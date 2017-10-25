@@ -1,0 +1,180 @@
+<Type Name="LocalizabilityAttribute" FullName="System.Windows.LocalizabilityAttribute">
+  <TypeSignature Language="C#" Value="public sealed class LocalizabilityAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LocalizabilityAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.LocalizabilityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os atributos de localização para uma classe de XAML (BAML) binário ou membro de classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo pode ser aplicado a um método, classe ou propriedade.  
+  
+ Para obter mais informações sobre como usar atributos de localização, consulte [atributos de localização e comentários](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalizabilityAttribute (System.Windows.LocalizationCategory category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.LocalizationCategory category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LocalizabilityAttribute.#ctor(System.Windows.LocalizationCategory)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="System.Windows.LocalizationCategory" />
+      </Parameters>
+      <Docs>
+        <param name="category">A categoria de localização.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.LocalizabilityAttribute" /> classe com uma categoria de localização especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public System.Windows.LocalizationCategory Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LocalizationCategory Category" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.LocalizabilityAttribute.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a definição de categoria de valor de destino do atributo de localização.</summary>
+        <value>A configuração de categoria do atributo de localização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra as configurações de modificação do atributo de localização.  
+  
+|Configuração de categoria|Significado|  
+|----------------------|-------------|  
+|<xref:System.Windows.LocalizationCategory.None>|Recursos não pertencem a uma categoria padrão.|  
+|<xref:System.Windows.LocalizationCategory.Text>|Uma parte longa de texto descritivo.|  
+|<xref:System.Windows.LocalizationCategory.Title>|Uma única linha de texto, como um título.|  
+|<xref:System.Windows.LocalizationCategory.Label>|Uma cadeia de texto curto, como um rótulo de controle.|  
+|<xref:System.Windows.LocalizationCategory.Button>|Um <xref:System.Windows.Controls.Button> ou relacionado ao controle.|  
+|<xref:System.Windows.LocalizationCategory.CheckBox>|Um <xref:System.Windows.Controls.CheckBox> ou relacionado ao controle.|  
+|<xref:System.Windows.LocalizationCategory.ComboBox>|Um <xref:System.Windows.Controls.ComboBox> ou relacionados de controle, como <xref:System.Windows.Controls.ComboBoxItem>.|  
+|<xref:System.Windows.LocalizationCategory.ListBox>|Um <xref:System.Windows.Controls.ListBox> ou relacionados de controle, como <xref:System.Windows.Controls.ListBoxItem>.|  
+|<xref:System.Windows.LocalizationCategory.Menu>|Um <xref:System.Windows.Controls.Menu> ou relacionados de controle, como <xref:System.Windows.Controls.MenuItem>.|  
+|<xref:System.Windows.LocalizationCategory.RadioButton>|Um <xref:System.Windows.Controls.RadioButton> ou relacionado ao controle.|  
+|<xref:System.Windows.LocalizationCategory.ToolTip>|Um <xref:System.Windows.Controls.ToolTip> ou relacionado ao controle.|  
+|<xref:System.Windows.LocalizationCategory.Hyperlink>|Um <xref:System.Windows.Documents.Hyperlink> ou relacionado ao controle.|  
+|<xref:System.Windows.LocalizationCategory.TextFlow>|Um <xref:System.Windows.Documents.FlowDocument> ou outro painel que pode conter texto.|  
+|<xref:System.Windows.LocalizationCategory.XmlData>|[!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)]dados.|  
+|<xref:System.Windows.LocalizationCategory.Font>|Dados relacionados a fonte, como tamanho da fonte, estilo de fonte ou família de fontes.|  
+|<xref:System.Windows.LocalizationCategory.Inherit>|Herda a categoria do nó pai.|  
+|<xref:System.Windows.LocalizationCategory.Ignore>|Não traduzir este recurso. Isso não se aplica a nós filho do recurso.|  
+|<xref:System.Windows.LocalizationCategory.NeverLocalize>|Não traduzir este recurso, ou qualquer um de seus nós filho cuja categoria é definida como <xref:System.Windows.LocalizationCategory.Inherit>.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra as configurações de categoria de atributos de localização definidos para um botão.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Attributes.xaml#attributessnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiability">
+      <MemberSignature Language="C#" Value="public System.Windows.Modifiability Modifiability { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Modifiability Modifiability" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.LocalizabilityAttribute.Modifiability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Modifiability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a configuração de modificação do valor de destino do atributo de localização.</summary>
+        <value>A configuração de modificação do atributo de localização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra as configurações de modificação do atributo de localização.  
+  
+|Configuração de modificação|Significado|  
+|---------------------------|-------------|  
+|<xref:System.Windows.Modifiability.Modifiable>|Valor de destino é modificável pelo localizadores.|  
+|<xref:System.Windows.Modifiability.Unmodifiable>|Valor de destino não é modificável pelo localizadores.|  
+|<xref:System.Windows.Modifiability.Inherit>|Modificação do valor de destino é herdada do nó pai.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a configuração de modificação de atributos de localização definido para um botão.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Attributes.xaml#attributessnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Readability">
+      <MemberSignature Language="C#" Value="public System.Windows.Readability Readability { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Readability Readability" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.LocalizabilityAttribute.Readability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Readability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a configuração de facilitar a leitura do valor de destino do atributo de localização.</summary>
+        <value>A configuração do atributo de localização de legibilidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra as configurações de leitura do atributo de localização.  
+  
+|Configuração de legibilidade|Significado|  
+|-------------------------|-------------|  
+|<xref:System.Windows.Readability.Readable>|Valor de destino é um texto legível.|  
+|<xref:System.Windows.Readability.Unreadable>|Valor de destino não é legível.|  
+|<xref:System.Windows.Readability.Inherit>|Facilitar a leitura do valor de destino é herdada do nó pai.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a configuração de legibilidade dos atributos de localização definido para um bloco de texto.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Comments.xaml#attributessnippet4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

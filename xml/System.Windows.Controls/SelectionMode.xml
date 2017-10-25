@@ -1,0 +1,80 @@
+<Type Name="SelectionMode" FullName="System.Windows.Controls.SelectionMode">
+  <TypeSignature Language="C#" Value="public enum SelectionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SelectionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.SelectionMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define o comportamento de seleção para um <see cref="T:System.Windows.Controls.ListBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Windows.Controls.ListBox.SelectionMode%2A> propriedade para um do <xref:System.Windows.Controls.SelectionMode> valores para especificar se o usuário pode selecionar mais que um item em uma caixa de listagem.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Windows.Controls.ListBox.SelectionMode%2A> propriedade múltiplo.  
+  
+ [!code-xaml[ListBoxEvent#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Extended">
+      <MemberSignature Language="C#" Value="Extended" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.SelectionMode Extended = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.SelectionMode.Extended" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.SelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O usuário pode selecionar vários itens consecutivos, mantendo pressionada a tecla SHIFT.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiple">
+      <MemberSignature Language="C#" Value="Multiple" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.SelectionMode Multiple = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.SelectionMode.Multiple" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.SelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O usuário pode selecionar vários itens sem pressionar uma tecla modificadora.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.SelectionMode Single = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.SelectionMode.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.SelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O usuário pode selecionar apenas um item de cada vez.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

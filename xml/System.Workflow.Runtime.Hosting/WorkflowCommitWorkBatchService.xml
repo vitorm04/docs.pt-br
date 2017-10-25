@@ -1,0 +1,81 @@
+<Type Name="WorkflowCommitWorkBatchService" FullName="System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService">
+  <TypeSignature Language="C#" Value="public abstract class WorkflowCommitWorkBatchService : System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WorkflowCommitWorkBatchService extends System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowRuntimeService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que a lógica personalizada para a confirmação de lotes de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Quando um lote de trabalho é confirmado o tempo de execução chama o <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> e concede a ele um delegado a ser chamado para realizar a confirmação real do lote de trabalho. O tempo de execução ainda tem a responsabilidade primária de confirmação de lote de trabalho, mas permite que o <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> para inserir a próprio no processo de personalização em todo o processo de confirmação.  
+  
+ Esse processo permite que a lógica de tratamento de erro personalizada. Se o <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> for proprietário da transação, que é o caso quando o <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> propriedade retorna `null` necessidade, portanto, a necessidade de criar uma nova transação de ambiente, é permitido chamar o delegado de mais de uma vez, criando uma nova transação para cada chamada. Por exemplo, o caso mais comum para isso é lidar com problemas de rede intermitente ou failovers de cluster do SQL. Se a chamada para o <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback> lança uma exceção <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> pode tratar essa exceção, iniciar uma nova transação e chamar o delegado novamente. Isso fornece um nível de resiliência para execução da instância do fluxo de trabalho que caso contrário, causará fluxos de trabalho encerrar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma classe que herda de <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService>.  
+  
+ [!code-csharp[WF_Samples#0](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#0)]
+ [!code-vb[WF_Samples#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowCommitWorkBatchService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitWorkBatch">
+      <MemberSignature Language="C#" Value="protected virtual void CommitWorkBatch (System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback commitWorkBatchCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void CommitWorkBatch(class System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService/CommitWorkBatchCallback commitWorkBatchCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatch(System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commitWorkBatchCallback" Type="System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService+CommitWorkBatchCallback" />
+      </Parameters>
+      <Docs>
+        <param name="commitWorkBatchCallback">O <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback" /> delegado para chamar a confirmar o lote de trabalho.</param>
+        <summary>Chamado para confirmar o lote de trabalho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

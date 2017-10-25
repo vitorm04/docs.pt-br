@@ -1,0 +1,341 @@
+<Type Name="ObjectDisposedException" FullName="System.ObjectDisposedException">
+  <TypeSignature Language="C#" Value="public class ObjectDisposedException : InvalidOperationException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ObjectDisposedException extends System.InvalidOperationException" />
+  <TypeSignature Language="DocId" Value="T:System.ObjectDisposedException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.InvalidOperationException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é gerada quando uma operação é executada em um objeto descartado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ObjectDisposedException> é gerada quando você tentar acessar um membro de um objeto que implementa o <xref:System.IDisposable> interface e esse objeto foi descartado. Normalmente, essa exceção é causada por uma das seguintes condições:  
+  
+-   Chamado de um objeto `Dispose` método e você está tentando acessar um membro de instância que obtém ou define o estado do objeto. O exemplo a seguir ilustra o <xref:System.ObjectDisposedException> que é gerada quando você tentar redefinir a frequência de notificações do timer depois de chamar o <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType> método.  
+  
+     [!code-csharp[System.ObjectDisposedException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.objectdisposedexception/cs/dispose1.cs#1)]
+     [!code-vb[System.ObjectDisposedException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.objectdisposedexception/vb/dispose1.vb#1)]  
+  
+-   Chamado de um objeto `Close` método e você está tentando acessar um membro de instância que obtém ou define o estado do objeto. Geralmente, o `Close` método fornece a implementação de um tipo público do <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> método.  
+  
+-   Chamado de um objeto `Dispose` método várias vezes. Normalmente, isso não gera uma exceção. No entanto, dependendo de como um tipo implementa <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, ele não pode permitir várias chamadas para `Dispose`.  
+  
+ Na maioria dos casos, essa exceção resulta de erro do desenvolvedor. Em vez de tratamento de erro em uma `try` / `catch` bloco, você deve corrigir o erro, normalmente por reinstanciar o objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um erro que faz com que o `ObjectDisposedException` exceção seja lançada.  
+  
+ [!code-cpp[ObjDispEx#1](~/samples/snippets/cpp/VS_Snippets_CLR/ObjDispEx/CPP/objdispexc.cpp#1)]
+ [!code-csharp[ObjDispEx#1](~/samples/snippets/csharp/VS_Snippets_CLR/ObjDispEx/CS/objdispexc.cs#1)]
+ [!code-vb[ObjDispEx#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ObjDispEx/VB/objdispexc.vb#1)]  
+  
+ Esse código gera a seguinte saída:  
+  
+```  
+Caught:  
+  Cannot access a closed Stream.  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDisposedException (string objectName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string objectName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ObjectDisposedException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="objectName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objectName">Uma cadeia de caracteres que contém o nome do objeto descartado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ObjectDisposedException" /> com uma cadeia de caracteres que contém o nome do objeto descartado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ObjectDisposedException.Message%2A> propriedade é inicializada para uma mensagem fornecida pelo sistema que descreve o erro e inclui o `objectName` parâmetro. Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ O `InnerException` propriedade da nova instância é inicializada para `null`.  
+  
+ Se `objectName` é `null`, o `Message` propriedade contém apenas uma mensagem de erro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ObjectDisposedException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ObjectDisposedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ObjectDisposedException" /> com dados serializados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDisposedException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ObjectDisposedException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual. Se <c>innerException</c> não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ObjectDisposedException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. O <xref:System.Exception.InnerException%2A> propriedade retorna o mesmo valor que é passado para o construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDisposedException (string objectName, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string objectName, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ObjectDisposedException.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="objectName" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objectName">O nome do objeto descartado.</param>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ObjectDisposedException" /> classe com o nome do objeto especificado e a mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `InnerException` propriedade da nova instância é inicializada para `null`.  
+  
+ Se `objectName` é `null`, o `Message` propriedade contém apenas uma mensagem de erro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ObjectDisposedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Recupera o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com o nome do parâmetro e informações adicionais de exceção.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /> ação de segurança:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.ObjectDisposedException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem que descreve o erro.</summary>
+        <value>Uma cadeia de caracteres que descreve o erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.ObjectDisposedException.ObjectName%2A> propriedade não é `null`, a mensagem inclui o nome do objeto.  
+  
+ Esta propriedade substitui <xref:System.Exception.Message%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectName">
+      <MemberSignature Language="C#" Value="public string ObjectName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ObjectName" />
+      <MemberSignature Language="DocId" Value="P:System.ObjectDisposedException.ObjectName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do objeto descartado.</summary>
+        <value>Uma cadeia de caracteres que contém o nome do objeto descartado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a propriedade atual não é `null` ou <xref:System.String?displayProperty=nameWithType>, o valor dessa propriedade é incluído na cadeia de caracteres retornada pelo <xref:System.ObjectDisposedException.Message%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,495 @@
+<Type Name="PeerObject" FullName="System.Net.PeerToPeer.Collaboration.PeerObject">
+  <TypeSignature Language="C#" Value="public class PeerObject : IDisposable, IEquatable&lt;System.Net.PeerToPeer.Collaboration.PeerObject&gt;, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable PeerObject extends System.Object implements class System.IDisposable, class System.IEquatable`1&lt;class System.Net.PeerToPeer.Collaboration.PeerObject&gt;, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Net.PeerToPeer.Collaboration.PeerObject&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma nova instância da classe PeerObject com um autogerado <see cref="T:System.Guid" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um PeerObject é dados de tempo de execução, como uma imagem, certificado ou uma descrição específica que está associada um aplicativo específico. O elemento de dados de cada instância de PeerObject deve ser menor ou igual a 16KB de tamanho. Depois que uma instância de PeerObject é construída ela é publicada com a infraestrutura de colaboração ponto a ponto via <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SetObject%2A>.  
+  
+ Depois de construir uma instância dessa classe e definindo as propriedades apropriadas esse objeto podem ser passados para o <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SetObject%2A> e <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.DeleteObject%2A> métodos para habilitar/desabilitar a publicação deste objeto para outros pontos descobrir e exibir.  
+  
+ Depois de registrar um objeto com a infraestrutura de colaboração as informações de registro não é persistido no registro, resultando em um comportamento diferente de <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> instâncias.  O registro de objeto só é válido para a duração de tempo de vida do aplicativo registrado o objeto.  Aplicativos devem cancelar o registro de objetos quando eles não são mais necessários ou aplicativo antes de sair.  Por padrão, um PeerObject é cancelado automaticamente se a instância sai do escopo.  
+  
+ Alterando as propriedades em uma instância de PeerObject depois que ele foi registrado usando o <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> métodos de registro não atualizará o registro para a instância de PeerObject.  Para atualizar efetivamente o registro de uma instância específica do PeerObject, o PeerObject deve ser excluído e registrado novamente com as novas informações.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após o <xref:System.Net.PeerToPeer.Collaboration.PeerObject> instância for criada, o <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SetObject%2A> método deve ser chamado para publicar o objeto com a infraestrutura de colaboração ponto a ponto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após o <xref:System.Net.PeerToPeer.Collaboration.PeerObject> instância for criada, o <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SetObject%2A> método deve ser chamado para publicar o <xref:System.Net.PeerToPeer.Collaboration.PeerObject> com a infraestrutura de colaboração ponto a ponto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PeerObject (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</param>
+        <param name="streamingContext">O destino de serialização associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</param>
+        <summary>Inicializa uma nova <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância com os parâmetros associados necessários para a serialização.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerObject (Guid Id, byte[] data, System.Net.PeerToPeer.Collaboration.PeerScope peerScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid Id, unsigned int8[] data, valuetype System.Net.PeerToPeer.Collaboration.PeerScope peerScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.#ctor(System.Guid,System.Byte[],System.Net.PeerToPeer.Collaboration.PeerScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Id" Type="System.Guid" />
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="peerScope" Type="System.Net.PeerToPeer.Collaboration.PeerScope" />
+      </Parameters>
+      <Docs>
+        <param name="Id">O identificador definido pelo usuário para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</param>
+        <param name="data">Um blob de dados que contém informações sobre o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />. Esse parâmetro é limitado um tamanho que seja menor ou igual a 16K.</param>
+        <param name="peerScope">Especifica o escopo no qual o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> deve ser registrado.</param>
+        <summary>Inicializa uma nova <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância com o escopo associado e dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Id` o valor do parâmetro utilizado por este construtor é gerado automaticamente. Após o <xref:System.Net.PeerToPeer.Collaboration.PeerObject> instância for criada, o <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SetObject%2A> método deve ser chamado para publicar o <xref:System.Net.PeerToPeer.Collaboration.PeerObject> com a infraestrutura de colaboração ponto a ponto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um dos argumentos fornecidos para este método não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public byte[] Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Data" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerObject.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define dados descritivos associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância para um aplicativo de colaboração ponto a ponto.</summary>
+        <value>Dados descritivos (por exemplo, texto ou uma imagem pequena) associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> foi descartada.</exception>
+        <exception cref="T:System.ArgumentException">Um dos argumentos fornecidos para este método não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos utilizados pelo <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Definido como <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Net.PeerToPeer.Collaboration.PeerObject other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Net.PeerToPeer.Collaboration.PeerObject other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.Equals(System.Net.PeerToPeer.Collaboration.PeerObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Net.PeerToPeer.Collaboration.PeerObject" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância para testar a igualdade.</param>
+        <summary>Compara uma <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância.</summary>
+        <returns>Retorna <see langword="true" /> se o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância fornecida tem correspondência de dados, mais <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância especificada pelo <paramref name="other" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto para testar a igualdade.</param>
+        <summary>Compara o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> ao objeto especificado.</summary>
+        <returns>Retorna <see langword="true" /> se a<see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />  
+  
+ instância fornecida tem correspondência de dados, mais <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto especificado pelo <paramref name="obj" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (object objA, object objB);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(object objA, object objB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.Equals(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objA" Type="System.Object" />
+        <Parameter Name="objB" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objA">O primeiro <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> a ser comparado.</param>
+        <param name="objB">O segundo <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> a ser comparado.</param>
+        <summary>Determina se as instâncias <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> especificadas são consideradas iguais.</summary>
+        <returns>Retorna <see langword="true" /> se o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instâncias fornecidas têm correspondência de dados, mais <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância.</summary>
+        <returns>32 bits assinado o código de hash de número inteiro usado para comparar instâncias desse tipo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> instância a ser populado com dados.</param>
+        <param name="context">O destino para a serialização.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um tipo derivado deve chamar o tipo base <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Guid Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Id" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerObject.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Guid" /> associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância.</summary>
+        <value>
+          <see cref="T:System.Guid" />associado a<see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />  
+  
+ .</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; ObjectChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; ObjectChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerObject.ObjectChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sinalizado quando um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> alterações da instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes desse evento pode ser sinalizado por uma alteração de objeto, assinaturas devem ser feitas para o par remoto especificado por meio de <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnObjectChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnObjectChanged (System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs objChangedArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnObjectChanged(class System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs objChangedArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.OnObjectChanged(System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objChangedArgs" Type="System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="objChangedArgs">Tipo de alteração de objeto especificado pelo <see cref="T:System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs" />.</param>
+        <summary>Sinalizado quando um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância com a ID especificada for adicionada, atualizada ou removida por um outro computador remoto na rede.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância associada a essa alteração foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerScope">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerScope PeerScope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.PeerToPeer.Collaboration.PeerScope PeerScope" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerObject.PeerScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerScope" /> no qual o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância está registrada.</summary>
+        <value>PeerScope que especifica o escopo no qual o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> está registrado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizingObject">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ISynchronizeInvoke SynchronizingObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISynchronizeInvoke SynchronizingObject" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerObject.SynchronizingObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Description("SynchronizingObject")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISynchronizeInvoke</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto usado para empacotar as chamadas de manipulador de eventos emitidas como resultado de uma <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> alteração da instância.</summary>
+        <value>Objeto com uma implementação de <see cref="T:System.ComponentModel.ISynchronizeInvoke" /> interface. Esse objeto é usado para sincronização de manipulador de eventos.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto de chamada foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino para a serialização.</param>
+        <summary>Popula atual <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância com os dados obtidos da fonte serializado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerObject.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> que representa um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> foi descartada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

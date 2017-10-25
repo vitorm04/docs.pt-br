@@ -1,0 +1,96 @@
+<Type Name="DataSourceCapabilities" FullName="System.Web.UI.DataSourceCapabilities">
+  <TypeSignature Language="C#" Value="public enum DataSourceCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSourceCapabilities extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceCapabilities" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma maneira para solicitar processamento além da recuperação de registros para uma operação de recuperação de dados de um controle de fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fonte de dados controla o uso de <xref:System.Web.UI.DataSourceCapabilities> enumeração em conjunto com o <xref:System.Web.UI.DataSourceSelectArguments> classe para solicitar a paginação, classificação ou outros recursos de select específicos ao executar uma operação de recuperação de dados. Os recursos solicitados são verificados com relação aos recursos reais do controle de fonte de dados durante a operação de recuperação de dados e se elas não corresponderem, uma exceção é gerada.  
+  
+ Esta enumeração oferece suporte a <xref:System.FlagsAttribute> atributo, que permite que você use mais de um membro por vez.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataSourceCapabilities None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataSourceCapabilities.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não representa a nenhuma paginação, classificação ou recursos de recuperação de contagem de linha de total.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="Page" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataSourceCapabilities Page = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataSourceCapabilities.Page" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a capacidade para percorrer as linhas retornadas por uma <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> operação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveTotalRowCount">
+      <MemberSignature Language="C#" Value="RetrieveTotalRowCount" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataSourceCapabilities RetrieveTotalRowCount = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataSourceCapabilities.RetrieveTotalRowCount" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a capacidade de recuperar uma contagem total de linhas de dados que corresponde ao usar o <see cref="F:System.Web.UI.DataSourceOperation.SelectCount" /> valor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="Sort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataSourceCapabilities Sort = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataSourceCapabilities.Sort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a capacidade de classificar as linhas retornadas por uma <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> operação.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

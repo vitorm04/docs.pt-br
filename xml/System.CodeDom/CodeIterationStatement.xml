@@ -1,0 +1,211 @@
+<Type Name="CodeIterationStatement" FullName="System.CodeDom.CodeIterationStatement">
+  <TypeSignature Language="C#" Value="public class CodeIterationStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeIterationStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeIterationStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma instrução <see langword="for" /> ou um loop em um bloco de instruções, usando uma expressão de teste como uma condição para continuar executando o loop.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.CodeDom.CodeIterationStatement> pode representar um `for` loop ou `while` loop.  
+  
+ O <xref:System.CodeDom.CodeIterationStatement.InitStatement%2A> propriedade especifica a instrução a ser executada antes da primeira iteração do loop. O <xref:System.CodeDom.CodeIterationStatement.TestExpression%2A> propriedade especifica a expressão de continuação do loop, que deve ser avaliada como `true` no final de cada iteração do loop para outra iteração começar. O <xref:System.CodeDom.CodeIterationStatement.IncrementStatement%2A> propriedade especifica a instrução a ser executada no final de cada iteração do loop. O <xref:System.CodeDom.CodeIterationStatement.Statements%2A> propriedade especifica a coleção de instruções a serem executadas dentro do loop.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como usar um <xref:System.CodeDom.CodeIterationStatement> representar um `for` loop.  
+  
+ [!code-cpp[CodeIterationStatementExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeIterationStatementExample/CPP/codeiterationstatementexample.cpp#2)]
+ [!code-csharp[CodeIterationStatementExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeIterationStatementExample/CS/codeiterationstatementexample.cs#2)]
+ [!code-vb[CodeIterationStatementExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeIterationStatementExample/VB/codeiterationstatementexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeIterationStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeIterationStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeIterationStatement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeIterationStatement (System.CodeDom.CodeStatement initStatement, System.CodeDom.CodeExpression testExpression, System.CodeDom.CodeStatement incrementStatement, params System.CodeDom.CodeStatement[] statements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeStatement initStatement, class System.CodeDom.CodeExpression testExpression, class System.CodeDom.CodeStatement incrementStatement, class System.CodeDom.CodeStatement[] statements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeIterationStatement.#ctor(System.CodeDom.CodeStatement,System.CodeDom.CodeExpression,System.CodeDom.CodeStatement,System.CodeDom.CodeStatement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initStatement" Type="System.CodeDom.CodeStatement" />
+        <Parameter Name="testExpression" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="incrementStatement" Type="System.CodeDom.CodeStatement" />
+        <Parameter Name="statements" Type="System.CodeDom.CodeStatement[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="initStatement">Um <see cref="T:System.CodeDom.CodeStatement" /> que contém a instrução de inicialização de loop.</param>
+        <param name="testExpression">Um <see cref="T:System.CodeDom.CodeExpression" /> que contém a expressão para testar a condição de saída.</param>
+        <param name="incrementStatement">Um <see cref="T:System.CodeDom.CodeStatement" /> que contém a instrução de incremento por ciclo.</param>
+        <param name="statements">Uma matriz do tipo <see cref="T:System.CodeDom.CodeStatement" /> que contenha as instruções dentro do loop.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeIterationStatement" /> classe usando os parâmetros especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementStatement">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatement IncrementStatement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatement IncrementStatement" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIterationStatement.IncrementStatement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a instrução que é chamada após cada ciclo de loop.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeStatement" /> que indica o por instrução de incremento de ciclo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa instrução é chamada após cada iteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitStatement">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatement InitStatement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatement InitStatement" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIterationStatement.InitStatement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a instrução de inicialização de loop.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeStatement" /> que indica a instrução de inicialização de loop.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar uma instrução vazia inicialização definindo essa propriedade como um <xref:System.CodeDom.CodeExpressionStatement> que contém um <xref:System.CodeDom.CodeSnippetExpression> que contém uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Statements">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatementCollection Statements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatementCollection Statements" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIterationStatement.Statements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de instruções a serem executadas dentro do loop.</summary>
+        <value>Uma matriz do tipo <see cref="T:System.CodeDom.CodeStatement" /> que indica as instruções dentro do loop.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TestExpression">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression TestExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression TestExpression" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIterationStatement.TestExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão para testar como a condição que continua o loop.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpression" /> que indica a expressão de teste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa expressão é resolvida como `true`, o loop continuará.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

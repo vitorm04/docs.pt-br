@@ -1,0 +1,89 @@
+<Type Name="IMemoryCacheManager" FullName="System.Runtime.Caching.Hosting.IMemoryCacheManager">
+  <TypeSignature Language="C#" Value="public interface IMemoryCacheManager" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMemoryCacheManager" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.Hosting.IMemoryCacheManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma interface que um cache usa para comunicar-se a utilização de memória de cache para um ambiente de host.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.Hosting.IMemoryCacheManager> interface é implementada pelos ambientes de host, como ASP.NET e é consumido por <xref:System.Runtime.Caching.ObjectCache> implementações devem interagir com o ambiente de host para determinar o uso de memória. Como caches geralmente consomem quantidades significativas de memória, o <xref:System.Runtime.Caching.Hosting.IMemoryCacheManager> interface o ajuda a ambientes de hospedagem gerenciar o uso de memória.  
+  
+ Normalmente, apenas <xref:System.Runtime.Caching.ObjectCache> implementações que gerenciam objetos do cache em memória usaria essa interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReleaseCache">
+      <MemberSignature Language="C#" Value="public void ReleaseCache (System.Runtime.Caching.MemoryCache cache);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseCache(class System.Runtime.Caching.MemoryCache cache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Hosting.IMemoryCacheManager.ReleaseCache(System.Runtime.Caching.MemoryCache)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Runtime.Caching.MemoryCache" />
+      </Parameters>
+      <Docs>
+        <param name="cache">Uma referência para o cache.</param>
+        <summary>Remove todas as referências a um cache no ambiente de host.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um cache tiver se registrado anteriormente com o ambiente de host, o cache pode chamar o <xref:System.Runtime.Caching.Hosting.IMemoryCacheManager.ReleaseCache%2A> método para liberar a referência. Quando um cache está sendo descartado, ele deve chamar o <xref:System.Runtime.Caching.Hosting.IMemoryCacheManager.ReleaseCache%2A> método para certificar-se de que nenhuma referência para o cache é mantida no host.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateCacheSize">
+      <MemberSignature Language="C#" Value="public void UpdateCacheSize (long size, System.Runtime.Caching.MemoryCache cache);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateCacheSize(int64 size, class System.Runtime.Caching.MemoryCache cache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Hosting.IMemoryCacheManager.UpdateCacheSize(System.Int64,System.Runtime.Caching.MemoryCache)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+        <Parameter Name="cache" Type="System.Runtime.Caching.MemoryCache" />
+      </Parameters>
+      <Docs>
+        <param name="size">O tamanho da memória, em bytes, que consome o cache.</param>
+        <param name="cache">Uma referência para o cache.</param>
+        <summary>Informa o tamanho do cache atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma implementação de cache com bom comportamento deve usar o <xref:System.Runtime.Caching.Hosting.IMemoryCacheManager.UpdateCacheSize%2A> método para relatar periodicamente o tamanho do espaço de memória do cache para o ambiente de host.  
+  
+ A implementação de cache que informa o tamanho também passa uma referência a mesmo como um parâmetro. Isso permite que o ambiente de host para executar as seguintes tarefas:  
+  
+-   Manter uma lista dos caches do objeto conhecido.  
+  
+-   Chame o cache e solicitar que o cache cortar uma porcentagem de itens de cache com base no tamanho do relatado, se necessário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

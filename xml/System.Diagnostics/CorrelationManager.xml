@@ -1,0 +1,232 @@
+<Type Name="CorrelationManager" FullName="System.Diagnostics.CorrelationManager">
+  <TypeSignature Language="C#" Value="public class CorrelationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CorrelationManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.CorrelationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Correlaciona rastreamentos que fazem parte de uma transação lógica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rastreamentos gerados a partir de uma única operação lógica podem ser marcados com uma identidade exclusiva de operação, para diferenciá-los de rastreamentos a partir de uma operação lógica diferente. Por exemplo, pode ser útil para rastreamentos de grupo correlacionado por solicitação do ASP.NET. O <xref:System.Diagnostics.CorrelationManager> classe fornece métodos usados para armazenar uma identidade de operação lógica em um contexto de thread associado e identificar automaticamente a cada evento de rastreamento gerado pelo thread com a identidade armazenado.  
+  
+ Também podem ser aninhadas operações lógicas. O <xref:System.Diagnostics.CorrelationManager.LogicalOperationStack%2A> propriedade expõe a pilha de identidades de operação lógica aninhada. Cada chamada para o <xref:System.Diagnostics.CorrelationManager.StartLogicalOperation%2A> método envia uma nova identidade da operação lógica para a pilha. Cada chamada para o <xref:System.Diagnostics.CorrelationManager.StopLogicalOperation%2A> método aparece uma identidade de operação lógica da pilha.  
+  
+> [!NOTE]
+>  Identidades de operação lógica são objetos, permitindo o uso de um tipo para uma identidade de operação lógica.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.Diagnostics.CorrelationManager> classe identificando a operação lógica associada a um evento de rastreamento. Duas operações lógicas são iniciadas, uma no thread principal e o outro em um thread de trabalho. Um evento de erro é registrado em ambas as operações lógicas.  
+  
+ [!code-cpp[System.Diagnostics.CorrelationManager#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.CorrelationManager/cpp/correlationmanager.cpp#1)]
+ [!code-csharp[System.Diagnostics.CorrelationManager#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.CorrelationManager/cs/program.cs#1)]
+ [!code-vb[System.Diagnostics.CorrelationManager#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.CorrelationManager/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivityId">
+      <MemberSignature Language="C#" Value="public Guid ActivityId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ActivityId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CorrelationManager.ActivityId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a identidade de uma atividade global.</summary>
+        <value>Uma estrutura <see cref="T:System.Guid" /> que identifica a atividade global.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> propriedade obtém e define a identidade de atividade global de <xref:System.Runtime.Remoting.Messaging.CallContext> para o thread. O <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> é usada para operações de transferência de rastreamento de ouvintes de rastreamento que substituem o <xref:System.Diagnostics.TraceListener.TraceTransfer%2A> método, como o <xref:System.Diagnostics.XmlWriterTraceListener> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalOperationStack">
+      <MemberSignature Language="C#" Value="public System.Collections.Stack LogicalOperationStack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Stack LogicalOperationStack" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CorrelationManager.LogicalOperationStack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Stack</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a pilha de operação lógica do contexto da chamada.</summary>
+        <value>Um objeto <see cref="T:System.Collections.Stack" /> que representa a pilha de operação lógica para o contexto de chamada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada chamada para o <xref:System.Diagnostics.CorrelationManager.StartLogicalOperation%2A> método envia uma nova identidade da operação lógica para o <xref:System.Diagnostics.CorrelationManager.LogicalOperationStack%2A> pilha da propriedade. Cada chamada para o <xref:System.Diagnostics.CorrelationManager.StopLogicalOperation%2A> método aparece uma identidade de operação lógica da pilha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartLogicalOperation">
+      <MemberSignature Language="C#" Value="public void StartLogicalOperation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartLogicalOperation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CorrelationManager.StartLogicalOperation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia uma operação lógica em um thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A operação lógica é iniciada usando um GUID gerado automaticamente para um identificador de operação lógica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartLogicalOperation">
+      <MemberSignature Language="C#" Value="public void StartLogicalOperation (object operationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartLogicalOperation(object operationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CorrelationManager.StartLogicalOperation(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationId" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="operationId">Um objeto que identifica a operação.</param>
+        <summary>Inicia uma operação lógica com a identidade especificada em um thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `operationId` parâmetro pode ser qualquer objeto, como um <xref:System.String> que permite que a operação a ser identificado para fins de rastreamento. O objeto representado pelo `operationId` é adicionada para o <xref:System.Diagnostics.CorrelationManager.LogicalOperationStack%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Diagnostics.CorrelationManager.StartLogicalOperation%28System.Object%29> método inicializando uma operação lógica a ser associado com o thread principal. Para o exemplo de código completo, consulte o <xref:System.Diagnostics.CorrelationManager> classe.  
+  
+ [!code-csharp[System.Diagnostics.CorrelationManager#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.CorrelationManager/cs/program.cs#2)]
+ [!code-vb[System.Diagnostics.CorrelationManager#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.CorrelationManager/vb/module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="operationId" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StopLogicalOperation">
+      <MemberSignature Language="C#" Value="public void StopLogicalOperation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopLogicalOperation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CorrelationManager.StopLogicalOperation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe a operação lógica atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A operação lógica é interrompida e a identidade da operação lógica é removida do <xref:System.Diagnostics.CorrelationManager.LogicalOperationStack%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Diagnostics.CorrelationManager.LogicalOperationStack" /> propriedade é uma pilha vazia.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,776 @@
+<Type Name="DisplayAttribute" FullName="System.ComponentModel.DataAnnotations.DisplayAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DisplayAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DisplayAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.DisplayAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um atributo de uso geral que permite especificar cadeias de caracteres localizáveis para tipos e membros de classes parciais de entidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades dessa classe podem ser usadas como literais ou identificadores de recurso para um <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType%2A> instância.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.DataAnnotations.DisplayAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor inicializa o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName%2A>, <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Name%2A>, <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Description%2A>, e <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt%2A> propriedades para uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateField">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateField" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayAttribute.AutoGenerateField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a interface do usuário deve ser gerada automaticamente para exibir esse campo.</summary>
+        <value>
+          <see langword="true" /> se a interface do usuário deve ser gerada automaticamente para exibir esse campo; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não use essa propriedade para acessar o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.AutoGenerateField%2A> propriedade. Use o método <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.GetAutoGenerateField%2A> em seu lugar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de obter o valor da propriedade antes de ela ser definida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateFilter">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateFilter" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayAttribute.AutoGenerateFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a interface do usuário de filtragem é exibida automaticamente para esse campo.</summary>
+        <value>
+          <see langword="true" /> se a interface do usuário deve ser gerada automaticamente para exibir a filtragem para esse campo; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não use essa propriedade para obter o valor da <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.AutoGenerateFilter%2A> propriedade. Use o método <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.GetAutoGenerateFilter%2A> em seu lugar.  
+  
+ A definição dessa propriedade substitui o comportamento padrão para especificar quais colunas são incluídas como filtros.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como desabilitar o filtro para o campo Employee1.  
+  
+```csharp  
+[MetadataType(typeof(EmployeeMD))]  
+public partial class Employee {  
+    public class EmployeeMD {  
+        [Display(Name = "Last Name", Order = -9,   
+            Prompt = "Enter Last Name", Description="Emp Last Name")]  
+        public object LastName { get; set; }  
+  
+        [Display(Name = "Manager", AutoGenerateFilter=false)]  
+        public object Employee1 { get; set; }  
+    }  
+}  
+```  
+  
+```vb  
+<MetadataType(GetType(EmployeeMD))>  _  
+Public Class Employee  
+  
+    Public Class EmployeeMD  
+  
+        <Display(Name:="Last Name", Order:=-9, _  
+           Prompt:="Enter Last Name", Description:="Emp Last Name")>  _  
+        Public Property LastName As Object  
+        End Property  
+  
+        <Display(Name:="Manager", AutoGenerateFilter:=false)>  _  
+        Public Property Employee1 As Object  
+        End Property  
+    End Class  
+End Class  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de obter o valor da propriedade antes de ela ser definida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor usado para exibir uma descrição na interface do usuário.</summary>
+        <value>Um valor usado para exibir uma descrição na interface do usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não use essa propriedade para obter o valor da <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Description%2A> propriedade. Use o método <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.GetDescription%2A> em seu lugar.  
+  
+ O <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Description%2A> propriedade normalmente é usada como um elemento de IU de dica de ferramenta ou a descrição associada ao membro com esse atributo. O modelo de Edit.ascx dinâmica de dados exibirá a descrição como uma dica de ferramenta em campos de entrada de texto. Um `null` valor ou cadeia de caracteres vazia é válida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Description%2A> propriedade.  
+  
+```csharp  
+[MetadataType(typeof(EmployeeMD))]  
+public partial class Employee {  
+    public class EmployeeMD {  
+        [Display(Name = "Last Name", Order = -9,   
+        Prompt = "Enter Last Name", Description="Emp Last Name")]  
+        public object LastName { get; set; }  
+  
+        [Display(Name = "Manager", AutoGenerateFilter=false)]  
+        public object Employee1 { get; set; }  
+    }  
+}  
+```  
+  
+```vb  
+<MetadataType(GetType(EmployeeMD))>  _  
+Public Class Employee  
+  
+    Public Class EmployeeMD  
+  
+        <Display(Name:="Last Name", Order:=-9, _  
+           Prompt:="Enter Last Name", Description:="Emp Last Name")>  _  
+        Public Property LastName As Object  
+        End Property  
+  
+        <Display(Name:="Manager", AutoGenerateFilter:=false)>  _  
+        Public Property Employee1 As Object  
+        End Property  
+    End Class  
+End Class  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutoGenerateField">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; GetAutoGenerateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Nullable`1&lt;bool&gt; GetAutoGenerateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayAttribute.GetAutoGenerateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o valor da propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.AutoGenerateField" />.</summary>
+        <returns>O valor de <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.AutoGenerateField" /> se a propriedade tiver sido iniciado; caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutoGenerateFilter">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; GetAutoGenerateFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Nullable`1&lt;bool&gt; GetAutoGenerateFilter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayAttribute.GetAutoGenerateFilter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se interface do usuário deve ser gerado automaticamente para exibir a filtragem para esse campo.</summary>
+        <returns>O valor de <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.AutoGenerateFilter" /> se a propriedade tiver sido iniciado; caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDescription">
+      <MemberSignature Language="C#" Value="public string GetDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayAttribute.GetDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o valor da propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Description" />.</summary>
+        <returns>O localizada descrição, se o <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" /> foi especificado e a propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Description" /> representa uma chave de recurso; caso contrário, o valor não localizado da propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Description" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Description%2A> propriedade normalmente é usada como uma dica de ferramenta para a propriedade que é anotada com esse atributo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">As propriedades <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" /> e <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Description" /> são inicializadas, mas não foi possível encontrar uma propriedade estática pública com um nome que corresponda ao valor <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Description" /> para a propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGroupName">
+      <MemberSignature Language="C#" Value="public string GetGroupName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetGroupName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayAttribute.GetGroupName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o valor da propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.GroupName" />.</summary>
+        <returns>Um valor que será usado para campos de agrupamento na interface de usuário, se <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.GroupName" /> foi inicializada; caso contrário, <see langword="null" />. Se o <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" /> propriedade foi especificada e o <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.GroupName" /> propriedade representa uma chave de recurso, uma cadeia de caracteres localizada é retornada; caso contrário, uma cadeia de caracteres não localizada é retornada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public string GetName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayAttribute.GetName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor usado para exibição de campo na interface do usuário.</summary>
+        <returns>A cadeia de caracteres localizada da propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Name" />, se a propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" /> tiver sido especificada e a propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Name" /> representar uma chave de recurso. Caso contrário, o valor não localizado da propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome geralmente é usado como o rótulo de campo para um elemento de interface do usuário que está associado à propriedade que está anotada com o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Name%2A> propriedade. Um `null` valor ou cadeia de caracteres vazia é válida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">As propriedades <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" /> e <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Name" /> são inicializadas, mas não foi possível encontrar uma propriedade estática pública com um nome que corresponda ao valor <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Name" /> para a propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrder">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; GetOrder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Nullable`1&lt;int32&gt; GetOrder() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayAttribute.GetOrder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o valor da propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Order" />.</summary>
+        <returns>O valor de <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Order" /> propriedade, se ele tiver sido definida; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não for especificado um pedido, camadas de apresentação Considere definir o valor da <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Order%2A> propriedade a 10000. Esse valor permite que os campos solicitados explicitamente seja exibido antes e depois os campos que não têm uma ordem especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrompt">
+      <MemberSignature Language="C#" Value="public string GetPrompt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetPrompt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayAttribute.GetPrompt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o valor da propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt" />.</summary>
+        <returns>Obtém a cadeia de caracteres localizada para a <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt" /> propriedade se o <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" /> propriedade foi especificada e se o <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt" /> propriedade representa um recurso de chave; caso contrário, o valor não localizada a <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt" /> propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt%2A> propriedade normalmente é usada como uma marca d'água ou um prompt para um elemento de interface do usuário que está associado à propriedade que está anotada com o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt%2A> atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetShortName">
+      <MemberSignature Language="C#" Value="public string GetShortName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetShortName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayAttribute.GetShortName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o valor da propriedade <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName" />.</summary>
+        <returns>A cadeia de caracteres localizada para a <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName" /> propriedade se o <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" /> propriedade foi especificada e se o <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName" /> propriedade representa um recurso de chave; caso contrário, o valor não localizada a <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName" /> valor de propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome curto é usado como rótulo da coluna de grade para um elemento de interface do usuário que está associado à propriedade anotadas com esse atributo. Esta propriedade retorna a cadeia de caracteres literal, não localizada ou uma cadeia de caracteres localizada se <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType%2A> não é `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayAttribute.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor usado para agrupar campos na interface do usuário.</summary>
+        <value>Um valor usado para agrupar campos na interface do usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não use essa propriedade para obter o valor da <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.GroupName%2A> propriedade. Use o método <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.GetDescription%2A> em seu lugar. Um `null` valor ou cadeia de caracteres vazia é válida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor usado para exibição na interface do usuário.</summary>
+        <value>Um valor usado para exibição na interface do usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não use essa propriedade para obter o valor da <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Name%2A> propriedade. Use o método <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.GetName%2A> em seu lugar.  
+  
+ Normalmente, o nome é usado como o rótulo de campo para um elemento de interface do usuário que está associado à propriedade anotadas com esse atributo. Usam os modelos de página dinâmica List.aspx de dados, ListDetails.aspx e Details.aspx o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Name%2A> propriedade para o rótulo de campo. Um `null` valor ou cadeia de caracteres vazia é válida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir a propriedade name.  
+  
+```csharp  
+[MetadataType(typeof(EmployeeMD))]  
+public partial class Employee {  
+    public class EmployeeMD {  
+        [Display(Name = "Last Name", Order = -9,   
+        Prompt = "Enter Last Name", Description="Emp Last Name")]  
+        public object LastName { get; set; }  
+  
+        [Display(Name = "Manager", AutoGenerateFilter=false)]  
+        public object Employee1 { get; set; }  
+    }  
+}  
+```  
+  
+```vb  
+<MetadataType(GetType(EmployeeMD))>  _  
+Public Class Employee  
+  
+    Public Class EmployeeMD  
+  
+        <Display(Name:="Last Name", Order:=-9, _  
+           Prompt:="Enter Last Name", Description:="Emp Last Name")>  _  
+        Public Property LastName As Object  
+        End Property  
+  
+        <Display(Name:="Manager", AutoGenerateFilter:=false)>  _  
+        Public Property Employee1 As Object  
+        End Property  
+    End Class  
+End Class  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Order">
+      <MemberSignature Language="C#" Value="public int Order { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Order" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Order" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o peso da ordem da coluna.</summary>
+        <value>O peso da ordem da coluna.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Colunas são classificadas em ordem com base no valor da ordem crescente. Colunas sem esse atributo tem um valor de ordem de 0. Valores negativos são válidos e podem ser usados para posicionar uma coluna antes de todas as colunas de não-negativo. Se não for especificado um pedido, camadas de apresentação devem considerar o uso do valor 10000. Esse valor permite que os campos solicitados explicitamente seja exibido antes e depois os campos que não têm uma ordem especificada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o peso de ordem do campo Sobrenome para -9. Os outros campos na entidade tem o peso de ordem padrão de zero. Portanto, o campo Sobrenome será exibido pela primeira vez.  
+  
+```csharp  
+[MetadataType(typeof(EmployeeMD))]  
+public partial class Employee {  
+    public class EmployeeMD {  
+        [Display(Name = "Last Name", Order = -9,   
+        Prompt = "Enter Last Name", Description="Emp Last Name")]  
+        public object LastName { get; set; }  
+  
+        [Display(Name = "Manager", AutoGenerateFilter=false)]  
+        public object Employee1 { get; set; }  
+    }  
+}  
+```  
+  
+```vb  
+<MetadataType(GetType(EmployeeMD))>  _  
+Public Class Employee  
+  
+    Public Class EmployeeMD  
+  
+        <Display(Name:="Last Name", Order:=-9, _  
+           Prompt:="Enter Last Name", Description:="Emp Last Name")>  _  
+        Public Property LastName As Object  
+        End Property  
+  
+        <Display(Name:="Manager", AutoGenerateFilter:=false)>  _  
+        Public Property Employee1 As Object  
+        End Property  
+    End Class  
+End Class  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prompt">
+      <MemberSignature Language="C#" Value="public string Prompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prompt" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que será usado para definir a marca-d'água para solicitações na interface do usuário.</summary>
+        <value>Um valor que será usado para exibir uma marca-d'água na interface do usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade normalmente é usada como uma marca d'água ou um prompt para um elemento de interface do usuário que está associado à propriedade anotadas com esse atributo. Não use esse método para acessar a cadeia de caracteres de prompt. Use o método <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.GetPrompt%2A> em seu lugar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt%2A> propriedade como "Insira Last Name".  
+  
+```csharp  
+[MetadataType(typeof(EmployeeMD))]  
+public partial class Employee {  
+    public class EmployeeMD {  
+        [Display(Name = "Last Name", Order = -9,   
+        Prompt = "Enter Last Name", Description="Emp Last Name")]  
+        public object LastName { get; set; }  
+  
+        [Display(Name = "Manager", AutoGenerateFilter=false)]  
+        public object Employee1 { get; set; }  
+    }  
+}  
+```  
+  
+```vb  
+<MetadataType(GetType(EmployeeMD))>  _  
+Public Class Employee  
+  
+    Public Class EmployeeMD  
+  
+        <Display(Name:="Last Name", Order:=-9, _  
+           Prompt:="Enter Last Name", Description:="Emp Last Name")>  _  
+        Public Property LastName As Object  
+        End Property  
+  
+        <Display(Name:="Manager", AutoGenerateFilter:=false)>  _  
+        Public Property Employee1 As Object  
+        End Property  
+    End Class  
+End Class  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceType">
+      <MemberSignature Language="C#" Value="public Type ResourceType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ResourceType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo que contém os recursos para as propriedades <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName" />, <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Name" />, <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt" /> e <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Description" />.</summary>
+        <value>O tipo de recurso que contém as propriedades <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName" />, <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Name" />, <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt" /> e <see cref="P:System.ComponentModel.DataAnnotations.DisplayAttribute.Description" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse valor for `null`, o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName%2A>, <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Name%2A>, <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Prompt%2A>, e <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.Description%2A> propriedades devem para ser cadeias de caracteres literal não localizado. Se esse valor não for `null`, as propriedades de cadeia de caracteres devem para ser os nomes das propriedades públicas estáticas que retornam o valor de cadeia de caracteres real.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShortName">
+      <MemberSignature Language="C#" Value="public string ShortName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShortName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que é usado para o rótulo de coluna de grade.</summary>
+        <value>Um valor que é para o rótulo de coluna de grade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome curto é usado como rótulo da coluna de grade para um elemento de interface do usuário que está associado à propriedade anotadas com esse atributo. Usam os modelos de página dinâmica Insert.aspx de dados e Edit.aspx a <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName%2A> para o rótulo de campo. Essa propriedade retorna a cadeia de caracteres localizada para <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType%2A> se o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType%2A> propriedade foi especificada e se o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName%2A> propriedade representa uma chave de recurso. Se o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ResourceType%2A> propriedade não foi especificada ou se o <xref:System.ComponentModel.DataAnnotations.DisplayAttribute.ShortName%2A> não é uma chave de recurso, essa propriedade retorna uma cadeia de caracteres não localizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

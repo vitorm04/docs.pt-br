@@ -1,0 +1,53 @@
+<Type Name="DownloadProgressChangedEventHandler" FullName="System.Net.DownloadProgressChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DownloadProgressChangedEventHandler(object sender, DownloadProgressChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DownloadProgressChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.DownloadProgressChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Net.DownloadProgressChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Net.DownloadProgressChangedEventArgs" /> que contém dados de evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Net.WebClient.DownloadProgressChanged" /> de <see cref="T:System.Net.WebClient" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Net.DownloadProgressChangedEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115). [NIB: Eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115)  
+  
+> [!NOTE]
+>  Se o servidor não enviar o tamanho do arquivo baixado (tal como no caso de uma conexão de FTP passivo), <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> sempre pode ser zero.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a configuração de um manipulador de eventos para o <xref:System.Net.WebClient.DownloadProgressChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-cpp[NCLWebClientAsync#19](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#19)]
+ [!code-csharp[NCLWebClientAsync#19](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#19)]
+ [!code-vb[NCLWebClientAsync#19](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#19)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

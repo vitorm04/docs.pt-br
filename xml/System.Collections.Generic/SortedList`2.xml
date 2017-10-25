@@ -1,0 +1,2312 @@
+<Type Name="SortedList&lt;TKey,TValue&gt;" FullName="System.Collections.Generic.SortedList&lt;TKey,TValue&gt;">
+  <TypeSignature Language="C#" Value="public class SortedList&lt;TKey,TValue&gt; : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;, System.Collections.IDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SortedList`2&lt;TKey, TValue&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;!TKey, !TValue&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyDictionary`2&lt;!TKey, !TValue&gt;, class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.SortedList`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Generic.System_DictionaryDebugView`2))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TKey">O tipo das chaves da coleção.</typeparam>
+    <typeparam name="TValue">O tipo dos valores da coleção.</typeparam>
+    <summary>Representa uma coleção de pares chave/valor que são classificados por chave com base na implementação de <see cref="T:System.Collections.Generic.IComparer`1" /> associada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.Generic.SortedList%602> classe genérica é uma matriz de pares chave/valor com O (log `n`) recuperação, onde n é o número de elementos no dicionário. Nesse ponto, ele é semelhante de <xref:System.Collections.Generic.SortedDictionary%602> classe genérica. As duas classes têm modelos de objeto semelhantes, e ambos possuem O (log `n`) recuperação. Onde as duas classes diferem está em uso de memória e velocidade de inserção e remoção:  
+  
+-   <xref:System.Collections.Generic.SortedList%602>usa menos memória do que <xref:System.Collections.Generic.SortedDictionary%602>.  
+  
+-   <xref:System.Collections.Generic.SortedDictionary%602>tem inserção mais rápida e operações de remoção de dados sem classificação, O (log `n`) em vez de O (`n`) para <xref:System.Collections.Generic.SortedList%602>.  
+  
+-   Se a lista é preenchida de uma só vez de dados classificados, <xref:System.Collections.Generic.SortedList%602> é mais rápido que <xref:System.Collections.Generic.SortedDictionary%602>.  
+  
+ Outra diferença entre o <xref:System.Collections.Generic.SortedDictionary%602> e <xref:System.Collections.Generic.SortedList%602> classes é que <xref:System.Collections.Generic.SortedList%602> dá suporte a recuperação indexada eficiente de chaves e valores nas coleções retornadas pelo <xref:System.Collections.Generic.SortedList%602.Keys%2A> e <xref:System.Collections.Generic.SortedList%602.Values%2A> propriedades. Não é necessário gerar novamente as listas quando as propriedades são acessadas, como as listas são wrappers apenas para as matrizes internas de chaves e valores. O código a seguir mostra o uso do <xref:System.Collections.Generic.SortedList%602.Values%2A> propriedade para a recuperação indexada de valores de uma lista ordenada de cadeias de caracteres:  
+  
+ [!code-cpp[Generic.SortedList#11](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/remarks.cpp#11)]
+ [!code-csharp[Generic.SortedList#11](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/remarks.cs#11)]
+ [!code-vb[Generic.SortedList#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/remarks.vb#11)]  
+  
+ <xref:System.Collections.Generic.SortedList%602>é implementado como uma matriz de pares chave/valor, classificados por chave.  Cada elemento pode ser recuperado como um <xref:System.Collections.Generic.KeyValuePair%602> objeto.  
+  
+ Objetos de chave devem ser imutáveis, desde que eles são usados como chaves no <xref:System.Collections.Generic.SortedList%602>. Todas as chaves em um <xref:System.Collections.Generic.SortedList%602> devem ser exclusivos. Uma chave não pode ser `null`, mas um valor possível, se o tipo de valores na lista, `TValue`, é um tipo de referência.  
+  
+ <xref:System.Collections.Generic.SortedList%602>requer uma implementação de comparador para classificar e executar comparações.  O comparador padrão <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se a chave de tipo `TKey` implementa <xref:System.IComparable%601?displayProperty=nameWithType> e usa essa implementação, se disponível.  Caso contrário, <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se a chave de tipo `TKey` implementa <xref:System.IComparable?displayProperty=nameWithType>.  Se a chave de tipo `TKey` não implementa a interface, você pode especificar um <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementação em uma sobrecarga de construtor que aceita um `comparer` parâmetro.  
+  
+ A capacidade de um <xref:System.Collections.Generic.SortedList%602> é o número de elementos de <xref:System.Collections.Generic.SortedList%602> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Generic.SortedList%602>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna. A capacidade pode ser diminuída chamando <xref:System.Collections.Generic.SortedList%602.TrimExcess%2A> ou definindo o <xref:System.Collections.Generic.SortedList%602.Capacity%2A> propriedade explicitamente. Reduzir a capacidade realoca a memória e copia todos os elementos de <xref:System.Collections.Generic.SortedList%602>.  
+  
+ Para grandes <xref:System.Collections.Generic.SortedList%602> objetos, você pode aumentar a capacidade máxima para 2 bilhões de elementos em um sistema de 64 bits definindo o `enabled` atributo do elemento de configuração para `true` no ambiente de tempo de execução.  
+  
+ O `foreach` instrução de linguagem c# (`for each` em C++, `For Each` no Visual Basic) retorna um objeto do tipo dos elementos na coleção. Desde que os elementos do <xref:System.Collections.Generic.SortedList%602> são pares chave/valor, o tipo de elemento não é o tipo de chave ou o tipo do valor. Em vez disso, o tipo de elemento é <xref:System.Collections.Generic.KeyValuePair%602>. Por exemplo:  
+  
+ [!code-cpp[Generic.SortedList#12](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/remarks.cpp#12)]
+ [!code-csharp[Generic.SortedList#12](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/remarks.cs#12)]
+ [!code-vb[Generic.SortedList#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/remarks.vb#12)]  
+  
+ O `foreach` instrução é um wrapper em torno de enumerador, que só permite ler, gravar não à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um vazio <xref:System.Collections.Generic.SortedList%602> de cadeias de caracteres com as chaves de cadeia de caracteres e usa o <xref:System.Collections.Generic.SortedList%602.Add%2A> método para adicionar alguns elementos. O exemplo demonstra que o <xref:System.Collections.Generic.SortedList%602.Add%2A> método lança um <xref:System.ArgumentException> ao tentar adicionar uma chave duplicada.  
+  
+ O exemplo usa o <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade (indexador em c#) para recuperar valores, demonstrando que um <xref:System.Collections.Generic.KeyNotFoundException> é lançada quando uma chave solicitada não está presente e mostrando que o valor associado com uma chave pode ser substituído.  
+  
+ O exemplo mostra como usar o <xref:System.Collections.Generic.SortedList%602.TryGetValue%2A> método como uma forma mais eficiente para recuperar valores, se um programa geralmente deve tentar valores de chave que não estão na lista classificada, e ele mostra como usar o <xref:System.Collections.Generic.SortedList%602.ContainsKey%2A> método para testar se uma chave existe antes de chamar o <c5/> método.  
+  
+ O exemplo mostra como enumerar as chaves e valores na lista classificada e como enumerar as chaves e valores usando apenas o <xref:System.Collections.Generic.SortedList%602.Keys%2A> propriedade e o <xref:System.Collections.Generic.SortedList%602.Values%2A> propriedade.  
+  
+ Por fim, o exemplo demonstra o <xref:System.Collections.Generic.SortedList%602.Remove%2A> método.  
+  
+ [!code-cpp[Generic.SortedList#1](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#1)]
+ [!code-csharp[Generic.SortedList#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#1)]
+ [!code-vb[Generic.SortedList#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Um <see cref="T:System.Collections.Generic.SortedList`2" /> pode dar suporte a vários leitores simultaneamente, desde que a coleção não é modificada.  Mesmo assim, enumerar através de uma coleção intrinsecamente não é um procedimento de thread-safe.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.SortedList`2" /> que está vazia, tem a capacidade inicial padrão e usa o <see cref="T:System.Collections.Generic.IComparer`1" /> padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as chaves em um <xref:System.Collections.Generic.SortedList%602> devem ser exclusivos de acordo com o comparador padrão.  
+  
+ Este construtor usa o valor padrão para a capacidade inicial igual a <xref:System.Collections.Generic.SortedList%602>. Para definir a capacidade inicial, use o <xref:System.Collections.Generic.SortedList%602.%23ctor%28System.Int32%29> construtor. Se o tamanho final da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Generic.SortedList%602>.  
+  
+ Este construtor usa o comparador padrão para `TKey`. Para especificar um comparador, use o <xref:System.Collections.Generic.SortedList%602.%23ctor%28System.Collections.Generic.IComparer%7B%600%7D%29> construtor. O comparador padrão <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se a chave de tipo `TKey` implementa <xref:System.IComparable%601?displayProperty=nameWithType> e usa essa implementação, se disponível.  Caso contrário, <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se a chave de tipo `TKey` implementa <xref:System.IComparable?displayProperty=nameWithType>.  Se a chave de tipo `TKey` não implementa a interface, você pode especificar um <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementação em uma sobrecarga de construtor que aceita um `comparer` parâmetro.  
+  
+ Este construtor é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um vazio <xref:System.Collections.Generic.SortedList%602> de cadeias de caracteres com as chaves de cadeia de caracteres e usa o <xref:System.Collections.Generic.SortedList%602.Add%2A> método para adicionar alguns elementos. O exemplo demonstra que o <xref:System.Collections.Generic.SortedList%602.Add%2A> método lança um <xref:System.ArgumentException> ao tentar adicionar uma chave duplicada.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.Generic.SortedList%602> classe.  
+  
+ [!code-cpp[Generic.SortedList#2](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#2)]
+ [!code-csharp[Generic.SortedList#2](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#2)]
+ [!code-vb[Generic.SortedList#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedList (System.Collections.Generic.IComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IComparer`1&lt;!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.#ctor(System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.Generic.IComparer`1" /> a ser usada ao comparar chaves.  
+  
+ -ou-  
+  
+ <see langword="null" /> para usar o padrão <see cref="T:System.Collections.Generic.Comparer`1" /> para o tipo da chave.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.SortedList`2" /> que está vazia, tem a capacidade inicial padrão e usa o <see cref="T:System.Collections.Generic.IComparer`1" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as chaves em um <xref:System.Collections.Generic.SortedList%602> devem ser exclusivos de acordo com o comparador especificado.  
+  
+ Este construtor usa o valor padrão para a capacidade inicial igual a <xref:System.Collections.Generic.SortedList%602>. Para definir a capacidade inicial, use o <xref:System.Collections.Generic.SortedList%602.%23ctor%28System.Int32%2CSystem.Collections.Generic.IComparer%7B%600%7D%29> construtor. Se o tamanho final da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Generic.SortedList%602>.  
+  
+ Este construtor é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma lista classificada com um comparador de maiusculas e minúsculas para a cultura atual. O exemplo adiciona quatro elementos, algumas com chaves em letras minúsculas e alguns com chaves de letras maiusculas. O exemplo, em seguida, tentar adicionar um elemento com uma chave que difere de uma chave existente somente por maiusculas, captura a exceção resultante e exibe uma mensagem de erro. Por fim, o exemplo exibe os elementos em ordem de classificação de maiusculas e minúsculas.  
+  
+ [!code-csharp[Generic.SortedList.ctor_IComp#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.ctor_IComp/CS/source.cs#1)]
+ [!code-vb[Generic.SortedList.ctor_IComp#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.ctor_IComp/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedList (System.Collections.Generic.IDictionary&lt;TKey,TValue&gt; dictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;!TKey, !TValue&gt; dictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">O <see cref="T:System.Collections.Generic.IDictionary`2" /> cujos elementos são copiados para o novo <see cref="T:System.Collections.Generic.SortedList`2" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Generic.SortedList`2" /> classe que contém os elementos copiados especificado <see cref="T:System.Collections.Generic.IDictionary`2" />tem capacidade suficiente para acomodar o número de elementos copiados e usa o padrão <see cref="T:System.Collections.Generic.IComparer`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as chaves em um <xref:System.Collections.Generic.SortedList%602> devem ser exclusivos de acordo com o padrão comparador; da mesma forma, cada chave na fonte `dictionary` também devem ser exclusivos de acordo com o comparador padrão.  
+  
+ A capacidade do novo <xref:System.Collections.Generic.SortedList%602> é definido como o número de elementos no `dictionary`, portanto, nenhum redimensionamento ocorre enquanto a lista é preenchida.  
+  
+ Este construtor usa o comparador padrão para `TKey`. Para especificar um comparador, use o <xref:System.Collections.Generic.SortedList%602.%23ctor%28System.Collections.Generic.IDictionary%7B%600%2C%601%7D%2CSystem.Collections.Generic.IComparer%7B%600%7D%29> construtor. O comparador padrão <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se a chave de tipo `TKey` implementa <xref:System.IComparable%601?displayProperty=nameWithType> e usa essa implementação, se disponível.  Caso contrário, <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se a chave de tipo `TKey` implementa <xref:System.IComparable?displayProperty=nameWithType>.  Se a chave de tipo `TKey` não implementa a interface, você pode especificar um <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementação em uma sobrecarga de construtor que aceita um `comparer` parâmetro.  
+  
+ Se os dados em `dictionary` são classificados, este construtor é um O (`n`) operação, onde `n` é o número de elementos em `dictionary`. Caso contrário, será um O (`n`*`n`) operação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar <xref:System.Collections.Generic.SortedList%602> para criar uma cópia classificada de informações em um <xref:System.Collections.Generic.Dictionary%602>, passando o <xref:System.Collections.Generic.Dictionary%602> para o <xref:System.Collections.Generic.SortedList%602.%23ctor%28System.Collections.Generic.IDictionary%7B%600%2C%601%7D%29> construtor.  
+  
+ [!code-csharp[Generic.SortedList.ctor_IDic#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.ctor_IDic/CS/source.cs#1)]
+ [!code-vb[Generic.SortedList.ctor_IDic#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.ctor_IDic/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dictionary" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dictionary" /> contém uma ou mais chaves duplicadas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedList (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número inicial de elementos que o <see cref="T:System.Collections.Generic.SortedList`2" /> pode conter.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Generic.SortedList`2" /> classe está vazio, tem a capacidade inicial especificada e usa o padrão <see cref="T:System.Collections.Generic.IComparer`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as chaves em um <xref:System.Collections.Generic.SortedList%602> devem ser exclusivos de acordo com o comparador padrão.  
+  
+ A capacidade de um <xref:System.Collections.Generic.SortedList%602> é o número de elementos que o <xref:System.Collections.Generic.SortedList%602> pode conter antes de redimensionar. Como os elementos são adicionados a um <xref:System.Collections.Generic.SortedList%602>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Generic.SortedList%602>.  
+  
+ A capacidade pode ser diminuída chamando <xref:System.Collections.Generic.SortedList%602.TrimExcess%2A> ou definindo o <xref:System.Collections.Generic.SortedList%602.Capacity%2A> propriedade explicitamente. Reduzir a capacidade realoca a memória e copia todos os elementos de <xref:System.Collections.Generic.SortedList%602>.  
+  
+ Este construtor usa o comparador padrão para `TKey`. Para especificar um comparador, use o <xref:System.Collections.Generic.SortedList%602.%23ctor%28System.Int32%2CSystem.Collections.Generic.IComparer%7B%600%7D%29> construtor. O comparador padrão <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se a chave de tipo `TKey` implementa <xref:System.IComparable%601?displayProperty=nameWithType> e usa essa implementação, se disponível.  Caso contrário, <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se a chave de tipo `TKey` implementa <xref:System.IComparable?displayProperty=nameWithType>.  Se a chave de tipo `TKey` não implementa a interface, você pode especificar um <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementação em uma sobrecarga de construtor que aceita um `comparer` parâmetro.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `capacity`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma lista classificada com uma capacidade inicial de 4 e o preenche com 4 entradas.  
+  
+ [!code-csharp[Generic.SortedList.ctor_Int32#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.ctor_Int32/CS/source.cs#1)]
+ [!code-vb[Generic.SortedList.ctor_Int32#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.ctor_Int32/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedList (System.Collections.Generic.IDictionary&lt;TKey,TValue&gt; dictionary, System.Collections.Generic.IComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;!TKey, !TValue&gt; dictionary, class System.Collections.Generic.IComparer`1&lt;!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.#ctor(System.Collections.Generic.IDictionary{`0,`1},System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">O <see cref="T:System.Collections.Generic.IDictionary`2" /> cujos elementos são copiados para o novo <see cref="T:System.Collections.Generic.SortedList`2" />.</param>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.Generic.IComparer`1" /> a ser usada ao comparar chaves.  
+  
+ -ou-  
+  
+ <see langword="null" /> para usar o padrão <see cref="T:System.Collections.Generic.Comparer`1" /> para o tipo da chave.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.SortedList`2" />, que contém os elementos copiados do <see cref="T:System.Collections.Generic.IDictionary`2" /> especificado, tem capacidade suficiente para acomodar o número de elementos copiados e usa o <see cref="T:System.Collections.Generic.IComparer`1" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as chaves em um <xref:System.Collections.Generic.SortedList%602> devem ser exclusivos de acordo com o especificado comparador; da mesma forma, cada chave na fonte `dictionary` também devem ser exclusivos de acordo com o comparador especificado.  
+  
+ A capacidade do novo <xref:System.Collections.Generic.SortedList%602> é definido como o número de elementos no `dictionary`, portanto, nenhum redimensionamento ocorre enquanto a lista é preenchida.  
+  
+ Se os dados em `dictionary` são classificados, este construtor é um O (`n`) operação, onde `n` é o número de elementos em `dictionary`. Caso contrário, será um O (`n`*`n`) operação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar <xref:System.Collections.Generic.SortedList%602> criar um maiusculas de minúsculas classificados cópia das informações em um maiusculas de minúsculas <xref:System.Collections.Generic.Dictionary%602>, passando o <xref:System.Collections.Generic.Dictionary%602> para o <xref:System.Collections.Generic.SortedList%602.%23ctor%28System.Collections.Generic.IDictionary%7B%600%2C%601%7D%2CSystem.Collections.Generic.IComparer%7B%600%7D%29> construtor. Neste exemplo, os comparadores maiusculas e minúsculas são para a cultura atual.  
+  
+ [!code-csharp[Generic.SortedList.ctor_IDicIComp#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.ctor_IDicIComp/CS/source.cs#1)]
+ [!code-vb[Generic.SortedList.ctor_IDicIComp#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.ctor_IDicIComp/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dictionary" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dictionary" /> contém uma ou mais chaves duplicadas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortedList (int capacity, System.Collections.Generic.IComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity, class System.Collections.Generic.IComparer`1&lt;!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.#ctor(System.Int32,System.Collections.Generic.IComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número inicial de elementos que o <see cref="T:System.Collections.Generic.SortedList`2" /> pode conter.</param>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.Generic.IComparer`1" /> a ser usada ao comparar chaves.  
+  
+ -ou-  
+  
+ <see langword="null" /> para usar o padrão <see cref="T:System.Collections.Generic.Comparer`1" /> para o tipo da chave.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.SortedList`2" /> que está vazia, tem a capacidade inicial especificada e usa o <see cref="T:System.Collections.Generic.IComparer`1" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as chaves em um <xref:System.Collections.Generic.SortedList%602> devem ser exclusivos de acordo com o comparador especificado.  
+  
+ A capacidade de um <xref:System.Collections.Generic.SortedList%602> é o número de elementos que o <xref:System.Collections.Generic.SortedList%602> pode conter antes de redimensionar. Como os elementos são adicionados a um <xref:System.Collections.Generic.SortedList%602>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Generic.SortedList%602>.  
+  
+ A capacidade pode ser diminuída chamando <xref:System.Collections.Generic.SortedList%602.TrimExcess%2A> ou definindo o <xref:System.Collections.Generic.SortedList%602.Capacity%2A> propriedade explicitamente. Reduzir a capacidade realoca a memória e copia todos os elementos de <xref:System.Collections.Generic.SortedList%602>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `capacity`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma lista classificada com uma capacidade inicial igual a 5 e um comparador de maiusculas e minúsculas para a cultura atual. O exemplo adiciona quatro elementos, algumas com chaves em letras minúsculas e alguns com chaves de letras maiusculas. O exemplo, em seguida, tentar adicionar um elemento com uma chave que difere de uma chave existente somente por maiusculas, captura a exceção resultante e exibe uma mensagem de erro. Por fim, o exemplo exibe os elementos em ordem de classificação de maiusculas e minúsculas.  
+  
+ [!code-csharp[Generic.SortedList.ctor_Int32IComp#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.ctor_Int32IComp/CS/source.cs#1)]
+ [!code-vb[Generic.SortedList.ctor_Int32IComp#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.ctor_Int32IComp/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.Add(`0,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser adicionada.</param>
+        <param name="value">O valor do elemento a ser adicionado. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Adiciona um elemento com a chave e o valor especificados ao <see cref="T:System.Collections.Generic.SortedList`2" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chave não pode ser `null`, mas um valor possível, se o tipo de valores na lista classificada, `TValue`, é um tipo de referência.  
+  
+ Você também pode usar o <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no <xref:System.Collections.Generic.SortedList%602>; por exemplo, `myCollection["myNonexistentKey"] = myValue`. No entanto, se a chave especificada já existe no <xref:System.Collections.Generic.SortedList%602>, a definição de <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.Generic.SortedList%602.Add%2A> método não modifica os elementos existentes.  
+  
+ Se <xref:System.Collections.Generic.SortedList%602.Count%2A> já for igual a <xref:System.Collections.Generic.SortedList%602.Capacity%2A>, a capacidade do <xref:System.Collections.Generic.SortedList%602> é aumentado, automaticamente realocando matriz interna, e os elementos existentes são copiados para a nova matriz antes de adicionar o novo elemento.  
+  
+ Esse método é um O (`n`) a operação de dados classificados, onde `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>. É um O (log `n`) se o novo elemento é adicionado ao final da lista de operação. Se a inserção faz com que um redimensionamento, a operação é O (`n`).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um vazio <xref:System.Collections.Generic.SortedList%602> de cadeias de caracteres com as chaves de cadeia de caracteres e usa o <xref:System.Collections.Generic.SortedList%602.Add%2A> método para adicionar alguns elementos. O exemplo demonstra que o <xref:System.Collections.Generic.SortedList%602.Add%2A> método lança um <xref:System.ArgumentException> ao tentar adicionar uma chave duplicada.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.Generic.SortedList%602> classe.  
+  
+ [!code-cpp[Generic.SortedList#2](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#2)]
+ [!code-csharp[Generic.SortedList#2](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#2)]
+ [!code-vb[Generic.SortedList#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Já existe um elemento com a mesma chave no <see cref="T:System.Collections.Generic.SortedList`2" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public int Capacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Capacity" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de elementos que o <see cref="T:System.Collections.Generic.SortedList`2" /> pode conter.</summary>
+        <value>O número de elementos que o <see cref="T:System.Collections.Generic.SortedList`2" /> pode conter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.SortedList%602.Capacity%2A>é o número de elementos que o <xref:System.Collections.Generic.SortedList%602> pode armazenar. <xref:System.Collections.Generic.SortedList%602.Count%2A>é o número de elementos que estão realmente no <xref:System.Collections.Generic.SortedList%602>.  
+  
+ <xref:System.Collections.Generic.SortedList%602.Capacity%2A>sempre é maior que ou igual a <xref:System.Collections.Generic.SortedList%602.Count%2A>. Se <xref:System.Collections.Generic.SortedList%602.Count%2A> excede <xref:System.Collections.Generic.SortedList%602.Capacity%2A> durante a adição de elementos, a capacidade é aumentada, automaticamente realocando a matriz interna antes de copiar os elementos antigos e adição de novos elementos.  
+  
+ A capacidade pode ser diminuída chamando <xref:System.Collections.Generic.SortedList%602.TrimExcess%2A> ou definindo o <xref:System.Collections.Generic.SortedList%602.Capacity%2A> propriedade explicitamente. Quando o valor de <xref:System.Collections.Generic.SortedList%602.Capacity%2A> é definido explicitamente, a matriz interna também seja realocada para acomodar a capacidade especificada.  
+  
+ Recuperar o valor dessa propriedade é uma operação de (1); configuração da propriedade é um O (`n`) operação, onde `n` é a nova capacidade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Collections.Generic.SortedList`2.Capacity" /> é definido como um valor menor que <see cref="P:System.Collections.Generic.SortedList`2.Count" />.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente disponível no sistema.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os elementos do <see cref="T:System.Collections.Generic.SortedList`2" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.SortedList%602.Count%2A>é definido como zero, e referências a outros objetos de elementos da coleção também são liberadas.  
+  
+ <xref:System.Collections.Generic.SortedList%602.Capacity%2A>permanece inalterado. Para redefinir a capacidade do <xref:System.Collections.Generic.SortedList%602>, chame <xref:System.Collections.Generic.SortedList%602.TrimExcess%2A> ou defina o <xref:System.Collections.Generic.SortedList%602.Capacity%2A> propriedade diretamente. Cortar vazio <xref:System.Collections.Generic.SortedList%602> define a capacidade do <xref:System.Collections.Generic.SortedList%602> à capacidade padrão.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comparer">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IComparer&lt;TKey&gt; Comparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IComparer`1&lt;!TKey&gt; Comparer" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.Comparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IComparer&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Collections.Generic.IComparer`1" /> para obter a lista classificada.</summary>
+        <value>O <see cref="T:System.IComparable`1" /> atual <see cref="T:System.Collections.Generic.SortedList`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.ContainsKey(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Collections.Generic.SortedList`2" />.</param>
+        <summary>Determina se a <see cref="T:System.Collections.Generic.SortedList`2" /> contém uma chave específica.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.SortedList`2" /> contiver um elemento com a chave especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(log `n`), em que `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Collections.Generic.SortedList%602.ContainsKey%2A> método para testar se uma chave existe antes de chamar o <xref:System.Collections.Generic.SortedList%602.Add%2A> método. Ele também mostra como usar o <xref:System.Collections.Generic.SortedList%602.TryGetValue%2A> método para recuperar valores, que é uma maneira eficiente para recuperar valores quando um programa tenta frequentemente chaves que não estão na lista classificada. Finalmente, ele mostra a maneira menos eficiente para testar se chaves existirem, usando o <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade (indexador em c#).  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.Generic.SortedList%602> classe.  
+  
+ [!code-cpp[Generic.SortedList#6](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#6)]
+ [!code-csharp[Generic.SortedList#6](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#6)]
+ [!code-vb[Generic.SortedList#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#6)]  
+[!code-cpp[Generic.SortedList#5](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#5)]
+[!code-csharp[Generic.SortedList#5](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#5)]
+[!code-vb[Generic.SortedList#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#5)]  
+[!code-cpp[Generic.SortedList#4](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#4)]
+[!code-csharp[Generic.SortedList#4](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#4)]
+[!code-vb[Generic.SortedList#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsValue">
+      <MemberSignature Language="C#" Value="public bool ContainsValue (TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsValue(!TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.ContainsValue(`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser localizado na <see cref="T:System.Collections.Generic.SortedList`2" />. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Determinará se o <see cref="T:System.Collections.Generic.SortedList`2" /> contiver um valor específico.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.SortedList`2" /> contiver um elemento com o valor especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método determina a igualdade usando o comparador padrão <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> para o tipo de valor `TValue`.  <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>verifica se o valor do tipo `TValue` implementa <xref:System.IComparable%601?displayProperty=nameWithType> e usa essa implementação, se disponível.  Caso contrário, <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se o valor do tipo `TValue` implementa <xref:System.IComparable?displayProperty=nameWithType>.  Se o valor do tipo `TValue` implementa a interface, esse método usa <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Esse método executa uma pesquisa linear; Portanto, o tempo médio de execução é proporcional ao <xref:System.Collections.Generic.SortedList%602.Count%2A>. Ou seja, esse método é um O (`n`) operação, onde `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pares chave-valor contidos no <see cref="T:System.Collections.Generic.SortedList`2" />.</summary>
+        <value>O número de pares chave-valor contidos no <see cref="T:System.Collections.Generic.SortedList`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.SortedList%602.Capacity%2A>é o número de elementos que o <xref:System.Collections.Generic.SortedList%602> pode armazenar. <xref:System.Collections.Generic.SortedList%602.Count%2A>é o número de elementos que estão realmente no <xref:System.Collections.Generic.SortedList%602>.  
+  
+ <xref:System.Collections.Generic.SortedList%602.Capacity%2A>sempre é maior que ou igual a <xref:System.Collections.Generic.SortedList%602.Count%2A>. Se <xref:System.Collections.Generic.SortedList%602.Count%2A> excede <xref:System.Collections.Generic.SortedList%602.Capacity%2A> durante a adição de elementos, a capacidade é aumentada, automaticamente realocando a matriz interna antes de copiar os elementos antigos e adição de novos elementos.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do <see cref="T:System.Collections.Generic.SortedList`2" />.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerator`1" /> do tipo <see cref="T:System.Collections.Generic.KeyValuePair`2" /> para <see cref="T:System.Collections.Generic.SortedList`2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ O dicionário é mantido em uma ordem classificada, usando uma árvore interna. Cada elemento novo é posicionado na posição de classificação correta e a árvore é ajustada para manter a ordem de classificação, sempre que um elemento seja removido. Durante a enumeração, a ordem de classificação é mantida.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. Nesta posição, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A>Retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> retornar `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> está indefinido. Não é possível definir <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o primeiro elemento da coleção novamente; você deve criar uma nova instância de enumerador em vez disso.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOfKey">
+      <MemberSignature Language="C#" Value="public int IndexOfKey (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOfKey(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.IndexOfKey(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Collections.Generic.SortedList`2" />.</param>
+        <summary>Procura a chave especificada e retorna o índice baseado em zero em toda a <see cref="T:System.Collections.Generic.SortedList`2" />.</summary>
+        <returns>O índice baseado em zero de <paramref name="key" /> em toda a <see cref="T:System.Collections.Generic.SortedList`2" />, se encontrada; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa uma pesquisa binária; Portanto, esse método é um O (log `n`) operação, onde `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOfValue">
+      <MemberSignature Language="C#" Value="public int IndexOfValue (TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOfValue(!TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.IndexOfValue(`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser localizado na <see cref="T:System.Collections.Generic.SortedList`2" />.  O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Procura o valor especificado e retorna o índice baseado em zero da primeira ocorrência dentro de toda a <see cref="T:System.Collections.Generic.SortedList`2" />.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de <paramref name="value" /> em todo o <see cref="T:System.Collections.Generic.SortedList`2" />, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método determina a igualdade usando o comparador padrão <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> para o tipo de valor `TValue`.  <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>verifica se o valor do tipo `TValue` implementa <xref:System.IComparable%601?displayProperty=nameWithType> e usa essa implementação, se disponível.  Caso contrário, <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> verifica se o valor do tipo `TValue` implementa <xref:System.IComparable?displayProperty=nameWithType>.  Se o valor do tipo `TValue` implementa a interface, esse método usa <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Esse método executa uma pesquisa linear; Portanto, o tempo médio de execução é proporcional ao <xref:System.Collections.Generic.SortedList%602.Count%2A>. Ou seja, esse método é um O (`n`) operação, onde `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TValue this[TKey key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue Item(!TKey)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.Item(`0)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave cujo valor será obtido ou definido.</param>
+        <summary>Obtém ou define o valor associado à chave especificada.</summary>
+        <value>O valor associado à chave especificada. Se a chave especificada não for localizada, uma operação get lançará um <see cref="T:System.Collections.Generic.KeyNotFoundException" /> e uma operação de conjuntos criará um novo elemento com a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[key]`.  
+  
+ Uma chave não pode ser `null`, mas um valor possível, se o tipo de valores na lista, `TValue`, é um tipo de referência.  
+  
+ Se a chave não for encontrada quando um valor é recuperado, <xref:System.Collections.Generic.KeyNotFoundException> é gerada. Se a chave não for encontrada quando um valor está sendo definido, a chave e valor são adicionados.  
+  
+ Você também pode usar o <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no <xref:System.Collections.Generic.SortedList%602>; por exemplo, `myCollection["myNonexistentKey"] = myValue`. No entanto, se a chave especificada já existe no <xref:System.Collections.Generic.SortedList%602>, a definição de <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.Generic.SortedList%602.Add%2A> método não modifica os elementos existentes.  
+  
+ A linguagem c# usa a palavra-chave para definir os indexadores em vez de implementar o <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade. Visual Basic implementa <xref:System.Collections.Generic.SortedList%602.Item%2A> como uma propriedade padrão, que fornece a mesma funcionalidade de indexação.  
+  
+ Recuperar o valor dessa propriedade é um O (log `n`) operação, onde n é <xref:System.Collections.Generic.SortedList%602.Count%2A>. Configuração da propriedade é um O (log `n`) operação se a chave já está no <xref:System.Collections.Generic.SortedList%602>. Se a chave não estiver na lista, a configuração da propriedade é um O (`n`) a operação de dados classificados e O (log `n`) se o novo elemento é adicionado ao final da lista. Se a inserção faz com que um redimensionamento, a operação é O (`n`).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade (indexador em c#) para recuperar valores, demonstrando que um <xref:System.Collections.Generic.KeyNotFoundException> é lançada quando uma chave solicitada não está presente e mostrando que o valor associado com uma chave pode ser substituído.  
+  
+ O exemplo também mostra como usar o <xref:System.Collections.Generic.SortedList%602.TryGetValue%2A> método como uma forma mais eficiente para recuperar valores, se um programa geralmente deve tentar valores de chave que não estão na lista classificada.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.Generic.SortedList%602> classe.  
+  
+ [!code-cpp[Generic.SortedList#3](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#3)]
+ [!code-csharp[Generic.SortedList#3](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#3)]
+ [!code-vb[Generic.SortedList#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#3)]  
+[!code-cpp[Generic.SortedList#4](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#4)]
+[!code-csharp[Generic.SortedList#4](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#4)]
+[!code-vb[Generic.SortedList#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#4)]  
+[!code-cpp[Generic.SortedList#5](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#5)]
+[!code-csharp[Generic.SortedList#5](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#5)]
+[!code-vb[Generic.SortedList#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">A propriedade é recuperada e <paramref name="key" /> não existe na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;TKey&gt; Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;!TKey&gt; Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que contém as chaves no <see cref="T:System.Collections.Generic.SortedList`2" />, na ordem de classificação.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IList`1" /> que contém as chaves no <see cref="T:System.Collections.Generic.SortedList`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem das chaves no <xref:System.Collections.Generic.IList%601> é o mesmo que a ordem no <xref:System.Collections.Generic.SortedList%602>.  
+  
+ Retornado <xref:System.Collections.Generic.IList%601> não é uma cópia estática; em vez disso, o <xref:System.Collections.Generic.IList%601> refere-se novamente para as chaves no original <xref:System.Collections.Generic.SortedList%602>. Portanto, as alterações para o <xref:System.Collections.Generic.SortedList%602> continuar sejam refletidas no <xref:System.Collections.Generic.IList%601>.  
+  
+ A coleção retornada pelo <xref:System.Collections.Generic.SortedList%602.Keys%2A> propriedade fornece uma maneira eficiente de recuperar chaves de índice. Não é necessário gerar a lista quando a propriedade é acessada, pois a lista é apenas um wrapper para a matriz interna de chaves. O código a seguir mostra o uso do <xref:System.Collections.Generic.SortedList%602.Keys%2A> propriedade para a recuperação indexada das chaves de uma lista ordenada de elementos com chaves de cadeia de caracteres:  
+  
+ [!code-cpp[Generic.SortedList#11](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/remarks.cpp#11)]
+ [!code-csharp[Generic.SortedList#11](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/remarks.cs#11)]
+ [!code-vb[Generic.SortedList#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/remarks.vb#11)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como enumerar as chaves usando a lista classificada de <xref:System.Collections.Generic.SortedList%602.Keys%2A> propriedade e como enumerar as chaves e valores na lista classificada.  
+  
+ O exemplo também mostra como usar o <xref:System.Collections.Generic.SortedList%602.Keys%2A> propriedade para a recuperação indexada eficiente de chaves.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte <xref:System.Collections.Generic.SortedList%602>.  
+  
+ [!code-cpp[Generic.SortedList#9](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#9)]
+ [!code-csharp[Generic.SortedList#9](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#9)]
+ [!code-vb[Generic.SortedList#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#9)]  
+[!code-cpp[Generic.SortedList#7](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#7)]
+[!code-csharp[Generic.SortedList#7](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#7)]
+[!code-vb[Generic.SortedList#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser removido.</param>
+        <summary>Remove o elemento com a chave especificada do <see cref="T:System.Collections.Generic.SortedList`2" />.</summary>
+        <returns>
+          <see langword="true" /> se o elemento for removido com êxito; caso contrário, <see langword="false" />.  Esse método também retornará <see langword="false" /> se <paramref name="key" /> não tiver sido encontrado no <see cref="T:System.Collections.Generic.SortedList`2" /> original.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa uma pesquisa binária; No entanto, os elementos são movidos para preencher o ponto aberto, esse método é um O (`n`) operação, onde `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como remover um par chave/valor da lista classificada usando o <xref:System.Collections.Generic.SortedList%602.Remove%2A> método.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.Generic.SortedList%602> classe.  
+  
+ [!code-cpp[Generic.SortedList#10](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#10)]
+ [!code-csharp[Generic.SortedList#10](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#10)]
+ [!code-vb[Generic.SortedList#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento a ser removido.</param>
+        <summary>Remove o elemento no índice especificado do <see cref="T:System.Collections.Generic.SortedList`2" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa uma pesquisa binária; No entanto, os elementos são movidos para preencher o ponto aberto, esse método é um O (`n`) operação, onde `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Collections.Generic.SortedList`2.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;.Add (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt; keyValuePair);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Add(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt; keyValuePair) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#Add(System.Collections.Generic.KeyValuePair{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyValuePair" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keyValuePair">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Contains">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;.Contains (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt; keyValuePair);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Contains(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt; keyValuePair) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#Contains(System.Collections.Generic.KeyValuePair{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyValuePair" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keyValuePair">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;.CopyTo (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.CopyTo(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="arrayIndex">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;.Remove (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt; keyValuePair);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Remove(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt; keyValuePair) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#Remove(System.Collections.Generic.KeyValuePair{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyValuePair" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keyValuePair">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Keys">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.ICollection&lt;TKey&gt; System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;!TKey&gt; System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#Generic#IDictionary&lt;TKey,TValue&gt;#Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Values">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.ICollection&lt;TValue&gt; System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;!TValue&gt; System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#Generic#IDictionary&lt;TKey,TValue&gt;#Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#Generic#IEnumerable&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Keys">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;TKey&gt; System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TKey&gt; System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#Generic#IReadOnlyDictionary&lt;TKey,TValue&gt;#Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Values">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;TValue&gt; System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TValue&gt; System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#Generic#IReadOnlyDictionary&lt;TKey,TValue&gt;#Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ICollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="arrayIndex">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos do <see cref="T:System.Collections.ICollection" /> para um <see cref="T:System.Array" />, começando em um determinado índice <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se o tipo da fonte de <xref:System.Collections.ICollection> não pode ser convertido automaticamente para o tipo de destino `array`, as implementações não genérica de <xref:System.Collections.ICollection.CopyTo%2A?displayProperty=nameWithType> gerar <xref:System.InvalidCastException>, enquanto as implementações genéricas lançam <xref:System.ArgumentException>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O <paramref name="array" /> não tem indexação baseada em zero.  
+  
+ -ou-  
+  
+ O número de elementos na origem <see cref="T:System.Collections.ICollection" /> é maior do que o espaço disponível de <paramref name="arrayIndex" /> até o final do <paramref name="array" /> de destino.  
+  
+ -ou-  
+  
+ O tipo do <see cref="T:System.Collections.ICollection" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.ICollection" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.  Na implementação padrão de <see cref="T:System.Collections.Generic.SortedList`2" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ O <xref:System.Collections.ICollection.SyncRoot%2A> propriedade retorna um objeto que pode ser usado para sincronizar o acesso a <xref:System.Collections.ICollection>. A sincronização é eficaz somente se todos os threads bloquear este objeto antes de acessar a coleção.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.  Na implementação padrão da <see cref="T:System.Collections.Generic.SortedList`2" />, essa propriedade sempre retorna a instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração. Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ O <xref:System.Collections.ICollection.SyncRoot%2A> propriedade retorna um objeto que pode ser usado para sincronizar o acesso a <xref:System.Collections.ICollection>. A sincronização é eficaz somente se todos os threads bloquear este objeto antes de acessar a coleção. O código a seguir mostra o uso do <xref:System.Collections.ICollection.SyncRoot%2A> propriedade para c#, C++ e Visual Basic.  
+  
+```csharp  
+ICollection ic = ...;  
+lock (ic.SyncRoot) {  
+   // Access the collection.  
+}  
+```  
+  
+```vb  
+Dim ic As ICollection = ...  
+SyncLock ic.SyncRoot  
+   ' Access the collection.  
+End SyncLock  
+```  
+  
+```cpp#  
+ICollection^ ic = ...;  
+try {  
+   Monitor::Enter(ic->SyncRoot);  
+   // Access the collection.  
+}  
+finally {  
+   Monitor::Exit(ic->SyncRoot);  
+}  
+```  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Add">
+      <MemberSignature Language="C#" Value="void IDictionary.Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#IDictionary#Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">O <see cref="T:System.Object" /> a ser usado como chave do elemento a ser adicionado.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser usado como valor do elemento a ser adicionado.</param>
+        <summary>Adiciona um elemento com a chave fornecida e o valor para o <see cref="T:System.Collections.IDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode usar o <xref:System.Collections.IDictionary.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no dicionário; por exemplo, `myCollection["myNonexistentKey"] = myValue`. No entanto, se a chave especificada já existe no dicionário, configurando o <xref:System.Collections.IDictionary.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.IDictionary.Add%2A> método não modifica os elementos existentes.  
+  
+ Esse método é um O (`n`) a operação de dados classificados, onde `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>. É um O (log `n`) se o novo elemento é adicionado ao final da lista de operação. Se a inserção faz com que um redimensionamento, a operação é O (`n`).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Collections.Generic.SortedList%602> classe por meio de <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface. O exemplo de código cria um vazio <xref:System.Collections.Generic.SortedList%602> de cadeias de caracteres com as chaves de cadeia de caracteres e usa o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Add%2A> método para adicionar alguns elementos. O exemplo demonstra que o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Add%2A> método lança um <xref:System.ArgumentException> ao tentar adicionar uma chave duplicada ou uma chave ou valor de tipo de dados errado for fornecido.  
+  
+ O exemplo de código demonstra o uso de vários outros membros de <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface.  
+  
+ [!code-csharp[Generic.SortedList.IDictionary#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#1)]
+ [!code-vb[Generic.SortedList.IDictionary#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="key" /> é de um tipo que não é atribuível ao tipo de chave <paramref name="TKey" /> do <see cref="T:System.Collections.IDictionary" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />é de um tipo que não é atribuível ao tipo de valor <paramref name="TValue" /> do <see cref="T:System.Collections.IDictionary" />.  
+  
+ -ou-  
+  
+ Já existe um elemento com a mesma chave no <see cref="T:System.Collections.IDictionary" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Contains">
+      <MemberSignature Language="C#" Value="bool IDictionary.Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IDictionary.Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#IDictionary#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Collections.IDictionary" />.</param>
+        <summary>Determina se o <see cref="T:System.Collections.IDictionary" /> contém um elemento com a chave especificada.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.IDictionary" /> contiver um elemento com a chave; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `false` se `key` é de um tipo que não é atribuível ao tipo de chave `TKey` do <xref:System.Collections.Generic.SortedList%602>.  
+  
+ Este método é uma operação O(log `n`), em que `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Contains%2A> método o <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface com um <xref:System.Collections.Generic.SortedList%602>. O exemplo demonstra que o método retorna `false` se uma chave de tipo de dados errado for fornecida.  
+  
+ O exemplo de código faz parte de um exemplo maior, inclusive saída, fornecido para o método <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Add%2A>.  
+  
+ [!code-csharp[Generic.SortedList.IDictionary#31](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#31)]
+ [!code-vb[Generic.SortedList.IDictionary#31](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#31)]  
+[!code-csharp[Generic.SortedList.IDictionary#6](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#6)]
+[!code-vb[Generic.SortedList.IDictionary#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#6)]  
+[!code-csharp[Generic.SortedList.IDictionary#32](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#32)]
+[!code-vb[Generic.SortedList.IDictionary#32](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IDictionaryEnumerator IDictionary.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator System.Collections.IDictionary.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#IDictionary#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IDictionaryEnumerator" /> para o <see cref="T:System.Collections.IDictionary" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IDictionaryEnumerator" /> para o <see cref="T:System.Collections.IDictionary" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IDictionaryEnumerator.Entry%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IDictionaryEnumerator.Entry%2A>.  
+  
+ <xref:System.Collections.IDictionaryEnumerator.Entry%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IDictionaryEnumerator.Entry%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IDictionaryEnumerator.Entry%2A> está indefinido. Para definir <xref:System.Collections.IDictionaryEnumerator.Entry%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como enumerar os pares chave/valor na lista classificada, usando o `foreach` instrução (`For Each` no Visual Basic, `for each` em C++), que oculta o uso do enumerador. Em particular, observe que o enumerador para o <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface retorna <xref:System.Collections.DictionaryEntry> objetos em vez de <xref:System.Collections.Generic.KeyValuePair%602> objetos.  
+  
+ O exemplo de código faz parte de um exemplo maior, inclusive saída, fornecido para o método <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Add%2A>.  
+  
+ [!code-csharp[Generic.SortedList.IDictionary#31](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#31)]
+ [!code-vb[Generic.SortedList.IDictionary#31](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#31)]  
+[!code-csharp[Generic.SortedList.IDictionary#7](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#7)]
+[!code-vb[Generic.SortedList.IDictionary#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#7)]  
+[!code-csharp[Generic.SortedList.IDictionary#32](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#32)]
+[!code-vb[Generic.SortedList.IDictionary#32](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#IDictionary#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.IDictionary" /> tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.IDictionary" /> tiver um valor fixo; caso contrário, <see langword="false" />.  Na implementação padrão de <see cref="T:System.Collections.Generic.SortedList`2" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção com um tamanho fixo não permite a adição ou a remoção de elementos após a coleção ser criada, mas permite a modificação de elementos existentes.  
+  
+ Uma coleção com um tamanho fixo é simplesmente uma coleção com um wrapper que impede a adição e a remoção de elementos; por isso, caso as alterações sejam feitas na coleção subjacente, inclusive a adição ou a remoção de elementos, a coleção de tamanho fixo reflete essas alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#IDictionary#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.IDictionary" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.IDictionary" /> for somente leitura; caso contrário, <see langword="false" />.  Na implementação padrão de <see cref="T:System.Collections.Generic.SortedList`2" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção que seja somente leitura não permite a adição, a remoção ou a modificação de elementos após a coleção ser criada.  
+  
+ Uma coleção somente leitura é apenas uma coleção com um wrapper que impede a modificação da coleção; por isso, caso as alterações sejam feitas na coleção subjacente, a coleção somente leitura reflete as alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IDictionary.Item[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IDictionary.Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#IDictionary#Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser obtida ou adicionada.</param>
+        <summary>Obtém ou define o elemento com a chave especificada.</summary>
+        <value>O elemento com a chave especificada, ou <see langword="null" /> se <paramref name="key" /> não está no dicionário ou <paramref name="key" /> é de um tipo que não é atribuível ao tipo de chave <paramref name="TKey" /> do <see cref="T:System.Collections.Generic.SortedList`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna `null` se `key` é de um tipo que não é atribuível ao tipo de chave `TKey` do <xref:System.Collections.Generic.SortedList%602>.  
+  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[key]`.  
+  
+ Você também pode usar o <xref:System.Collections.IDictionary.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no dicionário; por exemplo, `myCollection["myNonexistentKey"] = myValue`. No entanto, se a chave especificada já existe no dicionário, configurando o <xref:System.Collections.IDictionary.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.IDictionary.Add%2A> método não modifica os elementos existentes.  
+  
+ A linguagem c# usa o [isso](~/docs/csharp/language-reference/keywords/this.md) palavra-chave para definir os indexadores em vez de implementar o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Item%2A> propriedade. Visual Basic implementa <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Item%2A> como uma propriedade padrão, que fornece a mesma funcionalidade de indexação.  
+  
+ Recuperar o valor dessa propriedade é um O (log `n`) operação, onde n é <xref:System.Collections.Generic.SortedList%602.Count%2A>. Configuração da propriedade é um O (log `n`) operação se a chave já está no <xref:System.Collections.Generic.SortedList%602>. Se a chave não estiver na lista, a configuração da propriedade é um O (`n`) a operação de dados classificados e O (log `n`) se o novo elemento é adicionado ao final da lista. Se a inserção faz com que um redimensionamento, a operação é O (`n`).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Item%2A> propriedade (indexador em c#) da <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface com um <xref:System.Collections.Generic.SortedList%602>e diferenças entre a propriedade de <xref:System.Collections.Generic.SortedList%602.Item%2A?displayProperty=nameWithType> propriedade.  
+  
+ O exemplo mostra que, como o <xref:System.Collections.Generic.SortedList%602.Item%2A?displayProperty=nameWithType> propriedade, o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Item%2A?displayProperty=nameWithType> propriedade pode alterar o valor associado com uma chave existente e pode ser usada para adicionar um novo par de chave/valor se a chave especificada não está na lista classificada. O exemplo também mostra que, ao contrário de <xref:System.Collections.Generic.SortedList%602.Item%2A?displayProperty=nameWithType> propriedade, o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Item%2A?displayProperty=nameWithType> propriedade não lança uma exceção se `key` não estiver na lista classificada, retornando uma referência nula em vez disso. Por fim, o exemplo demonstra que obtendo o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Item%2A?displayProperty=nameWithType> propriedade retorna uma referência nula se `key` não é do tipo de dados correto e que a configuração da propriedade gera uma exceção se `key` não é do tipo de dados correto.  
+  
+ O exemplo de código faz parte de um exemplo maior, inclusive saída, fornecido para o método <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Add%2A>.  
+  
+ [!code-csharp[Generic.SortedList.IDictionary#31](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#31)]
+ [!code-vb[Generic.SortedList.IDictionary#31](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#31)]  
+[!code-csharp[Generic.SortedList.IDictionary#3](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#3)]
+[!code-vb[Generic.SortedList.IDictionary#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#3)]  
+[!code-csharp[Generic.SortedList.IDictionary#4](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#4)]
+[!code-vb[Generic.SortedList.IDictionary#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#4)]  
+[!code-csharp[Generic.SortedList.IDictionary#32](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#32)]
+[!code-vb[Generic.SortedList.IDictionary#32](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um valor está sendo atribuído e <paramref name="key" /> é de um tipo que não é atribuível ao tipo de chave <paramref name="TKey" /> do <see cref="T:System.Collections.Generic.SortedList`2" />.  
+  
+ -ou-  
+  
+ Um valor está sendo atribuído e <paramref name="value" /> é de um tipo que não é atribuível ao tipo de valor <paramref name="TValue" /> do <see cref="T:System.Collections.Generic.SortedList`2" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Keys">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection System.Collections.IDictionary.Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection System.Collections.IDictionary.Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#IDictionary#Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> que contém as chaves do <see cref="T:System.Collections.IDictionary" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém as chaves do <see cref="T:System.Collections.IDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem das chaves no <xref:System.Collections.ICollection> é o mesmo que a ordem no <xref:System.Collections.Generic.SortedList%602>.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Collections.IDictionary.Keys%2A> propriedade o <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface com um <xref:System.Collections.Generic.SortedDictionary%602>, para listar as chaves no dicionário. O exemplo também mostra como enumerar os pares chave/valor na lista classificada; Observe que o enumerador para o <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface retorna <xref:System.Collections.DictionaryEntry> objetos em vez de <xref:System.Collections.Generic.KeyValuePair%602> objetos.  
+  
+ O exemplo de código faz parte de um exemplo maior, inclusive saída, fornecido para o método <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Add%2A>.  
+  
+ [!code-csharp[Generic.SortedList.IDictionary#31](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#31)]
+ [!code-vb[Generic.SortedList.IDictionary#31](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#31)]  
+[!code-csharp[Generic.SortedList.IDictionary#9](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#9)]
+[!code-vb[Generic.SortedList.IDictionary#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#9)]  
+[!code-csharp[Generic.SortedList.IDictionary#7](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#7)]
+[!code-vb[Generic.SortedList.IDictionary#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#7)]  
+[!code-csharp[Generic.SortedList.IDictionary#32](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#32)]
+[!code-vb[Generic.SortedList.IDictionary#32](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Remove">
+      <MemberSignature Language="C#" Value="void IDictionary.Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#IDictionary#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser removido.</param>
+        <summary>Remove o elemento com a chave especificada do <see cref="T:System.Collections.IDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa uma pesquisa binária; No entanto, os elementos são movidos para preencher o ponto aberto, esse método é um O (`n`) operação, onde `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Remove%2A> do <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface com um <xref:System.Collections.Generic.SortedList%602>.  
+  
+ O exemplo de código faz parte de um exemplo maior, inclusive saída, fornecido para o método <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Add%2A>.  
+  
+ [!code-csharp[Generic.SortedList.IDictionary#31](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#31)]
+ [!code-vb[Generic.SortedList.IDictionary#31](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#31)]  
+[!code-csharp[Generic.SortedList.IDictionary#10](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#10)]
+[!code-vb[Generic.SortedList.IDictionary#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#10)]  
+[!code-csharp[Generic.SortedList.IDictionary#32](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#32)]
+[!code-vb[Generic.SortedList.IDictionary#32](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Values">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection System.Collections.IDictionary.Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection System.Collections.IDictionary.Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.System#Collections#IDictionary#Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> que contém os valores no <see cref="T:System.Collections.IDictionary" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém os valores de <see cref="T:System.Collections.IDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores a <xref:System.Collections.ICollection> é o mesmo que a ordem no <xref:System.Collections.Generic.SortedList%602>.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Values%2A> propriedade o <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface com um <xref:System.Collections.Generic.SortedList%602>, para listar os valores na lista classificada. O exemplo também mostra como enumerar os pares chave/valor na lista classificada; Observe que o enumerador para o <xref:System.Collections.IDictionary?displayProperty=nameWithType> interface retorna <xref:System.Collections.DictionaryEntry> objetos em vez de <xref:System.Collections.Generic.KeyValuePair%602> objetos.  
+  
+ O exemplo de código faz parte de um exemplo maior, inclusive saída, fornecido para o método <xref:System.Collections.Generic.SortedList%602.System%23Collections%23IDictionary%23Add%2A>.  
+  
+ [!code-csharp[Generic.SortedList.IDictionary#31](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#31)]
+ [!code-vb[Generic.SortedList.IDictionary#31](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#31)]  
+[!code-csharp[Generic.SortedList.IDictionary#8](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#8)]
+[!code-vb[Generic.SortedList.IDictionary#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#8)]  
+[!code-csharp[Generic.SortedList.IDictionary#7](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#7)]
+[!code-vb[Generic.SortedList.IDictionary#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#7)]  
+[!code-csharp[Generic.SortedList.IDictionary#32](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList.IDictionary/CS/source.cs#32)]
+[!code-vb[Generic.SortedList.IDictionary#32](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList.IDictionary/VB/source.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera em uma coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimExcess">
+      <MemberSignature Language="C#" Value="public void TrimExcess ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrimExcess() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.TrimExcess" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Definirá a capacidade para o número real de elementos no <see cref="T:System.Collections.Generic.SortedList`2" />, se esse número for menor que 90% da capacidade atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para minimizar a memória da coleção sobrecarga se nenhum elemento novo será adicionado à coleção. O custo de realocar e copiar uma grande <xref:System.Collections.Generic.SortedList%602> pode ser considerável, no entanto, para que o <xref:System.Collections.Generic.SortedList%602.TrimExcess%2A> método não fará nada se a lista estiver em mais de 90% da capacidade. Isso evita a incorrer em um custo de realocação grande para um ganho relativamente pequeno.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+ Para redefinir um <xref:System.Collections.Generic.SortedList%602> para seu estado inicial, chame o <xref:System.Collections.Generic.SortedList%602.Clear%2A> método antes de chamar <xref:System.Collections.Generic.SortedList%602.TrimExcess%2A> método. Cortar vazio <xref:System.Collections.Generic.SortedList%602> define a capacidade do <xref:System.Collections.Generic.SortedList%602> à capacidade padrão.  
+  
+ A capacidade também pode ser definida usando o <xref:System.Collections.Generic.SortedList%602.Capacity%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (TKey key, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(!TKey key, [out] !TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedList`2.TryGetValue(`0,`1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave cujo valor será obtido.</param>
+        <param name="value">Quando este método retorna, o valor associado à chave especificada, se a chave for encontrada; Caso contrário, o valor padrão para o tipo do <c>valor</c> parâmetro. Este parâmetro é passado não inicializado.</param>
+        <summary>Obtém o valor associado à chave especificada.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.SortedList`2" /> contiver um elemento com a chave especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método combina a funcionalidade do <xref:System.Collections.Generic.SortedList%602.ContainsKey%2A> método e o <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade.  
+  
+ Se a chave não for encontrada, o `value` parâmetro obtém o valor padrão apropriado para o tipo de valor `TValue`; por exemplo, zero (0) para tipos de inteiros, `false` para tipos boolianos, e `null` para tipos de referência.  
+  
+ Esse método executa uma pesquisa binária; Portanto, esse método é um O (log `n`) operação, onde `n` é <xref:System.Collections.Generic.SortedList%602.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo mostra como usar o <xref:System.Collections.Generic.SortedList%602.TryGetValue%2A> método como uma forma mais eficiente para recuperar os valores em um programa que tenta frequentemente chaves que não estão na lista classificada. Para contraste, o exemplo também mostra como o <xref:System.Collections.Generic.SortedList%602.Item%2A> propriedade (indexador em c#) lança exceções ao tentar recuperar as chaves que não existentes.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.Generic.SortedList%602> classe.  
+  
+ [!code-cpp[Generic.SortedList#5](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#5)]
+ [!code-csharp[Generic.SortedList#5](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#5)]
+ [!code-vb[Generic.SortedList#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#5)]  
+[!code-cpp[Generic.SortedList#4](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#4)]
+[!code-csharp[Generic.SortedList#4](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#4)]
+[!code-vb[Generic.SortedList#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;TValue&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;!TValue&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedList`2.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que contém os valores no <see cref="T:System.Collections.Generic.SortedList`2" />.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IList`1" /> que contém os valores no <see cref="T:System.Collections.Generic.SortedList`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores a <xref:System.Collections.Generic.IList%601> é o mesmo que a ordem no <xref:System.Collections.Generic.SortedList%602>.  
+  
+ Retornado <xref:System.Collections.Generic.IList%601> não é uma cópia estática; em vez disso, o <xref:System.Collections.Generic.IList%601> refere-se novamente para os valores originais <xref:System.Collections.Generic.SortedList%602>. Portanto, as alterações para o <xref:System.Collections.Generic.SortedList%602> continuar sejam refletidas no <xref:System.Collections.Generic.IList%601>.  
+  
+ A coleção retornada pelo <xref:System.Collections.Generic.SortedList%602.Values%2A> propriedade fornece uma maneira eficiente para recuperar valores por índice. Não é necessário gerar a lista quando a propriedade é acessada, pois a lista é apenas um wrapper para a matriz interna de valores. O código a seguir mostra o uso do <xref:System.Collections.Generic.SortedList%602.Values%2A> propriedade para a recuperação indexada de valores de uma lista ordenada de cadeias de caracteres:  
+  
+ [!code-cpp[Generic.SortedList#11](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/remarks.cpp#11)]
+ [!code-csharp[Generic.SortedList#11](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/remarks.cs#11)]
+ [!code-vb[Generic.SortedList#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/remarks.vb#11)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Este exemplo de código mostra como enumerar os valores na lista classificada utilizando o <xref:System.Collections.Generic.SortedList%602.Values%2A> propriedade e como enumerar as chaves e valores na lista classificada.  
+  
+ O exemplo também mostra como usar o <xref:System.Collections.Generic.SortedList%602.Values%2A> recuperação indexada eficiente de valores de propriedade.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.Generic.SortedList%602> classe.  
+  
+ [!code-cpp[Generic.SortedList#8](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#8)]
+ [!code-csharp[Generic.SortedList#8](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#8)]
+ [!code-vb[Generic.SortedList#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#8)]  
+[!code-cpp[Generic.SortedList#7](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.SortedList/cpp/source.cpp#7)]
+[!code-csharp[Generic.SortedList#7](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.SortedList/CS/source.cs#7)]
+[!code-vb[Generic.SortedList#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.SortedList/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

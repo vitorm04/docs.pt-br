@@ -1,0 +1,109 @@
+<Type Name="XmlnsDefinitionAttribute" FullName="System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlnsDefinitionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlnsDefinitionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Opcionalmente, podem ser aplicadas a um assembly de fluxo de trabalho. Define um mapeamento entre um namespace de tempo de execução de linguagem comum que é definido no assembly atual e um namespace XML. Essas informações são usadas na serialização/desserialização do extensible Application Markup Language (XAML) quando atividades ou fluxos de trabalho que são definidos no assembly decorado com esse atributo são usados. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlnsDefinitionAttribute (string xmlNamespace, string clrNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string xmlNamespace, string clrNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlNamespace" Type="System.String" />
+        <Parameter Name="clrNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNamespace">Um <see cref="T:System.String" /> que contém o valor para <see cref="P:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute.XmlNamespace" />.</param>
+        <param name="clrNamespace">Um <see cref="T:System.String" /> que contém o valor para <see cref="P:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute.ClrNamespace" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute" /> classe Inicializando <see cref="P:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute.XmlNamespace" /> e <see cref="P:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute.ClrNamespace" /> propriedades.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="clrNamespace" />é uma referência nula (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.String" /> que representa o <see cref="P:System.Type.Assembly" /> nome da classe decorada.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o <see cref="P:System.Type.Assembly" /> nome da classe decorada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClrNamespace">
+      <MemberSignature Language="C#" Value="public string ClrNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClrNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute.ClrNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.String" /> que representa o nome do namespace da classe decorada CLR.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o nome do namespace da classe decorada CLR.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNamespace">
+      <MemberSignature Language="C#" Value="public string XmlNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.XmlnsDefinitionAttribute.XmlNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.String" /> que representa o nome do namespace XML da classe decorada.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o nome do namespace XML da classe decorada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

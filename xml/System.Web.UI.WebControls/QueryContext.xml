@@ -1,0 +1,155 @@
+<Type Name="QueryContext" FullName="System.Web.UI.WebControls.QueryContext">
+  <TypeSignature Language="C#" Value="public class QueryContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QueryContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.QueryContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma lista de parâmetros que são usadas para consultar uma fonte de dados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryContext (System.Collections.Generic.IDictionary&lt;string,object&gt; whereParameters, System.Collections.Generic.IDictionary&lt;string,object&gt; orderGroupsByParameters, System.Collections.Specialized.IOrderedDictionary orderByParameters, System.Collections.Generic.IDictionary&lt;string,object&gt; groupByParameters, System.Collections.Generic.IDictionary&lt;string,object&gt; selectParameters, System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; whereParameters, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; orderGroupsByParameters, class System.Collections.Specialized.IOrderedDictionary orderByParameters, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; groupByParameters, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; selectParameters, class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryContext.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Specialized.IOrderedDictionary,System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="whereParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="orderGroupsByParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="orderByParameters" Type="System.Collections.Specialized.IOrderedDictionary" />
+        <Parameter Name="groupByParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="selectParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="whereParameters">A coleção de parâmetros que usa a fonte de dados para criar o <see langword="Where" /> cláusula.</param>
+        <param name="orderGroupsByParameters">A coleção de parâmetros que usa a fonte de dados para criar o <see langword="OrderGroupsBy" /> cláusula.</param>
+        <param name="orderByParameters">A coleção de parâmetros que usa a fonte de dados para criar o <see langword="OrderBy" /> cláusula.</param>
+        <param name="groupByParameters">A coleção de parâmetros que usa a fonte de dados para criar o <see langword="GroupBy" /> cláusula.</param>
+        <param name="selectParameters">A coleção de parâmetros que usa a fonte de dados para criar o <see langword="Select" /> comando.</param>
+        <param name="arguments">Os argumentos para passar para o <see cref="T:System.Web.UI.WebControls.QueryContext" /> classe.</param>
+        <summary>Inicializa a nova instância do <see cref="T:System.Web.UI.WebControls.QueryContext" /> classe usando o <see cref="P:System.Web.UI.WebControls.QueryContext.WhereParameters" />, <see cref="P:System.Web.UI.WebControls.QueryContext.OrderGroupsByParameters" />, <see cref="P:System.Web.UI.WebControls.QueryContext.OrderByParameters" />, <see cref="P:System.Web.UI.WebControls.QueryContext.GroupByParameters" />, <see cref="P:System.Web.UI.WebControls.QueryContext.SelectParameters" />, e <see cref="P:System.Web.UI.WebControls.QueryContext.Arguments" /> propriedades.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataSourceSelectArguments Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataSourceSelectArguments Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryContext.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os argumentos para passar para o <see cref="T:System.Web.UI.WebControls.QueryContext" /> classe.</summary>
+        <value>Os argumentos para passar para o <see cref="T:System.Web.UI.WebControls.QueryContext" /> classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupByParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; GroupByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; GroupByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryContext.GroupByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de parâmetros que especificam quais propriedades são usadas para agrupar os dados recuperados.</summary>
+        <value>Uma coleção de parâmetros que usa a fonte de dados para criar um <see langword="GroupBy" /> cláusula.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderByParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary OrderByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary OrderByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryContext.OrderByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de parâmetros que especificam quais campos são usados para ordenar os dados recuperados.</summary>
+        <value>Uma coleção de parâmetros que usa a fonte de dados para criar um <see langword="OrderBy" /> cláusula.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderGroupsByParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; OrderGroupsByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; OrderGroupsByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryContext.OrderGroupsByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de parâmetros que especificam os campos que são usados para ordenar os dados agrupados.</summary>
+        <value>Uma coleção de parâmetros que usa a fonte de dados para criar um <see langword="OrderGroupsBy" /> cláusula.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; SelectParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; SelectParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryContext.SelectParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de parâmetros que especificam as propriedades e os valores calculados são incluídos nos dados recuperados.</summary>
+        <value>Uma coleção de parâmetros que usa a fonte de dados para criar um <see langword="Select" /> comando.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WhereParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; WhereParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; WhereParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryContext.WhereParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de parâmetros que especificam as condições que devem ser verdadeiras para um registro a ser incluído nos dados recuperados.</summary>
+        <value>Uma coleção de parâmetros que usa a fonte de dados para criar um <see langword="Where" /> cláusula.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

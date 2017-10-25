@@ -1,0 +1,95 @@
+<Type Name="PreProcessInputEventArgs" FullName="System.Windows.Input.PreProcessInputEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class PreProcessInputEventArgs : System.Windows.Input.ProcessInputEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PreProcessInputEventArgs extends System.Windows.Input.ProcessInputEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.PreProcessInputEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.ProcessInputEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para eventos de entrada de pré-processamento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma entrada pré-processar o cancelamento interrompe a entrada do que está sendo processado.  Espere o <xref:System.Windows.Input.InputManager.PreNotifyInput> para determinar se outro manipulador cancelada uma entrada de pré-processo.  
+  
+ A área de preparação entrada processa a entrada em [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] eventos.  
+  
+ Todos os <xref:System.Windows.Input.InputManager.PreProcessInput> manipuladores de eventos são chamados, mesmo se um dos manipuladores de cancela a entrada.  Para verificar se um manipulador ainda mais a árvore cancelada a entrada, espere o <xref:System.Windows.Input.InputManager.PreNotifyInput> evento.  
+  
+ <xref:System.Windows.Input.PreProcessInputEventArgs>é usado com o <xref:System.Windows.Input.InputManager.PreProcessInput> evento.  
+  
+ Entrada é processada em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] nos estágios a seguir:  
+  
+1.  Pré-processe estágio.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PreProcessInput> evento.  
+  
+2.  Pré-notificar estágio.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PreNotifyInput> evento.  
+  
+3.  O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] evento de entrada ou de eventos são gerados.  
+  
+4.  Pós-notificar estágio.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PostNotifyInput> evento.  
+  
+5.  Estágio de pós-processamento.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PostProcessInput> evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.PreProcessInputEventArgs.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela o processamento do evento de entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma entrada pré-processar o cancelamento interrompe a entrada do que está sendo processado.  Espere o <xref:System.Windows.Input.InputManager.PreNotifyInput> para determinar se outro manipulador cancelada uma entrada de pré-processo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Canceled">
+      <MemberSignature Language="C#" Value="public bool Canceled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Canceled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.PreProcessInputEventArgs.Canceled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se o processamento do evento de entrada foi cancelado.</summary>
+        <value>
+          <see langword="true" />Se o processamento foi cancelado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma entrada pré-processar o cancelamento interrompe a entrada do que está sendo processado.  Espere o <xref:System.Windows.Input.InputManager.PreNotifyInput> para determinar se outro manipulador cancelada uma entrada de pré-processo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,393 @@
+<Type Name="DataGridColumnHeaderItemAutomationPeer" FullName="System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer">
+  <TypeSignature Language="C#" Value="public class DataGridColumnHeaderItemAutomationPeer : System.Windows.Automation.Peers.ItemAutomationPeer, System.Windows.Automation.Provider.IInvokeProvider, System.Windows.Automation.Provider.IScrollItemProvider, System.Windows.Automation.Provider.ITransformProvider, System.Windows.Automation.Provider.IVirtualizedItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridColumnHeaderItemAutomationPeer extends System.Windows.Automation.Peers.ItemAutomationPeer implements class System.Windows.Automation.Provider.IInvokeProvider, class System.Windows.Automation.Provider.IScrollItemProvider, class System.Windows.Automation.Provider.ITransformProvider, class System.Windows.Automation.Provider.IVirtualizedItemProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.ItemAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IInvokeProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IScrollItemProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.ITransformProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IVirtualizedItemProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Expõe o <see cref="P:System.Windows.Controls.DataGridColumn.Header" /> de um <see cref="T:System.Windows.Controls.DataGridColumn" /> que está em um <see cref="T:System.Windows.Controls.DataGrid" /> à automação de interface do usuário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridColumnHeaderItemAutomationPeer (object item, System.Windows.Controls.DataGridColumn column, System.Windows.Automation.Peers.DataGridColumnHeadersPresenterAutomationPeer peer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object item, class System.Windows.Controls.DataGridColumn column, class System.Windows.Automation.Peers.DataGridColumnHeadersPresenterAutomationPeer peer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.#ctor(System.Object,System.Windows.Controls.DataGridColumn,System.Windows.Automation.Peers.DataGridColumnHeadersPresenterAutomationPeer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="column" Type="System.Windows.Controls.DataGridColumn" />
+        <Parameter Name="peer" Type="System.Windows.Automation.Peers.DataGridColumnHeadersPresenterAutomationPeer" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="P:System.Windows.Controls.DataGridColumn.Header" /> no <see cref="T:System.Windows.Controls.DataGridColumn" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" />.</param>
+        <param name="column">A coluna que está associada a <see cref="P:System.Windows.Controls.DataGridColumn.Header" />.</param>
+        <param name="peer">O par de automação para o <see cref="T:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter" /> que está associado a <see cref="T:System.Windows.Controls.DataGrid" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o tipo de controle de cabeçalho que está associado a essa <see cref="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
+        <returns>O valor de enumeração <see cref="F:System.Windows.Automation.Peers.AutomationControlType.HeaderItem" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um nome que diferencia o cabeçalho que é representado por esse <see cref="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
+        <returns>O nome de tipo de <see cref="P:System.Windows.Controls.DataGridColumn.Header" /> propriedade que é associada a essa <see cref="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Um valor de enumeração que especifica o padrão de controle.</param>
+        <summary>Retorna o objeto que suporta o padrão de controle especificado do elemento que está associado com esse ponto de automação.</summary>
+        <returns>Atual <see cref="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" /> do objeto, se <paramref name="patternInterface" /> é um valor com suporte; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma das seguintes situações ocorrer, esse método retorna atual <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> objeto:  
+  
+-   `patternInterface`é <xref:System.Windows.Automation.Peers.PatternInterface?displayProperty=nameWithType> e <xref:System.Windows.Controls.DataGridColumn> objeto que está associado com esta <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> podem ser classificados.  
+  
+-   `patternInterface`é <xref:System.Windows.Automation.Peers.PatternInterface?displayProperty=nameWithType> e <xref:System.Windows.Controls.DataGridColumn> objeto que está associado com esta <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> pode ser redimensionada pelo usuário.  
+  
+-   `patternInterface` é <xref:System.Windows.Automation.Peers.PatternInterface?displayProperty=nameWithType>.  
+  
+-   `patternInterface` é <xref:System.Windows.Automation.Peers.PatternInterface?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContentElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsContentElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsContentElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.IsContentElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento que está associado com esse ponto de automação contém dados que são apresentados ao usuário.</summary>
+        <returns>
+          <see langword="false" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IInvokeProvider.Invoke">
+      <MemberSignature Language="C#" Value="void IInvokeProvider.Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.IInvokeProvider.Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.System#Windows#Automation#Provider#IInvokeProvider#Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Envia uma solicitação para ativar um controle e iniciar sua ação única não ambígua.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView">
+      <MemberSignature Language="C#" Value="void IScrollItemProvider.ScrollIntoView ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.System#Windows#Automation#Provider#IScrollItemProvider#ScrollIntoView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o cabeçalho e a coluna que está associada com o <see cref="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" /> em modo de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.IScrollItemProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ITransformProvider.CanMove">
+      <MemberSignature Language="C#" Value="bool System.Windows.Automation.Provider.ITransformProvider.CanMove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Windows.Automation.Provider.ITransformProvider.CanMove" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.System#Windows#Automation#Provider#ITransformProvider#CanMove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a coluna pode ser movida.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.ITransformProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ITransformProvider.CanResize">
+      <MemberSignature Language="C#" Value="bool System.Windows.Automation.Provider.ITransformProvider.CanResize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Windows.Automation.Provider.ITransformProvider.CanResize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.System#Windows#Automation#Provider#ITransformProvider#CanResize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a coluna pode ser redimensionada.</summary>
+        <value>
+          <see langword="true" />Se o elemento pode ser redimensionado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.ITransformProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ITransformProvider.CanRotate">
+      <MemberSignature Language="C#" Value="bool System.Windows.Automation.Provider.ITransformProvider.CanRotate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Windows.Automation.Provider.ITransformProvider.CanRotate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.System#Windows#Automation#Provider#ITransformProvider#CanRotate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o controle pode ser girado.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.ITransformProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ITransformProvider.Move">
+      <MemberSignature Language="C#" Value="void ITransformProvider.Move (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.ITransformProvider.Move(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.System#Windows#Automation#Provider#ITransformProvider#Move(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Este parâmetro não é usado.</param>
+        <param name="y">Este parâmetro não é usado.</param>
+        <summary>Gera uma exceção em todos os casos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coluna que está associada a essa <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> não pode ser movido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ITransformProvider.Resize">
+      <MemberSignature Language="C#" Value="void ITransformProvider.Resize (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.ITransformProvider.Resize(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.System#Windows#Automation#Provider#ITransformProvider#Resize(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">A nova largura da coluna, em pixels.</param>
+        <param name="height">Este parâmetro não é usado.</param>
+        <summary>Redimensiona a largura da coluna que está associada a <see cref="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.ITransformProvider>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coluna que está associada a essa <see cref="T:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" /> não pode ser redimensionado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ITransformProvider.Rotate">
+      <MemberSignature Language="C#" Value="void ITransformProvider.Rotate (double degrees);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.ITransformProvider.Rotate(float64 degrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.System#Windows#Automation#Provider#ITransformProvider#Rotate(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">Este parâmetro não é usado.</param>
+        <summary>Gera uma exceção em todos os casos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coluna que está associada com o <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> não pode ser girado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize">
+      <MemberSignature Language="C#" Value="void IVirtualizedItemProvider.Realize ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer.System#Windows#Automation#Provider#IVirtualizedItemProvider#Realize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Torna a coluna virtual totalmente acessível como um elemento de automação de interface do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.IVirtualizedItemProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

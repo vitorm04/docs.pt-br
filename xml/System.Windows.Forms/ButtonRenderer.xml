@@ -1,0 +1,407 @@
+<Type Name="ButtonRenderer" FullName="System.Windows.Forms.ButtonRenderer">
+  <TypeSignature Language="C#" Value="public sealed class ButtonRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ButtonRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ButtonRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece os métodos usados para renderizar um controle de botão com ou sem estilos visuais. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ButtonRenderer> classe fornece um conjunto de `static` métodos que podem ser usados para renderizar um controle de botão. Renderizar um controle refere-se a desenhar a interface do usuário de um controle. Para desenhar um botão, use um do <xref:System.Windows.Forms.ButtonRenderer.DrawButton%2A> métodos. Esses métodos fornecem uma variedade de opções, como desenhando texto ou uma imagem do botão.  
+  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, <xref:System.Windows.Forms.ButtonRenderer.DrawButton%2A> desenhará o botão com o estilo visual atual. Caso contrário, <xref:System.Windows.Forms.ButtonRenderer.DrawButton%2A> desenhará o botão com o estilo clássico do Windows. Isso é útil se você estiver desenhando um controle personalizado que automaticamente deve corresponder a configuração de estilo visual atual do sistema operacional.  
+  
+ Essa classe encapsula a funcionalidade de um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> está definido como um dos elementos expostos pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.PushButton?displayProperty=nameWithType> classe. Para obter mais informações, consulte [renderização de controles com estilos visuais](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle personalizado que usa o <xref:System.Windows.Forms.ButtonRenderer.DrawButton%2A> método para desenhar um botão. Quando o botão é clicado, o controle desenha um botão menor dentro dos limites do botão original e o controle usa o <xref:System.Windows.Forms.ButtonRenderer.DrawParentBackground%2A> método para pintar o restante do botão original.  
+  
+ [!code-cpp[System.Windows.Forms.ButtonRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.ButtonRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.ButtonRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o botão.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do botão.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> que especifica o estado visual do botão.</param>
+        <summary>Desenha um controle de botão no estado especificado e limites.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará o botão com o estilo visual atual. Caso contrário, ele utilizará o botão com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o botão.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do botão.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco no botão; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> que especifica o estado visual do botão.</param>
+        <summary>Desenha um controle de botão no estado especificado e limites e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará o botão com o estilo visual atual. Caso contrário, ele utilizará o botão com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o botão.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do botão.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> a ser desenhado no botão.</param>
+        <param name="imageBounds">O <see cref="T:System.Drawing.Rectangle" /> que representa as dimensões de <c>imagem</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco no botão; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> que especifica o estado visual do botão.</param>
+        <summary>Desenha um controle de botão no estado especificado e limites, com a imagem especificada e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará o botão com o estilo visual atual. Caso contrário, ele utilizará o botão com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string buttonText, System.Drawing.Font font, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string buttonText, class System.Drawing.Font font, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="buttonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o botão.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do botão.</param>
+        <param name="buttonText">O <see cref="T:System.String" /> a ser desenhado no botão.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>buttonText</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco no botão; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> que especifica o estado visual do botão.</param>
+        <summary>Desenha um controle de botão no estado e nos limites especificados, com o texto especificado e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará o botão com o estilo visual atual. Caso contrário, ele utilizará o botão com o estilo clássico do Windows.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ButtonRenderer.DrawButton%28System.Drawing.Graphics%2CSystem.Drawing.Rectangle%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Boolean%2CSystem.Windows.Forms.VisualStyles.PushButtonState%29> método em um controle personalizado <xref:System.Windows.Forms.Control.OnPaint%2A> método para desenhar um botão em um estado determinado pelo local do ponteiro do mouse. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ButtonRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.ButtonRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ButtonRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ButtonRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string buttonText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string buttonText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="buttonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o botão.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do botão.</param>
+        <param name="buttonText">O <see cref="T:System.String" /> a ser desenhado no botão.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>buttonText</c>.</param>
+        <param name="flags">Uma combinação bit a bit do <see cref="T:System.Windows.Forms.TextFormatFlags" /> valores para aplicar a <c>buttonText</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco no botão; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> que especifica o estado visual do botão.</param>
+        <summary>Desenha um controle de botão no estado especificado e limites, com o texto especificado e a formatação de texto e um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará o botão com o estilo visual atual. Caso contrário, ele utilizará o botão com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string buttonText, System.Drawing.Font font, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string buttonText, class System.Drawing.Font font, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="buttonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o botão.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do botão.</param>
+        <param name="buttonText">O <see cref="T:System.String" /> a ser desenhado no botão.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>buttonText</c>.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> a ser desenhado no botão.</param>
+        <param name="imageBounds">O <see cref="T:System.Drawing.Rectangle" /> que representa as dimensões de <c>imagem</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco no botão; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> que especifica o estado visual do botão.</param>
+        <summary>Desenha um controle de botão no estado especificado e limites, com o texto especificado e a imagem e um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará o botão com o estilo visual atual. Caso contrário, ele utilizará o botão com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButton">
+      <MemberSignature Language="C#" Value="public static void DrawButton (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string buttonText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawButton(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string buttonText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawButton(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="buttonText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o botão.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites do botão.</param>
+        <param name="buttonText">O <see cref="T:System.String" /> a ser desenhado no botão.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>buttonText</c>.</param>
+        <param name="flags">Uma combinação bit a bit do <see cref="T:System.Windows.Forms.TextFormatFlags" /> valores para aplicar a <c>buttonText</c>.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> a ser desenhado no botão.</param>
+        <param name="imageBounds">O <see cref="T:System.Drawing.Rectangle" /> que representa as dimensões de <c>imagem</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco no botão; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> que especifica o estado visual do botão.</param>
+        <summary>Desenha um controle de botão no estado especificado e limites; com o texto especificado, a formatação de texto e imagem. e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará o botão com o estilo visual atual. Caso contrário, ele utilizará o botão com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawParentBackground">
+      <MemberSignature Language="C#" Value="public static void DrawParentBackground (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.Control childControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawParentBackground(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.Control childControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.DrawParentBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="childControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o plano de fundo do pai do <c>childControl</c>.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> no qual desenhar a tela de fundo do controle pai. Esse retângulo deve ser dentro dos limites do controle filho.</param>
+        <param name="childControl">O controle cuja tela de fundo pai será desenhada.</param>
+        <summary>Desenha a tela de fundo do pai de um controle na área especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ButtonRenderer.DrawParentBackground%2A> método para pintar uma área de um controle personalizado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ButtonRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.ButtonRenderer#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.ButtonRenderer#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.ButtonRenderer#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ButtonRenderer/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBackgroundPartiallyTransparent">
+      <MemberSignature Language="C#" Value="public static bool IsBackgroundPartiallyTransparent (System.Windows.Forms.VisualStyles.PushButtonState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsBackgroundPartiallyTransparent(valuetype System.Windows.Forms.VisualStyles.PushButtonState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonRenderer.IsBackgroundPartiallyTransparent(System.Windows.Forms.VisualStyles.PushButtonState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.PushButtonState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.PushButtonState" /> que especifica o estado visual do botão.</param>
+        <summary>Indica se o plano de fundo do botão tem partes semitransparentes ou combinação alfa.</summary>
+        <returns>
+          <see langword="true" />Se o plano de fundo do botão tem partes semitransparentes ou combinação alfa; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMatchingApplicationState">
+      <MemberSignature Language="C#" Value="public static bool RenderMatchingApplicationState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool RenderMatchingApplicationState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonRenderer.RenderMatchingApplicationState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o renderizador usa o estado do aplicativo para determinar o estilo de renderização.</summary>
+        <value>
+          <see langword="true" />Se o estado do aplicativo é usado para determinar o estilo de renderização; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.ButtonRenderer.RenderMatchingApplicationState%2A> é de propriedade `true`, o <xref:System.Windows.Forms.ButtonRenderer> usa a configuração do <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> propriedade para determinar o estilo de renderização. Se <xref:System.Windows.Forms.ButtonRenderer.RenderMatchingApplicationState%2A> é `false`, o renderizador sempre será renderizado com estilos visuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

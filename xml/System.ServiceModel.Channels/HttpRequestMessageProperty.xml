@@ -1,0 +1,314 @@
+<Type Name="HttpRequestMessageProperty" FullName="System.ServiceModel.Channels.HttpRequestMessageProperty">
+  <TypeSignature Language="C#" Value="public sealed class HttpRequestMessageProperty : System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpRequestMessageProperty extends System.Object implements class System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.HttpRequestMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Http</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IMessageProperty</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece acesso à solicitação HTTP para acessar e responder às informações adicionais disponibilizadas para solicitações por meio do protocolo HTTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe de uso geral que fornece ao desenvolvedor acesso direto a informações de solicitação de HTTP, que podem ser usadas para encapsular as informações específicas de HTTP. Um exemplo do uso dessa classe é implementados de acordo com a arquitetura REST Representational State Transfer () de serviços de suporte.  
+  
+ Essa classe permite o suporte para os seguintes cenários:  
+  
+-   Varia o verbo HTTP usado para cada solicitação.  
+  
+-   Permite que os pares de cabeçalho (chave, valor) HTTP a ser definida e consultados por solicitação.  
+  
+-   Permite que a cadeia de caracteres de consulta deve ser especificado para uma solicitação HTTP.  
+  
+ Essa classe pode ser usada por <xref:System.ServiceModel.Channels.HttpTransportBindingElement> e classes relacionadas.  
+  
+ Para mensagens de entrada, essa propriedade é adicionada às mensagens.  
+  
+ Mensagens de saída, essa propriedade faz com que ocorra o seguinte:  
+  
+-   <xref:System.Net.HttpWebRequest.Method%2A> é definido como <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.Method%2A>.  
+  
+-   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.QueryString%2A>é anexado ao <xref:System.Net.HttpWebRequest.RequestUri%2A>.  
+  
+-   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.Headers%2A>é adicionado aos cabeçalhos HTTP definidos para ser transmitido.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir várias propriedades em uma instância dessa classe e incorporar a instância em uma mensagem.  
+  
+ [!code-csharp[S_Pox#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_pox/cs/service.cs#3)]
+ [!code-vb[S_Pox#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_pox/vb/service.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestMessageProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpRequestMessageProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.HttpRequestMessageProperty" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o objeto da seguinte maneira:  
+  
+-   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.Method%2A> = `POST`.  
+  
+-   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.QueryString%2A>é definido como a cadeia de caracteres vazia.  
+  
+-   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.SuppressEntityBody%2A> = `false`.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como criar uma instância dessa classe de uma mensagem sem chamar explicitamente o construtor.  
+  
+ [!code-csharp[S_Pox#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_pox/cs/service.cs#0)]
+ [!code-vb[S_Pox#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_pox/vb/service.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Net.WebHeaderCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebHeaderCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpRequestMessageProperty.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os cabeçalhos HTTP da solicitação HTTP.</summary>
+        <value>Retorna um <see cref="T:System.Net.WebHeaderCollection" /> que contém os cabeçalhos HTTP na solicitação HTTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há situações em que essa propriedade não está disponível e tentar acessá-lo pode causar uma exceção. Isso pode acontecer quando [!INCLUDE[indigo2](~/includes/indigo2-md.md)] está hospedado no IIS, depois que a solicitação HTTP é concluída, principalmente em cenários unidirecionais em que a resposta é enviada antes da mensagem se torna disponível.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como usar essa propriedade para adicionar cabeçalhos personalizados a uma mensagem.  
+  
+ [!code-csharp[S_Pox#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_pox/cs/service.cs#3)]
+ [!code-vb[S_Pox#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_pox/vb/service.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public string Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Method" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpRequestMessageProperty.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o verbo HTTP para a solicitação HTTP.</summary>
+        <value>O verbo HTTP para a solicitação HTTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] usa o verbo POST para mensagens HTTP. O verbo GET é usado pelo [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para exibir informações de ajuda ao acessar o endereço base do ServiceHost. Isso é útil para verificar se um [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviço está ativo ao usar um navegador da Web. Outros métodos definidos pelo [HTTP RFC](http://go.microsoft.com/fwlink/?LinkId=96616) PUT, DELETE, HEAD, opções, rastreamento e conectar-se. Esses métodos têm comportamentos especiais ao interagir com outros serviços.  
+  
+   
+  
+## Examples  
+ O código a seguir obtém uma instância dessa classe da mensagem e, em seguida, distribui para métodos diferentes de acordo com essa propriedade.  
+  
+ [!code-csharp[PoxSample#0](~/samples/snippets/csharp/VS_Snippets_CFX/poxsample/cs/server/messagebasedcustomerservice.cs#0)]
+ [!code-vb[PoxSample#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/poxsample/vb/server/messagebasedcustomerservice.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public static string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpRequestMessageProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade de mensagem associado a <see cref="T:System.ServiceModel.Channels.HttpRequestMessageProperty" /> classe.</summary>
+        <value>O valor "httpRequest".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryString">
+      <MemberSignature Language="C#" Value="public string QueryString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QueryString" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpRequestMessageProperty.QueryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de consulta para a solicitação HTTP.</summary>
+        <value>A cadeia de caracteres de consulta da solicitação de HTTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há muitos ataques de segurança conhecidos com base na cadeia de caracteres de consulta de uma solicitação HTTP (por exemplo, o ataque de injeção de SQL). Sempre rigorosamente valide os parâmetros contidos na cadeia de caracteres de consulta. Se você usar os valores sem validação, uma falha de segurança conhecidas é aberta.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressEntityBody">
+      <MemberSignature Language="C#" Value="public bool SuppressEntityBody { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressEntityBody" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpRequestMessageProperty.SuppressEntityBody" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o corpo da mensagem é ignorado e somente os cabeçalhos são enviados.</summary>
+        <value>
+          <see langword="true" />Se o corpo da mensagem é suprimido; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada para solicitações de mensagens vazios: por exemplo, um serviço que aceita uma solicitação GET sem um corpo de mensagem. Nesse caso, quando estiver criando o <xref:System.ServiceModel.Channels.HttpRequestMessageProperty> de objeto para a mensagem de resposta, defina o <xref:System.ServiceModel.Channels.HttpRequestMessageProperty.SuppressEntityBody%2A> propriedade `true`.  
+  
+ Ao interagir com não[!INCLUDE[indigo2](~/includes/indigo2-md.md)] services, é importante observar que certos verbos devem conter um corpo de mensagem acordo com o padrão HTTP; elas incluem PUT e POST. Outros verbos são esperados para suprimir o corpo da mensagem; Isso inclui GET e HEAD.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_Pox#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_pox/cs/service.cs#2)]
+ [!code-vb[S_Pox#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_pox/vb/service.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.IMessageProperty.CreateCopy">
+      <MemberSignature Language="C#" Value="System.ServiceModel.Channels.IMessageProperty IMessageProperty.CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ServiceModel.Channels.IMessageProperty System.ServiceModel.Channels.IMessageProperty.CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpRequestMessageProperty.System#ServiceModel#Channels#IMessageProperty#CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia do objeto atual.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IMessageProperty" /> objeto que representa uma cópia do objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

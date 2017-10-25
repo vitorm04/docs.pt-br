@@ -1,0 +1,173 @@
+<Type Name="DiscoveryReferenceCollection" FullName="System.Web.Services.Discovery.DiscoveryReferenceCollection">
+  <TypeSignature Language="C#" Value="public sealed class DiscoveryReferenceCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DiscoveryReferenceCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma coleção de referências de descoberta. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DiscoveryReferenceCollection#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryReferenceCollection/CPP/discoveryreferencecollection.cpp#1)]
+ [!code-csharp[DiscoveryReferenceCollection#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryReferenceCollection/CS/discoveryreferencecollection.cs#1)]
+ [!code-vb[DiscoveryReferenceCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryReferenceCollection/VB/discoveryreferencecollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryReferenceCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryReferenceCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.Services.Discovery.DiscoveryReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.Services.Discovery.DiscoveryReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryReferenceCollection.Add(System.Web.Services.Discovery.DiscoveryReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.Services.Discovery.DiscoveryReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> para adicionar ao <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" />.</param>
+        <summary>Adiciona um <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> para o <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" />.</summary>
+        <returns>A posição onde a <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> foi inserida no <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DiscoveryReferenceCollection#2](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryReferenceCollection/CPP/discoveryreferencecollection.cpp#2)]
+ [!code-csharp[DiscoveryReferenceCollection#2](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryReferenceCollection/CS/discoveryreferencecollection.cs#2)]
+ [!code-vb[DiscoveryReferenceCollection#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryReferenceCollection/VB/discoveryreferencecollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.Services.Discovery.DiscoveryReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.Services.Discovery.DiscoveryReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryReferenceCollection.Contains(System.Web.Services.Discovery.DiscoveryReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.Services.Discovery.DiscoveryReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> localizar dentro de <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" />.</param>
+        <summary>Determina se o <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" /> contém um determinado <see cref="T:System.Web.Services.Discovery.DiscoveryReference" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" /> contém o <see cref="T:System.Web.Services.Discovery.DiscoveryReference" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DiscoveryReferenceCollection#2](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryReferenceCollection/CPP/discoveryreferencecollection.cpp#2)]
+ [!code-csharp[DiscoveryReferenceCollection#2](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryReferenceCollection/CS/discoveryreferencecollection.cs#2)]
+ [!code-vb[DiscoveryReferenceCollection#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryReferenceCollection/VB/discoveryreferencecollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryReference this[int i] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Discovery.DiscoveryReference Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryReferenceCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">O índice de base zero de <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> para obter ou definir.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> no índice especificado.</summary>
+        <value>O <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DiscoveryReferenceCollection#2](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryReferenceCollection/CPP/discoveryreferencecollection.cpp#2)]
+ [!code-csharp[DiscoveryReferenceCollection#2](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryReferenceCollection/CS/discoveryreferencecollection.cs#2)]
+ [!code-vb[DiscoveryReferenceCollection#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryReferenceCollection/VB/discoveryreferencecollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="i" /> não é um índice válido no <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Services.Discovery.DiscoveryReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Services.Discovery.DiscoveryReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryReferenceCollection.Remove(System.Web.Services.Discovery.DiscoveryReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.Services.Discovery.DiscoveryReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> a ser removido de <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" />.</param>
+        <summary>Remove um <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> do <see cref="T:System.Web.Services.Discovery.DiscoveryReferenceCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ DiscoveryReferenceCollection n º 2  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

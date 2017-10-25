@@ -1,0 +1,37 @@
+<Type Name="PassportAuthenticationEventHandler" FullName="System.Web.Security.PassportAuthenticationEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void PassportAuthenticationEventHandler(object sender, PassportAuthenticationEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PassportAuthenticationEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.PassportAuthenticationEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("This type is obsolete. The Passport authentication product is no longer supported and has been superseded by Live ID.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Security.PassportAuthenticationEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto que gerencie o evento.</param>
+    <param name="e">Um objeto de <see cref="T:System.Web.Security.PassportAuthenticationEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipula o evento <see langword="PassportAuthentication_OnAuthenticate" /> de um <see cref="T:System.Web.Security.PassportAuthenticationModule" />. Essa classe foi preterida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe foi preterido e não é mais suportada. Rede do Microsoft Passport foi substituído pelo Windows Live ID. Para obter mais informações sobre como usar o Windows Live ID para autenticar usuários em um aplicativo Web, consulte [SDK do Windows Live ID](http://go.microsoft.com/fwlink/?LinkId=106346).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

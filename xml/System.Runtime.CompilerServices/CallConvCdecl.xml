@@ -1,0 +1,86 @@
+<Type Name="CallConvCdecl" FullName="System.Runtime.CompilerServices.CallConvCdecl">
+  <TypeSignature Language="C#" Value="public class CallConvCdecl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallConvCdecl extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.CallConvCdecl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.CompilerServices.VisualC</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que um método deve usar o <see langword="Cdecl" /> convenção de chamada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador limpa a pilha. Isso permite que as funções de chamada com `varargs`.  
+  
+ Essa classe é usada apenas como um modificador personalizado da assinatura de metadados de um método.  
+  
+ As classes em <xref:System.Runtime.CompilerServices> são autores de compilador apenas para uso.  
+  
+ Compiladores emitem modificadores personalizados dentro dos metadados para alterar o maneira como o compilador just-in-time (JIT) manipula valores quando o comportamento padrão não é apropriado.  Quando o compilador JIT encontra um modificador personalizado, ele trata o valor da maneira que especifica o modificador.  Compiladores podem aplicar modificadores personalizados para os métodos, parâmetros e valores de retorno.  O compilador JIT deve responder às modificadores necessárias, mas pode ignorar modificadores opcionais.  Um compilador de C++ pode emitir um modificador personalizado para descrever como um byte deve ser tratado em casos onde o compilador JIT trata os bytes de uma maneira que não é compatível com C++ por padrão.  
+  
+ Você pode emitir modificadores personalizados em metadados usando uma das seguintes técnicas:  
+  
+-   Usando métodos de <xref:System.Reflection.Emit.TypeBuilder> classe como <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineField%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineConstructor%2A>, e <xref:System.Reflection.Emit.TypeBuilder.DefineProperty%2A>.  
+  
+-   Gerar um arquivo de instrução do Microsoft intermediate language (MSIL) que contém chamadas para `modopt` e `modreq`e montar o arquivo com o [Ilasm.exe (IL Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md).  
+  
+-   Usando a API de reflexão não gerenciada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallConvCdecl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CallConvCdecl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.CompilerServices.VisualC</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.CompilerServices.CallConvCdecl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes em <xref:System.Runtime.CompilerServices> são autores de compilador apenas para uso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,98 @@
+<Type Name="OperationFormatUse" FullName="System.ServiceModel.OperationFormatUse">
+  <TypeSignature Language="C#" Value="public enum OperationFormatUse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OperationFormatUse extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.OperationFormatUse" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina o formato da mensagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é Literal. Literal significa que a mensagem é uma instância literal do esquema no WSDL, conforme mostrado no seguinte exemplo de documento/Literal.  
+  
+```  
+<Add xmlns="http://Microsoft.ServiceModel.Samples">  
+  <n1>100</n1>  
+  <n2>15.99</n2>  
+ </Add>  
+```  
+  
+ Codificado significa que os esquemas no WSDL são especificações abstratas que são codificadas de acordo com as regras encontradas na seção 5 do SOAP 1.1. O seguinte é um exemplo RPC/Encoded.  
+  
+```  
+<q1:Add xmlns:q1="http://Microsoft.ServiceModel.Samples">  
+  <n1 xsi:type="xsd:double" xmlns="">100</n1>  
+  <n2 xsi:type="xsd:double" xmlns="">15.99</n2>  
+ </q1:Add>  
+```  
+  
+ Use o <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> para definir esse valor.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como usar essa enumeração.  
+  
+ [!code-csharp[style_and_Use#0](~/samples/snippets/csharp/VS_Snippets_CFX/style_and_use/cs/source.cs#0)]
+ [!code-vb[style_and_Use#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/style_and_use/vb/source.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Encoded">
+      <MemberSignature Language="C#" Value="Encoded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.OperationFormatUse Encoded = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.OperationFormatUse.Encoded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.OperationFormatUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Significa que os esquemas no WSDL são especificações abstratas que são codificadas de acordo com as regras encontradas na seção 5 do SOAP 1.1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Literal">
+      <MemberSignature Language="C#" Value="Literal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.OperationFormatUse Literal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.OperationFormatUse.Literal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.OperationFormatUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a mensagem é uma instância literal do esquema no WSDL.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

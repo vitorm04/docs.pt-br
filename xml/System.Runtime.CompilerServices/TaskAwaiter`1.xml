@@ -1,0 +1,230 @@
+<Type Name="TaskAwaiter&lt;TResult&gt;" FullName="System.Runtime.CompilerServices.TaskAwaiter&lt;TResult&gt;">
+  <TypeSignature Language="C#" Value="public struct TaskAwaiter&lt;TResult&gt; : System.Runtime.CompilerServices.ICriticalNotifyCompletion" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit TaskAwaiter`1&lt;TResult&gt; extends System.ValueType implements class System.Runtime.CompilerServices.ICriticalNotifyCompletion, class System.Runtime.CompilerServices.INotifyCompletion" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.TaskAwaiter`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.CompilerServices.ICriticalNotifyCompletion</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TResult">O resultado da tarefa.</typeparam>
+    <summary>Representa um objeto que aguarda a conclusão de uma tarefa assíncrona e fornece um parâmetro para o resultado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo e seus membros são destinados para uso pelo compilador.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetResult">
+      <MemberSignature Language="C#" Value="public TResult GetResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TResult GetResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.TaskAwaiter`1.GetResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina a espera pela conclusão da tarefa assíncrona.</summary>
+        <returns>O resultado da tarefa concluída.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo e seus membros são destinados para uso pelo compilador.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O objeto <see cref="T:System.Runtime.CompilerServices.TaskAwaiter`1" /> não foi inicializado corretamente.</exception>
+        <exception cref="T:System.Threading.Tasks.TaskCanceledException">A tarefa foi cancelada.</exception>
+        <exception cref="T:System.Exception">A tarefa foi concluída em um estado <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.TaskAwaiter`1.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a tarefa assíncrona foi concluída.</summary>
+        <value>
+          <see langword="true" />Se a tarefa foi concluída; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo e seus membros são destinados para uso pelo compilador.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O objeto <see cref="T:System.Runtime.CompilerServices.TaskAwaiter`1" /> não foi inicializado corretamente.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnCompleted">
+      <MemberSignature Language="C#" Value="public void OnCompleted (Action continuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnCompleted(class System.Action continuation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.TaskAwaiter`1.OnCompleted(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="continuation" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="continuation">A ação a ser executada quando a operação de espera é concluída.</param>
+        <summary>Define a ação a ser executada quando o objeto <see cref="T:System.Runtime.CompilerServices.TaskAwaiter`1" /> para de esperar a conclusão da tarefa assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo e seus membros são destinados para uso pelo compilador.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="continuation" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NullReferenceException">O objeto <see cref="T:System.Runtime.CompilerServices.TaskAwaiter`1" /> não foi inicializado corretamente.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeOnCompleted">
+      <MemberSignature Language="C#" Value="public void UnsafeOnCompleted (Action continuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnsafeOnCompleted(class System.Action continuation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.TaskAwaiter`1.UnsafeOnCompleted(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="continuation" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="continuation">A ação a ser invocada quando a operação de espera é concluída.</param>
+        <summary>A ação de continuação para a tarefa assíncrona associada a este awaiter os agendamentos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="continuation" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O awaiter não foi inicializado corretamente.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

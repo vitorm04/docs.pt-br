@@ -1,0 +1,43 @@
+<Type Name="HttpResponseSubstitutionCallback" FullName="System.Web.HttpResponseSubstitutionCallback">
+  <TypeSignature Language="C#" Value="public delegate string HttpResponseSubstitutionCallback(HttpContext context);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpResponseSubstitutionCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpResponseSubstitutionCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.Web.HttpContext" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.String</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">O <see cref="T:System.Web.HttpContext" /> que contém as informações de solicitação HTTP para a página com o controle que exige substituição post-cache.</param>
+    <summary>Representa o método que trata a substituição post-cache.</summary>
+    <returns>O conteúdo inserido para a resposta armazenada em cache antes de serem enviados ao cliente.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponseSubstitutionCallback> delegado, em combinação com o <xref:System.Web.HttpResponse.WriteSubstitution%2A> método, é usado para renderizar o conteúdo do pós-cache de para o <xref:System.Web.UI.WebControls.Substitution> e <xref:System.Web.UI.WebControls.AdRotator> controles.  
+  
+ Para o <xref:System.Web.UI.WebControls.Substitution> controlar, use o <xref:System.Web.UI.WebControls.Substitution.MethodName%2A> propriedade para especificar o nome do método de retorno de chamada para invocar quando o <xref:System.Web.UI.WebControls.Substitution> controle executa. O método de retorno de chamada que você especificar deve ser um método estático na página ou o controle de usuário que contém o <xref:System.Web.UI.WebControls.Substitution> controle. A assinatura para o método de retorno de chamada deve corresponder a assinatura para um <xref:System.Web.HttpResponseSubstitutionCallback> delegado que utiliza um <xref:System.Web.HttpContext> parâmetro e retorna uma cadeia de caracteres.  
+  
+ Para o <xref:System.Web.UI.WebControls.AdRotator> controle, o processamento é independente do cache de página, a menos que um manipulador de eventos é fornecido para o <xref:System.Web.UI.WebControls.AdRotator.AdCreated> evento. Se nenhum <xref:System.Web.UI.WebControls.AdRotator.AdCreated> manipulador de eventos está presente, a substituição post-cache é usada para renderizar o <xref:System.Web.UI.WebControls.AdRotator> conteúdo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar um <xref:System.Web.UI.WebControls.Substitution> controle programaticamente a uma página da Web de cache de saída. Quando a página for carregada, a data e hora atuais são exibidos para o usuário em um rótulo. Esta seção da página é armazenada em cache e atualizada a cada 60 segundos. Quando o <xref:System.Web.UI.WebControls.Substitution> controle é executado, ele chama o `GetCurrentDateTime` método, que deve corresponder a assinatura para o <xref:System.Web.HttpResponseSubstitutionCallback> delegate. A cadeia de caracteres que é retornada pelo `GetCurrentDateTime` método é exibido ao usuário. Esta seção da página não é armazenado em cache e é atualizada sempre que a página for atualizada. O <xref:System.Web.UI.WebControls.Substitution.MethodName%2A> propriedade o <xref:System.Web.UI.WebControls.Substitution> controle obtém ou define o nome do método de retorno de chamada.  
+  
+ [!code-aspx-csharp[SubstitutionCstr#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SubstitutionCstr/CS/substitutioncstrcs.aspx#1)]
+ [!code-aspx-vb[SubstitutionCstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SubstitutionCstr/VB/substitutioncstrvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

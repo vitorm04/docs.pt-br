@@ -1,0 +1,1435 @@
+<Type Name="HijriCalendar" FullName="System.Globalization.HijriCalendar">
+  <TypeSignature Language="C#" Value="public class HijriCalendar : System.Globalization.Calendar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit HijriCalendar extends System.Globalization.Calendar" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.HijriCalendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Calendars</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Globalization.Calendar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o calendário islâmico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O calendário islâmico reconhece um era: A.H. (Latino "Anno Hegirae", que significa que "o ano da migração," refere-se a migração de Muhammad (PBUH) de Mecca).  
+  
+> [!NOTE]
+>  Para obter informações sobre como usar o <xref:System.Globalization.HijriCalendar> classe e outras classes do Framework .NET de calendário, consulte [trabalhando com calendários](~/docs/standard/datetime/working-with-calendars.md).  
+  
+ Em cada ciclo de 30 anos que termina com um ano divisível por 30, 2º, dia 5, 7, 10º dia, 13, 16, 18, 21, 24, 26 e 29 anos são bissextos. Um ano comum tem 354 dias e um ano bissexto tiver 355 dias.  
+  
+ O calendário islâmico tem 12 meses com 29 a 30 dias a cada:  
+  
+|Valor GetMonth|Mês|Dias em anos comuns|Dias em anos leap|  
+|--------------------|-----------|--------------------------|------------------------|  
+|1|محرم (Muharram)|30|30|  
+|2|صفر (Safar)|29|29|  
+|3|ربيع الاول (Rabi I)|30|30|  
+|4|ربيع الثاني (Rabi II)|29|29|  
+|5|جمادى الاولى (Jumada I)|30|30|  
+|6|جمادى الثانية (Jumada II)|29|29|  
+|7|رجب (Rajab)|30|30|  
+|8|شعبان (Shaban)|29|29|  
+|9|رمضان (Ramadan)|30|30|  
+|10|شوال (Shawwal)|29|29|  
+|11|ذو القعدة (Zulkadah)|30|30|  
+|12|ذو الحجة (Zulhijjah)|29|30|  
+  
+ Ramadã, o mês de fasting no mundo muçulmanos, oficialmente inicia e termina acordo com um decreto que se baseia a observação da lua novo. Portanto, o número de dias em Shaban e o número de dias em Ramadan variam.  
+  
+ A data de 1º de janeiro de 2001. no calendário gregoriano é aproximadamente equivalente ao sexto dia do Shawwal em A.H. de 1421 o ano no calendário islâmico.  
+  
+ Essa implementação do <xref:System.Globalization.HijriCalendar> classe ajusta a data do calendário adicionando ou subtraindo-se um valor de zero a dois dias para acomodar as variações no início e o término do Ramadan e para acomodar a diferença de data entre países/regiões. Se o valor é armazenado no <xref:System.Globalization.HijriCalendar.HijriAdjustment%2A> propriedade. Se <xref:System.Globalization.HijriCalendar.HijriAdjustment%2A> não está definida explicitamente, ela deriva seu valor as configurações na parte de opções regionais e de idioma do painel de controle e é armazenada no valor do registro HKEY_CURRENT_USER\Painel Panel\International\AddHijriDate. No entanto, essas informações podem alterar durante a vida do <xref:System.AppDomain>. O <xref:System.Globalization.HijriCalendar> classe não detecta alterações nas configurações do sistema automaticamente.  
+  
+ Cada <xref:System.Globalization.CultureInfo> suporta um conjunto de calendários. O <xref:System.Globalization.CultureInfo.Calendar%2A> propriedade retorna o calendário padrão para a cultura e o <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> propriedade retorna uma matriz que contém todos os calendários suportados pela cultura. Para alterar o calendário usado por um <xref:System.Globalization.CultureInfo>, o aplicativo deve definir o <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> para um novo <xref:System.Globalization.Calendar>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HijriCalendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Globalization.HijriCalendar" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMonths">
+      <MemberSignature Language="C#" Value="public override DateTime AddMonths (DateTime time, int months);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddMonths(valuetype System.DateTime time, int32 months) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.AddMonths(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="months" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> para adicionar os meses.</param>
+        <param name="months">O número de meses a serem adicionados.</param>
+        <summary>Retorna um <see cref="T:System.DateTime" /> que é o número especificado de meses longe especificado <see cref="T:System.DateTime" />.</summary>
+        <returns>O <see cref="T:System.DateTime" /> resultante da adição do número especificado de meses ao <see cref="T:System.DateTime" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A parte do dia de resultante <xref:System.DateTime> é afetado se o dia resultante não é um dia válido no mês do ano resultante resultante. Ele é alterado para o último dia válido no mês do ano resultante resultante. A parte do ano de resultante <xref:System.DateTime> é afetado se o mês resultante está fora do ano especificado <xref:System.DateTime>. Essa implementação oferece suporte somente a era atual. Portanto, <xref:System.ArgumentException> é gerada se o ano resultante é fora era especificada <xref:System.DateTime>. A parte de hora do dia de resultante <xref:System.DateTime> permanece o mesmo que o especificado <xref:System.DateTime>.  
+  
+ Por exemplo, se o mês especificado é Zulkadah, que tem 30 dias, o dia especificado é 30 o dia do mês e o valor da `months` parâmetro é 3, o ano resultante é mais que o ano especificado, o mês resultante é Safar e o dia resultante é o dia 29, que é o último dia do Safar.  
+  
+ Se o valor da `months` parâmetro for negativo, o resultante <xref:System.DateTime> é anterior ao especificado <xref:System.DateTime>.  
+  
+ O <xref:System.DateTime.Kind%2A> propriedade retornado <xref:System.DateTime> sempre valor for igual a <xref:System.DateTimeKind?displayProperty=nameWithType>. Você pode preservar o <xref:System.DateTime.Kind%2A> propriedade do `time` parâmetro ao chamar o <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> método, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#5)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#5)]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário islâmico.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CPP/hijricalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CS/hijricalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/VB/hijricalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Resultante <see cref="T:System.DateTime" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="months" />é menor que-120000.  
+  
+ -ou-  
+  
+ <paramref name="months" />é maior que 120000.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddYears">
+      <MemberSignature Language="C#" Value="public override DateTime AddYears (DateTime time, int years);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddYears(valuetype System.DateTime time, int32 years) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.AddYears(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="years" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> adicionar anos.</param>
+        <param name="years">O número de anos a ser adicionado.</param>
+        <summary>Retorna um <see cref="T:System.DateTime" /> que é o número especificado de anos longe especificado <see cref="T:System.DateTime" />.</summary>
+        <returns>O <see cref="T:System.DateTime" /> resultante da adição do número especificado de anos indicado ao <see cref="T:System.DateTime" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A parte do dia de resultante <xref:System.DateTime> é afetado se o dia resultante não é um dia válido no mês do ano resultante resultante. Ele é alterado para o último dia válido no mês do ano resultante resultante. A parte do mês de resultante <xref:System.DateTime> permanece o mesmo que o especificado <xref:System.DateTime>. Essa implementação oferece suporte somente a era atual. Portanto, <xref:System.ArgumentException> é gerada se o ano resultante é fora era especificada <xref:System.DateTime>. A parte de hora do dia de resultante <xref:System.DateTime> permanece o mesmo que o especificado <xref:System.DateTime>.  
+  
+ Por exemplo, Zulhijjah tem 29 dias, exceto durante os anos bissextos quando ele tem 30 dias. Se a data especificada é o dia 30 de Zulhijjah em um ano bissexto e o valor de `years` é 1, a data resultante será o dia 29 de Zulhijjah no ano seguinte.  
+  
+ Se `years` for negativo, o resultante <xref:System.DateTime> é anterior ao especificado <xref:System.DateTime>.  
+  
+ O <xref:System.DateTime.Kind%2A> propriedade retornado <xref:System.DateTime> sempre valor for igual a <xref:System.DateTimeKind?displayProperty=nameWithType>. Você pode preservar o <xref:System.DateTime.Kind%2A> propriedade do `time` parâmetro ao chamar o <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> método, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#8)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#8)]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário islâmico.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CPP/hijricalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CS/hijricalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/VB/hijricalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O resultante <see cref="T:System.DateTime" /> está fora do intervalo com suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmType">
+      <MemberSignature Language="C#" Value="public override System.Globalization.CalendarAlgorithmType AlgorithmType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Globalization.CalendarAlgorithmType AlgorithmType" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HijriCalendar.AlgorithmType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarAlgorithmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o calendário atual é solar baseado, lunar ou uma combinação de ambos.</summary>
+        <value>Sempre retorna <see cref="F:System.Globalization.CalendarAlgorithmType.LunarCalendar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa reflexão para criar uma instância de cada <xref:System.Globalization.Calendar> tipo encontrado no .NET Framework e exibe o valor da sua <xref:System.Globalization.Calendar.AlgorithmType%2A> propriedade.  
+  
+ [!code-csharp[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/cs/algorithmtype1.cs#1)]
+ [!code-vb[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/vb/algorithmtype1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DaysInYearBeforeMinSupportedYear">
+      <MemberSignature Language="C#" Value="protected override int DaysInYearBeforeMinSupportedYear { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DaysInYearBeforeMinSupportedYear" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HijriCalendar.DaysInYearBeforeMinSupportedYear" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de dias do ano que precede o ano especificado pelo <see cref="P:System.Globalization.HijriCalendar.MinSupportedDateTime" /> propriedade.</summary>
+        <value>O número de dias do ano que precede o ano especificado por <see cref="P:System.Globalization.HijriCalendar.MinSupportedDateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna um valor constante de 354.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eras">
+      <MemberSignature Language="C#" Value="public override int[] Eras { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Eras" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HijriCalendar.Eras" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de eras no <see cref="T:System.Globalization.HijriCalendar" />.</summary>
+        <value>Uma matriz de inteiros que representa as eras no <see cref="T:System.Globalization.HijriCalendar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O calendário islâmico reconhece um era: A.H. (Latino "Anno Hegirae", que significa que "o ano da migração," refere-se a migração de Muhammad (PBUH) de Mecca). Essa propriedade sempre retorna uma matriz com apenas um elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfMonth">
+      <MemberSignature Language="C#" Value="public override int GetDayOfMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetDayOfMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o dia do mês especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um inteiro de 1 a 30 que representa o dia do mês especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário islâmico.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CPP/hijricalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CS/hijricalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/VB/hijricalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfWeek">
+      <MemberSignature Language="C#" Value="public override DayOfWeek GetDayOfWeek (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DayOfWeek GetDayOfWeek(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetDayOfWeek(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DayOfWeek</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o dia da semana especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um <see cref="T:System.DayOfWeek" /> valor que representa o dia da semana especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DayOfWeek> valores são os seguintes:  
+  
+|Valor de DayOfWeek|Que indica|  
+|---------------------|---------------------|  
+|Domingo|الاحد (Al-Ahad)|  
+|Segunda-feira|الاثنين (Al-Ithnayn)|  
+|Terça-feira|الثلاثاء (em Thulaathaa')|  
+|Quarta-feira|الاربعاء (Al Arbi'aa')|  
+|Quinta-feira|الخميس (Al-Khamiis)|  
+|Sexta-feira|الجمعة (Al-Jumu'ah)|  
+|Sábado|السبت (como Sabt)|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário islâmico.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CPP/hijricalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CS/hijricalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/VB/hijricalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfYear">
+      <MemberSignature Language="C#" Value="public override int GetDayOfYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetDayOfYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o dia do ano especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um inteiro de 1 a 355 que representa o dia do ano especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dia do ano é definido como o número de dias desde o primeiro dia do ano. Por exemplo, <xref:System.Globalization.HijriCalendar.GetDayOfYear%2A> para o primeiro dia do primeiro mês retorna 1, e <xref:System.Globalization.HijriCalendar.GetDayOfYear%2A> para o último dia do mês anterior retorna o número total de dias no ano, que é o mesmo valor retornado por <xref:System.Globalization.HijriCalendar.GetDaysInYear%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário islâmico.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CPP/hijricalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CS/hijricalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/VB/hijricalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInMonth">
+      <MemberSignature Language="C#" Value="public override int GetDaysInMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 12 que representa o mês.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Retorna o número de dias no mês do ano especificado e era especificado.</summary>
+        <returns>O número de dias do mês especificado no ano especificado na era especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, este método retorna 29 ou 30 para Zulhijjah (`month` = 12), dependendo se `year` é um ano bissexto.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama `GetDaysInMonth` para o décimo-segundo mês em cada um dos cinco anos em cada era.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar.GetDaysInMonth#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.GetDaysInMonth/CPP/hijricalendar_getdaysinmonth.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar.GetDaysInMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.GetDaysInMonth/CS/hijricalendar_getdaysinmonth.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar.GetDaysInMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.GetDaysInMonth/VB/hijricalendar_getdaysinmonth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="era" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="year" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="month" /> está fora do intervalo com suporte por esse calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInYear">
+      <MemberSignature Language="C#" Value="public override int GetDaysInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetDaysInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Retorna o número de dias no ano especificado e era.</summary>
+        <returns>O número de dias no ano especificado e era. O número de dias é 354 em um ano comuns ou 355 em um ano bissexto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir exemplo chama `GetDaysInYear` por cinco anos em cada era.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar.GetDaysInYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.GetDaysInYear/CPP/hijricalendar_getdaysinyear.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar.GetDaysInYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.GetDaysInYear/CS/hijricalendar_getdaysinyear.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar.GetDaysInYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.GetDaysInYear/VB/hijricalendar_getdaysinyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />ou <paramref name="era" /> está fora do intervalo aceito por este calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEra">
+      <MemberSignature Language="C#" Value="public override int GetEra (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetEra(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetEra(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna a era no <see cref="T:System.DateTime" /> especificado.</summary>
+        <returns>Um inteiro que representa a era no <see cref="T:System.DateTime" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O calendário islâmico reconhece um era: A.H. (Latino "Anno Hegirae", que significa que "o ano da migração," refere-se a migração de Muhammad (PBUH) de Mecca).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário islâmico.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CPP/hijricalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CS/hijricalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/VB/hijricalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLeapMonth">
+      <MemberSignature Language="C#" Value="public override int GetLeapMonth (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetLeapMonth(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetLeapMonth(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um ano.</param>
+        <param name="era">Uma época. Especifique <see cref="F:System.Globalization.Calendar.CurrentEra" /> ou <see cref="F:System.Globalization.HijriCalendar.HijriEra" />.</param>
+        <summary>Calcula o mês de salto para um ano especificado e era.</summary>
+        <returns>Sempre 0 porque o <see cref="T:System.Globalization.HijriCalendar" /> tipo não oferece suporte a noção de um mês de salto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um calendário que oferece suporte a noção de um mês de salto, o mês de salto pode ocorrer depois de um determinado mês ou depois de qualquer mês em um ano. Por exemplo, o <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> método retorna um número entre 1 e 13 que indica o mês associado a uma data especificada. Se houver um mês bissexto entre os oitavo e o nono meses do ano, o <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> método retorna 8 oitavo mês, 9 para o passo oitavo mês e 10 para o nono mês.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />é menor que o ano do Calendário Hijri, 1 ou maior que o ano 9666.  
+  
+ -ou-  
+  
+ <paramref name="era" /> não é <see cref="F:System.Globalization.Calendar.CurrentEra" /> ou <see cref="F:System.Globalization.HijriCalendar.HijriEra" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonth">
+      <MemberSignature Language="C#" Value="public override int GetMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o mês na <see cref="T:System.DateTime" /> especificada.</summary>
+        <returns>Um inteiro de 1 a 12 que representa o mês na <see cref="T:System.DateTime" /> especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário islâmico.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CPP/hijricalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CS/hijricalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/VB/hijricalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonthsInYear">
+      <MemberSignature Language="C#" Value="public override int GetMonthsInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonthsInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetMonthsInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Retorna o número de meses no ano especificado e era.</summary>
+        <returns>O número de meses no ano especificado e era.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir chama o método de GetMonthsInYear por cinco anos em cada era.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar.GetMonthsInYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.GetMonthsInYear/CPP/hijricalendar_getmonthsinyear.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar.GetMonthsInYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.GetMonthsInYear/CS/hijricalendar_getmonthsinyear.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar.GetMonthsInYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.GetMonthsInYear/VB/hijricalendar_getmonthsinyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="era" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="year" /> está fora do intervalo com suporte por esse calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetYear">
+      <MemberSignature Language="C#" Value="public override int GetYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.GetYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o ano especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um inteiro que representa o ano especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário islâmico.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CPP/hijricalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/CS/hijricalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_AddGet/VB/hijricalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HijriAdjustment">
+      <MemberSignature Language="C#" Value="public int HijriAdjustment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HijriAdjustment" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HijriCalendar.HijriAdjustment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de dias a serem adicionados ou subtraídos do calendário para acomodar as variações no início e final do Ramadan e acomodar a diferença de data entre países/regiões.</summary>
+        <value>Um inteiro de -2 a 2 que representa o número de dias a serem adicionados ou subtraídos do calendário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Globalization.HijriCalendar> classe ajusta a data do calendário adicionando ou subtraindo-se um valor de zero a dois dias para acomodar as variações no início e o término do Ramadan e para acomodar a diferença de data entre países/regiões. Se o valor é armazenado no <xref:System.Globalization.HijriCalendar.HijriAdjustment%2A> propriedade. Se <xref:System.Globalization.HijriCalendar.HijriAdjustment%2A> não está definida explicitamente, ela deriva seu valor as configurações na parte de opções regionais e de idioma do painel de controle e é armazenada no valor do registro HKEY_CURRENT_USER\Painel Panel\International\AddHijriDate. No entanto, essas informações podem alterar durante a vida do <xref:System.AppDomain>. O <xref:System.Globalization.HijriCalendar> classe não detecta alterações nas configurações do sistema automaticamente.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra como <xref:System.Globalization.HijriCalendar.HijriAdjustment%2A> afeta a data.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar.HijriAdjustment#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.HijriAdjustment/CPP/hijriadjustment.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar.HijriAdjustment#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.HijriAdjustment/CS/hijriadjustment.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar.HijriAdjustment#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.HijriAdjustment/VB/hijriadjustment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade está sendo definida com um valor inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HijriEra">
+      <MemberSignature Language="C#" Value="public static readonly int HijriEra;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 HijriEra" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.HijriCalendar.HijriEra" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a era atual. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Globalization.HijriCalendar.HijriEra> campo é 1.  
+  
+ O calendário islâmico reconhece um era: A.H. (Latino "Anno Hegirae", que significa que "o ano da migração," refere-se a migração de Muhammad (PBUH) de Mecca).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapDay">
+      <MemberSignature Language="C#" Value="public override bool IsLeapDay (int year, int month, int day, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapDay(int32 year, int32 month, int32 day, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 12 que representa o mês.</param>
+        <param name="day">Um inteiro de 1 a 30 que representa o dia.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Determina se a data especificada é um dia bissexto.</summary>
+        <returns>
+          <see langword="true" />Se o dia especificado é um dia bissexto; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em cada ciclo de 30 anos que termina com um ano divisível por 30, 2º, dia 5, 7, 10º dia, 13, 16, 18, 21, 24, 26 e 29 anos são bissextos. Um ano comum tem 354 dias e um ano bissexto tiver 355 dias.  
+  
+ Um dia de salto é um dia em que ocorre apenas em um ano bissexto. No calendário islâmico, o dia 30 de Zulhijjah será a única bissexto.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama o `IsLeapDay` método para o último dia do mês segundo (fevereiro) por cinco anos em cada uma das eras.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar.IsLeapDay#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapDay/CPP/hijricalendar_isleapday.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar.IsLeapDay#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapDay/CS/hijricalendar_isleapday.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar.IsLeapDay#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapDay/VB/hijricalendar_isleapday.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="era" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="year" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="month" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="day" /> está fora do intervalo com suporte por esse calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapMonth">
+      <MemberSignature Language="C#" Value="public override bool IsLeapMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 12 que representa o mês.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Determina se o mês no ano especificado e era especificado é um mês de salto.</summary>
+        <returns>Esse método sempre retorna <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em cada ciclo de 30 anos que termina com um ano divisível por 30, 2º, dia 5, 7, 10º dia, 13, 16, 18, 21, 24, 26 e 29 anos são bissextos. Um ano comum tem 354 dias e um ano bissexto tiver 355 dias.  
+  
+ Um mês de salto é um mês inteiro ocorre apenas em um ano bissexto. O calendário islâmico não tem qualquer meses bissexto.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama `IsLeapMonth` para todos os meses em cinco anos na era atual.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar.IsLeapMonth#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapMonth/CPP/hijricalendar_isleapmonth.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar.IsLeapMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapMonth/CS/hijricalendar_isleapmonth.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar.IsLeapMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapMonth/VB/hijricalendar_isleapmonth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="era" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="year" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="month" /> está fora do intervalo com suporte por esse calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapYear">
+      <MemberSignature Language="C#" Value="public override bool IsLeapYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.IsLeapYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Determina se o ano especificado na era especificado é um ano bissexto.</summary>
+        <returns>
+          <see langword="true" />Se o ano especificado é um ano bissexto; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em cada ciclo de 30 anos que termina com um ano divisível por 30, 2º, dia 5, 7, 10º dia, 13, 16, 18, 21, 24, 26 e 29 anos são bissextos. Um ano comum tem 354 dias e um ano bissexto tiver 355 dias.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama o `IsLeapYear` método por cinco anos em cada uma das eras.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar.IsLeapYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapYear/CPP/hijricalendar_isleapyear.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar.IsLeapYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapYear/CS/hijricalendar_isleapyear.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar.IsLeapYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar.IsLeapYear/VB/hijricalendar_isleapyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="era" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="year" /> está fora do intervalo com suporte por esse calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MaxSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MaxSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HijriCalendar.MaxSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora com suporte por este calendário mais recente.</summary>
+        <value>Na última data e hora com suporte a <see cref="T:System.Globalization.HijriCalendar" /> tipo, que é equivalente ao último momento de 31 de dezembro de 9999 C.E. no calendário gregoriano.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 31 de dezembro de 9999 C.E. é equivalente para o 3º dia do mês do ano 9666 no calendário islâmico 4º.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor mínimo e o valor máximo do calendário.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_MinMax#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_MinMax/CPP/hijricalendar_minmax.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_MinMax#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_MinMax/CS/hijricalendar_minmax.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_MinMax#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_MinMax/VB/hijricalendar_minmax.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MinSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MinSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HijriCalendar.MinSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora com suporte por este calendário mais antigo.</summary>
+        <value>Data e hora com suporte mais recente do <see cref="T:System.Globalization.HijriCalendar" /> tipo, que é equivalente ao primeiro momento em 18 de julho de 622 E.C. no calendário gregoriano.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Microsoft Visual Basic representa a hora do dia, como a hora especificada na data mínima com suporte a <xref:System.DateTime> tipo, que é 1 de janeiro de 0001 C.E. No entanto, o <xref:System.Globalization.HijriCalendar> tipo não oferece suporte a data mínima. Consequentemente, se você chamar um método para formatar a hora do dia usando o calendário atual, mas você não especificar um especificador de formato, formatação usa o ISO 8601 classificável ("s") data/hora especificador de formato padrão em vez do padrão geral ("G") de data/hora padrão especificador de formato. Para obter mais informações, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor mínimo e o valor máximo do calendário.  
+  
+ [!code-cpp[System.Globalization.HijriCalendar_MinMax#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_MinMax/CPP/hijricalendar_minmax.cpp#1)]
+ [!code-csharp[System.Globalization.HijriCalendar_MinMax#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_MinMax/CS/hijricalendar_minmax.cs#1)]
+ [!code-vb[System.Globalization.HijriCalendar_MinMax#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HijriCalendar_MinMax/VB/hijricalendar_minmax.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime ToDateTime (int year, int month, int day, int hour, int minute, int second, int millisecond, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime ToDateTime(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second, int32 millisecond, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="hour" Type="System.Int32" />
+        <Parameter Name="minute" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+        <Parameter Name="millisecond" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 12 que representa o mês.</param>
+        <param name="day">Um inteiro de 1 a 30 que representa o dia.</param>
+        <param name="hour">Um inteiro de 0 a 23 que representa a hora.</param>
+        <param name="minute">Um inteiro de 0 a 59 que representa o minuto.</param>
+        <param name="second">Um inteiro de 0 a 59 que representa o segundo.</param>
+        <param name="millisecond">Um inteiro de 0 a 999 que representa o milissegundo.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Retorna um <see cref="T:System.DateTime" /> que é definido como a data especificada, a hora e a época.</summary>
+        <returns>O <see cref="T:System.DateTime" /> que é definido como a data e hora especificadas na era atual.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="era" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="year" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="month" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="day" /> está fora do intervalo com suporte por esse calendário.  
+  
+ -ou-  
+  
+ <paramref name="hour" /> é menor que zero ou maior que 23.  
+  
+ - ou -  
+  
+ <paramref name="minute" /> é menor que zero ou maior que 59.  
+  
+ -ou-  
+  
+ <paramref name="second" /> é menor que zero ou maior que 59.  
+  
+ -ou-  
+  
+ <paramref name="millisecond" /> é menor que zero ou maior que 999.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToFourDigitYear">
+      <MemberSignature Language="C#" Value="public override int ToFourDigitYear (int year);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ToFourDigitYear(int32 year) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HijriCalendar.ToFourDigitYear(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro de dois ou quatro dígitos que representa o ano a ser convertido.</param>
+        <summary>Converte o ano especificado em um ano de quatro dígitos usando a propriedade <see cref="P:System.Globalization.HijriCalendar.TwoDigitYearMax" /> para determinar o século apropriado.</summary>
+        <returns>Um inteiro que contém a representação de quatro dígitos de <paramref name="year" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Globalization.HijriCalendar.TwoDigitYearMax%2A>é o último ano no intervalo de 100 anos que pode ser representado por um ano de dois dígitos. O século é determinado pelo localizar a ocorrência exclusiva de dois dígitos `year` dentro desse intervalo de 100 anos. Por exemplo, se <xref:System.Globalization.HijriCalendar.TwoDigitYearMax%2A> está definido para 1429, é o intervalo de 100 anos de 1330 a 1429; portanto, um valor de 2 dígitos de 30 anos é interpretado como 1330, enquanto um valor de 2 dígitos de 29 é interpretado como 1429.  
+  
+ <xref:System.Globalization.HijriCalendar.ToFourDigitYear%2A>oferece suporte a um ano de dois dígitos ou um ano de quatro dígitos. Passando um valor de ano de dois dígitos (menos de 100) faz com que o método converter o valor para um valor de quatro dígitos de acordo com o <xref:System.Globalization.HijriCalendar.TwoDigitYearMax%2A> valor que representa o século apropriado. Se o aplicativo fornece um valor de ano de quatro dígitos que está dentro do intervalo de calendário com suporte para <xref:System.Globalization.HijriCalendar.ToFourDigitYear%2A>, o método retorna o valor de entrada real. Se o aplicativo fornece um valor de quatro dígitos que está fora do intervalo de calendário com suporte, ou se ele fornece um valor negativo, o método gera uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> está fora do intervalo com suporte por esse calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoDigitYearMax">
+      <MemberSignature Language="C#" Value="public override int TwoDigitYearMax { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TwoDigitYearMax" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HijriCalendar.TwoDigitYearMax" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o último ano de um intervalo de 100 anos que pode ser representado por um ano de dois dígitos.</summary>
+        <value>O último ano de um intervalo de 100 anos que pode ser representado por um ano de dois dígitos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade permite que um ano de 2 dígitos ser convertido corretamente em um ano de 4 dígitos. Por exemplo, se essa propriedade é definida como 1429, o intervalo de 100 anos é de 1330 1429. Portanto, um valor de 2 dígitos de 30 anos é interpretado como 1330, enquanto um valor de 2 dígitos de 29 é interpretado como 1429.  
+  
+ O valor inicial dessa propriedade é derivado das configurações na parte de opções regionais e de idioma do painel de controle. No entanto, essas informações podem alterar durante a vida do <xref:System.AppDomain>. O <xref:System.Globalization.HijriCalendar> classe não detecta alterações nas configurações do sistema automaticamente.  
+  
+ O aplicativo deve definir esse valor a 99 para indicar que os anos de 2 dígitos são deve ser considerado literalmente. Por exemplo, se essa propriedade é definida como 99, o intervalo de 100 anos é de 0 (não um valor válido para a maioria dos calendários) a 99. Portanto, um valor de 2 dígitos de 30 anos é interpretado como 30.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse calendário é somente leitura.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor em uma operação de definição é menor que 100 ou maior que 9666.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

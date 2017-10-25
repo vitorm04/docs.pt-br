@@ -1,0 +1,356 @@
+<Type Name="Content" FullName="System.Web.UI.WebControls.Content">
+  <TypeSignature Language="C#" Value="public class Content : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Content extends System.Web.UI.Control implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Content" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ContentDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.ContentBuilderInternal))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Mantém controles servidor, marcação e texto para serem renderizados em um controle <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> em uma página mestra.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.Content> controle é um contêiner para o conteúdo e os controles de uma página de conteúdo. Um <xref:System.Web.UI.WebControls.Content> o controle é usado apenas com uma página mestre que define um correspondente <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle. Um <xref:System.Web.UI.WebControls.Content> controle não é adicionado à hierarquia de controle em tempo de execução. Em vez disso, o conteúdo dentro do <xref:System.Web.UI.WebControls.Content> controle diretamente são mesclados em correspondente <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle.  
+  
+ O <xref:System.Web.UI.WebControls.Content> controle está associado com um <xref:System.Web.UI.WebControls.ContentPlaceHolder> usando seu <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> propriedade. Definir o <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> o valor da propriedade a <xref:System.Web.UI.Control.ID%2A> propriedade de um <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle em uma página mestre. Quando a URL da página de conteúdo é chamado, todos os controles de texto, a marcação e o servidor que estão contidos dentro do <xref:System.Web.UI.WebControls.Content> controle são renderizados para o <xref:System.Web.UI.WebControls.ContentPlaceHolder> na página mestra e o endereço barra do navegador mostrará o nome da página de conteúdo.  
+  
+ Para obter mais informações sobre páginas mestras e páginas de conteúdo, consulte [páginas mestras ASP.NET](http://msdn.microsoft.com/library/4e53eedf-8304-4e7a-aed1-691a2623b28b).  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:Content  
+    ContentPlaceHolderID="string"  
+    EnableViewState="True|False"  
+    ID="string"  
+    runat="server">  
+    Visible="True|False"  
+        <!-- child controls -->  
+</asp:Content>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.UI.WebControls.Content> controle para definir o conteúdo para uma página mestra. A primeira página da Web é uma página mestra e define uma região de conteúdo usando um <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle.  
+  
+ [!code-xml[System.Web.UI.MasterPage_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.MasterPage_1/CS/MasterPageSample_1cs.master#1)]   
+  
+ O exemplo de código a seguir demonstra como usar uma página de conteúdo para a página mestra anterior. O texto, marcação e os controles de servidor que estão definidos dentro de <xref:System.Web.UI.WebControls.Content> modelo de controle são renderizados para o <xref:System.Web.UI.WebControls.ContentPlaceHolder> na página mestra.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/MasterPageSample_1cs.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/MasterPageSample_1vb.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Content ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Content.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CompositeDataBoundControl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Content> controle normalmente é criado declarativamente, programaticamente. Para ver um exemplo, consulte <xref:System.Web.UI.WebControls.Content>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentPlaceHolderID">
+      <MemberSignature Language="C#" Value="public string ContentPlaceHolderID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentPlaceHolderID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Content.ContentPlaceHolderID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty(typeof(System.Web.UI.WebControls.ContentPlaceHolder))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID do controle <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> associado ao conteúdo atual.</summary>
+        <value>Uma cadeia de caracteres que contém a ID do <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> associado ao conteúdo atual. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todo o conteúdo que é encapsulado pelo <xref:System.Web.UI.WebControls.Content> controle é processado no referenciado <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle em uma página mestre. Um <xref:System.Web.UI.WebControls.Content> controle não é adicionado à hierarquia de controle em tempo de execução.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> propriedade de um <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle em uma página da Web do ASP.NET.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.Content> classe.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/MasterPageSample_1cs.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/MasterPageSample_1vb.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir a propriedade no tempo de execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBinding">
+      <MemberSignature Language="C#" Value="public event EventHandler DataBinding;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DataBinding" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.DataBinding" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é vinculado a uma fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Content.DataBinding> nunca é chamado de evento e não aparecem em designers visuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disposed">
+      <MemberSignature Language="C#" Value="public event EventHandler Disposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposed" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.Disposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é liberado da memória.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Content.Disposed> nunca é chamado de evento e não aparecem em designers visuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public event EventHandler Init;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Init" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.Init" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é inicializado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Content.Init> nunca é chamado de evento e não aparecem em designers visuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public event EventHandler Load;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Load" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.Load" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle de servidor é carregado no <see cref="T:System.Web.UI.Page" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Content.Load> nunca é chamado de evento e não aparecem em designers visuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreRender">
+      <MemberSignature Language="C#" Value="public event EventHandler PreRender;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PreRender" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.PreRender" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle de servidor está prestes a renderizar para que o contém <see cref="T:System.Web.UI.Page" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Content.PreRender> nunca é chamado de evento e não aparecem em designers visuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unload">
+      <MemberSignature Language="C#" Value="public event EventHandler Unload;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Unload" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Content.Unload" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle de servidor é descarregado da memória.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Content.Unload> nunca é chamado de evento e não aparecem em designers visuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

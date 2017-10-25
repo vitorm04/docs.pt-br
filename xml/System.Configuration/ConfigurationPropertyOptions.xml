@@ -1,0 +1,174 @@
+<Type Name="ConfigurationPropertyOptions" FullName="System.Configuration.ConfigurationPropertyOptions">
+  <TypeSignature Language="C#" Value="public enum ConfigurationPropertyOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConfigurationPropertyOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationPropertyOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as opções a serem aplicadas a uma propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a criação de um elemento de configuração, você deve usar o <xref:System.Configuration.ConfigurationPropertyOptions> enumerador para especificar as opções para aplicar de forma programática. Essas opções indicarem se uma propriedade é necessária, é uma propriedade de chave da coleção, etc. Se um valor não for especificado, o valor deve para ser None.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsAssemblyStringTransformationRequired">
+      <MemberSignature Language="C#" Value="IsAssemblyStringTransformationRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationPropertyOptions IsAssemblyStringTransformationRequired = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationPropertyOptions.IsAssemblyStringTransformationRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o nome do assembly para a propriedade de configuração requer transformação quando ele é serializado para uma versão anterior do .NET Framework.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultCollection">
+      <MemberSignature Language="C#" Value="IsDefaultCollection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationPropertyOptions IsDefaultCollection = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationPropertyOptions.IsDefaultCollection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a propriedade é uma coleção padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKey">
+      <MemberSignature Language="C#" Value="IsKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationPropertyOptions IsKey = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationPropertyOptions.IsKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a propriedade é uma chave de coleção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequired">
+      <MemberSignature Language="C#" Value="IsRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationPropertyOptions IsRequired = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationPropertyOptions.IsRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a propriedade é necessária.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTypeStringTransformationRequired">
+      <MemberSignature Language="C#" Value="IsTypeStringTransformationRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationPropertyOptions IsTypeStringTransformationRequired = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationPropertyOptions.IsTypeStringTransformationRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o nome do tipo para a propriedade de configuração requer transformação quando ele é serializado para uma versão anterior do .NET Framework.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVersionCheckRequired">
+      <MemberSignature Language="C#" Value="IsVersionCheckRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationPropertyOptions IsVersionCheckRequired = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationPropertyOptions.IsVersionCheckRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a seção de configuração pai da propriedade de configuração deve ser consultada no tempo de serialização para determinar se a propriedade de configuração deve ser serializada em XML.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationPropertyOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationPropertyOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que nenhuma opção se aplica à propriedade.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

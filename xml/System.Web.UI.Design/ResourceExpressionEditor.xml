@@ -1,0 +1,155 @@
+<Type Name="ResourceExpressionEditor" FullName="System.Web.UI.Design.ResourceExpressionEditor">
+  <TypeSignature Language="C#" Value="public class ResourceExpressionEditor : System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResourceExpressionEditor extends System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ResourceExpressionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ExpressionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades e métodos para avaliar e editar uma expressão de recursos em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ResourceExpressionEditor> classe deriva de <xref:System.Web.UI.Design.ExpressionEditor> classe e fornece uma implementação para avaliar e associar uma referência de recurso com uma propriedade de controle em tempo de design. Por exemplo, você pode associar o valor de uma propriedade de controle para a expressão de recurso `Resources:submitText`, que indica que o valor de propriedade do controle é definido usando o recurso denominado `submitText`.  
+  
+ Hospedar um designer visual, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], usa o <xref:System.Web.UI.Design.ResourceExpressionEditor> de classe para especificar uma classe de recurso, a chave e o valor padrão do designer para a expressão de recurso e, em seguida, avaliar a expressão de recurso selecionado para a renderização de tempo de design.  
+  
+ Quando você procura a <xref:System.Web.UI.Design.HtmlControlDesigner.Expressions%2A> propriedade para um controle na grade de propriedades de tempo de design, o designer visual exibe uma caixa de diálogo para expressões de conjunto que fornecem o valor de tempo de execução para uma propriedade de controle. Você pode selecionar o tipo de expressão com base em uma lista de prefixos de expressão. Quando você seleciona o **recursos** prefixo de expressão na lista, os usos de designer visual a <xref:System.Web.UI.Design.ResourceExpressionEditor> métodos para definir, avaliar e converter a expressão com base na sintaxe de expressão de recurso. O designer visual usa o resultado da expressão avaliada para atribuir valores de propriedade são renderizados na superfície de design de controle.  
+  
+ A base de <xref:System.Web.Configuration.ExpressionBuilder.ExpressionPrefix%2A?displayProperty=nameWithType> propriedade para um <xref:System.Web.Compilation.ResourceExpressionBuilder> retorna a cadeia de caracteres `Resources`. O <xref:System.Web.Compilation.ResourceExpressionBuilder> classe está associada com o prefixo de expressão `Resources` e <xref:System.Web.UI.Design.ResourceExpressionEditor> implementação.  
+  
+ O <xref:System.Web.UI.Design.ResourceExpressionEditor.EvaluateExpression%2A> método avalia uma expressão de recurso de entrada. O <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> método retorna o <xref:System.Web.UI.Design.ExpressionEditorSheet> implementação que é usada para selecionar o nome do recurso, a classe e o valor padrão do designer e para formar uma expressão de recurso entre os valores de recursos selecionado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como associar o <xref:System.Web.UI.WebControls.HyperLink.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.HyperLink> controle para uma expressão de recurso usando o <xref:System.Web.UI.Design.ResourceExpressionEditor> classe.  
+  
+1.  Em um projeto Web Forms, adicione um novo arquivo de recurso denominado Strings.resx à pasta App_LocalResources.  
+  
+2.  Adicionar uma cadeia de caracteres chamada myLinkText para o arquivo de recurso Strings.resx e, em seguida, defina o valor como o texto de um <xref:System.Web.UI.WebControls.HyperLink> controle.  
+  
+     Por exemplo, definir a `myLinkText` valor de cadeia de caracteres `This is a good link`.  
+  
+3.  Em uma página de Web Forms, adicione um <xref:System.Web.UI.WebControls.HyperLink> controle.  
+  
+4.  Para o `Hyperlink` de controle, em propriedades, clique em **expressões**e, em seguida, clique no botão de reticências (**... **).  
+  
+     O `<Hyperlinkname>` **expressões** caixa de diálogo é exibida.  
+  
+5.  Em **propriedades vinculáveis**, clique em **texto**e, em seguida, no **tipo de expressão** , digite **recursos**.  
+  
+     As propriedades de expressão de recursos que são definidas pelo <xref:System.Web.UI.Design.ResourceExpressionEditorSheet> classe aparecem.  
+  
+6.  Em **propriedades de expressão** definir **ClassName** para **cadeias de caracteres**, que é o nome da classe para o arquivo de recurso Strings.resx e defina a compilados **ResourceKey ** para **myLinkText**, que é o nome de cadeia de caracteres em Strings.resx.  
+  
+ O designer visual usa o <xref:System.Web.UI.Design.ResourceExpressionEditor> atribuir a expressão de recurso para o `Text` propriedade. A fonte. aspx mostra um exemplo de um valor de propriedade que é definido usando uma expressão de recurso.  
+  
+ [!code-aspx-csharp[ControlsUsingExpressions#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlsUsingExpressions/CS/controlsusingexpressionscs.aspx#3)]
+ [!code-aspx-vb[ControlsUsingExpressions#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlsUsingExpressions/VB/controlsusingexpressionsvb.aspx#3)]
+ [!code-xml[ControlsUsingExpressions#3](~/samples/snippets/common/VS_Snippets_WebNet/ControlsUsingExpressions/Common/controlsusingexpressions.xml#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceExpressionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ResourceExpressionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de uma classe <see cref="T:System.Web.UI.Design.ResourceExpressionEditor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.Design.ResourceExpressionEditor> objeto é configurado pela classe base junto com um <xref:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix%2A> propriedade definida como `Resources`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (string expression, object parseTimeData, Type propertyType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(string expression, object parseTimeData, class System.Type propertyType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ResourceExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="parseTimeData" Type="System.Object" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Uma expressão de recurso para avaliar. <c>expressão</c> não inclui o <see langword="Resources" /> prefixo de expressão.</param>
+        <param name="parseTimeData">Um objeto que fornece dados de análise adicional, na forma de uma <see cref="T:System.Web.Compilation.ResourceExpressionFields" /> valor.</param>
+        <param name="propertyType">O tipo da propriedade de controle.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer, usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Avalia uma expressão de recurso e fornece o valor de tempo de design para uma propriedade de controle.</summary>
+        <returns>O objeto referenciado pela cadeia de caracteres de expressão avaliada, se a avaliação da expressão for bem-sucedida; Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ResourceExpressionEditor.EvaluateExpression%2A> método pesquisa o recurso especificado pela `expression`e, em seguida, retorna o recurso.  
+  
+ O designer visual usa o <xref:System.Web.UI.Design.ResourceExpressionEditor.EvaluateExpression%2A> método para avaliar uma expressão de recurso e forneça o valor de tempo de design para uma propriedade do controle associado. Em tempo de execução, o analisador de página usa o <xref:System.Web.Compilation.ResourceExpressionBuilder.EvaluateExpression%2A> e <xref:System.Web.Compilation.ResourceExpressionBuilder.GetCodeExpression%2A> métodos do <xref:System.Web.Compilation.ResourceExpressionBuilder> implementação para avaliar uma expressão e forneça o valor de tempo de execução para uma propriedade do controle associado.  
+  
+ O designer visual usa o <xref:System.Web.Compilation.ResourceExpressionBuilder.ParseExpression%2A> método para analisar a cadeia de caracteres de expressão em tempo de design e, em seguida, chama o <xref:System.Web.UI.Design.ResourceExpressionEditor.EvaluateExpression%2A> método com os dados da expressão analisada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditorSheet">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ResourceExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditorSheet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Uma expressão de recurso, usada para inicializar a folha de editor de expressão.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer, usado para inicializar a folha de editor de expressão.</param>
+        <summary>Retorna uma folha de editor de expressão de recurso que é inicializada com a implementação de provedor de serviço e de cadeia de caracteres da expressão de entrada.</summary>
+        <returns>Um <see cref="T:System.Web.UI.Design.ResourceExpressionEditorSheet" /> que define as propriedades de expressão de recurso.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ResourceExpressionEditor.GetExpressionEditorSheet%2A> método retorna um editor de expressão de implementação de folha para expressões de recurso. O host de designer visual usa a folha de editor de expressão em sua caixa de diálogo de expressões.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

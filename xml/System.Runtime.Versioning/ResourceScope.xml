@@ -1,0 +1,222 @@
+<Type Name="ResourceScope" FullName="System.Runtime.Versioning.ResourceScope">
+  <TypeSignature Language="C#" Value="public enum ResourceScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ResourceScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Versioning.ResourceScope" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica o escopo de um recurso compartilhável.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um recurso é um objeto que mantém o estado. Exemplos de recursos incluem um arquivo no disco, uma fila de mensagens para um processo e um conjunto nomeado <xref:System.Threading.Mutex>. Saber a que um objeto é um recurso não indica o uso apropriado; a propriedade importante de um recurso é o escopo do recurso. O escopo inclui o tipo e a visibilidade do recurso. O tipo de recurso Especifica se o recurso é um recurso de nível de máquina, como um arquivo no disco, um recurso de todo o processo, como um bloco de memória não compartilhado ou um recurso de nível de domínio de aplicativo, como um bloqueio em uma instância de um não marshaling por objeto de referência.  Os escopos de visibilidade são Assembly e privadas, o padrão é `Public`, que é implícita se Private ou Assembly não são indicados.  Não há nenhum valor de enumeração para `Public`.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="AppDomain">
+      <MemberSignature Language="C#" Value="AppDomain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope AppDomain = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.AppDomain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado é compartilhado por objetos dentro de um <see cref="T:System.AppDomain" />.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="Assembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Assembly = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Assembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O recurso é visível em um escopo de assembly.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Library">
+      <MemberSignature Language="C#" Value="Library" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Library = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Library" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado é compartilhado por objetos dentro de uma biblioteca.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Machine">
+      <MemberSignature Language="C#" Value="Machine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Machine = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Machine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado é compartilhado por objetos dentro da máquina.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há nenhum estado compartilhado.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Private">
+      <MemberSignature Language="C#" Value="Private" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Private = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Private" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O recurso é visível apenas no tipo.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="Process" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Versioning.ResourceScope Process = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Versioning.ResourceScope.Process" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado é compartilhado dentro de um processo.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

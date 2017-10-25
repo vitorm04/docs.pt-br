@@ -1,0 +1,205 @@
+<Type Name="EditingContext" FullName="System.Activities.Presentation.EditingContext">
+  <TypeSignature Language="C#" Value="public class EditingContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EditingContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.EditingContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contém informações contextuais de estado para um designer, como o <see cref="T:System.Activities.Presentation.WorkflowDesigner" />. Isso inclui informações de estado permanentes, como a lista de serviços em execução no designer. Ele também inclui o estado transiente consiste em itens de contexto, incluindo o conjunto de objetos selecionados no momento, bem como a ferramenta de edição que está sendo usado para manipular objetos na superfície de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.Presentation.EditingContext> representa o limite de comunicação que é compartilhado entre o aplicativo de hospedagem e o [!INCLUDE[wfd1](~/includes/wfd1-md.md)]. O <xref:System.Activities.Presentation.EditingContext> foi implementada como uma classe concreta para facilidade de uso. Substituir <xref:System.Activities.Presentation.EditingContext.CreateServiceManager%2A> e <xref:System.Activities.Presentation.EditingContext.CreateContextItemManager%2A> usar gerenciadores personalizados derivados de <xref:System.Activities.Presentation.ServiceManager> e <xref:System.Activities.Presentation.ContextItemManager>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditingContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.EditingContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.EditingContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContextItemManager">
+      <MemberSignature Language="C#" Value="protected virtual System.Activities.Presentation.ContextItemManager CreateContextItemManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Activities.Presentation.ContextItemManager CreateContextItemManager() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.EditingContext.CreateContextItemManager" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.ContextItemManager</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância do contexto do Gerenciador de item que é retornado pelo <see cref="P:System.Activities.Presentation.EditingContext.Items" /> propriedade.</summary>
+        <returns>
+          <see cref="T:System.Activites.Design.ContextItemManager" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão cria um <xref:System.Activities.Presentation.ContextItemManager> que dá suporte a atrasada ativação dos gerenciadores de editor de design por meio da declaração de um <xref:System.Activities.Presentation.SubscribeContextCallback> atributo no Gerenciador de editor de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceManager">
+      <MemberSignature Language="C#" Value="protected virtual System.Activities.Presentation.ServiceManager CreateServiceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Activities.Presentation.ServiceManager CreateServiceManager() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.EditingContext.CreateServiceManager" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.ServiceManager</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância do Gerenciador de serviço a ser retornado do <see cref="P:System.Activities.Presentation.EditingContext.Services" /> propriedade.</summary>
+        <returns>Um objeto <see cref="T:System.Activities.Presentation.ServiceManager" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão cria um <xref:System.Activities.Presentation.ServiceManager> que dá suporte a atrasada ativação dos gerenciadores de editor de design por meio da declaração de um <xref:System.Activities.Presentation.SubscribeContextCallback> atributo no Gerenciador de editor de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.EditingContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera imediatamente todos os recursos não gerenciados usados pelo objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.EditingContext.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />Se esse objeto está sendo descartado; <see langword="false" /> se o objeto está finalizando.</param>
+        <summary>Libera imediatamente os recursos não gerenciados usados pelo atual <see cref="T:System.Activities.Presentation.EditingContext" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disposing">
+      <MemberSignature Language="C#" Value="public event EventHandler Disposing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Disposing" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.EditingContext.Disposing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="M:System.IDisposable.Dispose" /> método é chamado ou quando a <see cref="T:System.Activities.Presentation.EditingContext" /> o objeto é finalizado e coletado pelo coletor de lixo do Microsoft .NET common language runtime.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.ContextItemManager Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.ContextItemManager Items" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.EditingContext.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.ContextItemManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna a coleção de local de itens de contexto armazenados pelo contexto de edição atual.</summary>
+        <value>O <see cref="T:System.Activities.Presentation.ContextItemManager" /> coleção de <see cref="T:System.Activities.Presentation.ContextItem" /> usados neste contexto de edição de objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.Presentation.EditingContext.Items%2A> é coleta de dados que são compartilhados entre um host e o designer.  Esses dados fornecem o mecanismo necessário para conectar-se para uma assinatura e de notificação de alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Services">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.ServiceManager Services { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.ServiceManager Services" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.EditingContext.Services" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.ServiceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o Gerenciador de serviço usado no contexto de edição atual.</summary>
+        <value>O <see cref="T:System.Activities.Presentation.ServiceManager" /> usado neste contexto de edição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Presentation.EditingContext.Services%2A>representa a funcionalidade que é fornecido pelo host para usar o designer ou que é usado pelo designer para tornar a funcionalidade disponível para todos os designers dentro do editor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

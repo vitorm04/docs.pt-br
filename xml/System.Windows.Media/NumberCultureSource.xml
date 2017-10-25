@@ -1,0 +1,73 @@
+<Type Name="NumberCultureSource" FullName="System.Windows.Media.NumberCultureSource">
+  <TypeSignature Language="C#" Value="public enum NumberCultureSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NumberCultureSource extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.NumberCultureSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como a cultura para números em uma sequência de texto é determinada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.NumberSubstitution> classe usa os valores enumerados do <xref:System.Windows.Media.NumberCultureSource> classe para determinar como os números são exibidos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Override">
+      <MemberSignature Language="C#" Value="Override" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.NumberCultureSource Override = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberCultureSource.Override" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberCultureSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Número cultura é derivada do <see cref="P:System.Windows.Media.NumberSubstitution.CultureOverride" /> propriedade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.NumberCultureSource Text = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberCultureSource.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberCultureSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Padrão. Número cultura é derivada do valor da <see cref="P:System.Windows.Media.TextFormatting.TextRunProperties.CultureInfo" /> propriedade, que é a cultura da sequência de texto. Na marcação, isso é representado pelo <c>XML: lang</c> atributo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="User" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.NumberCultureSource User = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.NumberCultureSource.User" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberCultureSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Número cultura é derivada do valor de cultura do thread atual, que é a cultura padrão do usuário por padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

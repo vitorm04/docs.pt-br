@@ -1,0 +1,105 @@
+<Type Name="Localize" FullName="System.Web.UI.WebControls.Localize">
+  <TypeSignature Language="C#" Value="public class Localize : System.Web.UI.WebControls.Literal" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Localize extends System.Web.UI.WebControls.Literal" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Localize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Literal</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LocalizeDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.UI.WebControls.Localize))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Reserva um local em uma página da Web para exibir um texto estático localizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ Use o <xref:System.Web.UI.WebControls.Localize> controle para reservar um local em uma página da Web para exibir o texto localizado.  
+  
+> [!NOTE]
+>  Controles que estão fora de `body` elemento são ignorados.  
+  
+ O <xref:System.Web.UI.WebControls.Localize> controle herda o <xref:System.Web.UI.WebControls.Literal> controlar e é idêntico a ele em cada modo. O <xref:System.Web.UI.WebControls.Localize> controle é usado em tempo de design para distinguir texto estático que pode ser localizado de outro texto estático. Embora o <xref:System.Web.UI.WebControls.Label> controle permite que você aplique um estilo para o texto exibido, o <xref:System.Web.UI.WebControls.Localize> controle não. Você pode gerenciar programaticamente o texto exibido no controle definindo o <xref:System.Web.UI.WebControls.Literal.Text%2A?displayProperty=nameWithType> propriedade, herdada do <xref:System.Web.UI.WebControls.Literal> controle.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [protegendo controles padrão](http://msdn.microsoft.com/library/f3e7718f-63d0-44a3-bd5f-48cc2059c2a8), [como: proteger contra scripts maliciosos em um aplicativo da Web aplicando codificação HTML a cadeias de caracteres](http://msdn.microsoft.com/library/6f67973f-dda0-45a1-ba9d-e88532d7dc5b), e [Validando a entrada do usuário em páginas da Web do ASP.NET](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:Localize  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    Mode="Transform|PassThrough|Encode"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Text="string"  
+    Visible="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.Localize> controle para exibir texto estático.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Localize#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Localize/CS/localizecs.aspx#1)]
+ [!code-aspx-vb[Localize#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Localize/VB/localizevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Localize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Localize.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Localize" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma nova instância do <xref:System.Web.UI.WebControls.Localize> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

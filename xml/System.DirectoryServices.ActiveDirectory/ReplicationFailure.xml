@@ -1,0 +1,115 @@
+<Type Name="ReplicationFailure" FullName="System.DirectoryServices.ActiveDirectory.ReplicationFailure">
+  <TypeSignature Language="C#" Value="public class ReplicationFailure" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ReplicationFailure extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ReplicationFailure" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações sobre uma tentativa de replicação com falha.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConsecutiveFailureCount">
+      <MemberSignature Language="C#" Value="public int ConsecutiveFailureCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConsecutiveFailureCount" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationFailure.ConsecutiveFailureCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de falhas consecutivas desde a última replicação com êxito.</summary>
+        <value>O número de falhas consecutivas desde a última replicação com êxito.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstFailureTime">
+      <MemberSignature Language="C#" Value="public DateTime FirstFailureTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime FirstFailureTime" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationFailure.FirstFailureTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e a hora em que a primeira falha ocorreu.</summary>
+        <value>A data e hora em que a primeira falha ocorreu durante a replicação do servidor de origem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastErrorCode">
+      <MemberSignature Language="C#" Value="public int LastErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LastErrorCode" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationFailure.LastErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de erro para a falha mais recente.</summary>
+        <value>Um HRESULT que contém o código de erro que é associado à falha mais recente. Isso será ERROR_SUCCESS se o erro específico está disponível.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastErrorMessage">
+      <MemberSignature Language="C#" Value="public string LastErrorMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LastErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationFailure.LastErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de erro para a falha mais recente.</summary>
+        <value>A mensagem de erro para a falha mais recente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceServer">
+      <MemberSignature Language="C#" Value="public string SourceServer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceServer" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ReplicationFailure.SourceServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome DNS do servidor de origem.</summary>
+        <value>O nome DNS do servidor de origem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

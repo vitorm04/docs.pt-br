@@ -1,0 +1,588 @@
+<Type Name="ShaderEffect" FullName="System.Windows.Media.Effects.ShaderEffect">
+  <TypeSignature Language="C#" Value="public abstract class ShaderEffect : System.Windows.Media.Effects.Effect" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract ShaderEffect extends System.Windows.Media.Effects.Effect" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.ShaderEffect" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Effects.Effect</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um efeito de bitmap personalizado usando um <see cref="T:System.Windows.Media.Effects.PixelShader" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivam de <xref:System.Windows.Media.Effects.ShaderEffect> classe para implementar um efeito personalizado com base em um sombreador de pixel único.  
+  
+ As etapas a seguir mostram como criar um efeito personalizado.  
+  
+1.  Carregar um <xref:System.Windows.Media.Effects.PixelShader> do código de idioma de sombreamento de nível alto (HLSL) pré-compilado bytes.  
+  
+2.  Defina as propriedades de dependência que representam os parâmetros do efeito e o <xref:System.Windows.Media.Brush>-com base em entradas de superfície. Use um do <xref:System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty%2A> sobrecargas para associar essas entradas com registrar números que são referenciados no código de bytes HLSL.  
+  
+ O número de amostras é limitado a 4.  
+  
+ As seguintes restrições se aplicam ao usar um sombreador PS 3.0.  
+  
+-   Quando é atribuído um sombreador PS 3.0, aumenta o número de amostras para 8. Atribua o sombreador 3.0 de PS antes de outros sombreadores para habilitar o registro de classificadores de 8.  
+  
+-   O limite de registro constante de sombreador completo de 224 para flutuações, é usado. Para obter mais informações, consulte [ps_3_0](http://go.microsoft.com/fwlink/?LinkId=166292).  
+  
+-   Os seguintes tipos de dados têm suporte no PS 3.0 sombreadores somente. Uma exceção é gerada se eles são usados em versões anteriores do sombreador.  
+  
+    -   `int`and types convertible to `int`: `uint`, `byte`, `sbyte`, `long`, `ulong`, `short`, `ushort`,`char`  
+  
+    -   `bool`  
+  
+-   Se um sombreador PS 3.0 válido é carregado em um computador que não oferecem suporte de hardware para PS 3.0, o sombreador será ignorado. Se o sombreador for inválido, nenhuma exceção é lançada.  
+  
+-   Se um computador tiver mais de uma placa de vídeo, o comportamento é definido pela placa de vídeo compatível com menos. Por exemplo, se o computador tiver duas placas de vídeo, um dos quais com suporte PS 3.0 e um dos quais não, o comportamento é o mesmo como se o computador não oferece suporte a 3.0 PS.  
+  
+-   Se um computador que dá suporte à renderização PS 3.0 no hardware, mas um sombreador PS 3.0 inválido é atribuído, o <xref:System.Windows.Media.Effects.PixelShader.InvalidPixelShaderEncountered> é gerado. Um exemplo de um sombreador PS 3.0 inválido é compilado com o `ps_3_sw` sinalizador. O <xref:System.Windows.Media.Effects.ShaderEffect> classe aceita apenas os sombreadores de PS 3.0 que são compilados com o `ps_3_0` sinalizador passado para fxc.exe. Para obter mais informações, consulte [ferramenta do compilador efeito](http://go.microsoft.com/fwlink/?LinkId=166293).  
+  
+> [!NOTE]
+>  PS 2.0 sombreadores executado durante a renderização no software. No entanto, mesmo se PS 3.0 é suportado pelo hardware do sistema, sombreadores PS 3.0 não serão executados durante a renderização de software.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como derivar o <xref:System.Windows.Media.Effects.ShaderEffect> classe.  
+  
+ [!code-csharp[System.Windows.Media.Effects.ShaderEffect#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Media.Effects.ShaderEffect/CS/ThresholdEffect.cs#1)]  
+  
+ O exemplo de código a seguir mostra um sombreador que corresponde à anterior <xref:System.Windows.Media.Effects.ShaderEffect> classe.  
+  
+ [!code-csharp[System.Windows.Media.Effects.ShaderEffect#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Media.Effects.ShaderEffect/CS/Threshold.fx#10)]  
+  
+ O XAML a seguir mostra como usar o efeito de sombreador personalizado.  
+  
+ [!code-xaml[System.Windows.Media.Effects.ShaderEffect#1000](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Media.Effects.ShaderEffect/CS/Window1.xaml#1000)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.UIPermission">Para obter acesso completo aos recursos de interface do usuário. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ShaderEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Effects.ShaderEffect" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.ShaderEffect Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.ShaderEffect Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.ShaderEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável <see cref="T:System.Windows.Media.Effects.ShaderEffect" /> objeto, fazendo cópias profundas dos valores do objeto. Ao copiar as propriedades do objeto de dependência, esse método copia dados e referências de ligações de recurso (que não podem resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável desta instância. O clone retornado é efetivamente uma cópia em profundidade do objeto atual. O clone <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Effects.ShaderEffect.Clone%2A> método pode ser usado para gerar cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos. Para sua conveniência, este método sombreia a herdadas <xref:System.Windows.Freezable.Clone%2A> método para fornecer uma implementação fortemente tipada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O objeto para clonar.</param>
+        <summary>Faz a instância de um clone (cópia em profundidade) especificada <see cref="T:System.Windows.Freezable" /> usando valores de propriedade base (não animado).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.ShaderEffect CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.ShaderEffect CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.ShaderEffect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.Effects.ShaderEffect" />, fazendo cópias em profundidade dos valores do objeto atual. Referências de recurso, associações de dados e animações não são copiadas, mas seus valores atuais serão copiados.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Freezable" /> a ser clonado.</param>
+        <summary>Faz a instância de um clone modificável (cópia em profundidade) especificado <see cref="T:System.Windows.Freezable" /> usando os valores da propriedade atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Windows.Freezable" /> classe derivada.</summary>
+        <returns>A nova instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DdxUvDdyUvRegisterIndex">
+      <MemberSignature Language="C#" Value="protected int DdxUvDdyUvRegisterIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DdxUvDdyUvRegisterIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.ShaderEffect.DdxUvDdyUvRegisterIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o registro do sombreador a ser usado para as derivadas parciais das coordenadas de textura em relação ao espaço de tela.</summary>
+        <value>O índice do registro que contém as derivadas parciais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.Effects.ShaderEffect.DdxUvDdyUvRegisterIndex%2A> propriedade para especificar o registro do sombreador que contém as derivadas parciais da textura coordenadas em relação ao espaço de tela. Por exemplo, se <xref:System.Windows.Media.Effects.ShaderEffect.DdxUvDdyUvRegisterIndex%2A> for definido como 4, o sombreador register c4 é usado. Registrar c4 contém quatro campos de float. O código de idioma de sombreamento de nível alto (HLSL) a seguir mostra como este registro é usado. O `nextPixelUV` valor representa o pixel próximo à direita.  
+  
+```  
+float4 ddxUvDdyUv : register(c4);  
+SamplerState  sampler : register(S0);  
+...  
+float2 nextPixelUV;  
+nextPixelUV.u = ddxUvDdyUv.x + u;  
+nextPixelUV.v = ddxUvDdyUv.y + v;  
+  
+tex2D(sampler, nextPixelUV);  
+```  
+  
+ A tabela a seguir mostra como o registro especificado para <xref:System.Windows.Media.Effects.ShaderEffect.DdxUvDdyUvRegisterIndex%2A> é preenchido.  
+  
+|Constante de registro|Valor derivado|  
+|-----------------------|----------------------|  
+|componente x|DDX(u)|  
+|componente de y|DDX(v)|  
+|componente de z|ddy(u)|  
+|componente w|ddy(v)|  
+  
+ As coordenadas de textura são indicadas como `(u, v)`. `ddx(u)`é o constante derivado parcial do componente de coordenadas de textura `u` em relação a coordenada x do espaço de tela. `ddy(u)`é a coordenada de textura a derivada parcial `u` em relação a coordenada y do espaço de tela. Da mesma forma, `ddx(v)` e `ddy(v)` são os derivados de espaço de tela correspondente para o componente de coordenadas de textura `v`.  
+  
+> [!NOTE]
+>  HLSL tem as instruções ddx e ddy para calcular esses valores, mas essas instruções não estão disponíveis em todo o hardware PixelShader 2.0.  
+  
+ Você pode pensar das constantes da seguinte maneira. Se a etapa 1 pixel para a direita no espaço de tela (na direção x), em seguida, `ddx(u)` é a quantidade que `u` alterações no espaço de textura, e `ddx(v)` é a quantidade que `v` alterações no espaço de textura. Se o efeito é alinhado por eixo quando ele for renderizado, em seguida, `ddx(v)` é 0. Se o efeito for girado quando ele for renderizado, em seguida, `ddx(v)` é diferente de zero.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa para definir o <see cref="P:System.Windows.Media.Effects.ShaderEffect.DdxUvDdyUvRegisterIndex" /> propriedade mais de uma vez ou após o processamento inicial do efeito.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">A instância para copiar.</param>
+        <summary>Faz a instância de um clone congelado especificada <see cref="T:System.Windows.Freezable" /> usando valores de propriedade base (não animado).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Freezable" /> para copiar e congelar.</param>
+        <summary>Faz a instância atual um clone congelado especificada <see cref="T:System.Windows.Freezable" />. Se o objeto tem propriedades de dependência animada, seus valores atuais de animado serão copiados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingBottom">
+      <MemberSignature Language="C#" Value="protected double PaddingBottom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PaddingBottom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.ShaderEffect.PaddingBottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a textura de saída do efeito é maior que sua entrada textura ao longo da borda inferior.</summary>
+        <value>O preenchimento ao longo da borda inferior do efeito.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor fornecido é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingLeft">
+      <MemberSignature Language="C#" Value="protected double PaddingLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PaddingLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.ShaderEffect.PaddingLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a textura de saída do efeito é maior que sua entrada textura ao longo da borda esquerda.</summary>
+        <value>O preenchimento ao longo da borda esquerda do efeito.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor fornecido é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingRight">
+      <MemberSignature Language="C#" Value="protected double PaddingRight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PaddingRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.ShaderEffect.PaddingRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a textura de saída do efeito é maior que sua entrada textura ao longo da borda direita.</summary>
+        <value>O preenchimento ao longo da borda direita do efeito.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor fornecido é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingTop">
+      <MemberSignature Language="C#" Value="protected double PaddingTop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PaddingTop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.ShaderEffect.PaddingTop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a textura de saída do efeito é maior que sua entrada textura ao longo da borda superior.</summary>
+        <value>O preenchimento ao longo da borda superior do efeito.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor fornecido é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelShader">
+      <MemberSignature Language="C#" Value="protected System.Windows.Media.Effects.PixelShader PixelShader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Effects.PixelShader PixelShader" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.ShaderEffect.PixelShader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.PixelShader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Media.Effects.PixelShader" /> a ser usado para o efeito.</summary>
+        <value>O <see cref="T:System.Windows.Media.Effects.PixelShader" /> para o efeito.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_PixelShader"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Effects.ShaderEffect.PixelShaderProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelShaderConstantCallback">
+      <MemberSignature Language="C#" Value="protected static System.Windows.PropertyChangedCallback PixelShaderConstantCallback (int floatRegisterIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Windows.PropertyChangedCallback PixelShaderConstantCallback(int32 floatRegisterIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.PixelShaderConstantCallback(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyChangedCallback</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="floatRegisterIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="floatRegisterIndex">O índice do registro do sombreador associado com a propriedade de dependência.</param>
+        <summary>Associa um valor de propriedade de dependência com registro constante de float de um sombreador pixel.</summary>
+        <returns>Um <see cref="T:System.Windows.PropertyChangedCallback" /> representante que associa uma propriedade de dependência e o registro de constante de sombreador especificado pelo <paramref name="floatRegisterIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.Effects.ShaderEffect.PixelShaderConstantCallback%2A> método quando você registrar uma propriedade de dependência para uma constante de sombreador. O <xref:System.Windows.Media.Effects.ShaderEffect.PixelShaderConstantCallback%2A> método construções um <xref:System.Windows.PropertyChangedCallback> delegar que, quando chamado, cria uma associação entre a propriedade de dependência e o registro de constante de sombreador especificado pelo `floatRegisterIndex`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade de dependência é um tipo desconhecido.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="floatRegisterIndex" />é maior que ou igual a 32, ou <paramref name="floatRegisterIndex" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelShaderProperty">
+      <MemberSignature Language="C#" Value="protected static readonly System.Windows.DependencyProperty PixelShaderProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Windows.DependencyProperty PixelShaderProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.ShaderEffect.PixelShaderProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Effects.ShaderEffect.PixelShader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelShaderSamplerCallback">
+      <MemberSignature Language="C#" Value="protected static System.Windows.PropertyChangedCallback PixelShaderSamplerCallback (int samplerRegisterIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Windows.PropertyChangedCallback PixelShaderSamplerCallback(int32 samplerRegisterIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.PixelShaderSamplerCallback(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyChangedCallback</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="samplerRegisterIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="samplerRegisterIndex">O índice da amostra do sombreador associado com a propriedade de dependência.</param>
+        <summary>Associa um valor de propriedade de dependência com o registro de amostra de um sombreador de pixel.</summary>
+        <returns>Um <see cref="T:System.Windows.PropertyChangedCallback" /> representante que associa uma propriedade de dependência e o registro de amostra do sombreador especificado pelo <paramref name="samplerRegisterIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.Effects.ShaderEffect.PixelShaderSamplerCallback%2A> método quando você registra um <xref:System.Windows.Media.Brush>-com valor de propriedade de dependência para uma amostra do sombreador. O <xref:System.Windows.Media.Effects.ShaderEffect.PixelShaderSamplerCallback%2A> método construções um <xref:System.Windows.PropertyChangedCallback> delegar que, quando chamado, cria uma associação entre a propriedade de dependência e o registro de amostra do sombreador especificado pelo `samplerRegisterIndex`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelShaderSamplerCallback">
+      <MemberSignature Language="C#" Value="protected static System.Windows.PropertyChangedCallback PixelShaderSamplerCallback (int samplerRegisterIndex, System.Windows.Media.Effects.SamplingMode samplingMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Windows.PropertyChangedCallback PixelShaderSamplerCallback(int32 samplerRegisterIndex, valuetype System.Windows.Media.Effects.SamplingMode samplingMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.PixelShaderSamplerCallback(System.Int32,System.Windows.Media.Effects.SamplingMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyChangedCallback</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="samplerRegisterIndex" Type="System.Int32" />
+        <Parameter Name="samplingMode" Type="System.Windows.Media.Effects.SamplingMode" />
+      </Parameters>
+      <Docs>
+        <param name="samplerRegisterIndex">O índice da amostra do sombreador associado com a propriedade de dependência.</param>
+        <param name="samplingMode">O <see cref="T:System.Windows.Media.Effects.SamplingMode" /> para a amostra do sombreador.</param>
+        <summary>Associa um valor de propriedade de dependência com o registro de amostra de um sombreador de pixel e um <see cref="T:System.Windows.Media.Effects.SamplingMode" />.</summary>
+        <returns>Um <see cref="T:System.Windows.PropertyChangedCallback" /> representante que associa uma propriedade de dependência e o registro de amostra do sombreador especificado pelo <paramref name="samplerRegisterIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty%2A> método quando você registra um <xref:System.Windows.Media.Brush>-com valor de propriedade de dependência para uma amostra do sombreador. O <xref:System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty%2A> método construções um <xref:System.Windows.PropertyChangedCallback> delegar que, quando chamado, cria uma associação entre a propriedade de dependência e o registro de amostra do sombreador especificado pelo `samplerRegisterIndex`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterPixelShaderSamplerProperty">
+      <MemberSignature Language="C#" Value="protected static System.Windows.DependencyProperty RegisterPixelShaderSamplerProperty (string dpName, Type ownerType, int samplerRegisterIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Windows.DependencyProperty RegisterPixelShaderSamplerProperty(string dpName, class System.Type ownerType, int32 samplerRegisterIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty(System.String,System.Type,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dpName" Type="System.String" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="samplerRegisterIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dpName">O nome da propriedade de dependência.</param>
+        <param name="ownerType">O tipo do efeito que tem a propriedade de dependência.</param>
+        <param name="samplerRegisterIndex">O índice da amostra do sombreador associado com a propriedade de dependência.</param>
+        <summary>Associa uma propriedade de dependência com um registro de amostra do sombreador.</summary>
+        <returns>Uma propriedade de dependência associada à amostra de sombreador especificada pelo <paramref name="samplerRegisterIndex" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterPixelShaderSamplerProperty">
+      <MemberSignature Language="C#" Value="protected static System.Windows.DependencyProperty RegisterPixelShaderSamplerProperty (string dpName, Type ownerType, int samplerRegisterIndex, System.Windows.Media.Effects.SamplingMode samplingMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Windows.DependencyProperty RegisterPixelShaderSamplerProperty(string dpName, class System.Type ownerType, int32 samplerRegisterIndex, valuetype System.Windows.Media.Effects.SamplingMode samplingMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty(System.String,System.Type,System.Int32,System.Windows.Media.Effects.SamplingMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dpName" Type="System.String" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="samplerRegisterIndex" Type="System.Int32" />
+        <Parameter Name="samplingMode" Type="System.Windows.Media.Effects.SamplingMode" />
+      </Parameters>
+      <Docs>
+        <param name="dpName">O nome da propriedade de dependência.</param>
+        <param name="ownerType">O tipo do efeito que tem a propriedade de dependência.</param>
+        <param name="samplerRegisterIndex">O índice da amostra do sombreador associado com a propriedade de dependência.</param>
+        <param name="samplingMode">O <see cref="T:System.Windows.Media.Effects.SamplingMode" /> para a amostra do sombreador.</param>
+        <summary>Associa uma propriedade de dependência um registro de amostra do sombreador e um <see cref="T:System.Windows.Media.Effects.SamplingMode" />.</summary>
+        <returns>Uma propriedade de dependência associada à amostra de sombreador especificada pelo <paramref name="samplerRegisterIndex" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateShaderValue">
+      <MemberSignature Language="C#" Value="protected void UpdateShaderValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UpdateShaderValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.ShaderEffect.UpdateShaderValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">A propriedade de dependência a ser atualizado.</param>
+        <summary>Notifica o efeito que a constante de sombreador ou amostra correspondente à propriedade de dependência especificada deve ser atualizada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,109 @@
+<Type Name="LicenseProvider" FullName="System.ComponentModel.LicenseProvider">
+  <TypeSignature Language="C#" Value="public abstract class LicenseProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LicenseProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.LicenseProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a classe base <see langword="abstract" /> para implementar um provedor de licença.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um controle licenciado usando o <xref:System.ComponentModel.LicenseManager.Validate%2A> método. Ele usa um <xref:System.ComponentModel.LicenseProvider> é implementado pela <xref:System.ComponentModel.LicFileLicenseProvider> classe.  
+  
+ [!code-cpp[Classic LicenseManager Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic LicenseManager Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic LicenseManager Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic LicenseManager Example/CS/source.cs#1)]
+ [!code-vb[Classic LicenseManager Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic LicenseManager Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.ComponentModel.LicenseProvider" />, você deve substituir o <see cref="M:System.ComponentModel.LicenseProvider.GetLicense(System.ComponentModel.LicenseContext,System.Type,System.Object,System.Boolean)" /> método.  
+  
+ Consulte <see cref="T:System.ComponentModel.LicFileLicenseProvider" /> para uma implementação desta classe. Para obter mais informações sobre licenciamento, consulte [como: controles e componentes de licença](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LicenseProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.LicenseProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLicense">
+      <MemberSignature Language="C#" Value="public abstract System.ComponentModel.License GetLicense (System.ComponentModel.LicenseContext context, Type type, object instance, bool allowExceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.License GetLicense(class System.ComponentModel.LicenseContext context, class System.Type type, object instance, bool allowExceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LicenseProvider.GetLicense(System.ComponentModel.LicenseContext,System.Type,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.License</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.LicenseContext" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="allowExceptions" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.LicenseContext" /> que especifica onde você pode usar o objeto licenciado.</param>
+        <param name="type">Um <see cref="T:System.Type" /> que representa o componente solicitando a licença.</param>
+        <param name="instance">Um objeto que está solicitando a licença.</param>
+        <param name="allowExceptions">
+          <see langword="true" />Se um <see cref="T:System.ComponentModel.LicenseException" /> deve ser gerada quando o componente não é possível conceder uma licença; caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, obtém uma licença para uma instância ou um tipo de componente, quando é fornecido um contexto e se a negação de uma licença lança uma exceção.</summary>
+        <returns>Uma opção válida <see cref="T:System.ComponentModel.License" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar de <see cref="T:System.ComponentModel.LicenseProvider" />, você deve substituir <see cref="M:System.ComponentModel.LicenseProvider.GetLicense(System.ComponentModel.LicenseContext,System.Type,System.Object,System.Boolean)" /> para implementar um método de validação para a chave de licença.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

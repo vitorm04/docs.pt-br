@@ -1,0 +1,806 @@
+<Type Name="WorkflowInstance" FullName="System.Activities.Hosting.WorkflowInstance">
+  <TypeSignature Language="C#" Value="public abstract class WorkflowInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract WorkflowInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Hosting.WorkflowInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+      <see cref="T:System.Activities.Hosting.WorkflowInstance" /> é um tempo de execução por instância leve para executar um programa de fluxo de trabalho. Ele pode ser construído para criar uma nova instância de fluxo de trabalho ou de estado da instância existente. As APIs que o <see cref="T:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl" /> expõe são o conjunto mínimo de controles de tempo de execução do qual as operações de nível superior podem ser implementadas. Esse conjunto de APIs representa a largura inteira da funcionalidade do tempo de execução. O <see cref="T:System.Activities.Hosting.WorkflowInstance" /> é uma classe abstrata e se baseia na implementação de um host de seus métodos abstratos para fornecer a funcionalidade do host, como sincronização, persistência, acompanhamento e extensões.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Hosting.WorkflowInstance>é o único thread e pressupõe que o host sincroniza todo o acesso a ele. Uma tentativa de chamar APIs vários simultaneamente resultará em um <xref:System.InvalidOperationException> que está sendo gerada.  
+  
+ Internamente, uma <xref:System.Activities.Hosting.WorkflowInstance> tem dois estados: em execução e em pausa. A única maneira de fazer com que o tempo de execução para fazer a transição de pausa a execução é chamar <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl.Run%2A>. Todas as ações (exceto Pausar) só podem ser feitas enquanto o tempo de execução está em pausa. O tempo de execução será se tornam pausado espontaneamente nas seguintes situações:  
+  
+-   Ocorreu um erro fatal no tempo de execução. O host será sinalizado por meio de <xref:System.Activities.Hosting.WorkflowInstance.OnRequestAbort%2A> (que não indica uma transição para pausado) e, em seguida, é notificado por meio de <xref:System.Activities.Hosting.WorkflowInstance.OnNotifyPaused%2A>.  
+  
+-   Uma exceção no fluxo de trabalho foi não identificada e escape raiz. O host será notificado por meio de <xref:System.Activities.Hosting.WorkflowInstance.OnNotifyUnhandledException%2A> método.  
+  
+-   O Agendador está sem itens de trabalho e agora é <xref:System.Activities.Hosting.WorkflowInstanceState.Idle>. O host será notificado por meio de <xref:System.Activities.Hosting.WorkflowInstance.OnNotifyPaused%2A> método. Observe que o Agendador pode ter ficado sem itens de trabalho porque a instância estiver ociosa ou porque a instância seja concluída. O <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl.State%2A> valor o <xref:System.Activities.Hosting.WorkflowInstance.Controller%2A> propriedade pode ser usada para diferenciar entre os dois.  
+  
+ O host pode solicitar uma alteração de executando para pausada chamando o <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl.RequestPause%2A> ou <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl.PauseWhenPersistable%2A> métodos do <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl> instância retornada pelo <xref:System.Activities.Hosting.WorkflowInstance.Controller%2A> propriedade. Esta solicitação não deve ser considerada para uma resposta específica, que significa que o host não deve tentar correlacionar uma OnNotify * ou <xref:System.Activities.Hosting.WorkflowInstance.OnRequestAbort%2A> com uma chamada específica para pausar. Em resposta a uma solicitação de pausa, o tempo de execução pode fazer a transição para pausado e chamada <xref:System.Activities.Hosting.WorkflowInstance.OnNotifyPaused%2A> enquanto o Agendador ainda tem itens de trabalho pendentes. O <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl.State%2A> valor o <xref:System.Activities.Hosting.WorkflowInstance.Controller%2A> propriedade pode ser usada para determinar se o Agendador não tem não mais trabalho ou foi interrompido por uma solicitação para pausar.  
+  
+ O <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl.RequestPause%2A> método do <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl> instância retornada pelo <xref:System.Activities.Hosting.WorkflowInstance.Controller%2A> propriedade é o único método que pode ser chamado enquanto o <xref:System.Activities.Hosting.WorkflowInstance> está no estado em execução. Todos os outros métodos lançará um <xref:System.InvalidOperationException> se for chamado. Dadas as regras para como <xref:System.Activities.Hosting.WorkflowInstance> faz a transição de um estado para outro, a noção de pública de execução e em pausa pode ser definida da seguinte maneira:  
+  
+-   Em execução – o estado entre uma chamada para <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl.Run%2A> e o próximo WorkflowInstance.OnNotify*.  
+  
+-   Em pausa – o estado entre a última WorkflowInstance.OnNotify* e a próxima chamada para <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl.Run%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowInstance (System.Activities.Activity workflowDefinition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity workflowDefinition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.#ctor(System.Activities.Activity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowDefinition" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinition">A atividade que define o fluxo de trabalho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.Hosting.WorkflowInstance" /> classe com a definição de fluxo de trabalho especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowInstance (System.Activities.Activity workflowDefinition, System.Activities.WorkflowIdentity definitionIdentity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity workflowDefinition, class System.Activities.WorkflowIdentity definitionIdentity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.#ctor(System.Activities.Activity,System.Activities.WorkflowIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowDefinition" Type="System.Activities.Activity" />
+        <Parameter Name="definitionIdentity" Type="System.Activities.WorkflowIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinition">A atividade que define o fluxo de trabalho.</param>
+        <param name="definitionIdentity">A identidade de definição.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.Hosting.WorkflowInstance" /> classe com a definição de fluxo de trabalho especificado e a identidade de definição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginFlushTrackingRecords">
+      <MemberSignature Language="C#" Value="protected IAsyncResult BeginFlushTrackingRecords (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginFlushTrackingRecords(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.BeginFlushTrackingRecords(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O período de tempo após o qual a tentativa de anular.</param>
+        <param name="callback">O método a ser chamado quando a operação de controle foi concluída.</param>
+        <param name="state">As informações sobre a operação assíncrona.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para iniciar o envio pendente registros de rastreamento para os participantes de rastreamento assincronamente.</summary>
+        <returns>O status da operação atual de controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controller">
+      <MemberSignature Language="C#" Value="protected System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl Controller { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.Hosting.WorkflowInstance/WorkflowInstanceControl Controller" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstance.Controller" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Hosting.WorkflowInstance+WorkflowInstanceControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl" /> instância para este <see cref="T:System.Activities.Hosting.WorkflowInstance" />.</summary>
+        <value>A instância de controlador para essa instância de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefinitionIdentity">
+      <MemberSignature Language="C#" Value="public System.Activities.WorkflowIdentity DefinitionIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.WorkflowIdentity DefinitionIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstance.DefinitionIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.WorkflowIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a identidade de definição de <see cref="T:System.Activities.Hosting.WorkflowInstance" />.</summary>
+        <value>A identidade de definição de <see cref="T:System.Activities.Hosting.WorkflowInstance" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeExtensions">
+      <MemberSignature Language="C#" Value="protected void DisposeExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void DisposeExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.DisposeExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamadas <see cref="M:System.Disposable.Dispose" /> em todas as extensões que implementam <see cref="T:System.IDisposable" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndFlushTrackingRecords">
+      <MemberSignature Language="C#" Value="protected void EndFlushTrackingRecords (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EndFlushTrackingRecords(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.EndFlushTrackingRecords(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O status da operação assíncrona do controle.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para encerrar a operação de controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushTrackingRecords">
+      <MemberSignature Language="C#" Value="protected void FlushTrackingRecords (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void FlushTrackingRecords(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.FlushTrackingRecords(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O período de tempo após o qual a tentativa de anular.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para enviar pendentes registros de rastreamento para os participantes de rastreamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActivitiesBlockingUpdate">
+      <MemberSignature Language="C#" Value="protected static System.Collections.Generic.IList&lt;System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt; GetActivitiesBlockingUpdate (object deserializedRuntimeState, System.Activities.DynamicUpdate.DynamicUpdateMap updateMap);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Collections.Generic.IList`1&lt;class System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt; GetActivitiesBlockingUpdate(object deserializedRuntimeState, class System.Activities.DynamicUpdate.DynamicUpdateMap updateMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.GetActivitiesBlockingUpdate(System.Object,System.Activities.DynamicUpdate.DynamicUpdateMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deserializedRuntimeState" Type="System.Object" />
+        <Parameter Name="updateMap" Type="System.Activities.DynamicUpdate.DynamicUpdateMap" />
+      </Parameters>
+      <Docs>
+        <param name="deserializedRuntimeState">O estado de tempo de execução desserializado.</param>
+        <param name="updateMap">O mapa de atualização.</param>
+        <summary>Recupera a lista de atividade que está bloqueando a atualização do fluxo de trabalho.</summary>
+        <returns>A lista de atividade que está bloqueando a atualização.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtension&lt;T&gt;">
+      <MemberSignature Language="C#" Value="protected T GetExtension&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance !!T GetExtension&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.GetExtension``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de extensão para localizar.</typeparam>
+        <summary>Retorna uma extensão do tipo especificado.</summary>
+        <returns>Uma extensão do tipo especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtensions&lt;T&gt;">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.IEnumerable&lt;T&gt; GetExtensions&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; GetExtensions&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.GetExtensions``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de extensão para localizar.</typeparam>
+        <summary>Retorna todas as extensões encontradas para o tipo especificado.</summary>
+        <returns>Todas as extensões encontradas para o tipo especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostEnvironment">
+      <MemberSignature Language="C#" Value="public System.Activities.LocationReferenceEnvironment HostEnvironment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.LocationReferenceEnvironment HostEnvironment" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstance.HostEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.LocationReferenceEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ambiente de raiz para a instância de fluxo de trabalho argumentos e variáveis.</summary>
+        <value>O ambiente de raiz para a instância de fluxo de trabalho argumentos e variáveis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade é definida depois que a instância de fluxo de trabalho é inicializada e <xref:System.Activities.Hosting.WorkflowInstance.IsReadOnly%2A> retorna `true`, uma <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public abstract Guid Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Id" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstance.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador exclusivo para a instância de fluxo de trabalho.</summary>
+        <value>O identificador exclusivo para a instância de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected void Initialize (object deserializedRuntimeState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Initialize(object deserializedRuntimeState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.Initialize(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deserializedRuntimeState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="deserializedRuntimeState">O estado de tempo de execução usado para executar o fluxo de trabalho.</param>
+        <summary>Chamado pelo host a inicializar a instância de fluxo de trabalho com o estado de tempo de execução do fluxo de trabalho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected void Initialize (System.Collections.Generic.IDictionary&lt;string,object&gt; workflowArgumentValues, System.Collections.Generic.IList&lt;System.Activities.Handle&gt; workflowExecutionProperties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Initialize(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; workflowArgumentValues, class System.Collections.Generic.IList`1&lt;class System.Activities.Handle&gt; workflowExecutionProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.Initialize(System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IList{System.Activities.Handle})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowArgumentValues" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="workflowExecutionProperties" Type="System.Collections.Generic.IList&lt;System.Activities.Handle&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="workflowArgumentValues">Os parâmetros de entrada para o fluxo de trabalho, chaveado segundo o nome do argumento.</param>
+        <param name="workflowExecutionProperties">A lista de propriedades de execução de fluxo de trabalho.</param>
+        <summary>Chamado pelo host a inicializar a instância de fluxo de trabalho com os valores de argumento e propriedades de execução.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected void Initialize (object deserializedRuntimeState, System.Activities.DynamicUpdate.DynamicUpdateMap updateMap);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Initialize(object deserializedRuntimeState, class System.Activities.DynamicUpdate.DynamicUpdateMap updateMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.Initialize(System.Object,System.Activities.DynamicUpdate.DynamicUpdateMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deserializedRuntimeState" Type="System.Object" />
+        <Parameter Name="updateMap" Type="System.Activities.DynamicUpdate.DynamicUpdateMap" />
+      </Parameters>
+      <Docs>
+        <param name="deserializedRuntimeState">O estado de tempo de execução usado para executar o fluxo de trabalho.</param>
+        <param name="updateMap">O mapa de atualização.</param>
+        <summary>Chamado pelo host a inicializar a instância de fluxo de trabalho com o estado de tempo de execução do fluxo de trabalho e atualizar o mapa.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="protected bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstance.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a instância de fluxo de trabalho foi inicializada.</summary>
+        <value>
+          <see langword="true" />Se a instância de fluxo de trabalho tiver sido inicializada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginAssociateKeys">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult OnBeginAssociateKeys (System.Collections.Generic.ICollection&lt;System.Runtime.DurableInstancing.InstanceKey&gt; keys, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.IAsyncResult OnBeginAssociateKeys(class System.Collections.Generic.ICollection`1&lt;class System.Runtime.DurableInstancing.InstanceKey&gt; keys, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnBeginAssociateKeys(System.Collections.Generic.ICollection{System.Runtime.DurableInstancing.InstanceKey},System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.Generic.ICollection&lt;System.Runtime.DurableInstancing.InstanceKey&gt;" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keys">As chaves de instância para associar a esta instância de fluxo de trabalho.</param>
+        <param name="callback">O método a ser chamado quando a operação for concluída.</param>
+        <param name="state">Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host que novas chaves de instância devem ser associadas esta instância.</summary>
+        <returns>Uma referência para o assíncrona associar a operação de chaves.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginFlushTrackingRecords">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult OnBeginFlushTrackingRecords (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginFlushTrackingRecords(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnBeginFlushTrackingRecords(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O método a ser chamado quando a operação de controle foi concluída.</param>
+        <param name="state">As informações sobre a operação assíncrona.</param>
+        <summary>Chamada assíncrona para solicitar que o host ao liberar pendentes registros de rastreamento para os participantes de rastreamento.</summary>
+        <returns>O status da operação atual de controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginPersist">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult OnBeginPersist (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.IAsyncResult OnBeginPersist(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnBeginPersist(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O método a ser chamado quando a operação de persistência foi concluída.</param>
+        <param name="state">Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.</param>
+        <summary>Chamada assíncrona para solicitar que o host para manter o fluxo de trabalho.</summary>
+        <returns>Uma referência ao atual mantêm a operação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginResumeBookmark">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult OnBeginResumeBookmark (System.Activities.Bookmark bookmark, object value, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.IAsyncResult OnBeginResumeBookmark(class System.Activities.Bookmark bookmark, object value, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnBeginResumeBookmark(System.Activities.Bookmark,System.Object,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bookmark" Type="System.Activities.Bookmark" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="bookmark">O indicador a ser retomado.</param>
+        <param name="value">Os dados a serem passados para a atividade que criou o <see cref="T:System.Activities.Bookmark" />.</param>
+        <param name="timeout">O intervalo no qual a operação de retomada deve concluir antes da operação será cancelada e um <see cref="T:System.TimeoutException" /> é gerada.</param>
+        <param name="callback">O método a ser chamado quando a operação de retomada foi concluída.</param>
+        <param name="state">Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host que uma operação de indicador de continuação está começando.</summary>
+        <returns>Uma referência para a operação de retomada assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDisassociateKeys">
+      <MemberSignature Language="C#" Value="protected abstract void OnDisassociateKeys (System.Collections.Generic.ICollection&lt;System.Runtime.DurableInstancing.InstanceKey&gt; keys);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnDisassociateKeys(class System.Collections.Generic.ICollection`1&lt;class System.Runtime.DurableInstancing.InstanceKey&gt; keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnDisassociateKeys(System.Collections.Generic.ICollection{System.Runtime.DurableInstancing.InstanceKey})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.Generic.ICollection&lt;System.Runtime.DurableInstancing.InstanceKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keys">A lista de chaves para desassociar.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host que um determinado conjunto de chaves de instância não deve ser associado esta instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndAssociateKeys">
+      <MemberSignature Language="C#" Value="protected abstract void OnEndAssociateKeys (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnEndAssociateKeys(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnEndAssociateKeys(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">A referência ao assíncrona associar a operação de chaves.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host que uma operação de associação de chaves foi concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndFlushTrackingRecords">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndFlushTrackingRecords (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndFlushTrackingRecords(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnEndFlushTrackingRecords(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O status da limpeza assíncrona de operação de registros de rastreamento.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host quando a limpeza de registros de operação de rastreamento é concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndPersist">
+      <MemberSignature Language="C#" Value="protected abstract void OnEndPersist (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnEndPersist(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnEndPersist(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">A referência ao assíncrona mantêm a operação.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host que uma operação de persistência foi concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndResumeBookmark">
+      <MemberSignature Language="C#" Value="protected abstract System.Activities.BookmarkResumptionResult OnEndResumeBookmark (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance valuetype System.Activities.BookmarkResumptionResult OnEndResumeBookmark(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnEndResumeBookmark(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.BookmarkResumptionResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">A referência para a operação de indicador de retomada assíncrona.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host que uma operação de indicador de continuação foi concluída.</summary>
+        <returns>Um dos valores de enumeração que indica o resultado de uma <see cref="T:System.Activities.Bookmark" /> retomar a operação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNotifyPaused">
+      <MemberSignature Language="C#" Value="protected abstract void OnNotifyPaused ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNotifyPaused() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnNotifyPaused" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host em que a instância de fluxo de trabalho tiver feito a transição do estado de execução para o estado de pausa.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNotifyUnhandledException">
+      <MemberSignature Language="C#" Value="protected abstract void OnNotifyUnhandledException (Exception exception, System.Activities.Activity source, string sourceInstanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNotifyUnhandledException(class System.Exception exception, class System.Activities.Activity source, string sourceInstanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnNotifyUnhandledException(System.Exception,System.Activities.Activity,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="source" Type="System.Activities.Activity" />
+        <Parameter Name="sourceInstanceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="exception">A exceção sem tratamento.</param>
+        <param name="source">A atividade que lançou a exceção.</param>
+        <param name="sourceInstanceId">O identificador exclusivo do <see cref="T:System.Activities.ActivityInstance" /> que representa a atividade que lançou a exceção.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host que ocorreu uma exceção sem tratamento na instância de fluxo de trabalho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRequestAbort">
+      <MemberSignature Language="C#" Value="protected abstract void OnRequestAbort (Exception reason);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnRequestAbort(class System.Exception reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.OnRequestAbort(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reason" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="reason">O motivo para anular a instância de fluxo de trabalho.</param>
+        <summary>Chamado pelo tempo de execução de fluxo de trabalho para notificar o host que uma operação de anulação foi solicitada para a instância de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma vez <xref:System.Activities.Hosting.WorkflowInstance.OnRequestAbort%2A> é chamado, a maioria <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl> APIs exceto <xref:System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl.Abort%2A> lançará um <xref:System.InvalidOperationException>. Espera-se que, depois <xref:System.Activities.Hosting.WorkflowInstance.OnRequestAbort%2A> é chamado de um host será tendência em direção a um estado em que ele pode atender a anulação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterExtensionManager">
+      <MemberSignature Language="C#" Value="protected void RegisterExtensionManager (System.Activities.Hosting.WorkflowInstanceExtensionManager extensionManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RegisterExtensionManager(class System.Activities.Hosting.WorkflowInstanceExtensionManager extensionManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.RegisterExtensionManager(System.Activities.Hosting.WorkflowInstanceExtensionManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extensionManager" Type="System.Activities.Hosting.WorkflowInstanceExtensionManager" />
+      </Parameters>
+      <Docs>
+        <param name="extensionManager">O Gerenciador de extensões para registrar.</param>
+        <summary>Chamado pelo host para registrar o Gerenciador de extensão especificada, validar todas as necessárias extensões estão presentes e inicializar a coleção de extensões a ser usado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As extensões são criptografadas pelo tipo e um host fornecido extensão sempre será usada se fornecido. Extensões adicionadas por meio de <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.Add%2A> usar o tipo de tempo de execução do objeto como a chave de tipo. Provedores de extensões adicionadas por meio de <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.Add%2A> usar o tipo T decared do Func\<T > como a chave de tipo. Provedores de extensão da contribuição atividades através de vários métodos *ActivityMetadata.AddDefaultExtensionProvider serão descartadas se existe uma extensão de host para o tipo declarado ou se há um tipo mais amplo fornecido por meio de AddDefaultExtensionProvider (ex. Se Func\<StreamWriter > é fornecido e Func\<TextWriter > for fornecido, apenas Func\<StreamWriter > serão mantidas). Se uma extensão não existe na coleção que é exigida por uma atividade (expresso chamando * ActivityMetadata.RequireExtension) um <xref:System.Activities.ValidationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsInstanceKeys">
+      <MemberSignature Language="C#" Value="protected abstract bool SupportsInstanceKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsInstanceKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstance.SupportsInstanceKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o host oferece suporte a associação de <see cref="P:System.Runtime.Persistence.InstanceView.InstanceKeys" /> com uma instância de tempo de execução.</summary>
+        <value>
+          <see langword="true" />Se o host der suporte a associação de <see cref="P:System.Runtime.Persistence.InstanceView.InstanceKeys" /> com uma instância de fluxo de trabalho; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizationContext">
+      <MemberSignature Language="C#" Value="public System.Threading.SynchronizationContext SynchronizationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.SynchronizationContext SynchronizationContext" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstance.SynchronizationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.SynchronizationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Threading.SynchronizationContext" /> usado para agendar a instância de fluxo de trabalho.</summary>
+        <value>O contexto de sincronização usado para a instância de fluxo de trabalho de agendamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade é definida depois que a instância de fluxo de trabalho é inicializada e <xref:System.Activities.Hosting.WorkflowInstance.IsReadOnly%2A> retorna `true`, uma <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowIfReadOnly">
+      <MemberSignature Language="C#" Value="protected void ThrowIfReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ThrowIfReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstance.ThrowIfReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera um <see cref="T:System.InvalidOperationException" /> se a instância de fluxo de trabalho tiver sido inicializada, conforme determinado pela <see cref="P:System.Activities.Hosting.WorkflowInstance.IsReadOnly" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Activities.Hosting.WorkflowInstance.IsReadOnly%2A> retorna `true`, então um <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowDefinition">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity WorkflowDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity WorkflowDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Hosting.WorkflowInstance.WorkflowDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a definição de fluxo de trabalho da instância do fluxo de trabalho.</summary>
+        <value>A definição de fluxo de trabalho da instância do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

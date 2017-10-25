@@ -1,0 +1,485 @@
+<Type Name="SyndicationContent" FullName="System.ServiceModel.Syndication.SyndicationContent">
+  <TypeSignature Language="C#" Value="public abstract class SyndicationContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SyndicationContent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.SyndicationContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe base que representa o conteúdo de sindicalização.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa é uma classe abstrata e não pode ser instanciada diretamente. Ela é usada como a classe base para os seguintes tipos de conteúdo de distribuição:  
+  
+-   <xref:System.ServiceModel.Syndication.TextSyndicationContent>  
+  
+-   <xref:System.ServiceModel.Syndication.UrlSyndicationContent>  
+  
+-   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SyndicationContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Syndication.SyndicationContent" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SyndicationContent (System.ServiceModel.Syndication.SyndicationContent source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Syndication.SyndicationContent source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.#ctor(System.ServiceModel.Syndication.SyndicationContent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.ServiceModel.Syndication.SyndicationContent" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.ServiceModel.Syndication.SyndicationContent" /> instância a ser usada para inicializar a nova instância.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Syndication.SyndicationContent" /> com a instância <see cref="T:System.ServiceModel.Syndication.SyndicationContent" /> especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeExtensions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,string&gt; AttributeExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;class System.Xml.XmlQualifiedName, string&gt; AttributeExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationContent.AttributeExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as extensões de atributo para este conteúdo.</summary>
+        <value>Um dicionário que contém as extensões de atributo para este objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Extensões de atributo são os atributos personalizados que não são definidos pelas especificações Atom 1.0 ou RSS 2.0. O modelo de objeto de distribuição permite que você adicione atributos personalizados para um tipo de conteúdo de distribuição (por exemplo, <xref:System.ServiceModel.Syndication.TextSyndicationContent>). Quando serializado Atom 1.0, esses atributos são exibidos dentro do `<content>` elemento. Quando serializado para RSS 2.0, esses atributos são ignorados.  
+  
+   
+  
+## Examples  
+ O XML a seguir mostra como um atributo personalizado adicionado a um <xref:System.ServiceModel.Syndication.TextSyndicationContent> instância é serializada como Atom 1.0.  
+  
+```  
+<content type="text" customAttribute="value">Some text content</content>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Syndication.SyndicationContent Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Syndication.SyndicationContent Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do <see cref="T:System.ServiceModel.Syndication.SyndicationContent" /> instância.</summary>
+        <returns>Uma cópia do <see cref="T:System.ServiceModel.Syndication.SyndicationContent" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHtmlContent">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Syndication.TextSyndicationContent CreateHtmlContent (string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Syndication.TextSyndicationContent CreateHtmlContent(string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.CreateHtmlContent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.TextSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">O texto do conteúdo.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" /> instância com o conteúdo HTML especificado.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres passada para este método deve conter HTML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePlaintextContent">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Syndication.TextSyndicationContent CreatePlaintextContent (string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Syndication.TextSyndicationContent CreatePlaintextContent(string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.CreatePlaintextContent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.TextSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">O conteúdo de texto sem formatação.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" /> instância com o conteúdo de texto sem formatação especificado.</summary>
+        <returns>Um novo <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUrlContent">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Syndication.UrlSyndicationContent CreateUrlContent (Uri url, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Syndication.UrlSyndicationContent CreateUrlContent(class System.Uri url, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.CreateUrlContent(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.UrlSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.Uri" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">O <see cref="T:System.Uri" /> do conteúdo.</param>
+        <param name="mediaType">O tipo de mídia do conteúdo.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Syndication.UrlSyndicationContent" /> instância com especificado <see cref="T:System.Uri" /> e tipo de mídia.</summary>
+        <returns>Um novo <see cref="T:System.ServiceModel.Syndication.UrlSyndicationContent" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro de tipo de mídia pode ser definido para qualquer valor de tipo MIME conhecido, conforme definido em [RFC 2046](http://go.microsoft.com/fwlink/?LinkId=95720).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXhtmlContent">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Syndication.TextSyndicationContent CreateXhtmlContent (string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Syndication.TextSyndicationContent CreateXhtmlContent(string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.CreateXhtmlContent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.TextSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">O conteúdo XHTML.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" /> instância com o conteúdo XHTML especificado.</summary>
+        <returns>Um novo <see cref="T:System.ServiceModel.Syndication.TextSyndicationContent" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXmlContent">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Syndication.XmlSyndicationContent CreateXmlContent (object dataContractObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Syndication.XmlSyndicationContent CreateXmlContent(object dataContractObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.CreateXmlContent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.XmlSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataContractObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataContractObject">O objeto de contrato de dados.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> instância com o objeto de contrato de dados especificado.</summary>
+        <returns>Um novo <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXmlContent">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Syndication.XmlSyndicationContent CreateXmlContent (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Syndication.XmlSyndicationContent CreateXmlContent(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.CreateXmlContent(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.XmlSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">To be added.</param>
+        <summary>Cria o conteúdo de distribuição de XML.</summary>
+        <returns>Uma instância do <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> classe que contém o novo conteúdo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXmlContent">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Syndication.XmlSyndicationContent CreateXmlContent (object dataContractObject, System.Runtime.Serialization.XmlObjectSerializer dataContractSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Syndication.XmlSyndicationContent CreateXmlContent(object dataContractObject, class System.Runtime.Serialization.XmlObjectSerializer dataContractSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.CreateXmlContent(System.Object,System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.XmlSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataContractObject" Type="System.Object" />
+        <Parameter Name="dataContractSerializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="dataContractObject">O objeto de contrato de dados.</param>
+        <param name="dataContractSerializer">O serializador de contrato de dados.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> instância com o objeto de contrato de dados especificado e o serializador de contrato de dados.</summary>
+        <returns>Um novo <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXmlContent">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Syndication.XmlSyndicationContent CreateXmlContent (object xmlSerializerObject, System.Xml.Serialization.XmlSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Syndication.XmlSyndicationContent CreateXmlContent(object xmlSerializerObject, class System.Xml.Serialization.XmlSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.CreateXmlContent(System.Object,System.Xml.Serialization.XmlSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.XmlSyndicationContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlSerializerObject" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Xml.Serialization.XmlSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="xmlSerializerObject">O objeto.</param>
+        <param name="serializer">O serializador XML.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> instância com o objeto especificado e o serializador XML.</summary>
+        <returns>Um novo <see cref="T:System.ServiceModel.Syndication.XmlSyndicationContent" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public abstract string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationContent.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de conteúdo de distribuição.</summary>
+        <value>O nome do tipo de conteúdo de distribuição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é abstrata, portanto, ele deve ser acessado em uma instância de um tipo de conteúdo de distribuição (uma classe derivada de <xref:System.ServiceModel.Syndication.SyndicationContent>). O .NET Framework define os seguintes tipos de conteúdo de distribuição:  
+  
+-   <xref:System.ServiceModel.Syndication.TextSyndicationContent>  
+  
+-   <xref:System.ServiceModel.Syndication.UrlSyndicationContent>  
+  
+-   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
+  
+-   Essa classe contém um número de métodos auxiliares estáticos para criar vários tipos de conteúdo de distribuição:  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationContent.CreateHtmlContent%28System.String%29>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationContent.CreatePlaintextContent%28System.String%29>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationContent.CreateUrlContent%28System.Uri%2CSystem.String%29>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationContent.CreateXhtmlContent%28System.String%29>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationContent.CreateXmlContent%28System.Object%29>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationContent.CreateXmlContent%28System.Object%2CSystem.Runtime.Serialization.XmlObjectSerializer%29>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationContent.CreateXmlContent%28System.Object%2CSystem.Xml.Serialization.XmlSerializer%29>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentsTo">
+      <MemberSignature Language="C#" Value="protected abstract void WriteContentsTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteContentsTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.WriteContentsTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> no qual ocorrerá a gravação.</param>
+        <summary>Grava o conteúdo deste <see cref="T:System.ServiceModel.Syndication.SyndicationContent" /> objeto especificado <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só grava o conteúdo de <xref:System.ServiceModel.Syndication.SyndicationContent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.Xml.XmlWriter writer, string outerElementName, string outerElementNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.Xml.XmlWriter writer, string outerElementName, string outerElementNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationContent.WriteTo(System.Xml.XmlWriter,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="outerElementName" Type="System.String" />
+        <Parameter Name="outerElementNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> no qual ocorrerá a gravação.</param>
+        <param name="outerElementName">O nome do elemento.</param>
+        <param name="outerElementNamespace">O namespace do elemento.</param>
+        <summary>Grava o conteúdo do objeto especificado <see cref="T:System.Xml.XmlWriter" /> dentro do elemento especificado e o namespace do elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo deste objeto é gravado no elemento externo especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

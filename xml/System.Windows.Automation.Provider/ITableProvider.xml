@@ -1,0 +1,98 @@
+<Type Name="ITableProvider" FullName="System.Windows.Automation.Provider.ITableProvider">
+  <TypeSignature Language="C#" Value="public interface ITableProvider : System.Windows.Automation.Provider.IGridProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITableProvider implements class System.Windows.Automation.Provider.IGridProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.ITableProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IGridProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("9c860395-97b3-490a-b52a-858cc22af166")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades para oferecer suporte ao acesso de cliente de automação de interface do usuário para controles que atuam como contêineres para uma coleção de elementos filho. Os filhos deste elemento devem implementar <see cref="T:System.Windows.Automation.Provider.ITableItemProvider" /> e ser organizados em um sistema de coordenadas lógico bidimensional que pode ser percorrido (isto é, um cliente de automação de interface do usuário pode mudar para os controles adjacentes) usando o teclado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse padrão de controle é análogo a <xref:System.Windows.Automation.Provider.IGridProvider> com a diferença que qualquer controle que implementa <xref:System.Windows.Automation.Provider.ITableProvider> também deve expor uma relação de cabeçalho de coluna e/ou linha para cada elemento filho.  
+  
+ Controles que implementam <xref:System.Windows.Automation.Provider.ITableProvider> também são necessários para implementar <xref:System.Windows.Automation.Provider.IGridProvider> para expor a funcionalidade de grade inerente de um controle de tabela.  
+  
+ Implementado em um provedor de automação de interface do usuário que deve dar suporte a <xref:System.Windows.Automation.TablePattern> e <xref:System.Windows.Automation.GridPattern> padrões de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetColumnHeaders">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple[] GetColumnHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple[] GetColumnHeaders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma coleção de provedores de automação de interface do usuário que representa todos os cabeçalhos de coluna em uma tabela.</summary>
+        <returns>Uma coleção de provedores de automação de interface do usuário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowHeaders">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple[] GetRowHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple[] GetRowHeaders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de provedores de automação de interface do usuário que representa todos os cabeçalhos de linha na tabela.</summary>
+        <returns>Uma coleção de provedores de automação de interface do usuário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowOrColumnMajor">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.RowOrColumnMajor RowOrColumnMajor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.RowOrColumnMajor RowOrColumnMajor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.RowOrColumnMajor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera a direção primária da passagem para a tabela.</summary>
+        <value>A direção primária da passagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

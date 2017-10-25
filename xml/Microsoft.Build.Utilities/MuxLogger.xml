@@ -1,0 +1,222 @@
+<Type Name="MuxLogger" FullName="Microsoft.Build.Utilities.MuxLogger">
+  <TypeSignature Language="C#" Value="public class MuxLogger : Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MuxLogger extends System.Object implements class Microsoft.Build.Framework.ILogger, class Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.MuxLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.INodeLogger</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um agente multiplexação. É a finalidade desse agente de log registrar e cancelar o registro de vários agentes de log durante a compilação. Suporta o cenário do IDE do Visual Studio na qual agentes de log são registrados e seu registro cancelados para solicitação de compilação do cada sistema projeto. Uma compilação física pode ter várias versões lógicos, cada um com seu próprio conjunto de agentes de log.  
+  
+ O <see langword="MuxLogger" /> se registra com o Gerenciador de compilação como um agente de estilo regular /l central. Ele recebe mensagens do Gerenciador de compilação e rotas para o agente de log correto, com base em lógica que criar a mensagem veio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `MuxLogger` geralmente funciona da seguinte maneira:  
+  
+-   O `MuxLogger` está registrado no início da compilação de início do Gerenciador de compilação.  
+  
+     Quaisquer agentes registrados antes que o Gerenciador de compilação a compilação é iniciado obtém o evento de compilação iniciada ao mesmo tempo como o `MuxLogger`.  
+  
+     Quaisquer agentes registrados depois que o Gerenciador de compilação a compilação é iniciado terá um evento de compilação iniciada sintetizado. O evento não pode ser armazenado em cache porque o carimbo de hora do evento de compilação iniciada é determinado quando o evento é criado e o evento de cache, fornecer tempos de compilação incorreto os agentes registrados para o `MuxLogger`.  
+  
+-   O `MuxLogger` é inicializada pelo Gerenciador de compilação  
+  
+     O `MuxLogger` escuta todos os eventos na fonte de evento do Gerenciador de compilação e encaminha eventos corretamente para os agentes de log registrados.  
+  
+-   O `MuxLogger` é desligado quando a compilação seja concluída na compilação de término. Neste momento, ele cancela o registro de qualquer agentes anexados a ele.  
+  
+-   O `MuxLogger` registra o evento de conclusão de compilação quando o evento de conclusão de projeto para o primeiro evento iniciado pelo projeto é exibido para cada agente de log.  
+  
+ O `MuxLogger` registra agentes de log da seguinte maneira:  
+  
+1.  O agente de log é passado para o `MuxLogger.RegisterLogger` método com uma ID de envio é usado para rotear uma mensagem para esse agente.  
+  
+2.  O `MuxLogger` registra o agente de log para o `MuxLogger` origem do evento.  
+  
+3.  Se o evento iniciado de compilação já foi registrado, o `MuxLogger` cria um novo evento de compilação iniciada e a envia para a origem do evento do agente de log.  
+  
+ O `MuxLogger` cancela o registro de agentes de log da seguinte maneira:  
+  
+1.  Quando um envio de compilação for concluído, o `MuxLogger.UnregisterLogger` método é chamado com a ID de envio para o agente de log.  
+  
+2.  O `MuxLogger` procura o estado de êxito do evento de conclusão de projeto para a ID de envio e registra um evento de conclusão de compilação para o agente de log.  
+  
+3.  O `MuxLogger` limpa a origem do evento.  
+  
+     Observe que o cancelamento de registro é proveniente de um thread que não seja o thread de registro em log e um problema de sincronização pode ocorrer se o cancelamento de registro é chamado enquanto eventos estão sendo registrados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MuxLogger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do agente de log multiplexação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">A fonte do evento.</param>
+        <summary>Inicializar o <see langword="MuxLogger" /> instância com a origem do evento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int maxNodeCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource, int32 maxNodeCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+        <Parameter Name="maxNodeCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">A fonte do evento.</param>
+        <param name="maxNodeCount">O número máximo de nós.</param>
+        <summary>Inicializar o <see langword="MuxLogger" /> instância com a origem do evento especificado e o número máximo especificado de nós.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public string Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.MuxLogger.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o atributo de parâmetros necessário para o <see langword="ILogger" /> interface.</summary>
+        <value>Retorna o atributo de parâmetros.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterLogger">
+      <MemberSignature Language="C#" Value="public void RegisterLogger (int submissionId, Microsoft.Build.Framework.ILogger logger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterLogger(int32 submissionId, class Microsoft.Build.Framework.ILogger logger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.RegisterLogger(System.Int32,Microsoft.Build.Framework.ILogger)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="submissionId" Type="System.Int32" />
+        <Parameter Name="logger" Type="Microsoft.Build.Framework.ILogger" />
+      </Parameters>
+      <Docs>
+        <param name="submissionId">A ID de envio do agente de log que está sendo registrado.</param>
+        <param name="logger">O agente de log para registrar.</param>
+        <summary>Registra um agente de log no <see langword="MuxLogger" /> e gera um evento de compilação iniciada, se o evento iniciado de compilação já foi registrado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desliga o <see langword="MuxLogger" /> e limpa qualquer estado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterLoggers">
+      <MemberSignature Language="C#" Value="public bool UnregisterLoggers (int submissionId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool UnregisterLoggers(int32 submissionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.MuxLogger.UnregisterLoggers(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="submissionId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="submissionId">A ID de envio do agente de log a ser removido.</param>
+        <summary>Remove o MuxLogger o agente de log especificado.</summary>
+        <returns>Retorna <see langword="true" /> se o método for bem-sucedido ao remover o agente de log, caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbosity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.LoggerVerbosity Verbosity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.MuxLogger.Verbosity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o atributo de detalhamento, necessário para o <see langword="ILogger" /> interface.</summary>
+        <value>Retorna o atributo de detalhamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

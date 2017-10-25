@@ -1,0 +1,1789 @@
+<Type Name="TypeConverter" FullName="System.ComponentModel.TypeConverter">
+  <TypeSignature Language="C#" Value="public class TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TypeConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.TypeConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma maneira unificada de converter tipos de valores em outros tipos, bem como acessar valores padrão e subpropriedades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo mais comum de conversor é aquele converte uma representação de texto. O conversor de tipo para uma classe está associado à classe com um <xref:System.ComponentModel.TypeConverterAttribute>. A menos que esse atributo for substituído, todas as classes que herdam desta classe usam o mesmo conversor de tipo como a classe base.  
+  
+> [!NOTE]
+>  Para fins de sistema do tipo geral, não acesse um conversor de tipo diretamente. Em vez disso, acessar o conversor apropriado usando <xref:System.ComponentModel.TypeDescriptor>. Para obter mais informações, consulte os exemplos de código fornecidos.  
+  
+ **Observação** para fins XAML, um processador XAML procura o <xref:System.ComponentModel.TypeConverterAttribute> diretamente, em vez de passar pelo <xref:System.ComponentModel.TypeDescriptor>. Para casos onde você deseja uma <xref:System.ComponentModel.TypeDescriptor> instância do código, ou onde você pode criar uma instância compartilhada no WPF recursos, é aceitável para construí-lo diretamente sem referenciar <xref:System.ComponentModel.TypeDescriptor> ou outro sistema de reflexão e tipo de suporte.  
+  
+ Classes derivadas de <xref:System.ComponentModel.TypeConverter> geralmente são referenciadas como parte de como um processador XAML converte um valor de texto de inicialização ou o atributo da marcação (que é inerentemente uma cadeia de caracteres) e gera um objeto para uma representação de tempo de execução. Os autores de tipo personalizado que pretendem dar suporte a um comportamento de conversão de tipo para XAML normalmente implementam um <xref:System.ComponentModel.TypeConverter> classe que dá suporte a seus próprios exclusivo `ConvertFrom` comportamento a partir de uma cadeia de caracteres. Esse comportamento permite a conversão de tipo de cadeia de caracteres fornecida como um valor de atributo XAML e fornece um processador XAML com o suporte necessário para criar um objeto de cadeia de caracteres, para que o objeto pode ser produzido em um gráfico de objeto analisado. Tipos personalizados ou membros de tipos personalizados são indicados pela aplicação <xref:System.ComponentModel.TypeConverterAttribute> para as definições, com o atributo referência personalizado <xref:System.ComponentModel.TypeConverter> implementação. Para obter mais informações, consulte [conversores de tipo para XAML Overview](~/docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma instância de um conversor de tipo e associá-lo a uma classe. A classe que implementa o conversor `MyClassConverter`, herde o <xref:System.ComponentModel.TypeConverter> classe.  
+  
+ [!code-cpp[Classic TypeConverter Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TypeConverter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TypeConverter Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TypeConverter Example/CS/source.cs#1)]
+ [!code-vb[Classic TypeConverter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TypeConverter Example/VB/source.vb#1)]  
+  
+ Quando você tem uma propriedade que tem uma enumeração, verifique se um valor de enumeração é válido antes de definir a propriedade. O exemplo de código a seguir exige que uma enumeração chamado `MyPropertyEnum` foi declarado.  
+  
+ [!code-cpp[Classic TypeConverter Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TypeConverter Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic TypeConverter Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TypeConverter Example/CS/source.cs#2)]
+ [!code-vb[Classic TypeConverter Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TypeConverter Example/VB/source.vb#2)]  
+  
+ Outro uso comum de conversor de tipo é converter um objeto em uma cadeia de caracteres. O exemplo de código a seguir imprime o nome do <xref:System.Drawing.Color> armazenado na variável `c`.  
+  
+ [!code-cpp[Classic TypeConverter Example#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TypeConverter Example/CPP/source.cpp#3)]
+ [!code-csharp[Classic TypeConverter Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TypeConverter Example/CS/source.cs#3)]
+ [!code-vb[Classic TypeConverter Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TypeConverter Example/VB/source.vb#3)]  
+  
+ Você também pode usar um conversor de tipo para converter um valor de seu nome, conforme mostrado no exemplo de código a seguir.  
+  
+ [!code-cpp[Classic TypeConverter Example#4](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TypeConverter Example/CPP/source.cpp#4)]
+ [!code-csharp[Classic TypeConverter Example#4](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TypeConverter Example/CS/source.cs#4)]
+ [!code-vb[Classic TypeConverter Example#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TypeConverter Example/VB/source.vb#4)]  
+  
+ No exemplo de código a seguir, você pode usar um conversor de tipo para imprimir o conjunto de valores padrão que o objeto oferece suporte.  
+  
+ [!code-cpp[Classic TypeConverter Example#5](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TypeConverter Example/CPP/source.cpp#5)]
+ [!code-csharp[Classic TypeConverter Example#5](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TypeConverter Example/CS/source.cs#5)]
+ [!code-vb[Classic TypeConverter Example#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TypeConverter Example/VB/source.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Herdar de <see cref="T:System.ComponentModel.TypeConverter" /> para implementar seus próprios requisitos de conversão. Quando você herda desta classe, você pode substituir os métodos a seguir:  
+  
+-   Para dar suporte à conversão de tipo personalizado, substitua o <see cref="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)" />, <see cref="M:System.ComponentModel.TypeConverter.CanConvertTo(System.Type)" />, <see cref="M:System.ComponentModel.TypeConverter.ConvertFrom(System.Object)" />, e <see cref="M:System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)" /> métodos.  
+  
+-   Para converter tipos que devem recriar o objeto para alterar seu valor, substitua o <see cref="M:System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)" /> e <see cref="M:System.ComponentModel.TypeConverter.GetCreateInstanceSupported" /> métodos.  
+  
+-   Para converter tipos que oferecem suporte a propriedades, substituir o <see cref="M:System.ComponentModel.TypeConverter.GetProperties(System.Object)" /> e <see cref="M:System.ComponentModel.TypeConverter.GetPropertiesSupported" /> métodos. Se a classe que você está convertendo não tiver propriedades e você precisa implementar propriedades, você pode usar o <see cref="T:System.ComponentModel.TypeConverter.SimplePropertyDescriptor" /> classe como uma base para implementar os descritores de propriedade. Ao herdar de <see cref="T:System.ComponentModel.TypeConverter.SimplePropertyDescriptor" />, você deve substituir o <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)" /> e <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)" /> métodos.  
+  
+-   Para converter tipos que oferecem suporte a valores padrão, substituir o <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" />, <see cref="M:System.ComponentModel.TypeConverter.GetStandardValuesExclusive" />, <see cref="M:System.ComponentModel.TypeConverter.GetStandardValuesSupported" /> e <see cref="M:System.ComponentModel.TypeConverter.IsValid(System.Object)" /> métodos.  
+  
+ <block subset="none" type="note"><para>  
+ O tipo derivado pode ser marcado como <see langword="internal" /> ou <see langword="private" />, mas uma instância do seu tipo pode ser criada com o <see cref="T:System.ComponentModel.TypeDescriptor" /> classe. Não grave o código não seguro, supondo que o chamador é confiável. Em vez disso, suponha que os chamadores podem criar instâncias de seu tipo em confiança parcial.  
+  
+</para></block>  
+  
+ Para obter mais informações sobre conversores de tipo para fins gerais (não XAML), consulte [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56) ou [conversão do tipo generalizada](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.TypeConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public bool CanConvertFrom (Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanConvertFrom(class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceType">Um <see cref="T:System.Type" /> que representa o tipo do qual você deseja converter.</param>
+        <summary>Retorna se este conversor pode converter um objeto do tipo indicado para o tipo deste conversor.</summary>
+        <returns>
+          <see langword="true" /> se esse conversor puder realizar a conversão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `false`. Nunca retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public virtual bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="sourceType">Um <see cref="T:System.Type" /> que representa o tipo do qual você deseja converter.</param>
+        <summary>Retorna se esse conversor pode converter um objeto do tipo especificado no tipo desse conversor, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" /> se esse conversor puder realizar a conversão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, este método retorna `false`, a menos que `sourceType` é um <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para fornecer seus próprios requisitos de conversão.  
+  
+ Use o <paramref name="context" /> parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser <see langword="null" />, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public bool CanConvertTo (Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanConvertTo(class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.CanConvertTo(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="destinationType">Um <see cref="T:System.Type" /> que representa o tipo para o qual você deseja converter.</param>
+        <summary>Retorna se esse conversor pode converter o objeto para o tipo especificado.</summary>
+        <returns>
+          <see langword="true" /> se esse conversor puder realizar a conversão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `destinationType` é uma cadeia de caracteres, a implementação padrão de <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> sempre retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public virtual bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="destinationType">Um <see cref="T:System.Type" /> que representa o tipo para o qual você deseja converter.</param>
+        <summary>Retorna se esse conversor pode converter o objeto para o tipo especificado, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" /> se esse conversor puder realizar a conversão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ Se `destinationType` é uma cadeia de caracteres, a implementação padrão de <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> sempre retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para fornecer seus próprios requisitos de conversão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public object ConvertFrom (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ConvertFrom(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertFrom(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o valor fornecido noo tipo deste conversor.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public virtual object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="culture">O <see cref="T:System.Globalization.CultureInfo" /> para usar como a cultura atual.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o objeto determinado para o tipo deste conversor, usando as informações de contexto e de cultura especificadas.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os autores de tipo personalizado que pretendem dar suporte a um comportamento de conversão de tipo para XAML normalmente implementam um <xref:System.ComponentModel.TypeConverter> classe que dá suporte a <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> comportamento a partir de uma cadeia de caracteres. Esse comportamento permite a conversão de tipo de cadeia de caracteres fornecida como um valor de atributo XAML e fornece um processador XAML com o suporte necessário para criar um objeto de cadeia de caracteres, para que o objeto pode ser produzido em um gráfico de objeto analisado. Tipos personalizados ou membros de tipos personalizados são indicados pela aplicação <xref:System.ComponentModel.TypeConverterAttribute> para as definições, com o atributo referência personalizado <xref:System.ComponentModel.TypeConverter> implementação.  
+  
+ Para fins XAML, você geralmente não fornecem as implementações de ramificação baseadas em `culture`. Isso ocorre porque o XAML é pré-compilado em um contexto de ambiente de desenvolvimento e informações específicas de cultura para tempo de execução XAML não é relevante para a conversão de tipo XAML. Para obter mais informações, consulte [conversores de tipo para XAML Overview](~/docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para fornecer seus próprios requisitos de conversão.  
+  
+ Use o <paramref name="context" /> parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser <see langword="null" />, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar <see langword="null" />.  
+  
+ Para padrões de implementação para conversores de tipo que são usados para oferecer suporte a XAML e tipos personalizados, consulte [conversores de tipo para XAML Overview](~/docs/framework/xaml-services/type-converters-for-xaml-overview.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromInvariantString">
+      <MemberSignature Language="C#" Value="public object ConvertFromInvariantString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ConvertFromInvariantString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O <see cref="T:System.String" /> a ser convertido.</param>
+        <summary>Converte a cadeia de caracteres fornecida para o tipo deste conversor usando a cultura invariável.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o texto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão sempre retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromInvariantString">
+      <MemberSignature Language="C#" Value="public object ConvertFromInvariantString (System.ComponentModel.ITypeDescriptorContext context, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ConvertFromInvariantString(class System.ComponentModel.ITypeDescriptorContext context, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.ComponentModel.ITypeDescriptorContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="text">O <see cref="T:System.String" /> a ser convertido.</param>
+        <summary>Converte a cadeia de caracteres fornecida para o tipo deste conversor usando a cultura invariável e o contexto especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o texto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção é gerada se a cadeia de caracteres não pode ser convertida para o objeto apropriado. A implementação padrão sempre retorna `null`.  
+  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromString">
+      <MemberSignature Language="C#" Value="public object ConvertFromString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ConvertFromString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertFromString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">A representação de texto do objeto a ser convertido.</param>
+        <summary>Converte o texto especificado em um objeto.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o texto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão sempre retorna `null`.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo dessa função, consulte o <xref:System.ComponentModel.TypeConverter> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A cadeia de caracteres não pode ser convertida em objeto apropriado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromString">
+      <MemberSignature Language="C#" Value="public object ConvertFromString (System.ComponentModel.ITypeDescriptorContext context, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ConvertFromString(class System.ComponentModel.ITypeDescriptorContext context, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="text">O <see cref="T:System.String" /> a ser convertido.</param>
+        <summary>Converte o texto fornecido em um objeto, usando o contexto especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o texto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção é gerada se a cadeia de caracteres não pode ser convertida para o objeto apropriado. A implementação padrão sempre retorna `null`.  
+  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromString">
+      <MemberSignature Language="C#" Value="public object ConvertFromString (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ConvertFromString(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" />. Se <see langword="null" /> for passado, atual cultura será assumida.</param>
+        <param name="text">O <see cref="T:System.String" /> a ser convertido.</param>
+        <summary>Converte o texto fornecido em um objeto, usando o contexto e a informação de cultura especificados.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o texto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção é gerada se a cadeia de caracteres não pode ser convertida para o objeto apropriado. A implementação padrão sempre retorna `null`.  
+  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public object ConvertTo (object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ConvertTo(object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <param name="destinationType">O <see cref="T:System.Type" /> para converter o <c>valor</c> parâmetro.</param>
+        <summary>Converte o objeto de valor especificado para o tipo especificado, usando os argumentos.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo mais comum para converter para e de é um objeto de cadeia de caracteres. Essa implementação chama <xref:System.Object.ToString%2A> no objeto, se o objeto é válido e se o tipo de destino é uma cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="destinationType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public virtual object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" />. Se <see langword="null" /> for passado, atual cultura será assumida.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <param name="destinationType">O <see cref="T:System.Type" /> para converter o <c>valor</c> parâmetro.</param>
+        <summary>Converte o objeto de valor determinado para o tipo especificado, usando as informações de contexto e de cultura especificadas.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos mais comuns para converter são de e para um objeto de cadeia de caracteres. Essa implementação chama <xref:System.Object.ToString%2A> no objeto se o objeto é válido e se o tipo de destino é uma cadeia de caracteres.  
+  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ Os autores de tipo personalizado que pretendem dar suporte a um comportamento de conversão de tipo para XAML normalmente implementam um <xref:System.ComponentModel.TypeConverter> classe que dá suporte a <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> comportamento a partir de uma cadeia de caracteres. Esses conversores de tipo também podem implementar <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> para oferecer suporte à serialização para o XAML.  
+  
+ Alguns cenários de serialização de XAML não podem ser atendidos com <xref:System.ComponentModel.TypeConverter> sozinho. Nesses casos, pode ser necessário definir também uma <xref:System.Windows.Markup.ValueSerializer> que manipula os casos de serialização que poderiam ser tratados por <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Para obter mais informações, consulte <xref:System.Windows.Markup.ValueSerializer>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="destinationType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para fornecer seus próprios requisitos de conversão.  
+  
+ Para padrões de implementação para conversores de tipo que são usados para oferecer suporte a XAML e tipos personalizados, consulte [conversores de tipo para XAML Overview](~/docs/framework/xaml-services/type-converters-for-xaml-overview.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToInvariantString">
+      <MemberSignature Language="C#" Value="public string ConvertToInvariantString (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ConvertToInvariantString(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o valor especificado em uma representação de cadeia de caracteres invariável da cultura.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `context` parâmetro pode ser usado para extrair informações adicionais sobre o ambiente do qual este conversor está sendo invocado. Isso pode ser `null`, portanto, sempre verifique. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ Dependendo da implementação do formatador de valor, pode ser possível passar a cadeia de caracteres retornada para o formatador de valor para recriar uma instância do objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToInvariantString">
+      <MemberSignature Language="C#" Value="public string ConvertToInvariantString (System.ComponentModel.ITypeDescriptorContext context, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ConvertToInvariantString(class System.ComponentModel.ITypeDescriptorContext context, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertToInvariantString(System.ComponentModel.ITypeDescriptorContext,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o valor especificado em uma representação de cadeia de caracteres de cultura invariável, usando o contexto especificado.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ Dependendo da implementação do formatador de valor, pode ser possível passar a cadeia de caracteres retornada para o formatador de valor para recriar uma instância do objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public string ConvertToString (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ConvertToString(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertToString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o valor especificado em uma representação de cadeia de caracteres.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dependendo da implementação do formatador de valor, pode ser possível passar a cadeia de caracteres retornada para o formatador de valor para recriar uma instância do objeto.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo sobre esta função, consulte o <xref:System.ComponentModel.TypeConverter> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public string ConvertToString (System.ComponentModel.ITypeDescriptorContext context, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ConvertToString(class System.ComponentModel.ITypeDescriptorContext context, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o valor especificado em uma representação de cadeia de caracteres, usando o contexto determinado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ Dependendo da implementação do formatador de valor, pode ser possível passar a cadeia de caracteres retornada para o formatador de valor para recriar uma instância do objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public string ConvertToString (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ConvertToString(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" />. Se <see langword="null" /> for passado, atual cultura será assumida.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o valor especificado em uma representação de cadeia de caracteres, usando as informações de contexto e cultura especificadas.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ Dependendo da implementação do formatador de valor, pode ser possível passar a cadeia de caracteres retornada para o formatador de valor para recriar uma instância do objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A conversão não pode ser executada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public object CreateInstance (System.Collections.IDictionary propertyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object CreateInstance(class System.Collections.IDictionary propertyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="propertyValues">Um <see cref="T:System.Collections.IDictionary" /> que representa um dicionário de novos valores de propriedade.</param>
+        <summary>Recria um <see cref="T:System.Object" /> dado um conjunto de valores de propriedade do objeto.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o determinado <see cref="T:System.Collections.IDictionary" />, ou <see langword="null" /> se o objeto não pode ser criado. Esse método sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para objetos que são imutáveis, mas para o qual você deseja fornecer propriedades mutáveis.  
+  
+ O dicionário fornecido pelo `propertyValues` parâmetro tem uma série de pares nome/valor, um para cada propriedade retornado de <xref:System.ComponentModel.TypeConverter.GetProperties%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public virtual object CreateInstance (System.ComponentModel.ITypeDescriptorContext context, System.Collections.IDictionary propertyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateInstance(class System.ComponentModel.ITypeDescriptorContext context, class System.Collections.IDictionary propertyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="propertyValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="propertyValues">Um <see cref="T:System.Collections.IDictionary" /> de novos valores de propriedade.</param>
+        <summary>Cria uma instância do tipo que isso <see cref="T:System.ComponentModel.TypeConverter" /> está associado, usando o contexto especificado, dado um conjunto de valores de propriedade do objeto.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o determinado <see cref="T:System.Collections.IDictionary" />, ou <see langword="null" /> se o objeto não pode ser criado. Esse método sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para objetos que são imutáveis, mas para o qual você deseja fornecer propriedades mutáveis.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter deve recriar o objeto para alterar seu valor.  
+  
+ Use o <paramref name="context" /> parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser <see langword="null" />, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar <see langword="null" />.  
+  
+ O dicionário fornecido pelo <paramref name="propertyValues" /> parâmetro tem uma série de pares nome/valor, um para cada propriedade retornado de <see cref="M:System.ComponentModel.TypeConverter.GetProperties(System.Object)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConvertFromException">
+      <MemberSignature Language="C#" Value="protected Exception GetConvertFromException (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception GetConvertFromException(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> para converter, ou <see langword="null" /> se o objeto não está disponível.</param>
+        <summary>Retorna uma exceção a emitir quando uma conversão não pode ser executada.</summary>
+        <returns>Um <see cref="T:System.Exception" /> que representa a exceção a emitir quando uma conversão não pode ser executada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Gerada automaticamente por este método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConvertToException">
+      <MemberSignature Language="C#" Value="protected Exception GetConvertToException (object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Exception GetConvertToException(object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> para converter, ou <see langword="null" /> se o objeto não está disponível.</param>
+        <param name="destinationType">Um <see cref="T:System.Type" /> que representa o tipo de conversão estava tentando converter.</param>
+        <summary>Retorna uma exceção a emitir quando uma conversão não pode ser executada.</summary>
+        <returns>Um <see cref="T:System.Exception" /> que representa a exceção a emitir quando uma conversão não pode ser executada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Gerada automaticamente por este método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCreateInstanceSupported">
+      <MemberSignature Language="C#" Value="public bool GetCreateInstanceSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetCreateInstanceSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetCreateInstanceSupported" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se a alteração de um valor no objeto requer uma chamada para o <see cref="M:System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)" /> método para criar um novo valor.</summary>
+        <returns>
+          <see langword="true" />Se a alteração de uma propriedade no objeto requer uma chamada para <see cref="M:System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)" /> para criar um novo valor; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCreateInstanceSupported">
+      <MemberSignature Language="C#" Value="public virtual bool GetCreateInstanceSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetCreateInstanceSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <summary>Retorna se a alteração de um valor no objeto requer uma chamada para <see cref="M:System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)" /> para criar um novo valor, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se a alteração de uma propriedade no objeto requer uma chamada para <see cref="M:System.ComponentModel.TypeConverter.CreateInstance(System.Collections.IDictionary)" /> para criar um novo valor; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter deve recriar o objeto para alterar seu valor.  
+  
+ Use o <paramref name="context" /> parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser <see langword="null" />, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetProperties (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Object" /> que especifica o tipo de matriz para o qual obter as propriedades.</param>
+        <summary>Retorna uma coleção de propriedades para o tipo de matriz especificado pelo parâmetro de valor.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> com as propriedades que são expostas para esse tipo de dados, ou <see langword="null" /> se não houver nenhuma propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `null`.  
+  
+ Por padrão, um tipo de retorno não propriedades. Uma simples implementação desse método pode chamar <xref:System.ComponentModel.TypeDescriptor.GetProperties%2A> para o tipo de dados correto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetProperties (System.ComponentModel.ITypeDescriptorContext context, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(class System.ComponentModel.ITypeDescriptorContext context, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="value">Um <see cref="T:System.Object" /> que especifica o tipo de matriz para o qual obter as propriedades.</param>
+        <summary>Retorna uma coleção de propriedades para o tipo de matriz especificado pelo parâmetro de valor, usando o contexto especificado.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> com as propriedades que são expostas para esse tipo de dados, ou <see langword="null" /> se não houver nenhuma propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ Conforme implementado nesta classe, esse método sempre retornará `null`.  
+  
+ Por padrão, um tipo de retorno não propriedades. Uma simples implementação desse método pode chamar <xref:System.ComponentModel.TypeDescriptor.GetProperties%2A> para o tipo de dados correto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptorCollection GetProperties (System.ComponentModel.ITypeDescriptorContext context, object value, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(class System.ComponentModel.ITypeDescriptorContext context, object value, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="value">Um <see cref="T:System.Object" /> que especifica o tipo de matriz para o qual obter as propriedades.</param>
+        <param name="attributes">Uma matriz do tipo <see cref="T:System.Attribute" /> que é usado como um filtro.</param>
+        <summary>Retorna uma coleção de propriedades para o tipo de matriz especificado pelo parâmetro de valor, usando o contexto especificado e os atributos.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> com as propriedades que são expostas para esse tipo de dados, ou <see langword="null" /> se não houver nenhuma propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter oferece suporte às propriedades.  
+  
+ Use o <paramref name="context" /> parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser <see langword="null" />, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar <see langword="null" />.  
+  
+ A matriz de atributos é usada para filtrar a matriz. Os atributos podem ter uma mistura de <see cref="T:System.Type" /> e <see cref="T:System.Attribute" /> objetos. A filtragem é definida pelas seguintes regras:  
+  
+-   Um <see cref="T:System.Type" /> é tratado como um curinga; ele corresponde a uma propriedade que tem o <see cref="T:System.Type" /> em seu conjunto de atributos.  
+  
+-   Se uma propriedade não tem um <see cref="T:System.Attribute" /> da mesma classe, a propriedade não está incluída na matriz retornada.  
+  
+-   Se o atributo for uma instância de <see cref="T:System.Attribute" />, a propriedade deve ser uma correspondência exata ou se ele não está incluído na matriz retornada.  
+  
+-   Se um <see cref="T:System.Attribute" /> instância for especificada e é a propriedade padrão, ele está incluído na matriz retornada mesmo se não houver nenhuma instância do <see cref="T:System.Attribute" /> na propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesSupported">
+      <MemberSignature Language="C#" Value="public bool GetPropertiesSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetPropertiesSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetPropertiesSupported" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se este objeto oferece suporte às propriedades.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="M:System.ComponentModel.TypeConverter.GetProperties(System.Object)" /> deve ser chamado para localizar as propriedades do objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesSupported">
+      <MemberSignature Language="C#" Value="public virtual bool GetPropertiesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetPropertiesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <summary>Retorna se este objeto oferece suporte a propriedades, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="M:System.ComponentModel.TypeConverter.GetProperties(System.Object)" /> deve ser chamado para localizar as propriedades do objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter oferece suporte às propriedades.  
+  
+ Use o <paramref name="context" /> parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser <see langword="null" />, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetStandardValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ICollection GetStandardValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetStandardValues" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de valores padrão do contexto padrão para o tipo de dados para o qual esse conversor de tipo foi criado.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém um conjunto padrão de valores válidos ou <see langword="null" /> se o tipo de dados não der suporte a um conjunto padrão de valores.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato que pode ser usado para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Retorna uma coleção de valores padrão para o tipo de dados para o qual esse conversor de tipo foi criado quando fornecido com um contexto de formato.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém um conjunto padrão de valores válidos ou <see langword="null" />, se o tipo de dados não der suporte a um conjunto padrão de valores.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado no <xref:System.ComponentModel.TypeConverter>, esse método sempre retornará `null`.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo sobre esta função, consulte o <xref:System.ComponentModel.TypeConverter> classe.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public bool GetStandardValuesExclusive ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetStandardValuesExclusive() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetStandardValuesExclusive" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se a coleção de valores padrão retornada de <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> é uma lista exclusiva.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> retornado de <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> é uma lista completa de valores possíveis; <see langword="false" /> se outros valores são possíveis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `false`.  
+  
+ Se a lista for exclusiva, como em um tipo de dados de enumeração, não há outros valores são válidos. Se a lista não é exclusiva, então, podem existir outros valores válidos além da lista de padrão de valores que o <xref:System.ComponentModel.TypeConverter.GetStandardValues%2A> método fornece. Se os valores são exclusivos, a lista retornada por <xref:System.ComponentModel.TypeConverter.GetStandardValues%2A> não deve permitir que esses valores a ser editado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public virtual bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <summary>Retorna se a coleção de valores padrão retornada de <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> é uma lista exclusiva de valores possíveis, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> retornado de <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> é uma lista completa de valores possíveis; <see langword="false" /> se outros valores são possíveis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `false`.  
+  
+ Se a lista for exclusiva, como em um tipo de dados de enumeração, não há outros valores são válidos. Se a lista não é exclusiva, então, podem existir outros valores válidos além da lista de padrão de valores que o <xref:System.ComponentModel.TypeConverter.GetStandardValues%2A> método fornece. Se os valores são exclusivos, a lista retornada por <xref:System.ComponentModel.TypeConverter.GetStandardValues%2A> não deve permitir que esses valores a ser editado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão.  
+  
+ Use o <paramref name="context" /> parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser <see langword="null" />, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public bool GetStandardValuesSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetStandardValuesSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetStandardValuesSupported" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se este objeto oferece suporte a um conjunto padrão de valores que podem ser escolhidos em uma lista.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> deve ser chamado para localizar um conjunto comum de valores que o objeto suporta; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public virtual bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <summary>Retorna se este objeto oferece suporte a um conjunto padrão de valores que podem ser escolhidos em uma lista, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues" /> deve ser chamado para localizar um conjunto comum de valores que o objeto suporta; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `false`.  
+  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsValid(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.IsValid(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser testado quanto à validade.</param>
+        <summary>Retorna se o objeto de valor especificado é válido para esse tipo.</summary>
+        <returns>
+          <see langword="true" /> se o valor especificado for válido para esse objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A partir do [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o <xref:System.ComponentModel.TypeConverter.IsValid%2A> método captura exceções a <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> e <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> métodos. Se o tipo de valor de entrada faz com que <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> para retornar `false`, ou se o valor de entrada faz com que <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> para gerar uma exceção, o <xref:System.ComponentModel.TypeConverter.IsValid%2A> método retornará `false`.  
+  
+ Para habilitar o comportamento herdado, insira as seguintes linhas no arquivo de configuração do aplicativo, por exemplo, application1.exe.config.  
+  
+```xml  
+<configuration>  
+  <appSettings>  
+    <add key="UseCompatibleTypeConverterBehavior" value="true" />  
+  </appSettings>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão que podem ser validados.  
+  
+ O <see cref="M:System.ComponentModel.TypeConverter.IsValid(System.Object)" /> método é usado para validar um valor dentro do tipo em vez de determinar se <paramref name="value" /> pode ser convertido para o tipo fornecido. Por exemplo, <see cref="M:System.ComponentModel.TypeConverter.IsValid(System.Object)" /> pode ser usado para determinar se um valor fornecido é válido para um tipo de enumeração. Para ver um exemplo, consulte <see cref="T:System.ComponentModel.EnumConverter" />.  
+  
+ Você pode escrever seus próprios <c>WillConvertSucceed</c> método encapsulando a <see cref="Overload:System.ComponentModel.TypeConverter.ConvertTo" /> e <see cref="Overload:System.ComponentModel.TypeConverter.ConvertFrom" /> métodos em blocos de exceção.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public virtual bool IsValid (System.ComponentModel.ITypeDescriptorContext context, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsValid(class System.ComponentModel.ITypeDescriptorContext context, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="value">O <see cref="T:System.Object" /> para testar a validade.</param>
+        <summary>Retorna se o objeto de valor fornecido é válido para esse tipo e para o contexto especificado.</summary>
+        <returns>
+          <see langword="true" /> se o valor especificado for válido para esse objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `context` parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser `null`, sempre verifique isso. Além disso, as propriedades no objeto de contexto podem retornar `null`.  
+  
+ A partir do [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o <xref:System.ComponentModel.TypeConverter.IsValid%2A> método captura exceções a <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> e <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> métodos. Se o tipo de valor de entrada faz com que <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> para retornar `false`, ou se o valor de entrada faz com que <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> para gerar uma exceção, o <xref:System.ComponentModel.TypeConverter.IsValid%2A> método retornará `false`.  
+  
+ Para habilitar o comportamento herdado, insira as seguintes linhas no arquivo de configuração do aplicativo, por exemplo, application1.exe.config.  
+  
+```xml  
+<configuration>  
+  <appSettings>  
+    <add key="UseCompatibleTypeConverterBehavior" value="true" />  
+  </appSettings>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ Para obter um exemplo dessa função, consulte o <xref:System.ComponentModel.TypeConverter> classe.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão que podem ser validados.  
+  
+ O <see cref="M:System.ComponentModel.TypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)" /> método é usado para validar um valor dentro do tipo em vez de determinar se <paramref name="value" /> pode ser convertido para o tipo fornecido. Por exemplo, <see cref="M:System.ComponentModel.TypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)" /> pode ser usado para determinar se um valor fornecido é válido para um tipo de enumeração. Para ver um exemplo, consulte <see cref="T:System.ComponentModel.EnumConverter" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SortProperties">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.PropertyDescriptorCollection SortProperties (System.ComponentModel.PropertyDescriptorCollection props, string[] names);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.ComponentModel.PropertyDescriptorCollection SortProperties(class System.ComponentModel.PropertyDescriptorCollection props, string[] names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.SortProperties(System.ComponentModel.PropertyDescriptorCollection,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="props" Type="System.ComponentModel.PropertyDescriptorCollection" />
+        <Parameter Name="names" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="props">Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que tem as propriedades de classificação.</param>
+        <param name="names">Uma matriz de nomes na ordem em que você deseja que as propriedades para aparecer na coleção.</param>
+        <summary>Classifica um conjunto de propriedades.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que contém as propriedades de classificação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as propriedades na coleção que não ainda estão na matriz de nomes são adicionadas em ordem alfabética no final. Se o `names` parâmetro é uma matriz vazia ou `null`, todas as propriedades na coleção são classificadas em ordem alfabética.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

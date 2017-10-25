@@ -1,0 +1,233 @@
+<Type Name="CryptographicProviderType" FullName="System.Messaging.CryptographicProviderType">
+  <TypeSignature Language="C#" Value="public enum CryptographicProviderType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CryptographicProviderType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.CryptographicProviderType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os provedores de serviços disponíveis para validação de assinaturas digitais.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor de serviços de criptografia contém implementações de algoritmos e padrões de criptografia. Aplicativos podem exigir o nome do provedor de autenticação ou o tipo de provedor de autenticação de um provedor de serviços de criptografia para validar as assinaturas digitais.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dss">
+      <MemberSignature Language="C#" Value="Dss" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType Dss = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.Dss" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um provedor de tipo, como <see langword="RsqSig" />, só dá suporte a hashes e assinaturas digitais. <see langword="Dss" />Especifica o algoritmo de assinatura do algoritmo de Assinatura Digital (DSA).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fortezza">
+      <MemberSignature Language="C#" Value="Fortezza" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType Fortezza = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.Fortezza" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de provedor que contém um conjunto de protocolos de criptografia e algoritmos de propriedade do Instituto Nacional de padrões e tecnologia.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MicrosoftExchange">
+      <MemberSignature Language="C#" Value="MicrosoftExchange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType MicrosoftExchange = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.MicrosoftExchange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de provedor foi projetado para as necessidades de criptografia do aplicativo de email do Microsoft Exchange e outros aplicativos compatíveis com o Microsoft Mail.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo de provedor é preliminar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum tipo de provedor de criptografia especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RsaFull">
+      <MemberSignature Language="C#" Value="RsaFull" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType RsaFull = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.RsaFull" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O RSA provedor tipo completo, que oferece suporte a assinaturas digitais e criptografia de dados. Considerado um provedor de serviços de criptografia de uso geral. O algoritmo de chave pública RSA é usado para todas as operações de chave pública.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ RSA Data Security, Inc., é um desenvolvedor principal e o publicador de padrões de criptografia de chave pública. Os nomes de desenvolvedores de três da empresa e os proprietários significa "RSA" no nome: Rivest, Shamir e Adelman.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RsqSig">
+      <MemberSignature Language="C#" Value="RsqSig" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType RsqSig = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.RsqSig" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um subconjunto do <see langword="RsaFull" /> tipo de provedor, que dá suporte apenas essas funções e algoritmos necessários para hash e assinaturas digitais.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ssl">
+      <MemberSignature Language="C#" Value="Ssl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType Ssl = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.Ssl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de provedor que suporte o protocolo Secure Sockets Layer (SSL).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SttAcq">
+      <MemberSignature Language="C#" Value="SttAcq" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType SttAcq = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.SttAcq" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Comprador de provedor de tecnologia de segurança de transação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SttBrnd">
+      <MemberSignature Language="C#" Value="SttBrnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType SttBrnd = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.SttBrnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Marca de provedor de tecnologia de segurança de transação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SttIss">
+      <MemberSignature Language="C#" Value="SttIss" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType SttIss = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.SttIss" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Emissor do provedor de tecnologia de segurança de transação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SttMer">
+      <MemberSignature Language="C#" Value="SttMer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType SttMer = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.SttMer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Proteger a empresa de provedor de tecnologia de transação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SttRoot">
+      <MemberSignature Language="C#" Value="SttRoot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.CryptographicProviderType SttRoot = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.CryptographicProviderType.SttRoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Raiz de provedor de tecnologia de transação segura.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

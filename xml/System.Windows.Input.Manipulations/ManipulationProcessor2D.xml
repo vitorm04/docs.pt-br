@@ -1,0 +1,309 @@
+<Type Name="ManipulationProcessor2D" FullName="System.Windows.Input.Manipulations.ManipulationProcessor2D">
+  <TypeSignature Language="C#" Value="public class ManipulationProcessor2D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManipulationProcessor2D extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.ManipulationProcessor2D" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa um compositor vários entrada, saída única para transformações de bidimensionais (2-D) em um espaço de coordenada compartilhado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> objeto trata uma coleção de manipuladores como um objeto composto. Seu aplicativo é liberado depois da necessidade de controlar e gerenciar manipuladores individuais.  
+  
+ Um processador de manipulação por si só não faz com que um elemento mover. Seu aplicativo começa uma manipulação conforme necessário e, em seguida, recebe informações de um processador de manipulação ouvindo a <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started>, <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> e <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> eventos. Os valores recebidos por esses eventos permitem que você alterar o local, o tamanho ou a orientação de um elemento, conforme necessário.  
+  
+ Você informou um processador de manipulação que tipos de manipulações são permitidos (traduzir, redimensionar, girar) definindo o <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.SupportedManipulations%2A> propriedade. Em seguida, você pode fornecer lógica condicional não para a transformação do elemento que está sendo manipulado. Por exemplo, em vez de verificar se a rotação está habilitada antes de alterar a orientação de um elemento, você pode aplicar incondicionalmente o fator de rotação recebido do processador manipulação; Se a rotação não estiver habilitada, o processador de manipulação relatará que nenhuma alteração rotação ocorreu.  
+  
+ Quando um elemento que está sendo manipulado é liberado (todos os manipuladores são removidos), você pode usar o processamento de inércia simular fricção e fazer com que o elemento a velocidade gradualmente seus movimentos antes de entrar para uma parada. Para obter mais informações consulte a classe de <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> .  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManipulationProcessor2D (System.Windows.Input.Manipulations.Manipulations2D supportedManipulations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Input.Manipulations.Manipulations2D supportedManipulations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.ManipulationProcessor2D.#ctor(System.Windows.Input.Manipulations.Manipulations2D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="supportedManipulations" Type="System.Windows.Input.Manipulations.Manipulations2D" />
+      </Parameters>
+      <Docs>
+        <param name="supportedManipulations">O conjunto inicial de manipulações com suporte.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Input.Manipulations.ManipulationProcessor2D" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="supportedManipulations" /> parâmetro não é uma combinação válida do <see cref="T:System.Windows.Input.Manipulations.Manipulations2D" /> valores de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManipulationProcessor2D (System.Windows.Input.Manipulations.Manipulations2D supportedManipulations, System.Windows.Input.Manipulations.ManipulationPivot2D pivot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Input.Manipulations.Manipulations2D supportedManipulations, class System.Windows.Input.Manipulations.ManipulationPivot2D pivot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.ManipulationProcessor2D.#ctor(System.Windows.Input.Manipulations.Manipulations2D,System.Windows.Input.Manipulations.ManipulationPivot2D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="supportedManipulations" Type="System.Windows.Input.Manipulations.Manipulations2D" />
+        <Parameter Name="pivot" Type="System.Windows.Input.Manipulations.ManipulationPivot2D" />
+      </Parameters>
+      <Docs>
+        <param name="supportedManipulations">O conjunto inicial de manipulações com suporte.</param>
+        <param name="pivot">Informações de manipulator único rotações de tabela dinâmica.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Input.Manipulations.ManipulationProcessor2D" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="supportedManipulations" /> parâmetro não é uma combinação válida do <see cref="T:System.Windows.Input.Manipulations.Manipulations2D" /> valores de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt; Completed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt; Completed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma manipulação de ser concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompleteManipulation">
+      <MemberSignature Language="C#" Value="public void CompleteManipulation (long timestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CompleteManipulation(int64 timestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.ManipulationProcessor2D.CompleteManipulation(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timestamp" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="timestamp">O carimbo de hora para concluir a manipulação, em tiques de 100 nanossegundos.</param>
+        <summary>Força a manipulação atual para concluir e gera o <see cref="E:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed" /> evento.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O carimbo de hora é menor que o carimbo de hora anterior para a manipulação atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delta">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt; Delta;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt; Delta" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a origem de manipulação foi alterado ou quando a conversão, dimensionamento ou rotação ocorreram.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta?displayProperty=nameWithType> evento e o <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta?displayProperty=nameWithType> eventos são do mesmo tipo. Normalmente, você pode usar o mesmo manipulador de eventos para ambos os eventos.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_OnManipulationOrInertiaDelta](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_onmanipulationorinertiadelta)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumScaleRotateRadius">
+      <MemberSignature Language="C#" Value="public float MinimumScaleRotateRadius { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 MinimumScaleRotateRadius" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationProcessor2D.MinimumScaleRotateRadius" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o raio mínimo, em unidades de coordenadas, necessário para um manipulator participar de escala e rotação.</summary>
+        <value>O raio mínimo, em unidades de coordenadas, necessários para um manipulator participar de escala e rotação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um manipulator é muito semelhante a Central de massa de manipuladores de sendo processado no momento, um movimento manipulator muito pequeno pode se tornar uma alteração muito grande de rotação ou dimensionamento. Para evitar esse problema, defina <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.MinimumScaleRotateRadius%2A> com um valor maior que zero. Qualquer que seja mais próximo que que distância da Centro de massa manipulator não será incluída em operações de escala e rotação.  
+  
+ Um valor típico para usar deve ser baseado em magnitude provável de "acidentais" movimentos dos manipuladores. Por exemplo, se o manipulator humano dedo tocar uma tela, um radius correspondente a um centímetro ou isso pode ser apropriado.  
+  
+ O valor de <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.MinimumScaleRotateRadius%2A> deve ser um número finito e positivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pivot">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Manipulations.ManipulationPivot2D Pivot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.Manipulations.ManipulationPivot2D Pivot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationProcessor2D.Pivot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Manipulations.ManipulationPivot2D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de tabela dinâmica para o processador de manipulação.</summary>
+        <value>As informações de tabela dinâmica para o processador de manipulação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Pivot%2A> propriedade é usada para fornecer informações pivot rotações manipulator único. A definição dessa propriedade como null desabilita rotações manipulator único.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessManipulators">
+      <MemberSignature Language="C#" Value="public void ProcessManipulators (long timestamp, System.Collections.Generic.IEnumerable&lt;System.Windows.Input.Manipulations.Manipulator2D&gt; manipulators);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ProcessManipulators(int64 timestamp, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Input.Manipulations.Manipulator2D&gt; manipulators) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators(System.Int64,System.Collections.Generic.IEnumerable{System.Windows.Input.Manipulations.Manipulator2D})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timestamp" Type="System.Int64" />
+        <Parameter Name="manipulators" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Input.Manipulations.Manipulator2D&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="timestamp">O carimbo de hora para o lote, em tiques de 100 nanossegundos.</param>
+        <param name="manipulators">O conjunto de manipuladores que estão no escopo.</param>
+        <summary>Processa os manipuladores especificados como uma ação de lote único.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro `manipulators` pode ser uma lista vazia ou null. Se o resultado é o número de manipuladores de chegar a zero, o <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> é gerado.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o <xref:System.Windows.UIElement.OnLostMouseCapture%2A> método de um <xref:System.Windows.UIElement> objeto é substituído para chamar o <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> método com a lista de <xref:System.Windows.Input.Manipulations.Manipulator2D> objetos definido como nulo.  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_OnLostMouseCapture](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_onlostmousecapture)]  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_Timestamp](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_timestamp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O carimbo de hora é menor que o carimbo de hora anterior para a manipulação atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameters">
+      <MemberSignature Language="C#" Value="public void SetParameters (System.Windows.Input.Manipulations.ManipulationParameters2D parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParameters(class System.Windows.Input.Manipulations.ManipulationParameters2D parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.ManipulationProcessor2D.SetParameters(System.Windows.Input.Manipulations.ManipulationParameters2D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Windows.Input.Manipulations.ManipulationParameters2D" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Parâmetros definidos.</param>
+        <summary>Define parâmetros do processador de manipulação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Started">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs&gt; Started;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs&gt; Started" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma nova manipulação foi iniciado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, um manipulador de eventos para o <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> evento verifica se o processamento de inércia está em execução e, nesse caso, interrompe-lo.  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_OnManipulationStarted](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_onmanipulationstarted)]  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_Timestamp](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_timestamp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedManipulations">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Manipulations.Manipulations2D SupportedManipulations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.Manipulations.Manipulations2D SupportedManipulations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationProcessor2D.SupportedManipulations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Manipulations.Manipulations2D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto atual de manipulações com suporte.</summary>
+        <value>O conjunto atual de manipulações com suporte.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade tentar definir um valor que não é uma combinação válida da<see cref="T:System.Windows.Input.Manipulations.Manipulations2D" />  
+  
+ valores de enumeração.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

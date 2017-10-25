@@ -1,0 +1,1440 @@
+<Type Name="AmbientTheme" FullName="System.Workflow.ComponentModel.Design.AmbientTheme">
+  <TypeSignature Language="C#" Value="public class AmbientTheme : System.Workflow.ComponentModel.Design.DesignerTheme" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AmbientTheme extends System.Workflow.ComponentModel.Design.DesignerTheme" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.AmbientTheme" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.DesignerTheme</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece as configurações de propriedades de aparência para um fluxo de trabalho de nível superior em um ambiente de tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Temas de fluxo de trabalho definem a aparência de uma superfície de design do fluxo de trabalho. Isso inclui quaisquer estilos de plano de fundo, estilos de primeiro plano, fontes e ícones definidos para a superfície de design do fluxo de trabalho. Um tema de ambiente contém as propriedades de exibição padrão para a superfície de design do fluxo de trabalho. Ele fornece configurações a serem usadas na superfície de design inteiro (por exemplo, a grade, cores de primeiro plano e plano de fundo, cor de designer somente leitura e assim por diante). Ele pode usar valores selecionados pelo usuário ou os valores do sistema operacional.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AmbientTheme (System.Workflow.ComponentModel.Design.WorkflowTheme theme);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.WorkflowTheme theme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.AmbientTheme.#ctor(System.Workflow.ComponentModel.Design.WorkflowTheme)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="theme" Type="System.Workflow.ComponentModel.Design.WorkflowTheme" />
+      </Parameters>
+      <Docs>
+        <param name="theme">O <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" /> à qual o tema do ambiente está associado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> classe usando um <see cref="T:System.Workflow.ComponentModel.Design.WorkflowTheme" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de fundo de ambiente em uma superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor de plano de fundo de ambiente. O padrão é em branco.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define o <xref:System.Workflow.ComponentModel.Design.AmbientTheme.BackColor%2A> propriedade nega a <xref:System.Workflow.ComponentModel.Design.AmbientTheme.BackgroundBrush%2A> o valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundBrush">
+      <MemberSignature Language="C#" Value="public System.Drawing.Brush BackgroundBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Brush BackgroundBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.BackgroundBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel de ambiente usado para preencher formas gráficas exibidas na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Brush" /> valor que representa o pincel do plano de fundo do fluxo de trabalho em uma superfície de design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.SolidBrush> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.BackColor%2A> valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoldFont">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font BoldFont { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font BoldFont" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.BoldFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a configuração do ambiente de negrito para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Font" /> valor que determina se o texto na superfície de design de fluxo de trabalho está em negrito.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public virtual int BorderWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura da borda do ambiente para objetos que são colocados na superfície de design do fluxo de trabalho.</summary>
+        <value>Um inteiro que representa a largura da borda dos objetos colocados na superfície de design de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommentIndicatorBrush">
+      <MemberSignature Language="C#" Value="public System.Drawing.Brush CommentIndicatorBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Brush CommentIndicatorBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.CommentIndicatorBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel de ambiente associado com designers comentados na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Brush" /> que está associado com designers comentados na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.SolidBrush> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.CommentIndicatorColor%2A> valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommentIndicatorColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color CommentIndicatorColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CommentIndicatorColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.CommentIndicatorColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor ambiente associada com designers comentados na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor associado com comentários designers na superfície de design de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommentIndicatorPen">
+      <MemberSignature Language="C#" Value="public System.Drawing.Pen CommentIndicatorPen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Pen CommentIndicatorPen" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.CommentIndicatorPen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a caneta de ambiente associada com designers comentados na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Pen" /> valor associado com comentários designers na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic) por padrão, ela retornará um <xref:System.Drawing.Pen> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.CommentIndicatorColor%2A> valor da propriedade e sua largura definida como 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerSize">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Design.DesignerSize DesignerSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Design.DesignerSize DesignerSize" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.DesignerSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(20)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.DesignerSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as configurações de tamanho de ambiente para designers de atividade na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Design.DesignerSize" /> valor de enumeração que determina o tamanho dos designers de atividade na superfície de design de fluxo de trabalho. O valor padrão é <see cref="F:System.Workflow.ComponentModel.Design.DesignerSize.Medium" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.AmbientTheme.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGrayscale">
+      <MemberSignature Language="C#" Value="public virtual bool DrawGrayscale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DrawGrayscale" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.DrawGrayscale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(6)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o tema de ambiente associado com a superfície de design do fluxo de trabalho desenha escalas de cinza.</summary>
+        <value>
+          <see langword="true" />Se o tema de ambiente associados ao fluxo de trabalho desenha escalas de cinza; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRounded">
+      <MemberSignature Language="C#" Value="public virtual bool DrawRounded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DrawRounded" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.DrawRounded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(21)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o tema de ambiente associado com a superfície de design do fluxo de trabalho desenha formas arredondadas.</summary>
+        <value>
+          <see langword="true" />Se o tema de ambiente associados com o fluxo de trabalho desenha formas arredondadas. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawShadow">
+      <MemberSignature Language="C#" Value="public virtual bool DrawShadow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DrawShadow" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.DrawShadow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o tema de ambiente associado à superfície de design de fluxo de trabalho desenha sombras.</summary>
+        <value>
+          <see langword="true" /> se o tema do ambiente associado ao fluxo de trabalho desenha sombras; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropIndicatorBrush">
+      <MemberSignature Language="C#" Value="public System.Drawing.Brush DropIndicatorBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Brush DropIndicatorBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.DropIndicatorBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel de ambiente associado a um objeto que você arrasta para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Brush" /> associado ao objeto que você arrasta para a superfície de design do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic) por padrão, ela retornará um <xref:System.Drawing.SolidBrush> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.DropIndicatorColor%2A> valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropIndicatorColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color DropIndicatorColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color DropIndicatorColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.DropIndicatorColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(7)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor ambiente associada ao objeto que você arrasta para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor associado a um objeto que você arrasta para a superfície de design do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropIndicatorPen">
+      <MemberSignature Language="C#" Value="public System.Drawing.Pen DropIndicatorPen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Pen DropIndicatorPen" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.DropIndicatorPen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a caneta ambiente associada a um objeto que você arrasta para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Pen" /> associado ao objeto que você arrasta para a superfície de design do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.Pen> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.DropIndicatorColor%2A> o valor da propriedade e sua largura definida como o <xref:System.Workflow.ComponentModel.Design.AmbientTheme.BorderWidth%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações de fonte de ambiente para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Font" /> que representa as configurações de fonte de ambiente para a superfície de design do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontName">
+      <MemberSignature Language="C#" Value="public virtual string FontName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FontName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.FontName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.FontFamilyConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da fonte de ambiente para a superfície de design do fluxo de trabalho.</summary>
+        <value>Uma cadeia de caracteres que representa o nome da fonte de ambiente para a superfície de design do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do primeiro o plano ambiente propriedade para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa o primeiro plano de ambiente de cores para a superfície de design do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundBrush">
+      <MemberSignature Language="C#" Value="public System.Drawing.Brush ForegroundBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Brush ForegroundBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.ForegroundBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel de primeiro plano de ambiente para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Brush" /> valor que representa o pincel de primeiro plano de ambiente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.SolidBrush> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.ForeColor%2A> valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundPen">
+      <MemberSignature Language="C#" Value="public System.Drawing.Pen ForegroundPen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Pen ForegroundPen" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.ForegroundPen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a caneta do ambiente do primeiro plano para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Pen" /> valor que representa a caneta de ambiente em primeiro plano.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.Pen> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.DropIndicatorColor%2A> o valor da propriedade, sua largura definida como 1 e sua <xref:System.Drawing.Pen.DashStyle%2A> propriedade definida como <xref:System.Drawing.Drawing2D.DashStyle?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphSize">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Size GlyphSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size GlyphSize" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.GlyphSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o ambiente altura e largura de glifos na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> valor que representa a altura do ambiente e a largura de glifos na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma maneira comum, você pode acessar o <xref:System.Workflow.ComponentModel.Design.AmbientTheme.GlyphSize%2A> propriedade de uma classe que deriva de <xref:System.Workflow.ComponentModel.Design.DesignerGlyph> classe.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo DatabaseService.cs. Para obter mais informações, consulte [o Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#133](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#133)]
+ [!code-vb[WF_Samples#133](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#133)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color GridColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color GridColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.GridColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(19)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da grade de ambiente para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor da grade para a superfície de design do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridSize">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Size GridSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size GridSize" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.GridSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho do ambiente da grade para exibir na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> valor que representa a altura e largura da grade para exibir na superfície de design de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Drawing2D.DashStyle GridStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Drawing2D.DashStyle GridStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.GridStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(18)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da grade de ambiente para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Drawing2D.DashStyle" /> valor que representa o estilo de traço para a grade. A configuração padrão é <see cref="F:System.Drawing.Drawing2D.DashStyle.Dash" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.AmbientTheme.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa tarefas de inicialização adicional para o <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> classe que não são realizadas pelo <see cref="M:System.Workflow.ComponentModel.Design.AmbientTheme.#ctor(System.Workflow.ComponentModel.Design.WorkflowTheme)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.ComponentModel.Design.AmbientTheme.UseOperatingSystemSettings%2A> retorna `true`, <xref:System.Workflow.ComponentModel.Design.AmbientTheme.Initialize%2A> define todos os <xref:System.Workflow.ComponentModel.Design.AmbientTheme> propriedades para os valores definidos pelo sistema operacional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorGridBrush">
+      <MemberSignature Language="C#" Value="public System.Drawing.Brush MajorGridBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Brush MajorGridBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.MajorGridBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações de ambiente pincel de grade principais na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Brush" /> associados com a grade principal na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.SolidBrush> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.GridColor%2A> valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorGridPen">
+      <MemberSignature Language="C#" Value="public System.Drawing.Pen MajorGridPen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Pen MajorGridPen" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.MajorGridPen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações de ambiente caneta de grade principais na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Pen" /> associados com a grade principal na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.Pen> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.GridColor%2A> o valor da propriedade, sua largura definida como 1 e sua <xref:System.Drawing.Pen.DashStyle%2A> propriedade definida como <xref:System.Drawing.Drawing2D.DashStyle.Dash>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Margin">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Size Margin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Margin" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.Margin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações de margem de ambiente para a superfície de design do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> que representa as configurações de margem na superfície de design de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorGridPen">
+      <MemberSignature Language="C#" Value="public System.Drawing.Pen MinorGridPen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Pen MinorGridPen" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.MinorGridPen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações de ambiente caneta de grade secundária na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Pen" /> associados com a grade secundária na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.Pen> com sua cor calculado com base na atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.GridColor%2A> o valor da propriedade, sua largura definida como 1 e sua <xref:System.Drawing.Pen.DashStyle%2A> propriedade definida como <xref:System.Drawing.Drawing2D.DashStyle?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAmbientPropertyChanged">
+      <MemberSignature Language="C#" Value="public override void OnAmbientPropertyChanged (System.Workflow.ComponentModel.Design.AmbientProperty ambientProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnAmbientPropertyChanged(valuetype System.Workflow.ComponentModel.Design.AmbientProperty ambientProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.AmbientTheme.OnAmbientPropertyChanged(System.Workflow.ComponentModel.Design.AmbientProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ambientProperty" Type="System.Workflow.ComponentModel.Design.AmbientProperty" />
+      </Parameters>
+      <Docs>
+        <param name="ambientProperty">O <see cref="T:System.Workflow.ComponentModel.Design.AmbientProperty" /> valor de enumeração para o qual a configuração foi alterada.</param>
+        <summary>Notifica o <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> quando o valor de <see cref="T:System.Workflow.ComponentModel.Design.AmbientProperty" /> alterações de enumeração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.AmbientProperty>Especifica a origem das propriedades de ambiente de tema para classes que herdam o <xref:System.Workflow.ComponentModel.Design.DesignerTheme> classe.  As duas origens de possíveis são o sistema operacional e as configurações especificadas pelo designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadonlyIndicatorBrush">
+      <MemberSignature Language="C#" Value="public System.Drawing.Brush ReadonlyIndicatorBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Brush ReadonlyIndicatorBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.ReadonlyIndicatorBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel de ambiente usado para preencher formas gráficas associadas a itens de somente leitura exibidos na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Brush" /> que representa o pincel associado a itens de somente leitura no fluxo de trabalho em uma superfície de design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.SolidBrush> objeto com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.ReadonlyIndicatorColor%2A> valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadonlyIndicatorColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ReadonlyIndicatorColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ReadonlyIndicatorColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.ReadonlyIndicatorColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor ambiente para itens de somente leitura na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor ambiente para os itens na superfície de design de fluxo de trabalho somente leitura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionForeColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color SelectionForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SelectionForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(8)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor ambiente para os itens selecionados na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor ambiente para os itens na superfície de design de fluxo de trabalho somente leitura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionForegroundBrush">
+      <MemberSignature Language="C#" Value="public System.Drawing.Brush SelectionForegroundBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Brush SelectionForegroundBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionForegroundBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel de primeiro plano ambiente usado para preencher formas gráficas associadas a itens selecionados, exibidos na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Brush" /> que representa o pincel associado a itens de somente leitura no fluxo de trabalho em uma superfície de design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.SolidBrush> objeto com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionForeColor%2A> valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionForegroundPen">
+      <MemberSignature Language="C#" Value="public System.Drawing.Pen SelectionForegroundPen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Pen SelectionForegroundPen" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionForegroundPen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o ambiente em primeiro plano configurações da caneta de itens selecionados na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Pen" /> associado com o primeiro plano dos itens selecionados na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic) por padrão, ela retornará um `Pen` com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionForeColor%2A> valor da propriedade e sua largura definida como 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionPatternColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color SelectionPatternColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SelectionPatternColor" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionPatternColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ColorPickerEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ColorPickerConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(9)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do ambiente padrão para itens que você selecionar na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor do ambiente padrão para itens que você selecionar na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionPatternPen%2A> não seja referência nula (`Nothing` no Visual Basic) quando você define <xref:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionPatternColor%2A>, <xref:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionPatternColor%2A> irá descartar todos os recursos usados por <xref:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionPatternPen%2A> e defina-a como `null` (`Nothing`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionPatternPen">
+      <MemberSignature Language="C#" Value="public System.Drawing.Pen SelectionPatternPen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Pen SelectionPatternPen" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionPatternPen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Pen</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações da caneta de ambiente para o padrão associado itens selecionados na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Pen" /> associados com o padrão de itens selecionados na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta propriedade contém uma referência nula (`Nothing` no Visual Basic), por padrão, ela retornará um <xref:System.Drawing.Pen> com sua cor definida para o atual <xref:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionPatternColor%2A> o valor da propriedade, sua largura definida como 1 e sua <xref:System.Drawing.Pen.DashStyle%2A> propriedade definida como <xref:System.Drawing.Drawing2D.DashStyle?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionSize">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Size SelectionSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size SelectionSize" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.SelectionSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho do ambiente de um item selecionado na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> que representa as configurações de propriedade de ambiente para os itens selecionados na superfície de design de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowConfigErrors">
+      <MemberSignature Language="C#" Value="public virtual bool ShowConfigErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowConfigErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.ShowConfigErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a superfície de design do fluxo de trabalho exibe erros de configuração.</summary>
+        <value>
+          <see langword="true" />Se for a superfície de design do fluxo de trabalho Exibir erros de configuração. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode definir <xref:System.Workflow.ComponentModel.Design.AmbientTheme.ShowConfigErrors%2A> como false. Fazer isso em uma superfície de design do fluxo de trabalho significa que nenhuma do <xref:System.Workflow.ComponentModel.Design.ActivityDesigner> objetos exibidos na superfície de design exibirá seus respectivos <xref:System.Workflow.ComponentModel.Design.DesignerAction> objetos.  
+  
+ Este exemplo de código é parte do controle perfil Designer SDK exemplo do arquivo WorkflowDesignerControl.cs. Para obter mais informações, consulte [exemplo criador de perfil do controle](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[WF_Samples#125](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#125)]
+ [!code-vb[WF_Samples#125](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#125)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDesignerBorder">
+      <MemberSignature Language="C#" Value="public virtual bool ShowDesignerBorder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowDesignerBorder" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.ShowDesignerBorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(24)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a superfície de design do fluxo de trabalho exibe bordas do designer.</summary>
+        <value>
+          <see langword="true" />Se a superfície de design do fluxo de trabalho exibe bordas do designer; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowGrid">
+      <MemberSignature Language="C#" Value="public virtual bool ShowGrid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowGrid" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.ShowGrid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(17)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a grade será mostrada na superfície de design de fluxo de trabalho.</summary>
+        <value>
+          <see langword="true" />Se a grade será exibida na superfície de design de fluxo de trabalho; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextQuality">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Design.TextQuality TextQuality { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Design.TextQuality TextQuality" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.TextQuality" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.TextQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a qualidade do texto para exibir na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Design.TextQuality" /> que especifica as configurações de qualidade do texto a ser usado na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.AmbientTheme.TextQuality%2A>permite que você determine se o texto exibido em uma superfície de design do fluxo de trabalho e todos os seus criadores de filho é suavização ou alias. Texto de suavização fornece exibição de texto de melhor qualidade, enquanto um alias texto requer menos recursos para manter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseOperatingSystemSettings">
+      <MemberSignature Language="C#" Value="public virtual bool UseOperatingSystemSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseOperatingSystemSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.UseOperatingSystemSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> usa as configurações de tema do sistema operacional.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> usa configurações de tema do sistema operacional; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WatermarkAlignment">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Design.DesignerContentAlignment WatermarkAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.Design.DesignerContentAlignment WatermarkAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(16)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.DesignerContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as configurações de ambiente de alinhamento de imagens de marca d'água na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Design.DesignerContentAlignment" /> que especifica as configurações de ambiente de alinhamento de imagens de marca d'água na superfície de design de fluxo de trabalho. O padrão é <see cref="F:System.Workflow.ComponentModel.Design.DesignerContentAlignment.BottomRight" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WatermarkImagePath">
+      <MemberSignature Language="C#" Value="public virtual string WatermarkImagePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WatermarkImagePath" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.ImageBrowserEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(15)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho de ambiente para a imagem a ser exibida como uma marca d'água na superfície de design de fluxo de trabalho.</summary>
+        <value>Uma cadeia de caracteres que contém o caminho de ambiente para a imagem a ser exibida como uma marca d'água na superfície de design de fluxo de trabalho. O padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A> para associar uma imagem como uma imagem de marca d'água para uma superfície de design do fluxo de trabalho. Se <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A> não é `null` (`Nothing` no Visual Basic) quando você define <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A>, <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A> descarta qualquer recurso usado pelo <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A> e define seu valor como `null` (`Nothing`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowWatermarkImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image WorkflowWatermarkImage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image WorkflowWatermarkImage" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.AmbientTheme.WorkflowWatermarkImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a imagem do ambiente para associar com a superfície de design de fluxo de trabalho como sua marca d'água.</summary>
+        <value>Um <see cref="T:System.Drawing.Image" /> para usar como uma marca d'água na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A> para associar uma imagem como uma imagem de marca d'água para uma superfície de design do fluxo de trabalho. Se <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A> não é `null` (`Nothing` no Visual Basic) quando você define <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A>, <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A> descarta qualquer recurso usado pelo <xref:System.Workflow.ComponentModel.Design.AmbientTheme.WatermarkImagePath%2A> e define seu valor como `null` (`Nothing`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

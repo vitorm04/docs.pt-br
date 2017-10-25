@@ -1,0 +1,53 @@
+<Type Name="PartialCachingControl" FullName="System.Web.UI.PartialCachingControl">
+  <TypeSignature Language="C#" Value="public class PartialCachingControl : System.Web.UI.BasePartialCachingControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PartialCachingControl extends System.Web.UI.BasePartialCachingControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PartialCachingControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.BasePartialCachingControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Criado quando um controle de usuário (arquivo. ascx) é especificado para o cache de saída, usando a diretiva de página ou o <see cref="T:System.Web.UI.PartialCachingAttribute" /> atributo e o controle de usuário é inserido na hierarquia de controle da página ao carregar dinamicamente o controle de usuário com o <see cref="M:System.Web.UI.TemplateControl.LoadControl(System.String)" /> método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores de página e o controle não podem usar o <xref:System.Web.UI.PartialCachingControl> classe diretamente. O ASP.NET cria uma instância do <xref:System.Web.UI.PartialCachingControl> classe para encapsular um controle de usuário (arquivo. ascx) quando um controle de usuário carregados dinamicamente habilita o cache de saída. Você pode habilitar o cache de saída para um controle de usuário usando o [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) diretiva de página ou o <xref:System.Web.UI.PartialCachingAttribute> atributo.  
+  
+ Um controle de usuário você adiciona a uma página programaticamente chamando o <xref:System.Web.UI.TemplateControl.LoadControl%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CachedControl">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control CachedControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control CachedControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingControl.CachedControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o controle de usuário que é armazenado em cache.</summary>
+        <value>O controle de usuário que é armazenado em cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o controle de usuário somente quando sua saída não é armazenado em cache. Se a saída de controle de usuário existe no cache de saída, essa propriedade retornará `null`, porque uma instância do controle nunca é criada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

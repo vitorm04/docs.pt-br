@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.Mobile">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Mobile" /> namespace contém os recursos principais, inclusive autenticação e tratamento de erros, necessários para a criação de aplicativos Web móveis em ASP.NET.  Para obter informações sobre como desenvolver aplicativos móveis, consulte o <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Mobile.MobileCapabilities> classe fornece uma única fonte para acessar informações de capacidade sobre um dispositivo cliente e para executar consultas em recursos do dispositivo. O <xref:System.Web.Mobile.MobileFormsAuthentication> classe dá suporte a dispositivos cookieless adicionando informações de autenticação apropriado para as URLs apropriadas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

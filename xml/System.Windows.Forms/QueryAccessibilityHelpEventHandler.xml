@@ -1,0 +1,43 @@
+<Type Name="QueryAccessibilityHelpEventHandler" FullName="System.Windows.Forms.QueryAccessibilityHelpEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void QueryAccessibilityHelpEventHandler(object sender, QueryAccessibilityHelpEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed QueryAccessibilityHelpEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.QueryAccessibilityHelpEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.QueryAccessibilityHelpEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.QueryAccessibilityHelpEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o <see cref="E:System.Windows.Forms.Control.QueryAccessibilityHelp" /> eventos de um controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Windows.Forms.QueryAccessibilityHelpEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a criação de um gráfico com suporte a acessibilidade de controle, usando o <xref:System.Windows.Forms.AccessibleObject> e <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes para expor informações acessíveis. O controle plota duas curvas junto com uma legenda. O `ChartControlAccessibleObject` classe que deriva de `ControlAccessibleObject`, é usado no <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método para fornecer informações acessíveis personalizadas para o controle de gráfico. Porque a legenda do gráfico não é um real <xref:System.Windows.Forms.Control>-com base em controle, mas em vez disso, é desenhado pelo controle do gráfico, ele não inclui todas as informações internas acessíveis. Por isso, o `ChartControlAccessibleObject` substituições de classe a <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> método para retornar o `CurveLegendAccessibleObject` que representa informações acessíveis para cada parte da legenda. Quando um aplicativo acessível ciente usa esse controle, o controle pode fornecer as informações necessárias de acessíveis.  
+  
+ Esse código demonstra como usar o <xref:System.Windows.Forms.QueryAccessibilityHelpEventHandler> delegar com o <xref:System.Windows.Forms.Control.QueryAccessibilityHelp> evento. Para o exemplo de código completo, consulte <xref:System.Windows.Forms.AccessibleObject>.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#2)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#2)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,92 @@
+<Type Name="DataGridColumnReorderingEventArgs" FullName="System.Windows.Controls.DataGridColumnReorderingEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridColumnReorderingEventArgs : System.Windows.Controls.DataGridColumnEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridColumnReorderingEventArgs extends System.Windows.Controls.DataGridColumnEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridColumnReorderingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.DataGridColumnEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Controls.DataGrid.ColumnReordering" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridColumnReorderingEventArgs (System.Windows.Controls.DataGridColumn dataGridColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.DataGridColumn dataGridColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumnReorderingEventArgs.#ctor(System.Windows.Controls.DataGridColumn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataGridColumn" Type="System.Windows.Controls.DataGridColumn" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridColumn">A coluna que está sendo movida.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.DataGridColumnReorderingEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumnReorderingEventArgs.Cancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a operação de reordenação é interrompida antes da conclusão.</summary>
+        <value>
+          <see langword="true" />Se a operação de reordenação é interrompida antes da conclusão; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragIndicator">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Control DragIndicator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Control DragIndicator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumnReorderingEventArgs.DragIndicator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o controle que é usado para exibir o indicador visual do cabeçalho da coluna que está sendo arrastado.</summary>
+        <value>O controle que é usado para exibir um cabeçalho de coluna arrastado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropLocationIndicator">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Control DropLocationIndicator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Control DropLocationIndicator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumnReorderingEventArgs.DropLocationIndicator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o controle que é usado para exibir o indicador visual de que o local de destino atual durante a operação de arrastar uma coluna.</summary>
+        <value>Operação de arrastar o controle que é usado para exibir o indicador de local de soltar durante uma coluna.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

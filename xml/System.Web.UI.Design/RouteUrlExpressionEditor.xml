@@ -1,0 +1,107 @@
+<Type Name="RouteUrlExpressionEditor" FullName="System.Web.UI.Design.RouteUrlExpressionEditor">
+  <TypeSignature Language="C#" Value="public class RouteUrlExpressionEditor : System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RouteUrlExpressionEditor extends System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.RouteUrlExpressionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ExpressionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades e métodos para compor uma <see langword="RouteURL" /> expressão em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hospedar um designer visual, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], usa o <xref:System.Web.UI.Design.RouteUrlExpressionEditor> classe para compor uma `RouteUrl` expressão marcação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RouteUrlExpressionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.RouteUrlExpressionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.RouteUrlExpressionEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (string expression, object parseTimeData, Type propertyType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(string expression, object parseTimeData, class System.Type propertyType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.RouteUrlExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="parseTimeData" Type="System.Object" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Um <see langword="RouteUrl" /> expressão a ser avaliada. A expressão não inclui o <see langword="RouteUrl" /> prefixo de expressão.</param>
+        <param name="parseTimeData">Um objeto que contém informações de análise adicionais para avaliar a expressão.</param>
+        <param name="propertyType">O tipo da propriedade de controle.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer que é usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Avalia uma <see langword="RouteUrl" /> expressão e fornece o valor de tempo de design.</summary>
+        <returns>A URL para a rota especificada e os valores de parâmetro de rota, se a avaliação da expressão for bem-sucedida; Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O designer visual usa o <xref:System.Web.UI.Design.RouteUrlExpressionEditor.EvaluateExpression%2A> método para avaliar um `RouteUrl` expressão e forneça o valor de tempo de design para uma propriedade do controle associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditorSheet">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.RouteUrlExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditorSheet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">A cadeia de caracteres de expressão que é usada para inicializar a folha de editor de expressão. A expressão não inclui o <see langword="RouteUrl" /> prefixo de expressão.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer que é usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Retorna uma folha de editor de expressão para um <see langword="RouteUrl" /> expressão.</summary>
+        <returns>Um <see cref="T:System.Web.UI.Design.RouteUrlExpressionEditorSheet" /> instância que define o <see langword="RouteUrl" /> propriedades de expressão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.RouteUrlExpressionEditor.GetExpressionEditorSheet%2A> método retorna uma implementação de folha de editor para `RouteUrl` expressões. A folha de editor `RouteUrl` expressões permite aos usuários selecionar parâmetros e um nome de rota. Depois que o usuário seleciona os parâmetros e o nome da rota, a implementação do editor de folha gera um `RouteUrl` expressão, que é retornado para o designer visual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,162 @@
+<Type Name="IDefaultCommunicationTimeouts" FullName="System.ServiceModel.IDefaultCommunicationTimeouts">
+  <TypeSignature Language="C#" Value="public interface IDefaultCommunicationTimeouts" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDefaultCommunicationTimeouts" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.IDefaultCommunicationTimeouts" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a interface para especificar tempos limite de comunicação usados pelos canais, os gerentes de canal como ouvintes de canais, fábricas de canais e hosts de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface possui quatro propriedades somente leitura que fornecem valores de tempo limite padrão de para o envio aberto, receberam e fechar métodos que podem ser chamados em um objeto de comunicação. Cada implementação é responsável por obter os valores padrão de maneira que for apropriada para a implementação. Essa interface é implementada por <xref:System.ServiceModel.Channels.ChannelBase>, a implementação base para a gravação de canais personalizados e o <xref:System.ServiceModel.Channels.ChannelManagerBase>, a implementação base para a gravação de gerentes de canal personalizado que derivam <xref:System.ServiceModel.Channels.ChannelFactoryBase> e <xref:System.ServiceModel.Channels.ChannelListenerBase>. A interface também é implementada pelo <xref:System.ServiceModel.Channels.Binding> classe e, em seguida, herdado de lá por <xref:System.ServiceModel.Channels.CustomBinding> e as associações fornecidas pelo sistema, como <xref:System.ServiceModel.BasicHttpBinding>.  
+  
+ Quando você usa canais diretamente, você tem a capacidade de especificar tempos limite explicitamente em uma base por operação ou por canais, ou em qualquer outro modo personalizado. Ao usar o modelo de canal, tempos limite é bastante acessível quando desejar controlá-los.  
+  
+ Ao usar o modelo de serviço, por outro lado, você programe em serviços e contratos e tempos limite são mais em segundo plano. Eles são controlados por máquinas de infraestrutura que fluem tempos limite de um local para outro em seu nome. <xref:System.ServiceModel.IDefaultCommunicationTimeouts>é um mecanismo para fornecer esse fluxo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CloseTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan CloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.IDefaultCommunicationTimeouts.CloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o intervalo de tempo após o qual o método close, invocado por um objeto de comunicação, o tempo limite.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo de espera para o método close para tempo limite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as operações que são potencialmente longas devem ter um tempo limite. Métodos que não têm tempos limite explícitos, deve delegar para aqueles que fazer com os limites padrão ou não faça qualquer trabalho que bloqueia. Tempos limite é limite total para operações de alto nível para o qual estiverem ser concluída, portanto, quaisquer tentativas devem ser limitadas ao tempo que ainda não consumido por tentativas anteriores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan OpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan OpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.IDefaultCommunicationTimeouts.OpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o intervalo de tempo após o qual o método open, invocado por um objeto de comunicação, o tempo limite.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo de espera para o método open para tempo limite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as operações que são potencialmente longas devem ter um tempo limite. Métodos que não têm tempos limite explícitos, deve delegar para aqueles que fazer com os limites padrão ou não faça qualquer trabalho que bloqueia. Tempos limite é limite total para operações de alto nível para o qual estiverem ser concluída, portanto, quaisquer tentativas devem ser limitadas ao tempo que ainda não consumido por tentativas anteriores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ReceiveTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ReceiveTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.IDefaultCommunicationTimeouts.ReceiveTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o intervalo de tempo após o qual o método receive, invocado por um objeto de comunicação, o tempo limite.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo de espera para o método receive para tempo limite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as operações que são potencialmente longas devem ter um tempo limite. Métodos que não têm tempos limite explícitos, deve delegar para aqueles que fazer com os limites padrão ou não faça qualquer trabalho que bloqueia. Tempos limite é limite total para operações de alto nível para o qual estiverem ser concluída, portanto, quaisquer tentativas devem ser limitadas ao tempo que ainda não consumido por tentativas anteriores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan SendTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SendTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.IDefaultCommunicationTimeouts.SendTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o intervalo de tempo após o qual o método de envio, invocado por um objeto de comunicação, o tempo limite.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo de espera para o método de envio para o tempo limite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as operações que são potencialmente longas devem ter um tempo limite. Métodos que não têm tempos limite explícitos, deve delegar para aqueles que fazer com os limites padrão ou não faça qualquer trabalho que bloqueia. Tempos limite é limite total para operações de alto nível para o qual estiverem ser concluída, portanto, quaisquer tentativas devem ser limitadas ao tempo que ainda não consumido por tentativas anteriores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

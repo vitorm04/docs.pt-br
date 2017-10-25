@@ -1,0 +1,129 @@
+<Type Name="ObjectResult&lt;T&gt;" FullName="System.Data.Objects.ObjectResult&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ObjectResult&lt;T&gt; : System.Data.Objects.ObjectResult, System.Collections.Generic.IEnumerable&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectResult`1&lt;T&gt; extends System.Data.Objects.ObjectResult implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectResult`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Data.Objects.ObjectResult</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo de entidade do resultado.</typeparam>
+    <summary>Representa o resultado de uma <see cref="T:System.Data.Objects.ObjectQuery`1" /> como uma coleção enumerável de objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe implementa <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IDisposable>. As instâncias dessa classe são retornadas do <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> método e o <xref:System.Data.Objects.ObjectQuery%601.System%23Collections%23Generic%23IEnumerable%7BT%7D%23GetEnumerator%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832), que foi gerado pelo [Assistente de modelo de dados de entidade](http://msdn.microsoft.com/en-us/423ec9a7-5464-43b7-a7ef-9f5f000848b5).  
+  
+ O exemplo a seguir retorna um <xref:System.Data.Objects.ObjectResult%601> do <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> método. Em seguida, ele obtém um enumerador e itera os resultados da consulta. No final, ele libera o enumerador e <xref:System.Data.Objects.ObjectResult%601> objeto.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Execute](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_execute)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Execute](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_execute)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectResult`1.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa tarefas associadas à liberação ou redefinição de recursos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fecha o <xref:System.Data.Common.DbDataReader>, que contém os resultados da consulta.  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo retorna um <xref:System.Data.Objects.ObjectResult%601> do <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> método. Em seguida, ele obtém um enumerador e itera os resultados da consulta. No final, ele libera o enumerador e <xref:System.Data.Objects.ObjectResult%601> objeto.  
+  
+ [!code-csharp[DP ObjectServices Concepts#QueryResult](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#queryresult)]
+ [!code-vb[DP ObjectServices Concepts#QueryResult](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#queryresult)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementType">
+      <MemberSignature Language="C#" Value="public override Type ElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectResult`1.ElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do <see cref="T:System.Data.Objects.ObjectResult`1" />.</summary>
+        <value>Um <see cref="T:System.Type" /> que é o tipo do <see cref="T:System.Data.Objects.ObjectResult`1" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;T&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectResult`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera pelos resultados da consulta.</summary>
+        <returns>Um enumerador que itera pelos resultados da consulta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O enumerador deve ser descartado quando forem mais necessários. Usando o `foreach` instrução (`For Each` no Visual Basic) garante que o enumerador corretamente é descartado quando a iteração sobre os resultados for concluída.  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo retorna um <xref:System.Data.Objects.ObjectResult%601> do <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> método. Em seguida, ele obtém um enumerador e itera os resultados da consulta. No final, ele libera o enumerador e <xref:System.Data.Objects.ObjectResult%601> objeto.  
+  
+ [!code-csharp[DP ObjectServices Concepts#QueryResult](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#queryresult)]
+ [!code-vb[DP ObjectServices Concepts#QueryResult](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#queryresult)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

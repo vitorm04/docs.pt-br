@@ -1,0 +1,209 @@
+<Type Name="GCLatencyMode" FullName="System.Runtime.GCLatencyMode">
+  <TypeSignature Language="C#" Value="public enum GCLatencyMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed GCLatencyMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.GCLatencyMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Ajusta a hora em que o coletor de lixo atua no seu aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode ajustar o risco de invasão da coleta de lixo em seu aplicativo, definindo o <xref:System.Runtime.GCSettings.LatencyMode%2A> propriedade qualquer <xref:System.Runtime.GCLatencyMode> valor de enumeração exceto NoGCRegion. Você também pode determinar o modo de latência atual do coletor de lixo, recuperando o <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> o valor da propriedade.  
+  
+ Consulte [modos de latência](~/docs/standard/garbage-collection/latency.md) para obter uma discussão de como as definições de configuração de tempo de execução de coleta de lixo afetam o valor padrão para essa enumeração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Batch">
+      <MemberSignature Language="C#" Value="Batch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode Batch = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.Batch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Desabilita a simultaneidade de coleta de lixo e recupera objetos em uma chamada de lote. Esse é o modo mais invasivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse modo destina-se a taxa de transferência máxima às custas da capacidade de resposta.  
+  
+ Esse modo substitui a configuração de tempo de execução. Se estiver habilitado, alternar para modo de lote impede que todas as coleções mais simultâneas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interactive">
+      <MemberSignature Language="C#" Value="Interactive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode Interactive = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.Interactive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite a simultaneidade da coleta de lixo e recupera objetos durante a execução do aplicativo. Este é o modo padrão para coleta de lixo em uma estação de trabalho e é menos intrusiva que <see cref="F:System.Runtime.GCLatencyMode.Batch" />. Equilibra a capacidade de resposta com a taxa de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este modo é equivalente a coleta de lixo em uma estação de trabalho simultânea.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowLatency">
+      <MemberSignature Language="C#" Value="LowLatency" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode LowLatency = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.LowLatency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite uma coleta de lixo mais conservadora na recuperação de objetos. Coleções completas ocorrem apenas se o sistema está sob demanda de memória, enquanto coleções de geração 0 e geração 1 podem ocorrer com mais frequência</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse modo não está disponível para o coletor de lixo do servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoGCRegion">
+      <MemberSignature Language="C#" Value="NoGCRegion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode NoGCRegion = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.NoGCRegion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a coleta de lixo será suspensa enquanto o aplicativo estiver sendo executado em um caminho crítico.  
+  
+ <see cref="F:System.Runtime.GCLatencyMode.NoGCRegion" />é um valor somente leitura; ou seja, não é possível atribuir o <see cref="F:System.Runtime.GCLatencyMode.NoGCRegion" /> o valor para o <see cref="P:System.Runtime.GCSettings.LatencyMode" /> propriedade. Especifique o modo de latência da região não GC chamando o método <see cref="Overload:System.GC.TryStartNoGCRegion" /> e encerre-o chamando o método <see cref="M:System.GC.EndNoGCRegion" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SustainedLowLatency">
+      <MemberSignature Language="C#" Value="SustainedLowLatency" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.GCLatencyMode SustainedLowLatency = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.SustainedLowLatency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite uma coleta de lixo que tenta minimizar a latência durante um longo período. O coletor tenta executar somente geração 0, geração 1 e coleções simultâneas de geração 2. Ainda poderão ocorrer coleções com bloqueio completo se o sistema estiver sob demanda de memória.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

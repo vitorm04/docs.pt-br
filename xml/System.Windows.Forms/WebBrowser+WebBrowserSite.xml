@@ -1,0 +1,56 @@
+<Type Name="WebBrowser+WebBrowserSite" FullName="System.Windows.Forms.WebBrowser+WebBrowserSite">
+  <TypeSignature Language="C#" Value="protected class WebBrowser.WebBrowserSite : System.Windows.Forms.WebBrowserSiteBase" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit WebBrowser/WebBrowserSite extends System.Windows.Forms.WebBrowserSiteBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowser.WebBrowserSite" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.WebBrowserSiteBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a janela do host de um controle <see cref="T:System.Windows.Forms.WebBrowser" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você estiver familiarizado com o desenvolvimento de OLE com não gerenciado `WebBrowser` controle ActiveX, você pode estender a funcionalidade do Windows Forms <xref:System.Windows.Forms.WebBrowser> controle, que é um wrapper gerenciado para o controle ActiveX. Você pode usar essa extensão, por exemplo, para personalizar os menu e atalhos teclas de atalho do navegador ou para fornecer uma configuração de segurança personalizada para documentos hospedados.  
+  
+ Para usar esse recurso, implementar classes que herdam o <xref:System.Windows.Forms.WebBrowser> e <xref:System.Windows.Forms.WebBrowser.WebBrowserSite> classes. Não gerenciado `WebBrowser` controle ActiveX usa protegido <xref:System.Windows.Forms.WebBrowser.CreateWebBrowserSiteBase%2A?displayProperty=nameWithType> método para recuperar as interfaces de extensibilidade implementadas pelo <xref:System.Windows.Forms.WebBrowser.WebBrowserSite> classe. Substituir o <xref:System.Windows.Forms.WebBrowser.CreateWebBrowserSiteBase%2A> método para retornar uma instância de sua própria classe que herde de <xref:System.Windows.Forms.WebBrowser.WebBrowserSite> classe. O <xref:System.Windows.Forms.WebBrowser.WebBrowserSite> classe fornece um padrão de implementações da OLE `IDocHostUIHandler` interface. Para obter mais informações, consulte [IDocHostUIHandler Interface](http://go.microsoft.com/fwlink/?LinkId=98895) na biblioteca MSDN. Você pode fornecer sua própria implementação desta interface ou implementar qualquer outro `WebBrowser` interface de controle ActiveX para personalizar o comportamento do controle. Para obter mais informações, consulte [controle WebBrowser](http://go.microsoft.com/fwlink/?LinkID=98894) na biblioteca MSDN.  
+  
+> [!NOTE]
+>  Se você fornecer sua própria implementação de qualquer `IDocHostUIHandler` membros, você deve implementar todos os membros da interface.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para substituir este tipo, que requer acesso ao código não gerenciado. Enumerações associadas: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /> e <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserSite (System.Windows.Forms.WebBrowser host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.WebBrowser host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.WebBrowserSite.#ctor(System.Windows.Forms.WebBrowser)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="host" Type="System.Windows.Forms.WebBrowser" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.Windows.Forms.WebBrowser" /></param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.WebBrowser.WebBrowserSite" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumerações associadas: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /> e <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

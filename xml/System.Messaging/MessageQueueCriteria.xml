@@ -1,0 +1,291 @@
+<Type Name="MessageQueueCriteria" FullName="System.Messaging.MessageQueueCriteria">
+  <TypeSignature Language="C#" Value="public class MessageQueueCriteria" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueueCriteria extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueCriteria" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Filtros de filas de mensagens ao executar uma consulta usando o <see cref="T:System.Messaging.MessageQueue" /> da classe <see cref="M:System.Messaging.MessageQueue.GetPublicQueues" /> método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueue> classe fornece vários métodos que permitem filtrar sua pesquisa para filas públicas na rede. Métodos específicos para a filtragem por fila rótulo, categoria ou servidor local são o <xref:System.Messaging.MessageQueue.GetPublicQueuesByLabel%2A>, <xref:System.Messaging.MessageQueue.GetPublicQueuesByCategory%2A>, e <xref:System.Messaging.MessageQueue.GetPublicQueuesByMachine%2A>.  
+  
+ O <xref:System.Messaging.MessageQueueCriteria> classe, quando usado com o <xref:System.Messaging.MessageQueue.GetPublicQueues%2A> método, permite que você refine seu filtro. Você pode especificar critérios de pesquisa não especificamente endereçados por meio de uma da `GetPublicQueuesBy`* métodos, ou por vários critérios. Você pode passar um <xref:System.Messaging.MessageQueueCriteria> de instância para o <xref:System.Messaging.MessageQueue.GetPublicQueues%2A> método para pesquisar, por exemplo, por vezes de criação ou modificação de fila, a fila reside no computador, o rótulo da fila ou categoria ou qualquer combinação dessas propriedades.  
+  
+ Ao filtrar por várias propriedades, os critérios são compostos, aplicando o `AND` operador para o conjunto de propriedades. Portanto, quando você especifica um valor para o <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> propriedade junto com o <xref:System.Messaging.MessageQueueCriteria.MachineName%2A> propriedade, você está solicitando todas as filas que foram criados após um tempo especificado e que residem em um computador específico.  
+  
+ Quando você definir qualquer propriedade, o método que define a propriedade também define um sinalizador para indicar que devem ser incluído no filtro que você está criando. Você não pode remover propriedades individuais de filtro de pesquisa. Em vez disso, você remover todas as propriedades do filtro chamando <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>e, em seguida, defina as propriedades que você deseja compilar no filtro de pesquisa. <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>Redefine todas as propriedades em um estado padrão "não configurado".  
+  
+ Você deve definir uma propriedade antes de tentar ler. Caso contrário, uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir itera por meio de filas de mensagens e exibe o caminho de cada fila que foi criada no último dia e que existe no computador "MyComputer".  
+  
+ [!code-cpp[MessageQueue.GetMessageQueueEnumerator_criteria#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_criteria/CPP/mqgetmessagequeueenumerator_criteria.cpp#1)]
+ [!code-csharp[MessageQueue.GetMessageQueueEnumerator_criteria#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_criteria/CS/mqgetmessagequeueenumerator_criteria.cs#1)]
+ [!code-vb[MessageQueue.GetMessageQueueEnumerator_criteria#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_criteria/VB/mqgetmessagequeueenumerator_criteria.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueCriteria ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueCriteria.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Messaging.MessageQueueCriteria" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public Guid Category { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Category" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a categoria pelo qual a filas de filtro na rede.</summary>
+        <value>Categoria das filas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A categoria de fila permite que um aplicativo categorizem suas filas. Por exemplo, você pode colocar todas as filas de cobrança em uma categoria e todas as filas de pedido em outro. O <xref:System.Messaging.MessageQueue.Category%2A> propriedade é definido pelo aplicativo e não tem nenhum significado intrínseco para enfileiramento de mensagens.  
+  
+ Se você estiver filtrando somente por categoria ao pesquisar as filas na rede, você pode usar o método <xref:System.Messaging.MessageQueue.GetPublicQueuesByCategory%2A>, que é projetado especificamente para essa finalidade. Se você estiver procurando por vários critérios que incluem a categoria, defina <xref:System.Messaging.MessageQueueCriteria.Category%2A> propriedade e passar o parâmetro em <xref:System.Messaging.MessageQueue.GetPublicQueues%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O aplicativo não definiu o <see cref="P:System.Messaging.MessageQueueCriteria.Category" /> propriedade antes da leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearAll">
+      <MemberSignature Language="C#" Value="public void ClearAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueCriteria.ClearAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todas as propriedades de que está sendo criado em um filtro e coloca todos os valores de propriedade em um estado "não configurado".</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>, o método define sinalizadores relacionados a cada o <xref:System.Messaging.MessageQueueCriteria> propriedades, que indicam que não há propriedades devem ser incluídas quando o aplicativo cria o filtro de pesquisa. <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>Redefine todas as propriedades que têm valores em um estado padrão "não configurado". As propriedades que você alterar posteriormente são combinadas usando lógica `AND` operador para definir um novo filtro para o <xref:System.Messaging.MessageQueue.GetPublicQueues%2A> método. Quando você altera a propriedade, o método que define a propriedade também define um sinalizador para indicar que devem ser incluído no filtro que você está criando.  
+  
+ Você não pode remover propriedades individuais de filtro de pesquisa. Em vez disso, você remover todas as propriedades do filtro chamando <xref:System.Messaging.MessageQueueCriteria.ClearAll%2A>e, em seguida, defina as propriedades que você deseja compilar no filtro de pesquisa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatedAfter">
+      <MemberSignature Language="C#" Value="public DateTime CreatedAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CreatedAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.CreatedAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite inferior da data de criação da fila e o tempo pelo qual às filas de filtro na rede.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que especifica o limite inferior para a data e hora de uma fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueueCriteria> propriedades são combinadas usando uma lógica `AND`, para definir ambos <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> e <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A> dos limites de um intervalo de tempo para a criação das filas. Se você definir apenas <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A>, não há nenhum limite superior na data.  
+  
+ Se você tentar definir <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> para posterior <xref:System.DateTime> valor que <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A>, <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A> é redefinido para o mesmo valor (novo) como <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O aplicativo não definiu o <see cref="P:System.Messaging.MessageQueueCriteria.CreatedAfter" /> propriedade antes da leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatedBefore">
+      <MemberSignature Language="C#" Value="public DateTime CreatedBefore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CreatedBefore" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.CreatedBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite superior do tempo e data de criação da fila pelo qual a filas de filtro na rede.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que especifica o limite superior para a data e hora de uma fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueueCriteria> propriedades são combinadas usando uma lógica `AND`, para definir ambos <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> e <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A> dos limites de um intervalo de tempo para a criação das filas. Se você definir apenas <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A>, não há nenhum limite inferior na data.  
+  
+ Se você tentar definir <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A> para um anterior <xref:System.DateTime> valor que <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A>, <xref:System.Messaging.MessageQueueCriteria.CreatedAfter%2A> é redefinido para o mesmo valor (novo) como <xref:System.Messaging.MessageQueueCriteria.CreatedBefore%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O aplicativo não definiu o <see cref="P:System.Messaging.MessageQueueCriteria.CreatedBefore" /> propriedade antes da leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o rótulo pelo qual a filas de filtro na rede.</summary>
+        <value>Rótulo das filas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rótulo de uma fila de mensagens é uma descrição definida pelo aplicativo da fila. Ele não tem nenhum significado intrínseco para enfileiramento de mensagens.  
+  
+ Se você estiver filtrando somente por rótulo ao pesquisar as filas na rede, você pode usar o método <xref:System.Messaging.MessageQueue.GetPublicQueuesByLabel%2A>, que é projetado especificamente para essa finalidade. Se você estiver procurando por vários critérios que incluem o rótulo, defina <xref:System.Messaging.MessageQueueCriteria.Label%2A> propriedade e passar o parâmetro em <xref:System.Messaging.MessageQueue.GetPublicQueues%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O aplicativo não definiu o <see cref="P:System.Messaging.MessageQueueCriteria.Label" /> propriedade antes da leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do computador pelo qual a filas de filtro na rede.</summary>
+        <value>O nome do computador em que as filas residem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma fila de mensagens <xref:System.Messaging.MessageQueue.MachineName%2A> reflita o nome do servidor no qual reside a fila, sem precedentes barras invertidas (\\\\).  
+  
+ Se você estiver filtrando apenas pelo nome do computador ao pesquisar as filas na rede, você pode usar o método <xref:System.Messaging.MessageQueue.GetPublicQueuesByMachine%2A>, que é projetado especificamente para essa finalidade. Se você estiver procurando por vários critérios que incluem o nome do computador, defina <xref:System.Messaging.MessageQueueCriteria.MachineName%2A> propriedade e passar o parâmetro em <xref:System.Messaging.MessageQueue.GetPublicQueues%2A>.  
+  
+ Você também pode pesquisar as filas particulares na rede, especificando um nome de computador no <xref:System.Messaging.MessageQueue.GetPrivateQueuesByMachine%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O aplicativo não definiu o <see cref="P:System.Messaging.MessageQueueCriteria.MachineName" /> propriedade antes da leitura.  
+  
+ -ou-  
+  
+ A sintaxe de nome de computador é inválida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedAfter">
+      <MemberSignature Language="C#" Value="public DateTime ModifiedAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ModifiedAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.ModifiedAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite inferior da data de modificação de fila e o tempo pelo qual às filas de filtro na rede.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que especifica o limite inferior para a última data de modificação e hora de uma fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sinalizador de modificação de uma fila é definido quando você alterar as propriedades de uma fila, mas não quando uma mensagem é lida ou gravada na fila.  
+  
+ O <xref:System.Messaging.MessageQueueCriteria> propriedades são combinadas usando uma lógica `AND`, para definir ambos <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A> e <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A> dos limites de um intervalo de tempo da última modificação das filas. Se você definir apenas <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A>, não há nenhum limite superior na data.  
+  
+ Se você tentar definir <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A> para posterior <xref:System.DateTime> valor que <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A>, <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A> é redefinido para o mesmo valor (novo) como <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O aplicativo não definiu o <see cref="P:System.Messaging.MessageQueueCriteria.ModifiedAfter" /> propriedade antes da leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedBefore">
+      <MemberSignature Language="C#" Value="public DateTime ModifiedBefore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ModifiedBefore" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueCriteria.ModifiedBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite superior da data de modificação de fila e hora pelo qual a filas de filtro na rede.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que especifica o limite superior para a última data de modificação e hora de uma fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sinalizador de modificação de uma fila é definido quando você alterar as propriedades de uma fila, mas não quando uma mensagem é lida ou gravada na fila.  
+  
+ O <xref:System.Messaging.MessageQueueCriteria> propriedades são combinadas usando uma lógica `AND`, para definir ambos <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A> e <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A> dos limites de um intervalo de tempo da última modificação das filas. Se você definir apenas <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A>, não há nenhum limite inferior na data.  
+  
+ Se você tentar definir <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A> para um anterior <xref:System.DateTime> valor que <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A>, <xref:System.Messaging.MessageQueueCriteria.ModifiedAfter%2A> é redefinido para o mesmo valor (novo) como <xref:System.Messaging.MessageQueueCriteria.ModifiedBefore%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O aplicativo não definiu o <see cref="P:System.Messaging.MessageQueueCriteria.ModifiedBefore" /> propriedade antes da leitura.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

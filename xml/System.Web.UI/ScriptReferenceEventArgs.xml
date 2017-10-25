@@ -1,0 +1,87 @@
+<Type Name="ScriptReferenceEventArgs" FullName="System.Web.UI.ScriptReferenceEventArgs">
+  <TypeSignature Language="C#" Value="public class ScriptReferenceEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScriptReferenceEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ScriptReferenceEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.ScriptManager.ResolveScriptReference" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma referência de script é processada, o <xref:System.Web.UI.ScriptReferenceEventArgs> objeto contém o <xref:System.Web.UI.ScriptReference> definida no objeto o <xref:System.Web.UI.ScriptManager> instância. Você pode criar um manipulador de eventos para o <xref:System.Web.UI.ScriptManager.ResolveScriptReference> eventos para verificar o <xref:System.Web.UI.ScriptReference> de objeto e modifique conforme necessário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma página da Web do ASP.NET que faz referência a um arquivo de script chamado CustomScript.js. Quando o aplicativo Web é hospedado no domínio www.contoso.com, [ScriptReference.Path]<xref:System.Web.UI.ScriptReferenceBase.Path%2A> propriedade é definida como um valor específica para esse domínio. Um manipulador de eventos para o <xref:System.Web.UI.ScriptManager.ResolveScriptReference> evento verifica se a URL do host e altera o valor de [ScriptReference.Path]<xref:System.Web.UI.ScriptReferenceBase.Path%2A> propriedade se for necessário.  
+  
+ [!code-aspx-csharp[System.Web.UI.ScriptReferenceEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReferenceEventArgs/CS/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ScriptReferenceEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReferenceEventArgs/VB/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptReferenceEventArgs (System.Web.UI.ScriptReference script);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.ScriptReference script) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceEventArgs.#ctor(System.Web.UI.ScriptReference)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="script" Type="System.Web.UI.ScriptReference" />
+      </Parameters>
+      <Docs>
+        <param name="script">Um <see cref="T:System.Web.UI.ScriptReference" /> objeto que contém o script de cliente referenciado na página da Web.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ScriptReferenceEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="script" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Script">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ScriptReference Script { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ScriptReference Script" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReferenceEventArgs.Script" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ScriptReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.ScriptReference" /> objeto que contém a biblioteca de script.</summary>
+        <value>Um <see cref="T:System.Web.UI.ScriptReference" /> objeto que contém o script de cliente referenciado na página da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ScriptReference> objeto o <xref:System.Web.UI.ScriptReferenceEventArgs.Script%2A> propriedade é adicionada ao <xref:System.Web.UI.ScriptManager.Scripts%2A> propriedade quando o <xref:System.Web.UI.ScriptManager.ResolveScriptReference> é gerado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma página da Web do ASP.NET que faz referência a um arquivo de script chamado CustomScript.js. Quando o aplicativo Web é hospedado no domínio www.contoso.com, [ScriptReference.Path]<xref:System.Web.UI.ScriptReferenceBase.Path%2A> propriedade é definida como um valor específica para esse domínio. Um manipulador de eventos para o <xref:System.Web.UI.ScriptManager.ResolveScriptReference> evento verifica se a URL do host e altera o valor de [ScriptReference.Path]<xref:System.Web.UI.ScriptReferenceBase.Path%2A> propriedade se for necessário. O <xref:System.Web.UI.ScriptReference> objeto é recuperado por meio de <xref:System.Web.UI.ScriptReferenceEventArgs.Script%2A> propriedade.  
+  
+ [!code-aspx-csharp[System.Web.UI.ScriptReferenceEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.ScriptReferenceEventArgs/CS/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ScriptReferenceEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.ScriptReferenceEventArgs/VB/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

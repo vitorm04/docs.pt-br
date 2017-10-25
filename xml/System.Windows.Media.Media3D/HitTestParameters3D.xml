@@ -1,0 +1,25 @@
+<Type Name="HitTestParameters3D" FullName="System.Windows.Media.Media3D.HitTestParameters3D">
+  <TypeSignature Language="C#" Value="public abstract class HitTestParameters3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HitTestParameters3D extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.HitTestParameters3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe abstrata que representa os parâmetros de um teste de clique 3D.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para especificar um teste de clique em uma cena 3D, use o <xref:System.Windows.Media.Media3D.RayHitTestParameters> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

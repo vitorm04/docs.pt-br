@@ -1,0 +1,163 @@
+<Type Name="TemplateContainerAttribute" FullName="System.Web.UI.TemplateContainerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TemplateContainerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TemplateContainerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TemplateContainerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Declara o tipo base do controle de contêiner de uma propriedade que retorna um <see cref="T:System.Web.UI.ITemplate" /> interface e é marcado com o <see cref="T:System.Web.UI.TemplateContainerAttribute" /> atributo. O controle com o <see cref="T:System.Web.UI.ITemplate" /> propriedade deve implementar o <see cref="T:System.Web.UI.INamingContainer" /> interface. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Type> que é passado como um parâmetro de objeto de <xref:System.Web.UI.TemplateContainerAttribute> objeto é usado pelo analisador como o tipo de <xref:System.ComponentModel.Container> objeto que é usado em expressões de associação de dados. O controle cuja propriedade retorna um <xref:System.Web.UI.ITemplate> interface e é marcado com o <xref:System.Web.UI.TemplateContainerAttribute>, deve implementar a <xref:System.Web.UI.INamingContainer> interface.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle modelo nomeado `TemplatedFirstControl` e associá-lo a um contêiner denominado `FirstTemplateContainer`. Isso permite a criação de controles personalizados que exibem a hora do servidor quando o modelo não for especificado e o conteúdo do modelo quando o modelo é especificado.  
+  
+ [!code-csharp[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.cs#1)]
+ [!code-vb[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.vb#1)]  
+  
+ Formulário da Web a seguir demonstra como usar o controle personalizado criado no exemplo de código anterior. Duas instâncias do `TemplatedFirstControl` são colocados na página:  
+  
+-   A primeira instância inclui o modelo `<FirstTemplate>`.  
+  
+-   A segunda instância não inclui `<FirstTemplate>`; portanto, ela mostra apenas o tempo.  
+  
+ [!code-aspx-csharp[SystemWebUI_TemplateContainerAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.aspx#2)]
+ [!code-aspx-vb[SystemWebUI_TemplateContainerAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateContainerAttribute (Type containerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type containerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateContainerAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="containerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="containerType">O <see cref="T:System.Type" /> para o controle de contêiner.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.TemplateContainerAttribute" /> classe usando o tipo de contêiner especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um controle modelo nomeado `TemplatedFirstControl` e associá-lo a um contêiner denominado `FirstTemplateContainer`. Isso permite a criação de controles personalizados que exibem a hora do servidor quando o modelo não for especificado e o conteúdo do modelo quando o modelo é especificado. O <xref:System.Web.UI.TemplateContainerAttribute> classe é usada para o `FirstTemplate` propriedade.  
+  
+ [!code-csharp[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.cs#1)]
+ [!code-vb[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateContainerAttribute (Type containerType, System.ComponentModel.BindingDirection bindingDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type containerType, valuetype System.ComponentModel.BindingDirection bindingDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateContainerAttribute.#ctor(System.Type,System.ComponentModel.BindingDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="containerType" Type="System.Type" />
+        <Parameter Name="bindingDirection" Type="System.ComponentModel.BindingDirection" />
+      </Parameters>
+      <Docs>
+        <param name="containerType">O <see cref="T:System.Type" /> para o controle de contêiner.</param>
+        <param name="bindingDirection">O <see cref="P:System.Web.UI.TemplateContainerAttribute.BindingDirection" /> para o controle de contêiner.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.TemplateContainerAttribute" /> classe usando o tipo de contêiner especificado e o <see cref="P:System.Web.UI.TemplateContainerAttribute.BindingDirection" /> propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingDirection">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.BindingDirection BindingDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.BindingDirection BindingDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TemplateContainerAttribute.BindingDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BindingDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a direção da associação do controle de contêiner.</summary>
+        <value>Um <see cref="T:System.ComponentModel.BindingDirection" /> indicando que o controle de contêiner ligação de direção. O padrão é <see cref="F:System.ComponentModel.BindingDirection.OneWay" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.TemplateContainerAttribute.BindingDirection%2A> propriedade pode ser o <xref:System.ComponentModel.BindingDirection.OneWay> campo, em que o modelo pode aceitar somente valores de propriedade ou o <xref:System.ComponentModel.BindingDirection.TwoWay> campo, em que o modelo pode aceitar e expor os valores de propriedade. No último cenário, controles associados a dados podem usar automaticamente a atualização, exclusão e operações de inserção de uma fonte de dados usando o `Bind` sintaxe de associação de dados.  
+  
+ Para obter mais informações sobre associação de dados, consulte [para bancos de dados de associação](http://msdn.microsoft.com/en-us/ab7b2846-975b-4057-a948-45527497c742) e [visão geral de expressões de associação de dados](http://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle modelo nomeado `TemplatedFirstControl` e associá-lo a um contêiner denominado `FirstTemplateContainer`. Isso permite a criação de controles personalizados que exibem a hora do servidor quando o modelo não for especificado e o conteúdo do modelo quando o modelo é especificado. O <xref:System.Attribute.GetCustomAttribute%2A> método determina a <xref:System.Web.UI.TemplateContainerAttribute.BindingDirection%2A> propriedade do `FirstTemplate` propriedade o `TemplateFirstControl`.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.TemplateContainerAttribute> classe.  
+  
+ [!code-csharp[SystemWebUI_TemplateContainerAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.aspx#3)]
+ [!code-vb[SystemWebUI_TemplateContainerAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerType">
+      <MemberSignature Language="C#" Value="public Type ContainerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContainerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TemplateContainerAttribute.ContainerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de controle do contêiner.</summary>
+        <value>O controle de contêiner <see cref="T:System.Type" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle modelo nomeado `TemplatedFirstControl` e associá-lo a um contêiner denominado `FirstTemplateContainer`. Isso permite a criação de controles personalizados que exibem a hora do servidor quando o modelo não for especificado e o conteúdo do modelo quando o modelo é especificado. O <xref:System.Web.UI.TemplateContainerAttribute> classe é usada para o `FirstTemplate` propriedade e para especificar o <xref:System.Web.UI.TemplateContainerAttribute.ContainerType%2A> a propriedade como `FirstTemplateContainer`.  
+  
+ [!code-csharp[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/CS/templatecontainerattribute.cs#1)]
+ [!code-vb[SystemWebUI_TemplateContainerAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_TemplateContainerAttribute/VB/templatecontainerattribute.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

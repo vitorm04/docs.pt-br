@@ -1,0 +1,2737 @@
+<Type Name="MenuItemBinding" FullName="System.Web.UI.WebControls.MenuItemBinding">
+  <TypeSignature Language="C#" Value="public sealed class MenuItemBinding : ICloneable, System.Web.UI.IDataSourceViewSchemaAccessor, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MenuItemBinding extends System.Object implements class System.ICloneable, class System.Web.UI.IDataSourceViewSchemaAccessor, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuItemBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataSourceViewSchemaAccessor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("TextField")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define a relação entre um item de dados e o item de menu que está associado em um <see cref="T:System.Web.UI.WebControls.Menu" /> controle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados onde cada item de dados contém vários campos (como um elemento XML com vários atributos), se nenhuma associação de item de menu é definidas, um item de menu exibe o valor retornado pelo `ToString()` método do item de dados por padrão. No caso de um elemento XML, o item de menu exibe o nome do elemento, que mostra a estrutura subjacente do menu, mas não é muito útil, caso contrário. Você pode associar as propriedades de um item de menu a um campo específico, especificando associações de item de menu. Um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto define a relação entre cada item de dados e o item de menu que está associado.  
+  
+> [!NOTE]
+>  Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a um <xref:System.Web.UI.WebControls.SiteMapDataSource> controle, associações de item de menu não têm nenhum efeito. Associação é executada automaticamente usando o provedor de mapa de site.  
+  
+ O <xref:System.Web.UI.WebControls.Menu> controlar armazena seu <xref:System.Web.UI.WebControls.MenuItemBinding> objetos no <xref:System.Web.UI.WebControls.Menu.DataBindings%2A> propriedade e aplica as associações à fonte de dados para criar uma relação um para um entre a hierarquia de menu e a hierarquia de origem de dados. Para cada item de dados na fonte de dados, o <xref:System.Web.UI.WebControls.Menu> controle tenta corresponder o item de dados para um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto para criar correspondente <xref:System.Web.UI.WebControls.MenuItem> objeto.  
+  
+ Ao criar um <xref:System.Web.UI.WebControls.MenuItemBinding> do objeto, você deve especificar os critérios de associação. Os critérios indicam quando um item de dados deve ser associado a um item de menu. Você pode especificar o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A>, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A>, ou ambos.  
+  
+ A profundidade de um item de menu Especifica o nível de menu que obtém a associação. Por exemplo, a seguinte <xref:System.Web.UI.WebControls.MenuItemBinding> declaração associa os campos nome e ID da fonte de dados para o <xref:System.Web.UI.WebControls.MenuItem.Text%2A> e <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedades, respectivamente, de todos os nós com uma profundidade de 0:  
+  
+```  
+<asp:MenuItemBinding Depth="0" TextField="Name" ValueField="ID">  
+```  
+  
+ Um membro de dados especifica o tipo de item de dados na fonte de dados subjacente, mas pode representar informações diferentes dependendo da fonte de dados. Cada item de dados em uma fonte de dados hierárquicos (representado por um <xref:System.Web.UI.IHierarchyData> objeto) expõe uma <xref:System.Web.UI.IHierarchyData.Type%2A> propriedade, que especifica o tipo de item de dados. Por exemplo, o membro de dados para um elemento XML Especifica o nome do elemento. Quando uma fonte de dados contém vários tipos de item de dados, o membro de dados especifica quais dados de tipo de item para usar. O seguinte <xref:System.Web.UI.WebControls.MenuItemBinding> declaração associa o `<Book>` elementos de um <xref:System.Web.UI.WebControls.XmlDataSource> controle a todos os itens de menu no menu, independentemente do local na hierarquia:  
+  
+```  
+<asp:MenuItemBinding DataMember="Book" TextField="Title" ValueField= "ISBN">  
+```  
+  
+ Às vezes você precisa criar uma associação de item de menu que especifica uma profundidade e um membro de dados. Isso geralmente é usado quando a fonte de dados contém itens em diferentes níveis que têm o mesmo valor de membro de dados. Por exemplo, você pode ter `<Item>` elementos que aparecem em diferentes níveis dentro de um arquivo XML. O seguinte <xref:System.Web.UI.WebControls.MenuItemBinding> declarações mostram como especificar associações de item de menu que se aplicam a dados idênticos membros profundidades diferentes de menu:  
+  
+ `<asp:MenuItemBinding DataMember="Item" Depth="1" TextField="Title">`  
+  
+ `<asp:MenuItemBinding DataMember="Item" Depth="2" TextField="ISBN">`  
+  
+ Se uma associação de item de menu é definida sem uma profundidade e um membro de dados, a associação de item de menu é aplicada a todos os itens de menu no menu. Isso é geralmente usado quando todos os itens de dados têm as mesmas propriedades e devem ser exibidos de forma idêntica, independentemente da profundidade de menu.  
+  
+ Depois que os critérios de associação são estabelecidos, em seguida, você pode associar uma propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto que pode ser associado a um valor. Você pode vincular a um campo de um item de dados ou para um valor estático. Quando associado a um valor estático, todos os <xref:System.Web.UI.WebControls.MenuItem> objetos aos quais o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado compartilham o mesmo valor. Propriedades vinculadas aos campos contêm os valores do campo correspondente da fonte de dados.  
+  
+> [!NOTE]
+>  Seletivamente, você pode substituir uma propriedade associada em uma <xref:System.Web.UI.WebControls.MenuItem> objeto definindo a propriedade correspondente diretamente.  
+  
+ A tabela a seguir lista as propriedades do <xref:System.Web.UI.WebControls.MenuItemBinding> que permitem que você vincule uma propriedade de classe a <xref:System.Web.UI.WebControls.MenuItem> objeto para um campo de um item de dados.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrlField%2A>|Para ligar para o <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrlField%2A>|Para ligar para o <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A>|Para ligar para o <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.ToolTipField%2A>|Para ligar para o <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.ValueField%2A>|Para ligar para o <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+  
+ A tabela a seguir lista as propriedades do <xref:System.Web.UI.WebControls.MenuItemBinding> que permitem que você vincule uma propriedade de classe a <xref:System.Web.UI.WebControls.MenuItem> objeto para um valor estático.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrl%2A>|O valor estático para associar o <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrl%2A>|O valor estático para associar o <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A>|O valor estático para associar o <xref:System.Web.UI.WebControls.MenuItem.Target%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.Text%2A>|O valor estático para associar o <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.ToolTip%2A>|O valor estático para associar o <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+|<xref:System.Web.UI.WebControls.MenuItemBinding.Value%2A>|O valor estático para associar o <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.|  
+  
+ Se conflitante <xref:System.Web.UI.WebControls.MenuItemBinding> objetos são definidos, o <xref:System.Web.UI.WebControls.Menu> controle aplica-se as associações de item de menu na seguinte ordem de precedência:  
+  
+1.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define e corresponde a uma profundidade e um membro de dados.  
+  
+2.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define e faz a correspondência apenas o membro de dados.  
+  
+3.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define e corresponde apenas a profundidade.  
+  
+4.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define a profundidade, nem o membro de dados. (Este tipo de associação de item de menu é aplicado a todos os itens de menu no menu).  
+  
+5.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que não têm uma correspondência na fonte de dados. Nesse caso, o valor retornado pelo `ToString()` método do item de dados é associado ao <xref:System.Web.UI.WebControls.MenuItem.Text%2A> e <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedades dos itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+ O <xref:System.Web.UI.WebControls.MenuItemBinding> classe também permite que você formate o texto exibido em um item de menu, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.FormatString%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Web.UI.WebControls.MenuItemBinding> objetos para definir a relação entre os campos de um <xref:System.Web.UI.WebControls.XmlDataSource> controle e os itens de menu em um <xref:System.Web.UI.WebControls.Menu> controle. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBinding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBinding/CS/menuitembindingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBinding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBinding/VB/menuitembindingvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItemBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.MenuItemBinding" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma nova instância do <xref:System.Web.UI.WebControls.MenuItemBinding> classe. Ele geralmente é usado ao preencher dinamicamente o <xref:System.Web.UI.WebControls.Menu.DataBindings%2A> coleção de um <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o construtor para preencher dinamicamente o <xref:System.Web.UI.WebControls.Menu.DataBindings%2A> coleção de um <xref:System.Web.UI.WebControls.Menu> controle. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado MenuDepth.xml.  
+  
+ [!code-aspx-csharp[MenuItemBindingCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingCtor/CS/menuitembindingctorcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingCtor/VB/menuitembindingctorvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o membro de dados para vincular a um item de menu.</summary>
+        <value>O membro de dados para vincular a um item de menu. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao criar um <xref:System.Web.UI.WebControls.MenuItemBinding> do objeto, você deve especificar os critérios de associação. Os critérios indicam quando um item de dados deve ser associado a um item de menu. Você pode especificar o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+ Quando a fonte de dados contém vários elementos ou tabelas, use o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade para especificar o elemento ou tabela para vincular a um item de menu. Um membro de dados especifica o tipo de item de dados na fonte de dados subjacente, mas pode representar informações diferentes dependendo da fonte de dados. Cada item de dados em uma fonte de dados hierárquicos (representado por um <xref:System.Web.UI.IHierarchyData?displayProperty=nameWithType> objeto) expõe uma <xref:System.Web.UI.IHierarchyData.Type%2A?displayProperty=nameWithType> propriedade, que especifica o tipo de item de dados. Por exemplo, o membro de dados para um elemento XML Especifica o nome do elemento. O seguinte <xref:System.Web.UI.WebControls.MenuItemBinding> declaração associa o `<Book>` elementos de um <xref:System.Web.UI.WebControls.XmlDataSource> controle a todos os itens de menu no menu, independentemente do local na hierarquia:  
+  
+```  
+<asp:MenuItemBinding DataMember="Book" TextField="Title" ValueField= "ISBN">  
+```  
+  
+ Às vezes você precisa criar uma associação de item de menu que especifica uma profundidade e um membro de dados. Isso geralmente é usado quando a fonte de dados contém itens em diferentes níveis que têm o mesmo valor de membro de dados. Por exemplo, você pode ter `<Item>` elementos que aparecem em diferentes níveis dentro de um arquivo XML. O seguinte <xref:System.Web.UI.WebControls.MenuItemBinding> declarações mostram como especificar associações de item de menu que se aplicam a dados idênticos membros profundidades diferentes de menu:  
+  
+ `<asp:MenuItemBinding DataMember="Item" Depth="1" TextField="Title">`  
+  
+ `<asp:MenuItemBinding DataMember="Item" Depth="2" TextField="ISBN">`  
+  
+ Se uma associação de item de menu é definida sem uma profundidade ou um membro de dados, a associação de item de menu é aplicada a todos os itens de menu no menu. Isso é geralmente usado quando todos os itens de dados têm as mesmas propriedades e devem ser exibidos de forma idêntica, independentemente da profundidade de menu.  
+  
+ Depois que os critérios de associação são estabelecidos, em seguida, você pode associar uma propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto que pode ser associado a um valor. Você pode vincular a um campo de um item de dados ou para um valor estático. Quando associado a um valor estático, todos os <xref:System.Web.UI.WebControls.MenuItem> objetos aos quais o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado compartilham o mesmo valor. Propriedades vinculadas aos campos contêm os valores do campo da fonte de dados.  
+  
+ Se conflitante <xref:System.Web.UI.WebControls.MenuItemBinding> objetos são definidos, o <xref:System.Web.UI.WebControls.Menu> controle aplica-se as associações de item de menu na seguinte ordem de precedência:  
+  
+1.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define e corresponde a uma profundidade e um membro de dados.  
+  
+2.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define e faz a correspondência apenas o membro de dados.  
+  
+3.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define e corresponde apenas a profundidade.  
+  
+4.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define a profundidade, nem o membro de dados. (Este tipo de associação de item de menu é aplicado a todos os itens de menu no menu).  
+  
+5.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que não têm uma correspondência na fonte de dados. Nesse caso, o valor retornado pelo `ToString()` método do item de dados é associado ao <xref:System.Web.UI.WebControls.MenuItem.Text%2A> e <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedades dos itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade para especificar qual elemento XML para vincular os itens de menu em um <xref:System.Web.UI.WebControls.Menu> controle. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado MenuDataMember.xml.  
+  
+ [!code-aspx-csharp[MenuItemBindingDataMember#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingDataMember/CS/menuitembindingdatamembercs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingDataMember#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingDataMember/VB/menuitembindingdatamembervb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapNodeHome ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNodeCategory ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNodeSection ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNodeSection ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNodeSection ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNodeCategory>`  
+  
+ `<MapNodeCategory ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNodeSection ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNodeSection ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNodeSection ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNodeCategory>`  
+  
+ `</MapNodeHome>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public int Depth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.WebControls.TreeNodeBindingDepthConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a profundidade de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado.</summary>
+        <value>A profundidade de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada. O padrão é -1, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao criar um <xref:System.Web.UI.WebControls.MenuItemBinding> do objeto, você deve especificar os critérios de associação. Os critérios indicam quando um item de dados deve ser associado a um item de menu. Você pode especificar o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+ Use o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade para especificar a profundidade de menu no qual aplicar o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto. Por exemplo, a seguinte <xref:System.Web.UI.WebControls.MenuItemBinding> declaração associa os campos nome e ID da fonte de dados para o <xref:System.Web.UI.WebControls.MenuItem.Text%2A> e <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedades, respectivamente, de todos os itens de menu com uma profundidade de 0:  
+  
+```  
+<asp:MenuItemBinding Depth="0" TextField="Name" ValueField="ID">  
+```  
+  
+ Às vezes você precisa criar uma associação de item de menu que especifica uma profundidade e um membro de dados. Isso geralmente é usado quando a fonte de dados contém itens em diferentes níveis que têm o mesmo valor de membro de dados. Por exemplo, você pode ter `<Item>` elementos que aparecem em diferentes níveis dentro de um arquivo XML. O seguinte <xref:System.Web.UI.WebControls.MenuItemBinding> declarações mostram como especificar associações de item de menu que se aplicam a dados idênticos membros profundidades diferentes de menu:  
+  
+ `<asp:MenuItemBinding DataMember="Item" Depth="1" TextField="Title">`  
+  
+ `<asp:MenuItemBinding DataMember="Item" Depth="2" TextField="ISBN">`  
+  
+ Se uma associação de item de menu é definida sem uma profundidade e um membro de dados, a associação de item de menu é aplicada a todos os itens de menu no menu. Isso é geralmente usado quando todos os itens de dados têm as mesmas propriedades e devem ser exibidos de forma idêntica, independentemente da profundidade de menu.  
+  
+ Depois que os critérios de associação são estabelecidos, em seguida, você pode associar uma propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto que pode ser associado a um valor. Você pode vincular a um campo de um item de dados ou para um valor estático. Quando associado a um valor estático, todos os <xref:System.Web.UI.WebControls.MenuItem> objetos aos quais o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado compartilham o mesmo valor. Propriedades vinculadas aos campos contêm os valores do campo da fonte de dados.  
+  
+ Se conflitante <xref:System.Web.UI.WebControls.MenuItemBinding> objetos são definidos, o <xref:System.Web.UI.WebControls.Menu> controle aplica-se as associações de item de menu na seguinte ordem de precedência:  
+  
+1.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define e corresponde a uma profundidade e um membro de dados.  
+  
+2.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define e faz a correspondência apenas o membro de dados.  
+  
+3.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define e corresponde apenas a profundidade.  
+  
+4.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que define a profundidade, nem o membro de dados. (Este tipo de associação de item de menu é aplicado a todos os itens de menu no menu).  
+  
+5.  O <xref:System.Web.UI.WebControls.MenuItemBinding> objeto que não têm uma correspondência na fonte de dados. Nesse caso, o valor retornado pelo `ToString()` método do item de dados é associado ao <xref:System.Web.UI.WebControls.MenuItem.Text%2A> e <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedades dos itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade para especificar a profundidade de menu no qual deseja aplicar um <xref:System.Web.UI.WebControls.MenuItemBinding> objeto. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado MenuDepth.xml.  
+  
+ [!code-aspx-csharp[MenuItemBindingDepth#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingDepth/CS/menuitembindingdepthcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingDepth#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingDepth/VB/menuitembindingdepthvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o menu de item ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado é habilitada, permitindo que o item para exibir uma imagem pop-out e qualquer filho itens de menu.</summary>
+        <value>
+          <see langword="true" />Se o item de menu ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado estiver habilitada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemBinding.Enabled%2A> propriedade para definir o <xref:System.Web.UI.WebControls.MenuItem.Enabled%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Essa configuração é compartilhada com todos os itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Quando essa propriedade é definida como `false`, o item de menu está desativado e nenhum imagem pop-out indica itens filho é exibida. Definir essa propriedade como `false` para um item de menu essencialmente torna o menu item final do nó, onde não há níveis adicionais são mostrados fora desse nó.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnabledField">
+      <MemberSignature Language="C#" Value="public string EnabledField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EnabledField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.EnabledField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.Enabled" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo a ser associado ao <see cref="P:System.Web.UI.WebControls.MenuItem.Enabled" /> de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.EnabledField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.Enabled%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.  
+  
+> [!NOTE]
+>  Você pode substituir a habilitação de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.Enabled%2A> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.Enabled%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.EnabledField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.EnabledField%2A> propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatString">
+      <MemberSignature Language="C#" Value="public string FormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.FormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres que especifica o formato de exibição para o texto de um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado.</summary>
+        <value>Uma cadeia de caracteres de formatação que especifica o formato de exibição para o texto de um item de menu para que o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MenuItemBinding.FormatString%2A> propriedade é usada para fornecer um formato personalizado para o texto de um item de menu. A cadeia de caracteres de formato pode consistir em uma cadeia de caracteres literal, um espaço reservado ou ambos. A cadeia de caracteres literal é exibida literalmente, enquanto o espaço reservado é substituído pelo valor que está associado ao texto do item de menu.  
+  
+ O espaço reservado é dividido em duas partes, separadas por dois-pontos, na forma {`A`:`Bxx`}. Por exemplo, {0: F2} exibe um número de ponto fixo com duas casas decimais.  
+  
+> [!NOTE]
+>  A cadeia de caracteres de espaço reservado deve ser colocada entre chaves para indicar que é um espaço reservado e não uma cadeia de caracteres literal. Qualquer texto fora de chaves é exibido como texto literal.  
+  
+ Mantendo o sintaxe de cadeia de caracteres, o valor antes dos dois pontos de formatação padrão (`A` no exemplo geral) Especifica o índice do parâmetro em uma lista com base em zero de parâmetros. Como apenas um valor pode ser exibido em cada item de menu, o índice do parâmetro pode ser definido somente como 0.  
+  
+ O caractere após os dois-pontos (`B` no exemplo geral) Especifica o formato de exibição para o valor. A tabela a seguir lista os formatos comuns.  
+  
+|Formato de caractere|Descrição|  
+|----------------------|-----------------|  
+|`C`|Exibe valores numéricos em formato de moeda.|  
+|`D`|Exibe valores numéricos em formato decimal.|  
+|`E`|Exibe valores numéricos em formato científico de (exponencial).|  
+|`F`|Exibe valores numéricos em um formato fixo.|  
+|`G`|Exibe os valores numéricos de formato em geral.|  
+|`N`|Exibe valores numéricos em formato de número.|  
+|`X`|Exibe valores numéricos em formato hexadecimal.|  
+  
+> [!NOTE]
+>  Os caracteres de formato não diferenciam maiusculas de minúsculas, exceto para `X`, que exibe os caracteres hexadecimais no caso especificado.  
+  
+ O valor após o caractere de formato (`xx` no exemplo geral) Especifica o número de dígitos significativos ou casas decimais a serem exibidas.  
+  
+ Para mais informações sobre cadeias de caracteres de formatação, consulte [Tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.FormatString%2A> propriedade para formatar o texto exibido nos itens de menu de um <xref:System.Web.UI.WebControls.Menu> controle. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBinding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBinding/CS/menuitembindingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBinding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBinding/VB/menuitembindingvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="public string ImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.ImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem que é exibida ao lado do texto de um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado.</summary>
+        <value>A URL para uma imagem que é exibida ao lado do texto de um item de menu para que o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrl%2A> propriedade para especificar a URL de uma imagem personalizada para associar ao <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Esta imagem é compartilhada com todos os <xref:System.Web.UI.WebControls.MenuItem> objetos aos quais o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. A imagem é exibida ao lado do texto de um item de menu e pode estar em qualquer formato de arquivo (. jpg,. gif,. bmp e assim por diante), desde que o navegador do cliente oferece suporte a esse formato.  
+  
+> [!NOTE]
+>  Você pode substituir a imagem de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade diretamente.  
+  
+ Em vez de usar essa propriedade para exibir a mesma imagem em cada item de menu, você também pode usar o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrlField%2A> propriedade para associar o <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto para um campo de fonte de dados. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrl%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrlField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrlField%2A> propriedade terá precedência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrl%2A> propriedade para especificar a URL para uma imagem para exibir ao lado do texto dos itens de menu. Esta imagem é exibida em cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingText/CS/menuitembindingtextcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingText/VB/menuitembindingtextvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrlField">
+      <MemberSignature Language="C#" Value="public string ImageUrlField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrlField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.ImageUrlField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.ImageUrl" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo a ser associado ao <see cref="P:System.Web.UI.WebControls.MenuItem.ImageUrl" /> de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrlField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo. A imagem é exibida ao lado do texto de um item de menu e pode estar em qualquer formato de arquivo (. jpg,. gif,. bmp e assim por diante), desde que o navegador do cliente oferece suporte a esse formato.  
+  
+> [!NOTE]
+>  Você pode substituir a imagem de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+ Em vez de usar essa propriedade para associar o <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> o objeto para um campo, você também pode associá-lo para um valor estático, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrl%2A?displayProperty=nameWithType> propriedade. Isso permite que você exiba a mesma imagem em cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrl%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrlField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrlField%2A> propriedade terá precedência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.ImageUrlField%2A> propriedade para especificar o nome do campo para associar o <xref:System.Web.UI.WebControls.MenuItem.ImageUrl%2A> propriedade de um item de menu. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBinding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBinding/CS/menuitembindingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBinding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBinding/VB/menuitembindingvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrl">
+      <MemberSignature Language="C#" Value="public string NavigateUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.NavigateUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para vincular a quando um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado é clicado.</summary>
+        <value>A URL para vincular a quando um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada é clicado. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrl%2A> propriedade para especificar a URL para vincular ao <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Essa URL é compartilhado com todos os itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Quando o usuário clica no item de menu, o usuário é levado para a URL especificada.  
+  
+> [!NOTE]
+>  Você pode substituir a URL para um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade diretamente.  
+  
+ Em vez de usar essa propriedade para navegar para a mesma URL em cada item de menu, você também pode associar o <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto para um campo de fonte de dados, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrlField%2A> propriedade. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrl%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrlField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrlField%2A> propriedade terá precedência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrl%2A> propriedade para especificar a URL para navegar quando um item de menu é clicado. Essa URL é usada em cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingText/CS/menuitembindingtextcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingText/VB/menuitembindingtextvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUrlField">
+      <MemberSignature Language="C#" Value="public string NavigateUrlField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NavigateUrlField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.NavigateUrlField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.NavigateUrl" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo da fonte de dados para associar ao <see cref="P:System.Web.UI.WebControls.MenuItem.NavigateUrl" /> de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> para que o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrlField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo. O usuário é levado para a URL correspondente quando o item de menu é clicado.  
+  
+> [!NOTE]
+>  Você pode substituir a URL para um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+ Em vez de usar essa propriedade para associar o <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> o objeto para um campo, você também pode associá-lo para um valor estático, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrl%2A?displayProperty=nameWithType> propriedade. Isso permite que você navegue para a mesma URL de cada item de menu ao qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrl%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrlField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrlField%2A> propriedade terá precedência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.NavigateUrlField%2A> propriedade para especificar o nome do campo para associar o <xref:System.Web.UI.WebControls.MenuItem.NavigateUrl%2A> propriedade de um item de menu. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBinding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBinding/CS/menuitembindingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBinding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBinding/VB/menuitembindingvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopOutImageUrl">
+      <MemberSignature Language="C#" Value="public string PopOutImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PopOutImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem que indica a presença de um submenu dinâmico para um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado.</summary>
+        <value>A URL para uma imagem que indica a presença de um submenu dinâmico para um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrl%2A> propriedade para especificar a URL de um <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Essa URL é compartilhado com todos os itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Você pode substituir a URL para um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A> propriedade diretamente.  
+  
+ Você pode vincular o <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto para um campo de fonte de dados, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrlField%2A> propriedade. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrl%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrlField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrlField%2A> propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopOutImageUrlField">
+      <MemberSignature Language="C#" Value="public string PopOutImageUrlField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PopOutImageUrlField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrlField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.PopOutImageUrl" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo da fonte de dados para associar ao <see cref="P:System.Web.UI.WebControls.MenuItem.PopOutImageUrl" /> propriedade de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> objeto ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrlField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo. A imagem na URL correspondente é exibida para cada item de menu.  
+  
+> [!NOTE]
+>  Você pode substituir a URL para um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+ Em vez de usar essa propriedade para associar o <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> o objeto para um campo, você também pode associá-lo para um valor estático, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrl%2A?displayProperty=nameWithType> propriedade. Isso permite que você navegue para a mesma URL de cada item de menu ao qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrl%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrlField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.PopOutImageUrlField%2A> propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selectable">
+      <MemberSignature Language="C#" Value="public bool Selectable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selectable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.Selectable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o menu de item ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado pode ser selecionado ou está "clicável."</summary>
+        <value>
+          <see langword="true" />Se o item de menu ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado selecionável; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.Selectable%2A> propriedade para definir o <xref:System.Web.UI.WebControls.MenuItem.Selectable%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Essa configuração é compartilhada com todos os itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Quando essa propriedade é definida como `false`, o item de menu não é "clicável", mas os itens filhos são exibidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectableField">
+      <MemberSignature Language="C#" Value="public string SelectableField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectableField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.SelectableField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.Selectable" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo a ser associado ao <see cref="P:System.Web.UI.WebControls.MenuItem.Selectable" /> de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.SelectableField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.Selectable%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.  
+  
+> [!NOTE]
+>  Você pode substituir a habilitação de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.Selectable%2A> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.Selectable%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.SelectableField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.SelectableField%2A> propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorImageUrl">
+      <MemberSignature Language="C#" Value="public string SeparatorImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SeparatorImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem exibida abaixo do texto de um item de menu (para separá-lo de outros itens de menu) para um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado.</summary>
+        <value>A URL para uma imagem exibida abaixo do texto de um item de menu para um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrl%2A> propriedade para especificar a URL de um <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Essa URL é compartilhado com todos os itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Você pode substituir a URL para um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A> propriedade diretamente.  
+  
+ Em vez de usar essa propriedade para indicar a mesma URL em cada item de menu, você também pode associar o <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto para um campo de fonte de dados, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrlField%2A> propriedade. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrl%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrlField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrlField%2A> propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorImageUrlField">
+      <MemberSignature Language="C#" Value="public string SeparatorImageUrlField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SeparatorImageUrlField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrlField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo da fonte de dados para associar ao <see cref="P:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl" /> de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> para que o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrlField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo. A imagem na URL correspondente é exibida para cada item de menu.  
+  
+> [!NOTE]
+>  Você pode substituir a URL para um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+ Em vez de usar essa propriedade para associar o <xref:System.Web.UI.WebControls.MenuItem.SeparatorImageUrl%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> o objeto para um campo, você também pode associá-lo para um valor estático, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrl%2A?displayProperty=nameWithType> propriedade. Isso permite que você navegue para a mesma URL de cada item de menu ao qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrl%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrlField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.SeparatorImageUrlField%2A> propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBinding.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa uma cópia do <see cref="T:System.Web.UI.WebControls.MenuItemBinding" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MenuItemBinding.System%23ICloneable%23Clone%2A> método é uma função auxiliar que cria uma cópia do <xref:System.Web.UI.WebControls.MenuItemBinding> do objeto do qual esse método é chamado.  
+  
+> [!NOTE]
+>  Esse método é usado principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema">
+      <MemberSignature Language="C#" Value="object System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.System#Web#UI#IDataSourceViewSchemaAccessor#DataSourceViewSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema" />.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.MenuItemBinding> é convertida em uma interface de <xref:System.Web.UI.IDataSourceViewSchemaAccessor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto está salvando alterações ao seu estado de exibição.</summary>
+        <value>
+          <see langword="true" /> se o controle estiver marcado para salvar seu estado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBinding.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Object" /> que contém os valores de estado de exibição salvo.</param>
+        <summary>Carrega o nó salvo anteriormente o estado de exibição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBinding.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva a exibição de estado é alterado para um <see cref="T:System.Object" />.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém as alterações de estado de exibição.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBinding.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto para controlar alterações em seu estado de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que esse método é chamado em um controle de servidor, o <xref:System.Web.UI.Control.IsTrackingViewState%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a janela de destino ou o quadro no qual exibir a página conteúda associada a um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado.</summary>
+        <value>A janela de destino ou quadro no qual exibir o conteúdo da página da Web vinculada. O valor padrão é uma cadeia de caracteres vazia (""), que atualiza a janela ou quadro com o foco.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A> propriedade para especificar a janela ou quadro no qual exibir o conteúdo da Web vinculada a um item de menu quando esse item de menu é clicado.  
+  
+> [!NOTE]
+>  Configurar essa propriedade substitui a <xref:System.Web.UI.WebControls.Menu.Target%2A?displayProperty=nameWithType> propriedade o <xref:System.Web.UI.WebControls.Menu> controle para os itens de menu ao qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Você pode substituir essa propriedade seletivamente definindo o <xref:System.Web.UI.WebControls.MenuItem.Target%2A?displayProperty=nameWithType> propriedade de cada item de menu diretamente.  
+  
+ Valores de destino devem começar com uma letra no intervalo À Z (maiusculas de minúsculas), com exceção de determinados valores especiais que começam com um sublinhado, conforme mostrado na tabela a seguir.  
+  
+|Valor de destino|Descrição|  
+|------------------|-----------------|  
+|`_blank`|Renderiza o conteúdo em uma nova janela sem quadros.|  
+|`_parent`|Renderiza o conteúdo no conjunto de quadros pai.|  
+|`_search`|Renderiza o conteúdo no painel de pesquisa.|  
+|`_self`|Renderiza o conteúdo do quadro com foco.|  
+|`_top`|Renderiza o conteúdo na janela inteira sem quadros.|  
+  
+> [!NOTE]
+>  Verifique a documentação do navegador para determinar se o `_search` valor tem suporte.  Por exemplo, Microsoft Internet Explorer 5.0 e posteriores dão suporte ao `_search` valor de destino.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A> propriedade renderiza como um `target` atributo. O `target` atributo no `anchor` elementos não é permitido na definição do tipo de documento XHTML 1.1. Não defina o <xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A> propriedade se a saída renderizada para o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto deve ser compatível com o XHTML 1.1. Para obter mais informações, consulte o tópico [padrões XHTML no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>   
+>  Ao criar páginas da Web acessíveis, é altamente recomendável evitar o uso de <xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A> propriedade a outra janela de destino. Para obter mais informações, consulte [NIB: acessibilidade ASP.NET](http://msdn.microsoft.com/en-us/9b5f3e05-e88d-4248-a5f4-9e64850fa0ae).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A> propriedade para especificar a janela para exibir o conteúdo da Web associado a um item de menu, quando esse item de menu é clicado. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBinding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBinding/CS/menuitembindingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBinding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBinding/VB/menuitembindingvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetField">
+      <MemberSignature Language="C#" Value="public string TargetField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.TargetField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.Target" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo a ser associado ao <see cref="P:System.Web.UI.WebControls.MenuItem.Target" /> de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.TargetField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.Target%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.MenuItem.Target%2A?displayProperty=nameWithType> propriedade especifica a janela ou quadro no qual exibir o conteúdo da Web vinculada a um item de menu quando esse item de menu é clicado. Os valores devem começar com uma letra no intervalo À Z (maiusculas de minúsculas), com exceção de determinados valores especiais que começam com um sublinhado, conforme mostrado na tabela a seguir.  
+  
+|Valor de destino|Descrição|  
+|------------------|-----------------|  
+|`_blank`|Renderiza o conteúdo em uma nova janela sem quadros.|  
+|`_parent`|Renderiza o conteúdo no conjunto de quadros pai.|  
+|`_self`|Renderiza o conteúdo do quadro com foco.|  
+|`_top`|Renderiza o conteúdo na janela inteira sem quadros.|  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A> propriedade renderiza como um `target` atributo. O `target` atributo no `anchor` elementos não é permitido na definição do tipo de documento XHTML 1.1. Não defina o <xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A> propriedade se a saída renderizada para o <xref:System.Web.UI.WebControls.MenuItemBinding> devem ser compatíveis com XHTML 1.1. Para obter mais informações, consulte o tópico [padrões XHTML no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>   
+>  Ao criar páginas da Web acessíveis, é altamente recomendável evitar o uso de <xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A> propriedade a outra janela de destino. Para obter mais informações, consulte [NIB: acessibilidade ASP.NET](http://msdn.microsoft.com/en-us/9b5f3e05-e88d-4248-a5f4-9e64850fa0ae).  
+  
+ Observe que a definição dessa propriedade substitui a <xref:System.Web.UI.WebControls.Menu.Target%2A?displayProperty=nameWithType> propriedade o <xref:System.Web.UI.WebControls.Menu> controle para este item de menu. Definindo o <xref:System.Web.UI.WebControls.Menu.Target%2A?displayProperty=nameWithType> propriedade para abrir uma nova janela pode tornar difícil para usuários de dispositivos de tecnologia assistencial usar a página.  
+  
+> [!NOTE]
+>  Você pode substituir a ativação de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.Target%2A?displayProperty=nameWithType> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.Target%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.TargetField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.TargetField%2A> propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto exibido para o item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado.</summary>
+        <value>O texto exibido para o item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.Text%2A> propriedade para especificar o texto para associar ao <xref:System.Web.UI.WebControls.MenuItem.Text%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Esse texto é exibido em um item de menu e é compartilhado com todos os itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Você pode substituir o texto de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade diretamente.  
+  
+ Em vez de usar essa propriedade para exibir o mesmo texto em cada item de menu, você também pode associar o <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto para um campo de fonte de dados, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A> propriedade. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.Text%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A> propriedade terá precedência.  
+  
+ Não é possível criar nós vazios em um <xref:System.Web.UI.WebControls.Menu> controle definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Text%2A> ou <xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A> propriedades de cadeia de caracteres vazia (""). Definir essas propriedades para a cadeia de caracteres vazia tem o mesmo efeito que não definindo as propriedades. Nesse caso, o <xref:System.Web.UI.WebControls.Menu> controle cria uma associação padrão usando o <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> propriedade. Para obter mais informações, consulte [ASP.NET mapa de conteúdo de acesso de dados](http://msdn.microsoft.com/en-us/f9219396-a0fa-481f-894d-e3d9c67d64f2).  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.Text%2A> propriedade para especificar o texto a ser exibido em um item de menu. Esse texto é exibido em cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingText/CS/menuitembindingtextcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingText/VB/menuitembindingtextvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextField">
+      <MemberSignature Language="C#" Value="public string TextField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TextField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.TextField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.Text" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo da fonte de dados para associar ao <see cref="P:System.Web.UI.WebControls.MenuItem.Text" /> de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> para que o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo. Esse texto é exibido nos itens de menu.  
+  
+> [!NOTE]
+>  Você pode substituir o texto de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+ Não é possível criar nós vazios em um <xref:System.Web.UI.WebControls.Menu> controle definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Text%2A> ou <xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A> propriedades de cadeia de caracteres vazia (""). Definir essas propriedades para a cadeia de caracteres vazia tem o mesmo efeito que não definindo as propriedades. Nesse caso, o <xref:System.Web.UI.WebControls.Menu> controle cria uma associação padrão usando o <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> propriedade. Para obter mais informações, consulte [ASP.NET mapa de conteúdo de acesso de dados](http://msdn.microsoft.com/en-us/f9219396-a0fa-481f-894d-e3d9c67d64f2).  
+  
+ Em vez de usar essa propriedade para associar o <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> o objeto para um campo, você também pode associá-lo para um valor estático, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Text%2A?displayProperty=nameWithType> propriedade. Isso permite que você exiba o mesmo texto em cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.Text%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A> propriedade terá precedência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.TextField%2A> propriedade para especificar o nome do campo para associar o <xref:System.Web.UI.WebControls.MenuItem.Text%2A> propriedade de um item de menu. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBinding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBinding/CS/menuitembindingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBinding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBinding/VB/menuitembindingvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de dica de ferramenta para um item de menu ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado.</summary>
+        <value>O texto de dica de ferramenta para um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicada. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTip%2A> propriedade para especificar o texto para associar ao <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Essa dica de ferramenta é compartilhada com todos os itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Quando o usuário posiciona o ponteiro do mouse sobre um item de menu, o texto especificado é exibido.  
+  
+> [!NOTE]
+>  Você pode substituir a dica de ferramenta para um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade diretamente.  
+  
+ Em vez de usar essa propriedade para especificar a mesma dica de ferramenta para cada item de menu, você também pode associar o <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto para um campo de fonte de dados, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTipField%2A> propriedade. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTip%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTipField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTipField%2A> propriedade terá precedência.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTip%2A> propriedade para especificar a dica de ferramenta a ser exibido quando o usuário posiciona o ponteiro do mouse sobre um item de menu. Essa dica de ferramenta é exibida para cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingText/CS/menuitembindingtextcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingText/VB/menuitembindingtextvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipField">
+      <MemberSignature Language="C#" Value="public string ToolTipField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.ToolTipField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.ToolTip" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo a ser associado ao <see cref="P:System.Web.UI.WebControls.MenuItem.ToolTip" /> de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTipField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo. O texto especificado é exibido quando o usuário posiciona o ponteiro do mouse sobre um item de menu.  
+  
+> [!NOTE]
+>  Você pode substituir o texto de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+ Em vez de usar essa propriedade para associar o <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> o objeto para um campo, você também pode associá-lo para um valor estático, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTip%2A?displayProperty=nameWithType> propriedade. Isso permite que você exiba a mesma dica de ferramenta para cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTip%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTipField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTipField%2A> propriedade terá precedência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.ToolTipField%2A> propriedade para especificar o nome do campo para associar o <xref:System.Web.UI.WebControls.MenuItem.ToolTip%2A> propriedade de um item de menu. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBinding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBinding/CS/menuitembindingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBinding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBinding/VB/menuitembindingvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemBinding.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor os usado para armazenar dados adicionais sobre um item de menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> objeto é aplicado, como os dados usados para tratar eventos de postback.</summary>
+        <value>Item de dados complementares sobre um menu no qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado; esses dados não são exibidos. O valor padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.Value%2A> propriedade para especificar o valor para associar ao <xref:System.Web.UI.WebControls.MenuItem.Value%2A?displayProperty=nameWithType> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Esse valor é compartilhado com todos os itens de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. O valor especificado não é exibido em um item de menu e é usado para armazenar dados adicionais sobre um item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado, como os dados usados para tratar eventos de postback.  
+  
+> [!NOTE]
+>  Você pode substituir o valor de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade diretamente.  
+  
+ Em vez de usar essa propriedade para especificar o mesmo valor para cada item de menu, você também pode associar o <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto para um campo de fonte de dados, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.ValueField%2A> propriedade. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.Value%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.ValueField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.ValueField%2A> propriedade terá precedência.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.Value%2A> propriedade para especificar um valor dos associado a um item de menu. Esse valor é usado em cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBindingText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBindingText/CS/menuitembindingtextcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBindingText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBindingText/VB/menuitembindingtextvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueField">
+      <MemberSignature Language="C#" Value="public string ValueField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemBinding.ValueField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da fonte de dados a ser associado à propriedade <see cref="P:System.Web.UI.WebControls.MenuItem.Value" /> de um objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o objeto <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado.</summary>
+        <value>O nome do campo a ser associado ao <see cref="P:System.Web.UI.WebControls.MenuItem.Value" /> de um <see cref="T:System.Web.UI.WebControls.MenuItem" /> ao qual o <see cref="T:System.Web.UI.WebControls.MenuItemBinding" /> é aplicado. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, use o <xref:System.Web.UI.WebControls.MenuItemBinding.ValueField%2A> propriedade para especificar o nome do campo para associar ao <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto. Quando renderizado, o <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade de cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado contém o valor correspondente do campo. O valor especificado não é exibido em um item de menu e é usado para armazenar dados adicionais sobre um item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado, como os dados usados para tratar eventos de postback.  
+  
+> [!NOTE]
+>  Você pode substituir o valor de um item de menu individuais definindo seu <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade diretamente.  
+  
+ Se a fonte de dados contiver várias tabelas ou atributos, você deve primeiro estabelecer os critérios de associação, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Depth%2A> propriedade, o <xref:System.Web.UI.WebControls.MenuItemBinding.DataMember%2A> propriedade, ou ambos.  
+  
+ Em vez de usar essa propriedade para associar o <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> o objeto para um campo, você também pode associá-lo para um valor estático, definindo o <xref:System.Web.UI.WebControls.MenuItemBinding.Value%2A?displayProperty=nameWithType> propriedade. Isso permite que você especifique o mesmo valor para cada item de menu no qual o <xref:System.Web.UI.WebControls.MenuItemBinding> objeto é aplicado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.MenuItemBinding.Value%2A> e <xref:System.Web.UI.WebControls.MenuItemBinding.ValueField%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.MenuItemBinding.ValueField%2A> propriedade terá precedência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemBinding.ValueField%2A> propriedade para especificar o nome do campo para associar o <xref:System.Web.UI.WebControls.MenuItem.Value%2A> propriedade de um item de menu. Para esse exemplo funcione corretamente, você deve copiar os dados XML de exemplo abaixo em um arquivo chamado Menu.xml.  
+  
+ [!code-aspx-csharp[MenuItemBinding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemBinding/CS/menuitembindingcs.aspx#1)]
+ [!code-aspx-vb[MenuItemBinding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemBinding/VB/menuitembindingvb.aspx#1)]  
+  
+ O código a seguir é dados de mapa de site de exemplo para o exemplo anterior.  
+  
+ `<MapHomeNode ImageUrl="~\Images\Home.gif"`  
+  
+ `Title="Home"`  
+  
+ `Description="Root Page"`  
+  
+ `ToolTip="Home Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Music.gif"`  
+  
+ `Title="Music"`  
+  
+ `Description="Music Category"`  
+  
+ `ToolTip="Music Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Classical.gif"`  
+  
+ `Title="Classical"`  
+  
+ `Description="Classical Section"`  
+  
+ `ToolTip="Classical Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Rock.gif"`  
+  
+ `Title="Rock"`  
+  
+ `Description="Rock Section"`  
+  
+ `ToolTip="Rock Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Jazz.gif"`  
+  
+ `Title="Jazz"`  
+  
+ `Description="Jazz Section"`  
+  
+ `ToolTip="Jazz Page"/>`  
+  
+ `</MapNode>`  
+  
+ `<MapNode ImageUrl="~\Images\Movies.gif"`  
+  
+ `Title="Movies"`  
+  
+ `Description="Movies Category"`  
+  
+ `ToolTip="Movies Page">`  
+  
+ `<MapNode ImageUrl="~\Images\Action.gif"`  
+  
+ `Title="Action"`  
+  
+ `Description="Action Section"`  
+  
+ `ToolTip="Action Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Drama.gif"`  
+  
+ `Title="Drama"`  
+  
+ `Description="Drama Section"`  
+  
+ `ToolTip="Drama Page"/>`  
+  
+ `<MapNode ImageUrl="~\Images\Musical.gif"`  
+  
+ `Title="Musical"`  
+  
+ `Description="Musical Section"`  
+  
+ `ToolTip="Musical Page"/>`  
+  
+ `</MapNode>`  
+  
+ `</MapHomeNode>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1086 @@
+<Type Name="DataGridViewComboBoxCell" FullName="System.Windows.Forms.DataGridViewComboBoxCell">
+  <TypeSignature Language="C#" Value="public class DataGridViewComboBoxCell : System.Windows.Forms.DataGridViewCell" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewComboBoxCell extends System.Windows.Forms.DataGridViewCell" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewComboBoxCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewCell</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Exibe uma caixa de combinação em um controle <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxCell> classe é um tipo especializado de <xref:System.Windows.Forms.DataGridViewCell> usado para exibir um controle de caixa de combinação, que é um campo de edição combinado com um campo de lista de seleção. Selecionado no momento <xref:System.Windows.Forms.DataGridViewComboBoxCell> hosts um <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl> no qual o usuário pode alterar o valor da célula, supondo que a célula <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A> está definida como `false`.  
+  
+ Ao contrário de <xref:System.Windows.Forms.ComboBox> controle, o <xref:System.Windows.Forms.DataGridViewComboBoxCell> não tem <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> e <xref:System.Windows.Forms.ListControl.SelectedValue%2A> propriedades. Em vez disso, selecionando um valor de uma lista suspensa define a célula <xref:System.Windows.Forms.DataGridViewCell.Value%2A> propriedade.  
+  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxColumn> é o tipo de coluna especializado para manter as células desse tipo. Por padrão, o <xref:System.Windows.Forms.DataGridViewComboBoxColumn.CellTemplate%2A?displayProperty=nameWithType> é inicializada com um novo <xref:System.Windows.Forms.DataGridViewComboBoxCell>. Para as células dentro de uma coluna de padrões após uma existente <xref:System.Windows.Forms.DataGridViewComboBoxCell>, defina a coluna <xref:System.Windows.Forms.DataGridViewComboBoxColumn.CellTemplate%2A> propriedade até a célula para usar como padrão.  
+  
+ As propriedades relacionadas a célula da coluna são wrappers para as propriedades nomeadas da mesma forma de célula do modelo. Alterando os valores de propriedade da célula modelo afetará apenas células com base no modelo que são adicionadas após a alteração. Alterando os valores de propriedade de célula da coluna, no entanto, será atualizar o modelo de células e todas as outras células na coluna e atualize a exibição da coluna se necessário.  
+  
+ Normalmente, você trabalhará com o <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tipo, a menos que você deseja substituir os valores de coluna para células específicas. As diretrizes descritas no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral de classe para popular a lista suspensa se aplica a instâncias de célula e coluna.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.DataGridViewComboBoxColumn> classe, que usam o <xref:System.Windows.Forms.DataGridViewComboBoxCell> classe. Você pode definir a célula <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A>, e <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A> propriedades da mesma maneira que as propriedades de coluna correspondentes são definidas neste exemplo. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#40)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#40)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#40)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você deriva de <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" /> e adicionar novas propriedades para a classe derivada, certifique-se de substituir o <see cref="M:System.Windows.Forms.DataGridViewComboBoxCell.Clone" /> método para copiar as novas propriedades durante operações de clonagem. Você também deve chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewComboBoxCell.Clone" /> método para que as propriedades da classe base são copiadas para a nova célula.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewComboBoxCell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Windows.Forms.DataGridViewComboBoxCell.AutoComplete%2A> valor da propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoComplete">
+      <MemberSignature Language="C#" Value="public virtual bool AutoComplete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoComplete" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.AutoComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a célula corresponderão aos caracteres sendo inseridos na célula com uma seleção na lista suspensa.</summary>
+        <value>
+          <see langword="true" />Se o preenchimento automático está ativado; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata desta célula.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" /> clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Windows.Forms.DataGridViewComboBoxCell.Clone%2A> método sempre que derivam de <xref:System.Windows.Forms.DataGridViewComboBoxCell> e adicionar novas propriedades para a classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridViewComboBoxCell.Clone" /> em uma classe derivada, chame a classe base <see cref="M:System.Windows.Forms.DataGridViewComboBoxCell.Clone" /> método para que as propriedades da classe base são copiadas para a nova célula e certifique-se de também copiar os valores de todas as propriedades que foram adicionados à classe derivada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public virtual object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte de dados cujos dados contêm as seleções possíveis mostradas na lista suspensa.</summary>
+        <value>Um <see cref="T:System.Collections.IList" /> ou <see cref="T:System.ComponentModel.IListSource" /> que contém uma coleção de valores usados para fornecer dados à lista suspensa. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, essa propriedade será definida para uma coluna inteira de células por meio de <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A?displayProperty=nameWithType> propriedade.  
+  
+ Se possível, defina <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> para uma fonte que contém apenas as opções possíveis, como uma coluna de seleções. Em seguida, o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A> propriedade não precisa ser definidos. Mas se a fonte é mais complicada, defina <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A> para o nome da propriedade ou coluna da qual recuperar seleções possíveis.  
+  
+ Se <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> é definido como uma matriz de cadeia de caracteres, em seguida, <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A> e <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A> não precisa ser definida porque cada cadeia de caracteres da matriz será usada para o valor e exibição.  
+  
+ Alterando o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> propriedade faz com que a célula reinicializar sua <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A> coleta e redesenhar em si.  
+  
+ Quando você altera o valor da <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> propriedade, o controle tenta usar o <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A> e <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A> propriedade valores com a nova fonte de dados e define cada propriedade `null` se seu valor não pode ser encontrado. Qualquer exceção que ocorre durante esse processo é ignorada, a menos que é uma das seguintes exceções críticas: <xref:System.NullReferenceException>, <xref:System.StackOverflowException>, <xref:System.OutOfMemoryException>, <xref:System.Threading.ThreadAbortException>, <xref:System.ExecutionEngineException>, <xref:System.IndexOutOfRangeException>, ou <xref:System.AccessViolationException>.  
+  
+ Quando o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> for definida, o <xref:System.Windows.Forms.DataGridViewComboBoxCell> anexa ao <xref:System.ComponentModel.Component.Disposed> eventos da fonte de dados. Quando o <xref:System.Windows.Forms.DataGridViewComboBoxCell> será retirado do <xref:System.Windows.Forms.DataGridView>, o recurso não está liberado imediatamente. O <xref:System.Windows.Forms.DataGridViewComboBoxCell> recurso é liberado quando a fonte de dados anexado é descartada. Para liberar o recurso de coleta de lixo imediatamente, defina o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> propriedade `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#40)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#40)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado ao definir essa propriedade não é <see langword="null" /> e não é do tipo <see cref="T:System.Collections.IList" /> nem <see cref="T:System.ComponentModel.IListSource" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachEditingControl">
+      <MemberSignature Language="C#" Value="public override void DetachEditingControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DetachEditingControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.DetachEditingControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o controle de edição da célula do <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayMember">
+      <MemberSignature Language="C#" Value="public virtual string DisplayMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayMember" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que especifica o local para coletar as seleções para exibir na lista suspensa.</summary>
+        <value>Uma cadeia de caracteres especificando o nome de uma propriedade ou coluna na fonte de dados especificada na propriedade <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" />. O valor padrão é <see cref="F:System.String.Empty" />, que indica que o <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember" /> propriedade não será usada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A>representa as informações do texto exibidas na lista suspensa da caixa de combinação. Em contraste, o <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A> propriedade representa o valor correspondente de uma seleção.  
+  
+ Se os dados para as seleções são exibidos pelo <xref:System.Windows.Forms.DataGridViewComboBoxCell> deve ser formulados a partir de uma propriedade não padrão ou uma coluna do <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A>, em seguida, <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A> deve ser definido além <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A>.  
+  
+ Quando <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> é definido como uma matriz de cadeia de caracteres, <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A> não precisa ser definida porque cada cadeia de caracteres da matriz será usada como uma cadeia de caracteres de exibição válido e um valor base válido.  
+  
+ Outra maneira de carregamento de seleções da caixa de combinação é usar o <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A> propriedade. <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A>deve conter o nome da propriedade do qual coletar as seleções.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#40)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#40)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> não é <see langword="null" /> e o valor especificado quando a configuração dessa propriedade não é <see langword="null" /> ou <see cref="F:System.String.Empty" /> e não nomeia uma propriedade válida ou uma coluna na fonte de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewComboBoxDisplayStyle DisplayStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewComboBoxDisplayStyle DisplayStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewComboBoxDisplayStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina como a caixa de combinação será exibida quando não estiver no modo de edição.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DataGridViewComboBoxDisplayStyle" />. O padrão é <see cref="F:System.Windows.Forms.DataGridViewComboBoxDisplayStyle.DropDownButton" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyle%2A> propriedade afeta a aparência da célula quando ele não está no modo de edição e independentemente se ele é somente leitura. Quando a célula está em modo de edição, sempre parece um <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ Se o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyleForCurrentCellOnly%2A> é o valor da propriedade `true`, o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyle%2A> propriedade afeta a célula apenas quando a célula atual.  
+  
+ O comportamento e a aparência da seta suspensa é indicado pelo <xref:System.Windows.Forms.DataGridViewComboBoxCell.FlatStyle%2A> propriedade.  
+  
+ Para ativar o realce de célula quando o ponteiro do mouse está sobre a célula, você deve definir o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyle%2A> propriedade <xref:System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox> e <xref:System.Windows.Forms.DataGridViewComboBoxCell.FlatStyle%2A> valor da propriedade <xref:System.Windows.Forms.FlatStyle.Popup>.  
+  
+ Definindo o <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayStyle%2A> também define uma propriedade da coluna de propriedade de <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyle%2A> a propriedade de cada célula na coluna e atualiza a coluna exibir. Para substituir o valor especificado para células individuais, defina os valores de célula depois de definir o valor da coluna.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor especificado ao definir essa propriedade não é um valor <see cref="T:System.Windows.Forms.DataGridViewComboBoxDisplayStyle" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayStyleForCurrentCellOnly">
+      <MemberSignature Language="C#" Value="public bool DisplayStyleForCurrentCellOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisplayStyleForCurrentCellOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyleForCurrentCellOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyle" /> o valor da propriedade se aplica à célula apenas quando a célula atual o <see cref="T:System.Windows.Forms.DataGridView" /> controle.</summary>
+        <value>
+          <see langword="true" />Se o estilo de exibição se aplica à célula apenas quando a célula atual; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyle%2A> propriedade afeta a aparência da célula quando ele não está no modo de edição e independentemente se ele é somente leitura. Quando a célula está em modo de edição, sempre parece um <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownWidth">
+      <MemberSignature Language="C#" Value="public virtual int DropDownWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DropDownWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.DropDownWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da parte de lista suspensa de uma caixa de combinação.</summary>
+        <value>A largura, em pixels, da lista suspensa. O padrão é 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do <xref:System.Windows.Forms.ComboBox.DropDownWidth%2A> propriedade hospedado <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DropDownWidth%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#40)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#40)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor especificado é menor que um.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EditType">
+      <MemberSignature Language="C#" Value="public override Type EditType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EditType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.EditType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de controle de edição hospedado da célula.</summary>
+        <value>O <see cref="T:System.Type" /> do controle de edição subjacente. Essa propriedade sempre retorna <see cref="T:System.Windows.Forms.DataGridViewComboBoxEditingControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl> classe é derivada do <xref:System.Windows.Forms.ComboBox> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlatStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FlatStyle FlatStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FlatStyle FlatStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.FlatStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a aparência de estilo plano da célula.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.FlatStyle" />. O valor padrão é <see cref="F:System.Windows.Forms.FlatStyle.Standard" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxCell.FlatStyle%2A> propriedade afeta o comportamento e a aparência da seta suspensa na célula.  
+  
+ Para ativar o realce de célula quando o ponteiro do mouse está sobre a célula, você deve definir o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayStyle%2A> propriedade <xref:System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox> e <xref:System.Windows.Forms.DataGridViewComboBoxCell.FlatStyle%2A> valor da propriedade <xref:System.Windows.Forms.FlatStyle.Popup>.  
+  
+ Definindo o <xref:System.Windows.Forms.DataGridViewComboBoxColumn.FlatStyle%2A> também define uma propriedade da coluna de propriedade de <xref:System.Windows.Forms.DataGridViewComboBoxCell.FlatStyle%2A> a propriedade de cada célula na coluna e atualiza a coluna exibir. Para substituir o valor especificado para células individuais, defina os valores de célula depois de definir o valor da coluna.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.FlatStyle%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#40)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#40)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor especificado não é um valor <see cref="T:System.Windows.Forms.FlatStyle" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FormattedValueType">
+      <MemberSignature Language="C#" Value="public override Type FormattedValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type FormattedValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.FormattedValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de classe do valor formatado associado à célula.</summary>
+        <value>O tipo de célula do formatado. Essa propriedade sempre retorna <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como uma caixa de combinação trata apenas informações de texto, o tipo do valor formatado subjacente é sempre <xref:System.String>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DataGridViewCell.FormattedValueType%2A?displayProperty=nameWithType> propriedade para determinar o tipo do conteúdo da célula. Neste exemplo, o <xref:System.Windows.Forms.DataGridViewCell.FormattedValueType%2A?displayProperty=nameWithType> propriedade é usada para determinar se a célula contém um <xref:System.String> antes de tentar converter o valor. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridView.SelectionChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewSelectionSum#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectionSum/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewSelectionSum#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectionSum/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentBounds">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle GetContentBounds (System.Drawing.Graphics graphics, System.Windows.Forms.DataGridViewCellStyle cellStyle, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Rectangle GetContentBounds(class System.Drawing.Graphics graphics, class System.Windows.Forms.DataGridViewCellStyle cellStyle, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.GetContentBounds(System.Drawing.Graphics,System.Windows.Forms.DataGridViewCellStyle,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O contexto de gráficos para a célula.</param>
+        <param name="cellStyle">O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> a ser aplicado à célula.</param>
+        <param name="rowIndex">O índice da linha pai da célula.</param>
+        <summary>Retorna o retângulo delimitador que inclui a área de conteúdo da célula, que é calculada usando especificado <see cref="T:System.Drawing.Graphics" /> e estilo da célula.</summary>
+        <returns>O <see cref="T:System.Drawing.Rectangle" /> que delimita o conteúdo da célula.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorIconBounds">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle GetErrorIconBounds (System.Drawing.Graphics graphics, System.Windows.Forms.DataGridViewCellStyle cellStyle, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Rectangle GetErrorIconBounds(class System.Drawing.Graphics graphics, class System.Windows.Forms.DataGridViewCellStyle cellStyle, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.GetErrorIconBounds(System.Drawing.Graphics,System.Windows.Forms.DataGridViewCellStyle,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O contexto de gráficos para a célula.</param>
+        <param name="cellStyle">O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> a ser aplicado à célula.</param>
+        <param name="rowIndex">O índice da linha pai da célula.</param>
+        <summary>Retorna o retângulo delimitador que inclui o ícone de erro da célula, caso seja exibida.</summary>
+        <returns>O <see cref="T:System.Drawing.Rectangle" /> que circunda o ícone de erro da célula, se um for exibido; caso contrário, <see cref="F:System.Drawing.Rectangle.Empty" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormattedValue">
+      <MemberSignature Language="C#" Value="protected override object GetFormattedValue (object value, int rowIndex, ref System.Windows.Forms.DataGridViewCellStyle cellStyle, System.ComponentModel.TypeConverter valueTypeConverter, System.ComponentModel.TypeConverter formattedValueTypeConverter, System.Windows.Forms.DataGridViewDataErrorContexts context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetFormattedValue(object value, int32 rowIndex, class System.Windows.Forms.DataGridViewCellStyle&amp; cellStyle, class System.ComponentModel.TypeConverter valueTypeConverter, class System.ComponentModel.TypeConverter formattedValueTypeConverter, valuetype System.Windows.Forms.DataGridViewDataErrorContexts context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.GetFormattedValue(System.Object,System.Int32,System.Windows.Forms.DataGridViewCellStyle@,System.ComponentModel.TypeConverter,System.ComponentModel.TypeConverter,System.Windows.Forms.DataGridViewDataErrorContexts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle&amp;" RefType="ref" />
+        <Parameter Name="valueTypeConverter" Type="System.ComponentModel.TypeConverter" />
+        <Parameter Name="formattedValueTypeConverter" Type="System.ComponentModel.TypeConverter" />
+        <Parameter Name="context" Type="System.Windows.Forms.DataGridViewDataErrorContexts" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser formatado.</param>
+        <param name="rowIndex">O índice da linha pai da célula.</param>
+        <param name="cellStyle">O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> em vigor para a célula.</param>
+        <param name="valueTypeConverter">Um <see cref="T:System.ComponentModel.TypeConverter" /> associado com o tipo de valor que fornece conversão personalizada para o tipo de valor formatado, ou <see langword="null" /> se não há tal conversão personalizada é necessária.</param>
+        <param name="formattedValueTypeConverter">Um <see cref="T:System.ComponentModel.TypeConverter" /> associado com o tipo de valor formatado que fornece personalizados de conversão do tipo de valor, ou <see langword="null" /> se não há tal conversão personalizada é necessária.</param>
+        <param name="context">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.DataGridViewDataErrorContexts" /> valores que descrevem o contexto no qual o valor formatado é necessário.</param>
+        <summary>Obtém o valor formatado dos dados da célula.</summary>
+        <returns>O valor dos dados da célula após a aplicação da formatação ou <see langword="null" /> se a célula não é parte de um <see cref="T:System.Windows.Forms.DataGridView" /> controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView> controle chama esse método para converter um valor de célula em um valor de exibição equivalente do tipo indicado pelo <xref:System.Windows.Forms.DataGridViewComboBoxCell.FormattedValueType%2A> propriedade. O controle passa o valor da célula para este método no `value` parâmetro.  
+  
+ Este método primeiro determina se `value` é válido, determinando se uma das seguintes condições é atendida.  
+  
+-   `value`está presente no <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> ou <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A> coleção.  
+  
+-   `value` é `null` ou <xref:System.DBNull.Value?displayProperty=nameWithType>.  
+  
+-   `value`é <xref:System.String.Empty?displayProperty=nameWithType> e <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueType%2A> representa o valor da propriedade de <xref:System.String> tipo.  
+  
+ Se `value` não é válido, o <xref:System.Windows.Forms.DataGridView.DataError?displayProperty=nameWithType> evento ocorre. Se não houver nenhum manipulador para este evento ou os conjuntos de manipulador de <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.ThrowException%2A?displayProperty=nameWithType> propriedade `true`, uma exceção será lançada.  
+  
+ Se `value` é válida ou há um manipulador para o <xref:System.Windows.Forms.DataGridView.DataError> eventos e ele não define o <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.ThrowException%2A?displayProperty=nameWithType> propriedade `true`, o <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> evento ocorre.  
+  
+ Um <xref:System.Windows.Forms.DataGridView.CellFormatting> manipulador de eventos pode modificar tanto `value` e `cellStyle`. Se o manipulador não definir o <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A?displayProperty=nameWithType> propriedade `true`, no entanto, esse método formatos `value` usando as propriedades de formatação a `cellStyle` objeto. Isso pode resultar em mais <xref:System.Windows.Forms.DataGridView.DataError> eventos.  
+  
+ Se a formatação for bem-sucedida, este método retorna o valor formatado para exibição no <xref:System.Windows.Forms.DataGridView> controle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Falha ao formatar e não há nenhum manipulador para o evento <see cref="E:System.Windows.Forms.DataGridView.DataError" /> do controle <see cref="T:System.Windows.Forms.DataGridView" /> ou o manipulador definiu a propriedade <see cref="P:System.Windows.Forms.DataGridViewDataErrorEventArgs.ThrowException" /> como <see langword="true" />. O objeto de exceção normalmente pode ser convertido no tipo <see cref="T:System.FormatException" /> para erros de conversão de tipo ou no tipo <see cref="T:System.ArgumentException" /> se <paramref name="value" /> não foi encontrado no <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> ou na coleção <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.Items" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size GetPreferredSize (System.Drawing.Graphics graphics, System.Windows.Forms.DataGridViewCellStyle cellStyle, int rowIndex, System.Drawing.Size constraintSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(class System.Drawing.Graphics graphics, class System.Windows.Forms.DataGridViewCellStyle cellStyle, int32 rowIndex, valuetype System.Drawing.Size constraintSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.GetPreferredSize(System.Drawing.Graphics,System.Windows.Forms.DataGridViewCellStyle,System.Int32,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="constraintSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a célula.</param>
+        <param name="cellStyle">Um <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> que representa o estilo da célula.</param>
+        <param name="rowIndex">O índice de linha de base zero da célula.</param>
+        <param name="constraintSize">Tamanho máximo permitido a célula.</param>
+        <summary>Calcula o tamanho preferido, em pixels, da célula.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> que representa o tamanho preferido, em pixels, da célula.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeEditingControl">
+      <MemberSignature Language="C#" Value="public override void InitializeEditingControl (int rowIndex, object initialFormattedValue, System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeEditingControl(int32 rowIndex, object initialFormattedValue, class System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.InitializeEditingControl(System.Int32,System.Object,System.Windows.Forms.DataGridViewCellStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="initialFormattedValue" Type="System.Object" />
+        <Parameter Name="dataGridViewCellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha pai da célula.</param>
+        <param name="initialFormattedValue">O valor inicial a ser exibida no controle.</param>
+        <param name="dataGridViewCellStyle">Um <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> que determina a aparência do controle hospedado.</param>
+        <summary>Anexa e inicializa o controle de edição hospedado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxCell.InitializeEditingControl%2A> método inicializa hospedado <xref:System.Windows.Forms.ComboBox> controle conforme descrito na base de <xref:System.Windows.Forms.DataGridViewCell.InitializeEditingControl%2A?displayProperty=nameWithType> método. Além disso, para cada invocação, <xref:System.Windows.Forms.DataGridViewComboBoxCell.InitializeEditingControl%2A> faz o seguinte:  
+  
+-   Define as propriedades visuais de hospedado <xref:System.Windows.Forms.ComboBox> controlar, como <xref:System.Windows.Forms.ComboBox.MaxDropDownItems%2A>, <xref:System.Windows.Forms.ComboBox.DropDownWidth%2A>, e <xref:System.Windows.Forms.ComboBox.FlatStyle%2A>, para coincidir com as propriedades correspondentes da célula atual.  
+  
+-   Define as propriedades de associação de dados de hospedado <xref:System.Windows.Forms.ComboBox> controlar, como <xref:System.Windows.Forms.ComboBox.DataSource%2A>, <xref:System.Windows.Forms.ListControl.DisplayMember%2A>, e <xref:System.Windows.Forms.ListControl.ValueMember%2A>, para coincidir com as propriedades correspondentes da célula atual.  
+  
+-   Reinicializa o <xref:System.Windows.Forms.ComboBox.Items%2A> propriedade hospedado <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ Esse método também ajusta dimensões da célula para acomodar hospedado <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewComboBoxCell/ObjectCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewComboBoxCell+ObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os objetos que representam a seleção exibida na lista suspensa.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection" /> que contém a seleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você obtenha uma referência para a lista de itens que estão atualmente armazenados na <xref:System.Windows.Forms.DataGridViewComboBoxCell>. Com essa referência, adicionar itens, remover itens e obter uma contagem dos itens na coleção. Para obter mais informações sobre as tarefas que podem ser executadas com o <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A> coleta, consulte <xref:System.Windows.Forms.DataGridViewComboBoxCell.ObjectCollection>.  
+  
+ Se cadeias de caracteres são adicionadas ao <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A>, em seguida, <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A> e <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A> não precisa ser definida porque cada cadeia de caracteres adicionada será usada para o valor e exibição.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.DataGridViewComboBoxCell>não suporta o uso de vários itens com valores de exibição idêntico.  
+  
+ Se o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> propriedade for definida, o <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A> propriedade não pode ser usada.  
+  
+ O valor formatado da célula sempre deve ser um dos valores a <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A> coleção ou um erro ocorrerá e o valor da célula será revertido para o primeiro item na coleção. Você pode personalizar esse comportamento ao manipular o <xref:System.Windows.Forms.DataGridView.DataError?displayProperty=nameWithType> e <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> eventos.  
+  
+ Definir essa propriedade como um valor diferente do valor da coluna pai da <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> propriedade forçará a linha se torne não compartilhado, a alocação de memória extra. Para obter mais informações sobre compartilhamento de linha, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#30](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#30)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#30)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyEntersEditMode">
+      <MemberSignature Language="C#" Value="public override bool KeyEntersEditMode (System.Windows.Forms.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool KeyEntersEditMode(class System.Windows.Forms.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.KeyEntersEditMode(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.KeyEventArgs" /> que representa a tecla pressionada.</param>
+        <summary>Determina se o modo de edição deve ser iniciado com base na chave especificada.</summary>
+        <returns>
+          <see langword="true" />Se Editar modo deve ser iniciado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.DataGridView.EditMode%2A> propriedade o <xref:System.Windows.Forms.DataGridView> controle é definido como <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke> ou <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>, o controle usa esse método para determinar se uma chave diferente F2 for pressionado, o usuário enquanto esta célula tem foco fará com que a célula entrar no modo de edição.  
+  
+ Este método retorna `true` se o parâmetro e indica que uma das seguintes chaves ou combinações de teclas: F4, ALT + seta para cima, ALT + seta para baixo ou uma chave de entrada de dados comuns (como uma letra, número, marca de pontuação ou a chave de espaço) sem modificações por ALT ou CTRL, excluindo SHIFT + espaço, que é usado pelo controle para fins de seleção. Para obter mais informações, consulte [padrão de teclado e Mouse manipulando em controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDropDownItems">
+      <MemberSignature Language="C#" Value="public virtual int MaxDropDownItems { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxDropDownItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.MaxDropDownItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(8)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de itens mostrados na lista suspensa.</summary>
+        <value>O número de itens de lista suspensa para permitir. O mínimo é 1 e o máximo é 100; o padrão é 8.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterando o <xref:System.Windows.Forms.DataGridViewComboBoxCell.MaxDropDownItems%2A> alterações de propriedade correspondente <xref:System.Windows.Forms.ComboBox.MaxDropDownItems%2A> propriedade hospedado <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>, se um for encerrada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.MaxDropDownItems%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#30](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#30)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#30)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que 1 ou maior que 100 ao definir essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataGridViewChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDataGridViewChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataGridViewChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.OnDataGridViewChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando o <see cref="P:System.Windows.Forms.DataGridViewElement.DataGridView" /> propriedade da célula é alterada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> propriedade não é <see langword="null" /> e o valor da <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember" /> propriedade ou o <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember" /> propriedade não é <see langword="null" /> ou <see cref="F:System.String.Empty" /> e não nomeia uma propriedade válida ou uma coluna na fonte de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnter">
+      <MemberSignature Language="C#" Value="protected override void OnEnter (int rowIndex, bool throughMouseClick);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnter(int32 rowIndex, bool throughMouseClick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.OnEnter(System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="throughMouseClick" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha pai da célula.</param>
+        <param name="throughMouseClick">
+          <see langword="true" />Se uma ação do usuário movido o foco para a célula; <see langword="false" /> se uma operação programática movido o foco para a célula.</param>
+        <summary>Chamado quando o foco é movido para uma célula.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLeave">
+      <MemberSignature Language="C#" Value="protected override void OnLeave (int rowIndex, bool throughMouseClick);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLeave(int32 rowIndex, bool throughMouseClick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.OnLeave(System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="throughMouseClick" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha pai da célula.</param>
+        <param name="throughMouseClick">
+          <see langword="true" />Se uma ação do usuário moveu o foco da célula; <see langword="false" /> se uma operação programática movido o foco da célula.</param>
+        <summary>Chamado quando o foco é movido de uma célula.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseClick">
+      <MemberSignature Language="C#" Value="protected override void OnMouseClick (System.Windows.Forms.DataGridViewCellMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseClick(class System.Windows.Forms.DataGridViewCellMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.OnMouseClick(System.Windows.Forms.DataGridViewCellMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DataGridViewCellMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DataGridViewCellMouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Chamado quando o usuário clica em um botão do mouse enquanto o ponteiro está em uma célula.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.OnMouseEnter(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha pai da célula.</param>
+        <summary>Chamado quando o ponteiro do mouse se move sobre uma célula.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.OnMouseLeave(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha pai da célula.</param>
+        <summary>Chamado quando o ponteiro do mouse sai da célula.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Forms.DataGridViewCellMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Forms.DataGridViewCellMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.OnMouseMove(System.Windows.Forms.DataGridViewCellMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DataGridViewCellMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DataGridViewCellMouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Chamado quando o ponteiro do mouse se move de uma célula.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected override void Paint (System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle cellBounds, int rowIndex, System.Windows.Forms.DataGridViewElementStates elementState, object value, object formattedValue, string errorText, System.Windows.Forms.DataGridViewCellStyle cellStyle, System.Windows.Forms.DataGridViewAdvancedBorderStyle advancedBorderStyle, System.Windows.Forms.DataGridViewPaintParts paintParts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Paint(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipBounds, valuetype System.Drawing.Rectangle cellBounds, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewElementStates elementState, object value, object formattedValue, string errorText, class System.Windows.Forms.DataGridViewCellStyle cellStyle, class System.Windows.Forms.DataGridViewAdvancedBorderStyle advancedBorderStyle, valuetype System.Windows.Forms.DataGridViewPaintParts paintParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.Object,System.Object,System.String,System.Windows.Forms.DataGridViewCellStyle,System.Windows.Forms.DataGridViewAdvancedBorderStyle,System.Windows.Forms.DataGridViewPaintParts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="cellBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="elementState" Type="System.Windows.Forms.DataGridViewElementStates" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="formattedValue" Type="System.Object" />
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="advancedBorderStyle" Type="System.Windows.Forms.DataGridViewAdvancedBorderStyle" />
+        <Parameter Name="paintParts" Type="System.Windows.Forms.DataGridViewPaintParts" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> usado para pintar a célula.</param>
+        <param name="clipBounds">Um <see cref="T:System.Drawing.Rectangle" /> que representa a área do <see cref="T:System.Windows.Forms.DataGridView" /> que precisa ser pintada novamente.</param>
+        <param name="cellBounds">Um <see cref="T:System.Drawing.Rectangle" /> que contém os limites da célula que está sendo pintada.</param>
+        <param name="rowIndex">O índice de linha da célula que está sendo pintada.</param>
+        <param name="elementState">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> valores que especifica o estado da célula.</param>
+        <param name="value">Os dados da célula que está sendo pintada.</param>
+        <param name="formattedValue">Os dados formatados da célula que está sendo pintada.</param>
+        <param name="errorText">Uma mensagem de erro que é associada à célula.</param>
+        <param name="cellStyle">Um <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> que contém informações de formatação e estilo sobre a célula.</param>
+        <param name="advancedBorderStyle">Um <see cref="T:System.Windows.Forms.DataGridViewAdvancedBorderStyle" /> que contém estilos de borda para a célula que está sendo pintada.</param>
+        <param name="paintParts">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> que especificam quais partes da célula precisam ser pintadas.</param>
+        <summary>Pinta o <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" /> atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseFormattedValue">
+      <MemberSignature Language="C#" Value="public override object ParseFormattedValue (object formattedValue, System.Windows.Forms.DataGridViewCellStyle cellStyle, System.ComponentModel.TypeConverter formattedValueTypeConverter, System.ComponentModel.TypeConverter valueTypeConverter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ParseFormattedValue(object formattedValue, class System.Windows.Forms.DataGridViewCellStyle cellStyle, class System.ComponentModel.TypeConverter formattedValueTypeConverter, class System.ComponentModel.TypeConverter valueTypeConverter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ParseFormattedValue(System.Object,System.Windows.Forms.DataGridViewCellStyle,System.ComponentModel.TypeConverter,System.ComponentModel.TypeConverter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formattedValue" Type="System.Object" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="formattedValueTypeConverter" Type="System.ComponentModel.TypeConverter" />
+        <Parameter Name="valueTypeConverter" Type="System.ComponentModel.TypeConverter" />
+      </Parameters>
+      <Docs>
+        <param name="formattedValue">O valor da célula de exibição.</param>
+        <param name="cellStyle">O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> em vigor para a célula.</param>
+        <param name="formattedValueTypeConverter">Um <see cref="T:System.ComponentModel.TypeConverter" /> para o tipo de valor de exibição, ou null usar o conversor padrão.</param>
+        <param name="valueTypeConverter">Um <see cref="T:System.ComponentModel.TypeConverter" /> para o tipo de valor de célula ou null usar o conversor padrão.</param>
+        <summary>Converte um valor formatado para exibição no valor real da célula.</summary>
+        <returns>O valor da célula.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sorted">
+      <MemberSignature Language="C#" Value="public virtual bool Sorted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Sorted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.Sorted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os itens na caixa de combinação estão classificados automaticamente.</summary>
+        <value>
+          <see langword="true" /> se a caixa de combinação for classificada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica se o hospedado <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl> classifica as entradas existentes e adicionar novas entradas à posição classificada apropriada na lista. Quando essa propriedade é definida como `false`, novos itens são adicionados ao final da lista existente. A operação de classificação é executada em ordem alfabética crescente e diferencia maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Sorted%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#30](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#30)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#30)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Foi feita uma tentativa para classificar uma célula que está anexada a uma fonte de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxCell.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que descreve o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueMember">
+      <MemberSignature Language="C#" Value="public virtual string ValueMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueMember" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que especifica o local para coletar os valores usados na lista suspensa.</summary>
+        <value>Uma cadeia de caracteres que especifica o nome de uma propriedade ou coluna. O valor padrão é <see cref="F:System.String.Empty" />, que indica que essa propriedade será ignorada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A>representa o valor correspondente de uma seleção. Em contraste, o <xref:System.Windows.Forms.DataGridViewComboBoxCell.DisplayMember%2A> propriedade representa as informações do texto exibidas na lista suspensa.  
+  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> propriedade especifica a fonte de dados para o valor de seleção exibida na lista suspensa.  
+  
+ Se os dados para as seleções são exibidos pelo <xref:System.Windows.Forms.DataGridViewComboBoxCell> deve ser formulados a partir de uma propriedade não padrão ou uma coluna do <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A>, em seguida, <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A> deve ser definido além <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A>.  
+  
+ Quando <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A> é definido como uma matriz de cadeia de caracteres, <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A> não precisa ser definida porque cada cadeia de caracteres da matriz será usada como uma cadeia de caracteres de exibição válido e um valor base válido.  
+  
+ Outra maneira de carregamento de seleções da caixa de combinação é usar o <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A> propriedade. <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A>deve conter o nome da propriedade do qual coletar as seleções.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#40)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#40)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade <see cref="P:System.Windows.Forms.DataGridViewComboBoxCell.DataSource" /> não é <see langword="null" /> e o valor especificado quando a configuração dessa propriedade não é <see langword="null" /> ou <see cref="F:System.String.Empty" /> e não nomeia uma propriedade válida ou uma coluna na fonte de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueType">
+      <MemberSignature Language="C#" Value="public override Type ValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxCell.ValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de dados dos valores na célula.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de dados do valor na célula.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

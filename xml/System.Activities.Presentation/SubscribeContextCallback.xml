@@ -1,0 +1,30 @@
+<Type Name="SubscribeContextCallback" FullName="System.Activities.Presentation.SubscribeContextCallback">
+  <TypeSignature Language="C#" Value="public delegate void SubscribeContextCallback(ContextItem item);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SubscribeContextCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.SubscribeContextCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="item" Type="System.Activities.Presentation.ContextItem" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="item">O item de contexto que foram alteradas.</param>
+    <summary>Define um método de retorno de chamada que será chamado quando um item de contexto é alterado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse retorno de chamada fornece um mecanismo para as partes interessadas no host e o designer de fluxo de trabalho para se inscrever para atualizações para um <xref:System.Activities.Presentation.ContextItem> publicados para o contexto de edição do designer de fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

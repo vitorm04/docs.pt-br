@@ -1,0 +1,116 @@
+<Type Name="SoapTransportImporter" FullName="System.Web.Services.Description.SoapTransportImporter">
+  <TypeSignature Language="C#" Value="public abstract class SoapTransportImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SoapTransportImporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.SoapTransportImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Serve como uma classe base para classes derivadas que importa os protocolos de transmissão de SOAP para serviços Web XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Embora essa classe é projetada para servir como a classe base para classes definidas pelo usuário, a implementação atual dos XML Web services não oferece suporte a essas classes definidas pelo usuário.  
+  
+ Para obter mais informações sobre como especificar protocolos para XML Web services, consulte [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Para obter mais informações sobre WSDL Web Services Description Language (), consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Web.Services.Description.SoapTransportImporter" />, você deve substituir os seguintes membros: <see cref="M:System.Web.Services.Description.SoapTransportImporter.IsSupportedTransport(System.String)" /> e <see cref="M:System.Web.Services.Description.SoapTransportImporter.ImportClass" />.  
+  
+ As implementações padrão desses membros não executam nenhuma ação.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SoapTransportImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapTransportImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.SoapTransportImporter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportClass">
+      <MemberSignature Language="C#" Value="public abstract void ImportClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ImportClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapTransportImporter.ImportClass" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, esse método usa as informações contidas no <see cref="T:System.Web.Services.Description.ServiceDescription" /> modelo de objeto (disponíveis por meio de <see cref="P:System.Web.Services.Description.SoapTransportImporter.ImportContext" /> propriedade) para adicionar código específico de transporte para a classe que está sendo gerada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportContext">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapProtocolImporter ImportContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.SoapProtocolImporter ImportContext" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapTransportImporter.ImportContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapProtocolImporter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para o <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> executando a ação de importação.</summary>
+        <value>Uma referência para o <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> executando a ação de importação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas podem usar essa propriedade para obter informações detalhadas sobre o contexto de importação atual, como o <xref:System.Web.Services.Description.ServiceDescription> modelo de objeto, o nome da classe atual ou o nome do método atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupportedTransport">
+      <MemberSignature Language="C#" Value="public abstract bool IsSupportedTransport (string transport);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupportedTransport(string transport) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapTransportImporter.IsSupportedTransport(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transport" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="transport">Um URI que representa o protocolo de transporte a ser verificada.</param>
+        <summary>Quando substituído em uma classe derivada, este método determina se o protocolo de transporte especificado é suportado pelo serviço da Web em XML.</summary>
+        <returns>
+          <see langword="true" />Se o protocolo de transporte é suportado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

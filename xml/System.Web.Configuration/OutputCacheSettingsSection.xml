@@ -1,0 +1,119 @@
+<Type Name="OutputCacheSettingsSection" FullName="System.Web.Configuration.OutputCacheSettingsSection">
+  <TypeSignature Language="C#" Value="public sealed class OutputCacheSettingsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OutputCacheSettingsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.OutputCacheSettingsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define as configurações de cache de saída para as páginas do aplicativo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.OutputCacheSettingsSection> classe permite que você programaticamente acessar e modificar o `outputCacheSettings` elemento o `caching` seção em um arquivo de configuração. As configurações de cache de saída definem as dependências (as relações entre itens armazenados em cache e arquivos, chaves de cache, ou <xref:System.Web.Caching.CacheDependency> objetos) que são usados no cache de saída, por exemplo, pelo [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) diretiva ou o <xref:System.Web.Configuration.OutputCacheProfile>.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.OutputCacheSettingsSection> pode gravar informações para a seção correspondente do arquivo de configuração de acordo com as restrições definidas pela propriedade seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.MachineToApplication>. Qualquer tentativa de gravar em um arquivo de configuração em um nível não é permitido na hierarquia resulta em uma mensagem de erro gerada pelo analisador. No entanto, você pode usar essa classe para ler informações de configuração em qualquer nível na hierarquia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.OutputCacheSettingsSection> objeto do arquivo de configuração de um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.OutputCacheSettingsSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.OutputCacheSettingsSection/CS/OutputCacheSettingsSection.cs#1)]
+ [!code-vb[System.Web.Configuration.OutputCacheSettingsSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.OutputCacheSettingsSection/VB/OutputCacheSettingsSection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutputCacheSettingsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.OutputCacheSettingsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.OutputCacheSettingsSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.OutputCacheSettingsSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.OutputCacheSettingsSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputCacheProfiles">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.OutputCacheProfileCollection OutputCacheProfiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.OutputCacheProfileCollection OutputCacheProfiles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.OutputCacheSettingsSection.OutputCacheProfiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("outputCacheProfiles")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.OutputCacheProfileCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.Configuration.OutputCacheProfileCollection" />.</summary>
+        <value>Um <see cref="T:System.Web.Configuration.OutputCacheProfileCollection" /> de <see cref="T:System.Web.Configuration.OutputCacheProfile" /> objetos</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.OutputCacheSettingsSection.OutputCacheProfiles%2A> propriedade permite que você acesse programaticamente o `outputCacheProfiles` elemento em um arquivo de configuração. Você pode usar o <xref:System.Web.Configuration.OutputCacheSettingsSection.OutputCacheProfiles%2A> propriedade para modificar o `outputCacheProfiles` elemento programaticamente.  
+  
+ O `outputCacheProfiles` seção contém <xref:System.Web.Configuration.OutputCacheProfile> configurações que podem ser usadas por páginas do aplicativo de cache de objetos que representam a saída.  Essas configurações podem ser aplicadas a uma página definindo a `CacheProfile` atributo o [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) diretiva. Aplica o perfil ao controle de cache de atributos como dependências, o local do cache e o tempo de expiração do cache.  
+  
+ O [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) diretiva pode substituir todas as configurações contidas por um <xref:System.Web.Configuration.OutputCacheProfile> exceto o <xref:System.Web.Configuration.OutputCacheProfile.Enabled%2A> propriedade. Isso é para garantir que você pode habilitar ou desabilitar o <xref:System.Web.Configuration.OutputCacheProfile> sem a necessidade de modificar as diretivas de todas as páginas que podem ter substituído-lo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.OutputCacheSettingsSection.OutputCacheProfiles%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.OutputCacheSettingsSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.OutputCacheSettingsSection/CS/OutputCacheSettingsSection.cs#3)]
+ [!code-vb[System.Web.Configuration.OutputCacheSettingsSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.OutputCacheSettingsSection/VB/OutputCacheSettingsSection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.OutputCacheSettingsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,428 @@
+<Type Name="MessageSecurityVersion" FullName="System.ServiceModel.MessageSecurityVersion">
+  <TypeSignature Language="C#" Value="public abstract class MessageSecurityVersion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract MessageSecurityVersion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessageSecurityVersion" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Security</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um contêiner abstrato de classe que, quando implementado por várias de suas propriedades estáticas, contém informações de versão para componentes de segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é o ponto de extensibilidade para personalizar a serialização de token.  
+  
+ Essa classe é um singleton que fornece informações sobre as versões das especificações de segurança, (WS-Security, WS-Trust, WS-Secure Conversation e WS-Security Policy), que devem ser suportados por uma associação.  
+  
+ A classe contém sete `static` propriedades, cada uma delas retorna uma instância dessa classe. Cada uma dessas propriedades representa uma combinação diferente de versões da especificação de segurança. As instâncias dessa classe são usadas como parâmetros no `Create…CertificateBindingElement` método chama o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe. Se você passar o <xref:System.ServiceModel.MessageSecurityVersion.Default%2A> propriedade, você cria uma versão padrão do elemento de associação. Para criar uma versão não padrão, passe a propriedade que corresponde à sua versão.  
+  
+ A classe também contém `abstract` propriedades que são implementadas por instâncias anteriores.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BasicSecurityProfileVersion">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Security.BasicSecurityProfileVersion BasicSecurityProfileVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.BasicSecurityProfileVersion BasicSecurityProfileVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.BasicSecurityProfileVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.BasicSecurityProfileVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de versão para o perfil de segurança básico.</summary>
+        <value>O objeto <see cref="T:System.ServiceModel.Security.BasicSecurityProfileVersion" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado por instâncias dessa classe retornado por sete propriedades estáticas. Cada implementação representa uma combinação diferente de versões da especificação e então retorna um valor diferente para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.MessageSecurityVersion Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.MessageSecurityVersion Default" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de versão de segurança de mensagem padrão.</summary>
+        <value>O <see cref="T:System.ServiceModel.MessageSecurityVersion" /> objeto que representa a segurança da mensagem padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As especificações de segurança padrão são 1.1 do WS-Security, WS-Trust de fevereiro de 2005, WS-SecureConversation de fevereiro de 2005 e WS-SecurityPolicy 1.1.  
+  
+ Esta propriedade estática retorna uma instância dessa classe. A instância dessa classe é usada como parâmetros no `Create…CertificateBindingElement` método chama o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecureConversationVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecureConversationVersion SecureConversationVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecureConversationVersion SecureConversationVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.SecureConversationVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecureConversationVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de WS-SecureConversation que corresponde à versão de segurança de mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.SecureConversationVersion" /> objeto que corresponde à versão de segurança de mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado por instâncias dessa classe retornado por sete propriedades estáticas. Cada implementação representa uma combinação diferente de versões da especificação e então retorna um valor diferente para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityPolicyVersion">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Security.SecurityPolicyVersion SecurityPolicyVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityPolicyVersion SecurityPolicyVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.SecurityPolicyVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityPolicyVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de WS-SecurityPolicy que corresponde à versão de segurança de mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.SecurityPolicyVersion" /> objeto que corresponde à versão de segurança de mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado por instâncias dessa classe retornado por sete propriedades estáticas. Cada implementação representa uma combinação diferente de versões da especificação e então retorna um valor diferente para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenVersion">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenVersion SecurityTokenVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenVersion SecurityTokenVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.SecurityTokenVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de token de segurança que corresponde à versão de segurança de mensagem.</summary>
+        <value>O <see cref="T:System.IdentityModel.Selectors.SecurityTokenVersion" /> objeto que corresponde à versão de segurança de mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado por instâncias dessa classe retornado por sete propriedades estáticas. Cada implementação representa uma combinação diferente de versões da especificação e então retorna um valor diferente para essa propriedade.  
+  
+ Esta propriedade é usada para consultar uma interface de fábrica do serializador de token definida no <xref:System.IdentityModel.Selectors.SecurityTokenVersion> para uma instância de serializador de token capaz de serializar tokens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityVersion SecurityVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityVersion SecurityVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.SecurityVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do WS-Security que corresponde à versão de segurança de mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.SecurityVersion" /> objeto que corresponde à versão de segurança de mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado por instâncias dessa classe retornado por sete propriedades estáticas. Cada implementação representa uma combinação diferente de versões da especificação e então retorna um valor diferente para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.TrustVersion TrustVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.TrustVersion TrustVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.TrustVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.TrustVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de WS-Trust que corresponde à versão de segurança de mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.TrustVersion" /> objeto que corresponde à versão de segurança de mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado por instâncias dessa classe retornado por sete propriedades estáticas. Cada implementação representa uma combinação diferente de versões da especificação e então retorna um valor diferente para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.MessageSecurityVersion WSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.MessageSecurityVersion WSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.WSSecurity10WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de segurança da mensagem que exige o Basic Security Profile 1.0 com base nas especificações de segurança WS-Security 1.0, WS-Trust 1.3, WS-SecureConversation 1.3 e WS-SecurityPolicy 1.2.</summary>
+        <value>O objeto <see cref="T:System.ServiceModel.MessageSecurityVersion" /> que exige o Basic Security Profile 1.0 com base nas especificações de segurança WS-Security 1.0, WS-Trust 1.3, WS-SecureConversation 1.3 e WS-SecurityPolicy 1.2.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade estática retorna uma instância dessa classe. A instância dessa classe é usada como parâmetros no `Create…CertificateBindingElement` método chama o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.MessageSecurityVersion WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.MessageSecurityVersion WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de segurança da mensagem que requer o Basic Security Profile 1.0 com base nas especificações de segurança WS-Security 1.0, WS-Trust de fevereiro de 2005, WS-SecureConversation de fevereiro de 2005 e WS-SecurityPolicy 1.1.</summary>
+        <value>O objeto <see cref="T:System.ServiceModel.MessageSecurityVersion" /> que requer o Basic Security Profile 1.0 com base nas especificações de segurança WS-Security 1.0, WS-Trust de fevereiro de 2005, WS-SecureConversation de fevereiro de 2005 e WS-SecurityPolicy 1.1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade estática retorna uma instância dessa classe. A instância dessa classe é usada como parâmetros no `Create…CertificateBindingElement` método chama o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.MessageSecurityVersion WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.MessageSecurityVersion WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de segurança de mensagem que requer 1.1 do WS-Security, WS-Trust 1.3, WS-SecureConversation 1.3 de especificações de segurança WS-SecurityPolicy 1.2.</summary>
+        <value>O <see cref="T:System.ServiceModel.MessageSecurityVersion" /> objeto que requer as especificações de segurança 1.1 do WS-Security, WS-Trust 1.3, WS-SecureConversation 1.3 e 1.2 do WS-SecurityPolicy.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade estática retorna uma instância dessa classe. A instância dessa classe é usada como parâmetros no `Create…CertificateBindingElement` método chama o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.MessageSecurityVersion WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.MessageSecurityVersion WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrust13WSSecureConversation13WSSecurityPolicy12BasicSecurityProfile10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de segurança de mensagem que requer as especificações de segurança WS-Security1.1, WS-Trust 1.3, 1.3 WS-SecureConversation, WS-SecurityPolicy 1.2 e BasicSecurityProfile 1.0.</summary>
+        <value>O <see cref="T:System.ServiceModel.MessageSecurityVersion" /> objeto que requer as especificações de segurança WS-Security1.1, WS-Trust 1.3, 1.3 WS-SecureConversation, WS-SecurityPolicy 1.2 e BasicSecurityProfile 1.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade estática retorna uma instância dessa classe. A instância dessa classe é usada como parâmetros no `Create…CertificateBindingElement` método chama o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.MessageSecurityVersion WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.MessageSecurityVersion WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de segurança de mensagem que requer o 1.1 do WS-Security, WS-Trust de fevereiro de 2005, WS-SecureConversation de fevereiro de 2005 e as especificações de segurança WS-SecurityPolicy 1.1.</summary>
+        <value>O <see cref="T:System.ServiceModel.MessageSecurityVersion" /> objeto que exija o 1.1 do WS-Security, WS-Trust de fevereiro de 2005, WS-SecureConversation de fevereiro de 2005 e as especificações de segurança WS-SecurityPolicy 1.1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade estática retorna uma instância dessa classe. A instância dessa classe é usada como parâmetros no `Create…CertificateBindingElement` método chama o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.MessageSecurityVersion WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.MessageSecurityVersion WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de segurança da mensagem que exige o Basic Security Profile com base nas especificações de segurança WS-Security 1.1, WS-Trust de fevereiro de 2005, WS-SecureConversation de fevereiro de 2005 e WS-SecurityPolicy 1.1.</summary>
+        <value>O objeto <see cref="T:System.ServiceModel.MessageSecurityVersion" /> que exige o Basic Security Profile com base nas especificações de segurança WS-Security 1.1, WS-Trust de fevereiro de 2005, WS-SecureConversation de fevereiro de 2005 e WS-SecurityPolicy 1.1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade estática retorna uma instância dessa classe. A instância dessa classe é usada como parâmetros no `Create…CertificateBindingElement` método chama o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

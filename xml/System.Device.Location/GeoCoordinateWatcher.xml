@@ -1,0 +1,728 @@
+<Type Name="GeoCoordinateWatcher" FullName="System.Device.Location.GeoCoordinateWatcher">
+  <TypeSignature Language="C#" Value="public class GeoCoordinateWatcher : IDisposable, System.ComponentModel.INotifyPropertyChanged, System.Device.Location.IGeoPositionWatcher&lt;System.Device.Location.GeoCoordinate&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GeoCoordinateWatcher extends System.Object implements class System.ComponentModel.INotifyPropertyChanged, class System.Device.Location.IGeoPositionWatcher`1&lt;class System.Device.Location.GeoCoordinate&gt;, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Location.GeoCoordinateWatcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Device.Location.IGeoPositionWatcher&lt;System.Device.Location.GeoCoordinate&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados de localização baseados em coordenadas de latitude e longitude.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Device.Location.GeoCoordinateWatcher> classe fornece dados baseados em coordenadas de local do provedor de local atual. O provedor do local atual é priorizado como o mais alto no computador, com base em uma série de fatores, como a idade e a precisão dos dados de todos os provedores, a precisão solicitada por aplicativos de local e o impacto de desempenho e o consumo de energia associado ao provedor local. O provedor do local atual pode ser alterado ao longo do tempo, por exemplo, quando um dispositivo GPS perde o sinal de satélite em locais fechados e um provedor de triangulação Wi-Fi torna-se o provedor mais preciso no computador.  
+  
+ Para começar a acessar os dados de local, crie um <xref:System.Device.Location.GeoCoordinateWatcher> e chame <xref:System.Device.Location.GeoCoordinateWatcher.Start%2A> ou <xref:System.Device.Location.GeoCoordinateWatcher.TryStart%2A> para iniciar a aquisição de dados do provedor de local atual.  
+  
+ O <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> propriedade pode ser verificada para determinar se os dados estão disponíveis. Se houver dados disponíveis, você pode obter o local de uma vez a partir de <xref:System.Device.Location.GeoCoordinateWatcher.Position*> propriedade, ou receber atualizações contínua local manipulando o <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> evento.  
+  
+ O <xref:System.Device.Location.GeoCoordinateWatcher.Permission%2A>, <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A>, e <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> suporte para propriedades de <xref:System.ComponentModel.INotifyPropertyChanged>, de modo que um aplicativo pode associação de dados para essas propriedades.  
+  
+ No Windows 7, todos os <xref:System.Device.Location> classes são totalmente funcional se o provedor local está instalado e capaz de resolver o local do computador.  
+  
+> [!NOTE]
+>  No Windows 7 Starter Edition, o provedor somente local com suporte é o provedor de local padrão no painel de controle e um suplemento deve ser instalado para especificar a latitude e longitude.  
+  
+ **Observação** nas versões do Windows anterior ao Windows 7, as seguintes condições se aplicam:  
+  
+-   Todos os <xref:System.Device.Location> objetos que tenham construtores podem ser criados, mas o <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> propriedade sempre terá o valor <xref:System.Device.Location.GeoPositionStatus.Disabled>.  
+  
+-   O local indicado pelo <xref:System.Device.Location.GeoPosition%601.Location%2A> propriedade <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> sempre será <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+-   Nenhum evento local será gerado.  
+  
+   
+  
+## Examples  
+ O programa a seguir mostra como criar um <xref:System.Device.Location.GeoCoordinateWatcher> e iniciar a obtenção de dados usando um tempo limite de inicialização. O código, em seguida, imprime as coordenadas do local, se conhecido.  
+  
+ [!code-csharp[System.Device.Location.GetLocationDataSync1#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.getlocationdatasync1/cs/getlocationdatasync.cs#1)]
+ [!code-vb[System.Device.Location.GetLocationDataSync1#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.getlocationdatasync1/vb/GetLocationDataSync.vb#1)]  
+  
+ O programa a seguir mostra como receber atualizações contínua local assinando <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> eventos.  
+  
+ [!code-csharp[System.Device.Location.GetLocationDataAsync#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.getlocationdataasync/cs/getlocationdataasync.cs#1)]
+ [!code-vb[System.Device.Location.GetLocationDataAsync#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.getlocationdataasync/vb/GetLocationDataAsync.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Device.Location.GeoCoordinateWatcher" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** nas versões do Windows anterior ao Windows 7, as seguintes condições se aplicam:  
+  
+-   Todos os <xref:System.Device.Location> objetos que tenham construtores podem ser criados, mas o <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> propriedade sempre terá o valor <xref:System.Device.Location.GeoPositionStatus.Disabled>.  
+  
+-   O local indicado pelo <xref:System.Device.Location.GeoPosition%601.Location%2A> propriedade <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> sempre será <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+-   Nenhum evento local será gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeoCoordinateWatcher ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Device.Location.GeoCoordinateWatcher" /> com as configurações de precisão padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A configuração de precisão padrão é <xref:System.Device.Location.GeoPositionAccuracy.Default>.  
+  
+ **Observação** nas versões do Windows anterior ao Windows 7, as seguintes condições se aplicam:  
+  
+-   Todos os <xref:System.Device.Location> objetos que tenham construtores podem ser criados, mas o <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> propriedade sempre terá o valor <xref:System.Device.Location.GeoPositionStatus.Disabled>.  
+  
+-   O local indicado pelo <xref:System.Device.Location.GeoPosition%601.Location%2A> propriedade <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> sempre será <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+-   Nenhum evento local será gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeoCoordinateWatcher (System.Device.Location.GeoPositionAccuracy desiredAccuracy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Device.Location.GeoPositionAccuracy desiredAccuracy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.#ctor(System.Device.Location.GeoPositionAccuracy)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="desiredAccuracy" Type="System.Device.Location.GeoPositionAccuracy" />
+      </Parameters>
+      <Docs>
+        <param name="desiredAccuracy">
+          <see cref="T:System.Device.Location.GeoLocationAccuracy" /> que indica o nível de precisão solicitado do localizador.  
+  
+ Uma precisão de <see cref="F:System.Device.Location.GeoPositionAccuracy.High" /> pode prejudicar o desempenho e deve ser especificada somente quando a alta precisão for necessária.</param>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Device.Location.GeoCoordinateWatcher" />, dado um nível de precisão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** nas versões do Windows anterior ao Windows 7, as seguintes condições se aplicam:  
+  
+-   Todos os <xref:System.Device.Location> objetos que tenham construtores podem ser criados, mas o <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> propriedade sempre terá o valor <xref:System.Device.Location.GeoPositionStatus.Disabled>.  
+  
+-   O local indicado pelo <xref:System.Device.Location.GeoPosition%601.Location%2A> propriedade <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> sempre será <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+-   Nenhum evento local será gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredAccuracy">
+      <MemberSignature Language="C#" Value="public System.Device.Location.GeoPositionAccuracy DesiredAccuracy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Location.GeoPositionAccuracy DesiredAccuracy" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinateWatcher.DesiredAccuracy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionAccuracy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nível de precisão solicitado para os dados de localização fornecidos pelo <see cref="T:System.Device.Location.GeoCoordinateWatcher" />.</summary>
+        <value>
+          <see cref="T:System.Device.Location.GeoPositionAccuracy" />, o que indica o nível de precisão solicitado do localizador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma precisão de <xref:System.Device.Location.GeoPositionAccuracy.High> pode prejudicar o desempenho e deve ser especificada somente quando a alta precisão for necessária.  
+  
+ **Observação** nas versões do Windows anterior ao Windows 7, as seguintes condições se aplicam:  
+  
+-   Todos os <xref:System.Device.Location> objetos que tenham construtores podem ser criados, mas o <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> propriedade sempre terá o valor <xref:System.Device.Location.GeoPositionStatus.Disabled>.  
+  
+-   O local indicado pelo <xref:System.Device.Location.GeoPosition%601.Location%2A> propriedade <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> sempre será <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+-   Nenhum evento local será gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Dispose">
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Device.Location.GeoCoordinateWatcher" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Device.Location.GeoCoordinateWatcher.Dispose%2A> quando tiver terminado de usar o <xref:System.Device.Location.GeoCoordinateWatcher> classe? qualifyHint = False & no upgrade automático = True.  
+  
+ Esse método deve ser chamado para que os recursos não gerenciados podem ser liberados.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Device.Location.GeoCoordinateWatcher" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Device.Location.GeoCoordinateWatcher.Dispose%2A> quando tiver terminado de usar o <xref:System.Device.Location.GeoCoordinateWatcher> classe? qualifyHint = False & no upgrade automático = True.  
+  
+ Esse método deve ser chamado para que os recursos não gerenciados podem ser liberados.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Device.Location.GeoCoordinateWatcher" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Device.Location.GeoCoordinateWatcher.Dispose%2A> quando tiver terminado de usar o <xref:System.Device.Location.GeoCoordinateWatcher> classe? qualifyHint = False & no upgrade automático = True.  
+  
+ Esse método deve ser chamado para que os recursos não gerenciados podem ser liberados.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~GeoCoordinateWatcher ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos e executa outras operações de limpeza antes do <see cref="T:System.Device.Location.GeoCoordinateWatcher" /> é recuperada pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MovementThreshold">
+      <MemberSignature Language="C#" Value="public double MovementThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MovementThreshold" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinateWatcher.MovementThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A distância que deve ser percorrida, em metros, em relação à coordenada do último evento <see cref="E:System.Device.Location.GeoCoordinateWatcher.PositionChanged" /> antes que o localizador gere outro evento <see cref="E:System.Device.Location.GeoCoordinateWatcher.PositionChanged" />.</summary>
+        <value>Distância em metros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite de movimento padrão é zero, o que significa que qualquer alteração no local detectado pelas causas de provedor do local atual um <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> eventos e uma atualização no <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> propriedade.  
+  
+> [!NOTE]
+>  O limite de movimentação não garante que os eventos serão recebidos no limite solicitado. A plataforma tenta cumprir as solicitações para um limite específico de movimentação, mas em alguns casos, os eventos não serão gerados no limite solicitado.  
+  
+ **Observação** nas versões do Windows anterior ao Windows 7, as seguintes condições se aplicam:  
+  
+-   Todos os <xref:System.Device.Location> objetos que tenham construtores podem ser criados, mas o <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> propriedade sempre terá o valor <xref:System.Device.Location.GeoPositionStatus.Disabled>.  
+  
+-   O local indicado pelo <xref:System.Device.Location.GeoPosition%601.Location%2A> propriedade <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> sempre será <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+-   Nenhum evento local será gerado.  
+  
+ O diagrama a seguir representa as coordenadas de local que o provedor de local (por exemplo, um dispositivo GPS) fornece ao computador. P1, no diagrama, representa os dados de local incluídos em um <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> de eventos e P2, P3 e P4 representam pontos dentro do limite de movimentação. Portanto, quando o provedor local fornece dados indicando um local que os pontos (P1, P2, P3 e P4), não <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> os eventos são gerados, e <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> retorna P1. O P5 ponto está fora do <xref:System.Device.Location.GeoCoordinateWatcher.MovementThreshold%2A> distância, portanto nesse ponto, <xref:System.Device.Location.GeoCoordinateWatcher.Position*> é atualizado e um <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> é gerado.  
+  
+ ![Diagrama ilustrando MovementThreshold](~/add/media/ndp-movementthreshold.png "Diagrama ilustrando MovementThreshold")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPositionChanged">
+      <MemberSignature Language="C#" Value="protected void OnPositionChanged (System.Device.Location.GeoPositionChangedEventArgs&lt;System.Device.Location.GeoCoordinate&gt; e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnPositionChanged(class System.Device.Location.GeoPositionChangedEventArgs`1&lt;class System.Device.Location.GeoCoordinate&gt; e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.OnPositionChanged(System.Device.Location.GeoPositionChangedEventArgs{System.Device.Location.GeoCoordinate})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Device.Location.GeoPositionChangedEventArgs&lt;System.Device.Location.GeoCoordinate&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Device.Location.GeoPositionChangedEventArgs`1" /> objeto que contém o novo local.</param>
+        <summary>Chamado quando um <see cref="E:System.Device.Location.GeoCoordinateWatcher.PositionChanged" /> evento ocorre.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O programa a seguir mostra como se inscrever para atualizações contínuas de <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> eventos.  
+  
+ [!code-csharp[System.Device.Location.GetLocationDataAsync#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.getlocationdataasync/cs/getlocationdataasync.cs#1)]
+ [!code-vb[System.Device.Location.GetLocationDataAsync#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.getlocationdataasync/vb/GetLocationDataAsync.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPositionStatusChanged">
+      <MemberSignature Language="C#" Value="protected void OnPositionStatusChanged (System.Device.Location.GeoPositionStatusChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnPositionStatusChanged(class System.Device.Location.GeoPositionStatusChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.OnPositionStatusChanged(System.Device.Location.GeoPositionStatusChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Device.Location.GeoPositionStatusChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Device.Location.GeoPositionStatusChangedEventArgs" /> objeto que contém o novo status.</param>
+        <summary>Chamado quando um <see cref="E:System.Device.Location.GeoCoordinateWatcher.StatusChanged" /> evento ocorre.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected void OnPropertyChanged (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnPropertyChanged(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.OnPropertyChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade que foi alterada.</param>
+        <summary>Chamado quando uma propriedade do <see cref="T:System.Device.Location.GeoCoordinateWatcher" /> alterações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> evento para implementar a associação de dados em aplicativos de formulários do Windows.  
+  
+ Este método indica que o <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> propriedade, o <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> propriedade, ou o <xref:System.Device.Location.GeoCoordinateWatcher.Permission%2A> propriedade foi alterada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Permission">
+      <MemberSignature Language="C#" Value="public System.Device.Location.GeoPositionPermission Permission { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Location.GeoPositionPermission Permission" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinateWatcher.Permission" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionPermission</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a permissão para acessar dados de local de provedores de local foi concedido ou negado.</summary>
+        <value>Um valor que indica se permissão foi concedida ou negada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Device.Location.GeoPosition&lt;System.Device.Location.GeoCoordinate&gt; Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.Location.GeoPosition`1&lt;class System.Device.Location.GeoCoordinate&gt; Position" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinateWatcher.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPosition&lt;System.Device.Location.GeoCoordinate&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Device.Location.GeoCoordinate" /> que indica o local atual.</summary>
+        <value>O <see cref="T:System.Device.Location.GeoCoordinate" /> que indica o local atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, o <xref:System.Device.Location.GeoPosition%601.Location%2A> propriedade o <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> propriedade é salvo em um <xref:System.Device.Location.GeoCoordinate> objeto. Os campos de latitude e longitude do <xref:System.Device.Location.GeoCoordinate> são impressas se eles são conhecidos.  
+  
+ [!code-csharp[System.Device.Location.GetLocationDataSync1#2](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.getlocationdatasync1/cs/getlocationdatasync.cs#2)]
+ [!code-vb[System.Device.Location.GetLocationDataSync1#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.getlocationdatasync1/vb/GetLocationDataSync.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Device.Location.GeoPositionChangedEventArgs&lt;System.Device.Location.GeoCoordinate&gt;&gt; PositionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Device.Location.GeoPositionChangedEventArgs`1&lt;class System.Device.Location.GeoCoordinate&gt;&gt; PositionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Device.Location.GeoCoordinateWatcher.PositionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Device.Location.GeoPositionChangedEventArgs&lt;System.Device.Location.GeoCoordinate&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a latitude ou a longitude dos dados de localização foi alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado apenas quando a distância movido desde o último evento excede o limite especificado pelo <xref:System.Device.Location.GeoCoordinateWatcher.MovementThreshold%2A>.  
+  
+ O <xref:System.Device.Location.GeoPositionChangedEventArgs%601> objeto passado para o manipulador de eventos inclui o <xref:System.Device.Location.GeoPosition%601> objeto que contém os dados de local atualizado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como tratar o primeiro <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> eventos.  
+  
+ [!code-csharp[System.Device.Location.LocationEvent1#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.locationevent1/cs/locationevent.cs#1)]
+ [!code-vb[System.Device.Location.LocationEvent1#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.locationevent1/vb/locationevent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicie a aquisição de dados do localizador atual. Esse método habilita eventos <see cref="E:System.Device.Location.GeoCoordinateWatcher.PositionChanged" /> e permite o acesso à propriedade <see cref="P:System.Device.Location.GeoCoordinateWatcher.Position" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método iniciará a aquisição de dados do provedor de local atual. O provedor do local atual é selecionado com base em fatores como a idade e a precisão dos dados de todos os provedores, a precisão solicitada pelo aplicativo ou aplicativos e o consumo de energia e impacto de desempenho associada ao provedor local. O provedor do local atual pode ser alterado ao longo do tempo, por exemplo, quando um dispositivo GPS perde o sinal de satélite em locais fechados e um provedor de triangulação Wi-Fi torna-se o provedor mais preciso no computador.  
+  
+ Se o atual priorizadas provedor local não tem dados quando o <xref:System.Device.Location.GeoCoordinateWatcher.Start%2A> método é chamado, ele será iniciado para obter dados. Se as permissões tiverem sido concedidas ao cliente quando os dados se torna disponíveis, dados podem ser acessados de forma síncrona e serão entregues de forma assíncrona se os eventos estão sendo tratados.  
+  
+ Se a plataforma de Sensor do Windows 7 e o local é desabilitada quando <xref:System.Device.Location.GeoCoordinateWatcher.Start%2A> é chamado, <xref:System.Device.Location.GeoCoordinateWatcher.Start%2A> retornará imediatamente, <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> eventos não serão gerados e o local retornado pelo <xref:System.Device.Location.GeoPosition%601.Location%2A> propriedade de <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> conterá <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+ Se o provedor local priorizada atual tiver dados, ele estará disponível imediatamente sincronicamente e serão entregues de forma assíncrona se os eventos estão sendo tratados.  
+  
+ Se o aplicativo de chamada não tem permissões para acessar dados de um provedor de local, o usuário será solicitado com uma caixa de diálogo para conceder ou negar permissão. A caixa de diálogo será sem janela restrita.  
+  
+   
+  
+## Examples  
+ O seguinte programa trata a primeira atualização local depois <xref:System.Device.Location.GeoCoordinateWatcher.Start%2A> é chamado.  
+  
+ [!code-csharp[System.Device.Location.GetLocationDataUpdateOnce#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.getlocationdataupdateonce/cs/getlocationdataupdateonce.cs#1)]
+ [!code-vb[System.Device.Location.GetLocationDataUpdateOnce#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.getlocationdataupdateonce/vb/GetLocationDataUpdateOnce.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start (bool suppressPermissionPrompt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Start(bool suppressPermissionPrompt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.Start(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="suppressPermissionPrompt" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="suppressPermissionPrompt">
+          <see langword="true" />Para suprimir a caixa de diálogo permissão; <see langword="false" /> se desejar mostrar a caixa de diálogo permissão se não já foram concedidas permissões.</param>
+        <summary>Inicie a aquisição de dados do localizador atual. Esse método habilita eventos <see cref="E:System.Device.Location.GeoCoordinateWatcher.PositionChanged" /> e permite o acesso à propriedade <see cref="P:System.Device.Location.GeoCoordinateWatcher.Position" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public System.Device.Location.GeoPositionStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Location.GeoPositionStatus Status" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinateWatcher.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o status atual do <see cref="T:System.Device.Location.GeoCoordinateWatcher" />.</summary>
+        <value>Um <see cref="T:System.Device.Location.GeoPositionStatus" /> que indica a disponibilidade de dados do <see cref="T:System.Device.Location.GeoCoordinateWatcher" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir trata <xref:System.Device.Location.GeoCoordinateWatcher.StatusChanged> eventos e imprime uma mensagem com base no <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A>.  
+  
+ [!code-csharp[System.Device.Location.ShowStatusUpdates#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.showstatusupdates/cs/showstatusupdates.cs#1)]
+ [!code-vb[System.Device.Location.ShowStatusUpdates#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.showstatusupdates/vb/ShowStatusUpdates.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Device.Location.GeoPositionStatusChangedEventArgs&gt; StatusChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Device.Location.GeoPositionStatusChangedEventArgs&gt; StatusChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Device.Location.GeoCoordinateWatcher.StatusChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Device.Location.GeoPositionStatusChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o status do objeto <see cref="T:System.Device.Location.GeoCoordinateWatcher" /> foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Device.Location.GeoCoordinateWatcher.StatusChanged> evento é gerado no mesmo thread que o <xref:System.Device.Location.GeoCoordinateWatcher> objeto foi criado no.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como tratar <xref:System.Device.Location.GeoCoordinateWatcher.StatusChanged> eventos.  
+  
+ [!code-csharp[System.Device.Location.ShowStatusUpdates#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.showstatusupdates/cs/showstatusupdates.cs#1)]
+ [!code-vb[System.Device.Location.ShowStatusUpdates#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.showstatusupdates/vb/ShowStatusUpdates.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe o <see cref="T:System.Device.Location.GeoCoordinateWatcher" /> do fornecimento de dados local e eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de <xref:System.Device.Location.GeoCoordinateWatcher.Stop%2A> é chamado, nenhum outro <xref:System.Device.Location.GeoCoordinateWatcher.PositionChanged> eventos ocorrem e o <xref:System.Device.Location.GeoCoordinateWatcher.Position%2A> propriedade retornará <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+ Quando <xref:System.Device.Location.GeoCoordinateWatcher.Stop%2A> é chamado, o <xref:System.Device.Location.GeoCoordinateWatcher.Status%2A> está definida como <xref:System.Device.Location.GeoPositionStatus.Disabled>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryStart">
+      <MemberSignature Language="C#" Value="public bool TryStart (bool suppressPermissionPrompt, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryStart(bool suppressPermissionPrompt, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinateWatcher.TryStart(System.Boolean,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="suppressPermissionPrompt" Type="System.Boolean" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="suppressPermissionPrompt">
+          <see langword="true" /> para suprimir a caixa de diálogo de permissão; <see langword="false" /> para exibir a caixa de diálogo de permissão.</param>
+        <param name="timeout">Tempo em milissegundos para aguardar o localizador do Windows iniciar antes do tempo limite ser excedido.</param>
+        <summary>Inicia a aquisição de dados do localizador atual. Esse método é retornado de forma síncrona.</summary>
+        <returns>
+          <see langword="true" /> se a aquisição de dados iniciar dentro do período de tempo especificado por <paramref name="timeout" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método bloqueia a execução do thread de chamada durante o período de tempo especificado por `timeout`. Tenha cuidado ao chamar <xref:System.Device.Location.GeoCoordinateWatcher.TryStart%2A> do thread da interface do usuário do seu aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como chamar <xref:System.Device.Location.GeoCoordinateWatcher.TryStart%2A>.  
+  
+ [!code-csharp[System.Device.Location.GetLocationDataSync1#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.getlocationdatasync1/cs/getlocationdatasync.cs#1)]
+ [!code-vb[System.Device.Location.GetLocationDataSync1#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.getlocationdatasync1/vb/GetLocationDataSync.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

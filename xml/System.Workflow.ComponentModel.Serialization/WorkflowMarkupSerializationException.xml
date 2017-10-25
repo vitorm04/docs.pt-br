@@ -1,0 +1,215 @@
+<Type Name="WorkflowMarkupSerializationException" FullName="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException">
+  <TypeSignature Language="C#" Value="public class WorkflowMarkupSerializationException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WorkflowMarkupSerializationException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é lançada por métodos que realizar a serialização e desserialização.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException>inclui informações sobre os locais de linha e coluna que causou a exceção seja lançada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowMarkupSerializationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowMarkupSerializationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma cadeia de caracteres que contém a mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" /> classe usando a mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowMarkupSerializationException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contém os dados do objeto serializado sobre a <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" /> que está sendo gerada.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém as informações de contexto sobre a origem ou destino dos bits estava usando o serializador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" /> utilizando dados serializados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowMarkupSerializationException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma cadeia de caracteres que contém a mensagem que descreve o erro.</param>
+        <param name="innerException">A exceção que é a causa o <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" />.  Se <c>innerException</c> não é uma referência nula (<see langword="Nothing" /> no Visual Basic), a exceção atual é gerada em um bloco catch que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" /> classe por meio de uma mensagem de erro e uma exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowMarkupSerializationException (string message, int lineNumber, int columnNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, int32 lineNumber, int32 columnNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma cadeia de caracteres que contém a mensagem que descreve o erro.</param>
+        <param name="lineNumber">O número de linha no objeto ou arquivo XOML que causou a exceção seja lançada.</param>
+        <param name="columnNumber">A posição de coluna no objeto ou arquivo XOML que causou a exceção seja lançada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" /> classe por meio de uma mensagem de erro e os números de linha e coluna que causou a exceção seja lançada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowMarkupSerializationException (string message, Exception innerException, int lineNumber, int columnNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException, int32 lineNumber, int32 columnNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.#ctor(System.String,System.Exception,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma cadeia de caracteres que contém a mensagem que descreve o erro.</param>
+        <param name="innerException">A exceção que é a causa o <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" />. Se <c>innerException</c> não é uma referência nula (<see langword="Nothing" /> no Visual Basic), a exceção atual é gerada em um bloco catch que manipula a exceção interna.</param>
+        <param name="lineNumber">O número de linha no objeto ou arquivo XOML que causou a exceção seja lançada.</param>
+        <param name="columnNumber">A posição de coluna no objeto ou arquivo XOML que causou a exceção seja lançada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" /> classe por meio de uma mensagem de erro, uma exceção e os números de linha e coluna que causou a exceção seja lançada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contém os dados do objeto serializado sobre a <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" /> que está sendo gerada.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém as informações de contexto sobre a origem ou destino dos bits estava usando o serializador.</param>
+        <summary>Define especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com informações sobre o <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.GetObjectData%2A>define um <xref:System.Runtime.Serialization.SerializationInfo> com todos os dados do objeto de exceção destinados para a serialização. Durante a desserialização, a exceção é reconstituída do <xref:System.Runtime.Serialization.SerializationInfo> transmitido no fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linha no objeto ou arquivo XOML que causou a exceção seja lançada.</summary>
+        <value>Um inteiro que representa o número da linha na qual a exceção foi lançada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationException.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição da coluna no objeto ou arquivo XOML que causou a exceção seja lançada.</summary>
+        <value>Um inteiro que representa a posição da coluna que causou a exceção seja lançada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

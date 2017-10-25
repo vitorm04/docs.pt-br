@@ -1,0 +1,444 @@
+<Type Name="DataGridViewImageColumn" FullName="System.Windows.Forms.DataGridViewImageColumn">
+  <TypeSignature Language="C#" Value="public class DataGridViewImageColumn : System.Windows.Forms.DataGridViewColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewImageColumn extends System.Windows.Forms.DataGridViewColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewImageColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Windows.Forms.DataGridViewImageColumn), "DataGridViewImageColumn.bmp")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Hospeda uma coleção de objetos <see cref="T:System.Windows.Forms.DataGridViewImageCell" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewImageColumn> classe é um tipo especializado do <xref:System.Windows.Forms.DataGridViewColumn> classe usada para logicamente células de host que exibem imagens. Um <xref:System.Windows.Forms.DataGridViewImageColumn> possui um tipo de <xref:System.Windows.Forms.DataGridViewImageCell> em cada <xref:System.Windows.Forms.DataGridViewRow> que faz interseção com ele. Cada célula é capaz de conter um <xref:System.Drawing.Image> ou um <xref:System.Drawing.Icon>, dependendo do valor de <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A?displayProperty=nameWithType> propriedade. Exibindo ícones é útil para acomodar imagens com transparência.  
+  
+ Por padrão, as células vazias exibem um gráfico de erro padrão. Para evitar este gráfico seja exibida para valores de célula iguais a `null` ou <xref:System.DBNull.Value?displayProperty=nameWithType>, defina o <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A?displayProperty=nameWithType> propriedade do objeto de estilo de célula retornada pelo <xref:System.Windows.Forms.DataGridViewImageColumn.DefaultCellStyle%2A> propriedade `null` antes de adicionar linhas ao controle. Isso não afeta a linha para novos registros, no entanto. Para impedir que o gráfico de erro que aparece na linha para novos registros quando o controle <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> é o valor da propriedade `true`, também deve defina explicitamente o valor da célula como `null` em um manipulador para o controle <xref:System.Windows.Forms.DataGridView.RowsAdded> evento ou a coluna do conjunto <xref:System.Windows.Forms.DataGridViewImageColumn.CellTemplate%2A> propriedade a uma instância de um <xref:System.Windows.Forms.DataGridViewImageCell>-derivado do tipo com uma substituição <xref:System.Windows.Forms.DataGridViewImageCell.DefaultNewRowValue%2A> propriedade retorna `null`.  
+  
+ O modo de classificação padrão para esse tipo de coluna é <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar imagens para criar um jogo TicTacToe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CPP/tictactoe.cpp#0)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#0)]
+ [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você deriva de <see cref="T:System.Windows.Forms.DataGridViewImageColumn" /> e adicionar novas propriedades para a classe derivada, certifique-se de substituir o <see cref="M:System.Windows.Forms.DataGridViewImageColumn.Clone" /> método para copiar as novas propriedades durante operações de clonagem. Você também deve chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewImageColumn.Clone" /> método para que as propriedades da classe base são copiadas para a nova célula.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewImageColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewImageColumn" />, configurando-a para o uso com valores de célula do tipo <see cref="T:System.Drawing.Image" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor chama <xref:System.Windows.Forms.DataGridViewImageColumn.%23ctor%28System.Boolean%29> com um `valuesAreIcons` valor de parâmetro de `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewImageColumn (bool valuesAreIcons);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool valuesAreIcons) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageColumn.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valuesAreIcons" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="valuesAreIcons">
+          <see langword="true" />para indicar que o <see cref="P:System.Windows.Forms.DataGridViewCell.Value" /> propriedade de células nesta coluna será definida com valores do tipo <see cref="T:System.Drawing.Icon" />; <see langword="false" /> para indicar que eles serão definidos para os valores do tipo <see cref="T:System.Drawing.Image" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataGridViewImageColumn" /> classe, opcionalmente, configurá-lo para uso com <see cref="T:System.Drawing.Icon" /> valores de célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa a coluna, definindo as propriedades a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Windows.Forms.DataGridViewImageColumn.CellTemplate%2A>|Um novo <xref:System.Windows.Forms.DataGridViewImageCell> com seus <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> propriedade inicializada para o `valuesAreIcons` o valor do parâmetro.|  
+|<xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A>|O valor de `valuesAreIcons` parâmetro.|  
+|O <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A> propriedade o <xref:System.Windows.Forms.DataGridViewCellStyle> objeto retornado pelo <xref:System.Windows.Forms.DataGridViewImageColumn.DefaultCellStyle%2A> propriedade.|<xref:System.Windows.Forms.DataGridViewContentAlignment?displayProperty=nameWithType>|  
+|O <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> propriedade o <xref:System.Windows.Forms.DataGridViewCellStyle> objeto retornado pelo <xref:System.Windows.Forms.DataGridViewImageColumn.DefaultCellStyle%2A> propriedade.|Um gráfico de erro padrão do tipo <xref:System.Drawing.Icon> se `valuesAreIcons` é `true` e tipo <xref:System.Drawing.Bitmap> se `valuesAreIcons` é `false`.|  
+  
+ Para garantir que o canal alfa de <xref:System.Drawing.Icon> valores de célula é pintado corretamente, use este construtor com um `valuesAreIcons` valor de parâmetro de `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellTemplate">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCell CellTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCell CellTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageColumn.CellTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo usado para criar novas células.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataGridViewCell" /> depois do qual todas as outras células na coluna são modeladas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os construtores de <xref:System.Windows.Forms.DataGridViewImageColumn> classe inicializar esta propriedade recém-criado para um <xref:System.Windows.Forms.DataGridViewImageCell>.  
+  
+> [!CAUTION]
+>  Alterar as propriedades do modelo de célula não afetará imediatamente a interface do usuário (UI) de células existentes da coluna. Essas alterações são aparentes somente depois que a coluna for gerado novamente (por exemplo, ao classificar a coluna ou por meio de uma chamada para o <xref:System.Windows.Forms.DataGridView.InvalidateColumn%2A?displayProperty=nameWithType> método).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível em [como: manipular colunas no controle DataGridView de formulários do Windows](~/docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#120)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#120)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">O tipo de conjunto não é compatível com o tipo <see cref="T:System.Windows.Forms.DataGridViewImageCell" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageColumn.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata desta coluna.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o <see cref="T:System.Windows.Forms.DataGridViewImageColumn" /> clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para duplicar uma coluna de células.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCellStyle">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageColumn.DefaultCellStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da célula padrão da coluna.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> a ser aplicado como estilo padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão <xref:System.Windows.Forms.DataGridViewCellStyle> retornados por essa propriedade tem os seguintes valores de propriedade inicial:  
+  
+|Propriedade `DataGridViewCellStyle`|Valor padrão|  
+|--------------------------------------|-------------------|  
+|<xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>|<xref:System.Windows.Forms.DataGridViewContentAlignment?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>|Um gráfico de erro padrão do tipo <xref:System.Drawing.Icon> se inicial <xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A> é o valor da propriedade `true`; caso contrário, um gráfico de erro padrão do tipo <xref:System.Drawing.Bitmap>.|  
+  
+ Esses valores de substituem o valor especificado no <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> propriedade o <xref:System.Windows.Forms.DataGridView> controle, mas podem ser substituídas por outras propriedades de estilo de célula. Para obter mais informações, consulte [Estilos de célula no controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+ Para impedir que o gráfico de erro padrão que aparecem para `null` ou <xref:System.DBNull.Value?displayProperty=nameWithType> valores de célula, defina o <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A?displayProperty=nameWithType> propriedade para este objeto de estilo de célula para `null` ou seu próprio gráfico de erro antes de adicionar linhas ao controle. Isso não afeta a linha para novos registros, no entanto. Para impedir que o gráfico de erro que aparece na linha para novos registros quando o controle <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> é o valor da propriedade `true`, também deve defina explicitamente o valor da célula como `null` ou seu próprio gráfico de erro em um manipulador para o controle <xref:System.Windows.Forms.DataGridView.RowsAdded> evento ou a coluna do conjunto <xref:System.Windows.Forms.DataGridViewImageColumn.CellTemplate%2A> propriedade a uma instância de um <xref:System.Windows.Forms.DataGridViewImageCell>-derivado do tipo com uma substituição <xref:System.Windows.Forms.DataGridViewImageCell.DefaultNewRowValue%2A> propriedade retorna `null` ou seu próprio gráfico de erro.  
+  
+ Se o <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> propriedade do objeto retornado pelo <xref:System.Windows.Forms.DataGridViewImageColumn.DefaultCellStyle%2A> propriedade tem um valor igual ao gráfico de erro padrão do tipo <xref:System.Drawing.Bitmap>, alterando o <xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A> valor da propriedade `true` define automaticamente <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> para o gráfico de erro padrão do tipo <xref:System.Drawing.Icon>. Se <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> tem um valor igual ao gráfico de erro padrão do tipo <xref:System.Drawing.Icon>, alterando o <xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A> valor da propriedade `false` define automaticamente <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> para o gráfico de erro padrão do tipo <xref:System.Drawing.Bitmap>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso dessa propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.GridViewContentAlignment#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GridViewContentAlignment/CS/changecolumnalignment.cs#1)]
+ [!code-vb[System.Windows.Forms.GridViewContentAlignment#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GridViewContentAlignment/VB/changecolumnalignment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageColumn.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que descreve a imagem da coluna.</summary>
+        <value>A descrição textual da imagem de coluna. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.DataGridViewImageColumn.Description%2A> propriedade para descrever a imagem fornecida pelo <xref:System.Windows.Forms.DataGridViewImageColumn.Image%2A> ou <xref:System.Windows.Forms.DataGridViewImageColumn.Icon%2A> propriedade. Essa descrição fornece uma alternativa acessível para a imagem. Além disso, o texto de descrição é usado quando o valor da célula é copiado para a área de transferência.  
+  
+ Obter ou definir esta propriedade obtém ou define o <xref:System.Windows.Forms.DataGridViewImageCell.Description%2A> propriedade do objeto retornado pelo <xref:System.Windows.Forms.DataGridViewImageColumn.CellTemplate%2A> propriedade. Definir esta propriedade também define o <xref:System.Windows.Forms.DataGridViewImageCell.Description%2A> a propriedade de cada célula na coluna. Para substituir o valor especificado para células individuais, defina os valores de célula depois de definir o valor da coluna.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DataGridViewImageColumn.Description%2A> propriedade para refletir o layout de imagem. Este exemplo é parte de um exemplo maior disponível em [como: trabalhar com colunas de imagem em controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#20](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CPP/tictactoe.cpp#20)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewImageColumn.CellTemplate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Icon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageColumn.Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ícone exibido nas células desta coluna quando a célula <see cref="P:System.Windows.Forms.DataGridViewCell.Value" /> propriedade não está definida e a célula <see cref="P:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon" /> está definida como <see langword="true" />.</summary>
+        <value>O <see cref="T:System.Drawing.Icon" /> a ser exibido. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewImageColumn.Icon%2A> propriedade especifica uma ícones que são exibidos em células com valores de quando a coluna não está associado a dados e a célula <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> está definida como `true`. Para uma coluna de associação de dados cujas células não têm uma imagem associada, o gráfico de erro padrão é exibido.  
+  
+ Usando o <xref:System.Windows.Forms.DataGridViewImageColumn.Icon%2A> propriedade em vez de <xref:System.Windows.Forms.DataGridViewImageColumn.Image%2A> propriedade garante que um canal alfa em um ícone é pintado corretamente. Se você deseja exibir um <xref:System.Drawing.Image> em vez de um <xref:System.Drawing.Icon>, defina o <xref:System.Windows.Forms.DataGridViewImageColumn.Image%2A> propriedade em vez disso e defina o <xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A> propriedade `false`. Você também pode definir o <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> propriedades de células individuais para indicar se a célula exibe o <xref:System.Windows.Forms.DataGridViewImageColumn.Image%2A> ou <xref:System.Windows.Forms.DataGridViewImageColumn.Icon%2A> o valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageColumn.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem exibida nas células desta coluna quando a propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.Value" /> da célula não está definida e a propriedade <see cref="P:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon" /> da célula está definida como <see langword="false" />.</summary>
+        <value>O <see cref="T:System.Drawing.Image" /> a ser exibido. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewImageColumn.Image%2A> propriedade especifica uma imagem que é exibida em células com valores de quando a coluna não está associado a dados e a célula <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> está definida como `false`. Para uma coluna de associação de dados cujas células não têm uma imagem associada, o gráfico de erro padrão é exibido.  
+  
+ Se você deseja exibir um <xref:System.Drawing.Icon> em vez de um <xref:System.Drawing.Image>, defina o <xref:System.Windows.Forms.DataGridViewImageColumn.Icon%2A> propriedade em vez disso e defina o <xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A> propriedade `true`. Isso garante que o canal alfa do <xref:System.Drawing.Icon> é pintado corretamente. Você também pode definir o <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> propriedades de células individuais para indicar se a célula exibe o <xref:System.Windows.Forms.DataGridViewImageColumn.Image%2A> ou <xref:System.Windows.Forms.DataGridViewImageColumn.Icon%2A> valor da propriedade quando não há nenhum valor de célula.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a imagem padrão. Este exemplo é parte de um exemplo maior disponível em [como: trabalhar com colunas de imagem em controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CPP/tictactoe.cpp#5)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#5)]
+ [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageLayout">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewImageCellLayout ImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewImageCellLayout ImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageColumn.ImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewImageCellLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o layout da imagem nas células desta coluna.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataGridViewImageCellLayout" /> que especifica o layout da célula. O padrão é <see cref="F:System.Windows.Forms.DataGridViewImageCellLayout.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obter ou definir esta propriedade obtém ou define o <xref:System.Windows.Forms.DataGridViewImageCell.ImageLayout%2A> propriedade do objeto retornado pelo <xref:System.Windows.Forms.DataGridViewImageColumn.CellTemplate%2A> propriedade. Definir esta propriedade também define o <xref:System.Windows.Forms.DataGridViewImageCell.ImageLayout%2A> propriedade de cada célula na coluna e atualiza a coluna exibida. Para substituir o valor especificado para células individuais, defina os valores de célula depois de definir o valor da coluna.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como alongar e imagens para ajustar as células de zoom. Este exemplo é parte de um exemplo maior disponível em [como: trabalhar com colunas de imagem em controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#20](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CPP/tictactoe.cpp#20)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewImageColumn.CellTemplate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewImageColumn.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que descreve a coluna.</summary>
+        <returns>Um <see cref="T:System.String" /> que descreve a coluna.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValuesAreIcons">
+      <MemberSignature Language="C#" Value="public bool ValuesAreIcons { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValuesAreIcons" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as células nesta coluna exibem <see cref="T:System.Drawing.Icon" /> valores.</summary>
+        <value>
+          <see langword="true" />Se as células exibem valores do tipo <see cref="T:System.Drawing.Icon" />; <see langword="false" /> se as células exibem valores do tipo <see cref="T:System.Drawing.Image" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para garantir que o canal alfa de <xref:System.Drawing.Icon> valores é pintado corretamente, defina essa propriedade como `true`.  
+  
+ Obter ou definir esta propriedade obtém ou define o <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> propriedade do objeto retornado pelo <xref:System.Windows.Forms.DataGridViewImageColumn.CellTemplate%2A> propriedade. Definir esta propriedade também define o <xref:System.Windows.Forms.DataGridViewImageCell.ValueIsIcon%2A> propriedade de cada célula na coluna e atualiza a coluna exibida. Para substituir o valor especificado para células individuais, defina os valores de célula depois de definir o valor da coluna.  
+  
+ Se o <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> propriedade do objeto retornado pelo <xref:System.Windows.Forms.DataGridViewImageColumn.DefaultCellStyle%2A> propriedade tem um valor igual ao gráfico de erro padrão do tipo <xref:System.Drawing.Bitmap>, alterando o <xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A> valor da propriedade `true` define automaticamente <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> para o gráfico de erro padrão do tipo <xref:System.Drawing.Icon>. Se <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> tem um valor igual ao gráfico de erro padrão do tipo <xref:System.Drawing.Icon>, alterando o <xref:System.Windows.Forms.DataGridViewImageColumn.ValuesAreIcons%2A> valor da propriedade `false` define automaticamente <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> para o gráfico de erro padrão do tipo <xref:System.Drawing.Bitmap>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewImageColumn.CellTemplate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

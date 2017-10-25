@@ -1,0 +1,329 @@
+<Type Name="SamlSecurityToken" FullName="System.IdentityModel.Tokens.SamlSecurityToken">
+  <TypeSignature Language="C#" Value="public class SamlSecurityToken : System.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlSecurityToken extends System.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlSecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityToken</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um token de segurança baseado em uma asserção SAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As declarações para <xref:System.IdentityModel.Tokens.SamlSecurityToken> tokens de segurança são expressos como parte de um <xref:System.IdentityModel.Tokens.SamlAssertion>. Um <xref:System.IdentityModel.Tokens.SamlAssertion> tem um conjunto extensível de declarações, conhecido como declarações SAML que são representadas pelo <xref:System.IdentityModel.Tokens.SamlAssertion.Statements%2A> propriedade. A autoridade SAML que emitiu a declaração SAML é especificada no <xref:System.IdentityModel.Tokens.SamlAssertion.Issuer%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SamlSecurityToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSecurityToken.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlSecurityToken (System.IdentityModel.Tokens.SamlAssertion assertion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SamlAssertion assertion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSecurityToken.#ctor(System.IdentityModel.Tokens.SamlAssertion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assertion" Type="System.IdentityModel.Tokens.SamlAssertion" />
+      </Parameters>
+      <Docs>
+        <param name="assertion">Um <see cref="T:System.IdentityModel.Tokens.SamlAssertion" /> que representa a asserção SAML para este token de segurança.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> classe usando a declaração SAML especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor chama o <xref:System.IdentityModel.Tokens.SamlSecurityToken.Initialize%28System.IdentityModel.Tokens.SamlAssertion%29> método, que pode ser substituído em classes derivadas.  
+  
+ Para <xref:System.IdentityModel.Tokens.SamlSecurityToken> tokens de segurança, as declarações são especificadas por meio de uma asserção SAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assertion">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SamlAssertion Assertion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SamlAssertion Assertion" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlSecurityToken.Assertion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAssertion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a asserção SAML para este token de segurança.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SamlAssertion" /> que representa a asserção SAML para este token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para <xref:System.IdentityModel.Tokens.SamlSecurityToken> tokens de segurança, as declarações são especificadas por meio de uma asserção SAML.  
+  
+ Use um construtor ou <xref:System.IdentityModel.Tokens.SamlSecurityToken.Initialize%28System.IdentityModel.Tokens.SamlAssertion%29> método para definir o <xref:System.IdentityModel.Tokens.SamlSecurityToken.Assertion%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanCreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanCreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSecurityToken.CanCreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que especifica o identificador de chave para criar.</typeparam>
+        <summary>Obtém um valor que indica se esse token de segurança é capaz de criar o identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="T" /> é do tipo <see cref="T:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlSecurityToken.CanCreateKeyIdentifierClause%2A> método para determinar se um <xref:System.IdentityModel.Tokens.SamlSecurityToken> token de segurança pode criar um identificador de chave específico. Para criar a chamada de identificador de chave de <xref:System.IdentityModel.Tokens.SamlSecurityToken.CreateKeyIdentifierClause%60%601> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T CreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T CreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSecurityToken.CreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que especifica o identificador de chave para criar.</typeparam>
+        <summary>Cria a cláusula de identificador de chave especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause" /> que é uma cláusula de identificador de chave para um token de segurança do SAML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlSecurityToken.CanCreateKeyIdentifierClause%2A> método para determinar se um <xref:System.IdentityModel.Tokens.SamlSecurityToken> token de segurança pode criar um identificador de chave específico. Para criar a chamada de identificador de chave de <xref:System.IdentityModel.Tokens.SamlSecurityToken.CreateKeyIdentifierClause%60%601> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="T" /> não é do tipo <see cref="T:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public override string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlSecurityToken.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo do token de segurança.</summary>
+        <value>O identificador exclusivo do token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.IdentityModel.Tokens.SamlSecurityToken> token de segurança é serializado em XML, o valor do atributo Id é definido como o valor de <xref:System.IdentityModel.Tokens.SamlSecurityToken.Id%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected void Initialize (System.IdentityModel.Tokens.SamlAssertion assertion);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Initialize(class System.IdentityModel.Tokens.SamlAssertion assertion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSecurityToken.Initialize(System.IdentityModel.Tokens.SamlAssertion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assertion" Type="System.IdentityModel.Tokens.SamlAssertion" />
+      </Parameters>
+      <Docs>
+        <param name="assertion">Um <see cref="T:System.IdentityModel.Tokens.SamlAssertion" /> que representa a asserção SAML para este token de segurança.</param>
+        <summary>Inicializa as propriedades da <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> classe usando a declaração SAML especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.SamlSecurityToken.%23ctor%28System.IdentityModel.Tokens.SamlAssertion%29> construtor chama o <xref:System.IdentityModel.Tokens.SamlSecurityToken.Initialize%28System.IdentityModel.Tokens.SamlAssertion%29> método, que pode ser substituído em classes derivadas.  
+  
+ Para <xref:System.IdentityModel.Tokens.SamlSecurityToken> tokens de segurança, as declarações são especificadas por meio de uma asserção SAML.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assertion" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool MatchesKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MatchesKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlSecurityToken.MatchesKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="skiClause">To be added.</param>
+        <summary>Retorna um valor que indica se o identificador de chave para esta instância é igual ao identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="skiClause" /> é um <see cref="T:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause" /> e tem o mesmo identificador exclusivo que o <see cref="P:System.IdentityModel.Tokens.SamlSecurityToken.Id" /> propriedade; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKeys">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlSecurityToken.SecurityKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as chaves criptográficas associadas ao token de segurança.</summary>
+        <value>Uma <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> que contém o conjunto de chaves associadas com o token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlSecurityToken.SecurityKeys%2A> propriedade para definir as chaves de criptografia para este token de segurança proteger uma mensagem SOAP. As chaves podem ser usadas, entre outras coisas, para assinar digitalmente ou criptografar mensagens SOAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidFrom">
+      <MemberSignature Language="C#" Value="public override DateTime ValidFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidFrom" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlSecurityToken.ValidFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro instantâneo na hora em que esse token de segurança é válido.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o primeiro instantâneo na hora em que esse token de segurança é válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidTo%2A> propriedades para determinar o período de tempo no qual um <xref:System.IdentityModel.Tokens.SamlSecurityToken> token é válido. O <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidTo%2A> propriedades representam os primeiro e o últimos instants na hora em que o token de segurança é válido, respectivamente.  
+  
+ Por padrão, um distorção do relógio de 5 minutos é permitido entre o remetente e o destinatário do token de segurança. Por isso, se o <xref:System.IdentityModel.Tokens.SamlConditions.NotBefore%2A> está definida como 1:00 PM, o <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidFrom%2A> está definida como 12:55 PM.  
+  
+ Quando o <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidFrom%2A> está definida como <xref:System.DateTime.MinValue>, em seguida, a asserção SAML associada a esta <xref:System.IdentityModel.Tokens.SamlSecurityToken> token de segurança não tem nenhuma condição definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidTo">
+      <MemberSignature Language="C#" Value="public override DateTime ValidTo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidTo" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlSecurityToken.ValidTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o último no momento em que esse token de segurança é válido.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o último no momento em que esse token de segurança é válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidTo%2A> propriedades para determinar o período de tempo no qual um <xref:System.IdentityModel.Tokens.SamlSecurityToken> token é válido. O <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidTo%2A> propriedades representam os primeiro e o últimos instants na hora em que o token de segurança é válido, respectivamente.  
+  
+ Por padrão, um distorção do relógio de 5 minutos é permitido entre o remetente e o destinatário do token de segurança. Por isso, se o <xref:System.IdentityModel.Tokens.SamlConditions.NotOnOrAfter%2A> está definida como 1:00 PM, o <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidFrom%2A> está definida como 1:05 PM.  
+  
+ Quando o <xref:System.IdentityModel.Tokens.SamlSecurityToken.ValidTo%2A> está definida como <xref:System.DateTime.MaxValue>, em seguida, a asserção SAML associada a esta <xref:System.IdentityModel.Tokens.SamlSecurityToken> token de segurança não tem nenhuma condição definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

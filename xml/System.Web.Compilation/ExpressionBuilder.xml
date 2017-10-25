@@ -1,0 +1,251 @@
+<Type Name="ExpressionBuilder" FullName="System.Web.Compilation.ExpressionBuilder">
+  <TypeSignature Language="C#" Value="public abstract class ExpressionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExpressionBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ExpressionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Avalia expressões durante a análise da página.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.ExpressionBuilder> classe é a classe base para construtores de expressão, como o <xref:System.Web.Compilation.AppSettingsExpressionBuilder> classe, criar expressões de código durante a análise da página.  
+  
+ Construtores de expressões expressões declarativas de analisar e criar o código para recuperar valores associados a uma propriedade de controle. Em cenários de não-compilação, um construtor de expressões que dá suporte a um recurso de compilação não avalia a expressão em tempo de execução.  
+  
+ Quando o analisador de página encontra uma expressão que é delimitada com a cadeia de caracteres `<%$ %>`, ele cria um construtor de expressão para a expressão com base no prefixo na cadeia de caracteres. O prefixo é a parte da cadeia de caracteres que está à esquerda de dois-pontos (:). Por exemplo, quando o analisador encontra a cadeia de caracteres `<%$ ConnectionStrings:MessageDB %>`, ele cria um <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> objeto. Os prefixos estão associados com construtores de expressões no arquivo Web. config no <xref:System.Web.Configuration.CompilationSection.ExpressionBuilders%2A> seção.  
+  
+ O lado direito da expressão declarativa é passado para o construtor de expressões para avaliação. Substituir o <xref:System.Web.Compilation.ExpressionBuilder.GetCodeExpression%2A> método para gerar o código que será compilado com a página.  
+  
+ Se você quiser que o construtor de expressão personalizada ativos em páginas que não são compiladas, você também deve substituir o <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> método para retornar um objeto que representa os resultados da expressão. Você também deve substituir o <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> propriedade para indicar que o construtor de expressões personalizado oferece suporte a páginas de não-compilação.  
+  
+ Você pode definir um conjunto de propriedades e métodos para selecionar e avaliação de uma expressão que é associada uma propriedade de controle em tempo de design, Implementando um editor de expressão. O editor é marcado por meio de metadados de nível de classe, o construtor de expressões. Para obter mais informações, consulte <xref:System.Web.UI.Design.ExpressionEditor>.  
+  
+   
+  
+## Examples  
+ Os exemplos de código a seguir demonstram como criar um construtor de expressões personalizado implementando a <xref:System.Web.Compilation.ExpressionBuilder> classe abstrata. Essa implementação de <xref:System.Web.Compilation.ExpressionBuilder> retorna uma instrução avaliada que é passada para a expressão. Para executar este exemplo, você deve primeiro registrar o construtor de expressões personalizadas no arquivo Web. config. O primeiro exemplo de código demonstra como registrar o construtor de expressões personalizadas no arquivo Web. config.  
+  
+```  
+<configuration>  
+    <system.web>  
+       <compilation>  
+          <expressionBuilders>  
+              <add expressionPrefix="MyCustomExpression"  
+               type="MyCustomExpressionBuilder"/>  
+          </expressionBuilders>  
+       </compilation>  
+    </system.web>  
+</configuration>  
+```  
+  
+ O segundo exemplo de código demonstra como fazer referência a expressão em um arquivo. aspx.  
+  
+```  
+<asp:Label ID="Label1" runat="server"   
+Text="<%$ MyCustomExpression:Hello, world! %>" />  
+```  
+  
+ O terceiro exemplo de código demonstra como desenvolver um construtor de expressão personalizada derivando de <xref:System.Web.Compilation.ExpressionBuilder>. Para executar este exemplo de código, você deve colocar a classe na pasta App_Code.  
+  
+ [!code-csharp[System.Web.Compilation.ExpressionBuilder#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/CS/MyExpressionBuilder.cs#1)] 
+ [!code-vb[System.Web.Compilation.ExpressionBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/VB/MyExpressionBuilder.vb#1)]   
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você herda o <see cref="T:System.Web.Compilation.ExpressionBuilder" /> classe, você deve substituir o <see cref="M:System.Web.Compilation.ExpressionBuilder.GetCodeExpression(System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" /> método.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExpressionBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Compilation.ExpressionBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.Compilation.ExpressionBuilder> classe é abstrata, não é possível criar uma instância de <xref:System.Web.Compilation.ExpressionBuilder> diretamente usando o <xref:System.Web.Compilation.ExpressionBuilder.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao derivar do <see cref="T:System.Web.Compilation.ExpressionBuilder" /> classe, substitua o <see cref="M:System.Web.Compilation.ExpressionBuilder.#ctor" /> construtor para implementar as ações de inicialização personalizada para sua implementação do construtor de expressão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public virtual object EvaluateExpression (object target, System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object EvaluateExpression(object target, class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto que contém a expressão.</param>
+        <param name="entry">O objeto que representa informações sobre a propriedade associada pela expressão.</param>
+        <param name="parsedData">O objeto que contém analisar dados como retornado por <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Informações contextuais para a avaliação da expressão.</param>
+        <summary>Quando substituído em uma classe derivada, retorna um objeto que representa uma expressão avaliada.</summary>
+        <returns>Um objeto que representa a expressão avaliada; caso contrário, <see langword="null" /> se o herdeiro não implementa <see cref="M:System.Web.Compilation.ExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você quiser que seu <xref:System.Web.Compilation.ExpressionBuilder> objeto ativo em uma página que suporta o recurso de não-compilação, você pode substituir o <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> método e o <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> propriedade. O <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> método deve retornar a avaliação da expressão atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar substituído <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> método para retornar uma expressão avaliada.  
+  
+ [!code-csharp[System.Web.Compilation.ExpressionBuilder#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/CS/MyExpressionBuilder.cs#3)]    
+ [!code-vb[System.Web.Compilation.ExpressionBuilder#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/VB/MyExpressionBuilder.vb#3)]   
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir o <see cref="M:System.Web.Compilation.ExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" /> método, você também deve substituir o <see cref="P:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate" /> propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeExpression">
+      <MemberSignature Language="C#" Value="public abstract System.CodeDom.CodeExpression GetCodeExpression (System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.CodeExpression GetCodeExpression(class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilder.GetCodeExpression(System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="entry">O objeto que representa informações sobre a propriedade associada pela expressão.</param>
+        <param name="parsedData">O objeto que contém analisar dados como retornado por <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Informações contextuais para a avaliação da expressão.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o código que é usado durante a execução da página para obter a expressão avaliada.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeExpression" /> que é usado para atribuição de propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam o <xref:System.Web.Compilation.ExpressionBuilder> classe deve implementar o <xref:System.Web.Compilation.ExpressionBuilder.GetCodeExpression%2A> método abstract.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como retornar um <xref:System.CodeDom.CodeExpression> objeto, substituindo o <xref:System.Web.Compilation.ExpressionBuilder.GetCodeExpression%2A> método.  
+  
+ [!code-csharp[System.Web.Compilation.ExpressionBuilder#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/CS/MyExpressionBuilder.cs#4)] 
+ [!code-vb[System.Web.Compilation.ExpressionBuilder#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/VB/MyExpressionBuilder.vb#4)]   
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você implementar um construtor de expressões personalizado, você deve executar a conversão de tipo adequado para a propriedade de controle e retornar a operação de conversão no <see cref="T:System.CodeDom.CodeExpression" /> objeto.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseExpression">
+      <MemberSignature Language="C#" Value="public virtual object ParseExpression (string expression, Type propertyType, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ParseExpression(string expression, class System.Type propertyType, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O valor da expressão declarativa.</param>
+        <param name="propertyType">O tipo da propriedade associada pela expressão.</param>
+        <param name="context">Informações contextuais para a avaliação da expressão.</param>
+        <summary>Quando substituído em uma classe derivada, retorna um objeto que representa a expressão analisada.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém a representação analisada da expressão; caso contrário, <see langword="null" /> se <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" /> não está implementado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando substituído em uma classe derivada, esse método analisa a expressão e retorna-o como um objeto que pode ser usado como o `parsedData` parâmetro em uma <xref:System.Web.Compilation.ExpressionBuilder.GetCodeExpression%2A> ou <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsEvaluate">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsEvaluate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsEvaluate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna um valor que indica se o atual <see cref="T:System.Web.Compilation.ExpressionBuilder" /> objeto oferece suporte a páginas de não-compilação.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.Compilation.ExpressionBuilder" /> oferece suporte a avaliação de expressão; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para o <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> é de propriedade `false`. Para dar suporte a páginas de não-compilação, você deve substituir o <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> método e o <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Compilation.ExpressionBuilder.SupportsEvaluate%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Compilation.ExpressionBuilder#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/CS/MyExpressionBuilder.cs#2)] 
+ [!code-vb[System.Web.Compilation.ExpressionBuilder#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ExpressionBuilder/VB/MyExpressionBuilder.vb#2)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

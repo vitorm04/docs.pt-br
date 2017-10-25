@@ -1,0 +1,216 @@
+<Type Name="PathTooLongException" FullName="System.IO.PathTooLongException">
+  <TypeSignature Language="C#" Value="public class PathTooLongException : System.IO.IOException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PathTooLongException extends System.IO.IOException" />
+  <TypeSignature Language="DocId" Value="T:System.IO.PathTooLongException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.IOException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção gerada quando um caminho ou nome de arquivo totalmente qualificado é maior que o tamanho máximo definido pelo sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se seu código não tiver <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A?displayProperty=nameWithType> permissão, a mensagem de erro para essa exceção pode conter apenas os nomes de arquivo ou diretório em vez de caminhos completos.  
+  
+ Em aplicativos que são executados em versões do .NET Framework antes do [!INCLUDE[net_v462](~/includes/net-v462-md.md)], caminhos completos não devem exceder 260 caracteres para manter a compatibilidade com sistemas operacionais Windows. Qualquer caminho exceder 260 caracteres gera automaticamente um <xref:System.IO.PathTooLongException>. Para obter mais informações sobre essa restrição, consulte a entrada [caminhos longos em .NET](http://go.microsoft.com/fwlink/?LinkID=163666) no blog da equipe de BCL.  
+  
+> [!NOTE]
+>  Esta exceção não está incluída no [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), mas ela é gerada por alguns membros que são. Para capturar a exceção nesse caso, escreva uma `catch` instrução que manipula um <xref:System.IO.IOException> em vez disso.  
+  
+ Começando com os aplicativos em execução sob o [!INCLUDE[net_v462](~/includes/net-v462-md.md)], o .NET Framework oferece suporte a caminhos longos exceder 260 (ou `MAX_PATH`) caracteres.  As condições sob as quais um <xref:System.IO.PathTooLongException> são exceção dependem da versão do .NET Framework que um aplicativo é destinado ao:  
+  
+ **Aplicativos que se destinam a [!INCLUDE[net_v462](~/includes/net-v462-md.md)] e versões posteriores**  
+ Caminhos longos têm suporte por padrão. O tempo de execução gera um <xref:System.IO.PathTooLongException> sob as seguintes condições:  
+  
+-   O sistema operacional retorna `COR_E_PATHTOOLONG` ou seu equivalente.  
+  
+-   O comprimento do caminho excede <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32.767) caracteres.  
+  
+ **Aplicativos que se destinam a [!INCLUDE[net_v461](~/includes/net-v461-md.md)] e versões anteriores**  
+ Caminhos longos são desabilitados por padrão, e o comportamento herdado é mantido. O tempo de execução gera um <xref:System.IO.PathTooLongException> sempre que um caminho excede 260 caracteres.  
+  
+ Se isso for indesejável, aplicativos de destino a [!INCLUDE[net_v461](~/includes/net-v461-md.md)] e anteriores, mas também executada sob o [!INCLUDE[net_v462](~/includes/net-v462-md.md)] pode habilitar o suporte de caminho longos, incluindo a configuração a seguir no [ \<tempo de execução >](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) elemento do arquivo de configuração do aplicativo:  
+  
+```xml  
+  
+<runtime>   
+   <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />   
+</runtime>  
+  
+```  
+  
+ <xref:System.IO.PathTooLongException>usa o HRESULT `COR_E_PATHTOOLONG`, que tem o valor 0x800700CE.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathTooLongException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.PathTooLongException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.PathTooLongException" /> com o HRESULT definido como COR_E_PATHTOOLONG.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Exception.Message%2A> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro, como "o caminho fornecido é muito longo." Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathTooLongException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.PathTooLongException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see cref="T:System.String" /> que descreve o erro. O conteúdo de <c>mensagem</c> se destina a ser compreendidos por humanos. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.PathTooLongException" /> classe com sua cadeia de caracteres de mensagem definida como <paramref name="message" /> e seu HRESULT definido como COR_E_PATHTOOLONG.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Exception.Message%2A> propriedade da nova instância usando `message`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PathTooLongException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.PathTooLongException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.PathTooLongException" /> classe com as informações de serialização e contexto especificadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathTooLongException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.PathTooLongException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see cref="T:System.String" /> que descreve o erro. O conteúdo de <c>mensagem</c> se destina a ser compreendidos por humanos. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual. Se o <c>innerException</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.PathTooLongException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade `InnerException` retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade `InnerException` não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.IO.PathTooLongException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência de exceção interna.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+ Para obter mais informações sobre exceções internas, consulte <xref:System.Exception.InnerException%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

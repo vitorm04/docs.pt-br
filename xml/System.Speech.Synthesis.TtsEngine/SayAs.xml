@@ -1,0 +1,122 @@
+<Type Name="SayAs" FullName="System.Speech.Synthesis.TtsEngine.SayAs">
+  <TypeSignature Language="C#" Value="public class SayAs" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi beforefieldinit SayAs extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.SayAs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações sobre o tipo de conteúdo (como moeda, data ou endereços) ou uma construção de linguagem que determinam como o texto deve ser ditas.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SayAs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.SayAs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <c>SayAs</c> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades do <xref:System.Speech.Synthesis.TtsEngine.SayAs> classe são usadas para obter ou definir os valores para os atributos do `say-as` elemento na marcação SSML. O <xref:System.Speech.Synthesis.TtsEngine.FragmentState.SayAs%2A> propriedade usa um <xref:System.Speech.Synthesis.TtsEngine.SayAs> instância para informar o <xref:System.Speech.Synthesis.SpeechSynthesizer> como falar o texto contido no <xref:System.Speech.Synthesis.TtsEngine.TextFragment.TextToSpeak%2A> propriedade de um <xref:System.Speech.Synthesis.TtsEngine.TextFragment>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detail">
+      <MemberSignature Language="C#" Value="public string Detail { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Detail" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SayAs.Detail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da <c>detalhes</c> de atributo para um <c>dizer-como</c> elemento na linguagem de marcação de SSML de um prompt.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.TtsEngine.FragmentState.SayAs%2A?displayProperty=nameWithType> propriedade obtém ou define o valor para o <xref:System.Speech.Synthesis.TtsEngine.SayAs.Detail%2A> propriedade em um <xref:System.Speech.Synthesis.TtsEngine.SayAs> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SayAs.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da <c>formato</c> de atributo para um <c>dizer-como</c> elemento na linguagem de marcação de SSML de um prompt.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.TtsEngine.FragmentState.SayAs%2A?displayProperty=nameWithType> propriedade obtém ou define o valor para o <xref:System.Speech.Synthesis.TtsEngine.SayAs.Format%2A> propriedade em um <xref:System.Speech.Synthesis.TtsEngine.SayAs> instância.  
+  
+ Por exemplo, um prompt pode conter a frase "a hora é `<say-as interpret-as="time"> 05:00 </say-as>`".  Neste exemplo, `05:00` pode ser dita como "cinco horas" ou "cinco AM" ou "AH quinhentos". O <xref:System.Speech.Synthesis.TtsEngine.SayAs.Format%2A> propriedade permite que o valor de `interpret-as` atributo a ser estendido para especificar o formato de hora que falam. Se o valor para o `interpret-as` atributo é "tempo: 24 horas", o <xref:System.Speech.Synthesis.SpeechSynthesizer> fala "AH quinhentos". Se o valor para o `interpret-as` atributo é "hora do tempo: 12", o <xref:System.Speech.Synthesis.SpeechSynthesizer> fala "cinco um M".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpretAs">
+      <MemberSignature Language="C#" Value="public string InterpretAs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InterpretAs" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SayAs.InterpretAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da <c>interpretar-como</c> de atributo para um <c>dizer-como</c> elemento na linguagem de marcação de SSML de um prompt.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.TtsEngine.FragmentState.SayAs%2A?displayProperty=nameWithType> propriedade obtém ou define o valor para o <xref:System.Speech.Synthesis.TtsEngine.SayAs.InterpretAs%2A> propriedade em um <xref:System.Speech.Synthesis.TtsEngine.SayAs> instância.  
+  
+ O <xref:System.Speech.Synthesis.SpeechSynthesizer> usa o tipo de conteúdo indicado pelo <xref:System.Speech.Synthesis.TtsEngine.SayAs.InterpretAs%2A> propriedade para determinar como processar o texto especificado.  
+  
+ Por exemplo, o nome Edgar pode ser dita como um nome: "meu nome é Edgar". Ou poderia ser escrito com letras, conforme especificado com o `interpret-as` atributo esta frase: "meu nome é `<say-as interpret-as="spell-out"> Edgar </say-as>`." Nesse caso, a <xref:System.Speech.Synthesis.SpeechSynthesizer> fala Edgar como "E D G R A".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

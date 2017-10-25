@@ -1,0 +1,1190 @@
+<Type Name="Interlocked" FullName="System.Threading.Interlocked">
+  <TypeSignature Language="C#" Value="public static class Interlocked" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Interlocked extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Interlocked" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece operações atômicas para variáveis que são compartilhadas por vários threads.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os métodos dessa classe ajudam a proteger contra erros que podem ocorrer quando o Agendador alterna contextos enquanto um thread está atualizando uma variável que pode ser acessada por outros threads, ou quando dois threads estão em execução simultaneamente em processadores separados. Os membros dessa classe não lançam exceções.  
+  
+ O <xref:System.Threading.Interlocked.Increment%2A> e <xref:System.Threading.Interlocked.Decrement%2A> métodos incrementar ou decrementar a uma variável e armazenar o valor resultante em uma única operação. Na maioria dos computadores, incrementar uma variável não é uma operação atômica, que requerem as seguintes etapas:  
+  
+1.  Carregar um valor de uma variável de instância em um registro.  
+  
+2.  Aumentar ou diminuir o valor.  
+  
+3.  Armazene o valor na variável de instância.  
+  
+ Se você não usar <xref:System.Threading.Interlocked.Increment%2A> e <xref:System.Threading.Interlocked.Decrement%2A>, um thread pode ser impedido depois de executar as duas primeiras etapas. Outro thread, em seguida, pode executar todas as três etapas. Quando o primeiro thread retoma a execução, ele substitui o valor da variável de instância, e o efeito do incremento ou decremento executada pelo thread de segundo serão perdido.  
+  
+ O <xref:System.Threading.Interlocked.Exchange%2A> método atomicamente troca os valores das variáveis especificados. O <xref:System.Threading.Interlocked.CompareExchange%2A> método combina duas operações: comparando dois valores e armazenar um terceiro valor em uma das variáveis, com base no resultado da comparação. As operações de comparação e o exchange são executadas como uma operação atômica.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um mecanismo de bloqueio de recurso de thread-safe.  
+  
+ [!code-cpp[System.Threading.Interlocked.Exchange Int32 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange Int32 Example/CPP/class1.cpp#1)]
+ [!code-csharp[System.Threading.Interlocked.Exchange Int32 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange Int32 Example/CS/class1.cs#1)]
+ [!code-vb[System.Threading.Interlocked.Exchange Int32 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange Int32 Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static int Add (ref int location1, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Add(int32&amp; location1, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Add(System.Int32@,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Int32&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="location1">Uma variável que contém o primeiro valor a ser adicionado. A soma dos dois valores é armazenada em <c>location1</c>.</param>
+        <param name="value">O valor a ser adicionada para o número inteiro no <c>location1</c>.</param>
+        <summary>Adiciona dois números inteiros de 32 bits e substitui o primeiro inteiro com a soma, como uma operação atômica.</summary>
+        <returns>O novo valor armazenado em <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método trata uma condição de estouro encapsulando: se o valor no `location1` é <xref:System.Int32?displayProperty=nameWithType> e `value` é 1, o resultado é <xref:System.Int32?displayProperty=nameWithType>; se `value` for 2, o resultado é (<xref:System.Int32?displayProperty=nameWithType> + 1); e assim por diante. Nenhuma exceção é lançada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static long Add (ref long location1, long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 Add(int64&amp; location1, int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Add(System.Int64@,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Int64&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="location1">Uma variável que contém o primeiro valor a ser adicionado. A soma dos dois valores é armazenada em <c>location1</c>.</param>
+        <param name="value">O valor a ser adicionada para o número inteiro no <c>location1</c>.</param>
+        <summary>Adiciona dois números inteiros de 64 bits e substitui o primeiro inteiro com a soma, como uma operação atômica.</summary>
+        <returns>O novo valor armazenado em <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método trata uma condição de estouro encapsulando: se o valor no `location1` é <xref:System.Int64?displayProperty=nameWithType> e `value` é 1, o resultado é <xref:System.Int64?displayProperty=nameWithType>; se `value` for 2, o resultado é (<xref:System.Int64?displayProperty=nameWithType> + 1); e assim por diante. Nenhuma exceção é lançada.  
+  
+ O <xref:System.Threading.Interlocked.Read%2A> método e as sobrecargas de 64 bits do <xref:System.Threading.Interlocked.Increment%2A>, <xref:System.Threading.Interlocked.Decrement%2A>, e <xref:System.Threading.Interlocked.Add%2A> métodos são realmente atômicos apenas em sistemas em que um <xref:System.IntPtr?displayProperty=nameWithType> tem 64 bits. Em outros sistemas, esses métodos são atômicos com respeito ao outro, mas não em relação a outros meios de acesso a dados. Portanto, para ser thread-safe em sistemas de 32 bits, qualquer acesso a um valor de 64 bits deve ser feito através dos membros do <xref:System.Threading.Interlocked> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareExchange">
+      <MemberSignature Language="C#" Value="public static double CompareExchange (ref double location1, double value, double comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 CompareExchange(float64&amp; location1, float64 value, float64 comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.CompareExchange(System.Double@,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Double&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="comparand" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="location1">O destino, cujo valor é comparado com <c>termo de comparação</c> e possivelmente substituído.</param>
+        <param name="value">O valor que substitui o valor de destino quando a comparação resulta em igualdade.</param>
+        <param name="comparand">O valor que é comparado com o valor no <c>location1</c>.</param>
+        <summary>Compara se dois pontos flutuantes de precisão dupla são iguais e, se eles forem, substitui o primeiro valor.</summary>
+        <returns>O valor original em <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `comparand` e o valor na `location1` são iguais, em seguida, `value` é armazenado em `location1`. Caso contrário, nenhuma operação será executada. As operações de comparação e o exchange são executadas como uma operação atômica. O valor de retorno <xref:System.Threading.Interlocked.CompareExchange%2A> é o valor original no `location1`, esteja ou não ocorre a troca.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um método de thread-safe que acumula total de execução de <xref:System.Double> valores. Dois threads de adicionar uma série de <xref:System.Double> valores usando o método de thread-safe e adição comum, e quando os threads concluir os totais são comparados. Em um computador com processador duplo, há uma diferença significativa nos totais.  
+  
+ O método de thread-safe, o valor inicial de execução total é salvo e, em seguida, o <xref:System.Threading.Interlocked.CompareExchange%2A> método é usado para o computado recentemente total com o total antigo do exchange. Se o valor de retorno não é igual ao valor salvo do total em execução, em seguida, outro thread atualizou o total nesse meio tempo. Nesse caso, a tentativa de atualizar o total de execução deve ser repetida.  
+  
+ [!code-csharp[System.Threading.Interlocked CompareExchange Double#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Interlocked CompareExchange Double/cs/source.cs#1)]
+ [!code-vb[System.Threading.Interlocked CompareExchange Double#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Interlocked CompareExchange Double/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareExchange">
+      <MemberSignature Language="C#" Value="public static int CompareExchange (ref int location1, int value, int comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 CompareExchange(int32&amp; location1, int32 value, int32 comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.CompareExchange(System.Int32@,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Int32&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Int32" />
+        <Parameter Name="comparand" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="location1">O destino, cujo valor é comparado com <c>termo de comparação</c> e possivelmente substituído.</param>
+        <param name="value">O valor que substitui o valor de destino quando a comparação resulta em igualdade.</param>
+        <param name="comparand">O valor que é comparado com o valor no <c>location1</c>.</param>
+        <summary>Compara dois inteiros com sinal de 32 bits para verificar se são iguais e, em caso de igualdade, substitui o primeiro valor.</summary>
+        <returns>O valor original em <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `comparand` e o valor na `location1` são iguais, em seguida, `value` é armazenado em `location1`. Caso contrário, nenhuma operação será executada. As operações de comparação e o exchange são executadas como uma operação atômica. O valor de retorno <xref:System.Threading.Interlocked.CompareExchange%2A> é o valor original no `location1`, esteja ou não ocorre a troca.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um método de thread-safe que acumula total de execução. O valor inicial de execução total é salvo e, em seguida, o <xref:System.Threading.Interlocked.CompareExchange%2A> método é usado para o computado recentemente total com o total antigo do exchange. Se o valor de retorno não é igual ao valor salvo do total em execução, em seguida, outro thread atualizou o total nesse meio tempo. Nesse caso, a tentativa de atualizar o total de execução deve ser repetida.  
+  
+> [!NOTE]
+>  O <xref:System.Threading.Interlocked.Add%2A> método, introduzido na versão 2.0 do .NET Framework, fornece uma maneira mais conveniente para acumular os totais em execução de thread-safe de inteiros.  
+  
+ [!code-cpp[System.Threading.Interlocked CompareExchange0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Interlocked CompareExchange0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Interlocked CompareExchange0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Interlocked CompareExchange0/CS/source.cs#1)]
+ [!code-vb[System.Threading.Interlocked CompareExchange0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Interlocked CompareExchange0/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareExchange">
+      <MemberSignature Language="C#" Value="public static long CompareExchange (ref long location1, long value, long comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 CompareExchange(int64&amp; location1, int64 value, int64 comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.CompareExchange(System.Int64@,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Int64&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Int64" />
+        <Parameter Name="comparand" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="location1">O destino, cujo valor é comparado com <c>termo de comparação</c> e possivelmente substituído.</param>
+        <param name="value">O valor que substitui o valor de destino quando a comparação resulta em igualdade.</param>
+        <param name="comparand">O valor que é comparado com o valor no <c>location1</c>.</param>
+        <summary>Compara dois inteiros com sinal de 64 bits para verificar se são iguais e, em caso de igualdade, substitui o primeiro valor.</summary>
+        <returns>O valor original em <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `comparand` e o valor na `location1` são iguais, em seguida, `value` é armazenado em `location1`. Caso contrário, nenhuma operação será executada. As operações de comparação e o exchange são executadas como uma operação atômica. O valor de retorno <xref:System.Threading.Interlocked.CompareExchange%2A> é o valor original no `location1`, esteja ou não ocorre a troca.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareExchange">
+      <MemberSignature Language="C#" Value="public static IntPtr CompareExchange (ref IntPtr location1, IntPtr value, IntPtr comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int CompareExchange(native int&amp; location1, native int value, native int comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.CompareExchange(System.IntPtr@,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.IntPtr&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.IntPtr" />
+        <Parameter Name="comparand" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="location1">O destino <see cref="T:System.IntPtr" />, cujo valor é comparado com o valor de <c>termo de comparação</c> e possivelmente substituído por <c>valor</c>.</param>
+        <param name="value">O <see cref="T:System.IntPtr" /> que substitui o valor de destino quando a comparação resulta em igualdade.</param>
+        <param name="comparand">O <see cref="T:System.IntPtr" /> que é comparado com o valor em <c>location1</c>.</param>
+        <summary>Compara dois ponteiros ou identificadores específicos da plataforma quanto à igualdade e, se eles são iguais, substitui o primeiro.</summary>
+        <returns>O valor original em <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `comparand` e o valor na `location1` são iguais, em seguida, `value` é armazenado em `location1`. Caso contrário, nenhuma operação será executada. As operações de comparação e o exchange são executadas como uma operação atômica. O valor de retorno desse método é o valor original no `location1`, esteja ou não ocorre a troca.  
+  
+> [!NOTE]
+>  <xref:System.IntPtr>é um tipo específico de plataforma.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareExchange">
+      <MemberSignature Language="C#" Value="public static object CompareExchange (ref object location1, object value, object comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CompareExchange(object&amp; location1, object value, object comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.CompareExchange(System.Object@,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="comparand" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="location1">O objeto de destino que é comparado com <c>termo de comparação</c> e possivelmente substituído.</param>
+        <param name="value">O objeto que substitui o objeto de destino quando a comparação resulta em igualdade.</param>
+        <param name="comparand">O objeto que é comparado com o objeto no <c>location1</c>.</param>
+        <summary>Compara dois objetos quanto à igualdade de referência e, se eles forem iguais, substitui o primeiro objeto.</summary>
+        <returns>O valor original em <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `comparand` e o objeto no `location1` são iguais, em seguida, `value` é armazenado em `location1`. Caso contrário, nenhuma operação será executada. As operações de comparação e o exchange são executadas como uma operação atômica. O valor de retorno <xref:System.Threading.Interlocked.CompareExchange%2A> é o valor original no `location1`, esteja ou não ocorre a troca.  
+  
+ Começando com o .NET Framework versão 2.0, o <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> sobrecarga do método fornece uma alternativa de tipo seguro para tipos de referência.  
+  
+> [!NOTE]
+>  Os objetos são comparados para igualdade de referência, em vez de <xref:System.Object.Equals%2A?displayProperty=nameWithType>. Como resultado, duas instâncias de processador do mesmo tipo de valor (por exemplo, o valor inteiro 3) sempre parecem ser diferentes, e nenhuma operação é executada. Não use essa sobrecarga com tipos de valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareExchange">
+      <MemberSignature Language="C#" Value="public static float CompareExchange (ref float location1, float value, float comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 CompareExchange(float32&amp; location1, float32 value, float32 comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.CompareExchange(System.Single@,System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Single&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Single" />
+        <Parameter Name="comparand" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="location1">O destino, cujo valor é comparado com <c>termo de comparação</c> e possivelmente substituído.</param>
+        <param name="value">O valor que substitui o valor de destino quando a comparação resulta em igualdade.</param>
+        <param name="comparand">O valor que é comparado com o valor no <c>location1</c>.</param>
+        <summary>Compara dois precisão única números de ponto flutuante para igualdade e, se eles forem iguais, substitui o primeiro valor.</summary>
+        <returns>O valor original em <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `comparand` e o valor na `location1` são iguais, em seguida, `value` é armazenado em `location1`. Caso contrário, nenhuma operação será executada. As operações de comparação e o exchange são executadas como uma operação atômica. O valor de retorno <xref:System.Threading.Interlocked.CompareExchange%2A> é o valor original no `location1`, esteja ou não ocorre a troca.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um método de thread-safe que acumula total de execução de <xref:System.Single> valores. Dois threads de adicionar uma série de <xref:System.Single> valores usando o método de thread-safe e adição comum, e quando os threads concluir os totais são comparados. Em um computador com processador duplo, há uma diferença significativa nos totais.  
+  
+ O método de thread-safe, o valor inicial de execução total é salvo e, em seguida, o <xref:System.Threading.Interlocked.CompareExchange%2A> método é usado para o computado recentemente total com o total antigo do exchange. Se o valor de retorno não é igual ao valor salvo do total em execução, em seguida, outro thread atualizou o total nesse meio tempo. Nesse caso, a tentativa de atualizar o total de execução deve ser repetida.  
+  
+ [!code-csharp[System.Threading.Interlocked CompareExchange Single#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Interlocked CompareExchange Single/cs/source.cs#1)]
+ [!code-vb[System.Threading.Interlocked CompareExchange Single#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Interlocked CompareExchange Single/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareExchange&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T CompareExchange&lt;T&gt; (ref T location1, T value, T comparand) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T CompareExchange&lt;class T&gt;(!!T&amp; location1, !!T value, !!T comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.CompareExchange``1(``0@,``0,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location1" Type="T&amp;" RefType="ref" />
+        <Parameter Name="value" Type="T" />
+        <Parameter Name="comparand" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo a ser usado para <c>location1</c>, <c>valor</c>, e <c>termo de comparação</c>. Esse tipo deve ser um tipo de referência.</typeparam>
+        <param name="location1">O destino, cujo valor é comparado com <c>termo de comparação</c> e possivelmente substituído. Esse é um parâmetro de referência (<see langword="ref" /> no C# e <see langword="ByRef" /> no Visual Basic).</param>
+        <param name="value">O valor que substitui o valor de destino quando a comparação resulta em igualdade.</param>
+        <param name="comparand">O valor que é comparado com o valor no <c>location1</c>.</param>
+        <summary>Compara duas instâncias do tipo de referência <paramref name="T" /> especificado em relação à igualdade e, se elas forem iguais, substitui a primeira.</summary>
+        <returns>O valor original em <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `comparand` e o valor na `location1` são iguais, em seguida, `value` é armazenado em `location1`. Caso contrário, nenhuma operação será executada. A comparação e o exchange são executadas como uma operação atômica. O valor de retorno desse método é o valor original no `location1`, esteja ou não ocorre a troca.  
+  
+ Esse método só dá suporte a tipos de referência. Há sobrecargas do <xref:System.Threading.Interlocked.CompareExchange%2A> método para os tipos de valor <xref:System.Int32>, <xref:System.Int64>, <xref:System.IntPtr>, <xref:System.Single>, e <xref:System.Double>, mas não há suporte para outros tipos de valor.  
+  
+> [!NOTE]
+>  Essa sobrecarga de método é preferível a <xref:System.Threading.Interlocked.CompareExchange%28System.Object%40%2CSystem.Object%2CSystem.Object%29> sobrecarga do método, porque o último requer o objeto de destino a serem acessadas associação tardia.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Decrement">
+      <MemberSignature Language="C#" Value="public static int Decrement (ref int location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Decrement(int32&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Decrement(System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">A variável cujo valor deve ser decrementado.</param>
+        <summary>Decrementa uma variável especificada e armazena o resultado, como uma operação atômica.</summary>
+        <returns>O valor decrementado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método trata uma condição de estouro encapsulando: se `location`  =  <xref:System.Int32?displayProperty=nameWithType>, `location` - 1 = <xref:System.Int32?displayProperty=nameWithType>. Nenhuma exceção é lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir determina quantos números aleatórios que variam de 0 a 1.000 são necessários para gerar números aleatórios 1.000 com um valor de ponto médio. Para controlar o número de valores de ponto médio, uma variável, `midpointCount`, é definida igual a 1.000 e reduzido cada vez que o gerador de número aleatório retorna um valor de ponto médio. Como três threads geram números aleatórios, o <xref:System.Threading.Interlocked.Decrement%28System.Int32%40%29> método é chamado para garantir que vários threads não atualizem `midpointCount` simultaneamente. Observe que um bloqueio também é usado para proteger o gerador de número aleatório e que um <xref:System.Threading.CountdownEvent> objeto é usado para garantir que o `Main` método não concluir a execução antes de três threads.  
+  
+ [!code-csharp[System.Threading.Interlocked.Decrement#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.interlocked.decrement/cs/decrement1.cs#1)]
+ [!code-vb[System.Threading.Interlocked.Decrement#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.interlocked.decrement/vb/decrement1.vb#1)]  
+  
+ O exemplo a seguir é semelhante ao anterior, exceto que ele usa o em vez de um procedimento de thread para gerar números inteiros de ponto médio aleatório 50.000. Neste exemplo, uma expressão lambda substitui o `GenerateNumbers` procedimento de thread e a chamada para o <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> método elimina a necessidade do <xref:System.Threading.CountdownEvent> objeto.  
+  
+ [!code-csharp[System.Threading.Interlocked.Decrement#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.interlocked.decrement/cs/decrement2.cs#2)]
+ [!code-vb[System.Threading.Interlocked.Decrement#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.interlocked.decrement/vb/decrement2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O endereço de <paramref name="location" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Decrement">
+      <MemberSignature Language="C#" Value="public static long Decrement (ref long location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 Decrement(int64&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Decrement(System.Int64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int64&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">A variável cujo valor deve ser decrementado.</param>
+        <summary>Diminui uma variável especificada e armazena o resultado como uma operação atômica.</summary>
+        <returns>O valor decrementado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método trata uma condição de estouro encapsulando: se `location`  =  <xref:System.Int64?displayProperty=nameWithType>, `location` - 1 = <xref:System.Int64?displayProperty=nameWithType>. Nenhuma exceção é lançada.  
+  
+ O <xref:System.Threading.Interlocked.Read%2A> método e as sobrecargas de 64 bits do <xref:System.Threading.Interlocked.Increment%2A>, <xref:System.Threading.Interlocked.Decrement%2A>, e <xref:System.Threading.Interlocked.Add%2A> métodos são realmente atômicos apenas em sistemas em que um <xref:System.IntPtr?displayProperty=nameWithType> tem 64 bits. Em outros sistemas, esses métodos são atômicos com respeito ao outro, mas não em relação a outros meios de acesso a dados. Portanto, para ser thread-safe em sistemas de 32 bits, qualquer acesso a um valor de 64 bits deve ser feito através dos membros do <xref:System.Threading.Interlocked> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O endereço de <paramref name="location" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exchange">
+      <MemberSignature Language="C#" Value="public static double Exchange (ref double location1, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 Exchange(float64&amp; location1, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Exchange(System.Double@,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Double&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="location1">A variável a ser definida com o valor especificado.</param>
+        <param name="value">O valor para o qual o <c>location1</c> parâmetro está definido.</param>
+        <summary>Define um número de ponto flutuante de precisão dupla para um valor especificado e retorna o valor original, como uma operação atômica.</summary>
+        <returns>O valor original de <paramref name="location1" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exchange">
+      <MemberSignature Language="C#" Value="public static int Exchange (ref int location1, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Exchange(int32&amp; location1, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Exchange(System.Int32@,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Int32&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="location1">A variável a ser definida com o valor especificado.</param>
+        <param name="value">O valor para o qual o <c>location1</c> parâmetro está definido.</param>
+        <summary>Define um inteiro com sinal de 32 bits com um valor especificado e retorna o valor original, como uma operação atômica.</summary>
+        <returns>O valor original de <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra um mecanismo de bloqueio de recurso de thread-safe.  
+  
+ [!code-cpp[System.Threading.Interlocked.Exchange Int32 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange Int32 Example/CPP/class1.cpp#1)]
+ [!code-csharp[System.Threading.Interlocked.Exchange Int32 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange Int32 Example/CS/class1.cs#1)]
+ [!code-vb[System.Threading.Interlocked.Exchange Int32 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange Int32 Example/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exchange">
+      <MemberSignature Language="C#" Value="public static long Exchange (ref long location1, long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 Exchange(int64&amp; location1, int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Exchange(System.Int64@,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Int64&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="location1">A variável a ser definida com o valor especificado.</param>
+        <param name="value">O valor para o qual o <c>location1</c> parâmetro está definido.</param>
+        <summary>Define um inteiro com sinal de 64 bits com um valor especificado e retorna o valor original, como uma operação atômica.</summary>
+        <returns>O valor original de <paramref name="location1" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exchange">
+      <MemberSignature Language="C#" Value="public static IntPtr Exchange (ref IntPtr location1, IntPtr value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int Exchange(native int&amp; location1, native int value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Exchange(System.IntPtr@,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.IntPtr&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="location1">A variável a ser definida com o valor especificado.</param>
+        <param name="value">O valor para o qual o <c>location1</c> parâmetro está definido.</param>
+        <summary>Define um identificador específico da plataforma ou um ponteiro para um valor especificado e retorna o valor original, como uma operação atômica.</summary>
+        <returns>O valor original de <paramref name="location1" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exchange">
+      <MemberSignature Language="C#" Value="public static object Exchange (ref object location1, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Exchange(object&amp; location1, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Exchange(System.Object@,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="location1">A variável a ser definida com o valor especificado.</param>
+        <param name="value">O valor para o qual o <c>location1</c> parâmetro está definido.</param>
+        <summary>Define um objeto com um valor especificado e retorna uma referência ao objeto original, como uma operação atômica.</summary>
+        <returns>O valor original de <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o .NET Framework versão 2.0, o <xref:System.Threading.Interlocked.Exchange%60%601%28%60%600%40%2C%60%600%29> sobrecarga do método fornece uma alternativa de tipo seguro para tipos de referência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a sintaxe para usar `Exchange` com qualquer objeto do tipo de referência.  
+  
+ [!code-cpp[System.Threading.Interlocked.Exchange#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Interlocked.Exchange#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange/CS/source.cs#1)]
+ [!code-vb[System.Threading.Interlocked.Exchange#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exchange">
+      <MemberSignature Language="C#" Value="public static float Exchange (ref float location1, float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Exchange(float32&amp; location1, float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Exchange(System.Single@,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location1" Type="System.Single&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="location1">A variável a ser definida com o valor especificado.</param>
+        <param name="value">O valor para o qual o <c>location1</c> parâmetro está definido.</param>
+        <summary>Define um número de ponto flutuante de precisão simples com um valor especificado e retorna o valor original, como uma operação atômica.</summary>
+        <returns>O valor original de <paramref name="location1" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exchange&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static T Exchange&lt;T&gt; (ref T location1, T value) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Exchange&lt;class T&gt;(!!T&amp; location1, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Exchange``1(``0@,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location1" Type="T&amp;" RefType="ref" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo a ser usado para <c>location1</c> e <c>valor</c>. Esse tipo deve ser um tipo de referência.</typeparam>
+        <param name="location1">A variável a ser definida com o valor especificado. Esse é um parâmetro de referência (<see langword="ref" /> no C# e <see langword="ByRef" /> no Visual Basic).</param>
+        <param name="value">O valor para o qual o <c>location1</c> parâmetro está definido.</param>
+        <summary>Define uma variável do tipo <paramref name="T" /> especificado como um valor especificado e retorna o valor original como uma operação atômica.</summary>
+        <returns>O valor original de <paramref name="location1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só dá suporte a tipos de referência. Há sobrecargas do <xref:System.Threading.Interlocked.Exchange%2A> método para o <xref:System.Int32>, <xref:System.Int64>, <xref:System.IntPtr>, <xref:System.Single>, e <xref:System.Double> os tipos de valor, mas não há suporte para outros tipos de valor.  
+  
+> [!NOTE]
+>  Essa sobrecarga de método é preferível a <xref:System.Threading.Interlocked.Exchange%28System.Object%40%2CSystem.Object%29> sobrecarga do método, porque o último requer acesso de associação tardia para o objeto de destino.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir executa dez tarefas, cada um deles gera números de 100 caracteres dez parte. Em seguida, o número de peça é o primeiro em ordem alfabética.  
+  
+ [!code-csharp[System.Threading.Interlocked.Exchange#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange/CS/Exchange5.cs#2)]
+ [!code-vb[System.Threading.Interlocked.Exchange#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Interlocked.Exchange/VB/Exchange5.vb#2)]  
+  
+ O exemplo usa o `firstWidget` variável para armazenar a ID que ocorre primeiro na ordem de classificação. Ele compara cada ID gerado com o `firstWidget` valor.  Se o novo valor precede o valor atual de `firstWidget` na ordem de classificação, o exemplo chama o <xref:System.Threading.Interlocked.Exchange%2A> método para atribuir o novo valor para `firstWidget`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location1" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public static int Increment (ref int location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 Increment(int32&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Increment(System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">A variável cujo valor deve ser incrementado.</param>
+        <summary>Incrementa uma variável especificada e armazena o resultado, como uma operação atômica.</summary>
+        <returns>O valor incrementado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método trata uma condição de estouro encapsulando: se `location`  =  <xref:System.Int32?displayProperty=nameWithType>, `location` + 1 = <xref:System.Int32?displayProperty=nameWithType>. Nenhuma exceção é lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir determina quantos números aleatórios que variam de 0 a 1.000 são necessários para gerar números aleatórios 1.000 com um valor de ponto médio. Para controlar o número de valores de ponto médio, uma variável, `midpointCount`, é definido como 0 e incrementado toda vez que o gerador de número aleatório retorna um valor de ponto médio até atingir a 10.000. Como três threads geram números aleatórios, o <xref:System.Threading.Interlocked.Increment%28System.Int32%40%29> método é chamado para garantir que vários threads não atualizem `midpointCount` simultaneamente. Observe que um bloqueio também é usado para proteger o gerador de número aleatório e que um <xref:System.Threading.CountdownEvent> objeto é usado para garantir que o `Main` método não concluir a execução antes de três threads.  
+  
+ [!code-csharp[System.Threading.Interlocked.Increment2#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.interlocked.increment2/cs/increment3.cs#3)]
+ [!code-vb[System.Threading.Interlocked.Increment2#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.interlocked.increment2/vb/Increment3.vb#3)]  
+  
+ O exemplo a seguir é semelhante ao anterior, exceto que ele usa o em vez de um procedimento de thread para gerar números inteiros de ponto médio aleatório 50.000. Neste exemplo, uma expressão lambda substitui o `GenerateNumbers` procedimento de thread e a chamada para o <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> método elimina a necessidade do <xref:System.Threading.CountdownEvent> objeto.  
+  
+ [!code-csharp[System.Threading.Interlocked.Increment2#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.interlocked.increment2/cs/increment4.cs#4)]
+ [!code-vb[System.Threading.Interlocked.Increment2#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.interlocked.increment2/vb/Increment4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public static long Increment (ref long location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 Increment(int64&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Increment(System.Int64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int64&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">A variável cujo valor deve ser incrementado.</param>
+        <summary>Incrementa uma variável especificada e armazena o resultado, como uma operação atômica.</summary>
+        <returns>O valor incrementado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método trata uma condição de estouro encapsulando: se `location`  =  <xref:System.Int64?displayProperty=nameWithType>, `location` + 1 = <xref:System.Int64?displayProperty=nameWithType>. Nenhuma exceção é lançada.  
+  
+ O <xref:System.Threading.Interlocked.Read%2A> método e as sobrecargas de 64 bits do <xref:System.Threading.Interlocked.Increment%2A>, <xref:System.Threading.Interlocked.Decrement%2A>, e <xref:System.Threading.Interlocked.Add%2A> métodos são realmente atômicos apenas em sistemas em que um <xref:System.IntPtr?displayProperty=nameWithType> tem 64 bits. Em outros sistemas, esses métodos são atômicos com respeito ao outro, mas não em relação a outros meios de acesso a dados. Portanto, para ser thread-safe em sistemas de 32 bits, qualquer acesso a um valor de 64 bits deve ser feito através dos membros do <xref:System.Threading.Interlocked> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O endereço de <paramref name="location" /> é um ponteiro nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryBarrier">
+      <MemberSignature Language="C#" Value="public static void MemoryBarrier ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void MemoryBarrier() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.MemoryBarrier" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sincroniza o acesso à memória da seguinte maneira: o processador que executa o thread atual não pode reorganizar as instruções de forma que os acessos à memória anteriores à chamada para <see cref="M:System.Threading.Interlocked.MemoryBarrier" /> sejam executados depois dos acessos à memória posteriores à chamada para <see cref="M:System.Threading.Interlocked.MemoryBarrier" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método foi adicionado para o <xref:System.Threading.Interlocked> classe no [!INCLUDE[net_v45](~/includes/net-v45-md.md)] como uma conveniência; é um wrapper para o <xref:System.Threading.Thread.MemoryBarrier%2A?displayProperty=nameWithType> método.  
+  
+ <xref:System.Threading.Interlocked.MemoryBarrier%2A>é necessária somente em sistemas de multiprocessador que têm memória fraca ordenação (por exemplo, um sistema que utiliza vários processadores Intel Itanium).  
+  
+ Para a maioria das finalidades, c# `lock` instrução, o Visual Basic `SyncLock` instrução, ou o <xref:System.Threading.Monitor> classe fornecem maneiras mais fáceis para sincronizar os dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryBarrierProcessWide">
+      <MemberSignature Language="C#" Value="public static void MemoryBarrierProcessWide ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void MemoryBarrierProcessWide() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.MemoryBarrierProcessWide" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public static long Read (ref long location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 Read(int64&amp; location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Interlocked.Read(System.Int64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int64&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="location">O valor de 64 bits a ser carregado.</param>
+        <summary>Retorna um valor de 64 bits, carregado como uma operação atômica.</summary>
+        <returns>O valor carregado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.Interlocked.Read%2A> método é desnecessário em sistemas de 64 bits, pois as operações de leitura de 64 bits já são atômicas. Operações de leitura de 64 bits em sistemas de 32 bits, não são atômicas, a menos que executada usando <xref:System.Threading.Interlocked.Read%2A>.  
+  
+ O <xref:System.Threading.Interlocked.Read%2A> método e as sobrecargas de 64 bits do <xref:System.Threading.Interlocked.Increment%2A>, <xref:System.Threading.Interlocked.Decrement%2A>, e <xref:System.Threading.Interlocked.Add%2A> métodos são realmente atômicos apenas em sistemas em que um <xref:System.IntPtr?displayProperty=nameWithType> tem 64 bits. Em outros sistemas, esses métodos são atômicos com respeito ao outro, mas não em relação a outros meios de acesso a dados. Portanto, para ser thread-safe em sistemas de 32 bits, qualquer acesso a um valor de 64 bits deve ser feito através dos membros do <xref:System.Threading.Interlocked> classe.  
+  
+> [!NOTE]
+>  <xref:System.IntPtr>é um tipo específico de plataforma.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,724 @@
+<Type Name="ToolBarButton" FullName="System.Windows.Forms.ToolBarButton">
+  <TypeSignature Language="C#" Value="public class ToolBarButton : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolBarButton extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolBarButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.ToolBarButtonDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um botão de barra de ferramentas do Windows. Embora o <see cref="T:System.Windows.Forms.ToolStripButton" /> substitua e estenda o controle <see cref="T:System.Windows.Forms.ToolBarButton" /> de versões anteriores, <see cref="T:System.Windows.Forms.ToolBarButton" /> é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolBarButton>controles são gerados pelo <xref:System.Windows.Forms.ToolBar> controles. Propriedades comuns para definir quando tiver sido criado no botão da barra de ferramentas são <xref:System.Windows.Forms.ToolBarButton.Text%2A> e <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>. Definir o <xref:System.Windows.Forms.ToolBarButton.Text%2A> propriedade do botão para exibir o texto abaixo ou à direita da imagem. Para atribuir imagens para os botões, criando um <xref:System.Windows.Forms.ImageList>, atribuí-lo para o <xref:System.Windows.Forms.ToolBar.ImageList%2A> propriedade da barra de ferramentas; em seguida, atribuir o valor de índice de imagem para o <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propriedade do botão.  
+  
+ Para alterar a aparência dos botões de barra de ferramentas atribuídos à barra de ferramentas, defina o <xref:System.Windows.Forms.ToolBar.Appearance%2A> propriedade do controle pai da barra de ferramentas. O `ToolBarAppearance.Flat` aparência fornece os botões uma aparência plana. Como o mouse o ponteiro se move sobre os botões, suas alterações aparência tridimensional. Separadores de botão aparecem como linhas em vez de espaços entre os botões quando os botões tem uma aparência plana. Se o <xref:System.Windows.Forms.ToolBar.Appearance%2A> está definida como `ToolBarAppearance.Normal`, os botões são exibidos gerado e tridimensionais e separadores de aparecem como uma lacuna entre os botões.  
+  
+ Você pode atribuir um <xref:System.Windows.Forms.ContextMenu> a um botão se a <xref:System.Windows.Forms.ToolBarButton.Style%2A> está definida como `ToolBarButtonStyle.DropDown`. Quando o botão é clicado, o menu atribuído é exibido.  
+  
+ Para criar uma coleção de <xref:System.Windows.Forms.ToolBarButton> controles para exibir em um <xref:System.Windows.Forms.ToolBar>, adicionar os botões individualmente usando o <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> método o <xref:System.Windows.Forms.ToolBar.Buttons%2A> propriedade. Como alternativa, você pode adicionar vários botões de barra de ferramentas usando o <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.AddRange%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.ToolBar> e três <xref:System.Windows.Forms.ToolBarButton> controles. Os botões da barra de ferramentas são atribuídos à coleção de botão, a coleção é atribuída à barra de ferramentas e barra de ferramentas é adicionada ao formulário. No <xref:System.Windows.Forms.ToolBar.ButtonClick> eventos da barra de ferramentas, o <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> propriedade o <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> é avaliado e abrir a caixa de diálogo apropriada. Esse código requer que um <xref:System.Windows.Forms.Form>, uma <xref:System.Windows.Forms.OpenFileDialog>, um <xref:System.Windows.Forms.SaveFileDialog>e um <xref:System.Windows.Forms.PrintDialog> todas foram criadas.  
+  
+ [!code-cpp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBar.ToolBar Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBar.ToolBar Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBar.ToolBar Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolBarButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBarButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ToolBarButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Criada uma nova <xref:System.Windows.Forms.ToolBarButton> não possui padrão <xref:System.Windows.Forms.ToolBarButton.Text%2A> ou <xref:System.Drawing.Image> atribuído a ele. Estilo de padrão do botão é `ToolBarButtonStyle.PushButton`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.ToolBar> e três <xref:System.Windows.Forms.ToolBarButton> controla, atribui os botões na barra de ferramentas e define algumas propriedades comuns dos botões. Esse código requer que um <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> e um <xref:System.Windows.Forms.Form> foram criados e o <xref:System.Windows.Forms.ImageList> tem pelo menos um <xref:System.Drawing.Image> atribuído a ele.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolBarButton (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBarButton.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido no novo <see cref="T:System.Windows.Forms.ToolBarButton" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ToolBarButton" /> classe e exibe o texto atribuído no botão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recém-criado <xref:System.Windows.Forms.ToolBarButton> não tem nenhum <xref:System.Drawing.Image> atribuído a ele. Estilo de padrão do botão é <xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>. O `text` parâmetro é atribuído a <xref:System.Windows.Forms.ToolBarButton.Text%2A> propriedade e é exibido no controle de botão de barra de ferramentas nova.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.ToolBar> e três <xref:System.Windows.Forms.ToolBarButton> controla, atribui os botões na barra de ferramentas e define algumas propriedades comuns dos botões. Esse código requer que um <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> e um <xref:System.Windows.Forms.Form> foram criados e o <xref:System.Windows.Forms.ImageList> tem pelo menos um <xref:System.Drawing.Image> atribuído a ele.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBarButton.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.ToolBarButton" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose` e pelo método <xref:System.Object.Finalize%2A>. `Dispose` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Windows.Forms.ToolBarButton> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownMenu">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Menu DropDownMenu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Menu DropDownMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.DropDownMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Menu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o menu a ser exibido no botão da lista suspensa de barra de ferramentas.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.ContextMenu" /> a ser exibido no botão da lista suspensa de barra de ferramentas. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar um <xref:System.Windows.Forms.ContextMenu> a ser exibida ao clicar no botão suspenso. Essa propriedade não é usada, a menos que o <xref:System.Windows.Forms.ToolBarButton.Style%2A> o valor da propriedade é definido como <xref:System.Windows.Forms.ToolBarButtonStyle?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Embora o <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> está definida como um <xref:System.Windows.Forms.Menu> tipo, é necessário atribuir um <xref:System.Windows.Forms.ContextMenu> para que ele seja exibido corretamente. Se você estiver criando suas próprias <xref:System.Windows.Forms.MenuItem> você deve atribuir esse objeto de classe derivada uma <xref:System.Windows.Forms.ContextMenu> e atribua o <xref:System.Windows.Forms.ContextMenu> para o <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.ToolBar> e três <xref:System.Windows.Forms.ToolBarButton> controla, atribui os botões na barra de ferramentas e define algumas propriedades comuns dos botões. Esse código requer que um <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> e um <xref:System.Windows.Forms.Form> foram criados e o <xref:System.Windows.Forms.ImageList> tem pelo menos um <xref:System.Drawing.Image> atribuído a ele.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O objeto atribuído não é um <see cref="T:System.Windows.Forms.ContextMenu" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o botão é habilitado.</summary>
+        <value>
+          <see langword="true" />Se o botão estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> está definida como `false`, não pode ser clicado no botão da barra de ferramentas e altera a aparência do botão. O <xref:System.Drawing.Image> e <xref:System.Windows.Forms.ToolBarButton.Text%2A> atribuída ao botão aparecem esmaecidas. Se a imagem ou texto tem várias cores, elas sejam exibidas em um monocromático cinza.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageIndex">
+      <MemberSignature Language="C#" Value="public int ImageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ImageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.ImageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageIndexConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do índice da imagem atribuída ao botão.</summary>
+        <value>O valor de índice a <see cref="T:System.Drawing.Image" /> atribuída ao botão da barra de ferramentas. O padrão é -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> valor referencia o valor indexado das imagens em um <xref:System.Windows.Forms.ImageList> atribuídos ao pai <xref:System.Windows.Forms.ToolBar> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.ToolBar> e três <xref:System.Windows.Forms.ToolBarButton> controla, atribui os botões na barra de ferramentas e define algumas propriedades comuns dos botões. Esse código requer que um <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> e um <xref:System.Windows.Forms.Form> foram criados e o <xref:System.Windows.Forms.ImageList> tem pelo menos um <xref:System.Drawing.Image> atribuído a ele.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor atribuído é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageKey">
+      <MemberSignature Language="C#" Value="public string ImageKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.ImageKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageKeyConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da imagem atribuída ao botão.</summary>
+        <value>O nome do <see cref="T:System.Drawing.Image" /> atribuída ao botão da barra de ferramentas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolBarButton.ImageKey%2A> valor indica que uma imagem no <xref:System.Windows.Forms.ImageList> atribuídos ao pai <xref:System.Windows.Forms.ToolBar> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do botão.</summary>
+        <value>O nome do botão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o nome do botão como uma chave para recuperar o <xref:System.Windows.Forms.ToolBarButton> do <xref:System.Windows.Forms.ToolBar.Buttons%2A> coleção de um <xref:System.Windows.Forms.ToolBar> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolBar Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolBar Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBar</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle de barra de ferramentas atribuída ao botão da barra de ferramentas.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ToolBar" /> de controle que o <see cref="T:System.Windows.Forms.ToolBarButton" /> é atribuído a.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartialPush">
+      <MemberSignature Language="C#" Value="public bool PartialPush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PartialPush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.PartialPush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um botão de barra de ferramentas do estilo de alternância é parcialmente pressionado.</summary>
+        <value>
+          <see langword="true" />Se um botão de barra de ferramentas do estilo de alternância é parcialmente pressionado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Forms.ToolBarButton.PartialPush%2A> é definido como `true`, o botão de barra de ferramentas parece ter sua face esmaecido. Essa aparência é diferente da aparência esmaecida quando o <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> está definida como `false` desde que a aparência de envio por push parcial oferece um borrões a face do botão inteiro. Essa propriedade não tem nenhum efeito a menos que o <xref:System.Windows.Forms.ToolBarButtonStyle> é definido como `ToggleButton`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ToolBarButton.Pushed%2A>, e <xref:System.Windows.Forms.ToolBarButton.PartialPush%2A> propriedades. Para executar o exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.RichTextBox> controle chamado `RichTextBox1`. Chamar o `InitializeToolBar` método no construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pushed">
+      <MemberSignature Language="C#" Value="public bool Pushed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Pushed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Pushed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um botão de barra de ferramentas do estilo de alternância está no estado enviadas por push.</summary>
+        <value>
+          <see langword="true" />Se um botão de barra de ferramentas do estilo de alternância está no estado enviadas por push; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Forms.ToolBarButton.Pushed%2A> é definido como `true`, no botão de barra de ferramentas é exibida em baixo-relevo ou inserindo em relação os outros botões. Essa propriedade não tem nenhum efeito a menos que o <xref:System.Windows.Forms.ToolBarButtonStyle> é definido como `ToggleButton`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ToolBarButton.Pushed%2A>, e <xref:System.Windows.Forms.ToolBarButton.PartialPush%2A> propriedades. Para executar o exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.RichTextBox> controle chamado `RichTextBox1`. Chamar o `InitializeToolBar` método no construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Rectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Rectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Rectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o retângulo delimitador para um botão de barra de ferramentas.</summary>
+        <value>O delimitador <see cref="T:System.Drawing.Rectangle" /> para um botão de barra de ferramentas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.ToolBar> e no botão atual forem <xref:System.Windows.Forms.ToolBarButton.Visible%2A>, em seguida, essa propriedade recupera o retângulo delimitador botão atualmente está contido no.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolBarButtonStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolBarButtonStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarButtonStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo do botão de barra de ferramentas.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ToolBarButtonStyle" />. O padrão é <see langword="ToolBarButtonStyle.PushButton" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o botão <xref:System.Windows.Forms.ToolBarButton.Style%2A> é definido como <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton> você pode especificar um <xref:System.Windows.Forms.MenuItem> a ser exibida quando o botão suspenso é pressionado. Se o estilo for definido como `ToolBarButtonStyle.Separator`, o botão de barra de ferramentas aparece como um separador de botão e não como um botão. O `ToolBarButtonStyle.ToggleButton` estilo faz com que o botão de barra de ferramentas atuar como um botão de alternância; ela pode estar em um ou desativar estado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.ToolBar> e três <xref:System.Windows.Forms.ToolBarButton> controla, atribui os botões na barra de ferramentas e define algumas propriedades comuns dos botões. Esse código requer que um <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> e um <xref:System.Windows.Forms.Form> foram criados e o <xref:System.Windows.Forms.ImageList> tem pelo menos um <xref:System.Drawing.Image> atribuído a ele.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.ToolBarButtonStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que contém dados sobre o botão da barra de ferramentas.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém dados sobre o botão da barra de ferramentas. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recupera ou atribui os dados atualmente associados ao botão de barra de ferramentas. Qualquer <xref:System.Object> tipo derivado pode ser atribuído a esta propriedade. Se essa propriedade está sendo definida por meio do designer de formulários do Windows, pode ser atribuído somente texto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ToolBarButton.Pushed%2A>, <xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>, e <xref:System.Windows.Forms.ToolBarButton.Tag%2A> propriedades. Para executar o exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.RichTextBox> controle chamado `RichTextBox1`. Chamar o `InitializeToolBar` método no construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolBarButtonExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolBarButtonExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto exibido no botão de barra de ferramentas.</summary>
+        <value>O texto exibido no botão de barra de ferramentas. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de propriedade de texto padrão é uma cadeia de caracteres vazia (""), a menos que você criou o controle com o <xref:System.Windows.Forms.ToolBar.%23ctor%2A> construtor que aceita a cadeia de caracteres de texto como um parâmetro. A orientação do texto do botão de barra de ferramentas é determinada pelo <xref:System.Windows.Forms.ToolBar.TextAlign%2A> propriedade do pai do botão <xref:System.Windows.Forms.ToolBar>, que pode ser definido como uma da <xref:System.Windows.Forms.ToolBarTextAlign> valores de enumeração. A orientação é em relação a imagem atribuída ao botão. Se nenhuma imagem for atribuída ao botão, haverá espaço à esquerda de um na superfície do botão da barra de ferramentas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.ToolBar> e três <xref:System.Windows.Forms.ToolBarButton> controla, atribui os botões na barra de ferramentas e define algumas propriedades comuns dos botões. Esse código requer que um <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> e um <xref:System.Windows.Forms.Form> foram criados e o <xref:System.Windows.Forms.ImageList> tem pelo menos um <xref:System.Drawing.Image> atribuído a ele.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipText">
+      <MemberSignature Language="C#" Value="public string ToolTipText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.ToolTipText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto que aparece como uma dica de ferramenta do botão.</summary>
+        <value>O texto que é exibido quando o ponteiro do mouse se move sobre o botão da barra de ferramentas. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para habilitar a exibição do texto de dica de ferramenta quando o ponteiro do mouse é movido sobre o botão, defina a <xref:System.Windows.Forms.ToolBar.ShowToolTips%2A> propriedade do pai do botão <xref:System.Windows.Forms.ToolBar> para `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.ToolBar> e três <xref:System.Windows.Forms.ToolBarButton> controla, atribui os botões na barra de ferramentas e define algumas propriedades comuns dos botões. Esse código requer que um <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> e um <xref:System.Windows.Forms.Form> foram criados e o <xref:System.Windows.Forms.ImageList> tem pelo menos um <xref:System.Drawing.Image> atribuído a ele.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolBarButton.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o controle <see cref="T:System.Windows.Forms.ToolBarButton" />.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.ToolBarButton" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolBarButton.ToString%2A> método retorna uma cadeia de caracteres que inclui o tipo e o valor de <xref:System.Windows.Forms.ToolBarButton.Style%2A> e <xref:System.Windows.Forms.ToolBarButton.Text%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolBarButton.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o botão de barra de ferramentas está visível.</summary>
+        <value>
+          <see langword="true" />Se o botão de barra de ferramentas estiver visível; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o botão de barra de ferramentas não estiver visível, ele não será exibido na barra de ferramentas e, portanto, não pode receber entrada do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

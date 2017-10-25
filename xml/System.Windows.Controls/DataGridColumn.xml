@@ -1,0 +1,1359 @@
+<Type Name="DataGridColumn" FullName="System.Windows.Controls.DataGridColumn">
+  <TypeSignature Language="C#" Value="public abstract class DataGridColumn : System.Windows.DependencyObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataGridColumn extends System.Windows.DependencyObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridColumn" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coluna <see cref="T:System.Windows.Controls.DataGrid" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe abstrata fornece a funcionalidade básica para todos os <xref:System.Windows.Controls.DataGrid> colunas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataGridColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.DataGridColumn" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActualWidth">
+      <MemberSignature Language="C#" Value="public double ActualWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ActualWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.ActualWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura atual da coluna, em [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</summary>
+        <value>A largura da coluna em [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]. O padrão registrado é 0. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Windows.Controls.DataGridColumn.ActualWidth%2A> propriedade é usada para organizar as células e o cabeçalho da coluna. O valor é forçado a ser dentro de <xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A> e <xref:System.Windows.Controls.DataGridColumn.MinWidth%2A> restrições.  
+  
+ Para obter a renderizado largura da coluna, use o <xref:System.Windows.Controls.DataGridLength.DisplayValue%2A> do <xref:System.Windows.Controls.DataGridColumn.Width%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActualWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ActualWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ActualWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.ActualWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.ActualWidth" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelCellEdit">
+      <MemberSignature Language="C#" Value="protected virtual void CancelCellEdit (System.Windows.FrameworkElement editingElement, object uneditedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CancelCellEdit(class System.Windows.FrameworkElement editingElement, object uneditedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.CancelCellEdit(System.Windows.FrameworkElement,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="uneditedValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="editingElement">O elemento que exibe a coluna de uma célula no modo de edição.</param>
+        <param name="uneditedValue">O valor original, não editado na célula que está sendo editado.</param>
+        <summary>Faz com que a célula que está sendo editada para reverter para o valor original não editado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUserReorder">
+      <MemberSignature Language="C#" Value="public bool CanUserReorder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUserReorder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.CanUserReorder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode alterar a posição de exibição da coluna arrastando o cabeçalho da coluna.</summary>
+        <value>
+          <see langword="true" />Se o usuário pode arrastar o cabeçalho de coluna para uma nova posição; Caso contrário, <see langword="false" />. O padrão registrado é <see langword="true" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir esse comportamento reordenar para todas as colunas definindo o <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A?displayProperty=nameWithType> propriedade. Se o <xref:System.Windows.Controls.DataGridColumn.CanUserReorder%2A?displayProperty=nameWithType> propriedade e o <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A?displayProperty=nameWithType> propriedade são definidas, um valor de `false` tem precedência sobre um valor de `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUserReorderProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanUserReorderProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanUserReorderProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.CanUserReorderProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.CanUserReorder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUserResize">
+      <MemberSignature Language="C#" Value="public bool CanUserResize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUserResize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.CanUserResize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode ajustar a largura da coluna usando o mouse.</summary>
+        <value>
+          <see langword="true" />Se o usuário pode redimensionar a coluna. Caso contrário, <see langword="false" />. O padrão registrado é <see langword="true" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não afeta se as larguras de coluna podem ser alteradas programaticamente, por exemplo, alterando o <xref:System.Windows.Controls.DataGridColumn.Width%2A> propriedade.  
+  
+ Você pode definir esse comportamento de redimensionamento para todas as colunas definindo o <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> propriedade. Se o <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> propriedade e o <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> propriedade são definidas, um valor de `false` tem precedência sobre um valor de `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUserResizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanUserResizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanUserResizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.CanUserResizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.CanUserResize" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUserSort">
+      <MemberSignature Language="C#" Value="public bool CanUserSort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanUserSort" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.CanUserSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode classificar a coluna clicando no seu cabeçalho.</summary>
+        <value>
+          <see langword="true" /> se o usuário puder classificar a coluna; caso contrário, <see langword="false" />. O padrão registrado é <see langword="true" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir esse comportamento para todas as colunas de classificação, definindo o <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A?displayProperty=nameWithType> propriedade. Se o <xref:System.Windows.Controls.DataGridColumn.CanUserSort%2A?displayProperty=nameWithType> propriedade e o <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A?displayProperty=nameWithType> propriedade são definidas, um valor de `false` tem precedência sobre um valor de `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUserSortProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanUserSortProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanUserSortProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.CanUserSortProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.CanUserSort" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style CellStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style CellStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.CellStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo usado para renderizar as células da coluna.</summary>
+        <value>O estilo usado para renderizar as células da coluna. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir um <xref:System.Windows.Style> para uma célula, especifique um <xref:System.Windows.Style.TargetType%2A> de <xref:System.Windows.Controls.DataGridCell>.  
+  
+ Um <xref:System.Windows.Style> pode ser aplicado a uma célula na tabela, coluna ou nível de célula. Para aplicar um <xref:System.Windows.Style> para todas as células em uma coluna, defina o <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A?displayProperty=nameWithType> propriedade, que tem precedência sobre o <xref:System.Windows.Controls.DataGrid.CellStyle%2A?displayProperty=nameWithType> propriedade. Para aplicar um <xref:System.Windows.Style> para uma célula individual, definir o <xref:System.Windows.FrameworkElement.Style%2A> propriedade diretamente no <xref:System.Windows.Controls.DataGridCell> objeto, que tem precedência sobre todos os outros estilos aplicar à célula.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CellStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CellStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.CellStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.CellStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipboardContentBinding">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Data.BindingBase ClipboardContentBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingBase ClipboardContentBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.ClipboardContentBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de associação a ser usado ao obter ou definir o conteúdo da célula para a área de transferência.</summary>
+        <value>Um objeto que representa o associação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitCellEdit">
+      <MemberSignature Language="C#" Value="protected virtual bool CommitCellEdit (System.Windows.FrameworkElement editingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CommitCellEdit(class System.Windows.FrameworkElement editingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.CommitCellEdit(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="editingElement">O elemento que exibe a coluna de uma célula no modo de edição.</param>
+        <summary>Executa nenhuma validação necessária antes de sair do modo de edição de célula.</summary>
+        <returns>
+          <see langword="true" />Se nenhum erro de validação for encontrado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyingCellClipboardContent">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Controls.DataGridCellClipboardEventArgs&gt; CopyingCellClipboardContent;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Controls.DataGridCellClipboardEventArgs&gt; CopyingCellClipboardContent" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.DataGridColumn.CopyingCellClipboardContent" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Controls.DataGridCellClipboardEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre depois que o conteúdo da área de transferência de célula está preparado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipuladores de eventos podem modificar o conteúdo da célula antes que ele é armazenado na área de transferência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataGridOwner">
+      <MemberSignature Language="C#" Value="protected System.Windows.Controls.DataGrid DataGridOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataGrid DataGridOwner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.DataGridOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGrid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Controls.DataGrid" /> controle que contém esta coluna.</summary>
+        <value>O <see cref="T:System.Windows.Controls.DataGrid" /> controle que contém esta coluna.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayIndex">
+      <MemberSignature Language="C#" Value="public int DisplayIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição de exibição da coluna em relação às outras colunas do <see cref="T:System.Windows.Controls.DataGrid" />.</summary>
+        <value>A posição de base zero da coluna, conforme exibida no <see cref="T:System.Windows.Controls.DataGrid" /> associado. O padrão registrado é -1. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> propriedade tem um valor padrão de -1 antes de ser adicionado para o <xref:System.Windows.Controls.DataGrid.Columns%2A?displayProperty=nameWithType> coleção. Esse valor é atualizado quando a coluna é adicionada para o <xref:System.Windows.Controls.DataGrid>.  
+  
+ O <xref:System.Windows.Controls.DataGrid> requer que o <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> propriedade de cada coluna deve ser um inteiro exclusivo de 0 para o <xref:System.Windows.Controls.ColumnDefinitionCollection.Count%2A> de <xref:System.Windows.Controls.DataGrid.Columns%2A> -1. Portanto, quando o <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> de alterações de uma coluna, a alteração normalmente faz com que o <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> de outras colunas também alterar.  
+  
+ As restrições sobre o <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> valor são impostas por um <xref:System.Windows.ValidateValueCallback> mecanismo. Se você tentar definir um valor que não é válido, uma exceção de tempo de execução é gerada.  
+  
+ Quando o valor da <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> propriedade for alterada, o <xref:System.Windows.Controls.DataGrid.ColumnDisplayIndexChanged?displayProperty=nameWithType> é gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayIndexProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DisplayIndexProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DisplayIndexProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.DisplayIndexProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.DisplayIndex" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragIndicatorStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style DragIndicatorStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style DragIndicatorStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.DragIndicatorStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de estilo para aplicar ao cabeçalho de coluna durante uma operação de arrastar.</summary>
+        <value>O objeto de estilo para aplicar ao cabeçalho de coluna durante uma operação de arrastar. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para definir o <xref:System.Windows.Controls.DataGridColumn.DragIndicatorStyle%2A> para uma coluna individual no <xref:System.Windows.Controls.DataGrid>. Para definir um <xref:System.Windows.Style> para o indicador de arrastar, especifique um <xref:System.Windows.Style.TargetType%2A> de <xref:System.Windows.Controls.Control>.  
+  
+ Você pode definir propriedades no estilo para alterar a aparência de determinados elementos do indicador arrastar, como a borda ao redor do cabeçalho da coluna. No entanto, o modelo padrão para o indicador de arrastar usa um <xref:System.Windows.Media.VisualBrush> para pintar uma <xref:System.Windows.Controls.Canvas> com uma imagem do cabeçalho da coluna original que está sendo arrastado. Como resultado, se você definir algumas propriedades no seu estilo, tais como <xref:System.Windows.Controls.Control.Background%2A> ou <xref:System.Windows.Controls.Control.Foreground%2A>, eles serão exibidos, a não ser aplicada. Para alterar a aparência do cabeçalho da coluna, enquanto está sendo arrastado, aplicar um novo modelo que não usa o padrão <xref:System.Windows.Media.VisualBrush>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragIndicatorStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DragIndicatorStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DragIndicatorStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.DragIndicatorStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.DragIndicatorStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEditingElement">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.FrameworkElement GenerateEditingElement (System.Windows.Controls.DataGridCell cell, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.FrameworkElement GenerateEditingElement(class System.Windows.Controls.DataGridCell cell, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.GenerateEditingElement(System.Windows.Controls.DataGridCell,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Windows.Controls.DataGridCell" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="cell">A célula que contém o elemento gerado.</param>
+        <param name="dataItem">O item de dados que é representado pela linha que contém a célula pretendida.</param>
+        <summary>Quando substituído em uma classe derivada, obtém um elemento de edição que está associado ao <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> valor da propriedade da coluna.</summary>
+        <returns>Um novo elemento de edição que está associado ao <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> valor da propriedade da coluna.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria a árvore visual para o conteúdo da célula quando a célula está em modo de edição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateElement">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.FrameworkElement GenerateElement (System.Windows.Controls.DataGridCell cell, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.FrameworkElement GenerateElement(class System.Windows.Controls.DataGridCell cell, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.GenerateElement(System.Windows.Controls.DataGridCell,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Windows.Controls.DataGridCell" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="cell">A célula que contém o elemento gerado.</param>
+        <param name="dataItem">O item de dados que é representado pela linha que contém a célula pretendida.</param>
+        <summary>Quando substituído em uma classe derivada, obtém um elemento somente leitura que está associado ao valor da propriedade <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> da coluna.</summary>
+        <returns>Um novo elemento somente leitura associado ao valor da propriedade <see cref="P:System.Windows.Controls.DataGridBoundColumn.Binding" /> da coluna.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria a árvore visual para o conteúdo da célula quando a célula está em modo de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCellContent">
+      <MemberSignature Language="C#" Value="public System.Windows.FrameworkElement GetCellContent (object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.FrameworkElement GetCellContent(object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.GetCellContent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataItem">O item de dados que é representado pela linha que contém a célula pretendida.</param>
+        <summary>Obtém o valor da propriedade <see cref="P:System.Windows.Controls.ContentControl.Content" /> da célula na interseção dessa coluna e da linha que representa o item de dados especificado.</summary>
+        <returns>O conteúdo da célula; ou <see langword="null" />, se a célula não foi encontrada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataItem" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCellContent">
+      <MemberSignature Language="C#" Value="public System.Windows.FrameworkElement GetCellContent (System.Windows.Controls.DataGridRow dataGridRow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.FrameworkElement GetCellContent(class System.Windows.Controls.DataGridRow dataGridRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.GetCellContent(System.Windows.Controls.DataGridRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataGridRow" Type="System.Windows.Controls.DataGridRow" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridRow">A linha que contém a célula pretendida.</param>
+        <summary>Recupera o valor da propriedade <see cref="P:System.Windows.Controls.ContentControl.Content" /> da célula na interseção dessa coluna e da linha especificada.</summary>
+        <returns>O conteúdo da célula; ou <see langword="null" />, se a célula não foi encontrada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataGridRow" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public object Header { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Header" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do cabeçalho da coluna.</summary>
+        <value>O conteúdo do cabeçalho de coluna. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.HeaderProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.Header" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStringFormat">
+      <MemberSignature Language="C#" Value="public string HeaderStringFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderStringFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.HeaderStringFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formato padrão para aplicar ao conteúdo do cabeçalho da coluna.</summary>
+        <value>Um valor de cadeia de caracteres que representa o formatação padrão. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStringFormatProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderStringFormatProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderStringFormatProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.HeaderStringFormatProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.HeaderStringFormat" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style HeaderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style HeaderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.HeaderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo usado ao renderizar o cabeçalho de coluna.</summary>
+        <value>O estilo que é usado para renderizar o cabeçalho de coluna ou <see langword="null" />, para usar a configuração <see cref="P:System.Windows.Controls.DataGrid.ColumnHeaderStyle" />. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir um <xref:System.Windows.Style> para um cabeçalho de coluna, especifique um <xref:System.Windows.Style.TargetType%2A> de <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
+  
+ Um <xref:System.Windows.Style> podem ser aplicadas a todos os cabeçalhos de coluna ou a um cabeçalho de coluna individuais. Para aplicar um <xref:System.Windows.Style> para um cabeçalho individual, defina o <xref:System.Windows.Controls.DataGridColumn.HeaderStyle%2A?displayProperty=nameWithType> propriedade, que tem precedência sobre o <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa um recurso de estilo para alterar o estilo dos cabeçalhos de coluna no <xref:System.Windows.Controls.DataGrid>. O estilo do cabeçalho da primeira coluna, em seguida, é definido com um estilo embutido que substitui o <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A?displayProperty=nameWithType>.  
+  
+ [!code-xaml[DataGrid_ColumnHeaderStyle#1](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_columnheaderstyle/CS/mainwindow.xaml#1)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.HeaderStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.HeaderStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate HeaderTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate HeaderTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.HeaderTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo que define a representação visual do cabeçalho de coluna.</summary>
+        <value>O objeto que define a representação visual do cabeçalho da coluna. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.HeaderTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.HeaderTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.HeaderTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que seleciona qual modelo usar para o cabeçalho de coluna.</summary>
+        <value>O objeto que seleciona o modelo. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HeaderTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HeaderTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.HeaderTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.HeaderTemplateSelector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAutoGenerated">
+      <MemberSignature Language="C#" Value="public bool IsAutoGenerated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAutoGenerated" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.IsAutoGenerated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coluna é gerado automaticamente.</summary>
+        <value>
+          <see langword="true" />Se a coluna é gerado automaticamente; Caso contrário, <see langword="false" />. O padrão registrado é <see langword="false" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAutoGeneratedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsAutoGeneratedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsAutoGeneratedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.IsAutoGeneratedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.IsAutoGenerated" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFrozen">
+      <MemberSignature Language="C#" Value="public bool IsFrozen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFrozen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.IsFrozen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coluna está impedida de rolar horizontalmente.</summary>
+        <value>
+          <see langword="true" /> se a coluna não puder ser rolada horizontalmente, caso contrário, <see langword="false" />. O padrão registrado é <see langword="false" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.DataGridColumn.IsFrozen%2A>não pode ser usado para congelar uma coluna. Em vez disso, defina o <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> propriedade. As colunas mais à esquerda até a coluna que é especificado pelo <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> número será congelada em vigor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como congelar uma coluna quando "Congelar colunas" é selecionada do <xref:System.Windows.Controls.ContextMenu>. Colunas são movidas para a esquerda para ser incluído nas colunas congeladas.  
+  
+ [!code-xaml[DataGrid_FrozenColumn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_frozencolumn/cs/window1.xaml#1)]  
+  
+ [!code-csharp[DataGrid_FrozenColumn#2](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_frozencolumn/cs/window1.xaml.cs#2)]
+ [!code-vb[DataGrid_FrozenColumn#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_frozencolumn/vb/window1.xaml.vb#2)]  
+[!code-csharp[DataGrid_FrozenColumn#3](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_frozencolumn/cs/window1.xaml.cs#3)]
+[!code-vb[DataGrid_FrozenColumn#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_frozencolumn/vb/window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFrozenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsFrozenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsFrozenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.IsFrozenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.IsFrozen" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as células na coluna podem ser editadas.</summary>
+        <value>
+          <see langword="true" /> se as células na coluna não forem editáveis; caso contrário, <see langword="false" />. O padrão registrado é <see langword="false" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A> propriedade `true` para fazer todas as células em uma coluna individual somente leitura. Definir o <xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=nameWithType> propriedade `true` para fazer todas as células da <xref:System.Windows.Controls.DataGrid> somente leitura. Definir o <xref:System.Windows.Controls.DataGridCell.IsReadOnly%2A?displayProperty=nameWithType> propriedade `true` para tornar uma célula individual somente leitura. Se houver um conflito entre as configurações no <xref:System.Windows.Controls.DataGrid>, coluna ou célula níveis, um valor de `true` tem precedência sobre um valor de `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnlyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsReadOnlyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsReadOnlyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.IsReadOnlyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.IsReadOnly" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWidth">
+      <MemberSignature Language="C#" Value="public double MaxWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.MaxWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a restrição de largura máxima da coluna.</summary>
+        <value>A largura máxima da coluna, em [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]. O padrão registrado é <see cref="F:System.Double.PositiveInfinity" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define um valor para o <xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A> propriedade, ele deve ser maior ou igual a 0.0.  
+  
+ <xref:System.Double?displayProperty=nameWithType>não é um valor válido para esta propriedade. As restrições de valor sobre o <xref:System.Double> valor são impostas por um <xref:System.Windows.ValidateValueCallback> mecanismo. Se você tentar definir um valor que não é válido, uma exceção de tempo de execução é gerada.  
+  
+ O <xref:System.Windows.Controls.DataGridLength.DisplayValue%2A> do <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType> propriedades são restritas por propriedades a seguir, se estiverem definidos, na ordem de precedência:  
+  
+-   <xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.DataGridColumn.MinWidth%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.MaxWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.MaxWidth" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidth">
+      <MemberSignature Language="C#" Value="public double MinWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.MinWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a restrição de largura mínima da coluna.</summary>
+        <value>A largura mínima da coluna, em [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]. O padrão registrado é 20. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define um valor para o <xref:System.Windows.Controls.DataGridColumn.MinWidth%2A> propriedade, o valor deve ser maior ou igual a 0.0.  
+  
+ <xref:System.Double?displayProperty=nameWithType>e <xref:System.Double?displayProperty=nameWithType> não são valores válidos para essa propriedade. As restrições de valor sobre o <xref:System.Double> valor são impostas por um <xref:System.Windows.ValidateValueCallback> mecanismo. Se você tentar definir um valor que não é válido, uma exceção de tempo de execução é gerada.  
+  
+ O <xref:System.Windows.Controls.DataGridLength.DisplayValue%2A> do <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType> propriedades são restritas por propriedades a seguir, se estiverem definidos, na ordem de precedência:  
+  
+-   <xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.DataGridColumn.MinWidth%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.MinWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.MinWidth" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyPropertyChanged">
+      <MemberSignature Language="C#" Value="protected void NotifyPropertyChanged (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void NotifyPropertyChanged(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.NotifyPropertyChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade de coluna que foi alterada.</param>
+        <summary>Notifica o <see cref="T:System.Windows.Controls.DataGrid" /> que contém essa coluna de que uma propriedade da coluna foi alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCoerceIsReadOnly">
+      <MemberSignature Language="C#" Value="protected virtual bool OnCoerceIsReadOnly (bool baseValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnCoerceIsReadOnly(bool baseValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.OnCoerceIsReadOnly(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor passado para o delegado.</param>
+        <summary>Determina o valor da <see cref="P:System.Windows.Controls.DataGridColumn.IsReadOnly" /> propriedade com base nas regras de propriedade de <see cref="T:System.Windows.Controls.DataGrid" /> que contém esta coluna.</summary>
+        <returns>
+          <see langword="true" />Se as células na coluna não podem ser editadas com base nas regras do <see cref="T:System.Windows.Controls.DataGrid" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCopyingCellClipboardContent">
+      <MemberSignature Language="C#" Value="public virtual object OnCopyingCellClipboardContent (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object OnCopyingCellClipboardContent(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.OnCopyingCellClipboardContent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O contexto de dados para o elemento selecionado.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Controls.DataGridColumn.CopyingCellClipboardContent" />.</summary>
+        <returns>Um objeto que representa o conteúdo da célula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado para cada célula selecionada recuperar o conteúdo de célula padrão. Ele gera o <xref:System.Windows.Controls.DataGridColumn.CopyingCellClipboardContent> evento. Você pode manipular o evento para modificar o conteúdo da célula antes de ser retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPastingCellClipboardContent">
+      <MemberSignature Language="C#" Value="public virtual void OnPastingCellClipboardContent (object item, object cellContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnPastingCellClipboardContent(object item, object cellContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.OnPastingCellClipboardContent(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="cellContent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O contexto de dados para o elemento selecionado.</param>
+        <param name="cellContent">O conteúdo a ser colado na célula.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Controls.DataGridColumn.PastingCellClipboardContent" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado como um auxiliar, se você fornecer uma implementação de colar personalizado para o <xref:System.Windows.Controls.DataGrid>. O conteúdo da célula é armazenado na `item` objeto.  
+  
+ Este método gera o <xref:System.Windows.Controls.DataGridColumn.PastingCellClipboardContent> evento. Você pode manipular o evento para modificar o conteúdo da célula antes que ele é colado na célula. Você pode definir `cellContent` para `null` para cancelar a ação de colar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PastingCellClipboardContent">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Controls.DataGridCellClipboardEventArgs&gt; PastingCellClipboardContent;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Controls.DataGridCellClipboardEventArgs&gt; PastingCellClipboardContent" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.DataGridColumn.PastingCellClipboardContent" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Controls.DataGridCellClipboardEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes do conteúdo da área de transferência é movido para a célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipuladores de eventos podem modificar o conteúdo da área de transferência antes que ele é armazenado no conteúdo da célula.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareCellForEdit">
+      <MemberSignature Language="C#" Value="protected virtual object PrepareCellForEdit (System.Windows.FrameworkElement editingElement, System.Windows.RoutedEventArgs editingEventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object PrepareCellForEdit(class System.Windows.FrameworkElement editingElement, class System.Windows.RoutedEventArgs editingEventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.PrepareCellForEdit(System.Windows.FrameworkElement,System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="editingEventArgs" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="editingElement">O elemento que exibe a coluna de uma célula no modo de edição.</param>
+        <param name="editingEventArgs">Informações sobre o gesto do usuário que está causando uma célula para entrar no modo de edição.</param>
+        <summary>Quando substituído em uma classe derivada, define o conteúdo da célula conforme necessário para edição.</summary>
+        <returns>Quando retornado por uma classe derivada, o valor da célula não editados. Essa implementação retorna <see langword="null" /> em todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de coluna derivada substituem este método para responder ao gesto do usuário que é indicado pelo `editingEventArgs` e retornar o valor atual antes de editar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshCellContent">
+      <MemberSignature Language="C#" Value="protected virtual void RefreshCellContent (System.Windows.FrameworkElement element, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void RefreshCellContent(class System.Windows.FrameworkElement element, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridColumn.RefreshCellContent(System.Windows.FrameworkElement,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">A célula para atualizar.</param>
+        <param name="propertyName">O nome da propriedade de coluna que foi alterada.</param>
+        <summary>Quando substituído em uma classe derivada, atualiza o conteúdo de uma célula na coluna em resposta a um valor de propriedade de coluna alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDirection">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.ComponentModel.ListSortDirection&gt; SortDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.ComponentModel.ListSortDirection&gt; SortDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.SortDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.ComponentModel.ListSortDirection&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção da classificação (crescente ou decrescente) da coluna.</summary>
+        <value>Um valor que representa a direção de classificação. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SortDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SortDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.SortDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.SortDirection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortMemberPath">
+      <MemberSignature Language="C#" Value="public string SortMemberPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortMemberPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.SortMemberPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um nome de propriedade, ou uma hierarquia de nomes de propriedade baseada na delimitação por ponto, que indica o membro pelo qual classificar.</summary>
+        <value>O caminho do item de dados membro para classificar por. O padrão registrado é uma cadeia de caracteres vazia (""). Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortMemberPathProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SortMemberPathProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SortMemberPathProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.SortMemberPathProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.SortMemberPath" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Visibility Visibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Visibility Visibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.Visibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Visibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a visibilidade da coluna.</summary>
+        <value>Um valor de enumeração que especifica a visibilidade da coluna. O padrão registrado é <see cref="F:System.Windows.Visibility.Visible" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ocultar uma coluna, defina seu <xref:System.Windows.Controls.DataGridColumn.Visibility%2A> propriedade <xref:System.Windows.Visibility.Collapsed>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir a visibilidade da coluna.  
+  
+ [!code-xaml[DataGrid_ColumnsManipulation#Visible](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_columnsmanipulation/cs/datagrid_columnsmanipulation/window1.xaml#visible)]  
+[!code-xaml[DataGrid_ColumnsManipulation#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_columnsmanipulation/cs/datagrid_columnsmanipulation/window1.xaml#datagrid)]  
+  
+ [!code-csharp[DataGrid_ColumnsManipulation#Visible2](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_columnsmanipulation/cs/datagrid_columnsmanipulation/window1.xaml.cs#visible2)]
+ [!code-vb[DataGrid_ColumnsManipulation#Visible2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_columnsmanipulation/vb/datagrid_columnsmanipulation_vb/window1.xaml.vb#visible2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.VisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.Visibility" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataGridLength Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.DataGridLength Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridColumn.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridLength</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da coluna ou o modo de dimensionamento automático.</summary>
+        <value>Uma estrutura que representa a largura da coluna ou o modo de dimensionamento automático. O padrão registrado é <see cref="P:System.Windows.Controls.DataGridLength.Auto" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.DataGridColumn.Width%2A> propriedade, quando definida em um indivíduo <xref:System.Windows.Controls.DataGridColumn>, tem precedência sobre o <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType> propriedade.  
+  
+ O <xref:System.Windows.Controls.DataGridLength.DisplayValue%2A> do <xref:System.Windows.Controls.DataGridColumn.Width%2A> propriedade é restrito pelas seguintes propriedades, se estiverem definidos, na ordem de precedência:  
+  
+-   <xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.DataGridColumn.MinWidth%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridColumn.WidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridColumn.Width" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

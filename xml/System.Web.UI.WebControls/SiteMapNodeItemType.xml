@@ -1,0 +1,107 @@
+<Type Name="SiteMapNodeItemType" FullName="System.Web.UI.WebControls.SiteMapNodeItemType">
+  <TypeSignature Language="C#" Value="public enum SiteMapNodeItemType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SiteMapNodeItemType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SiteMapNodeItemType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>O <see cref="T:System.Web.UI.WebControls.SiteMapNodeItemType" /> enumeração é usada pelo <see cref="T:System.Web.UI.WebControls.SiteMapPath" /> controle para identificar o tipo de um <see cref="T:System.Web.UI.WebControls.SiteMapNodeItem" /> nó dentro de uma hierarquia de nó.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapPath> controle gerencia as informações de navegação do site como uma coleção de <xref:System.Web.UI.WebControls.SiteMapNodeItem> objetos. <xref:System.Web.UI.WebControls.SiteMapNodeItem>objetos representam funcionalmente diferentes tipos de <xref:System.Web.SiteMapNode> nós. Da mesma forma, eles são gerenciados pelo <xref:System.Web.UI.WebControls.SiteMapPath> controle. A lista a seguir descreve os tipos de nós disponíveis:  
+  
+-   Um nó que representa a página exibida atualmente.  
+  
+-   Um nó que é o nó superior da hierarquia de navegação do site.  
+  
+-   Zero ou mais nós entre o nó superior e o nó atual (nós pai).  
+  
+-   Zero ou mais nós que representam os separadores de caminho de navegação do site.  
+  
+ Cada nó está associado a dados para uma base <xref:System.Web.SiteMapNode>, exceto nós do tipo PathSeparator.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Web.UI.WebControls.SiteMapPath.OnItemCreated%2A> método depois de criar um <xref:System.Web.UI.WebControls.SiteMapNodeItem> dentro de <xref:System.Web.UI.WebControls.SiteMapPath.InitializeItem%2A> método. Este exemplo de código é parte de um exemplo de código maior fornecido para a <xref:System.Web.UI.WebControls.SiteMapPath.InitializeItem%2A> classe.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.DropDownNavigationPath_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/CS/dropdownnavigationpath.cs#3)]
+ [!code-vb[Urtue.Samples.Alexkr.DropDownNavigationPath_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.DropDownNavigationPath_1/VB/dropdownnavigationpath.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="Current" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.SiteMapNodeItemType Current = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.SiteMapNodeItemType.Current" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SiteMapNodeItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A página exibida atualmente no caminho de navegação do site.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="Parent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.SiteMapNodeItemType Parent = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.SiteMapNodeItemType.Parent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SiteMapNodeItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nó pai da página exibido no momento no caminho de navegação do site. Um nó pai é qualquer nó que é encontrado entre o nó raiz e o nó atual na hierarquia de navegação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PathSeparator">
+      <MemberSignature Language="C#" Value="PathSeparator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.SiteMapNodeItemType PathSeparator = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.SiteMapNodeItemType.PathSeparator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SiteMapNodeItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um separador de caminho de navegação de mapa de site. O separador de padrão para o <see cref="T:System.Web.UI.WebControls.SiteMapPath" /> controle é o "&gt;" caracteres.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Root">
+      <MemberSignature Language="C#" Value="Root" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.SiteMapNodeItemType Root = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.SiteMapNodeItemType.Root" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SiteMapNodeItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó superior da hierarquia de navegação do site. Pode haver apenas um nó raiz.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

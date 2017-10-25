@@ -1,0 +1,90 @@
+<Type Name="ITextExpression" FullName="System.Activities.Expressions.ITextExpression">
+  <TypeSignature Language="C#" Value="public interface ITextExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITextExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Expressions.ITextExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma expressão de texto.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExpressionText">
+      <MemberSignature Language="C#" Value="public string ExpressionText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExpressionText" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.ITextExpression.ExpressionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto da expressão a ser avaliada.</summary>
+        <value>O texto da expressão a ser avaliada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionTree">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression GetExpressionTree ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.Expressions.Expression GetExpressionTree() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.ITextExpression.GetExpressionTree" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a árvore de expressão.</summary>
+        <returns>A árvore de expressão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.ITextExpression.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de idioma que aplica-se a expressão de texto de interface.</summary>
+        <value>As informações de idioma que aplica-se a expressão de texto de interface.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresCompilation">
+      <MemberSignature Language="C#" Value="public bool RequiresCompilation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresCompilation" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.ITextExpression.RequiresCompilation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o ITextExpression requer compilação.</summary>
+        <value>
+          <see langword="True" />Se o ITextExpression requer compilação; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

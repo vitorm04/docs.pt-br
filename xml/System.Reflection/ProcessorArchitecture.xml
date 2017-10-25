@@ -1,0 +1,203 @@
+<Type Name="ProcessorArchitecture" FullName="System.Reflection.ProcessorArchitecture">
+  <TypeSignature Language="C#" Value="public enum ProcessorArchitecture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ProcessorArchitecture extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ProcessorArchitecture" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica o processador e bits por palavra da plataforma de destino de um executável.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nem todas as combinações de <xref:System.Reflection.PortableExecutableKinds> e <xref:System.Reflection.ImageFileMachine> descrevem os tipos de arquivo PE válidos. <xref:System.Reflection.ProcessorArchitecture>é o conjunto de combinações de <xref:System.Reflection.PortableExecutableKinds> e <xref:System.Reflection.ImageFileMachine> que descrevem os tipos de arquivo PE válidos para código gerenciado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Amd64">
+      <MemberSignature Language="C#" Value="Amd64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ProcessorArchitecture Amd64 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ProcessorArchitecture.Amd64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ProcessorArchitecture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Apenas um processador AMD da 64 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Arm">
+      <MemberSignature Language="C#" Value="Arm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ProcessorArchitecture Arm = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ProcessorArchitecture.Arm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ProcessorArchitecture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um processador ARM.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IA64">
+      <MemberSignature Language="C#" Value="IA64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ProcessorArchitecture IA64 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ProcessorArchitecture.IA64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ProcessorArchitecture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Apenas um processador da 64 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MSIL">
+      <MemberSignature Language="C#" Value="MSIL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ProcessorArchitecture MSIL = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ProcessorArchitecture.MSIL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ProcessorArchitecture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Neutro em relação ao processador e bits por palavra.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ProcessorArchitecture None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ProcessorArchitecture.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ProcessorArchitecture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma combinação de processador e bits por palavra desconhecida ou não especificada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="X86">
+      <MemberSignature Language="C#" Value="X86" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.ProcessorArchitecture X86 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ProcessorArchitecture.X86" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ProcessorArchitecture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um processador Intel de 32 bits, nativo ou de Windows no ambiente do Windows em uma plataforma de 64 bits (WOW64).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

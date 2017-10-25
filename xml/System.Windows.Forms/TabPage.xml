@@ -1,0 +1,1198 @@
+<Type Name="TabPage" FullName="System.Windows.Forms.TabPage">
+  <TypeSignature Language="C#" Value="public class TabPage : System.Windows.Forms.Panel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TabPage extends System.Windows.Forms.Panel" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TabPage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Panel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Click")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.TabPageDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma única página da guia em um <see cref="T:System.Windows.Forms.TabControl" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.TabPage>controles representam as páginas com guias em um <xref:System.Windows.Forms.TabControl> controle. A ordem das guias no <xref:System.Windows.Forms.TabControl.TabPages%2A?displayProperty=nameWithType> coleção reflete a ordem das guias no <xref:System.Windows.Forms.TabControl> controle. Para alterar a ordem das guias no controle, você deve alterar suas posições na coleção por removê-los e inseri-los em novos índices.  
+  
+ <xref:System.Windows.Forms.TabPage>controles são restritas por seus contêineres, para algumas das propriedades herdadas do <xref:System.Windows.Forms.Control> classe base não terá efeito, incluindo <xref:System.Windows.Forms.Control.Top%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Left%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Show%2A>, e <xref:System.Windows.Forms.Control.Hide%2A>.  
+  
+ As guias em um <xref:System.Windows.Forms.TabControl> fazem parte do <xref:System.Windows.Forms.TabControl> , mas não as partes do indivíduo <xref:System.Windows.Forms.TabPage> controles. Membros do <xref:System.Windows.Forms.TabPage> classe, como o <xref:System.Windows.Forms.Control.ForeColor%2A> propriedade afeta apenas o retângulo de cliente da página da guia, mas não as guias. Além disso, o <xref:System.Windows.Forms.Control.Hide%2A> método o <xref:System.Windows.Forms.TabPage> não ocultará a guia. Para ocultar a guia, você deve remover o <xref:System.Windows.Forms.TabPage> controlar do <xref:System.Windows.Forms.TabControl.TabPages%2A?displayProperty=nameWithType> coleção.  
+  
+> [!NOTE]
+>  No [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a guia é considerada parte da página da guia para determinar quando o <xref:System.Windows.Forms.Control.Enter> e <xref:System.Windows.Forms.Control.Leave> eventos o <xref:System.Windows.Forms.TabPage> ocorrer. Em versões anteriores do .NET Framework, o <xref:System.Windows.Forms.Control.Enter> e <xref:System.Windows.Forms.Control.Leave> eventos o <xref:System.Windows.Forms.TabPage> não ocorrem quando o foco entra ou sai de uma guia, mas somente quando o foco entra ou sai do retângulo de cliente da página da guia.  
+  
+ Para obter mais informações sobre como esse controle responde para o <xref:System.Windows.Forms.Control.Focus%2A> e <xref:System.Windows.Forms.Control.Select%2A> métodos, consulte o seguinte <xref:System.Windows.Forms.Control> membros: <xref:System.Windows.Forms.Control.CanFocus%2A>, <xref:System.Windows.Forms.Control.CanSelect%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.ContainsFocus%2A>, <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.Select%2A>.  
+  
+> [!NOTE]
+>  Controles contidos em um <xref:System.Windows.Forms.TabPage> não são criadas até que a página da guia é mostrada e quaisquer associações de dados nesses controles não são ativadas até que a página da guia é exibida.  
+  
+ Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> propriedade permite que você indique se o plano de fundo da página da guia deve renderizar usando o estilo visual atual. Isso ocorre somente quando o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> e <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> valores de propriedade são ambos `true` e <xref:System.Windows.Forms.TabControl.Appearance%2A> propriedade do pai <xref:System.Windows.Forms.TabControl> é <xref:System.Windows.Forms.TabAppearance.Normal>. Caso contrário, o plano de fundo é pintado normalmente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.TabControl> com um <xref:System.Windows.Forms.TabPage>.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[TabPage#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TabPage/CPP/form1.cpp#1)]
+ [!code-csharp[TabPage#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabPage/CS/form1.cs#1)]
+ [!code-vb[TabPage#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabPage/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TabPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.TabPage" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.TabControl> com um <xref:System.Windows.Forms.TabPage>. O <xref:System.Windows.Forms.TabPage.%23ctor%2A> construtor instancia `tabPage1`.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[TabPage_constructor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TabPage_constructor/CPP/form1.cpp#1)]
+ [!code-csharp[TabPage_constructor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabPage_constructor/CS/form1.cs#1)]
+ [!code-vb[TabPage_constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabPage_constructor/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TabPage (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto da guia.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.TabPage" /> e especifica o texto da guia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabPage.Text%2A> propriedade é definida como o valor de `text` parâmetro.  
+  
+   
+  
+## Examples  
+ Este exemplo cria um <xref:System.Windows.Forms.TabControl> com um <xref:System.Windows.Forms.TabPage>. O <xref:System.Windows.Forms.TabPage.%23ctor%2A> construtor aceita o `myTabPage` de cadeia de caracteres como <xref:System.Windows.Forms.TabPage.Text%2A> para `tabPage1`.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[TabPage_withText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TabPage_withText/CPP/form1.cpp#1)]
+ [!code-csharp[TabPage_withText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabPage_withText/CS/form1.cs#1)]
+ [!code-vb[TabPage_withText#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabPage_withText/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Anchor">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AnchorStyles Anchor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AnchorStyles Anchor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.Anchor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AnchorStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este membro não é significativo para esse controle.</summary>
+        <value>Um valor <see cref="T:System.Windows.Forms.AnchorStyles" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade não é significativa para esse controle.</summary>
+        <value>O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TabPage.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.TabPage.AutoSize" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora você possa alterar o valor da <xref:System.Windows.Forms.TabPage.AutoSize%2A> propriedade e lidar com esse evento para determinar quando o valor é alterado, o <xref:System.Windows.Forms.TabPage.AutoSize%2A> propriedade não é significativa para esse controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeMode">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AutoSizeMode AutoSizeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoSizeMode AutoSizeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.AutoSizeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade não é significativa para esse controle.</summary>
+        <value>O controle aumenta conforme o necessário para ajustar seu conteúdo, mas não é menor do que o valor de sua propriedade de tamanho reduzido</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo do <see cref="T:System.Windows.Forms.TabPage" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor da tela de fundo do <see cref="T:System.Windows.Forms.TabPage" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão da <xref:System.Windows.Forms.TabPage.BackColor%2A> propriedade é o valor da <xref:System.Windows.Forms.Control.DefaultBackColor%2A?displayProperty=nameWithType> propriedade, a menos que o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> e <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> valores de propriedade são ambos `true` e o <xref:System.Windows.Forms.TabControl.Appearance%2A> propriedade do pai <xref:System.Windows.Forms.TabControl> tem um valor de <xref:System.Windows.Forms.TabAppearance.Normal>, caso em que o valor padrão da <xref:System.Windows.Forms.TabPage.BackColor%2A> é de propriedade <xref:System.Drawing.Color.Transparent%2A>. Controles filho que você coloque no <xref:System.Windows.Forms.TabPage> herdam o <xref:System.Windows.Forms.TabPage.BackColor%2A> valor por padrão, portanto, isso faz com que o plano de fundo do filho controles para processar com o estilo visual atual.  
+  
+ Alterar o valor da <xref:System.Windows.Forms.TabPage.BackColor%2A> propriedade define automaticamente o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> propriedade `false`. Se você quiser que o <xref:System.Windows.Forms.TabPage> em segundo plano para renderizar usando estilos visuais, mas você deseja que os controles filho para herdar um <xref:System.Windows.Forms.TabPage.BackColor%2A> valor que você especificar, defina o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> propriedade depois de definir o <xref:System.Windows.Forms.TabPage.BackColor%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlsInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Control.ControlCollection CreateControlsInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.Control/ControlCollection CreateControlsInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.CreateControlsInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control+ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da coleção de controle para o controle.</summary>
+        <returns>Uma nova instância do <see cref="T:System.Windows.Forms.Control.ControlCollection" /> atribuído ao controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dock">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DockStyle Dock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DockStyle Dock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.Dock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este membro não é significativo para esse controle.</summary>
+        <value>Um valor <see cref="T:System.Windows.Forms.DockStyle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DockChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DockChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TabPage.DockChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.TabPage.Dock" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabPage.Dock%2A> propriedade não é significativa para esse controle, embora você possa alterar seu valor e tratar o <xref:System.Windows.Forms.TabPage.DockChanged> evento para detectar a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este membro não é significativo para esse controle.</summary>
+        <value>O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnabledChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler EnabledChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EnabledChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TabPage.EnabledChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.TabPage.Enabled" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabPage.Enabled%2A> propriedade não é significativa para esse controle, embora você possa alterar seu valor e tratar o <xref:System.Windows.Forms.TabPage.EnabledChanged> evento para detectar a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTabPageOfComponent">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.TabPage GetTabPageOfComponent (object comp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Forms.TabPage GetTabPageOfComponent(object comp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.GetTabPageOfComponent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabPage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comp" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="comp">O objeto a ser pesquisada.</param>
+        <summary>Recupera a página de guia que contém o objeto especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TabPage" /> que contém o objeto especificado, ou <see langword="null" /> se o objeto não pode ser encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.TabControl> com dois <xref:System.Windows.Forms.TabPage> objetos, cada um contendo uma <xref:System.Windows.Forms.Button> componente. O parâmetro `button2` é passado para o <xref:System.Windows.Forms.TabPage.GetTabPageOfComponent%2A> método, que recupera o <xref:System.Windows.Forms.TabPage> contendo `button2`. Para verificar se a página da guia correto é recuperada, o <xref:System.Windows.Forms.TabControl.SelectedIndex%2A> conjuntos de propriedades de <xref:System.Windows.Forms.TabPage> contendo `button2` para a guia selecionada no momento.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[GetTabPageOfComponent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetTabPageOfComponent/CPP/form1.cpp#1)]
+ [!code-csharp[GetTabPageOfComponent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetTabPageOfComponent/CS/form1.cs#1)]
+ [!code-vb[GetTabPageOfComponent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetTabPageOfComponent/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageIndex">
+      <MemberSignature Language="C#" Value="public int ImageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ImageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.ImageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageIndexConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice da imagem exibida nessa guia.</summary>
+        <value>O índice baseado em zero para a imagem no <see cref="P:System.Windows.Forms.TabControl.ImageList" /> que aparece na guia. O padrão é -1, o que não significa que nenhuma imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabPage.ImageIndex%2A> aponta para uma imagem associada <xref:System.Windows.Forms.TabControl.ImageList%2A> do <xref:System.Windows.Forms.TabControl>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.TabControl> com um <xref:System.Windows.Forms.TabPage>. Este exemplo usa o <xref:System.Windows.Forms.TabPage.ImageIndex%2A> propriedade para especificar qual imagem de `myImages` exibe na guia de `tabPage1`.  
+  
+ Use o <xref:System.Drawing>, <xref:System.ComponentModel>, <xref:System.Windows.Forms>, e <xref:System.Resources> namespace para este exemplo.  
+  
+ [!code-cpp[TabPage.ImageIndex#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TabPage.ImageIndex/CPP/form1.cpp#1)]
+ [!code-csharp[TabPage.ImageIndex#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabPage.ImageIndex/CS/form1.cs#1)]
+ [!code-vb[TabPage.ImageIndex#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabPage.ImageIndex/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor de <see cref="P:System.Windows.Forms.TabPage.ImageIndex" /> é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageKey">
+      <MemberSignature Language="C#" Value="public string ImageKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.ImageKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageKeyConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o acessador de chave para a imagem no <see cref="P:System.Windows.Forms.TabControl.ImageList" /> dos <see cref="T:System.Windows.Forms.TabControl" />.</summary>
+        <value>Uma cadeia de caracteres que representa a chave da imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabPage.ImageKey%2A> propriedade especifica a imagem da lista de imagens para exibir no controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade não é significativa para esse controle.</summary>
+        <value>As coordenadas x e y que especifica o local do objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler LocationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LocationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TabPage.LocationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.TabPage.Location" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora você possa alterar o valor da <xref:System.Windows.Forms.TabPage.Location%2A> propriedade e lidar com esse evento para determinar quando o valor é alterado, o <xref:System.Windows.Forms.TabPage.Location%2A> propriedade não é significativa para esse controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size MaximumSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size MaximumSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.MaximumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Size), "0, 0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade não é significativa para esse controle.</summary>
+        <value>O limite superior do tamanho do objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size MinimumSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size MinimumSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.MinimumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade não é significativa para esse controle.</summary>
+        <value>O limite inferior do tamanho do objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnter">
+      <MemberSignature Language="C#" Value="protected override void OnEnter (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnter(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.OnEnter(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Windows.Forms.Control.Enter" /> evento o <see cref="T:System.Windows.Forms.TabPage" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a guia é considerada parte da página da guia para determinar quando o <xref:System.Windows.Forms.Control.Enter> e <xref:System.Windows.Forms.Control.Leave> eventos o <xref:System.Windows.Forms.TabPage> ocorrer. Em versões anteriores do .NET Framework, o <xref:System.Windows.Forms.Control.Enter> e <xref:System.Windows.Forms.Control.Leave> eventos o <xref:System.Windows.Forms.TabPage> não ocorrem quando o foco entra ou sai de uma guia, mas somente quando o foco entra ou sai do retângulo de cliente da página da guia.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.TabPage.OnEnter%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.TabPage.OnEnter(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.TabPage.OnEnter(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLeave">
+      <MemberSignature Language="C#" Value="protected override void OnLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.OnLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Windows.Forms.Control.Leave" /> evento o <see cref="T:System.Windows.Forms.TabPage" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a guia é considerada parte da página da guia para determinar quando o <xref:System.Windows.Forms.Control.Enter> e <xref:System.Windows.Forms.Control.Leave> eventos o <xref:System.Windows.Forms.TabPage> ocorrer. Em versões anteriores do .NET Framework, o <xref:System.Windows.Forms.Control.Enter> e <xref:System.Windows.Forms.Control.Leave> eventos o <xref:System.Windows.Forms.TabPage> não ocorrem quando o foco entra ou sai de uma guia, mas somente quando o foco entra ou sai do retângulo de cliente da página da guia.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.TabPage.OnLeave%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.TabPage.OnLeave(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.TabPage.OnLeave(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaintBackground">
+      <MemberSignature Language="C#" Value="protected override void OnPaintBackground (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaintBackground(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> que contém dados úteis para pintar o plano de fundo.</param>
+        <summary>Pinta a tela de fundo do <see cref="T:System.Windows.Forms.TabPage" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema chama esse método para pintar o plano de fundo do <xref:System.Windows.Forms.TabPage>. Quando o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> e <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> valores de propriedade são ambos `true` e <xref:System.Windows.Forms.TabControl.Appearance%2A> propriedade do pai <xref:System.Windows.Forms.TabControl> é <xref:System.Windows.Forms.TabAppearance.Normal>, esse método pinta o plano de fundo usando o estilo visual atual. Caso contrário, esse método pinta o plano de fundo como de costume.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size PreferredSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size PreferredSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.PreferredSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade não é significativa para esse controle.</summary>
+        <value>O tamanho de uma área retangular na qual o controle pode conter.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsCore">
+      <MemberSignature Language="C#" Value="protected override void SetBoundsCore (int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetBoundsCore(int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="x">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Left" /> do controle.</param>
+        <param name="y">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Top" /> do controle.</param>
+        <param name="width">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Width" /> do controle.</param>
+        <param name="height">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Height" /> do controle.</param>
+        <param name="specified">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.BoundsSpecified" />.</param>
+        <summary>Este membro substitui <see cref="M:System.Windows.Forms.Control.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndex">
+      <MemberSignature Language="C#" Value="public int TabIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TabIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.TabIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade não é significativa para esse controle.</summary>
+        <value>Ordem das guias do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Control.TabIndex%2A?displayProperty=nameWithType> propriedade indica a ordem na qual os controles recebem foco como um usuário pressiona a tecla TAB em um formulário. <xref:System.Windows.Forms.TabPage>controles contidos <xref:System.Windows.Forms.TabControl> controla, no entanto e não recebe foco individualmente como parte da ordem de tabulação do formulário. Essa propriedade, portanto, não tem sentida para esta classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndexChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TabIndexChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabIndexChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TabPage.TabIndexChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.TabPage.TabIndex" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabPage.TabIndex%2A> propriedade não é significativa para esse controle, embora você possa alterar seu valor e tratar o <xref:System.Windows.Forms.TabPage.TabIndexChanged> evento para detectar a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este membro não é significativo para esse controle.</summary>
+        <value>O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.TabPage>controles contidos <xref:System.Windows.Forms.TabControl> controles e não recebe foco individualmente como parte da ordem de tabulação do formulário. Essa propriedade, portanto, não tem sentida para esta classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStopChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TabStopChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabStopChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TabPage.TabStopChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.TabPage.TabStop" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabPage.TabStop%2A> propriedade não é significativa para esse controle, embora você possa alterar seu valor e tratar o <xref:System.Windows.Forms.TabPage.TabStopChanged> evento para detectar a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto a ser exibido na guia.</summary>
+        <value>O texto a ser exibido na guia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterando o <xref:System.Windows.Forms.TabPage.Text%2A> o valor da propriedade não centralizar automaticamente o novo valor na guia se o <xref:System.Windows.Forms.TabControl> tem um <xref:System.Windows.Forms.TabControl.SizeMode%2A> valor da propriedade <xref:System.Windows.Forms.TabSizeMode.Fixed>. Você pode contornar essa limitação, definindo o <xref:System.Windows.Forms.TabControl.ItemSize%2A?displayProperty=nameWithType> propriedade ou removendo o <xref:System.Windows.Forms.TabPage> do <xref:System.Windows.Forms.TabControl.TabPages%2A?displayProperty=nameWithType> coleta e adicioná-lo de volta para a coleção. Ambas as ações serão automaticamente centralizar o texto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.TabControl> com um <xref:System.Windows.Forms.TabPage>. O <xref:System.Windows.Forms.TabPage.Text%2A> propriedade define o texto da guia `myTabPage`.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[TabText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TabText/CPP/form1.cpp#1)]
+ [!code-csharp[TabText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabText/CS/form1.cs#1)]
+ [!code-vb[TabText#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabText/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TabPage.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.TabControl.Text" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipText">
+      <MemberSignature Language="C#" Value="public string ToolTipText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.ToolTipText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de ToolTip para essa guia.</summary>
+        <value>O texto de ToolTip para essa guia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta página de guia pertence a um <xref:System.Windows.Forms.TabControl>. O texto de dica de ferramenta é exibida quando o usuário move o mouse sobre a guia se o <xref:System.Windows.Forms.TabControl.ShowToolTips%2A> propriedade o <xref:System.Windows.Forms.TabControl> é `true`. Para obter mais informações sobre dicas de ferramenta, consulte o <xref:System.Windows.Forms.ToolTip> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.TabControl> com dois <xref:System.Windows.Forms.TabPage> objetos. O <xref:System.Windows.Forms.TabControl> está definido para permitir que as dicas de ferramenta e as páginas de guia são atribuídas a texto de dica de ferramenta.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[ToolTipText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTipText/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTipText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTipText/CS/form1.cs#1)]
+ [!code-vb[ToolTipText#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTipText/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabPage.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que contém o valor da <see cref="P:System.Windows.Forms.TabPage.Text" /> propriedade.</summary>
+        <returns>Uma cadeia de caracteres que contém o valor da <see cref="P:System.Windows.Forms.TabPage.Text" /> propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.TabControl> com um <xref:System.Windows.Forms.TabPage>. O <xref:System.Windows.Forms.TabPage.ToString%2A> método cria uma cadeia de caracteres que inclui o <xref:System.Windows.Forms.TabPage.Text%2A> valor para `tabPage1` e retorna-o para o `tabPage1` <xref:System.Windows.Forms.TabPage.ToolTipText%2A> propriedade.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[TabPage.ToString#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TabPage.ToString/CPP/form1.cpp#1)]
+ [!code-csharp[TabPage.ToString#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TabPage.ToString/CS/form1.cs#1)]
+ [!code-vb[TabPage.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabPage.ToString/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseVisualStyleBackColor">
+      <MemberSignature Language="C#" Value="public bool UseVisualStyleBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseVisualStyleBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.UseVisualStyleBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a tela de fundo do <see cref="T:System.Windows.Forms.TabPage" /> é renderizado usando o estilo visual atual quando os estilos visuais estiverem habilitados.</summary>
+        <value>
+          <see langword="true" /> para renderizar a tela de fundo usando o estilo visual atual; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabPage> em segundo plano usa o estilo visual atual somente quando o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> e <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> valores de propriedade são ambos `true`.  
+  
+ Quando o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> e <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> valores de propriedade são ambos `true` e <xref:System.Windows.Forms.TabControl.Appearance%2A> propriedade do pai <xref:System.Windows.Forms.TabControl> é <xref:System.Windows.Forms.TabAppearance.Normal>, o valor padrão da <xref:System.Windows.Forms.TabPage.BackColor%2A> é de propriedade <xref:System.Drawing.Color.Transparent%2A>. Controles filho que você coloque no <xref:System.Windows.Forms.TabPage> herdam o <xref:System.Windows.Forms.TabPage.BackColor%2A> valor por padrão, portanto, isso faz com que o plano de fundo do filho controles para processar com o estilo visual atual.  
+  
+ Alterar o valor da <xref:System.Windows.Forms.TabPage.BackColor%2A> propriedade define automaticamente o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> propriedade `false`. Se você quiser que o <xref:System.Windows.Forms.TabPage> em segundo plano para renderizar usando estilos visuais, mas você deseja que os controles filho para herdar um <xref:System.Windows.Forms.TabPage.BackColor%2A> valor que você especificar, defina o <xref:System.Windows.Forms.TabPage.UseVisualStyleBackColor%2A> propriedade depois de definir o <xref:System.Windows.Forms.TabPage.BackColor%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabPage.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este membro não é significativo para esse controle.</summary>
+        <value>O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro não é significativo para esse controle.  
+  
+ Para ocultar uma guia em um <xref:System.Windows.Forms.TabControl>, você deve removê-lo do controle de <xref:System.Windows.Forms.TabControl.TabPages%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler VisibleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler VisibleChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.TabPage.VisibleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.TabPage.Visible" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabPage.Visible%2A> propriedade não é significativa para esse controle, embora você possa alterar seu valor e tratar o <xref:System.Windows.Forms.TabPage.VisibleChanged> evento para detectar a alteração.  
+  
+ Para ocultar uma guia em um <xref:System.Windows.Forms.TabControl>, você deve removê-lo do controle de <xref:System.Windows.Forms.TabControl.TabPages%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

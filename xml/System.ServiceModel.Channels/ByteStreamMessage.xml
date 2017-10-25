@@ -1,0 +1,87 @@
+<Type Name="ByteStreamMessage" FullName="System.ServiceModel.Channels.ByteStreamMessage">
+  <TypeSignature Language="C#" Value="public static class ByteStreamMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ByteStreamMessage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ByteStreamMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma mensagem de fluxo de bytes.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (ArraySegment&lt;byte&gt; buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(valuetype System.ArraySegment`1&lt;unsigned int8&gt; buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessage.CreateMessage(System.ArraySegment{System.Byte})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ArraySegment&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer que fornece dados para a mensagem a ser criado.</param>
+        <summary>Cria uma mensagem de fluxo de bytes usando os dados de buffer especificado.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessage.CreateMessage(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo usado para criar a mensagem.</param>
+        <summary>Cria uma mensagem de fluxo de bytes usando o fluxo especificado.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message CreateMessage (ArraySegment&lt;byte&gt; buffer, System.ServiceModel.Channels.BufferManager bufferManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message CreateMessage(valuetype System.ArraySegment`1&lt;unsigned int8&gt; buffer, class System.ServiceModel.Channels.BufferManager bufferManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ByteStreamMessage.CreateMessage(System.ArraySegment{System.Byte},System.ServiceModel.Channels.BufferManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="bufferManager" Type="System.ServiceModel.Channels.BufferManager" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer que fornece dados para a mensagem a ser criado.</param>
+        <param name="bufferManager">O <see cref="T:System.ServiceModel.Channels.BufferManager" /> que gerencia o buffer no qual a mensagem é criada.</param>
+        <summary>Cria uma mensagem de fluxo de bytes usando os dados de buffer especificado e o Gerenciador de buffer.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.Message" /> para a mensagem criada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

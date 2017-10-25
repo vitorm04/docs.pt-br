@@ -1,0 +1,32 @@
+<Type Name="RowCallback" FullName="System.Web.UI.WebControls.WebParts.RowCallback">
+  <TypeSignature Language="C#" Value="public delegate void RowCallback(object rowData);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RowCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.RowCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="rowData" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="rowData">Os dados serem recuperados do provedor.</param>
+    <summary>Referencia o método a ser chamado quando a recuperação de dados de linha de um provedor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um controle de Web Parts implementa o <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> interface e funciona como um provedor em uma conexão de Web Parts, a conexão ou transformador necessário recuperar os dados da linha do provedor. O <xref:System.Web.UI.WebControls.WebParts.RowCallback> delegate representa o método a ser chamado para recuperar os dados do provedor.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> método contém um <xref:System.Web.UI.WebControls.WebParts.RowCallback> delegar o parâmetro. O <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> método é usado o <xref:System.Web.UI.WebControls.WebParts.RowToFieldTransformer> classe e o <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> classe para recuperar dados de linha para a transformação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,73 @@
+<Type Name="RenderType" FullName="System.Web.UI.DataVisualization.Charting.RenderType">
+  <TypeSignature Language="C#" Value="public enum RenderType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RenderType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.RenderType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como a imagem do gráfico será renderizada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.RenderType> enumeração representa a maneira na qual a imagem do gráfico será renderizada e é usada em conjunto com o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BinaryStreaming">
+      <MemberSignature Language="C#" Value="BinaryStreaming" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.RenderType BinaryStreaming = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.RenderType.BinaryStreaming" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.RenderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gráfico é transmitido diretamente ao cliente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageMap">
+      <MemberSignature Language="C#" Value="ImageMap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.RenderType ImageMap = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.RenderType.ImageMap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.RenderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gráfico é renderizado como um mapa de imagem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageTag">
+      <MemberSignature Language="C#" Value="ImageTag" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.RenderType ImageTag = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.RenderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gráfico é renderizado usando uma marca de imagem HTML.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,81 @@
+<Type Name="ViewStateEncryptionMode" FullName="System.Web.UI.ViewStateEncryptionMode">
+  <TypeSignature Language="C#" Value="public enum ViewStateEncryptionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ViewStateEncryptionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ViewStateEncryptionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se as informações de estado de exibição são criptografadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ViewStateEncryptionMode> enumeração fornece valores para especificar se as informações de estado de exibição em uma <xref:System.Web.UI.Page> objeto está criptografado. O <xref:System.Web.UI.ViewStateEncryptionMode> valor pode ser definido apenas no [@ Page](http://msdn.microsoft.com/en-us/f06cf9e5-22bb-461d-8b8f-549e53ff40a4) diretiva ou na seção do arquivo de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a definição do modo de exibição de estado de criptografia para um <xref:System.Web.UI.Page> objeto e solicita criptografia das informações de estado de exibição por meio de <xref:System.Web.UI.Page.RegisterRequiresViewStateEncryption%2A> método. Neste exemplo, as informações de estado de exibição serão criptografadas quando as informações do cliente são recuperadas de um banco de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.ViewStateEncryptionMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ViewStateEncryptionMode/CS/encryptViewState.cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ViewStateEncryptionMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ViewStateEncryptionMode/VB/encryptViewState.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ViewStateEncryptionMode Always = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ViewStateEncryptionMode.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ViewStateEncryptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As informações de estado de exibição sempre são criptografadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ViewStateEncryptionMode Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ViewStateEncryptionMode.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ViewStateEncryptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As informações de estado de exibição serão criptografadas se um controle solicitar criptografia ao chamar o método <see cref="M:System.Web.UI.Page.RegisterRequiresViewStateEncryption" />. Esse é o padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ViewStateEncryptionMode Never = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ViewStateEncryptionMode.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ViewStateEncryptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As informações de estado de exibição nunca serão criptografadas, mesmo se um controle solicitá-las.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

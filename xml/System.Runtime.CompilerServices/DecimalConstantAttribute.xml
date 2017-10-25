@@ -1,0 +1,169 @@
+<Type Name="DecimalConstantAttribute" FullName="System.Runtime.CompilerServices.DecimalConstantAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DecimalConstantAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DecimalConstantAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.DecimalConstantAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field | System.AttributeTargets.Parameter, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Armazena o valor de um <see cref="T:System.Decimal" /> constante nos metadados. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse atributo para especificar em que um valor decimal é um valor constante de tempo de compilação.  
+  
+ Você pode aplicar esse atributo para campos ou parâmetros.  
+  
+ Para obter mais informações sobre os atributos de constantes, consulte o <xref:System.Runtime.CompilerServices.CustomConstantAttribute> classe.  
+  
+ As classes no <xref:System.Runtime.CompilerServices> para os autores de compilador usam apenas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DecimalConstantAttribute (byte scale, byte sign, int hi, int mid, int low);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 scale, unsigned int8 sign, int32 hi, int32 mid, int32 low) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.DecimalConstantAttribute.#ctor(System.Byte,System.Byte,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="sign" Type="System.Byte" />
+        <Parameter Name="hi" Type="System.Int32" />
+        <Parameter Name="mid" Type="System.Int32" />
+        <Parameter Name="low" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="scale">A potência de 10 fator de escala que indica o número de dígitos à direita da vírgula decimal. Os valores válidos são de 0 a 28 inclusivo.</param>
+        <param name="sign">Um valor de 0 indica um valor positivo e um valor de 1 indica um valor negativo.</param>
+        <param name="hi">Os 32 bits altos de 96 bits <see cref="P:System.Runtime.CompilerServices.DecimalConstantAttribute.Value" />.</param>
+        <param name="mid">32 bits de 96 bits meio <see cref="P:System.Runtime.CompilerServices.DecimalConstantAttribute.Value" />.</param>
+        <param name="low">Os 32 bits baixos de 96 bits <see cref="P:System.Runtime.CompilerServices.DecimalConstantAttribute.Value" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.CompilerServices.DecimalConstantAttribute" /> classe com especificado assinado valores inteiros.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DecimalConstantAttribute (byte scale, byte sign, uint hi, uint mid, uint low);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 scale, unsigned int8 sign, unsigned int32 hi, unsigned int32 mid, unsigned int32 low) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.DecimalConstantAttribute.#ctor(System.Byte,System.Byte,System.UInt32,System.UInt32,System.UInt32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="scale" Type="System.Byte" />
+        <Parameter Name="sign" Type="System.Byte" />
+        <Parameter Name="hi" Type="System.UInt32" />
+        <Parameter Name="mid" Type="System.UInt32" />
+        <Parameter Name="low" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="scale">A potência de 10 fator de escala que indica o número de dígitos à direita da vírgula decimal. Os valores válidos são de 0 a 28 inclusivo.</param>
+        <param name="sign">Um valor de 0 indica um valor positivo e um valor de 1 indica um valor negativo.</param>
+        <param name="hi">Os 32 bits altos de 96 bits <see cref="P:System.Runtime.CompilerServices.DecimalConstantAttribute.Value" />.</param>
+        <param name="mid">32 bits de 96 bits meio <see cref="P:System.Runtime.CompilerServices.DecimalConstantAttribute.Value" />.</param>
+        <param name="low">Os 32 bits baixos de 96 bits <see cref="P:System.Runtime.CompilerServices.DecimalConstantAttribute.Value" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.CompilerServices.DecimalConstantAttribute" /> classe com os valores inteiros sem sinal especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scale" /> &gt; 28.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public decimal Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.DecimalConstantAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a constante decimal armazenada nesse atributo.</summary>
+        <value>A constante decimal armazenada nesse atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

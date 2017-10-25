@@ -1,0 +1,6 @@
+<Namespace Name="System.Dynamic">
+  <Docs>
+    <summary>O <see cref="N:System.Dynamic" /> namespace fornece classes e interfaces que oferecem suporte a Dynamic Language Runtime.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

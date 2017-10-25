@@ -1,0 +1,330 @@
+<Type Name="HelpKeywordAttribute" FullName="System.ComponentModel.Design.HelpKeywordAttribute">
+  <TypeSignature Language="C#" Value="public sealed class HelpKeywordAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit HelpKeywordAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.HelpKeywordAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a palavra-chave de contexto de uma classe ou membro. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a palavra-chave de ajuda para uma classe é fornecida pelo <xref:System.Type.FullName%2A?displayProperty=nameWithType> o valor da propriedade. Para membros, a palavra-chave da Ajuda é determinado pelo nome completo do tipo declarado a propriedade, mais o nome da propriedade.  
+  
+ Por exemplo, considere o <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType> propriedade o <xref:System.Windows.Forms.Button?displayProperty=nameWithType> controle. A palavra-chave class é "System.Windows.Forms.Button", mas o <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType> palavra-chave de propriedade é "System.Windows.Forms.Control.Text", porque o <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType> propriedade é declarada o <xref:System.Windows.Forms.Control?displayProperty=nameWithType> classe, em vez de <xref:System.Windows.Forms.Button?displayProperty=nameWithType> classe em si; o <xref:System.Windows.Forms.Button?displayProperty=nameWithType> classe herda a propriedade.  
+  
+ Por outro lado, o <xref:System.Windows.Forms.Button.DialogResult%2A?displayProperty=nameWithType> propriedade é declarada a <xref:System.Windows.Forms.Button?displayProperty=nameWithType> classe, portanto, sua palavra-chave é "System.Windows.Forms.Button.DialogResult".  
+  
+ Quando o sistema de ajuda obtém as palavras-chave, ele primeiro examinar <xref:System.ComponentModel.Design.HelpKeywordAttribute>. No nível de classe, ela retornará a cadeia de caracteres especificada pelo <xref:System.ComponentModel.Design.HelpKeywordAttribute>. Isso não será usado para os membros do tipo em questão, o qual ainda refletirão o nome completo do real do tipo declarativo, mais o nome do membro. Esse atributo suporta classes fortemente tipadas que associaram documentação comuns mas identificações distintos da Ajuda.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir esse comportamento do sistema de Ajuda, colocando o atributo do membro em si. Essas são as palavras-chave para a seguinte classe chamado `DemoComponent`:  
+  
+-   Palavra-chave class: "`System.ComponentModel.Component`" (`DemoNamespace.DemoComponent`)  
+  
+-   Palavra-chave de Property1: "`DemoNamespace.DemoComponent.Property1`" (padrão)  
+  
+-   Palavra-chave de Property2: "`SomeNamespace.SomeOtherClass.Property2`" (`DemoNamespace.DemoComponent.Property2`)  
+  
+```csharp  
+[HelpKeywordAttribute(typeof(Component))]  
+public class DemoComponent : Component  
+{  
+    public string Property1  
+    {  
+        get  
+        {  
+            return "";  
+        }  
+    }  
+  
+    [HelpKeywordAttribute("SomeNamespace.SomeOtherClass.Property2")]  
+    public string Property2  
+    {  
+        get  
+        {  
+            return "";  
+        }  
+    }  
+}  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.Design.HelpKeywordAttribute> classe para especificar uma palavra-chave de contexto. Para obter uma explicação completa sobre este exemplo de código, consulte [como: aplicar atributos em controles dos Windows Forms](~/docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+  
+ [!code-csharp[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#20)]
+ [!code-vb[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HelpKeywordAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.HelpKeywordAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HelpKeywordAttribute (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.HelpKeywordAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">O valor de palavra-chave da Ajuda.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HelpKeywordAttribute (Type t);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type t) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.HelpKeywordAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="t">O tipo do qual a palavra-chave de Ajuda será feita.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" /> classe do tipo fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A palavra-chave de Ajuda será definida como o <xref:System.Type.FullName%2A> propriedade `t`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="t" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.HelpKeywordAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.HelpKeywordAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.HelpKeywordAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.HelpKeywordAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o valor padrão para <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" />. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para <xref:System.ComponentModel.Design.HelpKeywordAttribute> é `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.HelpKeywordAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" /> para comparar com a atual <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" />.</param>
+        <summary>Determina se duas instâncias <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" /> são iguais.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" /> especificado for igual ao <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" /> atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Duas instâncias de um <xref:System.ComponentModel.Design.HelpKeywordAttribute> são iguais se palavras-chave de ajuda são iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.HelpKeywordAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código hash do <see cref="T:System.ComponentModel.Design.HelpKeywordAttribute" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeyword">
+      <MemberSignature Language="C#" Value="public string HelpKeyword { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeyword" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.HelpKeywordAttribute.HelpKeyword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a palavra-chave de ajuda fornecida por este atributo.</summary>
+        <value>A palavra-chave ajuda fornecida por este atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.HelpKeywordAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a palavra-chave da Ajuda é <see langword="null" />.</summary>
+        <returns>
+          <see langword="true" />Se a palavra-chave da Ajuda é <see langword="null" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

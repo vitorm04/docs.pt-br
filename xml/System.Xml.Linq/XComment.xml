@@ -1,0 +1,322 @@
+<Type Name="XComment" FullName="System.Xml.Linq.XComment">
+  <TypeSignature Language="C#" Value="public class XComment : System.Xml.Linq.XNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XComment extends System.Xml.Linq.XNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XComment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Linq.XNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um comentário XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar um comentário XML como um nó filho de um elemento. Você também pode adicionar um comentário XML para uma <xref:System.Xml.Linq.XDocument> como um irmão do nó de elemento raiz.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XComment (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XComment.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres que contém o conteúdo do novo <see cref="T:System.Xml.Linq.XComment" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Linq.XComment" /> classe com o conteúdo de cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um elemento que contém um comentário como um nó filho.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root",  
+    new XComment("This is a comment")  
+);  
+Console.WriteLine(root);  
+```  
+  
+```vb  
+  
+                Dim root As XElement = <Root>  
+                           <!--This is a comment-->  
+                       </Root>  
+Console.WriteLine(root)  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+                <Root>  
+  <!--This is a comment-->  
+</Root>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XComment (System.Xml.Linq.XComment other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XComment other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XComment.#ctor(System.Xml.Linq.XComment)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.Xml.Linq.XComment" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Xml.Linq.XComment" /> nó copiar de.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Linq.XComment" /> classe a partir de um nó de comentário existente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é utilizado principalmente para fazer uma cópia profunda de uma árvore XML.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="other" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XComment.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de nó para este nó.</summary>
+        <value>O tipo de nó. Para objetos <see cref="T:System.Xml.Linq.XComment" />, esse valor é <see cref="F:System.Xml.XmlNodeType.Comment" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como todas as classes que derivam da <xref:System.Xml.Linq.XObject> contêm um <xref:System.Xml.Linq.XObject.NodeType%2A> propriedade, você pode escrever código que opera em coleções de subclasse concreta de <xref:System.Xml.Linq.XObject>. O tipo de nó de cada nó na coleção, em seguida, pode testar seu código.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um nó de comentário e imprime o tipo de nó.  
+  
+```csharp  
+  
+                XComment com = new XComment("This is a comment");  
+XNode node = com;  
+Console.WriteLine(node.NodeType);  
+```  
+  
+```vb  
+  
+                Dim com As XComment = New XComment("This is a comment")  
+Dim node As XNode = com  
+Console.WriteLine(node.NodeType.ToString())  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Comment  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XComment.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de cadeia de caracteres deste comentário.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o valor de cadeia de caracteres deste comentário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XAttribute>, você não pode recuperar o conteúdo de um comentário, convertê-la em uma cadeia de caracteres. Em vez disso, você deve usar essa propriedade para recuperar o conteúdo.  
+  
+ Configuração para essa propriedade gerará o <xref:System.Xml.Linq.XObject.Changed> e <xref:System.Xml.Linq.XObject.Changing> eventos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um nó de comentário. Em seguida, ele recupera o conteúdo do nó de comentário.  
+  
+```csharp  
+  
+                XComment com = new XComment("This is a comment");  
+Console.WriteLine(com.Value);  
+```  
+  
+```vb  
+  
+                Dim com As XComment = New XComment("This is a comment")  
+Console.WriteLine(com.Value)  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+This is a comment  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XComment.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> no qual esse método gravará.</param>
+        <summary>Gravar este comentário para um <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente internamente pelos métodos gravar uma árvore XML para uma <xref:System.Xml.XmlWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteToAsync (System.Xml.XmlWriter writer, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteToAsync(class System.Xml.XmlWriter writer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XComment.WriteToAsync(System.Xml.XmlWriter,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

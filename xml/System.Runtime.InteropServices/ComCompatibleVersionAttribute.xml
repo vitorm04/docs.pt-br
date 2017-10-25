@@ -1,0 +1,199 @@
+<Type Name="ComCompatibleVersionAttribute" FullName="System.Runtime.InteropServices.ComCompatibleVersionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComCompatibleVersionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComCompatibleVersionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComCompatibleVersionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica a um cliente COM que todas as classes na versão atual de um assembly são compatíveis com as classes em uma versão anterior do assembly.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para assemblies.  
+  
+ Por padrão, o [Tlbexp.exe (exportador da biblioteca)](~/docs/framework/tools/tlbexp-exe-type-library-exporter.md) usa o número de versão de um assembly para calcular os identificadores de classe (CLSIDs). Todos os públicos, o receberá classes COM visíveis novos CLSIDs toda vez que você exportar uma nova versão do assembly.  
+  
+ Você pode aplicar o `ComCompatibleVersionAttribute` atributo forçar CLSIDs todas as classes na versão atual de um assembly deve ser o mesmo que CLSIDs para classes em uma versão anterior do assembly. Como os CLSIDs permanecem os mesmos, um aplicativo herdado do COM pode usar a versão mais recente de um assembly compatível depois de desinstalar o assembly original. Se você aplicar o <xref:System.Runtime.InteropServices.GuidAttribute?displayProperty=nameWithType> a uma classe para definir explicitamente o CLSID, o `ComCompatibleVersionAttribute` não tem nenhum efeito.  
+  
+ As propriedades desse atributo é combinar partes do formulário de quatro de uma versão de assembly. Sempre especifique a versão mais antiga que o assembly atual é compatível com versões anteriores para que essa versão é usada para calcular todas as CLSIDs no assembly.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como especificar a versão 1.0.0.0 do assembly em um assembly com um número de versão superior. Independentemente da nova versão do assembly, todos os CLSIDs no assembly são gerados usando a versão 1.0.0.0 em vez de usar a versão do assembly atual.  
+  
+ [!code-cpp[System.Runtime.InteropServices.ComCompatibleVersionAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.comcompatibleversionattribute/cpp/source.cpp#1)]
+ [!code-csharp[System.Runtime.InteropServices.ComCompatibleVersionAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.comcompatibleversionattribute/cs/source.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.ComCompatibleVersionAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.comcompatibleversionattribute/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComCompatibleVersionAttribute (int major, int minor, int build, int revision);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 major, int32 minor, int32 build, int32 revision) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComCompatibleVersionAttribute.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="major" Type="System.Int32" />
+        <Parameter Name="minor" Type="System.Int32" />
+        <Parameter Name="build" Type="System.Int32" />
+        <Parameter Name="revision" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="major">O número de versão principal do assembly.</param>
+        <param name="minor">O número de versão secundária do assembly.</param>
+        <param name="build">O número de compilação do assembly.</param>
+        <param name="revision">O número de revisão do assembly.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ComCompatibleVersionAttribute" /> classe com a versão principal, versão secundária, compilação e os números de revisão do assembly.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildNumber">
+      <MemberSignature Language="C#" Value="public int BuildNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BuildNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComCompatibleVersionAttribute.BuildNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de compilação do assembly.</summary>
+        <value>O número de compilação do assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorVersion">
+      <MemberSignature Language="C#" Value="public int MajorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MajorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComCompatibleVersionAttribute.MajorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão principal do assembly.</summary>
+        <value>O número de versão principal do assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorVersion">
+      <MemberSignature Language="C#" Value="public int MinorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComCompatibleVersionAttribute.MinorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão secundária do assembly.</summary>
+        <value>O número de versão secundária do assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevisionNumber">
+      <MemberSignature Language="C#" Value="public int RevisionNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RevisionNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComCompatibleVersionAttribute.RevisionNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de revisão do assembly.</summary>
+        <value>O número de revisão do assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

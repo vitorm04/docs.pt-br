@@ -1,0 +1,201 @@
+<Type Name="PackagingAction" FullName="System.Windows.Xps.Packaging.PackagingAction">
+  <TypeSignature Language="C#" Value="public enum PackagingAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PackagingAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.PackagingAction" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifica os tipos de eventos que ocorrem durante a serialização de um pacote.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta enumeração como o valor da <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs.Action%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddingDocumentSequence">
+      <MemberSignature Language="C#" Value="AddingDocumentSequence" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction AddingDocumentSequence = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.AddingDocumentSequence" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma sequência de documento está sendo adicionada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddingFixedDocument">
+      <MemberSignature Language="C#" Value="AddingFixedDocument" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction AddingFixedDocument = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.AddingFixedDocument" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um documento está sendo adicionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddingFixedPage">
+      <MemberSignature Language="C#" Value="AddingFixedPage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction AddingFixedPage = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.AddingFixedPage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma página está sendo adicionada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentSequenceCompleted">
+      <MemberSignature Language="C#" Value="DocumentSequenceCompleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction DocumentSequenceCompleted = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.DocumentSequenceCompleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma sequência de documento foi adicionada, mas não necessariamente confirmada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedDocumentCompleted">
+      <MemberSignature Language="C#" Value="FixedDocumentCompleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction FixedDocumentCompleted = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.FixedDocumentCompleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um documento foi adicionado, mas não necessariamente confirmado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedPageCompleted">
+      <MemberSignature Language="C#" Value="FixedPageCompleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction FixedPageCompleted = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma página foi adicionada, mas não necessariamente confirmada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FontAdded">
+      <MemberSignature Language="C#" Value="FontAdded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction FontAdded = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.FontAdded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma fonte foi adicionada, mas não necessariamente confirmada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageAdded">
+      <MemberSignature Language="C#" Value="ImageAdded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction ImageAdded = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.ImageAdded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma imagem foi adicionada, mas não necessariamente confirmada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma ação foi executada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceAdded">
+      <MemberSignature Language="C#" Value="ResourceAdded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction ResourceAdded = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.ResourceAdded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um recurso foi adicionado, mas não necessariamente confirmado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XpsDocumentCommitted">
+      <MemberSignature Language="C#" Value="XpsDocumentCommitted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Packaging.PackagingAction XpsDocumentCommitted = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Packaging.PackagingAction.XpsDocumentCommitted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O documento é confirmado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

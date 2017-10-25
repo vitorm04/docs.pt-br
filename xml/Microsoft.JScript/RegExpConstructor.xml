@@ -1,0 +1,253 @@
+<Type Name="RegExpConstructor" FullName="Microsoft.JScript.RegExpConstructor">
+  <TypeSignature Language="C#" Value="public sealed class RegExpConstructor : Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegExpConstructor extends Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.RegExpConstructor" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ScriptFunction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto baseados no protótipo que é definido por uma função de construtor. Essa classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Construct">
+      <MemberSignature Language="C#" Value="public object Construct (string pattern, bool ignoreCase, bool global, bool multiline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Construct(string pattern, bool ignoreCase, bool global, bool multiline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.RegExpConstructor.Construct(System.String,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="global" Type="System.Boolean" />
+        <Parameter Name="multiline" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">O padrão de expressão regular para correspondência.</param>
+        <param name="ignoreCase">
+          <see langword="true" />Para usar a correspondência diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />.</param>
+        <param name="global">
+          <see langword="true" />Para usar uma correspondência global; Caso contrário, <see langword="false" />.</param>
+        <param name="multiline">
+          <see langword="true" />Para usar uma correspondência de várias linhas; Caso contrário, <see langword="false" />.</param>
+        <summary>Cria um novo <see cref="T:Microsoft.JScript.RegExpObject" /> objeto para o padrão de expressão regular especificada e sinalizadores.</summary>
+        <returns>Um novo objeto <see cref="T:Microsoft.JScript.RegExpObject" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.RegExpObject CreateInstance (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.JScript.RegExpObject CreateInstance(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.RegExpConstructor.CreateInstance(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.RegExpObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">Os argumentos a serem passados para o construtor.</param>
+        <summary>Cria uma instância do objeto baseados no protótipo, passando os argumentos especificados.</summary>
+        <returns>Uma instância do objeto.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="index">
+      <MemberSignature Language="C#" Value="public object index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object index" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpConstructor.index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice da última correspondência com êxito, antes de Avançar o índice.</summary>
+        <value>O índice da última correspondência com êxito, se houver algum.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="input">
+      <MemberSignature Language="C#" Value="public object input { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object input" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpConstructor.input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de entrada para uma pesquisa de expressão regular.</summary>
+        <value>A cadeia de entrada para uma pesquisa de expressão regular.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.RegExpObject Invoke (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.JScript.RegExpObject Invoke(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.RegExpConstructor.Invoke(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.RegExpObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">Os argumentos a serem passados para o construtor.</param>
+        <summary>Cria uma instância de um objeto com base no protótipo, passando os argumentos especificados.</summary>
+        <returns>Uma instância do objeto.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="lastIndex">
+      <MemberSignature Language="C#" Value="public object lastIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object lastIndex" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpConstructor.lastIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice da última correspondência bem-sucedida, após Avançar o índice.</summary>
+        <value>O índice da última correspondência com êxito, se houver algum.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="lastMatch">
+      <MemberSignature Language="C#" Value="public object lastMatch { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object lastMatch" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpConstructor.lastMatch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma representação de cadeia de caracteres da última correspondência bem-sucedida.</summary>
+        <value>Uma representação de cadeia de caracteres da última correspondência com êxito, se houver algum.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="lastParen">
+      <MemberSignature Language="C#" Value="public object lastParen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object lastParen" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpConstructor.lastParen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a última <see cref="T:System.Text.RegularExpressions.Group" /> do <see cref="P:System.Text.RegularExpressions.Match.Groups" /> da última correspondência.</summary>
+        <value>Uma representação de cadeia de caracteres do último grupo, se houver algum.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="leftContext">
+      <MemberSignature Language="C#" Value="public object leftContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object leftContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpConstructor.leftContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma subcadeia da cadeia de caracteres de entrada entre o início da entrada e o início da última correspondência bem-sucedida.</summary>
+        <value>Uma subcadeia da cadeia de entrada, se houver algum.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="rightContext">
+      <MemberSignature Language="C#" Value="public object rightContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object rightContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.RegExpConstructor.rightContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma subcadeia da cadeia de caracteres de entrada entre o início da última correspondência bem-sucedida e o fim da entrada.</summary>
+        <value>Uma subcadeia da cadeia de entrada, se houver algum.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

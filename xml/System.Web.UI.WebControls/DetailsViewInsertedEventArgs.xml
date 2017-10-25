@@ -1,0 +1,259 @@
+<Type Name="DetailsViewInsertedEventArgs" FullName="System.Web.UI.WebControls.DetailsViewInsertedEventArgs">
+  <TypeSignature Language="C#" Value="public class DetailsViewInsertedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewInsertedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewInsertedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.DetailsView.ItemInserted" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DetailsView> controlar gera o <xref:System.Web.UI.WebControls.DetailsView.ItemInserted> evento quando um botão de inserção (um botão com sua `CommandName` propriedade definida como "Inserir") dentro do controle é clicado, mas após o <xref:System.Web.UI.WebControls.DetailsView> controle inserir o registro. Isso permite que você forneça um manipulador de eventos que executa uma rotina personalizada, como verificar os resultados de uma operação de inserção, sempre que esse evento ocorre.  
+  
+ Um <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs> objeto é passado para o manipulador de eventos, que permite que você determine o número de registros afetados e todas as exceções que possam ter ocorrido. Para determinar o número de registros afetados pela operação de inserção, use o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.AffectedRows%2A> propriedade. Use o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Exception%2A> propriedade para determinar se todas as exceções ocorreram. Você também pode indicar se a exceção foi tratada no evento manipulador definindo o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.ExceptionHandled%2A> propriedade. Se você precisar acessar os valores do registro inserido, use o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Values%2A> propriedade.  
+  
+ Por padrão, o <xref:System.Web.UI.WebControls.DetailsView> o controle retorna ao modo especificado pelo <xref:System.Web.UI.WebControls.DetailsView.DefaultMode%2A> propriedade após uma operação de inserção. Para manter o <xref:System.Web.UI.WebControls.DetailsView> de controle no modo de inserção, defina o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.KeepInInsertMode%2A> propriedade `true`.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.DetailsViewDeletedEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs> objeto passado para o manipulador de eventos para o <xref:System.Web.UI.WebControls.DetailsView.ItemInserted> evento para determinar se ocorreu uma exceção durante uma operação de inserção.  
+  
+ [!code-aspx-csharp[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/CS/detailsviewinsertedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/VB/detailsviewinsertedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewInsertedEventArgs (int affectedRows, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 affectedRows, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.#ctor(System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="affectedRows" Type="System.Int32" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="affectedRows">O número de linhas afetadas pela operação de inserção.</param>
+        <param name="e">Um <see cref="T:System.Exception" /> que representa a exceção gerada quando a operação de inserção foi executada. Se nenhuma exceção foi gerada, use <see langword="null" /> para esse parâmetro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DetailsViewInsertedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.AffectedRows%2A>|O valor de `affectedRows` parâmetro.|  
+|<xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Exception%2A>|O <xref:System.Exception?displayProperty=nameWithType> objeto contido no `e` parâmetro.|  
+|<xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.ExceptionHandled%2A>|Inicializado para `false`.|  
+|<xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.KeepInInsertMode%2A>|Inicializado para `false`.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedRows">
+      <MemberSignature Language="C#" Value="public int AffectedRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AffectedRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.AffectedRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linhas afetadas pela operação de inserção.</summary>
+        <value>O número de linhas afetadas pela operação de inserção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.AffectedRows%2A> propriedade para determinar o número de linhas afetadas pela operação de inserção. Esse valor normalmente é usado para verificar se o número apropriado de linhas foram inserido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.AffectedRows%2A> propriedade para determinar o número de linhas afetadas pela operação de inserção.  
+  
+ [!code-aspx-csharp[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/CS/detailsviewinsertedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/VB/detailsviewinsertedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exceção (se houver) que foi gerado durante a operação de inserção.</summary>
+        <value>Um <see cref="T:System.Exception" /> que representa a exceção foi elevada durante a operação de inserção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Exception%2A> propriedade para determinar a exceção (se houver) que foi gerado durante a operação de inserção. Se nenhuma exceção tiver sido acionada, essa propriedade retornará `null`.  
+  
+> [!NOTE]
+>  Se uma exceção foi gerada e optar por tratar a exceção no manipulador de eventos, certifique-se de definir o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.ExceptionHandled%2A> propriedade `true`; caso contrário, a exceção é passada para o próximo método na pilha de chamadas para manipulação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Exception%2A> para determinar se uma exceção foi gerada durante uma operação de inserção.  
+  
+ [!code-aspx-csharp[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/CS/detailsviewinsertedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/VB/detailsviewinsertedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma exceção foi elevada durante a operação de inserção foi manipulada no evento manipulador.</summary>
+        <value>
+          <see langword="true" />Se a exceção foi tratada no evento manipulador; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma exceção é gerada durante a operação de inserção, use o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.ExceptionHandled%2A> propriedade para indicar se a exceção foi tratada no evento manipulador. Quando essa propriedade é definida como `true`, a exceção será considerada tratadas e não for passado mais acima na pilha de chamada. Se essa propriedade é definida como `false`, a exceção é passada para o próximo método na pilha de chamadas para manipulação. Para determinar qual exceção foi gerada, use o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Exception%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.ExceptionHandled%2A> propriedade para indicar que a exceção foi tratada no evento manipulador.  
+  
+ [!code-aspx-csharp[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/CS/detailsviewinsertedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/VB/detailsviewinsertedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepInInsertMode">
+      <MemberSignature Language="C#" Value="public bool KeepInInsertMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepInInsertMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.KeepInInsertMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.UI.WebControls.DetailsView" /> controle deve permanecer no modo de inserção após uma operação de inserção.</summary>
+        <value>
+          <see langword="true" />para permanecer no modo de inserção após uma operação de inserção; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Web.UI.WebControls.DetailsView> o controle retorna ao modo especificado pelo <xref:System.Web.UI.WebControls.DetailsView.DefaultMode%2A> propriedade. Use o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.KeepInInsertMode%2A> propriedade para especificar se o <xref:System.Web.UI.WebControls.DetailsView> controle deve permanecer no modo de inserção após uma operação de inserção. Para manter o <xref:System.Web.UI.WebControls.DetailsView> controle no modo de inserção, defina essa propriedade como `true`.  
+  
+> [!NOTE]
+>  Essa propriedade deve ser usada quando você deseja substituir o modo padrão apenas ocasionalmente. Se o <xref:System.Web.UI.WebControls.DetailsView> controle precisa permanecer no modo de inserção, por padrão, defina o <xref:System.Web.UI.WebControls.DetailsView.DefaultMode%2A> propriedade em vez disso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.KeepInInsertMode%2A> propriedade para manter o <xref:System.Web.UI.WebControls.DetailsView> controle no modo de inserção depois de uma operação de inserção.  
+  
+ [!code-aspx-csharp[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/CS/detailsviewinsertedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/VB/detailsviewinsertedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário que contém pares de nome/valor do campo para o registro inserido.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> que contém um dicionário de pares de nome/valor do campo de chave do registro inserido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Values%2A> propriedade para acessar os valores dos campos do registro inserido. Por exemplo, você pode usar esses valores para manter um registro de registros inseridos.  
+  
+ O <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Values%2A> propriedade retorna um objeto que implementa o <xref:System.Collections.Specialized.IOrderedDictionary> interface. O objeto contém <xref:System.Collections.DictionaryEntry> objetos que representam os campos do registro inserido.  
+  
+> [!NOTE]
+>  Como um atalho, você também pode usar o indexador de <xref:System.Collections.Specialized.IOrderedDictionary> objeto para acessar o campo valores diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewInsertedEventArgs.Values%2A> propriedade para acessar os valores dos campos do registro inserido.  
+  
+ [!code-aspx-csharp[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/CS/detailsviewinsertedeventargsinlinecs.aspx#1)]
+ [!code-aspx-vb[DetailsViewInsertedEventArgsCodeInline#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewInsertedEventArgsCodeInline/VB/detailsviewinsertedeventargsinlinevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

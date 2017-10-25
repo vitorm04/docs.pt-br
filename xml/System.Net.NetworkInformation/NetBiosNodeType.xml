@@ -1,0 +1,174 @@
+<Type Name="NetBiosNodeType" FullName="System.Net.NetworkInformation.NetBiosNodeType">
+  <TypeSignature Language="C#" Value="public enum NetBiosNodeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NetBiosNodeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.NetBiosNodeType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de nó do sistema de entrada/saída básico de rede (NetBIOS).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de nó determina a maneira na qual os nomes NetBIOS são resolvidos para endereços IP (Internet Protocol). A tabela a seguir mostra o método de resolução de nome para cada tipo de nó.  
+  
+|Tipo de nó|Resolver o nome para o endereço IP|  
+|---------------|--------------------------------|  
+|Difusão|Usa as consultas de nome NetBIOS.|  
+|Peer2Peer|Usa um servidor de nomes NetBIOS (NBNS), por exemplo, nome do serviço WINS (Windows Internet).|  
+|Mixed|Tenta resolver primeiro usando consultas de nome NetBIOS e, em seguida, usando um NBNS.|  
+|Híbrido|Tenta resolver primeiro usando um NBNS e, em seguida, usando uma consulta de nome NetBIOS.|  
+  
+ Essa enumeração é usada para especificar valores para o <xref:System.Net.NetworkInformation.IPGlobalProperties.NodeType%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Broadcast">
+      <MemberSignature Language="C#" Value="Broadcast" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetBiosNodeType Broadcast = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetBiosNodeType.Broadcast" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetBiosNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nó de difusão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hybrid">
+      <MemberSignature Language="C#" Value="Hybrid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetBiosNodeType Hybrid = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetBiosNodeType.Hybrid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetBiosNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nó híbrido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mixed">
+      <MemberSignature Language="C#" Value="Mixed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetBiosNodeType Mixed = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetBiosNodeType.Mixed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetBiosNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nó misto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Peer2Peer">
+      <MemberSignature Language="C#" Value="Peer2Peer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetBiosNodeType Peer2Peer = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetBiosNodeType.Peer2Peer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetBiosNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nó ponto a ponto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.NetBiosNodeType Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.NetBiosNodeType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetBiosNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de nó desconhecido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

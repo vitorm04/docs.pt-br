@@ -1,0 +1,96 @@
+<Type Name="TrustRelationshipInformation" FullName="System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation">
+  <TypeSignature Language="C#" Value="public class TrustRelationshipInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrustRelationshipInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> contém informações de uma relação de confiança entre um par de objetos <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> ou <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SourceName">
+      <MemberSignature Language="C#" Value="public string SourceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation.SourceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da fonte de <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> ou <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> objetos para essa relação de confiança.</summary>
+        <value>Uma cadeia de caracteres que contém o nome da fonte de <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> ou <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> objetos para essa relação de confiança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetName">
+      <MemberSignature Language="C#" Value="public string TargetName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation.TargetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do destino <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> ou <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> objetos para essa relação de confiança.</summary>
+        <value>Uma cadeia de caracteres que contém o nome do destino <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> ou <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> objetos para essa relação de confiança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustDirection">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.TrustDirection TrustDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.TrustDirection TrustDirection" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation.TrustDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> objetos para essa confiança relação relativa ao <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> ou <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> objetos que criou a relação de confiança.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> valor para essa relação de confiança relativo a <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> ou <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> objetos que criou a relação de confiança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustType">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.TrustType TrustType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.TrustType TrustType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation.TrustType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.DirectoryServices.ActiveDirectory.TrustType" /> objeto da relação de confiança.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.TrustType" /> valor que representa o tipo de relação de confiança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

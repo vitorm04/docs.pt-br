@@ -1,0 +1,81 @@
+<Type Name="ServiceInstallerDialogResult" FullName="System.ServiceProcess.Design.ServiceInstallerDialogResult">
+  <TypeSignature Language="C#" Value="public enum ServiceInstallerDialogResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ServiceInstallerDialogResult extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceProcess.Design.ServiceInstallerDialogResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o valor de retorno de um <see cref="T:System.ServiceProcess.Design.ServiceInstallerDialog" /> formulário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceProcess.Design.ServiceInstallerDialog.Result%2A?displayProperty=nameWithType> propriedade usa esta enumeração para indicar a resposta do usuário à caixa de diálogo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa um <xref:System.ServiceProcess.Design.ServiceInstallerDialog> para solicitar ao usuário para uma conta de instalação do serviço.  
+  
+ [!code-cpp[ServiceInstallConfig#1](~/samples/snippets/cpp/VS_Snippets_CLR/ServiceInstallConfig/CPP/source.cpp#1)]
+ [!code-csharp[ServiceInstallConfig#1](~/samples/snippets/csharp/VS_Snippets_CLR/ServiceInstallConfig/CS/source.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Canceled">
+      <MemberSignature Language="C#" Value="Canceled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.Design.ServiceInstallerDialogResult Canceled = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.Canceled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.Design.ServiceInstallerDialogResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de diálogo valor de retorno é <see langword="Canceled" />. Esse valor normalmente indica que o usuário cancelou fora da caixa de diálogo sem definir os campos de conta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OK">
+      <MemberSignature Language="C#" Value="OK" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.Design.ServiceInstallerDialogResult OK = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.OK" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.Design.ServiceInstallerDialogResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de diálogo valor de retorno é <see langword="OK" />. Esse valor normalmente indica que o usuário confirmar as propriedades da conta e pressionado o <see langword="OK" /> para fechar a caixa de diálogo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSystem">
+      <MemberSignature Language="C#" Value="UseSystem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.Design.ServiceInstallerDialogResult UseSystem = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.UseSystem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.Design.ServiceInstallerDialogResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Instale o serviço com uma conta do sistema em vez de uma conta de usuário. Esse valor normalmente indica que a caixa de diálogo não foi exibida ao usuário. Por exemplo, o <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Account" /> propriedade é definida como algo diferente de <see langword="User" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

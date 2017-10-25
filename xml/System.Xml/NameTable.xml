@@ -1,0 +1,323 @@
+<Type Name="NameTable" FullName="System.Xml.NameTable">
+  <TypeSignature Language="C#" Value="public class NameTable : System.Xml.XmlNameTable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NameTable extends System.Xml.XmlNameTable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.NameTable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlNameTable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa um <see cref="T:System.Xml.XmlNameTable" /> single-threaded.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Várias classes, como <xref:System.Xml.XmlDocument> e <xref:System.Xml.XmlReader>, use o `NameTable` classe internamente para armazenar os nomes de atributo e elemento. Quando um nome de elemento ou atributo ocorre várias vezes em um documento XML, ele é armazenado somente uma vez no `NameTable`.  
+  
+ Os nomes são armazenados como tipos de objeto do common language runtime (CLR). Isso permite comparações sobre essas cadeias de caracteres em vez de uma comparação de cadeia de caracteres mais cara do objeto. Esses objetos de cadeia de caracteres são denominados atomizadas cadeias de caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir compara os dois nomes de elemento.  
+  
+ [!code-cpp[NameTable#1](~/samples/snippets/cpp/VS_Snippets_Data/NameTable/CPP/nametable.cpp#1)]
+ [!code-csharp[NameTable#1](~/samples/snippets/csharp/VS_Snippets_Data/NameTable/CS/nametable.cs#1)]
+ [!code-vb[NameTable#1](~/samples/snippets/visualbasic/VS_Snippets_Data/NameTable/VB/nametable.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.NameTable.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see langword="NameTable" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Constrói uma tabela de nomes vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Add">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Atomizes a cadeia de caracteres especificada e adiciona-o para o <see langword="NameTable" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre cadeias de caracteres atomizadas, consulte <xref:System.Xml.NameTable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override string Add (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string Add(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.NameTable.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A cadeia de caracteres a ser adicionada.</param>
+        <summary>Atomizes a cadeia de caracteres especificada e adiciona-o para o <see langword="NameTable" />.</summary>
+        <returns>A cadeia de caracteres atomizada ou a cadeia de caracteres existente se ela já existe o <see langword="NameTable" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre cadeias de caracteres atomizadas, consulte <xref:System.Xml.NameTable>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override string Add (char[] key, int start, int len);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string Add(char[] key, int32 start, int32 len) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.NameTable.Add(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Char[]" />
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="len" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="key">A matriz de caracteres que contém a cadeia de caracteres para adicionar.</param>
+        <param name="start">O índice baseado em zero na matriz especificando o primeiro caractere da cadeia de caracteres.</param>
+        <param name="len">O número de caracteres na cadeia de caracteres.</param>
+        <summary>Atomizes a cadeia de caracteres especificada e adiciona-o para o <see langword="NameTable" />.</summary>
+        <returns>A cadeia de caracteres atomizada ou a cadeia de caracteres existente se já houver um o <see langword="NameTable" />. Se <paramref name="len" /> for zero, Empty é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre cadeias de caracteres atomizadas, consulte <xref:System.Xml.NameTable>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">0 &gt; <paramref name="start" />  
+  
+ -ou-  
+  
+ <paramref name="start" />&gt;= <paramref name="key" />. Comprimento  
+  
+ -ou-  
+  
+ <paramref name="len" />&gt;= <paramref name="key" />. Comprimento  
+  
+ As condições acima não fazem com que uma exceção seja lançada se <paramref name="len" /> = 0.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="len" /> &lt; 0.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Get">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres atomizada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre cadeias de caracteres atomizadas, consulte <xref:System.Xml.NameTable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public override string Get (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string Get(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.NameTable.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O nome a ser localizado.</param>
+        <summary>Obtém a cadeia de caracteres atomizada com o valor especificado.</summary>
+        <returns>O objeto de cadeia de caracteres atomizados ou <see langword="null" /> se a cadeia de caracteres já não foi atomizada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre cadeias de caracteres atomizadas, consulte <xref:System.Xml.NameTable>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public override string Get (char[] key, int start, int len);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string Get(char[] key, int32 start, int32 len) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.NameTable.Get(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Char[]" />
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="len" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="key">A matriz de caracteres que contém o nome a ser localizado.</param>
+        <param name="start">O índice baseado em zero na matriz especificando o primeiro caractere do nome.</param>
+        <param name="len">O número de caracteres no nome.</param>
+        <summary>Obtém a cadeia de caracteres atomizada que contém os mesmos caracteres que o intervalo especificado de caracteres na matriz fornecida.</summary>
+        <returns>A cadeia de caracteres atomizada ou <see langword="null" /> se a cadeia de caracteres já não foi atomizada. Se <paramref name="len" /> for zero, Empty é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre cadeias de caracteres atomizadas, consulte <xref:System.Xml.NameTable>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">0 &gt; <paramref name="start" />  
+  
+ -ou-  
+  
+ <paramref name="start" />&gt;= <paramref name="key" />. Comprimento  
+  
+ -ou-  
+  
+ <paramref name="len" />&gt;= <paramref name="key" />. Comprimento  
+  
+ As condições acima não fazem com que uma exceção seja lançada se <paramref name="len" /> = 0.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="len" /> &lt; 0.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

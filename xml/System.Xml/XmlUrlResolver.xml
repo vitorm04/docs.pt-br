@@ -1,0 +1,355 @@
+<Type Name="XmlUrlResolver" FullName="System.Xml.XmlUrlResolver">
+  <TypeSignature Language="C#" Value="public class XmlUrlResolver : System.Xml.XmlResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlUrlResolver extends System.Xml.XmlResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlUrlResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlResolver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Resolve recursos XML externos nomeados por um URI (Uniform Resource Identifier).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.XmlUrlResolver>é usado para resolver a recursos externos do XML, como entidades, esquemas ou definições de tipo de documento (DTDs). Também é usado para processo incluir e importar elementos encontrados em folhas de estilo do Extensible StyleSheet Language (XSL) ou esquemas de linguagem XSD de definição de esquema XML.  
+  
+ <xref:System.Xml.XmlUrlResolver>é o resolvedor padrão para todas as classes de <xref:System.Xml> namespace. Suporta `file://` e os protocolos e as solicitações de `http://` de <xref:System.Net.WebRequest> classe.  
+  
+> [!IMPORTANT]
+>  os objetos de<xref:System.Xml.XmlUrlResolver> podem conter informações sigilosas como credenciais do usuário. Você deve ter cuidado quando você armazena em cache <xref:System.Xml.XmlUrlResolver> objetos e não deve transmitir <xref:System.Xml.XmlUrlResolver> objetos para um componente não confiável.  
+  
+## <a name="resolving-dtds"></a>Resolvendo DTDs  
+ Se um leitor de XML (<xref:System.Xml.XmlReader>) está lendo um arquivo XML que contém um DTD externo, ele chama o <xref:System.Xml.XmlUrlResolver.GetEntityAsync%2A?displayProperty=nameWithType> método para obter uma representação de fluxo do DTD. Se o URI do DTD é um URI relativo, o leitor de XML chama o <xref:System.Xml.XmlUrlResolver.ResolveUri%2A?displayProperty=nameWithType> método e retorna um URI absoluto para o determinado `relativeUri` e `baseURi` parâmetros. Se o <xref:System.Xml.XmlUrlResolver> não sabe como resolver o URI, ele retorna `null`.  
+  
+ O método de <xref:System.Xml.XmlUrlResolver.GetEntity%2A?displayProperty=nameWithType> usa as informações na propriedade de <xref:System.Xml.XmlUrlResolver.Credentials%2A> como apropriada para acessar o recurso. Não há nenhum acessador de `get` a essa propriedade por razões de segurança. Ao substituir <xref:System.Xml.XmlResolver>, **GetEntity** é o método que utiliza as informações de credencial de **credenciais** propriedade.  
+  
+ Resolver todos outros recursos XML é muito semelhante a resolver os DTDs. <xref:System.Xml.XmlResolver>negocia a conexão com o recurso externo e retorna um <xref:System.IO.Stream> representação do conteúdo. O objeto que está fazendo a chamada para <xref:System.Xml.XmlResolver> interpreta o fluxo.  
+  
+## <a name="extending-the-xmlurlresolver-class"></a>Estendendo a classe XmlUrlResolver  
+ O comportamento padrão da classe de <xref:System.Xml.XmlUrlResolver> é resolver um recurso de dados de sua origem, não do cache. Em alguns casos, resolver um recurso de dados do cache pode melhorar o desempenho de um aplicativo salvando processamento para o servidor de recurso de dados. Os ganhos de desempenho aqui sejam devem ser contra a necessidade para o conteúdo atualizado.  
+  
+ O exemplo a seguir estende <xref:System.Xml.XmlUrlResolver> e cria uma nova classe, `XmlCachingResolver`, para recuperar os recursos do cache. Isso é feito substituindo a propriedade de <xref:System.Xml.XmlUrlResolver.Credentials%2A?displayProperty=nameWithType> e o método de <xref:System.Xml.XmlUrlResolver.GetEntity%2A?displayProperty=nameWithType> .  
+  
+ [!code-csharp[XmlCachingResolver_ex#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlCachingResolver_ex/CS/XmlCachingResolver_ex.cs#1)]
+ [!code-vb[XmlCachingResolver_ex#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlCachingResolver_ex/VB/XmlCachingResolver_ex.vb#1)]  
+  
+ O comportamento de cachê da classe de `XmlCachingResolver` é implementado no método de `GetEntity` . Isso é feito criando um novo <xref:System.Net.WebRequest> e objetos de <xref:System.Net.Cache.HttpRequestCachePolicy> . O objeto de <xref:System.Net.Cache.HttpRequestCachePolicy> é criado usando o membro de <xref:System.Net.Cache.HttpRequestCacheLevel.Default> de enumeração <xref:System.Net.Cache.HttpRequestCacheLevel> .  
+  
+ A propriedade de <xref:System.Net.WebRequest.CachePolicy%2A> do objeto de <xref:System.Net.WebRequest> é definida com o objeto de <xref:System.Net.Cache.HttpRequestCachePolicy> .  
+  
+ Uma instância da classe de `XmlCachingResolver` é criada com `Boolean` `enableHttpCaching`. Quando esse valor é definido como `true`, a instância resolve um recurso de cache padrão se possível. Quando `enableHttpCaching` é definido como `false`, a instância usa o comportamento padrão e resolve os recursos de sua origem.  
+  
+> [!NOTE]
+>  Este exemplo utiliza a extensibilidade das classes XML no .NET Framework. Outras classes podem ser estendidas e personalizado para atender às necessidades de um determinado aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.XmlReader> que usa um <xref:System.Xml.XmlUrlResolver> com as credenciais padrão.  
+  
+ [!code-csharp[XmlResolver_Samples#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlResolver_Samples/CS/XmlResolver_Samples.cs#1)]
+ [!code-vb[XmlResolver_Samples#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlResolver_Samples/VB/XmlResolver_Samples.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlUrlResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlUrlResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.XmlUrlResolver" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachePolicy">
+      <MemberSignature Language="C#" Value="public System.Net.Cache.RequestCachePolicy CachePolicy { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Cache.RequestCachePolicy CachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlUrlResolver.CachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.RequestCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a política de cache para subjacente <see cref="T:System.Net.WebRequest" /> objeto.</summary>
+        <value>A política de cache para a solicitação da web subjacente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public override System.Net.ICredentials Credentials { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlUrlResolver.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define as credenciais usadas para autenticar solicitações da web.</summary>
+        <value>As credenciais a serem usadas para autenticar solicitações da Web. Se essa propriedade não estiver definida, o valor assumirá o padrão de <see langword="null" />, isto é, o <see langword="XmlUrlResolver" /> não tem credenciais de usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o diretório virtual não exigir autenticação, essa propriedade não precisa ser definido. Caso contrário, as credenciais do usuário devem ser fornecidas.  
+  
+ Você pode associar credenciais diferentes URIs diferentes e adicioná-los a um cache. Você pode usar as credenciais para verificar a autenticação para URIs diferentes, independentemente da origem original do XML.  
+  
+ O código c# a seguir mostra como definir o <xref:System.Xml.XmlUrlResolver.Credentials%2A> propriedade a um cache de credencial.  
+  
+```  
+NetworkCredential myCred = new NetworkCredential(UserName,SecurelyStoredPassword,Domain);   
+CredentialCache myCache = new CredentialCache();   
+myCache.Add(new Uri("http://www.contoso.com/"), "Basic", myCred);   
+myCache.Add(new Uri("http://app.contoso.com/"), "Basic", myCred);  
+XmlUrlResolver resolver = new XmlUrlResolver();  
+resolver.Credentials = myCache;  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.XmlUrlResolver> objeto com as credenciais. O <xref:System.Xml.XmlReader> usa as credenciais no <xref:System.Xml.XmlUrlResolver> objeto para acessar um recurso de rede.  
+  
+ [!code-csharp[XmlResolver_Samples#2](~/samples/snippets/csharp/VS_Snippets_Data/XmlResolver_Samples/CS/XmlResolver_Samples.cs#2)]
+ [!code-vb[XmlResolver_Samples#2](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlResolver_Samples/VB/XmlResolver_Samples.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntity">
+      <MemberSignature Language="C#" Value="public override object GetEntity (Uri absoluteUri, string role, Type ofObjectToReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetEntity(class System.Uri absoluteUri, string role, class System.Type ofObjectToReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlUrlResolver.GetEntity(System.Uri,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absoluteUri" Type="System.Uri" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="ofObjectToReturn" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="absoluteUri">O URI retornado de <see cref="M:System.Xml.XmlResolver.ResolveUri(System.Uri,System.String)" />.</param>
+        <param name="role">Atualmente não usado.</param>
+        <param name="ofObjectToReturn">O tipo de objeto a ser retornado. A implementação atual retorna apenas <see cref="T:System.IO.Stream" /> objetos.</param>
+        <summary>Mapeia um URI para um objeto que contém o recurso real.</summary>
+        <returns>Um objeto de fluxo ou <see langword="null" /> se for especificado um tipo diferente de fluxo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado quando o chamador deseja mapear um determinado URI para um objeto que contém o recurso que representa o URI.  
+  
+ Para obter a versão assíncrona do método, consulte <xref:System.Xml.XmlUrlResolver.GetEntityAsync%2A>.  
+  
+> [!IMPORTANT]
+>  Seu aplicativo pode reduzir a negação de memória de serviço para o <xref:System.Xml.XmlUrlResolver.GetEntity%2A> método com a implementação de IStream <xref:System.Runtime.InteropServices.ComTypes.IStream> para limitar o número de bytes lidos. Isso ajuda a proteger contra a situações onde código mal-intencionado tenta transmitir um fluxo de infinito de bytes para o <xref:System.Xml.XmlUrlResolver.GetEntity%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o `GetEntity` e <xref:System.Xml.XmlResolver.ResolveUri%2A> métodos.  
+  
+ [!code-cpp[Classic WebData XmlUrlResolver.ResolveUri Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlUrlResolver.ResolveUri Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlUrlResolver.ResolveUri Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlUrlResolver.ResolveUri Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlUrlResolver.ResolveUri Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlUrlResolver.ResolveUri Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="ofObjectToReturn" />não é nem <see langword="null" /> nem um <see langword="Stream" /> tipo.</exception>
+        <exception cref="T:System.UriFormatException">O URI especificado não é um URI absoluto.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="absoluteUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Exception">Há um erro de tempo de execução (por exemplo, uma conexão de servidor interrompida).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;object&gt; GetEntityAsync (Uri absoluteUri, string role, Type ofObjectToReturn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;object&gt; GetEntityAsync(class System.Uri absoluteUri, string role, class System.Type ofObjectToReturn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlUrlResolver.GetEntityAsync(System.Uri,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Xml.XmlUrlResolver/&lt;GetEntityAsync&gt;c__async0))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="absoluteUri" Type="System.Uri" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="ofObjectToReturn" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="absoluteUri">O URI retornado de <see cref="M:System.Xml.XmlResolver.ResolveUri(System.Uri,System.String)" />.</param>
+        <param name="role">Atualmente não usado.</param>
+        <param name="ofObjectToReturn">O tipo de objeto a ser retornado. A implementação atual retorna apenas <see cref="T:System.IO.Stream" /> objetos.</param>
+        <summary>Assincronamente mapeia um URI para um objeto que contém o recurso real.</summary>
+        <returns>Um objeto de fluxo ou <see langword="null" /> se for especificado um tipo diferente de fluxo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Proxy">
+      <MemberSignature Language="C#" Value="public System.Net.IWebProxy Proxy { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IWebProxy Proxy" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlUrlResolver.Proxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IWebProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o proxy de rede subjacente <see cref="T:System.Net.WebRequest" /> objeto.</summary>
+        <value>O <see cref="T:System.Net.IWebProxy" /> a ser usado para acessar o recurso de Internet.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveUri">
+      <MemberSignature Language="C#" Value="public override Uri ResolveUri (Uri baseUri, string relativeUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Uri ResolveUri(class System.Uri baseUri, string relativeUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlUrlResolver.ResolveUri(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="relativeUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">O URI base usado para resolver o URI relativo.</param>
+        <param name="relativeUri">O URI para resolver. O URI pode ser absoluto ou relativo. Se absoluto, esse valor substitui com eficiência o <c>baseUri</c> valor. Se relativo, ele combina com o <c>baseUri</c> para tornar um URI absoluto.</param>
+        <summary>Resolve o URI absoluto dos URIs de base e relativo.</summary>
+        <returns>O URI absoluto, ou <see langword="null" /> se o URI relativo não pode ser resolvido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O URI absoluto pode ser usado como o URI de base para todas as solicitações subsequentes para entidades que estão em relação a esse URI.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          O <paramref name="baseUri" /> é <see langword="null" /> ou o <paramref name="relativeUri" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Esse método tem uma demanda de herança. Confiança total é necessária para substituir o <see cref="M:System.Xml.XmlUrlResolver.ResolveUri(System.Uri,System.String)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

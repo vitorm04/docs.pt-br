@@ -1,0 +1,315 @@
+<Type Name="DES" FullName="System.Security.Cryptography.DES">
+  <TypeSignature Language="C#" Value="public abstract class DES : System.Security.Cryptography.SymmetricAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DES extends System.Security.Cryptography.SymmetricAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.DES" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.SymmetricAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base do algoritmo DES (padrão de criptografia de dados) do qual todas as implementações <see cref="T:System.Security.Cryptography.DES" /> devem derivar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse algoritmo oferece suporte a um comprimento de chave de 64 bits.  
+  
+> [!NOTE]
+>  Um algoritmo de criptografia assimétrica mais recente, Advanced Encryption Standard (AES), está disponível. Considere o uso de <xref:System.Security.Cryptography.Aes> classe o <xref:System.Security.Cryptography.DES> classe. Use <xref:System.Security.Cryptography.DES> somente para compatibilidade com aplicativos herdados e dados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Security.Cryptography.DESCryptoServiceProvider> (uma implementação de <xref:System.Security.Cryptography.DES>) para criptografar uma cadeia de caracteres para um buffer na memória. Em seguida, ele descriptografa e exibe a cadeia de caracteres recuperado.  
+  
+ [!code-csharp[TripleDESCryptoServiceProvider#1](~/samples/snippets/csharp/VS_Snippets_CLR/tripledescryptoserviceprovider/cs/program.cs#1)]
+ [!code-vb[TripleDESCryptoServiceProvider#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/tripledescryptoserviceprovider/vb/program.vb#1)]  
+  
+ Descriptografia pode ser tratada da mesma forma; Use <xref:System.Security.Cryptography.DESCryptoServiceProvider.CreateDecryptor%2A> em vez de <xref:System.Security.Cryptography.DESCryptoServiceProvider.CreateEncryptor%2A>. A mesma chave (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) e o vetor de inicialização (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) usada para criptografar o arquivo deve ser usado para descriptografá-lo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DES ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DES.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.DES" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância de uma classe abstrata. Código do aplicativo criará uma nova instância de uma classe derivada.  
+  
+ Esse método inicializa os campos protegidos do <xref:System.Security.Cryptography.SymmetricAlgorithm> classe com os valores padrão mostrado na tabela a seguir.  
+  
+|Campo|Valor padrão|  
+|-----------|-------------------|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.KeySizeValue>|64|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.BlockSizeValue>|64|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSizeValue>|64|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.DES Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.DES Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DES.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DES</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de um objeto de criptografia para executar o algoritmo <see cref="T:System.Security.Cryptography.DES" /> (padrão de criptografia de dados).</summary>
+        <returns>Um objeto criptográfico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria uma instância de <xref:System.Security.Cryptography.DES> objeto que pode ser usado para criptografar e descriptografar dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar e usar um <xref:System.Security.Cryptography.DES> objeto para criptografar e descriptografar dados em um arquivo.  
+  
+ [!code-cpp[Cryptography.DES.Create.File#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DES.Create.File/CPP/fileexample.cpp#1)]
+ [!code-csharp[Cryptography.DES.Create.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DES.Create.File/CS/fileexample.cs#1)]
+ [!code-vb[Cryptography.DES.Create.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DES.Create.File/VB/fileexample.vb#1)]  
+  
+ O exemplo de código a seguir mostra como criar e usar um <xref:System.Security.Cryptography.DES> objeto para criptografar e descriptografar dados na memória.  
+  
+ [!code-cpp[Cryptography.DES.Create.Memory#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DES.Create.Memory/CPP/memoryexample.cpp#1)]
+ [!code-csharp[Cryptography.DES.Create.Memory#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DES.Create.Memory/CS/memoryexample.cs#1)]
+ [!code-vb[Cryptography.DES.Create.Memory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DES.Create.Memory/VB/memoryexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.DES Create (string algName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.DES Create(string algName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DES.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DES</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algName">O nome da implementação específica do <see cref="T:System.Security.Cryptography.DES" /> a ser usada.</param>
+        <summary>Cria uma instância de um objeto de criptografia para realizar a implementação especificada do algoritmo <see cref="T:System.Security.Cryptography.DES" /> (Padrão de Criptografia de Dados).</summary>
+        <returns>Um objeto criptográfico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar e usar um <xref:System.Security.Cryptography.DES> objeto para criptografar e descriptografar dados em um arquivo.  
+  
+ [!code-cpp[Cryptography.DES.Createstring.File#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DES.Createstring.File/CPP/fileexample.cpp#1)]
+ [!code-csharp[Cryptography.DES.Createstring.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DES.Createstring.File/CS/fileexample.cs#1)]
+ [!code-vb[Cryptography.DES.Createstring.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DES.Createstring.File/VB/fileexample.vb#1)]  
+  
+ O exemplo de código a seguir mostra como criar e usar um <xref:System.Security.Cryptography.DES> objeto para criptografar e descriptografar dados na memória.  
+  
+ [!code-cpp[Cryptography.DES.Createstring.Memory#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DES.Createstring.Memory/CPP/memoryexample.cpp#1)]
+ [!code-csharp[Cryptography.DES.Createstring.Memory#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DES.Createstring.Memory/CS/memoryexample.cs#1)]
+ [!code-vb[Cryptography.DES.Createstring.Memory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DES.Createstring.Memory/VB/memoryexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSemiWeakKey">
+      <MemberSignature Language="C#" Value="public static bool IsSemiWeakKey (byte[] rgbKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsSemiWeakKey(unsigned int8[] rgbKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DES.IsSemiWeakKey(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">A chave secreta para testar o ponto-e-fraco.</param>
+        <summary>Determina se a chave especificada é semifraca.</summary>
+        <returns>
+          <see langword="true" />Se a chave for semifraca; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chaves semifraca são pares de chaves que resultam em codificações que são fáceis de interrupção. Se o texto é criptografado com uma chave semifraca, criptografando a criptografia resultante com o parceiro de chave semifraca retorna o texto original. Há pares de chave semifraca conhecidas seis para o padrão de criptografia de dados (<xref:System.Security.Cryptography.DES>) algoritmo; este método verifica as chaves semifraca.  
+  
+ Tentativa de definir um resultados chave semifraca um <xref:System.Security.Cryptography.CryptographicException>. Quando <xref:System.Security.Cryptography.DESCryptoServiceProvider.GenerateKey%2A> é chamado para criar uma chave aleatória, um ponto-e-fraca chave nunca será retornada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O tamanho do parâmetro <paramref name="rgbKey" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWeakKey">
+      <MemberSignature Language="C#" Value="public static bool IsWeakKey (byte[] rgbKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsWeakKey(unsigned int8[] rgbKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DES.IsWeakKey(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbKey">A chave secreta cuja vulnerabilidade será testada.</param>
+        <summary>Determina se a chave especificada é fraca.</summary>
+        <returns>
+          <see langword="true" /> se a chave for fraca; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chaves fracas são chaves que resultam em codificações que são fáceis de interrupção. Se o texto é criptografado com uma chave fraca, criptografando a criptografia resultante novamente com a mesma chave fraca retorna o texto original. Há quatro chaves fracas conhecidas para o padrão de criptografia de dados (<xref:System.Security.Cryptography.DES>) algoritmo; este método verifica as chaves fracas.  
+  
+ Tentativa de definir um resultados fracos de chave um <xref:System.Security.Cryptography.CryptographicException>. Quando <xref:System.Security.Cryptography.DESCryptoServiceProvider.GenerateKey%2A> é chamado para criar uma chave aleatória, uma chave fraca nunca será ser retornada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O tamanho do parâmetro <paramref name="rgbKey" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public override byte[] Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.DES.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a chave secreta para o algoritmo <see cref="T:System.Security.Cryptography.DES" /> (padrão de criptografia de dados).</summary>
+        <value>A chave secreta para o algoritmo <see cref="T:System.Security.Cryptography.DES" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade for `null` quando ele é usado, <xref:System.Security.Cryptography.SymmetricAlgorithm.GenerateKey%2A> é chamado para criar um novo valor aleatório.  
+  
+ O comprimento da chave deve ser igual a <xref:System.Security.Cryptography.SymmetricAlgorithm.BlockSizeValue>.  
+  
+ Esse algoritmo oferece suporte a um comprimento de chave de 64 bits.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Foi feita uma tentativa para definir a chave <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Foi feita uma tentativa para definir uma chave cujo comprimento não é igual a <see cref="F:System.Security.Cryptography.SymmetricAlgorithm.BlockSizeValue" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Foi feita uma tentativa para definir uma chave fraca (consulte <see cref="M:System.Security.Cryptography.DES.IsWeakKey(System.Byte[])" />) ou uma chave semifraca (consulte <see cref="M:System.Security.Cryptography.DES.IsSemiWeakKey(System.Byte[])" />).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

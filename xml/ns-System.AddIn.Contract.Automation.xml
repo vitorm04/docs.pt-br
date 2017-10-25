@@ -1,0 +1,17 @@
+<Namespace Name="System.AddIn.Contract.Automation">
+  <Docs>
+    <summary>O <see cref="N:System.AddIn.Contract.Automation" /> namespace contém interfaces de componentes usam para acessar informações de tipo e chamar membros de tipo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usa as interfaces no <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> namespace habilitar componentes para acessar as informações de tipo para um objeto remoto sem ter acesso direto para o <xref:System.Type> do objeto remoto. O <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> namespace define a funcionalidade de reflexão para componentes que usam as interfaces e estruturas no <xref:System.AddIn.Contract?displayProperty=nameWithType>, <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType>, e <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> namespaces para se comunicar. As interfaces nesses namespaces, também são chamadas de contratos. Todos os contratos derivam o <xref:System.AddIn.Contract.IContract> interface.  
+  
+ Ao usar contratos para gerenciar a comunicação entre componentes, você deve implementar o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> interface em um tipo para expor as informações de tipo para outros componentes. Componentes, em seguida, podem acessar os membros do tipo chamando o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType%2A> método da interface para obter um <xref:System.AddIn.Contract.Automation.IRemoteTypeContract>. As outras interfaces e estruturas de <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> namespace fornecem acesso a informações de tipo para campos, propriedades, métodos, eventos e delegados.  
+  
+ Componentes podem usar os contratos no <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> namespace para acessar as informações de tipo para um objeto que está em um domínio de aplicativo ou processo diferente ou o mesmo processo ou o domínio de aplicativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

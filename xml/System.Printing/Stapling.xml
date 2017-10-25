@@ -1,0 +1,220 @@
+<Type Name="Stapling" FullName="System.Printing.Stapling">
+  <TypeSignature Language="C#" Value="public enum Stapling" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Stapling extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.Stapling" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se, e quando, uma impressora grampeia um documento de várias páginas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os valores desse tipo principalmente para esses fins:  
+  
+-   Como membros do <xref:System.Printing.PrintCapabilities.StaplingCapability%2A> coleção, que é uma propriedade de <xref:System.Printing.PrintCapabilities>, esses valores indicam os tipos de associação que dá suporte a uma impressora.  
+  
+-   Como o valor da <xref:System.Printing.PrintTicket.Stapling%2A> propriedade de um <xref:System.Printing.PrintTicket>, o valor instrui a impressora se e onde a grampeamento.  
+  
+ O `Unknown` valor nunca é usado nas propriedades de <xref:System.Printing.PrintCapabilities> objetos.  
+  
+ Você nunca deve definir um <xref:System.Printing.PrintTicket> propriedade `Unknown`. Se algum outro <xref:System.Printing.PrintTicket> produzir aplicativo tiver criado um *documento PrintTicket* que define o recurso de associação como uma opção não reconhecida (ou seja, uma opção que não está definida no [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397)), uma <xref:System.Printing.PrintTicket> objeto em um aplicativo que é construído com esse documento terá `Unknown` como o valor do <xref:System.Printing.PrintTicket.Stapling%2A> propriedade.  
+  
+ Embora o <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintCapabilities> classes não podem ser herdadas, você pode estender o [imprimir esquema](http://go.microsoft.com/fwlink/?LinkId=186397) para reconhecer os recursos de dispositivo de impressão que não são tratados do <xref:System.Printing.PrintTicket> ou <xref:System.Printing.PrintCapabilities> classes. Para obter mais informações, consulte [NOTINBUILD: como: estender o esquema de impressão e criar novas Classes de sistema de impressão](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como testar os recursos da impressora e configurar o trabalho de impressão para tirar proveito deles.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling None = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O documento não é grampeado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SaddleStitch">
+      <MemberSignature Language="C#" Value="SaddleStitch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling SaddleStitch = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.SaddleStitch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Vários grampos ao longo da linha de dobra. Também chamado de associação de grampo a cavalo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StapleBottomLeft">
+      <MemberSignature Language="C#" Value="StapleBottomLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling StapleBottomLeft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.StapleBottomLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um único grampo no canto inferior esquerdo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StapleBottomRight">
+      <MemberSignature Language="C#" Value="StapleBottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling StapleBottomRight = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.StapleBottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um único grampo no canto inferior direito.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StapleDualBottom">
+      <MemberSignature Language="C#" Value="StapleDualBottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling StapleDualBottom = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.StapleDualBottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dois grampos ao longo da borda inferior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StapleDualLeft">
+      <MemberSignature Language="C#" Value="StapleDualLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling StapleDualLeft = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.StapleDualLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dois grampos ao longo da borda esquerda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StapleDualRight">
+      <MemberSignature Language="C#" Value="StapleDualRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling StapleDualRight = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.StapleDualRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dois grampos ao longo da borda direita.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StapleDualTop">
+      <MemberSignature Language="C#" Value="StapleDualTop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling StapleDualTop = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.StapleDualTop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dois grampos ao longo da borda superior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StapleTopLeft">
+      <MemberSignature Language="C#" Value="StapleTopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling StapleTopLeft = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.StapleTopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um único grampo no canto superior esquerdo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StapleTopRight">
+      <MemberSignature Language="C#" Value="StapleTopRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling StapleTopRight = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.StapleTopRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um único grampo no canto superior direito.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.Stapling Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.Stapling.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.Stapling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O recurso (cujas opções são representadas por esta enumeração) é definido como uma opção não definida no [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

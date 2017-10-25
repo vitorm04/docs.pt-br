@@ -1,0 +1,181 @@
+<Type Name="ProtectedConfigurationProvider" FullName="System.Configuration.ProtectedConfigurationProvider">
+  <TypeSignature Language="C#" Value="public abstract class ProtectedConfigurationProvider : System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProtectedConfigurationProvider extends System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ProtectedConfigurationProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Provider.ProviderBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>É a classe base para criar provedores para criptografar e descriptografar dados de configuração protegida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode criptografar seções de um arquivo de configuração para proteger informações confidenciais usadas pelo seu aplicativo. Isso melhora a segurança, tornando difícil de acesso não autorizado mesmo se um invasor obtiver acesso ao seu arquivo de configuração.  
+  
+ O .NET Framework inclui dois provedores de configuração protegida que podem ser usados para criptografar as seções de um arquivo de configuração. O <xref:System.Configuration.RsaProtectedConfigurationProvider> classe usa a <xref:System.Security.Cryptography.RSACryptoServiceProvider> para criptografar as seções de configuração. O <xref:System.Configuration.DpapiProtectedConfigurationProvider> classe usa a API de proteção de dados Windows (DPAPI) para criptografar as seções de configuração.  
+  
+ Você pode ter um requisito para criptografar informações confidenciais usando um algoritmo que não sejam os provedores de RSA ou DPAPI. Nesse caso, você pode criar seu próprio provedor de configuração protegida personalizado. O <xref:System.Configuration.ProtectedConfigurationProvider> é uma classe base abstrata que você deve herdar de criar seu próprio provedor de configuração protegida.  
+  
+ Se você usar um padrão ou um provedor personalizado, você deve garantir que ele é configurado com o `add` elemento o `providers` seção o `configProtectedData` seção de configuração. (Consulte o exemplo a seguir).  
+  
+ Para obter detalhes, consulte [implementando um provedor de configuração protegida](http://msdn.microsoft.com/library/afc329e4-ef37-4915-b419-b37c745d2865).  
+  
+> [!NOTE]
+>  Quando ASP.NET encontrar dados de configuração criptografados, ele executa a descriptografia transparente usando o provedor configurado. Nenhuma ação é necessária em seu lado diferente certificando-se de que você configure o provedor necessário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como implementar um personalizado <xref:System.Configuration.ProtectedConfigurationProvider>.  
+  
+ Para poder configurar esse provedor, como mostrado no seguinte trecho de configuração, você deve instalá-lo no Cache de Assembly Global (GAC). Consulte [implementando um provedor de configuração protegida](http://msdn.microsoft.com/library/afc329e4-ef37-4915-b419-b37c745d2865) para obter mais informações.  
+  
+ [!code-csharp[System.Configuration.ProtectedConfigurationProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProtectedConfigurationProvider/CS/ProtectedConfigurationProviderLib.cs#1)]
+ [!code-vb[System.Configuration.ProtectedConfigurationProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProtectedConfigurationProvider/VB/ProtectedConfigurationProviderLib.vb#1)]  
+  
+ O exemplo a seguir mostra como usar personalizado anterior <xref:System.Configuration.ProtectedConfigurationProvider>.  
+  
+ [!code-csharp[System.Configuration.UsingProtectedConfigurationProvider#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.UsingProtectedConfigurationProvider/CS/ProtectedConfigurationProvider.cs#11)]
+ [!code-vb[System.Configuration.UsingProtectedConfigurationProvider#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.UsingProtectedConfigurationProvider/VB/ProtectedConfigurationProvider.vb#11)]  
+  
+ A seguir está um trecho do arquivo de configuração usado pelos exemplos acima.  
+  
+```  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+  
+  <configProtectedData >  
+    <providers>  
+      <clear />  
+      <add keyContainerName="pcKey.txt"   
+        name="TripleDESProtectedConfigurationProvider"  
+type="Samples.Aspnet.TripleDESProtectedConfigurationProvider, protectedconfigurationproviderlib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79e01ae0f5cfc66f, processorArchitecture=MSIL" />  
+    </providers>  
+  
+  </configProtectedData >  
+  
+  <connectionStrings>  
+    <add name="NorthwindConnectionString"   
+      connectionString="Data Source=webnetue2;Initial Catalog=Northwind;User ID=aspnet_test;Password=test"  
+providerName="System.Data.SqlClient" />  
+  </connectionStrings>  
+  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProtectedConfigurationProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProtectedConfigurationProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Configuration.ProtectedConfigurationProvider" /> classe usando as configurações padrão.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este construtor conforme necessário para sua classe.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlNode Decrypt (System.Xml.XmlNode encrypted_node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode Decrypt(class System.Xml.XmlNode encrypted_node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProtectedConfigurationProvider.Decrypt(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedNode" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="encrypted_node">To be added.</param>
+        <summary>Descriptografa o passado <see cref="T:System.Xml.XmlNode" /> objeto a partir de um arquivo de configuração.</summary>
+        <returns>O <see cref="T:System.Xml.XmlNode" /> objeto que contém dados descriptografados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Configuration.ProtectedConfigurationProvider.Decrypt%2A> método para executar a descriptografia personalizada.  
+  
+ [!code-csharp[System.Configuration.ProtectedConfigurationProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProtectedConfigurationProvider/CS/ProtectedConfigurationProviderLib.cs#2)]
+ [!code-vb[System.Configuration.ProtectedConfigurationProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProtectedConfigurationProvider/VB/ProtectedConfigurationProviderLib.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para realizar a descriptografia personalizada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlNode Encrypt (System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode Encrypt(class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ProtectedConfigurationProvider.Encrypt(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Xml.XmlNode" /> objeto para criptografar.</param>
+        <summary>Criptografa o passado <see cref="T:System.Xml.XmlNode" /> objeto a partir de um arquivo de configuração.</summary>
+        <returns>O <see cref="T:System.Xml.XmlNode" /> objeto que contém dados criptografados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Configuration.ProtectedConfigurationProvider.Encrypt%2A> para executar a criptografia personalizada.  
+  
+ [!code-csharp[System.Configuration.ProtectedConfigurationProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ProtectedConfigurationProvider/CS/ProtectedConfigurationProviderLib.cs#3)]
+ [!code-vb[System.Configuration.ProtectedConfigurationProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ProtectedConfigurationProvider/VB/ProtectedConfigurationProviderLib.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para executar criptografia personalizado.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

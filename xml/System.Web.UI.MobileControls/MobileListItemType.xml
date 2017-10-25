@@ -1,0 +1,99 @@
+<Type Name="MobileListItemType" FullName="System.Web.UI.MobileControls.MobileListItemType">
+  <TypeSignature Language="C#" Value="public enum MobileListItemType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MobileListItemType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.MobileListItemType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Atribui um tipo de item a um elemento em um <see cref="T:System.Web.UI.MobileControls.List" /> ou <see cref="T:System.Web.UI.MobileControls.ObjectList" /> os controles filho do controle. Essa classe não pode ser herdada. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Web.UI.MobileControls.List> ou <xref:System.Web.UI.MobileControls.ObjectList> controle é processado no modo de modelo, vazio <xref:System.Web.UI.MobileControls.MobileListItem> objetos com o tipo de item correspondentes são criados para cada cabeçalho, rodapé ou separador que precisa ser renderizado. Esses objetos vazios, em seguida, são inseridos em controles de filho do controle.  
+  
+> [!NOTE]
+>  <xref:System.Web.UI.MobileControls.MobileListItem>objetos que correspondem aos itens de lista sempre têm um tipo de <xref:System.Web.UI.WebControls.ListItem>.  
+  
+ Você pode usar essa enumeração para iteração na coleção de controles e localizando o <xref:System.Web.UI.MobileControls.MobileListItem> objetos correspondentes aos modelos de cabeçalho, rodapé e separador.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FooterItem">
+      <MemberSignature Language="C#" Value="FooterItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.MobileListItemType FooterItem = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobileListItemType.FooterItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um rodapé de uma lista. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderItem">
+      <MemberSignature Language="C#" Value="HeaderItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.MobileListItemType HeaderItem = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobileListItemType.HeaderItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um título para obter uma lista. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItem">
+      <MemberSignature Language="C#" Value="ListItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.MobileListItemType ListItem = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobileListItemType.ListItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um item em uma lista. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorItem">
+      <MemberSignature Language="C#" Value="SeparatorItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.MobileListItemType SeparatorItem = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.MobileListItemType.SeparatorItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.MobileListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um separador entre os itens de lista. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

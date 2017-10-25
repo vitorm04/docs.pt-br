@@ -1,0 +1,141 @@
+<Type Name="ComposablePartDefinition" FullName="System.ComponentModel.Composition.Primitives.ComposablePartDefinition">
+  <TypeSignature Language="C#" Value="public abstract class ComposablePartDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ComposablePartDefinition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma classe base abstrata para definições de parte de composição, que descrevem e permitem a criação de <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objetos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ComposablePartDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePart">
+      <MemberSignature Language="C#" Value="public abstract System.ComponentModel.Composition.Primitives.ComposablePart CreatePart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Composition.Primitives.ComposablePart CreatePart() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartDefinition.CreatePart" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ComposablePart</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de uma parte que o <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> descreve.</summary>
+        <returns>A parte criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos derivados que substituem este método devem retornar uma nova instância de um <xref:System.ComponentModel.Composition.Primitives.ComposablePart> objeto toda vez que o método é chamado e nunca deve retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportDefinitions">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt; ExportDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.ExportDefinition&gt; ExportDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ComposablePartDefinition.ExportDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> objetos que descrevem os objetos exportados pela parte definido por este <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> objeto.</summary>
+        <value>Uma coleção de <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> objetos que descrevem os objetos exportados fornecidos pelo <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objetos criados pelo <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituições dessa propriedade nunca devem retornar `null`. Se o <xref:System.ComponentModel.Composition.Primitives.ComposablePart> objetos criados pelo <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition> não fornecer objetos exportados, retornar vazio <xref:System.Collections.Generic.IEnumerable%601> coleção em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportDefinitions">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ImportDefinition&gt; ImportDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.ImportDefinition&gt; ImportDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ComposablePartDefinition.ImportDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ImportDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> objetos que descrevem as importações exigidas pela parte definido por este <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> objeto.</summary>
+        <value>Uma coleção de <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> objetos que descrevem as importações exigidas pelo <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objetos criados pelo <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituições dessa propriedade nunca devem retornar `null`. Se o <xref:System.ComponentModel.Composition.Primitives.ComposablePart> objetos criados pelo <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition> não tiver importações, retornar vazio <xref:System.Collections.Generic.IEnumerable%601> coleção em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,object&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ComposablePartDefinition.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de metadados para este <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> objeto.</summary>
+        <value>Uma coleção que contém os metadados para o <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" />. O padrão é vazio, somente leitura <see cref="T:System.Collections.Generic.IDictionary`2" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituições dessa propriedade devem retornar somente leitura <xref:System.Collections.Generic.IDictionary%602> objeto com uma comparação não linguística, diferencia maiusculas de minúsculas, como <xref:System.StringComparer.Ordinal%2A>e nunca deve retornar `null`. Se o <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition> não contém metadados, retornar vazio <xref:System.Collections.Generic.IDictionary%602> objeto em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

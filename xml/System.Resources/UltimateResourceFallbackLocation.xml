@@ -1,0 +1,91 @@
+<Type Name="UltimateResourceFallbackLocation" FullName="System.Resources.UltimateResourceFallbackLocation">
+  <TypeSignature Language="C#" Value="public enum UltimateResourceFallbackLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed UltimateResourceFallbackLocation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.UltimateResourceFallbackLocation" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se um objeto <see cref="T:System.Resources.ResourceManager" /> procura os recursos da cultura padrão do aplicativo no assembly principal ou em um assembly satélite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.UltimateResourceFallbackLocation> enumeração é usada com a <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> construtor para especificar se um <xref:System.Resources.ResourceManager> objeto recupera os recursos de cultura do padrão do aplicativo do assembly principal do aplicativo (o padrão), ou de um assembly satélite. Em um aplicativo localizado, os recursos da cultura padrão são usados se nenhum recursos específicos de cultura forem encontrados depois de usar o processo de fallback de recurso. Para obter mais informações, consulte a seção "Processo de Fallback de Recurso" em [Empacotamento e implantação de recursos](~/docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+  
+ Se você especificar um valor de MainAssembly ou nenhum valor para o <xref:System.Resources.NeutralResourcesLanguageAttribute> atributo e Gerenciador de recursos não é possível carregar um conjunto de recursos que pertence a cultura padrão, ele lança uma <xref:System.Resources.MissingManifestResourceException> exceção. Se você especificar um valor de satélite para o <xref:System.Resources.NeutralResourcesLanguageAttribute> e Gerenciador de recursos não é possível carregar um conjunto de recursos que pertence a cultura padrão, ele lança uma <xref:System.Resources.MissingSatelliteAssemblyException> exceção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MainAssembly">
+      <MemberSignature Language="C#" Value="MainAssembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Resources.UltimateResourceFallbackLocation MainAssembly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.UltimateResourceFallbackLocation.MainAssembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.UltimateResourceFallbackLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os recursos de fallback estão localizados no assembly principal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Satellite">
+      <MemberSignature Language="C#" Value="Satellite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Resources.UltimateResourceFallbackLocation Satellite = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Resources.UltimateResourceFallbackLocation.Satellite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.UltimateResourceFallbackLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os recursos de fallback estão localizados em um assembly satélite.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

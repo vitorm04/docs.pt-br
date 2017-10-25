@@ -1,0 +1,106 @@
+<Type Name="ObjectDataSourceDisposingEventArgs" FullName="System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectDataSourceDisposingEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectDataSourceDisposingEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing" /> do controle <see cref="T:System.Web.UI.WebControls.ObjectDataSource" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs> classe é usada no <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectDisposing%2A> método para fornecer acesso à instância do objeto de negócios depois de qualquer operação de dados que está usando o <xref:System.Web.UI.WebControls.ObjectDataSource> objeto de controle e de negócios são executadas, mas antes do negócio objeto é destruído. O objeto comercial é acessado usando o <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs.ObjectInstance%2A> propriedade. Adicionando um delegado para manipular o <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing> eventos, você pode acessar nenhum membro exposto publicamente do objeto comercial para executar qualquer trabalho final ou limpar.  
+  
+ O <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectDisposing%2A> método não é chamado pelo <xref:System.Web.UI.WebControls.ObjectDataSource> de controle, se o método que executa operações de dados for um `static` método. Nenhuma instância do objeto comercial é criada quando o método é estático.  
+  
+ O <xref:System.Web.UI.WebControls.ObjectDataSource> controle expõe vários eventos que você pode manipular para trabalhar com o objeto comercial subjacente várias vezes durante o ciclo de vida. A tabela a seguir lista os eventos e associado <xref:System.EventArgs> classes e delegados de manipulador de eventos.  
+  
+|Evento|EventArgs|EventHandler|  
+|-----------|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating>.<br /><br /> Ocorre imediatamente antes que a instância do objeto comercial é criada.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated>.<br /><br /> Ocorre imediatamente depois que a instância do objeto comercial é criada.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selecting>.<br /><br /> Ocorre antes que os dados são recuperados.|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserting>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updating> e <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting>.<br /><br /> Ocorre antes de uma operação de inserção, atualização ou delete é executada.|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selected><br /><br /> Ocorre depois que os dados são recuperados.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserted>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updated> e <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted>.<br /><br /> Ocorre após a inserção, atualização ou operação de exclusão é concluída.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing>.<br /><br /> Ocorre antes de um objeto comercial é destruído.|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventHandler>|  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para exibir informações. O segundo exemplo de código fornece o objeto comercial de camada intermediária de exemplo que usa o primeiro exemplo de código.  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para exibir informações. Você pode trabalhar com um objeto comercial que é muito caro (em termos de tempo ou recursos) criar para cada operação de dados que executa a página da Web. Pode ser uma maneira de trabalhar com um objeto caro para criar uma instância de uma vez e, em seguida, armazene em cache para operações subsequentes, em vez de criação e destruição de cada operação de dados. Este exemplo demonstra esse padrão. Você pode manipular o <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating> evento para verificar o cache para um objeto primeiro e, em seguida, crie uma instância, somente se um não já está em cache. Em seguida, tratar o <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing> evento para armazenar em cache o objeto comercial para uso futuro, em vez de destruí-lo. Neste exemplo, o <xref:System.ComponentModel.CancelEventArgs.Cancel?displayProperty=nameWithType> propriedade do <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs> objeto é definido como `true`, para direcionar o <xref:System.Web.UI.WebControls.ObjectDataSource> não chamar o <xref:System.IDisposable.Dispose%2A> método na instância.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_16#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/CS/objds16cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_16#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/VB/objds16vb.aspx#1)]  
+  
+ O exemplo de código a seguir fornece um objeto comercial de camada intermediária de exemplo que usa o exemplo de código anterior. O exemplo de código consiste em um objeto de negócios básico, definido pelo `EmployeeLogic` classe, que é uma classe que mantém o estado e encapsula a lógica de negócios. Para um exemplo completo de trabalho, você deve compilar este código como uma biblioteca e, em seguida, use essas classes de uma página ASP.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_16#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/CS/northwindemployee16.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_16#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/VB/northwindemployee16.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataSourceDisposingEventArgs (object objectInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object objectInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="objectInstance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objectInstance">O objeto de negócios com o qual o <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> interage para executar operações de dados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs" /> classe usando o objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectInstance">
+      <MemberSignature Language="C#" Value="public object ObjectInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs.ObjectInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que representa o objeto de negócios com a qual o <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> controle executa operações de dados.</summary>
+        <value>O objeto comercial de <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> usa para operações de dados; caso contrário, <see langword="null" />, se <see langword="null" /> é passado para o <see cref="T:System.Web.UI.WebControls.ObjectDataSourceEventArgs" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se os métodos de operação de dados (<xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.UpdateMethod%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteMethod%2A>, e <xref:System.Web.UI.WebControls.ObjectDataSource.InsertMethod%2A>) são métodos de instância, uma instância dos negócios objeto é criado antes do método é executado. Você pode impedir que o objeto comercial que está sendo criado para cada chamada ao salvar o objeto no <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs.ObjectInstance%2A> propriedade o <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing> manipulador de eventos. Em subsequentes <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating> eventos, você pode recuperar o objeto de negócios do <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para exibir informações. Você pode trabalhar com um objeto comercial que é muito caro (em termos de tempo ou recursos) criar para cada operação de dados que executa a página da Web. Pode ser uma maneira de trabalhar com um objeto caro para criar uma instância de uma vez e, em seguida, armazene em cache para operações subsequentes, em vez de criação e destruição de cada operação de dados. Este exemplo demonstra esse padrão. Você pode manipular o <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating> evento para verificar o cache para um objeto primeiro e, em seguida, crie uma instância, somente se um não já está em cache. Em seguida, tratar o <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing> evento para armazenar em cache o objeto comercial para uso futuro, em vez de destruí-lo. Neste exemplo, o <xref:System.ComponentModel.CancelEventArgs.Cancel?displayProperty=nameWithType> propriedade o <xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs> classe é definida como `true`, para direcionar o <xref:System.Web.UI.WebControls.ObjectDataSource> não chamar <xref:System.IDisposable.Dispose%2A> na instância.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_16#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/CS/objds16cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_16#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_16/VB/objds16vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,66 @@
+<Type Name="MachineKeyProtection" FullName="System.Web.Security.MachineKeyProtection">
+  <TypeSignature Language="C#" Value="public enum MachineKeyProtection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MachineKeyProtection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.MachineKeyProtection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica valores que indica se os dados devem ser criptografados ou descriptografados, se um código de autenticação de mensagem baseado em hash (HMAC) deve ser anexado ou validado ou ambos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Security.MachineKeyProtection All = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Security.MachineKeyProtection.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MachineKeyProtection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um código de autenticação de mensagem baseado em hash (HMAC) deve ser anexado aos dados e que os dados devem ser criptografados (para o <see cref="M:System.Web.Security.Encode" /> método) ou que os dados devem ser ambos descriptografada e validada (para o <see cref="M:System.Web.Security.Decode" /> método).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Encryption">
+      <MemberSignature Language="C#" Value="Encryption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Security.MachineKeyProtection Encryption = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Security.MachineKeyProtection.Encryption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MachineKeyProtection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os dados devem ser criptografados (para o <see cref="M:System.Web.Security.Encode" /> método) ou descriptografados (para o <see cref="M:System.Web.Security.Decode" /> método).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Validation">
+      <MemberSignature Language="C#" Value="Validation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Security.MachineKeyProtection Validation = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Security.MachineKeyProtection.Validation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MachineKeyProtection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um código de autenticação de mensagem baseado em hash (HMAC) deve ser anexado aos dados (para o <see cref="M:System.Web.Security.Encode" /> método) ou validado (para o <see cref="M:System.Web.Security.Decode" /> método).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

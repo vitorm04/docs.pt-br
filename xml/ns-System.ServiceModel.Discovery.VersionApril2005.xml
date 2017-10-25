@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Discovery.VersionApril2005">
+  <Docs>
+    <summary>O <see langword="System.ServiceModel.Discovery.VersionApril2005" /> namespace contém as classes necessárias para a criação e uso de serviços podem ser descobertos. Essas classes implementam a versão de abril de 2005 do protocolo WS-Discovery para o Windows Communication Foundation (WCF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

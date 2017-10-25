@@ -1,0 +1,2712 @@
+<Type Name="MonthCalendar" FullName="System.Windows.Forms.MonthCalendar">
+  <TypeSignature Language="C#" Value="public class MonthCalendar : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MonthCalendar extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MonthCalendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("SelectionRange")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("DateChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("SelectionRange")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.MonthCalendarDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle de Windows que permite ao usuário selecionar uma data usando uma exibição de calendário mensal visual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar> controle permite que o usuário selecione uma data usando uma exibição visual. Você pode limitar a data e os horários que podem ser selecionados, definindo o <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> e <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> propriedades.  
+  
+ Você pode alterar a aparência da parte do controle de calendário, definindo o <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>, e <xref:System.Windows.Forms.Control.BackColor%2A> propriedades.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.DateTimePicker> controle só oferece suporte a calendários do calendário gregoriano.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.DateTimePicker> controle só oferece suporte a calendários do calendário gregoriano.  
+  
+ O <xref:System.Windows.Forms.MonthCalendar> controle é desenhado pelo sistema operacional, portanto, o <xref:System.Windows.Forms.MonthCalendar.Paint> nunca é gerado. Se você precisa fornecer uma aparência personalizada para o <xref:System.Windows.Forms.MonthCalendar> controle, você deve substituir o <xref:System.Windows.Forms.Control.OnPrint%2A> método, chamar a implementação base de <xref:System.Windows.Forms.Control.OnPrint%2A>e, em seguida, executar pintura personalizada.  
+  
+ Se você precisar de uma seleção limitada a apenas uma data e formatação de datas personalizado, é possível usar um <xref:System.Windows.Forms.DateTimePicker> de controle, em vez de um <xref:System.Windows.Forms.MonthCalendar>. Usando o <xref:System.Windows.Forms.DateTimePicker> elimina muito a necessidade para validar valores de data/hora.  
+  
+ Para obter mais informações sobre o mês controles de calendário, consulte [referência de controle de calendário de mês](http://go.microsoft.com/fwlink/?LinkId=178863).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MonthCalendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar.%23ctor%2A> construtor cria um novo <xref:System.Windows.Forms.MonthCalendar>.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Windows.Forms.MonthCalendar> classe.  
+  
+|Item|Descrição|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A>|Data de hoje.|  
+|<xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>|Data de hoje.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAnnuallyBoldedDate">
+      <MemberSignature Language="C#" Value="public void AddAnnuallyBoldedDate (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAnnuallyBoldedDate(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">A data a ser exibido em negrito.</param>
+        <summary>Adiciona um dia em que é exibido em negrito anualmente no calendário do mês.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar o <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método posteriormente para atualizar a exibição.  
+  
+ Para adicionar várias datas em uma única atribuição, você pode atribuir uma matriz de <xref:System.DateTime> objetos para o <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBoldedDate">
+      <MemberSignature Language="C#" Value="public void AddBoldedDate (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddBoldedDate(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.AddBoldedDate(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">A data a ser exibido em negrito.</param>
+        <summary>Adiciona um dia a ser exibido em negrito no calendário do mês.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar o <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método posteriormente para atualizar a exibição.  
+  
+ Para adicionar várias datas em uma única atribuição, você pode atribuir uma matriz de <xref:System.DateTime> objetos para o <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A> e <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> métodos para marcar e uma fonte em negrito datas leem de um arquivo. Este exemplo requer que um <xref:System.Windows.Forms.MonthCalendar> controle, chamado `monthCalendar1`, foi adicionado a um <xref:System.Windows.Forms.Form> e que esse método é colocado dentro do formulário e chamado dele.  
+  
+ [!code-cpp[MonthCalendar#2](~/samples/snippets/cpp/VS_Snippets_Winforms/MonthCalendar/CPP/mc.cpp#2)]
+ [!code-csharp[MonthCalendar#2](~/samples/snippets/csharp/VS_Snippets_Winforms/MonthCalendar/CS/mc.cs#2)]
+ [!code-vb[MonthCalendar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MonthCalendar/VB/mc.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMonthlyBoldedDate">
+      <MemberSignature Language="C#" Value="public void AddMonthlyBoldedDate (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMonthlyBoldedDate(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">A data a ser exibido em negrito.</param>
+        <summary>Adiciona um dia em que é exibido em negrito no calendário do mês mensalmente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar o <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método posteriormente para atualizar a exibição.  
+  
+ Para adicionar várias datas em uma única atribuição, você pode atribuir uma matriz de <xref:System.DateTime> objetos para o <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnuallyBoldedDates">
+      <MemberSignature Language="C#" Value="public DateTime[] AnnuallyBoldedDates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime[] AnnuallyBoldedDates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a matriz de objetos <see cref="T:System.DateTime" /> que determina quais dias do ano são exibidos em negrito.</summary>
+        <value>Uma matriz de objetos de <see cref="T:System.DateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando essa propriedade, você pode atribuir uma matriz de datas em negrito anuais. Quando você atribui uma matriz de datas, as datas existentes primeiro são desmarcadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo do controle.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor da tela de fundo do controle. O padrão é o valor da propriedade <see cref="P:System.Windows.Forms.Control.DefaultBackColor" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Control.BackColor%2A> propriedade não dá suporte a cores transparentes, a menos que o `SupportsTransparentBackColor` valor <xref:System.Windows.Forms.ControlStyles?displayProperty=nameWithType> é definido como `true`.  
+  
+ O <xref:System.Windows.Forms.Control.BackColor%2A> propriedade é uma propriedade de ambiente. Uma propriedade de ambiente é uma propriedade de controle que, se não for definido, será recuperado do controle pai. Por exemplo, um <xref:System.Windows.Forms.Button> terão o mesmo <xref:System.Windows.Forms.Control.BackColor%2A> como seu pai <xref:System.Windows.Forms.Form> por padrão. Para obter mais informações sobre propriedades de ambiente, consulte o <xref:System.Windows.Forms.AmbientProperties> classe ou o <xref:System.Windows.Forms.Control> visão geral da classe.  
+  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.Control.BackColor%2A> e <xref:System.Windows.Forms.Control.ForeColor%2A> dos controles para as cores padrão do sistema. O código de forma recursiva chama a mesmo se o controle tiver os controles filho. Este exemplo de código requer que você tenha um <xref:System.Windows.Forms.Form> com controle de pelo menos um filho; no entanto, um contêiner filho de controle, como um <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox>, com seu próprio filho controle seria melhor demonstrar a recursão.  
+  
+ [!code-cpp[Windows.Forms.Control Properties#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CPP/controlproperties.cpp#1)]
+ [!code-csharp[Windows.Forms.Control Properties#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CS/controlproperties.cs#1)]
+ [!code-vb[Windows.Forms.Control Properties#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control Properties/VB/controlproperties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir o <see cref="P:System.Windows.Forms.Control.BackColor" /> propriedade em uma classe derivada, use a classe base <see cref="P:System.Windows.Forms.Control.BackColor" /> propriedade para estender a implementação base. Caso contrário, você deve fornecer todos os a implementação. Você não precisa substituir ambos os <see langword="get" /> e <see langword="set" /> acessadores do <see cref="P:System.Windows.Forms.Control.BackColor" /> propriedade; você pode substituir apenas um, se necessário.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem de plano de fundo para o<see cref="T:System.Windows.Forms.MonthCalendar" /></summary>
+        <value>O <see cref="T:System.Drawing.Image" /> que é a imagem de tela de fundo do controle <see cref="T:System.Windows.Forms.MonthCalendar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.MonthCalendar.BackgroundImage" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o layout para o <see cref="P:System.Windows.Forms.MonthCalendar.BackgroundImage" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImageLayout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.MonthCalendar.BackgroundImageLayout" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoldedDates">
+      <MemberSignature Language="C#" Value="public DateTime[] BoldedDates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime[] BoldedDates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.BoldedDates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a matriz de objetos <see cref="T:System.DateTime" /> que determina quais datas não recorrentes são exibidas em negrito.</summary>
+        <value>A matriz de datas em negrito.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando essa propriedade, você pode atribuir uma matriz de datas em negrito. Quando você atribui uma matriz de datas, as datas existentes primeiro são desmarcadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarDimensions">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size CalendarDimensions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size CalendarDimensions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.CalendarDimensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de colunas e linhas de meses exibidas.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> com o número de colunas e linhas a serem usadas para exibir o calendário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente um ano de calendário é exibido em um momento e o número máximo de meses que podem ser exibidos é 12. As combinações válidas de colunas e linhas tornam o produto máximo de 12; valores maiores que 12, a exibição é modificada de forma mais adequada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica no controle <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar> conjuntos de controles de <xref:System.Windows.Forms.ControlStyles.StandardClick> bit de sinalizador para `false`, portanto, o <xref:System.Windows.Forms.MonthCalendar> não gerará o <xref:System.Windows.Forms.MonthCalendar.Click> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandle">
+      <MemberSignature Language="C#" Value="protected override void CreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.CreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.CreateHandle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.CreateParams" /> para criar um <see cref="T:System.Windows.Forms.MonthCalendar" /> controle.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.CreateParams" /> com as informações para criar um <see cref="T:System.Windows.Forms.MonthCalendar" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar.CreateParams%2A> propriedade é chamada quando uma janela é criada. Classes de herança pode substituir essa propriedade para adicionar funcionalidade extra, mas primeiro você deve chamar `base.getCreateParams()` para certificar-se de que o controle continua a funcionar corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DateChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DateRangeEventHandler DateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DateRangeEventHandler DateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.DateChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DateRangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a data selecionada no <see cref="T:System.Windows.Forms.MonthCalendar" /> é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar.DateChanged> evento ocorrer durante qualquer seleção de data, por mouse, teclado ou código. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> é semelhante, mas ela ocorre somente no final de uma seleção de data feita usando o mouse.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.SelectionRange>, define seu <xref:System.Windows.Forms.SelectionRange.Start%2A> e <xref:System.Windows.Forms.SelectionRange.End%2A> propriedades e atribui o <xref:System.Windows.Forms.SelectionRange> para o <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> propriedade o <xref:System.Windows.Forms.MonthCalendar> controle. Quando o <xref:System.Windows.Forms.MonthCalendar.DateChanged> é gerado, o <xref:System.Windows.Forms.SelectionRange.Start%2A> e <xref:System.Windows.Forms.SelectionRange.End%2A> valores de propriedade são exibidos nas caixas de texto. Este exemplo requer que você tenha um <xref:System.Windows.Forms.Form> com dois <xref:System.Windows.Forms.TextBox> controles, uma <xref:System.Windows.Forms.Button>e um <xref:System.Windows.Forms.MonthCalendar> controle.  
+  
+ [!code-cpp[System.Windows.Forms.SelectionRange Members#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SelectionRange Members/CPP/selectionrangeobj.cpp#1)]
+ [!code-csharp[System.Windows.Forms.SelectionRange Members#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SelectionRange Members/CS/selectionrangeobj.cs#1)]
+ [!code-vb[System.Windows.Forms.SelectionRange Members#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SelectionRange Members/VB/selectionrangeobj.vb#1)]  
+  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DateSelected">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DateRangeEventHandler DateSelected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DateRangeEventHandler DateSelected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.DateSelected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DateRangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário faz uma seleção de data explícita usando o mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é semelhante do <xref:System.Windows.Forms.MonthCalendar.DateChanged> evento, mas ele ocorre no final de uma seleção de data feita usando o mouse. O <xref:System.Windows.Forms.MonthCalendar.DateChanged> evento ocorrer durante qualquer seleção de data, por mouse, teclado ou código.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultImeMode">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode DefaultImeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode DefaultImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.DefaultImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o editor de método de entrada para o <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+        <value>Conforme implementado para este objeto, sempre <see cref="F:System.Windows.Forms.ImeMode.Disable" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMargin">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Padding DefaultMargin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding DefaultMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.DefaultMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão de configurações de margem de <see cref="T:System.Windows.Forms.MonthCalendar" /> controle.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Padding" /> estrutura com um tamanho de preenchimento de 9 pixels, para todas as bordas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do calendário.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> especificando a altura e largura, em pixels, do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar.DefaultSize%2A> propriedade inclui a área necessária para exibir o "hoje:" data na parte inferior do calendário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefWndProc">
+      <MemberSignature Language="C#" Value="protected override void DefWndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DefWndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.DefWndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> do Windows a ser processado.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.DefWndProc(System.Windows.Forms.Message@)" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Windows.Forms.MonthCalendar> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleBuffered">
+      <MemberSignature Language="C#" Value="protected override bool DoubleBuffered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DoubleBuffered" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.DoubleBuffered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se este o controle deve redesenhar sua superfície usando um buffer secundário.</summary>
+        <value>
+          <see langword="true" />Se o controle deve usar um buffer secundário redesenhar; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.MonthCalendar.DoubleBuffered%2A> propriedade não tem nenhum efeito na aparência do <xref:System.Windows.Forms.MonthCalendar> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica duas vezes no controle <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar> conjuntos de controles de <xref:System.Windows.Forms.ControlStyles.StandardClick> bit de sinalizador para `false`, portanto, o <xref:System.Windows.Forms.MonthCalendar> não gerará o <xref:System.Windows.Forms.MonthCalendar.DoubleClick> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstDayOfWeek">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Day FirstDayOfWeek { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Day FirstDayOfWeek" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.FirstDayOfWeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Day</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o primeiro dia da semana, conforme exibido no calendário do mês.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.Day" />. O padrão é <see cref="F:System.Windows.Forms.Day.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um do <see cref="T:System.Windows.Forms.Day" /> membros de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano do controle.</summary>
+        <value>O primeiro plano <see cref="T:System.Drawing.Color" /> do controle. O padrão é o valor da propriedade <see cref="P:System.Windows.Forms.Control.DefaultForeColor" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Control.ForeColor%2A> propriedade é uma propriedade de ambiente. Uma propriedade de ambiente é uma propriedade de controle que, se não for definido, será recuperado do controle pai. Por exemplo, um <xref:System.Windows.Forms.Button> terão o mesmo <xref:System.Windows.Forms.Control.BackColor%2A> como seu pai <xref:System.Windows.Forms.Form> por padrão. Para obter mais informações sobre propriedades de ambiente, consulte o <xref:System.Windows.Forms.AmbientProperties> classe ou o <xref:System.Windows.Forms.Control> visão geral da classe.  
+  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.Control.BackColor%2A> e <xref:System.Windows.Forms.Control.ForeColor%2A> dos controles para as cores padrão do sistema. O código de forma recursiva chama a mesmo se o controle tiver os controles filho. Este exemplo de código requer que você tenha um <xref:System.Windows.Forms.Form> com controle de pelo menos um filho; no entanto, um contêiner filho de controle, como um <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox>, com seu próprio filho controle seria melhor demonstrar a recursão.  
+  
+ [!code-cpp[Windows.Forms.Control Properties#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CPP/controlproperties.cpp#1)]
+ [!code-csharp[Windows.Forms.Control Properties#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CS/controlproperties.cs#1)]
+ [!code-vb[Windows.Forms.Control Properties#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control Properties/VB/controlproperties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir o <see cref="P:System.Windows.Forms.Control.ForeColor" /> propriedade em uma classe derivada, use a classe base <see cref="P:System.Windows.Forms.Control.ForeColor" /> propriedade para estender a implementação base. Caso contrário, você deve fornecer todos os a implementação. Você não precisa substituir ambos os <see langword="get" /> e <see langword="set" /> acessadores do <see cref="P:System.Windows.Forms.Control.ForeColor" /> propriedade; você pode substituir apenas um, se necessário.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDisplayRange">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.SelectionRange GetDisplayRange (bool visible);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.SelectionRange GetDisplayRange(bool visible) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.GetDisplayRange(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SelectionRange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visible" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="visible">
+          <see langword="true" />para recuperar apenas as datas que são totalmente contidas no exibido meses. Caso contrário, <see langword="false" />.</param>
+        <summary>Recupera as informações de data que representa os limites inferior e superior de datas exibidas do controle.</summary>
+        <returns>As datas de início e término do calendário exibido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar.GetDisplayRange%2A> método retorna um <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> que contém as datas de início e de término exibidas no modo de exibição atual do controle. Você pode modificar o intervalo retornado com base no valor especificado para o `visible` parâmetro. Especificando `false`, você pode recuperar todas as datas exibidas no controle; especificando `true` recupera apenas as datas que fazem parte de meses totalmente exibidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MonthCalendar.HitTestInfo HitTest (System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.MonthCalendar/HitTestInfo HitTest(valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.HitTest(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitTestInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Um <see cref="T:System.Drawing.Point" /> que contém o <see cref="P:System.Drawing.Point.X" /> e <see cref="P:System.Drawing.Point.Y" /> testado coordenadas do ponto seja atingido.</param>
+        <summary>Retorna um objeto com informações sobre a parte de um mês controle de calendário é um local especificado por um <see cref="T:System.Drawing.Point" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.MonthCalendar.HitTestInfo" /> que contém informações sobre o ponto especificado no <see cref="T:System.Windows.Forms.MonthCalendar" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MonthCalendar.HitTestInfo HitTest (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.MonthCalendar/HitTestInfo HitTest(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.HitTest(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitTestInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">O <see cref="P:System.Drawing.Point.X" /> testado coordenada do ponto seja atingido.</param>
+        <param name="y">O <see cref="P:System.Drawing.Point.Y" /> testado coordenada do ponto seja atingido.</param>
+        <summary>Retorna um <see cref="T:System.Windows.Forms.MonthCalendar.HitTestInfo" /> com informações sobre a parte de um mês o controle de calendário é em uma especificado coordenadas x e y-.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.MonthCalendar.HitTestInfo" /> que contém informações sobre o ponto especificado no <see cref="T:System.Windows.Forms.MonthCalendar" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo do Editor de método de entrada (IME) com suporte deste controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImeMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.MonthCalendar.ImeMode" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInputKey">
+      <MemberSignature Language="C#" Value="protected override bool IsInputKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsInputKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.IsInputKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Um dos valores de chaves.</param>
+        <summary>Determina se a chave especificada é uma chave de entrada regular ou uma chave especial que exige o pré-processamento.</summary>
+        <returns>
+          <see langword="true" /> se a chave especificada for uma chave de entrada regular; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDate">
+      <MemberSignature Language="C#" Value="public DateTime MaxDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MaxDate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.MaxDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a data máxima permitida.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa a data permitida máximo. O padrão é 31/12/9998.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor é menor que <see cref="P:System.Windows.Forms.MonthCalendar.MinDate" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSelectionCount">
+      <MemberSignature Language="C#" Value="public int MaxSelectionCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxSelectionCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.MaxSelectionCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(7)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de dias que podem ser selecionados em um controle de calendário mensal.</summary>
+        <value>O número máximo de dias que podem ser selecionados. O padrão é 7.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade não afeta o intervalo de seleção atual.  
+  
+ É importante lembrar que o <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedade representa o número de dias da seleção, não a diferença entre <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>. Por exemplo, se <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> é 7 (o padrão), <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> podem ser separadas não mais de seis dias.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor é menor que 1.  
+  
+ -ou-  
+  
+ O <see cref="P:System.Windows.Forms.MonthCalendar.MaxSelectionCount" /> não pode ser definido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MinDate">
+      <MemberSignature Language="C#" Value="public DateTime MinDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MinDate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.MinDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a data mínima permitida.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa a data mínima de permitido. O padrão é 01/01/1753.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O conjunto de data for maior que o <see cref="P:System.Windows.Forms.MonthCalendar.MaxDate" />.  
+  
+ -ou-  
+  
+ O conjunto de data é anterior a 01/01/1753.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MonthlyBoldedDates">
+      <MemberSignature Language="C#" Value="public DateTime[] MonthlyBoldedDates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime[] MonthlyBoldedDates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a matriz de <see cref="T:System.DateTime" /> objetos que determinam quais dias mensais como negrito.</summary>
+        <value>Uma matriz de objetos de <see cref="T:System.DateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando essa propriedade, você atribuir uma matriz de datas em negrito mensais. Quando você atribui uma matriz de datas, as datas preexistentes são desmarcadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.MouseClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica no controle <see cref="T:System.Windows.Forms.MonthCalendar" /> com o mouse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica duas vezes no controle <see cref="T:System.Windows.Forms.MonthCalendar" /> com o mouse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBackColorChanged">
+      <MemberSignature Language="C#" Value="protected override void OnBackColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBackColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.OnBackColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.BackColorChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDateChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDateChanged (System.Windows.Forms.DateRangeEventArgs drevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDateChanged(class System.Windows.Forms.DateRangeEventArgs drevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.OnDateChanged(System.Windows.Forms.DateRangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drevent" Type="System.Windows.Forms.DateRangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="drevent">Um <see cref="T:System.Windows.Forms.DateRangeEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.MonthCalendar.DateChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.MonthCalendar.OnDateChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MonthCalendar.OnDateChanged(System.Windows.Forms.DateRangeEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MonthCalendar.OnDateChanged(System.Windows.Forms.DateRangeEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDateSelected">
+      <MemberSignature Language="C#" Value="protected virtual void OnDateSelected (System.Windows.Forms.DateRangeEventArgs drevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDateSelected(class System.Windows.Forms.DateRangeEventArgs drevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.OnDateSelected(System.Windows.Forms.DateRangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drevent" Type="System.Windows.Forms.DateRangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="drevent">Um <see cref="T:System.Windows.Forms.DateRangeEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.MonthCalendar.DateSelected" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.MonthCalendar.OnDateSelected%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MonthCalendar.OnDateSelected(System.Windows.Forms.DateRangeEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MonthCalendar.OnDateSelected(System.Windows.Forms.DateRangeEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.FontChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar.OnFontChanged%2A> método redimensiona o controle com base no tamanho da fonte de novo. Isso pode causar o calendário a ser sobrepostos outros controles no formulário, se os problemas potenciais de dimensionamento não foram levados em conta.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.MonthCalendar.OnFontChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MonthCalendar.OnFontChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MonthCalendar.OnFontChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnForeColorChanged">
+      <MemberSignature Language="C#" Value="protected override void OnForeColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnForeColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.OnForeColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.ForeColorChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HandleCreated" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleDestroyed">
+      <MemberSignature Language="C#" Value="protected override void OnHandleDestroyed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleDestroyed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.OnHandleDestroyed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HandleDestroyed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.MonthCalendar.OnHandleDestroyed%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MonthCalendar.OnHandleDestroyed(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MonthCalendar.OnHandleDestroyed(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnRightToLeftLayoutChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRightToLeftLayoutChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.OnRightToLeftLayoutChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.MonthCalendar.RightToLeftLayoutChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.MonthCalendar.OnRightToLeftLayoutChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MonthCalendar.OnRightToLeftLayoutChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MonthCalendar.OnRightToLeftLayoutChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o espaço entre as bordas de um <see cref="T:System.Windows.Forms.MonthCalendar" /> controle e seu conteúdo.</summary>
+        <value>
+          <see cref="F:System.Windows.Forms.Padding.Empty" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.MonthCalendar.Padding%2A> propriedade não terá efeito na aparência do <xref:System.Windows.Forms.MonthCalendar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.MonthCalendar.Padding" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ Exemplo  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.Paint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PaintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é redesenhado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar> conjuntos de controles de <xref:System.Windows.Forms.ControlStyles.UserPaint> bit de sinalizador para `false`, portanto, o <xref:System.Windows.Forms.MonthCalendar> não gerará o <xref:System.Windows.Forms.MonthCalendar.Paint> evento. Para fornecer uma aparência personalizada para o <xref:System.Windows.Forms.MonthCalendar> controle, você deve substituir o <xref:System.Windows.Forms.Control.OnPrint%2A> método, chamar a implementação base de <xref:System.Windows.Forms.Control.OnPrint%2A>e, em seguida, executar pintura personalizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllAnnuallyBoldedDates">
+      <MemberSignature Language="C#" Value="public void RemoveAllAnnuallyBoldedDates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAllAnnuallyBoldedDates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as datas em negrito anualmente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método limpa todas as datas do <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> matriz. Para remover uma única data das datas em negrito, use o <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A> método.  
+  
+ Você deve chamar o <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método para garantir que a exibição é atualizada para refletir a remoção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllBoldedDates">
+      <MemberSignature Language="C#" Value="public void RemoveAllBoldedDates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAllBoldedDates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as datas em negrito não recorrentes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método limpa o <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> matriz. Para remover uma única data das datas em negrito, use o <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A> método.  
+  
+ Você deve chamar o <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método para garantir que a exibição é atualizada para refletir a remoção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A> método.  
+  
+ [!code-cpp[MonthCalendar#4](~/samples/snippets/cpp/VS_Snippets_Winforms/MonthCalendar/CPP/mc.cpp#4)]
+ [!code-csharp[MonthCalendar#4](~/samples/snippets/csharp/VS_Snippets_Winforms/MonthCalendar/CS/mc.cs#4)]
+ [!code-vb[MonthCalendar#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MonthCalendar/VB/mc.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAllMonthlyBoldedDates">
+      <MemberSignature Language="C#" Value="public void RemoveAllMonthlyBoldedDates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAllMonthlyBoldedDates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as datas em negrito mensais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método limpa o <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> matriz. Para remover uma única data das datas em negrito, use o <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> método.  
+  
+ Você deve chamar o <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método para garantir que a exibição é atualizada para refletir a remoção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAnnuallyBoldedDate">
+      <MemberSignature Language="C#" Value="public void RemoveAnnuallyBoldedDate (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAnnuallyBoldedDate(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">A data para remover da lista de data.</param>
+        <summary>Remove a data especificada na lista de datas em negrito anualmente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a data especificada ocorrer mais de uma vez na lista Data, apenas a primeira data é removida. Ao comparar datas, apenas o dia e mês são usados. Você deve chamar o <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método para garantir que a exibição é atualizada para refletir a remoção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveBoldedDate">
+      <MemberSignature Language="C#" Value="public void RemoveBoldedDate (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveBoldedDate(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.RemoveBoldedDate(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">A data para remover da lista de data.</param>
+        <summary>Remove a data especificada na lista de datas em negrito não recorrentes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a data especificada ocorrer mais de uma vez na lista Data, apenas a primeira data é removida. Você deve chamar o <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método para garantir que a exibição é atualizada para refletir a remoção.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A> método para remover uma data especificada na lista de datas em negrito. Este exemplo requer que um <xref:System.Windows.Forms.MonthCalendar> controle, chamado `monthCalendar1`, foi adicionado a um <xref:System.Windows.Forms.Form> e que esse método é colocado dentro do formulário e chamado dele.  
+  
+ [!code-cpp[MonthCalendar#3](~/samples/snippets/cpp/VS_Snippets_Winforms/MonthCalendar/CPP/mc.cpp#3)]
+ [!code-csharp[MonthCalendar#3](~/samples/snippets/csharp/VS_Snippets_Winforms/MonthCalendar/CS/mc.cs#3)]
+ [!code-vb[MonthCalendar#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MonthCalendar/VB/mc.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMonthlyBoldedDate">
+      <MemberSignature Language="C#" Value="public void RemoveMonthlyBoldedDate (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveMonthlyBoldedDate(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">A data para remover da lista de data.</param>
+        <summary>Remove a data especificada na lista de datas em negrito mensais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a data especificada ocorrer mais de uma vez na lista Data, apenas a primeira data é removida. Ao comparar datas, apenas o dia e mês são usados. Você deve chamar <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> para garantir que a exibição é atualizada para refletir a remoção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RescaleConstantsForDpi">
+      <MemberSignature Language="C#" Value="protected override void RescaleConstantsForDpi (int deviceDpiOld, int deviceDpiNew);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RescaleConstantsForDpi(int32 deviceDpiOld, int32 deviceDpiNew) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.RescaleConstantsForDpi(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceDpiOld" Type="System.Int32" />
+        <Parameter Name="deviceDpiNew" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="deviceDpiOld">O valor de DPI antes da alteração.</param>
+        <param name="deviceDpiNew">O valor de DPI após a alteração.</param>
+        <summary>Fornece constantes para redimensionamento de controle quando ocorre uma alteração de DPI.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayout">
+      <MemberSignature Language="C#" Value="public virtual bool RightToLeftLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RightToLeftLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.RightToLeftLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle é apresentado da direita para esquerda.</summary>
+        <value>
+          <see langword="true" />Se o controle é apresentado da direita para a esquerda. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MonthCalendar.RightToLeftLayout%2A> propriedade é útil para aplicativos internacionais, onde o idioma é escrito da direita para esquerda. Quando o <xref:System.Windows.Forms.Control.RightToLeft%2A> e <xref:System.Windows.Forms.MonthCalendar.RightToLeftLayout%2A> propriedades estiverem `true`,  
+  
+ O espelhamento será ativado para o formulário e texto e o posicionamento do controle será da direita para esquerda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.RightToLeftLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.MonthCalendar.RightToLeftLayout" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.MonthCalendar.RightToLeftLayoutChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.MonthCalendar> chamado `MonthCalendar1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.MonthCalendar.RightToLeftLayoutChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#504](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#504)]
+ [!code-vb[System.Windows.Forms.EventExamples#504](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#504)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollChange">
+      <MemberSignature Language="C#" Value="public int ScrollChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScrollChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.ScrollChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a taxa de rolagem de um controle de calendário mensal.</summary>
+        <value>Um número positivo que representa a taxa atual de rolagem em número de meses movidos. O padrão é o número de meses exibido atualmente. O máximo é 20.000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A taxa de rolagem é o número de meses que o controle move sua exibição quando o usuário clica em uma seta de rolagem. Se esse valor for 0, o número de meses é redefinido para o padrão, que é o número de meses exibido no controle. O valor máximo é 20.000.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que 0.  
+  
+ -ou-  
+  
+ O valor é maior que 20.000.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionEnd">
+      <MemberSignature Language="C#" Value="public DateTime SelectionEnd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SelectionEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.SelectionEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a data de término do intervalo de datas selecionado.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que indica a última data no intervalo de seleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir o valor da <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedade para uma data anterior ao valor atual do <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> propriedade <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> é automaticamente definido como <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>.  
+  
+ Se você definir uma data <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> que faz com que a seleção exceder o número de dias especificado pelo <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedade, o valor de <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> é ajustado; <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> automaticamente conjunto para que o número de dias selecionado é igual a <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>representa o número de dias da seleção, não a diferença entre <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>. Por exemplo, se <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> é 7 (o padrão), em seguida, <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> podem ser separadas não mais de seis dias.  
+  
+> [!NOTE]
+>  Definindo o <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> para um <xref:System.Windows.Forms.MonthCalendar> controle com estilos visuais habilitados resultará no intervalo de seleção de pintura não corretamente no controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedades. Para executar o exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle chamado `MonthCalendar1`e chamar o `ShowAWeeksVacationOneMonthFromToday` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendarSelection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendarSelection/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendarSelection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendarSelection/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendarSelection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendarSelection/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de data é menor do que o <see cref="P:System.Windows.Forms.MonthCalendar.MinDate" /> valor.  
+  
+ -ou-  
+  
+ O valor da data é maior que o valor de <see cref="P:System.Windows.Forms.MonthCalendar.MaxDate" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionRange">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.SelectionRange SelectionRange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.SelectionRange SelectionRange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.SelectionRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SelectionRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de datas selecionado para um controle do calendário do mês.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.SelectionRange" /> com as datas de início e término do intervalo selecionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade é funcionalmente equivalente a usar o <xref:System.Windows.Forms.MonthCalendar.SetSelectionRange%2A> método. Você pode definir as datas de início e término separadamente, configuração de <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> ou <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedades. Você não pode alterar as datas de início e término, definindo o <xref:System.Windows.Forms.SelectionRange.Start%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.SelectionRange.End%2A?displayProperty=nameWithType> valores de propriedade do <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> propriedade. Você deve usar <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A>, <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>, ou <xref:System.Windows.Forms.MonthCalendar.SetSelectionRange%2A>.  
+  
+ Se o <xref:System.Windows.Forms.SelectionRange.Start%2A> valor da propriedade o <xref:System.Windows.Forms.SelectionRange> é maior do que seu <xref:System.Windows.Forms.SelectionRange.End%2A> valor de propriedade, as datas são trocadas; o <xref:System.Windows.Forms.SelectionRange.End%2A> valor da propriedade torna-se a data de início, e <xref:System.Windows.Forms.SelectionRange.Start%2A> valor da propriedade torna-se a data de término.  
+  
+> [!NOTE]
+>  Rolar a exibição do calendário com os botões de navegação quando um intervalo está selecionado pode causar resultados inesperados (por exemplo, a data não é preservado intervalo). Se você tiver um único mês exibido com um intervalo de 01/04/2001 para 10/04/2001, o calendário para março de rolagem altera o intervalo selecionado da seguinte forma: 01/03/2001 para 10/03/2001. Se você tiver vários meses, exibidos como março e abril com um intervalo selecionado de 01/04/2001 para 10/04/2001, rolar o calendário para janeiro e fevereiro altera o intervalo selecionado da seguinte forma: 01/01/2001 para 10/01/2001.  
+  
+> [!NOTE]
+>  Definindo o <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> para um <xref:System.Windows.Forms.MonthCalendar> controle com estilos visuais habilitados resultará no intervalo de seleção de pintura não corretamente no controle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="P:System.Windows.Forms.SelectionRange.Start" /> valor atribuída <see cref="T:System.Windows.Forms.SelectionRange" /> é menor do que a data mínima permitida para um controle de calendário mensal.  
+  
+ -ou-  
+  
+ O valor <see cref="P:System.Windows.Forms.SelectionRange.Start" /> do <see cref="T:System.Windows.Forms.SelectionRange" /> atribuído é maior que a data máxima permitida para um controle de calendário mensal.  
+  
+ -ou-  
+  
+ O <see cref="P:System.Windows.Forms.SelectionRange.End" /> valor atribuída <see cref="T:System.Windows.Forms.SelectionRange" /> é menor do que a data mínima permitida para um controle de calendário mensal.  
+  
+ -ou-  
+  
+ O valor <see cref="P:System.Windows.Forms.SelectionRange.End" /> do <see cref="T:System.Windows.Forms.SelectionRange" /> atribuído é maior que a data máxima permitida para um controle de calendário mensal.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStart">
+      <MemberSignature Language="C#" Value="public DateTime SelectionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SelectionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.SelectionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a data de início do intervalo de datas selecionado.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que indica a primeira data no intervalo de seleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir o valor da <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> propriedade em uma data posterior ao valor atual do <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedade <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> é automaticamente definido como <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A>.  
+  
+ Se você definir uma data <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> que faz com que a seleção exceder o número de dias especificado pelo <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedade, o valor de <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> é ajustado; <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> automaticamente conjunto para que o número de dias selecionado é igual a <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>representa o número de dias da seleção, não a diferença entre <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>. Por exemplo, se <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> é 7 (o padrão), em seguida, <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> podem ser separadas não mais de seis dias.  
+  
+> [!NOTE]
+>  Definindo o <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> para um <xref:System.Windows.Forms.MonthCalendar> controle com estilos visuais habilitados resultará no intervalo de seleção de pintura não corretamente no controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedades. Para executar o exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle chamado `MonthCalendar1`e chamar o `ShowAWeeksVacationOneMonthFromToday` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendarSelection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendarSelection/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendarSelection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendarSelection/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendarSelection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendarSelection/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de data é menor que <see cref="P:System.Windows.Forms.MonthCalendar.MinDate" />.  
+  
+ -ou-  
+  
+ O valor da data é maior que <see cref="P:System.Windows.Forms.MonthCalendar.MaxDate" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsCore">
+      <MemberSignature Language="C#" Value="protected override void SetBoundsCore (int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetBoundsCore(int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="x">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Left" /> do controle.</param>
+        <param name="y">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Right" /> do controle.</param>
+        <param name="width">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Width" /> do controle.</param>
+        <param name="height">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Height" /> do controle.</param>
+        <param name="specified">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.BoundsSpecified" />.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCalendarDimensions">
+      <MemberSignature Language="C#" Value="public void SetCalendarDimensions (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCalendarDimensions(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.SetCalendarDimensions(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">O número de colunas.</param>
+        <param name="y">O número de linhas.</param>
+        <summary>Define o número de colunas e linhas de meses para exibir.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número máximo de meses que você pode exibir é 12, restringido a um ano. O produto do `x` e `y` parâmetros devem ser 12 ou menos. Para obter valores de `x` e `y` que têm um produto de mais de 12, o maior do `x` e `y` valores serão reduzidos iterativamente até que o produto é 12 ou menos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="x" />ou <paramref name="y" /> é menor que 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDate">
+      <MemberSignature Language="C#" Value="public void SetDate (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDate(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.SetDate(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">A data a ser selecionada.</param>
+        <summary>Define uma data como a data selecionada atualmente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define o <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedades à data especificada. Esse método é funcional equivalente a definir o intervalo de seleção para um único dia, por meio de <xref:System.Windows.Forms.MonthCalendar.SetSelectionRange%2A> método ou o <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor do que a data mínima de permitido.  
+  
+ -ou-  
+  
+ O valor é maior que a data máxima permitida.  
+  
+ Essa exceção apenas será gerada se <see cref="P:System.Windows.Forms.MonthCalendar.MinDate" /> ou <see cref="P:System.Windows.Forms.MonthCalendar.MaxDate" /> for definido explicitamente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSelectionRange">
+      <MemberSignature Language="C#" Value="public void SetSelectionRange (DateTime date1, DateTime date2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSelectionRange(valuetype System.DateTime date1, valuetype System.DateTime date2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.SetSelectionRange(System.DateTime,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date1" Type="System.DateTime" />
+        <Parameter Name="date2" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date1">A data de início do intervalo de seleção.</param>
+        <param name="date2">A data de término do intervalo de seleção.</param>
+        <summary>Define as datas selecionadas em um controle de calendário mensal com o intervalo de datas especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando esse método é funcionalmente equivalente à configuração de <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> propriedade. Você pode definir as datas de início e término separadamente, configuração de <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> ou <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedade.  
+  
+ Se você definir o `date1` parâmetro maior do que o `date2` parâmetro, ambas as datas são definidas para o `date1` valor.  
+  
+> [!NOTE]
+>  Rolar a exibição do calendário com os botões de navegação quando um intervalo está selecionado pode causar resultados inesperados (por exemplo, a data não é preservado intervalo). Se você tiver um único mês exibido com um intervalo de 01/04/2001 para 10/04/2001, rolar o calendário volta altera o intervalo selecionado da seguinte forma: 01/03/2001 para 10/03/2001. Se você tiver vários meses, exibidos como março e abril com um intervalo selecionado de 01/04/2001 para 10/04/2001, rolar o calendário para janeiro e fevereiro altera o intervalo selecionado da seguinte forma: 01/01/2001 para 10/01/2001.  
+  
+> [!NOTE]
+>  Definindo o <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> para um <xref:System.Windows.Forms.MonthCalendar> controle com estilos visuais habilitados resultará no intervalo de seleção de pintura não corretamente no controle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="date1" />é menor do que a data mínima permitida para um controle de calendário mensal.  
+  
+ -ou-  
+  
+ <paramref name="date1" />é maior que a data máxima permitida para um controle de calendário mensal.  
+  
+ -ou-  
+  
+ <paramref name="date2" />é menor do que a data mínima permitida para um controle de calendário mensal.  
+  
+ -ou-  
+  
+ <paramref name="date2" />é maior que a data máxima permitida para um controle de calendário mensal.  
+  
+ Essa exceção apenas será gerada se <see cref="P:System.Windows.Forms.MonthCalendar.MinDate" /> ou <see cref="P:System.Windows.Forms.MonthCalendar.MaxDate" /> for definido explicitamente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowToday">
+      <MemberSignature Language="C#" Value="public bool ShowToday { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowToday" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.ShowToday" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a data representada pela propriedade <see cref="P:System.Windows.Forms.MonthCalendar.TodayDate" /> é exibida na parte inferior do controle.</summary>
+        <value>
+          <see langword="true" /> se a data de hoje for exibida; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A data é exibida no formato especificado pelas configurações do sistema para o formato de data abreviada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowTodayCircle">
+      <MemberSignature Language="C#" Value="public bool ShowTodayCircle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowTodayCircle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.ShowTodayCircle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a data de hoje é identificada com um círculo ou um quadrado.</summary>
+        <value>
+          <see langword="true" />Se hoje for identificado com um círculo ou um quadrado; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> é `true`e estilos visuais estão habilitados e tem suporte no computador que executa o aplicativo, a data de hoje será incluída em um quadrado, caso contrário, a data de hoje será circulada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowWeekNumbers">
+      <MemberSignature Language="C#" Value="public bool ShowWeekNumbers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowWeekNumbers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.ShowWeekNumbers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle de calendário mensal exibe os números de semana (1-52) à esquerda de cada linha de dias.</summary>
+        <value>
+          <see langword="true" />Se forem exibidos os números de semana; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleMonthSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size SingleMonthSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size SingleMonthSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.SingleMonthSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho mínimo para exibir um mês do calendário.</summary>
+        <value>O tamanho, em pixels, necessário para exibir totalmente um mês no calendário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações de tamanho são apresentadas na forma do <xref:System.Drawing.Size.Width%2A> e <xref:System.Drawing.Size.Height%2A> membros, que representa a largura e altura mínimas necessárias para exibir um mês no controle. O requisito mínimo de tamanho de janela para um controle de calendário mensal depende da fonte selecionada no momento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">As dimensões não podem ser recuperadas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do controle <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+        <value>O <see cref="T:System.Drawing.Size" /> do controle <see cref="T:System.Windows.Forms.MonthCalendar" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto para exibir o <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+        <value>
+          <see langword="Null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MonthCalendar.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.MonthCalendar.Text" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleBackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color TitleBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color TitleBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.TitleBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a cor da tela de fundo da área de título do calendário.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" />. O padrão é a cor do sistema para legendas de ativas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cor da fonte do texto dias da semana depende do <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> propriedade. Definindo o <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> igual a <xref:System.Windows.Forms.Control.BackColor%2A> para a tela principal área do calendário faz com que o texto de dias da semana ilegível.  
+  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor não é um <see cref="T:System.Drawing.Color" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color TitleForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color TitleForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.TitleForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a cor de primeiro plano da área do título do calendário.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" />. O padrão é a cor do sistema para o texto de legenda ativa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor não é um <see cref="T:System.Drawing.Color" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TodayDate">
+      <MemberSignature Language="C#" Value="public DateTime TodayDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TodayDate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.TodayDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor usado pelo <see cref="T:System.Windows.Forms.MonthCalendar" /> como data de hoje.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa a data de hoje. O valor padrão é a data atual do sistema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Windows.Forms.MonthCalendar.TodayDate%2A> propriedade retorna a data atual do sistema e o <xref:System.Windows.Forms.MonthCalendar.TodayDateSet%2A> é de propriedade `false`. Definindo o <xref:System.Windows.Forms.MonthCalendar.TodayDate%2A> conjuntos de propriedades a <xref:System.Windows.Forms.MonthCalendar.TodayDateSet%2A> propriedade `true` e, desse ponto, o valor retornado pelo <xref:System.Windows.Forms.MonthCalendar.TodayDate%2A> propriedade é um usuário configura.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A>, <xref:System.Windows.Forms.MonthCalendar.TodayDate%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> propriedades. Para executar o exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle chamado `MonthCalendar1`e chamar o `ShowAWeeksVacationOneMonthFromToday` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendarSelection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendarSelection/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendarSelection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendarSelection/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendarSelection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendarSelection/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor do que a data mínima de permitido.  
+  
+ -ou-  
+  
+ O valor é maior que a data máxima permitida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TodayDateSet">
+      <MemberSignature Language="C#" Value="public bool TodayDateSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TodayDateSet" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.TodayDateSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Windows.Forms.MonthCalendar.TodayDate" /> propriedade foi definida explicitamente.</summary>
+        <value>
+          <see langword="true" />Se o valor para o <see cref="P:System.Windows.Forms.MonthCalendar.TodayDate" /> propriedade foi explicitamente definido; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o controle <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.MonthCalendar" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres inclui o tipo e a cadeia de caracteres retornada pelo <xref:System.Windows.Forms.SelectionRange.ToString%2A> método o <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrailingForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color TrailingForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color TrailingForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MonthCalendar.TrailingForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a cor de dias nos meses que não são totalmente exibidos no controle.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" />. O padrão é <see cref="P:System.Drawing.Color.Gray" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o calendário é exibido, algumas datas anteriores e alguns siga os meses são totalmente exibidos. Usando o <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedade, você pode modificar a cor do texto para essas datas.  
+  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo mostra a configuração de <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades para personalizar a aparência do controle de calendário. Outras propriedades, como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas aparecem em negrito. O exemplo também define o <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propriedades para alterar o formato de calendário. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor não é um <see cref="T:System.Drawing.Color" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateBoldedDates">
+      <MemberSignature Language="C#" Value="public void UpdateBoldedDates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateBoldedDates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.UpdateBoldedDates" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Repinta as datas em negrito para refletir as datas definidas nas listas de datas em negrito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método para refletir as alterações feitas em <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A>, ou <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> propriedades, ou diretamente através da modificação de elementos da matriz, usando os métodos de adicionar ou remover fornecidas modificar a data de lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MonthCalendar.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> do Windows a ser processado.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.WndProc(System.Windows.Forms.Message@)" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

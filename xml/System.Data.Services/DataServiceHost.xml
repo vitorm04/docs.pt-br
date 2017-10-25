@@ -1,0 +1,61 @@
+<Type Name="DataServiceHost" FullName="System.Data.Services.DataServiceHost">
+  <TypeSignature Language="C#" Value="public class DataServiceHost : System.ServiceModel.Web.WebServiceHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataServiceHost extends System.ServiceModel.Web.WebServiceHost" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.DataServiceHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Web.WebServiceHost</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O WCF Data Services classe derivada de <see cref="T:System.ServiceModel.Web.WebServiceHost" /> usado para instanciar os serviços de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]não são entidades de servidor autônomo. Em vez disso, o serviço é um componente hospedado em um ambiente, como o Windows Communication Foundation (WCF) que oferece recursos de rede de servidor principal. Especificamente, um serviço não vincular e escutar em um soquete de rede para solicitações de entrada para os pontos de entrada do REST Representational State Transfer (). Os identificadores do host direcionam interações com a rede e armazenamento em cache, escalabilidade e módulos de autenticação.  
+  
+ [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]define uma interface genérica de hospedagem <xref:System.Data.Services.IDataServiceHost> que abstrai a sua implementação de um host específico. Isso permite que [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] para executar em um intervalo de ambientes de hospedagem. Para obter mais informações, consulte [hospeda o serviço de dados](~/docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).  
+  
+ ]]></format>
+    </remarks>
+    <altCompliant cref="None ." />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataServiceHost (Type serviceType, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type serviceType, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.DataServiceHost.#ctor(System.Type,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Identifica o [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] para o host.</param>
+        <param name="baseAddresses">O URI do host.</param>
+        <summary>Cria uma instância <see cref="T:System.Data.Services.DataServiceHost" /> para [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]define uma interface genérica de hospedagem <xref:System.Data.Services.IDataServiceHost> que abstrai a sua implementação de um host específico. Isso permite que [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)] para executar em um intervalo de ambientes de hospedagem. Esta interface não deve ser confundida com <xref:System.Data.Services.DataServiceHost>, que trata em vez disso, o registro e a ativação do serviço. Um padrão <xref:System.Data.Services.IDataServiceHost> é usado neste caso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

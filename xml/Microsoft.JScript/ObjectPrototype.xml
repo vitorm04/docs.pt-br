@@ -1,0 +1,217 @@
+<Type Name="ObjectPrototype" FullName="Microsoft.JScript.ObjectPrototype">
+  <TypeSignature Language="C#" Value="public class ObjectPrototype : Microsoft.JScript.JSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectPrototype extends Microsoft.JScript.JSObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ObjectPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.JSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades e métodos estáticos <see cref="T:Microsoft.JScript.JSObject" /> objetos. Todos os métodos dessa classe são chamados pela passagem de uma referência ao objeto que está solicitando acesso ao método. Essa classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.ObjectConstructor constructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.JScript.ObjectConstructor constructor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ObjectPrototype.constructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ObjectConstructor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a um objeto com base no protótipo que está usando esse protótipo.</summary>
+        <value>Uma referência a um objeto de protótipo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="hasOwnProperty">
+      <MemberSignature Language="C#" Value="public static bool hasOwnProperty (object thisob, object name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool hasOwnProperty(object thisob, object name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ObjectPrototype.hasOwnProperty(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Object_hasOwnProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="name" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <param name="name">A propriedade a ser pesquisado.</param>
+        <summary>Determina se o objeto especificado contém a propriedade especificada.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="name" /> é uma propriedade de <paramref name="thisob" /> e tiver sido definida; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="isPrototypeOf">
+      <MemberSignature Language="C#" Value="public static bool isPrototypeOf (object thisob, object ob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool isPrototypeOf(object thisob, object ob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ObjectPrototype.isPrototypeOf(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Object_isPrototypeOf)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="ob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <param name="ob">O objeto que tem o tipo desejado.</param>
+        <summary>Determina se o primeiro objeto especificado pode ser instanciado como o tipo do segundo objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="ob" /> na hierarquia de herança de <paramref name="thisob" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="propertyIsEnumerable">
+      <MemberSignature Language="C#" Value="public static bool propertyIsEnumerable (object thisob, object name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool propertyIsEnumerable(object thisob, object name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ObjectPrototype.propertyIsEnumerable(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Object_propertyIsEnumerable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="name" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <param name="name">A propriedade a ser testada.</param>
+        <summary>Determina se a propriedade especificada do objeto especificado é enumerável.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="name" /> é uma propriedade enumerável; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toLocaleString">
+      <MemberSignature Language="C#" Value="public static string toLocaleString (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toLocaleString(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ObjectPrototype.toLocaleString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Object_toLocaleString)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Cria uma representação de cadeia de caracteres do objeto especificado usando o <see cref="T:Microsoft.JScript.Convert" /> classe.</summary>
+        <returns>Uma representação de cadeia de caracteres de <paramref name="thisob" /> que é criado o <see cref="T:Microsoft.JScript.Convert" /> classe.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public static string toString (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toString(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ObjectPrototype.toString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Object_toString)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Cria uma representação de cadeia de caracteres do objeto especificado.</summary>
+        <returns>O nome da classe do objeto, se ele tiver um definido; Caso contrário, o <see cref="P:System.Reflection.MemberInfo.Name" /> do <see cref="T:System.Type" /> do objeto.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="valueOf">
+      <MemberSignature Language="C#" Value="public static object valueOf (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object valueOf(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ObjectPrototype.valueOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Object_valueOf)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Retorna o objeto especificado.</summary>
+        <returns>
+          <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

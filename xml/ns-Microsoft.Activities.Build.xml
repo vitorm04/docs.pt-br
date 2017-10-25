@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Activities.Build">
+  <Docs>
+    <summary>Tarefas de compilação de classes relacionadas ao fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

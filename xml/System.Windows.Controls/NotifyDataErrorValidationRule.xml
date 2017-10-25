@@ -1,0 +1,69 @@
+<Type Name="NotifyDataErrorValidationRule" FullName="System.Windows.Controls.NotifyDataErrorValidationRule">
+  <TypeSignature Language="C#" Value="public sealed class NotifyDataErrorValidationRule : System.Windows.Controls.ValidationRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NotifyDataErrorValidationRule extends System.Windows.Controls.ValidationRule" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.NotifyDataErrorValidationRule" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ValidationRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma regra que verifica se há erros gerados por uma fonte de dados que implementa o <see cref="T:System.ComponentModel.INotifyDataErrorInfo" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] modelo de associação de dados permite que você associe <xref:System.Windows.Data.Binding.ValidationRules%2A> com um <xref:System.Windows.Data.Binding> ou <xref:System.Windows.Data.BindingGroup> objeto. O <xref:System.Windows.Controls.NotifyDataErrorValidationRule> classe é uma regra interna que verifica para exceções geradas durante as atualizações da propriedade de fonte de associação. Você pode fornecer lógica personalizada para especificar como o mecanismo de associação lida com essas exceções usando um <xref:System.Windows.Data.UpdateSourceExceptionFilterCallback>. Para obter mais informações, consulte <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>.  
+  
+ Uma sintaxe alternativa à configuração o <xref:System.Windows.Controls.NotifyDataErrorValidationRule> explicitamente é definir o <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> propriedade `true` em seu <xref:System.Windows.Data.Binding>, <xref:System.Windows.Data.MultiBinding>, ou <xref:System.Windows.Data.BindingGroup> objeto. Por padrão, o valor de <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> é `true`, portanto, você não precisa usar explicitamente um <xref:System.Windows.Controls.NotifyDataErrorValidationRule>.  
+  
+ Você pode criar uma regra personalizada, criando uma classe que deriva de <xref:System.Windows.Controls.ValidationRule>. Para obter mais informações e uma discussão detalhada da validação de dados, consulte [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyDataErrorValidationRule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.NotifyDataErrorValidationRule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Windows.Controls.NotifyDataErrorValidationRule" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override System.Windows.Controls.ValidationResult Validate (object value, System.Globalization.CultureInfo cultureInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Controls.ValidationResult Validate(object value, class System.Globalization.CultureInfo cultureInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.NotifyDataErrorValidationRule.Validate(System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor (de destino da associação) para verificar.</param>
+        <param name="cultureInfo">A cultura a ser usada nesta regra.</param>
+        <summary>Executa verificações de validação em um valor.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Controls.ValidationResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,17 @@
+<Namespace Name="System.AddIn.Contract">
+  <Docs>
+    <summary>O <see cref="N:System.AddIn.Contract" /> namespace contém interfaces e estruturas que fornecem a base para a comunicação entre os componentes que são atualizadas de forma independente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Contract?displayProperty=nameWithType> namespace define um conjunto de interfaces e estruturas que podem ser usadas por independentemente atualizadas componentes, como um aplicativo e um suplemento para se comunicar. Componentes podem usar as interfaces e estruturas no <xref:System.AddIn.Contract?displayProperty=nameWithType> namespace para se comunicar em processo ou limites de domínio de aplicativo, ou para se comunicar com outros componentes no mesmo processo ou domínio de aplicativo.  
+  
+ Interfaces de <xref:System.AddIn.Contract?displayProperty=nameWithType> namespace também são chamados de contratos. Todos os contratos derivam o <xref:System.AddIn.Contract.IContract> interface. A finalidade que <xref:System.AddIn.Contract.IContract> serve para componentes criados usando o .NET Framework é semelhante à finalidade que o `IUnknown` serve de interface para os componentes criados usando COM. Para determinar se um objeto que implementa um contrato específico, os componentes usam o <xref:System.AddIn.Contract.IContract.QueryContract%2A> método.  
+  
+ O <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> e <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> namespaces contêm contratos adicionais que complementam o <xref:System.AddIn.Contract?displayProperty=nameWithType> namespace. O <xref:System.AddIn.Contract.Automation?displayProperty=nameWithType> namespace contém os contratos que componentes usam para acessar informações de tipo e chamar membros de tipo. O <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> namespace contém os contratos que definem coleções de <xref:System.AddIn.Contract.IContract> e <xref:System.AddIn.Contract.RemoteArgument> objetos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

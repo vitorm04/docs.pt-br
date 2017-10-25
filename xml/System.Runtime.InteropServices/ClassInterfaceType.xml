@@ -1,0 +1,159 @@
+<Type Name="ClassInterfaceType" FullName="System.Runtime.InteropServices.ClassInterfaceType">
+  <TypeSignature Language="C#" Value="public enum ClassInterfaceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ClassInterfaceType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ClassInterfaceType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica o tipo de interface de classe que é gerado para uma classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada em conjunto com o <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atributo.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como aplicar o <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> para um tipo de configuração de <xref:System.Runtime.InteropServices.ClassInterfaceType>. Classes definidas dessa maneira podem ser usados em COM. não gerenciado  
+  
+ [!code-cpp[ClassInterfaceType#1](~/samples/snippets/cpp/VS_Snippets_CLR/ClassInterfaceType/cpp/ClassInterfaceType.cpp#1)]
+ [!code-csharp[ClassInterfaceType#1](~/samples/snippets/csharp/VS_Snippets_CLR/ClassInterfaceType/CS/ClassInterfaceType.cs#1)]
+ [!code-vb[ClassInterfaceType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ClassInterfaceType/VB/ClassInterfaceType.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoDispatch">
+      <MemberSignature Language="C#" Value="AutoDispatch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ClassInterfaceType AutoDispatch = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ClassInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a classe só dá suporte à associação tardia para clientes COM. Um <see langword="dispinterface" /> para a classe é exposta automaticamente para clientes COM na solicitação. A biblioteca de tipos produzidos por [Tlbexp.exe (exportador da biblioteca)](~/docs/framework/tools/tlbexp-exe-type-library-exporter.md) não contém informações de tipo para o <see langword="dispinterface" /> para evitar que os clientes de cache DISPIDs da interface. O <see langword="dispinterface" /> não apresenta os problemas de controle de versão descritos em <see cref="T:System.Runtime.InteropServices.ClassInterfaceAttribute" /> porque os clientes podem apenas fazer a associação tardia com a interface.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa é a configuração padrão para <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoDual">
+      <MemberSignature Language="C#" Value="AutoDual" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ClassInterfaceType AutoDual = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ClassInterfaceType.AutoDual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ClassInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que uma interface de classe dupla é automaticamente gerada para a classe e exposta a COM. Informações de tipo são produzidas para a interface de classe e publicadas na biblioteca de tipos. Usar <see langword="AutoDual" /> não é recomendável devido a restrições de controle de versão descritas em <see cref="T:System.Runtime.InteropServices.ClassInterfaceAttribute" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ClassInterfaceType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ClassInterfaceType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ClassInterfaceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que nenhuma interface de classe é gerada para a classe. Se nenhuma interface é implementado explicitamente, a classe somente pode fornecer acesso de associação tardia por meio de <see langword="IDispatch" /> interface. Essa é a configuração recomendada para <see cref="T:System.Runtime.InteropServices.ClassInterfaceAttribute" />. Usar <see langword="ClassInterfaceType.None" /> é a única maneira de expor a funcionalidade por meio de interfaces explicitamente implementadas pela classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [TlbExp.exe (exportador da biblioteca)](~/docs/framework/tools/tlbexp-exe-type-library-exporter.md) expõe a primeira interface pública, COM visível implementada pela classe como a interface padrão de coclass. Começando com o .NET Framework versão 2.0, você pode especificar a interface padrão exposto ao COM usando o <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute> atributo. Se a classe implementa interfaces não, a primeira interface pública, COM visível implementada por uma classe base torna-se a interface padrão (começando com a classe base derivada mais recentemente e trabalhando para trás). TlbExp.exe expõe `_Object` como interface padrão se nem a classe nem suas classes base implementam interfaces.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

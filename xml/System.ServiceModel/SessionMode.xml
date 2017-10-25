@@ -1,0 +1,115 @@
+<Type Name="SessionMode" FullName="System.ServiceModel.SessionMode">
+  <TypeSignature Language="C#" Value="public enum SessionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.SessionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os valores disponíveis para indicar o suporte às sessões confiáveis que um contrato requer ou dá suporte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.SessionMode> enumeração com o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> propriedade exigem, permitir ou proibir associações para usar sessões entre pontos de extremidade que se conectar a ou aceitar o contrato de serviço. Uma sessão é uma maneira de correlacionar um conjunto de mensagens trocadas entre dois ou mais pontos de extremidade. Para obter mais informações sobre as sessões, consulte [sessões usando](~/docs/framework/wcf/using-sessions.md).  
+  
+ Se o serviço oferece suporte a sessões, você pode usar o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> propriedade para especificar a relação entre instâncias de sua implementação do contrato de serviço e a sessão de canal.  
+  
+ Por exemplo, se o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> propriedade é definida como permitido e o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> está definida como <xref:System.ServiceModel.InstanceContextMode?displayProperty=nameWithType>, um cliente pode usar uma associação que dá suporte a sessões confiáveis para fazer chamadas repetidas para o mesmo objeto de serviço.  
+  
+ Como uma sessão é um conceito de nível de canal que usa o modelo de aplicativo, há uma interação entre o <xref:System.ServiceModel.SessionMode> enumeração em um contrato e o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> propriedade, que controla a associação entre canais e objetos de serviço específico.  
+  
+ A tabela a seguir mostra o resultado de um canal de entrada o suporte a sessões confiáveis ou não suportar sessões confiáveis a combinação dos valores de um serviço dada a <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> propriedade e o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> propriedade.  
+  
+|Valor InstanceContextMode|Necessária|Permitido|Não permitido|  
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|PerCall|-Um comportamento com o canal de sessão: uma sessão e <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para cada chamada.<br />-Comportamento com canal sem sessão: uma exceção será lançada.|-Um comportamento com o canal de sessão: uma sessão e <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para cada chamada.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para cada chamada.|-Um comportamento com o canal de sessão: uma exceção será lançada.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para cada chamada.|  
+|PerSession|-Um comportamento com o canal de sessão: uma sessão e <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> de cada canal.<br />-Comportamento com canal sem sessão: uma exceção será lançada.|-Um comportamento com o canal de sessão: uma sessão e <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> de cada canal.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para cada chamada.|-Um comportamento com o canal de sessão: uma exceção será lançada.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para cada chamada.|  
+|Simples|-Um comportamento com o canal de sessão: uma sessão e um <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para todas as chamadas.<br />-Comportamento com canal sem sessão: uma exceção será lançada.|-Um comportamento com o canal de sessão: uma sessão e <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para cada singleton criado ou para o singleton especificado pelo usuário.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para cada singleton criado ou para o singleton especificado pelo usuário.|-Um comportamento com o canal de sessão: uma exceção será lançada.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> para cada singleton criado ou para o singleton especificado pelo usuário.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> propriedade o <xref:System.ServiceModel.ServiceContractAttribute> para especificar que o `IMyService` contrato de serviço requer associações que dão suporte ao estado de sessão.  
+  
+ [!code-csharp[SCA.Session#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/services.cs#1)]
+ [!code-vb[SCA.Session#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.session/vb/services.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Allowed">
+      <MemberSignature Language="C#" Value="Allowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.SessionMode Allowed = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.SessionMode.Allowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.SessionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o contrato dá suporte a sessões, se a associação de entrada der suporte a elas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAllowed">
+      <MemberSignature Language="C#" Value="NotAllowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.SessionMode NotAllowed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.SessionMode.NotAllowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.SessionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o contrato nunca dá suporte a associações que iniciam sessões.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="Required" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.SessionMode Required = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.SessionMode.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.SessionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o contrato exige uma associação de sessão. Uma exceção será lançada se a associação não estiver configurada para dar suporte à sessão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

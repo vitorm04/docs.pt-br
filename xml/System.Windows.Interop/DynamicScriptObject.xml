@@ -1,0 +1,290 @@
+<Type Name="DynamicScriptObject" FullName="System.Windows.Interop.DynamicScriptObject">
+  <TypeSignature Language="C#" Value="public sealed class DynamicScriptObject : System.Dynamic.DynamicObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DynamicScriptObject extends System.Dynamic.DynamicObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.DynamicScriptObject" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Dynamic.DynamicObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite chamadas de um aplicativo de navegador XAML (XBAP) para a janela HTML que hospeda o aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias dessa classe são expostas por meio de <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> propriedade <xref:System.Windows.Interop.BrowserInteropHelper>.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.DynamicScriptObject.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Tenta converter o objeto de script em uma representação de cadeia de caracteres.</summary>
+        <returns>Uma representação de cadeia de caracteres do objeto de script, se o objeto pode ser convertido; Caso contrário, uma representação de cadeia de caracteres de método ou propriedade padrão do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o objeto de script não pode ser convertido em uma cadeia de caracteres, o <xref:System.Windows.Interop.DynamicScriptObject.ToString%2A> método retorna uma representação de cadeia de caracteres de padrão de propriedade ou método.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetIndex">
+      <MemberSignature Language="C#" Value="public override bool TryGetIndex (System.Dynamic.GetIndexBinder binder, object[] indexes, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryGetIndex(class System.Dynamic.GetIndexBinder binder, object[] indexes, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.DynamicScriptObject.TryGetIndex(System.Dynamic.GetIndexBinder,System.Object[],System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.GetIndexBinder" />
+        <Parameter Name="indexes" Type="System.Object[]" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">O associador fornecido pelo site de chamada.</param>
+        <param name="indexes">O índice a ser recuperado.</param>
+        <param name="result">O resultado do método.</param>
+        <summary>Obtém um valor indexado do objeto de script usando o primeiro valor de índice a <paramref name="indexes" /> coleção.</summary>
+        <returns>Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Interop.DynamicScriptObject.TryGetIndex%2A> método lançará uma exceção se uma tentativa de um acesso inválido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="binder" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="indexes" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O comprimento de <paramref name="indexes" /> não é igual a 1.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A primeira <paramref name="indexes" /> valor é <see langword="null" />.</exception>
+        <exception cref="T:System.MissingMemberException">O membro não existe.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetMember">
+      <MemberSignature Language="C#" Value="public override bool TryGetMember (System.Dynamic.GetMemberBinder binder, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryGetMember(class System.Dynamic.GetMemberBinder binder, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.DynamicScriptObject.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.GetMemberBinder" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">O associador fornecido pelo site de chamada.</param>
+        <param name="result">O resultado do método.</param>
+        <summary>Obtém um valor de membro de objeto de script.</summary>
+        <returns>Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Interop.DynamicScriptObject.TryGetMember%2A> método lançará uma exceção se uma tentativa de um acesso inválido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="binder" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.MissingMemberException">O membro não existe.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TryInvoke">
+      <MemberSignature Language="C#" Value="public override bool TryInvoke (System.Dynamic.InvokeBinder binder, object[] args, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryInvoke(class System.Dynamic.InvokeBinder binder, object[] args, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.DynamicScriptObject.TryInvoke(System.Dynamic.InvokeBinder,System.Object[],System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.InvokeBinder" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">O associador fornecido pelo site de chamada.</param>
+        <param name="args">Os argumentos para passar para o método padrão.</param>
+        <param name="result">O resultado do método.</param>
+        <summary>Chama o método de script padrão.</summary>
+        <returns>Sempre retornará <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Interop.DynamicScriptObject.TryInvoke%2A> método lançará uma exceção se o método não existe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="binder" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.MissingMethodException">O método não existe.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TryInvokeMember">
+      <MemberSignature Language="C#" Value="public override bool TryInvokeMember (System.Dynamic.InvokeMemberBinder binder, object[] args, out object result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryInvokeMember(class System.Dynamic.InvokeMemberBinder binder, object[] args, [out] object&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.DynamicScriptObject.TryInvokeMember(System.Dynamic.InvokeMemberBinder,System.Object[],System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.InvokeMemberBinder" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="result" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="binder">O associador fornecido pelo site de chamada.</param>
+        <param name="args">Os argumentos para passar para o método padrão.</param>
+        <param name="result">O resultado do método.</param>
+        <summary>Chama um método no objeto de script.</summary>
+        <returns>Sempre retornará <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Interop.DynamicScriptObject.TryInvokeMember%2A> método lançará uma exceção se uma tentativa de um acesso inválido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="binder" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.MissingMethodException">O método não existe.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrySetIndex">
+      <MemberSignature Language="C#" Value="public override bool TrySetIndex (System.Dynamic.SetIndexBinder binder, object[] indexes, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TrySetIndex(class System.Dynamic.SetIndexBinder binder, object[] indexes, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.DynamicScriptObject.TrySetIndex(System.Dynamic.SetIndexBinder,System.Object[],System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.SetIndexBinder" />
+        <Parameter Name="indexes" Type="System.Object[]" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="binder">O associador fornecido pelo site de chamada.</param>
+        <param name="indexes">O índice a ser recuperado.</param>
+        <param name="value">O resultado do método</param>
+        <summary>Define um membro do objeto de script usando o primeiro índice especificado no <paramref name="indexes" /> coleção.</summary>
+        <returns>Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Interop.DynamicScriptObject.TrySetIndex%2A> método lançará uma exceção se uma tentativa de um acesso inválido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="binder" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="indexes" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O comprimento de <paramref name="indexes" /> não é igual a 1.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A primeira <paramref name="indexes" /> valor é <see langword="null" />.</exception>
+        <exception cref="T:System.MissingMemberException">O membro não existe.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TrySetMember">
+      <MemberSignature Language="C#" Value="public override bool TrySetMember (System.Dynamic.SetMemberBinder binder, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TrySetMember(class System.Dynamic.SetMemberBinder binder, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.DynamicScriptObject.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binder" Type="System.Dynamic.SetMemberBinder" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="binder">O associador fornecido pelo site de chamada.</param>
+        <param name="value">O valor a ser definido para o membro.</param>
+        <summary>Define um membro no objeto de script para o valor especificado.</summary>
+        <returns>Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Interop.DynamicScriptObject.TrySetMember%2A> método lançará uma exceção se uma tentativa de um acesso inválido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="binder" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="indexes" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O comprimento de <paramref name="indexes" /> não é igual a 1.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A primeira <paramref name="indexes" /> valor é <see langword="null" />.</exception>
+        <exception cref="T:System.MissingMemberException">O membro não existe.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,240 @@
+<Type Name="UdpRetransmissionSettings" FullName="System.ServiceModel.Channels.UdpRetransmissionSettings">
+  <TypeSignature Language="C#" Value="public sealed class UdpRetransmissionSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UdpRetransmissionSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.UdpRetransmissionSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica as configurações de retransmissão de UDP.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpRetransmissionSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.UdpRetransmissionSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.UdpRetransmissionSettings" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpRetransmissionSettings (int maxUnicastRetransmitCount, int maxMulticastRetransmitCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 maxUnicastRetransmitCount, int32 maxMulticastRetransmitCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.UdpRetransmissionSettings.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="maxUnicastRetransmitCount" Type="System.Int32" />
+        <Parameter Name="maxMulticastRetransmitCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxUnicastRetransmitCount">O máximo unicast retransmitir contagem.</param>
+        <param name="maxMulticastRetransmitCount">A contagem máxima de retransmissão de multicast.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.UdpRetransmissionSettings" /> classe com unicast máximo especificado de retransmissão de contagem e máximo de retransmissão de multicast.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpRetransmissionSettings (int maxUnicastRetransmitCount, int maxMulticastRetransmitCount, TimeSpan delayLowerBound, TimeSpan delayUpperBound, TimeSpan maxDelayPerRetransmission);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 maxUnicastRetransmitCount, int32 maxMulticastRetransmitCount, valuetype System.TimeSpan delayLowerBound, valuetype System.TimeSpan delayUpperBound, valuetype System.TimeSpan maxDelayPerRetransmission) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.UdpRetransmissionSettings.#ctor(System.Int32,System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="maxUnicastRetransmitCount" Type="System.Int32" />
+        <Parameter Name="maxMulticastRetransmitCount" Type="System.Int32" />
+        <Parameter Name="delayLowerBound" Type="System.TimeSpan" />
+        <Parameter Name="delayUpperBound" Type="System.TimeSpan" />
+        <Parameter Name="maxDelayPerRetransmission" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="maxUnicastRetransmitCount">O máximo unicast retransmitir contagem.</param>
+        <param name="maxMulticastRetransmitCount">A contagem máxima de retransmissão de multicast.</param>
+        <param name="delayLowerBound">O atraso de limite inferior.</param>
+        <param name="delayUpperBound">O atraso de limite superior.</param>
+        <param name="maxDelayPerRetransmission">O atraso máximo por retransmissão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.UdpRetransmissionSettings" /> contagem e contagem máxima de retransmissão multicast, limite inferior de atraso, limite superior de atraso e o atraso máximo por retransmissão de retransmissão de classe com unicast máximo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelayLowerBound">
+      <MemberSignature Language="C#" Value="public TimeSpan DelayLowerBound { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DelayLowerBound" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.UdpRetransmissionSettings.DelayLowerBound" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o atraso do limite inferior para a configuração de retransmissão.</summary>
+        <value>O atraso do limite inferior para a configuração de retransmissão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelayUpperBound">
+      <MemberSignature Language="C#" Value="public TimeSpan DelayUpperBound { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DelayUpperBound" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.UdpRetransmissionSettings.DelayUpperBound" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o atraso do limite superior para a configuração de retransmissão.</summary>
+        <value>O atraso do limite superior para a configuração de retransmissão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDelayPerRetransmission">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxDelayPerRetransmission { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxDelayPerRetransmission" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.UdpRetransmissionSettings.MaxDelayPerRetransmission" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o atraso máximo por retransmissão para a configuração de retransmissão.</summary>
+        <value>O atraso máximo por retransmissão para a configuração de retransmissão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxMulticastRetransmitCount">
+      <MemberSignature Language="C#" Value="public int MaxMulticastRetransmitCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxMulticastRetransmitCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.UdpRetransmissionSettings.MaxMulticastRetransmitCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a contagem de máximo de retransmissões de multicast.</summary>
+        <value>A contagem de máximo de retransmissões de multicast.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxUnicastRetransmitCount">
+      <MemberSignature Language="C#" Value="public int MaxUnicastRetransmitCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxUnicastRetransmitCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.UdpRetransmissionSettings.MaxUnicastRetransmitCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a contagem de retransmissões de unicast máximo.</summary>
+        <value>A contagem de retransmissões de unicast máximo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeDelayLowerBound">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeDelayLowerBound ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeDelayLowerBound() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.UdpRetransmissionSettings.ShouldSerializeDelayLowerBound" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se as configurações de retransmissão UDP devem serializar o atraso de limite inferior.</summary>
+        <returns>
+          <see langword="True" />Se as configurações de retransmissão UDP devem serializar o atraso de limite inferior; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeDelayUpperBound">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeDelayUpperBound ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeDelayUpperBound() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.UdpRetransmissionSettings.ShouldSerializeDelayUpperBound" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se as configurações de retransmissão UDP devem serializar o atraso de limite superior.</summary>
+        <returns>
+          <see langword="True" />Se as configurações de retransmissão UDP devem serializar o atraso de limite superior; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMaxDelayPerRetransmission">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMaxDelayPerRetransmission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMaxDelayPerRetransmission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.UdpRetransmissionSettings.ShouldSerializeMaxDelayPerRetransmission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se as configurações de retransmissão UDP devem serializar o atraso máximo por retransmissão.</summary>
+        <returns>
+          <see langword="True" />Se as configurações de retransmissão UDP devem serializar o atraso máximo por retransmissão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,239 @@
+<Type Name="ActivityMarkupSerializer" FullName="System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer">
+  <TypeSignature Language="C#" Value="public class ActivityMarkupSerializer : System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityMarkupSerializer extends System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DefaultSerializationProvider(typeof(System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializationProvider))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece serviços de serialização extensible Application Markup Language (XAML) para um <see cref="T:System.Workflow.ComponentModel.Activity" /> em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer>fornece métodos que serializar objetos da classe de atividade em formato XAML e desserializar o conteúdo XAML em objetos da classe de atividade. Esses serviços são usados principalmente por designers de atividade para manter as classes na superfície de design de fluxo de trabalho.  
+  
+ Para obter mais informações sobre serialização, consulte [serialização](http://msdn.microsoft.com/library/4d1111c0-9447-4231-a997-96a2b74b3453).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityMarkupSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected override object CreateInstance (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateInstance(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.CreateInstance(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">O <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" /> para usar na criação de instância.</param>
+        <param name="type">O <see cref="T:System.Type" /> para criar.</param>
+        <summary>Cria uma instância especificada <see cref="T:System.Type" /> usando especificado <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />.</summary>
+        <returns>Uma referência a recém-criado <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndColumnProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty EndColumnProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty EndColumnProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.EndColumnProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O índice do último caractere na definição da atividade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLineProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty EndLineProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty EndLineProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.EndLineProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O índice da última linha na definição da atividade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAfterSerialize">
+      <MemberSignature Language="C#" Value="protected override void OnAfterSerialize (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAfterSerialize(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.OnAfterSerialize(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">O <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" /> que gerencia o processo de serialização.</param>
+        <param name="obj">O <see cref="T:System.Object" /> que foi serializado.</param>
+        <summary>Notifica o <see cref="T:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer" /> que tem um objeto apenas foi serializado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.OnAfterSerialize%2A>é chamado imediatamente após o <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Serialize%2A> método é executado e realiza o processamento de pós-serialização em `obj`, principalmente Formatar e recuar código e XAML extensible Application Markup Language () no arquivo. xoml.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeSerialize">
+      <MemberSignature Language="C#" Value="protected override void OnBeforeSerialize (System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBeforeSerialize(class System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager serializationManager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.OnBeforeSerialize(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">O <see cref="T:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializationManager" /> que gerencia o processo de serialização.</param>
+        <param name="obj">O <see cref="T:System.Object" /> a ser serializado.</param>
+        <summary>Notifica o <see cref="T:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer" /> que um objeto está prestes a ser serializado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.OnAfterSerialize%2A>é chamado imediatamente antes do <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer.Serialize%2A> o método é executado sobre a atividade especificada pelo `obj`. <xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.OnBeforeSerialize%2A>grava a extensible Application Markup Language (XAML) à marca de abertura para a atividade, incluindo todos os atributos exigidos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationManager" />, <paramref name="obj" />, ou <paramref name="writer" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="obj" /> não é do tipo <see cref="T:System.Workflow.ComponentModel.Activity" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartColumnProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty StartColumnProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty StartColumnProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.StartColumnProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O índice do primeiro caractere na definição da atividade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartLineProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty StartLineProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty StartLineProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer.StartLineProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O índice da primeira linha na definição da atividade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

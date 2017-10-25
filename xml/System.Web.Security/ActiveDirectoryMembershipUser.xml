@@ -1,0 +1,328 @@
+<Type Name="ActiveDirectoryMembershipUser" FullName="System.Web.Security.ActiveDirectoryMembershipUser">
+  <TypeSignature Language="C#" Value="public class ActiveDirectoryMembershipUser : System.Web.Security.MembershipUser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ActiveDirectoryMembershipUser extends System.Web.Security.MembershipUser" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.ActiveDirectoryMembershipUser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Security.MembershipUser</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Expõe e atualiza as informações de usuário associado armazenadas em um armazenamento de dados do Active Directory.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto é usado para representar um usuário da associação único no repositório de dados de associação do Active Directory. Ele exibe informações sobre o usuário de associação, como o endereço de email e fornece funcionalidade para o usuário de associação, como a capacidade de alterar ou redefinir sua senha.  
+  
+ Um <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto é retornado pelo provedor de associação do aplicativo sempre que o aplicativo está configurado para usar um repositório de dados do Active Directory. Em um aplicativo que pode ser configurado usar dados diferentes armazena ou em um aplicativo que usa vários repositórios de dados, você pode se referir à classe base, <xref:System.Web.Security.MembershipUser>. Porque o <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto não implementa o <xref:System.Web.Security.ActiveDirectoryMembershipUser.LastActivityDate%2A> e <xref:System.Web.Security.ActiveDirectoryMembershipUser.LastLoginDate%2A> propriedades, você deve estar preparado para lidar com o <xref:System.NotSupportedException> que é lançada quando esses membros são acessados em uma <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto.  
+  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser> classe implementa otimizações internas usadas pelo <xref:System.Web.Security.ActiveDirectoryMembershipProvider> classe para minimizar o número de atualizações de atributo que ocorrem ao chamar o <xref:System.Web.Security.ActiveDirectoryMembershipProvider.UpdateUser%2A> método. Também serializar o <xref:System.Security.Principal.SecurityIdentifier> representação (disponível no <xref:System.Web.Security.ActiveDirectoryMembershipUser.ProviderUserKey%2A> propriedade) para que uma <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto pode ser serializado e desserializado sem gerar exceções.  
+  
+ Um <xref:System.Web.Security.ActiveDirectoryMembershipUser> retornado pelo objeto de <xref:System.Web.Security.ActiveDirectoryMembershipProvider.GetUser%2A> e <xref:System.Web.Security.ActiveDirectoryMembershipProvider.CreateUser%2A> métodos ou como parte de um <xref:System.Web.Security.MembershipUserCollection> retornado pelo <xref:System.Web.Security.ActiveDirectoryMembershipProvider.GetAllUsers%2A>, <xref:System.Web.Security.ActiveDirectoryMembershipProvider.FindUsersByName%2A>, e <xref:System.Web.Security.ActiveDirectoryMembershipProvider.FindUsersByEmail%2A> métodos.  
+  
+ Um <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto é necessário para o <xref:System.Web.Security.ActiveDirectoryMembershipProvider.UpdateUser%2A> método quando você deseja atualizar as informações para um usuário de associação existente.  
+  
+ <xref:System.Web.Security.ActiveDirectoryMembershipUser>propriedades são mapeadas para atributos do Active Directory. A seguinte tabela lista o <xref:System.Web.Security.ActiveDirectoryMembershipUser> mapeamentos de atributo de propriedades e padrão.  
+  
+|Propriedade|Atributo de diretório padrão|Pode ser mapeado?|  
+|--------------|---------------------------------|--------------------|  
+|<xref:System.Web.Security.ActiveDirectoryMembershipUser.ProviderUserKey%2A>|`securityIdentifier`|Não|  
+|<xref:System.Web.Security.MembershipUser.UserName%2A>|`userPrincipalName`|Sim, mas deve ser userPrincipalName ou sAMAccountName|  
+|<xref:System.Web.Security.ActiveDirectoryMembershipUser.Comment%2A>|`comment`|Não|  
+|<xref:System.Web.Security.MembershipUser.CreationDate%2A>|`whenCreated`|Não|  
+|<xref:System.Web.Security.ActiveDirectoryMembershipUser.Email%2A>|`mail`|Sim, mas deve ser um atributo de valor único do tipo cadeia de caracteres Unicode.|  
+|<xref:System.Web.Security.ActiveDirectoryMembershipUser.LastActivityDate%2A>|N/D|Não há suportada por <xref:System.Web.Security.ActiveDirectoryMembershipProvider>.|  
+|<xref:System.Web.Security.ActiveDirectoryMembershipUser.LastLoginDate%2A>|N/D|Não há suportada por <xref:System.Web.Security.ActiveDirectoryMembershipProvider>.|  
+|<xref:System.Web.Security.MembershipUser.LastPasswordChangedDate%2A>|`pwdLastSet`|Não|  
+|<xref:System.Web.Security.MembershipUser.PasswordQuestion%2A>|Nenhum, mas deve ser mapeada para um atributo se usando perguntas e respostas segurança para redefinição de senha ou recuperação.|Sim, mas deve ser um atributo de valor único do tipo cadeia de caracteres Unicode.|  
+|<xref:System.Web.Security.ActiveDirectoryMembershipUser.IsApproved%2A>|`User-Account-Control`(AD)<br /><br /> `mDS-UserAccountDisabled`(ADAM)|Não|  
+|<xref:System.Web.Security.MembershipUser.IsLockedOut%2A>|calculado a partir `lockoutTime` e a duração do bloqueio de AD (anúncio no Windows 2000)<br /><br /> `msDS-User-Account-Control-Computed`(AD no Windows Server 2003)<br /><br /> `msDS-User-Account-Control-Computed`(ADAM)|Não|  
+|<xref:System.Web.Security.MembershipUser.LastLockoutDate%2A>|Se bloqueada devido a muitas tentativas de senha incorreta, o atributo de tempo de bloqueio é retornado.<br /><br /> Se bloqueada devido a resposta de senha incorreta muitas tentativas, o valor armazenado no atributo definido pelo `attributeMapFailedPasswordAnswerLockoutTime` será retornado.<br /><br /> Se bloqueada devido a uma senha incorreta e a senha incorreta muitas tentativas, será retornado o valor de data/hora mais recente.<br /><br /> Se a conta não está bloqueada, retorne 1/1/1753 para compatibilidade do SQL.|Não|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de propriedades sobre o <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto em uma página da Web que podem retornar informações de usuário de vários armazenamentos de dados de associação. Porque o <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto que dá suporte a <xref:System.Web.Security.MembershipUser> retornado pelo provedor de associação de objeto não implementa o <xref:System.Web.Security.ActiveDirectoryMembershipUser.LastActivityDate%2A> e <xref:System.Web.Security.ActiveDirectoryMembershipUser.LastLoginDate%2A> propriedades, o código primeiro verifica o tipo do objeto de usuário retornado da associação provedor antes de exibir o conteúdo dessas propriedades.  
+  
+ [!code-aspx-csharp[System.Web.Security.ActiveDirectoryMembershipUser#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.ActiveDirectoryMembershipUser/CS/admuClassExamplecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.ActiveDirectoryMembershipUser#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.ActiveDirectoryMembershipUser/VB/admuClassExamplevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ActiveDirectoryMembershipUser ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.ActiveDirectoryMembershipUser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Web.Security.ActiveDirectoryMembershipUser" /> objeto para uma classe que herda de <see cref="T:System.Web.Security.ActiveDirectoryMembershipUser" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser.%23ctor%2A> construtor não se destina a ser usado em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectoryMembershipUser (string providerName, string name, object providerUserKey, string email, string passwordQuestion, string comment, bool isApproved, bool isLockedOut, DateTime creationDate, DateTime lastLoginDate, DateTime lastActivityDate, DateTime lastPasswordChangedDate, DateTime lastLockoutDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerName, string name, object providerUserKey, string email, string passwordQuestion, string comment, bool isApproved, bool isLockedOut, valuetype System.DateTime creationDate, valuetype System.DateTime lastLoginDate, valuetype System.DateTime lastActivityDate, valuetype System.DateTime lastPasswordChangedDate, valuetype System.DateTime lastLockoutDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.ActiveDirectoryMembershipUser.#ctor(System.String,System.String,System.Object,System.String,System.String,System.String,System.Boolean,System.Boolean,System.DateTime,System.DateTime,System.DateTime,System.DateTime,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="providerUserKey" Type="System.Object" />
+        <Parameter Name="email" Type="System.String" />
+        <Parameter Name="passwordQuestion" Type="System.String" />
+        <Parameter Name="comment" Type="System.String" />
+        <Parameter Name="isApproved" Type="System.Boolean" />
+        <Parameter Name="isLockedOut" Type="System.Boolean" />
+        <Parameter Name="creationDate" Type="System.DateTime" />
+        <Parameter Name="lastLoginDate" Type="System.DateTime" />
+        <Parameter Name="lastActivityDate" Type="System.DateTime" />
+        <Parameter Name="lastPasswordChangedDate" Type="System.DateTime" />
+        <Parameter Name="lastLockoutDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">O <see cref="P:System.Web.Security.MembershipUser.ProviderName" /> do usuário da associação.</param>
+        <param name="name">O <see cref="P:System.Web.Security.MembershipUser.UserName" /> do usuário da associação.</param>
+        <param name="providerUserKey">O <see cref="P:System.Web.Security.ActiveDirectoryMembershipUser.ProviderUserKey" /> do usuário da associação.</param>
+        <param name="email">O <see cref="P:System.Web.Security.ActiveDirectoryMembershipUser.Email" /> endereço do usuário da associação.</param>
+        <param name="passwordQuestion">O <see cref="P:System.Web.Security.MembershipUser.PasswordQuestion" /> do usuário da associação.</param>
+        <param name="comment">O <see cref="P:System.Web.Security.ActiveDirectoryMembershipUser.Comment" /> do usuário da associação.</param>
+        <param name="isApproved">O <see cref="P:System.Web.Security.ActiveDirectoryMembershipUser.IsApproved" /> valor para o usuário associado.</param>
+        <param name="isLockedOut">O <see cref="P:System.Web.Security.MembershipUser.IsLockedOut" /> valor para o usuário associado.</param>
+        <param name="creationDate">O <see cref="P:System.Web.Security.MembershipUser.CreationDate" /> do usuário da associação.</param>
+        <param name="lastLoginDate">O <see cref="P:System.Web.Security.ActiveDirectoryMembershipUser.LastLoginDate" /> do usuário da associação. Este parâmetro não é usado.</param>
+        <param name="lastActivityDate">O <see cref="P:System.Web.Security.ActiveDirectoryMembershipUser.LastActivityDate" /> do usuário da associação. Este parâmetro não é usado.</param>
+        <param name="lastPasswordChangedDate">O <see cref="P:System.Web.Security.MembershipUser.LastPasswordChangedDate" /> do usuário da associação.</param>
+        <param name="lastLockoutDate">O <see cref="P:System.Web.Security.MembershipUser.LastLockoutDate" /> do usuário da associação.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.Security.ActiveDirectoryMembershipUser" /> classe com os valores de propriedade especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Criando um novo <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto não adiciona um novo objeto de usuário de associação para o repositório de dados de associação. Para adicionar um novo usuário associado ao repositório de associação de dados, use o <xref:System.Web.Security.ActiveDirectoryMembershipProvider.CreateUser%2A> método. Observe que o <xref:System.Web.Security.ActiveDirectoryMembershipProvider.CreateUser%2A> método retorna um <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto do usuário da associação adicionado ao repositório de dados.  
+  
+ <xref:System.Web.Security.ActiveDirectoryMembershipUser>objetos geralmente são construídos em código do aplicativo para uso com o <xref:System.Web.Security.ActiveDirectoryMembershipProvider.UpdateUser%2A> método, embora você também pode passar um <xref:System.Web.Security.ActiveDirectoryMembershipUser> objeto retornado do <xref:System.Web.Security.ActiveDirectoryMembershipProvider.CreateUser%2A>, <xref:System.Web.Security.ActiveDirectoryMembershipProvider.GetUser%2A>, <xref:System.Web.Security.ActiveDirectoryMembershipProvider.GetAllUsers%2A>, <xref:System.Web.Security.ActiveDirectoryMembershipProvider.FindUsersByName%2A>, ou <xref:System.Web.Security.ActiveDirectoryMembershipProvider.FindUsersByEmail%2A> método para o <xref:System.Web.Security.ActiveDirectoryMembershipProvider.UpdateUser%2A> método também.  
+  
+ <xref:System.Web.Security.ActiveDirectoryMembershipUser>objetos normalmente são construídos por implementações do provedor de associação para o <xref:System.Web.Security.ActiveDirectoryMembershipProvider.CreateUser%2A>, <xref:System.Web.Security.ActiveDirectoryMembershipProvider.GetUser%2A>, <xref:System.Web.Security.ActiveDirectoryMembershipProvider.GetAllUsers%2A>, <xref:System.Web.Security.ActiveDirectoryMembershipProvider.UpdateUser%2A>, <xref:System.Web.Security.ActiveDirectoryMembershipProvider.FindUsersByName%2A>, e <xref:System.Web.Security.ActiveDirectoryMembershipProvider.FindUsersByEmail%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="providerUserKey" /> não é um objeto <see cref="T:System.Security.Principal.SecurityIdentifier" />.  
+  
+ \- ou -  
+  
+ <paramref name="providerName" />é <see langword="null" /> e um provedor não está definido no arquivo de configuração do aplicativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="public override string Comment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.ActiveDirectoryMembershipUser.Comment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações específicas do aplicativo para o usuário associado.</summary>
+        <value>Informações específicas do aplicativo para o membro do Active Directory armazenado no <see langword="Comment" /> atributo de diretório.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser.Comment%2A> propriedade pode ser usada para armazenar informações personalizadas para um usuário de associação que é específica para um aplicativo. A quantidade de informações que podem ser armazenadas no `Comment` propriedade para um <xref:System.Web.Security.ActiveDirectoryMembershipUser> é definido pelo <xref:System.Web.Security.ActiveDirectoryMembershipProvider>.  
+  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser.Comment%2A> propriedade está mapeada para o `Comment` atributo do padrão do Active Directory. Essa propriedade não pode ser remapeada para outro atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Email">
+      <MemberSignature Language="C#" Value="public override string Email { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Email" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.ActiveDirectoryMembershipUser.Email" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço de email do usuário.</summary>
+        <value>O endereço de email do usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser.Email%2A> propriedade está mapeada para o `Mail` atributo de diretório. Essa propriedade pode ser remapeada no arquivo Web. config, definindo o `attributeMapUserName` atributo o [provedores de elemento para o perfil (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/9e998377-b07f-44c1-ad9b-20a60e83c18f) elemento para perfis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsApproved">
+      <MemberSignature Language="C#" Value="public override bool IsApproved { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsApproved" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.ActiveDirectoryMembershipUser.IsApproved" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário de associação pode ser autenticado.</summary>
+        <value>
+          <see langword="true" />Se o usuário pode ser autenticado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser> valor para um usuário de associação é verificado durante a chamada para <xref:System.Web.Security.ActiveDirectoryMembershipProvider.ValidateUser%2A> pelo <xref:System.Web.Security.ActiveDirectoryMembershipProvider>. Se o <xref:System.Web.Security.ActiveDirectoryMembershipUser.IsApproved%2A> propriedade retorna `false`, o <xref:System.Web.Security.ActiveDirectoryMembershipProvider.ValidateUser%2A> método retorna `false` mesmo se o nome de usuário fornecido e a senha estão corretos.  
+  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser.IsApproved%2A> propriedade está mapeada para um dos seguintes atributos do Active Directory.  
+  
+|||  
+|-|-|  
+|Active Directory|`User-Account-Control`|  
+|Modo de aplicativo do Active Directory|`msDS-UserAccountDisabled`|  
+  
+ Essa propriedade não pode ser remapeada para outro atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastActivityDate">
+      <MemberSignature Language="C#" Value="public override DateTime LastActivityDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastActivityDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.ActiveDirectoryMembershipUser.LastActivityDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> exceção em todos os casos</summary>
+        <value>Sempre gera um <see cref="T:System.NotSupportedException" /> exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser.LastActivityDate%2A> propriedade não é suportada pelo <xref:System.Web.Security.ActiveDirectoryMembershipUser> classe. Tentativa de obter ou definir o valor sempre fará um <xref:System.NotSupportedException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como determinar se o tipo subjacente de um usuário de associação é <xref:System.Web.Security.ActiveDirectoryMembershipUser>e para evitar que seja um <xref:System.NotSupportedException> para acessar o <xref:System.Web.Security.ActiveDirectoryMembershipUser.LastActivityDate%2A> propriedade. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Security.ActiveDirectoryMembershipUser> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.Security.ActiveDirectoryMembershipUser#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.ActiveDirectoryMembershipUser/CS/admuClassExamplecs.aspx#2)]
+ [!code-vb[System.Web.Security.ActiveDirectoryMembershipUser#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.ActiveDirectoryMembershipUser/VB/admuClassExamplevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">qualquer tentativa de obter ou definir o <see cref="P:System.Web.Security.ActiveDirectoryMembershipUser.LastActivityDate" /> propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LastLoginDate">
+      <MemberSignature Language="C#" Value="public override DateTime LastLoginDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastLoginDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.ActiveDirectoryMembershipUser.LastLoginDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> exceção em todos os casos.</summary>
+        <value>Sempre gera um <see cref="T:System.NotSupportedException" /> exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser.LastLoginDate%2A> propriedade não é suportada pelo <xref:System.Web.Security.ActiveDirectoryMembershipUser> classe. Tentativa de obter ou definir o valor sempre fará um <xref:System.NotSupportedException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como determinar se o tipo subjacente de um usuário de associação é <xref:System.Web.Security.ActiveDirectoryMembershipUser>e para evitar que seja um <xref:System.NotSupportedException> para acessar o <xref:System.Web.Security.ActiveDirectoryMembershipUser.LastLoginDate%2A> propriedade. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Security.ActiveDirectoryMembershipUser> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.Security.ActiveDirectoryMembershipUser#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.ActiveDirectoryMembershipUser/CS/admuClassExamplecs.aspx#2)]
+ [!code-vb[System.Web.Security.ActiveDirectoryMembershipUser#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.ActiveDirectoryMembershipUser/VB/admuClassExamplevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">qualquer tentativa de obter ou definir o <see cref="P:System.Web.Security.ActiveDirectoryMembershipUser.LastLoginDate" /> propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderUserKey">
+      <MemberSignature Language="C#" Value="public override object ProviderUserKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ProviderUserKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.ActiveDirectoryMembershipUser.ProviderUserKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de usuário do armazenamento de dados do Active Directory para o usuário associado.</summary>
+        <value>Armazenar o identificador do usuário de dados do Active Directory para o usuário associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.ActiveDirectoryMembershipUser.ProviderUserKey%2A> propriedade expõe o identificador da associação de fonte de dados genericamente digitada como um `object`. O <xref:System.Web.Security.ActiveDirectoryMembershipUser.ProviderUserKey%2A> classe pode ser convertida como um <xref:System.Security.Principal.SecurityIdentifier> objeto.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.Web.Security.ActiveDirectoryMembershipUser.ProviderUserKey%2A> propriedade no formato de linguagem de definição do descritor de segurança (SDDL), convertendo-o para um <xref:System.Security.Principal.SecurityIdentifier> objeto. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Security.ActiveDirectoryMembershipUser> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.Security.ActiveDirectoryMembershipUser#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.ActiveDirectoryMembershipUser/CS/admuClassExamplecs.aspx#3)]
+ [!code-vb[System.Web.Security.ActiveDirectoryMembershipUser#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.ActiveDirectoryMembershipUser/VB/admuClassExamplevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

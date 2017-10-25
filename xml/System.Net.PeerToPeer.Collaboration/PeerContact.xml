@@ -1,0 +1,1651 @@
+<Type Name="PeerContact" FullName="System.Net.PeerToPeer.Collaboration.PeerContact">
+  <TypeSignature Language="C#" Value="public class PeerContact : System.Net.PeerToPeer.Collaboration.Peer, IEquatable&lt;System.Net.PeerToPeer.Collaboration.PeerContact&gt;, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable PeerContact extends System.Net.PeerToPeer.Collaboration.Peer implements class System.IEquatable`1&lt;class System.Net.PeerToPeer.Collaboration.PeerContact&gt;, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerContact" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.PeerToPeer.Collaboration.Peer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Net.PeerToPeer.Collaboration.PeerContact&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um par para que um usuário obteve informações estendidas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um contato representa um par confiável. Um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> objeto deve ser criado para um par remoto ou <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> para um usuário colaborar com o par remoto quando está fora do escopo "Pessoas ao meu redor". Um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> objeto pode existir como um aplicativo em execução em um computador remoto ou o usuário de um computador remoto. Uma instância desta classe pode ser adicionada para o <xref:System.Net.PeerToPeer.Collaboration.ContactManager> que armazena as informações de contato de maneira persistente.  
+  
+ Um convite para o aplicativo de um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> é autenticada e criptografada.  A caixa de diálogo de interface do usuário para aceitar ou rejeitar o convite de um ponto de contato também indica que o emissor do convite é confiável.  
+  
+ Assinando um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> objeto significa um outro computador remoto na rede podem ver seus aplicativos registrados, objetos e informações de presença. Para assinar um <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, o chamador deve estar conectado à infraestrutura de colaboração ponto a ponto via <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn%2A> ou conectado via a interface do usuário do Windows.  Todas as outras operações não requerem entrar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PeerContact (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</param>
+        <param name="streamingContext">O destino de serialização associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</param>
+        <summary>Nenhum construtor público é definido para esta classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância do objeto pode ser obtida o <xref:System.Net.PeerToPeer.Collaboration.ContactManager.GetContact%2A> <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> ou <xref:System.Net.PeerToPeer.Collaboration.PeerContact.FromXml%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt; ApplicationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt; ApplicationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerContact.ApplicationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse evento é gerado sempre que um aplicativo associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> foi alterado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 Credentials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerContact.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o X509Certificate (chave pública) para o par identificado por esse <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância.</summary>
+        <value>O X509Certificate (chave pública) para o par identificado por esse <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância. O valor padrão dessa propriedade é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerContact.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que representa o nome de exibição de <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <value>
+          <see cref="T:System.String" />que representa o nome de exibição deste <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />. A menos que explicitamente especificado, o valor padrão para todas as propriedades é <see langword="null" /> para tipos de referência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nome de exibição pode ser usado para diferenciar os contatos em um <xref:System.Net.PeerToPeer.Collaboration.ContactManager> em casos onde um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> pode ter vários endereços de email, ou se houver vários pares com o mesmo nome de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="True" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados e, opcionalmente, libera os recursos gerenciados usados pelo <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> deixa uma sessão de colaboração, determinados objetos não são mais necessários.  Se este contato tinha foi colaborando com qualquer outra extremidade diretamente não registrada com o host de ponto a ponto, e espera que o host continuar a colaborar com eles, o host deve registrar esses pontos de extremidade em um aplicativo ou no seu <xref:System.Net.PeerToPeer.Collaboration.ContactManager> antes de descartar este <xref:System.Net.PeerToPeer.Collaboration.PeerContact> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailAddress">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.MailAddress EmailAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Mail.MailAddress EmailAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerContact.EmailAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.MailAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço de email associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <value>
+          <see cref="T:System.Net.Mail.MailAddress" />objeto que contém o endereço de email associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Net.Mail.MailAddress> objeto é usado para representar o endereço de email.  O gerente do contato permite vários endereços de email dentro de uma instância. O valor padrão dessa propriedade é `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Equals">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Determina se o <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" /> deste <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto é equivalente ao nome de outro objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna `true` se especificado <xref:System.Object> tem o mesmo <xref:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName%2A> como a instância atual, caso contrário `false`. Esse método também retorna `false` se os parâmetros passados são `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Net.PeerToPeer.Collaboration.PeerContact other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Net.PeerToPeer.Collaboration.PeerContact other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Equals(System.Net.PeerToPeer.Collaboration.PeerContact)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Net.PeerToPeer.Collaboration.PeerContact" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância para testar a igualdade.</param>
+        <summary>Compara o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância.</summary>
+        <returns>Retorna <see langword="true" /> se o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância fornecida tem correspondência de dados, mais <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalização não ocorre em cadeias de caracteres antes da comparação.  Todos os normalização deve foram concluída durante ou antes de criar o <xref:System.Net.PeerToPeer.Collaboration.PeerContact> objetos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Compara o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância para o objeto especificado.</param>
+        <summary>Compara o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância para o objeto especificado.</summary>
+        <returns>Retorna <see langword="true" /> se o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância fornecida tem correspondência de dados, mais <see langword="false" />. Esse método também retorna <see langword="false" /> se o parâmetro passado for <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Outros objetos que podem ser comparados com <xref:System.Net.PeerToPeer.Collaboration.PeerContact> objetos incluem nomes de host de ponto a ponto, nomes de ponto a ponto relativo, e nomes desencapsulado outros <xref:System.Net.PeerToPeer> objetos.  
+  
+ Normalização não ocorre em cadeias de caracteres antes da comparação.  Todos os normalização deve foram concluída durante ou antes de criar o <xref:System.Net.PeerToPeer.Collaboration.PeerContact> objetos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (object objA, object objB);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(object objA, object objB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Equals(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objA" Type="System.Object" />
+        <Parameter Name="objB" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objA">O primeiro <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> a ser comparado.</param>
+        <param name="objB">O segundo <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> a ser comparado.</param>
+        <summary>Determina se as instâncias <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> especificadas são consideradas iguais.</summary>
+        <returns>Retorna <see langword="true" /> se o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instâncias fornecidas têm correspondência de dados, mais <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso pode ser usado para determinar se um <xref:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName%2A> está em uso simultaneamente por dois computadores remotos diferentes.  
+  
+ Outros objetos que podem ser comparados com <xref:System.Net.PeerToPeer.Collaboration.PeerContact> objetos incluem nomes de host de ponto a ponto, nomes de ponto a ponto relativo, e nomes desencapsulado outros <xref:System.Net.PeerToPeer> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.Collaboration.PeerContact FromXml (string peerContactXml);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.PeerToPeer.Collaboration.PeerContact FromXml(string peerContactXml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.FromXml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContact</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerContactXml" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="peerContactXml">A codificação de XML usado para reconstruir o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</param>
+        <summary>Cria um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância com base em fornecidos dados XML.</summary>
+        <returns>Uma cadeia de caracteres que representa o modelo de objeto XML para codificar o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres para passar como o parâmetro deve ser obtido da <xref:System.Net.PeerToPeer.Collaboration.PeerContact.ToXml%2A>.  
+  
+ Essa classe é destinada para ser uma simples implementação de um modelo de objeto XML simples para uso dentro da infraestrutura de colaboração e não para uso como um modelo de objeto XML geral.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro não pode ser<see langword="null." /></exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Não foi possível concluir <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.FromXml(System.String)" /> operação  
+  
+-   Parâmetro não é válido <see cref="M:System.Net.PeerToPeer.Collaboration.PeerCollaborationPermission.FromXml(System.Security.SecurityElement)" /> objeto.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetApplications">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Recupera o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> objetos que foram registrados por par remoto no cache local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa funcionalidade é exposta somente no <xref:System.Net.PeerToPeer.Collaboration.PeerContact> classe.  Essa funcionalidade não é exposta em qualquer outro tipo de ponto a ponto por motivos de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetApplications">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetApplications ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetApplications() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetApplications" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplicationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> objetos que foram registrados por par remoto no cache local.</summary>
+        <returns>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" /> do cache local. Se não foi localizados para aplicativos associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />, uma coleção de tamanho zero (0) é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o par de chamada não está inscrito para o <xref:System.Net.PeerToPeer.Collaboration.PeerContact> associado especificado <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> o <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> método deve ser chamado antes de chamar esse método.  
+  
+ Enquanto o chamador não é necessário entrar para a infraestrutura de colaboração para esse método seja concluído com êxito, uma chamada bem-sucedida para <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> ou uma da <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> métodos devem ser concluídos quando o chamador foi conectado anteriormente.  
+  
+ Essa funcionalidade é exposta somente no <xref:System.Net.PeerToPeer.Collaboration.PeerContact> classe.  Essa funcionalidade não é exposta em qualquer outro tipo de ponto a ponto por motivos de segurança.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">-   O par de chamada não está inscrito para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.  
+  
+-   O par de chamada ainda não foi chamado o <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData" /> método.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Não foi possível concluir <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetApplications" /> operação.</exception>
+        <block subset="none" type="usage">
+          <para>Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplications">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetApplications (Guid applicationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetApplications(valuetype System.Guid applicationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetApplications(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplicationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="applicationId">O <see cref="T:System.Guid" /> do aplicativo de ponto a ponto a ser recuperado.</param>
+        <summary>Obtém a coleção de <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> objetos com especificado <see cref="T:System.Guid" /> do cache local.</summary>
+        <returns>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" /> do cache local. Se nenhum aplicativo encontrado com especificado <paramref name="applicationId" />, uma coleção de tamanho zero (0) é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o par de chamada não está inscrito para o <xref:System.Net.PeerToPeer.Collaboration.PeerContact> associado especificado <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> o <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> método deve ser chamado antes de chamar esse método.  
+  
+ Enquanto o chamador não é necessário entrar para a infraestrutura de colaboração para esse método seja concluído com êxito, uma chamada bem-sucedida para <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> ou uma da <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> métodos devem ser concluídos quando o chamador foi conectado anteriormente.  
+  
+ Essa funcionalidade é exposta somente no <xref:System.Net.PeerToPeer.Collaboration.PeerContact> classe.  Essa funcionalidade não é exposta em qualquer outro tipo de ponto a ponto por motivos de segurança.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">-   O par de chamada não está inscrito para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.  
+  
+-   O par de chamada ainda não foi chamado o <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData" /> método.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Não foi possível concluir <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetApplications" /> operação.</exception>
+        <block subset="none" type="usage">
+          <para>Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplications">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetApplications (System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetApplications(class System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetApplications(System.Net.PeerToPeer.Collaboration.PeerEndPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplicationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerEndPoint" Type="System.Net.PeerToPeer.Collaboration.PeerEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="peerEndPoint">Contém informações de ponto de extremidade associadas a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</param>
+        <summary>Obtém o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.</summary>
+        <returns>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> especificado. Se os aplicativos não estão associados a especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />, uma coleção de tamanho zero (0) é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o par de chamada não está inscrito para o <xref:System.Net.PeerToPeer.Collaboration.PeerContact> associado especificado <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> o <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> método deve ser chamado antes de chamar esse método.  
+  
+ Enquanto o chamador não é necessário entrar para a infraestrutura de colaboração para esse método seja concluído com êxito, uma chamada bem-sucedida para <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> ou uma da <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> métodos devem ser concluídos quando o chamador foi conectado anteriormente.  
+  
+ Essa funcionalidade é exposta somente no <xref:System.Net.PeerToPeer.Collaboration.PeerContact> classe.  Essa funcionalidade não é exposta em qualquer outro tipo de ponto a ponto por motivos de segurança.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">-   O par de chamada não está inscrito para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.  
+  
+-   O par de chamada ainda não foi chamado o <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData" /> método.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Não foi possível concluir <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetApplications" /> operação.</exception>
+        <block subset="none" type="usage">
+          <para>Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplications">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetApplications (System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, Guid applicationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerApplicationCollection GetApplications(class System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, valuetype System.Guid applicationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetApplications(System.Net.PeerToPeer.Collaboration.PeerEndPoint,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplicationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerEndPoint" Type="System.Net.PeerToPeer.Collaboration.PeerEndPoint" />
+        <Parameter Name="applicationId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="peerEndPoint">O ponto de extremidade associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" />.</param>
+        <param name="applicationId">Contém informações de aplicativo associadas a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</param>
+        <summary>Obtém o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.</summary>
+        <returns>A coleção de <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> objetos associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.  
+  
+ Se aplicativos identificados pela ID não foi localizados para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />, ou se a ID do ponto de extremidade é <see langword="null" /> ou inválido, uma coleção de tamanho zero (0) é retornada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o par de chamada não está inscrito para o <xref:System.Net.PeerToPeer.Collaboration.PeerContact> associado especificado <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> o <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> método deve ser chamado antes de chamar esse método.  
+  
+ Enquanto o chamador não é necessário entrar para a infraestrutura de colaboração para esse método seja concluído com êxito, uma chamada bem-sucedida para <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> ou uma da <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> métodos devem ser concluídos quando o chamador foi conectado anteriormente.  
+  
+ Essa funcionalidade é exposta somente no <xref:System.Net.PeerToPeer.Collaboration.PeerContact> classe.  Essa funcionalidade não é exposta em qualquer outro tipo de ponto a ponto por motivos de segurança.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">-   O par de chamada não está inscrito para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.  
+  
+-   O par de chamada ainda não foi chamado o <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData" /> método.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Não foi possível concluir <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetApplications" /> operação.</exception>
+        <block subset="none" type="usage">
+          <para>Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor de código hash é usado para comparar programaticamente as instâncias desse tipo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Contém os dados serializados associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto.</param>
+        <param name="context">Contém o destino para o fluxo serializado associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com os dados necessários para serializar o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um tipo derivado deve chamar o <xref:System.Net.PeerToPeer.Collaboration.Peer.GetObjectData%2A> método do tipo base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjects">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetObjects (System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetObjects(class System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetObjects(System.Net.PeerToPeer.Collaboration.PeerEndPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerEndPoint" Type="System.Net.PeerToPeer.Collaboration.PeerEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="peerEndPoint">O ponto de extremidade do qual recuperar objetos.</param>
+        <summary>Obtém o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObjectCollection" /> registrados por especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> e armazenados no cache local.</summary>
+        <returns>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObjectCollection" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> especificado. Se nenhum aplicativo está associado com o ponto de extremidade, uma coleção de tamanho zero (0) será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o par de chamada não está inscrito para o <xref:System.Net.PeerToPeer.Collaboration.PeerContact> associado especificado <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> o <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> método deve ser chamado antes de chamar esse método.  
+  
+ Enquanto o chamador não é necessário entrar para a infraestrutura de colaboração para esse método seja concluído com êxito, uma chamada bem-sucedida para <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> ou uma da <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> métodos devem ser concluídos quando o chamador foi conectado anteriormente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">-   O par de chamada não está inscrito para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.  
+  
+-   O par de chamada ainda não foi chamado o <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData" /> método.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Não foi possível concluir <see cref="Overload:System.Net.PeerToPeer.Collaboration.PeerContact.GetObjects" /> operação.</exception>
+        <block subset="none" type="usage">
+          <para>Sobrecargas adicionais são definidas no <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> classe em vez de subclasses <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> e <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />.  
+  
+ Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjects">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetObjects (System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, Guid objectId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetObjects(class System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, valuetype System.Guid objectId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.GetObjects(System.Net.PeerToPeer.Collaboration.PeerEndPoint,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerEndPoint" Type="System.Net.PeerToPeer.Collaboration.PeerEndPoint" />
+        <Parameter Name="objectId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="peerEndPoint">O ponto de extremidade do qual recuperar objetos.</param>
+        <param name="objectId">O <see cref="T:System.Guid" /> do <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> a ser recuperado.</param>
+        <summary>Obtém a coleção de pares objetos registrados por especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> e registrado no <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> identificado pelo GUID <see cref="T:System.Guid" />.</summary>
+        <returns>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObjectCollection" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> especificado. Se nenhum aplicativo está associado com o ponto de extremidade, uma coleção de tamanho zero (0) será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o par de chamada não está inscrito para o <xref:System.Net.PeerToPeer.Collaboration.PeerContact> associado especificado <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> o <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> método deve ser chamado antes de chamar esse método.  
+  
+ Enquanto o chamador não é necessário entrar para a infraestrutura de colaboração para esse método seja concluído com êxito, uma chamada bem-sucedida para <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> ou uma da <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> métodos devem ser concluídos quando o chamador foi conectado anteriormente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">-   O par de chamada não está inscrito para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.  
+  
+-   O par de chamada ainda não foi chamado o <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData" /> método.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Não foi possível concluir <see cref="Overload:System.Net.PeerToPeer.Collaboration.PeerContact.GetObjects" /> operação.</exception>
+        <block subset="none" type="usage">
+          <para>Sobrecargas adicionais são definidas no <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> classe em vez de subclasses <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> e <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />.  
+  
+ Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Invite">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Envia um convite para ingressar na atividade de colaboração ponto a ponto patrocinada pelo remetente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Invite">
+      <MemberSignature Language="C#" Value="public override System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Invite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Envia um convite para ingressar em colaboração ponto a ponto patrocinada pelo remetente.</summary>
+        <returns>Um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> do par que recebeu o convite.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">O <see cref="P:System.Net.PeerToPeer.Collaboration.PeerApplication.Id" /> para o aplicativo atual não existe.</exception>
+        <block subset="none" type="usage">
+          <para>Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Invite">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite (System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite(class System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Invite(System.Net.PeerToPeer.Collaboration.PeerEndPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerEndPoint" Type="System.Net.PeerToPeer.Collaboration.PeerEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="peerEndPoint">O ponto de extremidade para receber o convite.</param>
+        <summary>Envia um convite para um ponto de extremidade específico para ingressar em colaboração ponto a ponto com o remetente do convite.</summary>
+        <returns>Um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> de ponto de extremidade que recebeu o convite.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Não foi possível concluir <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.Invite" /> operação.  
+  
+-   O aplicativo em execução no momento não está registrado com a infraestrutura de colaboração ponto a ponto.  
+  
+-   <see cref="P:System.Net.PeerToPeer.Collaboration.PeerEndPoint.EndPoint" />especificado pelo <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> objeto não é válido.</exception>
+        <block subset="none" type="usage">
+          <para>Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Invite">
+      <MemberSignature Language="C#" Value="public override System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite (System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, byte[] invitationData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite(class System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, unsigned int8[] invitationData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Invite(System.Net.PeerToPeer.Collaboration.PeerApplication,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationToInvite" Type="System.Net.PeerToPeer.Collaboration.PeerApplication" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="invitationData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="applicationToInvite">O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> para que o convite é enviado.</param>
+        <param name="message">Uma mensagem para enviar para o par remoto juntamente com o convite do aplicativo.</param>
+        <param name="invitationData">Um blob de dados definido pelo usuário para associar o convite.  O tamanho pode ser não mais de 16.384 bytes.</param>
+        <summary>Envia o convite especificado para ingressar em especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> patrocinado pelo remetente.</summary>
+        <returns>Um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> do par que recebeu o convite.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">O <see cref="P:System.Net.PeerToPeer.Collaboration.PeerApplication.Id" /> para o aplicativo atual não existe ou está vazio.</exception>
+        <block subset="none" type="usage">
+          <para>Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Invite">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite (System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, byte[] invitationData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite(class System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, class System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, unsigned int8[] invitationData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Invite(System.Net.PeerToPeer.Collaboration.PeerEndPoint,System.Net.PeerToPeer.Collaboration.PeerApplication,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerEndPoint" Type="System.Net.PeerToPeer.Collaboration.PeerEndPoint" />
+        <Parameter Name="applicationToInvite" Type="System.Net.PeerToPeer.Collaboration.PeerApplication" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="invitationData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="peerEndPoint">O ponto de extremidade ou ponto a ponto remota ao qual enviar o convite.</param>
+        <param name="applicationToInvite">O aplicativo para o qual o convite é enviado.</param>
+        <param name="message">Uma mensagem para enviar para o par remoto juntamente com o convite do aplicativo.  A mensagem pode ser não mais que 255 caracteres Unicode.</param>
+        <param name="invitationData">Um blob de dados definido pelo usuário para associar o convite.  O tamanho pode ser não mais de 16.384 bytes.</param>
+        <summary>Envia o convite especificado especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> para unir especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> aplicativo patrocinado pelo remetente.</summary>
+        <returns>Um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> do par que recebeu o convite.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ponto de extremidade no <paramref name="PeerEndPoint" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">-   <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />objeto não pode ser vazio.  
+  
+-   <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />e <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> objetos não podem ser <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">O <see cref="P:System.Net.PeerToPeer.Collaboration.PeerApplication.Id" /> para o aplicativo atual não existe ou está vazio.</exception>
+        <block subset="none" type="usage">
+          <para>Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="InviteAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicia uma operação assíncrona de convite para ingressar em um ponto de extremidade um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> aplicativo patrocinado pelo remetente do convite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Sobrecargas adicionais são definidas no <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> classe em vez de subclasses <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> e <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />.  
+  
+ Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="InviteAsync">
+      <MemberSignature Language="C#" Value="public override void InviteAsync (object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InviteAsync(object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.InviteAsync(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userToken">Objeto definido pelo usuário para passar para o retorno de chamada da operação assíncrona. Também é usado para identificar a operação assíncrona para cancelamento. Esse parâmetro deve ser especificado e é exclusivo em todas as operações de convite assíncrona em andamento.</param>
+        <summary>Inicia uma operação assíncrona de convite para ingressar em um ponto de extremidade um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> aplicativo patrocinado pelo remetente do convite. O convite é identificado usando especificado <see cref="T:System.Object" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="UserToken" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   O <see cref="P:System.Net.PeerToPeer.Collaboration.PeerApplication.Id" /> para o aplicativo atual não existe ou está vazio.  
+  
+-   <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPointCollection" />não pode ser<see langword="null." /></exception>
+        <block subset="none" type="usage">
+          <para>Sobrecargas adicionais são definidas no <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> classe em vez de subclasses <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> e <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />.  
+  
+ Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="InviteAsync">
+      <MemberSignature Language="C#" Value="public void InviteAsync (System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InviteAsync(class System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.InviteAsync(System.Net.PeerToPeer.Collaboration.PeerEndPoint,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerEndPoint" Type="System.Net.PeerToPeer.Collaboration.PeerEndPoint" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="peerEndPoint">O ponto de extremidade ou ponto a ponto remota ao qual enviar o convite.</param>
+        <param name="userToken">Objeto definido pelo usuário para passar para o retorno de chamada da operação assíncrona. Também é usado para identificar a operação assíncrona para cancelamento. Esse parâmetro deve ser especificado e é exclusivo em todas as operações de convite assíncrona em andamento.</param>
+        <summary>Inicia uma operação assíncrona de convite para o ponto de extremidade de ponto especificado ingressar um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> aplicativo patrocinado pelo remetente do convite. O convite é identificado usando especificado <see cref="T:System.Object" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   <paramref name="UserToken" />não pode ser<see langword="null." />  
+  
+-   Ponto de extremidade no <paramref name="peerEndPoint" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="peerEndPoint" />objeto não pode ser<see langword="null." /></exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">O <see cref="T:System.Guid" /> para o aplicativo atual não existe ou está vazio.</exception>
+        <block subset="none" type="usage">
+          <para>Sobrecargas adicionais são definidas no <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> classe em vez de subclasses <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> e <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />.  
+  
+ Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="InviteAsync">
+      <MemberSignature Language="C#" Value="public override void InviteAsync (System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, byte[] invitationData, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InviteAsync(class System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, unsigned int8[] invitationData, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.InviteAsync(System.Net.PeerToPeer.Collaboration.PeerApplication,System.String,System.Byte[],System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationToInvite" Type="System.Net.PeerToPeer.Collaboration.PeerApplication" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="invitationData" Type="System.Byte[]" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="applicationToInvite">O aplicativo para o qual o convite é enviado.</param>
+        <param name="message">Uma mensagem para enviar para o par remoto juntamente com o convite do aplicativo.  A mensagem pode ser não mais que 255 caracteres Unicode.</param>
+        <param name="invitationData">Um blob de dados definido pelo usuário para associar o convite.  O tamanho pode ser não mais de 16.384 bytes.</param>
+        <param name="userToken">Objeto definido pelo usuário para passar para o retorno de chamada da operação assíncrona. Também é usado para identificar a operação assíncrona para cancelamento. Esse parâmetro deve ser especificado e é exclusivo em todas as operações de convite assíncrona em andamento.</param>
+        <summary>Inicia uma operação assíncrona de convite para os pontos de extremidade de ponto especificado unir a colaboração especificada <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> patrocinado pelo remetente do convite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="UserToken" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />objeto não pode ser<see langword="null." /></exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   O <see cref="T:System.Guid" /> para o aplicativo atual não existe ou está vazio.  
+  
+-   Coleção de ponto de extremidade está vazia ou<see langword="null." /></exception>
+        <block subset="none" type="usage">
+          <para>Sobrecargas adicionais são definidas no <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> classe em vez de subclasses <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> e <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />.  
+  
+ Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="InviteAsync">
+      <MemberSignature Language="C#" Value="public void InviteAsync (System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, string message, byte[] invitationData, System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InviteAsync(class System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint, string message, unsigned int8[] invitationData, class System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.InviteAsync(System.Net.PeerToPeer.Collaboration.PeerEndPoint,System.String,System.Byte[],System.Net.PeerToPeer.Collaboration.PeerApplication,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerEndPoint" Type="System.Net.PeerToPeer.Collaboration.PeerEndPoint" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="invitationData" Type="System.Byte[]" />
+        <Parameter Name="applicationToInvite" Type="System.Net.PeerToPeer.Collaboration.PeerApplication" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="peerEndPoint">O ponto de extremidade ou ponto a ponto remota ao qual enviar o convite.</param>
+        <param name="message">Uma mensagem para enviar para o par remoto juntamente com o convite do aplicativo.  A mensagem pode ser não mais que 255 caracteres Unicode.</param>
+        <param name="invitationData">Um usuário definido o blob de dados para associar o convite.  O tamanho pode ser não mais de 16.384 bytes.</param>
+        <param name="applicationToInvite">O aplicativo para o qual o convite é enviado.</param>
+        <param name="userToken">Objeto definido pelo usuário para passar para o retorno de chamada da operação assíncrona. Também é usado para identificar a operação assíncrona para cancelamento. Esse parâmetro deve ser especificado e é exclusivo em todas as operações de convite assíncrona em andamento.</param>
+        <summary>Inicia uma operação assíncrona de convite especificado <paramref name="peerEndPoint" /> para unir a colaboração especificada <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> patrocinado pelo remetente do convite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador não é necessário entrar para o <xref:System.Net.PeerToPeer.Collaboration> infra-estrutura para esse método seja concluída com êxito. Um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> de convidado não é o mesmo que o convidado aceitar o convite para colaborar. Se for enviado um convite para um par remoto que não tenha instalado o aplicativo, o convite foi recusado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   <paramref name="UserToken" /> não pode ser nula.  
+  
+-   Ponto de extremidade especificado por <paramref name="peerEndPoint" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />e <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> objetos não podem ser<see langword="null." /></exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">O <see cref="P:System.Net.PeerToPeer.Collaboration.PeerApplication.Id" /> para o aplicativo atual não existe ou está vazio.</exception>
+        <block subset="none" type="usage">
+          <para>Sobrecargas adicionais são definidas no <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> classe em vez de subclasses <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> e <see cref="T:System.Net.PeerToPeer.Collaboration.PeerNearMe" />.  
+  
+ Chamar esse método exige um <see cref="T:System.Security.Permissions.PermissionState" /> de <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubscribed">
+      <MemberSignature Language="C#" Value="public bool IsSubscribed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSubscribed" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerContact.IsSubscribed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o atual <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> está assinado ou não inscrito para um ponto de extremidade. Como alternativa, essa propriedade obtém ou define um valor que especifica se o host de mesmo nível atual ou o aplicativo de hospedagem tem assinado ou não inscrito para este <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <value>
+          <see langword="True" />Se este <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> está inscrito para este ponto de extremidade, <see langword="false" /> se o contato não se inscreveu ou cancelou.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em muitos casos, um <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> não é o mesmo que um host de ponto a ponto. Um host de par tem uma instância dentro de <xref:System.Net.PeerToPeer.Collaboration.ContactManager> do correspondente remoto, e o relacionamento é que eles convidou o par colaborar.  Um ponto de extremidade tem um "Me" instância dentro de seu próprio Gerenciador de contato e o host de ponto a ponto, mas a relação não foi especificada.  
+  
+ Se o host de par a <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, e escolhe um contato par não a <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A>, sua <xref:System.Net.PeerToPeer.Collaboration.SubscriptionType> pode ter um valor de bloqueado, em vez de excluir a entrada do host entre em contato com o Gerenciador.  
+  
+ Há uma relação muitos-para-muitos entre pares locais, computadores remotos, hosts de ponto a ponto e assinaturas.  As assinaturas são por usuário, em vez de processo, aplicativo ou por domínio. Consequentemente, as assinaturas associadas com um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> do objeto são a lista de contatos para que ele tenha assinado e do qual ele espera atualizações.  Os contatos tiveram atualizado seu próprio aplicativo, objeto e informações de presença ou tenham atualizados informações sobre contatos o <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
+  
+ Essa propriedade sempre retorna `true` se o objeto for um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> que representa o local ou "Me" contato, como um contato sempre tem a mesmo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Nickname">
+      <MemberSignature Language="C#" Value="public string Nickname { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Nickname" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerContact.Nickname" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que representa o <paramref name="Nickname" /> do <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <value>
+          <see cref="T:System.String" />que representa o apelido do <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />. O valor padrão dessa propriedade é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um apelido pode ser usado para um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> caso haja vários pares com o mesmo nome de exibição do objeto.  Uma sessão de colaboração também pode usar o apelido para designar computadores remotos usados no maiores esforços de colaboração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; ObjectChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; ObjectChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerContact.ObjectChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse evento é sinalizado sempre que um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplicationChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnApplicationChanged (System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs appChangedArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnApplicationChanged(class System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs appChangedArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.OnApplicationChanged(System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appChangedArgs" Type="System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="appChangedArgs">O <see cref="T:System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs" /> objeto a ser passado para delegados associados a <see cref="E:System.Net.PeerToPeer.Collaboration.PeerContact.ApplicationChanged" /> eventos.</param>
+        <summary>Aciona o evento <see cref="E:System.Net.PeerToPeer.Collaboration.PeerContact.ApplicationChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterações de aplicativo ocorrem quando um aplicativo é iniciado, registrado ou desregistrado da infraestrutura de colaboração.  Eles também ocorrem quando pares ingressarem ou sair de uma sessão de colaboração ou alteram os locais de ponto de extremidade de rede.  Alterações de escopo de mesmo nível também podem afetar uma alteração em um aplicativo.  
+  
+ Classes que herdam desta classe podem substituir este método para realizar tarefas adicionais quando o evento ocorre.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Em uma classe derivada, certifique-se de chamar a implementação da classe base deste método para que os delegados registrados recebem o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnObjectChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnObjectChanged (System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs objChangedArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnObjectChanged(class System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs objChangedArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.OnObjectChanged(System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objChangedArgs" Type="System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="objChangedArgs">Tipo de alteração de objeto especificado pelo <see cref="T:System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs" />.</param>
+        <summary>Gera o <see cref="E:System.Net.PeerToPeer.Collaboration.PeerContact.ObjectChanged" /> eventos quando um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> é adicionado, atualizado ou removido por um outro computador remoto na rede.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPresenceChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPresenceChanged (System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs presenceChangedArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPresenceChanged(class System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs presenceChangedArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.OnPresenceChanged(System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="presenceChangedArgs" Type="System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="presenceChangedArgs">O <see cref="T:System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs" /> objeto a ser passado para delegados associados a <see cref="E:System.Net.PeerToPeer.Collaboration.PeerContact.PresenceChanged" /> eventos.</param>
+        <summary>Gera o <see cref="E:System.Net.PeerToPeer.Collaboration.PeerContact.PresenceChanged" /> eventos quando o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" /> um par foi alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterações de presença ocorrem quando um sinais de ponto a ponto fora de um aplicativo, um aplicativo é registrado ou desregistrado da infraestrutura de colaboração ou um par cancela a inscrição de um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> ou <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubscribeCompleted">
+      <MemberSignature Language="C#" Value="protected void OnSubscribeCompleted (System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnSubscribeCompleted(class System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.OnSubscribeCompleted(System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs" /> ou <see cref="T:System.Net.PeerToPeer.Collaboration.SubscriptionListChangedEventArgs" /> objeto associado a <see cref="E:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeCompleted" /> eventos.</param>
+        <summary>Aciona o evento <see cref="E:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeCompleted" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam desta classe podem substituir esse método para executar mais tarefas quando a <xref:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeCompleted> evento ocorre.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Uma classe derivada deve chamar a implementação da classe base deste método para que os delegados registrados recebem o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerEndPoints">
+      <MemberSignature Language="C#" Value="public override System.Net.PeerToPeer.Collaboration.PeerEndPointCollection PeerEndPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerEndPointCollection PeerEndPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerEndPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerEndPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPointCollection" /> associado a este <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <value>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> coleção associada a esta <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />. O valor padrão dessa propriedade é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> é um par local, remota ponto a ponto ou ponto a ponto para o contato de ponto a ponto representado por esta instância de host não é relevante para a presença do <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> em que o ponto de extremidade <xref:System.Net.PeerToPeer.Collaboration.PeerEndPointCollection> ou <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso correto do <xref:System.Net.PeerToPeer.Collaboration.PeerContact.PeerEndPoints%2A> propriedade:  
+  
+ [!code-csharp[NCLPNRPContacts#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPNRPContacts/CS/NCLPNRPContacts.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerName">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.PeerName PeerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.PeerName PeerName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Net.PeerToPeer.PeerName" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <value>
+          <see cref="T:System.String" />que representa o <see cref="T:System.Net.PeerToPeer.PeerName" /> do <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />. A menos que explicitamente especificado, o valor padrão para todas as propriedades é <see langword="null" /> para tipos de referência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há dois contatos no catálogo de endereços podem ter o mesmo <xref:System.Net.PeerToPeer.PeerName>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt; PresenceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt; PresenceChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerContact.PresenceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse evento é gerado sempre que o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> mudou seu status de presença.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Subscribe">
+      <MemberSignature Language="C#" Value="public virtual void Subscribe ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Subscribe() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Assina o par de chamada para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />, e como resultado, o par receberá qualquer futuro <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> eventos associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.PeerToPeer.Collaboration.PeerContact>as atualizações ocorrem de forma assíncrona depois o <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> método foi bem-sucedida. Como resultado, é possível para um <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> a ser adicionado à coleção de um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> antes associado <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint.Name%2A> é fornecido.  
+  
+ Para monitorar essas alterações, é recomendável que o usuário se inscrever para os eventos relevantes; Por exemplo, <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint.NameChanged>.  
+  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O par de chamada não está conectado a pessoas ao meu redor.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Não foi possível concluir <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe" /> operação. Falha pode ser devido a uma incapacidade de estabelecer uma conexão TCP para o par.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscribeAllowed">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.SubscriptionType SubscribeAllowed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.PeerToPeer.Collaboration.SubscriptionType SubscribeAllowed" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeAllowed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.SubscriptionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> é exposto para os eventos de colaboração associados com o mesmo nível ou um aplicativo que tem a propriedade do <see cref="T:System.Net.PeerToPeer.Collaboration.ContactManager" /> no qual este <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto reside.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.SubscriptionType" />valor de enumeração que especifica se este <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> é exposto para eventos de colaboração que pertencem ao host de ponto a ponto ou hospedando o aplicativo. A menos que explicitamente especificado, o valor padrão para todas as propriedades é <see langword="null" /> para tipos de referência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade como <xref:System.Net.PeerToPeer.Collaboration.SubscriptionType.Allowed> significa que o par remoto especificado por esse <xref:System.Net.PeerToPeer.Collaboration.PeerContact> pode ver os aplicativos registrados, objetos e informações de presença de usuário ou aplicativo que possui o <xref:System.Net.PeerToPeer.Collaboration.ContactManager> no qual este <xref:System.Net.PeerToPeer.Collaboration.PeerContact> objeto reside.  
+  
+ Essa propriedade não tem nenhum efeito um <xref:System.Net.PeerToPeer.Collaboration.PeerContact> instância que representa o local ou "Me" contato, como um contato sempre tem a mesmo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso<see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />  
+  
+ o objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscribeAsync">
+      <MemberSignature Language="C#" Value="public virtual void SubscribeAsync (object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SubscribeAsync(object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeAsync(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userToken">Um usuário definido <see cref="T:System.Object" /> que contém informações sobre o <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeAsync(System.Object)" /> operação.</param>
+        <summary>Assincronamente assina o par de chamada para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />, e como resultado, o par receberá qualquer futuro <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> eventos associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeCompleted> é gerado após a conclusão dessa operação. Se as atividades de colaboração não precisam ser assíncrona, o <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> método deve ser usado em vez disso.  
+  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="UserToken" />não pode ser<see langword="null." /></exception>
+        <exception cref="T:System.InvalidOperationException">O par de chamada não está conectado a pessoas ao meu redor.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> foi descartado.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Duplicar <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeAsync(System.Object)" /> identificador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscribeCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs&gt; SubscribeCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs&gt; SubscribeCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gerado quando uma operação de assinatura foi concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando esse evento é gerado, a propriedade de erro no <xref:System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs> objeto deve ser examinado para determinar se o <xref:System.Net.PeerToPeer.Collaboration.PeerContact.SubscribeAsync%2A> processo foi concluído com êxito.  
+  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Contém os dados serializados associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto.</param>
+        <param name="context">Contém o destino para o fluxo serializado associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto.</param>
+        <summary>Implementa a interface <see cref="T:System.Runtime.Serialization.ISerializable" /> e retorna os dados necessários para serializar a instância <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> representação do <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.DisplayName" /> associado a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <returns>
+          <see cref="T:System.String" />representação do <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.DisplayName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public string ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serializa o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> para uma cadeia de caracteres XML para a transferência de rede ou armazenamento persistente.</summary>
+        <returns>Uma codificação de XML de <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Não foi possível concluir <see cref="M:System.Net.PeerToPeer.Collaboration.PeerContact.ToXml" /> operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsubscribe">
+      <MemberSignature Language="C#" Value="public virtual void Unsubscribe ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Unsubscribe() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerContact.Unsubscribe" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove uma assinatura para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> e consequentemente o par de chamada não receberá mais <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" /> eventos associados a <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o par de chamada não está inscrito para o <xref:System.Net.PeerToPeer.Collaboration.PeerContact> especificado o resultado é não operacional. Um par de chamada pode verificar se ele está assinado para eventos para o par identificado por essa instância com o <xref:System.Net.PeerToPeer.Collaboration.PeerContact.IsSubscribed%2A> propriedade.  
+  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

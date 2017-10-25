@@ -1,0 +1,1798 @@
+<Type Name="WebControl" FullName="System.Web.UI.WebControls.WebControl">
+  <TypeSignature Language="C#" Value="public class WebControl : System.Web.UI.Control, System.Web.UI.IAttributeAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebControl extends System.Web.UI.Control implements class System.Web.UI.IAttributeAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IAttributeAccessor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.Themeable(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como a classe base que define os métodos, propriedades e eventos comuns a todos os controles no namespace <see cref="N:System.Web.UI.WebControls" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl> classe fornece as propriedades, métodos e eventos que são comuns a todos os controles de servidor Web. Você pode controlar a aparência e comportamento de um controle de servidor Web, definindo as propriedades definidas nesta classe. Por exemplo, a cor do plano de fundo e a cor da fonte de um controle são controladas por meio de <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> e <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A> propriedades, respectivamente. Em controles que podem exibir uma borda, você pode controlar a largura da borda, o estilo de borda e a cor da borda, definindo o <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A>, <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A>, e <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A> propriedades. O tamanho de um controle de servidor Web pode ser especificado usando o <xref:System.Web.UI.WebControls.WebControl.Height%2A> e <xref:System.Web.UI.WebControls.WebControl.Width%2A> propriedades.  
+  
+ O comportamento do controle pode ser especificado definindo determinadas propriedades. Você pode habilitar e desabilitar um controle definindo o <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade. O local do controle na ordem de tabulação é controlado pela configuração de <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> propriedade. Você pode especificar uma dica de ferramenta para o controle definindo o <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A> propriedade.  
+  
+> [!NOTE]
+>  Nem todos os controles oferecem suporte a cada propriedade definida nesta classe. Para obter informações específicas sobre se há suporte para uma propriedade, consulte a documentação para o controle específico.  
+  
+> [!NOTE]
+>  Algumas propriedades dessa classe renderizam diferente, dependendo do navegador. Algumas propriedades não serão renderizados, enquanto outros processam, mas não têm nenhum efeito. O <xref:System.Web.Configuration.HttpCapabilitiesBase.TagWriter%2A> propriedade o <xref:System.Web.HttpBrowserCapabilities> objeto determina a maneira na qual um controle de servidor Web processa. Para navegadores que oferecem suporte a HTML 4.0, o <xref:System.Web.Configuration.HttpCapabilitiesBase.TagWriter%2A> propriedade conterá uma regular <xref:System.Web.HttpBrowserCapabilities> objeto e a maioria das propriedades será renderizado usando os atributos de estilo HTML 4.0. Navegadores que não há suporte a HTML 4.0 usará o <xref:System.Web.UI.Html32TextWriter> objeto. Isso mapeará automaticamente os atributos de estilo para os atributos de marca HTML 3.2 relevantes. Em alguns casos, como com o <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A> propriedade, os atributos de estilo serão convertidos em marcas adicionais, como `<font>` marcas. Em alguns casos, não haverá nenhum mapeamento foi executada. Para obter informações específicas sobre como uma propriedade é renderizada em diferentes navegadores, consulte a documentação para a propriedade específica.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.WebControl>, consulte o <xref:System.Web.UI.WebControls.WebControl.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ [!code-csharp[WebControlAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebControlAddAttributesToRender/CS/addattrib.cs#1)]
+ [!code-vb[WebControlAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebControlAddAttributesToRender/VB/addattrib.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebControl" /> que representa uma marca HTML <see langword="Span" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado para inicializar uma nova instância do <xref:System.Web.UI.WebControls.WebControl> a classe que representa um `Span` elemento HTML.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.WebControl>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`TagKey`|O valor de enumeração <xref:System.Web.UI.HtmlTextWriterTag.Span>.|  
+  
+> [!NOTE]
+>  Este construtor não é chamado diretamente. Em vez disso, ele geralmente é chamado pelo construtor de uma classe derivada para inicializar o <xref:System.Web.UI.WebControls.WebControl.TagKey%2A> propriedade para o <xref:System.Web.UI.HtmlTextWriterTag.Span> valor de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebControl (string tag);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tag">Uma marca HTML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebControl" /> classe usando a marca HTML especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.WebControl> classe usando a marca HTML especificada.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.WebControl>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`TagKey`|O valor de enumeração <xref:System.Web.UI.HtmlTextWriterTag.Unknown>.|  
+|`TagName`|O valor de `tag` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor não é chamado diretamente. Em vez disso, ele geralmente é chamado pelo construtor de uma classe derivada para inicializar o <xref:System.Web.UI.WebControls.WebControl.TagKey%2A> e <xref:System.Web.UI.WebControls.WebControl.TagName%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebControl (System.Web.UI.HtmlTextWriterTag tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.HtmlTextWriterTag tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.#ctor(System.Web.UI.HtmlTextWriterTag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tag" Type="System.Web.UI.HtmlTextWriterTag" />
+      </Parameters>
+      <Docs>
+        <param name="tag">Um dos valores de <see cref="T:System.Web.UI.HtmlTextWriterTag" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebControl" /> classe usando a marca HTML especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.WebControl> classe usando especificado <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=nameWithType> valor.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.WebControl>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`TagKey`|O <xref:System.Web.UI.HtmlTextWriterTag> especificado pelo valor da enumeração de `tag` parâmetro.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o construtor para o <xref:System.Web.UI.WebControls.WebControl> classe para criar um `TextArea` elemento HTML e exibi-lo na página de Web Forms.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão de nome de arquivo. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic WebControl.WebControl Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.WebControl Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.WebControl Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.WebControl Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessKey">
+      <MemberSignature Language="C#" Value="public virtual string AccessKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccessKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.AccessKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a tecla de acesso que permite navegar rapidamente para o controle do servidor Web.</summary>
+        <value>A tecla de acesso para navegar rapidamente para o controle de servidor Web. O valor padrão é <see cref="F:System.String.Empty" />, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.AccessKey%2A> propriedade para especificar o atalho de teclado para o controle de servidor Web. Isso permite que você navegue rapidamente para o controle pressionando a tecla ALT e a chave para o caractere especificado no teclado. Por exemplo, definindo a chave de acesso de um controle para a cadeia de caracteres `"D"` indica que o usuário pode navegar para o controle pressionando ALT + D.  
+  
+ Somente uma única cadeia de caracteres é permitida para o <xref:System.Web.UI.WebControls.WebControl.AccessKey%2A> propriedade. Se você tentar definir essa propriedade como um valor que não é nem `null`, <xref:System.String.Empty>, nem uma única cadeia de caracteres, uma exceção será lançada.  
+  
+> [!NOTE]
+>  Essa propriedade é suportada apenas no Internet Explorer 4.0 e posterior.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como definir e usar o <xref:System.Web.UI.WebControls.WebControl.AccessKey%2A> propriedade de um <xref:System.Web.UI.WebControls.TextBox> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic WebControl.AccessKey Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.AccessKey Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.AccessKey Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.AccessKey Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A tecla de acesso especificada não é <see langword="null" />, <see cref="F:System.String.Empty" /> nem uma cadeia de caracteres única.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected virtual void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Adiciona atributos HTML e estilos que precisam ser renderizadas ao <see cref="T:System.Web.UI.HtmlTextWriterTag" /> especificado. Esse método é usado principalmente por desenvolvedores de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para processar atributos e estilos de um controle de servidor Web no cliente, normalmente você chama o <xref:System.Web.UI.HtmlTextWriter.AddAttribute%2A> e <xref:System.Web.UI.HtmlTextWriter.AddStyleAttribute%2A?displayProperty=nameWithType> métodos para inserir cada atributo e Estilizar individualmente para o <xref:System.Web.UI.HtmlTextWriter> fluxo de saída. Para simplificar o processo, este método encapsula todas as chamadas para o <xref:System.Web.UI.HtmlTextWriter.AddAttribute%2A?displayProperty=nameWithType> e <xref:System.Web.UI.HtmlTextWriter.AddStyleAttribute%2A?displayProperty=nameWithType> métodos para cada atributo e o estilo associado ao controle de servidor Web. Todos os atributos e estilos são inseridos a <xref:System.Web.UI.HtmlTextWriter> fluxo de saída em uma única chamada de método. Esse método normalmente é substituído por desenvolvedores de controle em classes derivadas para inserir os atributos apropriados e estilos para o <xref:System.Web.UI.HtmlTextWriter> fluxo de saída para a classe.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.WebControl.AddAttributesToRender%2A> método não pode ser usado para inserir script de cliente. Para usar o script de cliente, consulte o <xref:System.Web.UI.ClientScriptManager> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar uma classe que deriva de <xref:System.Web.UI.WebControls.WebControl> classe. A implementação base do <xref:System.Web.UI.WebControls.WebControl.AddAttributesToRender%2A> método é substituído para adicionar atributos apropriados para a classe derivada de <xref:System.Web.UI.HtmlTextWriter> fluxo de saída.  
+  
+ [!code-csharp[WebControlAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebControlAddAttributesToRender/CS/addattrib.cs#1)]
+ [!code-vb[WebControlAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebControlAddAttributesToRender/VB/addattrib.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyStyle">
+      <MemberSignature Language="C#" Value="public void ApplyStyle (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyStyle(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.ApplyStyle(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Um <see cref="T:System.Web.UI.WebControls.Style" /> que representa o estilo a ser copiado.</param>
+        <summary>Copia os elementos não vazios do estilo especificado para o controle da Web, substituindo os elementos de estilo existentes no controle. Esse método é usado principalmente por desenvolvedores de controles.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebControl.ApplyStyle%2A> método para aplicar um estilo para um <xref:System.Web.UI.WebControls.DataGrid> controle.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[WebControlApplyStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebControlApplyStyle/CS/webcontrolapplystylecs.aspx#1)]
+ [!code-aspx-vb[WebControlApplyStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebControlApplyStyle/VB/webcontrolapplystylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Web.UI.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de atributos arbitrários (somente para renderização) que não correspondem às propriedades do controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.AttributeCollection" /> de pares de nome e valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.Attributes%2A> coleção contém uma coleção de todos os atributos declarados na marca de abertura de um controle de servidor Web. Isso permite que você controle programaticamente os atributos associados a um controle de servidor Web. Você pode adicionar atributos à coleção ou remover atributos da coleção.  
+  
+> [!NOTE]
+>  Essa propriedade é processada com todos os atributos da coleção na marca de abertura do controle, independentemente das configurações de navegador. Nem todos os navegadores dão suporte a cada atributo que é renderizado. Não há suporte para atributos geralmente são ignorados pelo navegador.  
+  
+> [!NOTE]
+>  Não é possível adicionar script do lado do cliente para um <xref:System.Web.UI.WebControls.WebControl> instância usando o <xref:System.Web.UI.WebControls.WebControl.Attributes%2A> coleção. Para adicionar um script do lado do cliente, use o <xref:System.Web.UI.Page.ClientScript%2A> propriedade o <xref:System.Web.UI.Page> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como o <xref:System.Web.UI.WebControls.WebControl.Attributes%2A> propriedade de um <xref:System.Web.UI.WebControls.WebControl> pode ser usado para executar um JavaScript comando quando o <xref:System.Web.UI.WebControls.TextBox> controle perde o foco.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic WebControl.Attributes Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.Attributes Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.Attributes Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.Attributes Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.WebColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo do controle do servidor Web.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor da tela de fundo do controle. O padrão é <see cref="F:System.Drawing.Color.Empty" />, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> propriedade para especificar a cor de plano de fundo do controle do servidor Web. Essa propriedade é definida usando um <xref:System.Drawing.Color?displayProperty=nameWithType> objeto.  
+  
+> [!NOTE]
+>  Essa propriedade será renderizado para somente certos controles. Por exemplo, <xref:System.Web.UI.WebControls.Table>, <xref:System.Web.UI.WebControls.Panel>, <xref:System.Web.UI.WebControls.DataGrid>, <xref:System.Web.UI.WebControls.Calendar>, e <xref:System.Web.UI.WebControls.ValidationSummary> processará essa propriedade. Ele também funciona para <xref:System.Web.UI.WebControls.CheckBoxList>, <xref:System.Web.UI.WebControls.RadioButtonList> e <xref:System.Web.UI.WebControls.DataList> se seus `RepeatLayout` é de propriedade `RepeatLayout.Table`, não `RepeatLayout.Flow`.  
+  
+ Em geral, apenas controles que processam como um `<table>` marca pode exibir uma cor de plano de fundo em HTML 3.2, enquanto quase qualquer controle pode em HTML 4.0.  
+  
+ Para controles que processam como um `<span>` marca (incluindo <xref:System.Web.UI.WebControls.Label>, todos os controles de validação e controles de lista com seus `RepeatLayout` propriedade definida como `RepeatLayout.Flow`), essa propriedade funcionarão no Microsoft Internet Explorer versão 5 e posterior, mas não no Microsoft Internet Explorer versão 4.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como definir a <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> propriedade o <xref:System.Web.UI.WebControls.Table> controle, que é herdada do <xref:System.Web.UI.WebControls.WebControl> classe base.  
+  
+ [!code-aspx-csharp[Classic WebControl.BackColor Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.BackColor Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.BackColor Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.BackColor Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.WebColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da borda do controle Web.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor da borda do controle. O padrão é <see cref="F:System.Drawing.Color.Empty" />, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A> propriedade para especificar a cor da borda do controle do servidor Web. Essa propriedade é definida usando um <xref:System.Drawing.Color> objeto.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A> propriedade processará apenas para determinados controles. Por exemplo, o <xref:System.Web.UI.WebControls.Table>, <xref:System.Web.UI.WebControls.Panel>, <xref:System.Web.UI.WebControls.DataGrid>, <xref:System.Web.UI.WebControls.Calendar>, e <xref:System.Web.UI.WebControls.ValidationSummary> controles processará essa propriedade. Também funcionará para o <xref:System.Web.UI.WebControls.CheckBoxList>, <xref:System.Web.UI.WebControls.RadioButtonList>, e <xref:System.Web.UI.WebControls.DataList> controla, se seus `RepeatLayout` está definida como `RepeatLayout.Table`, não `RepeatLayout.Flow`. No entanto, ela é processada como o `bordercolor` atributo, que não é parte do HTML 3.2 padrão. O `bordercolor` atributo funciona para o Microsoft Internet Explorer versão 3.0 ou posterior, mas não a maioria dos outros navegadores.  
+  
+ Quando o <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A> propriedade não for definida, o navegador usará a cor de borda padrão. Consulte seu navegador para determinar seu esquema de cores padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como definir a <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A> propriedade o <xref:System.Web.UI.WebControls.Table> controle, que é herdada do <xref:System.Web.UI.WebControls.WebControl> classe base.  
+  
+ [!code-aspx-csharp[Classic WebControl.BorderColor Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.BorderColor Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.BorderColor Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.BorderColor Example/VB/sourcevb.aspx#1)]  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControl.BorderProperties#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/CS/borderpropertiescs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControl.BorderProperties#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/VB/borderpropertiesvb.aspx#1)]  
+[!code-aspx-csharp[System.Web.UI.WebControl.BorderProperties#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/CS/borderpropertiescs.aspx#3)]
+[!code-aspx-vb[System.Web.UI.WebControl.BorderProperties#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/VB/borderpropertiesvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de borda do controle de servidor Web.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.BorderStyle" />. O padrão é <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade para especificar o estilo de borda para o controle de servidor Web. Essa propriedade é definida usando um do <xref:System.Web.UI.WebControls.BorderStyle> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Estilo de borda|Descrição|  
+|------------------|-----------------|  
+|`NotSet`|O estilo de borda não está definido.|  
+|`None`|Nenhuma borda|  
+|`Dotted`|Uma borda de linha pontilhada.|  
+|`Dashed`|Uma borda de linha tracejada.|  
+|`Solid`|Uma borda de linha sólida.|  
+|`Double`|Uma borda de uma linha sólida dupla.|  
+|`Groove`|Uma borda chanfrada para uma aparência de borda em baixo relevo.|  
+|`Ridge`|Uma borda ondulada para uma aparência de borda.|  
+|`Inset`|Uma borda em baixo relevo para uma aparência de controle em baixo-relevo.|  
+|`Outset`|Uma borda em alto relevo para uma aparência de controle em alto relevo.|  
+  
+> [!NOTE]
+>  Essa propriedade não será renderizado em navegadores anteriores ao Microsoft Internet Explorer 4 para qualquer controle de servidor Web. Não há nenhum equivalente em HTML 3.2.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como definir a <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade o <xref:System.Web.UI.WebControls.Table> controle, que é herdada do <xref:System.Web.UI.WebControls.WebControl> classe base.  
+  
+ [!code-aspx-csharp[Classic WebControl.BorderStyle Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.BorderStyle Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.BorderStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.BorderStyle Example/VB/sourcevb.aspx#1)]  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControl.BorderProperties#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/CS/borderpropertiescs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControl.BorderProperties#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/VB/borderpropertiesvb.aspx#1)]  
+[!code-aspx-csharp[System.Web.UI.WebControl.BorderProperties#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/CS/borderpropertiescs.aspx#3)]
+[!code-aspx-vb[System.Web.UI.WebControl.BorderProperties#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/VB/borderpropertiesvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.Unit BorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da borda do controle de servidor Web.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> que representa a largura da borda do controle de servidor Web. O valor padrão é <see cref="F:System.Web.UI.WebControls.Unit.Empty" />, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A> propriedade para especificar uma largura de borda para um controle.  
+  
+> [!NOTE]
+>  Esta propriedade não funciona com todos os controles de servidor Web. Aplica-se somente a controles que são exibidos como uma tabela, como <xref:System.Web.UI.WebControls.Table> e <xref:System.Web.UI.WebControls.DataGrid>.  
+  
+ Essa propriedade é definida com um <xref:System.Web.UI.WebControls.Unit> objeto. Se o <xref:System.Web.UI.WebControls.Unit.Value%2A> propriedade o <xref:System.Web.UI.WebControls.Unit> contém um número negativo, uma exceção será lançada.  
+  
+> [!NOTE]
+>  A largura de borda pode ser expresso apenas em pixels para navegadores anteriores ao Microsoft Internet Explorer versão 5. Todos os tipos de unidade têm suporte no Microsoft Internet Explorer versão 5 e posterior. Consulte o controle específico para obter detalhes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como definir a <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A> propriedade o <xref:System.Web.UI.WebControls.Table> controle, herdado do <xref:System.Web.UI.WebControls.WebControl> classe base.  
+  
+ [!code-aspx-csharp[Classic WebControl.BorderWidth Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.BorderWidth Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.BorderWidth Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.BorderWidth Example/VB/sourcevb.aspx#1)]  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControl.BorderProperties#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/CS/borderpropertiescs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControl.BorderProperties#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/VB/borderpropertiesvb.aspx#1)]  
+[!code-aspx-csharp[System.Web.UI.WebControl.BorderProperties#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/CS/borderpropertiescs.aspx#3)]
+[!code-aspx-vb[System.Web.UI.WebControl.BorderProperties#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControl.BorderProperties/VB/borderpropertiesvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A largura da borda especificada é um valor negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style ControlStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style ControlStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.ControlStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo de um controle de servidor Web. Essa propriedade é usada principalmente por desenvolvedores de controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> que encapsula as propriedades de aparência do controle do servidor Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.ControlStyle%2A> propriedade encapsula todas as propriedades do <xref:System.Web.UI.WebControls.WebControl> classe que especificar a aparência do controle, como <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A> e <xref:System.Web.UI.WebControls.WebControl.Font%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlStyleCreated">
+      <MemberSignature Language="C#" Value="public bool ControlStyleCreated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlStyleCreated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.ControlStyleCreated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Web.UI.WebControls.Style" /> objeto foi criado para o <see cref="P:System.Web.UI.WebControls.WebControl.ControlStyle" /> propriedade. Essa propriedade é usada principalmente por desenvolvedores de controle.</summary>
+        <value>
+          <see langword="true" />Se um <see cref="T:System.Web.UI.WebControls.Style" /> objeto foi criado para o <see cref="P:System.Web.UI.WebControls.WebControl.ControlStyle" /> propriedade; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyBaseAttributes">
+      <MemberSignature Language="C#" Value="public void CopyBaseAttributes (System.Web.UI.WebControls.WebControl controlSrc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyBaseAttributes(class System.Web.UI.WebControls.WebControl controlSrc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.CopyBaseAttributes(System.Web.UI.WebControls.WebControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlSrc" Type="System.Web.UI.WebControls.WebControl" />
+      </Parameters>
+      <Docs>
+        <param name="controlSrc">Um <see cref="T:System.Web.UI.WebControls.WebControl" /> que representa o controle de origem com as propriedades a serem copiados para o controle de servidor Web que este método é chamado de.</param>
+        <summary>Copia as propriedades que não é encapsuladas pelo <see cref="P:System.Web.UI.WebControls.WebControl.Style" /> objeto de controle do servidor Web especificado para o controle de servidor Web que este método é chamado de. Esse método é usado principalmente por desenvolvedores de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.CopyBaseAttributes%2A> método copia o <xref:System.Web.UI.WebControls.WebControl.AccessKey%2A>, <xref:System.Web.UI.WebControls.WebControl.Enabled%2A>, <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A>, <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A>, e <xref:System.Web.UI.WebControls.WebControl.Attributes%2A> as propriedades de controle do servidor Web especificado para que este método é chamado de controle de servidor Web. Isso é normalmente usado em casos onde um controle de servidor da Web funciona criando novos controles dinamicamente enquanto está usando os controles e renderização. Esse método é útil nessa situação, pois ele copia todas as propriedades do servidor Web não é encapsulado pelo <xref:System.Web.UI.WebControls.Style> objeto, para que possam ser colocados no controle externo de uma marca que está sendo processado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="controlSrc" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlStyle">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.Style CreateControlStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.Style CreateControlStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.CreateControlStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria o objeto de estilo que é usado internamente pelo <see cref="T:System.Web.UI.WebControls.WebControl" /> propriedades relacionadas a classe para implementar todos os estilos. Esse método é usado principalmente por desenvolvedores de controle.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.Style" /> que é usado para implementar todas as propriedades relacionadas ao estilo do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.CreateControlStyle%2A> método é usado para criar o estilo de propriedades relacionadas ao objeto que é usado internamente para implementar todos os estilos. Classes derivadas podem substituir este método para criar um estilo que é apropriado para a classe. Esse método é usado principalmente por desenvolvedores de controles.  
+  
+ **Observação** os desenvolvedores de controle devem retornar um <xref:System.Web.UI.WebControls.Style> que deriva o <xref:System.Web.UI.WebControls.Style> que retorna o controle base. Ele não é possível supor que o <xref:System.Web.UI.WebControls.WebControl.ControlStyle%2A> é de um tipo específico de estilo, como um controle derivado pode retornar um tipo diferente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CssClass">
+      <MemberSignature Language="C#" Value="public virtual string CssClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CssClass" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.CssClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.CssClassProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a classe CSS (Folha de Estilos em Cascata) renderizada pelo controle do servidor Web no cliente.</summary>
+        <value>A classe CSS renderizada pelo controle do servidor Web no cliente. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> propriedade para especificar a classe CSS para renderizar no cliente para o controle de servidor Web. Essa propriedade será renderizado em navegadores para todos os controles. Ele sempre será processado como o atributo de classe, independentemente do navegador.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ Por exemplo, suponha que você tem a seguinte declaração de controle de servidor Web:  
+  
+```  
+<asp:TextBox id="TextBox1" ForeColor="Red" CssClass="class1" />  
+```  
+  
+ O HTML a seguir é processado no cliente para a declaração anterior de controle de servidor Web:  
+  
+```  
+<input type=text class="class1" style="ForeColor:red">  
+```  
+  
+ Se você usar folhas de estilo em cascata (CSS) para personalizar a aparência de um controle, use os estilos internos ou um arquivo separado CSS, mas não ambos. Usando estilos internos e um arquivo separado CSS pode causar resultados inesperados.  
+  
+> [!NOTE]
+>  Em navegadores que não oferecem suporte a CSS, definindo o <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> propriedade não terá efeito.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como usar o <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> propriedade para alterar o estilo de um <xref:System.Web.UI.WebControls.HyperLink> controle.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic WebControl.CssClass Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.CssClass Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.CssClass Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.CssClass Example/VB/sourcevb.aspx#1)]
+ [!code-xml[Classic WebControl.CssClass Example#1](~/samples/snippets/common/VS_Snippets_WebNet/Classic WebControl.CssClass Example/Common/source.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisabledCssClass">
+      <MemberSignature Language="C#" Value="public static string DisabledCssClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string DisabledCssClass" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.DisabledCssClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a classe CSS a ser aplicada ao elemento HTML renderizado quando o controle é desabilitado.</summary>
+        <value>A classe CSS que deve ser aplicada ao elemento HTML renderizado quando o controle é desabilitado. O valor padrão é "aspNetDisabled".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser usada para alterar o nome que é renderizado para o <xref:System.Web.UI.WebControls.WebControl.DisabledCssClass%2A> propriedade de controles da Web individuais. Por padrão, essa propriedade retorna "aspNetDisabled".  
+  
+ Quando <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A> é substituído em uma classe derivada para retornar `false`, o valor da <xref:System.Web.UI.WebControls.WebControl.DisabledCssClass%2A> propriedade é processada como o valor da `class` atributo do elemento HTML para o controle. Nesse caso, se houver um valor de <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> propriedade, ambas as classes CSS serão aplicadas ao elemento HTML renderizado. O `class` atributo será composto do valor da <xref:System.Web.UI.WebControls.WebControl.DisabledCssClass%2A> propriedade seguido pelo valor da <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> propriedade, separada por um espaço.  
+  
+ Essa propriedade é estática, o que significa que você pode definir apenas para o <xref:System.Web.UI.WebControls.WebControl> classe. Qualquer valor que você defina-a como é usado para todos os controles em um aplicativo Web. Não é possível especificar valores diferentes para os controles individuais.  
+  
+ Se você quiser usar um nome de classe diferente do valor padrão de "aspNetDisabled", você normalmente coloque o código para fazer isso no `Application_Start` método do arquivo global. asax, conforme mostrado no exemplo a seguir:  
+  
+```vb  
+Private Sub Application_Start(  
+    ByVal sender As Object, ByVal e As EventArgs)  
+    WebControl.DisabledCssClass = "customDisabledClassName"  
+End Sub  
+```  
+  
+```csharp  
+void Application_Start(object sender, EventArgs e)  
+{  
+    WebControl.DisabledCssClass = "customDisabledClassName";  
+}  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o HTML renderizado para a desabilitado <xref:System.Web.UI.WebControls.Label> controlar quando o <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A> é de propriedade `false`, quando o <xref:System.Web.UI.WebControls.WebControl.DisabledCssClass%2A> propriedade tem seu valor padrão e quando o <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> propriedade está vazia.  
+  
+ `<span id="Label1" class="aspNetDisabled">Test</span>`  
+  
+ A exemplo a seguir mostra renderizada o HTML sob as mesmas condições, exceto que o <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> propriedade possui o valor "SampleStyle"`:`  
+  
+ `<span id="Label1" class="aspNetDisabled SampleStyle">Test</span>`  
+  
+ Para obter mais informações, consulte a propriedade <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public virtual bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle do servidor Web está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o controle estiver habilitado; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade de um controle é definida como `false`, normalmente, o controle aparece esmaecido. Se o controle é um elemento de entrada, o navegador impede que o usuário clicando ou digitando nele. Elementos HTML que são renderizados para um controle de servidor são marcados como desativado, definindo suas `disabled` atributo ou o CSS `class` atributo. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A> e <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion%2A>.  
+  
+ Essa propriedade se propaga para baixo a hierarquia de controle. Se você desabilitar um controle de contêiner, os controles filho dentro do contêiner também são desabilitados. Para obter mais informações, consulte a propriedade <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A>.  
+  
+> [!NOTE]
+>  Em um controle composto personalizado, esse comportamento de herança não se aplica a controles que ainda não tem criado seu filho controles. Você deve definir o estado habilitado do filho controles quando eles são criados ou substituam o <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade para chamar o <xref:System.Web.UI.Control.EnsureChildControls%2A> método.  
+  
+> [!NOTE]
+>  Desabilitar um controle impede apenas a interação com o controle de usuário por meio do navegador da interface do usuário. É possível que um usuário crie uma solicitação que envia um postback que é processado pela página, mesmo se os controles na página estão desabilitados. Antes de processar uma solicitação de postback, verifique para certificar-se de que o controle está visível e habilitado.  
+  
+ Nem todos os controles oferecem suporte a essa propriedade. Consulte os controles individuais para obter detalhes.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como habilitar e desabilitar um <xref:System.Web.UI.WebControls.TextBox> controle, herdado do <xref:System.Web.UI.WebControls.WebControl> classe base definindo seu <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade programaticamente.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic WebControl.Enabled Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.Enabled Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.Enabled Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.Enabled Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os temas se aplicam a esse controle.</summary>
+        <value>
+          <see langword="true" /> para usar temas; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.EnableTheming%2A> propriedade indica se os temas estão habilitados para um controle especificado. Quando o <xref:System.Web.UI.WebControls.WebControl.EnableTheming%2A> é de propriedade `true`, o diretório de tema para o aplicativo é procurado capas de controle aplicar. Se nenhuma capa de controle específico existe no diretório do tema, capas não são aplicadas.  
+  
+ Quando o <xref:System.Web.UI.WebControls.WebControl.EnableTheming%2A> é de propriedade `false`, o diretório de tema não é pesquisado e o conteúdo do <xref:System.Web.UI.WebControls.WebControl.SkinID%2A> propriedade não é usada.  
+  
+ Um controle pode substituir o <xref:System.Web.UI.WebControls.WebControl.EnableTheming%2A> valor definido pelo seu controle pai ou o conteúdo da página. Por exemplo, se um controle pai tem o <xref:System.Web.UI.WebControls.WebControl.EnableTheming%2A> propriedade definida como `false`, você pode aplicar seletivamente os temas para controles filhos que estão contidos dentro do pai, definindo a <xref:System.Web.UI.WebControls.WebControl.EnableTheming%2A> propriedade `true` nos controles filho individuais.  
+  
+ Temas podem ser habilitados na página, o contêiner ou o nível de controle. Quando o tema está desabilitado no nível de página ou contêiner, temas estão desabilitados para todos os controles que estão contidos no página ou contêiner.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.FontInfo Font { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.FontInfo Font" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as propriedades de fonte associadas ao controle do servidor Web.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.FontInfo" /> que representa as propriedades de fonte do controle do servidor Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.Font%2A> propriedade para especificar as propriedades de fonte do controle do servidor Web. Essa propriedade inclui subpropriedades que podem ser acessadas declarativamente na forma de `Property-Subproperty` (por exemplo `Font-Bold`) ou por meio de programação na forma de `Property.Subproperty` (por exemplo `Font.Bold`).  
+  
+ Apenas um subpropriedade será renderizado em navegadores antes do Microsoft Internet Explorer versão 4 para todos os controles. Eles são: <xref:System.Web.UI.WebControls.FontInfo.Bold%2A>, <xref:System.Web.UI.WebControls.FontInfo.Italic%2A>, <xref:System.Web.UI.WebControls.FontInfo.Name%2A>, <xref:System.Web.UI.WebControls.FontInfo.Names%2A>, <xref:System.Web.UI.WebControls.FontInfo.Strikeout%2A>, <xref:System.Web.UI.WebControls.FontInfo.Underline%2A>, e <xref:System.Web.UI.WebControls.FontInfo.Size%2A> (mas só chamado tamanhos de fonte, como `Small`, `Smaller`e assim por diante, funcionará).  
+  
+> [!NOTE]
+>  Embora essas subpropriedades renderizam em navegadores antes da versão 4 do Microsoft Internet Explorer, o HTML que é renderizado é diferente de navegadores mais recentes. Em vez de renderização como atributos de estilo, esses subpropriedades são renderizadas como elementos HTML, como `<b>` e `<font>`.  
+  
+ É uma subpropriedade que não será renderizado em navegadores anteriores para todos os controles <xref:System.Web.UI.WebControls.FontInfo.Overline%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como usar o <xref:System.Web.UI.WebControls.WebControl.Font%2A> propriedade para coletar informações de fonte de um <xref:System.Web.UI.WebControls.Label> controle.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic WebControl.Font Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.Font Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.Font Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.Font Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.WebColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano (normalmente a cor do texto) do controle de servidor Web.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano do controle. O padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A> propriedade para especificar a cor de primeiro plano do controle do servidor Web. Normalmente, a cor de primeiro plano é a cor do texto. Essa propriedade será renderizado em navegadores anteriores ao Microsoft Internet Explorer versão 4 para todos os controles, exceto o <xref:System.Web.UI.WebControls.Image>, <xref:System.Web.UI.WebControls.AdRotator>, <xref:System.Web.UI.WebControls.HyperLink> e <xref:System.Web.UI.WebControls.LinkButton>.  
+  
+> [!NOTE]
+>  Em navegadores anteriores ao Microsoft Internet Explorer versão 4, essa propriedade é processada como `<font>` marcas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como definir a <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A> propriedade o <xref:System.Web.UI.WebControls.Table> controle, herdado do <xref:System.Web.UI.WebControls.WebControl> classe base.  
+  
+ [!code-aspx-csharp[Classic WebControl.ForeColor Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.ForeColor Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.ForeColor Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.ForeColor Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAttributes">
+      <MemberSignature Language="C#" Value="public bool HasAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.HasAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle tem atributos definidos.</summary>
+        <value>
+          <see langword="true" /> se o controle tiver atributos definidos; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.HasAttributes%2A> propriedade retorna `true` quando o <xref:System.Web.UI.WebControls.WebControl> instância tem pares de nome/valor do atributo. Os pares de atributo podem ser definidos na propriedade ou no estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.Unit Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Height" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura do controle do servidor Web.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> que representa a altura do controle. O padrão é <see cref="F:System.Web.UI.WebControls.Unit.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.Height%2A> propriedade para especificar a altura do controle do servidor Web.  
+  
+> [!NOTE]
+>  Essa propriedade não processa para todos os controles em navegadores anteriores ao Microsoft Internet Explorer versão 4. Controles que não processam essa propriedade em navegadores anteriores incluem <xref:System.Web.UI.WebControls.Label>, <xref:System.Web.UI.WebControls.HyperLink>, <xref:System.Web.UI.WebControls.LinkButton>e os controles de validação. O <xref:System.Web.UI.WebControls.CheckBoxList>, <xref:System.Web.UI.WebControls.RadioButtonList> e <xref:System.Web.UI.WebControls.DataList> também não processam essa propriedade em navegadores anteriores quando seus `RepeatLayout` está definida como `RepeatLayout.Flow`. Além disso, somente os tipos de unidade de `Pixel` e `Percentage` são suportados em navegadores anteriores.  
+  
+ Como essa propriedade é HTML padrão, controles de servidor Web que mostram como uma tabela, como <xref:System.Web.UI.WebControls.Table> e <xref:System.Web.UI.WebControls.DataGrid>, não dão suporte a essa propriedade em navegadores anteriores ao Microsoft Internet Explorer versão 4.  
+  
+> [!NOTE]
+>  Para definir o <xref:System.Web.UI.WebControls.WebControl.Height%2A> tipo de propriedade para uma unidade diferente do padrão de `Pixel`, você deve criar um novo tipo de unidade específica para o tipo de unidade que você deseja. Por exemplo, para definir um controle <xref:System.Web.UI.WebControls.WebControl.Height%2A> propriedade para um valor de porcentagem de 100, você pode fazer o seguinte:  
+>   
+>  `myWebControl.Width = Unit.Percentage(100);`  
+>   
+>  Para obter mais informações sobre os tipos de unidade disponíveis para o <xref:System.Web.UI.WebControls.WebControl.Height%2A> propriedade, consulte o <xref:System.Web.UI.WebControls.Unit> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como definir declarativamente o <xref:System.Web.UI.WebControls.WebControl.Height%2A> propriedade o <xref:System.Web.UI.WebControls.Table> controle, herdado do <xref:System.Web.UI.WebControls.WebControl> classe base.  
+  
+ [!code-aspx-csharp[Classic WebControl.Height Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.Height Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.Height Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.Height Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A altura foi definida como um valor negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="protected bool IsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o objeto <see cref="T:System.Web.UI.WebControls.WebControl" /> estiver habilitado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma propriedade somente leitura. Se você quiser desabilitar um controle, você definir sua <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade `false`.  
+  
+ Se um controle não está contido por outro controle, o valor da <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A> propriedade é sempre o mesmo que o valor da <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A> propriedade tem um valor que é diferente de <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade se um controle é um filho de outro controle e se todas as circunstâncias a seguir forem verdadeiras:  
+  
+-   O valor de <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade ou o <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A> é de propriedade do controle pai `false`.  
+  
+-   O <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade do controle filho é definida como `true`.  
+  
+ Nessa situação, o controle filho herda o estado desabilitado do controle pai. O <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A> retorna a propriedade do controle filho `false` para indicar que o controle é desabilitado, embora o controle filho não foi desabilitado explicitamente, definindo seu <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade `false`. O controle pai propriamente dito pode ter seu <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade definida como `true` , mas pode herdar o estado desabilitado de seu pai e assim por diante.  
+  
+ Quando o ASP.NET processa elementos HTML para um controle de servidor, ele marca os elementos como desativado, definindo suas `disabled` atributo ou o CSS `class` atributo. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A> e <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um objeto que representa o estado do controle a ser restaurado.</param>
+        <summary>Restaura informações de estado de exibição de uma solicitação anterior que foi salva com o método <see cref="M:System.Web.UI.WebControls.WebControl.SaveViewState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado basicamente pela infraestrutura do .NET Framework e não se destina a ser usado diretamente no seu código. No entanto, os desenvolvedores de controle podem substituir este método para especificar como um controle de servidor personalizado restaura o estado de exibição. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ O <xref:System.Web.UI.WebControls.WebControl.LoadViewState%2A> método restaura as informações de estado de exibição que foi salvo durante anterior <xref:System.Web.UI.WebControls.WebControl.SaveViewState%2A> solicitação. O <xref:System.Web.UI.WebControls.WebControl> classe substitui a base de <xref:System.Web.UI.Control.LoadViewState%2A> método para tratar o <xref:System.Web.UI.Control.ViewState%2A>, <xref:System.Web.UI.WebControls.WebControl.Style%2A>, e <xref:System.Web.UI.WebControls.WebControl.Attributes%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeStyle">
+      <MemberSignature Language="C#" Value="public void MergeStyle (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MergeStyle(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.MergeStyle(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Um <see cref="T:System.Web.UI.WebControls.Style" /> que representa o estilo a ser copiado.</param>
+        <summary>Copia os elementos não vazios do estilo especificado para o controle da Web, mas não substituirá os elementos de estilo existentes do controle. Esse método é usado principalmente por desenvolvedores de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebControl.MergeStyle%2A> método para mesclar um estilo com o estilo de um <xref:System.Web.UI.WebControls.DataGrid> controle.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[WebControlMergeStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebControlMergeStyle/CS/webcontrolmergestylecs.aspx#1)]
+ [!code-aspx-vb[WebControlMergeStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebControlMergeStyle/VB/webcontrolmergestylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> que recebe o conteúdo do controle.</param>
+        <summary>Renderiza o controle para o gravador de HTML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.Render%2A> método é usado principalmente por desenvolvedores de controle.  
+  
+ O <xref:System.Web.UI.WebControls.WebControl.Render%2A> método envia o controle da Web especificado <xref:System.Web.UI.HtmlTextWriter> instância. Substitua este método para enviar seu controle de servidor personalizado para o cliente.  
+  
+ O <xref:System.Web.UI.WebControls.WebControl.Render%2A> método primeiro chama o <xref:System.Web.UI.WebControls.WebControl.RenderBeginTag%2A> método, o <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A> método e, finalmente, o <xref:System.Web.UI.WebControls.WebControl.RenderEndTag%2A> para enviar o controle ao cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginTag">
+      <MemberSignature Language="C#" Value="public virtual void RenderBeginTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderBeginTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Renderiza a marca de abertura HTML do controle para o gravador especificado. Esse método é usado principalmente por desenvolvedores de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso se torna público para que outros controles podem processar vários controles entre as marcas de abertura e fechamento de um controle de servidor Web.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected virtual void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Renderiza o conteúdo do controle no gravador especificado. Esse método é usado principalmente por desenvolvedores de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A> método para renderizar o conteúdo do controle entre as marcas de início e de término. A implementação padrão desse método processa qualquer filho controles.  
+  
+ Se o controle tem controles filho, você deve chamar a base de <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A> método ou chamada de <xref:System.Web.UI.Control.RenderChildren%2A> no ponto onde você deseja que os controles filho a ser renderizada para o gravador de texto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="public virtual void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Renderiza o HTML que marca do controle de fechamento para o gravador especificado. Esse método é usado principalmente por desenvolvedores de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso se torna público para que outros controles podem processar vários controles entre as marcas de abertura e fechamento de um controle de servidor Web.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva qualquer estado que foi modificado depois que o método <see cref="M:System.Web.UI.WebControls.Style.TrackViewState" /> foi invocado.</summary>
+        <returns>Um objeto que contém o estado de exibição atual do controle; Caso contrário, se não houver nenhum estado de exibição associado ao controle <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.SaveViewState%2A> método é usado principalmente por desenvolvedores de controle.  
+  
+ Estado de exibição é os cumulativos valores das propriedades de um controle de servidor. Esses valores são colocados automaticamente no <xref:System.Web.UI.Control.ViewState%2A> propriedade para o controle de servidor, que é uma instância do <xref:System.Web.UI.StateBag> classe. O <xref:System.Web.UI.Control.ViewState%2A> o valor da propriedade, em seguida, é mantido em um objeto de cadeia de caracteres depois de salvar o estágio do ciclo de vida para o controle de servidor de estado. Para obter mais informações, consulte [visão geral do ciclo de vida de página ASP.NET](http://msdn.microsoft.com/library/7949d756-1a79-464e-891f-904b1cfc7991).  
+  
+ Quando o estado de exibição for salvo, esse objeto de cadeia de caracteres é retornado ao cliente como uma variável que é armazenada em uma HTML oculta `input` elemento. Quando você criar controles de servidor personalizado, você pode melhorar a eficiência, substituindo o <xref:System.Web.UI.WebControls.WebControl.SaveViewState%2A> método e modificando o <xref:System.Web.UI.Control.ViewState%2A> propriedade para o controle de servidor. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkinID">
+      <MemberSignature Language="C#" Value="public override string SkinID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkinID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.SkinID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a capa a ser aplicada ao controle.</summary>
+        <value>O nome da capa para aplicar ao controle. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Capas disponíveis para um controle estão contidas em um ou mais arquivos de capa em um diretório do tema. O <xref:System.Web.UI.WebControls.WebControl.SkinID%2A> propriedade especifica qual essas capas para aplicar ao controle. Uma capa é específica para um determinado controle; não é possível compartilhar capa configuração entre os controles de tipos diferentes.  
+  
+ Se você não definir o <xref:System.Web.UI.WebControls.WebControl.SkinID%2A> propriedade, um controle usa a capa padrão se um for definido. Por exemplo, se uma capa sem uma ID é definida para um <xref:System.Web.UI.WebControls.Image> de controle, em seguida, aquela aparência se aplica a todos os <xref:System.Web.UI.WebControls.Image> controles que fazem referência explicitamente uma capa por ID e que não estão definidas como desabilitar temas. Se uma capa com uma ID é definida para um <xref:System.Web.UI.WebControls.Image> controlar, e que aparência se aplica apenas ao <xref:System.Web.UI.WebControls.Image> controla cujo <xref:System.Web.UI.WebControls.WebControl.SkinID%2A> está definido para essa ID.  
+  
+ Se os arquivos de capa em um diretório de tema não contêm uma capa com especificado <xref:System.Web.UI.WebControls.WebControl.SkinID%2A>, um <xref:System.ArgumentException> exceção em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A capa especificada na propriedade <see cref="P:System.Web.UI.WebControls.WebControl.SkinID" /> não existe no tema.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Web.UI.CssStyleCollection Style { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.CssStyleCollection Style" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.CssStyleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de atributos de texto que serão renderizados como um atributo de estilo na marca externa do controle de servidor Web.</summary>
+        <value>Um <see cref="T:System.Web.UI.CssStyleCollection" /> que contém os atributos de estilo HTML a serem renderizados na marca externa do controle de servidor Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.Style%2A> coleção para gerenciar os atributos de estilo renderizados na marca externa do controle do servidor Web. Essa propriedade será renderizado em todos os navegadores para todos os controles.  
+  
+> [!NOTE]
+>  Navegadores que não oferecem suporte a atributos de estilo irá ignorar o HTML renderizado.  
+  
+ Quaisquer valores de estilo é definido por meio das propriedades de estilo com rigidez de tipos (por exemplo, `BackColor="Red"`) substituirá automaticamente um valor correspondente na coleção.  
+  
+ Valores definidos nesta coleção não são refletidos automaticamente pelas propriedades de estilo com rigidez de tipos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como usar o <xref:System.Web.UI.WebControls.WebControl.Style%2A> propriedade para ocultar ou exibir um <xref:System.Web.UI.WebControls.Label> controle em uma página.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic WebControl.Style Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.Style Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.Style Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle deve definir o atributo <see langword="disabled" /> do elemento HTML renderizado para "desabilitado" quando a propriedade do controle <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" /> é <see langword="false" />.</summary>
+        <value>Sempre <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em classes derivadas, essa propriedade indica como ASP.NET devem renderizar HTML para um controle quando o controle está desabilitado.  
+  
+## <a name="disabling-aspnet-web-controls"></a>Controla a desabilitação da Web do ASP.NET  
+ Quando o <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade de um controle ASP.NET está definida como `false` (ou seja, quando o controle é desabilitado), a intenção é que ASP.NET deve processar o controle na página, mas exibi-lo em um estado desabilitado (esmaecido normalmente). Se um controle pai estiver desabilitado, filhos desse controle também são exibidos como desabilitado. Nesse caso, o controle filho <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A> está definida como `false`, mesmo que seu <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> propriedade pode ser definida como `true`.  
+  
+ No ASP.NET 3.5 e versões anteriores, quando um controle <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A> é de propriedade `false`, ASP.NET define o `disabled` atributo como "desabilitado" no elemento HTML que ele renderiza para o controle. No entanto, o padrão do HTML 4.01 permite que o `disabled` atributo apenas em determinados elementos que são usados para entrada do usuário. Por exemplo, o `disabled` atributo é permitido para `input` elementos, mas não para `span` elementos.  
+  
+ A maioria dos navegadores suportam uma aparência padrão desativado para somente exibição elementos que têm `disabled` atributos. No entanto, para estar em conformidade com padrões HTML, por padrão o ASP.NET 4 omite atributos inválidos.  
+  
+## <a name="how-the-supportsdisabledattribute-property-is-used"></a>Como a propriedade SupportsDisabledAttribute é usada  
+ Se o <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A> é de propriedade `true`, o ASP.NET processa um `disabled` atributo quando o controle está desabilitado. Se essa propriedade for `false`, o ASP.NET processa um `class` atributo quando o controle está desabilitado.  
+  
+ Classes derivadas substituem essa propriedade para retornar `false` se todas as seguintes condições forem verdadeiras:  
+  
+-   O controle renderiza um elemento HTML que não oferece suporte a `disabled` atributo.  
+  
+-   O <xref:System.Web.UI.Control.RenderingCompatibility%2A> propriedade indica um número de versão do ASP.NET inferior à 4.0.  
+  
+ O <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A> propriedade não necessariamente indica se o elemento HTML que é renderizado para um controle oferece suporte (permite) o `disabled` atributo. Se um controle <xref:System.Web.UI.Control.RenderingCompatibility%2A> propriedade indica um número de versão do ASP.NET inferior à 4.0, o valor do controle <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A> pode retornar a propriedade `true` mesmo se o HTML renderizado não oferece suporte a `disabled` atributo.  
+  
+## <a name="backward-compatibility-for-disabled-controls"></a>Compatibilidade com versões anteriores para controles desabilitados  
+ Quando você usa o Visual Studio para atualizar um projeto da Web para ASP.NET 4 de uma versão anterior, o Visual Studio define automaticamente o `controlRenderingCompatibilityVersion` atributo no arquivo Web. config (que define o <xref:System.Web.UI.Control.RenderingCompatibility%2A> propriedade) para o número da versão anterior. Porque o <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A> propriedade sempre retorna `true` quando o <xref:System.Web.UI.Control.RenderingCompatibility%2A> é inferior à 4.0, isso faz com que os controles da Web renderizar HTML para controles desabilitados como ocorria na versão anterior. Se você quiser um site atualizado para renderizar HTML usando o algoritmo introduzido no ASP.NET 4, você pode alterar ou remover o `controlRenderingCompatibilityVersion` atributo. Para obter mais informações, consulte a propriedade <xref:System.Web.UI.Control.RenderingCompatibility%2A>.  
+  
+## <a name="setting-a-disabled-appearance-by-using-css"></a>Definindo uma aparência desabilitada com o uso de CSS  
+ Se o <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A> é de propriedade de um controle `false` e o controle está desabilitado, o ASP.NET define o `class` atributo do elemento HTML renderizado para o valor da <xref:System.Web.UI.WebControls.WebControl.DisabledCssClass%2A?displayProperty=nameWithType> propriedade. O valor padrão de <xref:System.Web.UI.WebControls.WebControl.DisabledCssClass%2A?displayProperty=nameWithType> propriedade é "aspNetDisabled".  
+  
+ Para fornecer uma aparência desativada para controles desabilitados, você deve definir uma regra de CSS para a classe que é representada pelo valor de <xref:System.Web.UI.WebControls.WebControl.DisabledCssClass%2A?displayProperty=nameWithType> propriedade.  
+  
+ O elemento HTML que é renderizado para um controle pode ter mais de um valor em seu `class` atributo se houver um valor em seu <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> propriedade. Para obter mais informações, consulte a propriedade <xref:System.Web.UI.WebControls.WebControl.DisabledCssClass%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a marcação para um desabilitado <xref:System.Web.UI.WebControls.Label> controle:  
+  
+ `<asp:Label id="Label1" runat="server" Text="Test" Enabled="false"/>`  
+  
+ No ASP.NET 3.5 e versões anteriores, essa marcação processa o HTML a seguir:  
+  
+ `<span id="Label1" disabled="disabled">Test</span>`  
+  
+ No ASP.NET 4, se o valor da <xref:System.Web.UI.Control.RenderingCompatibility%2A> propriedade é 4.0 ou posterior e se o <xref:System.Web.UI.WebControls.WebControl.DisabledCssClass%2A> propriedade é definida como seu valor padrão, a mesma marcação renderiza HTML a seguir:  
+  
+ `<span id="Label1" class="aspNetDisabled">Test</span>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.GetAttribute">
+      <MemberSignature Language="C#" Value="string IAttributeAccessor.GetAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Web.UI.IAttributeAccessor.GetAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.System#Web#UI#IAttributeAccessor#GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do atributo.</param>
+        <summary>Obtém um atributo do controle da Web com o nome especificado.</summary>
+        <returns>O valor do atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.System%23Web%23UI%23IAttributeAccessor%23GetAttribute%2A> método é uma implementação de membro de interface explícita. Ele pode ser usado somente quando a instância do <xref:System.Web.UI.WebControls.WebControl> classe é convertida em um <xref:System.Web.UI.IAttributeAccessor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.SetAttribute">
+      <MemberSignature Language="C#" Value="void IAttributeAccessor.SetAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IAttributeAccessor.SetAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.System#Web#UI#IAttributeAccessor#SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O componente de nome do par de nome/valor do atributo.</param>
+        <param name="value">O componente de valor do par de nome/valor do atributo.</param>
+        <summary>Define um atributo do controle da Web para o nome especificado e o valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.System%23Web%23UI%23IAttributeAccessor%23SetAttribute%2A> método é uma implementação de membro de interface explícita. Ele pode ser usado somente quando a instância do <xref:System.Web.UI.WebControls.WebControl> classe é convertida em um <xref:System.Web.UI.IAttributeAccessor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndex">
+      <MemberSignature Language="C#" Value="public virtual short TabIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 TabIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.TabIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice de tabulação do controle do servidor Web.</summary>
+        <value>O índice de tabulação do controle de servidor Web. O padrão é <see langword="0" />, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> para especificar ou determinar o índice do guia de um controle de servidor Web na página de Web Forms. Quando você pressiona o `Tab` chave, a ordem na qual o servidor Web recebe o foco é determinada pelo <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> propriedade de cada controle. Quando uma página for carregada inicialmente, o primeiro item que recebe foco quando a `Tab` tecla é pressionada a barra de endereço. Em seguida, os controles na página de Web Forms com guias para em ordem crescente, com base no valor da <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> propriedade de cada controle, começando com o valor positivo menor, diferente de zero. Se vários controles compartilharem o mesmo índice do guia, os controles irá receber foco na ordem em que eles são declarados na página de Web Forms. Por fim, controles que têm um índice de tabulação do zero com guias na ordem em que eles são declarados.  
+  
+> [!NOTE]
+>  Somente controles com um índice de tabulação diferente de zero processará o `tabindex` atributo.  
+  
+ Você pode remover um controle de servidor Web da ordem de tabulação, definindo o <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> propriedade com um valor negativo.  
+  
+> [!NOTE]
+>  Essa propriedade é suportada apenas no Internet Explorer 4 e posterior.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como usar o <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> propriedade o <xref:System.Web.UI.WebControls.WebControl> para definir a ordem de tabulação dos controles na página.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic WebControl.TabIndex Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.TabIndex Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.TabIndex Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.TabIndex Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice de tabulação especificado não está entre -32768 e 32767.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TagKey">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.HtmlTextWriterTag TagKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.HtmlTextWriterTag TagKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.TagKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor <see cref="T:System.Web.UI.HtmlTextWriterTag" /> que corresponde ao controle do servidor Web. Essa propriedade é usada principalmente por desenvolvedores de controle.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.HtmlTextWriterTag" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.TagKey%2A> propriedade para determinar a <xref:System.Web.UI.HtmlTextWriterTag> valor que está associado este controle de servidor Web. Essa propriedade é usada principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagName">
+      <MemberSignature Language="C#" Value="protected virtual string TagName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.TagName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da marca de controle. Essa propriedade é usada principalmente por desenvolvedores de controle.</summary>
+        <value>O nome da marca de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.TagName%2A> propriedade para determinar o nome da marca do controle associado a este controle de servidor Web. Essa propriedade é usada principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public virtual string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto exibido quando o ponteiro do mouse passa sobre o controle de servidor Web.</summary>
+        <value>O texto exibido quando o ponteiro do mouse passa sobre o controle de servidor Web. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A> propriedade para especificar o texto personalizado que é exibido quando o ponteiro do mouse passa sobre o controle de servidor Web.  
+  
+> [!NOTE]
+>  Essa propriedade é renderizada para todos os navegadores. No entanto, somente o Microsoft Internet Explorer exibirá essa propriedade como uma dica de ferramenta. Todos os outros navegadores irá ignorar essa propriedade.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como definir a <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A> propriedade o <xref:System.Web.UI.WebControls.Button> controle, que é herdada do <xref:System.Web.UI.WebControls.WebControl> classe base.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic WebControl.ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.ToolTip Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.ToolTip Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebControl.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o controle controlar alterações em seu estado de exibição para que eles podem ser armazenados no objeto de <see cref="P:System.Web.UI.Control.ViewState" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl.TrackViewState%2A> método é usado principalmente por desenvolvedores de controle.  
+  
+ O <xref:System.Web.UI.WebControls.WebControl.TrackViewState%2A> marca o ponto de partida no qual começar a rastreamento e salvar alterações para o estado de exibição para o controle. O <xref:System.Web.UI.WebControls.WebControl.TrackViewState%2A> método é chamado automaticamente pelo ASP.NET quando um controle de servidor é inicializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.Unit Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Width" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebControl.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura do controle de servidor Web.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> que representa a largura do controle. O padrão é <see cref="F:System.Web.UI.WebControls.Unit.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebControl.Width%2A> propriedade para especificar a largura do controle do servidor Web.  
+  
+> [!NOTE]
+>  Essa propriedade não processa para todos os controles em navegadores anteriores ao Microsoft Internet Explorer versão 4. Controles que não processam essa propriedade em navegadores anteriores incluem <xref:System.Web.UI.WebControls.Label>, <xref:System.Web.UI.WebControls.HyperLink>, <xref:System.Web.UI.WebControls.LinkButton>e os controles de validação. O <xref:System.Web.UI.WebControls.CheckBoxList>, <xref:System.Web.UI.WebControls.RadioButtonList> e <xref:System.Web.UI.WebControls.DataList> também não processam essa propriedade em navegadores anteriores quando seus `RepeatLayout` está definida como `RepeatLayout.Flow`. Além disso, somente os tipos de unidade de `Pixel` e `Percentage` são suportados em navegadores anteriores.  
+  
+ Como essa propriedade é HTML padrão, controles de servidor Web que mostram como uma tabela, como <xref:System.Web.UI.WebControls.Table> e <xref:System.Web.UI.WebControls.DataGrid>, não dão suporte a essa propriedade em navegadores anteriores ao Microsoft Internet Explorer versão 4.  
+  
+> [!NOTE]
+>  Para definir o <xref:System.Web.UI.WebControls.WebControl.Width%2A> tipo de propriedade declarativamente como uma unidade diferente do padrão de `Pixel`, você deve criar um novo tipo de unidade específica para o tipo de unidade que você deseja. Por exemplo, para definir um controle <xref:System.Web.UI.WebControls.WebControl.Width%2A> propriedade para um valor de porcentagem de 100, você pode fazer o seguinte:  
+>   
+>  `myWebControl.width = Unit.Percentage(100);`  
+>   
+>  Para obter mais informações sobre os tipos de unidade disponíveis para o <xref:System.Web.UI.WebControls.WebControl.Width%2A> propriedade, consulte o <xref:System.Web.UI.WebControls.Unit> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como definir declarativamente o <xref:System.Web.UI.WebControls.WebControl.Width%2A> propriedade o <xref:System.Web.UI.WebControls.Table> controle, herdado do <xref:System.Web.UI.WebControls.WebControl> classe base.  
+  
+ [!code-aspx-csharp[Classic WebControl.Width Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic WebControl.Width Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic WebControl.Width Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic WebControl.Width Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A largura do controle de servidor Web foi definida como um valor negativo.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

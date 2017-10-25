@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities.Presentation.Factories">
+  <Docs>
+    <summary>Contém fábricas que criam pares de atividade de envio/ReceiveReply e Receive/SendReply.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

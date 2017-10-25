@@ -1,0 +1,358 @@
+<Type Name="IOutputChannel" FullName="System.ServiceModel.Channels.IOutputChannel">
+  <TypeSignature Language="C#" Value="public interface IOutputChannel : System.ServiceModel.Channels.IChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOutputChannel implements class System.ServiceModel.Channels.IChannel, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IOutputChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define a interface que um canal deve implementar para enviar uma mensagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IOutputChannel> interface define variantes síncronos e assíncronos do <xref:System.ServiceModel.ClientBase%601.ChannelBase%601.System%23ServiceModel%23Channels%23IOutputChannel%23Send%2A> operação. Ele fornece um <xref:System.ServiceModel.Channels.IOutputChannel.RemoteAddress%2A> para o destino das mensagens enviadas no canal.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginSend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSend (System.ServiceModel.Channels.Message message, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginSend(class System.ServiceModel.Channels.Message message, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IOutputChannel.BeginSend(System.ServiceModel.Channels.Message,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> sendo enviadas pelo canal de saída.</param>
+        <param name="callback">O delegado <see cref="T:System.AsyncCallback" />.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas à operação de envio assíncrono.</param>
+        <summary>Inicia uma operação assíncrona para transmitir uma mensagem para o destino do canal de saída.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a transmissão de mensagens assíncronas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O destino para as mensagens enviadas em um canal de saída é especificado no momento de criação do canal.  
+  
+ O <xref:System.ServiceModel.Channels.IOutputChannel.BeginSend%2A> método não garante a entrega de mensagem para o ponto de extremidade remoto. Se as garantias de entrega são necessárias, use o <xref:System.ServiceModel.Channels.IOutputSessionChannel>.  
+  
+ Se a mensagem enviada é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSend (System.ServiceModel.Channels.Message message, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginSend(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IOutputChannel.BeginSend(System.ServiceModel.Channels.Message,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> sendo enviadas pelo canal de saída.</param>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação de envio tem para ser concluída antes de atingir o tempo limite.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação da operação assíncrona enviar conclusão.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas à operação de envio assíncrono.</param>
+        <summary>Inicia uma operação assíncrona para transmitir uma mensagem para o destino do canal de saída dentro de um intervalo de tempo especificado.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação de envio assíncrono.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O destino para as mensagens enviadas em um canal de saída é especificado no momento de criação do canal.  
+  
+ O <xref:System.ServiceModel.Channels.IOutputChannel.BeginSend%2A> método não garante a entrega de mensagem para o ponto de extremidade remoto. Se as garantias de entrega são necessárias, use <xref:System.ServiceModel.Channels.IOutputSessionChannel>.  
+  
+ Se a mensagem enviada é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A operação deve lançar uma <see cref="T:System.TimeoutException" /> se especificado <paramref name="timeout" /> for excedido.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSend">
+      <MemberSignature Language="C#" Value="public void EndSend (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndSend(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IOutputChannel.EndSend(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="Overload:System.ServiceModel.Channels.IOutputChannel.BeginSend" /> método.</param>
+        <summary>Conclui uma operação assíncrona para transmitir uma mensagem para o destino do canal de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem enviada é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress RemoteAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress RemoteAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IOutputChannel.RemoteAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o destino do serviço para o qual as mensagens são enviadas no canal de saída.</summary>
+        <value>O <see cref="T:System.ServiceModel.EndpointAddress" /> do serviço ao qual o canal de saída envia mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.EndpointAddress> serve como o destino final e o endereço físico, se um <xref:System.ServiceModel.Channels.IOutputChannel.Via%2A> não for especificado. Se o <xref:System.ServiceModel.Channels.IOutputChannel.Via%2A> for especificado, o que é o endereço físico real para que a mensagem é enviada, e por meio do qual a mensagem deve ir para chegar ao seu destino.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar essa propriedade:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Send(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IOutputChannel.Send(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> sendo enviadas pelo canal de saída.</param>
+        <summary>Transmite uma mensagem para o destino do canal de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O destino para as mensagens enviadas em um canal de saída é especificado no momento de criação do canal.  
+  
+ O <xref:System.ServiceModel.Channels.IOutputChannel.Send%2A> método não garante a entrega de mensagem para o ponto de extremidade remoto. Uma implementação de <xref:System.ServiceModel.Channels.IOutputChannel> silenciosamente pode descartar as mensagens para uma variedade de razões. Não pode haver nenhuma mais espaço de buffer, por exemplo. Se as garantias de entrega são necessárias, use <xref:System.ServiceModel.Channels.IOutputSessionChannel>.  
+  
+ Passar a mensagem para o canal de saída faz com que a mensagem a ser consumida. Depois de chamar <xref:System.ServiceModel.Channels.IOutputChannel.Send%2A>, você não pode inspecionar a mensagem ou chamada <xref:System.ServiceModel.Channels.Message.Close%2A> na mensagem.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (System.ServiceModel.Channels.Message message, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Send(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IOutputChannel.Send(System.ServiceModel.Channels.Message,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> sendo enviadas pelo canal de saída.</param>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação de envio tem para ser concluída antes de atingir o tempo limite.</param>
+        <summary>Envia uma mensagem no canal de saída atual dentro de um intervalo de tempo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O destino para as mensagens enviadas em um canal de saída é especificado no momento de criação do canal.  
+  
+ O <xref:System.ServiceModel.Channels.IOutputChannel.Send%2A> método não garante a entrega de mensagem para o ponto de extremidade remoto. Uma implementação de <xref:System.ServiceModel.Channels.IOutputChannel> silenciosamente pode descartar as mensagens para uma variedade de razões. Não pode haver nenhuma mais espaço de buffer, por exemplo. Se as garantias de entrega são necessárias, use <xref:System.ServiceModel.Channels.IOutputSessionChannel>.  
+  
+ Passar a mensagem para o canal de saída faz com que a mensagem a ser consumida. Depois de chamar <xref:System.ServiceModel.Channels.IOutputChannel.Send%2A>, você não pode inspecionar a mensagem ou chamada <xref:System.ServiceModel.Channels.Message.Close%2A> na mensagem.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A operação deve lançar uma <see cref="T:System.TimeoutException" /> se especificado <paramref name="timeout" /> for excedido.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Via">
+      <MemberSignature Language="C#" Value="public Uri Via { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Via" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IOutputChannel.Via" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o URI que contém o endereço de transporte para o qual as mensagens são enviadas no canal de saída.</summary>
+        <value>O <see cref="T:System.Uri" /> que contém o endereço de transporte para o qual as mensagens são enviadas no canal de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.EndpointAddress> serve como o destino final e o endereço físico, se um <xref:System.ServiceModel.Channels.IOutputChannel.Via%2A> não for especificado. Se o <xref:System.ServiceModel.Channels.IOutputChannel.Via%2A> for especificado, o que é o endereço físico real para que a mensagem é enviada, e por meio do qual a mensagem deve ir para chegar ao seu destino.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar essa propriedade:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

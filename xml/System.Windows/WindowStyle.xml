@@ -1,0 +1,82 @@
+<Type Name="WindowStyle" FullName="System.Windows.WindowStyle">
+  <TypeSignature Language="C#" Value="public enum WindowStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WindowStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.WindowStyle" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de borda que um <see cref="T:System.Windows.Window" /> tem. Usado pela propriedade <see cref="P:System.Windows.Window.WindowStyle" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.WindowStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.WindowStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente a área do cliente estiver visível - a barra de título e borda não são mostradas. A <see cref="T:System.Windows.Navigation.NavigationWindow" /> com um <see cref="P:System.Windows.Window.WindowStyle" /> de <see cref="F:System.Windows.WindowStyle.None" /> ainda exibirá o [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] de navegação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleBorderWindow">
+      <MemberSignature Language="C#" Value="SingleBorderWindow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.WindowStyle SingleBorderWindow = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.WindowStyle.SingleBorderWindow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela com uma única borda. Este é o valor padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreeDBorderWindow">
+      <MemberSignature Language="C#" Value="ThreeDBorderWindow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.WindowStyle ThreeDBorderWindow = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.WindowStyle.ThreeDBorderWindow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela com uma borda [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolWindow">
+      <MemberSignature Language="C#" Value="ToolWindow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.WindowStyle ToolWindow = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.WindowStyle.ToolWindow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela de ferramentas fixa.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

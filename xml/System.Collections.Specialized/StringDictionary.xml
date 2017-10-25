@@ -1,0 +1,776 @@
+<Type Name="StringDictionary" FullName="System.Collections.Specialized.StringDictionary">
+  <TypeSignature Language="C#" Value="public class StringDictionary : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit StringDictionary extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Specialized.StringDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Specialized</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer("System.Diagnostics.Design.StringDictionaryCodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.ComponentModel.Design.Serialization.CodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa uma tabela de hash com a chave e o valor fortemente tipado sendo cadeias de caracteres em vez de objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chave não pode ser `null`, mas um valor possível.  
+  
+ A chave é tratada de forma maiusculas de minúsculas; antes de ser usado com o dicionário de cadeia de caracteres, ele é convertido em minúsculas.  
+  
+ Na versão 1.0 do .NET Framework, essa classe usa comparações de cadeia de caracteres sensíveis à cultura. No entanto, no .NET Framework versão 1.1 ou posterior, essa classe usa <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ao comparar cadeias de caracteres. Para obter mais informações sobre como a cultura afeta as comparações e a classificação, consulte [executando operações de cadeia de caracteres de cultura](~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra várias propriedades e métodos de <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/CPP/stringdictionary.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/CS/stringdictionary.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/VB/stringdictionary.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Esta implementação não oferece um sincronizado wrapper (thread-safe) para um <see cref="T:System.Collections.Specialized.StringDictionary" />, mas as classes derivadas podem criar suas próprias versões sincronizadas do <see cref="T:System.Collections.Specialized.StringDictionary" /> usando o <see cref="P:System.Collections.Specialized.StringDictionary.SyncRoot" /> propriedade.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.StringDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra várias propriedades e métodos de <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/CPP/stringdictionary.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/CS/stringdictionary.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/VB/stringdictionary.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringDictionary.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave da entrada a ser adicionada.</param>
+        <param name="value">O valor da entrada a ser adicionado. O valor pode ser <see langword="null" />.</param>
+        <summary>Adiciona uma entrada com a chave e o valor especificados ao <see cref="T:System.Collections.Specialized.StringDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave é tratada de forma maiusculas de minúsculas; antes de serem adicionado ao dicionário de cadeia de caracteres, ele é convertido em minúsculas.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar e remover elementos de um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_AddRemove#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_AddRemove/CPP/stringdictionary_addremove.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_AddRemove#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_AddRemove/CS/stringdictionary_addremove.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_AddRemove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_AddRemove/VB/stringdictionary_addremove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Uma entrada com a mesma chave já existe no <see cref="T:System.Collections.Specialized.StringDictionary" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.Specialized.StringDictionary" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringDictionary.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as entradas do <see cref="T:System.Collections.Specialized.StringDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.StringDictionary.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar e remover elementos de um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_AddRemove#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_AddRemove/CPP/stringdictionary_addremove.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_AddRemove#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_AddRemove/CS/stringdictionary_addremove.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_AddRemove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_AddRemove/VB/stringdictionary_addremove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.Specialized.StringDictionary" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringDictionary.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Collections.Specialized.StringDictionary" />.</param>
+        <summary>Determina se o <see cref="T:System.Collections.Specialized.StringDictionary" /> contém uma chave específica.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.Specialized.StringDictionary" /> contiver uma entrada com a chave, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave é tratada de forma maiusculas de minúsculas; antes de ser usado, ele é convertido em minúsculas.  
+  
+ Este método é uma operação O(1).  
+  
+ Começando com o .NET Framework 2.0, esse método usa objetos da coleção <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> métodos em `item` para determinar se `item` existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo procura um elemento em um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_Contains#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Contains/CPP/stringdictionary_contains.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_Contains#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Contains/CS/stringdictionary_contains.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Contains/VB/stringdictionary_contains.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A chave é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsValue">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsValue (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsValue(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringDictionary.ContainsValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser localizado na <see cref="T:System.Collections.Specialized.StringDictionary" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Determina se o <see cref="T:System.Collections.Specialized.StringDictionary" /> contém um valor específico.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.Specialized.StringDictionary" /> contiver um elemento com o valor especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores dos elementos do StringDictionary são comparados com o valor especificado usando o <xref:System.Object.Equals%2A?displayProperty=nameWithType> método.  
+  
+ Esse método executa uma pesquisa linear; Portanto, o tempo médio de execução é proporcional ao <xref:System.Collections.Specialized.StringDictionary.Count%2A>. Ou seja, esse método é um O (`n`) operação, onde `n` é <xref:System.Collections.Specialized.StringDictionary.Count%2A>.  
+  
+ Começando com o .NET Framework 2.0, esse método usa objetos da coleção <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> métodos em `item` para determinar se `item` existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo procura um elemento em um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_Contains#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Contains/CPP/stringdictionary_contains.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_Contains#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Contains/CS/stringdictionary_contains.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Contains/VB/stringdictionary_contains.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringDictionary.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O unidimensional <see cref="T:System.Array" /> que é o destino dos valores copiados do <see cref="T:System.Collections.Specialized.StringDictionary" />.</param>
+        <param name="index">O índice da matriz em que a cópia começa.</param>
+        <summary>Copia os valores do dicionário de cadeia de caracteres para um unidimensional <see cref="T:System.Array" /> instância no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Specialized.StringDictionary.CopyTo%2A>copia os objetos que podem ser conversão de tipo para <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType>. <xref:System.Collections.DictionaryEntry>contém a chave e o valor.  
+  
+ Os elementos copiados para o <xref:System.Array> são classificados na mesma ordem em que o enumerador que itera por meio de <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.StringDictionary.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como um StringDictionary pode ser copiado para uma matriz.  
+  
+ [!code-cpp[System.Collections.Specialized.StringDictionary.CopyTo#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.StringDictionary.CopyTo/CPP/stringdictionary_copyto.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.StringDictionary.CopyTo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.StringDictionary.CopyTo/CS/stringdictionary_copyto.cs#1)]
+ [!code-vb[System.Collections.Specialized.StringDictionary.CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.StringDictionary.CopyTo/VB/stringdictionary_copyto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O número de elementos no <see cref="T:System.Collections.Specialized.StringDictionary" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que o limite inferior de <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.StringDictionary.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pares chave/valor no <see cref="T:System.Collections.Specialized.StringDictionary" />.</summary>
+        <value>O número de chave/valor pares no <see cref="T:System.Collections.Specialized.StringDictionary" />.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CPP/stringdictionary_enumeration.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CS/stringdictionary_enumeration.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/VB/stringdictionary_enumeration.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringDictionary.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do dicionário de cadeia de caracteres.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que itera por meio do dicionário de cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CPP/stringdictionary_enumeration.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CS/stringdictionary_enumeration.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/VB/stringdictionary_enumeration.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public virtual bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.StringDictionary.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.Specialized.StringDictionary" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.Specialized.StringDictionary" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Collections.Specialized.StringDictionary> instância não está sincronizada. Classes derivadas podem fornecer uma versão sincronizada do <xref:System.Collections.Specialized.StringDictionary> usando o <xref:System.Collections.Specialized.StringDictionary.SyncRoot%2A> propriedade.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.Specialized.StringDictionary.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/CPP/source2.cpp#2)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/CS/source2.cs#2)]
+ [!code-vb[System.Collection.Specialized.StringDictionary#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/VB/source2.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual string this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.StringDictionary.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave cujo valor será obtido ou definido.</param>
+        <summary>Obtém ou define o valor associado à chave especificada.</summary>
+        <value>O valor associado à chave especificada. Se a chave especificada não for encontrada, Get retornará <see langword="null" /> e Set criará uma nova entrada com a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave é tratada de forma maiusculas de minúsculas; antes de ser usado, ele é convertido em minúsculas.  
+  
+ Uma chave não pode ser `null`, mas um valor possível. Para distinguir entre `null` que é retornado porque a chave especificada não foi encontrada e `null` que é retornado porque o valor da chave especificada é `null`, use o <xref:System.Collections.Specialized.StringDictionary.ContainsKey%2A> método para determinar se a chave existe na lista.  
+  
+ A linguagem c# usa a palavra-chave para definir os indexadores em vez de implementar o <xref:System.Collections.Specialized.StringDictionary.Item%2A> propriedade. Visual Basic implementa <xref:System.Collections.Specialized.StringDictionary.Item%2A> como uma propriedade padrão, que fornece a mesma funcionalidade de indexação.  
+  
+ Recuperar o valor dessa propriedade é uma operação de (1); definindo a propriedade também é uma operação de (1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CPP/stringdictionary_enumeration.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CS/stringdictionary_enumeration.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/VB/stringdictionary_enumeration.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.StringDictionary.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de chaves no <see cref="T:System.Collections.Specialized.StringDictionary" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que fornece as chaves no <see cref="T:System.Collections.Specialized.StringDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem das chaves no <xref:System.Collections.ICollection> não for especificado, mas é a mesma ordem que os valores associados a <xref:System.Collections.ICollection> retornado pelo <xref:System.Collections.Specialized.StringDictionary.Values%2A> método.  
+  
+ Retornado <xref:System.Collections.ICollection> não é uma cópia estática; em vez disso, o <xref:System.Collections.ICollection> refere-se novamente para as chaves no original <xref:System.Collections.Specialized.StringDictionary>. Portanto, as alterações para o <xref:System.Collections.Specialized.StringDictionary> continuar sejam refletidas no <xref:System.Collections.ICollection>.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CPP/stringdictionary_enumeration.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CS/stringdictionary_enumeration.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_Enumeration#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/VB/stringdictionary_enumeration.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.StringDictionary.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave da entrada a ser removido.</param>
+        <summary>Remove a entrada com a chave especificada do dicionário de cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Collections.Specialized.StringDictionary> não contém um elemento com a chave especificada, o <xref:System.Collections.Specialized.StringDictionary> permanece inalterado. Nenhuma exceção é lançada.  
+  
+ A chave é tratada de forma maiusculas de minúsculas; antes de ser usada para localizar a entrada a ser removido do dicionário de cadeia de caracteres, ele é convertido em minúsculas.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar e remover elementos de um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_AddRemove#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_AddRemove/CPP/stringdictionary_addremove.cpp#1)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_AddRemove#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_AddRemove/CS/stringdictionary_addremove.cs#1)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_AddRemove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_AddRemove/VB/stringdictionary_addremove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A chave é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.Specialized.StringDictionary" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public virtual object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.StringDictionary.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.Specialized.StringDictionary" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que pode ser usado para sincronizar o acesso a <see cref="T:System.Collections.Specialized.StringDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas podem fornecer sua própria versão sincronizada de <xref:System.Collections.Specialized.StringDictionary> usando o <xref:System.Collections.Specialized.StringDictionary.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Collections.Specialized.StringDictionary.SyncRoot%2A> do <xref:System.Collections.Specialized.StringDictionary>, não diretamente no <xref:System.Collections.Specialized.StringDictionary>. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.Collections.Specialized.StringDictionary> objeto.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.Specialized.StringDictionary.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/CPP/source2.cpp#2)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/CS/source2.cs#2)]
+ [!code-vb[System.Collection.Specialized.StringDictionary#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary/VB/source2.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.StringDictionary.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de valores de <see cref="T:System.Collections.Specialized.StringDictionary" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que fornece os valores de <see cref="T:System.Collections.Specialized.StringDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores no <xref:System.Collections.ICollection> não for especificado, mas é a mesma ordem que as chaves associadas no <xref:System.Collections.ICollection> retornado pelo <xref:System.Collections.Specialized.StringDictionary.Keys%2A> método.  
+  
+ Retornado <xref:System.Collections.ICollection> não é uma cópia estática; em vez disso, o <xref:System.Collections.ICollection> refere-se novamente para os valores originais <xref:System.Collections.Specialized.StringDictionary>. Portanto, as alterações para o <xref:System.Collections.Specialized.StringDictionary> continuar sejam refletidas no <xref:System.Collections.ICollection>.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os elementos de um <xref:System.Collections.Specialized.StringDictionary>.  
+  
+ [!code-cpp[System.Collection.Specialized.StringDictionary_Enumeration#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CPP/values.cpp#2)]
+ [!code-csharp[System.Collection.Specialized.StringDictionary_Enumeration#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/CS/values.cs#2)]
+ [!code-vb[System.Collection.Specialized.StringDictionary_Enumeration#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collection.Specialized.StringDictionary_Enumeration/VB/values.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

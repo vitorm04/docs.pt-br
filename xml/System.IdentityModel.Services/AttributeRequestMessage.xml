@@ -1,0 +1,234 @@
+<Type Name="AttributeRequestMessage" FullName="System.IdentityModel.Services.AttributeRequestMessage">
+  <TypeSignature Language="C#" Value="public class AttributeRequestMessage : System.IdentityModel.Services.WSFederationMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AttributeRequestMessage extends System.IdentityModel.Services.WSFederationMessage" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.AttributeRequestMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Services.WSFederationMessage</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma mensagem de solicitação do WS-Federation atributo. Esta mensagem é criada quando o parâmetro de wa na mensagem recebida é "wattr1.0".</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a mensagem de que essa classe representa, consulte a especificação WS-Federation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AttributeRequestMessage (Uri baseUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri baseUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.AttributeRequestMessage.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseUrl" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="baseUrl">A URL base ao qual esta mensagem se aplica.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Services.AttributeRequestMessage" /> classe com a URL base especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro da mensagem wa (o <xref:System.IdentityModel.Services.WSFederationMessage.Action%2A> propriedade) é inicializado como "wattr1.0".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attribute">
+      <MemberSignature Language="C#" Value="public string Attribute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Attribute" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.AttributeRequestMessage.Attribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wattr da mensagem.</summary>
+        <value>Uma cadeia de caracteres que contém o valor do parâmetro wattr.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definido como `null` ou uma cadeia de caracteres vazia para remover o parâmetro wattr da mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributePtr">
+      <MemberSignature Language="C#" Value="public string AttributePtr { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttributePtr" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.AttributeRequestMessage.AttributePtr" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wattrptr da mensagem.</summary>
+        <value>Uma cadeia de caracteres que contém o valor do parâmetro wattrptr.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definido como `null` ou uma cadeia de caracteres vazia para remover o parâmetro wattrptr da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é um URI válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reply">
+      <MemberSignature Language="C#" Value="public string Reply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reply" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.AttributeRequestMessage.Reply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wreply da mensagem.</summary>
+        <value>Uma cadeia de caracteres que contém o valor do parâmetro wreply. Esta é a URL para o qual a resposta deve ser enviada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definido como `null` ou uma cadeia de caracteres vazia para remover o parâmetro wreply da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é um URI válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public string Result { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Result" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.AttributeRequestMessage.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wresult da mensagem.</summary>
+        <value>Uma cadeia de caracteres que contém o valor do parâmetro wresult.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definido como `null` ou uma cadeia de caracteres vazia para remover o parâmetro wresult da mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResultPtr">
+      <MemberSignature Language="C#" Value="public string ResultPtr { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResultPtr" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.AttributeRequestMessage.ResultPtr" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wresultptr da mensagem.</summary>
+        <value>Uma cadeia de caracteres que contém o valor do parâmetro wresultptr.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definido como `null` ou uma cadeia de caracteres vazia para remover o parâmetro wresultptr da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é um URI válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.AttributeRequestMessage.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Nenhuma validação é executada pelo framework. Os usuários dessa classe devem validar externamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma validação é executada pelo framework. Os usuários dessa classe devem validar externamente. Por exemplo, você talvez queira verificar que parâmetro wresult (o <xref:System.IdentityModel.Services.AttributeRequestMessage.Result%2A> propriedade) e o parâmetro wresultptr (o <xref:System.IdentityModel.Services.AttributeRequestMessage.ResultPtr%2A> propriedade) não estão definidas na mesma mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.AttributeRequestMessage.Write(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador no qual gravar a mensagem.</param>
+        <summary>Grava a mensagem no formulário de cadeia de caracteres de consulta para o gravador de texto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.IdentityModel.Services.AttributeRequestMessage.Validate%2A> método antes de gravar a mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

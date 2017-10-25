@@ -1,0 +1,99 @@
+<Type Name="PeerCollaborationPermissionAttribute" FullName="System.Net.PeerToPeer.Collaboration.PeerCollaborationPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PeerCollaborationPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PeerCollaborationPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerCollaborationPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as ações de segurança para <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaborationPermission" /> sejam aplicadas ao código usando a segurança declarativa. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O escopo da declaração que é permitido depende do <xref:System.Security.Permissions.SecurityAction> que é usado.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. Atributos de segurança são usados apenas para a segurança declarativa. Para segurança obrigatória, use a classe de permissão correspondente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerCollaborationPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaborationPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Especifica um <see cref="T:System.Security.Permissions.SecurityAction" /> valor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.PeerToPeer.Collaboration.PeerCollaborationPermissionAttribute" /> com o <see cref="T:System.Security.Permissions.SecurityAction" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.PeerToPeer.Collaboration.PeerCollaborationPermissionAttribute>funciona com <xref:System.Net.PeerToPeer.Collaboration.PeerCollaborationPermission> para permitir ou negar acesso de um ponto a ponto para a sessão de colaboração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaborationPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um novo <see cref="T:System.Security.IPermission" />.</summary>
+        <returns>Um novo objeto <see cref="T:System.Security.IPermission" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não é chamado e está incluído somente para dar suporte a herança de <xref:System.Security.Permissions.SecurityAttribute>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando as permissões são herdadas <see cref="T:System.Security.Permissions.SecurityAttribute" />, <see cref="M:System.Net.PeerToPeer.Collaboration.PeerCollaborationPermissionAttribute.CreatePermission" /> deve ser substituído.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

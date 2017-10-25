@@ -1,0 +1,230 @@
+<Type Name="BounceEase" FullName="System.Windows.Media.Animation.BounceEase">
+  <TypeSignature Language="C#" Value="public class BounceEase : System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BounceEase extends System.Windows.Media.Animation.EasingFunctionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.BounceEase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.EasingFunctionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma função de easing que cria um efeito de balanço animado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O gráfico a seguir demonstra <xref:System.Windows.Media.Animation.BounceEase> com os valores diferentes de <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>, onde *f*(*t*) representa o progresso de animação e *t* representa a hora.  
+  
+ ![Gráficos de BounceEase EasingMode. ] (~/add/media/bounceease-graph.png "BounceEase EasingMode gráficos.")  
+  
+ Você pode especificar quantos atempado ocorre usando o <xref:System.Windows.Media.Animation.BounceEase.Bounces%2A> propriedade e especificar como saltitantes (como Elástico o atempado é) usando o <xref:System.Windows.Media.Animation.BounceEase.Bounciness%2A> propriedade. O <xref:System.Windows.Media.Animation.BounceEase.Bounciness%2A> propriedade especifica a escala de amplitude do próximo salto. Por exemplo, um valor bounciness 2 dobra a amplitude do próximo salto durante a facilidade de e -metades amplitude do próximo salto durante uma facilidade out.  
+  
+ Há várias outras funções de atenuação além <xref:System.Windows.Media.Animation.BounceEase> que você pode explorar usando o exemplo a seguir do Silverlight.  
+  
+ [Executar esta amostra](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
+  
+ Além de usar as funções de atenuação incluídas no tempo de execução, você pode criar suas próprias funções personalizadas de atenuação herdando de <xref:System.Windows.Media.Animation.EasingFunctionBase>.  
+  
+<a name="xamlObjectElementUsage_BounceEase"></a>   
+## <a name="xaml-object-element-usage"></a>Uso de elemento Object do XAML  
+  
+```  
+<BounceEase .../>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir aplica-se um <xref:System.Windows.Media.Animation.BounceEase> facilitando a função para um <xref:System.Windows.Media.Animation.DoubleAnimation> para criar um efeito saltitante.  
+  
+ [!code-xaml[BounceEase_Snippet#BounceEase](~/samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BounceEase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BounceEase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.BounceEase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounces">
+      <MemberSignature Language="C#" Value="public int Bounces { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Bounces" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.BounceEase.Bounces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de atempado.</summary>
+        <value>O número de atempado. O valor deve ser maior ou igual a zero. Resolver valores negativos para zero. O padrão é 3.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não inclui a devolução de metade final.  
+  
+ [!INCLUDE[DP_ID_field_label](~/includes/dp-id-field-label-md.md)] <xref:System.Windows.Media.Animation.BounceEase.BouncesProperty>  
+  
+<a name="xamlAttributeUsage_Bounces"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Bounces="int" .../>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BouncesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BouncesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BouncesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.BounceEase.BouncesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.BounceEase.Bounces" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounciness">
+      <MemberSignature Language="C#" Value="public double Bounciness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Bounciness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.BounceEase.Bounciness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a animação de devolução saltitantes como está. Valores baixos de resultado essa propriedade em atempado com pouca percam da altura entre atempado (mais saltitantes) e valores altos resultam em amortecido atempado (menos saltitantes).</summary>
+        <value>O valor que especifica a animação de devolução saltitantes como está. Esse valor deve ser positivo. O valor padrão é <c>2</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DP_ID_field_label](~/includes/dp-id-field-label-md.md)] <xref:System.Windows.Media.Animation.BounceEase.BouncinessProperty>  
+  
+<a name="xamlAttributeUsage_Bounciness"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Bounciness="double" .../>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BouncinessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BouncinessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BouncinessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.BounceEase.BouncinessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.BounceEase.Bounciness" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BounceEase.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Windows.Freezable" /> classe derivada. Ao criar uma classe derivada, você deve substituir esse método.</summary>
+        <returns>A nova instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de animação herdam indiretamente <xref:System.Windows.Freezable>. Por isso, você precisa substituir o <xref:System.Windows.Media.Animation.BackEase.CreateInstanceCore%2A> método para construir um objeto de animação personalizada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação típica de <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInCore">
+      <MemberSignature Language="C#" Value="protected override double EaseInCore (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance float64 EaseInCore(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BounceEase.EaseInCore(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Tempo normalizado (progresso) da animação.</param>
+        <summary>Fornece a parte da lógica da função de atenuação que você pode substituir para produzir o <see cref="F:System.Windows.Media.Animation.EasingMode.EaseIn" /> modo da função de atenuação personalizada.</summary>
+        <returns>Um duplo que representa o progresso transformado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método transforma tempo normalizado para controlar o andamento de uma animação para o <xref:System.Windows.Media.Animation.EasingMode.EaseIn> caso de <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>.  
+  
+ Você só precisa especificar a função de easing para o <xref:System.Windows.Media.Animation.EasingMode.EaseIn> caso porque a implementação do <xref:System.Windows.Media.Animation.EasingFunctionBase.Ease%2A> método transformações `normalizedTime` para o <xref:System.Windows.Media.Animation.EasingMode.EaseOut> e <xref:System.Windows.Media.Animation.EasingMode.EaseInOut> casos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

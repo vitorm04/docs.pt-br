@@ -1,0 +1,90 @@
+<Type Name="SpecialSettingAttribute" FullName="System.Configuration.SpecialSettingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SpecialSettingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SpecialSettingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SpecialSettingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que uma propriedade de configurações de aplicativo tem uma significância especial. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Determinadas propriedades de configurações do aplicativo tem um significado especial que altera a maneira na qual sua configurações associadas em provedor deve processá-los. O <xref:System.Configuration.SpecialSettingAttribute> é usado para identificar tais propriedades. Essa classe usa a <xref:System.Configuration.SpecialSetting?displayProperty=nameWithType> enumeração para indicar qual categoria especial, a propriedade pertence.  
+  
+ <xref:System.Configuration.SpecialSettingAttribute>só pode ser aplicado à classe de configurações ou para a propriedade de configurações individuais.  
+  
+ Para obter um exemplo de como um provedor de configurações lida com a <xref:System.Configuration.SpecialSettingAttribute>, consulte o <xref:System.Configuration.LocalFileSettingsProvider.GetPropertyValues%2A> método o <xref:System.Configuration.LocalFileSettingsProvider> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpecialSettingAttribute (System.Configuration.SpecialSetting setting);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Configuration.SpecialSetting setting) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SpecialSettingAttribute.#ctor(System.Configuration.SpecialSetting)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="specialSetting" Type="System.Configuration.SpecialSetting" />
+      </Parameters>
+      <Docs>
+        <param name="setting">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.SpecialSettingAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecialSetting">
+      <MemberSignature Language="C#" Value="public System.Configuration.SpecialSetting SpecialSetting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.SpecialSetting SpecialSetting" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SpecialSettingAttribute.SpecialSetting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SpecialSetting</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que descreve a categoria especial de configuração da propriedade de configurações do aplicativo.</summary>
+        <value>Um <see cref="T:System.Configuration.SpecialSetting" /> valor de enumeração define a categoria da propriedade de configurações do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SpecialSettingAttribute.SpecialSetting%2A> propriedade é definida no <xref:System.Configuration.SpecialSettingAttribute.%23ctor%2A> construtor dessa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

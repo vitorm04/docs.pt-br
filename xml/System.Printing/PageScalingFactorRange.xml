@@ -1,0 +1,95 @@
+<Type Name="PageScalingFactorRange" FullName="System.Printing.PageScalingFactorRange">
+  <TypeSignature Language="C#" Value="public sealed class PageScalingFactorRange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageScalingFactorRange extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PageScalingFactorRange" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica um intervalo de porcentagens pelo qual uma impressora pode ampliar ou reduzir a imagem de impressão em uma página.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa essa classe para especificar o intervalo de escala que é compatível com uma impressora com o <xref:System.Printing.PrintCapabilities.PageScalingFactorRange%2A> propriedade de um <xref:System.Printing.PrintCapabilities> objeto.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo Windows Forms, consulte o <xref:System.Drawing.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MaximumScale">
+      <MemberSignature Language="C#" Value="public int MaximumScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumScale" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageScalingFactorRange.MaximumScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o percentual máximo do intervalo.</summary>
+        <value>Um valor <see cref="T:System.Int32" /> que representa um percentual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumScale">
+      <MemberSignature Language="C#" Value="public int MinimumScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumScale" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageScalingFactorRange.MinimumScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o percentual mínimo do intervalo.</summary>
+        <value>Um valor <see cref="T:System.Int32" /> que representa um percentual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PageScalingFactorRange.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="T:System.String" /> representação do intervalo.</summary>
+        <returns>Um <see cref="T:System.String" /> representação do intervalo de escala.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato é o seguinte:  
+  
+ (<xref:System.Printing.PageScalingFactorRange.MinimumScale%2A>, <xref:System.Printing.PageScalingFactorRange.MaximumScale%2A>)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

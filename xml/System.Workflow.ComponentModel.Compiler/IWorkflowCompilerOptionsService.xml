@@ -1,0 +1,119 @@
+<Type Name="IWorkflowCompilerOptionsService" FullName="System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService">
+  <TypeSignature Language="C#" Value="public interface IWorkflowCompilerOptionsService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWorkflowCompilerOptionsService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define a interface implementada pelo ambiente de hospedagem do designer de fluxo de trabalho e o compilador para fornecer informações específicas do ambiente de compilação durante os processos de compilação e validação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CheckTypes">
+      <MemberSignature Language="C#" Value="public bool CheckTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.CheckTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os tipos são verificados.</summary>
+        <value>
+          <see langword="true" />Se os tipos são verificados, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a fase de validação de compilação de fluxo de trabalho, um documento de origem do fluxo de trabalho será rejeitado se o <xref:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.CheckTypes%2A> é de propriedade `true` e o fluxo de trabalho ou as regras de complementar referências do arquivo diretamente qualquer tipos do .NET Framework não está presente em uma lista de tipos autorizados. A lista de tipos autorizados é um documento XML em que cada entrada indica um `Assembly`, um `Namespace`, um `TypeName`e um `Authorized` {`true` ou `false`} indicador. Esta classe corresponde a uma entrada na lista. Observe também que designações de caracteres curinga são permitidas para incluir ou excluir os espaços para nome completos. Por exemplo, usando `Type="System.*"` inclui todos os tipos de <xref:System>, incluindo tipos contidos em namespaces filho.  
+  
+ O uso de uma lista de tipos autorizados é controlado pelo <xref:System.Workflow.ComponentModel.Compiler.WorkflowCompiler> opção **/checktypes** ou usando o <xref:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.CheckTypes%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a linguagem de programação usada pelo ambiente, como o Visual Studio, ao compilar o fluxo de trabalho.</summary>
+        <value>O nome da linguagem de programação usada pelo ambiente de desenvolvimento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação de `Language` propriedade. Este exemplo é um exemplo de controle SDK do criador de perfil de. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Exemplo de perfil do Designer de controle](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[WF_Samples#123](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#123)]
+ [!code-vb[WF_Samples#123](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#123)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNamespace">
+      <MemberSignature Language="C#" Value="public string RootNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.IWorkflowCompilerOptionsService.RootNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace raiz definido para o projeto.</summary>
+        <value>O nome do namespace raiz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada no ambiente de compilação do Visual Basic para passar o namespace raiz do projeto para o compilador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação de `RootNamespace` propriedade. Este exemplo é um exemplo de controle SDK do criador de perfil de. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Exemplo de perfil do Designer de controle](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[Wf_samples#122](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#122)]
+ [!code-vb[Wf_samples#122](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#122)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

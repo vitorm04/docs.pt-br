@@ -1,0 +1,401 @@
+<Type Name="XmlEntityReference" FullName="System.Xml.XmlEntityReference">
+  <TypeSignature Language="C#" Value="public class XmlEntityReference : System.Xml.XmlLinkedNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlEntityReference extends System.Xml.XmlLinkedNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlEntityReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlLinkedNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um nó de referência de entidade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlEntityReference (string name, System.Xml.XmlDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string name, class System.Xml.XmlDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntityReference.#ctor(System.String,System.Xml.XmlDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="doc" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da referência de entidade; Consulte o <see cref="P:System.Xml.XmlEntityReference.Name" /> propriedade.</param>
+        <param name="doc">O documento XML pai.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.XmlEntityReference" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não criar uma instância de um <xref:System.Xml.XmlEntityReference> diretamente; em vez disso, use os métodos, como <xref:System.Xml.XmlDocument.CreateEntityReference%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseURI">
+      <MemberSignature Language="C#" Value="public override string BaseURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.BaseURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a base identificador URI (Uniform Resource) do nó atual.</summary>
+        <value>O local do qual o nó foi carregado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um documento XML em rede é composto de partes de dados agregados usando vários mecanismos de inclusão padrão do World Wide Web Consortium (W3C) e, portanto, contém nós que vêm de diferentes locais. O `BaseURI` informa onde veio esses nós. Se não houver nenhum URI de base para os nós que estão sendo retornados (talvez eles foram analisados a partir de uma cadeia de caracteres na memória), <xref:System.String.Empty> será retornado.  
+  
+ `BaseURI`aborda a árvore de nós procurando limites de referência de entidade, portanto se entidades são expandidas, essas informações não são preservadas e essa propriedade retorna o local do XmlDocument em todos os casos.  
+  
+ Para obter informações adicionais sobre `BaseURI` e como ele se comporta com outros tipos de nó, consulte <xref:System.Xml.XmlNode.BaseURI%2A?displayProperty=nameWithType>.  
+  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe informações sobre o nó de referência de entidade, incluindo o URI de base.  
+  
+ [!code-cpp[Classic WebData XmlEntityReference.BaseURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlEntityReference.BaseURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlEntityReference.BaseURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlEntityReference.BaseURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlEntityReference.BaseURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlEntityReference.BaseURI Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo de `uri.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlEntityReference.BaseURI Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlEntityReference.BaseURI Example/XML/source.xml#2)]  
+  
+ O `style.xml` arquivo contém a cadeia de caracteres XML `<style>hardcover</style>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneNode">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode CloneNode (bool deep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode CloneNode(bool deep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntityReference.CloneNode(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deep" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deep">
+          <see langword="true" /> para recursivamente clonar a subárvore abaixo do nó especificado; <see langword="false" /> para clonar apenas o próprio nó. Para <see langword="XmlEntityReference" /> nós, este método sempre retorna um nó de referência de entidade sem filhos. O texto de substituição é definido quando o nó é inserido em um pai.</param>
+        <summary>Cria uma duplicação deste nó.</summary>
+        <returns>O nó clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método funciona como um construtor de cópia para nós. O nó clonado não tem nenhum pai (<xref:System.Xml.XmlNode.ParentNode%2A> retorna `null`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o nó for somente leitura; Caso contrário, <see langword="false" />.  
+  
+ Porque <see langword="XmlEntityReference" /> nós são somente leitura, essa propriedade sempre retorna <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nó somente leitura é um cujas propriedades, atributos ou filhos não pode ser alterado. No entanto, você pode remover um nó somente leitura da árvore e inseri-lo em outro lugar.  
+  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o `IsReadOnly` propriedade.  
+  
+ [!code-cpp[Classic WebData XmlEntityReference.IsReadOnly Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlEntityReference.IsReadOnly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlEntityReference.IsReadOnly Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlEntityReference.IsReadOnly Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlEntityReference.IsReadOnly Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlEntityReference.IsReadOnly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public override string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome local do nó.</summary>
+        <value>Para <see langword="XmlEntityReference" /> nós, essa propriedade retorna o nome da entidade referenciada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do nó.</summary>
+        <value>O nome da entidade referenciada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe informações sobre o nó de referência de entidade.  
+  
+ [!code-cpp[Classic WebData XmlEntityReference.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlEntityReference.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlEntityReference.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlEntityReference.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlEntityReference.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlEntityReference.Name Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do nó.</summary>
+        <value>O tipo de nó. Para <see langword="XmlEntityReference" /> nós, o valor é XmlNodeType.EntityReference.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlEntityReference.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do nó.</summary>
+        <value>O valor do nó. Para <see langword="XmlEntityReference" /> nós, essa propriedade retornará <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Nó é somente leitura.</exception>
+        <exception cref="T:System.InvalidOperationException">Definindo a propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentTo">
+      <MemberSignature Language="C#" Value="public override void WriteContentTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteContentTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntityReference.WriteContentTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">O <see langword="XmlWriter" /> no qual você deseja salvar.</param>
+        <summary>Salva todos os filhos do nó especificado <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlEntityReference.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">O <see langword="XmlWriter" /> no qual você deseja salvar.</param>
+        <summary>Salva o nó especificado <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

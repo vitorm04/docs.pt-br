@@ -1,0 +1,220 @@
+<Type Name="LockRecursionException" FullName="System.Threading.LockRecursionException">
+  <TypeSignature Language="C#" Value="public class LockRecursionException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit LockRecursionException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.LockRecursionException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é lançada quando a entrada recursiva em um bloqueio não é compatível com a política de recursão para o bloqueio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.LockRecursionException>é gerada por vários motivos, incluindo o seguinte:  
+  
+-   Se um thread tentar inserir uma instância de <xref:System.Threading.ReaderWriterLockSlim> recursivamente, mas a instância não oferece suporte a recursão.  
+  
+-   Se um thread tenta inserir um <xref:System.Threading.ReaderWriterLockSlim> instância em modo de gravação ou atualizável quando o thread inserido inicialmente o bloqueio em modo de leitura. Isso representa um potencial deadlock e, portanto, não é permitido.  
+  
+-   Se a permitir um nível mais de recursão excede o valor máximo para o contador de armazenamento interno usado para rastrear recursões. Esse limite é tão grande que aplicativos nunca deverão encontrá-lo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra duas causas <xref:System.Threading.LockRecursionException> ao usar o <xref:System.Threading.ReaderWriterLockSlim> classe. O programa cria um <xref:System.Threading.ReaderWriterLockSlim> usando o construtor padrão, que não permite a recursão. O programa, em seguida, inicia um thread que entra o bloqueio em modo de leitura. O thread tenta digitar o bloqueio recursivamente em modo de leitura e captura a exceção resultante. Finalmente, o thread tenta entrar no modo de gravação, que criaria um potencial para deadlocks. O thread de captura a exceção resultante.  
+  
+ [!code-csharp[System.Threading.LockRecursionException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.LockRecursionException/cs/source.cs#1)]
+ [!code-vb[System.Threading.LockRecursionException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.LockRecursionException/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LockRecursionException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LockRecursionException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.LockRecursionException" /> com uma mensagem fornecida pelo sistema que descreve o erro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Exception.Message%2A> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro, como "Recursiva ler aquisições de bloqueio não permitidas neste modo." Esta mensagem leva em conta a cultura atual do sistema.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.InsufficientMemoryException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LockRecursionException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LockRecursionException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve a exceção. O chamador desse construtor deve se certificar de que essa cadeia de caracteres foi localizada para a cultura atual do sistema.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Threading.LockRecursionException" /> classe com uma mensagem especificada que descreve o erro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Exception.Message%2A?displayProperty=nameWithType> propriedade da nova exceção com a `message` parâmetro. O conteúdo de `message` deve ser compreendido por humanos. O chamador desse construtor deve se certificar de que essa cadeia de caracteres foi localizada para a cultura atual do sistema.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Threading.LockRecursionException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LockRecursionException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LockRecursionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.LockRecursionException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir a um objeto de exceção que é transmitido em um fluxo. Para obter mais informações, consulte [XML e serialização SOAP](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LockRecursionException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.LockRecursionException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve a exceção. O chamador desse construtor deve se certificar de que essa cadeia de caracteres foi localizada para a cultura atual do sistema.</param>
+        <param name="innerException">A exceção que causou a exceção atual. Se o <c>innerException</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.LockRecursionException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Threading.LockRecursionException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A exceção especificada no `innerException`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro especificada em `message`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

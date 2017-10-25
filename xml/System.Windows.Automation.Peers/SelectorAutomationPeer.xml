@@ -1,0 +1,138 @@
+<Type Name="SelectorAutomationPeer" FullName="System.Windows.Automation.Peers.SelectorAutomationPeer">
+  <TypeSignature Language="C#" Value="public abstract class SelectorAutomationPeer : System.Windows.Automation.Peers.ItemsControlAutomationPeer, System.Windows.Automation.Provider.ISelectionProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SelectorAutomationPeer extends System.Windows.Automation.Peers.ItemsControlAutomationPeer implements class System.Windows.Automation.Provider.ISelectionProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.SelectorAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.ItemsControlAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.ISelectionProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Expõe <see cref="T:System.Windows.Controls.Primitives.Selector" /> tipos de automação de interface do usuário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SelectorAutomationPeer (System.Windows.Controls.Primitives.Selector owner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.Primitives.Selector owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.SelectorAutomationPeer.#ctor(System.Windows.Controls.Primitives.Selector)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Controls.Primitives.Selector" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Controls.Primitives.Selector" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.SelectorAutomationPeer" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Automation.Peers.SelectorAutomationPeer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.SelectorAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o tipo de controle para o <see cref="T:System.Windows.Controls.Primitives.Selector" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.SelectorAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
+        <returns>O valor de enumeração <see cref="F:System.Windows.Automation.Peers.AutomationControlType.List" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.SelectorAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Um valor na enumeração.</param>
+        <summary>Obtém o padrão de controle para o <see cref="T:System.Windows.Controls.Primitives.Selector" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.SelectorAutomationPeer" />.</summary>
+        <returns>Se <paramref name="patternInterface" /> é <see cref="F:System.Windows.Automation.Peers.PatternInterface.Selection" />, esse método retorna um ponteiro para a instância atual; caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple">
+      <MemberSignature Language="C#" Value="bool System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.SelectorAutomationPeer.System#Windows#Automation#Provider#ISelectionProvider#CanSelectMultiple" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <value>
+          <see langword="true" />Se a seleção múltipla é permitida. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ISelectionProvider.GetSelection">
+      <MemberSignature Language="C#" Value="System.Windows.Automation.Provider.IRawElementProviderSimple[] ISelectionProvider.GetSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple[] System.Windows.Automation.Provider.ISelectionProvider.GetSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.SelectorAutomationPeer.System#Windows#Automation#Provider#ISelectionProvider#GetSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <returns>Uma coleção de provedores de automação de interface do usuário. True se a seleção múltipla é permitida. Caso contrário, false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired">
+      <MemberSignature Language="C#" Value="bool System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.SelectorAutomationPeer.System#Windows#Automation#Provider#ISelectionProvider#IsSelectionRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <value>Retorna <see langword="S_OK" /> se for bem-sucedido, ou um erro de valor caso contrário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

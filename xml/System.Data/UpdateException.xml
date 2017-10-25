@@ -1,0 +1,198 @@
+<Type Name="UpdateException" FullName="System.Data.UpdateException">
+  <TypeSignature Language="C#" Value="public class UpdateException : System.Data.DataException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit UpdateException extends System.Data.DataException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.UpdateException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.DataException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção gerada quando as modificações em instâncias de objetos não podem ser mantidas para a fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular exceções em seu código, consulte <xref:System.Exception>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Data.UpdateException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular exceções em seu código, consulte <xref:System.Exception>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdateException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UpdateException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Data.UpdateException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular exceções em seu código, consulte <xref:System.Exception>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdateException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UpdateException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Data.UpdateException" /> com uma mensagem de erro especializadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular exceções em seu código, consulte <xref:System.Exception>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UpdateException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UpdateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Data.UpdateException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular exceções em seu código, consulte <xref:System.Exception>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdateException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UpdateException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual ou uma referência nula (<see langword="Nothing" /> no Visual Basic) se nenhuma exceção interna é especificada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.UpdateException" /> classe que usa uma mensagem de erro especificada e uma referência à exceção interna que é a causa dessa exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular exceções em seu código, consulte <xref:System.Exception>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdateException (string message, Exception innerException, System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectStateEntry&gt; stateEntries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException, class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Objects.ObjectStateEntry&gt; stateEntries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.UpdateException.#ctor(System.String,System.Exception,System.Collections.Generic.IEnumerable{System.Data.Objects.ObjectStateEntry})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+        <Parameter Name="stateEntries" Type="System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectStateEntry&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual ou uma referência nula (<see langword="Nothing" /> no Visual Basic) se nenhuma exceção interna é especificada.</param>
+        <param name="stateEntries">A coleção de objetos <see cref="T:System.Data.Objects.ObjectStateEntry" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.UpdateException" /> mensagem de classe que usa um erro especificado, uma referência para a exceção interna e uma coleção enumerável de <see cref="T:System.Data.Objects.ObjectStateEntry" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular exceções em seu código, consulte <xref:System.Exception>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateEntries">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Objects.ObjectStateEntry&gt; StateEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Objects.ObjectStateEntry&gt; StateEntries" />
+      <MemberSignature Language="DocId" Value="P:System.Data.UpdateException.StateEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Objects.ObjectStateEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os objetos <see cref="T:System.Data.Objects.ObjectStateEntry" /> para este <see cref="T:System.Data.UpdateException" />.</summary>
+        <value>Uma coleção de objetos <see cref="T:System.Data.Objects.ObjectStateEntry" /> composta por uma única entidade e zero ou mais relações ou zero entidades e uma ou mais relações.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular exceções em seu código, consulte <xref:System.Exception>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

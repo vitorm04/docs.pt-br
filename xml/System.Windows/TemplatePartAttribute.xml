@@ -1,0 +1,110 @@
+<Type Name="TemplatePartAttribute" FullName="System.Windows.TemplatePartAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TemplatePartAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TemplatePartAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TemplatePartAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um atributo aplicado à definição de classe para identificar os tipos das partes nomeadas que são usadas para modelagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autores de controle aplicam esse atributo para a definição de classe para informar os tipos das partes de autores de modelo a ser usado para a classe de estilo. Essas partes são normalmente necessárias no modelo e tem um nome de predefinida específico. Pode haver apenas um elemento com um determinado nome em qualquer modelo.  
+  
+ Por exemplo, se você observar a declaração de classe do <xref:System.Windows.Controls.ComboBox> de classe, você pode ver que as partes `PART_EditableTextBox` e `PART_Popup` são de tipos <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.Primitives.Popup> respectivamente.  
+  
+ Para obter mais informações, consulte [diretrizes para criação de controles estilizados](~/docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
+  
+<a name="xamlTextUsage_TemplatePartAttribute"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você não pode usar essa classe ou suas propriedades no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplatePartAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplatePartAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.TemplatePartAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplatePartAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome pré-definido da parte.</summary>
+        <value>O nome predefinido da parte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Name"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você não pode usar essa propriedade em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplatePartAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo da parte nomeada, que esse atributo é a identificação.</summary>
+        <value>O tipo da parte nomeada, que esse atributo é a identificação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Type"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você não pode usar essa propriedade em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

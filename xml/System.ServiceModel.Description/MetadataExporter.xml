@@ -1,0 +1,229 @@
+<Type Name="MetadataExporter" FullName="System.ServiceModel.Description.MetadataExporter">
+  <TypeSignature Language="C#" Value="public abstract class MetadataExporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MetadataExporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MetadataExporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Exporta informações de descrição do serviço em metadados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exportação de metadados é o processo de descrever os pontos de extremidade de serviço e projeção-los em uma representação paralela, padronizada (normalmente, mas não necessariamente XML) que os aplicativos podem acessar para implementar um cliente que usa o serviço. Para exportar metadados de <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> objetos, use uma implementação de <xref:System.ServiceModel.Description.MetadataExporter> classe abstrata.  Um <xref:System.ServiceModel.Description.MetadataExporter> implementação gera metadados que é encapsulado em um <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> instância.  
+  
+ O <xref:System.ServiceModel.Description.MetadataExporter> classe fornece uma estrutura para a geração de expressões de política que descrevem os recursos e requisitos de uma associação de ponto de extremidade e suas operações associadas, mensagens e falhas. Essas expressões de política são capturadas em um <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> instância. Um <xref:System.ServiceModel.Description.MetadataExporter> implementação pode, em seguida, anexar essas expressões de política para os metadados que ele gera.  
+  
+ O <xref:System.ServiceModel.Description.MetadataExporter> chamadas em cada <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> que implementa o <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface na associação de um <xref:System.ServiceModel.Description.ServiceEndpoint> ao gerar uma <xref:System.ServiceModel.Description.PolicyConversionContext> de objeto para o <xref:System.ServiceModel.Description.MetadataExporter> implementação para usar. Você pode exportar novas declarações de política Implementando o <xref:System.ServiceModel.Description.IPolicyExportExtension> interface em suas implementações personalizadas do <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> tipo.  
+  
+ O <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> tipo é a implementação do <xref:System.ServiceModel.Description.MetadataExporter> classe incluída com [!INCLUDE[indigo1](~/includes/indigo1-md.md)]. O <xref:System.ServiceModel.Description.WsdlExporter> tipo gera metadados WSDL com expressões de política anexada.  
+  
+ Para exportar metadados WSDL personalizado ou extensões WSDL para comportamentos de ponto de extremidade, comportamentos de contrato ou elementos de associação em um ponto de extremidade de serviço, você pode implementar o <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interface. O <xref:System.ServiceModel.Description.WsdlExporter> digite chamadas em partes de um ponto de extremidade de serviço que implementam esta interface ao gerar o documento WSDL do ponto de extremidade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A?displayProperty=nameWithType> método que demonstra como o <xref:System.ServiceModel.Description.MetadataExporter.State%2A> propriedade da classe <xref:System.ServiceModel.Description.WsdlExporter> é usado para anexar um personalizado <xref:System.Runtime.Serialization.XsdDataContractExporter?displayProperty=nameWithType> que modifica a exportação de contratos de dados no ponto de extremidade.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#6)]  
+[!code-csharp[C_CustomWSDLExtensions#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MetadataConversionError&gt; Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.MetadataConversionError&gt; Errors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataExporter.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MetadataConversionError&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de erros que ocorreram durante a exportação de metadados.</summary>
+        <value>Os erros de exportação que ocorreram.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é preenchida com erros que ocorreram durante o processo de exportação de metadados. Os usuários de classes derivadas devem verificar a <xref:System.ServiceModel.Description.MetadataExporter.Errors%2A> propriedade antes de usar os metadados exportado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportContract">
+      <MemberSignature Language="C#" Value="public abstract void ExportContract (System.ServiceModel.Description.ContractDescription contract);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExportContract(class System.ServiceModel.Description.ContractDescription contract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataExporter.ExportContract(System.ServiceModel.Description.ContractDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ContractDescription" />
+      </Parameters>
+      <Docs>
+        <param name="contract">O contrato para exportar.</param>
+        <summary>Quando substituído em uma classe derivada, exporta uma descrição do contrato nos metadados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir e implementar <xref:System.ServiceModel.Description.MetadataExporter.ExportContract%2A> para converter uma descrição do contrato em metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportEndpoint">
+      <MemberSignature Language="C#" Value="public abstract void ExportEndpoint (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExportEndpoint(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataExporter.ExportEndpoint(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade para converter.</param>
+        <summary>Quando substituído em uma classe derivada, converte um ponto de extremidade em metadados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir e implementar <xref:System.ServiceModel.Description.MetadataExporter.ExportEndpoint%2A> para converter uma descrição do contrato em metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportPolicy">
+      <MemberSignature Language="C#" Value="protected System.ServiceModel.Description.PolicyConversionContext ExportPolicy (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.ServiceModel.Description.PolicyConversionContext ExportPolicy(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataExporter.ExportPolicy(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyConversionContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade do qual extrair declarações de política.</param>
+        <summary>Converte as declarações de política em um <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> objeto.</summary>
+        <returns>Um objeto que contém informações de declaração de política para o ponto de extremidade. As declarações de política, em seguida, podem ser inseridas em um documento de metadados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGeneratedMetadata">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.MetadataSet GetGeneratedMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.MetadataSet GetGeneratedMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataExporter.GetGeneratedMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MetadataSet</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna os metadados gerado por uma chamada para a <see cref="M:System.ServiceModel.Description.MetadataExporter.ExportContract(System.ServiceModel.Description.ContractDescription)" />, <see cref="M:System.ServiceModel.Description.MetadataExporter.ExportEndpoint(System.ServiceModel.Description.ServiceEndpoint)" />, ou <see cref="M:System.ServiceModel.Description.MetadataExporter.ExportPolicy(System.ServiceModel.Description.ServiceEndpoint)" />.</summary>
+        <returns>Uma coleção enumerável de <see cref="T:System.ServiceModel.Description.MetadataSection" /> objetos que contêm os metadados exportado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.MetadataExporter.GetGeneratedMetadata%2A> método para recuperar os metadados gerados a partir de chamadas anteriores. Verifique o <xref:System.ServiceModel.Description.MetadataExporter.Errors%2A> propriedade antes de recuperar os metadados para garantir que você tenha os metadados que você deseja.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.PolicyVersion PolicyVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.PolicyVersion PolicyVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataExporter.PolicyVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a versão da especificação WS-Policy sendo usada.</summary>
+        <value>Uma instância de <see cref="T:System.ServiceModel.Description.PolicyVersion" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.PolicyVersion> classe contém o namespace para a versão do WS-Policy usa o exportador de metadados. Atualmente há suporte para WS-Policy 1.2 e 1.5.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;object,object&gt; State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;object, object&gt; State" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.MetadataExporter.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Object,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de objetos usados na exportação de metadados.</summary>
+        <value>Um dicionário de objetos usados pelo importador para exportar os contratos e pontos de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `State` propriedade para passar um <xref:System.ServiceModel.Description.MetadataExporter> necessários para exportar com êxito pontos de extremidade ou contratos de dados de estado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A?displayProperty=nameWithType> método que demonstra como o <xref:System.ServiceModel.Description.MetadataExporter.State%2A> propriedade da classe derivada <xref:System.ServiceModel.Description.WsdlImporter> é usado para anexar um personalizado <xref:System.Runtime.Serialization.XsdDataContractExporter?displayProperty=nameWithType> que modifica a exportação de contratos de dados no ponto de extremidade.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#6)]  
+[!code-csharp[C_CustomWSDLExtensions#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

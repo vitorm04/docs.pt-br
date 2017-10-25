@@ -1,0 +1,526 @@
+<Type Name="DrawListViewSubItemEventArgs" FullName="System.Windows.Forms.DrawListViewSubItemEventArgs">
+  <TypeSignature Language="C#" Value="public class DrawListViewSubItemEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DrawListViewSubItemEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DrawListViewSubItemEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.ListView.DrawSubItem" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento permite que você personalize (ou desenho proprietário) a aparência de um <xref:System.Windows.Forms.ListView> controle na exibição de detalhes.  
+  
+ O <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> é gerado por um <xref:System.Windows.Forms.ListView> controlar quando seu <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType> está definida como `true` e sua <xref:System.Windows.Forms.ListView.View%2A> está definida como <xref:System.Windows.Forms.View.Details>. O <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> passado para o evento manipulador contém informações sobre o <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> para desenhar e também fornece métodos para ajudá-lo a desenhar subitem.  
+  
+ Use o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.ItemState%2A> ou <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.Item%2A> propriedades para recuperar informações sobre o item pai para desenhar subitem. Para recuperar o <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> em si, use o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.SubItem%2A> propriedade. Use o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.Header%2A> propriedade para recuperar o <xref:System.Windows.Forms.ColumnHeader> que representa o cabeçalho da coluna na qual o subitem é exibido.  
+  
+ Use o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.Graphics%2A> fazer o desenho real dentro da área especificada pela propriedade de <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.Bounds%2A> propriedade. Para desenhar padrão <xref:System.Windows.Forms.ListView> elementos que não é necessário para personalização, use o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawBackground%2A>, <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawText%2A>, e <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawFocusRectangle%2A> métodos.  
+  
+ Use o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawDefault%2A> propriedade quando desejar que o sistema operacional para desenhar subitem. Isso é útil quando você deseja personalizar somente subitens específicos.  
+  
+> [!NOTE]
+>  Para evitar problemas com elementos gráficos cintilação ao proprietário do desenho, substituir o <xref:System.Windows.Forms.ListView> controle e defina o <xref:System.Windows.Forms.ListView.DoubleBuffered%2A> propriedade `true`. Este recurso está disponível somente no Windows XP e a família Windows Server 2003, quando o aplicativo chama o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como fornecer desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. O <xref:System.Windows.Forms.ListView> controle no exemplo tem um plano de fundo do gradiente. Subitens com valores negativos tem um primeiro plano vermelho e um plano de fundo preto.  
+  
+ Um manipulador para o <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> evento desenha itens todos o plano de fundo. Um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto e o texto e o plano de fundo para subitens que têm valores negativos. Um manipulador para o <xref:System.Windows.Forms.ListView.DrawColumnHeader> evento desenha cada cabeçalho de coluna.  
+  
+ Um <xref:System.Windows.Forms.ContextMenu> componente fornece uma maneira para alternar entre a exibição de detalhes e o modo de exibição de lista. Na exibição de lista, somente o <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> evento é acionado. Nesse caso, o texto e plano de fundo são ambos desenhados no <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> manipulador de eventos.  
+  
+ [!code-csharp[ListViewOwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#1)]
+ [!code-vb[ListViewOwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawListViewSubItemEventArgs (System.Drawing.Graphics graphics, System.Drawing.Rectangle bounds, System.Windows.Forms.ListViewItem item, System.Windows.Forms.ListViewItem.ListViewSubItem subItem, int itemIndex, int columnIndex, System.Windows.Forms.ColumnHeader header, System.Windows.Forms.ListViewItemStates itemState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.ListViewItem item, class System.Windows.Forms.ListViewItem/ListViewSubItem subItem, int32 itemIndex, int32 columnIndex, class System.Windows.Forms.ColumnHeader header, valuetype System.Windows.Forms.ListViewItemStates itemState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewSubItemEventArgs.#ctor(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.ListViewItem,System.Windows.Forms.ListViewItem.ListViewSubItem,System.Int32,System.Int32,System.Windows.Forms.ColumnHeader,System.Windows.Forms.ListViewItemStates)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="item" Type="System.Windows.Forms.ListViewItem" />
+        <Parameter Name="subItem" Type="System.Windows.Forms.ListViewItem+ListViewSubItem" />
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="header" Type="System.Windows.Forms.ColumnHeader" />
+        <Parameter Name="itemState" Type="System.Windows.Forms.ListViewItemStates" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> superfície na qual desenhar.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> no qual desenhar.</param>
+        <param name="item">O <see cref="T:System.Windows.Forms.ListViewItem" /> pai do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> para desenhar.</param>
+        <param name="subItem">O <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> a ser desenhado.</param>
+        <param name="itemIndex">O índice do pai <see cref="T:System.Windows.Forms.ListViewItem" /> dentro de <see cref="P:System.Windows.Forms.ListView.Items" /> coleção.</param>
+        <param name="columnIndex">O índice do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> coluna dentro de <see cref="P:System.Windows.Forms.ListView.Columns" /> coleção.</param>
+        <param name="header">O <see cref="T:System.Windows.Forms.ColumnHeader" /> para a coluna na qual o <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> é exibido.</param>
+        <param name="itemState">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.ListViewItemStates" /> valores que indica o estado atual do <see cref="T:System.Windows.Forms.ListViewItem" /> pai do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> para desenhar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DrawListViewSubItemEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewSubItemEventArgs.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho e o local do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> para desenhar.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que representa os limites do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> para desenhar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O local especificado por essa propriedade é em relação ao canto superior esquerdo do <xref:System.Windows.Forms.ListView> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.Bounds%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. No exemplo, um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto subitem e o texto e o plano de fundo para subitens que têm valores negativos.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#4)]
+ [!code-vb[ListViewOwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnIndex">
+      <MemberSignature Language="C#" Value="public int ColumnIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewSubItemEventArgs.ColumnIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do <see cref="T:System.Windows.Forms.ListView" /> coluna na qual o <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> é exibido.</summary>
+        <value>O índice do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> coluna dentro de <see cref="P:System.Windows.Forms.ListView.Columns" /> coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.ColumnIndex%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. No exemplo, um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto subitem e o texto e o plano de fundo para subitens que têm valores negativos.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#4)]
+ [!code-vb[ListViewOwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBackground">
+      <MemberSignature Language="C#" Value="public void DrawBackground ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBackground() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawBackground" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desenha a tela de fundo do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> usando sua cor da tela de fundo atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para desenhar um plano de fundo padrão que usa o valor atual de <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.BackColor%2A?displayProperty=nameWithType> propriedade. O plano de fundo é desenhado para preencher a área especificada pelo <xref:System.Windows.Forms.DrawListViewItemEventArgs.Bounds%2A> propriedade.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> propriedade do pai <xref:System.Windows.Forms.ListViewItem> deve ser definido como `false` para impedir que o <xref:System.Windows.Forms.ListViewItem.BackColor%2A?displayProperty=nameWithType> valor do item pai, substitua o valor do subitem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawBackground%2A> método em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. No exemplo, um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto subitem e o texto e o plano de fundo para subitens que têm valores negativos.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#4)]
+ [!code-vb[ListViewOwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawDefault">
+      <MemberSignature Language="C#" Value="public bool DrawDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DrawDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> devem ser desenhadas pelo sistema operacional, em vez de desenho proprietário.</summary>
+        <value>
+          <see langword="true" />Se o subitem deve ser desenhado pelo sistema operacional; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade ao manipular o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento subitens que você não deseja personalizar. Se você definir essa propriedade como `true`, subitem será desenhado normalmente usando os valores atuais do <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.BackColor%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A?displayProperty=nameWithType>, e <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Font%2A?displayProperty=nameWithType> propriedades  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> propriedade do pai <xref:System.Windows.Forms.ListViewItem> deve ser definido como `false` para impedir que o <xref:System.Windows.Forms.ListViewItem.BackColor%2A?displayProperty=nameWithType> valor do item pai, substitua o valor do subitem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#472](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#472)]
+ [!code-vb[System.Windows.Forms.EventExamples#472](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#472)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawFocusRectangle">
+      <MemberSignature Language="C#" Value="public void DrawFocusRectangle (System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawFocusRectangle(valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawFocusRectangle(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="bounds">A área na qual desenhar o retângulo de foco.</param>
+        <summary>Desenha um retângulo de foco para o <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> se o pai <see cref="T:System.Windows.Forms.ListViewItem" /> tem foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para desenhar um retângulo de foco padrão ao redor do subitem. O retângulo de foco é desenhada um pixel dentro da área especificada pelo `bounds` parâmetro. Ela é desenhada somente quando o item pai tem foco, portanto você não precisa verificar o estado de foco do item antes de chamar esse método.  
+  
+ Você talvez queira desenhar o retângulo de foco em torno de subitem primeiro (ou seja, o item pai, que é exibido na primeira coluna) em vez de desenho-lo em torno de cada subitem de um item. Isso corresponde do comportamento normal de uma <xref:System.Windows.Forms.ListView> controlar quando o <xref:System.Windows.Forms.ListView.FullRowSelect%2A?displayProperty=nameWithType> está definida como `false`. Para desenhar o retângulo de foco em torno do subitem primeiro, chame o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawFocusRectangle%2A> método apenas quando o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.ColumnIndex%2A> valor é 0.  
+  
+ O <xref:System.Windows.Forms.ListView> controle não fornece a capacidade de selecionar subitens individuais, mas se você quiser implementar subitem seleção por conta própria, você pode usar esse método para desenhar o retângulo de foco em torno de um subitem diferente do primeiro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desenha o texto do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> usando sua cor de primeiro plano atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para desenhar o texto de subitem usando os valores atuais do <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Font%2A?displayProperty=nameWithType> propriedades. O texto é desenhado dentro da área especificada pelo <xref:System.Windows.Forms.DrawListViewItemEventArgs.Bounds%2A> propriedade.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> propriedade do pai <xref:System.Windows.Forms.ListViewItem> deve ser definido como `false` para impedir que o <xref:System.Windows.Forms.ListViewItem.ForeColor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.ListViewItem.Font%2A?displayProperty=nameWithType> valores do item pai substituam os valores do subitem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawText(System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.TextFormatFlags" />.</param>
+        <summary>Desenha o texto do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> usando sua cor de primeiro plano atual e formatação com especificado <see cref="T:System.Windows.Forms.TextFormatFlags" /> valores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para desenhar o texto de subitem usando os valores atuais do <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.ForeColor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Font%2A?displayProperty=nameWithType> propriedades. O texto é desenhado dentro da área especificada pelo <xref:System.Windows.Forms.DrawListViewItemEventArgs.Bounds%2A> propriedade. O <xref:System.Windows.Forms.TextFormatFlags> valores especificados no `flags` parâmetro permitem que você forneça as propriedades de formatação para o rótulo do nó, como alinhamento do texto.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.ListViewItem.UseItemStyleForSubItems%2A> propriedade do pai <xref:System.Windows.Forms.ListViewItem> deve ser definido como `false` para impedir que o <xref:System.Windows.Forms.ListViewItem.ForeColor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.ListViewItem.Font%2A?displayProperty=nameWithType> valores do item pai substituam os valores do subitem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawText%2A> método em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. No exemplo, um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto subitem e o texto e o plano de fundo para subitens que têm valores negativos.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#4)]
+ [!code-vb[ListViewOwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewSubItemEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Graphics" /> usado para desenhar o <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Graphics" /> usado para desenhar o <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Graphics> classe fornece propriedades e métodos úteis para o dispositivo de vídeo de desenho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.Graphics%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. No exemplo, um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto subitem e o texto e o plano de fundo para subitens que têm valores negativos.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#4)]
+ [!code-vb[ListViewOwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ColumnHeader Header { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ColumnHeader Header" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewSubItemEventArgs.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cabeçalho do <see cref="T:System.Windows.Forms.ListView" /> coluna na qual o <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> é exibido.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ColumnHeader" /> para a coluna na qual o <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> é exibido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.Header%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. No exemplo, um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto subitem e o texto e o plano de fundo para subitens que têm valores negativos.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#4)]
+ [!code-vb[ListViewOwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListViewItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewSubItemEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai <see cref="T:System.Windows.Forms.ListViewItem" /> do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> para desenhar.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.ListViewItem" /> que representa o pai do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> para desenhar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para acessar o <xref:System.Windows.Forms.ListViewItem> pai do <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> para desenhar. Isso é útil quando o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.ItemState%2A> propriedade não fornece informações suficientes para atender às suas necessidades. O <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.ItemState%2A> propriedade fornece somente as informações de estado básica que você pode usar, por exemplo, para determinar se o item pai é selecionado, marcado ou focalizado. O <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.Item%2A> propriedade, por outro lado, permite acessar todos os membros do pai <xref:System.Windows.Forms.ListViewItem>.  
+  
+ Para acessar o <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> desenhada, use o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.SubItem%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#472](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#472)]
+ [!code-vb[System.Windows.Forms.EventExamples#472](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#472)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewSubItemEventArgs.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do pai <see cref="T:System.Windows.Forms.ListViewItem" /> do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> para desenhar.</summary>
+        <value>O índice do pai <see cref="T:System.Windows.Forms.ListViewItem" /> dentro de <see cref="P:System.Windows.Forms.ListView.Items" /> coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#472](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#472)]
+ [!code-vb[System.Windows.Forms.EventExamples#472](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#472)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemState">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItemStates ItemState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ListViewItemStates ItemState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewSubItemEventArgs.ItemState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual do pai <see cref="T:System.Windows.Forms.ListViewItem" /> do <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> para desenhar.</summary>
+        <value>Uma combinação bit a bit de <see cref="T:System.Windows.Forms.ListViewItemStates" /> valores que indica o estado atual do pai <see cref="T:System.Windows.Forms.ListViewItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para verificar se o <xref:System.Windows.Forms.ListViewItem> pai do <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> desenhar está em um estado específico. Esta propriedade fornece somente as informações de estado básicas sobre o item pai. Você pode usar essa propriedade, por exemplo, para determinar se o item pai é selecionado, marcado ou focalizado. Se você precisa saber mais, recuperar o item pai por meio de <xref:System.Windows.Forms.DrawListViewItemEventArgs.Item%2A> propriedade e verifique suas propriedades diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.ItemState%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. No exemplo, um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto subitem e o texto e o plano de fundo para subitens que têm valores negativos.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#4)]
+ [!code-vb[ListViewOwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItem.ListViewSubItem SubItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListViewItem/ListViewSubItem SubItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewSubItemEventArgs.SubItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem+ListViewSubItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> para desenhar.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ListViewItem.ListViewSubItem" /> a ser desenhado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil quando o outro <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> propriedades não fornecem informações suficientes para atender às suas necessidades. O <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.SubItem%2A> propriedade permite acessar todos os membros de <xref:System.Windows.Forms.ListViewItem.ListViewSubItem> desenhado. É necessário acessar esse objeto diretamente, por exemplo, para desenhar o <xref:System.Windows.Forms.ListViewItem.ListViewSubItem.Text%2A?displayProperty=nameWithType> valor por conta própria em vez de usar o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.DrawText%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs.SubItem%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. No exemplo, um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto subitem e o texto e o plano de fundo para subitens que têm valores negativos.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewSubItemEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#4)]
+ [!code-vb[ListViewOwnerDraw#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

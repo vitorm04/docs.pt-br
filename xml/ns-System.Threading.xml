@@ -1,0 +1,6 @@
+<Namespace Name="System.Threading">
+  <Docs>
+    <summary>O <see cref="N:System.Threading" /> namespace fornece classes e interfaces que permitem programação multithread. Além das classes para a sincronização de atividades de thread e acesso a dados (<see cref="T:System.Threading.Mutex" />, <see cref="T:System.Threading.Monitor" />, <see cref="T:System.Threading.Interlocked" />, <see cref="T:System.Threading.AutoResetEvent" />, e assim por diante), este namespace inclui um <see cref="T:System.Threading.ThreadPool" /> classe que permite que você use um pool de threads e fornecido pelo sistema e um <see cref="T:System.Threading.Timer" /> classe que executa os métodos de retorno de chamada em threads de pool.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

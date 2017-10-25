@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.Design">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.Design" /> namespace contém classes que podem ser usados para estender o suporte de tempo de design para páginas da Web ASP.NET e controles de servidor Web.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

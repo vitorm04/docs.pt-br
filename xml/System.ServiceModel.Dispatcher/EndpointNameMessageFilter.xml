@@ -1,0 +1,83 @@
+<Type Name="EndpointNameMessageFilter" FullName="System.ServiceModel.Dispatcher.EndpointNameMessageFilter">
+  <TypeSignature Language="C#" Value="public class EndpointNameMessageFilter : System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EndpointNameMessageFilter extends System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.EndpointNameMessageFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.MessageFilter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma consulta que testa se uma mensagem foi recebida em um ponto de extremidade com um nome que corresponda ao nome especificado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointNameMessageFilter (string endpointName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string endpointName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointNameMessageFilter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpointName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="endpointName">O endpointName em relação à qual as mensagens são testadas</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.EndpointNameMessageFilter" /> classe com um nome especificado em relação à qual uma mensagem de teste.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointNameMessageFilter.Match(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O objeto de mensagem para verificar.</param>
+        <summary>Testa se uma mensagem que satisfaz o nome do ponto de extremidade especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de mensagem satisfizer o nome do ponto de extremidade especificado no filtro; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.MessageBuffer buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.MessageBuffer buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointNameMessageFilter.Match(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> objeto a ser verificado.</param>
+        <summary>Testa se uma mensagem em buffer satisfaz o nome do ponto de extremidade especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de mensagem satisfizer o nome do ponto de extremidade especificado no filtro; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

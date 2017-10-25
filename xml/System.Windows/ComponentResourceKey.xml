@@ -1,0 +1,266 @@
+<Type Name="ComponentResourceKey" FullName="System.Windows.ComponentResourceKey">
+  <TypeSignature Language="C#" Value="public class ComponentResourceKey : System.Windows.ResourceKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComponentResourceKey extends System.Windows.ResourceKey" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ComponentResourceKey" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.ResourceKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Markup.ComponentResourceKeyConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define ou referencia as chaves de recurso com base em nomes de classe de assemblies externos, bem como um identificador adicional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] informações, consulte [ComponentResourceKey Markup Extension](~/docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  
+  
+ Essa classe implementa um tipo de objeto que é útil para a criação de chaves que são baseadas nos tipos em assemblies mais de um identificador. Como definir ou o tipo de referência, você não é necessário solicitar um determinado <xref:System.Windows.ResourceDictionary>, e mais de um conjunto de recursos pode existir no assembly, cada diferenciado pelo tipo de seus <xref:System.Windows.ComponentResourceKey>.  
+  
+ Há duas maneiras de definir um <xref:System.Windows.ComponentResourceKey>.  
+  
+ Se você quiser uma chave facilmente acessível, você pode definir uma propriedade estática em seu código de classe de controle que retorna um <xref:System.Windows.ComponentResourceKey>, construído com uma <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> que existe no assembly de recursos externos e um <xref:System.Windows.ComponentResourceKey.ResourceId%2A>. A chave pode ser usada para definir estilos de padrão alternativo para controles em um assembly, alternando o assembly original do recurso externo para um personalizado. Você também pode definir uma parte de recurso nomeado dentro de um estilo de controle maior ou um modelo para expor um ponto de entrada de personalização. Isso é particularmente útil se você estiver definindo um dicionário de recursos de tema para o seu controle.  
+  
+ Você também pode usar o [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] [ComponentResourceKey Markup Extension](~/docs/framework/wpf/advanced/componentresourcekey-markup-extension.md) na sintaxe detalhada diretamente para criar uma instância flexível da chave. Isso é útil se você quiser declarar recursos particulares de outros assemblies que são menos identificáveis personalizar.  
+  
+<a name="xamlTextUsage_ComponentResourceKey"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Consulte comentários  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentResourceKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ComponentResourceKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.ComponentResourceKey" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão não é geralmente usado, porque um <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> valor e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> valor são necessários para inicialização apropriada. O construtor padrão existe principalmente para oferecer suporte a [ComponentResourceKey Markup Extension](~/docs/framework/wpf/advanced/componentresourcekey-markup-extension.md) uso XAML no formato do parâmetro nomeado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentResourceKey (Type typeInTargetAssembly, object resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type typeInTargetAssembly, object resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ComponentResourceKey.#ctor(System.Type,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeInTargetAssembly" Type="System.Type" />
+        <Parameter Name="resourceId" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeInTargetAssembly">O tipo que define a chave do recurso.</param>
+        <param name="resourceId">Um identificador exclusivo para diferenciar este <see cref="T:System.Windows.ComponentResourceKey" /> de outros usuários associados a <c>typeInTargetAssembly</c> tipo.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Windows.ComponentResourceKey" /> , especificando o <see cref="T:System.Type" /> que define a chave e um objeto a ser usado como um identificador de recurso adicional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor existe para dois cenários, com o primeiro cenário, sendo as mais importantes:  
+  
+-   Dá suporte à criação de um <xref:System.Windows.ComponentResourceKey> que, em seguida, é exposto como um campo estático público em uma classe de controle personalizado. Isso simplifica o acesso de um controle para seus próprios recursos definidos no modelo por meio de `{x:Static}` usos para valores de propriedade do modelo.  
+  
+-   Dá suporte a [ComponentResourceKey Markup Extension](~/docs/framework/wpf/advanced/componentresourcekey-markup-extension.md) uso XAML em forma de parâmetro posicional, que é uma técnica disponível para parceiros que fazem referência a um recurso do componente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.ComponentResourceKey> que, em seguida, é exposta como uma chave estática de um controle para fornecer um ponto de entrada de personalização de estilo.  
+  
+ [!code-csharp[CorePseudocode#CRKCode](~/samples/snippets/csharp/VS_Snippets_Wpf/CorePseudocode/CSharp/corepseudocode.cs#crkcode)]
+ [!code-vb[CorePseudocode#CRKCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CorePseudocode/visualbasic/corepseudocode.vb#crkcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Assembly Assembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly Assembly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ComponentResourceKey.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto assembly que indica o dicionário do qual assembly para procurar o valor associado a essa chave.</summary>
+        <value>O assembly recuperado, como uma classe de reflexão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ComponentResourceKey.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Objeto a ser comparado com o atual <see cref="T:System.Windows.ComponentResourceKey" />.</param>
+        <summary>Determina se o objeto fornecido é igual ao atual <see cref="T:System.Windows.ComponentResourceKey" />.</summary>
+        <returns>
+          <see langword="true" /> se os objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Duas chaves são iguais se tiverem os mesmos valores para todas as suas propriedades configuráveis imediatas (<xref:System.Windows.ComponentResourceKey.ResourceId%2A>, <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ComponentResourceKey.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código hash para este <see cref="T:System.Windows.ComponentResourceKey" />.</summary>
+        <returns>Um valor inteiro de 32 bits com sinal.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceId">
+      <MemberSignature Language="C#" Value="public object ResourceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ResourceId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ComponentResourceKey.ResourceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um identificador exclusivo para diferenciar esta chave de outros usuários associados a esse tipo.</summary>
+        <value>Um identificador exclusivo. Normalmente, isso é uma cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] informações, consulte [ComponentResourceKey Markup Extension](~/docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  
+  
+ Normalmente, a cadeia de caracteres usada para um <xref:System.Windows.ComponentResourceKey.ResourceId%2A> valor está em conformidade com a [gramática XamlName](~/docs/framework/xaml-services/xamlname-grammar.md).  
+  
+<a name="xamlTextUsage_2"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Consulte comentários  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.ComponentResourceKey.ResourceId%2A> para diferenciar esta chave de outros usuários associados a esse tipo.  
+  
+ [!code-xaml[ColorPicker_snip#SliderStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/Themes/generic.xaml#sliderstyle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ComponentResourceKey.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a representação de cadeia de caracteres de um <see cref="T:System.Windows.ComponentResourceKey" />.</summary>
+        <returns>A representação de cadeia de caracteres.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeInTargetAssembly">
+      <MemberSignature Language="C#" Value="public Type TypeInTargetAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TypeInTargetAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ComponentResourceKey.TypeInTargetAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Type" /> que define a chave do recurso.</summary>
+        <value>O tipo que define a chave do recurso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] informações, consulte [ComponentResourceKey Markup Extension](~/docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  
+  
+ O <xref:System.Windows.ComponentResourceKey> elemento é usado por componentes personalizados para definir as chaves para recursos que são acessados de assemblies externos, com base em um assembly que contém o tipo de direcionamento. Componentes personalizados geralmente definem novos tipos que devem ser no assembly em que o recurso está localizado. Esses tipos não têm nenhuma outra implementação em geral, os tipos existem somente para satisfazer os requisitos de pesquisa de um <xref:System.Windows.ComponentResourceKey>.  
+  
+<a name="xamlTextUsage_3"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Consulte comentários  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.ComponentResourceKey> incluindo <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> e <xref:System.Windows.ComponentResourceKey.ResourceId%2A> usando o [ComponentResourceKey Markup Extension](~/docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Esse recurso pode ser colocado em um assembly externo e acessado pelo uso de chave que solicita o recurso usando um análogo <xref:System.Windows.ComponentResourceKey> na solicitação.  
+  
+ [!code-xaml[ColorPicker_snip#SliderStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/Themes/generic.xaml#sliderstyle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

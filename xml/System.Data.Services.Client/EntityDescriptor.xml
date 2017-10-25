@@ -1,0 +1,274 @@
+<Type Name="EntityDescriptor" FullName="System.Data.Services.Client.EntityDescriptor">
+  <TypeSignature Language="C#" Value="public sealed class EntityDescriptor : System.Data.Services.Client.Descriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EntityDescriptor extends System.Data.Services.Client.Descriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.EntityDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Services.Client.Descriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("State = {state}, Uri = {editLink}, Element = {entity.GetType().ToString()}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descrição das modificações feitas a entidades por operações retornadas em um <see cref="T:System.Data.Services.Client.DataServiceResponse" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método retorna um <xref:System.Data.Services.Client.DataServiceResponse> objeto que contém uma série de <xref:System.Data.Services.Client.OperationResponse> objetos cada uma delas contém uma sequência de <xref:System.Data.Services.Client.EntityDescriptor> ou <xref:System.Data.Services.Client.LinkDescriptor> instâncias que representam as alterações que foram persistentes.  
+  
+ Para operações bem-sucedidas, o <xref:System.Data.Services.Client.Descriptor.State*> propriedade do descritor será definido como inalterados e os novos valores para inserir e operações de atualização serão mescladas de acordo com as configurações de mesclagem.  
+  
+ Para operações com erros, o <xref:System.Data.Services.Client.Descriptor.State*> do descritor permanecerá a mesma antes <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> foi chamado.  
+  
+ Se ocorreu um erro e o processamento é interrompido durante uma operação, o <xref:System.Data.Services.Client.Descriptor.State*> permanecerá inalterada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EditLink">
+      <MemberSignature Language="C#" Value="public Uri EditLink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri EditLink" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.EditLink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI que modifica a entidade.</summary>
+        <value>O link de edição URI para o recurso de entidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditStreamUri">
+      <MemberSignature Language="C#" Value="public Uri EditStreamUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri EditStreamUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.EditStreamUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI que modifica os dados binários de propriedade da entidade.</summary>
+        <value>O <see cref="P:System.Data.Services.Client.EntityDescriptor.EditStreamUri" /> propriedade contém o link de mídia Editar URI para o recurso de mídia que está associado com a entidade, que é uma Media Link Entry.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Entity">
+      <MemberSignature Language="C#" Value="public object Entity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Entity" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.Entity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a entidade que contém os dados de atualização.</summary>
+        <value>Um objeto que contém dados de atualização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ETag">
+      <MemberSignature Language="C#" Value="public string ETag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ETag" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.ETag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor de eTag que indica o estado dos dados de destino para atualização desde a última chamada para <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" />.</summary>
+        <value>Um valor de cadeia de caracteres que indica o estado dos dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O eTag associado com a entidade é usado para representar valores originais para uso com verificações de simultaneidade otimista de acordo com as regras de eTag em HTTP [RFC 2616](http://go.microsoft.com/fwlink/?LinkID=114956).  
+  
+ O valor pode ser nulo ou vazio. NULL representa o caso em que nenhum eTag está associado no momento com a entidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public string Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI que é o valor de identidade da entidade.</summary>
+        <value>O <see cref="P:System.Data.Services.Client.EntityDescriptor.Identity" /> propriedade corresponde ao <see langword="identity" /> elemento o <see langword="entry" /> que representa a entidade na resposta Atom.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentForInsert">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.EntityDescriptor ParentForInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.Client.EntityDescriptor ParentForInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.ParentForInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.EntityDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a entidade pai que está relacionada à entidade.</summary>
+        <value>Um objeto que é a entidade pai no link de relação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentPropertyForInsert">
+      <MemberSignature Language="C#" Value="public string ParentPropertyForInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParentPropertyForInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.ParentPropertyForInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade da entidade que é uma propriedade de navegação e links para a entidade pai.</summary>
+        <value>O nome da propriedade pai.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadStreamUri">
+      <MemberSignature Language="C#" Value="public Uri ReadStreamUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ReadStreamUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.ReadStreamUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI que acessa os dados binários de propriedade da entidade.</summary>
+        <value>Um URI que acessa a propriedade binária como um fluxo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Client.EntityDescriptor.ReadStreamUri%2A> propriedade contém o URI para o recurso de mídia que está associado com a entidade, que é uma Media Link Entry.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelfLink">
+      <MemberSignature Language="C#" Value="public Uri SelfLink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SelfLink" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.SelfLink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI que é usado para retornar o recurso de entidade.</summary>
+        <value>Um URI que retorna a entidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerTypeName">
+      <MemberSignature Language="C#" Value="public string ServerTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.ServerTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo da fonte de dados ao qual a entidade está mapeada.</summary>
+        <value>Uma cadeia de caracteres que é o nome do tipo de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamETag">
+      <MemberSignature Language="C#" Value="public string StreamETag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StreamETag" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityDescriptor.StreamETag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o eTag para o recurso de mídia associado a uma entidade que é uma entrada de link de mídia.</summary>
+        <value>Um valor de cadeia de caracteres que indica o estado dos dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Client.EntityDescriptor.StreamETag%2A> propriedade retorna um valor de eTag que indica o estado de destino para atualização desde a última chamada para o recurso de mídia <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> quando a entidade é uma mídia de entrada do link.  
+  
+ O eTag associado ao recurso de mídia é usado para representar valores originais para uso com verificações de simultaneidade otimista de acordo com as regras de eTag em HTTP [RFC 2616](http://go.microsoft.com/fwlink/?LinkID=114956).  
+  
+ O valor pode ser nulo ou vazio. NULL representa o caso em que nenhum eTag está associado atualmente com o recurso de mídia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

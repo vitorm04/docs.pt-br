@@ -1,0 +1,172 @@
+<Type Name="TimestampInformation" FullName="System.Security.Cryptography.X509Certificates.TimestampInformation">
+  <TypeSignature Language="C#" Value="public sealed class TimestampInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TimestampInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.TimestampInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece detalhes sobre o carimbo de hora que foi aplicada a uma assinatura Authenticode de um manifesto.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public string HashAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o algoritmo de hash usado para calcular a assinatura de carimbo de data / hora.</summary>
+        <value>O algoritmo de hash usado para calcular a assinatura de carimbo de data / hora.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HResult">
+      <MemberSignature Language="C#" Value="public int HResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HResult" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.HResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor HRESULT que é o resultado da verificação da assinatura.</summary>
+        <value>O valor HRESULT que é o resultado da verificação da assinatura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o carimbo de data / hora da assinatura é válida.</summary>
+        <value>
+          <see langword="true" />Se o carimbo de hora é válido. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureChain">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Chain SignatureChain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Chain SignatureChain" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.SignatureChain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Chain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de certificados usados para verificar se o carimbo de data / hora da assinatura.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Chain" /> objeto que representa a cadeia de certificados.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.StorePermission">para a direita enumerar os certificados. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.StorePermissionFlags.EnumerateCertificates" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 SigningCertificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 SigningCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.SigningCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o certificado que assinou o carimbo de hora.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto que representa o certificado.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.StorePermission">para a direita enumerar os certificados. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.StorePermissionFlags.EnumerateCertificates" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="public DateTime Timestamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Timestamp" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.Timestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o carimbo de hora que foi aplicado à assinatura.</summary>
+        <value>Um <see cref="T:System.DateTime" /> objeto que representa o carimbo de hora.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O carimbo de hora é expresso no horário local. O carimbo de hora está disponível somente se o publicador é confiável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationResult">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.SignatureVerificationResult VerificationResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.SignatureVerificationResult VerificationResult" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.TimestampInformation.VerificationResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SignatureVerificationResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o resultado da verificação da assinatura de carimbo de data / hora.</summary>
+        <value>Um dos valores de <see cref="T:System.Security.Cryptography.SignatureVerificationResult" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna uma verificação positiva o <xref:System.Security.Cryptography.SignatureVerificationResult.Valid>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

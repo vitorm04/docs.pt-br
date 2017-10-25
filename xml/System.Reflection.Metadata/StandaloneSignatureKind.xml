@@ -1,0 +1,57 @@
+<Type Name="StandaloneSignatureKind" FullName="System.Reflection.Metadata.StandaloneSignatureKind">
+  <TypeSignature Language="C#" Value="public enum StandaloneSignatureKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StandaloneSignatureKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Metadata.StandaloneSignatureKind" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Metadata</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <AssemblyVersion>1.4.1.0</AssemblyVersion>
+    <AssemblyVersion>1.4.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica se um <see cref="T:System.Reflection.Metadata.StandaloneSignature" /> representa um método autônomo ou a assinatura de variável local.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LocalVariables">
+      <MemberSignature Language="C#" Value="LocalVariables" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Metadata.StandaloneSignatureKind LocalVariables = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Metadata.StandaloneSignatureKind.LocalVariables" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Metadata.StandaloneSignatureKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Reflection.Metadata.MemberReference" /> faz referência a uma assinatura de variável local.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="Method" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Metadata.StandaloneSignatureKind Method = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Metadata.StandaloneSignatureKind.Method" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Metadata</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.1.0</AssemblyVersion>
+        <AssemblyVersion>1.4.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Metadata.StandaloneSignatureKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Reflection.Metadata.StandaloneSignature" /> representa uma assinatura de método autônomo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

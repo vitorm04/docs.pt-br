@@ -1,0 +1,122 @@
+<Type Name="StateMachineAttribute" FullName="System.Runtime.CompilerServices.StateMachineAttribute">
+  <TypeSignature Language="C#" Value="public class StateMachineAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit StateMachineAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.StateMachineAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que você determine se um método é um método de máquina de estado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não deve aplicar o `StateMachine` atributo métodos em seu código. Para métodos que são os métodos de máquina de estado, o compilador aplicará o <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute> ou <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute> em IL emitido.  
+  
+ Ao verificar se um método é um método de máquina de estado, é preferível em vez disso, verificar se há atributos a seguir, que são derivados de `StateMachineAttribute`:  
+  
+-   <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+  
+-   <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
+  
+> [!NOTE]
+>  `StateMachineAttribute`não pode ser usado para verificar se um método é um método de máquina de estado, se o método é um método iterador em c#.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateMachineAttribute (Type stateMachineType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type stateMachineType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.StateMachineAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stateMachineType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="stateMachineType">O objeto de tipo para o tipo subjacente de máquina de estado que foi gerado pelo compilador para implementar o método de máquina de estado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.CompilerServices.StateMachineAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateMachineType">
+      <MemberSignature Language="C#" Value="public Type StateMachineType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type StateMachineType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.CompilerServices.StateMachineAttribute.StateMachineType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o objeto de tipo para o tipo subjacente de máquina de estado que foi gerado pelo compilador para implementar o método de máquina de estado.</summary>
+        <value>Obtém o objeto de tipo para o tipo subjacente de máquina de estado que foi gerado pelo compilador para implementar o método de máquina de estado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser útil para depuradores e ferramentas de reflexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

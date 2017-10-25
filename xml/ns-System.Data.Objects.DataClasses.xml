@@ -1,0 +1,13 @@
+<Namespace Name="System.Data.Objects.DataClasses">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Objects.DataClasses" /> namespace inclui classes que são classes base para tipos que são definidos em um modelo de dados de entidade (EDM), as classes base para os tipos que são retornados pelas propriedades de navegação e classes que definem os atributos que objetos common language runtime (CLR) são mapeados para tipos no modelo conceitual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ferramentas do modelo de dados de entidade usam o arquivo de modelo conceitual para gerar classes de dados que derivam de classes nesse namespace. Para obter mais informações, consulte [visão geral dos serviços de objeto (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038). Classes de dados personalizados podem herdar de classes nesse namespace. O <xref:System.Data.Objects.DataClasses> namespace também inclui as interfaces que são usadas para implementar classes de dados personalizados sem herdadas de classes do Entity Framework. Para obter mais informações, consulte [personalizando objetos](http://msdn.microsoft.com/en-us/af6f07ce-2261-4c65-87cf-d018ad082921).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

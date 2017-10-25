@@ -1,0 +1,91 @@
+<Type Name="PageAction" FullName="System.Web.DynamicData.PageAction">
+  <TypeSignature Language="C#" Value="public static class PageAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit PageAction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.PageAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica valores de ação padrão que são usados pelo mecanismo de roteamento em aplicativos de dados dinâmicos do ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Details">
+      <MemberSignature Language="C#" Value="public static string Details { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Details" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.PageAction.Details" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da ação para uma página que mostra detalhes de um item de dados.</summary>
+        <value>O valor literal "Detalhes".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="public static string Edit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Edit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.PageAction.Edit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da ação para uma página que edita um item de dados.</summary>
+        <value>O valor literal "Edit".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public static string Insert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Insert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.PageAction.Insert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da ação para uma página que insere um item de dados.</summary>
+        <value>O valor literal "Insert".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="public static string List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string List" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.PageAction.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da ação para uma página que exibe dados de uma tabela.</summary>
+        <value>O valor literal "List".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

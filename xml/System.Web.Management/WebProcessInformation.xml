@@ -1,0 +1,222 @@
+<Type Name="WebProcessInformation" FullName="System.Web.Management.WebProcessInformation">
+  <TypeSignature Language="C#" Value="public sealed class WebProcessInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebProcessInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebProcessInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre o processo de trabalho que hospeda o ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de eventos responsáveis pela compactação de dados de status de integridade do aplicativo e o provedor de tipos responsável pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ Instâncias do <xref:System.Web.Management.WebProcessInformation> classe contêm informações que são obtidas usando qualquer um dos tipos que derivam de <xref:System.Web.Management.WebManagementEvent> tipo.  
+  
+ Seu aplicativo precisa as permissões apropriadas para acessar informações protegidas fornecidas por este tipo.  
+  
+ O exemplo a seguir é um trecho do arquivo de configuração, que você pode usar para habilitar o ASP.NET para eventos de erro de log que contêm informações de processo.  
+  
+```  
+<healthMonitoring   
+  enabled="true" heartBeatInterval="0">  
+  
+    <rules>  
+     <add   
+       name="All Errors Default"  
+       eventName="All Errors"  
+       provider="EventLogProvider"  
+       profile="Default"  
+       minInterval="00:01:00" />  
+    </rules>  
+  
+</healthMonitoring>  
+```  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `healthMonitoring` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de criação de uma classe de evento personalizado, consulte a seção de exemplo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir tem duas partes. A primeira é um trecho de um arquivo de configuração que permite que o ASP.NET usar um evento personalizado que usa o <xref:System.Web.Management.WebProcessInformation> tipo.  
+  
+ O segundo mostra como implementar o evento personalizado.  
+  
+ Certifique-se de que seu evento personalizado é gerado em um momento apropriado, ou seja, quando o evento de integridade do sistema equivalentes substitui será emitido.  
+  
+```  
+<healthMonitoring   
+  enabled="true" heartBeatInterval="0">  
+  
+    <eventMappings>  
+      <add    
+        name="SampleProcessInformation"   
+        type="SamplesAspNet.SampleWebProcessInformation, webprocessinformation, Version=1.0.1585.27289, Culture=neutral, PublicKeyToken=3648e5c763a8239f, processorArchitecture=MSIL"/>  
+    </eventMappings>  
+  
+    <rules>  
+      <add   
+        name="Custom Process Information"  
+        eventName="SampleProcessInformation"   
+        provider="EventLogProvider"  
+        profile="Default"/>  
+    </rules>  
+  
+</healthMonitoring>  
+  
+```  
+  
+ O exemplo a seguir mostra como implementar um evento personalizado que usa o <xref:System.Web.Management.WebProcessInformation> tipo.  
+  
+ [!code-csharp[System.Web.Management.WebProcessInformation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/CS/webprocessinformation.cs#1)]
+ [!code-vb[System.Web.Management.WebProcessInformation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/VB/webprocessinformation.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccountName">
+      <MemberSignature Language="C#" Value="public string AccountName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccountName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebProcessInformation.AccountName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da conta do processo de trabalho.</summary>
+        <value>O nome de conta do processo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seu aplicativo precisa as permissões apropriadas para acessar as informações fornecidas por esta propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o nome da conta de processo.  
+  
+ [!code-csharp[System.Web.Management.WebProcessInformation#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/CS/webprocessinformation.cs#4)]
+ [!code-vb[System.Web.Management.WebProcessInformation#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/VB/webprocessinformation.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatToString">
+      <MemberSignature Language="C#" Value="public void FormatToString (System.Web.Management.WebEventFormatter formatter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FormatToString(class System.Web.Management.WebEventFormatter formatter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebProcessInformation.FormatToString(System.Web.Management.WebEventFormatter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatter" Type="System.Web.Management.WebEventFormatter" />
+      </Parameters>
+      <Docs>
+        <param name="formatter">O <see cref="T:System.Web.Management.WebEventFormatter" /> que contém as configurações de recuo e tabulação usadas para formatar as informações de evento de integridade da Web.</param>
+        <summary>Formata as informações do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebProcessInformation.FormatToString%2A> método fornece um formato uniforme para obter informações de evento, que é útil se os dados do evento devem ser registrados e posteriormente apresentados ao usuário. O método é chamado internamente quando o provedor chama uma da <xref:System.Web.Management.WebBaseEvent.ToString%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como formatar informações personalizadas.  
+  
+ [!code-csharp[System.Web.Management.WebProcessInformation#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/CS/webprocessinformation.cs#7)]
+ [!code-vb[System.Web.Management.WebProcessInformation#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/VB/webprocessinformation.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessID">
+      <MemberSignature Language="C#" Value="public int ProcessID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProcessID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebProcessInformation.ProcessID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de processo.</summary>
+        <value>O identificador de processo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o identificador do processo de trabalho que hospeda o ASP.NET.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o identificador de processo.  
+  
+ [!code-csharp[System.Web.Management.WebProcessInformation#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/CS/webprocessinformation.cs#5)]
+ [!code-vb[System.Web.Management.WebProcessInformation#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/VB/webprocessinformation.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessName">
+      <MemberSignature Language="C#" Value="public string ProcessName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProcessName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebProcessInformation.ProcessName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do processo.</summary>
+        <value>O nome do processo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse é o nome do processo de trabalho que hospeda o ASP.NET.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o nome do processo.  
+  
+ [!code-csharp[System.Web.Management.WebProcessInformation#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/CS/webprocessinformation.cs#6)]
+ [!code-vb[System.Web.Management.WebProcessInformation#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebProcessInformation/VB/webprocessinformation.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

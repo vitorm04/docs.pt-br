@@ -1,0 +1,1555 @@
+<Type Name="CollectionBase" FullName="System.Collections.CollectionBase">
+  <TypeSignature Language="C#" Value="public abstract class CollectionBase : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit CollectionBase extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.CollectionBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a classe base <see langword="abstract" /> para uma coleção fortemente tipada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Collections.CollectionBase> instância sempre é modificável. Consulte <xref:System.Collections.ReadOnlyCollectionBase> para obter uma versão somente leitura dessa classe.  
+  
+ A capacidade de um <xref:System.Collections.CollectionBase> é o número de elementos de <xref:System.Collections.CollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.CollectionBase>, a capacidade é aumentada automaticamente conforme necessário por meio de realocação. A capacidade pode ser diminuída, definindo o <xref:System.Collections.CollectionBase.Capacity%2A> propriedade explicitamente.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Esta implementação não oferece um sincronizado wrapper (thread-safe) para um <see cref="T:System.Collections.CollectionBase" />, mas as classes derivadas podem criar suas próprias versões sincronizadas do <see cref="T:System.Collections.CollectionBase" /> usando o <see cref="P:System.Collections.ICollection.SyncRoot" /> propriedade.  
+  
+ Enumerar através de uma coleção intrinsecamente não é um procedimento de segurança do thread. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Essa classe base é fornecido para tornar mais fácil para os implementadores criar uma coleção personalizada com rigidez de tipos. Os implementadores são incentivados a estender a classe base em vez de criar seus próprios.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CollectionBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.CollectionBase" /> classe com a capacidade inicial padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.CollectionBase> é o número de elementos que o <xref:System.Collections.CollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.CollectionBase>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.CollectionBase>.  
+  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CollectionBase (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número de elementos que a nova lista pode armazenar inicialmente.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.CollectionBase" /> classe com a capacidade especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.CollectionBase> é o número de elementos que o <xref:System.Collections.CollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.CollectionBase>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.CollectionBase>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `capacity`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public int Capacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Capacity" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CollectionBase.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de elementos que o <see cref="T:System.Collections.CollectionBase" /> pode conter.</summary>
+        <value>O número de elementos que o <see cref="T:System.Collections.CollectionBase" /> pode conter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.CollectionBase.Capacity%2A>é o número de elementos que o <xref:System.Collections.CollectionBase> pode armazenar. <xref:System.Collections.CollectionBase.Count%2A>é o número de elementos que estão realmente no <xref:System.Collections.CollectionBase>.  
+  
+ <xref:System.Collections.CollectionBase.Capacity%2A>sempre é maior que ou igual a <xref:System.Collections.CollectionBase.Count%2A>. Se <xref:System.Collections.CollectionBase.Count%2A> excede <xref:System.Collections.CollectionBase.Capacity%2A> durante a adição de elementos, a capacidade é aumentada automaticamente realocando a matriz interna antes de copiar os elementos antigos e adição de novos elementos.  
+  
+ A capacidade pode ser diminuída, definindo o <xref:System.Collections.CollectionBase.Capacity%2A> propriedade explicitamente. Quando o valor de <xref:System.Collections.CollectionBase.Capacity%2A> é definido explicitamente, a matriz interna também seja realocada para acomodar a capacidade especificada.  
+  
+ Recuperar o valor dessa propriedade é uma operação de (1); configuração da propriedade é um O (`n`) operação, onde `n` é a nova capacidade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Collections.CollectionBase.Capacity" /> é definido como um valor menor que <see cref="P:System.Collections.CollectionBase.Count" />.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente disponível no sistema.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os objetos do <see cref="T:System.Collections.CollectionBase" /> instância. Este método não pode ser substituído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.CollectionBase.Count%2A>é definido como zero.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Para executar ações personalizadas antes ou depois que a coleção é desmarcada, substituir protegido <xref:System.Collections.CollectionBase.OnClear%2A> ou <xref:System.Collections.CollectionBase.OnClearComplete%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CollectionBase.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos na instância <see cref="T:System.Collections.CollectionBase" />. Essa propriedade não pode ser substituída.</summary>
+        <value>O número de elementos contidos na instância <see cref="T:System.Collections.CollectionBase" />.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera pela instância <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para a instância <see cref="T:System.Collections.CollectionBase" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [Visual Basic, C#]  
+  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição. AT isso posicionar, chamando <xref:System.Collections.IEnumerator.Current%2A> lança uma exceção. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Se a última chamada <xref:System.Collections.IEnumerator.MoveNext%2A> retornou `false`, chamar <xref:System.Collections.IEnumerator.Current%2A> lança uma exceção. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador é invalidado invalidado e a próxima chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException>. Se a coleção é modificada entre <xref:System.Collections.IEnumerator.MoveNext%2A> e <xref:System.Collections.IEnumerator.Current%2A>, <xref:System.Collections.IEnumerator.Current%2A> retorna o elemento que está definido como, mesmo se o enumerador já é invalidado.  
+  
+ O enumerador não tem acesso exclusivo à coleção; Portanto, enumerando através de uma coleção intrinsecamente não é um procedimento de segurança do thread. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ Enquanto o <xref:System.Collections.CollectionBase.GetEnumerator%2A> método não é visível para clientes COM por padrão, herdando a <xref:System.Collections.CollectionBase> classe pode expô-lo e pode causar um comportamento indesejado em clientes COM.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerList">
+      <MemberSignature Language="C#" Value="protected System.Collections.ArrayList InnerList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList InnerList" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CollectionBase.InnerList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma <see cref="T:System.Collections.ArrayList" /> que contém a lista de elementos na instância de <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <value>Uma <see cref="T:System.Collections.ArrayList" /> que representa a própria instância de <see cref="T:System.Collections.CollectionBase" />.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="protected System.Collections.IList List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList List" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CollectionBase.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma <see cref="T:System.Collections.IList" /> que contém a lista de elementos na instância de <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <value>Uma <see cref="T:System.Collections.IList" /> que representa a própria instância de <see cref="T:System.Collections.CollectionBase" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected virtual void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa processos personalizados adicionais ao limpar o conteúdo do <see cref="T:System.Collections.CollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para executar alguma ação antes da coleção está desmarcada.  
+  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ Se o processo falhar, a coleção será revertido para seu estado anterior.  
+  
+ A implementação padrão desse método é uma operação de (1).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados antes de excluir todos os elementos do subjacente <see cref="T:System.Collections.ArrayList" />. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnClear" />é invocado antes de limpar o comportamento padrão, enquanto <see cref="M:System.Collections.CollectionBase.OnClearComplete" /> é invocado após o comportamento padrão de limpar.  
+  
+ Por exemplo, implementadores podem isentar certos elementos de exclusão por uma clara global.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnClearComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClearComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.OnClearComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa processos personalizados adicionais depois de limpar o conteúdo do <see cref="T:System.Collections.CollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para executar alguma ação após a coleção está desmarcada.  
+  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ A implementação padrão desse método é uma operação de (1).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores definir os processos que devem ser executados após a exclusão de todos os elementos de base <see cref="T:System.Collections.ArrayList" />. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnClear" />é invocado antes de limpar o comportamento padrão, enquanto <see cref="M:System.Collections.CollectionBase.OnClearComplete" /> é invocado após o comportamento padrão de limpar.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected virtual void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir <c>valor</c>.</param>
+        <param name="value">O novo valor do elemento no <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais antes de inserir um novo elemento para a <see cref="T:System.Collections.CollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para executar alguma ação antes que o elemento especificado é inserido.  
+  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ Se o processo falhar, a coleção será revertido para seu estado anterior.  
+  
+ A implementação padrão desse método é uma operação de (1).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados antes de inserir o elemento em subjacente <see cref="T:System.Collections.ArrayList" />. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnInsert(System.Int32,System.Object)" />é chamado antes do comportamento padrão de inserção, enquanto <see cref="M:System.Collections.CollectionBase.OnInsertComplete(System.Int32,System.Object)" /> é invocado após o comportamento padrão de inserção.  
+  
+ Por exemplo, os implementadores podem restringir quais tipos de objetos podem ser inseridos no <see cref="T:System.Collections.ArrayList" />.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />é chamado antes desse método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsertComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnInsertComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInsertComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.OnInsertComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir <c>valor</c>.</param>
+        <param name="value">O novo valor do elemento no <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais depois de inserir um novo elemento para a <see cref="T:System.Collections.CollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para executar alguma ação depois de inserido o elemento especificado.  
+  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ A coleção será revertido para seu estado anterior se ocorrer um dos seguintes:  
+  
+-   O processo falhará.  
+  
+-   Esse método é substituído para gerar uma exceção.  
+  
+ A implementação padrão desse método é uma operação de (1).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados depois de inserir o elemento no subjacente <see cref="T:System.Collections.ArrayList" />. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnInsert(System.Int32,System.Object)" />é chamado antes do comportamento padrão de inserção, enquanto <see cref="M:System.Collections.CollectionBase.OnInsertComplete(System.Int32,System.Object)" /> é invocado após o comportamento padrão de inserção.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected virtual void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> pode ser encontrado.</param>
+        <param name="value">O valor do elemento a ser removido do <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais ao remover um elemento do <see cref="T:System.Collections.CollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para executar alguma ação antes que o elemento especificado é removido.  
+  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ Se o processo falhar, a coleção será revertido para seu estado anterior.  
+  
+ A implementação padrão desse método é uma operação de (1).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores definir os processos que devem ser executados antes de remover o elemento subjacente <see cref="T:System.Collections.ArrayList" />. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)" />é chamado antes do comportamento padrão de remover, enquanto <see cref="M:System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)" /> é invocado depois de remover o comportamento padrão.  
+  
+ Por exemplo, os implementadores podem impedir a remoção de elementos sempre lançando uma exceção <see cref="M:System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)" />.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />é chamado antes desse método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnRemoveComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRemoveComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> pode ser encontrado.</param>
+        <param name="value">O valor do elemento a ser removido do <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais depois de remover um elemento do <see cref="T:System.Collections.CollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para executar alguma ação após a remoção do elemento especificado.  
+  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ A coleção será revertido para seu estado anterior se ocorrer um dos seguintes:  
+  
+-   O processo falhará.  
+  
+-   Esse método é substituído para gerar uma exceção.  
+  
+ A implementação padrão desse método é uma operação de (1).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores definir os processos que devem ser executados depois de remover o elemento de subjacente <see cref="T:System.Collections.ArrayList" />. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)" />é chamado antes do comportamento padrão de remover, enquanto <see cref="M:System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)" /> é invocado depois de remover o comportamento padrão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected virtual void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>oldValue</c> pode ser encontrado.</param>
+        <param name="oldValue">O valor para substituir <c>newValue</c>.</param>
+        <param name="newValue">O novo valor do elemento no <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais antes de um valor de configuração o <see cref="T:System.Collections.CollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para executar alguma ação antes da definição do elemento especificado.  
+  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ Se o processo falhar, a coleção será revertido para seu estado anterior.  
+  
+ A implementação padrão desse método é uma operação de (1).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados antes de configurar o elemento especificado no subjacente <see cref="T:System.Collections.ArrayList" />. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnSet(System.Int32,System.Object,System.Object)" />é chamado antes do comportamento padrão do conjunto, enquanto <see cref="M:System.Collections.CollectionBase.OnSetComplete(System.Int32,System.Object,System.Object)" /> é invocado após o comportamento padrão do conjunto.  
+  
+ Por exemplo, os implementadores podem restringir quais valores podem ser substituídos por executar uma verificação de dentro de <see cref="M:System.Collections.CollectionBase.OnSet(System.Int32,System.Object,System.Object)" />.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />é chamado antes desse método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnSetComplete (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSetComplete(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.OnSetComplete(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>oldValue</c> pode ser encontrado.</param>
+        <param name="oldValue">O valor para substituir <c>newValue</c>.</param>
+        <param name="newValue">O novo valor do elemento no <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais depois de definir um valor <see cref="T:System.Collections.CollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método destina-se a ser substituído por uma classe derivada para executar alguma ação após o elemento especificado está definido.  
+  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ A coleção será revertido para seu estado anterior se ocorrer um dos seguintes:  
+  
+-   O processo falhará.  
+  
+-   Esse método é substituído para gerar uma exceção.  
+  
+ A implementação padrão desse método é uma operação de (1).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados depois de definir o elemento especificado na subjacente <see cref="T:System.Collections.ArrayList" />. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnSet(System.Int32,System.Object,System.Object)" />é chamado antes do comportamento padrão do conjunto, enquanto <see cref="M:System.Collections.CollectionBase.OnSetComplete(System.Int32,System.Object,System.Object)" /> é invocado após o comportamento padrão do conjunto.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected virtual void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser validado.</param>
+        <summary>Executa processos personalizados adicionais ao validar um valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método determina se `value` é `null`e, nesse caso, lança <xref:System.ArgumentNullException>. Destina-se a ser substituído por uma classe derivada para executar uma ação adicional quando o elemento especificado é validado.  
+  
+ Os métodos On * são invocados somente na instância retornada pelo <xref:System.Collections.CollectionBase.List%2A> propriedade, mas não na instância retornado pelo <xref:System.Collections.CollectionBase.InnerList%2A> propriedade.  
+  
+ A implementação padrão desse método é uma operação de (1).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados ao executar o comportamento padrão da subjacente <see cref="T:System.Collections.ArrayList" />. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />pode ser usado para impor restrições no tipo de objetos que são aceitos na coleção. Impede que a implementação padrão <see langword="null" /> sejam adicionados ou removidos da subjacente <see cref="T:System.Collections.ArrayList" />.  
+  
+ <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />é chamado antes de <see cref="M:System.Collections.CollectionBase.OnInsert(System.Int32,System.Object)" />, <see cref="M:System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)" />, e <see cref="M:System.Collections.CollectionBase.OnSet(System.Int32,System.Object,System.Object)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento a ser removido.</param>
+        <summary>Remove o elemento no índice especificado do <see cref="T:System.Collections.CollectionBase" /> instância. Este método não é substituível.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o elemento removido sobem para ocupar o ponto vazio. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Collections.CollectionBase.Count" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Este método chama <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />, <see cref="M:System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)" />, e <see cref="M:System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.CollectionBase" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia todo o <see cref="T:System.Collections.CollectionBase" /> em um <see cref="T:System.Array" /> unidimensional compatível, começando no índice especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz especificada deve ser de um tipo compatível.  
+  
+ Este método usa <xref:System.Array.Copy%2A?displayProperty=nameWithType> para copiar os elementos.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ - ou -  
+  
+ O número de elementos na origem <see cref="T:System.Collections.CollectionBase" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.CollectionBase" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CollectionBase.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.CollectionBase" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.CollectionBase" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Collections.CollectionBase> instância não está sincronizada. Classes derivadas podem fornecer uma versão sincronizada do <xref:System.Collections.CollectionBase> usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade.  
+  
+ Enumerar através de uma coleção intrinsecamente não é um procedimento de segurança do thread. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ICollection.SyncRoot%2A> durante toda a enumeração:  
+  
+ [!code-cpp[System.Collections.CollectionBase#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/remarks.cpp#2)]
+ [!code-csharp[System.Collections.CollectionBase#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/remarks.cs#2)]
+ [!code-vb[System.Collections.CollectionBase#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/remarks.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CollectionBase.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.CollectionBase" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas podem fornecer sua própria versão sincronizada de <xref:System.Collections.CollectionBase> usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Collections.ICollection.SyncRoot%2A> do <xref:System.Collections.CollectionBase>, não diretamente no <xref:System.Collections.CollectionBase>. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.Collections.CollectionBase> objeto.  
+  
+ Enumerar através de uma coleção intrinsecamente não é um procedimento de segurança do thread. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ICollection.SyncRoot%2A> durante toda a enumeração:  
+  
+ [!code-cpp[System.Collections.CollectionBase#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/remarks.cpp#2)]
+ [!code-csharp[System.Collections.CollectionBase#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/remarks.cs#2)]
+ [!code-vb[System.Collections.CollectionBase#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/remarks.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto <see cref="T:System.Object" /> a ser adicionado ao final do <see cref="T:System.Collections.CollectionBase" />.</param>
+        <summary>Adiciona um objeto ao final do <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <returns>O índice <see cref="T:System.Collections.CollectionBase" /> ao qual o <paramref name="value" /> foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Collections.CollectionBase.Count%2A> já for igual à capacidade, a capacidade da lista é duplicada, automaticamente realocando a matriz interna e copiar os elementos existentes para a nova matriz antes de adicionar o novo elemento.  
+  
+ Se <xref:System.Collections.CollectionBase.Count%2A> é menor que a capacidade, esse método é uma operação de (1). Se a capacidade precisa ser aumentado para acomodar o novo elemento, esse método se torna um O (`n`) operação, onde `n` é <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.CollectionBase" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.CollectionBase" /> tem um tamanho fixo.</exception>
+        <block subset="none" type="overrides">
+          <para>Este método chama <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />, <see cref="M:System.Collections.CollectionBase.OnInsert(System.Int32,System.Object)" />, e <see cref="M:System.Collections.CollectionBase.OnInsertComplete(System.Int32,System.Object)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.CollectionBase" />.</param>
+        <summary>Determina se o <see cref="T:System.Collections.CollectionBase" /> contém um elemento específico.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.CollectionBase" /> contiver o <paramref name="value" /> especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Começando com o .NET Framework 2.0, esse método usa objetos da coleção <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> métodos em `item` para determinar se `item` existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.CollectionBase" />.</param>
+        <summary>Pesquisa o <see cref="T:System.Object" /> especificado e retorna o índice de base zero da primeira ocorrência dentro de todo o <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de <paramref name="value" /> em todo o <see cref="T:System.Collections.CollectionBase" />, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Começando com o .NET Framework 2.0, esse método usa objetos da coleção <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> métodos em `item` para determinar se `item` existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> devem ser inseridos.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser inserido.</param>
+        <summary>Insere um elemento no <see cref="T:System.Collections.CollectionBase" />, no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Collections.CollectionBase.Count%2A> já for igual à capacidade, a capacidade da lista é duplicada, automaticamente realocando a matriz interna antes do novo elemento é inserido.  
+  
+ Se `index` é igual a <xref:System.Collections.CollectionBase.Count%2A>, `value` é adicionada ao final da <xref:System.Collections.CollectionBase>.  
+  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o ponto de inserção descem para acomodar o novo elemento. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é maior que <see cref="P:System.Collections.CollectionBase.Count" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.CollectionBase" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.CollectionBase" /> tem um tamanho fixo.</exception>
+        <block subset="none" type="overrides">
+          <para>Este método chama <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />, <see cref="M:System.Collections.CollectionBase.OnInsert(System.Int32,System.Object)" />, e <see cref="M:System.Collections.CollectionBase.OnInsertComplete(System.Int32,System.Object)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CollectionBase.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.CollectionBase" /> tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.CollectionBase" /> tiver um valor fixo; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção com um tamanho fixo não permite a adição ou a remoção de elementos após a coleção ser criada, mas permite a modificação de elementos existentes.  
+  
+ Uma coleção com um tamanho fixo é simplesmente uma coleção com um wrapper que impede a adição e a remoção de elementos; por isso, caso as alterações sejam feitas na coleção subjacente, inclusive a adição ou a remoção de elementos, a coleção de tamanho fixo reflete essas alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CollectionBase.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.CollectionBase" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.CollectionBase" /> for somente leitura; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção que seja somente leitura não permite a adição, a remoção ou a modificação de elementos após a coleção ser criada.  
+  
+ Uma coleção somente leitura é apenas uma coleção com um wrapper que impede a modificação da coleção; por isso, caso as alterações sejam feitas na coleção subjacente, a coleção somente leitura reflete as alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CollectionBase.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Obtém ou define o elemento no índice especificado.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[index]`.  
+  
+ Recuperar o valor dessa propriedade é uma operação de (1); definindo a propriedade também é uma operação de (1).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Collections.CollectionBase.Count" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Quando essa propriedade é definida, os métodos <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />, <see cref="M:System.Collections.CollectionBase.OnSet(System.Int32,System.Object,System.Object)" />, e <see cref="M:System.Collections.CollectionBase.OnSetComplete(System.Int32,System.Object,System.Object)" /> são chamados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CollectionBase.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser removido de <see cref="T:System.Collections.CollectionBase" />.</param>
+        <summary>Remove a primeira ocorrência de um objeto específico do <see cref="T:System.Collections.CollectionBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Collections.CollectionBase> não contém o objeto especificado, o <xref:System.Collections.CollectionBase> permanece inalterado. Nenhuma exceção é lançada.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o elemento removido sobem para ocupar o ponto vazio. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.CollectionBase> classe e usa essa implementação para criar uma coleção de <xref:System.Int16> objetos.  
+  
+ [!code-cpp[System.Collections.CollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CPP/collectionbase.cpp#1)]
+ [!code-csharp[System.Collections.CollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CollectionBase/CS/collectionbase.cs#1)]
+ [!code-vb[System.Collections.CollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CollectionBase/VB/collectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="value" /> parâmetro não foi encontrado na <see cref="T:System.Collections.CollectionBase" /> objeto.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.CollectionBase" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.CollectionBase" /> tem um tamanho fixo.</exception>
+        <block subset="none" type="overrides">
+          <para>Este método chama <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />, <see cref="M:System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)" />, e <see cref="M:System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

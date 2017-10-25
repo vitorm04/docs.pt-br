@@ -1,0 +1,100 @@
+<Type Name="GridResizeDirection" FullName="System.Windows.Controls.GridResizeDirection">
+  <TypeSignature Language="C#" Value="public enum GridResizeDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GridResizeDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.GridResizeDirection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se um <see cref="T:System.Windows.Controls.GridSplitter" /> controle redistribui espaço entre linhas ou colunas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta enumeração para definir o <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> propriedade o <xref:System.Windows.Controls.GridSplitter> controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeDirection Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeDirection.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Espaço é redistribuído com base nos valores da <see cref="P:System.Windows.FrameworkElement.HorizontalAlignment" />, <see cref="P:System.Windows.FrameworkElement.VerticalAlignment" />, <see cref="P:System.Windows.FrameworkElement.ActualWidth" />, e <see cref="P:System.Windows.FrameworkElement.ActualHeight" /> propriedades da <see cref="T:System.Windows.Controls.GridSplitter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Se o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> não está definido como <xref:System.Windows.HorizontalAlignment.Stretch>, espaço é redistribuído entre colunas.  
+  
+-   Se o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> é definido como <xref:System.Windows.HorizontalAlignment.Stretch> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> não está definido como <xref:System.Windows.VerticalAlignment.Stretch>, espaço é redistribuído entre linhas.  
+  
+-   Se as seguintes condições forem verdadeiras, o espaço é redistribuído entre colunas:  
+  
+    -   O <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> é definido como <xref:System.Windows.HorizontalAlignment.Stretch>.  
+  
+    -   O <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> é definido como <xref:System.Windows.VerticalAlignment.Stretch>.  
+  
+    -   O <xref:System.Windows.FrameworkElement.ActualWidth%2A> é menor que ou igual a <xref:System.Windows.FrameworkElement.ActualHeight%2A>.  
+  
+-   Se as seguintes condições forem verdadeiras, o espaço é redistribuído entre linhas:  
+  
+    -   <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> é definido como <xref:System.Windows.HorizontalAlignment.Stretch>.  
+  
+    -   <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> é definido como <xref:System.Windows.VerticalAlignment.Stretch>.  
+  
+    -   <xref:System.Windows.FrameworkElement.ActualWidth%2A>é maior do que o <xref:System.Windows.FrameworkElement.ActualHeight%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="Columns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeDirection Columns = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeDirection.Columns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Espaço será redistribuído entre colunas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rows">
+      <MemberSignature Language="C#" Value="Rows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeDirection Rows = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeDirection.Rows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Espaço será redistribuído entre linhas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,120 @@
+<Type Name="RibbonScrollButtonVisibilityConverter" FullName="System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter">
+  <TypeSignature Language="C#" Value="public sealed class RibbonScrollButtonVisibilityConverter : System.Windows.Data.IMultiValueConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RibbonScrollButtonVisibilityConverter extends System.Object implements class System.Windows.Data.IMultiValueConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Data.IMultiValueConverter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Converte uma barra visibilidade e rolagem posição de rolagem <see cref="T:System.Windows.Visibility" /> valores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabHeadersPanel> e <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel> fornecem o comportamento de rolagem horizontal para a faixa de opções. Quando for necessária a rolagem, faixa de opções substitui a barra de rolagem típico com um botão repetido em cada extremidade da faixa de opções. O conversor usa a visibilidade e a posição da barra de rolagem para determinar a visibilidade de cada um dos botões de repetição.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonScrollButtonVisibilityConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object[] values, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object[] values, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="values">Os valores a serem convertidos. Quatro valores são esperados, um <see cref="T:System.Windows.Visibility" /> objeto que representa a visibilidade da barra de rolagem e três <see cref="T:System.Double" /> valores que representam a posição da barra de rolagem.</param>
+        <param name="targetType">O tipo a ser convertido em. O <see cref="T:System.Windows.Visibility" /> tipo é esperado.</param>
+        <param name="parameter">A porcentagem desejada que a faixa de opções é rolada para a direita antes do botão de rolagem está oculto. Um <see cref="T:System.Double" /> é esperado.</param>
+        <param name="culture">A cultura a ser usada durante a conversão.</param>
+        <summary>Converte uma rolagem posição visibilidade e role para um <see cref="T:System.Windows.Visibility" /> valor.</summary>
+        <returns>Um <see cref="T:System.Windows.Visibility" /> objeto que representa a visibilidade do botão de rolagem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os três <xref:System.Double> são valores que representam a posição da barra de rolagem de <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.HorizontalOffset%2A>, <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.ExtentWidth%2A>, e <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.ViewportWidth%2A> valores de propriedade do <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel> ou <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabHeadersPanel>. Essas propriedades contêm valores do painel internos <xref:System.Windows.Controls.ScrollViewer>.  
+  
+ O `parameter` valor representa a porcentagem desejada que a faixa de opções é rolada para a direita antes do botão de rolagem está oculto. Por padrão, o botão de rolagem à esquerda passa 0 como parâmetro e ele ficará oculto quando a faixa de opções é rolados para 0 por cento para a direita. O botão de rolagem à direita passa 100 como o parâmetro, e ele ficará oculto quando a faixa de opções é rolados para 100% para a direita.  
+  
+ Passando `null` ou parâmetros de tipos inesperados podem fazer com que esse método retornar <xref:System.Windows.DependencyProperty.UnsetValue>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertBack">
+      <MemberSignature Language="C#" Value="public object[] ConvertBack (object value, Type[] targetTypes, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] ConvertBack(object value, class System.Type[] targetTypes, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetTypes" Type="System.Type[]" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Esta API não está implementada.</param>
+        <param name="targetTypes">Esta API não está implementada.</param>
+        <param name="parameter">Esta API não está implementada.</param>
+        <param name="culture">Esta API não está implementada.</param>
+        <summary>Esta API não está implementada.</summary>
+        <returns>
+          <see cref="F:System.Windows.Data.Binding.DoNothing" /> em todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.Binding.DoNothing?displayProperty=nameWithType>é retornada para indicar que a associação deve usar o valor de retorno ou padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

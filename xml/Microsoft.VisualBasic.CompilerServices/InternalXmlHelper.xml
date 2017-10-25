@@ -1,0 +1,254 @@
+<Type Name="InternalXmlHelper" FullName="Microsoft.VisualBasic.CompilerServices.InternalXmlHelper">
+  <TypeSignature Language="C#" Value="public sealed class InternalXmlHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InternalXmlHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.InternalXmlHelper" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece propriedades e métodos que oferecem suporte a literais XML do Visual Basic. Essa classe não se destina a ser usado diretamente no seu código.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AttributeValue">
+      <MemberSignature Language="C#" Value="public static string AttributeValue[System.Collections.Generic.IEnumerable&lt;System.Xml.Linq.XElement&gt; source, System.Xml.Linq.XName name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AttributeValue(class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.Linq.XElement&gt;, class System.Xml.Linq.XName)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.CompilerServices.InternalXmlHelper.AttributeValue(System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement},System.Xml.Linq.XName)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.Linq.XElement&gt;" />
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+      </Parameters>
+      <Docs>
+        <param name="source">Uma coleção de elementos XML para obter um atributo de valor ou definir um valor de atributo para.</param>
+        <param name="name">O nome do atributo XML para obter um valor ou definir um valor para.</param>
+        <summary>Obtém ou define o valor de um atributo XML. Essa propriedade não se destina a ser usado em seu código.</summary>
+        <value>O valor do atributo XML identificado pelo <paramref name="name" /> parâmetro do primeiro elemento na coleção de elementos XML fornecido. Retorna se a coleção estiver vazia, <see langword="Nothing" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeValue">
+      <MemberSignature Language="C#" Value="public static string AttributeValue[System.Xml.Linq.XElement source, System.Xml.Linq.XName name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AttributeValue(class System.Xml.Linq.XElement, class System.Xml.Linq.XName)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.CompilerServices.InternalXmlHelper.AttributeValue(System.Xml.Linq.XElement,System.Xml.Linq.XName)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Xml.Linq.XElement" />
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um elemento XML para obter um atributo de valor ou definir um valor de atributo para.</param>
+        <param name="name">O nome do atributo XML para obter um valor ou definir um valor para.</param>
+        <summary>Obtém ou define o valor de um atributo XML. Essa propriedade não se destina a ser usado em seu código.</summary>
+        <value>O valor do atributo XML identificado pelo <paramref name="name" /> parâmetro no elemento XML fornecido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAttribute">
+      <MemberSignature Language="C#" Value="public static System.Xml.Linq.XAttribute CreateAttribute (System.Xml.Linq.XName name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Xml.Linq.XAttribute CreateAttribute(class System.Xml.Linq.XName name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.InternalXmlHelper.CreateAttribute(System.Xml.Linq.XName,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do atributo XML para criar.</param>
+        <param name="value">O valor a ser atribuído ao atributo XML criado. Se <c>valor</c> é <see langword="Nothing" />, esse método retornará <see langword="Nothing" />.</param>
+        <summary>Cria um atributo XML que tem o nome fornecido e o valor. Esse método não se destina a ser usado em seu código.</summary>
+        <returns>Um <see cref="T:System.Xml.Linq.XAttribute" /> objeto que tem o nome fornecido e o valor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNamespaceAttribute">
+      <MemberSignature Language="C#" Value="public static System.Xml.Linq.XAttribute CreateNamespaceAttribute (System.Xml.Linq.XName name, System.Xml.Linq.XNamespace ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Xml.Linq.XAttribute CreateNamespaceAttribute(class System.Xml.Linq.XName name, class System.Xml.Linq.XNamespace ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.InternalXmlHelper.CreateNamespaceAttribute(System.Xml.Linq.XName,System.Xml.Linq.XNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+        <Parameter Name="ns" Type="System.Xml.Linq.XNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do atributo XML para criar.</param>
+        <param name="ns">O valor do namespace para atribuir ao atributo XML criado.</param>
+        <summary>Cria um atributo XML que tem o valor de nome e namespace fornecido. Esse método não se destina a ser usado em seu código.</summary>
+        <returns>Um <see cref="T:System.Xml.Linq.XAttribute" /> objeto que tem o valor de nome e namespace fornecido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveNamespaceAttributes">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable RemoveNamespaceAttributes (string[] inScopePrefixes, System.Xml.Linq.XNamespace[] inScopeNs, System.Collections.Generic.List&lt;System.Xml.Linq.XAttribute&gt; attributes, System.Collections.IEnumerable obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Collections.IEnumerable RemoveNamespaceAttributes(string[] inScopePrefixes, class System.Xml.Linq.XNamespace[] inScopeNs, class System.Collections.Generic.List`1&lt;class System.Xml.Linq.XAttribute&gt; attributes, class System.Collections.IEnumerable obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.InternalXmlHelper.RemoveNamespaceAttributes(System.String[],System.Xml.Linq.XNamespace[],System.Collections.Generic.List{System.Xml.Linq.XAttribute},System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inScopePrefixes" Type="System.String[]" />
+        <Parameter Name="inScopeNs" Type="System.Xml.Linq.XNamespace[]" />
+        <Parameter Name="attributes" Type="System.Collections.Generic.List&lt;System.Xml.Linq.XAttribute&gt;" />
+        <Parameter Name="obj" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="inScopePrefixes">A lista de prefixos de namespace XML para elementos XML no escopo atual.</param>
+        <param name="inScopeNs">A lista de namespaces XML para elementos XML no escopo atual.</param>
+        <param name="attributes">A lista de atributos de namespace para remover o elemento XML.</param>
+        <param name="obj">O elemento XML para remover atributos de namespace XML do.</param>
+        <summary>Remove os atributos do namespace XML de um elemento XML. Esse método não se destina a ser usado em seu código.</summary>
+        <returns>O elemento XML fornecido com os atributos de namespace XML especificados removido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveNamespaceAttributes">
+      <MemberSignature Language="C#" Value="public static object RemoveNamespaceAttributes (string[] inScopePrefixes, System.Xml.Linq.XNamespace[] inScopeNs, System.Collections.Generic.List&lt;System.Xml.Linq.XAttribute&gt; attributes, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object RemoveNamespaceAttributes(string[] inScopePrefixes, class System.Xml.Linq.XNamespace[] inScopeNs, class System.Collections.Generic.List`1&lt;class System.Xml.Linq.XAttribute&gt; attributes, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.InternalXmlHelper.RemoveNamespaceAttributes(System.String[],System.Xml.Linq.XNamespace[],System.Collections.Generic.List{System.Xml.Linq.XAttribute},System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inScopePrefixes" Type="System.String[]" />
+        <Parameter Name="inScopeNs" Type="System.Xml.Linq.XNamespace[]" />
+        <Parameter Name="attributes" Type="System.Collections.Generic.List&lt;System.Xml.Linq.XAttribute&gt;" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inScopePrefixes">A lista de prefixos de namespace XML para elementos XML no escopo atual.</param>
+        <param name="inScopeNs">A lista de namespaces XML para elementos XML no escopo atual.</param>
+        <param name="attributes">A lista de atributos de namespace para remover o elemento XML.</param>
+        <param name="obj">O elemento XML para remover atributos de namespace XML do.</param>
+        <summary>Remove os atributos do namespace XML de um elemento XML. Esse método não se destina a ser usado em seu código.</summary>
+        <returns>O elemento XML fornecido com os atributos de namespace XML especificados removido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveNamespaceAttributes">
+      <MemberSignature Language="C#" Value="public static System.Xml.Linq.XElement RemoveNamespaceAttributes (string[] inScopePrefixes, System.Xml.Linq.XNamespace[] inScopeNs, System.Collections.Generic.List&lt;System.Xml.Linq.XAttribute&gt; attributes, System.Xml.Linq.XElement e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static class System.Xml.Linq.XElement RemoveNamespaceAttributes(string[] inScopePrefixes, class System.Xml.Linq.XNamespace[] inScopeNs, class System.Collections.Generic.List`1&lt;class System.Xml.Linq.XAttribute&gt; attributes, class System.Xml.Linq.XElement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.InternalXmlHelper.RemoveNamespaceAttributes(System.String[],System.Xml.Linq.XNamespace[],System.Collections.Generic.List{System.Xml.Linq.XAttribute},System.Xml.Linq.XElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inScopePrefixes" Type="System.String[]" />
+        <Parameter Name="inScopeNs" Type="System.Xml.Linq.XNamespace[]" />
+        <Parameter Name="attributes" Type="System.Collections.Generic.List&lt;System.Xml.Linq.XAttribute&gt;" />
+        <Parameter Name="e" Type="System.Xml.Linq.XElement" />
+      </Parameters>
+      <Docs>
+        <param name="inScopePrefixes">A lista de prefixos de namespace XML para elementos XML no escopo atual.</param>
+        <param name="inScopeNs">A lista de namespaces XML para elementos XML no escopo atual.</param>
+        <param name="attributes">A lista de atributos de namespace para remover o elemento XML.</param>
+        <param name="e">O elemento XML para remover atributos de namespace XML do.</param>
+        <summary>Remove os atributos do namespace XML de um elemento XML. Esse método não se destina a ser usado em seu código.</summary>
+        <returns>O elemento XML fornecido com os atributos de namespace XML especificados removido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public static string Value[System.Collections.Generic.IEnumerable&lt;System.Xml.Linq.XElement&gt; source] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Value(class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.Linq.XElement&gt;)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.CompilerServices.InternalXmlHelper.Value(System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement})" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.Linq.XElement&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="source">Uma coleção de elementos XML para obter um valor ou definir um valor para.</param>
+        <summary>Obtém ou define o valor de um elemento XML. Essa propriedade não se destina a ser usado em seu código.</summary>
+        <value>O valor do primeiro elemento XML na coleção fornecida. Retorna se a coleção estiver vazia, <see langword="Nothing" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

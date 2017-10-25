@@ -1,0 +1,437 @@
+<Type Name="ConsoleKeyInfo" FullName="System.ConsoleKeyInfo">
+  <TypeSignature Language="C#" Value="public struct ConsoleKeyInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit ConsoleKeyInfo extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.ConsoleKeyInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Console</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve a chave do console que foi pressionada, incluindo o caractere representado pela chave do console e o estado das teclas modificadoras SHIFT, ALT e CTRL.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ConsoleKeyInfo> tipo não se destina a ser criado por usuários. Em vez disso, ele é retornado para o usuário em resposta a chamar o <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> método.  
+  
+ O <xref:System.ConsoleKeyInfo> objeto descreve o <xref:System.ConsoleKey> constante e caractere Unicode, se houver, que correspondem à chave do console pressionado. O <xref:System.ConsoleKeyInfo> objeto também descreve, em uma combinação bit a bit de <xref:System.ConsoleModifiers> valores, se uma ou mais chaves de modificador SHIFT, ALT e CTRL foi pressionada simultaneamente com a chave do console.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.ConsoleKeyInfo> objeto em uma operação de leitura.  
+  
+ [!code-cpp[console.readkey1#1](~/samples/snippets/cpp/VS_Snippets_CLR/console.readkey1/CPP/rk.cpp#1)]
+ [!code-csharp[console.readkey1#1](~/samples/snippets/csharp/VS_Snippets_CLR/console.readkey1/CS/rk.cs#1)]
+ [!code-vb[console.readkey1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/console.readkey1/VB/rk.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsoleKeyInfo (char keyChar, ConsoleKey key, bool shift, bool alt, bool control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char keyChar, valuetype System.ConsoleKey key, bool shift, bool alt, bool control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ConsoleKeyInfo.#ctor(System.Char,System.ConsoleKey,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyChar" Type="System.Char" />
+        <Parameter Name="key" Type="System.ConsoleKey" />
+        <Parameter Name="shift" Type="System.Boolean" />
+        <Parameter Name="alt" Type="System.Boolean" />
+        <Parameter Name="control" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="keyChar">O caractere Unicode correspondente para o <c>chave</c> parâmetro.</param>
+        <param name="key">A chave de console que corresponde do <c>keyChar</c> parâmetro.</param>
+        <param name="shift">
+          <see langword="true" /> para indicar que uma tecla SHIFT foi pressionada; Caso contrário, <see langword="false" />.</param>
+        <param name="alt">
+          <see langword="true" /> para indicar que uma tecla ALT foi pressionada; Caso contrário, <see langword="false" />.</param>
+        <param name="control">
+          <see langword="true" /> para indicar que uma tecla CTRL foi pressionada; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.ConsoleKeyInfo" /> usando os valores reais e imaginários especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo não se destina a ser criado por usuários. Em vez disso, ele é retornado para o usuário em resposta a chamar o <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> método.  
+  
+ O <xref:System.ConsoleKeyInfo> type não especificar se a esquerda ou direita SHIFT, ALT e CTRL Modificadora foi pressionada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor numérico do parâmetro <paramref name="key" /> é menor que 0 ou maior que 255.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (ConsoleKeyInfo obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.ConsoleKeyInfo obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ConsoleKeyInfo.Equals(System.ConsoleKeyInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.ConsoleKeyInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado ao atual <see cref="T:System.ConsoleKeyInfo" /> objeto.</param>
+        <summary>Obtém um valor que indica se o especificado <see cref="T:System.ConsoleKeyInfo" /> objeto é igual ao atual <see cref="T:System.ConsoleKeyInfo" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é igual à atual <see cref="T:System.ConsoleKeyInfo" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois objetos <xref:System.ConsoleKeyInfo> são iguais caso as propriedades <xref:System.ConsoleKeyInfo.KeyChar%2A>, <xref:System.ConsoleKeyInfo.Key%2A> e <xref:System.ConsoleKeyInfo.Modifiers%2A> correspondentes sejam iguais.  
+  
+ O <xref:System.ConsoleKeyInfo.Equals%2A> método executa um pouco melhor do que o <xref:System.ConsoleKeyInfo.Equals%28System.Object%29?displayProperty=nameWithType> método porque ele não tem que converter `obj` a um objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ConsoleKeyInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto a ser comparado ao atual <see cref="T:System.ConsoleKeyInfo" /> objeto.</param>
+        <summary>Obtém um valor que indica se o objeto especificado é igual ao atual <see cref="T:System.ConsoleKeyInfo" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> é um <see cref="T:System.ConsoleKeyInfo" /> do objeto e é igual à atual <see cref="T:System.ConsoleKeyInfo" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois objetos <xref:System.ConsoleKeyInfo> são iguais caso as propriedades <xref:System.ConsoleKeyInfo.KeyChar%2A>, <xref:System.ConsoleKeyInfo.Key%2A> e <xref:System.ConsoleKeyInfo.Modifiers%2A> correspondentes sejam iguais.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.ConsoleKeyInfo.Equals%2A> método.  
+  
+ [!code-cpp[system.ConsoleKeyInfo.Equals#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.ConsoleKeyInfo.Equals/cpp/consolekeyinfo.equals.cpp#1)]
+ [!code-csharp[system.ConsoleKeyInfo.Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ConsoleKeyInfo.Equals/cs/equals.cs#1)]
+ [!code-vb[system.ConsoleKeyInfo.Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ConsoleKeyInfo.Equals/vb/equals.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ConsoleKeyInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o objeto <see cref="T:System.ConsoleKeyInfo" /> atual.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado pelo <xref:System.ConsoleKeyInfo.GetHashCode%2A> método não é adequado para distinguir uma <xref:System.ConsoleKeyInfo> objeto de outro. Se seu aplicativo precisa de um código hash exclusivo, substituir o <xref:System.ConsoleKeyInfo.GetHashCode%2A> método com seu próprio método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.ConsoleKeyInfo.GetHashCode%2A> método.  
+  
+ [!code-cpp[System.ConsoleKeyInfo.GetHashCode#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.ConsoleKeyInfo.GetHashcode/cpp/hash.cpp#1)]
+ [!code-csharp[System.ConsoleKeyInfo.GetHashCode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ConsoleKeyInfo.GetHashcode/cs/hash.cs#1)]
+ [!code-vb[System.ConsoleKeyInfo.GetHashCode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ConsoleKeyInfo.GetHashcode/vb/hash.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public ConsoleKey Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ConsoleKey Key" />
+      <MemberSignature Language="DocId" Value="P:System.ConsoleKeyInfo.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ConsoleKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de console representada pelo objeto <see cref="T:System.ConsoleKeyInfo" /> atual.</summary>
+        <value>Um valor que identifica a chave de console que foi pressionada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.ConsoleKeyInfo.Key%2A> propriedade em uma operação de leitura.  
+  
+ [!code-cpp[console.readkey1#1](~/samples/snippets/cpp/VS_Snippets_CLR/console.readkey1/CPP/rk.cpp#1)]
+ [!code-csharp[console.readkey1#1](~/samples/snippets/csharp/VS_Snippets_CLR/console.readkey1/CS/rk.cs#1)]
+ [!code-vb[console.readkey1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/console.readkey1/VB/rk.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyChar">
+      <MemberSignature Language="C#" Value="public char KeyChar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char KeyChar" />
+      <MemberSignature Language="DocId" Value="P:System.ConsoleKeyInfo.KeyChar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caractere Unicode representado pelo objeto <see cref="T:System.ConsoleKeyInfo" /> atual.</summary>
+        <value>Um objeto que corresponde à chave do console representada pelo objeto <see cref="T:System.ConsoleKeyInfo" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a tecla pressionada não mapeiam um caractere Unicode (por exemplo, se o usuário pressiona o **F1** chave ou o **início** chave), o valor da <xref:System.ConsoleKeyInfo.KeyChar%2A> propriedade é \U0000.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.ConsoleKeyInfo.KeyChar%2A> propriedade para adicionar a entrada de caracteres pelo usuário em uma cadeia de caracteres. O exemplo ignora chaves especiais que **ENTER**, **ESC**, e **BACKSPACE**.  
+  
+ [!code-csharp[System.ConsoleKeyInfo.KeyChar#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.consolekeyinfo.keychar/cs/keychar1.cs#1)]
+ [!code-vb[System.ConsoleKeyInfo.KeyChar#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.consolekeyinfo.keychar/vb/keychar1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiers">
+      <MemberSignature Language="C#" Value="public ConsoleModifiers Modifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ConsoleModifiers Modifiers" />
+      <MemberSignature Language="DocId" Value="P:System.ConsoleKeyInfo.Modifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ConsoleModifiers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma combinação bit a bit de valores <see cref="T:System.ConsoleModifiers" /> que especifica uma ou mais teclas modificadoras pressionadas simultaneamente à tecla do console.</summary>
+        <value>Um combinação bit a bit dos valores de enumeração. Nenhum valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.ConsoleKeyInfo.Modifiers%2A> propriedade em uma operação de leitura.  
+  
+ [!code-cpp[console.readkey1#1](~/samples/snippets/cpp/VS_Snippets_CLR/console.readkey1/CPP/rk.cpp#1)]
+ [!code-csharp[console.readkey1#1](~/samples/snippets/csharp/VS_Snippets_CLR/console.readkey1/CS/rk.cs#1)]
+ [!code-vb[console.readkey1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/console.readkey1/VB/rk.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (ConsoleKeyInfo a, ConsoleKeyInfo b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.ConsoleKeyInfo a, valuetype System.ConsoleKeyInfo b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ConsoleKeyInfo.op_Equality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.ConsoleKeyInfo" />
+        <Parameter Name="b" Type="System.ConsoleKeyInfo" />
+      </Parameters>
+      <Docs>
+        <param name="a">O primeiro objeto a ser comparado.</param>
+        <param name="b">O segundo objeto a ser comparado.</param>
+        <summary>Indica se o especificado <see cref="T:System.ConsoleKeyInfo" /> objetos são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="a" /> for igual a <paramref name="b" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois objetos <xref:System.ConsoleKeyInfo> são iguais caso as propriedades <xref:System.ConsoleKeyInfo.KeyChar%2A>, <xref:System.ConsoleKeyInfo.Key%2A> e <xref:System.ConsoleKeyInfo.Modifiers%2A> correspondentes sejam iguais.  
+  
+ O método equivalente para esse operador é <xref:System.ConsoleKeyInfo.Equals%28System.ConsoleKeyInfo%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (ConsoleKeyInfo a, ConsoleKeyInfo b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.ConsoleKeyInfo a, valuetype System.ConsoleKeyInfo b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ConsoleKeyInfo.op_Inequality(System.ConsoleKeyInfo,System.ConsoleKeyInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Console</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.ConsoleKeyInfo" />
+        <Parameter Name="b" Type="System.ConsoleKeyInfo" />
+      </Parameters>
+      <Docs>
+        <param name="a">O primeiro objeto a ser comparado.</param>
+        <param name="b">O segundo objeto a ser comparado.</param>
+        <summary>Indica se o especificado <see cref="T:System.ConsoleKeyInfo" /> objetos não são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="a" /> não for igual a <paramref name="b" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois objetos <xref:System.ConsoleKeyInfo> são iguais caso as propriedades <xref:System.ConsoleKeyInfo.KeyChar%2A>, <xref:System.ConsoleKeyInfo.Key%2A> e <xref:System.ConsoleKeyInfo.Modifiers%2A> correspondentes sejam iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,73 @@
+<Type Name="ValidationResults" FullName="System.Activities.Validation.ValidationResults">
+  <TypeSignature Language="C#" Value="public class ValidationResults" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidationResults extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Validation.ValidationResults" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém todos os erros de validação gerados por <see cref="M:System.Activities.Validation.ActivityValidationServices.Validate(System.Activities.Activity)" /> ao validar um fluxo de trabalho.  Esses erros estão contidos no <see cref="P:System.Activities.Validation.ValidationResults.Errors" /> e <see cref="P:System.Activities.Validation.ValidationResults.Warnings" /> coleções.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationResults (System.Collections.Generic.IList&lt;System.Activities.Validation.ValidationError&gt; allValidationErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;class System.Activities.Validation.ValidationError&gt; allValidationErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ValidationResults.#ctor(System.Collections.Generic.IList{System.Activities.Validation.ValidationError})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="allValidationErrors" Type="System.Collections.Generic.IList&lt;System.Activities.Validation.ValidationError&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="allValidationErrors">A coleção de avisos e erros de validação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Validation.ValidationResults" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Activities.Validation.ValidationError&gt; Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Activities.Validation.ValidationError&gt; Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationResults.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Activities.Validation.ValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura do fluxo de trabalho erros de validação.</summary>
+        <value>Uma coleção somente leitura de erros de validação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Warnings">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Activities.Validation.ValidationError&gt; Warnings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Activities.Validation.ValidationError&gt; Warnings" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationResults.Warnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Activities.Validation.ValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura do fluxo de trabalho avisos de validação.</summary>
+        <value>Uma coleção somente leitura de avisos de validação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,107 @@
+<Type Name="GridViewSelectEventArgs" FullName="System.Web.UI.WebControls.GridViewSelectEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewSelectEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewSelectEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewSelectEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.GridView.SelectedIndexChanging" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.GridView> controlar gera o <xref:System.Web.UI.WebControls.GridView.SelectedIndexChanging> evento quando um botão de seleção (um botão com seu `CommandName` propriedade definida como "Select") é clicado, mas antes de <xref:System.Web.UI.WebControls.GridView> controle manipula a operação select. Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada, como cancelar a operação de seleção, sempre que esse evento ocorre.  
+  
+ Um <xref:System.Web.UI.WebControls.GridViewSelectEventArgs> objeto é passado para o método de manipulação de eventos, que permite que você determine o índice da linha selecionada pelo usuário e para indicar que a operação de seleção deve ser cancelada. Para cancelar a operação de seleção, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.Web.UI.WebControls.GridViewSelectEventArgs> do objeto para `true`.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewSelectEventArgs>, consulte o <xref:System.Web.UI.WebControls.GridViewSelectEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewSelectEventArgs> objeto passado para o método de manipulação de eventos para cancelar a operação de seleção de um <xref:System.Web.UI.WebControls.GridView> controlar quando o usuário seleciona um autor com o último nome em branco.  
+  
+ [!code-aspx-csharp[GridViewSelect#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewSelect/CS/gridviewselectcs.aspx#1)]
+ [!code-aspx-vb[GridViewSelect#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewSelect/VB/gridviewselectvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewSelectEventArgs (int newSelectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 newSelectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewSelectEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newSelectedIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="newSelectedIndex">O índice da nova linha a ser selecionado no controle <see cref="T:System.Web.UI.WebControls.GridView" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.GridViewSelectEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.GridViewSelectEventArgs> classe.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewSelectEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewSelectEventArgs.NewSelectedIndex%2A>|O valor de `newSelectedIndex` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSelectedIndex">
+      <MemberSignature Language="C#" Value="public int NewSelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewSelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewSelectEventArgs.NewSelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice da nova linha a ser selecionado no controle <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+        <value>O índice da nova linha a ser selecionado no controle <see cref="T:System.Web.UI.WebControls.GridView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.WebControls.GridView.SelectedIndexChanging> evento ocorre antes do <xref:System.Web.UI.WebControls.GridView> controle executa a operação de seleção, o <xref:System.Web.UI.WebControls.GridView.SelectedIndex%2A> propriedade do controle não pode ser usada para determinar o índice da nova linha selecionado pelo usuário. O <xref:System.Web.UI.WebControls.GridView.SelectedIndex%2A> propriedade ainda contém o índice da linha selecionada anteriormente. Para determinar o índice da nova linha selecionado pelo usuário, use o <xref:System.Web.UI.WebControls.GridViewSelectEventArgs.NewSelectedIndex%2A> propriedade. Você também pode usar essa propriedade para substituir o índice da linha selecionado pelo usuário definindo-o para outro valor de forma programática.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewSelectEventArgs.NewSelectedIndex%2A> para determinar o índice da linha selecionada pelo usuário.  
+  
+ [!code-aspx-csharp[GridViewSelect#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewSelect/CS/gridviewselectcs.aspx#1)]
+ [!code-aspx-vb[GridViewSelect#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewSelect/VB/gridviewselectvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

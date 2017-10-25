@@ -1,0 +1,66 @@
+<Type Name="CodeDomLocalizationModel" FullName="System.ComponentModel.Design.Serialization.CodeDomLocalizationModel">
+  <TypeSignature Language="C#" Value="public enum CodeDomLocalizationModel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CodeDomLocalizationModel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.CodeDomLocalizationModel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina o modelo de localização a ser usado pelo adaptador de recurso de CodeDom.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Serialization.CodeDomLocalizationModel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Serialization.CodeDomLocalizationModel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.CodeDomLocalizationModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O provedor de localização deve ignorar propriedades localizadas. Ele gravará ainda recursos para objetos que não oferecem suporte a geração de código e são serializáveis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyAssignment">
+      <MemberSignature Language="C#" Value="PropertyAssignment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Serialization.CodeDomLocalizationModel PropertyAssignment = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Serialization.CodeDomLocalizationModel.PropertyAssignment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.CodeDomLocalizationModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O provedor de localização gravará propriedades localizadas, atribuindo um recurso para cada propriedade. Esse modelo é rápido quando o número de propriedades é pequeno, mas mal dimensiona à medida que aumenta o número de propriedades que contém os valores padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyReflection">
+      <MemberSignature Language="C#" Value="PropertyReflection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Serialization.CodeDomLocalizationModel PropertyReflection = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Serialization.CodeDomLocalizationModel.PropertyReflection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.CodeDomLocalizationModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O provedor de localização será escrever os valores de propriedade localizada em um arquivo de recurso e usar o <see cref="T:System.ComponentModel.ComponentResourceManager" /> classe para refletir nos propriedades pelo nome para preenchê-los em tempo de execução. Isso usa reflexão em tempo de execução para que ele pode ser lento, mas ele é dimensionado melhor para um grande número de propriedades com valores padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

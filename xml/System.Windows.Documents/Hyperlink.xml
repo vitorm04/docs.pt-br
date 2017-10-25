@@ -1,0 +1,822 @@
+<Type Name="Hyperlink" FullName="System.Windows.Documents.Hyperlink">
+  <TypeSignature Language="C#" Value="public class Hyperlink : System.Windows.Documents.Span, System.Windows.Input.ICommandSource, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Hyperlink extends System.Windows.Documents.Span implements class System.Windows.Input.ICommandSource, class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Hyperlink" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Span</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Input.ICommandSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Documents.TextElementEditingBehavior(IsMergeable=false, IsTypographicOnly=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Um elemento de conteúdo de fluxo de nível embutido que fornece recursos para hospedar hiperlinks no conteúdo de fluxo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Hyperlink>implementa o <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A> propriedade definida com o <xref:System.Uri> do conteúdo que deve ser acessado quando o hiperlink é clicado. <xref:System.Windows.Documents.Hyperlink>navegação só pode ocorrer, no entanto, se o pai direto ou indireto de um <xref:System.Windows.Documents.Hyperlink> é um host de navegação, incluindo <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, ou em qualquer navegador que pode hospedar [!INCLUDE[TLA2#tla_xbap#plural](~/includes/tla2sharptla-xbapsharpplural-md.md)] (que inclui [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)], [!INCLUDE[TLA2#tla_ie6](~/includes/tla2sharptla-ie6-md.md)]e o Firefox 2.0 +). Para obter mais informações, consulte o **Hosts de navegação** tópico [visão geral de navegação](~/docs/framework/wpf/app-development/navigation-overview.md).  
+  
+ <xref:System.Windows.Documents.Hyperlink>aplica um modelo de conteúdo de alta segurança para o conteúdo filho. Consulte [visão geral do modelo de conteúdo TextElement](~/docs/framework/wpf/advanced/textelement-content-model-overview.md) para obter mais informações sobre o <xref:System.Windows.Documents.Hyperlink> modelo de conteúdo.  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso simples de um <xref:System.Windows.Documents.Hyperlink> elemento.  
+  
+ [!code-xaml[HyperlinkSnippets#_Hyperlink_NavUriXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HyperlinkSnippets/CSharp/Window1.xaml#_hyperlink_navurixaml)]  
+  
+ O exemplo a seguir mostra como criar um <xref:System.Windows.Documents.Hyperlink> programaticamente.  
+  
+ [!code-csharp[HyperlinkSnippets#_Hyperlink_NavUri](~/samples/snippets/csharp/VS_Snippets_Wpf/HyperlinkSnippets/CSharp/Window1.xaml.cs#_hyperlink_navuri)]
+ [!code-vb[HyperlinkSnippets#_Hyperlink_NavUri](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HyperlinkSnippets/visualbasic/window1.xaml.vb#_hyperlink_navuri)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hyperlink ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hyperlink (System.Windows.Documents.Inline childInline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline childInline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.#ctor(System.Windows.Documents.Inline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childInline" Type="System.Windows.Documents.Inline" />
+      </Parameters>
+      <Docs>
+        <param name="childInline">Um <see cref="T:System.Windows.Documents.Inline" /> objeto especificando o conteúdo inicial do novo <see cref="T:System.Windows.Documents.Hyperlink" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Hyperlink" /> classe, levando a especificada <see cref="T:System.Windows.Documents.Inline" /> objeto como o conteúdo inicial do novo <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor.  
+  
+ [!code-csharp[HyperlinkSnippets#_Hyperlink_Const1](~/samples/snippets/csharp/VS_Snippets_Wpf/HyperlinkSnippets/CSharp/Window1.xaml.cs#_hyperlink_const1)]
+ [!code-vb[HyperlinkSnippets#_Hyperlink_Const1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HyperlinkSnippets/visualbasic/window1.xaml.vb#_hyperlink_const1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hyperlink (System.Windows.Documents.Inline childInline, System.Windows.Documents.TextPointer insertionPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline childInline, class System.Windows.Documents.TextPointer insertionPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.#ctor(System.Windows.Documents.Inline,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childInline" Type="System.Windows.Documents.Inline" />
+        <Parameter Name="insertionPosition" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="childInline">Um <see cref="T:System.Windows.Documents.Inline" /> objeto especificando o conteúdo inicial do novo <see cref="T:System.Windows.Documents.Hyperlink" />.  Esse parâmetro pode ser <see langword="null" />, caso em que nenhum <see cref="T:System.Windows.Documents.Inline" /> é inserido.</param>
+        <param name="insertionPosition">Um <see cref="T:System.Windows.Documents.TextPointer" /> especificando uma posição de inserção no qual inserir o <see cref="T:System.Windows.Documents.Hyperlink" /> elemento depois que ele é criado, ou <see langword="null" /> para nenhuma inserção automática.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Hyperlink" /> classe, levando a especificada <see cref="T:System.Windows.Documents.Inline" /> objeto como o conteúdo inicial do novo <see cref="T:System.Windows.Documents.Hyperlink" />e um <see cref="T:System.Windows.Documents.TextPointer" /> especificando uma posição de inserção para o novo <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor.  
+  
+ [!code-csharp[HyperlinkSnippets#_Hyperlink_Const2](~/samples/snippets/csharp/VS_Snippets_Wpf/HyperlinkSnippets/CSharp/Window1.xaml.cs#_hyperlink_const2)]
+ [!code-vb[HyperlinkSnippets#_Hyperlink_Const2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HyperlinkSnippets/visualbasic/window1.xaml.vb#_hyperlink_const2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hyperlink (System.Windows.Documents.TextPointer start, System.Windows.Documents.TextPointer end);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.TextPointer start, class System.Windows.Documents.TextPointer end) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.#ctor(System.Windows.Documents.TextPointer,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Windows.Documents.TextPointer" />
+        <Parameter Name="end" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="start">Um <see cref="T:System.Windows.Documents.TextPointer" /> indicando o início de uma seleção de conteúdo a ser contido pelo novo <see cref="T:System.Windows.Documents.Hyperlink" />.</param>
+        <param name="end">Um <see cref="T:System.Windows.Documents.TextPointer" /> que indicam o final de uma seleção de conteúdo a ser contido pelo novo <see cref="T:System.Windows.Documents.Hyperlink" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Hyperlink" /> classe, levando duas <see cref="T:System.Windows.Documents.TextPointer" /> objetos que indicam o início e fim de uma seleção de conteúdo a ser contido pelo novo <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor destina-se ao inicializar um novo <xref:System.Windows.Documents.Hyperlink> conteúdo do elemento, que envolva uma seleção de preexistente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor.  
+  
+ [!code-csharp[HyperlinkSnippets#_Hyperlink_Const3](~/samples/snippets/csharp/VS_Snippets_Wpf/HyperlinkSnippets/CSharp/Window1.xaml.cs#_hyperlink_const3)]
+ [!code-vb[HyperlinkSnippets#_Hyperlink_Const3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HyperlinkSnippets/visualbasic/window1.xaml.vb#_hyperlink_const3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="start" /> ou <paramref name="end" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="start" />e <paramref name="end" /> não resolver para uma variedade de conteúdo adequado para o compartimento por um <see cref="T:System.Windows.Documents.Span" /> elemento; por exemplo, se <paramref name="start" /> e <paramref name="end" /> indicar posições em parágrafos diferentes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="protected virtual Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Hyperlink.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um URI de base para o <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <value>Um URI de base para o <see cref="T:System.Windows.Documents.Hyperlink" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.Hyperlink.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando se clica no botão esquerdo do mouse em um <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_Click"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Hyperlink.ClickEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClickEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ClickEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ClickEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Hyperlink.ClickEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Documents.Hyperlink.Click" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ICommand Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ICommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Hyperlink.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um comando a ser associado a <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <value>Um comando a ser associado a <see cref="T:System.Windows.Documents.Hyperlink" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Command"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Hyperlink.CommandProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameter">
+      <MemberSignature Language="C#" Value="public object CommandParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Hyperlink.CommandParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os parâmetros de comando associados ao comando especificado pelo <see cref="P:System.Windows.Documents.Hyperlink.Command" /> propriedade.</summary>
+        <value>Um objeto que especifica os parâmetros para o comando especificado pelo <see cref="P:System.Windows.Documents.Hyperlink.Command" /> propriedade. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CommandParameter"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Hyperlink.CommandParameterProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameterProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandParameterProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandParameterProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Hyperlink.CommandParameterProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Hyperlink.CommandParameter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Hyperlink.CommandProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Hyperlink.Command" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement CommandTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement CommandTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Hyperlink.CommandTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um elemento de destino na qual executar o comando especificado pelo <see cref="P:System.Windows.Documents.Hyperlink.Command" /> propriedade.</summary>
+        <value>Um elemento de destino na qual executar o comando especificado pelo <see cref="P:System.Windows.Documents.Hyperlink.Command" /> propriedade. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CommandTarget"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Hyperlink.CommandTargetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTargetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandTargetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandTargetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Hyperlink.CommandTargetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Hyperlink.CommandTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoClick">
+      <MemberSignature Language="C#" Value="public void DoClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DoClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.DoClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Simule o ato de um usuário clicando o <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método é equivalente a um usuário clicar o <xref:System.Windows.Documents.Hyperlink>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledCore">
+      <MemberSignature Language="C#" Value="protected override bool IsEnabledCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabledCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Hyperlink.IsEnabledCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Documents.Hyperlink" /> está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Documents.Hyperlink" /> estiver habilitado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade substitui <xref:System.Windows.ContentElement.IsEnabledCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUri">
+      <MemberSignature Language="C#" Value="public Uri NavigateUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri NavigateUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Hyperlink.NavigateUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Hyperlink)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para o qual navegar quando o <see cref="T:System.Windows.Documents.Hyperlink" /> estiver ativado.</summary>
+        <value>O <see cref="T:System.Uri" /> para o qual navegar quando um <see cref="T:System.Windows.Documents.Hyperlink" /> estiver ativado. O padrão é <see langword="null" />.  
+  
+ <block subset="none" type="note"><para><see cref="T:System.Windows.Documents.Hyperlink" />pode navegar para o valor da <see cref="P:System.Windows.Documents.Hyperlink.NavigateUri" /> propriedade somente se o pai direto ou indireto de um <see cref="T:System.Windows.Documents.Hyperlink" /> é um host de navegação, incluindo <see cref="T:System.Windows.Navigation.NavigationWindow" />, <see cref="T:System.Windows.Controls.Frame" />, ou em qualquer navegador que pode hospedar [!INCLUDE[TLA2#tla_xbap#plural](~/includes/tla2sharptla-xbapsharpplural-md.md)] (que inclui [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)], [!INCLUDE[TLA2#tla_ie6](~/includes/tla2sharptla-ie6-md.md)]e o Firefox 2.0 +). Para obter mais informações, consulte o **Hosts de navegação** seção [visão geral de navegação](~/docs/framework/wpf/app-development/navigation-overview.md).  
+  
+</para></block></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para vincular a um elemento embutido específico, especifique o nome do elemento precedido por um símbolo de libra (#).  
+  
+ Quando um usuário passa o mouse sobre um <xref:System.Windows.Documents.Hyperlink> em uma [!INCLUDE[TLA2#tla_xbap](~/includes/tla2sharptla-xbap-md.md)], o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] armazenados no <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A> propriedade é exibida na barra de status. <xref:System.Windows.Documents.Hyperlink>navega para esta [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] quando o usuário clica o <xref:System.Windows.Documents.Hyperlink>. Se o valor da <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A> alterações de propriedade após a usuário clica no <xref:System.Windows.Documents.Hyperlink> e antes da solicitação de navegação subsequentes, <xref:System.Windows.Documents.Hyperlink> ignora o novo valor da <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A> propriedade e navega para o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] que era o valor da <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A> propriedade quando o usuário clicou o <xref:System.Windows.Documents.Hyperlink>.  
+  
+> [!NOTE]
+>  Você não está restrito a usar somente um <xref:System.Windows.Documents.Hyperlink> para fazer a navegação. Você pode usar o <xref:System.Windows.Documents.FixedPage.NavigateUri%2A> anexado propriedade, mas apenas das seguintes opções: <xref:System.Windows.Documents.FixedPage>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Controls.Canvas>, e <xref:System.Windows.Documents.Glyphs>.  
+  
+<a name="dependencyPropertyInfo_NavigateUri"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Hyperlink.NavigateUriProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A> atributo de um <xref:System.Windows.Documents.Hyperlink> elemento.  
+  
+ [!code-xaml[HyperlinkSnippets#_Hyperlink_NavUriXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HyperlinkSnippets/CSharp/Window1.xaml#_hyperlink_navurixaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A> propriedade programaticamente.  
+  
+ [!code-csharp[HyperlinkSnippets#_Hyperlink_NavUri](~/samples/snippets/csharp/VS_Snippets_Wpf/HyperlinkSnippets/CSharp/Window1.xaml.cs#_hyperlink_navuri)]
+ [!code-vb[HyperlinkSnippets#_Hyperlink_NavUri](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HyperlinkSnippets/visualbasic/window1.xaml.vb#_hyperlink_navuri)]  
+  
+ O exemplo a seguir mostra como usar um **mailto:** [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para abrir uma nova janela de email que contém um endereço de email, um endereço de email e um assunto e um endereço de email, assunto e corpo.  
+  
+ [!code-xaml[HOWTONavigationMailToSnippet#MailToMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationMailToSnippet/CS/HomePage.xaml#mailtomarkup)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateUriProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty NavigateUriProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty NavigateUriProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Hyperlink.NavigateUriProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Hyperlink.NavigateUri" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.OnClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Manipula o <see cref="E:System.Windows.Documents.Hyperlink.Click" /> eventos roteados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método navega para o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] especificado pelo <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A> propriedade e marca o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] como visitado.  
+  
+> [!IMPORTANT]
+>  Dependendo da configuração de segurança do computador host, certas formas de navegação (por exemplo, navegando até um [!INCLUDE[TLA#tla_unc](~/includes/tlasharptla-unc-md.md)] caminho) não são permitidos na zona da Internet.  Nesses casos, esse método exigem confiança total.  Para obter mais informações, consulte [Code Access Security](~/docs/framework/misc/code-access-security.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objeto para este <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objeto para este <see cref="T:System.Windows.Documents.Hyperlink" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos associados a <see cref="E:System.Windows.ContentElement.KeyDown" /> eventos.</param>
+        <summary>Manipula o <see cref="E:System.Windows.ContentElement.KeyDown" /> eventos roteados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.ContentElement.OnKeyDown%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos associados a <see cref="E:System.Windows.ContentElement.MouseLeftButtonDown" /> eventos.</param>
+        <summary>Manipula o <see cref="E:System.Windows.ContentElement.MouseLeftButtonDown" /> eventos roteados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.ContentElement.OnMouseLeftButtonDown%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnMouseLeftButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Hyperlink.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos associados a <see cref="E:System.Windows.ContentElement.MouseLeftButtonUp" /> eventos.</param>
+        <summary>Manipula o <see cref="E:System.Windows.ContentElement.MouseLeftButtonUp" /> eventos roteados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.ContentElement.OnMouseLeftButtonUp%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestNavigate">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.RequestNavigateEventHandler RequestNavigate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.RequestNavigateEventHandler RequestNavigate" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.Hyperlink.RequestNavigate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.RequestNavigateEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando eventos de navegação são solicitados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_RequestNavigate"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Hyperlink.RequestNavigateEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.Navigation.RequestNavigateEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestNavigateEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent RequestNavigateEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent RequestNavigateEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Hyperlink.RequestNavigateEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Documents.Hyperlink.RequestNavigate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Hyperlink.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um URI de base para o <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <value>Um URI de base para o <see cref="T:System.Windows.Documents.Hyperlink" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetName">
+      <MemberSignature Language="C#" Value="public string TargetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Hyperlink.TargetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Modifiability=System.Windows.Modifiability.Unmodifiable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de um quadro ou janela de destino do <see cref="T:System.Windows.Documents.Hyperlink" />.</summary>
+        <value>Uma cadeia de caracteres que especifica o nome de uma janela ou um quadro de destino para o <see cref="T:System.Windows.Documents.Hyperlink" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do `TARGET` atributo de um [!INCLUDE[TLA#tla_html](~/includes/tlasharptla-html-md.md)] hiperlink.  
+  
+<a name="dependencyPropertyInfo_TargetName"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Hyperlink.TargetNameProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetNameProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TargetNameProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TargetNameProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Hyperlink.TargetNameProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Hyperlink.TargetName" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

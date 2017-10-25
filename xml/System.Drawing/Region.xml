@@ -1,0 +1,1966 @@
+<Type Name="Region" FullName="System.Drawing.Region">
+  <TypeSignature Language="C#" Value="public sealed class Region : MarshalByRefObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Region extends System.MarshalByRefObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Region" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Descreve o interior de uma forma de gráfico composta por retângulos e caminhos. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma região é escalonável porque suas coordenadas são especificadas nas coordenadas do mundo. No entanto, em uma superfície de desenho, seu interior é dependente do tamanho e forma dos pixels que ele representa. Um aplicativo pode usar regiões recortar a saída de operações de desenho. Essas regiões são chamadas de regiões de recorte. Para obter mais informações sobre como usar regiões de recorte, consulte [como: usar recorte com uma região](~/docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md).  
+  
+ Um aplicativo também pode usar regiões em operações de testes, como verificar se um ponto ou um retângulo intercepta uma região. Para obter mais informações sobre o uso de regiões para testes, consulte [como: Use ocorrências de teste com uma região](~/docs/framework/winforms/advanced/how-to-use-hit-testing-with-a-region.md).  
+  
+ Um aplicativo pode preencher uma região usando o <xref:System.Drawing.Graphics.FillRegion%2A?displayProperty=nameWithType> método e uma <xref:System.Drawing.Brush> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  O exemplo de código demonstra como usar o <xref:System.Drawing.Drawing2D.RegionData.Data%2A> um <xref:System.Drawing.Drawing2D.RegionData> objeto para definir o <xref:System.Drawing.Drawing2D.RegionData.Data%2A> para outro <xref:System.Drawing.Drawing2D.RegionData>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#13)]
+ [!code-csharp[System.Drawing.MiscExamples#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#13)]
+ [!code-vb[System.Drawing.MiscExamples#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Region ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Region" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um novo <xref:System.Drawing.Region> com um interior infinito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Region (System.Drawing.Drawing2D.GraphicsPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Drawing2D.GraphicsPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.#ctor(System.Drawing.Drawing2D.GraphicsPath)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.Drawing.Drawing2D.GraphicsPath" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> que define o novo <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Region" /> com o <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um novo <xref:System.Drawing.Region> com um <xref:System.Drawing.Drawing2D.GraphicsPath>. A nova região é definida como o interior do <xref:System.Drawing.Drawing2D.GraphicsPath> especificado pelo `path` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Region (System.Drawing.Drawing2D.RegionData rgnData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Drawing2D.RegionData rgnData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.#ctor(System.Drawing.Drawing2D.RegionData)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rgnData" Type="System.Drawing.Drawing2D.RegionData" />
+      </Parameters>
+      <Docs>
+        <param name="rgnData">Um <see cref="T:System.Drawing.Drawing2D.RegionData" /> que define o interior do novo <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Region" /> dos dados especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um novo <xref:System.Drawing.Region> com um interior definido por um existente <xref:System.Drawing.Region>. O `rgnData` parâmetro é uma matriz que contém a definição de um objeto existente <xref:System.Drawing.Region>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rgnData" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Region (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.#ctor(System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.Rectangle" /> que define o interior do novo <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Region" /> da estrutura <see cref="T:System.Drawing.Rectangle" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um novo <xref:System.Drawing.Region> com um interior retangular. O interior é definido pelo `rect` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Region.%23ctor%2A> construtor e <xref:System.Drawing.Region.MakeEmpty%2A> método. Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário e cole o seguinte código para ele. Chamar o `FillEmptyRegion` método no formulário de <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.MiscExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.MiscExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Region (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.#ctor(System.Drawing.RectangleF)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.RectangleF" /> que define o interior do novo <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Inicializa um novo <see cref="T:System.Drawing.Region" /> da estrutura <see cref="T:System.Drawing.RectangleF" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um novo <xref:System.Drawing.Region> com um interior retangular. O interior é definido pelo `rect` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Drawing.Region Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Region Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Region</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata deste <see cref="T:System.Drawing.Region" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Region" /> criado por esse método.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complement">
+      <MemberSignature Language="C#" Value="public void Complement (System.Drawing.Drawing2D.GraphicsPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complement(class System.Drawing.Drawing2D.GraphicsPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Complement(System.Drawing.Drawing2D.GraphicsPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Drawing.Drawing2D.GraphicsPath" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> para complementar este <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza este <see cref="T:System.Drawing.Region" /> para conter a parte do <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> especificado que não se intersecciona com este <see cref="T:System.Drawing.Region" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um retângulo e desenha na tela em preto.  
+  
+-   Cria um segundo retângulo que faz interseção com a primeira e desenha a tela em vermelho.  
+  
+-   Cria uma região usando o retângulo primeiro.  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.GraphicsPath>e adiciona o segundo retângulo a ele.  
+  
+-   Obtém o complemento da região quando combinado com o <xref:System.Drawing.Drawing2D.GraphicsPath>.  
+  
+-   Preenche a área de complemento com azul e desenha na tela.  
+  
+ Observe que a área do <xref:System.Drawing.Drawing2D.GraphicsPath> que não faz intersecção com a região é azuis.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Complement">
+      <MemberSignature Language="C#" Value="public void Complement (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complement(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Complement(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.Rectangle" /> estrutura complementa isso <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para conter a parte especificada <see cref="T:System.Drawing.Rectangle" /> estrutura que não faz intersecção com isso <see cref="T:System.Drawing.Region" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo, consulte o <xref:System.Drawing.Region.Complement%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complement">
+      <MemberSignature Language="C#" Value="public void Complement (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complement(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Complement(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.RectangleF" /> estrutura complementa isso <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para conter a parte especificada <see cref="T:System.Drawing.RectangleF" /> estrutura que não faz intersecção com isso <see cref="T:System.Drawing.Region" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um retângulo e desenha na tela em preto.  
+  
+-   Cria um segundo retângulo que faz interseção com a primeira e desenha a tela em vermelho.  
+  
+-   Cria uma região usando o retângulo primeiro.  
+  
+-   Obtém o complemento da região combinado com o segundo retângulo.  
+  
+-   Preenche a área de complemento com azul e desenha na tela.  
+  
+ Observe que a área do segundo retângulo que não faz intersecção com a região é azuis.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complement">
+      <MemberSignature Language="C#" Value="public void Complement (System.Drawing.Region region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complement(class System.Drawing.Region region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Complement(System.Drawing.Region)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Drawing.Region" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Drawing.Region" /> objeto complementa isso <see cref="T:System.Drawing.Region" /> objeto.</param>
+        <summary>Atualiza este <see cref="T:System.Drawing.Region" /> para conter a parte do <see cref="T:System.Drawing.Region" /> especificado que não se intersecciona com este <see cref="T:System.Drawing.Region" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um retângulo e desenha na tela em preto  
+  
+-   Cria um segundo retângulo que faz interseção com a primeira e desenha a tela em vermelho.  
+  
+-   Cria uma região usando o retângulo primeiro e uma segunda região usando o segundo retângulo.  
+  
+-   Obtém o complemento da região primeiro quando combinado com a segunda região.  
+  
+-   Preenche a área de complemento com azul e desenha na tela.  
+  
+ Observe que a área da segunda área que não faz intersecção com a primeira região é azuis.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="region" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados por este <see cref="T:System.Drawing.Region" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Drawing.Region.Dispose%2A> permite que os recursos usados por este <xref:System.Drawing.Region> sejam realocadas para outras finalidades.  
+  
+ Chamar <xref:System.Drawing.Region.Dispose%2A> quando tiver terminado de usar o <xref:System.Drawing.Region>. O <xref:System.Drawing.Region.Dispose%2A> método deixa o <xref:System.Drawing.Region> em um estado inutilizável. Depois de chamar <xref:System.Drawing.Region.Dispose%2A>, você deve liberar todas as referências para o <xref:System.Drawing.Region> para o coletor de lixo possa recuperar a memória que o <xref:System.Drawing.Region> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Drawing.Region.Dispose%2A> antes de liberar sua última referência para o <xref:System.Drawing.Region>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Drawing.Region> do objeto `Finalize` método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Drawing.Region.%23ctor%2A> construtor e o <xref:System.Drawing.Region.Exclude%2A> e <xref:System.Drawing.Region.Dispose%2A> métodos.  
+  
+ Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário e uma chamada a `FillRegionExcludingPath` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.GraphicsProperties#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.GraphicsProperties/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.GraphicsProperties#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.GraphicsProperties/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.GraphicsProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.GraphicsProperties/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Drawing.Region region, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class System.Drawing.Region region, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Equals(System.Drawing.Region,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Drawing.Region" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Drawing.Region" /> a ser testado.</param>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa uma superfície de desenho.</param>
+        <summary>Testes se especificado <see cref="T:System.Drawing.Region" /> é idêntica a esta <see cref="T:System.Drawing.Region" /> superfície de desenho em especificado.</summary>
+        <returns>
+          <see langword="true" />Se o interior da região for idêntico ao interior nesta região quando a transformação associada com o <paramref name="g" /> parâmetro é aplicado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto gráficos `g` é usado para calcular os interiores região na superfície de desenho.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> ou <paramref name="region" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public void Exclude (System.Drawing.Drawing2D.GraphicsPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Exclude(class System.Drawing.Drawing2D.GraphicsPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Exclude(System.Drawing.Drawing2D.GraphicsPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Drawing.Drawing2D.GraphicsPath" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> a excluir deste <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza essa <see cref="T:System.Drawing.Region" /> para conter apenas a parte do seu interior que não faz interseção com o <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Drawing.Region.%23ctor%2A> construtor e o <xref:System.Drawing.Region.Exclude%2A> e <xref:System.Drawing.Region.Dispose%2A> métodos.  
+  
+ Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário e uma chamada a `FillRegionExcludingPath` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.GraphicsProperties#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.GraphicsProperties/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.GraphicsProperties#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.GraphicsProperties/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.GraphicsProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.GraphicsProperties/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public void Exclude (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Exclude(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Exclude(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.Rectangle" /> estrutura a ser excluído neste <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para conter somente a parte de seu interior que não faz intersecção com especificado <see cref="T:System.Drawing.Rectangle" /> estrutura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.Exclude%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public void Exclude (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Exclude(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Exclude(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.RectangleF" /> estrutura a ser excluído neste <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para conter somente a parte de seu interior que não faz intersecção com especificado <see cref="T:System.Drawing.RectangleF" /> estrutura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um retângulo e desenha na tela em preto  
+  
+-   Cria um segundo retângulo que faz interseção com a primeira e desenha a tela em vermelho.  
+  
+-   Cria uma região usando o retângulo primeiro.  
+  
+-   Obtém a área nonexcluded da região quando combinado com o segundo retângulo.  
+  
+-   Preenche a área nonexcluded com azul e desenha na tela.  
+  
+ Observe que a área da área da região que não faz intersecção com o retângulo é azuis.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public void Exclude (System.Drawing.Region region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Exclude(class System.Drawing.Region region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Exclude(System.Drawing.Region)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Drawing.Region" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Drawing.Region" /> a excluir deste <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza essa <see cref="T:System.Drawing.Region" /> para conter apenas a parte do seu interior que não faz interseção com o <see cref="T:System.Drawing.Region" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter exemplos de código, consulte o <xref:System.Drawing.Region.Exclude%28System.Drawing.RectangleF%29> e <xref:System.Drawing.Region.Complement%28System.Drawing.Region%29> métodos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="region" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~Region ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um objeto tente liberar recursos e executar outras operações de limpeza antes de ser recuperado pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHrgn">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Region FromHrgn (IntPtr hrgn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Region FromHrgn(native int hrgn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.FromHrgn(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Region</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hrgn" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hrgn">Um identificador para um existente <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Inicializa uma nova <see cref="T:System.Drawing.Region" /> de um identificador para existente especificado [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] região.</summary>
+        <returns>O novo <see cref="T:System.Drawing.Region" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um novo <xref:System.Drawing.Region> com um interior definido pelo existente <xref:System.Drawing.Region> referenciado pelo identificador no `hrgn` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Relacionado a enumeração <see cref="T:System.Security.Permissions.SecurityPermissionFlag" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.RectangleF GetBounds (System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.RectangleF GetBounds(class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.GetBounds(System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> no qual este <see cref="T:System.Drawing.Region" /> é desenhado.</param>
+        <summary>Obtém uma estrutura <see cref="T:System.Drawing.RectangleF" /> que representa um retângulo que delimita este <see cref="T:System.Drawing.Region" /> na superfície de desenho de um objeto <see cref="T:System.Drawing.Graphics" />.</summary>
+        <returns>A estrutura <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo delimitador para este <see cref="T:System.Drawing.Region" /> na superfície de desenho especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto do gráfico é usada para calcular o interior de região na superfície de desenho. O retângulo delimitador nem sempre é o retângulo delimitador possíveis menor dependendo da transformação atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.GraphicsPath> e adiciona uma elipse a ele.  
+  
+-   O caminho é preenchido com azul e desenha na tela.  
+  
+-   Cria uma região que usa o <xref:System.Drawing.Drawing2D.GraphicsPath>.  
+  
+-   Obtém a área nonexcluded da região quando combinado com o segundo retângulo.  
+  
+-   Obtém o retângulo delimitador para a região e desenha a tela em vermelho.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHrgn">
+      <MemberSignature Language="C#" Value="public IntPtr GetHrgn (System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int GetHrgn(class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.GetHrgn(System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> no qual este <see cref="T:System.Drawing.Region" /> é desenhado.</param>
+        <summary>Retorna um identificador para esse <see cref="T:System.Drawing.Region" /> no contexto de gráfico especificado.</summary>
+        <returns>Um identificador do Windows para esta <see cref="T:System.Drawing.Region" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRegionData">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.RegionData GetRegionData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Drawing2D.RegionData GetRegionData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.GetRegionData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.RegionData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Drawing.Drawing2D.RegionData" /> que representa as informações que descrevem este <see cref="T:System.Drawing.Region" />.</summary>
+        <returns>Um <see cref="T:System.Drawing.Drawing2D.RegionData" /> que representa as informações que descrevem este <see cref="T:System.Drawing.Region" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Region> classe permite que você defina uma forma personalizada. A forma pode ser composta de linhas, polígonos e curvas. <xref:System.Drawing.Region.GetRegionData%2A>Descreve a forma contida neste <xref:System.Drawing.Region>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  O exemplo de código demonstra como usar o <xref:System.Drawing.Drawing2D.RegionData.Data%2A> um <xref:System.Drawing.Drawing2D.RegionData> objeto para definir o <xref:System.Drawing.Drawing2D.RegionData.Data%2A> para outro <xref:System.Drawing.Drawing2D.RegionData>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#13)]
+ [!code-csharp[System.Drawing.MiscExamples#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#13)]
+ [!code-vb[System.Drawing.MiscExamples#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRegionScans">
+      <MemberSignature Language="C#" Value="public System.Drawing.RectangleF[] GetRegionScans (System.Drawing.Drawing2D.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.RectangleF[] GetRegionScans(class System.Drawing.Drawing2D.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.GetRegionScans(System.Drawing.Drawing2D.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Um <see cref="T:System.Drawing.Drawing2D.Matrix" /> que representa uma transformação geométrica para aplicar à região.</param>
+        <summary>Retorna uma matriz de <see cref="T:System.Drawing.RectangleF" /> estruturas que se aproximam isso <see cref="T:System.Drawing.Region" /> depois que a transformação de matriz especificado é aplicada.</summary>
+        <returns>Uma matriz de <see cref="T:System.Drawing.RectangleF" /> estruturas que se aproximam isso <see cref="T:System.Drawing.Region" /> depois que a transformação de matriz especificado é aplicada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="matrix" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public void Intersect (System.Drawing.Drawing2D.GraphicsPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Intersect(class System.Drawing.Drawing2D.GraphicsPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Intersect(System.Drawing.Drawing2D.GraphicsPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Drawing.Drawing2D.GraphicsPath" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> para realizar a interseção com este <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza este <see cref="T:System.Drawing.Region" /> para a interseção de si mesmo com o <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter exemplos de código, consulte o <xref:System.Drawing.RectangleF.Intersect%28System.Drawing.RectangleF%29?displayProperty=nameWithType> e <xref:System.Drawing.Region.Complement%28System.Drawing.Drawing2D.GraphicsPath%29> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public void Intersect (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Intersect(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Intersect(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">A estrutura <see cref="T:System.Drawing.Rectangle" /> a ser interseccionada com este <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza este <see cref="T:System.Drawing.Region" /> para a interseção de si mesmo com a estrutura <see cref="T:System.Drawing.Rectangle" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.Intersect%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public void Intersect (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Intersect(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Intersect(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">A estrutura <see cref="T:System.Drawing.RectangleF" /> a ser interseccionada com este <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza este <see cref="T:System.Drawing.Region" /> para a interseção de si mesmo com a estrutura <see cref="T:System.Drawing.RectangleF" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria o primeiro retângulo e desenha na tela em preto.  
+  
+-   Cria o segundo retângulo e desenha a tela em vermelho.  
+  
+-   Cria uma região do retângulo primeiro.  
+  
+-   Obtém a área de interseção para a região quando combinado com o segundo retângulo.  
+  
+-   Preenche a área de interseção com azul e desenha na tela.  
+  
+ Observe que somente a área sobreposta para a região e o retângulo é azul.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public void Intersect (System.Drawing.Region region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Intersect(class System.Drawing.Region region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Intersect(System.Drawing.Region)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Drawing.Region" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Drawing.Region" /> para realizar a interseção com este <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza este <see cref="T:System.Drawing.Region" /> para a interseção de si mesmo com o <see cref="T:System.Drawing.Region" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter exemplos de código, consulte o <xref:System.Drawing.Region.Intersect%28System.Drawing.RectangleF%29> e <xref:System.Drawing.Region.Complement%28System.Drawing.Drawing2D.GraphicsPath%29> método`.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty (System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEmpty(class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsEmpty(System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa uma superfície de desenho.</param>
+        <summary>Testa se este <see cref="T:System.Drawing.Region" /> tem um interior vazio na superfície de desenho especificada.</summary>
+        <returns>
+          <see langword="true" /> se o interior deste <see cref="T:System.Drawing.Region" /> estiver vazio quando a transformação associada ao <paramref name="g" /> for aplicada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto gráficos `g` é usado para calcular o interior de região na superfície de desenho.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInfinite">
+      <MemberSignature Language="C#" Value="public bool IsInfinite (System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsInfinite(class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsInfinite(System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa uma superfície de desenho.</param>
+        <summary>Testes se isso <see cref="T:System.Drawing.Region" /> tem um interior infinito na superfície de desenho especificado.</summary>
+        <returns>
+          <see langword="true" />Se o interior disso <see cref="T:System.Drawing.Region" /> é infinito quando a transformação associado <paramref name="g" /> é aplicado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto gráficos `g` é usado para calcular o interior de região na superfície de desenho.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Drawing.Point" /> estrutura para testar.</param>
+        <summary>Testes se especificado <see cref="T:System.Drawing.Point" /> estrutura está contida dentro deste <see cref="T:System.Drawing.Region" />.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="point" /> está contida dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (System.Drawing.PointF point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(valuetype System.Drawing.PointF point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Drawing.PointF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.PointF" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Drawing.PointF" /> estrutura para testar.</param>
+        <summary>Testes se especificado <see cref="T:System.Drawing.PointF" /> estrutura está contida dentro deste <see cref="T:System.Drawing.Region" />.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="point" /> está contida dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.Rectangle" /> estrutura para testar.</param>
+        <summary>Testa se qualquer parte do <see cref="T:System.Drawing.Rectangle" /> estrutura está contida dentro deste <see cref="T:System.Drawing.Region" />.</summary>
+        <returns>Este método retorna <see langword="true" /> quando qualquer parte do <paramref name="rect" /> está contida dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.RectangleF" /> estrutura para testar.</param>
+        <summary>Testa se qualquer parte do <see cref="T:System.Drawing.RectangleF" /> estrutura está contida dentro deste <see cref="T:System.Drawing.Region" />.</summary>
+        <returns>
+          <see langword="true" />Quando qualquer parte do <paramref name="rect" /> está contida dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria o primeiro retângulo e desenha a tela em azul.  
+  
+-   Cria o segundo retângulo e desenha a tela em vermelho.  
+  
+-   Cria uma região do retângulo primeiro.  
+  
+-   Determina se qualquer parte do retângulo faz interseção com a região.  
+  
+-   Exibe o `true` ou `false` resultado na tela.  
+  
+ Observe que o retângulo intercepta a região, portanto, o resultado é `true`.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (System.Drawing.Point point, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(valuetype System.Drawing.Point point, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Drawing.Point,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.Point" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Drawing.Point" /> estrutura para testar.</param>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa um contexto de gráficos.</param>
+        <summary>Testes se especificado <see cref="T:System.Drawing.Point" /> estrutura está contida dentro deste <see cref="T:System.Drawing.Region" /> quando desenhados usando especificado <see cref="T:System.Drawing.Graphics" />.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="point" /> está contida dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto do gráfico é usada para calcular o interior de região e as coordenadas de ponto na superfície de desenho.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (System.Drawing.PointF point, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(valuetype System.Drawing.PointF point, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Drawing.PointF,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.PointF" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Drawing.PointF" /> estrutura para testar.</param>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa um contexto de gráficos.</param>
+        <summary>Testes se especificado <see cref="T:System.Drawing.PointF" /> estrutura está contida dentro deste <see cref="T:System.Drawing.Region" /> quando desenhados usando especificado <see cref="T:System.Drawing.Graphics" />.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="point" /> está contida dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto do gráfico é usada para calcular o interior de região e as coordenadas de ponto na superfície de desenho.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (System.Drawing.Rectangle rect, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(valuetype System.Drawing.Rectangle rect, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Drawing.Rectangle,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.Rectangle" /> estrutura para testar.</param>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa um contexto de gráficos.</param>
+        <summary>Testa se qualquer parte do <see cref="T:System.Drawing.Rectangle" /> estrutura está contida dentro deste <see cref="T:System.Drawing.Region" /> quando desenhados usando especificado <see cref="T:System.Drawing.Graphics" />.</summary>
+        <returns>
+          <see langword="true" />Quando qualquer parte do <paramref name="rect" /> está contida dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto do gráfico é usada para calcular o interior de região e as coordenadas do retângulo na superfície de desenho.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (System.Drawing.RectangleF rect, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(valuetype System.Drawing.RectangleF rect, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Drawing.RectangleF,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.RectangleF" /> estrutura para testar.</param>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa um contexto de gráficos.</param>
+        <summary>Testa se qualquer parte do <see cref="T:System.Drawing.RectangleF" /> estrutura está contida dentro deste <see cref="T:System.Drawing.Region" /> quando desenhados usando especificado <see cref="T:System.Drawing.Graphics" />.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="rect" /> está contida dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto do gráfico é usada para calcular o interior de região e as coordenadas do retângulo na superfície de desenho.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (float x, float y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(float32 x, float32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada X do ponto a ser testado.</param>
+        <param name="y">A coordenada Y do ponto a ser testado.</param>
+        <summary>Testa se o ponto especificado está contido dentro deste <see cref="T:System.Drawing.Region" />.</summary>
+        <returns>
+          <see langword="true" />Quando o ponto especificado está contido dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (int x, int y, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(int32 x, int32 y, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Int32,System.Int32,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada X do ponto a ser testado.</param>
+        <param name="y">A coordenada Y do ponto a ser testado.</param>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa um contexto de gráficos.</param>
+        <summary>Testa se o ponto especificado está contido dentro deste <see cref="T:System.Drawing.Region" /> quando desenhados usando especificado do objeto <see cref="T:System.Drawing.Graphics" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Quando o ponto especificado está contido dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto do gráfico é usada para calcular o interior de região e as coordenadas de ponto na superfície de desenho.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (float x, float y, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(float32 x, float32 y, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Single,System.Single,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada X do ponto a ser testado.</param>
+        <param name="y">A coordenada Y do ponto a ser testado.</param>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa um contexto de gráficos.</param>
+        <summary>Testa se o ponto especificado está contido dentro deste <see cref="T:System.Drawing.Region" /> quando desenhados usando especificado <see cref="T:System.Drawing.Graphics" />.</summary>
+        <returns>
+          <see langword="true" />Quando o ponto especificado está contido dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto do gráfico é usada para calcular o interior de região e as coordenadas de ponto na superfície de desenho.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (int x, int y, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(int32 x, int32 y, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada x do canto superior esquerdo do retângulo para testar.</param>
+        <param name="y">A coordenada y do canto superior esquerdo do retângulo para testar.</param>
+        <param name="width">A largura do retângulo para testar.</param>
+        <param name="height">A altura do retângulo para testar.</param>
+        <summary>Testa se qualquer parte do retângulo especificado está contido dentro deste <see cref="T:System.Drawing.Region" />.</summary>
+        <returns>
+          <see langword="true" />Quando qualquer parte do retângulo especificado está contido dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (float x, float y, float width, float height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(float32 x, float32 y, float32 width, float32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Single,System.Single,System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada x do canto superior esquerdo do retângulo para testar.</param>
+        <param name="y">A coordenada y do canto superior esquerdo do retângulo para testar.</param>
+        <param name="width">A largura do retângulo para testar.</param>
+        <param name="height">A altura do retângulo para testar.</param>
+        <summary>Testa se qualquer parte do retângulo especificado está contido dentro deste <see cref="T:System.Drawing.Region" />.</summary>
+        <returns>
+          <see langword="true" />Quando qualquer parte do retângulo especificado está contido dentro deste <see cref="T:System.Drawing.Region" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (int x, int y, int width, int height, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(int32 x, int32 y, int32 width, int32 height, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada x do canto superior esquerdo do retângulo para testar.</param>
+        <param name="y">A coordenada y do canto superior esquerdo do retângulo para testar.</param>
+        <param name="width">A largura do retângulo para testar.</param>
+        <param name="height">A altura do retângulo para testar.</param>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa um contexto de gráficos.</param>
+        <summary>Testa se qualquer parte do retângulo especificado está contido dentro deste <see cref="T:System.Drawing.Region" /> quando desenhados usando especificado <see cref="T:System.Drawing.Graphics" />.</summary>
+        <returns>
+          <see langword="true" />Quando qualquer parte do retângulo especificado está contido dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto do gráfico é usada para calcular o interior de região e as coordenadas do retângulo na superfície de desenho.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible (float x, float y, float width, float height, System.Drawing.Graphics g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVisible(float32 x, float32 y, float32 width, float32 height, class System.Drawing.Graphics g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.IsVisible(System.Single,System.Single,System.Single,System.Single,System.Drawing.Graphics)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada x do canto superior esquerdo do retângulo para testar.</param>
+        <param name="y">A coordenada y do canto superior esquerdo do retângulo para testar.</param>
+        <param name="width">A largura do retângulo para testar.</param>
+        <param name="height">A altura do retângulo para testar.</param>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que representa um contexto de gráficos.</param>
+        <summary>Testa se qualquer parte do retângulo especificado está contido dentro deste <see cref="T:System.Drawing.Region" /> quando desenhados usando especificado <see cref="T:System.Drawing.Graphics" />.</summary>
+        <returns>
+          <see langword="true" />Quando qualquer parte do retângulo especificado está contido dentro deste <see cref="T:System.Drawing.Region" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação atual do contexto do gráfico é usada para calcular o interior de região e as coordenadas do retângulo na superfície de desenho.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.IsVisible%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeEmpty">
+      <MemberSignature Language="C#" Value="public void MakeEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.MakeEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa essa <see cref="T:System.Drawing.Region" /> para um interior vazio.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Region.%23ctor%2A> construtor e <xref:System.Drawing.Region.MakeEmpty%2A> método. Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário e cole o seguinte código para ele. Chamar o `FillEmptyRegion` método no formulário de <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.MiscExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.MiscExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeInfinite">
+      <MemberSignature Language="C#" Value="public void MakeInfinite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeInfinite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.MakeInfinite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa essa <see cref="T:System.Drawing.Region" /> objeto para um interior infinito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Region.MakeInfinite%2A> método. Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário e cole o seguinte código para ele. Chamar o `FillEmptyRegion` método no formulário de <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.MiscExamples#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.MiscExamples#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseHrgn">
+      <MemberSignature Language="C#" Value="public void ReleaseHrgn (IntPtr regionHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReleaseHrgn(native int regionHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.ReleaseHrgn(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regionHandle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="regionHandle">O identificador para o <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Libera o identificador do <see cref="T:System.Drawing.Region" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="regionHandle" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Relacionado a enumeração <see cref="T:System.Security.Permissions.SecurityPermissionFlag" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public void Transform (System.Drawing.Drawing2D.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Transform(class System.Drawing.Drawing2D.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Transform(System.Drawing.Drawing2D.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">A <see cref="T:System.Drawing.Drawing2D.Matrix" /> pela qual essa <see cref="T:System.Drawing.Region" /> será transformada.</param>
+        <summary>Transforma essa <see cref="T:System.Drawing.Region" /> pela <see cref="T:System.Drawing.Drawing2D.Matrix" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um retângulo e desenha a tela em azul.  
+  
+-   Cria uma região do retângulo.  
+  
+-   Cria uma matriz de transformação e o define como 45 graus.  
+  
+-   Aplica a transformação para a região.  
+  
+-   Preenche a região transformada com vermelho e desenha a região transformada para a tela em vermelho.  
+  
+ Observe que o retângulo vermelho é girada 45 graus do retângulo original, mostrada em azul.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#9)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#9)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="matrix" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public void Translate (int dx, int dy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Translate(int32 dx, int32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Translate(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Int32" />
+        <Parameter Name="dy" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dx">A quantidade para deslocar isso <see cref="T:System.Drawing.Region" /> horizontalmente.</param>
+        <param name="dy">A quantidade para deslocar isso <see cref="T:System.Drawing.Region" /> verticalmente.</param>
+        <summary>Desloca as coordenadas deste <see cref="T:System.Drawing.Region" /> pelo valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um retângulo e desenha a tela em azul.  
+  
+-   Cria uma região do retângulo.  
+  
+-   Aplica-se a tradução para a região.  
+  
+-   Preenche a região traduzida com vermelho e desenha a região traduzida para a tela em vermelho.  
+  
+ Observe que o retângulo vermelho é deslocado para baixo e à direita do retângulo original, mostrada em azul.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#10)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#10)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public void Translate (float dx, float dy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Translate(float32 dx, float32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Translate(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="dx">A quantidade para deslocar isso <see cref="T:System.Drawing.Region" /> horizontalmente.</param>
+        <param name="dy">A quantidade para deslocar isso <see cref="T:System.Drawing.Region" /> verticalmente.</param>
+        <summary>Desloca as coordenadas deste <see cref="T:System.Drawing.Region" /> pelo valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.Translate%28System.Single%2CSystem.Single%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Drawing.Drawing2D.GraphicsPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(class System.Drawing.Drawing2D.GraphicsPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Union(System.Drawing.Drawing2D.GraphicsPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Drawing.Drawing2D.GraphicsPath" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> para unir com essa <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para a união de si mesmo e especificado <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.Union%28System.Drawing.RectangleF%29> e <xref:System.Drawing.Region.Complement%28System.Drawing.Drawing2D.GraphicsPath%29> métodos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Union(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.Rectangle" /> estrutura unir com essa <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para a união de si mesmo e especificado <see cref="T:System.Drawing.Rectangle" /> estrutura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.Union%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Union(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.RectangleF" /> estrutura unir com essa <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para a união de si mesmo e especificado <see cref="T:System.Drawing.RectangleF" /> estrutura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`. O código executa as seguintes ações:  
+  
+-   Cria o primeiro retângulo e desenha na tela em preto.  
+  
+-   Cria um segundo retângulo e desenha a tela em vermelho.  
+  
+-   Cria uma região usando o retângulo primeiro.  
+  
+-   Obtém a área de união para `myRegion` quando combinado com `complementRect`.  
+  
+-   Preenche a preencher a área de união com azul e desenha na tela.  
+  
+ Observe que os dois retângulos são preenchidos com azul, incluindo a área de sobreposição.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#11)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#11)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Drawing.Region region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(class System.Drawing.Region region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Union(System.Drawing.Region)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Drawing.Region" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Drawing.Region" /> para unir com essa <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para a união de si mesmo e especificado <see cref="T:System.Drawing.Region" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.Union%28System.Drawing.RectangleF%29> e <xref:System.Drawing.Region.Complement%28System.Drawing.Drawing2D.GraphicsPath%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="region" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Xor">
+      <MemberSignature Language="C#" Value="public void Xor (System.Drawing.Drawing2D.GraphicsPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Xor(class System.Drawing.Drawing2D.GraphicsPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Xor(System.Drawing.Drawing2D.GraphicsPath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.Drawing.Drawing2D.GraphicsPath" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> para <see cref="Overload:System.Drawing.Region.Xor" /> com essa <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para a união menos a interseção de si mesmo com especificado <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.Xor%28System.Drawing.RectangleF%29> e <xref:System.Drawing.Region.Complement%28System.Drawing.Drawing2D.GraphicsPath%29> métodos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Xor">
+      <MemberSignature Language="C#" Value="public void Xor (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Xor(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Xor(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">A estrutura <see cref="T:System.Drawing.Rectangle" /> a <see cref="Overload:System.Drawing.Region.Xor" /> com esse <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza essa <see cref="T:System.Drawing.Region" /> à união menos a interseção de si mesmo com a estrutura <see cref="T:System.Drawing.Rectangle" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.Xor%28System.Drawing.RectangleF%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xor">
+      <MemberSignature Language="C#" Value="public void Xor (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Xor(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Xor(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">A estrutura <see cref="T:System.Drawing.RectangleF" /> a <see cref="M:System.Drawing.Region.Xor(System.Drawing.Drawing2D.GraphicsPath)" /> com esse <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza essa <see cref="T:System.Drawing.Region" /> à união menos a interseção de si mesmo com a estrutura <see cref="T:System.Drawing.RectangleF" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria o primeiro retângulo e desenha na tela em preto.  
+  
+-   Cria um segundo retângulo e desenha a tela em vermelho.  
+  
+-   Cria uma região usando o retângulo primeiro.  
+  
+-   Obtém o <xref:System.Drawing.Region.Xor%2A> área `myRegion` quando combinado com `complementRect`.  
+  
+-   Preenche o <xref:System.Drawing.Region.Xor%2A> área com azul e desenha na tela.  
+  
+ Observe que os dois retângulos são preenchidos com azul, exceto para a área de sobreposição.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#12](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#12)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#12)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xor">
+      <MemberSignature Language="C#" Value="public void Xor (System.Drawing.Region region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Xor(class System.Drawing.Region region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Region.Xor(System.Drawing.Region)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Drawing.Region" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Drawing.Region" /> para <see cref="Overload:System.Drawing.Region.Xor" /> com essa <see cref="T:System.Drawing.Region" />.</param>
+        <summary>Atualiza isso <see cref="T:System.Drawing.Region" /> para a união menos a interseção de si mesmo com especificado <see cref="T:System.Drawing.Region" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Region.Xor%28System.Drawing.RectangleF%29> e <xref:System.Drawing.Region.Complement%28System.Drawing.Drawing2D.GraphicsPath%29> métodos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="region" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

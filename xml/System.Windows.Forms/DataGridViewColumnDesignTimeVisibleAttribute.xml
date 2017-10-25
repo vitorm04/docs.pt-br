@@ -1,0 +1,221 @@
+<Type Name="DataGridViewColumnDesignTimeVisibleAttribute" FullName="System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DataGridViewColumnDesignTimeVisibleAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataGridViewColumnDesignTimeVisibleAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se um tipo de coluna está visível no <see cref="T:System.Windows.Forms.DataGridView" /> designer. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, os tipos derivados de <xref:System.Windows.Forms.DataGridViewColumn> aparecem na <xref:System.Windows.Forms.DataGridView> partes de controle específicos do designer do Visual Studio, mas herdar um <xref:System.ComponentModel.DesignTimeVisibleAttribute> de <xref:System.ComponentModel.DesignTimeVisibleAttribute.No> para impedir que aparecem em outras partes do designer. Isso é necessário porque o <xref:System.Windows.Forms.DataGridViewColumn> tipo implementa o <xref:System.ComponentModel.IComponent> interface, que normalmente faz com que uma instância do tipo apareça no designer.  
+  
+ Use esse atributo para impedir que um <xref:System.Windows.Forms.DataGridViewColumn> tipo apareçam no <xref:System.Windows.Forms.DataGridView> designer de controle específicos.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewColumnDesignTimeVisibleAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute" /> classe usando o padrão <see cref="P:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible" /> valor da propriedade <see langword="true" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewColumnDesignTimeVisibleAttribute (bool visible);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool visible) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visible" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="visible">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute" /> classe usando o valor especificado para inicializar o <see cref="P:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible" /> propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O padrão <see cref="T:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute" /> valor, que é <see cref="F:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Yes" />, indicando que a coluna está visível no <see cref="T:System.Windows.Forms.DataGridView" /> designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta instância de atributo tem um <xref:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible%2A> valor da propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Object" />.</param>
+        <summary>Obtém um valor que indica se este objeto é equivalente ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />para indicar que o objeto especificado é um <see cref="T:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute" /> instância com o mesmo <see cref="P:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible" /> valor da propriedade que esta instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se esta instância do atributo é igual de <see cref="F:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default" /> valor do atributo.</summary>
+        <returns>
+          <see langword="true" />para indicar que esta instância é igual a <see cref="F:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Default" /> instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute" /> valor que indica que a coluna não é visível no <see cref="T:System.Windows.Forms.DataGridView" /> designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta instância de atributo tem um <xref:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible%2A> valor da propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o tipo de coluna está visível no <see cref="T:System.Windows.Forms.DataGridView" /> designer.</summary>
+        <value>
+          <see langword="true" />para indicar que o tipo de coluna está visível no <see cref="T:System.Windows.Forms.DataGridView" /> designer; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute" /> valor que indica que a coluna esteja visível no <see cref="T:System.Windows.Forms.DataGridView" /> designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta instância de atributo tem um <xref:System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible%2A> valor da propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

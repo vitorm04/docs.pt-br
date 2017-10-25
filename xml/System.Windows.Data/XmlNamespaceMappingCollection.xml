@@ -1,0 +1,388 @@
+<Type Name="XmlNamespaceMappingCollection" FullName="System.Windows.Data.XmlNamespaceMappingCollection">
+  <TypeSignature Language="C#" Value="public class XmlNamespaceMappingCollection : System.Xml.XmlNamespaceManager, System.Collections.Generic.ICollection&lt;System.Windows.Data.XmlNamespaceMapping&gt;, System.Collections.Generic.IEnumerable&lt;System.Windows.Data.XmlNamespaceMapping&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlNamespaceMappingCollection extends System.Xml.XmlNamespaceManager implements class System.Collections.Generic.ICollection`1&lt;class System.Windows.Data.XmlNamespaceMapping&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Data.XmlNamespaceMapping&gt;, class System.Collections.IEnumerable, class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.XmlNamespaceMappingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlNamespaceManager</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Windows.Data.XmlNamespaceMapping&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Windows.Data.XmlNamespaceMapping&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Data.XmlNamespaceMapping> classe fornece um mapeamento entre o namespace especificado no seu [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] associação de origem e um prefixo que você especificar que você pode usar em [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlNamespaceMappingCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Data.XmlNamespaceMappingCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Data.XmlNamespaceMapping mapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Windows.Data.XmlNamespaceMapping mapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.Add(System.Windows.Data.XmlNamespaceMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapping" Type="System.Windows.Data.XmlNamespaceMapping" />
+      </Parameters>
+      <Docs>
+        <param name="mapping">O objeto <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> a ser adicionado. Esse não pode ser <see langword="null" />.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objeto à coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="mapping" /> for <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Se o <see cref="P:System.Windows.Data.XmlNamespaceMapping.Uri" /> do <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objeto é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="protected virtual void AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> a ser adicionado. Esse não pode ser <see langword="null" />.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objeto à coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="mapping" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddText">
+      <MemberSignature Language="C#" Value="protected virtual void AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">A cadeia de caracteres de texto para adicionar como um filho.</param>
+        <summary>Adiciona uma cadeia de caracteres de texto como um filho deste <see cref="T:System.Windows.Data.XmlNamespaceMappingCollection" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="text" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objetos nesta coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é potencialmente cara; Considere a possibilidade de criar um novo <xref:System.Windows.Data.XmlNamespaceMappingCollection> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Data.XmlNamespaceMapping mapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Windows.Data.XmlNamespaceMapping mapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.Contains(System.Windows.Data.XmlNamespaceMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapping" Type="System.Windows.Data.XmlNamespaceMapping" />
+      </Parameters>
+      <Docs>
+        <param name="mapping">O <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objeto de interesse. Esse não pode ser <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se esta coleção contém especificado <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se esta coleção contém especificado <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="mapping" /> for <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Se o <see cref="P:System.Windows.Data.XmlNamespaceMapping.Uri" /> do <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objeto é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Windows.Data.XmlNamespaceMapping[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Windows.Data.XmlNamespaceMapping[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.CopyTo(System.Windows.Data.XmlNamespaceMapping[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Windows.Data.XmlNamespaceMapping[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz que é o destino dos itens copiados da coleção.</param>
+        <param name="arrayIndex">O índice com base em zero na matriz em que a cópia começa.</param>
+        <summary>Copia os itens da coleção para a matriz especificada, começando no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="array" /> for <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Se o número de itens excede o comprimento da matriz.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlNamespaceMappingCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objetos na coleção.</summary>
+        <value>O número de <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objetos na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IEnumerator" /> que você pode usar para enumerar os itens na coleção do objeto.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que você pode usar para enumerar os itens na coleção do objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlNamespaceMappingCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta coleção é somente leitura.</summary>
+        <value>Nesse sempre retorna <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectedGetEnumerator">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.IEnumerator&lt;System.Windows.Data.XmlNamespaceMapping&gt; ProtectedGetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.Data.XmlNamespaceMapping&gt; ProtectedGetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.ProtectedGetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Windows.Data.XmlNamespaceMappingCollection/&lt;ProtectedGetEnumerator&gt;d__16))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.Data.XmlNamespaceMapping&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um genérico <see cref="T:System.Collections.Generic.IEnumerator`1" /> objeto.</summary>
+        <returns>Um genérico <see cref="T:System.Collections.Generic.IEnumerator`1" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um membro protegido para <xref:System.Collections.Generic.IEnumerable%601> implementações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Windows.Data.XmlNamespaceMapping mapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.Windows.Data.XmlNamespaceMapping mapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.Remove(System.Windows.Data.XmlNamespaceMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapping" Type="System.Windows.Data.XmlNamespaceMapping" />
+      </Parameters>
+      <Docs>
+        <param name="mapping">O objeto <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> a ser removido. Esse não pode ser <see langword="null" />.</param>
+        <summary>Remove o objeto especificado <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> desta coleção.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objeto foi removido com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="mapping" /> for <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Se o <see cref="P:System.Windows.Data.XmlNamespaceMapping.Uri" /> do <see cref="T:System.Windows.Data.XmlNamespaceMapping" /> objeto é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Windows.Data.XmlNamespaceMapping&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Windows.Data.XmlNamespaceMapping&gt; IEnumerable&lt;XmlNamespaceMapping&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.Data.XmlNamespaceMapping&gt; System.Collections.Generic.IEnumerable&lt;System.Windows.Data.XmlNamespaceMapping&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.System#Collections#Generic#IEnumerable&lt;System#Windows#Data#XmlNamespaceMapping&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.Data.XmlNamespaceMapping&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.Generic.IEnumerable`1.GetEnumerator" />.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.Generic.IEnumerator`1" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Data.XmlNamespaceMappingCollection> é convertida em uma interface de <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O filho <see cref="T:System.Object" /> para adicionar.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Markup.IAddChild.AddChild(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Data.XmlNamespaceMappingCollection> é convertida em uma interface de <xref:System.Windows.Markup.IAddChild>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlNamespaceMappingCollection.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser adicionado para o <see cref="T:System.Object" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Markup.IAddChild.AddText(System.String)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Data.XmlNamespaceMappingCollection> é convertida em uma interface de <xref:System.Windows.Markup.IAddChild>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,129 @@
+<Type Name="SolidBrush" FullName="System.Drawing.SolidBrush">
+  <TypeSignature Language="C#" Value="public sealed class SolidBrush : System.Drawing.Brush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SolidBrush extends System.Drawing.Brush" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.SolidBrush" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Brush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um pincel de uma única cor. Pincéis são usados para preencher formas de elementos gráficos, como retângulos, elipses, gráficos de pizza, polígonos e caminhos. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe herda o <xref:System.Drawing.Brush> classe.  
+  
+   
+  
+## Examples  
+  
+-   O exemplo de código a seguir adiciona uma sombra em um <xref:System.Windows.Forms.ListBox> usando um <xref:System.Drawing.SolidBrush>.  
+  
+ Este exemplo é projetado para ser usado com um Windows Form. Para executar este exemplo, cole este código em um formulário e a chamada a `AddShadow` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> eventos. Verifique se o formulário contém um <xref:System.Windows.Forms.ListBox> chamado `listBox1`.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.MiscExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.MiscExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SolidBrush (System.Drawing.Color color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.SolidBrush.#ctor(System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="color">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor desse pincel.</param>
+        <summary>Inicializa um novo objeto <see cref="T:System.Drawing.SolidBrush" /> da cor especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+  
+-   O exemplo de código a seguir adiciona uma sombra em um <xref:System.Windows.Forms.ListBox> usando um <xref:System.Drawing.SolidBrush>.  
+  
+ Este exemplo é projetado para ser usado com um Windows Form. Para executar este exemplo, cole este código em um formulário e a chamada a `AddShadow` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> eventos. Verifique se o formulário contém um <xref:System.Windows.Forms.ListBox> chamado `listBox1`.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.MiscExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.MiscExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.SolidBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata desta <see cref="T:System.Drawing.SolidBrush" /> objeto.</summary>
+        <returns>O <see cref="T:System.Drawing.SolidBrush" /> objeto criado por esse método.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color Color" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.SolidBrush.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor desse objeto <see cref="T:System.Drawing.SolidBrush" />.</summary>
+        <value>Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor desse pincel.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">A propriedade <see cref="P:System.Drawing.SolidBrush.Color" /> é definida em um <see cref="T:System.Drawing.SolidBrush" /> imutável.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.SolidBrush.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

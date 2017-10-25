@@ -1,0 +1,73 @@
+<Type Name="StartFromZero" FullName="System.Windows.Forms.DataVisualization.Charting.StartFromZero">
+  <TypeSignature Language="C#" Value="public enum StartFromZero" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StartFromZero extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.StartFromZero" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica se um segmento de eixo deve iniciar do zero quando uma quebra de escala é usada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.StartFromZero> enumeração é usada para definir o valor de <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.StartFromZero%2A> propriedade e indica se um segmento de eixo deve iniciar do zero.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.StartFromZero Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.StartFromZero.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.StartFromZero</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle calcula se deseja iniciar a escala do eixo em zero ou em um valor arredondado mais apropriado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="No" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.StartFromZero No = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.StartFromZero.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.StartFromZero</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não inicie a escala de segmento do eixo de zero.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="Yes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.StartFromZero Yes = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.StartFromZero.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.StartFromZero</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inicie a escala de segmento do eixo do zero.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

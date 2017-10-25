@@ -1,0 +1,1363 @@
+<Type Name="ButtonBase" FullName="System.Windows.Forms.ButtonBase">
+  <TypeSignature Language="C#" Value="public abstract class ButtonBase : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ButtonBase extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ButtonBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.ButtonBaseDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa a funcionalidade básica comum aos controles de botão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente não herda de <xref:System.Windows.Forms.ButtonBase>. Para criar sua própria classe de botão, herdam o <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, ou <xref:System.Windows.Forms.RadioButton> classe.  
+  
+ Para que o controle de botão derivada para exibir uma imagem, defina o <xref:System.Windows.Forms.ButtonBase.Image%2A> propriedade ou o <xref:System.Windows.Forms.ButtonBase.ImageList%2A> e <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedades. A imagem pode ser alinhada no controle de botão, definindo a <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A> propriedade. Da mesma forma, para alinhar o <xref:System.Windows.Forms.Control.Text%2A> exibida no controle de botão, defina o <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> propriedade.  
+  
+ O <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> propriedade determina o estilo e a aparência do controle. Se o <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> está definida como <xref:System.Windows.Forms.FlatStyle?displayProperty=nameWithType>, sistema operacional do usuário determina a aparência do controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ButtonBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ButtonBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoEllipsis">
+      <MemberSignature Language="C#" Value="public bool AutoEllipsis { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoEllipsis" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.AutoEllipsis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o caractere de reticências (...) aparece na borda direita do controle, denotando que o texto de controle ultrapassa o tamanho especificado do controle.</summary>
+        <value>
+          <see langword="true" /> se o texto do rótulo adicional deve ser indicado por reticências; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir <xref:System.Windows.Forms.ButtonBase.AutoEllipsis%2A> para `true` para exibir o texto que ultrapassa a largura do controle quando o usuário passa sobre o controle com o mouse. Você deve definir o controle `AutoSize` propriedade `false` se você quiser <xref:System.Windows.Forms.ButtonBase.AutoEllipsis%2A> ser `true`. Se `AutoSize` é `true`, o controle crescerá para acomodar o texto e não aparecerá uma elipse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle é redimensionado com base em seu conteúdo.</summary>
+        <value>
+          <see langword="true" />Se o controle é redimensionado automaticamente com base no seu conteúdo. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ButtonBase.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ButtonBase.AutoSize" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ButtonBase.AutoSizeChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ButtonBase>, como um <xref:System.Windows.Forms.Button> ou <xref:System.Windows.Forms.CheckBox>. Em seguida, nomear a instância `ButtonBase1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ButtonBase.AutoSizeChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#136](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#136)]
+ [!code-vb[System.Windows.Forms.EventExamples#136](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#136)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo do controle.</summary>
+        <value>Um valor <see cref="T:System.Drawing.Color" /> que representa a cor da tela de fundo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto de acessibilidade para o controle.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Forms.AccessibleObject" /> para o controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de criação necessários quando a alça de controle é criada.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.CreateParams" /> que contém os parâmetros de criação necessários quando a alça de controle é criada.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultImeMode">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode DefaultImeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode DefaultImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.DefaultImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo do Editor de método de entrada (IME) padrão suportado por este controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImeMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado o <xref:System.Windows.Forms.ButtonBase> classe, essa propriedade sempre retorna o `Disable` valor <xref:System.Windows.Forms.ImeMode?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do controle.</summary>
+        <value>O <see cref="T:System.Drawing.Size" /> padrão do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.ButtonBase" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose` e pelo método <xref:System.Object.Finalize%2A>. `Dispose` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Windows.Forms.ButtonBase> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FlatAppearance">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FlatButtonAppearance FlatAppearance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.FlatButtonAppearance FlatAppearance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.FlatAppearance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatButtonAppearance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a aparência da borda e as cores usadas para indicar o estado de seleção e o estado do mouse.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.FlatButtonAppearance" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ButtonBase.FlatAppearance%2A> propriedade somente com <xref:System.Windows.Forms.Button> controla cujo <xref:System.Windows.Forms.FlatStyle> é <xref:System.Windows.Forms.FlatStyle.Flat>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlatStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FlatStyle FlatStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FlatStyle FlatStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.FlatStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a aparência de estilo plano do controle de botão.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.FlatStyle" />. O valor padrão é <see langword="Standard" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> propriedade o <xref:System.Windows.Forms.RadioButton> e <xref:System.Windows.Forms.CheckBox> classes é definido como `System`, o controle é desenhado pelo sistema operacional do usuário e o alinhamento de verificação baseia-se a `CheckAlign` e <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> valores de propriedade. O `CheckAlign` o valor da propriedade não é alterado, mas a aparência do controle pode ser afetada. A caixa de seleção horizontal está alinhada com a borda esquerda ou direita do controle (um alinhamento à esquerda ou center aparece esquerdo permanece alinhado, à direita inalterado) e alinhado verticalmente o mesmo que o texto descritivo. Por exemplo, se você tiver um <xref:System.Windows.Forms.CheckBox> controlar com um `CheckAlign` valor da propriedade `ContentAlignment`. `MiddleCenter`, um <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> valor da propriedade `ContentAlignment.TopRight`e o <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> o valor da propriedade é definido como `System`, o alinhamento da caixa de seleção aparecerá ser `ContentAlignment.TopLeft` enquanto o alinhamento do texto permanece inalterado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> está definida como `FlatStyle.System`, imagens com o <xref:System.Windows.Forms.ButtonBase.Image%2A> propriedade não são exibidos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Button> e define algumas de suas propriedades comuns. O resultado será um botão simples com texto à esquerda e uma imagem à direita. Esse código requer que você tem uma imagem de bitmap denominada `MyBitMap.bmp` armazenados no `C:\Graphics` diretório e que uma referência para o <xref:System.Drawing?displayProperty=nameWithType> namespace está incluído.  
+  
+ [!code-cpp[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.FlatStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size GetPreferredSize (System.Drawing.Size proposedSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(valuetype System.Drawing.Size proposedSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.GetPreferredSize(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="proposedSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="proposedSize">A área tamanho personalizado para um controle.</param>
+        <summary>Recupera o tamanho de uma área retangular na qual um controle pode ser ajustado.</summary>
+        <returns>Um par ordenado de tipo <see cref="T:System.Drawing.Size" /> que representa a largura e a altura de um retângulo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento de <xref:System.Windows.Forms.ButtonBase.GetPreferredSize%2A> difere pelo controle. O <xref:System.Windows.Forms.Control.LayoutEngine%2A> pode ser não é possível atribuir o tamanho retornado para o controle. Você pode retornar um tamanho maior do que as restrições indicadas no `proposedSize` parâmetro, mas `proposedSize` diminua como diminui a restrição. Por exemplo, `GetPreferredSize(new Size(100, 0))` não deve ser maior do que `GetPreferredSize(new Size(200, 0))`. A exceção é um `proposedSize` 0 ou `Size.Empty`, que é definido como irrestrita.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem que é exibida em um controle de botão.</summary>
+        <value>O <see cref="T:System.Drawing.Image" /> que é exibido no controle de botão. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.ButtonBase.Image%2A> propriedade for definida, o <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propriedade será definida como `null`e o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedade será definida para seu padrão, -1.  
+  
+> [!NOTE]
+>  Se o <xref:System.Windows.Forms.ButtonBase.FlatStyle%2A> está definida como `FlatStyle.System`, imagens com o <xref:System.Windows.Forms.ButtonBase.Image%2A> propriedade não são exibidos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Button> e define algumas de suas propriedades comuns. O resultado será um botão simples com texto à esquerda e uma imagem à direita. Esse código requer que você tem uma imagem de bitmap denominada `MyBitMap.bmp` armazenados no `C:\Graphics` diretório e que uma referência para o <xref:System.Drawing?displayProperty=nameWithType> namespace está incluído.  
+  
+ [!code-cpp[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageAlign">
+      <MemberSignature Language="C#" Value="public System.Drawing.ContentAlignment ImageAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment ImageAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.ImageAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento da imagem no controle de botão.</summary>
+        <value>Um dos valores de <see cref="T:System.Drawing.ContentAlignment" />. O valor padrão é <see langword="MiddleCenter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Button> e define algumas de suas propriedades comuns. O resultado será um botão simples com texto à esquerda e uma imagem à direita. Esse código requer que você tem uma imagem de bitmap denominada `MyBitMap.bmp` armazenados no `C:\Graphics` diretório e que uma referência para o <xref:System.Drawing?displayProperty=nameWithType> namespace está incluído.  
+  
+ [!code-cpp[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Drawing.ContentAlignment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageIndex">
+      <MemberSignature Language="C#" Value="public int ImageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ImageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.ImageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageIndexConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de índice da lista de imagens da imagem exibida no controle de botão.</summary>
+        <value>Um índice baseado em zero, que representa a posição da imagem em um <see cref="T:System.Windows.Forms.ImageList" />. O padrão é -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> ou <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propriedades forem definidas, o <xref:System.Windows.Forms.ButtonBase.Image%2A> propriedade é definida como seu valor padrão, `null`.  
+  
+> [!NOTE]
+>  Se o <xref:System.Windows.Forms.ButtonBase.ImageList%2A> o valor da propriedade é alterado para `null`, o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedade retorna o valor padrão, -1. No entanto, atribuída <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> valor é mantido internamente e usado quando outro <xref:System.Windows.Forms.ImageList> objeto é atribuído para o <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propriedade. Se o novo <xref:System.Windows.Forms.ImageList> atribuído ao <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propriedade tem um <xref:System.Windows.Forms.ImageList.ImageCollection.Count%2A?displayProperty=nameWithType> que seja menor ou igual ao valor atribuído ao valor da propriedade a <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedade menos um (a conta para a coleção sendo um índice com base em zero), o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> valor da propriedade é ajustado para um menor do que o <xref:System.Windows.Forms.ImageList.ImageCollection.Count%2A> valor da propriedade. Por exemplo, considere um botão controle cuja <xref:System.Windows.Forms.ImageList> tem três imagens e cujo <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> estiver definida como 2. Se um novo <xref:System.Windows.Forms.ImageList> que tem apenas duas imagens é atribuída ao botão, o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> valor é alterado para 1.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Button> e define o <xref:System.Windows.Forms.ButtonBase.ImageList%2A> e <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedades. Esse código requer que um <xref:System.Windows.Forms.ImageList> foi criado e um mínimo de um <xref:System.Drawing.Image> foi atribuído a ele. Esse código também requer que você tem uma imagem de bitmap denominada `MyBitMap.bmp` armazenados no `C:\Graphics` directory.  
+  
+ [!code-cpp[Classic ButtonBase.ImageIndex Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ButtonBase.ImageIndex Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ButtonBase.ImageIndex Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ButtonBase.ImageIndex Example/CS/source.cs#1)]
+ [!code-vb[Classic ButtonBase.ImageIndex Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ButtonBase.ImageIndex Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor atribuído é menor que os limites inferiores do <see cref="P:System.Windows.Forms.ButtonBase.ImageIndex" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageKey">
+      <MemberSignature Language="C#" Value="public string ImageKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.ImageKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageKeyConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o acessador de chave para a imagem no <see cref="P:System.Windows.Forms.ButtonBase.ImageList" />.</summary>
+        <value>Uma cadeia de caracteres que representa a chave da imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> propriedade especifica a imagem da lista de imagens para exibir no controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageList">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImageList ImageList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ImageList ImageList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.ImageList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.ImageList" /> que contém o <see cref="T:System.Drawing.Image" /> exibido em um controle de botão.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.ImageList" />. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.ButtonBase.ImageList%2A> ou <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedade for definida, o <xref:System.Windows.Forms.ButtonBase.Image%2A> está definida `null`, que é seu valor padrão.  
+  
+> [!NOTE]
+>  Se o <xref:System.Windows.Forms.ButtonBase.ImageList%2A> o valor da propriedade é alterado para `null`, o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedade retorna o valor padrão, -1. No entanto, o atribuído <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> valor é mantido internamente e usado quando outro <xref:System.Windows.Forms.ImageList> é atribuído para o <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propriedade. Se o novo <xref:System.Windows.Forms.ImageList> atribuído ao <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propriedade tem um <xref:System.Windows.Forms.ImageList.ImageCollection.Count%2A?displayProperty=nameWithType> que seja menor ou igual ao valor atribuído ao valor da propriedade o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedade menos um (porque a coleção é um índice com base em zero), o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> o valor da propriedade é ajustado a uma menor do que o <xref:System.Windows.Forms.ImageList.ImageCollection.Count%2A> valor da propriedade. Por exemplo, considere um botão controle cuja <xref:System.Windows.Forms.ImageList> tem três imagens e cujo <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> estiver definida como 2. Se um novo <xref:System.Windows.Forms.ImageList> que tem apenas duas imagens é atribuída ao botão, o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> valor é alterado para 1.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Button> e define o <xref:System.Windows.Forms.ButtonBase.ImageList%2A> e <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedades. Esse código requer que um <xref:System.Windows.Forms.ImageList> foi criado e um mínimo de um <xref:System.Drawing.Image> foi atribuído a ele. Esse código também requer que você tem uma imagem de bitmap denominada `MyBitMap.bmp` armazenados no `C:\Graphics` directory.  
+  
+ [!code-cpp[Classic ButtonBase.ImageIndex Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ButtonBase.ImageIndex Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ButtonBase.ImageIndex Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ButtonBase.ImageIndex Example/CS/source.cs#1)]
+ [!code-vb[Classic ButtonBase.ImageIndex Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ButtonBase.ImageIndex Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo do Editor de método de entrada (IME) com suporte deste controle. Essa propriedade não é relevante para essa classe.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImeMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ButtonBase.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.ButtonBase.ImeMode" /> é modificada. Esse evento não é relevante para essa classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="protected bool IsDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.IsDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle de botão é o botão padrão.</summary>
+        <value>
+          <see langword="true" />Se o controle de botão é o botão padrão; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.ButtonBase.IsDefault%2A> está definida como `true`, o botão é o padrão para o <xref:System.Windows.Forms.Form>. Isso significa que o botão é clicado quando a tecla ENTER for pressionada se nenhum outro botão ou outro controle que captura a tecla ENTER tem foco.  
+  
+ Para especificar o botão padrão de um formulário, defina o <xref:System.Windows.Forms.Form.AcceptButton%2A> propriedade do formulário para o botão desejado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnabledChanged">
+      <MemberSignature Language="C#" Value="protected override void OnEnabledChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnabledChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnEnabledChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.EnabledChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotFocus (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotFocus(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnGotFocus(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.GotFocus" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnGotFocus%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnGotFocus(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnGotFocus(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Forms.KeyEventArgs kevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Forms.KeyEventArgs kevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnKeyDown(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kevent" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="kevent">Um <see cref="T:System.Windows.Forms.KeyEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnKeyDown%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+> [!NOTE]
+>  Não chame <xref:System.Windows.Forms.ButtonBase.OnKeyDown%2A> se o botão estiver desabilitado (Isso inclui chamadas para a classe base <xref:System.Windows.Forms.ButtonBase.OnKeyDown%2A> método quando você substituir <xref:System.Windows.Forms.ButtonBase.OnKeyDown%2A> em uma classe derivada). Ao desabilitar um botão em uma substituição de <xref:System.Windows.Forms.ButtonBase.OnKeyDown%2A>, chame a classe base <xref:System.Windows.Forms.ButtonBase.OnKeyDown%2A> método antes de desabilitar o botão, ou não chamá-lo em todos os.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnKeyDown(System.Windows.Forms.KeyEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnKeyDown(System.Windows.Forms.KeyEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyUp">
+      <MemberSignature Language="C#" Value="protected override void OnKeyUp (System.Windows.Forms.KeyEventArgs kevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyUp(class System.Windows.Forms.KeyEventArgs kevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kevent" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="kevent">Um <see cref="T:System.Windows.Forms.KeyEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnKeyUp%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostFocus">
+      <MemberSignature Language="C#" Value="protected override void OnLostFocus (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostFocus(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnLostFocus(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.ButtonBase.OnLostFocus(System.EventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnLostFocus%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnLostFocus(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnLostFocus(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs mevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs mevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="mevent">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.Control.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnMouseDown%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+> [!NOTE]
+>  Não chame <xref:System.Windows.Forms.ButtonBase.OnMouseDown%2A> se o botão estiver desabilitado (Isso inclui chamadas para a classe base <xref:System.Windows.Forms.ButtonBase.OnMouseDown%2A> método quando você substituir <xref:System.Windows.Forms.ButtonBase.OnMouseDown%2A> em uma classe derivada). Ao desabilitar um botão em uma substituição de <xref:System.Windows.Forms.ButtonBase.OnMouseDown%2A>, chame a classe base <xref:System.Windows.Forms.ButtonBase.OnMouseDown%2A> método antes de desabilitar o botão, ou não chamá-lo em todos os.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (EventArgs eventargs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(class System.EventArgs eventargs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnMouseEnter(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventargs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventargs">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.Control.OnMouseEnter(System.EventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnMouseEnter%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+> [!NOTE]
+>  Não chame <xref:System.Windows.Forms.ButtonBase.OnMouseEnter%2A> se o botão estiver desabilitado (Isso inclui a chamada para a classe base <xref:System.Windows.Forms.ButtonBase.OnMouseEnter%2A> método quando você substituir <xref:System.Windows.Forms.ButtonBase.OnMouseEnter%2A> em uma classe derivada). Ao desabilitar um botão em uma substituição de <xref:System.Windows.Forms.ButtonBase.OnMouseEnter%2A>, chame a classe base <xref:System.Windows.Forms.ButtonBase.OnMouseEnter%2A> método antes de desabilitar o botão, ou não chamá-lo em todos os.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnMouseEnter(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnMouseEnter(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (EventArgs eventargs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.EventArgs eventargs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnMouseLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventargs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventargs">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.Control.OnMouseLeave(System.EventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnMouseLeave%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnMouseLeave(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnMouseLeave(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Forms.MouseEventArgs mevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Forms.MouseEventArgs mevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="mevent">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.Control.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnMouseMove%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+> [!NOTE]
+>  Não chame <xref:System.Windows.Forms.ButtonBase.OnMouseMove%2A> se o botão estiver desabilitado (Isso inclui chamadas para a classe base <xref:System.Windows.Forms.ButtonBase.OnMouseMove%2A> método quando você substituir <xref:System.Windows.Forms.ButtonBase.OnMouseMove%2A> em uma classe derivada). Ao desabilitar um botão em uma substituição de <xref:System.Windows.Forms.ButtonBase.OnMouseMove%2A>, chame a classe base <xref:System.Windows.Forms.ButtonBase.OnMouseMove%2A> método antes de desabilitar o botão, ou não chamá-lo em todos os.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnMouseMove(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnMouseMove(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs mevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs mevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="mevent">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.ButtonBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnMouseUp%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs pevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs pevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pevent" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pevent">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.ButtonBase.OnPaint(System.Windows.Forms.PaintEventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ButtonBase.OnPaint%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ButtonBase.OnPaint(System.Windows.Forms.PaintEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ButtonBase.OnPaint(System.Windows.Forms.PaintEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnParentChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnParentChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnParentChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.ParentChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTextChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnTextChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.TextChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisibleChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisibleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnVisibleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.OnVisibleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.VisibleChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetFlagsandPaint">
+      <MemberSignature Language="C#" Value="protected void ResetFlagsandPaint ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ResetFlagsandPaint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.ResetFlagsandPaint" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o <see cref="T:System.Windows.Forms.Button" /> controle para o estado antes que ele é pressionado e redesenha a ele.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.MultilineStringEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto associado a esse controle.</summary>
+        <value>O texto associado a esse controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.ContentAlignment TextAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment TextAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.TextAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do texto no controle de botão.</summary>
+        <value>Um dos valores de <see cref="T:System.Drawing.ContentAlignment" />. O padrão é <see langword="MiddleCenter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Button> e define algumas de suas propriedades comuns. O resultado será um botão simples com texto à esquerda e uma imagem à direita. Esse código requer que você tem uma imagem de bitmap denominada `MyBitMap.bmp` armazenados no `C:\Graphics` diretório e que uma referência para o <xref:System.Drawing?displayProperty=nameWithType> namespace está incluído.  
+  
+ [!code-cpp[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic ButtonBase.FlatStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ButtonBase.FlatStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Drawing.ContentAlignment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TextImageRelation">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TextImageRelation TextImageRelation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TextImageRelation TextImageRelation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.TextImageRelation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TextImageRelation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição do texto e da imagem em relação um ao outro.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.TextImageRelation" />. O padrão é <see cref="F:System.Windows.Forms.TextImageRelation.Overlay" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor não é um dos valores <see cref="T:System.Windows.Forms.TextImageRelation" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCompatibleTextRendering">
+      <MemberSignature Language="C#" Value="public bool UseCompatibleTextRendering { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCompatibleTextRendering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.UseCompatibleTextRendering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se as classes <see cref="T:System.Drawing.Graphics" /> ([!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]) ou <see cref="T:System.Windows.Forms.TextRenderer" /> ([!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]) devem ser usadas para renderizar o texto.</summary>
+        <value>
+          <see langword="true" /> se a classe <see cref="T:System.Drawing.Graphics" /> for usada para executar a renderização de texto para compatibilidade com versões as 1.0 e 1.1. do .NET Framework; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `UseCompatibleTextRendering` propriedade destina-se para fornecer compatibilidade visual entre os controles de formulários do Windows que renderizam texto usando o <xref:System.Windows.Forms.TextRenderer> classe e [!INCLUDE[net_v10_short](~/includes/net-v10-short-md.md)] e [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)] aplicativos que executam a renderização de texto personalizado usando o <xref:System.Drawing.Graphics> classe. Na maioria dos casos, se seu aplicativo não está sendo atualizado do [!INCLUDE[net_v10_short](~/includes/net-v10-short-md.md)] ou [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)], é recomendável que você deixe `UseCompatibleTextRendering` definido como o valor padrão de `false`.  
+  
+ O [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] com base em <xref:System.Windows.Forms.TextRenderer> classe foi introduzida no [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] para melhorar o desempenho, verifique o texto aparência e melhorar o suporte para fontes internacionais. Em versões anteriores do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], o [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] com base em <xref:System.Drawing.Graphics> classe foi usada para executar todo o processamento de texto. [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]calcula o espaçamento entre caracteres e a quebra automática de forma diferente de [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]. Em um aplicativo Windows Forms que usa o <xref:System.Drawing.Graphics> de classe para renderizar texto, isso pode causar o texto para controles que usam <xref:System.Windows.Forms.TextRenderer> apareça diferente do texto no aplicativo. Para resolver essa incompatibilidade, você pode definir o `UseCompatibleTextRendering` propriedade `true` para um controle específico. Para definir `UseCompatibleTextRendering` para `true` para todos os controles com suporte no aplicativo, chame o <xref:System.Windows.Forms.Application.SetCompatibleTextRenderingDefault%2A?displayProperty=nameWithType> método com um parâmetro de `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseMnemonic">
+      <MemberSignature Language="C#" Value="public bool UseMnemonic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseMnemonic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.UseMnemonic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o primeiro caractere precedido de um e comercial (&amp;) é usado como uma tecla mnemônica do controle.</summary>
+        <value>
+          <see langword="true" />Se o primeiro caractere que é precedido por um e comercial (&amp;) é usada como uma tecla mnemônica do controle; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseVisualStyleBackColor">
+      <MemberSignature Language="C#" Value="public bool UseVisualStyleBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseVisualStyleBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ButtonBase.UseVisualStyleBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se a tela de fundo é desenhada com estilos visuais, se houver suporte.</summary>
+        <value>
+          <see langword="true" /> se a tela de fundo for desenhada com estilos visuais; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estilos visuais são especificações para a aparência dos controles. Por exemplo, estilos visuais podem definir a cor, tamanho e fonte dos controles, e eles permitem que você configurar a interface visual para coordenar com a interface do aplicativo. Além disso, eles fornecem um mecanismo para todos os aplicativos baseados no Windows com estilos visuais aplicados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ButtonBase.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> do Windows a ser processado.</param>
+        <summary>Processa mensagens do Windows.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

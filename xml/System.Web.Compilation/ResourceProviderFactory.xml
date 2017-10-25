@@ -1,0 +1,130 @@
+<Type Name="ResourceProviderFactory" FullName="System.Web.Compilation.ResourceProviderFactory">
+  <TypeSignature Language="C#" Value="public abstract class ResourceProviderFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ResourceProviderFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ResourceProviderFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Serve como a classe base para classes que criam provedores de recursos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Compilation.ResourceProviderFactory>é uma classe abstrata que serve como a classe base para objetos que retornam os provedores de recursos globais e locais. Classes devem derivar de <xref:System.Web.Compilation.ResourceProviderFactory> para implementar sua funcionalidade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma fábrica de provedor de recursos personalizado que recupera os valores armazenados em cache.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ResourceProviderFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ResourceProviderFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância da classe derivada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância de uma classe abstrata. Classes que derivam de <xref:System.Web.Compilation.ResourceProviderFactory> pode implementar um construtor para definir valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGlobalResourceProvider">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Compilation.IResourceProvider CreateGlobalResourceProvider (string classKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Compilation.IResourceProvider CreateGlobalResourceProvider(string classKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ResourceProviderFactory.CreateGlobalResourceProvider(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.IResourceProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="classKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="classKey">O nome da classe de recurso.</param>
+        <summary>Quando substituído em uma classe derivada, cria um provedor de recursos globais.</summary>
+        <returns>Um provedor de recursos globais.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando substituído em uma classe derivada, esse método retorna um <xref:System.Web.Compilation.IResourceProvider> de objeto para o determinado `classKey` parâmetro. O método pode ser implementado, de modo que `classKey` é o nome de um arquivo. resx na pasta App_GlobalResources.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma fábrica de provedor de recursos personalizado que implementa o <xref:System.Web.Compilation.ResourceProviderFactory.CreateGlobalResourceProvider%2A> método e recupera os valores armazenados em cache.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLocalResourceProvider">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Compilation.IResourceProvider CreateLocalResourceProvider (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Compilation.IResourceProvider CreateLocalResourceProvider(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ResourceProviderFactory.CreateLocalResourceProvider(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.IResourceProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho para um arquivo de recurso.</param>
+        <summary>Quando substituído em uma classe derivada, cria um provedor de recursos locais.</summary>
+        <returns>Um provedor de recursos locais.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando substituído em uma classe derivada, esse método retorna um <xref:System.Web.Compilation.IResourceProvider> de objeto para o determinado `virtualPath` parâmetro. O método pode ser implementado, de modo que `virtualPath` é mapeado para um arquivo de recurso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma fábrica de provedor de recursos personalizado que implementa o <xref:System.Web.Compilation.ResourceProviderFactory.CreateLocalResourceProvider%2A> método e recupera os valores armazenados em cache.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

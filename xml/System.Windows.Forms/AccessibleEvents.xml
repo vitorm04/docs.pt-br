@@ -1,0 +1,712 @@
+<Type Name="AccessibleEvents" FullName="System.Windows.Forms.AccessibleEvents">
+  <TypeSignature Language="C#" Value="public enum AccessibleEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AccessibleEvents extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AccessibleEvents" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os eventos que são relatados por aplicativos acessíveis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os aplicativos de servidor do sistema operacional e a acessibilidade gerarem eventos de acessibilidade em resposta a alterações na interface do usuário.  
+  
+ Essa enumeração é usada por <xref:System.Windows.Forms.AccessibleObject> e <xref:System.Windows.Forms.Control>.  
+  
+ Para obter mais informações sobre o aplicativo de acessibilidade, pesquise por "Microsoft Active Accessibility" na biblioteca MSDN.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a criação de um gráfico com suporte a acessibilidade de controle, usando o <xref:System.Windows.Forms.AccessibleObject> e <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes para expor informações acessíveis. O controle plota duas curvas junto com uma legenda. O `ChartControlAccessibleObject` classe que deriva de `ControlAccessibleObject`, é usado no <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método para fornecer informações acessíveis personalizadas para o controle de gráfico. Porque a legenda do gráfico não é um real <xref:System.Windows.Forms.Control> -com base em controle, mas em vez disso, é desenhado pelo controle do gráfico, ele faz não todas as informações acessíveis internas. Por isso, o `ChartControlAccessibleObject` substituições de classe a <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> método para retornar o `CurveLegendAccessibleObject` que representa informações acessíveis para cada parte da legenda. Quando um aplicativo acessível ciente usa esse controle, o controle pode fornecer as informações necessárias de acessíveis.  
+  
+ Este exemplo demonstra como usar o <xref:System.Windows.Forms.AccessibleEvents> enumeração com o <xref:System.Windows.Forms.Control.AccessibilityNotifyClients%2A> método. Consulte o <xref:System.Windows.Forms.AccessibleObject> visão geral da classe para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#5)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#5)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceleratorChange">
+      <MemberSignature Language="C#" Value="AcceleratorChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents AcceleratorChange = int32(32786)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.AcceleratorChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.Windows.Forms.AccessibleObject.KeyboardShortcut" /> de um objeto foi alterada. Os aplicativos de servidor enviam o evento para os objetos acessíveis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="Create" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents Create = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.Create" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto foi criado. O sistema operacional envia o evento para os seguintes elementos da interface do usuário: cursor do sistema, controle de cabeçalho, controle de exibição de lista, controle guia, controle de barra de ferramentas, controle de exibição de árvore e objeto de janela. Os aplicativos de servidor enviam esse evento para os objetos acessíveis. Servidores devem enviar esse evento para todos os objetos filho de um objeto antes de enviar o evento para o objeto pai. Os servidores devem garantir que todos os objetos filho estejam totalmente criados e prontos para aceitar chamadas de clientes quando o objeto pai envia o evento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultActionChange">
+      <MemberSignature Language="C#" Value="DefaultActionChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents DefaultActionChange = int32(32785)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.DefaultActionChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.Windows.Forms.AccessibleObject.DefaultAction" /> de um objeto foi alterada. O sistema envia esse evento para caixas de diálogo. Os aplicativos de servidor enviam esse evento para os objetos acessíveis. Portanto, os aplicativos de servidor não precisam enviar esse evento para os objetos filho. Objetos ocultos têm um estado de <see cref="F:System.Windows.Forms.AccessibleStates.Invisible" /> e os objetos mostrados não. Eventos do tipo <see langword="AccessibleEvents.Hide" /> indicam que um estado de <see cref="F:System.Windows.Forms.AccessibleStates.Invisible" /> foi definido. Portanto, servidores não precisam enviar o evento <see langword="AccessibleEvents.StateChange" /> neste caso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DescriptionChange">
+      <MemberSignature Language="C#" Value="DescriptionChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents DescriptionChange = int32(32781)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.DescriptionChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.Windows.Forms.AccessibleObject.Description" /> de um objeto foi alterada. Os aplicativos de servidor enviam esse evento para os objetos acessíveis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Destroy">
+      <MemberSignature Language="C#" Value="Destroy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents Destroy = int32(32769)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.Destroy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto foi destruído. O sistema envia esse evento para os seguintes elementos da interface do usuário: cursor do sistema, controle de cabeçalho, controle de exibição de lista, controle guia, controle de barra de ferramentas, controle de exibição de árvore e objeto de janela. Os aplicativos de servidor enviam esse evento para os objetos acessíveis. Esse evento pode ou não ser enviado para objetos filho. No entanto, os clientes podem concluir que todos os filhos de um objeto foram destruídos quando o objeto pai envia esse evento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="Focus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents Focus = int32(32773)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.Focus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto recebeu o foco do teclado. O sistema envia esse evento para os seguintes elementos da interface do usuário: controle de exibição de lista, barra de menus, menu de atalho, janela de comutador, controle guia, controle de exibição de árvore e objeto de janela. Os aplicativos de servidor enviam esse evento para os objetos acessíveis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpChange">
+      <MemberSignature Language="C#" Value="HelpChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents HelpChange = int32(32784)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.HelpChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.Windows.Forms.AccessibleObject.Help" /> de um objeto foi alterada. Os aplicativos de servidor enviam esse evento para os objetos acessíveis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hide">
+      <MemberSignature Language="C#" Value="Hide" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents Hide = int32(32771)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.Hide" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto está oculto. O sistema envia o evento para os seguintes elementos da interface do usuário: cursor do sistema e cursor. Os aplicativos de servidor enviam o evento para os objetos acessíveis. Quando o evento é gerado para um objeto pai, todos os objetos filho já foram ocultados. Portanto, os aplicativos de servidor não precisam enviar o evento para os objetos filho. O sistema não envia o evento consistentemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationChange">
+      <MemberSignature Language="C#" Value="LocationChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents LocationChange = int32(32779)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.LocationChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto mudou de localização, forma ou tamanho. O sistema envia esse evento para os seguintes elementos da interface do usuário: objeto de janela e cursor do sistema. Os aplicativos de servidor enviam esse evento para os objetos acessíveis. Esse evento é gerado em resposta ao objeto de nível superior dentro da hierarquia de objeto que foi alterada, não para qualquer filho que ele possa conter. Por exemplo, se o usuário redimensiona uma janela, o sistema envia essa notificação para a janela, mas não para a barra de menus, barra de título, barras de rolagem ou outros objetos que também foram alterados. O sistema não envia esse evento para cada janela filho não flutuante quando o pai é movido. No entanto, se um aplicativo explicitamente redimensionar janelas filho como resultado do redimensionamento, o sistema envia vários eventos para os filhos redimensionados. Se a propriedade <see cref="P:System.Windows.Forms.AccessibleObject.State" /> do objeto estiver definida como <see cref="F:System.Windows.Forms.AccessibleStates.Floating" />, os servidores deverão enviar um evento de mudança de local sempre que o objeto mudar de local. Se um objeto não tiver esse estado, os servidores deverão gerar esse evento quando o objeto se mover em relação ao seu pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NameChange">
+      <MemberSignature Language="C#" Value="NameChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents NameChange = int32(32780)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.NameChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.Windows.Forms.AccessibleObject.Name" /> de um objeto foi alterada. O sistema envia esse evento para os seguintes elementos da interface do usuário: caixa de seleção, cursor, controle de exibição de lista, botão de ação, botão de opção, controle de barra de status, controle de exibição de árvore e objeto de janela. Os aplicativos de servidor enviam esse evento para os objetos acessíveis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentChange">
+      <MemberSignature Language="C#" Value="ParentChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents ParentChange = int32(32783)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.ParentChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto tem um novo objeto pai. Os aplicativos de servidor enviam esse evento para os objetos acessíveis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reorder">
+      <MemberSignature Language="C#" Value="Reorder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents Reorder = int32(32772)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.Reorder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto de contêiner adicionou, removeu ou reordenou seus filhos. O sistema envia esse evento para os seguintes elementos da interface do usuário: controle de cabeçalho, controle de exibição de lista, controle de barra de ferramentas e objeto de janela. Os aplicativos de servidor enviam esse evento, conforme apropriado, para os objetos acessíveis. Esse evento também é enviado por uma janela pai quando a ordem de z para as janelas filho é alterada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selection">
+      <MemberSignature Language="C#" Value="Selection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents Selection = int32(32774)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.Selection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto acessível dentro de um objeto de contêiner foi selecionado. Esse evento sinaliza uma única seleção. Um filho foi selecionado em um contêiner que anteriormente não continha nenhum filho selecionado ou a seleção mudou de um filho para outro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionAdd">
+      <MemberSignature Language="C#" Value="SelectionAdd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SelectionAdd = int32(32775)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SelectionAdd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um item em um objeto de contêiner foi adicionado à seleção. O sistema envia esse evento para os seguintes elementos da interface do usuário: caixa de listagem, controle de exibição de lista e controle de exibição de árvore. Os aplicativos de servidor enviam esse evento para os objetos acessíveis. Esse evento indica que um filho foi adicionado a uma seleção existente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionRemove">
+      <MemberSignature Language="C#" Value="SelectionRemove" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SelectionRemove = int32(32776)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SelectionRemove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um item em um objeto de contêiner foi removido da seleção. O sistema envia esse evento para os seguintes elementos da interface do usuário: caixa de listagem, controle de exibição de lista e controle de exibição de árvore. Os aplicativos de servidor enviam esse evento para os objetos acessíveis. Esse evento indica que um filho foi removido de uma seleção existente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionWithin">
+      <MemberSignature Language="C#" Value="SelectionWithin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SelectionWithin = int32(32777)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SelectionWithin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorreram várias alterações de seleção em um objeto de contêiner. O sistema envia esse evento para caixas de listagem. Os aplicativos de servidor enviam esse evento para os objetos acessíveis. Esse evento pode ser enviado quando os itens selecionados em um controle mudaram consideravelmente. Esse evento informa ao cliente que ocorreram muitas alterações de seleção. Isso é preferível para enviar vários eventos <see langword="SelectionAdd" /> ou <see langword="SelectionRemove" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="Show" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents Show = int32(32770)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.Show" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto oculto está sendo exibido. O sistema envia esse evento para os seguintes elementos da interface do usuário: objeto de janela, cursor e cursor do sistema. Os aplicativos de servidor enviam esse evento para os objetos acessíveis. Os clientes podem concluir que, quando esse evento é enviado por um objeto pai, todos os objetos filho já foram exibidos. Portanto, os aplicativos de servidor não precisam enviar esse evento para os objetos filho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChange">
+      <MemberSignature Language="C#" Value="StateChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents StateChange = int32(32778)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.StateChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado de um objeto foi alterado. O sistema envia o evento para os seguintes elementos da interface do usuário: caixa de seleção, caixa de combinação controle de cabeçalho, botão de ação, botão de opção, barra de rolagem, controle de barra de ferramentas, controle de exibição de árvore, controle acima-abaixo e objeto de janela. Os aplicativos de servidor enviam o evento para os objetos acessíveis. Por exemplo, uma alteração de estado pode ocorrer quando um objeto de botão for pressionado ou solto ou quando um objeto estiver sendo habilitado ou desabilitado. O sistema não envia o evento consistentemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAlert">
+      <MemberSignature Language="C#" Value="SystemAlert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemAlert = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemAlert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um alerta foi gerado. Os aplicativos de servidor enviam esse evento sempre que ocorre uma alteração importante da interface do usuário sobre a qual um usuário pode precisar saber. O sistema não envia o evento consistentemente para objetos de caixa de diálogo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemCaptureEnd">
+      <MemberSignature Language="C#" Value="SystemCaptureEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemCaptureEnd = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemCaptureEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela perdeu a captura do mouse. O sistema envia o evento, os servidores nunca enviam esse evento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemCaptureStart">
+      <MemberSignature Language="C#" Value="SystemCaptureStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemCaptureStart = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemCaptureStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela está sendo movida ou redimensionada. O sistema envia o evento, os servidores nunca enviam esse evento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemContextHelpEnd">
+      <MemberSignature Language="C#" Value="SystemContextHelpEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemContextHelpEnd = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemContextHelpEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela saiu do modo de ajuda contextual. O sistema não envia o evento consistentemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemContextHelpStart">
+      <MemberSignature Language="C#" Value="SystemContextHelpStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemContextHelpStart = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemContextHelpStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela entrou no modo de ajuda contextual. O sistema não envia o evento consistentemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDialogEnd">
+      <MemberSignature Language="C#" Value="SystemDialogEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemDialogEnd = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemDialogEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma caixa de diálogo foi fechada. O sistema não envia o evento para caixas de diálogo padrão. Os servidores enviam esse evento para caixas de diálogo personalizadas. O sistema não envia o evento consistentemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDialogStart">
+      <MemberSignature Language="C#" Value="SystemDialogStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemDialogStart = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemDialogStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma caixa de diálogo foi exibida. O sistema envia o evento para caixas de diálogo padrão. Os servidores enviam esse evento para caixas de diálogo personalizadas. O sistema não envia o evento consistentemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDragDropEnd">
+      <MemberSignature Language="C#" Value="SystemDragDropEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemDragDropEnd = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemDragDropEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um aplicativo está prestes a sair do modo de "arrastar e soltar". Os aplicativos que dão suporte a operações do tipo "arrastar e soltar" devem enviar esse evento, o sistema não.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDragDropStart">
+      <MemberSignature Language="C#" Value="SystemDragDropStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemDragDropStart = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemDragDropStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um aplicativo está prestes a entrar no modo de "arrastar e soltar". Os aplicativos que dão suporte a operações do tipo "arrastar e soltar" devem enviar esse evento, o sistema não.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemForeground">
+      <MemberSignature Language="C#" Value="SystemForeground" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemForeground = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemForeground" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A janela de primeiro plano foi alterada. O sistema envia esse evento, mesmo que a janela de primeiro plano seja alterada para outra janela no mesmo thread. Os aplicativos de servidor nunca enviam esse evento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemMenuEnd">
+      <MemberSignature Language="C#" Value="SystemMenuEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemMenuEnd = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemMenuEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um menu da barra de menus foi fechado. O sistema envia esse evento para menus padrão. Os servidores enviam esse evento para menus personalizados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemMenuPopupEnd">
+      <MemberSignature Language="C#" Value="SystemMenuPopupEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemMenuPopupEnd = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemMenuPopupEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um menu de atalho foi fechado. O sistema envia esse evento para menus padrão. Os servidores enviam esse evento para menus personalizados. Quando um menu de atalho é fechado, o cliente recebe essa mensagem quase que imediatamente seguida pelo evento <see langword="SystemMenuEnd" />. O sistema não envia o evento consistentemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemMenuPopupStart">
+      <MemberSignature Language="C#" Value="SystemMenuPopupStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemMenuPopupStart = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemMenuPopupStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um menu de atalho foi exibido. O sistema envia esse evento para menus padrão. Os servidores enviam esse evento para menus personalizados. O sistema não envia o evento consistentemente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemMenuStart">
+      <MemberSignature Language="C#" Value="SystemMenuStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemMenuStart = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemMenuStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um item de menu na barra de menus foi selecionado. O sistema envia esse evento para menus padrão. Os servidores enviam esse evento para menus personalizados. O sistema pode gerar mais de um evento <see langword="MenuStart" /> que pode ou não ter um evento <see langword="MenuEnd" /> correspondente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemMinimizeEnd">
+      <MemberSignature Language="C#" Value="SystemMinimizeEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemMinimizeEnd = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemMinimizeEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto de janela foi minimizado ou maximizado. O sistema envia o evento, os servidores nunca enviam esse evento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemMinimizeStart">
+      <MemberSignature Language="C#" Value="SystemMinimizeStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemMinimizeStart = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemMinimizeStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto de janela está prestes a ser minimizado ou maximizado. O sistema envia o evento, os servidores nunca enviam esse evento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemMoveSizeEnd">
+      <MemberSignature Language="C#" Value="SystemMoveSizeEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemMoveSizeEnd = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemMoveSizeEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A movimentação ou redimensionamento de uma janela é concluído. O sistema envia o evento, os servidores nunca enviam esse evento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemMoveSizeStart">
+      <MemberSignature Language="C#" Value="SystemMoveSizeStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemMoveSizeStart = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemMoveSizeStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma janela está sendo movida ou redimensionada. O sistema envia o evento, os servidores nunca enviam esse evento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemScrollingEnd">
+      <MemberSignature Language="C#" Value="SystemScrollingEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemScrollingEnd = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemScrollingEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A rolagem terminou em uma barra de rolagem. O sistema envia esse evento para barras de rolagem anexadas a uma janela e para controles da barra de rolagem padrão. Os servidores enviam esse evento para barras de rolagem personalizadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemScrollingStart">
+      <MemberSignature Language="C#" Value="SystemScrollingStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemScrollingStart = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemScrollingStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A rolagem foi iniciada em uma barra de rolagem. O sistema envia o evento para barras de rolagem anexadas a uma janela e para controles da barra de rolagem padrão. Os servidores enviam esse evento para barras de rolagem personalizadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemSound">
+      <MemberSignature Language="C#" Value="SystemSound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemSound = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemSound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um som foi reproduzido. O sistema envia esse evento quando um sistema de som, como de menus, é executado, mesmo que nenhum som seja audível. Isso pode ser causado pela falta de um arquivo de som ou placa de som. Os servidores enviam este evento se um elemento de interface do usuário personalizado gera um som.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemSwitchEnd">
+      <MemberSignature Language="C#" Value="SystemSwitchEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemSwitchEnd = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemSwitchEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O usuário soltou o ALT+TAB. O sistema envia o evento <see langword="SwitchEnd" />, os servidores nunca enviam esse evento. Se apenas um aplicativo estiver em execução quando o usuário pressionar ALT+TAB, o sistema enviará o evento <see langword="SwitchEnd" /> sem um evento <see langword="SwitchStart" /> correspondente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemSwitchStart">
+      <MemberSignature Language="C#" Value="SystemSwitchStart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents SystemSwitchStart = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.SystemSwitchStart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O usuário pressionou ALT+TAB, o que ativa a janela de comutador. Se apenas um aplicativo estiver em execução quando o usuário pressionar ALT+TAB, o sistema gerará o evento <see langword="SwitchEnd" /> sem um evento <see langword="SwitchStart" /> correspondente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChange">
+      <MemberSignature Language="C#" Value="ValueChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleEvents ValueChange = int32(32782)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleEvents.ValueChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleEvents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.Windows.Forms.AccessibleObject.Value" /> de um objeto foi alterada. O sistema gera o evento <see langword="ValueChange" /> para os seguintes elementos de interface do usuário: controle de edição, controle de cabeçalho, controle de tecla de acesso, controle de barra de progresso, barra de rolagem, controle deslizante e controle acima-abaixo. Os aplicativos de servidor enviam esse evento para os objetos acessíveis.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

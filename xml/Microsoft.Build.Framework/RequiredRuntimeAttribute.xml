@@ -1,0 +1,72 @@
+<Type Name="RequiredRuntimeAttribute" FullName="Microsoft.Build.Framework.RequiredRuntimeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class RequiredRuntimeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RequiredRuntimeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.RequiredRuntimeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o atributo de metadados que os autores de tarefa usam para identificar se a tarefa requer uma versão específica do tempo de execução do CLR.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma tarefa marcada com o <xref:Microsoft.Build.Framework.RequiredRuntimeAttribute> indica que ele tem um requisito de tempo de execução mais rígido que uma tarefa regular. Ele o alertará MSBuild que ele pode ser necessário iniciar um processo separado para a tarefa se a versão atual de tempo de execução do CLR não coincide com a versão necessária.  
+  
+> [!NOTE]
+>  Esse atributo no momento não está funcionando porque somente uma versão do CLR (2.0) é capaz de executar o [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] versão 2.0 ou 3.5.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [Estendendo metadados usando atributos](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequiredRuntimeAttribute (string runtimeVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string runtimeVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.RequiredRuntimeAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="runtimeVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="runtimeVersion">A versão do tempo de execução do CLR necessário precedida de um "v", como "v 2.0."</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Framework.RequiredRuntimeAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuntimeVersion">
+      <MemberSignature Language="C#" Value="public string RuntimeVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RuntimeVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.RequiredRuntimeAttribute.RuntimeVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de tempo de execução CLR que o atributo foi construído com, como "v 2.0."</summary>
+        <value>Uma cadeia de caracteres que contém a versão de tempo de execução CLR necessária.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

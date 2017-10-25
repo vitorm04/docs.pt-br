@@ -1,0 +1,59 @@
+<Type Name="AuthenticationMode" FullName="Microsoft.VisualBasic.ApplicationServices.AuthenticationMode">
+  <TypeSignature Language="C#" Value="public enum AuthenticationMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthenticationMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ApplicationServices.AuthenticationMode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica como um aplicativo Visual Basic autentica o usuário para o <see langword="My.User" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir o modo de autenticação para um aplicativo, passando um dos valores da enumeração este para o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.%23ctor%2A> construtor. Para obter mais informações, consulte [estendendo o modelo de aplicativo do Visual Basic](~/docs/visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md).  
+  
+ Um aplicativo do Visual Basic que usa o modelo de aplicativo do Visual Basic pode especificar se ele usa a autenticação do Windows ou a autenticação personalizada. Você também pode configurar o modo de autenticação no Visual Studio ambiente de desenvolvimento integrado. Para obter mais informações, consulte [Página de aplicativo, Designer de Projeto (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationDefined">
+      <MemberSignature Language="C#" Value="ApplicationDefined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.ApplicationServices.AuthenticationMode ApplicationDefined = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.ApplicationServices.AuthenticationMode.ApplicationDefined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.ApplicationServices.AuthenticationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="M:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.#ctor(Microsoft.VisualBasic.ApplicationServices.AuthenticationMode)" /> construtor inicializa a entidade de segurança do thread principal do aplicativo. O aplicativo precisa inicializar o princípio do thread principal do aplicativo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Windows">
+      <MemberSignature Language="C#" Value="Windows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.ApplicationServices.AuthenticationMode Windows = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.ApplicationServices.AuthenticationMode.Windows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.ApplicationServices.AuthenticationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="M:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.#ctor(Microsoft.VisualBasic.ApplicationServices.AuthenticationMode)" /> construtor inicializa a entidade de segurança para a thread principal do aplicativo com informações de usuário do Windows do usuário atual.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

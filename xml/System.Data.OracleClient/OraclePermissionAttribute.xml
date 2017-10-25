@@ -1,0 +1,248 @@
+<Type Name="OraclePermissionAttribute" FullName="System.Data.OracleClient.OraclePermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class OraclePermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit OraclePermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OraclePermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("OraclePermissionAttribute has been deprecated. http://go.microsoft.com/fwlink/?LinkID=144260", false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Associa uma ação de segurança com um atributo de segurança personalizada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo foi substituído e será removido em uma versão futura do .NET Framework. Para obter mais informações, consulte [Oracle e ADO.NET](~/docs/framework/data/adonet/oracle-and-adonet.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OraclePermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OraclePermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Uma da <see cref="T:System.Security.Permissions.SecurityAction" /> valores que representam uma ação que pode ser realizada usando a segurança declarativa.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.OracleClient.OraclePermissionAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowBlankPassword">
+      <MemberSignature Language="C#" Value="public bool AllowBlankPassword { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowBlankPassword" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OraclePermissionAttribute.AllowBlankPassword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma senha em branco é permitida.</summary>
+        <value>
+          <see langword="true" />Se uma senha em branco é permitida, caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OraclePermissionAttribute.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres de conexão permitidos.</summary>
+        <value>Uma cadeia de caracteres de conexão permitidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Várias cadeias de caracteres de conexão podem ser identificadas. Você pode também fornecer conexão adicional restrições de cadeia de caracteres usando <xref:System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictions%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OraclePermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Data.OracleClient.OraclePermission" /> objeto que é configurado de acordo com as propriedades de atributo.</summary>
+        <returns>Um objeto <see cref="T:System.Data.OracleClient.OraclePermission" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyRestrictionBehavior">
+      <MemberSignature Language="C#" Value="public System.Data.KeyRestrictionBehavior KeyRestrictionBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.KeyRestrictionBehavior KeyRestrictionBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictionBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.KeyRestrictionBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica se a lista de parâmetros de cadeia de caracteres de conexão é identificada pelo <see cref="P:System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictions" /> propriedade são os parâmetros de cadeia de caracteres de conexão somente permitidos.</summary>
+        <value>Um dos valores de <see cref="P:System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictionBehavior" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyRestrictions">
+      <MemberSignature Language="C#" Value="public string KeyRestrictions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyRestrictions" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a conexão parâmetros de cadeia de caracteres que são permitidos ou não permitidos.</summary>
+        <value>Um ou mais conexão cadeia parâmetros que são permitidos ou não permitidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros de cadeia de caracteres de Conexão são identificados no formulário =. Vários parâmetros podem ser especificados, sendo delimitados por um ponto e vírgula (;). Os parâmetros de cadeia de caracteres de conexão listados podem ser identificados como parâmetros adicionais somente permitidos ou parâmetros adicionais que não são permitidos usando a <xref:System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictionBehavior%2A> propriedade.  
+  
+ Se nenhuma restrição de chave for especificada e o <xref:System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictionBehavior%2A> está definida como `AllowOnly`, nenhum parâmetro de cadeia de caracteres de conexão adicionais é permitido.  
+  
+ Se nenhuma restrição de chave for especificada e o <xref:System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictionBehavior%2A> está definida como `PreventUsage`, parâmetros de cadeia de caracteres de conexão adicionais são permitidos. Se mais de uma regra é definida para a mesma cadeia de conexão, a regra mais restritiva é selecionada durante a verificação de permissão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeConnectionString">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeConnectionString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeConnectionString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OraclePermissionAttribute.ShouldSerializeConnectionString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Identifica se o atributo deve serializar a cadeia de caracteres de conexão.</summary>
+        <returns>
+          <see langword="true" />Se o atributo deve serializar a cadeia de caracteres de conexão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeKeyRestrictions">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeKeyRestrictions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeKeyRestrictions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OraclePermissionAttribute.ShouldSerializeKeyRestrictions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Identifica se o atributo deve serializar o conjunto de restrições de chave.</summary>
+        <returns>
+          <see langword="true" />Se o atributo deve serializar o conjunto de restrições de chave, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

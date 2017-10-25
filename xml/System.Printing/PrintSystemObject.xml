@@ -1,0 +1,377 @@
+<Type Name="PrintSystemObject" FullName="System.Printing.PrintSystemObject">
+  <TypeSignature Language="C#" Value="public abstract class PrintSystemObject : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract PrintSystemObject extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintSystemObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define as propriedades básicas e os métodos comuns aos objetos do sistema de impressão. As classes que derivam dessa classe representam objetos como filas de impressão, servidores de impressão e trabalhos de impressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Além de ser a classe base para objetos do sistema de impressão, essa classe pode ser útil para chamar métodos quando o aplicativo não sabe ou não se preocupar com o tipo específico de objeto de sistema de impressão está usando. Por exemplo, você pode enumerar por meio de um <xref:System.Printing.PrintSystemObjects> coleção de diferentes tipos de objeto, chamar o <xref:System.Printing.PrintSystemObject.Commit%2A> método em cada um por sua vez.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo Windows Forms, consulte o <xref:System.Drawing.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Se você derivar uma classe de <see cref="T:System.Printing.PrintSystemObject" />, talvez você queira derivar uma coleção de objetos da classe de <see cref="T:System.Printing.PrintSystemObjects" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PrintSystemObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Printing.PrintSystemObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PrintSystemObject (System.Printing.PrintSystemObjectLoadMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Printing.PrintSystemObjectLoadMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.#ctor(System.Printing.PrintSystemObjectLoadMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Printing.PrintSystemObjectLoadMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um valor que especifica se as propriedades do objeto devem ser inicializadas quando o objeto está carregado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PrintSystemObject" /> classe usando especificado <see cref="T:System.Printing.PrintSystemObjectLoadMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAttributeNames">
+      <MemberSignature Language="C#" Value="protected static string[] BaseAttributeNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string[] BaseAttributeNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.BaseAttributeNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os nomes dos atributos da classe derivada.</summary>
+        <returns>Uma matriz de <see cref="T:System.String" /> valores.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public abstract void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, grava as alterações feitas pelo seu programa para as propriedades do objeto para o software real ou componente de hardware que representa o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, quando é substituído pelo <xref:System.Printing.PrintServer> classe <xref:System.Printing.PrintServer.Commit%2A> gravará as alterações feitas para o <xref:System.Printing.PrintServer> propriedades do objeto para o computador real que representa o objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método (chamado em um <xref:System.Printing.PrintQueue> objeto, que substitui o método de <xref:System.Printing.PrintSystemObject>) como parte do processo de mesclagem de tíquetes de impressão.  
+  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Printing.PrintSystemObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Printing.PrintSystemObject.Dispose> quando tiver terminado de usar o <xref:System.Printing.PrintSystemObject>. O <xref:System.Printing.PrintSystemObject.Dispose> método deixa o <xref:System.Printing.PrintSystemObject> em um estado inutilizável. Depois de chamar <xref:System.Printing.PrintSystemObject.Dispose>, você deve liberar todas as referências para o <xref:System.Printing.PrintSystemObject> para o coletor de lixo possa recuperar a memória que o <xref:System.Printing.PrintSystemObject> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Printing.PrintSystemObject.Dispose> antes de liberar sua última referência para o <xref:System.Printing.PrintSystemObject>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Printing.PrintSystemObject> do objeto <xref:System.Object.Finalize%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">To be added.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Printing.PrintSystemObject" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()`invoca o protegido `Dispose(Boolean)` método com o parâmetro booliano sem nome definido como `true`. <xref:System.Object.Finalize%2A>invoca `Dispose` com o parâmetro definido `false`.  
+  
+ Quando o parâmetro booliano é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Printing.PrintSystemObject> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tome cuidado para não referenciar objetos que tenham sido descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~PrintSystemObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos que estão sendo usados pelo <see cref="T:System.Printing.PrintSystemObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.PrintSystemObject.Finalize%2A> método atua como uma proteção para limpar os recursos no caso em que o <xref:System.Printing.PrintSystemObject.Dispose%2A> método não for chamado. Você deve implementar o <xref:System.Printing.PrintSystemObject.Finalize%2A> método limpar apenas recursos não gerenciados. Você não deve implementar esse método para objetos gerenciados, como o coletor de lixo limpa os recursos gerenciados automaticamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa as propriedades da <see cref="T:System.Printing.PrintSystemObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalDispose">
+      <MemberSignature Language="C#" Value="protected virtual void InternalDispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InternalDispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.InternalDispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Quando substituído em uma classe derivada, libera os recursos não gerenciados que estão sendo usados pelo <see cref="T:System.Printing.PrintSystemObject" />e, opcionalmente, libera os recursos gerenciados que estão sendo usados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDisposed">
+      <MemberSignature Language="C#" Value="protected bool IsDisposed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDisposed" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemObject.IsDisposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o objeto foi descartado.</summary>
+        <value>
+          <see langword="true" />Se o objeto foi descartado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemObject.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do objeto.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o nome do objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public virtual System.Printing.PrintSystemObject Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintSystemObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemObject.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintSystemObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai do objeto.</summary>
+        <value>Outro <see cref="T:System.Printing.PrintSystemObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, o pai de uma fila de impressão é o servidor de impressão que hospeda a fila.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesCollection">
+      <MemberSignature Language="C#" Value="public System.Printing.IndexedProperties.PrintPropertyDictionary PropertiesCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.IndexedProperties.PrintPropertyDictionary PropertiesCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintSystemObject.PropertiesCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.IndexedProperties.PrintPropertyDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de pares de atributo e valor.</summary>
+        <value>Um <see cref="T:System.Printing.IndexedProperties.PrintPropertyDictionary" /> que contém pares de atributo e valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade para descobrir em tempo de execução as propriedades e os tipos dessas propriedades, de um objeto do sistema de impressão, sem o uso de reflexão.  
+  
+ [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
+ [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public abstract void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintSystemObject.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, atualiza as propriedades de um objeto da classe derivada para que seus valores correspondem aos valores do componente de software ou hardware real que o objeto representa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As alterações feitas nas propriedades de um objeto da classe derivada podem ser perdidas quando o <xref:System.Printing.PrintSystemObject.Refresh%2A> da classe derivada é executado. A perda ocorrerá se as alterações têm ainda não foram gravadas para o componente de software ou hardware real, usando a implementação da classe derivada de <xref:System.Printing.PrintSystemObject.Commit%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

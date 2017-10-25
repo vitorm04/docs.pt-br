@@ -1,0 +1,253 @@
+<Type Name="GroupDescription" FullName="System.ComponentModel.GroupDescription">
+  <TypeSignature Language="C#" Value="public abstract class GroupDescription : System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit GroupDescription extends System.Object implements class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.GroupDescription" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma classe base abstrata para tipos que descrevem como dividir os itens em uma coleção em grupos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GroupDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.GroupDescription.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.GroupDescription" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomSort">
+      <MemberSignature Language="C#" Value="public System.Collections.IComparer CustomSort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IComparer CustomSort" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.GroupDescription.CustomSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IComparer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um comparador personalizado que classifica os grupos usando um objeto que implementa <see cref="T:System.Collections.IComparer" />.</summary>
+        <value>Um comparador personalizado que classifica os grupos usando um objeto que implementa <see cref="T:System.Collections.IComparer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O objeto de comparador personalizado desmarque anteriormente será definido <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupNameFromItem">
+      <MemberSignature Language="C#" Value="public abstract object GroupNameFromItem (object item, int level, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GroupNameFromItem(object item, int32 level, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.GroupDescription.GroupNameFromItem(System.Object,System.Int32,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="level" Type="System.Int32" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item para retornar nomes de grupo para.</param>
+        <param name="level">O nível de agrupamento.</param>
+        <param name="culture">O <see cref="T:System.Globalization.CultureInfo" /> para fornecer o conversor.</param>
+        <summary>Retorna os nomes de grupo para o item fornecido.</summary>
+        <returns>Os nomes de grupo para o item fornecido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;object&gt; GroupNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;object&gt; GroupNames" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.GroupDescription.GroupNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de nomes que são usados para inicializar um grupo com um conjunto de subgrupos com os nomes de fornecido.</summary>
+        <value>A coleção de nomes que são usados para inicializar um grupo com um conjunto de subgrupos com os nomes de fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar subgrupos adicionais posteriormente se houver itens que não correspondem a qualquer um dos nomes especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamesMatch">
+      <MemberSignature Language="C#" Value="public virtual bool NamesMatch (object groupName, object itemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool NamesMatch(object groupName, object itemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.GroupDescription.NamesMatch(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.Object" />
+        <Parameter Name="itemName" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">O nome do grupo para verificar.</param>
+        <param name="itemName">O nome do item a ser verificado.</param>
+        <summary>Retorna um valor que indica se o nome do grupo e o nome do item correspondem, de modo que o item pertence ao grupo.</summary>
+        <returns>
+          <see langword="true" />Se a correspondência de nomes e o item pertence ao grupo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (System.ComponentModel.PropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(class System.ComponentModel.PropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.GroupDescription.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.PropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos do evento que está sendo criado.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.GroupDescription.PropertyChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As subclasses precisam chamar este método para gerar o <xref:System.ComponentModel.GroupDescription.PropertyChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.GroupDescription.PropertyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um valor de propriedade é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeGroupNames">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeGroupNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeGroupNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.GroupDescription.ShouldSerializeGroupNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se processos de serialização devem serializar o valor efetivo de <see cref="P:System.ComponentModel.GroupDescription.GroupNames" /> propriedade em instâncias dessa classe.</summary>
+        <returns>Retorna <see langword="true" /> se o <see cref="P:System.ComponentModel.GroupDescription.GroupNames" /> o valor da propriedade deve ser serializado; caso contrário, false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSortDescriptions">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeSortDescriptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeSortDescriptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.GroupDescription.ShouldSerializeSortDescriptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se processos de serialização devem serializar o valor efetivo de <see cref="P:System.ComponentModel.GroupDescription.SortDescriptions" /> propriedade em instâncias dessa classe.</summary>
+        <returns>
+          <see langword="true" /> se o valor da propriedade <see cref="P:System.ComponentModel.GroupDescription.SortDescriptions" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDescriptions">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.SortDescriptionCollection SortDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.SortDescriptionCollection SortDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.GroupDescription.SortDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.SortDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de classificação critérios de classificação dos grupos.</summary>
+        <value>A coleção de critérios de classificação na qual classificar os grupos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

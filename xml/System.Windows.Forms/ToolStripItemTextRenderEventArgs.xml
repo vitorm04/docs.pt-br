@@ -1,0 +1,271 @@
+<Type Name="ToolStripItemTextRenderEventArgs" FullName="System.Windows.Forms.ToolStripItemTextRenderEventArgs">
+  <TypeSignature Language="C#" Value="public class ToolStripItemTextRenderEventArgs : System.Windows.Forms.ToolStripItemRenderEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripItemTextRenderEventArgs extends System.Windows.Forms.ToolStripItemRenderEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripItemTextRenderEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripItemRenderEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderItemText" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#595](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#595)]
+ [!code-vb[System.Windows.Forms.EventExamples#595](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#595)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripItemTextRenderEventArgs (System.Drawing.Graphics g, System.Windows.Forms.ToolStripItem item, string text, System.Drawing.Rectangle textRectangle, System.Drawing.Color textColor, System.Drawing.Font textFont, System.Drawing.ContentAlignment textAlign);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics g, class System.Windows.Forms.ToolStripItem item, string text, valuetype System.Drawing.Rectangle textRectangle, valuetype System.Drawing.Color textColor, class System.Drawing.Font textFont, valuetype System.Drawing.ContentAlignment textAlign) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemTextRenderEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.ToolStripItem,System.String,System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Font,System.Drawing.ContentAlignment)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="item" Type="System.Windows.Forms.ToolStripItem" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="textRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textColor" Type="System.Drawing.Color" />
+        <Parameter Name="textFont" Type="System.Drawing.Font" />
+        <Parameter Name="textAlign" Type="System.Drawing.ContentAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o texto.</param>
+        <param name="item">O <see cref="T:System.Windows.Forms.ToolStripItem" /> na qual desenhar o texto.</param>
+        <param name="text">O texto a ser desenhado.</param>
+        <param name="textRectangle">O <see cref="T:System.Drawing.Rectangle" /> que representa os limites para desenhar o texto.</param>
+        <param name="textColor">O <see cref="T:System.Drawing.Color" /> usado para desenhar o texto.</param>
+        <param name="textFont">O <see cref="T:System.Drawing.Font" /> usado para desenhar o texto.</param>
+        <param name="textAlign">O <see cref="T:System.Drawing.ContentAlignment" /> que especifica o alinhamento horizontal e vertical do texto na área de delimitador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ToolStripItemTextRenderEventArgs" /> classe com as propriedades de texto e o texto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripItemTextRenderEventArgs (System.Drawing.Graphics g, System.Windows.Forms.ToolStripItem item, string text, System.Drawing.Rectangle textRectangle, System.Drawing.Color textColor, System.Drawing.Font textFont, System.Windows.Forms.TextFormatFlags format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics g, class System.Windows.Forms.ToolStripItem item, string text, valuetype System.Drawing.Rectangle textRectangle, valuetype System.Drawing.Color textColor, class System.Drawing.Font textFont, valuetype System.Windows.Forms.TextFormatFlags format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemTextRenderEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.ToolStripItem,System.String,System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Font,System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="item" Type="System.Windows.Forms.ToolStripItem" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="textRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="textColor" Type="System.Drawing.Color" />
+        <Parameter Name="textFont" Type="System.Drawing.Font" />
+        <Parameter Name="format" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o texto.</param>
+        <param name="item">O <see cref="T:System.Windows.Forms.ToolStripItem" /> na qual desenhar o texto.</param>
+        <param name="text">O texto a ser desenhado.</param>
+        <param name="textRectangle">O <see cref="T:System.Drawing.Rectangle" /> que representa os limites para desenhar o texto.</param>
+        <param name="textColor">O <see cref="T:System.Drawing.Color" /> usado para desenhar o texto.</param>
+        <param name="textFont">O <see cref="T:System.Drawing.Font" /> usado para desenhar o texto.</param>
+        <param name="format">As informações de exibição e o layout de cadeias de caracteres de texto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ToolStripItemTextRenderEventArgs" /> classe com o texto especificado e o formato de propriedades de texto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemTextRenderEventArgs.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto a ser desenhado <see cref="T:System.Windows.Forms.ToolStripItem" />.</summary>
+        <value>Uma cadeia de caracteres que representa o texto a ser pintada no <see cref="T:System.Windows.Forms.ToolStripItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#595](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#595)]
+ [!code-vb[System.Windows.Forms.EventExamples#595](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#595)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color TextColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color TextColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do <see cref="T:System.Windows.Forms.ToolStripItem" /> texto.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor do <see cref="T:System.Windows.Forms.ToolStripItem" /> texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#595](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#595)]
+ [!code-vb[System.Windows.Forms.EventExamples#595](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#595)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripTextDirection TextDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolStripTextDirection TextDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripTextDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o texto é desenhado verticalmente ou horizontalmente.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ToolStripTextDirection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#595](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#595)]
+ [!code-vb[System.Windows.Forms.EventExamples#595](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#595)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextFont">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font TextFont { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font TextFont" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte do texto desenhado no <see cref="T:System.Windows.Forms.ToolStripItem" />.</summary>
+        <value>O <see cref="T:System.Drawing.Font" /> do texto desenhado no <see cref="T:System.Windows.Forms.ToolStripItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#595](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#595)]
+ [!code-vb[System.Windows.Forms.EventExamples#595](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#595)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextFormat">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TextFormatFlags TextFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TextFormatFlags TextFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TextFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de exibição e o layout do texto desenhado no <see cref="T:System.Windows.Forms.ToolStripItem" />.</summary>
+        <value>Uma combinação bit a bit do <see cref="T:System.Windows.Forms.TextFormatFlags" /> valores que especificam as informações de exibição e o layout do texto desenhado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#595](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#595)]
+ [!code-vb[System.Windows.Forms.EventExamples#595](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#595)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle TextRectangle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle TextRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o retângulo que representa os limites para desenhar o texto.</summary>
+        <value>O <see cref="T:System.Drawing.Rectangle" /> que representa os limites para desenhar o texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#595](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#595)]
+ [!code-vb[System.Windows.Forms.EventExamples#595](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#595)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

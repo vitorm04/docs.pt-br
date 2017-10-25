@@ -1,0 +1,147 @@
+<Type Name="RegistryPermissionAccess" FullName="System.Security.Permissions.RegistryPermissionAccess">
+  <TypeSignature Language="C#" Value="public enum RegistryPermissionAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed RegistryPermissionAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.RegistryPermissionAccess" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o acesso permitido aos valores e chaves do Registro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Permissions.RegistryPermissionAccess>os valores são independentes. direitos para um tipo de acesso não implicam direitos para outro. Por exemplo, `Write` permissão não implica a permissão para `Read` ou `Create`.  
+  
+> [!NOTE]
+>  Embora NoAccess e AllAccess aparecem em <xref:System.Security.Permissions.RegistryPermissionAccess.NoAccess>, eles não são válidos para uso como o parâmetro <xref:System.Security.Permissions.RegistryPermission.GetPathList%2A> porque eles descrevem nenhum tipo de acesso a variáveis de registro ou todos os tipos de acesso a variáveis de registro, respectivamente, e <xref:System.Security.Permissions.RegistryPermission.GetPathList%2A> espera um tipo de acesso a variáveis de registro único.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllAccess">
+      <MemberSignature Language="C#" Value="AllAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess AllAccess = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.AllAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /> e <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" /> acessam a variáveis de Registro. <see cref="F:System.Security.Permissions.RegistryPermissionAccess.AllAccess" /> representa vários valores de <see cref="T:System.Security.Permissions.RegistryPermissionAccess" /> e causa um <see cref="T:System.ArgumentException" /> quando usado como o parâmetro <paramref name="access" /> para o método <see cref="M:System.Security.Permissions.RegistryPermission.GetPathList(System.Security.Permissions.RegistryPermissionAccess)" />, que espera um único valor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="Create" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess Create = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.Create" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Crie o acesso a variáveis de Registro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoAccess">
+      <MemberSignature Language="C#" Value="NoAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess NoAccess = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.NoAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sem acesso a variáveis de Registro. <see cref="F:System.Security.Permissions.RegistryPermissionAccess.NoAccess" /> não representa nenhum valor válido de <see cref="T:System.Security.Permissions.RegistryPermissionAccess" /> e causa um <see cref="T:System.ArgumentException" /> quando usado como parâmetro para <see cref="M:System.Security.Permissions.RegistryPermission.GetPathList(System.Security.Permissions.RegistryPermissionAccess)" />, que espera um único valor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess Read = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Acesso de leitura a variáveis de Registro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="Write" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.RegistryPermissionAccess Write = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.RegistryPermissionAccess.Write" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.RegistryPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Acesso de gravação a variáveis de Registro.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

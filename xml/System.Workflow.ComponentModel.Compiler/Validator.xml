@@ -1,0 +1,211 @@
+<Type Name="Validator" FullName="System.Workflow.ComponentModel.Compiler.Validator">
+  <TypeSignature Language="C#" Value="public class Validator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Validator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.Validator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Classe base para todos os componentes do validador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ A classe do validador é usada para garantir que as atividades estão configuradas corretamente no tempo de design. Validadores são instanciados durante o tempo de design quando o designer valida as propriedades atribuídas a atividades; Se os parâmetros de uma atividade não estiverem configurados corretamente, o designer mostrará erros de marcas inteligentes para os valores incorretos. Validadores também executadas durante o tempo de compilação e retornarão erros de validação se as restrições, como o tipo de objeto pai ou filho, o número mínimo de filhos, etc. não estiverem corretos.  Validadores também serão executada em tempo de execução quando um fluxo de trabalho baseados em marcação é instanciado usando o <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> método.  
+  
+ A principal finalidade de um validador é garantir que os erros são conhecidos no tempo de design e não são expostos como exceções em tempo de execução.  
+  
+ Validadores estão associados com as atividades que eles validar usando o <xref:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.ValidatorTypeName%2A> atributo; validadores devem herdar de toda a atividade de <xref:System.Workflow.ComponentModel.Compiler.ActivityValidator> classe.  
+  
+ Por padrão, validadores validará metapropriedades; eles não validar as propriedades de instância que são configuráveis no tempo de execução.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Validator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.Validator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Compiler.Validator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFullPropertyName">
+      <MemberSignature Language="C#" Value="protected string GetFullPropertyName (System.Workflow.ComponentModel.Compiler.ValidationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetFullPropertyName(class System.Workflow.ComponentModel.Compiler.ValidationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.Validator.GetFullPropertyName(System.Workflow.ComponentModel.Compiler.ValidationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Workflow.ComponentModel.Compiler.ValidationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationManager" /> vinculado à validação.</param>
+        <summary>Método auxiliar para extrair o nome da propriedade completo.</summary>
+        <returns>O nome da propriedade completo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Útil quando a propriedade validada é aninhada.  O método atravessa o <xref:System.Workflow.ComponentModel.Compiler.PropertyValidationContext> na pilha para construir o nome completo da propriedade.  
+  
+ Por exemplo: o nome My.Actor.Bas é criada usando três <xref:System.Workflow.ComponentModel.Compiler.PropertyValidationContext> itens.  
+  
+ Se a propriedade validada pertence a um objeto que é um item em uma coleção, o método produzirá o nome da coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Validate (System.Workflow.ComponentModel.Compiler.ValidationManager manager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Validate(class System.Workflow.ComponentModel.Compiler.ValidationManager manager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.Validator.Validate(System.Workflow.ComponentModel.Compiler.ValidationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationErrorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Workflow.ComponentModel.Compiler.ValidationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de validação é vinculado à validação.</param>
+        <param name="obj">O <see cref="T:System.Object" /> a ser validado.</param>
+        <summary>Valida o objeto especificado e retorna uma coleção de erros de validação.</summary>
+        <returns>Um <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" /> que contém os erros de validação resultante dessa operação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" />é uma referência nula (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateActivityChange">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Compiler.ValidationError ValidateActivityChange (System.Workflow.ComponentModel.Activity activity, System.Workflow.ComponentModel.ActivityChangeAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Workflow.ComponentModel.Compiler.ValidationError ValidateActivityChange(class System.Workflow.ComponentModel.Activity activity, class System.Workflow.ComponentModel.ActivityChangeAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.Validator.ValidateActivityChange(System.Workflow.ComponentModel.Activity,System.Workflow.ComponentModel.ActivityChangeAction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="action" Type="System.Workflow.ComponentModel.ActivityChangeAction" />
+      </Parameters>
+      <Docs>
+        <param name="activity">O <see cref="T:System.Workflow.ComponentModel.Activity" /> especificado.</param>
+        <param name="action">O <see cref="T:System.Workflow.ComponentModel.ActivityChangeAction" /> especificado.</param>
+        <summary>Quando substituído em uma classe derivada, valida um mudam de acordo com a especificada <see cref="T:System.Workflow.ComponentModel.Activity" /> que está sendo adicionado ou removido. Essa função é chamada durante a aplicação das alterações que são feitas para o fluxo de trabalho durante atualizações dinâmicas.</summary>
+        <returns>O <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationError" /> gerados pela operação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na implementação de base, uma referência nula (Visual Basic `Nothing`) será retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" />é uma referência nula (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateProperties">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Compiler.ValidationErrorCollection ValidateProperties (System.Workflow.ComponentModel.Compiler.ValidationManager manager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Workflow.ComponentModel.Compiler.ValidationErrorCollection ValidateProperties(class System.Workflow.ComponentModel.Compiler.ValidationManager manager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.Validator.ValidateProperties(System.Workflow.ComponentModel.Compiler.ValidationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationErrorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Workflow.ComponentModel.Compiler.ValidationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de validação é vinculado à validação.</param>
+        <param name="obj">O <see cref="T:System.Workflow.ComponentModel.Activity" /> a ser validado.</param>
+        <summary>Método auxiliar para validar automaticamente as propriedades de objetos específicos.</summary>
+        <returns>Um <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" /> que contém os erros de validação resultante dessa operação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" />é uma referência nula (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateProperty">
+      <MemberSignature Language="C#" Value="protected System.Workflow.ComponentModel.Compiler.ValidationErrorCollection ValidateProperty (System.Reflection.PropertyInfo propertyInfo, object propertyOwner, object propertyValue, System.Workflow.ComponentModel.Compiler.ValidationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Workflow.ComponentModel.Compiler.ValidationErrorCollection ValidateProperty(class System.Reflection.PropertyInfo propertyInfo, object propertyOwner, object propertyValue, class System.Workflow.ComponentModel.Compiler.ValidationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.Validator.ValidateProperty(System.Reflection.PropertyInfo,System.Object,System.Object,System.Workflow.ComponentModel.Compiler.ValidationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationErrorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyInfo" Type="System.Reflection.PropertyInfo" />
+        <Parameter Name="propertyOwner" Type="System.Object" />
+        <Parameter Name="propertyValue" Type="System.Object" />
+        <Parameter Name="manager" Type="System.Workflow.ComponentModel.Compiler.ValidationManager" />
+      </Parameters>
+      <Docs>
+        <param name="propertyInfo">O <see cref="T:System.Reflection.PropertyInfo" /> na propriedade de entidade.</param>
+        <param name="propertyOwner">O proprietário da propriedade.</param>
+        <param name="propertyValue">O valor da propriedade.</param>
+        <param name="manager">Um <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationManager" /> para esta operação.</param>
+        <summary>Realiza a validação em uma propriedade e retorna um <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" /> que contém os resultados da validação.</summary>
+        <returns>Um <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" /> que contém os resultados da validação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum erro de resultado de validação, vazio <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection> é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,263 @@
+<Type Name="RenderCapability" FullName="System.Windows.Media.RenderCapability">
+  <TypeSignature Language="C#" Value="public static class RenderCapability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit RenderCapability extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.RenderCapability" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que os aplicativos do WPF consultar o nível atual de renderização para seus respectivos <see cref="T:System.Windows.Threading.Dispatcher" /> objeto e se registrar para notificação de alterações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nível de renderização define um nível de funcionalidade de hardware de gráficos e de desempenho para um dispositivo que executa um aplicativo [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Os recursos do hardware de gráficos que mais afetam os níveis de renderização são os seguintes:  
+  
+-   RAM de vídeo: A quantidade de memória de vídeo no hardware gráfico determina o tamanho e o número de buffers que podem ser usados para compor gráficos.  
+  
+-   Sombreador de pixel: Um sombreador de pixel é uma função que calcula efeitos em uma base por pixel de processamento de gráficos. Dependendo da resolução dos gráficos exibidos, pode haver muitos milhões de pixels que precisam ser processados para cada quadro de vídeo.  
+  
+-   Sombreador de vértice: Um sombreador de vértice é uma função que executa operações matemáticas em dados de vértice do objeto de processamento de gráficos.  
+  
+-   Suporte multitextura: Suporte multitextura refere-se à capacidade de aplicar duas ou mais texturas distintas durante uma operação de mesclagem em um objeto gráfico 3D. O grau de suporte a multitextura é determinado pelo número de unidades de multitextura no hardware gráfico.  
+  
+ O sombreador de pixel, o sombreador de vértices e recursos multitextura são usados para definir níveis específicos de versão [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)], que, por sua vez, são usados para definir as diferentes camadas de renderização em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Para obter uma descrição completa das camadas de renderização, consulte [níveis de renderização gráfica](~/docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsPixelShaderVersionSupported">
+      <MemberSignature Language="C#" Value="public static bool IsPixelShaderVersionSupported (short majorVersionRequested, short minorVersionRequested);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPixelShaderVersionSupported(int16 majorVersionRequested, int16 minorVersionRequested) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderCapability.IsPixelShaderVersionSupported(System.Int16,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="majorVersionRequested" Type="System.Int16" />
+        <Parameter Name="minorVersionRequested" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="majorVersionRequested">A versão principal do sombreador de pixel.</param>
+        <param name="minorVersionRequested">A versão secundária do sombreador de pixel.</param>
+        <summary>Obtém um valor que indica se a versão de sombreador de pixel especificado tem suporte.</summary>
+        <returns>
+          <see langword="true" />Se a versão de sombreador de pixel é suportada pela versão atual do WPF; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.RenderCapability.IsPixelShaderVersionSupported%2A> método `true` se a versão de sombreador de pixel é suportada pela versão atual do WPF e um <xref:System.Windows.Media.Effects.Effect> usando a versão principal/secundária especificada pode executar na GPU.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPixelShaderVersionSupportedInSoftware">
+      <MemberSignature Language="C#" Value="public static bool IsPixelShaderVersionSupportedInSoftware (short majorVersionRequested, short minorVersionRequested);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPixelShaderVersionSupportedInSoftware(int16 majorVersionRequested, int16 minorVersionRequested) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderCapability.IsPixelShaderVersionSupportedInSoftware(System.Int16,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="majorVersionRequested" Type="System.Int16" />
+        <Parameter Name="minorVersionRequested" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="majorVersionRequested">A versão principal do sombreador de pixel.</param>
+        <param name="minorVersionRequested">A versão secundária do sombreador de pixel.</param>
+        <summary>Obtém um valor que indica se a versão de sombreador de pixel especificado pode ser renderizada no software do sistema atual.</summary>
+        <returns>
+          <see langword="true" />Se o sombreador de pixel pode ser renderizado de software no sistema atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Renderização de software somente há suporte para o Pixel Shader 2.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShaderEffectSoftwareRenderingSupported">
+      <MemberSignature Language="C#" Value="public static bool IsShaderEffectSoftwareRenderingSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsShaderEffectSoftwareRenderingSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RenderCapability.IsShaderEffectSoftwareRenderingSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("IsShaderEffectSoftwareRenderingSupported property is deprecated.  Use IsPixelShaderVersionSupportedInSoftware static method instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o sistema pode renderizar efeitos de bitmap no software.</summary>
+        <value>
+          <see langword="true" />Se o sistema pode renderizar efeitos de bitmap no software; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHardwareTextureSize">
+      <MemberSignature Language="C#" Value="public static System.Windows.Size MaxHardwareTextureSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Size MaxHardwareTextureSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RenderCapability.MaxHardwareTextureSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura e largura máxima para a criação de bitmap de dispositivo de hardware subjacente.</summary>
+        <value>Um <see cref="T:System.Windows.Size" /> que representa a largura máxima e a altura para a criação de bitmap do hardware.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver vários dispositivos, <xref:System.Windows.Media.RenderCapability.MaxHardwareTextureSize%2A> retorna o tamanho mínimo entre eles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPixelShaderInstructionSlots">
+      <MemberSignature Language="C#" Value="public static int MaxPixelShaderInstructionSlots (short majorVersionRequested, short minorVersionRequested);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 MaxPixelShaderInstructionSlots(int16 majorVersionRequested, int16 minorVersionRequested) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.RenderCapability.MaxPixelShaderInstructionSlots(System.Int16,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="majorVersionRequested" Type="System.Int16" />
+        <Parameter Name="minorVersionRequested" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="majorVersionRequested">A versão principal do sombreador de pixel.</param>
+        <param name="minorVersionRequested">A versão secundária do sombreador de pixel.</param>
+        <summary>Obtém o número máximo de slots de instrução compatível com a versão de sombreador de pixel especificado.</summary>
+        <returns>96 para Pixel Shader 2.0, 512 ou maior para 3.0 do sombreador de Pixel, ou 0 para qualquer outra versão do sombreador de Pixel.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número de slots de instrução suportados pelo 3.0 do sombreador de Pixel varia, mas é sempre 512 ou maior.  
+  
+ Há suporte para apenas o Pixel Shader 2.0 e 3.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tier">
+      <MemberSignature Language="C#" Value="public static int Tier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 Tier" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.RenderCapability.Tier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a camada de renderização do thread atual.</summary>
+        <value>Um valor <see cref="T:System.Int32" /> cuja palavra de ordem superior corresponde à camada de renderização para o thread atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  A partir do .NET Framework 4, nível 1 de renderização foi redefinido para incluir somente o hardware de gráficos que dá suporte a [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)] 9.0 ou posterior. Hardware de gráficos que dá suporte a [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)] 7 ou 8 agora está definido como nível de renderização 0.  
+  
+ O valor de retorno é um dos três valores possíveis:  
+  
+|Valor retornado|Nível de renderização|Observações|  
+|------------------|--------------------|-----------|  
+|0x00000000|0|Nenhuma aceleração de hardware está disponível para o aplicativo no dispositivo. Todos os recursos gráficos usam a aceleração de software. O nível de versão [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)] é inferior à versão 9.0.|  
+|0x00010000|1|A maioria das características gráficas do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] usará a aceleração de hardware, se os recursos de sistema necessários estão disponíveis e não foram esgotados. Isso corresponde a uma [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)] versão que é maior ou igual a 9.0.|  
+|0x00020000|2|A maioria das características gráficas do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] usará a aceleração de hardware desde que os recursos de sistema necessários não foram esgotados. Isso corresponde a uma [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)] versão que é maior ou igual a 9.0.|  
+  
+ A tabela a seguir mostra as diferenças nos gráficos de requisitos de hardware para o nível de renderização 1 e nível 2 de renderização:  
+  
+|Recurso|Camada 1|Camada 2|  
+|-------------|------------|------------|  
+|Versão do [!INCLUDE[TLA2#tla_dx](~/includes/tla2sharptla-dx-md.md)]|Deve ser maior que ou igual a 9.0.|Deve ser maior que ou igual a 9.0.|  
+|RAM de vídeo|Deve ser maior que ou igual a 60MB.|Deve ser maior que ou igual a 120MB.|  
+|Sombreador de pixel|Nível da versão deve ser maior ou igual a 2.0.|Nível da versão deve ser maior ou igual a 2.0.|  
+|Sombreador de vértice|Nenhum requisito.|Nível da versão deve ser maior ou igual a 2.0.|  
+|Unidades de multitextura|Nenhum requisito.|Número de unidades deve ser maior ou igual a 4.|  
+  
+ Para obter mais informações sobre as definições para os níveis de renderização, consulte [níveis de renderização gráfica](~/docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+  
+ Se o thread atual não tem um tipo de <xref:System.Windows.Threading.Dispatcher> do objeto, um será criado automaticamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como retornar o nível de renderização para o thread atual.  
+  
+ [!code-csharp[RenderOptions#RenderCapability1](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#rendercapability1)]
+ [!code-vb[RenderOptions#RenderCapability1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#rendercapability1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TierChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler TierChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TierChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.RenderCapability.TierChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o nível de renderização foi alterado para o <see cref="T:System.Windows.Threading.Dispatcher" /> objeto do thread atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o thread atual não tem um tipo de <xref:System.Windows.Threading.Dispatcher> do objeto, um será criado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

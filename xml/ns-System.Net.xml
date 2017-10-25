@@ -1,0 +1,8 @@
+<Namespace Name="System.Net">
+  <Docs>
+    <summary>O <see cref="N:System.Net" /> namespace fornece uma interface de programação simple para muitos dos protocolos usados nas redes de hoje. O <see cref="T:System.Net.WebRequest" /> e <see cref="T:System.Net.WebResponse" /> classes formam a base de quais são denominados protocolos conectáveis, uma implementação de serviços de rede que permite que você desenvolva aplicativos que usam recursos de Internet sem se preocupar com detalhes específicos dos protocolos individuais.  
+  
+ Classes de <see cref="N:System.Net" /> namespace pode ser usado para desenvolver aplicativos da Windows Store ou aplicativos de desktop. Quando usado em um aplicativo da Windows Store, classes de <see cref="N:System.Net" /> namespace são afetadas pelo recurso de isolamento de rede, parte do modelo de segurança do aplicativo usado pelo Windows Developer Preview. Os recursos de rede apropriado devem ser habilitados no manifesto do aplicativo para um aplicativo da Windows Store para o sistema permitir o acesso à rede por um aplicativo da Windows Store. Para obter mais informações, consulte o [rede isolamento de aplicativos da Windows Store](~/docs/framework/network-programming/network-isolation-for-windows-store-apps.md).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

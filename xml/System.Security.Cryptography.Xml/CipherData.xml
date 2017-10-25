@@ -1,0 +1,325 @@
+<Type Name="CipherData" FullName="System.Security.Cryptography.Xml.CipherData">
+  <TypeSignature Language="C#" Value="public sealed class CipherData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CipherData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.CipherData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o <see langword="&lt;CipherData&gt;" /> elemento na criptografia de XML. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.CipherData> classe representa o `<CipherData>` elemento na criptografia de XML. É um elemento necessário que fornece os dados criptografados. Ele deve conter os dados criptografados como texto codificado na base64 o `<CipherValue>` elemento, ou forneça uma referência a um local externo que contém os dados criptografados usando o `<CipherReference>` elemento.  
+  
+ Em muitos casos, você não precisa criar diretamente de uma nova instância do <xref:System.Security.Cryptography.Xml.CipherData> classe.  O <xref:System.Security.Cryptography.Xml.SignedXml.EncryptedXml%2A>, <xref:System.Security.Cryptography.Xml.EncryptedData>, e <xref:System.Security.Cryptography.Xml.EncryptedKey> classes criam instâncias para você.  
+  
+> [!NOTE]
+>  Um <xref:System.Security.Cryptography.Xml.CipherData> objeto pode ter um <xref:System.Security.Cryptography.Xml.CipherReference> propriedade ou um <xref:System.Security.Cryptography.Xml.CipherData.CipherValue%2A> propriedade, mas não ambos. Um <xref:System.Security.Cryptography.CryptographicException> é gerada se ambos forem atribuídas a um <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.EncryptedData> classe para criar um <`EncryptedData`> elemento contém um <`CipherData`> elemento e, em seguida, grava o XML para um arquivo XML.  
+  
+ [!code-cpp[cryptgraphy.Xml.EncryptedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/cryptgraphy.Xml.EncryptedData/cpp/encrypteddata.cpp#1)]
+ [!code-csharp[cryptgraphy.Xml.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptgraphy.Xml.EncryptedData/CS/encrypteddata.cs#1)]
+ [!code-vb[cryptgraphy.Xml.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptgraphy.Xml.EncryptedData/VB/encrypteddata.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CipherData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.CipherData" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Security.Cryptography.Xml.CipherData> objeto que representa o `<CipherData>` elemento na criptografia de XML. O `<CipherData>` é um elemento necessário na criptografia de XML.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma nova instância do <xref:System.Security.Cryptography.Xml.CipherData> classe. O exemplo completo pode ser encontrado no <xref:System.Security.Cryptography.Xml.CipherData> tópico sobre a classe.  
+  
+ [!code-cpp[cryptgraphy.Xml.EncryptedData#2](~/samples/snippets/cpp/VS_Snippets_CLR/cryptgraphy.Xml.EncryptedData/cpp/encrypteddata.cpp#2)]
+ [!code-csharp[cryptgraphy.Xml.EncryptedData#2](~/samples/snippets/csharp/VS_Snippets_CLR/cryptgraphy.Xml.EncryptedData/CS/encrypteddata.cs#2)]
+ [!code-vb[cryptgraphy.Xml.EncryptedData#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptgraphy.Xml.EncryptedData/VB/encrypteddata.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CipherData (byte[] cipherValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] cipherValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherData.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cipherValue" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="cipherValue">Os dados criptografados para usar para o <see langword="&lt;CipherValue&gt;" /> elemento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.CipherData" /> classe usando uma matriz de bytes como o <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherValue" /> valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Security.Cryptography.Xml.CipherData> objeto que representa o `<CipherData>` elemento na criptografia de XML. O construtor atribui o `cipherValue` valor para o <xref:System.Security.Cryptography.Xml.CipherData.CipherValue%2A> dados criptografados de propriedade como o valor real.  
+  
+> [!NOTE]
+>  O `<CipherData>` elemento pode ter um <xref:System.Security.Cryptography.Xml.CipherReference> ou um <xref:System.Security.Cryptography.Xml.CipherData.CipherValue%2A> elemento filho, mas não ambos. Um <xref:System.Security.Cryptography.CryptographicException> é gerada se ambos forem atribuídas a um <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma nova instância do <xref:System.Security.Cryptography.Xml.CipherData> classe.  
+  
+ [!code-cpp[cryptography.Xml.EncryptedData2#1](~/samples/snippets/cpp/VS_Snippets_CLR/cryptography.Xml.EncryptedData2/CPP/encrypteddata.cpp#1)]
+ [!code-csharp[cryptography.Xml.EncryptedData2#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.Xml.EncryptedData2/CS/encrypteddata.cs#1)]
+ [!code-vb[cryptography.Xml.EncryptedData2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.Xml.EncryptedData2/VB/encrypteddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="cipherValue" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherValue" /> propriedade já foi definida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CipherData (System.Security.Cryptography.Xml.CipherReference cipherReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Xml.CipherReference cipherReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherData.#ctor(System.Security.Cryptography.Xml.CipherReference)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cipherReference" Type="System.Security.Cryptography.Xml.CipherReference" />
+      </Parameters>
+      <Docs>
+        <param name="cipherReference">O objeto <see cref="T:System.Security.Cryptography.Xml.CipherReference" /> a ser usado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.CipherData" /> classe usando um <see cref="T:System.Security.Cryptography.Xml.CipherReference" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Security.Cryptography.Xml.CipherData> objeto que representa o `<CipherData>` elemento na criptografia de XML e atribui o `cipherReference` o valor para o <xref:System.Security.Cryptography.Xml.CipherReference> propriedade. O <xref:System.Security.Cryptography.Xml.CipherReference> objeto representa o `<CipherReference>` elemento, que fornece o local dos dados criptografados.  
+  
+> [!NOTE]
+>  Um <xref:System.Security.Cryptography.Xml.CipherData> objeto pode ter um <xref:System.Security.Cryptography.Xml.CipherReference> propriedade ou um <xref:System.Security.Cryptography.Xml.CipherData.CipherValue%2A> propriedade, mas não ambos. Um <xref:System.Security.Cryptography.CryptographicException> é gerada se ambos forem atribuídas a um <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma nova instância do <xref:System.Security.Cryptography.Xml.CipherData> classe usando <xref:System.Security.Cryptography.Xml.CipherReference> informações.  
+  
+ [!code-cpp[cryptography.Xml.CipherReference#1](~/samples/snippets/cpp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CPP/example.cpp#1)]
+ [!code-csharp[cryptography.Xml.CipherReference#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CS/example.cs#1)]
+ [!code-vb[cryptography.Xml.CipherReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.Xml.CipherReference/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="cipherValue" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherValue" /> propriedade já foi definida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CipherReference">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.CipherReference CipherReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.CipherReference CipherReference" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.CipherData.CipherReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.CipherReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento <see langword="&lt;CipherReference&gt;" />.</summary>
+        <value>Um objeto <see cref="T:System.Security.Cryptography.Xml.CipherReference" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `<CipherReference>` elemento identifica uma fonte que, quando processado, produz os dados criptografados. Para obter mais informações sobre este elemento, consulte <xref:System.Security.Cryptography.Xml.CipherReference>.  
+  
+> [!NOTE]
+>  Um <xref:System.Security.Cryptography.Xml.CipherData> objeto pode ter um <xref:System.Security.Cryptography.Xml.CipherReference> propriedade ou um <xref:System.Security.Cryptography.Xml.CipherData.CipherValue%2A> propriedade, mas não ambos. Um <xref:System.Security.Cryptography.CryptographicException> é gerada se ambos forem atribuídas a um <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma nova instância do <xref:System.Security.Cryptography.Xml.CipherData> classe usando <xref:System.Security.Cryptography.Xml.CipherReference> informações.  
+  
+ [!code-cpp[cryptography.Xml.CipherReference#1](~/samples/snippets/cpp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CPP/example.cpp#1)]
+ [!code-csharp[cryptography.Xml.CipherReference#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CS/example.cs#1)]
+ [!code-vb[cryptography.Xml.CipherReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.Xml.CipherReference/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A propriedade <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherReference" /> foi definida como <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherReference" /> propriedade foi definida mais de uma vez.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CipherValue">
+      <MemberSignature Language="C#" Value="public byte[] CipherValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] CipherValue" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.CipherData.CipherValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento <see langword="&lt;CipherValue&gt;" />.</summary>
+        <value>Uma matriz de bytes que representa o elemento <see langword="&lt;CipherValue&gt;" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor é dados criptografados.  
+  
+> [!NOTE]
+>  O `<CipherData>` elemento pode ter um <xref:System.Security.Cryptography.Xml.CipherReference> ou um <xref:System.Security.Cryptography.Xml.CipherData.CipherValue%2A> elemento filho, mas não ambos. Um <xref:System.Security.Cryptography.CryptographicException> é gerada se ambos forem atribuídas a um <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma nova instância do <xref:System.Security.Cryptography.Xml.CipherData> classe.  
+  
+ [!code-cpp[cryptography.Xml.EncryptedData2#1](~/samples/snippets/cpp/VS_Snippets_CLR/cryptography.Xml.EncryptedData2/CPP/encrypteddata.cpp#1)]
+ [!code-csharp[cryptography.Xml.EncryptedData2#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.Xml.EncryptedData2/CS/encrypteddata.cs#1)]
+ [!code-vb[cryptography.Xml.EncryptedData2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.Xml.EncryptedData2/VB/encrypteddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A propriedade <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherValue" /> foi definida como <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherValue" /> propriedade foi definida mais de uma vez.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherData.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os valores XML para o <see cref="T:System.Security.Cryptography.Xml.CipherData" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlElement" /> objeto que representa as informações de XML para o <see cref="T:System.Security.Cryptography.Xml.CipherData" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para a saída XML para um <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma nova instância do <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+ [!code-cpp[cryptgraphy.Xml.EncryptedData#2](~/samples/snippets/cpp/VS_Snippets_CLR/cryptgraphy.Xml.EncryptedData/cpp/encrypteddata.cpp#2)]
+ [!code-csharp[cryptgraphy.Xml.EncryptedData#2](~/samples/snippets/csharp/VS_Snippets_CLR/cryptgraphy.Xml.EncryptedData/CS/encrypteddata.cs#2)]
+ [!code-vb[cryptgraphy.Xml.EncryptedData#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptgraphy.Xml.EncryptedData/VB/encrypteddata.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherValue" /> propriedade e o <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherReference" /> são de propriedade <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherData.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Xml.XmlElement" /> que representa os dados XML para carregar.</param>
+        <summary>Carrega dados XML de um <see cref="T:System.Xml.XmlElement" /> em uma <see cref="T:System.Security.Cryptography.Xml.CipherData" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.CipherData.LoadXml%2A> método substitui os elementos XML existentes com o `value` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherValue" /> propriedade e o <see cref="P:System.Security.Cryptography.Xml.CipherData.CipherReference" /> são de propriedade <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

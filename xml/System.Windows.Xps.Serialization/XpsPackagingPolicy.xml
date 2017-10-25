@@ -1,0 +1,568 @@
+<Type Name="XpsPackagingPolicy" FullName="System.Windows.Xps.Serialization.XpsPackagingPolicy">
+  <TypeSignature Language="C#" Value="public class XpsPackagingPolicy : System.Windows.Xps.Serialization.BasePackagingPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsPackagingPolicy extends System.Windows.Xps.Serialization.BasePackagingPolicy" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Serialization.XpsPackagingPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Xps.Serialization.BasePackagingPolicy</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define o gravador, recursos, tíquete de impressão e as configurações de relacionamento de pacote que estão associadas com um especificado <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XpsPackagingPolicy (System.Windows.Xps.Packaging.XpsDocument xpsPackage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Xps.Packaging.XpsDocument xpsPackage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.#ctor(System.Windows.Xps.Packaging.XpsDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xpsPackage" Type="System.Windows.Xps.Packaging.XpsDocument" />
+      </Parameters>
+      <Docs>
+        <param name="xpsPackage">O <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> que é associada a essa <see cref="T:System.Windows.Xps.Serialization.XpsPackagingPolicy" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Xps.Serialization.XpsPackagingPolicy" /> classe para um <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XpsPackagingPolicy (System.Windows.Xps.Packaging.XpsDocument xpsPackage, System.Windows.Xps.Packaging.PackageInterleavingOrder interleavingType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Xps.Packaging.XpsDocument xpsPackage, valuetype System.Windows.Xps.Packaging.PackageInterleavingOrder interleavingType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.#ctor(System.Windows.Xps.Packaging.XpsDocument,System.Windows.Xps.Packaging.PackageInterleavingOrder)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xpsPackage" Type="System.Windows.Xps.Packaging.XpsDocument" />
+        <Parameter Name="interleavingType" Type="System.Windows.Xps.Packaging.PackageInterleavingOrder" />
+      </Parameters>
+      <Docs>
+        <param name="xpsPackage">O [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] que a política se aplica ao documento.</param>
+        <param name="interleavingType">A ordem na qual a intercalação de elementos de documento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Xps.Serialization.XpsPackagingPolicy" /> classe com um especificado <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> especificados e ordem de intercalação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireResourceStreamForXpsColorContext">
+      <MemberSignature Language="C#" Value="public override System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsColorContext (string resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsColorContext(string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireResourceStreamForXpsColorContext(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsResourceStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceId">O identificador de recurso do contexto de cor.</param>
+        <summary>Adquire o fluxo de recurso para um <see cref="T:System.Windows.Xps.Packaging.XpsColorContext" />.</summary>
+        <returns>O fluxo de recurso para o <see cref="T:System.Windows.Xps.Packaging.XpsColorContext" /> que foi especificado <paramref name="resourceId" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireResourceStreamForXpsFont">
+      <MemberSignature Language="C#" Value="public override System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsFont ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsFont() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireResourceStreamForXpsFont" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsResourceStream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adquire o <see cref="T:System.Windows.Xps.Serialization.XpsResourceStream" /> atual <see cref="T:System.Windows.Xps.Packaging.XpsFont" />.</summary>
+        <returns>O fluxo de recurso atual <see cref="T:System.Windows.Xps.Packaging.XpsFont" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireResourceStreamForXpsFont">
+      <MemberSignature Language="C#" Value="public override System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsFont (string resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsFont(string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireResourceStreamForXpsFont(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsResourceStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceId">O identificador do [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] fonte.</param>
+        <summary>Adquire o <see cref="T:System.Windows.Xps.Serialization.XpsResourceStream" /> para um <see cref="T:System.Windows.Xps.Packaging.XpsFont" />.</summary>
+        <returns>O fluxo de recurso para o [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] fonte que foi especificado <paramref name="resourceId" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireResourceStreamForXpsImage">
+      <MemberSignature Language="C#" Value="public override System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsImage (string resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsImage(string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireResourceStreamForXpsImage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsResourceStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceId">O identificador de recurso do [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] imagem.</param>
+        <summary>Adquire o fluxo de recurso para um <see cref="T:System.Windows.Xps.Packaging.XpsImage" />.</summary>
+        <returns>O fluxo de recurso para o <see cref="T:System.Windows.Xps.Packaging.XpsImage" /> que foi especificado <paramref name="resourceId" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireResourceStreamForXpsResourceDictionary">
+      <MemberSignature Language="C#" Value="public override System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsResourceDictionary (string resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Xps.Serialization.XpsResourceStream AcquireResourceStreamForXpsResourceDictionary(string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireResourceStreamForXpsResourceDictionary(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsResourceStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceId">O identificador do dicionário de recursos.</param>
+        <summary>Adquire o fluxo de recurso para um <see cref="T:System.Windows.Xps.Packaging.XpsResourceDictionary" />.</summary>
+        <returns>O [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] fluxo de recursos para o <see cref="T:System.Windows.Xps.Packaging.XpsResourceDictionary" /> que foi especificado <paramref name="resourceId" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireStreamForLinkTargets">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;string&gt; AcquireStreamForLinkTargets ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;string&gt; AcquireStreamForLinkTargets() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireStreamForLinkTargets" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista de <see cref="P:System.Windows.Documents.PageContent.LinkTargets" /> para o conteúdo da página atual.</summary>
+        <returns>A lista de <see cref="P:System.Windows.Documents.PageContent.LinkTargets" /> para o conteúdo da página atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireXmlWriterForFixedDocument">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlWriter AcquireXmlWriterForFixedDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlWriter AcquireXmlWriterForFixedDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireXmlWriterForFixedDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adquire o <see cref="T:System.Xml.XmlWriter" /> atual <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+        <returns>O [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] gravador atual <see cref="T:System.Windows.Documents.FixedDocument" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireXmlWriterForFixedDocumentSequence">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlWriter AcquireXmlWriterForFixedDocumentSequence ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlWriter AcquireXmlWriterForFixedDocumentSequence() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireXmlWriterForFixedDocumentSequence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adquire o <see cref="T:System.Xml.XmlWriter" /> atual <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</summary>
+        <returns>O [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] gravador atual <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireXmlWriterForFixedPage">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlWriter AcquireXmlWriterForFixedPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlWriter AcquireXmlWriterForFixedPage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireXmlWriterForFixedPage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adquire o <see cref="T:System.Xml.XmlWriter" /> atual <see cref="T:System.Windows.Documents.FixedPage" />.</summary>
+        <returns>O [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] gravador atual <see cref="T:System.Windows.Documents.FixedPage" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireXmlWriterForPage">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlWriter AcquireXmlWriterForPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlWriter AcquireXmlWriterForPage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireXmlWriterForPage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adquire o <see cref="T:System.Xml.XmlWriter" /> para a página atual.</summary>
+        <returns>O [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] gravador atual <see cref="T:System.Windows.Documents.FixedPage" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireXmlWriterForResourceDictionary">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlWriter AcquireXmlWriterForResourceDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlWriter AcquireXmlWriterForResourceDictionary() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.AcquireXmlWriterForResourceDictionary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adquire o <see cref="T:System.Xml.XmlWriter" /> atual <see cref="T:System.Windows.Xps.Packaging.XpsResourceDictionary" />.</summary>
+        <returns>O [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] gravador atual <see cref="T:System.Windows.Xps.Packaging.XpsResourceDictionary" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentFixedDocumentUri">
+      <MemberSignature Language="C#" Value="public override Uri CurrentFixedDocumentUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri CurrentFixedDocumentUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsPackagingPolicy.CurrentFixedDocumentUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] do documento atual fixado.</summary>
+        <value>O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do documento atual fixado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentFixedPageUri">
+      <MemberSignature Language="C#" Value="public override Uri CurrentFixedPageUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri CurrentFixedPageUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsPackagingPolicy.CurrentFixedPageUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] da página fixa atual.</summary>
+        <value>O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da página fixa atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PackagingProgressEvent">
+      <MemberSignature Language="C#" Value="public event System.Windows.Xps.Packaging.PackagingProgressEventHandler PackagingProgressEvent;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Xps.Packaging.PackagingProgressEventHandler PackagingProgressEvent" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Xps.Serialization.XpsPackagingPolicy.PackagingProgressEvent" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingProgressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Documents.FixedPage" />, <see cref="T:System.Windows.Documents.FixedDocument" />, ou <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> é adicionada para o <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistPrintTicket">
+      <MemberSignature Language="C#" Value="public override void PersistPrintTicket (System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PersistPrintTicket(class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.PersistPrintTicket(System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="printTicket">O tíquete de impressão para armazenar como parte do [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] documento.</param>
+        <summary>Armazena um especificado <see cref="T:System.Printing.PrintTicket" /> como parte do <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreCommitCurrentPage">
+      <MemberSignature Language="C#" Value="public override void PreCommitCurrentPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PreCommitCurrentPage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.PreCommitCurrentPage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Se prepara para confirmar a página atual para o repositório de saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelateResourceToCurrentPage">
+      <MemberSignature Language="C#" Value="public override void RelateResourceToCurrentPage (Uri targetUri, string relationshipName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RelateResourceToCurrentPage(class System.Uri targetUri, string relationshipName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.RelateResourceToCurrentPage(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetUri" Type="System.Uri" />
+        <Parameter Name="relationshipName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetUri">O [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] do recurso para associar com a página atual.</param>
+        <param name="relationshipName">O nome de identificação do <see cref="T:System.IO.Packaging.PackageRelationship" /> que associa a página atual com o recurso especificado.</param>
+        <summary>Adiciona um <see cref="T:System.IO.Packaging.PackageRelationship" /> com um nome especificado que associa um recurso especificado com a página atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelateRestrictedFontToCurrentDocument">
+      <MemberSignature Language="C#" Value="public override void RelateRestrictedFontToCurrentDocument (Uri targetUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RelateRestrictedFontToCurrentDocument(class System.Uri targetUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.RelateRestrictedFontToCurrentDocument(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="targetUri">O [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] da fonte restrito para associar o documento atual.</param>
+        <summary>Adiciona um <see cref="T:System.IO.Packaging.PackageRelationship" /> que associa um restricted font com o documento atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseResourceStreamForXpsColorContext">
+      <MemberSignature Language="C#" Value="public override void ReleaseResourceStreamForXpsColorContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReleaseResourceStreamForXpsColorContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.ReleaseResourceStreamForXpsColorContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versões de <see cref="T:System.Windows.Xps.Serialization.XpsResourceStream" /> atual <see cref="T:System.Windows.Xps.Packaging.XpsColorContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseResourceStreamForXpsFont">
+      <MemberSignature Language="C#" Value="public override void ReleaseResourceStreamForXpsFont ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReleaseResourceStreamForXpsFont() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.ReleaseResourceStreamForXpsFont" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versões de <see cref="T:System.Windows.Xps.Serialization.XpsResourceStream" /> atual <see cref="T:System.Windows.Xps.Packaging.XpsFont" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseResourceStreamForXpsFont">
+      <MemberSignature Language="C#" Value="public override void ReleaseResourceStreamForXpsFont (string resourceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReleaseResourceStreamForXpsFont(string resourceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.ReleaseResourceStreamForXpsFont(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceId">O identificador do [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] fonte que você deseja liberar.</param>
+        <summary>Versões de <see cref="T:System.Windows.Xps.Serialization.XpsResourceStream" /> para um <see cref="T:System.Windows.Xps.Packaging.XpsFont" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseResourceStreamForXpsImage">
+      <MemberSignature Language="C#" Value="public override void ReleaseResourceStreamForXpsImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReleaseResourceStreamForXpsImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.ReleaseResourceStreamForXpsImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versões de <see cref="T:System.Windows.Xps.Serialization.XpsResourceStream" /> atual <see cref="T:System.Windows.Xps.Packaging.XpsImage" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseResourceStreamForXpsResourceDictionary">
+      <MemberSignature Language="C#" Value="public override void ReleaseResourceStreamForXpsResourceDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReleaseResourceStreamForXpsResourceDictionary() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.ReleaseResourceStreamForXpsResourceDictionary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versões de <see cref="T:System.Windows.Xps.Serialization.XpsResourceStream" /> atual <see cref="T:System.Windows.Xps.Packaging.XpsResourceDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseXmlWriterForFixedDocument">
+      <MemberSignature Language="C#" Value="public override void ReleaseXmlWriterForFixedDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReleaseXmlWriterForFixedDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.ReleaseXmlWriterForFixedDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versões de <see cref="T:System.Xml.XmlWriter" /> atual <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseXmlWriterForFixedDocumentSequence">
+      <MemberSignature Language="C#" Value="public override void ReleaseXmlWriterForFixedDocumentSequence ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReleaseXmlWriterForFixedDocumentSequence() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.ReleaseXmlWriterForFixedDocumentSequence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versões de <see cref="T:System.Xml.XmlWriter" /> atual <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseXmlWriterForFixedPage">
+      <MemberSignature Language="C#" Value="public override void ReleaseXmlWriterForFixedPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReleaseXmlWriterForFixedPage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsPackagingPolicy.ReleaseXmlWriterForFixedPage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Versões de <see cref="T:System.Xml.XmlWriter" /> atual <see cref="T:System.Windows.Documents.FixedPage" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

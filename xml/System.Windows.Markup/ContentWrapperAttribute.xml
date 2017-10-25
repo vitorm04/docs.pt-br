@@ -1,0 +1,134 @@
+<Type Name="ContentWrapperAttribute" FullName="System.Windows.Markup.ContentWrapperAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ContentWrapperAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContentWrapperAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.ContentWrapperAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica um ou mais tipos no tipo de coleção associada que será usado para encapsular conteúdo externo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conteúdo externo se refere a casos em que as restrições do sistema de tipo no tipo da propriedade de conteúdo não capturar todos os casos possíveis de conteúdo que seria compatíveis com o uso do XAML para o tipo de propriedade. Por exemplo, o XAML suporte para conteúdo de um tipo específico pode oferecer suporte a cadeias de caracteres em uma genérica fortemente tipada <xref:System.Collections.ObjectModel.Collection%601>.  
+  
+ <xref:System.Windows.Documents.InlineCollection>é um exemplo de um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] classe que tem o <xref:System.Windows.Markup.ContentWrapperAttribute> atributo aplicado. Nesse caso, há duas classes de wrapper atribuído separado.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existia no assembly específicos de WPF WindowsBase. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.ContentWrapperAttribute> está no assembly System. XAML. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentWrapperAttribute (Type contentWrapper);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type contentWrapper) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ContentWrapperAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentWrapper" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contentWrapper">O <see cref="T:System.Type" /> que é declarado como um wrapper de conteúdo para o tipo de coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.ContentWrapperAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentWrapper">
+      <MemberSignature Language="C#" Value="public Type ContentWrapper { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContentWrapper" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ContentWrapperAttribute.ContentWrapper" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo que é declarado como um wrapper de conteúdo para o tipo de coleção associado a este atributo.</summary>
+        <value>O tipo que é declarado como um wrapper de conteúdo para o tipo de coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ContentWrapperAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Windows.Markup.ContentWrapperAttribute" /> para comparar.</param>
+        <summary>Determina se o especificado <see cref="T:System.Windows.Markup.ContentWrapperAttribute" /> equivale isso <see cref="T:System.Windows.Markup.ContentWrapperAttribute" /> comparando o <see cref="P:System.Windows.Markup.ContentWrapperAttribute.ContentWrapper" /> propriedades.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Markup.ContentWrapperAttribute.ContentWrapper" /> propriedades forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ContentWrapperAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para essa instância.</summary>
+        <returns>Um código de hash de número inteiro</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ContentWrapperAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo para este atributo.</summary>
+        <value>Um identificador exclusivo para o atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

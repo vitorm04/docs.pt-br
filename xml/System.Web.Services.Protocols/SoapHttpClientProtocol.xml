@@ -1,0 +1,457 @@
+<Type Name="SoapHttpClientProtocol" FullName="System.Web.Services.Protocols.SoapHttpClientProtocol">
+  <TypeSignature Language="C#" Value="public class SoapHttpClientProtocol : System.Web.Services.Protocols.HttpWebClientProtocol" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapHttpClientProtocol extends System.Web.Services.Protocols.HttpWebClientProtocol" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapHttpClientProtocol" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.HttpWebClientProtocol</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o cliente da classe do qual os proxies são derivados ao usar o SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você estiver criando um cliente de serviço da Web em XML, em seguida, uma classe proxy que deriva indiretamente ou diretamente de <xref:System.Web.Services.Protocols.WebClientProtocol> devem ser criados para o serviço Web XML. Quando o cliente do serviço Web XML chama usando SOAP, a classe de proxy deve derivar de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, que é derivado de <xref:System.Web.Services.Protocols.HttpWebClientProtocol>. <xref:System.Web.Services.Protocols.HttpWebClientProtocol>, por sua vez, deriva de <xref:System.Web.Services.Protocols.WebClientProtocol>.  
+  
+ Para se comunicar com um serviço Web XML, crie uma classe de proxy que deriva indiretamente ou diretamente de <xref:System.Web.Services.Protocols.WebClientProtocol> para o serviço Web XML que você deseja chamar. Em vez de criar a classe proxy manualmente, use a ferramenta Web Services Description Language (Wsdl.exe) para criar uma classe de proxy para a descrição do serviço de um determinado do XML Web Services. Quando uma classe proxy gerada para o protocolo SOAP, chamadas síncronas para métodos de serviço da Web em XML são feitas por meio de <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.Invoke%2A> método, enquanto chamadas assíncronas são feitas usando o <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.BeginInvoke%2A> método e o <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol.EndInvoke%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é uma classe de proxy gerada pelo Wsdl.exe para o `Math` XML Web Services. A classe de proxy deriva <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, que é derivado de abstrata <xref:System.Web.Services.Protocols.WebClientProtocol> classe.  
+  
+ [!code-cpp[Classic SoapHttpClientProtocol Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHttpClientProtocol Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHttpClientProtocol Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHttpClientProtocol Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHttpClientProtocol Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHttpClientProtocol Example/VB/source.vb#1)]  
+  
+ O exemplo de código a seguir é o `Math` XML Web Services, do qual a classe de proxy anterior foi gerada.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Quando você substituir essa classe, você pode introduzir métodos na classe derivada, que são específicos para um determinado tipo de serviço Web XML. Os métodos de capturar os parâmetros e chame a classe base para fazer o trabalho de se comunicar com o serviço Web XML. Se os métodos introduzidos são assíncronos, chame o <see cref="M:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke(System.String,System.Object[],System.AsyncCallback,System.Object)" /> método e o <see cref="M:System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke(System.IAsyncResult)" /> método. Se os métodos introduzidos são síncronos, chame o <see cref="M:System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(System.String,System.Object[])" /> método. O construtor substituído normalmente define o <see cref="P:System.Web.Services.Protocols.WebClientProtocol.Url" /> propriedade para a URL do método de serviço da Web em XML.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHttpClientProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.SoapHttpClientProtocol" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="protected IAsyncResult BeginInvoke (string methodName, object[] parameters, AsyncCallback callback, object asyncState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginInvoke(string methodName, object[] parameters, class System.AsyncCallback callback, object asyncState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke(System.String,System.Object[],System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome do método de serviço Web XML na classe derivada que está invocando o método <see cref="M:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke(System.String,System.Object[],System.AsyncCallback,System.Object)" />.</param>
+        <param name="parameters">Uma matriz de objetos que contém os parâmetros para passar para o serviço Web XML. A ordem dos valores na matriz corresponde à ordem de parâmetros no método de chamada da classe derivada.</param>
+        <param name="callback">O delegado a ser chamado quando a invocação assíncrona for concluída. Se <c>retorno de chamada</c> é <see langword="null" />, o delegado não é chamado.</param>
+        <param name="asyncState">Informações adicionais fornecidas pelo chamador.</param>
+        <summary>Inicia uma invocação assíncrona de um método de serviço Web XML usando SOAP.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que é passado para o <see cref="M:System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke(System.IAsyncResult)" /> método para obter os valores de retorno de chamada de método remoto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não poderia chamar o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke%2A> método diretamente, a menos que você estivesse criando sua própria classe de proxy para um serviço Web XML.  
+  
+ Uma classe proxy gerada pela ferramenta Web Services Description Language (Wsdl.exe) de uma descrição de serviço expõe os métodos do serviço Web XML como nomes derivados da classe proxy para chamar os métodos do serviço Web XML sincronicamente. Para chamar os métodos do serviço da Web em XML de forma assíncrona, os dois métodos adicionais são adicionados para a classe de proxy para cada método de serviço da Web em XML, uma com o `Begin` prefixo adicionado ao nome do método de serviço Web XML e outra com o `End` prefixo adicionado.  
+  
+ As chamadas de classe de proxy de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke%2A> método para iniciar uma chamada de invocação assíncrona para o método de serviço da Web em XML. Por exemplo, se um serviço Web XML expõe um método de serviço Web XML chamado `Add`, a classe de proxy contém um método chamado `BeginAdd`, método de serviço para iniciar uma chamada para o XML da Web. Dentro do código para o `BeginAdd`, é feita uma chamada para o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke%2A> método e os resultados são colocados no tipo de retorno esperado para `Add`.  
+  
+ O `methodName` é usado para localizar os atributos personalizados que podem ter sido adicionados para o método, como <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>. <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>Fornece informações adicionais sobre o método derivado é necessária para o protocolo SOAP.  
+  
+ `asyncState`é passado para `callback` e está incluído no <xref:System.IAsyncResult> que é retornado o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke%2A> método. O `asyncState` parâmetro pode ser usado para passar informações sobre o contexto da chamada assíncrona, especificada no `callback` parâmetro ao representante que manipula o resultado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é uma classe de proxy gerada pela ferramenta Web Services Description Language (Wsdl.exe) para o `Math` XML Web Services. Dentro de `BeginAdd` método da classe proxy, o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke%2A> método está iniciando uma chamada assíncrona para o `Add` método de serviço Web XML.  
+  
+ [!code-cpp[Classic SoapHttpClientProtocol.BeginInvoke Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHttpClientProtocol.BeginInvoke Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHttpClientProtocol.BeginInvoke Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHttpClientProtocol.BeginInvoke Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHttpClientProtocol.BeginInvoke Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHttpClientProtocol.BeginInvoke Example/VB/source.vb#1)]  
+  
+ O exemplo de código a seguir é o `Math` XML Web Services, da qual a classe de proxy anterior foi criada.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.Services.Protocols.SoapException">A solicitação atingiu o computador do servidor, mas não foi processada com êxito.</exception>
+        <exception cref="T:System.InvalidOperationException">A solicitação não era válida para o estado do objeto atual.</exception>
+        <exception cref="T:System.Net.WebException">Ocorreu um erro ao acessar a rede.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Discover">
+      <MemberSignature Language="C#" Value="public void Discover ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Discover() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.Discover" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Associa dinamicamente a um serviço Web XML descrito no documento de descoberta em <see cref="P:System.Web.Services.Protocols.WebClientProtocol.Url" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um cliente de serviço Web XML pode vincular dinamicamente a um serviço Web XML diferente daquele referenciado na classe proxy usando o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.Discover%2A> método. Normalmente, o <xref:System.Web.Services.Protocols.WebClientProtocol.Url%2A> propriedade refere-se para o endereço base do serviço da Web em XML. No entanto, antes de chamar o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.Discover%2A> método, defina o <xref:System.Web.Services.Protocols.WebClientProtocol.Url%2A> propriedade para uma URL de um documento de descoberta. O <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.Discover%2A> método tenta encontrar uma correspondência no documento de descoberta para a associação definido na classe proxy e, em seguida, vincular dinamicamente a ele. Se for bem-sucedido, chamadas de método subsequentes são direcionadas para o serviço Web XML descrito no documento discovery.  
+  
+ Se a classe de proxy é criada usando a ferramenta Web Services Description Language (Wsdl.exe), a classe proxy define a associação implementada pelos métodos de serviço da Web em XML, ele chama usando o <xref:System.Web.Services.WebServiceBindingAttribute>. Quando um serviço Web XML implementa várias associações, Wsdl.exe cria uma classe de proxy para cada associação. Aplicado para cada classe de proxy é um <xref:System.Web.Services.WebServiceBindingAttribute> que define o nome da associação e seu namespace. O documento de descoberta que você definir o <xref:System.Web.Services.Protocols.WebClientProtocol.Url%2A> propriedade deve conter uma referência a um serviço Web XML que implementa o mesmo nome de associação e o namespace ou uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é uma classe de proxy gerada usando o utilitário Wsdl.exe para o `Math` XML Web Services. Um <xref:System.Web.Services.WebServiceBindingAttribute> é aplicada para o `Math` classe proxy definindo o nome da associação `MathSoap` e seu namespace para `http://tempuri.org/`.  
+  
+ [!code-cpp[SoapHttpClientProtocol.Discover Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapHttpClientProtocol.Discover Example/CPP/source.cpp#1)]
+ [!code-csharp[SoapHttpClientProtocol.Discover Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHttpClientProtocol.Discover Example/CS/source.cs#1)]
+ [!code-vb[SoapHttpClientProtocol.Discover Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHttpClientProtocol.Discover Example/VB/source.vb#1)]  
+  
+ O exemplo de código a seguir é um cliente de serviço Web usando a classe proxy anterior. Dentro de `EnterBtn_Click` eventos do formulário da Web, as chamadas de cliente de serviço Web XML o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.Discover%2A> método tentar vincular dinamicamente para a URL fornecida pelo usuário.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[SoapHttpClientProtocol.Discover Example#2](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHttpClientProtocol.Discover Example/CS/sourcecs.aspx#2)]
+ [!code-vb[SoapHttpClientProtocol.Discover Example#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHttpClientProtocol.Discover Example/VB/sourcevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">A classe de proxy não tem uma associação definida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInvoke">
+      <MemberSignature Language="C#" Value="protected object[] EndInvoke (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object[] EndInvoke(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">O <see cref="T:System.IAsyncResult" /> retornado do método <see cref="M:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke(System.String,System.Object[],System.AsyncCallback,System.Object)" />.</param>
+        <summary>Encerra uma invocação assíncrona de um método de serviço Web XML usando SOAP.</summary>
+        <returns>Uma matriz de objetos que contém o valor de retorno e qualquer por referência ou <see langword="out" /> parâmetros do método da classe derivada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não poderia chamar o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke%2A> método diretamente, a menos que você estivesse criando sua própria classe de proxy para um serviço Web XML.  
+  
+ Uma classe proxy gerada pela ferramenta Web Services Description Language (Wsdl.exe) para um serviço Web XML expõe os métodos do serviço Web XML como nomes de classe de proxy para chamar os métodos do serviço da Web em XML de forma síncrona. Chamando métodos de serviço da Web em XML de forma assíncrona, dois métodos adicionais são adicionados à classe de proxy para cada método de serviço da Web em XML, uma com o `Begin` prefixo adicionado ao nome do método de serviço Web XML e outra com o `End` prefixo adicionado.  
+  
+ As chamadas de classe de proxy de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke%2A> método para concluir uma chamada de invocação assíncrona para o método de serviço da Web em XML. Por exemplo, se um serviço Web XML expõe um método de serviço Web XML chamado `Add`, a classe de proxy contém um método chamado `EndAdd`, método de serviço para a conclusão de uma chamada assíncrona de um Web XML. Dentro do código para o `EndAdd` é feita uma chamada para o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke%2A> método e, em seguida, os resultados são colocados no tipo de retorno esperado para `Add`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é uma classe de proxy gerada pelo Wsdl.exe para o `Math` XML Web Services. Dentro de `EndAdd` método da classe proxy, o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke%2A> método completa a chamada assíncrona para o `Add` método de serviço Web XML.  
+  
+ [!code-cpp[Classic SoapHttpClientProtocol.EndInvoke Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHttpClientProtocol.EndInvoke Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHttpClientProtocol.EndInvoke Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHttpClientProtocol.EndInvoke Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHttpClientProtocol.EndInvoke Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHttpClientProtocol.EndInvoke Example/VB/source.vb#1)]  
+  
+ O exemplo de código a seguir é o `Math` XML Web Services, da qual a classe de proxy anterior foi criada.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="asyncResult" /> não é o valor retornado do método <see cref="M:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke(System.String,System.Object[],System.AsyncCallback,System.Object)" />.</exception>
+        <exception cref="T:System.Web.Services.Protocols.SoapException">A solicitação atingiu o computador do servidor, mas não foi processada com êxito.</exception>
+        <exception cref="T:System.InvalidOperationException">A solicitação não era válida para o estado do objeto atual.</exception>
+        <exception cref="T:System.Net.WebException">Ocorreu um erro ao acessar a rede.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReaderForMessage">
+      <MemberSignature Language="C#" Value="protected virtual System.Xml.XmlReader GetReaderForMessage (System.Web.Services.Protocols.SoapClientMessage message, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xml.XmlReader GetReaderForMessage(class System.Web.Services.Protocols.SoapClientMessage message, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.GetReaderForMessage(System.Web.Services.Protocols.SoapClientMessage,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Web.Services.Protocols.SoapClientMessage" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see cref="T:System.Web.Services.Protocols.SoapClientMessage" /> que fornece o <see cref="P:System.Web.Services.Protocols.SoapMessage.Stream" /> para inicializar o <see cref="T:System.Xml.XmlReader" />.</param>
+        <param name="bufferSize">O tamanho do buffer inicial do <see cref="T:System.IO.StreamReader" /> usado pelo <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Retorna um <see cref="T:System.Xml.XmlReader" /> inicializado com a propriedade <see cref="P:System.Web.Services.Protocols.SoapMessage.Stream" /> do parâmetro <see cref="T:System.Web.Services.Protocols.SoapClientMessage" />.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlReader" /> inicializado com a propriedade <see cref="P:System.Web.Services.Protocols.SoapMessage.Stream" /> do parâmetro <paramref name="message" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebRequest">
+      <MemberSignature Language="C#" Value="protected override System.Net.WebRequest GetWebRequest (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Net.WebRequest GetWebRequest(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.GetWebRequest(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O <see cref="T:System.Uri" /> a ser usado durante a criação do <see cref="T:System.Net.WebRequest" />.</param>
+        <summary>Cria um <see cref="T:System.Net.WebRequest" /> para o <paramref name="uri" /> especificado.</summary>
+        <returns>O <see cref="T:System.Net.WebRequest" /> para o URI especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método pode ser substituído para personalizar o <xref:System.Net.WebRequest> antes do XML da Web é feita a solicitação de serviço. Por exemplo, você pode adicionar um cabeçalho personalizado para a solicitação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O parâmetro <paramref name="uri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWriterForMessage">
+      <MemberSignature Language="C#" Value="protected virtual System.Xml.XmlWriter GetWriterForMessage (System.Web.Services.Protocols.SoapClientMessage message, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xml.XmlWriter GetWriterForMessage(class System.Web.Services.Protocols.SoapClientMessage message, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.GetWriterForMessage(System.Web.Services.Protocols.SoapClientMessage,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Web.Services.Protocols.SoapClientMessage" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see cref="T:System.Web.Services.Protocols.SoapClientMessage" /> que fornece o <see cref="P:System.Web.Services.Protocols.SoapMessage.Stream" /> para inicializar o <see cref="T:System.Xml.XmlWriter" />.</param>
+        <param name="bufferSize">O tamanho do buffer inicial do <see cref="T:System.IO.StreamWriter" /> usado pelo <see cref="T:System.Xml.XmlWriter" />.</param>
+        <summary>Retorna um <see cref="T:System.Xml.XmlWriter" /> inicializado com a propriedade <see cref="P:System.Web.Services.Protocols.SoapMessage.Stream" /> do parâmetro <see cref="T:System.Web.Services.Protocols.SoapClientMessage" />.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlWriter" /> inicializado com a propriedade <see cref="P:System.Web.Services.Protocols.SoapMessage.Stream" /> do parâmetro <paramref name="message" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="protected object[] Invoke (string method_name, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object[] Invoke(string method_name, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="method_name">To be added.</param>
+        <param name="parameters">Uma matriz de objetos que contém os parâmetros a serem passados para o serviço Web XML. A ordem dos valores na matriz corresponde à ordem dos parâmetros no método de chamada da classe derivada.</param>
+        <summary>Invoca um método de serviço Web XML usando de forma síncrona usando SOAP.</summary>
+        <returns>Uma matriz de objetos que contém o valor de retorno e qualquer <see langword="reference" /> ou <see langword="out" /> parâmetros do método da classe derivada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não chama o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke%2A> método diretamente, a menos que você está criando sua própria classe de proxy para um serviço Web XML.  
+  
+ Uma classe proxy gerada pela ferramenta Web Services Description Language (Wsdl.exe) para um serviço Web XML expõe os métodos do serviço Web XML como nomes de classe de proxy. As chamadas de classe de proxy de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke%2A> método para invocar uma chamada de método de serviço da Web em XML. Por exemplo, se um serviço Web XML expõe um método de serviço Web XML chamado `Add`, a classe de proxy também contém um método chamado `Add`. Dentro do código para o `Add` método na classe proxy, é feita uma chamada síncrona para o método de serviço Web XML por meio de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke%2A> método e, em seguida, os resultados são colocados no tipo de retorno esperado para `Add`.  
+  
+ O `methodName` parâmetro é usado para localizar os atributos personalizados que podem ter sido adicionados para o método, como <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>. <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>Fornece informações adicionais sobre o método derivado que é necessário para o protocolo SOAP.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é uma classe de proxy gerada pelo Wsdl.exe para o `Math` XML Web Services. Dentro de `Add` método da classe proxy, o <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke%2A> está chamando o método o `Add` método de serviço Web XML.  
+  
+ [!code-cpp[Classic SoapHttpClientProtocol.Invoke Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHttpClientProtocol.Invoke Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHttpClientProtocol.Invoke Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHttpClientProtocol.Invoke Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHttpClientProtocol.Invoke Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHttpClientProtocol.Invoke Example/VB/source.vb#1)]  
+  
+ O exemplo de código a seguir é o `Math` XML Web Services, da qual a classe de proxy anterior foi criada.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.Services.Protocols.SoapException">A solicitação atingiu o computador do servidor, mas não foi processada com êxito.</exception>
+        <exception cref="T:System.InvalidOperationException">A solicitação não era válida para o estado do objeto atual.</exception>
+        <exception cref="T:System.Net.WebException">Ocorreu um erro ao acessar a rede.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="protected void InvokeAsync (string methodName, object[] parameters, System.Threading.SendOrPostCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InvokeAsync(string methodName, object[] parameters, class System.Threading.SendOrPostCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.InvokeAsync(System.String,System.Object[],System.Threading.SendOrPostCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="callback" Type="System.Threading.SendOrPostCallback" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome do método que será invocado.</param>
+        <param name="parameters">Os parâmetros para passar para o método.</param>
+        <param name="callback">O delegado é chamado quando a chamada do método é concluída.</param>
+        <summary>Chama o método especificado de forma assíncrona.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="protected void InvokeAsync (string methodName, object[] parameters, System.Threading.SendOrPostCallback callback, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InvokeAsync(string methodName, object[] parameters, class System.Threading.SendOrPostCallback callback, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHttpClientProtocol.InvokeAsync(System.String,System.Object[],System.Threading.SendOrPostCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="callback" Type="System.Threading.SendOrPostCallback" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome do método que será invocado.</param>
+        <param name="parameters">Os parâmetros para passar para o método.</param>
+        <param name="callback">O delegado é chamado quando a chamada do método é concluída.</param>
+        <param name="userState">Um objeto usado para transmitir informações de estado para o <c>retorno de chamada</c> delegate.</param>
+        <summary>Chama o método especificado de forma assíncrona.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapVersion">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapProtocolVersion SoapVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapProtocolVersion SoapVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHttpClientProtocol.SoapVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapProtocolVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão do protocolo SOAP usada para criar a solicitação SOAP para o serviço Web XML.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Services.Protocols.SoapProtocolVersion" />. O padrão é <see cref="F:System.Web.Services.Protocols.SoapProtocolVersion.Soap11" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.SoapVersion%2A> propriedade é definida na classe proxy gerado pela ferramenta Web Services Description Language (Wsdl.exe) para <xref:System.Web.Services.Protocols.SoapProtocolVersion.Soap11> por padrão quando um documento WSDL para um serviço Web XML dá suporte a SOAP versão 1.1. No entanto, quando um serviço Web XML só dá suporte a SOAP 1.2, Wsdl.exe conjuntos de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.SoapVersion%2A> propriedade <xref:System.Web.Services.Protocols.SoapProtocolVersion.Soap12>. Para escolher a versão do protocolo SOAP ao gerar a classe de proxy com Wsdl.exe, use o `/protocol` alternar com a `SOAP` ou `SOAP12` configurações para definir a <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.SoapVersion%2A> propriedade <xref:System.Web.Services.Protocols.SoapProtocolVersion.Soap11> e <xref:System.Web.Services.Protocols.SoapProtocolVersion.Soap12>, respectivamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define a versão do protocolo usado para se comunicar com um serviço Web XML para SOAP 1.2.  
+  
+ [!code-aspx-csharp[SoapHttpClientProtocol.SoapVersion#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapHttpClientProtocol.SoapVersion/CS/serverusageclientcs.aspx#1)]
+ [!code-aspx-vb[SoapHttpClientProtocol.SoapVersion#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapHttpClientProtocol.SoapVersion/VB/serverusageclientvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

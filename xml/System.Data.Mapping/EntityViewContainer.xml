@@ -1,0 +1,153 @@
+<Type Name="EntityViewContainer" FullName="System.Data.Mapping.EntityViewContainer">
+  <TypeSignature Language="C#" Value="public abstract class EntityViewContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EntityViewContainer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Mapping.EntityViewContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe base para o tipo criado no tempo de design para modos de exibição gerado pelo repositório.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada para geração de exibições de tempo de compilação. Ele não é destinado ao uso de desenvolvedor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EntityViewContainer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Mapping.EntityViewContainer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see langword="EntityViewContainer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EdmEntityContainerName">
+      <MemberSignature Language="C#" Value="public string EdmEntityContainerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EdmEntityContainerName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Mapping.EntityViewContainer.EdmEntityContainerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do <see cref="T:System.Data.Metadata.Edm.EntityContainer" />.</summary>
+        <value>O nome do contêiner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewAt">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.Generic.KeyValuePair&lt;string,string&gt; GetViewAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt; GetViewAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Mapping.EntityViewContainer.GetViewAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice da exibição.</param>
+        <summary>Retorna o par chave-valor no índice especificado, que contém a exibição e sua chave.</summary>
+        <returns>O par chave-valor em <paramref name="index" />, que contém a exibição e sua chave.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashOverAllExtentViews">
+      <MemberSignature Language="C#" Value="public string HashOverAllExtentViews { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashOverAllExtentViews" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Mapping.EntityViewContainer.HashOverAllExtentViews" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor de hash de modos de exibição.</summary>
+        <value>O valor de hash.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashOverMappingClosure">
+      <MemberSignature Language="C#" Value="public string HashOverMappingClosure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashOverMappingClosure" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Mapping.EntityViewContainer.HashOverMappingClosure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor de hash.</summary>
+        <value>O valor de hash.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreEntityContainerName">
+      <MemberSignature Language="C#" Value="public string StoreEntityContainerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StoreEntityContainerName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Mapping.EntityViewContainer.StoreEntityContainerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> no esquema de armazenamento.</summary>
+        <value>Nome do contêiner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewCount">
+      <MemberSignature Language="C#" Value="public int ViewCount { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ViewCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Mapping.EntityViewContainer.ViewCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a contagem de exibição.</summary>
+        <value>Contagem de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

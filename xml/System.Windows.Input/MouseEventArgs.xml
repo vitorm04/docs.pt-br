@@ -1,0 +1,393 @@
+<Type Name="MouseEventArgs" FullName="System.Windows.Input.MouseEventArgs">
+  <TypeSignature Language="C#" Value="public class MouseEventArgs : System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MouseEventArgs extends System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para eventos roteados relacionados ao mouse que não envolvem especificamente os botões do mouse ou a roda do mouse, por exemplo <see cref="E:System.Windows.UIElement.MouseMove" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe de dados de evento é usado com os seguintes eventos anexados.  
+  
+-   <xref:System.Windows.Input.Mouse.GotMouseCapture?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.LostMouseCapture?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.MouseEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.MouseLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.MouseMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.PreviewMouseMove?displayProperty=nameWithType>  
+  
+ Essa classe de dados de evento é usado com os seguintes eventos roteados. Esses eventos roteados encaminham os eventos anexados listados anteriormente para torná-las mais acessível para o modelo de elemento geral em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.MouseEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.MouseLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.MouseMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewMouseMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.MouseEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.MouseLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.MouseMove?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewMouseMove?displayProperty=nameWithType>  
+  
+ Os eventos anexados e os eventos roteado de elemento base compartilham seus dados de evento e bolha e túnel versões dos eventos roteados também compartilham dados de evento. Isso pode afetar as características manipuladas do evento conforme ela se desloca a rota de evento. Para obter detalhes, consulte [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ Other than o <xref:System.Windows.RoutedEventArgs> propriedades que são relevantes para todos os eventos roteados, as propriedades mais interessantes de <xref:System.Windows.Input.MouseEventArgs> que você pode usar em um <xref:System.Windows.Input.MouseEventHandler> implementação são várias propriedades que expõem o estado atual do botão (como <xref:System.Windows.Input.MouseEventArgs.LeftButton%2A>) e <xref:System.Windows.Input.MouseEventArgs.MouseDevice%2A>). <xref:System.Windows.Input.MouseEventArgs.MouseDevice%2A>é útil principalmente porque você pode verificar <xref:System.Windows.Input.MouseDevice.Captured%2A> nele.  
+  
+ Observe que os eventos que lidam especificamente com eventos de botão do mouse usam uma classe de dados de eventos diferentes, <xref:System.Windows.Input.MouseButtonEventArgs>. As propriedades de botão do mouse estão disponíveis em <xref:System.Windows.Input.MouseEventArgs> em caso de modos de entrada ou interações que envolvem os botões, mesmo se você estiver tratando um evento de botão não.  
+  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseEventArgs (System.Windows.Input.MouseDevice mouse, int timestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.MouseDevice mouse, int32 timestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseEventArgs.#ctor(System.Windows.Input.MouseDevice,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mouse" Type="System.Windows.Input.MouseDevice" />
+        <Parameter Name="timestamp" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="mouse">O dispositivo de mouse associado ao evento.</param>
+        <param name="timestamp">A hora em que ocorreu a entrada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.MouseEventArgs" /> classe usando especificado <see cref="T:System.Windows.Input.MouseDevice" /> e carimbo de data</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseEventArgs (System.Windows.Input.MouseDevice mouse, int timestamp, System.Windows.Input.StylusDevice stylusDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.MouseDevice mouse, int32 timestamp, class System.Windows.Input.StylusDevice stylusDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseEventArgs.#ctor(System.Windows.Input.MouseDevice,System.Int32,System.Windows.Input.StylusDevice)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mouse" Type="System.Windows.Input.MouseDevice" />
+        <Parameter Name="timestamp" Type="System.Int32" />
+        <Parameter Name="stylusDevice" Type="System.Windows.Input.StylusDevice" />
+      </Parameters>
+      <Docs>
+        <param name="mouse">O dispositivo de mouse associado ao evento.</param>
+        <param name="timestamp">A hora em que ocorreu a entrada.</param>
+        <param name="stylusDevice">O dispositivo de caneta lógico associado ao evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.MouseEventArgs" /> classe usando especificado <see cref="T:System.Windows.Input.MouseDevice" />, carimbo de hora e <see cref="T:System.Windows.Input.StylusDevice" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Point GetPosition (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Point GetPosition(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseEventArgs.GetPosition(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">O elemento a ser usado como o quadro de referência para calcular a posição do ponteiro do mouse.</param>
+        <summary>Retorna a posição do ponteiro do mouse em relação a um elemento especificado.</summary>
+        <returns>As coordenadas x e y da posição do ponteiro do mouse com relação ao objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ponto (0,0) é o canto superior esquerdo do quadro de referência.  
+  
+ Estático <xref:System.Windows.Input.Mouse.GetPosition%2A?displayProperty=nameWithType> método também pode ser usado para obter a posição do mouse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O manipulador genérico para chamar em uma forma de um tipo específico.</param>
+        <param name="genericTarget">O destino para chamar o manipulador no.</param>
+        <summary>Invoca manipuladores de eventos de uma maneira de um tipo específico, que pode aumentar a eficiência do sistema de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação converte o manipulador genérico como um <xref:System.Windows.Input.MouseEventHandler> e, em seguida, invoca. Para obter detalhes sobre esse padrão de implementação e os motivos para ele, consulte <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A> e [visão geral sobre eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftButton">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseButtonState LeftButton { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.MouseButtonState LeftButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseEventArgs.LeftButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual do botão esquerdo do mouse.</summary>
+        <value>O estado atual do botão esquerdo do mouse, que é <see cref="F:System.Windows.Input.MouseButtonState.Pressed" /> ou <see cref="F:System.Windows.Input.MouseButtonState.Released" />.  Nenhum valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime uma mensagem se o estado do <xref:System.Windows.Input.MouseEventArgs.LeftButton%2A> é de propriedade <xref:System.Windows.Input.MouseButtonState.Pressed>.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsLeftButtonDown](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargsleftbuttondown)]
+ [!code-vb[mousesnippetsample#MouseEventArgsLeftButtonDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargsleftbuttondown)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleButton">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseButtonState MiddleButton { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.MouseButtonState MiddleButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseEventArgs.MiddleButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual do botão do meio do mouse.</summary>
+        <value>O estado atual do botão do meio do mouse, que é <see cref="F:System.Windows.Input.MouseButtonState.Pressed" /> ou <see cref="F:System.Windows.Input.MouseButtonState.Released" />. Nenhum valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime uma mensagem se o estado do <xref:System.Windows.Input.MouseEventArgs.MiddleButton%2A> é de propriedade <xref:System.Windows.Input.MouseButtonState.Pressed>.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsMiddleButtonDown](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargsmiddlebuttondown)]
+ [!code-vb[mousesnippetsample#MouseEventArgsMiddleButtonDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargsmiddlebuttondown)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDevice">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseDevice MouseDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.MouseDevice MouseDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseEventArgs.MouseDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o dispositivo de mouse associado ao evento.</summary>
+        <value>O dispositivo de mouse associado ao evento.  Nenhum valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o <xref:System.Windows.Input.MouseDevice> associado a um evento de entrada.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsMouseDevice](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargsmousedevice)]
+ [!code-vb[mousesnippetsample#MouseEventArgsMouseDevice](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargsmousedevice)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightButton">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseButtonState RightButton { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.MouseButtonState RightButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseEventArgs.RightButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual do botão direito do mouse.</summary>
+        <value>O estado atual do botão direito do mouse, que é <see cref="F:System.Windows.Input.MouseButtonState.Pressed" /> ou <see cref="F:System.Windows.Input.MouseButtonState.Released" />.  Nenhum valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime uma mensagem se o estado do <xref:System.Windows.Input.MouseEventArgs.RightButton%2A> é de propriedade <xref:System.Windows.Input.MouseButtonState.Pressed>.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsRightButtonDown](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargsrightbuttondown)]
+ [!code-vb[mousesnippetsample#MouseEventArgsRightButtonDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargsrightbuttondown)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusDevice">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusDevice StylusDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.StylusDevice StylusDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseEventArgs.StylusDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o dispositivo de caneta associado ao evento.</summary>
+        <value>A caneta associada ao evento.  Nenhum valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como recuperar o <xref:System.Windows.Input.StylusDevice> associado a um evento.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsStylusDevice](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargsstylusdevice)]
+ [!code-vb[mousesnippetsample#MouseEventArgsStylusDevice](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargsstylusdevice)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XButton1">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseButtonState XButton1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.MouseButtonState XButton1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseEventArgs.XButton1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual do botão de mouse estendida primeiro.</summary>
+        <value>O estado atual do primeiro botão de mouse estendida, que é <see cref="F:System.Windows.Input.MouseButtonState.Pressed" /> ou <see cref="F:System.Windows.Input.MouseButtonState.Released" />.  Nenhum valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime uma mensagem se o estado do <xref:System.Windows.Input.MouseEventArgs.XButton1%2A> é de propriedade <xref:System.Windows.Input.MouseButtonState.Pressed>.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsXButton1ButtonDown](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargsxbutton1buttondown)]
+ [!code-vb[mousesnippetsample#MouseEventArgsXButton1ButtonDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargsxbutton1buttondown)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XButton2">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseButtonState XButton2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.MouseButtonState XButton2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseEventArgs.XButton2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do segundo botão do mouse estendida.</summary>
+        <value>O estado atual do segundo botão de mouse estendida, que é <see cref="F:System.Windows.Input.MouseButtonState.Pressed" /> ou <see cref="F:System.Windows.Input.MouseButtonState.Released" />.  Nenhum valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime uma mensagem se o estado do <xref:System.Windows.Input.MouseEventArgs.XButton2%2A> é de propriedade <xref:System.Windows.Input.MouseButtonState.Pressed>.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsXButton2ButtonDown](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargsxbutton2buttondown)]
+ [!code-vb[mousesnippetsample#MouseEventArgsXButton2ButtonDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargsxbutton2buttondown)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

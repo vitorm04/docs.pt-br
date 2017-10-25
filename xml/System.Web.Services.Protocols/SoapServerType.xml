@@ -1,0 +1,139 @@
+<Type Name="SoapServerType" FullName="System.Web.Services.Protocols.SoapServerType">
+  <TypeSignature Language="C#" Value="public sealed class SoapServerType : System.Web.Services.Protocols.ServerType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapServerType extends System.Web.Services.Protocols.ServerType" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapServerType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.ServerType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.Web.Services.Protocols.SoapServerType" /> classe representa o tipo no qual o serviço Web XML se baseia.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapServerType (Type type, System.Web.Services.Configuration.WebServiceProtocols protocolsSupported);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, valuetype System.Web.Services.Configuration.WebServiceProtocols protocolsSupported) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapServerType.#ctor(System.Type,System.Web.Services.Configuration.WebServiceProtocols)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="protocolsSupported" Type="System.Web.Services.Configuration.WebServiceProtocols" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> na qual esse serviço da Web em XML é baseado.</param>
+        <param name="protocolsSupported">Um <see cref="T:System.Web.Services.Configuration.WebServiceProtocols" /> valor que especifica os protocolos de transmissão que são usados para descriptografar os dados enviados na solicitação de serviço da Web em XML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.SoapServerType" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDuplicateMethod">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapServerMethod GetDuplicateMethod (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Protocols.SoapServerMethod GetDuplicateMethod(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapServerType.GetDuplicateMethod(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapServerMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave associada a duplicata desejada <see cref="T:System.Web.Services.Protocols.SoapServerMethod" />.</param>
+        <summary>Retorna a duplicata <see cref="T:System.Web.Services.Protocols.SoapServerMethod" /> associados com a chave especificada.</summary>
+        <returns>A duplicata <see cref="T:System.Web.Services.Protocols.SoapServerMethod" /> associados com a chave especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethod">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapServerMethod GetMethod (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Protocols.SoapServerMethod GetMethod(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapServerType.GetMethod(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapServerMethod</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave associada desejado <see cref="T:System.Web.Services.Protocols.SoapServerMethod" />.</param>
+        <summary>Retorna o <see cref="T:System.Web.Services.Protocols.SoapServerMethod" /> associado à chave especificada.</summary>
+        <returns>O <see cref="T:System.Web.Services.Protocols.SoapServerMethod" /> associado à chave especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceDefaultIsEncoded">
+      <MemberSignature Language="C#" Value="public bool ServiceDefaultIsEncoded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ServiceDefaultIsEncoded" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerType.ServiceDefaultIsEncoded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Boolean" /> que indica se as transmissões de dados SOAP enviadas e recebidas esse serviço da Web em XML são codificadas por padrão.</summary>
+        <value>
+          <see langword="true" />Se as transmissões de dados SOAP enviadas e recebidas esse serviço da Web em XML são codificadas por padrão. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceNamespace">
+      <MemberSignature Language="C#" Value="public string ServiceNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServiceNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerType.ServiceNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.String" /> que contém o namespace ao qual pertence este serviço da Web em XML.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o namespace ao qual pertence este serviço da Web em XML.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceRoutingOnSoapAction">
+      <MemberSignature Language="C#" Value="public bool ServiceRoutingOnSoapAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ServiceRoutingOnSoapAction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerType.ServiceRoutingOnSoapAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Boolean" /> que indica se as mensagens SOAP que são roteadas para esse serviço da Web em XML são roteadas com base no <see langword="SOAPAction" /> cabeçalho HTTP.</summary>
+        <value>
+          <see langword="true" />Se as mensagens SOAP que são roteadas para esse serviço da Web em XML são roteadas com base no <see langword="SOAPAction" /> cabeçalho HTTP; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,106 @@
+<Type Name="IPolicyExportExtension" FullName="System.ServiceModel.Description.IPolicyExportExtension">
+  <TypeSignature Language="C#" Value="public interface IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IPolicyExportExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implementar <see cref="T:System.ServiceModel.Description.IPolicyExportExtension" /> para inserir as declarações de política de associação personalizada nas informações de WSDL Web Services Description Language ().</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IPolicyExportExtension> interface em um <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> objeto escrever instruções sobre recursos de ponto de extremidade ou requisitos para as informações de WSDL exposto por um ponto de extremidade específico. Normalmente, o elemento de associação é que implementa alguns recursos, mas isso não é necessário. Para carregar o exportador de política de um arquivo de configuração, implementar um <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> que retorna o exportador de política <xref:System.ServiceModel.Channels.BindingElement> objeto.  
+  
+ O exportador de política é usado pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] usar declarações de política para se comunicar com clientes a existência desse recurso de requisito ou ponto de extremidade de associação personalizada.  
+  
+ O <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> leva o <xref:System.ServiceModel.Description.MetadataExporter> e <xref:System.ServiceModel.Description.PolicyConversionContext> objetos. Use o <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A>, e <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> métodos de obter conjuntos de declarações de política que já foram exportados em vários escopos. Adicione o objeto de declaração de política personalizada para a coleção apropriada.  
+  
+ O <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A> propriedade expõe o <xref:System.ServiceModel.Description.ContractDescription> para o ponto de extremidade que está sendo exportado. Isso permite que o <xref:System.ServiceModel.Description.IPolicyExportExtension> extensão para definir o escopo de suas declarações de política exportados corretamente. Por exemplo, os atributos de segurança no código podem adicionar comportamentos para o <xref:System.ServiceModel.Description.ContractDescription> que indicam onde as declarações de política de segurança devem ser adicionadas.  
+  
+ O <xref:System.ServiceModel.Description.IPolicyExportExtension> mecanismo só oferece suporte a declarações de política de exportação em WSDL. Para exportar elementos WSDL personalizados, você deve usar o <xref:System.ServiceModel.Description.IWsdlExportExtension> mecanismo para modificar o WSDL diretamente.  
+  
+ Depois que as declarações de política personalizadas foram anexadas às informações WSDL, os clientes podem detectar e importar as asserções de associação personalizada usando um <xref:System.ServiceModel.Description.IPolicyImportExtension> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação de <xref:System.ServiceModel.Description.IPolicyExportExtension> em um <xref:System.ServiceModel.Channels.BindingElement>. Neste exemplo, um elemento de associação personalizada é anexado ao arquivo WSDL no nível de associação.  
+  
+ [!code-csharp[CustomPolicySample#14](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
+ [!code-vb[CustomPolicySample#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
+  
+ O seguinte exemplo de código mostra um <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> implementação que permite que o anterior exportador de política a ser carregado de um arquivo de configuração do aplicativo.  
+  
+ [!code-csharp[CustomPolicySample#15](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#15)]
+ [!code-vb[CustomPolicySample#15](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#15)]  
+  
+ O exemplo a seguir mostra o host do arquivo de configuração que carrega o exportador de política personalizada.  
+  
+ [!code-xml[CustomPolicySample#3](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/app.config#3)]   
+  
+ O exemplo a seguir mostra a declaração personalizada no arquivo WSDL.  
+  
+ [!code-xml[CustomPolicySample#16](~/samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/tempuri.org.wsdl#16)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExportPolicy">
+      <MemberSignature Language="C#" Value="public void ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">O <see cref="T:System.ServiceModel.Description.MetadataExporter" /> que você pode usar para modificar o processo de exportação.</param>
+        <param name="context">O <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> que você pode usar para inserir a declaração de política personalizada.</param>
+        <summary>Implemente para incluir para exportar uma declaração de política personalizadas sobre associações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A>, e <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> métodos de obter conjuntos de declarações de política que já foram exportados em vários escopos. Em seguida, adicione o <xref:System.ServiceModel.Description.IPolicyExportExtension> objeto à coleção apropriada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação de <xref:System.ServiceModel.Description.IPolicyExportExtension> em um <xref:System.ServiceModel.Channels.BindingElement>. Neste exemplo, um elemento de associação personalizada é anexado ao arquivo WSDL no nível de associação.  
+  
+ [!code-csharp[CustomPolicySample#14](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
+ [!code-vb[CustomPolicySample#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
+  
+ O seguinte exemplo de código mostra um <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> implementação que permite que o anterior exportador de política a ser carregado de um arquivo de configuração do aplicativo.  
+  
+ [!code-csharp[CustomPolicySample#15](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#15)]
+ [!code-vb[CustomPolicySample#15](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#15)]  
+  
+ O exemplo a seguir mostra o host do arquivo de configuração que carrega o exportador de política personalizada.  
+  
+ [!code-xml[CustomPolicySample#3](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/app.config#3)]   
+  
+ O exemplo a seguir mostra a declaração personalizada no arquivo WSDL.  
+  
+ [!code-xml[CustomPolicySample#16](~/samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/tempuri.org.wsdl#16)]    
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

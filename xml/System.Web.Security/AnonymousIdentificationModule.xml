@@ -1,0 +1,273 @@
+<Type Name="AnonymousIdentificationModule" FullName="System.Web.Security.AnonymousIdentificationModule">
+  <TypeSignature Language="C#" Value="public sealed class AnonymousIdentificationModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AnonymousIdentificationModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.AnonymousIdentificationModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gerencia os identificadores anônimos para o aplicativo ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AnonymousIdentificationModule> classe cria e gerencia identificadores anônimos para um aplicativo ASP.NET. Anônimos identificadores são usados pelos recursos que oferecem suporte à identificação anônima, como o ASP.NET <xref:System.Web.Profile>.  
+  
+ O <xref:System.Web.Security.AnonymousIdentificationModule> expõe um <xref:System.Web.Security.AnonymousIdentificationModule.Creating> evento que permite que você defina o identificador de anônimo para um valor personalizado. Se você não especificar um valor de identificador anônimo personalizados, um <xref:System.Guid> é usado.  
+  
+ O <xref:System.Web.Security.AnonymousIdentificationModule.Creating> evento é acessado, especificando uma sub-rotina chamada **AnonymousIdentification_Creating** no arquivo global. asax para seu aplicativo ASP.NET.  
+  
+ O <xref:System.Web.Security.AnonymousIdentificationModule> é usado somente quando é a identificação anônima <xref:System.Web.Security.AnonymousIdentificationModule.Enabled%2A> , definindo o atributo enabled de configuração para `true`.  
+  
+> [!NOTE]
+>  Identificação anônima é independente de qualquer tipo de autenticação do ASP.NET.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um arquivo Web. config para um aplicativo que permite a identificação anônima.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx" name=".ASPXFORMSAUTH" />  
+    </authentication>  
+  
+    <anonymousIdentification enabled="true" />  
+  
+    <profile defaultProvider="AspNetSqlProvider">  
+      <properties>  
+        <add name="ZipCode" allowAnonymous="true" />  
+        <add name="CityAndState" allowAnonymous="true" />  
+        <add name="StockSymbols" type="System.Collections.ArrayList"   
+          allowAnonymous="true" />  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousIdentificationModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AnonymousIdentificationModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Web.Security.AnonymousIdentificationModule" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não se destina a ser chamado no código do aplicativo.  
+  
+ ASP.NET chama este construtor para criar uma instância do <xref:System.Web.Security.AnonymousIdentificationModule> classe. Depois de chamar o construtor, ele chama o <xref:System.Web.Security.AnonymousIdentificationModule.Init%2A> método para inicializar o novo <xref:System.Web.Security.AnonymousIdentificationModule> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearAnonymousIdentifier">
+      <MemberSignature Language="C#" Value="public static void ClearAnonymousIdentifier ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ClearAnonymousIdentifier() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AnonymousIdentificationModule.ClearAnonymousIdentifier" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o cookie anônimo ou identificador associado a uma sessão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AnonymousIdentificationModule.ClearAnonymousIdentifier%2A> método Remove o identificador de anônimo associado a uma sessão em um site da Web.  Use o <xref:System.Web.Security.AnonymousIdentificationModule.ClearAnonymousIdentifier%2A> método para remover o identificador de anônimo associado a uma sessão quando o usuário alterna para uma sessão autenticada associada com uma ID de usuário, por exemplo quando o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento ocorre.  
+  
+ Como um novo identificador anônimo será emitido imediatamente se o identificador anônimo atual for removido, o <xref:System.Web.Security.AnonymousIdentificationModule.ClearAnonymousIdentifier%2A> método lançará um <xref:System.NotSupportedException> se ele é chamado durante a sessão é identificada por um identificador anônimo.  
+  
+ Se o site está usando cookies, o <xref:System.Web.Security.AnonymousIdentificationModule.ClearAnonymousIdentifier%2A> método emite um cookie criptografado para remover o identificador anônimo do navegador. O cookie criptografado é emitido, mesmo se um cookie anônimo não foi enviado na solicitação anterior.  
+  
+ O cookie criptografado é construído da seguinte maneira:  
+  
+-   Se o navegador oferece suporte a cadeias de caracteres vazias em um cookie, o cookie é emitido com a cadeia de caracteres vazia como seu valor. Caso contrário, o cookie é emitido com "NoCookie" como seu valor.  
+  
+-   Os valores para o nome do cookie, o caminho e o domínio são definidos para o padrão configurado no arquivo de configuração do aplicativo da Web.  
+  
+-   A data de validade é definida como 12 de outubro de 1999.  
+  
+ Se o site está usando a autenticação sem cookies e um identificador anônimo está presente na URL, o identificador anônimo será removido da URL. Nenhuma outra alteração é feitas para a cadeia de caracteres de consulta ou endereço. Depois que a URL é modificada, um redirecionamento é emitido para retornar à página em execução no momento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Chamando <see cref="M:System.Web.Security.AnonymousIdentificationModule.ClearAnonymousIdentifier" /> quando a identificação anônima não está habilitada.  
+  
+ -ou-  
+  
+ O usuário para a solicitação atual é anônimo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Creating">
+      <MemberSignature Language="C#" Value="public event System.Web.Security.AnonymousIdentificationEventHandler Creating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.Security.AnonymousIdentificationEventHandler Creating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.Security.AnonymousIdentificationModule.Creating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.AnonymousIdentificationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um novo identificador anônimo é criado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AnonymousIdentificationModule.Creating> é gerado durante o <xref:System.Web.HttpApplication.PostAuthenticateRequest> evento.  
+  
+ Você pode acessar o <xref:System.Web.Security.AnonymousIdentificationModule.Creating> evento o <xref:System.Web.Security.AnonymousIdentificationModule> classe especificando uma sub-rotina chamada **AnonymousIdentification_Creating** no arquivo global. asax para seu aplicativo ASP.NET.  
+  
+ Você pode usar o <xref:System.Web.Security.AnonymousIdentificationEventArgs.AnonymousID%2A> propriedade o <xref:System.Web.Security.AnonymousIdentificationEventArgs> objeto fornecido para o **AnonymousIdentification_Creating** evento para definir o identificador de anônimo para um valor personalizado. Se você não especificar um valor para o <xref:System.Web.Security.AnonymousIdentificationEventArgs.AnonymousID%2A> propriedade durante o **AnonymousIdentification_Creating** evento, um <xref:System.Guid> é usado.  
+  
+ O **AnonymousIdentification_Creating** evento é gerado apenas quando a identificação anônima é <xref:System.Web.Security.AnonymousIdentificationModule.Enabled%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o **AnonymousIdentification_Creating** evento para definir o identificador de anônimo para um valor personalizado.  
+  
+ [!code-csharp[System.Web.Security.AnonymousIdentificationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.AnonymousIdentificationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.AnonymousIdentificationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.AnonymousIdentificationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AnonymousIdentificationModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos, que não seja a memória usada pelo <see cref="T:System.Web.Security.AnonymousIdentificationModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public static bool Enabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.AnonymousIdentificationModule.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a identificação anônima está habilitada para o aplicativo ASP.NET.</summary>
+        <value>
+          <see langword="true" />Se a identificação anônima está habilitada para o aplicativo ASP.NET; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra um arquivo Web. config para um aplicativo que permite a identificação anônima.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx" name=".ASPXFORMSAUTH" />  
+    </authentication>  
+  
+    <anonymousIdentification enabled="true" />  
+  
+    <profile defaultProvider="AspNetSqlProvider">  
+      <properties>  
+        <add name="ZipCode" allowAnonymous="true" />  
+        <add name="CityAndState" allowAnonymous="true" />  
+        <add name="StockSymbols" type="System.Collections.ArrayList"   
+          allowAnonymous="true" />  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AnonymousIdentificationModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">A instância <see cref="T:System.Web.HttpApplication" /> atual.</param>
+        <summary>Inicializa o objeto <see cref="T:System.Web.Security.AnonymousIdentificationModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ O <xref:System.Web.Security.AnonymousIdentificationModule.Init%2A> método garante que o <xref:System.Web.Security.AnonymousIdentificationModule> está incluído no processamento das <xref:System.Web.HttpApplication.PostAuthenticateRequest> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,145 @@
+<Type Name="DiscoveryServiceExtension" FullName="System.ServiceModel.Discovery.DiscoveryServiceExtension">
+  <TypeSignature Language="C#" Value="public abstract class DiscoveryServiceExtension : System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DiscoveryServiceExtension extends System.Object implements class System.ServiceModel.IExtension`1&lt;class System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.DiscoveryServiceExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Uma WCF extensão classe abstrata para especificar um serviço de descoberta personalizado ou para obter os pontos de extremidade publicados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derive uma classe de <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> e substituir o <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> método para retornar o serviço de descoberta personalizado. Adicionar a classe derivada de <xref:System.ServiceModel.ServiceHost> extensões que hospedam o serviço de descoberta. Quando o <xref:System.ServiceModel.ServiceBehaviorAttribute.System%23ServiceModel%23Description%23IServiceBehavior%23Validate%2A> é chamado o comportamento itera por meio de extensões no host do serviço e procura um <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. Se ele encontrar seu <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> é chamado para obter o serviço de descoberta personalizado. Se uma extensão não foi encontrada para a implementação do serviço de descoberta padrão será usada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DiscoveryServiceExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryServiceExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Discovery.DiscoveryServiceExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiscoveryService">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Discovery.DiscoveryService GetDiscoveryService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Discovery.DiscoveryService GetDiscoveryService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.DiscoveryService</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitua este método para retornar personalizados <see cref="T:System.ServiceModel.Discovery.DiscoveryService" /> implementação.</summary>
+        <returns>Uma implementação de serviço personalizado de descoberta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.InvalidOperationException> é gerada ao abrir o host de serviço se esse método retornar`null`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublishedEndpoints">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Discovery.EndpointDiscoveryMetadata&gt; PublishedEndpoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ServiceModel.Discovery.EndpointDiscoveryMetadata&gt; PublishedEndpoints" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.DiscoveryServiceExtension.PublishedEndpoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Discovery.EndpointDiscoveryMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura de pontos de extremidade publicadas.</summary>
+        <value>Uma coleção somente leitura de pontos de extremidade publicadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade deve ser acessado apenas depois de <xref:System.ServiceModel.ServiceHost> foi aberto com êxito. Quando o <xref:System.ServiceModel.ServiceHost> está em <xref:System.ServiceModel.CommunicationState.Opening> estado, o <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> está sendo gerado e adicionado à coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Attach">
+      <MemberSignature Language="C#" Value="void IExtension&lt;ServiceHostBase&gt;.Attach (System.ServiceModel.ServiceHostBase owner);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Attach(class System.ServiceModel.ServiceHostBase owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryServiceExtension.System#ServiceModel#IExtension&lt;System#ServiceModel#ServiceHostBase&gt;#Attach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O host de serviço para anexar a extensão.</param>
+        <summary>Anexa a extensão para o host de serviço especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Detach">
+      <MemberSignature Language="C#" Value="void IExtension&lt;ServiceHostBase&gt;.Detach (System.ServiceModel.ServiceHostBase owner);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Detach(class System.ServiceModel.ServiceHostBase owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryServiceExtension.System#ServiceModel#IExtension&lt;System#ServiceModel#ServiceHostBase&gt;#Detach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O host de serviço para desanexar do.</param>
+        <summary>Este método para permitir a extensão a ser desanexado do seu host de serviço de sobrecarga.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação da classe base deste método lança um <xref:System.InvalidOperationException> que indica que as extensões de serviços de descoberta não podem ser desanexadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

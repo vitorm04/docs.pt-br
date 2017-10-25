@@ -1,0 +1,105 @@
+<Type Name="SessionStateMode" FullName="System.Web.SessionState.SessionStateMode">
+  <TypeSignature Language="C#" Value="public enum SessionStateMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionStateMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.SessionStateMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o modo de estado de sessão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O modo de estado de sessão é definido no arquivo de configuração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateMode Custom = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateMode.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Estado de sessão está usando armazenamento de dados personalizado para armazenar dados de estado de sessão personalizados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InProc">
+      <MemberSignature Language="C#" Value="InProc" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateMode InProc = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateMode.InProc" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Estado de sessão está em processo com um processo de trabalho do ASP.NET.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Off">
+      <MemberSignature Language="C#" Value="Off" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateMode Off = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateMode.Off" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado de sessão está desabilitado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SQLServer">
+      <MemberSignature Language="C#" Value="SQLServer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateMode SQLServer = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateMode.SQLServer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Estado de sessão está usando uma base de dados do SQL Server fora do processo para armazenar as informações do estado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StateServer">
+      <MemberSignature Language="C#" Value="StateServer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateMode StateServer = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateMode.StateServer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Estado de sessão está usando o Serviço de Controle de Sessão do ASP.NET fora do processo para armazenar as informações do estado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

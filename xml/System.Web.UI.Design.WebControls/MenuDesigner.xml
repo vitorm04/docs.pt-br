@@ -1,0 +1,542 @@
+<Type Name="MenuDesigner" FullName="System.Web.UI.Design.WebControls.MenuDesigner">
+  <TypeSignature Language="C#" Value="public class MenuDesigner : System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner, System.Web.UI.Design.IDataBindingSchemaProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MenuDesigner extends System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner implements class System.Web.UI.Design.IDataBindingSchemaProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.MenuDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.Design.IDataBindingSchemaProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece suporte de tempo de design em um designer visual para o <see cref="T:System.Web.UI.WebControls.Menu" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Menu> classe fornece um menu hierárquico de controle de servidor Web.  
+  
+ Em um designer visual, quando você alternar de origem para o modo de Design, a marcação de código-fonte que descreve o associado <xref:System.Web.UI.WebControls.Menu> controle é analisado e uma versão de tempo de design do controle é criada na superfície de design. Quando você alternar de volta à exibição da fonte, o controle de tempo de design é mantido para marcação e adicionado a marcação existente para a página da Web. O <xref:System.Web.UI.Design.WebControls.MenuDesigner> classe fornece suporte de tempo de design para <xref:System.Web.UI.WebControls.Menu> controles em um designer visual.  
+  
+ O <xref:System.Web.UI.Design.WebControls.MenuDesigner.ActionLists%2A> propriedade retorna um <xref:System.ComponentModel.Design.DesignerActionListCollection> objeto, que normalmente contém um objeto que é derivado do <xref:System.ComponentModel.Design.DesignerActionList> classe para cada nível na árvore de herança do designer. O <xref:System.Web.UI.Design.WebControls.MenuDesigner.AutoFormats%2A> propriedade retorna uma coleção de esquemas para exibição de formatação de **AutoFormatação** caixa de diálogo.  
+  
+ O <xref:System.Web.UI.Design.WebControls.MenuDesigner.TemplateGroups%2A> propriedade retorna uma coleção de grupos de modelo para os modelos de associado <xref:System.Web.UI.WebControls.Menu> controle. O <xref:System.Web.UI.Design.WebControls.MenuDesigner.UsePreviewControl%2A> propriedade sempre retorna `true`, indicando que o designer cria uma cópia temporária do associado <xref:System.Web.UI.WebControls.Menu> para gerar a marcação de tempo de design.  
+  
+ O <xref:System.Web.UI.Design.WebControls.MenuDesigner> métodos da classe fornecerem a seguinte funcionalidade:  
+  
+-   O <xref:System.Web.UI.Design.WebControls.MenuDesigner.Initialize%2A> método prepara o designer para exibir, editar e criar associado <xref:System.Web.UI.WebControls.Menu> controle. O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetDesignTimeHtml%2A> método retorna a marcação que é usada para renderizar associado <xref:System.Web.UI.WebControls.Menu> em tempo de design.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetEmptyDesignTimeHtml%2A> método obtém a marcação que processa um espaço reservado para o controle associado em tempo de design quando nenhuma marcação estiver disponível. O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetErrorDesignTimeHtml%2A> método fornece a marcação que renderiza o controle associado em tempo de design quando ocorreu um erro.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.MenuDesigner.DataBind%2A> método associa associado <xref:System.Web.UI.WebControls.Menu> controle à fonte de dados de tempo de design. O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetSampleDataSource%2A> método constrói uma fonte de dados de exemplo que pode ser usada em tempo de design para o controle associado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como estender o <xref:System.Web.UI.Design.WebControls.MenuDesigner> classe para alterar a aparência dos controles que são derivados do <xref:System.Web.UI.WebControls.Menu> controle em tempo de design.  
+  
+ O exemplo deriva o `MyMenu` classe o <xref:System.Web.UI.WebControls.Menu>. O `MyMenu` classe é uma cópia do <xref:System.Web.UI.WebControls.Menu>. O exemplo também deriva o `MyMenuDesigner` classe o <xref:System.Web.UI.Design.WebControls.MenuDesigner> classe e, em seguida, aplica-se um <xref:System.ComponentModel.DesignerAttribute> de atributo para o `MyMenuDesigner` no `MyMenu` classe.  
+  
+ `The MyMenuDesigner`substitui o seguinte <xref:System.Web.UI.Design.WebControls.MenuDesigner> membros:  
+  
+-   O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetDesignTimeHtml%2A> método para desenhar uma borda laranja, pontilhada ao redor do controle para tornar sua extensão mais visível.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetErrorDesignTimeHtml%2A> método para gerar a marcação para um espaço reservado que inclui a mensagem de erro, que é renderizada em vermelho, de texto em negrito.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetEmptyDesignTimeHtml%2A> para gerar a marcação para um espaço reservado que contém uma mensagem indicando que nenhum item de menu é definidos.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.MenuDesigner.Initialize%2A> método para lançar uma <xref:System.ArgumentException> exceção, se o controle associado não é um `MyMenu` objeto.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.MenuDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/CS/MenuDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.MenuDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/VB/MenuDesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MenuDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.MenuDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.MenuDesigner> classe quando ele cria associado <xref:System.Web.UI.WebControls.Menu> controle ou uma cópia desse controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MenuDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de lista de ação de designer para este designer.</summary>
+        <value>O <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> associado a este designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.MenuDesigner.ActionLists%2A> propriedade cria um <xref:System.ComponentModel.Design.DesignerActionList> de objeto para o <xref:System.Web.UI.Design.WebControls.MenuDesigner> classe, adiciona-o para o <xref:System.ComponentModel.Design.DesignerActionListCollection> que é obtido o <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.ActionLists%2A> propriedade base e, em seguida, retorna o <xref:System.ComponentModel.Design.DesignerActionListCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFormats">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MenuDesigner.AutoFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerAutoFormatCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de formatação predefinidas esquemas para exibir o **AutoFormatação** caixa de diálogo.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" /> que contém os esquemas predefinidos para a <see cref="T:System.Web.UI.WebControls.Menu" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DesignerAutoFormatCollection> objeto é preenchido com constantes internas predefinidas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRefreshSchema">
+      <MemberSignature Language="C#" Value="protected bool CanRefreshSchema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRefreshSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MenuDesigner.CanRefreshSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o provedor pode atualizar o esquema.</summary>
+        <value>
+          <see langword="true" />Se o esquema pode ser atualizado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="protected override void DataBind (System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DataBind(class System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MenuDesigner.DataBind(System.Web.UI.WebControls.BaseDataBoundControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataBoundControl" Type="System.Web.UI.WebControls.BaseDataBoundControl" />
+      </Parameters>
+      <Docs>
+        <param name="dataBoundControl">O <see cref="T:System.Web.UI.WebControls.Menu" /> para associar à fonte de dados de tempo de design.</param>
+        <summary>Associa o controle associado à fonte de dados de tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma das seguintes condições for verdadeira, o <xref:System.Web.UI.Design.WebControls.MenuDesigner.DataBind%2A> método limpa o <xref:System.Web.UI.WebControls.Menu.Items%2A> propriedade e, em seguida, chama o <xref:System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DataBind%2A> método de base:  
+  
+-   O <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID%2A> propriedade não é `null` ou uma cadeia de caracteres vazia ("").  
+  
+-   A propriedade <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> não é `null`.  
+  
+-   O <xref:System.Web.UI.WebControls.Menu.Items%2A> coleção contém um ou mais elementos.  
+  
+ O `dataBoundControl` parâmetro é o <xref:System.Web.UI.WebControls.Menu> controle associado este designer ou uma cópia desse controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MenuDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a marcação que é usada para renderizar o controle associado em tempo de design.</summary>
+        <returns>Uma cadeia de caracteres contendo a marcação usada para renderizar o <see cref="T:System.Web.UI.WebControls.Menu" /> em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetDesignTimeHtml%2A> chamadas de método de <xref:System.Web.UI.Design.WebControls.MenuDesigner.DataBind%2A> método para associar a fonte de dados de tempo de design associados <xref:System.Web.UI.WebControls.Menu> controle e, em seguida, o <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetDesignTimeHtml%2A> chamadas a <xref:System.Web.UI.WebControls.Menu.GetDesignModeState%2A> método para fazer com que o <xref:System.Web.UI.WebControls.Menu> controle para gerar sua marcação exibição estática e exibição dinâmica. O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetDesignTimeHtml%2A> retorna a marcação para o modo de exibição atual. Se o modo de exibição atual não for definido, o <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetDesignTimeHtml%2A> chama o <xref:System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner.GetDesignTimeHtml%2A> método de base.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetDesignTimeHtml%2A> método em uma classe herdada do <xref:System.Web.UI.Design.WebControls.MenuDesigner> classe. O método substituído altera a aparência de um controle que é derivado de <xref:System.Web.UI.WebControls.Menu> controle em tempo de design. O exemplo desenha uma borda laranja pontilhada ao redor do controle para tornar sua extensão mais visível, se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> é de propriedade do controle de <xref:System.Web.UI.WebControls.BorderStyle.NotSet> ou <xref:System.Web.UI.WebControls.BorderStyle.None> valor.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.MenuDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/CS/MenuDesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.MenuDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/VB/MenuDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MenuDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a marcação que processa um espaço reservado para o controle associado em tempo de design quando nenhuma marcação estiver disponível.</summary>
+        <returns>Uma cadeia de caracteres que contém o texto de marcação que renderiza a um espaço reservado na superfície de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetEmptyDesignTimeHtml%2A> método gera marcação para um espaço reservado que especifica o <xref:System.Web.UI.WebControls.Menu> controlar o nome e uma mensagem solicitando que você usar o editor de coleção para adicionar itens.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetEmptyDesignTimeHtml%2A> método em uma classe herdada do <xref:System.Web.UI.Design.WebControls.MenuDesigner> classe. O método substituído altera a aparência de um controle que é derivado de <xref:System.Web.UI.WebControls.Menu> classe em tempo de design. O exemplo gera a marcação para um espaço reservado que inclui uma mensagem indicando que nenhum item de menu é definidos para o controle associado.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.MenuDesigner#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/CS/MenuDesigner.cs#5)]
+ [!code-vb[System.Web.UI.Design.WebControls.MenuDesigner#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/VB/MenuDesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetErrorDesignTimeHtml (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetErrorDesignTimeHtml(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MenuDesigner.GetErrorDesignTimeHtml(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Exception" /> objeto que foi gerado.</param>
+        <summary>Fornece a marcação que renderiza o controle associado em tempo de design quando ocorreu um erro.</summary>
+        <returns>Uma cadeia de caracteres que contém a marcação usada para renderizar associado <see cref="T:System.Web.UI.WebControls.Menu" /> em tempo de design depois que um erro ocorreu.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetErrorDesignTimeHtml%2A> método gera marcação que renderiza o tempo de design do erro <xref:System.Web.UI.WebControls.Menu> controle como um espaço reservado que contém o nome do tipo, o nome do controle e mensagens que descreve o erro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetErrorDesignTimeHtml%2A> método em uma classe herdada do <xref:System.Web.UI.Design.WebControls.MenuDesigner> classe. O método substituído altera a aparência de um controle que é derivado de <xref:System.Web.UI.WebControls.Menu> classe em tempo de design. O exemplo gera a marcação para um espaço reservado que inclui a mensagem de erro, que é renderizada no texto vermelho, em negrito.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.MenuDesigner#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/CS/MenuDesigner.cs#2)]
+ [!code-vb[System.Web.UI.Design.WebControls.MenuDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/VB/MenuDesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSampleDataSource">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.IHierarchicalEnumerable GetSampleDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.IHierarchicalEnumerable GetSampleDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MenuDesigner.GetSampleDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Constrói uma fonte de dados de exemplo para usar em tempo de design para o controle associado.</summary>
+        <returns>Um objeto que implementa o <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> para usar como uma fonte de dados para o associado <see cref="T:System.Web.UI.WebControls.Menu" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte de dados de exemplo que é criada pelo <xref:System.Web.UI.Design.WebControls.MenuDesigner.GetSampleDataSource%2A> método tem vários itens de menu raiz com caminhos vazios. Esta fonte de dados de exemplo é usado em tempo de design se não há itens de menu são definidos para o associado <xref:System.Web.UI.WebControls.Menu> controle e se o menu não pode ser associado a uma fonte de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MenuDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Um <see cref="T:System.Web.UI.WebControls.Menu" />, que implementa o <see cref="T:System.ComponentModel.IComponent" /> interface.</param>
+        <summary>Prepara o designer para exibir, editar e criar o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O visual designer chama o <xref:System.Web.UI.Design.WebControls.MenuDesigner.Initialize%2A> método quando ele estiver pronto para usar o designer para renderizar o <xref:System.Web.UI.WebControls.Menu> controle. O <xref:System.Web.UI.Design.WebControls.MenuDesigner.Initialize%2A> método e seus métodos base configurar propriedades e os eventos que são necessários para a operação do designer.  
+  
+ O `component` parâmetro é o <xref:System.Web.UI.WebControls.Menu> controle associado este designer ou uma cópia desse controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.MenuDesigner.Initialize%2A> método em uma classe herdada do <xref:System.Web.UI.Design.WebControls.MenuDesigner> classe. O método substituído altera o comportamento de um controle que é derivado de <xref:System.Web.UI.WebControls.Menu> classe em tempo de design. O exemplo gera um <xref:System.ArgumentException> exceção, se o controle associado não é um `MyMenu` objeto.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.MenuDesigner#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/CS/MenuDesigner.cs#6)]
+ [!code-vb[System.Web.UI.Design.WebControls.MenuDesigner#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.MenuDesigner/VB/MenuDesigner.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">*componente* não é um <see cref="T:System.Web.UI.WebControls.Menu" /> ou de uma classe derivada de <see cref="T:System.Web.UI.WebControls.Menu" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshSchema">
+      <MemberSignature Language="C#" Value="protected void RefreshSchema (bool preferSilent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RefreshSchema(bool preferSilent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MenuDesigner.RefreshSchema(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preferSilent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="preferSilent">Se <see langword="true" />, exibir mensagens de erro quando ocorrerem exceções durante o processamento; caso contrário, as mensagens de exceção são exibidas.</param>
+        <summary>Atualiza o esquema da exibição da fonte de dados associado <see cref="T:System.Web.UI.WebControls.Menu" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.MenuDesigner.RefreshSchema%2A> método será chamado por if design host somente o <xref:System.Web.UI.Design.WebControls.MenuDesigner.CanRefreshSchema%2A> propriedade é true.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Design.IDataSourceViewSchema Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceViewSchema Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MenuDesigner.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um esquema que descreve a exibição da fonte de dados associado <see cref="T:System.Web.UI.WebControls.Menu" /> controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" /> objeto que descreve a estrutura da fonte de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MenuDesigner.System#Web#UI#Design#IDataBindingSchemaProvider#CanRefreshSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o provedor pode atualizar o esquema. Para obter uma descrição desse membro, consulte o <see cref="P:System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema" /> propriedade.</summary>
+        <value>
+          <see langword="true" />, se o esquema pode ser atualizado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.Design.WebControls.MenuDesigner> é convertida em uma interface de <xref:System.Web.UI.Design.IDataBindingSchemaProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema">
+      <MemberSignature Language="C#" Value="void IDataBindingSchemaProvider.RefreshSchema (bool preferSilent);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema(bool preferSilent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MenuDesigner.System#Web#UI#Design#IDataBindingSchemaProvider#RefreshSchema(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preferSilent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="preferSilent">
+          <see langword="true" />para indicar que as mensagens de erro não devem ser exibidas quando ocorrerem exceções durante o processamento; Caso contrário, <see langword="false" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte o método <see cref="M:System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema(System.Boolean)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.Design.WebControls.MenuDesigner> é convertida em uma interface de <xref:System.Web.UI.Design.IDataBindingSchemaProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataBindingSchemaProvider.Schema">
+      <MemberSignature Language="C#" Value="System.Web.UI.Design.IDataSourceViewSchema System.Web.UI.Design.IDataBindingSchemaProvider.Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceViewSchema System.Web.UI.Design.IDataBindingSchemaProvider.Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MenuDesigner.System#Web#UI#Design#IDataBindingSchemaProvider#Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de esquema atual para o designer. Para obter uma descrição desse membro, consulte o <see cref="P:System.Web.UI.Design.IDataBindingSchemaProvider.Schema" /> propriedade.</summary>
+        <value>O objeto de esquema atual para o designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.Design.WebControls.MenuDesigner> é convertida em uma interface de <xref:System.Web.UI.Design.IDataBindingSchemaProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MenuDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de grupos de modelo para os modelos do controle associado.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.TemplateGroupCollection" /> que contém um elemento para cada modelo no <see cref="T:System.Web.UI.WebControls.Menu" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.MenuDesigner.TemplateGroups%2A> propriedade obtém um <xref:System.Web.UI.Design.TemplateGroupCollection> de objeto o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> base da propriedade. Ele adiciona ao <xref:System.Web.UI.Design.TemplateGroupCollection> um <xref:System.Web.UI.Design.TemplateGroup> objeto denominado "`ItemTemplates`" que contém duas <xref:System.Web.UI.Design.TemplateDefinition> objetos denominados "StaticItemTemplate" e "DynamicItemTemplate". O <xref:System.Web.UI.Design.WebControls.MenuDesigner.TemplateGroups%2A> propriedade retornará <xref:System.Web.UI.Design.TemplateGroupCollection> ao chamador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MenuDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer deve usar uma cópia do controle associado ou use o controle em si para gerar a marcação de tempo de design.</summary>
+        <value>Sempre <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.Design.WebControls.MenuDesigner.UsePreviewControl%2A> propriedade é sempre `true`, o designer usa um <xref:System.Web.UI.WebControls.View> controle que contém uma cópia do associado <xref:System.Web.UI.WebControls.Menu> controle para gerar a marcação de tempo de design. O <xref:System.Web.UI.WebControls.View> controle não afeta qualquer persistência para os <xref:System.Web.UI.WebControls.Menu> objeto.  
+  
+ Se o <xref:System.Web.UI.Design.WebControls.MenuDesigner.UsePreviewControl%2A> propriedade foi substituída para retornar `false`, o designer usa associado <xref:System.Web.UI.WebControls.Menu> próprio para gerar a marcação de tempo de design e alterações de tempo de design para o controle de objeto são mantidas para a origem de marcação da página.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="P:System.Web.UI.Design.WebControls.MenuDesigner.UsePreviewControl" /> propriedade para retornar <see langword="false" /> ou para determinar seu valor com base em se o controle está marcado com um nível de classe <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> atributo. Se o <see cref="P:System.Web.UI.Design.WebControls.MenuDesigner.UsePreviewControl" /> não for substituído, o <see cref="T:System.Web.UI.WebControls.Menu" /> ignora o <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

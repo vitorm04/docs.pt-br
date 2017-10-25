@@ -1,0 +1,101 @@
+<Type Name="Base64FormattingOptions" FullName="System.Base64FormattingOptions">
+  <TypeSignature Language="C#" Value="public enum Base64FormattingOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Base64FormattingOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Base64FormattingOptions" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se os métodos <see cref="Overload:System.Convert.ToBase64CharArray" /> e <see cref="Overload:System.Convert.ToBase64String" /> relevantes inserem interrupções em sua saída.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Convert.ToBase64CharArray%2A?displayProperty=nameWithType> e <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> métodos convertem o valor de uma matriz de inteiros sem sinal de 8 bits em uma representação de cadeia de caracteres equivalente que consiste em base 64 dígitos. A representação de cadeia de caracteres pode conter um ou mais quebras de linha, onde uma quebra de linha é definida como um carro retornam caractere (U + 000d) seguido por um caractere (U + 000A) de alimentação de linha. Como quebras de linha são consideradas caracteres de espaço em branco em uma codificação de base 64, elas serão ignoradas quando a conversão de base 64 codificados cadeia de caracteres para uma matriz de bytes. As quebras de linha são simplesmente convenientes ao exibir a cadeia de caracteres codificada para um controle ou um dispositivo, como uma janela do console.  
+  
+ None e valores de InsertLineBreaks são mutuamente exclusivos. Portanto, embora o <xref:System.Base64FormattingOptions.None?displayProperty=nameWithType> enumeração está marcada com o <xref:System.FlagsAttribute> atributo, não faz sentido para executar uma combinação bit a bit desses dois valores.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Convert.ToBase64String%28System.Byte%5B%5D%2CSystem.Base64FormattingOptions%29?displayProperty=nameWithType> com um InsertLineBreaks argumento para inserir a linha de quebra na cadeia de caracteres que é produzida por uma matriz de elemento de 100 bytes de codificação.  
+  
+ [!code-csharp[System.Convert.ToBase64String#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Convert.ToBase64String/cs/ToBase64String3.cs#3)]
+ [!code-vb[System.Convert.ToBase64String#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Convert.ToBase64String/vb/ToBase64String3.vb#3)]  
+  
+ Como a saída mostra o exemplo, o <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> terá êxito na restauração de matriz de bytes original; os caracteres de quebra de linha são ignorados durante a conversão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InsertLineBreaks">
+      <MemberSignature Language="C#" Value="InsertLineBreaks" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Base64FormattingOptions InsertLineBreaks = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Base64FormattingOptions.InsertLineBreaks" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Base64FormattingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Insere quebras de linha após cada 76 caracteres na representação de cadeia de caracteres.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Base64FormattingOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Base64FormattingOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Base64FormattingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não insere quebras de linha a cada 76 caracteres na representação de cadeia de caracteres.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

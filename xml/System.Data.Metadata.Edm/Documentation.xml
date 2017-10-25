@@ -1,0 +1,118 @@
+<Type Name="Documentation" FullName="System.Data.Metadata.Edm.Documentation">
+  <TypeSignature Language="C#" Value="public sealed class Documentation : System.Data.Metadata.Edm.MetadataItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Documentation extends System.Data.Metadata.Edm.MetadataItem" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.Documentation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Metadata.Edm.MetadataItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a documentação associada a uma construção de modelo conceitual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Metadata.Edm.Documentation> instância da classe representa o conteúdo da marca documentação definido no armazenamento de arquivos de idioma (SSDL) de definição de esquema e os arquivos de CSDL (linguagem) de definição de esquema conceitual. Você pode definir uma marca de documentação para construções de modelo conceitual, como o <xref:System.Data.Metadata.Edm.EntityContainer>, o <xref:System.Data.Metadata.Edm.EntityType>, o <xref:System.Data.Metadata.Edm.ComplexType>, o <xref:System.Data.Metadata.Edm.AssociationType>, e assim por diante. Para obter mais informações, consulte [elemento documentação (CSDL)](http://msdn.microsoft.com/en-us/d49e7bb9-a6a1-4017-9c7e-7836bf3bef48).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuiltInTypeKind">
+      <MemberSignature Language="C#" Value="public override System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Documentation.BuiltInTypeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.BuiltInTypeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do tipo interno para este <see cref="T:System.Data.Metadata.Edm.Documentation" />.</summary>
+        <value>Um <see cref="T:System.Data.Metadata.Edm.BuiltInTypeKind" /> objeto que representa o tipo do tipo interno para este <see cref="T:System.Data.Metadata.Edm.Documentation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Documentation.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Data.Metadata.Edm.Documentation" /> objeto contém apenas um valor nulo ou vazio <see cref="P:System.Data.Metadata.Edm.Documentation.Summary" /> e um <see cref="P:System.Data.Metadata.Edm.Documentation.Longdescription" />.</summary>
+        <value>
+          <see langword="true" />Se este <see cref="T:System.Data.Metadata.Edm.Documentation" /> objeto contém apenas um valor nulo ou vazio <see cref="P:System.Data.Metadata.Edm.Documentation.Summary" /> e um <see cref="P:System.Data.Metadata.Edm.Documentation.LongDescription" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LongDescription">
+      <MemberSignature Language="C#" Value="public string LongDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LongDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Documentation.LongDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição longa para este <see cref="T:System.Data.Metadata.Edm.Documentation" />.</summary>
+        <value>A descrição longa para este <see cref="T:System.Data.Metadata.Edm.Documentation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Summary">
+      <MemberSignature Language="C#" Value="public string Summary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Summary" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Documentation.Summary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o resumo para este <see cref="T:System.Data.Metadata.Edm.Documentation" />.</summary>
+        <value>O resumo para este <see cref="T:System.Data.Metadata.Edm.Documentation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.Documentation.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o resumo para este <see cref="T:System.Data.Metadata.Edm.Documentation" />.</summary>
+        <returns>O resumo para este <see cref="T:System.Data.Metadata.Edm.Documentation" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,181 @@
+<Type Name="AuthorizationRule" FullName="System.Security.AccessControl.AuthorizationRule">
+  <TypeSignature Language="C#" Value="public abstract class AuthorizationRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AuthorizationRule extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.AuthorizationRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Determina o acesso a objetos protegíveis. As classes derivadas <see cref="T:System.Security.AccessControl.AccessRule" /> e <see cref="T:System.Security.AccessControl.AuditRule" /> oferecem especializações para a funcionalidade de acesso e auditoria.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AuthorizationRule (System.Security.Principal.IdentityReference identity, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.AuthorizationRule.#ctor(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identity">A identidade ao qual a regra de acesso se aplica. Esse parâmetro deve ser um objeto que pode ser convertido como um <see cref="T:System.Security.Principal.SecurityIdentifier" />.</param>
+        <param name="accessMask">A máscara de acesso dessa regra. A máscara de acesso é uma coleção de 32 bits de bits anônimas, o significado dos quais é definido pelos integradores individuais.</param>
+        <param name="isInherited">
+          <see langword="true" />Herdar essa regra de um contêiner pai.</param>
+        <param name="inheritanceFlags">As propriedades de herança da regra de acesso.</param>
+        <param name="propagationFlags">Se as regras de acesso herdadas são propagadas automaticamente. Os sinalizadores de propagação serão ignorados se <c>inheritanceFlags</c> é definido como <see cref="F:System.Security.AccessControl.InheritanceFlags.None" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.AccessRule" /> usando os valores especificados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O valor de <paramref name="identity" /> parâmetro não pode ser convertido como um <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor do parâmetro <paramref name="accessMask" /> é zero ou os parâmetros <paramref name="inheritanceFlags" /> ou <paramref name="propagationFlags" /> contêm valores de sinalizador não reconhecidos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessMask">
+      <MemberSignature Language="C#" Value="protected int AccessMask { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AccessMask" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.AuthorizationRule.AccessMask" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a máscara de acesso para essa regra.</summary>
+        <value>A máscara de acesso para essa regra.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdentityReference">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IdentityReference IdentityReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IdentityReference IdentityReference" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.AuthorizationRule.IdentityReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IdentityReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Security.Principal.IdentityReference" /> ao qual essa regra se aplica.</summary>
+        <value>O <see cref="T:System.Security.Principal.IdentityReference" /> ao qual essa regra se aplica.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritanceFlags">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.InheritanceFlags InheritanceFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.InheritanceFlags InheritanceFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.AuthorizationRule.InheritanceFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.InheritanceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de sinalizadores que determinam como a essa regra é herdada por objetos filhos.</summary>
+        <value>Um combinação bit a bit dos valores de enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInherited">
+      <MemberSignature Language="C#" Value="public bool IsInherited { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInherited" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.AuthorizationRule.IsInherited" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta regra é definida explicitamente ou é herdada de um objeto de contêiner pai.</summary>
+        <value>
+          <see langword="true" /> se a regra não for definida explicitamente e for herdada de um contêiner pai.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropagationFlags">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.PropagationFlags PropagationFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.PropagationFlags PropagationFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.AuthorizationRule.PropagationFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.PropagationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor dos sinalizadores de propagação, que determinam como a herança dessa regra é propagada a objetos filho. Esta propriedade é significativo apenas quando o valor de <see cref="T:System.Security.AccessControl.InheritanceFlags" /> enumeração não é <see cref="F:System.Security.AccessControl.InheritanceFlags.None" />.</summary>
+        <value>Um combinação bit a bit dos valores de enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

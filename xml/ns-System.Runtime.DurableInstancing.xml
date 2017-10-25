@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.DurableInstancing">
+  <Docs>
+    <summary>Este namespace contém classes que são usadas pela infraestrutura do Windows Communication Foundation (WCF) para implementar um provedor de persistência.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

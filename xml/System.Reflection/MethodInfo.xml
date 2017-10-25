@@ -1,0 +1,1002 @@
+<Type Name="MethodInfo" FullName="System.Reflection.MethodInfo">
+  <TypeSignature Language="C#" Value="public abstract class MethodInfo : System.Reflection.MethodBase, System.Runtime.InteropServices._MethodInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit MethodInfo extends System.Reflection.MethodBase implements class System.Runtime.InteropServices._MethodInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.MethodInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.MethodBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._MethodInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._MethodInfo))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descobre os atributos de um método e fornece acesso aos metadados de método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.MethodInfo> classe representa um método de um tipo. Você pode usar um <xref:System.Reflection.MethodInfo> para obter informações sobre o método que representa o objeto e invocar o método de objeto. Por exemplo:  
+  
+-   Você pode determinar a visibilidade do método recuperando os valores de <xref:System.Reflection.MethodBase.IsFamilyAndAssembly%2A>, <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>, <xref:System.Reflection.MethodBase.IsPrivate%2A>, e <xref:System.Reflection.MethodBase.IsPublic%2A> propriedades.  
+  
+-   Você pode descobrir quais atributos são aplicados ao método por recuperar o valor da <xref:System.Reflection.MethodBase.Attributes%2A> propriedade ou chamar o <xref:System.Reflection.Assembly.GetCustomAttributes%2A> método.  
+  
+-   Você pode determinar se o método é um método genérico, um aberto construído método genérico ou construído um método genérico, recuperando os valores da <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> e <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A> propriedades.  
+  
+-   Você pode obter informações sobre os parâmetros do método e tipo de retorno de <xref:System.Reflection.MethodBase.GetParameters%2A> método e o <xref:System.Reflection.MethodInfo.ReturnParameter%2A>, <xref:System.Reflection.MethodInfo.ReturnType%2A>, e <xref:System.Reflection.MethodInfo.ReturnTypeCustomAttributes%2A> propriedades.  
+  
+-   Você pode executar um método em uma instância da classe chamando o <xref:System.Reflection.MethodBase.Invoke%2A> método.  
+  
+-   Você pode instanciar uma <xref:System.Reflection.MethodInfo> objeto que representa um método genérico construído de um que representa uma definição de método genérico ao chamar o <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> método.  
+  
+ Você pode instanciar uma <xref:System.Reflection.MethodInfo> instâncias chamando o <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> ou <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> método, ou chamando o <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> método de um <xref:System.Reflection.MethodInfo> objeto que representa uma definição de método genérico.  
+  
+ Para obter uma lista das condições invariáveis para termos específicos para os métodos genéricos, consulte o <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> propriedade. Para obter uma lista das condições invariáveis para outros termos usados na reflexão genérico, consulte o <xref:System.Type.IsGenericType%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Reflection.MethodInfo" />, você deve substituir <see cref="M:System.Reflection.MethodInfo.GetBaseDefinition" />, <see cref="P:System.Reflection.MethodInfo.ReturnType" />, <see cref="P:System.Reflection.MethodInfo.ReturnTypeCustomAttributes" />, <see cref="M:System.Reflection.MethodBase.GetParameters" />, <see cref="M:System.Reflection.MethodBase.GetMethodImplementationFlags" />, <see cref="P:System.Reflection.MethodBase.MethodHandle" />, <see cref="P:System.Reflection.MethodBase.Attributes" />, <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />, <see cref="P:System.Reflection.MemberInfo.Name" />, <see cref="P:System.Reflection.MemberInfo.MemberType" />, <see cref="P:System.Reflection.MemberInfo.DeclaringType" />, <see cref="P:System.Reflection.MemberInfo.ReflectedType" />, <see cref="M:System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean)" />, <see cref="M:System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean)" />, e <see cref="M:System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MethodInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.MethodInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public virtual Delegate CreateDelegate (Type delegateType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Delegate CreateDelegate(class System.Type delegateType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.CreateDelegate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="delegateType">O tipo do delegado a criar.</param>
+        <summary>Cria um delegado do tipo especificado desse método.</summary>
+        <returns>O delegado para esse método.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public virtual Delegate CreateDelegate (Type delegateType, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Delegate CreateDelegate(class System.Type delegateType, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.CreateDelegate(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateType" Type="System.Type" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="delegateType">O tipo do delegado a criar.</param>
+        <param name="target">O objeto almejado pelo delegado.</param>
+        <summary>Cria um delegado do tipo especificado com o destino especificado deste método.</summary>
+        <returns>O delegado para esse método.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado com essa instância ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaseDefinition">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodInfo GetBaseDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetBaseDefinition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.GetBaseDefinition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna o objeto <see cref="T:System.Reflection.MethodInfo" /> para o método sobre a classe base direta ou indireta em que o método representado por esta instância foi declarado.</summary>
+        <returns>Um objeto <see cref="T:System.Reflection.MethodInfo" /> para a primeira implementação deste método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método retorna a primeira definição do método especificado na hierarquia de classe. Você pode determinar o tipo no qual a primeira definição do método foi encontrada ao recuperar o valor da <xref:System.Reflection.MemberInfo.DeclaringType%2A> propriedade retornado <xref:System.Reflection.MethodInfo> objeto.  
+  
+ O <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método se comporta da seguinte maneira:  
+  
+-   Se o atual <xref:System.Reflection.MethodInfo> objeto representa uma implementação de interface, o <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método retorna atual <xref:System.Reflection.MethodInfo> objeto.  
+  
+-   Se o atual <xref:System.Reflection.MethodInfo> objeto representa um método que substitui uma definição virtual em uma classe base, o <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método retorna um <xref:System.Reflection.MethodInfo> objeto que representa a definição de virtual.  
+  
+-   Se atual <xref:System.Reflection.MethodInfo> objeto representa um método que é especificado com o `new` palavra-chave em c# ou o `Shadows` palavra-chave no Visual Basic (como em `newslot`, conforme descrito em [CTS](~/docs/standard/base-types/common-type-system.md)), o <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método retorna atual <xref:System.Reflection.MethodInfo> objeto.  
+  
+-   Se o atual <xref:System.Reflection.MethodInfo> objeto representa um método herdado (ou seja, o método atual não fornece sua própria implementação), o <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método retorna um <xref:System.Reflection.MethodInfo> objeto que representa o método mais baixo na hierarquia de classe. Por exemplo, se `Base.ToString` substitui `Object.ToString`, e `Derived.ToString` substitui `Base.ToString`, chamar o <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método em um <xref:System.Reflection.MethodInfo> objeto que representa `Derived.ToString` retorna um <xref:System.Reflection.MethodInfo> objeto que representa `Object.ToString`.  
+  
+-   Se o atual <xref:System.Reflection.MethodInfo> objeto representa um método que não está presente em nenhuma classe base, o <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método retorna atual <xref:System.Reflection.MethodInfo> objeto.  
+  
+ Você pode determinar se o método atual substitui um método em uma classe base chamando o <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método. O exemplo a seguir implementa um `IsOverride` método que faz isso.  
+  
+ [!code-csharp[system.reflection.methodinfo.getbasedefinition#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.methodinfo.getbasedefinition/cs/IsOverride1.cs#2)]
+ [!code-vb[system.reflection.methodinfo.getbasedefinition#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.methodinfo.getbasedefinition/vb/IsOverride1.vb#2)]  
+  
+ Para chamar o `GetBaseDefinition` método:  
+  
+1.  Obter um <xref:System.Type> objeto que representa o tipo (a classe ou estrutura) que contém a propriedade. Se você estiver trabalhando com um objeto (uma instância de um tipo), você pode chamar seu <xref:System.Object.GetType%2A> método. Caso contrário, você pode usar o operador c# ou o operador do Visual Basic, como mostra o exemplo.  
+  
+2.  Obter um <xref:System.Reflection.MethodInfo> objeto que representa o método no qual você está interessado. Você pode fazer isso obtendo uma matriz de todos os métodos do <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> método e, em seguida, iterar os elementos na matriz, ou você podem recuperar o <xref:System.Reflection.MethodInfo> objeto que representa o método diretamente ao chamar o <xref:System.Type.GetMethod%28System.String%29?displayProperty=nameWithType> método e especificando o nome do método.  
+  
+3.  Chamar o <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método para obter o valor da <xref:System.Reflection.MethodInfo> objeto que representa a definição de método de base.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o comportamento de <xref:System.Reflection.MethodInfo.GetBaseDefinition%2A> método.  
+  
+ [!code-csharp[System.Reflection.MethodInfo.GetBaseDefinition#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.methodinfo.getbasedefinition/cs/getbasedefinition1.cs#1)]
+ [!code-vb[System.Reflection.MethodInfo.GetBaseDefinition#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.methodinfo.getbasedefinition/vb/getbasedefinition1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGenericArguments">
+      <MemberSignature Language="C#" Value="public override Type[] GetGenericArguments ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type[] GetGenericArguments() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.GetGenericArguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz de objetos <see cref="T:System.Type" /> que representam os argumentos de tipo de um método genérico ou os parâmetros de tipo de uma definição de método genérico.</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Type" /> que representam os argumentos de tipo de um método genérico ou os parâmetros de tipo de uma definição de método genérico. Retornará uma matriz vazia se o método atual não for um método genérico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos da matriz retornada estão na ordem em que aparecem na lista de parâmetros de tipo para o método genérico.  
+  
+-   Se o método atual é um método de construído fechado (ou seja, o <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A> propriedade retorna `false`), a matriz retornada pelo <xref:System.Reflection.MethodInfo.GetGenericArguments%2A> método contém os tipos que foram atribuídos a parâmetros de tipo genérico de definição de método genérico.  
+  
+-   Se o método atual é uma definição de método genérico, a matriz contém os parâmetros de tipo.  
+  
+-   Se o método atual é um método construído open (ou seja, o <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A> propriedade retorna `true`) em que tipos específicos foram atribuídos a alguns parâmetros de tipo e parâmetros de tipo de delimitador tipos genéricos foram atribuídos a outros parâmetros de tipo, a matriz contém tipos e tipo de parâmetros. Use o <xref:System.Type.IsGenericParameter%2A> propriedade distingui-los. Para ver uma demonstração desse cenário, consulte o exemplo de código para o <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A> propriedade.  
+  
+ Para obter uma lista das condições invariáveis para termos específicos para os métodos genéricos, consulte o <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> propriedade. Para obter uma lista das condições invariáveis para outros termos usados na reflexão genérico, consulte o <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter os argumentos de tipo de um método genérico e exibi-los.  
+  
+ Este exemplo é parte de um exemplo maior fornecido para o <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> método.  
+  
+ [!code-cpp[MethodInfo.Generics#8](~/samples/snippets/cpp/VS_Snippets_CLR/MethodInfo.Generics/cpp/source.cpp#8)]
+ [!code-csharp[MethodInfo.Generics#8](~/samples/snippets/csharp/VS_Snippets_CLR/MethodInfo.Generics/CS/source.cs#8)]
+ [!code-vb[MethodInfo.Generics#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodInfo.Generics/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGenericMethodDefinition">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodInfo GetGenericMethodDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetGenericMethodDefinition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.GetGenericMethodDefinition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto <see cref="T:System.Reflection.MethodInfo" /> que representa uma definição de método genérico da qual o método atual pode ser criado.</summary>
+        <returns>Um objeto <see cref="T:System.Reflection.MethodInfo" /> que representa uma definição de método genérico da qual o método atual pode ser criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma definição de método genérico é um modelo do qual os métodos podem ser construídos. Por exemplo, da definição de método genérico `T M<T>(T t)` (expresso na sintaxe do c#; `Function M(Of T)(ByVal tVal As T) As T` no Visual Basic) você pode criar e invocar o método `int M<int>(int t)` (`Function M(Of Integer)(ByVal tVal As Integer) As Integer` no Visual Basic). Dado um <xref:System.Reflection.MethodInfo> construída de objeto que representa esse método, o <xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A> método retorna a definição de método genérico.  
+  
+ Se os dois métodos construídos são criados da definição do método genérico, o <xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A> método retorna o mesmo <xref:System.Reflection.MethodInfo> objeto para ambos os métodos.  
+  
+ Se você chamar <xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A> em uma <xref:System.Reflection.MethodInfo> que já representa uma definição de método genérico, ele retorna atual <xref:System.Reflection.MethodInfo>.  
+  
+ Se uma definição de método genérico inclui parâmetros genéricos do tipo declarativo, haverá uma definição de método genérico específicos para cada tipo construído. Por exemplo, considere o seguinte código c#, Visual Basic e C++:  
+  
+```  
+class B<U,V> {}  
+class C<T> { public B<T,S> M<S>() {...}}  
+  
+Class B(Of U, V)  
+End Class  
+Class C(Of T)  
+    Public Function M(Of S)() As B(Of T, S)  
+        ...  
+    End Function  
+End Class   
+  
+generic <typename U, typename V> ref class B {};  
+generic <typename T> ref class C  
+{  
+public:  
+    generic <typename S> B<T,S>^ M() {...};  
+};  
+```  
+  
+ O tipo construído `C<int>` (`C(Of Integer)` no Visual Basic), o método genérico `M` retorna `B<int, S>`. No tipo aberto `C<T>`, `M` retorna `B<T, S>`. Em ambos os casos, o <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> propriedade retorna `true` para o <xref:System.Reflection.MethodInfo> que representa `M`, portanto <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> pode ser chamado em ambos <xref:System.Reflection.MethodInfo> objetos. No caso do tipo construído, o resultado da chamada <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> é um <xref:System.Reflection.MethodInfo> que pode ser invocado. No caso do tipo aberto, o <xref:System.Reflection.MethodInfo> retornado por <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> não pode ser invocado.  
+  
+ Para obter uma lista das condições invariáveis para termos específicos para os métodos genéricos, consulte o <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> propriedade. Para obter uma lista das condições invariáveis para outros termos usados na reflexão genérico, consulte o <xref:System.Type.IsGenericType%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma classe com um método genérico e o código necessário para obter um <xref:System.Reflection.MethodInfo> para o método, vincular o método argumentos de tipo e voltar a definição de tipo genérico original do método associado.  
+  
+ Este exemplo é parte de um exemplo maior fornecido para o <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> método.  
+  
+ [!code-cpp[MethodInfo.Generics#2](~/samples/snippets/cpp/VS_Snippets_CLR/MethodInfo.Generics/cpp/source.cpp#2)]
+ [!code-csharp[MethodInfo.Generics#2](~/samples/snippets/csharp/VS_Snippets_CLR/MethodInfo.Generics/CS/source.cs#2)]
+ [!code-vb[MethodInfo.Generics#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodInfo.Generics/VB/source.vb#2)]  
+[!code-cpp[MethodInfo.Generics#3](~/samples/snippets/cpp/VS_Snippets_CLR/MethodInfo.Generics/cpp/source.cpp#3)]
+[!code-csharp[MethodInfo.Generics#3](~/samples/snippets/csharp/VS_Snippets_CLR/MethodInfo.Generics/CS/source.cs#3)]
+[!code-vb[MethodInfo.Generics#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodInfo.Generics/VB/source.vb#3)]  
+[!code-cpp[MethodInfo.Generics#4](~/samples/snippets/cpp/VS_Snippets_CLR/MethodInfo.Generics/cpp/source.cpp#4)]
+[!code-csharp[MethodInfo.Generics#4](~/samples/snippets/csharp/VS_Snippets_CLR/MethodInfo.Generics/CS/source.cs#4)]
+[!code-vb[MethodInfo.Generics#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodInfo.Generics/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método atual não é um método genérico. Ou seja, <see cref="P:System.Reflection.MethodInfo.IsGenericMethod" /> retorna <see langword="false" />.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeGenericMethod">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.MethodInfo MakeGenericMethod (params Type[] typeArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo MakeGenericMethod(class System.Type[] typeArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.MakeGenericMethod(System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeArguments" Type="System.Type[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="typeArguments">Uma matriz de tipos a serem substituídos para os parâmetros de tipo da definição de método genérico atual.</param>
+        <summary>Substitui os elementos de uma matriz de tipos pelos parâmetros de tipo da definição de método genérico atual e retorna um objeto <see cref="T:System.Reflection.MethodInfo" /> que representa o método construído resultante.</summary>
+        <returns>Um objeto <see cref="T:System.Reflection.MethodInfo" /> que representa o método construído formado pela substituição dos elementos de <paramref name="typeArguments" /> pelos parâmetros de tipo da definição de método genérico atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> método permite que você escreva código que atribui tipos específicos para os parâmetros de tipo de uma definição de método genérico, criando assim uma <xref:System.Reflection.MethodInfo> objeto que representa um método específico de construído. Se o <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A> propriedade deste <xref:System.Reflection.MethodInfo> objeto retorna `true`, você pode usá-lo para chamar o método ou para criar um delegado para invocar o método.  
+  
+ Métodos construído com o <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> método pode ser aberto, ou seja, alguns de seus argumentos de tipo podem ser parâmetros de tipo de tipos genéricos de circunscrição. Você pode usar esses métodos construídos abertos quando você gerar assemblies dinâmicos. Por exemplo, considere o seguinte código c#, Visual Basic e C++.  
+  
+```  
+class C  
+{  
+    T N<T,U>(T t, U u) {...}  
+    public V M<V>(V v)  
+    {  
+        return N<V,int>(v, 42);  
+    }  
+}  
+  
+Class C  
+    Public Function N(Of T,U)(ByVal ta As T, ByVal ua As U) As T  
+        ...  
+    End Function  
+    Public Function M(Of V)(ByVal va As V ) As V  
+        Return N(Of V, Integer)(va, 42)  
+    End Function  
+End Class  
+  
+ref class C  
+{  
+private:  
+    generic <typename T, typename U> T N(T t, U u) {...}  
+public:  
+    generic <typename V> V M(V v)  
+    {  
+        return N<V, int>(v, 42);  
+    }  
+};  
+```  
+  
+ O corpo do método de `M` contém uma chamada ao método `N`, especificando o parâmetro de tipo de `M` e o tipo <xref:System.Int32>. O <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> propriedade retorna `false` método `N<V,int>`. O <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A> propriedade retorna `true`, portanto método `N<V,int>` não pode ser invocado.  
+  
+ Para obter uma lista das condições invariáveis para termos específicos para os métodos genéricos, consulte o <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> propriedade. Para obter uma lista das condições invariáveis para outros termos usados na reflexão genérico, consulte o <xref:System.Type.IsGenericType%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra as propriedades e métodos de <xref:System.Reflection.MethodInfo> que dão suporte a exame de métodos genéricos. O exemplo faz o seguinte:  
+  
+-   Define uma classe que tem um método genérico.  
+  
+-   Cria um <xref:System.Reflection.MethodInfo> que representa o método genérico.  
+  
+-   Exibe as propriedades da definição de método genérico.  
+  
+-   Atribui digite argumentos para os parâmetros de tipo de <xref:System.Reflection.MethodInfo>e invoca o método genérico construído resultante.  
+  
+-   Exibe as propriedades do método genérico construído.  
+  
+-   Recupera a definição de método genérico do método construído e a compara à definição original.  
+  
+ [!code-cpp[MethodInfo.Generics#1](~/samples/snippets/cpp/VS_Snippets_CLR/MethodInfo.Generics/cpp/source.cpp#1)]
+ [!code-csharp[MethodInfo.Generics#1](~/samples/snippets/csharp/VS_Snippets_CLR/MethodInfo.Generics/CS/source.cs#1)]
+ [!code-vb[MethodInfo.Generics#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodInfo.Generics/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Reflection.MethodInfo" /> atual não representa uma definição de método genérico. Ou seja, <see cref="P:System.Reflection.MethodInfo.IsGenericMethodDefinition" /> retorna <see langword="false" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeArguments" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Qualquer elemento de <paramref name="typeArguments" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O número de elementos em <paramref name="typeArguments" /> não é igual ao número de parâmetros de tipo da definição de método genérico atual.  
+  
+ -ou-  
+  
+ Um elemento de <paramref name="typeArguments" /> não satisfaz as restrições especificadas para o parâmetro de tipo correspondente da definição de método genérico atual.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodInfo.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor <see cref="T:System.Reflection.MemberTypes" /> que indica que esse membro é um método.</summary>
+        <value>Um valor <see cref="T:System.Reflection.MemberTypes" /> que indica que esse membro é um método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade substitui <xref:System.Reflection.MemberInfo.MemberType%2A?displayProperty=nameWithType>. Portanto, quando você examinar um conjunto de <xref:System.Reflection.MemberInfo> objetos — por exemplo, a matriz retornada por <xref:System.Type.GetMembers%2A> — o <xref:System.Reflection.MemberInfo.MemberType%2A> propriedade retorna <xref:System.Reflection.MemberTypes?displayProperty=nameWithType> somente quando um determinado membro é um método.  
+  
+ Para obter o `MemberType` propriedade, primeiro obtenha a classe `Type`. Do `Type`, obter o `MethodInfo`. Do `MethodInfo`, obter o `MemberType`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o tipo do membro especificado.  
+  
+ [!code-cpp[Classic MethodInfo.MemberType Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodInfo.MemberType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodInfo.MemberType Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodInfo.MemberType Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodInfo.MemberType Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodInfo.MemberType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.MethodInfo left, System.Reflection.MethodInfo right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Reflection.MethodInfo left, class System.Reflection.MethodInfo right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.op_Equality(System.Reflection.MethodInfo,System.Reflection.MethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="right" Type="System.Reflection.MethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro objeto a ser comparado.</param>
+        <param name="right">O segundo objeto a ser comparado.</param>
+        <summary>Indica se dois objetos <see cref="T:System.Reflection.MethodInfo" /> são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="left" /> for igual a <paramref name="right" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.MethodInfo left, System.Reflection.MethodInfo right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Reflection.MethodInfo left, class System.Reflection.MethodInfo right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.op_Inequality(System.Reflection.MethodInfo,System.Reflection.MethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="right" Type="System.Reflection.MethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro objeto a ser comparado.</param>
+        <param name="right">O segundo objeto a ser comparado.</param>
+        <summary>Indica se dois <see cref="T:System.Reflection.MethodInfo" /> objetos não são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="left" /> não for igual a <paramref name="right" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnParameter">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.ParameterInfo ReturnParameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.ParameterInfo ReturnParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodInfo.ReturnParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ParameterInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Reflection.ParameterInfo" /> que contém informações sobre o tipo de retorno do método, como se o tipo de retorno tem modificadores personalizados.</summary>
+        <value>Um objeto <see cref="T:System.Reflection.ParameterInfo" /> que contém informações sobre o tipo de retorno.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Designers de compilador podem usar o <xref:System.Reflection.ParameterInfo> objeto retornado por essa propriedade para descobrir se personalizado modificadores, como <xref:Microsoft.VisualC.IsConstModifier>, foram aplicadas ao tipo de retorno.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Este método não está implementado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public virtual Type ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodInfo.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de retorno desse método.</summary>
+        <value>O tipo de retorno desse método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter a propriedade de tipo de retorno, primeiro obtenha a classe `Type`. Do `Type`, obter o `MethodInfo`. Do `MethodInfo`, obter o `ReturnType`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o tipo de retorno do método especificado.  
+  
+ [!code-cpp[Classic MethodInfo.ReturnType Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MethodInfo.ReturnType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MethodInfo.ReturnType Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MethodInfo.ReturnType Example/CS/source.cs#1)]
+ [!code-vb[Classic MethodInfo.ReturnType Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MethodInfo.ReturnType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnTypeCustomAttributes">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.ICustomAttributeProvider ReturnTypeCustomAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.ICustomAttributeProvider ReturnTypeCustomAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.MethodInfo.ReturnTypeCustomAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ICustomAttributeProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos personalizados para o tipo de retorno.</summary>
+        <value>Um <see langword="ICustomAttributeProvider" /> objeto que representa os atributos personalizados para o tipo de retorno.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodInfo.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _MethodInfo.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodInfo.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.System#Runtime#InteropServices#_MethodInfo#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="rgszNames">Matriz passada de nomes a serem mapeados.</param>
+        <param name="cNames">Contagem dos nomes a serem mapeados.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar os nomes.</param>
+        <param name="rgDispId">Matriz alocada pelo chamador que recebe os IDs correspondentes aos nomes.</param>
+        <summary>Mapeia um conjunto de nomes para um conjunto correspondente de identificadores de expedição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetIDsOfNames`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodInfo.GetType">
+      <MemberSignature Language="C#" Value="Type _MethodInfo.GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Type System.Runtime.InteropServices._MethodInfo.GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.System#Runtime#InteropServices#_MethodInfo#GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece acesso para o <see cref="M:System.Object.GetType" /> método de COM.</summary>
+        <returns>Um <see cref="T:System.Type" /> objeto representando o <see cref="T:System.Reflection.MethodInfo" /> tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodInfo.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _MethodInfo.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodInfo.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.System#Runtime#InteropServices#_MethodInfo#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">As informações de tipo a serem retornadas.</param>
+        <param name="lcid">O identificador de localidade das informações do tipo.</param>
+        <param name="ppTInfo">Recebe um ponteiro para o objeto de informações de tipo solicitado.</param>
+        <summary>Recupera as informações de tipo para um objeto, que pode ser usado para obter as informações de tipo para uma interface.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfo`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodInfo.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _MethodInfo.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodInfo.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.System#Runtime#InteropServices#_MethodInfo#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Aponta para um local que recebe o número de interfaces de informações de tipo fornecido pelo objeto.</param>
+        <summary>Retorna o número de interfaces de informações do tipo que um objeto fornece (0 ou 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfoCount`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._MethodInfo.Invoke">
+      <MemberSignature Language="C#" Value="void _MethodInfo.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._MethodInfo.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.MethodInfo.System#Runtime#InteropServices#_MethodInfo#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Identifica o membro.</param>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar argumentos.</param>
+        <param name="wFlags">Sinalizadores que descrevem o contexto da chamada.</param>
+        <param name="pDispParams">Ponteiro para uma estrutura contendo uma matriz de argumentos, uma matriz de DISPIDs de argumento para argumentos nomeados e contagens para o número de elementos nas matrizes.</param>
+        <param name="pVarResult">Ponteiro para o local onde o resultado deve ser armazenado.</param>
+        <param name="pExcepInfo">Ponteiro para uma estrutura que contém informações de exceção.</param>
+        <param name="puArgErr">O índice do primeiro argumento que tem um erro.</param>
+        <summary>Fornece acesso a propriedades e métodos expostos por um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::Invoke`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

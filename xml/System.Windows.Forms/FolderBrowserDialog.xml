@@ -1,0 +1,355 @@
+<Type Name="FolderBrowserDialog" FullName="System.Windows.Forms.FolderBrowserDialog">
+  <TypeSignature Language="C#" Value="public sealed class FolderBrowserDialog : System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FolderBrowserDialog extends System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FolderBrowserDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.CommonDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("HelpRequest")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("SelectedPath")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.FolderBrowserDialogDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Solicita ao usuário para selecionar uma pasta. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece uma maneira para solicitar ao usuário para procurar, criar e, eventualmente, selecione uma pasta. Use esta classe quando você deseja permitir que o usuário selecionar pastas, arquivos não. Navegação de pastas é feito por meio de um controle de árvore. Somente as pastas do sistema de arquivos podem ser selecionadas; não é possível pastas virtuais.  
+  
+ Normalmente, depois de criar um novo <xref:System.Windows.Forms.FolderBrowserDialog>, você definir o <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> para o local da qual iniciar a pesquisa. Opcionalmente, você pode definir o <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> em um caminho absoluto de uma subpasta de <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> que será selecionada inicialmente. Você também pode definir o <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> propriedade para fornecer instruções adicionais para o usuário. Finalmente, chame o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para exibir a caixa de diálogo para o usuário. Quando a caixa de diálogo é fechada e a caixa de diálogo são provenientes de <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> é <xref:System.Windows.Forms.DialogResult?displayProperty=nameWithType>, o <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> será uma cadeia de caracteres que contém o caminho para a pasta selecionada.  
+  
+ Você pode usar o <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> propriedade para controlar se o usuário é capaz de criar novas pastas com o **nova pasta** botão.  
+  
+ <xref:System.Windows.Forms.FolderBrowserDialog>é uma caixa de diálogo modal Portanto, quando exibido, ele bloqueia o restante do aplicativo até que o usuário escolher uma pasta. Quando uma caixa de diálogo é exibida modalmente, nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos na caixa de diálogo. O programa deve ocultar ou fechar a caixa de diálogo (normalmente em resposta a uma ação do usuário) antes de entrada para o programa de chamada pode ocorrer.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um aplicativo que permite ao usuário para abrir arquivos de rich text (. rtf) dentro do <xref:System.Windows.Forms.RichTextBox> controle.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FolderBrowserDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FolderBrowserDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.FolderBrowserDialog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão inicializa as propriedades com seus valores padrão.  
+  
+ Quando um novo <xref:System.Windows.Forms.FolderBrowserDialog> é criado, o <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> está definida como <xref:System.Environment.SpecialFolder?displayProperty=nameWithType>, o <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> está definida como uma cadeia de caracteres vazia (""), o <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> está definida como uma cadeia de caracteres vazia e o <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> está definida como `true`.  
+  
+ Normalmente, depois de criar um novo <xref:System.Windows.Forms.FolderBrowserDialog>, você definir o <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> para o local da qual iniciar a pesquisa. Opcionalmente, você pode definir o <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> para o caminho de uma subpasta de <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> que será selecionada inicialmente. Você também pode definir o <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> propriedade para fornecer instruções adicionais para o usuário. Finalmente, chame o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para exibir a caixa de diálogo para o usuário. Quando a caixa de diálogo é fechada e a caixa de diálogo são provenientes de <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> é <xref:System.Windows.Forms.DialogResult?displayProperty=nameWithType>, o <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> será uma cadeia de caracteres que contém o caminho para a pasta selecionada.  
+  
+ <xref:System.Windows.Forms.FolderBrowserDialog>é uma caixa de diálogo modal Portanto, quando exibido, ele bloqueia o restante do aplicativo até que o usuário escolher uma pasta. Quando uma caixa de diálogo é exibida modalmente, nenhuma entrada (clique de mouse ou teclado) pode ocorrer exceto para objetos na caixa de diálogo. O programa deve ocultar ou fechar a caixa de diálogo (normalmente em resposta a uma ação do usuário) antes de entrada para o programa de chamada pode ocorrer.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um aplicativo que permite ao usuário para abrir arquivos de rich text (. rtf) dentro do <xref:System.Windows.Forms.RichTextBox> controle.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FolderBrowserDialog.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto descritivo exibido acima do controle de exibição de árvore na caixa de diálogo.</summary>
+        <value>A descrição a exibir. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> propriedade pode ser usada para especificar informações adicionais para o usuário, como instruções.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um aplicativo que permite ao usuário para abrir arquivos de rich text (. rtf) dentro do <xref:System.Windows.Forms.RichTextBox> controle.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler HelpRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HelpRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.FolderBrowserDialog.HelpRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica no botão **Ajuda** da caixa de diálogo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FolderBrowserDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine propriedades para seus valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Redefine o <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>, <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A>, <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> e <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> propriedades com seus valores padrão. Para obter uma lista de valores padrão, consulte o <xref:System.Windows.Forms.FolderBrowserDialog.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootFolder">
+      <MemberSignature Language="C#" Value="public Environment.SpecialFolder RootFolder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Environment/SpecialFolder RootFolder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FolderBrowserDialog.RootFolder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.SpecialFolderEnumConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a pasta raiz na qual começa a navegação.</summary>
+        <value>Um dos valores de <see cref="T:System.Environment.SpecialFolder" />. O padrão é <see langword="Desktop" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente a pasta especificada e quaisquer subpastas abaixo dela aparecerá na caixa de diálogo e ser selecionadas. O <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> propriedade, junto com <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>, determina a qual a pasta selecionada será quando a caixa de diálogo é exibida, contanto que <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> é um caminho absoluto que é uma subpasta da <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> (ou mais precisamente, aponta para uma subpasta do namespace de shell representado por <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um aplicativo que permite ao usuário para abrir arquivos de rich text (. rtf) dentro do <xref:System.Windows.Forms.RichTextBox> controle.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Environment.SpecialFolder" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RunDialog">
+      <MemberSignature Language="C#" Value="protected override bool RunDialog (IntPtr hWndOwner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool RunDialog(native int hWndOwner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FolderBrowserDialog.RunDialog(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hWndOwner" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hWndOwner">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedPath">
+      <MemberSignature Language="C#" Value="public string SelectedPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FolderBrowserDialog.SelectedPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.SelectedPathEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho selecionado pelo usuário.</summary>
+        <value>O caminho da pasta que foi selecionada na caixa de diálogo ou a última pasta selecionada pelo usuário. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> propriedade é definida antes de mostrar a caixa de diálogo, a pasta com esse caminho será a pasta selecionada, contanto que <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> é definido como um caminho absoluto que é uma subpasta da <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> (ou mais precisamente, aponta para uma subpasta do namespace de shell representado por <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>).  
+  
+ Se o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> retorna <xref:System.Windows.Forms.DialogResult.OK>, indicando que o usuário clicado o **Okey** botão, o <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> propriedade retornará uma cadeia de caracteres que contém o caminho para a pasta selecionada. Se <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> retorna <xref:System.Windows.Forms.DialogResult.Cancel>, indicando que o usuário cancelou a caixa de diálogo, esta propriedade terá o mesmo valor que tinha antes de exibir a caixa de diálogo. Se o usuário seleciona uma pasta que não tem um caminho físico (por exemplo, meu computador), o **Okey** botão na caixa de diálogo será desabilitado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um aplicativo que permite ao usuário para abrir arquivos de rich text (. rtf) dentro do <xref:System.Windows.Forms.RichTextBox> controle.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para obter o caminho. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowNewFolderButton">
+      <MemberSignature Language="C#" Value="public bool ShowNewFolderButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowNewFolderButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o botão **Nova Pasta** aparece na caixa de diálogo do navegador de pastas.</summary>
+        <value>
+          <see langword="true" /> se o botão **Nova Pasta** for exibido na caixa de diálogo; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> é `true`, o **nova pasta** botão estiver visível, dar ao usuário a oportunidade de criar uma pasta. Quando o usuário clica o **nova pasta** botão, uma nova pasta é criada e o usuário é solicitado a especificar o nome da pasta. O nó selecionado na árvore de torna-se o pai da nova pasta. A legenda real do **nova pasta** botão pode variar de acordo com o sistema operacional  
+  
+> [!IMPORTANT]
+>  Configuração <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> para `false` não funciona no Windows 2000.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um aplicativo que permite ao usuário para abrir arquivos de rich text (. rtf) dentro do <xref:System.Windows.Forms.RichTextBox> controle.  
+  
+ [!code-cpp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FolderBrowserDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

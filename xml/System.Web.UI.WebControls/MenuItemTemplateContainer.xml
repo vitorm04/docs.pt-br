@@ -1,0 +1,205 @@
+<Type Name="MenuItemTemplateContainer" FullName="System.Web.UI.WebControls.MenuItemTemplateContainer">
+  <TypeSignature Language="C#" Value="public sealed class MenuItemTemplateContainer : System.Web.UI.Control, System.Web.UI.IDataItemContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MenuItemTemplateContainer extends System.Web.UI.Control implements class System.Web.UI.IDataItemContainer, class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuItemTemplateContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataItemContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um contêiner que armazena o conteúdo de um item de menu modelo em um <see cref="T:System.Web.UI.WebControls.Menu" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MenuItemTemplateContainer> classe é usada pelo <xref:System.Web.UI.WebControls.Menu> controle como um contêiner para o conteúdo dos itens de menu que são processados usando um modelo personalizado.  
+  
+> [!NOTE]
+>  Essa classe é usada por desenvolvedores de controle principalmente ao estender o <xref:System.Web.UI.WebControls.Menu> classe para criar um contêiner para um item de menu modelo.  
+  
+ Você pode definir um modelo personalizado para os itens de menu dinâmico e estático de uma <xref:System.Web.UI.WebControls.Menu> controle usando o <xref:System.Web.UI.WebControls.Menu.DynamicItemTemplate%2A> e <xref:System.Web.UI.WebControls.Menu.StaticItemTemplate%2A> propriedades, respectivamente.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.MenuItemTemplateContainer> de classe, consulte o <xref:System.Web.UI.WebControls.MenuItemTemplateContainer> construtor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItemTemplateContainer (int itemIndex, System.Web.UI.WebControls.MenuItem dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 itemIndex, class System.Web.UI.WebControls.MenuItem dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemTemplateContainer.#ctor(System.Int32,System.Web.UI.WebControls.MenuItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="dataItem" Type="System.Web.UI.WebControls.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item de menu.</param>
+        <param name="dataItem">O <see cref="T:System.Web.UI.WebControls.MenuItem" /> associado ao contêiner do objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.MenuItemTemplateContainer" /> classe usando o índice do item de menu especificado e o item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma nova instância do <xref:System.Web.UI.WebControls.MenuItemTemplateContainer> classe usando o índice do item de menu especificado e o item de menu.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.Web.UI.WebControls.MenuItemTemplateContainer> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.MenuItemTemplateContainer.DataItem%2A>|O valor de `dataItem` parâmetro.|  
+|<xref:System.Web.UI.WebControls.MenuItemTemplateContainer.ItemIndex%2A>|O valor de `itemIndex` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public object DataItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemTemplateContainer.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o item de menu associado ao contêiner.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.MenuItem" /> que representa o item de menu associado ao contêiner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemTemplateContainer.DataItem%2A> para especificar ou determinar o item de menu associado ao contêiner.  
+  
+> [!NOTE]
+>  Esta propriedade é usada principalmente por desenvolvedores de controle ao estender o <xref:System.Web.UI.WebControls.Menu> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemTemplateContainer.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do item de menu associado ao contêiner.</summary>
+        <value>O índice do item de menu associado ao contêiner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemTemplateContainer.ItemIndex%2A> propriedade para determinar o índice do item de menu associada ao contêiner.  
+  
+> [!NOTE]
+>  Esta propriedade é usada principalmente por desenvolvedores de controle ao estender o <xref:System.Web.UI.WebControls.Menu> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemTemplateContainer.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DataItem">
+      <MemberSignature Language="C#" Value="object System.Web.UI.IDataItemContainer.DataItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Web.UI.IDataItemContainer.DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemTemplateContainer.System#Web#UI#IDataItemContainer#DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item de menu associado ao contêiner.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.MenuItem" /> objeto que representa o item de menu associada ao contêiner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DataItemIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DataItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DataItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemTemplateContainer.System#Web#UI#IDataItemContainer#DataItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de índice a <see cref="T:System.Web.UI.WebControls.MenuItem" /> associado ao contêiner do objeto.</summary>
+        <value>O valor de índice a <see cref="T:System.Web.UI.WebControls.MenuItem" /> associado ao contêiner do objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DisplayIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemTemplateContainer.System#Web#UI#IDataItemContainer#DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de índice do item de menu para o contêiner.</summary>
+        <value>O valor de índice do item de menu para o contêiner.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

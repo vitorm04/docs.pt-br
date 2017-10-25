@@ -1,0 +1,218 @@
+<Type Name="RawStylusInput" FullName="System.Windows.Input.StylusPlugIns.RawStylusInput">
+  <TypeSignature Language="C#" Value="public class RawStylusInput" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RawStylusInput extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusPlugIns.RawStylusInput" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre a entrada de um <see cref="T:System.Windows.Input.StylusDevice" /> para um <see cref="T:System.Windows.Input.StylusPlugIns.StylusPlugIn" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Input.StylusPlugIns.RawStylusInput> para obter informações sobre a entrada de <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> recebe quando o usuário move a caneta.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> que verifica a <xref:System.Windows.Ink.ApplicationGesture.Down> gesto. O <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> chamadas <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> na <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUp%2A> para assinar o <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> método, que é chamado do thread do aplicativo.  
+  
+ [!code-csharp[StylusPluginSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/RecognizerPlugin.cs#12)]
+ [!code-vb[StylusPluginSamples#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/RecognizerPlugin.vb#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetStylusPoints">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusPointCollection GetStylusPoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StylusPointCollection GetStylusPoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.RawStylusInput.GetStylusPoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os pontos de caneta que são coletados de caneta.</summary>
+        <returns>Os pontos de caneta que são coletados de caneta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como alterar os pontos de caneta no <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDown%2A> método. Para criar um <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> que restringe a tinta para uma determinada área, consulte o <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> visão geral.  
+  
+ [!code-csharp[StylusPluginSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/FilterPlugin.cs#8)]
+ [!code-vb[StylusPluginSamples#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/FilterPlugin.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyWhenProcessed">
+      <MemberSignature Language="C#" Value="public void NotifyWhenProcessed (object callbackData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NotifyWhenProcessed(object callbackData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callbackData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callbackData">Os dados a serem passados para o thread de aplicativo.</param>
+        <summary>Assina os métodos de caneta correspondentes do segmento do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A caneta da entrada é roteada para um elemento <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> no thread de caneta. Como testes de acertos precisos não podem ser executados no thread da caneta, alguns elementos podem, ocasionalmente, receber entradas da caneta destinadas a outros elementos. Se você precisa ter certeza de que a entrada foi roteada corretamente antes de executar uma operação, chame o <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> método no método que ocorre no thread de caneta. A tabela a seguir lista onde você pode chamar <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> para inscrever-se ao método do segmento do aplicativo.  
+  
+|Chamar <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> nesse método|Para assinar este método|  
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|  
+|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDown%2A>|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>|  
+|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMove%2A>|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>|  
+|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUp%2A>|<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> que verifica a <xref:System.Windows.Ink.ApplicationGesture.Down> gesto. O <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> chamadas <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> na <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUp%2A> para assinar o <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> método, que é chamado do thread do aplicativo.  
+  
+ [!code-csharp[StylusPluginSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/RecognizerPlugin.cs#12)]
+ [!code-vb[StylusPluginSamples#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/RecognizerPlugin.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStylusPoints">
+      <MemberSignature Language="C#" Value="public void SetStylusPoints (System.Windows.Input.StylusPointCollection stylusPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetStylusPoints(class System.Windows.Input.StylusPointCollection stylusPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.RawStylusInput.SetStylusPoints(System.Windows.Input.StylusPointCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPoints" Type="System.Windows.Input.StylusPointCollection" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoints">Os pontos de caneta para passar para o thread de aplicativo.</param>
+        <summary>Define os pontos de caneta que são passados para o thread de aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eventos como <xref:System.Windows.UIElement.StylusDown> e <xref:System.Windows.UIElement.StylusMove>, pode obter o <xref:System.Windows.Input.StylusPointCollection> definido por <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.SetStylusPoints%2A> chamando o <xref:System.Windows.Input.StylusEventArgs.GetStylusPoints%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como alterar os pontos de caneta no <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDown%2A> método. Para criar um <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> que restringe a tinta para uma determinada área, consulte o <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> visão geral.  
+  
+ [!code-csharp[StylusPluginSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/FilterPlugin.cs#8)]
+ [!code-vb[StylusPluginSamples#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/FilterPlugin.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para definir os pontos de caneta. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusDeviceId">
+      <MemberSignature Language="C#" Value="public int StylusDeviceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StylusDeviceId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPlugIns.RawStylusInput.StylusDeviceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador do dispositivo de caneta atual.</summary>
+        <value>O identificador do atual <see cref="T:System.Windows.Input.StylusDevice" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir garante que os pontos de caneta coletados são da mesma <xref:System.Windows.Input.StylusDevice>. Este exemplo é parte do exemplo maior no <xref:System.Windows.Input.StylusPlugIns.RawStylusInput> visão geral da classe.  
+  
+ [!code-csharp[StylusPluginSamples#15](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/RecognizerPlugin.cs#15)]
+ [!code-vb[StylusPluginSamples#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/RecognizerPlugin.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabletDeviceId">
+      <MemberSignature Language="C#" Value="public int TabletDeviceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TabletDeviceId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPlugIns.RawStylusInput.TabletDeviceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador do dispositivo de tablet atual.</summary>
+        <value>O identificador do atual <see cref="T:System.Windows.Input.TabletDevice" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="public int Timestamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timestamp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPlugIns.RawStylusInput.Timestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a hora em que ocorreu a entrada.</summary>
+        <value>A hora em que ocorreu a entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.Timestamp%2A> propriedade é o valor da <xref:System.Environment.TickCount%2A?displayProperty=nameWithType> propriedade na qual ocorreu o evento de caneta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

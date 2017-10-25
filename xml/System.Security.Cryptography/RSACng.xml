@@ -1,0 +1,672 @@
+<Type Name="RSACng" FullName="System.Security.Cryptography.RSACng">
+  <TypeSignature Language="C#" Value="public sealed class RSACng : System.Security.Cryptography.RSA" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RSACng extends System.Security.Cryptography.RSA" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RSACng" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.RSA</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma implementação CNG (Cryptography Next Generation) do algoritmo RSA.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.RSACng> classe é derivada do <xref:System.Security.Cryptography.RSA> classe. Portanto, não é uma substituição para soltar de usos existentes do <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  
+  
+ <xref:System.Security.Cryptography.RSACng>usa um modelo de programação que é semelhante do <xref:System.Security.Cryptography.ECDsaCng> classe em vez de <xref:System.Security.Cryptography.RSACryptoServiceProvider> classe. Por exemplo:  
+  
+-   A chave usada pelo <xref:System.Security.Cryptography.RSACng> é gerenciado por um separado <xref:System.Security.Cryptography.CngKey> objeto. Por outro lado, <xref:System.Security.Cryptography.RSACryptoServiceProvider> tem uma chave que está diretamente vinculada às operações do próprio tipo.  
+  
+-   <xref:System.Security.Cryptography.RSACng>executa operações como assinar e verificar assinaturas com propriedades do <xref:System.Security.Cryptography.RSACng> objeto, assim como <xref:System.Security.Cryptography.ECDsaCng> usa suas operações de verificação e propriedades de objeto para controlar a assinatura.  
+
+> [!NOTE]
+> O <xref:System.Security.Cryptography.RSACng> classe é uma implementação do algoritmo RSA usando as bibliotecas Windows CNG e não está disponível em sistemas operacionais diferentes do Windows. Para aplicativos que não estão fazendo a interoperabilidade do Windows, você é incentivado a usar <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> em vez de fazer referência a esse tipo diretamente.
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSACng ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.RSACng" /> classe com um par de chave de 2.048 bits aleatório.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSACng (int keySize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 keySize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keySize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="keySize">O tamanho da chave para gerar em bits.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.RSACng" /> classe com uma chave gerada aleatoriamente do tamanho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tamanhos de chave válidos variam de 384 bits 16.384, em incrementos de 8. É recomendável que um tamanho mínimo de 2.048 bits seja usado para todas as chaves.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="keySize" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSACng (System.Security.Cryptography.CngKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.CngKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.#ctor(System.Security.Cryptography.CngKey)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.CngKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser usada para operações de RSA.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.RSACng" /> com a chave especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.CngKey.AlgorithmGroup%2A?displayProperty=nameWithType> de `key` devem ser <xref:System.Security.Cryptography.CngAlgorithmGroup.Rsa%2A?displayProperty=nameWithType>.  
+  
+ Este construtor cria uma cópia da chave. Mesmo se `key` é descartado, a cópia deste objeto chave RSA permanece ativa.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" />não é uma chave RSA válida.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="public override byte[] Decrypt (byte[] data, System.Security.Cryptography.RSAEncryptionPadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] Decrypt(unsigned int8[] data, class System.Security.Cryptography.RSAEncryptionPadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.Decrypt(System.Byte[],System.Security.Cryptography.RSAEncryptionPadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSAEncryptionPadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem descriptografados.</param>
+        <param name="padding">O modo de preenchimento.</param>
+        <summary>Descriptografa os dados usando o modo de preenchimento especificado de entrada.</summary>
+        <returns>Os dados descriptografados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="padding" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="padding" />não é igual a <see cref="P:System.Security.Cryptography.RSAEncryptionPadding.Pkcs1" />, ou então <see cref="P:System.Security.Cryptography.RSAEncryptionPadding.Mode" /> de <paramref name="padding" /> não é igual a <see cref="F:System.Security.Cryptography.RSAEncryptionPaddingMode.Oaep" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptValue">
+      <MemberSignature Language="C#" Value="public override byte[] DecryptValue (byte[] rgb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] DecryptValue(unsigned int8[] rgb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.DecryptValue(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">O texto de criptografia a ser descriptografado.</param>
+        <summary>Descriptografa os dados de entrada usando a chave privada.</summary>
+        <returns>A descriptografia resultante do parâmetro <paramref name="rgb" /> em um texto sem formatação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para essa chamada de método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public override byte[] Encrypt (byte[] data, System.Security.Cryptography.RSAEncryptionPadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] Encrypt(unsigned int8[] data, class System.Security.Cryptography.RSAEncryptionPadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.Encrypt(System.Byte[],System.Security.Cryptography.RSAEncryptionPadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSAEncryptionPadding" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem criptografados.</param>
+        <param name="padding">O modo de preenchimento.</param>
+        <summary>Criptografa os dados de entrada usando o preenchimento especificado.</summary>
+        <returns>Retorna <see cref="T:System.Byte" /> .</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="padding" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="padding" />não é igual a <see cref="P:System.Security.Cryptography.RSASignaturePadding.Pkcs1" /> ou <see cref="P:System.Security.Cryptography.RSASignaturePadding.Pss" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptValue">
+      <MemberSignature Language="C#" Value="public override byte[] EncryptValue (byte[] rgb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] EncryptValue(unsigned int8[] rgb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.EncryptValue(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">O texto sem formatação a ser criptografado.</param>
+        <summary>Criptografa os dados de entrada usando a chave pública.</summary>
+        <returns>A criptografia resultante do parâmetro <paramref name="rgb" /> como texto cifrado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para essa chamada de método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportParameters">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.RSAParameters ExportParameters (bool includePrivateParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Security.Cryptography.RSAParameters ExportParameters(bool includePrivateParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.ExportParameters(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSAParameters</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includePrivateParameters">
+          <see langword="true" /> para incluir parâmetros particulares; caso contrário, <see langword="false" />.</param>
+        <summary>Exporta a chave usada pelo objeto RSA em um <see cref="T:System.Security.Cryptography.RSAParameters" /> objeto.</summary>
+        <returns>A chave usada pelo objeto RSA.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected override byte[] HashData (System.IO.Stream data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] HashData(class System.IO.Stream data, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.HashData(System.IO.Stream,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">To be added.</param>
+        <param name="hashAlgorithm">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashData">
+      <MemberSignature Language="C#" Value="protected override byte[] HashData (byte[] data, int offset, int count, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] HashData(unsigned int8[] data, int32 offset, int32 count, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.HashData(System.Byte[],System.Int32,System.Int32,System.Security.Cryptography.HashAlgorithmName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+      </Parameters>
+      <Docs>
+        <param name="data">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="count">To be added.</param>
+        <param name="hashAlgorithm">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportParameters">
+      <MemberSignature Language="C#" Value="public override void ImportParameters (System.Security.Cryptography.RSAParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ImportParameters(valuetype System.Security.Cryptography.RSAParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.RSAParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Os parâmetros RSA.</param>
+        <summary>Substitui a chave existente em que a instância atual está trabalhando, criando um novo <see cref="T:System.Security.Cryptography.CngKey" /> para a estrutura dos parâmetros.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `parameters` contém apenas um expoente e módulo, somente uma chave pública é importada. Se `parameters` também contém os valores de P e Q, uma chave completa par é importado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="parameters" />não contém um expoente nem um módulo.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="parameters" />não é uma chave RSA válida.  
+  
+ -ou-  
+  
+ <paramref name="parameters" />é um par de chave completo e o padrão que é usar o KSP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngKey Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CngKey Key" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSACng.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave que será usada pelo objeto <see cref="T:System.Security.Cryptography.RSACng" /> para qualquer operação criptográfica realizada.</summary>
+        <value>A chave usada pelo <see cref="T:System.Security.Cryptography.RSACng" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retornado <xref:System.Security.Cryptography.CngKey> o objeto é descartado se a chave for redefinida, por exemplo, alterando o <xref:System.Security.Cryptography.CngKey.KeySize%2A?displayProperty=nameWithType> propriedade usando o <xref:System.Security.Cryptography.RSA.ImportParameters%2A?displayProperty=nameWithType> para criar uma nova chave, ou removendo-o do pai <xref:System.Security.Cryptography.RSA> objeto. Portanto, você deve garantir que o objeto de chave não é usado nesses casos.  
+  
+ Isso <xref:System.Security.Cryptography.CngKey> objeto não é igual a <xref:System.Security.Cryptography.CngKey> objeto passado para o <xref:System.Security.Cryptography.RSACng.%23ctor%2A> construtor, se esse construtor foi usado. No entanto, ele vai apontar para a mesma chave CNG.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyExchangeAlgorithm">
+      <MemberSignature Language="C#" Value="public override string KeyExchangeAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyExchangeAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSACng.KeyExchangeAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do algoritmo de troca de chaves disponível com esta implementação de RSA.</summary>
+        <value>Retorna "RSA".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegalKeySizes">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.KeySizes[] LegalKeySizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.KeySizes[] LegalKeySizes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSACng.LegalKeySizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureAlgorithm">
+      <MemberSignature Language="C#" Value="public override string SignatureAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignatureAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSACng.SignatureAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do algoritmo de assinatura disponível com esta implementação da RSA.</summary>
+        <value>Retorna "RSA".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignHash">
+      <MemberSignature Language="C#" Value="public override byte[] SignHash (byte[] hash, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] SignHash(unsigned int8[] hash, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.SignHash(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="hash">O hash para entrar.</param>
+        <param name="hashAlgorithm">O nome do algoritmo de hash.</param>
+        <param name="padding">O modo de preenchimento.</param>
+        <summary>Dados de sinais que foi transformado em hash usando o algoritmo de hash especificado e o modo de preenchimento.</summary>
+        <returns>Os dados assinados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hash" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="padding" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O valor da <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> propriedade <paramref name="hashAlgorithm" /> é <see langword="null" /> ou <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="padding" />não é igual a <see cref="P:System.Security.Cryptography.RSASignaturePadding.Pkcs1" /> ou <see cref="P:System.Security.Cryptography.RSASignaturePadding.Pss" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyHash">
+      <MemberSignature Language="C#" Value="public override bool VerifyHash (byte[] hash, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool VerifyHash(unsigned int8[] hash, unsigned int8[] signature, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, class System.Security.Cryptography.RSASignaturePadding padding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" />
+        <Parameter Name="padding" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="hash">O hash para verificar.</param>
+        <param name="signature">A assinatura dos dados.</param>
+        <param name="hashAlgorithm">O nome do algoritmo de hash.</param>
+        <param name="padding">O modo de preenchimento.</param>
+        <summary>Verifica os dados que foi assinados e o hash já foi aplicados com o algoritmo especificado e o modo de preenchimento.</summary>
+        <returns>
+          <see langword="true" />Se verifica a assinatura para o hash; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hash" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="signature" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="padding" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O valor da <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> propriedade <paramref name="hashAlgorithm" /> é <see langword="null" /> ou <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="padding" />não é igual a <see cref="P:System.Security.Cryptography.RSASignaturePadding.Pkcs1" /> ou <see cref="P:System.Security.Cryptography.RSASignaturePadding.Pss" />.  
+  
+ -ou-  
+  
+ A assinatura está formatada incorretamente. (No [!INCLUDE[net_v46](~/includes/net-v46-md.md)] e 4.6.1 somente; iniciando com o [!INCLUDE[net_v462](~/includes/net-v462-md.md)], o método retorna <see langword="false" /> se uma assinatura está formatada incorretamente.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,65 @@
+<Type Name="DataSourceCacheExpiry" FullName="System.Web.UI.DataSourceCacheExpiry">
+  <TypeSignature Language="C#" Value="public enum DataSourceCacheExpiry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSourceCacheExpiry extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceCacheExpiry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve a maneira como os dados armazenados em cache usando o ASP.NET mecanismos de cache expirarem quando um tempo limite é definido.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceCacheExpiry> enumeração que descreve como os dados armazenados em cache por um controle de fonte de dados expirarem no cache do ASP.NET. Um controle de fonte de dados do ASP.NET armazena em cache os dados no cache do ASP.NET com base em um período de tempo limite especificado, que é definido usando o `CacheDuration` propriedade. O <xref:System.Web.UI.DataSourceCacheExpiry> descreve como essa configuração de tempo limite é usada. Se a política de expiração é definida como absoluta, os dados em cache são descartados quando o período de tempo especificado passa desde primeiro foi armazenado em cache os dados. Se a política de expiração é definida como deslizante, os dados em cache são descartados somente quando a entrada de cache não foi usada para a quantidade de tempo especificado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.DataSourceCacheExpiry.Absolute> enumeração declarativamente. Neste exemplo, um <xref:System.Web.UI.WebControls.SqlDataSource> controle é usado para exibir dados em um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.SqlDataSource> controle tem cache habilitado e seu <xref:System.Web.UI.WebControls.SqlDataSource.CacheExpirationPolicy%2A> definido como deslizante, os dados em cache enquanto há uma atividade.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_19sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_19sql/CS/sql19cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_19sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_19sql/VB/sql19vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Absolute">
+      <MemberSignature Language="C#" Value="Absolute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataSourceCacheExpiry Absolute = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataSourceCacheExpiry.Absolute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceCacheExpiry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dados armazenados em cache expirarem quando o período de tempo especificado pelo <see langword="CacheDuration" /> propriedade decorrido desde o primeiro foi armazenado em cache os dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sliding">
+      <MemberSignature Language="C#" Value="Sliding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataSourceCacheExpiry Sliding = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataSourceCacheExpiry.Sliding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceCacheExpiry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dados armazenados em cache expirarem apenas quando a entrada de cache não foi usada para a quantidade de tempo especificado pelo <see langword="CacheDuration" /> propriedade.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

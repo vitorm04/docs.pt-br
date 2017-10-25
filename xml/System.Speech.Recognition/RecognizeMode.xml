@@ -1,0 +1,100 @@
+<Type Name="RecognizeMode" FullName="System.Speech.Recognition.RecognizeMode">
+  <TypeSignature Language="C#" Value="public enum RecognizeMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RecognizeMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.RecognizeMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os valores do modo de reconhecimento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada como um argumento para <xref:System.Speech.Recognition.SpeechRecognitionEngine.RecognizeAsync%28System.Speech.Recognition.RecognizeMode%29>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a implementação de um botão de início/parada para um aplicativo que tem uma interface gráfica do usuário e usa <xref:System.Speech.Recognition.SpeechRecognitionEngine>. Dependendo do estado do aplicativo, <xref:System.Speech.Recognition.SpeechRecognitionEngine.RecognizeAsync%28System.Speech.Recognition.RecognizeMode%29> é chamado com um único ou vários quando o botão é clicado.  
+  
+```  
+private void _startRecogButton_Click(object sender, EventArgs eventArgs)   
+{  
+  
+  // Toggle speech recognition on.  
+  if (_startRecogButton.Text == "Start Speech Recognition")   
+  {       
+    _startRecogButton.Text = "Stop Speech Recognition";  
+    if (_useMultiple)   
+    {  
+      _recognitionEngine.RecognizeAsync(RecognizeMode.Multiple);  
+    }   
+    else   
+    {  
+      _recognitionEngine.RecognizeAsync(RecognizeMode.Single);  
+    }  
+  }  
+  
+  // Toggle speech recognition off.   
+  else   
+  {                                                        
+    _startRecogButton.Text = "Start Speech Recognition";  
+  
+    // Stop after current phrase is finished.  
+    if (_friendlyStop)   
+    {       
+      _recognitionEngine.RecognizeAsyncStop();   
+    }  
+  
+    // Stop before current phrase is finished.  
+    else   
+    {        
+      _recognitionEngine.RecognizeAsyncCancel();   
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Multiple">
+      <MemberSignature Language="C#" Value="Multiple" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.RecognizeMode Multiple = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.RecognizeMode.Multiple" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o reconhecimento não termina após a conclusão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.RecognizeMode Single = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.RecognizeMode.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o reconhecimento termina após a conclusão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

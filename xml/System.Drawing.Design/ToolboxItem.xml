@@ -1,0 +1,1158 @@
+<Type Name="ToolboxItem" FullName="System.Drawing.Design.ToolboxItem">
+  <TypeSignature Language="C#" Value="public class ToolboxItem : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ToolboxItem extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.ToolboxItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma implementação básica de um item de caixa de ferramentas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Design.ToolboxItem>é uma classe base para os itens da caixa de ferramentas que podem ser exibidos na caixa de ferramentas de um ambiente de tempo de design. Um item de caixa de ferramentas normalmente representa um componente a ser criado quando invocado em um documento do modo de design. O <xref:System.Drawing.Design.ToolboxItem> classe fornece os métodos e as propriedades necessárias para fornecer a caixa de ferramentas com as propriedades de exibição para o item de caixa de ferramentas, para criar um componente ou componentes quando usado e para serializar e desserializar próprio para persistência no banco de dados de caixa de ferramentas.  
+  
+ Uma instância do <xref:System.Drawing.Design.ToolboxItem> classe pode ser configurada com um nome, o bitmap e o tipo a ser criado, sem criar uma classe que deriva de <xref:System.Drawing.Design.ToolboxItem>. O <xref:System.Drawing.Design.ToolboxItem> classe também fornece uma classe base para a caixa de ferramentas personalizada implementações de item. Um personalizado <xref:System.Drawing.Design.ToolboxItem> pode criar vários componentes. Para implementar um item de caixa de ferramentas personalizado, você deve derivar de <xref:System.Drawing.Design.ToolboxItem> e substituir o <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A>, <xref:System.Drawing.Design.ToolboxItem.Serialize%2A>, e <xref:System.Drawing.Design.ToolboxItem.Deserialize%2A> métodos.  
+  
+ As seguintes propriedades e métodos devem ser configurados para um <xref:System.Drawing.Design.ToolboxItem> funcione corretamente:  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.DisplayName%2A> propriedade especifica o rótulo para o item de caixa de ferramentas quando exibido em uma caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.TypeName%2A> propriedade especifica o nome totalmente qualificado do tipo de componente que cria o item. Se uma classe derivada cria vários componentes, o <xref:System.Drawing.Design.ToolboxItem.TypeName%2A> propriedade podem ou não podem ser usada, condicionada a se um <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> substituição de método depende do valor dessa propriedade.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.AssemblyName%2A> propriedade especifica o assembly que contém o tipo de um componente que cria o item.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.Bitmap%2A> propriedade opcionalmente, especifica uma imagem de bitmap será exibido ao lado do nome de exibição para o item de caixa de ferramentas na caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.Filter%2A> propriedade opcionalmente contém qualquer <xref:System.ComponentModel.ToolboxItemFilterAttribute> objetos que determinam se o item de caixa de ferramentas pode ser usado em um componente específico.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método retorna a instância do componente ou instâncias para inserir onde essa ferramenta é usada.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.Serialize%2A> método salva o item de caixa de ferramentas para determinado <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.Deserialize%2A> método configura o item de caixa de ferramentas das informações de estado contidas no especificado <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.Initialize%2A> método configura o item de caixa de ferramentas para criar o tipo especificado do componente, se o <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método não foi substituído para se comportar de maneira diferente.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.Locked%2A> propriedade indica se as propriedades do item da caixa de ferramentas podem ser alteradas. Um item de caixa de ferramentas normalmente é bloqueado depois que ele é adicionado a uma caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.Lock%2A> método bloqueia um item de caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.ToolboxItem.CheckUnlocked%2A> método lançará uma exceção se o <xref:System.Drawing.Design.ToolboxItem.Locked%2A> é de propriedade `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir fornece um componente que usa o <xref:System.Drawing.Design.IToolboxService> interface para adicionar um manipulador de formato de dados de texto, ou <xref:System.Drawing.Design.ToolboxItemCreatorCallback>, a caixa de ferramentas. O representante de retorno de chamada do criador de dados passa os dados de texto colado à caixa de ferramentas e arrastadas para um formulário para um personalizado <xref:System.Drawing.Design.ToolboxItem> que cria um <xref:System.Windows.Forms.TextBox> que contém o texto.  
+  
+ [!code-cpp[ToolboxCreatorCallbackSample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/CPP/textdatatextboxcomponent.cpp#1)]
+ [!code-csharp[ToolboxCreatorCallbackSample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/CS/textdatatextboxcomponent.cs#1)]
+ [!code-vb[ToolboxCreatorCallbackSample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/VB/textdatatextboxcomponent.vb#1)]  
+  
+ O exemplo de código a seguir demonstra o uso da <xref:System.Drawing.Design.ToolboxItem> classe como uma classe base para uma implementação de item de caixa de ferramentas personalizado.  
+  
+ [!code-csharp[System.Drawing.Design.ToolboxItem#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.Design.ToolboxItem#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Drawing.Design.ToolboxItem.%23ctor%2A> construtor em uma classe derivada de <xref:System.Drawing.Design.ToolboxItem> para uma implementação de item de caixa de ferramentas personalizado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Drawing.Design.ToolboxItem> classe.  
+  
+ [!code-csharp[System.Drawing.Design.ToolboxItem#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/CS/Form1.cs#3)]
+ [!code-vb[System.Drawing.Design.ToolboxItem#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolboxItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Drawing.Design.ToolboxItem.%23ctor%2A> construtor em uma classe derivada de <xref:System.Drawing.Design.ToolboxItem> para uma implementação de item de caixa de ferramentas personalizado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Drawing.Design.ToolboxItem> classe.  
+  
+ [!code-csharp[System.Drawing.Design.ToolboxItem#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/CS/Form1.cs#3)]
+ [!code-vb[System.Drawing.Design.ToolboxItem#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolboxItem (Type toolType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type toolType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="toolType">O tipo de <see cref="T:System.ComponentModel.IComponent" /> que cria o item de caixa de ferramentas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Design.ToolboxItem" /> classe que cria o tipo de componente especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Drawing.Design.ToolboxItem.%23ctor%2A> construtor em uma classe derivada de <xref:System.Drawing.Design.ToolboxItem> para uma implementação de item de caixa de ferramentas personalizado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Drawing.Design.ToolboxItem> classe.  
+  
+ [!code-csharp[System.Drawing.Design.ToolboxItem#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/CS/Form1.cs#3)]
+ [!code-vb[System.Drawing.Design.ToolboxItem#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Drawing.Design.ToolboxItem" /> foi bloqueado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.AssemblyName AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do assembly que contém o tipo ou tipos que cria o item de caixa de ferramentas.</summary>
+        <value>Um <see cref="T:System.Reflection.AssemblyName" /> que indica que o assembly que contém o tipo ou tipos de criar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.AssemblyName%2A> propriedade especifica o assembly que contém os tipos de componentes para criar.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se sua classe de item da caixa de ferramentas derivadas cria vários componentes que estão localizados em assemblies diferentes, você deve garantir que as referências a esses assemblies existem em seu projeto. É recomendável adicionar essas referências de uma sobrecarga de <see cref="M:System.Drawing.Design.ToolboxItem.CreateComponentsCore(System.ComponentModel.Design.IDesignerHost)" /> método. Mesmo que seu <see cref="M:System.Drawing.Design.ToolboxItem.CreateComponentsCore(System.ComponentModel.Design.IDesignerHost)" /> método não depende do valor da <see cref="P:System.Drawing.Design.ToolboxItem.AssemblyName" /> propriedade, você deve garantir que essa propriedade é definida para o assembly que um dos componentes para criar pertence, porque ele é exibido no **personalizar caixa de ferramentas ** da caixa de diálogo [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Bitmap">
+      <MemberSignature Language="C#" Value="public System.Drawing.Bitmap Bitmap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Bitmap Bitmap" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.Bitmap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um bitmap para representar o item de caixa de ferramentas na caixa de ferramentas.</summary>
+        <value>Um <see cref="T:System.Drawing.Bitmap" /> que representa o item de caixa de ferramentas na caixa de ferramentas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckUnlocked">
+      <MemberSignature Language="C#" Value="protected void CheckUnlocked ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckUnlocked() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.CheckUnlocked" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera uma exceção se o item de caixa de ferramentas está bloqueado no momento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.CheckUnlocked%2A> método lança um <xref:System.InvalidOperationException> se o <xref:System.Drawing.Design.ToolboxItem.Locked%2A> propriedade o <xref:System.Drawing.Design.ToolboxItem> é definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Drawing.Design.ToolboxItem" /> está bloqueado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Company">
+      <MemberSignature Language="C#" Value="public string Company { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Company" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.Company" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da empresa para este <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <value>Um <see cref="T:System.String" /> que especifica a empresa para este <see cref="T:System.Drawing.Design.ToolboxItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentsCreated">
+      <MemberSignature Language="C#" Value="public event System.Drawing.Design.ToolboxComponentsCreatedEventHandler ComponentsCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Drawing.Design.ToolboxComponentsCreatedEventHandler ComponentsCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Drawing.Design.ToolboxItem.ComponentsCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxComponentsCreatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre imediatamente após a criação de componentes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.ComponentsCreated> é gerado sempre que os componentes desse item de caixa de ferramentas são criados.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentsCreating">
+      <MemberSignature Language="C#" Value="public event System.Drawing.Design.ToolboxComponentsCreatingEventHandler ComponentsCreating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Drawing.Design.ToolboxComponentsCreatingEventHandler ComponentsCreating" />
+      <MemberSignature Language="DocId" Value="E:System.Drawing.Design.ToolboxItem.ComponentsCreating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxComponentsCreatingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando os componentes estão prestes a ser criado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.ComponentsCreating> é gerado sempre que os componentes do item da caixa de ferramentas estão prestes a ser criado.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentType">
+      <MemberSignature Language="C#" Value="public virtual string ComponentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComponentType" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.ComponentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de componente para este <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <value>Um <see cref="T:System.String" /> que especifica o tipo de componente para este <see cref="T:System.Drawing.Design.ToolboxItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponents">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent[] CreateComponents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.IComponent[] CreateComponents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.CreateComponents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria os componentes que o item de caixa de ferramentas estiver configurado para criar.</summary>
+        <returns>Uma matriz de criada <see cref="T:System.ComponentModel.IComponent" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.CreateComponents%2A> chamadas de método de <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método para recuperar uma matriz do tipo <xref:System.ComponentModel.IComponent> que contém os componentes a serem criados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponents">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent[] CreateComponents (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.IComponent[] CreateComponents(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.CreateComponents(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para usar ao criar os componentes.</param>
+        <summary>Cria os componentes que o item de caixa de ferramentas está configurado para criar, usando o designer de host especificado.</summary>
+        <returns>Uma matriz de criada <see cref="T:System.ComponentModel.IComponent" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.CreateComponents%2A> chamadas de método de <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método para recuperar uma matriz do tipo <xref:System.ComponentModel.IComponent> que contém os componentes a serem criados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponents">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent[] CreateComponents (System.ComponentModel.Design.IDesignerHost host, System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.IComponent[] CreateComponents(class System.ComponentModel.Design.IDesignerHost host, class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.CreateComponents(System.ComponentModel.Design.IDesignerHost,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para usar ao criar os componentes.</param>
+        <param name="defaultValues">Um dicionário de pares de nome/valor de propriedade de valores padrão com a qual inicializar o componente.</param>
+        <summary>Cria os componentes que o item de caixa de ferramentas está configurado para criar, usando os valores especificados e designers de host e padrão.</summary>
+        <returns>Uma matriz de criada <see cref="T:System.ComponentModel.IComponent" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.CreateComponents%2A> chamadas de método de <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método para recuperar uma matriz do tipo <xref:System.ComponentModel.IComponent> que contém os componentes a serem criados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponentsCore">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.IComponent[] CreateComponentsCore (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ComponentModel.IComponent[] CreateComponentsCore(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.CreateComponentsCore(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para hospedar o item de caixa de ferramentas.</param>
+        <summary>Cria um componente ou uma matriz de componentes quando o item de caixa de ferramentas é invocado.</summary>
+        <returns>Uma matriz de criada <see cref="T:System.ComponentModel.IComponent" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `host` não é `null`, o <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método adiciona os novos componentes para o designer.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="M:System.Drawing.Design.ToolboxItem.CreateComponentsCore(System.ComponentModel.Design.IDesignerHost)" /> método para retornar o componente ou componentes que cria um item de caixa de ferramentas.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponentsCore">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.IComponent[] CreateComponentsCore (System.ComponentModel.Design.IDesignerHost host, System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ComponentModel.IComponent[] CreateComponentsCore(class System.ComponentModel.Design.IDesignerHost host, class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.CreateComponentsCore(System.ComponentModel.Design.IDesignerHost,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="host">O designer host a ser usado durante a criação de componentes.</param>
+        <param name="defaultValues">Um dicionário de pares de nome/valor de propriedade de valores padrão com a qual inicializar o componente.</param>
+        <summary>Cria uma matriz de componentes quando o item de caixa de ferramentas é invocado.</summary>
+        <returns>Uma matriz de criada <see cref="T:System.ComponentModel.IComponent" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `host` não é `null`, o <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método adiciona os novos componentes para o designer.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método em uma classe derivada de <xref:System.Drawing.Design.ToolboxItem> para uma implementação de item de caixa de ferramentas personalizado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Drawing.Design.ToolboxItem> classe.  
+  
+ [!code-csharp[System.Drawing.Design.ToolboxItem#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/CS/Form1.cs#5)]
+ [!code-vb[System.Drawing.Design.ToolboxItem#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/VB/Form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependentAssemblies">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName[] DependentAssemblies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.AssemblyName[] DependentAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.DependentAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Reflection.AssemblyName" /> para o item de caixa de ferramentas.</summary>
+        <value>Uma matriz de objetos de <see cref="T:System.Reflection.AssemblyName" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do assembly descreve as informações de assembly necessárias para carregar o tipo do item da caixa de ferramentas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição para este <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <value>Um <see cref="T:System.String" /> que especifica a descrição para este <see cref="T:System.Drawing.Design.ToolboxItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="protected virtual void Deserialize (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Deserialize(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.Deserialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> para carregar do.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> que indica as características de fluxo.</param>
+        <summary>Carrega o estado do item da caixa de ferramentas do objeto de informações de serialização especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o carregamento do estado do item da caixa de ferramentas do objeto de informações de serialização especificada. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Drawing.Design.ToolboxItem> classe.  
+  
+ [!code-csharp[System.Drawing.Design.ToolboxItem#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/CS/Form1.cs#4)]
+ [!code-vb[System.Drawing.Design.ToolboxItem#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Design.ToolboxItem/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Drawing.Design.ToolboxItem.Serialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> e <see cref="M:System.Drawing.Design.ToolboxItem.Deserialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> métodos devem ser implementados em classes derivadas de <see cref="T:System.Drawing.Design.ToolboxItem" /> para dar suporte à persistência no banco de dados de caixa de ferramentas fornecido pelo alguns ambientes de desenvolvimento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de exibição para o item de caixa de ferramentas.</summary>
+        <value>O nome de exibição para o item de caixa de ferramentas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Drawing.Design.ToolboxItem.DisplayName%2A> propriedade indica a cadeia de caracteres que é exibida para o item de caixa de ferramentas na caixa de ferramentas.  
+  
+ Por padrão, a base de <xref:System.Drawing.Design.ToolboxItem> classe define seu <xref:System.Drawing.Design.ToolboxItem.DisplayName%2A> propriedade para uma forma abreviada do nome totalmente qualificado do tipo especificado pelo <xref:System.Drawing.Design.ToolboxItem.TypeName%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Drawing.Design.ToolboxItem" /> para comparar com a atual <see cref="T:System.Drawing.Design.ToolboxItem" />.</param>
+        <summary>Determina se duas instâncias <see cref="T:System.Drawing.Design.ToolboxItem" /> são iguais.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Drawing.Design.ToolboxItem" /> especificado for igual ao <see cref="T:System.Drawing.Design.ToolboxItem" /> atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o filtro que determina se o item de caixa de ferramentas pode ser usado em um componente de destino.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> de <see cref="T:System.ComponentModel.ToolboxItemFilterAttribute" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.Filter%2A> coleção de propriedades contém <xref:System.ComponentModel.ToolboxItemFilterAttribute> objetos que especifica a política que usa o ambiente de tempo de design para determinar se um item de caixa de ferramentas pode ser usado no componente de destino.  
+  
+ Para obter mais informações sobre como restringir o escopo no qual um <xref:System.Drawing.Design.ToolboxItem> pode ser usado, consulte a documentação para o <xref:System.ComponentModel.ToolboxItemFilterAttribute> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterPropertyValue">
+      <MemberSignature Language="C#" Value="protected virtual object FilterPropertyValue (string propertyName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object FilterPropertyValue(string propertyName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.FilterPropertyValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade a ser filtrada.</param>
+        <param name="value">O valor para a qual a propriedade de filtro.</param>
+        <summary>Filtra um valor de propriedade antes de retorná-lo.</summary>
+        <returns>Um valor de propriedade filtrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.FilterPropertyValue%2A> método permite que uma propriedade sempre clonar valores, ou fornecer um valor padrão quando nenhum existe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código hash do <see cref="T:System.Drawing.Design.ToolboxItem" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetType(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.GetType(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">O host de designer de consulta para <see cref="T:System.ComponentModel.Design.ITypeResolutionService" />.</param>
+        <summary>Permite o acesso para o tipo associado ao item de caixa de ferramentas.</summary>
+        <returns>O tipo associado ao item de caixa de ferramentas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O designer host é usado para acessar uma implementação de <xref:System.ComponentModel.Design.ITypeResolutionService> interface. No entanto, o tipo carregado não é adicionado à lista de referências no host do designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="protected virtual Type GetType (System.ComponentModel.Design.IDesignerHost host, System.Reflection.AssemblyName assemblyName, string typeName, bool reference);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Type GetType(class System.ComponentModel.Design.IDesignerHost host, class System.Reflection.AssemblyName assemblyName, string typeName, bool reference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.GetType(System.ComponentModel.Design.IDesignerHost,System.Reflection.AssemblyName,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="assemblyName" Type="System.Reflection.AssemblyName" />
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="reference" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para o documento atual. Ele pode ser <see langword="null" />.</param>
+        <param name="assemblyName">Um <see cref="T:System.Reflection.AssemblyName" /> que indica que o assembly que contém o tipo de carga. Ele pode ser <see langword="null" />.</param>
+        <param name="typeName">O nome do tipo para criar uma instância do.</param>
+        <param name="reference">Um valor que indica se deve ou não adicionar uma referência ao assembly que contém o tipo especificado para o host de designer do conjunto de referências.</param>
+        <summary>Cria uma instância do tipo especificado, opcionalmente usando um nome de host e o assembly designer especificado.</summary>
+        <returns>Uma instância do tipo especificado, se ele pode ser localizado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeName" /> não está especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.Initialize(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> que cria o item de caixa de ferramentas.</param>
+        <summary>Inicializa o item atual da caixa de ferramentas com o tipo especificado para criar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.Initialize%2A> método configura o item de caixa de ferramentas para criar o tipo especificado, se o <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método não foi substituído para se comportar de maneira diferente.  
+  
+ Esse método executa as seguintes operações:  
+  
+-   Conjuntos de <xref:System.Drawing.Design.ToolboxItem.AssemblyName%2A> propriedade para um <xref:System.Reflection.AssemblyName> indicando que o assembly do tipo especificado.  
+  
+-   Conjuntos de <xref:System.Drawing.Design.ToolboxItem.DisplayName%2A> propriedade para um nome curto de tipo com base no nome do tipo especificado.  
+  
+-   Adiciona qualquer <xref:System.ComponentModel.ToolboxItemFilterAttribute> atributos encontrados no tipo especificado para o <xref:System.Drawing.Design.ToolboxItem.Filter%2A> coleção de propriedades.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Drawing.Design.ToolboxItem" /> foi bloqueado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTransient">
+      <MemberSignature Language="C#" Value="public bool IsTransient { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTransient" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.IsTransient" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o item de caixa de ferramentas é transitório.</summary>
+        <value>
+          <see langword="true" />, se este item de caixa de ferramentas não deve ser armazenado em qualquer banco de dados de caixa de ferramentas quando um aplicativo que está fornecendo uma caixa de ferramentas é fechado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.IsTransient%2A> propriedade padroniza como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lock">
+      <MemberSignature Language="C#" Value="public virtual void Lock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Lock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.Lock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bloqueia o item de caixa de ferramentas e impede que as alterações em suas propriedades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades de um item de caixa de ferramentas não podem ser alteradas quando ela está bloqueada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Locked">
+      <MemberSignature Language="C#" Value="public virtual bool Locked { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Locked" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.Locked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Drawing.Design.ToolboxItem" /> está bloqueado no momento.</summary>
+        <value>
+          <see langword="true" />Se o item de caixa de ferramentas estiver bloqueado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Drawing.Design.ToolboxItem> é bloqueado, você não pode ajustar suas propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentsCreated">
+      <MemberSignature Language="C#" Value="protected virtual void OnComponentsCreated (System.Drawing.Design.ToolboxComponentsCreatedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnComponentsCreated(class System.Drawing.Design.ToolboxComponentsCreatedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.OnComponentsCreated(System.Drawing.Design.ToolboxComponentsCreatedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Drawing.Design.ToolboxComponentsCreatedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Um <see cref="T:System.Drawing.Design.ToolboxComponentsCreatedEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Drawing.Design.ToolboxItem.ComponentsCreated" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.OnComponentsCreated%2A> método gera o <xref:System.Drawing.Design.ToolboxItem.ComponentsCreated> evento. Este método é chamado depois que um item de caixa de ferramentas é invocado para criar componentes e <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método retornou.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Drawing.Design.ToolboxItem.OnComponentsCreated%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Drawing.Design.ToolboxItem.OnComponentsCreated(System.Drawing.Design.ToolboxComponentsCreatedEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Drawing.Design.ToolboxItem.OnComponentsCreated(System.Drawing.Design.ToolboxComponentsCreatedEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentsCreating">
+      <MemberSignature Language="C#" Value="protected virtual void OnComponentsCreating (System.Drawing.Design.ToolboxComponentsCreatingEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnComponentsCreating(class System.Drawing.Design.ToolboxComponentsCreatingEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.OnComponentsCreating(System.Drawing.Design.ToolboxComponentsCreatingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Drawing.Design.ToolboxComponentsCreatingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Um <see cref="T:System.Drawing.Design.ToolboxComponentsCreatingEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Drawing.Design.ToolboxItem.ComponentsCreating" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.OnComponentsCreating%2A> método gera o <xref:System.Drawing.Design.ToolboxItem.ComponentsCreating> evento. Este método é chamado depois que um item de caixa de ferramentas é invocado para criar componentes, antes de <xref:System.Drawing.Design.ToolboxItem.CreateComponentsCore%2A> método é chamado.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Drawing.Design.ToolboxItem.OnComponentsCreating%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Drawing.Design.ToolboxItem.OnComponentsCreating(System.Drawing.Design.ToolboxComponentsCreatingEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Drawing.Design.ToolboxItem.OnComponentsCreating(System.Drawing.Design.ToolboxComponentsCreatingEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalBitmap">
+      <MemberSignature Language="C#" Value="public System.Drawing.Bitmap OriginalBitmap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Bitmap OriginalBitmap" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.OriginalBitmap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o bitmap original que será usado na caixa de ferramentas para este item.</summary>
+        <value>Um <see cref="T:System.Drawing.Bitmap" /> que representa o item de caixa de ferramentas na caixa de ferramentas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este bitmap deve ter 16x16 pixels e deve ser usado na caixa de ferramentas da Visual Studio, não na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de propriedades.</summary>
+        <value>Um dicionário de pares nome/valor (os nomes são nomes de propriedade e os valores são valores de propriedade).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.Properties%2A> dicionário de propriedade será somente leitura após o item de caixa de ferramentas foi bloqueado.  
+  
+ Valores no dicionário de propriedades são validados por meio de <xref:System.Drawing.Design.ToolboxItem.ValidatePropertyValue%2A> método e os valores padrão são obtidos do <xref:System.ComponentModel.TypeDescriptor.GetDefaultProperty%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="protected virtual void Serialize (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Serialize(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.Serialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser salvo.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> que indica as características de fluxo.</param>
+        <summary>Salva o estado do item da caixa de ferramentas para o objeto de informações de serialização especificada.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Drawing.Design.ToolboxItem.Serialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> e <see cref="M:System.Drawing.Design.ToolboxItem.Deserialize(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> métodos devem ser implementados em classes que derivam de <see cref="T:System.Drawing.Design.ToolboxItem" /> classe para dar suporte à persistência no banco de dados de caixa de ferramentas fornecido pelo alguns ambientes de desenvolvimento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino (consulte <see cref="T:System.Runtime.Serialization.StreamingContext" />) desta serialização.</param>
+        <summary>Para obter uma descrição desse membro, consulte o método <see cref="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Drawing.Design.ToolboxItem> é convertida em uma interface de <xref:System.Runtime.Serialization.ISerializable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> que representa o atual <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o atual <see cref="T:System.Drawing.Design.ToolboxItem" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome totalmente qualificado do tipo de <see cref="T:System.ComponentModel.IComponent" /> que o item de caixa de ferramentas cria quando invocado.</summary>
+        <value>O nome de tipo totalmente qualificado do tipo de componente criado por este item de caixa de ferramentas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.TypeName%2A> propriedade especifica o nome de tipo totalmente qualificado do tipo de componente a ser criado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se uma classe de item de caixa de ferramentas derivadas cria vários componentes, essa propriedade deve ser definida, a menos que seu <see cref="M:System.Drawing.Design.ToolboxItem.CreateComponentsCore(System.ComponentModel.Design.IDesignerHost)" /> substituição de método não depende do valor dessa propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatePropertyType">
+      <MemberSignature Language="C#" Value="protected void ValidatePropertyType (string propertyName, object value, Type expectedType, bool allowNull);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ValidatePropertyType(string propertyName, object value, class System.Type expectedType, bool allowNull) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.ValidatePropertyType(System.String,System.Object,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="expectedType" Type="System.Type" />
+        <Parameter Name="allowNull" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade para validar.</param>
+        <param name="value">Valor opcional no qual você quer validar.</param>
+        <param name="expectedType">O tipo esperado da propriedade.</param>
+        <param name="allowNull">
+          <see langword="true" />para permitir <see langword="null" />; caso contrário, <see langword="false" />.</param>
+        <summary>Confirma que um objeto de um determinado tipo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.ValidatePropertyType%2A> método é chamado como um método auxiliar para o <xref:System.Drawing.Design.ToolboxItem.ValidatePropertyValue%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" />is <see langword="null" />, and <paramref name="allowNull" /> is <see langword="false" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />não é do tipo especificado pelo <paramref name="expectedType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatePropertyValue">
+      <MemberSignature Language="C#" Value="protected virtual object ValidatePropertyValue (string propertyName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object ValidatePropertyValue(string propertyName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItem.ValidatePropertyValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade para validar.</param>
+        <param name="value">O valor no qual você quer validar.</param>
+        <summary>Valida uma propriedade antes de ser atribuído ao dicionário de propriedade.</summary>
+        <returns>O valor usado para executar a validação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItem.ValidatePropertyValue%2A> método é chamado sempre que um valor é definido no dicionário de propriedades. Com esse método, você pode alterar o valor de um objeto antes de confirmá-la ou rejeitá-la, lançando uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" />é <see langword="null" />, e <paramref name="propertyName" /> é "IsTransient".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public virtual string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItem.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão desta <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <value>Um <see cref="T:System.String" /> que especifica a versão para este <see cref="T:System.Drawing.Design.ToolboxItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

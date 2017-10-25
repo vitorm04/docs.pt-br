@@ -1,0 +1,434 @@
+<Type Name="CommaDelimitedStringCollection" FullName="System.Configuration.CommaDelimitedStringCollection">
+  <TypeSignature Language="C#" Value="public sealed class CommaDelimitedStringCollection : System.Collections.Specialized.StringCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CommaDelimitedStringCollection extends System.Collections.Specialized.StringCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.CommaDelimitedStringCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.StringCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de elementos de cadeia de caracteres separados por vírgulas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa uma coleção de cadeia de caracteres que é serializada como uma lista delimitada por vírgulas de elementos de cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.CommaDelimitedStringCollection> tipo.  
+  
+ [!code-csharp[System.Configuration.CommaDelimitedStringCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/CS/CommaDelimitedStringCollection.cs#1)]
+ [!code-vb[System.Configuration.CommaDelimitedStringCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/VB/CommaDelimitedStringCollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommaDelimitedStringCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CommaDelimitedStringCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Configuration.CommaDelimitedStringCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.CommaDelimitedStringCollection.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Configuration.CommaDelimitedStringCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Configuration.CommaDelimitedStringCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/CS/CommaDelimitedStringCollection.cs#2)]
+ [!code-vb[System.Configuration.CommaDelimitedStringCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/VB/CommaDelimitedStringCollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CommaDelimitedStringCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor da cadeia de caracteres.</param>
+        <summary>Adiciona uma cadeia de caracteres para a coleção delimitada por vírgulas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz com que o <xref:System.Configuration.CommaDelimitedStringCollection.IsModified%2A> propriedade a ser definida `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (string[] range);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(string[] range) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CommaDelimitedStringCollection.AddRange(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="range" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="range">Uma matriz de cadeias de caracteres para adicionar à coleção.</param>
+        <summary>Adiciona as cadeias de caracteres em uma matriz de cadeia de caracteres na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `range` parâmetro deve ser uma matriz em vez de uma cadeia de caracteres delimitada por vírgulas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.CommaDelimitedStringCollection.AddRange%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Configuration.CommaDelimitedStringCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Configuration.CommaDelimitedStringCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/CS/CommaDelimitedStringCollection.cs#3)]
+ [!code-vb[System.Configuration.CommaDelimitedStringCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/VB/CommaDelimitedStringCollection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CommaDelimitedStringCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz com que o <xref:System.Configuration.CommaDelimitedStringCollection.IsModified%2A> propriedade a ser definida `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Configuration.CommaDelimitedStringCollection Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Configuration.CommaDelimitedStringCollection Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CommaDelimitedStringCollection.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.CommaDelimitedStringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia da coleção.</summary>
+        <returns>Uma cópia do <see cref="T:System.Configuration.CommaDelimitedStringCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CommaDelimitedStringCollection.Insert(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice da coleção na qual o novo elemento será adicionado.</param>
+        <param name="value">O valor do novo elemento a ser adicionado à coleção.</param>
+        <summary>Adiciona um elemento de cadeia de caracteres na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz com que o <xref:System.Configuration.CommaDelimitedStringCollection.IsModified%2A> propriedade a ser definida `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.CommaDelimitedStringCollection.Insert%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Configuration.CommaDelimitedStringCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Configuration.CommaDelimitedStringCollection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/CS/CommaDelimitedStringCollection.cs#9)]
+ [!code-vb[System.Configuration.CommaDelimitedStringCollection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/VB/CommaDelimitedStringCollection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="public bool IsModified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsModified" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.CommaDelimitedStringCollection.IsModified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a coleção foi modificada.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Configuration.CommaDelimitedStringCollection" /> foi modificada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.CommaDelimitedStringCollection.IsModified%2A> é de propriedade `true` depois que o <xref:System.Configuration.CommaDelimitedStringCollection.Add%2A>, <xref:System.Configuration.CommaDelimitedStringCollection.Clear%2A>, <xref:System.Configuration.CommaDelimitedStringCollection.Insert%2A>, ou <xref:System.Configuration.CommaDelimitedStringCollection.Remove%2A> método foi chamado. Além disso, o <xref:System.Configuration.CommaDelimitedStringCollection.IsModified%2A> é de propriedade `true` depois que o <xref:System.Configuration.CommaDelimitedStringCollection.Item%2A> propriedade é usada para modificar um elemento da coleção de cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.CommaDelimitedStringCollection.IsModified%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Configuration.CommaDelimitedStringCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Configuration.CommaDelimitedStringCollection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/CS/CommaDelimitedStringCollection.cs#7)]
+ [!code-vb[System.Configuration.CommaDelimitedStringCollection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/VB/CommaDelimitedStringCollection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.CommaDelimitedStringCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto de coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o elemento de cadeia de caracteres especificada no <see cref="T:System.Configuration.CommaDelimitedStringCollection" /> é somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna `true` se a coleção está marcada como somente leitura. Isso é útil para proteger o elemento em tempo de execução, em vez de tempo de design. Para obter mais informações, consulte o <xref:System.Configuration.ConfigurationElement.IsReadOnly%2A> método sobre o <xref:System.Configuration.ConfigurationElement?displayProperty=nameWithType> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.CommaDelimitedStringCollection.IsReadOnly%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Configuration.CommaDelimitedStringCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Configuration.CommaDelimitedStringCollection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/CS/CommaDelimitedStringCollection.cs#8)]
+ [!code-vb[System.Configuration.CommaDelimitedStringCollection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/VB/CommaDelimitedStringCollection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.CommaDelimitedStringCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do elemento a cadeia de caracteres na coleção.</param>
+        <summary>Obtém ou define um elemento de cadeia de caracteres na coleção com base no índice.</summary>
+        <value>Um elemento de cadeia de caracteres na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade permite que uma cadeia de caracteres da coleção a ser definido ou recuperado com base em seu índice na coleção. Essa propriedade também faz com que o <xref:System.Configuration.CommaDelimitedStringCollection.IsModified%2A> propriedade a ser definida `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CommaDelimitedStringCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser removido.</param>
+        <summary>Remove um elemento de cadeia de caracteres da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz com que o <xref:System.Configuration.CommaDelimitedStringCollection.IsModified%2A> propriedade a ser definida `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.CommaDelimitedStringCollection.Remove%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Configuration.CommaDelimitedStringCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Configuration.CommaDelimitedStringCollection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/CS/CommaDelimitedStringCollection.cs#10)]
+ [!code-vb[System.Configuration.CommaDelimitedStringCollection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.CommaDelimitedStringCollection/VB/CommaDelimitedStringCollection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="public void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CommaDelimitedStringCollection.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o objeto de coleção somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para determinar se o <xref:System.Configuration.CommaDelimitedStringCollection> coleção pode ser modificado, chame o <xref:System.Configuration.CommaDelimitedStringCollection.IsReadOnly%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CommaDelimitedStringCollection.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres do objeto.</summary>
+        <returns>Uma representação de cadeia de caracteres do objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

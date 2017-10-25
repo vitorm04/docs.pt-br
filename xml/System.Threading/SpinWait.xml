@@ -1,0 +1,437 @@
+<Type Name="SpinWait" FullName="System.Threading.SpinWait">
+  <TypeSignature Language="C#" Value="public struct SpinWait" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SpinWait extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.SpinWait" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte à espera baseada em rotação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.SpinWait>encapsula a lógica de rotação comuns. Em máquinas de processador único, produz é sempre usados em vez de esperas ocupadas e em computadores com processadores Intel utilizar a tecnologia Hyper-Threading, ele ajuda a evitar a privação de thread de hardware. SpinWait encapsula uma mistura de boa de rotação e gerando true.  
+  
+ <xref:System.Threading.SpinWait>é um tipo de valor, o que significa que o código de nível inferior pode utilizar SpinWait sem medo de sobrecarga desnecessária de alocação. SpinWait não geralmente é útil para aplicativos comuns. Na maioria dos casos, você deve usar as classes de sincronização fornecidas pelo .NET Framework, como <xref:System.Threading.Monitor>. Geral em que espera de rotação é necessária, no entanto, o <xref:System.Threading.SpinWait> tipo deve ser preferido sobre o <xref:System.Threading.Thread.SpinWait%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Threading.SpinWait>:  
+  
+ [!code-csharp[System.Threading.SpinWait#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.spinwait/cs/spinwait.cs#01)]
+ [!code-vb[System.Threading.SpinWait#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.spinwait/vb/spinwait.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Enquanto <see cref="T:System.Threading.SpinWait" /> é projetado para ser usado em aplicativos simultâneos, ele não foi projetado para ser usado em vários threads ao mesmo tempo. <see cref="T:System.Threading.SpinWait" />membros não são thread-safe. Se vários threads devem girar, cada um deve usar sua própria instância do <see cref="T:System.Threading.SpinWait" />.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SpinWait.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de vezes que <see cref="M:System.Threading.SpinWait.SpinOnce" /> foi chamado nessa instância.</summary>
+        <value>Retorna um inteiro que representa o número de vezes que <see cref="M:System.Threading.SpinWait.SpinOnce" /> foi chamado nessa instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextSpinWillYield">
+      <MemberSignature Language="C#" Value="public bool NextSpinWillYield { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NextSpinWillYield" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SpinWait.NextSpinWillYield" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se a próxima chamada para <see cref="M:System.Threading.SpinWait.SpinOnce" /> produzirá o processador, disparar uma alternância de contexto forçado.</summary>
+        <value>Se a próxima chamada para <see cref="M:System.Threading.SpinWait.SpinOnce" /> produzirá o processador, disparar uma alternância de contexto forçado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um computador único CPU, <xref:System.Threading.SpinWait.SpinOnce%2A> sempre produz o processador. Em computadores com várias CPUs, <xref:System.Threading.SpinWait.SpinOnce%2A> pode resultar em após um número especificado de chamadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinWait.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o contador de rotação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso torna <xref:System.Threading.SpinWait.SpinOnce%2A> e <xref:System.Threading.SpinWait.NextSpinWillYield%2A> se comportam como se nenhuma chamada para <xref:System.Threading.SpinWait.SpinOnce%2A> tiver sido emitida nessa instância. Se um <xref:System.Threading.SpinWait> instância é reutilizada muitas vezes, pode ser útil para redefini-la para evitar respondendo muito em breve.  
+  
+   
+  
+## Examples  
+ Este é um exemplo de como usar SpinWait em uma implementação simples de pilha sem bloqueio. (Isso é apenas um exemplo. Se for necessária uma pilha eficiente, thread-safe, considere o uso ConcurrentStack.)  
+  
+ `// C#`  
+  
+ `public class LockFreeStack<T>`  
+  
+ `{`  
+  
+ `private volatile Node m_head;`  
+  
+ `private class Node { public Node Next; public T Value; }`  
+  
+ `public void Push(T item)`  
+  
+ `{`  
+  
+ `var spin = new SpinWait();`  
+  
+ `Node node = new Node { Value = item }, head;`  
+  
+ `while (true)`  
+  
+ `{`  
+  
+ `head = m_head;`  
+  
+ `node.Next = head;`  
+  
+ `if (Interlocked.CompareExchange(ref m_head, node, head) == head) break;`  
+  
+ `spin.SpinOnce();`  
+  
+ `}`  
+  
+ `}`  
+  
+ `public bool TryPop(out T result)`  
+  
+ `{`  
+  
+ `result = default(T);`  
+  
+ `var spin = new SpinWait();`  
+  
+ `Node head;`  
+  
+ `while (true)`  
+  
+ `{`  
+  
+ `head = m_head;`  
+  
+ `if (head == null) return false;`  
+  
+ `if (Interlocked.CompareExchange(ref m_head, head.Next, head) == head)`  
+  
+ `{`  
+  
+ `result = head.Value;`  
+  
+ `return true;`  
+  
+ `}`  
+  
+ `spin.SpinOnce();`  
+  
+ `}`  
+  
+ `}`  
+  
+ `}`  
+  
+ `' Visual Basic`  
+  
+ `Public Class LockFreeStack(Of T)`  
+  
+ `Private m_head As Node`  
+  
+ `Private Class Node`  
+  
+ `Public [Next] As Node`  
+  
+ `Public Value As T`  
+  
+ `End Class`  
+  
+ `Public Sub Push(ByVal item As T)`  
+  
+ `Dim spin As New SpinWait()`  
+  
+ `Dim head As Node, node As New Node With {.Value = item}`  
+  
+ `While True`  
+  
+ `Thread.MemoryBarrier()`  
+  
+ `head = m_head`  
+  
+ `node.Next = head`  
+  
+ `If Interlocked.CompareExchange(m_head, node, head) Is head Then Exit While`  
+  
+ `spin.SpinOnce()`  
+  
+ `End While`  
+  
+ `End Sub`  
+  
+ `Public Function TryPop(ByRef result As T) As Boolean`  
+  
+ `result = CType(Nothing, T)`  
+  
+ `Dim spin As New SpinWait()`  
+  
+ `Dim head As Node`  
+  
+ `While True`  
+  
+ `Thread.MemoryBarrier()`  
+  
+ `head = m_head`  
+  
+ `If head Is Nothing Then Return False`  
+  
+ `If Interlocked.CompareExchange(m_head, head.Next, head) Is head Then`  
+  
+ `result = head.Value`  
+  
+ `Return True`  
+  
+ `End If`  
+  
+ `spin.SpinOnce()`  
+  
+ `End While`  
+  
+ `End Function`  
+  
+ `End Class`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpinOnce">
+      <MemberSignature Language="C#" Value="public void SpinOnce ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SpinOnce() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinWait.SpinOnce" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa uma única rotação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso geralmente é chamado em um loop e pode ser alterado no comportamento com base no número de vezes que um <xref:System.Threading.SpinWait.SpinOnce%2A> foi chamado até o momento nesta instância. Cada rotação resulta no <xref:System.Threading.Thread.SpinWait%2A> método ser chamado. É mantida uma contagem do número de vezes <xref:System.Threading.SpinWait.SpinOnce%2A> é chamado, e depois uma contagem do limite for atingida, o <xref:System.Threading.Thread.Yield%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpinUntil">
+      <MemberSignature Language="C#" Value="public static void SpinUntil (Func&lt;bool&gt; condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SpinUntil(class System.Func`1&lt;bool&gt; condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Func&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Um delegado a ser executado repetidamente até retornar true.</param>
+        <summary>Gira até que a condição especificada seja atendida.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="condition" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SpinUntil">
+      <MemberSignature Language="C#" Value="public static bool SpinUntil (Func&lt;bool&gt; condition, int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SpinUntil(class System.Func`1&lt;bool&gt; condition, int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean},System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Func&lt;System.Boolean&gt;" />
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Um delegado a ser executado repetidamente até retornar true.</param>
+        <param name="millisecondsTimeout">O número de milissegundos para aguardar ou <see cref="F:System.Threading.Timeout.Infinite" /> (- 1) para aguardar indefinidamente.</param>
+        <summary>Gira até que a condição especificada seja atendida ou até que o tempo limite especificado expire.</summary>
+        <returns>True se a condição for atendida dentro do tempo limite; caso contrário, false</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="condition" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> é um número negativo diferente de -1, que representa um tempo limite infinito.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SpinUntil">
+      <MemberSignature Language="C#" Value="public static bool SpinUntil (Func&lt;bool&gt; condition, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SpinUntil(class System.Func`1&lt;bool&gt; condition, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SpinWait.SpinUntil(System.Func{System.Boolean},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Func&lt;System.Boolean&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Um delegado a ser executado repetidamente até retornar true.</param>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que representa o número de milissegundos de espera, ou um TimeSpan que representa-1 milissegundos a aguardar indefinidamente.</param>
+        <summary>Gira até que a condição especificada seja atendida ou até que o tempo limite especificado expire.</summary>
+        <returns>True se a condição for atendida dentro do tempo limite; caso contrário, false</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="condition" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é um número negativo diferente de -1 milissegundos, que representa um tempo limite infinito ou o tempo limite é maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

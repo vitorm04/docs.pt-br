@@ -1,0 +1,72 @@
+<Type Name="XmlSchemaUnique" FullName="System.Xml.Schema.XmlSchemaUnique">
+  <TypeSignature Language="C#" Value="public class XmlSchemaUnique : System.Xml.Schema.XmlSchemaIdentityConstraint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaUnique extends System.Xml.Schema.XmlSchemaIdentityConstraint" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaUnique" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaIdentityConstraint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento <see langword="unique" /> do esquema XML, conforme especificado pelo W3C (World Wide Web Consortium). Essa classe pode ser usada para identificar uma restrição exclusiva entre um conjunto de elementos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifica que um valor de atributo ou elemento (ou uma combinação de valores de atributo ou elemento) deve ser exclusivo dentro do escopo especificado. O nome da restrição deve ser exclusivo dentro de um esquema.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso da `XmlSchemaUnique` classe.  
+  
+ [!code-cpp[Classic WebData XmlSchemaUnique Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic Webdata XmlSchemaUnique Example/CPP/unique.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaUnique Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic Webdata XmlSchemaUnique Example/CS/unique.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaUnique Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic Webdata XmlSchemaUnique Example/VB/unique.vb#1)]  
+  
+ O seguinte arquivo XML é gerado para este exemplo de código.  
+  
+ [!code-xml[Classic WebData XmlSchemaUnique Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic Webdata XmlSchemaUnique Example/XML/example.xsd#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaUnique ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaUnique.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaUnique" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

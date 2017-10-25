@@ -1,0 +1,565 @@
+<Type Name="IXpsFixedPageWriter" FullName="System.Windows.Xps.Packaging.IXpsFixedPageWriter">
+  <TypeSignature Language="C#" Value="public interface IXpsFixedPageWriter : System.Windows.Xps.Packaging.IStoryFragmentProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXpsFixedPageWriter implements class System.Windows.Xps.Packaging.IStoryFragmentProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.IXpsFixedPageWriter" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Xps.Packaging.IStoryFragmentProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define métodos para gravação <see cref="T:System.Windows.Documents.FixedPage" /> partes de um documento XPS.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.AddFixedPage%2A> método para obter um gravador de página fixa para a adição de páginas para um <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateadddoccontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateadddoccontent)]
+ [!code-vb[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateadddoccontent)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddColorContext">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsColorContext AddColorContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsColorContext AddColorContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddColorContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsColorContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Xps.Packaging.XpsColorContext" /> à página atual.</summary>
+        <returns>O novo recurso de contexto de cor que foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddColorContext%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsColorContext> para o pacote de documento e a associa atual <xref:System.Windows.Documents.FixedPage>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="M:System.IDisposable.Dispose" />foi chamado.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddFont">
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Xps.Packaging.XpsFont" /> à página atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsFont> para o pacote de documento e a associa atual <xref:System.Windows.Documents.FixedPage>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddFont">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsFont AddFont ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsFont AddFont() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsFont</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Xps.Packaging.XpsFont" /> à página atual.</summary>
+        <returns>O novo recurso de fonte que foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsFont> para o pacote de documento e a associa atual <xref:System.Windows.Documents.FixedPage>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont%2A> para adicionar um recurso de fonte para uma página.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="M:System.IDisposable.Dispose" />foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFont">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsFont AddFont (bool obfuscate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsFont AddFont(bool obfuscate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsFont</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obfuscate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="obfuscate">
+          <see langword="true" />Para ofuscar da fonte. Caso contrário, <see langword="false" />.</param>
+        <summary>Adiciona um novo ofuscado <see cref="T:System.Windows.Xps.Packaging.XpsFont" /> à página atual.</summary>
+        <returns>O novo recurso de fonte que foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsFont> com ofuscação opcional para o pacote de documento e a associa atual <xref:System.Windows.Documents.FixedPage>.  
+  
+ Definir o `obfuscate` parâmetro `true` quando estiver legalmente obrigados a ofuscar uma fonte de proprietária licenciada.  Enquanto o obscurecimento não criptografa a fonte, ele inibe descompactar proprietárias fontes e instalá-los separadamente para outros usos.  
+  
+ Para obter mais informações sobre a ofuscação de fonte, consulte a seção 2.1.7.3 "Ofuscação de fonte incorporada" no *XML Paper Specification (XPS)* disponível para download em [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont%2A> método para adicionar um recurso de fonte para uma página.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="M:System.IDisposable.Dispose" />foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFont">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsFont AddFont (bool obfuscate, bool addRestrictedRelationship);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsFont AddFont(bool obfuscate, bool addRestrictedRelationship) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsFont</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obfuscate" Type="System.Boolean" />
+        <Parameter Name="addRestrictedRelationship" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="obfuscate">
+          <see langword="true" />Para ofuscar da fonte. Caso contrário, <see langword="false" />.</param>
+        <param name="addRestrictedRelationship">
+          <see langword="true" />Para impedir a modificação de qualquer texto que usa a fonte. Caso contrário, <see langword="false" />.</param>
+        <summary>Adiciona um novo ocultado ou restrito <see cref="T:System.Windows.Xps.Packaging.XpsFont" /> à página atual.</summary>
+        <returns>O novo recurso de fonte que foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsFont> com ofuscação opcional ou restrições para o pacote de documento e o associa ao atual <xref:System.Windows.Documents.FixedPage>.  
+  
+ Definir o `obfuscate` parâmetro `true` quando estiver legalmente obrigados a ofuscar uma fonte de proprietária licenciada.  Enquanto o obscurecimento não criptografa a fonte, ele inibe descompactar proprietárias fontes e instalá-los separadamente para outros usos.  
+  
+ Para obter mais informações sobre o obscurecimento de fonte e o uso de fontes restritas, consulte o *XML Paper Specification (XPS)* disponível para download em [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont%2A> para adicionar um recurso de fonte para uma página.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="M:System.IDisposable.Dispose" />foi chamado.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddImage">
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Xps.Packaging.XpsImage" /> à página atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsImage> para o pacote de documento e a associa atual <xref:System.Windows.Documents.FixedPage>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddImage">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsImage AddImage (string mimeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsImage AddImage(string mimeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsImage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mimeType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mimeType">O [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] tipo de imagem para adicionar.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Xps.Packaging.XpsImage" /> com determinado [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] tipo à página atual.</summary>
+        <returns>O novo recurso de imagem que foi adicionado à página</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsImage> com determinado `mimeType` para o pacote de documento e a associa atual <xref:System.Windows.Documents.FixedPage>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage%2A> para adicionar um recurso de imagem para uma página.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="M:System.IDisposable.Dispose" />foi chamado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mimeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mimeType" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddImage">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsImage AddImage (System.Windows.Xps.Packaging.XpsImageType imageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsImage AddImage(valuetype System.Windows.Xps.Packaging.XpsImageType imageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage(System.Windows.Xps.Packaging.XpsImageType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsImage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageType" Type="System.Windows.Xps.Packaging.XpsImageType" />
+      </Parameters>
+      <Docs>
+        <param name="imageType">O tipo de imagem para adicionar à página.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Xps.Packaging.XpsImage" /> com determinado <see cref="T:System.Windows.Xps.Packaging.XpsImageType" /> à página atual.</summary>
+        <returns>O novo recurso de imagem que foi adicionado à página</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsImage> com especificado <xref:System.Windows.Xps.Packaging.XpsImageType> para o pacote de documento e a associa atual <xref:System.Windows.Documents.FixedPage>.  
+  
+ Por exemplo, `imageType` pode ser <xref:System.Windows.Xps.Packaging.XpsImageType.JpegImageType> ou <xref:System.Windows.Xps.Packaging.XpsImageType.PngImageType>. Para adicionar um JPEG ou PNG <xref:System.Windows.Xps.Packaging.XpsImage>, respectivamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage%2A> para adicionar um recurso de imagem para uma página.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="M:System.IDisposable.Dispose" />foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsResource AddResource (Type resourceType, Uri resourceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsResource AddResource(class System.Type resourceType, class System.Uri resourceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddResource(System.Type,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsResource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceType" Type="System.Type" />
+        <Parameter Name="resourceUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="resourceType">O tipo de recurso para adicionar.</param>
+        <param name="resourceUri">O caminho absoluto do recurso para adicionar, ou <see langword="null" />.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Xps.Packaging.XpsResource" /> à página atual.</summary>
+        <returns>O novo [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] recurso que foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddResource%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsResource> para o pacote de documento e o associa ao atual <xref:System.Windows.Documents.FixedPage>.  
+  
+ Se `resourceUri` é `null`, um recurso exclusivo <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.Uri%2A> é criado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="M:System.IDisposable.Dispose" />foi chamado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="resourceType" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResourceDictionary">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsResourceDictionary AddResourceDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsResourceDictionary AddResourceDictionary() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddResourceDictionary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsResourceDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona um <see cref="T:System.Windows.Xps.Packaging.XpsResourceDictionary" /> para a página.</summary>
+        <returns>O <see cref="T:System.Windows.Xps.Packaging.XpsResourceDictionary" /> que foi adicionado à página.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddResourceDictionary%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsResourceDictionary> para o pacote de documento e a associa atual <xref:System.Windows.Documents.FixedPage>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="M:System.IDisposable.Dispose" />foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddThumbnail">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsThumbnail AddThumbnail (System.Windows.Xps.Packaging.XpsImageType imageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsThumbnail AddThumbnail(valuetype System.Windows.Xps.Packaging.XpsImageType imageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddThumbnail(System.Windows.Xps.Packaging.XpsImageType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsThumbnail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageType" Type="System.Windows.Xps.Packaging.XpsImageType" />
+      </Parameters>
+      <Docs>
+        <param name="imageType">O tipo de imagem da imagem em miniatura para adicionar à página.</param>
+        <summary>Adiciona uma imagem em miniatura de um especificado <see cref="T:System.Windows.Xps.Packaging.XpsImageType" /> à página atual.</summary>
+        <returns>O novo recurso de imagem em miniatura que foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddThumbnail%2A>Adiciona um novo <xref:System.Windows.Xps.Packaging.XpsImageType> para o pacote de documento e a associa atual <xref:System.Windows.Documents.FixedPage>.  
+  
+ Por exemplo, `imageType` pode ser <xref:System.Windows.Xps.Packaging.XpsImageType.JpegImageType> ou <xref:System.Windows.Xps.Packaging.XpsImageType.PngImageType>. Para adicionar uma imagem em miniatura JPEG ou PNG, respectivamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddThumbnail(System.Windows.Xps.Packaging.XpsImageType)" />já foi chamado para adicionar uma miniatura da imagem para essa página.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="M:System.IDisposable.Dispose" />foi chamado.</exception>
+        <block subset="none" type="overrides">
+          <para>Cada página pode conter apenas com uma miniatura.  Um <see cref="T:System.InvalidOperationException" /> é gerada se <see cref="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddThumbnail(System.Windows.Xps.Packaging.XpsImageType)" /> é chamado para adicionar mais de uma imagem em miniatura para a página.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedPageWriter.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera e fecha o gravador de página fixa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com base nas configurações de <xref:System.Windows.Xps.Serialization.XpsSerializationManager> e <xref:System.Windows.Xps.Serialization.XpsPackagingPolicy>, como <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies> e <xref:System.Windows.Xps.Packaging.PackageInterleavingOrder>, a operação de liberação do <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.Commit%2A> método pode ser atrasado até a conclusão <xref:System.Windows.Xps.Packaging.XpsDocument> está fechado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como liberar e fechar o gravador de página fixa com o <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.Commit%2A> método.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateadddoccontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateadddoccontent)]
+ [!code-vb[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateadddoccontent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkTargetStream">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; LinkTargetStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; LinkTargetStream" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageWriter.LinkTargetStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de cadeias de caracteres que identificam o <see cref="T:System.Windows.Documents.LinkTarget" /> pontos de hiperlink que estão contidos na página atual.</summary>
+        <value>Uma lista de cadeias de caracteres que identificam o <see cref="T:System.Windows.Documents.LinkTarget" /> pontos de hiperlink que estão contidos na página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A lista de <xref:System.Windows.Documents.LinkTarget> pontos hiperlink está disponível depois que a página foi gravada e o <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.Commit%2A> método foi chamado.  
+  
+ Para obter informações sobre <xref:System.Windows.Documents.LinkTarget> elementos consulte a seção 3.2.3 "\<LinkTarget > elemento" no *XML Paper Specification (XPS)* disponível para download em [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageNumber">
+      <MemberSignature Language="C#" Value="public int PageNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageWriter.PageNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número da página de base zero dessa página.</summary>
+        <value>O número da página de base zero dessa página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.PageNumber%2A> propriedade retorna o número da página com base em zero para este <xref:System.Windows.Documents.FixedPage> do documento.  (<xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.PageNumber%2A> valor zero é a primeira página.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket PrintTicket { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket PrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageWriter.PrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define as opções de impressão padrão para a página.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageWriter.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da página fixa.</summary>
+        <value>O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da página fixa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlWriter">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlWriter XmlWriter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlWriter XmlWriter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedPageWriter.XmlWriter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xml.XmlWriter" /> para gravação [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] marcação para a página.</summary>
+        <value>O <see cref="T:System.Xml.XmlWriter" /> para gravação [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] marcação para a página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.XmlWriter%2A> método para obter um <xref:System.Xml.XmlWriter>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateadddoccontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateadddoccontent)]
+ [!code-vb[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateadddoccontent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

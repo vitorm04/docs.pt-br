@@ -1,0 +1,162 @@
+<Type Name="SoapDocumentServiceAttribute" FullName="System.Web.Services.Protocols.SoapDocumentServiceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SoapDocumentServiceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapDocumentServiceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A aplicação do <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> opcional para um serviço Web XML define o formato padrão das solicitações e respostas SOAP enviadas de e para métodos do serviço Web XML dentro do serviço Web XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> permite que você defina a formatação de estilos para métodos de serviço Web XML dentro de um serviço Web XML padrão. Se um método de serviço Web XML individual deve alterar esses padrões, aplique um <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> para esse método de serviço da Web em XML.  
+  
+ WSDL Web Services Description Language () define dois estilos para como um método de serviço da Web em XML, que chama uma operação, pode ser formatado de uma solicitação SOAP ou uma resposta SOAP: `RPC` e `Document`. Exatamente como as partes individuais de mensagem é determinado pelo <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use%2A> e <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle%2A> propriedades. O <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use%2A> propriedade determina se os parâmetros são formatados `Encoded` ou `Literal`. O <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle%2A> determina se os parâmetros são encapsulados em uma parte da mensagem única sob o `Body` elemento, ou se cada parâmetro é uma parte de mensagem individual.  
+  
+ Para definir o nível de método padrão de formatação para `RPC`, aplicar um <xref:System.Web.Services.Protocols.SoapRpcServiceAttribute> para a classe que implementa o serviço Web XML.  
+  
+ Para obter mais detalhes, consulte [&#91;\< Topic://cpconCustomizingSOAPInASPNETWebServicesWebServiceClients > &#93; ](http://msdn.microsoft.com/en-us/1d777288-c0d9-4e6a-b638-f010da031952).  
+  
+ Esse atributo pode ser aplicado a uma classe de implementação de um serviço Web XML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDocumentServiceAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapDocumentServiceAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> classe definir todas as propriedades para seus valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDocumentServiceAttribute (System.Web.Services.Description.SoapBindingUse use);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Services.Description.SoapBindingUse use) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapDocumentServiceAttribute.#ctor(System.Web.Services.Description.SoapBindingUse)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="use" Type="System.Web.Services.Description.SoapBindingUse" />
+      </Parameters>
+      <Docs>
+        <param name="use">O parâmetro de formatação do serviço da Web em XML. Define a propriedade <see cref="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> classe definindo a formatação de parâmetro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapDocumentServiceAttribute (System.Web.Services.Description.SoapBindingUse use, System.Web.Services.Protocols.SoapParameterStyle paramStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Services.Description.SoapBindingUse use, valuetype System.Web.Services.Protocols.SoapParameterStyle paramStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapDocumentServiceAttribute.#ctor(System.Web.Services.Description.SoapBindingUse,System.Web.Services.Protocols.SoapParameterStyle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="use" Type="System.Web.Services.Description.SoapBindingUse" />
+        <Parameter Name="paramStyle" Type="System.Web.Services.Protocols.SoapParameterStyle" />
+      </Parameters>
+      <Docs>
+        <param name="use">O estilo de formatação de parâmetro. Define a propriedade <see cref="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use" />.</param>
+        <param name="paramStyle">Define se os parâmetros são encapsulados em um único elemento XML, sob o <see langword="Body" /> elemento em mensagens SOAP enviadas para e de métodos de serviço Web XML dentro do serviço da Web em XML. Define a propriedade <see cref="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapDocumentServiceAttribute" /> classe que define a formatação de parâmetro e define se os parâmetros são encapsulados em um único elemento XML, sob o <see langword="Body" /> elemento nas mensagens de SOAP.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterStyle">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapParameterStyle ParameterStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapParameterStyle ParameterStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapParameterStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a configuração que controla se os parâmetros são encapsulados em seguir um único elemento padrão de <see langword="&lt;Body&gt;" /> elemento na parte do XML de uma mensagem SOAP para métodos de serviço da Web em XML do serviço Web XML.</summary>
+        <value>O padrão <see cref="T:System.Web.Services.Protocols.SoapParameterStyle" /> para solicitações SOAP e respostas SOAP para e de métodos de serviço Web XML dentro do serviço da Web em XML. Se não estiver definida, o padrão é <see cref="F:System.Web.Services.Protocols.SoapParameterStyle.Wrapped" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoutingStyle">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapServiceRoutingStyle RoutingStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapServiceRoutingStyle RoutingStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.RoutingStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapServiceRoutingStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define como as mensagens SOAP são roteadas para o serviço Web XML.</summary>
+        <value>Um <see cref="T:System.Web.Services.Protocols.SoapServiceRoutingStyle" /> que representa como as mensagens SOAP são roteadas para o serviço Web XML. O valor padrão é <see cref="F:System.Web.Services.Protocols.SoapServiceRoutingStyle.SoapAction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Use">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapBindingUse Use { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.SoapBindingUse Use" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapBindingUse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro de padrão de formatação para um serviço Web XML.</summary>
+        <value>O padrão <see cref="T:System.Web.Services.Description.SoapBindingUse" /> para o serviço Web XML. Se não estiver definida, o padrão é <see cref="F:System.Web.Services.Description.SoapBindingUse.Literal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O WSDL Web Services Description Language () define dois estilos de formatação para os parâmetros enviados e recebidos os XML Web services: <xref:System.Web.Services.Description.SoapBindingUse.Encoded> e <xref:System.Web.Services.Description.SoapBindingUse.Literal>. <xref:System.Web.Services.Description.SoapBindingUse.Encoded>refere-se a formatação os parâmetros usando a codificação de SOAP descrito na especificação de SOAP na seção 5. <xref:System.Web.Services.Description.SoapBindingUse.Literal>refere-se a formatação os parâmetros usando um esquema XSD predefinido para cada parâmetro.  
+  
+ Para obter mais detalhes, consulte [&#91;\< Topic://cpconCustomizingSOAPInASPNETWebServicesWebServiceClients > &#93; ](http://msdn.microsoft.com/en-us/1d777288-c0d9-4e6a-b638-f010da031952).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,716 @@
+<Type Name="NetNamedPipeBinding" FullName="System.ServiceModel.NetNamedPipeBinding">
+  <TypeSignature Language="C#" Value="public class NetNamedPipeBinding : System.ServiceModel.Channels.Binding, System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NetNamedPipeBinding extends System.ServiceModel.Channels.Binding implements class System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.NetNamedPipeBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.Binding</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IBindingRuntimePreferences</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma associação segura e confiável que é otimizada para a comunicação em computadores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.NetNamedPipeBinding> gera uma pilha de comunicação de tempo de execução por padrão, que usa a segurança de transporte, pipes nomeada para entrega de mensagens e uma codificação de mensagem binária. Essa associação é um apropriado [!INCLUDE[indigo1](~/includes/indigo1-md.md)] opção fornecida pelo sistema para a comunicação na máquina. Ele também dá suporte a transações.  
+  
+ A configuração padrão para o <xref:System.ServiceModel.NetNamedPipeBinding> é semelhante à configuração fornecida pelo <xref:System.ServiceModel.NetTcpBinding>, mas é mais simples porque o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] implementação destina-se apenas para uso na máquina e, consequentemente, há menos recursos expostos. A diferença mais notável é que o <xref:System.ServiceModel.SecurityMode> configuração oferece apenas o <xref:System.ServiceModel.SecurityMode.None> e <xref:System.ServiceModel.SecurityMode.Transport> opções. Suporte de segurança SOAP não é uma opção incluída. O comportamento de segurança é configurável usando opcional `securityMode` parâmetro <xref:System.ServiceModel.NetNamedPipeBinding.%23ctor%28System.ServiceModel.NetNamedPipeSecurityMode%29> o construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a parte do arquivo de configuração que contém a seção para o <xref:System.ServiceModel.NetNamedPipeBinding> com valores definidos para os padrões.  
+  
+  
+  
+ O exemplo a seguir mostra como usar programaticamente o <xref:System.ServiceModel.NetNamedPipeBinding> classe.  
+  
+ [!code-csharp[S_UENetNamedPipe#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.NetNamedPipeBinding" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento de segurança é configurável usando opcional `securityMode` parâmetro no construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetNamedPipeBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.NetNamedPipeBinding" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modo de segurança padrão usado é <xref:System.ServiceModel.NetNamedPipeSecurityMode.Transport>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a parte do arquivo de configuração que contém a seção para o <xref:System.ServiceModel.NetNamedPipeBinding> com valores definidos para os padrões.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetNamedPipeBinding (System.ServiceModel.NetNamedPipeSecurityMode securityMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.NetNamedPipeSecurityMode securityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeBinding.#ctor(System.ServiceModel.NetNamedPipeSecurityMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.NetNamedPipeSecurityMode" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">O <see cref="T:System.ServiceModel.NetNamedPipeSecurityMode" /> pipes nomeados de valor que especifica se a segurança do Windows é usada com.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.NetNamedPipeBinding" /> classe com um modo de segurança especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor quando você deseja configurar a segurança explicitamente. O padrão é <xref:System.ServiceModel.NetNamedPipeSecurityMode.Transport> ao usar o construtor padrão.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UENetNamedPipe#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/snippets.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetNamedPipeBinding (string configurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configurationName">O nome da configuração de associação para o [netNamedPipeBinding elemento](~/docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.NetNamedPipeBinding" /> com um nome de configuração especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor quando deseja inicializar as configurações de associação de configuração.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UENetNamedPipe#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/snippets.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElements">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElementCollection CreateBindingElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElementCollection CreateBindingElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeBinding.CreateBindingElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma coleção com os elementos de associação para a associação.</summary>
+        <returns>O <see cref="T:System.Collections.Generic.ICollection`1" /> do tipo <see cref="T:System.ServiceModel.Channels.BindingElement" /> que compõe a associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UENetNamedPipe#12](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvelopeVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EnvelopeVersion EnvelopeVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EnvelopeVersion EnvelopeVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.EnvelopeVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EnvelopeVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do SOAP que é usado para mensagens processadas por essa associação.</summary>
+        <value>
+          <see cref="P:System.ServiceModel.EnvelopeVersion.Soap12" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ SOAP 1.2 deve ser usado com essa associação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter a versão do SOAP.  
+  
+ [!code-csharp[S_UENetNamedPipe#16](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostNameComparisonMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.HostNameComparisonMode HostNameComparisonMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.HostNameComparisonMode HostNameComparisonMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.HostNameComparisonMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HostNameComparisonMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o nome do host é usado para acessar o serviço ao combinar a URI.</summary>
+        <value>O <see cref="P:System.ServiceModel.Configuration.WSDualHttpBindingElement.HostNameComparisonMode" /> valor que indica se o nome do host é usado para acessar o serviço ao combinar a URI. O valor padrão é <see cref="F:System.ServiceModel.HostNameComparisonMode.StrongWildcard" />, que ignora o nome do host na correspondência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.ServiceModel.NetNamedPipeBinding.HostNameComparisonMode%2A> propriedade.  
+  
+ [!code-csharp[S_UENetNamedPipe#13](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferPoolSize">
+      <MemberSignature Language="C#" Value="public long MaxBufferPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxBufferPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.MaxBufferPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(524288)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de bytes que são usados para armazenar em buffer as mensagens de entrada na memória.</summary>
+        <value>O número máximo de bytes que são usados para armazenar em buffer as mensagens de entrada na memória. O valor padrão é 524.288 bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você receber mais dados que você pode de buffer, os dados que excede o tamanho do buffer permanecem no soquete subjacente até que o buffer tem espaço para o restante dos dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.ServiceModel.NetNamedPipeBinding.MaxBufferPoolSize%2A> valor.  
+  
+ [!code-csharp[S_UENetNamedPipe#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferSize">
+      <MemberSignature Language="C#" Value="public int MaxBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.MaxBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(65536)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de bytes usado para armazenar em buffer as mensagens de entrada na memória.</summary>
+        <value>O número máximo de bytes que são usados para armazenar em buffer as mensagens de entrada na memória. O valor padrão é 65.536 bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você receber mais dados que você pode de buffer, os dados que excede o tamanho do buffer permanecem no soquete subjacente até que o buffer tem espaço para o restante dos dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.ServiceModel.NetNamedPipeBinding.MaxBufferSize%2A> valor.  
+  
+ [!code-csharp[S_UENetNamedPipe#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor definido é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConnections">
+      <MemberSignature Language="C#" Value="public int MaxConnections { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConnections" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.MaxConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de conexões de entrada e saídas, que têm permissão para pontos de extremidade configurados com a associação de pipe nomeado.</summary>
+        <value>O número máximo de conexões de pipe nomeado que são permitidas com esta associação. O valor padrão é 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número máximo de entrada e o número máximo de conexões de saída são definidos para o mesmo valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.ServiceModel.NetNamedPipeBinding.MaxConnections%2A> valores.  
+  
+ [!code-csharp[S_UENetNamedPipe#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReceivedMessageSize">
+      <MemberSignature Language="C#" Value="public long MaxReceivedMessageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxReceivedMessageSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.MaxReceivedMessageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(65536)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo, em bytes, de uma mensagem recebida processada pela associação.</summary>
+        <value>O tamanho máximo (em bytes) para uma mensagem recebida que é processado por meio da associação. O valor padrão é 65.536 bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.ServiceModel.NetNamedPipeBinding.MaxReceivedMessageSize%2A> valor.  
+  
+ [!code-csharp[S_UENetNamedPipe#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReaderQuotas">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReaderQuotas ReaderQuotas { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDictionaryReaderQuotas ReaderQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.ReaderQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as restrições na complexidade das mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação.</summary>
+        <value>O <see cref="T:System.Xml.XmlDictionaryReaderQuotas" /> que especifica as restrições de complexidade em mensagens SOAP trocadas. Os valores padrão para essas restrições são fornecidos na seção Comentários a seguir.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As restrições de complexidade protegem contra uma classe de ataques negação de serviço (DOS) que tentam usar complexidade mensagem unir os recursos de processamento de ponto de extremidade. As propriedades que express essas restrições e seus valores padrão são da seguinte maneira:  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> = 32  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A> = 8192  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> = 16384  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> = 4096  
+  
+-   <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A> = 16384  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.ServiceModel.NetNamedPipeBinding.ReaderQuotas%2A> objeto.  
+  
+ [!code-csharp[S_UENetNamedPipe#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor definido for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o esquema de transporte URI para os canais e ouvintes que estão configurados com essa associação.</summary>
+        <value>Retorna "pipe".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o esquema de transporte URI.  
+  
+ [!code-csharp[S_UENetNamedPipe#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.NetNamedPipeSecurity Security { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.NetNamedPipeSecurity Security" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.Security" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.NetNamedPipeSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que especifica o tipo de segurança usado com serviços configurados com esta associação.</summary>
+        <value>O <see cref="T:System.ServiceModel.NetNamedPipeSecurity" /> que é usado com esta associação. O valor padrão é <see cref="F:System.ServiceModel.NetNamedPipeSecurityMode.Transport" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.NetNamedPipeSecurity> fornece os tipos de configurações de segurança e disponíveis para o <xref:System.ServiceModel.NetNamedPipeBinding>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o tipo de segurança a ser usado com essa associação.  
+  
+ [!code-csharp[S_UENetNamedPipe#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMaxConnections">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMaxConnections ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMaxConnections() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeBinding.ShouldSerializeMaxConnections" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="P:System.ServiceModel.NetNamedPipeBinding.MaxConnections" /> propriedade foi alterado do valor padrão e deve ser serializada.</summary>
+        <returns>
+          <see langword="True" /> se o valor da propriedade <see cref="P:System.ServiceModel.NetNamedPipeBinding.MaxConnections" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeReaderQuotas">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeReaderQuotas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeReaderQuotas() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeBinding.ShouldSerializeReaderQuotas" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="P:System.ServiceModel.NetNamedPipeBinding.ReaderQuotas" /> propriedade foi alterado do valor padrão e deve ser serializada. Isso é usado por [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para integração com o XAML.</summary>
+        <returns>
+          <see langword="true" /> se o valor da propriedade <see cref="P:System.ServiceModel.NetNamedPipeBinding.ReaderQuotas" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSecurity">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeSecurity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeBinding.ShouldSerializeSecurity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="P:System.ServiceModel.NetNamedPipeBinding.Security" /> propriedade foi alterado do valor padrão e deve ser serializada. Isso é usado por [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para integração com o XAML.</summary>
+        <returns>
+          <see langword="true" /> se o valor da propriedade <see cref="P:System.ServiceModel.NetNamedPipeBinding.Security" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeTransactionProtocol">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeTransactionProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeTransactionProtocol() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetNamedPipeBinding.ShouldSerializeTransactionProtocol" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="P:System.ServiceModel.NetNamedPipeBinding.TransactionProtocol" /> propriedade foi alterado do valor padrão e deve ser serializada. Isso é usado por [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para integração com o XAML.</summary>
+        <returns>
+          <see langword="true" /> se o valor da propriedade <see cref="P:System.ServiceModel.NetNamedPipeBinding.TransactionProtocol" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously">
+      <MemberSignature Language="C#" Value="bool System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.System#ServiceModel#Channels#IBindingRuntimePreferences#ReceiveSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as solicitações de entrada são tratadas de forma síncrona ou assíncrona.</summary>
+        <value>
+          <see langword="false" />para indicar que as solicitações de entrada são tratadas de forma assíncrona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra a parte do arquivo de configuração que contém a seção para o <xref:System.ServiceModel.NetNamedPipeBinding> com valores definidos para os padrões.  
+  
+ [!code-csharp[S_UENetNamedPipe#17](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionFlow">
+      <MemberSignature Language="C#" Value="public bool TransactionFlow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransactionFlow" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.TransactionFlow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se devem ser fluxo de transações para o serviço.</summary>
+        <value>
+          <see langword="true" />Se devem ser fluxo de transações do cliente para o serviço. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.NetNamedPipeBinding.TransactionFlow%2A> propriedade permite que você especifique se essa associação deve dar suporte a fluxo de transações.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.ServiceModel.NetNamedPipeBinding.TransactionFlow%2A> a associação.  
+  
+ [!code-csharp[S_UENetNamedPipe#14](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionProtocol">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.TransactionProtocol TransactionProtocol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.TransactionProtocol TransactionProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.TransactionProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransactionProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o protocolo de transações usado pelo serviço para transações de fluxo.</summary>
+        <value>O <see cref="T:System.ServiceModel.TransactionProtocol" /> usado pelo serviço para transações de fluxo. O protocolo padrão é <see cref="P:System.ServiceModel.TransactionProtocol.OleTransactions" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O protocolo WS-AT também pode ser usado ao definir o <xref:System.ServiceModel.TransactionProtocol.WSAtomicTransactionOctober2004%2A> valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.ServiceModel.NetNamedPipeBinding.TransactionProtocol%2A> objeto.  
+  
+ [!code-csharp[S_UENetNamedPipe#15](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.TransferMode TransferMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.TransferMode TransferMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetNamedPipeBinding.TransferMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransferMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o serviço configurado com a associação usa Streaming (em uma ou ambas as direções) ou armazenados em buffer os modos de transferência de mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.TransferMode" /> valor que indica se o serviço configurado com a associação usa Streaming (em uma ou ambas as direções) ou armazenados em buffer modos de transferência de mensagem. O padrão é <see cref="F:System.ServiceModel.TransferMode.Buffered" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É possível transmitir apenas de entrada ou de saída mensagens especificando, respectivamente, <xref:System.ServiceModel.TransferMode.StreamedRequest> ou <xref:System.ServiceModel.TransferMode.StreamedResponse>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.ServiceModel.NetNamedPipeBinding.TransferMode%2A>.  
+  
+ [!code-csharp[S_UENetNamedPipe#18](~/samples/snippets/csharp/VS_Snippets_CFX/s_uenetnamedpipe/cs/service.cs#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

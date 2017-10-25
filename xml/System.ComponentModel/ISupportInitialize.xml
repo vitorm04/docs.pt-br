@@ -1,0 +1,119 @@
+<Type Name="ISupportInitialize" FullName="System.ComponentModel.ISupportInitialize">
+  <TypeSignature Language="C#" Value="public interface ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ISupportInitialize" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica que esse objeto dá suporte a uma notificação transacionada simples para inicialização em lote.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.ISupportInitialize>permite que os controles otimizar várias atribuições de propriedade. Como resultado, você pode inicializar propriedades dependentes colegas ou lote configurar múltiplas propriedades em tempo de design.  
+  
+ Chamar o <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> método para indicar que o objeto que a inicialização está iniciando. Chamar o <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> método para sinalizar que a inicialização for concluído.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.ISupportInitialize> interface inicializar três <xref:System.Windows.Forms.TrackBar> controles.  
+  
+ [!code-cpp[TrackBar#4](~/samples/snippets/cpp/VS_Snippets_Winforms/Trackbar/CPP/form1.cpp#4)]
+ [!code-csharp[TrackBar#4](~/samples/snippets/csharp/VS_Snippets_Winforms/Trackbar/CS/form1.cs#4)]
+ [!code-vb[TrackBar#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Trackbar/VB/form1.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ISupportInitialize.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sinaliza o objeto de que a inicialização está sendo iniciada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.ISupportInitialize> interface inicializar três <xref:System.Windows.Forms.TrackBar> controles.  
+  
+ [!code-cpp[TrackBar#4](~/samples/snippets/cpp/VS_Snippets_Winforms/Trackbar/CPP/form1.cpp#4)]
+ [!code-csharp[TrackBar#4](~/samples/snippets/csharp/VS_Snippets_Winforms/Trackbar/CS/form1.cs#4)]
+ [!code-vb[TrackBar#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Trackbar/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ISupportInitialize.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sinaliza o objeto de que a inicialização está sendo concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.ISupportInitialize> interface inicializar três <xref:System.Windows.Forms.TrackBar> controles.  
+  
+ [!code-cpp[TrackBar#4](~/samples/snippets/cpp/VS_Snippets_Winforms/Trackbar/CPP/form1.cpp#4)]
+ [!code-csharp[TrackBar#4](~/samples/snippets/csharp/VS_Snippets_Winforms/Trackbar/CS/form1.cs#4)]
+ [!code-vb[TrackBar#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Trackbar/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

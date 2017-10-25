@@ -1,0 +1,118 @@
+<Type Name="SoapExtensionReflector" FullName="System.Web.Services.Description.SoapExtensionReflector">
+  <TypeSignature Language="C#" Value="public abstract class SoapExtensionReflector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SoapExtensionReflector extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.SoapExtensionReflector" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface comum e a funcionalidade para classes adicionarem informações de extensão SOAP a um objeto <see cref="T:System.Web.Services.Description.ServiceDescription" /> por método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O resumo <xref:System.Web.Services.Description.SoapExtensionReflector> classe expõe um método abstrato, <xref:System.Web.Services.Description.SoapExtensionReflector.ReflectMethod%2A>. Esse método abstrato permite que uma classe derivada para adicionar as descrições das extensões SOAP ao refletir um método Web em objetos que são colocados em um <xref:System.Web.Services.Description.ServiceDescription> objeto. O próprio método não é uma entrada. As descrições são adicionadas para todos os métodos da Web que pertencem a uma associação especificada que produz um <xref:System.Web.Services.Description.ServiceDescription>.  
+  
+ Você pode usar um <xref:System.Web.Services.Description.ServiceDescription> para gerar um documento WSDL Web Services Description Language () por meio de <xref:System.Web.Services.Description.ServiceDescription.Write%2A> método. O <xref:System.Web.Services.Description.ServiceDescriptionImporter> e classes relacionadas também podem usar um <xref:System.Web.Services.Description.ServiceDescription> para gerar o proxy do cliente de código ou abstrato código do servidor.  
+  
+ Usar uma classe derivada do <xref:System.Web.Services.Description.SoapExtensionReflector> classe junto com uma classe derivada de abstrata <xref:System.Web.Services.Protocols.SoapExtension> mensagens de classe para estender o processamento de tempo de execução do SOAP no cliente ou serviço.  
+  
+ Você pode especificar <xref:System.Web.Services.Description.SoapExtensionReflector> em um arquivo de configuração por meio de [ \<soapExtensionReflectorTypes > elemento](http://msdn.microsoft.com/en-us/6950609a-c9a3-4f6f-a5fc-a05d6d204d5c) elemento e seus filhos **adicionar** elemento. Você também pode aplicar a configuração para um aplicativo Web ASP.NET que publica um serviço Web.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SoapExtensionReflector ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapExtensionReflector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância do <see cref="T:System.Web.Services.Description.SoapExtensionReflector" /> classe</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectDescription">
+      <MemberSignature Language="C#" Value="public virtual void ReflectDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReflectDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapExtensionReflector.ReflectDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera informações de descrição de serviço específico que são colocadas em um <see cref="T:System.Web.Services.Description.ServiceDescription" /> correspondente a uma associação de objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectionContext">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ProtocolReflector ReflectionContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ProtocolReflector ReflectionContext" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapExtensionReflector.ReflectionContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ProtocolReflector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a instância de uma classe derivada de abstrata <see cref="T:System.Web.Services.Description.ProtocolReflector" /> classe que invoca o <see cref="M:System.Web.Services.Description.SoapExtensionReflector.ReflectMethod" /> método.</summary>
+        <value>A instância de uma classe derivada de abstrata <see cref="T:System.Web.Services.Description.ProtocolReflector" /> classe que invoca o <see cref="M:System.Web.Services.Description.SoapExtensionReflector.ReflectMethod" /> método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você implementar uma classe que deriva o <xref:System.Web.Services.Description.SoapExtensionReflector> `abstract` classe, você não precisará implementar uma classe derivada de <xref:System.Web.Services.Description.ProtocolReflector> para invocar o <xref:System.Web.Services.Description.SoapExtensionReflector.ReflectMethod%2A> método ou para definir o <xref:System.Web.Services.Description.SoapExtensionReflector.ReflectionContext%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectMethod">
+      <MemberSignature Language="C#" Value="public abstract void ReflectMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReflectMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapExtensionReflector.ReflectMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <see langword="Abstract" />método deve implementar uma classe derivada para adicionar informações de extensão SOAP para uma <see cref="T:System.Web.Services.Description.ServiceDescription" /> objeto em uma base por método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.SoapExtensionReflector.ReflectMethod%2A> método é chamado para cada método Web que pertence a uma associação que o <xref:System.Web.Services.Description.ServiceDescription> representa. O <xref:System.Web.Services.Description.SoapExtensionReflector.ReflectMethod%2A> método não usa o método da Web diretamente. As informações de extensão SOAP são adicionadas para todos os métodos da Web em uma associação refletido de uma classe de serviço da Web.  
+  
+ Uma implementação do <xref:System.Web.Services.Description.SoapExtensionReflector.ReflectMethod%2A> pode gerar informações como associação de operação `abstract` operação e mensagens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

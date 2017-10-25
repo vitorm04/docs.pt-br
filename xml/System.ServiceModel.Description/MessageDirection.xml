@@ -1,0 +1,82 @@
+<Type Name="MessageDirection" FullName="System.ServiceModel.Description.MessageDirection">
+  <TypeSignature Language="C#" Value="public enum MessageDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MessageDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MessageDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a direção da mensagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A direção de uma mensagem indica se a mensagem é entram em um ponto de extremidade ou saem de um ponto de extremidade. Entrada é de entrada para o servidor e a saída é de saída do servidor. Para um padrão de mensagem de solicitação/resposta básica, uma solicitação é de entrada para o servidor e a resposta é de saída do servidor. Em retornos de chamada do servidor para o cliente, no entanto, uma solicitação é de saída do servidor e uma resposta é de entrada para o servidor.  
+  
+ Use o <xref:System.ServiceModel.Description.MessageDescription.%23ctor%28System.String%2CSystem.ServiceModel.Description.MessageDirection%29> construtor para especificar a direção de uma mensagem.  
+  
+ Recuperar a direção de uma mensagem usando o <xref:System.ServiceModel.Description.MessageDescription.Direction%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="Input" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.MessageDirection Input = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.MessageDirection.Input" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MessageDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A mensagem é de entrada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="Output" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.MessageDirection Output = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.MessageDirection.Output" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MessageDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A mensagem é de saída.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

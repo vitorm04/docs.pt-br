@@ -1,0 +1,256 @@
+<Type Name="SqlWebEventProvider" FullName="System.Web.Management.SqlWebEventProvider">
+  <TypeSignature Language="C#" Value="public class SqlWebEventProvider : System.Web.Management.BufferedWebEventProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlWebEventProvider extends System.Web.Management.BufferedWebEventProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.SqlWebEventProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.BufferedWebEventProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa um provedor de eventos que salva as notificações de eventos em um banco de dados SQL.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management?displayProperty=nameWithType> namespace contém os tipos de evento de integridade responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ Esse provedor tem um conjunto abrangente de atributos de configuração que você pode usar para personalizar seu comportamento.  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `<healthMonitoring>` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de criação de um provedor personalizado, consulte [como: implementar a integridade de monitoramento personalizado provedor exemplo](http://msdn.microsoft.com/library/bbb1c959-e6e4-42b2-be62-49b7ca5ab72c).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é um trecho do arquivo de configuração que mostra como especificar um provedor do tipo <xref:System.Web.Management.SqlWebEventProvider> no `<healthMonitoring>` seção. O `<add>` elemento o `<rules>` seção especifica que o provedor vai manipular eventos de auditoria.  
+  
+```  
+<healthMonitoring  
+  enabled="true"  
+  heartBeatInterval="0">  
+  <bufferModes>  
+    <add name="Analysis"  
+    maxBufferSize="1000"  
+    maxFlushSize="100"  
+    urgentFlushThreshold="100"  
+    regularFlushInterval="00:05:00"  
+    urgentFlushInterval="00:01:00"  
+    maxBufferThreads="1"  
+    />  
+  </bufferModes>  
+  <providers>  
+    <add name="SqlWebEventProvider"  
+    type="System.Web.Management.SqlWebEventProvider,System.Web"  
+    connectionStringName="LocalSqlServer"  
+    maxEventDetailsLength="1073741823"  
+    buffer="true"  
+    bufferMode="Analysis"  
+    />  
+  </providers>  
+  <eventMappings>  
+    <add name="All Audits"  
+    type="System.Web.Management.WebAuditEvent, System.Web"   
+    />  
+  </eventMappings>  
+  <profiles>  
+    <add name="Default"  
+    minInstances="1"  
+    maxLimit="Infinite"  
+    minInterval="00:10:00"  
+    />  
+  </profiles>  
+  <rules>  
+    <add name="All Audits Default"  
+    eventName="All Audits"  
+    provider="SqlWebEventProvider"  
+    profile="Default"  
+    minInterval="00:00:30"   
+    />  
+  </rules>  
+</healthMonitoring>   
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SqlWebEventProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlWebEventProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Management.SqlWebEventProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo sistema de monitoramento de integridade do ASP.NET. Você nunca usará para criar uma instância do <xref:System.Web.Management.SqlWebEventProvider> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventProcessingComplete">
+      <MemberSignature Language="C#" Value="protected virtual void EventProcessingComplete (System.Web.Management.WebBaseEventCollection raisedEvents);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EventProcessingComplete(class System.Web.Management.WebBaseEventCollection raisedEvents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlWebEventProvider.EventProcessingComplete(System.Web.Management.WebBaseEventCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="raisedEvents" Type="System.Web.Management.WebBaseEventCollection" />
+      </Parameters>
+      <Docs>
+        <param name="raisedEvents">Um <see cref="T:System.Web.Management.WebBaseEventCollection" /> objeto dos eventos gerados.</param>
+        <summary>Chamado quando o processamento de eventos é concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de monitoramento de integridade do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlWebEventProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome usado no arquivo de configuração para identificar esse provedor.</param>
+        <param name="config">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> objeto que especifica os atributos atribuídos para esse provedor no arquivo de configuração.</param>
+        <summary>Define os valores iniciais para este objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET chama o <xref:System.Web.Management.SqlWebEventProvider.Initialize%2A> método para inicializar o <xref:System.Web.Management.SqlWebEventProvider> classe com as definições de configuração e nome conforme especificado no arquivo de configuração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não há nenhuma cadeia de conexão declarada em <paramref name="config" />.  
+  
+ \- ou -  
+  
+ Há mais de uma conexão de cadeia de caracteres declarada em <paramref name="config" />.  
+  
+ \- ou -  
+  
+ A cadeia de caracteres de conexão fornecido pelo <paramref name="config" /> Especifica a segurança integrada.  
+  
+ \- ou -  
+  
+ O valor da <see langword="maxEventDetailsLength" /> atributo fornecido pelo <paramref name="config" /> é menor que <see langword="0" /> ou maior que <see langword="1073741823" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEvent">
+      <MemberSignature Language="C#" Value="public override void ProcessEvent (System.Web.Management.WebBaseEvent eventRaised);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessEvent(class System.Web.Management.WebBaseEvent eventRaised) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlWebEventProvider.ProcessEvent(System.Web.Management.WebBaseEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventRaised" Type="System.Web.Management.WebBaseEvent" />
+      </Parameters>
+      <Docs>
+        <param name="eventRaised">O <see cref="T:System.Web.Management.WebBaseEvent" /> do objeto de processo.</param>
+        <summary>Processa o evento passado para o provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de monitoramento de integridade do ASP.NET para iniciar o processamento do evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEventFlush">
+      <MemberSignature Language="C#" Value="public override void ProcessEventFlush (System.Web.Management.WebEventBufferFlushInfo flushInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessEventFlush(class System.Web.Management.WebEventBufferFlushInfo flushInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlWebEventProvider.ProcessEventFlush(System.Web.Management.WebEventBufferFlushInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flushInfo" Type="System.Web.Management.WebEventBufferFlushInfo" />
+      </Parameters>
+      <Docs>
+        <param name="flushInfo">O <see cref="T:System.Web.Management.WebEventBufferFlushInfo" /> objeto que contém as informações de buffer a ser liberado.</param>
+        <summary>Remove todos os eventos de buffer do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de monitoramento de integridade do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public override void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlWebEventProvider.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa tarefas associadas ao desligamento do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET chama o <xref:System.Web.Management.SqlWebEventProvider.Shutdown%2A> método quando o domínio de aplicativo que hospeda o aplicativo Web é encerrado. O método é chamado para executar tarefas que permitem que o aplicativo terminar normalmente."  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

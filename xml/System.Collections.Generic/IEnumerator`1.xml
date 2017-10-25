@@ -1,0 +1,131 @@
+<Type Name="IEnumerator&lt;T&gt;" FullName="System.Collections.Generic.IEnumerator&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IEnumerator&lt;out T&gt; : IDisposable, System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEnumerator`1&lt;+ T&gt; implements class System.Collections.IEnumerator, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.IEnumerator`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo de objetos a serem enumerados.</typeparam>
+    <summary>Dá suporte a uma iteração simples em vez de uma coleção genérica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.IEnumerator%601>é a interface base para todos os enumeradores genéricos.  
+  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. Nesta posição, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A>Retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> está indefinido. Não é possível definir <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o primeiro elemento da coleção novamente; você deve criar uma nova instância de enumerador em vez disso.  
+  
+ O <xref:System.Collections.IEnumerator.Reset%2A> método é fornecido para interoperabilidade COM. Ele não necessariamente precisa ser implementadas; em vez disso, o implementador de simplesmente pode lançar um <xref:System.NotSupportedException>. No entanto, se você optar por fazer isso, você deve garantir não depender de nenhum chamadores a <xref:System.Collections.IEnumerator.Reset%2A> funcionalidade.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador é invalidado invalidado e a próxima chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException>.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração. Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções no namespace <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação do <xref:System.Collections.Generic.IEnumerator%601> interface para uma classe de coleção de objetos personalizados. O objeto personalizado é uma instância do tipo `Box`, e a classe de coleção é `BoxCollection`. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Collections.Generic.ICollection%601> interface.  
+  
+ [!code-csharp[System.Collections.Generic.BoxExamples#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxexamples/cs/program.cs#3)]
+ [!code-vb[System.Collections.Generic.BoxExamples#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxexamples/vb/program.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implementar essa interface exige a implementação não genérica <see cref="T:System.Collections.IEnumerator" /> interface. O <see cref="M:System.Collections.IEnumerator.MoveNext" /> e <see cref="M:System.Collections.IEnumerator.Reset" /> métodos não dependem de <typeparamref name="T" />e aparecem somente na interface não genérica. O <see cref="P:System.Collections.Generic.IEnumerator`1.Current" /> propriedade aparece em ambas as interfaces e tem diferentes tipos de retorno. Implementar não genérica <see cref="P:System.Collections.IEnumerator.Current" /> a propriedade como uma implementação de interface explícita. Isso permite que qualquer consumidor da interface não genérica consumir a interface genérica.  
+  
+ Além disso, <see cref="T:System.Collections.Generic.IEnumerator`1" /> implementa <see cref="T:System.IDisposable" />, que exige que você implemente o <see cref="M:System.IDisposable.Dispose" /> método. Isso permite que você fechar conexões de banco de dados ou liberar identificadores de arquivos ou operações semelhantes ao usar outros recursos. Se não existem recursos adicionais de descartar, forneça um vazio <see cref="M:System.IDisposable.Dispose" /> implementação.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public T Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Current" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IEnumerator`1.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento na coleção na posição atual do enumerador.</summary>
+        <value>O elemento na coleção na posição atual do enumerador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A>o não está definida em qualquer uma das seguintes condições:  
+  
+-   O enumerador está posicionado antes do primeiro elemento na coleção, imediatamente depois que o enumerador é criado.   <xref:System.Collections.IEnumerator.MoveNext%2A>deve ser chamado para avançar o enumerador para o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+  
+-   A última chamada a <xref:System.Collections.IEnumerator.MoveNext%2A> retornou `false`, que indica o final da coleção.  
+  
+-   O enumerador é invalidado devido a alterações feitas na coleção, como adicionar, modificar ou excluir elementos.  
+  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A>Retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o próximo elemento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Implementar essa interface exige a implementação não genérica <see cref="T:System.Collections.IEnumerator" /> interface. O <see cref="P:System.Collections.Generic.IEnumerator`1.Current" /> propriedade aparece em ambas as interfaces e tem diferentes tipos de retorno. Implementar não genérica <see cref="P:System.Collections.IEnumerator.Current" /> a propriedade como uma implementação de interface explícita. Isso permite que qualquer consumidor da interface não genérica consumir a interface genérica.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

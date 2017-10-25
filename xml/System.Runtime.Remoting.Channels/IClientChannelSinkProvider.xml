@@ -1,0 +1,118 @@
+<Type Name="IClientChannelSinkProvider" FullName="System.Runtime.Remoting.Channels.IClientChannelSinkProvider">
+  <TypeSignature Language="C#" Value="public interface IClientChannelSinkProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IClientChannelSinkProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria o cliente do coletor de canal para o canal do cliente por meio de comunicação remota do qual fluem de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coletores de canal estão conectados a um canal do cliente por meio de implementações do <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider> interface. Todos os canais do cliente de comunicação remota fornecem construtores que usam um <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider> como um parâmetro.  
+  
+ Provedores de coletor de canal são armazenados em uma cadeia e o usuário é responsável por encadeando todos os provedores de coletor de canal antes de passar a uma externa para o construtor do canal. <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider>Fornece uma propriedade chamada <xref:System.Runtime.Remoting.Channels.IServerChannelSinkProvider.Next%2A> para essa finalidade.  
+  
+ Quando vários provedores de coletor de canal são especificados em um arquivo de configuração, a infraestrutura de comunicação remota será encadeá-los na ordem em que eles são encontrados no arquivo de configuração. Os provedores de coletor de canal serão criados quando o canal é criado durante a <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%2A?displayProperty=nameWithType> chamar.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra uma implementação desta interface.  
+  
+ [!code-cpp[Remoting_Sinks#30](~/samples/snippets/cpp/VS_Snippets_Remoting/Remoting_Sinks/CPP/clientsink.cpp#30)]
+ [!code-csharp[Remoting_Sinks#30](~/samples/snippets/csharp/VS_Snippets_Remoting/Remoting_Sinks/CS/clientsink.cs#30)]  
+  
+ Consulte o <xref:System.Runtime.Remoting.Channels.IClientChannelSink> interface documentação para obter um exemplo da implementação de coletor do cliente correspondente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IClientChannelSink CreateSink (System.Runtime.Remoting.Channels.IChannelSender channel, string url, object remoteChannelData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Channels.IClientChannelSink CreateSink(class System.Runtime.Remoting.Channels.IChannelSender channel, string url, object remoteChannelData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IClientChannelSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelSender,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IClientChannelSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.Runtime.Remoting.Channels.IChannelSender" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="remoteChannelData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="channel">Canal para o qual a cadeia de coletor atual está sendo construída.</param>
+        <param name="url">A URL do objeto para se conectar ao. Esse parâmetro pode ser <see langword="null" /> se a conexão se baseia totalmente as informações contidas no <c>remoteChannelData</c> parâmetro.</param>
+        <param name="remoteChannelData">Um objeto de dados de canal que descreve um canal no servidor remoto.</param>
+        <summary>Cria uma cadeia de coletor.</summary>
+        <returns>O primeiro coletor da cadeia de coletor de canal recém-criado, ou <see langword="null" />, que indica que esse provedor não serão ou não é possível fornecer uma conexão para este ponto de extremidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider.CreateSink%2A> método é chamado, ele cria seu próprio coletor de canal, encaminha o <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider.CreateSink%2A> chamada para o provedor de coletor Avançar na cadeia (se houver) e garante que o coletor Avançar e atual são vinculados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra uma implementação deste método.  
+  
+ [!code-cpp[Remoting_Sinks#33](~/samples/snippets/cpp/VS_Snippets_Remoting/Remoting_Sinks/CPP/clientsink.cpp#33)]
+ [!code-csharp[Remoting_Sinks#33](~/samples/snippets/csharp/VS_Snippets_Remoting/Remoting_Sinks/CS/clientsink.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IClientChannelSinkProvider Next { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Channels.IClientChannelSinkProvider Next" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.IClientChannelSinkProvider.Next" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IClientChannelSinkProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o provedor de coletor Avançar na cadeia de provedor de coletor de canal.</summary>
+        <value>O provedor de coletor Avançar na cadeia de provedor de coletor de canal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra uma implementação dessa propriedade.  
+  
+ [!code-cpp[Remoting_Sinks#32](~/samples/snippets/cpp/VS_Snippets_Remoting/Remoting_Sinks/CPP/clientsink.cpp#32)]
+ [!code-csharp[Remoting_Sinks#32](~/samples/snippets/csharp/VS_Snippets_Remoting/Remoting_Sinks/CS/clientsink.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

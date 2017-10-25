@@ -1,0 +1,550 @@
+<Type Name="ServiceConfig" FullName="System.EnterpriseServices.ServiceConfig">
+  <TypeSignature Language="C#" Value="public sealed class ServiceConfig" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceConfig extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ServiceConfig" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica e configura os serviços que serão ativas no domínio, que é inserido quando chamar <see cref="M:System.EnterpriseServices.ServiceDomain.Enter(System.EnterpriseServices.ServiceConfig)" /> ou criar um <see cref="T:System.EnterpriseServices.Activity" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ServiceDomain.Enter%2A>e <xref:System.EnterpriseServices.Activity.%23ctor%2A> permitem que você use os serviços configurados por <xref:System.EnterpriseServices.ServiceConfig> não precisa unir esses serviços para um componente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceConfig ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServiceConfig.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.ServiceConfig" /> classe, definindo as propriedades para configurar os serviços desejados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.EnterpriseServices.ServiceConfig>.  
+  
+|Item|Descrição|  
+|----------|-----------------|  
+|`Binding`|<xref:System.EnterpriseServices.BindingOption.NoBinding>|  
+|`BringYourOwnTransaction`|`null`|  
+|`COMTIIntrinsicsEnabled`|`false`|  
+|`IISIntrinsicsEnabled`|`false`|  
+|`Inheritance`|<xref:System.EnterpriseServices.InheritanceOption.Inherit>|  
+|`IsolationLevel`|<xref:System.EnterpriseServices.TransactionIsolationLevel.Any>|  
+|`PartitionId`|Um zero GUID.|  
+|`PartitionOption`|<xref:System.EnterpriseServices.PartitionOption.Ignore>|  
+|`SxsDirectory`|`null`|  
+|`SxsName`|`null`|  
+|`SxsOption`|<xref:System.EnterpriseServices.SxsOption.Ignore>|  
+|`Synchronization`|<xref:System.EnterpriseServices.SynchronizationOption.Disabled>|  
+|`ThreadPool`|<xref:System.EnterpriseServices.ThreadPoolOption.None>|  
+|`TipUrl`|`null`|  
+|`TrackingAppName`|`null`|  
+|`TrackingComponentName`|`null`|  
+|`TrackingEnabled`|`false`|  
+|`Transaction`|<xref:System.EnterpriseServices.TransactionOption.Disabled>|  
+|`TransactionDescription`|`null`|  
+|`TransactionTimeout`|O padrão do sistema|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.EnterpriseServices.ServiceConfig" />Não há suporte na plataforma atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.BindingOption Binding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.BindingOption Binding" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.BindingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a opção de associação, que indica se todo o trabalho enviado pela atividade deve ser associado a apenas um single-threaded apartment (STA).</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.BindingOption" />. O padrão é <see cref="F:System.EnterpriseServices.BindingOption.NoBinding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ServiceConfig.Binding%2A>não tem impacto sobre o multi-threaded apartment (MTA). Esta propriedade é usada para definir a associação de pool de thread durante a criação de um <xref:System.EnterpriseServices.Activity>. Um erro será retornado se for feita uma tentativa de definir a associação de pool de thread, ao chamar <xref:System.EnterpriseServices.ServiceDomain.Enter%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BringYourOwnSystemTransaction">
+      <MemberSignature Language="C#" Value="public System.Transactions.Transaction BringYourOwnSystemTransaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Transactions.Transaction BringYourOwnSystemTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.BringYourOwnSystemTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Transactions.Transaction" /> que representa uma transação existente que forneça as configurações usadas para executar a transação identificada por <see cref="T:System.EnterpriseServices.ServiceConfig" />.</summary>
+        <value>Um <see cref="T:System.Transactions.Transaction" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ServiceConfig.BringYourOwnSystemTransaction%2A>(BYOT) identifica uma transação que fornece o contexto para o <xref:System.EnterpriseServices.ServiceConfig> transação. Quando você abre sua própria transação, configurações da transação substituirão as outras transações no <xref:System.EnterpriseServices.ServiceConfig> objeto. O valor padrão para <xref:System.EnterpriseServices.ServiceConfig.BringYourOwnTransaction%2A> é `null`.  
+  
+ Para obter mais informações sobre BYOT, consulte <xref:System.EnterpriseServices.BYOT>.  
+  
+ ]]></format>
+        </remarks>
+        <altmember cref="T:System.EnterpriseServices.BYOT" />
+      </Docs>
+    </Member>
+    <Member MemberName="BringYourOwnTransaction">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.ITransaction BringYourOwnTransaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EnterpriseServices.ITransaction BringYourOwnTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.BringYourOwnTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ITransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.EnterpriseServices.ITransaction" /> que representa uma transação existente que forneça as configurações usadas para executar a transação identificada por <see cref="T:System.EnterpriseServices.ServiceConfig" />.</summary>
+        <value>Um <see cref="T:System.EnterpriseServices.ITransaction" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ServiceConfig.BringYourOwnTransaction%2A>(BYOT) identifica uma transação que fornece o contexto para o <xref:System.EnterpriseServices.ServiceConfig> transação. Quando você abre sua própria transação, configurações da transação substituirão as outras transações no <xref:System.EnterpriseServices.ServiceConfig> objeto. O valor padrão para <xref:System.EnterpriseServices.ServiceConfig.BringYourOwnTransaction%2A> é `null`.  
+  
+ Para obter mais informações sobre BYOT, consulte <xref:System.EnterpriseServices.BYOT>.  
+  
+ ]]></format>
+        </remarks>
+        <altmember cref="T:System.EnterpriseServices.BYOT" />
+      </Docs>
+    </Member>
+    <Member MemberName="COMTIIntrinsicsEnabled">
+      <MemberSignature Language="C#" Value="public bool COMTIIntrinsicsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool COMTIIntrinsicsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.COMTIIntrinsicsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se intrínsecos COM Transaction Integrator (COMTI) estão habilitados.</summary>
+        <value>
+          <see langword="true" />Se COMTI intrínsecos estão habilitados; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permite passar propriedades de contexto do COMTI para o contexto para esta classe. O COMTI facilita a tarefa de quebra automática de transações do mainframe e lógica de negócios como componentes COM.  
+  
+ Configura os intrínsecos COMTI para o trabalho é realizado. O COMTI facilita a tarefa de quebra automática de transações do mainframe e lógica de negócios com transações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IISIntrinsicsEnabled">
+      <MemberSignature Language="C#" Value="public bool IISIntrinsicsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IISIntrinsicsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.IISIntrinsicsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os serviços de informações da Internet (IIS) intrínsecos estão habilitados.</summary>
+        <value>
+          <see langword="true" />Se o IIS intrínsecos estão habilitados; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permite passar propriedades de contexto do IIS, como um objeto de sessão do aplicativo ou um objeto de sessão de usuário para o contexto para esta classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inheritance">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.InheritanceOption Inheritance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.InheritanceOption Inheritance" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.Inheritance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.InheritanceOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é para criar um novo contexto com base no contexto atual ou para criar um novo contexto com base apenas nas informações <see cref="T:System.EnterpriseServices.ServiceConfig" />.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.InheritanceOption" />. O padrão é <see cref="F:System.EnterpriseServices.InheritanceOption.Inherit" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsolationLevel">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.TransactionIsolationLevel IsolationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.TransactionIsolationLevel IsolationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.IsolationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.TransactionIsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de isolamento da transação.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.TransactionIsolationLevel" />. O padrão é <see cref="F:System.EnterpriseServices.TransactionIsolationLevel.Any" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma nova transação é criada se não está em execução da transação envolvida no nível de isolamento especificado. <xref:System.EnterpriseServices.ServiceConfig.IsolationLevel%2A>será ignorado se o código incluído caso contrário, não será executado em uma transação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartitionId">
+      <MemberSignature Language="C#" Value="public Guid PartitionId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid PartitionId" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.PartitionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o GUID para a partição COM+ que será usado.</summary>
+        <value>O GUID para a partição a ser usado. O padrão é zero GUID.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartitionOption">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.PartitionOption PartitionOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.PartitionOption PartitionOption" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.PartitionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.PartitionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica como as partições são usadas para o trabalho incluído.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.PartitionOption" />. O padrão é <see cref="F:System.EnterpriseServices.PartitionOption.Ignore" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SxsDirectory">
+      <MemberSignature Language="C#" Value="public string SxsDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SxsDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.SxsDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o diretório para o assembly lado a lado para o trabalho incluído.</summary>
+        <value>O nome do diretório a ser usado para o assembly lado a lado. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configura os assemblies lado a lado para este <xref:System.EnterpriseServices.ServiceConfig>.  
+  
+ Você deve definir o <xref:System.EnterpriseServices.ServiceConfig.SxsDirectory%2A> propriedade, se você criar um novo assembly lado a lado, definindo o <xref:System.EnterpriseServices.ServiceConfig.SxsOption%2A> propriedade <xref:System.EnterpriseServices.SxsOption.New>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SxsName">
+      <MemberSignature Language="C#" Value="public string SxsName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SxsName" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.SxsName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do arquivo do assembly para o trabalho colocado lado a lado.</summary>
+        <value>O nome do arquivo do assembly lado a lado. O valor padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SxsOption">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.SxsOption SxsOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.SxsOption SxsOption" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.SxsOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.SxsOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica como configurar o assembly lado a lado.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.SxsOption" />. O padrão é <see cref="F:System.EnterpriseServices.SxsOption.Ignore" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronization">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.SynchronizationOption Synchronization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.SynchronizationOption Synchronization" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.Synchronization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.SynchronizationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o tipo de sincronização automática solicitada pelo componente.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.SynchronizationOption" />. O padrão é <see cref="F:System.EnterpriseServices.SynchronizationOption.Disabled" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadPool">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.ThreadPoolOption ThreadPool { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.ThreadPoolOption ThreadPool" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.ThreadPool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ThreadPoolOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o pool de threads que executa o trabalho enviado pela atividade.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.ThreadPoolOption" />. O padrão é <see cref="F:System.EnterpriseServices.ThreadPoolOption.None" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TipUrl">
+      <MemberSignature Language="C#" Value="public string TipUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TipUrl" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.TipUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL do protocolo de Internet de transação (dica) que permite que o código incluído ser executado em uma transação existente.</summary>
+        <value>UMA DICA DE URL. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ServiceConfig.TipUrl%2A>é semelhante do <xref:System.EnterpriseServices.ServiceConfig.BringYourOwnTransaction%2A> propriedade mas permite que o código incluído ser executado como uma transação existente que é especificada por uma URL de dica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackingAppName">
+      <MemberSignature Language="C#" Value="public string TrackingAppName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TrackingAppName" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.TrackingAppName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres de texto que corresponde à ID do aplicativo sob a qual as informações do controlador são relatadas.</summary>
+        <value>A ID do aplicativo no qual o controlador de informações são relatadas. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como nenhum componente está associado essa propriedade do controlador, atividade do controlador será relatada como proveniente de um componente com o nome especificado pelo <xref:System.EnterpriseServices.ServiceConfig.TrackingAppName%2A>.  
+  
+ Para obter mais informações, consulte <xref:System.EnterpriseServices.ServiceConfig.TrackingEnabled%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <altmember cref="P:System.EnterpriseServices.ServiceConfig.TrackingEnabled" />
+      </Docs>
+    </Member>
+    <Member MemberName="TrackingComponentName">
+      <MemberSignature Language="C#" Value="public string TrackingComponentName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TrackingComponentName" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.TrackingComponentName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres de texto que corresponde ao nome do contexto no qual as informações de controlador são relatadas.</summary>
+        <value>O nome do contexto no qual o controlador de informações são relatadas. O valor padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+        <altmember cref="P:System.EnterpriseServices.ServiceConfig.TrackingEnabled" />
+      </Docs>
+    </Member>
+    <Member MemberName="TrackingEnabled">
+      <MemberSignature Language="C#" Value="public bool TrackingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrackingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.TrackingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o rastreamento está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o rastreamento estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controlador é um mecanismo de relatório usado pelo monitoramento de aplicativos para assistir a execução de componentes COM+. É o mecanismo de relatórios atrás os ícones de componente girando na ferramenta administrativa Serviços de componentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transaction">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.TransactionOption Transaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.TransactionOption Transaction" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.Transaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.TransactionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica como as transações são usadas no trabalho incluído.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.TransactionOption" />. O padrão é <see cref="F:System.EnterpriseServices.TransactionOption.Disabled" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionDescription">
+      <MemberSignature Language="C#" Value="public string TransactionDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransactionDescription" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.TransactionDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome que é usado quando a transação são exibidas.</summary>
+        <value>O nome usado quando a transação são exibidas. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma descrição se não for fornecido, o valor de <xref:System.EnterpriseServices.ServiceConfig.TrackingComponentName%2A> é usado para descrever a transação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionTimeout">
+      <MemberSignature Language="C#" Value="public int TransactionTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TransactionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ServiceConfig.TransactionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite da transação para uma nova transação.</summary>
+        <value>O tempo limite da transação, em segundos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

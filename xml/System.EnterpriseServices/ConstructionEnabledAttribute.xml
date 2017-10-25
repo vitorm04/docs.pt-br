@@ -1,0 +1,137 @@
+<Type Name="ConstructionEnabledAttribute" FullName="System.EnterpriseServices.ConstructionEnabledAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ConstructionEnabledAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConstructionEnabledAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ConstructionEnabledAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Habilita o suporte de construção de objeto COM+. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.EnterpriseServices.ConstructionEnabledAttribute>, consulte o <xref:System.EnterpriseServices.ConstructionEnabledAttribute.%23ctor%2A> construtor.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse atributo para associar uma cadeia de caracteres do construtor de objeto com um <xref:System.EnterpriseServices.ServicedComponent> classe.  
+  
+ [!code-cpp[EnterpriseServices_Security#4](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#4)]
+ [!code-csharp[EnterpriseServices_Security#4](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#4)]
+ [!code-vb[EnterpriseServices_Security#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.ConstructionEnabledAttribute" />.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConstructionEnabledAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ConstructionEnabledAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.ConstructionEnabledAttribute" /> classe e inicializa as configurações padrão para <see cref="P:System.EnterpriseServices.ConstructionEnabledAttribute.Enabled" /> e <see cref="P:System.EnterpriseServices.ConstructionEnabledAttribute.Default" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.EnterpriseServices.ConstructionEnabledAttribute>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|`Default`|Uma cadeia de caracteres vazia ("")|  
+|`Enabled`|`true`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConstructionEnabledAttribute (bool val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ConstructionEnabledAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="val" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="val">
+          <see langword="true" /> para habilitar o suporte à construção de objetos COM+; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.ConstructionEnabledAttribute" />, definido <see cref="P:System.EnterpriseServices.ConstructionEnabledAttribute.Enabled" /> com o valor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public string Default { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Default" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ConstructionEnabledAttribute.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor padrão para a cadeia de caracteres do construtor.</summary>
+        <value>O valor a ser usado para a cadeia de caracteres do construtor padrão. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ConstructionEnabledAttribute.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o suporte de construção de objeto COM+ é habilitado.</summary>
+        <value>
+          <see langword="true" />Se oferecer suporte a construção de objetos COM+ está ativado. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

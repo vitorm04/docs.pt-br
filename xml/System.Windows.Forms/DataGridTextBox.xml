@@ -1,0 +1,229 @@
+<Type Name="DataGridTextBox" FullName="System.Windows.Forms.DataGridTextBox">
+  <TypeSignature Language="C#" Value="public class DataGridTextBox : System.Windows.Forms.TextBox" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridTextBox extends System.Windows.Forms.TextBox" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridTextBox" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.TextBox</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("GridEditName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle <see cref="T:System.Windows.Forms.TextBox" /> hospedado em um <see cref="T:System.Windows.Forms.DataGridTextBoxColumn" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridTextBox> e <xref:System.Windows.Forms.DataGridTextBoxColumn> trabalham juntos para que os usuários possam editar diretamente valores em um <xref:System.Windows.Forms.DataGrid> coluna do controle. O <xref:System.Windows.Forms.DataGridTextBoxColumn> deriva <xref:System.Windows.Forms.DataGridColumnStyle>e foi projetado para hospedar o <xref:System.Windows.Forms.DataGridTextBox>, que deriva de <xref:System.Windows.Forms.TextBox> controle.  
+  
+ Além das propriedades, eventos e métodos do controle base, você pode chamar o <xref:System.Windows.Forms.Control.KeyPress> e <xref:System.Windows.Forms.Control.KeyDown> eventos com o <xref:System.Windows.Forms.Control.OnKeyPress%2A> e <xref:System.Windows.Forms.Control.OnMouseDown%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Windows.Forms.DataGridTextBox> hospedado por um <xref:System.Windows.Forms.DataGridTextBoxColumn>.  
+  
+ [!code-cpp[Classic DataGridTextBox Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTextBox Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTextBox Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTextBox Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTextBox Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTextBox Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridTextBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTextBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridTextBox" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInEditOrNavigateMode">
+      <MemberSignature Language="C#" Value="public bool IsInEditOrNavigateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInEditOrNavigateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTextBox.IsInEditOrNavigateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.DataGridTextBox" /> está em um modo que permite editar ou navegar.</summary>
+        <value>
+          <see langword="true" />Se os controles estiver no modo de navegação e edição não foi iniciado; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridTextBox.IsInEditOrNavigateMode%2A> propriedade é usada no <xref:System.Windows.Forms.Control.ProcessKeyMessage%2A> para determinar como processar eventos de pressionamento de tecla, para verificar o estado de <xref:System.Windows.Forms.DataGridTextBox>. Por exemplo, se uma das teclas de navegação (seta) é pressionada, deve ocorrer a ação apropriada para o estado do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTextBox_IsInEditOrNavigateMode#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTextBox_IsInEditOrNavigateMode/CPP/datagridtextbox_isineditornavigatemode.cpp#1)]
+ [!code-csharp[DataGridTextBox_IsInEditOrNavigateMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTextBox_IsInEditOrNavigateMode/CS/datagridtextbox_isineditornavigatemode.cs#1)]
+ [!code-vb[DataGridTextBox_IsInEditOrNavigateMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTextBox_IsInEditOrNavigateMode/VB/datagridtextbox_isineditornavigatemode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyPress">
+      <MemberSignature Language="C#" Value="protected override void OnKeyPress (System.Windows.Forms.KeyPressEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyPress(class System.Windows.Forms.KeyPressEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTextBox.OnKeyPress(System.Windows.Forms.KeyPressEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.KeyPressEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.KeyPressEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.KeyPress" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTextBox.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.MouseWheel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessKeyMessage">
+      <MemberSignature Language="C#" Value="protected override bool ProcessKeyMessage (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ProcessKeyMessage(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTextBox.ProcessKeyMessage(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Um <see cref="T:System.Windows.Forms.Message" />, passada por referência, que contém os dados de chave.</param>
+        <summary>Indica se a tecla pressionada é processada adicional (por exemplo, para navegar ou escape). Esta propriedade é somente para leitura.</summary>
+        <returns>
+          <see langword="true" />Se a chave é consumida, <see langword="false" /> como se a chave adicional é processada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando um controle recebe uma mensagem do teclado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataGrid">
+      <MemberSignature Language="C#" Value="public void SetDataGrid (System.Windows.Forms.DataGrid parentGrid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDataGrid(class System.Windows.Forms.DataGrid parentGrid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTextBox.SetDataGrid(System.Windows.Forms.DataGrid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentGrid" Type="System.Windows.Forms.DataGrid" />
+      </Parameters>
+      <Docs>
+        <param name="parentGrid">O <see cref="T:System.Windows.Forms.DataGrid" /> controle que hospeda o controle.</param>
+        <summary>Conjuntos de <see cref="T:System.Windows.Forms.DataGrid" /> ao qual este <see cref="T:System.Windows.Forms.TextBox" /> controle pertence.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTextBox_SetDataGrid#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTextBox_SetDataGrid/CPP/datagridtextbox_setdatagrid.cpp#2)]
+ [!code-csharp[DataGridTextBox_SetDataGrid#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTextBox_SetDataGrid/CS/datagridtextbox_setdatagrid.cs#2)]
+ [!code-vb[DataGridTextBox_SetDataGrid#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTextBox_SetDataGrid/VB/datagridtextbox_setdatagrid.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTextBox.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Um <see cref="T:System.Windows.Forms.Message" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.Control.WndProc(System.Windows.Forms.Message@)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

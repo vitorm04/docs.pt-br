@@ -1,0 +1,1145 @@
+<Type Name="CommandField" FullName="System.Web.UI.WebControls.CommandField">
+  <TypeSignature Language="C#" Value="public class CommandField : System.Web.UI.WebControls.ButtonFieldBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandField extends System.Web.UI.WebControls.ButtonFieldBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CommandField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ButtonFieldBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um campo que exibe botões de comando para executar operações de seleção, edição, inserção ou exclusão em um controle de associação de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CommandField> classe é um campo usado por controles de associação de dados (como <xref:System.Web.UI.WebControls.GridView> e <xref:System.Web.UI.WebControls.DetailsView>) para exibir os botões de comando que executam excluir, editar, inserir ou selecionar operações. Os botões de comando para executar essas operações podem ser mostrados ou ocultados usando as propriedades mostradas na tabela a seguir.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.CommandField.ShowDeleteButton%2A>|Mostra ou oculta um botão de exclusão em um <xref:System.Web.UI.WebControls.CommandField> campo para cada registro no controle associado a dados. O botão de exclusão permite que o usuário excluir o registro da fonte de dados.|  
+|<xref:System.Web.UI.WebControls.CommandField.ShowEditButton%2A>|Mostra ou oculta um botão de edição em um <xref:System.Web.UI.WebControls.CommandField> campo para cada registro no controle associado a dados. O botão Editar permite que o usuário editar um registro da fonte de dados. Quando o usuário clica no botão de edição para um registro específico, o que editar botão é substituído por um botão de atualização e um botão de cancelamento. Todos os outros botões de comando também são ocultos.|  
+|<xref:System.Web.UI.WebControls.CommandField.ShowInsertButton%2A>|Mostra ou oculta o botão novo em um <xref:System.Web.UI.WebControls.CommandField> campo. O botão novo permite ao usuário inserir um novo registro na fonte de dados. Quando o usuário clica no botão novo, ele será substituído com um botão de inserção e um botão de cancelamento. Todos os outros botões de comando também são ocultos. **Observação:** essa propriedade se aplica somente a controles de associação de dados que oferecem suporte a operações de inserção, como o <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|<xref:System.Web.UI.WebControls.CommandField.ShowSelectButton%2A>|Mostra ou oculta um botão de seleção em um <xref:System.Web.UI.WebControls.CommandField> campo para cada registro no controle associado a dados. O botão de seleção permite que o usuário selecione um registro no controle associado a dados.|  
+  
+ Além disso, o cancelamento botão exibido quando um registro está em edição ou modo de inserção pode ser mostrado ou ocultado definindo o <xref:System.Web.UI.WebControls.CommandField.ShowCancelButton%2A> propriedade.  
+  
+> [!NOTE]
+>  Quando um controle associado a dados é usado em combinação com um controle de fonte de dados (como um <xref:System.Web.UI.WebControls.SqlDataSource> controle), o controle associado a dados pode tirar proveito da fonte de dados de recursos do controle e fornecer automático excluir, atualizar e inserir a funcionalidade. Para outras fontes de dados, você precisa fornecer as rotinas para executar essas operações durante os eventos adequados para o controle associado a dados.  
+  
+ O <xref:System.Web.UI.WebControls.CommandField> campo é exibido de modo diferente dependendo do controle associado a dados no qual ele é usado. Por exemplo, o <xref:System.Web.UI.WebControls.GridView> controle exibe um <xref:System.Web.UI.WebControls.CommandField> campo como uma coluna, enquanto o <xref:System.Web.UI.WebControls.DetailsView> controle exibe como uma linha.  
+  
+ Para especificar o tipo de botão para exibir, use o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade. Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> está definida como `ButtonType.Button` ou `ButtonType.Link`, você pode especificar o texto a ser exibido para os botões, definindo as propriedades mostradas na tabela a seguir.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.CommandField.CancelText%2A>|A legenda para o botão Cancelar.|  
+|<xref:System.Web.UI.WebControls.CommandField.DeleteText%2A>|A legenda para o botão de exclusão.|  
+|<xref:System.Web.UI.WebControls.CommandField.EditText%2A>|A legenda para o botão Editar.|  
+|<xref:System.Web.UI.WebControls.CommandField.InsertText%2A>|A legenda para o botão de inserção. **Observação:** essa propriedade se aplica somente a controles de associação de dados que suporte operações de inserção, como o <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|<xref:System.Web.UI.WebControls.CommandField.NewText%2A>|A legenda para o novo botão. **Observação:** essa propriedade se aplica somente a controles de associação de dados que suporte operações de inserção, como o <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|<xref:System.Web.UI.WebControls.CommandField.SelectText%2A>|A legenda para o botão de seleção.|  
+|<xref:System.Web.UI.WebControls.CommandField.UpdateText%2A>|A legenda para o botão de atualização.|  
+  
+ Em vez de exibir um botão de comando ou um link, você pode exibir um botão de imagem, definindo o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo as propriedades mostradas na tabela a seguir.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A>|A imagem a ser exibida para o botão Cancelar|  
+|<xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A>|A imagem a ser exibida para o botão de exclusão.|  
+|<xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A>|A imagem a ser exibida para o botão Editar.|  
+|<xref:System.Web.UI.WebControls.CommandField.InsertText%2A>|A imagem a ser exibida para o botão de inserção. **Observação:** essa propriedade se aplica somente a controles de associação de dados que suporte operações de inserção, como o <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|<xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A>|A imagem a ser exibida para o novo botão. **Observação:** essa propriedade se aplica somente a controles de associação de dados que suporte operações de inserção, como o <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|<xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A>|A imagem a ser exibida para o botão de seleção.|  
+|<xref:System.Web.UI.WebControls.CommandField.UpdateImageUrl%2A>|A imagem a ser exibida para o botão de atualização.|  
+  
+ Por padrão, quando o usuário clica no botão em um <xref:System.Web.UI.WebControls.CommandField> campo, a validação é executada em todos os controles de validação na página. Para impedir a validação ocorra quando um botão é clicado, defina a <xref:System.Web.UI.WebControls.CommandField.CausesValidation%2A> propriedade `false`.  
+  
+ Você pode ocultar uma <xref:System.Web.UI.WebControls.CommandField> campo em um controle associado a dados, definindo o <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> propriedade `false`.  
+  
+ O <xref:System.Web.UI.WebControls.CommandField> campo permite que você personalize suas seções de cabeçalho e rodapé. Para exibir uma legenda no cabeçalho ou na seção do rodapé, defina o <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> ou <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> propriedade, respectivamente. Em vez de exibir o texto na seção de cabeçalho, você pode exibir uma imagem, definindo o <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> propriedade. Para ocultar a seção de cabeçalho em uma <xref:System.Web.UI.WebControls.CommandField> do objeto, defina o <xref:System.Web.UI.WebControls.ButtonFieldBase.ShowHeader%2A> propriedade `false`.  
+  
+> [!NOTE]
+>  Alguns controles associados a dados (como o <xref:System.Web.UI.WebControls.GridView> controle) pode mostrar ou ocultar apenas a seção de cabeçalho inteiro do controle. Esses controles associados a dados não oferecem suporte a <xref:System.Web.UI.WebControls.ButtonFieldBase.ShowHeader%2A> propriedade para um campo individual do botão. Para mostrar ou ocultar a seção de cabeçalho inteiro de um controle associado a dados (se disponível), use o controle `ShowHeader` propriedade.  
+  
+ Você também pode personalizar a aparência do <xref:System.Web.UI.WebControls.CommandField> objeto (cor da fonte, cor do plano de fundo e assim por diante), definindo as propriedades de estilo para as diferentes partes do campo. A tabela a seguir lista as propriedades de estilo diferente.  
+  
+|Propriedade de estilo|Descrição|  
+|--------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A>|As configurações de estilo para controles de servidor Web filho do <xref:System.Web.UI.WebControls.CommandField> objeto.|  
+|<xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A>|As configurações de estilo para a seção de rodapé de <xref:System.Web.UI.WebControls.CommandField> objeto.|  
+|<xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A>|As configurações de estilo para a seção de cabeçalho de <xref:System.Web.UI.WebControls.CommandField> objeto.|  
+|<xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A>|As configurações de estilo dos itens de dados no <xref:System.Web.UI.WebControls.CommandField> objeto.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.CommandField> campo para exibir controles para editar um registro em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandField2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField2/CS/commandfield2cs.aspx#1)]
+ [!code-aspx-vb[CommandField2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField2/VB/commandfield2vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.CancelText%2A>, <xref:System.Web.UI.WebControls.CommandField.EditText%2A>, e <xref:System.Web.UI.WebControls.CommandField.UpdateText%2A> propriedades para personalizar o texto para os controles de edição.  
+  
+ [!code-aspx-csharp[CommandField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField/CS/commandfieldcs.aspx#1)]
+ [!code-aspx-vb[CommandField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField/VB/commandfieldvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.CommandField> classe. Este construtor é comumente usado ao adicionar campos a um controle de associação de dados criado dinamicamente.  
+  
+ Adicionar dinamicamente um <xref:System.Web.UI.WebControls.CommandField> campo a um controle associado a dados, crie um novo <xref:System.Web.UI.WebControls.CommandField> do objeto, defina suas propriedades e, em seguida, adicioná-lo à coleção de campos do controle associado a dados. Por exemplo, se você estiver usando o <xref:System.Web.UI.WebControls.GridView> de controle, adicione o <xref:System.Web.UI.WebControls.CommandField> o objeto para o <xref:System.Web.UI.WebControls.GridView.Columns%2A> coleção.  
+  
+> [!NOTE]
+>  Embora dinamicamente, você pode adicionar campos a um controle associado a dados, é altamente recomendável que campos ser estaticamente declarados e, em seguida, mostrado ou oculto, conforme apropriado. Declarar estaticamente todos os seus campos reduz o tamanho do estado de exibição para o controle de associação de dados pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o construtor de adicionar dinamicamente um <xref:System.Web.UI.WebControls.CommandField> coluna do campo para um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandFieldCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldCtor/CS/commandfieldctorcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldCtor/VB/commandfieldctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string CancelImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CancelImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.CancelImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida para o botão Cancelar em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo.</summary>
+        <value>A URL para uma imagem a ser exibida para o botão Cancelar em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Image`, use o <xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A> propriedade para especificar a imagem a ser exibida para o botão Cancelar. Essa imagem pode ser em qualquer formato de arquivo (. jpg,. gif,. bmp e assim por diante), desde que o navegador do cliente oferece suporte a esse formato.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir uma imagem para o botão Cancelar, você pode exibir o texto pelo primeiro parâmetro de <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Button` ou `ButtonType.Link` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.CancelText%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A> propriedade para especificar uma imagem personalizada a ser exibida para um botão de cancelamento em um <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade deve ser definida como `ButtonType.Image` para um botão de cancelamento exibir uma imagem.  
+  
+ [!code-aspx-csharp[CommandFieldEditImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldEditImageUrl/CS/commandfieldeditimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldEditImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldEditImageUrl/VB/commandfieldeditimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelText">
+      <MemberSignature Language="C#" Value="public virtual string CancelText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CancelText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.CancelText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a legenda para o botão Cancelar exibido em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo.</summary>
+        <value>A legenda para o botão Cancelar em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é "Cancelar".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.CancelText%2A> propriedade para especificar o texto a ser exibido no botão de cancelamento.  
+  
+> [!NOTE]
+>  Como uma alternativa para a exibição de texto para um botão de cancelamento, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A> propriedade.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.CancelText%2A> propriedade para especificar uma legenda personalizada para um botão de cancelamento exibido em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField/CS/commandfieldcs.aspx#1)]
+ [!code-aspx-vb[CommandField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField/VB/commandfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public override bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a validação é realizada quando o usuário clica em um botão em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>
+          <see langword="true" /> para executar a validação quando o usuário clica em um botão em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CommandField.CausesValidation%2A> propriedade para especificar se a validação é executada quando um botão em um <xref:System.Web.UI.WebControls.CommandField> campo é clicado. Quando essa propriedade é definida como `true`, por padrão, todos os controles de validação na página são validados. Para limitar a validação para apenas um determinado grupo de controles de validação, crie um grupo de validação e, em seguida, defina o <xref:System.Web.UI.WebControls.ButtonFieldBase.ValidationGroup%2A> propriedade para o nome do grupo de validação. Para obter mais informações sobre grupos de validação, consulte <xref:System.Web.UI.WebControls.BaseValidator.ValidationGroup%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.CausesValidation%2A> propriedade para evitar a validação ocorra quando um botão em um <xref:System.Web.UI.WebControls.CommandField> campo é clicado.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CommandFieldCausesValidation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldCausesValidation/CS/commandfieldcausesvalidationcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldCausesValidation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldCausesValidation/VB/commandfieldcausesvalidationvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataControlField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataControlField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">O <see cref="T:System.Web.UI.WebControls.DataControlField" /> para copiar as propriedades do atual <see cref="T:System.Web.UI.WebControls.CommandField" /> para.</param>
+        <summary>Copia as propriedades do atual <see cref="T:System.Web.UI.WebControls.CommandField" /> objeto especificado <see cref="T:System.Web.UI.WebControls.DataControlField" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CommandField.CopyProperties%2A> é um método auxiliar usado pelo <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> método para copiar as propriedades do atual <xref:System.Web.UI.WebControls.CommandField> o objeto para o <xref:System.Web.UI.WebControls.DataControlField> objeto criado pelo método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um vazio <see cref="T:System.Web.UI.WebControls.CommandField" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.CommandField" /> vazio.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CommandField.CreateField%2A> é um método auxiliar usado pelo <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> método para criar um vazio <xref:System.Web.UI.WebControls.CommandField> objeto para copiar as propriedades do atual <xref:System.Web.UI.WebControls.CommandField> objeto para.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string DeleteImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeleteImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.DeleteImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida para um botão Excluir em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>A URL para uma imagem a ser exibida para um botão Excluir em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Image`, use o <xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A> propriedade para especificar a imagem a ser exibida para um botão de exclusão. Essa imagem pode ser em qualquer formato de arquivo (. jpg,. gif,. bmp e assim por diante), desde que o navegador do cliente oferece suporte a esse formato.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir uma imagem de um botão de exclusão, você pode exibir o texto pelo primeiro parâmetro de <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Button` ou `ButtonType.Link` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.DeleteText%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A> propriedade para especificar uma imagem personalizada a ser exibida para um botão de exclusão em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade deve ser definida como `ButtonType.Image` para o botão Excluir exibir uma imagem.  
+  
+ [!code-aspx-csharp[CommandFieldDeleteImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldDeleteImageUrl/CS/commandfielddeleteimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldDeleteImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldDeleteImageUrl/VB/commandfielddeleteimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteText">
+      <MemberSignature Language="C#" Value="public virtual string DeleteText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeleteText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.DeleteText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a legenda para um botão de exclusão em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo.</summary>
+        <value>A legenda para um botão de exclusão em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é "Excluir".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.DeleteText%2A> propriedade para especificar o texto a ser exibido para um botão de exclusão.  
+  
+> [!NOTE]
+>  Como uma alternativa para a exibição de texto para um botão de exclusão, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A> propriedade.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.DeleteText%2A> propriedade para especificar uma legenda personalizada para um botão de exclusão exibido em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandFieldDeleteText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldDeleteText/CS/commandfielddeletetextcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldDeleteText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldDeleteText/VB/commandfielddeletetextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string EditImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EditImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.EditImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida para um botão Editar em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>A URL para uma imagem a ser exibida para um botão Editar em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Image`, use o <xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A> propriedade para especificar a imagem a ser exibida para um botão de edição. Essa imagem pode ser em qualquer formato de arquivo (. jpg,. gif,. bmp e assim por diante), desde que o navegador do cliente oferece suporte a esse formato.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir uma imagem de um botão de edição, você pode exibir o texto pelo primeiro parâmetro de <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Button` ou `ButtonType.Link` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.EditText%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A> propriedade para especificar uma imagem personalizada a ser exibida para um botão de edição em um <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade deve ser definida como `ButtonType.Image` para um botão de edição exibir uma imagem.  
+  
+ [!code-aspx-csharp[CommandFieldEditImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldEditImageUrl/CS/commandfieldeditimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldEditImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldEditImageUrl/VB/commandfieldeditimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditText">
+      <MemberSignature Language="C#" Value="public virtual string EditText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EditText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.EditText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a legenda para um botão de edição em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>A legenda para um botão de edição em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é "Edição".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> objeto é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.EditText%2A> propriedade para especificar o texto a ser exibido para um botão de edição.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir um botão de edição de texto, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A> propriedade.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.EditText%2A> propriedade para especificar uma legenda personalizada para um botão de edição exibido em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField/CS/commandfieldcs.aspx#1)]
+ [!code-aspx-vb[CommandField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField/VB/commandfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeCell">
+      <MemberSignature Language="C#" Value="public override void InitializeCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlCellType cellType, System.Web.UI.WebControls.DataControlRowState rowState, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlCellType cellType, valuetype System.Web.UI.WebControls.DataControlRowState rowState, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="cellType" Type="System.Web.UI.WebControls.DataControlCellType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cell">O <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> a ser inicializado.</param>
+        <param name="cellType">Um dos valores de <see cref="T:System.Web.UI.WebControls.DataControlCellType" />.</param>
+        <param name="rowState">Um dos valores de <see cref="T:System.Web.UI.WebControls.DataControlRowState" />.</param>
+        <param name="rowIndex">O índice baseado em zero da linha que contém a célula.</param>
+        <summary>Inicializa especificado <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> objeto para o estado de linha especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CommandField.InitializeCell%2A> método é implementado por <xref:System.Web.UI.WebControls.DataControlField>-derivadas de tipos para adicionar texto e controles para um <xref:System.Web.UI.WebControls.TableCell> objeto de um controle de dados que usa tabelas para exibir uma interface do usuário (IU). Esses controles de dados criar a tabela completa estrutura linha por linha quando o controle `CreateChildControls` método é chamado. O <xref:System.Web.UI.WebControls.CommandField.InitializeCell%2A> método é chamado pelo `InitializeRow` controla o método de dados como <xref:System.Web.UI.WebControls.DetailsView> e <xref:System.Web.UI.WebControls.GridView>.  
+  
+ Chamada para esse método quando você está escrevendo uma associação de dados personalizada de controle que usa <xref:System.Web.UI.WebControls.TableCell> objetos para inicializar as células da estrutura de tabela com dados ou controles. Implementar esse método quando você estiver escrevendo um <xref:System.Web.UI.WebControls.CommandField>-classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string InsertImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InsertImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.InsertImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida para o botão de inserção em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo.</summary>
+        <value>A URL para uma imagem a ser exibida para o botão de inserção em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Image`, use o <xref:System.Web.UI.WebControls.CommandField.InsertImageUrl%2A> propriedade para especificar a imagem a ser exibida para um botão de inserção. Essa imagem pode ser em qualquer formato de arquivo (. jpg,. gif,. bmp e assim por diante), desde que o navegador do cliente oferece suporte a esse formato.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir uma imagem do botão de inserção, você pode exibir o texto pelo primeiro parâmetro de <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Button` ou `ButtonType.Link` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.InsertText%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.InsertImageUrl%2A> propriedade para especificar uma imagem personalizada a ser exibida para um botão de inserção em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.DetailsView> controle. O <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade deve ser definida como `ButtonType.Image` para um botão de inserção exibir uma imagem.  
+  
+ [!code-aspx-csharp[CommandFieldInsertImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldInsertImageUrl/CS/commandfieldinsertimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldInsertImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldInsertImageUrl/VB/commandfieldinsertimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertText">
+      <MemberSignature Language="C#" Value="public virtual string InsertText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InsertText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.InsertText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a legenda para o botão de inserção em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo.</summary>
+        <value>A legenda para o botão de inserção em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é "Insert".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.InsertText%2A> propriedade para especificar o texto a ser exibida para o botão de inserção.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir o texto do botão de inserção, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.InsertImageUrl%2A> propriedade.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.InsertText%2A> propriedade para especificar uma legenda personalizada para um botão de inserção exibido em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.DetailsView> controle.  
+  
+ [!code-aspx-csharp[CommandFieldInsertText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldInsertText/CS/commandfieldinserttextcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldInsertText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldInsertText/VB/commandfieldinserttextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string NewImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.NewImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida para o novo botão em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo.</summary>
+        <value>A URL para uma imagem a ser exibida para o novo botão em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Image`, use o <xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A> propriedade para especificar a imagem a ser exibida para o novo botão. Essa imagem pode ser em qualquer formato de arquivo (. jpg,. gif,. bmp e assim por diante), desde que o navegador do cliente oferece suporte a esse formato.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir uma imagem do botão novo, você pode exibir o texto pelo primeiro parâmetro de <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Button` ou `ButtonType.Link` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.NewText%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A> propriedade para especificar uma imagem personalizada a ser exibida para o novo botão em um <xref:System.Web.UI.WebControls.CommandField> campo de coluna de uma <xref:System.Web.UI.WebControls.DetailsView> controle. O <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade deve ser definida como `ButtonType.Image` para o novo botão Exibir uma imagem.  
+  
+ [!code-aspx-csharp[CommandFieldInsertImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldInsertImageUrl/CS/commandfieldinsertimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldInsertImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldInsertImageUrl/VB/commandfieldinsertimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewText">
+      <MemberSignature Language="C#" Value="public virtual string NewText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.NewText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a legenda para o novo botão em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo.</summary>
+        <value>A legenda para o novo botão em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo. O padrão é "Novo".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> objeto é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.NewText%2A> propriedade para especificar o texto a ser exibido para o novo botão.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir o texto do botão novo, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A> propriedade.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.NewText%2A> propriedade para especificar uma legenda personalizada para o novo botão exibido em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.DetailsView> controle.  
+  
+ [!code-aspx-csharp[CommandFieldInsertText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldInsertText/CS/commandfieldinserttextcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldInsertText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldInsertText/VB/commandfieldinserttextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string SelectImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.SelectImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a exibir para um botão Selecionar em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>A URL para uma imagem a ser exibida para um botão Selecionar em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Image`, use o <xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A> propriedade para especificar a imagem a ser exibida para um botão de seleção. Essa imagem pode ser em qualquer formato de arquivo (. jpg,. gif,. bmp e assim por diante), desde que o navegador do cliente oferece suporte a esse formato.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir uma imagem de um botão de seleção, você pode exibir o texto pelo primeiro parâmetro de <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Button` ou `ButtonType.Link` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.SelectText%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A> propriedade para especificar uma imagem personalizada a ser exibida para um botão de seleção em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade deve ser definida como `ButtonType.Image` para um botão de seleção exibir uma imagem.  
+  
+ [!code-aspx-csharp[CommandFieldSelectImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldSelectImageUrl/CS/commandfieldselectimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldSelectImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldSelectImageUrl/VB/commandfieldselectimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectText">
+      <MemberSignature Language="C#" Value="public virtual string SelectText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.SelectText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a legenda para um botão de seleção em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>A legenda para um botão de seleção em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é "Selecionar".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.SelectText%2A> propriedade para especificar o texto a ser exibido para um botão de seleção.  
+  
+> [!NOTE]
+>  Como uma alternativa para a exibição de texto para um botão de seleção, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A> propriedade.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.SelectText%2A> propriedade para especificar uma legenda personalizada para um botão de seleção exibida em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandFieldSelectText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldSelectText/CS/commandfieldselecttextcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldSelectText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldSelectText/VB/commandfieldselecttextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCancelButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowCancelButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowCancelButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowCancelButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um botão Cancelar é exibido em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>
+          <see langword="true" /> para exibir um botão Cancelar em um <see cref="T:System.Web.UI.WebControls.CommandField" />, caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CommandField.ShowCancelButton%2A> propriedade para especificar se o botão de cancelamento é exibido em uma <xref:System.Web.UI.WebControls.CommandField> objeto. Um botão de cancelamento pode ser exibido em um <xref:System.Web.UI.WebControls.CommandField> campo quando o registro correspondente em um controle associado a dados está em edição ou modo de inserção. O botão Cancelar permite que o usuário cancelar a edição ou a operação de inserção e retorna o registro para o modo de exibição normal.  
+  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.CancelText%2A> propriedade para especificar o texto a ser exibido para um botão de cancelamento. Como alternativa, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.CancelImageUrl%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.ShowCancelButton%2A> propriedade para ocultar o botão Cancelar exibido quando uma linha em um <xref:System.Web.UI.WebControls.GridView> controle está no modo de edição.  
+  
+ [!code-aspx-csharp[CommandFieldShowCancelButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldShowCancelButton/CS/commandfieldshowcancelbuttoncs.aspx#1)]
+ [!code-aspx-vb[CommandFieldShowCancelButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldShowCancelButton/VB/commandfieldshowcancelbuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDeleteButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowDeleteButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowDeleteButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowDeleteButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um botão Excluir é exibido em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>
+          <see langword="true" /> para exibir um botão Excluir em um <see cref="T:System.Web.UI.WebControls.CommandField" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CommandField.ShowDeleteButton%2A> propriedade para especificar se um botão de exclusão é exibido em um <xref:System.Web.UI.WebControls.CommandField> campo para cada registro no controle da fonte de dados. Botão Excluir permite remover um registro da fonte de dados.  
+  
+> [!NOTE]
+>  Quando um controle associado a dados é usado em combinação com um controle de fonte de dados (como um <xref:System.Web.UI.WebControls.SqlDataSource> controle), o controle associado a dados pode tirar proveito da fonte de dados de recursos do controle e fornecer funcionalidade de exclusão automática. Para outras fontes de dados, você deve fornecer as rotinas para executar a operação de exclusão durante o evento apropriado para o controle associado a dados.  
+  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.DeleteText%2A> propriedade para especificar o texto a ser exibido para um botão de exclusão. Como alternativa, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.DeleteImageUrl%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.ShowDeleteButton%2A> propriedade para exibir um botão de exclusão para cada registro em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandFieldShowDeleteButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldShowDeleteButton/CS/commandfieldshowdeletebuttoncs.aspx#1)]
+ [!code-aspx-vb[CommandFieldShowDeleteButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldShowDeleteButton/VB/commandfieldshowdeletebuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowEditButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowEditButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowEditButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowEditButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um botão Editar é exibido em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>
+          <see langword="true" /> para exibir um botão Editar em um <see cref="T:System.Web.UI.WebControls.CommandField" />, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CommandField.ShowEditButton%2A> propriedade para especificar se um botão de edição é exibido no <xref:System.Web.UI.WebControls.CommandField> campo para cada registro no controle da fonte de dados. O botão Editar permite editar os valores de um registro.  
+  
+ Quando o usuário clica em um botão de edição, os controles de entrada são exibidos para cada campo no registro. O botão de edição do registro é substituído por um botão de atualização e um botão de cancelamento e todos os outros botões de comando para o registro estão ocultos. Clique no botão de atualização atualiza o registro com os novos valores na fonte de dados, enquanto clicando no botão Cancelar cancela a operação.  
+  
+> [!NOTE]
+>  Quando um controle associado a dados é usado em combinação com um controle de fonte de dados (como um <xref:System.Web.UI.WebControls.SqlDataSource> controle), o controle associado a dados pode tirar proveito da fonte de dados de recursos do controle e fornecer funcionalidade de atualização automática. Para outras fontes de dados, você deve fornecer as rotinas para executar a operação de atualização durante o evento apropriado para o controle associado a dados.  
+  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.EditText%2A> propriedade para especificar o texto a ser exibido para um botão de edição. Como alternativa, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.EditImageUrl%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.ShowEditButton%2A> propriedade para exibir um botão de edição para cada registro em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandFieldEditImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldEditImageUrl/CS/commandfieldeditimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldEditImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldEditImageUrl/VB/commandfieldeditimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowInsertButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowInsertButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowInsertButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowInsertButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um botão Novo é exibido em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>
+          <see langword="true" /> para exibir um botão Novo em um <see cref="T:System.Web.UI.WebControls.CommandField" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CommandField.ShowInsertButton%2A> propriedade para especificar se um novo botão é exibido em um <xref:System.Web.UI.WebControls.CommandField> campo. Novo botão é exibido apenas uma vez no <xref:System.Web.UI.WebControls.CommandField> campo e permite que o usuário adicione um novo registro na fonte de dados.  
+  
+> [!NOTE]
+>  Essa propriedade só se aplica a controles de associação de dados que suporte operações de inserção, como o <xref:System.Web.UI.WebControls.DetailsView> controle.  
+  
+ Quando o usuário clica no botão novo, controles de entrada são exibidos para cada campo exibido no controle associado a dados, permitindo que o usuário insira os valores para o novo registro. Botão novo é substituído por um botão de inserção e um botão de cancelamento e todos os outros comando botões o <xref:System.Web.UI.WebControls.CommandField> campo estão ocultos. Clicar no botão de inserção adiciona o registro para a fonte de dados, enquanto clicar na cancela o botão Cancelar a operação.  
+  
+> [!NOTE]
+>  Quando um controle associado a dados é usado em combinação com um controle de fonte de dados (como um <xref:System.Web.UI.WebControls.SqlDataSource> controle), o controle associado a dados pode tirar proveito da fonte de dados de recursos do controle e oferece a funcionalidade de inserção automática. Para outras fontes de dados, você deve fornecer as rotinas para executar a operação de inserção durante o evento apropriado para o controle associado a dados.  
+  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.NewText%2A> propriedade para especificar o texto a ser exibida para um novo botão. Como alternativa, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.NewImageUrl%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.ShowInsertButton%2A> propriedade para exibir um botão novo em um <xref:System.Web.UI.WebControls.DetailsView> controle, que permite que o usuário adicione um novo registro para a fonte de dados.  
+  
+ [!code-aspx-csharp[CommandFieldShowInsertButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldShowInsertButton/CS/commandfieldshowinsertbuttoncs.aspx#1)]
+ [!code-aspx-vb[CommandFieldShowInsertButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldShowInsertButton/VB/commandfieldshowinsertbuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSelectButton">
+      <MemberSignature Language="C#" Value="public virtual bool ShowSelectButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowSelectButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.ShowSelectButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um botão Selecionar é exibido em um campo <see cref="T:System.Web.UI.WebControls.CommandField" />.</summary>
+        <value>
+          <see langword="true" /> para exibir um botão Selecionar em um <see cref="T:System.Web.UI.WebControls.CommandField" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CommandField.ShowSelectButton%2A> propriedade para especificar se um botão de seleção é exibido em um <xref:System.Web.UI.WebControls.CommandField> campo para cada registro no controle da fonte de dados. O botão de seleção permite que o usuário selecione uma linha no controle da fonte de dados. Quando o botão de seleção de um registro é clicado, o controle de fonte de dados responde adequadamente. Por exemplo, um <xref:System.Web.UI.WebControls.GridView> controlam as atualizações de <xref:System.Web.UI.WebControls.GridView.SelectedDataKey%2A>, <xref:System.Web.UI.WebControls.GridView.SelectedIndex%2A>, <xref:System.Web.UI.WebControls.GridView.SelectedRow%2A>, e <xref:System.Web.UI.WebControls.GridView.SelectedValue%2A> propriedades para valores correspondentes para a linha selecionada. O <xref:System.Web.UI.WebControls.GridView.SelectedRowStyle%2A> estilo é então aplicado à linha selecionada e o <xref:System.Web.UI.WebControls.GridView.SelectedIndexChanged> e <xref:System.Web.UI.WebControls.GridView.SelectedIndexChanging> os eventos são gerados.  
+  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.SelectText%2A> propriedade para especificar o texto a ser exibido para um botão de seleção. Como alternativa, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.SelectImageUrl%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.ShowSelectButton%2A> propriedade para exibir um botão de seleção para cada registro em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandFieldShowSelectButton#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldShowSelectButton/CS/commandfieldshowselectbuttoncs.aspx#1)]
+ [!code-aspx-vb[CommandFieldShowSelectButton#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldShowSelectButton/VB/commandfieldshowselectbuttonvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string UpdateImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.UpdateImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida para um botão de atualização em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo.</summary>
+        <value>A URL para uma imagem a ser exibida para um botão de atualização em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Image`, use o <xref:System.Web.UI.WebControls.CommandField.UpdateImageUrl%2A> propriedade para especificar a imagem a ser exibida para um botão de atualização. Essa imagem pode ser em qualquer formato de arquivo (. jpg,. gif,. bmp e assim por diante), desde que o navegador do cliente oferece suporte a esse formato.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir uma imagem de um botão de atualização, você pode exibir o texto pelo primeiro parâmetro de <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Button` ou `ButtonType.Link` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.UpdateText%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.UpdateImageUrl%2A> propriedade para especificar uma imagem personalizada a ser exibida para um botão de atualização em um <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade deve ser definida como `ButtonType.Image` para um botão de atualização exibir uma imagem.  
+  
+ [!code-aspx-csharp[CommandFieldEditImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandFieldEditImageUrl/CS/commandfieldeditimageurlcs.aspx#1)]
+ [!code-aspx-vb[CommandFieldEditImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandFieldEditImageUrl/VB/commandfieldeditimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateText">
+      <MemberSignature Language="C#" Value="public virtual string UpdateText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandField.UpdateText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a legenda para um botão de atualização em um <see cref="T:System.Web.UI.WebControls.CommandField" /> campo.</summary>
+        <value>A legenda para um botão de atualização em um <see cref="T:System.Web.UI.WebControls.CommandField" />. O padrão é "Update".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.CommandField> campo é definido como `ButtonType.Button` ou `ButtonType.Link`, use o <xref:System.Web.UI.WebControls.CommandField.UpdateText%2A> propriedade para especificar o texto a ser exibido em um botão de atualização.  
+  
+> [!NOTE]
+>  Como uma alternativa para exibir o texto de um botão de atualização, você pode exibir uma imagem definindo primeiro o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade `ButtonType.Image` e, em seguida, definindo o <xref:System.Web.UI.WebControls.CommandField.UpdateImageUrl%2A> propriedade.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandField.UpdateText%2A> propriedade para especificar uma legenda personalizada para um botão de atualização exibido em uma <xref:System.Web.UI.WebControls.CommandField> campo de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CommandField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CommandField/CS/commandfieldcs.aspx#1)]
+ [!code-aspx-vb[CommandField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CommandField/VB/commandfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSupportsCallback">
+      <MemberSignature Language="C#" Value="public override void ValidateSupportsCallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ValidateSupportsCallback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandField.ValidateSupportsCallback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se os controles contidos em um <see cref="T:System.Web.UI.WebControls.CommandField" /> retornos de chamada do suporte do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CommandField.ValidateSupportsCallback%2A> é um método auxiliar usado para determinar se os controles contidos em um <xref:System.Web.UI.WebControls.CommandField> retornos de chamada do suporte do objeto. O <xref:System.Web.UI.WebControls.CommandField> classe não tem suporte para retornos de chamada quando o botão de seleção é exibido. Esse método foi implementado para gerar um <xref:System.NotSupportedException> exceção quando o botão de seleção é exibido.  
+  
+> [!NOTE]
+>  Esse método é usado principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O botão de seleção é exibido no <see cref="T:System.Web.UI.WebControls.CommandField" /> objeto. O <see cref="T:System.Web.UI.WebControls.CommandField" /> classe oferece suporte para retornos de chamada quando o botão de seleção é exibido.</exception>
+        <block subset="none" type="overrides">
+          <para>Classes que derivam de <see cref="T:System.Web.UI.WebControls.CommandField" /> classe pode substituir este método para indicar se os controles contidos pelos retornos de chamada de suporte de campo. Para indicar que os retornos de chamada são suportados, implementam este método como um método vazio que não lançam uma exceção; Caso contrário, lance uma exceção com uma mensagem útil que descreve por que não há suporte para retornos de chamada.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

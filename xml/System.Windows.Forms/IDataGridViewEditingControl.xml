@@ -1,0 +1,353 @@
+<Type Name="IDataGridViewEditingControl" FullName="System.Windows.Forms.IDataGridViewEditingControl">
+  <TypeSignature Language="C#" Value="public interface IDataGridViewEditingControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataGridViewEditingControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IDataGridViewEditingControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a funcionalidade comum para os controles hospedadas nas células de uma <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada por todos os controles, como <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl> e <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>, que são hospedadas por correspondente <xref:System.Windows.Forms.DataGridView> células, como <xref:System.Windows.Forms.DataGridViewComboBoxCell> e <xref:System.Windows.Forms.DataGridViewTextBoxCell>, quando eles estiverem no modo de edição.  
+  
+ Tipos que podem hospedar o conjunto de controles de edição de célula seus <xref:System.Windows.Forms.DataGridViewCell.EditType%2A> propriedade para um <xref:System.Type> que representa a edição de tipo de controle. Quando a célula entra em modo de edição, as etapas a seguir são executadas:  
+  
+1.  O <xref:System.Windows.Forms.DataGridView> controle cria uma instância do tipo de controle de edição.  
+  
+2.  O <xref:System.Windows.Forms.DataGridView> controle chama a célula <xref:System.Windows.Forms.DataGridViewCell.InitializeEditingControl%2A> método. Você pode substituir esse método para transferir o valor da célula para o controle de edição.  
+  
+3.  O <xref:System.Windows.Forms.DataGridView> controle chama o controle de edição <xref:System.Windows.Forms.IDataGridViewEditingControl.ApplyCellStyleToEditingControl%2A> método e passa em estilo atual da célula. Você pode implementar esse método para inicializar a aparência do controle de edição para que corresponda a aparência da célula.  
+  
+4.  O <xref:System.Windows.Forms.DataGridView> controle chama o controle de edição <xref:System.Windows.Forms.IDataGridViewEditingControl.PrepareEditingControlForEdit%2A> método. Você pode implementar esse método para fazer os ajustes finais para o controle de edição, como selecionar o valor do controle.  
+  
+ Para obter mais informações sobre como implementar <xref:System.Windows.Forms.IDataGridViewEditingControl>, consulte [como: hospedar controles em células de DataGridView do Windows Forms](~/docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+  
+ Tipos, como a célula <xref:System.Windows.Forms.DataGridViewCheckBoxCell> que fornecem uma interface de usuário (UI) para especificar valores sem uma implementação de controle de edição de hospedagem de <xref:System.Windows.Forms.IDataGridViewEditingCell> interface. Nesse caso, a interface do usuário é exibido, independentemente se a célula está em modo de edição.  
+  
+ Tipos de outra célula, como <xref:System.Windows.Forms.DataGridViewButtonCell>, fornecer uma interface do usuário, mas não armazenam valores especificados pelo usuário. Nesse caso, o tipo de célula não implementa <xref:System.Windows.Forms.IDataGridViewEditingCell> ou hospedar um controle de edição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir fornece uma implementação desta interface derivada de <xref:System.Windows.Forms.DateTimePicker>. Este exemplo é parte de um exemplo maior disponível em [como: hospedar controles em células de DataGridView do Windows Forms](~/docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewCalendarColumn#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/CS/datagridviewcalendarcolumn.cs#300)]
+ [!code-vb[System.Windows.Forms.DataGridViewCalendarColumn#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/VB/datagridviewcalendarcolumn.vb#300)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplyCellStyleToEditingControl">
+      <MemberSignature Language="C#" Value="public void ApplyCellStyleToEditingControl (System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyCellStyleToEditingControl(class System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridViewEditingControl.ApplyCellStyleToEditingControl(System.Windows.Forms.DataGridViewCellStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataGridViewCellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridViewCellStyle">O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> para usar como modelo para a interface do usuário.</param>
+        <summary>Altera a interface do usuário do controle (IU) para ser consistente com o estilo de célula especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, uma implementação deste método definirá as propriedades de interface do usuário para o controle de edição, como fonte, cor do plano de fundo e cores de primeiro plano, como os valores das propriedades correspondentes no `dataGridViewCellStyle`, que é o estilo usado para a célula que hospeda o controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir fornece uma implementação desse membro. Este exemplo é parte de um exemplo maior disponível em [como: hospedar controles em células de DataGridView do Windows Forms](~/docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewCalendarColumn#303](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/CS/datagridviewcalendarcolumn.cs#303)]
+ [!code-vb[System.Windows.Forms.DataGridViewCalendarColumn#303](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/VB/datagridviewcalendarcolumn.vb#303)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlDataGridView">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridView EditingControlDataGridView { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridView EditingControlDataGridView" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingControl.EditingControlDataGridView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.DataGridView" /> que contém a célula.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGridView" /> que contém o <see cref="T:System.Windows.Forms.DataGridViewCell" /> que está sendo editado; <see langword="null" /> se não houver associado não <see cref="T:System.Windows.Forms.DataGridView" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlFormattedValue">
+      <MemberSignature Language="C#" Value="public object EditingControlFormattedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object EditingControlFormattedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingControl.EditingControlFormattedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor formatado da célula que está sendo modificada pelo editor.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o valor formatado da célula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor formatado representa o valor conforme ele é exibido na interface do usuário do controle. O valor formatado pode ser diferente em valor absoluto e dados do mesmo tipo do valor real contido no controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir fornece uma implementação desse membro. Este exemplo é parte de um exemplo maior disponível em [como: hospedar controles em células de DataGridView do Windows Forms](~/docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewCalendarColumn#301](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/CS/datagridviewcalendarcolumn.cs#301)]
+ [!code-vb[System.Windows.Forms.DataGridViewCalendarColumn#301](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/VB/datagridviewcalendarcolumn.vb#301)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlRowIndex">
+      <MemberSignature Language="C#" Value="public int EditingControlRowIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EditingControlRowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingControl.EditingControlRowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice da linha pai de hospedagem da célula.</summary>
+        <value>O índice da linha que contém a célula, ou -1 se não houver nenhuma linha pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.IDataGridViewEditingControl> interface não define um correspondente `ColumnIndex` propriedade. Você pode usar o <xref:System.Windows.Forms.IDataGridViewEditingControl.EditingControlDataGridView%2A> propriedade para recuperar o pai <xref:System.Windows.Forms.DataGridView> controlar e usar o <xref:System.Windows.Forms.DataGridView.CurrentCellAddress%2A?displayProperty=nameWithType> para determinar os índices de linha e coluna da célula ativa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlValueChanged">
+      <MemberSignature Language="C#" Value="public bool EditingControlValueChanged { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EditingControlValueChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingControl.EditingControlValueChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o valor do controle de edição é diferente do valor da célula de hospedagem.</summary>
+        <value>
+          <see langword="true" />Se o valor do controle for diferente do valor da célula; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.IDataGridViewEditingControl.EditingControlValueChanged%2A> está definida como `true` para indicar que o estado de hospedagem da célula foi alterada e sua interface de usuário (UI) precisa ser atualizado para refletir essa alteração no valor. A célula ou tabela proprietária redefinirá a essa propriedade como `false` após uma atualização.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Retornando <see langword="true" /> em sua implementação dessa propriedade não automaticamente altera o valor exibido. Quando o valor é alterado no controle de edição, você deve notificar a <see cref="T:System.Windows.Forms.DataGridView" /> da alteração passando <see langword="true" /> para o <see cref="M:System.Windows.Forms.DataGridView.NotifyCurrentCellDirty(System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlWantsInputKey">
+      <MemberSignature Language="C#" Value="public bool EditingControlWantsInputKey (System.Windows.Forms.Keys keyData, bool dataGridViewWantsInputKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EditingControlWantsInputKey(valuetype System.Windows.Forms.Keys keyData, bool dataGridViewWantsInputKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridViewEditingControl.EditingControlWantsInputKey(System.Windows.Forms.Keys,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+        <Parameter Name="dataGridViewWantsInputKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Um <see cref="T:System.Windows.Forms.Keys" /> que representa a tecla pressionada.</param>
+        <param name="dataGridViewWantsInputKey">
+          <see langword="true" />Quando o <see cref="T:System.Windows.Forms.DataGridView" /> deseja processar o <see cref="T:System.Windows.Forms.Keys" /> na <c>keyData</c>; caso contrário, <see langword="false" />.</param>
+        <summary>Determina se a chave especificada é uma chave de entrada regular que deve ser processada pelo controle de edição ou uma chave especial que deve ser processada pelo <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <returns>
+          <see langword="true" /> se a chave especificada for uma chave de entrada regular que deverá ser manipulada pelo controle de edição; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de edição implementa este método para determinar quais teclas de entrada devem ser processadas pelo controle, e que as chaves de entrada deve ser processada pelo <xref:System.Windows.Forms.DataGridView>.  
+  
+ O <xref:System.Windows.Forms.IDataGridViewEditingControl.EditingControlWantsInputKey%2A> método é chamado pelo <xref:System.Windows.Forms.DataGridView>. O <xref:System.Windows.Forms.DataGridView> passará `true` para `dataGridViewWantsInputKey` quando ela pode processar o `keyData`. Se o controle de edição pode permitir que o <xref:System.Windows.Forms.DataGridView> tratar o `keyData`, <xref:System.Windows.Forms.IDataGridViewEditingControl.EditingControlWantsInputKey%2A> deve retornar `false` quando `dataGridViewWantsInputKey` é `true`. Outras implementações do <xref:System.Windows.Forms.IDataGridViewEditingControl.EditingControlWantsInputKey%2A> pode ignorar um `dataGridViewWantsInputKey` valor `true` e tratar o `keyData` no controle de edição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir fornece uma implementação desse membro. Este exemplo é parte de um exemplo maior disponível em [como: hospedar controles em células de DataGridView do Windows Forms](~/docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewCalendarColumn#305](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/CS/datagridviewcalendarcolumn.cs#305)]
+ [!code-vb[System.Windows.Forms.DataGridViewCalendarColumn#305](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/VB/datagridviewcalendarcolumn.vb#305)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingPanelCursor">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Cursor EditingPanelCursor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor EditingPanelCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingControl.EditingPanelCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cursor usado quando o ponteiro do mouse está sobre o <see cref="P:System.Windows.Forms.DataGridView.EditingPanel" /> , mas não sobre o controle de edição.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Cursor" /> que representa o ponteiro do mouse usado para o painel de edição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O painel de edição é a <xref:System.Windows.Forms.Panel> que hospeda a edição controla quando o <xref:System.Windows.Forms.DataGridView> controle está no modo de edição. O controle de edição real não pode abranger toda a área do painel de edição. Nesse caso, o <xref:System.Windows.Forms.IDataGridViewEditingControl.EditingPanelCursor%2A> implementação deve retornar o cursor a ser usado quando o ponteiro do mouse está sobre o painel, mas não sobre o controle. Normalmente, você desejará retornar o mesmo cursor que usa o controle. Se você quiser alterar o cursor exibido quando o ponteiro está sobre o controle, você deve definir o <xref:System.Windows.Forms.Control.Cursor%2A> propriedade. Você pode definir isso no construtor do <xref:System.Windows.Forms.IDataGridViewEditingControl> implementação ou você pode defini-lo <xref:System.Windows.Forms.IDataGridViewEditingControl.PrepareEditingControlForEdit%2A> implementação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir fornece uma implementação desse membro. Este exemplo é parte de um exemplo maior disponível em [como: hospedar controles em células de DataGridView do Windows Forms](~/docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewCalendarColumn#311](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/CS/datagridviewcalendarcolumn.cs#311)]
+ [!code-vb[System.Windows.Forms.DataGridViewCalendarColumn#311](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCalendarColumn/VB/datagridviewcalendarcolumn.vb#311)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditingControlFormattedValue">
+      <MemberSignature Language="C#" Value="public object GetEditingControlFormattedValue (System.Windows.Forms.DataGridViewDataErrorContexts context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetEditingControlFormattedValue(valuetype System.Windows.Forms.DataGridViewDataErrorContexts context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridViewEditingControl.GetEditingControlFormattedValue(System.Windows.Forms.DataGridViewDataErrorContexts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Forms.DataGridViewDataErrorContexts" />
+      </Parameters>
+      <Docs>
+        <param name="context">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.DataGridViewDataErrorContexts" /> valores que especifica o contexto no qual os dados são necessários.</param>
+        <summary>Recupera o valor formatado da célula.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa a versão formatada do conteúdo da célula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor formatado representa o valor conforme ele é exibido na interface do usuário do controle. O valor formatado pode ser diferente em valor absoluto e dados do mesmo tipo do valor real contido no controle.  
+  
+ Para definir o valor formatado do controle, use o <xref:System.Windows.Forms.IDataGridViewEditingControl.EditingControlFormattedValue%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Alterar o valor de retorno em sua implementação deste método não altera o valor exibido automaticamente. Quando o valor é alterado no controle de edição, você deve notificar a <see cref="T:System.Windows.Forms.DataGridView" /> da alteração passando <see langword="true" /> para o <see cref="M:System.Windows.Forms.DataGridView.NotifyCurrentCellDirty(System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareEditingControlForEdit">
+      <MemberSignature Language="C#" Value="public void PrepareEditingControlForEdit (bool selectAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PrepareEditingControlForEdit(bool selectAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridViewEditingControl.PrepareEditingControlForEdit(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectAll" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="selectAll">
+          <see langword="true" />para selecionar todo o conteúdo da célula; Caso contrário, <see langword="false" />.</param>
+        <summary>Prepara a célula selecionada atualmente para edição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade deste método é preparar o controle e seu conteúdo para edição. Por exemplo, convém colocar o ponto de inserção no final do conteúdo, ou alterar como o conteúdo é alinhado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepositionEditingControlOnValueChange">
+      <MemberSignature Language="C#" Value="public bool RepositionEditingControlOnValueChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RepositionEditingControlOnValueChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingControl.RepositionEditingControlOnValueChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o conteúdo da célula precisa ser reposicionado sempre que o valor é alterado.</summary>
+        <value>
+          <see langword="true" />Se o conteúdo precisar ser reposicionado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas situações exigem que o conteúdo da célula reposicionar quando o valor é alterado. Por exemplo, o conteúdo da célula precisará reposicionar quando uma célula quebra o texto e o conteúdo fique maior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

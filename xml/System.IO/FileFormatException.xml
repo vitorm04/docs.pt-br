@@ -1,0 +1,325 @@
+<Type Name="FileFormatException" FullName="System.IO.FileFormatException">
+  <TypeSignature Language="C#" Value="public class FileFormatException : FormatException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit FileFormatException extends System.FormatException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileFormatException" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Packaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.FormatException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma exceção que é lançada quando um arquivo de entrada ou um fluxo de dados que deve estar em conformidade com uma determinada especificação de formato de arquivo está malformado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileFormatException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileFormatException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.IO.FileFormatException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor usa uma mensagem de sistema padrão que descreve o erro, como "um arquivo de entrada ou um fluxo de dados não está de acordo com a especificação de formato de arquivo esperada." Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileFormatException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileFormatException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see cref="T:System.String" /> valor que representa a mensagem de erro.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.IO.FileFormatException" /> classe com uma mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileFormatException (Uri sourceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri sourceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileFormatException.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="sourceUri">O <see cref="T:System.Uri" /> valor do arquivo que causou o erro.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.IO.FileFormatException" /> classe com uma fonte de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Exception.Message%2A> propriedade do novo <xref:System.IO.FileFormatException> instância para uma mensagem fornecida pelo sistema que descreve o erro e inclui o nome do arquivo, como "o arquivo '`sourceUri`' não se adequa à especificação de formato de arquivo esperada." Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ O <xref:System.IO.FileFormatException.SourceUri%2A> propriedade é inicializada usando o `sourceUri` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FileFormatException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileFormatException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.IO.FileFormatException" /> de classe e a inicializa com os dados serializados. Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileFormatException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileFormatException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see cref="T:System.String" /> valor que representa a mensagem de erro.</param>
+        <param name="innerException">O valor de <see cref="P:System.Exception.InnerException" /> propriedade, que representa a causa da exceção atual.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.IO.FileFormatException" /> classe com um tipo de mensagem e a exceção de erro especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Exception.Message%2A> propriedade do novo <xref:System.IO.FileFormatException> instância com a mensagem de erro especificada representada por `message`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileFormatException (Uri sourceUri, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri sourceUri, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileFormatException.#ctor(System.Uri,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceUri" Type="System.Uri" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="sourceUri">O <see cref="T:System.Uri" /> valor do arquivo que causou o erro.</param>
+        <param name="innerException">O valor de <see cref="P:System.Exception.InnerException" /> propriedade, que representa a causa da exceção atual.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.IO.FileFormatException" /> classe com uma fonte de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor e um tipo de exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa a propriedade de mensagem da nova instância para uma mensagem fornecida pelo sistema que descreve o erro e inclui o nome do arquivo, como "o arquivo '`sourceUri`' não se adequa à especificação de formato de arquivo esperada." Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ O <xref:System.IO.FileFormatException.SourceUri%2A> propriedade é inicializada usando o `sourceUri` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileFormatException (Uri sourceUri, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri sourceUri, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileFormatException.#ctor(System.Uri,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceUri" Type="System.Uri" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceUri">O <see cref="T:System.Uri" /> valor do arquivo que causou o erro.</param>
+        <param name="message">Um <see cref="T:System.String" /> valor que representa a mensagem de erro.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.IO.FileFormatException" /> classe com uma fonte de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor e uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Exception.Message%2A> propriedade do novo <xref:System.IO.FileFormatException> instância com a mensagem de erro especificada representada por `message`. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.  
+  
+ O <xref:System.IO.FileFormatException.SourceUri%2A> propriedade é inicializada usando o `sourceUri` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileFormatException (Uri sourceUri, string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri sourceUri, string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileFormatException.#ctor(System.Uri,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceUri" Type="System.Uri" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="sourceUri">O <see cref="T:System.Uri" /> valor do arquivo que causou o erro.</param>
+        <param name="message">Um <see cref="T:System.String" /> valor que representa a mensagem de erro.</param>
+        <param name="innerException">O valor de <see cref="P:System.Exception.InnerException" /> propriedade, que representa a causa da exceção atual.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.IO.FileFormatException" /> classe com uma fonte de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor, uma mensagem de erro especificada e um tipo de exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa a propriedade de mensagem da nova instância usando o parâmetro de mensagem. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.  
+  
+ O <xref:System.IO.FileFormatException.SourceUri%2A> propriedade é inicializada usando o `sourceUri` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileFormatException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com o nome de arquivo e informações adicionais de exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceUri">
+      <MemberSignature Language="C#" Value="public Uri SourceUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SourceUri" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileFormatException.SourceUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de um arquivo que causou o <see cref="T:System.IO.FileFormatException" />.</summary>
+        <value>Um <see cref="T:System.Uri" /> que representa o nome do arquivo que causou a exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver um erro ao obter o nome o arquivo que causou a exceção, o valor de retorno é `null`e SourceUri.<xref:System.Object.ToString%2A> retorna uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

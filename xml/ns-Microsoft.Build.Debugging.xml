@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Debugging">
+  <Docs>
+    <summary>Contém o tipo para gerenciar o depurador.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

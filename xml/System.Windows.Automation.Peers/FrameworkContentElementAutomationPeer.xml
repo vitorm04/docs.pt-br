@@ -1,0 +1,108 @@
+<Type Name="FrameworkContentElementAutomationPeer" FullName="System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer">
+  <TypeSignature Language="C#" Value="public class FrameworkContentElementAutomationPeer : System.Windows.Automation.Peers.ContentElementAutomationPeer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FrameworkContentElementAutomationPeer extends System.Windows.Automation.Peers.ContentElementAutomationPeer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.ContentElementAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Expõe <see cref="T:System.Windows.FrameworkContentElement" /> tipos de automação de interface do usuário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkContentElementAutomationPeer (System.Windows.FrameworkContentElement owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.FrameworkContentElement owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer.#ctor(System.Windows.FrameworkContentElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.FrameworkContentElement" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationIdCore">
+      <MemberSignature Language="C#" Value="protected override string GetAutomationIdCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetAutomationIdCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer.GetAutomationIdCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a cadeia de caracteres que identifica exclusivamente o <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.ContentElementAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationId" />.</summary>
+        <returns>A cadeia de caracteres que identifica exclusivamente o <see cref="T:System.Windows.FrameworkContentElement" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpTextCore">
+      <MemberSignature Language="C#" Value="protected override string GetHelpTextCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetHelpTextCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer.GetHelpTextCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a cadeia de caracteres que descreve a funcionalidade do <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.ContentElementAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetHelpText" />.</summary>
+        <returns>A cadeia de caracteres que descreve a funcionalidade do elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa cadeia de caracteres geralmente retorna o mesmo texto que é fornecido na dica de ferramenta para o controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLabeledByCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer GetLabeledByCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer GetLabeledByCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer.GetLabeledByCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" /> para o <see cref="T:System.Windows.Controls.Label" /> que é o destino para o <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.FrameworkContentElementAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetLabeledBy" />.</summary>
+        <returns>O <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" /> para o elemento que é o destino de <see cref="T:System.Windows.Controls.Label" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, se o elemento é um <xref:System.Windows.Controls.ComboBox> controle, o <xref:System.Windows.Automation.Peers.AutomationPeer.GetLabeledBy%2A> método pode recuperar o <xref:System.Windows.Automation.Peers.AutomationPeer> para o <xref:System.Windows.Controls.Label> que está associado a <xref:System.Windows.Controls.ComboBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

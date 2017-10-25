@@ -1,0 +1,157 @@
+<Type Name="ToolStripDropDownItemAccessibleObject" FullName="System.Windows.Forms.ToolStripDropDownItemAccessibleObject">
+  <TypeSignature Language="C#" Value="public class ToolStripDropDownItemAccessibleObject : System.Windows.Forms.ToolStripItem.ToolStripItemAccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripDropDownItemAccessibleObject extends System.Windows.Forms.ToolStripItem/ToolStripItemAccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripDropDownItemAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripItem+ToolStripItemAccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações que os aplicativos de acessibilidade usam para ajustar a interface do usuário de um <see cref="T:System.Windows.Forms.ToolStripDropDown" /> para usuários portadores de deficiências.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripDropDownItemAccessibleObject (System.Windows.Forms.ToolStripDropDownItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ToolStripDropDownItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.#ctor(System.Windows.Forms.ToolStripDropDownItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.ToolStripDropDownItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Windows.Forms.ToolStripDropDownItem" /> que possui essa <see cref="T:System.Windows.Forms.ToolStripDropDownItemAccessibleObject" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ToolStripDropDownItemAccessibleObject" /> com o <see cref="T:System.Windows.Forms.ToolStripDropDownItem" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public override void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a ação padrão associada a este objeto acessível.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os clientes podem recuperar a ação padrão do objeto ao inspecionar um objeto <xref:System.Windows.Forms.AccessibleObject.DefaultAction%2A> propriedade. Um cliente pode usar a automação (se houver suporte) em vez de <xref:System.Windows.Forms.AccessibleObject.DoDefaultAction%2A> para executar a ação padrão de um objeto. No entanto, <xref:System.Windows.Forms.AccessibleObject.DoDefaultAction%2A> fornece uma maneira fácil de realizar um objeto do usados mais comumente ação.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A ação padrão executada por elementos de interface de usuário fornecido pelo sistema depende do estado do teclado. Ou seja, se uma chave de modificador como SHIFT, ALT e CTRL está inativo (ou por uma ação do usuário ou programaticamente) quando <see cref="M:System.Windows.Forms.AccessibleObject.DoDefaultAction" /> é chamado, o padrão ação não pode ser o mesmo que quando essas chaves não são para baixo. Nem todos os objetos têm uma ação padrão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChild">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject GetChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.AccessibleObject GetChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.GetChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do controle filho acessível.</param>
+        <summary>Recupera o controle filho acessível correspondente para o índice especificado.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.AccessibleObject" /> que representa o controle filho acessível correspondente para o índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a criação de um gráfico com suporte a acessibilidade de controle, usando o <xref:System.Windows.Forms.AccessibleObject> e <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes para expor informações acessíveis. O controle plota duas curvas junto com uma legenda. O `ChartControlAccessibleObject` classe que deriva de <xref:System.Windows.Forms.Control.ControlAccessibleObject>, é usado no <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método para fornecer informações acessíveis personalizadas para o controle de gráfico. Porque a legenda do gráfico não é um real <xref:System.Windows.Forms.Control>-com base em controle, mas em vez disso, é desenhado pelo controle do gráfico, ele faz não todas as informações acessíveis internas. Portanto, o `ChartControlAccessibleObject` substituições de classe a <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> método para retornar o `CurveLegendAccessibleObject` que representa informações acessíveis para cada parte da legenda. Quando um aplicativo acessível ciente usa esse controle, o controle pode fornecer as informações necessárias de acessíveis.  
+  
+ Esse código demonstra substituindo o <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> método. Consulte o <xref:System.Windows.Forms.AccessibleObject> visão geral da classe para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#4)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#4)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildCount">
+      <MemberSignature Language="C#" Value="public override int GetChildCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetChildCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.GetChildCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o número de filhos que pertence a um objeto acessível.</summary>
+        <returns>O número de filhos que pertence a um objeto acessível.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a criação de um gráfico com suporte a acessibilidade de controle, usando o <xref:System.Windows.Forms.AccessibleObject> e <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes para expor informações acessíveis. O controle plota duas curvas junto com uma legenda. O `ChartControlAccessibleObject` classe que deriva de <xref:System.Windows.Forms.Control.ControlAccessibleObject>, é usado no <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método para fornecer informações acessíveis personalizadas para o controle de gráfico. Porque a legenda do gráfico não é um real <xref:System.Windows.Forms.Control>-com base em controle, mas em vez disso, é desenhado pelo controle do gráfico, ele faz não todas as informações acessíveis internas. Portanto, o `ChartControlAccessibleObject` substituições de classe a <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> método para retornar o `CurveLegendAccessibleObject` que representa informações acessíveis para cada parte da legenda. Quando um aplicativo acessível ciente usa esse controle, o controle pode fornecer as informações necessárias de acessíveis.  
+  
+ Esse código demonstra mostra substituindo o <xref:System.Windows.Forms.AccessibleObject.GetChildCount%2A> método. Consulte o <xref:System.Windows.Forms.AccessibleObject> visão geral da classe para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#4)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#4)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripDropDownItemAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a função deste objeto acessível.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.AccessibleRole" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A função do objeto ajudam a descrever a função do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,124 @@
+<Type Name="BitmapEditor" FullName="System.Drawing.Design.BitmapEditor">
+  <TypeSignature Language="C#" Value="public class BitmapEditor : System.Drawing.Design.ImageEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BitmapEditor extends System.Drawing.Design.ImageEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.BitmapEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.ImageEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma interface de usuário para selecionar os arquivos de bitmap em um navegador de propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.BitmapEditor> classe fornece uma maneira simples para selecionar uma imagem de bitmap para uma propriedade. Iniciar o editor exibe um **abrir arquivo** caixa de diálogo que permite a navegação de diretório e selecionando um arquivo. Inicialmente, a lista de arquivos é filtrada para arquivos de bitmap (bmp).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.ComponentModel.EditorAttribute> para associar o <xref:System.Drawing.Design.BitmapEditor> com uma propriedade.  
+  
+ [!code-cpp[BitmapEditorExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BitmapEditorExample/CPP/usercontrol1.cpp#1)]
+ [!code-csharp[BitmapEditorExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BitmapEditorExample/CS/usercontrol1.cs#1)]
+ [!code-vb[BitmapEditorExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BitmapEditorExample/VB/usercontrol1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+    <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.BitmapEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Design.BitmapEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtensions">
+      <MemberSignature Language="C#" Value="protected override string[] GetExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string[] GetExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.BitmapEditor.GetExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as extensões para o filtro da lista de arquivos que o editor de bitmap inicialmente será usado para filtrar a lista de arquivos.</summary>
+        <returns>O conjunto de extensões de arquivo usado para filtrar a lista de arquivos padrão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDialogDescription">
+      <MemberSignature Language="C#" Value="protected override string GetFileDialogDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetFileDialogDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.BitmapEditor.GetFileDialogDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a descrição para o filtro de lista de arquivos padrão fornecida por este editor.</summary>
+        <returns>A descrição para o tipo de padrão de arquivos para filtrar a lista de arquivos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A descrição para o tipo de padrão de arquivos para filtrar aparece na caixa de lista suspensa de filtro da lista de arquivos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFromStream">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Image LoadFromStream (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Drawing.Image LoadFromStream(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.BitmapEditor.LoadFromStream(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo do qual carregar a imagem.</param>
+        <summary>Carrega uma imagem do fluxo especificado.</summary>
+        <returns>O <see cref="T:System.Drawing.Image" /> carregados do fluxo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

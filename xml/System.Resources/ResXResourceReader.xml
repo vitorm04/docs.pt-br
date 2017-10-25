@@ -1,0 +1,666 @@
+<Type Name="ResXResourceReader" FullName="System.Resources.ResXResourceReader">
+  <TypeSignature Language="C#" Value="public class ResXResourceReader : System.Resources.IResourceReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResXResourceReader extends System.Object implements class System.Collections.IEnumerable, class System.IDisposable, class System.Resources.IResourceReader" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.ResXResourceReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Resources.IResourceReader</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Enumera os arquivos e fluxos de recurso de XML (.resx) e lê os pares de nome e valor do recurso sequencial.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResXResourceReader> classe fornece uma implementação padrão da <xref:System.Resources.IResourceReader> interface que lê as informações de recursos em um formato XML. Para ler as informações sobre o recurso de um formato binário de recurso, use o <xref:System.Resources.ResourceReader> classe.  
+  
+ Você usa o <xref:System.Resources.ResXResourceReader> classe enumerar recursos em arquivos. resx atravessando o enumerador de dicionário (<xref:System.Collections.IDictionaryEnumerator>) que é retornado pelo <xref:System.Resources.ResXResourceReader.GetEnumerator%2A> método. Chame os métodos fornecidos pela <xref:System.Collections.IDictionaryEnumerator> para ir para o próximo recurso e ler o nome e valor de cada recurso no arquivo. resx.  
+  
+> [!NOTE]
+>  O <xref:System.Resources.ResXResourceReader> classe fornece dois enumeradores. O <xref:System.Resources.ResXResourceReader.GetEnumerator%2A?displayProperty=nameWithType> método retorna um <xref:System.Collections.IDictionaryEnumerator> objeto; é recomendável que você use esse método para enumerar os recursos. O <xref:System.Resources.ResXResourceReader.System%23Collections%23IEnumerable%23GetEnumerator%2A?displayProperty=nameWithType> método é uma implementação de interface explícita que retorna um <xref:System.Collections.IEnumerator> objeto; não recomendamos seu uso.  
+  
+ O exemplo a seguir usa o <xref:System.Resources.ResXResourceReader.GetEnumerator%2A> método para obter um <xref:System.Collections.IDictionaryEnumerator> objeto que é usado para enumerar os recursos em um arquivo. resx. O exemplo inclui um `CreateResourceFile` rotina que cria o arquivo de recurso necessário.  
+  
+ [!code-csharp[System.Resources.ResXResourceReader.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resxresourcereader.class/cs/resxresourcereader1.cs#1)]
+ [!code-vb[System.Resources.ResXResourceReader.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resxresourcereader.class/vb/resxresourcereader1.vb#1)]  
+  
+ Se o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> é de propriedade `true`, o valor da <xref:System.Collections.IDictionaryEnumerator.Value%2A?displayProperty=nameWithType> propriedade é um <xref:System.Resources.ResXDataNode> em vez do valor do recurso do objeto. Isso torna o comentário do item de um recurso disponível no <xref:System.Resources.ResXDataNode.Comment%2A?displayProperty=nameWithType> propriedade. O exemplo a seguir define o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> propriedade `true` e enumera os recursos em um arquivo. resx,  
+  
+ [!code-csharp[System.Resources.ResXResourceReader.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resxresourcereader.class/cs/resxresourcereader2.cs#2)]
+ [!code-vb[System.Resources.ResXResourceReader.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resxresourcereader.class/vb/resxresourcereader2.vb#2)]  
+  
+ Se <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> é `true`, o <xref:System.Resources.ResXDataNode> itens na enumeração podem ser:  
+  
+-   Recursos nomeados com seus dados. Nesse caso, o <xref:System.Resources.ResXDataNode.FileRef%2A?displayProperty=nameWithType> é de propriedade `null`.  
+  
+-   Chamado recursos junto com o nome do arquivo que contém os dados de recurso. Nesse caso, o <xref:System.Resources.ResXDataNode.FileRef%2A?displayProperty=nameWithType> propriedade retorna um <xref:System.Resources.ResXFileRef> objeto que fornece informações sobre o recurso, incluindo seu nome de arquivo. Se os nomes de arquivo relativos são usados, você sempre deve definir o <xref:System.Resources.ResXResourceReader.BasePath%2A> propriedade para fornecer um ponto de referência para o caminho do arquivo relativo.  
+  
+ Se você deseja recuperar os recursos de nomeados de um arquivo. resx em vez de enumerar seus recursos, você pode instanciar uma <xref:System.Resources.ResXResourceSet> objeto e chame seu `GetString` e `GetObject` métodos.  
+  
+> [!NOTE]
+>  O <xref:System.Resources.ResXResourceReader> classe contém uma demanda de link e uma demanda de herança no nível de classe que se aplica a todos os membros. Um <xref:System.Security.SecurityException> exceção é lançada quando o chamador imediato ou classe derivada não tem permissão de confiança total.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.Resources.ResXResourceReader> para iterar por meio dos recursos em um arquivo. resx. Primeiro, o <xref:System.Resources.ResXResourceReader> `rsxr` é criado para o arquivo `items.resx`. Em seguida, o <xref:System.Resources.ResXResourceReader.GetEnumerator%2A> método é usado para criar um <xref:System.Collections.IDictionaryEnumerator> para iterar por meio dos recursos e exibir o conteúdo para o console.  
+  
+ [!code-cpp[System.Resources.ResxresourceReader Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CPP/resxresourcereader.cpp#1)]
+ [!code-csharp[System.Resources.ResxresourceReader Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CS/resxresourcereader.cs#1)]
+ [!code-vb[System.Resources.ResxresourceReader Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/VB/resxresourcereader.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceReader (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um fluxo de entrada que contém recursos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.ResXResourceReader" /> para o fluxo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Resources.ResXResourceReader.Dispose%2A> e <xref:System.Resources.ResXResourceReader.Close%2A> métodos não feche o fluxo que você especificar este construtor.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceReader (System.IO.TextReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.#ctor(System.IO.TextReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um fluxo de entrada do texto que contém os recursos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXResourceReader" /> classe especificado <see cref="T:System.IO.TextReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceReader (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O caminho do arquivo de recurso a ser lido.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.ResXResourceReader" /> para o arquivo de recurso especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma nova instância do <xref:System.Resources.ResXResourceReader> itera por meio dos recursos do arquivo de classe para o arquivo especificado e exibe o conteúdo para o console.  
+  
+ [!code-cpp[System.Resources.ResxresourceReader Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CPP/resxresourcereader.cpp#1)]
+ [!code-csharp[System.Resources.ResxresourceReader Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CS/resxresourcereader.cs#1)]
+ [!code-vb[System.Resources.ResxresourceReader Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/VB/resxresourcereader.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceReader (System.IO.Stream stream, System.ComponentModel.Design.ITypeResolutionService typeResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.ComponentModel.Design.ITypeResolutionService typeResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.#ctor(System.IO.Stream,System.ComponentModel.Design.ITypeResolutionService)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="typeResolver" Type="System.ComponentModel.Design.ITypeResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um fluxo de entrada que contém recursos.</param>
+        <param name="typeResolver">Um objeto que resolve nomes especificados em um recurso de tipo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXResourceReader" /> usando um fluxo de entrada e um serviço de resolução de tipo de classe.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceReader (System.IO.Stream stream, System.Reflection.AssemblyName[] assemblyNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Reflection.AssemblyName[] assemblyNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.#ctor(System.IO.Stream,System.Reflection.AssemblyName[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="assemblyNames" Type="System.Reflection.AssemblyName[]" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um fluxo de entrada que contém recursos.</param>
+        <param name="assemblyNames">Uma matriz de <see cref="T:System.Reflection.AssemblyName" /> objetos que especifica um ou mais assemblies. Os assemblies são usados para resolver um nome de tipo de recurso para um tipo real.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXResourceReader" /> classe usando um fluxo e uma matriz de nomes de assembly.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceReader (System.IO.TextReader reader, System.ComponentModel.Design.ITypeResolutionService typeResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextReader reader, class System.ComponentModel.Design.ITypeResolutionService typeResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.#ctor(System.IO.TextReader,System.ComponentModel.Design.ITypeResolutionService)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.TextReader" />
+        <Parameter Name="typeResolver" Type="System.ComponentModel.Design.ITypeResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um leitor de fluxo de texto que contém recursos.</param>
+        <param name="typeResolver">Um objeto que resolve nomes especificados em um recurso de tipo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXResourceReader" /> usando um leitor de fluxo de texto e um serviço de resolução de tipo de classe.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceReader (System.IO.TextReader reader, System.Reflection.AssemblyName[] assemblyNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextReader reader, class System.Reflection.AssemblyName[] assemblyNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.#ctor(System.IO.TextReader,System.Reflection.AssemblyName[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.TextReader" />
+        <Parameter Name="assemblyNames" Type="System.Reflection.AssemblyName[]" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um objeto usado para ler recursos de um fluxo de texto.</param>
+        <param name="assemblyNames">Uma matriz de <see cref="T:System.Reflection.AssemblyName" /> objetos que especifica um ou mais assemblies. Os assemblies são usados para resolver um nome de tipo de recurso para um tipo real.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXResourceReader" /> classe usando um <see cref="T:System.IO.TextReader" /> objeto e uma matriz de nomes de assembly.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceReader (string fileName, System.ComponentModel.Design.ITypeResolutionService typeResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.ComponentModel.Design.ITypeResolutionService typeResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.#ctor(System.String,System.ComponentModel.Design.ITypeResolutionService)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="typeResolver" Type="System.ComponentModel.Design.ITypeResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome de um arquivo de recurso XML que contém os recursos.</param>
+        <param name="typeResolver">Um objeto que resolve nomes especificados em um recurso de tipo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXResourceReader" /> usando um nome de arquivo e um serviço de resolução de tipo de classe.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXResourceReader (string fileName, System.Reflection.AssemblyName[] assemblyNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Reflection.AssemblyName[] assemblyNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.#ctor(System.String,System.Reflection.AssemblyName[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="assemblyNames" Type="System.Reflection.AssemblyName[]" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome de um arquivo de recurso XML que contém os recursos.</param>
+        <param name="assemblyNames">Uma matriz de <see cref="T:System.Reflection.AssemblyName" /> objetos que especifica um ou mais assemblies. Os assemblies são usados para resolver um nome de tipo de recurso para um tipo real.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXResourceReader" /> classe usando um nome de arquivo de recurso XML e uma matriz de nomes de assembly.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BasePath">
+      <MemberSignature Language="C#" Value="public string BasePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BasePath" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResXResourceReader.BasePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho base para o caminho relativo do arquivo especificado em um objeto <see cref="T:System.Resources.ResXFileRef" />.</summary>
+        <value>Um caminho que, se preceder o caminho relativo do arquivo especificado em um objeto <see cref="T:System.Resources.ResXFileRef" />, resulta em um caminho absoluto para um arquivo de recurso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResXResourceReader.BasePath%2A> propriedade é usada para resolver referências de caminho relativo do arquivo que são atribuídas ao <xref:System.Resources.ResXFileRef.FileName%2A> propriedade <xref:System.Resources.ResXFileRef> objetos.  Por padrão, seu valor é <xref:System.String.Empty?displayProperty=nameWithType>, e referências de caminho relativo do arquivo são resolvidas em relação ao diretório atual retornado pelo <xref:System.Environment.CurrentDirectory%2A?displayProperty=nameWithType> propriedade. Você deve definir essa propriedade antes de começar a enumeração de recursos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um arquivo de recurso XML que contém imagens de gerações dog e também cria um recurso de cadeia de caracteres que especifica o aplicativo que criou o recurso. <xref:System.Resources.ResXFileRef>objetos são usados para armazenar o caminho para as imagens em vez de armazenar as imagens binárias si no arquivo de recurso. O exemplo define o <xref:System.Resources.ResXResourceReader.BasePath%2A> propriedade para que os caminhos de arquivo relativa em nomes de arquivo as imagens são interpretados como subdiretórios de um diretório chamado c:\Data.\\.  
+  
+ [!code-csharp[System.Resources.ResXResourceReader.BasePath#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resxresourcereader.basepath/cs/basepathex1.cs#1)]
+ [!code-vb[System.Resources.ResXResourceReader.BasePath#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resxresourcereader.basepath/vb/basepathex1.vb#1)]  
+  
+ Observe que você deve adicionar uma referência a System.Drawing.dll para compilar o projeto com êxito. O exemplo também requer que as imagens necessárias existem em um diretório chamado C:\data\images\\.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Uma operação de conjuntos, não é possível especificar um valor porque o arquivo de recurso XML já foi acessado e está em uso.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Resources.ResXResourceReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Resources.ResXResourceReader.Close%2A> permite que os recursos usados pelo <xref:System.Resources.ResXResourceReader> para ser realocada para outros fins. Para obter mais informações sobre <xref:System.Resources.ResXResourceReader.Close%2A>, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe os recursos de um arquivo para o console e, em seguida, usa o <xref:System.Resources.ResXResourceReader.Close%2A> método para desligar o leitor e disponibilizar seus recursos para outros processos.  
+  
+ [!code-cpp[System.Resources.ResxresourceReader Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CPP/resxresourcereader.cpp#1)]
+ [!code-csharp[System.Resources.ResxresourceReader Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CS/resxresourcereader.cs#1)]
+ [!code-vb[System.Resources.ResxresourceReader Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/VB/resxresourcereader.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Resources.ResXResourceReader" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser chamado pelo <xref:System.Resources.ResXResourceReader.System%23IDisposable%23Dispose%2A> método ou o <xref:System.Object.Finalize%2A?displayProperty=nameWithType> método. <xref:System.Resources.ResXResourceReader.System%23IDisposable%23Dispose%2A>chama esse método com o `disposing` parâmetro definido como `true`. <xref:System.Object.Finalize%2A>chama esse método com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Resources.ResXResourceReader> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tome cuidado para não referenciar objetos que tenham sido descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte e.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ResXResourceReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Esse membro substitui o método <see cref="M:System.Object.Finalize" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromFileContents">
+      <MemberSignature Language="C#" Value="public static System.Resources.ResXResourceReader FromFileContents (string fileContents);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Resources.ResXResourceReader FromFileContents(string fileContents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.FromFileContents(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResXResourceReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileContents" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileContents">Uma cadeia de caracteres que contém informações de XML formatado de recurso.</param>
+        <summary>Cria um novo <see cref="T:System.Resources.ResXResourceReader" /> do objeto e a inicializa para ler uma cadeia de caracteres cujo conteúdo está na forma de um arquivo de recurso XML.</summary>
+        <returns>Um objeto que lê os recursos a partir de <paramref name="fileContents" /> cadeia de caracteres.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromFileContents">
+      <MemberSignature Language="C#" Value="public static System.Resources.ResXResourceReader FromFileContents (string fileContents, System.ComponentModel.Design.ITypeResolutionService typeResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Resources.ResXResourceReader FromFileContents(string fileContents, class System.ComponentModel.Design.ITypeResolutionService typeResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.FromFileContents(System.String,System.ComponentModel.Design.ITypeResolutionService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResXResourceReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileContents" Type="System.String" />
+        <Parameter Name="typeResolver" Type="System.ComponentModel.Design.ITypeResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="fileContents">Uma cadeia de caracteres que contém informações de XML formatado de recurso.</param>
+        <param name="typeResolver">Um objeto que resolve nomes especificados em um recurso de tipo.</param>
+        <summary>Cria um novo <see cref="T:System.Resources.ResXResourceReader" /> do objeto e a inicializa para ler uma cadeia de caracteres cujo conteúdo está na forma de um arquivo de recurso XML e usar um <see cref="T:System.ComponentModel.Design.ITypeResolutionService" /> objeto para resolver nomes de tipo especificados em um recurso.</summary>
+        <returns>Um objeto que lê os recursos a partir de <paramref name="fileContents" /> cadeia de caracteres.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromFileContents">
+      <MemberSignature Language="C#" Value="public static System.Resources.ResXResourceReader FromFileContents (string fileContents, System.Reflection.AssemblyName[] assemblyNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Resources.ResXResourceReader FromFileContents(string fileContents, class System.Reflection.AssemblyName[] assemblyNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.FromFileContents(System.String,System.Reflection.AssemblyName[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResXResourceReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileContents" Type="System.String" />
+        <Parameter Name="assemblyNames" Type="System.Reflection.AssemblyName[]" />
+      </Parameters>
+      <Docs>
+        <param name="fileContents">Uma cadeia de caracteres cujo conteúdo está na forma de um arquivo de recurso XML.</param>
+        <param name="assemblyNames">Uma matriz de <see cref="T:System.Reflection.AssemblyName" /> objetos que especifica um ou mais assemblies. Os assemblies são usados para resolver um nome de tipo de recurso para um tipo real.</param>
+        <summary>Cria um novo <see cref="T:System.Resources.ResXResourceReader" /> do objeto e a inicializa para ler uma cadeia de caracteres cujo conteúdo está na forma de um arquivo de recurso XML e usar uma matriz de <see cref="T:System.Reflection.AssemblyName" /> objetos para resolver nomes de tipo especificados em um recurso.</summary>
+        <returns>Um objeto que lê os recursos a partir de <paramref name="fileContents" /> cadeia de caracteres.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Este membro não pode ser herdado por código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para atual <see cref="T:System.Resources.ResXResourceReader" /> objeto.</summary>
+        <returns>Um enumerador para atual <see cref="T:System.Resources.ResourceReader" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResXResourceReader.GetEnumerator%2A> método recupera os pares de nome/valor no fluxo de recurso (. resx) XML ou cadeia de caracteres associada atual <xref:System.Resources.ResXResourceReader> objeto. No entanto, se o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> está definida como `true` antes de chamar <xref:System.Resources.ResXResourceReader.GetEnumerator%2A>, os itens de recurso são recuperados como <xref:System.Resources.ResXDataNode> objetos. Nesse caso, todos os nós de recurso são retornados, independentemente do tipo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResXResourceReader.GetEnumerator%2A> método para obter um <xref:System.Collections.IDictionaryEnumerator> objeto que é usado para enumerar os recursos em um arquivo. resx. O exemplo inclui um `CreateResourceFile` rotina que cria o arquivo de recurso necessário.  
+  
+ [!code-csharp[System.Resources.ResXResourceReader.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resxresourcereader.class/cs/resxresourcereader1.cs#1)]
+ [!code-vb[System.Resources.ResXResourceReader.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resxresourcereader.class/vb/resxresourcereader1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionaryEnumerator GetMetadataEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IDictionaryEnumerator GetMetadataEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.GetMetadataEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um enumerador de dicionário que pode recuperar as propriedades de tempo de design do fluxo ou arquivo XML de recurso atual.</summary>
+        <returns>Um enumerador para os metadados em um recurso.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recursos são armazenados como pares de nome/valor em um arquivo de recurso ou o fluxo. Propriedades de tempo de design, que são chamadas de metadados, são armazenadas no arquivo de recurso ou fluxo juntamente com recursos de tempo de execução de dados. O <xref:System.Resources.ResXResourceReader.GetMetadataEnumerator%2A> método fornece uma <xref:System.Collections.IDictionaryEnumerator> objeto que pode recuperar os metadados do arquivo de recurso ou fluxo associado atual <xref:System.Resources.ResXResourceReader> objeto. No entanto, se o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> está definida como `true` antes de chamar <xref:System.Resources.ResXResourceReader.GetMetadataEnumerator%2A>, nenhum nó de recurso é recuperados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResXResourceReader.GetMetadataEnumerator%2A> método para iterar por meio dos recursos de metadados em um arquivo de recurso XML. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> propriedade.  
+  
+ [!code-cpp[System.Resources.ResxresourceReader Example#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CPP/useresxdatanodes.cpp#4)]
+ [!code-csharp[System.Resources.ResxresourceReader Example#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CS/useresxdatanodes.cs#4)]
+ [!code-vb[System.Resources.ResxresourceReader Example#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/VB/useresxdatanodes.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para atual <see cref="T:System.Resources.ResXResourceReader" /> objeto. Para obter uma descrição desse membro, consulte o método <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Um enumerador que pode iterar por meio de pares de nome/valor no fluxo de recurso (. resx) XML ou cadeia de caracteres associada atual <see cref="T:System.Resources.ResXResourceReader" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Resources.ResXResourceReader> é convertida em uma interface de <xref:System.Collections.IEnumerable>. Para enumerar os recursos em um arquivo. resx, é recomendável que você chamar o <xref:System.Resources.ResXResourceReader.GetEnumerator%2A?displayProperty=nameWithType> método e, em seguida, chame o `MoveNext` método retornado <xref:System.Collections.IDictionaryEnumerator> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXResourceReader.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Resources.ResXResourceReader" /> e opcionalmente libera os recursos gerenciados. Para obter uma descrição desse membro, consulte o método <see cref="M:System.IDisposable.Dispose" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Resources.ResXResourceReader> é convertida em uma interface de <xref:System.IDisposable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseResXDataNodes">
+      <MemberSignature Language="C#" Value="public bool UseResXDataNodes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseResXDataNodes" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResXResourceReader.UseResXDataNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se <see cref="T:System.Resources.ResXDataNode" /> objetos são retornados ao ler o fluxo ou arquivo de recurso XML atual.</summary>
+        <value>
+          <see langword="true" /> se os nós de dados de recursos são recuperados; <see langword="false" /> se os nós de dados de recurso forem ignorados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> propriedade antes de começar a enumeração de recursos. Por padrão, seu valor é `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir enumera e exibe os itens de recurso em um arquivo XML. Inicialmente, <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> é definido como `false` para mostrar os itens de dados e metadados que eles ocorrem no arquivo de recurso. A enumeração segundo tem o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> definida como `true` para que os elementos de dados de recursos são retornados como <xref:System.Resources.ResXDataNode> objetos.  
+  
+ [!code-cpp[System.Resources.ResXResourceReader Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CPP/useresxdatanodes.cpp#2)]
+ [!code-csharp[System.Resources.ResXResourceReader Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/CS/useresxdatanodes.cs#2)]
+ [!code-vb[System.Resources.ResXResourceReader Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResXResourceReader Example/VB/useresxdatanodes.vb#2)]  
+  
+ O arquivo XML do recurso usado pelo exemplo contém um nó de dados e um nó de metadados. Para usar o arquivo XML com o exemplo anterior, copie o seguinte texto e salve-o em um arquivo chamado Resource1.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<root>  
+  <resheader name="resmimetype">  
+    <value>text/microsoft-resx</value>  
+  </resheader>  
+  <resheader name="version">  
+    <value>2.0</value>  
+  </resheader>  
+  <resheader name="reader">  
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0,  
+           Culture=neutral, PublicKeyToken=b77a5c561934e089  
+    </value>  
+  </resheader>  
+  <resheader name="writer">  
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0,  
+           Culture=neutral, PublicKeyToken=b77a5c561934e089  
+    </value>  
+  </resheader>  
+  <data name="DataSample" xml:space="preserve">  
+    <value>Sample DATA value</value>  
+  </data>  
+  <metadata name="MetadataSample">  
+    <value>Sample METADATA value</value>  
+  </metadata>  
+</root>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Em uma operação de conjuntos, o enumerador para o fluxo ou arquivo de recurso já está aberto.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

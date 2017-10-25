@@ -1,0 +1,76 @@
+<Type Name="WebPartDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.WebPartDesigner">
+  <TypeSignature Language="C#" Value="public class WebPartDesigner : System.Web.UI.Design.WebControls.WebParts.PartDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartDesigner extends System.Web.UI.Design.WebControls.WebParts.PartDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.PartDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design visual para <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner> classe fornece a representação visual de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles em tempo de design. Ele é derivado do <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner> classe e adiciona a validação para verificar se o controle associado é um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle ou tipo derivado.  
+  
+ <xref:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner>herda um <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner.UsePreviewControl%2A> propriedade de seu pai que é sempre definido como `true`. Isso faz com que o ambiente de design visual gerar um <xref:System.Web.UI.WebControls.View> controle para manter uma cópia temporária do <xref:System.Web.UI.WebControls.WebParts.WebPart> na superfície de design; essa cópia é então persistida na marcação. Se você substituir o <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner.UsePreviewControl%2A> propriedade para retornar `false`, o ambiente de design visual gera marcação diretamente do real <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ Designers de partes da Web geralmente funcionam muito como designers de controle normal; os principais métodos para definir a aparência de tempo de design derivam de <xref:System.Web.UI.Design.ControlDesigner> classe. Especificamente, você pode substituir o <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner.GetDesignTimeHtml%2A> método para alterar a marcação de tempo de design associada ao controle. Da mesma forma, você pode substituir o <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A> e <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> métodos para tratar erros e cadeias de caracteres vazias (""), respectivamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a interação entre um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle e seus associados <xref:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner>. O <xref:System.Web.UI.WebControls.WebParts.WebPart> controle contém um <xref:System.Web.UI.WebControls.Calendar> controle a partir do qual o usuário final seleciona seu aniversário, um <xref:System.Web.UI.WebControls.Button> controle para enviar a seleção e um <xref:System.Web.UI.WebControls.Label> controle para exibir uma mensagem no aniversário do usuário. O <xref:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner> verifica se o controle associado é do tipo esperado e, em seguida, personaliza o processamento de tempo de design do controle tal. Observe que as personalizações visual do designer são visíveis apenas em tempo de design, enquanto aquelas do controle associado são visíveis em tempo de execução e tempo de design.  
+  
+ Todos os métodos substituídos neste exemplo derivam de <xref:System.Web.UI.Design.ControlDesigner> classe base. Para outros membros disponíveis e seu uso, consulte <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>.  
+  
+ [!code-csharp[WebPartsDesigners_WebPartDesigner_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebPartsDesigners_WebPartDesigner_Overview/CS/BirthdayPart.cs#1)] 
+ [!code-vb[WebPartsDesigners_WebPartDesigner_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebPartsDesigners_WebPartDesigner_Overview/vb/birthdaypart.vb#1)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.WebPartDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle associado a este designer.</param>
+        <summary>O designer é vinculado a um controle e valida que o controle é um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

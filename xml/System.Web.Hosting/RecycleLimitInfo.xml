@@ -1,0 +1,113 @@
+<Type Name="RecycleLimitInfo" FullName="System.Web.Hosting.RecycleLimitInfo">
+  <TypeSignature Language="C#" Value="public sealed class RecycleLimitInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RecycleLimitInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.RecycleLimitInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve o nível de pressão de memória detectado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RecycleLimitInfo (long currentPrivateBytes, long recycleLimit, System.Web.Hosting.RecycleLimitNotificationFrequency recycleLimitNearFrequency);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 currentPrivateBytes, int64 recycleLimit, valuetype System.Web.Hosting.RecycleLimitNotificationFrequency recycleLimitNearFrequency) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.RecycleLimitInfo.#ctor(System.Int64,System.Int64,System.Web.Hosting.RecycleLimitNotificationFrequency)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="currentPrivateBytes" Type="System.Int64" />
+        <Parameter Name="recycleLimit" Type="System.Int64" />
+        <Parameter Name="recycleLimitNearFrequency" Type="System.Web.Hosting.RecycleLimitNotificationFrequency" />
+      </Parameters>
+      <Docs>
+        <param name="currentPrivateBytes">Uso de bytes particulares detectados para o processo atual.</param>
+        <param name="recycleLimit">O limite de bytes particulares determinado para o processo atual.</param>
+        <param name="recycleLimitNearFrequency">Uma enumeração indica com que frequência o monitor de memória percebe que estamos pedindo aos ouvintes para reagir à aproximação do limite de memória.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Hosting.RecycleLimitInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPrivateBytes">
+      <MemberSignature Language="C#" Value="public long CurrentPrivateBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CurrentPrivateBytes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.RecycleLimitInfo.CurrentPrivateBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o uso de bytes particulares detectados para o processo atual.</summary>
+        <value>O uso de bytes particulares detectado para o processo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecycleLimit">
+      <MemberSignature Language="C#" Value="public long RecycleLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RecycleLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.RecycleLimitInfo.RecycleLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o limite de bytes particulares determinado para o processo atual.</summary>
+        <value>O limite de bytes particulares determinado para o processo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestGC">
+      <MemberSignature Language="C#" Value="public bool RequestGC { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequestGC" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.RecycleLimitInfo.RequestGC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define um valor booliano retornado para a origem do evento observável que pode ser usado para indicar se a origem do evento deve induzir a uma coleta de lixo depois que todos os observadores tem processou o evento.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimFrequency">
+      <MemberSignature Language="C#" Value="public System.Web.Hosting.RecycleLimitNotificationFrequency TrimFrequency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Hosting.RecycleLimitNotificationFrequency TrimFrequency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.RecycleLimitInfo.TrimFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Hosting.RecycleLimitNotificationFrequency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma enumeração que indica que frequência o monitor de memória percebe que estamos pedindo aos ouvintes para reagir à aproximação do limite de memória. Os assinantes personalizar suas ações para o evento a ser mais graves ou benigno baseia essa frequência.</summary>
+        <value>Uma enumeração que indica a frequência os ouvintes devem reagir.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

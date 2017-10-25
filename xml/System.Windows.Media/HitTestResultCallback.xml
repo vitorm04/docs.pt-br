@@ -1,0 +1,39 @@
+<Type Name="HitTestResultCallback" FullName="System.Windows.Media.HitTestResultCallback">
+  <TypeSignature Language="C#" Value="public delegate System.Windows.Media.HitTestResultBehavior HitTestResultCallback(HitTestResult result);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HitTestResultCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.HitTestResultCallback" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="result" Type="System.Windows.Media.HitTestResult" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Windows.Media.HitTestResultBehavior</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="result">O valor <see cref="T:System.Windows.Media.HitTestResult" /> que representa um objeto visual retornado de um teste de clique.</param>
+    <summary>Representa um retorno de chamada usado para personalizar o teste de clique. WPF invoca o <see cref="T:System.Windows.Media.HitTestResultCallback" /> para relatar interseções de teste de clique ao usuário.</summary>
+    <returns>Um <see cref="T:System.Windows.Media.HitTestFilterBehavior" /> que representa a ação resultante do teste de clique.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método de retorno de chamada de teste de clique define as ações executadas quando um teste de clique é identificado em um determinado objeto visual na árvore visual. Depois de executar as ações, o retorno de chamada deve retornar um <xref:System.Windows.Media.HitTestResultBehavior> valor que determina se deseja continuar a percorrer a árvore visual para qualquer outro objeto visual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como invocar <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> usando um <xref:System.Windows.Media.HitTestResultCallback> valor. O método de retorno de chamada de teste de hit correspondente também é definido.  
+  
+ [!code-csharp[DrawingVisualSample#103](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
+ [!code-vb[DrawingVisualSample#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,274 @@
+<Type Name="AssemblyBuilder" FullName="System.Web.Compilation.AssemblyBuilder">
+  <TypeSignature Language="C#" Value="public class AssemblyBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssemblyBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.AssemblyBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um contêiner para a criação de um assembly de um ou mais caminhos virtuais em um projeto do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instâncias de <xref:System.Web.Compilation.AssemblyBuilder> classe são usados com <xref:System.Web.Compilation.BuildProvider> classe métodos para criar um ou mais arquivos em um assembly compilado.  
+  
+ O <xref:System.Web.Compilation.BuildProvider> classe define a funcionalidade de compilação para arquivos individuais e o <xref:System.Web.Compilation.AssemblyBuilder> classe combina o código-fonte contribuído por cada <xref:System.Web.Compilation.BuildProvider> instância em um único assembly. Passa de ambiente de compilação do ASP.NET um <xref:System.Web.Compilation.AssemblyBuilder> o objeto para o <xref:System.Web.Compilation.BuildProvider> métodos ao criar um assembly de um ou mais arquivos, para que cada <xref:System.Web.Compilation.BuildProvider> instância pode contribuir código-fonte para o seu arquivo de assembly global.  
+  
+ O ambiente de compilação do ASP.NET determina o idioma e o compilador necessário pelos arquivos dentro do projeto, com base no <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A?displayProperty=nameWithType> propriedade. Os arquivos de grupos do ambiente de compilação com base nas suas configurações de compilador e cria um conjunto de arquivos que exigem o mesmo compilador.  
+  
+ O <xref:System.Web.Compilation.AssemblyBuilder.CodeDomProvider%2A> propriedade indica a <xref:System.CodeDom.Compiler.CodeDomProvider> contribuiu com implementação que usa o ambiente de compilação do ASP.NET para compilar um assembly do código-fonte por cada <xref:System.Web.Compilation.BuildProvider> implementação.  
+  
+ Um <xref:System.Web.Compilation.BuildProvider> objeto contribui com o código-fonte na forma de um gráfico de CodeDOM usando o <xref:System.Web.Compilation.AssemblyBuilder.AddCodeCompileUnit%2A> método. Um <xref:System.Web.Compilation.BuildProvider> objeto contribui com o código-fonte armazenado em um arquivo físico usando o <xref:System.Web.Compilation.AssemblyBuilder.CreateCodeFile%2A> método.  
+  
+ Depois de cada <xref:System.Web.Compilation.BuildProvider> objeto contribui com o código-fonte usando apropriada <xref:System.Web.Compilation.AssemblyBuilder> métodos, o ASP.NET usa do ambiente de compilação de <xref:System.Web.Compilation.AssemblyBuilder> classe para compilar o código-fonte coletados em um assembly.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra uma implementação de provedor de compilação simples, herdando abstrata <xref:System.Web.Compilation.BuildProvider> classe base. O provedor de compilação substitui o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A>, <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A>, e <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> membros da classe base.  
+  
+ No <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> implementação do método, o provedor de compilação adiciona o código gerado para a compilação do assembly usando o <xref:System.Web.Compilation.AssemblyBuilder.CreateCodeFile%2A> método. O exemplo não inclui a implementação de `SampleClassGenerator` classe. Para obter mais informações, consulte <xref:System.CodeDom.CodeCompileUnit>.  
+  
+ [!code-csharp[System.Web.Compilation_SampleBuildProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation_SampleBuildProvider/CS/samplebuildprovider.cs#2)]
+ [!code-vb[System.Web.Compilation_SampleBuildProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation_SampleBuildProvider/VB/samplebuildprovider.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddAssemblyReference">
+      <MemberSignature Language="C#" Value="public void AddAssemblyReference (System.Reflection.Assembly a);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAssemblyReference(class System.Reflection.Assembly a) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AssemblyBuilder.AddAssemblyReference(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="a">Um assembly referenciado por um compilação unidade ou fonte de arquivo de código incluído na compilação do assembly.</param>
+        <summary>Adiciona um assembly que é referenciado por código-fonte gerado para um arquivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Compilation.BuildProvider> implementação usa o <xref:System.Web.Compilation.AssemblyBuilder.AddAssemblyReference%2A> método durante a geração de código-fonte que faz referência a tipos de dentro do assembly de entrada.  
+  
+ O ASP.NET criar ambiente inicializa a coleção padrão de assemblies disponíveis para consulta por meio do provedor de compilação no <xref:System.Web.Compilation.BuildProvider.ReferencedAssemblies%2A?displayProperty=nameWithType> propriedade. Se o provedor de compilação gera o código-fonte que faz referência a assemblies adicionais, o provedor de compilação adiciona os assemblies adicionais usando o <xref:System.Web.Compilation.AssemblyBuilder.AddAssemblyReference%2A> método. O ambiente de compilação do ASP.NET resolve tipos externos durante a compilação do assembly usando ambos os assemblies referenciados adicionados por criar provedores e a coleção padrão de assemblies disponíveis para referência.  
+  
+ Normalmente, um <xref:System.Web.Compilation.BuildProvider> objeto adiciona o código-fonte para o <xref:System.Web.Compilation.AssemblyBuilder> objeto o <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> método. Se um provedor de compilação gera um código de origem que usa um tipo externo, o provedor de compilação adiciona o assembly do tipo usando o <xref:System.Web.Compilation.AssemblyBuilder.AddAssemblyReference%2A?displayProperty=nameWithType> método.  
+  
+ Use o <xref:System.Web.Compilation.AssemblyBuilder.AddAssemblyReference%2A> método para adicionar um assembly referenciado necessário no código-fonte gerado por um <xref:System.Web.Compilation.BuildProvider> instância de um tipo de arquivo específico. Use o [assemblies elemento de compilação (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/3811c448-af1c-498d-be2b-6ed2634c51e9) elemento de configuração para configurar um assembly de referência em vários tipos de arquivo em um projeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCodeCompileUnit">
+      <MemberSignature Language="C#" Value="public void AddCodeCompileUnit (System.Web.Compilation.BuildProvider buildProvider, System.CodeDom.CodeCompileUnit compileUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCodeCompileUnit(class System.Web.Compilation.BuildProvider buildProvider, class System.CodeDom.CodeCompileUnit compileUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AssemblyBuilder.AddCodeCompileUnit(System.Web.Compilation.BuildProvider,System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buildProvider" Type="System.Web.Compilation.BuildProvider" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="buildProvider">O provedor de compilação gera <c>compileUnit</c>.</param>
+        <param name="compileUnit">A unidade de compilação de código para incluir na compilação do assembly.</param>
+        <summary>Adiciona o código-fonte para o assembly na forma de um gráfico CodeDOM.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Compilation.BuildProvider> chamadas de implementação de <xref:System.Web.Compilation.AssemblyBuilder.AddCodeCompileUnit%2A> método ao gerar um gráfico CodeDOM para um caminho virtual. Adicionado com do código-fonte <xref:System.Web.Compilation.AssemblyBuilder.AddCodeCompileUnit%2A> está incluído na compilação do assembly.  
+  
+ Do normalmente, um provedor de compilação <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> leituras de implementação de método de <xref:System.Web.Compilation.BuildProvider.VirtualPath%2A> propriedade, analisa o conteúdo e, em seguida, adiciona o código-fonte gerado especificado <xref:System.Web.Compilation.AssemblyBuilder> objeto. O provedor de compilação usa o <xref:System.Web.Compilation.AssemblyBuilder.AddCodeCompileUnit%2A> método para adicionar o código-fonte como um gráfico CodeDOM ao assembly. Como alternativa, o provedor de compilação pode usar o <xref:System.Web.Compilation.AssemblyBuilder.CreateCodeFile%2A> para adicionar o código-fonte como um arquivo físico para o assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeDomProvider">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CodeDomProvider CodeDomProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.CodeDomProvider CodeDomProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.AssemblyBuilder.CodeDomProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CodeDomProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o compilador usado para compilar o código-fonte em um assembly.</summary>
+        <value>Somente leitura <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> implementação usada para compilar o código-fonte contribuíram por cada provedor de compilação em um assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.AssemblyBuilder.CodeDomProvider%2A> propriedade indica a <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> contribuiu com implementação que usa o ambiente de compilação do ASP.NET para compilar um assembly do código-fonte por cada <xref:System.Web.Compilation.BuildProvider> implementação.  
+  
+ O ambiente de compilação do ASP.NET determina o idioma e o compilador necessário pelos arquivos dentro do projeto, com base no <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A?displayProperty=nameWithType> propriedade. Os arquivos de grupos do ambiente de compilação com base nas suas configurações de compilador e cria um conjunto de arquivos que exigem o mesmo compilador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCodeFile">
+      <MemberSignature Language="C#" Value="public System.IO.TextWriter CreateCodeFile (System.Web.Compilation.BuildProvider buildProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.TextWriter CreateCodeFile(class System.Web.Compilation.BuildProvider buildProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AssemblyBuilder.CreateCodeFile(System.Web.Compilation.BuildProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buildProvider" Type="System.Web.Compilation.BuildProvider" />
+      </Parameters>
+      <Docs>
+        <param name="buildProvider">O provedor de compilação de gerar o arquivo de origem do código.</param>
+        <summary>Permite que um provedor de compilação criar um arquivo de origem temporário e incluir o arquivo de origem na compilação do assembly.</summary>
+        <returns>Um open <see cref="T:System.IO.TextWriter" /> que pode ser usado para gravar o código-fonte em um arquivo temporário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Compilation.BuildProvider> chamadas de implementação de <xref:System.Web.Compilation.AssemblyBuilder.CreateCodeFile%2A> método ao gerar um arquivo de origem para um caminho virtual. Adicionado com do código-fonte <xref:System.Web.Compilation.AssemblyBuilder.CreateCodeFile%2A> está incluído na compilação do assembly.  
+  
+ Normalmente, um provedor de compilação <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> leituras de implementação de método de <xref:System.Web.Compilation.BuildProvider.VirtualPath%2A> propriedade, analisa o conteúdo e, em seguida, adiciona o código-fonte gerado especificado <xref:System.Web.Compilation.AssemblyBuilder> objeto. O provedor de compilação usa o <xref:System.Web.Compilation.AssemblyBuilder.CreateCodeFile%2A> método para adicionar o código-fonte como um arquivo físico para o assembly. Como alternativa, o provedor de compilação pode usar o <xref:System.Web.Compilation.AssemblyBuilder.AddCodeCompileUnit%2A> para adicionar o código-fonte como um gráfico CodeDOM ao assembly.  
+  
+ Depois de chamar <xref:System.Web.Compilation.AssemblyBuilder.CreateCodeFile%2A>, o provedor de compilação grava a fonte de conteúdo do arquivo usando retornado <xref:System.IO.TextWriter> objeto. Após gravar o arquivo de origem, o <xref:System.Web.Compilation.BuildProvider> objeto deve usar o <xref:System.IO.TextWriter.Close%2A> método para fechar o <xref:System.IO.TextWriter> de objeto e liberar recursos do sistema associados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra uma implementação de provedor de compilação simples, herdando abstrata <xref:System.Web.Compilation.BuildProvider> classe base. O provedor de compilação substitui o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A>, <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A>, e <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> membros da classe base.  
+  
+ No <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> implementação do método, o provedor de compilação adiciona o código gerado para a compilação do assembly usando o <xref:System.Web.Compilation.AssemblyBuilder.CreateCodeFile%2A> método. O exemplo não inclui a implementação de `SampleClassGenerator` classe. Para obter mais informações, consulte <xref:System.CodeDom.CodeCompileUnit>.  
+  
+ [!code-csharp[System.Web.Compilation_SampleBuildProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation_SampleBuildProvider/CS/samplebuildprovider.cs#2)]
+ [!code-vb[System.Web.Compilation_SampleBuildProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation_SampleBuildProvider/VB/samplebuildprovider.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEmbeddedResource">
+      <MemberSignature Language="C#" Value="public System.IO.Stream CreateEmbeddedResource (System.Web.Compilation.BuildProvider buildProvider, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream CreateEmbeddedResource(class System.Web.Compilation.BuildProvider buildProvider, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AssemblyBuilder.CreateEmbeddedResource(System.Web.Compilation.BuildProvider,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buildProvider" Type="System.Web.Compilation.BuildProvider" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="buildProvider">O provedor de compilação gera o recurso.</param>
+        <param name="name">O nome do arquivo de recurso a ser criado.</param>
+        <summary>Permite que um provedor de compilação criar um arquivo de recurso para incluir na compilação do assembly.</summary>
+        <returns>Um open <see cref="T:System.IO.Stream" /> que pode ser usado para gravar os recursos, que são incluídos na compilação do assembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de chamar o <xref:System.Web.Compilation.AssemblyBuilder.CreateEmbeddedResource%2A> método, uma <xref:System.Web.Compilation.BuildProvider> objeto grava o recurso de conteúdo do arquivo usando retornado <xref:System.IO.Stream> objeto. Por exemplo, o provedor de compilação pode gravar os recursos usando um <xref:System.Resources.ResourceWriter> objeto. Depois de gravar o arquivo de recurso, o provedor de compilação deve usar o <xref:System.IO.Stream.Close%2A> método para fechar o <xref:System.IO.Stream> de objeto e liberar recursos do sistema associados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> não é um nome de arquivo válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateTypeFactory">
+      <MemberSignature Language="C#" Value="public void GenerateTypeFactory (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GenerateTypeFactory(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AssemblyBuilder.GenerateTypeFactory(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo para gerar.</param>
+        <summary>Insere um modelo de fábrica rápida de objeto para um tipo no assembly compilado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Compilation.BuildProvider> chamadas de implementação de <xref:System.Web.Compilation.AssemblyBuilder.GenerateTypeFactory%2A> método para otimizar o desempenho do frequentes criações de instâncias do tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTempFilePhysicalPath">
+      <MemberSignature Language="C#" Value="public string GetTempFilePhysicalPath (string extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetTempFilePhysicalPath(string extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.AssemblyBuilder.GetTempFilePhysicalPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extension">A extensão de arquivo a ser usado para o arquivo temporário.</param>
+        <summary>Gera um caminho de arquivo temporário.</summary>
+        <returns>Um caminho para um arquivo temporário, com a extensão de arquivo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Compilation.BuildProvider> chamadas de implementação de <xref:System.Web.Compilation.AssemblyBuilder.GetTempFilePhysicalPath%2A> método para obter um caminho de arquivo temporário é excluído automaticamente depois que o assembly é compilado.  
+  
+ O <xref:System.Web.Compilation.AssemblyBuilder.GetTempFilePhysicalPath%2A> método gera um caminho de arquivo temporário exclusivo, mas não cria o arquivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

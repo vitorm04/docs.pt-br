@@ -1,0 +1,136 @@
+<Type Name="GacIdentityPermissionAttribute" FullName="System.Security.Permissions.GacIdentityPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class GacIdentityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit GacIdentityPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.GacIdentityPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as ações de segurança para <see cref="T:System.Security.Permissions.GacIdentityPermission" /> sejam aplicadas ao código usando a segurança declarativa. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada para garantir que os chamadores sejam registrados no cache de assembly global (GAC).  
+  
+ O escopo da declaração que é permitido depende do <xref:System.Security.Permissions.SecurityAction> valor que é usado.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. Atributos de segurança são usados apenas para a segurança declarativa. Para segurança obrigatória, use a classe de permissão correspondente, <xref:System.Security.Permissions.GacIdentityPermission>.  
+  
+> [!IMPORTANT]
+>  Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], as permissões de identidade não são usadas.  
+>   
+>  Nas versões do .NET Framework 1.0 e 1.1, demandas sobre as permissões de identidade são efetivas mesmo quando o assembly de chamada é totalmente confiável. Ou seja, embora o assembly de chamada tenha confiança total, uma solicitação de uma permissão de identidade falhará se o assembly não atendem aos critérios necessárias. No .NET Framework versão 2.0, demandas de permissões de identidade são ineficazes se o assembly de chamada tem confiança total. Isso garante a consistência de todas as permissões, eliminando o tratamento de permissões de identidade como um caso especial.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de <xref:System.Security.Permissions.GacIdentityPermissionAttribute>.  
+  
+ [!code-cpp[System.Security.Permissions.GacIdentityPermissionAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.GacIdentityPermissionAttribute/CPP/gacidentitypermissionattribute.cpp#1)]
+ [!code-csharp[System.Security.Permissions.GacIdentityPermissionAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.GacIdentityPermissionAttribute/CS/gacidentitypermissionattribute.cs#1)]
+ [!code-vb[System.Security.Permissions.GacIdentityPermissionAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.GacIdentityPermissionAttribute/VB/gacidentitypermissionattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GacIdentityPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.GacIdentityPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores de <see cref="T:System.Security.Permissions.SecurityAction" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.GacIdentityPermissionAttribute" /> com o valor <see cref="T:System.Security.Permissions.SecurityAction" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor chama a classe base para validar o <xref:System.Security.Permissions.SecurityAction> valor.  
+  
+ Este construtor associa um <xref:System.Security.Permissions.SecurityAction> (por exemplo, `Demand`) com o <xref:System.Security.Permissions.GacIdentityPermission>.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. Atributos de segurança são usados apenas para a segurança declarativa. Use <xref:System.Security.Permissions.GacIdentityPermission> para segurança obrigatória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Security.Permissions.GacIdentityPermissionAttribute.%23ctor%2A> construtor a demanda que o programa de chamada ser no cache de assembly global. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.GacIdentityPermissionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.GacIdentityPermissionAttribute#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.GacIdentityPermissionAttribute/CPP/gacidentitypermissionattribute.cpp#2)]
+ [!code-csharp[System.Security.Permissions.GacIdentityPermissionAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.GacIdentityPermissionAttribute/CS/gacidentitypermissionattribute.cs#2)]
+ [!code-vb[System.Security.Permissions.GacIdentityPermissionAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.GacIdentityPermissionAttribute/VB/gacidentitypermissionattribute.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="action" /> parâmetro não é válido <see cref="T:System.Security.Permissions.SecurityAction" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.GacIdentityPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:System.Security.Permissions.GacIdentityPermission" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.GacIdentityPermission" /> que corresponde a este atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método deve ser chamado somente pelo sistema de segurança, nunca pelo código do aplicativo.  
+  
+ Em tempo de compilação, atributos convertem declarações de segurança para um formato serializado em metadados. Dados de segurança declarativa em metadados são criados a partir de permissão retornada por este método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

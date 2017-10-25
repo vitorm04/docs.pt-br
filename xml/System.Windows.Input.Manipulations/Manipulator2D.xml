@@ -1,0 +1,213 @@
+<Type Name="Manipulator2D" FullName="System.Windows.Input.Manipulations.Manipulator2D">
+  <TypeSignature Language="C#" Value="public struct Manipulator2D" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Manipulator2D extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.Manipulator2D" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um manipulator 2D em um momento no tempo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Manipulator2D (int id, float x, float y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 id, float32 x, float32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.Manipulator2D.#ctor(System.Int32,System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="id">A ID exclusiva para esta manipulator.</param>
+        <param name="x">A coordenada x do manipulator.</param>
+        <param name="y">A coordenada y do manipulator.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto com as propriedades especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ X e y parâmetros devem ser um número finito.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="x" />-coordenar ou <paramref name="y" />-coordenada são <see langword="float.NaN" />, <see langword="float.PositiveInfinity" />, ou <see langword="float.NegativeInfinity" />. Esses valores são todos inválidos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.Manipulator2D.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto a ser comparado a este objeto.</param>
+        <summary>Determina se este <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto tem o mesmo valor especificado <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objetos são do mesmo tipo e representarem o mesmo valor; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.Manipulator2D.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>O código hash para essa instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.Manipulator2D.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID exclusiva para essa <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto.</summary>
+        <value>A ID exclusiva <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Input.Manipulations.Manipulator2D manipulator1, System.Windows.Input.Manipulations.Manipulator2D manipulator2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Input.Manipulations.Manipulator2D manipulator1, valuetype System.Windows.Input.Manipulations.Manipulator2D manipulator2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.Manipulator2D.op_Equality(System.Windows.Input.Manipulations.Manipulator2D,System.Windows.Input.Manipulations.Manipulator2D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manipulator1" Type="System.Windows.Input.Manipulations.Manipulator2D" />
+        <Parameter Name="manipulator2" Type="System.Windows.Input.Manipulations.Manipulator2D" />
+      </Parameters>
+      <Docs>
+        <param name="manipulator1">O primeiro objeto <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> a ser comparado.</param>
+        <param name="manipulator2">O segundo objeto <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> a ser comparado.</param>
+        <summary>Determina se dois objetos <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> especificados têm o mesmo valor.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objetos têm o mesmo valor; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Windows.Input.Manipulations.Manipulator2D.Equals%2A?displayProperty=nameWithType>]]>.</format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Input.Manipulations.Manipulator2D manipulator1, System.Windows.Input.Manipulations.Manipulator2D manipulator2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Input.Manipulations.Manipulator2D manipulator1, valuetype System.Windows.Input.Manipulations.Manipulator2D manipulator2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.Manipulator2D.op_Inequality(System.Windows.Input.Manipulations.Manipulator2D,System.Windows.Input.Manipulations.Manipulator2D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manipulator1" Type="System.Windows.Input.Manipulations.Manipulator2D" />
+        <Parameter Name="manipulator2" Type="System.Windows.Input.Manipulations.Manipulator2D" />
+      </Parameters>
+      <Docs>
+        <param name="manipulator1">O primeiro objeto <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> a ser comparado.</param>
+        <param name="manipulator2">O segundo objeto <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> a ser comparado.</param>
+        <summary>Determina se duas especificadas <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objetos têm valores diferentes.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objetos têm valores diferentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é a negação de <xref:System.Windows.Input.Manipulations.Manipulator2D.Equals%2A?displayProperty=nameWithType>]]>. </format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public float X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.Manipulator2D.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada x disso <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto.</summary>
+        <value>A coordenada x disso <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao definir essa propriedade, o valor deve ser um valor finito. O valor padrão desta propriedade é zero (0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public float Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.Manipulator2D.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada y disso <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto.</summary>
+        <value>A coordenada y disso <see cref="T:System.Windows.Input.Manipulations.Manipulator2D" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao definir essa propriedade, o valor deve ser um valor finito. O valor padrão desta propriedade é zero (0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

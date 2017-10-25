@@ -1,0 +1,181 @@
+<Type Name="IXmlNamespaceResolver" FullName="System.Xml.IXmlNamespaceResolver">
+  <TypeSignature Language="C#" Value="public interface IXmlNamespaceResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlNamespaceResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.IXmlNamespaceResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso somente leitura a um conjunto de mapeamentos de prefixo e namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetNamespacesInScope">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; GetNamespacesInScope (System.Xml.XmlNamespaceScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetNamespacesInScope(valuetype System.Xml.XmlNamespaceScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Xml.XmlNamespaceScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Um <see cref="T:System.Xml.XmlNamespaceScope" /> valor que especifica o tipo de nós de namespace para retornar.</param>
+        <summary>Obtém uma coleção de mapeamentos de prefixo namespace definido que estão no escopo.</summary>
+        <returns>Um <see cref="T:System.Collections.IDictionary" /> que contém os namespaces no escopo atuais.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção é inserida pelo prefixo e pode ser usada para enumerar os namespaces no momento no escopo. A coleção é uma cópia desconectada da lista atual de namespace.  
+  
+ A seguinte tabela lista o <xref:System.Xml.XmlNamespaceScope> valores e como ele afeta a ou não os namespaces padrão e internos são retornados pelo <xref:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope%2A> método.  
+  
+|Valor de XmlNamespaceScope|xmlns: XML|xmlns:xmlns|xmlns = ""|  
+|-----------------------------|---------------|-----------------|---------------|  
+|<xref:System.Xml.XmlNamespaceScope.All>|sim|no|no|  
+|<xref:System.Xml.XmlNamespaceScope.ExcludeXml>|no|no|no|  
+|<xref:System.Xml.XmlNamespaceScope.Local>|no|no|sim|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupNamespace">
+      <MemberSignature Language="C#" Value="public string LookupNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string LookupNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo cujo namespace URI que você deseja localizar.</param>
+        <summary>Obtém o namespace que URI mapeado para o prefixo especificado.</summary>
+        <returns>O namespace URI que é mapeado para o prefixo. <see langword="null" /> se o prefixo não está mapeado para um URI de namespace.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Mapeamentos de URI de prefixo do Namespace podem alterar de nó para nó em um documento XML. Você não pode depender do resultado de uma pesquisa seja consistente de um nó para o próximo.  
+  
+ A tabela a seguir descreve como os namespaces padrão e internos são manipulados pelo <xref:System.Xml.IXmlNamespaceResolver.LookupNamespace%2A> método.  
+  
+|Prefixo|Valor de retorno|  
+|------------|------------------|  
+|xml|http://www.w3.org/XML/1998/namespace|  
+|xmlns|http://www.w3.org/2000/xmlns/|  
+|`String.Empty`(Um namespace padrão foi atribuído).|O namespace padrão atribuída no momento.|  
+|`String.Empty`(O namespace padrão não foi explicitamente atribuído).|`String.Empty`(O prefixo em branco está associado a elementos que não estão em qualquer namespace).|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupPrefix">
+      <MemberSignature Language="C#" Value="public string LookupPrefix (string namespaceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string LookupPrefix(string namespaceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">O namespace URI cujo prefixo que você deseja localizar.</param>
+        <summary>Obtém o prefixo que é mapeado para o URI do namespace especificado.</summary>
+        <returns>O prefixo que é mapeado para o namespace URI. <see langword="null" /> se o URI de namespace não está mapeado para um prefixo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É possível para um URI a ser mapeada para vários prefixos de namespace. Porque os prefixos não são mapeados de maneira previsível, você não deve depender voltando um prefixo específico quando um URI é mapeado para mais de um prefixo de namespace.  
+  
+> [!NOTE]
+>  URI de Namespace para mapeamentos de prefixo pode alterar de nó para nó em um documento XML. Você não pode depender do resultado de uma pesquisa seja consistente de um nó para o próximo.  
+  
+ A tabela a seguir descreve como os namespaces padrão e internos são manipulados pelo <xref:System.Xml.IXmlNamespaceResolver.LookupPrefix%2A> método.  
+  
+|Namespace|Valor retornado|  
+|---------------|------------------|  
+|http://www.w3.org/XML/1998/namespace|xml|  
+|http://www.w3.org/2000/xmlns/|xmlns|  
+|Um espaço para nome vazio.|Um namespace padrão que não tenha sido definido.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

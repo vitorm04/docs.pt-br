@@ -1,0 +1,70 @@
+<Type Name="SimpleSecurityTokenProvider" FullName="System.ServiceModel.Security.SimpleSecurityTokenProvider">
+  <TypeSignature Language="C#" Value="public class SimpleSecurityTokenProvider : System.IdentityModel.Selectors.SecurityTokenProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SimpleSecurityTokenProvider extends System.IdentityModel.Selectors.SecurityTokenProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.SimpleSecurityTokenProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um provedor de token de segurança que produz um token de segurança como um token emitido para associações federados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SimpleSecurityTokenProvider (System.IdentityModel.Tokens.SecurityToken token, System.IdentityModel.Selectors.SecurityTokenRequirement tokenRequirement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityToken token, class System.IdentityModel.Selectors.SecurityTokenRequirement tokenRequirement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SimpleSecurityTokenProvider.#ctor(System.IdentityModel.Tokens.SecurityToken,System.IdentityModel.Selectors.SecurityTokenRequirement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="tokenRequirement" Type="System.IdentityModel.Selectors.SecurityTokenRequirement" />
+      </Parameters>
+      <Docs>
+        <param name="token">Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança para fornecer.</param>
+        <param name="tokenRequirement">Um <see cref="T:System.IdentityModel.Selectors.SecurityTokenRequirement" /> que contém os requisitos descritos pela associação que usará o token especificado para mensagens seguras.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Security.SimpleSecurityTokenProvider" /> classe usando o token especificado e os requisitos de token de associação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um provedor de token de segurança que produz um token de segurança como um token emitido para associações federados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityToken GetTokenCore (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken GetTokenCore(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SimpleSecurityTokenProvider.GetTokenCore(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que contém o período de tempo limite.</param>
+        <summary>Cria um token de segurança de acordo com o tempo limite especificado.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

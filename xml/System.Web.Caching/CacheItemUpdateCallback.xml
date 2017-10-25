@@ -1,0 +1,46 @@
+<Type Name="CacheItemUpdateCallback" FullName="System.Web.Caching.CacheItemUpdateCallback">
+  <TypeSignature Language="C#" Value="public delegate void CacheItemUpdateCallback(string key, CacheItemUpdateReason reason, out object expensiveObject, out CacheDependency dependency, out DateTime absoluteExpiration, out TimeSpan slidingExpiration);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CacheItemUpdateCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.CacheItemUpdateCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="key" Type="System.String" />
+    <Parameter Name="reason" Type="System.Web.Caching.CacheItemUpdateReason" />
+    <Parameter Name="expensiveObject" Type="System.Object&amp;" RefType="out" />
+    <Parameter Name="dependency" Type="System.Web.Caching.CacheDependency&amp;" RefType="out" />
+    <Parameter Name="absoluteExpiration" Type="System.DateTime&amp;" RefType="out" />
+    <Parameter Name="slidingExpiration" Type="System.TimeSpan&amp;" RefType="out" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="key">O identificador do item que está sendo removido do cache.</param>
+    <param name="reason">O motivo pelo qual o item está sendo removido do cache.</param>
+    <param name="expensiveObject">Quando este método retorna, contém o objeto de item de cache que contém as atualizações.</param>
+    <param name="dependency">Quando este método retorna, contém o objeto que define a dependência entre o objeto do item e um arquivo, uma chave de cache, uma matriz de ambos ou outro objeto <see cref="T:System.Web.Caching.CacheDependency" />.</param>
+    <param name="absoluteExpiration">Quando este método for retorna, ele contém a hora em que o objeto expirou.</param>
+    <param name="slidingExpiration">Quando esse método retorna, ele contém o intervalo entre a hora em que o objeto foi acessado pela última vez e a hora em que o objeto expirou.</param>
+    <summary>Define um método de retorno de chamada para notificar aplicativos antes de um item em cache ser removido do cache.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um objeto expira no cache, o ASP.NET chama o <xref:System.Web.Caching.CacheItemUpdateCallback> método com a chave para o item de cache e o motivo pelo qual talvez você queira atualizar o item. Os parâmetros restantes desse método são parâmetros de saída. Você fornecer o novo item em cache e expiração opcional e valores de dependência a ser usado ao atualizar o item em cache.  
+  
+ O retorno de chamada de atualização não será chamado se o item em cache é explicitamente removido usando uma chamada para <xref:System.Web.Caching.Cache.Remove%2A>.  
+  
+ Se você desejar que o item em cache a ser removido do cache, você deve retornar `null` no `expensiveObject` parâmetro. Caso contrário, retorna uma referência para os novos dados armazenados em cache usando o `expensiveObject` parâmetro. Se você não especificar valores de dependência ou expiração, o item será removido do cache apenas quando a memória é necessária.  
+  
+ Se o método de retorno de chamada lança uma exceção, o ASP.NET suprime a exceção e remove o valor armazenado em cache.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

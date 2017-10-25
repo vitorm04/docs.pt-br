@@ -1,0 +1,131 @@
+<Type Name="DefaultDllImportSearchPathsAttribute" FullName="System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DefaultDllImportSearchPathsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DefaultDllImportSearchPathsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os caminhos que são usados para procurar DLLs que fornecem funções para invocações de plataforma.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando aplicado a um assembly, este atributo especifica os caminhos que são usados por padrão para procurar qualquer DLL que fornece uma função de uma plataforma chamar, em qualquer código no assembly. Quando aplicado a uma plataforma individual invocar, esse atributo substitui os caminhos de pesquisa padrão que foram especificados para o assembly.  
+  
+ Esse atributo é ignorado para invocação de qualquer plataforma que especifica um caminho absoluto.  
+  
+ Use esse atributo para impedir que o Win32 `LoadLibraryEx` função da pesquisa de diretório de trabalho atual. Isso ajuda a proteger seu aplicativo contra ataques em quais locais de software mal-intencionado a DLL no diretório de trabalho atual, para que quando uma plataforma invoca chama o Win32 `LoadLibraryEx` função, a ordem de pesquisa padrão da função localiza a DLL mal-intencionado, em vez da ele estivesse destinado para localizar a DLL do sistema.  
+  
+ O common language runtime lida com a chamada para o [LoadLibraryEx](http://go.microsoft.com/fwlink/?LinkId=236091)função de acordo com o seguinte algoritmo:  
+  
+1.  Se o atributo é aplicado a uma plataforma individual invocar, use os valores especificados por essa instância do atributo.  
+  
+2.  Caso contrário, se o atributo é aplicado ao assembly que contém a plataforma invoke, use os valores especificados por essa instância do atributo.  
+  
+3.  Caso contrário, pesquisar o diretório de assembly e, em seguida, chame o `LoadLibraryEx` funcionar com o `LOAD_WITH_ALTERED_SEARCH_PATH` sinalizador.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultDllImportSearchPathsAttribute (System.Runtime.InteropServices.DllImportSearchPath paths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.DllImportSearchPath paths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute.#ctor(System.Runtime.InteropServices.DllImportSearchPath)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="paths" Type="System.Runtime.InteropServices.DllImportSearchPath" />
+      </Parameters>
+      <Docs>
+        <param name="paths">Uma combinação bit a bit dos valores de enumeração que especifica os caminhos que os <c>LoadLibraryEx</c> invoca pesquisas de função durante a plataforma.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute" /> classe, especificando os caminhos a ser usado ao procurar os destinos de plataforma invoca.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paths">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.DllImportSearchPath Paths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.DllImportSearchPath Paths" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute.Paths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.DllImportSearchPath</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma combinação bit a bit dos valores de enumeração que especifica os caminhos que os <c>LoadLibraryEx</c> invoca pesquisas de função durante a plataforma.</summary>
+        <value>Invoca uma combinação bit a bit dos valores de enumeração que especificam caminhos de pesquisa para a plataforma.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute> atributo é aplicado a um assembly, os caminhos são usados por padrão para procurar os destinos de qualquer plataforma invoca que são executados pelo código no assembly. Quando o atributo é aplicado a uma plataforma individual invocar, os caminhos são usados para pesquisar o destino da plataforma individual invocar e substituir os caminhos especificados para o assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

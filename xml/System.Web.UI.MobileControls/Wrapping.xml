@@ -1,0 +1,78 @@
+<Type Name="Wrapping" FullName="System.Web.UI.MobileControls.Wrapping">
+  <TypeSignature Language="C#" Value="public enum Wrapping" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Wrapping extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Wrapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o texto renderizado como é encapsulado. Essa classe não pode ser herdada. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente há suporte para vários modos de encapsulamento em determinados dispositivos. Consulte informações sobre o processamento específico ao dispositivo de estilos para obter detalhes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Wrapping NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Wrapping.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Wrapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor padrão. Se o valor for <see cref="F:System.Web.UI.MobileControls.Wrapping.NotSet" />, em seguida, se um controle envolve ou não é herdado de estilo do controle, ou, se o estilo não é definido, de controle do pai do controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoWrap">
+      <MemberSignature Language="C#" Value="NoWrap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Wrapping NoWrap = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Wrapping.NoWrap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Wrapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Texto não está quebrado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="Wrap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.Wrapping Wrap = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.Wrapping.Wrap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Wrapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Texto é quebrado nas margens de uma tela ou um contêiner. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

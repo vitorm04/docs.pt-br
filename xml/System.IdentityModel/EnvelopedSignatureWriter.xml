@@ -1,0 +1,176 @@
+<Type Name="EnvelopedSignatureWriter" FullName="System.IdentityModel.EnvelopedSignatureWriter">
+  <TypeSignature Language="C#" Value="public sealed class EnvelopedSignatureWriter : System.IdentityModel.DelegatingXmlDictionaryWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EnvelopedSignatureWriter extends System.IdentityModel.DelegatingXmlDictionaryWriter" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.EnvelopedSignatureWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.DelegatingXmlDictionaryWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula um gravador e gera uma assinatura automaticamente quando o envelope tiver sido completamente gravado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a assinatura gerada será inserida como o último elemento no envelope. Isso pode ser modificado por chamar explicitamente o <xref:System.IdentityModel.EnvelopedSignatureWriter.WriteSignature%2A> método para indicar o local dentro do envelope onde a assinatura deve ser inserida.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnvelopedSignatureWriter (System.Xml.XmlWriter innerWriter, System.IdentityModel.Tokens.SigningCredentials signingCredentials, string referenceId, System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlWriter innerWriter, class System.IdentityModel.Tokens.SigningCredentials signingCredentials, string referenceId, class System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureWriter.#ctor(System.Xml.XmlWriter,System.IdentityModel.Tokens.SigningCredentials,System.String,System.IdentityModel.Selectors.SecurityTokenSerializer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="innerWriter" Type="System.Xml.XmlWriter" />
+        <Parameter Name="signingCredentials" Type="System.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="referenceId" Type="System.String" />
+        <Parameter Name="securityTokenSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="innerWriter">O gravador para encapsular.</param>
+        <param name="signingCredentials">As credenciais de autenticação a ser usado para gerar a assinatura.</param>
+        <param name="referenceId">A ID de referência do envelope.</param>
+        <param name="securityTokenSerializer">O serializador de token a ser usado para serializar a KeyInfo de assinatura.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.EnvelopedSignatureWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="referenceId" /> é <see langword="null" /> ou vazio.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="innerWriter" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="signingCredentials" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="securityTokenSerializer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndElement">
+      <MemberSignature Language="C#" Value="public override void WriteEndElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureWriter.WriteEndElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha um elemento e aciona o escopo de namespace correspondente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o último elemento do envelope é gravado, a assinatura é calculada automaticamente sobre o envelope. Se o <xref:System.IdentityModel.EnvelopedSignatureWriter.WriteSignature%2A> método foi chamado explicitamente, a assinatura é inserida na posição apropriada dentro do envelope; caso contrário, ele será inserido no final do envelope.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteFullEndElement">
+      <MemberSignature Language="C#" Value="public override void WriteFullEndElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteFullEndElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureWriter.WriteFullEndElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha um elemento e aciona o escopo de namespace correspondente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o último elemento do envelope é gravado, a assinatura é calculada automaticamente sobre o envelope. Se o <xref:System.IdentityModel.EnvelopedSignatureWriter.WriteSignature%2A> método foi chamado explicitamente, a assinatura é inserida na posição apropriada dentro do envelope; caso contrário, ele será inserido no final do envelope.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteSignature">
+      <MemberSignature Language="C#" Value="public void WriteSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureWriter.WriteSignature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define a posição da assinatura dentro do envelope. Chame este método ao gravar o envelope para indicar em que a assinatura do ponto deve ser inserido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartElement">
+      <MemberSignature Language="C#" Value="public override void WriteStartElement (string prefix, string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartElement(string prefix, string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureWriter.WriteStartElement(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo do namespace do elemento.</param>
+        <param name="localName">O nome local do elemento. (O nome do elemento sem o prefixo).</param>
+        <param name="ns">O URI do namespace a ser associado ao elemento.</param>
+        <summary>Grava a marca de início especificada e o associa ao namespace especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

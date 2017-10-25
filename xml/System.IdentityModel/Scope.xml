@@ -1,0 +1,359 @@
+<Type Name="Scope" FullName="System.IdentityModel.Scope">
+  <TypeSignature Language="C#" Value="public class Scope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Scope extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Scope" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a configuração para a solicitação de emissão de token.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Scope> classe encapsula informações sobre a terceira parte confiável (RP) associada a uma solicitação de token de segurança (primeira). Essas informações são usadas por implementações de <xref:System.IdentityModel.SecurityTokenService> classe (STS) no pipeline de emissão de token para retornar uma resposta (RSTR) para uma solicitação de token de segurança (primeira).  
+  
+ <xref:System.IdentityModel.Scope>objetos contêm informações sobre o endereço do RP, criptografia e credenciais de autenticação a ser usado com o token de segurança emitido e se o token em si ou chaves simétricas emitidos com o token deve ser criptografado. Por padrão, as chaves simétricas e token são criptografadas. Você pode estender o <xref:System.IdentityModel.Scope> padrão de classe para conter informações adicionais sobre a solicitação, como tipos de token aceito pelo RP, vida útil do token, a vida útil do token máximo, conjuntos de algoritmo usados pela RP e assim por diante; no entanto, as informações encapsuladas nessa classe não devem variar para solicitações individuais.  
+  
+ O pipeline de emissão de token é implementado no <xref:System.IdentityModel.SecurityTokenService.Issue%2A> método e este método chama o <xref:System.IdentityModel.SecurityTokenService.GetScope%2A> método para obter a configuração para a primeira. Você deve implementar um <xref:System.IdentityModel.SecurityTokenService.GetScope%2A> método no STS personalizado e retornar um <xref:System.IdentityModel.Scope> objeto apropriado para RP e sua implementação do STS.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Scope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Scope.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Scope" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para o novo <xref:System.IdentityModel.Scope> instância.  
+  
+|Propriedade|Valor.|  
+|--------------|------------|  
+|<xref:System.IdentityModel.Scope.AppliesToAddress%2A>|`null` .|  
+|<xref:System.IdentityModel.Scope.EncryptingCredentials%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.Properties%2A>|Um dicionário vazio.|  
+|<xref:System.IdentityModel.Scope.ReplyToAddress%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.SigningCredentials%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.SymmetricKeyEncryptionRequired%2A>|`true`.|  
+|<xref:System.IdentityModel.Scope.TokenEncryptionRequired%2A>|`true`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Scope (string appliesToAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string appliesToAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Scope.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appliesToAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="appliesToAddress">O endereço appliesTo da terceira parte confiável. Isso geralmente é um URI.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Scope" /> classe com o endereço appliesTo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para o novo <xref:System.IdentityModel.Scope> instância.  
+  
+|Propriedade|Valor.|  
+|--------------|------------|  
+|<xref:System.IdentityModel.Scope.AppliesToAddress%2A>|O valor de `appliesToAddress` parâmetro.|  
+|<xref:System.IdentityModel.Scope.EncryptingCredentials%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.Properties%2A>|Um dicionário vazio.|  
+|<xref:System.IdentityModel.Scope.ReplyToAddress%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.SigningCredentials%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.SymmetricKeyEncryptionRequired%2A>|`true`.|  
+|<xref:System.IdentityModel.Scope.TokenEncryptionRequired%2A>|`true`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Scope (string appliesToAddress, System.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string appliesToAddress, class System.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Scope.#ctor(System.String,System.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appliesToAddress" Type="System.String" />
+        <Parameter Name="encryptingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="appliesToAddress">O endereço appliesTo da terceira parte confiável. Isso geralmente é um URI.</param>
+        <param name="encryptingCredentials">As credenciais de criptografia para a terceira parte confiável.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Scope" /> classe com o endereço especificado appliesTo e criptografar credenciais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para o novo <xref:System.IdentityModel.Scope> instância.  
+  
+|Propriedade|Valor.|  
+|--------------|------------|  
+|<xref:System.IdentityModel.Scope.AppliesToAddress%2A>|O valor de `appliesToAddress` parâmetro.|  
+|<xref:System.IdentityModel.Scope.EncryptingCredentials%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.Properties%2A>|Um dicionário vazio.|  
+|<xref:System.IdentityModel.Scope.ReplyToAddress%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.SigningCredentials%2A>|O valor de `signingCredentials` parâmetro.|  
+|<xref:System.IdentityModel.Scope.SymmetricKeyEncryptionRequired%2A>|`true`.|  
+|<xref:System.IdentityModel.Scope.TokenEncryptionRequired%2A>|`true`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Scope (string appliesToAddress, System.IdentityModel.Tokens.SigningCredentials signingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string appliesToAddress, class System.IdentityModel.Tokens.SigningCredentials signingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Scope.#ctor(System.String,System.IdentityModel.Tokens.SigningCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appliesToAddress" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="System.IdentityModel.Tokens.SigningCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="appliesToAddress">O endereço appliesTo da terceira parte confiável. Isso geralmente é um URI.</param>
+        <param name="signingCredentials">As credenciais de assinatura da terceira parte confiável.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Scope" /> classe com o endereço especificado appliesTo e as credenciais de assinatura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para o novo <xref:System.IdentityModel.Scope> instância.  
+  
+|Propriedade|Valor.|  
+|--------------|------------|  
+|<xref:System.IdentityModel.Scope.AppliesToAddress%2A>|O valor de `appliesToAddress` parâmetro.|  
+|<xref:System.IdentityModel.Scope.EncryptingCredentials%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.Properties%2A>|Um dicionário vazio.|  
+|<xref:System.IdentityModel.Scope.ReplyToAddress%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.SigningCredentials%2A>|O valor de `signingCredentials` parâmetro.|  
+|<xref:System.IdentityModel.Scope.SymmetricKeyEncryptionRequired%2A>|`true`.|  
+|<xref:System.IdentityModel.Scope.TokenEncryptionRequired%2A>|`true`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Scope (string appliesToAddress, System.IdentityModel.Tokens.SigningCredentials signingCredentials, System.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string appliesToAddress, class System.IdentityModel.Tokens.SigningCredentials signingCredentials, class System.IdentityModel.Tokens.EncryptingCredentials encryptingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Scope.#ctor(System.String,System.IdentityModel.Tokens.SigningCredentials,System.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appliesToAddress" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="System.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="encryptingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="appliesToAddress">O endereço appliesTo da terceira parte confiável. Isso geralmente é um URI.</param>
+        <param name="signingCredentials">As credenciais de assinatura da terceira parte confiável.</param>
+        <param name="encryptingCredentials">As credenciais de criptografia para a terceira parte confiável.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Scope" /> classe com o endereço appliesTo especificado, as credenciais de assinatura e criptografia de credenciais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para o novo <xref:System.IdentityModel.Scope> instância.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Scope.AppliesToAddress%2A>|O valor de `appliesToAddress` parâmetro.|  
+|<xref:System.IdentityModel.Scope.EncryptingCredentials%2A>|O valor de `encryptingCredentials` parâmetro.|  
+|<xref:System.IdentityModel.Scope.Properties%2A>|Um dicionário vazio.|  
+|<xref:System.IdentityModel.Scope.ReplyToAddress%2A>|`null`.|  
+|<xref:System.IdentityModel.Scope.SigningCredentials%2A>|O valor de `signingCredentials` parâmetro.|  
+|<xref:System.IdentityModel.Scope.SymmetricKeyEncryptionRequired%2A>|`true`.|  
+|<xref:System.IdentityModel.Scope.TokenEncryptionRequired%2A>|`true`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppliesToAddress">
+      <MemberSignature Language="C#" Value="public virtual string AppliesToAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppliesToAddress" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Scope.AppliesToAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço appliesTo da terceira parte confiável.</summary>
+        <value>O endereço appliesTo da terceira parte confiável. Isso geralmente é um URI.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptingCredentials">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.EncryptingCredentials EncryptingCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.EncryptingCredentials EncryptingCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Scope.EncryptingCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.EncryptingCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as credenciais de criptografia para a terceira parte confiável.</summary>
+        <value>As credenciais de criptografia a ser usado para a terceira parte confiável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.IdentityModel.Scope.TokenEncryptionRequired%2A> é de propriedade `true`, as credenciais são usadas para criptografar tokens de segurança emitidos. Se o <xref:System.IdentityModel.Scope.SymmetricKeyEncryptionRequired%2A> é de propriedade `true`, as credenciais são usadas para criptografar chaves simétricas emitidas com tokens de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.Dictionary&lt;string,object&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, object&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Scope.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o recipiente de propriedades para estender o objeto.</summary>
+        <value>O recipiente de propriedades.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplyToAddress">
+      <MemberSignature Language="C#" Value="public virtual string ReplyToAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReplyToAddress" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Scope.ReplyToAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço replyTo da terceira parte confiável.</summary>
+        <value>O endereço replyTo da terceira parte confiável. Isso geralmente é um URI.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningCredentials">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SigningCredentials SigningCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SigningCredentials SigningCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Scope.SigningCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SigningCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as credenciais de assinatura da terceira parte confiável.</summary>
+        <value>As credenciais de autenticação a ser usado para a terceira parte confiável.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SymmetricKeyEncryptionRequired">
+      <MemberSignature Language="C#" Value="public virtual bool SymmetricKeyEncryptionRequired { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SymmetricKeyEncryptionRequired" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Scope.SymmetricKeyEncryptionRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as chaves simétricas emitidas devem ser criptografadas.</summary>
+        <value>
+          <see langword="true" />Se as chaves simétricas devem ser criptografadas; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.IdentityModel.Scope.SymmetricKeyEncryptionRequired%2A> é de propriedade `true`, chaves simétricas são criptografadas usando as credenciais no <xref:System.IdentityModel.Scope.EncryptingCredentials%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenEncryptionRequired">
+      <MemberSignature Language="C#" Value="public virtual bool TokenEncryptionRequired { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TokenEncryptionRequired" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Scope.TokenEncryptionRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os tokens de segurança emitidos devem ser criptografados.</summary>
+        <value>
+          <see langword="true" />Se os tokens de segurança devem ser criptografados; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.IdentityModel.Scope.TokenEncryptionRequired%2A> é de propriedade `true`, tokens de segurança são criptografados usando as credenciais no <xref:System.IdentityModel.Scope.EncryptingCredentials%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

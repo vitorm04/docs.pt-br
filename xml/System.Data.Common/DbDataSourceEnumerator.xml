@@ -1,0 +1,109 @@
+<Type Name="DbDataSourceEnumerator" FullName="System.Data.Common.DbDataSourceEnumerator">
+  <TypeSignature Language="C#" Value="public abstract class DbDataSourceEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbDataSourceEnumerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbDataSourceEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um mecanismo para enumerar todas as instâncias disponíveis dos servidores de banco de dados dentro da rede local.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece que a base para outros fortemente tipado enumeradores de fonte de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbDataSourceEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbDataSourceEnumerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Data.Common.DbDataSourceEnumerator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.DbDataSourceEnumerator> classe fornece a base para enumeradores fortemente tipadas como <xref:System.Data.Sql.SqlDataSourceEnumerator>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataSources">
+      <MemberSignature Language="C#" Value="public abstract System.Data.DataTable GetDataSources ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.DataTable GetDataSources() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbDataSourceEnumerator.GetDataSources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um <see cref="T:System.Data.DataTable" /> que contém informações sobre todas as instâncias visíveis do servidor representado pela instância desta classe fortemente tipada.</summary>
+        <returns>Retorna um <see cref="T:System.Data.DataTable" /> que contém informações sobre as instâncias visíveis da fonte de dados associado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela retornada por este método contém as seguintes colunas, que contêm cadeias de caracteres. Provedores individuais podem adicionar colunas adicionais.  
+  
+|Ordinal de coluna|Column|Descrição|  
+|--------------------|------------|-----------------|  
+|0|**Nome do servidor**|Nome do servidor.|  
+|1|**InstanceName**|Nome da instância do servidor. Dependendo do provedor, várias instâncias podem existir em um único servidor.|  
+|2|**IsClustered**|Indica se o servidor faz parte de um cluster.|  
+|3|**Versão**|Versão do servidor. Formato exato varia de acordo com o provedor.|  
+|4|**FactoryName**|Nome da fábrica de provedor correspondente.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,99 @@
+<Type Name="WebPartExportMode" FullName="System.Web.UI.WebControls.WebParts.WebPartExportMode">
+  <TypeSignature Language="C#" Value="public enum WebPartExportMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartExportMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartExportMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se todos, alguns ou nenhum de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> propriedades do controle podem ser exportadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor da <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode> enumerador pode ser aplicado para o <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> propriedade para especificar quais propriedades de um controle de Web Parts podem ser exportadas. Por padrão, as propriedades de um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle não pode ser exportado e o controle <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> propriedade é definida como None. Para habilitar a exportação de todas as propriedades do controle, defina o <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> valor para todos. Para exportar apenas determinadas propriedades, evitando que a exportação de propriedades que contêm dados confidenciais, você pode definir o valor da propriedade para NonSensitiveData.  
+  
+ Uma propriedade pode ser marcada como confidencial, por meio de <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> atributo.  
+  
+> [!NOTE]
+>  Para habilitar o recurso Exportar para um aplicativo Web que inclui controles de Web Parts, no arquivo Web. config para seu aplicativo, você deve adicionar um atributo para o `<webParts>` elemento dentro do `<system.web>` seção, como a seguinte marcação.  
+>   
+>  `<webParts enableExport="true">`  
+>   
+>  `</webParts>`  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> propriedade. Observe que para o exemplo de código de exportação trabalhar, você também deve atualizar o arquivo Web. config conforme indicado na seção comentários.  
+  
+ A primeira parte deste exemplo contém o código para um controle chamado `TextDisplayWebPart`. Esse controle é o mesmo que o controle personalizado que é encontrado na seção de exemplo do <xref:System.Web.UI.WebControls.WebParts.WebPartExportMode.NonSensitiveData> classe visão geral, exceto que ele adiciona um `Personalizable` de atributo para o `TextDisplayWebPart.ContentText` propriedade para a propriedade pode ser exportada. Observe que a declaração de atributo inclui um valor de `true` para o `isSensitive` parâmetro, o que significa que a propriedade é marcada como dados confidenciais para fins de exportação. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código pressupõe que você compila o código-fonte em um assembly, colocá-lo em uma subpasta Bin do seu aplicativo Web e referenciar o assembly com um `Register` diretiva na sua página da Web. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPart_ExportMode#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/CS/textdisplaywebpart.cs#2)]
+ [!code-vb[WebParts_WebPart_ExportMode#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/VB/textdisplaywebpart.vb#2)]  
+  
+ A segunda parte do exemplo mostra como referenciar o `TextDisplayWebPart` controle em uma página da Web do ASP.NET. Observe que na marcação declarativa, o <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> o valor da propriedade é definido para tudo, que significa que mesmo propriedades com valores confidenciais serão exportadas.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_ExportMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/CS/exportmodecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_ExportMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_ExportMode/VB/exportmodevb.aspx#1)]  
+  
+ Carregar a página da Web em um navegador e, no menu de verbos de <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> de controle, clique no verbo de exportação e siga as instruções para exportar um arquivo de descrição que contém os dados de estado e de propriedade do controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartExportMode All = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartExportMode.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartExportMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as propriedades de um controle de Web Parts podem ser exportadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartExportMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartExportMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartExportMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma das propriedades de um controle de Web Parts podem ser exportadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonSensitiveData">
+      <MemberSignature Language="C#" Value="NonSensitiveData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartExportMode NonSensitiveData = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartExportMode.NonSensitiveData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartExportMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Apenas as propriedades de um controle de Web Parts que foram definidas como não confidenciais podem ser exportadas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

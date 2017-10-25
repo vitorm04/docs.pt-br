@@ -1,0 +1,184 @@
+<Type Name="LabelEditEventArgs" FullName="System.Windows.Forms.LabelEditEventArgs">
+  <TypeSignature Language="C#" Value="public class LabelEditEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LabelEditEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.LabelEditEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de <see cref="E:System.Windows.Forms.ListView.BeforeLabelEdit" /> e de <see cref="E:System.Windows.Forms.ListView.AfterLabelEdit" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.LabelEditEventArgs> Especifica o índice e a legenda de um <xref:System.Windows.Forms.ListViewItem> e a legenda depois que ele foi editado pelo usuário. Essa classe também fornece um <xref:System.Windows.Forms.LabelEditEventArgs.CancelEdit%2A> propriedade. Você pode usar essa propriedade em um <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> manipulador de eventos para impedir que o usuário edite o rótulo. Você também pode usá-lo em um <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> manipulador de eventos para reverter a alteração, retornando o rótulo para seu valor original. Isso é útil quando você deseja validar a entrada do usuário antes de confirmar a alteração.  
+  
+> [!NOTE]
+>  Porque o <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> acontece do evento antes de editar o rótulo é confirmado, a chamada a <xref:System.Windows.Forms.ListView.Sort%2A?displayProperty=nameWithType> método em um manipulador para este evento classificará o item usando o valor original.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a manipulação de <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> eventos e usando o <xref:System.Windows.Forms.LabelEditEventArgs.Item%2A> e <xref:System.Windows.Forms.LabelEditEventArgs.CancelEdit%2A> propriedades. Para executar o exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.ListView> controle chamado `ListView1` e preenchido com pelo menos 3 itens. Certifique-se de que todos os eventos estão associados com os métodos de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ListView3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView3/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LabelEditEventArgs (int item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LabelEditEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="item">O índice de base zero de <see cref="T:System.Windows.Forms.ListViewItem" />, que contém o rótulo para editar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.LabelEditEventArgs" /> classe com o índice especificado para o <see cref="T:System.Windows.Forms.ListViewItem" /> para editar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar este construtor ao gerar o <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> ou <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> eventos em tempo de execução para especificar um item específico do <xref:System.Windows.Forms.ListView> para editar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LabelEditEventArgs (int item, string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 item, string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LabelEditEventArgs.#ctor(System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Int32" />
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="item">O índice de base zero de <see cref="T:System.Windows.Forms.ListViewItem" />, que contém o rótulo para editar.</param>
+        <param name="label">O novo texto atribuído para o rótulo da <see cref="T:System.Windows.Forms.ListViewItem" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.LabelEditEventArgs" /> classe com o índice especificado para o <see cref="T:System.Windows.Forms.ListViewItem" /> que está sendo editado e o novo texto do rótulo da <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar este construtor ao gerar o <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> ou <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> eventos em tempo de execução para especificar um item de lista no <xref:System.Windows.Forms.ListView> para editar. O construtor também permite que você especifique o novo texto associado com o rótulo de <xref:System.Windows.Forms.ListViewItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public bool CancelEdit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CancelEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LabelEditEventArgs.CancelEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as alterações feitas para o rótulo da <see cref="T:System.Windows.Forms.ListViewItem" /> devem ser canceladas.</summary>
+        <value>
+          <see langword="true" />Se a operação de edição do rótulo para o <see cref="T:System.Windows.Forms.ListViewItem" /> deve ser cancelada; caso contrário <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para cancelar as alterações feitas para o rótulo de um <xref:System.Windows.Forms.ListViewItem> e revertê-lo ao seu texto original. Use essa propriedade para impedir que a legenda de um item que está sendo alterado para um valor que não atende aos requisitos do seu aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a manipulação de <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> eventos e usando o <xref:System.Windows.Forms.LabelEditEventArgs.Item%2A> e <xref:System.Windows.Forms.LabelEditEventArgs.CancelEdit%2A> propriedades. Para executar o exemplo, cole o código a seguir em um formulário que contém um controle ListView chamado ListView1 e preenchido com pelo menos 3 itens. Certifique-se de que todos os eventos estão associados com os métodos de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ListView3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView3/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public int Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LabelEditEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice de base zero de <see cref="T:System.Windows.Forms.ListViewItem" /> que contém o rótulo para editar.</summary>
+        <value>O índice de base zero de <see cref="T:System.Windows.Forms.ListViewItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a manipulação de <xref:System.Windows.Forms.ListView.BeforeLabelEdit?displayProperty=nameWithType> eventos e usando o <xref:System.Windows.Forms.LabelEditEventArgs.Item%2A> e <xref:System.Windows.Forms.LabelEditEventArgs.CancelEdit%2A> propriedades. Para executar o exemplo, cole o código a seguir em um formulário que contém um controle ListView chamado ListView1 e preenchido com pelo menos 3 itens. Certifique-se de que todos os eventos estão associados com os métodos de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ListView3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView3/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView3/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LabelEditEventArgs.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o novo texto atribuído para o rótulo da <see cref="T:System.Windows.Forms.ListViewItem" />.</summary>
+        <value>O novo texto para associar o <see cref="T:System.Windows.Forms.ListViewItem" /> ou <see langword="null" /> se o texto é alterado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.AfterLabelEdit?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#463](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#463)]
+ [!code-vb[System.Windows.Forms.EventExamples#463](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#463)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

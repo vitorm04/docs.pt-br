@@ -1,0 +1,105 @@
+<Type Name="JavascriptCallbackResponseMessageProperty" FullName="System.ServiceModel.Channels.JavascriptCallbackResponseMessageProperty">
+  <TypeSignature Language="C#" Value="public sealed class JavascriptCallbackResponseMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JavascriptCallbackResponseMessageProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.JavascriptCallbackResponseMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite o uso de um retorno de chamada de JavaScript em uma resposta de operação de serviço usando JSON preenchimento (JSONP).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ JSONP é um mecanismo usado para habilitar os sites, scripts de suporte em navegadores da Web.  
+  
+> [!CAUTION]
+>  Usar scripts intersites é intrinsecamente não segura e seu uso não é geralmente recomendado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JavascriptCallbackResponseMessageProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.JavascriptCallbackResponseMessageProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.JavascriptCallbackResponseMessageProperty" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallbackFunctionName">
+      <MemberSignature Language="C#" Value="public string CallbackFunctionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CallbackFunctionName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.JavascriptCallbackResponseMessageProperty.CallbackFunctionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da função de retorno de chamada usado com JSONP.</summary>
+        <value>O nome da função de retorno de chamada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public static string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.JavascriptCallbackResponseMessageProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de propriedade de mensagem usado para adicionar uma propriedade de mensagem de retorno de chamada de JavaScript para a resposta de operação de serviço usando JSONP.</summary>
+        <value>O nome de propriedade de mensagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Net.HttpStatusCode&gt; StatusCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Net.HttpStatusCode&gt; StatusCode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.JavascriptCallbackResponseMessageProperty.StatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Net.HttpStatusCode&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o código de status HTTP.</summary>
+        <value>O código de status HTTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código de status HTTP, se não for igual a 200, é anexado como um segundo parâmetro na resposta JavaScript.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

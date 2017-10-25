@@ -1,0 +1,115 @@
+<Type Name="MachineKeyValidationConverter" FullName="System.Web.Configuration.MachineKeyValidationConverter">
+  <TypeSignature Language="C#" Value="public sealed class MachineKeyValidationConverter : System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MachineKeyValidationConverter extends System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.MachineKeyValidationConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationConverterBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para converter <see cref="T:System.Web.Configuration.MachineKeyValidation" /> objetos em cadeias de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Security.Permissions.HostProtectionAttribute> atributo aplicado a essa classe tem as seguintes <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> o valor da propriedade: <xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort>. <xref:System.Security.Permissions.HostProtectionAttribute> não afeta aplicativos de área de trabalho (que são normalmente iniciados com o clique duplo em um ícone, a digitação de um comando ou a inserção de uma URL em um navegador). Para obter mais informações, consulte o <xref:System.Security.Permissions.HostProtectionAttribute> classe ou [programação do SQL Server e atributos de proteção de Host](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MachineKeyValidationConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.MachineKeyValidationConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.MachineKeyValidationConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.MachineKeyValidationConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">Este parâmetro não é usado.</param>
+        <param name="ci">Este parâmetro não é usado.</param>
+        <param name="data">A cadeia de caracteres a ser convertida.</param>
+        <summary>Converte uma cadeia de caracteres equivalente <see cref="T:System.Web.Configuration.MachineKeyValidation" /> valor.</summary>
+        <returns>O equivalente <see cref="T:System.Web.Configuration.MachineKeyValidation" /> valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método lançará um <xref:System.ArgumentException> exceção se o `data` parâmetro não faz referência a uma das seguintes cadeias de caracteres:  
+  
+-   SHA1  
+  
+-   MD5  
+  
+-   3DES  
+  
+-   AES  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Os dados não são uma das cadeias de caracteres esperadas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object value, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object value, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.MachineKeyValidationConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">Este parâmetro não é usado.</param>
+        <param name="ci">Este parâmetro não é usado.</param>
+        <param name="value">O <see cref="T:System.Web.Configuration.MachineKeyValidation" /> a ser convertido.</param>
+        <param name="type">Este parâmetro não é usado.</param>
+        <summary>Converte um <see cref="T:System.Web.Configuration.MachineKeyValidation" /> valor para a representação de cadeia de caracteres do valor.</summary>
+        <returns>Uma cadeia de caracteres que representa um <see cref="T:System.Web.Configuration.MachineKeyValidation" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="value" /> parâmetro não é um dos valores enumerados esperados.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="value" /> parâmetro não é um <see cref="T:System.Web.Configuration.MachineKeyValidation" /> objeto.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

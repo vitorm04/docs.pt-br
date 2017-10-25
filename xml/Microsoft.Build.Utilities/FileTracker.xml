@@ -1,0 +1,878 @@
+<Type Name="FileTracker" FullName="Microsoft.Build.Utilities.FileTracker">
+  <TypeSignature Language="C#" Value="public static class FileTracker" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed FileTracker extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.FileTracker" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe contém funções de utilitário para encapsular Iniciando e registro em log para o controlador</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateRootingMarkerResponseFile">
+      <MemberSignature Language="C#" Value="public static string CreateRootingMarkerResponseFile (Microsoft.Build.Framework.ITaskItem[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateRootingMarkerResponseFile(class Microsoft.Build.Framework.ITaskItem[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.CreateRootingMarkerResponseFile(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="sources">O conjunto de arquivos de origem.</param>
+        <summary>Fornecido um conjunto de arquivos de origem na forma de ITaskItem, cria um arquivo de resposta temporário que contém o marcador de raiz no que corresponde a essas fontes.</summary>
+        <returns>O caminho do arquivo de resposta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRootingMarkerResponseFile">
+      <MemberSignature Language="C#" Value="public static string CreateRootingMarkerResponseFile (string rootMarker);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateRootingMarkerResponseFile(string rootMarker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.CreateRootingMarkerResponseFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootMarker" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rootMarker">O raiz no marcador para colocar no arquivo de resposta.</param>
+        <summary>Fornecido um marcador de raiz no, cria um arquivo de resposta temporário com esse marcador raiz nele.</summary>
+        <returns>O caminho do arquivo de resposta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTrackingContext">
+      <MemberSignature Language="C#" Value="public static void EndTrackingContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EndTrackingContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.EndTrackingContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Paradas de acessos do arquivo de rastreamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureFileTrackerOnPath">
+      <MemberSignature Language="C#" Value="public static string EnsureFileTrackerOnPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EnsureFileTrackerOnPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.EnsureFileTrackerOnPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Precede o caminho ao assembly FileTracker apropriado à variável de ambiente PATH. Usado para processamento de controle.</summary>
+        <returns>O valor antigo da variável de ambiente PATH.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureFileTrackerOnPath">
+      <MemberSignature Language="C#" Value="public static string EnsureFileTrackerOnPath (string rootPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string EnsureFileTrackerOnPath(string rootPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.EnsureFileTrackerOnPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rootPath">O caminho raiz FileTracker.dll. Substitui o toolType se especificado.</param>
+        <summary>Precede o caminho ao assembly FileTracker apropriado à variável de ambiente PATH. Usado para processamento de controle, ou quando o .NET Framework não pode estar no caminho.</summary>
+        <returns>O valor antigo do caminho</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileIsExcludedFromDependencies">
+      <MemberSignature Language="C#" Value="public static bool FileIsExcludedFromDependencies (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool FileIsExcludedFromDependencies(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.FileIsExcludedFromDependencies(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Caminho completo do arquivo para testar</param>
+        <summary>Verifique se o arquivo especificado é excluído de dependências controladas</summary>
+        <returns>Retorna VERDADEIRO se o arquivo é excluído.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileIsUnderPath">
+      <MemberSignature Language="C#" Value="public static bool FileIsUnderPath (string fileName, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool FileIsUnderPath(string fileName, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.FileIsUnderPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Caminho completo do arquivo para testar</param>
+        <param name="path">O caminho pode conter o arquivo.</param>
+        <summary>Verifique se o arquivo especificado está no caminho especificado</summary>
+        <returns>Retorna VERDADEIRO se o arquivo estiver sob o caminho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindTrackerOnPath">
+      <MemberSignature Language="C#" Value="public static string FindTrackerOnPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string FindTrackerOnPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.FindTrackerOnPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Pesquisa % PATH % para o local do Tracker.exe e retorna o primeiro caminho correspondente. Correspondência de caminho completo para Tracker.exe ou null se não for encontrado um caminho correspondente.</summary>
+        <returns>Retorna o caminho para Tracker.exe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceOutOfProcTracking">
+      <MemberSignature Language="C#" Value="public static bool ForceOutOfProcTracking (Microsoft.Build.Utilities.ExecutableType toolType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ForceOutOfProcTracking(valuetype Microsoft.Build.Utilities.ExecutableType toolType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.ForceOutOfProcTracking(Microsoft.Build.Utilities.ExecutableType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+      </Parameters>
+      <Docs>
+        <param name="toolType">O tipo de executável para a ferramenta que estão sendo rastreada</param>
+        <summary>Determina se é necessário rastrear fora do processo ou se inproc controle funcionará.</summary>
+        <returns>True se for necessário rastrear fora do processo, falsa se inproc controle for Okey</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceOutOfProcTracking">
+      <MemberSignature Language="C#" Value="public static bool ForceOutOfProcTracking (Microsoft.Build.Utilities.ExecutableType toolType, string dllName, string cancelEventName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ForceOutOfProcTracking(valuetype Microsoft.Build.Utilities.ExecutableType toolType, string dllName, string cancelEventName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.ForceOutOfProcTracking(Microsoft.Build.Utilities.ExecutableType,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+        <Parameter Name="dllName" Type="System.String" />
+        <Parameter Name="cancelEventName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolType">O tipo de executável para a ferramenta que estão sendo rastreada</param>
+        <param name="dllName">A ferramenta que está sendo rastreada.</param>
+        <param name="cancelEventName">O nome do controlador de eventos de cancelamento deve escutar, ou nulo se não houver um</param>
+        <summary>Determina se é necessário rastrear fora do processo ou se inproc controle funcionará.</summary>
+        <returns>True se for necessário rastrear fora do processo, falsa se inproc controle for Okey</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatRootingMarker">
+      <MemberSignature Language="C#" Value="public static string FormatRootingMarker (Microsoft.Build.Framework.ITaskItem source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string FormatRootingMarker(class Microsoft.Build.Framework.ITaskItem source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.FormatRootingMarker(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">As fontes principais.</param>
+        <summary>Construa uma cadeia de caracteres do marcador de raiz a partir da matriz ITaskItem de fontes primárias.</summary>
+        <returns>Retorna a cadeia de caracteres do marcador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatRootingMarker">
+      <MemberSignature Language="C#" Value="public static string FormatRootingMarker (Microsoft.Build.Framework.ITaskItem[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string FormatRootingMarker(class Microsoft.Build.Framework.ITaskItem[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.FormatRootingMarker(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="sources">Matriz de ITaskItem de fontes principais.</param>
+        <summary>Construa uma cadeia de caracteres do marcador de raiz a partir da matriz ITaskItem de fontes primárias.</summary>
+        <returns>Retorna a cadeia de caracteres do marcador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatRootingMarker">
+      <MemberSignature Language="C#" Value="public static string FormatRootingMarker (Microsoft.Build.Framework.ITaskItem source, Microsoft.Build.Framework.ITaskItem output);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string FormatRootingMarker(class Microsoft.Build.Framework.ITaskItem source, class Microsoft.Build.Framework.ITaskItem output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.FormatRootingMarker(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+        <Parameter Name="output" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">As fontes principais.</param>
+        <param name="output">Os arquivos de saída.</param>
+        <summary>Construa uma cadeia de caracteres do marcador de raiz a partir da matriz ITaskItem de fontes primárias.</summary>
+        <returns>Retorna a cadeia de caracteres do marcador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatRootingMarker">
+      <MemberSignature Language="C#" Value="public static string FormatRootingMarker (Microsoft.Build.Framework.ITaskItem[] sources, Microsoft.Build.Framework.ITaskItem[] outputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string FormatRootingMarker(class Microsoft.Build.Framework.ITaskItem[] sources, class Microsoft.Build.Framework.ITaskItem[] outputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.FormatRootingMarker(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="outputs" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="sources">Matriz de ITaskItem de fontes principais.</param>
+        <param name="outputs">Os arquivos de saída.</param>
+        <summary>Construa uma cadeia de caracteres do marcador de raiz a partir da matriz ITaskItem de fontes primárias.</summary>
+        <returns>Retorna a cadeia de caracteres do marcador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileTrackerPath">
+      <MemberSignature Language="C#" Value="public static string GetFileTrackerPath (Microsoft.Build.Utilities.ExecutableType toolType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFileTrackerPath(valuetype Microsoft.Build.Utilities.ExecutableType toolType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.GetFileTrackerPath(Microsoft.Build.Utilities.ExecutableType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+      </Parameters>
+      <Docs>
+        <param name="toolType">ExecutableType da ferramenta sendo encapsulada.</param>
+        <summary>Considerando a ExecutableType da ferramenta disposta e informações que podemos saber sobre nosso bitness atual, descobre e retorna o caminho para o FileTracker.dll correto.</summary>
+        <returns>Retorna o caminho da ferramenta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileTrackerPath">
+      <MemberSignature Language="C#" Value="public static string GetFileTrackerPath (Microsoft.Build.Utilities.ExecutableType toolType, string rootPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFileTrackerPath(valuetype Microsoft.Build.Utilities.ExecutableType toolType, string rootPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.GetFileTrackerPath(Microsoft.Build.Utilities.ExecutableType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+        <Parameter Name="rootPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolType">ToolType.</param>
+        <param name="rootPath">O caminho raiz FileTracker.dll. Substitui o toolType se especificado.</param>
+        <summary>Considerando a ExecutableType da ferramenta disposta e informações que podemos saber sobre nosso bitness atual, descobre e retorna o caminho para o FileTracker.dll correto.</summary>
+        <returns>Retorna <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTrackerPath">
+      <MemberSignature Language="C#" Value="public static string GetTrackerPath (Microsoft.Build.Utilities.ExecutableType toolType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetTrackerPath(valuetype Microsoft.Build.Utilities.ExecutableType toolType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.GetTrackerPath(Microsoft.Build.Utilities.ExecutableType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+      </Parameters>
+      <Docs>
+        <param name="toolType">ExecutableType da ferramenta sendo encapsulada.</param>
+        <summary>Considerando os ExecutableType da ferramenta disposta e as informações que podemos saber sobre nosso bitness atual, descobre e retorna o caminho para o Tracker.exe correto.</summary>
+        <returns>Retorna o caminho do controlador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTrackerPath">
+      <MemberSignature Language="C#" Value="public static string GetTrackerPath (Microsoft.Build.Utilities.ExecutableType toolType, string rootPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetTrackerPath(valuetype Microsoft.Build.Utilities.ExecutableType toolType, string rootPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.GetTrackerPath(Microsoft.Build.Utilities.ExecutableType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+        <Parameter Name="rootPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolType">ToolType.</param>
+        <param name="rootPath">O caminho raiz Tracker.exe. Substitui o toolType se especificado.</param>
+        <summary>Considerando os ExecutableType da ferramenta disposta e as informações que podemos saber sobre nosso bitness atual, descobre e retorna o caminho para o Tracker.exe correto.</summary>
+        <returns>Retorna <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeTracking">
+      <MemberSignature Language="C#" Value="public static void ResumeTracking ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ResumeTracking() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.ResumeTracking" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Arquivo de rastreamento de retomada acessa no contexto atual do controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetThreadCount">
+      <MemberSignature Language="C#" Value="public static void SetThreadCount (int threadCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetThreadCount(int32 threadCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.SetThreadCount(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threadCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="threadCount">A contagem de threads.</param>
+        <summary>Defina a contagem de thread global e atribuir valores para o thread atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartProcess">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.Process StartProcess (string command, string arguments, Microsoft.Build.Utilities.ExecutableType toolType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.Process StartProcess(string command, string arguments, valuetype Microsoft.Build.Utilities.ExecutableType toolType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="arguments" Type="System.String" />
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando a ser acompanhado</param>
+        <param name="arguments">O comando para acompanhar argumentos</param>
+        <param name="toolType">O tipo de executável que a ferramenta encapsulada é</param>
+        <summary>Inicie o processo; acompanhando o comando.</summary>
+        <returns>Retorna a instância do processo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartProcess">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.Process StartProcess (string command, string arguments, Microsoft.Build.Utilities.ExecutableType toolType, string rootFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.Process StartProcess(string command, string arguments, valuetype Microsoft.Build.Utilities.ExecutableType toolType, string rootFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="arguments" Type="System.String" />
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+        <Parameter Name="rootFiles" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando a ser acompanhado</param>
+        <param name="arguments">Argumentos do comando</param>
+        <param name="toolType">O tipo de executável que a ferramenta encapsulada é</param>
+        <param name="rootFiles">Marcador de raiz</param>
+        <summary>Inicie o processo; acompanhando o comando.</summary>
+        <returns>Retorna a instância do processo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartProcess">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.Process StartProcess (string command, string arguments, Microsoft.Build.Utilities.ExecutableType toolType, string intermediateDirectory, string rootFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.Process StartProcess(string command, string arguments, valuetype Microsoft.Build.Utilities.ExecutableType toolType, string intermediateDirectory, string rootFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="arguments" Type="System.String" />
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="rootFiles" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando a ser acompanhado</param>
+        <param name="arguments">O comando para acompanhar argumentos</param>
+        <param name="toolType">O tipo de executável que a ferramenta encapsulada é</param>
+        <param name="intermediateDirectory">O diretório intermediário onde os logs de rastreamento serão gravados</param>
+        <param name="rootFiles">Marcador de raiz</param>
+        <summary>Inicie o processo; acompanhando o comando.</summary>
+        <returns>Retorna a instância do processo</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartProcess">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.Process StartProcess (string command, string arguments, Microsoft.Build.Utilities.ExecutableType toolType, string dllName, string intermediateDirectory, string rootFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.Process StartProcess(string command, string arguments, valuetype Microsoft.Build.Utilities.ExecutableType toolType, string dllName, string intermediateDirectory, string rootFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="arguments" Type="System.String" />
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+        <Parameter Name="dllName" Type="System.String" />
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="rootFiles" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando a ser acompanhado</param>
+        <param name="arguments">O comando para acompanhar argumentos</param>
+        <param name="toolType">O tipo de executável que a ferramenta encapsulada é</param>
+        <param name="dllName">O nome da DLL que fará o acompanhamento</param>
+        <param name="intermediateDirectory">O diretório intermediário onde os logs de rastreamento serão gravados</param>
+        <param name="rootFiles">Marcador de raiz</param>
+        <summary>Inicie o processo; acompanhando o comando.</summary>
+        <returns>Instância do processo</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartProcess">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.Process StartProcess (string command, string arguments, Microsoft.Build.Utilities.ExecutableType toolType, string dllName, string intermediateDirectory, string rootFiles, string cancelEventName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.Process StartProcess(string command, string arguments, valuetype Microsoft.Build.Utilities.ExecutableType toolType, string dllName, string intermediateDirectory, string rootFiles, string cancelEventName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.StartProcess(System.String,System.String,Microsoft.Build.Utilities.ExecutableType,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="arguments" Type="System.String" />
+        <Parameter Name="toolType" Type="Microsoft.Build.Utilities.ExecutableType" />
+        <Parameter Name="dllName" Type="System.String" />
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="rootFiles" Type="System.String" />
+        <Parameter Name="cancelEventName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando a ser acompanhado</param>
+        <param name="arguments">O comando para acompanhar argumentos</param>
+        <param name="toolType">O tipo de executável que a ferramenta encapsulada é</param>
+        <param name="dllName">O nome da DLL que fará o acompanhamento</param>
+        <param name="intermediateDirectory">O diretório intermediário onde os logs de rastreamento serão gravados</param>
+        <param name="rootFiles">Marcador de raiz</param>
+        <param name="cancelEventName">Se o controlador deve estar escutando em um determinado evento de cancelamento, passe o nome aqui</param>
+        <summary>Inicie o processo; acompanhando o comando.</summary>
+        <returns>Instância do processo</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartTrackingContext">
+      <MemberSignature Language="C#" Value="public static void StartTrackingContext (string intermediateDirectory, string taskName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartTrackingContext(string intermediateDirectory, string taskName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.StartTrackingContext(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="taskName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="intermediateDirectory">O diretório no qual gravar os arquivos de log de acompanhamento</param>
+        <param name="taskName">O nome da tarefa que chama esta função, usado para determinar os nomes dos arquivos de log de acompanhamento</param>
+        <summary>Partir de controle de acesso de arquivo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartTrackingContextWithRoot">
+      <MemberSignature Language="C#" Value="public static void StartTrackingContextWithRoot (string intermediateDirectory, string taskName, string rootMarkerResponseFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartTrackingContextWithRoot(string intermediateDirectory, string taskName, string rootMarkerResponseFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.StartTrackingContextWithRoot(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="rootMarkerResponseFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="intermediateDirectory">O diretório no qual gravar os arquivos de log de acompanhamento</param>
+        <param name="taskName">O nome da tarefa que chama esta função, usado para determinar os nomes dos arquivos de log de acompanhamento</param>
+        <param name="rootMarkerResponseFile">O raiz no marcador no arquivo de resposta.</param>
+        <summary>Inicia o controle de acesso de arquivo, usando o marcador de raiz no arquivo de resposta fornecido. Para gerar automaticamente um arquivo de resposta que recebe um marcador de raiz no, chame FileTracker.CreateRootingMarkerResponseFile.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopTrackingAndCleanup">
+      <MemberSignature Language="C#" Value="public static void StopTrackingAndCleanup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StopTrackingAndCleanup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.StopTrackingAndCleanup" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Parar o controle de acesso de arquivo e se livrar dos contextos de rastreamento atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendTracking">
+      <MemberSignature Language="C#" Value="public static void SuspendTracking ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SuspendTracking() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.SuspendTracking" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Suspenda temporariamente o controle de acesso de arquivo no contexto atual do controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackerArguments">
+      <MemberSignature Language="C#" Value="public static string TrackerArguments (string command, string arguments, string dllName, string intermediateDirectory, string rootFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string TrackerArguments(string command, string arguments, string dllName, string intermediateDirectory, string rootFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.TrackerArguments(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="arguments" Type="System.String" />
+        <Parameter Name="dllName" Type="System.String" />
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="rootFiles" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando a ser acompanhado</param>
+        <param name="arguments">O comando para acompanhar argumentos</param>
+        <param name="dllName">O nome da DLL que fará o acompanhamento</param>
+        <param name="intermediateDirectory">O diretório intermediário onde os logs de rastreamento serão gravados</param>
+        <param name="rootFiles">Marcador de raiz</param>
+        <summary>Este método constrói os argumentos de Tracker.exe corretos a partir dos parâmetros.</summary>
+        <returns>Os argumentos como uma cadeia de caracteres</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackerArguments">
+      <MemberSignature Language="C#" Value="public static string TrackerArguments (string command, string arguments, string dllName, string intermediateDirectory, string rootFiles, string cancelEventName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string TrackerArguments(string command, string arguments, string dllName, string intermediateDirectory, string rootFiles, string cancelEventName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.TrackerArguments(System.String,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="arguments" Type="System.String" />
+        <Parameter Name="dllName" Type="System.String" />
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="rootFiles" Type="System.String" />
+        <Parameter Name="cancelEventName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando a ser acompanhado</param>
+        <param name="arguments">O comando para acompanhar argumentos</param>
+        <param name="dllName">O nome da DLL que fará o acompanhamento</param>
+        <param name="intermediateDirectory">O diretório intermediário onde os logs de rastreamento serão gravados</param>
+        <param name="rootFiles">Marcador de raiz</param>
+        <param name="cancelEventName">Se tiver sido criado um evento de cancelamento que o controlador deve ser escutando, seu nome é passado aqui</param>
+        <summary>Este método constrói os argumentos de Tracker.exe corretos a partir dos parâmetros.</summary>
+        <returns>Os argumentos como uma cadeia de caracteres</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackerCommandArguments">
+      <MemberSignature Language="C#" Value="public static string TrackerCommandArguments (string command, string arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string TrackerCommandArguments(string command, string arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.TrackerCommandArguments(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="arguments" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando a ser acompanhado</param>
+        <param name="arguments">O comando para acompanhar argumentos</param>
+        <summary>Esse método constrói os argumentos de comando Tracker.exe corretos de seus parâmetros</summary>
+        <returns>Os argumentos como uma cadeia de caracteres</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackerResponseFileArguments">
+      <MemberSignature Language="C#" Value="public static string TrackerResponseFileArguments (string dllName, string intermediateDirectory, string rootFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string TrackerResponseFileArguments(string dllName, string intermediateDirectory, string rootFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.TrackerResponseFileArguments(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dllName" Type="System.String" />
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="rootFiles" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dllName">O nome da DLL que fará o acompanhamento</param>
+        <param name="intermediateDirectory">O diretório intermediário onde os logs de rastreamento serão gravados</param>
+        <param name="rootFiles">Marcador de raiz</param>
+        <summary>Este método constrói os argumentos do arquivo de resposta Tracker.exe corretos a partir dos parâmetros.</summary>
+        <returns>Os argumentos como uma cadeia de caracteres</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackerResponseFileArguments">
+      <MemberSignature Language="C#" Value="public static string TrackerResponseFileArguments (string dllName, string intermediateDirectory, string rootFiles, string cancelEventName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string TrackerResponseFileArguments(string dllName, string intermediateDirectory, string rootFiles, string cancelEventName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.TrackerResponseFileArguments(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dllName" Type="System.String" />
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="rootFiles" Type="System.String" />
+        <Parameter Name="cancelEventName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dllName">O nome da DLL que fará o acompanhamento</param>
+        <param name="intermediateDirectory">O diretório intermediário onde os logs de rastreamento serão gravados</param>
+        <param name="rootFiles">Marcador de raiz</param>
+        <param name="cancelEventName">Se tiver sido criado um evento de cancelamento que o controlador deve ser escutando, seu nome é passado aqui</param>
+        <summary>Este método constrói os argumentos do arquivo de resposta Tracker.exe corretos a partir dos parâmetros.</summary>
+        <returns>Os argumentos como uma cadeia de caracteres</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAllTLogs">
+      <MemberSignature Language="C#" Value="public static void WriteAllTLogs (string intermediateDirectory, string taskName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteAllTLogs(string intermediateDirectory, string taskName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.WriteAllTLogs(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="taskName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="intermediateDirectory">O diretório no qual gravar os arquivos de log de acompanhamento</param>
+        <param name="taskName">O nome da tarefa que chama esta função, usado para determinar os nomes dos arquivos de log de acompanhamento</param>
+        <summary>Grave logs de rastreamento para todos os contextos e threads.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContextTLogs">
+      <MemberSignature Language="C#" Value="public static void WriteContextTLogs (string intermediateDirectory, string taskName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteContextTLogs(string intermediateDirectory, string taskName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.FileTracker.WriteContextTLogs(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="intermediateDirectory" Type="System.String" />
+        <Parameter Name="taskName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="intermediateDirectory">O diretório no qual gravar os arquivos de log de acompanhamento</param>
+        <param name="taskName">O nome da tarefa que chama esta função, usado para determinar os nomes dos arquivos de log de acompanhamento</param>
+        <summary>Grave logs de rastreamento correspondente ao contexto atual do controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

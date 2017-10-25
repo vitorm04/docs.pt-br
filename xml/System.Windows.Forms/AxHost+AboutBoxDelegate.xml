@@ -1,0 +1,36 @@
+<Type Name="AxHost+AboutBoxDelegate" FullName="System.Windows.Forms.AxHost+AboutBoxDelegate">
+  <TypeSignature Language="C#" Value="protected delegate void AxHost.AboutBoxDelegate();" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi sealed AxHost/AboutBoxDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AxHost.AboutBoxDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Representa o método que será exibido um controle ActiveX caixa de diálogo sobre.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.AxHost.AboutBoxDelegate> fornece a capacidade de ser notificado quando a caixa sobre do controle ActiveX será exibida. Código adicionado para o método delegate é executado antes que seja exibida a caixa sobre.  
+  
+ Quando você cria um <xref:System.Windows.Forms.AxHost.AboutBoxDelegate> delegado, você identificar o método que tratará a exibição de um controle ActiveX caixa de diálogo sobre se ele tiver um. Para associar o método seu manipulador, adicione uma instância do representante ao método. O manipulador é chamado sempre que o método é chamado, a menos que você remova o delegado. Para obter mais informações sobre delegados, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir substitui o construtor e o <xref:System.Windows.Forms.AxHost.SetAboutBoxDelegate%2A> e <xref:System.Windows.Forms.AxHost.AttachInterfaces%2A> métodos de um <xref:System.Windows.Forms.AxHost> derivado da classe que encapsula mascarada Editar controle ActiveX da Microsoft. Esse código supõe que você criou o código-fonte gerados por executar o AxImp.exe no arquivo Msmask32 com o `/source` switch para gerar a classe wrapper a ser editado. Esse código é mostrado apenas na sintaxe do c# como que é o o AxImp.exe a saída de único idioma.  
+  
+ [!code-csharp[AxHost_Wrap_MaskEdit#1](~/samples/snippets/csharp/VS_Snippets_Winforms/AxHost_Wrap_MaskEdit/CS/axmsmask.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

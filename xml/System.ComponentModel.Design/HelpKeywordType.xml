@@ -1,0 +1,109 @@
+<Type Name="HelpKeywordType" FullName="System.ComponentModel.Design.HelpKeywordType">
+  <TypeSignature Language="C#" Value="public enum HelpKeywordType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HelpKeywordType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.HelpKeywordType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os identificadores que indicam o tipo de uma palavra-chave da Ajuda.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.HelpKeywordType>Define os identificadores que indicam o tipo de uma palavra-chave de ajuda para o sistema de Ajuda. Qualquer ou todos os identificadores de tipo de palavra-chave podem ser especificados para uma única palavra-chave. O tipo de uma palavra-chave da Ajuda, às vezes, é usado quando o sistema de Ajuda é determinar os tópicos da Ajuda para exibir uma solicitação de Ajuda.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="F1Keyword">
+      <MemberSignature Language="C#" Value="F1Keyword" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.HelpKeywordType F1Keyword = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.HelpKeywordType.F1Keyword" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.HelpKeywordType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma palavra-chave que F1 foi pressionada para solicitar ajuda sobre.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterKeyword">
+      <MemberSignature Language="C#" Value="FilterKeyword" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.HelpKeywordType FilterKeyword = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.HelpKeywordType.FilterKeyword" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.HelpKeywordType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma palavra-chave do filtro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneralKeyword">
+      <MemberSignature Language="C#" Value="GeneralKeyword" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.HelpKeywordType GeneralKeyword = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.HelpKeywordType.GeneralKeyword" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.HelpKeywordType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma palavra-chave geral.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

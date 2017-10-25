@@ -1,0 +1,157 @@
+<Type Name="IInstanceContextProvider" FullName="System.ServiceModel.Dispatcher.IInstanceContextProvider">
+  <TypeSignature Language="C#" Value="public interface IInstanceContextProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInstanceContextProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IInstanceContextProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implementar participar a criação ou a escolha de um <see cref="T:System.ServiceModel.InstanceContext" /> objeto, especialmente para permitir sessões compartilhadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> interface para fornecer apropriada <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> objeto para o sistema. Normalmente, essa interface é implementada para dar suporte a sessões compartilhadas, ativar pool de instância de serviço, controlar o tempo de vida de instâncias de serviço ou para contextos de grupo entre clientes.  
+  
+ Por exemplo, para implementar o compartilhamento, insira um personalizado <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> para decidir qual sessão ou uma chamada de um cliente é associada com a qual <xref:System.ServiceModel.InstanceContext> objeto. Para obter um exemplo que demonstra o compartilhamento de contextos de instância, consulte [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+  
+> [!NOTE]
+>  Quando um <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> é inserido em [!INCLUDE[indigo1](~/includes/indigo1-md.md)], a propriedade normal que controla a criação de <xref:System.ServiceModel.InstanceContext> objetos (o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> propriedade) não está marcada e não tem nenhum efeito.  
+  
+ Um mecanismo mais genérico pelo qual você pode inicializar <xref:System.ServiceModel.InstanceContext> objetos quando criado (por exemplo, para anexar extensões personalizadas para cada <xref:System.ServiceModel.InstanceContext>) é o <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetExistingInstanceContext">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.InstanceContext GetExistingInstanceContext (System.ServiceModel.Channels.Message message, System.ServiceModel.IContextChannel channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.InstanceContext GetExistingInstanceContext(class System.ServiceModel.Channels.Message message, class System.ServiceModel.IContextChannel channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInstanceContextProvider.GetExistingInstanceContext(System.ServiceModel.Channels.Message,System.ServiceModel.IContextChannel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.InstanceContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="channel" Type="System.ServiceModel.IContextChannel" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de entrada.</param>
+        <param name="channel">O canal que recebeu a mensagem.</param>
+        <summary>Chamado quando uma nova mensagem é recebida.</summary>
+        <returns>O <see cref="T:System.ServiceModel.InstanceContext" /> objeto que é usado para processar a mensagem; retorna <see langword="null" /> para instruir [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para criar um novo <see cref="T:System.ServiceModel.InstanceContext" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.GetExistingInstanceContext%2A> método é chamado quando uma mensagem é recebida. Retornar o <xref:System.ServiceModel.InstanceContext> do objeto que você deseja processar a mensagem, ou `null`. No caso de `null`, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] cria um novo <xref:System.ServiceModel.InstanceContext> objeto para a mensagem e, em seguida, chama o <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.InitializeInstanceContext%2A> método.  
+  
+ Se você retornar `null`, o novo <xref:System.ServiceModel.InstanceContext> objeto passa pelo sistema de limitação e incrementa a contagem de <xref:System.ServiceModel.Dispatcher.ServiceThrottle.MaxConcurrentInstances%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeInstanceContext">
+      <MemberSignature Language="C#" Value="public void InitializeInstanceContext (System.ServiceModel.InstanceContext instanceContext, System.ServiceModel.Channels.Message message, System.ServiceModel.IContextChannel channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeInstanceContext(class System.ServiceModel.InstanceContext instanceContext, class System.ServiceModel.Channels.Message message, class System.ServiceModel.IContextChannel channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInstanceContextProvider.InitializeInstanceContext(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Message,System.ServiceModel.IContextChannel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceContext" Type="System.ServiceModel.InstanceContext" />
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="channel" Type="System.ServiceModel.IContextChannel" />
+      </Parameters>
+      <Docs>
+        <param name="instanceContext">O novo objeto <see cref="T:System.ServiceModel.InstanceContext" />.</param>
+        <param name="message">A mensagem de entrada.</param>
+        <param name="channel">O canal que recebeu a mensagem.</param>
+        <summary>Chamado quando <see langword="null" /> é retornado a partir de <see cref="M:System.ServiceModel.Dispatcher.IInstanceContextProvider.GetExistingInstanceContext(System.ServiceModel.Channels.Message,System.ServiceModel.IContextChannel)" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.InitializeInstanceContext%2A>chamado quando <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.GetExistingInstanceContext%2A> retorna `null` e um novo <xref:System.ServiceModel.InstanceContext> objeto é criado. Este método é chamado para notificar que uma nova <xref:System.ServiceModel.InstanceContext> foi criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdle">
+      <MemberSignature Language="C#" Value="public bool IsIdle (System.ServiceModel.InstanceContext instanceContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsIdle(class System.ServiceModel.InstanceContext instanceContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle(System.ServiceModel.InstanceContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceContext" Type="System.ServiceModel.InstanceContext" />
+      </Parameters>
+      <Docs>
+        <param name="instanceContext">O <see cref="T:System.ServiceModel.InstanceContext" /> objeto que é considerado ocioso.</param>
+        <summary>Chamado quando todos os <see cref="T:System.ServiceModel.InstanceContext" /> atividades tiverem sido concluídas para habilitar os implementadores impedir que o <see cref="T:System.ServiceModel.InstanceContext" /> de ser reciclado.</summary>
+        <returns>
+          <see langword="true" />Se [!INCLUDE[indigo1](~/includes/indigo1-md.md)] é fechar e reciclar o <see cref="T:System.ServiceModel.InstanceContext" /> de objeto e ajustar o valor de <see cref="P:System.ServiceModel.Dispatcher.ServiceThrottle.MaxConcurrentInstances" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>chamado quando [!INCLUDE[indigo2](~/includes/indigo2-md.md)] está prestes a fechar e reciclar ficar ocioso <xref:System.ServiceModel.InstanceContext> para que você pode informar se deseja continuar fazendo isso o tempo de execução do objeto.  
+  
+ Para obter um exemplo que demonstra o compartilhamento de contextos de instância, consulte [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyIdle">
+      <MemberSignature Language="C#" Value="public void NotifyIdle (System.ServiceModel.Dispatcher.InstanceContextIdleCallback callback, System.ServiceModel.InstanceContext instanceContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NotifyIdle(class System.ServiceModel.Dispatcher.InstanceContextIdleCallback callback, class System.ServiceModel.InstanceContext instanceContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle(System.ServiceModel.Dispatcher.InstanceContextIdleCallback,System.ServiceModel.InstanceContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.ServiceModel.Dispatcher.InstanceContextIdleCallback" />
+        <Parameter Name="instanceContext" Type="System.ServiceModel.InstanceContext" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O <see cref="T:System.ServiceModel.Dispatcher.InstanceContextIdleCallback" /> objeto notifica [!INCLUDE[indigo2](~/includes/indigo2-md.md)] quando o <see cref="T:System.ServiceModel.InstanceContext" /> objeto é fechado e reciclados.</param>
+        <param name="instanceContext">O <see cref="T:System.ServiceModel.InstanceContext" /> atual.</param>
+        <summary>Chamado quando o <see cref="M:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle(System.ServiceModel.InstanceContext)" /> método retorna <see langword="false" /> para habilitar os implementadores fornecer um retorno de chamada para notificar [!INCLUDE[indigo2](~/includes/indigo2-md.md)] quando o <see cref="T:System.ServiceModel.InstanceContext" /> objeto for concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A> método é chamado quando o <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> método retorna `false` para que você possa fornecer [!INCLUDE[indigo2](~/includes/indigo2-md.md)] com um <xref:System.ServiceModel.Dispatcher.InstanceContextIdleCallback?displayProperty=nameWithType> que você usa para informar o tempo de execução do objeto que o <xref:System.ServiceModel.InstanceContext> concluiu seu trabalho. Quando o <xref:System.ServiceModel.Dispatcher.InstanceContextIdleCallback?displayProperty=nameWithType> objeto notifica o tempo de execução que o <xref:System.ServiceModel.InstanceContext> concluiu seu trabalho, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] chamadas <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> novamente. Esse ciclo continua até <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> retorna `true` e o contexto é fechado e reciclado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

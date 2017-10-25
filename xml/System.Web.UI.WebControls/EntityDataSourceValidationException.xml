@@ -1,0 +1,141 @@
+<Type Name="EntityDataSourceValidationException" FullName="System.Web.UI.WebControls.EntityDataSourceValidationException">
+  <TypeSignature Language="C#" Value="public sealed class EntityDataSourceValidationException : Exception, System.Web.DynamicData.IDynamicValidatorException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EntityDataSourceValidationException extends System.Exception implements class System.Web.DynamicData.IDynamicValidatorException" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.EntityDataSourceValidationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.DynamicData.IDynamicValidatorException</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa erros que ocorrem ao validar as propriedades de uma fonte de dados dinâmicos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityDataSourceValidationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceValidationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.UI.WebControls.EntityDataSourceValidationException" /> classe com uma mensagem fornecida pelo sistema que descreve o erro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Exception.Message%2A> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro, como "DefaultMessageDisplayedByParameterlessCtorWriterMustSupply". Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.InsufficientMemoryException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityDataSourceValidationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceValidationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve a exceção. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.UI.WebControls.EntityDataSourceValidationException" /> classe com uma mensagem especificada que descreve o erro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Web.UI.WebControls.EntityDataSourceValidationException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro especificada em `message`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityDataSourceValidationException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSourceValidationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve a exceção. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual. Se o <c>innerException</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.UI.WebControls.EntityDataSourceValidationException" /> classe com uma mensagem de erro especificada e uma referência à exceção interna que é a causa dessa exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Web.UI.WebControls.EntityDataSourceValidationException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro especificada em `message`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.DynamicData.IDynamicValidatorException.InnerExceptions">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IDictionary&lt;string,Exception&gt; System.Web.DynamicData.IDynamicValidatorException.InnerExceptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.Exception&gt; System.Web.DynamicData.IDynamicValidatorException.InnerExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSourceValidationException.System#Web#DynamicData#IDynamicValidatorException#InnerExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Exception&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as exceções que ocorrem quando um campo de dados novos ou editados é validado.</summary>
+        <value>Uma coleção que contém todas as exceções que ocorreram.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.EntityDataSourceValidationException> é convertida em uma interface de <xref:System.Web.DynamicData.IDynamicValidatorException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

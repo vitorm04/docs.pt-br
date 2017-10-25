@@ -1,0 +1,133 @@
+<Type Name="VisualStyleElement+ExplorerBar+IEBarMenu" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+ExplorerBar+IEBarMenu">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.ExplorerBar.IEBarMenu" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/ExplorerBar/IEBarMenu extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> objetos para cada estado na seta do menu expandido da barra do Explorer. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada propriedade do <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu> classe obtém uma <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para um estado diferente do botão de menu da barra do Explorer.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Normal%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElementExplorerBarIEBarMenu1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#147](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#147)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#147](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#147)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Hot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Hot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Hot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de menu ativa.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de menu ativa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Hot%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Hot%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElementExplorerBarIEBarMenu2` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#148](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#148)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#148](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#148)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de menu normal.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de menu normal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Normal%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Normal%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElementExplorerBarIEBarMenu1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#147](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#147)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#147](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#147)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pressed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Pressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Pressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Pressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de menu pressionado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de menu pressionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Pressed%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar.IEBarMenu.Pressed%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElementExplorerBarIEBarMenu3` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#149](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#149)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#149](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#149)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

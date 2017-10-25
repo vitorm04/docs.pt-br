@@ -1,0 +1,66 @@
+<Type Name="NoSettingsVersionUpgradeAttribute" FullName="System.Configuration.NoSettingsVersionUpgradeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class NoSettingsVersionUpgradeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NoSettingsVersionUpgradeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.NoSettingsVersionUpgradeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que um provedor de configurações deve desativar qualquer lógica que é invocada quando uma atualização de aplicativo é detectada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar um provedor de configurações do aplicativo completo que dá suporte à versão do aplicativo, o provedor deve implementar a <xref:System.Configuration.IApplicationSettingsProvider> interface. Um dos membros nesta interface, o <xref:System.Configuration.IApplicationSettingsProvider.Upgrade%2A> método é chamado para notificar o provedor de que uma nova versão do aplicativo foi instalada. Em resposta, o provedor deve executar uma ação adequada, normalmente migrando após as configurações do aplicativo.  
+  
+ O <xref:System.Configuration.NoSettingsVersionUpgradeAttribute> informa ao provedor para suprimir a lógica de atualização associada com a classe de configurações atuais. Portanto, o valor da versão anterior deste grupo de propriedade não deve ser migrado para a nova instalação.  
+  
+> [!NOTE]
+>  Esse atributo pode ser aplicado somente a propriedades de configurações de aplicativos individuais.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NoSettingsVersionUpgradeAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.NoSettingsVersionUpgradeAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.NoSettingsVersionUpgradeAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o construtor padrão fornecidos pelo compilador para o <xref:System.Configuration.NoSettingsVersionUpgradeAttribute> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

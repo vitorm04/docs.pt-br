@@ -1,0 +1,130 @@
+<Type Name="ActivityDesignerLayoutEventArgs" FullName="System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs">
+  <TypeSignature Language="C#" Value="public class ActivityDesignerLayoutEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityDesignerLayoutEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento de layout para o <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ O evento de layout ocorre quando o tamanho ou posição de designer ou seus componentes independentes alterar. O <xref:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs> contém os elementos gráficos usados para fazer alterações de layout e o tema a ser usado para a aparência do designer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityDesignerLayoutEventArgs (System.Drawing.Graphics graphics, System.Workflow.ComponentModel.Design.ActivityDesignerTheme designerTheme);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, class System.Workflow.ComponentModel.Design.ActivityDesignerTheme designerTheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs.#ctor(System.Drawing.Graphics,System.Workflow.ComponentModel.Design.ActivityDesignerTheme)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="designerTheme" Type="System.Workflow.ComponentModel.Design.ActivityDesignerTheme" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> usou o layout do designer.</param>
+        <param name="designerTheme">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerTheme" /> a ser usado para a aparência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" /> classe com o gráfico especificado e o tema de designer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AmbientTheme">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.AmbientTheme AmbientTheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.AmbientTheme AmbientTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs.AmbientTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.AmbientTheme</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> associado com o fluxo de trabalho raiz.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> que contém informações de tema para designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.ComponentModel.Design.AmbientTheme> é usado para descrever as propriedades de aparência designer, como planos de fundo, estilos e cores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerTheme">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.ActivityDesignerTheme DesignerTheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesignerTheme DesignerTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs.DesignerTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesignerTheme</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerTheme" /> associada com o designer.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerTheme" /> que descreve a aparência designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se tiver um designer de um <xref:System.Workflow.ComponentModel.Design.ActivityDesignerTheme> associados a ele, o designer usará as propriedades de aparência descritas pelo <xref:System.Workflow.ComponentModel.Design.ActivityDesignerTheme> para pintar em si. Se nenhum <xref:System.Workflow.ComponentModel.Design.ActivityDesignerTheme> está associado com o designer, o designer usará o <xref:System.Workflow.ComponentModel.Design.AmbientTheme> para redesenhar suas propriedades de aparência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Graphics" /> usado para definir o layout do designer.</summary>
+        <value>O <see cref="T:System.Drawing.Graphics" /> objeto usado para definir o layout do designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Graphics> objeto fornece métodos para desenhar objetos no dispositivo de vídeo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,739 @@
+<Type Name="MessageQueueInstaller" FullName="System.Messaging.MessageQueueInstaller">
+  <TypeSignature Language="C#" Value="public class MessageQueueInstaller : System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueueInstaller extends System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.ComponentInstaller</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que você instale e configure uma fila que seu aplicativo precisa para executar. Essa classe é chamada pelo utilitário de instalação, por exemplo, InstallUtil.exe, ao instalar um <see cref="T:System.Messaging.MessageQueue" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueueInstaller> é usado pelo utilitário de instalação para gravar valores do registro que são associados à fila. Para obter mais informações sobre os utilitários de instalação, consulte [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md).  
+  
+ Para instalar uma fila, crie uma classe de instalador de projeto que herda o <xref:System.Configuration.Install.Installer>e defina o <xref:System.ComponentModel.RunInstallerAttribute> a classe `true`. Dentro de seu projeto, criar um <xref:System.Messaging.MessageQueueInstaller> de instância para cada fila na instalação e adicione a instância à sua classe de instalador do projeto.  
+  
+ Ao criar um <xref:System.Messaging.MessageQueueInstaller> instância, você poderá opcionalmente passar um existente <xref:System.Messaging.MessageQueue> (por exemplo, de um servidor de teste) para o <xref:System.Messaging.MessageQueueInstaller.%23ctor%2A> construtor. Essa abordagem fornece automaticamente as definições de configuração para a nova fila espelhando as configurações da fila passado. Como alternativa, você pode definir manualmente as propriedades <xref:System.Messaging.MessageQueueInstaller> instância para os estados desejado e chame o construtor padrão.  
+  
+ Quando o utilitário de instalação é chamado, ele procura o <xref:System.ComponentModel.RunInstallerAttribute>. Se for `true`, o utilitário instala todas as filas na <xref:System.Configuration.Install.Installer.Installers%2A> coleção associada com o instalador de seu projeto. Se <xref:System.ComponentModel.RunInstallerAttribute> é `false`, o utilitário ignora o instalador do projeto.  
+  
+ Modifique outras propriedades de um <xref:System.Messaging.MessageQueueInstaller> instância antes ou depois de adicionar a instância para o <xref:System.Configuration.Install.Installer.Installers%2A> coleção de instalador de seu projeto. Por exemplo, uma fila <xref:System.Messaging.MessageQueue.Path%2A> deve ser definido antes de executa o utilitário de instalação.  
+  
+ Normalmente, você não chama os métodos de <xref:System.Messaging.MessageQueueInstaller> de dentro de seu código; eles são geralmente chamados somente com o utilitário de instalação do installutil.exe. O utilitário chama automaticamente o <xref:System.Messaging.MessageQueueInstaller.Install%2A> método durante o processo de instalação e chamadas <xref:System.Messaging.MessageQueueInstaller.Commit%2A> se a instalação não lançou uma exceção. Ele desfaz falhas, se necessário, chamando <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> para o objeto que gerou a exceção.  
+  
+ Rotina de instalação de um aplicativo usa o instalador de projeto <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> para manter automaticamente informações sobre os componentes que já foram instalados. Essas informações de estado são atualizadas continuamente como cada <xref:System.Messaging.MessageQueueInstaller> instância é instalada pelo utilitário. Não é geralmente necessário para seu código modificar explicitamente as informações de estado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Messaging.MessageQueueInstaller" />. Não definir as propriedades de instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueInstaller (System.Messaging.MessageQueue componentToCopy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Messaging.MessageQueue componentToCopy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.#ctor(System.Messaging.MessageQueue)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="componentToCopy" Type="System.Messaging.MessageQueue" />
+      </Parameters>
+      <Docs>
+        <param name="componentToCopy">O <see cref="T:System.Messaging.MessageQueue" /> componente cujas configurações de determinam as configurações de propriedade da nova fila instalado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.MessageQueueInstaller" /> classe inicializando as configurações de instalação de um objeto existente <see cref="T:System.Messaging.MessageQueue" /> instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticate">
+      <MemberSignature Language="C#" Value="public bool Authenticate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Authenticate" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Authenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a fila a ser instalado aceita apenas mensagens autenticadas.</summary>
+        <value>
+          <see langword="true" /> se a fila aceita apenas mensagens autenticadas; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma mensagem autenticada não é enviada a uma fila que aceita apenas mensagens autenticadas, a mensagem será rejeitada. O aplicativo de envio pode solicitar a notificação de rejeição de uma mensagem, definindo o <xref:System.Messaging.Message.AcknowledgeType%2A> para a mensagem. Caso contrário, não há nenhuma indicação de que a mensagem foi rejeitada, e a mensagem pode ser perdida, a menos que você enviá-lo para a fila de mensagens mortas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BasePriority">
+      <MemberSignature Language="C#" Value="public short BasePriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 BasePriority" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.BasePriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade base que é usada para rotear mensagens de uma fila pública pela rede.</summary>
+        <value>A prioridade base única para todas as mensagens enviadas à fila pública. O padrão é zero (0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueueInstaller.BasePriority%2A> é utilizado para rotear as mensagens da fila na rede. Use o <xref:System.Messaging.MessageQueueInstaller.BasePriority%2A> para fornecer as mensagens enviadas para a fila mais alta prioridade mais baixa do que as mensagens enviadas a outras filas. Quando a prioridade básica da fila estiver definida, todas as mensagens enviadas a ele recebem uma prioridade mais alta do que as mensagens enviadas para filas com uma prioridade mais baixa de base. Prioridade básica da fila não tem efeito na ordem das mensagens na fila ou em como as mensagens são lidas da fila.  
+  
+ O <xref:System.Messaging.MessageQueueInstaller.BasePriority%2A> aplica-se somente para as filas públicas que são acessadas por meio do controlador de domínio (em outras palavras, usando o nome de formato público). A prioridade básica de filas particulares e de filas públicas diretamente acessadas sempre será zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public Guid Category { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Category" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.GuidConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um tipo de fila específicos de implementação.</summary>
+        <value>Um <see cref="T:System.Guid" /> que representa a categoria de fila (ou identificador de tipo de enfileiramento de mensagens), que permite que os aplicativos categorizem suas filas de acordo com como elas são usadas. O padrão é <see langword="Guid.empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A categoria de fila permite que um aplicativo categorizar associadas filas de acordo com a maneira que eles são usados. O <xref:System.Messaging.MessageQueue.Category%2A> pode ser uma referência nula. Você também pode definir uma nova categoria.  
+  
+ O <xref:System.Messaging.MessageQueue.Category%2A> propriedade fornece acesso à propriedade de identificador de tipo enfileiramento de mensagens, que é associado uma determinada fila e é leitura/gravação. Você pode usar o <xref:System.Guid.NewGuid%2A> método para criar um valor de categoria é garantido como exclusivo em todos os <xref:System.Guid> valores. No entanto, é necessário apenas para o valor da categoria a ser diferente de outras categorias, não de todos os outros <xref:System.Guid> valores. Por exemplo, você pode definir o <xref:System.Messaging.MessageQueue.Category%2A> para um grupo de filas para {00000000-0000-0000-0000-000000000001} e o <xref:System.Messaging.MessageQueue.Category%2A> para outro grupo de {00000000-0000-0000-0000-000000000002}.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.Commit(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado após a instalação do computador.</param>
+        <summary>Conclui o processo de instalação, confirmando o <see cref="T:System.Messaging.MessageQueue" /> informações de instalação que o <see cref="M:System.Messaging.MessageQueueInstaller.Install(System.Collections.IDictionary)" /> método gravou o registro. Este método destina-se a ser usada por ferramentas de instalação, que automaticamente chamam os métodos apropriados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não chama os métodos de <xref:System.Messaging.MessageQueueInstaller> de dentro de seu código; eles são geralmente chamados somente com o utilitário de instalação do installutil.exe. O utilitário chama automaticamente o <xref:System.Messaging.MessageQueueInstaller.Install%2A> método durante o processo de instalação. Instalação é transacional, portanto, se houver uma falha de qualquer componente de projeto de instalação durante a instalação, todos os componentes instalados anteriormente são convertidos para seus estados de pré-instalação. Isso é feito chamando cada componente <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> método.  
+  
+ Após uma instalação bem-sucedida de todos os componentes que estão associados com o projeto de instalação ocorreu, o utilitário de instalação confirma as instalações. <xref:System.Messaging.MessageQueueInstaller.Commit%2A>concluir a instalação do <xref:System.Messaging.MessageQueue> definindo a fila para o estado inicial apropriado. Se a fila especificada pelo <xref:System.Messaging.MessageQueueInstaller.Path%2A> propriedade já existe e contém mensagens, <xref:System.Messaging.MessageQueueInstaller.Commit%2A> limpa as mensagens. <xref:System.Messaging.MessageQueueInstaller.Commit%2A>, em vez de <xref:System.Messaging.MessageQueueInstaller.Install%2A>, limpa as mensagens, como o ato de descarte de mensagens não pode ser revertido.  
+  
+ Rotina de instalação de um aplicativo usa o instalador de projeto <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> para manter automaticamente informações sobre os componentes que já foram instalados. Essas informações de estado, que são passadas para <xref:System.Messaging.MessageQueueInstaller.Commit%2A> como o `savedState` parâmetro, é atualizado continuamente como o utilitário confirma cada <xref:System.Messaging.MessageQueueInstaller> instância. Geralmente, não é necessário para seu código modificar explicitamente essas informações de estado. Quando a fila foi limpo, <xref:System.Messaging.MessageQueueInstaller.Commit%2A> posta uma entrada de log para o `savedState` que está associado com a instalação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFromComponent">
+      <MemberSignature Language="C#" Value="public override void CopyFromComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFromComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.CopyFromComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Um <see cref="T:System.ComponentModel.IComponent" /> para usar como um modelo para o <see cref="T:System.Messaging.MessageQueueInstaller" />.</param>
+        <summary>Copia os valores de propriedade de um <see cref="T:System.Messaging.MessageQueue" /> componente que são necessárias no momento da instalação para uma fila de mensagens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não chama os métodos de <xref:System.Messaging.MessageQueueInstaller> de dentro de seu código; eles são geralmente chamados somente com o utilitário de instalação do installutil.exe. <xref:System.Messaging.MessageQueueInstaller.CopyFromComponent%2A>é usado pelo utilitário de instalação para definir os valores de propriedade para o <xref:System.Messaging.MessageQueueInstaller> para os valores de um objeto existente <xref:System.Messaging.MessageQueue>.  
+  
+ Se o <xref:System.Messaging.MessageQueue.Path%2A> do <xref:System.Messaging.MessageQueue> que é transmitido é uma cadeia de caracteres vazia (""), você deve definir o <xref:System.Messaging.MessageQueue.Path%2A> propriedade para um valor não vazio antes de executa o instalador.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O componente associado a esta <see cref="T:System.Messaging.MessageQueueInstaller" /> não é um <see cref="T:System.Messaging.MessageQueue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionRequired">
+      <MemberSignature Language="C#" Value="public System.Messaging.EncryptionRequired EncryptionRequired { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.EncryptionRequired EncryptionRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.EncryptionRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.EncryptionRequired</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a fila aceita apenas privadas ou criptografadas, mensagens.</summary>
+        <value>Uma da <see cref="T:System.Messaging.EncryptionRequired" /> valores que indicam a criptografia no nível necessária em mensagens enviadas para a fila. O padrão é <see langword="Optional" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a criptografia for especificada, somente o <xref:System.Messaging.Message.Body%2A> de uma mensagem é criptografado. Outras propriedades, como o <xref:System.Messaging.Message.Label%2A>, não são criptografados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary stateSaver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary stateSaver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateSaver" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="stateSaver">Um <see cref="T:System.Collections.IDictionary" /> usado para salvar as informações necessárias para executar um commit, rollback, ou a operação de desinstalação.</param>
+        <summary>Executa a instalação e grava informações de fila de mensagens no registro. Este método destina-se a ser usada por ferramentas de instalação, que automaticamente chamam os métodos apropriados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueueInstaller.Install%2A> método grava informações de fila de mensagens no registro e associa o <xref:System.Messaging.MessageQueue> instância com uma fila que está localizada no caminho especificado pelo <xref:System.Messaging.MessageQueueInstaller.Path%2A> propriedade. Se a fila ainda não existir, <xref:System.Messaging.MessageQueueInstaller.Install%2A> cria uma fila transacional. <xref:System.Messaging.MessageQueueInstaller.Install%2A>Define as propriedades de fila de novo ou existente para aqueles que você especificou no <xref:System.Messaging.MessageQueueInstaller>. Se a fila já existir, suas propriedades são redefinidas para os o <xref:System.Messaging.MessageQueueInstaller>. Se a fila existente não é transacional, ela é excluída e, em seguida, recriada como uma fila transacional.  
+  
+> [!CAUTION]
+>  Se for necessário recriar a fila, as mensagens na fila serão perdidas.  
+  
+ Normalmente, você não chama os métodos de <xref:System.Messaging.MessageQueueInstaller> de dentro de seu código; eles são geralmente chamados somente com o utilitário de instalação do installutil.exe. O utilitário chama automaticamente o <xref:System.Messaging.MessageQueueInstaller.Install%2A> método durante o processo de instalação para gravar informações de registro que está associadas com a fila de mensagens está sendo instalada. Instalação é transacional, portanto, se houver uma falha de qualquer componente de projeto de instalação durante a instalação, todos os componentes instalados anteriormente são convertidos para seus estados de pré-instalação. Isso é feito chamando cada componente <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> método.  
+  
+ Após uma instalação bem-sucedida de todos os componentes que estão associados com o projeto de instalação ocorreu, o utilitário de instalação confirma as instalações. <xref:System.Messaging.MessageQueueInstaller.Commit%2A>concluir a instalação do <xref:System.Messaging.MessageQueue> definindo a fila para o estado inicial apropriado. Se a fila especificada pelo <xref:System.Messaging.MessageQueueInstaller.Path%2A> propriedade já existe e contém mensagens, <xref:System.Messaging.MessageQueueInstaller.Commit%2A> limpa as mensagens. <xref:System.Messaging.MessageQueueInstaller.Commit%2A>, em vez de <xref:System.Messaging.MessageQueueInstaller.Install%2A>, limpa as mensagens, como o ato de descarte de mensagens não pode ser revertido.  
+  
+ Rotina de instalação de um aplicativo usa o instalador de projeto <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> para manter automaticamente informações sobre os componentes que já foram instalados. Essas informações de estado, que são passadas para <xref:System.Messaging.MessageQueueInstaller.Install%2A> como o `stateSaver` parâmetro, é atualizado continuamente como o utilitário instala cada <xref:System.Messaging.MessageQueueInstaller> instância. Geralmente, não é necessário para seu código modificar explicitamente essas informações de estado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentInstaller">
+      <MemberSignature Language="C#" Value="public override bool IsEquivalentInstaller (System.Configuration.Install.ComponentInstaller otherInstaller);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsEquivalentInstaller(class System.Configuration.Install.ComponentInstaller otherInstaller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherInstaller" Type="System.Configuration.Install.ComponentInstaller" />
+      </Parameters>
+      <Docs>
+        <param name="otherInstaller">O instalador para comparar.</param>
+        <summary>Determina se o instalador especificado pode lidar com o mesmo tipo de instalação como esse instalador.</summary>
+        <returns>
+          <see langword="true" />Se esse instalador e o instalador especificado pelo <paramref name="otherInstaller" /> parâmetro pode lidar com o mesmo tipo de instalação; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, <xref:System.Configuration.Install.ComponentInstaller.IsEquivalentInstaller%2A> retorna `true` somente se esse instalador e o instalador especificado pelo `otherInstaller` parâmetro são do mesmo tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma descrição da fila.</summary>
+        <value>O rótulo que descreve a fila de mensagens. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueue.Label%2A> propriedade precisa ser exclusivo em todas as filas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Messaging.MessageQueueInstaller.Label" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumJournalSize">
+      <MemberSignature Language="C#" Value="public long MaximumJournalSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumJournalSize" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.MaximumJournalSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo do diário que está associado à fila.</summary>
+        <value>O tamanho máximo, em quilobytes, da fila de diário, que registra as mensagens que são removidas da fila. O padrão do serviço de enfileiramento de mensagens é ilimitado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma fila é criada, enfileiramento de mensagens cria automaticamente um diário de fila no mesmo local que a nova fila. O diário da fila é usado para rastrear as mensagens que são removidas da fila.  
+  
+ Dois tipos de mensagens permanecem não controlados: são removidas da fila porque seu timer de tempo de recebimento expirou e são limpos da fila.  
+  
+ Aplicativos não podem enviar mensagens para a fila de diário. No entanto, você deve limpar periodicamente a fila para remover as mensagens que não são mais necessários. Mensagens armazenadas na contagem de filas de diário para a cota para o computador onde residem as filas. (A cota do computador é definida pelo administrador).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumQueueSize">
+      <MemberSignature Language="C#" Value="public long MaximumQueueSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumQueueSize" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.MaximumQueueSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo da fila.</summary>
+        <value>O tamanho máximo, em quilobytes, da fila. O padrão do serviço de enfileiramento de mensagens é ilimitado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho máximo da fila normalmente é definido no momento da criação da fila, embora possam ser reiniciado mais tarde.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastAddress">
+      <MemberSignature Language="C#" Value="public string MulticastAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MulticastAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.MulticastAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Introduzido no MSMQ 3.0. Obtém ou define o endereço multicast associado à fila.</summary>
+        <value>Um <see cref="T:System.String" /> que contém um endereço multicast válido (no formato mostrado abaixo) ou <see langword="null" />, que indica que a fila não está associada a um endereço multicast.  
+  
+```  
+&lt;address&gt;:&lt;port&gt;  
+```</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O MSMQ 3.0 não está instalado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Messaging.Design.QueuePathEditor", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local da fila que é referenciada por este objeto.</summary>
+        <value>O caminho que representa o local da fila na rede.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A sintaxe para a <xref:System.Messaging.MessageQueue.Path%2A> propriedade depende do tipo de fila-referências. A tabela a seguir mostra a sintaxe que você deve usar para filas de vários tipos.  
+  
+|Tipo de fila|Sintaxe|  
+|----------------|------------|  
+|Fila pública|`machineName`\\`queueName`|  
+|Fila particular|`machineName`\\`Private$`\\`queueName`|  
+|Fila de diário|`machineName`\\`queueName`\\`Journal$`|  
+|Fila de diário do computador|`machineName`\\`Journal$`|  
+|Fila de mensagens mortas da máquina|`machineName`\\`Deadletter$`|  
+|Fila de mensagens mortas transacional do computador|`machineName`\\`XactDeadletter$`|  
+  
+ Use "." para o computador local.  
+  
+ Você também pode usar o <xref:System.Messaging.MessageQueue.FormatName%2A> ou <xref:System.Messaging.MessageQueue.Label%2A> de um objeto de aplicativo do serviço de enfileiramento de mensagens para descrever o caminho da fila. A tabela a seguir mostra a sintaxe adequada para cada tipo de referência.  
+  
+|Referência|Sintaxe|  
+|---------------|------------|  
+|Nome do formato|FormatName: [ *nome do formato* ]|  
+|Rotular|Rótulo: [ *rótulo* ]|  
+  
+ Se você estiver trabalhando offline, você deve usar o nome de formato para definir a fila <xref:System.Messaging.MessageQueue.Path%2A>. Se você não fizer isso, o aplicativo lançará uma exceção, porque o controlador de domínio primário não está disponível para resolver o <xref:System.Messaging.MessageQueue.Path%2A> para o <xref:System.Messaging.MessageQueue.FormatName%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Messaging.MessageQueueInstaller.Path" /> foi definido como um valor inválido, possivelmente porque a sintaxe não é válida.  
+  
+ -ou-  
+  
+ O <see cref="P:System.Messaging.MessageQueueInstaller.Path" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Permissions">
+      <MemberSignature Language="C#" Value="public System.Messaging.AccessControlList Permissions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.AccessControlList Permissions" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Permissions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AccessControlList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as permissões associadas à fila.</summary>
+        <value>Um <see cref="T:System.Messaging.AccessControlList" /> que contém um ou mais entradas de controle de acesso que especifica os objetos de confiança e permissões para conceder para a fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o criador de uma fila pública ou privada tem controle total e o grupo de domínio todos têm permissão para obter as propriedades de fila, obter permissões e gravar na fila. O Message Queuing acessa cada entrada da lista de permissão por sua vez até encontrar um que se aplica ao usuário atual e a ação tentada atual. Como com as permissões do sistema operacional, os direitos que você negar especificamente para um usuário têm precedência sobre as permitir.  
+  
+ Quando você cria o <xref:System.Messaging.MessageQueueInstaller.Permissions%2A> propriedade, adicione <xref:System.Messaging.AccessControlEntry> instâncias do seu <xref:System.Messaging.AccessControlList> coleção. Quando você construir cada entrada de controle de acesso, você pode especificar os direitos de acesso genérico ou padrão. Os direitos para uma fila podem ser qualquer combinação das seguintes opções:  
+  
+-   Excluir  
+  
+-   Segurança de leitura  
+  
+-   Segurança de gravação  
+  
+-   Sincronizar  
+  
+-   Modificar proprietário  
+  
+-   Ler  
+  
+-   Write  
+  
+-   Executar  
+  
+-   Necessária  
+  
+-   Todos  
+  
+-   Nenhum  
+  
+ Esses direitos são um conjunto de sinalizadores de bit que você pode combinar usando o OR bit a bit:  
+  
+-   Controle total  
+  
+-   Excluir mensagem  
+  
+-   Receber mensagem  
+  
+-   Inspecionar mensagem  
+  
+-   Receber mensagens do diário  
+  
+-   Obter propriedades de fila  
+  
+-   Definir propriedades de fila  
+  
+-   Obter permissões  
+  
+-   Conjunto de permissões  
+  
+-   Assumir a propriedade de fila  
+  
+-   Gravar a mensagem  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.Rollback(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado de pré-instalação do computador.</param>
+        <summary>Restaura o computador para o estado em que estava antes da instalação, disponibilizando as informações de fila que gravou o procedimento de instalação no registro. Este método destina-se a ser usada por ferramentas de instalação, que automaticamente chamam os métodos apropriados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> método desfazer os efeitos do <xref:System.Messaging.MessageQueueInstaller.Install%2A> método. <xref:System.Messaging.MessageQueueInstaller.Rollback%2A>é chamada se a instalação de qualquer componente no projeto de instalação falhará. O <xref:System.Messaging.MessageQueueInstaller.Install%2A> método cria ou define as propriedades de uma fila. <xref:System.Messaging.MessageQueueInstaller.Rollback%2A>Exclui a fila ou redefine as propriedades de uma fila já existente para os valores de pré-instalação.  
+  
+ Normalmente, você não chama os métodos de <xref:System.Messaging.MessageQueueInstaller> de dentro de seu código; eles são geralmente chamados somente com o utilitário de instalação do InstallUtil.exe. O utilitário chama automaticamente o <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> método depois de uma falha de instalação para desfazer quaisquer alterações que o processo de instalação já fez.  
+  
+ Rotina de instalação de um aplicativo usa o instalador de projeto <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> para manter automaticamente informações sobre os componentes que já foram instalados. Essas informações de estado, que são passadas para <xref:System.Messaging.MessageQueueInstaller.Rollback%2A> como o `savedState` parâmetro, é atualizado continuamente como faz o utilitário fazer cada <xref:System.Messaging.MessageQueueInstaller> instância. Geralmente, não é necessário para seu código modificar explicitamente essas informações de estado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transactional">
+      <MemberSignature Language="C#" Value="public bool Transactional { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Transactional" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.Transactional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a fila aceita apenas mensagens enviadas como parte de uma transação.</summary>
+        <value>
+          <see langword="true" />Se a fila aceita somente mensagens enviadas como parte de uma transação; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As mensagens podem ser recuperadas de uma fila de transação local, com ou sem o uso de uma transação. Se você não especificar um contexto de transação, enfileiramento de mensagens cria uma única transação interna para você.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado após a instalação do computador.</param>
+        <summary>Remove uma instalação removendo as informações de fila do registro. Este método destina-se a ser usada por ferramentas de desinstalação, que automaticamente chamam os métodos apropriados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Messaging.MessageQueueInstaller.UninstallAction%2A> é `Remove`, <xref:System.Messaging.MessageQueueInstaller.Uninstall%2A> também exclui a fila associada a <xref:System.Messaging.MessageQueue>.  
+  
+ Normalmente, você não chama os métodos do <xref:System.Messaging.MessageQueueInstaller> de dentro de seu código; eles são geralmente chamados somente com o utilitário de instalação do InstallUtil.exe (no modo de desinstalação). O utilitário chama automaticamente o <xref:System.Messaging.MessageQueueInstaller.Uninstall%2A> método para restaurar as partes do sistema que foram afetadas pela instalação do respectivos estados de pré-instalação. Isso inclui excluir informações de registro que está associadas com o MessageQueue sendo desinstalado.  
+  
+ Um aplicativo desinstalar rotina usa o instalador de projeto <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> para manter automaticamente informações sobre os componentes que já tenha sido desinstalado. Essas informações de estado, que são passadas para <xref:System.Messaging.MessageQueueInstaller.Uninstall%2A> como o `savedState` parâmetro, é atualizado continuamente como o utilitário desinstala cada <xref:System.Messaging.MessageQueueInstaller> instância. Geralmente, não é necessário para seu código modificar explicitamente essas informações de estado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallAction">
+      <MemberSignature Language="C#" Value="public System.Configuration.Install.UninstallAction UninstallAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.Install.UninstallAction UninstallAction" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.UninstallAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Install.UninstallAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica que o instalador com a fila no momento da desinstalação: removê-lo, restaurá-lo para seu estado de pré-instalação ou deixá-lo no estado atual instalado.</summary>
+        <value>Uma da <see cref="T:System.Configuration.Install.UninstallAction" /> valores que indicam o estado para deixar a fila quando o <see cref="T:System.Messaging.MessageQueue" /> é desinstalado. O padrão é <see langword="Remove" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você instala uma fila, opcionalmente, você pode usar uma fila existente. Se você fizer isso, você deve decidir se a fila deve retornar para o estado de pré-instalação ou permanecem em seu estado atual, após a instalação. Se você optar por retornar a fila para o estado de pré-instalação, mensagens que foram excluídas da fila no momento da instalação não são restauradas. Você pode redefinir apenas as propriedades de fila que estão associadas a <xref:System.Messaging.MessageQueueInstaller> para seus valores de pré-instalação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseJournalQueue">
+      <MemberSignature Language="C#" Value="public bool UseJournalQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseJournalQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueInstaller.UseJournalQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as mensagens que são recuperadas da fila também são copiadas para a fila de diário associado.</summary>
+        <value>
+          <see langword="true" />Para copiar mensagens recuperadas da fila para a fila de diário; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma fila do diário permite manter o controle de mensagens mesmo depois que eles foram recuperados da fila. No entanto, os dois tipos de mensagens permanecem não controlados: são removidas da fila quando seu tempo de recebimento timer expira e são limpos da fila.  
+  
+ Uma fila do diário deve ser limpa periodicamente para remover as mensagens que não são mais necessários. Mensagens armazenadas na contagem de fila de diário para a cota para o computador no qual o diário está localizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,19 @@
+<Type Name="IBidirectionalContainer&lt;TValue&gt;" FullName="Microsoft.VisualC.StlClr.Generic.IBidirectionalContainer&lt;TValue&gt;">
+  <TypeSignature Language="C#" Value="public interface IBidirectionalContainer&lt;TValue&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IBidirectionalContainer`1&lt;TValue&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.StlClr.Generic.IBidirectionalContainer`1" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TValue">[!INCLUDE[cpp_iter_arg](~/includes/cpp-iter-arg-md.md)]</typeparam>
+    <summary>Interface para um contêiner que oferece suporte à iteração frente e para trás. Contêineres que implementam bidirecional iteração dão suporte as seguintes operações: mover uma posição forward chamando <c>operador + +</c>e mover uma posição para trás chamando <c>operator--</c>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members />
+</Type>

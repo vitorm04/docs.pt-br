@@ -1,0 +1,261 @@
+<Type Name="SchemaImporterExtension" FullName="System.Xml.Serialization.Advanced.SchemaImporterExtension">
+  <TypeSignature Language="C#" Value="public abstract class SchemaImporterExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SchemaImporterExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite personalizar o código gerado de um documento com a linguagem WSDL ao usar as ferramentas de consulta automatizadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Importação de esquema ocorre sempre que um proxy do serviço Web é produzido por meio de uma ferramenta como a caixa de diálogo Adicionar referência Web caixa encontrada no Visual Studio ou usando o [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88). Importação de esquema também ocorre ao usar o [ferramenta de definição de esquema XML (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) para gerar código de um documento específico de XSD.  
+  
+ O <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> classe permite que você modifique o código gerado ao usar qualquer uma dessas ferramentas. Por exemplo, você pode ter uma classe existente que ordena livro de processos em um sistema e você tem um documento XSD existente que fornece as ordens. Usando o <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> classe, você pode habilitar uma das ferramentas para gerar o código que usa sua classe.  
+  
+ Para controlar a geração do código, você deve usar as classes localizadas no <xref:System.CodeDom> namespace. Para obter mais informações, consulte [usando o CodeDOM](~/docs/framework/reflection-and-codedom/using-the-codedom.md) e [referência rápida de CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).  
+  
+ As etapas para habilitar a ferramenta WSDL.exe (que por sua vez, é usada por outras ferramentas, como a caixa de diálogo Adicionar referência da Web) para usar a extensão são:  
+  
+1.  Criar uma implementação de <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> classe.  
+  
+2.  Use o <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportSchemaType%2A> método escrever código para o gerador de código. O método contém parâmetros que permitem que você examine o tipo XSD interceptado e criar objetos de CodeDOM que são usados para gerar o novo código do CLR.  
+  
+3.  Se necessário, use o <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportAnyElement%2A> método para tratar \<xsd: qualquer > elementos encontrados no documento de XSD.  
+  
+4.  Se necessário, use o <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportDefaultValue%2A> método para examinar os valores padrão encontrado no documento XSD e retornar um valor diferente do padrão.  
+  
+5.  Compile sua extensão em uma biblioteca.  
+  
+6.  Assine o assembly.  
+  
+7.  Instale o assembly no Cache de Assembly Global (GAC).  
+  
+8.  Modifique o arquivo Machine. config para incluir a extensão.  
+  
+   
+  
+## Examples  
+ Consulte o [tecnologia SchemaImporterExtension exemplo](~/docs/standard/serialization/schemaimporterextension-technology-sample.md). Observe que este exemplo não inclui um assembly assinado. Em vez disso, ele demonstra como usar o <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> com uma janela de comando.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SchemaImporterExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.Advanced.SchemaImporterExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportAnyElement">
+      <MemberSignature Language="C#" Value="public virtual string ImportAnyElement (System.Xml.Schema.XmlSchemaAny any, bool mixed, System.Xml.Serialization.XmlSchemas schemas, System.Xml.Serialization.XmlSchemaImporter importer, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.Xml.Serialization.CodeGenerationOptions options, System.CodeDom.Compiler.CodeDomProvider codeProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ImportAnyElement(class System.Xml.Schema.XmlSchemaAny any, bool mixed, class System.Xml.Serialization.XmlSchemas schemas, class System.Xml.Serialization.XmlSchemaImporter importer, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, valuetype System.Xml.Serialization.CodeGenerationOptions options, class System.CodeDom.Compiler.CodeDomProvider codeProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportAnyElement(System.Xml.Schema.XmlSchemaAny,System.Boolean,System.Xml.Serialization.XmlSchemas,System.Xml.Serialization.XmlSchemaImporter,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.Xml.Serialization.CodeGenerationOptions,System.CodeDom.Compiler.CodeDomProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="any" Type="System.Xml.Schema.XmlSchemaAny" />
+        <Parameter Name="mixed" Type="System.Boolean" />
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+        <Parameter Name="importer" Type="System.Xml.Serialization.XmlSchemaImporter" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+      </Parameters>
+      <Docs>
+        <param name="any">Um <see cref="T:System.Xml.Schema.XmlSchemaAny" /> que representa o <see langword="xsd:any" /> elemento encontrado no documento de esquema XML (XSD).</param>
+        <param name="mixed">Um <see cref="T:System.Boolean" /> que indica se o XSD <see langword="complex" /> atributo foi definido como "misto". <see langword="true" />, se o atributo foi definido como misto, caso contrário, <see langword="false" />.</param>
+        <param name="schemas">Um <see cref="T:System.Xml.Serialization.XmlSchemas" /> que contém a coleção de esquemas encontrado no XSD.</param>
+        <param name="importer">O <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> que é o importador que está sendo usado.</param>
+        <param name="compileUnit">Um <see cref="T:System.CodeDom.CodeCompileUnit" /> ao qual você pode adicionar estruturas de CodeDOM para gerar código alternativo para o XSD.</param>
+        <param name="mainNamespace">Um <see cref="T:System.CodeDom.CodeNamespace" /> que representa o namespace do elemento atual.</param>
+        <param name="options">Um <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> para as opções de configuração para o compilador de código.</param>
+        <param name="codeProvider">Um <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> que é o provedor de CodeDOM usado para gerar o novo código.</param>
+        <summary>Lida com a importação do &lt;xsd: qualquer&gt; elementos no esquema.</summary>
+        <returns>O nome do tipo CLR que mapeia o elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para controlar a geração do código, você deve usar as classes localizadas no <xref:System.CodeDom> namespace. Para obter mais informações, consulte [usando o CodeDOM](~/docs/framework/reflection-and-codedom/using-the-codedom.md) e [referência rápida de CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportDefaultValue">
+      <MemberSignature Language="C#" Value="public virtual System.CodeDom.CodeExpression ImportDefaultValue (string value, string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.CodeExpression ImportDefaultValue(string value, string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportDefaultValue(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor encontrado no XSD original.</param>
+        <param name="type">O nome do tipo XSD.</param>
+        <summary>Permite que você especifique o valor padrão para o tipo XSD que estão sendo importado.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeExpression" /> definindo o novo valor padrão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para controlar a geração do código, você deve usar as classes localizadas no <xref:System.CodeDom> namespace. Para obter mais informações, consulte [usando o CodeDOM](~/docs/framework/reflection-and-codedom/using-the-codedom.md) e [referência rápida de CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ImportSchemaType">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Permite que você manipule o código gerado pelo examinando o esquema importado e especificando o tipo CLR que ele é mapeado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação simples do <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportSchemaType%28System.String%2CSystem.String%2CSystem.Xml.Schema.XmlSchemaObject%2CSystem.Xml.Serialization.XmlSchemas%2CSystem.Xml.Serialization.XmlSchemaImporter%2CSystem.CodeDom.CodeCompileUnit%2CSystem.CodeDom.CodeNamespace%2CSystem.Xml.Serialization.CodeGenerationOptions%2CSystem.CodeDom.Compiler.CodeDomProvider%29> método. O código verifica o namespace e nome. Quando os valores corretos são encontrados, ele adiciona o nome de um assembly personalizado ("Order.dll") deve ser referenciado no código gerado. Em seguida, ele adiciona um novo namespace ("Microsoft.Samples") que é gerado no código.  
+  
+ [!code-csharp[SchemaImporterExtensionExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SchemaImporterExtensionExample/CS/SchemaImporterExtensionExample.cs#1)]
+ [!code-vb[SchemaImporterExtensionExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SchemaImporterExtensionExample/VB/SchemaImporterExtensionExample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ImportSchemaType">
+      <MemberSignature Language="C#" Value="public virtual string ImportSchemaType (System.Xml.Schema.XmlSchemaType type, System.Xml.Schema.XmlSchemaObject context, System.Xml.Serialization.XmlSchemas schemas, System.Xml.Serialization.XmlSchemaImporter importer, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.Xml.Serialization.CodeGenerationOptions options, System.CodeDom.Compiler.CodeDomProvider codeProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ImportSchemaType(class System.Xml.Schema.XmlSchemaType type, class System.Xml.Schema.XmlSchemaObject context, class System.Xml.Serialization.XmlSchemas schemas, class System.Xml.Serialization.XmlSchemaImporter importer, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, valuetype System.Xml.Serialization.CodeGenerationOptions options, class System.CodeDom.Compiler.CodeDomProvider codeProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportSchemaType(System.Xml.Schema.XmlSchemaType,System.Xml.Schema.XmlSchemaObject,System.Xml.Serialization.XmlSchemas,System.Xml.Serialization.XmlSchemaImporter,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.Xml.Serialization.CodeGenerationOptions,System.CodeDom.Compiler.CodeDomProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Xml.Schema.XmlSchemaType" />
+        <Parameter Name="context" Type="System.Xml.Schema.XmlSchemaObject" />
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+        <Parameter Name="importer" Type="System.Xml.Serialization.XmlSchemaImporter" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Xml.Schema.XmlSchemaType" /> que representa o tipo XSD.</param>
+        <param name="context">Um <see cref="T:System.Xml.Schema.XmlSchemaObject" /> que representa informações de esquema, como o número da linha do elemento XML.</param>
+        <param name="schemas">Um <see cref="T:System.Xml.Serialization.XmlSchemas" /> que contém a coleção de esquemas no documento.</param>
+        <param name="importer">O <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> que é o importador que está sendo usado.</param>
+        <param name="compileUnit">Um <see cref="T:System.CodeDom.CodeCompileUnit" /> ao qual você pode adicionar estruturas de CodeDOM para gerar código alternativo para o XSD.</param>
+        <param name="mainNamespace">Um <see cref="T:System.CodeDom.CodeNamespace" /> que representa o namespace do elemento atual.</param>
+        <param name="options">Um <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> para as opções de configuração para o compilador de código.</param>
+        <param name="codeProvider">Um <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> que é usado para gerar o novo código.</param>
+        <summary>Permite que você manipule o código gerado pelo examinando o esquema importado e especificando o tipo CLR que ele é mapeado.</summary>
+        <returns>O nome do tipo CLR que mapeia para.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação simples do <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportSchemaType%28System.String%2CSystem.String%2CSystem.Xml.Schema.XmlSchemaObject%2CSystem.Xml.Serialization.XmlSchemas%2CSystem.Xml.Serialization.XmlSchemaImporter%2CSystem.CodeDom.CodeCompileUnit%2CSystem.CodeDom.CodeNamespace%2CSystem.Xml.Serialization.CodeGenerationOptions%2CSystem.CodeDom.Compiler.CodeDomProvider%29> método. O código verifica o namespace e nome. Quando os valores corretos são encontrados, ele adiciona o nome de um assembly personalizado ("Order.dll") deve ser referenciado no código gerado. Em seguida, ele adiciona um novo namespace ("Microsoft.Samples") que é gerado no código.  
+  
+ [!code-csharp[SchemaImporterExtensionExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SchemaImporterExtensionExample/CS/SchemaImporterExtensionExample.cs#1)]
+ [!code-vb[SchemaImporterExtensionExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SchemaImporterExtensionExample/VB/SchemaImporterExtensionExample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportSchemaType">
+      <MemberSignature Language="C#" Value="public virtual string ImportSchemaType (string name, string ns, System.Xml.Schema.XmlSchemaObject context, System.Xml.Serialization.XmlSchemas schemas, System.Xml.Serialization.XmlSchemaImporter importer, System.CodeDom.CodeCompileUnit compileUnit, System.CodeDom.CodeNamespace mainNamespace, System.Xml.Serialization.CodeGenerationOptions options, System.CodeDom.Compiler.CodeDomProvider codeProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ImportSchemaType(string name, string ns, class System.Xml.Schema.XmlSchemaObject context, class System.Xml.Serialization.XmlSchemas schemas, class System.Xml.Serialization.XmlSchemaImporter importer, class System.CodeDom.CodeCompileUnit compileUnit, class System.CodeDom.CodeNamespace mainNamespace, valuetype System.Xml.Serialization.CodeGenerationOptions options, class System.CodeDom.Compiler.CodeDomProvider codeProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportSchemaType(System.String,System.String,System.Xml.Schema.XmlSchemaObject,System.Xml.Serialization.XmlSchemas,System.Xml.Serialization.XmlSchemaImporter,System.CodeDom.CodeCompileUnit,System.CodeDom.CodeNamespace,System.Xml.Serialization.CodeGenerationOptions,System.CodeDom.Compiler.CodeDomProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="context" Type="System.Xml.Schema.XmlSchemaObject" />
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+        <Parameter Name="importer" Type="System.Xml.Serialization.XmlSchemaImporter" />
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="mainNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do elemento.</param>
+        <param name="ns">O namespace do elemento.</param>
+        <param name="context">Um <see cref="T:System.Xml.Schema.XmlSchemaObject" /> que representa informações de esquema, como o número da linha do elemento XML.</param>
+        <param name="schemas">Um <see cref="T:System.Xml.Serialization.XmlSchemas" /> que contém a coleção de esquemas no documento.</param>
+        <param name="importer">O <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> que é o importador que está sendo usado.</param>
+        <param name="compileUnit">Um <see cref="T:System.CodeDom.CodeCompileUnit" /> ao qual você pode adicionar estruturas de CodeDOM para gerar código alternativo para o XSD.</param>
+        <param name="mainNamespace">Um <see cref="T:System.CodeDom.CodeNamespace" /> que representa o namespace do elemento atual.</param>
+        <param name="options">Um <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> para as opções de configuração para o compilador de código.</param>
+        <param name="codeProvider">Um <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> que é usado para gerar o novo código.</param>
+        <summary>Permite que você manipule o código gerado pelo examinando o esquema importado e especificando o tipo CLR que ele é mapeado.</summary>
+        <returns>O nome do tipo CLR que mapeia para.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para controlar a geração do código, você deve usar as classes localizadas no <xref:System.CodeDom> namespace. Para obter mais informações, consulte [usando o CodeDOM](~/docs/framework/reflection-and-codedom/using-the-codedom.md) e [referência rápida de CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação simples do <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportSchemaType%28System.String%2CSystem.String%2CSystem.Xml.Schema.XmlSchemaObject%2CSystem.Xml.Serialization.XmlSchemas%2CSystem.Xml.Serialization.XmlSchemaImporter%2CSystem.CodeDom.CodeCompileUnit%2CSystem.CodeDom.CodeNamespace%2CSystem.Xml.Serialization.CodeGenerationOptions%2CSystem.CodeDom.Compiler.CodeDomProvider%29> método. O código verifica o namespace e nome. Quando os valores corretos são encontrados, ele adiciona o nome de um assembly personalizado ("Order.dll") deve ser referenciado no código gerado. Em seguida, ele adiciona um novo namespace ("Microsoft.Samples") que é gerado no código.  
+  
+ [!code-csharp[SchemaImporterExtensionExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SchemaImporterExtensionExample/CS/SchemaImporterExtensionExample.cs#1)]
+ [!code-vb[SchemaImporterExtensionExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SchemaImporterExtensionExample/VB/SchemaImporterExtensionExample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

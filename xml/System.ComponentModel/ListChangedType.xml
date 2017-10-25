@@ -1,0 +1,239 @@
+<Type Name="ListChangedType" FullName="System.ComponentModel.ListChangedType">
+  <TypeSignature Language="C#" Value="public enum ListChangedType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ListChangedType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ListChangedType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como a lista foi alterada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado pelo <xref:System.ComponentModel.ListChangedEventArgs.ListChangedType%2A> propriedade do <xref:System.ComponentModel.ListChangedEventArgs> classe para indicar a maneira como um <xref:System.ComponentModel.IBindingList> alterações do objeto.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de uso dessa classe, consulte [manipulando eventos de DataView](~/docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ItemAdded">
+      <MemberSignature Language="C#" Value="ItemAdded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ListChangedType ItemAdded = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ListChangedType.ItemAdded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um item adicionado à lista. O <see cref="P:System.ComponentModel.ListChangedEventArgs.NewIndex" /> contém o índice do item que foi adicionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemChanged">
+      <MemberSignature Language="C#" Value="ItemChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ListChangedType ItemChanged = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ListChangedType.ItemChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um item alterado na lista. O <see cref="P:System.ComponentModel.ListChangedEventArgs.NewIndex" /> contém o índice do item que foi alterado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDeleted">
+      <MemberSignature Language="C#" Value="ItemDeleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ListChangedType ItemDeleted = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ListChangedType.ItemDeleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um item excluído da lista. O <see cref="P:System.ComponentModel.ListChangedEventArgs.NewIndex" /> contém o índice do item que foi excluído.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemMoved">
+      <MemberSignature Language="C#" Value="ItemMoved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ListChangedType ItemMoved = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ListChangedType.ItemMoved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um item movido dentro da lista. <see cref="P:System.ComponentModel.ListChangedEventArgs.OldIndex" /> contém o índice anterior para o item, enquanto <see cref="P:System.ComponentModel.ListChangedEventArgs.NewIndex" /> contém o novo índice do item.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptorAdded">
+      <MemberSignature Language="C#" Value="PropertyDescriptorAdded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ListChangedType PropertyDescriptorAdded = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ListChangedType.PropertyDescriptorAdded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> foi adicionado, o que alterou o esquema.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptorChanged">
+      <MemberSignature Language="C#" Value="PropertyDescriptorChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ListChangedType PropertyDescriptorChanged = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ListChangedType.PropertyDescriptorChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> foi alterado, o que alterou o esquema.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptorDeleted">
+      <MemberSignature Language="C#" Value="PropertyDescriptorDeleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ListChangedType PropertyDescriptorDeleted = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ListChangedType.PropertyDescriptorDeleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> foi excluído, o que alterou o esquema.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="Reset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.ListChangedType Reset = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.ListChangedType.Reset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Grande parte da lista foi alterada. Os controles de escuta devem atualizar todos os seus dados da lista.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

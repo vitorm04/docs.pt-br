@@ -1,0 +1,223 @@
+<Type Name="DBDataPermissionAttribute" FullName="System.Data.Common.DBDataPermissionAttribute">
+  <TypeSignature Language="C#" Value="public abstract class DBDataPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit DBDataPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DBDataPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Associa uma ação de segurança com um atributo de segurança personalizada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DBDataPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores da ação de segurança que representa uma ação que pode ser executada por segurança declarativa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.Common.DBDataPermissionAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowBlankPassword">
+      <MemberSignature Language="C#" Value="public bool AllowBlankPassword { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowBlankPassword" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DBDataPermissionAttribute.AllowBlankPassword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma senha em branco é permitida.</summary>
+        <value>
+          <see langword="true" />Se uma senha em branco é permitida. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DBDataPermissionAttribute.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres de conexão permitidos.</summary>
+        <value>Uma cadeia de caracteres de conexão permitidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Várias cadeias de caracteres de conexão podem ser identificadas. Você pode também fornecer conexão adicional restrições de cadeia de caracteres usando **KeyRestrictions**.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyRestrictionBehavior">
+      <MemberSignature Language="C#" Value="public System.Data.KeyRestrictionBehavior KeyRestrictionBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.KeyRestrictionBehavior KeyRestrictionBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DBDataPermissionAttribute.KeyRestrictionBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.KeyRestrictionBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica se a lista de parâmetros de cadeia de caracteres de conexão é identificada pelo <see cref="P:System.Data.Common.DBDataPermissionAttribute.KeyRestrictions" /> propriedade são os parâmetros de cadeia de caracteres de conexão somente permitidos.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.KeyRestrictionBehavior" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyRestrictions">
+      <MemberSignature Language="C#" Value="public string KeyRestrictions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyRestrictions" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DBDataPermissionAttribute.KeyRestrictions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a conexão parâmetros de cadeia de caracteres que são permitidos ou não permitidos.</summary>
+        <value>Um ou mais conexão cadeia parâmetros que são permitidos ou não permitidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros de cadeia de caracteres de Conexão são identificados no formulário * \<nome de parâmetro >*=. Vários parâmetros podem ser especificados, sendo delimitados por um ponto e vírgula (;). Os parâmetros de cadeia de caracteres de conexão listados podem ser identificados como parâmetros adicionais somente permitidos ou parâmetros adicionais que não são permitidos usando a <xref:System.Data.Common.DBDataPermissionAttribute.KeyRestrictionBehavior%2A> propriedade.  
+  
+ Se nenhuma restrição de chave for especificada e o <xref:System.Data.Common.DBDataPermissionAttribute.KeyRestrictionBehavior%2A> está definida como `AllowOnly`, nenhum parâmetro de cadeia de caracteres de conexão adicionais é permitido.  
+  
+ Se nenhuma restrição de chave for especificada e o <xref:System.Data.Common.DBDataPermissionAttribute.KeyRestrictionBehavior%2A> está definida como `PreventUsage`, parâmetros de cadeia de caracteres de conexão adicionais são permitidos. Se mais de uma regra é definida para a mesma cadeia de conexão, a regra mais restritiva é selecionada durante a verificação de permissão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeConnectionString">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeConnectionString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeConnectionString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermissionAttribute.ShouldSerializeConnectionString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Identifica se o atributo deve serializar a cadeia de caracteres de conexão.</summary>
+        <returns>
+          <see langword="true" />Se o atributo deve serializar a cadeia de caracteres de conexão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeKeyRestrictions">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeKeyRestrictions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeKeyRestrictions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DBDataPermissionAttribute.ShouldSerializeKeyRestrictions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Identifica se o atributo deve serializar o conjunto de restrições de chave.</summary>
+        <returns>
+          <see langword="true" />Se o atributo deve serializar o conjunto de restrições de chave; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

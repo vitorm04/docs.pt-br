@@ -1,0 +1,139 @@
+<Type Name="IEquatable&lt;T&gt;" FullName="System.IEquatable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IEquatable&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEquatable`1&lt;T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.IEquatable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O tipo de objetos a serem comparados.</typeparam>
+    <summary>Define um método generalizado que implementa uma classe ou um tipo de valor para criar um método de tipo específico para determinar igualdade de instâncias.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada por tipos cujos valores podem ser era igual (para classes de exemplo, numéricos e cadeia de caracteres). Implementa uma classe ou um tipo de valor de <xref:System.IEquatable%601.Equals%2A> método para criar um método específico de tipo adequado para determinar igualdade de instâncias.  
+  
+> [!NOTE]
+>  O <xref:System.IComparable%601> interface define o <xref:System.IComparable%601.CompareTo%2A> método, que determina a ordem de classificação de instâncias do tipo de implementação. O <xref:System.IEquatable%601> interface define o <xref:System.IEquatable%601.Equals%2A> método, que determina a igualdade de instâncias do tipo de implementação.  
+  
+ O <xref:System.IEquatable%601> interface é usada por objetos de coleção genérica, como <xref:System.Collections.Generic.Dictionary%602>, <xref:System.Collections.Generic.List%601>, e <xref:System.Collections.Generic.LinkedList%601> durante o teste de igualdade em tais métodos como `Contains`, `IndexOf`, `LastIndexOf`, e `Remove`. Ele deve ser implementado para qualquer objeto que pode ser armazenado em uma coleção genérica.  
+  
+   
+  
+## Examples  
+ Consulte o exemplo para o <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Substitua o parâmetro de tipo de <see cref="T:System.IEquatable`1" /> interface com o tipo que implementa essa interface.  
+  
+ Se você implementar <see cref="T:System.IEquatable`1" />, você também deve substituir as implementações de classe base de <see cref="M:System.Object.Equals(System.Object)" /> e <see cref="M:System.Object.GetHashCode" /> para que seu comportamento é consistente com que o <see cref="M:System.IEquatable`1.Equals(`0)" /> método. Se você substituir <see cref="M:System.Object.Equals(System.Object)" />, também é chamada de sua implementação substituída em chamadas para estático <see langword="Equals(System.Object, System.Object)" /> método na sua classe. Além disso, você deve sobrecarregar o <see langword="op_Equality" /> e <see langword="op_Inequality" /> operadores. Isso garante que todos os testes de igualdade retornam resultados consistentes.  
+  
+ <block subset="none" type="note"><para>  
+ Para obter informações sobre substituição de <see cref="M:System.Object.Equals(System.Object)" />, consulte o <see cref="M:System.Object.Equals(System.Object)" /> artigo.  
+  
+</para></block>  
+  
+ Para um tipo de valor, você sempre deve implementar <see cref="T:System.IEquatable`1" /> e substituir <see cref="M:System.Object.Equals(System.Object)" /> para melhorar o desempenho. <see cref="M:System.Object.Equals(System.Object)" />caixas de tipos de valor e se baseia em reflexão para comparar dois valores para igualdade. Ambos os sua implementação de <see cref="M:System.IEquatable`1.Equals(`0)" /> e sua substituição de <see cref="M:System.Object.Equals(System.Object)" /> deve retornar resultados consistentes.  
+  
+ Se você implementar <see cref="T:System.IEquatable`1" />, você também deve implementar <see cref="T:System.IComparable`1" /> se instâncias de seu tipo podem ser ordenadas ou classificadas. Se o tipo implementa <see cref="T:System.IComparable`1" />, você sempre deve implementar <see cref="T:System.IEquatable`1" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (T other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(!T other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IEquatable`1.Equals(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="other">Um objeto para comparação com esse objeto.</param>
+        <summary>Indica se o objeto atual é igual a outro objeto do mesmo tipo.</summary>
+        <returns>
+          <see langword="true" /> se o objeto atual for igual ao parâmetro <paramref name="other" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação do <xref:System.IEquatable%601.Equals%2A> método destina-se para executar um teste de igualdade com outro objeto do tipo `T`, o mesmo tipo que o objeto atual. O <xref:System.IEquatable%601.Equals%2A> método é chamado nas seguintes circunstâncias:  
+  
+-   Quando o `Equals` método é chamado e o `other` parâmetro representa um objeto fortemente tipado do tipo `T`. (Se `other` é do tipo <xref:System.Object>, a base de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> método é chamado. Os dois métodos, <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> oferece um pouco melhor desempenho.)  
+  
+-   Quando são chamados os métodos de pesquisa de um número de objetos de coleção genérica. Alguns desses tipos e seus métodos incluem o seguinte:  
+  
+    -   Algumas das sobrecargas genéricas do <xref:System.Array.BinarySearch%2A> método.  
+  
+    -   Os métodos de pesquisa do <xref:System.Collections.Generic.List%601> classe, incluindo <xref:System.Collections.Generic.List%601.Contains%28%600%29?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601.IndexOf%2A?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A?displayProperty=nameWithType>, e <xref:System.Collections.Generic.List%601.Remove%2A?displayProperty=nameWithType>.  
+  
+    -   Os métodos de pesquisa do <xref:System.Collections.Generic.Dictionary%602> classe, incluindo <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> e <xref:System.Collections.Generic.IDictionary%602.Remove%2A>.  
+  
+    -   Os métodos de pesquisa de genérica <xref:System.Collections.Generic.LinkedList%601> classe, incluindo <xref:System.Collections.Generic.LinkedList%601.Contains%2A?displayProperty=nameWithType> e <xref:System.Collections.Generic.LinkedList%601.Remove%2A>.  
+  
+ Em outras palavras, para lidar com a possibilidade de que os objetos de uma classe serão armazenados em uma matriz ou um objeto de coleção genérica, é recomendável implementar <xref:System.IEquatable%601> para que o objeto pode ser facilmente identificado e manipulado.  
+  
+ Ao implementar o <xref:System.IEquatable%601.Equals%2A> método, definir a igualdade de forma apropriada para o tipo especificado pelo argumento de tipo genérico. Por exemplo, se o argumento de tipo é <xref:System.Int32>, definir a igualdade adequadamente para a comparação de dois inteiros de 32 bits assinados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a implementação parcial de um `Person` classe que implementa <xref:System.IEquatable%601> e tem duas propriedades, `LastName` e `SSN`. O <xref:System.IEquatable%601.Equals%2A> método retorna `True` se o `SSN` propriedade de dois `Person` objetos é idêntico; caso contrário, retornará `False`.  
+  
+ [!code-csharp[System.GenericIEquatable.Equals#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.GenericIEquatable.Equals/cs/EqualsEx2.cs#3)]
+ [!code-vb[System.GenericIEquatable.Equals#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.GenericIEquatable.Equals/vb/EqualsEx2.vb#3)]  
+  
+ `Person`objetos podem ser armazenados em um <xref:System.Collections.Generic.List%601> de objeto e pode ser identificado pelo `Contains` método, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.GenericIEquatable.Equals#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.GenericIEquatable.Equals/cs/Snippet12.cs#12)]
+ [!code-vb[System.GenericIEquatable.Equals#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.GenericIEquatable.Equals/vb/Snippet12.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você implementar <see cref="M:System.IEquatable`1.Equals(`0)" />, você também deve substituir as implementações de classe base de <see cref="M:System.Object.Equals(System.Object)" /> e <see cref="M:System.Object.GetHashCode" /> para que seu comportamento é consistente com que o <see cref="M:System.IEquatable`1.Equals(`0)" /> método. Se você substituir <see cref="M:System.Object.Equals(System.Object)" />, também é chamada de sua implementação substituída em chamadas para estático <see langword="Equals(System.Object, System.Object)" /> método na sua classe. Além disso, você deve sobrecarregar o <see langword="op_Equality" /> e <see langword="op_Inequality" /> operadores. Isso garante que todos os testes de igualdade retornam resultados consistentes, que ilustra o exemplo.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

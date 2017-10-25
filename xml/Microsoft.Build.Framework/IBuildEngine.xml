@@ -1,0 +1,213 @@
+<Type Name="IBuildEngine" FullName="Microsoft.Build.Framework.IBuildEngine">
+  <TypeSignature Language="C#" Value="public interface IBuildEngine" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBuildEngine" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IBuildEngine" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira para que os autores de tarefas usar um subconjunto da funcionalidade do mecanismo MSBuild.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFileName, string[] targetNames, System.Collections.IDictionary globalProperties, System.Collections.IDictionary targetOutputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BuildProjectFile(string projectFileName, string[] targetNames, class System.Collections.IDictionary globalProperties, class System.Collections.IDictionary targetOutputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine.BuildProjectFile(System.String,System.String[],System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFileName" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="globalProperties" Type="System.Collections.IDictionary" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="projectFileName">O nome do arquivo de projeto para criar.</param>
+        <param name="targetNames">Os nomes de destino do projeto para criar. Separe vários destinos com um ponto e vírgula (;).</param>
+        <param name="globalProperties">Um <see cref="T:System.Collections.IDictionary" /> de propriedades adicionais de global para aplicar ao projeto. A chave e o valor devem ser <see langword="String" /> tipos de dados.</param>
+        <param name="targetOutputs">As saídas de cada destino especificado.</param>
+        <summary>Inicia uma compilação de um arquivo de projeto. Se a compilação for bem-sucedida, as saídas, se houver, os destinos especificados são retornadas.</summary>
+        <returns>
+          <see langword="true" /> caso a compilação tenha sido bem-sucedida; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `targetNames`, `globalProperties`, e `targetOutputs` parâmetros podem ser `null`.  
+  
+ Se nenhum destino for especificado, [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] compila os destinos padrão do projeto.  
+  
+ Saídas de destino são retornadas como <xref:Microsoft.Build.Framework.ITaskItem> matrizes indexada pelo nome de destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnNumberOfTaskNode">
+      <MemberSignature Language="C#" Value="public int ColumnNumberOfTaskNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnNumberOfTaskNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IBuildEngine.ColumnNumberOfTaskNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número da linha do nó tarefa dentro do arquivo de projeto que o chamou.</summary>
+        <value>O número da linha do nó tarefa dentro do arquivo de projeto que o chamou.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnError">
+      <MemberSignature Language="C#" Value="public bool ContinueOnError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContinueOnError" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IBuildEngine.ContinueOnError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna <see langword="true" /> se o sinalizador ContinueOnError foi definido como <see langword="true" /> para essa tarefa específica no arquivo de projeto.</summary>
+        <value>
+          <see langword="true" />Se o sinalizador ContinueOnError foi definido como <see langword="true" /> para essa tarefa específica no arquivo de projeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumberOfTaskNode">
+      <MemberSignature Language="C#" Value="public int LineNumberOfTaskNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumberOfTaskNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IBuildEngine.LineNumberOfTaskNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número da linha do nó tarefa dentro do arquivo de projeto que o chamou.</summary>
+        <value>O número da linha do nó tarefa dentro do arquivo de projeto que o chamou.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogCustomEvent">
+      <MemberSignature Language="C#" Value="public void LogCustomEvent (Microsoft.Build.Framework.CustomBuildEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LogCustomEvent(class Microsoft.Build.Framework.CustomBuildEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine.LogCustomEvent(Microsoft.Build.Framework.CustomBuildEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Build.Framework.CustomBuildEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Gera um evento personalizado para todos os agentes de log registrados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogErrorEvent">
+      <MemberSignature Language="C#" Value="public void LogErrorEvent (Microsoft.Build.Framework.BuildErrorEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LogErrorEvent(class Microsoft.Build.Framework.BuildErrorEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine.LogErrorEvent(Microsoft.Build.Framework.BuildErrorEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildErrorEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Gera um evento de erro para todos os agentes de log registrados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogMessageEvent">
+      <MemberSignature Language="C#" Value="public void LogMessageEvent (Microsoft.Build.Framework.BuildMessageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LogMessageEvent(class Microsoft.Build.Framework.BuildMessageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine.LogMessageEvent(Microsoft.Build.Framework.BuildMessageEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildMessageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Gera um evento de mensagem para todos os agentes de log registrados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogWarningEvent">
+      <MemberSignature Language="C#" Value="public void LogWarningEvent (Microsoft.Build.Framework.BuildWarningEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LogWarningEvent(class Microsoft.Build.Framework.BuildWarningEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine.LogWarningEvent(Microsoft.Build.Framework.BuildWarningEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildWarningEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Gera um evento de aviso para todos os agentes de log registrados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFileOfTaskNode">
+      <MemberSignature Language="C#" Value="public string ProjectFileOfTaskNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProjectFileOfTaskNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IBuildEngine.ProjectFileOfTaskNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho completo para o arquivo de projeto que continha a chamada para essa tarefa.</summary>
+        <value>O caminho completo para o arquivo de projeto que continha a chamada para essa tarefa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

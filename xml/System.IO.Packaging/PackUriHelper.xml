@@ -1,0 +1,797 @@
+<Type Name="PackUriHelper" FullName="System.IO.Packaging.PackUriHelper">
+  <TypeSignature Language="C#" Value="public static class PackUriHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed PackUriHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackUriHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Packaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos de utilitário para compor e analisar objetos URI de pacote.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ComparePackUri">
+      <MemberSignature Language="C#" Value="public static int ComparePackUri (Uri firstPackUri, Uri secondPackUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ComparePackUri(class System.Uri firstPackUri, class System.Uri secondPackUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.ComparePackUri(System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstPackUri" Type="System.Uri" />
+        <Parameter Name="secondPackUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="firstPackUri">O primeiro pacote URI.</param>
+        <param name="secondPackUri">O segundo pacote URI.</param>
+        <summary>Retorna um valor que indica se dois URIs de pacote são equivalentes.</summary>
+        <returns>Um inteiro que indica a relação entre <paramref name="firstPackUri" /> e <paramref name="secondPackUri" />.  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Significado  
+  
+ </description></listheader><item><term>Menor que 0  
+  
+ </term><description><paramref name="firstPackUri" />é menor que <paramref name="secondPackUri" />.  
+  
+ </description></item><item><term> 0  
+  
+ </term><description><paramref name="firstPackUri" />é equivalente a <paramref name="secondPackUri" />.  
+  
+ </description></item><item><term>Maior que 0  
+  
+ </term><description><paramref name="firstPackUri" />é maior do que <paramref name="secondPackUri" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se ambos os `firstPackUri` e `secondPackUri` são `null`, <xref:System.IO.Packaging.PackUriHelper.ComparePackUri%2A> retornará 0. Ao comparar os URIs do pacote, um URI nulo é sempre menor que um URI não nulo.    Para casos onde `firstPackUri` e `secondPackUri` são ambos absoluto pack URIs <xref:System.IO.Packaging.PackUriHelper.ComparePackUri%2A> executa a comparação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="firstPackUri" /> ou <paramref name="secondPackUri" /> não é um absoluto [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].  
+  
+ -ou-  
+  
+ O <paramref name="firstPackUri" /> ou <paramref name="secondPackUri" /> não começam com um "pacote: / /" esquema.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ComparePartUri">
+      <MemberSignature Language="C#" Value="public static int ComparePartUri (Uri firstPartUri, Uri secondPartUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ComparePartUri(class System.Uri firstPartUri, class System.Uri secondPartUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.ComparePartUri(System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstPartUri" Type="System.Uri" />
+        <Parameter Name="secondPartUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="firstPartUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do primeiro <see cref="T:System.IO.Packaging.PackagePart" />.</param>
+        <param name="secondPartUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da segunda <see cref="T:System.IO.Packaging.PackagePart" />.</param>
+        <summary>Retorna um valor que indica se dois parte do pacote [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] são equivalentes.</summary>
+        <returns>Um valor que indica a relação entre <paramref name="firstPartUri" /> e <paramref name="secondPartUri" />.  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Significado  
+  
+ </description></listheader><item><term>Menor que 0  
+  
+ </term><description><paramref name="firstPartUri" />é menor que <paramref name="secondPartUri" />.  
+  
+ </description></item><item><term> 0  
+  
+ </term><description><paramref name="firstPartUri" />é equivalente a <paramref name="secondPartUri" />.  
+  
+ </description></item><item><term>Maior que 0  
+  
+ </term><description><paramref name="firstPartUri" />é maior do que <paramref name="secondPartUri" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se ambos os `firstPartUri` e `secondPartUri` são `null`, <xref:System.IO.Packaging.PackUriHelper.ComparePartUri%2A> retornará 0. Ao comparar <xref:System.IO.Packaging.PackagePart> [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)], um valor nulo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] sempre é menor do que o não null [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)]. Para casos onde `firstPartUri` e `secondPartUri` são ambos relativo <xref:System.IO.Packaging.PackagePart> URIs <xref:System.IO.Packaging.PackUriHelper.ComparePartUri%2A> executa a comparação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="firstPartUri" />ou <paramref name="secondPartUri" /> não é uma parte válida [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] sintaxe.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Create">
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria um novo URI de pacote.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir ilustra os casos de exemplo para o <xref:System.IO.Packaging.PackUriHelper.Create%2A> método.  
+  
+|`packageUri`|`partUri`|`fragment`|URI de pacote retornado|  
+|------------------|---------------|----------------|-----------------------|  
+|http://www.proseware.com/mypackage.pkg|/Page1.XAML|#intro|Pack://http:, www.proseware.com, mypackage.pkg/page1.xaml#intro|  
+|http://www.proseware.com/mypackage.pkg|/Page2.XAML|**null**|Pack://http:, www.proseware.com, mypackage.pkg/page2.xaml|  
+|http://www.proseware.com/mypackage.pkg|/a/page4.XAML|**null**|Pack://http:, www.proseware.com, mypackage.pkg/a/page4.xaml|  
+|http://www.proseware.com/mypackage.pkg|/%41/%61.XML|**null**|Pack://http:, www.proseware.com, mypackage.pkg/A/a.xml|  
+|http://www.proseware.com/mypackage.pkg|/%25XY.XML|**null**|Pack://http:, www.proseware.com, mypackage.pkg/%25XY.xml|  
+|http://www.proseware.com/mypackage.pkg|/a/page5.XAML|#summary|Pack://http:, www.proseware.com, mypackage.pkg/a/page5.xaml#summary|  
+|http://www.proseware.com/Packages.aspx?pkg04|/Page1.XAML|#intro|Pack://http:, www.proseware.com, packages.aspx%3fpkg04/page1.xaml#intro|  
+|http://www.proseware.com/mypackage.pkg|**null**|**null**|Pack://http:, www.proseware.com, mypackage.pkg|  
+|FTP://FTP.proseware.com/Packages/mypackage1.abc|/a/MyDoc.XAML|**null**|Pack://FTP:, ftp.proseware.com,packages,mypackage1.abc/a/mydoc.xaml|  
+|file:///d:/Packages/mypackage2.pkg|/a/Bar.XAML|#xref|Pack://file:,, d:,packages,mypackage2.pkg/a/bar.xaml#xref|  
+  
+ Composição de um URI de pacote é um processo de várias etapa.  Por exemplo, uma etapa para formar um URI de pacote é substituir os caracteres de barra invertida (/) da `packageUri` com vírgulas (,).  
+  
+ Para obter mais informações sobre conversão de cadeia de caracteres e como os URIs do pacote são formados, consulte o Apêndice a. 4 "Exemplos de conversão de cadeia de caracteres" e apêndice b. 3 "Compor um URI de pacote" na especificação Open Packaging Conventions disponível para download em [Downloads de licença e especificações](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Uri Create (Uri packageUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri Create(class System.Uri packageUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.Create(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="packageUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="packageUri">O URI do referenciado <see cref="T:System.IO.Packaging.Package" />.</param>
+        <summary>Cria um novo pacote de URI que aponta para um pacote.</summary>
+        <returns>O URI de pacote para o <see cref="T:System.IO.Packaging.Package" /> referenciado pelo determinado <paramref name="packageUri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `packageUri`não pode ser especificado como `null` ou vazio.  
+  
+ A tabela a seguir ilustra os casos de exemplo para <xref:System.IO.Packaging.PackUriHelper.Create%2A>.  
+  
+|`packageUri`|URI de pacote retornado|  
+|------------------|-----------------------|  
+|http://www.proseware.com/mypackage.pkg|Pack://http:, www.proseware.com, mypackage.pkg|  
+|FTP://FTP.proseware.com/Packages/mypackage1.abc|Pack://FTP:, ftp.proseware.com,packages,mypackage1.abc|  
+|file:///d:/Packages/mypackage2.pkg|Pack://file:,, d:,packages,mypackage2.pkg|  
+  
+ Composição de um URI de pacote é um processo de várias etapa.  Por exemplo, uma etapa para formar um URI de pacote é substituir os caracteres de barra invertida (/) da `packageUri` com vírgulas (,).  
+  
+ Para obter mais informações sobre conversão de cadeia de caracteres e como os URIs do pacote são formados, consulte o Apêndice a. 4 "Exemplos de conversão de cadeia de caracteres" e apêndice b. 3 "Compor um URI de pacote" na especificação Open Packaging Conventions disponível para download em [Downloads de licença e especificações](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Packaging.PackUriHelper.Create%2A> método para definir um URI que faz referência a um pacote do pacote.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubGetFixDoc](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubgetfixdoc)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubGetFixDoc](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubgetfixdoc)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="packageUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="packageUri" /> não é um URI absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Uri Create (Uri packageUri, Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri Create(class System.Uri packageUri, class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.Create(System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="packageUri" Type="System.Uri" />
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="packageUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <see cref="T:System.IO.Packaging.Package" />.</param>
+        <param name="partUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <see cref="T:System.IO.Packaging.PackagePart" /> no pacote.</param>
+        <summary>Cria um pacote URI fornecido um <see cref="T:System.IO.Packaging.Package" /> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] e [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] de uma parte no pacote.</summary>
+        <returns>O URI de pacote da determinado <see cref="T:System.IO.Packaging.PackagePart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `packageUri`não pode ser especificado como nulo ou vazio.  
+  
+ Se `partUri` é `null`, o URI de pacote retornado aponta para o pacote.  
+  
+ A tabela a seguir ilustra os casos de exemplo para o <xref:System.IO.Packaging.PackUriHelper.Create%2A> método.  
+  
+|`packageUri`|`partUri`|URI de pacote retornado|  
+|------------------|---------------|-----------------------|  
+|http://www.proseware.com/mypackage.pkg|/Page2.XAML|Pack://http:, www.proseware.com, mypackage.pkg/page2.xaml|  
+|http://www.proseware.com/mypackage.pkg|/a/page4.XAML|Pack://http:, www.proseware.com, mypackage.pkg/a/page4.xaml|  
+|http://www.proseware.com/mypackage.pkg|/%41/%61.XML|Pack://http:, www.proseware.com, mypackage.pkg/A/a.xml|  
+|http://www.proseware.com/mypackage.pkg|/%25XY.XML|Pack://http:, www.proseware.com, mypackage.pkg/%25XY.xml|  
+|http://www.proseware.com/mypackage.pkg|**null**|Pack://http:, www.proseware.com, mypackage.pkg|  
+|FTP://FTP.proseware.com/Packages/mypackage1.abc|/a/MyDoc.XAML|Pack://FTP:, ftp.proseware.com,packages,mypackage1.abc/a/mydoc.xaml|  
+|file:///d:/Packages/mypackage2.pkg|/a/Bar.XAML|Pack://file:,, d:,packages,mypackage2.pkg/a/bar.xaml|  
+  
+ Composição de um URI de pacote é um processo de várias etapa.  Por exemplo, uma etapa para formar um URI de pacote é substituir os caracteres de barra invertida (/) da `packageUri` com vírgulas (,).  
+  
+ Para obter mais informações sobre conversão de cadeia de caracteres e como os URIs do pacote são formados, consulte o Apêndice a. 4 "Exemplos de conversão de cadeia de caracteres" e apêndice b. 3 "Compor um URI de pacote" na especificação Open Packaging Conventions disponível para download em [Downloads de licença e especificações](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Packaging.PackUriHelper.Create%28System.Uri%29> método para definir um URI que faz referência a um pacote do pacote.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubGetFixDoc](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubgetfixdoc)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubGetFixDoc](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubgetfixdoc)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="packageUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="packageUri" /> não é um URI absoluto.  
+  
+ -ou-  
+  
+ <paramref name="partUri" /> não é uma sintaxe de URI de parte válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Uri Create (Uri packageUri, Uri partUri, string fragment);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri Create(class System.Uri packageUri, class System.Uri partUri, string fragment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.Create(System.Uri,System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="packageUri" Type="System.Uri" />
+        <Parameter Name="partUri" Type="System.Uri" />
+        <Parameter Name="fragment" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="packageUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <see cref="T:System.IO.Packaging.Package" />.</param>
+        <param name="partUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <see cref="T:System.IO.Packaging.PackagePart" /> no pacote.</param>
+        <param name="fragment">Uma referência "#" que identifica um elemento na parte do pacote.</param>
+        <summary>Cria um pacote URI fornecido um <see cref="T:System.IO.Packaging.Package" /> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)], o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] de uma parte do pacote e um fragmento de "#" para anexar.</summary>
+        <returns>O URI de pacote que identifica o pacote especificado, a parte do pacote e o fragmento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `packageUri`não pode ser especificado como `null` ou vazio.  
+  
+ Se `partUri` é `null`, o URI de pacote retornado aponta para o pacote.  
+  
+ `fragment`não pode ser uma cadeia de caracteres vazia, mas pode ser especificado como `null`.  Quando não especificado como `null`, o `fragment` cadeia de caracteres deve começar com um caractere '#'.  Para obter mais informações de sintaxe de `fragment` referências, consulte a seção 3.5 "Fragment" de [RFC 3986](http://www.ietf.org/rfc/rfc3986.txt).  
+  
+ A tabela a seguir ilustra os casos de exemplo para o <xref:System.IO.Packaging.PackUriHelper.Create%2A> método.  
+  
+|`packageUri`|`partUri`|`fragment`|URI de pacote retornado|  
+|------------------|---------------|----------------|-----------------------|  
+|http://www.proseware.com/mypackage.pkg|/Page1.XAML|#intro|Pack://http:, www.proseware.com, mypackage.pkg/page1.xaml#intro|  
+|http://www.proseware.com/mypackage.pkg|/Page2.XAML|**null**|Pack://http:, www.proseware.com, mypackage.pkg/page2.xaml|  
+|http://www.proseware.com/mypackage.pkg|/a/page4.XAML|**null**|Pack://http:, www.proseware.com, mypackage.pkg/a/page4.xaml|  
+|http://www.proseware.com/mypackage.pkg|/%41/%61.XML|**null**|Pack://http:, www.proseware.com, mypackage.pkg/A/a.xml|  
+|http://www.proseware.com/mypackage.pkg|/%25XY.XML|**null**|Pack://http:, www.proseware.com, mypackage.pkg/%25XY.xml|  
+|http://www.proseware.com/mypackage.pkg|/a/page5.XAML|#summary|Pack://http:, www.proseware.com, mypackage.pkg/a/page5.xaml#summary|  
+|http://www.proseware.com/Packages.aspx?pkg04|/Page1.XAML|#intro|Pack://http:, www.proseware.com, packages.aspx%3fpkg04/page1.xaml#intro|  
+|http://www.proseware.com/mypackage.pkg|**null**|**null**|Pack://http:, www.proseware.com, mypackage.pkg|  
+|FTP://FTP.proseware.com/Packages/mypackage1.abc|/a/MyDoc.XAML|**null**|Pack://FTP:, ftp.proseware.com,packages,mypackage1.abc/a/mydoc.xaml|  
+|file:///d:/Packages/mypackage2.pkg|/a/Bar.XAML|#xref|Pack://file:,, d:,packages,mypackage2.pkg/a/bar.xaml#xref|  
+  
+ Composição de um URI de pacote é um processo de várias etapa.  Por exemplo, uma etapa para formar um URI de pacote é substituir os caracteres de barra invertida (/) da `packageUri` com vírgulas (,).  
+  
+ Para obter mais informações sobre conversão de cadeia de caracteres e como os URIs do pacote são formados, consulte o Apêndice a. 4 "Exemplos de conversão de cadeia de caracteres" e apêndice b. 3 "Compor um URI de pacote" na especificação Open Packaging Conventions disponível para download em [Downloads de licença e especificações](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Packaging.PackUriHelper.Create%28System.Uri%29> método para definir um URI que faz referência a um pacote do pacote.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubGetFixDoc](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubgetfixdoc)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubGetFixDoc](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubgetfixdoc)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="packageUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="packageUri" /> não é um URI absoluto.  
+  
+ -ou-  
+  
+ <paramref name="partUri" /> não é uma sintaxe de URI de parte válida.  
+  
+ -ou-  
+  
+ <paramref name="fragment" /> está vazio ou começa com "#".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePartUri">
+      <MemberSignature Language="C#" Value="public static Uri CreatePartUri (Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri CreatePartUri(class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.CreatePartUri(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">O URI do <see cref="T:System.IO.Packaging.PackagePart" /> dentro do pacote.</param>
+        <summary>Cria uma URI <see cref="T:System.IO.Packaging.PackagePart" /> formatada.</summary>
+        <returns>Uma URI <see cref="T:System.IO.Packaging.PackagePart" /> formatada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] de um <xref:System.IO.Packaging.PackagePart> sempre referenciado a partir de <xref:System.IO.Packaging.Package> raiz.  
+  
+ Retornado <xref:System.IO.Packaging.PackagePart> URI é um caminho absoluto sempre começa com "/" e está em conformidade com a sintaxe definida no [especificações do Open Packaging convenções](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ A tabela a seguir ilustra os casos de exemplo para <xref:System.IO.Packaging.PackUriHelper.CreatePartUri%2A>.  
+  
+|`partUri`|O URI da parte retornado|  
+|---------------|-----------------------|  
+|Picture1|/Picture1.jpg|  
+|/picture2.jpg|/picture2.jpg|  
+|a/MyDoc.XAML|/a/MyDoc.XAML|  
+|/b/Bar.XAML|/b/Bar.XAML|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Packaging.PackUriHelper.CreatePartUri%2A> método para definir os URIs relativos para <xref:System.IO.Packaging.PackagePart> elementos.  
+  
+ [!code-csharp[PackageWrite#PackageWriteCreatePartUri](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreateparturi)]
+ [!code-vb[PackageWrite#PackageWriteCreatePartUri](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreateparturi)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNormalizedPartUri">
+      <MemberSignature Language="C#" Value="public static Uri GetNormalizedPartUri (Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri GetNormalizedPartUri(class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.GetNormalizedPartUri(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">O <see cref="T:System.IO.Packaging.PackagePart" /> URI para normalizar.</param>
+        <summary>Retorna o formulário normalizado de determinado <see cref="T:System.IO.Packaging.PackagePart" /> URI.</summary>
+        <returns>A forma normalizada da determinado <paramref name="partUri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackUriHelper.GetNormalizedPartUri%2A>normaliza `partUri` por dobra caso em maiusculas (<xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType>) e retornar o resultado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partUri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPackageUri">
+      <MemberSignature Language="C#" Value="public static Uri GetPackageUri (Uri packUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri GetPackageUri(class System.Uri packUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.GetPackageUri(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="packUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="packUri">O URI de pacote do qual retornar o URI do <see cref="T:System.IO.Packaging.Package" />.</param>
+        <summary>Retorna o URI interno que aponta para o pacote inteiro de um URI de pacote especificado.</summary>
+        <returns>O URI do <see cref="T:System.IO.Packaging.Package" /> especificado <paramref name="packUri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir ilustra os casos de exemplo para <xref:System.IO.Packaging.PackUriHelper.GetPackageUri%2A>.  
+  
+|`packUri`|O URI de pacote retornado|  
+|---------------|--------------------------|  
+|Pack://http:, www.proseware.com, mypackage.xyz/a/mydoc.xaml|http://www.proseware.com/mypackage.XYZ|  
+|Pack://http:, www.proseware.com, packages.aspx%3fmypackage/a/bar.xaml|http://www.proseware.com/Packages.aspx?mypackage|  
+|Pack://http:, www.proseware.com, mypackage.pkg|http://www.proseware.com/mypackage.pkg|  
+|Pack://FTP:, ftp.proseware.com,packages,mypackage1.abc/a/picture.jpg|FTP://FTP.proseware.com/Packages/mypackage1.abc|  
+|Pack://file:,, d:,packages,mypackage2.pkg/a/bar.xaml|file:///d:/Packages/mypackage2.pkg|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPartUri">
+      <MemberSignature Language="C#" Value="public static Uri GetPartUri (Uri packUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri GetPartUri(class System.Uri packUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.GetPartUri(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="packUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="packUri">O URI de pacote do qual retornar o <see cref="T:System.IO.Packaging.PackagePart" /> URI.</param>
+        <summary>Retorna o URI de um <see cref="T:System.IO.Packaging.PackagePart" /> dentro de um URI de pacote especificado.</summary>
+        <returns>O URI do <see cref="T:System.IO.Packaging.PackagePart" /> no <paramref name="packUri" /> determinado ou <see langword="null" /> se <paramref name="packUri" /> apontar para um pacote, em vez de um <see cref="T:System.IO.Packaging.PackagePart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retornado <xref:System.IO.Packaging.PackagePart> URI relativa a raiz do pacote e é um caminho absoluto que sempre começa com "/" e está em conformidade com a sintaxe definida no [especificações do Open Packaging convenções](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ A tabela a seguir ilustra os casos de exemplo para <xref:System.IO.Packaging.PackUriHelper.GetPartUri%2A>.  
+  
+|`packUri`|O URI da parte retornado|  
+|---------------|-----------------------|  
+|Pack://http:, www.proseware.com, mypackage.xyz/a/mydoc.xaml|/a/MyDoc.XAML|  
+|Pack://http:, www.proseware.com, packages.aspx%3fmypackage/a/bar.xaml|/a/Bar.XAML|  
+|Pack://http:, www.proseware.com, mypackage.pkg|nulo|  
+|Pack://FTP:, ftp.proseware.com,packages,mypackage1.abc/a/picture.jpg|/a/Picture.jpg|  
+|Pack://file:,, d:,packages,mypackage2.pkg/a/bar.xaml|/a/Bar.XAML|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationshipPartUri">
+      <MemberSignature Language="C#" Value="public static Uri GetRelationshipPartUri (Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri GetRelationshipPartUri(class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.GetRelationshipPartUri(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">O <see cref="P:System.IO.Packaging.PackagePart.Uri" /> do <see cref="T:System.IO.Packaging.PackagePart" /> para retornar o URI para o associado <see cref="T:System.IO.Packaging.PackageRelationship" />.</param>
+        <summary>Retorna o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da parte de relação associada a um <see cref="T:System.IO.Packaging.PackagePart" />.</summary>
+        <returns>O URI do <see cref="T:System.IO.Packaging.PackageRelationship" /> parte associado a <see cref="T:System.IO.Packaging.PackagePart" /> identificado por <paramref name="partUri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `partUri`deve identificar o o <xref:System.IO.Packaging.Package> ("/") ou um <xref:System.IO.Packaging.PackagePart> que não é um <xref:System.IO.Packaging.PackageRelationship> parte.  
+  
+ Para obter mais informações sobre <xref:System.IO.Packaging.PackageRelationship> partes, consulte a seção 9.3 "Relações" na abrir especificação de convenções de empacotamento disponível para download em [Downloads de licença e especificações](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+   
+  
+## Examples  
+ [URIs "pack://" no WPF](~/docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+  
+ [Especificação do Open Packaging Conventions](http://go.microsoft.com/fwlink/?LinkID=71255)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partUri" />sintaxe não é válida para um URI de parte do pacote.  
+  
+ -ou-  
+  
+ <paramref name="partUri" />é um URI absoluto.  
+  
+ -ou-  
+  
+ <paramref name="partUri" />faz referência a uma parte de relação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelativeUri">
+      <MemberSignature Language="C#" Value="public static Uri GetRelativeUri (Uri sourcePartUri, Uri targetPartUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri GetRelativeUri(class System.Uri sourcePartUri, class System.Uri targetPartUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.GetRelativeUri(System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourcePartUri" Type="System.Uri" />
+        <Parameter Name="targetPartUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePartUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da parte de origem.</param>
+        <param name="targetPartUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da parte de destino.</param>
+        <summary>Retorna o relativo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] entre dois especificado <see cref="T:System.IO.Packaging.PackagePart" /> [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)].</summary>
+        <returns>Relativa [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] de <paramref name="sourcePartUri" /> para <paramref name="targetPartUri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir ilustra os casos de exemplo para <xref:System.IO.Packaging.PackUriHelper.GetRelativeUri%2A>.  
+  
+|`sourcePartUri`|`targetPartUri`|Retornou um URI relativo|  
+|---------------------|---------------------|---------------------------|  
+|/MyDoc/Markup/Page.XML|/MyDoc/Markup/Picture.jpg|Picture. jpg|  
+|/MyDoc/Markup/Page.XML|/MyDoc/Picture.jpg|.. /Picture.jpg|  
+|/MyDoc/Markup/Page.XML|/MyDoc/images/Picture.jpg|.. /images/Picture.jpg|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sourcePartUri" /> ou <paramref name="targetPartUri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourcePartUriFromRelationshipPartUri">
+      <MemberSignature Language="C#" Value="public static Uri GetSourcePartUriFromRelationshipPartUri (Uri relationshipPartUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri GetSourcePartUriFromRelationshipPartUri(class System.Uri relationshipPartUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.GetSourcePartUriFromRelationshipPartUri(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationshipPartUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="relationshipPartUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da parte de relação para retornar o <see cref="P:System.IO.Packaging.PackageRelationship.SourceUri" /> do.</param>
+        <summary>Retorna o <see cref="P:System.IO.Packaging.PackageRelationship.SourceUri" /> do <see cref="T:System.IO.Packaging.PackageRelationship" /> com um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</summary>
+        <returns>O <see cref="P:System.IO.Packaging.PackageRelationship.SourceUri" /> do <see cref="T:System.IO.Packaging.PackagePart" /> da relação com o <paramref name="relationshipPartUri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Packaging.PackageRelationship.SourceUri%2A> propriedade de uma parte de relação deve identificar o o <xref:System.IO.Packaging.PackagePart.Package%2A> ("/") ou um <xref:System.IO.Packaging.PackagePart> que não é um <xref:System.IO.Packaging.PackageRelationship>.  
+  
+ Por exemplo, se a parte do pacote "/ files/document.xaml" é o proprietário da fonte da parte de relação "/ files/_rels/document.xaml.rels", chamar <xref:System.IO.Packaging.PackUriHelper.GetSourcePartUriFromRelationshipPartUri%2A> com o `relationshipPartUri` parâmetro de "/ files/_rels/document.xaml.rels" retorna o <xref:System.IO.Packaging.PackageRelationship.SourceUri%2A> de "/ files/document.xaml".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="relationshipPartUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="relationshipPartUri" />é um absoluto [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].  
+  
+ -ou-  
+  
+ <paramref name="relationshipPartUri" />sintaxe não é válida para um <see cref="T:System.IO.Packaging.PackagePart" />.  
+  
+ -ou-  
+  
+ <paramref name="relationshipPartUri" />não faz referência a uma parte de relação.  
+  
+ -ou-  
+  
+ O <see cref="P:System.IO.Packaging.PackageRelationship.SourceUri" /> da relação parte faz referência a outra parte da relação (inválido).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRelationshipPartUri">
+      <MemberSignature Language="C#" Value="public static bool IsRelationshipPartUri (Uri partUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsRelationshipPartUri(class System.Uri partUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.IsRelationshipPartUri(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="partUri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para verificar se há um <see cref="T:System.IO.Packaging.PackageRelationship" /> parte.</param>
+        <summary>Retorna um valor que indica se um especificado [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] é o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] de um <see cref="T:System.IO.Packaging.PackageRelationship" /> parte.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="partUri" /> identifica um <see cref="T:System.IO.Packaging.PackageRelationship" /> parte; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="partUri" />é um absoluto [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].  
+  
+ -ou-  
+  
+ <paramref name="partUri" />é inválido <see cref="T:System.IO.Packaging.PackagePart" /> sintaxe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvePartUri">
+      <MemberSignature Language="C#" Value="public static Uri ResolvePartUri (Uri sourcePartUri, Uri targetUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri ResolvePartUri(class System.Uri sourcePartUri, class System.Uri targetUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackUriHelper.ResolvePartUri(System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourcePartUri" Type="System.Uri" />
+        <Parameter Name="targetUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="sourcePartUri">O URI da parte de origem, ou "/" para designar o <see cref="T:System.IO.Packaging.Package" /> raiz.</param>
+        <param name="targetUri">O URI relativo à parte de destino.</param>
+        <summary>Retorna uma parte URI fornecido um URI de parte de origem e um URI com um caminho relativo para uma parte de destino.</summary>
+        <returns>O URI da parte de destino resolvido entre especificado <paramref name="SourcePartUri" /> e <paramref name="targetUri" /> parâmetros.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir ilustra os casos de exemplo para <xref:System.IO.Packaging.PackUriHelper.ResolvePartUri%2A>.  
+  
+|`sourcePartUri`|`targetUri`|URI retornado|  
+|---------------------|-----------------|------------------|  
+|/MyDoc/Markup/Page.XML|Picture. jpg|/MyDoc/Markup/Picture.jpg|  
+|/MyDoc/Markup/Page.XML|images/Picture.jpg|/MyDoc/Markup/images/Picture.jpg|  
+|/MyDoc/Markup/Page.XML|./Picture.jpg|/MyDoc/Markup/Picture.jpg|  
+|/MyDoc/Markup/Page.XML|.. /Picture.jpg|/MyDoc/Picture.jpg|  
+|/MyDoc/Markup/Page.XML|.. /images/Picture.jpg|/MyDoc/images/Picture.jpg|  
+|/|images/Picture.jpg|/images/Picture.jpg|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.IO.Packaging.PackUriHelper.ResolvePartUri%2A>.  Para o exemplo completo, consulte [ler um exemplo de pacote](http://go.microsoft.com/fwlink/?LinkID=160034).  
+  
+ [!code-csharp[PackageRead#PackageReadUsing](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageRead/CSharp/PackageRead.cs#packagereadusing)]
+ [!code-vb[PackageRead#PackageReadUsing](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageRead/visualbasic/packageread.vb#packagereadusing)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sourcePartUri" /> ou <paramref name="targetUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="sourcePartUri" />não é um URI de parte válido.  
+  
+ -ou-  
+  
+ <paramref name="targetUri" />não é um URI relativo válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UriSchemePack">
+      <MemberSignature Language="C#" Value="public static readonly string UriSchemePack;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string UriSchemePack" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Packaging.PackUriHelper.UriSchemePack" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o pacote"nome de esquema URI" pack.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

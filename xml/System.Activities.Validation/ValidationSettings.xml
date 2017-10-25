@@ -1,0 +1,171 @@
+<Type Name="ValidationSettings" FullName="System.Activities.Validation.ValidationSettings">
+  <TypeSignature Language="C#" Value="public class ValidationSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidationSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Validation.ValidationSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de configurações que personalizam o comportamento que <see cref="M:System.Activities.Validation.ActivityValidationServices.Validate(System.Activities.Activity)" /> exibirá. Ele também permite que o usuário de atividade aplicar restrições de política a um fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ValidationSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Validation.ValidationSettings" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalConstraints">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;Type,System.Collections.Generic.IList&lt;System.Activities.Validation.Constraint&gt;&gt; AdditionalConstraints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Type, class System.Collections.Generic.IList`1&lt;class System.Activities.Validation.Constraint&gt;&gt; AdditionalConstraints" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationSettings.AdditionalConstraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Type,System.Collections.Generic.IList&lt;System.Activities.Validation.Constraint&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de pares de restrição de tipo. Cada restrição adicional adicionada ao dicionário será aplicada a todas as atividades do tipo especificar no fluxo de trabalho para validar.</summary>
+        <value>Uma lista de tipo de dicionário de tipos e restrições.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationSettings.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o token de cancelamento usado para notificar a atividade deve ser cancelada.</summary>
+        <value>O token de cancelamento usado para notificar a atividade deve ser cancelada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Environment">
+      <MemberSignature Language="C#" Value="public System.Activities.LocationReferenceEnvironment Environment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.LocationReferenceEnvironment Environment" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationSettings.Environment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.LocationReferenceEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ambiente de variáveis e argumentos associados a essas configurações de validação.</summary>
+        <value>O ambiente de variáveis e argumentos associados a essas configurações de validação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyUseAdditionalConstraints">
+      <MemberSignature Language="C#" Value="public bool OnlyUseAdditionalConstraints { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OnlyUseAdditionalConstraints" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as restrições de validação adicionais devem ser usados exclusivamente para validar o fluxo de trabalho. Se definido como <see langword="true" />, validação contida dentro da atividade em si será ignorada.</summary>
+        <value>
+          <see langword="true" />Se as restrições adicionais são usados exclusivamente; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>é chamado sempre que um fluxo de trabalho é executado, e e os erros resultantes fará com que um <xref:System.Activities.InvalidWorkflowException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareForRuntime">
+      <MemberSignature Language="C#" Value="public bool PrepareForRuntime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrepareForRuntime" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationSettings.PrepareForRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se esta instância está preparada para tempo de execução.</summary>
+        <value>
+          <see langword="True" />Se esta instância está preparada para tempo de execução; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleLevel">
+      <MemberSignature Language="C#" Value="public bool SingleLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SingleLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationSettings.SingleLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a atividade fornecida e todos os filhos e sub filhos da atividade fornecida são validados, ou se o validador deve validar apenas para a atividade fornecida.</summary>
+        <value>
+          <see langword="true" />Se um elemento está sendo validado sem validar seus elementos filho; Caso contrário, <see langword="false" /> se o elemento e seus filhos e um sub filhos estão sendo validados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipValidatingRootConfiguration">
+      <MemberSignature Language="C#" Value="public bool SkipValidatingRootConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipValidatingRootConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationSettings.SkipValidatingRootConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a configuração de raiz não é o assunto para validação.</summary>
+        <value>
+          <see langword="true" />Se a configuração de raiz não é um assunto para validação; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

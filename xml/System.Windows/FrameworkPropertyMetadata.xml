@@ -1,0 +1,1060 @@
+<Type Name="FrameworkPropertyMetadata" FullName="System.Windows.FrameworkPropertyMetadata">
+  <TypeSignature Language="C#" Value="public class FrameworkPropertyMetadata : System.Windows.UIPropertyMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FrameworkPropertyMetadata extends System.Windows.UIPropertyMetadata" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FrameworkPropertyMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.UIPropertyMetadata</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Relata ou aplica metadados para uma propriedade de dependência, especificamente adicionando características específicas de estrutura do sistema de propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é derivada de <xref:System.Windows.PropertyMetadata> (por meio de <xref:System.Windows.UIPropertyMetadata>). Para fins de desenvolvimento de aplicativo de nível da estrutura de maioria dos WPF, <xref:System.Windows.FrameworkPropertyMetadata> é o tipo usado para metadados de propriedade de dependência, em vez de tipos de metadados de base <xref:System.Windows.PropertyMetadata> ou <xref:System.Windows.UIPropertyMetadata>. Isso é verdadeiro para as propriedades de dependência existente e na maioria dos cenários de propriedade de dependência personalizada.  
+  
+ Os membros declarados por esta classe esse suplemento a <xref:System.Windows.PropertyMetadata> classe base inclui várias propriedades Boolianas que especifique ou comportamento do sistema de propriedade de nível de framework WPF como herança de propriedade, associação de dados e layout de relatório.  
+  
+ Várias assinaturas de construtor para criar um <xref:System.Windows.FrameworkPropertyMetadata> instância tirar uma <xref:System.Windows.FrameworkPropertyMetadataOptions> parâmetro. O <xref:System.Windows.FrameworkPropertyMetadataOptions> enumeração é usada somente para especificar o comportamento inicial no construtor e caso contrário, não será exposta após <xref:System.Windows.FrameworkPropertyMetadata> é construído. Em uma instância criada, você pode obter ou definir as informações correspondentes por meio de várias propriedades que compartilham o nome dos valores de enumeração usado na chamada de construtor.  
+  
+<a name="xamlTextUsage_FrameworkPropertyMetadata"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Essa classe não é usada normalmente em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém os metadados para uma propriedade de dependência em um proprietário específico como inicial base <xref:System.Windows.PropertyMetadata> tipo. Esses metadados são convertidos em <xref:System.Windows.FrameworkPropertyMetadata>. Se a conversão retornou um válido <xref:System.Windows.FrameworkPropertyMetadata>, em seguida, vários <xref:System.Windows.FrameworkPropertyMetadata> valores de propriedade são relatados por meio de uma interface do usuário simple (não mostrado).  
+  
+ [!code-csharp[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpgetmetadatasingle)]
+ [!code-vb[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpgetmetadatasingle)]  
+[!code-csharp[PropertySystemEsoterics#FPMProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#fpmproperties)]
+[!code-vb[PropertySystemEsoterics#FPMProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#fpmproperties)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.FrameworkPropertyMetadata" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta assinatura inicializa todos os valores de <xref:System.Windows.FrameworkPropertyMetadata.%23ctor%2A> para seus padrões de propriedade. <xref:System.Windows.PropertyMetadata.DefaultValue%2A>será `null`e os diversos <xref:System.Windows.FrameworkPropertyMetadata> propriedades Boolianas serão `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente, fornecido como um valor de um tipo específico.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.FrameworkPropertyMetadata" /> classe com o valor padrão especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido para `defaultValue` devem coincidir ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação. O sistema de propriedade não avalia o valor efetivo de uma propriedade até que o tempo de execução, portanto, o resultado de uma incompatibilidade de tipo de propriedade do tipo de valor padrão é um erro de tempo de execução.  
+  
+ O valor <xref:System.Windows.DependencyProperty.UnsetValue> tem um significado especial no sistema de propriedade e não pode ser usado como um valor de padrão de propriedade de dependência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama essa assinatura de construtor:  
+  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor1param](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor1param)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" /> é definido como <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (System.Windows.PropertyChangedCallback propertyChangedCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.PropertyChangedCallback propertyChangedCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Windows.PropertyChangedCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="propertyChangedCallback">Uma referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.FrameworkPropertyMetadata" /> classe com especificado <see cref="T:System.Windows.PropertyChangedCallback" /> retorno de chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir chama essa assinatura de construtor:  
+  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor1paramcallback](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor1paramcallback)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (object defaultValue, System.Windows.FrameworkPropertyMetadataOptions flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, valuetype System.Windows.FrameworkPropertyMetadataOptions flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Object,System.Windows.FrameworkPropertyMetadataOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="flags" Type="System.Windows.FrameworkPropertyMetadataOptions" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente, fornecido como um valor de um tipo específico.</param>
+        <param name="flags">Os sinalizadores de opção de metadados (uma combinação de valores <see cref="T:System.Windows.FrameworkPropertyMetadataOptions" />). Essas opções especificam características da propriedade de dependência que interagem com sistemas, como layout ou vinculação de dados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.FrameworkPropertyMetadata" /> com o valor padrão e as opções de metadados em nível da estrutura fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido para `defaultValue` devem coincidir ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação. O sistema de propriedade não avalia o valor efetivo de uma propriedade até que o tempo de execução, portanto, o resultado de uma incompatibilidade de tipo de propriedade do tipo de valor padrão é um erro de tempo de execução.  
+  
+ O valor <xref:System.Windows.DependencyProperty.UnsetValue> tem um significado especial no sistema de propriedade e não pode ser usado como um valor de padrão de propriedade de dependência.  
+  
+ Valores marcados como definir sinalizadores no `flags` parâmetro definirá o valor booliano de <xref:System.Windows.FrameworkPropertyMetadata> propriedades que correspondem que <xref:System.Windows.FrameworkPropertyMetadataOptions> nome do sinalizador para `true`. Posteriormente, você pode alterar os valores das propriedades nos metadados, como os metadados ainda não foram aplicados a uma operação de sistema de propriedade específica.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama essa assinatura de construtor:  
+  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor_DV_FPMO](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor_dv_fpmo)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" /> é definido como <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (object defaultValue, System.Windows.PropertyChangedCallback propertyChangedCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, class System.Windows.PropertyChangedCallback propertyChangedCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Object,System.Windows.PropertyChangedCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente, fornecido como um valor de um tipo específico.</param>
+        <param name="propertyChangedCallback">Uma referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.FrameworkPropertyMetadata" /> classe com o valor padrão fornecido e especificado <see cref="T:System.Windows.PropertyChangedCallback" /> retorno de chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido para `defaultValue` devem coincidir ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação. O sistema de propriedade não avalia o valor efetivo de uma propriedade até que o tempo de execução, portanto, o resultado de uma incompatibilidade de tipo de propriedade do tipo de valor padrão é um erro de tempo de execução.  
+  
+ O valor <xref:System.Windows.DependencyProperty.UnsetValue> tem um significado especial no sistema de propriedade e não pode ser usado como um valor de padrão de propriedade de dependência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama essa assinatura de construtor:  
+  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor2param](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor2param)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" /> é definido como <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (System.Windows.PropertyChangedCallback propertyChangedCallback, System.Windows.CoerceValueCallback coerceValueCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.PropertyChangedCallback propertyChangedCallback, class System.Windows.CoerceValueCallback coerceValueCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Windows.PropertyChangedCallback,System.Windows.CoerceValueCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+        <Parameter Name="coerceValueCallback" Type="System.Windows.CoerceValueCallback" />
+      </Parameters>
+      <Docs>
+        <param name="propertyChangedCallback">Uma referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <param name="coerceValueCallback">Uma referência a uma implementação do manipulador ser chamada sempre que o sistema de propriedade chama <see cref="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" /> para essa propriedade de dependência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.FrameworkPropertyMetadata" /> classe com os retornos de chamada especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação chama um inicializador de base e, em seguida, adiciona o `coerceValueCallback` , definindo a propriedade na instância de base.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama essa assinatura de construtor:  
+  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor_PCC_CVC](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor_pcc_cvc)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (object defaultValue, System.Windows.FrameworkPropertyMetadataOptions flags, System.Windows.PropertyChangedCallback propertyChangedCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, valuetype System.Windows.FrameworkPropertyMetadataOptions flags, class System.Windows.PropertyChangedCallback propertyChangedCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Object,System.Windows.FrameworkPropertyMetadataOptions,System.Windows.PropertyChangedCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="flags" Type="System.Windows.FrameworkPropertyMetadataOptions" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente, fornecido como um valor de um tipo específico.</param>
+        <param name="flags">Os sinalizadores de opção de metadados (uma combinação de valores <see cref="T:System.Windows.FrameworkPropertyMetadataOptions" />). Essas opções especificam características da propriedade de dependência que interagem com sistemas, como layout ou vinculação de dados.</param>
+        <param name="propertyChangedCallback">Uma referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.FrameworkPropertyMetadata" /> com o valor padrão e as opções de metadados da estrutura fornecidos, bem como o retorno de chamada <see cref="T:System.Windows.PropertyChangedCallback" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido para `defaultValue` devem coincidir ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação. O sistema de propriedade não avalia o valor efetivo de uma propriedade até que o tempo de execução, portanto, o resultado de uma incompatibilidade de tipo de propriedade do tipo de valor padrão é um erro de tempo de execução.  
+  
+ O valor <xref:System.Windows.DependencyProperty.UnsetValue> tem um significado especial no sistema de propriedade e não pode ser usado como um valor de padrão de propriedade de dependência.  
+  
+ Valores marcados como definir sinalizadores no `flags` parâmetro definirá o valor booliano de <xref:System.Windows.FrameworkPropertyMetadata> propriedades que correspondem que <xref:System.Windows.FrameworkPropertyMetadataOptions> nome do sinalizador para `true`. Você ainda pode alterar os valores das propriedades nos metadados, como os metadados ainda não foram aplicados a uma operação de sistema de propriedade específica.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama essa assinatura de construtor:  
+  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor_DV_FPMO_PCC](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor_dv_fpmo_pcc)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" /> é definido como <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (object defaultValue, System.Windows.PropertyChangedCallback propertyChangedCallback, System.Windows.CoerceValueCallback coerceValueCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, class System.Windows.PropertyChangedCallback propertyChangedCallback, class System.Windows.CoerceValueCallback coerceValueCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Object,System.Windows.PropertyChangedCallback,System.Windows.CoerceValueCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+        <Parameter Name="coerceValueCallback" Type="System.Windows.CoerceValueCallback" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente, fornecido como um tipo específico.</param>
+        <param name="propertyChangedCallback">Uma referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <param name="coerceValueCallback">Uma referência a uma implementação do manipulador que será chamada sempre que o sistema de propriedade chama <see cref="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" /> para essa propriedade de dependência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.FrameworkPropertyMetadata" /> classe com o valor padrão fornecido e retornos de chamada especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido para `defaultValue` devem coincidir ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação. O sistema de propriedade não avalia o valor efetivo de uma propriedade até que o tempo de execução, portanto, o resultado de uma incompatibilidade de tipo de propriedade do tipo de valor padrão é um erro de tempo de execução.  
+  
+ O valor <xref:System.Windows.DependencyProperty.UnsetValue> tem um significado especial no sistema de propriedade e não pode ser usado como um valor de padrão de propriedade de dependência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama essa assinatura de construtor:  
+  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor3param](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor3param)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" /> é definido como <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (object defaultValue, System.Windows.FrameworkPropertyMetadataOptions flags, System.Windows.PropertyChangedCallback propertyChangedCallback, System.Windows.CoerceValueCallback coerceValueCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, valuetype System.Windows.FrameworkPropertyMetadataOptions flags, class System.Windows.PropertyChangedCallback propertyChangedCallback, class System.Windows.CoerceValueCallback coerceValueCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Object,System.Windows.FrameworkPropertyMetadataOptions,System.Windows.PropertyChangedCallback,System.Windows.CoerceValueCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="flags" Type="System.Windows.FrameworkPropertyMetadataOptions" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+        <Parameter Name="coerceValueCallback" Type="System.Windows.CoerceValueCallback" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente, fornecido como um tipo específico.</param>
+        <param name="flags">Os sinalizadores de opção de metadados (uma combinação de valores <see cref="T:System.Windows.FrameworkPropertyMetadataOptions" />). Essas opções especificam características da propriedade de dependência que interagem com sistemas, como layout ou vinculação de dados.</param>
+        <param name="propertyChangedCallback">Uma referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <param name="coerceValueCallback">Uma referência a uma implementação de manipulador que será chamada sempre que o sistema de propriedades chamar <see cref="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" /> nessa propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.FrameworkPropertyMetadata" /> classe com o valor padrão fornecido e opções de metadados da estrutura e retornos de chamada especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido para `defaultValue` devem coincidir ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação. O sistema de propriedade não avalia o valor efetivo de uma propriedade até que o tempo de execução, portanto, o resultado de uma incompatibilidade de tipo de propriedade do tipo de valor padrão é um erro de tempo de execução.  
+  
+ O valor <xref:System.Windows.DependencyProperty.UnsetValue> tem um significado especial no sistema de propriedade e não pode ser usado como um valor de padrão de propriedade de dependência.  
+  
+ Valores marcados como definir sinalizadores no `flags` parâmetro definirá o valor booliano de <xref:System.Windows.FrameworkPropertyMetadata> propriedades que correspondem que <xref:System.Windows.FrameworkPropertyMetadataOptions> nome do sinalizador para `true`. Você ainda pode alterar os valores das propriedades nos metadados, como os metadados ainda não foram aplicados a uma operação de sistema de propriedade específica.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama essa assinatura de construtor:  
+  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor_DV_FPMO_PCC_CVC](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor_dv_fpmo_pcc_cvc)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" /> é definido como <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (object defaultValue, System.Windows.FrameworkPropertyMetadataOptions flags, System.Windows.PropertyChangedCallback propertyChangedCallback, System.Windows.CoerceValueCallback coerceValueCallback, bool isAnimationProhibited);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, valuetype System.Windows.FrameworkPropertyMetadataOptions flags, class System.Windows.PropertyChangedCallback propertyChangedCallback, class System.Windows.CoerceValueCallback coerceValueCallback, bool isAnimationProhibited) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Object,System.Windows.FrameworkPropertyMetadataOptions,System.Windows.PropertyChangedCallback,System.Windows.CoerceValueCallback,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="flags" Type="System.Windows.FrameworkPropertyMetadataOptions" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+        <Parameter Name="coerceValueCallback" Type="System.Windows.CoerceValueCallback" />
+        <Parameter Name="isAnimationProhibited" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente, fornecido como um tipo específico.</param>
+        <param name="flags">Os sinalizadores de opção de metadados (uma combinação de valores <see cref="T:System.Windows.FrameworkPropertyMetadataOptions" />). Essas opções especificam características da propriedade de dependência que interagem com sistemas, como layout ou vinculação de dados.</param>
+        <param name="propertyChangedCallback">Uma referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <param name="coerceValueCallback">Uma referência a uma implementação do manipulador que será chamada sempre que o sistema de propriedade chama <see cref="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" /> com essa propriedade de dependência.</param>
+        <param name="isAnimationProhibited">
+          <see langword="true" /> para impedir que o sistema de propriedades anime a propriedade à qual esses metadados foram aplicados. Propriedades desse tipo acionarão uma exceção de tempo de execução que provenientes do sistema de propriedades, em caso de tentativa de criar animações delas. <see langword="false" />para permitir que a propriedade de animação. O padrão é <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.FrameworkPropertyMetadata" /> classe com as opções de metadados de estrutura e o valor padrão fornecido, retornos de chamada especificados e um valor booleano que pode ser usado para impedir que a animação da propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido para `defaultValue` devem coincidir ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação. O sistema de propriedade não avalia o valor efetivo de uma propriedade até que o tempo de execução, portanto, o resultado de uma incompatibilidade de tipo de propriedade do tipo de valor padrão é um erro de tempo de execução.  
+  
+ O valor <xref:System.Windows.DependencyProperty.UnsetValue> tem um significado especial no sistema de propriedade e não pode ser usado como um valor de padrão de propriedade de dependência.  
+  
+ O `isAnimationProhibited` parâmetro define o valor inicial de <xref:System.Windows.UIPropertyMetadata.IsAnimationProhibited%2A> propriedade declarada com a base de imediata <xref:System.Windows.UIPropertyMetadata> classe.  
+  
+ Valores marcados como definir sinalizadores no `flags` parâmetro definirá o valor booliano de <xref:System.Windows.FrameworkPropertyMetadata> propriedades que correspondem que <xref:System.Windows.FrameworkPropertyMetadataOptions> nome do sinalizador para `true`. Você ainda pode alterar os valores das propriedades nos metadados, como os metadados ainda não foram aplicados a uma operação de sistema de propriedade específica.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama essa assinatura de construtor:  
+  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor_DV_FPMO_PCC_CVC_IAP](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor_dv_fpmo_pcc_cvc_iap)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" /> é definido como <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FrameworkPropertyMetadata (object defaultValue, System.Windows.FrameworkPropertyMetadataOptions flags, System.Windows.PropertyChangedCallback propertyChangedCallback, System.Windows.CoerceValueCallback coerceValueCallback, bool isAnimationProhibited, System.Windows.Data.UpdateSourceTrigger defaultUpdateSourceTrigger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, valuetype System.Windows.FrameworkPropertyMetadataOptions flags, class System.Windows.PropertyChangedCallback propertyChangedCallback, class System.Windows.CoerceValueCallback coerceValueCallback, bool isAnimationProhibited, valuetype System.Windows.Data.UpdateSourceTrigger defaultUpdateSourceTrigger) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.#ctor(System.Object,System.Windows.FrameworkPropertyMetadataOptions,System.Windows.PropertyChangedCallback,System.Windows.CoerceValueCallback,System.Boolean,System.Windows.Data.UpdateSourceTrigger)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="flags" Type="System.Windows.FrameworkPropertyMetadataOptions" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+        <Parameter Name="coerceValueCallback" Type="System.Windows.CoerceValueCallback" />
+        <Parameter Name="isAnimationProhibited" Type="System.Boolean" />
+        <Parameter Name="defaultUpdateSourceTrigger" Type="System.Windows.Data.UpdateSourceTrigger" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente, fornecido como um tipo específico.</param>
+        <param name="flags">Os sinalizadores de opção de metadados (uma combinação de valores <see cref="T:System.Windows.FrameworkPropertyMetadataOptions" />). Essas opções especificam características da propriedade de dependência que interagem com sistemas, como layout ou vinculação de dados.</param>
+        <param name="propertyChangedCallback">Uma referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <param name="coerceValueCallback">Uma referência a uma implementação de manipulador que será chamada sempre que o sistema de propriedades chamar <see cref="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" /> nessa propriedade.</param>
+        <param name="isAnimationProhibited">
+          <see langword="true" /> para impedir que o sistema de propriedades anime a propriedade à qual esses metadados foram aplicados. Propriedades desse tipo acionarão uma exceção de tempo de execução que provenientes do sistema de propriedades, em caso de tentativa de criar animações delas. O padrão é <see langword="false" />.</param>
+        <param name="defaultUpdateSourceTrigger">O <see cref="T:System.Windows.Data.UpdateSourceTrigger" /> a ser usado quando as associações dessa propriedade forem aplicadas com seu <see cref="T:System.Windows.Data.UpdateSourceTrigger" /> definido como <see cref="F:System.Windows.Data.UpdateSourceTrigger.Default" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.FrameworkPropertyMetadata" /> com o valor padrão e as opções de metadados da estrutura fornecidos, os retornos de chamada especificados, um booliano que pode ser usado para impedir a animação da propriedade e um padrão de gatilho de atualização com associação de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido para `defaultValue` devem coincidir ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação. O sistema de propriedade não avalia o valor efetivo de uma propriedade até que o tempo de execução, portanto, o resultado de uma incompatibilidade de tipo de propriedade do tipo de valor padrão é um erro de tempo de execução.  
+  
+ O valor <xref:System.Windows.DependencyProperty.UnsetValue> tem um significado especial no sistema de propriedade e não pode ser usado como um valor de padrão de propriedade de dependência.  
+  
+ O `isAnimationProhibited` parâmetro define o valor inicial de <xref:System.Windows.UIPropertyMetadata.IsAnimationProhibited%2A> propriedade declarada com a base de imediata <xref:System.Windows.UIPropertyMetadata> classe.  
+  
+ Para obter mais informações sobre o comportamento de origem de atualização para associações, consulte [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ Valores marcados como definir sinalizadores no `flags` parâmetro definirá o valor booliano de <xref:System.Windows.FrameworkPropertyMetadata> propriedades que correspondem que <xref:System.Windows.FrameworkPropertyMetadataOptions> nome do sinalizador para `true`. Você ainda pode alterar os valores das propriedades nos metadados, como os metadados ainda não foram aplicados a uma operação de sistema de propriedade específica.  
+  
+   
+  
+## Examples  
+ [!code-csharp[PropertyMetadataAPIs#Initfpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initfpm)]  
+[!code-csharp[PropertyMetadataAPIs#FPMCtor_DV_FPMO_PCC_CVC_IAP_DUST](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#fpmctor_dv_fpmo_pcc_cvc_iap_dust)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" /> é definido como <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectsArrange">
+      <MemberSignature Language="C#" Value="public bool AffectsArrange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AffectsArrange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.AffectsArrange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma propriedade de dependência potencialmente afeta a passagem de organizar durante as operações de mecanismo de layout.</summary>
+        <value>
+          <see langword="true" />Se a propriedade de dependência na qual esses metadados existem potencialmente afeta a etapa de organização; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FrameworkElement>e <xref:System.Windows.FrameworkContentElement> inclui uma implementação do <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> que monitora as alterações de valor efetivo para todas as propriedades de dependência que existem em um elemento. Como parte dessa lógica, propriedades de dependência que alteram a partir de valor e têm metadados com <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> definida como `true` iniciará uma solicitação adiada para invalidar os visuais para esse elemento (uma chamada para <xref:System.Windows.UIElement.InvalidateArrange%2A>). Como essa implementação de nível de framework WPF já está em vigor, você normalmente não é necessário procurar por propriedades de dependência com <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> , a menos que você é substancialmente substituir ou modificar o comportamento de layout de nível de framework do WPF.  
+  
+ Personalizar <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> implementações podem optar por ter um comportamento semelhante para as alterações de propriedade de dependência onde <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> é `true`.  
+  
+ Propriedades em classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_AffectsArrange"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe ou não são geralmente usados em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém os metadados padrão da dependência de vários campos de propriedade, consulta o valor de vários <xref:System.Windows.FrameworkPropertyMetadata> propriedades nele e usa as informações para popular uma tabela para implementar um navegador de metadados"".  
+  
+ [!code-csharp[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpgetmetadatasingle)]
+ [!code-vb[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpgetmetadatasingle)]  
+[!code-csharp[PropertySystemEsoterics#FPMProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#fpmproperties)]
+[!code-vb[PropertySystemEsoterics#FPMProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#fpmproperties)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectsMeasure">
+      <MemberSignature Language="C#" Value="public bool AffectsMeasure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AffectsMeasure" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.AffectsMeasure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma propriedade de dependência potencialmente afeta a passagem de medição durante operações de mecanismo de layout.</summary>
+        <value>
+          <see langword="true" /> se a propriedade de dependência na qual esses metadados existem potencialmente afetar a passagem de medida; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FrameworkElement>e <xref:System.Windows.FrameworkContentElement> inclui uma implementação do <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> que monitora as alterações de valor efetivo para todas as propriedades de dependência que existem em um elemento. Como parte dessa lógica, propriedades de dependência que alteram a partir de valor e têm metadados com <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> definida como `true` iniciará uma solicitação adiada para invalidar os visuais para esse elemento. Como essa implementação de nível de framework WPF já está em vigor, você normalmente não é necessário procurar por propriedades de dependência com <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> , a menos que você é substancialmente substituir ou modificar o comportamento de layout de nível de framework do WPF.  
+  
+ Personalizar <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> implementações podem optar por ter um comportamento semelhante para as alterações de propriedade de dependência onde <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> é `true`.  
+  
+ Propriedades em classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_AffectsMeasure"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém os metadados padrão da dependência de vários campos de propriedade, consulta o valor de vários <xref:System.Windows.FrameworkPropertyMetadata> propriedades nele e usa as informações para popular uma tabela para implementar um navegador de metadados"".  
+  
+ [!code-csharp[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpgetmetadatasingle)]
+ [!code-vb[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpgetmetadatasingle)]  
+[!code-csharp[PropertySystemEsoterics#FPMProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#fpmproperties)]
+[!code-vb[PropertySystemEsoterics#FPMProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#fpmproperties)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectsParentArrange">
+      <MemberSignature Language="C#" Value="public bool AffectsParentArrange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AffectsParentArrange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma propriedade de dependência potencialmente afeta a etapa de organização do layout do seu elemento pai durante as operações de mecanismo de layout.</summary>
+        <value>
+          <see langword="true" />Se a propriedade de dependência na qual esses metadados existem potencialmente afeta a passagem de organizar especificamente em seu elemento pai. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FrameworkElement>e <xref:System.Windows.FrameworkContentElement> inclui uma implementação do <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> que monitora as alterações de valor efetivo para todas as propriedades de dependência que existem em um elemento. Como parte dessa lógica, propriedades de dependência que alteram a partir de valor e têm metadados com <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A> definida como `true` iniciará uma solicitação adiada para invalidar os visuais para o elemento pai.  
+  
+ Em geral, você não precisa alterações de relatório de um <xref:System.Windows.FrameworkElement> propriedade para um elemento pai usando <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A> porque o elemento em si já deve ter seu próprio <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> como `true`. É geralmente suficiente, como as alterações no elemento filho geralmente iniciam um pai organizar quando apropriado. <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>às vezes, é usado para um <xref:System.Windows.FrameworkContentElement> classe derivada. Nesse caso, os conjuntos de elemento filho, uma propriedade, mas um <xref:System.Windows.FrameworkContentElement> classe derivada não controla seu próprio processamento. O processamento é tratado por um <xref:System.Windows.FrameworkElement> elemento pai que serve como o host de conteúdo. Por exemplo, uma alteração no valor da <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> propriedade anexada por um elemento filho invalida organizar do pai, porque a posição do filho no pai deve ser alterada. Portanto, o <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> propriedade anexada tem metadados onde <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A> é `true`. Outro exemplo é <xref:System.Windows.Controls.Control.Padding%2A>; quando alterações de propriedade, o pai pode alterar o posicionamento do filho, dependendo do espaço disponível.  
+  
+ Como essa implementação de nível de framework WPF já está em vigor, você normalmente não é necessário procurar por propriedades de dependência com <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A> , a menos que você é substancialmente substituir ou modificar o comportamento de layout de nível de framework do WPF.  
+  
+ Personalizar <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> implementações podem optar por ter um comportamento semelhante para as alterações de propriedade de dependência onde <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A> é `true`.  
+  
+ Propriedades em qualquer classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_AffectsParentArrange"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectsParentMeasure">
+      <MemberSignature Language="C#" Value="public bool AffectsParentMeasure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AffectsParentMeasure" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma propriedade de dependência potencialmente afeta a passagem de medida de layout de seu elemento pai durante as operações de mecanismo de layout.</summary>
+        <value>
+          <see langword="true" />Se a propriedade de dependência na qual esses metadados existem potencialmente afeta a passagem de medição especificamente em seu elemento pai. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FrameworkElement>e <xref:System.Windows.FrameworkContentElement> inclui uma implementação do <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> que monitora as alterações de valor efetivo para todas as propriedades de dependência que existem em um elemento. Como parte dessa lógica, propriedades de dependência que alteram a partir de valor e têm metadados com <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A> definida como `true` iniciará uma solicitação adiada para invalidar os visuais para o elemento pai. Como essa implementação de nível de framework WPF já está em vigor, você normalmente não é necessário procurar por propriedades de dependência com <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A> , a menos que você é substancialmente substituir ou modificar o comportamento de layout de nível de framework do WPF.  
+  
+ Em geral, você não precisa alterações de relatório de um <xref:System.Windows.FrameworkElement> propriedade para um elemento pai usando <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A> porque o elemento em si já deve ter seu próprio <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> como `true`. Que é geralmente suficiente, como as alterações no elemento filho geralmente iniciam uma passagem de medidas pai quando apropriado. <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>às vezes, é usado para um <xref:System.Windows.FrameworkContentElement> classe derivada. Nesse caso, os conjuntos de elemento filho, uma propriedade, mas um <xref:System.Windows.FrameworkContentElement> classe derivada não controla seu próprio processamento. O processamento é tratado por um <xref:System.Windows.FrameworkElement> elemento pai que serve como o host de conteúdo. Por exemplo, uma alteração no valor da <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType> propriedade por um elemento filho invalida a medida do pai, pois o espaçamento relativo dos parágrafos pode alterar e pode aumentar ou diminuir o tamanho do host de conteúdo. Portanto, o <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType> propriedade tem metadados onde <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A> é `true`.  
+  
+ Elementos de host de conteúdo também frequentemente procure alterações nas propriedades de dependência onde <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A> é `true`, como parte da lógica de processamento do host de conteúdo. Por exemplo, o <xref:System.Windows.Controls.TextBox> elemento deve responder a determinadas alterações em texto que podem exigir que a caixa delimitadora do <xref:System.Windows.Controls.TextBox> próprio ser alterado.  
+  
+ Personalizar <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> implementações podem optar por ter um comportamento semelhante para as alterações de propriedade de dependência onde <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A> é `true`.  
+  
+ Propriedades em qualquer classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_AffectsParentMeasure"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectsRender">
+      <MemberSignature Language="C#" Value="public bool AffectsRender { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AffectsRender" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.AffectsRender" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma propriedade de dependência pode afetar o layout geral de algum modo que não influencie especificamente a organização ou medida, mas que exigiria um redesenho.</summary>
+        <value>
+          <see langword="true" /> se a propriedade de dependência na qual esses metadados existem afeta a renderização; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FrameworkElement>e <xref:System.Windows.FrameworkContentElement> inclui uma implementação do <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> que monitora as alterações de valor efetivo para todas as propriedades de dependência que existem em um elemento. Como parte dessa lógica, propriedades de dependência que alteram a partir de valor e têm metadados com <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A> definida como `true` iniciará uma solicitação adiada para invalidar os visuais para esse elemento. Como essa implementação de nível de framework WPF já está em vigor, você normalmente não é necessário procurar por propriedades de dependência com <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A> , a menos que você é substancialmente substituir ou modificar o comportamento de layout de nível de framework do WPF.  
+  
+ Personalizar <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> implementações podem optar por ter um comportamento semelhante para as alterações de propriedade de dependência onde <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A> é `true`.  
+  
+ Propriedades em qualquer classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_AffectsRender"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém os metadados padrão da dependência de vários campos de propriedade, consulta o valor de vários <xref:System.Windows.FrameworkPropertyMetadata> propriedades nele e usa as informações para popular uma tabela para implementar um navegador de metadados"".  
+  
+ [!code-csharp[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpgetmetadatasingle)]
+ [!code-vb[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpgetmetadatasingle)]  
+[!code-csharp[PropertySystemEsoterics#FPMProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#fpmproperties)]
+[!code-vb[PropertySystemEsoterics#FPMProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#fpmproperties)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BindsTwoWayByDefault">
+      <MemberSignature Language="C#" Value="public bool BindsTwoWayByDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BindsTwoWayByDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a propriedade associa de forma bidirecional por padrão.</summary>
+        <value>
+          <see langword="true" /> se a propriedade de dependência na qual esses metadados existem associa de forma bidirecional por padrão. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na ausência dessa propriedade está sendo `true`, as atualizações de vinculação são unidirecionais por padrão, com base no comportamento padrão do <xref:System.Windows.Data.Binding> construtores ou equivalente [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] sintaxe.  
+  
+ Elementos existentes, você encontrará esta propriedade definida como `true` nos metadados de propriedade de dependência que ambas relatam o estado e são modificáveis por ação do usuário, por exemplo <xref:System.Windows.Controls.Primitives.Selector.IsSelected%2A?displayProperty=nameWithType>.  
+  
+ Essa propriedade só reporta as características de atualização de associação padrão da propriedade de dependência em geral. Nenhuma associação de conjunto para essa propriedade em uma instância local pode definir o <xref:System.Windows.Data.Binding.Mode%2A> propriedade da associação e alterar esse padrão.  
+  
+ Propriedades em qualquer classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_BindsTwoWayByDefault"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém os metadados padrão da dependência de vários campos de propriedade, consulta o valor de vários <xref:System.Windows.FrameworkPropertyMetadata> propriedades nele e usa as informações para popular uma tabela para implementar um navegador de metadados"".  
+  
+ [!code-csharp[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpgetmetadatasingle)]
+ [!code-vb[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpgetmetadatasingle)]  
+[!code-csharp[PropertySystemEsoterics#FPMProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#fpmproperties)]
+[!code-vb[PropertySystemEsoterics#FPMProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#fpmproperties)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultUpdateSourceTrigger">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.UpdateSourceTrigger DefaultUpdateSourceTrigger { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Data.UpdateSourceTrigger DefaultUpdateSourceTrigger" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.DefaultUpdateSourceTrigger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o padrão para <see cref="T:System.Windows.Data.UpdateSourceTrigger" /> a ser usado quando as associações para a propriedade com esses metadados forem aplicadas, que têm seus <see cref="T:System.Windows.Data.UpdateSourceTrigger" /> definidos como <see cref="F:System.Windows.Data.UpdateSourceTrigger.Default" />.</summary>
+        <value>Um valor da enumeração, diferente de <see cref="F:System.Windows.Data.UpdateSourceTrigger.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades em classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_DefaultUpdateSourceTrigger"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Essa propriedade está definida como <see cref="F:System.Windows.Data.UpdateSourceTrigger.Default" />; o valor definido deve se tornar o padrão quando solicitado por associações.</exception>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherits">
+      <MemberSignature Language="C#" Value="public bool Inherits { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Inherits" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.Inherits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o valor da propriedade de dependência é herdável.</summary>
+        <value>
+          <see langword="true" /> se o valor da propriedade for herdável, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Herança de valor de propriedade é um recurso do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade no nível de framework do WPF, na qual determinadas propriedades de dependência podem ser definidas localmente em um elemento ou próximo a raiz de um [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] elemento árvore e, em seguida, tem seu valor herdado por todos os elementos dentro da árvore lógica de elementos filho que também possuem essa propriedade. Herança de valor de propriedade não está habilitada por padrão, e permitindo que ele tem algumas implicações de desempenho. Para obter detalhes, consulte [Herança do valor da propriedade](~/docs/framework/wpf/advanced/property-value-inheritance.md).  
+  
+> [!NOTE]
+>  Embora a herança de valor de propriedade pode parecer funcionar para as propriedades de dependência, o comportamento de herança de uma propriedade não anexada por certos divisões de objeto do objeto na árvore de tempo de execução é indefinido. Sempre use <xref:System.Windows.DependencyProperty.RegisterAttached%2A> para registrar as propriedades em que você especificar <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> nos metadados.  
+  
+ Propriedades em classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_Inherits"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém os metadados padrão da dependência de vários campos de propriedade, consulta o valor de vários <xref:System.Windows.FrameworkPropertyMetadata> propriedades nele e usa as informações para popular uma tabela para implementar um navegador de metadados"".  
+  
+ [!code-csharp[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpgetmetadatasingle)]
+ [!code-vb[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpgetmetadatasingle)]  
+[!code-csharp[PropertySystemEsoterics#FPMProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#fpmproperties)]
+[!code-vb[PropertySystemEsoterics#FPMProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#fpmproperties)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataBindingAllowed">
+      <MemberSignature Language="C#" Value="public bool IsDataBindingAllowed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDataBindingAllowed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.IsDataBindingAllowed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação de dados tem suporte para a propriedade de dependência.</summary>
+        <value>
+          <see langword="true" />Se a associação de dados é suportada na propriedade de dependência ao qual se aplica a esses metadados; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade reporta `false` para uma das duas condições possíveis: a associação de dados para uma propriedade de dependência não é permitida porque a propriedade de dependência é somente leitura (como relatado no identificador de propriedade de dependência, não os metadados), ou o valor de outra propriedade de metadados, <xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, é definido como `true` em metadados. Essa propriedade é exposta como uma conveniência para que os chamadores não precisa verificar ambos <xref:System.Windows.DependencyProperty.ReadOnly%2A> e <xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>.  
+  
+ Se você estiver tentando criar os metadados que especifica que uma propriedade de leitura/gravação deve não oferecem suporte à associação de dados, especifique o sinalizador <xref:System.Windows.FrameworkPropertyMetadataOptions.NotDataBindable> (Observe a diferença de convenção de nomenclatura pequena versus <xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>).  
+  
+<a name="xamlTextUsage_IsDataBindingAllowed"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém os metadados padrão da dependência de vários campos de propriedade, consulta o valor de vários <xref:System.Windows.FrameworkPropertyMetadata> propriedades nele e usa as informações para popular uma tabela para implementar um navegador de metadados"".  
+  
+ [!code-csharp[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#dpgetmetadatasingle)]
+ [!code-vb[PropertySystemEsoterics#DPGetMetadataSingle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#dpgetmetadatasingle)]  
+[!code-csharp[PropertySystemEsoterics#FPMProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/XAMLAPP/page2.xaml.cs#fpmproperties)]
+[!code-vb[PropertySystemEsoterics#FPMProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/xamlapp/page2.xaml.vb#fpmproperties)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNotDataBindable">
+      <MemberSignature Language="C#" Value="public bool IsNotDataBindable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNotDataBindable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a propriedade de dependência dá suporte à associação de dados.</summary>
+        <value>
+          <see langword="true" />Se a propriedade não dá suporte à associação de dados; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que essa propriedade de metadados é definida como `true` especificamente para propriedades que não devem dar suporte a associação de dados, apesar de ser propriedades de leitura-gravação. A expectativa é que na maioria dos casos em que uma propriedade de dependência é declarada, associação de dados é desejada, como associação de dados é um dos principais cenários em que uma propriedade de dependência é útil. Ao contrário de <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, isso não altera simplesmente um padrão que pode ser alterado posteriormente em uma associação específica. A definição dessa propriedade `true` nos metadados para uma propriedade de dependência metadados desabilitará todas as associações da aplicação de seus valores por meio de expressões de propriedade de dependência.  
+  
+ Propriedades de dependência somente leitura não dão suporte à associação de dados (porque eles têm nenhum setter que pode aplicar valores alterados), mas ainda será relatório `false` para <xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>. Isso ocorre porque as propriedades que correspondem a um <xref:System.Windows.FrameworkPropertyMetadataOptions> valores relatará paridade com como os metadados foi realmente estabelecido, em vez de relatórios sempre o comportamento do resultado final implicar o nome da propriedade. Para determinar se uma propriedade de dependência permite associação de dados, você normalmente deve verificar <xref:System.Windows.FrameworkPropertyMetadata.IsDataBindingAllowed%2A> em vez disso. <xref:System.Windows.FrameworkPropertyMetadata.IsDataBindingAllowed%2A>é uma conveniência para a verificação de ambos <xref:System.Windows.DependencyProperty.ReadOnly%2A> e <xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A> como uma única operação, produzindo o resultado esperado.  
+  
+ Propriedades em classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_IsNotDataBindable"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Journal">
+      <MemberSignature Language="C#" Value="public bool Journal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Journal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.Journal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se esta propriedade contém informações de registro em log que aplicativos pode ou devem armazenar como parte de uma implementação do registro em log.</summary>
+        <value>
+          <see langword="true" />Se o diário deve ser executado na propriedade de dependência que esses metadados é aplicado a; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades em classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_Journal"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Merge">
+      <MemberSignature Language="C#" Value="protected override void Merge (System.Windows.PropertyMetadata baseMetadata, System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Merge(class System.Windows.PropertyMetadata baseMetadata, class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.Merge(System.Windows.PropertyMetadata,System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseMetadata" Type="System.Windows.PropertyMetadata" />
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="baseMetadata">Os metadados de base para mesclagem.</param>
+        <param name="dp">A propriedade de dependência que esses metadados está sendo aplicado.</param>
+        <summary>Permite que uma mesclagem de uma fonte de metadados com metadados de base.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado internamente quando metadados estão sendo substituído.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Classes que derivam de <see cref="T:System.Windows.PropertyMetadata" /> (ou esta classe particularmente) devem substituir este método para quaisquer propriedades de metadados que tem adicionado em suas implementações. Por exemplo, sua implementação pode ter adicionado um novo valor de enumeração sinalizadora e o <see cref="M:System.Windows.FrameworkPropertyMetadata.Merge(System.Windows.PropertyMetadata,System.Windows.DependencyProperty)" /> implementação poderá combinar esses sinalizadores corretamente.  
+  
+ Sempre chame a implementação base antes de sua própria implementação, porque a implementação base cuida da mesclagem de todas as propriedades já definidas em tipos anteriores da hierarquia.  
+  
+ O comportamento adicionado pelo <see cref="M:System.Windows.FrameworkPropertyMetadata.Merge(System.Windows.PropertyMetadata,System.Windows.DependencyProperty)" /> implementação em <see cref="T:System.Windows.FrameworkPropertyMetadata" /> é que propriedades específicas de nível de framework WPF nos metadados, como <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender" /> são combinados em um bit a bit ou operação.  
+  
+ O <see cref="M:System.Windows.FrameworkPropertyMetadata.Merge(System.Windows.PropertyMetadata,System.Windows.DependencyProperty)" /> comportamento também implementa o comportamento quando você substituir os metadados de propriedade em uma propriedade de dependência existente chamando <see cref="M:System.Windows.DependencyProperty.OverrideMetadata(System.Type,System.Windows.PropertyMetadata)" />., usando metadados de substituição é <see cref="T:System.Windows.FrameworkPropertyMetadata" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApply">
+      <MemberSignature Language="C#" Value="protected override void OnApply (System.Windows.DependencyProperty dp, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnApply(class System.Windows.DependencyProperty dp, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FrameworkPropertyMetadata.OnApply(System.Windows.DependencyProperty,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="dp">A propriedade de dependência para a qual os metadados foi aplicado.</param>
+        <param name="targetType">O tipo associado com esses metadados quando se trata de um tipo específico metadados. Quando se trata de metadados padrão, esse valor pode ser <see langword="null" />.</param>
+        <summary>Chamado quando esses metadados foi aplicado a uma propriedade, que indica se os metadados está sendo lacrado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer Mutabilidade da estrutura de dados de um <xref:System.Windows.FrameworkPropertyMetadata> instância deve ser marcada como imutável quando esse método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="T:System.Windows.FrameworkPropertyMetadata" /> implementação deste método não faz nada além de chamar a implementação base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OverridesInheritanceBehavior">
+      <MemberSignature Language="C#" Value="public bool OverridesInheritanceBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OverridesInheritanceBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a avaliação de herança de valor de propriedade deve abranger certos limites conteúdo na árvore lógica de elementos.</summary>
+        <value>
+          <see langword="true" />Se a herança de valor de propriedade deve abranger em determinados limites de conteúdo; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses metadados informa uma modificação raramente aplicado ao comportamento de herança de valor de propriedade nos limites do elemento filho do elemento pai especial. O exemplo canônico de tal um limite é o conteúdo de um <xref:System.Windows.Controls.Frame>, onde o <xref:System.Windows.Controls.Frame> conteúdo pode obter recarregado independentemente da existência da <xref:System.Windows.Controls.Frame>. O comportamento do sistema de propriedade desejada é que herança de valor de propriedade não deve percorrer o conteúdo do <xref:System.Windows.Controls.Frame>, pois esses conteúdos podem ser elementos que o aplicativo que hospeda o quadro não possui ou controla. Especificar metadados com <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> definida como `true`, bem como especificando <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> como `true`, fará com que a propriedade na qual os metadados é aplicado para ser herdável mesmo no <xref:System.Windows.Controls.Frame> limite ou limites semelhantes.  
+  
+ Propriedades em classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, depois que os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_OverridesInheritanceBehavior"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubPropertiesDoNotAffectRender">
+      <MemberSignature Language="C#" Value="public bool SubPropertiesDoNotAffectRender { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SubPropertiesDoNotAffectRender" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as subpropriedades da propriedade de dependência não afetam o processamento do objeto contentor.</summary>
+        <value>
+          <see langword="true" />Se as alterações nos valores de propriedade sub não afetam a renderização se alterada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa opção de metadados é pertinente para propriedades de dependência que são tipos de referência, em que esse tipo tem valores de propriedade de seu próprio. Normalmente, a lógica do sistema de layout é supõem que qualquer propriedade de dependência com subpropriedades potencialmente afetará layout, porque a verificação de todas as subpropriedades de alterações é mais demorado do que realmente em execução outro renderizar passagem. Definir essa opção como `true` é útil para otimizar o desempenho da implementação de sistema de layout de nível de framework WPF.  
+  
+ Propriedades em classes derivadas de <xref:System.Windows.PropertyMetadata> geralmente são definidas no modelo de objeto como leitura-gravação. Isso é possível ajustá-los após a inicialização da instância. No entanto, quando os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e propriedades que transmitem as especificações de metadados são consideradas imutáveis. Tentativa de definir esta propriedade após <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+<a name="xamlTextUsage_SubPropertiesDoNotAffectRender"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros dessa classe não são normalmente usados no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Os metadados já foram aplicados à operação de propriedade de dependência, portanto os metadados estão selados e as propriedades dos metadados não podem ser definidas.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

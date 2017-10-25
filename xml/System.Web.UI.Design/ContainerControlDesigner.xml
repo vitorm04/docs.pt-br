@@ -1,0 +1,354 @@
+<Type Name="ContainerControlDesigner" FullName="System.Web.UI.Design.ContainerControlDesigner">
+  <TypeSignature Language="C#" Value="public class ContainerControlDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContainerControlDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ContainerControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece funcionalidade de designer para controles que contêm controles filho ou propriedades que podem ser modificadas em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ContainerControlDesigner> classe fornece uma classe do designer de base para controles que podem ser modificados na superfície de design. Isso inclui controles que contêm controles filho ou propriedades editáveis de internas. O <xref:System.Web.UI.Design.ContainerControlDesigner> fornece uma única região são enquadrada para representar o controle e manipula automaticamente a processar o controle em tempo de design.  
+  
+ Aplicar o <xref:System.Web.UI.ParseChildrenAttribute> atributo para o controle associado para determinar o comportamento de tempo de design a <xref:System.Web.UI.Design.ContainerControlDesigner>. Aplicar o <xref:System.Web.UI.ParseChildrenAttribute> configurações para o controle associado da seguinte maneira:  
+  
+-   `false`para indicar que o <xref:System.Web.UI.Design.ContainerControlDesigner> representa o conteúdo da área de design editável como controles filho.  
+  
+-   `true`para indicar que o <xref:System.Web.UI.Design.ContainerControlDesigner> representa o conteúdo da área de design editável como propriedades editáveis de internas do controle.  
+  
+ Os desenvolvedores de controle podem derivar e estender um designer personalizado de um dos vários designers base dependendo do tipo de controle que está sendo desenvolvido, conforme definido na lista a seguir:  
+  
+-   Controles que permitem que os controles filho a ser adicionado a ele em tempo de design podem derivar de <xref:System.Web.UI.Design.ContainerControlDesigner> classe. Por exemplo, o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> classe é derivada do <xref:System.Web.UI.Design.ContainerControlDesigner> classe e representa um <xref:System.Web.UI.WebControls.Panel> controle na superfície de design.  
+  
+-   Controles que têm um ou mais controles filho e também podem ter uma área de designer editável onde os controles podem ser adicionados em tempo de design, podem derivar de <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner> classe.  
+  
+-   Controles que exigem processamento de tempo de design personalizado pode derivar de base de <xref:System.Web.UI.Design.ControlDesigner> classe.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ContainerControlDesigner> classe substitui o obsoleto <xref:System.Web.UI.Design.ReadWriteControlDesigner> classe.  
+  
+ Use o <xref:System.ComponentModel.DesignerAttribute> atributo para associar uma classe personalizada designer junto com uma implementação de controle personalizado. Para obter informações detalhadas sobre como usar os designers de controle com controles personalizados, consulte [passo a passo: Criando um controle de Designer básico para um controle de servidor Web](http://msdn.microsoft.com/library/27e44af0-6e12-4b7d-b17f-db35f1b6a052).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como derivar uma classe do designer do <xref:System.Web.UI.Design.ContainerControlDesigner> classe. O exemplo define um controle simples que é derivado do <xref:System.Web.UI.WebControls.CompositeControl> classe e, em seguida, define um designer associado, que é derivado do <xref:System.Web.UI.Design.ContainerControlDesigner> classe. As substituições de designer de classe derivada de <xref:System.Web.UI.Design.ContainerControlDesigner.FrameCaption%2A> e <xref:System.Web.UI.Design.ContainerControlDesigner.FrameStyle%2A> propriedades para personalizar o quadro em torno da região editável do controle na superfície de design.  
+  
+ [!code-csharp[SimpleContainerControlDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleContainerControlDesigner/CS/simplecontainercontrol.cs#1)]
+ [!code-vb[SimpleContainerControlDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleContainerControlDesigner/VB/simplecontainercontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContainerControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ContainerControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.ContainerControlDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDesignTimeCssAttributes">
+      <MemberSignature Language="C#" Value="protected virtual void AddDesignTimeCssAttributes (System.Collections.IDictionary styleAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddDesignTimeCssAttributes(class System.Collections.IDictionary styleAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ContainerControlDesigner.AddDesignTimeCssAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="styleAttributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="styleAttributes">Uma coleção com chave de atributos de estilo.</param>
+        <summary>Adiciona os atributos de estilo para o controle em tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ContainerControlDesigner.AddDesignTimeCssAttributes%2A> método adiciona um conjunto de atributos de estilo para a representação de tempo de design do controle. Os valores de atributo de estilo são adicionados para o `styleAttributes` coleção, chaveada segundo o nome do atributo de estilo. Por exemplo, você pode acessar o valor da altura da coleção como `styleAttributes["height"]` para c# ou `styleAttributes("height")` para Microsoft Visual Basic.  
+  
+ Se o controle associado não é derivado do <xref:System.Web.UI.WebControls.WebControl> classe, o <xref:System.Web.UI.Design.ContainerControlDesigner.AddDesignTimeCssAttributes%2A> método não adiciona valores de atributo para o `styleAttributes` coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowResize">
+      <MemberSignature Language="C#" Value="public override bool AllowResize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowResize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ContainerControlDesigner.AllowResize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle pode ser redimensionado em tempo de design.</summary>
+        <value>
+          <see langword="true" />, se o controle pode ser redimensionado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação base para a <xref:System.Web.UI.Design.ContainerControlDesigner.AllowResize%2A> propriedade retorna `true`. Isso indica que o designer oferece suporte a redimensionamento de controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Classes que derivam de <see cref="T:System.Web.UI.Design.ContainerControlDesigner" /> classe pode substituir o <see cref="P:System.Web.UI.Design.ContainerControlDesigner.AllowResize" /> propriedade para indicar que o designer não oferecer suporte ao redimensionamento do controle na superfície de design.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameCaption">
+      <MemberSignature Language="C#" Value="public virtual string FrameCaption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameCaption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ContainerControlDesigner.FrameCaption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a legenda exibida para um controle em tempo de design.</summary>
+        <value>A cadeia de caracteres usada para a legenda do quadro de controle em tempo de design, se o controle tiver uma legenda de tempo de design; Caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ContainerControlDesigner.FrameCaption%2A> cadeia de caracteres é a legenda exibida no quadro em torno da região editável do controle na superfície de design.  
+  
+ A legenda padrão para um <xref:System.Web.UI.Design.ContainerControlDesigner> quadro é o <xref:System.Web.UI.Design.ControlDesigner.ID%2A> propriedade da instância do designer. Isso normalmente é o mesmo que o tempo de execução <xref:System.Web.UI.Control.ID%2A> propriedade do controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode definir uma legenda de quadro diferente para um controle de designer derivando uma classe a partir de <see cref="T:System.Web.UI.Design.ContainerControlDesigner" /> classe e, em seguida, substituindo o <see cref="P:System.Web.UI.Design.ContainerControlDesigner.FrameCaption" /> propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.Style FrameStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style FrameStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ContainerControlDesigner.FrameStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo aplicado ao quadro controle em tempo de design.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> para o quadro de controle em tempo de design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ContainerControlDesigner.FrameStyle%2A> propriedade indica as propriedades de estilo do quadro em torno da região editável do controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao derivar uma classe a partir de <see cref="T:System.Web.UI.Design.ContainerControlDesigner" /> classe, substitua o <see cref="P:System.Web.UI.Design.ContainerControlDesigner.FrameStyle" /> propriedade para alterar o <see cref="T:System.Web.UI.WebControls.Style" /> propriedades do quadro, como a borda, cor de primeiro plano, cor de plano de fundo e configurações de fonte da legenda.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeCssAttributes">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary GetDesignTimeCssAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionary GetDesignTimeCssAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeCssAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a coleção de atributos de estilo para o controle em tempo de design.</summary>
+        <returns>Uma coleção de atributos de estilo aplicado ao controle na superfície de design. Os nomes de atributo de estilo são as chaves usadas para acessar os valores de atributo de estilo no <see cref="T:System.Collections.IDictionary" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeCssAttributes%2A> método retorna uma coleção de atributos de estilo para a representação de tempo de design do controle.  
+  
+ Para examinar um valor de atributo de estilo em tempo de design para um controle, use o nome do atributo de estilo como uma chave para a coleção retornada. Valores de atributo de estilo são armazenados como cadeias de caracteres na coleção. Por exemplo, você pode acessar o valor da altura da coleção como `styleAttributes["height"]` para c# ou `styleAttributes("height")` para Microsoft Visual Basic.  
+  
+ Se o controle associado não é derivado de <xref:System.Web.UI.WebControls.WebControl> classe, o <xref:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeCssAttributes%2A> método retorna uma coleção vazia.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A implementação padrão para o <see cref="M:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeCssAttributes" /> método inicializa a coleção de atributos de estilo usando o <see cref="M:System.Web.UI.Design.ContainerControlDesigner.AddDesignTimeCssAttributes(System.Collections.IDictionary)" /> método. Para manipular os estilos em um designer de controle que são derivados do <see cref="T:System.Web.UI.Design.ContainerControlDesigner" /> classe, substitua o <see cref="M:System.Web.UI.Design.ContainerControlDesigner.AddDesignTimeCssAttributes(System.Collections.IDictionary)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml (System.Web.UI.Design.DesignerRegionCollection regions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml(class System.Web.UI.Design.DesignerRegionCollection regions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="regions">Uma coleção de regiões de designer.</param>
+        <summary>Retorna a marcação HTML que é usada para representar o controle em tempo de design.</summary>
+        <returns>Uma cadeia de marcação HTML que representa o controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeHtml%28System.Web.UI.Design.DesignerRegionCollection%29> método para obter o HTML para o controle. Controles filho que estão contidos na área de design editável renderizados usando seus designers de controle associado.  
+  
+ O <xref:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeHtml%28System.Web.UI.Design.DesignerRegionCollection%29> método inicializa um novo <xref:System.Web.UI.Design.EditableDesignerRegion> região por meio do objeto para a área editável do controle associado e, em seguida, retorna o `regions` coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override string GetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ContainerControlDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+      </Parameters>
+      <Docs>
+        <param name="region">Uma região de design editável contida dentro do controle.</param>
+        <summary>Retorna o conteúdo para a área editável do controle em tempo de design.</summary>
+        <returns>O conteúdo persistente da região dentro de <see cref="T:System.Web.UI.Design.ContainerControlDesigner" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ContainerControlDesigner> classe implementa uma única região de designer em vez de uma coleção de regiões de designer. Portanto, o `region` parâmetro é ignorado e o <xref:System.Web.UI.Design.ContainerControlDesigner.GetEditableDesignerRegionContent%2A> método retorna o conteúdo para a região de designer único que está contida no designer de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPersistenceContent">
+      <MemberSignature Language="C#" Value="public override string GetPersistenceContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetPersistenceContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ContainerControlDesigner.GetPersistenceContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o conteúdo persistente do controle em tempo de design.</summary>
+        <returns>
+          <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ContainerControlDesigner.GetPersistenceContent%2A> método `null` para indicar que o <xref:System.Web.UI.Design.ContainerControlDesigner> classe não tem conteúdo interno persistente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoWrap">
+      <MemberSignature Language="C#" Value="protected virtual bool NoWrap { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoWrap" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ContainerControlDesigner.NoWrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se deve usar o HTML <see langword="nowrap" /> atributo em tabelas.</summary>
+        <value>
+          <see langword="true" />Para usar o HTML <see langword="nowrap" /> atributo em tabelas; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override void SetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ContainerControlDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">Uma região de design editável contida dentro do controle.</param>
+        <param name="content">Conteúdo para atribuir para a região de design editável.</param>
+        <summary>Define o conteúdo para a área editável do controle em tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ContainerControlDesigner> classe implementa uma única região de designer em vez de uma coleção de regiões de designer. Portanto, o `region` parâmetro é ignorado e o <xref:System.Web.UI.Design.ContainerControlDesigner.SetEditableDesignerRegionContent%2A> método define o conteúdo para a região de designer único que está contida no designer de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

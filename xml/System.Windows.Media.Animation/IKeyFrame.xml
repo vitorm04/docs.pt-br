@@ -1,0 +1,59 @@
+<Type Name="IKeyFrame" FullName="System.Windows.Media.Animation.IKeyFrame">
+  <TypeSignature Language="C#" Value="public interface IKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.IKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Um <see cref="T:System.Windows.Media.Animation.IKeyFrame" /> implementação de interface fornece acesso não digitado para <see cref="T:System.Windows.Media.Animation.KeyTime" /> propriedades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acessando <xref:System.Windows.Media.Animation.KeyTime> instâncias conceder ao usuário maior controle sobre interpolação uma animação de, permitindo uma experiência mais elegante, bem coordenada e realista.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="KeyTime">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.KeyTime KeyTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Animation.KeyTime KeyTime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.IKeyFrame.KeyTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define <see cref="P:System.Windows.Media.Animation.IKeyFrame.KeyTime" /> valores associados a um objeto de quadro-chave.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.Animation.KeyTime" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.IKeyFrame.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor associado com um <see cref="T:System.Windows.Media.Animation.KeyTime" /> instância.</summary>
+        <value>O valor atual para essa propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

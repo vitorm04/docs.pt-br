@@ -1,0 +1,73 @@
+<Type Name="HttpCacheRevalidation" FullName="System.Web.HttpCacheRevalidation">
+  <TypeSignature Language="C#" Value="public enum HttpCacheRevalidation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpCacheRevalidation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCacheRevalidation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Fornece valores enumerados são usados para definir a revalidação específico <see langword="Cache-Control" /> cabeçalhos HTTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpCacheRevalidation> enumeração é usada para definir cabeçalhos HTTP de revalidação específica e é definida usando o <xref:System.Web.HttpCachePolicy.SetRevalidation%2A> método. Se o <xref:System.Web.HttpCachePolicy.SetRevalidation%2A> método não for chamado, não `Cache-Control` cabeçalho HTTP está definido.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllCaches">
+      <MemberSignature Language="C#" Value="AllCaches" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCacheRevalidation AllCaches = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCacheRevalidation.AllCaches" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheRevalidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o cabeçalho HTTP para <see langword="Cache-Control: must-revalidate" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCacheRevalidation None = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCacheRevalidation.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheRevalidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se esse valor for definido, nenhuma diretiva de revalidação do cache é enviada. O valor padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyCaches">
+      <MemberSignature Language="C#" Value="ProxyCaches" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.HttpCacheRevalidation ProxyCaches = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.HttpCacheRevalidation.ProxyCaches" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCacheRevalidation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o cabeçalho HTTP para <see langword="Cache-Control: proxy-revalidate" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

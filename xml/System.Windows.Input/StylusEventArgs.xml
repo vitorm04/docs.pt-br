@@ -1,0 +1,244 @@
+<Type Name="StylusEventArgs" FullName="System.Windows.Input.StylusEventArgs">
+  <TypeSignature Language="C#" Value="public class StylusEventArgs : System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StylusEventArgs extends System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para vários eventos que estão associados a <see cref="T:System.Windows.Input.Stylus" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.StylusEventArgs> classe fornece dados para os seguintes eventos:  
+  
+-   <xref:System.Windows.UIElement.StylusUp>  
+  
+-   <xref:System.Windows.UIElement.StylusMove>  
+  
+-   <xref:System.Windows.UIElement.StylusInAirMove>  
+  
+-   <xref:System.Windows.UIElement.StylusEnter>  
+  
+-   <xref:System.Windows.UIElement.StylusLeave>  
+  
+-   <xref:System.Windows.UIElement.StylusInRange>  
+  
+-   <xref:System.Windows.UIElement.StylusOutOfRange>  
+  
+-   <xref:System.Windows.UIElement.GotStylusCapture>  
+  
+-   <xref:System.Windows.UIElement.LostStylusCapture>  
+  
+-   <xref:System.Windows.UIElement.PreviewStylusUp>  
+  
+-   <xref:System.Windows.UIElement.PreviewStylusMove>  
+  
+-   <xref:System.Windows.UIElement.PreviewStylusInAirMove>  
+  
+-   <xref:System.Windows.UIElement.PreviewStylusInRange>  
+  
+-   <xref:System.Windows.UIElement.PreviewStylusOutOfRange>  
+  
+ (bem como equivalentes eventos declarados no <xref:System.Windows.ContentElement> classe).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StylusEventArgs (System.Windows.Input.StylusDevice stylus, int timestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.StylusDevice stylus, int32 timestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusEventArgs.#ctor(System.Windows.Input.StylusDevice,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stylus" Type="System.Windows.Input.StylusDevice" />
+        <Parameter Name="timestamp" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stylus">A caneta para associar o evento.</param>
+        <param name="timestamp">A hora quando o evento ocorre.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.StylusEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Point GetPosition (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Point GetPosition(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusEventArgs.GetPosition(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">O <see cref="T:System.Windows.IInputElement" /> que o (<c>x</c>, <c>y</c>) coordenadas são mapeadas para.</param>
+        <summary>Obtém a posição da caneta.</summary>
+        <returns>Um <see cref="T:System.Windows.Point" /> que representa a posição da caneta, com base nas coordenadas do <paramref name="relativeTo" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStylusPoints">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusPointCollection GetStylusPoints (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StylusPointCollection GetStylusPoints(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusEventArgs.GetStylusPoints(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">O <see cref="T:System.Windows.IInputElement" /> ao qual o (<c>x, y</c>) coordena no <see cref="T:System.Windows.Input.StylusPointCollection" /> são mapeados.</param>
+        <summary>Retorna um <see cref="T:System.Windows.Input.StylusPointCollection" /> que contém <see cref="T:System.Windows.Input.StylusPoint" /> objetos em relação ao elemento de entrada especificado.</summary>
+        <returns>Um <see cref="T:System.Windows.Input.StylusPointCollection" /> que contém <see cref="T:System.Windows.Input.StylusPoint" /> objetos coletadas no evento.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="relativeTo" />não é nem <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.FrameworkContentElement" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStylusPoints">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusPointCollection GetStylusPoints (System.Windows.IInputElement relativeTo, System.Windows.Input.StylusPointDescription subsetToReformatTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StylusPointCollection GetStylusPoints(class System.Windows.IInputElement relativeTo, class System.Windows.Input.StylusPointDescription subsetToReformatTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusEventArgs.GetStylusPoints(System.Windows.IInputElement,System.Windows.Input.StylusPointDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+        <Parameter Name="subsetToReformatTo" Type="System.Windows.Input.StylusPointDescription" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">O <see cref="T:System.Windows.IInputElement" /> ao qual o (<c>x, y</c>) coordena no <see cref="T:System.Windows.Input.StylusPointCollection" /> são mapeados.</param>
+        <param name="subsetToReformatTo">O <see cref="T:System.Windows.Input.StylusPointDescription" /> a ser usado pelo <see cref="T:System.Windows.Input.StylusPointCollection" />.</param>
+        <summary>Retorna um <see cref="T:System.Windows.Input.StylusPointCollection" /> que usa especificado <see cref="T:System.Windows.Input.StylusPointDescription" /> e contém <see cref="T:System.Windows.Input.StylusPoint" /> objetos relacionados ao elemento de entrada especificado.</summary>
+        <returns>Um <see cref="T:System.Windows.Input.StylusPointCollection" /> que contém <see cref="T:System.Windows.Input.StylusPoint" /> objetos coletados durante um evento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `subsetToReformatTo`deve ser compatível com o <xref:System.Windows.Input.StylusPointCollection.Description%2A> propriedade o <xref:System.Windows.Input.StylusPointCollection> do <xref:System.Windows.Input.StylusEventArgs.GetStylusPoints%28System.Windows.IInputElement%29> método. Use o <xref:System.Windows.Input.StylusPointDescription.GetCommonDescription%2A> método para obter um <xref:System.Windows.Input.StylusPointDescription> antes de chamar o <xref:System.Windows.Input.StylusEventArgs.GetStylusPoints%28System.Windows.IInputElement%2CSystem.Windows.Input.StylusPointDescription%29> método.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Input.StylusEventArgs.GetStylusPoints%2A>usa restrições do <xref:System.Windows.Input.StylusPointCollection> na <xref:System.Windows.Input.StylusEventArgs>, mesmo se as restrições em `subsetToReformatTo` são diferentes. Por exemplo, se `subsetToReformatTo` usa <xref:System.Windows.Input.StylusPointProperties.NormalPressure> valores de 0 a 1023 mas <xref:System.Windows.Input.StylusEventArgs> usa valores de 0 e 255, <xref:System.Windows.Input.StylusEventArgs.GetStylusPoints%2A> retorna um <xref:System.Windows.Input.StylusPointDescription> que contém os valores 0 e 255.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="relativeTo" />não é nem <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.FrameworkContentElement" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InAir">
+      <MemberSignature Language="C#" Value="public bool InAir { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InAir" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusEventArgs.InAir" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a caneta está em proximidade, mas não tocar o digitalizador.</summary>
+        <value>
+          <see langword="true" />Se a caneta está no proximidade, mas não tocar o digitalizador; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inverted">
+      <MemberSignature Language="C#" Value="public bool Inverted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Inverted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusEventArgs.Inverted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a caneta em invertido.</summary>
+        <value>
+          <see langword="true" />Se a caneta é invertida; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O manipulador genérico para chamar em uma forma de um tipo específico.</param>
+        <param name="genericTarget">O destino para chamar o manipulador no.</param>
+        <summary>Invoca manipuladores de eventos de uma maneira de um tipo específico, que pode aumentar a eficiência do sistema de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação converte o manipulador genérico como um <xref:System.Windows.Input.StylusEventHandler> e, em seguida, invoca. Para obter detalhes sobre esse padrão de implementação e os motivos para ele, consulte <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A> e [visão geral sobre eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusDevice">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusDevice StylusDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.StylusDevice StylusDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusEventArgs.StylusDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Input.StylusDevice" /> que representa a caneta.</summary>
+        <value>O <see cref="T:System.Windows.Input.StylusDevice" /> que representa a caneta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

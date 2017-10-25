@@ -1,0 +1,152 @@
+<Type Name="CallTarget" FullName="Microsoft.Build.Tasks.CallTarget">
+  <TypeSignature Language="C#" Value="public class CallTarget : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallTarget extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.CallTarget" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.Build.Framework.RunInMTA</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa o <c>CallTarget</c> tarefa. Use o <c>CallTarget</c> elemento no arquivo de projeto para criar e executar essa tarefa. Para obter informações de uso e de parâmetro, consulte [tarefa CallTarget](http://msdn.microsoft.com/library/bb1fe2c4-4383-436f-8326-c24cc4a46150).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallTarget ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CallTarget.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.CallTarget" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.CallTarget.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] engine para criar um ou mais destinos no projeto atual.</summary>
+        <returns>
+          <see langword="true" />Se todos os destinos criado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RunEachTargetSeparately">
+      <MemberSignature Language="C#" Value="public bool RunEachTargetSeparately { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RunEachTargetSeparately" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CallTarget.RunEachTargetSeparately" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] mecanismo é chamado uma vez por destino (<see langword="true" />) ou o [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] mecanismo é chamado uma vez para todos os destinos de compilação (<see langword="false" />).</summary>
+        <value>
+          <see langword="true" />Se o [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] mecanismo é chamado uma vez por destino; <see langword="false" /> se o [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] mecanismo é chamado uma vez para todos os destinos de compilação.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TargetOutputs">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] TargetOutputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] TargetOutputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CallTarget.TargetOutputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as saídas de todos os destinos internos.</summary>
+        <value>As saídas de todos os destinos internos.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Targets">
+      <MemberSignature Language="C#" Value="public string[] Targets { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Targets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CallTarget.Targets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o destino ou os destinos da compilação.</summary>
+        <value>O destino ou os destinos da compilação.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseResultsCache">
+      <MemberSignature Language="C#" Value="public bool UseResultsCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseResultsCache" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.CallTarget.UseResultsCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o mecanismo MSBuild retornará os destinos internos do cache.</summary>
+        <value>
+          <see langword="true" />Se o mecanismo MSBuild retornará os destinos internos do cache; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O escopo de destinos internos em dinheiro é (GlobalProperties ProjectFileName) [TargetNames] como uma lista de itens de compilação.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

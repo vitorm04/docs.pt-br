@@ -1,0 +1,1216 @@
+<Type Name="EndpointAddress" FullName="System.ServiceModel.EndpointAddress">
+  <TypeSignature Language="C#" Value="public class EndpointAddress" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EndpointAddress extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.EndpointAddress" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um endereço de rede exclusivo que um cliente usa para se comunicar com um ponto de extremidade de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um endereço de ponto de extremidade identifica exclusivamente o ponto de extremidade para um serviço.  
+  
+ O endereço do ponto de extremidade pertence para o ponto de extremidade de serviço, que também contém a associação, contrato e comportamentos de ponto de extremidade.  
+  
+ O <xref:System.ServiceModel.EndpointAddress> contém um URI e endereço de propriedades que incluem uma identidade, elementos WSDL e uma coleção de cabeçalhos opcionais. Os cabeçalhos opcionais são usados para fornecer informações de endereçamento adicionais mais detalhadas para identificar ou interagir com o ponto de extremidade. Por exemplo, eles podem ser usados para indicar qual instância de um serviço deve ser usado para processar uma mensagem de entrada de um determinado usuário quando houver várias instâncias.  
+  
+ O endereço de ponto de extremidade para um serviço pode ser especificado imperativa usando código ou declarativamente por meio de configuração. Definir pontos de extremidade no código geralmente não é prático porque as associações e os endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. É mais prático definir pontos de extremidade de serviço usando a configuração.  
+  
+ <xref:System.ServiceModel.EndpointAddress>não implementa o <xref:System.Runtime.Serialization.ISerializable> interface e, portanto não é serializável. Para um ponto de extremidade deve ser exposta como parte de um contrato de serviço deve ser serializável e também devem ser compatível com o protocolo da Web (WS-Addressing) de endereçamento de serviço. Pontos de extremidade serializáveis que são compatíveis com a versão 1.0 e a versão de agosto de 2004 do WS-Addressing forem fornecidos, respectivamente, pelo <xref:System.ServiceModel.EndpointAddress10> e <xref:System.ServiceModel.EndpointAddressAugust2004> classes.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddress#0](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/hostapplication.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointAddress (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O URI que identifica o ponto de extremidade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.EndpointAddress" /> com uma cadeia de caracteres URI especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#13](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointAddress (Uri uri, params System.ServiceModel.Channels.AddressHeader[] addressHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri, class System.ServiceModel.Channels.AddressHeader[] addressHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.#ctor(System.Uri,System.ServiceModel.Channels.AddressHeader[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="addressHeaders" Type="System.ServiceModel.Channels.AddressHeader[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="uri">O <see cref="T:System.Uri" /> que identifica o local do ponto de extremidade.</param>
+        <param name="addressHeaders">O <see cref="T:System.Array" /> do tipo <see cref="T:System.ServiceModel.Channels.AddressHeader" /> que contém informações de endereço usadas para interagir com o ponto de extremidade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.EndpointAddress" /> com um URI e cabeçalhos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra o uso desse construtor.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointAddress (Uri uri, System.ServiceModel.EndpointIdentity identity, params System.ServiceModel.Channels.AddressHeader[] addressHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri, class System.ServiceModel.EndpointIdentity identity, class System.ServiceModel.Channels.AddressHeader[] addressHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.#ctor(System.Uri,System.ServiceModel.EndpointIdentity,System.ServiceModel.Channels.AddressHeader[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="identity" Type="System.ServiceModel.EndpointIdentity" />
+        <Parameter Name="addressHeaders" Type="System.ServiceModel.Channels.AddressHeader[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="uri">O <see cref="T:System.Uri" /> que identifica o local do ponto de extremidade.</param>
+        <param name="identity">O <see cref="T:System.ServiceModel.EndpointIdentity" /> do ponto de extremidade.</param>
+        <param name="addressHeaders">O <see cref="T:System.Array" /> do tipo <see cref="T:System.ServiceModel.Channels.AddressHeader" /> que contém informações de endereço usadas para interagir com o ponto de extremidade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.EndpointAddress" /> com um URI, uma identidade e cabeçalhos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como construir um <xref:System.ServiceModel.EndpointAddress> do objeto com um <xref:System.Uri>, <xref:System.ServiceModel.EndpointIdentity> e uma matriz de <xref:System.ServiceModel.Channels.AddressHeader> objetos.  
+  
+ [!code-csharp[EndpointAddress#2](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointAddress (Uri uri, System.ServiceModel.EndpointIdentity identity, System.ServiceModel.Channels.AddressHeaderCollection headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri, class System.ServiceModel.EndpointIdentity identity, class System.ServiceModel.Channels.AddressHeaderCollection headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.#ctor(System.Uri,System.ServiceModel.EndpointIdentity,System.ServiceModel.Channels.AddressHeaderCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="identity" Type="System.ServiceModel.EndpointIdentity" />
+        <Parameter Name="headers" Type="System.ServiceModel.Channels.AddressHeaderCollection" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O <see cref="T:System.Uri" /> que identifica o local do ponto de extremidade.</param>
+        <param name="identity">O <see cref="T:System.ServiceModel.EndpointIdentity" /> do ponto de extremidade.</param>
+        <param name="headers">O <see cref="T:System.ServiceModel.Channels.AddressHeaderCollection" /> que contém informações de endereço usadas para interagir com o ponto de extremidade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.EndpointAddress" /> classe com uma coleção especificada de URI, identidade e cabeçalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como construir um <xref:System.ServiceModel.EndpointAddress> do objeto com um <xref:System.Uri>, <xref:System.ServiceModel.EndpointIdentity> e um <xref:System.ServiceModel.Channels.AddressHeaderCollection> objeto.  
+  
+ [!code-csharp[EndpointAddress#3](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointAddress (Uri uri, System.ServiceModel.EndpointIdentity identity, System.ServiceModel.Channels.AddressHeaderCollection headers, System.Xml.XmlDictionaryReader metadataReader, System.Xml.XmlDictionaryReader extensionReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri, class System.ServiceModel.EndpointIdentity identity, class System.ServiceModel.Channels.AddressHeaderCollection headers, class System.Xml.XmlDictionaryReader metadataReader, class System.Xml.XmlDictionaryReader extensionReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.#ctor(System.Uri,System.ServiceModel.EndpointIdentity,System.ServiceModel.Channels.AddressHeaderCollection,System.Xml.XmlDictionaryReader,System.Xml.XmlDictionaryReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="identity" Type="System.ServiceModel.EndpointIdentity" />
+        <Parameter Name="headers" Type="System.ServiceModel.Channels.AddressHeaderCollection" />
+        <Parameter Name="metadataReader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="extensionReader" Type="System.Xml.XmlDictionaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O <see cref="T:System.Uri" /> que identifica o local do ponto de extremidade.</param>
+        <param name="identity">O <see cref="T:System.ServiceModel.EndpointIdentity" /> do ponto de extremidade.</param>
+        <param name="headers">O <see cref="T:System.ServiceModel.Channels.AddressHeaderCollection" /> que contém informações de endereço usadas para interagir com o ponto de extremidade.</param>
+        <param name="metadataReader">O <see cref="T:System.Xml.XmlDictionaryReader" /> do qual os metadados do ponto de extremidade é obtido.</param>
+        <param name="extensionReader">O <see cref="T:System.Xml.XmlDictionaryReader" /> de quais extensões são obtidas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.EndpointAddress" /> classe com um URI especificado, identidade, coleção de cabeçalhos e leitores de metadados e a extensão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permite a especificação WS-Addressing para elementos de extensão arbitrária para aparecer no final de uma referência de ponto de extremidade (EPR) que pode ser obtida usando um <xref:System.Xml.XmlDictionaryReader>.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como instanciar um <xref:System.ServiceModel.EndpointAddress> que especifica um <xref:System.Uri>, uma <xref:System.ServiceModel.EndpointIdentity>, uma coleção de cabeçalhos, metadados <xref:System.Xml.XmlDictionaryReader> e uma extensão <xref:System.Xml.XmlDictionaryReader>.  
+  
+ [!code-csharp[EndpointAddress#6](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnonymousUri">
+      <MemberSignature Language="C#" Value="public static Uri AnonymousUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Uri AnonymousUri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddress.AnonymousUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma representação com neutralidade de versão do URI anônimo.</summary>
+        <value>Um <see cref="T:System.Uri" /> com o valor http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor do URI usado para inicializar o construtor é o <xref:System.ServiceModel.EndpointAddress.AnonymousUri%2A>, em seguida, <xref:System.ServiceModel.EndpointAddress.IsAnonymous%2A> é definido como `true`.  
+  
+ <xref:System.ServiceModel.EndpointAddress>é uma classe com neutralidade de versão e o <xref:System.ServiceModel.EndpointAddress.AnonymousUri%2A> propriedade retorna um valor é uma representação neutra. Quando você gravar isso ou converta-os em uma versão ou a outra, em seguida, ele se torna o valor correto para essa versão.  
+  
+ Devido a variedade de tecnologias de rede atualmente em uso generalizada (por exemplo, NAT, DHCP e firewalls), muitas implantações não é possível atribuir um URI global significativo para um determinado ponto de extremidade. Para permitir que eles *anônimo* padrões de troca de pontos de extremidade para iniciar a mensagem e recebem respostas, a especificação de endereçamento de serviços Web define um [URI](http://go.microsoft.com/fwlink/?LinkId=96169) para uso pelos pontos de extremidade que não pode ter um URI estável, pode ser resolvido.  
+  
+ Solicitações que usam esse endereço devem fornecer um mecanismo para fornecer respostas ou falhas (por exemplo, retornar a resposta a mesma conexão de transporte). Esse mecanismo pode ser um protocolo de transporte de solicitação/resposta (por exemplo, HTTP GET ou POST). Esse URI pode ser usado como o destino para as mensagens de resposta e não deve ser usado como o destino em outras circunstâncias.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddress#13](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyTo">
+      <MemberSignature Language="C#" Value="public void ApplyTo (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyTo(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.ApplyTo(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> cujos valores de cabeçalho estão sendo atribuídos.</param>
+        <summary>Atribui o URI e as propriedades do endereço do ponto de extremidade para os valores dos cabeçalhos de uma mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.EndpointAddress.ApplyTo%28System.ServiceModel.Channels.Message%29> método define o "para" da mensagem com o <xref:System.ServiceModel.EndpointAddress.Uri%2A> do atual <xref:System.ServiceModel.EndpointAddress>. Lembre-se de que "aplicar para" significa aqui "" aplicam-se este endereço para o cabeçalho 'Para' da mensagem.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como aplicar as propriedades de um endereço de ponto de extremidade e o URI para os cabeçalhos de uma mensagem.  
+  
+ [!code-csharp[EndpointAddress#4](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> a ser comparado com o endereço de ponto de extremidade atual.</param>
+        <summary>Retorna um valor que indica se um objeto especificado é equivalente ao endereço de ponto de extremidade atual.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado é equivalente ao endereço atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#20](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um código hash exclusivo para o endereço de ponto de extremidade atual.</summary>
+        <returns>Um código hash exclusivo para o endereço de ponto de extremidade atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.EndpointAddress.GetHashCode%2A>é adequado para uso em algoritmos de hash e estruturas de dados como uma tabela de hash.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddress#21](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReaderAtExtensions">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReader GetReaderAtExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlDictionaryReader GetReaderAtExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.GetReaderAtExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o leitor de dicionário XML que fornece acesso às extensões.</summary>
+        <returns>O <see cref="T:System.Xml.XmlDictionaryReader" /> que fornece acesso às extensões.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O leitor fornece acesso às informações que não estão contidos no modelo da referência do ponto de extremidade definido pelo WS-Addressing.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddress#7](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReaderAtMetadata">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReader GetReaderAtMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlDictionaryReader GetReaderAtMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.GetReaderAtMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o leitor de dicionário XML que fornece acesso aos metadados para um ponto de extremidade.</summary>
+        <returns>O <see cref="T:System.Xml.XmlDictionaryReader" /> que fornece acesso aos metadados para um ponto de extremidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#8](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.AddressHeaderCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.AddressHeaderCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddress.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AddressHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de cabeçalhos de endereço para os pontos de extremidade que o construtor pode criar.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.AddressHeaderCollection" /> que contém informações de endereço do ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#14](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointIdentity Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddress.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identidade do ponto de extremidade usado para autenticá-la.</summary>
+        <value>O <see cref="T:System.ServiceModel.EndpointIdentity" /> do ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornece uma identidade que permite a autenticação de um ponto de extremidade por outros pontos de extremidade que trocam mensagens com ele.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddress#15](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAnonymous">
+      <MemberSignature Language="C#" Value="public bool IsAnonymous { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAnonymous" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddress.IsAnonymous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o ponto de extremidade é *anônimo*.</summary>
+        <value>
+          <see langword="true" />Se o ponto de extremidade <see cref="P:System.ServiceModel.EndpointAddress.AnonymousUri" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usar esse método para verificar a <xref:System.ServiceModel.EndpointAddress.AnonymousUri%2A> ao copiar manualmente o URI de um <xref:System.ServiceModel.EndpointAddress> para o URI de um <xref:System.ServiceModel.EndpointAddress10> ou um <xref:System.ServiceModel.EndpointAddressAugust2004>. Isso deve ser feito porque ambos <xref:System.ServiceModel.EndpointAddress10> e <xref:System.ServiceModel.EndpointAddressAugust2004> têm valores anônimos especiais. Os usuários devem usar esses valores se o URI que está sendo copiado é anônimo.  
+  
+ Devido a variedade de tecnologias de rede atualmente em uso generalizada (por exemplo, NAT, DHCP e firewalls), muitas implantações não é possível atribuir um URI global significativo para um determinado ponto de extremidade. Para permitir que eles *anônimo* padrões de troca de pontos de extremidade para iniciar a mensagem e recebem respostas, a especificação de endereçamento de serviços Web define um [URI](http://go.microsoft.com/fwlink/?LinkId=96169) para uso pelos pontos de extremidade que não pode ter um URI estável, pode ser resolvido.  
+  
+ Solicitações que usam esse endereço devem fornecer um mecanismo para fornecer respostas ou falhas (por exemplo, retornar a resposta a mesma conexão de transporte). Esse mecanismo pode ser um protocolo de transporte de solicitação/resposta (por exemplo, HTTP GET ou POST). Esse URI pode ser usado como o destino para as mensagens de resposta e não deve ser usado como o destino em outras circunstâncias.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddress#16](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNone">
+      <MemberSignature Language="C#" Value="public bool IsNone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNone" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddress.IsNone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o URI do ponto de extremidade é o <see cref="P:System.ServiceModel.EndpointAddress.NoneUri" />.</summary>
+        <value>
+          <see langword="true" />Se o URI do ponto de extremidade é <see cref="P:System.ServiceModel.EndpointAddress.NoneUri" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usar esse método para verificar a <xref:System.ServiceModel.EndpointAddress.NoneUri%2A> ao copiar manualmente o URI de um <xref:System.ServiceModel.EndpointAddress> para o URI de um <xref:System.ServiceModel.EndpointAddress10> ou um <xref:System.ServiceModel.EndpointAddressAugust2004>. Isso deve ser feito porque ambos <xref:System.ServiceModel.EndpointAddress10> e <xref:System.ServiceModel.EndpointAddressAugust2004> têm especial nenhum URI de valores. Os usuários devem usar esses valores se o URI que está sendo copiado é none.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddress#17](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoneUri">
+      <MemberSignature Language="C#" Value="public static Uri NoneUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Uri NoneUri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddress.NoneUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um URI com neutralidade de versão usado para o endereço de um ponto de extremidade ao qual uma mensagem não deve ser enviada.</summary>
+        <value>Um <see cref="T:System.Uri" /> com o valor http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/None.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor do URI usado para inicializar o construtor é o <xref:System.ServiceModel.EndpointAddress.NoneUri%2A>, em seguida, <xref:System.ServiceModel.EndpointAddress.IsNone%2A> é definido como `true`.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddress#18](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.ServiceModel.EndpointAddress address1, System.ServiceModel.EndpointAddress address2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.ServiceModel.EndpointAddress address1, class System.ServiceModel.EndpointAddress address2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.op_Equality(System.ServiceModel.EndpointAddress,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address1" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="address2" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address1">Uma da <see cref="T:System.ServiceModel.EndpointAddress" /> objetos que estão sendo comparados.</param>
+        <param name="address2">Uma da <see cref="T:System.ServiceModel.EndpointAddress" /> objetos que estão sendo comparados.</param>
+        <summary>Retorna um valor que indica se os endereços de ponto de extremidade especificado não são equivalentes.</summary>
+        <returns>
+          <see langword="true" />Se os endereços de ponto de extremidade forem equivalentes; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.ServiceModel.EndpointAddress.Equals%2A?displayProperty=nameWithType>.  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#5](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.ServiceModel.EndpointAddress address1, System.ServiceModel.EndpointAddress address2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.ServiceModel.EndpointAddress address1, class System.ServiceModel.EndpointAddress address2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.op_Inequality(System.ServiceModel.EndpointAddress,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address1" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="address2" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address1">Uma da <see cref="T:System.ServiceModel.EndpointAddress" /> objetos que estão sendo comparados.</param>
+        <param name="address2">Uma da <see cref="T:System.ServiceModel.EndpointAddress" /> objetos que estão sendo comparados.</param>
+        <summary>Retorna um valor que indica se os endereços de ponto de extremidade especificado não são equivalentes.</summary>
+        <returns>
+          <see langword="true" />Se os endereços de ponto de extremidade não são equivalentes; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.ServiceModel.EndpointAddress.Equals%2A?displayProperty=nameWithType>.  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#22](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFrom">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EndpointAddress ReadFrom (System.Xml.XmlDictionaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.EndpointAddress ReadFrom(class System.Xml.XmlDictionaryReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.ReadFrom(System.Xml.XmlDictionaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlDictionaryReader" /> do que o endereço do ponto de extremidade é obtido.</param>
+        <summary>Lê um endereço de ponto de extremidade de um leitor de dicionário XML especificado.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointAddress" /> ler do leitor XML de dicionário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como ler um endereço de ponto de extremidade de um leitor de dicionário XML.  
+  
+ [!code-csharp[EndpointAddress#10](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFrom">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EndpointAddress ReadFrom (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlDictionaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.EndpointAddress ReadFrom(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlDictionaryReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.ReadFrom(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlDictionaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="reader">O <see cref="T:System.Xml.XmlDictionaryReader" /> do que o endereço do ponto de extremidade é obtido.</param>
+        <summary>Lê um endereço de ponto de extremidade para uma versão de endereço especificado de um leitor de dicionário XML especificado.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointAddress" /> ler do leitor XML de dicionário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#25](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFrom">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EndpointAddress ReadFrom (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.EndpointAddress ReadFrom(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.ReadFrom(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> do que o endereço do ponto de extremidade é obtido.</param>
+        <summary>Lê um endereço de ponto de extremidade para uma versão de endereço especificado de um leitor XML especificado.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointAddress" /> ler do leitor de XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como ler um endereço de ponto de extremidade de um leitor de dicionário XML.  
+  
+ [!code-csharp[EndpointAddress#12](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFrom">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EndpointAddress ReadFrom (System.Xml.XmlDictionaryReader reader, System.Xml.XmlDictionaryString localName, System.Xml.XmlDictionaryString ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.EndpointAddress ReadFrom(class System.Xml.XmlDictionaryReader reader, class System.Xml.XmlDictionaryString localName, class System.Xml.XmlDictionaryString ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.ReadFrom(System.Xml.XmlDictionaryReader,System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="localName" Type="System.Xml.XmlDictionaryString" />
+        <Parameter Name="ns" Type="System.Xml.XmlDictionaryString" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlDictionaryReader" /> do que o endereço do ponto de extremidade é obtido.</param>
+        <param name="localName">Um <see cref="T:System.Xml.XmlDictionaryString" /> que contém o nome local para o nó XML conter o endereço de ponto de extremidade.</param>
+        <param name="ns">Um <see cref="T:System.Xml.XmlDictionaryString" /> que contém o namespace para o nó XML conter o endereço de ponto de extremidade.</param>
+        <summary>Lê um endereço de ponto de extremidade com um nome qualificado especificado de um leitor de dicionário XML especificado.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointAddress" /> com o nome qualificado de leitura do leitor XML de dicionário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como ler um endereço de ponto de extremidade de um leitor de dicionário XML.  
+  
+ [!code-csharp[EndpointAddress#11](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFrom">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EndpointAddress ReadFrom (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlDictionaryReader reader, System.Xml.XmlDictionaryString localName, System.Xml.XmlDictionaryString ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.EndpointAddress ReadFrom(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlDictionaryReader reader, class System.Xml.XmlDictionaryString localName, class System.Xml.XmlDictionaryString ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.ReadFrom(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlDictionaryReader,System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+        <Parameter Name="localName" Type="System.Xml.XmlDictionaryString" />
+        <Parameter Name="ns" Type="System.Xml.XmlDictionaryString" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="reader">O <see cref="T:System.Xml.XmlDictionaryReader" /> do que o endereço do ponto de extremidade é obtido.</param>
+        <param name="localName">Contém o nome local para o nó XML conter o endereço de ponto de extremidade.</param>
+        <param name="ns">Contém o namespace para o nó XML conter o endereço de ponto de extremidade.</param>
+        <summary>Lê um endereço de ponto de extremidade para uma versão de endereço especificado com um nome qualificado especificado de um leitor de dicionário XML especificado.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointAddress" /> com o nome qualificado de leitura do leitor de XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#26](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFrom">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EndpointAddress ReadFrom (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlReader reader, string localName, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.EndpointAddress ReadFrom(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlReader reader, string localName, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.ReadFrom(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlReader,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> do que o endereço do ponto de extremidade é obtido.</param>
+        <param name="localName">Contém o nome local para o nó XML conter o endereço de ponto de extremidade.</param>
+        <param name="ns">Contém o namespace para o nó XML conter o endereço de ponto de extremidade.</param>
+        <summary>Lê um endereço de ponto de extremidade para uma versão de endereço especificado com um nome qualificado especificado de um leitor XML especificado.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointAddress" /> com o nome qualificado de leitura do leitor de XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#26](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres canônica do URI contido no endereço do ponto de extremidade.</summary>
+        <returns>O URI que identifica o ponto de extremidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#27](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddress.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o URI do ponto de extremidade.</summary>
+        <value>O <see cref="T:System.Uri" /> do ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O URI identifica onde uma mensagem está sendo enviada. Para definir um URI para um endereço de ponto de extremidade, use <xref:System.ServiceModel.EndpointAddressBuilder.Uri%2A>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddress#19](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentsTo">
+      <MemberSignature Language="C#" Value="public void WriteContentsTo (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteContentsTo(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.WriteContentsTo(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="writer">O <see cref="T:System.Xml.XmlDictionaryWriter" /> para que o endereço do ponto de extremidade é salvo.</param>
+        <summary>Salva o filho todos os nós do nó para o gravador de dicionário XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#29](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#29)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ou <paramref name="addressingVersion" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentsTo">
+      <MemberSignature Language="C#" Value="public void WriteContentsTo (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteContentsTo(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.WriteContentsTo(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> para que o endereço do ponto de extremidade é salvo.</param>
+        <summary>Salva o filho todos os nós do nó para o gravador XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#30](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ou <paramref name="addressingVersion" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.WriteTo(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="writer">O <see cref="T:System.Xml.XmlDictionaryWriter" /> para que o endereço do ponto de extremidade é salvo.</param>
+        <summary>Salva o endereço de ponto de extremidade atual de uma versão especificada para um gravador de dicionário XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#31](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#31)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ou <paramref name="addressingVersion" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.WriteTo(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> para que o endereço do ponto de extremidade é salvo.</param>
+        <summary>Salva o endereço de ponto de extremidade atual de uma versão especificada para um gravador XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#32](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> ou <paramref name="addressingVersion" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlDictionaryWriter writer, System.Xml.XmlDictionaryString localname, System.Xml.XmlDictionaryString ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlDictionaryWriter writer, class System.Xml.XmlDictionaryString localname, class System.Xml.XmlDictionaryString ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.WriteTo(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlDictionaryWriter,System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="localName" Type="System.Xml.XmlDictionaryString" />
+        <Parameter Name="ns" Type="System.Xml.XmlDictionaryString" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="writer">O <see cref="T:System.Xml.XmlDictionaryWriter" /> para que o endereço do ponto de extremidade é salvo.</param>
+        <param name="localname">To be added.</param>
+        <param name="ns">O <see cref="T:System.Xml.XmlDictionaryString" /> que contém o namespace para o nó XML conter o endereço de ponto de extremidade.</param>
+        <summary>Salva o endereço de ponto de extremidade atual de uma versão especificada para um gravador de XML de dicionário com um espaço para nome especificado e o nome local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#33](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" />or <paramref name="addressingVersion" /> or <paramref name="localName" /> or <paramref name="ns" /> is <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.ServiceModel.Channels.AddressingVersion addressingVersion, System.Xml.XmlWriter writer, string localname, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.ServiceModel.Channels.AddressingVersion addressingVersion, class System.Xml.XmlWriter writer, string localname, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddress.WriteTo(System.ServiceModel.Channels.AddressingVersion,System.Xml.XmlWriter,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> do endereço do ponto de extremidade atual.</param>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> para que o endereço do ponto de extremidade é salvo.</param>
+        <param name="localname">To be added.</param>
+        <param name="ns">O <see cref="T:System.Xml.XmlDictionaryString" /> que contém o namespace para o nó XML conter o endereço de ponto de extremidade.</param>
+        <summary>Salva o endereço de ponto de extremidade atual de uma versão especificada para um gravador XML com um espaço para nome especificado e o nome local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddress#33](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddress/cs/snippets.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" />or <paramref name="addressingVersion" /> or <paramref name="localName" /> or <paramref name="ns" /> is <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

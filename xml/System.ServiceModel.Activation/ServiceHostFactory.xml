@@ -1,0 +1,138 @@
+<Type Name="ServiceHostFactory" FullName="System.ServiceModel.Activation.ServiceHostFactory">
+  <TypeSignature Language="C#" Value="public class ServiceHostFactory : System.ServiceModel.Activation.ServiceHostFactoryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceHostFactory extends System.ServiceModel.Activation.ServiceHostFactoryBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.ServiceHostFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activation.ServiceHostFactoryBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fábrica que fornece instâncias do <see cref="T:System.ServiceModel.ServiceHost" /> em ambientes de hospedagem gerenciados em que a instância do host é criada dinamicamente em resposta às mensagens de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os ambientes de hospedagem gerenciados que oferece suporte à ativação dinâmica são serviços de informações da Internet (IIS) e o serviço de ativação de processos do Windows (WAS).  
+  
+ Se você tiver implementado um personalizado derivado de <xref:System.ServiceModel.ServiceHost>, considere também a implementação de uma fábrica que deriva de <xref:System.ServiceModel.Activation.ServiceHostFactory> classe.  
+  
+ Se você tiver implementado um personalizado derivado de <xref:System.ServiceModel.ServiceHostBase> em vez disso, considere também a implementação de uma fábrica que deriva de sua fábrica de <xref:System.ServiceModel.Activation.ServiceHostFactoryBase> diretamente.  
+  
+   
+  
+## Examples  
+ Estes exemplos mostram como usar o <xref:System.ServiceModel.Activation.ServiceHostFactory> classe:  
+  
+ [!code-csharp[ServiceHostFactory#0](~/samples/snippets/csharp/VS_Snippets_CFX/servicehostfactory/cs/program.cs#0)]
+ [!code-vb[ServiceHostFactory#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/servicehostfactory/vb/program.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceHostFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceHostFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activation.ServiceHostFactory" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Estes exemplos mostram como usar o <xref:System.ServiceModel.Activation.ServiceHostFactory.%23ctor%2A>:  
+  
+ [!code-csharp[ServiceHostFactory#1](~/samples/snippets/csharp/VS_Snippets_CFX/servicehostfactory/cs/program.cs#1)]
+ [!code-vb[ServiceHostFactory#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/servicehostfactory/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceHost">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.ServiceHostBase CreateServiceHost (string constructorString, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.ServiceHostBase CreateServiceHost(string constructorString, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost(System.String,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHostBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constructorString" Type="System.String" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="constructorString">Os dados de inicialização são passados para a <see cref="T:System.ServiceModel.ServiceHostBase" /> instância sendo construída pela fábrica.</param>
+        <param name="baseAddresses">O <see cref="T:System.Array" /> do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Cria um <see cref="T:System.ServiceModel.ServiceHost" /> com endereços básicos específicos e inicializa-o com os dados especificados.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.ServiceHost" /> com endereços base específicos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%28System.String%2CSystem.Uri%5B%5D%29> método:  
+  
+ [!code-csharp[ServiceHostFactory#3](~/samples/snippets/csharp/VS_Snippets_CFX/servicehostfactory/cs/program.cs#3)]
+ [!code-vb[ServiceHostFactory#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/servicehostfactory/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="baseAddress" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum contexto de hospedagem fornecido ou <paramref name="constructorString" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceHost">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.ServiceHost CreateServiceHost (Type serviceType, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.ServiceHost CreateServiceHost(class System.Type serviceType, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost(System.Type,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHost</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Especifica o tipo de serviço de host.</param>
+        <param name="baseAddresses">O <see cref="T:System.Array" /> do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Cria um <see cref="T:System.ServiceModel.ServiceHost" /> para um tipo específico de serviço com um endereço básico específico.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.ServiceHost" /> para o tipo de serviço especificado com um endereço base específico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como criar uma implementação de substituição do <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> método:  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

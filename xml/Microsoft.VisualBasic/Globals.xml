@@ -1,0 +1,183 @@
+<Type Name="Globals" FullName="Microsoft.VisualBasic.Globals">
+  <TypeSignature Language="C#" Value="public sealed class Globals" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Globals extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Globals" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O módulo <see langword="Globals" /> contém funções de mecanismo de script.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este módulo oferece suporte a palavras-chave de linguagem Visual Basic e membros da biblioteca em tempo de execução que fornecem informações sobre o tempo de execução atualmente em uso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `ScriptEngineMajorVersion` propriedade e propriedades relacionadas para retornar uma cadeia de caracteres que descreve as informações de tempo de execução atual:  
+  
+```  
+Function getRuntimeInfo() As String  
+    Dim runtime As String = ScriptEngine & " Version "  
+    runtime &= CStr(ScriptEngineMajorVersion) & "."  
+    runtime &= CStr(ScriptEngineMinorVersion) & "."  
+    runtime &= CStr(ScriptEngineBuildVersion)  
+    ' Return the current runtime information.  
+    Return runtime  
+End Function  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ScriptEngine">
+      <MemberSignature Language="C#" Value="public static string ScriptEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ScriptEngine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Globals.ScriptEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see langword="String" /> que representa o tempo de execução em uso no momento.</summary>
+        <value>Retorna um <see langword="String" /> que representa o tempo de execução em uso no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `ScriptEngine` propriedade retorna a cadeia de caracteres "VB".  
+  
+ Você pode usar `ScriptEngine` quando seu aplicativo é executado como um programa autônomo, em um script ou em um aplicativo host.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `ScriptEngine` propriedade e propriedades relacionadas para retornar uma cadeia de caracteres que descreve as informações de tempo de execução atuais:  
+  
+ [!code-vb[VbVbalrScriptEngineProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrScriptEngineProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptEngineBuildVersion">
+      <MemberSignature Language="C#" Value="public static int ScriptEngineBuildVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ScriptEngineBuildVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see langword="Integer" /> que contém o número de versão de compilação de tempo de execução atualmente em uso.</summary>
+        <value>Retorna um <see langword="Integer" /> que contém o número de versão de compilação de tempo de execução atualmente em uso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado corresponde diretamente às informações de versão contidas na DLL para o tempo de execução atual.  
+  
+ Você pode usar `ScriptEngineBuildVersion` quando seu aplicativo é executado como um programa autônomo, em um script ou em um aplicativo host.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `ScriptEngineBuildVersion` propriedade e propriedades relacionadas para retornar uma cadeia de caracteres que descreve as informações de tempo de execução atuais:  
+  
+ [!code-vb[VbVbalrScriptEngineProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrScriptEngineProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptEngineMajorVersion">
+      <MemberSignature Language="C#" Value="public static int ScriptEngineMajorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ScriptEngineMajorVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see langword="Integer" /> que contém o número de versão principal do tempo de execução atualmente em uso.</summary>
+        <value>Retorna um <see langword="Integer" /> que contém o número de versão principal do tempo de execução atualmente em uso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado corresponde diretamente às informações de versão contidas na DLL para o tempo de execução atual.  
+  
+ Você pode usar `ScriptEngineMajorVersion` quando seu aplicativo é executado como um programa autônomo, em um script ou em um aplicativo host.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `ScriptEngineMajorVersion` propriedade e propriedades relacionadas para retornar uma cadeia de caracteres que descreve as informações de tempo de execução atuais:  
+  
+ [!code-vb[VbVbalrScriptEngineProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrScriptEngineProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptEngineMinorVersion">
+      <MemberSignature Language="C#" Value="public static int ScriptEngineMinorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ScriptEngineMinorVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see langword="Integer" /> que contém o número de versão secundária do tempo de execução atualmente em uso.</summary>
+        <value>Retorna um <see langword="Integer" /> que contém o número de versão secundária do tempo de execução atualmente em uso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado corresponde diretamente às informações de versão contidas na DLL para o tempo de execução atual.  
+  
+ Você pode usar `ScriptEngineMinorVersion` quando seu aplicativo é executado como um programa autônomo, em um script ou em um aplicativo host.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `ScriptEngineMinorVersion` propriedade e propriedades relacionadas para retornar uma cadeia de caracteres que descreve as informações de tempo de execução atuais:  
+  
+ [!code-vb[VbVbalrScriptEngineProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrScriptEngineProperties/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

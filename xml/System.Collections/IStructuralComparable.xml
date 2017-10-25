@@ -1,0 +1,148 @@
+<Type Name="IStructuralComparable" FullName="System.Collections.IStructuralComparable">
+  <TypeSignature Language="C#" Value="public interface IStructuralComparable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IStructuralComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.IStructuralComparable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>FSharp.Core</AssemblyName>
+    <AssemblyVersion>2.3.98.1</AssemblyVersion>
+    <AssemblyVersion>3.98.4.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Dá suporte à comparação estrutural de objetos da coleção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.IStructuralComparable> interface permite que você implemente comparações personalizadas de membros da coleção. Ou seja, você pode definir com precisão o que significa para um objeto de coleção para preceder, siga ou ocorrer na mesma posição na ordem de classificação como um segundo objeto de coleção. Você pode especificar que essa definição usada com um tipo de coleção que aceita o <xref:System.Collections.IStructuralComparable> interface.  
+  
+ A interface tem um único membro, <xref:System.Collections.IStructuralComparable.CompareTo%2A>, que determina se o objeto de coleção atual é menor que, igual a ou maior do que um segundo objeto na ordem de classificação. Os membros ou os elementos na instância atual com os de um segundo objeto a comparação real é executada por um <xref:System.Collections.IComparer> implementação de interface, que contém a definição de sua comparação personalizada.  
+  
+> [!NOTE]
+>  O <xref:System.Collections.IStructuralComparable> interface dá suporte a apenas comparações estruturais para classificação ou ordenação. O <xref:System.Collections.IStructuralEquatable> interface oferece suporte a comparações personalizadas para igualdade estrutural.  
+  
+ O .NET Framework fornece dois comparadores de padrão. Um é retornado pelo <xref:System.Collections.StructuralComparisons.StructuralComparer%2A?displayProperty=nameWithType> propriedade; a outra é retornada pelo <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> propriedade.  
+  
+ As classes de tupla genérico (<xref:System.Tuple%601>, <xref:System.Tuple%602>, <xref:System.Tuple%603>, e assim por diante) e o <xref:System.Array> classe fornecer implementações explícitas do <xref:System.Collections.IStructuralComparable> interface. Conversão (em c#) ou convertendo (no Visual Basic) a instância atual de uma matriz ou coleção de itens para um <xref:System.Collections.IStructuralComparable> valor interface e fornecendo o <xref:System.Collections.IComparer> implementação como um argumento para o <xref:System.Collections.IStructuralComparable.CompareTo%2A> método, você pode definir uma ordem de classificação personalizada para a matriz ou coleção. No entanto, você não chama o <xref:System.Collections.IStructuralComparable.CompareTo%2A> método diretamente na maioria dos casos. Em vez disso, o <xref:System.Collections.IStructuralComparable.CompareTo%2A> método é chamado por métodos de classificação, como <xref:System.Array.Sort%28System.Array%2CSystem.Collections.IComparer%29>. Nesse caso, você define sua <xref:System.Collections.IComparer> implementação e passá-lo como um argumento para o construtor de classe uma classificação método ou uma coleção do objeto. O <xref:System.Collections.IStructuralComparable.CompareTo%2A> método com o comparador personalizado é chamado automaticamente sempre que a coleção é classificada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma matriz de <xref:System.Tuple%606> objetos que contém dados de população para três cidades EUA 1960 a 2000. Componente de primeiro do sêxtupla é o nome da cidade. Os cinco componentes restantes representam a população em intervalos de dez anos de 1960 a 2000.  
+  
+ O `PopulationComparer` classe fornece um <xref:System.Collections.IComparer> implementação que permite que a matriz de sextuples a ser classificada por qualquer um de seus componentes. Dois valores são fornecidos para o `PopulationComparer` classe em seu construtor: a posição do componente que define a ordem de classificação e um valor booliano que indica se os objetos de tupla devem ser classificados em ordem crescente ou decrescente.  
+  
+ O exemplo, em seguida, exibe os elementos na matriz na ordem não classificado, classifica pelo terceiro componente (a população em 1970) e exibi-los, classifica pelo componente sexto (a população em 2000) e exibe-os. Observe que o exemplo não chama diretamente o <xref:System.Collections.IStructuralComparable.CompareTo%2A> método. O método é chamado implicitamente, o <xref:System.Array.Sort%28System.Array%2CSystem.Collections.IComparer%29> método para cada objeto de coleção de itens na matriz.  
+  
+ [!code-csharp[System.Tuple\`6.CompareTo#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple`6.compareto/cs/compareto2.cs#2)]
+ [!code-vb[System.Tuple\`6.CompareTo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple`6.compareto/vb/compareto2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object other, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object other, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IStructuralComparable.CompareTo(System.Object,System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>FSharp.Core</AssemblyName>
+        <AssemblyVersion>2.3.98.1</AssemblyVersion>
+        <AssemblyVersion>3.98.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="other">O objeto a ser comparado com a instância atual.</param>
+        <param name="comparer">Um objeto que compara os membros do objeto da coleção atual com os membros correspondentes do <c>outros</c>.</param>
+        <summary>Determina se o objeto da coleção atual precede, ocorre na mesma posição ou segue a outro objeto na ordem de classificação.</summary>
+        <returns>Um inteiro que indica a relação do objeto da coleção atual para <paramref name="other" />, conforme mostrado na tabela a seguir.  
+  
+ <list type="table"><listheader><term>Valor de retorno  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term> -1  
+  
+ </term><description>A instância atual é anterior <paramref name="other" />.  
+  
+ </description></item><item><term> 0  
+  
+ </term><description>A instância atual e <paramref name="other" /> são iguais.  
+  
+ </description></item><item><term> 1  
+  
+ </term><description>A instância atual segue <paramref name="other" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.IStructuralComparable.CompareTo%2A> método dá suporte à comparação estrutural personalizada e a classificação de objetos de tupla e de matriz. O <xref:System.Collections.IStructuralComparable.CompareTo%2A> chamadas de método de `comparer` do objeto <xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType> método para comparar elementos individuais da matriz ou componentes de tupla, começando com o primeiro elemento ou componente. Chamadas individuais para <xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType> final e o <xref:System.Collections.IStructuralComparable.CompareTo%2A> método retorna um valor quando uma das seguintes condições for verdadeira:  
+  
+-   O <xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType> método retornará -1.  
+  
+-   O <xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType> método retorna 1.  
+  
+-   O <xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType> método é chamado para o último elemento ou componente no objeto de coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma matriz de <xref:System.Tuple%606> objetos que contém dados de população para três cidades EUA 1960 a 2000. Componente de primeiro do sêxtupla é o nome da cidade. Os cinco componentes restantes representam a população em intervalos de dez anos de 1960 a 2000.  
+  
+ O `PopulationComparer` classe fornece um <xref:System.Collections.IComparer> implementação que permite que a matriz de sextuples a ser classificada por qualquer um de seus componentes. Dois valores são fornecidos para o `PopulationComparer` classe em seu construtor: a posição do componente que define a ordem de classificação, e um <xref:System.Boolean> valor que indica se os objetos de tupla devem ser classificados em ordem crescente ou decrescente.  
+  
+ O exemplo, em seguida, exibe os elementos na matriz na ordem não classificado, classifica pelo terceiro componente (a população em 1970) e exibi-los, classifica pelo componente sexto (a população em 2000) e exibe-os. Observe que o exemplo não chama diretamente o <xref:System.Collections.IStructuralComparable.CompareTo%2A?displayProperty=nameWithType> implementação. O método é chamado implicitamente, o <xref:System.Array.Sort%28System.Array%2CSystem.Collections.IComparer%29> método para cada objeto de coleção de itens na matriz.  
+  
+ [!code-csharp[System.Tuple\`6.CompareTo#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple`6.compareto/cs/compareto2.cs#2)]
+ [!code-vb[System.Tuple\`6.CompareTo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple`6.compareto/vb/compareto2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Essa instância e <paramref name="other" /> não são do mesmo tipo.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

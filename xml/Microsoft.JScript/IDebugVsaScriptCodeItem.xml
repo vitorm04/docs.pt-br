@@ -1,0 +1,85 @@
+<Type Name="IDebugVsaScriptCodeItem" FullName="Microsoft.JScript.IDebugVsaScriptCodeItem">
+  <TypeSignature Language="C#" Value="public interface IDebugVsaScriptCodeItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDebugVsaScriptCodeItem" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.IDebugVsaScriptCodeItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("6DFE759A-CB8B-4ca0-A973-1D04E0BF0B53")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define métodos que avaliam expressões e analisar cadeias de caracteres. Normalmente, essa interface é implementada por um objeto que representa um bloco de código e, normalmente, ele é chamado por um depurador. Essa interface fornece funcionalidade adicional que é necessária para um host IActiveScript.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="public object Evaluate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Evaluate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebugVsaScriptCodeItem.Evaluate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe, avalia o bloco, expressão ou instrução representado pelo item de código e retorna o valor. Normalmente, ele é chamado por um depurador que precisa para avaliar uma expressão (em uma janela de observação, por exemplo). Para expressões, o valor é o resultado da expressão. Para instruções e blocos, a expressão resultante é a última expressão calculada pela instrução ou bloco.</summary>
+        <returns>Retorna um valor que representa a avaliação da expressão, instrução ou bloco.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que o <xref:Microsoft.JScript.IDebugVsaScriptCodeItem.Evaluate%2A> método é funcionalmente idêntico de <xref:Microsoft.JScript.IVsaScriptCodeItem.Execute%2A> método. Somente os atributos de marshaling são diferentes. Esta versão da interface permite que um depurador não gerenciado obter o valor de retorno como uma `IUnknown` ponteiro em vez de `VARIANT`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseNamedBreakPoint">
+      <MemberSignature Language="C#" Value="public bool ParseNamedBreakPoint (string input, out string functionName, out int nargs, out string arguments, out string returnType, out ulong offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ParseNamedBreakPoint(string input, [out] string&amp; functionName, [out] int32&amp; nargs, [out] string&amp; arguments, [out] string&amp; returnType, [out] unsigned int64&amp; offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebugVsaScriptCodeItem.ParseNamedBreakPoint(System.String,System.String@,System.Int32@,System.String@,System.String@,System.UInt64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="functionName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="nargs" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="arguments" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="returnType" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="offset" Type="System.UInt64&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">Uma cadeia de caracteres de ponto de interrupção nomeada bem formado fornecendo uma função, a lista de argumento opcional e o deslocamento de IL opcional.</param>
+        <param name="functionName">Parâmetro out retornando o nome da função analisar a cadeia de caracteres de entrada ou a cadeia de caracteres vazia se a cadeia de caracteres de entrada não está bem formada.</param>
+        <param name="nargs">Parâmetro out retornando o número de argumentos na lista de argumentos opcionais. Retorna zero se não houver nenhuma lista de argumentos, ou se a cadeia de caracteres não está bem formada.</param>
+        <param name="arguments">Parâmetro out retornando uma lista separada por espaços de nomes de tipos de todos os argumentos na lista de argumentos, ou uma cadeia de caracteres vazia se a lista de argumentos está ausente ou a cadeia de caracteres de entrada não estava bem formada.</param>
+        <param name="returnType">Parâmetro out retornar uma cadeia de caracteres que contém o tipo de retorno da função nomeada na entrada, ou a cadeia de caracteres vazia se o tipo de retorno estava ausente ou a cadeia de caracteres de entrada não estava bem formado.</param>
+        <param name="offset">Inteiro longo não assinado fornecendo o deslocamento de IL a cadeia de caracteres de entrada, ou zero se não havia nenhum deslocamento de IL ou a cadeia de caracteres não foi bem formada.</param>
+        <summary>Quando implementada em uma classe, analisa cadeias de caracteres e retorna as informações de limite analisado. Normalmente, esse método é chamado por um depurador que precisa para analisar as informações sobre um ponto de interrupção é representado como um <see langword="string" />. O depurador pode ter um ponto de interrupção digitado pelo usuário no formato *functionname de argumentos de ILoffset*. Uma cadeia de caracteres do nome do ponto de interrupção pode ter um formato complexo, por exemplo, <c>F.B ([C.D], int, arg: double): C.Abc + 123.</c> A lista de parâmetros é opcional, assim como o deslocamento de IL.</summary>
+        <returns>Retorna <see langword="true" /> se o ponto de interrupção nomeado é analisado com êxito, <see langword="false" /> caso contrário.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

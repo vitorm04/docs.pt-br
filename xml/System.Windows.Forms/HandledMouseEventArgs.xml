@@ -1,0 +1,116 @@
+<Type Name="HandledMouseEventArgs" FullName="System.Windows.Forms.HandledMouseEventArgs">
+  <TypeSignature Language="C#" Value="public class HandledMouseEventArgs : System.Windows.Forms.MouseEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HandledMouseEventArgs extends System.Windows.Forms.MouseEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HandledMouseEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.MouseEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que um controle personalizado impeça que o evento <see cref="E:System.Windows.Forms.Control.MouseWheel" /> seja enviado ao seu contêiner pai.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você desejará usar <xref:System.Windows.Forms.HandledMouseEventArgs> principalmente durante o desenvolvimento de um controle que precisa tratar eventos de roda do mouse em si e evitar que eles sejam vistos por contêiner de pai imediato do controle. <xref:System.Windows.Forms.HandledMouseEventArgs>não é passado diretamente pelo <xref:System.Windows.Forms.MouseEventHandler> quando ele trata o <xref:System.Windows.Forms.Control.MouseWheel> evento. Em vez disso, <xref:System.Windows.Forms.MouseEventHandler> usa um <xref:System.Windows.Forms.MouseEventArgs>, que deve ser convertido em um <xref:System.Windows.Forms.HandledMouseEventArgs> para cancelar uma ocorrência de <xref:System.Windows.Forms.Control.MouseWheel>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como marcar o evento de roda de mouse tratados em um controle personalizado.  
+  
+ [!code-vb[System.Windows.Forms.HandledMouseEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HandledMouseEventArgs/VB/MouseWheelControl.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HandledMouseEventArgs (System.Windows.Forms.MouseButtons button, int clicks, int x, int y, int delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.MouseButtons button, int32 clicks, int32 x, int32 y, int32 delta) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HandledMouseEventArgs.#ctor(System.Windows.Forms.MouseButtons,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="clicks" Type="System.Int32" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="delta" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="button">Uma da <see cref="T:System.Windows.Forms.MouseButtons" /> valores indicando qual botão do mouse foi pressionado.</param>
+        <param name="clicks">O número de vezes que um botão do mouse foi pressionado.</param>
+        <param name="x">A coordenada x de um clique do mouse, em pixels.</param>
+        <param name="y">A coordenada y de um clique do mouse, em pixels.</param>
+        <param name="delta">Uma contagem com sinal do número de detentores que o botão de rolagem girou.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.HandledMouseEventArgs" /> classe com o botão do mouse especificada, o número de botão do mouse clica em coordenadas da tela horizontal e vertical e a alteração da posição do ponteiro do mouse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HandledMouseEventArgs (System.Windows.Forms.MouseButtons button, int clicks, int x, int y, int delta, bool defaultHandledValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.MouseButtons button, int32 clicks, int32 x, int32 y, int32 delta, bool defaultHandledValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HandledMouseEventArgs.#ctor(System.Windows.Forms.MouseButtons,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="clicks" Type="System.Int32" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="delta" Type="System.Int32" />
+        <Parameter Name="defaultHandledValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="button">Uma da <see cref="T:System.Windows.Forms.MouseButtons" /> valores indicando qual botão do mouse foi pressionado.</param>
+        <param name="clicks">O número de vezes que um botão do mouse foi pressionado.</param>
+        <param name="x">A coordenada x de um clique do mouse, em pixels.</param>
+        <param name="y">A coordenada y de um clique do mouse, em pixels.</param>
+        <param name="delta">Uma contagem com sinal do número de detentores que o botão de rolagem girou.</param>
+        <param name="defaultHandledValue">
+          <see langword="true" /> se o evento for tratado; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.HandledMouseEventArgs" /> coordenadas de classe com o botão do mouse especificado, o número de cliques de botão do mouse, a tela horizontal e vertical, a alteração da posição do ponteiro do mouse e o valor que indica se o evento é manipulado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HandledMouseEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se esse evento deve ser encaminhado para o contêiner pai do controle.</summary>
+        <value>
+          <see langword="true" />Se o evento mouse deve ir para o controle pai. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como marcar o evento de roda de mouse tratados em um controle personalizado.  
+  
+ [!code-vb[System.Windows.Forms.HandledMouseEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HandledMouseEventArgs/VB/MouseWheelControl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

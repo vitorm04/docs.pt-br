@@ -1,0 +1,388 @@
+<Type Name="PersonalizationState" FullName="System.Web.UI.WebControls.WebParts.PersonalizationState">
+  <TypeSignature Language="C#" Value="public abstract class PersonalizationState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PersonalizationState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizationState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define a funcionalidade básica que representa os dados de personalização de uma página.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam dessa classe base contém a implementação real para gerenciar, aplicar e extrair dados de personalização. O <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> classe faz uso de uma referência para o estado de personalização <xref:System.Web.UI.WebControls.WebParts.PersonalizationState>.  
+  
+ Se um desenvolvedor grava um personalizado <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> implementação, um personalizado <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider> também deve ser escrito. <xref:System.Web.UI.WebControls.WebParts.PersonalizationProvider>instâncias são responsáveis por criar e consumir <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> instâncias.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Classes derivadas sempre devem chamar o construtor da classe base a partir do construtor derivado.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PersonalizationState (System.Web.UI.WebControls.WebParts.WebPartManager webPartManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPartManager webPartManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.#ctor(System.Web.UI.WebControls.WebParts.WebPartManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webPartManager" Type="System.Web.UI.WebControls.WebParts.WebPartManager" />
+      </Parameters>
+      <Docs>
+        <param name="webPartManager">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> que gerencia os controles de Web Parts que têm dados de personalização.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto criado por este construtor gerencia o estado dos controles de Web Parts que são gerenciados pelo especificado <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="webPartManager" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Classes derivadas sempre devem chamar o construtor da classe base a partir do construtor derivado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyWebPartManagerPersonalization">
+      <MemberSignature Language="C#" Value="public abstract void ApplyWebPartManagerPersonalization ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyWebPartManagerPersonalization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.ApplyWebPartManagerPersonalization" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído, aplica os dados de personalização para a <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle associado com a instância do estado de personalização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O associado <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle era um parâmetro de construtor que criou o <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyWebPartPersonalization">
+      <MemberSignature Language="C#" Value="public abstract void ApplyWebPartPersonalization (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyWebPartPersonalization(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.ApplyWebPartPersonalization(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">As Web Parts controlar a personalização de quais dados são aplicados.</param>
+        <summary>Quando substituído, aplica os dados de personalização para o controle de Web Parts especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é a definição abstrata do método usado para aplicar os dados de personalização para um controle de Web Parts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractWebPartManagerPersonalization">
+      <MemberSignature Language="C#" Value="public abstract void ExtractWebPartManagerPersonalization ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExtractWebPartManagerPersonalization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.ExtractWebPartManagerPersonalization" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído, extrai informações de personalização do <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle associado com o estado atual de personalização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é a definição abstrata de um método usado para extrair as informações de personalização do <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle associado a <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> objeto. O associado <xref:System.Web.UI.WebControls.WebParts.WebPartManager> foi um parâmetro de construtor que foi usado para criar o <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractWebPartPersonalization">
+      <MemberSignature Language="C#" Value="public abstract void ExtractWebPartPersonalization (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExtractWebPartPersonalization(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.ExtractWebPartPersonalization(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">As Web Parts de controle de personalização de quais dados são extraídos.</param>
+        <summary>Quando substituído, extrai dados de personalização do controle de Web Parts especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é a definição abstrata do método usado para extrair dados de personalização de um controle de Web Parts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAuthorizationFilter">
+      <MemberSignature Language="C#" Value="public abstract string GetAuthorizationFilter (string webPartID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetAuthorizationFilter(string webPartID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.GetAuthorizationFilter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPartID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="webPartID">A ID do controle de Web Parts do qual o <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter" /> é recuperado.</param>
+        <summary>Recupera o filtro de autorização para o controle de Web Parts especificado.</summary>
+        <returns>A cadeia de filtro de autorização para um controle de Web Parts.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> de cadeia de caracteres para um <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar antes de uma instância desse objeto é criada. Esse método deve retornar `null` se não houver nenhum valor personalizado para o <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> propriedade.  
+  
+ O conjunto de controles de Web Parts não implementar qualquer comportamento padrão para o <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> propriedade. A propriedade é fornecida para que um desenvolvedor pode atribuir um valor de cadeia de caracteres arbitrária para um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle; isso pode propriedade ser verificada assinando o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.AuthorizeWebPart> evento no <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle em uma página para determinar se o controle pode ser adicionado à página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationState.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as informações de personalização foi alterado.</summary>
+        <value>
+          <see langword="true" />Se qualquer instância de estado de personalização foi alterado (é "sujos"); Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> classe verifica essa propriedade para determinar se o estado de personalização precisa ser gravados de volta para o repositório de dados subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public abstract bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationState.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído, obtém um valor que indica se o estado de qualquer personalização foram extraído por uma instância de estado.</summary>
+        <value>
+          <see langword="true" />Se o estado de qualquer personalização foram extraído por uma instância de estado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é uma definição abstrata de uma propriedade que pode ser chamada para determinar se o estado de qualquer personalização foram extraído por uma instância de estado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirty">
+      <MemberSignature Language="C#" Value="protected void SetDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.SetDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Marca o estado de personalização atual como tendo sido alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam de <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> pode usar esse método para marcar se tivesse sido alterado (ou sendo "sujos"), indicando a necessidade de reserialize e salvar o estado de personalização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWebPartDirty">
+      <MemberSignature Language="C#" Value="public abstract void SetWebPartDirty (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetWebPartDirty(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.SetWebPartDirty(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">O controle de Web Parts a ser marcado como tendo sido alterado.</param>
+        <summary>Quando substituído, marca um controle de Web Parts como tendo sido alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma definição abstrata do método usado para indicar que um controle de Web Parts foi alterado (é "sujos"). O <xref:System.Web.UI.WebControls.WebParts.WebPart> classe expõe métodos (que por sua vez, chamar este método) que podem ser usados por desenvolvedores para marcar um controle de Web Parts, como "sujos", indicando a necessidade de reserialize e salvar o estado de personalização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWebPartManagerDirty">
+      <MemberSignature Language="C#" Value="public abstract void SetWebPartManagerDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetWebPartManagerDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.SetWebPartManagerDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído, marca associado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle como tendo sido alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é a definição abstrata do método usado para indicar que o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> instância associada a <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> instância é considerada ter sido alterado (é "sujos").  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> classe expõe um método protegido (que por sua vez chama esse método) que pode ser usado por desenvolvedores para marcar associado <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle como "sujos", indicando a necessidade de reserialize e salvar o estado de personalização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateWebPart">
+      <MemberSignature Language="C#" Value="protected void ValidateWebPart (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ValidateWebPart(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationState.ValidateWebPart(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">O controle de Web Parts a ser validado.</param>
+        <summary>Verifica se o controle de Web Parts especificado é válido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método verifica se `webPart` é um controle de Web Parts válido. A classe base verifica se `webPart` não é `null` e é gerenciado pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle associado a <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> objeto.  
+  
+ Classes que derivam de <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> devem validar controles de Web Parts dentro de qualquer método que funcionam com <xref:System.Web.UI.WebControls.WebParts.WebPart> instâncias. Isso garante que o autônomo <xref:System.Web.UI.WebControls.WebParts.WebPart> instâncias não possuem alterações de estado, gravadas acidentalmente os dados de personalização de uma página.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="webPart" />não é gerenciado atualmente pelo <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> associado a <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationState" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPart" /> é <see langword="null." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartManager">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationState.WebPartManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle atualmente associado com a instância do estado de personalização.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> associado a <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle é o objeto usado como um parâmetro para o construtor que cria o <xref:System.Web.UI.WebControls.WebParts.PersonalizationState> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,102 @@
+<Type Name="ClipboardData" FullName="System.Activities.Presentation.ClipboardData">
+  <TypeSignature Language="C#" Value="public class ClipboardData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ClipboardData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.ClipboardData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os dados passados com a área de transferência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.Presentation.ClipboardData> contém três tipos de dados:  
+  
+-   Os dados em si, acessados por meio de <xref:System.Activities.Presentation.ClipboardData.Data%2A> propriedade.  
+  
+-   Os metadados, acessado por meio de <xref:System.Activities.Presentation.ClipboardData.Metadata%2A> propriedade.  
+  
+-   As informações de versão, acessadas por meio de <xref:System.Activities.Presentation.ClipboardData.Version%2A> propriedade.  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClipboardData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ClipboardData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Activities.Presentation.ClipboardData" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;object&gt; Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;object&gt; Data" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ClipboardData.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os dados passados na área de transferência.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.List`1" /> do tipo <see cref="T:System.Object" /> que contém os dados passados na área de transferência.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;object&gt; Metadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;object&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ClipboardData.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os metadados passados na área de transferência.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.List`1" /> do tipo <see cref="T:System.Object" /> que contém os metadados passados na área de transferência.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ClipboardData.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de versão passadas na área de transferência.</summary>
+        <value>As informações de versão passados na área de transferência.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

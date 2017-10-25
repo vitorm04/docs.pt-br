@@ -1,0 +1,148 @@
+<Type Name="EventRegistrationToken" FullName="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken">
+  <TypeSignature Language="C#" Value="public struct EventRegistrationToken" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit EventRegistrationToken extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um token que é retornado quando um manipulador de eventos é adicionado a um evento de tempo de execução do Windows. O token é usado para remover o manipulador de eventos do evento posteriormente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken> estrutura somente se você usar nativo [!INCLUDE[wrt](~/includes/wrt-md.md)] técnicas para adicionar e remover manipuladores de eventos para [!INCLUDE[wrt](~/includes/wrt-md.md)] eventos. Se você usar a sintaxe fornecida pelas linguagens c# ou Visual Basic para adicionar e remover manipuladores de eventos, <xref:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken> é um detalhe de implementação tratado pelos compiladores.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado.</param>
+        <summary>Retorna um valor que indica se o objeto atual é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto atual é igual a <paramref name="obj" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>O código hash para essa instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken left, System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken left, valuetype System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken.op_Equality(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken,System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+        <Parameter Name="right" Type="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância a ser comparado.</param>
+        <param name="right">A segunda instância a ser comparado.</param>
+        <summary>Indica se dois <see cref="T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" /> instâncias são iguais.</summary>
+        <returns>
+          <see langword="true" /> se os dois objetos forem iguais; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken left, System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken left, valuetype System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken.op_Inequality(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken,System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+        <Parameter Name="right" Type="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância a ser comparado.</param>
+        <param name="right">A segunda instância a ser comparado.</param>
+        <summary>Indica se dois <see cref="T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" /> instâncias não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se as duas instâncias não forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

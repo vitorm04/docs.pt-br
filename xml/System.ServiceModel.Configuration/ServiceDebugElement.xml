@@ -1,0 +1,447 @@
+<Type Name="ServiceDebugElement" FullName="System.ServiceModel.Configuration.ServiceDebugElement">
+  <TypeSignature Language="C#" Value="public sealed class ServiceDebugElement : System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceDebugElement extends System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ServiceDebugElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BehaviorExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento de configuração que especifica os recursos de informações de depuração e ajuda para um serviço do Windows Communication Foundation (WCF). Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir o <xref:System.ServiceModel.Configuration.ServiceDebugElement.IncludeExceptionDetailInFaults%2A> propriedade `true` programaticamente, você pode habilitar o fluxo de informações de exceção gerenciada para o cliente para fins de depuração, bem como a publicação de informações HTML para os usuários que navegam o serviço em navegadores da Web.  
+  
+> [!CAUTION]
+>  Retornando informações de exceção gerenciada aos serviços podem ser um risco à segurança. Isso ocorre porque os detalhes da exceção expõem informações sobre a implementação do cliente interno que pode ser usada por serviços não autorizados.  
+  
+ O <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageEnabled%2A> e <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageEnabled%2A> propriedades instruem o serviço para publicar arquivos de ajuda HTML quando o serviço é exibido usando um navegador HTML.  
+  
+ O <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageUrl%2A> e <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageUrl%2A> propriedades controlam o local da página de ajuda HTML que é exibido.  
+  
+ Para habilitar ou desabilitar uma da <xref:System.ServiceModel.Configuration.ServiceDebugElement> recursos usando um arquivo de configuração, você deve:  
+  
+1.  Adicionar um `behaviorConfiguration` de atributo para o [ &lt;service&gt; ](~/docs/framework/configure-apps/file-schema/wcf/service.md) elemento para sua [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviço. (Os comportamentos de ponto de extremidade são configurados no `<endpoint>` elementos; comportamentos de serviço em [ &lt;service&gt; ](~/docs/framework/configure-apps/file-schema/wcf/service.md) elementos.)  
+  
+2.  Adicionar a ou criar um [ &lt;serviceBehaviors&gt; ](~/docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) seção e adicione um [ &lt;comportamento&gt; ](~/docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento para que com o nome que corresponde a `behaviorConfiguration`valor do atributo da etapa 1. (Comportamentos de ponto de extremidade são configurados usando um [ &lt;endpointBehaviors&gt; ](~/docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento; o serviço comportamentos são configurados usando um [ &lt;serviceBehaviors&gt; ](~/docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) elemento.  
+  
+3.  Adicionar um [ &lt;serviceDebug&gt; ](~/docs/framework/configure-apps/file-schema/wcf/servicedebug.md) elemento para o [ &lt;comportamento&gt; ](~/docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento da etapa 2 e habilitar ou desabilitar as várias propriedades apropriadas para seu cenário.  
+  
+ Para obter um exemplo específico, consulte a seção de exemplo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar um arquivo de configuração para habilitar o recurso de página de ajuda HTML e retornam informações de exceção dentro de uma falha de SOAP para o cliente para fins (além de habilitar o suporte a metadados) de depuração.  
+  
+ [!code-xml[ServiceDebugBehaviorConfig#1](~/samples/snippets/csharp/VS_Snippets_CFX/servicedebugbehaviorconfig/cs/hostapplication.exe.config#1)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceDebugElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceDebugElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.ServiceDebugElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BehaviorType">
+      <MemberSignature Language="C#" Value="public override Type BehaviorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BehaviorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.BehaviorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo deste elemento de comportamento.</summary>
+        <value>O tipo do comportamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.ServiceModel.Configuration.ServiceModelExtensionElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.ServiceModel.Configuration.ServiceModelExtensionElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceDebugElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">O elemento de configuração a serem copiados.</param>
+        <summary>Copia o conteúdo do elemento de configuração especificado para este elemento de configuração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBehavior">
+      <MemberSignature Language="C#" Value="protected override object CreateBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object CreateBehavior() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceDebugElement.CreateBehavior" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpHelpPageBinding">
+      <MemberSignature Language="C#" Value="public string HttpHelpPageBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpHelpPageBinding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpHelpPageBinding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de cadeia de caracteres que especifica a associação a ser usada quando HTTP é utilizado para acessar a página de Ajuda do serviço.</summary>
+        <value>A associação a ser usada quando HTTP é utilizado para acessar a página de Ajuda do serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade não está definida, a associação padrão (HttpTransportBindingElement) é usada para acesso à página de Ajuda do serviço conforme apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpHelpPageBindingConfiguration">
+      <MemberSignature Language="C#" Value="public string HttpHelpPageBindingConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpHelpPageBindingConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageBindingConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpHelpPageBindingConfiguration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que aponta para uma seção XML definindo as informações de configuração adicional para a associação especificada no <see cref="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageBinding" />.</summary>
+        <value>Uma seção XML definindo as informações de configuração adicional para a associação especificada no <see cref="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageBinding" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpHelpPageEnabled">
+      <MemberSignature Language="C#" Value="public bool HttpHelpPageEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HttpHelpPageEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpHelpPageEnabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se [!INCLUDE[indigo1](~/includes/indigo1-md.md)] publica uma página de ajuda HTML no endereço especificado pelo <see cref="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageUrl" /> propriedade.</summary>
+        <value>
+          <see langword="true" />Se WCF publica uma página de Ajuda do HTML. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir essa propriedade `false` para desabilitar a publicação de uma página de ajuda HTML visível para os navegadores HTML.  
+  
+ Para garantir a Ajuda HTML página é publicada no local controlado pelo <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageUrl%2A> propriedade, você deve definir essa propriedade `true`. Além disso, uma das condições a seguir deve também ser atendida:  
+  
+-   O <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageUrl%2A> propriedade é um endereço absoluto que suporta o esquema de protocolo HTTP.  
+  
+-   Há um endereço base para o serviço que suporta o esquema de protocolo HTTP.  
+  
+ Embora uma exceção será lançada se for atribuído um endereço absoluto que não oferece suporte para o esquema de protocolo HTTP para o <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageUrl%2A> página de ajuda de propriedade, qualquer outro cenário no qual nenhum dos critérios acima é atendida resulta em nenhuma exceção e nenhum HTML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpHelpPageUrl">
+      <MemberSignature Language="C#" Value="public Uri HttpHelpPageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri HttpHelpPageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpHelpPageUrl")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local em que o arquivo de ajuda HTML é publicado.</summary>
+        <value>A URL relativa ou absoluta baseada em HTTP, do HTML personalizado ajuda arquivo o usuário vê quando o ponto de extremidade é visto usando um navegador HTML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para habilitar o uso de um arquivo de ajuda HTML personalizado que é retornado por uma solicitação HTTP/Get, por exemplo, um navegador HTML. O local do arquivo de ajuda HTML é resolvido da seguinte maneira.  
+  
+1.  Se o valor dessa propriedade é um endereço relativo, o local do arquivo de ajuda HTML é o valor do endereço base serviço que dá suporte a solicitações HTTP mais este valor de propriedade.  
+  
+2.  Se o valor dessa propriedade é um endereço absoluto e oferece suporte a solicitações HTTP, o local do arquivo de ajuda HTML é o valor dessa propriedade.  
+  
+3.  Se o valor dessa propriedade é absoluto, mas não oferece suporte a solicitações HTTP, uma exceção será lançada.  
+  
+ Essa propriedade só é válida quando o <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpHelpPageEnabled%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpsHelpPageBinding">
+      <MemberSignature Language="C#" Value="public string HttpsHelpPageBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpsHelpPageBinding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpsHelpPageBinding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de cadeia de caracteres que especifica a associação a ser usada quando HTTPS é utilizado para acessar a página de Ajuda do serviço.</summary>
+        <value>A associação a ser usada quando HTTPS é utilizado para acessar a página de Ajuda do serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade não está definida, a associação padrão (HttpsTransportBindingElement) é usada para acesso à página de Ajuda do serviço conforme apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpsHelpPageBindingConfiguration">
+      <MemberSignature Language="C#" Value="public string HttpsHelpPageBindingConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpsHelpPageBindingConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageBindingConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpsHelpPageBindingConfiguration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que aponta para uma seção XML definindo as informações de configuração adicional para a associação especificada no <see cref="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageBinding" />.</summary>
+        <value>Uma seção XML definindo as informações de configuração adicional para a associação especificada no <see cref="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageBinding" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpsHelpPageEnabled">
+      <MemberSignature Language="C#" Value="public bool HttpsHelpPageEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HttpsHelpPageEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpsHelpPageEnabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se [!INCLUDE[indigo1](~/includes/indigo1-md.md)] retorna um arquivo de ajuda HTML via HTTPS no endereço especificado pelo <see cref="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageUrl" /> propriedade.</summary>
+        <value>
+          <see langword="true" />Se um arquivo de ajuda HTML é retornado para clientes que estão fazendo uma solicitação HTTPS/GET, por exemplo, de um navegador HTML; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir essa propriedade `false` para desabilitar a publicação de uma página de ajuda HTML visível para os navegadores HTML.  
+  
+ Para garantir a Ajuda HTML página é publicada no local controlado pelo <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageUrl%2A> propriedade, você deve definir essa propriedade `true`. Além disso, uma das condições a seguir deve também ser atendida:  
+  
+-   O <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageUrl%2A> propriedade é um endereço absoluto que suporta o esquema de protocolo HTTPS.  
+  
+-   Há um endereço base para o serviço que suporta o esquema de protocolo HTTPS.  
+  
+-   Embora uma exceção será lançada se for atribuído um endereço absoluto que não oferece suporte para o esquema de protocolo HTTPS para o <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageUrl%2A> página de ajuda de propriedade, qualquer outro cenário no qual nenhum dos critérios acima é atendida resulta em nenhuma exceção e nenhum HTML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpsHelpPageUrl">
+      <MemberSignature Language="C#" Value="public Uri HttpsHelpPageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri HttpsHelpPageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpsHelpPageUrl")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local em que um arquivo de ajuda HTML é publicado para recuperação usando HTTPS.</summary>
+        <value>A URL relativa ou absoluta baseada em HTTPS, do HTML personalizado ajuda arquivo o usuário vê quando o ponto de extremidade é visto usando um navegador HTML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para habilitar o uso de um arquivo de ajuda HTML personalizado que é retornado por uma solicitação HTTPS/Get, por exemplo, um navegador HTML. O local do arquivo de ajuda HTML é resolvido da seguinte maneira.  
+  
+1.  Se o valor dessa propriedade é um endereço relativo, o local do arquivo de ajuda HTML é o valor do endereço base serviço que dá suporte a solicitações HTTPS, mais o valor da propriedade.  
+  
+2.  Se o valor dessa propriedade é um endereço absoluto e oferece suporte a solicitações HTTPS, o local do arquivo de ajuda HTML é o valor dessa propriedade.  
+  
+3.  Se o valor dessa propriedade é absoluto, mas não oferece suporte a solicitações HTTPS, uma exceção será lançada.  
+  
+ Essa propriedade só é válida quando o <xref:System.ServiceModel.Configuration.ServiceDebugElement.HttpsHelpPageEnabled%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeExceptionDetailInFaults">
+      <MemberSignature Language="C#" Value="public bool IncludeExceptionDetailInFaults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeExceptionDetailInFaults" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.IncludeExceptionDetailInFaults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("includeExceptionDetailInFaults", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor que especifica se são incluídas informações de exceção gerenciada no detalhe de falhas SOAP retornadas para o cliente para fins de depuração.</summary>
+        <value>
+          <see langword="true" />Se [!INCLUDE[indigo1](~/includes/indigo1-md.md)] retorna informações de exceção gerenciada em falhas de SOAP para fins de depuração do lado do cliente; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir o <xref:System.ServiceModel.Configuration.ServiceDebugElement.IncludeExceptionDetailInFaults%2A> propriedade `true` programaticamente, você pode habilitar o fluxo de informações de exceção gerenciada para o cliente para fins de depuração, bem como a publicação de informações HTML para os usuários que navegam o serviço em navegadores da Web.  
+  
+> [!CAUTION]
+>  Retornando informações de exceção gerenciada aos serviços podem ser um risco à segurança. Isso ocorre porque os detalhes da exceção expõem informações sobre a implementação do cliente interno que pode ser usada por serviços não autorizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceDebugElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,113 @@
+<Type Name="IDataBoundControl" FullName="System.Web.UI.WebControls.IDataBoundControl">
+  <TypeSignature Language="C#" Value="public interface IDataBoundControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataBoundControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IDataBoundControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define as propriedades que são compartilhadas por todos os controles de associação de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface fornece acesso às propriedades compartilhadas por controles de associação de dados, como o <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.ListView>, <xref:System.Web.UI.WebControls.FormView> e <xref:System.Web.UI.WebControls.DetailsView> controles.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataKeyNames">
+      <MemberSignature Language="C#" Value="public string[] DataKeyNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] DataKeyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataKeyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma matriz que contém os nomes dos campos de chave primária dos itens que são exibidos em um controle associado a dados.</summary>
+        <value>Uma matriz que contém os nomes dos campos de chave primária dos itens que são exibidos em um controle associado a dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da lista de dados que o controle associado a dados associa a quando a fonte de dados contém mais de uma lista de itens de dados.</summary>
+        <value>O nome da lista de dados que vincula o controle associado a dados para.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto do qual o controle de associação de dados recupera uma lista de itens de dados.</summary>
+        <value>O objeto que contém a lista de dados que recupera o controle associado a dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceID">
+      <MemberSignature Language="C#" Value="public string DataSourceID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSourceID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataSourceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID do controle de fonte de dados do qual o controle de associação de dados recupera uma lista de itens de dados.</summary>
+        <value>A ID do controle da fonte de dados que contém a lista de itens de dados que recupera o controle associado a dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceObject">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IDataSource DataSourceObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IDataSource DataSourceObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundControl.DataSourceObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IDataSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de fonte de dados do qual o controle de associação de dados recupera uma lista de itens de dados.</summary>
+        <value>O objeto de fonte de dados que contém a lista de itens de dados que recupera o controle associado a dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

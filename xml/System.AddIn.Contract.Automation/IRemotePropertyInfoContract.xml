@@ -1,0 +1,164 @@
+<Type Name="IRemotePropertyInfoContract" FullName="System.AddIn.Contract.Automation.IRemotePropertyInfoContract">
+  <TypeSignature Language="C#" Value="public interface IRemotePropertyInfoContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemotePropertyInfoContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.IRemotePropertyInfoContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define um contrato que componentes podem usar para acessar informações sobre uma propriedade nos limites de domínio e o processo do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.AddIn.Contract.Automation.IRemotePropertyInfoContract> representa uma propriedade de um objeto remoto que implementa o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> interface.  
+  
+ Para acessar uma ou mais propriedades de um objeto remoto, use o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType%2A> método para obter um <xref:System.AddIn.Contract.Automation.IRemoteTypeContract> que representa o tipo do objeto remoto. Em seguida, chame o <xref:System.AddIn.Contract.Automation.IRemoteTypeContract.GetProperty%2A> ou <xref:System.AddIn.Contract.Automation.IRemoteTypeContract.GetProperties%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetGetMethod">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.IRemoteMethodInfoContract GetGetMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.Automation.IRemoteMethodInfoContract GetGetMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemotePropertyInfoContract.GetGetMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteMethodInfoContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see langword="get" /> acessador da propriedade que este <see cref="T:System.AddIn.Contract.Automation.IRemotePropertyInfoContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.Automation.IRemoteMethodInfoContract" /> que representa o <see langword="get" /> acessador da propriedade que este <see cref="T:System.AddIn.Contract.Automation.IRemotePropertyInfoContract" /> identifica; <see langword="null" /> se a propriedade não tem um <see langword="get" /> acessador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyData">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemotePropertyData GetPropertyData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.Automation.RemotePropertyData GetPropertyData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemotePropertyInfoContract.GetPropertyData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemotePropertyData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna informações sobre a propriedade que este <see cref="T:System.AddIn.Contract.Automation.IRemotePropertyInfoContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.Automation.RemotePropertyData" /> que fornece informações sobre a propriedade que este <see cref="T:System.AddIn.Contract.Automation.IRemotePropertyInfoContract" /> identifica.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações fornecidas pelo <xref:System.AddIn.Contract.Automation.RemotePropertyData> estrutura inclui o tipo de valor da propriedade e se a propriedade é de leitura ou de gravação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSetMethod">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.IRemoteMethodInfoContract GetSetMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.Automation.IRemoteMethodInfoContract GetSetMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemotePropertyInfoContract.GetSetMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteMethodInfoContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see langword="set" /> acessador da propriedade que este <see cref="T:System.AddIn.Contract.Automation.IRemotePropertyInfoContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.Automation.IRemoteMethodInfoContract" /> que representa o <see langword="set" /> acessador da propriedade que este <see cref="T:System.AddIn.Contract.Automation.IRemotePropertyInfoContract" /> identifica; <see langword="null" /> se a propriedade não tem um <see langword="set" /> acessador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.RemoteArgument GetValue (System.AddIn.Contract.Automation.IRemoteObjectContract obj, System.Reflection.BindingFlags bindingFlags, System.AddIn.Contract.Collections.IRemoteArgumentArrayContract index, int localeId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.RemoteArgument GetValue(class System.AddIn.Contract.Automation.IRemoteObjectContract obj, valuetype System.Reflection.BindingFlags bindingFlags, class System.AddIn.Contract.Collections.IRemoteArgumentArrayContract index, int32 localeId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemotePropertyInfoContract.GetValue(System.AddIn.Contract.Automation.IRemoteObjectContract,System.Reflection.BindingFlags,System.AddIn.Contract.Collections.IRemoteArgumentArrayContract,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.AddIn.Contract.Automation.IRemoteObjectContract" />
+        <Parameter Name="bindingFlags" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="index" Type="System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" />
+        <Parameter Name="localeId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.AddIn.Contract.Automation.IRemoteObjectContract" /> que identifica o objeto que contém a propriedade.</param>
+        <param name="bindingFlags">Uma combinação bit a bit do <see cref="T:System.Reflection.BindingFlags" /> valores que especifica como invocar a propriedade.</param>
+        <param name="index">Um <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" /> que especifica os valores de índice para uma propriedade indexada; <see langword="null" /> se a propriedade não está indexada.</param>
+        <param name="localeId">Uma ID de localidade a ser usada para conversões específicas de localidade que são executadas pela propriedade.</param>
+        <summary>Retorna o valor da propriedade que este <see cref="T:System.AddIn.Contract.Automation.IRemotePropertyInfoContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.RemoteArgument" /> que especifica o valor da propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É recomendável que <xref:System.AddIn.Contract.Automation.IRemotePropertyInfoContract.GetValue%2A> implementações lançam um <xref:System.ArgumentException> se a propriedade é somente gravação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (System.AddIn.Contract.Automation.IRemoteObjectContract target, ref System.AddIn.Contract.RemoteArgument value, System.Reflection.BindingFlags bindingFlags, System.AddIn.Contract.Collections.IRemoteArgumentArrayContract index, int localeId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(class System.AddIn.Contract.Automation.IRemoteObjectContract target, valuetype System.AddIn.Contract.RemoteArgument&amp; value, valuetype System.Reflection.BindingFlags bindingFlags, class System.AddIn.Contract.Collections.IRemoteArgumentArrayContract index, int32 localeId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemotePropertyInfoContract.SetValue(System.AddIn.Contract.Automation.IRemoteObjectContract,System.AddIn.Contract.RemoteArgument@,System.Reflection.BindingFlags,System.AddIn.Contract.Collections.IRemoteArgumentArrayContract,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.AddIn.Contract.Automation.IRemoteObjectContract" />
+        <Parameter Name="value" Type="System.AddIn.Contract.RemoteArgument&amp;" RefType="ref" />
+        <Parameter Name="bindingFlags" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="index" Type="System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" />
+        <Parameter Name="localeId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="target">O <see cref="T:System.AddIn.Contract.Automation.IRemoteObjectContract" /> que identifica o objeto que contém a propriedade.</param>
+        <param name="value">Um <see cref="T:System.AddIn.Contract.RemoteArgument" /> que especifica o valor da propriedade.</param>
+        <param name="bindingFlags">Uma combinação bit a bit do <see cref="T:System.Reflection.BindingFlags" /> valores que especifica como invocar a propriedade.</param>
+        <param name="index">Um <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" /> que especifica os valores de índice para uma propriedade indexada; <see langword="null" /> se a propriedade não está indexada.</param>
+        <param name="localeId">A ID de localidade que a propriedade será usado para qualquer conversões de tipo específico de localidade.</param>
+        <summary>Define o valor da propriedade que isso <see cref="T:System.AddIn.Contract.Automation.IRemotePropertyInfoContract" /> identifica.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É recomendável que <xref:System.AddIn.Contract.Automation.IRemotePropertyInfoContract.SetValue%2A> implementações lançam um <xref:System.ArgumentException> se a propriedade é somente leitura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

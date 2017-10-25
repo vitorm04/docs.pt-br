@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Media.TextFormatting">
+  <Docs>
+    <summary>Fornece tipos que controlar a formatação de texto, normalmente em um nível inferior apresentação com base em controle de texto ou o modelo de objeto de texto.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

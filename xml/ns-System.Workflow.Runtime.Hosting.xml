@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.Runtime.Hosting">
+  <Docs>
+    <summary>Fornece classes relacionadas à hospedagem de tempo de execução do Windows Workflow Foundation.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

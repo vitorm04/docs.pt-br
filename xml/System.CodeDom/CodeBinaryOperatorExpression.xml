@@ -1,0 +1,165 @@
+<Type Name="CodeBinaryOperatorExpression" FullName="System.CodeDom.CodeBinaryOperatorExpression">
+  <TypeSignature Language="C#" Value="public class CodeBinaryOperatorExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeBinaryOperatorExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeBinaryOperatorExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma expressão que consiste em uma operação binária entre duas expressões.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeBinaryOperatorExpression>pode ser usado para representar as expressões de código que incluem um operador binário. Alguns exemplos de operadores binários são igualdade (`==`), adição (`+`) e bit a bit (`|`) operadores. O <xref:System.CodeDom.CodeBinaryOperatorType> enumeração representa um conjunto de operadores binários básico, comumente usados que têm suporte em vários idiomas.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra o uso de um <xref:System.CodeDom.CodeBinaryOperatorExpression> para somar dois números.  
+  
+ [!code-cpp[CodeBinaryOperatorExpression#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeBinaryOperatorExpression/CPP/codebinaryoperatorexpressionexample.cpp#2)]
+ [!code-csharp[CodeBinaryOperatorExpression#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeBinaryOperatorExpression/CS/codebinaryoperatorexpressionexample.cs#2)]
+ [!code-vb[CodeBinaryOperatorExpression#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeBinaryOperatorExpression/VB/codebinaryoperatorexpressionexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeBinaryOperatorExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeBinaryOperatorExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeBinaryOperatorExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeBinaryOperatorExpression (System.CodeDom.CodeExpression left, System.CodeDom.CodeBinaryOperatorType op, System.CodeDom.CodeExpression right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression left, valuetype System.CodeDom.CodeBinaryOperatorType op, class System.CodeDom.CodeExpression right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeBinaryOperatorExpression.#ctor(System.CodeDom.CodeExpression,System.CodeDom.CodeBinaryOperatorType,System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="left" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="op" Type="System.CodeDom.CodeBinaryOperatorType" />
+        <Parameter Name="right" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="left">O <see cref="T:System.CodeDom.CodeExpression" /> à esquerda do operador.</param>
+        <param name="op">Um <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> que indica o tipo de operador.</param>
+        <param name="right">O <see cref="T:System.CodeDom.CodeExpression" /> à direita do operador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeBinaryOperatorExpression" /> classe usando os parâmetros especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Left" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeBinaryOperatorExpression.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão de código, à esquerda do operador.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpression" /> que indica que o operando da esquerda.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operator">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeBinaryOperatorType Operator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.CodeDom.CodeBinaryOperatorType Operator" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeBinaryOperatorExpression.Operator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeBinaryOperatorType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o operador na expressão de operador binário.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> que indica o tipo de operador na expressão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um operador binário executa uma avaliação em dois operandos. Alguns exemplos de operadores binários são igualdade (`==`), adição (`+`) e bit a bit (`|`) operadores. Muitos operadores binários usados podem ser encontrados no <xref:System.CodeDom.CodeBinaryOperatorType> enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Right" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeBinaryOperatorExpression.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão de código, à direita do operador.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpression" /> que indica que o operando direito.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

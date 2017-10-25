@@ -1,0 +1,845 @@
+<Type Name="LinkLabel+LinkCollection" FullName="System.Windows.Forms.LinkLabel+LinkCollection">
+  <TypeSignature Language="C#" Value="public class LinkLabel.LinkCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit LinkLabel/LinkCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.LinkLabel.LinkCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a coleção de links em um controle <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.LinkLabel.LinkCollection> classe armazena o link exibido no <xref:System.Windows.Forms.LinkLabel> controle. Cada item na coleção é uma instância do <xref:System.Windows.Forms.LinkLabel.Link> classe, que define as informações do link.  
+  
+ O <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> método fornece a capacidade de adicionar um único <xref:System.Windows.Forms.LinkLabel.Link> à coleção. Para remover os links, você pode usar o <xref:System.Windows.Forms.LinkLabel.LinkCollection.Remove%2A> método ou o <xref:System.Windows.Forms.LinkLabel.LinkCollection.RemoveAt%2A> método se você souber onde o link está localizado dentro da coleção. O <xref:System.Windows.Forms.LinkLabel.LinkCollection.Clear%2A> método permite que você remova todos os links da coleção em vez de usar o <xref:System.Windows.Forms.LinkLabel.LinkCollection.Remove%2A> método para remover um único link por vez.  
+  
+ Além dos métodos e propriedades para adicionar e remover itens, o <xref:System.Windows.Forms.LinkLabel.LinkCollection> também fornece métodos para encontrar links dentro da coleção. O <xref:System.Windows.Forms.LinkLabel.LinkCollection.Contains%2A> método permite que você determine se um <xref:System.Windows.Forms.LinkLabel.Link> é um membro da coleção. Quando você sabe que o link está localizado dentro da coleção, você pode usar o <xref:System.Windows.Forms.LinkLabel.LinkCollection.IndexOf%2A> método para determinar onde o link está localizado dentro da coleção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkCollection (System.Windows.Forms.LinkLabel owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.LinkLabel owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.#ctor(System.Windows.Forms.LinkLabel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.LinkLabel" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.LinkLabel" /> controle que possui a coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.LinkLabel.LinkCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância dessa classe não pode ser criada sem associá-lo com um <xref:System.Windows.Forms.LinkLabel> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Windows.Forms.LinkLabel.Link value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Windows.Forms.LinkLabel/Link value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.Add(System.Windows.Forms.LinkLabel.Link)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.LinkLabel+Link" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Windows.Forms.LinkLabel.Link" /> que representa o link a ser adicionado.</param>
+        <summary>Adiciona um link com o valor especificado na coleção.</summary>
+        <returns>O índice de base zero no qual o link especificado pelo parâmetro <paramref name="value" /> está localizado na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.LinkLabel.Link Add (int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.LinkLabel/Link Add(int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.Add(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkLabel+Link</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">O caractere inicial do texto do rótulo em que o link é criado.</param>
+        <param name="length">O número de caracteres após o caractere inicial para incluir no texto do link.</param>
+        <summary>Adiciona um link à coleção.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.LinkLabel.Link" /> que representa o link que foi criado e adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.LinkLabel> controle pode exibir vários links dentro do texto do controle. O <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> método permite converter texto dentro de <xref:System.Windows.Forms.LinkLabel> controle em um link que pode ser clicado pelo usuário para executar tarefas como um <xref:System.Windows.Forms.Button> controle. Este método adiciona o link é criado para o <xref:System.Windows.Forms.LinkLabel.LinkCollection> para o <xref:System.Windows.Forms.LinkLabel>. Por exemplo, se você deseja definir a palavra "rápido" no texto do rótulo, "A raposa marrom", você chamar esse método com o `start` parâmetro definido como o valor de quatro (4) e o `length` parâmetro para cinco (5). A palavra "rápido", em seguida, altera para um link e o link é adicionada à coleção. Se você deseja associar informações com o link, como a URL para exibição ou um arquivo a ser aberto quando o usuário clica no link, use a outra versão do <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> método.  
+  
+> [!NOTE]
+>  Dois links não podem compartilhar o mesmo texto. Se você criar um link que usa o texto que está sendo usado por outro link, uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a configuração de <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> propriedade usando o <xref:System.Windows.Forms.LinkBehavior> enumeração. Ele também mostra a configuração de <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.Text%2A> e <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedades e adicionar itens a uma <xref:System.Windows.Forms.LinkLabel.LinkCollection>. Para executar este exemplo, cole-o em um formulário em branco e chamada `InitializeLinkLabel` do construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.LinkLabel.Link Add (int start, int length, object linkData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.LinkLabel/Link Add(int32 start, int32 length, object linkData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.Add(System.Int32,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkLabel+Link</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="linkData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="start">O caractere inicial do texto do rótulo em que o link é criado.</param>
+        <param name="length">O número de caracteres após o caractere inicial para incluir no texto do link.</param>
+        <param name="linkData">O objeto que contém as informações para associar com o link.</param>
+        <summary>Adiciona um link para a coleção com informações para associação com o link.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.LinkLabel.Link" /> que representa o link que foi criado e adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.LinkLabel> controle pode exibir vários links dentro do texto do controle. O <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A> método permite converter texto dentro de <xref:System.Windows.Forms.LinkLabel> controle em um link que pode ser clicado pelo usuário para executar tarefas como um <xref:System.Windows.Forms.Button> controle. Este método adiciona o link é criado para o <xref:System.Windows.Forms.LinkLabel.LinkCollection> para o <xref:System.Windows.Forms.LinkLabel>. Por exemplo, se você deseja definir a palavra "rápido" no texto do rótulo, "A raposa marrom", você chamar esse método com o `start` parâmetro definido como o valor de quatro (4) e o `length` parâmetro para cinco (5). A palavra "rápido", em seguida, altera para um link e o link é adicionada à coleção. Esta versão do método Add permite que você forneça informações adicionais que podem ser associadas com o link por meio de `linkData` parâmetro. Por exemplo, você pode passar um <xref:System.String> para o `linkData` parâmetro que contém uma URL a ser exibida quando o link é clicado. Você pode usar essas informações no seu manipulador para o <xref:System.Windows.Forms.LinkLabel.LinkClicked> eventos do <xref:System.Windows.Forms.LinkLabel> controle para exibir a URL no Internet Explorer.  
+  
+> [!NOTE]
+>  Dois links não podem compartilhar o mesmo texto. Se você criar um link que usa o texto que está sendo usado por outro link, uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.LinkLabel> controle que exibe um link e exibe o site da Microsoft no navegador padrão, quando o link definido no texto do controle é clicado. O exemplo define um método que inicializa o <xref:System.Windows.Forms.LinkLabel> de controle e um método que manipulará o <xref:System.Windows.Forms.LinkLabel.LinkClicked> eventos do controle. O manipulador de eventos do <xref:System.Windows.Forms.LinkLabel.LinkClicked> evento usa o <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> propriedade o <xref:System.Windows.Forms.LinkLabel.Link> classe para determinar a URL para exibir no navegador padrão. Este exemplo requer que ele está localizado dentro de um <xref:System.Windows.Forms.Form> classe.  
+  
+ [!code-cpp[LinkLabel Overview#1](~/samples/snippets/cpp/VS_Snippets_Winforms/LinkLabel Overview/CPP/linklabelex.cpp#1)]
+ [!code-csharp[LinkLabel Overview#1](~/samples/snippets/csharp/VS_Snippets_Winforms/LinkLabel Overview/CS/linklabelex.cs#1)]
+ [!code-vb[LinkLabel Overview#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinkLabel Overview/VB/linklabelex.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os links da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você remover links da coleção, todas as informações sobre os links removidos são excluídas. Para remover um único link do <xref:System.Windows.Forms.LinkLabel>, use o <xref:System.Windows.Forms.LinkLabel.LinkCollection.Remove%2A> ou <xref:System.Windows.Forms.LinkLabel.LinkCollection.RemoveAt%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.LinkLabel.Link link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.LinkLabel/Link link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.Contains(System.Windows.Forms.LinkLabel.Link)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="link" Type="System.Windows.Forms.LinkLabel+Link" />
+      </Parameters>
+      <Docs>
+        <param name="link">Um <see cref="T:System.Windows.Forms.LinkLabel.Link" /> que representa o link a ser pesquisado na coleção.</param>
+        <summary>Determina se o link especificado está na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o link especificado está na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.LinkLabel.LinkCollection.Contains%2A> método permite que você determine se um <xref:System.Windows.Forms.LinkLabel.Link> é um membro da coleção. Quando você sabe que o link está localizado dentro da coleção, você pode usar o <xref:System.Windows.Forms.LinkLabel.LinkCollection.IndexOf%2A> método para determinar onde o link está localizado dentro da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O link a ser pesquisado na coleção.</param>
+        <summary>Retorna um valor que indica se a coleção contém um link com a chave especificada.</summary>
+        <returns>
+          <see langword="true" />Se a coleção contém um item com a chave especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.LinkLabel.Link.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.LinkLabel.Link> no <xref:System.Windows.Forms.LinkLabel.LinkCollection>. A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.LinkLabel.LinkCollection.ContainsKey%2A> retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de links na coleção.</summary>
+        <value>O número de links na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você determine o número de links no <xref:System.Windows.Forms.LinkLabel> controle. Você pode usar esse valor quando são percorrer os valores da coleção e precisa fornecer um número de iterações para executar o loop.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador a ser usado para iterar na coleção de link.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que representa a coleção de link.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.LinkLabel.Link link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.LinkLabel/Link link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.IndexOf(System.Windows.Forms.LinkLabel.Link)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="link" Type="System.Windows.Forms.LinkLabel+Link" />
+      </Parameters>
+      <Docs>
+        <param name="link">Um <see cref="T:System.Windows.Forms.LinkLabel.Link" /> que representa o link a ser pesquisado na coleção.</param>
+        <summary>Retorna o índice do link especificado dentro da coleção.</summary>
+        <returns>O índice de base zero onde o link está localizado na coleção; Caso contrário, um negativo (-1).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.LinkLabel.LinkCollection.IndexOf%2A> método permite que você determine onde um link está localizado dentro da coleção. Para determinar se um link está localizado dentro da coleção antes de chamar esse método, use o <xref:System.Windows.Forms.LinkLabel.LinkCollection.Contains%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a configuração de <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> propriedade usando o <xref:System.Windows.Forms.LinkBehavior> enumeração. Ele também mostra a configuração a <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.Text%2A> e <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedades e adição e acesso a links em um <xref:System.Windows.Forms.LinkLabel.LinkCollection>. Para executar este exemplo, cole-o em um formulário em branco e chamada `InitializeLinkLabel` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOfKey">
+      <MemberSignature Language="C#" Value="public virtual int IndexOfKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOfKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.IndexOfKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave para pesquisar a coleção.</param>
+        <summary>Recupera o índice com base em zero da primeira ocorrência da chave especificada na coleção inteira.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência do valor em toda a coleção, se encontrado; Caso contrário, retornará -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Forms.LinkLabel.LinkCollection.IndexOfKey%2A> é chamado sucessivamente, a última retornou o índice será verificado para uma correspondência de chave pela primeira vez e se não houver nenhuma correspondência, a pesquisa começa no início da coleção.  
+  
+ O <xref:System.Windows.Forms.LinkLabel.Link.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.LinkLabel.Link> no <xref:System.Windows.Forms.LinkLabel.LinkCollection>. A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.LinkLabel.LinkCollection.IndexOfKey%2A> retornará -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é sempre `false` para esta coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.LinkLabel.Link this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.LinkLabel/Link Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkLabel+Link</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do link na coleção a ser obtida.</param>
+        <summary>Obtém e define o link no índice especificado na coleção.</summary>
+        <value>Um objeto que representa o link localizado no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para obter o link armazenado em um local específico na coleção. Para determinar o índice de um item específico na coleção, use o <xref:System.Windows.Forms.LinkLabel.LinkCollection.IndexOf%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de <paramref name="index" /> é um valor negativo ou maior que o número de itens na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.LinkLabel.Link this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.LinkLabel/Link Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkLabel+Link</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do link para recuperar da coleção.</param>
+        <summary>Obtém um link com a chave especificada da coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.LinkLabel.Link" /> com a chave especificada dentro da coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.LinkLabel.LinkCollection.Item%2A> retorna`null.`  
+  
+ O <xref:System.Windows.Forms.LinkLabel.Link.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.LinkLabel.Link> no <xref:System.Windows.Forms.LinkLabel.LinkCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinksAdded">
+      <MemberSignature Language="C#" Value="public bool LinksAdded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LinksAdded" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkCollection.LinksAdded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os links foram adicionados para o <see cref="T:System.Windows.Forms.LinkLabel.LinkCollection" />.</summary>
+        <value>
+          <see langword="true" />Se os links foram adicionados para o <see cref="T:System.Windows.Forms.LinkLabel.LinkCollection" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Forms.LinkLabel.Link value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Forms.LinkLabel/Link value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.Remove(System.Windows.Forms.LinkLabel.Link)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.LinkLabel+Link" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Windows.Forms.LinkLabel.Link" /> que representa o link para remover da coleção.</param>
+        <summary>Remove o link especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você remove um link da coleção, os índices alterar subsequentes itens na coleção. Todas as informações sobre o item removido são excluídas. Você pode usar esse método para remover um link específico da coleção especificando o item real a ser removido da coleção. Para especificar o índice do link para remover, em vez do próprio link, use o <xref:System.Windows.Forms.LinkLabel.LinkCollection.RemoveAt%2A> método. Para remover todos os links da coleção, use o <xref:System.Windows.Forms.LinkLabel.LinkCollection.Clear%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do item a ser removido da coleção.</param>
+        <summary>Remove um link em um local especificado na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você remove um link da coleção, os índices alterar subsequentes itens na coleção. Todas as informações sobre o link excluído serão perdidas. Você pode usar esse método para remover um link específico da coleção especificando o índice do link a ser removido da coleção. Para especificar o link para remover, em vez do índice para o link, use o <xref:System.Windows.Forms.LinkLabel.LinkCollection.Remove%2A> método. Para remover todos os links da coleção, use o <xref:System.Windows.Forms.LinkLabel.LinkCollection.Clear%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de <paramref name="index" /> é um valor negativo ou maior que o número de itens na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveByKey">
+      <MemberSignature Language="C#" Value="public virtual void RemoveByKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveByKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.RemoveByKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do link para remover.</param>
+        <summary>Remove o link com a chave especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.LinkLabel.Link.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.LinkLabel.Link> no <xref:System.Windows.Forms.LinkLabel.LinkCollection>. A chave comparação não diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ICollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> para adicionar ao <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Add(System.Object)" />.</summary>
+        <returns>A posição na qual o novo elemento foi inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object link);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="link" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="link">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Contains(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Object" /> for encontrado no <see cref="T:System.Collections.IList" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object link);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="link" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="link">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.IndexOf(System.Object)" />.</summary>
+        <returns>O índice do <paramref name="link" /> parâmetro, se encontrado na lista; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> devem ser inseridos.</param>
+        <param name="value">O <see cref="T:System.Object" /> para inserir o <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte. <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.IList" /> tiver um valor fixo; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.Item(System.Int32)" />.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabel.LinkCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser removido de <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Remove(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.LinkLabel.LinkCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

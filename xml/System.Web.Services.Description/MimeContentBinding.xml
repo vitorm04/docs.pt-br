@@ -1,0 +1,158 @@
+<Type Name="MimeContentBinding" FullName="System.Web.Services.Description.MimeContentBinding">
+  <TypeSignature Language="C#" Value="public sealed class MimeContentBinding : System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MimeContentBinding extends System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.MimeContentBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ServiceDescriptionFormatExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtension("content", "http://schemas.xmlsoap.org/wsdl/mime/", typeof(System.Web.Services.Description.InputBinding), typeof(System.Web.Services.Description.OutputBinding))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtensionPrefix("mime", "http://schemas.xmlsoap.org/wsdl/mime/")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um elemento de extensibilidade adicionado a um <see cref="T:System.Web.Services.Description.InputBinding" /> ou um <see cref="T:System.Web.Services.Description.OutputBinding" /> dentro de um serviço Web XML, especificando o formato MIME para o corpo da transmissão HTTP. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como especificar protocolos para XML Web services, consulte [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Para obter mais informações sobre WSDL Web Services Description Language (), consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso das propriedades e métodos expostos pelo `MimeContentBinding` classe.  
+  
+ [!code-cpp[MimeContentBinding_Part_4#4](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeContentBinding_Part_4/CPP/mimecontentbinding_part_4.cpp#4)]
+ [!code-csharp[MimeContentBinding_Part_4#4](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeContentBinding_Part_4/CS/mimecontentbinding_part_4.cs#4)]
+ [!code-vb[MimeContentBinding_Part_4#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeContentBinding_Part_4/VB/mimecontentbinding_part_4.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MimeContentBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeContentBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.MimeContentBinding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public const string Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Description.MimeContentBinding.Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o URI para o namespace XML do <see cref="T:System.Web.Services.Description.MimeContentBinding" /> classe. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[MimeContentBinding_Part_4#3](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeContentBinding_Part_4/CPP/mimecontentbinding_part_4.cpp#3)]
+ [!code-csharp[MimeContentBinding_Part_4#3](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeContentBinding_Part_4/CS/mimecontentbinding_part_4.cs#3)]
+ [!code-vb[MimeContentBinding_Part_4#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeContentBinding_Part_4/VB/mimecontentbinding_part_4.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Part">
+      <MemberSignature Language="C#" Value="public string Part { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Part" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MimeContentBinding.Part" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("part")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do <see cref="T:System.Web.Services.Description.MessagePart" /> ao qual o <see cref="T:System.Web.Services.Description.MimeContentBinding" /> se aplica.</summary>
+        <value>Uma cadeia de caracteres que representa o nome do <see cref="T:System.Web.Services.Description.MessagePart" /> com a qual atual <see cref="T:System.Web.Services.Description.MimeContentBinding" /> está associado. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[MimeContentBinding_Part_4#2](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeContentBinding_Part_4/CPP/mimecontentbinding_part_4.cpp#2)]
+ [!code-csharp[MimeContentBinding_Part_4#2](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeContentBinding_Part_4/CS/mimecontentbinding_part_4.cs#2)]
+ [!code-vb[MimeContentBinding_Part_4#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeContentBinding_Part_4/VB/mimecontentbinding_part_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MimeContentBinding.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o formato do corpo de transmissão HTTP.</summary>
+        <value>Uma cadeia de caracteres que indica o formato do corpo de transmissão HTTP. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A especificação de WSDL Web Services Description Language () define associações para vários tipos MIME, incluindo texto/xml, com diversas partes/relacionado e application/x-www-form-urlencoded, embora possa ser usado qualquer tipo MIME. O caractere curinga (*) também pode ser usado. Por exemplo, a cadeia de caracteres "texto /\*" representa todos os tipos de texto. Se o valor dessa propriedade não é definido, o `MimeContentBinding` especifica todos os tipos MIME.  
+  
+ Para obter mais informações sobre WSDL, consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ MimeContentBinding_Part_4 n º 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

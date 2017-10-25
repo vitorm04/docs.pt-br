@@ -1,0 +1,166 @@
+<Type Name="FilterInvalidBodyAccessException" FullName="System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException">
+  <TypeSignature Language="C#" Value="public class FilterInvalidBodyAccessException : System.ServiceModel.Dispatcher.InvalidBodyAccessException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit FilterInvalidBodyAccessException extends System.ServiceModel.Dispatcher.InvalidBodyAccessException" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.InvalidBodyAccessException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é lançada quando um filtro ou uma tabela de filtro tenta acessar o corpo de uma mensagem sem buffer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa exceção é lançada quando um filtro ou uma tabela de filtro tenta acessar o corpo de uma instância de <xref:System.ServiceModel.Channels.Message>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterInvalidBodyAccessException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterInvalidBodyAccessException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FilterInvalidBodyAccessException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contém todos os dados necessários para serializar a exceção.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que especifica a origem e o destino do fluxo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException" /> classe com dados que especifica a origem e destino do fluxo e as informações necessárias para serializar a exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterInvalidBodyAccessException (string message, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; filters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; filters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException.#ctor(System.String,System.Collections.ObjectModel.Collection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="filters" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="filters">O <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> que tentou inspecionar o corpo da mensagem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException" /> com uma mensagem de erro especificada e os filtros que tentou inspecionar o corpo da mensagem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterInvalidBodyAccessException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">O <see cref="T:System.Exception" /> que causou a exceção atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException" /> classe com uma mensagem de erro especificada e a exceção interna que provocou a exceção atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterInvalidBodyAccessException (string message, Exception innerException, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; filters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; filters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException.#ctor(System.String,System.Exception,System.Collections.ObjectModel.Collection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+        <Parameter Name="filters" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">O <see cref="T:System.Exception" /> que causou a exceção atual.</param>
+        <param name="filters">O <see cref="T:System.Collections.ObjectModel.Collection`1" /> do tipo <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> que contém o filtro que tentou inspecionar o corpo da mensagem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException" /> classe com uma mensagem de erro especificada, a exceção interna que provocou a exceção atual e a coleção que contém o filtro que tentou inspecionar o corpo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; Filters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; Filters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.FilterInvalidBodyAccessException.Filters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de filtros que contém o filtro que causou a exceção seja lançada.</summary>
+        <value>O <see cref="T:System.Collections.ObjectModel.Collection`1" /> do tipo <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> que contém os filtros que causou a exceção seja lançada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No caso de uma tabela de filtro, esta coleção não contém necessariamente todos os filtros incorretos. Ele contém apenas os filtros que causou a violação. É bem possível existem outros filtros que poderiam ter sido confirmada uma violação semelhante processamento não tivesse sido anulada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

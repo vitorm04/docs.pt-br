@@ -1,0 +1,15 @@
+<Namespace Name="System.Runtime.Caching.Hosting">
+  <Docs>
+    <summary>Os tipos na <see cref="N:System.Runtime.Caching.Hosting" /> suporte a namespace ambientes que usam o cache de hospedagem do .NET Framework recursos no ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A base de <xref:System.Runtime.Caching.ObjectCache> classe expõe um estático <xref:System.Runtime.Caching.ObjectCache.Host%2A> propriedade. Quando um ambiente de hospedagem do .NET Framework domínios de aplicativo individuais é iniciado, ele pode definir uma referência o <xref:System.Runtime.Caching.ObjectCache.Host%2A> propriedade. Isso permite que o ambiente de hospedagem fornecer melhor integração com o cache.  
+  
+ Em [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], o <xref:System.Runtime.Caching.Hosting> namespace fornece interfaces que um ambiente de hospedagem pode utilizar para definir um <xref:System.IServiceProvider> referência sobre o <xref:System.Runtime.Caching.ObjectCache.Host%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

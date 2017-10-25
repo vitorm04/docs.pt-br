@@ -1,0 +1,198 @@
+<Type Name="CallingConvention" FullName="System.Runtime.InteropServices.CallingConvention">
+  <TypeSignature Language="C#" Value="public enum CallingConvention" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CallingConvention extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.CallingConvention" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a convenção de chamada necessária para chamar os métodos implementados em código não gerenciado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use sempre o <xref:System.Runtime.InteropServices.CallingConvention> enumeração em vez de <xref:System.Runtime.InteropServices.CALLCONV> enumeração para especificar uma convenção de chamada no código gerenciado. O último existe somente para definições de COM. O <xref:System.Runtime.InteropServices.CallingConvention> enumeração é usada pelo <xref:System.Runtime.InteropServices.DllImportAttribute> e várias classes em <xref:System.Reflection.Emit> dinamicamente emitir assinaturas de invocação de plataforma.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como aplicar o `Cdecl` chamando convenção, que deve ser usada porque a pilha é limpos pelo chamador.  
+  
+ [!code-cpp[Interop CallingConvention#1](~/samples/snippets/cpp/VS_Snippets_CLR/Interop CallingConvention/CPP/callingconv.cpp#1)]
+ [!code-csharp[Interop CallingConvention#1](~/samples/snippets/csharp/VS_Snippets_CLR/Interop CallingConvention/CS/callingconv.cs#1)]
+ [!code-vb[Interop CallingConvention#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Interop CallingConvention/VB/callingconv.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cdecl">
+      <MemberSignature Language="C#" Value="Cdecl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.CallingConvention Cdecl = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CallingConvention.Cdecl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O chamador limpa a pilha. Isso permite chamar funções com <see langword="varargs" />, o que o torna apropriado para usar para métodos que aceitam um número variável de parâmetros, como <see langword="Printf" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FastCall">
+      <MemberSignature Language="C#" Value="FastCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.CallingConvention FastCall = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CallingConvention.FastCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há suporte para essa convenção de chamada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StdCall">
+      <MemberSignature Language="C#" Value="StdCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.CallingConvention StdCall = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CallingConvention.StdCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O computador chamado limpa a pilha. Essa é a convenção padrão para chamar funções não gerenciadas com a invocação da plataforma.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThisCall">
+      <MemberSignature Language="C#" Value="ThisCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.CallingConvention ThisCall = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CallingConvention.ThisCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O primeiro parâmetro é o ponteiro <see langword="this" /> e é armazenado no ECX de registro. Outros parâmetros são enviados na pilha. Esta convenção de chamada é usada para chamar métodos em classes exportadas de uma DLL não gerenciada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Winapi">
+      <MemberSignature Language="C#" Value="Winapi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.CallingConvention Winapi = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.CallingConvention.Winapi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este membro não é realmente uma convenção de chamada, mas usa a convenção de chamada da plataforma padrão. Por exemplo, no Windows o padrão é <see cref="F:System.Runtime.InteropServices.CallingConvention.StdCall" /> e no Windows CE.NET é <see cref="F:System.Runtime.InteropServices.CallingConvention.Cdecl" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

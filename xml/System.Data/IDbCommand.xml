@@ -1,0 +1,616 @@
+<Type Name="IDbCommand" FullName="System.Data.IDbCommand">
+  <TypeSignature Language="C#" Value="public interface IDbCommand : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDbCommand implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.IDbCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma instrução SQL que é executada enquanto está conectada a uma fonte de dados e que é implementada por provedores de dados .NET Framework que acessam bancos de dados relacionais.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.IDbCommand> interface permite uma herança de classe implementar uma classe de comando, que representa uma instrução SQL que é executada em uma fonte de dados. Para obter mais informações sobre classes de comando, consulte [executando um comando](~/docs/framework/data/adonet/executing-a-command.md).  
+  
+ Um aplicativo não cria uma instância do <xref:System.Data.IDbCommand> interface diretamente, mas cria uma instância de uma classe que herda <xref:System.Data.IDbCommand>.  
+  
+ As classes que herdam <xref:System.Data.IDbCommand> deve implementar membros herdados todas as e geralmente definem membros adicionais para adicionar funcionalidade específica do provedor. Por exemplo, o <xref:System.Data.IDbCommand> interface define o <xref:System.Data.IDbCommand.ExecuteNonQuery%2A> método. Por sua vez, o <xref:System.Data.SqlClient.SqlCommand> classe herda esse método e também define o <xref:System.Data.SqlClient.SqlCommand.ExecuteXmlReader%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria instâncias de classes derivadas, <xref:System.Data.SqlClient.SqlConnection>, <xref:System.Data.SqlClient.SqlCommand>, e <xref:System.Data.SqlClient.SqlDataReader>. O exemplo lê os dados, gravá-la no console. Por fim, o exemplo fecha o <xref:System.Data.SqlClient.SqlDataReader>, em seguida, o <xref:System.Data.SqlClient.SqlConnection>.  
+  
+ [!code-csharp[Classic WebData SqlCommand Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlCommand Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlCommand Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Para promover a consistência entre os provedores de dados .NET Framework, nomeie a classe herdada no formulário <paramref name="PrvClassname" /> onde <paramref name="Prv" /> é o prefixo uniforme fornecido para todas as classes em um namespace específico do provedor de dados do .NET Framework. Por exemplo, <paramref name="Sql" /> é o prefixo do <see cref="T:System.Data.SqlClient.SqlCommand" /> classe no <see langword="System.Data.SqlClient" /> namespace.  
+  
+ Ao herdar do <see cref="T:System.Data.IDbCommand" /> interface, você deve implementar construtores a seguir:  
+  
+ <list type="table"><listheader><term>Item  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>PrvCommand()  
+  
+ </term><description>Inicializa uma nova instância da classe PrvCommand.  
+  
+ </description></item><item><term>PrvCommand (cadeia de caracteres cmdText)  
+  
+ </term><description>Inicializa uma nova instância da classe PrvCommand com o texto da consulta.  
+  
+ </description></item><item><term>PrvCommand (cadeia de caracteres cmdText, PrvConnection conexão)  
+  
+ </term><description>Inicializa uma nova instância da classe PrvCommand com o texto da consulta e um PrvConnection.  
+  
+ </description></item><item><term>PrvCommand (cadeia de caracteres cmdText, PrvConnection conexão, transação PrvTransaction)  
+  
+ </term><description>Inicializa uma nova instância da classe PrvCommand com o texto da consulta, um PrvConnection e o PrvTransaction.  
+  
+ </description></item></list></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbCommand.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Tentativas de cancelar a execução de um <see cref="T:System.Data.IDbCommand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não há nada para cancelar, nada acontecerá. No entanto, se houver um comando no processo e a tentativa de cancelar falha, nenhuma exceção é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandText">
+      <MemberSignature Language="C#" Value="public string CommandText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandText" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbCommand.CommandText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comando de texto a ser executado na fonte de dados.</summary>
+        <value>O comando de texto a ser executado. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Data.IDbCommand.CommandType%2A> está definida como `StoredProcedure`, defina o <xref:System.Data.IDbCommand.CommandText%2A> propriedade para o nome do procedimento armazenado. O usuário pode ser necessário usar a sintaxe de escape de caracteres se o nome do procedimento armazenado contiver caracteres especiais. O comando chamará esse procedimento armazenado quando você chama um dos métodos Execute.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância de uma classe derivada, <xref:System.Data.OleDb.OleDbCommand> e define algumas de suas propriedades.  
+  
+ [!code-csharp[Classic WebData IDbCommand.CommandText Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData IDbCommand.CommandText Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData IDbCommand.CommandText Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData IDbCommand.CommandText Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTimeout">
+      <MemberSignature Language="C#" Value="public int CommandTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CommandTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbCommand.CommandTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo de espera antes do término da tentativa de executar um comando e antes de gerar um erro.</summary>
+        <value>O tempo de espera (em segundos) para a execução do comando. O valor padrão é 30 segundos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma instância de uma classe derivada, <xref:System.Data.SqlClient.SqlCommand> e define algumas de suas propriedades.  
+  
+ [!code-csharp[Classic WebData IDbCommand.CommandTimeout Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData IDbCommand.CommandTimeout Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData IDbCommand.CommandTimeout Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData IDbCommand.CommandTimeout Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor atribuído da propriedade é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandType">
+      <MemberSignature Language="C#" Value="public System.Data.CommandType CommandType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.CommandType CommandType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbCommand.CommandType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.CommandType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica ou especifica como a propriedade <see cref="P:System.Data.IDbCommand.CommandText" /> é interpretada.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.CommandType" />. O padrão é <see langword="Text" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define o <xref:System.Data.IDbCommand.CommandType%2A> propriedade `StoredProcedure`, você deve definir o <xref:System.Data.IDbCommand.CommandText%2A> propriedade para o nome do procedimento armazenado. O comando é executado esse procedimento armazenado quando você chama um dos métodos Execute.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.IDbConnection Connection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbCommand.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.IDbConnection" /> usado por essa instância do <see cref="T:System.Data.IDbCommand" />.</summary>
+        <value>A conexão com a fonte de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParameter">
+      <MemberSignature Language="C#" Value="public System.Data.IDbDataParameter CreateParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDbDataParameter CreateParameter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbCommand.CreateParameter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbDataParameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de um objeto <see cref="T:System.Data.IDbDataParameter" />.</summary>
+        <returns>Um objeto <see langword="IDbDataParameter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao herdar de <xref:System.Data.IDbCommand>, um provedor de dados .NET Framework implementa uma versão fortemente tipada de <xref:System.Data.IDbCommand.CreateParameter%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteNonQuery">
+      <MemberSignature Language="C#" Value="public int ExecuteNonQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ExecuteNonQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbCommand.ExecuteNonQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa uma instrução SQL no objeto <see langword="Connection" /> de um provedor de dados .NET Framework e retorna o número de linhas afetadas.</summary>
+        <returns>O número de linhas afetadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.IDbCommand.ExecuteNonQuery%2A> para executar operações de catálogo (por exemplo, consultar a estrutura de um banco de dados ou criar objetos de banco de dados como tabelas), ou para alterar os dados em um banco de dados sem usar um <xref:System.Data.DataSet> executando instruções UPDATE, INSERT ou DELETE.  
+  
+ Embora o <xref:System.Data.IDbCommand.ExecuteNonQuery%2A> não retornar nenhuma linha, os parâmetros de saída ou retornar valores mapeados para parâmetros são preenchidos com dados.  
+  
+ Para instruções UPDATE, INSERT e DELETE, o valor retornado é o número de linhas afetadas pelo comando. Para todos os outros tipos de instruções, o valor retornado é -1.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância da classe derivada, <xref:System.Data.OleDb.OleDbCommand>e, em seguida, ele é executado. Para fazer isso, o método é passado uma cadeia de caracteres que é uma instrução SQL SELECT e uma cadeia de caracteres a ser usado para se conectar à fonte de dados.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.ExecuteNonQuery Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteNonQuery Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.ExecuteNonQuery Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.ExecuteNonQuery Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A conexão não existe.  
+  
+ -ou-  
+  
+ A conexão não está aberta.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReader">
+      <MemberSignature Language="C#" Value="public System.Data.IDataReader ExecuteReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDataReader ExecuteReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbCommand.ExecuteReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o <see cref="P:System.Data.IDbCommand.CommandText" /> no <see cref="P:System.Data.IDbCommand.Connection" /> e compila um <see cref="T:System.Data.IDataReader" />.</summary>
+        <returns>Um objeto <see cref="T:System.Data.IDataReader" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReader">
+      <MemberSignature Language="C#" Value="public System.Data.IDataReader ExecuteReader (System.Data.CommandBehavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDataReader ExecuteReader(valuetype System.Data.CommandBehavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbCommand.ExecuteReader(System.Data.CommandBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Data.CommandBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Um dos valores de <see cref="T:System.Data.CommandBehavior" />.</param>
+        <summary>Executa o <see cref="P:System.Data.IDbCommand.CommandText" /> contra o <see cref="P:System.Data.IDbCommand.Connection" />e cria um <see cref="T:System.Data.IDataReader" /> usando um do <see cref="T:System.Data.CommandBehavior" /> valores.</summary>
+        <returns>Um objeto <see cref="T:System.Data.IDataReader" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador deve chamar o <xref:System.Data.IDbConnection.Open%2A> método o <xref:System.Data.IDbCommand.Connection%2A> propriedade.  
+  
+ Quando o <xref:System.Data.IDbCommand.CommandType%2A> está definida como `StoredProcedure`, o <xref:System.Data.IDbCommand.CommandText%2A> propriedade deve ser definida como o nome do procedimento armazenado. O comando é executado esse procedimento armazenado quando você chamar <xref:System.Data.IDbCommand.ExecuteReader%2A>.  
+  
+> [!NOTE]
+>  Use <xref:System.Data.CommandBehavior.SequentialAccess> para recuperar dados binários e valores grandes. Caso contrário, um <xref:System.OutOfMemoryException> podem ocorrer e a conexão será fechada.  
+  
+ Enquanto o <xref:System.Data.IDataReader> está em uso, associado <xref:System.Data.IDbConnection> estão ocupados atendendo a <xref:System.Data.IDataReader>. Nesse estado, nenhuma outra operação pode ser executada no <xref:System.Data.IDbConnection> diferente de fechá-lo. Esse é o caso até que o <xref:System.Data.IDataReader.Close%2A> é chamado de método do DataReader. Se o DataReader for criado com <xref:System.Data.CommandBehavior> definida como `CloseConnection`, fechar o DataReader fecha a conexão automaticamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteScalar">
+      <MemberSignature Language="C#" Value="public object ExecuteScalar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ExecuteScalar() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbCommand.ExecuteScalar" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a consulta e retorna a primeira coluna da primeira linha no conjunto de resultados retornado pela consulta. Colunas ou linhas extra são ignoradas.</summary>
+        <returns>A primeira coluna da primeira linha no conjunto de resultados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.IDbCommand.ExecuteScalar%2A> método para recuperar um único valor (por exemplo, um valor agregado) de um banco de dados. Isso requer menos código do que usando o <xref:System.Data.IDbCommand.ExecuteReader%2A> método e, em seguida, executar as operações necessárias para gerar o valor único usando os dados retornados por uma <xref:System.Data.IDataReader>.  
+  
+ Um típico <xref:System.Data.IDbCommand.ExecuteScalar%2A> consulta pode ser formatada como o exemplo c# a seguir:  
+  
+```  
+CommandText = "select count(*) as NumberOfRegions from region";  
+Int32 count = (int) ExecuteScalar();  
+```  
+  
+ Se a primeira coluna da primeira linha no conjunto de resultados não for encontrado, uma referência nula (`Nothing` no Visual Basic) é retornado. Se o valor no banco de dados for `null`, a consulta retorna `DBNull.Value`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância da classe derivada, <xref:System.Data.SqlClient.SqlCommand>e, em seguida, executa-o usando <xref:System.Data.SqlClient.SqlCommand.ExecuteScalar%2A>. O exemplo é passado uma cadeia de caracteres que é uma instrução Transact-SQL que retorna o resultado de uma agregação e uma cadeia de caracteres a ser usado para se conectar à fonte de dados.  
+  
+ [!code-csharp[Classic WebData SqlCommand.ExecuteScalar#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlCommand.ExecuteScalar/CS/mysample.cs#1)]
+ [!code-vb[Classic WebData SqlCommand.ExecuteScalar#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlCommand.ExecuteScalar/VB/mysample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Data.IDataParameterCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDataParameterCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbCommand.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.IDataParameterCollection" />.</summary>
+        <value>Os parâmetros da instrução SQL ou do procedimento armazenado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma instância da classe derivada, <xref:System.Data.SqlClient.SqlCommand>e exibe seus parâmetros. No exemplo, o aplicativo passa um <xref:System.Data.SqlClient.SqlConnection>, uma cadeia de caracteres de consulta que é uma instrução SELECT Transact-SQL e uma matriz de <xref:System.Data.SqlClient.SqlParameter> objetos.  
+  
+ [!code-csharp[Classic WebData IDbCommand.Parameters Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData IDbCommand.Parameters Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData IDbCommand.Parameters Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData IDbCommand.Parameters Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prepare">
+      <MemberSignature Language="C#" Value="public void Prepare ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Prepare() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDbCommand.Prepare" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma versão preparada (ou compilada) do comando na fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Data.IDbCommand.CommandType%2A> está definida como `TableDirect`, <xref:System.Data.IDbCommand.Prepare%2A> não fará nada. Se <xref:System.Data.IDbCommand.CommandType%2A> é definido como `StoredProcedure`, a chamada para <xref:System.Data.IDbCommand.Prepare%2A> deve ter êxito, embora isso pode resultar em uma não-operacional. O servidor automaticamente armazena em cache os planos para reutilização conforme necessário; Portanto, não há nenhuma necessidade de chamar este método diretamente em seu aplicativo cliente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância da classe derivada, <xref:System.Data.OleDb.OleDbCommand>e abre a conexão. O exemplo, em seguida, prepara um procedimento armazenado na fonte de dados, passando uma cadeia de caracteres que é uma instrução SQL Select e uma cadeia de caracteres a ser usado para se conectar à fonte de dados.  
+  
+ [!code-csharp[Classic WebData OleDbCommand.Prepare Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Prepare Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbCommand.Prepare Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommand.Prepare Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Data.OleDb.OleDbCommand.Connection" /> não foi definido.  
+  
+ -ou-  
+  
+ O <see cref="P:System.Data.OleDb.OleDbCommand.Connection" /> não é <see cref="M:System.Data.OleDb.OleDbConnection.Open" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transaction">
+      <MemberSignature Language="C#" Value="public System.Data.IDbTransaction Transaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbTransaction Transaction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbCommand.Transaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbTransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a transação dentro do qual o <see langword="Command" /> executa do objeto de um provedor de dados do .NET Framework.</summary>
+        <value>o <see langword="Command" /> executa do objeto de um provedor de dados do .NET Framework. O valor padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatedRowSource">
+      <MemberSignature Language="C#" Value="public System.Data.UpdateRowSource UpdatedRowSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.UpdateRowSource UpdatedRowSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDbCommand.UpdatedRowSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.UpdateRowSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define como os resultados do comando são aplicados a <see cref="T:System.Data.DataRow" /> quando usados pelo método <see cref="M:System.Data.IDataAdapter.Update(System.Data.DataSet)" /> de <see cref="T:System.Data.Common.DbDataAdapter" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.UpdateRowSource" />. O padrão é <see langword="Both" />, a menos que o comando seja gerado automaticamente. Nesse caso, o padrão é <see langword="None" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O valor inserido não era um dos valores <see cref="T:System.Data.UpdateRowSource" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

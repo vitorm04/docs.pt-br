@@ -1,0 +1,153 @@
+<Type Name="StaticResourceExtension" FullName="System.Windows.StaticResourceExtension">
+  <TypeSignature Language="C#" Value="public class StaticResourceExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StaticResourceExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.StaticResourceExtension" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Object))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa uma extensão de marcação que dá suporte a referências de recurso (tempo de carregamento XAML) estáticas feitas do XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é uma implementação de extensão de marcação. Classes de extensão de marcação no WPF existem principalmente para oferecer suporte à infraestrutura para alguns aspectos do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] implementação do processador XAML e os membros expostos por uma extensão de marcação não normalmente são chamados de código do usuário. Essa extensão oferece suporte a [StaticResource Markup Extension](~/docs/framework/wpf/advanced/staticresource-markup-extension.md) uso do XAML. Para obter mais informações sobre os mecanismos de pesquisa por recursos estáticos em WPF XAML, consulte [StaticResource Markup Extension](~/docs/framework/wpf/advanced/staticresource-markup-extension.md) ou [recursos XAML](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ `{StaticResource}`é uma extensão de marcação que é específica para a implementação do WPF XAML. Você pode usar `{StaticResource}` ao referenciar o namespace XAML padrão para WPF, sem usar um prefixo. Por outro lado, suportam a extensões de marcação que são definidas para a linguagem XAML (como `{x:Type}`) requerem o prefixo do namespace XAML linguagem XAML no uso. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](~/docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+  
+ Referências a recursos estáticos são geralmente usadas em XAML sempre que um [DynamicResource Markup Extension](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md) não é necessário explicitamente.  
+  
+<a name="xamlTextUsage_StaticResourceExtension"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Consulte comentários  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticResourceExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.StaticResourceExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.StaticResourceExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticResourceExtension (object resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.StaticResourceExtension.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">A chave do recurso que faz referência a esta extensão de marcação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.StaticResourceExtension" /> classe, com a chave inicial fornecida.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resourceKey" />o parâmetro é <see langword="null" />, por meio do uso de extensão de marcação ou construção explícita.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.StaticResourceExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Objeto que pode fornecer serviços para a extensão de marcação.</param>
+        <summary>Retorna um objeto que deve ser definido na propriedade onde essa extensão é aplicada. Para <see cref="T:System.Windows.StaticResourceExtension" />, esse é o objeto encontrado em um dicionário de recursos, onde encontrar o objeto é identificado pelo <see cref="P:System.Windows.StaticResourceExtension.ResourceKey" />.</summary>
+        <returns>O valor de objeto a ser definido na propriedade de extensão de marcação onde o valor fornecido é avaliado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte à [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] implementação do processador XAML e não se destina a ser chamado diretamente. A implementação de processador XAML usa esse método para manipulação adequada de `StaticResource` valores de durante a criação do objeto de extensão.  
+  
+ A propriedade a ser definido pode ser identificada por um <xref:System.Reflection.PropertyInfo> (propriedade padrão) ou <xref:System.Windows.DependencyProperty> (propriedade de dependência).  
+  
+ Esta implementação se baseia em serviços relacionados a XAML com base no passado `serviceProvider`. Ele não deve ser `null`. No [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] implementação, estes são os serviços necessários do contexto do serviço:  
+  
+-   <xref:System.Xaml.IXamlSchemaContextProvider>  
+  
+-   <xref:System.Xaml.IAmbientProvider>  
+  
+-   <xref:System.Xaml.IRootObjectProvider>  
+  
+ Se qualquer um desses serviços estiver ausente, o uso da extensão de marcação gera uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="serviceProvider" />foi <see langword="null" />, ou com falha implementar um serviço necessário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceKey">
+      <MemberSignature Language="C#" Value="public object ResourceKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ResourceKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.StaticResourceExtension.ResourceKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ConstructorArgument("resourceKey")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da chave passado por referência esse recurso estático. Chave é usada para retornar o objeto correspondente a essa chave nos dicionários de recursos.</summary>
+        <value>A chave de recurso para um recurso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] informações de uso, consulte [StaticResource Markup Extension](~/docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+  
+<a name="xamlTextUsage_ResourceKey"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Especificado valor como <see langword="null" />, por meio do uso de extensão de marcação ou construção explícita.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,139 @@
+<Type Name="CodeDirectionExpression" FullName="System.CodeDom.CodeDirectionExpression">
+  <TypeSignature Language="C#" Value="public class CodeDirectionExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeDirectionExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeDirectionExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma expressão usada como um método invoke parâmetro junto com um indicador de direção de referência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeDirectionExpression>pode representar um parâmetro passado para um método e a direção do parâmetro de referência.  
+  
+ O <xref:System.CodeDom.CodeDirectionExpression.Expression%2A> propriedade indica a expressão para qualificar-se com uma direção. O <xref:System.CodeDom.CodeDirectionExpression.Direction%2A> propriedade indica a direção do parâmetro usando um do <xref:System.CodeDom.FieldDirection> valores de enumeração.  
+  
+> [!NOTE]
+>  <xref:System.CodeDom.CodeDirectionExpression>destina-se a ser usado como um método de invocação de parâmetro e não deve ser usada ao declarar métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de um <xref:System.CodeDom.CodeDirectionExpression> para especificar um modificador de direção de campo para uma expressão a ser passado como um parâmetro de método.  
+  
+ [!code-cpp[CodeMultiExample#4](~/samples/snippets/cpp/VS_Snippets_CLR/CodeMultiExample/CPP/codemultiexample.cpp#4)]
+ [!code-csharp[CodeMultiExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/CodeMultiExample/CS/codemultiexample.cs#4)]
+ [!code-vb[CodeMultiExample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeMultiExample/VB/codemultiexample.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDirectionExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeDirectionExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeDirectionExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDirectionExpression (System.CodeDom.FieldDirection direction, System.CodeDom.CodeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.CodeDom.FieldDirection direction, class System.CodeDom.CodeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeDirectionExpression.#ctor(System.CodeDom.FieldDirection,System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.CodeDom.FieldDirection" />
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Um <see cref="T:System.CodeDom.FieldDirection" /> que indica a direção de campo da expressão.</param>
+        <param name="expression">Um <see cref="T:System.CodeDom.CodeExpression" /> que indica a expressão de código para representar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeDirectionExpression" /> classe usando a direção do campo especificado e a expressão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.CodeDom.FieldDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.CodeDom.FieldDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDirectionExpression.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.FieldDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção de campo para esta expressão de direção.</summary>
+        <value>Um <see cref="T:System.CodeDom.FieldDirection" /> que indica a direção de campo para esta expressão de direção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Expression" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDirectionExpression.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão de código para representar.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpression" /> que indica a expressão para representar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

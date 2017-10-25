@@ -1,0 +1,248 @@
+<Type Name="XmlSchemaValidationFlags" FullName="System.Xml.Schema.XmlSchemaValidationFlags">
+  <TypeSignature Language="C#" Value="public enum XmlSchemaValidationFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlSchemaValidationFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaValidationFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as opções de validação de esquema usadas pelas classes <see cref="T:System.Xml.Schema.XmlSchemaValidator" /> e <see cref="T:System.Xml.XmlReader" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seguir estão as anotações a serem considerados ao usar <xref:System.Xml.Schema.XmlSchemaValidationFlags> valores com o <xref:System.Xml.XmlReader>.  
+  
+-   <xref:System.Xml.Schema.XmlSchemaValidationFlags>valores definem opções de validação usadas por um esquema de validação <xref:System.Xml.XmlReader> para executar a validação de XML em um esquema. <xref:System.Xml.Schema.XmlSchemaValidationFlags>valores de uma validação <xref:System.Xml.XmlReader> são especificados usando o <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> propriedade.  
+  
+ A seguir estão as anotações a serem considerados ao usar o valor de AllowXmlAttributes.  
+  
+1.  Quando um esquema não importa o namespace de Xml.  
+  
+    1.  Se AllowXmlAttributes for definido como `true` (padrão) e o documento de instância contém atributos Xml, o mecanismo de validação carregará um instantâneo do esquema do namespace de Xml padrão e usá-lo para validação. Se os atributos Xml usados no documento da instância não forem encontrados no esquema padrão, não será validado, o documento.  
+  
+    2.  Se AllowXmlAttributes for definido como `false` e o documento de instância contém atributos Xml, o mecanismo de validação relatará um erro.  
+  
+2.  Quando um esquema importa o namespace de Xml sem uma localização.  
+  
+    1.  Se AllowXmlAttributes for definido como `true` (padrão) e o documento de instância contém atributos Xml, o mecanismo de validação usará o esquema padrão do namespace Xml para validação. Se os atributos Xml usados no documento da instância não forem encontrados no esquema padrão, não será validado, o documento.  
+  
+    2.  Se AllowXmlAttributes for definido como `false` e o documento de instância contém atributos de Xml que não são explicitamente permitidos pelo esquema, o mecanismo de validação relatará um erro.  
+  
+    3.  Se AllowXmlAttributes for definido como `false` e o documento de instância contém os atributos Xml são explicitamente permitidos pelo esquema, o mecanismo de validação validar os atributos da mesma forma que ele valida outros atributos usando o esquema do namespace Xml padrão.  
+  
+3.  Quando um esquema importa um esquema de namespace Xml personalizado com um schemaLocation personalizado.  
+  
+    1.  Se AllowXmlAttributes for definido como `true` (padrão) e o documento de instância contém atributos Xml, o mecanismo de validação usará o esquema do namespace Xml personalizado para validação. Se os atributos Xml usados no documento da instância não forem encontrados no esquema especificado, não será validado, o documento.  
+  
+    2.  Se AllowXmlAttributes for definido como `false` e o documento de instância contém atributos de Xml que não são explicitamente permitidos pelo esquema, o mecanismo de validação relatará um erro.  
+  
+    3.  Se AllowXmlAttributes for definido como `false` e o documento de instância contém os atributos Xml são explicitamente permitidos pelo esquema, o mecanismo de validação validar os atributos da mesma forma que ele valida outros atributos usando o esquema de namespace Xml especificado.  
+  
+4.  Quando um esquema define um xml: * atributo com use = "necessário".  
+  
+    1.  O seguinte se aplica quando AllowXmlAttributes está definido como `true` e `false`. Necessário xml: * atributos devem ser tratados como outros atributos e validados usando o esquema do namespace Xml especificado.  
+  
+5.  Quando um esquema define um xml: * atributo com use = "prohibited".  
+  
+    1.  O seguinte se aplica quando AllowXmlAttributes está definido como `true` e `false`. Se um documento de instância contém xml: * atributos que são explicitamente proibido pelo esquema, o mecanismo de validação relatará um erro.  
+  
+6.  Quando um esquema especifica um curinga de atributo.  
+  
+    1.  Se um documento de instância contém um atributo Xml e o esquema especifica um curinga de atributo com processContents seja omitido ou definido como "estrito", o mecanismo de validação usará o esquema do namespace de Xml presente no <xref:System.Xml.Schema.XmlSchemaSet>. Se nenhum esquema de namespace Xml for especificada, o mecanismo de validação irão se comportar da seguinte maneira.  
+  
+    2.  Se AllowXmlAttributes for definido como `true`, o mecanismo de validação usará o esquema do namespace Xml padrão para executar a validação.  
+  
+    3.  Se AllowXmlAttributes for definido como `false`, o mecanismo de validação relatará um erro.  
+  
+    4.  Se um documento de instância contém um atributo Xml e o esquema especifica um curinga de atributo com processContents definido como "Ignorar", o mecanismo de validação ignorará a validação do atributo.  
+  
+    5.  Se um documento de instância contém um atributo Xml e o esquema especifica um curinga de atributo com processContents definido como "incerta", o mecanismo de validação usará o esquema do namespace de Xml presente no <xref:System.Xml.Schema.XmlSchemaSet>. Se nenhum esquema de namespace Xml for especificada, o mecanismo de validação irão se comportar da seguinte maneira.  
+  
+    6.  Se AllowXmlAttributes for definido como `true`, o mecanismo de validação usará o esquema do namespace Xml padrão para executar a validação.  
+  
+    7.  Se AllowXmlAttributes for definido como `false`, validação de atributo não será executada.  
+  
+7.  Durante a validação de tipos simples.  
+  
+    1.  Quando AllowXmlAttributes está definido como `true` (padrão), os atributos Xml serão permitidos em elementos de tipos simples.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de <xref:System.Xml.Schema.XmlSchemaValidationFlags.AllowXmlAttributes> de classe, consulte o <xref:System.Xml.Schema.XmlSchemaValidator> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowXmlAttributes">
+      <MemberSignature Language="C#" Value="AllowXmlAttributes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags AllowXmlAttributes = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.AllowXmlAttributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite atributos xml:* mesmo quando não estão definidos no esquema. Os atributos serão validados com base em seu tipo de dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não processe restrições de identidade, esquemas embutidos, dicas de localização de esquema ou avisos de validação de esquema de relatório.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessIdentityConstraints">
+      <MemberSignature Language="C#" Value="ProcessIdentityConstraints" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags ProcessIdentityConstraints = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Restrições de identidade de processo (<c>xs: ID</c>, <c>xs: IDREF</c>, <c>xs:key</c>, <c>xs:keyref</c>, <c>xs: exclusivo</c>) encontrado durante a validação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessInlineSchema">
+      <MemberSignature Language="C#" Value="ProcessInlineSchema" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags ProcessInlineSchema = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esquemas embutidos do processo encontrados durante a validação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessSchemaLocation">
+      <MemberSignature Language="C#" Value="ProcessSchemaLocation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags ProcessSchemaLocation = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Processar dicas de local de esquema (<c>xsi: schemaLocation</c>, <c>xsi: noNamespaceSchemaLocation</c>) encontrados durante a validação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportValidationWarnings">
+      <MemberSignature Language="C#" Value="ReportValidationWarnings" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSchemaValidationFlags ReportValidationWarnings = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Avisos de validação de esquema de relatório encontrados durante a validação.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

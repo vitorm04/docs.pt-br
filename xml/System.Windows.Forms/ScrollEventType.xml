@@ -1,0 +1,174 @@
+<Type Name="ScrollEventType" FullName="System.Windows.Forms.ScrollEventType">
+  <TypeSignature Language="C#" Value="public enum ScrollEventType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScrollEventType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ScrollEventType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de ação usada para gerar o evento <see cref="E:System.Windows.Forms.ScrollBar.Scroll" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por <xref:System.Windows.Forms.ScrollEventArgs.Type%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EndScroll">
+      <MemberSignature Language="C#" Value="EndScroll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollEventType EndScroll = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollEventType.EndScroll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de rolagem parou de se mover.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="First">
+      <MemberSignature Language="C#" Value="First" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollEventType First = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollEventType.First" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de rolagem foi movida para a posição <see cref="P:System.Windows.Forms.ScrollBar.Minimum" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeDecrement">
+      <MemberSignature Language="C#" Value="LargeDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollEventType LargeDecrement = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollEventType.LargeDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de rolagem foi movida uma grande distância. O usuário clicou na barra de rolagem à esquerda (horizontal) ou acima (vertical) da caixa de rolagem ou pressionou a tecla PAGE UP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeIncrement">
+      <MemberSignature Language="C#" Value="LargeIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollEventType LargeIncrement = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollEventType.LargeIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de rolagem foi movida uma grande distância. O usuário clicou na barra de rolagem à direita (horizontal) ou abaixo (vertical) da caixa de rolagem ou pressionou a tecla PAGE DOWN.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Last">
+      <MemberSignature Language="C#" Value="Last" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollEventType Last = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollEventType.Last" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de rolagem foi movida para a posição <see cref="P:System.Windows.Forms.ScrollBar.Maximum" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallDecrement">
+      <MemberSignature Language="C#" Value="SmallDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollEventType SmallDecrement = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollEventType.SmallDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de rolagem foi movida uma pequena distância. O usuário clicou na seta de rolagem esquerda (horizontal) ou superior (vertical) ou pressionou a tecla de SETA PARA CIMA.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallIncrement">
+      <MemberSignature Language="C#" Value="SmallIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollEventType SmallIncrement = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollEventType.SmallIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de rolagem foi movida uma pequena distância. O usuário clicou na seta de rolagem direita (horizontal) ou inferior (vertical) ou pressionou a tecla de SETA PARA BAIXO.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbPosition">
+      <MemberSignature Language="C#" Value="ThumbPosition" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollEventType ThumbPosition = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollEventType.ThumbPosition" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de rolagem foi movida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbTrack">
+      <MemberSignature Language="C#" Value="ThumbTrack" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollEventType ThumbTrack = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollEventType.ThumbTrack" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A caixa de rolagem está sendo movida no momento.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

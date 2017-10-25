@@ -1,0 +1,71 @@
+<Type Name="DirectoryServicesPermissionAccess" FullName="System.DirectoryServices.DirectoryServicesPermissionAccess">
+  <TypeSignature Language="C#" Value="public enum DirectoryServicesPermissionAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DirectoryServicesPermissionAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.DirectoryServicesPermissionAccess" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.DirectoryServicesPermissionAccess" /> enumeração define os níveis de acesso que são usados por <see cref="N:System.DirectoryServices" /> classes de permissão. Esta enumeração tem um atributo <see cref="T:System.FlagsAttribute" /> que permite uma combinação bit a bit dos valores de seus membros.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Browse">
+      <MemberSignature Language="C#" Value="Browse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectoryServicesPermissionAccess Browse = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectoryServicesPermissionAccess.Browse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryServicesPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Lendo a árvore de serviços de domínio do Active Directory é permitido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectoryServicesPermissionAccess None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectoryServicesPermissionAccess.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryServicesPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há permissões.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="Write" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectoryServicesPermissionAccess Write = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectoryServicesPermissionAccess.Write" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryServicesPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ler, gravar, excluir, alterar e adicionar à árvore de Srevices de domínio do Active Directory são permitidos.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

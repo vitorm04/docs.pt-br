@@ -1,0 +1,168 @@
+<Type Name="XamlAccessLevel" FullName="System.Xaml.Permissions.XamlAccessLevel">
+  <TypeSignature Language="C#" Value="public class XamlAccessLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit XamlAccessLevel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.Permissions.XamlAccessLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define o controle de acesso a assemblies e tipos para fins de carregamento do XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Métodos estáticos <xref:System.Xaml.Permissions.XamlAccessLevel> retornar instâncias de <xref:System.Xaml.Permissions.XamlAccessLevel>, com base na entrada. Essa é a única maneira de gerar um <xref:System.Xaml.Permissions.XamlAccessLevel> valor (o construtor é privado).  
+  
+ <xref:System.Xaml.Permissions.XamlAccessLevel>geralmente é usado somente em conjunto com <xref:System.Xaml.Permissions.XamlLoadPermission>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssemblyAccessTo">
+      <MemberSignature Language="C#" Value="public static System.Xaml.Permissions.XamlAccessLevel AssemblyAccessTo (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.Permissions.XamlAccessLevel AssemblyAccessTo(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Permissions.XamlAccessLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O assembly para a solicitação.</param>
+        <summary>Retorna um <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> instância com base em um assembly solicitado pelo <see cref="T:System.Reflection.Assembly" />.</summary>
+        <returns>Um <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> instância, com o <paramref name="assembly" /> valor usado como fonte de informação para <see cref="P:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessToAssemblyName" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assembly" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyAccessTo">
+      <MemberSignature Language="C#" Value="public static System.Xaml.Permissions.XamlAccessLevel AssemblyAccessTo (System.Reflection.AssemblyName assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.Permissions.XamlAccessLevel AssemblyAccessTo(class System.Reflection.AssemblyName assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo(System.Reflection.AssemblyName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Permissions.XamlAccessLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.Reflection.AssemblyName" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">O nome do assembly para a solicitação.</param>
+        <summary>Retorna um <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> instância com base em um assembly solicitado pelo <see cref="T:System.Reflection.AssemblyName" />.</summary>
+        <returns>Um <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> instância, com o <paramref name="assemblyName" /> valor usado como fonte de informação para <see cref="P:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessToAssemblyName" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assemblyName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="assemblyName" />não é um nome totalmente qualificado do assembly válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyAccessToAssemblyName">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName AssemblyAccessToAssemblyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.AssemblyName AssemblyAccessToAssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessToAssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Reflection.AssemblyName" /> do assembly para o qual o <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> determina as permissões.</summary>
+        <value>O <see cref="T:System.Reflection.AssemblyName" /> do assembly para o qual o <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> determina as permissões.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateAccessTo">
+      <MemberSignature Language="C#" Value="public static System.Xaml.Permissions.XamlAccessLevel PrivateAccessTo (string assemblyQualifiedTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.Permissions.XamlAccessLevel PrivateAccessTo(string assemblyQualifiedTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Permissions.XamlAccessLevel.PrivateAccessTo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Permissions.XamlAccessLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyQualifiedTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyQualifiedTypeName">Uma cadeia de caracteres é analisada como um nome de tipo qualificado por assembly.</param>
+        <summary>Retorna um <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> instância com base em um tipo específico, especificado pelo nome qualificado.</summary>
+        <returns>Um <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> instância, com o <paramref name="assemblyQualifiedTypeName" /> valor usado como fonte de informação para <see cref="P:System.Xaml.Permissions.XamlAccessLevel.PrivateAccessToTypeName" /> e <see cref="P:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessToAssemblyName" /> determinado por reflexão no tipo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assemblyQualifiedTypeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="assemblyQualifiedTypeName" />não é um nome de tipo qualificado de assembly válido.  
+  
+ -ou-  
+  
+ Nome do assembly em <paramref name="assemblyQualifiedTypeName" /> não é um nome de assembly válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateAccessTo">
+      <MemberSignature Language="C#" Value="public static System.Xaml.Permissions.XamlAccessLevel PrivateAccessTo (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.Permissions.XamlAccessLevel PrivateAccessTo(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.Permissions.XamlAccessLevel.PrivateAccessTo(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Permissions.XamlAccessLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> a solicitação de acesso.</param>
+        <summary>Retorna um <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> instância com base em um tipo específico, especificado pelo <see cref="T:System.Type" />.</summary>
+        <returns>Um <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> instância, com o <paramref name="type" /> valor usado como fonte de informação para <see cref="P:System.Xaml.Permissions.XamlAccessLevel.PrivateAccessToTypeName" /> e <see cref="P:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessToAssemblyName" /> determinado por reflexão no tipo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateAccessToTypeName">
+      <MemberSignature Language="C#" Value="public string PrivateAccessToTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrivateAccessToTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.Permissions.XamlAccessLevel.PrivateAccessToTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de cadeia de caracteres não qualificado do tipo para o qual o <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> determina as permissões.</summary>
+        <value>O nome não qualificado de cadeia de caracteres do tipo para o qual o <see cref="T:System.Xaml.Permissions.XamlAccessLevel" /> determina as permissões.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

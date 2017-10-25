@@ -1,0 +1,162 @@
+<Type Name="DirectoryConnection" FullName="System.DirectoryServices.Protocols.DirectoryConnection">
+  <TypeSignature Language="C#" Value="public abstract class DirectoryConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DirectoryConnection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DirectoryConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.Protocols.DirectoryConnection" /> é uma classe abstrata e não pode ter uma instância criada. Use as classes <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> ou <see cref="T:System.DirectoryServices.Protocols.DsmlSoapHttpConnection" /> para se conectar a um servidor de diretório.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DirectoryConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryConnection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DirectoryConnection.#ctor" /> construtor inicializa uma nova instância de um <see cref="T:System.DirectoryServices.Protocols.DirectoryConnection" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificates">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509CertificateCollection ClientCertificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509CertificateCollection ClientCertificates" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509CertificateCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates" /> especifica um ou mais certificados do cliente a serem enviados para autenticação.</summary>
+        <value>Um ou mais certificados do cliente a serem enviados para autenticação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public virtual System.Net.NetworkCredential Credential { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryConnection.Credential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DirectoryConnection.Credential" /> propriedade especifica as credenciais alternativas para o objeto de conexão.</summary>
+        <value>Credenciais alternativas para o objeto de conexão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não for especificado, o valor padrão é `null`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Directory">
+      <MemberSignature Language="C#" Value="public virtual System.DirectoryServices.Protocols.DirectoryIdentifier Directory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.DirectoryIdentifier Directory" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryConnection.Directory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.DirectoryServices.Protocols.DirectoryConnection.Directory" /> especifica o domínio ou o servidor com o qual a conexão deve ser feita.</summary>
+        <value>O domínio ou o servidor com o qual a conexão deve ser feita.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, "http://fabrikam.com/platforms/adssoap.dll" representa um servidor DSML e "controlador de domínio-01.fabrikam.com" representa um servidor LDAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendRequest">
+      <MemberSignature Language="C#" Value="public abstract System.DirectoryServices.Protocols.DirectoryResponse SendRequest (System.DirectoryServices.Protocols.DirectoryRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.DirectoryServices.Protocols.DirectoryResponse SendRequest(class System.DirectoryServices.Protocols.DirectoryRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryConnection.SendRequest(System.DirectoryServices.Protocols.DirectoryRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.DirectoryServices.Protocols.DirectoryRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Um objeto <see cref="T:System.DirectoryServices.Protocols.DirectoryRequest" /> que contém a solicitação.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DirectoryConnection.SendRequest(System.DirectoryServices.Protocols.DirectoryRequest)" /> método envia uma operação de diretório único para o servidor.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> objeto que contém a resposta do servidor para a operação de solicitação. O objeto de resposta retornado pode ser diferente do objeto solicitado se o servidor retornará uma resposta diferente.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+          <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+        </permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public virtual TimeSpan Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryConnection.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DirectoryConnection.Timeout" /> propriedade contém o período de tempo, em segundos, antes que a conexão expire.</summary>
+        <value>O período de tempo, em segundos, antes que a conexão expire.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Trinta segundos é a configuração de propriedade de comprimento de tempo padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,130 @@
+<Type Name="DomainUpDown+DomainUpDownAccessibleObject" FullName="System.Windows.Forms.DomainUpDown+DomainUpDownAccessibleObject">
+  <TypeSignature Language="C#" Value="public class DomainUpDown.DomainUpDownAccessibleObject : System.Windows.Forms.Control.ControlAccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit DomainUpDown/DomainUpDownAccessibleObject extends System.Windows.Forms.Control/ControlAccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control+ControlAccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações sobre o controle <see cref="T:System.Windows.Forms.DomainUpDown" /> para aplicativos cliente de acessibilidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms tem suporte de acessibilidade interno e fornece informações sobre o aplicativo que lhe permite trabalhar com aplicativos cliente de acessibilidade. Exemplos de aplicativos cliente de acessibilidade tela utilitários ampliador e revisor, utilitários de entrada de voz, teclados na tela, dispositivos de entrada alternativos e os utilitários de aprimoramento de teclado. O <xref:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject> classe herda o <xref:System.Windows.Forms.AccessibleObject> classe para fornecer informações sobre o <xref:System.Windows.Forms.DomainUpDown> controle para aplicativos cliente de acessibilidade.  
+  
+ Há instâncias quando você deve fornecer informações personalizadas, como nome ou descrição, para aplicativos cliente de acessibilidade de um controle. Há duas maneiras de fornecer essas informações. Para fornecer informações de acessibilidade limitada para controles existentes, defina o controle <xref:System.Windows.Forms.Control.AccessibleName%2A>, <xref:System.Windows.Forms.Control.AccessibleDescription%2A>, <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A>, e <xref:System.Windows.Forms.Control.AccessibleRole%2A> valores de propriedade, que serão relatados para aplicativos cliente de acessibilidade.  
+  
+ Se você precisar de mais informações sobre acessibilidade para ser incluído no seu controle, você pode escrever sua própria classe que deriva de <xref:System.Windows.Forms.AccessibleObject> ou <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes. Por exemplo, se você estiver escrevendo seu próprio controle que não é derivado de controles comuns, ou exigem operações como teste de clique dentro do controle, você deve criar um <xref:System.Windows.Forms.Control.ControlAccessibleObject> para seu controle chamando o <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DomainUpDownAccessibleObject (System.Windows.Forms.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject.#ctor(System.Windows.Forms.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.Control" /> que tem o <see cref="T:System.Windows.Forms.Control.ControlAccessibleObject" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetChild">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject GetChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.AccessibleObject GetChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject.GetChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do filho acessível.</param>
+        <summary>Obtém o filho acessível correspondente para o índice especificado.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.AccessibleObject" /> que representa o filho acessível correspondente para o índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject> contém objetos acessível de filhos que correspondem às partes diferentes do <xref:System.Windows.Forms.DomainUpDown> controle. A tabela a seguir mostra os valores de índice e objeto filho acessível a <xref:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject.GetChild%2A> método retorna.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|0|Um objeto acessível para a caixa de texto|  
+|1|Um objeto acessível para cima e para baixo de botões.|  
+|2|Um objeto acessível para a propriedade de itens do <xref:System.Windows.Forms.DomainUpDown> controle.|  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildCount">
+      <MemberSignature Language="C#" Value="public override int GetChildCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetChildCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject.GetChildCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o número de filhos que pertence a um objeto acessível.</summary>
+        <returns>Retorna 3 em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a função deste objeto acessível.</summary>
+        <value>O valor <see cref="F:System.Windows.Forms.AccessibleRole.ComboBox" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

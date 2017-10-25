@@ -1,0 +1,385 @@
+<Type Name="TableProvider" FullName="System.Web.DynamicData.ModelProviders.TableProvider">
+  <TypeSignature Language="C#" Value="public abstract class TableProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TableProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.ModelProviders.TableProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a classe base para provedores de tabela de dados dinâmicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Provedores de tabela devem estender a classe. LINQ to SQL classes e o modelo de dados de entidade ADO.NET são os provedores que estendem a classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TableProvider (System.Web.DynamicData.ModelProviders.DataModelProvider model);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.DynamicData.ModelProviders.DataModelProvider model) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.TableProvider.#ctor(System.Web.DynamicData.ModelProviders.DataModelProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="model" Type="System.Web.DynamicData.ModelProviders.DataModelProvider" />
+      </Parameters>
+      <Docs>
+        <param name="model">O modelo que a tabela pertence.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.DynamicData.ModelProviders.TableProvider" /> classe para uso por uma instância de classe herdada. Esse construtor só pode ser chamado por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.TableProvider.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos que são definidos para a tabela que é representada por esse provedor.</summary>
+        <value>A coleção de atributos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDelete">
+      <MemberSignature Language="C#" Value="public virtual bool CanDelete (System.Security.Principal.IPrincipal principal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanDelete(class System.Security.Principal.IPrincipal principal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.TableProvider.CanDelete(System.Security.Principal.IPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="principal" Type="System.Security.Principal.IPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="principal">O usuário.</param>
+        <summary>Obtém um valor que indica se o usuário tem permissão para excluir itens da tabela.</summary>
+        <returns>
+          <see langword="true" />Se o usuário tem permissão para excluir itens da tabela; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInsert">
+      <MemberSignature Language="C#" Value="public virtual bool CanInsert (System.Security.Principal.IPrincipal principal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanInsert(class System.Security.Principal.IPrincipal principal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.TableProvider.CanInsert(System.Security.Principal.IPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="principal" Type="System.Security.Principal.IPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="principal">O usuário.</param>
+        <summary>Obtém um valor que indica se o usuário tem permissão para inserir itens na tabela.</summary>
+        <returns>
+          <see langword="true" />Se o usuário tem permissão para inserir itens na tabela; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public virtual bool CanRead (System.Security.Principal.IPrincipal principal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanRead(class System.Security.Principal.IPrincipal principal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.TableProvider.CanRead(System.Security.Principal.IPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="principal" Type="System.Security.Principal.IPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="principal">O usuário.</param>
+        <summary>Obtém um valor que indica se o usuário tem permissão para ler os itens na tabela.</summary>
+        <returns>
+          <see langword="true" />Se o usuário tem permissão para ler os itens da tabela. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpdate">
+      <MemberSignature Language="C#" Value="public virtual bool CanUpdate (System.Security.Principal.IPrincipal principal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanUpdate(class System.Security.Principal.IPrincipal principal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.TableProvider.CanUpdate(System.Security.Principal.IPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="principal" Type="System.Security.Principal.IPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="principal">O usuário.</param>
+        <summary>Obtém um valor que indica se o usuário tem permissão para atualizar os itens na tabela.</summary>
+        <returns>
+          <see langword="true" />Se o usuário tem permissão para atualizar itens da tabela. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Web.DynamicData.ModelProviders.ColumnProvider&gt; Columns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Web.DynamicData.ModelProviders.ColumnProvider&gt; Columns" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.TableProvider.Columns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Web.DynamicData.ModelProviders.ColumnProvider&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a coleção de colunas nesta tabela.</summary>
+        <value>A coleção de colunas nesta tabela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataContextPropertyName">
+      <MemberSignature Language="C#" Value="public virtual string DataContextPropertyName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataContextPropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.TableProvider.DataContextPropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da tabela de contexto de dados.</summary>
+        <value>O nome da tabela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataModel">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.ModelProviders.DataModelProvider DataModel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.ModelProviders.DataModelProvider DataModel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.TableProvider.DataModel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ModelProviders.DataModelProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.DynamicData.ModelProviders.DataModelProvider" /> objeto.</summary>
+        <value>O objeto <see cref="T:System.Web.DynamicData.ModelProviders.DataModelProvider" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Dynamic Data do ASP.NET](http://msdn.microsoft.com/library/78c7fcd7-5f38-46a0-a4bc-48eff3c8a512).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityType">
+      <MemberSignature Language="C#" Value="public virtual Type EntityType { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EntityType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.TableProvider.EntityType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo que representa a tabela.</summary>
+        <value>O tipo que representa a tabela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateForeignKey">
+      <MemberSignature Language="C#" Value="public virtual object EvaluateForeignKey (object row, string foreignKeyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object EvaluateForeignKey(object row, string foreignKeyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.TableProvider.EvaluateForeignKey(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Object" />
+        <Parameter Name="foreignKeyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="row">A linha para obter o valor de chave estrangeira.</param>
+        <param name="foreignKeyName">O nome da coluna de chave estrangeira.</param>
+        <summary>Retorna o valor de uma chave estrangeira para a linha especificada.</summary>
+        <returns>A chave estrangeira.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQuery">
+      <MemberSignature Language="C#" Value="public abstract System.Linq.IQueryable GetQuery (object context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.IQueryable GetQuery(object context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.TableProvider.GetQuery(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto de dados para a tabela.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o <see cref="T:System.Linq.IQueryable" /> objeto que por sua vez, retorna os elementos da tabela.</summary>
+        <returns>Um <see cref="T:System.Linq.IQueryable" /> objeto que retorna os elementos da tabela.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeDescriptor">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.TableProvider.GetTypeDescriptor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ICustomTypeDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o descritor de tipo para a tabela.</summary>
+        <returns>O descritor de tipo para a tabela.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.TableProvider.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da tabela.</summary>
+        <value>O nome da tabela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, isso é o nome da propriedade da tabela na classe de contexto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentEntityType">
+      <MemberSignature Language="C#" Value="public virtual Type ParentEntityType { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ParentEntityType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.TableProvider.ParentEntityType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de pai.</summary>
+        <value>O tipo de pai, se a entidade tem um pai; Caso contrário, uma instância do <see cref="T:System.Data.Metadata.Edm.EntityType" /> classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootEntityType">
+      <MemberSignature Language="C#" Value="public virtual Type RootEntityType { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type RootEntityType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.ModelProviders.TableProvider.RootEntityType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de raiz para esta entidade.</summary>
+        <value>O tipo de raiz para esta entidade se a entidade tem um pai; Caso contrário, uma instância do <see cref="T:System.Data.Metadata.Edm.EntityType" /> classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.ModelProviders.TableProvider.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="P:System.Web.DynamicData.ModelProviders.TableProvider.Name" /> propriedade o <see cref="T:System.Web.DynamicData.ModelProviders.TableProvider" /> instância.</summary>
+        <returns>O nome do <see cref="T:System.Web.DynamicData.ModelProviders.TableProvider" /> instância. Se o <see cref="P:System.Web.DynamicData.ModelProviders.TableProvider.Name" /> é de propriedade <see langword="null" />, a classe base <see langword="Name" /> propriedade é retornada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método destina-se para fins de depuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

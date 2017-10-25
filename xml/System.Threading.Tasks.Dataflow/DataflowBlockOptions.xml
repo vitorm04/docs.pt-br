@@ -1,0 +1,207 @@
+<Type Name="DataflowBlockOptions" FullName="System.Threading.Tasks.Dataflow.DataflowBlockOptions">
+  <TypeSignature Language="C#" Value="public class DataflowBlockOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataflowBlockOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.DataflowBlockOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece as opções usadas para configurar o processamento executado por blocos de fluxo de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  A biblioteca de fluxo de dados TPL (<xref:System.Threading.Tasks.Dataflow> namespace) não é distribuído com o net_v45. Para instalar o <xref:System.Threading.Tasks.Dataflow> namespace, abra seu projeto no [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], escolha **gerenciar pacotes NuGet** no menu projeto e pesquise online o `Microsoft.Tpl.Dataflow` pacote.  
+  
+ <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>é mutável e pode ser configurado por meio de suas propriedades.  
+  
+ Quando as opções de configuração específicos não forem definidas, os seguintes padrões são usados:  
+  
+|Opções|Padrão|  
+|-------------|-------------|  
+|TaskScheduler|<xref:System.Threading.Tasks.TaskScheduler.Default%2A>|  
+|MaxMessagesPerTask|DataflowBlockOptions.Unbounded (-1)|  
+|CancellationToken|<xref:System.Threading.CancellationToken.None%2A>|  
+|BoundedCapacity|DataflowBlockOptions.Unbounded (-1)|  
+  
+ Blocos de fluxo de dados capturam o estado das opções em sua construção. As alterações subsequentes fornecido <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions> instância não deve afetar o comportamento de um bloco de fluxo de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataflowBlockOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlockOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa um novo <see cref="T:System.Threading.Tasks.Dataflow.DataflowBlockOptions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoundedCapacity">
+      <MemberSignature Language="C#" Value="public int BoundedCapacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BoundedCapacity" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowBlockOptions.BoundedCapacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de mensagens que podem ser armazenados em buffer pelo bloco.</summary>
+        <value>O número máximo de mensagens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Threading.CancellationToken" /> para monitorar solicitações de cancelamento.</summary>
+        <value>O token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureOrdered">
+      <MemberSignature Language="C#" Value="public bool EnsureOrdered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnsureOrdered" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowBlockOptions.EnsureOrdered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxMessagesPerTask">
+      <MemberSignature Language="C#" Value="public int MaxMessagesPerTask { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxMessagesPerTask" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowBlockOptions.MaxMessagesPerTask" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de mensagens que podem ser processados por tarefa.</summary>
+        <value>O número máximo de mensagens. O padrão é -1, que indica um número ilimitado de mensagens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameFormat">
+      <MemberSignature Language="C#" Value="public string NameFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NameFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowBlockOptions.NameFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de formato a ser usado quando um bloco é consultado para seu nome.</summary>
+        <value>A cadeia de caracteres de formato a ser usado quando um bloco é consultado para seu nome.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato de nome pode conter até dois itens de formato. {0} será substituído pelo nome do bloco. \\{1 \\} será substituído com a Id do bloco, que é retornada da propriedade de Completion.Id do bloco.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskScheduler">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.TaskScheduler TaskScheduler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.Tasks.TaskScheduler TaskScheduler" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Threading.Tasks.TaskScheduler" /> para usar para o agendamento de tarefas.</summary>
+        <value>O Agendador de tarefas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unbounded">
+      <MemberSignature Language="C#" Value="public const int Unbounded = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 Unbounded = (-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Uma constante usada para especificar uma quantidade ilimitada de <see cref="T:System.Threading.Tasks.Dataflow.DataflowBlockOptions" /> membros que fornecem um limite superior. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

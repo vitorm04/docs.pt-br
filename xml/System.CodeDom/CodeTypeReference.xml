@@ -1,0 +1,474 @@
+<Type Name="CodeTypeReference" FullName="System.CodeDom.CodeTypeReference">
+  <TypeSignature Language="C#" Value="public class CodeTypeReference : System.CodeDom.CodeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeTypeReference extends System.CodeDom.CodeObject" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeTypeReference" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma referência a um tipo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.CodeDom.CodeTypeReference> objeto é usado para representar um tipo para objetos de CodeDOM. Quando tipos de CodeDOM tem um `Type` propriedade, ela é do tipo <xref:System.CodeDom.CodeTypeReference>. Por exemplo, o <xref:System.CodeDom.CodeMemberField.Type%2A?displayProperty=nameWithType> propriedade é um <xref:System.CodeDom.CodeTypeReference> que representa o tipo de dados do campo.  
+  
+ Um <xref:System.CodeDom.CodeTypeReference> pode ser inicializado com um <xref:System.Type> objeto ou uma cadeia de caracteres. Geralmente é recomendável usar um <xref:System.Type> para fazer isso, embora não seja sempre possível. Se a inicialização de uma instância dessa classe com uma cadeia de caracteres, ele é altamente recomendável sempre usar tipos totalmente qualificados, como "System" em vez de apenas "Console", porque nem todos os idiomas oferecem suporte a namespaces de importação. Tipos de matriz podem ser especificados passando um objeto de tipo para uma matriz ou usando um dos construtores que aceitem classificação como um parâmetro.  
+  
+ O <xref:System.CodeDom.CodeTypeReference.BaseType%2A> propriedade especifica o nome do tipo de referência. Para as referências aos tipos de matriz, o <xref:System.CodeDom.CodeTypeReference.ArrayElementType%2A> propriedade indica o tipo dos elementos da matriz e o <xref:System.CodeDom.CodeTypeReference.ArrayRank%2A> propriedade indica o número de dimensões da matriz.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de um <xref:System.CodeDom.CodeTypeReference> representar uma referência a um tipo.  
+  
+ [!code-cpp[CodeTypeOfExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeOfExample/CPP/codetypeofexample.cpp#2)]
+ [!code-csharp[CodeTypeOfExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeOfExample/CS/codetypeofexample.cs#2)]
+ [!code-vb[CodeTypeOfExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeOfExample/VB/codetypeofexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeTypeReference" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria vazio <xref:System.CodeDom.CodeTypeReference> objeto.  Se você usar esse construtor, defina propriedades para estabelecer a referência de tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReference (System.CodeDom.CodeTypeParameter typeParameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeParameter typeParameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReference.#ctor(System.CodeDom.CodeTypeParameter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeParameter" Type="System.CodeDom.CodeTypeParameter" />
+      </Parameters>
+      <Docs>
+        <param name="typeParameter">Um <see cref="T:System.CodeDom.CodeTypeParameter" /> que representa o tipo do parâmetro de tipo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeTypeReference" /> classe usando o parâmetro de tipo de código especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReference (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReference.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo de referência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeTypeReference" /> classe usando o nome do tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `typeName` parâmetro faz referência a um tipo genérico, ela deve seguir as convenções de sintaxe para tipos genéricos. Por exemplo, a assinatura de reflexão para um <xref:System.Collections.Generic.Dictionary%602> tipo, onde `K` é uma cadeia de caracteres e `V` é um <xref:System.Collections.Generic.List%601> de inteiros, é representado por reflexão como o seguinte (com as informações de assembly removidas): ``System.Collections.Generic.Dictionary`2[[System.String], [System.Collections.Generic.List`1[[System.Int32]]]]``.  
+  
+> [!NOTE]
+>  Você deve usar colchetes ([]) e não os c# colchetes angulares (<>) para delimitar os parâmetros genéricos.  
+  
+ Para evitar a possibilidade de cometer um erro de sintaxe para especificar, considere o uso de construtor que usa um tipo como um parâmetro em vez de uma cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReference (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReference.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> para referência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeTypeReference" /> classe usando o tipo especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReference (System.CodeDom.CodeTypeReference arrayType, int rank);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeReference arrayType, int32 rank) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReference.#ctor(System.CodeDom.CodeTypeReference,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="arrayType" Type="System.CodeDom.CodeTypeReference" />
+        <Parameter Name="rank" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="arrayType">Um <see cref="T:System.CodeDom.CodeTypeReference" /> que indica o tipo da matriz.</param>
+        <param name="rank">O número de dimensões da matriz.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeTypeReference" /> classe usando o tipo de matriz especificada e a classificação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser usado para construir a matrizes de matrizes aninhando <xref:System.CodeDom.CodeTypeReference> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReference (string typeName, params System.CodeDom.CodeTypeReference[] typeArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, class System.CodeDom.CodeTypeReference[] typeArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReference.#ctor(System.String,System.CodeDom.CodeTypeReference[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="typeArguments" Type="System.CodeDom.CodeTypeReference[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo de referência.</param>
+        <param name="typeArguments">Uma matriz de <see cref="T:System.CodeDom.CodeTypeReference" /> valores.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeTypeReference" /> classe usando os argumentos de nome e o tipo do tipo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReference (string typeName, System.CodeDom.CodeTypeReferenceOptions codeTypeReferenceOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, valuetype System.CodeDom.CodeTypeReferenceOptions codeTypeReferenceOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReference.#ctor(System.String,System.CodeDom.CodeTypeReferenceOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="codeTypeReferenceOption" Type="System.CodeDom.CodeTypeReferenceOptions" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo de referência.</param>
+        <param name="codeTypeReferenceOption">A opção de referência de tipo de código, um do <see cref="T:System.CodeDom.CodeTypeReferenceOptions" /> valores.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeTypeReference" /> classe usando o nome do tipo especificado e a opção de tipo de referência de código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReference (string baseType, int rank);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string baseType, int32 rank) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReference.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseType" Type="System.String" />
+        <Parameter Name="rank" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="baseType">O nome do tipo dos elementos da matriz.</param>
+        <param name="rank">O número de dimensões da matriz.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeTypeReference" /> classe usando o nome de tipo de matriz especificada e a classificação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeReference (Type type, System.CodeDom.CodeTypeReferenceOptions codeTypeReferenceOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, valuetype System.CodeDom.CodeTypeReferenceOptions codeTypeReferenceOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeReference.#ctor(System.Type,System.CodeDom.CodeTypeReferenceOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="codeTypeReferenceOption" Type="System.CodeDom.CodeTypeReferenceOptions" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> para referência.</param>
+        <param name="codeTypeReferenceOption">A opção de referência de tipo de código, um do <see cref="T:System.CodeDom.CodeTypeReferenceOptions" /> valores.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeTypeReference" /> classe usando o tipo especificado e a referência de tipo de código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrayElementType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference ArrayElementType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference ArrayElementType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeReference.ArrayElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo dos elementos na matriz.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeTypeReference" /> que indica o tipo dos elementos da matriz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é ignorado, a menos que o <xref:System.CodeDom.CodeTypeReference.ArrayRank%2A> propriedade é maior que ou igual a 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrayRank">
+      <MemberSignature Language="C#" Value="public int ArrayRank { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ArrayRank" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeReference.ArrayRank" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a classificação de matriz da matriz.</summary>
+        <value>O número de dimensões da matriz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseType">
+      <MemberSignature Language="C#" Value="public string BaseType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeReference.BaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo que está sendo referenciado.</summary>
+        <value>O nome do tipo que está sendo referenciado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade contém o nome do tipo, a menos que ele seja um tipo de matriz, caso em que é o tipo de elemento de matriz.  
+  
+> [!NOTE]
+>  O nome da propriedade pode ser enganoso. Esta propriedade contém apenas o nome de tipo com ornamentos qualquer matriz ou argumentos de tipo genérico removido, não do tipo base ou pai como pode ser esperado. Por exemplo, o <xref:System.CodeDom.CodeTypeReference.BaseType%2A> valor para ``System.Collections.Generic.Dictionary`2[[System.String], [System.Collections.Generic.List`1[[System.Int32]]]]`` é ``System.Collections.Generic.Dictionary`2``.  
+  
+## <a name="representation-of-generic-types"></a>Representação de tipos genéricos  
+ As informações desta seção são destinadas a desenvolvedores de provedor de CodeDom e só se aplica a linguagens compatíveis com CLS. O valor de retorno pode conter tipos genéricos. Tipos genéricos são formatados com o nome do tipo seguido por um acento grave ("'") seguido por uma contagem de argumentos de tipo genérico. Os argumentos de tipo genérico podem ser encontrados no <xref:System.CodeDom.CodeTypeReferenceCollection> retornado pelo <xref:System.CodeDom.CodeTypeReference.TypeArguments%2A> propriedade. Os valores retornados por <xref:System.CodeDom.CodeTypeReference.BaseType%2A> e associado <xref:System.CodeDom.CodeTypeReference.TypeArguments%2A> contêm o mesmo conteúdo, como o valor do tipo retornado por reflexão.  
+  
+ Por exemplo, um construído <xref:System.Collections.Generic.Dictionary%602> onde `K` é uma cadeia de caracteres e `V` é um construído <xref:System.Collections.Generic.List%601> de inteiros é representado por reflexão como o seguinte (com as informações de assembly removidas):  
+  
+```  
+System.Collections.Generic.Dictionary`2[[System.String], [System.Collections.Generic.List`1[[System.Int32]]]]  
+```  
+  
+ Análise recursivamente a <xref:System.CodeDom.CodeTypeReference.BaseType%2A> propriedade o <xref:System.CodeDom.CodeTypeReference> para <xref:System.Collections.Generic.Dictionary%602> produz as mesmo cadeias de caracteres como a representação de reflexão acima:  
+  
+-   O <xref:System.CodeDom.CodeTypeReference.BaseType%2A> propriedade pai <xref:System.CodeDom.CodeTypeReference> retorna o seguinte:  
+  
+    ```  
+    System.Collections.Generic.Dictionary`2  
+    ```  
+  
+-   O <xref:System.CodeDom.CodeTypeReference.BaseType%2A> propriedade para a primeira <xref:System.CodeDom.CodeTypeReference> objeto o <xref:System.CodeDom.CodeTypeReference.TypeArguments%2A> coleção retorna o seguinte:  
+  
+    ```  
+    System.String  
+    ```  
+  
+-   O <xref:System.CodeDom.CodeTypeReference.BaseType%2A> propriedade para a segunda <xref:System.CodeDom.CodeTypeReference> objeto o <xref:System.CodeDom.CodeTypeReference.TypeArguments%2A> coleção retorna o seguinte:  
+  
+    ```  
+    System.Collections.Generic.List`1  
+    ```  
+  
+-   O <xref:System.CodeDom.CodeTypeReference.TypeArguments%2A> propriedade o <xref:System.CodeDom.CodeTypeReference> de objeto para ``System.Collections.Generic.List`1`` retorna o seguinte:  
+  
+    ```  
+    System.Int32  
+    ```  
+  
+ A contagem de argumento de tipo deve ser usada durante a análise associado <xref:System.CodeDom.CodeTypeReference.TypeArguments%2A> valores. A prática comum é remover a contagem de argumento de tipo de código gerado, mas a prática é específico do compilador.  É importante observar que a contagem de argumentos de tipo pode ser encontrada em um nome de tipo aninhado, caso em que ele seja seguido por um sinal de adição ("+").  
+  
+> [!NOTE]
+>  Ao criar um genérico <xref:System.CodeDom.CodeTypeReference>, a prática recomendada é especificar os argumentos de tipo como <xref:System.CodeDom.CodeTypeReference> objetos ou use o construtor que assume um <xref:System.Type>. Use o construtor que cria um <xref:System.CodeDom.CodeTypeReference> de uma cadeia de caracteres pode levar a erros de argumento de tipo undiscoverable.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReferenceOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.CodeDom.CodeTypeReferenceOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeReference.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReferenceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a opção de referência de tipo de código.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.CodeDom.CodeTypeReferenceOptions" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeArguments">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReferenceCollection TypeArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReferenceCollection TypeArguments" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeReference.TypeArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os argumentos de tipo para a referência de tipo genérico atual.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> que contém os argumentos de tipo atual <see cref="T:System.CodeDom.CodeTypeReference" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.CodeDom.CodeTypeReference.TypeArguments%2A> propriedade é uma coleção de referências de tipo a ser substituído para as referências de parâmetro de tipo do tipo genérico atual. A coleção contém todos os argumentos de tipo para todos os tipos aninhados. Para obter um exemplo, consulte o <xref:System.CodeDom.CodeTypeReference.BaseType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

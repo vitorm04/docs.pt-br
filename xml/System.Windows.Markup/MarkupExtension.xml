@@ -1,0 +1,131 @@
+<Type Name="MarkupExtension" FullName="System.Windows.Markup.MarkupExtension">
+  <TypeSignature Language="C#" Value="public abstract class MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MarkupExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.MarkupExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma classe base para as implementações de extensão de marcação XAML que podem ter o suporte pelos serviços XAML do .NET Framework e outros leitores e gravadores de XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Extensões de marcação retornam objetos para chamadores, com base na entrada de valores de atributo de cadeia de caracteres ou elementos de marcação em XAML. Extensões de marcação retornam objetos de forma mais sofisticada de conversores de tipo sozinho podem realizar. Um gravador de objeto XAML invoca um conversor de tipo como um tipo ou membro tem uma implementação de conversor de tipo associada a ele. Do CLR quadro de referência, isso significa que é um tipo ou membro <xref:System.ComponentModel.TypeConverterAttribute> atribuído. Da perspectiva do sistema de tipo XAML, isso significa que um tipo XAML ou um membro XAML tem um valor para o seu `TypeConverter` propriedade. A invocação de um conversor de tipo está vinculada à definição de tipo ou propriedade e sempre é invocada por XAML de processamento para esses casos. Em contraste, uma extensão de marcação está mais sob o controle do código de usuário e a marcação produzido pelo usuário e pode ser aplicada sempre que um cenário de aplicativo necessárias. Uma extensão de marcação pode ser chamada e pode ser usada para definir valores de membro de tipo diferente, desde que o tipo de retorno da extensão de marcação seja atribuído a esse valor.  
+  
+ Para obter informações sobre como criar uma extensão de marcação personalizada, consulte <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Para obter mais informações sobre extensões de marcação em geral, consulte [extensões de marcação para XAML Overview](~/docs/framework/xaml-services/markup-extensions-for-xaml-overview.md). Se você estiver criando no WPF e usar ou criar extensões de marcação para XAML, outras informações relevantes podem ser encontradas no tópico [extensões de marcação e WPF XAML](~/docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+  
+ O <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> pode usar o método de cada implementação de extensão de marcação um <xref:System.IServiceProvider> em tempo de execução que pode fornecer o contexto. Isso <xref:System.IServiceProvider> é consultada para serviços específicos que passa informações, como <xref:System.Windows.Markup.IProvideValueTarget> ou <xref:System.Windows.Markup.IXamlTypeResolver>. Para obter mais informações sobre os contextos de serviço para uma extensão de marcação, consulte [contextos de serviço disponíveis para conversores de tipo e extensões de marcação](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+ Classes derivadas devem ser atribuídas com <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> para informar os consumidores do tipo de retorno mais específico da extensão de marcação <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> implementação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MarkupExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.MarkupExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de uma classe derivada de <see cref="T:System.Windows.Markup.MarkupExtension" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Markup.MarkupExtension> classe abstrata não mantenha quaisquer valores particulares que requerem inicialização.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Uma extensão de marcação funcional deve definir seu próprio construtor padrão público. Além disso, a extensão de marcação deve implementar construtores que são apropriados para recursos pretendido da extensão e uso de marcação. Para obter mais informações, consulte [extensões de marcação para XAML Overview](~/docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public abstract object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.MarkupExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um auxiliar de provedor de serviço que pode fornecer serviços para a extensão de marcação.</param>
+        <summary>Quando implementada em uma classe derivada, retorna um objeto que é fornecido como o valor da propriedade de destino para esta extensão de marcação.</summary>
+        <returns>O valor do objeto para definir na propriedade na qual a extensão é aplicada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um processador XAML processa um valor de nó e o membro de tipo que é uma extensão de marcação, ele chama o <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> método de extensão de marcação e grava o resultado ao fluxo de serialização ou gráfico de objeto. O gravador de objeto XAML passa o contexto de serviço para cada dessa implementação por meio de `serviceProvider` parâmetro.  
+  
+ Consulte a seção "Observações para implementadores" para obter mais informações sobre como implementar <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> em uma extensão de marcação personalizada.  
+  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
+  
+> [!IMPORTANT]
+>  Classes WPF com interações específicas com operações de conjunto de marcação não devem depender <xref:System.Windows.Markup.IReceiveMarkupExtension> para um [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] implementação. Use <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>-atribuída retornos de chamada em vez disso.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Serviços comuns retornados pelo provedor de serviços padrão que é normalmente disponíveis para um personalizado ou existente <see cref="T:System.Windows.Markup.MarkupExtension" /> implementação incluem os seguintes serviços primários.  
+  
+-   <see cref="T:System.Windows.Markup.IProvideValueTarget" />relata a referência de objeto e um identificador de propriedade de contexto em que a extensão de marcação é usada  
+  
+-   <see cref="T:System.Windows.Markup.IXamlTypeResolver" />expõe um serviço comparável ao objeto XAML geral gravando o comportamento que pode fornecer um <see cref="T:System.Type" /> com base em um nome de tipo XAML. O nome pode incluir opcionalmente um prefixo de namespace do XAML mapeado.  
+  
+-   <see cref="T:System.Xaml.IXamlSchemaContextProvider" />expõe o contexto do esquema XAML active diretamente. De informado <see cref="T:System.Xaml.XamlSchemaContext" />, você pode obter XAML esquema informações de contexto, como assemblies são mapeados para o suporte de tipo, prefixo preferencial em assemblies, lista de cada <see cref="T:System.Xaml.XamlType" /> em um assembly e assim por diante.  
+  
+-   Outros serviços disponíveis para cenários de extensão de marcação mais especializados incluem:  
+  
+    -   <see cref="T:System.Windows.Markup.IUriContext" />  
+  
+    -   <see cref="T:System.Xaml.IAmbientProvider" />  
+  
+    -   <see cref="T:System.Xaml.IDestinationTypeProvider" />  
+  
+    -   <see cref="T:System.Xaml.IRootObjectProvider" />  
+  
+    -   <see cref="T:System.Xaml.IXamlNameResolver" />  
+  
+    -   <see cref="T:System.Xaml.IXamlNamespaceResolver" />  
+  
+ Potencialmente, as implementações de <see cref="M:System.Windows.Markup.MarkupExtension.ProvideValue(System.IServiceProvider)" /> pode ignorar o <paramref name="serviceProvider" /> parâmetro. Isso é viável para alguns cenários básicos, onde nenhum contexto de é necessário para retornar um valor.  
+  
+ No uso típico, os serviços de XAML do .NET Framework e implementada XAML objeto gravadores fornecerá um provedor de serviços para todos os métodos de conversor de valor que são invocados durante XAML de processamento. No entanto, para eficiência, você deve fornecer caminhos de código para valores nulos para o provedor de serviços e para qualquer serviço solicitado. Valores nulos podem ocorrer se sua extensão de marcação é aplicada em uma circunstância em que o suporte de serviço típico fornecido por uma infraestrutura de processador XAML não está disponível.  
+  
+ Para obter mais informações sobre serviços disponíveis no contexto do provedor de serviço XAML e como usá-los, consulte [conversores de tipo e extensões de marcação para XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+  
+ Implementações que exigem um determinado serviço esteja disponível para produzir um útil <see cref="M:System.Windows.Markup.MarkupExtension.ProvideValue(System.IServiceProvider)" /> resultados devem gerar exceções se esse serviço não está disponível. A exceção recomendada para lançar é <see cref="T:System.InvalidOperationException" />.  
+  
+ A implementação também pode gerar exceções se um dos argumentos que precisa ter a extensão de marcação personalizada para fornecer um valor é null, é inválido para seu tipo de dados, ou não contém um valor que a extensão de marcação é capaz de processamento. A exceção recomendada para lançar é <see cref="T:System.InvalidOperationException" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

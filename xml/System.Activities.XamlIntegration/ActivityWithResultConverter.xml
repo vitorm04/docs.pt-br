@@ -1,0 +1,52 @@
+<Type Name="ActivityWithResultConverter" FullName="System.Activities.XamlIntegration.ActivityWithResultConverter">
+  <TypeSignature Language="C#" Value="public sealed class ActivityWithResultConverter : System.Activities.XamlIntegration.TypeConverterBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityWithResultConverter extends System.Activities.XamlIntegration.TypeConverterBase" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.XamlIntegration.ActivityWithResultConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.XamlIntegration.TypeConverterBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece conversão de tipo para o tipo de resultado de uma operação de atividade de fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityWithResultConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityWithResultConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.XamlIntegration.ActivityWithResultConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityWithResultConverter (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityWithResultConverter.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo no qual o resultado da atividade é convertido.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.XamlIntegration.ActivityWithResultConverter" /> classe com o tipo especificado para a qual o resultado de uma atividade é convertido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

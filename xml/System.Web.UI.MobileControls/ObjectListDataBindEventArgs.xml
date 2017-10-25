@@ -1,0 +1,95 @@
+<Type Name="ObjectListDataBindEventArgs" FullName="System.Web.UI.MobileControls.ObjectListDataBindEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectListDataBindEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectListDataBindEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ObjectListDataBindEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Web.UI.MobileControls.ObjectList.ItemDataBind" /> eventos de um <see cref="T:System.Web.UI.MobileControls.ObjectList" /> controle. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um manipulador de eventos ou classe herdado pode usar o <xref:System.Web.UI.MobileControls.ObjectList.ItemDataBind> evento para realizar a associação de dados complexos.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectListDataBindEventArgs (System.Web.UI.MobileControls.ObjectListItem item, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.MobileControls.ObjectListItem item, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.#ctor(System.Web.UI.MobileControls.ObjectListItem,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.MobileControls.ObjectListItem" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Inicializa <see cref="P:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.ListItem" />.</param>
+        <param name="dataItem">Inicializa <see cref="P:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.DataItem" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.MobileControls.ObjectListDataBindEventArgs" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um novo <xref:System.Web.UI.MobileControls.ObjectListDataBindEventArgs> do objeto, inicializando o <xref:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.ListItem%2A> e <xref:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.DataItem%2A> propriedades com valores da `listItem` e `dataItem` parâmetros, respectivamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public object DataItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de dados especificado do item da lista que está sendo associado. Essa propriedade está disponível apenas em uma solicitação em que o item de lista é associado a dados; em postagens subsequentes, é sempre <see langword="null" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O objeto de dados especificado do item da lista que está sendo associado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItem">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListItem ListItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListItem ListItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.ListItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.ListItem" /> que gerou o evento. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O <see cref="P:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.ListItem" /> que gerou o evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

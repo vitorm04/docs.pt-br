@@ -1,0 +1,280 @@
+<Type Name="IReadOnlyDictionary&lt;TKey,TValue&gt;" FullName="System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;">
+  <TypeSignature Language="C#" Value="public interface IReadOnlyDictionary&lt;TKey,TValue&gt; : System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReadOnlyDictionary`2&lt;TKey, TValue&gt; implements class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.IReadOnlyDictionary`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TKey">O tipo de chaves no dicionário somente leitura.</typeparam>
+    <typeparam name="TValue">O tipo de valores no dicionário somente leitura.</typeparam>
+    <summary>Representa uma coleção somente leitura genérica de pares chave/valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada elemento é um par chave/valor que é armazenado em um <xref:System.Collections.Generic.KeyValuePair%602> objeto.  
+  
+ Cada par deve ter uma chave exclusiva. Implementações podem variar se elas permitem que você especifique uma chave que é `null`. O valor pode ser `null` e não precisa ser exclusivo. O <xref:System.Collections.Generic.IDictionary%602> interface permite que as chaves independentes e valores a serem enumerados, mas não implica em qualquer ordem de classificação específico.  
+  
+ O `foreach` instrução de linguagem c# (`For Each` no Visual Basic, `for each` em C++) requer que o tipo de cada elemento na coleção. Como cada elemento de <xref:System.Collections.Generic.IReadOnlyDictionary%602> interface é um par chave/valor, o tipo de elemento não é o tipo de chave ou o tipo do valor. Em vez disso, o tipo de elemento é <xref:System.Collections.Generic.KeyValuePair%602>, como mostra o exemplo a seguir.  
+  
+ [!code-cpp[Generic.IDictionary#11](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source2.cpp#11)]
+ [!code-csharp[Generic.IDictionary#11](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source2.cs#11)]
+ [!code-vb[Generic.IDictionary#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source2.vb#11)]  
+  
+ O `foreach` instrução é um wrapper em torno do enumerador; ela permite que somente leitura da coleção, não gravando à coleção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IReadOnlyDictionary`2.ContainsKey(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada.</param>
+        <summary>Determina se o dicionário de somente leitura contém um elemento que tem a chave especificada.</summary>
+        <returns>
+          <see langword="true" />Se o dicionário somente leitura contém um elemento que tem a chave especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações podem variar em como elas determinam a igualdade de objetos; Por exemplo, a classe que implementa <xref:System.Collections.Generic.IReadOnlyDictionary%602> pode usar o <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> propriedade ou ela pode implementar o <xref:System.Collections.Generic.IComparer%601> método.  
+  
+ Implementações podem variar se eles permitem `key` ser `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TValue this[TKey key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue Item(!TKey)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IReadOnlyDictionary`2.Item(`0)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada.</param>
+        <summary>Obtém o elemento que tem a chave especificada no dicionário somente leitura.</summary>
+        <value>O elemento que tem a chave especificada no dicionário somente leitura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você acesse um elemento específico na coleção usando a seguinte sintaxe: `myCollection[key]` (`myCollection(key)` no Visual Basic).  
+  
+ Implementações podem variar em como elas determinam a igualdade de objetos: por exemplo, a classe que implementa <xref:System.Collections.Generic.IReadOnlyDictionary%602> pode usar o <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> propriedade ou ela pode implementar o <xref:System.Collections.Generic.IComparer%601> método.  
+  
+ Implementações podem variar se eles permitem `key` ser `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">A propriedade é recuperada e <paramref name="key" /> não foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TKey&gt; Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TKey&gt; Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IReadOnlyDictionary`2.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção enumerável que contém as chaves no dicionário somente leitura.</summary>
+        <value>Uma coleção enumerável que contém as chaves no dicionário somente leitura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem das chaves na coleção enumerável é especificada, mas a implementação deve garantir que as chaves estejam na mesma ordem que os valores correspondentes na coleção enumerável que é retornado pelo <xref:System.Collections.Generic.IReadOnlyDictionary%602.Values%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (TKey key, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(!TKey key, [out] !TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IReadOnlyDictionary`2.TryGetValue(`0,`1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada.</param>
+        <param name="value">Quando este método retorna, o valor associado à chave especificada, se a chave for encontrada; Caso contrário, o valor padrão para o tipo do <c>valor</c> parâmetro. Este parâmetro é passado não inicializado.</param>
+        <summary>Obtém o valor associado à chave especificada.</summary>
+        <returns>
+          <see langword="true" /> se o objeto que implementa a interface <see cref="T:System.Collections.Generic.IReadOnlyDictionary`2" /> contiver um elemento que tem a chave especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método combina a funcionalidade do <xref:System.Collections.Generic.IReadOnlyDictionary%602.ContainsKey%2A> método e o <xref:System.Collections.Generic.IReadOnlyDictionary%602.Item%2A> propriedade.  
+  
+ Se a chave não for encontrada, o `value` parâmetro obtém o valor padrão apropriado para o tipo de `TValue`: por exemplo, 0 (zero) para tipos de inteiros, `false` para tipos boolianos, e `null` para tipos de referência.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TValue&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TValue&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IReadOnlyDictionary`2.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção enumerável que contém os valores no dicionário somente leitura.</summary>
+        <value>Uma coleção enumerável que contém os valores no dicionário somente leitura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores na coleção enumerável é especificada, mas a implementação deve garantir que os valores estão na mesma ordem que as chaves correspondentes na coleção enumerável que é retornado pelo <xref:System.Collections.Generic.IReadOnlyDictionary%602.Keys%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

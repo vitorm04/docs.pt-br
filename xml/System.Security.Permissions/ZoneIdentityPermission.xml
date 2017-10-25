@@ -1,0 +1,353 @@
+<Type Name="ZoneIdentityPermission" FullName="System.Security.Permissions.ZoneIdentityPermission">
+  <TypeSignature Language="C#" Value="public sealed class ZoneIdentityPermission : System.Security.CodeAccessPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ZoneIdentityPermission extends System.Security.CodeAccessPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.ZoneIdentityPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define a permissão de identidade para a zona do qual se origina o código. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa permissão pode determinar se o código de chamada é de uma zona determinados. Zonas são configuradas de acordo com as opções do Microsoft Internet Explorer e são mapeadas da URL do Internet Explorer IInternetSecurityManager e APIs relacionadas. Somente correspondências exatas de zona são definidas para a permissão; uma URL só pode pertencer a uma zona.  
+  
+-   Zona de intranet local: zona de intranet Local o é usada para o conteúdo localizado na intranet da empresa. Porque os servidores estão no firewall da empresa, o conteúdo na intranet é atribuído um nível mais alto de confiança.  
+  
+-   Zona de sites confiáveis: confiável para a zona de sites é usada para o conteúdo localizado em sites da Web que são considerados os mais confiáveis ou confiável que outros sites na Internet. Os usuários podem usar esta zona para atribuir um nível mais alto de confiança para sites específicos de Internet. As URLs desses sites confiáveis precisam ser mapeadas para essa zona pelo usuário. Por padrão, os sites na zona de sites confiáveis não recebem nenhuma relação de confiança superior na zona da Internet. Um usuário ou a empresa precisa alterar o nível de confiança concedido a essa zona se quiserem que os sites contém para receber um nível mais alto de confiança.  
+  
+-   Zona da Internet: zona da Internet é usada para sites da Web na Internet que não pertencem à outra zona. As configurações padrão permitem código baixado do acesso de somente mínimos sites aos recursos no computador do usuário. Sites da Web que não estão mapeadas para outras zonas automaticamente se encaixam nesta zona.  
+  
+-   Zona de sites restritos: restrito a zona de sites é usada para sites que contêm o conteúdo que pode causar ou pode ter anteriormente causado, problemas quando baixados. Esta zona pode ser usada para impedir que o código baixado desses sites sejam executados no computador do usuário. As URLs desses sites não confiáveis precisam ser mapeadas para essa zona pelo usuário.  
+  
+-   Zona do computador local: O computador Local for uma zona implícita que é usada para o conteúdo que existe no computador do usuário. O conteúdo localizado no computador do usuário, exceto o conteúdo armazenado em cache pelo Internet Explorer no sistema local, é tratado com um nível muito alto de confiança.  
+  
+> [!IMPORTANT]
+>  Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], as permissões de identidade não são usadas.  
+>   
+>  Nas versões do .NET Framework 1.0 e 1.1, demandas sobre as permissões de identidade são efetivas, mesmo quando o assembly de chamada é totalmente confiável. Ou seja, embora o assembly de chamada tenha confiança total, uma solicitação de uma permissão de identidade falhará se o assembly não atendem aos critérios necessárias. Iniciando com o .NET Framework versão 2.0, demandas de permissões de identidade são ineficazes se o assembly de chamada tem confiança total. Isso garante a consistência de todas as permissões, eliminando o tratamento de permissões de identidade como um caso especial.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ZoneIdentityPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ZoneIdentityPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um dos valores de <see cref="T:System.Security.Permissions.PermissionState" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.ZoneIdentityPermission" /> com o <see cref="T:System.Security.Permissions.PermissionState" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um totalmente restrito (`None`) ou `Unrestricted` permissão.  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, as permissões de identidade não podem ter um <xref:System.Security.Permissions.PermissionState.Unrestricted> valor de estado de permissão. Iniciando com o .NET Framework versão 2.0, as permissões de identidade podem ter qualquer valor de estado de permissão. Isso significa que, nas versões 2.0 e posteriores, as permissões de identidade tem o mesmo comportamento das permissões que implementam o <xref:System.Security.Permissions.IUnrestrictedPermission> interface. Ou seja, uma solicitação para uma identidade sempre terá êxito, independentemente da identidade do assembly, se o assembly tiver sido concedido confiança total.  
+  
+ Nas versões do .NET Framework 1.0 e 1.1, demandas sobre as permissões de identidade são efetivas, mesmo quando o assembly de chamada é totalmente confiável. Ou seja, embora o assembly de chamada tenha confiança total, uma solicitação de uma permissão de identidade falhará se o assembly não atendem aos critérios necessárias. Iniciando com o .NET Framework versão 2.0, demandas de permissões de identidade são ineficazes se o assembly de chamada tem confiança total. Isso garante a consistência de todas as permissões, eliminando o tratamento de permissões de identidade como um caso especial.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.Security.Permissions.ZoneIdentityPermission.%23ctor%28System.Security.Permissions.PermissionState%29?displayProperty=nameWithType> construtor.  
+  
+ [!code-csharp[System.Security.Permissions.ZoneIdentityPermission#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.ZoneIdentityPermission/CS/zoneidentity.cs#7)]
+ [!code-vb[System.Security.Permissions.ZoneIdentityPermission#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.ZoneIdentityPermission/VB/zoneidentity.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="state" /> não é um valor válido de <see cref="T:System.Security.Permissions.PermissionState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ZoneIdentityPermission (System.Security.SecurityZone zone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.SecurityZone zone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ZoneIdentityPermission.#ctor(System.Security.SecurityZone)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="zone" Type="System.Security.SecurityZone" />
+      </Parameters>
+      <Docs>
+        <param name="zone">O identificador da zona.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.ZoneIdentityPermission" /> classe para representar a identidade da zona especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.Security.Permissions.ZoneIdentityPermission.%23ctor%28System.Security.SecurityZone%29?displayProperty=nameWithType> construtor.  
+  
+ [!code-csharp[System.Security.Permissions.ZoneIdentityPermission#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.ZoneIdentityPermission/CS/zoneidentity.cs#8)]
+ [!code-vb[System.Security.Permissions.ZoneIdentityPermission#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.ZoneIdentityPermission/VB/zoneidentity.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ZoneIdentityPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia idêntica da permissão atual.</summary>
+        <returns>Uma cópia da permissão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia de uma permissão representa o mesmo acesso a recursos como a permissão original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement esd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement esd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ZoneIdentityPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="esd" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="esd">O XML de codificação a ser usada para reconstruir a permissão.</param>
+        <summary>Reconstrói uma permissão com um estado especificado de uma codificação de XML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="esd" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="esd" /> parâmetro não é um elemento de permissão válido.  
+  
+ -ou-  
+  
+ O <paramref name="esd" /> número de versão do parâmetro não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ZoneIdentityPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a interseção com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria e retorna uma permissão que é a interseção de permissão atual e da permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a interseção de permissão atual e a permissão especificada. Essa nova permissão é <see langword="null" /> se a interseção estiver vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A interseção de duas permissões é uma permissão que descreve o conjunto de operações que ambas descrevem em comum. Somente uma demanda que passa as permissões originais passará a interseção.  
+  
+ A interseção de dois idênticos <xref:System.Security.Permissions.ZoneIdentityPermission> objetos é a mesma permissão. Qualquer outra combinação resulta em uma permissão que é `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="target" /> não é <see langword="null" /> e não é do mesmo tipo que a permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ZoneIdentityPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a ser testado para a relação de subconjunto. Essa permissão deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Determina se a permissão atual é um subconjunto de permissão especificada.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é um subconjunto da permissão especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão atual é um subconjunto da permissão especificada se as duas permissões são iguais ou se a permissão atual representa o <xref:System.Security.SecurityZone.NoZone> zona de segurança.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="target" /> parâmetro não é <see langword="null" />, essa permissão não representam o <see cref="F:System.Security.SecurityZone.NoZone" /> zona de segurança e a permissão especificada não é igual à permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityZone">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityZone SecurityZone { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.SecurityZone SecurityZone" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.ZoneIdentityPermission.SecurityZone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityZone</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a zona representada pelo atual <see cref="T:System.Security.Permissions.ZoneIdentityPermission" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Security.SecurityZone" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O valor do parâmetro não é um valor válido de <see cref="T:System.Security.SecurityZone" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ZoneIdentityPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML de permissão e seu estado atual.</summary>
+        <returns>Uma codificação de XML de permissão, incluindo quaisquer informações de estado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ZoneIdentityPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria uma permissão que é a união de permissão atual e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a união de permissão atual e a permissão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O resultado de uma chamada para <xref:System.Security.Permissions.ZoneIdentityPermission.Union%2A> é uma permissão que representa a zona de segurança representada pela permissão atual e a permissão especificada. Qualquer solicitação que passa a ter a permissão passa seu union. A união de dois idênticos <xref:System.Security.Permissions.ZoneIdentityPermission> objetos é a mesma permissão. A união de uma permissão nulo e um <xref:System.Security.Permissions.ZoneIdentityPermission> permissão é a permissão que não seja nula.  
+  
+ Observe que uma <xref:System.Security.Permissions.ZoneIdentityPermission> objeto que representa um <xref:System.Security.SecurityZone.NoZone> zona de segurança é tratada como uma permissão nulo e tratada como um caso especial. A união de uma <xref:System.Security.Permissions.ZoneIdentityPermission> objeto representando o <xref:System.Security.SecurityZone.NoZone> zona de segurança e uma permissão nulo é nulo. A união de duas permissões de identidade de zona diferente resulta em uma <xref:System.ArgumentException> exceção sendo lançada quando nenhuma das duas permissões representa o <xref:System.Security.SecurityZone.NoZone> zona de segurança.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="target" /> não é <see langword="null" /> e não é do mesmo tipo que a permissão atual.  
+  
+ -ou-  
+  
+ As duas permissões não forem iguais e a permissão atual não representam o <see cref="F:System.Security.SecurityZone.NoZone" /> zona de segurança.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

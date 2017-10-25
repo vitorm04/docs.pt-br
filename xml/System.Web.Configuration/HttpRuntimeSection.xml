@@ -1,0 +1,1242 @@
+<Type Name="HttpRuntimeSection" FullName="System.Web.Configuration.HttpRuntimeSection">
+  <TypeSignature Language="C#" Value="public sealed class HttpRuntimeSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpRuntimeSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HttpRuntimeSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura o tempo de execução de HTTP do ASP.NET. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection> permite que você manipule esses parâmetros que afetam o comportamento de tempo de execução do ASP.NET.  
+  
+ Refere-se ao nó no arquivo de configuração que é indicado pelo elemento e pode ser usado em qualquer nível na hierarquia de configuração.  
+  
+ O <xref:System.Web.Configuration.HttpRuntimeSection> seção contém as diretivas que gerenciam o seguinte:  
+  
+-   Tempos limite de execução da solicitação.  
+  
+-   Diretivas para o thread de agendamento no nível do aplicativo.  
+  
+-   Diretivas que controlam os limites de fila de aplicativo.  
+  
+-   Comprimento da solicitação.  
+  
+ Ao executar mais de um aplicativo em um único processo, você deve bloquear nesta seção para que os aplicativos não é possível elevar a prioridade relativa uns aos outros.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRuntimeSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpRuntimeSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.HttpRuntimeSection" /> classe usando as configurações padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Web.Configuration.HttpRuntimeSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#2)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDynamicModuleRegistration">
+      <MemberSignature Language="C#" Value="public bool AllowDynamicModuleRegistration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDynamicModuleRegistration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.AllowDynamicModuleRegistration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("allowDynamicModuleRegistration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se <see cref="M:System.Web.HttpApplication.RegisterModule(System.Type)" /> são permitidas chamadas de método. O padrão é <see langword="true" />.</summary>
+        <value>
+          <see langword="true" />Se <see cref="M:System.Web.HttpApplication.RegisterModule(System.Type)" /> chamadas de método são permitidos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApartmentThreading">
+      <MemberSignature Language="C#" Value="public bool ApartmentThreading { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApartmentThreading" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.ApartmentThreading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("apartmentThreading", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o aplicativo de apartment threading está habilitada.</summary>
+        <value>
+          <see langword="true" />Se o aplicativo de apartment threading estiver habilitado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppRequestQueueLimit">
+      <MemberSignature Language="C#" Value="public int AppRequestQueueLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AppRequestQueueLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.AppRequestQueueLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("appRequestQueueLimit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o número máximo de solicitações que o ASP.NET coloca na fila para o aplicativo.</summary>
+        <value>O número máximo de solicitações que podem ser colocadas na fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET enfileira as solicitações quando não há threads livres suficientes para processá-las.  
+  
+> [!NOTE]
+>  Quando o número de solicitações em fila exceder o limite imposto por essa configuração, as solicitações de entrada serão rejeitadas com um "503 - Servidor muito ocupado" erro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.AppRequestQueueLimit%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#16](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#16)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#16](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncPreloadMode">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.AsyncPreloadModeFlags AsyncPreloadMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.AsyncPreloadModeFlags AsyncPreloadMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.AsyncPreloadMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("asyncPreloadMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.AsyncPreloadModeFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo da entidade de solicitação pré-carregada assincronamente.</summary>
+        <value>O modo da entidade de solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade deve ser definida antes que <xref:System.Web.RequestNotification.ExecuteRequestHandler> é definido no pipeline do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRegexMatchTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan DefaultRegexMatchTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultRegexMatchTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.DefaultRegexMatchTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultRegexMatchTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo que uma expressão regular é permitida para executar uma correspondência.</summary>
+        <value>O tempo permitido para correspondência de expressão regular.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelayNotificationTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan DelayNotificationTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DelayNotificationTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.DelayNotificationTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanSecondsConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("delayNotificationTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o atraso na notificação de alteração.</summary>
+        <value>O tempo, em segundos, que especifica o atraso de notificação de alteração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode abordar o problema causado por alguns aplicativos antivírus, ao gravar informações de volta para os arquivos examinados, definindo o <xref:System.Web.Configuration.HttpRuntimeSection.DelayNotificationTimeout%2A> propriedade.  
+  
+> [!NOTE]
+>  O problema ocorre porque as alterações de arquivo causadas pela verificação antivírus não podem ser distinguidas daquelas feitas pelo usuário. O resultado final é a reinicialização do aplicativo cujos arquivos estão sendo verificados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.DelayNotificationTimeout%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#11)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enable">
+      <MemberSignature Language="C#" Value="public bool Enable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.Enable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enable", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o domínio de aplicativo está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o domínio de aplicativo está ativado. Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa configuração afeta o aplicativo ou domínios no nível do nó atual e anterior.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.Enable%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#14](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#14)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#14](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableHeaderChecking">
+      <MemberSignature Language="C#" Value="public bool EnableHeaderChecking { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableHeaderChecking" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.EnableHeaderChecking" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableHeaderChecking", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a verificação de cabeçalho está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a verificação de cabeçalho estiver habilitada; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade dessa propriedade é habilitar a codificação do retorno de carro e caracteres de nova linha, `\r` e `\n`, que são encontrados nos cabeçalhos de resposta.  
+  
+ Em cabeçalhos de resposta de saída, os caracteres que são representados por códigos de 0x1F e abaixo são codificados e também o caractere 0x7F (caractere de exclusão). A única exceção é que o caractere 0x09 (o caractere de tabulação) é não modificado.  
+  
+ Essa codificação pode ajudar a evitar ataques de injeção que exploram um aplicativo que reflete os dados não confiáveis contidos pelo cabeçalho.  
+  
+> [!NOTE]
+>  Essa propriedade não se aplica à linha de status em si (código de status e a descrição de status), mas deve ser aplicada a outros cabeçalhos. Embora pode ser definida em qualquer nível, essa propriedade é aplicável somente no nível de máquina e do aplicativo.  
+  
+ Quando essa propriedade é `true`, que é o padrão, o `\r` ou `\n` caracteres encontrados em um cabeçalho de resposta são codificados para `%0d` e `%0a`. Isso anula os ataques de injeção de cabeçalho, tornando a parte de material injetada da mesma linha de cabeçalho. Isso pode corromper a resposta, mas não deve abrir vetores de ataque contra o cliente. Recuperando confiáveis dados nunca são uma boa ideia em qualquer situação, embora.  
+  
+> [!IMPORTANT]
+>  Continuação do cabeçalho HTTP dependem cabeçalhos abrangência várias linhas e exige novas linhas neles. Se você precisar usar continuações de cabeçalho, você precisa definir o <xref:System.Web.Configuration.HttpRuntimeSection.EnableHeaderChecking%2A> propriedade `false`. Porque há um impacto no desempenho observando cabeçalhos, se você tiver certeza de que você já está fazendo as verificações de direito, a desativação desse recurso pode melhorar o desempenho do seu aplicativo. Antes de você desabilitar esse recurso, certifique-se de que você já está aproveitando as precauções direito nessa área.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.EnableHeaderChecking%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#20](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#20)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#20](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableKernelOutputCache">
+      <MemberSignature Language="C#" Value="public bool EnableKernelOutputCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableKernelOutputCache" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.EnableKernelOutputCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableKernelOutputCache", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cache da saída está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o cache de saída estiver habilitado, caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para armazenar em cache uma resposta, os critérios a seguir devem ser atendidos:  
+  
+-   O cache deve ser explicitamente habilitado por uma diretiva de página ou a API de cache.  
+  
+-   O cache deve ter uma política de expiração para que o kernel Saiba quando descartá-lo.  
+  
+-   O cache não pode ter quaisquer cabeçalhos de variáveis ou parâmetros.  
+  
+-   A solicitação não deve exigir autenticação.  
+  
+> [!NOTE]
+>  Esta propriedade é relevante apenas quando os serviços de informações da Internet (IIS) versão 6.0 ou posterior está instalado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.EnableKernelOutputCache%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#3)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableVersionHeader">
+      <MemberSignature Language="C#" Value="public bool EnableVersionHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableVersionHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.EnableVersionHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableVersionHeader", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o ASP.NET deve gerar um cabeçalho de versão.</summary>
+        <value>
+          <see langword="true" /> se a geração do cabeçalho de versão estiver habilitada; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este atributo é usado pelo Visual Studio para determinar qual versão do ASP.NET está em uso. Não é necessário para sites de produção e pode ser desabilitado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.EnableVersionHeader%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#17](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#17)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#17](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncoderType">
+      <MemberSignature Language="C#" Value="public string EncoderType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncoderType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.EncoderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("encoderType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de um tipo personalizado que pode ser usado para manipular codificação de HTML e URL.</summary>
+        <value>O nome de um tipo que pode ser usado para manipular codificação de HTML e URL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ASP.NET usa o <xref:System.Web.Util.HttpEncoder> tipo como o manipulador padrão para tarefas de codificação HTML e URL.  
+  
+ Para personalizar o comportamento de codificação, você pode criar uma classe que herda de <xref:System.Web.Util.HttpEncoder> tipo. No arquivo de configuração para um aplicativo, você definir o <xref:System.Web.Configuration.HttpRuntimeSection.EncoderType%2A> atributo o `httpRuntime` elemento para o nome totalmente qualificado da cadeia de caracteres do tipo personalizado. Para obter mais informações, consulte [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ExecutionTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ExecutionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.ExecutionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanSecondsConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("executionTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo de execução permitido para a solicitação.</summary>
+        <value>Um valor <see cref="T:System.TimeSpan" /> que indica o tempo de execução permitido para a solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.ExecutionTimeout%2A> propriedade indica o número máximo de segundos que uma solicitação pode ser executada antes de ser encerrada automaticamente pelo ASP.NET. O padrão é 110 segundos. Esse tempo limite se aplica somente se o atributo de depuração no elemento é definido como `false`.  
+  
+ Se o tempo limite expirar, uma exceção será gerada. Você pode registrar as informações relacionadas na pasta do aplicativo do Log de eventos. Você pode fazer isso habilitando no elemento de configuração de monitoramento de integridade de aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.ExecutionTimeout%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#10)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O tempo de execução da solicitação excedeu o limite definido pelo tempo limite de execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FcnMode">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.FcnMode FcnMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.FcnMode FcnMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.FcnMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("fcnMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FcnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de enumeração especificando o modo de notificações de alteração de arquivo.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.Configuration.FcnMode" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxQueryStringLength">
+      <MemberSignature Language="C#" Value="public int MaxQueryStringLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxQueryStringLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.MaxQueryStringLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxQueryStringLength", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo possível, em número de caracteres, de uma cadeia de caracteres de consulta em uma solicitação HTTP.</summary>
+        <value>O tamanho máximo da cadeia de consulta, em número de caracteres. O padrão é 2048.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Web.Configuration.HttpRuntimeSection.MaxQueryStringLength%2A> propriedade pode ser qualquer inteiro, zero ou maior. Se o comprimento de uma cadeia de caracteres de consulta excede o limite de tamanho, o ASP.NET retornará um `HTTP 400` código de status (solicitação incorreta).  
+  
+> [!NOTE]
+>  Valores extremamente pequenos podem inutilizar um site da Web.  
+  
+ Você pode definir esse valor em um arquivo de configuração, definindo o `maxQueryStringLength` atributo o `httpRuntime` elemento. Para obter mais informações, consulte [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369).  
+  
+> [!NOTE]
+>  Também é uma configuração do IIS que controla o tamanho da cadeia de caracteres de consulta. Consulte o `maxQueryString` atributo [limites de solicitações \<requestLimits >](http://www.iis.net/ConfigReference/system.webServer/security/requestFiltering/requestLimits).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRequestLength">
+      <MemberSignature Language="C#" Value="public int MaxRequestLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRequestLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxRequestLength", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo da solicitação.</summary>
+        <value>O tamanho máximo da solicitação em quilobytes. O tamanho padrão é 4096 KB (4 MB).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength%2A> propriedade especifica o limite para o limite de buffer de fluxo de entrada. Por exemplo, esse limite pode ser usado para impedir ataques negação de serviço que são causados por usuários que enviar os arquivos grandes para o servidor.  
+  
+ O valor atribuído a essa propriedade deve ser maior ou igual ao valor atribuído para o <xref:System.Web.Configuration.HttpRuntimeSection.RequestLengthDiskThreshold%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter atual <xref:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength%2A> valor da propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#19](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#19)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#19](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O valor selecionado é menor que <see cref="P:System.Web.Configuration.HttpRuntimeSection.RequestLengthDiskThreshold" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxUrlLength">
+      <MemberSignature Language="C#" Value="public int MaxUrlLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxUrlLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.MaxUrlLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxUrlLength", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo possível, em número de caracteres, de uma URL em uma solicitação HTTP.</summary>
+        <value>O tamanho da URL, em número de caracteres. O padrão é 260.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Web.Configuration.HttpRuntimeSection.MaxUrlLength%2A> propriedade pode ser qualquer inteiro, zero ou maior.  
+  
+> [!NOTE]
+>  Valores extremamente pequenos podem inutilizar um site da Web.  
+  
+ Se o comprimento da URL de solicitação (que é o valor da <xref:System.Web.HttpRequest.Path%2A> propriedade) excede o limite de tamanho configurado, ASP.NET retorna um código de status HTTP 400 (solicitação incorreta)  
+  
+ Você pode definir esse valor em um arquivo de configuração, definindo o <xref:System.Web.Configuration.HttpRuntimeSection.MaxUrlLength%2A> atributo o `httpRuntime` elemento. Para obter mais informações, consulte [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWaitChangeNotification">
+      <MemberSignature Language="C#" Value="public int MaxWaitChangeNotification { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxWaitChangeNotification" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.MaxWaitChangeNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxWaitChangeNotification", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tempo entre a primeira notificação de alteração e a hora em que o domínio de aplicativo é reiniciado.</summary>
+        <value>O intervalo de tempo máximo, em segundos, desde a primeira notificação de alteração e a hora quando o domínio de aplicativo é reiniciado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor sugerido para o <xref:System.Web.Configuration.HttpRuntimeSection.MaxWaitChangeNotification%2A> propriedade excederia o período de tempo para concluir uma cópia durante o processo de implantação.  
+  
+> [!NOTE]
+>  O conteúdo pode aparecer em cache se você pode exibi-lo imediatamente após um processo de cópia e implantar. Esse é o comportamento típico. As alterações entram em vigor quando o período de espera especificado tiver decorrido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.MaxWaitChangeNotification%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#4)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinFreeThreads">
+      <MemberSignature Language="C#" Value="public int MinFreeThreads { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinFreeThreads" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.MinFreeThreads" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("minFreeThreads", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número mínimo de threads que devem estar livres antes que uma solicitação de recursos nesse escopo de configuração possa ser atendida.</summary>
+        <value>O número mínimo de threads livres no pool de threads do CLR (Common Language Runtime) antes que uma solicitação nesse escopo de configuração seja atendida. O valor padrão é <c>8</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.MinFreeThreads%2A> propriedade define o número mínimo de threads livres para executar uma solicitação. Se um número suficiente de threads não estiverem disponível, a solicitação permanecerá na fila e as verificações periódicas de disponibilidade do thread continuará até que a quantidade de threads necessários estão presentes. O valor padrão é `8`.  
+  
+> [!NOTE]
+>  ASP.NET mantém esse número de segmentos livre para solicitações que precisam de segmentos adicionais para concluir seu processamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.MinFreeThreads%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#8)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinLocalRequestFreeThreads">
+      <MemberSignature Language="C#" Value="public int MinLocalRequestFreeThreads { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinLocalRequestFreeThreads" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.MinLocalRequestFreeThreads" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("minLocalRequestFreeThreads", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número mínimo de threads livres necessário para atender uma solicitação do local.</summary>
+        <value>O número mínimo de threads livres atribuído para solicitações locais. O valor padrão é 4.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.MinLocalRequestFreeThreads%2A> propriedade define o número de threads livres que o ASP.NET mantém disponível para permitir a execução de novas solicitações de locais. A intenção é evitar um possível bloqueio com entrada recursiva no servidor Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.MinLocalRequestFreeThreads%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#5)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelaxedUrlToFileSystemMapping">
+      <MemberSignature Language="C#" Value="public bool RelaxedUrlToFileSystemMapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RelaxedUrlToFileSystemMapping" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.RelaxedUrlToFileSystemMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("relaxedUrlToFileSystemMapping", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a URL em uma solicitação HTTP deve ser um caminho de arquivo válido do Windows.</summary>
+        <value>
+          <see langword="true" /> se a URL não estiver em conformidade com as regras de caminho do Windows; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.RelaxedUrlToFileSystemMapping%2A> propriedade determina como a URL em uma solicitação HTTP de entrada será validada. Se essa propriedade for `false`, a URL é validada usando as mesmas regras que determinam se um caminho de sistema de arquivos do Windows é válido.  
+  
+ Você pode definir esse valor em um arquivo de configuração, definindo o <xref:System.Web.Configuration.HttpRuntimeSection.RelaxedUrlToFileSystemMapping%2A> atributo o `httpRuntime` elemento. Para obter mais informações, consulte [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestLengthDiskThreshold">
+      <MemberSignature Language="C#" Value="public int RequestLengthDiskThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RequestLengthDiskThreshold" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.RequestLengthDiskThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requestLengthDiskThreshold", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite de buffer de fluxo de entrada.</summary>
+        <value>O número de bytes que indicam o limite de buffer de fluxo de entrada. O padrão é 80 quilobytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.RequestLengthDiskThreshold%2A> propriedade especifica o limite de buffer do fluxo de entrada no número de bytes. Seu valor não deve exceder a <xref:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength%2A> o valor da propriedade. Depois que uma entidade de solicitação excede esse limite, ele é armazenado em buffer transparente para o disco.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.RequestLengthDiskThreshold%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#12)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O valor selecionado é maior que <see cref="P:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestPathInvalidCharacters">
+      <MemberSignature Language="C#" Value="public string RequestPathInvalidCharacters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestPathInvalidCharacters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.RequestPathInvalidCharacters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requestPathInvalidCharacters", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista de caracteres especificados como inválidos em um caminho que faz parte de uma solicitação HTTP.</summary>
+        <value>Uma lista separada por vírgulas de caracteres inválidos. A lista a seguir contém o conjunto padrão de caracteres inválidos:  
+  
+ <c>&lt;,&gt;,*,%,&amp;,:,\\</c></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir esse valor em um arquivo de configuração, você pode atribuir uma cadeia de caracteres separada por vírgulas de caracteres para o `requestPathInvalidCharacters` atributo o `httpRuntime` elemento. Para obter mais informações, consulte [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestValidationMode">
+      <MemberSignature Language="C#" Value="public Version RequestValidationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version RequestValidationMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.RequestValidationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.Configuration.VersionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requestValidationMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um número de versão que indica qual abordagem de validação específica da versão do ASP.NET será usada.</summary>
+        <value>Um valor que indica qual abordagem de validação específica da versão do ASP.NET será usada. O padrão é <c>4.5</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.RequestValidationMode%2A> propriedade especifica qual abordagem ASP.NET de validação será usada. Isso pode ser o algoritmo que é usado em versões do ASP.NET anteriores à versão 4, ou a versão que é usada em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]. A propriedade pode ser definida com os seguintes valores:  
+  
+-   `4.5 (the default).`Nesse modo, os valores são carregados lentamente, ou seja, eles não são legíveis até que elas são solicitadas.  
+  
+-   `4.0`O <xref:System.Web.HttpRequest> objeto internamente define um sinalizador que indica se a validação de solicitação deve ser disparada sempre que nenhum dado de solicitação HTTP é acessado. Isso garante que a validação da solicitação é disparada antes dos dados, como cookies e URLs são acessados durante a solicitação. As configurações de validação de solicitação do elemento (se houver) no arquivo de configuração ou a diretiva em uma página individual são ignoradas.  
+  
+-   `2.0`. Validação de solicitação é habilitada somente para páginas, não para todas as solicitações HTTP. Além disso, as configurações de validação de solicitação do elemento (se houver) no arquivo de configuração ou a diretiva em uma página individual são usadas para determinar qual página solicitações para validar.  
+  
+ O valor atribuído a essa propriedade não é validado de acordo com uma versão específica do ASP.NET. Qualquer valor numérico menor do que `4.0` (por exemplo, `3.7`, `2.9`, ou `2.0`) será interpretado como `2.0`. Qualquer número maior do que `4.5` é interpretado como `4.5`.  
+  
+ Para definir esse valor em um arquivo de configuração, você pode atribuir um valor para o `requestValidationMode` atributo o `httpRuntime` elemento. Para obter mais informações, consulte [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestValidationType">
+      <MemberSignature Language="C#" Value="public string RequestValidationType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestValidationType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.RequestValidationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requestValidationType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de um tipo que é usado para validar solicitações HTTP.</summary>
+        <value>O nome de um tipo que manipula tarefas de validação de solicitação. O padrão é o nome totalmente qualificado do tipo <see cref="T:System.Web.Util.RequestValidator" /> que o ASP.NET usa para validação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para personalizar o comportamento de validação de solicitação do ASP.NET, você pode criar uma classe que herda de <xref:System.Web.Util.RequestValidator> tipo. No arquivo de configuração para um aplicativo, você definir o `requestValidationType` atributo o `httpRuntime` elemento para o nome totalmente qualificado da cadeia de caracteres do tipo personalizado. Para obter mais informações, consulte [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireRootedSaveAsPath">
+      <MemberSignature Language="C#" Value="public bool RequireRootedSaveAsPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireRootedSaveAsPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.RequireRootedSaveAsPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requireRootedSaveAsPath", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o nome do arquivo deve ser um caminho de arquivo físico totalmente qualificado.</summary>
+        <value>
+          <see langword="true" />Se o nome do arquivo deve ser um caminho de arquivo físico totalmente qualificado; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.RequireRootedSaveAsPath%2A> propriedade especifica se o nome do arquivo argumento `SaveAs` métodos devem ser um caminho com raiz. O processo do ASP.NET deve ter permissão para criar arquivos no local especificado.  
+  
+ Para obter mais informações, consulte Salvar os métodos definidos no <xref:System.Configuration.Configuration> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.RequireRootedSaveAsPath%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#7)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendCacheControlHeader">
+      <MemberSignature Language="C#" Value="public bool SendCacheControlHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SendCacheControlHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.SendCacheControlHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("sendCacheControlHeader", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <c>cache-controle: privada</c> cabeçalho será enviado como parte da resposta HTTP.</summary>
+        <value>
+          <see langword="true" />Se o <c>cache-controle: privada</c> cabeçalho será enviada; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse> classe verifica tanto a <xref:System.Web.Configuration.HttpRuntimeSection.SendCacheControlHeader%2A?displayProperty=nameWithType> propriedade e o <xref:System.Web.Configuration.OutputCacheSection.SendCacheControlHeader%2A?displayProperty=nameWithType> propriedade para determinar se deseja enviar o `cache-control:private` cabeçalho na resposta HTTP. Se a propriedade for definida como `false`, o cabeçalho não será enviado. Quando o cabeçalho cache-control é definido como `private`, em seguida, o cliente não armazenará em cache a resposta em um cache compartilhado.  
+  
+ Suporte para o <xref:System.Web.Configuration.HttpRuntimeSection.SendCacheControlHeader%2A> propriedade o <xref:System.Web.Configuration.HttpRuntimeSection> classe é fornecida para compatibilidade com aplicativos herdados; esta propriedade está obsoleta no .NET Framework versão 2.0. Para obter mais informações, consulte a classe <xref:System.Web.Configuration.OutputCacheSection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="protected override void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpRuntimeSection.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ShutdownTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ShutdownTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.ShutdownTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanSecondsConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("shutdownTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período que o aplicativo pode permanecer ocioso antes que seja finalizado.</summary>
+        <value>Um valor <see cref="T:System.TimeSpan" /> que indica o período que o aplicativo pode permanecer ocioso antes que seja finalizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.ShutdownTimeout%2A> propriedade indica a quantidade de tempo antes que um aplicativo é desativado com sutileza. O padrão é 90 segundos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.ShutdownTimeout%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#6)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFramework">
+      <MemberSignature Language="C#" Value="public string TargetFramework { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFramework" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.TargetFramework" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("targetFramework", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o .NET Framework de destino.</summary>
+        <value>O .NET Framework de destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseFullyQualifiedRedirectUrl">
+      <MemberSignature Language="C#" Value="public bool UseFullyQualifiedRedirectUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseFullyQualifiedRedirectUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.UseFullyQualifiedRedirectUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("useFullyQualifiedRedirectUrl", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os redirecionamentos do lado do cliente são totalmente qualificados.</summary>
+        <value>
+          <see langword="true" /> se os redirecionamentos do lado do cliente forem totalmente qualificados; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpRuntimeSection.UseFullyQualifiedRedirectUrl%2A> propriedade indica se os redirecionamentos do lado do cliente são totalmente qualificados (em http://server/path o formulário) ou se redirecionamentos relativos em vez disso, são enviados ao cliente.  
+  
+> [!NOTE]
+>  Alguns navegadores podem ter problemas de carregamento de páginas em sessões sem cookies quando esse valor é `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.UseFullyQualifiedRedirectUrl%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#15](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#15)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#15](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitChangeNotification">
+      <MemberSignature Language="C#" Value="public int WaitChangeNotification { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WaitChangeNotification" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpRuntimeSection.WaitChangeNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("waitChangeNotification", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo de espera antes da próxima notificação de alteração.</summary>
+        <value>O tempo de espera, em segundos, antes da próxima notificação de alteração que dispara um domínio do aplicativo a ser reiniciado. O valor padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor sugerido para <xref:System.Web.Configuration.HttpRuntimeSection.WaitChangeNotification%2A> excederia o período de tempo para concluir uma cópia durante o processo de implantação.  
+  
+> [!NOTE]
+>  O conteúdo pode aparecer em cache se você exibi-lo imediatamente após uma cópia e implantar o processo. Esse é o comportamento típico. As alterações entram em vigor quando o período de espera especificado tiver decorrido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.HttpRuntimeSection.WaitChangeNotification%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpRuntimeSection#18](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/CS/httpruntimesection.cs#18)]
+ [!code-vb[System.Web.Configuration.HttpRuntimeSection#18](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpRuntimeSection/VB/httpruntimesection.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

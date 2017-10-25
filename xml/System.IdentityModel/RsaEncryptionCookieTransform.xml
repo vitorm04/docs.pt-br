@@ -1,0 +1,204 @@
+<Type Name="RsaEncryptionCookieTransform" FullName="System.IdentityModel.RsaEncryptionCookieTransform">
+  <TypeSignature Language="C#" Value="public class RsaEncryptionCookieTransform : System.IdentityModel.CookieTransform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RsaEncryptionCookieTransform extends System.IdentityModel.CookieTransform" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.RsaEncryptionCookieTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.CookieTransform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Criptografa um cookie usando <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cookies criptografados com essa transformação podem ser descriptografados por qualquer computador que compartilha a mesma chave privada do RSA (geralmente associada a um certificado x. 509).  
+  
+ Os dados fornecidos são criptografados usando uma chave aleatória de AES256. Essa chave é criptografada usando o RSA, e a chave pública RSA é enviada em texto sem formatação para que quando a classe de decodificação sabe qual chave RSA para usar.  
+  
+> [!IMPORTANT]
+>  Ao usar o <xref:System.IdentityModel.RsaEncryptionCookieTransform> com um serviço, se houver uma chave fornecida pelas alterações de um certificado de serviço deve ser reiniciado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaEncryptionCookieTransform (System.Security.Cryptography.RSA key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.RSA key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.RsaEncryptionCookieTransform.#ctor(System.Security.Cryptography.RSA)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.RSA" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser usado como a chave de criptografia e descriptografia do padrão. Inicializa o <see cref="P:System.IdentityModel.RsaEncryptionCookieTransform.DecryptionKeys" /> e <see cref="P:System.IdentityModel.RsaEncryptionCookieTransform.EncryptionKey" /> propriedades.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.RsaEncryptionCookieTransform" /> classe que usa a chave especificada para criptografia e descriptografia.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RsaEncryptionCookieTransform (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.RsaEncryptionCookieTransform.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">O certificado cuja chave privada é usada para criptografar e descriptografar.  
+  
+ O certificado cuja chave privada será usado como a chave de criptografia e descriptografia do padrão. Inicializa o <see cref="P:System.IdentityModel.RsaEncryptionCookieTransform.DecryptionKeys" /> e <see cref="P:System.IdentityModel.RsaEncryptionCookieTransform.EncryptionKey" /> propriedades.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.RsaEncryptionCookieTransform" /> classe que usa a chave privada do certificado x. 509 especificado para criptografia e descriptografia.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="certificate" />não tem uma chave privada.  
+  
+ -ou-  
+  
+ A chave privada não é RSA.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public override byte[] Decode (byte[] encoded);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] Decode(unsigned int8[] encoded) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.RsaEncryptionCookieTransform.Decode(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoded" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encoded">Os dados codificados</param>
+        <summary>Descriptografa os dados especificados usando as chaves RSA fornecidas para descriptografar uma chave AES, que descriptografa o cookie.</summary>
+        <returns>Os dados decodificados</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="encoded" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="encoded" /> contém zero byte.</exception>
+        <exception cref="T:System.NotSupportedException">A plataforma não oferece suporte para o algoritmo solicitado.</exception>
+        <exception cref="T:System.InvalidOperationException">Não há nenhuma chave de descriptografia ou corresponder a nenhuma das teclas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptionKeys">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Cryptography.RSA&gt; DecryptionKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Security.Cryptography.RSA&gt; DecryptionKeys" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.RsaEncryptionCookieTransform.DecryptionKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Cryptography.RSA&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as chaves usadas para descriptografia por padrão, essa propriedade retorna uma lista que contém a chave de criptografia.</summary>
+        <value>As chaves a ser usado para descriptografia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public override byte[] Encode (byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] Encode(unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.RsaEncryptionCookieTransform.Encode(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Os dados para codificar</param>
+        <summary>Codifica os dados especificados. Os dados são criptografados usando o algoritmo de criptografia padrão (AES-256), em seguida, a chave AES é criptografada usando RSA e a chave pública RSA é anexada.</summary>
+        <returns>Os dados codificados</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> contém zero byte.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.IdentityModel.RsaEncryptionCookieTransform.EncryptionKey" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionKey">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.RSA EncryptionKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.RSA EncryptionKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.RsaEncryptionCookieTransform.EncryptionKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSA</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a chave RSA usada para criptografia</summary>
+        <value>A chave RSA usada para criptografia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esta propriedade também define o <xref:System.IdentityModel.RsaEncryptionCookieTransform.DecryptionKeys%2A> propriedade a uma coleção que contém a mesma chave como seu único elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashName">
+      <MemberSignature Language="C#" Value="public string HashName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.RsaEncryptionCookieTransform.HashName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do algoritmo de hash a ser usado.</summary>
+        <value>O nome do algoritmo de hash a ser usado. O padrão é "SHA2566".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ SHA256 é o algoritmo padrão. Isso pode exigir uma plataforma mínima do Windows Server 2003 e o .NET 3.5 SP1.  
+  
+ Se não há suporte para SHA256, defina o <xref:System.IdentityModel.RsaEncryptionCookieTransform.HashName%2A> propriedade como "SHA1".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

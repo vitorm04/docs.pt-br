@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Logging">
+  <Docs>
+    <summary>Contém tipos usados para registrar em log o progresso de uma compilação. Para obter informações, consulte <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,163 @@
+<Type Name="X509WindowsSecurityToken" FullName="System.IdentityModel.Tokens.X509WindowsSecurityToken">
+  <TypeSignature Language="C#" Value="public class X509WindowsSecurityToken : System.IdentityModel.Tokens.X509SecurityToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509WindowsSecurityToken extends System.IdentityModel.Tokens.X509SecurityToken" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509WindowsSecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.X509SecurityToken</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um token de segurança que baseia-se um certificado x. 509 e que o certificado é mapeado para um usuário de domínio do Windows ou a conta de usuário do computador local.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, os desenvolvedores de aplicativos não precisam usar o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken> de classe, a menos que um serviço Web deve obter acesso a detalhes sobre um certificado x. 509 referenciado em uma mensagem SOAP de entrada ou a conta de domínio ou computador que o certificado é mapeado para. Para obter os detalhes do certificado x. 509, acessar o <xref:System.IdentityModel.Tokens.X509SecurityToken.Certificate%2A> propriedade. Para obter a identidade do usuário, consulte o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken.WindowsIdentity%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509WindowsSecurityToken (System.Security.Cryptography.X509Certificates.X509Certificate2 cert, System.Security.Principal.WindowsIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 cert, class System.Security.Principal.WindowsIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509WindowsSecurityToken.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Principal.WindowsIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+        <Parameter Name="windowsIdentity" Type="System.Security.Principal.WindowsIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="cert">To be added.</param>
+        <param name="identity">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.X509WindowsSecurityToken" /> classe usando o certificado x. 509 especificado e a conta de computador ou de domínio do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um identificador exclusivo para o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken> token de segurança e atribui o valor para o <xref:System.IdentityModel.Tokens.X509SecurityToken.Id%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509WindowsSecurityToken (System.Security.Cryptography.X509Certificates.X509Certificate2 cert, System.Security.Principal.WindowsIdentity identity, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 cert, class System.Security.Principal.WindowsIdentity identity, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509WindowsSecurityToken.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Principal.WindowsIdentity,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+        <Parameter Name="windowsIdentity" Type="System.Security.Principal.WindowsIdentity" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cert">To be added.</param>
+        <param name="identity">To be added.</param>
+        <param name="id">Um identificador exclusivo do token de segurança.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.X509WindowsSecurityToken" /> classe usando o certificado x. 509 especificado, a conta de computador ou de domínio do Windows e o identificador exclusivo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509WindowsSecurityToken (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, System.Security.Principal.WindowsIdentity windowsIdentity, string authenticationType, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, class System.Security.Principal.WindowsIdentity windowsIdentity, string authenticationType, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509WindowsSecurityToken.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Principal.WindowsIdentity,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+        <Parameter Name="windowsIdentity" Type="System.Security.Principal.WindowsIdentity" />
+        <Parameter Name="authenticationType" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> que contém o certificado x. 509.</param>
+        <param name="windowsIdentity">Representa a identidade de uma conta de computador ou de domínio do Windows.</param>
+        <param name="authenticationType">O tipo de autenticação para o token.</param>
+        <param name="id">Um identificador exclusivo para o token de segurança.</param>
+        <summary>Cria uma nova instância de <see cref="T:System.IdentityModel.Tokens.X509WindowsSecurityToken" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationType">
+      <MemberSignature Language="C#" Value="public string AuthenticationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509WindowsSecurityToken.AuthenticationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de autenticação para o token.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509WindowsSecurityToken.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.IdentityModel.Tokens.X509WindowsSecurityToken" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken.Dispose%2A> método quando tiver terminado de usar o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken>. O <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken.Dispose%2A> método deixa o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken> em um estado inutilizável. Depois de chamar o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken.Dispose%2A> método, você deve liberar todas as referências para o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken> para o coletor de lixo possa recuperar a memória que o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken> estava ocupando.  
+  
+> [!NOTE]
+>  Sempre chamar o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken.Dispose%2A> método antes de liberar sua última referência para o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.IdentityModel.Tokens.X509WindowsSecurityToken> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsIdentity">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.WindowsIdentity WindowsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.WindowsIdentity WindowsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509WindowsSecurityToken.WindowsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identidade de uma conta de computador ou de domínio do Windows.</summary>
+        <value>Um <see cref="T:System.Security.Principal.WindowsIdentity" /> que representa a identidade de uma conta de computador ou de domínio do Windows.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

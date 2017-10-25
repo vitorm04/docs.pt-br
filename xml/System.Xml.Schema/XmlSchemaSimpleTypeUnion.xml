@@ -1,0 +1,175 @@
+<Type Name="XmlSchemaSimpleTypeUnion" FullName="System.Xml.Schema.XmlSchemaSimpleTypeUnion">
+  <TypeSignature Language="C#" Value="public class XmlSchemaSimpleTypeUnion : System.Xml.Schema.XmlSchemaSimpleTypeContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaSimpleTypeUnion extends System.Xml.Schema.XmlSchemaSimpleTypeContent" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaSimpleTypeUnion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaSimpleTypeContent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento <see langword="union" /> para tipos simples do Esquema XML, conforme especificado pelo W3C (World Wide Web Consortium). Um <see langword="union" /> tipo de dados pode ser usado para especificar o conteúdo de um <see langword="simpleType" />. O valor de <see langword="simpleType" /> elemento deve ser qualquer um de um conjunto de tipos de dados alternativos especificados na União. Tipos de união sempre são tipos derivados e devem ter pelo menos dois tipos de dados alternativos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um `union` tipo permite que um valor de elemento ou atributo ser um ou mais instâncias de um tipo desenhadas da união de várias atômicas e listam tipos de.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso de `XmlSchemaSimpleTypeUnion` classe.  
+  
+ [!code-cpp[Classic WebData XmlSchemaSimpleTypeUnion Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic Webdata XmlSchemaSimpleTypeUnion Example/CPP/simpletypeunion.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaSimpleTypeUnion Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic Webdata XmlSchemaSimpleTypeUnion Example/CS/simpletypeunion.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaSimpleTypeUnion Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic Webdata XmlSchemaSimpleTypeUnion Example/VB/simpletypeunion.vb#1)]  
+  
+ O seguinte arquivo XML é gerado para este exemplo de código.  
+  
+ [!code-xml[Classic WebData XmlSchemaSimpleTypeUnion Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic Webdata XmlSchemaSimpleTypeUnion Example/XML/example.xsd#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaSimpleTypeUnion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaSimpleTypeUnion.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaSimpleTypeUnion" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseMemberTypes">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaSimpleType[] BaseMemberTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaSimpleType[] BaseMemberTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSimpleTypeUnion.BaseMemberTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSimpleType[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> objetos que representa o tipo do <see langword="simpleType" /> elemento baseia o <see cref="P:System.Xml.Schema.XmlSchemaSimpleTypeUnion.BaseTypes" /> e <see cref="P:System.Xml.Schema.XmlSchemaSimpleTypeUnion.MemberTypes" /> valores do tipo simples.</summary>
+        <value>Uma matriz de <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> objetos que representa o tipo de <see langword="simpleType" /> elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é uma propriedade de post-schema-compilação-infoset.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseTypes">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectCollection BaseTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectCollection BaseTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSimpleTypeUnion.BaseTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("simpleType", typeof(System.Xml.Schema.XmlSchemaSimpleType))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de tipos de base.</summary>
+        <value>A coleção de valores de base de tipo simples.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberTypes">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName[] MemberTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName[] MemberTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaSimpleTypeUnion.MemberTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("memberTypes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a matriz de membros qualificados nomes de tipos de dados internos ou <see langword="simpleType" /> elementos definidos no esquema (ou outro esquema indicado pelo namespace especificado).</summary>
+        <value>Uma matriz que consiste em uma lista de membros de tipos de dados internos ou tipos simples.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

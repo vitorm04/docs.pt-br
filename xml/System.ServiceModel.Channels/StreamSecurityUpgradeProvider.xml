@@ -1,0 +1,103 @@
+<Type Name="StreamSecurityUpgradeProvider" FullName="System.ServiceModel.Channels.StreamSecurityUpgradeProvider">
+  <TypeSignature Language="C#" Value="public abstract class StreamSecurityUpgradeProvider : System.ServiceModel.Channels.StreamUpgradeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StreamSecurityUpgradeProvider extends System.ServiceModel.Channels.StreamUpgradeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.StreamSecurityUpgradeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.StreamUpgradeProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa um provedor de atualização de segurança personalizada, herdado neste <see langword="abstract" /> classe base.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para adicionar uma atualização de segurança, você implementa uma classe que deriva de <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>.  
+  
+ O processo de atualização tem as seguintes etapas:  
+  
+1.  Implementar uma classe que deriva de <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>.  
+  
+2.  Registre-o. Você pode fazer isso criando um elemento de associação para ele, e registrar o provedor em uma associação personalizada.  
+  
+3.  A classe derivada que você implementar cria uma instância de <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>, e em tempo de execução inicia uma solicitação para a outra extremidade da sua conexão para atualizar a camada de transporte de canal.  
+  
+4.  A classe derivada que você implementar cria uma instância de <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>, que em tempo de execução recebe a solicitação de atualização da etapa anterior, se possível, aceita a atualização e retorna o fluxo atualizado para o outro lado da sua conexão.  
+  
+ A solicitação de atualização de segurança pode ser uma das muitas solicitações semelhantes. Nesse caso, as solicitações são processadas em uma ordem definida. Para obter mais informações, consulte <xref:System.ServiceModel.Channels.StreamUpgradeProvider>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StreamSecurityUpgradeProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamSecurityUpgradeProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.StreamSecurityUpgradeProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StreamSecurityUpgradeProvider (System.ServiceModel.IDefaultCommunicationTimeouts timeouts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.IDefaultCommunicationTimeouts timeouts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamSecurityUpgradeProvider.#ctor(System.ServiceModel.IDefaultCommunicationTimeouts)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timeouts" Type="System.ServiceModel.IDefaultCommunicationTimeouts" />
+      </Parameters>
+      <Docs>
+        <param name="timeouts">Os tempos-limite de comunicação padrão.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.StreamSecurityUpgradeProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tempos limite de controla o padrão fechar e abrir tempos limite ao usar a segurança personalizada atualize o provedor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.EndpointIdentity Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.StreamSecurityUpgradeProvider.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identidade que está sendo usada para a atualização de segurança.</summary>
+        <value>Retorna o <see cref="T:System.ServiceModel.EndpointIdentity" /> do cliente que solicita a atualização de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa identidade pode ser usada para desenvolver esquemas de autenticação de nível de fluxo personalizados por meio de herança da classe de provedor de atualização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

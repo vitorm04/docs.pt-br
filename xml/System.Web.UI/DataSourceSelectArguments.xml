@@ -1,0 +1,411 @@
+<Type Name="DataSourceSelectArguments" FullName="System.Web.UI.DataSourceSelectArguments">
+  <TypeSignature Language="C#" Value="public sealed class DataSourceSelectArguments" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataSourceSelectArguments extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceSelectArguments" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um mecanismo que controles de associação de dados usam para solicitar operações relacionadas a dados de controles de fonte de dados quando dados são recuperados. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles associados a dados usam o <xref:System.Web.UI.DataSourceSelectArguments> classe para solicitar que um controle de fonte de dados executa operações adicionais relacionadas a dados em um conjunto de resultados, como os dados de classificação ou retornando um subconjunto específico de dados. Essas operações relacionadas a dados são enumeradas pelo <xref:System.Web.UI.DataSourceCapabilities> enumeração. A tabela a seguir indica como o <xref:System.Web.UI.DataSourceSelectArguments> classe oferece suporte a essas operações relacionadas a dados.  
+  
+|Recurso|Propriedades de DataSourceSelectArguments relacionadas|  
+|----------------|--------------------------------------------------|  
+|<xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType>|<xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A>|  
+|<xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType>|<xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A>, <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A>|  
+|<xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType>|<xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A>, <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A>|  
+  
+ Controles associados a dados chamam explicitamente o <xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A> método vincular dados, que chama o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> método do controle de fonte de dados que estão associados. Dessa forma, o controle de associação de dados recupera dados do controle de fonte de dados sob demanda. Porque o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> método aceita um <xref:System.Web.UI.DataSourceSelectArguments> parâmetro, o controle associado a dados é responsável por criar e gerenciar uma <xref:System.Web.UI.DataSourceSelectArguments> objeto e passá-lo para o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> método quando ele recupera dados de controle de fonte de dados.  
+  
+ Em alguns casos, controles de associação de dados talvez não seja necessário todos os recursos adicionais relacionados a dados. Nesse caso, os controles de associação de dados passar um <xref:System.Web.UI.DataSourceSelectArguments.Empty%2A> argumentos de objeto para o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> método.  
+  
+ Para conjuntos de resultados classificados, controles de associação de dados Verifique uma exibição de fonte de dados <xref:System.Web.UI.DataSourceView.CanSort%2A> propriedade em tempo de execução e adicione um <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> usando o recurso de <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> método. Como uma operação separada, o controle associado a dados pode solicitar um resultado classificado definida de um controle de fonte de dados definindo o <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> propriedade o <xref:System.Web.UI.DataSourceSelectArguments> objeto passado para o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> método.  
+  
+ Para cenários de paginação, controles de associação de dados Verifique uma exibição de fonte de dados <xref:System.Web.UI.DataSourceView.CanPage%2A> propriedade em tempo de execução e adicione um <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> usando o recurso de <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> método. Como uma operação separada, o controle associado a dados pode solicitar um subconjunto de dados de um controle de fonte de dados para paginação, definindo o <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> e <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> propriedades de <xref:System.Web.UI.DataSourceSelectArguments> objeto passado para o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> método.  
+  
+ Para recuperar uma contagem total de linhas para cenários de paginação, controles de associação de dados Verifique uma exibição de fonte de dados <xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A> propriedade em tempo de execução e adicione um <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> usando o recurso de <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> método. Como uma operação separada, o controle associado a dados pode solicitar uma contagem total de linhas de um controle de fonte de dados para paginação, definindo a <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A> propriedade o <xref:System.Web.UI.DataSourceSelectArguments> objeto passado para o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> método. Quando o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> método retorna, a contagem total de linhas está contida pelo <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> propriedade.  
+  
+> [!IMPORTANT]
+>  Se qualquer uma da <xref:System.Web.UI.DataSourceSelectArguments> propriedades são definidas, mas o controle de fonte de dados associada atualmente não suporta o recurso solicitado, um <xref:System.InvalidOperationException> exceção é lançada quando o <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=nameWithType> método é chamado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceSelectArguments ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.Web.UI.DataSourceSelectArguments" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão cria uma instância da classe com o <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> propriedade inicializada para <xref:System.String.Empty?displayProperty=nameWithType> e <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> e <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> propriedades inicializadas a zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceSelectArguments (string sortExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sortExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sortExpression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sortExpression">Uma expressão de classificação que os controles de fonte de dados usam para classificar o resultado de uma operação de recuperação de dados antes do resultado ser retornado para o chamador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataSourceSelectArguments" /> com a expressão de classificação especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceSelectArguments.%23ctor%28System.String%29> construtor cria uma instância da classe com o <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> inicializado com a expressão especificada e o <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> e <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> propriedades inicializadas a zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceSelectArguments (int startRowIndex, int maximumRows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 startRowIndex, int32 maximumRows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startRowIndex" Type="System.Int32" />
+        <Parameter Name="maximumRows" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startRowIndex">O índice da linha de dados que marca o início dos dados retornados por uma operação de recuperação de dados.</param>
+        <param name="maximumRows">O número máximo de linhas retornados por uma operação de recuperação de dados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataSourceSelectArguments" /> classe com a posição inicial especificada e o número de linhas a serem retornadas para cenários de paginação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceSelectArguments.%23ctor%28System.Int32%2CSystem.Int32%29> construtor cria uma instância da classe com o <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> inicializado como <xref:System.String.Empty?displayProperty=nameWithType> e <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> e <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> propriedades inicializadas com os valores fornecidos para o `startRowIndex` e `maximumRows` parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSourceSelectArguments (string sortExpression, int startRowIndex, int maximumRows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sortExpression, int32 startRowIndex, int32 maximumRows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sortExpression" Type="System.String" />
+        <Parameter Name="startRowIndex" Type="System.Int32" />
+        <Parameter Name="maximumRows" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sortExpression">Uma expressão de classificação que os controles de fonte de dados usam para classificar o resultado de uma operação de recuperação de dados antes do resultado ser retornado para o chamador.</param>
+        <param name="startRowIndex">O índice da linha de dados que marca o início dos dados retornados por uma operação de recuperação de dados.</param>
+        <param name="maximumRows">O número máximo de linhas retornados por uma operação de recuperação de dados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataSourceSelectArguments" /> classe com a expressão de classificação especificada, a posição inicial e o número de linhas a serem retornadas para cenários de paginação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSupportedCapabilities">
+      <MemberSignature Language="C#" Value="public void AddSupportedCapabilities (System.Web.UI.DataSourceCapabilities capabilities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSupportedCapabilities(valuetype System.Web.UI.DataSourceCapabilities capabilities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities(System.Web.UI.DataSourceCapabilities)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="capabilities" Type="System.Web.UI.DataSourceCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="capabilities">Um dos valores de <see cref="T:System.Web.UI.DataSourceCapabilities" />.</param>
+        <summary>Adiciona um recurso para o <see cref="T:System.Web.UI.DataSourceSelectArguments" /> instância, que é usada para comparar recursos com suporte para e solicitado recursos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles de fonte de dados chamada a <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> método para cada recurso dá suporte à fonte de dados. Depois que os recursos são adicionados, qualquer chamada para o <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29> método compara os recursos com suporte com relação aos recursos solicitados (representados definindo o <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A>, <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A>, <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A>, e <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> propriedades). Por exemplo, se um recurso, como <xref:System.Web.UI.DataSourceCapabilities.Sort> não for adicionado, mas o <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> propriedade for definida, o <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29> método lança um <xref:System.NotSupportedException> exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.DataSourceSelectArguments Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.UI.DataSourceSelectArguments Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Web.UI.DataSourceSelectArguments" /> com a expressão de classificação definida como <see cref="F:System.String.Empty" />.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.DataSourceSelectArguments" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade retorna um <xref:System.Web.UI.DataSourceSelectArguments> objeto criado com o padrão <xref:System.Web.UI.DataSourceSelectArguments.%23ctor> construtor. Você pode usar o <xref:System.Web.UI.DataSourceSelectArguments.Empty%2A> propriedade quando você deseja chamar o <xref:System.Web.UI.DataSourceView.ExecuteSelect%28System.Web.UI.DataSourceSelectArguments%29> método de uma classe de exibição de fonte de dados sem quaisquer argumentos adicionais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Web.UI.DataSourceSelectArguments" /> para comparar com a atual.</param>
+        <summary>Determina se o especificado <see cref="T:System.Web.UI.DataSourceSelectArguments" /> instância é igual à instância atual.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Web.UI.DataSourceSelectArguments" /> é igual à instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceSelectArguments> substituições de classe a <xref:System.Object.Equals%2A?displayProperty=nameWithType> método para testar a igualdade usando as várias propriedades de objetos. Se o <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A>, <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A>, <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A>, <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A>, e <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> propriedades são todos iguais em valor, o <xref:System.Web.UI.DataSourceSelectArguments.Equals%28System.Object%29> método retornará `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o <see cref="T:System.Web.UI.DataSourceSelectArguments" /> tipo.</summary>
+        <returns>O código hash para o <see cref="T:System.Web.UI.DataSourceSelectArguments" /> tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumRows">
+      <MemberSignature Language="C#" Value="public int MaximumRows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.MaximumRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa o número máximo de linhas de dados que retorna um controle de fonte de dados para uma operação de recuperação de dados.</summary>
+        <value>O número máximo de linhas de dados retornados por uma fonte de dados para uma operação de recuperação de dados. O valor padrão é 0, que indica que todas as linhas de dados são retornadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> propriedade oferece suporte a cenários de paginação. Controles de associação de dados Verifique uma exibição de fonte de dados <xref:System.Web.UI.DataSourceView.CanPage%2A> propriedade em tempo de execução e adicione um <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> usando o recurso de <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> método se o modo de exibição oferece suporte à paginação. Se o controle associado a dados Falha ao adicionar o recurso, e configurar as propriedades de paginação em um <xref:System.Web.UI.DataSourceSelectArguments> objeto passado para o modo de exibição de fonte de dados durante uma operação de recuperação de dados, um <xref:System.InvalidOperationException> exceção pode ser gerada.  
+  
+ O controle associado a dados pode solicitar um subconjunto de dados de um controle de fonte de dados para paginação, definindo a <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> e <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> propriedades o <xref:System.Web.UI.DataSourceSelectArguments> objeto passado para o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29> método.  
+  
+> [!IMPORTANT]
+>  Se qualquer uma da <xref:System.Web.UI.DataSourceSelectArguments> propriedades são definidas, mas o controle de fonte de dados associada atualmente não suporta o recurso solicitado, um <xref:System.InvalidOperationException> exceção é lançada quando o <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=nameWithType> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseUnsupportedCapabilitiesError">
+      <MemberSignature Language="C#" Value="public void RaiseUnsupportedCapabilitiesError (System.Web.UI.DataSourceView view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseUnsupportedCapabilitiesError(class System.Web.UI.DataSourceView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError(System.Web.UI.DataSourceView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Web.UI.DataSourceView" />
+      </Parameters>
+      <Docs>
+        <param name="view">A exibição da fonte de dados que executa a operação de recuperação de dados.</param>
+        <summary>Compara os recursos solicitados para um <see cref="M:System.Web.UI.DataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" /> dá suporte à operação com base nos critérios exibição da fonte de dados especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29> método é usado por controles de associação de dados para comparar recursos adicionais de solicitada representados pelas propriedades do <xref:System.Web.UI.DataSourceSelectArguments> classe, como a capacidade de classificar ou página por meio de um conjunto de resultados, com os recursos com suporte a exibição de fonte de dados. O modo de exibição chama sua própria <xref:System.Web.UI.DataSourceView.RaiseUnsupportedCapabilityError%28System.Web.UI.DataSourceCapabilities%29> método para cada recurso possíveis definido no <xref:System.Web.UI.DataSourceCapabilities> enumeração.  
+  
+> [!IMPORTANT]
+>  Se qualquer uma da <xref:System.Web.UI.DataSourceSelectArguments> propriedades são definidas, mas o controle de fonte de dados associada atualmente não suporta o recurso solicitado, um <xref:System.InvalidOperationException> exceção é lançada quando o <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=nameWithType> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O modo de exibição de fonte de dados não oferece suporte para o recurso de fonte de dados especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveTotalRowCount">
+      <MemberSignature Language="C#" Value="public bool RetrieveTotalRowCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RetrieveTotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um controle de fonte de dados deve recuperar uma contagem de todas as linhas de dados durante uma operação de recuperação de dados.</summary>
+        <value>
+          <see langword="true" />Se o controle de fonte de dados deve recuperar uma contagem de linhas de total dos dados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A> propriedade oferece suporte a cenários de paginação. Defina essa propriedade como `true` para solicitar uma contagem total de linhas de controle de fonte de dados durante a operação de recuperação de dados. Verifique o <xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A?displayProperty=nameWithType> propriedade para determinar se uma fonte de dados exibir oferece suporte à recuperação de uma contagem total de linhas. Se a fonte de dados oferece suporte, o <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> pelo controle de fonte de dados, a propriedade é definida durante o curso de uma operação de recuperação de dados e a contagem de linhas de dados total é retornada no <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> propriedade muito como um valor é retornado em um parâmetro de saída de um método.  
+  
+> [!IMPORTANT]
+>  Se qualquer uma da <xref:System.Web.UI.DataSourceSelectArguments> propriedades são definidas, mas o controle de fonte de dados associada atualmente não suporta o recurso solicitado, um <xref:System.InvalidOperationException> exceção é lançada quando o <xref:System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError%28System.Web.UI.DataSourceView%29?displayProperty=nameWithType> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortExpression">
+      <MemberSignature Language="C#" Value="public string SortExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.SortExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma expressão que a exibição de fonte de dados usa para classificar os dados recuperados pelo método <see cref="M:System.Web.UI.DataSourceView.Select(System.Web.UI.DataSourceSelectArguments,System.Web.UI.DataSourceViewSelectCallback)" />.</summary>
+        <value>Uma cadeia de caracteres que a exibição de fonte de dados usa para classificar os dados recuperados pelo método <see cref="M:System.Web.UI.DataSourceView.Select(System.Web.UI.DataSourceSelectArguments,System.Web.UI.DataSourceViewSelectCallback)" />. <see cref="F:System.String.Empty" /> será retornado se a expressão de classificação não tiver sido definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceSelectArguments.SortExpression%2A> propriedade oferece suporte a cenários de classificação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartRowIndex">
+      <MemberSignature Language="C#" Value="public int StartRowIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartRowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.StartRowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa a posição inicial, que o controle de fonte de dados deve usar ao recuperar linhas de dados durante uma operação de recuperação de dados.</summary>
+        <value>A posição inicial da linha da qual uma fonte de dados controle recupera os dados. O valor padrão é 0, que indica que a posição inicial é o início do conjunto de resultados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> propriedade oferece suporte a cenários de paginação. Controles de associação de dados Verifique uma exibição de fonte de dados <xref:System.Web.UI.DataSourceView.CanPage%2A> propriedade em tempo de execução e adicione um <xref:System.Web.UI.DataSourceCapabilities?displayProperty=nameWithType> usando o recurso de <xref:System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities%28System.Web.UI.DataSourceCapabilities%29> método se o modo de exibição oferece suporte à paginação. Se o controle associado a dados Falha ao adicionar o recurso, e configurar as propriedades de paginação em um <xref:System.Web.UI.DataSourceSelectArguments> objeto passado para o modo de exibição de fonte de dados durante uma operação de recuperação de dados, um <xref:System.InvalidOperationException> exceção pode ser gerada.  
+  
+ Como uma operação separada, o controle associado a dados pode solicitar um subconjunto de dados de um controle de fonte de dados definindo o <xref:System.Web.UI.DataSourceSelectArguments.StartRowIndex%2A> e <xref:System.Web.UI.DataSourceSelectArguments.MaximumRows%2A> propriedades de <xref:System.Web.UI.DataSourceSelectArguments> objeto passado para o <xref:System.Web.UI.DataSourceView.Select%28System.Web.UI.DataSourceSelectArguments%2CSystem.Web.UI.DataSourceViewSelectCallback%29?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalRowCount">
+      <MemberSignature Language="C#" Value="public int TotalRowCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataSourceSelectArguments.TotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de linhas recuperadas durante uma operação de recuperação de dados.</summary>
+        <value>O número total de linhas de dados recuperados pela operação de recuperação de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> propriedade oferece suporte a cenários de paginação. Fonte de dados e controles de exibição de fonte de dados diferem em sua implementação interna de como recuperar as contagens de linha de total. Verifique o <xref:System.Web.UI.DataSourceView.CanRetrieveTotalRowCount%2A?displayProperty=nameWithType> propriedade para determinar se uma fonte de dados exibir oferece suporte à recuperação de uma contagem total de linhas durante uma operação de recuperação de dados. Se a fonte de dados oferece suporte, o <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> pelo controle de fonte de dados, a propriedade é definida durante o curso de uma operação de recuperação de dados e a contagem de linhas de dados total é retornada no <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> propriedade muito como um valor é retornado em um parâmetro de saída de um método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,45 @@
+<Type Name="TemplatePropertyEntry" FullName="System.Web.UI.TemplatePropertyEntry">
+  <TypeSignature Language="C#" Value="public class TemplatePropertyEntry : System.Web.UI.BuilderPropertyEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplatePropertyEntry extends System.Web.UI.BuilderPropertyEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TemplatePropertyEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.BuilderPropertyEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Habilita a entrada de propriedade para <see cref="T:System.Web.UI.ITemplate" /> propriedades da classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.TemplatePropertyEntry> classe é usada durante a análise da página.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BindableTemplate">
+      <MemberSignature Language="C#" Value="public bool BindableTemplate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BindableTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.TemplatePropertyEntry.BindableTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.ITemplate" /> propriedade pode ter dados associados a ele.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.ITemplate" /> é de propriedade associável; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,145 @@
+<Type Name="EditingScope" FullName="System.Activities.Presentation.Model.EditingScope">
+  <TypeSignature Language="C#" Value="public class EditingScope : System.Activities.Presentation.Model.ModelEditingScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EditingScope extends System.Activities.Presentation.Model.ModelEditingScope" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Model.EditingScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.Model.ModelEditingScope</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um escopo de edição representa uma coleção de alterações para o <see cref="T:System.Activities.Presentation.Model.ModelItem" /> árvore que pode ser confirmada ou revertida como uma unidade atômica de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é útil para em lote de um conjunto de alterações a vários <xref:System.Activities.Presentation.Model.ModelItem> objetos. Como exemplo, as atividades de mensagens, as alterações feitas as caixas de diálogo geradas afetará vários valores de propriedade. No entanto, como todas as alterações que vêm de caixa de diálogo gerado, a necessidade de alterações a ser considerado como um lote e desfeitas como uma única unidade de trabalho. Para obter mais detalhes sobre o uso, consulte o exemplo de escopo de edição  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanComplete">
+      <MemberSignature Language="C#" Value="protected override bool CanComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.EditingScope.CanComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a instância atual de escopo de edição pode ser concluída.</summary>
+        <returns>
+          <see langword="true" />Se o escopo de edição pode ser concluída; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Activities.Presentation.Model.Change&gt; Changes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Activities.Presentation.Model.Change&gt; Changes" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.EditingScope.Changes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Activities.Presentation.Model.Change&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de alterações.</summary>
+        <value>Retorna um <see cref="T:System.Collections.Generic.List`1" /> que contém as alterações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasEffectiveChanges">
+      <MemberSignature Language="C#" Value="public bool HasEffectiveChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasEffectiveChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.EditingScope.HasEffectiveChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booleano que especifica se as alterações foram aplicadas ao escopo de edição.</summary>
+        <value>
+          <see langword="true" />Se as alterações tiverem sido aplicadas ao escopo de edição; Caso contrário, <see langword="false" />...</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComplete">
+      <MemberSignature Language="C#" Value="protected override void OnComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.EditingScope.OnComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera o evento de conclusão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnException">
+      <MemberSignature Language="C#" Value="protected override bool OnException (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnException(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.EditingScope.OnException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">A exceção para tratar.</param>
+        <summary>Manipula a exceção especificada.</summary>
+        <returns>
+          <see langword="true" />Se a exceção é manipulada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRevert">
+      <MemberSignature Language="C#" Value="protected override void OnRevert (bool finalizing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRevert(bool finalizing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.EditingScope.OnRevert(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalizing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="finalizing">Não usado nesta implementação.</param>
+        <summary>Gera o evento de reversão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,849 @@
+<Type Name="SoapException" FullName="System.Web.Services.Protocols.SoapException">
+  <TypeSignature Language="C#" Value="public class SoapException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SoapException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a exceção que é gerada quando um método de serviço Web XML é chamado por meio do SOAP e uma exceção ocorre.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapException> pode ser gerada pelo common language runtime ou por um método de serviço da Web em XML. O common language runtime pode lançar uma <xref:System.Web.Services.Protocols.SoapException> se uma resposta a uma solicitação não está formatada corretamente. Métodos de serviço Web XML podem gerar um <xref:System.Web.Services.Protocols.SoapException> simplesmente lançando uma exceção no XML Web método do serviço. Se o cliente acessar o método através de SOAP, a exceção é detectada no servidor e encapsulada dentro de um novo <xref:System.Web.Services.Protocols.SoapException>. O <xref:System.Web.Services.Protocols.SoapException> gerada tem os seguintes valores de propriedade:  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.Message%2A>|O <xref:System.Exception.Message%2A> propriedade da exceção original.|  
+|<xref:System.Web.Services.Protocols.SoapException.Code%2A>|<xref:System.Web.Services.Protocols.SoapException.ServerFaultCode>.|  
+|<xref:System.Web.Services.Protocols.SoapException.Actor%2A>|A URL do método de serviço da Web em XML.|  
+|<xref:System.Web.Services.Protocols.SoapException.Detail%2A>|`null`, mas um elemento vazio detalhes está presente no elemento falha.|  
+  
+ Um método de serviço Web XML pode acionar um <xref:System.Web.Services.Protocols.SoapException> quando os clientes chama usando SOAP. Se um serviço Web XML gera o <xref:System.Web.Services.Protocols.SoapException>, outros detalhes podem ser adicionados por meio de <xref:System.Web.Services.Protocols.SoapException.Actor%2A>, <xref:System.Web.Services.Protocols.SoapException.Code%2A> e <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedades caso contrário, não podem ser definidas por um XML Web service método se outro tipo de exceção é lançado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir gera um <xref:System.Web.Services.Protocols.SoapException> onde o método de serviço Web XML define o <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.SoapException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SoapException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">T:System.Runtime.Serialization.StreamingContext que contém informações contextuais sobre a origem ou destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.SoapException" /> com dados serializados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException (string message, System.Xml.XmlQualifiedName code);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.String,System.Xml.XmlQualifiedName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que identifica o motivo pelo qual a exceção ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Exception.Message" />.</param>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de erro que ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Code" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.SoapException" /> com a mensagem de exceção e o código de exceção especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException (string message, System.Xml.XmlQualifiedName code, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.String,System.Xml.XmlQualifiedName,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que identifica o motivo pelo qual a exceção ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Exception.Message" />.</param>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de erro que ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Code" />.</param>
+        <param name="innerException">Uma exceção que é a causa da exceção. Esse parâmetro define a propriedade <see cref="P:System.Exception.InnerException" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapException" /> classe com a mensagem de exceção especificada, o código de exceção e a referência para a causa da exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException (string message, System.Xml.XmlQualifiedName code, string actor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que identifica o motivo pelo qual a exceção ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Exception.Message" />.</param>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de erro que ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Code" />.</param>
+        <param name="actor">Um URI que identifica o código que causou a exceção. Normalmente, essa é uma URL para um método de serviço da Web em XML. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapException" /> classe com a mensagem de exceção especificada, o código de exceção e o URI que identifica o trecho de código que causou a exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException (string message, System.Xml.XmlQualifiedName code, System.Web.Services.Protocols.SoapFaultSubCode subcode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, class System.Web.Services.Protocols.SoapFaultSubCode subcode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.String,System.Xml.XmlQualifiedName,System.Web.Services.Protocols.SoapFaultSubCode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="subCode" Type="System.Web.Services.Protocols.SoapFaultSubCode" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que identifica o motivo pelo qual a exceção ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Exception.Message" />.</param>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de erro que ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Code" />.</param>
+        <param name="subcode">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapException" /> classe com a mensagem de exceção especificada, o código de exceção e o subcódigo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException (string message, System.Xml.XmlQualifiedName code, string actor, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que identifica o motivo pelo qual a exceção ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Exception.Message" />.</param>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de erro que ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Code" />.</param>
+        <param name="actor">Um URI que identifica o trecho de código que causou a exceção. Normalmente, essa é uma URL para um método de serviço da Web em XML. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />.</param>
+        <param name="innerException">Uma exceção que é a causa da exceção. Esse parâmetro define a propriedade <see cref="P:System.Exception.InnerException" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapException" /> classe com a mensagem de exceção especificada, o código de exceção, o URI que identifica o código que causou a exceção e a referência para a causa da exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException (string message, System.Xml.XmlQualifiedName code, string actor, System.Xml.XmlNode detail);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor, class System.Xml.XmlNode detail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String,System.Xml.XmlNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="detail" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que identifica o motivo pelo qual a exceção ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Exception.Message" />.</param>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de erro que ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Code" />.</param>
+        <param name="actor">Um URI que identifica o trecho de código que causou a exceção. Normalmente, essa é uma URL para um método de serviço da Web em XML. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />.</param>
+        <param name="detail">Um <see cref="T:System.Xml.XmlNode" /> que contém informações de exceção específicos do aplicativo. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Detail" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapException" /> classe com a exceção especificada da mensagem, o código de exceção, URI que identifica o trecho de código que causou a exceção e informações de exceção específicos do aplicativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException (string message, System.Xml.XmlQualifiedName code, string actor, System.Xml.XmlNode detail, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor, class System.Xml.XmlNode detail, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String,System.Xml.XmlNode,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="detail" Type="System.Xml.XmlNode" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que identifica o motivo pelo qual a exceção ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Exception.Message" />.</param>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de erro que ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Code" />.</param>
+        <param name="actor">Um URI que identifica o trecho de código que causou a exceção. Normalmente, essa é uma URL para um método de serviço da Web em XML. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />.</param>
+        <param name="detail">Um <see cref="T:System.Xml.XmlNode" /> que contém informações de exceção específicos do aplicativo. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Detail" />.</param>
+        <param name="innerException">Uma exceção que é a causa da exceção. Esse parâmetro define a propriedade <see cref="P:System.Exception.InnerException" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapException" /> classe com a exceção especificada da mensagem, o código de exceção, URI que identifica o trecho de código que causou a exceção, a informações de exceção específicos do aplicativo e a referência para a causa da exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException (string message, System.Xml.XmlQualifiedName code, string actor, string role, System.Xml.XmlNode detail, System.Web.Services.Protocols.SoapFaultSubCode subcode, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor, string role, class System.Xml.XmlNode detail, class System.Web.Services.Protocols.SoapFaultSubCode subcode, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String,System.String,System.Xml.XmlNode,System.Web.Services.Protocols.SoapFaultSubCode,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="detail" Type="System.Xml.XmlNode" />
+        <Parameter Name="subCode" Type="System.Web.Services.Protocols.SoapFaultSubCode" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que identifica o motivo pelo qual a exceção ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Exception.Message" />.</param>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de erro que ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Code" />.</param>
+        <param name="actor">Um URI que identifica o trecho de código que causou a exceção. Normalmente, essa é uma URL para um método de serviço da Web em XML. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />.</param>
+        <param name="role">Um URI que representa a função do serviço Web XML no processamento da mensagem SOAP. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Role" />.</param>
+        <param name="detail">Um <see cref="T:System.Xml.XmlNode" /> que contém informações de exceção específicos do aplicativo. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Detail" />.</param>
+        <param name="subcode">To be added.</param>
+        <param name="innerException">Uma exceção que é a causa da exceção. Esse parâmetro define a propriedade <see cref="P:System.Exception.InnerException" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapException" /> classe com a exceção especificada da mensagem, o código de exceção, URI que identifica o trecho de código que causou a exceção, a informações de exceção específicos do aplicativo e a referência para a causa da exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapException (string message, System.Xml.XmlQualifiedName code, string actor, string role, string lang, System.Xml.XmlNode detail, System.Web.Services.Protocols.SoapFaultSubCode subcode, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Xml.XmlQualifiedName code, string actor, string role, string lang, class System.Xml.XmlNode detail, class System.Web.Services.Protocols.SoapFaultSubCode subcode, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.#ctor(System.String,System.Xml.XmlQualifiedName,System.String,System.String,System.String,System.Xml.XmlNode,System.Web.Services.Protocols.SoapFaultSubCode,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="lang" Type="System.String" />
+        <Parameter Name="detail" Type="System.Xml.XmlNode" />
+        <Parameter Name="subCode" Type="System.Web.Services.Protocols.SoapFaultSubCode" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que identifica o motivo pelo qual a exceção ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Exception.Message" />.</param>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de erro que ocorreu. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Code" />.</param>
+        <param name="actor">Um URI que identifica o trecho de código que causou a exceção. Normalmente, essa é uma URL para um método de serviço da Web em XML. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Actor" />.</param>
+        <param name="role">Um URI que representa a função do serviço Web XML no processamento da mensagem SOAP. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Role" />.</param>
+        <param name="lang">Um idioma humano associado à exceção. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Lang" />.</param>
+        <param name="detail">Um <see cref="T:System.Xml.XmlNode" /> que contém informações de exceção específicos do aplicativo. Esse parâmetro define a propriedade <see cref="P:System.Web.Services.Protocols.SoapException.Detail" />.</param>
+        <param name="subcode">To be added.</param>
+        <param name="innerException">Uma exceção que é a causa da exceção. Esse parâmetro define a propriedade <see cref="P:System.Exception.InnerException" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapException" /> classe com a mensagem de exceção especificada, o código de exceção, URI que identifica o trecho de código que causou a exceção, o URI que representa a função do serviço Web XML no processamento de SOAP da mensagem, o idioma humano associado com a exceção, as informações de exceção específicos do aplicativo, o subcódigo para a falha de SOAP e a referência para a causa da exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Actor">
+      <MemberSignature Language="C#" Value="public string Actor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Actor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapException.Actor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o trecho de código que causou a exceção.</summary>
+        <value>O trecho de código que causou a exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapException.Actor%2A> propriedade só pode ser definida usando um dos construtores que aceita um <xref:System.Web.Services.Protocols.SoapException.Actor%2A> argumento.  
+  
+ Quando é feita uma solicitação SOAP, a mensagem é enviada para um destinatário, que é especificado em um atributo de ator do SOAP. Se uma exceção ocorrer dentro de um serviço Web XML, o valor do atributo de ator SOAP é atribuído para o <xref:System.Web.Services.Protocols.SoapException.Actor%2A> propriedade. Para XML Web services criado usando ASP.NET, a URL para o método de serviço Web XML é o valor do atributo de ator SOAP e é retornada no <xref:System.Web.Services.Protocols.SoapException.Actor%2A> propriedade.  
+  
+ Para obter mais informações sobre o atributo de ator SOAP, consulte a especificação de SOAP em http://www.w3.org/TR/SOAP/.  
+  
+   
+  
+## Examples  
+ Formulário da Web de exemplo a seguir chama o `Math` método de serviço da Web em XML, que gera uma exceção se ocorrer uma divisão por zero. Quando a exceção é gerada, o formulário da Web captura a exceção e gera os detalhes da exceção, incluindo o <xref:System.Web.Services.Protocols.SoapException.Actor%2A> e <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedades, em um <xref:System.Web.UI.HtmlControls.HtmlTable> controle.  
+  
+ [!code-aspx-csharp[Classic SoapException.Actor Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapException.Actor Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic SoapException.Actor Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapException.Actor Example/VB/sourcevb.aspx#1)]  
+  
+ Para que o formulário da Web anterior usar o seguinte `Math` exemplo de serviço da Web, um namespace de `MyMath` foi especificado durante a criação da classe de proxy.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName ClientFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName ClientFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapException.ClientFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um código de falha SOAP que representa uma chamada de cliente que não está formatada corretamente ou não contém as informações apropriadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo de quando um <xref:System.Web.Services.Protocols.SoapException.ClientFaultCode> pode ser gerado, quando uma chamada de cliente não tem informações de autenticação ou o pagamento adequadas. Geralmente é uma indicação de que a chamada do cliente deve ser alterada antes que ele é enviado novamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName Code { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName Code" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapException.Code" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de código de falha de SOAP.</summary>
+        <value>Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o código de falha de SOAP ocorrido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade só pode ser definida ao criar uma nova instância do <xref:System.Web.Services.Protocols.SoapException> classe.  
+  
+ O <xref:System.Web.Services.Protocols.SoapException> classe é para uso por clientes de serviço da Web em XML que chamam os métodos do serviço da Web em XML através de SOAP. ASP.NET controla se o cliente chama usa o SOAP. Isso é quando ocorre uma exceção em um serviço Web XML. Se o cliente usa o SOAP, o ASP.NET envolve a exceção específica em um <xref:System.Web.Services.Protocols.SoapException> e define o <xref:System.Web.Services.Protocols.SoapException.Actor%2A> e <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedades.  
+  
+ O conjunto de códigos disponíveis, conhecido como códigos de falha de SOAP para a versão do protocolo SOAP 1.1, são os seguintes:  
+  
+|Item|Descrição|  
+|----------|-----------------|  
+|<xref:System.Web.Services.Protocols.SoapException.VersionMismatchFaultCode>|Um namespace inválido para um envelope SOAP foi encontrado.|  
+|<xref:System.Web.Services.Protocols.SoapException.MustUnderstandFaultCode>|Nem todos os elementos SOAP não exigem processamento. No entanto, se um elemento SOAP é marcado com o `MustUnderstand` atributo com um valor de 1, é necessário. Falha ao processar o elemento gera essa exceção.|  
+|<xref:System.Web.Services.Protocols.SoapException.ClientFaultCode>|Uma chamada de cliente não foi formatada corretamente ou não contém as informações apropriadas. Por exemplo, a chamada do cliente pode não ter as informações de autenticação ou o pagamento adequadas. Geralmente é uma indicação de que a mensagem deve ser alterada antes que ele é enviado novamente.|  
+|<xref:System.Web.Services.Protocols.SoapException.ServerFaultCode>|Ocorreu um erro durante o processamento de uma chamada de cliente no servidor, no entanto, o problema não é porque o conteúdo da mensagem. Por exemplo, um servidor upstream não pode responder a uma solicitação devido a problemas de rede. Normalmente, esse tipo de exceção, a chamada do cliente pode ter êxito mais tarde. Se um serviço Web XML lança uma exceção, diferente de <xref:System.Web.Services.Protocols.SoapException> e chamadas de cliente usando SOAP, ASP.NET converte a exceção a um <xref:System.Web.Services.Protocols.SoapException>, a definição a <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade <xref:System.Web.Services.Protocols.SoapException.ServerFaultCode> e lança-lo de volta ao cliente.|  
+  
+   
+  
+## Examples  
+ Formulário da Web de exemplo a seguir chama o `Math` método de serviço da Web, o que gera uma exceção se ocorrer uma divisão por zero. Depois que a exceção é gerada, o formulário da Web captura a exceção e gera os detalhes da exceção, incluindo o <xref:System.Web.Services.Protocols.SoapException.Actor%2A> e <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedades em um <xref:System.Web.UI.HtmlControls.HtmlTable> controle.  
+  
+ [!code-aspx-csharp[classic soapexception.actor example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapException.Actor Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[classic soapexception.actor example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapException.Actor Example/VB/sourcevb.aspx#1)]  
+  
+ Para que o formulário da Web anterior usar o seguinte `Math` exemplo de serviço da Web em XML, um namespace de `MyMath` foi especificado durante a criação da classe de proxy.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detail">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNode Detail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode Detail" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapException.Detail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xml.XmlNode" /> que representa os detalhes de informações de erro específicas do aplicativo.</summary>
+        <value>As informações de erro específicas do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedade pode ser definida usando um dos construtores de classe que aceita um <xref:System.Web.Services.Protocols.SoapException.Detail%2A> valor.  
+  
+ O <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedade é usada para fornecer detalhes de erro específicas do aplicativo relacionados ao `Body` elemento da solicitação SOAP. Acordo com a especificação de SOAP, se ocorrer um erro porque a solicitação do cliente não pode ser processada devido ao `Body` elemento da solicitação SOAP, o <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedade deve ser definida. Se ocorrer um erro nas entradas de cabeçalho da solicitação SOAP, é necessário gerar um <xref:System.Web.Services.Protocols.SoapHeaderException>, de modo que os detalhes do erro são retornados no cabeçalho SOAP. Se o erro não ocorre, devido ao processamento do `Body` elemento, o <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedade não deve ser definida.  
+  
+ Em construção um <xref:System.Xml.XmlNode> para o <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedade, o <xref:System.Xml.XmlQualifiedName.Name%2A> e <xref:System.Xml.XmlQualifiedName.Namespace%2A> propriedades de <xref:System.Web.Services.Protocols.SoapException.DetailElementName> pode ser usado para garantir a consistência com a especificação de SOAP.  
+  
+ Todos os elementos filho imediato do elemento de detalhes são chamados de entradas de detalhes e cada entrada de detalhes é codificada como um elemento independente dentro do elemento de detalhes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir gera um <xref:System.Web.Services.Protocols.SoapException>, em que o método de serviço Web XML define o <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailElementName">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName DetailElementName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName DetailElementName" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapException.DetailElementName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xml.XmlQualifiedName" /> que representa o <see cref="P:System.Web.Services.Protocols.SoapException.Detail" /> elemento de um código de falha de SOAP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em construção um <xref:System.Xml.XmlNode> para o <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedade, o <xref:System.Xml.XmlQualifiedName.Name%2A> e <xref:System.Xml.XmlQualifiedName.Namespace%2A> propriedades de <xref:System.Web.Services.Protocols.SoapException.DetailElementName> pode ser usado para garantir a consistência com a especificação de SOAP.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Web.Services.Protocols.SoapException.Detail%2A> propriedade usando o <xref:System.Web.Services.Protocols.SoapException.DetailElementName> campo e, em seguida, gera um <xref:System.Web.Services.Protocols.SoapException>.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Conjuntos de <see cref="T:System.Runtime.Serialization." /> <see cref="SerializationInfo" /> com informações sobre a exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClientFaultCode">
+      <MemberSignature Language="C#" Value="public static bool IsClientFaultCode (System.Xml.XmlQualifiedName code);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsClientFaultCode(class System.Xml.XmlQualifiedName code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.IsClientFaultCode(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que contém um código de falha SOAP.</param>
+        <summary>Retorna um valor que indica se o código de falha SOAP é equivalente a <see langword="Client" /> código de falha SOAP, independentemente da versão do protocolo SOAP usada.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="code" /> é equivalente a <see langword="Client" /> código de falha SOAP; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os destinatários de uma <xref:System.Web.Services.Protocols.SoapException> pode usar esse método para determinar se o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade é funcionalmente equivalente ao `Client` código de falha SOAP definido em SOAP 1.1, independentemente da versão do protocolo SOAP usada. Versões de SOAP de protocolo mais tarde do que 1.1 pode usar diferentes nomes ou namespaces para o `Client` código de falha SOAP definido em SOAP versão 1.1, que é representado pelo <xref:System.Web.Services.Protocols.SoapException.ClientFaultCode> campo. O código de falha de SOAP 1.2 nomes `Sender`, que é representado pelo <xref:System.Web.Services.Protocols.Soap12FaultCodes.SenderFaultCode?displayProperty=nameWithType> campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMustUnderstandFaultCode">
+      <MemberSignature Language="C#" Value="public static bool IsMustUnderstandFaultCode (System.Xml.XmlQualifiedName code);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsMustUnderstandFaultCode(class System.Xml.XmlQualifiedName code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.IsMustUnderstandFaultCode(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que contém um código de falha SOAP.</param>
+        <summary>Retorna um valor que indica se o código de falha SOAP é equivalente a <see langword="MustUnderstand" /> independentemente da versão do protocolo SOAP usada.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="code" /> é equivalente a <see langword="MustUnderstand" /> código de falha SOAP; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os destinatários de uma <xref:System.Web.Services.Protocols.SoapException> pode usar esse método para determinar se o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade é funcionalmente equivalente ao `MustUnderstand` código de falha SOAP definido em SOAP 1.1, independentemente da versão do protocolo SOAP usada. Versões de SOAP de protocolo mais tarde do que 1.1 pode usar diferentes nomes ou namespaces para o `MustUnderstand` código de falha SOAP definido em SOAP versão 1.1, que é representado pelo <xref:System.Web.Services.Protocols.SoapException.MustUnderstandFaultCode?displayProperty=nameWithType> campo. SOAP 1.2 nomeia o código de falha iguais. No entanto, ele tem seu escopo definido por um namespace XML diferente e é representado pelo <xref:System.Web.Services.Protocols.Soap12FaultCodes.MustUnderstandFaultCode?displayProperty=nameWithType> campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsServerFaultCode">
+      <MemberSignature Language="C#" Value="public static bool IsServerFaultCode (System.Xml.XmlQualifiedName code);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsServerFaultCode(class System.Xml.XmlQualifiedName code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.IsServerFaultCode(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que contém um código de falha SOAP.</param>
+        <summary>Retorna um valor que indica se o código de falha SOAP é equivalente a <see langword="Server" /> código de falha SOAP, independentemente da versão do protocolo SOAP usada.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="code" /> é equivalente a <see langword="Server" /> código de falha SOAP; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os destinatários de uma <xref:System.Web.Services.Protocols.SoapException> pode usar esse método para determinar se o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade é funcionalmente equivalente ao `Server` código de falha SOAP definido em SOAP 1.1, independentemente da versão do protocolo SOAP usada. Versões de SOAP de protocolo mais tarde do que 1.1 pode usar diferentes nomes ou namespaces para o `Server` código de falha SOAP definido em SOAP versão 1.1, que é representado pelo <xref:System.Web.Services.Protocols.SoapException.ServerFaultCode> campo. O código de falha de SOAP 1.2 nomes `Receiver`, que é representado pelo <xref:System.Web.Services.Protocols.Soap12FaultCodes.ReceiverFaultCode?displayProperty=nameWithType> campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVersionMismatchFaultCode">
+      <MemberSignature Language="C#" Value="public static bool IsVersionMismatchFaultCode (System.Xml.XmlQualifiedName code);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsVersionMismatchFaultCode(class System.Xml.XmlQualifiedName code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapException.IsVersionMismatchFaultCode(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> que contém um código de falha SOAP.</param>
+        <summary>Retorna um valor que indica se o código de falha SOAP é equivalente a <see langword="VersionMismatch" /> código de falha SOAP, independentemente da versão do protocolo SOAP usada.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="code" /> é equivalente a <see langword="VersionMismatch" /> código de falha SOAP; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os destinatários de uma <xref:System.Web.Services.Protocols.SoapException> pode usar esse método para determinar se o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade é funcionalmente equivalente ao `VersionMismatch` código de falha SOAP definido em SOAP 1.1, independentemente da versão do protocolo SOAP usada. Versões de SOAP de protocolo mais tarde do que 1.1 pode usar diferentes nomes ou namespaces para o `VersionMismatch` código de falha SOAP definido em SOAP versão 1.1, que é representado pelo <xref:System.Web.Services.Protocols.SoapException.VersionMismatchFaultCode?displayProperty=nameWithType> campo. SOAP 1.2 nomeia o código de falha iguais. No entanto, ele tem seu escopo definido por um namespace XML diferente e é representado pelo <xref:System.Web.Services.Protocols.Soap12FaultCodes.VersionMismatchFaultCode?displayProperty=nameWithType> campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lang">
+      <MemberSignature Language="C#" Value="public string Lang { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Lang" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapException.Lang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o idioma humano associado à exceção.</summary>
+        <value>Um <see cref="T:System.String" /> valor que identifica o idioma humano associado à exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o serviço da Web funciona com vários idiomas humanos, lança exceções ou outras propriedades localizadas para cada idioma de texto da mensagem. Use essa propriedade para identificar o idioma associado à exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MustUnderstandFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName MustUnderstandFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName MustUnderstandFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapException.MustUnderstandFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um código de falha de SOAP que representa um elemento SOAP marcado com o <see langword="MustUnderstand" /> atributo não foi processado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nem todos os elementos SOAP não exigem processamento pelo servidor. No entanto, se um elemento SOAP é marcado com o `MustUnderstand` atributo igual a 1 ou `true`, o processamento é necessário. Falha ao processar o elemento gera uma <xref:System.Web.Services.Protocols.SoapException> com um <xref:System.Web.Services.Protocols.SoapException.MustUnderstandFaultCode>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public string Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Node" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapException.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um URI que representa o trecho de código que causou a exceção.</summary>
+        <value>O trecho de código que causou a exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapException.Node%2A> propriedade será ignorada quando a versão do protocolo SOAP 1.1 é usada para se comunicar com um serviço Web XML. Quando SOAP 1.2 é usado, o <xref:System.Web.Services.Protocols.SoapException.Node%2A> conjuntos de propriedades a `node` elemento dentro de um `fault` elemento de uma mensagem SOAP.  
+  
+ O <xref:System.Web.Services.Protocols.SoapException.Actor%2A> e <xref:System.Web.Services.Protocols.SoapException.Node%2A> ambas as propriedades identificam o trecho de código que causou a exceção; eles apenas se referir aos seus nomes de SOAP 1.1 e SOAP 1.2 respectivamente. Porque ambos referem-se com o mesmo valor de propriedade, os aplicativos podem acessar apenas o <xref:System.Web.Services.Protocols.SoapException.Actor%2A> propriedade. O valor dessas propriedades é definido pelos construtores que aceitam um `actor` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public string Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Role" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapException.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um URI que representa a função do serviço Web XML no processamento da mensagem SOAP.</summary>
+        <value>A função do serviço de XML Web lançando a <see cref="T:System.Web.Services.Protocols.SoapException" />. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapException.Role%2A> propriedade será ignorada quando a versão do protocolo SOAP 1.1 é usada para se comunicar com um serviço Web XML. Quando SOAP 1.2 é usado, o <xref:System.Web.Services.Protocols.SoapException.Role%2A> conjuntos de propriedades a `role` elemento dentro de um `fault` elemento de uma mensagem SOAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName ServerFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName ServerFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapException.ServerFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um código de falha SOAP que representa um erro ocorreu durante o processamento de uma chamada de cliente no servidor, em que o problema não se deve ao conteúdo da mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Services.Protocols.SoapException.ServerFaultCode> pode ocorrer, por exemplo, se um servidor que está sendo chamado não pode responder a uma solicitação devido a problemas de rede. Normalmente, esse tipo de exceção, a chamada do cliente pode ter êxito mais tarde.  
+  
+ Se um serviço Web XML lança uma exceção, que o <xref:System.Web.Services.Protocols.SoapException>, e o cliente está se comunicando com o serviço da Web em XML usando o protocolo SOAP, o ASP.NET retornará uma falha SOAP. O .NET Framework em execução no computador cliente converte essa falha SOAP em um <xref:System.Web.Services.Protocols.SoapException>, a definição de <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade <xref:System.Web.Services.Protocols.SoapException.ServerFaultCode>e gera essa exceção para o cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubCode">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapFaultSubCode SubCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.SoapFaultSubCode SubCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapException.SubCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapFaultSubCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de erro opcionais contidas no elemento XML <see langword="subcode" /> de uma falha SOAP.</summary>
+        <value>Um <see cref="T:System.Web.Services.Protocols.SoapFaultSubCode" /> que representa os conteúdos do elemento XML <see langword="subcode" /> de uma falha SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapException.SubCode%2A> propriedade será ignorada quando a versão do protocolo SOAP 1.1 é usada para se comunicar com um serviço Web XML. O <xref:System.Web.Services.Protocols.SoapException.Code%2A> que representa o conteúdo da propriedade a `code` elemento Especifica o tipo de erro que ocorreu usando um número limitado de códigos de erro predefinidos especificado pelo protocolo SOAP, enquanto opcional `subcode` elemento permite que um aplicativo fornecer códigos de erro definidas pelo usuário específicos do aplicativo. ASP.NET define dois esses códigos são representados pelo <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcProcedureNotPresentFaultCode> e <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcBadArgumentsFaultCode> campos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionMismatchFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName VersionMismatchFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName VersionMismatchFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapException.VersionMismatchFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um código de falha SOAP que representa um namespace inválido para um envelope SOAP foi encontrado durante o processamento da mensagem SOAP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um envelope SOAP é o elemento de nível superior de um documento XML que representa uma mensagem SOAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

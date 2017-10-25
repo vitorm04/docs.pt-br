@@ -1,0 +1,258 @@
+<Type Name="SqlCacheDependencyDatabase" FullName="System.Web.Configuration.SqlCacheDependencyDatabase">
+  <TypeSignature Language="C#" Value="public sealed class SqlCacheDependencyDatabase : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlCacheDependencyDatabase extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.SqlCacheDependencyDatabase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura os bancos de dados de dependências de cache SQL para um aplicativo ASP.NET. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SqlCacheDependencyDatabase> permite acessar e modificar programaticamente o `databases` elemento do `sqlCacheDependency` nó dentro a `caching` seção de configuração.  
+  
+ A dependência de cache do SQL permite que os dados em cache sejam sincronizados com a fonte original. Depois de configurar a relação entre um item armazenado em cache de um aplicativo ASP.NET e uma tabela de banco de dados de SQL Server, uma instância do <xref:System.Web.Caching.SqlCacheDependency> classe monitora a tabela de alterações.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.SqlCacheDependencyDatabase> objeto do arquivo de configuração de um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/CS/sqlcachedependencydatabase.cs#1)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/VB/sqlcachedependencydatabase.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlCacheDependencyDatabase (string name, string connectionStringName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string connectionStringName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabase.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="connectionStringName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que especifica o nome usado pelo <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> para identificar o banco de dados.</param>
+        <param name="connectionStringName">Uma cadeia de caracteres que especifica o nome da cadeia de caracteres de conexão no <see langword="connectionStrings" /> seção usar para se conectar ao banco de dados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> classe com os parâmetros passados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar este construtor.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabase#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/CS/sqlcachedependencydatabase.cs#6)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabase#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/VB/sqlcachedependencydatabase.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlCacheDependencyDatabase (string name, string connectionStringName, int pollTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string connectionStringName, int32 pollTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SqlCacheDependencyDatabase.#ctor(System.String,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="connectionStringName" Type="System.String" />
+        <Parameter Name="pollTime" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que especifica o nome usado pelo <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> para identificar o banco de dados.</param>
+        <param name="connectionStringName">Uma cadeia de caracteres que especifica o nome da cadeia de caracteres de conexão no <see langword="connectionStrings" /> seção usar para se conectar ao banco de dados.</param>
+        <param name="pollTime">O tempo de sondagem de banco de dados, em milissegundos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar este construtor.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabase#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/CS/sqlcachedependencydatabase.cs#5)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabase#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/VB/sqlcachedependencydatabase.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionStringName">
+      <MemberSignature Language="C#" Value="public string ConnectionStringName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionStringName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencyDatabase.ConnectionStringName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("connectionStringName", IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de conexão para o banco de dados.</summary>
+        <value>Uma cadeia de caracteres que especifica o nome de uma cadeia de caracteres de conexão de banco de dados dentro de <see langword="connectionStrings" /> seção de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SqlCacheDependencyDatabase.ConnectionStringName%2A> propriedade permite acessar e modificar programaticamente o `connectionName` atributo de um `add` elemento do `databases` nó em um arquivo de configuração. O nome de conexão identifica um elemento de `connectionStrings` seção que contém a cadeia de caracteres de conexão do banco de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabase.ConnectionStringName%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabase#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/CS/sqlcachedependencydatabase.cs#4)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabase#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/VB/sqlcachedependencydatabase.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementProperty">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElementProperty ElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationElementProperty ElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencyDatabase.ElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencyDatabase.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do banco de dados.</summary>
+        <value>Uma cadeia de caracteres que especifica o nome usado pelo <see cref="T:System.Web.Configuration.SqlCacheDependencyDatabase" /> para identificar o banco de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SqlCacheDependencyDatabase.Name%2A> propriedade permite acessar e modificar programaticamente o `name` atributo de um `add` elemento do `databases` nó em um arquivo de configuração.  
+  
+ O `name` atributo identifica o banco de dados cuja tabela é usada para o <xref:System.Web.Caching.SqlCacheDependency>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabase.Name%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabase#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/CS/sqlcachedependencydatabase.cs#3)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabase#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/VB/sqlcachedependencydatabase.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PollTime">
+      <MemberSignature Language="C#" Value="public int PollTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PollTime" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencyDatabase.PollTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("pollTime", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a frequência com que o <see cref="T:System.Web.Caching.SqlCacheDependency" /> sonda a tabela de banco de dados quanto a alterações.</summary>
+        <value>O tempo de sondagem de banco de dados, em milissegundos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SqlCacheDependencyDatabase.PollTime%2A> propriedade permite acessar e modificar programaticamente o `pollTime` atributo de um `add` elemento do `databases` nó em um arquivo de configuração.  
+  
+ Depois de configurar a relação entre um item armazenado em cache de um aplicativo ASP.NET e uma tabela de banco de dados de SQL Server, uma instância do <xref:System.Web.Caching.SqlCacheDependency> classe monitora a tabela para que quando um item nas alterações de tabela, o item é automaticamente atualizado no ou removido do cache. O monitoramento acontece na frequência especificada pelo <xref:System.Web.Configuration.SqlCacheDependencyDatabase.PollTime%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.SqlCacheDependencyDatabase.PollTime%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.SqlCacheDependencyDatabase#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/CS/sqlcachedependencydatabase.cs#2)]
+ [!code-vb[System.Web.Configuration.SqlCacheDependencyDatabase#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SqlCacheDependencyDatabase/VB/sqlcachedependencydatabase.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SqlCacheDependencyDatabase.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

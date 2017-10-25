@@ -1,0 +1,183 @@
+<Type Name="SkinIDTypeConverter" FullName="System.Web.UI.Design.SkinIDTypeConverter">
+  <TypeSignature Language="C#" Value="public class SkinIDTypeConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SkinIDTypeConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.SkinIDTypeConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma lista de IDs de capa válidos para um controle em tempo de design, com base no tema aplicável no momento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SkinIDTypeConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SkinIDTypeConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.SkinIDTypeConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SkinIDTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um T:System.ComponentModel.ITypeDescriptorContext que fornece um contexto de formato para o controle que está sendo criado.</param>
+        <param name="sourceType">Um <see cref="T:System.Type" />.</param>
+        <summary>Retorna um valor que indica se esse conversor pode converter um <see cref="P:System.Web.UI.Control.SkinID" /> uma cadeia de caracteres usando o contexto de formato fornecida e o tipo de objeto.</summary>
+        <returns>
+          <see langword="true" />, se a conversão pode ser feita; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SkinIDTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um T:System.ComponentModel.ITypeDescriptorContext que fornece um contexto de formato para o controle que está sendo criado.</param>
+        <param name="destType">Um T:System.Type que representa o tipo para converter.</param>
+        <summary>Retorna um valor que indica se esse conversor pode converter um <see cref="P:System.Web.UI.Control.SkinID" /> objeto para o tipo especificado, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />, se a conversão pode ser realizada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SkinIDTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um T:System.ComponentModel.ITypeDescriptorContext que fornece um contexto de formatação que representa o controle que está sendo criado.</param>
+        <param name="culture">T: System.Globalization.CultureInfo. Se <see langword="null" /> for passado, atual cultura será assumida.</param>
+        <param name="value">A cadeia de caracteres a ser convertida.</param>
+        <summary>Converte a cadeia de caracteres específica para um <see cref="P:System.Web.UI.Control.SkinID" /> usando as informações de contexto e a cultura especificadas do objeto.</summary>
+        <returns>Um objeto que pode ser convertido como um <see cref="P:System.Web.UI.DataSourceControl.SkinID" /> do objeto, se a conversão pode ser feita; caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SkinIDTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um T:System.ComponentModel.ITypeDescriptorContext que fornece um contexto de formatação que representa o controle que está sendo criado.</param>
+        <param name="culture">T: System.Globalization.CultureInfo. Se <see langword="null" />, a cultura atual é assumida.</param>
+        <param name="value">O <see cref="P:System.Web.UI.Control.SkinID" /> objeto converter.</param>
+        <param name="destinationType">T:System.Type Converter <c>valor</c> para (deve ser um <see cref="T:System.String" />).</param>
+        <summary>Converte a determinado <see cref="P:System.Web.UI.Control.SkinID" /> objeto como uma cadeia de caracteres usando as informações de contexto e a cultura especificadas.</summary>
+        <returns>Um objeto que representa o valor convertido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SkinIDTypeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um T:System.ComponentModel.ITypeDescriptorContext que fornece um contexto de formatação que representa o controle que está sendo criado. <c>contexto</c> ou as propriedades de <c>contexto</c> pode ser <see langword="null" />.</param>
+        <summary>Retorna um conjunto de <see cref="P:System.Web.UI.Control.SkinID" /> objetos que podem ser aplicados para o controle que é representado pelo contexto de formato fornecido.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém um conjunto de <see cref="P:System.Web.UI.Control.SkinID" /> objetos; caso contrário, <see langword="null" />, se o controle não oferece suporte a capas.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.SkinIDTypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> para o controle que está sendo criado.</param>
+        <summary>Retorna um valor que indica se o controle que é representado por um determinado contexto oferece suporte a um conjunto de <see cref="P:System.Web.UI.Control.SkinID" /> objetos que podem ser escolhidos em uma lista.</summary>
+        <returns>
+          <see langword="true" />, se <see cref="Overload:System.Web.UI.Design.SkinIDTypeConverter.GetStandardValues" /> deve ser chamado para localizar um conjunto comum de valores que o objeto suporta; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

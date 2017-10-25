@@ -1,0 +1,140 @@
+<Type Name="Parity" FullName="System.IO.Ports.Parity">
+  <TypeSignature Language="C#" Value="public enum Parity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Parity extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.Parity" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o bit de paridade para um objeto <see cref="T:System.IO.Ports.SerialPort" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta enumeração ao definir o <xref:System.IO.Ports.SerialPort.Parity%2A> propriedade para uma conexão de porta serial.  
+  
+ Paridade é um procedimento de verificação de erros em que o número de 1s deve sempre ser o mesmo — par ou ímpar — para cada grupo de bits que é transmitido sem erro. Em comunicações de modem para modem, paridade costuma ser um dos parâmetros que devem ser aceito por partes de envio e recebimento de colocar antes que a transmissão pode demorar.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores possíveis do <xref:System.IO.Ports.Parity> enumeração no console, em seguida, solicita ao usuário para escolher um. Este exemplo de código é parte de um exemplo de código maior fornecido para a <xref:System.IO.Ports.SerialPort> classe.  
+  
+ [!code-cpp[System.IO.Ports.SerialPort#03](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cpp/serialport.cpp#03)]
+ [!code-csharp[System.IO.Ports.SerialPort#03](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/cs/SerialPort.cs#03)]
+ [!code-vb[System.IO.Ports.SerialPort#03](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Ports.SerialPort/vb/SerialPort.vb#03)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Even">
+      <MemberSignature Language="C#" Value="Even" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.Parity Even = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.Even" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Parity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o bit de paridade de modo que a contagem de bits definida seja um número par.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mark">
+      <MemberSignature Language="C#" Value="Mark" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.Parity Mark = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.Mark" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Parity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Deixa o bit de paridade definido como 1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.Parity None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Parity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma verificação de paridade ocorre.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Odd">
+      <MemberSignature Language="C#" Value="Odd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.Parity Odd = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.Odd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Parity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o bit de paridade de modo que a contagem de bits definida seja um número ímpar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Space">
+      <MemberSignature Language="C#" Value="Space" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.Parity Space = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.Space" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.Parity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Deixa o bit de paridade definido como 0.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

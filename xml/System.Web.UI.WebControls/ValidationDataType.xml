@@ -1,0 +1,111 @@
+<Type Name="ValidationDataType" FullName="System.Web.UI.WebControls.ValidationDataType">
+  <TypeSignature Language="C#" Value="public enum ValidationDataType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidationDataType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ValidationDataType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os tipos de dados de validação usados pelos controles <see cref="T:System.Web.UI.WebControls.CompareValidator" /> e <see cref="T:System.Web.UI.WebControls.RangeValidator" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ValidationDataType> enumeração representa os dados de diferentes tipos de <xref:System.Web.UI.WebControls.CompareValidator> e <xref:System.Web.UI.WebControls.RangeValidator> controles podem validar. Quando você especificar um tipo de dados para o controle de validação e o controle de entrada que está sendo validado for aprovado na validação, o valor de controle de entrada pode ser analisado para o tipo de dados especificado.  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[Classic CompareValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CompareValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CompareValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CompareValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Currency">
+      <MemberSignature Language="C#" Value="Currency" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidationDataType Currency = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidationDataType.Currency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationDataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de dados monetário. O valor é tratado como um <see cref="T:System.Decimal" />. No entanto, os símbolos de moeda e de agrupamentos ainda são permitidos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="Date" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidationDataType Date = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidationDataType.Date" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationDataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de dados de data. Apenas as datas numéricas são permitidas. Não é possível especificar a parte de hora.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Double">
+      <MemberSignature Language="C#" Value="Double" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidationDataType Double = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidationDataType.Double" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationDataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de dados do número do ponto flutuante de precisão dupla. O valor é tratado como um <see cref="T:System.Double" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Integer">
+      <MemberSignature Language="C#" Value="Integer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidationDataType Integer = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidationDataType.Integer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationDataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de dados inteiro com sinal de 32 bits. O valor é tratado como um <see cref="T:System.Int32" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="String">
+      <MemberSignature Language="C#" Value="String" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidationDataType String = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidationDataType.String" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationDataType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de dados String. O valor é tratado como um <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

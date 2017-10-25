@@ -1,0 +1,81 @@
+<Type Name="ButtonType" FullName="System.Web.UI.WebControls.ButtonType">
+  <TypeSignature Language="C#" Value="public enum ButtonType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ButtonType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ButtonType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os diferentes tipos de botões que podem ser renderizados em uma página do Web Forms.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ButtonType> enumeração é usada para representar os diferentes tipos de botões (como o botão de comando, o botão de imagem, o botão de link e assim por diante) que podem ser renderizado em uma página ASP.NET. Ele é normalmente usado por propriedades, como o <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade o <xref:System.Web.UI.WebControls.ButtonFieldBase> classe para indicar qual tipo de botão está sendo usado pelo controle pai.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ButtonType> enumeração para especificar que o link botões são exibidos em uma <xref:System.Web.UI.WebControls.ButtonField> coluna campo de um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.ButtonFieldBase.ButtonType%2A> propriedade de um <xref:System.Web.UI.WebControls.ButtonField> objeto declarativamente é definido como `ButtonType.Link`.  
+  
+ [!code-aspx-csharp[ButtonType#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonType/CS/buttontypecs.aspx#1)]
+ [!code-aspx-vb[ButtonType#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonType/VB/buttontypevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Button">
+      <MemberSignature Language="C#" Value="Button" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ButtonType Button = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ButtonType.Button" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um botão de comando.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="Image" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ButtonType Image = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ButtonType.Image" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um botão que exibe uma imagem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Link">
+      <MemberSignature Language="C#" Value="Link" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ButtonType Link = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ButtonType.Link" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um botão com estilo de hiperlink.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

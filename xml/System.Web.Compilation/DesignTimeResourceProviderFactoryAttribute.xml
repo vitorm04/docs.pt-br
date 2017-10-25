@@ -1,0 +1,127 @@
+<Type Name="DesignTimeResourceProviderFactoryAttribute" FullName="System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DesignTimeResourceProviderFactoryAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignTimeResourceProviderFactoryAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de fábrica de provedor de recursos de tempo de design. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute> classe permite que um <xref:System.Web.Compilation.ResourceProviderFactory> objeto para especificar o tipo de associado <xref:System.Web.UI.Design.DesignTimeResourceProviderFactory> objeto. O <xref:System.Web.UI.Design.DesignTimeResourceProviderFactory> classe é usada para criar provedores de tempo de design para ler e gravar recursos. Dentro de [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)], um desenvolvedor pode usar o **gerar recursos locais** comando o **ferramentas** menu para criar recursos durante o tempo de design.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma fábrica de provedor de recursos personalizado que especifica uma fábrica de provedor de recursos de tempo de design personalizado por meio de <xref:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute> atributo. Este exemplo não inclui o código necessário para implementar uma fábrica de provedor de recursos personalizados de tempo de design.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#1)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignTimeResourceProviderFactoryAttribute (string factoryTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string factoryTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="factoryTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="factoryTypeName">O nome do tipo de fábrica de provedor de recurso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute" /> classe com o atributo definido como o nome do tipo de fábrica especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute> atributo é definido como `factoryTypeName`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignTimeResourceProviderFactoryAttribute (Type factoryType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type factoryType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="factoryType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="factoryType">O tipo da fábrica de provedor de recursos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute" /> classe com o atributo definido como o nome qualificado do tipo de fábrica especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute.FactoryTypeName%2A> está definida como o <xref:System.Type.AssemblyQualifiedName%2A> valor da propriedade de `factoryType` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FactoryTypeName">
+      <MemberSignature Language="C#" Value="public string FactoryTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FactoryTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute.FactoryTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do nome do tipo de fábrica.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome do tipo de fábrica.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o provedor padrão é usado.</summary>
+        <returns>
+          <see langword="true" /> se <see cref="P:System.Web.Compilation.DesignTimeResourceProviderFactoryAttribute.FactoryTypeName" /> for igual a <see langword="null" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,73 @@
+<Type Name="EncodingFormat" FullName="System.Speech.AudioFormat.EncodingFormat">
+  <TypeSignature Language="C#" Value="public enum EncodingFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EncodingFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.AudioFormat.EncodingFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera valores que descrevem o formato de codificação de áudio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo.EncodingFormat%2A> propriedade obtém um membro de <xref:System.Speech.AudioFormat.EncodingFormat> que indica o formato de codificação de áudio.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ALaw">
+      <MemberSignature Language="C#" Value="ALaw" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.AudioFormat.EncodingFormat ALaw = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.AudioFormat.EncodingFormat.ALaw" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.AudioFormat.EncodingFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formato de codificação do áudio é ALaw.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pcm">
+      <MemberSignature Language="C#" Value="Pcm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.AudioFormat.EncodingFormat Pcm = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.AudioFormat.EncodingFormat.Pcm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.AudioFormat.EncodingFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formato de codificação do áudio é PCM (Modulação por Código de Pulso).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ULaw">
+      <MemberSignature Language="C#" Value="ULaw" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.AudioFormat.EncodingFormat ULaw = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.AudioFormat.EncodingFormat.ULaw" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.AudioFormat.EncodingFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formato de codificação do áudio é ULaw.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

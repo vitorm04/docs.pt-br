@@ -1,0 +1,927 @@
+<Type Name="IOControlCode" FullName="System.Net.Sockets.IOControlCode">
+  <TypeSignature Language="C#" Value="public enum IOControlCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IOControlCode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.IOControlCode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os códigos de controle de E/S com suporte pelo método <see cref="M:System.Net.Sockets.Socket.IOControl(System.Int32,System.Byte[],System.Byte[])" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.IOControlCode> enumeração fornece valores nomeados para especificar os modos operacionais do soquete. Esses valores são passados para o Windows Sockets 2 (Winsock 2) os códigos de controle `WSAIoctl` função.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama o <xref:System.Net.Sockets.Socket.IOControl%28System.Net.Sockets.IOControlCode%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29> método com um valor de parâmetro DataToRead e compara o resultado com o acesso a.<xref:System.Net.Sockets.Socket.Available%2A> propriedade.  
+  
+ [!code-cpp[NCLSocketIoControl1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSocketIoControl1/CPP/iocontrolcode.cpp#1)]
+ [!code-csharp[NCLSocketIoControl1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSocketIoControl1/CS/iocontrolcode.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AbsorbRouterAlert">
+      <MemberSignature Language="C#" Value="AbsorbRouterAlert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode AbsorbRouterAlert = int64(2550136837)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.AbsorbRouterAlert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse valor é igual à constante Winsock 2 SIO_ABSORB_RTRALERT.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMulticastGroupOnInterface">
+      <MemberSignature Language="C#" Value="AddMulticastGroupOnInterface" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode AddMulticastGroupOnInterface = int64(2550136842)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.AddMulticastGroupOnInterface" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ingressar em um grupo de multicast usando uma interface identificada por seu índice. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Esse valor é igual à constante Winsock 2 SIO_INDEX_ADD_MCAST.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressListChange">
+      <MemberSignature Language="C#" Value="AddressListChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode AddressListChange = int64(671088663)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.AddressListChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita receber notificação quando a lista de interfaces locais para a família de protocolo do soquete se altera. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Esse valor é igual à constante Winsock 2 SIO_ADDRESS_LIST_CHANGE.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressListQuery">
+      <MemberSignature Language="C#" Value="AddressListQuery" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode AddressListQuery = int64(1207959574)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.AddressListQuery" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna a lista de interfaces locais que pode se associar ao soquete. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Esse valor é igual à constante Winsock 2 SIO_ADDRESS_LIST_QUERY.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressListSort">
+      <MemberSignature Language="C#" Value="AddressListSort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode AddressListSort = int64(3355443225)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.AddressListSort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Classifica a estrutura retornada pelo campo <see cref="F:System.Net.Sockets.IOControlCode.AddressListQuery" /> e adicionar informações de identificação de escopo para endereços IPv6. Este código de controle tem suporte nos sistemas operacionais Windows XP e posteriores. Esse valor é igual à constante Winsock 2 SIO_ADDRESS_LIST_SORT.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociateHandle">
+      <MemberSignature Language="C#" Value="AssociateHandle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode AssociateHandle = int64(2281701377)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.AssociateHandle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Associe esse soquete com o identificador especificado de uma interface de assistente. Consulte o anexo específico do protocolo apropriado na referência de Winsock 2 ou documentação para a interface complementar específico para obter detalhes adicionais. É recomendável que o modelo de objeto de componente (COM) seja usado em vez deste IOCTL, para descobrir e controlar outras interfaces que possam ter suporte por um soquete. Esse código de controle está presente para fins de compatibilidade com sistemas em que COM não está disponível ou não pode ser usado por algum outro motivo. Esse valor é igual à constante Winsock 2 SIO_ASSOCIATE_HANDLE.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncIO">
+      <MemberSignature Language="C#" Value="AsyncIO" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode AsyncIO = int64(2147772029)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.AsyncIO" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilitar a notificação para quando os dados estão aguardando para serem recebidos. Esse valor é igual à constante Winsock 2 FIOASYNC.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BindToInterface">
+      <MemberSignature Language="C#" Value="BindToInterface" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode BindToInterface = int64(2550136840)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.BindToInterface" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Associar o soquete à um índice de interface especificada. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Esse valor é igual à constante Winsock 2 SIO_INDEX_BIND.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DataToRead">
+      <MemberSignature Language="C#" Value="DataToRead" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode DataToRead = int64(1074030207)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.DataToRead" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o número de bytes disponível para leitura. Esse valor é igual à constante Winsock 2 FIONREAD.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteMulticastGroupFromInterface">
+      <MemberSignature Language="C#" Value="DeleteMulticastGroupFromInterface" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode DeleteMulticastGroupFromInterface = int64(2550136843)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.DeleteMulticastGroupFromInterface" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Remova o soquete de um grupo de multicast. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Esse valor é igual à constante Winsock 2 SIO_INDEX_ADD_MCAST.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCircularQueuing">
+      <MemberSignature Language="C#" Value="EnableCircularQueuing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode EnableCircularQueuing = int64(671088642)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.EnableCircularQueuing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui o datagrama na fila mais antigo com um datagrama de entrada quando as filas de mensagens de entrada estão cheias. Esse valor é igual à constante Winsock 2 SIO_ENABLE_CIRCULAR_QUEUEING.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="Flush" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode Flush = int64(671088644)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.Flush" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Descarta o conteúdo da fila de envio. Esse valor é igual à constante Winsock 2 SIO_FLUSH.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBroadcastAddress">
+      <MemberSignature Language="C#" Value="GetBroadcastAddress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode GetBroadcastAddress = int64(1207959557)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.GetBroadcastAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma estrutura SOCKADDR que contém o endereço de difusão da família de endereços de soquete atual. O endereço retornado pode ser usado com o método <see cref="Overload:System.Net.Sockets.Socket.SendTo" />. Esse valor é igual à constante Winsock 2 SIO_GET_BROADCAST_ADDRESS. Esse valor pode ser usado apenas em soquetes do protocolo UDP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtensionFunctionPointer">
+      <MemberSignature Language="C#" Value="GetExtensionFunctionPointer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode GetExtensionFunctionPointer = int64(3355443206)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.GetExtensionFunctionPointer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obter funções específicas do provedor que não fazem parte da especificação do Winsock. Funções são especificadas usando o GUID atribuído pelo provedor. Esse valor é igual à constante Winsock 2 SIO_GET_EXTENSION_FUNCTION_POINTER.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGroupQos">
+      <MemberSignature Language="C#" Value="GetGroupQos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode GetGroupQos = int64(3355443208)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.GetGroupQos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna os atributos de qualidade de serviço (QoS) para o grupo de soquete. Esse valor é reservado para uso futuro e é igual à constante Winsock 2 SIO_GET_GROUP_QOS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQos">
+      <MemberSignature Language="C#" Value="GetQos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode GetQos = int64(3355443207)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.GetQos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupere a estrutura QoS associada ao soquete. Esse controle só tem suporte em plataformas que fornecem um transporte compatível com QoS (Windows Me, Windows 2000 e posterior). Esse valor é igual à constante Winsock 2 SIO_GET_QOS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepAliveValues">
+      <MemberSignature Language="C#" Value="KeepAliveValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode KeepAliveValues = int64(2550136836)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.KeepAliveValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Controla envio de pacotes keep-alive do TCP e o intervalo em que eles são enviados. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Para obter mais informações, consulte RFC 1122 seção 4.2.3.6. Esse valor é igual à constante Winsock 2 SIO_KEEPALIVE_VALS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LimitBroadcasts">
+      <MemberSignature Language="C#" Value="LimitBroadcasts" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode LimitBroadcasts = int64(2550136839)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.LimitBroadcasts" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse valor é igual à constante Winsock 2 SIO_LIMIT_BROADCASTS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastInterface">
+      <MemberSignature Language="C#" Value="MulticastInterface" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode MulticastInterface = int64(2550136841)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.MulticastInterface" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define a interface usada para pacotes multicast de saída. A interface é identificada por seu índice. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores.  Esse valor é igual à constante Winsock 2 SIO_INDEX_MCASTIF.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastScope">
+      <MemberSignature Language="C#" Value="MulticastScope" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode MulticastScope = int64(2281701386)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.MulticastScope" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Controla o número de vezes que um pacote de multicast pode ser encaminhado por um roteador, também conhecido como vida útil (TTL) ou a contagem de saltos. Esse valor é igual à constante Winsock 2 SIO_MULTICAST_SCOPE.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultipointLoopback">
+      <MemberSignature Language="C#" Value="MultipointLoopback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode MultipointLoopback = int64(2281701385)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.MultipointLoopback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Controla se dados de multicast enviados por soquete aparecem como dados de entrada nos soquetes fila de recebimento. Esse valor é igual à constante Winsock 2 SIO_MULTIPOINT_LOOPBACK.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceChange">
+      <MemberSignature Language="C#" Value="NamespaceChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode NamespaceChange = int64(2281701401)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.NamespaceChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Controla se o soquete recebe notificação quando uma consulta de namespace se torna inválida. Este código de controle tem suporte nos sistemas operacionais Windows XP e posteriores. Esse valor é igual à constante Winsock 2 SIO_NSP_NOTIFY_CHANGE.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonBlockingIO">
+      <MemberSignature Language="C#" Value="NonBlockingIO" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode NonBlockingIO = int64(2147772030)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.NonBlockingIO" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Controlar o comportamento de bloqueio do soquete. Se o argumento especificado com esse código de controle for zero, o soquete é colocado no modo de bloqueio. Se o argumento for diferente de zero, o soquete será colocado no modo sem bloqueio. Esse valor é igual à constante Winsock 2 FIONBIO.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OobDataRead">
+      <MemberSignature Language="C#" Value="OobDataRead" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode OobDataRead = int64(1074033415)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.OobDataRead" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna informações sobre dados out-of-band aguardando para serem recebidos. Ao usar esse código de controle em soquetes de fluxo, o valor retornado indica o número de bytes disponíveis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryTargetPnpHandle">
+      <MemberSignature Language="C#" Value="QueryTargetPnpHandle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode QueryTargetPnpHandle = int64(1207959576)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.QueryTargetPnpHandle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera o identificador de SOQUETE do provedor subjacente. Esse identificador pode ser usado para receber uma notificação de evento de plug-and-play. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Esse valor é igual à constante Winsock 2 SIO_QUERY_TARGET_PNP_HANDLE.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAll">
+      <MemberSignature Language="C#" Value="ReceiveAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode ReceiveAll = int64(2550136833)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.ReceiveAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita o recebimento de todos os pacotes IPv4 na rede. O soquete deve ter a família de endereço <see cref="F:System.Net.Sockets.AddressFamily.InterNetwork" />, o tipo de soquete deve ser <see cref="F:System.Net.Sockets.SocketType.Raw" /> e o tipo de protocolo deve ser <see cref="F:System.Net.Sockets.ProtocolType.IP" />. O usuário atual deve pertencer ao grupo Administradores no computador local e o soquete deve ser associado a uma porta específica. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Esse valor é igual à constante Winsock 2 SIO_RCVALL.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAllIgmpMulticast">
+      <MemberSignature Language="C#" Value="ReceiveAllIgmpMulticast" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode ReceiveAllIgmpMulticast = int64(2550136835)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.ReceiveAllIgmpMulticast" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita o recebimento de todos os pacotes de Internet Group Management Protocol (IGMP) na rede. O soquete deve ter a família de endereço <see cref="F:System.Net.Sockets.AddressFamily.InterNetwork" />, o tipo de soquete deve ser <see cref="F:System.Net.Sockets.SocketType.Raw" /> e o tipo de protocolo deve ser <see cref="F:System.Net.Sockets.ProtocolType.Igmp" />. O usuário atual deve pertencer ao grupo Administradores no computador local e o soquete deve ser associado a uma porta específica. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Esse valor é igual à constante Winsock 2 SIO_RCVALL_IGMPMCAST.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAllMulticast">
+      <MemberSignature Language="C#" Value="ReceiveAllMulticast" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode ReceiveAllMulticast = int64(2550136834)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.ReceiveAllMulticast" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita o recebimento de todos os pacotes IPv4 multicast na rede. Estes são os pacotes com endereços de destino no intervalo de 224.0.0.0 a 239.255.255.255. O soquete deve ter a família de endereço <see cref="F:System.Net.Sockets.AddressFamily.InterNetwork" />, o tipo de soquete deve ser <see cref="F:System.Net.Sockets.SocketType.Raw" /> e o tipo de protocolo deve ser <see cref="F:System.Net.Sockets.ProtocolType.Udp" />. O usuário atual deve pertencer ao grupo Administradores no computador local e o soquete deve ser associado a uma porta específica. Este código de controle tem suporte nos sistemas operacionais Windows 2000 e posteriores. Esse valor é igual à constante Winsock 2 SIO_RCVALL_MCAST.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RoutingInterfaceChange">
+      <MemberSignature Language="C#" Value="RoutingInterfaceChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode RoutingInterfaceChange = int64(2281701397)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.RoutingInterfaceChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita o recebimento de notificações quando a interface local usada para acessar um alterações de ponto de extremidade remoto. Esse valor é igual à constante Winsock 2 SIO_ROUTING_INTERFACE_CHANGE.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RoutingInterfaceQuery">
+      <MemberSignature Language="C#" Value="RoutingInterfaceQuery" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode RoutingInterfaceQuery = int64(3355443220)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.RoutingInterfaceQuery" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna os endereços de interface que podem ser usados para se conectar ao endereço remoto especificado. Esse valor é igual à constante Winsock 2 SIO_ROUTING_INTERFACE_QUERY.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGroupQos">
+      <MemberSignature Language="C#" Value="SetGroupQos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode SetGroupQos = int64(2281701388)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.SetGroupQos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define os atributos de qualidade de serviço (QoS) para o grupo de soquete. Esse valor é reservado para uso futuro e é igual à constante Winsock 2 SIO_SET_GROUP_QOS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetQos">
+      <MemberSignature Language="C#" Value="SetQos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode SetQos = int64(2281701387)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.SetQos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define os atributos de qualidade de serviço (QoS) para o soquete. QoS define os requisitos de largura de banda para o soquete. Este código de controle tem suporte nos sistemas operacionais Windows 2000, Me e posteriores. Esse valor é igual à constante Winsock 2 SIO_SET_QOS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateHandle">
+      <MemberSignature Language="C#" Value="TranslateHandle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode TranslateHandle = int64(3355443213)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.TranslateHandle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um identificador para o soquete que é válido no contexto de uma interface de assistente. Esse valor é igual à constante Winsock 2 SIO_TRANSLATE_HANDLE.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnicastInterface">
+      <MemberSignature Language="C#" Value="UnicastInterface" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IOControlCode UnicastInterface = int64(2550136838)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IOControlCode.UnicastInterface" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IOControlCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Defina a interface usada para pacotes unicast de saída. Esse valor é igual à constante Winsock 2 SIO_UCAST_IF.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

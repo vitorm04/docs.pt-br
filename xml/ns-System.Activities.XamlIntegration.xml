@@ -1,0 +1,6 @@
+<Namespace Name="System.Activities.XamlIntegration">
+  <Docs>
+    <summary>Contém classes que oferecem suporte para a serialização de atividades em XAML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

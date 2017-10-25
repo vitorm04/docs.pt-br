@@ -1,0 +1,250 @@
+<Type Name="DispatcherExtensions" FullName="System.Windows.Threading.DispatcherExtensions">
+  <TypeSignature Language="C#" Value="public static class DispatcherExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DispatcherExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de métodos <see langword="static" /> que estende a classe <see cref="T:System.Windows.Threading.Dispatcher" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os métodos nesta classe são definidos como métodos de extensão que estendem o <xref:System.Windows.Threading.Dispatcher> classe. Isso significa que eles podem ser chamados como um método de instância em qualquer <xref:System.Windows.Threading.Dispatcher> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public static System.Windows.Threading.DispatcherOperation BeginInvoke (this System.Windows.Threading.Dispatcher dispatcher, Action action);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Threading.DispatcherOperation BeginInvoke(class System.Windows.Threading.Dispatcher dispatcher, class System.Action action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherExtensions.BeginInvoke(System.Windows.Threading.Dispatcher,System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispatcher" Type="System.Windows.Threading.Dispatcher" RefType="this" />
+        <Parameter Name="action" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="dispatcher">O distribuidor que executa o delegado.</param>
+        <param name="action">O representante para execução, que não requer argumentos e não retorna um valor.</param>
+        <summary>Executa o delegado especificado de maneira assíncrona com prioridade normal no thread em que o <see cref="T:System.Windows.Threading.Dispatcher" /> especificado foi criado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da <see cref="M:System.Windows.Threading.DispatcherExtensions.BeginInvoke(System.Windows.Threading.Dispatcher,System.Action)" /> operação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public static System.Windows.Threading.DispatcherOperation BeginInvoke (this System.Windows.Threading.Dispatcher dispatcher, Action action, System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Threading.DispatcherOperation BeginInvoke(class System.Windows.Threading.Dispatcher dispatcher, class System.Action action, valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherExtensions.BeginInvoke(System.Windows.Threading.Dispatcher,System.Action,System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispatcher" Type="System.Windows.Threading.Dispatcher" RefType="this" />
+        <Parameter Name="action" Type="System.Action" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <param name="dispatcher">O distribuidor que executa o delegado.</param>
+        <param name="action">O representante para execução, que não requer argumentos e não retorna um valor.</param>
+        <param name="priority">A prioridade de execução do representante em relação a outras operações pendentes no <see cref="T:System.Windows.Threading.Dispatcher" /> fila de eventos.</param>
+        <summary>Executa o delegado especificado assincronamente com a prioridade especificada no thread que o especificado <see cref="T:System.Windows.Threading.Dispatcher" /> foi criado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> objeto que representa o resultado da <see cref="M:System.Windows.Threading.DispatcherExtensions.BeginInvoke(System.Windows.Threading.Dispatcher,System.Action,System.Windows.Threading.DispatcherPriority)" /> operação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" /> não é um <see cref="T:System.Windows.Threading.DispatcherPriority" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static void Invoke (this System.Windows.Threading.Dispatcher dispatcher, Action action);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invoke(class System.Windows.Threading.Dispatcher dispatcher, class System.Action action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherExtensions.Invoke(System.Windows.Threading.Dispatcher,System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispatcher" Type="System.Windows.Threading.Dispatcher" RefType="this" />
+        <Parameter Name="action" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="dispatcher">O distribuidor que executa o delegado.</param>
+        <param name="action">O representante para execução, que não requer argumentos e não retorna um valor.</param>
+        <summary>Executa o delegado especificado de forma síncrona com prioridade normal no thread que o especificado <see cref="T:System.Windows.Threading.Dispatcher" /> foi criado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static void Invoke (this System.Windows.Threading.Dispatcher dispatcher, Action action, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invoke(class System.Windows.Threading.Dispatcher dispatcher, class System.Action action, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherExtensions.Invoke(System.Windows.Threading.Dispatcher,System.Action,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispatcher" Type="System.Windows.Threading.Dispatcher" RefType="this" />
+        <Parameter Name="action" Type="System.Action" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="dispatcher">O distribuidor que executa o delegado.</param>
+        <param name="action">O representante para execução, que não requer argumentos e não retorna um valor.</param>
+        <param name="timeout">O tempo máximo para aguardar a conclusão da operação.</param>
+        <summary>Executa o delegado especificado de forma síncrona no thread que o especificado <see cref="T:System.Windows.Threading.Dispatcher" /> foi criado e interrompe a execução após o período de tempo limite especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="priority" /> é igual a <see cref="F:System.Windows.Threading.DispatcherPriority.Inactive" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" /> não é um <see cref="T:System.Windows.Threading.DispatcherPriority" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static void Invoke (this System.Windows.Threading.Dispatcher dispatcher, Action action, System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invoke(class System.Windows.Threading.Dispatcher dispatcher, class System.Action action, valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherExtensions.Invoke(System.Windows.Threading.Dispatcher,System.Action,System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispatcher" Type="System.Windows.Threading.Dispatcher" RefType="this" />
+        <Parameter Name="action" Type="System.Action" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <param name="dispatcher">O distribuidor que executa o delegado.</param>
+        <param name="action">O representante para execução, que não requer argumentos e não retorna um valor.</param>
+        <param name="priority">A prioridade de execução do representante em relação a outras operações pendentes no <see cref="T:System.Windows.Threading.Dispatcher" /> fila de eventos.</param>
+        <summary>Executa o delegado especificado sincronia com a prioridade especificada no thread que o especificado <see cref="T:System.Windows.Threading.Dispatcher" /> foi criado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="priority" /> é igual a <see cref="F:System.Windows.Threading.DispatcherPriority.Inactive" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" /> não é um <see cref="T:System.Windows.Threading.DispatcherPriority" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static void Invoke (this System.Windows.Threading.Dispatcher dispatcher, Action action, TimeSpan timeout, System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Invoke(class System.Windows.Threading.Dispatcher dispatcher, class System.Action action, valuetype System.TimeSpan timeout, valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherExtensions.Invoke(System.Windows.Threading.Dispatcher,System.Action,System.TimeSpan,System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispatcher" Type="System.Windows.Threading.Dispatcher" RefType="this" />
+        <Parameter Name="action" Type="System.Action" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <param name="dispatcher">O distribuidor que executa o delegado.</param>
+        <param name="action">O representante para execução, que não requer argumentos e não retorna um valor.</param>
+        <param name="timeout">O tempo máximo para aguardar a conclusão da operação.</param>
+        <param name="priority">A prioridade de execução do representante em relação a outras operações pendentes no <see cref="T:System.Windows.Threading.Dispatcher" /> fila de eventos.</param>
+        <summary>Executa o delegado especificado sincronia com a prioridade especificada no thread que o especificado <see cref="T:System.Windows.Threading.Dispatcher" /> foi criado e interrompe a execução após o período de tempo limite especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="action" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="priority" /> é igual a <see cref="F:System.Windows.Threading.DispatcherPriority.Inactive" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="priority" /> não é um <see cref="T:System.Windows.Threading.DispatcherPriority" /> válido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

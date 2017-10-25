@@ -1,0 +1,570 @@
+<Type Name="DllImportAttribute" FullName="System.Runtime.InteropServices.DllImportAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DllImportAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DllImportAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.DllImportAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que o método atribuído é exposto por uma DLL (biblioteca de vínculo dinâmico) não gerenciada como um ponto de entrada estático.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para métodos.  
+  
+ O <xref:System.Runtime.InteropServices.DllImportAttribute> atributo fornece as informações necessárias para chamar uma função exportada de uma DLL não gerenciada. Como um requisito mínimo, você deve fornecer o nome da DLL que contém o ponto de entrada.  
+  
+ Esse atributo é aplicado diretamente ao c# e as definições de método do C++. No entanto, o compilador do Visual Basic emite esse atributo quando você usa o `Declare` instrução. Para obter definições de método complexo que incluem <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>, ou <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> campos, esse atributo é aplicado diretamente a definições de método do Visual Basic.  
+  
+ **Observação** JScript não dá suporte a esse atributo. Você pode usar o c# ou Visual Basic classes de wrapper para acessar os métodos da API não gerenciados de programas de JScript.  
+  
+ Para obter informações adicionais sobre como usar a plataforma de invocar o serviço de acesso funções em DLLs não gerenciados, consulte [consumindo funções de DLL não gerenciadas](~/docs/framework/interop/consuming-unmanaged-dll-functions.md).  
+  
+> [!NOTE]
+>  O <xref:System.Runtime.InteropServices.DllImportAttribute> não oferece suporte para marshaling de tipos genéricos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.InteropServices.DllImportAttribute> atributo para importar o Win32 `MessageBox` função.  O exemplo de código, em seguida, chama o método importado.  
+  
+ [!code-csharp[System.Runtime.InteropServices.DllImport.Canonical#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.DllImport.Canonical/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.DllImport.Canonical#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.DllImport.Canonical/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DllImportAttribute (string dllName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string dllName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.DllImportAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dllName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dllName">O nome da DLL que contém o método não gerenciado. Isso pode incluir um nome de exibição do assembly se a DLL estiver incluída em um assembly.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.DllImportAttribute" /> com o nome da DLL que contém o método a ser importado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um arquivo DLL não gerenciado está incluído em um assembly, por exemplo, usando o vinculador ou `/linkresource` opção de compilador, você pode especificar o nome de exibição do assembly como parte do `dllName`. Por exemplo, se uma DLL não gerenciada denominada `unmanaged.dll` está incluído em um assembly gerenciado chamado `MyAssembly`, o atributo pode ser especificado conforme mostrado no código a seguir.  
+  
+ [!code-cpp[System.Runtime.InteropServices.DllImportAttribute#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cpp/source.cpp#2)]
+ [!code-csharp[System.Runtime.InteropServices.DllImportAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cs/source.cs#2)]
+ [!code-vb[System.Runtime.InteropServices.DllImportAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/vb/source.vb#2)]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.InteropServices.DllImportAttribute> atributo para importar o Win32 `MessageBox` função.  O exemplo de código, em seguida, chama o método importado.  
+  
+ [!code-csharp[System.Runtime.InteropServices.DllImport.Canonical#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.DllImport.Canonical/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.DllImport.Canonical#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.DllImport.Canonical/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BestFitMapping">
+      <MemberSignature Language="C#" Value="public bool BestFitMapping;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool BestFitMapping" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita ou desabilita o comportamento de mapeamento mais adequado ao converter caracteres Unicode em caracteres ANSI.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `true`, melhor ajuste mapeamento comportamento está habilitado; caso contrário, o melhor ajuste mapeamento está desabilitado. O <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping> campo é `true` por padrão. As configurações para esse campo substituem as configurações para qualquer níveis de <xref:System.Runtime.InteropServices.BestFitMappingAttribute?displayProperty=nameWithType> atributo.  
+  
+ O common language runtime converte em caracteres ANSI que qualquer gerenciado caracteres Unicode passados para um método não gerenciado em execução no Windows 98 ou Windows Me. Mapeamento de melhor ajuste permite que o marshaler interoperabilidade fornecer um caractere de fechamento correspondente quando não existe nenhuma correspondência exata. Por exemplo, o marshaler converte o caractere Unicode copyright c para não gerenciados métodos que aceitam caracteres ANSI. Alguns caracteres não têm uma representação de melhor ajuste; Esses caracteres são chamados não mapeável. Caracteres não mapeável geralmente são convertidos para o padrão '?' Caractere ANSI.  
+  
+> [!CAUTION]
+>  Determinados caracteres Unicode são convertidos em caracteres perigosos, como a barra invertida '\\' caractere, que pode alterar inadvertidamente um caminho. Definindo o <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> campo `true`, você pode indicar a presença de um caractere não mapeável ao chamador lançando uma exceção.  
+  
+> [!CAUTION]
+>  Você não pode alterar os valores padrão fornecidos pelo <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping> e <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> campos ao passar uma matriz gerenciada cujos elementos é caracteres ANSI ou LPSTRs para uma matriz segura não gerenciada. Mapeamento de melhor ajuste está sempre habilitado e nenhuma exceção é lançada. Lembre-se de que essa combinação pode comprometer o modelo de segurança.  
+  
+   
+  
+## Examples  
+ Em alguns casos, os desenvolvedores do Visual Basic usam o <xref:System.Runtime.InteropServices.DllImportAttribute>, em vez do `Declare` instrução, para definir uma função de DLL no código gerenciado. Definindo o <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping> campo é um dos casos. O exemplo a seguir mostra como aplicar o mais rígido definições de método de invocação de segurança de mapeamento de caractere para uma plataforma especificando o conjunto de caracteres ANSI, desabilitando melhor o comportamento de mapeamento de ajuste e gerar uma exceção em caracteres de Unicode não mapeados.  
+  
+ [!code-cpp[System.Runtime.InteropServices.DllImportAttribute#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cpp/source.cpp#3)]
+ [!code-csharp[System.Runtime.InteropServices.DllImportAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cs/source.cs#3)]
+ [!code-vb[System.Runtime.InteropServices.DllImportAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallingConvention">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.CallingConvention CallingConvention;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.CallingConvention CallingConvention" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.DllImportAttribute.CallingConvention" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CallingConvention</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a convenção de chamada de um ponto de entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina este campo para um do <xref:System.Runtime.InteropServices.CallingConvention> membros de enumeração. O valor padrão para o <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention> campo é <xref:System.Runtime.InteropServices.CallingConvention.Winapi>, que por sua vez, assume como <xref:System.Runtime.InteropServices.CallingConvention.StdCall> convenção.  
+  
+ Para obter mais informações, consulte a convenção de chamada na biblioteca MSDN.  
+  
+   
+  
+## Examples  
+ Em alguns casos, os desenvolvedores do Visual Basic usam o <xref:System.Runtime.InteropServices.DllImportAttribute>, em vez do `Declare` instrução, para definir uma função de DLL no código gerenciado. Definindo o <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention> campo é um dos casos.  
+  
+ System.Runtime.InteropServices.DllImportAttribute#1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharSet">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.CharSet CharSet;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Runtime.InteropServices.CharSet CharSet" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.DllImportAttribute.CharSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CharSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica como realizar marshaling de parâmetros de cadeia de caracteres para o método e a desconfiguração de nome de controles.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse campo com um membro do <xref:System.Runtime.InteropServices.CharSet> enumeração para especificar o comportamento de marshaling de parâmetros de cadeia de caracteres e para especificar qual nome de ponto de entrada para invocar (o nome exato fornecido ou um nome que termina com "A" ou "W"). O membro de enumeração padrão para c# e Visual Basic é `CharSet.Ansi` e o membro de enumeração padrão do C++ é `CharSet.None`, que é equivalente a `CharSet.Ansi`. No Visual Basic, você deve usar o `Declare` instrução para especificar o `CharSet` campo.  
+  
+ O <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> campo influencia o comportamento do `CharSet` campo determinar qual nome de ponto de entrada para invocar. Para obter uma descrição detalhada e exemplos da realização de marshaling de cadeia de caracteres e o nome correspondente comportamento associado com o `CharSet` campo, consulte [especificando um conjunto de caracteres](~/docs/framework/interop/specifying-a-character-set.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.InteropServices.DllImportAttribute> atributo para importar o Win32 `MessageBox` função.  O exemplo de código, em seguida, chama o método importado.  
+  
+ [!code-csharp[System.Runtime.InteropServices.DllImport.Canonical#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.DllImport.Canonical/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.DllImport.Canonical#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.DllImport.Canonical/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryPoint">
+      <MemberSignature Language="C#" Value="public string EntryPoint;" />
+      <MemberSignature Language="ILAsm" Value=".field public string EntryPoint" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.DllImportAttribute.EntryPoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o nome ou o ordinal do ponto de entrada DLL a ser chamado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar o nome do ponto de entrada, fornecendo uma cadeia de caracteres que indica o nome da DLL que contém o ponto de entrada, ou você pode identificar o ponto de entrada pelo seu ordinal. Ordinais são prefixados com o sinal #, por exemplo, #1. Se você omitir esse campo, o common language runtime usa o nome do método do.NET marcado com o <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+  
+ Para obter mais informações, consulte [identificando funções em DLLs](~/docs/framework/interop/identifying-functions-in-dlls.md). Para obter exemplos que mostram como usar o <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint> campo, consulte [especificando um ponto de entrada](~/docs/framework/interop/specifying-an-entry-point.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.InteropServices.DllImportAttribute> atributo para importar o Win32 `MessageBox` função.  O exemplo de código usa o <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint> propriedade para especificar a função a ser importado e, em seguida, altera o nome para `MyNewMessageBoxMethod`.  
+  
+ [!code-csharp[System.Runtime.InteropServices.DllImport.EntryPoint#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.InteropServices.DllImport.EntryPoint/cs/sample.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.DllImport.EntryPoint#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.InteropServices.DllImport.EntryPoint/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExactSpelling">
+      <MemberSignature Language="C#" Value="public bool ExactSpelling;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool ExactSpelling" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Controla se o campo <see cref="F:System.Runtime.InteropServices.DllImportAttribute.CharSet" /> faz com que a Common Language Runtime pesquise uma DLL não gerenciada quanto a nomes de ponto de entrada diferentes daquele especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `false`, o nome do ponto de entrada anexado com a letra A é invocado quando o <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> campo é definido como `CharSet.Ansi`, e o nome de ponto de entrada anexado com a letra W é invocado quando o <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> campo é definido como o `CharSet.Unicode`. Normalmente, os compiladores gerenciados defina este campo.  
+  
+ A tabela a seguir mostra a relação entre o <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> e <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> campos, com base em valores padrão impostos pela linguagem de programação. Você pode substituir a configuração padrão, mas fazer isso com cuidado.  
+  
+|Linguagem|ANSI|Unicode|Auto|  
+|--------------|----------|-------------|----------|  
+|Visual Basic|ExactSpelling foi: = True|ExactSpelling foi: = True|ExactSpelling foi: = False|  
+|C#|ExactSpelling foi = false|ExactSpelling foi = false|ExactSpelling foi = false|  
+|C++|ExactSpelling foi = false|ExactSpelling foi = false|ExactSpelling foi = false|  
+  
+   
+  
+## Examples  
+ Em alguns casos, os desenvolvedores do Visual Basic usam o <xref:System.Runtime.InteropServices.DllImportAttribute>, em vez de usar o `Declare` instrução, para definir uma função de DLL no código gerenciado. Definindo o <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> campo é um dos casos.  
+  
+ [!code-cpp[System.Runtime.InteropServices.DllImportAttribute#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cpp/source.cpp#4)]
+ [!code-csharp[System.Runtime.InteropServices.DllImportAttribute#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cs/source.cs#4)]
+ [!code-vb[System.Runtime.InteropServices.DllImportAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/vb/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreserveSig">
+      <MemberSignature Language="C#" Value="public bool PreserveSig;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool PreserveSig" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.DllImportAttribute.PreserveSig" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se os métodos não gerenciados que têm <see langword="HRESULT" /> ou <see langword="retval" /> retornar valores são convertidos diretamente ou se <see langword="HRESULT" /> ou <see langword="retval" /> retornar valores são automaticamente convertidos em exceções.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig> campo `true` converter diretamente assinaturas não gerenciadas com `HRESULT` ou `retval` valores; defina-a como `false` para converter automaticamente `HRESULT` ou `retval` valores para exceções. Por padrão, o <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig> campo é `true`.  
+  
+ Quando `true`, a assinatura do método resultante retorna um valor inteiro que contém o `HRESULT` valor.  Nesse caso, você deve manualmente inspecionar o valor de retorno e respondam adequadamente em seu aplicativo.  
+  
+ Quando você define o <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig> campo `false`, a assinatura do método resultante contém um tipo de retorno nulo em vez de um número inteiro (`HRESULT`) tipo de retorno.  Quando o método gerenciado produz um `HRESULT`, o tempo de execução ignora automaticamente um valor de retorno `S_OK` (ou 0) e não gerará uma exceção.  Para `HRESULT`s diferente `S_OK`, o tempo de execução automaticamente gera uma exceção que corresponde do `HRESULT`.  Observe que o <xref:System.Runtime.InteropServices.DllImportAttribute> atributo só executa essa conversão para métodos que retornam um `HRESULT`.  
+  
+ Você pode optar por alterar o comportamento a partir de relatórios de erros de padrão `HRESULT`s às exceções em casos onde exceções se ajuste melhor a estrutura do seu aplicativo de relatório de erros.  
+  
+ Este campo é semelhante do <xref:System.Runtime.InteropServices.PreserveSigAttribute>; no entanto, em comparação com o <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig> campo, o valor padrão para o atributo é `false`.  
+  
+ Em alguns casos, os desenvolvedores do Visual Basic usam o <xref:System.Runtime.InteropServices.DllImportAttribute>, em vez de usar o `Declare` instrução, para definir uma função de DLL no código gerenciado. Definindo o <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig> campo é um dos casos.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Runtime.InteropServices.DllImportAttribute> importar não gerenciado `SHAutoComplete` função uma vez com o <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig> campo definido como `true` e novamente com o <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig> campo definido como `false`.  Este exemplo de código faz com que o `SHAutoComplete` função para gerar erros com uma exceção de uma vez e um `HRESULT` a próxima.  
+  
+ [!code-csharp[Runtime.InteropServices.PreserveSigAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/Runtime.InteropServices.PreserveSigAttribute/cs/example.cs#1)]
+ [!code-vb[Runtime.InteropServices.PreserveSigAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Runtime.InteropServices.PreserveSigAttribute/vb/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLastError">
+      <MemberSignature Language="C#" Value="public bool SetLastError;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool SetLastError" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.DllImportAttribute.SetLastError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o computador chamado chama a <see langword="SetLastError" /> função da API do Win32 antes de retornar do método atribuído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `true`para indicar que o receptor chamará `SetLastError`; caso contrário, `false`. O padrão é `false`.  
+  
+ As chamadas de empacotador de tempo de execução `GetLastError` e armazena o valor retornado para impedir que ele seja substituído por outras chamadas de API. Você pode recuperar o código de erro chamando <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A>.  
+  
+   
+  
+## Examples  
+ Em alguns casos, os desenvolvedores do Visual Basic usam o <xref:System.Runtime.InteropServices.DllImportAttribute>, em vez de usar o `Declare` instrução, para definir uma função de DLL no código gerenciado. Definindo o <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> campo é um dos casos.  
+  
+ [!code-cpp[System.Runtime.InteropServices.DllImportAttribute#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cpp/source.cpp#5)]
+ [!code-csharp[System.Runtime.InteropServices.DllImportAttribute#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cs/source.cs#5)]
+ [!code-vb[System.Runtime.InteropServices.DllImportAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/vb/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnUnmappableChar">
+      <MemberSignature Language="C#" Value="public bool ThrowOnUnmappableChar;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool ThrowOnUnmappableChar" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita ou desabilita o lançamento de uma exceção em um caractere não mapeável de Unicode que é convertido em um ANSI "?" caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `true`para indicar que uma exceção será gerada cada vez que o marshaler interoperabilidade converte um caractere não mapeável; `false` para indicar que o <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> campo será desabilitado. Este campo é `false` por padrão.  
+  
+ O common language runtime converte em caracteres ANSI que qualquer gerenciado caracteres Unicode passados para um método não gerenciado em execução no Windows 98 ou Windows Me. Mapeamento de melhor ajuste permite que o marshaler interoperabilidade fornecer um caractere de fechamento correspondente quando não existe nenhuma correspondência exata. Por exemplo, o marshaler converte o caractere Unicode copyright c para não gerenciados métodos que aceitam caracteres ANSI. Alguns caracteres não têm uma representação de melhor ajuste; Esses caracteres são chamados não mapeável. Caracteres não mapeável geralmente são convertidos para o padrão '?' Caractere ANSI.  
+  
+> [!CAUTION]
+>  Determinados caracteres Unicode são convertidos em caracteres perigosos, como a barra invertida '\\' caractere, que pode alterar inadvertidamente um caminho. Definindo o <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> campo `true`, você pode indicar a presença de um caractere não mapeável ao chamador lançando uma exceção.  
+  
+> [!CAUTION]
+>  Você não pode alterar os valores padrão fornecidos pelo <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping> e <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> campos ao passar uma matriz gerenciada cujos elementos é caracteres ANSI ou LPSTRs para uma matriz segura não gerenciada. Mapeamento de melhor ajuste está sempre habilitado e nenhuma exceção é lançada. Lembre-se de que essa combinação pode comprometer o modelo de segurança.  
+  
+   
+  
+## Examples  
+ Em alguns casos, os desenvolvedores do Visual Basic usam o <xref:System.Runtime.InteropServices.DllImportAttribute> para definir uma função DLL no código gerenciado, em vez de usar o `Declare` instrução. Definindo o <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> campo é um dos casos. O exemplo a seguir mostra como aplicar o mais rígido definições de método de invocação de segurança de mapeamento de caractere para uma plataforma especificando o conjunto de caracteres ANSI, desabilitando melhor o comportamento de mapeamento de ajuste e gerar uma exceção em caracteres de Unicode não mapeados.  
+  
+ [!code-cpp[System.Runtime.InteropServices.DllImportAttribute#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cpp/source.cpp#3)]
+ [!code-csharp[System.Runtime.InteropServices.DllImportAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/cs/source.cs#3)]
+ [!code-vb[System.Runtime.InteropServices.DllImportAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.dllimportattribute/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.DllImportAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo DLL que contém o ponto de entrada.</summary>
+        <value>O nome do arquivo DLL que contém o ponto de entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode fornecer um caminho completo ou relativo. Se você não fornecer nenhum caminho, a DLL deve estar no caminho atual em tempo de execução, a menos que a DLL é carregada por outros meios. Lembre-se, no entanto, que usando um caminho totalmente qualificado pode introduzir imprecisão se a DLL é movida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

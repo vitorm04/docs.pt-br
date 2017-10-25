@@ -1,0 +1,140 @@
+<Type Name="TickMark" FullName="System.Windows.Forms.DataVisualization.Charting.TickMark">
+  <TypeSignature Language="C#" Value="public class TickMark : System.Windows.Forms.DataVisualization.Charting.Grid" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TickMark extends System.Windows.Forms.DataVisualization.Charting.Grid" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.TickMark" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.Grid</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Enabled")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa as marcas de escala principais e secundárias ao longo de um eixo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.TickMark> classe encapsula a funcionalidade para todas as marcas de escala do gráfico.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.TickMark> classe é exposta como o <xref:System.Windows.Forms.DataVisualization.Charting.Axis.MajorTickMark%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.Axis.MinorTickMark%2A> propriedades de <xref:System.Windows.Forms.DataVisualization.Charting.Axis> objetos.  
+  
+ Por padrão, as marcas de escala principais são exibidas em linhas de grade principais, enquanto as marcas de escala secundárias devem ser exibidas explicitamente.  
+  
+ MajorTickMark.Interval não está definido (`Double.NaN`) por padrão e a escala marcas são desenhadas com <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Interval%2A>. MinorTickMark.Interval é definido como `Auto` (`0`) por padrão e o gráfico de controle determina automaticamente o intervalo.  
+  
+ Um desenvolvedor pode usar essa classe para:  
+  
+-   Habilitar ou desabilitar as marcas de escala.  
+  
+-   Defina o estilo de cor, largura, comprimento e linha de escala marcas.  
+  
+-   Especifique um estilo que determina se as marcas de escala são exibidas fora do eixo, dentro do eixo ou ao longo do eixo.  
+  
+-   Especifique o ponto de partida, onde a primeira marca de escala é desenhada — bem como o intervalo entre marcas de escala, que se correlaciona com sua frequência.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TickMark ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.TickMark.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.TickMark" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public float Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.TickMark.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comprimento da escala marcas. O comprimento é medido em unidades que representam uma porcentagem da altura ou largura da imagem do gráfico, dependendo do eixo.</summary>
+        <value>Um <see langword="float" /> valor que representa o tamanho ou o comprimento das marcas de escala. O valor padrão é % 1.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho de uma marca de escala determina o comprimento da marca de escala.  
+  
+ O `Size` propriedade é medida em unidades que representam uma porcentagem da altura ou largura da imagem do gráfico. Se a marca de escala é exibida em um eixo vertical, a unidade de medida é uma porcentagem da largura da imagem do gráfico. Se a marca de escala é exibida em um eixo horizontal, a unidade de medida é uma porcentagem da altura da imagem do gráfico.  
+  
+ Uma alteração na largura da imagem do gráfico resulta no redimensionamento de todas as marcas de escala exibidas ao longo do eixo vertical, para todas as áreas do gráfico. Da mesma forma, uma alteração na altura da imagem do gráfico resulta no redimensionamento de todas as marcas de escala exibidas ao longo dos eixos horizontais, para todas as áreas do gráfico.  
+  
+ Para exibir as marcas de escala para os gráficos tridimensionais (3D), para que eles são desenhados apenas para a largura da parede, defina o <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle%2A> propriedade <xref:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.AcrossAxis> e especifique um tamanho de marca de escala de zero (0) usando o <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.Size%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickMarkStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TickMarkStyle TickMarkStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.TickMarkStyle TickMarkStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TickMarkStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da marca de escala.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle" />. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.OutsideArea" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle%2A> propriedade determina o estilo das marcas de escala.  
+  
+ As marcas de escala podem ser desenhadas dentro da área do gráfico, fora da área do gráfico, em uma linha de eixo, ou podem ser desabilitadas.  
+  
+ Para exibir as marcas de escala para gráficos de tridimensional (3D) para que eles são desenhados apenas para a largura da parede, defina o <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle%2A> propriedade <xref:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.AcrossAxis?displayProperty=nameWithType>. Em seguida, especifique um tamanho de marca de escala de zero (0) usando o <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.Size%2A> propriedade.  
+  
+ Se o <xref:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle%2A> está definida como <xref:System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.None?displayProperty=nameWithType>, as marcas de escala não são exibidas. As marcas de escala podem também ser ativadas ou desativados, definindo o <xref:System.Windows.Forms.DataVisualization.Charting.Grid.Enabled%2A> propriedade `true` ou `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

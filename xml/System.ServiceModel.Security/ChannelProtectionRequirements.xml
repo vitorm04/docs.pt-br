@@ -1,0 +1,317 @@
+<Type Name="ChannelProtectionRequirements" FullName="System.ServiceModel.Security.ChannelProtectionRequirements">
+  <TypeSignature Language="C#" Value="public class ChannelProtectionRequirements" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChannelProtectionRequirements extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.ChannelProtectionRequirements" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve a criptografia e assinatura que se aplicam a diferentes partes de mensagens que são transmitidas neste canal.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao estender o <xref:System.ServiceModel.Channels.BindingElement> classe, você deve implementar o <xref:System.ServiceModel.Channels.BindingElement.GetProperty%60%601%28System.ServiceModel.Channels.BindingContext%29> para que ele retorna uma instância dessa classe correspondente para o elemento de associação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChannelProtectionRequirements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ChannelProtectionRequirements.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor padrão define as propriedades a seguir para uma nova instância de <xref:System.ServiceModel.Security.ScopedMessagePartSpecification>, que é uma classe que especifica quais partes são incluídas em uma mensagem:  
+  
+-   <xref:System.ServiceModel.Security.ChannelProtectionRequirements.IncomingEncryptionParts%2A>,  
+  
+-   <xref:System.ServiceModel.Security.ChannelProtectionRequirements.IncomingSignatureParts%2A>,  
+  
+-   <xref:System.ServiceModel.Security.ChannelProtectionRequirements.OutgoingEncryptionParts%2A>, e  
+  
+-   <xref:System.ServiceModel.Security.ChannelProtectionRequirements.OutgoingSignatureParts%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChannelProtectionRequirements (System.ServiceModel.Security.ChannelProtectionRequirements other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.ChannelProtectionRequirements other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ChannelProtectionRequirements.#ctor(System.ServiceModel.Security.ChannelProtectionRequirements)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Security.ChannelProtectionRequirements" />
+      </Parameters>
+      <Docs>
+        <param name="other">A outra instância de <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" /> classe a partir de outra instância dessa classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor define as propriedades a seguir para uma nova instância da <xref:System.ServiceModel.Security.ScopedMessagePartSpecification>, usando o <xref:System.ServiceModel.Security.ScopedMessagePartSpecification.%23ctor%2A> construtor, com `other` como o parâmetro de entrada. <xref:System.ServiceModel.Security.ScopedMessagePartSpecification>é uma classe que especifica quais partes são incluídas em uma mensagem:  
+  
+-   <xref:System.ServiceModel.Security.ChannelProtectionRequirements.IncomingEncryptionParts%2A>,  
+  
+-   <xref:System.ServiceModel.Security.ChannelProtectionRequirements.IncomingSignatureParts%2A>,  
+  
+-   <xref:System.ServiceModel.Security.ChannelProtectionRequirements.OutgoingEncryptionParts%2A>, e  
+  
+-   <xref:System.ServiceModel.Security.ChannelProtectionRequirements.OutgoingSignatureParts%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ServiceModel.Security.ChannelProtectionRequirements protectionRequirements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.ServiceModel.Security.ChannelProtectionRequirements protectionRequirements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ChannelProtectionRequirements.Add(System.ServiceModel.Security.ChannelProtectionRequirements)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="protectionRequirements" Type="System.ServiceModel.Security.ChannelProtectionRequirements" />
+      </Parameters>
+      <Docs>
+        <param name="protectionRequirements">O <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" /> especificado.</param>
+        <summary>Adiciona as coleções de partes do <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" /> para a instância atual dessa classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ServiceModel.Security.ChannelProtectionRequirements protectionRequirements, bool channelScopeOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.ServiceModel.Security.ChannelProtectionRequirements protectionRequirements, bool channelScopeOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ChannelProtectionRequirements.Add(System.ServiceModel.Security.ChannelProtectionRequirements,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="protectionRequirements" Type="System.ServiceModel.Security.ChannelProtectionRequirements" />
+        <Parameter Name="channelScopeOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="protectionRequirements">O <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" /> especificado.</param>
+        <param name="channelScopeOnly">Especifica se o escopo é somente de canal.</param>
+        <summary>Adiciona várias coleções de partes do <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" /> para a instância atual dessa classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInverse">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.ChannelProtectionRequirements CreateInverse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Security.ChannelProtectionRequirements CreateInverse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ChannelProtectionRequirements.CreateInverse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.ChannelProtectionRequirements</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe com partes de entrada e saídas revertidas.</summary>
+        <returns>Uma nova instância dessa classe com partes de entrada e saídas é revertida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Partes de entrada da instância dessa classe atual se tornar saídas partes da nova instância. Partes de saída da instância atual dessa classe tornam-se a entrada partes da nova instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingEncryptionParts">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.ScopedMessagePartSpecification IncomingEncryptionParts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.ScopedMessagePartSpecification IncomingEncryptionParts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ChannelProtectionRequirements.IncomingEncryptionParts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.ScopedMessagePartSpecification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de partes de mensagem criptografada para mensagens de cliente para servidor.</summary>
+        <value>Uma coleção de <see cref="T:System.ServiceModel.Security.ScopedMessagePartSpecification" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida no construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingSignatureParts">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.ScopedMessagePartSpecification IncomingSignatureParts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.ScopedMessagePartSpecification IncomingSignatureParts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ChannelProtectionRequirements.IncomingSignatureParts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.ScopedMessagePartSpecification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de partes da mensagem que está conectado para mensagens de cliente para servidor.</summary>
+        <value>Uma coleção de <see cref="T:System.ServiceModel.Security.ScopedMessagePartSpecification" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida no construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ChannelProtectionRequirements.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta instância da classe é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se esta instância da classe é somente leitura; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReadOnly">
+      <MemberSignature Language="C#" Value="public void MakeReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.ChannelProtectionRequirements.MakeReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define essa classe e suas coleções de parte para somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Security.ChannelProtectionRequirements.IsReadOnly%2A>é definido como true, assim como as propriedades correspondentes nas coleções partes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingEncryptionParts">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.ScopedMessagePartSpecification OutgoingEncryptionParts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.ScopedMessagePartSpecification OutgoingEncryptionParts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ChannelProtectionRequirements.OutgoingEncryptionParts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.ScopedMessagePartSpecification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de partes de mensagem criptografada para mensagens de servidor para cliente.</summary>
+        <value>Uma coleção de <see cref="T:System.ServiceModel.Security.ScopedMessagePartSpecification" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida no construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingSignatureParts">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.ScopedMessagePartSpecification OutgoingSignatureParts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.ScopedMessagePartSpecification OutgoingSignatureParts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ChannelProtectionRequirements.OutgoingSignatureParts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.ScopedMessagePartSpecification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de partes da mensagem que está conectado para mensagens de servidor para cliente.</summary>
+        <value>Uma coleção de <see cref="T:System.ServiceModel.Security.ScopedMessagePartSpecification" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida no construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

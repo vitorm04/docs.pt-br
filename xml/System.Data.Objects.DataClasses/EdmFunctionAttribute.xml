@@ -1,0 +1,110 @@
+<Type Name="EdmFunctionAttribute" FullName="System.Data.Objects.DataClasses.EdmFunctionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EdmFunctionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EdmFunctionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EdmFunctionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Um atributo que, quando aplicado a um método, indica que o método é um proxy para uma função no modelo conceitual ou modelo de armazenamento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> vincula um método do common language runtime (CLR) para outra função. Por exemplo, o atributo pode ser usado para mapear um método CLR para uma função que é exposta pelo provedor de armazenamento, uma função definida pelo usuário no banco de dados ou uma função definida pelo usuário no modelo conceitual. Os métodos que possuem esse atributo podem ser chamados do LINQ para consultas de entidades.  
+  
+ Para usar um <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para mapear um método CLR para uma função, o seguinte deve ser verdadeiro:  
+  
+-   O tipo de retorno do método CLR deve ser compatível com o tipo de retorno da função mapeado.  
+  
+-   Os tipos de argumento do método CLR devem ser compatíveis com os tipos de argumento da função mapeado.  
+  
+ Para obter informações sobre tipos compatíveis, consulte [tipos de modelo conceitual (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmFunctionAttribute (string namespaceName, string functionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string namespaceName, string functionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmFunctionAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="functionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">O namespace da função mapeado.</param>
+        <param name="functionName">O nome da função mapeado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Objects.DataClasses.EdmFunctionAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> vincula um método do common language runtime (CLR) para outra função. Por exemplo, o atributo pode ser usado para mapear um método CLR para uma função que é exposta pelo provedor de armazenamento, uma função definida pelo usuário no banco de dados ou uma função definida pelo usuário no modelo conceitual. Os métodos que possuem esse atributo podem ser chamados do LINQ para consultas de entidades.  
+  
+ Para usar um <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para mapear um método CLR para uma função, o seguinte deve ser verdadeiro:  
+  
+-   O tipo de retorno do método CLR deve ser compatível com o tipo de retorno da função mapeado.  
+  
+-   Os tipos de argumento do método CLR devem ser compatíveis com os tipos de argumento da função mapeado.  
+  
+ Para obter informações sobre tipos compatíveis, consulte [tipos de modelo conceitual (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FunctionName">
+      <MemberSignature Language="C#" Value="public string FunctionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FunctionName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome da função mapeado.</summary>
+        <value>O nome da função mapeado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceName">
+      <MemberSignature Language="C#" Value="public string NamespaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O namespace da função mapeado.</summary>
+        <value>O namespace da função mapeado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,52 @@
+<Type Name="IOutputCacheEntry" FullName="System.Web.Caching.IOutputCacheEntry">
+  <TypeSignature Language="C#" Value="public interface IOutputCacheEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOutputCacheEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.IOutputCacheEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define as coleções de cabeçalho HTTP e elementos de resposta que juntos constituem um tipo de dados de cache de saída ASP.NET pode passar para um provedor.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HeaderElements">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Web.Caching.HeaderElement&gt; HeaderElements { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Web.Caching.HeaderElement&gt; HeaderElements" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.IOutputCacheEntry.HeaderElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Web.Caching.HeaderElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de elementos de cabeçalho HTTP em uma entrada de cache de saída.</summary>
+        <value>Uma lista de elementos de cabeçalho HTTP.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseElements">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Web.Caching.ResponseElement&gt; ResponseElements { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Web.Caching.ResponseElement&gt; ResponseElements" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.IOutputCacheEntry.ResponseElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Web.Caching.ResponseElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de elementos de resposta HTTP em uma entrada de cache de saída.</summary>
+        <value>Uma lista de elementos de resposta HTTP.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

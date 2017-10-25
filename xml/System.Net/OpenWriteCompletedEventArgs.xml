@@ -1,0 +1,93 @@
+<Type Name="OpenWriteCompletedEventArgs" FullName="System.Net.OpenWriteCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class OpenWriteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenWriteCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.OpenWriteCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Net.WebClient.OpenWriteCompleted" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias dessa classe são passadas para <xref:System.Net.OpenWriteCompletedEventHandler> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como abrir um fluxo para gravar os dados a serem carregados.  
+  
+ [!code-cpp[NCLWebClientAsync#16](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#16)]
+ [!code-csharp[NCLWebClientAsync#16](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#16)]
+ [!code-vb[NCLWebClientAsync#16](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#16)]  
+  
+ O seguinte método é chamado quando o fluxo está disponível.  
+  
+ [!code-cpp[NCLWebClientAsync#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#15)]
+ [!code-csharp[NCLWebClientAsync#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#15)]
+ [!code-vb[NCLWebClientAsync#15](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#15)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream Result" />
+      <MemberSignature Language="DocId" Value="P:System.Net.OpenWriteCompletedEventArgs.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um fluxo gravável que é usado para enviar dados para um servidor.</summary>
+        <value>Um <see cref="T:System.IO.Stream" /> onde você pode escrever dados a serem carregados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve verificar o <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> e <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> propriedades antes de usar o fluxo retornado por essa propriedade. Se o <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> o valor da propriedade é uma <xref:System.Exception> objeto ou o <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> o valor da propriedade é `true`, a operação assíncrona não foi concluída corretamente e o <xref:System.Net.OpenWriteCompletedEventArgs.Result%2A> valor da propriedade não será válido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa o fluxo retornado por essa propriedade.  
+  
+ [!code-cpp[NCLWebClientAsync#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#15)]
+ [!code-csharp[NCLWebClientAsync#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#15)]
+ [!code-vb[NCLWebClientAsync#15](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,8 @@
+<Namespace Name="System.IdentityModel.Selectors">
+  <Docs>
+    <summary>O <see cref="N:System.IdentityModel.Selectors" /> namespace contém classes que implementam a autenticação no modelo de identidade baseada em declarações do Windows Communication Foundation (WCF).  
+  
+ Começando com o .NET Framework 4.5 e a integração do Windows Identity Foundation (WIF) no .NET Framework, o modelo de identidade baseada em declarações do WCF foi substituído pelo WIF. O WIF fornece um modelo de objeto de identidade baseada em declarações que pode ser usado para fornecer autenticação e autorização em várias pilhas de produto da Microsoft, incluindo o CLR, o WCF e ASP.NET. As classes WIF que representam os tokens de segurança e que são usados para processar contidos em tokens de segurança de <see cref="N:System.IdentityModel.Tokens" /> namespace; por exemplo, <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> e <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" />. Começando com o .NET 4.5, as classes de <see cref="N:System.IdentityModel.Tokens" /> namespace deve ser usado em vez no <see cref="N:System.IdentityModel.Selectors" /> namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

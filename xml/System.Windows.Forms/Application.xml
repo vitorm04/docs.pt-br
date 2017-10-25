@@ -1,0 +1,1680 @@
+<Type Name="Application" FullName="System.Windows.Forms.Application">
+  <TypeSignature Language="C#" Value="public sealed class Application" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Application extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Application" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades e métodos <see langword="static" /> para gerenciar um aplicativo, como métodos para iniciar e interromper um aplicativo, para processar mensagens do Windows e propriedades para obter informações sobre um aplicativo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Application> classe tem métodos para iniciar e parar threads e aplicativos e para processar mensagens do Windows, da seguinte maneira:  
+  
+-   <xref:System.Windows.Forms.Application.Run%2A>Iniciar um loop de mensagem do aplicativo no thread atual e, opcionalmente, faz com que um formulário visível.  
+  
+-   <xref:System.Windows.Forms.Application.Exit%2A>ou <xref:System.Windows.Forms.Application.ExitThread%2A> interrompe um loop de mensagem.  
+  
+-   <xref:System.Windows.Forms.Application.DoEvents%2A>processa as mensagens enquanto o programa estiver em um loop.  
+  
+-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A>Adiciona um filtro de mensagem para a bomba de mensagens do aplicativo para monitorar mensagens do Windows.  
+  
+-   <xref:System.Windows.Forms.IMessageFilter>permite que você pare um evento seja gerado ou executar operações especiais antes de chamar um manipulador de eventos.  
+  
+ Essa classe tem <xref:System.Windows.Forms.Application.CurrentCulture%2A> e <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> cultura de propriedades para obter ou definir informações para o thread atual.  
+  
+ Não é possível criar uma instância dessa classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir lista os números em uma caixa de listagem em um formulário. Cada vez que você clicar em `button1`, o aplicativo adiciona outro número à lista.  
+  
+ O `Main` chamadas de método <xref:System.Windows.Forms.Application.Run%2A> para iniciar o aplicativo, o que cria o formulário, `listBox1` e `button1`. Quando o usuário clica `button1`, o `button1_Click` método exibe um <xref:System.Windows.Forms.MessageBox>. Se o usuário clica em `No` no <xref:System.Windows.Forms.MessageBox>, o `button1_Click` método adiciona um número à lista. Se o usuário clica em `Yes`, o aplicativo chama <xref:System.Windows.Forms.Application.Exit%2A> para processar todas as mensagens restantes na fila e, em seguida, para sair.  
+  
+> [!NOTE]
+>  A chamada para <xref:System.Windows.Forms.Application.Exit%2A> falhará em confiança parcial.  
+  
+ [!code-cpp[Classic Application Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application Example/CS/source.cs#1)]
+ [!code-vb[Classic Application Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddMessageFilter">
+      <MemberSignature Language="C#" Value="public static void AddMessageFilter (System.Windows.Forms.IMessageFilter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddMessageFilter(class System.Windows.Forms.IMessageFilter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.AddMessageFilter(System.Windows.Forms.IMessageFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.IMessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="value">A implementação da interface <see cref="T:System.Windows.Forms.IMessageFilter" /> que você deseja instalar.</param>
+        <summary>Adiciona um filtro de mensagem para monitorar mensagens do Windows à medida que elas são direcionadas para seus destinos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um filtro de mensagem para impedir que os eventos específicos que está sendo gerado ou para executar operações especiais para um evento antes de ser passado para um manipulador de eventos. Filtros de mensagem são exclusivos a um segmento específico.  
+  
+ Para impedir que uma mensagem que está sendo enviado, o `value` instância parâmetro transmitido para esse método deve substituir o <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A> método com o código para manipular a mensagem. O método deve retornar `false`.  
+  
+> [!CAUTION]
+>  Adicionar filtros de mensagem para a bomba de mensagens para um aplicativo pode prejudicar o desempenho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um filtro de mensagem chamado `TestMessageFilter`. Esse filtro bloqueia todas as mensagens relacionadas ao botão esquerdo do mouse. Antes de usar um filtro de mensagem, você deve fornecer uma implementação para o <xref:System.Windows.Forms.IMessageFilter> interface.  
+  
+ [!code-cpp[Classic Application.RemoveMessageFilter Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.RemoveMessageFilter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.RemoveMessageFilter Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.RemoveMessageFilter Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.RemoveMessageFilter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.RemoveMessageFilter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para o chamador imediato chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowQuit">
+      <MemberSignature Language="C#" Value="public static bool AllowQuit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AllowQuit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.AllowQuit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o chamador pode sair desse aplicativo.</summary>
+        <value>
+          <see langword="true" /> se o chamador puder sair desse aplicativo; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna `false` se ele é chamado de um <xref:System.Windows.Forms.Control> que está sendo hospedado em um navegador da Web. Portanto, o <xref:System.Windows.Forms.Control> não é possível encerrar o <xref:System.Windows.Forms.Application>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationExit">
+      <MemberSignature Language="C#" Value="public static event EventHandler ApplicationExit;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ApplicationExit" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Application.ApplicationExit" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o aplicativo está prestes a ser desligado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve anexar os manipuladores de eventos para o <xref:System.Windows.Forms.Application.Exit%2A> evento para executar sem tratamento, tarefas necessárias antes do aplicativo é interrompido. Você pode fechar arquivos abertos por esse aplicativo ou descarte de objetos que não recuperou a coleta de lixo.  
+  
+ Como esse é um evento estático, você deve desanexar os manipuladores de evento anexados a este evento no <xref:System.Windows.Forms.Application.ApplicationExit> manipulador de eventos em si. Se você não desanexar esses manipuladores, eles permanecerão anexados ao evento e continuar a consumir memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe duas formas e sai do aplicativo quando as duas formas estão fechadas. Quando o aplicativo é iniciado e é encerrado, a posição de cada formulário será lembrada. Este exemplo demonstra como usar o <xref:System.Windows.Forms.Application.ApplicationExit> evento para saber quando as posições do formulário devem ser persistidas no arquivo e quando o `FileStream` devem ser fechados.  
+  
+ A classe `MyApplicationContext` herda de <xref:System.Windows.Forms.ApplicationContext> e mantém o controle de quando cada formulário está fechado e o segmento atual é encerrado quando ambos são. A classe lembra a posição de cada formulário quando ele é fechado. Quando o <xref:System.Windows.Forms.Application.ApplicationExit> evento ocorre, a classe grava as posições de cada para o usuário no arquivo. Os dados de posição do formulário são armazenados em um arquivo denominado `appdata.txt` que é criado no local determinado pelo <xref:System.Windows.Forms.Application.UserAppDataPath%2A>. O `Main` chamadas de método `Application.Run(context)` para iniciar o aplicativo recebido o <xref:System.Windows.Forms.ApplicationContext>.  
+  
+ Esse código é um trecho do exemplo mostrado o <xref:System.Windows.Forms.ApplicationContext> visão geral da classe. Consulte <xref:System.Windows.Forms.ApplicationContext> para a listagem de código inteiro.  
+  
+ [!code-cpp[Application#5](~/samples/snippets/cpp/VS_Snippets_Winforms/Application/CPP/source.cpp#5)]
+ [!code-csharp[Application#5](~/samples/snippets/csharp/VS_Snippets_Winforms/Application/CS/source.cs#5)]
+ [!code-vb[Application#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Application/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonAppDataPath">
+      <MemberSignature Language="C#" Value="public static string CommonAppDataPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string CommonAppDataPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.CommonAppDataPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho para os dados de aplicativo compartilhados entre todos os usuários.</summary>
+        <value>O caminho para os dados de aplicativo compartilhados entre todos os usuários.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um caminho não existir, um será criado no seguinte formato:  
+  
+ *Caminho de base*\\<xref:System.Windows.Forms.Application.CompanyName%2A>\\<xref:System.Windows.Forms.Application.ProductName%2A>\\<xref:System.Windows.Forms.Application.ProductVersion%2A>  
+  
+ <xref:System.Windows.Forms.Application.ProductVersion%2A>procura primeiro para ver se o assembly que contém o executável principal tem a `AssemblyInformationalVersion` atributo nele. Se esse atributo existir, ele é usado para <xref:System.Windows.Forms.Application.ProductVersion%2A> e <xref:System.Windows.Forms.Application.CommonAppDataPath%2A>. Se esse atributo não existir, ambas as propriedades usam em vez disso, a versão do arquivo executável.  
+  
+ O caminho será diferente dependendo se o aplicativo do Windows Forms é implantado usando [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]aplicativos são armazenados em um cache de aplicativo por usuário na pasta C:\Documents and configurações\\*username* directory. Para obter mais informações, confira [Acessando dados locais e remotos em aplicativos ClickOnce](http://msdn.microsoft.com/library/be5cbe12-6cb6-49c9-aa59-a1624e1eef3d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonAppDataRegistry">
+      <MemberSignature Language="C#" Value="public static Microsoft.Win32.RegistryKey CommonAppDataRegistry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Win32.RegistryKey CommonAppDataRegistry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.CommonAppDataRegistry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave do Registro dos dados de aplicativos compartilhados entre todos os usuários.</summary>
+        <value>Um <see cref="T:Microsoft.Win32.RegistryKey" /> que representa a chave do Registro dos dados de aplicativos compartilhados entre todos os usuários.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a chave não existir, ele será criado no seguinte formato:  
+  
+ LocalMachine\Software\\<xref:System.Windows.Forms.Application.CompanyName%2A>\\<xref:System.Windows.Forms.Application.ProductName%2A>\\<xref:System.Windows.Forms.Application.ProductVersion%2A>   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompanyName">
+      <MemberSignature Language="C#" Value="public static string CompanyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string CompanyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.CompanyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da empresa associado ao aplicativo.</summary>
+        <value>O nome da empresa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém essa propriedade e exibe seu valor em uma caixa de texto. O exemplo requer que `textBox1` foi colocado em um formulário.  
+  
+ [!code-cpp[Classic Application.CompanyName Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.CompanyName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.CompanyName Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.CompanyName Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.CompanyName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.CompanyName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentCulture">
+      <MemberSignature Language="C#" Value="public static System.Globalization.CultureInfo CurrentCulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Globalization.CultureInfo CurrentCulture" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.CurrentCulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de cultura do thread atual.</summary>
+        <value>Um <see cref="T:System.Globalization.CultureInfo" /> que representa as informações de cultura do thread atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém essa propriedade e exibe seu valor em uma caixa de texto. O exemplo requer que `textBox1` foi colocado em um formulário.  
+  
+ [!code-cpp[Classic Application.CurrentCulture Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.CurrentCulture Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.CurrentCulture Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.CurrentCulture Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.CurrentCulture Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.CurrentCulture Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para todas as janelas definir essa propriedade. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentInputLanguage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.InputLanguage CurrentInputLanguage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.InputLanguage CurrentInputLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.CurrentInputLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.InputLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o idioma de entrada atual para o thread atual.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.InputLanguage" /> que representa o idioma de entrada atual para o thread atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém essa propriedade e exibe seu valor em uma caixa de texto. O exemplo requer que `textBox1` foi colocado em um formulário.  
+  
+ [!code-cpp[Classic Application.CurrentInputLanguage Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.CurrentInputLanguage Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.CurrentInputLanguage Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.CurrentInputLanguage Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.CurrentInputLanguage Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.CurrentInputLanguage Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para o chamador imediato chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DoEvents">
+      <MemberSignature Language="C#" Value="public static void DoEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DoEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.DoEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Processa todas as mensagens do Windows atualmente na fila de mensagens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você executa um formulário do Windows, ele cria o novo formulário, em seguida, aguarda a tratar eventos. Cada vez que o formulário manipula um evento, ele processa todo o código associado com esse evento. Todos os outros eventos aguardam na fila. Enquanto seu código manipula o evento, seu aplicativo não responde. Por exemplo, a janela não redesenhar se outra janela é arrastada na parte superior.  
+  
+ Se você chamar <xref:System.Windows.Forms.Application.DoEvents%2A> em seu código, seu aplicativo pode manipular os outros eventos. Por exemplo, se você tiver um formulário que adiciona dados a um <xref:System.Windows.Forms.ListBox> e adicionar <xref:System.Windows.Forms.Application.DoEvents%2A> ao seu código, seu formulário redesenha quando outra janela é arrastada sobre ele. Se você remover <xref:System.Windows.Forms.Application.DoEvents%2A> do seu código, seu formulário não será redesenhado até que o manipulador de eventos de clique do botão é terminado em execução. Para obter mais informações sobre mensagens, consulte [entrada do usuário no Windows Forms](~/docs/framework/winforms/user-input-in-windows-forms.md).  
+  
+ Ao contrário do Visual Basic 6.0, o <xref:System.Windows.Forms.Application.DoEvents%2A> não chama o método de <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> método.  
+  
+ Normalmente, você deve usar esse método em um loop para processar mensagens.  
+  
+> [!CAUTION]
+>  Chamar este método faz com que o thread atual deve ser suspensa enquanto todas as mensagens de janela de espera são processadas. Se uma mensagem faz com que um evento a ser disparada, poderão executar outras áreas do seu código de aplicativo. Isso pode causar exibem comportamentos inesperados que são difíceis de depurar seu aplicativo. Se você executar operações ou cálculos que levam muito tempo, geralmente é preferível para executar essas operações em um novo thread. Para obter mais informações sobre a programação assíncrona, consulte [modelo de programação assíncrona (APM)](~/docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.Application.DoEvents%2A> método. Quando o exemplo for executado, um usuário pode selecionar arquivos gráficos de um <xref:System.Windows.Forms.OpenFileDialog>. Os arquivos selecionados são exibidos no formulário. O <xref:System.Windows.Forms.Application.DoEvents%2A> método força um redesenho do formulário para cada arquivo de gráficos aberto. Para executar este exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.PictureBox> chamado `PictureBox1`, uma <xref:System.Windows.Forms.OpenFileDialog> chamado `OpenFileDialog1`e um botão chamado `fileButton`. Chamar o `InitializePictureBox` e `InitializeOpenFileDialog` métodos de construtor do formulário ou `Load` método.  
+  
+> [!NOTE]
+>  Em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], se você adicionar um <xref:System.Windows.Forms.OpenFileDialog> ao formulário usando uma operação de arrastar, você precisará modificar o seguinte `InitializeOpenFileDialog` método removendo a linha que cria uma nova instância de <xref:System.Windows.Forms.OpenFileDialog>.  
+  
+ O exemplo também requer que o <xref:System.Windows.Forms.Control.Click?displayProperty=nameWithType> eventos do <xref:System.Windows.Forms.Button> controle e o <xref:System.Windows.Forms.FileDialog.FileOk> eventos do <xref:System.Windows.Forms.OpenFileDialog> estão conectados aos manipuladores de eventos definidos no exemplo. Quando o exemplo está em execução, exiba a caixa de diálogo clicando no botão.  
+  
+ [!code-cpp[System.Windows.Forms.FileDialog#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FileDialog/CPP/filedialogform.cpp#1)]
+ [!code-csharp[System.Windows.Forms.FileDialog#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialog/CS/filedialogform.cs#1)]
+ [!code-vb[System.Windows.Forms.FileDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialog/VB/filedialogform.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableVisualStyles">
+      <MemberSignature Language="C#" Value="public static void EnableVisualStyles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableVisualStyles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.EnableVisualStyles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite estilos visuais para o aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que os estilos visuais para o aplicativo. Estilos visuais são as cores, fontes e outros elementos visuais que formam um tema do sistema operacional. Controles desenhará com estilos visuais, se o controle e o sistema operacional oferecem suporte a ele. Para ter efeito, <xref:System.Windows.Forms.Application.EnableVisualStyles> deve ser chamado antes de criar os controles no aplicativo; normalmente, <xref:System.Windows.Forms.Application.EnableVisualStyles> é a primeira linha de `Main` função. Um manifesto separado não é necessário para habilitar estilos visuais ao chamar <xref:System.Windows.Forms.Application.EnableVisualStyles>.  
+  
+> [!NOTE]
+>  Antes do .NET Framework 2.0, o `FlatStyle` propriedade de alguns controles, como controles que derivam de <xref:System.Windows.Forms.ButtonBase>, teve de ser definida como <xref:System.Windows.Forms.FlatStyle?displayProperty=nameWithType> para que os controles a ser desenhado com estilos visuais. Em aplicativos escritos com o .NET Framework 2.0, isso não é necessário.  
+  
+> [!NOTE]
+>  Esse método não terá efeito para controles hospedado no Internet Explorer.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a chamada <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> no `Main` função para habilitar estilos visuais para o aplicativo.  
+  
+ [!code-cpp[System.Windows.Forms.Application.EnableVisualStyles#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Application.EnableVisualStyles/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Application.EnableVisualStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Application.EnableVisualStyles/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.Application.EnableVisualStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Application.EnableVisualStyles/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterThreadModal">
+      <MemberSignature Language="C#" Value="public static event EventHandler EnterThreadModal;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EnterThreadModal" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Application.EnterThreadModal" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o aplicativo está prestes a entrar em estado modal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Application.EnterThreadModal> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um Windows Forms e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Application.EnterThreadModal> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#3)]
+ [!code-vb[System.Windows.Forms.EventExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Requer <see cref="P:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode" /> permissão para escutar o evento.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutablePath">
+      <MemberSignature Language="C#" Value="public static string ExecutablePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ExecutablePath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.ExecutablePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho para o arquivo executável que iniciou o aplicativo, incluindo o nome do executável.</summary>
+        <value>O caminho e o nome de executável para o arquivo executável que iniciou o aplicativo.  
+  
+ Esse caminho será diferente dependendo se o aplicativo do Windows Forms for implantado com o uso de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]aplicativos são armazenados em um cache de aplicativo por usuário na pasta C:\Documents and configurações\\*username* directory. Para obter mais informações, confira [Acessando dados locais e remotos em aplicativos ClickOnce](http://msdn.microsoft.com/library/be5cbe12-6cb6-49c9-aa59-a1624e1eef3d).</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para obter o caminho. Enumeração associada: <see cref="T:System.Security.Permissions.FileIOPermissionAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Exit">
+      <MemberSignature Language="C#" Value="public static void Exit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Exit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.Exit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Informa todos os aumentos de mensagem que devem encerrar e, em seguida, fecha todas as janelas de aplicativo após as mensagens terem sido processadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Application.Exit%2A> método interrompe a execução de todas as loops de mensagens em todos os threads e fecha todas as janelas do aplicativo. Esse método não necessariamente força o aplicativo para sair. O <xref:System.Windows.Forms.Application.Exit%2A> método normalmente é chamado de dentro de um loop de mensagem e força <xref:System.Windows.Forms.Application.Run%2A> para retornar. Para sair de um loop de mensagem do thread atual, chame <xref:System.Windows.Forms.Application.ExitThread%2A>.  
+  
+ <xref:System.Windows.Forms.Application.Exit%2A>gera os seguintes eventos e executa as ações condicionais associadas:  
+  
+-   Um <xref:System.Windows.Forms.Form.FormClosing> é gerado para cada formulário representado pelo <xref:System.Windows.Forms.Application.OpenForms%2A> propriedade. Esse evento pode ser cancelado, definindo a <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade de seus <xref:System.Windows.Forms.FormClosingEventArgs> parâmetro `true`.  
+  
+-   Se um ou mais dos manipuladores cancelará o evento, em seguida, <xref:System.Windows.Forms.Application.Exit%2A> retorna sem ação adicional. Caso contrário, um <xref:System.Windows.Forms.Form.FormClosed> é gerado para cada formulário aberto, todos os loops de mensagens em execução e formulários são fechados.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Application.Exit%2A> método não gera o <xref:System.Windows.Forms.Form.Closed> e <xref:System.Windows.Forms.Form.Closing> eventos que estão obsoletos de [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir lista os números em uma caixa de listagem em um formulário. Cada vez que você clicar em `button1`, o aplicativo adiciona outro número à lista.  
+  
+ O `Main` chamadas de método <xref:System.Windows.Forms.Application.Run%2A> para iniciar o aplicativo, o que cria o formulário, `listBox1`, e `button1`. Quando o usuário clica `button1`, o `button1_Click` método adiciona uma a três à caixa de listagem de números e exibe um <xref:System.Windows.Forms.MessageBox>. Se o usuário clica em **não** no <xref:System.Windows.Forms.MessageBox>, o `button1_Click` método adiciona outro número para a lista. Se o usuário clica em **Sim**, o aplicativo chama <xref:System.Windows.Forms.Application.Exit%2A>para processar todas as mensagens restantes na fila e, em seguida, para sair.  
+  
+ O exemplo requer que `listBox1` e `button1` instanciados e colocados em um formulário.  
+  
+ [!code-cpp[Classic Application.Exit Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.Exit Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.Exit Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.Exit Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.Exit Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.Exit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para o chamador imediato chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Exit">
+      <MemberSignature Language="C#" Value="public static void Exit (System.ComponentModel.CancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Exit(class System.ComponentModel.CancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.Exit(System.ComponentModel.CancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.CancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Retorna se qualquer <see cref="T:System.Windows.Forms.Form" /> dentro do aplicativo cancelou a saída.</param>
+        <summary>Informa todos os aumentos de mensagem que devem encerrar e, em seguida, fecha todas as janelas de aplicativo após as mensagens terem sido processadas.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityException">Permissão encerrar um execução de thread de aplicativo. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitThread">
+      <MemberSignature Language="C#" Value="public static void ExitThread ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ExitThread() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.ExitThread" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sai do loop de mensagem no thread atual e fecha todas as janelas no thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para sair do loop de mensagem do thread atual. Este método faz com que a chamada <xref:System.Windows.Forms.Application.Run%2A> para o thread atual retornar. Para sair do aplicativo inteiro, chame <xref:System.Windows.Forms.Application.Exit%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para o chamador imediato chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterMessage">
+      <MemberSignature Language="C#" Value="public static bool FilterMessage (ref System.Windows.Forms.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool FilterMessage(valuetype System.Windows.Forms.Message&amp; message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de evento do Windows a ser filtrada.</param>
+        <summary>Executa qualquer filtro em uma mensagem de janela e retorna uma cópia da mensagem modificada.</summary>
+        <returns>
+          <see langword="True" /> se os filtros foram processados; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Idle">
+      <MemberSignature Language="C#" Value="public static event EventHandler Idle;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Idle" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Application.Idle" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o aplicativo termina o processamento e está prestes a entrar no estado ocioso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tiver tarefas que você deve executar antes do thread fica ocioso, anexá-los a esse evento.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Application.Idle> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um formulário do Windows e certifique-se de que o manipulador de eventos está associado a <xref:System.Windows.Forms.Application.Idle> eventos.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#2)]
+ [!code-vb[System.Windows.Forms.EventExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeaveThreadModal">
+      <MemberSignature Language="C#" Value="public static event EventHandler LeaveThreadModal;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LeaveThreadModal" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Application.LeaveThreadModal" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o aplicativo está prestes a sair de um estado modal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Application.LeaveThreadModal> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um Windows Forms e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Application.LeaveThreadModal> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#4)]
+ [!code-vb[System.Windows.Forms.EventExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalUserAppDataPath">
+      <MemberSignature Language="C#" Value="public static string LocalUserAppDataPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string LocalUserAppDataPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.LocalUserAppDataPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho para os dados de aplicativo de um usuário local não roaming.</summary>
+        <value>O caminho para os dados de aplicativo de um usuário local, não roaming.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um usuário local é uma cujo perfil do usuário é armazenado no sistema em que o usuário fez logon. Se um caminho não existir, um será criado no seguinte formato:  
+  
+ *Caminho de base*\\<xref:System.Windows.Forms.Application.CompanyName%2A>\\<xref:System.Windows.Forms.Application.ProductName%2A>\\<xref:System.Windows.Forms.Application.ProductVersion%2A>   
+  
+ Um caminho de base comum é C:\Documents and Settings\\*username*\Local dados. Esse caminho será diferente, no entanto, se o aplicativo do Windows Forms é implantado usando [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]cria seu próprio diretório de dados de aplicativo que é isolado de todos os outros aplicativos. Para obter mais informações, confira [Acessando dados locais e remotos em aplicativos ClickOnce](http://msdn.microsoft.com/library/be5cbe12-6cb6-49c9-aa59-a1624e1eef3d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe duas formas e sai do aplicativo quando as duas formas estão fechadas. Quando o aplicativo é iniciado e é encerrado, a posição de cada formulário será lembrada. Embora este exemplo demonstra como usar o <xref:System.Windows.Forms.Application.UserAppDataPath%2A> propriedade para armazenar dados de aplicativo para o usuário, o <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A> pode ser usado em vez disso.  
+  
+ O `MyApplicationContext` classe herda de <xref:System.Windows.Forms.ApplicationContext> e mantém o controle quando cada formulário está fechado e o segmento atual é encerrado quando ambos são. A classe armazena as posições de cada formulário para o usuário. Os dados de posição do formulário são armazenados em um arquivo denominado `Appdata.txt` que é criado no local determinado pelo <xref:System.Windows.Forms.Application.UserAppDataPath%2A>. O `Main` chamadas de método `Application.Run(context)` para iniciar o aplicativo recebido o <xref:System.Windows.Forms.ApplicationContext>.  
+  
+ Esse código é um trecho do exemplo mostrado o <xref:System.Windows.Forms.ApplicationContext> visão geral da classe. Um código não é exibido para fins de brevidade. Consulte <xref:System.Windows.Forms.ApplicationContext> para a listagem de código inteiro.  
+  
+ [!code-cpp[Application#5](~/samples/snippets/cpp/VS_Snippets_Winforms/Application/CPP/source.cpp#5)]
+ [!code-csharp[Application#5](~/samples/snippets/csharp/VS_Snippets_Winforms/Application/CS/source.cs#5)]
+ [!code-vb[Application#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Application/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageLoop">
+      <MemberSignature Language="C#" Value="public static bool MessageLoop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool MessageLoop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.MessageLoop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um loop de mensagem existe neste thread.</summary>
+        <value>
+          <see langword="true" /> se existir um loop de mensagem; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao hospedar formulários do Windows em outros ambientes, como aplicativos não gerenciados, essa propriedade sempre retornará `false`. Use <xref:System.Windows.Forms.Application.RegisterMessageLoop%2A> para instruir o Windows Forms se o ambiente de hospedagem ainda tem um loop de mensagem ativa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OleRequired">
+      <MemberSignature Language="C#" Value="public static System.Threading.ApartmentState OleRequired ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.ApartmentState OleRequired() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.OleRequired" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ApartmentState</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a OLE no thread atual.</summary>
+        <returns>Um dos valores de <see cref="T:System.Threading.ApartmentState" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método antes de chamar qualquer `Microsoft.Win32` método que requer OLE. <xref:System.Windows.Forms.Application.OleRequired%2A>primeiro verifica se OLE foi inicializado no thread atual. Caso contrário, ele inicializa o thread para OLE.  
+  
+> [!NOTE]
+>  A menos que um thread chama métodos OLE diretamente, você não precisa chamar este método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnThreadException">
+      <MemberSignature Language="C#" Value="public static void OnThreadException (Exception t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void OnThreadException(class System.Exception t) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.OnThreadException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="t">Um <see cref="T:System.Exception" /> que representa a exceção que foi lançada.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Application.ThreadException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Windows.Forms.Application.OnThreadException%2A> para gerar uma exceção que irá parar o processamento do aplicativo.  
+  
+ O <xref:System.Windows.Forms.Application> classe tiver um <xref:System.Windows.Forms.Application.ThreadException> eventos. Você pode anexar um manipulador de eventos para esse evento para fazer o processamento personalizado que você precisa para exceções não tratadas. Se você anexar um manipulador de eventos, <xref:System.Windows.Forms.Application.OnThreadException%2A> executará o comportamento padrão, que envolve a exibição de uma caixa de diálogo para informar ao usuário que houve um erro.  
+  
+ <xref:System.Windows.Forms.Application.OnThreadException%2A>implementa o comportamento de exceção padrão para exceções não tratadas que ocorrem apenas em threads pertencentes a Windows Forms. Exceções sem tratamento em outros threads são manipuladas pelo <xref:System.AppDomain.UnhandledException> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenForms">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.FormCollection OpenForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.FormCollection OpenForms" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.OpenForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de formulários abertos pertencentes ao aplicativo.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.FormCollection" /> que contém todos os formulários abertos no momento pertencentes a este aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Application.OpenForms%2A> propriedade representa uma coleção somente leitura de formulários pertencentes ao aplicativo. Essa coleção pode ser pesquisada com a posição de índice ou a <xref:System.Windows.Forms.Control.Name%2A> do <xref:System.Windows.Forms.Form>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Chamador deve ter permissão para acessar todas as janelas, conforme definido pelo <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> valor o <see cref="T:System.Security.Permissions.UIPermissionWindow" /> enumeração.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProductName">
+      <MemberSignature Language="C#" Value="public static string ProductName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ProductName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.ProductName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do produto associada a este aplicativo.</summary>
+        <value>O Nome do produto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `ProductName`é obtido dos metadados do assembly que contém o formulário principal do aplicativo atual. Você pode configurá-lo definindo <xref:System.Reflection.AssemblyProductAttribute> dentro de seu manifesto do assembly. Para obter mais informações, consulte [manifesto do Assembly](~/docs/framework/app-domains/assembly-manifest.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém essa propriedade e exibe seu valor em uma caixa de texto. O exemplo requer que `textBox1` foi colocado em um formulário.  
+  
+ [!code-cpp[Classic Application.ProductName Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.ProductName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.ProductName Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.ProductName Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.ProductName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.ProductName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProductVersion">
+      <MemberSignature Language="C#" Value="public static string ProductVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ProductVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.ProductVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do produto associada a este aplicativo.</summary>
+        <value>A versão do produto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um número de versão exibe como *principal número*.* número de secundária*.* número da compilação*.* número de peça particular*. Você pode definir explicitamente, definindo a versão do assembly em seu manifesto do assembly. Para obter mais informações, consulte [manifesto do Assembly](~/docs/framework/app-domains/assembly-manifest.md).  
+  
+ <xref:System.Windows.Forms.Application.ProductVersion%2A>procura primeiro para ver se o assembly que contém o executável principal tem a `AssemblyInformationalVersion` atributo nele. Se esse atributo existir, ele é usado para <xref:System.Windows.Forms.Application.ProductVersion%2A> e <xref:System.Windows.Forms.Application.CommonAppDataPath%2A>. Se esse atributo não existir, ambas as propriedades usam em vez disso, a versão do arquivo executável.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém essa propriedade e exibe seu valor em uma caixa de texto. O exemplo requer que `textBox1` foi colocado em um formulário.  
+  
+ [!code-cpp[Classic Application.ProductVersion Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.ProductVersion Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.ProductVersion Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.ProductVersion Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.ProductVersion Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.ProductVersion Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseIdle">
+      <MemberSignature Language="C#" Value="public static void RaiseIdle (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RaiseIdle(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.RaiseIdle(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os objetos <see cref="T:System.EventArgs" /> para passar para o evento <see cref="E:System.Windows.Forms.Application.Idle" />.</param>
+        <summary>Gera o <see cref="E:System.Windows.Forms.Application.Idle" /> evento em cenários hospedados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado quando hospedando o Windows Forms em outro ambiente, como um aplicativo não gerenciado. Você deve chamar <xref:System.Windows.Forms.Application.RaiseIdle%2A> quando o aplicativo host entra em um estado ocioso. Isso permite que alguns controles de formulários do Windows e componentes para fazer o trabalho importante em segundo plano enquanto o usuário não está interagindo com o aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterMessageLoop">
+      <MemberSignature Language="C#" Value="public static void RegisterMessageLoop (System.Windows.Forms.Application.MessageLoopCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterMessageLoop(class System.Windows.Forms.Application/MessageLoopCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.RegisterMessageLoop(System.Windows.Forms.Application.MessageLoopCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Windows.Forms.Application+MessageLoopCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O método a ser chamado quando o Windows Forms precisa verificar se o ambiente de hospedagem ainda está enviando mensagens.</param>
+        <summary>Registra um retorno de chamada para verificar se o loop de mensagens está em execução em ambientes hospedados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado quando hospedando o Windows Forms em outro ambiente, como um aplicativo não gerenciado. Em ambientes hospedados, o <xref:System.Windows.Forms.Application.MessageLoop%2A> propriedade sempre retornará false se os formulários do Windows não está processando as mensagens. Use esse retorno de chamada para informar ao Windows Forms se o ambiente de hospedagem ainda está processando as mensagens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMessageFilter">
+      <MemberSignature Language="C#" Value="public static void RemoveMessageFilter (System.Windows.Forms.IMessageFilter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveMessageFilter(class System.Windows.Forms.IMessageFilter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.RemoveMessageFilter(System.Windows.Forms.IMessageFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.IMessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="value">A implementação do <see cref="T:System.Windows.Forms.IMessageFilter" /> a ser removida do aplicativo.</param>
+        <summary>Remove um filtro de mensagens da bomba de mensagens do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode remover um filtro de mensagem quando não quiser capturar mensagens do Windows antes de serem distribuídos.  
+  
+   
+  
+## Examples  
+ Antes de usar um filtro de mensagem, você deve fornecer uma implementação para o <xref:System.Windows.Forms.IMessageFilter> interface. A classe a seguir cria um filtro de mensagem chamado `TestMessageFilter`. Esse filtro bloqueia todas as mensagens relacionadas ao botão esquerdo do mouse.  
+  
+ [!code-cpp[Classic Application.RemoveMessageFilter Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.RemoveMessageFilter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.RemoveMessageFilter Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.RemoveMessageFilter Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.RemoveMessageFilter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.RemoveMessageFilter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderWithVisualStyles">
+      <MemberSignature Language="C#" Value="public static bool RenderWithVisualStyles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool RenderWithVisualStyles" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.RenderWithVisualStyles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o aplicativo atual está desenhando controles com estilos visuais.</summary>
+        <value>
+          <see langword="true" /> se os estilos visuais estiverem habilitados para controles na área de cliente das janelas do aplicativo. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você estiver desenhando um controle personalizado, use essa propriedade para decidir se é desenhar o controle com ou sem estilos visuais, para que sua aparência seja consistente com outros controles no aplicativo.  
+  
+ A tabela a seguir mostra as quatro condições que devem existir para <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> para retornar `true`.  
+  
+|Condição|Descrição|  
+|---------------|-----------------|  
+|O sistema operacional oferece suporte a estilos visuais|Para verificar essa condição separadamente, use o <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> propriedade o <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> classe.|  
+|O usuário ativou estilos visuais no sistema operacional|Para verificar essa condição separadamente, use o <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> propriedade o <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> classe.|  
+|Esses estilos estejam habilitados no aplicativo|Estilos visuais podem ser habilitados em um aplicativo chamando o <xref:System.Windows.Forms.Application.EnableVisualStyles> método ou usando um aplicativo de manifesto que especifica que a versão ComCtl32.dll 6 ou posterior será usado para desenhar controles.|  
+|Estilos visuais estão sendo usados para desenhar a área cliente de aplicativo windows|Para verificar essa condição separadamente, use o <xref:System.Windows.Forms.Application.VisualStyleState%2A> propriedade o <xref:System.Windows.Forms.Application> classe e verifique se ele tem o valor <xref:System.Windows.Forms.VisualStyles.VisualStyleState?displayProperty=nameWithType> ou <xref:System.Windows.Forms.VisualStyles.VisualStyleState?displayProperty=nameWithType>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Restart">
+      <MemberSignature Language="C#" Value="public static void Restart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Restart() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.Restart" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desliga o aplicativo e inicia uma nova instância imediatamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O motivo mais comum para chamar `Restart` é iniciar uma nova versão do aplicativo que você baixou a [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] usando o `Update` ou `UpdateAsync` método.  
+  
+ Aplicativos são reiniciados no contexto no qual eles foram executados inicialmente. Se seu aplicativo foi iniciado usando uma URL que aponta diretamente para o arquivo executável principal do aplicativo, ele será reiniciado usando a mesma URL. Se seu aplicativo for um [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] aplicativo, ele será reiniciado usando [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)].  
+  
+ Se seu aplicativo foi originalmente fornecidas opções de linha de comando quando executado pela primeira vez, <xref:System.Windows.Forms.Application.Restart%2A> iniciará o aplicativo novamente com as mesmas opções.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Seu código não é um aplicativo Windows Forms. Você não pode chamar esse método nesse contexto.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Requer <see cref="M:System.Security.Permissions.SecurityPermission.IsUnrestricted" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static void Run ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Run() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.Run" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia a execução de um loop de mensagens do aplicativo padrão no thread atual, sem nenhum formulário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um Win32 ou formulários do Windows no aplicativo, um loop de mensagem é uma rotina no código que processa eventos de usuário, como cliques do mouse e de teclado. Cada aplicativo em execução do Windows requer um loop de mensagem ativa, chamado o loop de mensagem principal. Quando o loop de mensagem principal for fechado, o aplicativo será encerrado. No Windows Forms, este loop é fechada quando o <xref:System.Windows.Forms.Application.Exit%2A> método é chamado, ou quando o <xref:System.Windows.Forms.Application.ExitThread%2A> método é chamado no thread que está executando o loop de mensagem principal.  
+  
+ A maioria dos desenvolvedores do Windows Forms não precisará usar essa versão do método. Você deve usar o <xref:System.Windows.Forms.Application.Run%28System.Windows.Forms.Form%29> sobrecarga para iniciar um aplicativo com um formulário principal, para que o aplicativo termina quando o formulário principal é fechado. Em outras situações, use o <xref:System.Windows.Forms.Application.Run%28System.Windows.Forms.ApplicationContext%29> sobrecarga, que oferece suporte ao fornecer um <xref:System.Windows.Forms.ApplicationContext> objeto para um melhor controle sobre o tempo de vida do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Um loop de mensagem principal já está em execução nesse thread.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static void Run (System.Windows.Forms.ApplicationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Run(class System.Windows.Forms.ApplicationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.Run(System.Windows.Forms.ApplicationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Forms.ApplicationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Windows.Forms.ApplicationContext" /> no qual o aplicativo é executado.</param>
+        <summary>Inicia a execução de um loop de mensagens do aplicativo padrão no thread atual, com um <see cref="T:System.Windows.Forms.ApplicationContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O loop de mensagens é executado até que <xref:System.Windows.Forms.Application.Exit%2A> ou <xref:System.Windows.Forms.Application.ExitThread%2A> é chamado ou a <xref:System.Windows.Forms.Application.ThreadExit> é gerado no objeto de contexto.  
+  
+   
+  
+## Examples  
+ O exemplo exibe duas formas e sai do aplicativo quando as duas formas estão fechadas. Quando o aplicativo é iniciado e é encerrado, a posição de cada formulário será lembrada. Este exemplo demonstra como usar um <xref:System.Windows.Forms.ApplicationContext>, juntamente com o `Application.Run(context)` método para exibir vários formulários quando o aplicativo for iniciado.  
+  
+ A classe `MyApplicationContext` herda de <xref:System.Windows.Forms.ApplicationContext> e mantém o controle quando cada formulário está fechado e o segmento atual é encerrado quando ambos são. A classe armazena as posições de cada formulário para o usuário. Os dados de posição do formulário são armazenados em um arquivo denominado `Appdata.txt` que é criado no local determinado pelo <xref:System.Windows.Forms.Application.UserAppDataPath%2A>. O `Main` chamadas de método `Application.Run(context)` para iniciar o aplicativo recebido o <xref:System.Windows.Forms.ApplicationContext>.  
+  
+ O código para o `AppForm1` e `AppForm2` formulários não é exibido para fins de brevidade. Consulte o <xref:System.Windows.Forms.ApplicationContext> visão geral da classe para a listagem de código inteiro.  
+  
+ [!code-cpp[Application#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Application/CPP/source.cpp#2)]
+ [!code-csharp[Application#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Application/CS/source.cs#2)]
+ [!code-vb[Application#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Application/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Um loop de mensagem principal já está em execução nesse thread.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static void Run (System.Windows.Forms.Form mainForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Run(class System.Windows.Forms.Form mainForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.Run(System.Windows.Forms.Form)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mainForm" Type="System.Windows.Forms.Form" />
+      </Parameters>
+      <Docs>
+        <param name="mainForm">Um <see cref="T:System.Windows.Forms.Form" /> que representa o formulário para tornar visível.</param>
+        <summary>Começa a executar um loop de mensagem do aplicativo padrão no thread atual e torna o formulário especificado visível.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, a função principal de um aplicativo chama esse método e passa para ele a janela principal do aplicativo.  
+  
+ Este método adiciona um manipulador de eventos para o `mainForm` parâmetro para o <xref:System.Windows.Forms.Form.Closed> evento. As chamadas do manipulador de eventos <xref:System.Windows.Forms.Application.ExitThread%2A> para limpar o aplicativo.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Control.Dispose%2A> método o <xref:System.Windows.Forms.Form> classe será chamada antes do retorno deste método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir lista os números em uma caixa de listagem em um formulário. Cada vez que você clicar em `button1`, o aplicativo adiciona outro número à lista.  
+  
+ O `Main` chamadas de método <xref:System.Windows.Forms.Application.Run%2A> para iniciar o aplicativo, o que cria o formulário, `listBox1`, e `button1`. Quando o usuário clica `button1`, o `button1_Click` método adiciona uma a três à caixa de listagem de números e exibe um <xref:System.Windows.Forms.MessageBox>. Se o usuário clica em **não** no <xref:System.Windows.Forms.MessageBox>, o `button1_Click` método adiciona outro número para a lista. Se o usuário clica em **Sim**, o aplicativo chama <xref:System.Windows.Forms.Application.Exit%2A> para processar todas as mensagens restantes na fila e, em seguida, para sair.  
+  
+ O exemplo requer que `listBox1` e `button1` foram criados e colocados em um formulário.  
+  
+ [!code-cpp[Classic Application.Exit Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.Exit Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.Exit Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.Exit Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.Exit Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.Exit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Um loop de mensagem principal já está em execução no thread atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeTopLevelCaptionFormat">
+      <MemberSignature Language="C#" Value="public static string SafeTopLevelCaptionFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SafeTopLevelCaptionFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.SafeTopLevelCaptionFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de formato para aplicar a legendas de janela de nível superior quando elas são exibidas com um cabeçalho de aviso.</summary>
+        <value>A cadeia de caracteres de formato para aplicar a legendas de janela de nível superior.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para todas as janelas definir essa propriedade. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCompatibleTextRenderingDefault">
+      <MemberSignature Language="C#" Value="public static void SetCompatibleTextRenderingDefault (bool defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCompatibleTextRenderingDefault(bool defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão a ser usado para novos controles. Se <see langword="true" />, novos controles que suportam <c>UseCompatibleTextRendering</c> usar o [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] com base <see cref="T:System.Drawing.Graphics" /> classe para a renderização de texto; se <see langword="false" />, novo controla o uso de [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] com base em <see cref="T:System.Windows.Forms.TextRenderer" />classe.</param>
+        <summary>Define o padrão de nível de aplicativo para o <c>UseCompatibleTextRendering</c> propriedade definida em certos controles.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Determinados controles de formulários do Windows podem processar o texto usando o <xref:System.Windows.Forms.TextRenderer> classe, que se baseia o [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] biblioteca de elementos gráficos, ou o <xref:System.Drawing.Graphics> classe, que se baseia o [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] biblioteca de elementos gráficos. Essa alteração foi feita na [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] devido a problemas de desempenho e a localização com [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]. Use <xref:System.Windows.Forms.Application.SetCompatibleTextRenderingDefault%2A> para definir o valor padrão de `UseCompatibleTextRendering` propriedade para controles que oferecem suporte a ele.  
+  
+ O `UseCompatibleTextRendering` propriedade destina-se para fornecer compatibilidade visual entre os controles de formulários do Windows que renderizam texto usando o <xref:System.Windows.Forms.TextRenderer> classe e [!INCLUDE[net_v10_short](~/includes/net-v10-short-md.md)] e [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)] aplicativos que executam a renderização de texto personalizado usando o <xref:System.Drawing.Graphics> classe. Na maioria dos casos, se seu aplicativo não está sendo atualizado do [!INCLUDE[net_v10_short](~/includes/net-v10-short-md.md)] ou [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)], é recomendável que você deixe `UseCompatibleTextRendering` definido como o valor padrão de `false`.  
+  
+ O [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] com base em <xref:System.Windows.Forms.TextRenderer> classe foi introduzida no [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] para melhorar o desempenho, verifique o texto aparência e melhorar o suporte para fontes internacionais. Em versões anteriores do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], o [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] com base em <xref:System.Drawing.Graphics> classe foi usada para executar todo o processamento de texto. [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]calcula o espaçamento entre caracteres e a quebra automática de forma diferente de [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]. Em um aplicativo Windows Forms que usa o <xref:System.Drawing.Graphics> de classe para renderizar texto, isso pode causar o texto para controles que usam <xref:System.Windows.Forms.TextRenderer> apareça diferente do texto no aplicativo. Para resolver essa incompatibilidade, você pode definir o `UseCompatibleTextRendering` propriedade `true`. Para definir `UseCompatibleTextRendering` para `true` para todos os controles com suporte no aplicativo, chame o <xref:System.Windows.Forms.Application.SetCompatibleTextRenderingDefault%2A> método com um parâmetro de `true`.  
+  
+ Você nunca deve chamar esse método se seu código de Windows Forms estiver hospedado em outro aplicativo, como o Internet Explorer. Chame esse método em aplicativos de formulários do Windows autônomos.  
+  
+   
+  
+## Examples  
+  
+> [!IMPORTANT]
+>  Para definir o valor padrão para `UseCompatibleTextRendering` na [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] ou posterior, consulte <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A?displayProperty=nameWithType>.  
+  
+ Em [!INCLUDE[csprcslong](~/includes/csprcslong-md.md)] ou posterior, uma chamada para <xref:System.Windows.Forms.Application.SetCompatibleTextRenderingDefault%2A> é gerado automaticamente no arquivo Program.cs. Para alterar o padrão de processamento de texto, modifique o código gerado.  
+  
+```scr  
+static class Program  
+{  
+    /// <summary>  
+    /// The main entry point for the application.  
+    /// </summary>  
+    [STAThread]  
+    static void Main()  
+    {  
+        Application.EnableVisualStyles();  
+        Application.SetCompatibleTextRenderingDefault(false);  
+        Application.Run(new Form1());  
+    }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Você só pode chamar esse método antes que a primeira janela seja criada pelo seu aplicativo do Windows Forms.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSuspendState">
+      <MemberSignature Language="C#" Value="public static bool SetSuspendState (System.Windows.Forms.PowerState state, bool force, bool disableWakeEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SetSuspendState(valuetype System.Windows.Forms.PowerState state, bool force, bool disableWakeEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.SetSuspendState(System.Windows.Forms.PowerState,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Windows.Forms.PowerState" />
+        <Parameter Name="force" Type="System.Boolean" />
+        <Parameter Name="disableWakeEvent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Windows.Forms.PowerState" /> que indica o modo de atividade de energia para o qual será feita a transição.</param>
+        <param name="force">
+          <see langword="true" /> para forçar o modo suspenso imediatamente; <see langword="false" /> para fazer com que o Windows envie uma solicitação de suspensão para cada aplicativo.</param>
+        <param name="disableWakeEvent">
+          <see langword="true" /> para desabilitar a restauração do status de energia do sistema para ativo em um evento de ativação; <see langword="false" /> para permitir a restauração do status de energia do sistema para ativo em um evento de ativação.</param>
+        <summary>Suspende ou hiberna o sistema, ou solicita que o sistema seja suspenso ou hibernado.</summary>
+        <returns>
+          <see langword="true" /> para suspender o sistema; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um aplicativo não responder a uma solicitação de suspensão em 20 segundos, o Windows determina se ele está em um estado sem resposta, e que o aplicativo pode ser colocado em modo de suspensão ou encerrado. Depois que um aplicativo responde a uma solicitação de suspensão, no entanto, pode levar o tempo que ele precisa para limpar os recursos e encerrar processos ativos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SetUnhandledExceptionMode">
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Instrui o aplicativo a como responder às exceções não tratadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir define os manipuladores de eventos para exceções que ocorrem em threads de formulários do Windows e exceções que ocorrem em outros threads. Ele define <xref:System.Windows.Forms.Application.SetUnhandledExceptionMode%2A> para que todas as exceções são manipuladas pelo aplicativo, independentemente das configurações no arquivo de configuração de usuário do aplicativo. Ele usa o <xref:System.Windows.Forms.Application.ThreadException> eventos para lidar com exceções de thread de interface do usuário e o <xref:System.AppDomain.UnhandledException> eventos para lidar com exceções do thread sem interface do usuário. Como <xref:System.AppDomain.UnhandledException> não pode impedir que um aplicativo de encerrar, o exemplo simplesmente registra o erro no log de eventos do aplicativo antes do encerramento.  
+  
+ Este exemplo supõe que você define dois <xref:System.Windows.Forms.Button> controles, `button1` e `button2`, no seu <xref:System.Windows.Forms.Form> classe.  
+  
+ [!code-cpp[Classic Application.ThreadException Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.ThreadException Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.ThreadException Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.ThreadException Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SetUnhandledExceptionMode">
+      <MemberSignature Language="C#" Value="public static void SetUnhandledExceptionMode (System.Windows.Forms.UnhandledExceptionMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetUnhandledExceptionMode(valuetype System.Windows.Forms.UnhandledExceptionMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.SetUnhandledExceptionMode(System.Windows.Forms.UnhandledExceptionMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Windows.Forms.UnhandledExceptionMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um valor <see cref="T:System.Windows.Forms.UnhandledExceptionMode" /> descrevendo como o aplicativo deve se comportar se uma exceção é lançada sem ser detectada.</param>
+        <summary>Instrui o aplicativo a como responder às exceções não tratadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geralmente não é possível capturar todas as exceções lançadas pelo Windows Forms. Usando esse método, você pode instruir o seu aplicativo se ele deve capturar sem tratamento todas as exceções geradas por componentes de Windows Forms e continuar a operar, ou se deve expô-los para o usuário e interromper a execução.  
+  
+ Chamar <xref:System.Windows.Forms.Application.SetUnhandledExceptionMode%2A> antes de você criar uma instância do formulário principal do seu aplicativo usando o <xref:System.Windows.Forms.Application.Run%2A> método.  
+  
+ Capturar exceções que ocorrem em threads não criados e pertencentes a formulários do Windows, use o <xref:System.AppDomain.UnhandledException> manipulador de eventos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define os manipuladores de eventos para exceções que ocorrem em threads de formulários do Windows e exceções que ocorrem em outros threads. Ele define <xref:System.Windows.Forms.Application.SetUnhandledExceptionMode%2A> para que todas as exceções são manipuladas pelo aplicativo, independentemente das configurações no arquivo de configuração de usuário do aplicativo. Ele usa o <xref:System.Windows.Forms.Application.ThreadException> eventos para lidar com exceções de thread de interface do usuário e o <xref:System.AppDomain.UnhandledException> eventos para lidar com exceções do thread sem interface do usuário. Como <xref:System.AppDomain.UnhandledException> não pode impedir que um aplicativo de encerrar, o exemplo simplesmente registra o erro no log de eventos do aplicativo antes do encerramento.  
+  
+ Este exemplo supõe que você define dois <xref:System.Windows.Forms.Button> controles, `button1` e `button2`, no seu <xref:System.Windows.Forms.Form> classe.  
+  
+ [!code-cpp[Classic Application.ThreadException Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.ThreadException Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.ThreadException Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.ThreadException Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Você não pode definir o modo de exceção depois que o aplicativo criou sua primeira janela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUnhandledExceptionMode">
+      <MemberSignature Language="C#" Value="public static void SetUnhandledExceptionMode (System.Windows.Forms.UnhandledExceptionMode mode, bool threadScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetUnhandledExceptionMode(valuetype System.Windows.Forms.UnhandledExceptionMode mode, bool threadScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.SetUnhandledExceptionMode(System.Windows.Forms.UnhandledExceptionMode,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Windows.Forms.UnhandledExceptionMode" />
+        <Parameter Name="threadScope" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um valor <see cref="T:System.Windows.Forms.UnhandledExceptionMode" /> descrevendo como o aplicativo deve se comportar se uma exceção é lançada sem ser detectada.</param>
+        <param name="threadScope">
+          <see langword="true" /> para definir o modo de exceção do thread; caso contrário, <see langword="false" />.</param>
+        <summary>Instrui o aplicativo sobre como responder a exceções sem tratamento, opcionalmente aplicando o comportamento específico do thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geralmente não é possível capturar todas as exceções lançadas pelo Windows Forms. Usando esse método, você pode instruir o seu aplicativo se ele deve capturar sem tratamento todas as exceções geradas por componentes de Windows Forms e continuar a operar, ou se deve expô-los para o usuário e interromper a execução.  
+  
+ Chamar <xref:System.Windows.Forms.Application.SetUnhandledExceptionMode%2A> antes de você criar uma instância do formulário principal do seu aplicativo usando o <xref:System.Windows.Forms.Application.Run%2A> método.  
+  
+ Quando `threadScope` é `true`, o modo de exceção de thread está definido. O modo de exceção de thread substitui o modo de exceção de aplicativo se `mode` não está definido como <xref:System.Windows.Forms.UnhandledExceptionMode.Automatic>.  
+  
+ Quando `threadScope` é `false`, o modo de exceção de aplicativo está definido. O modo de exceção de aplicativo é usado para todos os threads que têm o <xref:System.Windows.Forms.UnhandledExceptionMode.Automatic> modo. Definir o modo de exceção de aplicativo não afeta a configuração do thread atual.  
+  
+ Capturar exceções que ocorrem em threads não criados e pertencentes a formulários do Windows, use o <xref:System.AppDomain.UnhandledException> manipulador de eventos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define os manipuladores de eventos para exceções que ocorrem em threads de formulários do Windows e exceções que ocorrem em outros threads. Ele define <xref:System.Windows.Forms.Application.SetUnhandledExceptionMode%2A> para que todas as exceções são manipuladas pelo aplicativo, independentemente das configurações no arquivo de configuração de usuário do aplicativo. Ele usa o <xref:System.Windows.Forms.Application.ThreadException> eventos para lidar com exceções de thread de interface do usuário e o <xref:System.AppDomain.UnhandledException> eventos para lidar com exceções do thread sem interface do usuário. Como <xref:System.AppDomain.UnhandledException> não pode impedir que um aplicativo de encerrar, o exemplo simplesmente registra o erro no log de eventos do aplicativo antes do encerramento.  
+  
+ Este exemplo supõe que você define dois <xref:System.Windows.Forms.Button> controles, `button1` e `button2`, no seu <xref:System.Windows.Forms.Form> classe.  
+  
+ [!code-cpp[Classic Application.ThreadException Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.ThreadException Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.ThreadException Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.ThreadException Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Você não pode definir o modo de exceção depois que o aplicativo criou sua primeira janela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartupPath">
+      <MemberSignature Language="C#" Value="public static string StartupPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string StartupPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.StartupPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho para o arquivo executável que iniciou o aplicativo, não incluindo o nome do executável.</summary>
+        <value>O caminho para o arquivo executável que iniciou o aplicativo.  
+  
+ Esse caminho será diferente dependendo se o aplicativo do Windows Forms for implantado com o uso de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]aplicativos são armazenados em um cache de aplicativo por usuário na pasta C:\Documents and configurações\\*username* directory. Para obter mais informações, confira [Acessando dados locais e remotos em aplicativos ClickOnce](http://msdn.microsoft.com/library/be5cbe12-6cb6-49c9-aa59-a1624e1eef3d).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém essa propriedade e exibe seu valor em uma caixa de texto. O exemplo requer que `textBox1` foi colocado em um formulário.  
+  
+ [!code-cpp[Classic Application.StartupPath Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.StartupPath Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.StartupPath Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.StartupPath Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.StartupPath Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.StartupPath Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para obter o caminho. Enumeração associada: <see cref="T:System.Security.Permissions.FileIOPermissionAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadException">
+      <MemberSignature Language="C#" Value="public static event System.Threading.ThreadExceptionEventHandler ThreadException;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Threading.ThreadExceptionEventHandler ThreadException" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Application.ThreadException" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadExceptionEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma exceção de thread não interceptada é gerada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento permite que seu aplicativo de formulários do Windows para outro tipo de identificador sem tratamento exceções que ocorrem em threads de formulários do Windows. Anexar seus manipuladores de eventos para o <xref:System.Windows.Forms.Application.ThreadException> eventos para lidar com essas exceções, o que deixará o aplicativo em um estado desconhecido. Sempre que possível, exceções devem ser tratadas por uma bloco de tratamento de exceções estruturado.  
+  
+ Você pode alterar se esse retorno de chamada é usado para exceções não tratadas de thread de formulários do Windows, definindo <xref:System.Windows.Forms.Application.SetUnhandledExceptionMode%2A>. Capturar exceções que ocorrem em threads não criados e pertencentes a formulários do Windows, use o <xref:System.AppDomain.UnhandledException> manipulador de eventos.  
+  
+> [!NOTE]
+>  Para garantir que nenhum ativações desse evento estiverem perdidas, você deve anexar um manipulador antes de chamar <xref:System.Windows.Application.Run%2A?displayProperty=nameWithType>.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define os manipuladores de eventos para exceções que ocorrem em threads de formulários do Windows e exceções que ocorrem em outros threads. Ele define <xref:System.Windows.Forms.Application.SetUnhandledExceptionMode%2A> para que todas as exceções são manipuladas pelo aplicativo, independentemente das configurações no arquivo de configuração de usuário do aplicativo. Ele usa o <xref:System.Windows.Forms.Application.ThreadException> eventos para lidar com exceções de thread de interface do usuário e o <xref:System.AppDomain.UnhandledException> eventos para lidar com exceções do thread sem interface do usuário. Como <xref:System.AppDomain.UnhandledException> não pode impedir que um aplicativo de encerrar, o exemplo simplesmente registra o erro no log de eventos do aplicativo antes do encerramento.  
+  
+ Este exemplo supõe que você define dois <xref:System.Windows.Forms.Button> controles, `button1` e `button2`, no seu <xref:System.Windows.Forms.Form> classe.  
+  
+ [!code-cpp[Classic Application.ThreadException Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Application.ThreadException Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Application.ThreadException Example/CS/source.cs#1)]
+ [!code-vb[Classic Application.ThreadException Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Application.ThreadException Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para o chamador imediato chamar código não gerenciado, ao adicionar um manipulador para esse evento. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadExit">
+      <MemberSignature Language="C#" Value="public static event EventHandler ThreadExit;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ThreadExit" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Application.ThreadExit" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um thread está prestes a ser desligado. Quando o thread principal de um aplicativo está prestes a ser desligado, esse evento é acionado primeiro, seguido por um evento <see cref="E:System.Windows.Forms.Application.ApplicationExit" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve anexar os manipuladores de eventos para o <xref:System.Windows.Forms.Application.ThreadExit> sem tratamento de evento para executar qualquer um, tarefas necessárias antes do thread de execução é interrompida. Feche os arquivos abertos por esse thread ou descarte de objetos que o coletor de lixo não recuperou.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Application.ThreadExit> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um Windows Forms e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Application.ThreadExit> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#6)]
+ [!code-vb[System.Windows.Forms.EventExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterMessageLoop">
+      <MemberSignature Language="C#" Value="public static void UnregisterMessageLoop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UnregisterMessageLoop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Application.UnregisterMessageLoop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela o registro o retorno de chamada de loop de mensagem feito com <see cref="M:System.Windows.Forms.Application.RegisterMessageLoop(System.Windows.Forms.Application.MessageLoopCallback)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAppDataPath">
+      <MemberSignature Language="C#" Value="public static string UserAppDataPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string UserAppDataPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.UserAppDataPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho para os dados de aplicativo de um usuário.</summary>
+        <value>O caminho para os dados de aplicativo de um usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um caminho não existir, um será criado no seguinte formato:  
+  
+ *Caminho de base*\\<xref:System.Windows.Forms.Application.CompanyName%2A>\\<xref:System.Windows.Forms.Application.ProductName%2A>\\<xref:System.Windows.Forms.Application.ProductVersion%2A>  
+  
+ Dados armazenados nesse caminho faz parte do perfil de usuário que está habilitado para o roaming. Um usuário móvel funciona em mais de um computador em uma rede. O perfil de usuário móvel é mantido em um servidor na rede e é carregado em um sistema quando o usuário fizer logon. Para um perfil de usuário a serem considerados para roaming, o sistema operacional deve dar suporte a perfis de roaming e ele deve ser habilitado.  
+  
+ Um caminho de base comum é C:\Documents and Settings\\*username*\Application Data. Esse caminho será diferente, no entanto, se o aplicativo do Windows Forms é implantado usando [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]cria seu próprio diretório de dados de aplicativo que é isolado de todos os outros aplicativos. Para obter mais informações, confira [Acessando dados locais e remotos em aplicativos ClickOnce](http://msdn.microsoft.com/library/be5cbe12-6cb6-49c9-aa59-a1624e1eef3d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe duas formas e sai do aplicativo quando as duas formas estão fechadas. Quando o aplicativo é iniciado e é encerrado, a posição de cada formulário será lembrada. Este exemplo demonstra como usar o <xref:System.Windows.Forms.Application.UserAppDataPath%2A> propriedade para armazenar dados de aplicativo para o usuário.  
+  
+ A classe `MyApplicationContext` herda de <xref:System.Windows.Forms.ApplicationContext> e mantém o controle quando cada formulário está fechado e o segmento atual é encerrado quando ambos são. A classe armazena as posições de cada formulário para o usuário. Os dados de posição do formulário são armazenados em um arquivo denominado `Appdata.txt` que é criado no local determinado pelo <xref:System.Windows.Forms.Application.UserAppDataPath%2A>. O `Main` chamadas de método `Application.Run(context)` para iniciar o aplicativo recebido o <xref:System.Windows.Forms.ApplicationContext>.  
+  
+ Esse código é um trecho do exemplo mostrado o <xref:System.Windows.Forms.ApplicationContext> visão geral da classe. Um código não é exibido para fins de brevidade. Consulte <xref:System.Windows.Forms.ApplicationContext> para a listagem de código inteiro.  
+  
+ [!code-cpp[Application#5](~/samples/snippets/cpp/VS_Snippets_Winforms/Application/CPP/source.cpp#5)]
+ [!code-csharp[Application#5](~/samples/snippets/csharp/VS_Snippets_Winforms/Application/CS/source.cs#5)]
+ [!code-vb[Application#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Application/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAppDataRegistry">
+      <MemberSignature Language="C#" Value="public static Microsoft.Win32.RegistryKey UserAppDataRegistry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Win32.RegistryKey UserAppDataRegistry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.UserAppDataRegistry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave do Registro dos dados de aplicativo de um usuário.</summary>
+        <value>Um <see cref="T:Microsoft.Win32.RegistryKey" /> que representa a chave do Registro dos dados de aplicativo específicos para o usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a chave não existir, ele será criado no seguinte formato:  
+  
+ CurrentUser\Software\\<xref:System.Windows.Forms.Application.CompanyName%2A>\\<xref:System.Windows.Forms.Application.ProductName%2A>\\<xref:System.Windows.Forms.Application.ProductVersion%2A>   
+  
+ Dados armazenados nessa chave faz parte do perfil de usuário que está habilitado para o roaming. Um usuário móvel funciona em mais de um computador em uma rede. O perfil de usuário móvel é mantido em um servidor na rede e é carregado em um sistema quando o usuário fizer logon. Para um perfil de usuário a serem considerados para roaming, o sistema operacional deve dar suporte a perfis de roaming e ele deve ser habilitado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseWaitCursor">
+      <MemberSignature Language="C#" Value="public static bool UseWaitCursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool UseWaitCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.UseWaitCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o cursor de espera é usado para todos os formulários abertos do aplicativo.</summary>
+        <value>
+          <see langword="true" /> é o cursor de espera usado para todos os formulários abertos; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, o <xref:System.Windows.Forms.Control.UseWaitCursor%2A> definirá a propriedade de todos os formulários abertos no aplicativo `true`. Essa chamada não retornará até que essa propriedade foi definida em todos os formulários. Use essa propriedade quando você tem uma operação de longa execução e para indicar em todos os formulários de aplicativo que a operação ainda está processando.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualStyleState">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleState VisualStyleState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Forms.VisualStyles.VisualStyleState VisualStyleState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Application.VisualStyleState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica como os estilos visuais são aplicados às janelas do aplicativo.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Windows.Forms.Application.VisualStyleState%2A> propriedade determina se os estilos visuais estão habilitados em áreas de cliente ou áreas não clientes do windows do aplicativo. Em geral, essa propriedade deve ser definida no construtor do formulário principal ou <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.Application.VisualStyleState%2A> propriedade para um do <xref:System.Windows.Forms.VisualStyles.VisualStyleState?displayProperty=nameWithType> valores dentro de <xref:System.Windows.Forms.Control.Click> manipulador de eventos para um <xref:System.Windows.Forms.Button> controle. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.VisualStyles.VisualStyleState?displayProperty=nameWithType> enumeração.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleState#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleState/cpp/visualstylestate.cpp#10)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleState#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleState/CS/visualstylestate.cs#10)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleState#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleState/VB/visualstylestate.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

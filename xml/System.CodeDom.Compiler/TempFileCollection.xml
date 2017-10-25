@@ -1,0 +1,693 @@
+<Type Name="TempFileCollection" FullName="System.CodeDom.Compiler.TempFileCollection">
+  <TypeSignature Language="C#" Value="public class TempFileCollection : IDisposable, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TempFileCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.TempFileCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma coleção de arquivos temporários.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.TempFileCollection>pode ser usado para gerar nomes de arquivo exclusivo e manter o controle de uma lista de arquivos. Isso pode ser útil para <xref:System.CodeDom.Compiler.ICodeCompiler> implementadores ao gerenciar uma lista de arquivos intermediários de gerado pelo compilador, que às vezes são excluídos após o uso.  
+  
+ Para especificar um diretório para gerar nomes de arquivo temporário exclusivo em, use um construtor sobrecarregado adequadamente. Você também pode usar uma sobrecarga de construtor para indicar se arquivos adicionados à coleção devem, se não especificado, caso contrário, ao usar o <xref:System.CodeDom.Compiler.TempFileCollection.AddFile%2A> ou <xref:System.CodeDom.Compiler.TempFileCollection.AddExtension%2A> métodos, ser excluído quando a coleção é descartada ou <xref:System.CodeDom.Compiler.TempFileCollection.Delete%2A> método é chamado.  
+  
+ Um arquivo em qualquer diretório pode ser adicionado a uma instância de <xref:System.CodeDom.Compiler.TempFileCollection> usando o <xref:System.CodeDom.Compiler.TempFileCollection.AddFile%2A> método.  
+  
+ Para gerar um nome exclusivo para um arquivo temporário de uma extensão de arquivo específico, chame <xref:System.CodeDom.Compiler.TempFileCollection.AddExtension%2A> e especifique a extensão do nome do arquivo para gerar. O <xref:System.CodeDom.Compiler.TempFileCollection.AddExtension%2A> método retornará uma cadeia de caracteres que consiste em um caminho completo para um nome de arquivo da extensão especificada no diretório especificado o <xref:System.CodeDom.Compiler.TempFileCollection.TempDir%2A> propriedade. O <xref:System.CodeDom.Compiler.TempFileCollection.AddExtension%2A> método só retornará um nome de arquivo exclusivo por extensão de nome de arquivo.  
+  
+ Tanto o <xref:System.CodeDom.Compiler.TempFileCollection.AddFile%2A> e <xref:System.CodeDom.Compiler.TempFileCollection.AddExtension%2A> métodos têm sobrecargas que permitem que você especifique se os arquivos devem ser excluídos quando a coleção é descartada ou <xref:System.CodeDom.Compiler.TempFileCollection.Delete%2A> método é chamado.  
+  
+ O <xref:System.CodeDom.Compiler.TempFileCollection.Delete%2A> método excluirá todos os arquivos da coleção, exceto aqueles que são marcados para ser mantido.  
+  
+ O <xref:System.CodeDom.Compiler.TempFileCollection.BasePath%2A> propriedade indica um caminho completo para o nome de arquivo base, sem uma extensão de nome de arquivo usado para gerar os nomes de arquivo retornados pelo <xref:System.CodeDom.Compiler.TempFileCollection.AddExtension%2A> método.  
+  
+> [!NOTE]
+>  Esta classe contém uma demanda de link e uma demanda de herança no nível de classe que se aplica a todos os membros. Um <xref:System.Security.SecurityException> é lançado quando o chamador imediato ou a classe derivada não tem permissão de confiança total. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md) e [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.CodeDom.Compiler.TempFileCollection> classe e o <xref:System.CodeDom.Compiler.TempFileCollection.AddExtension%2A> e <xref:System.CodeDom.Compiler.TempFileCollection.AddFile%2A> métodos.  
+  
+ [!code-csharp[System.CodeDom.Compiler.TempFileCollection#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.Compiler.TempFileCollection/CS/program.cs#1)]
+ [!code-vb[System.CodeDom.Compiler.TempFileCollection#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.Compiler.TempFileCollection/VB/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para derivar do <see cref="T:System.CodeDom.Compiler.TempFileCollection" /> classe. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; <see cref="T:System.Security.PermissionSet" />: <see langword="FullTrust" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TempFileCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.Compiler.TempFileCollection" /> com valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um construtor padrão que inicializa a coleção com as configurações padrão. Por padrão, essa coleção de arquivos temporários serão armazenados os arquivos em um diretório temporário padrão e excluirá os arquivos temporários após ter sido geradas e usadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TempFileCollection (string tempDir);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tempDir) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tempDir" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tempDir">Um caminho para o diretório temporário a ser usado para armazenar os arquivos temporários.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.Compiler.TempFileCollection" /> classe usando o diretório temporário especificado que é definido para excluir os arquivos temporários após sua geração e uso, por padrão.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TempFileCollection (string tempDir, bool keepFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tempDir, bool keepFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tempDir" Type="System.String" />
+        <Parameter Name="keepFiles" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tempDir">Um caminho para o diretório temporário a ser usado para armazenar os arquivos temporários.</param>
+        <param name="keepFiles">
+          <see langword="true" />Se os arquivos temporários devem ser mantidos após o uso; <see langword="false" /> se os arquivos temporários devem ser excluídos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.Compiler.TempFileCollection" /> classe usando o diretório temporário especificado e o valor especificado, que indica se deseja manter ou excluir os arquivos temporários após sua geração e uso, por padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de `keepFiles` é usado para definir o <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> parâmetro. Os arquivos temporários na coleção são retidos ou excluídos após a conclusão da atividade de compilador com base no valor da <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> propriedade na coleção. Como cada arquivo é adicionado à coleção, o valor atual de <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> é associado a ele, a menos que ele é adicionado com um método que tem um `keepFile` parâmetro, caso em que esse valor será usado para esse arquivo específico. Quando o <xref:System.CodeDom.Compiler.TempFileCollection.Delete%2A> método é chamado, se <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> é `true`, todos os arquivos são excluídos, inclusive aqueles adicionados com uma <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> valor `true`. Isso permite que arquivos específicos, identificadas como sendo a manter os arquivos, para ser temporariamente mantidos após a compilação para fins como relatório de erros e excluído quando não são mais necessários.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AddExtension">
+      <MemberSignature Language="C#" Value="public string AddExtension (string fileExtension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string AddExtension(string fileExtension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.AddExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileExtension" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileExtension">A extensão de nome de arquivo para o nome de arquivo temporário gerado automaticamente adicionar à coleção.</param>
+        <summary>Adiciona um nome de arquivo com a extensão de nome de arquivo especificado à coleção.</summary>
+        <returns>Um nome de arquivo com a extensão especificada que acabou de ser adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna um nome de arquivo com a extensão especificada que foi adicionado à coleção de arquivos temporários. Outro código ainda deve criar o arquivo antes de ser usada.  
+  
+ Esse método pode ser chamado apenas uma vez para cada extensão de nome de arquivo, porque ele retornará o mesmo nome se for chamado com a mesma extensão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddExtension">
+      <MemberSignature Language="C#" Value="public string AddExtension (string fileExtension, bool keepFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string AddExtension(string fileExtension, bool keepFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.AddExtension(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileExtension" Type="System.String" />
+        <Parameter Name="keepFile" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fileExtension">A extensão de nome de arquivo para o nome de arquivo temporário gerado automaticamente adicionar à coleção.</param>
+        <param name="keepFile">
+          <see langword="true" />Se o arquivo deve ser mantido após o uso; <see langword="false" /> se o arquivo deve ser excluído.</param>
+        <summary>Adiciona um nome de arquivo com a extensão de nome de arquivo especificado na coleção, usando o valor especificado, que indica se o arquivo deve ser excluído ou retido.</summary>
+        <returns>Um nome de arquivo com a extensão especificada que acabou de ser adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna um nome de arquivo com a extensão especificada que foi adicionado à coleção de arquivos temporários. Outro código ainda deve criar o arquivo antes de ser usada.  
+  
+ Esse método pode ser chamado apenas uma vez para cada extensão de nome de arquivo, porque ele retornará o mesmo nome se for chamado com a mesma extensão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="fileExtension" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFile">
+      <MemberSignature Language="C#" Value="public void AddFile (string fileName, bool keepFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFile(string fileName, bool keepFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.AddFile(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="keepFile" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo a ser adicionado à coleção.</param>
+        <param name="keepFile">
+          <see langword="true" />Se o arquivo deve ser mantido após o uso; <see langword="false" /> se o arquivo deve ser excluído.</param>
+        <summary>Adiciona o arquivo especificado na coleção, usando o valor especificado, que indica se deve manter o arquivo depois que a coleção é descartada ou quando o <see cref="M:System.CodeDom.Compiler.TempFileCollection.Delete" /> método é chamado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.CodeDom.Compiler.TempFileCollection.AddFile%28System.String%2CSystem.Boolean%29> para adicionar um arquivo que será mantida na coleção. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.CodeDom.Compiler.TempFileCollection> classe.  
+  
+ [!code-csharp[System.CodeDom.Compiler.TempFileCollection#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.Compiler.TempFileCollection/CS/program.cs#2)]
+ [!code-vb[System.CodeDom.Compiler.TempFileCollection#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.Compiler.TempFileCollection/VB/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="fileName" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="fileName" />é uma duplicata.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BasePath">
+      <MemberSignature Language="C#" Value="public string BasePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BasePath" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.TempFileCollection.BasePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho completo para o nome de arquivo base, sem uma extensão de nome de arquivo, no caminho de diretório temporário, usado para gerar nomes de arquivo temporários para a coleção.</summary>
+        <value>O caminho completo para o nome de arquivo base, sem uma extensão de nome de arquivo, no caminho de diretório temporário, usado para gerar nomes de arquivo temporários para a coleção.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Se a propriedade <see cref="P:System.CodeDom.Compiler.TempFileCollection.BasePath" /> não tiver sido definida ou for definida como <see langword="null" /> e <see cref="F:System.Security.Permissions.FileIOPermissionAccess.AllAccess" /> não for concedido ao diretório temporário indicado pela propriedade <see cref="P:System.CodeDom.Compiler.TempFileCollection.TempDir" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (string[] fileNames, int start);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(string[] fileNames, int32 start) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.CopyTo(System.String[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileNames" Type="System.String[]" />
+        <Parameter Name="start" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fileNames">A matriz de cadeias de caracteres para copiar.</param>
+        <param name="start">O índice da matriz para começar a copiar.</param>
+        <summary>Copia os membros da coleção de cadeia de caracteres especificada, começando no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.TempFileCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de arquivos na coleção.</summary>
+        <value>O número de arquivos na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui os arquivos temporários dentro desta coleção que não estavam marcados para ser mantido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.CodeDom.Compiler.TempFileCollection.Delete%2A> método examina cada arquivo na coleção para determinar, individualmente, se o arquivo será mantido ou excluído. Arquivos podem ser marcados explicitamente para ser mantida quando adicionado à coleção usando Adicionar métodos que usam um `keepFile` parâmetro. Ao adicionar um arquivo à coleção usando o <xref:System.CodeDom.Compiler.TempFileCollection.AddExtension%2A> sobrecarga que não tem um `keepFile` o valor do parâmetro do <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> propriedade é usada como indicador de arquivo de manter o padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.CodeDom.Compiler.TempFileCollection" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.CodeDom.Compiler.TempFileCollection> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tome cuidado para não referenciar objetos que tenham sido descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~TempFileCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Tentativa de excluir os arquivos temporários para que esse objeto é recuperado pela coleta de lixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui <xref:System.Object.Finalize%2A?displayProperty=nameWithType> e limpa os recursos chamando `Dispose(false)`. Substituir `Dispose(Boolean)` para personalizar a limpeza.  
+  
+ O código do aplicativo não deve chamar este método; o método `Finalize` de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType>.  
+  
+ Para obter mais informações, consulte [métodos Finalize e destruidores](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md), e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um enumerador que pode enumerar os membros da coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que contém os membros da coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepFiles">
+      <MemberSignature Language="C#" Value="public bool KeepFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepFiles" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.TempFileCollection.KeepFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deseja manter os arquivos, por padrão, quando o <see cref="M:System.CodeDom.Compiler.TempFileCollection.Delete" /> método é chamado ou a coleção é descartada.</summary>
+        <value>
+          <see langword="true" />Se os arquivos devem ser mantidos; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> propriedade é usada como padrão quando o <xref:System.CodeDom.Compiler.TempFileCollection.AddExtension%2A> sobrecarga que não tem um `keepFile` parâmetro é chamado para adicionar um arquivo temporário para a coleção. Cada arquivo temporário na coleção tem um sinalizador de arquivo manter associado que determina, em uma base por arquivo, se esse arquivo deve ser mantido ou excluído. Arquivos automaticamente são mantidos ou excluídos após a conclusão da compilação com base em seu valor de arquivos de manutenção associados. No entanto, após a conclusão da compilação, os arquivos que foram mantidos podem ser liberados definindo <xref:System.CodeDom.Compiler.TempFileCollection.KeepFiles%2A> false e chamar o <xref:System.CodeDom.Compiler.TempFileCollection.Delete%2A> método.  Isso resultará em todos os arquivos que está sendo excluídos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int start);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 start) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="start" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ICollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="start">O índice baseado em zero na matriz na qual a cópia é iniciada.</param>
+        <summary>Copia os elementos da coleção para uma matriz, começando no índice especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.CodeDom.Compiler.TempFileCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.TempFileCollection.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos na coleção.</summary>
+        <value>O número de elementos contidos no <see cref="T:System.Collections.ICollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.CodeDom.Compiler.TempFileCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.TempFileCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.CodeDom.Compiler.TempFileCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.TempFileCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.CodeDom.Compiler.TempFileCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera em uma coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.CodeDom.Compiler.TempFileCollection> é convertida em uma interface de <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.TempFileCollection.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Realiza tarefas definidas pelo aplicativo associadas à liberação ou à redefinição de recursos não gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.CodeDom.Compiler.TempFileCollection> é convertida em uma interface de <xref:System.IDisposable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TempDir">
+      <MemberSignature Language="C#" Value="public string TempDir { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TempDir" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.TempFileCollection.TempDir" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o diretório temporário para armazenar os arquivos temporários.</summary>
+        <value>O diretório temporário para armazenar os arquivos temporários.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

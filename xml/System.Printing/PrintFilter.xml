@@ -1,0 +1,57 @@
+<Type Name="PrintFilter" FullName="System.Printing.PrintFilter">
+  <TypeSignature Language="C#" Value="public abstract class PrintFilter : System.Printing.PrintSystemObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PrintFilter extends System.Printing.PrintSystemObject" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Printing.PrintSystemObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define o comportamento de descarte que é comum para ambos os <see cref="T:System.Printing.PrintDriver" /> e <see cref="T:System.Printing.PrintProcessor" /> classes. <see cref="T:System.Printing.PrintFilter" />oferece suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usado diretamente no seu código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo Windows Forms, consulte o <xref:System.Drawing.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InternalDispose">
+      <MemberSignature Language="C#" Value="protected override void InternalDispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InternalDispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintFilter.InternalDispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pela classe derivada de <see cref="T:System.Printing.PrintFilter" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

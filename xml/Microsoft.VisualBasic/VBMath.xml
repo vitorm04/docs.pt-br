@@ -1,0 +1,222 @@
+<Type Name="VBMath" FullName="Microsoft.VisualBasic.VBMath">
+  <TypeSignature Language="C#" Value="public sealed class VBMath" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VBMath extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.VBMath" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O módulo <see langword="VbMath" /> contém procedimentos usados para executar operações matemáticas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este módulo oferece suporte a palavras-chave de linguagem Visual Basic e membros da biblioteca em tempo de execução para gerar números aleatórios.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Rnd` função para gerar um valor inteiro aleatório no intervalo de 1 a 6.  
+  
+ [!code-vb[VbVbalrMath#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Randomize">
+      <MemberSignature Language="C#" Value="public static void Randomize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static void Randomize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBMath.Randomize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o gerador de número aleatório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do `Randomize` método não tem um valor de semente. Em vez disso, o valor retornado pelo timer do sistema é usado como o novo valor de semente.  
+  
+ Se `Randomize` não for usado, o `Rnd` função (sem nenhum argumento) usa o mesmo número como uma semente na primeira vez que ele é chamado e consequentemente usa o último número gerado como um valor de semente.  
+  
+> [!NOTE]
+>  Para repetir sequências de números aleatórios, chame `Rnd` com um argumento negativo imediatamente antes de usar `Randomize` com um argumento numérico.  
+  
+> [!IMPORTANT]
+>  Porque o `Random` instrução e o `Rnd` função começar com um valor de semente e gerar números que se enquadram dentro de um intervalo finito, os resultados podem ser previsíveis por alguém que conheça o algoritmo usado para gerá-los. Consequentemente, o `Random` instrução e o `Rnd` função não deve ser usada para gerar números aleatórios para uso na criptografia. Para obter mais informações, consulte <xref:System.Security.Cryptography.RandomNumberGenerator>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Randomize` instrução para inicializar o gerador de número aleatório. Porque o número de argumentos foi omitido, `Randomize` usa o valor de retorno de `Timer` funcionar como o novo valor de semente.  
+  
+ [!code-vb[VbVbalrMath#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Randomize">
+      <MemberSignature Language="C#" Value="public static void Randomize (double Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void Randomize(float64 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBMath.Randomize(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Opcional. Um <see langword="Object" /> ou qualquer expressão numérica válida.</param>
+        <summary>Inicializa o gerador de número aleatório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Randomize`usa `Number` para inicializar o `Rnd` gerador de número aleatório da função, dando a ele um novo valor de semente. Se você omitir `Number`, o valor retornado pelo timer do sistema é usado como o novo valor de semente.  
+  
+ Se `Randomize` não for usado, o `Rnd` função (sem nenhum argumento) usa o mesmo número como uma semente na primeira vez que ele é chamado e consequentemente usa o último número gerado como um valor de semente.  
+  
+> [!NOTE]
+>  Para repetir sequências de números aleatórios, chame `Rnd` com um argumento negativo imediatamente antes de usar `Randomize` com um argumento numérico. Usando `Randomize` com o mesmo valor para `Number` não repete a sequência anterior.  
+  
+> [!IMPORTANT]
+>  Porque o `Random` instrução e o `Rnd` função começar com um valor de semente e gerar números que se enquadram dentro de um intervalo finito, os resultados podem ser previsíveis por alguém que conheça o algoritmo usado para gerá-los. Consequentemente, o `Random` instrução e o `Rnd` função não deve ser usada para gerar números aleatórios para uso na criptografia. Para obter mais informações, consulte <xref:System.Security.Cryptography.RandomNumberGenerator>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Randomize` instrução para inicializar o gerador de número aleatório. Porque o número de argumentos foi omitido, `Randomize` usa o valor de retorno de `Timer` funcionar como o novo valor de semente.  
+  
+ [!code-vb[VbVbalrMath#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rnd">
+      <MemberSignature Language="C#" Value="public static float Rnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 Rnd() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBMath.Rnd" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um número aleatório do tipo <see langword="Single" />.</summary>
+        <returns>O próximo número aleatório na sequência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Rnd` função retorna um valor menor que 1, mas maior ou igual a zero.  
+  
+ Antes de chamar `Rnd`, use o `Randomize` instrução sem um argumento para inicializar o gerador de número aleatório com uma semente com base no timer do sistema.  
+  
+ Para produzir inteiros aleatórios em um determinado intervalo, use a fórmula a seguir.  
+  
+ [!code-vb[VbVbalrMath#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#30)]  
+  
+ Aqui, `upperbound` é o número mais alto no intervalo, e `lowerbound` é o menor número no intervalo.  
+  
+> [!NOTE]
+>  Para repetir sequências de números aleatórios, chame `Rnd` com um argumento negativo imediatamente antes de usar `Randomize` com um argumento numérico.  
+  
+> [!IMPORTANT]
+>  Porque o `Random` instrução e o `Rnd` função começar com um valor de semente e gerar números que se enquadram dentro de um intervalo finito, os resultados podem ser previsíveis por alguém que conheça o algoritmo usado para gerá-los. Consequentemente, o `Random` instrução e o `Rnd` função não deve ser usada para gerar números aleatórios para uso na criptografia.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Rnd` função para gerar um valor inteiro aleatório no intervalo de 1 a 6.  
+  
+ [!code-vb[VbVbalrMath#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rnd">
+      <MemberSignature Language="C#" Value="public static float Rnd (float Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 Rnd(float32 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBMath.Rnd(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Opcional. Um valor <see langword="Single" /> ou uma expressão <see langword="Single" /> válida.</param>
+        <summary>Retorna um número aleatório do tipo <see langword="Single" />.</summary>
+        <returns>Se o número for menor que zero, Rnd sempre gerará o mesmo número, usando <paramref name="Number" /> como a semente. Se o número for maior que zero, Rnd gerará o próximo número aleatório na sequência. Se o número for igual a zero, Rnd gerará o número gerado mais recentemente. Se o número não for fornecido, Rnd gerará o próximo número aleatório na sequência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Rnd` função retorna um valor menor que 1, mas maior ou igual a zero.  
+  
+ O valor de `Number` determina como `Rnd` gera um número aleatório.  
+  
+ Para qualquer propagação inicial, a mesma sequência de número é gerada porque cada chamada sucessiva para a `Rnd` função usa o número gerado anteriormente como uma semente para o próximo número na sequência.  
+  
+ Antes de chamar `Rnd`, use o `Randomize` instrução sem um argumento para inicializar o gerador de número aleatório com uma semente com base no timer do sistema.  
+  
+ Para produzir inteiros aleatórios em um determinado intervalo, use a fórmula a seguir.  
+  
+ [!code-vb[VbVbalrMath#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#30)]  
+  
+ Aqui, `upperbound` é o número mais alto no intervalo, e `lowerbound` é o menor número no intervalo.  
+  
+> [!NOTE]
+>  Para repetir sequências de números aleatórios, chame `Rnd` com um argumento negativo imediatamente antes de usar `Randomize` com um argumento numérico. Usando `Randomize` com o mesmo valor para `Number` não repete a sequência anterior.  
+  
+> [!IMPORTANT]
+>  Porque o `Random` instrução e o `Rnd` função começar com um valor de semente e gerar números que se enquadram dentro de um intervalo finito, os resultados podem ser previsíveis por alguém que conheça o algoritmo usado para gerá-los. Consequentemente, o `Random` instrução e o `Rnd` função não deve ser usada para gerar números aleatórios para uso na criptografia.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Rnd` função para gerar um valor inteiro aleatório no intervalo de 1 a 6.  
+  
+ [!code-vb[VbVbalrMath#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,433 @@
+<Type Name="ListBoxItem" FullName="System.Windows.Controls.ListBoxItem">
+  <TypeSignature Language="C#" Value="public class ListBoxItem : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ListBoxItem extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ListBoxItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Selected")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um item selecionável em um <see cref="T:System.Windows.Controls.ListBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.ListBox> contém uma coleção de <xref:System.Windows.Controls.ListBoxItem> objetos. Para selecionar um <xref:System.Windows.Controls.ListBoxItem> em uma <xref:System.Windows.Controls.ListBox>, defina o <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> propriedade `true`.  
+  
+ Associar um <xref:System.Windows.Controls.ListBoxItem> dados vinculando a <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade de um <xref:System.Windows.Controls.ListBox> para uma fonte de dados. Para obter mais informações, consulte [como: associar uma caixa de listagem dados](~/docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md). Você pode personalizar a aparência de um <xref:System.Windows.Controls.ListBoxItem> definindo o <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> propriedade de um <xref:System.Windows.Controls.ListBox> para um <xref:System.Windows.DataTemplate>.  Para obter mais informações, consulte [Visão geral de modelagem de dados](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+ Por padrão, o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> de um <xref:System.Windows.Controls.ListBoxItem> é definido como <xref:System.Windows.HorizontalAlignment.Stretch>. A posição horizontal padrão de um <xref:System.Windows.Controls.StackPanel> é <xref:System.Windows.HorizontalAlignment.Center>. Se você definir o <xref:System.Windows.FrameworkElement.Width%2A> propriedade de um <xref:System.Windows.Controls.ListBoxItem> por meio de um <xref:System.Windows.Controls.StackPanel>, padrão do painel é aplicada e o item é centralizado.  
+  
+ Um <xref:System.Windows.Controls.ListBoxItem> é um <xref:System.Windows.Controls.ContentControl>, que significa que ele pode conter um único objeto de qualquer tipo (como uma cadeia de caracteres, uma imagem ou um painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ContentControl>.  
+  
+## <a name="customizing-the-listboxitem-control"></a>Personalizando o controle de ListBoxItem  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.ListBoxItem> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.ListBoxItem>, consulte [modelos e estilos de caixa de listagem](~/docs/framework/wpf/controls/listbox-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.ListBoxItem> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Windows.Controls.ListBox> que contém <xref:System.Windows.Controls.ListBoxItem> elementos.  
+  
+ [!code-xaml[ListBoxEvent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListBoxItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBoxItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.ListBoxItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelected">
+      <MemberSignature Language="C#" Value="public bool IsSelected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ListBoxItem.IsSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Windows.Controls.ListBoxItem" /> está selecionado.</summary>
+        <value>
+          <see langword="true" /> se o item estiver selecionado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para selecionar um <xref:System.Windows.Controls.ListBoxItem> em uma <xref:System.Windows.Controls.ListBox>, defina essa propriedade como `true`.  
+  
+<a name="dependencyPropertyInfo_IsSelected"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ListBoxItem.IsSelectedProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um item de caixa de lista para ser selecionado quando a caixa de listagem é criada.  
+  
+ [!code-xaml[ListBox_snip#ListBoxItemsIsSelected1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBox_snip/CSharp/Window1.xaml#listboxitemsisselected1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ListBoxItem.IsSelectedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ListBoxItem.IsSelected" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBoxItem.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um apropriado <see cref="T:System.Windows.Automation.Peers.ListBoxItemAutomationPeer" /> implementação para este controle, como parte do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] infra-estrutura de automação.</summary>
+        <returns>A implementação de <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> específica ao tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBoxItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o mouse entra em um <see cref="T:System.Windows.Controls.ListBoxItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBoxItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o mouse sai um <see cref="T:System.Windows.Controls.ListBoxItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBoxItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o usuário pressiona o botão direito do mouse sobre o <see cref="T:System.Windows.Controls.ListBoxItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseRightButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseRightButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseRightButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBoxItem.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o usuário pressiona o botão direito do mouse sobre um <see cref="T:System.Windows.Controls.ListBoxItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelected">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelected (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelected(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBoxItem.OnSelected(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o <see cref="T:System.Windows.Controls.ListBoxItem" /> está selecionado em um <see cref="T:System.Windows.Controls.ListBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado quando o <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> alteração na propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnselected">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnselected (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUnselected(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBoxItem.OnUnselected(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o <see cref="T:System.Windows.Controls.ListBoxItem" /> está desmarcada em um <see cref="T:System.Windows.Controls.ListBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado quando o <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> alteração na propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualParentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisualParentChanged (System.Windows.DependencyObject oldParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnVisualParentChanged(class System.Windows.DependencyObject oldParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ListBoxItem.OnVisualParentChanged(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldParent" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="oldParent">Anterior <see cref="P:System.Windows.FrameworkElement.Parent" /> propriedade o <see cref="T:System.Windows.Controls.ListBoxItem" />.</param>
+        <summary>Chamado quando o visual pai de um item de caixa de listagem é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Selected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Selected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.ListBoxItem.Selected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Controls.ListBoxItem" /> é selecionado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para saber quando a seleção em um <xref:System.Windows.Controls.ListBox> alterações, espere o <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> evento.  
+  
+<a name="routedEventInfo_Selected"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ListBoxItem.SelectedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como assinar e tratar esse evento.  
+  
+ [!code-xaml[ListBox_snip#ListBoxItemsEvents](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBox_snip/CSharp/Window1.xaml#listboxitemsevents)]  
+  
+ [!code-csharp[ListBox_snip#ListBoxItemsEventSelected](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBox_snip/CSharp/Window1.xaml.cs#listboxitemseventselected)]
+ [!code-vb[ListBox_snip#ListBoxItemsEventSelected](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBox_snip/visualbasic/window1.xaml.vb#listboxitemseventselected)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SelectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SelectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ListBoxItem.SelectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.ListBoxItem.Selected" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unselected">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Unselected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Unselected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.ListBoxItem.Unselected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Controls.ListBoxItem" /> é desmarcado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para saber quando a seleção em um <xref:System.Windows.Controls.ListBox> alterações, espere o <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> evento.  
+  
+<a name="routedEventInfo_Unselected"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ListBoxItem.UnselectedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir mostram como assinar e tratar esse evento.  
+  
+ [!code-xaml[ListBox_snip#ListBoxItemsEvents](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBox_snip/CSharp/Window1.xaml#listboxitemsevents)]  
+  
+ [!code-csharp[ListBox_snip#ListBoxItemsEventUnselected](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBox_snip/CSharp/Window1.xaml.cs#listboxitemseventunselected)]
+ [!code-vb[ListBox_snip#ListBoxItemsEventUnselected](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBox_snip/visualbasic/window1.xaml.vb#listboxitemseventunselected)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnselectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent UnselectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent UnselectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ListBoxItem.UnselectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.ListBoxItem.Unselected" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

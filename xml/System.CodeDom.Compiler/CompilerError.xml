@@ -1,0 +1,276 @@
+<Type Name="CompilerError" FullName="System.CodeDom.Compiler.CompilerError">
+  <TypeSignature Language="C#" Value="public class CompilerError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompilerError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CompilerError" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um erro ou aviso de compilador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.CompilerError>representa um erro do compilador ou um aviso que foi retornado pelo compilador.  
+  
+> [!NOTE]
+>  Essa classe contém uma demanda de herança no nível de classe que se aplica a todos os membros. Um <xref:System.Security.SecurityException> é gerada quando a classe derivada não tem permissão de confiança total. Para obter detalhes sobre as exigências de herança, consulte [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir compila um gráfico CodeDOM do programa e fornece um exemplo de como acessar programaticamente CompilerError dados.  
+  
+ [!code-cpp[Classic CompilerError Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic CompilerError Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CompilerError Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic CompilerError Example/CS/source.cs#1)]
+ [!code-vb[Classic CompilerError Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic CompilerError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para derivar do <see cref="T:System.CodeDom.Compiler.CompilerError" /> classe. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; <see cref="T:System.Security.PermissionSet" />: <see langword="FullTrust" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerError.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.Compiler.CompilerError" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerError (string fileName, int line, int column, string errorNumber, string errorText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, int32 line, int32 column, string errorNumber, string errorText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerError.#ctor(System.String,System.Int32,System.Int32,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="line" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+        <Parameter Name="errorNumber" Type="System.String" />
+        <Parameter Name="errorText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo do arquivo que o compilador foi compilar quando encontrou o erro.</param>
+        <param name="line">A linha de origem do erro.</param>
+        <param name="column">A coluna de origem do erro.</param>
+        <param name="errorNumber">O número do erro do erro.</param>
+        <param name="errorText">O texto da mensagem de erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.Compiler.CompilerError" /> classe usando o nome de arquivo especificado, linha, coluna, número do erro e o texto de erro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public int Column { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Column" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerError.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da coluna onde ocorre a origem do erro.</summary>
+        <value>O número da coluna do arquivo de origem em que o compilador encontrou o erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.CodeDom.Compiler.CompilerError.Column%2A> propriedade pode ser definida como zero para compiladores que não retornam informações de coluna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorNumber">
+      <MemberSignature Language="C#" Value="public string ErrorNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorNumber" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerError.ErrorNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número do erro.</summary>
+        <value>O número do erro como uma cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.CodeDom.Compiler.CompilerError.ErrorNumber%2A> propriedade pode conter uma cadeia de caracteres de qualquer comprimento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorText">
+      <MemberSignature Language="C#" Value="public string ErrorText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorText" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerError.ErrorText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto da mensagem de erro.</summary>
+        <value>O texto da mensagem de erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.CodeDom.Compiler.CompilerError.ErrorText%2A> propriedade pode ser uma cadeia de caracteres de qualquer comprimento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerError.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do arquivo do arquivo de origem que contém o código que causou o erro.</summary>
+        <value>O nome do arquivo do arquivo de origem que contém o código que causou o erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWarning">
+      <MemberSignature Language="C#" Value="public bool IsWarning { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWarning" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerError.IsWarning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o erro é um aviso.</summary>
+        <value>
+          <see langword="true" />Se o erro é um aviso; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="public int Line { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Line" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CompilerError.Line" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da linha onde ocorre a origem do erro.</summary>
+        <value>O número da linha do arquivo de origem em que o compilador encontrou o erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CompilerError.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece uma implementação do objeto <see cref="M:System.Object.ToString" /> método.</summary>
+        <returns>Uma representação de cadeia de caracteres de erro do compilador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método tem suporte para <xref:System.CodeDom.Compiler.CompilerError> objetos podem ser tratados como objetos para saída de depuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

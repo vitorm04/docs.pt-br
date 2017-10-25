@@ -1,0 +1,259 @@
+<Type Name="Parallel" FullName="System.Activities.Statements.Parallel">
+  <TypeSignature Language="C#" Value="public sealed class Parallel : System.Activities.NativeActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Parallel extends System.Activities.NativeActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.Parallel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.NativeActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Branches")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Uma atividade que executa todas as atividades filho simultaneamente e de forma assíncrona.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Activities.Statements.Parallel> atividade opera agendando simultaneamente cada <xref:System.Activities.Activity> no seu <xref:System.Activities.Statements.Parallel.Branches%2A> coleção no início. É concluído quando todos os seus <xref:System.Activities.Statements.Parallel.Branches%2A> concluída ou quando seu <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> propriedade for avaliada como `true`. Durante todo o <xref:System.Activities.Activity> objetos executados de forma assíncrona, eles não são executados em threads separados, para cada atividade sucessiva é executada somente quando a atividade agendada anteriormente é concluída ou fica ociosa. Se nenhuma das atividades filho desta atividade ficar ociosa, essa atividade executada da mesma forma que um <xref:System.Activities.Statements.Sequence> atividade faz.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.Parallel> atividade. Este exemplo é proveniente do [manipulador atividade compensável](~/docs/framework/windows-workflow-foundation/samples/cancellation-handler-on-compensable-activity.md) exemplo.  
+  
+ [!code-csharp[wfs_CompensationCancellation#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_compensationcancellation/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Parallel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Parallel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da atividade <see cref="T:System.Activities.Statements.Parallel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.Parallel> atividade. Este exemplo é proveniente do [manipulador atividade compensável](~/docs/framework/windows-workflow-foundation/samples/cancellation-handler-on-compensable-activity.md) exemplo.  
+  
+ [!code-csharp[wfs_CompensationCancellation#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_compensationcancellation/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Branches">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Activities.Activity&gt; Branches { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.Activity&gt; Branches" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Parallel.Branches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("CompletionCondition")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os elementos filho a ser executado em paralelo.</summary>
+        <value>Os elementos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra definindo a propriedade de ramificações de um <xref:System.Activities.Statements.Parallel> atividade. Este exemplo é proveniente do [manipulador atividade compensável](~/docs/framework/windows-workflow-foundation/samples/cancellation-handler-on-compensable-activity.md) exemplo.  
+  
+ [!code-csharp[wfs_CompensationCancellation#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_compensationcancellation/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.NativeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.NativeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Parallel.CacheMetadata(System.Activities.NativeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.NativeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="protected override void Cancel (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Cancel(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Parallel.Cancel(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletionCondition">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;bool&gt; CompletionCondition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;bool&gt; CompletionCondition" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Parallel.CompletionCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Variables")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>É avaliado depois que uma ramificação é concluída.</summary>
+        <value>A expressão de conclusão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade for avaliada como `true`, e outros elementos agendados no <xref:System.Activities.Statements.Parallel.Branches%2A> coleção são canceladas. Se essa propriedade não é definida, o todos <xref:System.Activities.Activity> objetos no <xref:System.Activities.Statements.Parallel.Branches%2A> coleção executar até a conclusão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a definição da propriedade CompletionCondition de um <xref:System.Activities.Statements.Parallel> atividade. Este exemplo é proveniente do [manipulador atividade compensável](~/docs/framework/windows-workflow-foundation/samples/cancellation-handler-on-compensable-activity.md) exemplo.  
+  
+ [!code-csharp[wfs_CompensationCancellation#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_compensationcancellation/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override void Execute (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Execute(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Parallel.Execute(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateDynamicUpdateMap">
+      <MemberSignature Language="C#" Value="protected override void OnCreateDynamicUpdateMap (System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata metadata, System.Activities.Activity originalActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateDynamicUpdateMap(class System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata metadata, class System.Activities.Activity originalActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Parallel.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata" />
+        <Parameter Name="originalActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <param name="originalActivity">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateInstance">
+      <MemberSignature Language="C#" Value="protected override void UpdateInstance (System.Activities.DynamicUpdate.NativeActivityUpdateContext updateContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void UpdateInstance(class System.Activities.DynamicUpdate.NativeActivityUpdateContext updateContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Parallel.UpdateInstance(System.Activities.DynamicUpdate.NativeActivityUpdateContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="updateContext" Type="System.Activities.DynamicUpdate.NativeActivityUpdateContext" />
+      </Parameters>
+      <Docs>
+        <param name="updateContext">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variables">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Activities.Variable&gt; Variables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.Variable&gt; Variables" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Parallel.Variables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.Variable&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A coleção de variáveis independentes.</summary>
+        <value>As variáveis independentes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

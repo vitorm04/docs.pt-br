@@ -1,0 +1,2200 @@
+<Type Name="Delegate" FullName="System.Delegate">
+  <TypeSignature Language="C#" Value="public abstract class Delegate : ICloneable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi abstract serializable beforefieldinit Delegate extends System.Object implements class System.ICloneable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Delegate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDual)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um delegado, que é uma estrutura de dados que se refere a um método estático ou a uma instância da classe e um método de instância dessa classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Delegate> classe é a classe base para tipos delegados. No entanto, somente o sistema e os compiladores podem derivar explicitamente o <xref:System.Delegate> classe ou o <xref:System.MulticastDelegate> classe. Também não é permitido para derivar um novo tipo de um tipo delegado. O <xref:System.Delegate> classe não é considerada um tipo de delegado; é uma classe usada para derivar tipos delegados.  
+  
+ A maioria das linguagens implementar um `delegate` palavra-chave e compiladores para esses idiomas são capazes de derivar do <xref:System.MulticastDelegate> classe; portanto, os usuários devem usar o `delegate` fornecida pela linguagem de palavra-chave.  
+  
+> [!NOTE]
+>  O common language runtime fornece um `Invoke` método para cada tipo de delegado, com a mesma assinatura do representante. Você não precisa chamar este método explicitamente do c#, Visual Basic ou Visual C++, pois os compiladores chamá-lo automaticamente. O `Invoke` método é útil em [reflexão](~/docs/framework/reflection-and-codedom/reflection.md) quando você deseja localizar a assinatura do tipo delegado.  
+  
+ O common language runtime fornece a cada tipo de delegado com `BeginInvoke` e `EndInvoke` métodos, para permitir a invocação assíncrona do delegado. Para obter mais informações sobre esses métodos, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+ A declaração de um tipo delegado estabelece um contrato que especifica a assinatura de um ou mais métodos. Um delegado é uma instância de um tipo de delegado que tem referências para:  
+  
+-   Um método de instância de um tipo e um objeto de destino pode ser atribuído a esse tipo.  
+  
+-   Um método de instância de um tipo, ocultos `this` parâmetro exposto na lista de parâmetros formais. O representante será considerado um delegado de instância aberta.  
+  
+-   Um método estático.  
+  
+-   Um método estático e um objeto de destino pode ser atribuído ao primeiro parâmetro do método. O representante deve ser fechada em seu primeiro argumento.  
+  
+ Para obter mais informações sobre associação de delegado, consulte o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Boolean%29> sobrecarga do método.  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, um delegado pode representar um método somente se a assinatura do método corresponde exatamente à assinatura especificada pelo tipo de delegado. Portanto, têm suporte somente os primeiro e terceiro marcadores na lista anterior e o primeiro marcador requer uma correspondência exata do tipo.  
+  
+ Quando um delegado representa um método de instância fechado em seu primeiro argumento (o caso mais comum), o representante armazena uma referência ao ponto de entrada do método e uma referência a um objeto, chamado destino, que é de um tipo atribuível para o tipo definido pelo método. Quando um delegado representa um método de instância aberto, ele armazena uma referência ao ponto de entrada do método. A assinatura do delegado deve incluir oculto `this` parâmetro na lista de parâmetros formais; nesse caso, o representante não tem uma referência a um objeto de destino e um objeto de destino deve ser fornecido quando o delegado é invocado.  
+  
+ Quando um delegado representa um método estático, o representante armazena uma referência ao ponto de entrada do método. Quando um delegado representa um método estático fechado em seu primeiro argumento, o representante armazena uma referência ao ponto de entrada do método e uma referência a um objeto de destino pode ser atribuído ao tipo de argumento de primeiro do método. Quando o representante é chamado, o primeiro argumento do método estático recebe o objeto de destino.  
+  
+ A lista de invocação de um delegado é um conjunto ordenado de delegates em que cada elemento da lista invoca exatamente um dos métodos representados pelo delegado. Uma lista de invocação pode conter métodos duplicados. Durante uma chamada, os métodos são chamados na ordem em que aparecem na lista de invocação. Tentativas de um delegado chamar cada método na sua lista de invocação; duplicatas são invocadas depois de cada vez que eles aparecem na lista de invocação. Delegados são imutáveis; Depois de criado, não altera a lista de invocação de um representante.  
+  
+ Delegados são mencionados como multicast ou podem ser combinadas, porque um delegado pode invocar um ou mais métodos e pode ser usado na combinação de operações.  
+  
+ Combinação de operações, como <xref:System.Delegate.Combine%2A> e <xref:System.Delegate.Remove%2A>, não altere delegados existentes. Em vez disso, essa operação retorna um novo delegado que contém os resultados da operação, um representante inalterado, ou `null`. Uma operação de combinação retorna `null` quando o resultado da operação é um delegado que não faz referência a pelo menos um método. Uma operação de combinação retorna um delegado inalterado quando a operação solicitada não tem nenhum efeito.  
+  
+> [!NOTE]
+>  Gerenciado usar idiomas de <xref:System.Delegate.Combine%2A> e <xref:System.Delegate.Remove%2A> métodos para implementar operações de delegado. Os exemplos incluem o `AddHandler` e `RemoveHandler` instruções no Visual Basic e os operadores + = e-= no representante de tipos em c#.  
+  
+ Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], tipos de delegado genérico podem ter parâmetros de tipo variant. Parâmetros de tipo contravariant podem ser usados como tipos de parâmetro do delegado, e um parâmetro de tipo covariant pode ser usado como o tipo de retorno. Esse recurso permite delegado genérico tipos que são construídos com a mesma definição de tipo genérico para ser compatível com o atribuição se seus argumentos de tipo são tipos de referência com uma relação de herança, conforme explicado em [covariância e contravariância](~/docs/standard/generics/covariance-and-contravariance.md).  
+  
+> [!NOTE]
+>  Delegados genéricos que são compatíveis com atribuição devido à variação não são necessariamente podem ser combinadas. Para ser combináveis, os tipos devem corresponder exatamente. Por exemplo, suponha que uma classe denominada `Derived` é derivado de uma classe denominada `Base`. Um delegado do tipo `Action<Base>` (`Action(Of Base)` no Visual Basic) pode ser atribuído a uma variável do tipo `Action<Derived>`, mas os dois delegados não podem ser combinados porque os tipos não correspondem exatamente.  
+  
+ Se um método invocado lança uma exceção, o método interrompe a execução, a exceção é passada de volta para o chamador do delegado e métodos restantes na lista de invocação não serão chamados. Captura a exceção no chamador não altera esse comportamento.  
+  
+ Quando a assinatura dos métodos chamados por um delegado inclui um valor de retorno, o representante retorna o valor de retorno do último elemento na lista de invocação. Quando a assinatura inclui um parâmetro que é passado por referência, o valor final do parâmetro é o resultado de cada método na lista de invocação sequencialmente em execução e atualizar o valor do parâmetro.  
+  
+ O equivalente mais próximo de um delegado em C ou C++ é um ponteiro de função. Um delegado pode representar um método estático ou um método de instância. Quando o delegate representa um método de instância, o representante armazena não apenas uma referência ao ponto de entrada do método, mas também uma referência para a instância da classe. Ao contrário de ponteiros de função, delegados são orientada a objeto e de tipo seguros.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um delegado chamado `myMethodDelegate`. Instâncias deste delegado são criadas para um método de instância e um método estático de aninhada `mySampleClass` classe. O representante para o método de instância requer uma instância de `mySampleClass`. O `mySampleClass` instância é salvo em uma variável chamada `mySC`.  
+  
+ [!code-cpp[Classic Delegate Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Delegate Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Delegate Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Delegate Example/CS/source.cs#1)]
+ [!code-vb[Classic Delegate Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Delegate Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Delegate (object target, string method);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(object target, string method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.#ctor(System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="method" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">A instância da classe em que invoca o delegado <c>método</c>.</param>
+        <param name="method">O nome do método de instância que o delegado representa.</param>
+        <summary>Inicializa um delegado que invoca o método de instância especificado na instância de classe especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não pode ser usado no código do aplicativo. Para criar um delegado, especificando o nome de um método de instância, use uma sobrecarga de <xref:System.Delegate.CreateDelegate%2A> método que especifica um nome de método e um objeto de destino. Por exemplo, o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.String%29> sobrecarga do método cria um delegado para um método de instância com um nome especificado.  
+  
+ Este construtor cria delegados para a instância somente métodos. Método de instância é um método associado a uma instância de uma classe; método estático é um método associado à própria classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Ocorreu um erro de associação ao método de destino.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Delegate (Type target, string method);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Type target, string method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="target" Type="System.Type" />
+        <Parameter Name="method" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">O <see cref="T:System.Type" /> que representa a classe que define <c>método</c>.</param>
+        <param name="method">O nome do método estático que o delegado representa.</param>
+        <summary>Inicializa um delegado que invoca o método estático especificado da classe especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não pode ser usado no código do aplicativo. Para criar um delegado, especificando o nome de um método estático, use uma sobrecarga de <xref:System.Delegate.CreateDelegate%2A> método que especifica um nome de método, mas não especificam um objeto de destino. Por exemplo, o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Type%2CSystem.String%29> sobrecarga do método cria um delegado de estático para um método com um nome especificado.  
+  
+ Este construtor cria delegados para apenas métodos estáticos. Método de instância é um método associado a uma instância de uma classe; método estático é um método associado à própria classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ - ou -  
+  
+ <paramref name="target" /> representa um tipo genérico aberto.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia superficial do delegado.</summary>
+        <returns>Uma cópia superficial do delegado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O clone tem o mesmo <xref:System.Type>, lista de destino, o método e a invocação do representante original.  
+  
+ Uma cópia superficial cria uma nova instância do mesmo tipo que o objeto original e, em seguida, copia os campos não estáticos do objeto original. Se o campo é um tipo de valor, uma cópia de bit a bit do campo será executada. Se o campo for um tipo de referência, a referência é copiada, mas o objeto chamado é não; Portanto, a referência no objeto original e a referência do clone apontam para o mesmo objeto. Em contraste, uma cópia em profundidade de um objeto duplicatas tudo direta ou indiretamente referenciado por campos no objeto.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static Delegate Combine (params Delegate[] delegates);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate Combine(class System.Delegate[] delegates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.Combine(System.Delegate[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegates" Type="System.Delegate[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="delegates">A matriz de delegados a ser combinada.</param>
+        <summary>Concatena as listas de invocação de uma matriz de delegados.</summary>
+        <returns>Um novo delegado com uma lista de invocação que concatena as listas de invocação de delegados na matriz de <paramref name="delegates" />. Retornará <see langword="null" /> se <paramref name="delegates" /> for <see langword="null" />, se <paramref name="delegates" /> contiver zero elementos ou se cada entrada em <paramref name="delegates" /> for <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `delegates` matriz contém entradas que são `null`, essas entradas são ignoradas.  
+  
+ A lista de invocação pode conter entradas duplicadas; ou seja, as entradas que se referem ao mesmo método no mesmo objeto.  
+  
+> [!NOTE]
+>  Delegados genéricos que são compatíveis com atribuição devido à variação não são necessariamente podem ser combinadas. Para ser combináveis, os tipos devem corresponder exatamente. Por exemplo, suponha que uma classe denominada `Derived` é derivado de uma classe denominada `Base`. Um delegado do tipo `Action<Base>` (`Action(Of Base)` no Visual Basic) pode ser atribuído a uma variável do tipo `Action<Derived>`, conforme explicado em [covariância e contravariância](~/docs/standard/generics/covariance-and-contravariance.md), mas os dois delegados não podem ser combinados porque os tipos não correspondem exatamente.  
+  
+ <xref:System.Delegate.Combine%2A>é útil para a criação de manipuladores de eventos que ocorre um evento de tempo de vários métodos de chamada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Nem todas as entradas não nulas em <paramref name="delegates" /> são instâncias do mesmo tipo de delegado.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static Delegate Combine (Delegate a, Delegate b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate Combine(class System.Delegate a, class System.Delegate b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.Combine(System.Delegate,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Delegate" />
+        <Parameter Name="b" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="a">O delegado cuja lista de invocação vem em primeiro lugar.</param>
+        <param name="b">O delegado cuja lista de invocação vem em último lugar.</param>
+        <summary>Concatena as listas de invocação de dois representantes.</summary>
+        <returns>Um novo delegado com uma lista de invocação que concatena as listas de invocação de <paramref name="a" /> e <paramref name="b" /> nessa ordem. Retorna <paramref name="a" /> se <paramref name="b" /> for <see langword="null" />, retorna <paramref name="b" /> se <paramref name="a" /> for uma referência nula e retorna uma referência nula se <paramref name="a" /> e <paramref name="b" /> forem referências nulas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A lista de invocação pode conter entradas duplicadas; ou seja, as entradas que se referem ao mesmo método no mesmo objeto.  
+  
+> [!NOTE]
+>  Delegados genéricos que são compatíveis com atribuição devido à variação não são necessariamente podem ser combinadas. Para ser combináveis, os tipos devem corresponder exatamente. Por exemplo, suponha que uma classe denominada `Derived` é derivado de uma classe denominada `Base`. Um delegado do tipo `Action<Base>` (`Action(Of Base)` no Visual Basic) pode ser atribuído a uma variável do tipo `Action<Derived>`, conforme explicado em [covariância e contravariância](~/docs/standard/generics/covariance-and-contravariance.md), mas os dois delegados não podem ser combinados porque os tipos não correspondem exatamente.  
+  
+ <xref:System.Delegate.Combine%2A>é útil para a criação de manipuladores de eventos que ocorre um evento de tempo de vários métodos de chamada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException"><paramref name="a" /> e <paramref name="b" /> não são <see langword="null" />, enquanto <paramref name="a" /> e <paramref name="b" /> não são instâncias do mesmo tipo de delegado.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CombineImpl">
+      <MemberSignature Language="C#" Value="protected virtual Delegate CombineImpl (Delegate d);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Delegate CombineImpl(class System.Delegate d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CombineImpl(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="d">O multicast (Combinável) delegar delegar cuja lista de invocação para acrescentar ao final da lista de invocação do multicast atual (Combinável).</param>
+        <summary>Concatena as listas de invocação de delegado (Combinável) multicast especificado e o destino atual de multicast (Combinável).</summary>
+        <returns>Um novo (Combinável) destino multicast com uma lista de invocação que concatena a lista de invocação do delegado (Combinável) multicast atual e a lista de invocação de <paramref name="d" />, ou o multicast atual (Combinável) delegar se <paramref name="d" /> é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método se aplica somente se o representante atual é difundida via multicast (combináveis).  
+  
+ A implementação atual simplesmente gera uma <xref:System.MulticastNotSupportedException>.  
+  
+ A lista de invocação pode conter entradas duplicadas; ou seja, as entradas que se referem ao mesmo método no mesmo objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MulticastNotSupportedException">Sempre lançada.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, System.Reflection.MethodInfo method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, class System.Reflection.MethodInfo method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Reflection.MethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="method" Type="System.Reflection.MethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do representante a ser criado.</param>
+        <param name="method">O <see cref="T:System.Reflection.MethodInfo" /> que descreve o método estático ou de instância que o representante deve representar. Há suporte apenas para métodos estáticos no .NET Framework versão 1.0 e 1.1.</param>
+        <summary>Cria um delegado do tipo especificado para representar o método estático especificado.</summary>
+        <returns>Um delegado do tipo especificado para representar o método estático especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No .NET Framework versão 1.0 e 1.1, essa sobrecarga de método cria delegados para apenas métodos estáticos. No .NET Framework versão 2.0, essa sobrecarga de método também pode criar instância aberta delegados de método; ou seja, delegados que fornecem explicitamente o primeiro argumento oculto da instância métodos. Para obter uma explicação detalhada, consulte o mais geral <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29> sobrecarga de método, o que permite que você criar todas as combinações de delegates abertos ou fechados instância ou de métodos estáticos e, opcionalmente, para especificar o primeiro argumento.  
+  
+> [!NOTE]
+>  Essa sobrecarga de método deve ser usada quando o delegado não está fechado em seu primeiro argumento, porque ele é um pouco mais rápido, nesse caso.  
+  
+ Essa sobrecarga de método é equivalente a chamar o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%2CSystem.Boolean%29> sobrecarga de método e especificando `true` para `throwOnBindFailure`.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+## <a name="compatible-parameter-types-and-return-type"></a>Tipos de parâmetro compatíveis e tipo de retorno  
+ No .NET Framework versão 2.0, os tipos de parâmetro e tipo de retorno de um delegado criado usando essa sobrecarga de método devem ser compatíveis com os tipos de parâmetro e tipo de retorno do método que o delegado representa; os tipos não precisam corresponder exatamente. Isso representa uma atenuação do comportamento de associação no .NET Framework versão 1.0 e 1.1, onde os tipos devem corresponder exatamente.  
+  
+ Um parâmetro de um delegado será compatível com o parâmetro correspondente de um método se o tipo do parâmetro de delegado for mais restritivo do que o tipo do parâmetro de método, porque isso garante que um argumento passado para o delegado possa ser passado com segurança para o método.  
+  
+ Da mesma forma, o tipo de retorno de um delegado será compatível com o tipo de retorno de um método se o tipo de retorno do método for mais restritivo do que o tipo de retorno do delegado, porque isso garante que o valor retornado do método possa ser convertido com segurança para o tipo retorno do delegado.  
+  
+ Por exemplo, um delegado com um parâmetro de tipo <xref:System.Collections.Hashtable> e um tipo de retorno <xref:System.Object> pode representar um método com um parâmetro de tipo <xref:System.Object> e um valor de retorno do tipo <xref:System.Collections.Hashtable>.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo demonstra os dois tipos de delegados que podem ser criados com essa sobrecarga de método: Abra um método de instância e um método estático.  
+  
+ O segundo exemplo de código demonstra tipos de parâmetro correspondentes e tipos de retorno.  
+  
+ **Exemplo 1**  
+  
+ O exemplo de código a seguir demonstra um delegado pode ser criado usando essa sobrecarga de duas maneiras de <xref:System.Delegate.CreateDelegate%2A> método.  
+  
+> [!NOTE]
+>  Há duas sobrecargas do <xref:System.Delegate.CreateDelegate%2A> método que especifica um <xref:System.Reflection.MethodInfo> , mas não é um primeiro argumento; sua funcionalidade é a mesma, exceto que um permite que você especifique se deseja gerar Falha ao associar, e o outro sempre gera. Este exemplo de código usa ambas as sobrecargas.  
+  
+ O exemplo declara uma classe `C` com um método estático `M2` e um método de instância `M1`, e dois tipos delegados: `D1` usa uma instância do `C` e uma cadeia de caracteres, e `D2` usa uma cadeia de caracteres.  
+  
+ Uma segunda classe chamada `Example` contém o código que cria os representantes.  
+  
+-   Um representante de tipo `D1`, representando um método de instância aberto, é criado para o método de instância `M1`. Uma instância deve ser passada quando o representante é invocado.  
+  
+-   Um representante de tipo `D2`, representando um método estático aberto, é criado para o método estático `M2`.  
+  
+ [!code-csharp[Delegate.CreateDelegateTOM#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegateTOM/cs/openClosedOver.cs#1)]
+ [!code-vb[Delegate.CreateDelegateTOM#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegateTOM/VB/openClosedOver.vb#1)]  
+  
+ **Exemplo 2**  
+  
+ O exemplo de código a seguir demonstra a compatibilidade dos tipos de parâmetro e de retorno.  
+  
+ O exemplo de código define uma classe base chamada `Base` e uma classe chamada `Derived` derivada de `Base`. A classe derivada tem um método `static` (`Shared` no Visual Basic) chamado `MyMethod` com um parâmetro do tipo `Base` e um retorno do tipo de `Derived`. O exemplo de código também define um representante chamado `Example` que tem um parâmetro do tipo `Derived` e um tipo de retorno de `Base`.  
+  
+ O exemplo de código demonstra que o representante chamado `Example` pode ser usado para representar o método `MyMethod`. O método pode ser associado ao representante porque:  
+  
+-   O tipo de parâmetro do representante (`Derived`) é mais restritivo do que o tipo de parâmetro `MyMethod` (`Base`), logo, é sempre seguro passar o argumento do representante para `MyMethod`.  
+  
+-   O tipo de retorno de `MyMethod` (`Derived`) é mais restritivo do que o tipo de parâmetro do representante (`Base`), logo, é sempre seguro converter o tipo de retorno do método no tipo de retorno do representante.  
+  
+ O exemplo de código não produz nenhuma saída.  
+  
+ [!code-cpp[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/cpp/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/cpp/source.cpp#1)]
+ [!code-csharp[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/cs/source.cs#1)]
+ [!code-vb[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="method" /> não é um método estático, e a versão do .NET Framework é 1.0 ou 1.1.  
+  
+ -ou-  
+  
+ <paramref name="method" /> não pode ser associado.  
+  
+ -ou-  
+  
+ <paramref name="method" /> não é um <see langword="RuntimeMethodInfo" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, object firstArgument, System.Reflection.MethodInfo method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, object firstArgument, class System.Reflection.MethodInfo method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Object,System.Reflection.MethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="firstArgument" Type="System.Object" />
+        <Parameter Name="method" Type="System.Reflection.MethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do representante a ser criado.</param>
+        <param name="firstArgument">O objeto ao qual o delegado está vinculado, ou <see langword="null" /> tratar <c>método</c> como <see langword="static" /> (<see langword="Shared" /> no Visual Basic).</param>
+        <param name="method">O <see cref="T:System.Reflection.MethodInfo" /> que descreve o método estático ou de instância que o representante deve representar.</param>
+        <summary>Cria um delegado do tipo especificado que representa o método de instância ou estático especificado com o primeiro argumento especificado.</summary>
+        <returns>Um delegado do tipo especificado que representa o método de instância ou estático especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar essa sobrecarga de método é equivalente a chamar o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Boolean%29> sobrecarga de método e especificando `true` para `throwOnBindFailure`. Essas duas sobrecargas fornecem a maneira mais flexível para criar delegados. Você pode usá-los para criar delegados para estáticas ou métodos de instância e, opcionalmente, para especificar o primeiro argumento.  
+  
+> [!NOTE]
+>  Se você não fornecer um primeiro argumento, use o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%29> sobrecarga do método para melhorar o desempenho.  
+  
+ O tipo de delegado e o método devem ter tipos de retorno compatíveis. Ou seja, o tipo de retorno de `method` deve ser atribuível ao tipo de retorno de `type`.  
+  
+ Se `firstArgument` é fornecido, ele é passado para `method` toda vez que o delegado é invocado; `firstArgument` deve ser associado ao delegado, e o representante deve ser fechada em seu primeiro argumento. Se `method` é `static` (`Shared` no Visual Basic), o argumento fornecida ao invocar o delegado de lista inclui todos os parâmetros, exceto o primeiro; se `method` é um método de instância, em seguida, `firstArgument` é passado para o parâmetro de instância oculta (representado por `this` em c#, ou por `Me` no Visual Basic).  
+  
+ Se `firstArgument` for fornecido, o primeiro parâmetro de `method` deve ser um tipo de referência, e `firstArgument` devem ser compatíveis com o tipo.  
+  
+> [!IMPORTANT]
+>  Se `method` é `static` (`Shared` no Visual Basic) e o primeiro parâmetro é do tipo <xref:System.Object> ou <xref:System.ValueType>, em seguida, `firstArgument` pode ser um tipo de valor. Nesse caso `firstArgument` é convertido automaticamente. Conversão automática não ocorre para quaisquer outros argumentos, como seria em um c# ou Visual Basic função chamada.  
+  
+ Se `firstArgument` é uma referência nula e `method` é um método de instância, o resultado depende das assinaturas do tipo delegado `type` e `method`:  
+  
+-   Se a assinatura de `type` inclua explicitamente o primeiro parâmetro oculto de `method`, o representante deve representar um método de instância aberta. Quando o representante é chamado, o primeiro argumento na lista de argumentos é passado para o parâmetro de instância oculta de `method`.  
+  
+-   Se as assinaturas de `method` e `type` correspondem (ou seja, todos os tipos de parâmetro são compatíveis), em seguida, o representante deve ser fechada por uma referência nula. Invocar o delegado é como chamar um método de instância em uma instância nula, o que não é uma coisa particularmente útil para fazer.  
+  
+ Se `firstArgument` é uma referência nula e `method` é estático, o resultado depende das assinaturas do tipo delegado `type` e `method`:  
+  
+-   Se a assinatura de `method` e `type` correspondem (ou seja, todos os tipos de parâmetro são compatíveis), o representante deve representar um método estático aberto. Este é o caso mais comum para métodos estáticos. Nesse caso, você pode obter um pouco melhor desempenho usando o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%29> sobrecarga do método.  
+  
+-   Se a assinatura de `type` começa com o segundo parâmetro do `method` e o restante dos tipos de parâmetro são compatíveis, o representante deve ser fechada por uma referência nula. Quando o delegado é invocado, uma referência nula é passada para o primeiro parâmetro de `method`.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+## <a name="compatible-parameter-types-and-return-type"></a>Tipos de parâmetro compatíveis e tipo de retorno  
+ Os tipos de parâmetro e tipo de retorno de um delegado devem ser compatíveis com os tipos de parâmetro e tipo de retorno do método que o delegado representa; os tipos não precisam corresponder exatamente.  
+  
+> [!NOTE]
+>  Na versão 1.0 e 1.1 do .NET Framework, os tipos devem corresponder exatamente.  
+  
+ Um parâmetro de um delegado será compatível com o parâmetro correspondente de um método se o tipo do parâmetro de delegado for mais restritivo do que o tipo do parâmetro de método, porque isso garante que um argumento passado para o delegado possa ser passado com segurança para o método.  
+  
+ Da mesma forma, o tipo de retorno de um delegado será compatível com o tipo de retorno de um método se o tipo de retorno do método for mais restritivo do que o tipo de retorno do delegado, porque isso garante que o valor retornado do método possa ser convertido com segurança para o tipo retorno do delegado.  
+  
+ Por exemplo, um delegado com um parâmetro de tipo <xref:System.Collections.Hashtable> e um tipo de retorno <xref:System.Object> pode representar um método com um parâmetro de tipo <xref:System.Object> e um valor de retorno do tipo <xref:System.Collections.Hashtable>.  
+  
+## <a name="determining-the-methods-a-delegate-can-represent"></a>Determinando os métodos que um delegado pode representar  
+ Outra forma útil considerar a flexibilidade fornecida por essa sobrecarga de <xref:System.Delegate.CreateDelegate%2A> é que qualquer dado delegado pode representar quatro diferentes combinações de assinatura de método e o tipo de método (estático versus instância). Considere a possibilidade de um tipo de delegado `D` com um argumento do tipo `C`. A seguir descreve os métodos `D` podem representar, ignorando o tipo de retorno, pois ela deve corresponder em todos os casos:  
+  
+-   `D`pode representar qualquer método de instância que tenha exatamente um argumento de tipo `C`, independentemente de qual pertence o método de instância de tipo. Quando <xref:System.Delegate.CreateDelegate%2A> é chamado, `firstArgument` é uma instância do tipo `method` pertence, e o representante resultante deve ser fechada por essa instância. (Facilmente, `D` também pode ser fechada por uma referência nula se `firstArgument` é uma referência nula.)  
+  
+-   `D`pode representar um método de instância `C` que não possui argumentos. Quando <xref:System.Delegate.CreateDelegate%2A> é chamado, `firstArgument` é uma referência nula. O delegado resultante representa um método de instância aberta e uma instância de `C` deve ser fornecido a cada vez que ele é invocado.  
+  
+-   `D`pode representar um método estático que usa um argumento de tipo `C`, e que o método pode pertencer a qualquer tipo. Quando <xref:System.Delegate.CreateDelegate%2A> é chamado, `firstArgument` é uma referência nula. O delegado resultante representa um método estático open e uma instância de `C` deve ser fornecido a cada vez que ele é invocado.  
+  
+-   `D`pode representar um método estático que pertence ao tipo `F` e tem dois argumentos de tipo `F` e digite `C`. Quando <xref:System.Delegate.CreateDelegate%2A> é chamado, `firstArgument` é uma instância de `F`. O delegado resultante representa um método estático que é fechado por aquela instância do `F`. Observe que no caso onde `F` e `C` são do mesmo tipo, o método estático tem dois argumentos de tipo. (Nesse caso, `D` estiver fechado por uma referência nula se `firstArgument` é uma referência nula.)  
+  
+   
+  
+## Examples  
+ Esta seção contém três exemplos de código. O primeiro exemplo demonstra os quatro tipos de delegados que podem ser criados: fechado por um método de instância, abra um método de instância, abra um método estático e fechado por um método estático.  
+  
+ O segundo exemplo de código demonstra tipos de parâmetro correspondentes e tipos de retorno.  
+  
+ O terceiro exemplo de código define um tipo de delegado único e mostra todos os métodos de tipo delegado podem representar.  
+  
+ **Exemplo 1**  
+  
+ O exemplo de código a seguir demonstra as quatro maneiras em que um representante pode ser criado usando essa sobrecarga do <xref:System.Delegate.CreateDelegate%2A> método.  
+  
+> [!NOTE]
+>  Há duas sobrecargas do método <xref:System.Delegate.CreateDelegate%2A> que especificam `firstArgument` e <xref:System.Reflection.MethodInfo>; sua funcionalidade é a mesma, exceto por uma permitir especificar se é necessário lançar falha de associação e a outra lançar sempre. Este exemplo de código usa ambas as sobrecargas.  
+  
+ O exemplo declara uma classe `C` com um método estático `M2` e um método de instância `M1`, e três tipos delegados: `D1` usa uma instância do `C` e uma cadeia de caracteres, `D2` usa uma cadeia de caracteres e `D3`não possui argumentos.  
+  
+ Uma segunda classe chamada `Example` contém o código que cria os representantes.  
+  
+-   Um delegado do tipo `D2`, fechado em uma instância do `C`, é criado para o método de instância `M1`. Ele é invocado com cadeias de caracteres diferentes, para mostrar que a instância associada do `C` sempre é usado.  
+  
+-   Um representante de tipo `D1`, representando um método de instância aberto, é criado para o método de instância `M1`. Uma instância deve ser passada quando o representante é invocado.  
+  
+-   Um representante de tipo `D2`, representando um método estático aberto, é criado para o método estático `M2`.  
+  
+-   Por fim, um representante do tipo `D3`, fechado por uma cadeia de caracteres, que é criado para o método estático `M2`. O método é invocado para mostrar que ele usa a cadeia de caracteres associada.  
+  
+ [!code-csharp[Delegate.CreateDelegateTOM#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegateTOM/cs/openClosedOver.cs#1)]
+ [!code-vb[Delegate.CreateDelegateTOM#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegateTOM/VB/openClosedOver.vb#1)]  
+  
+ **Exemplo 2**  
+  
+ O exemplo de código a seguir demonstra a compatibilidade dos tipos de parâmetro e de retorno.  
+  
+> [!NOTE]
+>  Este exemplo de código usa o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%29> sobrecarga do método. O uso de outras sobrecargas que usam <xref:System.Reflection.MethodInfo> é semelhante.  
+  
+ O exemplo de código define uma classe base chamada `Base` e uma classe chamada `Derived` derivada de `Base`. A classe derivada tem um método `static` (`Shared` no Visual Basic) chamado `MyMethod` com um parâmetro do tipo `Base` e um retorno do tipo de `Derived`. O exemplo de código também define um representante chamado `Example` que tem um parâmetro do tipo `Derived` e um tipo de retorno de `Base`.  
+  
+ O exemplo de código demonstra que o representante chamado `Example` pode ser usado para representar o método `MyMethod`. O método pode ser associado ao representante porque:  
+  
+-   O tipo de parâmetro do representante (`Derived`) é mais restritivo do que o tipo de parâmetro `MyMethod` (`Base`), logo, é sempre seguro passar o argumento do representante para `MyMethod`.  
+  
+-   O tipo de retorno de `MyMethod` (`Derived`) é mais restritivo do que o tipo de parâmetro do representante (`Base`), logo, é sempre seguro converter o tipo de retorno do método no tipo de retorno do representante.  
+  
+ O exemplo de código não produz nenhuma saída.  
+  
+ [!code-cpp[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/cpp/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/cpp/source.cpp#1)]
+ [!code-csharp[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/cs/source.cs#1)]
+ [!code-vb[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/vb/source.vb#1)]  
+  
+ **Exemplo 3**  
+  
+ O exemplo de código a seguir mostra todos os métodos pode representar um tipo delegado único, usando o <xref:System.Delegate.CreateDelegate%2A> método para criar delegados.  
+  
+> [!NOTE]
+>  Há duas sobrecargas do método <xref:System.Delegate.CreateDelegate%2A> que especificam `firstArgument` e <xref:System.Reflection.MethodInfo>; sua funcionalidade é a mesma, exceto por uma permitir especificar se é necessário lançar falha de associação e a outra lançar sempre. Este exemplo de código usa ambas as sobrecargas.  
+  
+ O exemplo de código define duas classes, `C` e `F`e um tipo delegado `D` com um argumento do tipo `C`. As classes têm correspondência estático e métodos de instância `M1`, `M3`, e `M4`e a classe `C` também tem um método de instância `M2` que não possui argumentos.  
+  
+ Uma classe de terceiros denominada `Example` contém o código que cria os delegados.  
+  
+-   Delegados são criados para a instância método `M1` do tipo `C` e tipo `F`; cada um é fechada em uma instância do respectivo tipo. Método `M1` do tipo `C` exibe o `ID` propriedades da instância associada e do argumento.  
+  
+-   Um delegado é criado para o método `M2` do tipo `C`. Este é um delegado de instância aberto, em que o argumento do delegado representa o primeiro argumento oculto no método de instância. O método não tem outros argumentos. Ele é chamado como se fosse um método estático.  
+  
+-   Delegados são criados para o método estático `M3` do tipo `C` e tipo `F`; esses são abertos delegados estáticos.  
+  
+-   Por fim, os delegados são criados para o método estático `M4` do tipo `C` e tipo `F`; cada método tem o tipo de declaração como seu primeiro argumento e uma instância do tipo for fornecida, os delegados são fechada sobre seus argumentos primeiro . Método `M4` do tipo `C` exibe o `ID` propriedades da instância associada e do argumento.  
+  
+ [!code-csharp[Delegate.CreateDelegateTOM_2#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegateTOM_2/cs/source.cs#1)]
+ [!code-vb[Delegate.CreateDelegateTOM_2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegateTOM_2/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="method" /> não pode ser associado.  
+  
+ -ou-  
+  
+ <paramref name="method" /> não é um <see langword="RuntimeMethodInfo" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, object target, string method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, object target, string method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="method" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do representante a ser criado.</param>
+        <param name="target">A instância de classe na qual <c>método</c> é invocado.</param>
+        <param name="method">O nome do método de instância que o delegado deve representar.</param>
+        <summary>Cria um delegado do tipo especificado que representa o método de instância especificado a ser invocado na instância da classe especificada.</summary>
+        <returns>Um delegado do tipo especificado que representa o método de instância especificado a ser invocado na instância da classe especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria delegados para a instância somente métodos. Método de instância é um método associado a uma instância de uma classe; método estático é um método associado à própria classe.  
+  
+ Essa sobrecarga de método é equivalente a chamar o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%29> sobrecarga do método, especificando `false` para `ignoreCase` e `true` para `throwOnBindFailure`.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="method" /> não é um método de instância.  
+  
+ -ou-  
+  
+ O <paramref name="method" /> não pode ser associado, por exemplo, porque não foi encontrado.</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, System.Reflection.MethodInfo method, bool throwOnBindFailure);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, class System.Reflection.MethodInfo method, bool throwOnBindFailure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Reflection.MethodInfo,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="method" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="throwOnBindFailure" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do representante a ser criado.</param>
+        <param name="method">O <see cref="T:System.Reflection.MethodInfo" /> que descreve o método estático ou de instância que o representante deve representar.</param>
+        <param name="throwOnBindFailure">
+          <see langword="true" />para lançar uma exceção se <c>método</c> não pode ser associada; caso contrário, <see langword="false" />.</param>
+        <summary>Cria um delegado do tipo especificado para representar o método estático especificado, com o comportamento em falhas especificado a ser associado.</summary>
+        <returns>Um delegado do tipo especificado para representar o método estático especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga de método pode criar delegados de método estático open e abrir delegados de método de instância — ou seja, delegados que expõem o primeiro argumento oculto da instância métodos. Para obter uma explicação detalhada, consulte o mais geral <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%2CSystem.Boolean%29> sobrecarga de método, que permite que você crie todas as combinações de delegates abertos ou fechados para a instância ou métodos estáticos.  
+  
+> [!NOTE]
+>  Essa sobrecarga de método deve ser usada quando o delegado não está fechado em seu primeiro argumento, porque ele é um pouco mais rápido, nesse caso.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+## <a name="compatible-parameter-types-and-return-type"></a>Tipos de parâmetro compatíveis e tipo de retorno  
+ Os tipos de parâmetro e tipo de retorno de um delegado devem ser compatíveis com os tipos de parâmetro e tipo de retorno do método que o delegado representa; os tipos não precisam corresponder exatamente.  
+  
+> [!NOTE]
+>  Na versão 1.0 e 1.1 do .NET Framework, os tipos devem corresponder exatamente.  
+  
+ Um parâmetro de um delegado será compatível com o parâmetro correspondente de um método se o tipo do parâmetro de delegado for mais restritivo do que o tipo do parâmetro de método, porque isso garante que um argumento passado para o delegado possa ser passado com segurança para o método.  
+  
+ Da mesma forma, o tipo de retorno de um delegado será compatível com o tipo de retorno de um método se o tipo de retorno do método for mais restritivo do que o tipo de retorno do delegado, porque isso garante que o valor retornado do método possa ser convertido com segurança para o tipo retorno do delegado.  
+  
+ Por exemplo, um delegado com um parâmetro de tipo <xref:System.Collections.Hashtable> e um tipo de retorno <xref:System.Object> pode representar um método com um parâmetro de tipo <xref:System.Object> e um valor de retorno do tipo <xref:System.Collections.Hashtable>.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo demonstra os dois tipos de delegados que podem ser criados com essa sobrecarga de método: Abra um método de instância e um método estático.  
+  
+ O segundo exemplo de código demonstra tipos de parâmetro correspondentes e tipos de retorno.  
+  
+ **Exemplo 1**  
+  
+ O exemplo de código a seguir demonstra um delegado pode ser criado usando essa sobrecarga de duas maneiras de <xref:System.Delegate.CreateDelegate%2A> método.  
+  
+> [!NOTE]
+>  Há duas sobrecargas do <xref:System.Delegate.CreateDelegate%2A> método que especifica um <xref:System.Reflection.MethodInfo> , mas não é um primeiro argumento; sua funcionalidade é a mesma, exceto que um permite que você especifique se deseja gerar Falha ao associar, e o outro sempre gera. Este exemplo de código usa ambas as sobrecargas.  
+  
+ O exemplo declara uma classe `C` com um método estático `M2` e um método de instância `M1`, e dois tipos delegados: `D1` usa uma instância do `C` e uma cadeia de caracteres, e `D2` usa uma cadeia de caracteres.  
+  
+ Uma segunda classe chamada `Example` contém o código que cria os representantes.  
+  
+-   Um representante de tipo `D1`, representando um método de instância aberto, é criado para o método de instância `M1`. Uma instância deve ser passada quando o representante é invocado.  
+  
+-   Um representante de tipo `D2`, representando um método estático aberto, é criado para o método estático `M2`.  
+  
+ [!code-csharp[Delegate.CreateDelegateTOM#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegateTOM/cs/openClosedOver.cs#1)]
+ [!code-vb[Delegate.CreateDelegateTOM#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegateTOM/VB/openClosedOver.vb#1)]  
+  
+ **Exemplo 2**  
+  
+ O exemplo de código a seguir demonstra a compatibilidade dos tipos de parâmetro e de retorno.  
+  
+> [!NOTE]
+>  Este exemplo de código usa o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%29> sobrecarga do método. O uso de outras sobrecargas que usam <xref:System.Reflection.MethodInfo> é semelhante.  
+  
+ O exemplo de código define uma classe base chamada `Base` e uma classe chamada `Derived` derivada de `Base`. A classe derivada tem um método `static` (`Shared` no Visual Basic) chamado `MyMethod` com um parâmetro do tipo `Base` e um retorno do tipo de `Derived`. O exemplo de código também define um representante chamado `Example` que tem um parâmetro do tipo `Derived` e um tipo de retorno de `Base`.  
+  
+ O exemplo de código demonstra que o representante chamado `Example` pode ser usado para representar o método `MyMethod`. O método pode ser associado ao representante porque:  
+  
+-   O tipo de parâmetro do representante (`Derived`) é mais restritivo do que o tipo de parâmetro `MyMethod` (`Base`), logo, é sempre seguro passar o argumento do representante para `MyMethod`.  
+  
+-   O tipo de retorno de `MyMethod` (`Derived`) é mais restritivo do que o tipo de parâmetro do representante (`Base`), logo, é sempre seguro converter o tipo de retorno do método no tipo de retorno do representante.  
+  
+ O exemplo de código não produz nenhuma saída.  
+  
+ [!code-cpp[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/cpp/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/cpp/source.cpp#1)]
+ [!code-csharp[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/cs/source.cs#1)]
+ [!code-vb[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="method" /> não pode ser associado e <paramref name="throwOnBindFailure" /> é <see langword="true" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> não é um <see langword="RuntimeMethodInfo" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, Type target, string method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, class System.Type target, string method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="target" Type="System.Type" />
+        <Parameter Name="method" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do representante a ser criado.</param>
+        <param name="target">O <see cref="T:System.Type" /> que representa a classe que implementa <c>método</c>.</param>
+        <param name="method">O nome do método estático que o delegado deve representar.</param>
+        <summary>Cria um delegado do tipo especificado que representa o método estático especificado da classe especificada.</summary>
+        <returns>Um delegado do tipo especificado que representa o método especificado estático da classe especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria delegados para apenas métodos estáticos. Método de instância é um método associado a uma instância de uma classe; método estático é um método associado à própria classe.  
+  
+ Essa sobrecarga de método é equivalente a chamar o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Type%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%29> sobrecarga do método, especificando `false` para `ignoreCase` e `true` para `throwOnBindFailure`.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="target" /> não é um <see langword="RuntimeType" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é um tipo genérico aberto. Ou seja, sua propriedade <see cref="P:System.Type.ContainsGenericParameters" /> é <see langword="true" />.  
+  
+ -ou-  
+  
+ O <paramref name="method" /> não é um método <see langword="static" /> (método <see langword="Shared" /> no Visual Basic).  
+  
+ -ou-  
+  
+ <paramref name="method" /> não pode ser associado, por exemplo, porque não foi encontrado e <paramref name="throwOnBindFailure" /> é <see langword="true" />.</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, object firstArgument, System.Reflection.MethodInfo method, bool throwOnBindFailure);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, object firstArgument, class System.Reflection.MethodInfo method, bool throwOnBindFailure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Object,System.Reflection.MethodInfo,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="firstArgument" Type="System.Object" />
+        <Parameter Name="method" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="throwOnBindFailure" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> que representa o tipo de delegado a ser criado.</param>
+        <param name="firstArgument">Um <see cref="T:System.Object" /> que é o primeiro argumento do método que o delegado representa. Por exemplo, para métodos, ele deve ser compatível com o tipo de instância.</param>
+        <param name="method">O <see cref="T:System.Reflection.MethodInfo" /> que descreve o método estático ou de instância que o representante deve representar.</param>
+        <param name="throwOnBindFailure">
+          <see langword="true" />para lançar uma exceção se <c>método</c> não pode ser associada; caso contrário, <see langword="false" />.</param>
+        <summary>Cria um delegado do tipo especificado que representa o método de instância ou estático especificado, com o primeiro argumento especificado e o comportamento especificado na falha para associação.</summary>
+        <returns>Um delegado do tipo especificado que representa o método de instância ou estático especificado ou <see langword="null" /> se <paramref name="throwOnBindFailure" /> é <see langword="false" /> e o delegado não pode ser associado a <paramref name="method" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga de método e o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29> sobrecarga de método, que sempre gera Falha ao associar, fornecem a maneira mais flexível para criar delegados. Você pode usá-los para criar delegados para estáticas ou métodos de instância, com ou sem um primeiro argumento.  
+  
+> [!NOTE]
+>  Se você não fornecer um primeiro argumento, use o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%2CSystem.Boolean%29> sobrecarga do método para melhorar o desempenho.  
+  
+ O tipo de delegado e o método devem ter tipos de retorno compatíveis. Ou seja, o tipo de retorno de `method` deve ser atribuível ao tipo de retorno de `type`.  
+  
+ Se `firstArgument` é fornecido, ele é passado para `method` toda vez que o delegado é invocado; `firstArgument` deve ser associado ao delegado, e o representante deve ser fechada em seu primeiro argumento. Se `method` é `static` (`Shared` no Visual Basic), o argumento fornecida ao invocar o delegado de lista inclui todos os parâmetros, exceto o primeiro; se `method` é um método de instância, em seguida, `firstArgument` é passado para o parâmetro de instância oculta (representado por `this` em c#, ou por `Me` no Visual Basic).  
+  
+ Se `firstArgument` for fornecido, o primeiro parâmetro de `method` deve ser um tipo de referência, e `firstArgument` devem ser compatíveis com o tipo.  
+  
+> [!IMPORTANT]
+>  Se `method` é `static` (`Shared` no Visual Basic) e o primeiro parâmetro é do tipo <xref:System.Object> ou <xref:System.ValueType>, em seguida, `firstArgument` pode ser um tipo de valor. Nesse caso `firstArgument` é convertido automaticamente. Conversão automática não ocorre para quaisquer outros argumentos, como seria em um c# ou Visual Basic função chamada.  
+  
+ Se `firstArgument` é uma referência nula e `method` é um método de instância, o resultado depende das assinaturas do tipo delegado `type` e `method`:  
+  
+-   Se a assinatura de `type` inclua explicitamente o primeiro parâmetro oculto de `method`, o representante deve representar um método de instância aberta. Quando o representante é chamado, o primeiro argumento na lista de argumentos é passado para o parâmetro de instância oculta de `method`.  
+  
+-   Se as assinaturas de `method` e `type` correspondem (ou seja, todos os tipos de parâmetro são compatíveis), em seguida, o representante deve ser fechada por uma referência nula. Invocar o delegado é como chamar um método de instância em uma instância nula, o que não é uma coisa particularmente útil para fazer.  
+  
+ Se `firstArgument` é uma referência nula e `method` é estático, o resultado depende das assinaturas do tipo delegado `type` e `method`:  
+  
+-   Se a assinatura de `method` e `type` correspondem (ou seja, todos os tipos de parâmetro são compatíveis), o representante deve representar um método estático aberto. Este é o caso mais comum para métodos estáticos. Nesse caso, você pode obter um pouco melhor desempenho usando o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%2CSystem.Boolean%29> sobrecarga do método.  
+  
+-   Se a assinatura de `type` começa com o segundo parâmetro do `method` e o restante dos tipos de parâmetro são compatíveis, o representante deve ser fechada por uma referência nula. Quando o delegado é invocado, uma referência nula é passada para o primeiro parâmetro de `method`.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+## <a name="compatible-parameter-types-and-return-type"></a>Tipos de parâmetro compatíveis e tipo de retorno  
+ Os tipos de parâmetro e tipo de retorno de um delegado devem ser compatíveis com os tipos de parâmetro e tipo de retorno do método que o delegado representa; os tipos não precisam corresponder exatamente.  
+  
+> [!NOTE]
+>  No .NET Framework versão 1.0 e 1.1 os tipos devem corresponder exatamente.  
+  
+ Um parâmetro de um delegado será compatível com o parâmetro correspondente de um método se o tipo do parâmetro de delegado for mais restritivo do que o tipo do parâmetro de método, porque isso garante que um argumento passado para o delegado possa ser passado com segurança para o método.  
+  
+ Da mesma forma, o tipo de retorno de um delegado será compatível com o tipo de retorno de um método se o tipo de retorno do método for mais restritivo do que o tipo de retorno do delegado, porque isso garante que o valor retornado do método possa ser convertido com segurança para o tipo retorno do delegado.  
+  
+ Por exemplo, um delegado com um parâmetro de tipo <xref:System.Collections.Hashtable> e um tipo de retorno <xref:System.Object> pode representar um método com um parâmetro de tipo <xref:System.Object> e um valor de retorno do tipo <xref:System.Collections.Hashtable>.  
+  
+## <a name="determining-the-methods-a-delegate-can-represent"></a>Determinando os métodos que um delegado pode representar  
+ Outra forma útil considerar a flexibilidade fornecida por essa sobrecarga de <xref:System.Delegate.CreateDelegate%2A> é que qualquer dado delegado pode representar quatro diferentes combinações de assinatura de método e o tipo de método (estático versus instância). Considere a possibilidade de um tipo de delegado `D` com um argumento do tipo `C`. A seguir descreve os métodos `D` podem representar, ignorando o tipo de retorno, pois ela deve corresponder em todos os casos:  
+  
+-   `D`pode representar qualquer método de instância que tenha exatamente um argumento de tipo `C`, independentemente de qual pertence o método de instância de tipo. Quando <xref:System.Delegate.CreateDelegate%2A> é chamado, `firstArgument` é uma instância do tipo `method` pertence, e o representante resultante deve ser fechada por essa instância. (Facilmente, `D` também pode ser fechada por uma referência nula se `firstArgument` é `null`.)  
+  
+-   `D`pode representar um método de instância `C` que não possui argumentos. Quando <xref:System.Delegate.CreateDelegate%2A> é chamado, `firstArgument` é uma referência nula. O delegado resultante representa um método de instância aberta e uma instância de `C` deve ser fornecido a cada vez que ele é invocado.  
+  
+-   `D`pode representar um método estático que usa um argumento de tipo `C`, e que o método pode pertencer a qualquer tipo. Quando <xref:System.Delegate.CreateDelegate%2A> é chamado, `firstArgument` é uma referência nula. O delegado resultante representa um método estático open e uma instância de `C` deve ser fornecido a cada vez que ele é invocado.  
+  
+-   `D`pode representar um método estático que pertence ao tipo `F` e tem dois argumentos de tipo `F` e digite `C`. Quando <xref:System.Delegate.CreateDelegate%2A> é chamado, `firstArgument` é uma instância de `F`. O delegado resultante representa um método estático que é fechado por aquela instância do `F`. Observe que no caso onde `F` e `C` são do mesmo tipo, o método estático tem dois argumentos de tipo. (Nesse caso, `D` estiver fechado por uma referência nula se `firstArgument` é `null`.)  
+  
+   
+  
+## Examples  
+ Esta seção contém três exemplos de código. O primeiro exemplo demonstra os quatro tipos de delegados que podem ser criados: fechado por um método de instância, abra um método de instância, abra um método estático e fechado por um método estático.  
+  
+ O segundo exemplo de código demonstra tipos de parâmetro correspondentes e tipos de retorno.  
+  
+ O terceiro exemplo de código define um tipo de delegado único e mostra todos os métodos de tipo delegado podem representar.  
+  
+ **Exemplo 1**  
+  
+ O exemplo de código a seguir demonstra as quatro maneiras em que um representante pode ser criado usando essa sobrecarga do <xref:System.Delegate.CreateDelegate%2A> método.  
+  
+> [!NOTE]
+>  Há duas sobrecargas do método <xref:System.Delegate.CreateDelegate%2A> que especificam `firstArgument` e <xref:System.Reflection.MethodInfo>; sua funcionalidade é a mesma, exceto por uma permitir especificar se é necessário lançar falha de associação e a outra lançar sempre. Este exemplo de código usa ambas as sobrecargas.  
+  
+ O exemplo declara uma classe `C` com um método estático `M2` e um método de instância `M1`, e três tipos delegados: `D1` usa uma instância do `C` e uma cadeia de caracteres, `D2` usa uma cadeia de caracteres e `D3`não possui argumentos.  
+  
+ Uma segunda classe chamada `Example` contém o código que cria os representantes.  
+  
+-   Um delegado do tipo `D2`, fechado em uma instância do `C`, é criado para o método de instância `M1`. Ele é invocado com cadeias de caracteres diferentes, para mostrar que a instância associada do `C` sempre é usado.  
+  
+-   Um representante de tipo `D1`, representando um método de instância aberto, é criado para o método de instância `M1`. Uma instância deve ser passada quando o representante é invocado.  
+  
+-   Um representante de tipo `D2`, representando um método estático aberto, é criado para o método estático `M2`.  
+  
+-   Por fim, um representante do tipo `D3`, fechado por uma cadeia de caracteres, que é criado para o método estático `M2`. O método é invocado para mostrar que ele usa a cadeia de caracteres associada.  
+  
+ [!code-csharp[Delegate.CreateDelegateTOM#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegateTOM/cs/openClosedOver.cs#1)]
+ [!code-vb[Delegate.CreateDelegateTOM#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegateTOM/VB/openClosedOver.vb#1)]  
+  
+ **Exemplo 2**  
+  
+ O exemplo de código a seguir demonstra a compatibilidade dos tipos de parâmetro e de retorno.  
+  
+> [!NOTE]
+>  Este exemplo de código usa o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%29> sobrecarga do método. O uso de outras sobrecargas que usam <xref:System.Reflection.MethodInfo> é semelhante.  
+  
+ O exemplo de código define uma classe base chamada `Base` e uma classe chamada `Derived` derivada de `Base`. A classe derivada tem um método `static` (`Shared` no Visual Basic) chamado `MyMethod` com um parâmetro do tipo `Base` e um retorno do tipo de `Derived`. O exemplo de código também define um representante chamado `Example` que tem um parâmetro do tipo `Derived` e um tipo de retorno de `Base`.  
+  
+ O exemplo de código demonstra que o representante chamado `Example` pode ser usado para representar o método `MyMethod`. O método pode ser associado ao representante porque:  
+  
+-   O tipo de parâmetro do representante (`Derived`) é mais restritivo do que o tipo de parâmetro `MyMethod` (`Base`), logo, é sempre seguro passar o argumento do representante para `MyMethod`.  
+  
+-   O tipo de retorno de `MyMethod` (`Derived`) é mais restritivo do que o tipo de parâmetro do representante (`Base`), logo, é sempre seguro converter o tipo de retorno do método no tipo de retorno do representante.  
+  
+ O exemplo de código não produz nenhuma saída.  
+  
+ [!code-cpp[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/cpp/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/cpp/source.cpp#1)]
+ [!code-csharp[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/cs/source.cs#1)]
+ [!code-vb[Delegate.CreateDelegate_RelaxedFit#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegate_RelaxedFit/vb/source.vb#1)]  
+  
+ **Exemplo 3**  
+  
+ O exemplo de código a seguir mostra todos os métodos que pode representar um tipo delegado único.  
+  
+> [!NOTE]
+>  Há duas sobrecargas do método <xref:System.Delegate.CreateDelegate%2A> que especificam `firstArgument` e <xref:System.Reflection.MethodInfo>; sua funcionalidade é a mesma, exceto por uma permitir especificar se é necessário lançar falha de associação e a outra lançar sempre. Este exemplo de código usa ambas as sobrecargas.  
+  
+ O exemplo de código define duas classes, `C` e `F`e um tipo delegado `D` com um argumento do tipo `C`. As classes têm correspondência estático e métodos de instância `M1`, `M3`, e `M4`e a classe `C` também tem um método de instância `M2` que não possui argumentos.  
+  
+ Uma classe de terceiros denominada `Example` contém o código que cria os delegados.  
+  
+-   Delegados são criados para a instância método `M1` do tipo `C` e tipo `F`; cada um é fechada em uma instância do respectivo tipo. Método `M1` do tipo `C` exibe o `ID` propriedades da instância associada e do argumento.  
+  
+-   Um delegado é criado para o método `M2` do tipo `C`. Este é um delegado de instância aberto, em que o argumento do delegado representa o primeiro argumento oculto no método de instância. O método não tem outros argumentos.  
+  
+-   Delegados são criados para o método estático `M3` do tipo `C` e tipo `F`; esses são abertos delegados estáticos.  
+  
+-   Por fim, os delegados são criados para o método estático `M4` do tipo `C` e tipo `F`; cada método tem o tipo de declaração como seu primeiro argumento e uma instância do tipo for fornecida, os delegados são fechada sobre seus argumentos primeiro . Método `M4` do tipo `C` exibe o `ID` propriedades da instância associada e do argumento.  
+  
+ [!code-csharp[Delegate.CreateDelegateTOM_2#1](~/samples/snippets/csharp/VS_Snippets_CLR/Delegate.CreateDelegateTOM_2/cs/source.cs#1)]
+ [!code-vb[Delegate.CreateDelegateTOM_2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Delegate.CreateDelegateTOM_2/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="method" /> não pode ser associado e <paramref name="throwOnBindFailure" /> é <see langword="true" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> não é um <see langword="RuntimeMethodInfo" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, object target, string method, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, object target, string method, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Object,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="method" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do representante a ser criado.</param>
+        <param name="target">A instância de classe na qual <c>método</c> é invocado.</param>
+        <param name="method">O nome do método de instância que o delegado deve representar.</param>
+        <param name="ignoreCase">Um booliano indicando se é necessário ignorar as maiúsculas durante a comparação do nome do método.</param>
+        <summary>Cria um delegado do tipo especificado que representa o método de instância especificado a ser invocado na instância da classe especificada, com a diferenciação de maiúsculas e minúsculas especificada.</summary>
+        <returns>Um delegado do tipo especificado que representa o método de instância especificado a ser invocado na instância da classe especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria delegados para a instância somente métodos. Método de instância é um método associado a uma instância de uma classe; método estático é um método associado à própria classe.  
+  
+ Essa sobrecarga de método é equivalente a chamar o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%29> sobrecarga do método, especificando `true` para `throwOnBindFailure`.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="method" /> não é um método de instância.  
+  
+ -ou-  
+  
+ O <paramref name="method" /> não pode ser associado, por exemplo, porque não foi encontrado.</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, Type target, string method, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, class System.Type target, string method, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Type,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="target" Type="System.Type" />
+        <Parameter Name="method" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do representante a ser criado.</param>
+        <param name="target">O <see cref="T:System.Type" /> que representa a classe que implementa <c>método</c>.</param>
+        <param name="method">O nome do método estático que o delegado deve representar.</param>
+        <param name="ignoreCase">Um booliano indicando se é necessário ignorar as maiúsculas durante a comparação do nome do método.</param>
+        <summary>Cria um delegado do tipo especificado que representa o método estático especificado da classe especificada, com a diferenciação de maiúsculas e minúsculas especificada.</summary>
+        <returns>Um delegado do tipo especificado que representa o método especificado estático da classe especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria delegados para apenas métodos estáticos. Método de instância é um método associado a uma instância de uma classe; método estático é um método associado à própria classe.  
+  
+ Essa sobrecarga de método é equivalente a chamar o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Type%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%29> sobrecarga do método, especificando `true` para `throwOnBindFailure`.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="target" /> não é um <see langword="RuntimeType" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é um tipo genérico aberto. Ou seja, sua propriedade <see cref="P:System.Type.ContainsGenericParameters" /> é <see langword="true" />.  
+  
+ -ou-  
+  
+ O <paramref name="method" /> não é um método <see langword="static" /> (método <see langword="Shared" /> no Visual Basic).  
+  
+ -ou-  
+  
+ O <paramref name="method" /> não pode ser associado, por exemplo, porque não foi encontrado.</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, object target, string method, bool ignoreCase, bool throwOnBindFailure);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, object target, string method, bool ignoreCase, bool throwOnBindFailure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Object,System.String,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="method" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="throwOnBindFailure" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do representante a ser criado.</param>
+        <param name="target">A instância de classe na qual <c>método</c> é invocado.</param>
+        <param name="method">O nome do método de instância que o delegado deve representar.</param>
+        <param name="ignoreCase">Um booliano indicando se é necessário ignorar as maiúsculas durante a comparação do nome do método.</param>
+        <param name="throwOnBindFailure">
+          <see langword="true" />para lançar uma exceção se <c>método</c> não pode ser associada; caso contrário, <see langword="false" />.</param>
+        <summary>Cria um delegado do tipo especificado que representa o método de instância especificado a ser invocado na instância da classe especificada, com a diferenciação de maiúsculas e minúsculas especificada e o comportamento especificado na falha de associação.</summary>
+        <returns>Um delegado do tipo especificado que representa o método de instância especificado a ser invocado na instância da classe especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria delegados para a instância somente métodos. Método de instância é um método associado a uma instância de uma classe; método estático é um método associado à própria classe.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="method" /> não é um método de instância.  
+  
+ -ou-  
+  
+ <paramref name="method" /> não pode ser associado, por exemplo, porque não foi encontrado e <paramref name="throwOnBindFailure" /> é <see langword="true" />.</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public static Delegate CreateDelegate (Type type, Type target, string method, bool ignoreCase, bool throwOnBindFailure);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate CreateDelegate(class System.Type type, class System.Type target, string method, bool ignoreCase, bool throwOnBindFailure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.CreateDelegate(System.Type,System.Type,System.String,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="target" Type="System.Type" />
+        <Parameter Name="method" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="throwOnBindFailure" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do representante a ser criado.</param>
+        <param name="target">O <see cref="T:System.Type" /> que representa a classe que implementa <c>método</c>.</param>
+        <param name="method">O nome do método estático que o delegado deve representar.</param>
+        <param name="ignoreCase">Um booliano indicando se é necessário ignorar as maiúsculas durante a comparação do nome do método.</param>
+        <param name="throwOnBindFailure">
+          <see langword="true" />para lançar uma exceção se <c>método</c> não pode ser associada; caso contrário, <see langword="false" />.</param>
+        <summary>Cria um delegado do tipo especificado que representa o método estático especificado da classe especificada, com a diferenciação de maiúsculas e minúsculas especificada e o comportamento especificado na falha de associação.</summary>
+        <returns>Um delegado do tipo especificado que representa o método especificado estático da classe especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria delegados para apenas métodos estáticos. Método de instância é um método associado a uma instância de uma classe; método estático é um método associado à própria classe.  
+  
+> [!NOTE]
+>  Começando pelo [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método pode ser usado para acessar métodos não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos métodos não públicos seja restrito ao conjunto de concessões do chamador, ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="method" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não herda <see cref="T:System.MulticastDelegate" />.  
+  
+ -ou-  
+  
+ <paramref name="type" /> não é um <see langword="RuntimeType" />. Consulte [Runtime Types in Reflection](http://msdn.microsoft.com/en-us/c1439fb5-cf76-475d-a9d2-fe64ba858858) (Tipos de tempo de execução na reflexão).  
+  
+ -ou-  
+  
+ <paramref name="target" /> não é um <see langword="RuntimeType" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é um tipo genérico aberto. Ou seja, sua propriedade <see cref="P:System.Type.ContainsGenericParameters" /> é <see langword="true" />.  
+  
+ -ou-  
+  
+ O <paramref name="method" /> não é um método <see langword="static" /> (método <see langword="Shared" /> no Visual Basic).  
+  
+ -ou-  
+  
+ <paramref name="method" /> não pode ser associado, por exemplo, porque não foi encontrado e <paramref name="throwOnBindFailure" /> é <see langword="true" />.</exception>
+        <exception cref="T:System.MissingMethodException">O método <see langword="Invoke" /> de <paramref name="type" /> não foi encontrado.</exception>
+        <exception cref="T:System.MethodAccessException">O chamador não tem as permissões necessárias para acessar <paramref name="method" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicInvoke">
+      <MemberSignature Language="C#" Value="public object DynamicInvoke (params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object DynamicInvoke(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.DynamicInvoke(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">Uma matriz de objetos que são os argumentos a serem passados para o método representado pelo delegado atual.  
+  
+ -ou-  
+  
+ <see langword="null" /> se o método representado pelo delegado atual não exigir argumentos.</param>
+        <summary>Invoca dinamicamente (associação tardia) o método representado pelo delegado atual.</summary>
+        <returns>O objeto retornado pelo método representado pelo delegado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Delegate.DynamicInvokeImpl%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">O chamador não tem acesso ao método representado pelo representante (por exemplo, caso o método seja privado).  
+  
+ -ou-  
+  
+ O número, a ordem ou o tipo de parâmetros listados no <paramref name="args" /> é inválido.</exception>
+        <exception cref="T:System.ArgumentException">O método representado pelo delegado é invocado em um objeto ou uma classe que não dá suporte a ele.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">O método representado pelo delegado é um método de instância e o objeto de destino é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos métodos encapsulados gera uma exceção.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicInvokeImpl">
+      <MemberSignature Language="C#" Value="protected virtual object DynamicInvokeImpl (object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object DynamicInvokeImpl(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.DynamicInvokeImpl(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="args">Uma matriz de objetos que são os argumentos a serem passados para o método representado pelo delegado atual.  
+  
+ -ou-  
+  
+ <see langword="null" /> se o método representado pelo delegado atual não exigir argumentos.</param>
+        <summary>Invoca dinamicamente (associação tardia) o método representado pelo delegado atual.</summary>
+        <returns>O objeto retornado pelo método representado pelo delegado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método implementa o <xref:System.Delegate.DynamicInvoke%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">O chamador não tem acesso ao método representado pelo representante (por exemplo, caso o método seja privado).  
+  
+ -ou-  
+  
+ O número, a ordem ou o tipo de parâmetros listados no <paramref name="args" /> é inválido.</exception>
+        <exception cref="T:System.ArgumentException">O método representado pelo delegado é invocado em um objeto ou uma classe que não dá suporte a ele.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">O método representado pelo delegado é um método de instância e o objeto de destino é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos métodos encapsulados gera uma exceção.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com o delegado atual.</param>
+        <summary>Determina se o objeto especificado e o representante atual são do mesmo tipo e compartilham o mesmo destino, métodos e lista de invocação.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> e o representante atual tem os mesmos destinos, métodos e lista de invocação; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se os dois delegados não são do mesmo tipo, eles não são considerados iguais.  
+  
+> [!IMPORTANT]
+>  No .NET Framework versão 1.0 e 1.1, dois delegados foram considerados iguais se seus destinos, métodos e lista de invocação fossem iguais, mesmo que os delegados de tipos diferentes.  
+  
+ Os métodos e os destinos são comparados de igualdade, da seguinte maneira:  
+  
+-   Se os dois métodos que estão sendo comparados são estáticos em são o mesmo método na mesma classe, os métodos são considerados iguais e os destinos também são considerados iguais.  
+  
+-   Se os dois métodos que estão sendo comparados são métodos de instância em o mesmo método no mesmo objeto, os métodos são considerados iguais e os destinos também são considerados iguais.  
+  
+-   Caso contrário, os métodos não são considerados iguais e os destinos também são considerados não são iguais.  
+  
+ Duas listas de invocação serão consideradas idênticas somente se eles tiverem a mesma ordem e os elementos correspondentes das duas listas de representam o mesmo método e destino.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">O chamador não tem acesso ao método representado pelo representante (por exemplo, caso o método seja privado).</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código hash para o delegado.</summary>
+        <returns>Um código hash para o delegado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno deste método não deve ser persistido por dois motivos. Primeiro, a função de hash de uma classe pode ser alterada para gerar uma distribuição melhor, tornando os valores da função de hash antigo inúteis. Em segundo lugar, a implementação padrão dessa classe não garante que o mesmo valor será retornado por instâncias diferentes.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInvocationList">
+      <MemberSignature Language="C#" Value="public virtual Delegate[] GetInvocationList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Delegate[] GetInvocationList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.GetInvocationList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a lista de invocação do delegado.</summary>
+        <returns>Uma matriz de delegados representando a lista de invocação do delegado atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada representante na matriz representa exatamente um método.  
+  
+ A ordem de delegates na matriz é a mesma ordem em que o representante atual invoca os métodos que representam os delegados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir atribui três métodos para um representante. Depois, ele chama o <xref:System.Delegate.GetInvocationList%2A> método para obter uma contagem total dos métodos atribuído ao delegado, para executar os delegados na ordem inversa, bem como executar os métodos cujos nomes não incluem a subcadeia de caracteres "File".  
+  
+ [!code-csharp[System.Delegate.GetInvocationList#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Delegate.GetInvocationList/cs/GetInvocationList1.cs#1)]
+ [!code-vb[System.Delegate.GetInvocationList#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Delegate.GetInvocationList/vb/GetInvocationList1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodImpl">
+      <MemberSignature Language="C#" Value="protected virtual System.Reflection.MethodInfo GetMethodImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Reflection.MethodInfo GetMethodImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.GetMethodImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o método estático representado pelo delegado atual.</summary>
+        <returns>Um <see cref="T:System.Reflection.MethodInfo" /> que descreve o método estático representado pelo delegado atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método se aplica somente se o delegado atual representa um método estático.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">O chamador não tem acesso ao método representado pelo representante (por exemplo, caso o método seja privado).</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Não há suporte.</param>
+        <param name="context">Não há suporte.</param>
+        <summary>Não há suporte.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o método.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo Method { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo Method" />
+      <MemberSignature Language="DocId" Value="P:System.Delegate.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o método representado pelo delegado.</summary>
+        <value>Uma <see cref="T:System.Reflection.MethodInfo" /> que descreve o método representado pelo delegado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.MemberAccessException">O chamador não tem acesso ao método representado pelo representante (por exemplo, caso o método seja privado).</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Delegate d1, Delegate d2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Delegate d1, class System.Delegate d2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.op_Equality(System.Delegate,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d1" Type="System.Delegate" />
+        <Parameter Name="d2" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="d1">O primeiro delegado a ser comparado.</param>
+        <param name="d2">O segundo delegado a ser comparado.</param>
+        <summary>Determina se os delegados especificados são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="d1" /> for igual a <paramref name="d2" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois delegados do mesmo tipo com o mesmo destino, métodos e listas de invocação são considerados iguais.  
+  
+ Se os dois delegados não são do mesmo tipo, eles não são considerados iguais.  
+  
+> [!IMPORTANT]
+>  No .NET Framework versão 1.0 e 1.1, dois delegados foram considerados iguais se seus destinos, métodos e lista de invocação fossem iguais, mesmo que os delegados de tipos diferentes.  
+  
+ Os métodos e os destinos são comparados de igualdade, da seguinte maneira:  
+  
+-   Se os dois métodos que estão sendo comparados são estáticos em são o mesmo método na mesma classe, os métodos são considerados iguais e os destinos também são considerados iguais.  
+  
+-   Se os dois métodos que estão sendo comparados são métodos de instância em o mesmo método no mesmo objeto, os métodos são considerados iguais e os destinos também são considerados iguais.  
+  
+-   Caso contrário, os métodos não são considerados iguais e os destinos também são considerados não são iguais.  
+  
+ Duas listas de invocação serão consideradas idênticas se tiverem a mesma ordem e os elementos correspondentes das duas listas representarem o mesmo método e destino.  
+  
+ O método equivalente para esse operador é<xref:System.Delegate.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Delegate d1, Delegate d2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Delegate d1, class System.Delegate d2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.op_Inequality(System.Delegate,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d1" Type="System.Delegate" />
+        <Parameter Name="d2" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="d1">O primeiro delegado a ser comparado.</param>
+        <param name="d2">O segundo delegado a ser comparado.</param>
+        <summary>Determina se os delegados especificados não são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="d1" /> não for igual a <paramref name="d2" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois delegados são considerados não iguais se forem de tipos diferentes, ou ter métodos diferentes, destinos diferentes ou listas de invocação diferente.  
+  
+ Se os dois delegados não são do mesmo tipo, eles não são considerados iguais.  
+  
+> [!IMPORTANT]
+>  No .NET Framework versão 1.0 e 1.1, dois delegados são considerados iguais se seus destinos, métodos e lista de invocação fossem iguais, mesmo que os delegados de tipos diferentes.  
+  
+ Os métodos e os destinos são comparados de igualdade, da seguinte maneira:  
+  
+-   Se os dois métodos que estão sendo comparados são estáticos em são o mesmo método na mesma classe, os métodos são considerados iguais e os destinos também são considerados iguais.  
+  
+-   Se os dois métodos que estão sendo comparados são métodos de instância em o mesmo método no mesmo objeto, os métodos são considerados iguais e os destinos também são considerados iguais.  
+  
+-   Caso contrário, os métodos não são considerados iguais e os destinos também são considerados não são iguais.  
+  
+ Duas listas de invocação não são iguais se eles têm tamanhos diferentes, se eles são ordenados de forma diferente, ou se pelo menos um elemento de uma lista representa um método ou o destino é diferente da que é representado pelo elemento correspondente na lista de outros.  
+  
+ O método equivalente para esse operador é<xref:System.Delegate.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public static Delegate Remove (Delegate source, Delegate value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate Remove(class System.Delegate source, class System.Delegate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.Remove(System.Delegate,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Delegate" />
+        <Parameter Name="value" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="source">O representante do qual remover a lista de invocação de <c>valor</c>.</param>
+        <param name="value">O representante que fornece a lista de invocação para remover da lista de invocação de <c>fonte</c>.</param>
+        <summary>Remove a última ocorrência da lista de invocação de um delegado da lista de invocação de outro delegado.</summary>
+        <returns>Um novo delegado com uma lista de invocação formada com o uso da lista de invocação de <paramref name="source" /> e a remoção da última ocorrência da lista de invocação de <paramref name="value" />, se a lista de invocação de <paramref name="value" /> for encontrada na lista de invocação de <paramref name="source" />. Retorna <paramref name="source" /> se <paramref name="value" /> for <see langword="null" /> ou se a lista de invocação de <paramref name="value" /> não for encontrada na lista de invocação de <paramref name="source" />. Retorna uma referência nula se a lista de invocação de <paramref name="value" /> for igual à lista de invocação de <paramref name="source" /> ou se <paramref name="source" /> for uma referência nula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a lista de invocação de `value` corresponde a um conjunto contíguo de elementos na lista de invocação de `source`, em seguida, a lista de invocação de `value` ocorre dentro da lista de invocação de `source`. Se a lista de invocação de `value` ocorre mais de uma vez na lista de invocação `source`, a última ocorrência será removida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">O chamador não tem acesso ao método representado pelo representante (por exemplo, caso o método seja privado).</exception>
+        <exception cref="T:System.ArgumentException">Os tipos de delegado não são correspondentes.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public static Delegate RemoveAll (Delegate source, Delegate value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Delegate RemoveAll(class System.Delegate source, class System.Delegate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.RemoveAll(System.Delegate,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Delegate" />
+        <Parameter Name="value" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="source">O representante do qual remover a lista de invocação de <c>valor</c>.</param>
+        <param name="value">O representante que fornece a lista de invocação para remover da lista de invocação de <c>fonte</c>.</param>
+        <summary>Remove todas as ocorrências da lista de invocação de um delegado da lista de invocação de outro delegado.</summary>
+        <returns>Um novo delegado com uma lista de invocação formada com o uso da lista de invocação de <paramref name="source" /> e remoção de todas as ocorrências da lista de invocação de <paramref name="value" />, se a lista de invocação de <paramref name="value" /> for encontrada na lista de invocação de <paramref name="source" />. Retorna <paramref name="source" /> se <paramref name="value" /> é <see langword="null" /> ou se a lista de invocação de <paramref name="value" /> não é encontrada na lista de invocação de <paramref name="source" />. Retorna uma referência nula se a lista de invocação de <paramref name="value" /> é igual à lista de invocação de <paramref name="source" />, se <paramref name="source" /> contém apenas uma série de listas de invocação que é igual à lista de invocação de <paramref name="value" /> ou se <paramref name="source" /> é uma referência nula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a lista de invocação de `value` corresponde a um conjunto contíguo de elementos na lista de invocação de `source`, em seguida, a lista de invocação de `value` ocorre dentro da lista de invocação de `source`. Se a lista de invocação de `value` ocorre mais de uma vez na lista de invocação `source`, todas as ocorrências são removidas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">O chamador não tem acesso ao método representado pelo representante (por exemplo, caso o método seja privado).</exception>
+        <exception cref="T:System.ArgumentException">Os tipos de delegado não são correspondentes.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveImpl">
+      <MemberSignature Language="C#" Value="protected virtual Delegate RemoveImpl (Delegate d);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Delegate RemoveImpl(class System.Delegate d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Delegate.RemoveImpl(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="d">O representante que fornece a lista de invocação para remover da lista de invocação do delegado atual.</param>
+        <summary>Remove a lista de invocação de um representante da lista de invocação do delegado de outro.</summary>
+        <returns>Um novo delegado com uma lista de invocação formado, utilizando a lista de invocação do delegado atual e remover a lista de invocação de <paramref name="value" />, se a lista de invocação de <paramref name="value" /> for encontrado na lista de invocação do delegado. Retorna o representante atual se <paramref name="value" /> é <see langword="null" /> ou se a lista de invocação de <paramref name="value" /> não for encontrado na lista de invocação do delegado. Retorna <see langword="null" /> se a lista de invocação de <paramref name="value" /> é igual à lista de invocação do delegado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a lista de invocação de `value` corresponde a um conjunto contíguo de elementos na lista de invocação do delegado e, em seguida, a lista de invocação de `value` ocorre dentro da lista de invocação do delegado. Se a lista de invocação de `value` ocorre mais de uma vez na lista de invocação do delegado, a última ocorrência será removida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">O chamador não tem acesso ao método representado pelo representante (por exemplo, caso o método seja privado).</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public object Target { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Target" />
+      <MemberSignature Language="DocId" Value="P:System.Delegate.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância da classe em que o delegado atual invoca o método de instância.</summary>
+        <value>O objeto no qual o delegado atual invoca o método de instância, se o delegado representar um método de instância; <see langword="null" /> se o delegado representar um método estático.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Método de instância é um método associado a uma instância de uma classe; método estático é um método associado à própria classe.  
+  
+ Se o representante invoca um ou mais métodos de instância, essa propriedade retorna o destino do último método de instância na lista de invocação.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

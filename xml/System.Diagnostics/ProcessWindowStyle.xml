@@ -1,0 +1,127 @@
+<Type Name="ProcessWindowStyle" FullName="System.Diagnostics.ProcessWindowStyle">
+  <TypeSignature Language="C#" Value="public enum ProcessWindowStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProcessWindowStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.ProcessWindowStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Process</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como uma nova janela deve aparecer quando o sistema inicia um processo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hidden">
+      <MemberSignature Language="C#" Value="Hidden" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessWindowStyle Hidden = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessWindowStyle.Hidden" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de janela oculta. Uma janela pode ser visível ou oculta. O sistema exibe uma janela oculta ao não desenhá-la. Se uma janela for oculta, ele estará efetivamente desabilitada. Uma janela oculta pode processar mensagens do sistema ou de outras janelas, mas não pode processar a entrada do usuário ou exibir a saída. Com frequência, um aplicativo pode manter uma nova janela oculta enquanto personaliza a aparência dela, tornando o estilo da janela <see langword="Normal" />. Para usar <see cref="F:System.Diagnostics.ProcessWindowStyle.Hidden" />, a propriedade <see cref="P:System.Diagnostics.ProcessStartInfo.UseShellExecute" /> deve ser <see langword="false" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximized">
+      <MemberSignature Language="C#" Value="Maximized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessWindowStyle Maximized = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessWindowStyle.Maximized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de janela maximizada. Por padrão, o sistema aumenta uma janela maximizada para que ela ocupe a tela ou, no caso de uma janela filho, a área de cliente da janela pai. Se a janela tiver uma barra de título, o sistema automaticamente a moverá para a parte superior da tela ou para a parte superior da área de cliente da janela pai. Além disso, o sistema desabilita a borda de dimensionamento da janela e a capacidade de posicionamento de janela da barra de título para que o usuário não possa mover a janela arrastando a barra de título.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimized">
+      <MemberSignature Language="C#" Value="Minimized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessWindowStyle Minimized = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessWindowStyle.Minimized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de janela minimizada. Por padrão, o sistema reduz uma janela minimizada ao tamanho do seu botão da barra de tarefas e a move para a barra de tarefas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.ProcessWindowStyle Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.ProcessWindowStyle.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessWindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de janela normal e visível. O sistema exibe uma janela com o estilo <see langword="Normal" /> na tela, em uma localização padrão. Se uma janela estiver visível, o usuário poderá fornecer entradas a ela e exibir suas saídas. Com frequência, um aplicativo pode inicializar uma nova janela para o estilo <see langword="Hidden" /> enquanto personaliza a aparência da janela, tornando o estilo da janela <see langword="Normal" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,3166 @@
+<Type Name="ArrayList" FullName="System.Collections.ArrayList">
+  <TypeSignature Language="C#" Value="public class ArrayList : ICloneable, System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ArrayList extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.ArrayList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.ArrayList/ArrayListDebugView))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa a interface <see cref="T:System.Collections.IList" /> usando uma matriz cujo tamanho é aumentado dinamicamente conforme necessário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para exibir o código-fonte do .NET Framework para este tipo, consulte o [fonte de referência](http://referencesource.microsoft.com/#mscorlib/system/collections/arraylist.cs#3e3f6715773d6643). Percorra o código-fonte online, baixe a referência para exibição offline e percorrer as fontes (incluindo atualizações e patches) durante a depuração; consulte [instruções](http://referencesource.microsoft.com/).  
+  
+ O <xref:System.Collections.ArrayList> classe foi projetada para manter heterogêneas coleções de objetos. No entanto, ele não sempre oferece o melhor desempenho. Em vez disso, recomendamos o seguinte:  
+  
+-   Para uma coleção heterogênea de objetos, use o `List<Object>` (em c#) ou `List(Of Object)` (no Visual Basic), digite.  
+  
+-   Para uma coleção homogênea de objetos, use o <xref:System.Collections.Generic.List%601> classe.  
+  
+ Consulte a seção "Considerações de desempenho" o <xref:System.Collections.Generic.List%601> tópico de referência para uma discussão sobre o desempenho relativo dessas classes.  
+  
+ O <xref:System.Collections.ArrayList> não é garantida a ser classificada.  Você deve classificar o <xref:System.Collections.ArrayList> chamando seu <xref:System.Collections.ArrayList.Sort%2A> método antes de executar operações (como <xref:System.Collections.ArrayList.BinarySearch%2A>) que exigem o <xref:System.Collections.ArrayList> a ser classificada. Para manter uma coleção que é classificada automaticamente à medida que novos elementos são adicionados, você pode usar o <xref:System.Collections.Generic.SortedSet%601> classe.  
+  
+ A capacidade de um <xref:System.Collections.ArrayList> é o número de elementos de <xref:System.Collections.ArrayList> pode conter. Como os elementos são adicionados a um <xref:System.Collections.ArrayList>, a capacidade é aumentada automaticamente conforme necessário por meio de realocação. A capacidade pode ser diminuída chamando <xref:System.Collections.ArrayList.TrimToSize%2A> ou definindo o <xref:System.Collections.ArrayList.Capacity%2A> propriedade explicitamente.  
+  
+ Para grandes <xref:System.Collections.ArrayList> objetos, você pode aumentar a capacidade máxima para 2 bilhões de elementos em um sistema de 64 bits definindo o `enabled` atributo do elemento de configuração para `true` no ambiente de tempo de execução.  
+  
+ Elementos nesta coleção podem ser acessados usando um índice de inteiro.  Índices nesta coleção são baseadas em zero.  
+  
+ O <xref:System.Collections.ArrayList> coleção aceita `null` como um valor válido. Ele também permite elementos duplicados.  
+  
+ Usando matrizes multidimensionais como elementos em um <xref:System.Collections.ArrayList> não há suporte para a coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar e inicializar um <xref:System.Collections.ArrayList> e como exibir seus valores.  
+  
+ [!code-cpp[Classic ArrayList Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Um <see cref="T:System.Collections.ArrayList" /> pode dar suporte a vários leitores simultaneamente, desde que a coleção não é modificada. Para garantir a segurança de thread do <see cref="T:System.Collections.ArrayList" />, todas as operações devem ser feitas por meio do wrapper retornado pelo <see cref="M:System.Collections.ArrayList.Synchronized(System.Collections.IList)" /> método.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.ArrayList" /> que está vazia e tem a capacidade inicial padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.ArrayList> é o número de elementos que o <xref:System.Collections.ArrayList> pode conter. Como os elementos são adicionados a um <xref:System.Collections.ArrayList>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.ArrayList>.  
+  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayList (System.Collections.ICollection c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="c" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="c">O <see cref="T:System.Collections.ICollection" /> cujos elementos são copiados para a nova lista.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.ArrayList" />, que contém os elementos copiados da coleção especificada e tem a mesma capacidade inicial que o número de elementos copiados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.ArrayList> é o número de elementos que o <xref:System.Collections.ArrayList> pode conter. Como os elementos são adicionados a um <xref:System.Collections.ArrayList>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.ArrayList>.  
+  
+ Os elementos são copiados para o <xref:System.Collections.ArrayList> na mesma ordem em que são lidas pelo <xref:System.Collections.IEnumerator> do <xref:System.Collections.ICollection>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é o número de elementos em `c`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="c" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayList (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número de elementos que a nova lista pode armazenar inicialmente.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.ArrayList" /> que está vazia e tem a capacidade inicial especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.ArrayList> é o número de elementos que o <xref:System.Collections.ArrayList> pode conter. Como os elementos são adicionados a um <xref:System.Collections.ArrayList>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.ArrayList>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `capacity`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adapter">
+      <MemberSignature Language="C#" Value="public static System.Collections.ArrayList Adapter (System.Collections.IList list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ArrayList Adapter(class System.Collections.IList list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Adapter(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="list">O <see cref="T:System.Collections.IList" /> a ser encapsulado.</param>
+        <summary>Cria um wrapper <see cref="T:System.Collections.ArrayList" /> para um determinado <see cref="T:System.Collections.IList" />.</summary>
+        <returns>O wrapper <see cref="T:System.Collections.ArrayList" /> ao redor de <see cref="T:System.Collections.IList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList.Adapter%2A>não copia o conteúdo de <xref:System.Collections.IList>. Em vez disso, ele cria apenas uma <xref:System.Collections.ArrayList> wrapper em torno de <xref:System.Collections.IList>; portanto, é alterado para o <xref:System.Collections.IList> também afetam o <xref:System.Collections.ArrayList>.  
+  
+ O <xref:System.Collections.ArrayList> classe fornece genérico <xref:System.Collections.ArrayList.Reverse%2A>, <xref:System.Collections.ArrayList.BinarySearch%2A> e <xref:System.Collections.ArrayList.Sort%2A> métodos. Esse wrapper pode ser um meio para usar esses métodos no <xref:System.Collections.IList>; no entanto, essas operações genérico por meio de wrapper podem ser menos eficiente do que operações aplicadas diretamente a <xref:System.Collections.IList>.  
+  
+ Este método é uma operação O(1).  
+  
+## <a name="version-compatibility"></a>Compatibilidade de versões  
+ No .NET Framework versão 1.0 e 1.1, chamando o <xref:System.Collections.ArrayList.GetEnumerator%28System.Int32%2CSystem.Int32%29> sobrecarga de método no <xref:System.Collections.ArrayList> wrapper retornou um enumerador que tratado o segundo argumento como um limite superior em vez de uma contagem. No [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] corretamente, o segundo argumento é tratado como uma contagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="list" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual int Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto <see cref="T:System.Object" /> a ser adicionado ao final do <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Adiciona um objeto ao final do <see cref="T:System.Collections.ArrayList" />.</summary>
+        <returns>O índice <see cref="T:System.Collections.ArrayList" /> ao qual o <paramref name="value" /> foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList> aceita `null` como um valor válido e permite elementos duplicados.  
+  
+ Se <xref:System.Collections.ArrayList.Count%2A> já for igual a <xref:System.Collections.ArrayList.Capacity%2A>, a capacidade do <xref:System.Collections.ArrayList> é aumentado, automaticamente realocando matriz interna, e os elementos existentes são copiados para a nova matriz antes de adicionar o novo elemento.  
+  
+ Se <xref:System.Collections.ArrayList.Count%2A> é menor que <xref:System.Collections.ArrayList.Capacity%2A>, esse método é uma operação de (1). Se a capacidade precisa ser aumentado para acomodar o novo elemento, esse método se torna um O (`n`) operação, onde `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como adicionar elementos para o <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Add Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Add Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Add Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public virtual void AddRange (System.Collections.ICollection c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRange(class System.Collections.ICollection c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.AddRange(System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="c">O <see cref="T:System.Collections.ICollection" /> cujos elementos devem ser adicionados ao final do <see cref="T:System.Collections.ArrayList" />. A coleção em si não pode ser <see langword="null" />, mas pode conter elementos que são <see langword="null" />.</param>
+        <summary>Adiciona os elementos de um <see cref="T:System.Collections.ICollection" /> ao final do <see cref="T:System.Collections.ArrayList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList> aceita `null` como um valor válido e permite elementos duplicados.  
+  
+ A ordem dos elementos no <xref:System.Collections.ICollection> é preservada no <xref:System.Collections.ArrayList>.  
+  
+ Se o novo <xref:System.Collections.ArrayList.Count%2A> (atual <xref:System.Collections.ArrayList.Count%2A> mais o tamanho da coleção) será maior <xref:System.Collections.ArrayList.Capacity%2A>, a capacidade do <xref:System.Collections.ArrayList> é aumentado, automaticamente realocando a matriz interna para acomodar os novos elementos, e os elementos existentes são copiados para a nova matriz antes que os novos elementos são adicionados.  
+  
+ Se o <xref:System.Collections.ArrayList> pode acomodar os novos elementos sem aumentar o <xref:System.Collections.ArrayList.Capacity%2A>, esse método é um O (`n`) operação, onde `n` é o número de elementos a serem adicionados. Se a capacidade precisa ser aumentado para acomodar os novos elementos, esse método se torna um O (`n` + `m`) operação, onde `n` é o número de elementos a serem adicionados e `m` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como adicionar elementos para o <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Add Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Add Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Add Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="c" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySearch">
+      <MemberSignature Language="C#" Value="public virtual int BinarySearch (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 BinarySearch(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.BinarySearch(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado. O valor pode ser <see langword="null" />.</param>
+        <summary>Pesquisa todo o <see cref="T:System.Collections.ArrayList" /> classificado para um elemento usando o comparador padrão e retorna o índice baseado em zero do elemento.</summary>
+        <returns>O índice baseado em zero da <paramref name="value" /> no <see cref="T:System.Collections.ArrayList" /> classificado se <paramref name="value" /> for encontrado; caso contrário, um número negativo, que é o complemento bit a bit do índice do próximo elemento maior que <paramref name="value" /> ou, se não houver nenhum elemento maior, o complemento bit a bit de <see cref="P:System.Collections.ArrayList.Count" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `value` parâmetro e cada elemento do <xref:System.Collections.ArrayList> deve implementar o <xref:System.IComparable> interface, que é usada para comparações. Os elementos do <xref:System.Collections.ArrayList> já devem ser classificados em aumentar o valor de acordo com a ordem de classificação definida pelo <xref:System.IComparable> implementação; caso contrário, o resultado pode estar incorreto.  
+  
+ Comparando `null` com qualquer tipo é permitida e não gerará uma exceção ao usar <xref:System.IComparable>. Durante a classificação, `null` é considerado menor que qualquer outro objeto.  
+  
+ Se o <xref:System.Collections.ArrayList> contém mais de um elemento com o mesmo valor, o método retornará somente uma das ocorrências e pode retornar qualquer uma das ocorrências, não necessariamente o primeiro deles.  
+  
+ Caso o <xref:System.Collections.ArrayList> não contenha o valor especificado, o método retorna um inteiro negativo. Você pode aplicar a operação de complemento bit a bit (~) para esse número inteiro negativo para obter o índice do primeiro elemento que é maior do que o valor de pesquisa. Ao inserir o valor para o <xref:System.Collections.ArrayList>, esse índice deve ser usado como o ponto de inserção para manter a ordem de classificação.  
+  
+ Este método é uma operação O(log `n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar <xref:System.Collections.ArrayList.BinarySearch%2A> para localizar um objeto específico no <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.BinarySearch1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.BinarySearch1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.BinarySearch1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.BinarySearch1 Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.BinarySearch1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.BinarySearch1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Nem <paramref name="value" /> nem os elementos de <see cref="T:System.Collections.ArrayList" /> implementam a interface <see cref="T:System.IComparable" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="value" /> não é do mesmo tipo que os elementos do <see cref="T:System.Collections.ArrayList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySearch">
+      <MemberSignature Language="C#" Value="public virtual int BinarySearch (object value, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 BinarySearch(object value, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.BinarySearch(System.Object,System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado. O valor pode ser <see langword="null" />.</param>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.IComparer" /> a ser usada durante a comparação de elementos.  
+  
+ - ou -  
+  
+ <see langword="null" /> para usar o comparador padrão que é a implementação <see cref="T:System.IComparable" /> de cada elemento.</param>
+        <summary>Pesquisa um elemento em todo o <see cref="T:System.Collections.ArrayList" /> classificado usando o comparador especificado e retorna o índice baseado em zero do elemento.</summary>
+        <returns>O índice baseado em zero da <paramref name="value" /> no <see cref="T:System.Collections.ArrayList" /> classificado se <paramref name="value" /> for encontrado; caso contrário, um número negativo, que é o complemento bit a bit do índice do próximo elemento maior que <paramref name="value" /> ou, se não houver nenhum elemento maior, o complemento bit a bit de <see cref="P:System.Collections.ArrayList.Count" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A comparação personaliza como os elementos são comparados. Por exemplo, você pode usar um <xref:System.Collections.CaseInsensitiveComparer> instância como o comparador para executar pesquisas de cadeia de caracteres de maiusculas e minúsculas.  
+  
+ Se `comparer` for fornecido, os elementos do <xref:System.Collections.ArrayList> são comparados com o valor especificado usando especificado <xref:System.Collections.IComparer> implementação. Os elementos do <xref:System.Collections.ArrayList> já devem ser classificados em aumentar o valor de acordo com a ordem de classificação definida pelo `comparer`; caso contrário, o resultado pode estar incorreto.  
+  
+ Caso `comparer` seja `null`, a comparação é feita usando-se a implementação de <xref:System.IComparable> fornecida pelo próprio elemento ou pelo valor especificado. Os elementos do <xref:System.Collections.ArrayList> já devem ser classificados em aumentar o valor de acordo com a ordem de classificação definida pelo <xref:System.IComparable> implementação; caso contrário, o resultado pode estar incorreto.  
+  
+ Comparando `null` com qualquer tipo é permitida e não gerará uma exceção ao usar <xref:System.IComparable>. Durante a classificação, `null` é considerado menor que qualquer outro objeto.  
+  
+ Se o <xref:System.Collections.ArrayList> contém mais de um elemento com o mesmo valor, o método retornará somente uma das ocorrências e pode retornar qualquer uma das ocorrências, não necessariamente o primeiro deles.  
+  
+ Caso o <xref:System.Collections.ArrayList> não contenha o valor especificado, o método retorna um inteiro negativo. Você pode aplicar a operação de complemento bit a bit (~) para esse número inteiro negativo para obter o índice do primeiro elemento que é maior do que o valor de pesquisa. Ao inserir o valor para o <xref:System.Collections.ArrayList>, esse índice deve ser usado como o ponto de inserção para manter a ordem de classificação.  
+  
+ Este método é uma operação O(log `n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Collections.ArrayList> de animais coloridas. Fornecido <xref:System.Collections.IComparer> executa a comparação de cadeia de caracteres para a pesquisa binária. Os resultados de uma pesquisa iterativa e uma pesquisa binária são exibidos.  
+  
+ [!code-cpp[Classic ArrayList.BinarySearch1 Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.BinarySearch1 Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic ArrayList.BinarySearch1 Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.BinarySearch1 Example/CS/source2.cs#2)]
+ [!code-vb[Classic ArrayList.BinarySearch1 Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.BinarySearch1 Example/VB/source2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="comparer" /> é <see langword="null" /> e nem <paramref name="value" /> ou os elementos de <see cref="T:System.Collections.ArrayList" /> implementam a interface <see cref="T:System.IComparable" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="comparer" /> é <see langword="null" /> e <paramref name="value" /> não é do mesmo tipo que os elementos de <see cref="T:System.Collections.ArrayList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySearch">
+      <MemberSignature Language="C#" Value="public virtual int BinarySearch (int index, int count, object value, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 BinarySearch(int32 index, int32 count, object value, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.BinarySearch(System.Int32,System.Int32,System.Object,System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero inicial do intervalo a ser pesquisado.</param>
+        <param name="count">O tamanho do intervalo a ser procurado.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado. O valor pode ser <see langword="null" />.</param>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.IComparer" /> a ser usada durante a comparação de elementos.  
+  
+ - ou -  
+  
+ <see langword="null" /> para usar o comparador padrão que é a implementação <see cref="T:System.IComparable" /> de cada elemento.</param>
+        <summary>Pesquisa um intervalo de elementos no <see cref="T:System.Collections.ArrayList" /> classificado para encontrar um elemento que usa o comparador especificado e retorna o índice baseado em zero do elemento.</summary>
+        <returns>O índice baseado em zero da <paramref name="value" /> no <see cref="T:System.Collections.ArrayList" /> classificado se <paramref name="value" /> for encontrado; caso contrário, um número negativo, que é o complemento bit a bit do índice do próximo elemento maior que <paramref name="value" /> ou, se não houver nenhum elemento maior, o complemento bit a bit de <see cref="P:System.Collections.ArrayList.Count" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A comparação personaliza como os elementos são comparados. Por exemplo, você pode usar um <xref:System.Collections.CaseInsensitiveComparer> instância como o comparador para executar pesquisas de cadeia de caracteres de maiusculas e minúsculas.  
+  
+ Se `comparer` for fornecido, os elementos do <xref:System.Collections.ArrayList> são comparados com o valor especificado usando especificado <xref:System.Collections.IComparer> implementação. Os elementos do <xref:System.Collections.ArrayList> já devem ser classificados em aumentar o valor de acordo com a ordem de classificação definida pelo `comparer`; caso contrário, o resultado pode estar incorreto.  
+  
+ Caso `comparer` seja `null`, a comparação é feita usando-se a implementação de <xref:System.IComparable> fornecida pelo próprio elemento ou pelo valor especificado. Os elementos do <xref:System.Collections.ArrayList> já devem ser classificados em aumentar o valor de acordo com a ordem de classificação definida pelo <xref:System.IComparable> implementação; caso contrário, o resultado pode estar incorreto.  
+  
+ Comparando `null` com qualquer tipo é permitida e não gerará uma exceção ao usar <xref:System.IComparable>. Durante a classificação, `null` é considerado menor que qualquer outro objeto.  
+  
+ Se o <xref:System.Collections.ArrayList> contém mais de um elemento com o mesmo valor, o método retornará somente uma das ocorrências e pode retornar qualquer uma das ocorrências, não necessariamente o primeiro deles.  
+  
+ Caso o <xref:System.Collections.ArrayList> não contenha o valor especificado, o método retorna um inteiro negativo. Você pode aplicar a operação de complemento bit a bit (~) para esse número inteiro negativo para obter o índice do primeiro elemento que é maior do que o valor de pesquisa. Ao inserir o valor para o <xref:System.Collections.ArrayList>, esse índice deve ser usado como o ponto de inserção para manter a ordem de classificação.  
+  
+ Este método é uma operação O(log `n`), em que `n` é `count`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="index" /> e <paramref name="count" /> não denotam um intervalo válido em <see cref="T:System.Collections.ArrayList" />.  
+  
+ -ou-  
+  
+ <paramref name="comparer" /> é <see langword="null" /> e nem <paramref name="value" /> ou os elementos de <see cref="T:System.Collections.ArrayList" /> implementam a interface <see cref="T:System.IComparable" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="comparer" /> é <see langword="null" /> e <paramref name="value" /> não é do mesmo tipo que os elementos de <see cref="T:System.Collections.ArrayList" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public virtual int Capacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Capacity" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ArrayList.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de elementos que o <see cref="T:System.Collections.ArrayList" /> pode conter.</summary>
+        <value>O número de elementos que o <see cref="T:System.Collections.ArrayList" /> pode conter.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList.Capacity%2A>é o número de elementos que o <xref:System.Collections.ArrayList> pode armazenar. <xref:System.Collections.ArrayList.Count%2A>é o número de elementos que estão realmente no <xref:System.Collections.ArrayList>.  
+  
+ <xref:System.Collections.ArrayList.Capacity%2A>sempre é maior que ou igual a <xref:System.Collections.ArrayList.Count%2A>. Se <xref:System.Collections.ArrayList.Count%2A> excede <xref:System.Collections.ArrayList.Capacity%2A> durante a adição de elementos, a capacidade é aumentada automaticamente realocando a matriz interna antes de copiar os elementos antigos e adição de novos elementos.  
+  
+ A capacidade pode ser diminuída chamando <xref:System.Collections.ArrayList.TrimToSize%2A> ou definindo o <xref:System.Collections.ArrayList.Capacity%2A> propriedade explicitamente. Quando o valor de <xref:System.Collections.ArrayList.Capacity%2A> é definido explicitamente, a matriz interna também seja realocada para acomodar a capacidade especificada.  
+  
+ Recuperar o valor dessa propriedade é uma operação de (1); configuração da propriedade é um O (`n`) operação, onde `n` é a nova capacidade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Collections.ArrayList.Capacity" /> é definido como um valor menor que <see cref="P:System.Collections.ArrayList.Count" />.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente disponível no sistema.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os elementos do <see cref="T:System.Collections.ArrayList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList.Count%2A>é definido como zero, e referências a outros objetos de elementos da coleção também são liberadas.  
+  
+ <xref:System.Collections.ArrayList.Capacity%2A>permanece inalterado.  Para redefinir a capacidade do <xref:System.Collections.ArrayList>, chame <xref:System.Collections.ArrayList.TrimToSize%2A> ou defina o <xref:System.Collections.ArrayList.Capacity%2A> propriedade diretamente. Cortar vazio <xref:System.Collections.ArrayList> define a capacidade do <xref:System.Collections.ArrayList> à capacidade padrão.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como cortar as partes não utilizadas do <xref:System.Collections.ArrayList> e como limpar os valores a <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Clear Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Clear Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia superficial do <see cref="T:System.Collections.ArrayList" />.</summary>
+        <returns>Uma cópia superficial do <see cref="T:System.Collections.ArrayList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia superficial de uma coleção copia apenas os elementos da coleção, se eles são tipos de referência ou tipos de valor, mas não copia os objetos que se referem as referências a. As referências na nova coleção apontam para os mesmos objetos que as referências na coleção original apontem para.  
+  
+ Em contraste, uma cópia profunda de uma coleção copia os elementos e tudo direta ou indiretamente referenciado por elementos.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public virtual bool Contains (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Determina se um elemento está no <see cref="T:System.Collections.ArrayList" />.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="item" /> for encontrado no <see cref="T:System.Collections.ArrayList" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Começando pelo .NET Framework 2.0, esse método usa os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do objeto da coleção em `item` para determinar se o item existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.CopyTo(System.Array)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ArrayList" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <summary>Copia todo o <see cref="T:System.Collections.ArrayList" /> para um <see cref="T:System.Array" /> unidimensional compatível, a partir do início da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz especificada deve ser de um tipo compatível.  
+  
+ Este método usa <xref:System.Array.Copy%2A?displayProperty=nameWithType> para copiar os elementos.  
+  
+ Os elementos são copiados para o <xref:System.Array> na mesma ordem em que o enumerador que itera por meio de <xref:System.Collections.ArrayList>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como copiar um <xref:System.Collections.ArrayList> em um unidimensional <xref:System.Array?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic ArrayList.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O número de elementos no <see cref="T:System.Collections.ArrayList" /> de origem é maior que o número de elementos que o <paramref name="array" /> de destino pode conter.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.ArrayList" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ArrayList" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="arrayIndex">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia todo o <see cref="T:System.Collections.ArrayList" /> em um <see cref="T:System.Array" /> unidimensional compatível, começando no índice especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz especificada deve ser de um tipo compatível.  
+  
+ Este método usa <xref:System.Array.Copy%2A?displayProperty=nameWithType> para copiar os elementos.  
+  
+ Os elementos são copiados para o <xref:System.Array> na mesma ordem em que o enumerador que itera por meio de <xref:System.Collections.ArrayList>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como copiar um <xref:System.Collections.ArrayList> em um unidimensional <xref:System.Array?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic ArrayList.CopyTo1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.CopyTo1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.CopyTo1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.CopyTo1 Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.CopyTo1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.CopyTo1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ - ou -  
+  
+ O número de elementos na origem <see cref="T:System.Collections.ArrayList" /> é maior do que o espaço disponível de <paramref name="arrayIndex" /> até o final do <paramref name="array" /> de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.ArrayList" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (int index, Array array, int arrayIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(int32 index, class System.Array array, int32 arrayIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.CopyTo(System.Int32,System.Array,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero no <see cref="T:System.Collections.ArrayList" /> de origem em que a cópia começa.</param>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ArrayList" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="arrayIndex">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <param name="count">O número de elementos a serem copiados.</param>
+        <summary>Copia um intervalo de elementos do <see cref="T:System.Collections.ArrayList" /> para um <see cref="T:System.Array" /> unidimensional compatível, começando pelo índice especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz especificada deve ser de um tipo compatível.  
+  
+ Este método usa <xref:System.Array.Copy%2A?displayProperty=nameWithType> para copiar os elementos.  
+  
+ Os elementos são copiados para o <xref:System.Array> na mesma ordem em que o enumerador que itera por meio de <xref:System.Collections.ArrayList>.  
+  
+ Este método é uma operação O(`n`), em que `n` é `count`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como copiar um <xref:System.Collections.ArrayList> em um unidimensional <xref:System.Array?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic ArrayList.CopyTo1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.CopyTo1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.CopyTo1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.CopyTo1 Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.CopyTo1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.CopyTo1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="arrayIndex" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ <paramref name="index" /> é igual a ou maior que o <see cref="P:System.Collections.ArrayList.Count" /> do <see cref="T:System.Collections.ArrayList" /> de origem.  
+  
+ -ou-  
+  
+ O número de elementos de <paramref name="index" /> até o final do <see cref="T:System.Collections.ArrayList" /> de origem é maior que o espaço disponível do <paramref name="arrayIndex" /> até o final do <paramref name="array" /> de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.ArrayList" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ArrayList.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos realmente contidos no <see cref="T:System.Collections.ArrayList" />.</summary>
+        <value>O número de elementos realmente contidos no <see cref="T:System.Collections.ArrayList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList.Capacity%2A>é o número de elementos que o <xref:System.Collections.ArrayList> pode armazenar. <xref:System.Collections.ArrayList.Count%2A>é o número de elementos que estão realmente no <xref:System.Collections.ArrayList>.  
+  
+ <xref:System.Collections.ArrayList.Capacity%2A>sempre é maior que ou igual a <xref:System.Collections.ArrayList.Count%2A>. Se <xref:System.Collections.ArrayList.Count%2A> excede <xref:System.Collections.ArrayList.Capacity%2A> durante a adição de elementos, a capacidade é aumentada automaticamente realocando a matriz interna antes de copiar os elementos antigos e adição de novos elementos.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedSize">
+      <MemberSignature Language="C#" Value="public static System.Collections.ArrayList FixedSize (System.Collections.ArrayList list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ArrayList FixedSize(class System.Collections.ArrayList list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.FixedSize(System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="list">O <see cref="T:System.Collections.ArrayList" /> a ser encapsulado.</param>
+        <summary>Retorna um wrapper <see cref="T:System.Collections.ArrayList" /> com um tamanho fixo.</summary>
+        <returns>Um wrapper <see cref="T:System.Collections.ArrayList" /> com um tamanho fixo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse wrapper pode ser usado para impedir inclusões e exclusões de original <xref:System.Collections.ArrayList>. Os elementos ainda podem ser modificados ou substituídos.  
+  
+ Uma coleção com um tamanho fixo é simplesmente uma coleção com um wrapper que impede a adição e a remoção de elementos; por isso, caso as alterações sejam feitas na coleção subjacente, inclusive a adição ou a remoção de elementos, a coleção de tamanho fixo reflete essas alterações.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um wrapper de tamanho fixo para um <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.IsFixedSize Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IsFixedSize Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.IsFixedSize Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IsFixedSize Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.IsFixedSize Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IsFixedSize Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="list" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedSize">
+      <MemberSignature Language="C#" Value="public static System.Collections.IList FixedSize (System.Collections.IList list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IList FixedSize(class System.Collections.IList list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.FixedSize(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="list">O <see cref="T:System.Collections.IList" /> a ser encapsulado.</param>
+        <summary>Retorna um wrapper <see cref="T:System.Collections.IList" /> com um tamanho fixo.</summary>
+        <returns>Um wrapper <see cref="T:System.Collections.IList" /> com um tamanho fixo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse wrapper pode ser usado para impedir inclusões e exclusões de original <xref:System.Collections.IList>. Os elementos ainda podem ser modificados ou substituídos.  
+  
+ Uma coleção com um tamanho fixo é simplesmente uma coleção com um wrapper que impede a adição e a remoção de elementos; por isso, caso as alterações sejam feitas na coleção subjacente, inclusive a adição ou a remoção de elementos, a coleção de tamanho fixo reflete essas alterações.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="list" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para todo o <see cref="T:System.Collections.ArrayList" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para todo o <see cref="T:System.Collections.ArrayList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o enumerador para um <xref:System.Collections.ArrayList>e o enumerador para um intervalo de elementos de <xref:System.Collections.ArrayList>.  
+  
+ [!code-csharp[Collections.ArrayList.GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR/collections.arraylist.getenumerator/cs/program.cs#1)]
+ [!code-vb[Collections.ArrayList.GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/collections.arraylist.getenumerator/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.GetEnumerator(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice inicial baseado em zero da seção <see cref="T:System.Collections.ArrayList" /> que o enumerador deve consultar.</param>
+        <param name="count">O número de elementos na seção <see cref="T:System.Collections.ArrayList" /> que o enumerador deve consultar.</param>
+        <summary>Retorna um enumerador para um intervalo de elementos no <see cref="T:System.Collections.ArrayList" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para o intervalo especificado de elementos no <see cref="T:System.Collections.ArrayList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `foreach` instrução de linguagem c# (`for each` no Visual C++, `For Each` Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ Este método é uma operação O(1).  
+  
+## <a name="version-compatibility"></a>Compatibilidade de versões  
+ Nas versões do .NET Framework 1.0 e 1.1, o enumerador para um <xref:System.Collections.ArrayList> wrapper retornado pelo <xref:System.Collections.ArrayList.Adapter%2A> método tratado o segundo argumento como um limite superior em vez de uma contagem. No [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] corretamente, o segundo argumento é tratado como uma contagem.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o enumerador para um <xref:System.Collections.ArrayList>e o enumerador para um intervalo de elementos de <xref:System.Collections.ArrayList>.  
+  
+ [!code-csharp[Collections.ArrayList.GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_CLR/collections.arraylist.getenumerator/cs/program.cs#1)]
+ [!code-vb[Collections.ArrayList.GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/collections.arraylist.getenumerator/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="index" /> e <paramref name="count" /> não especificam um intervalo válido no <see cref="T:System.Collections.ArrayList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRange">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ArrayList GetRange (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ArrayList GetRange(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.GetRange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice <see cref="T:System.Collections.ArrayList" /> baseado em zero no qual é iniciado o intervalo.</param>
+        <param name="count">O número de elementos no intervalo.</param>
+        <summary>Retorna um <see cref="T:System.Collections.ArrayList" /> que representa um subconjunto dos elementos na origem <see cref="T:System.Collections.ArrayList" />.</summary>
+        <returns>Um <see cref="T:System.Collections.ArrayList" /> que representa um subconjunto dos elementos na origem <see cref="T:System.Collections.ArrayList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não cria cópias dos elementos. O novo <xref:System.Collections.ArrayList> é apenas uma janela de exibição na fonte de <xref:System.Collections.ArrayList>. No entanto, todas as alterações subsequentes à fonte de <xref:System.Collections.ArrayList> deve ser feito por meio desta janela de exibição <xref:System.Collections.ArrayList>. Se forem feitas alterações diretamente à fonte de <xref:System.Collections.ArrayList>, a janela de exibição <xref:System.Collections.ArrayList> é invalidado e quaisquer operações sobre ela retornará um <xref:System.InvalidOperationException>.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir e obter um intervalo de elementos de <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.SetRange Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.SetRange Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.SetRange Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.SetRange Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.SetRange Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.SetRange Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="index" /> e <paramref name="count" /> não denotam um intervalo válido de elementos no <see cref="T:System.Collections.ArrayList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public virtual int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Pesquisa o <see cref="T:System.Object" /> especificado e retorna o índice de base zero da primeira ocorrência dentro de todo o <see cref="T:System.Collections.ArrayList" />.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de <paramref name="value" /> em todo o <see cref="T:System.Collections.ArrayList" />, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.ArrayList> é pesquisado forward iniciando no primeiro elemento e terminando no último elemento.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Começando pelo .NET Framework 2.0, esse método usa os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do objeto da coleção em `item` para determinar se o item existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como determinar o índice da primeira ocorrência de um elemento especificado.  
+  
+ [!code-cpp[Classic ArrayList.IndexOf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IndexOf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.IndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IndexOf Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.IndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public virtual int IndexOf (object value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.IndexOf(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <param name="startIndex">O índice inicial com base em zero da pesquisa. 0 (zero) é válido em uma lista vazia.</param>
+        <summary>Pesquisa o <see cref="T:System.Object" /> especificado e retorna o índice baseado em zero da primeira ocorrência dentro do intervalo de elementos no <see cref="T:System.Collections.ArrayList" /> que se estende do índice especificado ao último elemento.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de <paramref name="value" /> dentro do intervalo de elementos no <see cref="T:System.Collections.ArrayList" /> que se estende do <paramref name="startIndex" /> ao último elemento, se for encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.ArrayList> é pesquisado forward começando em `startIndex` e terminando no último elemento.  
+  
+ Esse método executa uma pesquisa linear; Portanto, esse método é um O (`n`) operação, onde `n` é o número de elementos do `startIndex` ao final do <xref:System.Collections.ArrayList>.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Começando pelo .NET Framework 2.0, esse método usa os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do objeto da coleção em `item` para determinar se o item existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como determinar o índice da primeira ocorrência de um elemento especificado.  
+  
+ [!code-cpp[Classic ArrayList.IndexOf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IndexOf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.IndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IndexOf Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.IndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> está fora do intervalo de índices válidos para o <see cref="T:System.Collections.ArrayList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public virtual int IndexOf (object value, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object value, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.IndexOf(System.Object,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <param name="startIndex">O índice inicial com base em zero da pesquisa. 0 (zero) é válido em uma lista vazia.</param>
+        <param name="count">O número de elementos na seção a ser pesquisada.</param>
+        <summary>Pesquisa o <see cref="T:System.Object" /> especificado e retorna o índice baseado em zero da primeira ocorrência dentro de um intervalo de elementos no <see cref="T:System.Collections.ArrayList" /> que começa no índice especificado e contém o número de elementos especificado.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de <paramref name="value" /> dentro do intervalo de elementos no <see cref="T:System.Collections.ArrayList" /> que começa em <paramref name="startIndex" /> e contém o número de elementos <paramref name="count" />, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.ArrayList> é pesquisado forward começando em `startIndex` e final em `startIndex` mais `count` menos 1, se `count` for maior que 0.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é `count`.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Começando pelo .NET Framework 2.0, esse método usa os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do objeto da coleção em `item` para determinar se o item existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como determinar o índice da primeira ocorrência de um elemento especificado.  
+  
+ [!code-cpp[Classic ArrayList.IndexOf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IndexOf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.IndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IndexOf Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.IndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> está fora do intervalo de índices válidos para o <see cref="T:System.Collections.ArrayList" />.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="startIndex" /> e <paramref name="count" /> não especificam uma seção válida no <see cref="T:System.Collections.ArrayList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual void Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> devem ser inseridos.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser inserido. O valor pode ser <see langword="null" />.</param>
+        <summary>Insere um elemento no <see cref="T:System.Collections.ArrayList" />, no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList> aceita `null` como um valor válido e permite elementos duplicados.  
+  
+ Se <xref:System.Collections.ArrayList.Count%2A> já for igual a <xref:System.Collections.ArrayList.Capacity%2A>, a capacidade do <xref:System.Collections.ArrayList> é aumentado, automaticamente realocando matriz interna, e os elementos existentes são copiados para a nova matriz antes de adicionar o novo elemento.  
+  
+ Se `index` é igual a <xref:System.Collections.ArrayList.Count%2A>, `value` é adicionada ao final da <xref:System.Collections.ArrayList>.  
+  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o ponto de inserção descem para acomodar o novo elemento. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como inserir elementos no <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Insert Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Insert Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Insert Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Insert Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Insert Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Insert Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é maior que <see cref="P:System.Collections.ArrayList.Count" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertRange">
+      <MemberSignature Language="C#" Value="public virtual void InsertRange (int index, System.Collections.ICollection c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InsertRange(int32 index, class System.Collections.ICollection c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.InsertRange(System.Int32,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="c" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero no qual os novos elementos devem ser inseridos.</param>
+        <param name="c">O <see cref="T:System.Collections.ICollection" /> cujos elementos devem ser inseridos no <see cref="T:System.Collections.ArrayList" />. A coleção em si não pode ser <see langword="null" />, mas pode conter elementos que são <see langword="null" />.</param>
+        <summary>Insere os elementos de uma coleção no <see cref="T:System.Collections.ArrayList" /> no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList> aceita `null` como um valor válido e permite elementos duplicados.  
+  
+ Se o novo <xref:System.Collections.ArrayList.Count%2A> (atual <xref:System.Collections.ArrayList.Count%2A> mais o tamanho da coleção) será maior <xref:System.Collections.ArrayList.Capacity%2A>, a capacidade do <xref:System.Collections.ArrayList> é aumentado, automaticamente realocando a matriz interna para acomodar os novos elementos, e os elementos existentes são copiados para a nova matriz antes que os novos elementos são adicionados.  
+  
+ Se `index` é igual a <xref:System.Collections.ArrayList.Count%2A>, os elementos são adicionados ao final da <xref:System.Collections.ArrayList>.  
+  
+ A ordem dos elementos no <xref:System.Collections.ICollection> é preservada no <xref:System.Collections.ArrayList>.  
+  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o ponto de inserção descem para acomodar o novo elemento. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+ Esse método é um O (`n` + `m`) operação, onde `n` é o número de elementos a serem adicionados e `m` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como inserir elementos no <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Insert Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Insert Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Insert Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Insert Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Insert Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Insert Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="c" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é maior que <see cref="P:System.Collections.ArrayList.Count" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public virtual bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ArrayList.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.ArrayList" /> tiver um valor fixo; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção com um tamanho fixo não permite a adição ou a remoção de elementos após a coleção ser criada, mas permite a modificação de elementos existentes.  
+  
+ Uma coleção com um tamanho fixo é simplesmente uma coleção com um wrapper que impede a adição e a remoção de elementos; por isso, caso as alterações sejam feitas na coleção subjacente, inclusive a adição ou a remoção de elementos, a coleção de tamanho fixo reflete essas alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um wrapper de tamanho fixo para um <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.IsFixedSize Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IsFixedSize Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.IsFixedSize Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IsFixedSize Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.IsFixedSize Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IsFixedSize Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ArrayList.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.ArrayList" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.ArrayList" /> for somente leitura; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção que seja somente leitura não permite a adição, a remoção ou a modificação de elementos após a coleção ser criada.  
+  
+ Uma coleção somente leitura é apenas uma coleção com um wrapper que impede a modificação da coleção; por isso, caso as alterações sejam feitas na coleção subjacente, a coleção somente leitura reflete as alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um wrapper de somente leitura para um <xref:System.Collections.ArrayList> e como determinar se um <xref:System.Collections.ArrayList> é somente leitura.  
+  
+ [!code-cpp[Classic ArrayList.ReadOnly1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.ReadOnly1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.ReadOnly1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.ReadOnly1 Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.ReadOnly1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.ReadOnly1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public virtual bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ArrayList.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.ArrayList" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ArrayList" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para garantir a segurança de thread do <xref:System.Collections.ArrayList>, todas as operações devem ser feitas por meio do wrapper retornado pelo <xref:System.Collections.ArrayList.Synchronized%2A> método.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ArrayList.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ O exemplo de código a seguir mostra como sincronizar um <xref:System.Collections.ArrayList>, determinar se um <xref:System.Collections.ArrayList> é sincronizado e usar um sincronizado <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.IsSynchronized Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.IsSynchronized Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.IsSynchronized Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ArrayList.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Obtém ou define o elemento no índice especificado.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.ArrayList.Item%2A> retorna um <xref:System.Object>, portanto, talvez seja necessário converter o valor retornado para o tipo original para manipulá-los. É importante observar que <xref:System.Collections.ArrayList> não é uma coleção fortemente tipada. Para uma alternativa fortemente tipados, consulte <xref:System.Collections.Generic.List%601>.  
+  
+ <xref:System.Collections.ArrayList> aceita `null` como um valor válido e permite elementos duplicados.  
+  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[index]`.  
+  
+ A linguagem c# usa a palavra-chave para definir os indexadores em vez de implementar o <xref:System.Collections.ArrayList.Item%2A> propriedade. Visual Basic implementa <xref:System.Collections.ArrayList.Item%2A> como uma propriedade padrão, que fornece a mesma funcionalidade de indexação.  
+  
+ Recuperar o valor dessa propriedade é uma operação de (1); definindo a propriedade também é uma operação de (1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Collections.ArrayList> e adiciona vários itens. O exemplo demonstra o acesso aos elementos com o <xref:System.Collections.ArrayList.Item%2A> propriedade (indexador em c#) e a alteração de um elemento, atribuindo um novo valor para o <xref:System.Collections.ArrayList.Item%2A> propriedade para um índice especificado. O exemplo também mostra que o <xref:System.Collections.ArrayList.Item%2A> propriedade não pode ser usada para acessar ou adicionar elementos fora do tamanho atual da lista.  
+  
+ [!code-cpp[System.Collections.ArrayList.Item#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ArrayList.Item/cpp/source.cpp#1)]
+ [!code-csharp[System.Collections.ArrayList.Item#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ArrayList.Item/CS/source.cs#1)]
+ [!code-vb[System.Collections.ArrayList.Item#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ArrayList.Item/VB/source.vb#1)]  
+  
+ O exemplo a seguir usa o <xref:System.Collections.ArrayList.Item%2A> propriedade explicitamente para atribuir valores aos itens na lista. O exemplo define uma classe que herda um <xref:System.Collections.ArrayList> e adiciona um método para misturar os itens da lista.  
+  
+ [!code-cpp[System.Collections.ArrayList.Item#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ArrayList.Item/cpp/source2.cpp#2)]
+ [!code-csharp[System.Collections.ArrayList.Item#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ArrayList.Item/CS/source2.cs#2)]
+ [!code-vb[System.Collections.ArrayList.Item#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ArrayList.Item/VB/source2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Collections.ArrayList.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LastIndexOf">
+      <MemberSignature Language="C#" Value="public virtual int LastIndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 LastIndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.LastIndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Pesquisa o <see cref="T:System.Object" /> especificado e retorna o índice de base zero da última ocorrência dentro de todo o <see cref="T:System.Collections.ArrayList" />.</summary>
+        <returns>O índice de base zero da última ocorrência de <paramref name="value" /> em todo o <see cref="T:System.Collections.ArrayList" />, se localizado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.ArrayList> é pesquisado para trás, começando no último elemento e terminando no primeiro elemento.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+ Começando pelo .NET Framework 2.0, esse método usa os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do objeto da coleção em `item` para determinar se o item existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como determinar o índice da última ocorrência de um elemento especificado.  
+  
+ [!code-cpp[Classic ArrayList.LastIndexOf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.LastIndexOf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.LastIndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.LastIndexOf Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.LastIndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.LastIndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastIndexOf">
+      <MemberSignature Language="C#" Value="public virtual int LastIndexOf (object value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 LastIndexOf(object value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.LastIndexOf(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <param name="startIndex">O índice inicial com base em zero da pesquisa inversa.</param>
+        <summary>Procura especificado <see cref="T:System.Object" /> e retorna o índice baseado em zero da última ocorrência dentro do intervalo de elementos de <see cref="T:System.Collections.ArrayList" /> que se estende do primeiro elemento para o índice especificado.</summary>
+        <returns>O índice baseado em zero da última ocorrência de <paramref name="value" /> dentro do intervalo de elementos no <see cref="T:System.Collections.ArrayList" /> que se estende do primeiro elemento a ser <paramref name="startIndex" />, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.ArrayList> é pesquisada começando com versões anteriores em `startIndex` e terminando no primeiro elemento.  
+  
+ Esse método executa uma pesquisa linear; Portanto, esse método é um O (`n`) operação, onde `n` é o número de elementos desde o início do <xref:System.Collections.ArrayList> para `startIndex`.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Começando pelo .NET Framework 2.0, esse método usa os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do objeto da coleção em `item` para determinar se o item existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como determinar o índice da última ocorrência de um elemento especificado.  
+  
+ [!code-cpp[Classic ArrayList.LastIndexOf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.LastIndexOf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.LastIndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.LastIndexOf Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.LastIndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.LastIndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> está fora do intervalo de índices válidos para o <see cref="T:System.Collections.ArrayList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LastIndexOf">
+      <MemberSignature Language="C#" Value="public virtual int LastIndexOf (object value, int startIndex, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 LastIndexOf(object value, int32 startIndex, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.LastIndexOf(System.Object,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <param name="startIndex">O índice inicial com base em zero da pesquisa inversa.</param>
+        <param name="count">O número de elementos na seção a ser pesquisada.</param>
+        <summary>Procura especificado <see cref="T:System.Object" /> e retorna o índice baseado em zero da última ocorrência dentro do intervalo de elementos de <see cref="T:System.Collections.ArrayList" /> que contém o número especificado de elementos e termina no índice especificado.</summary>
+        <returns>O índice baseado em zero da última ocorrência de <paramref name="value" /> dentro do intervalo de elementos no <see cref="T:System.Collections.ArrayList" /> que contém <paramref name="count" /> número de elementos e termina no <paramref name="startIndex" />, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.ArrayList> é pesquisada começando com versões anteriores em `startIndex` e final em `startIndex` menos `count` mais 1, se `count` for maior que 0.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é `count`.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Começando pelo .NET Framework 2.0, esse método usa os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do objeto da coleção em `item` para determinar se o item existe. Em versões anteriores do .NET Framework, essa decisão era tomada usando-se os métodos <xref:System.Object.Equals%2A> e <xref:System.IComparable.CompareTo%2A> do parâmetro `item` nos objetos na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como determinar o índice da última ocorrência de um elemento especificado. Observe que `LastIndexOf` é uma pesquisa para trás; portanto, `count` deve ser menor ou igual a `startIndex` + 1.  
+  
+ [!code-cpp[Classic ArrayList.LastIndexOf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.LastIndexOf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.LastIndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.LastIndexOf Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.LastIndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.LastIndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> está fora do intervalo de índices válidos para o <see cref="T:System.Collections.ArrayList" />.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="startIndex" /> e <paramref name="count" /> não especificam uma seção válida no <see cref="T:System.Collections.ArrayList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public static System.Collections.ArrayList ReadOnly (System.Collections.ArrayList list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ArrayList ReadOnly(class System.Collections.ArrayList list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.ReadOnly(System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="list">O <see cref="T:System.Collections.ArrayList" /> a ser encapsulado.</param>
+        <summary>Retorna um wrapper <see cref="T:System.Collections.ArrayList" /> de somente leitura.</summary>
+        <returns>Um wrapper <see cref="T:System.Collections.ArrayList" /> de somente leitura encapsula <paramref name="list" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar modificações `list`, expor `list` apenas por esse wrapper.  
+  
+ Uma coleção que é somente leitura é simplesmente uma coleção com um wrapper que impede a modificação da coleção. Se forem feitas alterações à coleção subjacente, a coleção somente leitura reflete as alterações.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um wrapper de somente leitura para um <xref:System.Collections.ArrayList> e como determinar se um <xref:System.Collections.ArrayList> é somente leitura.  
+  
+ [!code-cpp[Classic ArrayList.ReadOnly1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.ReadOnly1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.ReadOnly1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.ReadOnly1 Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.ReadOnly1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.ReadOnly1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="list" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public static System.Collections.IList ReadOnly (System.Collections.IList list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IList ReadOnly(class System.Collections.IList list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.ReadOnly(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="list">O <see cref="T:System.Collections.IList" /> a ser encapsulado.</param>
+        <summary>Retorna um wrapper <see cref="T:System.Collections.IList" /> de somente leitura.</summary>
+        <returns>Um wrapper <see cref="T:System.Collections.IList" /> de somente leitura encapsula <paramref name="list" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar modificações `list`, expor `list` apenas por esse wrapper.  
+  
+ Uma coleção que é somente leitura é simplesmente uma coleção com um wrapper que impede a modificação da coleção. Se forem feitas alterações à coleção subjacente, a coleção somente leitura reflete as alterações.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="list" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> a ser removido de <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Remove a primeira ocorrência de um objeto específico do <see cref="T:System.Collections.ArrayList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Collections.ArrayList> não contém o objeto especificado, o <xref:System.Collections.ArrayList> permanece inalterado. Nenhuma exceção é lançada.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o elemento removido sobem para ocupar o ponto vazio. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como remover elementos do <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Remove Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Remove Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento a ser removido.</param>
+        <summary>Remove o elemento no índice especificado do <see cref="T:System.Collections.ArrayList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que o elemento seja removido, o tamanho da coleção é ajustado e o valor da <xref:System.Collections.ArrayList.Count%2A> propriedade é reduzida por um.  
+  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o elemento removido sobem para ocupar o ponto vazio. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como remover elementos do <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Remove Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Remove Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Collections.ArrayList.Count" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public virtual void RemoveRange (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveRange(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.RemoveRange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice inicial baseado em zero do intervalo de elementos a serem removidos.</param>
+        <param name="count">O número de elementos a serem removidos.</param>
+        <summary>Remove um intervalo de elementos do <see cref="T:System.Collections.ArrayList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o elemento removido sobem para ocupar o ponto vazio. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como remover elementos do <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Remove Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Remove Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="index" /> e <paramref name="count" /> não denotam um intervalo válido de elementos no <see cref="T:System.Collections.ArrayList" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Repeat">
+      <MemberSignature Language="C#" Value="public static System.Collections.ArrayList Repeat (object value, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ArrayList Repeat(object value, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Repeat(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> para copiar várias vezes no novo <see cref="T:System.Collections.ArrayList" />. O valor pode ser <see langword="null" />.</param>
+        <param name="count">O número de vezes <c>valor</c> devem ser copiados.</param>
+        <summary>Retorna um <see cref="T:System.Collections.ArrayList" /> cujos elementos são cópias do valor especificado.</summary>
+        <returns>Um <see cref="T:System.Collections.ArrayList" /> com <paramref name="count" /> número de elementos, que são cópias de <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList> aceita `null` como um valor válido e permite elementos duplicados.  
+  
+ Este método é uma operação O(`n`), em que `n` é `count`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar e inicializar uma nova <xref:System.Collections.ArrayList> com o mesmo valor.  
+  
+ [!code-cpp[Classic ArrayList.Repeat Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Repeat Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Repeat Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Repeat Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Repeat Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Repeat Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="public virtual void Reverse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reverse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Reverse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inverte a ordem dos elementos em todo o <see cref="T:System.Collections.ArrayList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa <xref:System.Array.Reverse%2A?displayProperty=nameWithType> para inverter a ordem dos elementos, de modo que o elemento no <xref:System.Collections.ArrayList> [i], onde qualquer índice dentro do intervalo, é movido para <xref:System.Collections.ArrayList> j, onde é igual a j `index`  +  `index`  +  `count` - i - 1.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como inverter a ordem de classificação dos valores em um <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Reverse Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Reverse Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Reverse Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Reverse Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Reverse Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Reverse Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="public virtual void Reverse (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reverse(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Reverse(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice inicial baseado em zero do intervalo a ser revertido.</param>
+        <param name="count">O número de elementos no intervalo a serem revertidos.</param>
+        <summary>Inverte a ordem dos elementos no intervalo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa <xref:System.Array.Reverse%2A?displayProperty=nameWithType> para inverter a ordem dos elementos, de modo que o elemento no <xref:System.Collections.ArrayList> [i], onde qualquer índice dentro do intervalo, é movido para <xref:System.Collections.ArrayList> j, onde é igual a j `index`  +  `index`  +  `count` - i - 1.  
+  
+ Este método é uma operação O(`n`), em que `n` é `count`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como inverter a ordem de classificação dos valores em um intervalo de elementos em um <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Reverse1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Reverse1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Reverse1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Reverse1 Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Reverse1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Reverse1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="index" /> e <paramref name="count" /> não denotam um intervalo válido de elementos no <see cref="T:System.Collections.ArrayList" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRange">
+      <MemberSignature Language="C#" Value="public virtual void SetRange (int index, System.Collections.ICollection c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetRange(int32 index, class System.Collections.ICollection c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.SetRange(System.Int32,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="c" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="index">O com base em zero <see cref="T:System.Collections.ArrayList" /> índice no qual começar a copiar os elementos de <c>c</c>.</param>
+        <param name="c">O <see cref="T:System.Collections.ICollection" /> cujos elementos copiar para o <see cref="T:System.Collections.ArrayList" />. A coleção em si não pode ser <see langword="null" />, mas pode conter elementos que são <see langword="null" />.</param>
+        <summary>Copia os elementos de uma coleção em um intervalo de elementos no <see cref="T:System.Collections.ArrayList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ArrayList> aceita `null` como um valor válido e permite elementos duplicados.  
+  
+ A ordem dos elementos no <xref:System.Collections.ICollection> é preservada no <xref:System.Collections.ArrayList>.  
+  
+ Esse método é um O (`n` + 1) a operação, onde `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir e obter um intervalo de elementos de <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.SetRange Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.SetRange Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.SetRange Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.SetRange Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.SetRange Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.SetRange Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> mais o número de elementos em <paramref name="c" /> é maior que <see cref="P:System.Collections.ArrayList.Count" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="c" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public virtual void Sort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Sort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Sort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Classifica os elementos em todo o <see cref="T:System.Collections.ArrayList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa <xref:System.Array.Sort%2A?displayProperty=nameWithType>, que usa o algoritmo QuickSort. O algoritmo QuickSort é uma comparação de classificação (também chamada de uma classificação instável), o que significa que um "menor que ou igual a" operação de comparação que determina qual dos dois elementos deve ocorrer primeiro na lista classificada final. No entanto, se dois elementos forem iguais, sua ordem original pode não ser preservada. Por outro lado, uma classificação estável preserva a ordem de elementos iguais. Para executar uma classificação estável, você deve implementar um personalizado <xref:System.Collections.IComparer> interface a ser usada com outras sobrecargas do método.  
+  
+ Em média, esse método é um O (`n` log `n`) operação, onde `n` é <xref:System.Collections.ArrayList.Count%2A>; no pior caso é um O (`n`^ 2) operação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como classificar os valores em um <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Sort Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Sort Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Sort Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Sort Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Sort Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Sort Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public virtual void Sort (System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Sort(class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Sort(System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.IComparer" /> a ser usada durante a comparação de elementos.  
+  
+ -ou-  
+  
+ Uma referência nula (<see langword="Nothing" /> no Visual Basic) para usar a implementação de <see cref="T:System.IComparable" /> de cada elemento.</param>
+        <summary>Classifica os elementos em todo o <see cref="T:System.Collections.ArrayList" /> usando o comparador especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Collections.ArrayList.Sort%2A> método para classificar uma lista de objetos com um comparador personalizado que implementa o <xref:System.Collections.IComparer> interface. Se você passar `null` para `comparer`, esse método usa o <xref:System.IComparable> implementação de cada elemento. Nesse caso, você deve garantir que os objetos contidos na lista de implementam o <xref:System.Collections.IComparer> interface ou uma exceção ocorrerá.  
+  
+ Além disso, usando o <xref:System.IComparable> implementação significa que a lista executa uma classificação de comparação (também chamada de uma classificação instável); ou seja, se dois elementos forem iguais, a ordem pode não ser preservada. Por outro lado, uma classificação estável preserva a ordem de elementos iguais. Para executar uma classificação estável, você deve implementar um personalizado <xref:System.Collections.IComparer> interface.  
+  
+ Em média, esse método é um O (`n` log `n`) operação, onde `n` é <xref:System.Collections.ArrayList.Count%2A>; no pior caso é um O (`n`^ 2) operação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como classificar os valores em um <xref:System.Collections.ArrayList> usando a comparação padrão e uma comparação personalizada que inverte a ordem de classificação.  
+  
+ [!code-cpp[System.Collections.ArrayList.Sort_2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ArrayList.Sort_2/CPP/arraylist_sort2.cpp#1)]
+ [!code-csharp[System.Collections.ArrayList.Sort_2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ArrayList.Sort_2/CS/arraylist_sort2.cs#1)]
+ [!code-vb[System.Collections.ArrayList.Sort_2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ArrayList.Sort_2/VB/arraylist_sort2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.</exception>
+        <exception cref="T:System.InvalidOperationException">Erro ao comparar dois elementos.</exception>
+        <exception cref="T:System.ArgumentException">
+          <see langword="null" /> é passado para <paramref name="comparer" />, e os elementos na lista não implementam <see cref="T:System.IComparable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public virtual void Sort (int index, int count, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Sort(int32 index, int32 count, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Sort(System.Int32,System.Int32,System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice inicial baseado em zero do intervalo a ser classificado.</param>
+        <param name="count">O tamanho do intervalo a ser classificado.</param>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.IComparer" /> a ser usada durante a comparação de elementos.  
+  
+ -ou-  
+  
+ Uma referência nula (<see langword="Nothing" /> no Visual Basic) para usar a implementação de <see cref="T:System.IComparable" /> de cada elemento.</param>
+        <summary>Classifica os elementos em um intervalo de elementos em <see cref="T:System.Collections.ArrayList" /> usando o comparador especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `comparer` é definido como `null`, esse método executa uma classificação de comparação (também chamada de uma classificação instável); ou seja, se dois elementos forem iguais, a ordem pode não ser preservada. Por outro lado, uma classificação estável preserva a ordem de elementos iguais. Para executar uma classificação estável, você deve implementar um personalizado <xref:System.Collections.IComparer> interface.  
+  
+ Em média, esse método é um O (`n` log `n`) operação, onde `n` é `count`; no pior caso é uma operação de O(n^2).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como classificar os valores em um intervalo de elementos em um <xref:System.Collections.ArrayList> usando o comparador padrão e um comparador personalizado que inverte a ordem de classificação.  
+  
+ [!code-cpp[System.Collections.ArrayList.Sort_3#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ArrayList.Sort_3/CPP/arraylist_sort3.cpp#1)]
+ [!code-csharp[System.Collections.ArrayList.Sort_3#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ArrayList.Sort_3/CS/arraylist_sort3.cs#1)]
+ [!code-vb[System.Collections.ArrayList.Sort_3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ArrayList.Sort_3/VB/arraylist_sort3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="index" /> e <paramref name="count" /> não especificam um intervalo válido no <see cref="T:System.Collections.ArrayList" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.</exception>
+        <exception cref="T:System.InvalidOperationException">Erro ao comparar dois elementos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="public static System.Collections.ArrayList Synchronized (System.Collections.ArrayList list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.ArrayList Synchronized(class System.Collections.ArrayList list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Synchronized(System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="list">O <see cref="T:System.Collections.ArrayList" /> a ser sincronizado.</param>
+        <summary>Retorna um wrapper <see cref="T:System.Collections.ArrayList" /> sincronizado (thread-safe).</summary>
+        <returns>Um wrapper <see cref="T:System.Collections.ArrayList" /> sincronizado (thread-safe).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para garantir a segurança de thread do <xref:System.Collections.ArrayList>, todas as operações devem ser feitas por meio desse wrapper.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ArrayList.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ Este método é uma operação O(1).  
+  
+ O exemplo de código a seguir mostra como sincronizar um <xref:System.Collections.ArrayList>, determinar se um <xref:System.Collections.ArrayList> é sincronizado e usar um sincronizado <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.IsSynchronized Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.IsSynchronized Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.IsSynchronized Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="list" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="public static System.Collections.IList Synchronized (System.Collections.IList list);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IList Synchronized(class System.Collections.IList list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.Synchronized(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="list">O <see cref="T:System.Collections.IList" /> a ser sincronizado.</param>
+        <summary>Retorna um wrapper <see cref="T:System.Collections.IList" /> sincronizado (thread-safe).</summary>
+        <returns>Um wrapper <see cref="T:System.Collections.IList" /> sincronizado (thread-safe).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para garantir a segurança de thread do <xref:System.Collections.ArrayList>, todas as operações devem ser feitas por meio desse wrapper.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ArrayList.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="list" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public virtual object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ArrayList.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ArrayList" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ArrayList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma versão sincronizada do <xref:System.Collections.ArrayList>, use o <xref:System.Collections.ArrayList.Synchronized%2A> método. No entanto, as classes derivadas podem fornecer sua própria versão sincronizada de <xref:System.Collections.ArrayList> usando o <xref:System.Collections.ArrayList.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Collections.ArrayList.SyncRoot%2A> do <xref:System.Collections.ArrayList>, não diretamente no <xref:System.Collections.ArrayList>. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.Collections.ArrayList> objeto.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ArrayList.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic ArrayList.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public virtual object[] ToArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] ToArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.ToArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Copia os elementos do <see cref="T:System.Collections.ArrayList" /> em uma nova matriz <see cref="T:System.Object" />.</summary>
+        <returns>Uma matriz <see cref="T:System.Object" /> que contém cópias dos elementos do <see cref="T:System.Collections.ArrayList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos são copiados usando <xref:System.Array.Copy%2A?displayProperty=nameWithType>, que é um O (`n`) operação, onde `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public virtual Array ToArray (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Array ToArray(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.ToArray(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O elemento <see cref="T:System.Type" /> da matriz de destino para criação e cópia dos elementos.</param>
+        <summary>Copia os elementos do <see cref="T:System.Collections.ArrayList" /> em uma nova matriz do tipo de elemento especificado.</summary>
+        <returns>Uma matriz do tipo de elemento especificado que contém cópias dos elementos do <see cref="T:System.Collections.ArrayList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os objetos no <xref:System.Collections.ArrayList> objeto será convertido para o <xref:System.Type> especificado no `type` parâmetro.  
+  
+ Os elementos são copiados usando <xref:System.Array.Copy%2A?displayProperty=nameWithType>, que é um O (`n`) operação, onde `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de cópia a seguir mostra como copiar os elementos de um <xref:System.Collections.ArrayList> para uma matriz de cadeia de caracteres.  
+  
+ [!code-cpp[System.Collections.ArrayList.ToArray#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ArrayList.ToArray/CPP/arraylist_toarray.cpp#1)]
+ [!code-csharp[System.Collections.ArrayList.ToArray#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ArrayList.ToArray/CS/arraylist_toarray.cs#1)]
+ [!code-vb[System.Collections.ArrayList.ToArray#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ArrayList.ToArray/VB/arraylist_toarray.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.ArrayList" /> de origem não pode ser convertido automaticamente no tipo especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimToSize">
+      <MemberSignature Language="C#" Value="public virtual void TrimToSize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TrimToSize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ArrayList.TrimToSize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define a capacidade para o número real de elementos em <see cref="T:System.Collections.ArrayList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para minimizar a memória da coleção sobrecarga se nenhum elemento novo será adicionado à coleção.  
+  
+ Para redefinir um <xref:System.Collections.ArrayList> para seu estado inicial, chame o <xref:System.Collections.ArrayList.Clear%2A> método antes de chamar <xref:System.Collections.ArrayList.TrimToSize%2A>. Cortar vazio <xref:System.Collections.ArrayList> define a capacidade do <xref:System.Collections.ArrayList> à capacidade padrão.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ArrayList.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como cortar as partes não utilizadas do <xref:System.Collections.ArrayList> e como limpar os valores a <xref:System.Collections.ArrayList>.  
+  
+ [!code-cpp[Classic ArrayList.Clear Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ArrayList.Clear Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ArrayList.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ArrayList.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic ArrayList.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ArrayList.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.ArrayList" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.ArrayList" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

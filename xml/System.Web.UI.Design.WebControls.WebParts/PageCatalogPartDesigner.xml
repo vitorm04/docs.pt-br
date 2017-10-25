@@ -1,0 +1,83 @@
+<Type Name="PageCatalogPartDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner">
+  <TypeSignature Language="C#" Value="public class PageCatalogPartDesigner : System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PageCatalogPartDesigner extends System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design em um designer visual para um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> classe atua como um catálogo de página para manter os controles adicionados anteriormente à página que um usuário tiver fechado, para que o usuário pode adicioná-los para a página. Esse controle é visível apenas quando uma página da Web está em modo de exibição de catálogo. O <xref:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner> classe fornece suporte de tempo de design para o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> classe.  
+  
+ Em um designer visual, quando você alternar de origem para o modo de Design, o código-fonte marcação que descreve o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle é analisado e uma versão de tempo de design do controle é criada na superfície de design. Quando você alternar de volta à exibição da fonte, o controle de tempo de design é persistente para o código-fonte marcação e editado na marcação da página da Web.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageCatalogPartDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o HTML que é usado para representar o controle em tempo de design.</summary>
+        <returns>A marcação HTML usada para representar o controle em tempo de design.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.ComponentModel.IComponent" /> a ser inicializado.</param>
+        <summary>Prepara o designer para exibir, editar e criar o <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

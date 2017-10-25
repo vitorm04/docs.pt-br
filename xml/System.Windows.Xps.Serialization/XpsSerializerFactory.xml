@@ -1,0 +1,160 @@
+<Type Name="XpsSerializerFactory" FullName="System.Windows.Xps.Serialization.XpsSerializerFactory">
+  <TypeSignature Language="C#" Value="public sealed class XpsSerializerFactory : System.Windows.Documents.Serialization.ISerializerFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XpsSerializerFactory extends System.Object implements class System.Windows.Documents.Serialization.ISerializerFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Serialization.XpsSerializerFactory" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Documents.Serialization.ISerializerFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Cria e fornece informações sobre os serializadores XML Paper Specification (XPS).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XpsSerializerFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializerFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Xps.Serialization.XpsSerializerFactory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSerializerWriter">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Serialization.SerializerWriter CreateSerializerWriter (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Documents.Serialization.SerializerWriter CreateSerializerWriter(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializerFactory.CreateSerializerWriter(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.SerializerWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de saída que o serializador retornado é gravar.</param>
+        <summary>Cria um <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" /> que gera [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] conteúdo para um <see cref="T:System.IO.Stream" />.</summary>
+        <returns>Um gravador de saída que serializa [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] conteúdo especificado <paramref name="stream" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFileExtension">
+      <MemberSignature Language="C#" Value="public string DefaultFileExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultFileExtension" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializerFactory.DefaultFileExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a extensão de nome de arquivo padrão para [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documentos.</summary>
+        <value>A extensão de nome de arquivo padrão (incluindo o ponto à esquerda) para [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documentos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sempre retorna a cadeia de caracteres ". XPS".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializerFactory.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome público para os serializadores produzidos pela fábrica.</summary>
+        <value>O nome público que produz a fábrica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sempre retorna a cadeia de caracteres "XPS serializador".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManufacturerName">
+      <MemberSignature Language="C#" Value="public string ManufacturerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ManufacturerName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializerFactory.ManufacturerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do fabricante para serializadores produzidos pela fábrica.</summary>
+        <value>O nome do fabricante.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sempre retorna a cadeia de caracteres "Microsoft".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManufacturerWebsite">
+      <MemberSignature Language="C#" Value="public Uri ManufacturerWebsite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ManufacturerWebsite" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializerFactory.ManufacturerWebsite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço do fabricante de serializadores produzidos pela fábrica.</summary>
+        <value>Site do fabricante.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sempre retornará o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] "http://www.microsoft.com".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

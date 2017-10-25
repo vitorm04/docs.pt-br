@@ -1,0 +1,59 @@
+<Type Name="IQueryable&lt;T&gt;" FullName="System.Linq.IQueryable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IQueryable&lt;out T&gt; : System.Collections.Generic.IEnumerable&lt;out T&gt;, System.Linq.IQueryable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IQueryable`1&lt;+ T&gt; implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.IEnumerable, class System.Linq.IQueryable" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.IQueryable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo de dados na fonte de dados.</typeparam>
+    <summary>Fornece a funcionalidade para avaliar as consultas em uma fonte de dados específica no qual o tipo de dado é conhecido.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq.IQueryable%601> interface destina implementação por provedores de consulta.  
+  
+ Essa interface é herdada do <xref:System.Collections.Generic.IEnumerable%601> interface para que se ele representa uma consulta, os resultados da consulta podem ser enumerados. Enumeração força a árvore de expressão associada com um <xref:System.Linq.IQueryable%601> objeto a ser executado. As consultas que não retornam resultados enumeráveis são executadas quando o <xref:System.Linq.IQueryProvider.Execute%60%601%28System.Linq.Expressions.Expression%29> método é chamado.  
+  
+ A definição de "execução de uma árvore de expressão" é específica para um provedor de consulta. Por exemplo, pode envolver transferir a árvore de expressão para uma linguagem de consulta apropriada para uma fonte de dados subjacente.  
+  
+ O <xref:System.Linq.IQueryable%601> interface permite que consultas para ser polimórficas. Ou seja, porque uma consulta em relação a um `IQueryable` fonte de dados é representada como uma árvore de expressão, ele pode ser executado em diferentes tipos de fontes de dados.  
+  
+ O `static` (`Shared` no Visual Basic) métodos definidos na classe <xref:System.Linq.Queryable> (exceto para <xref:System.Linq.Queryable.AsQueryable%2A>, <xref:System.Linq.Queryable.ThenBy%2A>, e <xref:System.Linq.Queryable.ThenByDescending%2A>) estender objetos dos tipos que implementam o <xref:System.Linq.IQueryable%601> interface.  
+  
+ Para obter mais informações sobre como criar seu próprio provedor LINQ, consulte [LINQ: Criando um provedor IQueryable](http://go.microsoft.com/fwlink/?LinkID=112370) blogs do MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

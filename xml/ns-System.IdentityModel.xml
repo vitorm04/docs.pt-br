@@ -1,0 +1,6 @@
+<Namespace Name="System.IdentityModel">
+  <Docs>
+    <summary>O <see cref="N:System.IdentityModel" /> namespace contém classes que são usadas para criar serviços de token (STS) de segurança. Isso inclui o <see cref="T:System.IdentityModel.SecurityTokenService" /> e <see cref="T:System.IdentityModel.Scope" /> classes, bem como a exceção de várias classes de utilitário que fornecem a capacidade de executar transformações de cookie.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

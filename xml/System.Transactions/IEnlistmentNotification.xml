@@ -1,0 +1,225 @@
+<Type Name="IEnlistmentNotification" FullName="System.Transactions.IEnlistmentNotification">
+  <TypeSignature Language="C#" Value="public interface IEnlistmentNotification" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEnlistmentNotification" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.IEnlistmentNotification" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve uma interface que um gerenciador de recursos deve implementar para fornecer dois retornos de chamada de notificação de confirmação de fase para o gerenciador de transação após a inscrição para a participação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em ordem de um Gerenciador de recursos para participar de uma transação, ele deve se inscrever na transação por meio do Gerenciador de transações. O <xref:System.Transactions.Transaction> classe define um conjunto de métodos cujos nomes começam com `Enlist` que fornecem essa funcionalidade. Os diferentes `Enlist` métodos correspondem a diferentes tipos de inscrição que pode ter um maanger de recursos.  
+  
+ Esta classe descreve uma interface que um Gerenciador de recursos deve implementar para fornecer dois fase confirmação notificação retornos de chamada para o Gerenciador de transações após a inscrição para participação no programa. Para a implementação do gerente de cada recurso do <xref:System.Transactions.IEnlistmentNotification> interface, você deverá inscrevê-lo usando o <xref:System.Transactions.Transaction.EnlistVolatile%2A> método ou o <xref:System.Transactions.Transaction.EnlistDurable%2A> método do <xref:System.Transactions.Transaction> classe, dependendo se o recurso é duráveis ou voláteis. Para obter mais informações sobre a inscrição e 2PC, consulte [inscrição recursos como participantes em uma transação](~/docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) e [confirmar uma transação de fase única e de várias fases](~/docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md) respectivamente.  
+  
+ O Gerenciador de transações notifica o objeto inscrito em diferentes fases do protocolo de confirmação de fase 2 pelos métodos a seguir.  
+  
+|Método|Descrição|  
+|------------|-----------------|  
+|<xref:System.Transactions.IEnlistmentNotification.Prepare%2A>|Esse método de um objeto inscrito é usado como um retorno de chamada pelo Gerenciador de transações durante a primeira fase de uma transação, o Gerenciador de transações solicita participantes se eles podem confirmar a transação.|  
+|<xref:System.Transactions.IEnlistmentNotification.Commit%2A>|Esse método de um objeto inscrito é usado como um retorno de chamada, o Gerenciador de transações durante a segunda fase de uma transação se a transação for confirmada.|  
+|<xref:System.Transactions.IEnlistmentNotification.Rollback%2A>|Esse método de um objeto inscrito é usado como um retorno de chamada, o Gerenciador de transações durante a segunda fase de uma transação se a transação foi anulada (isto é, revertida).|  
+|<xref:System.Transactions.IEnlistmentNotification.InDoubt%2A>|Esse método de um objeto inscrito é usado como um retorno de chamada, o Gerenciador de transações durante a segunda fase de uma transação se a transação está em dúvida.|  
+  
+> [!NOTE]
+>  Você deve estar ciente de que as notificações não podem ser enviadas em sequência ou em uma ordem específica.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação de nesta interface, bem como a inscrição do objeto como um participante em uma transação usando o <xref:System.Transactions.Transaction.EnlistVolatile%2A> método.  
+  
+ [!code-csharp[Tx_Enlist#1](~/samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#1)]
+ [!code-vb[Tx_Enlist#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit (System.Transactions.Enlistment enlistment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit(class System.Transactions.Enlistment enlistment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.IEnlistmentNotification.Commit(System.Transactions.Enlistment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enlistment" Type="System.Transactions.Enlistment" />
+      </Parameters>
+      <Docs>
+        <param name="enlistment">Um <see cref="T:System.Transactions.Enlistment" /> objeto usado para enviar uma resposta para o Gerenciador de transações.</param>
+        <summary>Notifica um inscrita objeto que uma transação está sendo confirmada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Gerenciador de transações chama esse método de um objeto inscrito durante a segunda fase de um compromisso, quando ele instrui a todos os participantes para confirmar a transação.  
+  
+ O Gerenciador de recursos deve executar qualquer trabalho necessário para concluir a transação e informe o TM concluiu chamando o <xref:System.Transactions.Enlistment.Done%2A> método o `enlistment` parâmetro.  
+  
+ Se o Gerenciador de recursos foi inscrito muito tempo, mas não responde chamando <xref:System.Transactions.Enlistment.Done%2A> método, o Gerenciador de transações não tem certo de que o Gerenciador de recursos recebeu o <xref:System.Transactions.IEnlistmentNotification.Commit%2A> chamar. Como tal, o Gerenciador de transações mantém aguardando uma resposta e mantém as informações relevantes para essa transação.  Se <xref:System.Transactions.Enlistment.Done%2A> é chamado nunca, essa informação é mantida indefinidamente na memória ou em um recurso do sistema. Isso resulta em recursos de não poder ser recuperada. No caso de uma transação distribuída, isso pode eventualmente preencher o log MSDTC que para o processo MSDTC. No caso de uma transação gerenciada pelo <xref:System.Transactions>, isso resulta em um aumento gradual e contínuo no consumo de memória de processo do Gerenciador de recursos. Portanto, é crucial que você chamar o <xref:System.Transactions.Enlistment.Done%2A> método depois que o Gerenciador de recursos é feito com a preparação do trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InDoubt">
+      <MemberSignature Language="C#" Value="public void InDoubt (System.Transactions.Enlistment enlistment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InDoubt(class System.Transactions.Enlistment enlistment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.IEnlistmentNotification.InDoubt(System.Transactions.Enlistment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enlistment" Type="System.Transactions.Enlistment" />
+      </Parameters>
+      <Docs>
+        <param name="enlistment">Um <see cref="T:System.Transactions.Enlistment" /> objeto usado para enviar uma resposta para o Gerenciador de transações.</param>
+        <summary>Notifica um objeto inscrito que é o status de uma transação em dúvida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado para recursos voláteis, quando o Gerenciador de transações chamou uma operação de confirmação de fase única a um único recurso durável e, em seguida, a conexão para o recurso durável foi perdida antes de obter o resultado da transação. Nesse ponto, o resultado da transação não pode ser determinado com segurança.  
+  
+ Como <xref:System.Transactions.IEnlistmentNotification.InDoubt%2A> é considerado um estado final de uma transação, você não deve chamar <xref:System.Transactions.IEnlistmentNotification.Commit%2A> ou <xref:System.Transactions.IEnlistmentNotification.Rollback%2A> depois de chamar <xref:System.Transactions.IEnlistmentNotification.InDoubt%2A>.  
+  
+> [!NOTE]
+>  Sua implementação deste método para o recurso volátil deve executar qualquer operação de recuperação ou confinamento entende os dados afetados.  Também deve chamar o <xref:System.Transactions.Enlistment.Done%2A> método o no `enlistment` parâmetro quando ela concluiu seu trabalho.  
+  
+ Se o Gerenciador de recursos foi inscrito muito tempo, mas não responde chamando <xref:System.Transactions.Enlistment.Done%2A> método, o Gerenciador de transações não tem certo de que o Gerenciador de recursos recebeu o <xref:System.Transactions.IEnlistmentNotification.InDoubt%2A> chamar. Como tal, o Gerenciador de transações mantém aguardando uma resposta e mantém as informações relevantes para essa transação.  Se <xref:System.Transactions.Enlistment.Done%2A> é chamado nunca, essa informação é mantida indefinidamente na memória ou em um recurso do sistema. Isso resulta em recursos de não poder ser recuperada. No caso de uma transação distribuída, isso pode eventualmente preencher o log MSDTC que para o processo MSDTC. No caso de uma transação gerenciada pelo <xref:System.Transactions>, isso resulta em um aumento gradual e contínuo no consumo de memória de processo do Gerenciador de recursos. Portanto, é crucial que você chamar o <xref:System.Transactions.Enlistment.Done%2A> método depois que o Gerenciador de recursos é feito com a preparação do trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prepare">
+      <MemberSignature Language="C#" Value="public void Prepare (System.Transactions.PreparingEnlistment preparingEnlistment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Prepare(class System.Transactions.PreparingEnlistment preparingEnlistment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.IEnlistmentNotification.Prepare(System.Transactions.PreparingEnlistment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preparingEnlistment" Type="System.Transactions.PreparingEnlistment" />
+      </Parameters>
+      <Docs>
+        <param name="preparingEnlistment">Um <see cref="T:System.Transactions.PreparingEnlistment" /> objeto usado para enviar uma resposta para o Gerenciador de transações.</param>
+        <summary>Notifica um objeto inscrito que uma transação está sendo preparada para confirmação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Gerenciador de transações chama esse método de um recurso inscrito manager durante a fase 1 de um compromisso, quando ele solicitar participantes se eles podem confirmar a transação.  
+  
+ Quando você estiver implementando um Gerenciador de recursos durável, você deve registrar seu preparar registro durante essa fase. O registro deve conter todas as informações necessárias para executar a recuperação. Isso inclui o <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> propriedade, que é passada para o Gerenciador de transações no <xref:System.Transactions.TransactionManager.Reenlist%2A> método durante a recuperação. Para obter mais informações sobre a recuperação, consulte [executar recuperação](http://msdn.microsoft.com/en-us/d342c5c7-da64-4a4c-8e63-b52f4fbf2691).  
+  
+ O Gerenciador de recursos deve concluir todo o trabalho que deve ser concluído antes de chamar o <xref:System.Transactions.PreparingEnlistment.Prepared%2A> método o `preparingEnlistment` parâmetro para indicar o voto de compromisso. Você deve certificar-se de que isso é feito antes de receber qualquer notificação de fase 2 tais como confirmar, reverter ou em dúvida. Isso ocorre porque as notificações de fase 2 podem acontecer embutido no mesmo thread que chamou o <xref:System.Transactions.PreparingEnlistment.Prepared%2A> método na fase 1. Assim, você não deve fazer qualquer trabalho após o <xref:System.Transactions.PreparingEnlistment.Prepared%2A> chamada (por exemplo, liberar bloqueios) que você esperaria ter concluído antes de receber as notificações de fase 2.  
+  
+ Você também pode chamar o método de `preparingEnlistment` parâmetro para indicar um voto de reversão.  
+  
+ Se você deseja que o objeto de simplesmente observar e reagir ao progresso da transação, sem participação nele, a implementação desse método deve chamar o <xref:System.Transactions.Enlistment.Done%2A> método o `preparingEnlistment` parâmetro quando ela concluiu seu trabalho. Fazendo isso, o Gerenciador de recursos não deve receber qualquer notificação de fase 2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public void Rollback (System.Transactions.Enlistment enlistment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Rollback(class System.Transactions.Enlistment enlistment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.IEnlistmentNotification.Rollback(System.Transactions.Enlistment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enlistment" Type="System.Transactions.Enlistment" />
+      </Parameters>
+      <Docs>
+        <param name="enlistment">Um <see cref="T:System.Transactions.Enlistment" /> objeto usado para enviar uma resposta para o Gerenciador de transações.</param>
+        <summary>Notifica um objeto inscrito que uma transação está sendo revertida (anulada).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Gerenciador de transações chama esse método de um objeto inscrito quando a transação está sendo revertida (interrompida) devido a problemas de um ou mais participantes da transação para confirmar a transação.  
+  
+ O Gerenciador de recursos deve executar qualquer trabalho necessário para concluir a transação e informe o TM concluiu chamando o <xref:System.Transactions.Enlistment.Done%2A> método o `enlistment` parâmetro.  
+  
+ Se o Gerenciador de recursos foi inscrito muito tempo, mas não responde chamando <xref:System.Transactions.Enlistment.Done%2A> método, o Gerenciador de transações não tem certo de que o Gerenciador de recursos recebeu o <xref:System.Transactions.IEnlistmentNotification.Rollback%2A> chamar. Como tal, o Gerenciador de transações mantém aguardando uma resposta e mantém as informações relevantes para essa transação.  Se <xref:System.Transactions.Enlistment.Done%2A> é chamado nunca, essa informação é mantida indefinidamente na memória ou em um recurso do sistema. Isso resulta em recursos de não poder ser recuperada. No caso de uma transação distribuída, isso pode eventualmente preencher o log MSDTC que para o processo MSDTC. No caso de uma transação gerenciada pelo <xref:System.Transactions>, isso resulta em um aumento gradual e contínuo no consumo de memória de processo do Gerenciador de recursos. Portanto, é crucial que você chamar o <xref:System.Transactions.Enlistment.Done%2A> método depois que o Gerenciador de recursos é feito com a preparação do trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

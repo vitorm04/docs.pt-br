@@ -1,0 +1,95 @@
+<Type Name="CalendarSelectionMode" FullName="System.Web.UI.WebControls.CalendarSelectionMode">
+  <TypeSignature Language="C#" Value="public enum CalendarSelectionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CalendarSelectionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CalendarSelectionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o modo de seleção de data do controle <see cref="T:System.Web.UI.WebControls.Calendar" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CalendarSelectionMode> enumeração representa os modos de seleção de data a <xref:System.Web.UI.WebControls.Calendar> controle.  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[CalendarSelectionMode2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarSelectionMode2/CS/calendarselectionmodecs.aspx#1)]
+ [!code-aspx-vb[CalendarSelectionMode2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarSelectionMode2/VB/calendarselectionmodevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Day">
+      <MemberSignature Language="C#" Value="Day" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.CalendarSelectionMode Day = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.CalendarSelectionMode.Day" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CalendarSelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>É possível selecionar uma única data no controle <see cref="T:System.Web.UI.WebControls.Calendar" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DayWeek">
+      <MemberSignature Language="C#" Value="DayWeek" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.CalendarSelectionMode DayWeek = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.CalendarSelectionMode.DayWeek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CalendarSelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>É possível selecionar uma única data ou uma semana inteira no controle <see cref="T:System.Web.UI.WebControls.Calendar" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DayWeekMonth">
+      <MemberSignature Language="C#" Value="DayWeekMonth" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.CalendarSelectionMode DayWeekMonth = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.CalendarSelectionMode.DayWeekMonth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CalendarSelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>É possível selecionar uma única data, uma semana ou um mês inteiro no controle <see cref="T:System.Web.UI.WebControls.Calendar" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.CalendarSelectionMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.CalendarSelectionMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CalendarSelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é possível selecionar nenhuma data no controle <see cref="T:System.Web.UI.WebControls.Calendar" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

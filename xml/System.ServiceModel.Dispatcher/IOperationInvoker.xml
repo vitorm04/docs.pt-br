@@ -1,0 +1,156 @@
+<Type Name="IOperationInvoker" FullName="System.ServiceModel.Dispatcher.IOperationInvoker">
+  <TypeSignature Language="C#" Value="public interface IOperationInvoker" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOperationInvoker" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.IOperationInvoker" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Declara os métodos que utilizam um objeto e uma matriz de parâmetros extraídos de uma mensagem, invocam um método no objeto com esses parâmetros e retornam o os parâmetros de saída e o valor retornado do método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Dispatcher.IOperationInvoker> interface para controlar a conversão de um objeto sem tipo e a matriz de parâmetros para uma chamada de método fortemente tipados nesse objeto. Ele tem um síncrono <xref:System.ServiceModel.Dispatcher.IOperationInvoker.Invoke%2A> método, que usa um conjunto de entradas do tipo objeto e uma instância e retorna um objeto e um conjunto de resultados do tipo objeto. Ele também tem um <xref:System.ServiceModel.Dispatcher.IOperationInvoker.InvokeBegin%2A> e <xref:System.ServiceModel.Dispatcher.IOperationInvoker.InvokeEnd%2A> variant.  O <xref:System.ServiceModel.Dispatcher.IOperationInvoker.IsSynchronous%2A> propriedade especifica se o método síncrono ou assíncrono deve ser usado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllocateInputs">
+      <MemberSignature Language="C#" Value="public object[] AllocateInputs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] AllocateInputs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IOperationInvoker.AllocateInputs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Array" /> de objetos de parâmetro.</summary>
+        <returns>Os parâmetros que devem ser usados como argumentos para a operação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implemente essa opção para retornar uma matriz de parâmetros para a operação. Esta matriz é preenchida com o formatador e passada de volta para o chamador quando <xref:System.ServiceModel.Dispatcher.IOperationInvoker.Invoke%2A> é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <threadsafe>Uma implementação deste método deve alocar uma matriz de entrada em cada chamada. Retornar o mesmo conjunto de várias chamadas pode resultar em comportamento imprevisível.</threadsafe>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (object instance, object[] inputs, out object[] outputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Invoke(object instance, object[] inputs, [out] object[]&amp; outputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IOperationInvoker.Invoke(System.Object,System.Object[],System.Object[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="inputs" Type="System.Object[]" />
+        <Parameter Name="outputs" Type="System.Object[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="instance">O objeto a ser invocado.</param>
+        <param name="inputs">As entradas para o método.</param>
+        <param name="outputs">As saídas do método.</param>
+        <summary>Retorna um objeto e um conjunto de objetos de saída de uma instância e um conjunto de objetos de entrada.</summary>
+        <returns>O valor de retorno.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeBegin">
+      <MemberSignature Language="C#" Value="public IAsyncResult InvokeBegin (object instance, object[] inputs, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult InvokeBegin(object instance, object[] inputs, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IOperationInvoker.InvokeBegin(System.Object,System.Object[],System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="inputs" Type="System.Object[]" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">O objeto a ser invocado.</param>
+        <param name="inputs">As entradas para o método.</param>
+        <param name="callback">O objeto de retorno de chamada assíncrono.</param>
+        <param name="state">Dados de estado associados.</param>
+        <summary>Uma implementação assíncrona do <see cref="M:System.ServiceModel.Dispatcher.IOperationInvoker.Invoke(System.Object,System.Object[],System.Object[]@)" /> método.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> usados para concluir a chamada assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEnd">
+      <MemberSignature Language="C#" Value="public object InvokeEnd (object instance, out object[] outputs, IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object InvokeEnd(object instance, [out] object[]&amp; outputs, class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.IOperationInvoker.InvokeEnd(System.Object,System.Object[]@,System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="outputs" Type="System.Object[]&amp;" RefType="out" />
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="instance">O objeto chamado.</param>
+        <param name="outputs">As saídas do método.</param>
+        <param name="result">O objeto <see cref="T:System.IAsyncResult" />.</param>
+        <summary>O método end assíncrono.</summary>
+        <returns>O valor de retorno.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronous">
+      <MemberSignature Language="C#" Value="public bool IsSynchronous { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronous" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.IOperationInvoker.IsSynchronous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o <see cref="M:System.ServiceModel.Dispatcher.IOperationInvoker.Invoke(System.Object,System.Object[],System.Object[]@)" /> ou <see cref="M:System.ServiceModel.Dispatcher.IOperationInvoker.InvokeBegin(System.Object,System.Object[],System.AsyncCallback,System.Object)" /> método é chamado pelo dispatcher.</summary>
+        <value>
+          <see langword="true" />Se o dispatcher invoca a operação síncrona. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador padrão distribui as mensagens para a operação síncrona por padrão. Esse valor é armazenado em cache pelo dispatcher e, portanto, não deve alterar durante o tempo de vida do objeto que implementa <xref:System.ServiceModel.Dispatcher.IOperationInvoker>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

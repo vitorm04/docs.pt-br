@@ -1,0 +1,74 @@
+<Type Name="MessagingDescriptionAttribute" FullName="System.Messaging.MessagingDescriptionAttribute">
+  <TypeSignature Language="C#" Value="public class MessagingDescriptionAttribute : System.ComponentModel.DescriptionAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessagingDescriptionAttribute extends System.ComponentModel.DescriptionAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessagingDescriptionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.DescriptionAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica uma descrição de uma propriedade ou evento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um designer visual pode exibir a descrição ao referenciar o membro de componente, como em uma janela de propriedades. Acesso a <xref:System.Messaging.MessagingDescriptionAttribute.Description%2A> propriedade para obter ou definir o texto associado a este atributo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessagingDescriptionAttribute (string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessagingDescriptionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="description">O texto de descrição definida pelo aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.MessagingDescriptionAttribute" /> de classe, usando a descrição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A descrição que você especificar o <xref:System.Messaging.MessagingDescriptionAttribute.%23ctor%2A> construtor é exibido por um designer visual quando você acessa a propriedade, um evento ou um extensor para o qual o atributo se aplica  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public override string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessagingDescriptionAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto de descrição associado ao item monitorado.</summary>
+        <value>Uma descrição definida pelo aplicativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

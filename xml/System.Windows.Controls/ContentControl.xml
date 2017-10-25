@@ -1,0 +1,705 @@
+<Type Name="ContentControl" FullName="System.Windows.Controls.ContentControl">
+  <TypeSignature Language="C#" Value="public class ContentControl : System.Windows.Controls.Control, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ContentControl extends System.Windows.Controls.Control implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ContentControl" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Content")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Content")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle com uma única parte do conteúdo de qualquer tipo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.ContentControl> pode conter qualquer tipo de objeto de tempo de execução de linguagem comum (como uma cadeia de caracteres ou um <xref:System.DateTime> objeto) ou um <xref:System.Windows.UIElement> objeto (como um <xref:System.Windows.Shapes.Rectangle> ou <xref:System.Windows.Controls.Panel>). Isso permite que você adicione conteúdo rico para controles como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.CheckBox>.  
+  
+ A ilustração a seguir mostra quatro botões cujo <xref:System.Windows.Controls.ContentControl.Content%2A> propriedade é definida como um dos seguintes:  
+  
+-   Uma cadeia de caracteres.  
+  
+-   Um objeto <xref:System.DateTime>.  
+  
+-   Um objeto <xref:System.Windows.UIElement>.  
+  
+-   Um <xref:System.Windows.Controls.Panel> controle que contém outros <xref:System.Windows.UIElement> objetos.  
+  
+ ![Quatro botões](~/add/media/controlcontentmodelbuttons.PNG "quatro botões")  
+Quatro botões com diferentes tipos de conteúdo  
+  
+ Um <xref:System.Windows.Controls.ContentControl> tem um estilo padrão limitado. Se você deseja melhorar a aparência do controle, você pode criar um novo <xref:System.Windows.DataTemplate>. Para obter mais informações, consulte [Visão geral de modelagem de dados](~/docs/framework/wpf/data/data-templating-overview.md). Outro cenário típico é usar o <xref:System.Windows.Controls.ContentControl> para mostrar mais informações sobre um item selecionado em um <xref:System.Windows.Controls.ItemsControl> controle. Para obter mais informações, consulte [como: associar a uma coleção e exibir informações com base na seleção](~/docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar quatro botões mostrados na seção comentários.  
+  
+> [!NOTE]
+>  Embora o [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] versão do exemplo poderia usar o `<Button.Content>` marcas em torno do conteúdo de cada botão, não é necessário. Para obter mais informações, consulte [visão geral de XAML (WPF)](~/docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+  
+ [!code-xaml[ControlContentOverviewSnippets#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#1)]  
+  
+ [!code-csharp[ControlContentOverviewSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[ControlContentOverviewSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlContentOverviewSnippets/VisualBasic/Window1.xaml.vb#2)]  
+  
+ O exemplo a seguir mostra como fazer um estilo um <xref:System.Windows.Controls.ContentControl> para que o controle tem uma aparência aprimorada.  
+  
+ [!code-xaml[ContentControl#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentControl/CSharp/Page1.xaml#1)]  
+[!code-xaml[ContentControl#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentControl/CSharp/Page1.xaml#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.ContentControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="protected virtual void AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a adicionar.</param>
+        <summary>Adiciona o objeto especificado como o filho de um <see cref="T:System.Windows.Controls.ContentControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddText">
+      <MemberSignature Language="C#" Value="protected virtual void AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">A cadeia de caracteres a ser adicionada.</param>
+        <summary>Adiciona uma cadeia de texto especificada a um <see cref="T:System.Windows.Controls.ContentControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public object Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Content" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContentControl.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo de um <see cref="T:System.Windows.Controls.ContentControl" />.</summary>
+        <value>Um objeto que contém o conteúdo do controle. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Windows.Controls.ContentControl.Content%2A> é de propriedade do tipo <xref:System.Object>, não existem restrições sobre o que você pode colocar em um <xref:System.Windows.Controls.ContentControl>. O <xref:System.Windows.Controls.ContentControl.Content%2A> é exibido por um <xref:System.Windows.Controls.ContentPresenter>, que é o <xref:System.Windows.Controls.ControlTemplate> do <xref:System.Windows.Controls.ContentControl>.  Cada <xref:System.Windows.Controls.ContentControl> digite [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] tem um <xref:System.Windows.Controls.ContentPresenter> em sua padrão <xref:System.Windows.Controls.ControlTemplate>.  Para obter mais informações sobre como o <xref:System.Windows.Controls.ContentPresenter> exibe <xref:System.Windows.Controls.ContentControl.Content%2A>, consulte <xref:System.Windows.Controls.ContentPresenter>.  
+  
+<a name="dependencyPropertyInfo_Content"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContentControl.ContentProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+<a name="xamlAttributeUsage_Content"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Content="content"/>  
+```  
+  
+<a name="xamlPropertyElementUsage_Content"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<object> content</object>  
+```  
+  
+<a name="xamlValues_Content"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ `Content`  
+ Texto ou um único objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar quatro <xref:System.Windows.Controls.Button> controla com <xref:System.Windows.Controls.ContentControl.Content%2A> definido como um dos seguintes:  
+  
+-   Uma cadeia de caracteres.  
+  
+-   Um objeto <xref:System.DateTime>.  
+  
+-   Um objeto <xref:System.Windows.UIElement>.  
+  
+-   Um <xref:System.Windows.Controls.Panel> controle que contém outros <xref:System.Windows.UIElement> objetos.  
+  
+> [!NOTE]
+>  Embora o [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] versão do exemplo poderia usar o `<Button.Content>` marcas em torno do conteúdo de cada botão, não é necessário. Para obter mais informações, consulte [visão geral de XAML (WPF)](~/docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+  
+ [!code-xaml[ControlContentOverviewSnippets#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml#1)]  
+  
+ [!code-csharp[ControlContentOverviewSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlContentOverviewSnippets/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[ControlContentOverviewSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlContentOverviewSnippets/VisualBasic/Window1.xaml.vb#2)]  
+  
+ A ilustração a seguir mostra os quatro botões criados no exemplo anterior.  
+  
+ ![Quatro botões](~/add/media/controlcontentmodelbuttons.PNG "quatro botões")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContentControl.ContentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContentControl.Content" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentStringFormat">
+      <MemberSignature Language="C#" Value="public string ContentStringFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentStringFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContentControl.ContentStringFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres de composição que especifica como formatar a propriedade <see cref="P:System.Windows.Controls.ContentControl.Content" />, se ela for exibida como uma cadeia de caracteres.</summary>
+        <value>Uma cadeia de caracteres de composição que especifica como formatar a propriedade <see cref="P:System.Windows.Controls.ContentControl.Content" />, se ela for exibida como uma cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ContentControl.ContentStringFormat%2A>pode ser um formato de cadeia de caracteres predefinidas, composto ou personalizadas. Para obter mais informações sobre formatos de cadeia de caracteres, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  Se você definir o <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> ou <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriedade de um <xref:System.Windows.Controls.ContentControl>, o <xref:System.Windows.Controls.ContentControl.ContentStringFormat%2A> propriedade será ignorada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir especifica o formato de <xref:System.DateTime> objetos definindo o <xref:System.Windows.Controls.ContentControl.ContentStringFormat%2A> propriedade em uma <xref:System.Windows.Style> e aplicar o <xref:System.Windows.Style> duas <xref:System.Windows.Controls.Label> objetos, que herdam de <xref:System.Windows.Controls.ContentControl>.  
+  
+ [!code-xaml[ContentStringSnippets#ContentControl](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentStringSnippets/CSharp/Window1.xaml#contentcontrol)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentStringFormatProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContentStringFormatProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContentStringFormatProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContentControl.ContentStringFormatProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContentControl.ContentStringFormat" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate ContentTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate ContentTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContentControl.ContentTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo de dados usado para exibir o conteúdo do <see cref="T:System.Windows.Controls.ContentControl" />.</summary>
+        <value>Um modelo de dados. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como um <xref:System.Windows.DataTemplate> para especificar a aparência do <xref:System.Windows.Controls.ContentControl>. Para obter mais informações sobre modelos de dados, consulte [visão geral de modelagem de dados](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+<a name="xamlAttributeUsage_ContentTemplate"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object ContentTemplate="{resourceExtension styleResourceKey}"/>  
+```  
+  
+<a name="xamlValues_ContentTemplate"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *resourceExtension*  
+ Uma extensão de marcação que identifica como referenciar o recurso de modelo, ou `StaticResource` ou `DynamicResource`. Consulte [recursos XAML](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *styleResourceKey*  
+ A chave que identifica o seletor de modelo solicitado. A chave refere-se a um recurso existente em um <xref:System.Windows.ResourceDictionary>.  
+  
+> [!NOTE]
+>  Sintaxe de elemento de propriedade é tecnicamente possível, mas não é recomendado. Para obter mais informações, consulte [modelos e estilos in-line](~/docs/framework/wpf/advanced/inline-styles-and-templates.md).  
+  
+<a name="dependencyPropertyInfo_ContentTemplate"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContentControl.ContentTemplateProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir mostram como criar um modelo de conteúdo e aplicar o modelo a um controle de conteúdo.  
+  
+ [!code-xaml[ContentControl#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentControl/CSharp/Page1.xaml#2)]  
+  
+ [!code-xaml[ContentControl#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentControl/CSharp/Page1.xaml#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContentTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContentTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContentControl.ContentTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContentControl.ContentTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector ContentTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector ContentTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContentControl.ContentTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um seletor de modelo que permite que um gravador de aplicativos forneça a lógica de seleção de modelo personalizada.</summary>
+        <value>Um seletor de modelo de dados. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você cria um <xref:System.Windows.Controls.DataTemplateSelector> quando há mais de um <xref:System.Windows.DataTemplate> para o mesmo tipo de objetos e você deseja fornecer sua própria lógica para escolher um <xref:System.Windows.DataTemplate> aplicar com base nas propriedades de cada objeto de dados. Observe que, se você tiver objetos de diferentes tipos que você pode definir o <xref:System.Windows.DataTemplate.DataType%2A> propriedade o <xref:System.Windows.DataTemplate>. Se você fizer isso, não é necessário para criar um <xref:System.Windows.Controls.DataTemplateSelector>. Além disso, se você tiver objetos do mesmo tipo, mas com propriedades diferentes, você também pode considerar usando um <xref:System.Windows.DataTrigger> ou um conversor de dados. Para obter mais informações, consulte [Visão geral de modelagem de dados](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+ Para criar um seletor de modelo, crie uma classe que herda de <xref:System.Windows.Controls.DataTemplateSelector> e substituir o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método. Após a definição de sua classe, você pode atribuir uma instância da classe para a propriedade de seletor de modelo do seu elemento.  
+  
+ Se o <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> e <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propriedades são definidas e, em seguida, essa propriedade será ignorada.  
+  
+<a name="xamlAttributeUsage_ContentTemplateSelector"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object ContentTemplateSelector="{ResourceExtension TemplateSelectorKey}"/>  
+```  
+  
+<a name="xamlValues_ContentTemplateSelector"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *ResourceExtension*  
+ Uma extensão de marcação que identifica como referenciar o recurso de modelo, ou `StaticResource` ou `DynamicResource`. Consulte [recursos XAML](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *TemplateSelectorKey*  
+ A chave que identifica o seletor de modelo solicitado. A chave refere-se a um recurso existente em um <xref:System.Windows.ResourceDictionary>.  
+  
+<a name="dependencyPropertyInfo_ContentTemplateSelector"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContentControl.ContentTemplateSelectorProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriedade. Este exemplo vincula o item selecionado em uma <xref:System.Windows.Controls.ComboBox> para o <xref:System.Windows.Controls.ContentControl.Content%2A> propriedade de um <xref:System.Windows.Controls.Label>, que herda de <xref:System.Windows.Controls.ContentControl>.  Quando o usuário seleciona um valor abaixo de 5, o valor do item selecionado é exibido em um quadrado preto no <xref:System.Windows.Controls.Label>.  Quando o usuário seleciona um valor de 5 ou superior, o valor aparece em uma elipse verde. O exemplo faz isso criando duas <xref:System.Windows.DataTemplate> objetos e um <xref:System.Windows.Controls.DataTemplateSelector>, que é definido como o <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propriedade e escolhe apropriada <xref:System.Windows.DataTemplate> com base no valor do item selecionado.  
+  
+ [!code-xaml[ContentControlTemplateSelector#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentControlTemplateSelector/CSharp/Window1.xaml#1)]  
+[!code-csharp[ContentControlTemplateSelector#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentControlTemplateSelector/CSharp/Window1.xaml.cs#2)]
+[!code-vb[ContentControlTemplateSelector#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentControlTemplateSelector/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContentTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContentTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContentControl.ContentTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContentControl.ContentTemplateSelector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasContent">
+      <MemberSignature Language="C#" Value="public bool HasContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContentControl.HasContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Controls.ContentControl" /> contém conteúdo.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.ContentControl" /> tiver conteúdo, caso contrário <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Controls.ContentControl.Content%2A> é de propriedade `null`, essa propriedade retornará `false`.  
+  
+<a name="dependencyPropertyInfo_HasContent"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContentControl.HasContentProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ContentControl.HasContent%2A> propriedade para determinar se um controle de conteúdo contém conteúdo.  
+  
+ [!code-csharp[ContentControl#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentControl/CSharp/Page1.xaml.cs#4)]
+ [!code-vb[ContentControl#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentControl/VisualBasic/Page1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasContentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HasContentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HasContentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContentControl.HasContentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContentControl.HasContent" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContentControl.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador para elementos filho de conteúdo do controle.</summary>
+        <value>Um enumerador. O valor padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContentChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnContentChanged (object oldContent, object newContent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContentChanged(object oldContent, object newContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.OnContentChanged(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldContent" Type="System.Object" />
+        <Parameter Name="newContent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldContent">O valor antigo do <see cref="P:System.Windows.Controls.ContentControl.Content" /> propriedade.</param>
+        <param name="newContent">O novo valor da propriedade <see cref="P:System.Windows.Controls.ContentControl.Content" />.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.Controls.ContentControl.Content" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContentStringFormatChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnContentStringFormatChanged (string oldContentStringFormat, string newContentStringFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContentStringFormatChanged(string oldContentStringFormat, string newContentStringFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.OnContentStringFormatChanged(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldContentStringFormat" Type="System.String" />
+        <Parameter Name="newContentStringFormat" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="oldContentStringFormat">O valor antigo da <see cref="P:System.Windows.Controls.ContentControl.ContentStringFormat" />.</param>
+        <param name="newContentStringFormat">O novo valor de <see cref="P:System.Windows.Controls.ContentControl.ContentStringFormat" />.</param>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Controls.ContentControl.ContentStringFormat" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContentTemplateChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnContentTemplateChanged (System.Windows.DataTemplate oldContentTemplate, System.Windows.DataTemplate newContentTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContentTemplateChanged(class System.Windows.DataTemplate oldContentTemplate, class System.Windows.DataTemplate newContentTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.OnContentTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldContentTemplate" Type="System.Windows.DataTemplate" />
+        <Parameter Name="newContentTemplate" Type="System.Windows.DataTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="oldContentTemplate">O valor antigo do <see cref="P:System.Windows.Controls.ContentControl.ContentTemplate" /> propriedade.</param>
+        <param name="newContentTemplate">O novo valor da propriedade <see cref="P:System.Windows.Controls.ContentControl.ContentTemplate" />.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.Controls.ContentControl.ContentTemplate" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContentTemplateSelectorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnContentTemplateSelectorChanged (System.Windows.Controls.DataTemplateSelector oldContentTemplateSelector, System.Windows.Controls.DataTemplateSelector newContentTemplateSelector);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContentTemplateSelectorChanged(class System.Windows.Controls.DataTemplateSelector oldContentTemplateSelector, class System.Windows.Controls.DataTemplateSelector newContentTemplateSelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.OnContentTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldContentTemplateSelector" Type="System.Windows.Controls.DataTemplateSelector" />
+        <Parameter Name="newContentTemplateSelector" Type="System.Windows.Controls.DataTemplateSelector" />
+      </Parameters>
+      <Docs>
+        <param name="oldContentTemplateSelector">O valor antigo do <see cref="P:System.Windows.Controls.ContentControl.ContentTemplateSelector" /> propriedade.</param>
+        <param name="newContentTemplateSelector">O novo valor da propriedade <see cref="P:System.Windows.Controls.ContentControl.ContentTemplateSelector" />.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.Controls.ContentControl.ContentTemplateSelector" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeContent">
+      <MemberSignature Language="C#" Value="public virtual bool ShouldSerializeContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldSerializeContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.ShouldSerializeContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Controls.ContentControl.Content" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Controls.ContentControl.Content" /> propriedade deve ser persistente; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `ShouldSerialize` método é fornecido, pois o <xref:System.Windows.Controls.ContentControl.Content%2A> propriedade não tem um valor padrão simples. Este método indica se a propriedade foi alterado do valor padrão. Normalmente você invoca esse método se você estiver desenvolvendo ou um designer para o <xref:System.Windows.Controls.ContentControl> ou desenvolver seu próprio controle incorporando o <xref:System.Windows.Controls.ContentControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto a ser adicionado como filho.</param>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContentControl.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Uma cadeia de caracteres para adicionar ao objeto.</param>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

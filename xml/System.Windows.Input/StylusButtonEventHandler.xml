@@ -1,0 +1,25 @@
+<Type Name="StylusButtonEventHandler" FullName="System.Windows.Input.StylusButtonEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void StylusButtonEventHandler(object sender, StylusButtonEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StylusButtonEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusButtonEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.StylusButtonEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Input.StylusButtonEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipula o o <see cref="E:System.Windows.UIElement.StylusButtonDown" /> evento ou <see cref="E:System.Windows.UIElement.StylusButtonUp" /> eventos de um <see cref="T:System.Windows.UIElement" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

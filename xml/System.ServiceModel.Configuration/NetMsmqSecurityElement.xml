@@ -1,0 +1,157 @@
+<Type Name="NetMsmqSecurityElement" FullName="System.ServiceModel.Configuration.NetMsmqSecurityElement">
+  <TypeSignature Language="C#" Value="public sealed class NetMsmqSecurityElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NetMsmqSecurityElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.NetMsmqSecurityElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.ServiceModel.Configuration.NetMsmqSecurityElement" /> classe encapsula os recursos de segurança MSMQ disponíveis ao usar o <see cref="T:System.ServiceModel.NetMsmqBinding" /> associação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos desse tipo são criados por meio da criação de uma instância do <xref:System.ServiceModel.NetMsmqBinding> associação. Você pode usar esse objeto para fazer referência a todas as várias configurações de segurança relacionadas ao <xref:System.ServiceModel.NetMsmqBinding> associação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetMsmqSecurityElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.NetMsmqSecurityElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.NetMsmqSecurityElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.MessageSecurityOverMsmqElement Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.MessageSecurityOverMsmqElement Message" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqSecurityElement.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("message")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.MessageSecurityOverMsmqElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.MessageSecurityOverMsmq" /> instância que está associada com o <see cref="T:System.ServiceModel.NetMsmqBinding" /> associação.</summary>
+        <value>O <see cref="T:System.ServiceModel.MessageSecurityOverMsmq" /> instância que está associada com o <see cref="T:System.ServiceModel.NetMsmqBinding" /> associação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.MessageSecurityOverMsmq> instância encapsula as configurações de segurança de mensagem SOAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.NetMsmqSecurityMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.NetMsmqSecurityMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqSecurityElement.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.NetMsmqSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.NetMsmqSecurityMode" /> instância que está associada com o <see cref="T:System.ServiceModel.NetMsmqBinding" /> associação.</summary>
+        <value>O <see cref="T:System.ServiceModel.NetMsmqSecurityMode" /> instância que está associada com o <see cref="T:System.ServiceModel.NetMsmqBinding" /> associação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina o tipo de segurança usado pelo associado `NetMsmqBinding`. A lista a seguir descreve os valores aceitáveis:  
+  
+-   `None`-Nenhuma segurança será usada.  
+  
+-   `Transport`-Segurança de transporte será usada.  
+  
+-   `Message`-Segurança baseada em mensagem será usada.  
+  
+-   `Both`-Ambos segurança de transporte e segurança baseada em mensagem será usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqSecurityElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.MsmqTransportSecurityElement Transport { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.MsmqTransportSecurityElement Transport" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("transport")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.MsmqTransportSecurityElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.Configuration.MsmqTransportSecurityElement" /> elemento que está associado com o <see cref="T:System.ServiceModel.NetMsmqBinding" /> associação.</summary>
+        <value>O <see cref="T:System.ServiceModel.MsmqTransportSecurity" /> instância que está associada com o <see cref="T:System.ServiceModel.NetMsmqBinding" /> associação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite o acesso às configurações de segurança de transporte Msmq.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

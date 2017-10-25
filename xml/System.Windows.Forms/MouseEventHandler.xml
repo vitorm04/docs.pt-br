@@ -1,0 +1,41 @@
+<Type Name="MouseEventHandler" FullName="System.Windows.Forms.MouseEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void MouseEventHandler(object sender, MouseEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MouseEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MouseEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento <see langword="MouseDown" />, <see langword="MouseUp" /> ou <see langword="MouseMove" /> de um formulário, controle ou outro componente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Windows.Forms.MouseEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre como manipular eventos com delegados, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar eventos de mouse diferente para desenhar o caminho do mouse em um <xref:System.Windows.Forms.Panel>. Um segmento de linha é adicionado para o <xref:System.Drawing.Drawing2D.GraphicsPath> para cada <xref:System.Windows.Forms.Control.MouseMove> e <xref:System.Windows.Forms.Control.MouseDown> eventos que ocorrem. Para atualizar o gráfico, o <xref:System.Windows.Forms.Control.Invalidate%2A> método é chamado para o <xref:System.Windows.Forms.Panel> em cada `MouseDown` e `MouseUp` eventos. Além disso, o caminho do gráfico é rolado para cima ou para baixo quando o <xref:System.Windows.Forms.Control.MouseWheel> evento ocorre. Eventos de mouse adicionais, como <xref:System.Windows.Forms.Control.MouseHover>, são identificadas na tela também. Também é exibido na tela é informações adicionais sobre o mouse do <xref:System.Windows.Forms.SystemInformation> classe.  
+  
+ [!code-cpp[System.Windows.Forms.MouseEvent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MouseEvent/CPP/mouseeventexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MouseEvent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MouseEvent/CS/mouseeventexample.cs#1)]
+ [!code-vb[System.Windows.Forms.MouseEvent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MouseEvent/VB/mouseeventexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

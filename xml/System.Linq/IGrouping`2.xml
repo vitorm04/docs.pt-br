@@ -1,0 +1,114 @@
+<Type Name="IGrouping&lt;TKey,TElement&gt;" FullName="System.Linq.IGrouping&lt;TKey,TElement&gt;">
+  <TypeSignature Language="C#" Value="public interface IGrouping&lt;out TKey,out TElement&gt; : System.Collections.Generic.IEnumerable&lt;out TElement&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IGrouping`2&lt;+ TKey, + TElement&gt; implements class System.Collections.Generic.IEnumerable`1&lt;!TElement&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.IGrouping`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TElement">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;TElement&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TKey">O tipo da chave de <see cref="T:System.Linq.IGrouping`2" />.</typeparam>
+    <typeparam name="TElement">O tipo dos valores em <see cref="T:System.Linq.IGrouping`2" />.</typeparam>
+    <summary>Representa uma coleção de objetos que têm uma chave comum.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Linq.IGrouping%602> é um <xref:System.Collections.Generic.IEnumerable%601> Além disso, que tem uma chave. A chave representa o atributo que é comum a cada valor de <xref:System.Linq.IGrouping%602>.  
+  
+ Os valores de uma <xref:System.Linq.IGrouping%602> são acessados bem como os elementos de um <xref:System.Collections.Generic.IEnumerable%601> são acessados. Por exemplo, você pode acessar os valores usando um `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` na [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para iterar por meio de <xref:System.Linq.IGrouping%602> objeto. A seção de exemplo contém um exemplo de código que mostra como acessar a chave e os valores de uma <xref:System.Linq.IGrouping%602> objeto.  
+  
+ O <xref:System.Linq.IGrouping%602> tipo é usado pelo <xref:System.Linq.Enumerable.GroupBy%2A> métodos de operador de consulta padrão, que retornam uma sequência de elementos do tipo <xref:System.Linq.IGrouping%602>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como trabalhar com um <xref:System.Linq.IGrouping%602> objeto.  
+  
+ Neste exemplo, <xref:System.Linq.Enumerable.GroupBy%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> é chamado em matriz de <xref:System.Reflection.MemberInfo> objetos retornados pelo <xref:System.Type.GetMembers%2A>. <xref:System.Linq.Enumerable.GroupBy%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>agrupa os objetos com base no valor de suas <xref:System.Reflection.MemberInfo.MemberType%2A> propriedade. Cada valor exclusivo de <xref:System.Reflection.MemberInfo.MemberType%2A> na matriz de <xref:System.Reflection.MemberInfo> objetos torna-se uma chave para um novo <xref:System.Linq.IGrouping%602> objeto e o <xref:System.Reflection.MemberInfo> objetos que têm que formam a chave de <xref:System.Linq.IGrouping%602> sequência do objeto de valores.  
+  
+ Por fim, o <xref:System.Linq.Enumerable.First%2A> método é chamado na sequência de <xref:System.Linq.IGrouping%602> objetos para obter apenas os primeiros <xref:System.Linq.IGrouping%602> objeto.  
+  
+ O exemplo, em seguida, gera a chave do <xref:System.Linq.IGrouping%602> objeto e o <xref:System.Reflection.MemberInfo.Name%2A> propriedade de cada valor no <xref:System.Linq.IGrouping%602> sequência do objeto de valores. Observe que para acessar um <xref:System.Linq.IGrouping%602> sequência do objeto de valores, basta usar o <xref:System.Linq.IGrouping%602> variável em si.  
+  
+ [!code-csharp[System.Linq.IGrouping#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.IGrouping/CS/igrouping.cs#1)]
+ [!code-vb[System.Linq.IGrouping#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.IGrouping/VB/IGrouping.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public TKey Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TKey Key" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.IGrouping`2.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave do <see cref="T:System.Linq.IGrouping`2" />.</summary>
+        <value>A chave do <see cref="T:System.Linq.IGrouping`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave de um <xref:System.Linq.IGrouping%602> representa o atributo que é comum a cada valor de <xref:System.Linq.IGrouping%602>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Linq.IGrouping%602.Key%2A> propriedade para rotular cada <xref:System.Linq.IGrouping%602> objeto em uma sequência de <xref:System.Linq.IGrouping%602> objetos. O <xref:System.Linq.Enumerable.GroupBy%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> método é usado para obter uma sequência de <xref:System.Linq.IGrouping%602> objetos. O `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` na [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] loop itera por meio de cada <xref:System.Linq.IGrouping%602> objeto, gerando a saída de sua chave e o número de valores que ele contém.  
+  
+ [!code-csharp[System.Linq.IGrouping#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.IGrouping/CS/igrouping.cs#2)]
+ [!code-vb[System.Linq.IGrouping#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.IGrouping/VB/IGrouping.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

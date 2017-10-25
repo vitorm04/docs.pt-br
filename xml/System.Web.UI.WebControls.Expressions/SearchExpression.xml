@@ -1,0 +1,180 @@
+<Type Name="SearchExpression" FullName="System.Web.UI.WebControls.Expressions.SearchExpression">
+  <TypeSignature Language="C#" Value="public class SearchExpression : System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SearchExpression extends System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.SearchExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Expressions.ParameterDataSourceExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira de pesquisar valores de cadeia de caracteres em um ou mais campos e compará-los com um valor de cadeia de caracteres especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.QueryExtender> controle fornece a capacidade de filtrar dados em uma página da Web usando o <xref:System.Web.UI.WebControls.Expressions.SearchExpression> classe. O <xref:System.Web.UI.WebControls.Expressions.SearchExpression> classe compara uma cadeia de caracteres especificada em um campo ou campos para um valor que você fornecer. A expressão realiza uma "começa com", "contém" ou "termina com" pesquisa. Você deve especificar valores para o <xref:System.Web.UI.WebControls.Expressions.SearchExpression.SearchType%2A> e <xref:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields%2A> propriedades para indicar o tipo de pesquisa que você deseja executar e os campos de dados que você deseja pesquisar. Se o provedor LINQ que você use o <xref:System.Web.UI.WebControls.QueryExtender> controle oferece suporte a diferenciação de maiusculas e minúsculas, você pode usar o <xref:System.Web.UI.WebControls.Expressions.SearchExpression.ComparisonType%2A> propriedade para ativar ou Ignorar maiusculas e minúsculas.  
+  
+ O valor de pesquisa pode ser fornecido por um [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] controle. Para especificar isso, defina o <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> propriedade do <xref:System.Web.UI.WebControls.ControlParameter> classe no <xref:System.Web.UI.WebControls.Expressions.SearchExpression> objeto para a ID de um [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] controle. Por exemplo, se o valor de pesquisa é inserido em uma caixa de texto, o <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> propriedade deve ser definida para a identificação do controle da caixa de texto. Você pode usar o <xref:System.Web.UI.WebControls.Expressions.SearchExpression> classe em combinação com outras expressões do que o <xref:System.Web.UI.WebControls.QueryExtender> oferece suporte, como o <xref:System.Web.UI.WebControls.Expressions.RangeExpression> filtro. Por exemplo, você pode procurar nomes de produtos que contêm a cadeia de caracteres "chá" e uma lista de preços entre 100 e 200.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como pesquisar a coluna de nome na tabela de produtos do banco de dados AdventureWorks para produtos cuja que iniciam com a cadeia de caracteres especificada no `SearchTextBox` controle. O resultado é retornado a partir de <xref:System.Web.UI.WebControls.LinqDataSource> controle é exibido em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido na [passo a passo: filtrando dados em uma página da Web usando declarativa sintaxe](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" /> é de propriedade <see langword="null" /> (<see langword="Nothing" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)])</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SearchExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.SearchExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Expressions.SearchExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComparisonType">
+      <MemberSignature Language="C#" Value="public StringComparison ComparisonType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.StringComparison ComparisonType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.SearchExpression.ComparisonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringComparison</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de comparação de cadeia de caracteres a ser executada.</summary>
+        <value>O tipo de comparação de cadeia de caracteres a ser executada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você use o <xref:System.StringComparison> enumeração para especificar como a pesquisa é executada. O <xref:System.StringComparison> enumeração é usada para especificar se uma comparação de cadeia de caracteres usa a cultura atual ou a cultura invariável e se ele usa regras de classificação ordinal ou texto. Se o provedor de dados que o <xref:System.Web.UI.WebControls.QueryExtender> usa dá suporte a diferenciação de maiusculas e minúsculas, você pode usar uma das propriedades de tipo de comparação para ativar ou Ignorar maiusculas e minúsculas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFields">
+      <MemberSignature Language="C#" Value="public string DataFields { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFields" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define um único campo ou uma lista separada por vírgulas de campos a serem pesquisados.</summary>
+        <value>O campo ou campos a serem pesquisados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Expressions.SearchExpression> classe executa a pesquisa em um ou mais campos de dados na tabela especificada. Pelo menos um campo de dados deve ser especificado no <xref:System.Web.UI.WebControls.Expressions.SearchExpression> instância. Se você especificar mais de um campo de dados, separe os campos usando uma vírgula.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como pesquisar o nome e os campos de dados de ProductNumber na tabela de produtos do banco de dados AdventureWorks para produtos que têm nomes que começam com uma cadeia de caracteres especificada. Este exemplo de código é parte de um exemplo maior fornecido em [passo a passo: filtrando dados em uma página da Web usando declarativa sintaxe](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:SearchExpression SearchType="StartsWith"   
+      DataFields="Name","ProductNumber" >  
+  <asp:ControlParameter ControlID="SearchTextBox" />  
+</asp:SearchExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryable">
+      <MemberSignature Language="C#" Value="public override System.Linq.IQueryable GetQueryable (System.Linq.IQueryable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.IQueryable GetQueryable(class System.Linq.IQueryable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.SearchExpression.GetQueryable(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="source">O objeto a ser usado.</param>
+        <summary>Aplica-se um <see cref="T:System.Web.UI.WebControls.Expressions.SearchExpression" /> objeto especificado <see cref="T:System.Linq.IQueryable" /> objeto com base no <see cref="T:System.Web.UI.WebControls.Expressions.SearchType" /> objeto.</summary>
+        <returns>Uma instância do <see cref="T:System.Linq.IQueryable" /> do objeto que o <see cref="T:System.Web.UI.WebControls.Expressions.SearchExpression" /> foi aplicada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é avaliada a coleção de parâmetros que são usados no <xref:System.Web.UI.WebControls.Expressions.SearchExpression> de objeto e aplica-se a expressão para o <xref:System.Linq.IQueryable> objeto. Se forem especificados vários campos de dados, o `AND` operador é aplicado aos campos de dados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Web.UI.WebControls.Expressions.SearchExpression.DataFields" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SearchType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Expressions.SearchType SearchType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Expressions.SearchType SearchType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.SearchExpression.SearchType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Expressions.SearchType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.UI.WebControls.Expressions.SearchType" /> valor que determina onde a cadeia de caracteres de pesquisa ocorre.</summary>
+        <value>O tipo de pesquisa a ser executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Expressions.SearchType> propriedade usa o <xref:System.Web.UI.WebControls.Expressions.SearchType> enumeração que contém os tipos de pesquisa para usar em uma instância do <xref:System.Web.UI.WebControls.Expressions.SearchExpression> classe.  
+  
+ A tabela a seguir lista os valores de enumeração possíveis.  
+  
+|Enumeração|Descrição|  
+|-----------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Expressions.SearchType.StartsWith>|Indica uma pesquisa que inicia em qualquer lugar em um campo.|  
+|<xref:System.Web.UI.WebControls.Expressions.SearchType.Contains>|Indica uma pesquisa que começa no início de um campo.|  
+|<xref:System.Web.UI.WebControls.Expressions.SearchType.EndsWith>|Indica uma pesquisa que no final de um campo.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

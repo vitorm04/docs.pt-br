@@ -1,0 +1,23 @@
+<Type Name="State" FullName="System.Activities.Debugger.State">
+  <TypeSignature Language="C#" Value="public class State" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit State extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Debugger.State" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Mantém informações de propriedade que identifica os locais de código fonte que podem servir como pontos de interrupção ou ser escalonados pelo interpretador.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members />
+</Type>

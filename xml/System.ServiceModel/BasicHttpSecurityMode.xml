@@ -1,0 +1,151 @@
+<Type Name="BasicHttpSecurityMode" FullName="System.ServiceModel.BasicHttpSecurityMode">
+  <TypeSignature Language="C#" Value="public enum BasicHttpSecurityMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BasicHttpSecurityMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.BasicHttpSecurityMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Http</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os tipos de segurança que podem ser usados com o <see cref="T:System.ServiceModel.BasicHttpBinding" /> fornecido pelo sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Segurança neste contexto significa que a proteção de mensagem (integridade e confidencialidade), bem como autenticação de cliente e de serviço.  
+  
+ Requisitos de proteção real (as partes específicas de mensagens SOAP que devem ser assinadas ou assinadas e criptografadas) são controlados por meio de atributos no contrato de serviço ou por meio das propriedades na descrição do contrato. Propriedades de associação não controlam o que está sendo assinado ou criptografado: uma associação apenas oferece a capacidade geral de assinatura e criptografia.  
+  
+ O comportamento padrão para o <xref:System.ServiceModel.BasicHttpBinding> é None.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="Message" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.BasicHttpSecurityMode Message = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.BasicHttpSecurityMode.Message" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.BasicHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A segurança é fornecida usando a segurança de mensagem SOAP. Para o <see cref="T:System.ServiceModel.BasicHttpBinding" />, o sistema requer que o certificado do servidor seja fornecido ao cliente separadamente. Os tipos de credencial de cliente válidos para esta associação são <see langword="UserName" /> e <see langword="Certificate" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.BasicHttpSecurityMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.BasicHttpSecurityMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.BasicHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A mensagem SOAP não é protegida durante a transferência. Este é o comportamento padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="Transport" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.BasicHttpSecurityMode Transport = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.BasicHttpSecurityMode.Transport" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.BasicHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A proteção é fornecida usando HTTPS. O serviço deve ser configurado com certificados SSL. A mensagem SOAP é protegida como um todo usando HTTPS. O serviço é autenticado pelo cliente usando o certificado SSL do serviço. A autenticação do cliente é controlada por meio de <see cref="P:System.ServiceModel.HttpTransportSecurity.ClientCredentialType" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportCredentialOnly">
+      <MemberSignature Language="C#" Value="TransportCredentialOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.BasicHttpSecurityMode TransportCredentialOnly = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.BasicHttpSecurityMode.TransportCredentialOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.BasicHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse modo não fornece confidencialidade e integridade de mensagens. Ele fornece somente a autenticação do cliente com base em HTTP. Use esse modo com cuidado. Ele deve ser usado em ambientes em que a segurança de transferência estiver sendo fornecida por outros meios (como IPsec) e apenas a autenticação do cliente for fornecida pela infraestrutura [!INCLUDE[indigo1](~/includes/indigo1-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportWithMessageCredential">
+      <MemberSignature Language="C#" Value="TransportWithMessageCredential" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.BasicHttpSecurityMode TransportWithMessageCredential = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.BasicHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A integridade, a confidencialidade e a autenticação de servidor são fornecidas por HTTPS. O serviço deve ser configurado com um certificado. Autenticação de cliente é fornecida por meio de segurança de mensagens SOAP. Esse modo é aplicável quando o usuário estiver se autenticando com uma credencial UserName ou de certificado e houver uma implantação HTTPS existente para proteger a transferência de mensagens.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

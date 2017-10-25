@@ -1,0 +1,59 @@
+<Type Name="IVirtualizedItemProvider" FullName="System.Windows.Automation.Provider.IVirtualizedItemProvider">
+  <TypeSignature Language="C#" Value="public interface IVirtualizedItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IVirtualizedItemProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IVirtualizedItemProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("cb98b665-2d35-4fac-ad35-f3c60d0c0b8b")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe um método para suportar o padrão de controle item virtualizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize%2A> método faz com que um item virtual totalmente acessível como um elemento de automação de interface do usuário. Um item virtualizado normalmente é um item em uma lista virtual; ou seja, uma lista que não gerencia seus próprios dados. Quando um aplicativo recupera um elemento de automação para um item virtualizado usando o <xref:System.Windows.Automation.ItemContainerPattern.FindItemByProperty%2A> método, o provedor pode retornar um elemento de espaço reservado que implementa o <xref:System.Windows.Automation.Provider.IVirtualizedItemProvider> interface. A implementação de <xref:System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize%2A> método retorna uma referência de elemento de automação de interface do usuário completa.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Realize">
+      <MemberSignature Language="C#" Value="public void Realize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Realize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o item virtual totalmente acessível como um elemento de automação de interface do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um item é obtido de uma lista virtual, ela é apenas um espaço reservado. Use esse método para convertê-lo em uma referência de elemento de automação de interface do usuário completa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

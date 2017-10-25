@@ -1,0 +1,105 @@
+<Type Name="FileDialogCustomPlace" FullName="Microsoft.Win32.FileDialogCustomPlace">
+  <TypeSignature Language="C#" Value="public sealed class FileDialogCustomPlace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FileDialogCustomPlace extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.FileDialogCustomPlace" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma entrada em uma lista de locais personalizados <see cref="T:Microsoft.Win32.FileDialog" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A partir do [!INCLUDE[TLA#tla_winvista](~/includes/tlasharptla-winvista-md.md)], abrir e salvar caixas de diálogo de arquivo tem uma **Links Favoritos** painel no lado esquerdo da caixa de diálogo que permite que o usuário navegar rapidamente para um local diferente. Esses links são chamados de locais personalizados. Essa classe permite que você modifique a lista que aparece quando seu aplicativo usa uma caixa de diálogo. Para obter a lista de pastas conhecidas para locais personalizados, consulte <xref:Microsoft.Win32.FileDialogCustomPlaces>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileDialogCustomPlace (Guid knownFolder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid knownFolder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.FileDialogCustomPlace.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="knownFolder" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="knownFolder">O GUID de uma pasta conhecida.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Win32.FileDialogCustomPlace" /> classe com a GUID de pasta conhecidas especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileDialogCustomPlace (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.FileDialogCustomPlace.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para a pasta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Win32.FileDialogCustomPlace" /> classe com o caminho especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownFolder">
+      <MemberSignature Language="C#" Value="public Guid KnownFolder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid KnownFolder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.FileDialogCustomPlace.KnownFolder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID da pasta conhecida para o local personalizado.</summary>
+        <value>O GUID de uma pasta conhecida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ GUIDs são associados com as pastas conhecidas. Para obter a lista de pastas conhecidas, consulte <xref:Microsoft.Win32.FileDialogCustomPlaces>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.FileDialogCustomPlace.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do arquivo para o local personalizado.</summary>
+        <value>O caminho para um local personalizado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

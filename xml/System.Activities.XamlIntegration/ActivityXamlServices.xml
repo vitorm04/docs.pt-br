@@ -1,0 +1,501 @@
+<Type Name="ActivityXamlServices" FullName="System.Activities.XamlIntegration.ActivityXamlServices">
+  <TypeSignature Language="C#" Value="public static class ActivityXamlServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ActivityXamlServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.XamlIntegration.ActivityXamlServices" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Cria uma instância de uma árvore de atividade descrita em XAML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="CreateBuilderReader">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Mapeia um <see langword="x:Class" /> árvore de atividade a um <see cref="T:System.Activities.ActivityBuilder" /> ou <see cref="T:System.Activities.ActivityBuilder`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga é usada para cenários de tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateBuilderReader">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlReader CreateBuilderReader (System.Xaml.XamlReader innerReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.XamlReader CreateBuilderReader(class System.Xaml.XamlReader innerReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader(System.Xaml.XamlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerReader" Type="System.Xaml.XamlReader" />
+      </Parameters>
+      <Docs>
+        <param name="innerReader">O <see langword="x:Class" /> conteúdo.</param>
+        <summary>Mapeia um <see langword="x:Class" /> árvore de atividade do leitor especificado para um <see cref="T:System.Activities.ActivityBuilder" /> ou <see cref="T:System.Activities.ActivityBuilder`1" />.</summary>
+        <returns>Um <see cref="T:System.Xaml.XamlReader" /> que manipula a transformação entre o <see cref="T:System.Activities.ActivityBuilder" /> e a atividade <see langword="x:Class" /> XAML.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilderReader">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlReader CreateBuilderReader (System.Xaml.XamlReader innerReader, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.XamlReader CreateBuilderReader(class System.Xaml.XamlReader innerReader, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader(System.Xaml.XamlReader,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerReader" Type="System.Xaml.XamlReader" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="innerReader">O <see langword="x:Class" /> conteúdo.</param>
+        <param name="schemaContext">O contexto do esquema.</param>
+        <summary>Mapeia um <see langword="x:Class" /> árvore de atividade do leitor especificado para um <see cref="T:System.Activities.ActivityBuilder" /> ou <see cref="T:System.Activities.ActivityBuilder`1" /> usando o contexto do esquema especificado.</summary>
+        <returns>Um <see cref="T:System.Xaml.XamlReader" /> que manipula a transformação entre o <see cref="T:System.Activities.ActivityBuilder" /> e a atividade <see langword="x:Class" /> XAML.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilderWriter">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlWriter CreateBuilderWriter (System.Xaml.XamlWriter innerWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.XamlWriter CreateBuilderWriter(class System.Xaml.XamlWriter innerWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderWriter(System.Xaml.XamlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerWriter" Type="System.Xaml.XamlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="innerWriter">O conteúdo de um <see cref="T:System.Activities.ActivityBuilder" /> ou <see cref="T:System.Activities.ActivityBuilder`1" />.</param>
+        <summary>Mapeia um <see cref="T:System.Activities.ActivityBuilder" /> ou <see cref="T:System.Activities.ActivityBuilder`1" /> do gravador especificado para um <see langword="x:Class" /> árvore de atividade.</summary>
+        <returns>Um <see cref="T:System.Xaml.XamlWriter" /> que manipula a transformação entre o <see cref="T:System.Activities.ActivityBuilder" /> e a atividade <see langword="x:Class" /> XAML.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFactory">
+      <MemberSignature Language="C#" Value="public static Func&lt;object&gt; CreateFactory (System.Xaml.XamlReader reader, Type resultType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`1&lt;object&gt; CreateFactory(class System.Xaml.XamlReader reader, class System.Type resultType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.CreateFactory(System.Xaml.XamlReader,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xaml.XamlReader" />
+        <Parameter Name="resultType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O leitor XAML.</param>
+        <param name="resultType">O tipo do valor retornado do método encapsulado por esse delegado.</param>
+        <summary>Retorna um método delegado para o leitor XAML especificado com o valor de retorno do tipo especificado.</summary>
+        <returns>Um método delegado para o leitor XAML especificado com retornar o valor do tipo especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFactory&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;T&gt; CreateFactory&lt;T&gt; (System.Xaml.XamlReader reader) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`1&lt;!!T&gt; CreateFactory&lt;class T&gt;(class System.Xaml.XamlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.CreateFactory``1(System.Xaml.XamlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xaml.XamlReader" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo do valor retornado do método encapsulado por esse delegado.</typeparam>
+        <param name="reader">O leitor XAML.</param>
+        <summary>Retorna um método delegado para o leitor XAML especificado com o valor de retorno do tipo especificado.</summary>
+        <returns>Um método delegado para o leitor XAML especificado com o valor de retorno do tipo <paramref name="T" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateReader">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Mapeia um <see langword="x:Class" /> árvore de atividade a um <see cref="T:System.Activities.DynamicActivity" /> ou <see cref="T:System.Activities.DynamicActivity`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga é usada para cenários de tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateReader">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlReader CreateReader (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.XamlReader CreateReader(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.CreateReader(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O <see langword="x:Class" /> conteúdo.</param>
+        <summary>Mapeia um <see langword="x:Class" /> árvore de atividade do fluxo especificado para um <see cref="T:System.Activities.DynamicActivity" /> ou <see cref="T:System.Activities.DynamicActivity`1" />.</summary>
+        <returns>O <see cref="T:System.Activities.ActivityBuilder" /> ou <see cref="T:System.Activities.ActivityBuilder`1" /> conteúdo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReader">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlReader CreateReader (System.Xaml.XamlReader innerReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.XamlReader CreateReader(class System.Xaml.XamlReader innerReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.CreateReader(System.Xaml.XamlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerReader" Type="System.Xaml.XamlReader" />
+      </Parameters>
+      <Docs>
+        <param name="innerReader">O <see langword="x:Class" /> conteúdo.</param>
+        <summary>Mapeia um <see langword="x:Class" /> árvore de atividade do leitor especificado para um <see cref="T:System.Activities.DynamicActivity" /> ou <see cref="T:System.Activities.DynamicActivity`1" />.</summary>
+        <returns>O <see cref="T:System.Activities.ActivityBuilder" /> ou <see cref="T:System.Activities.ActivityBuilder`1" /> conteúdo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReader">
+      <MemberSignature Language="C#" Value="public static System.Xaml.XamlReader CreateReader (System.Xaml.XamlReader innerReader, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xaml.XamlReader CreateReader(class System.Xaml.XamlReader innerReader, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.CreateReader(System.Xaml.XamlReader,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerReader" Type="System.Xaml.XamlReader" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="innerReader">O <see langword="x:Class" /> conteúdo.</param>
+        <param name="schemaContext">O contexto do esquema.</param>
+        <summary>Mapeia um <see langword="x:Class" /> árvore de atividade do leitor especificado para um <see cref="T:System.Activities.DynamicActivity" /> ou <see cref="T:System.Activities.DynamicActivity`1" /> usando o contexto do esquema especificado.</summary>
+        <returns>O <see cref="T:System.Activities.ActivityBuilder" /> ou <see cref="T:System.Activities.ActivityBuilder`1" /> conteúdo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeComponent">
+      <MemberSignature Language="C#" Value="public static void InitializeComponent (Type componentType, object componentInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InitializeComponent(class System.Type componentType, object componentInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.InitializeComponent(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="componentType" Type="System.Type" />
+        <Parameter Name="componentInstance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="componentType">O tipo do componente.</param>
+        <param name="componentInstance">A instância do componente.</param>
+        <summary>Inicializa o componente especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">A definição de fluxo de trabalho.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrito no fluxo especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (System.IO.TextReader textReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(class System.IO.TextReader textReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.IO.TextReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">A definição de fluxo de trabalho.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrito no leitor de texto especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um arquivo que contém a definição de fluxo de trabalho.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrita no arquivo especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (System.Xaml.XamlReader xamlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(class System.Xaml.XamlReader xamlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.Xaml.XamlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlReader" Type="System.Xaml.XamlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xamlReader">A definição de fluxo de trabalho.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrito no leitor de XAML especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (System.Xml.XmlReader xmlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(class System.Xml.XmlReader xmlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">A definição de fluxo de trabalho.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrito no leitor de XML especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (System.IO.Stream stream, System.Activities.XamlIntegration.ActivityXamlServicesSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(class System.IO.Stream stream, class System.Activities.XamlIntegration.ActivityXamlServicesSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.IO.Stream,System.Activities.XamlIntegration.ActivityXamlServicesSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="settings" Type="System.Activities.XamlIntegration.ActivityXamlServicesSettings" />
+      </Parameters>
+      <Docs>
+        <param name="stream">A definição de fluxo de trabalho.</param>
+        <param name="settings">As configurações de serviço do XAML.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrito no fluxo especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (System.IO.TextReader textReader, System.Activities.XamlIntegration.ActivityXamlServicesSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(class System.IO.TextReader textReader, class System.Activities.XamlIntegration.ActivityXamlServicesSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.IO.TextReader,System.Activities.XamlIntegration.ActivityXamlServicesSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+        <Parameter Name="settings" Type="System.Activities.XamlIntegration.ActivityXamlServicesSettings" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">A definição de fluxo de trabalho.</param>
+        <param name="settings">As configurações de serviço do XAML.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrito no leitor de texto especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (string fileName, System.Activities.XamlIntegration.ActivityXamlServicesSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(string fileName, class System.Activities.XamlIntegration.ActivityXamlServicesSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.String,System.Activities.XamlIntegration.ActivityXamlServicesSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="settings" Type="System.Activities.XamlIntegration.ActivityXamlServicesSettings" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um arquivo que contém a definição de fluxo de trabalho.</param>
+        <param name="settings">As configurações de serviço do XAML.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrita no arquivo especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (System.Xaml.XamlReader xamlReader, System.Activities.XamlIntegration.ActivityXamlServicesSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(class System.Xaml.XamlReader xamlReader, class System.Activities.XamlIntegration.ActivityXamlServicesSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.Xaml.XamlReader,System.Activities.XamlIntegration.ActivityXamlServicesSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlReader" Type="System.Xaml.XamlReader" />
+        <Parameter Name="settings" Type="System.Activities.XamlIntegration.ActivityXamlServicesSettings" />
+      </Parameters>
+      <Docs>
+        <param name="xamlReader">A definição de fluxo de trabalho.</param>
+        <param name="settings">As configurações de serviço do XAML.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrito no leitor de XAML especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Activities.Activity Load (System.Xml.XmlReader xmlReader, System.Activities.XamlIntegration.ActivityXamlServicesSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.Activity Load(class System.Xml.XmlReader xmlReader, class System.Activities.XamlIntegration.ActivityXamlServicesSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.ActivityXamlServices.Load(System.Xml.XmlReader,System.Activities.XamlIntegration.ActivityXamlServicesSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="settings" Type="System.Activities.XamlIntegration.ActivityXamlServicesSettings" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">A definição de fluxo de trabalho.</param>
+        <param name="settings">As configurações de serviço do XAML.</param>
+        <summary>Cria uma instância do fluxo de trabalho declarativo descrito no leitor de XML especificado.</summary>
+        <returns>Uma instância de árvore de atividade que descreve o fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

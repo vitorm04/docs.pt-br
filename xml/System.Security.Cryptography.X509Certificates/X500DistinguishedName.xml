@@ -1,0 +1,446 @@
+<Type Name="X500DistinguishedName" FullName="System.Security.Cryptography.X509Certificates.X500DistinguishedName">
+  <TypeSignature Language="C#" Value="public sealed class X500DistinguishedName : System.Security.Cryptography.AsnEncodedData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit X500DistinguishedName extends System.Security.Cryptography.AsnEncodedData" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsnEncodedData</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.MonoTODO("Some X500DistinguishedNameFlags options aren't supported, like DoNotUsePlusSign, DoNotUseQuotes and ForceUTF8Encoding")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o nome diferenciado de um certificado X509. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é como uma extensão para o <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.SubjectName%2A> ou <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.IssuerName%2A> propriedade, que é o nome da pessoa ou entidade que está sendo emitido para o certificado. X. 500 é um padrão internacional para serviços de diretório distribuído. O nome distinto usa o seguinte formato:  
+  
+ [X500: / C = código de país/S = Organization/OU = OrganizationUnit/CN = CommonName]  
+  
+ Os seguintes limites de comprimento de campo se aplicam:  
+  
+|Campo|Limite de tamanho|  
+|-----------|------------------|  
+|Código de país|2 caracteres|  
+|Organização|Até 64 caracteres|  
+|OrganizationUnit|Até 32 caracteres|  
+|CommonName|Até 64 caracteres|  
+  
+ As seguintes diretrizes se aplicam:  
+  
+-   Os valores de campo podem ser letras maiusculas ou minúsculas.  
+  
+-   Delimitadores de marcas de barra (/) e devem aparecer antes do primeiro valor e entre os valores subsequentes.  
+  
+-   Delimitadores podem ser seguidos por um espaço.  
+  
+ A seguir está um exemplo de um nome formatado corretamente: [X500: / C = US /o = Microsoft / OU = WGA / CN = TedSt]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X500DistinguishedName (byte[] encodedDistinguishedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] encodedDistinguishedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X500DistinguishedName.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encodedDistinguishedName" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encodedDistinguishedName">Uma matriz de bytes que contém informações de nome diferenciado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" /> classe usando as informações da matriz de bytes especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe herda o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X500DistinguishedName (System.Security.Cryptography.AsnEncodedData encodedDistinguishedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsnEncodedData encodedDistinguishedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X500DistinguishedName.#ctor(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encodedDistinguishedName" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="encodedDistinguishedName">Um <see cref="T:System.Security.Cryptography.AsnEncodedData" /> objeto que representa o nome distinto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" /> usando o objeto <see cref="T:System.Security.Cryptography.AsnEncodedData" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe herda o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X500DistinguishedName (System.Security.Cryptography.X509Certificates.X500DistinguishedName distinguishedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X500DistinguishedName distinguishedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X500DistinguishedName.#ctor(System.Security.Cryptography.X509Certificates.X500DistinguishedName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinguishedName" Type="System.Security.Cryptography.X509Certificates.X500DistinguishedName" />
+      </Parameters>
+      <Docs>
+        <param name="distinguishedName">Um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" /> usando o objeto <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma cópia do <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> objeto. O <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe herda o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X500DistinguishedName (string distinguishedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string distinguishedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X500DistinguishedName.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinguishedName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="distinguishedName">Uma cadeia de caracteres que representa o nome distinto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" /> classe usando informações da cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe herda o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X500DistinguishedName (string distinguishedName, System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string distinguishedName, valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X500DistinguishedName.#ctor(System.String,System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinguishedName" Type="System.String" />
+        <Parameter Name="flag" Type="System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags" />
+      </Parameters>
+      <Docs>
+        <param name="distinguishedName">Uma cadeia de caracteres que representa o nome distinto.</param>
+        <param name="flag">Um combinação bit a bit de valores de enumeração que especificam as características do nome diferenciado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" /> classe usando a cadeia de caracteres especificada e <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags" /> sinalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe herda o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public string Decode (System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string Decode(valuetype System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X500DistinguishedName.Decode(System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flag" Type="System.Security.Cryptography.X509Certificates.X500DistinguishedNameFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Um combinação bit a bit de valores de enumeração que especificam as características do nome diferenciado.</param>
+        <summary>Decodifica um nome diferenciado usando as características especificadas pelo parâmetro <paramref name="flag" />.</summary>
+        <returns>O nome distinto decodificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método decodifica o nome distinto codificado ASN em um valor de cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O certificado tem um nome inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public override string Format (bool multiLine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string Format(bool multiLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X500DistinguishedName.Format(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiLine" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="multiLine">
+          <see langword="true" /> se a cadeia de caracteres retornada precisar conter retornos de carro; caso contrário, <see langword="false" />.</param>
+        <summary>Retorna uma versão formatada de um X500 diferenciados nome de impressão ou de saída para uma janela de texto ou a um console.</summary>
+        <returns>Uma cadeia de caracteres formatada que representa o X500 nome distinto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para imprimir a notação de sintaxe abstrata número um ASN. 1 ()-dados codificados ou as informações para uma caixa de texto de saída. Use o `multiLine` parâmetro para controlar o layout da saída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X500DistinguishedName.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome diferenciado delimitado por vírgula de um certificado X500.</summary>
+        <value>O nome diferenciado delimitado por vírgula do certificado X509.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome distinto usa o seguinte formato:  
+  
+ [X500: / C = código de país/S = Organization/OU = OrganizationUnit/CN = CommonName]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.X509Certificates.X500DistinguishedName> classe.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CPP/x500.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/CS/x500.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X500DistinguishedName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X500DistinguishedName/VB/x500.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

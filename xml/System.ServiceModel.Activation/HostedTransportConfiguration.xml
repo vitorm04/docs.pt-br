@@ -1,0 +1,75 @@
+<Type Name="HostedTransportConfiguration" FullName="System.ServiceModel.Activation.HostedTransportConfiguration">
+  <TypeSignature Language="C#" Value="public abstract class HostedTransportConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HostedTransportConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.HostedTransportConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece configuração específico de transporte para implementações de transporte hospedado no serviço de ativação de processo para Windows (WAS).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Transportes que oferecem suporte à ativação de processo usando o serviço de ativação de processos do Windows (WAS) usam associações de site do WAS para armazenar informações sobre os endereços de rede na qual o transporte está escutando. A implementação de transporte é responsável por ler essas informações a partir do arquivo applicationHost. config e para a criação de um conjunto de endereço base URIs que pode ser passada para o construtor de <xref:System.ServiceModel.ServiceHostBase>. O processo pelo qual esses endereços base são construídos é específico do protocolo de transporte. Implementações de um transporte que oferecem suporte a ativação do WAS devem fornecer uma implementação que deriva de <xref:System.ServiceModel.Activation.HostedTransportConfiguration> para encapsular essa lógica. Para obter mais informações sobre o uso dessa classe, consulte o [ativação UDP](~/docs/framework/wcf/samples/udp-activation.md) sample, que demonstra como criar um protocolo de datagrama de usuário personalizada (UDP) sejam ativadas pelo WAS.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HostedTransportConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.HostedTransportConfiguration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activation.HostedTransportConfiguration" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaseAddresses">
+      <MemberSignature Language="C#" Value="public abstract Uri[] GetBaseAddresses (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri[] GetBaseAddresses(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.HostedTransportConfiguration.GetBaseAddresses(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual para o serviço.</param>
+        <summary>Quando substituído em uma classe derivada, recupera o endereço base do host.</summary>
+        <returns>O <see cref="T:System.Uri" /> que contém o endereço base do host.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o uso dessa classe, consulte o [ativação UDP](~/docs/framework/wcf/samples/udp-activation.md) sample, que demonstra como criar um protocolo de datagrama de usuário personalizada (UDP) sejam ativadas pelo WAS.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

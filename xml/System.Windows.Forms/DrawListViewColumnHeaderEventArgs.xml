@@ -1,0 +1,463 @@
+<Type Name="DrawListViewColumnHeaderEventArgs" FullName="System.Windows.Forms.DrawListViewColumnHeaderEventArgs">
+  <TypeSignature Language="C#" Value="public class DrawListViewColumnHeaderEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DrawListViewColumnHeaderEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DrawListViewColumnHeaderEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.ListView.DrawColumnHeader" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> evento permite que você personalize (ou desenho proprietário) a aparência de um <xref:System.Windows.Forms.ListView> controle na exibição de detalhes.  
+  
+ O <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> é gerado por um <xref:System.Windows.Forms.ListView> controlar quando seu <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType> está definida como `true` e sua <xref:System.Windows.Forms.ListView.View%2A> está definida como <xref:System.Windows.Forms.View.Details>. O <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs> passado para o evento manipulador contém informações sobre o <xref:System.Windows.Forms.ColumnHeader> para desenhar e também fornece métodos para ajudá-lo a desenhar o cabeçalho.  
+  
+ Use o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Header%2A> propriedade para recuperar informações sobre o cabeçalho de coluna para desenhar. Use o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Graphics%2A> fazer o desenho real dentro da área especificada pela propriedade de <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Bounds%2A> propriedade. Para desenhar padrão <xref:System.Windows.Forms.ListView> elementos que não é necessário para personalização, use o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.DrawBackground%2A> e <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.DrawText%2A> métodos.  
+  
+ Use o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.DrawDefault%2A> propriedade quando desejar que o sistema operacional para desenhar subitem. Isso é útil quando você deseja personalizar somente cabeçalhos específicos.  
+  
+> [!NOTE]
+>  Para evitar problemas com elementos gráficos cintilação ao proprietário do desenho, substituir o <xref:System.Windows.Forms.ListView> controle e defina o <xref:System.Windows.Forms.ListView.DoubleBuffered%2A> propriedade `true`. Este recurso está disponível somente no Windows XP e a família Windows Server 2003, quando o aplicativo chama o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como fornecer desenho personalizado para um <xref:System.Windows.Forms.ListView> controle. O <xref:System.Windows.Forms.ListView> controle no exemplo tem um plano de fundo do gradiente. Subitens com valores negativos tem um primeiro plano vermelho e um plano de fundo preto.  
+  
+ Um manipulador para o <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> evento desenha itens todos o plano de fundo. Um manipulador para o <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType> evento desenha os valores de texto e o texto e o plano de fundo para subitens que têm valores negativos. Um manipulador para o <xref:System.Windows.Forms.ListView.DrawColumnHeader> evento desenha cada cabeçalho de coluna.  
+  
+ Um <xref:System.Windows.Forms.ContextMenu> componente fornece uma maneira para alternar entre a exibição de detalhes e o modo de exibição de lista. Na exibição de lista, somente o <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> evento é acionado. Nesse caso, o texto e plano de fundo são ambos desenhados no <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType> manipulador de eventos.  
+  
+ [!code-csharp[ListViewOwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#1)]
+ [!code-vb[ListViewOwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawListViewColumnHeaderEventArgs (System.Drawing.Graphics graphics, System.Drawing.Rectangle bounds, int columnIndex, System.Windows.Forms.ColumnHeader header, System.Windows.Forms.ListViewItemStates state, System.Drawing.Color foreColor, System.Drawing.Color backColor, System.Drawing.Font font);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle bounds, int32 columnIndex, class System.Windows.Forms.ColumnHeader header, valuetype System.Windows.Forms.ListViewItemStates state, valuetype System.Drawing.Color foreColor, valuetype System.Drawing.Color backColor, class System.Drawing.Font font) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.#ctor(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.ColumnHeader,System.Windows.Forms.ListViewItemStates,System.Drawing.Color,System.Drawing.Color,System.Drawing.Font)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="header" Type="System.Windows.Forms.ColumnHeader" />
+        <Parameter Name="state" Type="System.Windows.Forms.ListViewItemStates" />
+        <Parameter Name="foreColor" Type="System.Drawing.Color" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> superfície na qual desenhar.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> no qual desenhar.</param>
+        <param name="columnIndex">O índice da coluna do cabeçalho dentro de <see cref="P:System.Windows.Forms.ListView.Columns" /> coleção.</param>
+        <param name="header">O <see cref="T:System.Windows.Forms.ColumnHeader" /> que representa o cabeçalho para desenhar.</param>
+        <param name="state">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.ListViewItemStates" /> que indica o estado atual do cabeçalho da coluna de valores.</param>
+        <param name="foreColor">O primeiro plano <see cref="T:System.Drawing.Color" /> do cabeçalho.</param>
+        <param name="backColor">O plano de fundo <see cref="T:System.Drawing.Color" /> do cabeçalho.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> usado para o texto do cabeçalho.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DrawListViewColumnHeaderEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor do plano de fundo do cabeçalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de plano de fundo do cabeçalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#470](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#470)]
+ [!code-vb[System.Windows.Forms.EventExamples#470](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#470)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho e o local do cabeçalho da coluna para desenhar.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que representa os limites do cabeçalho da coluna.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O local especificado por essa propriedade é em relação ao canto superior esquerdo do <xref:System.Windows.Forms.ListView> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Bounds%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#5](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#5)]
+ [!code-vb[ListViewOwnerDraw#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnIndex">
+      <MemberSignature Language="C#" Value="public int ColumnIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.ColumnIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do <see cref="T:System.Windows.Forms.ColumnHeader" /> que representa o cabeçalho para desenhar.</summary>
+        <value>O índice do cabeçalho da coluna dentro de <see cref="P:System.Windows.Forms.ListView.Columns" /> coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#470](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#470)]
+ [!code-vb[System.Windows.Forms.EventExamples#470](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#470)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBackground">
+      <MemberSignature Language="C#" Value="public void DrawBackground ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBackground() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.DrawBackground" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desenha o plano de fundo do cabeçalho da coluna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método para desenhar o plano de fundo padrão para o cabeçalho de coluna.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.DrawBackground%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#5](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#5)]
+ [!code-vb[ListViewOwnerDraw#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawDefault">
+      <MemberSignature Language="C#" Value="public bool DrawDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DrawDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.DrawDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cabeçalho de coluna deve ser desenhado pelo sistema operacional, em vez de desenho proprietário.</summary>
+        <value>
+          <see langword="true" />Se o cabeçalho deve ser desenhado pelo sistema operacional; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade ao manipular o <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> evento para os cabeçalhos que você não deseja personalizar. Se você definir essa propriedade como `true`, o cabeçalho será desenhado como de costume.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#470](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#470)]
+ [!code-vb[System.Windows.Forms.EventExamples#470](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#470)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.DrawText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desenha o texto do cabeçalho de coluna usando a formatação padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método quando não precisar personalizar a aparência do texto do cabeçalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (System.Windows.Forms.TextFormatFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(valuetype System.Windows.Forms.TextFormatFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.DrawText(System.Windows.Forms.TextFormatFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.TextFormatFlags" />.</param>
+        <summary>Desenha o texto do cabeçalho de coluna, formatação com especificado <see cref="T:System.Windows.Forms.TextFormatFlags" /> valores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método quando não precisar personalizar a aparência do texto do cabeçalho. O <xref:System.Windows.Forms.TextFormatFlags> valores especificados no `flags` parâmetro permitem que você forneça as propriedades de formatação para o cabeçalho, como alinhamento do texto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a fonte usada para desenhar o texto de cabeçalho de coluna.</summary>
+        <value>Um <see cref="T:System.Drawing.Font" /> que representa a fonte do texto do cabeçalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#470](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#470)]
+ [!code-vb[System.Windows.Forms.EventExamples#470](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#470)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cor de primeiro plano do cabeçalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano do cabeçalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#470](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#470)]
+ [!code-vb[System.Windows.Forms.EventExamples#470](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#470)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Graphics" /> usado para desenhar o cabeçalho da coluna.</summary>
+        <value>Um <see cref="T:System.Drawing.Graphics" /> usado para desenhar o cabeçalho da coluna.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Graphics> classe fornece propriedades e métodos úteis para o dispositivo de vídeo de desenho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Graphics%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#5](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#5)]
+ [!code-vb[ListViewOwnerDraw#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ColumnHeader Header { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ColumnHeader Header" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.ColumnHeader" /> que representa o cabeçalho de coluna para desenhar.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ColumnHeader" /> que representa o cabeçalho de coluna.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é útil quando o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.State%2A> propriedade não fornece informações suficientes para atender às suas necessidades. O <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.State%2A> propriedade fornece somente as informações de estado básica que você pode usar, por exemplo, para determinar se o mouse estiver sobre o cabeçalho da coluna. O <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Header%2A> propriedade, por outro lado, permite acessar todos os membros de <xref:System.Windows.Forms.ColumnHeader> que representa o cabeçalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.Header%2A> propriedade em um aplicativo que fornece o desenho personalizado para um <xref:System.Windows.Forms.ListView> controle.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawListViewColumnHeaderEventArgs> tópico de referência de visão geral.  
+  
+ [!code-csharp[ListViewOwnerDraw#5](~/samples/snippets/csharp/VS_Snippets_Winforms/ListViewOwnerDraw/CS/listviewownerdraw.cs#5)]
+ [!code-vb[ListViewOwnerDraw#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListViewOwnerDraw/VB/listviewownerdraw.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItemStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ListViewItemStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawListViewColumnHeaderEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItemStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual do cabeçalho da coluna.</summary>
+        <value>Uma combinação bit a bit de <see cref="T:System.Windows.Forms.ListViewItemStates" /> que indica o estado atual do cabeçalho da coluna de valores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para determinar se o ponteiro do mouse está sobre o cabeçalho ou se o usuário clicou o cabeçalho. O <xref:System.Windows.Forms.ListViewItemStates> valores para esses estados são <xref:System.Windows.Forms.ListViewItemStates.Hot> e <xref:System.Windows.Forms.ListViewItemStates.Selected>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ListView> chamado `ListView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#470](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#470)]
+ [!code-vb[System.Windows.Forms.EventExamples#470](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#470)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

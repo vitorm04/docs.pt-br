@@ -1,0 +1,594 @@
+<Type Name="CancellationTokenSource" FullName="System.Threading.CancellationTokenSource">
+  <TypeSignature Language="C#" Value="public class CancellationTokenSource : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CancellationTokenSource extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.CancellationTokenSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Sinaliza para um <see cref="T:System.Threading.CancellationToken" /> que ele deve ser cancelado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o .NET Framework usa um modelo unificado cooperativo cancelamento de operações síncronas assíncronas ou de execução demorada que envolve dois objetos:  
+  
+-   Um <xref:System.Threading.CancellationTokenSource> object, que fornece um token de cancelamento por meio de seu <xref:System.Threading.CancellationTokenSource.Token%2A> propriedade e envia um cancelamento de mensagem chamando seu <xref:System.Threading.CancellationTokenSource.Cancel%2A> ou <xref:System.Threading.CancellationTokenSource.CancelAfter%2A> método.  
+  
+-   Um <xref:System.Threading.CancellationToken> objeto, que indica se o cancelamento é solicitado.  
+  
+ O padrão geral para implementar o modelo de cancelamento cooperativo é:  
+  
+-   Criar uma instância de um <xref:System.Threading.CancellationTokenSource> objeto, que gerencia e envia uma notificação de cancelamento para os tokens de cancelamento individuais.  
+  
+-   Passe o token retornado pelo <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> propriedade para cada tarefa ou o thread de escuta de cancelamento.  
+  
+-   Chamar o <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType> método de operações que recebe o token de cancelamento. Fornecem um mecanismo para cada tarefa ou o thread para responder a uma solicitação de cancelamento. Se você optar por cancelar uma operação e exatamente como você faz isso, depende da lógica do seu aplicativo.  
+  
+-   Chamar o <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> método para fornecer notificação de cancelamento. Isso define o <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType> propriedade em todas as cópias do token de cancelamento para `true`.  
+  
+-   Chamar o <xref:System.Threading.CancellationTokenSource.Dispose%2A> método quando tiver terminado com o <xref:System.Threading.CancellationTokenSource> objeto.  
+  
+ Para obter mais informações, consulte [cancelamento em Threads gerenciados](~/docs/standard/threading/cancellation-in-managed-threads.md).  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar uma instância do tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa um gerador de número aleatório para emular um aplicativo de coleta de dados que lê 10 valores integrais dos onze instrumentos diferentes. Um valor de zero indica que a medida falhou para um instrumento, caso em que a operação deve ser cancelada e nenhum média geral devem ser calculadas.  
+  
+ Para tratar de possíveis cancelamento da operação, o exemplo cria um <xref:System.Threading.CancellationTokenSource> objeto que gera um token de cancelamento que é passado para um <xref:System.Threading.Tasks.TaskFactory> objeto. O <xref:System.Threading.Tasks.TaskFactory> objeto passa o token de cancelamento para cada tarefa responsável por coletar leituras para um determinado instrumento. O <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%60%602%28System.Threading.Tasks.Task%7B%60%600%7D%5B%5D%2CSystem.Func%7BSystem.Threading.Tasks.Task%7B%60%600%7D%5B%5D%2C%60%601%7D%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> método é chamado para garantir que a média é computada somente depois que todas as leituras tenham sido coletadas com êxito. Se uma tarefa não porque ele foi cancelado, a chamada para o <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> método lançará uma exceção.  
+  
+ [!code-csharp[System.Threading.CancellationTokenSource.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.cancellationtokensource.class/cs/cancel1.cs#1)]
+ [!code-vb[System.Threading.CancellationTokenSource.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.cancellationtokensource.class/vb/cancel1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Todos os membros protegidos e públicos da <see cref="T:System.Threading.CancellationTokenSource" /> são thread-safe e podem ser usados simultaneamente em vários segmentos, com exceção de <see cref="M:System.Threading.CancellationTokenSource.Dispose" />, que deve ser usado somente quando todas as outras operações no <see cref="T:System.Threading.CancellationTokenSource" /> objeto concluiu.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CancellationTokenSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.CancellationTokenSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CancellationTokenSource (int millisecondsDelay);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 millisecondsDelay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="millisecondsDelay" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsDelay">O intervalo de tempo em milissegundos para aguardar antes de cancelar essa <see cref="T:System.Threading.CancellationTokenSource" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.CancellationTokenSource" /> que será cancelada depois do atraso especificado em milissegundos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A contagem regressiva para a `millisecondsDelay` for iniciado durante a chamada para o construtor.  Quando o `millisecondsDelay` expirar, o construído <xref:System.Threading.CancellationTokenSource> é cancelado (se ele não foi cancelado já).  
+  
+ As chamadas subsequentes para <xref:System.Threading.CancellationTokenSource.CancelAfter%2A> redefinirá o `millisecondsDelay` para o construído <xref:System.Threading.CancellationTokenSource>, se ele não foi cancelado já.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsDelay" /> é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CancellationTokenSource (TimeSpan delay);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.TimeSpan delay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.#ctor(System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="delay" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="delay">O intervalo de tempo de espera antes de cancelar essa <see cref="T:System.Threading.CancellationTokenSource" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.CancellationTokenSource" /> que será cancelada depois do intervalo de tempo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A contagem regressiva para o atraso for iniciado durante a chamada para o construtor. Quando o intervalo expira, o construído <xref:System.Threading.CancellationTokenSource> for cancelada, se ele não foi cancelado já.  
+  
+ As chamadas subsequentes para <xref:System.Threading.CancellationTokenSource.CancelAfter%2A> redefinirá o atraso para o construído <xref:System.Threading.CancellationTokenSource>, se ele não foi cancelado já.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="delay" />
+          <see langword="." />
+          <see cref="P:System.TimeSpan.TotalMilliseconds" />é menor que -1 ou maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Comunica uma solicitação de cancelamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O associado <xref:System.Threading.CancellationToken> será notificado sobre o cancelamento e fará a transição para um estado onde <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> retorna true.  
+  
+ Quaisquer operações canceláveis ou retornos de chamada registrado com o <xref:System.Threading.CancellationToken> será executado.  
+  
+ Operações canceláveis e retornos de chamada registrados com o token não deverão gerar exceções.  
+  
+ No entanto, essa sobrecarga de cancelamento será agregada a todas as exceções geradas em um <xref:System.AggregateException>, de modo que um retorno de chamada, gerando uma exceção não impedirá que outras retornos de chamada registrados que está sendo executada.  
+  
+ O <xref:System.Threading.ExecutionContext> que foi capturada quando cada retorno de chamada foi registrado será restabelecida quando o retorno de chamada é invocado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa um gerador de número aleatório para emular um aplicativo de coleta de dados que lê 10 valores integrais dos onze instrumentos diferentes. Um valor de zero indica que a medida falhou para um instrumento, caso em que a operação deve ser cancelada e nenhum média geral devem ser calculadas.  
+  
+ Para tratar de possíveis cancelamento da operação, o exemplo cria um <xref:System.Threading.CancellationTokenSource> objeto que gera um token de cancelamento que é passado para um <xref:System.Threading.Tasks.TaskFactory> objeto. O <xref:System.Threading.Tasks.TaskFactory> objeto passa o token de cancelamento para cada tarefa responsável por coletar leituras para um determinado instrumento. O <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%60%602%28System.Threading.Tasks.Task%7B%60%600%7D%5B%5D%2CSystem.Func%7BSystem.Threading.Tasks.Task%7B%60%600%7D%5B%5D%2C%60%601%7D%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> método é chamado para garantir que a média é computada somente depois que todas as leituras tenham sido coletadas com êxito. Se uma tarefa não porque ele foi cancelado, a chamada para o <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> método lançará uma exceção.  
+  
+ [!code-csharp[System.Threading.CancellationTokenSource.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.cancellationtokensource.class/cs/cancel1.cs#1)]
+ [!code-vb[System.Threading.CancellationTokenSource.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.cancellationtokensource.class/vb/cancel1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Threading.CancellationTokenSource" /> foi descartado.</exception>
+        <exception cref="T:System.AggregateException">Uma exceção de agregação que contém todas as exceções geradas pelos retornos de chamada registrados no <see cref="T:System.Threading.CancellationToken" /> associado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel (bool throwOnFirstException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Cancel(bool throwOnFirstException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.Cancel(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="throwOnFirstException" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="throwOnFirstException">
+          <see langword="true" /> se exceções devem propagar imediatamente; caso contrário, <see langword="false" />.</param>
+        <summary>Comunica-se uma solicitação de cancelamento e especifica se os retornos de chamada restantes e operações canceláveis devem ser processados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O associado <xref:System.Threading.CancellationToken> será notificado sobre o cancelamento e fará a transição para um estado onde <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> retorna `true`.  
+  
+ Quaisquer operações canceláveis ou retornos de chamada registrado com o <xref:System.Threading.CancellationToken> será executado.  
+  
+ Operações canceláveis e retornos de chamada registrados com o token não deverão gerar exceções.  
+  
+ Se `throwOnFirstException` é `true`, uma exceção serão propagadas imediatamente sem a chamada para <xref:System.Threading.CancellationTokenSource.Cancel%2A>, impedindo que o restantes de retornos de chamada e canceláveis operações que não sejam processadas.  
+  
+ Se `throwOnFirstException` é `false`, essa sobrecarga agregará todas as exceções geradas em um <xref:System.AggregateException>, de modo que um retorno de chamada, gerando uma exceção não impedirá que outras retornos de chamada registrados que está sendo executada.  
+  
+ O <xref:System.Threading.ExecutionContext> que foi capturada quando cada retorno de chamada foi registrado será restabelecida quando o retorno de chamada é invocado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Threading.CancellationTokenSource" /> foi descartado.</exception>
+        <exception cref="T:System.AggregateException">Uma exceção de agregação que contém todas as exceções geradas pelos retornos de chamada registrados no <see cref="T:System.Threading.CancellationToken" /> associado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAfter">
+      <MemberSignature Language="C#" Value="public void CancelAfter (int millisecondsDelay);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelAfter(int32 millisecondsDelay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.CancelAfter(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsDelay" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsDelay">O período de tempo de espera antes de cancelar este <see cref="T:System.Threading.CancellationTokenSource" />.</param>
+        <summary>Agenda uma operação de cancelamento neste <see cref="T:System.Threading.CancellationTokenSource" /> após o número especificado de milissegundos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A contagem regressiva para a `millisecondsDelay` inicia durante esta chamada. Quando o `millisecondsDelay` expirar, isso <xref:System.Threading.CancellationTokenSource> for cancelada, se ele não foi cancelado já.  
+  
+ As chamadas subsequentes para CancelAfter redefinirá o `millisecondsDelay` para este <xref:System.Threading.CancellationTokenSource>, se ele não foi cancelado já.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A exceção lançada quando este <see cref="T:System.Threading.CancellationTokenSource" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A exceção lançada quando <paramref name="millisecondsDelay" /> é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAfter">
+      <MemberSignature Language="C#" Value="public void CancelAfter (TimeSpan delay);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelAfter(valuetype System.TimeSpan delay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.CancelAfter(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delay" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="delay">O período de tempo de espera antes de cancelar este <see cref="T:System.Threading.CancellationTokenSource" />.</param>
+        <summary>Agenda uma operação de cancelamento neste <see cref="T:System.Threading.CancellationTokenSource" /> após o período de tempo especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A exceção lançada quando este <see cref="T:System.Threading.CancellationTokenSource" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A exceção que é lançada quando <paramref name="delay" /> é menor que -1 ou maior que Int32.MaxValue.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLinkedTokenSource">
+      <MemberSignature Language="C#" Value="public static System.Threading.CancellationTokenSource CreateLinkedTokenSource (params System.Threading.CancellationToken[] tokens);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.CancellationTokenSource CreateLinkedTokenSource(valuetype System.Threading.CancellationToken[] tokens) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.CreateLinkedTokenSource(System.Threading.CancellationToken[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationTokenSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokens" Type="System.Threading.CancellationToken[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="tokens">Uma matriz que contém as instâncias de token de cancelamento para observar.</param>
+        <summary>Cria uma <see cref="T:System.Threading.CancellationTokenSource" /> que estará em estado cancelado quando qualquer um dos tokens de origem na matriz especificada estiverem no estado cancelado.</summary>
+        <returns>Um <see cref="T:System.Threading.CancellationTokenSource" /> que é vinculado aos tokens de origem.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Um <see cref="T:System.Threading.CancellationTokenSource" /> associado a um dos tokens de origem foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tokens" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="tokens" /> está vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLinkedTokenSource">
+      <MemberSignature Language="C#" Value="public static System.Threading.CancellationTokenSource CreateLinkedTokenSource (System.Threading.CancellationToken token1, System.Threading.CancellationToken token2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.CancellationTokenSource CreateLinkedTokenSource(valuetype System.Threading.CancellationToken token1, valuetype System.Threading.CancellationToken token2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.CreateLinkedTokenSource(System.Threading.CancellationToken,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationTokenSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token1" Type="System.Threading.CancellationToken" />
+        <Parameter Name="token2" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token1">O primeiro token de cancelamento para observar.</param>
+        <param name="token2">O token de cancelamento segundo a observar.</param>
+        <summary>Cria um <see cref="T:System.Threading.CancellationTokenSource" /> que estará em estado cancelado quando qualquer um dos tokens de origem estiverem no estado cancelado.</summary>
+        <returns>Um <see cref="T:System.Threading.CancellationTokenSource" /> que é vinculado aos tokens de origem.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">Um <see cref="T:System.Threading.CancellationTokenSource" /> associado a um dos tokens de origem foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Threading.CancellationTokenSource" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Threading.CancellationTokenSource>. O `Dispose` método deixa o <xref:System.Threading.CancellationTokenSource> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Threading.CancellationTokenSource> para o coletor de lixo possa recuperar a memória que o <xref:System.Threading.CancellationTokenSource> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Threading.CancellationTokenSource>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Threading.CancellationTokenSource> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenSource.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pela classe <see cref="T:System.Threading.CancellationTokenSource" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCancellationRequested">
+      <MemberSignature Language="C#" Value="public bool IsCancellationRequested { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCancellationRequested" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.CancellationTokenSource.IsCancellationRequested" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se foi solicitado cancelamento para essa <see cref="T:System.Threading.CancellationTokenSource" />.</summary>
+        <value>
+          <see langword="true" /> se foi solicitado cancelamento para essa <see cref="T:System.Threading.CancellationTokenSource" />, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica se cancelamento foi solicitado para essa origem de token, por exemplo, devido a uma chamada para seu <xref:System.Threading.CancellationTokenSource.Cancel%2A> método.  
+  
+ Se essa propriedade retornará `true`, apenas garante que o cancelamento foi solicitado. Isso não garante que cada manipulador registrado com o token correspondente tiver concluído a execução, nem que solicitações de cancelamento terminar propagada para todos os manipuladores registrados. Sincronização adicional pode ser necessária, especialmente em situações onde objetos relacionados são cancelados simultaneamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken Token { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken Token" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.CancellationTokenSource.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Threading.CancellationToken" /> associado a este <see cref="T:System.Threading.CancellationTokenSource" />.</summary>
+        <value>O <see cref="T:System.Threading.CancellationToken" /> associado a este <see cref="T:System.Threading.CancellationTokenSource" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A origem do token foi descartada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

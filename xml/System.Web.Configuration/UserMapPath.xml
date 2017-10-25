@@ -1,0 +1,209 @@
+<Type Name="UserMapPath" FullName="System.Web.Configuration.UserMapPath">
+  <TypeSignature Language="C#" Value="public class UserMapPath : System.Web.Configuration.IConfigMapPath" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UserMapPath extends System.Object implements class System.Web.Configuration.IConfigMapPath" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.UserMapPath" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.Configuration.IConfigMapPath</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Mapeia caminhos virtuais do arquivo de configuração para caminhos físicos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserMapPath (System.Configuration.ConfigurationFileMap fileMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Configuration.ConfigurationFileMap fileMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UserMapPath.#ctor(System.Configuration.ConfigurationFileMap)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileMap" Type="System.Configuration.ConfigurationFileMap" />
+      </Parameters>
+      <Docs>
+        <param name="fileMap">O mapeamento do arquivo de configuração para o arquivo de configuração de máquina.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.UserMapPath" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAppPathForPath">
+      <MemberSignature Language="C#" Value="public string GetAppPathForPath (string siteID, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetAppPathForPath(string siteID, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UserMapPath.GetAppPathForPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteID" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteID">Um identificador exclusivo para o site.</param>
+        <param name="path">A URL que está associada com o site.</param>
+        <summary>Retorna o nome do diretório virtual que está associado um site específico.</summary>
+        <returns>O <paramref name="siteID" /> valor deve ser exclusivo. O <paramref name="siteID" /> valor distingue sites que têm o mesmo nome.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultSiteNameAndID">
+      <MemberSignature Language="C#" Value="public void GetDefaultSiteNameAndID (out string siteName, out string siteID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetDefaultSiteNameAndID([out] string&amp; siteName, [out] string&amp; siteID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UserMapPath.GetDefaultSiteNameAndID(System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="siteID" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">O nome do site padrão.</param>
+        <param name="siteID">Um identificador exclusivo para o site.</param>
+        <summary>Preenche o nome do site padrão e a ID do site.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMachineConfigFilename">
+      <MemberSignature Language="C#" Value="public string GetMachineConfigFilename ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetMachineConfigFilename() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UserMapPath.GetMachineConfigFilename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome do arquivo de configuração da máquina.</summary>
+        <returns>O nome do arquivo de configuração da máquina.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathConfigFilename">
+      <MemberSignature Language="C#" Value="public void GetPathConfigFilename (string siteID, string path, out string directory, out string baseName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetPathConfigFilename(string siteID, string path, [out] string&amp; directory, [out] string&amp; baseName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UserMapPath.GetPathConfigFilename(System.String,System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteID" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="directory" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="baseName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="siteID">Um identificador exclusivo para o site.</param>
+        <param name="path">A URL que está associada com o site.</param>
+        <param name="directory">O caminho físico do arquivo de configuração.</param>
+        <param name="baseName">O nome do arquivo de configuração.</param>
+        <summary>Preenche o diretório e o nome do arquivo de configuração com base na ID de site e o caminho de site.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootWebConfigFilename">
+      <MemberSignature Language="C#" Value="public string GetRootWebConfigFilename ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetRootWebConfigFilename() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UserMapPath.GetRootWebConfigFilename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho físico do arquivo de configuração que está na raiz do aplicativo Web.</summary>
+        <returns>O caminho físico do arquivo Web. config na raiz do aplicativo Web.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPath">
+      <MemberSignature Language="C#" Value="public string MapPath (string siteID, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string MapPath(string siteID, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UserMapPath.MapPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteID" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteID">Um identificador exclusivo para o site.</param>
+        <param name="path">A URL que está associada com o site.</param>
+        <summary>Retorna o caminho físico com a identificação do site e a URL que está associada com o site.</summary>
+        <returns>O caminho físico do site.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveSiteArgument">
+      <MemberSignature Language="C#" Value="public void ResolveSiteArgument (string siteArgument, out string siteName, out string siteID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResolveSiteArgument(string siteArgument, [out] string&amp; siteName, [out] string&amp; siteID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UserMapPath.ResolveSiteArgument(System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteArgument" Type="System.String" />
+        <Parameter Name="siteName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="siteID" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="siteArgument">O nome do site ou o identificador de site.</param>
+        <param name="siteName">O nome do site padrão.</param>
+        <param name="siteID">Um identificador exclusivo para o site.</param>
+        <summary>Preenche o nome do site e a ID de site com base em um valor de argumento do site.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `siteArgument` é `null`, é igual ao nome do site padrão ou é igual ao identificador de site padrão, o `siteName` e `siteID` valores são preenchidos com os valores de site padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

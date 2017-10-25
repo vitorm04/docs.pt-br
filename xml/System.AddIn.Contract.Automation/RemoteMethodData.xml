@@ -1,0 +1,116 @@
+<Type Name="RemoteMethodData" FullName="System.AddIn.Contract.Automation.RemoteMethodData">
+  <TypeSignature Language="C#" Value="public struct RemoteMethodData" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit RemoteMethodData extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.RemoteMethodData" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre um método de um tipo que podem acessar componentes nos limites de domínio e o processo do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Contract.Automation.RemoteMethodData> estrutura fornece informações sobre um método de um objeto que implementa o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodAttributes Attributes;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Reflection.MethodAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteMethodData.Attributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa os atributos do método que este <see cref="T:System.AddIn.Contract.Automation.RemoteMethodData" /> descreve.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor desse campo é uma combinação bit a bit de <xref:System.Reflection.MethodAttributes> valores se este <xref:System.AddIn.Contract.Automation.RemoteMethodData> descreve um método de um objeto COM:  
+  
+-   <xref:System.Reflection.MethodAttributes.Public>  
+  
+-   <xref:System.Reflection.MethodAttributes.Virtual>  
+  
+-   <xref:System.Reflection.MethodAttributes.NewSlot>  
+  
+-   <xref:System.Reflection.MethodAttributes.HideBySig>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberData">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemoteMemberData MemberData;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.AddIn.Contract.Automation.RemoteMemberData MemberData" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteMethodData.MemberData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemoteMemberData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa os dados de membro para o método que este <see cref="T:System.AddIn.Contract.Automation.RemoteMethodData" /> descreve.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dados de membro incluem o nome do método e o tipo que declara o método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemoteParameterData[] Parameters;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.AddIn.Contract.Automation.RemoteParameterData[] Parameters" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteMethodData.Parameters" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemoteParameterData[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa informações sobre os parâmetros do método que este <see cref="T:System.AddIn.Contract.Automation.RemoteMethodData" /> descreve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnParameter">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemoteParameterData ReturnParameter;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.AddIn.Contract.Automation.RemoteParameterData ReturnParameter" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteMethodData.ReturnParameter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemoteParameterData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa informações sobre o valor de retorno do método que este <see cref="T:System.AddIn.Contract.Automation.RemoteMethodData" /> descreve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

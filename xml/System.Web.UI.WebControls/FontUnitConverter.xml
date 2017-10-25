@@ -1,0 +1,287 @@
+<Type Name="FontUnitConverter" FullName="System.Web.UI.WebControls.FontUnitConverter">
+  <TypeSignature Language="C#" Value="public class FontUnitConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FontUnitConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FontUnitConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte um <see cref="T:System.Web.UI.WebControls.FontUnit" /> para uma cadeia de caracteres. Ele também converte uma cadeia de caracteres para um <see cref="T:System.Web.UI.WebControls.FontUnit" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.FontUnitConverter> classe é usada para converter dados para e de <xref:System.Web.UI.WebControls.FontUnit> e tipos de cadeia de caracteres.  
+  
+> [!CAUTION]
+>  Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando <xref:System.ComponentModel.TypeDescriptor?displayProperty=nameWithType>. Para obter mais informações, consulte os exemplos de <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> classe base.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontUnitConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnitConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.FontUnitConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando um <xref:System.ComponentModel.TypeDescriptor> objeto. Para obter mais informações, consulte os exemplos em <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnitConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> implementado o objeto que fornece informações sobre o contexto de um conversor de tipo.</param>
+        <param name="sourceType">Um <see cref="T:System.Type" /> que representa o tipo de dados para verificar.</param>
+        <summary>Determina se um tipo de dados pode ser convertido em um <see cref="T:System.Web.UI.WebControls.FontUnit" />.</summary>
+        <returns>
+          <see langword="true" />Se o tipo de dados especificado pelo <paramref name="sourceType" /> parâmetro pode ser convertido em um <see cref="T:System.Web.UI.WebControls.FontUnit" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnitConverter.CanConvertFrom%2A> método para determinar se o tipo de dados especificado com o `sourceType` parâmetro pode ser convertido em um <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+> [!NOTE]
+>  Esse método retornará true somente se o `sourceType` é <xref:System.String>. O único tipo esse conversor pode converter em <xref:System.Web.UI.WebControls.FontUnit> é <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnitConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que indica o contexto do objeto a ser convertido.</param>
+        <param name="destinationType">Um <see cref="T:System.Type" /> que representa o tipo de dados para converter.</param>
+        <summary>Retorna um valor que indica se o conversor pode converter um <see cref="T:System.Web.UI.WebControls.FontUnit" /> objeto para o tipo especificado.</summary>
+        <returns>
+          <see langword="true" />Se o conversor dá suporte à conversão de um <see cref="T:System.Web.UI.WebControls.FontUnit" /> objeto para o tipo de destino; caso contrário, <see langword="false" />.  
+  
+ <block subset="none" type="note"><para>  
+ Esse método retornará true somente se o <paramref name="destinationType" /> é <see cref="T:System.String" />. O único tipo que este conversor pode converter <see cref="T:System.Web.UI.WebControls.FontUnit" /> na <see cref="T:System.String" />.  
+  
+</para></block></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnitConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> implementado o objeto que fornece informações sobre o contexto de um conversor de tipo.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> que especifica a cultura para representar o <see cref="T:System.Web.UI.WebControls.FontUnit" />, quando ele é expresso em pontos.</param>
+        <param name="value">O objeto para converter para um <see cref="T:System.Web.UI.WebControls.FontUnit" />.</param>
+        <summary>Converte um objeto em um <see cref="T:System.Web.UI.WebControls.FontUnit" /> em uma cultura específica.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnitConverter.ConvertFrom%2A> método para converter o objeto especificado pelo `value` parâmetro para um <xref:System.Web.UI.WebControls.FontUnit> na cultura especificada pelo `culture` parâmetro.  
+  
+> [!NOTE]
+>  Se o objeto especificado for `null`, o valor retornado também é `null`. Da mesma forma, se o objeto especificado for <xref:System.String.Empty?displayProperty=nameWithType>, <xref:System.Web.UI.WebControls.FontUnit.Empty> será retornado.  
+  
+> [!NOTE]
+>  Esse método só pode converter uma cadeia de caracteres para um <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnitConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> implementado o objeto que fornece informações sobre o contexto de um conversor de tipo.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> que especifica a cultura para representar o <see cref="T:System.Web.UI.WebControls.FontUnit" />, quando ele é expresso em pontos.</param>
+        <param name="value">Um <see cref="T:System.Object" /> que representa o <see cref="T:System.Web.UI.WebControls.FontUnit" /> para converter.</param>
+        <param name="destinationType">Um <see cref="T:System.Type" /> que representa o tipo de dados para converter.</param>
+        <summary>Converte um <see cref="T:System.Web.UI.WebControls.FontUnit" /> a um objeto com um tipo de dados diferente.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnitConverter.ConvertTo%2A> método para converter o <xref:System.Web.UI.WebControls.FontUnit> especificado pelo `value` parâmetro a um objeto com o tipo de dados especificado pelo `destinationType` parâmetro.  
+  
+> [!NOTE]
+>  <xref:System.String.Empty?displayProperty=nameWithType>é retornado deste método se a `value` parâmetro contém `null`. <xref:System.String.Empty?displayProperty=nameWithType>também é retornado se o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade o <xref:System.Web.UI.WebControls.FontUnit> especificado pelo `value` parâmetro contém o valor `FontSize.NotSet`.  
+  
+> [!NOTE]
+>  Esse método só pode converter uma <xref:System.Web.UI.WebControls.FontUnit> para uma cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnitConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece informações sobre o contexto de um conversor de tipo.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém os valores padrão para um <see cref="T:System.Web.UI.WebControls.FontUnit" />, usando o contexto de formato especificado.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém os valores padrão para um <see cref="T:System.Web.UI.WebControls.FontUnit" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnitConverter.GetStandardValues%2A> método para recuperar um <xref:System.ComponentModel.TypeConverter.StandardValuesCollection?displayProperty=nameWithType> que contém os valores padrão para um <xref:System.Web.UI.WebControls.FontUnit>. Esta coleção contém todos os campos de <xref:System.Web.UI.WebControls.FontUnit> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnitConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece informações sobre o contexto de um conversor de tipo.</param>
+        <summary>Retorna se o <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> retornado pelo <see cref="M:System.Web.UI.WebControls.FontUnitConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> método é uma lista exclusiva de valores, usando o contexto de formato especificado.</summary>
+        <returns>
+          <see langword="false" />para todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnitConverter.GetStandardValuesExclusive%2A> método para determinar se o <xref:System.ComponentModel.TypeConverter.StandardValuesCollection?displayProperty=nameWithType> retornado pelo <xref:System.Web.UI.WebControls.FontUnitConverter.GetStandardValues%2A> método é uma lista exclusiva de valores. Esse método é substituído para retornar sempre `false` para indicar que a lista de valores não é uma lista exclusiva.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnitConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece informações sobre o contexto de um conversor de tipo.</param>
+        <summary>Retorna se a instância do <see cref="T:System.Web.UI.WebControls.FontUnitConverter" /> oferece suporte a classe que este método é chamado de um conjunto padrão de valores que podem ser escolhidos em uma lista, usando o contexto de formato especificado.</summary>
+        <returns>
+          <see langword="true" />para todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnitConverter.GetStandardValuesSupported%2A> método para determinar se a instância do <xref:System.Web.UI.WebControls.FontUnitConverter> oferece suporte a classe que este método é chamado de um conjunto padrão de valores que podem ser escolhidos em uma lista, usando o contexto de formato especificado. Esse método é substituído para retornar sempre `true` para indicar que esta classe dá suporte a um conjunto padrão de valores que podem ser escolhidos em uma lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

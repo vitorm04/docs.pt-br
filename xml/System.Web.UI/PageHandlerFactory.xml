@@ -1,0 +1,106 @@
+<Type Name="PageHandlerFactory" FullName="System.Web.UI.PageHandlerFactory">
+  <TypeSignature Language="C#" Value="public class PageHandlerFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PageHandlerFactory extends System.Object implements class System.Web.IHttpHandlerFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PageHandlerFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Cria instâncias de classes que herdam da classe <see cref="T:System.Web.UI.Page" /> e implementam a interface <see cref="T:System.Web.IHttpHandler" />. Instâncias são criadas dinamicamente para manipular solicitações de arquivos ASP.NET. A classe <see cref="T:System.Web.UI.PageHandlerFactory" /> é a implementação de fábrica do manipulador padrão para as páginas ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageHandlerFactory> classe implementa o <xref:System.Web.IHttpHandlerFactory> interface para fornecer o manipulador HTTP padrão para arquivos ASP.NET. O <xref:System.Web.UI.PageHandlerFactory> chama o sistema de compilação do ASP.NET para compilar, se necessário e retornar o tipo exato correspondente à URL e, em seguida, cria uma instância desse tipo. O tipo de página herda do <xref:System.Web.UI.Page> classe e implemente o <xref:System.Web.IHttpHandler> interface.  
+  
+ Para criar uma fábrica de manipulador de página personalizado, implemente o <xref:System.Web.IHttpHandlerFactory> e registrar personalizado <xref:System.Web.UI.PageHandlerFactory> classe no arquivo Web. config para o aplicativo no [httpHandlers Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/24ca01f3-7141-4fdc-acac-71c0733cf6c2) seção de configuração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PageHandlerFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageHandlerFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.PageHandlerFactory" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageHandlerFactory.%23ctor%2A> construtor é o construtor padrão e inicializa quaisquer campos com seus valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHandler">
+      <MemberSignature Language="C#" Value="public virtual System.Web.IHttpHandler GetHandler (System.Web.HttpContext context, string requestType, string virtualPath, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.IHttpHandler GetHandler(class System.Web.HttpContext context, string requestType, string virtualPath, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageHandlerFactory.GetHandler(System.Web.HttpContext,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="requestType" Type="System.String" />
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Uma instância do <see cref="T:System.Web.HttpContext" /> classe que fornece referências a objetos do servidor intrínsecos (por exemplo, solicitação, resposta, sessão e servidor) usados para atender a solicitações HTTP.</param>
+        <param name="requestType">Método (GET ou POST) que usa o cliente de transferência de dados HTTP.</param>
+        <param name="virtualPath">O caminho virtual para o recurso solicitado.</param>
+        <param name="path">O <see cref="P:System.Web.HttpRequest.PhysicalApplicationPath" /> propriedade para o recurso solicitado.</param>
+        <summary>Retorna uma instância do <see cref="T:System.Web.IHttpHandler" /> interface para processar o recurso solicitado.</summary>
+        <returns>Um novo <see cref="T:System.Web.IHttpHandler" /> que processa a solicitação; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageHandlerFactory.GetHandler%2A> método é chamado pelo tempo de execução do ASP.NET e retorna uma instância válida do <xref:System.Web.IHttpHandler> interface ou `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseHandler">
+      <MemberSignature Language="C#" Value="public virtual void ReleaseHandler (System.Web.IHttpHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseHandler(class System.Web.IHttpHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageHandlerFactory.ReleaseHandler(System.Web.IHttpHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.IHttpHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">O <see cref="T:System.Web.IHttpHandler" /> reutilizar.</param>
+        <summary>Permite que uma fábrica para reutilizar uma instância existente de um manipulador.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

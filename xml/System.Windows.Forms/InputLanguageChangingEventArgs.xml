@@ -1,0 +1,182 @@
+<Type Name="InputLanguageChangingEventArgs" FullName="System.Windows.Forms.InputLanguageChangingEventArgs">
+  <TypeSignature Language="C#" Value="public class InputLanguageChangingEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InputLanguageChangingEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.InputLanguageChangingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.Form.InputLanguageChanging" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar os dados a partir de <xref:System.Windows.Forms.InputLanguageChangingEventArgs> classe para se preparar para alterar os editores de método de entrada (IME) ou trocar valores da direita para esquerda. Você também pode alterar um segmento <xref:System.Threading.Thread.CurrentCulture%2A> e <xref:System.Threading.Thread.CurrentUICulture%2A> propriedades de forma que recursos diferentes escolhidos. Para impedir que o idioma de entrada alterem, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade `true`.  
+  
+ Um <xref:System.Windows.Forms.InputLanguageChangingEventArgs> identifica o idioma de entrada solicitado e o conjunto de caracteres do novo idioma de entrada. O <xref:System.Windows.Forms.InputLanguageChangingEventArgs.Culture%2A> propriedade identifica a localidade do idioma solicitado.  
+  
+ O <xref:System.Windows.Forms.Form.InputLanguageChanging> evento precede o <xref:System.Windows.Forms.Form.InputLanguageChanged> evento.  
+  
+ Para obter informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Form.InputLanguageChanging> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.Form> chamado `Form1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Form.InputLanguageChanging> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#401](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#401)]
+ [!code-vb[System.Windows.Forms.EventExamples#401](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#401)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InputLanguageChangingEventArgs (System.Globalization.CultureInfo culture, bool sysCharSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Globalization.CultureInfo culture, bool sysCharSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.InputLanguageChangingEventArgs.#ctor(System.Globalization.CultureInfo,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="sysCharSet" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="culture">A localidade do idioma de entrada solicitado.</param>
+        <param name="sysCharSet">
+          <see langword="true" />Se a fonte padrão do sistema dá suporte ao conjunto necessário para o idioma de entrada solicitado; de caracteres Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.InputLanguageChangingEventArgs" /> classe com a localidade especificada, o conjunto de caracteres e a aceitação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InputLanguageChangingEventArgs (System.Windows.Forms.InputLanguage inputLanguage, bool sysCharSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.InputLanguage inputLanguage, bool sysCharSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.InputLanguageChangingEventArgs.#ctor(System.Windows.Forms.InputLanguage,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inputLanguage" Type="System.Windows.Forms.InputLanguage" />
+        <Parameter Name="sysCharSet" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inputLanguage">O idioma de entrada solicitado.</param>
+        <param name="sysCharSet">
+          <see langword="true" />Se a fonte padrão do sistema dá suporte ao conjunto necessário para o idioma de entrada solicitado; de caracteres Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.InputLanguageChangingEventArgs" /> classe com o idioma de entrada especificado, o conjunto de caracteres e a aceitação de uma alteração de idioma.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputLanguage" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.InputLanguageChangingEventArgs.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a localidade do idioma de entrada solicitado.</summary>
+        <value>Um <see cref="T:System.Globalization.CultureInfo" /> que especifica a localidade do idioma de entrada solicitado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.InputLanguageChangedEventArgs.Culture%2A> propriedade especifica um <xref:System.Globalization.CultureInfo> que define um conjunto de informações dependentes do idioma do usuário, subidioma, país/região e convenções culturais.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Form.InputLanguageChanging?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.Form> chamado `Form1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Form.InputLanguageChanging?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#401](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#401)]
+ [!code-vb[System.Windows.Forms.EventExamples#401](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#401)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputLanguage">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.InputLanguage InputLanguage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.InputLanguage InputLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.InputLanguageChangingEventArgs.InputLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.InputLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o idioma de entrada.</summary>
+        <value>O idioma de entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Form.InputLanguageChanging?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.Form> chamado `Form1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Form.InputLanguageChanging?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#401](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#401)]
+ [!code-vb[System.Windows.Forms.EventExamples#401](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#401)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SysCharSet">
+      <MemberSignature Language="C#" Value="public bool SysCharSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SysCharSet" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.InputLanguageChangingEventArgs.SysCharSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fonte padrão do sistema dá suporte ao conjunto necessário para o idioma de entrada solicitado de caracteres.</summary>
+        <value>
+          <see langword="true" />Se a fonte padrão do sistema dá suporte ao conjunto necessário para o idioma de entrada solicitado; de caracteres Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Form.InputLanguageChanging?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.Form> chamado `Form1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Form.InputLanguageChanging?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#401](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#401)]
+ [!code-vb[System.Windows.Forms.EventExamples#401](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#401)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

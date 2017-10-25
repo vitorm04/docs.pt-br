@@ -1,0 +1,920 @@
+<Type Name="WorkflowViewElement" FullName="System.Activities.Presentation.WorkflowViewElement">
+  <TypeSignature Language="C#" Value="public class WorkflowViewElement : System.Windows.Controls.ContentControl, System.Activities.Presentation.ICompositeViewEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowViewElement extends System.Windows.Controls.ContentControl implements class System.Activities.Presentation.ICompositeViewEvents" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.WorkflowViewElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Activities.Presentation.ICompositeViewEvents</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Especifica a classe base para qualquer elemento de interface do usuário que aparece na tela do designer do Windows Workflow Foundation e visualmente representa uma instância de um item atômica que pode ser editado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exemplos de itens, representados por um <xref:System.Activities.Presentation.WorkflowViewElement> incluem <xref:System.Activities.Activity> e <xref:System.Activities.Statements.FlowNode>. `WorkflowViewElement`Fornece um contrato comum que o designer usa para processar o elemento visual para a superfície de designer e interagir com ele por meio de várias ações de edição.  
+  
+ Se você estiver criando um designer para um <xref:System.Activities.Activity>, você deve usar o <xref:System.Activities.Presentation.ActivityDesigner> tipo base. Se houver elementos não atividade que precisam ser tratados como itens de primeira classe na tela do designer, como um item de caixa de ferramentas que precisa ser arrastado por toda a tela, ou para cenários de recortar e colar, usam `WorkflowViewElement` como a classe base. Se você não deseja usar o chrome atividade padrão para um designer de atividade, `WorkflowViewElement` deve ser usado como o tipo base para fornecer mais flexibilidade.  
+  
+ Um <xref:System.Activities.Presentation.WorkflowViewElement> representa um <xref:System.Activities.Presentation.Model.ModelItem> na interface de usuário e fornece acesso de código para o item de modelo e um <xref:System.Activities.Presentation.EditingContext> que permite que as alterações sejam feitas.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código mostra como criar um novo <xref:System.Activities.Activity> e um <xref:System.Activities.Presentation.ActivityDesigner>e, em seguida, como associá-los, consulte o exemplo de <xref:System.Activities.Presentation.ActivityDesigner> documentação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowViewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.WorkflowViewElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.Presentation.WorkflowViewElement.Collapsible%2A> está definida como `false` por padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapsible">
+      <MemberSignature Language="C#" Value="public bool Collapsible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Collapsible" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.Collapsible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o elemento pode ser recolhido.</summary>
+        <value>
+          <see langword="true" />Se o elemento pode ser recolhido; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompositeViews">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.IList&lt;System.Activities.Presentation.ICompositeView&gt; CompositeViews { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Activities.Presentation.ICompositeView&gt; CompositeViews" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.CompositeViews" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Activities.Presentation.ICompositeView&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de todas as exibições de composição.</summary>
+        <value>A lista de todas as exibições de composição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.EditingContext Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.EditingContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.EditingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contexto de edição é compartilhado por todos os elementos contidos em um designer de fluxo de trabalho.</summary>
+        <value>O <see cref="T:System.Activities.Presentation.EditingContext" /> objeto para o designer de fluxo de trabalho que contém o elemento de exibição do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.Presentation.EditingContext> objeto é uma coleção de serviços compartilhados entre todos os elementos contidos no designer e usado para interagir entre o host e o designer. Os serviços são publicados e solicitados por meio de <xref:System.Activities.Presentation.EditingContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowViewElement.ContextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Activities.Presentation.WorkflowViewElement.Context" />. Este é um campo somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCompositeView">
+      <MemberSignature Language="C#" Value="protected System.Activities.Presentation.ICompositeView DefaultCompositeView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.ICompositeView DefaultCompositeView" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.DefaultCompositeView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.ICompositeView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo de exibição padrão composto.</summary>
+        <value>Exibição padrão composto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Designer">
+      <MemberSignature Language="C#" Value="protected System.Activities.Presentation.View.DesignerView Designer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.View.DesignerView Designer" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.Designer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.DesignerView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o designer associado ao elemento de exibição do fluxo de trabalho.</summary>
+        <value>O designer associado ao elemento de exibição do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragHandle">
+      <MemberSignature Language="C#" Value="public System.Windows.FrameworkElement DragHandle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.FrameworkElement DragHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.DragHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de arrastar para o elemento de exibição do fluxo de trabalho.</summary>
+        <value>A operação de arrastar identificador para o elemento de exibição do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandState">
+      <MemberSignature Language="C#" Value="public bool ExpandState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExpandState" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.ExpandState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o estado de exibição do elemento é expandido.</summary>
+        <value>
+          <see langword="true" />Se o estado de exibição do elemento é expandido; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandStateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ExpandStateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ExpandStateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowViewElement.ExpandStateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Activities.Presentation.WorkflowViewElement.ExpandState" />. Este é um campo somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationHelpText">
+      <MemberSignature Language="C#" Value="protected virtual string GetAutomationHelpText ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetAutomationHelpText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.GetAutomationHelpText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, recupera o texto de ajuda de automação.</summary>
+        <returns>A implementação padrão é retornar vazio <see cref="T:System.String" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implemente esse método em sua classe derivada para adicionar seu próprio tratamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationIdMemberName">
+      <MemberSignature Language="C#" Value="protected virtual string GetAutomationIdMemberName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetAutomationIdMemberName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.GetAutomationIdMemberName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém o nome de uma propriedade do modelo de item associado ao elemento que é usado como ID de automação.</summary>
+        <returns>O nome a ser usado como ID de automação. A classe base sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implemente esse método em sua classe derivada para adicionar seu próprio tratamento que especifica uma propriedade de um item de modelo a ser usado para identificar o item de modelo para automação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationItemStatus">
+      <MemberSignature Language="C#" Value="protected virtual string GetAutomationItemStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetAutomationItemStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.GetAutomationItemStatus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, recupera o status do item de automação.</summary>
+        <returns>A implementação padrão é retornar vazio <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="protected bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o elemento de exibição do fluxo de trabalho é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o elemento é somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRootDesigner">
+      <MemberSignature Language="C#" Value="public bool IsRootDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRootDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.IsRootDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o designer especificado é o designer raiz para esse elemento.</summary>
+        <value>
+          <see langword="true" />Se o designer especificado é o designer raiz; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelItem">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.Model.ModelItem ModelItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelItem ModelItem" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.ModelItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o subjacente <see cref="T:System.Activities.Presentation.Model.ModelItem" /> objeto associado ao elemento de exibição do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Activities.Presentation.Model.ModelItem" /> objeto que é um wrapper em torno de uma instância do modelo ou uma representação na memória do fluxo de trabalho subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.Presentation.Model.ModelItem> objeto fornece notificação de alteração, mesmo se a instância de modelo não fornece a notificação de alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelItemProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ModelItemProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ModelItemProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowViewElement.ModelItemProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Activities.Presentation.WorkflowViewElement.ModelItem" />. Este é um campo somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContextMenuLoaded">
+      <MemberSignature Language="C#" Value="protected virtual void OnContextMenuLoaded (System.Windows.Controls.ContextMenu menu);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContextMenuLoaded(class System.Windows.Controls.ContextMenu menu) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnContextMenuLoaded(System.Windows.Controls.ContextMenu)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="menu" Type="System.Windows.Controls.ContextMenu" />
+      </Parameters>
+      <Docs>
+        <param name="menu">O <see cref="T:System.Windows.Controls.ContextMenu" /> que é carregado.</param>
+        <summary>Chamado quando o menu de contexto é carregado. Implemente esse método em uma classe derivada para lidar com esse evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Activities.Presentation.WorkflowViewElement" />-específico <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> implementação para o [!INCLUDE[avalon1](~/includes/avalon1-md.md)] infraestrutura.</summary>
+        <returns>A implementação de <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> específica ao tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragEnter">
+      <MemberSignature Language="C#" Value="protected override void OnDragEnter (System.Windows.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragEnter(class System.Windows.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnDragEnter(System.Windows.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.UIElement.DragEnter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragOver">
+      <MemberSignature Language="C#" Value="protected override void OnDragOver (System.Windows.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragOver(class System.Windows.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnDragOver(System.Windows.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.UIElement.DragOver" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEditAnnotation">
+      <MemberSignature Language="C#" Value="protected virtual void OnEditAnnotation ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnEditAnnotation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnEditAnnotation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ocorre quando a anotação é editada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialized">
+      <MemberSignature Language="C#" Value="protected override void OnInitialized (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInitialized(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnInitialized(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.FrameworkElement.Initialized" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método virtual gera o evento conforme descrito acima. Substituições devem chamar a implementação base para preservar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnModelItemChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnModelItemChanged (object newItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnModelItemChanged(object newItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnModelItemChanged(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newItem">Um <see cref="T:System.Object" /> que representa o estado de alteração do item de modelo.</param>
+        <summary>Chamado quando o item de modelo subjacente é alterado. Implemente esse método em uma classe derivada para lidar com esse evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há nenhuma implementação padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Input.MouseButtonEventArgs" /> instância que contém os dados do evento. Esses dados de evento relata detalhes sobre o botão do mouse foi pressionado e o estado tratadas.</param>
+        <summary>Chamado quando o botão do mouse é pressionado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnMouseMove(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Input.MouseEventArgs" /> instância que contém os dados do evento.</param>
+        <summary>Chamado quando o mouse é movido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Input.MouseButtonEventArgs" /> instância que contém os dados do evento. Os dados do evento relatam que o botão do mouse foi liberado.</param>
+        <summary>Chamado quando o botão do mouse é liberado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewDragEnter">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewDragEnter (System.Windows.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewDragEnter(class System.Windows.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnPreviewDragEnter(System.Windows.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Chamado quando um arrastar sem tratamento anexado para o evento especificado entra em um elemento em sua rota que é derivada dessa classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewDragLeave">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewDragLeave (System.Windows.DragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewDragLeave(class System.Windows.DragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnPreviewDragLeave(System.Windows.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Chamado quando um arrastar sem tratamento anexado para o evento especificado deixa um elemento em sua rota que é derivada dessa classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnPreviewMouseUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Input.MouseButtonEventArgs" /> que contém os dados do evento. Os dados de evento informam que um ou mais botões do mouse foram soltos.</param>
+        <summary>Chamado quando uma versão de mouse sem tratamento anexada para o evento especificado atinge um elemento em sua rota que é derivada dessa classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnReadOnlyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnReadOnlyChanged (bool isReadOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnReadOnlyChanged(bool isReadOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnReadOnlyChanged(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isReadOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isReadOnly">
+          <see langword="true" />para indicar que o elemento é somente leitura; Caso contrário, <see langword="false" />.</param>
+        <summary>Chamado quando a propriedade somente leitura é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há nenhuma implementação padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnShowExpandedChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnShowExpandedChanged (bool newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnShowExpandedChanged(bool newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.OnShowExpandedChanged(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="newValue">
+          <see langword="true" />para indicar que o valor da apresentação expandida propriedade é alterado; Caso contrário, <see langword="false" />.</param>
+        <summary>Chamado quando a apresentação expandida de propriedade é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há nenhuma implementação padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinState">
+      <MemberSignature Language="C#" Value="public bool PinState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PinState" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.PinState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="P:System.Activities.Presentation.WorkflowViewElement.ExpandState" /> propriedade terá prioridade sobre outros estados que podem ser usados para expandir ou recolher o <see cref="T:System.Activities.Presentation.WorkflowViewElement" />.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Activities.Presentation.WorkflowViewElement.ExpandState" /> propriedade deve ser usada para expandir ou recolher o <see cref="T:System.Activities.Presentation.WorkflowViewElement" /> objeto; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinStateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PinStateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PinStateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowViewElement.PinStateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Activities.Presentation.WorkflowViewElement.PinState" />. Este é um campo somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterCompositeView">
+      <MemberSignature Language="C#" Value="public void RegisterCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.RegisterCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">O modo de exibição composto para registrar.</param>
+        <summary>Adiciona o modo de exibição composto especificado à lista de modos de exibição compostos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDefaultCompositeView">
+      <MemberSignature Language="C#" Value="public void RegisterDefaultCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterDefaultCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.RegisterDefaultCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">O modo de exibição composto.</param>
+        <summary>Adiciona o modo de exibição composto especificado como o modo de exibição padrão composto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowExpanded">
+      <MemberSignature Language="C#" Value="public bool ShowExpanded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowExpanded" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.ShowExpanded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento de exibição do fluxo de trabalho é mostrado em uma exibição expandida.</summary>
+        <value>
+          <see langword="true" />Se o elemento é mostrado em uma exibição expandida; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowExpandedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShowExpandedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShowExpandedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.WorkflowViewElement.ShowExpandedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Activities.Presentation.WorkflowViewElement.ShowExpanded" />. Este é um campo somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterCompositeView">
+      <MemberSignature Language="C#" Value="public void UnregisterCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.UnregisterCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">O modo de exibição composto para cancelar o registro.</param>
+        <summary>Remove a exibição de composição especificada na lista de modos de exibição compostos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterDefaultCompositeView">
+      <MemberSignature Language="C#" Value="public void UnregisterDefaultCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterDefaultCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.WorkflowViewElement.UnregisterDefaultCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">O modo de exibição composto para remover.</param>
+        <summary>Remove a exibição composto padrão especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewService">
+      <MemberSignature Language="C#" Value="protected System.Activities.Presentation.Services.ViewService ViewService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Services.ViewService ViewService" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.ViewService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Services.ViewService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Activities.Presentation.Services.ViewService" /> associado ao elemento de exibição do fluxo de trabalho.</summary>
+        <value>O serviço de modo de exibição associado ao elemento de exibição do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade também pode ser acessada com o <xref:System.Activities.Presentation.EditingContext.Services%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewStateService">
+      <MemberSignature Language="C#" Value="protected System.Activities.Presentation.View.ViewStateService ViewStateService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.View.ViewStateService ViewStateService" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.WorkflowViewElement.ViewStateService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.ViewStateService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Activities.Presentation.View.ViewStateService" /> definido no <see cref="T:System.Activities.Presentation.EditingContext" />. Um atalho para essa propriedade está acessando <see cref="P:System.Activities.Presentation.EditingContext.Services" />.</summary>
+        <value>O <see cref="T:System.Activities.Presentation.View.ViewStateService" /> definido no <see cref="T:System.Activities.Presentation.EditingContext" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

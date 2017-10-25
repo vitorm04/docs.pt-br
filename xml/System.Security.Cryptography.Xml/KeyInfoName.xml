@@ -1,0 +1,257 @@
+<Type Name="KeyInfoName" FullName="System.Security.Cryptography.Xml.KeyInfoName">
+  <TypeSignature Language="C#" Value="public class KeyInfoName : System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyInfoName extends System.Security.Cryptography.Xml.KeyInfoClause" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.KeyInfoName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.KeyInfoClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um <see langword="&lt;KeyName&gt;" /> subelemento de um XMLDSIG ou criptografia XML <see langword="&lt;KeyInfo&gt;" /> elemento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `<KeyName>` elemento contém um identificador de cadeia de caracteres que a parte validar ou descriptografar um documento XML usa para identificar a chave correspondente.  Por exemplo, se você receber um documento XML assinado ou criptografado que tem um `<KeyName>` o valor do elemento de "AsymmetricKey1", você usará uma chave que você e o remetente de tem chamado "AsymmetricKey1" para descriptografar ou verifique se o documento.  Ambas as partes devem concordar com um mapeamento de nome de chave antecipadamente.  Observe que a chave real não é incorporada no documento XML.  
+  
+ Para obter mais informações sobre o `<KeyName>` elemento, consulte a seção 4.4.1 da especificação XMLDSIG, que está disponível na World Wide Web Consortium (W3C) em www.w3.org/TR/xmldsig-core/, ou consulte a especificação de criptografia de XML, que está disponível a partir do W3C em www.w3.org/TR/xmlenc-core/.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao assinar um recurso representado por um identificador de recurso Universal (URI) do objeto.  Este exemplo salva a assinatura em um novo arquivo.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CPP/xmldsigdetach.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CS/xmldsigdetach.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/VB/xmldsigdetach.vb#1)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao assinar um documento XML do objeto.  Este exemplo salva a assinatura em um novo arquivo.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao criptografar um documento XML do objeto. Este exemplo insere uma chave criptografada dentro do documento XML criptografado.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao criptografar um documento XML do objeto. Este exemplo mapeia um nome para uma chave simétrica para identificá-lo para o método de descriptografia.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CPP/Cryptography.XML.XMLEncMapKey.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoName.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.KeyInfoName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao assinar um recurso representado por um identificador de recurso Universal (URI) do objeto.  Este exemplo salva a assinatura em um novo arquivo.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CPP/xmldsigdetach.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CS/xmldsigdetach.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/VB/xmldsigdetach.vb#1)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao assinar um documento XML do objeto.  Este exemplo salva a assinatura em um novo arquivo.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao criptografar um documento XML do objeto. Este exemplo insere uma chave criptografada dentro do documento XML criptografado.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao criptografar um documento XML do objeto. Este exemplo mapeia um nome para uma chave simétrica para identificá-lo para o método de descriptografia.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CPP/Cryptography.XML.XMLEncMapKey.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyInfoName (string keyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoName.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">O identificador de cadeia de caracteres que é o valor da <see langword="&lt;KeyName&gt;" /> elemento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.KeyInfoName" /> classe especificando o identificador de cadeia de caracteres que é o valor da <see langword="&lt;KeyName&gt;" /> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `keyName` parâmetro pode conter qualquer cadeia de caracteres; a interpretação da cadeia de caracteres é específica para o aplicativo. Espaço em branco é significativo no valor de cadeia de caracteres.  
+  
+ O `keyName` parâmetro especifica o valor de <xref:System.Security.Cryptography.Xml.KeyInfoName.Value%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoName.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação XML de <see cref="T:System.Security.Cryptography.Xml.KeyInfoName" /> objeto.</summary>
+        <returns>Uma representação XML de <see cref="T:System.Security.Cryptography.Xml.KeyInfoName" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlElement> objeto retornado por esse método é adequado para uso como um subelemento de um XMLDSIG ou criptografia XML `<KeyInfo>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public override void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.KeyInfoName.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Xml.XmlElement" /> que especifica o estado do objeto de <see cref="T:System.Security.Cryptography.Xml.KeyInfoName" /> objeto.</param>
+        <summary>Analisa a entrada <see cref="T:System.Xml.XmlElement" /> do objeto e configura o estado interno do <see cref="T:System.Security.Cryptography.Xml.KeyInfoName" /> objeto para corresponder.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.KeyInfoName.LoadXml%2A> método normalmente é usado para processar uma `<KeyName>` subelemento de um `<KeyInfo>` elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.KeyInfoName.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de cadeia de caracteres contido em um <see langword="&lt;KeyName&gt;" /> elemento.</summary>
+        <value>O identificador de cadeia de caracteres que é o valor da <see langword="&lt;KeyName&gt;" /> elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.KeyInfoName.Value%2A> propriedade pode conter qualquer cadeia de caracteres; a interpretação da cadeia de caracteres é específica para o aplicativo. Espaço em branco é significativo no valor de cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao assinar um recurso representado por um identificador de recurso Universal (URI) do objeto.  Este exemplo salva a assinatura em um novo arquivo.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CPP/xmldsigdetach.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CS/xmldsigdetach.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/VB/xmldsigdetach.vb#1)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao assinar um documento XML do objeto.  Este exemplo salva a assinatura em um novo arquivo.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao criptografar um documento XML do objeto. Este exemplo insere uma chave criptografada dentro do documento XML criptografado.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncImbedKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncImbedKey/VB/sample.vb#1)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Security.Cryptography.Xml.KeyInfoName> ao criptografar um documento XML do objeto. Este exemplo mapeia um nome para uma chave simétrica para identificá-lo para o método de descriptografia.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CPP/Cryptography.XML.XMLEncMapKey.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMapKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMapKey/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

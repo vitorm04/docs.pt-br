@@ -1,0 +1,103 @@
+<Type Name="IResourceProvider" FullName="System.Web.Compilation.IResourceProvider">
+  <TypeSignature Language="C#" Value="public interface IResourceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IResourceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.IResourceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a interface que uma classe deve implementar para atuar como um provedor de recursos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor de recursos facilita a recuperação de valores de um arquivo de recurso. Quando uma expressão do formulário `<%$ Resources: classKey, resourceKey %>` é encontrado durante a análise da página, o provedor de recursos retorna o valor localizado do recurso. O <xref:System.Web.Compilation.ResourceProviderFactory> classe cria instâncias de <xref:System.Web.Compilation.IResourceProvider> objetos para uso ao recuperar os valores.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma fábrica de provedor de recursos personalizado que recupera os valores armazenados em cache. A fábrica de provedor de recursos cria uma instância de uma classe que implementa <xref:System.Web.Compilation.IResourceProvider>.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public object GetObject (string resourceKey, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(string resourceKey, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.IResourceProvider.GetObject(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">A chave que identifica um recurso específico.</param>
+        <param name="culture">A cultura que identifica um valor localizado do recurso.</param>
+        <summary>Retorna um objeto de recurso para a chave e a cultura.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém o valor do recurso para o <paramref name="resourceKey" /> e <paramref name="culture" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando implementada, a <xref:System.Web.Compilation.IResourceProvider.GetObject%2A> método retorna o valor localizado de uma chave de recurso com base na cultura atual. A classe de implementação foi possível recuperar o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> propriedade se um valor para o `culture` parâmetro não for passado no.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma fábrica de provedor de recursos personalizado que recupera os valores armazenados em cache. A fábrica de provedor de recursos cria uma instância de um provedor de recursos personalizado que implementa <xref:System.Web.Compilation.IResourceProvider>. O provedor de recursos inclui um personalizado <xref:System.Web.Compilation.IResourceProvider.GetObject%2A> método.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceReader">
+      <MemberSignature Language="C#" Value="public System.Resources.IResourceReader ResourceReader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Resources.IResourceReader ResourceReader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.IResourceProvider.ResourceReader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.IResourceReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto para ler valores de recursos de uma fonte.</summary>
+        <value>O <see cref="T:System.Resources.IResourceReader" /> associado com o provedor de recursos atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Resources.IResourceReader> objeto lê os pares nome/valor sequencial de uma fonte. O <xref:System.Resources.ResourceReader> e <xref:System.Resources.ResXResourceReader> classes fornecem padrão <xref:System.Resources.IResourceReader> interface implementação para leitura de arquivos. Resources e. resx, respectivamente. Outras implementações do <xref:System.Web.Compilation.IResourceProvider> interface pode ler de qualquer fonte que contém valores de recursos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma fábrica de provedor de recursos personalizado que recupera os valores armazenados em cache. A fábrica de provedor de recursos cria uma instância de um provedor de recursos personalizado que implementa <xref:System.Web.Compilation.IResourceProvider>. O provedor de recursos inclui um personalizado <xref:System.Web.Compilation.IResourceProvider.ResourceReader%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/CS/source.cs#2)]
+ [!code-vb[System.Web.Compilation.ResourceProviderFactory#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.ResourceProviderFactory/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

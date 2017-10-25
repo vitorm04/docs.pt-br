@@ -1,0 +1,44 @@
+<Type Name="PreProcessInputEventHandler" FullName="System.Windows.Input.PreProcessInputEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void PreProcessInputEventHandler(object sender, PreProcessInputEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PreProcessInputEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.PreProcessInputEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.PreProcessInputEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Windows.Input.InputManager.PreProcessInput" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.PreProcessInputEventHandler> é usado com o <xref:System.Windows.Input.InputManager.PreProcessInput> evento.  
+  
+ Entrada é processada em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] nos estágios a seguir:  
+  
+1.  Pré-processe estágio.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PreProcessInput> evento.  
+  
+2.  Pré-notificar estágio.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PreNotifyInput> evento.  
+  
+3.  O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] evento de entrada ou de eventos são gerados.  
+  
+4.  Pós-notificar estágio.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PostNotifyInput> evento.  
+  
+5.  Estágio de pós-processamento.  A Gerenciador de entrada gera o <xref:System.Windows.Input.InputManager.PostProcessInput> evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

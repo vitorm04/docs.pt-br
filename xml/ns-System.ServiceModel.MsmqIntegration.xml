@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.MsmqIntegration">
+  <Docs>
+    <summary>O <see cref="N:System.ServiceModel.MsmqIntegration" /> namespace contém classes relacionadas a integração do serviço de enfileiramento de mensagens da Microsoft (MSMQ), que permite a comunicação entre aplicativos MSMQ e aplicativos do Windows Communication Foundation (WCF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

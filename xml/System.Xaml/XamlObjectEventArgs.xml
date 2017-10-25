@@ -1,0 +1,118 @@
+<Type Name="XamlObjectEventArgs" FullName="System.Xaml.XamlObjectEventArgs">
+  <TypeSignature Language="C#" Value="public class XamlObjectEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlObjectEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlObjectEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para retornos de chamada que podem ser inseridos em sequência para inicializar o objeto e a configuração de propriedade. Isso influencia o gráfico de objeto que é produzido pelo <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os retornos de chamada aplicável todos usam genérica <xref:System.EventHandler%601> que executa <xref:System.Xaml.XamlObjectEventArgs> dados de evento. Definir os manipuladores e, em seguida, definir as referências a eles, definindo propriedades do <xref:System.Xaml.XamlObjectWriterSettings>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlObjectEventArgs (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">A instância do objeto que é relevante para os dados do evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xaml.XamlObjectEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementLineNumber">
+      <MemberSignature Language="C#" Value="public int ElementLineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ElementLineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectEventArgs.ElementLineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da linha da instância do objeto relevantes.</summary>
+        <value>O número da linha do elemento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementLinePosition">
+      <MemberSignature Language="C#" Value="public int ElementLinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ElementLinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectEventArgs.ElementLinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição na linha da instância do objeto relevantes.</summary>
+        <value>A posição na linha do elemento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="public object Instance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Instance" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectEventArgs.Instance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância do objeto que é relevante para os dados do evento.</summary>
+        <value>A instância do objeto que é relevante para os dados do evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceBamlUri">
+      <MemberSignature Language="C#" Value="public Uri SourceBamlUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SourceBamlUri" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectEventArgs.SourceBamlUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI de BAML da instância do objeto relevantes.</summary>
+        <value>O URI BAML da instância do objeto relevantes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

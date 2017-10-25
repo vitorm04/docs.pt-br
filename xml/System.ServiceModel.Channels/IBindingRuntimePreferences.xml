@@ -1,0 +1,67 @@
+<Type Name="IBindingRuntimePreferences" FullName="System.ServiceModel.Channels.IBindingRuntimePreferences">
+  <TypeSignature Language="C#" Value="public interface IBindingRuntimePreferences" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBindingRuntimePreferences" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o contrato opcional que pode implementar uma associação para especificar se as solicitações de entrada são manipuladas forma síncrona ou assíncrona pelo serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em alguns casos pode ser mais eficiente para uma associação para processar mensagens com síncronos <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> ou <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A> métodos. Um <xref:System.ServiceModel.Channels.Binding> classe pode implementar <xref:System.ServiceModel.Channels.IBindingRuntimePreferences> para indicar a chamadores que isso é preferencial.  
+  
+ Se uma associação não implementa <xref:System.ServiceModel.Channels.IBindingRuntimePreferences>, o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] camada de tempo de execução do serviço modelo padronizado para usar as versões assíncronas de `Receive` e `Request` métodos. Se uma associação de implementar <xref:System.ServiceModel.Channels.IBindingRuntimePreferences>, o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] camada de tempo de execução de modelo de serviço verifica o valor de <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A> e a usa para determinar se deve chamar as versões síncronas desses métodos (<xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> ou <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A>) ou as versões assíncronas (<xref:System.ServiceModel.Channels.IInputChannel.BeginReceive%2A> e <xref:System.ServiceModel.Channels.IInputChannel.EndReceive%28System.IAsyncResult%29> ou <xref:System.ServiceModel.Channels.IRequestChannel.BeginRequest%2A> e <xref:System.ServiceModel.Channels.IRequestChannel.EndRequest%28System.IAsyncResult%29>. Se <xref:System.ServiceModel.Channels.IBindingRuntimePreferences> é implementado por meio da associação e retorna `true` do <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A> propriedade, é recomendável que você use síncronos <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> e <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A> métodos para receber mensagens do canal. Se a associação não implementa <xref:System.ServiceModel.Channels.IBindingRuntimePreferences> ou retorna `false` do <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A> propriedade, é recomendável que você use o assíncrona <xref:System.ServiceModel.Channels.IInputChannel.BeginReceive%2A> e <xref:System.ServiceModel.Channels.IInputChannel.EndReceive%28System.IAsyncResult%29> ou <xref:System.ServiceModel.Channels.IRequestChannel.BeginRequest%2A> e <xref:System.ServiceModel.Channels.IRequestChannel.EndRequest%28System.IAsyncResult%29> métodos.  
+  
+ Independentemente do valor retornado pelo <xref:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously%2A> propriedade, todas as associações ainda deverá fornecer implementações válidas de ambas as versões síncronas e assíncronas do `Receive` métodos para os tipos de canal específico implementados. Para obter mais informações sobre a implementação de canais personalizados, consulte [canais de desenvolvimento](~/docs/framework/wcf/extending/developing-channels.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a implementação de uma associação que implementa o <xref:System.ServiceModel.Channels.IBindingRuntimePreferences> interface. Esse código é obtido a [Chunking Channel](~/docs/framework/wcf/samples/chunking-channel.md) exemplo:  
+  
+ [!code-csharp[S_UE_ChunkingChannel#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_chunkingchannel/cs/tcpchunkingbinding.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReceiveSynchronously">
+      <MemberSignature Language="C#" Value="public bool ReceiveSynchronously { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as solicitações de entrada podem ser tratadas mais eficientemente forma síncrona ou assíncrona.</summary>
+        <value>
+          <see langword="true" />Se as solicitações podem ser tratadas com mais eficiência de forma síncrona; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />, para manipular solicitações de forma assíncrona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As ligações (fornecido pelo sistema) padrão fornecidas pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] implementar essa interface e em alguns casos, substituir o valor padrão para processar mensagens de entrada de forma síncrona.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ChunkingChannel#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_chunkingchannel/cs/tcpchunkingbinding.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

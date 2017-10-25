@@ -1,0 +1,693 @@
+<Type Name="ImageMap" FullName="System.Web.UI.WebControls.ImageMap">
+  <TypeSignature Language="C#" Value="public class ImageMap : System.Web.UI.WebControls.Image, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageMap extends System.Web.UI.WebControls.Image implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ImageMap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Image</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Click")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("HotSpots")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "HotSpots")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria um controle que exibe uma imagem em uma página. Quando uma região de ponto de acesso definida dentro do controle <see cref="T:System.Web.UI.WebControls.ImageMap" /> for clicada, o controle gera um postback para o servidor ou navega para um URL especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Acessibilidade](#accessibility)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ Use o <xref:System.Web.UI.WebControls.ImageMap> definido de controle para criar uma imagem que contém regiões do ponto de acesso. Quando um usuário clica em uma região de ponto de acesso, o controle pode gerar um postback para o servidor ou navegue até uma URL especificada. Por exemplo, você pode usar este controle para exibir um mapa de uma região geográfica. Quando um usuário clica em uma região específica no mapa, o controle navega para uma URL que fornece dados adicionais sobre a região selecionada. Você também pode usar este controle para gerar um postback para o servidor e executar o código específico com base na região de ponto de acesso que foi clicado. Por exemplo, você pode usar um <xref:System.Web.UI.WebControls.ImageMap> controle capturar respostas do usuário como votos. Quando um usuário clica na região de ponto de acesso definida para Sim votos, o código é chamado para registrar uma resposta Sim em um banco de dados. Quando um usuário clica na região de ponto de acesso definido para nenhum votos, uma resposta não é registrada. Você também pode combinar esses dois cenários dentro de um único <xref:System.Web.UI.WebControls.ImageMap> controle. Por exemplo, você pode especificar uma região de ponto de acesso para navegar até uma URL e outra região de ponto de acesso para postar de volta para o servidor.  
+  
+ Use o <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> propriedade para especificar o caminho para a imagem a ser exibida para o <xref:System.Web.UI.WebControls.ImageMap> controle. Você pode definir qualquer número de <xref:System.Web.UI.WebControls.HotSpot> objetos dentro de um <xref:System.Web.UI.WebControls.ImageMap> controle. Você pode usar o <xref:System.Web.UI.WebControls.CircleHotSpot>, <xref:System.Web.UI.WebControls.RectangleHotSpot>, e <xref:System.Web.UI.WebControls.PolygonHotSpot> classes para definir o ponto de acesso regiões. Como alternativa, você pode derivar abstrata <xref:System.Web.UI.WebControls.HotSpot> classe para definir seu próprio objeto de ponto de acesso personalizados.  
+  
+ Há duas maneiras para especificar o comportamento de um <xref:System.Web.UI.WebControls.HotSpot> do objeto em um <xref:System.Web.UI.WebControls.ImageMap> controlar quando o <xref:System.Web.UI.WebControls.HotSpot> é clicado. Você pode usar o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> propriedade no <xref:System.Web.UI.WebControls.ImageMap> controle ou <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> propriedade em um indivíduo <xref:System.Web.UI.WebControls.HotSpot> objeto. Essas propriedades são definidas usando um do <xref:System.Web.UI.WebControls.HotSpotMode> valores de enumeração. Se ambas as propriedades forem definidas, o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> propriedade especificada em cada indivíduo <xref:System.Web.UI.WebControls.HotSpot> objeto tem precedência sobre o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> propriedade o <xref:System.Web.UI.WebControls.ImageMap> controle.  
+  
+ Para navegar até uma URL, defina o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> propriedade ou o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade `HotSpotMode.Navigate`. Use o <xref:System.Web.UI.WebControls.HotSpot.NavigateUrl%2A> propriedade para especificar a URL de navegação.  
+  
+ Para gerar um postback para o servidor, defina o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> propriedade ou o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade `HotSpotMode.Postback`. Use o <xref:System.Web.UI.WebControls.HotSpot.PostBackValue%2A> propriedade para especificar um nome para a região do ponto de acesso. Esse nome será passado a <xref:System.Web.UI.WebControls.ImageMapEventArgs> dados de evento quando ocorre um evento de postback. Quando um postback <xref:System.Web.UI.WebControls.HotSpot> é clicado, o <xref:System.Web.UI.WebControls.ImageMap.Click> é gerado. Para controlar programaticamente as ações executadas quando um postback <xref:System.Web.UI.WebControls.HotSpot> é clicado, fornecer um manipulador de eventos para o <xref:System.Web.UI.WebControls.ImageMap.Click> evento.  
+  
+ Para fazer com que todos os <xref:System.Web.UI.WebControls.HotSpot> objetos em um <xref:System.Web.UI.WebControls.ImageMap> controle para fazer com que o mesmo comportamento, use o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> propriedade para especificar o comportamento. Em seguida, defina o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade em cada indivíduo <xref:System.Web.UI.WebControls.HotSpot> do objeto para `HotSpotMode.NotSet` ou não especifique um valor para o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade.  
+  
+ Para especificar comportamentos diferentes para <xref:System.Web.UI.WebControls.HotSpot> objetos em um <xref:System.Web.UI.WebControls.ImageMap>, defina o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade em cada indivíduo <xref:System.Web.UI.WebControls.HotSpot> objeto como `HotSpotMode.Navigate` ou `HotSpotMode.PostBack`.  
+  
+> [!NOTE]
+>  Se um <xref:System.Web.UI.WebControls.ImageMap> do controle <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> propriedade ou o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade em qualquer uma da <xref:System.Web.UI.WebControls.HotSpot> objetos que ele contém é definido como `HotSpotMode.NotSet` ou não está definido como um valor, por padrão, o comportamento é `HotSpotMode.Navigate`.  
+  
+<a name="accessibility"></a>   
+## <a name="accessibility"></a>Acessibilidade  
+ Para obter informações sobre como configurar este controle para que ele gera marcação que está de acordo com os padrões de acessibilidade, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) e [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:ImageMap  
+    AccessKey="string"  
+    AlternateText="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CssClass="string"  
+    DescriptionUrl="uri"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    HotSpotMode="NotSet|Navigate|PostBack|Inactive"  
+    ID="string"  
+    ImageAlign="NotSet|Left|Right|Baseline|Top|Middle|Bottom|  
+        AbsBottom|AbsMiddle|TextTop"  
+    ImageUrl="uri"  
+    OnClick="Click event handler"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    Target="string"  
+    ToolTip="string"  
+    Visible="True|False"  
+    Width="size"  
+>  
+            <asp:CircleHotSpot  
+                AccessKey="string"  
+                AlternateText="string"  
+                HotSpotMode="NotSet|Navigate|PostBack|Inactive"  
+                NavigateUrl="uri"  
+                PostBackValue="string"  
+                Radius="integer"  
+                TabIndex="integer"  
+                Target="string|_blank|_parent|_search|_self|_top"  
+                X="integer"  
+                Y="integer"  
+            />  
+            <asp:PolygonHotSpot  
+                AccessKey="string"  
+                AlternateText="string"  
+                Coordinates="string"  
+                HotSpotMode="NotSet|Navigate|PostBack|Inactive"  
+                NavigateUrl="uri"  
+                PostBackValue="string"  
+                TabIndex="integer"  
+                Target="string|_blank|_parent|_search|_self|_top"  
+            />  
+            <asp:RectangleHotSpot  
+                AccessKey="string"  
+                AlternateText="string"  
+                Bottom="integer"  
+                HotSpotMode="NotSet|Navigate|PostBack|Inactive"  
+                Left="integer"  
+                NavigateUrl="uri"  
+                PostBackValue="string"  
+                Right="integer"  
+                TabIndex="integer"  
+                Target="string|_blank|_parent|_search|_self|_top"  
+                Top="integer"  
+            />  
+</asp:ImageMap>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar declarativamente uma <xref:System.Web.UI.WebControls.ImageMap> controle que contém duas <xref:System.Web.UI.WebControls.CircleHotSpot> objetos. O <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> está definida como `HotSpotMode.Navigate`, que faz com que a página navegar até a URL especificada sempre que um usuário clica em uma das regiões de ponto de acesso do círculo. Para esse exemplo funcione corretamente, você deve fornecer sua própria imagem para o <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> propriedade e atualize o caminho para a imagem adequadamente para que o aplicativo possa localizá-lo.  
+  
+ [!code-aspx-csharp[ImageMapClass1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageMapClass1/CS/imagemapclass1cs.aspx#1)]
+ [!code-aspx-vb[ImageMapClass1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageMapClass1/VB/imagemapclass1vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como criar declarativamente uma <xref:System.Web.UI.WebControls.ImageMap> controle que contém duas <xref:System.Web.UI.WebControls.RectangleHotSpot> objetos. O <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> está definida como `HotSpotMode.PostBack`, que faz com que a página de postagem para o servidor sempre que um usuário clica em uma das regiões de ponto de acesso. Para esse exemplo funcione corretamente, você deve fornecer sua própria imagem para o <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> propriedade e atualize o caminho para a imagem adequadamente para que o aplicativo possa localizá-lo.  
+  
+ [!code-aspx-csharp[ImageMapClass2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageMapClass2/CS/imagemapclass2cs.aspx#1)]
+ [!code-aspx-vb[ImageMapClass2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageMapClass2/VB/imagemapclass2vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.ImageMap> controle que contém pontos de acesso com comportamentos diferentes. A área do plano de fundo é definida como um único <xref:System.Web.UI.WebControls.RectangleHotSpot> que postagens de volta para o servidor. Três <xref:System.Web.UI.WebControls.RectangleHotSpot> objetos são definidos na mesma região. Cada um desses pontos de acesso se parece com um botão e navega para uma URL. Quando um <xref:System.Web.UI.WebControls.ImageMap> controle é clicado em uma região onde a sobreposição de dois pontos de acesso, o ponto de acesso que é declarada primeiro tem precedência. Neste exemplo, os pontos de acesso do botão são declarados primeiro e o ponto de acesso do plano de fundo que os contém é declarado por último. Portanto, o usuário obtém o comportamento do botão <xref:System.Web.UI.WebControls.RectangleHotSpot> , e não o plano de fundo do objeto <xref:System.Web.UI.WebControls.RectangleHotSpot> objeto quando o usuário clica em um ponto de acesso do botão. Para esse exemplo funcione corretamente, você deve fornecer sua própria imagem para o <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> propriedade e atualize o caminho para a imagem adequadamente para que o aplicativo possa localizá-lo.  
+  
+ [!code-aspx-csharp[ImageMapClass3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageMapClass3/CS/imagemapclass3cs.aspx#1)]
+ [!code-aspx-vb[ImageMapClass3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageMapClass3/VB/imagemapclass3vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageMap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageMap.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ImageMap" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.ImageMap> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar programaticamente um <xref:System.Web.UI.WebControls.ImageMap> controlar e adicioná-lo a uma página.  
+  
+ [!code-aspx-csharp[ImageMap.Cstr#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageMap.Cstr/CS/imagemap.cstrcs.aspx#1)]
+ [!code-aspx-vb[ImageMap.Cstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageMap.Cstr/VB/imagemap.cstrvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageMap.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Adiciona os atributos HTML e os estilos de uma <see cref="T:System.Web.UI.WebControls.ImageMap" /> controle a ser renderizado especificado <see cref="T:System.Web.UI.HtmlTextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente por desenvolvedores de controle para inserir os atributos apropriados e estilos para o <xref:System.Web.UI.HtmlTextWriter?displayProperty=nameWithType> fluxo de saída para um <xref:System.Web.UI.WebControls.ImageMap> controle. Este método substitui <xref:System.Web.UI.WebControls.WebControl.AddAttributesToRender%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.ImageMapEventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.ImageMapEventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.ImageMap.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ImageMapEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um objeto <see cref="T:System.Web.UI.WebControls.HotSpot" /> em um controle <see cref="T:System.Web.UI.WebControls.ImageMap" /> é clicado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ImageMap.Click> é gerado quando um <xref:System.Web.UI.WebControls.HotSpot> do objeto em um <xref:System.Web.UI.WebControls.ImageMap> controle é clicado. Para permitir que um <xref:System.Web.UI.WebControls.HotSpot> para gerar o <xref:System.Web.UI.WebControls.ImageMap.Click> eventos, você deve primeiro definir a <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> propriedade no <xref:System.Web.UI.WebControls.ImageMap> controle ou o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> propriedade no <xref:System.Web.UI.WebControls.HotSpot> do objeto para `HotSpotMode.Postback`.  
+  
+ Para controlar programaticamente as ações executadas quando um postback <xref:System.Web.UI.WebControls.HotSpot> é clicado, fornecer um manipulador de eventos para o <xref:System.Web.UI.WebControls.ImageMap.Click> eventos que contém o código para ser executado quando o evento é gerado.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.ImageMap> controle que contém duas <xref:System.Web.UI.WebControls.RectangleHotSpot> objetos. O <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> está definida como `HotSpotMode.PostBack`, que faz com que a página de postagem para o servidor sempre que um usuário clica em uma das regiões de ponto de acesso. O `VoteMap_Clicked` manipulador de eventos manipula o evento de clique para o <xref:System.Web.UI.WebControls.ImageMap> controle. Para esse exemplo funcione corretamente, você deve fornecer sua própria imagem para o <xref:System.Web.UI.MobileControls.Image.ImageUrl%2A> propriedade e atualize o caminho para a imagem adequadamente para que o aplicativo possa localizá-lo.  
+  
+ [!code-aspx-csharp[ImageMapClass2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageMapClass2/CS/imagemapclass2cs.aspx#1)]
+ [!code-aspx-vb[ImageMapClass2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageMapClass2/VB/imagemapclass2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public override bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageMap.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle pode responder à interação do usuário.</summary>
+        <value>
+          <see langword="true" />Se o controle é responder a cliques do usuário; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Web.UI.WebControls.ImageMap.Enabled%2A> propriedade, você pode habilitar ou desabilitar o <xref:System.Web.UI.WebControls.ImageMap> controle em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HotSpotMode">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.HotSpotMode HotSpotMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HotSpotMode HotSpotMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageMap.HotSpotMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HotSpotMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comportamento padrão para os objetos <see cref="T:System.Web.UI.WebControls.HotSpot" /> de um controle <see cref="T:System.Web.UI.WebControls.ImageMap" /> quando os objetos <see cref="T:System.Web.UI.WebControls.HotSpot" /> são clicados.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.HotSpotMode" />. O padrão é <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> propriedade para especificar o padrão de comportamento de clique no <xref:System.Web.UI.WebControls.HotSpot> objetos dentro de um <xref:System.Web.UI.WebControls.ImageMap> controle. Essa propriedade é definida usando um do <xref:System.Web.UI.WebControls.HotSpotMode> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Item|Descrição|  
+|----------|-----------------|  
+|`Inactive`|O <xref:System.Web.UI.WebControls.HotSpot> o objeto não tem nenhum comportamento.|  
+|`NotSet`|O <xref:System.Web.UI.WebControls.HotSpot> objeto usa o comportamento definido <xref:System.Web.UI.WebControls.ImageMap> do controle <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> propriedade. Se o <xref:System.Web.UI.WebControls.ImageMap> controle não define o comportamento, o <xref:System.Web.UI.WebControls.HotSpot> objetos todos navegar até uma URL.|  
+|`Navigate`|O <xref:System.Web.UI.WebControls.HotSpot> objetos navegar até uma URL.|  
+|`PostBack`|O <xref:System.Web.UI.WebControls.HotSpot> objetos geram um postback para o servidor.|  
+  
+ Você pode especificar um <xref:System.Web.UI.WebControls.HotSpot> comportamento do objeto usando o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> propriedade do <xref:System.Web.UI.WebControls.ImageMap> controle ou o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade de cada indivíduo <xref:System.Web.UI.WebControls.HotSpot> objeto. Se ambas as propriedades forem definidas, o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade especificada em cada indivíduo <xref:System.Web.UI.WebControls.HotSpot> objeto tem precedência sobre o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> propriedade o <xref:System.Web.UI.WebControls.ImageMap> controle.  
+  
+ Quando você define o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> propriedade o <xref:System.Web.UI.WebControls.ImageMap> controlar, observe que o `HotSpotMode.NotSet` e `HotSpotMode.Navigate` valores têm o mesmo comportamento: ambos navegar até uma URL. Quando você especifica `HotSpotMode.NotSet` para o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade de um indivíduo <xref:System.Web.UI.WebControls.HotSpot> do objeto, que <xref:System.Web.UI.WebControls.HotSpot> determina o comportamento do valor da <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> propriedade o <xref:System.Web.UI.WebControls.ImageMap> controle.  
+  
+ Se você especificar `HotSpotMode.Navigate` para o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> a página de propriedade, navega para uma URL quando o <xref:System.Web.UI.WebControls.HotSpot> é clicado. Use o <xref:System.Web.UI.WebControls.HotSpot.NavigateUrl%2A> propriedade para especificar a URL de navegação.  
+  
+ Se você especificar `HotSpotMode.PostBack` para o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> propriedade, a página gera um postback para o servidor quando o <xref:System.Web.UI.WebControls.HotSpot> é clicado. Use o <xref:System.Web.UI.WebControls.HotSpot.PostBackValue%2A> propriedade para especificar o nome da região de ponto de acesso. Esse nome será passado a <xref:System.Web.UI.WebControls.ImageMapEventArgs> dados de evento quando ocorre um evento de postback. Quando um postback <xref:System.Web.UI.WebControls.HotSpot> é clicado, o <xref:System.Web.UI.WebControls.ImageMap.Click> é gerado. Para controlar programaticamente as ações executadas quando um postback <xref:System.Web.UI.WebControls.HotSpot> é clicado, fornecer um manipulador de eventos para o <xref:System.Web.UI.WebControls.ImageMap.Click> evento.  
+  
+ Se você especificar `HotSpotMode.Inactive` para o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade, o <xref:System.Web.UI.WebControls.HotSpot> objeto não tem nenhum comportamento de quando ele for clicado. Você pode usar esse valor para criar um ponto de acesso inativo dentro de um ponto de acesso de active maior. Essa opção é fornecida para que você possa criar zonas de ponto de acesso mais complexas em um <xref:System.Web.UI.WebControls.ImageMap> controle.  
+  
+ Para criar uma área inativa em um ponto de acesso a ativo, você deve especificar o ponto de acesso inativo antes do ponto de acesso de active do <xref:System.Web.UI.WebControls.ImageMap> controle. Por exemplo, a seguinte <xref:System.Web.UI.WebControls.ImageMap> define um anel active especificando um ponto de acesso circular inativo dentro de um ponto de acesso circular active maior:  
+  
+```  
+<asp:ImageMap ID="SaturnImage"   
+       ImageUrl="~/saturn.PNG"   
+       runat="server" OnClick="SaturnImage_Click">  
+    <asp:CircleHotSpot AlternateText="planet" HotSpotMode=PostBack  
+          PostBackValue="planet" Radius=40 X=100 Y=100 />  
+  
+    <asp:CircleHotSpot HotSpotMode=Inactive   
+          Radius=60 X=100 Y=100 />  
+    <asp:CircleHotSpot AlternateText="rings" HotSpotMode=PostBack  
+          PostBackValue="rings" Radius=80 X=100 Y=100 />  
+</asp:ImageMap>  
+```  
+  
+ Para fazer com que todos os <xref:System.Web.UI.WebControls.HotSpot> objetos em um <xref:System.Web.UI.WebControls.ImageMap> controle para fazer com que o mesmo comportamento, use o <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> propriedade no <xref:System.Web.UI.WebControls.ImageMap> controle para especificar o comportamento. Em seguida, defina o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> propriedade em cada indivíduo <xref:System.Web.UI.WebControls.HotSpot> do objeto para `HotSpotMode.NotSet` ou não especifique um valor para o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade.  
+  
+ Para especificar comportamentos diferentes para <xref:System.Web.UI.WebControls.HotSpot> objetos em um <xref:System.Web.UI.WebControls.ImageMap> controlar, defina o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade em cada indivíduo <xref:System.Web.UI.WebControls.HotSpot> objeto como `HotSpotMode.Navigate`, `HotSpotMode.PostBack`, ou `HotSpotMode.Inactive`.  
+  
+> [!NOTE]
+>  Se um <xref:System.Web.UI.WebControls.ImageMap> do controle <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> propriedade ou o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A?displayProperty=nameWithType> propriedade em qualquer uma da <xref:System.Web.UI.WebControls.HotSpot> objetos que ele contém é definido como `HotSpotMode.NotSet` ou não definido como um valor, por padrão, o comportamento é `HotSpotMode.Navigate`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar declarativamente uma <xref:System.Web.UI.WebControls.ImageMap> controle que contém duas <xref:System.Web.UI.WebControls.RectangleHotSpot> objetos. O <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> está definida como `HotSpotMode.PostBack`, que faz com que a página de postagem para o servidor sempre que um usuário clica em uma das regiões de ponto de acesso. O <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> propriedade não está definida em cada uma da <xref:System.Web.UI.WebControls.RectangleHotSpot> objetos porque eles obtêm seu comportamento do <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A?displayProperty=nameWithType> propriedade. Para esse exemplo funcione corretamente, você deve fornecer sua própria imagem para o <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> propriedade e atualize o caminho para a imagem adequadamente para que o aplicativo possa localizá-lo.  
+  
+ [!code-aspx-csharp[ImageMap.HotSpotMode1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageMap.HotSpotMode1/CS/imagemap.hotspotmode1cs.aspx#1)]
+ [!code-aspx-vb[ImageMap.HotSpotMode1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageMap.HotSpotMode1/VB/imagemap.hotspotmode1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tipo especificado não é um dos valores de enumeração de <see cref="T:System.Web.UI.WebControls.HotSpotMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HotSpots">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.HotSpotCollection HotSpots { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.HotSpotCollection HotSpots" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageMap.HotSpots" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HotSpotCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos <see cref="T:System.Web.UI.WebControls.HotSpot" /> que representa as regiões de ponto de acesso definidas em um controle <see cref="T:System.Web.UI.WebControls.ImageMap" />.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.WebControls.HotSpotCollection" /> que representa as regiões de ponto de acesso definidas em um controle <see cref="T:System.Web.UI.WebControls.ImageMap" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ImageMap.HotSpots%2A> propriedade gerenciar programaticamente as regiões do ponto de acesso em um <xref:System.Web.UI.WebControls.ImageMap> controle. Você pode usar o <xref:System.Web.UI.WebControls.ImageMap.HotSpots%2A> propriedade para adicionar, inserir, remover e recuperar <xref:System.Web.UI.WebControls.HotSpot> objetos. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.HotSpotCollection>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar programaticamente um <xref:System.Web.UI.WebControls.ImageMap> controlar e adicionar dois <xref:System.Web.UI.WebControls.CircleHotSpot> objetos a ele. O <xref:System.Web.UI.WebControls.ImageMap.HotSpots%2A> propriedade é usada para acessar o <xref:System.Web.UI.WebControls.HotSpotCollection> para o <xref:System.Web.UI.WebControls.ImageMap> controlar e adicione o <xref:System.Web.UI.WebControls.CircleHotSpot> objetos a ele. Para esse exemplo funcione corretamente, você deve fornecer sua própria imagem para o <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> propriedade e atualize o caminho para a imagem adequadamente para que o aplicativo possa localizá-lo.  
+  
+ [!code-aspx-csharp[ImageMap.Cstr#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ImageMap.Cstr/CS/imagemap.cstrcs.aspx#1)]
+ [!code-aspx-vb[ImageMap.Cstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ImageMap.Cstr/VB/imagemap.cstrvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageMap.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Object" /> que representa o <see cref="T:System.Web.UI.WebControls.ImageMap" /> controle para restaurar.</param>
+        <summary>Restaura as informações de estado de exibição para o <see cref="T:System.Web.UI.WebControls.ImageMap" /> controle de uma solicitação de página anterior que foi salvo pelo <see cref="M:System.Web.UI.WebControls.ImageMap.SaveViewState" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado basicamente pela infraestrutura do .NET Framework e não se destina a ser usado diretamente no seu código.  No entanto, os desenvolvedores de controle podem substituir este método para especificar como um controle de servidor personalizado restaura o estado de exibição. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="savedState" /> não é um <see cref="P:System.Web.UI.Control.ViewState" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick (System.Web.UI.WebControls.ImageMapEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick(class System.Web.UI.WebControls.ImageMapEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageMap.OnClick(System.Web.UI.WebControls.ImageMapEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.ImageMapEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um argumento do tipo <see cref="T:System.Web.UI.WebControls.ImageMapEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.ImageMap.Click" /> do controle <see cref="T:System.Web.UI.WebControls.ImageMap" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ImageMap.Click> é gerado quando um <xref:System.Web.UI.WebControls.HotSpot> do objeto em um <xref:System.Web.UI.WebControls.ImageMap> controle é clicado. Para permitir que um <xref:System.Web.UI.WebControls.HotSpot> para gerar o <xref:System.Web.UI.WebControls.ImageMap.Click> eventos, você deve primeiro definir a <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> propriedade no <xref:System.Web.UI.WebControls.ImageMap> controle ou o <xref:System.Web.UI.WebControls.HotSpot.HotSpotMode%2A> propriedade no <xref:System.Web.UI.WebControls.HotSpot> do objeto para `HotSpotMode.Postback`.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.ImageMap.OnClick%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.ImageMap.OnClick(System.Web.UI.WebControls.ImageMapEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.ImageMap.OnClick(System.Web.UI.WebControls.ImageMapEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageMap.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">O argumento para o evento.</param>
+        <summary>Gera eventos para o <see cref="T:System.Web.UI.WebControls.ImageMap" /> controlar quando um formulário é enviado para o servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A página passa o valor da `eventArgument` parâmetro para o <xref:System.Web.UI.WebControls.ImageMap.RaisePostBackEvent%2A> método o <xref:System.Web.UI.WebControls.ImageMap> controle. O <xref:System.Web.UI.WebControls.ImageMap> gera um <xref:System.Web.UI.WebControls.ImageMap.Click> eventos para o <xref:System.Web.UI.WebControls.HotSpot> objeto que foi clicado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para manipular um evento de clique em uma classe derivada, substituir o <see cref="M:System.Web.UI.WebControls.ImageMap.OnClick(System.Web.UI.WebControls.ImageMapEventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageMap.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto que recebe o <see cref="T:System.Web.UI.WebControls.ImageMap" /> controlar o conteúdo.</param>
+        <summary>Envia o <see cref="T:System.Web.UI.WebControls.ImageMap" /> controlar o conteúdo especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto, que grava o conteúdo a processar no cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente por desenvolvedores de controle. Ao desenvolver um controle de servidor personalizado derivado de <xref:System.Web.UI.WebControls.ImageMap> controle, você pode substituir este método para gerar o conteúdo para o <xref:System.Web.UI.WebControls.ImageMap>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageMap.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações para um <see cref="T:System.Web.UI.WebControls.ImageMap" /> estado do controle de exibição que ocorreram desde a hora a página foi postado no servidor.</summary>
+        <returns>Retorna o <see cref="T:System.Web.UI.WebControls.ImageMap" /> o estado de exibição atual do controle. Se não houver um estado de exibição associado ao controle, esse método retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente por desenvolvedores de controle.  
+  
+ Estado de exibição é o acúmulo dos valores de propriedades de um controle de servidor. Esses valores são colocados automaticamente no controle do servidor <xref:System.Web.UI.Control.ViewState%2A> propriedade, que é uma ocorrência da <xref:System.Web.UI.StateBag> classe. Valor desta propriedade é mantido, em seguida, para um objeto de cadeia de caracteres depois de salvar o estágio do ciclo de vida de controle do servidor de estado. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ Quando o estado de exibição for salvo, esse objeto de cadeia de caracteres é retornado ao cliente como uma variável que é armazenada em um `Hidden` elemento HTML. Quando você criar controles de servidor personalizado, você pode melhorar a eficiência ao substituir esse método e modificar seu controle de servidor `ViewState` propriedade. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageMap.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">O argumento para o evento.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você deve usar o <xref:System.Web.UI.WebControls.ImageMap.RaisePostBackEvent%2A?displayProperty=nameWithType> método para disparar um evento para o <xref:System.Web.UI.WebControls.ImageMap> controlar quando um formulário é enviado para o servidor.  
+  
+ O <xref:System.Web.UI.WebControls.ImageMap.System%23Web%23UI%23IPostBackEventHandler%23RaisePostBackEvent%28System.String%29> método é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ImageMap> é convertida em uma interface de <xref:System.Web.UI.IPostBackEventHandler>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para definir uma implementação personalizada para disparar o evento para um <see cref="T:System.Web.UI.WebControls.ImageMap" /> de objeto, substituir o <see cref="M:System.Web.UI.WebControls.ImageMap.RaisePostBackEvent(System.String)" /> membro. As chamadas de implementação de interface explícita de <see cref="M:System.Web.UI.WebControls.ImageMap.RaisePostBackEvent(System.String)" /> método para gerar o evento quando dados publicados é alterado para o controle.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public virtual string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageMap.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a janela de destino ou quadro que exibe o conteúdo da página da Web vinculado quando o <see cref="T:System.Web.UI.WebControls.ImageMap" /> controle é clicado.</summary>
+        <value>A janela de destino ou quadro que exibe a Web especificada página quando o <see cref="T:System.Web.UI.WebControls.ImageMap" /> controle é clicado. Os valores devem começar com uma letra no intervalo À Z (maiusculas de minúsculas), exceto para os seguintes valores especiais, que começam com um sublinhado:  
+  
+ <list type="table"><item><term><see langword="_blank" /></term><description>Renderiza o conteúdo em uma nova janela sem quadros.  
+  
+ </description></item><item><term><see langword="_parent" /></term><description>Renderiza o conteúdo no conjunto de quadros pai.  
+  
+ </description></item><item><term><see langword="_search" /></term><description>Renderiza o conteúdo no painel de pesquisa.  
+  
+ </description></item><item><term><see langword="_self" /></term><description>Renderiza o conteúdo do quadro com foco.  
+  
+ </description></item><item><term><see langword="_top" /></term><description>Renderiza o conteúdo na janela inteira sem quadros.  
+  
+ </description></item></list><block subset="none" type="note"><para>  
+ Verifique a documentação do navegador para determinar se o <see langword="_search" /> valor tem suporte.  Por exemplo, Microsoft Internet Explorer 5.0 e posteriores dão suporte ao <see langword="_search" /> valor de destino.  
+  
+</para></block>  
+  
+ O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ImageMap.Target%2A> propriedade para especificar o quadro ou janela que exibe a página da Web r quando o <xref:System.Web.UI.WebControls.ImageMap> controle é clicado. A página da Web é especificada pela configuração de <xref:System.Web.UI.WebControls.Image.ImageUrl%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.ImageMap.Target%2A> propriedade é usada quando o valor da <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> é de propriedade `HotSpotMode.Navigate`; ele será ignorado quando o valor da <xref:System.Web.UI.WebControls.ImageMap.HotSpotMode%2A> é de propriedade `HotSpotMode.PostBack`.  
+  
+ Se o <xref:System.Web.UI.WebControls.ImageMap.Target%2A> propriedade não for definida, o navegador ou janela com foco atualizada quando o <xref:System.Web.UI.WebControls.ImageMap> controle é clicado.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.ImageMap.Target%2A> propriedade renderiza como um `target` atributo. O `target` atributo no `anchor` elementos não é permitido na definição do tipo de documento XHTML 1.1. Não defina o <xref:System.Web.UI.WebControls.ImageMap.Target%2A> propriedade se a saída renderizada para o <xref:System.Web.UI.WebControls.ImageMap> deve ser XHTML 1.1 compatível. Para obter mais informações, consulte [padrões XHTML no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>   
+>  Ao criar páginas da Web acessíveis, é altamente recomendável que você evite usar o <xref:System.Web.UI.WebControls.ImageMap.Target%2A> propriedade a outra janela de destino. Para obter mais informações, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) e [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageMap.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rastreia as alterações de estado de exibição para o <see cref="T:System.Web.UI.WebControls.ImageMap" /> controle para que eles podem ser armazenados no controle do <see cref="T:System.Web.UI.StateBag" /> objeto. Esse objeto é acessível por meio da propriedade <see cref="P:System.Web.UI.Control.ViewState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado automaticamente pelo ASP.NET quando o <xref:System.Web.UI.WebControls.ImageMap> controle é inicializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,174 @@
+<Type Name="IStructuralEquatable" FullName="System.Collections.IStructuralEquatable">
+  <TypeSignature Language="C#" Value="public interface IStructuralEquatable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IStructuralEquatable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.IStructuralEquatable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>FSharp.Core</AssemblyName>
+    <AssemblyVersion>2.3.98.1</AssemblyVersion>
+    <AssemblyVersion>3.98.4.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos para dar suporte à comparação de objetos para igualdade estrutural.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Igualdade estrutural significa que os dois objetos são iguais porque eles têm valores iguais. Ele é diferente de igualdade de referência, que indica que as duas referências de objeto são iguais, porque eles referenciarem o mesmo objeto físico. O <xref:System.Collections.IStructuralEquatable> interface permite que você implemente comparações personalizadas para verificar a igualdade estrutural de objetos da coleção. Ou seja, você pode criar sua própria definição de igualdade estrutural e especificar que essa definição usada com um tipo de coleção que aceita o <xref:System.Collections.IStructuralEquatable> interface. A interface tem dois membros: <xref:System.Collections.IStructuralEquatable.Equals%2A>, que testa a igualdade usando um especificado <xref:System.Collections.IEqualityComparer> implementação, e <xref:System.Collections.IStructuralEquatable.GetHashCode%2A>, que retorna códigos de hash idênticos para os objetos são iguais.  
+  
+> [!NOTE]
+>  O <xref:System.Collections.IStructuralEquatable> interface oferece suporte a apenas comparações personalizadas para igualdade estrutural. O <xref:System.Collections.IStructuralComparable> interface oferece suporte a comparações estruturais personalizadas para classificação e ordenação.  
+  
+ O .NET Framework também fornece padrão comparadores de igualdade, que são retornados pelo <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> e <xref:System.Collections.StructuralComparisons.StructuralEqualityComparer%2A?displayProperty=nameWithType> propriedades. Para obter mais informações, consulte o exemplo.  
+  
+ As classes de tupla genérico (<xref:System.Tuple%601>, <xref:System.Tuple%602>, <xref:System.Tuple%603>, e assim por diante) e o <xref:System.Array> classe fornecer implementações explícitas do <xref:System.Collections.IStructuralEquatable> interface. Conversão (em c#) ou convertendo (no Visual Basic) a instância atual de uma matriz ou coleção de itens para um <xref:System.Collections.IStructuralEquatable> valor interface e fornecendo o <xref:System.Collections.IEqualityComparer> implementação como um argumento para o <xref:System.Collections.IStructuralEquatable.Equals%2A> método, você pode definir uma comparação de igualdade personalizado para a matriz ou coleção.  
+  
+   
+  
+## Examples  
+ O comparador de igualdade padrão, `EqualityComparer<Object>.Default.Equals`, considera dois `NaN` valores são iguais. No entanto, em alguns casos, convém a comparação de `NaN` igualdade retornar valores de `false`, que indica que os valores não podem ser comparados. O exemplo a seguir define uma `NanComparer` classe que implementa o <xref:System.Collections.IStructuralEquatable> interface. Compara dois <xref:System.Double> ou dois <xref:System.Single> valores usando o operador de igualdade. Ele passa valores de qualquer outro tipo para o comparador de igualdade padrão.  
+  
+ [!code-csharp[System.Collections.IStructuralEquatable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.istructuralequatable/cs/nanexample1.cs#1)]
+ [!code-vb[System.Collections.IStructuralEquatable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.istructuralequatable/vb/nanexample1.vb#1)]  
+  
+ O exemplo a seguir cria dois objetos de tupla de 3 idênticos cujos componentes consistem em três <xref:System.Double> valores. O valor do segundo componente é <xref:System.Double.NaN?displayProperty=nameWithType>. O exemplo, em seguida, chama o <xref:System.Tuple%603.Equals%2A?displayProperty=nameWithType> método e chama o <xref:System.Collections.IStructuralEquatable.Equals%2A?displayProperty=nameWithType> método três vezes. Na primeira vez, ele passa o comparador de igualdade padrão que é retornado pelo <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> propriedade. Na segunda vez, ele passa o comparador de igualdade padrão que é retornado pelo <xref:System.Collections.StructuralComparisons.StructuralEqualityComparer%2A?displayProperty=nameWithType> propriedade. A terceira vez, ele passa personalizado `NanComparer` objeto. Como mostra a saída do exemplo, o método três primeiros chama retorno `true`, enquanto a quarta chamada retorna `false`.  
+  
+ [!code-csharp[System.Collections.IStructuralEquatable#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.istructuralequatable/cs/nanexample1.cs#2)]
+ [!code-vb[System.Collections.IStructuralEquatable#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.istructuralequatable/vb/nanexample1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (object other, System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(object other, class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IStructuralEquatable.Equals(System.Object,System.Collections.IEqualityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>FSharp.Core</AssemblyName>
+        <AssemblyVersion>2.3.98.1</AssemblyVersion>
+        <AssemblyVersion>3.98.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="other">O objeto a ser comparado com a instância atual.</param>
+        <param name="comparer">Um objeto que determina se a instância atual e <c>outros</c> são iguais.</param>
+        <summary>Determina se um objeto é estruturalmente igual à instância atual.</summary>
+        <returns>
+          <see langword="true" /> se os dois objetos forem iguais; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.IStructuralEquatable.Equals%2A> método dá suporte à personalizado comparação estrutural de objetos de tupla e de matriz. Este método chama o `comparer` do objeto <xref:System.Collections.IEqualityComparer.Equals%2A?displayProperty=nameWithType> método para comparar elementos individuais da matriz ou componentes de tupla, começando com o primeiro elemento ou componente. Chamadas individuais para <xref:System.Collections.IEqualityComparer.Equals%2A?displayProperty=nameWithType> final e o <xref:System.Collections.IStructuralEquatable.Equals%2A?displayProperty=nameWithType> método retorna um valor ou uma chamada de método retorna `false` ou depois de todos os elementos de matriz ou componentes de tupla comparados.  
+  
+   
+  
+## Examples  
+ O comparador de igualdade padrão, `EqualityComparer<Object>.Default.Equals`, considera dois `NaN` valores são iguais. No entanto, em alguns casos, convém a comparação de `NaN` igualdade retornar valores de `false`, que indica que os valores não podem ser comparados. O exemplo a seguir define uma `NanComparer` classe que implementa o <xref:System.Collections.IStructuralEquatable> interface. Compara dois <xref:System.Double> ou dois <xref:System.Single> valores usando o operador de igualdade. Ele passa valores de qualquer outro tipo para o comparador de igualdade padrão.  
+  
+ [!code-csharp[System.Collections.IStructuralEquatable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.istructuralequatable/cs/nanexample1.cs#1)]
+ [!code-vb[System.Collections.IStructuralEquatable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.istructuralequatable/vb/nanexample1.vb#1)]  
+  
+ O exemplo a seguir cria dois objetos de tupla de 3 idênticos cujos componentes consistem em três <xref:System.Double> valores. O valor do segundo componente é <xref:System.Double.NaN?displayProperty=nameWithType>. O exemplo, em seguida, chama o <xref:System.Tuple%603.Equals%2A?displayProperty=nameWithType> método e chama o <xref:System.Collections.IStructuralEquatable.Equals%2A?displayProperty=nameWithType> método três vezes. Na primeira vez, ele passa o comparador de igualdade padrão que é retornado pelo <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> propriedade. Na segunda vez, ele passa o comparador de igualdade padrão que é retornado pelo <xref:System.Collections.StructuralComparisons.StructuralEqualityComparer%2A?displayProperty=nameWithType> propriedade. A terceira vez, ele passa personalizado `NanComparer` objeto. Como mostra a saída do exemplo, o método três primeiros chama retorno `true`, enquanto a quarta chamada retorna `false`.  
+  
+ [!code-csharp[System.Collections.IStructuralEquatable#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.istructuralequatable/cs/nanexample1.cs#2)]
+ [!code-vb[System.Collections.IStructuralEquatable#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.istructuralequatable/vb/nanexample1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode (System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode(class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IStructuralEquatable.GetHashCode(System.Collections.IEqualityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>FSharp.Core</AssemblyName>
+        <AssemblyVersion>2.3.98.1</AssemblyVersion>
+        <AssemblyVersion>3.98.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Um objeto que calcula o código hash do objeto atual.</param>
+        <summary>Retorna um código hash para a instância atual.</summary>
+        <returns>O código hash da instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar esse método para retornar códigos hash personalizadas para objetos de coleção que correspondem à comparação personalizada para igualdade estrutural fornecida pelo <xref:System.Collections.IStructuralEquatable.Equals%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se o <see cref="M:System.Collections.IStructuralEquatable.Equals(System.Object,System.Collections.IEqualityComparer)" /> método <see langword="true" /> de dois objetos, os valores retornados pelo <see cref="M:System.Collections.IStructuralEquatable.GetHashCode(System.Collections.IEqualityComparer)" /> método para os dois objetos também deve ser igual.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

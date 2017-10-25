@@ -1,0 +1,200 @@
+<Type Name="WebFailureAuditEvent" FullName="System.Web.Management.WebFailureAuditEvent">
+  <TypeSignature Language="C#" Value="public class WebFailureAuditEvent : System.Web.Management.WebAuditEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebFailureAuditEvent extends System.Web.Management.WebAuditEvent" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebFailureAuditEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebAuditEvent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre falhas de segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management?displayProperty=nameWithType> namespace contém os tipos de evento de integridade responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ O <xref:System.Web.Management.WebFailureAuditEvent> classe é usada quando uma operação de segurança falha. Um exemplo disso é uma falha na autorização de URL para uma solicitação da Web.  
+  
+ Por padrão, o ASP.NET está configurado para gerar o <xref:System.Web.Management.WebFailureAuditEvent> eventos para os seguintes recursos:  
+  
+-   Autorização do arquivo. ASP.NET tentativas de autorização do arquivo apenas quando uma identidade do Windows está associada à solicitação. O código de auditoria do evento relacionado é <xref:System.Web.Management.WebEventCodes.AuditFileAuthorizationFailure>.  
+  
+-   Autorização de URL. Isso controla as tentativas não autorizadas a acessar um recurso de URL. Tentativas com falha por um usuário anônimo não são auditadas, como falha de autenticação anônima é aceitável na maioria das circunstâncias. O código de auditoria do evento relacionado é <xref:System.Web.Management.WebEventCodes.AuditUrlAuthorizationFailure>.  
+  
+-   Sem tratamento genérico ou segurança não tratada condições. A seguir está uma lista dos códigos de evento relacionadas a estas condições:  
+  
+    -   <xref:System.Web.Management.WebEventCodes.AuditFormsAuthenticationFailure>  
+  
+    -   <xref:System.Web.Management.WebEventCodes.AuditMembershipAuthenticationFailure>  
+  
+    -   <xref:System.Web.Management.WebEventCodes.AuditInvalidViewStateFailure>  
+  
+    -   <xref:System.Web.Management.WebEventCodes.AuditUnhandledSecurityException>  
+  
+    -   <xref:System.Web.Management.WebEventCodes.AuditUnhandledAccessException>  
+  
+ Quando um <xref:System.Web.Management.WebFailureAuditEvent> evento é gerado, o monitoramento de integridade do ASP.NET incrementa o contador de desempenho gerados de eventos de falha de auditoria relacionada e, em seguida, verifica o `healthMonitoring` seção de configuração para determinar se os provedores de assinam o evento. Se os provedores de assinem o evento, o ASP.NET despacha o evento a eles para processamento.  
+  
+> [!NOTE]
+>  Para exibir o contador de desempenho eventos de falha de auditoria gerados no Monitor do sistema (PerfMon), no **adicionar contadores** janela, selecione **ASP.NET** do **objeto de desempenho** lista suspensa, selecione o **eventos de falha de auditoria gerados** contador de desempenho e clique no **adicionar** botão. Para obter mais informações, consulte [usando o Monitor do sistema (PerfMon) com aplicativos ASP.NET](http://go.microsoft.com/fwlink/?linkid=36882) na documentação do IIS no MSDN.  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `healthMonitoring` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de derivar do <xref:System.Web.Management.WebFailureAuditEvent> de classe, consulte a seção de exemplo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como derivar o <xref:System.Web.Management.WebFailureAuditEvent> classe para criar um evento de auditoria personalizada.  
+  
+ [!code-csharp[System.Web.Management.WebFailureAuditEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebFailureAuditEvent/CS/webfailureauditevent.cs#1)]
+ [!code-vb[System.Web.Management.WebFailureAuditEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebFailureAuditEvent/VB/webfailureauditevent.vb#1)]  
+  
+ O trecho de configuração a seguir mostra como habilitar o ASP.NET usar o <xref:System.Web.Management.WebFailureAuditEvent> evento.  
+  
+```  
+<healthMonitoring   
+enabled="true"  
+heartBeatInterval="0">   
+<providers>  
+<add name="EventLogProvider"   
+type="System.Web.Management.EventLogWebEventProvider,  
+System.Web,Version=2.0.3600.0,Culture=neutral,  
+PublicKeyToken=b03f5f7f11d50a3a"/>  
+</providers>  
+  
+<eventMappings>  
+<add  name="SampleWebFailureAuditEvent"   
+type="SamplesAspNet.SampleWebFailureAuditEvent,  
+webfailureauditevent,Version=1.0.1663.31140,   
+Culture=neutral,   
+PublicKeyToken=0d1fa0f69d94de96,   
+processorArchitecture=MSIL"/>  
+</eventMappings>  
+  
+<rules>  
+<add name="Custom Failure Audit Default"  
+eventName=" SampleWebFailureAuditEvent "  
+provider="EventLogProvider"  
+profile="Default"/>    
+</rules>  
+  
+</healthMonitoring>  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao formatar suas informações de evento personalizados para exibição, substitua o <see cref="M:System.Web.Management.WebBaseEvent.FormatCustomEventDetails(System.Web.Management.WebEventFormatter)" /> método em vez de <see cref="Overload:System.Web.Management.WebBaseEvent.ToString" /> método. Isso pode evitar a substituição ou violação com informações confidenciais.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebFailureAuditEvent (string message, object eventSource, int eventCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebFailureAuditEvent.#ctor(System.String,System.Object,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">A descrição do evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O código associado ao evento. Quando você implementa um evento personalizado, o código de evento deve ser maior que <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Management.WebFailureAuditEvent" /> classe usando os parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo sistema de monitoramento de integridade do ASP.NET. Você nunca usará para criar uma instância de <xref:System.Web.Management.WebFailureAuditEvent>, mas você pode chamar esse construtor ao implementar seu próprio tipo de evento que herda dessa classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como chamar o construtor `SampleWebFailureAuditEvent` classe. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Web.Management.WebFailureAuditEvent> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Management.WebFailureAuditEvent#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebFailureAuditEvent/CS/webfailureauditevent.cs#2)]
+ [!code-vb[System.Web.Management.WebFailureAuditEvent#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebFailureAuditEvent/VB/webfailureauditevent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebFailureAuditEvent (string message, object eventSource, int eventCode, int eventDetailCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, int32 eventDetailCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebFailureAuditEvent.#ctor(System.String,System.Object,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventDetailCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">A descrição do evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O código associado ao evento. Quando você implementa um evento personalizado, o código de evento deve ser maior que <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="eventDetailCode">O <see cref="T:System.Web.Management.WebEventCodes" /> valor que especifica o identificador detalhado para o evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Management.WebFailureAuditEvent" /> classe usando os parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo sistema de monitoramento de integridade do ASP.NET. Você nunca usará para criar uma instância de <xref:System.Web.Management.WebFailureAuditEvent>, mas você pode chamar esse construtor ao implementar seu próprio tipo de evento que herda dessa classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como chamar o construtor `SampleWebFailureAuditEvent` classe. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Web.Management.WebFailureAuditEvent> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Management.WebFailureAuditEvent#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebFailureAuditEvent/CS/webfailureauditevent.cs#3)]
+ [!code-vb[System.Web.Management.WebFailureAuditEvent#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebFailureAuditEvent/VB/webfailureauditevent.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementPerfCounters">
+      <MemberSignature Language="C#" Value="protected override void IncrementPerfCounters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void IncrementPerfCounters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebFailureAuditEvent.IncrementPerfCounters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Incrementa o contador de desempenho eventos de falha de auditoria gerados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contador de desempenho gerados de eventos de falha de auditoria controla o número de eventos de auditoria com falha gerados desde que o aplicativo foi iniciado. Este método também chama o pai <xref:System.Web.Management.WebBaseEvent.IncrementPerfCounters%2A> método, o que incrementa o contador de eventos gerados. Este contador controla o número total de eventos gerados.  
+  
+ Para exibir esses contadores de desempenho no Monitor do sistema (PerfMon), no **adicionar contadores** janela Selecione **ASP.NET** do **objeto de desempenho** lista suspensa, selecione o contador de desempenho que você deseja exibir e, em seguida, clique no **adicionar** botão. Para obter mais informações, consulte [usando o Monitor do sistema (PerfMon) com aplicativos ASP.NET](http://go.microsoft.com/fwlink/?linkid=36882) na documentação do IIS no MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

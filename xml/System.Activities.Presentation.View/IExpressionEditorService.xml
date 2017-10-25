@@ -1,0 +1,196 @@
+<Type Name="IExpressionEditorService" FullName="System.Activities.Presentation.View.IExpressionEditorService">
+  <TypeSignature Language="C#" Value="public interface IExpressionEditorService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExpressionEditorService" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.View.IExpressionEditorService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Cria ou fecha editores de expressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um editor de expressão é um controle do Visual Basic usado para editar as expressões dentro do Visual Studio. Esse controle oferece um IDE completo editando experiência, incluindo IntelliSense, colorização, Infoparam, linhas onduladas para erros, entre outros recursos.  
+  
+ O <xref:System.Activities.Presentation.View.IExpressionEditorService> também pode ser usado para gerenciar instâncias de editores de expressão personalizada. Para registrar um editor de expressão personalizado, você deve publicar o <xref:System.Activities.Presentation.View.IExpressionEditorService> usando o seguinte código:  
+  
+ `this.expressionEditorService = new ExpressionEditorService();`  
+  
+ `this.workflowDesigner.Context.Services.Publish<IExpressionEditorService>(this.expressionEditorService);`  
+  
+ Um editor de expressão é criado quando um <xref:System.Activities.Presentation.View.ExpressionTextBox> instância ganha o foco e é destruída em perdendo o foco de uma expressão válida, ou em Recarregar o designer.  
+  
+ O editor de expressões padrão não está disponível para uso em aplicativos hospedado novamente. Se o editor de expressão padrão é usado em um aplicativo hospedado novamente, uma caixa de texto está disponível para edição. No entanto, os editores de expressão personalizada podem ser usados em um aplicativo hospedado novamente publicando o <xref:System.Activities.Presentation.View.IExpressionEditorService> no aplicativo.  
+  
+ Se você estiver usando um <xref:System.Activities.Presentation.View.ExpressionTextBox> controle em um designer de atividade personalizada, não é necessário criar e destruir os editores de expressão usando esta interface. A classe de <xref:System.Activities.Presentation.View.ExpressionTextBox> gerencia essa para você.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CloseExpressionEditors">
+      <MemberSignature Language="C#" Value="public void CloseExpressionEditors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseExpressionEditors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha todos os editores de expressão ativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExpressionEditor">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.View.IExpressionEditorInstance CreateExpressionEditor (System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces, System.Collections.Generic.List&lt;System.Activities.Presentation.Model.ModelItem&gt; variables, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Presentation.View.IExpressionEditorInstance CreateExpressionEditor(class System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, class System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces, class System.Collections.Generic.List`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; variables, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor(System.Activities.Presentation.Hosting.AssemblyContextControlItem,System.Activities.Presentation.Hosting.ImportedNamespaceContextItem,System.Collections.Generic.List{System.Activities.Presentation.Model.ModelItem},System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.IExpressionEditorInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblies" Type="System.Activities.Presentation.Hosting.AssemblyContextControlItem" />
+        <Parameter Name="importedNamespaces" Type="System.Activities.Presentation.Hosting.ImportedNamespaceContextItem" />
+        <Parameter Name="variables" Type="System.Collections.Generic.List&lt;System.Activities.Presentation.Model.ModelItem&gt;" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblies">Usado para definir o contexto para a sessão do editor.</param>
+        <param name="importedNamespaces">Os namespaces importados a ser usado pelo editor de expressão.</param>
+        <param name="variables">Variáveis locais para o editor de expressão.</param>
+        <param name="text">Uma cadeia de caracteres usada para popular o editor de expressão.</param>
+        <summary>Cria uma nova expressão de editor.</summary>
+        <returns>Retorna um <see cref="T:System.Activities.Presentation.View.IExpressionEditorInstance" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExpressionEditor">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.View.IExpressionEditorInstance CreateExpressionEditor (System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces, System.Collections.Generic.List&lt;System.Activities.Presentation.Model.ModelItem&gt; variables, string text, Type expressionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Presentation.View.IExpressionEditorInstance CreateExpressionEditor(class System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, class System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces, class System.Collections.Generic.List`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; variables, string text, class System.Type expressionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor(System.Activities.Presentation.Hosting.AssemblyContextControlItem,System.Activities.Presentation.Hosting.ImportedNamespaceContextItem,System.Collections.Generic.List{System.Activities.Presentation.Model.ModelItem},System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.IExpressionEditorInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblies" Type="System.Activities.Presentation.Hosting.AssemblyContextControlItem" />
+        <Parameter Name="importedNamespaces" Type="System.Activities.Presentation.Hosting.ImportedNamespaceContextItem" />
+        <Parameter Name="variables" Type="System.Collections.Generic.List&lt;System.Activities.Presentation.Model.ModelItem&gt;" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="expressionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="assemblies">Os assemblies no ambiente locais e referenciados.</param>
+        <param name="importedNamespaces">Os namespaces importados usados pelo editor de expressão.</param>
+        <param name="variables">Variáveis locais para o editor de expressão.</param>
+        <param name="text">Uma cadeia de caracteres usada para popular o editor de expressão.</param>
+        <param name="expressionType">O tipo da expressão.</param>
+        <summary>Cria uma nova expressão editor usando os assemblies especificados, namespaces importados, variáveis, texto de expressão e o tipo de expressão.</summary>
+        <returns>Uma nova instância do <see cref="T:System.Activities.Presentation.View.IExpressionEditorInstance" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExpressionEditor">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.View.IExpressionEditorInstance CreateExpressionEditor (System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces, System.Collections.Generic.List&lt;System.Activities.Presentation.Model.ModelItem&gt; variables, string text, System.Windows.Size initialSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Presentation.View.IExpressionEditorInstance CreateExpressionEditor(class System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, class System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces, class System.Collections.Generic.List`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; variables, string text, valuetype System.Windows.Size initialSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor(System.Activities.Presentation.Hosting.AssemblyContextControlItem,System.Activities.Presentation.Hosting.ImportedNamespaceContextItem,System.Collections.Generic.List{System.Activities.Presentation.Model.ModelItem},System.String,System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.IExpressionEditorInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblies" Type="System.Activities.Presentation.Hosting.AssemblyContextControlItem" />
+        <Parameter Name="importedNamespaces" Type="System.Activities.Presentation.Hosting.ImportedNamespaceContextItem" />
+        <Parameter Name="variables" Type="System.Collections.Generic.List&lt;System.Activities.Presentation.Model.ModelItem&gt;" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="initialSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="assemblies">Os assemblies no ambiente locais e referenciados.</param>
+        <param name="importedNamespaces">Os namespaces importados usados pelo editor de expressão.</param>
+        <param name="variables">Variáveis locais para o editor de expressão.</param>
+        <param name="text">Uma cadeia de caracteres usada para popular o editor de expressão.</param>
+        <param name="initialSize">A altura inicial e a largura do controle de editor de expressão.</param>
+        <summary>Cria uma nova expressão usando os assemblies especificados, namespaces importados, variáveis, texto de expressão e o tamanho inicial do editor.</summary>
+        <returns>Uma nova instância do <see cref="T:System.Activities.Presentation.View.IExpressionEditorInstance" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExpressionEditor">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.View.IExpressionEditorInstance CreateExpressionEditor (System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces, System.Collections.Generic.List&lt;System.Activities.Presentation.Model.ModelItem&gt; variables, string text, Type expressionType, System.Windows.Size initialSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Presentation.View.IExpressionEditorInstance CreateExpressionEditor(class System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, class System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces, class System.Collections.Generic.List`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; variables, string text, class System.Type expressionType, valuetype System.Windows.Size initialSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor(System.Activities.Presentation.Hosting.AssemblyContextControlItem,System.Activities.Presentation.Hosting.ImportedNamespaceContextItem,System.Collections.Generic.List{System.Activities.Presentation.Model.ModelItem},System.String,System.Type,System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.IExpressionEditorInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblies" Type="System.Activities.Presentation.Hosting.AssemblyContextControlItem" />
+        <Parameter Name="importedNamespaces" Type="System.Activities.Presentation.Hosting.ImportedNamespaceContextItem" />
+        <Parameter Name="variables" Type="System.Collections.Generic.List&lt;System.Activities.Presentation.Model.ModelItem&gt;" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="expressionType" Type="System.Type" />
+        <Parameter Name="initialSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="assemblies">Os assemblies no ambiente locais e referenciados.</param>
+        <param name="importedNamespaces">Os namespaces importados usados pelo editor de expressão.</param>
+        <param name="variables">Variáveis locais para o editor de expressão.</param>
+        <param name="text">Uma cadeia de caracteres usada para popular o editor de expressão.</param>
+        <param name="expressionType">O tipo da expressão.</param>
+        <param name="initialSize">A altura inicial e a largura do controle de editor de expressão.</param>
+        <summary>Cria uma nova expressão usando os assemblies especificados, namespaces importados, variáveis, texto de expressão, o tipo de expressão e o tamanho inicial do editor.</summary>
+        <returns>Uma nova instância do <see cref="T:System.Activities.Presentation.View.IExpressionEditorInstance" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateContext">
+      <MemberSignature Language="C#" Value="public void UpdateContext (System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateContext(class System.Activities.Presentation.Hosting.AssemblyContextControlItem assemblies, class System.Activities.Presentation.Hosting.ImportedNamespaceContextItem importedNamespaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.IExpressionEditorService.UpdateContext(System.Activities.Presentation.Hosting.AssemblyContextControlItem,System.Activities.Presentation.Hosting.ImportedNamespaceContextItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblies" Type="System.Activities.Presentation.Hosting.AssemblyContextControlItem" />
+        <Parameter Name="importedNamespaces" Type="System.Activities.Presentation.Hosting.ImportedNamespaceContextItem" />
+      </Parameters>
+      <Docs>
+        <param name="assemblies">Usado para definir o contexto para a sessão do editor.</param>
+        <param name="importedNamespaces">Os namespaces importados usados pelo editor de expressão.</param>
+        <summary>Atualiza o contexto para a sessão de edição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

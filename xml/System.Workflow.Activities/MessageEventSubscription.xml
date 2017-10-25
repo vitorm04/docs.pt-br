@@ -1,0 +1,248 @@
+<Type Name="MessageEventSubscription" FullName="System.Workflow.Activities.MessageEventSubscription">
+  <TypeSignature Language="C#" Value="public class MessageEventSubscription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MessageEventSubscription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.MessageEventSubscription" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria uma assinatura de evento de mensagem para rotear mensagens para a instância de fluxo de trabalho apropriado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageEventSubscription ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.MessageEventSubscription.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.MessageEventSubscription" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageEventSubscription (IComparable queueName, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IComparable queueName, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.MessageEventSubscription.#ctor(System.IComparable,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="queueName" Type="System.IComparable" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="queueName">O nome amigável que identifica a fila.</param>
+        <param name="instanceId">O <see cref="T:System.Guid" /> que indica a instância de fluxo de trabalho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.MessageEventSubscription" /> classe usando um nome de fila especificado e a ID de instância</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageEventSubscription (IComparable queueName, Guid instanceId, Guid subscriptionId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IComparable queueName, valuetype System.Guid instanceId, valuetype System.Guid subscriptionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.MessageEventSubscription.#ctor(System.IComparable,System.Guid,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="queueName" Type="System.IComparable" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="subscriptionId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="queueName">O nome amigável que identifica a fila.</param>
+        <param name="instanceId">O <see cref="T:System.Guid" /> que indica a instância de fluxo de trabalho.</param>
+        <param name="subscriptionId">O <see cref="T:System.Guid" /> que indica o identificador de assinatura.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.MessageEventSubscription" /> classe usando um nome de fila especificada, a ID de instância e a ID da assinatura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageEventSubscription (IComparable queueName, Guid subscriptionId, Type interfaceType, string operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IComparable queueName, valuetype System.Guid subscriptionId, class System.Type interfaceType, string operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.MessageEventSubscription.#ctor(System.IComparable,System.Guid,System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="queueName" Type="System.IComparable" />
+        <Parameter Name="subscriptionId" Type="System.Guid" />
+        <Parameter Name="interfaceType" Type="System.Type" />
+        <Parameter Name="operation" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="queueName">O nome amigável que identifica a fila.</param>
+        <param name="subscriptionId">O <see cref="T:System.Guid" /> que indica o identificador de assinatura.</param>
+        <param name="interfaceType">O <see cref="T:System.Type" /> da interface.</param>
+        <param name="operation">O nome do evento na interface que representa a operação de mensagens para o qual você está criando uma assinatura.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.MessageEventSubscription" /> classe usando um nome de fila especificada, ID de assinatura, tipo de interface e o nome da operação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageEventSubscription (IComparable queueName, Guid instanceId, Type interfaceType, string operation, Guid subscriptionId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IComparable queueName, valuetype System.Guid instanceId, class System.Type interfaceType, string operation, valuetype System.Guid subscriptionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.MessageEventSubscription.#ctor(System.IComparable,System.Guid,System.Type,System.String,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="queueName" Type="System.IComparable" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="interfaceType" Type="System.Type" />
+        <Parameter Name="operation" Type="System.String" />
+        <Parameter Name="subscriptionId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="queueName">O nome amigável que identifica a fila.</param>
+        <param name="instanceId">O <see cref="T:System.Guid" /> que indica a instância de fluxo de trabalho.</param>
+        <param name="interfaceType">O <see cref="T:System.Type" /> da interface.</param>
+        <param name="operation">O nome do evento na interface que representa a operação de mensagens para o qual você está criando uma assinatura.</param>
+        <param name="subscriptionId">O <see cref="T:System.Guid" /> que indica o identificador de assinatura.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.MessageEventSubscription" /> usando um nome de fila especificado da classe, instância ID, tipo de interface, operação e uma ID de assinatura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationProperties">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.ICollection&lt;System.Workflow.Runtime.CorrelationProperty&gt; CorrelationProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Workflow.Runtime.CorrelationProperty&gt; CorrelationProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.MessageEventSubscription.CorrelationProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Workflow.Runtime.CorrelationProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de propriedades de correlação para a mensagem que será mapeado a mensagem de entrada junto com o <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" />.</summary>
+        <value>Uma lista de propriedades de correlação para a mensagem que será mapeado a mensagem de entrada junto com o <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterfaceType">
+      <MemberSignature Language="C#" Value="public virtual Type InterfaceType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type InterfaceType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.MessageEventSubscription.InterfaceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de interface.</summary>
+        <value>O <see cref="T:System.Type" /> da interface.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public virtual string MethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.MessageEventSubscription.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método.</summary>
+        <value>O nome do método.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueName">
+      <MemberSignature Language="C#" Value="public virtual IComparable QueueName { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IComparable QueueName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.MessageEventSubscription.QueueName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IComparable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da fila à qual pertence essa assinatura.</summary>
+        <value>O nome que identifica a fila à qual pertence essa assinatura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionId">
+      <MemberSignature Language="C#" Value="public virtual Guid SubscriptionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid SubscriptionId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.MessageEventSubscription.SubscriptionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador exclusivo para essa assinatura.</summary>
+        <value>O <see cref="T:System.Guid" /> que indica o identificador de assinatura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowInstanceId">
+      <MemberSignature Language="C#" Value="public virtual Guid WorkflowInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid WorkflowInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.MessageEventSubscription.WorkflowInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="InstanceId" /> do fluxo de trabalho para o qual esta assinatura foi criada.</summary>
+        <value>O <see cref="T:System.Guid" /> que indica a instância de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

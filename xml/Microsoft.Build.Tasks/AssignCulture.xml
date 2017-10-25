@@ -1,0 +1,186 @@
+<Type Name="AssignCulture" FullName="Microsoft.Build.Tasks.AssignCulture">
+  <TypeSignature Language="C#" Value="public class AssignCulture : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssignCulture extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.AssignCulture" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa o <c>AssignCulture</c> tarefa. Use o <c>AssignCulture</c> elemento no arquivo de projeto para criar e executar essa tarefa. Para obter informações de uso e de parâmetro, consulte [tarefa AssignCulture](http://msdn.microsoft.com/library/8f8314cc-82a6-4f16-a62d-b9f0d1d5e274).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssignCulture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AssignCulture.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.AssignCulture" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssignedFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] AssignedFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] AssignedFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignCulture.AssignedFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de <see cref="P:Microsoft.Build.Tasks.AssignCulture.Files" /> com um <c>cultura</c> adicionada a cada item de entrada de metadados.</summary>
+        <value>A lista de <see cref="P:Microsoft.Build.Tasks.AssignCulture.Files" />, com um <c>cultura</c> adicionada a cada item de entrada de metadados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a entrada do item do <xref:Microsoft.Build.Tasks.AssignCulture.Files%2A> propriedade já contém um `Culture` a entrada de metadados, a entrada de metadados original é usada.  
+  
+ A tarefá atribuirá uma entrada de metadados `Culture` somente se o nome de arquivo contiver um identificador de cultura válido. O identificador de cultura deve estar entre os dois últimos pontos no nome de arquivo.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssignedFilesWithCulture">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] AssignedFilesWithCulture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] AssignedFilesWithCulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignCulture.AssignedFilesWithCulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um subconjunto de <see cref="P:Microsoft.Build.Tasks.AssignCulture.AssignedFiles" /> que têm um <c>cultura</c> entrada de metadados.</summary>
+        <value>Um subconjunto de <see cref="P:Microsoft.Build.Tasks.AssignCulture.AssignedFiles" /> que têm um <c>cultura</c> entrada de metadados.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssignedFilesWithNoCulture">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] AssignedFilesWithNoCulture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] AssignedFilesWithNoCulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignCulture.AssignedFilesWithNoCulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um subconjunto de <see cref="P:Microsoft.Build.Tasks.AssignCulture.AssignedFiles" /> que não têm um <c>cultura</c> entrada de metadados.</summary>
+        <value>Um subconjunto de <see cref="P:Microsoft.Build.Tasks.AssignCulture.AssignedFiles" /> que não têm um <c>cultura</c> entrada de metadados.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CultureNeutralAssignedFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] CultureNeutralAssignedFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] CultureNeutralAssignedFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignCulture.CultureNeutralAssignedFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um subconjunto de <see cref="P:Microsoft.Build.Tasks.AssignCulture.AssignedFiles" /> que não têm um <c>cultura</c> entrada de metadados.</summary>
+        <value>Um subconjunto de <see cref="P:Microsoft.Build.Tasks.AssignCulture.AssignedFiles" /> que não têm um <c>cultura</c> entrada de metadados.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AssignCulture.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o <c>AssignCulture</c> tarefa.</summary>
+        <returns>
+          <see langword="true" /> caso a execução da tarefa seja bem-sucedida; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Files">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] Files { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] Files" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignCulture.Files" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista de arquivos com nomes de cultura incorporada para atribuir uma cultura para.</summary>
+        <value>A lista de arquivos com nomes de cultura incorporada para atribuir uma cultura para.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

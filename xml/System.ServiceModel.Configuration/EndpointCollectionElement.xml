@@ -1,0 +1,157 @@
+<Type Name="EndpointCollectionElement" FullName="System.ServiceModel.Configuration.EndpointCollectionElement">
+  <TypeSignature Language="C#" Value="public abstract class EndpointCollectionElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EndpointCollectionElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.EndpointCollectionElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia uma coleção de pontos de extremidade de serviço em um arquivo de configuração.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EndpointCollectionElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.EndpointCollectionElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.EndpointCollectionElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfiguredEndpoints">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Configuration.StandardEndpointElement&gt; ConfiguredEndpoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ServiceModel.Configuration.StandardEndpointElement&gt; ConfiguredEndpoints" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.EndpointCollectionElement.ConfiguredEndpoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Configuration.StandardEndpointElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, fornece uma coleção somente leitura de <see cref="T:System.ServiceModel.Configuration.StandardEndpointElement" /> métodos e propriedades.</summary>
+        <value>Uma coleção somente leitura de <see cref="T:System.ServiceModel.Configuration.StandardEndpointElement" /> métodos e propriedades.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public abstract bool ContainsKey (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.EndpointCollectionElement.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da chave em um par chave/valor que representa um nome de elemento de ponto de extremidade e um valor.</param>
+        <summary>Determina se o elemento de serviço em um arquivo de configuração contém um elemento de ponto de extremidade com o mesmo nome como cadeia de caracteres especificada.</summary>
+        <returns>
+          <see langword="true" />Se a cadeia de caracteres especificada contém um nome de elemento especificado. Caso contrário<see langword="false." /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointName">
+      <MemberSignature Language="C#" Value="public string EndpointName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.EndpointCollectionElement.EndpointName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém o valor do atributo de nome de um elemento de ponto de extremidade de serviço.</summary>
+        <value>O valor do atributo name em um elemento de ponto de extremidade de serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointType">
+      <MemberSignature Language="C#" Value="public abstract Type EndpointType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EndpointType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.EndpointCollectionElement.EndpointType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém o tipo do ponto de extremidade de serviço.</summary>
+        <value>Um tipo de ponto de extremidade de serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultStandardEndpointElement">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Configuration.StandardEndpointElement GetDefaultStandardEndpointElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.ServiceModel.Configuration.StandardEndpointElement GetDefaultStandardEndpointElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.EndpointCollectionElement.GetDefaultStandardEndpointElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.StandardEndpointElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, retorna o padrão <see cref="T:System.ServiceModel.Configuration.StandardEndpointElement" />.</summary>
+        <returns>Um elemento de ponto de extremidade padrão do modelo de serviço.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAdd">
+      <MemberSignature Language="C#" Value="protected abstract bool TryAdd (string name, System.ServiceModel.Description.ServiceEndpoint endpoint, System.Configuration.Configuration config);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryAdd(string name, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.Configuration.Configuration config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.EndpointCollectionElement.TryAdd(System.String,System.ServiceModel.Description.ServiceEndpoint,System.Configuration.Configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="config" Type="System.Configuration.Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do ponto de extremidade de serviço que contém a coleção de ponto de extremidade.</param>
+        <param name="endpoint">O elemento de ponto de extremidade de serviço a ser adicionado à coleção.</param>
+        <param name="config">O arquivo de configuração que recebe o ponto de extremidade de serviço.</param>
+        <summary>Quando implementada em uma classe derivada, adiciona o ponto de extremidade especificado para a coleção de pontos de extremidade de serviço em um arquivo de configuração.</summary>
+        <returns>
+          <see langword="true" />Se o ponto de extremidade é adicionado à coleção no arquivo de configuração; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,145 @@
+<Type Name="PrimaryInteropAssemblyAttribute" FullName="System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PrimaryInteropAssemblyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PrimaryInteropAssemblyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que o assembly atribuído é um assembly de interoperabilidade primário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para assemblies, embora o [Tlbimp.exe (importador da biblioteca)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) normalmente aplica para você quando ele importa uma biblioteca de tipos.  
+  
+ Um assembly de interoperabilidade contém metadados que descrevem os tipos COM existente, o que geralmente já são descritos em uma biblioteca de tipos COM. Tlbimp.exe produz assemblies de interoperabilidade de bibliotecas de tipos COM. Assemblies de interoperabilidade normalmente só contêm metadados (sem código). Assemblies de interoperabilidade primários são fornecidos pelo mesmo publicador como a biblioteca de tipos que descrevem e fornecem as definições oficiais dos tipos definidos com esse tipo de biblioteca. Assemblies de interoperabilidade primários sempre são assinados por seu fornecedor para garantir a exclusividade.  
+  
+ Você pode gerar um assembly de interoperabilidade primária de uma biblioteca de tipos das seguintes maneiras:  
+  
+-   Executar TlbImp.exe com o `/primary` opção da linha de comando.  
+  
+-   Aplicar o <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> em tempo de design.  
+  
+ Para especificar um assembly de interoperabilidade primária em código gerenciado, você deve aplicar o <xref:System.Runtime.InteropServices.GuidAttribute?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> para o assembly em tempo de design. O <xref:System.Runtime.InteropServices.GuidAttribute> no assembly de interoperabilidade primária identifica a ID da biblioteca do tipo de biblioteca e o <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> identifica a versão da biblioteca de tipo específico para o qual este assembly é o assembly de interoperabilidade primário. O <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> pode aparecer várias vezes se o assembly é o assembly de interoperabilidade primária para várias versões do mesmo tipo de biblioteca.  
+  
+ Ao usar os tipos definidos em uma biblioteca de tipos, sempre faça referência o assembly de interoperabilidade primária para essa biblioteca de tipos, em vez de reimportação ou redefinindo próprios tipos. Para obter diretrizes e procedimentos sobre como gerar ou usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080). Para obter uma descrição detalhada do processo de importação de biblioteca de tipos, consulte [biblioteca de tipos para o resumo da conversão de Assembly](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrimaryInteropAssemblyAttribute (int major, int minor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 major, int32 minor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="major" Type="System.Int32" />
+        <Parameter Name="minor" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="major">A versão principal da biblioteca de tipos para o qual este assembly é o assembly de interoperabilidade primário.</param>
+        <param name="minor">A versão secundária da biblioteca de tipos para o qual este assembly é o assembly de interoperabilidade primário.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute" /> classe com os números de versão primária e secundária da biblioteca de tipos para o qual este assembly é o assembly de interoperabilidade primário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute> pode aparecer várias vezes se o assembly é o assembly de interoperabilidade primária para várias versões do mesmo tipo de biblioteca.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorVersion">
+      <MemberSignature Language="C#" Value="public int MajorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MajorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute.MajorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão principal da biblioteca de tipos para o qual este assembly é o assembly de interoperabilidade primário.</summary>
+        <value>O número de versão principal da biblioteca de tipos para o qual este assembly é o assembly de interoperabilidade primário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorVersion">
+      <MemberSignature Language="C#" Value="public int MinorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute.MinorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão secundária da biblioteca de tipos para o qual este assembly é o assembly de interoperabilidade primário.</summary>
+        <value>O número de versão secundária da biblioteca de tipos para o qual este assembly é o assembly de interoperabilidade primário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

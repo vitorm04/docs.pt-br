@@ -1,0 +1,131 @@
+<Type Name="BaseAddressPrefixFilterElement" FullName="System.ServiceModel.Configuration.BaseAddressPrefixFilterElement">
+  <TypeSignature Language="C#" Value="public sealed class BaseAddressPrefixFilterElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BaseAddressPrefixFilterElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento de configuração que especifica uma passagem pelo filtro, que fornece um mecanismo para obter as associações de IIS apropriadas ao hospedar um aplicativo do Windows Communication Foundation (WCF) no IIS. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor do filtro de prefixo um mecanismo para um serviço para associar a um URI específico. Ele permite hospedar vários aplicativos com diferentes endereços base para o mesmo esquema no mesmo site.  
+  
+ Sites do IIS são contêineres de aplicativos virtuais que contêm diretórios virtuais. O aplicativo em um site pode ser acessado por meio de um ou mais associação do IIS. Associações do IIS fornecem duas informações: protocolo de associação e informações de associação. Associação de protocolo (por exemplo, HTTP) define o esquema durante o qual a comunicação ocorre, e (por exemplo, endereço IP, porta, cabeçalho de host) de informações de associação contém dados usados para acessar o site.  
+  
+ O IIS oferece suporte à especificação várias associações IIS por site, o que resulta em vários endereços de base por esquema. Como um [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviço hospedado em um site permite que a associação apenas um endereço base por esquema, você pode usar o recurso de filtro de prefixo para escolher o endereço base necessário do serviço hospedado.  Os endereços base entrados fornecidos pelo IIS, são filtrados com base no filtro de lista de prefixo opcional.  
+  
+ Por exemplo, seu site pode conter os seguintes endereços de base  
+  
+```  
+http://testl.fabrikam.com/Service.svc  
+http://test2.fabrikam.com/Service.svc  
+```  
+  
+ Você pode usar o seguinte arquivo de configuração para especificar um filtro de prefixo no nível do appdomain.  
+  
+```  
+<system.serviceModel>  
+  <serviceHostingEnvironment>  
+     <baseAddressPrefixFilters>  
+        <add prefix="net.tcp://test1.fabrikam.com:8000"/>  
+        <add prefix="http://test2.fabrikam.com:9000"/>  
+    </baseAddressPrefixFilters>  
+  </serviceHostingEnvironment>  
+</system.serviceModel>  
+```  
+  
+ Neste exemplo, `net.tcp://test1.fabrikam.com:8000` e `http://test2.fabrikam.com:9000` são os endereços base somente para seus respectivos esquemas que têm permissão para ser passado.  
+  
+ Por padrão, quando o prefixo não for especificado, todos os endereços são passados. Especifica o prefixo resultará em apenas o endereço base correspondente para esse esquema deverá ser passado.  
+  
+> [!NOTE]
+>  O filtro não oferece suporte a todos os curingas. Além disso, o baseAddresses fornecida pelo IIS pode ter endereços associados a outros esquemas não está presentes no `baseAddressPrefixFilters` lista. Esses endereços não serão filtrados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BaseAddressPrefixFilterElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BaseAddressPrefixFilterElement (Uri prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Um filtro que faz com que o serviço ao escutar em todos os URIs que começam com esse prefixo específico.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement" /> classe com um URI específico.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public Uri Prefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("prefix", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired | System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um prefixo que é usado para corresponder a uma parte de um endereço base.</summary>
+        <value>Um URI que é usado para corresponder a uma parte de um endereço base.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

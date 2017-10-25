@@ -1,0 +1,608 @@
+<Type Name="AnonymousPipeServerStream" FullName="System.IO.Pipes.AnonymousPipeServerStream">
+  <TypeSignature Language="C#" Value="public sealed class AnonymousPipeServerStream : System.IO.Pipes.PipeStream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AnonymousPipeServerStream extends System.IO.Pipes.PipeStream" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Pipes.AnonymousPipeServerStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Pipes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Pipes.PipeStream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Expõe um fluxo em torno de um pipe anônimo, que dá suporte a operações de leitura e gravação síncronas e assíncronas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pipes anônimos ajudam a fornecer segurança e proteger a comunicação entre processos entre pai e filho processos. O <xref:System.IO.Pipes.AnonymousPipeServerStream> classe permite que um processo pai enviar ou receber informações de um processo filho.  
+  
+ Pipes anônimos são pipes sem nome, unidirecionais que transferem dados entre processos pai e filho. Pipes anônimos sempre são locais; eles não podem ser usados em uma rede. Um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.InOut> não é suportado porque pipes anônimos são definidos para serem unidirecional.  
+  
+ Pipes anônimos não suportam <xref:System.IO.Pipes.PipeTransmissionMode.Message> modos de leitura.  
+  
+ Lado do cliente de um pipe anônimo deve ser criado de um identificador de pipe fornecido pelo lado do servidor chamando o <xref:System.IO.Pipes.AnonymousPipeServerStream.GetClientHandleAsString%2A> método. A cadeia de caracteres é então passada como um parâmetro ao criar o processo do cliente. No processo de cliente, em seguida, ele é passado para o <xref:System.IO.Pipes.AnonymousPipeClientStream> construtor como o `pipeHandleAsString` parâmetro.  
+  
+ O <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto deve descartar o identificador de cliente usando o <xref:System.IO.Pipes.AnonymousPipeServerStream.DisposeLocalCopyOfClientHandle%2A> método para ser notificado quando o cliente será encerrado.  
+  
+> [!NOTE]
+>  Para [!INCLUDE[winxppro](~/includes/winxppro-md.md)] e [!INCLUDE[win2kserver](~/includes/win2kserver-md.md)], um máximo de 10 pipes pode se conectar simultaneamente pela rede.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma maneira de enviar uma cadeia de caracteres de um processo pai para um processo filho usando pipes anônimos. Este exemplo cria um <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto em um processo pai com um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.Out>. Ele também cria um <xref:System.IO.Pipes.AnonymousPipeClientStream> objeto em um processo filho com um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.In>. O processo pai, em seguida, envia uma cadeia de caracteres fornecida pelo usuário para o processo filho. A cadeia de caracteres é exibida no console.  
+  
+ Este exemplo é para o processo de servidor, que usa o <xref:System.IO.Pipes.AnonymousPipeServerStream> classe. Para o exemplo de código inteiro, incluindo o código para o cliente de pipe e o servidor, consulte [como: Use o Pipes anônimos para comunicação Interprocess Local](~/docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousPipeServerStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para <xref:System.IO.Pipes.AnonymousPipeServerStream> construtores sem um <xref:System.IO.Pipes.PipeDirection> parâmetro, a direção padrão é <xref:System.IO.Pipes.PipeDirection.Out>. Um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.InOut> não é suportado porque pipes anônimos são definidos para serem unidirecional.  
+  
+ Este construtor cria um <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto que tem o tamanho do buffer padrão, nenhuma segurança de pipe, e um <xref:System.IO.HandleInheritability> valor <xref:System.IO.HandleInheritability.None>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousPipeServerStream (System.IO.Pipes.PipeDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.#ctor(System.IO.Pipes.PipeDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Um dos valores de enumeração que determinam a direção do pipe.  
+  
+ Pipes anônimos só podem ser em uma direção, portanto <c>direção</c> não pode ser definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> classe com a direção do pipe especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.InOut> não é suportado porque pipes anônimos são definidos para serem unidirecional.  
+  
+ Este construtor cria um <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto que tem o tamanho do buffer padrão, nenhuma segurança de pipe, e um <xref:System.IO.HandleInheritability> valor <xref:System.IO.HandleInheritability.None>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="direction" /> é definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousPipeServerStream (System.IO.Pipes.PipeDirection direction, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.#ctor(System.IO.Pipes.PipeDirection,System.IO.HandleInheritability)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Um dos valores de enumeração que determinam a direção do pipe.  
+  
+ Pipes anônimos só podem ser em uma direção, portanto <c>direção</c> não pode ser definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</param>
+        <param name="inheritability">Um dos valores de enumeração que determina se o identificador subjacente pode ser herdado por processos filhos. Deve ser definido como <see cref="F:System.IO.HandleInheritability.None" /> ou <see cref="F:System.IO.HandleInheritability.Inheritable" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> classe com o modo de direção e inheritability de pipe especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.InOut> não é suportado porque pipes anônimos são definidos para serem unidirecional.  
+  
+ Este construtor cria um <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto que tem o tamanho do buffer padrão e nenhuma segurança de pipe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um método para enviar uma cadeia de caracteres de um processo pai para um processo filho usando pipes anônimos. Neste exemplo, um <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto é criado em um processo pai com um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.Out>.  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="inheritability" />não está definido como <see cref="F:System.IO.HandleInheritability.None" /> ou <see cref="F:System.IO.HandleInheritability.Inheritable" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="direction" /> é definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousPipeServerStream (System.IO.Pipes.PipeDirection direction, Microsoft.Win32.SafeHandles.SafePipeHandle serverSafePipeHandle, Microsoft.Win32.SafeHandles.SafePipeHandle clientSafePipeHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction, class Microsoft.Win32.SafeHandles.SafePipeHandle serverSafePipeHandle, class Microsoft.Win32.SafeHandles.SafePipeHandle clientSafePipeHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.#ctor(System.IO.Pipes.PipeDirection,Microsoft.Win32.SafeHandles.SafePipeHandle,Microsoft.Win32.SafeHandles.SafePipeHandle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="serverSafePipeHandle" Type="Microsoft.Win32.SafeHandles.SafePipeHandle" />
+        <Parameter Name="clientSafePipeHandle" Type="Microsoft.Win32.SafeHandles.SafePipeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Um dos valores de enumeração que determinam a direção do pipe.  
+  
+ Pipes anônimos só podem ser em uma direção, portanto <c>direção</c> não pode ser definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</param>
+        <param name="serverSafePipeHandle">Um identificador seguro para o arquivo que este objeto <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> encapsulará.</param>
+        <param name="clientSafePipeHandle">Um identificador seguro para a <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> classe a partir de identificadores de pipe especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.InOut> não é suportado porque pipes anônimos são definidos para serem unidirecional.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="serverSafePipeHandle" />ou <paramref name="clientSafePipeHandle" /> é um identificador inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serverSafePipeHandle" /> ou <paramref name="clientSafePipeHandle" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="direction" /> é definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de e/s, como um erro de disco.  
+  
+ -ou-  
+  
+ O fluxo foi fechado.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousPipeServerStream (System.IO.Pipes.PipeDirection direction, System.IO.HandleInheritability inheritability, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction, valuetype System.IO.HandleInheritability inheritability, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.#ctor(System.IO.Pipes.PipeDirection,System.IO.HandleInheritability,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Um dos valores de enumeração que determinam a direção do pipe.  
+  
+ Pipes anônimos só podem ser em uma direção, portanto <c>direção</c> não pode ser definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</param>
+        <param name="inheritability">Um dos valores de enumeração que determina se o identificador subjacente pode ser herdado por processos filhos. Deve ser definido como <see cref="F:System.IO.HandleInheritability.None" /> ou <see cref="F:System.IO.HandleInheritability.Inheritable" />.</param>
+        <param name="bufferSize">O tamanho do buffer. Esse valor deve ser maior ou igual a 0.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> classe com a direção do pipe especificado, o modo de inheritability e o tamanho do buffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.InOut> não é suportado porque pipes anônimos são definidos para serem unidirecional.  
+  
+ Este construtor cria um <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto sem segurança de pipe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="inheritability" />não está definido como <see cref="F:System.IO.HandleInheritability.None" /> ou <see cref="F:System.IO.HandleInheritability.Inheritable" />.  
+  
+ -ou-  
+  
+ <paramref name="bufferSize" /> é menor que 0.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="direction" /> é definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousPipeServerStream (System.IO.Pipes.PipeDirection direction, System.IO.HandleInheritability inheritability, int bufferSize, System.IO.Pipes.PipeSecurity pipeSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.Pipes.PipeDirection direction, valuetype System.IO.HandleInheritability inheritability, int32 bufferSize, class System.IO.Pipes.PipeSecurity pipeSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.#ctor(System.IO.Pipes.PipeDirection,System.IO.HandleInheritability,System.Int32,System.IO.Pipes.PipeSecurity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="System.IO.Pipes.PipeDirection" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="pipeSecurity" Type="System.IO.Pipes.PipeSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Um dos valores de enumeração que determinam a direção do pipe.  
+  
+ Pipes anônimos só podem ser em uma direção, portanto <c>direção</c> não pode ser definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</param>
+        <param name="inheritability">Um dos valores de enumeração que determina se o identificador subjacente pode ser herdado por processos filhos.</param>
+        <param name="bufferSize">O tamanho do buffer. Esse valor deve ser maior ou igual a 0.</param>
+        <param name="pipeSecurity">Um objeto que determina o controle de acesso e a segurança de auditoria para o pipe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> classe com a direção do pipe especificado, o modo inheritability, o tamanho do buffer e a segurança de pipe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.InOut> não é suportado porque pipes anônimos são definidos para serem unidirecional.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="inheritability" />não está definido como <see cref="F:System.IO.HandleInheritability.None" /> ou <see cref="F:System.IO.HandleInheritability.Inheritable" />.  
+  
+ -ou-  
+  
+ <paramref name="bufferSize" /> é menor que 0.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="direction" /> é definido como <see cref="F:System.IO.Pipes.PipeDirection.InOut" />.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientSafePipeHandle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafePipeHandle ClientSafePipeHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafePipeHandle ClientSafePipeHandle" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.AnonymousPipeServerStream.ClientSafePipeHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafePipeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de seguro para o <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> objeto que está conectado no momento para o <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> objeto.</summary>
+        <value>Um identificador para o <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> objeto que está conectado no momento para o <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.AnonymousPipeServerStream.DisposeLocalCopyOfClientHandle%2A> método deve ser chamado depois que um identificador de cliente foi passado para um processo do cliente. Se esse método não for chamado, o <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto não receberá aviso quando o cliente descarta seu <xref:System.IO.Pipes.PipeStream> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeLocalCopyOfClientHandle">
+      <MemberSignature Language="C#" Value="public void DisposeLocalCopyOfClientHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisposeLocalCopyOfClientHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.DisposeLocalCopyOfClientHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha a cópia local do identificador de objeto <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.AnonymousPipeServerStream.DisposeLocalCopyOfClientHandle%2A> método deve ser chamado depois que o identificador de cliente foi passado para o cliente. Se esse método não for chamado, o <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto não receberá aviso quando o cliente descarta seu <xref:System.IO.Pipes.PipeStream> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma maneira de enviar uma cadeia de caracteres de um processo pai para um processo filho usando pipes anônimos. Neste exemplo, um <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto é criado em um processo pai com um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.Out>.  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~AnonymousPipeServerStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos não gerenciados e executa outras operações de limpeza antes do <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> instância é recuperada pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientHandleAsString">
+      <MemberSignature Language="C#" Value="public string GetClientHandleAsString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetClientHandleAsString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.AnonymousPipeServerStream.GetClientHandleAsString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o conectado <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> identificador do objeto como uma cadeia de caracteres.</summary>
+        <returns>Uma cadeia de caracteres que representa o conectado <see cref="T:System.IO.Pipes.AnonymousPipeClientStream" /> identificador do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.AnonymousPipeServerStream.DisposeLocalCopyOfClientHandle%2A> método deve ser chamado depois que um identificador de cliente foi passado para um processo do cliente. Se esse método não for chamado, o <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto não receberá aviso quando o cliente descarta seu <xref:System.IO.Pipes.PipeStream> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma maneira de enviar uma cadeia de caracteres de um processo pai para um processo filho usando pipes anônimos. Neste exemplo, um <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto é criado em um processo pai com um <xref:System.IO.Pipes.PipeDirection> valor <xref:System.IO.Pipes.PipeDirection.Out>.  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMode">
+      <MemberSignature Language="C#" Value="public override System.IO.Pipes.PipeTransmissionMode ReadMode { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Pipes.PipeTransmissionMode ReadMode" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.AnonymousPipeServerStream.ReadMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Pipes.PipeTransmissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o modo de leitura para o <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> objeto. Para pipes anônimos, o modo de transmissão deve ser <see cref="F:System.IO.Pipes.PipeTransmissionMode.Byte" />.</summary>
+        <value>O modo de leitura para o <see cref="T:System.IO.Pipes.AnonymousPipeServerStream" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pipes anônimos não suportam <xref:System.IO.Pipes.PipeTransmissionMode.Message> o modo de leitura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma maneira de enviar uma cadeia de caracteres de um processo pai para um processo filho usando pipes anônimos. Neste exemplo, o <xref:System.NotSupportedException> é detectado quando o <xref:System.IO.Pipes.AnonymousPipeServerStream.ReadMode%2A> está definida como <xref:System.IO.Pipes.PipeTransmissionMode.Message>.  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O modo de transmissão não é válido. Para pipes anônimos, apenas <see cref="F:System.IO.Pipes.PipeTransmissionMode.Byte" /> tem suporte.</exception>
+        <exception cref="T:System.NotSupportedException">A propriedade é definida como <see cref="F:System.IO.Pipes.PipeTransmissionMode.Message" />, que não há suporte para pipes anônimos.</exception>
+        <exception cref="T:System.IO.IOException">A conexão for interrompida ou outro erro de e/s ocorre.</exception>
+        <exception cref="T:System.ObjectDisposedException">O pipe está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmissionMode">
+      <MemberSignature Language="C#" Value="public override System.IO.Pipes.PipeTransmissionMode TransmissionMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Pipes.PipeTransmissionMode TransmissionMode" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.AnonymousPipeServerStream.TransmissionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Pipes.PipeTransmissionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo de transmissão de pipe com suporte para a conexão atual.</summary>
+        <value>O <see cref="T:System.IO.Pipes.PipeTransmissionMode" /> que tem suporte o pipe atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pipes anônimos não suportam <xref:System.IO.Pipes.PipeTransmissionMode.Message> o modo de leitura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma maneira de enviar uma cadeia de caracteres de um processo pai para um processo filho usando pipes anônimos. Neste exemplo, um <xref:System.IO.Pipes.AnonymousPipeServerStream> objeto é criado em um processo pai e o <xref:System.IO.Pipes.AnonymousPipeServerStream.TransmissionMode%2A> propriedade é exibida no console.  
+  
+ [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
+ [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
+ [!code-vb[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/vb/program.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

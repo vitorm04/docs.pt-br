@@ -1,0 +1,51 @@
+<Type Name="OneWayAttribute" FullName="System.Runtime.Remoting.Messaging.OneWayAttribute">
+  <TypeSignature Language="C#" Value="public class OneWayAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OneWayAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.OneWayAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Marca um método como uma maneira, sem um valor de retorno e <see langword="out" /> ou <see langword="ref" /> parâmetros.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando são chamados métodos unidirecionais, nenhuma mensagem de resposta ou status ou informação de espera. O <xref:System.Runtime.Remoting.Messaging.OneWayAttribute> é usado para indicar que o método tem um `void` retorno e somente `in` parâmetros. O método não é possível lançar exceções, e `ref` parâmetros e `return` valores não são suportados. O método pode executar de forma síncrona ou assíncrona em relação ao chamador. O chamador não pode fazer suposições que a chamada unidirecional executado no objeto de servidor quando o controle de thread retorna.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OneWayAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.OneWayAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Runtime.Remoting.Messaging.OneWayAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,92 @@
+<Type Name="HtmlElementInsertionOrientation" FullName="System.Windows.Forms.HtmlElementInsertionOrientation">
+  <TypeSignature Language="C#" Value="public enum HtmlElementInsertionOrientation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HtmlElementInsertionOrientation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HtmlElementInsertionOrientation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os valores que descrevem onde inserir um novo elemento ao usar <see cref="M:System.Windows.Forms.HtmlElement.InsertAdjacentElement(System.Windows.Forms.HtmlElementInsertionOrientation,System.Windows.Forms.HtmlElement)" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir exemplo insere um `DIV` elemento na parte superior de cada página que os usuários exibir fora do servidor ADatum.com. O exemplo requer que o formulário contém um <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`. O exemplo também deve importar o namespace <xref:System.Text.RegularExpressions>.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#9)]
+ [!code-vb[System.Windows.Forms.HtmlElement#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterBegin">
+      <MemberSignature Language="C#" Value="AfterBegin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HtmlElementInsertionOrientation AfterBegin = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HtmlElementInsertionOrientation.AfterBegin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementInsertionOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inserir o elemento após o elemento atual, mas antes de qualquer outro conteúdo no elemento atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AfterEnd">
+      <MemberSignature Language="C#" Value="AfterEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HtmlElementInsertionOrientation AfterEnd = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HtmlElementInsertionOrientation.AfterEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementInsertionOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inserir o elemento após o elemento atual, mas depois de qualquer outro conteúdo no elemento atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeBegin">
+      <MemberSignature Language="C#" Value="BeforeBegin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HtmlElementInsertionOrientation BeforeBegin = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HtmlElementInsertionOrientation.BeforeBegin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementInsertionOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inserir o elemento antes do elemento atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeEnd">
+      <MemberSignature Language="C#" Value="BeforeEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HtmlElementInsertionOrientation BeforeEnd = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HtmlElementInsertionOrientation.BeforeEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementInsertionOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inserir o elemento após o elemento atual.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

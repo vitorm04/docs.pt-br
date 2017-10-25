@@ -1,0 +1,15 @@
+<Namespace Name="System.Windows.Xps">
+  <Docs>
+    <summary>Fornece classes que gravar documentos XPS em um repositório de dados ou a fila de impressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Xps.XpsDocumentWriter> classe fornece a <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos de saída [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documentos para um dado armazenar ou fila de impressão.  Grupos de métodos de gravação separados são fornecidos para diferentes tipos de conteúdo incluindo <xref:System.Windows.Documents.DocumentPaginator>, <xref:System.Windows.Media.Visual>, <xref:System.Windows.Documents.FixedPage>, <xref:System.Windows.Documents.FixedDocument>, e <xref:System.Windows.Documents.FixedDocumentSequence>.  O <xref:System.Windows.Xps.XpsDocumentWriter> métodos permitem incluir também um <xref:System.Printing.PrintTicket> com o documento, além de informações adicionais de passagem aos manipuladores do <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted>, <xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged>, e <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> eventos.  
+  
+ Para obter mais informações sobre [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] consulte o XML Paper Specification (XPS) disponível para download em [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

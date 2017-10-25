@@ -1,0 +1,142 @@
+<Type Name="IWsdlImportExtension" FullName="System.ServiceModel.Description.IWsdlImportExtension">
+  <TypeSignature Language="C#" Value="public interface IWsdlImportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWsdlImportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IWsdlImportExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implementar e anexar a um <see cref="T:System.ServiceModel.Description.WsdlImporter" /> partes do objeto para controlar como o importador mapeia WSDL Web Services Description Language () de um <see cref="T:System.Web.Services.Description.ServiceDescription" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IWsdlImportExtension> interface para controlar o mapeamento entre WSDL e <xref:System.ServiceModel.Description.ServiceEndpoint> e <xref:System.ServiceModel.Description.ContractDescription> objetos, especialmente ao ler as extensões WSDL personalizadas para modificar suas informações de contrato ou ponto de extremidade. Em seguida, anexe personalizados <xref:System.ServiceModel.Description.IWsdlImportExtension> do objeto para um <xref:System.ServiceModel.Description.WsdlImporter> programaticamente ou usando um arquivo de configuração do aplicativo. Você também pode anexar personalizados <xref:System.ServiceModel.Description.IWsdlImportExtension> objeto interno <xref:System.ServiceModel.Description.WsdlImporter> usado pelo [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) usando um arquivo de configuração do aplicativo.  
+  
+ O <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A> método é chamado para importar um contrato.  
+  
+ Use o <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%2A> método de modificar os metadados que são então importados para <xref:System.ServiceModel.Description.ServiceEndpoint> e <xref:System.ServiceModel.Description.ContractDescription> objetos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.Description.IWsdlImportExtension> para adicionar um <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> e um <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> (o `WsdlDocumentationImporter`, neste caso) modificar gerado [!INCLUDE[indigo2](~/includes/indigo2-md.md)] código do cliente no nível de interface e a operação.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#4)]  
+  
+ O exemplo de código a seguir mostra como configurar o cliente do sistema de metadados usar personalizado <xref:System.ServiceModel.Description.IWsdlImportExtension> de um arquivo de configuração do aplicativo.  
+  
+ [!code-xml[C_CustomWSDLExtensions#9](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/client.exe.config#9)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeforeImport">
+      <MemberSignature Language="C#" Value="public void BeforeImport (System.Web.Services.Description.ServiceDescriptionCollection wsdlDocuments, System.Xml.Schema.XmlSchemaSet xmlSchemas, System.Collections.Generic.ICollection&lt;System.Xml.XmlElement&gt; policy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeforeImport(class System.Web.Services.Description.ServiceDescriptionCollection wsdlDocuments, class System.Xml.Schema.XmlSchemaSet xmlSchemas, class System.Collections.Generic.ICollection`1&lt;class System.Xml.XmlElement&gt; policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport(System.Web.Services.Description.ServiceDescriptionCollection,System.Xml.Schema.XmlSchemaSet,System.Collections.Generic.ICollection{System.Xml.XmlElement})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wsdlDocuments" Type="System.Web.Services.Description.ServiceDescriptionCollection" />
+        <Parameter Name="xmlSchemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="policy" Type="System.Collections.Generic.ICollection&lt;System.Xml.XmlElement&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="wsdlDocuments">As descrições de serviços para modificar.</param>
+        <param name="xmlSchemas">A coleção de esquema a ser usado durante a importação.</param>
+        <param name="policy">As declarações de política usadas durante a importação.</param>
+        <summary>Chamado antes da importação de documentos de metadados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%2A> métodos de todos os registrados <xref:System.ServiceModel.Description.IWsdlImportExtension> objetos é chamado antes de qualquer coisa é importada de metadados fornecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportContract">
+      <MemberSignature Language="C#" Value="public void ImportContract (System.ServiceModel.Description.WsdlImporter importer, System.ServiceModel.Description.WsdlContractConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ImportContract(class System.ServiceModel.Description.WsdlImporter importer, class System.ServiceModel.Description.WsdlContractConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IWsdlImportExtension.ImportContract(System.ServiceModel.Description.WsdlImporter,System.ServiceModel.Description.WsdlContractConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.ServiceModel.Description.WsdlImporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.WsdlContractConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="importer">O importador.</param>
+        <param name="context">O contexto de importação a ser modificado.</param>
+        <summary>Chamado durante a importação de um contrato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A> método é chamado quando um contrato está sendo importado. Você pode modificar o contrato ou inserir outros comportamentos de exportação, como <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> e um <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> objetos para modificar o código que é gerado para o contrato.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.Description.IWsdlImportExtension> para adicionar um <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> e um <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> (o `WsdlDocumentationImporter`, neste caso) modificar gerado [!INCLUDE[indigo2](~/includes/indigo2-md.md)] código do cliente no nível de interface e a operação.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#4)]  
+  
+ O exemplo de código a seguir mostra como configurar o cliente do sistema de metadados usar personalizado <xref:System.ServiceModel.Description.IWsdlImportExtension> de um arquivo de configuração do aplicativo.  
+  
+ [!code-xml[C_CustomWSDLExtensions#9](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/client.exe.config#9)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportEndpoint">
+      <MemberSignature Language="C#" Value="public void ImportEndpoint (System.ServiceModel.Description.WsdlImporter importer, System.ServiceModel.Description.WsdlEndpointConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ImportEndpoint(class System.ServiceModel.Description.WsdlImporter importer, class System.ServiceModel.Description.WsdlEndpointConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint(System.ServiceModel.Description.WsdlImporter,System.ServiceModel.Description.WsdlEndpointConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.ServiceModel.Description.WsdlImporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.WsdlEndpointConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="importer">O importador.</param>
+        <param name="context">O contexto de importação para modificar.</param>
+        <summary>Chamado durante a importação de um ponto de extremidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A> método é chamado durante a importação de um ponto de extremidade. Modificar as propriedades de contexto para personalizar o ponto de extremidade importado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

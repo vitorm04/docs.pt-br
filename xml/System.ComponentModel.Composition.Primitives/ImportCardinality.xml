@@ -1,0 +1,70 @@
+<Type Name="ImportCardinality" FullName="System.ComponentModel.Composition.Primitives.ImportCardinality">
+  <TypeSignature Language="C#" Value="public enum ImportCardinality" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ImportCardinality extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Primitives.ImportCardinality" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica a cardinalidade de <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos exigidos por um <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExactlyOne">
+      <MemberSignature Language="C#" Value="ExactlyOne" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Composition.Primitives.ImportCardinality ExactlyOne = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ImportCardinality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exatamente um <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objeto é necessário para o <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZeroOrMore">
+      <MemberSignature Language="C#" Value="ZeroOrMore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Composition.Primitives.ImportCardinality ZeroOrMore = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrMore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ImportCardinality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zero ou mais <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos são exigidos para o <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZeroOrOne">
+      <MemberSignature Language="C#" Value="ZeroOrOne" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Composition.Primitives.ImportCardinality ZeroOrOne = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrOne" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ImportCardinality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Zero ou um <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos são exigidos para o <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

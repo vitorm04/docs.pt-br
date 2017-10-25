@@ -1,0 +1,143 @@
+<Type Name="SyncFromAllServersOptions" FullName="System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions">
+  <TypeSignature Language="C#" Value="public enum SyncFromAllServersOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SyncFromAllServersOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica opções adicionais ao executar uma sincronização.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AbortIfServerUnavailable">
+      <MemberSignature Language="C#" Value="AbortIfServerUnavailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions AbortIfServerUnavailable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions.AbortIfServerUnavailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Anula a sincronização se qualquer servidor não pode ser contatado ou se nenhum servidor está inacessível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckServerAlivenessOnly">
+      <MemberSignature Language="C#" Value="CheckServerAlivenessOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions CheckServerAlivenessOnly = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions.CheckServerAlivenessOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Desabilita a sincronização. A topologia é analisada e são identificados os servidores não está disponíveis ou está inacessíveis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CrossSite">
+      <MemberSignature Language="C#" Value="CrossSite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions CrossSite = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions.CrossSite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sincroniza além dos limites do site. Por padrão, esse método tenta sincronizar apenas com controladores de domínio no mesmo site que o sistema base. Defina esse sinalizador para tentar sincronizar com todos os controladores de domínio na floresta da empresa. No entanto, os controladores de domínio podem ser sincronizados somente se conectado por um transporte (RPC) síncrono.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há opções de sincronização.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PushChangeOutward">
+      <MemberSignature Language="C#" Value="PushChangeOutward" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions PushChangeOutward = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions.PushChangeOutward" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Envia as alterações do servidor doméstico limite para todos os parceiros usando replicação transitiva. Isso inverte a direção da replicação e a ordem de execução dos conjuntos de replicação do modo habitual de execução.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipInitialCheck">
+      <MemberSignature Language="C#" Value="SkipInitialCheck" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions SkipInitialCheck = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions.SkipInitialCheck" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pressupõe-se de que todos os servidores estão respondendo. Isso acelerará a operação desse método, mas se alguns servidores não estão respondendo, algumas replicações transitivas poderão ser impedidas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncAdjacentServerOnly">
+      <MemberSignature Language="C#" Value="SyncAdjacentServerOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions SyncAdjacentServerOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions.SyncAdjacentServerOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Desabilita a replicação transitiva. Sincronização é executada apenas com servidores adjacentes.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

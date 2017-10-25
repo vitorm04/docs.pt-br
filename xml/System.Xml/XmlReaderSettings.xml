@@ -1,0 +1,1318 @@
+<Type Name="XmlReaderSettings" FullName="System.Xml.XmlReaderSettings">
+  <TypeSignature Language="C#" Value="public sealed class XmlReaderSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlReaderSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlReaderSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica um conjunto de recursos para dar suporte ao objeto <see cref="T:System.Xml.XmlReader" /> criado pelo método <see cref="Overload:System.Xml.XmlReader.Create" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Xml.XmlReader.Create%2A> método obter <xref:System.Xml.XmlReader> instâncias. Esse método usa o <xref:System.Xml.XmlReaderSettings> classe para especificar quais recursos implementar no <xref:System.Xml.XmlReader> cria do objeto.  
+  
+ Consulte as seções de comentários do <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlReader.Create%2A> páginas para obter informações sobre quais configurações a serem usadas para verificações de conformidade, validação e outros cenários comuns de referência. Consulte o <xref:System.Xml.XmlReaderSettings.%23ctor> construtor para obter uma lista das configurações padrão.  
+  
+## <a name="security-considerations"></a>Considerações sobre segurança  
+ Considere o seguinte ao usar o <xref:System.Xml.XmlReaderSettings> classe.  
+  
+-   Os sinalizadores de validação de <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema> e de <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation> de um objeto de <xref:System.Xml.XmlReaderSettings> não são definidos por padrão. Quando esses sinalizadores são definidos, <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> do objeto de <xref:System.Xml.XmlReaderSettings> é usado para resolver os locais de esquema encontrados no documento de instância em <xref:System.Xml.XmlReader>. Se o <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> objeto `null`, locais de esquema não são resolvidos mesmo se o <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema> e <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation> validação sinalizadores são definidos.  
+  
+-   Os esquemas adicionados durante a validação adicionar novos tipos e podem alterar o resultado de validação de documento que está sendo validada. Como resultado, os esquemas externos só devem ser resolvidos de fontes confiáveis.  
+  
+-   Mensagens de erro de validação podem expor informações confidenciais de modelo de conteúdo. Mensagens de aviso e erro de validação são tratadas usando a <xref:System.Xml.Schema.ValidationEventHandler> delegar ou são expostos como um <xref:System.Xml.Schema.XmlSchemaValidationException> se nenhum manipulador de eventos é fornecido para o <xref:System.Xml.XmlReaderSettings> objeto (avisos de validação não causam uma <xref:System.Xml.Schema.XmlSchemaValidationException> seja lançada). Essas informações de modelo de conteúdo não devem ser expostas em cenários não confiáveis. Mensagens de aviso de validação são suprimidas por padrão e podem ser relatadas, definindo o <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> sinalizador.  
+  
+-   O <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> propriedade de um <xref:System.Xml.Schema.XmlSchemaValidationException> retorna o caminho URI para o arquivo de esquema que causou a exceção. O <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> propriedade não deve ser exposta em cenários não confiáveis.  
+  
+-   Desabilitando o <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints> sinalizador (habilitada por padrão) é recomendado quando o XML de validação, não confiável, grande documentos em cenários de alta disponibilidade em um esquema com restrições de identidade em uma grande parte do documento.  
+  
+-   os objetos de<xref:System.Xml.XmlReaderSettings> podem conter informações sigilosas como credenciais do usuário. Você deve ser cuidadoso ao armazenar em cachê <xref:System.Xml.XmlReaderSettings> objetos, ou para passar o objeto de <xref:System.Xml.XmlReaderSettings> de um componente para outro.  
+  
+-   O processamento de DTD é desativado por padrão. Se você habilitar o processamento do DTD, você precisa estar ciente das incluindo DTDs de fontes não confiáveis e possíveis ataques de negação de serviço. Use o <xref:System.Xml.XmlSecureResolver> para restringir os recursos que o <xref:System.Xml.XmlReader> pode acessar.  
+  
+-   Aceitar componentes de suporte, como <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>, e objetos de <xref:System.Xml.XmlResolver> , de uma fonte não confiável.  
+  
+-   O uso de memória de um aplicativo que usa <xref:System.Xml.XmlReader> pode ter uma correlação o tamanho do documento XML analisado. Um formulário de ataque de negação de serviço é quando os documentos XML excessivamente grande são enviados para ser analisados. Você pode limitar o tamanho do documento que possa ser analisado, definindo o <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A> propriedade e, em seguida, limitar o número de caracteres que resultam de expandir entidades definindo o <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.XmlReader> que usa um <xref:System.Xml.XmlUrlResolver> com as credenciais necessárias.  
+  
+ [!code-csharp[XmlReader.Create#2](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader.Create/CS/XmlReader_Create.cs#2)]
+ [!code-vb[XmlReader.Create#2](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader.Create/VB/XmlReader_Create.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlReaderSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlReaderSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.XmlReaderSettings" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Xml.XmlReaderSettings>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Xml.XmlReaderSettings.Async%2A>|`false`.|  
+|<xref:System.Xml.XmlReaderSettings.CheckCharacters%2A>|`true`.|  
+|<xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A>|<xref:System.Xml.ConformanceLevel.Document>.|  
+|<xref:System.Xml.XmlReaderSettings.IgnoreComments%2A>|`false`.|  
+|<xref:System.Xml.XmlReaderSettings.IgnoreProcessingInstructions%2A>|`false`.|  
+|<xref:System.Xml.XmlReaderSettings.IgnoreWhitespace%2A>|`false`.|  
+|<xref:System.Xml.XmlReaderSettings.LineNumberOffset%2A>|0.|  
+|<xref:System.Xml.XmlReaderSettings.LinePositionOffset%2A>|0.|  
+|<xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A>|0 (não há nenhum limite no número de caracteres que resultam de expandir entidades).|  
+|<xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A>|0 (não há nenhum limite no tamanho do documento XML).|  
+|<xref:System.Xml.XmlReaderSettings.NameTable%2A>|`null`.|  
+|<xref:System.Xml.XmlTextReader.DtdProcessing%2A>|<xref:System.Xml.DtdProcessing.Prohibit>|  
+|<xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A>|`true`. Esta propriedade está obsoleta. Use <xref:System.Xml.XmlTextReader.DtdProcessing%2A> em seu lugar. Se você tivesse definido <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> para seu valor padrão `true` definir <xref:System.Xml.XmlTextReader.DtdProcessing%2A> para `Prohibit`. Se você tivesse definido <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> para `false` definir <xref:System.Xml.XmlTextReader.DtdProcessing%2A> para `Parse`.|  
+|<xref:System.Xml.XmlReaderSettings.Schemas%2A>|Vazio <xref:System.Xml.Schema.XmlSchemaSet> objeto.|  
+|<xref:System.Xml.XmlReaderSettings.ValidationFlags%2A>|<xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints>.|  
+|<xref:System.Xml.XmlReaderSettings.ValidationType%2A>|<xref:System.Xml.ValidationType.None>.|  
+|<xref:System.Xml.XmlReaderSettings.XmlResolver%2A>|Um novo objeto <xref:System.Xml.XmlUrlResolver>.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de configurações que pode ser usado para construir um leitor que retira o espaço em branco insignificante, comentários e instruções de processamento.  
+  
+ [!code-cpp[XmlReaderSettings.cctor#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.cctor/CPP/XmlReaderSettings.cctor.cpp#1)]
+ [!code-csharp[XmlReaderSettings.cctor#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.cctor/CS/factory_rdr_cctor2.cs#1)]
+ [!code-vb[XmlReaderSettings.cctor#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.cctor/VB/factory_rdr_cctor2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlReaderSettings (System.Xml.XmlResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlReaderSettings.#ctor(System.Xml.XmlResolver)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="resolver" Type="System.Xml.XmlResolver" />
+      </Parameters>
+      <Docs>
+        <param name="resolver">O resolvedor XML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.XmlReaderSettings" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Async">
+      <MemberSignature Language="C#" Value="public bool Async { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Async" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.Async" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se métodos <see cref="T:System.Xml.XmlReader" /> assíncronos podem ser usados em uma determinada instância do <see cref="T:System.Xml.XmlReader" />.</summary>
+        <value>
+          <see langword="true" /> se métodos assíncronos puderem ser usados; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve definir esse valor como `true` quando você cria um novo <xref:System.Xml.XmlReader> instância se você quiser usar assíncrona <xref:System.Xml.XmlReader> métodos nessa instância. Após o <xref:System.Xml.XmlReader> instância é criada, o <xref:System.Xml.XmlReaderSettings.Async%2A> propriedade é somente leitura. O valor padrão dessa propriedade é `false`.  
+  
+ Esse sinalizador é ignorado pelo <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> sobrecarga. Isso significa que, se você criar um novo <xref:System.Xml.XmlReader> com base em uma <xref:System.Xml.XmlReader>, o comportamento assíncrono depende da entrada <xref:System.Xml.XmlReader>, e você não pode usar o <xref:System.Xml.XmlReaderSettings.Async%2A> sinalizador para alterar o comportamento assíncrono.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckCharacters">
+      <MemberSignature Language="C#" Value="public bool CheckCharacters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckCharacters" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.CheckCharacters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a verificação de caracteres deve ser feita ou não.</summary>
+        <value>
+          <see langword="true" /> para fazer a verificação de caracteres de; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.  
+  
+ <block subset="none" type="note"><para>  
+ Se o <see cref="T:System.Xml.XmlReader" /> é processar dados de texto, ele sempre verifica se os nomes XML e o conteúdo de texto são válidas, independentemente da configuração de propriedade. A definição de <see cref="P:System.Xml.XmlReaderSettings.CheckCharacters" /> como <see langword="false" /> desativa a verificação de caracteres em referências de entidade de caracteres.  
+  
+</para></block></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade instrui o leitor de XML para verificar caracteres nos dados XML, ele está lendo e lançar um <xref:System.Xml.XmlException> se qualquer caractere fora do intervalo de caracteres XML válidos. Quando a verificação de caractere é ativado, você está assegurado o seguinte:  
+  
+-   Os caracteres são dentro do intervalo de caracteres XML válidos, conforme definido pelo [2.2 caracteres](http://www.w3.org/TR/2006/REC-xml-20060816/#charsets) seção da recomendação W3C XML 1.0.  
+  
+-   Todos os nomes XML são válidos, conforme definido pelo [2.3 comuns sintáticos constrói](http://www.w3.org/TR/2006/REC-xml-20060816/#NT-Name) seção da recomendação W3C XML 1.0.  
+  
+ Quando essa propriedade é definida como `true`, que é a configuração padrão, um <xref:System.Xml.XmlException> exceção é gerada se o arquivo XML contém caracteres inválidos ou nomes XML inválidos (por exemplo, um nome de elemento inicia com um número).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlReaderSettings Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlReaderSettings Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlReaderSettings.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlReaderSettings</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do <see cref="T:System.Xml.XmlReaderSettings" /> instância.</summary>
+        <returns>O clonado <see cref="T:System.Xml.XmlReaderSettings" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O clonado <xref:System.Xml.XmlReaderSettings> objeto pode ser modificado sem afetar as configurações no objeto original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseInput">
+      <MemberSignature Language="C#" Value="public bool CloseInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CloseInput" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.CloseInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o fluxo subjacente ou o <see cref="T:System.IO.TextReader" /> deverá ser fechado quando o leitor for fechado.</summary>
+        <value>
+          <see langword="true" /> para fechar o fluxo subjacente ou <see cref="T:System.IO.TextReader" /> quando o leitor for fechado, caso contrário <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa configuração é usada quando um fluxo ou <xref:System.IO.TextReader> é passado para o <xref:System.Xml.XmlReader.Create%2A> método. Se um fluxo é criado pelo leitor para o seu próprio processamento, como quando o leitor é criado com um URI ou quando ele é aberto em uma definição de tipo de documento externo, ele sempre é fechado quando o leitor está fechado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConformanceLevel">
+      <MemberSignature Language="C#" Value="public System.Xml.ConformanceLevel ConformanceLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.ConformanceLevel ConformanceLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.ConformanceLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ConformanceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de conformidade que o <see cref="T:System.Xml.XmlReader" /> cumprirá.</summary>
+        <value>Um dos valores de enumeração que especifica o nível de conformidade que será imposto pelo leitor de XML. O padrão é <see cref="F:System.Xml.ConformanceLevel.Document" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Leitores XML que são criados pelo <xref:System.Xml.XmlReader.Create%2A> método cumprir os seguintes requisitos de conformidade por padrão:  
+  
+-   Novas linhas e o valor de atributo são normalizados de acordo com o W3C [recomendação XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/).  
+  
+-   Todas as entidades são expandidas automaticamente.  
+  
+-   Atributos padrão declarados na definição do tipo de documento sempre são adicionados, mesmo quando o leitor não validar.  
+  
+-   Declaração de prefixo XML mapeado para o URI de namespace XML correto é permitida.  
+  
+-   Os nomes de notação em uma única `NotationType` declaração do atributo e `NmTokens` em uma única `Enumeration` declaração de atributo são diferentes.  
+  
+ Você pode usar o <xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A> propriedade para verificar e garantir que o fluxo que está sendo lido está em conformidade com as regras para um documento XML 1.0 bem formado ou fragmento de documento. Se os dados não está em conformidade, um <xref:System.Xml.XmlException> exceção será lançada. O padrão é <xref:System.Xml.ConformanceLevel?displayProperty=nameWithType> (nível de documento conformidade).  
+  
+ Os níveis de três conformidade são:  
+  
+|Configuração|Descrição|  
+|-------------|-----------------|  
+|<xref:System.Xml.ConformanceLevel.Document>|Garante que os dados XML está de acordo com as regras para um documento XML 1.0 bem formado. Esse nível de verificação garante que qualquer processador pode consumir o fluxo que está sendo lido como um [documento bem formado do XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/#sec-well-formed).<br /><br /> As verificações do leitor para o seguinte:<br /><br /> -O item de nível superior não deve ter todos os nós que não sejam declaração XML, definição de tipo de documento (DTD), elemento, comentário, espaço em branco ou instrução de processamento.<br />-Os dados XML devem ter exatamente um nó de elemento de nível superior.|  
+|<xref:System.Xml.ConformanceLevel.Fragment>|Garante que os dados XML está de acordo com as regras para um fragmento de documento XML 1.0 bem formado.<br /><br /> Essa configuração aceita dados XML com vários elementos de raiz, ou nós de texto no de nível superior. Esse nível de verificação garante que qualquer processador pode consumir o fluxo que está sendo lido como um [externo analisado entidade](http://www.w3.org/TR/2006/REC-xml-20060816/#wf-entities).|  
+|<xref:System.Xml.ConformanceLevel.Auto>|Especifica que o leitor deve determinar o nível de verificação de conformidade com base nos dados de entrada.<br /><br /> Verificação de compatibilidade do documento é aplicado se os dados XML contêm informações de DTD.<br /><br /> Verificação de compatibilidade de fragmento é aplicado se os dados XML contêm um dos seguintes:<br /><br /> -Nó de referência de entidade, CDATA ou texto no nível raiz.<br />-Mais de um elemento no nível raiz.<br />-Nenhum elemento no nível raiz.<br /><br /> <xref:System.Xml.XmlException> é lançada se houver um conflito, como quando há um nó de texto e um DTD no nível raiz.<br /><br /> Esta configuração pode ser usada em envolver cenários quando o método de <xref:System.Xml.XmlReader.Create%2A> é usado para adicionar recursos adicionais a <xref:System.Xml.XmlReader>existente. Nesse caso, <xref:System.Xml.ConformanceLevel?displayProperty=nameWithType> não adiciona nenhuma nova verificação de conformidade. Verificação de compatibilidade é deixado em <xref:System.Xml.XmlReader> que está sendo empacotado.|  
+  
+> [!NOTE]
+>  A recomendação XML 1,0 requer compatibilidade de um documento nível quando um DTD presente. Portanto, se o leitor estiver configurado para dar suporte a <xref:System.Xml.ConformanceLevel?displayProperty=nameWithType>, mas os dados XML contém uma definição de tipo de documento (DTD), um <xref:System.Xml.XmlException> é gerada.  
+  
+ Aqui está como o leitor trata violações de conformidade específico dependendo da configuração do <xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A> propriedade:  
+  
+|Condição|<xref:System.Xml.ConformanceLevel.Document>|<xref:System.Xml.ConformanceLevel.Fragment>|<xref:System.Xml.ConformanceLevel.Auto>|  
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|  
+|Texto ou um valor digitado aparece no nível superior.|<xref:System.Xml.XmlException>será lançada.|Não consideradas uma violação para essa configuração.|Não consideradas uma violação para essa configuração.|  
+|Vários elementos ou nenhum elemento aparecem no nível superior.|<xref:System.Xml.XmlException>será lançada.|Não consideradas uma violação para essa configuração.|Não consideradas uma violação para essa configuração.|  
+|Item de nível superior é o espaço em branco.|Não consideradas uma violação para essa configuração.|Não consideradas uma violação para essa configuração.|Não consideradas uma violação para essa configuração.|  
+|Item de nível superior é um atributo (reconhecido como um nó de texto).|<xref:System.Xml.XmlException>será lançada.|Não consideradas uma violação para essa configuração.|Não consideradas uma violação para essa configuração.|  
+|Várias, nós contíguos de texto for encontrado.|Não consideradas uma violação para essa configuração.|Não consideradas uma violação para essa configuração.|Não consideradas uma violação para essa configuração.|  
+|O mesmo prefixo de namespace é declarado duas vezes no mesmo escopo local.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|  
+|O namespace em um elemento ou atributo não existe no escopo local.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|  
+|Os dados contêm uma incompatibilidade de prefixo de namespace.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|  
+|`xml:space`atributo contém um valor inválido.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|  
+|Um nome inválido é localizado.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|  
+|O `xml` prefixo não corresponde ao URI http://www.w3.org/XML/1998/namespace.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|<xref:System.Xml.XmlException>será lançada.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.XmlReader> objeto que lê um fragmento XML.  
+  
+ [!code-csharp[XmlReader.Create#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader.Create/CS/XmlReader_Create.cs#1)]
+ [!code-vb[XmlReader.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader.Create/VB/XmlReader_Create.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DtdProcessing">
+      <MemberSignature Language="C#" Value="public System.Xml.DtdProcessing DtdProcessing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.DtdProcessing DtdProcessing" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.DtdProcessing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.DtdProcessing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina o processamento de DTDs.</summary>
+        <value>Um dos valores de enumeração que determina o processamento de DTDs. O padrão é <see cref="F:System.Xml.DtdProcessing.Prohibit" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Validação de DTD (definição) de tipo de documento é implementada usando restrições de validade definidas no W3C [Extensible Markup Language (XML) 1.0 (quarta edição) recomendação](http://www.w3.org/TR/2006/REC-xml-20060816/). DTDs usam uma gramática formal para descrever a estrutura e a sintaxe de documentos XML compatíveis com; eles especificam o conteúdo e os valores permitidos para o documento XML.  
+  
+ Essa propriedade pode ter um dos seguintes valores:  
+  
+-   <xref:System.Xml.DtdProcessing?displayProperty=nameWithType>Para habilitar o processamento do DTD.  
+  
+-   <xref:System.Xml.DtdProcessing?displayProperty=nameWithType>para lançar uma <xref:System.Xml.XmlException> exceção quando uma DTD for encontrada.  
+  
+-   <xref:System.Xml.DtdProcessing?displayProperty=nameWithType>Para desativar o processamento sem avisos ou as exceções do DTD.  
+  
+ Para executar a validação em um DTD, o <xref:System.Xml.XmlReader> usa o DTD definida na declaração DOCTYPE de um documento XML. A declaração DOCTYPE pode apontar para um DTD embutido ou pode ser uma referência a um arquivo DTD externo. Para validar um arquivo XML com base em um DTD:  
+  
+-   Defina a propriedade <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A?displayProperty=nameWithType> como `DtdProcessing.Parse.`  
+  
+-   Defina a propriedade <xref:System.Xml.XmlReaderSettings.ValidationType%2A?displayProperty=nameWithType> como `ValidationType.DTD`.  
+  
+-   Se o DTD é um arquivo externo armazenado em um recurso de rede que requer autenticação, passe um objeto <xref:System.Xml.XmlResolver> com as credenciais necessárias para o método <xref:System.Xml.XmlReader.Create%2A>.  
+  
+> [!IMPORTANT]
+>  Se o <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> está definida como <xref:System.Xml.DtdProcessing?displayProperty=nameWithType>, o <xref:System.Xml.XmlReader> não relatarão DTDs. Isso significa que a DTD/DOCTYPE será perdido na saída.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida um arquivo XML usando um arquivo DTD.  
+  
+ [!code-cpp[XmlReaderSettings.DtdValidate#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.DtdValidate/CPP/XmlReaderSettings.DtdValidate.cpp#1)]
+ [!code-csharp[XmlReaderSettings.DtdValidate#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.DtdValidate/CS/validdtd.cs#1)]
+ [!code-vb[XmlReaderSettings.DtdValidate#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.DtdValidate/VB/validdtd.vb#1)]  
+  
+## <a name="input"></a>Entrada  
+ O exemplo usa o arquivo `itemDTD.xml` como entrada.  
+  
+ [!code-xml[XmlReaderSettings.DtdValidate#2](~/samples/snippets/xml/VS_Snippets_Data/XmlReaderSettings.DtdValidate/XML/itemDTD.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreComments">
+      <MemberSignature Language="C#" Value="public bool IgnoreComments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreComments" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.IgnoreComments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os comentários devem ser ignorados.</summary>
+        <value>
+          <see langword="true" /> para ignorar comentários, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade como `true` pode resultar em vários nós de texto adjacentes que está sendo retornados do leitor. Isso não afeta a validação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de configurações que pode ser usado para construir um leitor que retira o espaço em branco insignificante, comentários e instruções de processamento.  
+  
+ [!code-cpp[XmlReaderSettings.cctor#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.cctor/CPP/XmlReaderSettings.cctor.cpp#1)]
+ [!code-csharp[XmlReaderSettings.cctor#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.cctor/CS/factory_rdr_cctor2.cs#1)]
+ [!code-vb[XmlReaderSettings.cctor#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.cctor/VB/factory_rdr_cctor2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreProcessingInstructions">
+      <MemberSignature Language="C#" Value="public bool IgnoreProcessingInstructions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreProcessingInstructions" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.IgnoreProcessingInstructions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as instruções de processamento devem ser ignoradas.</summary>
+        <value>
+          <see langword="true" /> para ignorar as instruções de processamento; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade como `true` pode resultar em vários nós de texto adjacentes que está sendo retornados do leitor. Isso não afeta a validação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de configurações que pode ser usado para construir um leitor que retira o espaço em branco insignificante, comentários e instruções de processamento.  
+  
+ [!code-cpp[XmlReaderSettings.cctor#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.cctor/CPP/XmlReaderSettings.cctor.cpp#1)]
+ [!code-csharp[XmlReaderSettings.cctor#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.cctor/CS/factory_rdr_cctor2.cs#1)]
+ [!code-vb[XmlReaderSettings.cctor#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.cctor/VB/factory_rdr_cctor2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreWhitespace">
+      <MemberSignature Language="C#" Value="public bool IgnoreWhitespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreWhitespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.IgnoreWhitespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os espaços em branco insignificantes devem ser ignorados.</summary>
+        <value>
+          <see langword="true" /> para ignorar espaços em branco; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Espaço em branco não é significativa inclui espaços, tabulações e usadas para separar a marcação para legibilidade maior de linhas em branco. Um exemplo disso é o espaço em branco no conteúdo do elemento.  
+  
+ Essa configuração de propriedade não afeta o espaço em branco entre a marcação em um modo de conteúdo misto ou espaço em branco que ocorre dentro do escopo de um `xml:space='preserve'` atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de configurações que pode ser usado para construir um leitor que retira o espaço em branco insignificante, comentários e instruções de processamento.  
+  
+ [!code-cpp[XmlReaderSettings.cctor#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.cctor/CPP/XmlReaderSettings.cctor.cpp#1)]
+ [!code-csharp[XmlReaderSettings.cctor#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.cctor/CS/factory_rdr_cctor2.cs#1)]
+ [!code-vb[XmlReaderSettings.cctor#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.cctor/VB/factory_rdr_cctor2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumberOffset">
+      <MemberSignature Language="C#" Value="public int LineNumberOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumberOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.LineNumberOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o deslocamento do número de linha do objeto <see cref="T:System.Xml.XmlReader" />.</summary>
+        <value>O deslocamento do número de linha. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlReaderSettings.LineNumberOffset%2A> determina o ponto em que o <xref:System.Xml.IXmlLineInfo.LineNumber%2A> propriedade inicia a contagem. Isso é útil se os dados XML são inseridos em um documento maior. Por exemplo, se os dados XML foram inseridos em um documento maior, e seus dados é iniciada na linha 101 do documento, convém especificar que o leitor iniciada na linha 100. Portanto, se o leitor emitiu uma exceção ao analisar a primeira linha do XML, ele seria relatar o número de linha como linha 101, em vez de linha 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePositionOffset">
+      <MemberSignature Language="C#" Value="public int LinePositionOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePositionOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.LinePositionOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o deslocamento de posição de linha do <see cref="T:System.Xml.XmlReader" /> objeto.</summary>
+        <value>O deslocamento de posição de linha. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlReaderSettings.LinePositionOffset%2A> determina o ponto em que o <xref:System.Xml.IXmlLineInfo.LinePosition%2A> propriedade inicia a contagem. Isso é útil se os dados XML são inseridos em um documento maior e não há nenhuma nova linha no início do XML. Nesse caso, se o leitor de lançar uma exceção ao analisar o XML, você deseja retornar a posição da linha em relação ao documento principal, não apenas em relação o fragmento XML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCharactersFromEntities">
+      <MemberSignature Language="C#" Value="public long MaxCharactersFromEntities { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxCharactersFromEntities" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.MaxCharactersFromEntities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o número máximo permitido de caracteres em um documento resultante da expansão de entidades.</summary>
+        <value>O número máximo permitido de caracteres de entidades expandidas. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor zero (0) significa que há limites no número de caracteres que resultam de expandir entidades. Um valor diferente de zero especifica o número máximo de caracteres que podem resultar de expandir entidades.  
+  
+ Se o leitor tenta ler um documento que contém entidades, de modo que o tamanho expandido excederá essa propriedade, um <xref:System.Xml.XmlException> será lançada.  
+  
+ Essa propriedade permite que você a reduzir ataques negação de serviço em que o invasor envia documentos XML que tentam excedem os limites de memória por meio de expansão de entidades. Limitando os caracteres que resultam de entidades expandidas, você pode detectar o ataque e recuperar de forma confiável.  
+  
+   
+  
+## Examples  
+ O código a seguir define essa propriedade e, em seguida, tenta analisar um documento que contém uma entidade que se expande para um tamanho maior que o limite definido. Em um cenário do mundo real, você definiria esse limite para um valor grande o suficiente para lidar com os documentos válidos, ainda pequeno o suficiente para limitar a ameaça de documentos mal-intencionado.  
+  
+```csharp  
+string markup =  
+@"<!DOCTYPE Root [  
+  <!ENTITY anEntity ""Expands to more than 30 characters"">  
+  <!ELEMENT Root (#PCDATA)>  
+]>  
+<Root>Content &anEntity;</Root>";  
+  
+XmlReaderSettings settings = new XmlReaderSettings();  
+settings.DtdProcessing = DtdProcessing.Parse;  
+settings.ValidationType = ValidationType.DTD;  
+settings.MaxCharactersFromEntities = 30;  
+  
+try  
+{  
+    XmlReader reader = XmlReader.Create(new StringReader(markup), settings);  
+    while (reader.Read()) { }  
+}  
+catch (XmlException ex)  
+{  
+    Console.WriteLine(ex.Message);  
+}  
+```  
+  
+```vb  
+Dim markup As String = _  
+    "<!DOCTYPE Root [" + Environment.NewLine + _  
+    "  <!ENTITY anEntity ""Expands to more than 30 characters"">" + Environment.NewLine + _  
+    "  <!ELEMENT Root (#PCDATA)>" + Environment.NewLine + _  
+    "]>" + Environment.NewLine + _  
+    "<Root>Content &anEntity;</Root>"  
+  
+Dim settings As XmlReaderSettings = New XmlReaderSettings()  
+settings.DtdProcessing = DtdProcessing.Parse;  
+settings.ValidationType = ValidationType.DTD  
+settings.MaxCharactersFromEntities = 30  
+  
+Try  
+    Dim reader As XmlReader = XmlReader.Create(New StringReader(markup), settings)  
+    While (reader.Read())  
+    End While  
+Catch ex As XmlException  
+    Console.WriteLine(ex.Message)  
+End Try  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+There is an error in XML document (MaxCharactersFromEntities, ).  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCharactersInDocument">
+      <MemberSignature Language="C#" Value="public long MaxCharactersInDocument { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxCharactersInDocument" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.MaxCharactersInDocument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o número máximo permitido de caracteres em um documento XML. Um valor zero (0) significa que não há limite para o tamanho do documento XML. Um valor diferente de zero especifica o tamanho máximo, em caracteres.</summary>
+        <value>O número máximo permitido de caracteres em um documento XML. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor zero (0) significa que há limites no número de caracteres do documento analisado. Um valor diferente de zero especifica o número máximo de caracteres que pode ser analisado.  
+  
+ O número de máximo de caracteres para o documento inclui a contagem de caracteres que resultam de entidades expandidas.  
+  
+ Se o leitor tenta ler um documento com um tamanho que excede essa propriedade, um <xref:System.Xml.XmlException> será lançada.  
+  
+ Essa propriedade permite que você a reduzir ataques negação de serviço em que o invasor envia documentos XML muito grandes. Limitando o tamanho de um documento, você pode detectar o ataque e recuperar de forma confiável.  
+  
+   
+  
+## Examples  
+ O código a seguir define essa propriedade e, em seguida, tenta analisar um documento maior que o limite. Em um cenário do mundo real, você definiria esse limite para um valor grande o suficiente para lidar com os documentos válidos, ainda pequeno o suficiente para limitar a ameaça de documentos mal-intencionado.  
+  
+```csharp  
+string markup = "<Root>Content</Root>";  
+  
+XmlReaderSettings settings = new XmlReaderSettings();  
+settings.MaxCharactersInDocument = 10;  
+  
+try  
+{  
+    XmlReader reader = XmlReader.Create(new StringReader(markup), settings);  
+    while (reader.Read()) { }  
+}  
+catch (XmlException ex)  
+{  
+    Console.WriteLine(ex.Message);  
+}  
+```  
+  
+```vb  
+Dim markup As String = "<Root>Content</Root>"  
+  
+Dim settings As XmlReaderSettings = New XmlReaderSettings()  
+settings.MaxCharactersInDocument = 10  
+  
+Try  
+    Dim reader As XmlReader = XmlReader.Create(New StringReader(markup), settings)  
+    While (reader.Read())  
+    End While  
+Catch ex As XmlException  
+    Console.WriteLine(ex.Message)  
+End Try  
+```  
+  
+ Esse código gera a seguinte saída:  
+  
+```  
+There is an error in XML document (MaxCharactersInDocument, ).  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameTable">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNameTable NameTable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNameTable NameTable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.NameTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNameTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Xml.XmlNameTable" /> usado para comparações de cadeia de caracteres atomizados.</summary>
+        <value>O <see cref="T:System.Xml.XmlNameTable" /> que armazena todas as strings atomizadas usadas por todos os <see cref="T:System.Xml.XmlReader" /> instâncias criadas usando esse <see cref="T:System.Xml.XmlReaderSettings" /> objeto.  
+  
+ O padrão é <see langword="null" />. O criado <see cref="T:System.Xml.XmlReader" /> instância usará um novo vazio <see cref="T:System.Xml.NameTable" /> se esse valor é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como um <xref:System.Xml.XmlNameTable> instância se desejar compartilhar uma tabela de nome comum entre todos os criado <xref:System.Xml.XmlReader> instâncias.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.NameTable> classe não é thread-safe. Portanto, não pode ser compartilhado entre <xref:System.Xml.XmlReader> objetos que são executados simultaneamente em threads diferentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProhibitDtd">
+      <MemberSignature Language="C#" Value="public bool ProhibitDtd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProhibitDtd" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.ProhibitDtd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use XmlReaderSettings.DtdProcessing property instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o processamento de DTD (definição de tipo de documento) deve ser proibido. Esta propriedade está obsoleta. Use <see cref="P:System.Xml.XmlTextReader.DtdProcessing" /> em seu lugar.</summary>
+        <value>
+          <see langword="true" /> para proibir o processamento de DTD; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando definido como `true`, o <xref:System.Xml.XmlReader> lança um <xref:System.Xml.XmlException> quando qualquer conteúdo DTD for encontrado. Não habilite o processamento de DTD se você estiver preocupado sobre problemas de negação de serviço ou se você está tratando as fontes não confiáveis.  
+  
+ Se você tiver o processamento de DTD ativado, você pode usar <xref:System.Xml.XmlSecureResolver> para restringir os recursos que <xref:System.Xml.XmlReader> pode acessar. Você também pode criar seu aplicativo para que processar XML é memória e hora restritos. Por exemplo, configurar limites de tempo limite no seu aplicativo ASP.NET.  
+  
+ Esta propriedade está obsoleta. Use <xref:System.Xml.XmlTextReader.DtdProcessing%2A> em seu lugar. Se você tivesse definido <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> para seu valor padrão `true` definir <xref:System.Xml.XmlTextReader.DtdProcessing%2A> para `Prohibit`. Se você tivesse definido <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> para `false` definir <xref:System.Xml.XmlTextReader.DtdProcessing%2A> para `Parse`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida os dados usando um DTD.  
+  
+ [!code-cpp[XmlReaderSettings.DtdValidate#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.DtdValidate/CPP/XmlReaderSettings.DtdValidate.cpp#1)]
+ [!code-csharp[XmlReaderSettings.DtdValidate#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.DtdValidate/CS/validdtd.cs#1)]
+ [!code-vb[XmlReaderSettings.DtdValidate#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.DtdValidate/VB/validdtd.vb#1)]  
+  
+ O exemplo usa o arquivo itemDTD.xml como entrada.  
+  
+ [!code-xml[XmlReaderSettings.DtdValidate#2](~/samples/snippets/xml/VS_Snippets_Data/XmlReaderSettings.DtdValidate/XML/itemDTD.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlReaderSettings.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine os membros da classe de configurações para seus valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Xml.XmlReaderSettings>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Xml.XmlReaderSettings.Async%2A>|`false`.|  
+|<xref:System.Xml.XmlReaderSettings.CheckCharacters%2A>|`true`.|  
+|<xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A>|<xref:System.Xml.ConformanceLevel.Document>.|  
+|<xref:System.Xml.XmlReaderSettings.IgnoreComments%2A>|`false`.|  
+|<xref:System.Xml.XmlReaderSettings.IgnoreProcessingInstructions%2A>|`false`.|  
+|<xref:System.Xml.XmlReaderSettings.IgnoreWhitespace%2A>|`false`.|  
+|<xref:System.Xml.XmlReaderSettings.LineNumberOffset%2A>|0.|  
+|<xref:System.Xml.XmlReaderSettings.LinePositionOffset%2A>|0.|  
+|<xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A>|0 (não há nenhum limite no número de caracteres que resultam de expandir entidades).|  
+|<xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A>|0 (não há nenhum limite no tamanho do documento XML).|  
+|<xref:System.Xml.XmlReaderSettings.NameTable%2A>|`null`.|  
+|<xref:System.Xml.XmlTextReader.DtdProcessing%2A>|<xref:System.Xml.DtdProcessing.Prohibit>|  
+|<xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A>|`true`. Esta propriedade está obsoleta. Use <xref:System.Xml.XmlTextReader.DtdProcessing%2A> em seu lugar. Se você tivesse definido <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> para seu valor padrão `true` definir <xref:System.Xml.XmlTextReader.DtdProcessing%2A> para `Prohibit`. Se você tivesse definido <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> para `false` definir <xref:System.Xml.XmlTextReader.DtdProcessing%2A> para `Parse`.|  
+|<xref:System.Xml.XmlReaderSettings.Schemas%2A>|Vazio <xref:System.Xml.Schema.XmlSchemaSet> objeto.|  
+|<xref:System.Xml.XmlReaderSettings.ValidationFlags%2A>|<xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints>.|  
+|<xref:System.Xml.XmlReaderSettings.ValidationType%2A>|<xref:System.Xml.ValidationType.None>.|  
+|<xref:System.Xml.XmlReaderSettings.XmlResolver%2A>|Um novo objeto <xref:System.Xml.XmlUrlResolver>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schemas">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaSet Schemas { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaSet Schemas" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.Schemas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Xml.Schema.XmlSchemaSet" /> a ser usado ao executar a validação de esquema.</summary>
+        <value>O <see cref="T:System.Xml.Schema.XmlSchemaSet" /> a ser usado ao executar a validação de esquema. O padrão é um objeto <see cref="T:System.Xml.Schema.XmlSchemaSet" /> vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  -   Não use esquemas de fontes desconhecidas ou não confiáveis ou locais. Isso comprometerá a segurança do seu código.  
+> -   Esquemas XML (incluindo esquemas embutidos) são inerentemente vulneráveis a ataques negação de serviço; não aceitá-los em cenários não confiáveis.  
+> -   Exceções e mensagens de erro de validação de esquema podem expor informações confidenciais sobre o modelo de conteúdo ou o caminho de URI para o arquivo de esquema. Tenha cuidado para não expor essas informações para chamadores não confiáveis.  
+> -   Para obter informações adicionais, consulte a seção "Considerações sobre segurança".  
+  
+ O <xref:System.Xml.Schema.XmlSchemaSet> classe só oferece suporte a esquemas de linguagem XSD de definição de esquema XML. <xref:System.Xml.XmlReader>instâncias criadas pelo <xref:System.Xml.XmlReader.Create%2A> método não pode ser configurado para habilitar a validação de esquema XML-Data Reduced (XDR).  
+  
+## <a name="security-considerations"></a>Considerações sobre segurança  
+  
+-   Não use esquemas de fontes desconhecidas ou não confiáveis. Isso comprometerá a segurança do seu código. O <xref:System.Xml.XmlUrlResolver> classe é usada para resolver esquemas externos por padrão. Para desabilitar a resolução de inclusão, importar e redefinir a elementos de um esquema, defina o <xref:System.Xml.Schema.XmlSchemaSet.XmlResolver%2A?displayProperty=nameWithType> propriedade `null`.  
+  
+-   Exceções geradas como resultado do uso de <xref:System.Xml.Schema.XmlSchemaSet> classe, como o <xref:System.Xml.Schema.XmlSchemaException> classe pode conter informações confidenciais que não devem ser expostas em cenários não confiáveis. Por exemplo, o <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> propriedade de um <xref:System.Xml.Schema.XmlSchemaException> retorna o caminho URI para o arquivo de esquema que causou a exceção. O <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> propriedade não deve ser exposta em cenários não confiáveis. Exceções devem ser tratadas corretamente para que informações confidenciais não são expostas em cenários não confiáveis.  
+  
+   
+  
+## Examples  
+ O exemplo abaixo usa o <xref:System.Xml.XmlReaderSettings> objeto e o <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> método associar um esquema a um documento XML. O esquema é adicionado para o <xref:System.Xml.XmlReaderSettings.Schemas%2A> propriedade o <xref:System.Xml.XmlReaderSettings> objeto. O valor de <xref:System.Xml.XmlReaderSettings.Schemas%2A> propriedade é um <xref:System.Xml.Schema.XmlSchemaSet> objeto. O esquema é usado para validar que o documento XML está de acordo com o modelo de conteúdo do esquema. Erros de validação de esquema e os avisos são tratados pelo <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> definido no <xref:System.Xml.XmlReaderSettings> objeto.  
+  
+ [!code-cpp[XmlSchemaSetOverall Example#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlSchemaSetOverall Example/CPP/xmlschemasetexample.cpp#1)]
+ [!code-csharp[XmlSchemaSetOverall Example#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaSetOverall Example/CS/xmlschemasetexample.cs#1)]
+ [!code-vb[XmlSchemaSetOverall Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaSetOverall Example/VB/xmlschemasetexample.vb#1)]  
+  
+ O exemplo usa o arquivo Books. XML como entrada.  
+  
+ [!code-xml[XmlSchemaSetOverall Example#2](~/samples/snippets/xml/VS_Snippets_Data/XmlSchemaSetOverall Example/XML/books.xml#2)]  
+  
+ O exemplo usa o arquivo Books como entrada.  
+  
+ [!code-xml[XmlSchemaSetOverall Example#3](~/samples/snippets/xml/VS_Snippets_Data/XmlSchemaSetOverall Example/XML/books.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationEventHandler">
+      <MemberSignature Language="C#" Value="public event System.Xml.Schema.ValidationEventHandler ValidationEventHandler;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Xml.Schema.ValidationEventHandler ValidationEventHandler" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.XmlReaderSettings.ValidationEventHandler" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.ValidationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o leitor encontra erros de validação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses eventos ocorrem durante a leitura de um documento de instância XML se o <xref:System.Xml.XmlReaderSettings.ValidationType%2A> está definida como <xref:System.Xml.ValidationType.DTD> ou <xref:System.Xml.ValidationType.Schema>. Se o <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> configuração foi ativada o <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> propriedade esses eventos também ocorrem quando os avisos de validação são encontrados.  
+  
+ Se o leitor estiver configurado para validação e nenhum manipulador de eventos de validação tiver sido definido, um <xref:System.Xml.Schema.XmlSchemaValidationException> é gerada para todos os erros de validação. (Avisos de validação não causam uma <xref:System.Xml.Schema.XmlSchemaValidationException> seja lançada).  
+  
+> [!IMPORTANT]
+>  Mensagens de erro de validação podem expor informações confidenciais de modelo de conteúdo. Mensagens de aviso e erro de validação são tratadas usando a <xref:System.Xml.Schema.ValidationEventHandler> delegar ou são expostos como um <xref:System.Xml.Schema.XmlSchemaValidationException> se nenhum manipulador de eventos é fornecido para o <xref:System.Xml.XmlReaderSettings> objeto (avisos de validação não causam uma <xref:System.Xml.Schema.XmlSchemaValidationException> seja lançada). Essas informações de modelo de conteúdo não devem ser expostas em cenários não confiáveis. Mensagens de aviso de validação são suprimidas por padrão e podem ser relatadas, definindo o <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> sinalizador.  
+>   
+>  O <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> propriedade de um <xref:System.Xml.Schema.XmlSchemaValidationException> retorna o caminho URI para o arquivo de esquema que causou a exceção. O <xref:System.Xml.Schema.XmlSchemaException.SourceUri%2A> propriedade não deve ser exposta em cenários não confiáveis.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra as configurações para especificar para criar um leitor que valida usando um esquema embutido e que também exibe avisos de validação. O manipulador de eventos de validação usa o <xref:System.Xml.Schema.XmlSeverityType> enumeração para diferenciar os erros e avisos.  
+  
+ [!code-csharp[XmlReaderSettings.IgnoreInlineSchema#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.IgnoreInlineSchema/CS/factory_rdr_cctor.cs#1)]
+ [!code-vb[XmlReaderSettings.IgnoreInlineSchema#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.IgnoreInlineSchema/VB/factory_rdr_cctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationFlags">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaValidationFlags ValidationFlags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaValidationFlags ValidationFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.ValidationFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica as configurações de validação de esquema. Essa configuração aplica-se a objetos <see cref="T:System.Xml.XmlReader" /> que validam esquemas (a propriedade <see cref="P:System.Xml.XmlReaderSettings.ValidationType" /> definida como <see langword="ValidationType.Schema" />).</summary>
+        <value>Uma combinação bit a bit dos valores de enumeração que especifica as opções de validação. <see cref="F:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints" />e <see cref="F:System.Xml.Schema.XmlSchemaValidationFlags.AllowXmlAttributes" /> estão habilitados por padrão. <see cref="F:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema" />, <see cref="F:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation" /> e <see cref="F:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings" /> são desabilitados por padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Os sinalizadores de validação de <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema> e de <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation> de um objeto de <xref:System.Xml.XmlReaderSettings> não são definidos por padrão. Quando esses sinalizadores são definidos, <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> do objeto de <xref:System.Xml.XmlReaderSettings> é usado para resolver os locais de esquema encontrados no documento de instância em <xref:System.Xml.XmlReader>. Se o <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> objeto `null`, locais de esquema não são resolvidos mesmo se o <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema> e <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation> validação sinalizadores são definidos.  
+>   
+>  Os esquemas adicionados durante a validação adicionar novos tipos e podem alterar o resultado de validação de documento que está sendo validada. Como resultado, os esquemas externos só devem ser resolvidos de fontes confiáveis.  
+>   
+>  Desabilitando o <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints> sinalizador (habilitada por padrão) é recomendado quando o XML de validação, não confiável, grande documentos em cenários de alta disponibilidade em um esquema com restrições de identidade em uma grande parte do documento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida um arquivo XML em relação a um esquema XML embutido, permitindo que o <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema> configuração. O leitor de XML está configurado para exibir avisos de validação, sp você também observa o aviso esperado no elemento raiz.  
+  
+ [!code-csharp[XmlReaderSettings.IgnoreInlineSchema#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.IgnoreInlineSchema/CS/factory_rdr_cctor.cs#1)]
+ [!code-vb[XmlReaderSettings.IgnoreInlineSchema#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.IgnoreInlineSchema/VB/factory_rdr_cctor.vb#1)]  
+  
+## <a name="input"></a>Entrada  
+ O exemplo usa o arquivo inlineSchema.xml como entrada.  
+  
+ [!code-xml[XmlReaderSettings.IgnoreInlineSchema#3](~/samples/snippets/xml/VS_Snippets_Data/XmlReaderSettings.IgnoreInlineSchema/XML/inlineSchema.xml#3)]  
+  
+## <a name="output"></a>Saída  
+ Aviso: Correspondência de esquema não encontrada. Nenhuma validação. Não foi possível encontrar informações sobre o elemento 'root'.  
+  
+ Erro de validação: O elemento 'xsdHeadCount:HeadCount' tem elemento filho inválido 'divisão'. 'ID' esperado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationType">
+      <MemberSignature Language="C#" Value="public System.Xml.ValidationType ValidationType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.ValidationType ValidationType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.ValidationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ValidationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Xml.XmlReader" /> executará a validação ou digitará a atribuição durante a leitura.</summary>
+        <value>Um dos valores <see cref="T:System.Xml.ValidationType" /> que indica se o XmlReader executará a validação ou digitará atribuição durante a leitura. O padrão é <see langword="ValidationType.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir descreve o <xref:System.Xml.ValidationType> valores.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.ValidationType.Auto> e <xref:System.Xml.ValidationType.XDR> valores de enumeração são obsoletos no .NET Framework versão 2.0.  
+  
+|ValidationType|Descrição|  
+|--------------------|-----------------|  
+|`DTD`|A validação é executada usando uma definição de tipo de documento (DTD). **Observação:** o <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> propriedade também deve ser definida como <xref:System.Xml.DtdProcessing.Parse>.|  
+|`None`|O <xref:System.Xml.XmlReader> não validar dados ou executar qualquer tipo de atribuição.|  
+|`Schema`|Validação e o tipo de atribuição é executada usando um esquema de linguagem XSD de definição de esquema XML. O leitor acessa o esquema XML usando o seguinte:<br /><br /> -Usa a <xref:System.Xml.XmlReaderSettings.Schemas%2A> propriedade para acessar o <xref:System.Xml.Schema.XmlSchemaSet> objeto associado com este leitor.<br />-Usa o esquema em linha contido no documento da instância XML. (O <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema> opção deve ser habilitada.)<br />-Usa o esquema de XML especificado pelo dicas de local de esquema (`xsi:schemaLocation` ou `xsi:noNamespaceSchemaLocation` atributo) encontrada no documento da instância XML. (O <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation> opção deve ser habilitada.)|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida usando um esquema armazenado na <xref:System.Xml.Schema.XmlSchemaSet>.  
+  
+ [!code-cpp[XmlReader_Validate_SchemaSet#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReader_Validate_SchemaSet/CPP/XmlReader_Validate_SchemaSet.cpp#1)]
+ [!code-csharp[XmlReader_Validate_SchemaSet#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader_Validate_SchemaSet/CS/validschemaset.cs#1)]
+ [!code-vb[XmlReader_Validate_SchemaSet#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader_Validate_SchemaSet/VB/validschemaset.vb#1)]  
+  
+ O exemplo usa os seguintes arquivos de entrada:  
+  
+ `booksSchemaFail.xml`  
+  
+ [!code-xml[XmlReader_Validate_SchemaSet#2](~/samples/snippets/xml/VS_Snippets_Data/XmlReader_Validate_SchemaSet/XML/booksschemafail.xml#2)]  
+  
+ `books.xsd`  
+  
+ [!code-xml[XmlReader_Validate_SchemaSet#3](~/samples/snippets/xml/VS_Snippets_Data/XmlReader_Validate_SchemaSet/XML/books.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlResolver">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlResolver XmlResolver { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlResolver XmlResolver" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlReaderSettings.XmlResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o <see cref="T:System.Xml.XmlResolver" /> usado para acessar documentos externos.</summary>
+        <value>Um <see cref="T:System.Xml.XmlResolver" /> usado para acessar documentos externos. Se definido como <see langword="null" />, uma <see cref="T:System.Xml.XmlException" /> é gerada quando o <see cref="T:System.Xml.XmlReader" /> tenta acessar um recurso externo. O padrão é um novo <see cref="T:System.Xml.XmlUrlResolver" /> sem credenciais.  Começando com o .NET Framework 4.5.2, essa configuração tem um valor padrão de <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlResolver> é usado para localizar e abrir um documento de instância XML, ou para localizar e abrir todos os recursos externos referenciados pelo documento de instância XML. Isso pode incluir entidades, DTD ou esquemas. O <xref:System.Xml.XmlResolver.Credentials%2A?displayProperty=nameWithType> propriedade pode ser usada para especificar as credenciais necessárias para autenticação de rede.  
+  
+> [!IMPORTANT]
+>  Porque o <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> podem conter informações confidenciais, como credenciais de usuário, você deve ter cuidado ao armazenar em cache <xref:System.Xml.XmlReaderSettings> objetos, ou ao passar o <xref:System.Xml.XmlReaderSettings> objeto de um componente para outro.  
+>   
+>  Um <xref:System.Xml.XmlSecureResolver> pode ser usado para acessar documentos externos. O <xref:System.Xml.XmlSecureResolver> classe ajuda a proteger a outra implementação da <xref:System.Xml.XmlResolver> encapsulando a <xref:System.Xml.XmlResolver> objeto e restringir os recursos que subjacente <xref:System.Xml.XmlResolver> tem acesso.  
+>   
+>  Os sinalizadores de validação de <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema> e de <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation> de um objeto de <xref:System.Xml.XmlReaderSettings> não são definidos por padrão. Quando esses sinalizadores são definidos, <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> do objeto de <xref:System.Xml.XmlReaderSettings> é usado para resolver os locais de esquema encontrados no documento de instância em <xref:System.Xml.XmlReader>. Se o <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> objeto `null`, locais de esquema não são resolvidos mesmo se o <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema> e <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation> validação sinalizadores são definidos.  
+>   
+>  Os esquemas adicionados durante a validação adicionar novos tipos e podem alterar o resultado de validação de documento que está sendo validada. Como resultado, os esquemas externos só devem ser resolvidos de fontes confiáveis.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.XmlReader> que usa um <xref:System.Xml.XmlSecureResolver> com as credenciais padrão.  
+  
+ [!code-csharp[XmlReader.Create#10](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader.Create/CS/XmlReader_Create.cs#10)]
+ [!code-vb[XmlReader.Create#10](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader.Create/VB/XmlReader_Create.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

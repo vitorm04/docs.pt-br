@@ -1,0 +1,1356 @@
+<Type Name="Popup" FullName="System.Windows.Controls.Primitives.Popup">
+  <TypeSignature Language="C#" Value="public class Popup : System.Windows.FrameworkElement, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Popup extends System.Windows.FrameworkElement implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.Popup" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Opened")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Child")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Child")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma janela pop-up que tem conteúdo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Modelo de conteúdo**: <xref:System.Windows.Controls.Primitives.Popup> tem uma propriedade de conteúdo: <xref:System.Windows.Controls.Primitives.Popup.Child%2A>. Um <xref:System.Windows.Controls.Primitives.Popup> pode ter no máximo um filho, que pode ser qualquer <xref:System.Windows.UIElement>.  
+  
+ A ilustração a seguir mostra um <xref:System.Windows.Controls.Primitives.Popup> controle que possui um <xref:System.Windows.Controls.Button> como seu pai.  
+  
+ ![Ilustração de pop-up](~/add/media/popuppicture.JPG "ilustração de pop-up")  
+  
+ Você pode posicionar um pop-up, definindo o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> propriedades. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md). Quando <xref:System.Windows.Controls.Primitives.Popup> é exibido na tela, ele não reposiciona a próprio se pai está reposicionado.  
+  
+ Um <xref:System.Windows.Controls.Primitives.Popup> exibe seu conteúdo em sua própria janela na tela. Um <xref:System.Windows.Controls.Primitives.Popup> controle oferece suporte a animação quando a <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> está definida como `true` e o aplicativo é executado com confiança total. Um aplicativo que está sendo executado com confiança total tem acesso completo aos recursos do sistema e é normalmente instalado no sistema do usuário. Para obter mais informações, consulte[segurança (WPF)](~/docs/framework/wpf/security-wpf.md).  
+  
+ Efeitos de bitmap e opacidade apareça no conteúdo de um <xref:System.Windows.Controls.Primitives.Popup>, você deve definir os efeitos diretamente no <xref:System.Windows.Controls.Primitives.Popup> conteúdo. O conteúdo de um <xref:System.Windows.Controls.Primitives.Popup> não herda efeitos que são definidos no <xref:System.Windows.Controls.Primitives.Popup> controlar ou em qualquer outro elemento que está na janela pai.  
+  
+ Um <xref:System.Windows.Controls.Primitives.Popup> é dimensionado para seu conteúdo por padrão. Quando isso ocorrer, aplicando um <xref:System.Windows.UIElement.RenderTransform%2A> ou efeitos de bitmap podem causar o <xref:System.Windows.Controls.Primitives.Popup> obscuros. Isso ocorre porque o tamanho padrão do conteúdo não fornecem a área suficiente para os efeitos da exibição. Se será necessário mais espaço, você pode definir uma margem ao redor de <xref:System.Windows.Controls.Primitives.Popup> conteúdo para aumentar a área que está disponível para o controle.  
+  
+ O <xref:System.Windows.FrameworkElement.Parent%2A> propriedade deve ser definida a <xref:System.Windows.Controls.Primitives.Popup> quando usado em um [!INCLUDE[TLA#tla_winfxwebapp](~/includes/tlasharptla-winfxwebapp-md.md)].  
+  
+ Para criar uma dica de ferramenta, use o <xref:System.Windows.Controls.ToolTip> e <xref:System.Windows.Controls.ToolTipService> classes. Para obter mais informações, consulte [Visão geral de ToolTip](~/docs/framework/wpf/controls/tooltip-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Windows.Controls.Primitives.Popup> controle.  
+  
+ [!code-xaml[PopupSimple#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#2)]  
+  
+ [!code-csharp[PopupSimple#CreatePopup](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml.cs#createpopup)]
+ [!code-vb[PopupSimple#CreatePopup](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSimple/VisualBasic/Window1.xaml.vb#createpopup)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Popup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.Popup" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowsTransparency">
+      <MemberSignature Language="C#" Value="public bool AllowsTransparency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowsTransparency" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.AllowsTransparency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um controle <see cref="T:System.Windows.Controls.Primitives.Popup" /> pode conter conteúdo transparente.</summary>
+        <value>
+          <see langword="true" /> se o controle <see cref="T:System.Windows.Controls.Primitives.Popup" /> pode conter conteúdo transparente, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Primitives.Popup> controle só pode conter conteúdo transparente quando o aplicativo é executado com confiança total. Um aplicativo que é executado com confiança total tem acesso completo aos recursos do sistema e é normalmente instalado no sistema local. Para obter mais informações, consulte[segurança (WPF)](~/docs/framework/wpf/security-wpf.md).  
+  
+ Essa propriedade não pode ser definida como `true` quando o <xref:System.Windows.Controls.Primitives.Popup> é hospedado em um [!INCLUDE[TLA#tla_winfxwebapp](~/includes/tlasharptla-winfxwebapp-md.md)].  
+  
+ Se o <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> está definida como `true` em um aplicativo que não é executado em confiança total, a <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> o valor da propriedade é alterado para `false`. Um aplicativo que é hospedado em um navegador é um exemplo de um aplicativo que não é executado em confiança total.  
+  
+<a name="dependencyPropertyInfo_AllowsTransparency"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.AllowsTransparencyProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> propriedade em um <xref:System.Windows.Controls.Primitives.Popup> controle.  
+  
+ [!code-csharp[PopupSnips#AllowsTransparency](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml.cs#allowstransparency)]
+ [!code-vb[PopupSnips#AllowsTransparency](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSnips/visualbasic/window1.xaml.vb#allowstransparency)]
+ [!code-xaml[PopupSnips#AllowsTransparency](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml#allowstransparency)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para definir essa propriedade para <see langword="true" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowsTransparencyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AllowsTransparencyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AllowsTransparencyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.AllowsTransparencyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.AllowsTransparency" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A>.  
+  
+   
+  
+## Examples  
+ [Visão geral das propriedades da dependência](~/docs/framework/wpf/advanced/dependency-properties-overview.md)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement Child { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement Child" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do controle <see cref="T:System.Windows.Controls.Primitives.Popup" />.</summary>
+        <value>O conteúdo <see cref="T:System.Windows.UIElement" /> do controle <see cref="T:System.Windows.Controls.Primitives.Popup" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Modelo de conteúdo**: O <xref:System.Windows.Controls.Primitives.Popup.Child%2A> é a propriedade de conteúdo somente para o <xref:System.Windows.Controls.Primitives.Popup> controle. Um <xref:System.Windows.Controls.Primitives.Popup> só pode ter um <xref:System.Windows.UIElement> como um filho, mas que filho pode conter conteúdo incorporado complexo. Por exemplo, o filho pode ser um <xref:System.Windows.Controls.StackPanel> que contém um <xref:System.Windows.Controls.Image>, texto e outros tipos de controles.  
+  
+ Quando o conteúdo é adicionado a um <xref:System.Windows.Controls.Primitives.Popup> controle, o <xref:System.Windows.Controls.Primitives.Popup> controle se torna o pai lógico para o conteúdo. Da mesma forma, o <xref:System.Windows.Controls.Primitives.Popup> conteúdo é considerado o filho lógico do <xref:System.Windows.Controls.Primitives.Popup>. O conteúdo filho não é adicionado à árvore visual que contém o <xref:System.Windows.Controls.Primitives.Popup> controle. Em vez disso, o conteúdo filho é renderizado em uma janela separada com seu próprio visual de árvore quando o <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> é definido como `true`.  
+  
+<a name="dependencyPropertyInfo_Child"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.ChildProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar conteúdo a um <xref:System.Windows.Controls.Primitives.Popup> controle.  
+  
+ [!code-csharp[PopupSnips#Child](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml.cs#child)]
+ [!code-vb[PopupSnips#Child](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSnips/visualbasic/window1.xaml.vb#child)]
+ [!code-xaml[PopupSnips#Child](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml#child)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ChildProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ChildProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.ChildProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.Child" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="public event EventHandler Closed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Closed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.Popup.Closed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Controls.Primitives.Popup.IsOpen" /> é alterada para <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Primitives.Popup> é aberto e fechado, alternando o <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um manipulador de eventos para o <xref:System.Windows.Controls.Primitives.Popup.Closed> evento.  
+  
+ [!code-csharp[PopupSnips#Closed](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml.cs#closed)]
+ [!code-vb[PopupSnips#Closed](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSnips/visualbasic/window1.xaml.vb#closed)]
+ [!code-xaml[PopupSnips#Closed](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml#closed)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRootPopup">
+      <MemberSignature Language="C#" Value="public static void CreateRootPopup (System.Windows.Controls.Primitives.Popup popup, System.Windows.UIElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CreateRootPopup(class System.Windows.Controls.Primitives.Popup popup, class System.Windows.UIElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.CreateRootPopup(System.Windows.Controls.Primitives.Popup,System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="popup" Type="System.Windows.Controls.Primitives.Popup" />
+        <Parameter Name="child" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="popup">O <see cref="T:System.Windows.Controls.Primitives.Popup" /> ao qual adicionar o conteúdo filho.</param>
+        <param name="child">O <see cref="T:System.Windows.UIElement" /> conteúdo filho.</param>
+        <summary>Anexa um elemento filho a um <see cref="T:System.Windows.Controls.Primitives.Popup" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Talvez você queira criar um controle personalizado que tem a mesma funcionalidade de um controle existente e também exibe o comportamento de um <xref:System.Windows.Controls.Primitives.Popup>.  Você pode fazer com que o controle se comportam como um <xref:System.Windows.Controls.Primitives.Popup> adicionando um <xref:System.Windows.Controls.Primitives.Popup> para seu controle e chamar o <xref:System.Windows.Controls.Primitives.Popup.CreateRootPopup%2A> método.  
+  
+ Esse método atribui `child` à propriedade filho e associa as seguintes propriedades para `child`.  
+  
+-   <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A>  
+  
+-   <xref:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallback%2A>  
+  
+-   <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>  
+  
+-   <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>  
+  
+-   <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>  
+  
+-   <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A>  
+  
+-   <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>  
+  
+-   <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>  
+  
+ Você deve implementá-las como propriedades de dependência no seu controle para que ele possa ser usado da mesma maneira que um <xref:System.Windows.Controls.Primitives.Popup>. Para obter mais informações, consulte [Propriedades de dependência personalizadas](~/docs/framework/wpf/advanced/custom-dependency-properties.md).  
+  
+ Quando você chama <xref:System.Windows.Controls.Primitives.Popup.CreateRootPopup%2A>, `child` não pode ser um filho de um <xref:System.Windows.UIElement>. Além disso, `PlacementTarget` devem ser definidas no seu controle antes de chamar esse método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomPopupPlacementCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.CustomPopupPlacementCallback CustomPopupPlacementCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Primitives.CustomPopupPlacementCallback CustomPopupPlacementCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.CustomPopupPlacementCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um método do manipulador delegado que posiciona o controle <see cref="T:System.Windows.Controls.Primitives.Popup" />.</summary>
+        <value>O método delegado <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacementCallback" /> que fornece informações de posicionamento para o controle <see cref="T:System.Windows.Controls.Primitives.Popup" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CustomPopupPlacementCallback"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallback%2A> delegate.  
+  
+ [!code-csharp[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml.cs#delegatedefinition)]
+ [!code-vb[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupCustomPlacement/visualbasic/window1.xaml.vb#delegatedefinition)]  
+  
+ [!code-csharp[PopupCustomPlacement#DelegateInstance](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml.cs#delegateinstance)]
+ [!code-vb[PopupCustomPlacement#DelegateInstance](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupCustomPlacement/visualbasic/window1.xaml.vb#delegateinstance)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomPopupPlacementCallbackProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CustomPopupPlacementCallbackProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CustomPopupPlacementCallbackProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacementCallback" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUIParentCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetUIParentCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Windows.DependencyObject GetUIParentCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.GetUIParentCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o pai lógico de um <see cref="T:System.Windows.Controls.Primitives.Popup" />.</summary>
+        <returns>Se o <see cref="T:System.Windows.Controls.Primitives.Popup" /> não tem um pai definido e o <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> não é <see langword="null" />, o <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> é retornado. Caso contrário, os valores de retorno são os mesmos <see cref="M:System.Windows.FrameworkElement.GetUIParentCore" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDropShadow">
+      <MemberSignature Language="C#" Value="public bool HasDropShadow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDropShadow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.HasDropShadow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Windows.Controls.Primitives.Popup" /> é exibido com um efeito de sombra.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.Primitives.Popup" /> é exibido com uma sombra, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um efeito de sombra é exibida quando o <xref:System.Windows.SystemParameters.DropShadow%2A?displayProperty=nameWithType> propriedade e o <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A?displayProperty=nameWithType> propriedade são definidos como `true`.  
+  
+<a name="dependencyPropertyInfo_HasDropShadow"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.HasDropShadowProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.Primitives.Popup.HasDropShadow%2A> propriedade.  
+  
+ [!code-csharp[PopupSnips#HasDropShadow](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml.cs#hasdropshadow)]
+ [!code-vb[PopupSnips#HasDropShadow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSnips/visualbasic/window1.xaml.vb#hasdropshadow)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDropShadowProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HasDropShadowProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HasDropShadowProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.HasDropShadowProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.HasDropShadow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.Popup.HasDropShadow%2A>.  
+  
+   
+  
+## Examples  
+ [Visão geral das propriedades da dependência](~/docs/framework/wpf/advanced/dependency-properties-overview.md)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffset">
+      <MemberSignature Language="C#" Value="public double HorizontalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância horizontal entre a origem de destino e o ponto de alinhamento de pop-up.</summary>
+        <value>A distância horizontal entre a origem de destino e o ponto de alinhamento de pop-up. Para obter informações sobre o ponto de alinhamento de origem e o pop-up de destino, consulte [comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md). O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode posicionar um pop-up, definindo o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> propriedades. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_HorizontalOffset"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffsetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+<a name="xamlAttributeUsage_HorizontalOffset"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object HorizontalOffset="double"/>  
+- or -  
+<object HorizontalOffset="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_HorizontallOffset"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ `double`  
+ <xref:System.Double>  
+  
+ Uma representação de cadeia de caracteres de uma <xref:System.Double> valor. Isso é interpretado como um [!INCLUDE[TLA#tla_dipixel](~/includes/tlasharptla-dipixel-md.md)] medida. Cadeias de caracteres não precisa explicitamente incluir pontos decimais. Por exemplo, um valor de `1` é aceitável.  
+  
+ O mesmo <xref:System.Double> aplicam restrições de intervalo que são mencionados na seção valor da propriedade deste tópico.  
+  
+ `qualifiedDouble`  
+ Um `double` valor conforme descrito anteriormente nesta tabela, seguido por um dos seguintes unidade declaração cadeias de caracteres: `px`, `in`, `cm`, ou `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; 1 em = 96px  
+  
+ `cm`centímetros; 1cm=(96/2.54) px  
+  
+ `pt`pontos; 1pt=(96/72) px  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.Primitives.Popup> e define o <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propriedades para 20.  O <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> está definida como <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> (que é o padrão), para que a origem de destino é o canto inferior esquerdo da área de destino e o ponto de alinhamento de pop-up é o canto superior esquerdo do <xref:System.Windows.Controls.Primitives.Popup>.  
+  
+ [!code-xaml[PopupPositionSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#5)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.HorizontalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpen">
+      <MemberSignature Language="C#" Value="public bool IsOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.IsOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Controls.Primitives.Popup" /> está visível.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.Primitives.Popup" /> estiver visível; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se usa um controle de um <xref:System.Windows.Controls.Primitives.Popup> como parte do seu estilo de padrão, associar a <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> propriedade o <xref:System.Windows.Controls.Primitives.Popup> a uma propriedade do controle. Por exemplo, um <xref:System.Windows.Controls.ComboBox> pode associar seu <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A> propriedade para o <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> propriedade o <xref:System.Windows.Controls.Primitives.Popup>. Isso simplifica a lógica para controlar quando o <xref:System.Windows.Controls.Primitives.Popup> está visível.  
+  
+<a name="dependencyPropertyInfo_IsOpen"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.IsOpenProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> propriedade.  
+  
+ [!code-csharp[PopupSnips#IsOpen](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml.cs#isopen)]
+ [!code-vb[PopupSnips#IsOpen](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSnips/visualbasic/window1.xaml.vb#isopen)]
+ [!code-xaml[PopupSnips#IsOpen](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml#isopen)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.IsOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.IsOpen" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador que você pode usar para acessar os elementos filho do <see cref="T:System.Windows.Controls.Primitives.Popup" /> controle.</summary>
+        <value>Um <see cref="T:System.Collections.IEnumerator" /> que você pode usar para acessar os elementos filho de um <see cref="T:System.Windows.Controls.Primitives.Popup" /> controle. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você adiciona o conteúdo para um <xref:System.Windows.Controls.Primitives.Popup> controle, o <xref:System.Windows.Controls.Primitives.Popup> controle se torna o pai lógico para o conteúdo. Da mesma forma, o <xref:System.Windows.Controls.Primitives.Popup> conteúdo é considerado o filho lógico do <xref:System.Windows.Controls.Primitives.Popup>. O conteúdo filho não é adicionado à árvore visual que contém o <xref:System.Windows.Controls.Primitives.Popup> controle. Em vez disso, o conteúdo filho é renderizado em uma janela separada que tem seu próprio visual de árvore quando o <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> está definida como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size availableSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size availableSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="availableSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="availableSize">O tamanho disponível que pode fornecer esse elemento filho. Você pode usar infinito como um valor para indicar que o elemento pode dimensionar para qualquer conteúdo que está disponível.</param>
+        <summary>Determina o tamanho necessário do <see cref="T:System.Windows.Controls.Primitives.Popup" /> conteúdo dentro da árvore visual do pai lógico.</summary>
+        <returns>Um <see cref="T:System.Windows.Size" /> estrutura que tem o <see cref="P:System.Windows.Size.Height" /> e <see cref="P:System.Windows.Size.Width" /> propriedades iguais a zero (0).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sempre retorna um <xref:System.Windows.Size> que tem uma largura e altura de zero (0), porque <xref:System.Windows.Controls.Primitives.Popup> conteúdo não está na árvore visual de seu pai lógico ou <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>. O conteúdo filho é criado em uma janela diferente que tem sua própria árvore visual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected virtual void OnClosed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClosed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.OnClosed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Responde quando o valor de <see cref="P:System.Windows.Controls.Primitives.Popup.IsOpen" /> alteração na propriedade de <see langword="true" /> para <see langword="false" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpened">
+      <MemberSignature Language="C#" Value="protected virtual void OnOpened (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnOpened(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.OnOpened(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os argumentos de evento.</param>
+        <summary>Responde à condição em que o valor de <see cref="P:System.Windows.Controls.Primitives.Popup.IsOpen" /> propriedade muda de <see langword="false" /> para <see langword="true" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.PreviewMouseLeftButtonDown" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação garante que um <xref:System.Windows.Controls.Primitives.Popup> fecha quando ocorre um evento do mouse fora do <xref:System.Windows.Controls.Primitives.Popup> quando o <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A> está definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseLeftButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseLeftButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseLeftButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.OnPreviewMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.PreviewMouseLeftButtonUp" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação garante que um <xref:System.Windows.Controls.Primitives.Popup> fecha quando ocorre um evento do mouse fora do <xref:System.Windows.Controls.Primitives.Popup> quando o <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A> está definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseRightButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseRightButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseRightButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.OnPreviewMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.PreviewMouseRightButtonUp" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação garante que um <xref:System.Windows.Controls.Primitives.Popup> fecha quando ocorre um evento do mouse fora do <xref:System.Windows.Controls.Primitives.Popup> quando o <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A> está definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseRightButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseRightButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseRightButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.OnPreviewMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.PreviewMouseRightButtonDown" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação garante que um <xref:System.Windows.Controls.Primitives.Popup> fecha quando ocorre um evento do mouse fora do <xref:System.Windows.Controls.Primitives.Popup> quando o <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A> está definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opened">
+      <MemberSignature Language="C#" Value="public event EventHandler Opened;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Opened" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.Popup.Opened" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Controls.Primitives.Popup.IsOpen" /> é alterada para <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Primitives.Popup> é aberto e fechado, alternando o <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um manipulador de eventos para o <xref:System.Windows.Controls.Primitives.Popup.Opened> evento.  
+  
+ [!code-csharp[PopupSnips#Opened](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml.cs#opened)]
+ [!code-vb[PopupSnips#Opened](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSnips/visualbasic/window1.xaml.vb#opened)]
+ [!code-xaml[PopupSnips#Opened](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml#opened)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Placement">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.PlacementMode Placement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.PlacementMode Placement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.Placement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a orientação do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> quando ele é aberto e especifica o comportamento do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> quando ele se sobrepõe aos limites da tela.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Controls.Primitives.PlacementMode" /> que determina a orientação do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> quando ele é aberto e que especifica como o controle interage com os limites da tela. O padrão é <see cref="F:System.Windows.Controls.Primitives.PlacementMode.Bottom" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode posicionar um pop-up, definindo o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> propriedades. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+ Se o <xref:System.Windows.SystemParameters.MenuDropAlignment%2A> é de propriedade `true`, a definição <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> para <xref:System.Windows.Controls.Primitives.PlacementMode.Left> ou <xref:System.Windows.Controls.Primitives.PlacementMode.Right> inverte a posição do <xref:System.Windows.Controls.Primitives.Popup>; <xref:System.Windows.Controls.Primitives.Popup> com <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> definido como <xref:System.Windows.Controls.Primitives.PlacementMode.Left> alinha a borda esquerda com a borda direita do <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> e um <xref:System.Windows.Controls.Primitives.Popup> com <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> definido como <xref:System.Windows.Controls.Primitives.PlacementMode.Right> alinha a borda direita com a borda esquerda do <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>.  
+  
+<a name="dependencyPropertyInfo_Placement"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.PlacementProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria quatro <xref:System.Windows.Controls.Primitives.Popup> controles que estão em relação a uma imagem. Cada <xref:System.Windows.Controls.Primitives.Popup> tem um valor diferente para a propriedade de posicionamento.  
+  
+ [!code-xaml[PopupPositionSnippet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#3)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.PlacementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.Placement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementRectangle">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect PlacementRectangle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect PlacementRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.PlacementRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o retângulo com relação ao qual o controle <see cref="T:System.Windows.Controls.Primitives.Popup" /> é posicionado ao abrir.</summary>
+        <value>O retângulo utilizado para posicionar o controle <see cref="T:System.Windows.Controls.Primitives.Popup" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode posicionar um pop-up, definindo o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> propriedades. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_PlacementRectangle"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangleProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> propriedade de um <xref:System.Windows.Controls.Primitives.Popup>. O <xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>, <xref:System.Windows.Rect.Width%2A>, e <xref:System.Windows.Rect.Height%2A> propriedades do <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> são 50, 50, 50 e 100, respectivamente. O <xref:System.Windows.Controls.Primitives.Popup> é relativa aos limites do <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> propriedade. Observe que o <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> propriedade não cria um elemento visível no aplicativo; o exemplo cria um <xref:System.Windows.Shapes.Rectangle> com os mesmos limites para representar o <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>.  
+  
+ [!code-xaml[PopupPositionSnippet#6](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#6)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementRectangleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementRectangleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementRectangleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.PlacementRectangleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementRectangle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement PlacementTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement PlacementTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento relativo ao qual o <see cref="T:System.Windows.Controls.Primitives.Popup" /> é posicionado quando é aberto.</summary>
+        <value>O <see cref="T:System.Windows.UIElement" /> que é o pai lógico do controle <see cref="T:System.Windows.Controls.Primitives.Popup" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode posicionar um pop-up, definindo o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> propriedades. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_PlacementTarget"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.PlacementTargetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.Primitives.Popup> que é o filho de um <xref:System.Windows.Controls.Canvas>e define <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> para `ellipse1`, portanto, o pop-up é relativo a <xref:System.Windows.Shapes.Ellipse>.  
+  
+ [!code-xaml[PopupPositionSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#2)]    
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementTargetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementTargetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementTargetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.PlacementTargetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopupAnimation">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.PopupAnimation PopupAnimation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.PopupAnimation PopupAnimation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.PopupAnimation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PopupAnimation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma animação de abertura e fechamento de um controle <see cref="T:System.Windows.Controls.Primitives.Popup" />.</summary>
+        <value>O valor de enumeração <see cref="T:System.Windows.Controls.Primitives.PopupAnimation" /> que define uma animação para abrir e fechar um controle <see cref="T:System.Windows.Controls.Primitives.Popup" />. O padrão é <see cref="F:System.Windows.Controls.Primitives.PopupAnimation.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Primitives.Popup> pode ser animado apenas quando o <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> está definida como `true`. Isso requer que o aplicativo que cria o <xref:System.Windows.Controls.Primitives.Popup> controle para executar com confiança total.  
+  
+ Se o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> é animada, o <xref:System.Windows.Controls.Primitives.Popup> não será animado.  
+  
+<a name="dependencyPropertyInfo_PopupAnimation"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.PopupAnimationProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Primitives.Popup.PopupAnimation%2A> propriedade.  
+  
+ [!code-csharp[PopupSnips#AllowsTransparency](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml.cs#allowstransparency)]
+ [!code-vb[PopupSnips#AllowsTransparency](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSnips/visualbasic/window1.xaml.vb#allowstransparency)]
+ [!code-xaml[PopupSnips#AllowsTransparency](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml#allowstransparency)]  
+  
+ [!code-csharp[PopupSnips#Animation](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml.cs#animation)]
+ [!code-vb[PopupSnips#Animation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSnips/visualbasic/window1.xaml.vb#animation)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopupAnimationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PopupAnimationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PopupAnimationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.PopupAnimationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.PopupAnimation" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpen">
+      <MemberSignature Language="C#" Value="public bool StaysOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StaysOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.StaysOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> será fechado quando não estiver mais em foco.</summary>
+        <value>
+          <see langword="true" /> se o controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> fecha quando a propriedade <see cref="P:System.Windows.Controls.Primitives.Popup.IsOpen" /> é definida como <see langword="false" />; <see langword="false" /> se o <see cref="T:System.Windows.Controls.Primitives.Popup" /> controle fecha quando ocorre um evento de mouse ou teclado fora do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A> está definida como `true`, <xref:System.Windows.Controls.Primitives.Popup> permanecerá aberta até que ele seja fechado explicitamente, definindo o <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> propriedade `false`. Quando <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A> é `false`, o <xref:System.Windows.Controls.Primitives.Popup> controle intercepta todos os eventos de teclado e mouse para determinar quando um desses eventos ocorre fora o <xref:System.Windows.Controls.Primitives.Popup> controle.  
+  
+<a name="dependencyPropertyInfo_StaysOpen"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.StaysOpenProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A> propriedade.  
+  
+ [!code-csharp[PopupSnips#StaysOpen](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml.cs#staysopen)]
+ [!code-vb[PopupSnips#StaysOpen](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupSnips/visualbasic/window1.xaml.vb#staysopen)]
+ [!code-xaml[PopupSnips#StaysOpen](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSnips/Csharp/Window1.xaml#staysopen)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StaysOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StaysOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.StaysOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.StaysOpen" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto a ser adicionado como filho.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Popup.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Uma cadeia de caracteres para adicionar ao objeto.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffset">
+      <MemberSignature Language="C#" Value="public double VerticalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância vertical entre a origem de destino e o ponto de alinhamento do pop-up.</summary>
+        <value>A distância vertical entre a origem de destino e o ponto de alinhamento do pop-up. Para obter informações sobre o ponto de alinhamento de origem e o pop-up de destino, consulte [comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md). O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode posicionar um pop-up, definindo o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> propriedades. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="xamlAttributeUsage_VerticalOffset"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object VerticalOffset="double"/>  
+- or -  
+<object VerticalOffset="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_VerticalOffset"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ `double`  
+ <xref:System.Double>  
+  
+ Uma representação de cadeia de caracteres de uma <xref:System.Double> valor. Isso é interpretado como um [!INCLUDE[TLA#tla_dipixel](~/includes/tlasharptla-dipixel-md.md)] medida. Cadeias de caracteres não precisa explicitamente incluir pontos decimais. Por exemplo, um valor de `1` é aceitável.  
+  
+ O mesmo <xref:System.Double> aplicam restrições de intervalo que são mencionados na seção valor da propriedade deste tópico.  
+  
+ `qualifiedDouble`  
+ Um `double` valor conforme descrito anteriormente nesta tabela, seguido por um dos seguintes unidade declaração cadeias de caracteres: `px`, `in`, `cm`, ou `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; 1 em = 96px  
+  
+ `cm`centímetros; 1cm=(96/2.54) px  
+  
+ `pt`pontos; 1pt=(96/72) px  
+  
+<a name="dependencyPropertyInfo_VerticalOffset"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.Primitives.Popup> e define o <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propriedades para 20.  O <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> está definida como <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> (que é o padrão), para que a origem de destino é o canto inferior esquerdo da área de destino e o ponto de alinhamento de pop-up é o canto superior esquerdo do <xref:System.Windows.Controls.Primitives.Popup>.  
+  
+ [!code-xaml[PopupPositionSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#5)]     
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

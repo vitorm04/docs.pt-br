@@ -1,0 +1,101 @@
+<Type Name="ParamArrayAttribute" FullName="System.ParamArrayAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ParamArrayAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ParamArrayAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ParamArrayAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que um método permitirá um número variável de argumentos na sua invocação. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ParamArrayAttribute> indica que um parâmetro de método é uma matriz de parâmetros. Uma matriz de parâmetros permite a especificação de um número desconhecido de argumentos. Uma matriz de parâmetros deve ser o último parâmetro em uma lista de parâmetros formais e ele deve ser uma matriz de dimensão única. Quando o método é chamado, uma matriz de parâmetros permite argumentos para um método a ser especificado em uma das duas maneiras:  
+  
+-   Como uma única expressão de um tipo que é implicitamente conversível para o tipo de parâmetro de matriz. A matriz de parâmetros funciona como um parâmetro de valor.  
+  
+-   Como zero ou mais argumentos, onde cada argumento é uma expressão de um tipo que é conversível implictly para o tipo do elemento da matriz de parâmetro.  
+  
+ O exemplo na próxima seção ilustra ambas as convenções de chamada.  
+  
+> [!NOTE]
+>  Normalmente, o <xref:System.ParamArrayAttribute> não é usado diretamente no código. Em vez disso, as palavras-chave de idiomas individuais, como `ParamArray` no Visual Basic e `params` em c#, são usados como wrappers para o <xref:System.ParamArrayAttribute> classe. Algumas linguagens, como c#, até mesmo podem exigir o uso de palavra-chave de linguagem e proibir o uso de <xref:System.ParamArrayAttribute>.  
+  
+ Durante a resolução de sobrecarga quando compiladores que oferece suporte a matrizes de parâmetro encontram uma sobrecarga de método que não existe, mas tem um parâmetro de menos de uma sobrecarga que inclui uma matriz de parâmetros, eles substituem o método com a sobrecarga que inclui a matriz de parâmetros. Por exemplo, uma chamada para o `String.Split()` método de instância (que não existe no <xref:System.String> classe) é resolvido como uma chamada para o <xref:System.String.Split%28System.Char%5B%5D%29?displayProperty=nameWithType> método. O compilador irá passar uma matriz vazia do tipo necessário para o método. Isso significa que o método sempre deve estar preparado para lidar com uma matriz cujo tamanho é zero ao processar os elementos na matriz de parâmetros. O exemplo fornece uma ilustração.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma `Temperature` classe que inclui um `Display` método, que deve é usado para exibir um ou mais valores de temperatura formatado. O método tem um único parâmetro, `formats`, que é definida como uma matriz de parâmetros.  
+  
+ [!code-csharp[System.ParamArrayAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ParamArrayAttribute/cs/Example.cs#1)]
+ [!code-vb[System.ParamArrayAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ParamArrayAttribute/vb/Example.vb#1)]  
+  
+ O exemplo a seguir ilustra três chamadas diferentes para o `Temperature.Display` método. No primeiro, o método é passado a uma matriz de cadeias de caracteres de formato. No segundo, o método é passado quatro cadeias de caracteres de formato individuais como argumentos. No terceiro, o método é chamado sem argumentos. Como mostra a saída do exemplo, os compiladores do Visual Basic e c# convertem isso em uma chamada para o `Display` método com uma matriz de cadeia de caracteres vazia.  
+  
+ [!code-csharp[System.ParamArrayAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ParamArrayAttribute/cs/Example.cs#2)]
+ [!code-vb[System.ParamArrayAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ParamArrayAttribute/vb/Example.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParamArrayAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ParamArrayAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ParamArrayAttribute" /> com propriedades padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

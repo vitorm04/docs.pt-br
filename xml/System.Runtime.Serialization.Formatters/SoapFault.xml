@@ -1,0 +1,206 @@
+<Type Name="SoapFault" FullName="System.Runtime.Serialization.Formatters.SoapFault">
+  <TypeSignature Language="C#" Value="public sealed class SoapFault : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SoapFault extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatters.SoapFault" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Remoting.Metadata.SoapType(Embedded=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações de status e erros em uma mensagem SOAP. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapFault ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.SoapFault.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" /> com valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapFault (string faultCode, string faultString, string faultActor, System.Runtime.Serialization.Formatters.ServerFault serverFault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string faultCode, string faultString, string faultActor, class System.Runtime.Serialization.Formatters.ServerFault serverFault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.SoapFault.#ctor(System.String,System.String,System.String,System.Runtime.Serialization.Formatters.ServerFault)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="faultCode" Type="System.String" />
+        <Parameter Name="faultString" Type="System.String" />
+        <Parameter Name="faultActor" Type="System.String" />
+        <Parameter Name="serverFault" Type="System.Runtime.Serialization.Formatters.ServerFault" />
+      </Parameters>
+      <Docs>
+        <param name="faultCode">O código de falha para a nova instância de <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />. O código de falha identifica o tipo de falha que ocorreu.</param>
+        <param name="faultString">A cadeia de caracteres de falhas para a nova instância de <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />. A cadeia de caracteres de falhas fornece uma explicação de legível humana da falha.</param>
+        <param name="faultActor">O URI do objeto que gerou a falha.</param>
+        <param name="serverFault">A descrição de uma exceção de tempo de execução de linguagem comum. Essas informações também estão presentes no <see cref="P:System.Runtime.Serialization.Formatters.SoapFault.Detail" /> propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" /> classe, definindo as propriedades com valores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detail">
+      <MemberSignature Language="C#" Value="public object Detail { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Detail" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapFault.Detail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações adicionais necessárias para o <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />.</summary>
+        <value>Informações adicionais necessárias para o <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento de detalhe executa o aplicativo informações de erro específicas relacionadas ao `Body` elemento de uma mensagem SOAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultActor">
+      <MemberSignature Language="C#" Value="public string FaultActor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FaultActor" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapFault.FaultActor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ator de falha para o <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />.</summary>
+        <value>O ator de falha para o <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Serialization.Formatters.SoapFault.FaultActor%2A> propriedade fornece informações sobre a causa da falha no caminho de mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultCode">
+      <MemberSignature Language="C#" Value="public string FaultCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FaultCode" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapFault.FaultCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o código de falha para o <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />.</summary>
+        <value>O código de falha para este <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento de código falha fornece um mecanismo de algoritmo para identificar a falha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultString">
+      <MemberSignature Language="C#" Value="public string FaultString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FaultString" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.SoapFault.FaultString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a mensagem de falha para o <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />.</summary>
+        <value>A mensagem de falha para o <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento de cadeia de caracteres de falhas fornece uma explicação legível humana da falha e não se destina ao processamento de algoritmo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.SoapFault.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino (consulte <see cref="T:System.Runtime.Serialization.StreamingContext" />) para a serialização atual.</param>
+        <summary>Popula especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados para serializar o <see cref="T:System.Runtime.Serialization.Formatters.SoapFault" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

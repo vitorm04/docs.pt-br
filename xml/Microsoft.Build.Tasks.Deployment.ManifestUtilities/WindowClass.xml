@@ -1,0 +1,185 @@
+<Type Name="WindowClass" FullName="Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass">
+  <TypeSignature Language="C#" Value="public class WindowClass" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowClass extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma classe de janela em um manifesto de aplicativo.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowClass (string name, bool versioned);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, bool versioned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="versioned" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da classe.</param>
+        <param name="versioned">Controla se a classe de janela interno nome que é usado no registro contém a versão do assembly que contém a classe de janela.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass" /> classe, especificando informações sobre o status de controle de versão da classe de janela.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `versioned` parâmetro controla se a classe de janela interno nome que é usado no registro contém a versão do assembly que contém a classe de janela. O valor desse atributo pode ser `yes` ou `no`. O padrão é `yes`. O valor `no` deve ser usada somente se a mesma classe de janela é definida por um componente lado a lado e um componente não---lado a lado equivalente e você deseja tratá-los como a mesma classe de janela. Observe que se aplicam as regras comuns sobre o registro de classe de janela: somente o primeiro componente que registra a classe de janela poderá registrá-lo, porque ele não tem uma versão aplicada a ele.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da classe de janela.</summary>
+        <value>O nome da classe de janela.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Versioned">
+      <MemberSignature Language="C#" Value="public bool Versioned { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Versioned" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que controla se o nome da classe de janela interno que é usado no registro contém a versão do assembly que contém a classe de janela.</summary>
+        <value>
+          <see langword="yes" />Se o nome que é usado no registro contém a versão do assembly. Caso contrário, <see langword="no" />. O padrão é <see langword="yes" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade controla se a classe de janela interno nome que é usado no registro contém a versão do assembly que contém a classe de janela. O valor desse atributo pode ser `yes` ou `no`. O padrão é `yes`. O valor `no` deve ser usada somente se a mesma classe de janela é definida por um componente lado a lado e um componente não---lado a lado equivalente e você deseja tratá-los como a mesma classe de janela. Observe que se aplicam as regras comuns sobre o registro de classe de janela: somente o primeiro componente que registra a classe de janela poderá registrá-lo, porque ele não tem uma versão aplicada a ele.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="XmlName">
+      <MemberSignature Language="C#" Value="public string XmlName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.XmlName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("Name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma propriedade que é usada para serializar o <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name" /> propriedade para um arquivo XML.</summary>
+        <value>O valor da propriedade <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Name" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="XmlVersioned">
+      <MemberSignature Language="C#" Value="public string XmlVersioned { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlVersioned" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.XmlVersioned" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("Versioned")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma propriedade que é usada para serializar o <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned" /> propriedade para um arquivo XML.</summary>
+        <value>O valor da propriedade <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass.Versioned" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

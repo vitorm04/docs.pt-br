@@ -1,0 +1,228 @@
+<Type Name="DocumentAutomationPeer" FullName="System.Windows.Automation.Peers.DocumentAutomationPeer">
+  <TypeSignature Language="C#" Value="public class DocumentAutomationPeer : System.Windows.Automation.Peers.ContentTextAutomationPeer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DocumentAutomationPeer extends System.Windows.Automation.Peers.ContentTextAutomationPeer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.DocumentAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.ContentTextAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Expõe <see cref="F:System.Windows.Automation.ControlType.Document" /> controlar os tipos de automação de interface do usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Automation.Peers.DocumentAutomationPeer> representa documentos e oferece suporte a <xref:System.Windows.Automation.TextPattern>.  Objetos como um <xref:System.Windows.Documents.FixedDocument> ou <xref:System.Windows.Documents.FlowDocument> pode conter objetos inseridos, como imagens e hiperlinks.  Inicialmente, ao tentar obter o filho elementos do documento, <xref:System.Windows.Automation.Peers.DocumentAutomationPeer.GetChildrenCore%2A?displayProperty=nameWithType> não retorna objetos incorporados.  Para obter os elementos inseridos, obter um <xref:System.Windows.Automation.Text.TextPatternRange> do <xref:System.Windows.Automation.TextPattern> e chame <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A?displayProperty=nameWithType>.  Depois de <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A?displayProperty=nameWithType> é chamado, quaisquer elementos em que <xref:System.Windows.Automation.Text.TextPatternRange> são retornados por <xref:System.Windows.Automation.Peers.DocumentAutomationPeer.GetChildrenCore%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  A menos que você sabe que o documento é um <xref:System.Windows.Documents.FlowDocument>, você não deve chamar <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> no <xref:System.Windows.Automation.TextPattern.DocumentRange%2A?displayProperty=nameWithType> propriedade. Se o documento é carregado de um local de rede, chamar <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> em todo o documento é recurso intensivo.  Em vez disso, você deve usar um dos métodos <xref:System.Windows.Automation.TextPattern> que retorna um <xref:System.Windows.Automation.Text.TextPatternRange> que representa uma parte do documento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DocumentAutomationPeer (System.Windows.FrameworkContentElement owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.FrameworkContentElement owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DocumentAutomationPeer.#ctor(System.Windows.FrameworkContentElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.FrameworkContentElement" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DocumentAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o tipo de controle para o controle que está associado a essa <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
+        <returns>
+          <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Text" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundingRectangleCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Rect GetBoundingRectangleCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Rect GetBoundingRectangleCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DocumentAutomationPeer.GetBoundingRectangleCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Rect" /> que representa as coordenadas de tela do elemento que é associada a essa <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetBoundingRectangle" />.</summary>
+        <returns>O retângulo delimitador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildrenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.List`1&lt;class System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DocumentAutomationPeer.GetChildrenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a coleção de elementos filho para o <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" />.</summary>
+        <returns>Porque <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" /> fornece acesso ao seu conteúdo por meio de <see cref="T:System.Windows.Automation.TextPattern" />, esse método sempre retornará <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DocumentAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
+        <returns>Uma cadeia de caracteres que contém o "Documento".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClickablePointCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Point GetClickablePointCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Point GetClickablePointCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DocumentAutomationPeer.GetClickablePointCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Point" /> que representa o espaço que pode ser clicado no <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.ContentElementAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClickablePoint" />.</summary>
+        <returns>O ponto que representa o espaço que pode ser clicado no elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DocumentAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Um dos valores de enumeração.</param>
+        <summary>Obtém o padrão de controle para o <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" />.</summary>
+        <returns>Se <paramref name="patternInterface" /> é <see cref="F:System.Windows.Automation.Peers.PatternInterface.Text" />, esse método retorna um <see cref="T:System.Windows.Automation.Provider.ITextProvider" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsControlElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsControlElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsControlElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DocumentAutomationPeer.IsControlElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" /> é compreendido pelo usuário final como interativo ou o usuário pode entender o <see cref="T:System.Windows.FrameworkContentElement" /> como que contribuem para a estrutura lógica do controle no [!INCLUDE[TLA2#tla_gui](~/includes/tla2sharptla-gui-md.md)]. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsControlElement" />.</summary>
+        <returns>
+          <see langword="true" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOffscreenCore">
+      <MemberSignature Language="C#" Value="protected override bool IsOffscreenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsOffscreenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.DocumentAutomationPeer.IsOffscreenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.FrameworkContentElement" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.DocumentAutomationPeer" /> está fora da tela. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsOffscreen" />.</summary>
+        <returns>
+          <see langword="true" />Se o elemento não está na tela; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não indica se o elemento está visível. Em algumas circunstâncias, um elemento está na tela, mas ainda não está visível. Por exemplo, se o elemento é obscurecido por outros elementos, ele não fiquem visível. Nesse caso, o método retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

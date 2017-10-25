@@ -1,0 +1,380 @@
+<Type Name="Table" FullName="System.Windows.Documents.Table">
+  <TypeSignature Language="C#" Value="public class Table : System.Windows.Documents.Block, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Table extends System.Windows.Documents.Block implements class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Table" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Block</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("RowGroups")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Um elemento de conteúdo de fluxo em nível de bloco que fornece uma apresentação baseada em grade organizada por linhas e colunas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Table>deriva a <xref:System.Windows.Documents.Block> elemento e segue as regras comuns que contém um <xref:System.Windows.Documents.Block> elemento.  Um <xref:System.Windows.Documents.Table> elemento pode estar contido em qualquer um dos seguintes elementos:  
+  
+-   <xref:System.Windows.Documents.FlowDocument>  
+  
+-   <xref:System.Windows.Documents.TableCell>  
+  
+-   <xref:System.Windows.Controls.ListBoxItem>  
+  
+-   <xref:System.Windows.Controls.ListViewItem>  
+  
+-   <xref:System.Windows.Documents.Section>  
+  
+-   <xref:System.Windows.Documents.Floater>  
+  
+-   <xref:System.Windows.Documents.Figure>  
+  
+> [!NOTE]
+>  <xref:System.Windows.Documents.Table>é semelhante do <xref:System.Windows.Controls.Grid> elemento mas tem mais recursos e, portanto, requer mais overhead de recursos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Table ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Table.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.Table" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public override void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Table.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado antes da inicialização de um elemento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellSpacing">
+      <MemberSignature Language="C#" Value="public double CellSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CellSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Table.CellSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de espaçamento entre as células em uma tabela.</summary>
+        <value>A quantidade de espaçamento entre as células em uma tabela, em pixels independentes de dispositivo.  
+  
+ O valor padrão é **2.0**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_CellSpacing"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="double"/>  
+- or -  
+<object property="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_CellSpacing"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *double*  
+ <xref:System.Double>  
+  
+ Representação de cadeia de caracteres um <xref:System.Double> valor maior que ou igual a **0,0** mas menor do que <xref:System.Double.PositiveInfinity>. Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *qualifiedDouble*  
+ Um *duplo* valor conforme descrito acima, seguido por um dos seguintes especificadores de unidade: `px`, `in`, `cm`, `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ `cm`centímetros; 1cm==(96/2.54) px  
+  
+ `pt`pontos; 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_CellSpacing"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Table.CellSpacingProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma tabela simples 2 x 3 com uma <xref:System.Windows.Documents.Table.CellSpacing%2A> de 0,35 centímetros.  
+  
+ [!code-xaml[TableSnippets2#_Table_ColumnSpacing](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspacing)]  
+  
+ A figura a seguir mostra como esse exemplo é renderizado.  
+  
+ ![Captura de tela: Espaçamento da célula de tabela](~/add/media/table-cellspacing.png "captura de tela: espaçamento da célula de tabela")  
+  
+ Em contraste, a figura a seguir mostra como a mesma tabela é processado com um espaçamento de célula padrão de 2 pixels.  
+  
+ ![Captura de tela: Espaçamento da célula de tabela](~/add/media/table-cellspacingdefault.png "captura de tela: espaçamento da célula de tabela")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellSpacingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CellSpacingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CellSpacingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Table.CellSpacingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Table.CellSpacing" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TableColumnCollection Columns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TableColumnCollection Columns" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Table.Columns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TableColumnCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Documents.TableColumnCollection" /> objeto que contém as colunas hospedadas pela tabela.</summary>
+        <value>Um <see cref="T:System.Windows.Documents.TableColumnCollection" /> objeto que contém as colunas (representado por <see cref="T:System.Windows.Documents.TableColumn" /> objetos) hospedado pela tabela. Observe que esse número não pode ser o número real de colunas renderizado na tabela. É o <see cref="T:System.Windows.Documents.TableCell" /> objetos em uma tabela que determinam o número de colunas, na verdade, é renderizado.  
+  
+ Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.TableColumn> objetos retornados por essa propriedade podem, em conjunto com o <xref:System.Windows.Documents.TableCell> objetos na coluna, pode ser usado para definir o layout de colunas, mas elas não determinam o número real de colunas renderizado. É o <xref:System.Windows.Documents.TableCell> objetos em uma tabela que determinam o número de colunas, na verdade, é renderizado. Por exemplo, se você define 3 colunas, mas tiver apenas células da tabela de 2 colunas, serão renderizadas somente 2 colunas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public override void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Table.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado imediatamente depois que um elemento é inicializado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Table.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador que pode ser usado para iterar os filhos lógicos a <see cref="T:System.Windows.Documents.Table" />.</summary>
+        <value>Um enumerador para os filhos lógicos a <see cref="T:System.Windows.Documents.Table" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os objetos filho são enumerados na seguinte ordem:  
+  
+1.  Colunas (representado por <xref:System.Windows.Documents.TableColumn> objetos).  
+  
+2.  Grupos de linhas (representado por <xref:System.Windows.Documents.TableRowGroup> objetos).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Table.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objeto para este <see cref="T:System.Windows.Documents.Table" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objeto para este <see cref="T:System.Windows.Documents.Table" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowGroups">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TableRowGroupCollection RowGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TableRowGroupCollection RowGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Table.RowGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TableRowGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Documents.TableRowGroupCollection" /> objeto da coleção que contém os grupos de linhas hospedados pela tabela.</summary>
+        <value>Um <see cref="T:System.Windows.Documents.TableRowGroupCollection" /> objeto da coleção que contém os grupos de linhas (representado por <see cref="T:System.Windows.Documents.TableRowGroup" /> objetos) hospedado pela tabela.  
+  
+ Esta propriedade não tem valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeColumns">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeColumns ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeColumns() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Table.ShouldSerializeColumns" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o valor efetivo do <see cref="P:System.Windows.Documents.Table.Columns" /> propriedade deve ser serializada durante a serialização de um <see cref="T:System.Windows.Documents.Table" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Documents.Table.Columns" /> propriedade deve ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Table.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto filho a ser adicionado.</param>
+        <summary>Adiciona um objeto filho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Table.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser adicionado ao objeto.</param>
+        <summary>Adiciona o conteúdo do texto de um nó ao objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

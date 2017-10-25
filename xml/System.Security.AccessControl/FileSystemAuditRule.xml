@@ -1,0 +1,264 @@
+<Type Name="FileSystemAuditRule" FullName="System.Security.AccessControl.FileSystemAuditRule">
+  <TypeSignature Language="C#" Value="public sealed class FileSystemAuditRule : System.Security.AccessControl.AuditRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FileSystemAuditRule extends System.Security.AccessControl.AuditRule" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.FileSystemAuditRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.AuditRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma abstração de uma entrada de controle de acesso (ACE) que define uma regra de auditoria para um arquivo ou diretório. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.AccessControl.FileSystemAuditRule> classe representa uma abstração de uma base controle entrada de acesso (ACE) que especifica uma conta de usuário, o tipo de acesso para fornecer (leitura, gravação e assim por diante) e se deseja executar a auditoria.  Essa classe também pode especificar como as regras de auditoria são herdadas do e propagadas para objetos.  
+  
+ Para permitir a auditoria de arquivo e diretório no Windows NT ou posterior, você deve habilitar a política de auditoria de segurança de acesso no seu computador.  Por padrão, essa política é definida como sem auditoria.  
+  
+ Para habilitar a política de auditoria de segurança de acesso, execute as seguintes etapas:  
+  
+1.  Abra o **configurações de segurança Local** snap-in Console de gerenciamento Microsoft (MMC), localizado na pasta Ferramentas administrativas.  
+  
+2.  Expanda a pasta Diretivas locais e clique na pasta de política de auditoria.  
+  
+3.  Clique duas vezes o **auditar acesso ao objeto** entrada no painel à direita do snap-in do MMC, ou com o botão direito e selecione Propriedades para exibir o **propriedades de acesso do objeto de auditoria** caixa de diálogo.  
+  
+4.  Selecione o **êxito** ou **falha** caixas de seleção para registrar êxitos ou falhas.  
+  
+ Observe que uma regra de auditoria para uma conta de usuário requer uma regra de acesso correspondente para a mesma conta de usuário.  
+  
+ Use o <xref:System.Security.AccessControl.FileSystemAuditRule> classe para criar uma nova regra de auditoria.  Você pode manter essa regra usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa a <xref:System.Security.AccessControl.FileSystemAuditRule> classe para adicionar e, em seguida, remover uma regra de auditoria de um arquivo.  Você deve fornecer uma conta de grupo ou de usuário válido para executar este exemplo.  
+  
+ [!code-csharp[AccessControl.FileSystemAuditRule#1](~/samples/snippets/csharp/VS_Snippets_CLR/AccessControl.FileSystemAuditRule/cs/sample.cs#1)]
+ [!code-vb[AccessControl.FileSystemAuditRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AccessControl.FileSystemAuditRule/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemAuditRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.FileSystemRights fileSystemRights, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSystemAuditRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.FileSystemRights,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="fileSystemRights" Type="System.Security.AccessControl.FileSystemRights" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que encapsula uma referência a uma conta de usuário.</param>
+        <param name="fileSystemRights">Uma da <see cref="T:System.Security.AccessControl.FileSystemRights" /> valores que especifica o tipo de operação associada à regra de auditoria.</param>
+        <param name="flags">Uma da <see cref="T:System.Security.AccessControl.AuditFlags" /> valores que especifica quando executar a auditoria.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.FileSystemAuditRule" /> classe usando uma referência a uma conta de usuário, um valor que especifica o tipo de operação associada à regra de auditoria e um valor que especifica quando executar a auditoria.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de auditoria que você pode persistir usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  As regras de auditoria determinam quando e como executar as ações em objetos do sistema, como arquivos e pastas, são registradas em log.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="identity" /> não é um objeto <see cref="T:System.Security.Principal.IdentityReference" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="identity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Uma enumeração incorretova foi transmitida para o <paramref name="flags" /> parâmetro.  
+  
+ -ou-  
+  
+ O <see cref="F:System.Security.AccessControl.AuditFlags.None" /> valor passado para o <paramref name="flags" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemAuditRule (string identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.Security.AccessControl.FileSystemRights fileSystemRights, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSystemAuditRule.#ctor(System.String,System.Security.AccessControl.FileSystemRights,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="fileSystemRights" Type="System.Security.AccessControl.FileSystemRights" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identity">O nome de uma conta de usuário.</param>
+        <param name="fileSystemRights">Uma da <see cref="T:System.Security.AccessControl.FileSystemRights" /> valores que especifica o tipo de operação associada à regra de auditoria.</param>
+        <param name="flags">Uma da <see cref="T:System.Security.AccessControl.AuditFlags" /> valores que especifica quando executar a auditoria.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.FileSystemAuditRule" /> classe usando um nome de conta de usuário, um valor que especifica o tipo de operação associada à regra de auditoria e um valor que especifica quando executar a auditoria.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de auditoria que você pode persistir usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  As regras de auditoria determinam quando e como executar as ações em objetos do sistema, como arquivos e pastas, são registradas em log.  
+  
+ O `identity` parâmetro deve identificar uma conta válida no domínio ou computador atual.  A cadeia de caracteres leva o seguinte formato, onde `DOMAIN` é o nome de um nome de computador ou de domínio válido e `account` é o nome de uma conta de usuário em um computador ou domínio: `DOMAIN\account`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa a <xref:System.Security.AccessControl.FileSystemAuditRule> classe para adicionar e, em seguida, remover uma regra de auditoria de um arquivo.  Você deve fornecer uma conta de grupo ou de usuário válido para executar este exemplo.  
+  
+ [!code-csharp[AccessControl.FileSystemAuditRule#1](~/samples/snippets/csharp/VS_Snippets_CLR/AccessControl.FileSystemAuditRule/cs/sample.cs#1)]
+ [!code-vb[AccessControl.FileSystemAuditRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AccessControl.FileSystemAuditRule/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Uma enumeração incorretova foi transmitida para o <paramref name="flags" /> parâmetro.  
+  
+ -ou-  
+  
+ O <see cref="F:System.Security.AccessControl.AuditFlags.None" /> valor passado para o <paramref name="flags" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemAuditRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.FileSystemRights fileSystemRights, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSystemAuditRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.FileSystemRights,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="fileSystemRights" Type="System.Security.AccessControl.FileSystemRights" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que encapsula uma referência a uma conta de usuário.</param>
+        <param name="fileSystemRights">Uma da <see cref="T:System.Security.AccessControl.FileSystemRights" /> valores que especifica o tipo de operação associada à regra de auditoria.</param>
+        <param name="inheritanceFlags">Uma da <see cref="T:System.Security.AccessControl.InheritanceFlags" /> valores que especifica como as máscaras de acesso são propagadas para objetos filho.</param>
+        <param name="propagationFlags">Uma da <see cref="T:System.Security.AccessControl.PropagationFlags" /> valores que especifica como as entradas de controle de acesso (ACEs) são propagadas para objetos filho.</param>
+        <param name="flags">Uma da <see cref="T:System.Security.AccessControl.AuditFlags" /> valores que especifica quando executar a auditoria.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.FileSystemAuditRule" /> classe usando o nome de uma referência para uma conta de usuário, um valor que especifica o tipo de operação associada a regra de auditoria, um valor que determina como os direitos são herdados, um valor que determina como os direitos são propagados e um valor que especifica quando executar a auditoria.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de auditoria que você pode persistir usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  As regras de auditoria determinam quando e como executar as ações em objetos do sistema, como arquivos e pastas, são registradas em log.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="identity" /> não é um objeto <see cref="T:System.Security.Principal.IdentityReference" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="identity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Uma enumeração incorretova foi transmitida para o <paramref name="flags" /> parâmetro.  
+  
+ -ou-  
+  
+ O <see cref="F:System.Security.AccessControl.AuditFlags.None" /> valor passado para o <paramref name="flags" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemAuditRule (string identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.Security.AccessControl.FileSystemRights fileSystemRights, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSystemAuditRule.#ctor(System.String,System.Security.AccessControl.FileSystemRights,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="fileSystemRights" Type="System.Security.AccessControl.FileSystemRights" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identity">O nome de uma conta de usuário.</param>
+        <param name="fileSystemRights">Uma da <see cref="T:System.Security.AccessControl.FileSystemRights" /> valores que especifica o tipo de operação associada à regra de auditoria.</param>
+        <param name="inheritanceFlags">Uma da <see cref="T:System.Security.AccessControl.InheritanceFlags" /> valores que especifica como as máscaras de acesso são propagadas para objetos filho.</param>
+        <param name="propagationFlags">Uma da <see cref="T:System.Security.AccessControl.PropagationFlags" /> valores que especifica como as entradas de controle de acesso (ACEs) são propagadas para objetos filho.</param>
+        <param name="flags">Uma da <see cref="T:System.Security.AccessControl.AuditFlags" /> valores que especifica quando executar a auditoria.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.FileSystemAuditRule" /> classe usando o nome de uma conta de usuário, um valor que especifica o tipo de operação associada à regra de auditoria, um valor que determina como os direitos são herdados, um valor que determina como os direitos são propagados e um valor que especifica quando executar a auditoria.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de auditoria que você pode persistir usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  As regras de auditoria determinam quando e como executar as ações em objetos do sistema, como arquivos e pastas, são registradas em log.  
+  
+ O `identity` parâmetro deve identificar uma conta válida no domínio ou computador atual.  A cadeia de caracteres leva o seguinte formato, onde `DOMAIN` é o nome de um nome de computador ou de domínio válido e `account` é o nome de uma conta de usuário em um computador ou domínio: `DOMAIN\account`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.ArgumentOutOfRangeException">Uma enumeração incorretova foi transmitida para o <paramref name="flags" /> parâmetro.  
+  
+ -ou-  
+  
+ O <see cref="F:System.Security.AccessControl.AuditFlags.None" /> valor passado para o <paramref name="flags" /> parâmetro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FileSystemRights">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.FileSystemRights FileSystemRights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.FileSystemRights FileSystemRights" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.FileSystemAuditRule.FileSystemRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os sinalizadores <see cref="T:System.Security.AccessControl.FileSystemRights" /> associados ao objeto <see cref="T:System.Security.AccessControl.FileSystemAuditRule" /> atual.</summary>
+        <value>O <see cref="T:System.Security.AccessControl.FileSystemRights" /> sinalizadores associados com a atual <see cref="T:System.Security.AccessControl.FileSystemAuditRule" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

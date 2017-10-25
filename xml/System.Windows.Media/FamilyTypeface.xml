@@ -1,0 +1,369 @@
+<Type Name="FamilyTypeface" FullName="System.Windows.Media.FamilyTypeface">
+  <TypeSignature Language="C#" Value="public class FamilyTypeface" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FamilyTypeface extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.FamilyTypeface" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os detalhes de uma única face de tipos com suporte por um <see cref="T:System.Windows.Media.FontFamily" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há quantos <xref:System.Windows.Media.FamilyTypeface> objetos que não haja suportados no sistema de tipos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FamilyTypeface ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FamilyTypeface.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.FamilyTypeface" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjustedFaceNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Windows.Markup.XmlLanguage,string&gt; AdjustedFaceNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Windows.Markup.XmlLanguage, string&gt; AdjustedFaceNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.AdjustedFaceNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Windows.Markup.XmlLanguage,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de nomes de face localizada ajustadas para o diferencial de fonte.</summary>
+        <value>Uma matriz do tipo <see cref="T:System.Collections.Generic.IDictionary`2" /> que representam os nomes de face de tipos localizada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapsHeight">
+      <MemberSignature Language="C#" Value="public double CapsHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CapsHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.CapsHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância da linha de base para a parte superior de um capital em inglês, relativo ao tamanho em.</summary>
+        <value>Um valor do tipo <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceFontCharacterMetrics">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.CharacterMetricsDictionary DeviceFontCharacterMetrics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.CharacterMetricsDictionary DeviceFontCharacterMetrics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.DeviceFontCharacterMetrics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CharacterMetricsDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de métricas de caractere para um tipo de família de fonte do dispositivo.</summary>
+        <value>Um valor do tipo <see cref="T:System.Windows.Media.CharacterMetricsDictionary" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceFontName">
+      <MemberSignature Language="C#" Value="public string DeviceFontName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceFontName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.DeviceFontName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome ou identificador exclusivo para um tipo de família de fonte do dispositivo.</summary>
+        <value>Um valor do tipo <see cref="T:System.String" /> que representa o nome da fonte de dispositivo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FamilyTypeface.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Object" /> valor que representa o tipo a ser comparado.</param>
+        <summary>Compara dois tipos de família de fonte para igualdade.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="typeface" /> não for null e tem as mesmas propriedades de tipo de letra; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Media.FamilyTypeface typeface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class System.Windows.Media.FamilyTypeface typeface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FamilyTypeface.Equals(System.Windows.Media.FamilyTypeface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeface" Type="System.Windows.Media.FamilyTypeface" />
+      </Parameters>
+      <Docs>
+        <param name="typeface">O <see cref="T:System.Windows.Media.FamilyTypeface" /> valor a ser comparado.</param>
+        <summary>Compara dois tipos de família de fonte para igualdade.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="typeface" /> não for null e tem as mesmas propriedades que esse tipo de família de fonte; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.FamilyTypeface.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para um <see cref="T:System.Windows.Media.FamilyTypeface" /> objeto. O <see cref="M:System.Windows.Media.FamilyTypeface.GetHashCode" /> método é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>Um valor do tipo <see cref="T:System.Int32" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de hash é calculado usando o <xref:System.Windows.Media.FamilyTypeface.Style%2A>, <xref:System.Windows.Media.FamilyTypeface.Weight%2A>, e <xref:System.Windows.Media.FamilyTypeface.Stretch%2A> propriedades do <xref:System.Windows.Media.FamilyTypeface> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stretch">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStretch Stretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStretch Stretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.Stretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ampliação projetada de face de tipos de família de fonte.</summary>
+        <value>Um valor do tipo <see cref="T:System.Windows.FontStretch" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.FamilyTypeface.Stretch%2A> valor descreve o grau ao qual a fonte tem foi ampliada em comparação comparado a taxa de proporção normal da fonte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrikethroughPosition">
+      <MemberSignature Language="C#" Value="public double StrikethroughPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StrikethroughPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.StrikethroughPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição do valor tachado em relação à linha de base. O valor também é relativo ao tamanho em.</summary>
+        <value>Um valor do tipo <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Windows.Media.FamilyTypeface.StrikethroughPosition%2A> é geralmente positivo para colocar o tachado acima da linha de base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrikethroughThickness">
+      <MemberSignature Language="C#" Value="public double StrikethroughThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StrikethroughThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.StrikethroughThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura do tachado em relação ao tamanho em.</summary>
+        <value>Um valor do tipo <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo do design de face de tipos de família de fonte.</summary>
+        <value>Um valor do tipo <see cref="T:System.Windows.FontStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Descreve o estilo de um tipo de fonte, como normal, itálico ou oblíquo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlinePosition">
+      <MemberSignature Language="C#" Value="public double UnderlinePosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 UnderlinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.UnderlinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição do valor sublinhado em relação à linha de base. O valor também é relativo ao tamanho em.</summary>
+        <value>Um valor do tipo <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Windows.Media.FamilyTypeface.UnderlinePosition%2A> é geralmente negativo para colocar o sublinhado abaixo da linha de base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlineThickness">
+      <MemberSignature Language="C#" Value="public double UnderlineThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 UnderlineThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.UnderlineThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura do sublinhado em relação ao tamanho em.</summary>
+        <value>Um valor do tipo <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Weight">
+      <MemberSignature Language="C#" Value="public System.Windows.FontWeight Weight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontWeight Weight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.Weight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o peso projetado desse tipo de família de fonte.</summary>
+        <value>Um valor do tipo <see cref="T:System.Windows.FontWeight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.FamilyTypeface.Weight%2A> valor descreve a importância relativa de uma determinada fonte. Diferenças de peso geralmente são diferenciadas por um traço aumento ou espessura associado a um determinado caractere em uma fonte, em comparação com um caractere "normal" da mesma fonte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XHeight">
+      <MemberSignature Language="C#" Value="public double XHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 XHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.FamilyTypeface.XHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura x Ocidental em relação ao tamanho em.</summary>
+        <value>Um valor do tipo <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

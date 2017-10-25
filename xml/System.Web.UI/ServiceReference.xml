@@ -1,0 +1,252 @@
+<Type Name="ServiceReference" FullName="System.Web.UI.ServiceReference">
+  <TypeSignature Language="C#" Value="public class ServiceReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceReference extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ServiceReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Path")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Registra um serviço Web para uso em uma página da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para chamar métodos de serviço Web de ECMAScript (JavaScript), você deve incluir uma referência de serviço na página ASP.NET e aplicar o <xref:System.Web.Script.Services.ScriptServiceAttribute> atributo à definição de classe de serviço da Web. Se você incluir uma referência de serviço a um serviço Web de <xref:System.Web.UI.ScriptManager> ou <xref:System.Web.UI.ScriptManagerProxy> controle dentro da página do ASP.NET, os objetos serão instanciados no navegador do JavaScript.  
+  
+ Os objetos de proxy serão usados para fazer o seguinte:  
+  
+-   Fazer solicitações assíncronas em JavaScript para métodos de serviço da Web,  
+  
+-   Inicialize instâncias de proxies dos tipos de dados do servidor, em particular para uso como parâmetros de entrada para invocar métodos de Web.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.ServiceReference> controle só pode ser usado para serviços no mesmo domínio.  
+  
+ Você pode definir o local do serviço Web declarativamente adicionando um `<asp:ServiceReference>` elemento para o `<Services>` elemento dentro do `<asp:ScriptManager>` elemento na página e, em seguida, configuração seu <xref:System.Web.UI.ServiceReference.Path%2A> atributo, conforme mostrado no exemplo a seguir.  
+  
+```  
+<asp:ScriptManager runat="server" ID="scriptManager">  
+  <Services>  
+    <asp:ServiceReference Path="~/WebServices/SimpleWebService.asmx" />  
+  </Services>  
+</asp:ScriptManager>  
+```  
+  
+ Você pode usar o <xref:System.Web.UI.ServiceReference.InlineScript%2A> propriedade para indicar se o script de geração de proxy é incluído na página como um bloco de script embutido ou é obtido por uma solicitação separada.  
+  
+ Também por meio de programação, você pode adicionar um <xref:System.Web.UI.ServiceReference> por meio do objeto o <xref:System.Web.UI.ScriptManager.Services%2A?displayProperty=nameWithType> ou <xref:System.Web.UI.ScriptManagerProxy.Services%2A?displayProperty=nameWithType> coleção usando o <xref:System.Collections.ObjectModel.Collection%601.Add%2A> método o <xref:System.Web.UI.ServiceReferenceCollection> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar uma referência a um serviço Web na marcação da página para chamar os métodos do serviço Web de script.  
+  
+ [!code-aspx-csharp[System.Web.Script.Services.ScriptMethodAttribute#5](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.Script.Services.ScriptMethodAttribute/CS/Default.aspx#5)]
+ [!code-aspx-vb[System.Web.Script.Services.ScriptMethodAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.Script.Services.ScriptMethodAttribute/VB/Default.aspx#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ServiceReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ServiceReference" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceReference (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ServiceReference.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O local do serviço Web.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.ServiceReference" /> classe com um caminho especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProxyScript">
+      <MemberSignature Language="C#" Value="protected virtual string GetProxyScript (System.Web.UI.ScriptManager scriptManager, System.Web.UI.Control containingControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetProxyScript(class System.Web.UI.ScriptManager scriptManager, class System.Web.UI.Control containingControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ServiceReference.GetProxyScript(System.Web.UI.ScriptManager,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="containingControl" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">O <see cref="T:System.Web.UI.ScriptManager" /> controle na página.</param>
+        <param name="containingControl">Um objeto <see cref="T:System.Web.UI.Control" />.</param>
+        <summary>Fornece um script de proxy de um derivado <see cref="T:System.Web.UI.ServiceReference" /> objeto que pode ser substituído por uma personalização.</summary>
+        <returns>O script de proxy.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `containingControl` parâmetro é o <xref:System.Web.UI.ScriptManager> objeto ou <xref:System.Web.UI.ScriptManagerProxy> objeto no qual o <xref:System.Web.UI.ServiceReference> objeto é definido. Ele deve ser usado como base para a resolução de URL relativa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProxyUrl">
+      <MemberSignature Language="C#" Value="protected virtual string GetProxyUrl (System.Web.UI.ScriptManager scriptManager, System.Web.UI.Control containingControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetProxyUrl(class System.Web.UI.ScriptManager scriptManager, class System.Web.UI.Control containingControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ServiceReference.GetProxyUrl(System.Web.UI.ScriptManager,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="containingControl" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">O <see cref="T:System.Web.UI.ScriptManager" /> controle na página.</param>
+        <param name="containingControl">Um objeto <see cref="T:System.Web.UI.Control" />.</param>
+        <summary>Fornece um URL do proxy de um derivado <see cref="T:System.Web.UI.ServiceReference" /> objeto pode ser substituído por uma personalização.</summary>
+        <returns>Uma URL de proxy.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `containingControl` parâmetro é o <xref:System.Web.UI.ScriptManager> objeto ou <xref:System.Web.UI.ScriptManagerProxy> objeto no qual o <xref:System.Web.UI.ServiceReference> objeto é definido e deve ser usado como base para a resolução de URL relativa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InlineScript">
+      <MemberSignature Language="C#" Value="public virtual bool InlineScript { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InlineScript" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ServiceReference.InlineScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o script de geração de proxy é incluído na página como um bloco de script embutido ou é obtido por uma solicitação separada.</summary>
+        <value>
+          <see langword="true" />Se o script de geração de proxy é incluído como um bloco de script embutido na página. <see langword="false" /> se o script de geração de proxy é obtido por uma solicitação separada. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.ServiceReference.InlineScript%2A> não está declarado como propriedade, o valor padrão é `false`.  
+  
+ Quando <xref:System.Web.UI.ServiceReference.InlineScript%2A> é definido como `false`, o script para gerar os proxies do ECMAScript (JavaScript) é baixado como um arquivo de script separado por uma solicitação adicional para o servidor. Se você usar o cache do navegador, essa opção é útil quando várias páginas da Web usa a mesma referência de serviço.  
+  
+ Quando <xref:System.Web.UI.ServiceReference.InlineScript%2A> é definido como `true`, a script será incluído como um bloco de script embutido na página de geração de proxy. Isso pode melhorar o desempenho do servidor, reduzindo o número de solicitações de rede, especialmente se há muitas referências de serviço na página e outras páginas não referenciam os mesmos serviços. Além disso, o <xref:System.Web.UI.ServiceReference.Path%2A> propriedade deve ser definida como um caminho relativo ao <xref:System.Web.UI.ServiceReference.InlineScript%2A> é definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public virtual string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ServiceReference.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do serviço Web referenciado.</summary>
+        <value>O caminho do serviço Web referenciado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ServiceReference.Path%2A> propriedade pode apontar os serviços da Web somente para locais. Em outras palavras, essa propriedade só pode apontar para serviços Web no mesmo domínio que o aplicativo da Web habilitado para AJAX do ASP.NET. <xref:System.Web.UI.ServiceReference.Path%2A>pode ser um caminho relativo, relativo ao aplicativo, relativo ao domínio ou absoluto.  
+  
+ Se o <xref:System.Web.UI.ServiceReference.InlineScript%2A> está definida como `true`, em seguida, você deve usar um caminho relativo que aponta para o mesmo aplicativo da Web como a página que contém o <xref:System.Web.UI.ServiceReference> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ServiceReference.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o valor da <see cref="P:System.Web.UI.ServiceReference.Path" /> propriedade ou o nome do tipo.</summary>
+        <returns>O valor da <see cref="P:System.Web.UI.ServiceReference.Path" /> propriedade, se for definido; caso contrário, o valor da <see cref="P:System.Reflection.MemberInfo.Name" /> propriedade para a classe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

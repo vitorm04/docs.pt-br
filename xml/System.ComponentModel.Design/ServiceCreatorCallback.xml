@@ -1,0 +1,56 @@
+<Type Name="ServiceCreatorCallback" FullName="System.ComponentModel.Design.ServiceCreatorCallback">
+  <TypeSignature Language="C#" Value="public delegate object ServiceCreatorCallback(IServiceContainer container, Type serviceType);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ServiceCreatorCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ServiceCreatorCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="container" Type="System.ComponentModel.Design.IServiceContainer" />
+    <Parameter Name="serviceType" Type="System.Type" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Object</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="container">O contêiner de serviço que solicitou a criação do serviço.</param>
+    <param name="serviceType">O tipo de serviço para criar.</param>
+    <summary>Fornece um mecanismo de retorno de chamada que pode criar uma instância de um serviço sob demanda.</summary>
+    <returns>O serviço especificado pelo <paramref name="serviceType" />, ou <see langword="null" /> se o serviço não pôde ser criado.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.ServiceCreatorCallback>Fornece um mecanismo para publicar os serviços que você pode solicitar tenha criado quando necessário, em vez do serviço que está sendo criado imediatamente quando o designer carrega. Você pode usar uma função de retorno de chamada se o serviço não é essencial e não pode ser usado. Um serviço publicado usando um <xref:System.ComponentModel.Design.ServiceCreatorCallback> não usa quantos recursos adicionais, se ele não é solicitado e criado. Para usar uma função de retorno de chamada para publicar seu serviço, passar um <xref:System.ComponentModel.Design.ServiceCreatorCallback> para o <xref:System.ComponentModel.Design.IServiceContainer.AddService%2A> método de um <xref:System.ComponentModel.Design.IServiceContainer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como publicar um serviço usando uma função de retorno de chamada.  
+  
+ [!code-cpp[Classic ServiceCreatorCallback Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ServiceCreatorCallback Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ServiceCreatorCallback Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ServiceCreatorCallback Example/CS/source.cs#1)]
+ [!code-vb[Classic ServiceCreatorCallback Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ServiceCreatorCallback Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

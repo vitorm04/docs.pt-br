@@ -1,0 +1,94 @@
+<Type Name="SerializableAttribute" FullName="System.SerializableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SerializableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SerializableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.SerializableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Delegate, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que uma classe pode ser serializada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplique o atributo <xref:System.SerializableAttribute> a um tipo para indicar que as instâncias desse tipo podem ser serializadas. O common language runtime lança <xref:System.Runtime.Serialization.SerializationException> se qualquer tipo no gráfico de objeto que está sendo serializado não tem o <xref:System.SerializableAttribute> atributo aplicado.  
+  
+ Aplicar o <xref:System.SerializableAttribute> atributo mesmo que a classe também implementa o <xref:System.Runtime.Serialization.ISerializable> interface para controlar o processo de serialização.  
+  
+ Quando você aplica o <xref:System.SerializableAttribute> atributo para um tipo de todos os campos particulares e públicos são serializados por padrão. Você pode controlar a serialização mais granular Implementando o <xref:System.Runtime.Serialization.ISerializable> interface para substituir o processo de serialização.  
+  
+ Ou você pode excluir campos de serialização, aplicando o <xref:System.NonSerializedAttribute> para o campo de atributo. Se um campo de um tipo serializável contém um ponteiro, um identificador ou outra estrutura de dados que é específico para um ambiente específico e não pode ser reconstituída em um ambiente diferente, talvez você queira aplicar o <xref:System.NonSerializedAttribute> ao campo de atributo.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md). Para obter mais informações sobre serialização, consulte <xref:System.Runtime.Serialization>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a serialização de um objeto que está marcado com o <xref:System.SerializableAttribute> atributo. Para usar o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> em vez do <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, Descomente as linhas apropriadas.  
+  
+ [!code-cpp[SerializationAttributes#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SerializationAttributes/CPP/s.cpp#1)]
+ [!code-csharp[SerializationAttributes#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SerializationAttributes/CS/s.cs#1)]
+ [!code-vb[SerializationAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SerializationAttributes/VB/s.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializableAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.SerializableAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.SerializableAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

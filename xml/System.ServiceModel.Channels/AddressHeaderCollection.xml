@@ -1,0 +1,233 @@
+<Type Name="AddressHeaderCollection" FullName="System.ServiceModel.Channels.AddressHeaderCollection">
+  <TypeSignature Language="C#" Value="public sealed class AddressHeaderCollection : System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Channels.AddressHeader&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AddressHeaderCollection extends System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ServiceModel.Channels.AddressHeader&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.AddressHeaderCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Channels.AddressHeader&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.ServiceModel.Channels.AddressHeader</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção thread-safe, somente leitura dos cabeçalhos de endereço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.AddressHeaderCollection> pode ser inicializado com um <xref:System.Collections.Generic.IEnumerable%601> conjunto de <xref:System.ServiceModel.Channels.AddressHeader> objetos e, em seguida, pesquisados para um cabeçalho com um nome qualificado específico usando o <xref:System.ServiceModel.Channels.AddressHeaderCollection.FindHeader%28System.String%2CSystem.String%29> método. Para localizar todos os cabeçalhos com um nome qualificado específico, use o <xref:System.ServiceModel.Channels.AddressHeaderCollection.FindAll%28System.String%2CSystem.String%29> método. O <xref:System.ServiceModel.Channels.AddressHeaderCollection.AddHeadersTo%28System.ServiceModel.Channels.Message%29> método é usado para adicionar cabeçalhos para os cabeçalhos de uma mensagem especificada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddressHeaderCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AddressHeaderCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.AddressHeaderCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O trecho de código a seguir ilustra como criar uma instância de <xref:System.ServiceModel.Channels.AddressHeaderCollection> classe com o construtor padrão.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddressHeaderCollection (System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Channels.AddressHeader&gt; addressHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.ServiceModel.Channels.AddressHeader&gt; addressHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AddressHeaderCollection.#ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="addressHeaders" Type="System.Collections.Generic.IEnumerable&lt;System.ServiceModel.Channels.AddressHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="addressHeaders">O <see cref="T:System.Collections.Generic.IEnumerable`1" /> conjunto de <see cref="T:System.ServiceModel.Channels.AddressHeader" /> usados para inicializar a coleção de objetos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.AddressHeaderCollection" /> classe a partir de um conjunto enumerável dos cabeçalhos de endereço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O trecho de código a seguir ilustra como criar uma instância de <xref:System.ServiceModel.Channels.AddressHeaderCollection> classe.  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um dos cabeçalhos de endereço na <paramref name="addressHeaders" /> parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHeadersTo">
+      <MemberSignature Language="C#" Value="public void AddHeadersTo (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddHeadersTo(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AddressHeaderCollection.AddHeadersTo(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> para que os cabeçalhos são adicionados.</param>
+        <summary>Adiciona os cabeçalhos da coleção para os cabeçalhos de uma mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso insere os cabeçalhos da coleção atual no <xref:System.ServiceModel.Channels.MessageHeaders> associados a <xref:System.ServiceModel.Channels.Message> e acessível por meio de <xref:System.ServiceModel.Channels.Message.Headers%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O trecho de código a seguir ilustra como chamar esse método.  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.AddressHeader[] FindAll (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.AddressHeader[] FindAll(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AddressHeaderCollection.FindAll(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AddressHeader[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cabeçalho de endereço a ser localizada.</param>
+        <param name="ns">O namespace do cabeçalho de endereço a ser localizada.</param>
+        <summary>Localiza todos os cabeçalhos de endereço da coleção com o nome especificado e o namespace.</summary>
+        <returns>O <see cref="T:System.Array" /> do tipo <see cref="T:System.ServiceModel.Channels.AddressHeader" /> que contém todos os cabeçalhos da coleção com o nome especificado e o namespace.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O trecho de código a seguir ilustra como chamar esse método.  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ou <paramref name="ns" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindHeader">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.AddressHeader FindHeader (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.AddressHeader FindHeader(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.AddressHeaderCollection.FindHeader(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AddressHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cabeçalho de endereço a ser localizada.</param>
+        <param name="ns">O namespace do cabeçalho de endereço a ser localizada.</param>
+        <summary>Localiza o primeiro cabeçalho de endereço da coleção com um namespace e nome especificados.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.AddressHeader" /> na coleção com o nome especificado e o namespace.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você precisar localizar todos os cabeçalhos de endereço na coleção com o nome especificado e o namespace, use o <xref:System.ServiceModel.Channels.AddressHeaderCollection.FindAll%28System.String%2CSystem.String%29> método em vez disso.  
+  
+ <xref:System.ArgumentException>não é o tipo de exceção ideal quando há mais de um cabeçalho na coleção. Chamadores desse método devem prestar atenção ao lidar com esta exceção quando a coleção contém várias entradas com o mesmo nome e namespace.  
+  
+   
+  
+## Examples  
+ O trecho de código a seguir ilustra como chamar esse método.  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ou <paramref name="ns" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Não há mais de um cabeçalho que foi especificado <paramref name="name" /> e <paramref name="ns" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1398 @@
+<Type Name="TraceListener" FullName="System.Diagnostics.TraceListener">
+  <TypeSignature Language="C#" Value="public abstract class TraceListener : MarshalByRefObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TraceListener extends System.MarshalByRefObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a classe base <see langword="abstract" /> para os ouvintes que monitoram o rastreamento e a saída da depuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter exemplos de como implementar um <xref:System.Diagnostics.TraceListener>, consulte o <xref:System.Diagnostics.DefaultTraceListener>, <xref:System.Diagnostics.TextWriterTraceListener> e <xref:System.Diagnostics.EventLogTraceListener> classes.  
+  
+ Você deve habilitar o rastreamento ou a depuração para usar um ouvinte de rastreamento. A sintaxe a seguir é específico do compilador. Se você usar compiladores que não seja o c# ou Visual Basic, consulte a documentação para o compilador.  
+  
+-   Para habilitar a depuração em c#, adicione o `/d:DEBUG` sinalizador para a linha de comando do compilador quando você compila o código, ou você pode adicionar `#define DEBUG` à parte superior do seu arquivo. No Visual Basic, adicione o `/d:DEBUG=True` sinalizador para a linha de comando do compilador.  
+  
+-   Para habilitar o rastreamento em c#, adicione o `/d:TRACE` sinalizador para a linha de comando do compilador quando você compila o código ou adiciona `#define TRACE` à parte superior do seu arquivo. No Visual Basic, adicione o `/d:TRACE=True` sinalizador para a linha de comando do compilador.  
+  
+ Para adicionar um ouvinte de rastreamento, edite o arquivo de configuração que corresponde ao nome do seu aplicativo. Nesse arquivo, você pode adicionar um ouvinte, defina seu tipo e definir seu parâmetro, remover um ouvinte ou limpar todos os ouvintes anteriormente definidos pelo aplicativo. O arquivo de configuração deve ser formatado semelhante ao exemplo a seguir.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="TextWriterOutput.log" />  
+        <remove name="Default" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Para obter mais informações sobre como usar arquivos de configuração de rastreamento, consulte [ &lt;System. Diagnostics&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md).  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Herdar desta classe para implementar um ouvinte personalizado para o <see cref="T:System.Diagnostics.Debug" /> e <see cref="T:System.Diagnostics.Trace" /> classes. No mínimo, você deve implementar o <see cref="M:System.Diagnostics.TraceListener.Write(System.String)" /> e <see cref="M:System.Diagnostics.TraceListener.WriteLine(System.String)" /> métodos. Além disso, você pode implementar o <see cref="M:System.Diagnostics.TraceListener.Fail(System.String)" />, <see cref="M:System.Diagnostics.TraceListener.Close" /> e <see cref="M:System.Diagnostics.TraceListener.Flush" /> métodos.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.TraceListener" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Diagnostics.TraceListener>.  
+  
+|Propriedade|Valor padrão|  
+|--------------|-------------------|  
+|Nome|A cadeia de caracteres vazia ("").|  
+|Recuar|Zero.|  
+|IndentSize|Quatro espaços.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TraceListener (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Diagnostics.TraceListener" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.TraceListener" /> classe usando o nome especificado como o ouvinte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringDictionary Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringDictionary Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceListener.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos do ouvinte de rastreamento personalizados definidos no arquivo de configuração de aplicativo.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.StringDictionary" /> que contém os atributos personalizados para o ouvinte de rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam o <xref:System.Diagnostics.TraceListener> classe pode adicionar atributos personalizados, substituindo o <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> método e retornar uma matriz de cadeia de caracteres de nomes de atributo personalizado. O <xref:System.Diagnostics.TraceListener.Attributes%2A> propriedade identifica os atributos personalizados que são referenciados no arquivo de configuração do aplicativo. Por exemplo, no seguinte trecho do arquivo de configuração o <xref:System.Diagnostics.DelimitedListTraceListener> atributo personalizado "delimitador" é referenciado. Nesse caso, o <xref:System.Diagnostics.TraceListener.Attributes%2A> propriedade retorna um <xref:System.Collections.Specialized.StringDictionary> que contém a cadeia de caracteres "delimitador".  
+  
+```  
+<listeners>  
+  <add name="delimitedListener"   
+    type="System.Diagnostics.DelimitedListTraceListener"   
+    delimiter=":"   
+    initializeData="delimitedOutput.txt"   
+    traceOutputOptions="ProcessId, DateTime" />  
+  <remove name="Default" />  
+</listeners>  
+```  
+  
+ Atributos personalizados não referenciados não são enumerados.  Para obter mais informações, consulte o método <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, fecha o fluxo de saída para que ele não recebe a saída de rastreamento ou de depuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando a saída vai para um arquivo, como o <xref:System.Diagnostics.TextWriterTraceListener>. Após uma chamada para esse método, você deve reinicializar o objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Diagnostics.TraceListener" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Diagnostics.TraceListener.Dispose%2A> permite que os recursos usados pelo <xref:System.Diagnostics.TraceListener> para ser realocada para outros fins. Para obter mais informações sobre <xref:System.Diagnostics.TraceListener.Dispose%2A>, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Diagnostics.TraceListener" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público <xref:System.Diagnostics.TraceListener.Dispose%2A> e pelo método <xref:System.Object.Finalize%2A>. `Dispose` invoca o método <xref:System.Diagnostics.TraceListener.Dispose%2A> protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Diagnostics.TraceListener> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir esse método, tenha cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see langword="Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public virtual void Fail (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Fail(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Fail(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser emitida.</param>
+        <summary>Emite uma mensagem de erro para o ouvinte, você cria ao implementar o <see cref="T:System.Diagnostics.TraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão é exibir a mensagem especificada em uma caixa de mensagem quando o aplicativo é executado em um modo de interface do usuário e para o <xref:System.Diagnostics.TraceListener> instâncias em um <xref:System.Diagnostics.TraceListenerCollection> coleção. Por padrão, o <xref:System.Diagnostics.TraceListenerCollection> coleta tem uma instância de um <xref:System.Diagnostics.DefaultTraceListener>. Você pode personalizar esse comportamento adicionando um <xref:System.Diagnostics.TraceListener> a ou remover uma da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public virtual void Fail (string message, string detailMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Fail(string message, string detailMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Fail(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="detailMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser emitida.</param>
+        <param name="detailMessage">Uma mensagem detalhada de emissão.</param>
+        <summary>Emite um erro de mensagem e uma mensagem de erro detalhada para o ouvinte criar quando você implementa o <see cref="T:System.Diagnostics.TraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão é exibir a mensagem e a mensagem detalhada em uma caixa de mensagem quando o aplicativo é executado em um modo de interface do usuário e para o <xref:System.Diagnostics.TraceListener> instâncias em um <xref:System.Diagnostics.TraceListenerCollection> coleção. Por padrão, o <xref:System.Diagnostics.TraceListenerCollection> coleta tem uma instância de um <xref:System.Diagnostics.DefaultTraceListener>. Você pode personalizar esse comportamento adicionando um <xref:System.Diagnostics.TraceListener> a ou remover uma da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.TraceFilter Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.TraceFilter Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceListener.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o filtro de rastreamento para o ouvinte de rastreamento.</summary>
+        <value>Um objeto derivado da classe base <see cref="T:System.Diagnostics.TraceFilter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um filtro de rastreamento pode ser adicionado a um ouvinte de rastreamento para fornecer uma camada de triagem além do fornecido para a origem de rastreamento por comutadores. Por exemplo, o <xref:System.Diagnostics.EventTypeFilter> pode ser adicionado a um ouvinte de rastreamento para controlar os tipos de eventos que são produzidas pelo ouvinte.  Os ouvintes que são chamados, porque os comutador critérios são atendidos podem consultar seus filtros, se estiver presente, para determinar se um rastreamento deve ser enviado para a saída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Diagnostics.TraceListener.Filter%2A> propriedade para adicionar um filtro de origem para um ouvinte de rastreamento do console. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#28](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#28)]
+ [!code-vb[System.Diagnostics.TraceSource2#28](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public virtual void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, libera o buffer de saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedAttributes">
+      <MemberSignature Language="C#" Value="protected virtual string[] GetSupportedAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string[] GetSupportedAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.GetSupportedAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os atributos personalizados com suporte no ouvinte de rastreamento.</summary>
+        <returns>Uma matriz de cadeia de caracteres que nomeia os atributos personalizados com suporte no ouvinte de rastreamento ou <see langword="null" /> se não houver nenhum atributo personalizado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão para <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> retorna `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma substituição do <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> método para um ouvinte de rastreamento personalizada.  
+  
+ [!code-csharp[System.Diagnostics.TraceListener.CustomAttributes#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceListener.CustomAttributes/cs/program.cs#1)]
+ [!code-vb[System.Diagnostics.TraceListener.CustomAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceListener.CustomAttributes/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Diagnostics.TraceListener" /> classe ou uma classe derivada, você pode substituir o <see cref="M:System.Diagnostics.TraceListener.GetSupportedAttributes" /> método para fornecer atributos personalizados para sua classe.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentLevel">
+      <MemberSignature Language="C#" Value="public int IndentLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IndentLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceListener.IndentLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de recuo.</summary>
+        <value>O nível de recuo. O padrão é zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceListener.IndentLevel%2A> propriedade representa o número de vezes que o recuo especificado pelo <xref:System.Diagnostics.TraceListener.IndentSize%2A> propriedade é aplicada. Essa propriedade é armazenada em cada thread/por-solicitação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentSize">
+      <MemberSignature Language="C#" Value="public int IndentSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IndentSize" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceListener.IndentSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de espaços em um recuo.</summary>
+        <value>O número de espaços em um recuo. O padrão é quatro espaços.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade é armazenada em cada thread/por-solicitação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Defina a operação falhou porque o valor é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsThreadSafe">
+      <MemberSignature Language="C#" Value="public virtual bool IsThreadSafe { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsThreadSafe" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceListener.IsThreadSafe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o ouvinte de rastreamento é thread-safe.</summary>
+        <value>
+          <see langword="true" /> se o ouvinte de rastreamento for thread-safe; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Diagnostics.TraceListener.IsThreadSafe%2A> é usado para determinar se deve usar um bloqueio global ao gravar o ouvinte. Se o valor de <xref:System.Diagnostics.TraceListener.IsThreadSafe%2A> é `false`, o bloqueio global é usado, independentemente do valor de <xref:System.Diagnostics.Trace.UseGlobalLock%2A>. O bloqueio global não é usado somente se o valor de <xref:System.Diagnostics.TraceListener.IsThreadSafe%2A> é `true` e o valor de <xref:System.Diagnostics.Trace.UseGlobalLock%2A> é `false`. O comportamento padrão é usar global sempre que a gravação para o ouvinte de bloqueio.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceListener.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um nome para este <see cref="T:System.Diagnostics.TraceListener" />.</summary>
+        <value>Um nome para este <see cref="T:System.Diagnostics.TraceListener" />. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome pode ser usado para organizar e acessar ouvintes em um <xref:System.Diagnostics.TraceListenerCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedIndent">
+      <MemberSignature Language="C#" Value="protected bool NeedIndent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NeedIndent" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceListener.NeedIndent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se recuar a saída.</summary>
+        <value>
+          <see langword="true" />Se a saída deve ser recuada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** o <xref:System.Diagnostics.TraceListener.WriteIndent%2A> método, chamado pelo <xref:System.Diagnostics.DefaultTraceListener> e <xref:System.Diagnostics.TextWriterTraceListener> classes, define o <xref:System.Diagnostics.TraceListener.NeedIndent%2A> valor da propriedade `false` para evitar mais tarde, recuos desnecessários. Você deve definir o <xref:System.Diagnostics.TraceListener.NeedIndent%2A> propriedade `true` cada vez que você deseja recuar a saída de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public virtual void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="data">Os dados de rastreamento a serem emitidos.</param>
+        <summary>Grava as informações de rastreamento, um objeto de dados e informações de evento para a saída específica do ouvinte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse método não se destina a ser chamado diretamente pelo código do aplicativo, mas por membros do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes para gravar dados de rastreamento de saída.  
+  
+ As gravações de implementação padrão de `eventCache`, `source`, `eventType` e `id` parâmetros no cabeçalho e rodapé do rastreamento. O `data` parâmetro é escrito como o corpo da mensagem de rastreamento. O `ToString` método do objeto de dados é usado para converter o objeto para um <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public virtual void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="data">Uma matriz de objetos para a emissão de dados.</param>
+        <summary>Grava informações de rastreamento, uma matriz de objetos de dados e informações de evento para a saída específica do ouvinte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse método não se destina a ser chamado diretamente pelo código do aplicativo, mas por membros do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes para gravar dados de rastreamento de saída.  
+  
+ A implementação padrão grava os valores de `source`, `eventType` e `id` parâmetros como um cabeçalho. Os objetos de dados são convertidos em cadeias de caracteres usando o `ToString` método de cada objeto. O `eventCache` dados são gravados como um rodapé, a natureza dos dados de saída seja dependente do valor da <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public virtual void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <summary>Grava as informações de rastreamento e evento para a saída específica do ouvinte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse método não se destina a ser chamado diretamente pelo código do aplicativo, mas por membros do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes para gravar dados de rastreamento de saída.  
+  
+ A implementação padrão grava os valores de `source`, `eventType` e `id` parâmetros como um cabeçalho. O `eventCache` dados são gravados como um rodapé, a natureza dos dados de saída seja dependente do valor da <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public virtual void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Grava informações de uma mensagem e informações de evento para a saída específica do ouvinte de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse método não se destina a ser chamado diretamente pelo código do aplicativo, mas por membros do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes para gravar dados de rastreamento de saída.  
+  
+ A implementação padrão grava os valores da `source`, `eventType` e `id` parâmetros como um cabeçalho, seguido de `message` dados. O `eventCache` dados são gravados como um rodapé, a natureza dos dados de saída seja dependente do valor da <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public virtual void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="format">Uma cadeia de caracteres de formato que contém zero ou mais itens de formato, que correspondem aos objetos no <c>args</c> matriz.</param>
+        <param name="args">Uma matriz <see langword="object" /> que contém zero ou mais objetos a serem formatados.</param>
+        <summary>Grava informações de rastreamento, uma matriz formatada de objetos e informações de evento para a saída específica do ouvinte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse método não se destina a ser chamado diretamente pelo código do aplicativo, mas por membros do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes para gravar dados de rastreamento de saída.  
+  
+ A implementação padrão grava os valores de `source`, `eventType` e `id` parâmetros como um cabeçalho. O `args` matriz de objeto é convertido em uma cadeia de caracteres usando o <xref:System.String.Format%2A> método, passando o `format` cadeia de caracteres e `args` matriz para a cadeia de caracteres de formato como a parte de mensagem de rastreamento. O `eventCache` dados são gravados como um rodapé, a natureza dos dados de saída seja dependente do valor da <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceOutputOptions">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.TraceOptions TraceOutputOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.TraceOptions TraceOutputOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceListener.TraceOutputOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as opções de saída de rastreamento.</summary>
+        <value>Um combinação bit a bit dos valores de enumeração. O padrão é <see cref="F:System.Diagnostics.TraceOptions.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade determina o conteúdo opcional de saída de rastreamento. A propriedade pode ser definida no arquivo de configuração ou por meio de programação durante a execução para incluir dados adicionais especificamente para uma seção de código. Por exemplo, você pode definir o <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade para o ouvinte de rastreamento do console para <xref:System.Diagnostics.TraceOptions?displayProperty=nameWithType> para adicionar informações de pilha de chamadas para a saída de rastreamento.  
+  
+ O <xref:System.Diagnostics.TraceOptions> enumeração não é usada pelas seguintes classes e métodos:  
+  
+-   O <xref:System.Diagnostics.EventLogTraceListener> de classe, porque isso pode causar um grande volume de dados a serem gravados no log.  
+  
+-   O `Write` e `WriteLine` métodos do <xref:System.Diagnostics.ConsoleTraceListener>, <xref:System.Diagnostics.DefaultTraceListener>, e <xref:System.Diagnostics.TextWriterTraceListener> classes.  
+  
+-   O <xref:System.Diagnostics.TraceListener.Write%2A> e <xref:System.Diagnostics.TraceListener.WriteLine%2A> métodos de <xref:System.Diagnostics.TraceListener> classe quando eles não são substituídos em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a configuração do <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade para um ouvinte de rastreamento do console. O ouvinte de rastreamento do console é um dos ouvintes enumerados no <xref:System.Diagnostics.TraceSource.Listeners%2A> propriedade de uma origem de rastreamento. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#16](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#16)]
+ [!code-vb[System.Diagnostics.TraceSource2#16](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A operação de conjuntos falhou porque o valor é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceTransfer">
+      <MemberSignature Language="C#" Value="public virtual void TraceTransfer (System.Diagnostics.TraceEventCache eventCache, string source, int id, string message, Guid relatedActivityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TraceTransfer(class System.Diagnostics.TraceEventCache eventCache, string source, int32 id, string message, valuetype System.Guid relatedActivityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.TraceTransfer(System.Diagnostics.TraceEventCache,System.String,System.Int32,System.String,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="relatedActivityId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <param name="relatedActivityId">Um <see cref="T:System.Guid" /> objeto identificando uma atividade relacionada.</param>
+        <summary>Grava informações de rastreamento, uma mensagem, informações de identidade e eventos de atividade relacionada para a saída específica do ouvinte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse método não se destina a ser chamado diretamente pelo código do aplicativo, mas por membros do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes para gravar dados de rastreamento de saída.  
+  
+ O <xref:System.Diagnostics.XmlWriterTraceListener.TraceTransfer%2A> método é usado para a correlação de rastreamento relacionado. O <xref:System.Diagnostics.TraceListener.TraceTransfer%2A> chamadas de método de <xref:System.Diagnostics.TraceListener.TraceEvent%2A> método para processar a chamada com o nível de eventType definido como <xref:System.Diagnostics.TraceEventType.Transfer> e o `relatedActivityId` <xref:System.Guid> como uma cadeia de caracteres anexada à mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Write(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um <see cref="T:System.Object" /> cujo nome totalmente qualificado da classe que você deseja gravar.</param>
+        <summary>Grava o valor do objeto <see cref="M:System.Object.ToString" /> método para o ouvinte que você cria ao implementar o <see cref="T:System.Diagnostics.TraceListener" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Quando substituído em uma classe derivada, grava a mensagem especificada no ouvinte criado na classe derivada.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar desta classe, você deve implementar esse método. Para dar suporte a um recuo, você deve chamar <see cref="M:System.Diagnostics.TraceListener.WriteIndent" /> se <see cref="P:System.Diagnostics.TraceListener.NeedIndent" /> é <see langword="true" />. Se você precisar recuar a linha a seguir, você deve redefinir <see cref="P:System.Diagnostics.TraceListener.NeedIndent" /> para <see langword="true" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (object o, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(object o, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Write(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um <see cref="T:System.Object" /> cujo nome totalmente qualificado da classe que você deseja gravar.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e o valor do objeto <see cref="M:System.Object.ToString" /> método para o ouvinte que você cria ao implementar o <see cref="T:System.Diagnostics.TraceListener" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.Write(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e uma mensagem para o ouvinte criar quando você implementa o <see cref="T:System.Diagnostics.TraceListener" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteIndent">
+      <MemberSignature Language="C#" Value="protected virtual void WriteIndent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteIndent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.WriteIndent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava o recuo para o ouvinte criar durante a implementação dessa classe e redefine a propriedade <see cref="P:System.Diagnostics.TraceListener.NeedIndent" /> para <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava o recuo e redefine o <xref:System.Diagnostics.TraceListener.NeedIndent%2A> propriedade `false`. Chame este método se <xref:System.Diagnostics.TraceListener.NeedIndent%2A> é `true` quando você está substituindo o <xref:System.Diagnostics.TraceListener.Write%2A> e <xref:System.Diagnostics.TraceListener.WriteLine%2A> métodos. Por padrão, esse método usa espaços em branco para recuo. O tamanho do recuo é determinado pelos valores de <xref:System.Diagnostics.TraceListener.IndentSize%2A> e <xref:System.Diagnostics.TraceListener.IndentLevel%2A> propriedades. O <xref:System.Diagnostics.TraceListener.IndentLevel%2A> propriedade representa o número de vezes que o recuo do tamanho especificado pelo <xref:System.Diagnostics.TraceListener.IndentSize%2A> propriedade é aplicada. Este método é chamado pelo <xref:System.Diagnostics.DefaultTraceListener> e <xref:System.Diagnostics.TextWriterTraceListener> classes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.WriteLine(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um <see cref="T:System.Object" /> cujo nome totalmente qualificado da classe que você deseja gravar.</param>
+        <summary>Grava o valor do objeto <see cref="M:System.Object.ToString" /> método para o ouvinte que você cria ao implementar o <see cref="T:System.Diagnostics.TraceListener" /> classe, seguido por um terminador de linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha típicas que você pode implementar é um retorno de carro seguido por uma alimentação de linha (\r\n).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public abstract void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Quando substituído em uma classe derivada, grava uma mensagem para o ouvinte que você criar na classe derivada, seguido por um terminador de linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha típicas que você pode implementar é um retorno de carro seguido por uma alimentação de linha (\r\n).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar desta classe, você deve implementar esse método. Para dar suporte a um recuo, chame <see cref="M:System.Diagnostics.TraceListener.WriteIndent" /> se <see cref="P:System.Diagnostics.TraceListener.NeedIndent" /> é <see langword="true" />. Para recuar a linha a seguir, você deve redefinir <see cref="P:System.Diagnostics.TraceListener.NeedIndent" /> para <see langword="true" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (object o, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(object o, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.WriteLine(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um <see cref="T:System.Object" /> cujo nome totalmente qualificado da classe que você deseja gravar.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e o valor do objeto <see cref="M:System.Object.ToString" /> método para o ouvinte que você cria ao implementar o <see cref="T:System.Diagnostics.TraceListener" /> classe, seguido por um terminador de linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha típicas que você pode implementar é um retorno de carro seguido por uma alimentação de linha (\r\n).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceListener.WriteLine(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e uma mensagem para o ouvinte criar quando você implementa o <see cref="T:System.Diagnostics.TraceListener" /> classe, seguido por um terminador de linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha típicas que você pode implementar é um retorno de carro seguido por uma alimentação de linha (\r\n).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

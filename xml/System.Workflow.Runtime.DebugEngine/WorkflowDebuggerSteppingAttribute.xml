@@ -1,0 +1,76 @@
+<Type Name="WorkflowDebuggerSteppingAttribute" FullName="System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowDebuggerSteppingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowDebuggerSteppingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a depuração passo a passo de comportamento de atividades compostas cujas atividades filho podem ser executados simultaneamente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Este atributo é usado pelo depurador de fluxo de trabalho para determinar a ordem de depuração para as atividades filho que podem ser executados simultaneamente. Isso é permitir que você deseja manter o foco em uma ramificação de sua atividade composta ou shift e voltar entre as atividades filho simultaneamente em execução.  
+  
+ Esse atributo deve decorar a atividade composta, não as atividades filho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowDebuggerSteppingAttribute (System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption steppingOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption steppingOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute.#ctor(System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="steppingOption" Type="System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption" />
+      </Parameters>
+      <Docs>
+        <param name="steppingOption">Um <see cref="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption" /> especificando o comportamento de revisão para as atividades filho executadas simultaneamente equivale ao valor da enumeração.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute" /> classe usando um <see cref="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption" /> valor de enumeração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SteppingOption">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption SteppingOption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption SteppingOption" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingAttribute.SteppingOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comportamento de revisão para a atividade composta.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Workflow.Runtime.DebugEngine.WorkflowDebuggerSteppingOption" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

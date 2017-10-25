@@ -1,0 +1,32 @@
+<Namespace Name="System.Printing">
+  <Docs>
+    <summary>Fornece classes que permitem que você automatizar o gerenciamento de servidores de impressão, filas de impressão e trabalhos de impressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este namespace contém as classes principais a seguir:  
+  
+-   O <xref:System.Printing.PrintSystemObject> classe, que é a classe base para as outras classes de impressão de núcleo.  
+  
+-   O <xref:System.Printing.PrintServer> classe que representa um servidor de impressão real, geralmente um computador.  
+  
+-   O <xref:System.Printing.PrintQueue> classe que representa uma fila de impressão real e sua impressora.  
+  
+-   O <xref:System.Printing.PrintSystemJobInfo> classe que representa um determinado trabalho de impressão.  
+  
+-   O <xref:System.Printing.PrintTicket> classe, que instrui a impressora como processar um trabalho de impressão.  
+  
+ Classes derivadas do <xref:System.Printing.PrintSystemObject> cada classe tem um <xref:System.Printing.PrintSystemObject.Commit%2A> e um <xref:System.Printing.PrintSystemObject.Refresh%2A> método. Você deve usar estes métodos para garantir que as instâncias das classes são sincronizadas com os componentes de hardware ou software que eles representam.  
+  
+ O <xref:System.Printing> namespace também inclui muitos enumerações que descrevem os recursos da impressora, como se uma impressora pode produzir saída de agrupadas e que especificam as instruções para impressoras, como o tamanho do papel a ser usado para um trabalho de impressão.  
+  
+ Este namespace é parte dos serviços de impressão aprimorados fornecidos com [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]. Os desenvolvedores de código gerenciado usando [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] devem usar o [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] no <xref:System.Drawing.Printing> namespace.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

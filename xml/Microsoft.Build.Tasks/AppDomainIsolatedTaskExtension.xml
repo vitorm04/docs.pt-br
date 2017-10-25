@@ -1,0 +1,44 @@
+<Type Name="AppDomainIsolatedTaskExtension" FullName="Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension">
+  <TypeSignature Language="C#" Value="public abstract class AppDomainIsolatedTaskExtension : Microsoft.Build.Utilities.AppDomainIsolatedTask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AppDomainIsolatedTaskExtension extends Microsoft.Build.Utilities.AppDomainIsolatedTask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.AppDomainIsolatedTask</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.Build.Framework.LoadInSeparateAppDomain</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a mesma funcionalidade que o <see cref="T:Microsoft.Build.Utilities.Task" /> de classe, mas deriva <see cref="T:System.MarshalByRefObject" /> para que ele pode ser instanciado em seu próprio domínio de aplicativo.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Utilities.TaskLoggingHelper Log { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Utilities.TaskLoggingHelper Log" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension.Log" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.TaskLoggingHelper</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma instância de um <see cref="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" /> classe que contém métodos de registro em log da tarefa.</summary>
+        <value>O objeto auxiliar de registro em log.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,284 @@
+<Type Name="RC2" FullName="System.Security.Cryptography.RC2">
+  <TypeSignature Language="C#" Value="public abstract class RC2 : System.Security.Cryptography.SymmetricAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RC2 extends System.Security.Cryptography.SymmetricAlgorithm" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RC2" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.SymmetricAlgorithm</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base da qual todas as implementações do algoritmo <see cref="T:System.Security.Cryptography.RC2" /> devem ser derivadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Um algoritmo de criptografia simétrica mais recente, Advanced Encryption Standard (AES), está disponível. Considere o uso de <xref:System.Security.Cryptography.Aes> algoritmo e suas classes derivadas, em vez da <xref:System.Security.Cryptography.RC2> classe. Use <xref:System.Security.Cryptography.RC2> somente para compatibilidade com aplicativos herdados e dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RC2 ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RC2.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Security.Cryptography.RC2" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância de uma classe abstrata. Código do aplicativo criará uma nova instância de uma classe derivada.  
+  
+ Comprimentos de chave de 40 bits para 1024 bits oferece suporte a esse algoritmo em incrementos de 8 bits, mas o <xref:System.Security.Cryptography.RC2CryptoServiceProvider> implementação suporta apenas os comprimentos de chave de 40 bits para 128 bits em incrementos de 8 bits.  
+  
+ Esse método inicializa os campos protegidos do <xref:System.Security.Cryptography.SymmetricAlgorithm> para os valores padrão listados na tabela a seguir.  
+  
+|Campo|Valor padrão|  
+|-----------|-------------------|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.KeySizeValue>|128|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.BlockSizeValue>|64|  
+|<xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSizeValue>|64|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RC2 Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.RC2 Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RC2.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RC2</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de um objeto criptográfico para executar o algoritmo <see cref="T:System.Security.Cryptography.RC2" />.</summary>
+        <returns>Uma instância de um objeto de criptografia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar uma instância da classe RC2, você pode usar para criptografar e descriptografar dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar e usar um objeto RC2 para criptografar e descriptografar dados em um arquivo.  
+  
+ [!code-cpp[Cryptography.RC2.Create.File#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.RC2.Create.File/CPP/fileexample.cpp#1)]
+ [!code-csharp[Cryptography.RC2.Create.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.RC2.Create.File/CS/fileexample.cs#1)]
+ [!code-vb[Cryptography.RC2.Create.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.RC2.Create.File/VB/fileexample.vb#1)]  
+  
+ O exemplo a seguir mostra como criar e usar um objeto RC2 para criptografar e descriptografar dados na memória.  
+  
+ [!code-cpp[Cryptography.RC2.Create.Memory#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.RC2.Create.Memory/CPP/memoryexample.cpp#1)]
+ [!code-csharp[Cryptography.RC2.Create.Memory#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.RC2.Create.Memory/CS/memoryexample.cs#1)]
+ [!code-vb[Cryptography.RC2.Create.Memory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.RC2.Create.Memory/VB/memoryexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">O algoritmo foi usado com o modo FIPS (Federal Information Processing Standards) habilitado, mas ele não é compatível com FIPS.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RC2 Create (string AlgName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.RC2 Create(string AlgName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RC2.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RC2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AlgName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AlgName">O nome da implementação específica do <see cref="T:System.Security.Cryptography.RC2" /> a ser usada.</param>
+        <summary>Cria uma instância de um objeto criptográfico para realizar a implementação especificada do algoritmo <see cref="T:System.Security.Cryptography.RC2" />.</summary>
+        <returns>Uma instância de um objeto de criptografia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar uma instância da classe RC2, você pode usar para criptografar e descriptografar dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar e usar um objeto RC2 para criptografar e descriptografar dados em um arquivo.  
+  
+ [!code-cpp[Cryptography.RC2.Createstring.File#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.RC2.Createstring.File/CPP/fileexample.cpp#1)]
+ [!code-csharp[Cryptography.RC2.Createstring.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.RC2.Createstring.File/CS/fileexample.cs#1)]
+ [!code-vb[Cryptography.RC2.Createstring.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.RC2.Createstring.File/VB/fileexample.vb#1)]  
+  
+ O exemplo a seguir mostra como criar e usar um objeto RC2 para criptografar e descriptografar dados na memória.  
+  
+ [!code-cpp[Cryptography.RC2.Createstring.Memory#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.RC2.Createstring.Memory/CPP/memoryexample.cpp#1)]
+ [!code-csharp[Cryptography.RC2.Createstring.Memory#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.RC2.Createstring.Memory/CS/memoryexample.cs#1)]
+ [!code-vb[Cryptography.RC2.Createstring.Memory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.RC2.Createstring.Memory/VB/memoryexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetInvocationException">O algoritmo descrito pelo parâmetro <paramref name="algName" /> foi usado com o modo FIPS (Federal Information Processing Standards) habilitado, mas ele não é compatível com FIPS.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EffectiveKeySize">
+      <MemberSignature Language="C#" Value="public virtual int EffectiveKeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EffectiveKeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RC2.EffectiveKeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho efetivo da chave secreta usada pelo <see cref="T:System.Security.Cryptography.RC2" /> algoritmo em bits.</summary>
+        <value>O tamanho da chave efetivo usado pelo <see cref="T:System.Security.Cryptography.RC2" /> algoritmo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O tamanho da chave efetivação é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EffectiveKeySizeValue">
+      <MemberSignature Language="C#" Value="protected int EffectiveKeySizeValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 EffectiveKeySizeValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RC2.EffectiveKeySizeValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o tamanho efetivo a chave secreta usada pelo <see cref="T:System.Security.Cryptography.RC2" /> algoritmo em bits.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.RC2.EffectiveKeySize%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public override int KeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RC2.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho da chave secreta usada pelo <see cref="T:System.Security.Cryptography.RC2" /> algoritmo em bits.</summary>
+        <value>O tamanho da chave secreta usada pelo <see cref="T:System.Security.Cryptography.RC2" /> algoritmo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Comprimentos de chave de 40 bits para 1024 bits oferece suporte a esse algoritmo em incrementos de 8 bits, mas a implementação de RC2CryptoServiceProvider suporta apenas os comprimentos de chave de 40 bits para 128 bits em incrementos de 8 bits.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O valor para o tamanho da chave RC2 é menor que o valor efetivo de tamanho de chave.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

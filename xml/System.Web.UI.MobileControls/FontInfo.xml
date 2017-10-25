@@ -1,0 +1,197 @@
+<Type Name="FontInfo" FullName="System.Web.UI.MobileControls.FontInfo">
+  <TypeSignature Language="C#" Value="public class FontInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FontInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.FontInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece acesso a todas as informações relacionadas à fonte de estilo sobre um controle móvel do ASP.NET. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.FontInfo> classe fornece um subconjunto da funcionalidade do Web Forms <xref:System.Web.UI.WebControls.FontInfo?displayProperty=nameWithType> classe.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="Bold">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.BooleanOption Bold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.BooleanOption Bold" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.FontInfo.Bold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.BooleanOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a fonte está em negrito. O valor padrão é <see langword="NotSet" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Um valor enumerado que indica se a fonte está em negrito.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.FontInfo.Bold%2A> propriedade usa um <xref:System.Web.UI.MobileControls.BooleanOption> enumeração, não é um valor booleano.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Italic">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.BooleanOption Italic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.BooleanOption Italic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.FontInfo.Italic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.BooleanOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a fonte está em itálico. O valor padrão é <see langword="NotSet" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Um valor enumerado que indica se a fonte está em itálico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.FontInfo.Italic%2A> propriedade usa um <xref:System.Web.UI.MobileControls.BooleanOption>, não é um valor booleano.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.FontInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Drawing.Design.FontNameEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.FontNameConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da fonte especificada. O valor padrão é uma cadeia de caracteres vazia (""). Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O nome da fonte especificada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.FontSize Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.FontSize Size" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.FontInfo.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho da fonte especificada. Deve ser do tipo <see cref="T:System.Web.UI.MobileControls.FontSize" />. O valor padrão é <see langword="NotSet" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Um valor enumerado que indica o tamanho da fonte especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar qualquer um dos seguintes tamanhos de fonte: `Large`, `Normal`, `NotSet`, ou `Small`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.FontInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte o valor especificado em sua representação de cadeia de caracteres equivalente. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

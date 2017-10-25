@@ -1,0 +1,6 @@
+<Namespace Name="System.Net.Security">
+  <Docs>
+    <summary>O <see cref="N:System.Net.Security" /> namespace fornece fluxos de rede para proteger as comunicações entre hosts.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

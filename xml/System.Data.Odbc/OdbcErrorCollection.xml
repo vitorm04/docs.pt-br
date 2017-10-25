@@ -1,0 +1,259 @@
+<Type Name="OdbcErrorCollection" FullName="System.Data.Odbc.OdbcErrorCollection">
+  <TypeSignature Language="C#" Value="public sealed class OdbcErrorCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit OdbcErrorCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcErrorCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Coleta todos os erros gerados pelo <see cref="T:System.Data.Odbc.OdbcDataAdapter" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é criada por <xref:System.Data.Odbc.OdbcException> para coletar as instâncias do <xref:System.Data.Odbc.OdbcError> classe. <xref:System.Data.Odbc.OdbcErrorCollection>sempre contém pelo menos uma instância de <xref:System.Data.Odbc.OdbcError> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe cada <xref:System.Data.Odbc.OdbcError> dentro de <xref:System.Data.Odbc.OdbcErrorCollection>.  
+  
+ [!code-csharp[Classic WebData OdbcError.Message#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcError.Message#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcErrorCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz na qual copiar os elementos.</param>
+        <param name="i">O índice inicial do <c>matriz</c>.</param>
+        <summary>Copia os elementos de <see cref="T:System.Data.Odbc.OdbcErrorCollection" /> em uma matriz, começando no índice especificado dentro da matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe cada <xref:System.Data.Odbc.OdbcError> dentro de <xref:System.Data.Odbc.OdbcErrorCollection> coleção.  
+  
+ [!code-csharp[Classic WebData OdbcError.Message#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcError.Message#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A soma de <paramref name="index" /> e o número de elementos de <see cref="T:System.Data.Odbc.OdbcErrorCollection" /> é maior que o comprimento da matriz.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> não é válido para <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.Odbc.OdbcError[] array, int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.Odbc.OdbcError[] array, int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcErrorCollection.CopyTo(System.Data.Odbc.OdbcError[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.Odbc.OdbcError[]" />
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Data.Odbc.OdbcErrorCollection" /> que é o destino dos elementos copiados do <see cref="T:System.Data.Odbc.OdbcErrorCollection" /> atual.</param>
+        <param name="i">Um inteiro de 32 bits que representa o índice no <see cref="T:System.Data.Odbc.OdbcErrorCollection" /> no qual a cópia é iniciada.</param>
+        <summary>Copia todos os elementos do <see cref="T:System.Data.Odbc.OdbcErrorCollection" /> atual para o <see cref="T:System.Data.Odbc.OdbcErrorCollection" /> especificado, começando no índice de destino especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe cada <xref:System.Data.Odbc.OdbcError> dentro de <xref:System.Data.Odbc.OdbcErrorCollection> coleção.  
+  
+ [!code-csharp[Classic WebData OdbcError.Message#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcError.Message#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcErrorCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de erros na coleção.</summary>
+        <value>O número total de erros na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe cada <xref:System.Data.Odbc.OdbcError> dentro de <xref:System.Data.Odbc.OdbcErrorCollection>.  
+  
+ [!code-csharp[Classic WebData OdbcError.Message#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcError.Message#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcError.Message/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcErrorCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto que implementa a interface <see cref="T:System.Collections.IEnumerator" /> e que pode iterar por meio dos objetos <see cref="T:System.Data.Odbc.OdbcErrorCollection" /> no <see cref="T:System.Data.Odbc.OdbcErrorCollection" />.</summary>
+        <returns>Um objeto que implementa a interface <see cref="T:System.Collections.IEnumerator" /> e que pode iterar por meio dos objetos <see cref="T:System.Data.Odbc.OdbcErrorCollection" /> no <see cref="T:System.Data.Odbc.OdbcErrorCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcError this[int i] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Odbc.OdbcError Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcErrorCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">O índice de base zero do erro para recuperar.</param>
+        <summary>Obtém o erro no índice especificado.</summary>
+        <value>Um <see cref="T:System.Data.Odbc.OdbcError" /> que contém o erro no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcErrorCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Odbc.OdbcErrorCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcErrorCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Odbc.OdbcErrorCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,241 @@
+<Type Name="PackWebResponse" FullName="System.IO.Packaging.PackWebResponse">
+  <TypeSignature Language="C#" Value="public sealed class PackWebResponse : System.Net.WebResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PackWebResponse extends System.Net.WebResponse" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackWebResponse" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.WebResponse</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma resposta de um <see cref="T:System.IO.Packaging.PackWebRequest" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usa o protocolo de URI de pacote, você pode referenciar um pacote e seus elementos de parte ou localmente, de dentro de um pacote externamente de uma fonte da Web.  
+  
+ Para o pacote de protocolo de URI, os caracteres de barra (/ /) de inserida [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] são representados por vírgulas (,). Por exemplo: `pack://http:,,www.adatum.com,folder,file.package/images/picture1.jpg` faz referência ao arquivo `/images/picture1.jpg` que está contida no `http://www.adatum.com/folder/file.package`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackWebResponse.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o fluxo para esta solicitação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Certifique-se de que os objetos fechem quando eles não estão mais em uso para que os recursos são exauridos não.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength">
+      <MemberSignature Language="C#" Value="public override long ContentLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebResponse.ContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento do conteúdo da resposta.</summary>
+        <value>O comprimento de conteúdo, em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Verificando a essa propriedade em uma solicitação da Web real e uma resposta correspondente tem implicações de desempenho porque em algumas circunstâncias, isso requer que o fluxo de resposta inteira é lido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public override string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebResponse.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_mime](~/includes/tlasharptla-mime-md.md)] tipo de conteúdo do conteúdo do fluxo de resposta.</summary>
+        <value>O [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] tipo de conteúdo do fluxo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma solicitação não especifica uma parte no pacote, ele retorna o [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] tipo do pacote.  
+  
+ Solicitações que especificam uma parte no pacote retornam um dos seguintes:  
+  
+1.  Se a parte solicitada contém um <xref:System.IO.Packaging.PackagePart.ContentType%2A> valor, o <xref:System.IO.Packaging.PackagePart.ContentType%2A> valor é retornado.  
+  
+2.  Se a parte solicitada não contém nenhuma <xref:System.IO.Packaging.PackagePart.ContentType%2A> valor, mas o nome do fluxo que contém um reconhecido [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] tipo de extensão, o [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] correspondente à extensão de tipo será retornado.  
+  
+3.  Se a parte solicitada não tem um <xref:System.IO.Packaging.PackagePart.ContentType%2A> valor nem um reconhecido [!INCLUDE[TLA2#tla_mime](~/includes/tla2sharptla-mime-md.md)] tipo de extensão, <xref:System.IO.Packaging.PackWebResponse.ContentType%2A> retorna uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackWebResponse.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponseStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream GetResponseStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.Stream GetResponseStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackWebResponse.GetResponseStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o fluxo de resposta que está contido no <see cref="T:System.IO.Packaging.PackWebResponse" />.</summary>
+        <returns>O fluxo de resposta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public override System.Net.WebHeaderCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebHeaderCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebResponse.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de Web <see cref="P:System.Net.WebResponse.Headers" /> para esta resposta.</summary>
+        <value>A coleção de resposta da Web <see cref="P:System.Net.WebResponse.Headers" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerResponse">
+      <MemberSignature Language="C#" Value="public System.Net.WebResponse InnerResponse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebResponse InnerResponse" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebResponse.InnerResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o interno <see cref="T:System.Net.WebResponse" /> objeto para a resposta.</summary>
+        <value>Os dados de resposta como um <see cref="T:System.Net.WebResponse" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackWebResponse.InnerResponse%2A>Retorna `null` quando a resposta é de cache do pacote (quando <xref:System.IO.Packaging.PackWebResponse.IsFromCache%2A> é `true`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFromCache">
+      <MemberSignature Language="C#" Value="public override bool IsFromCache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFromCache" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebResponse.IsFromCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a resposta de cache do pacote ou de uma solicitação da Web.</summary>
+        <value>
+          <see langword="true" />Se a resposta do cache do pacote; <see langword="false" /> se a resposta de uma solicitação da Web.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseUri">
+      <MemberSignature Language="C#" Value="public override Uri ResponseUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ResponseUri" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebResponse.ResponseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] da resposta.</summary>
+        <value>O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da resposta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

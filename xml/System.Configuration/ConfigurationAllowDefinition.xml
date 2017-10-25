@@ -1,0 +1,109 @@
+<Type Name="ConfigurationAllowDefinition" FullName="System.Configuration.ConfigurationAllowDefinition">
+  <TypeSignature Language="C#" Value="public enum ConfigurationAllowDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConfigurationAllowDefinition extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationAllowDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os locais dentro da hierarquia do arquivo de configuração que podem definir ou substituir as propriedades contidas dentro de um objeto <see cref="T:System.Configuration.ConfigurationSection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores nesta enumeração são opcionalmente usados ao criar uma nova instância do <xref:System.Configuration.ConfigurationSection> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Everywhere">
+      <MemberSignature Language="C#" Value="Everywhere" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationAllowDefinition Everywhere = int32(300)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationAllowDefinition.Everywhere" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationAllowDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Configuration.ConfigurationSection" /> pode ser definida em qualquer lugar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineOnly">
+      <MemberSignature Language="C#" Value="MachineOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationAllowDefinition MachineOnly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationAllowDefinition.MachineOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationAllowDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Configuration.ConfigurationSection" /> pode ser definido somente no arquivo Machine.config.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineToApplication">
+      <MemberSignature Language="C#" Value="MachineToApplication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationAllowDefinition MachineToApplication = int32(200)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationAllowDefinition.MachineToApplication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationAllowDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Configuration.ConfigurationSection" /> pode ser definido ou o arquivo Machine. config, o arquivo Web. config no nível da máquina localizado no mesmo diretório do Machine. config, ou o arquivo Web. config de nível superior do aplicativo localizado na raiz do diretório virtual, mas não nos subdiretórios de uma raiz virtual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineToWebRoot">
+      <MemberSignature Language="C#" Value="MachineToWebRoot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationAllowDefinition MachineToWebRoot = int32(100)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationAllowDefinition.MachineToWebRoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationAllowDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Configuration.ConfigurationSection" /> pode ser definido no arquivo Machine. config ou o arquivo Web. config de nível de máquina encontrada no mesmo diretório do Machine. config, mas não em arquivos Web. config do aplicativo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

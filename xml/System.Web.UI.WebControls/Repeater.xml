@@ -1,0 +1,1622 @@
+<Type Name="Repeater" FullName="System.Web.UI.WebControls.Repeater">
+  <TypeSignature Language="C#" Value="public class Repeater : System.Web.UI.Control, System.Web.UI.INamingContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Repeater extends System.Web.UI.Control implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Repeater" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ItemCommand")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("DataSource")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.RepeaterDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Um controle de lista com limite de dados que permite o layout personalizado pela repetição de um modelo especificado para cada item exibido na lista.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Associação de dados](#data_binding)  
+  
+-   [Modelos](#templates)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ O <xref:System.Web.UI.WebControls.Repeater> controle é uma lista de associação de dados de modelo básico. Ele não tem layout interno ou estilos, portanto você deve declarar explicitamente todos os layout, formatação e estilo marcas em modelos do controle.  
+  
+ O <xref:System.Web.UI.WebControls.Repeater> controle permite dividir marcas entre os modelos.  Para criar uma tabela usando modelos, inclua a marca de tabela inicial (`<table>`) no <xref:System.Web.UI.WebControls.Repeater.HeaderTemplate%2A>, uma marca de linha de tabela única (`<tr>`) no <xref:System.Web.UI.WebControls.Repeater.ItemTemplate%2A>e a marca de fim de tabela (`</table>`) no <xref:System.Web.UI.WebControls.Repeater.FooterTemplate%2A>.  
+  
+ O <xref:System.Web.UI.WebControls.Repeater> controle não tem recursos internos de seleção ou suporte de edição. Você pode usar o <xref:System.Web.UI.WebControls.Repeater.ItemCommand> eventos para eventos de controle de processo que são gerados a partir de modelos para o controle.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+<a name="data_binding"></a>   
+## <a name="data-binding"></a>Associação de dados  
+ O <xref:System.Web.UI.WebControls.Repeater> controle fornece duas propriedades para dar suporte à associação de dados. Para associar dados a qualquer coleção que implementa o <xref:System.Collections.IEnumerable?displayProperty=nameWithType> interface (como um <xref:System.Data.DataView?displayProperty=nameWithType>, um <xref:System.Collections.ArrayList?displayProperty=nameWithType>, ou uma matriz), ou o <xref:System.ComponentModel.IListSource> interface, use o <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade para especificar a fonte de dados. Quando você define o <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade manualmente você deve escrever o código para executar associação de dados. Para vincular automaticamente os <xref:System.Web.UI.WebControls.Repeater> controle a uma fonte de dados representada por um controle de fonte de dados, definir o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade para o <xref:System.Web.UI.Control.ID%2A> do controle de fonte de dados para usar. Quando você define o <xref:System.Web.UI.WebControls.BaseDataList.DataSourceID%2A> propriedade, o <xref:System.Web.UI.WebControls.Repeater> controle associa automaticamente para o controle de fonte de dados especificado na primeira solicitação. Portanto, você não precisa chamar explicitamente o <xref:System.Web.UI.WebControls.BaseDataList.DataBind%2A> método, a menos que você tiver alterado as propriedades relacionadas a dados do <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ Um <xref:System.Web.UI.WebControls.Repeater> controlar associa sua <xref:System.Web.UI.WebControls.Repeater.ItemTemplate%2A> e <xref:System.Web.UI.WebControls.Repeater.AlternatingItemTemplate%2A> para os dados de modelo declarado e referenciado por seu <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade ou os dados de origem controle especificado pelo seu <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade. O <xref:System.Web.UI.WebControls.Repeater.HeaderTemplate%2A>, <xref:System.Web.UI.WebControls.Repeater.FooterTemplate%2A>, e <xref:System.Web.UI.WebControls.Repeater.SeparatorTemplate%2A> não são associado a dados.  
+  
+ Se o <xref:System.Web.UI.WebControls.Repeater> a fonte de dados do controle está definida, mas nenhum dado é retornado, o controle processa o <xref:System.Web.UI.WebControls.Repeater.HeaderTemplate%2A> e <xref:System.Web.UI.WebControls.Repeater.FooterTemplate%2A> sem itens. Se a fonte de dados for `null`, o <xref:System.Web.UI.WebControls.Repeater> não será renderizado.  
+  
+<a name="templates"></a>   
+## <a name="templates"></a>Modelos  
+ No mínimo, cada <xref:System.Web.UI.WebControls.Repeater> controle deve definir um <xref:System.Web.UI.WebControls.Repeater.ItemTemplate%2A>. No entanto, outros modelos opcionais descritos na tabela a seguir podem ser usados para personalizar a aparência da lista.  
+  
+|Nome do modelo|Descrição|  
+|-------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Repeater.ItemTemplate%2A>|Define o conteúdo e o layout de itens na lista. Este modelo é necessário.|  
+|<xref:System.Web.UI.WebControls.Repeater.AlternatingItemTemplate%2A>|Se definido, determina o conteúdo e o layout de alternadas (com base em zero ímpar indexada) itens. Se não estiver definido, <xref:System.Web.UI.WebControls.Repeater.ItemTemplate%2A> é usado.|  
+|<xref:System.Web.UI.WebControls.Repeater.SeparatorTemplate%2A>|Se definido, será renderizado entre itens (e itens alternados). Se não estiver definido, um separador não será renderizado.|  
+|<xref:System.Web.UI.WebControls.Repeater.HeaderTemplate%2A>|Se definido, determina o conteúdo e o layout do cabeçalho da lista. Se não estiver definido, um cabeçalho não será renderizado.|  
+|<xref:System.Web.UI.WebControls.Repeater.FooterTemplate%2A>|Se definido, determina o conteúdo e o layout do rodapé da lista. Se não estiver definido, um rodapé de página não será renderizado.|  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:Repeater  
+    DataMember="string"  
+    DataSource="string"  
+    DataSourceID="string"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnItemCommand="ItemCommand event handler"  
+    OnItemCreated="ItemCreated event handler"  
+    OnItemDataBound="ItemDataBound event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    Visible="True|False"  
+>  
+        <AlternatingItemTemplate>  
+            <!-- child controls -->  
+        </AlternatingItemTemplate>  
+        <FooterTemplate>  
+            <!-- child controls -->  
+        </FooterTemplate>  
+        <HeaderTemplate>  
+            <!-- child controls -->  
+        </HeaderTemplate>  
+        <ItemTemplate>  
+            <!-- child controls -->  
+        </ItemTemplate>  
+        <SeparatorTemplate>  
+            <!-- child controls -->  
+        </SeparatorTemplate>  
+</asp:Repeater>  
+```  
+  
+   
+  
+## Examples  
+ Um projeto de site da Web do Visual Studio com o código-fonte está disponível para acompanhar este tópico: [baixar](http://go.microsoft.com/fwlink/?LinkId=192873).  
+  
+ O exemplo de código a seguir demonstra como usar dois simples <xref:System.Web.UI.WebControls.Repeater> controles em uma página. O <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade é usada para especificar a fonte de dados para o <xref:System.Web.UI.WebControls.Repeater> controle. A primeira <xref:System.Web.UI.WebControls.Repeater> exibe seus itens em uma tabela; o segundo <xref:System.Web.UI.WebControls.Repeater> exibe seus itens em uma lista separada por vírgulas.  
+  
+ [!code-aspx-csharp[Classic Repeater Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater Example/VB/sourcevb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade para especificar a fonte de dados para um <xref:System.Web.UI.WebControls.Repeater> controle. O <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> está definida como o <xref:System.Web.UI.Control.ID%2A> propriedade o <xref:System.Web.UI.WebControls.SqlDataSource> controle usado para recuperar os dados. Quando a página for carregada, o <xref:System.Web.UI.WebControls.Repeater> controle é vinculado automaticamente à fonte de dados especificado pelo <xref:System.Web.UI.WebControls.SqlDataSource> controle e os dados são exibidos para o usuário.  
+  
+ [!code-aspx-csharp[Repeater.DataSourceID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Repeater.DataSourceID/CS/repeater.datasourceidcs.aspx#1)]
+ [!code-aspx-vb[Repeater.DataSourceID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Repeater.DataSourceID/VB/repeater.datasourceidvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Repeater ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternatingItemTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate AlternatingItemTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate AlternatingItemTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.AlternatingItemTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.RepeaterItem))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que implementa <see cref="T:System.Web.UI.ITemplate" />, que define como os itens alternados no controle são exibidos.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> que define como os itens alternados são exibidos. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para fornecer uma aparência diferente para itens alternados a <xref:System.Web.UI.WebControls.Repeater> controle do que é especificado no <xref:System.Web.UI.WebControls.Repeater.ItemTemplate%2A>.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.Repeater.AlternatingItemTemplate%2A> para exibir itens alternados do <xref:System.Web.UI.WebControls.Repeater> controle em uma célula azul clara com fonte em negrito.  
+  
+ [!code-aspx-csharp[Classic Repeater.AlternatingItemTemplate Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.AlternatingItemTemplate Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.AlternatingItemTemplate Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.AlternatingItemTemplate Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallingDataMethods">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CallingDataMethodsEventHandler CallingDataMethods;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CallingDataMethodsEventHandler CallingDataMethods" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Repeater.CallingDataMethods" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CallingDataMethodsEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando os métodos de dados estão sendo chamados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade desse evento é que você tenha a oportunidade para especificar que os métodos de dados a ser chamado em um objeto diferente que o <xref:System.Web.UI.Page> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.ControlCollection" /> que contém os controles filho do controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+        <value>Um <see cref="T:System.Web.UI.ControlCollection" /> que contém os controles filho do controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Repeater.Controls%2A> controles de coleção para gerenciar o filho do <xref:System.Web.UI.WebControls.Repeater> controle. Ele costuma ser usado para recuperar um controle filho da coleção. Você também pode adicionar e remover controles filho da coleção.  
+  
+> [!NOTE]
+>  Para acessar um controle filho dentro de um <xref:System.Web.UI.WebControls.Repeater> controlar, percorrer o <xref:System.Web.UI.WebControls.Repeater> do controle <xref:System.Web.UI.WebControls.Repeater.Items%2A> coleção para recuperar o <xref:System.Web.UI.WebControls.RepeaterItem> para um determinado índice. Em seguida, chame o **repetidor** item herdado <xref:System.Web.UI.Control.FindControl%2A> método para recuperar um controle com uma ID específica  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado pela estrutura de página do ASP.NET para notificar os controles do servidor que usam a implementação baseada em composição para criar os controles filho para preparar-se para um postback ou renderização.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlHierarchy">
+      <MemberSignature Language="C#" Value="protected virtual void CreateControlHierarchy (bool useDataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CreateControlHierarchy(bool useDataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.CreateControlHierarchy(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useDataSource" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useDataSource">Indica se deve usar a fonte de dados especificado.</param>
+        <summary>Cria uma hierarquia de controle, com ou sem a fonte de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDataSourceSelectArguments">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.DataSourceSelectArguments CreateDataSourceSelectArguments ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.DataSourceSelectArguments CreateDataSourceSelectArguments() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.CreateDataSourceSelectArguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="P:System.Web.UI.DataSourceSelectArguments.Empty" /> valor.</summary>
+        <returns>O valor <see cref="P:System.Web.UI.DataSourceSelectArguments.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A primeira chamada para o <xref:System.Web.UI.WebControls.Repeater.SelectArguments%2A> chamadas de propriedade de <xref:System.Web.UI.WebControls.Repeater.CreateDataSourceSelectArguments%2A> método para retornar o <xref:System.Web.UI.DataSourceSelectArguments.Empty%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItem">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.RepeaterItem CreateItem (int itemIndex, System.Web.UI.WebControls.ListItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.RepeaterItem CreateItem(int32 itemIndex, valuetype System.Web.UI.WebControls.ListItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.CreateItem(System.Int32,System.Web.UI.WebControls.ListItemType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeaterItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O local especificado dentro do <see cref="T:System.Web.UI.WebControls.Repeater" /> controle para colocar o item criado.</param>
+        <param name="itemType">Um <see cref="T:System.Web.UI.WebControls.ListItemType" /> que representa o tipo especificado do <see cref="T:System.Web.UI.WebControls.Repeater" /> item para criar.</param>
+        <summary>Cria um objeto <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> com o tipo de item especificado e um local no controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+        <returns>O novo objeto <see cref="T:System.Web.UI.WebControls.RepeaterItem" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.Repeater.CreateItem%2A> controlar o método em um servidor personalizado para que sempre retorna um novo <xref:System.Web.UI.WebControls.RepeaterItem> e índice correspondente e digite um personalizado <xref:System.Web.UI.WebControls.Repeater> controle de servidor.  
+  
+ [!code-aspx-csharp[CustomRepeaterCreateItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRepeaterCreateItem/CS/custom_repeater_createitemcs.aspx#1)]
+ [!code-aspx-vb[CustomRepeaterCreateItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRepeaterCreateItem/VB/custom_repeater_createitemvb.aspx#1)]  
+  
+ [!code-csharp[CustomRepeaterCreateItem#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRepeaterCreateItem/CS/custom_repeater_createitem.cs#2)]
+ [!code-vb[CustomRepeaterCreateItem#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRepeaterCreateItem/VB/custom_repeater_createitem.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatingModelDataSource">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CreatingModelDataSourceEventHandler CreatingModelDataSource;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CreatingModelDataSourceEventHandler CreatingModelDataSource" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Repeater.CreatingModelDataSource" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CreatingModelDataSourceEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> objeto está sendo criado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade desse evento é que você tenha a oportunidade para alterar o <xref:System.Web.UI.WebControls.ModelDataSourceView> instância em cenários em que você deseja usar uma classe personalizada que deriva de <xref:System.Web.UI.WebControls.ModelDataSourceView> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public override void DataBind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.DataBind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Associa o controle <see cref="T:System.Web.UI.WebControls.Repeater" /> e todos os seus controles filho à fonte de dados especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método para associar a fonte de dados especificada pelo <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade para o <xref:System.Web.UI.WebControls.Repeater> controle. Quando você associa uma fonte de dados para o <xref:System.Web.UI.WebControls.Repeater> controle, as informações na fonte de dados é exibido no controle.  
+  
+ O <xref:System.Web.UI.WebControls.BaseDataList.DataBind%2A> método é normalmente usado para sincronizar a fonte de dados e uma lista de controle depois de informações da fonte de dados são atualizadas de dados. Isso permite que as alterações na fonte de dados também seja atualizado em uma lista de controle de dados.  
+  
+ Se a fonte de dados para o <xref:System.Web.UI.WebControls.Repeater> controle for especificado o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade, você não precisa chamar explicitamente o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método. ASP.NET chama esse método automaticamente para associar o controle da fonte de dados especificado para o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método em um servidor personalizado de controle para que ele sempre gera um evento de associação de dados em um personalizado <xref:System.Web.UI.WebControls.Repeater> controle de servidor.  
+  
+ [!code-aspx-csharp[CustomRepeaterDataBind#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRepeaterDataBind/CS/custom_repeater_databindcs.aspx#1)]
+ [!code-aspx-vb[CustomRepeaterDataBind#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRepeaterDataBind/VB/custom_repeater_databindvb.aspx#1)]  
+  
+ [!code-csharp[CustomRepeaterDataBind#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRepeaterDataBind/CS/custom_repeater_databind.cs#2)]
+ [!code-vb[CustomRepeaterDataBind#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRepeaterDataBind/VB/custom_repeater_databind.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public virtual string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a tabela específica no <see cref="P:System.Web.UI.WebControls.Repeater.DataSource" /> para associar ao controle.</summary>
+        <value>Uma cadeia de caracteres que especifica uma tabela no <see cref="P:System.Web.UI.WebControls.Repeater.DataSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fonte de dados especificado pelo <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade contiver várias fontes de dados, use o <xref:System.Web.UI.WebControls.Repeater.DataMember%2A> propriedade para especificar a origem específica para associar ao controle. Por exemplo, se você tiver um <xref:System.Data.DataSet?displayProperty=nameWithType> com várias tabelas, você deve especificar qual tabela para associar ao controle. Depois de especificar a fonte de dados, use o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método para associar a fonte de dados para o controle.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.Repeater.DataMember%2A> propriedade para especificar uma tabela no <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> para associar ao <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-aspx-csharp[Classic Repeater.DataMember Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.DataMember Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.DataMember Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.DataMember Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public virtual object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte de dados que fornece dados para popular a lista.</summary>
+        <value>Um objeto <see cref="T:System.Collections.IEnumerable" /> ou <see cref="T:System.ComponentModel.IListSource" /> que contém uma coleção de valores usada para fornecer dados a este controle. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para especificar a fonte de dados para popular o <xref:System.Web.UI.WebControls.Repeater> controle. O <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> pode ser qualquer <xref:System.Collections.IEnumerable?displayProperty=nameWithType> coleção como um <xref:System.Data.DataView?displayProperty=nameWithType> para acessar bancos de dados, um <xref:System.Collections.ArrayList?displayProperty=nameWithType>, ou uma matriz ou um <xref:System.ComponentModel.IListSource> objeto. Quando você define o <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade manualmente você deve escrever o código para associar à fonte de dados.  
+  
+ Se a fonte de dados especificado pelo <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade contiver várias fontes de dados, use o <xref:System.Web.UI.WebControls.Repeater.DataMember%2A> propriedade para especificar a origem específica para associar ao controle. Por exemplo, se você tiver um <xref:System.Data.DataSet?displayProperty=nameWithType> com várias tabelas, você deve especificar qual tabela para associar ao controle. Depois de especificar a fonte de dados, use o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método para associar a fonte de dados para o controle.  
+  
+ Como alternativa, você pode usar o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade para associar automaticamente a uma fonte de dados representada por um controle de fonte de dados. Quando você define o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade, o <xref:System.Web.UI.WebControls.Repeater> controle associa automaticamente para o controle de fonte de dados especificado. Você não precisa escrever código que explicitamente chama o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método, a menos que você alterar as propriedades de dinamicamente o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ Se os valores são especificados para ambos os <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade e o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade, o ASP.NET não é capaz de resolver a fonte de dados e um <xref:System.Web.HttpException?displayProperty=nameWithType> é gerada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar o <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> do <xref:System.Web.UI.WebControls.Repeater> controlar quando a página for carregada.  
+  
+ [!code-aspx-csharp[Classic Repeater.DataSource Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.DataSource Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.DataSource Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.DataSource Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Web.UI.WebControls.Repeater.DataSource" /> o objeto especificado não é uma origem com suporte de dados para o <see cref="T:System.Web.UI.WebControls.Repeater" /> controle.</exception>
+        <exception cref="T:System.Web.HttpException">A fonte de dados não pode ser resolvida porque foi especificado um valor para as propriedades <see cref="P:System.Web.UI.WebControls.Repeater.DataSource" /> e <see cref="P:System.Web.UI.WebControls.Repeater.DataSourceID" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceID">
+      <MemberSignature Language="C#" Value="public virtual string DataSourceID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSourceID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.DataSourceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty(typeof(System.Web.UI.DataSourceControl))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade <see cref="P:System.Web.UI.Control.ID" /> do controle de fonte de dados que o controle <see cref="T:System.Web.UI.WebControls.Repeater" /> deve usar para recuperar a fonte de dados.</summary>
+        <value>A propriedade <see langword="ID" /> do controle de fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade para acessar o <xref:System.Web.UI.Control.ID%2A> propriedade da fonte de dados de controle que o <xref:System.Web.UI.WebControls.Repeater> controle deve usar para recuperar a fonte de dados. A fonte de dados que é referenciado pelo controle de <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade pode ser qualquer controle que implementa o <xref:System.Web.UI.IDataSource> interface. O controle de fonte de dados deve existir no mesmo contêiner de nomeação, como o <xref:System.Web.UI.WebControls.Repeater> controle que faz referência a ele ou em um controle pai o <xref:System.Web.UI.WebControls.Repeater> controle. Quando você especificar um valor para o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade, o <xref:System.Web.UI.WebControls.Repeater> controle associado ao controle de fonte de dados especificado. Você não precisa escrever código que explicitamente chama o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método.  
+  
+ Como alternativa, você pode usar o <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade para especificar a origem dos valores para associar o <xref:System.Web.UI.WebControls.Repeater> controle. A fonte de dados deve ser uma coleção que implementa o <xref:System.Collections.IEnumerable?displayProperty=nameWithType> interface (como o <xref:System.Data.DataView?displayProperty=nameWithType> ou <xref:System.Collections.ArrayList?displayProperty=nameWithType> objeto) ou o <xref:System.ComponentModel.IListSource> interface. Quando você define o <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade, você deve escrever o código para executar a associação de dados.  
+  
+ Se os valores são especificados para ambos os <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> e <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedades, o ASP.NET não é capaz de resolver a fonte de dados e um <xref:System.Web.HttpException?displayProperty=nameWithType> exceção será lançada.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade para o <xref:System.Web.UI.Control.ID%2A> propriedade de um <xref:System.Web.UI.WebControls.SqlDataSource> controle. Quando a página for carregada, o <xref:System.Web.UI.WebControls.Repeater> controle associado à fonte de dados que é especificado pelo <xref:System.Web.UI.WebControls.SqlDataSource> controle e os dados são exibidos para o usuário.  
+  
+ [!code-aspx-csharp[Repeater.DataSourceID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Repeater.DataSourceID/CS/repeater.datasourceidcs.aspx#1)]
+ [!code-aspx-vb[Repeater.DataSourceID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Repeater.DataSourceID/VB/repeater.datasourceidvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A fonte de dados não pode ser resolvida para um dos seguintes motivos:  
+  
+-   Um valor for especificado para o <see cref="P:System.Web.UI.WebControls.Repeater.DataSource" /> e <see cref="P:System.Web.UI.WebControls.Repeater.DataSourceID" /> propriedades.  
+  
+-   A fonte de dados especificada pelo <see cref="P:System.Web.UI.WebControls.Repeater.DataSourceID" /> propriedade não pode ser encontrada na página.  
+  
+-   A fonte de dados especificada pela propriedade <see cref="P:System.Web.UI.WebControls.Repeater.DataSourceID" /> não implementa <see cref="T:System.Web.UI.IDataSource" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os temas são aplicados a este controle.</summary>
+        <value>
+          <see langword="true" /> para usar temas; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Repeater.EnableTheming%2A> propriedade indica se os temas estão habilitados. Quando o <xref:System.Web.UI.WebControls.Repeater.EnableTheming%2A> é de propriedade `true`, o diretório de tema para o aplicativo é procurado capas de controle aplicar. Se nenhuma capa de controle específico existe no diretório do tema, capas não são aplicadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureDataBound">
+      <MemberSignature Language="C#" Value="protected void EnsureDataBound ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EnsureDataBound() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.EnsureDataBound" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica se o <see cref="T:System.Web.UI.WebControls.Repeater" /> controle requer a associação de dados e um controle de fonte de dados válido especificado antes de chamar o <see cref="M:System.Web.UI.WebControls.Repeater.DataBind" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você especificar um valor para o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade ASP.NET automaticamente associa o <xref:System.Web.UI.WebControls.Repeater> controle para o controle de fonte de dados especificado. Quando o ASP.NET executa associação de dados para o <xref:System.Web.UI.WebControls.Repeater> controle, primeiro chama o <xref:System.Web.UI.WebControls.Repeater.EnsureDataBound%2A> método para verificar se o controle já não foi associado a dados e que uma fonte de dados válido controle que implementa o <xref:System.Web.UI.IDataSource> interface é especificada para sua <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade. O <xref:System.Web.UI.WebControls.Repeater.EnsureDataBound%2A> método chama o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate FooterTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate FooterTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.FooterTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.RepeaterItem))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.UI.ITemplate" /> que define como a seção de rodapé do controle <see cref="T:System.Web.UI.WebControls.Repeater" /> é exibida.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> que define como a seção de rodapé do controle <see cref="T:System.Web.UI.WebControls.Repeater" /> é exibida. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para criar um modelo que controla como a seção de rodapé de um <xref:System.Web.UI.WebControls.Repeater> controle é exibido.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.Repeater.FooterTemplate%2A> para controlar a aparência do rodapé para o <xref:System.Web.UI.WebControls.Repeater> controle. Observe que o <xref:System.Web.UI.WebControls.Repeater.FooterTemplate%2A> contém a marca de fim da tabela (`</table>`).  
+  
+ [!code-aspx-csharp[Classic Repeater.FooterTemplate Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.FooterTemplate Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.FooterTemplate Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.FooterTemplate Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IEnumerable GetData ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.IEnumerable GetData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.GetData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IEnumerable" /> interface da fonte de dados.</summary>
+        <returns>Um objeto que implementa <see cref="T:System.Collections.IEnumerable" /> que representa os dados da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte de dados for especificada, o <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade ou o <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> e <xref:System.Web.UI.WebControls.Repeater.SelectArguments%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate HeaderTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate HeaderTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.HeaderTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.RepeaterItem))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.UI.ITemplate" /> que define como a seção de cabeçalho do controle <see cref="T:System.Web.UI.WebControls.Repeater" /> é exibida.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> que define como a seção de cabeçalho do controle <see cref="T:System.Web.UI.WebControls.Repeater" /> é exibida. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para criar um modelo que controla como a seção de cabeçalho de um <xref:System.Web.UI.WebControls.Repeater> controle é exibido.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.Repeater.HeaderTemplate%2A> para controlar a aparência do cabeçalho para o <xref:System.Web.UI.WebControls.Repeater> controle. Observe que o <xref:System.Web.UI.WebControls.Repeater.HeaderTemplate%2A> contém a marca de início da tabela (`<table>`).  
+  
+ [!code-aspx-csharp[Classic Repeater.FooterTemplate Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.FooterTemplate Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.FooterTemplate Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.FooterTemplate Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialized">
+      <MemberSignature Language="C#" Value="protected bool Initialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Initialized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.Initialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se o controle foi inicializado.</summary>
+        <value>
+          <see langword="true" />, se o controle foi inicializado, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Repeater.Initialized%2A> propriedade é uma propriedade de auxiliar que é usada para determinar se a associação de dados é necessária quando o <xref:System.Web.UI.WebControls.Repeater.DataMember%2A>, <xref:System.Web.UI.WebControls.Repeater.DataSource%2A>, ou <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade é alterada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeItem">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeItem (System.Web.UI.WebControls.RepeaterItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeItem(class System.Web.UI.WebControls.RepeaterItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.InitializeItem(System.Web.UI.WebControls.RepeaterItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.RepeaterItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O controle a ser inicializado de um modelo embutida.</param>
+        <summary>Popula iterativamente especificado <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> com uma sub-hierarquia de controles filho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBoundUsingDataSourceID">
+      <MemberSignature Language="C#" Value="protected bool IsBoundUsingDataSourceID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBoundUsingDataSourceID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.IsBoundUsingDataSourceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Web.UI.WebControls.Repeater.DataSourceID" /> está definida.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Web.UI.WebControls.Repeater.DataSourceID" /> propriedade é definida como um valor diferente de uma cadeia de caracteres vazia (""); Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Repeater.IsBoundUsingDataSourceID%2A> propriedade é uma propriedade de auxiliar que determina se o controle está associado a um controle de fonte de dados do ASP.NET 2.0, como um <xref:System.Web.UI.WebControls.ObjectDataSource> ou um <xref:System.Web.UI.WebControls.SqlDataSource> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataBindingAutomatic">
+      <MemberSignature Language="C#" Value="protected bool IsDataBindingAutomatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDataBindingAutomatic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.IsDataBindingAutomatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação de dados é automática.</summary>
+        <value>
+          <see langword="true" />Se a associação de dados é automática; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Associação de dados é automática se o <xref:System.Web.UI.WebControls.Repeater> controle está associado a um controle de fonte de dados ou se associadores de modelo estão em uso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCommand">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.RepeaterCommandEventHandler ItemCommand;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.RepeaterCommandEventHandler ItemCommand" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Repeater.ItemCommand" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeaterCommandEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário clica em um botão no controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando um botão de <xref:System.Web.UI.WebControls.Repeater> controle é clicado.  
+  
+ Esse evento faz com que uma viagem do cliente ocorra.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar e codificar um manipulador para o <xref:System.Web.UI.WebControls.Repeater.ItemCommand> evento o <xref:System.Web.UI.WebControls.Repeater> controle. Informações sobre o botão são exibidas quando um <xref:System.Web.UI.WebControls.Button> controle dentro de <xref:System.Web.UI.WebControls.Repeater> controle é clicado.  
+  
+ [!code-aspx-csharp[Classic Repeater.ItemCommand Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.ItemCommand Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.ItemCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.ItemCommand Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCreated">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.RepeaterItemEventHandler ItemCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.RepeaterItemEventHandler ItemCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Repeater.ItemCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeaterItemEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um item é criado no controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando um item é criado no <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar e codificar um manipulador para o <xref:System.Web.UI.WebControls.Repeater.ItemCreated> evento o <xref:System.Web.UI.WebControls.Repeater> controle. Uma nova linha de texto que indica o tipo de item é exibida sempre que um <xref:System.Web.UI.WebControls.Repeater> item é criado.  
+  
+ [!code-aspx-csharp[Classic Repeater.ItemCreated Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.ItemCreated Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.ItemCreated Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.ItemCreated Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDataBound">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.RepeaterItemEventHandler ItemDataBound;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.RepeaterItemEventHandler ItemDataBound" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Repeater.ItemDataBound" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeaterItemEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre depois que um item no controle <see cref="T:System.Web.UI.WebControls.Repeater" /> tenha limite de dados, mas antes que seja renderizado na página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando um item de <xref:System.Web.UI.WebControls.Repeater> controle é associado a dados.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar e codificar um manipulador para o <xref:System.Web.UI.WebControls.Repeater.ItemDataBound> evento o <xref:System.Web.UI.WebControls.Repeater> controle. Os dados são modificados depois que está associado a um item de <xref:System.Web.UI.WebControls.Repeater> controle, mas antes é renderizado na página.  
+  
+ [!code-aspx-csharp[Classic Repeater.ItemDataBound Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.ItemDataBound Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.ItemDataBound Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.ItemDataBound Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.RepeaterItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.RepeaterItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeaterItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> no controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+        <value>Uma coleção de objetos <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> . O padrão é um <see cref="T:System.Web.UI.WebControls.RepeaterItemCollection" /> vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Repeater> controle preenche o <xref:System.Web.UI.WebControls.Repeater.Items%2A> coleção, enumerando todos os objetos no seu <xref:System.Web.UI.WebControls.Repeater.DataSource%2A>. O <xref:System.Web.UI.WebControls.Repeater.Items%2A> coleção é usada pelo <xref:System.Web.UI.WebControls.Repeater> controle para processar cada item no controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.Repeater.Items%2A> propriedade para determinar o índice do item selecionado a <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-aspx-csharp[Classic Repeater.Items Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.Items Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.Items Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.Items Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ItemTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ItemTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.ItemTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.RepeaterItem))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.UI.ITemplate" /> que define como os itens no controle <see cref="T:System.Web.UI.WebControls.Repeater" /> são exibidos.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> que define como os itens no controle <see cref="T:System.Web.UI.WebControls.Repeater" /> são exibidos. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para criar um modelo que controla como os itens no <xref:System.Web.UI.WebControls.Repeater> controle são exibidos.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como usar um simples <xref:System.Web.UI.WebControls.Repeater> controle para exibir uma tabela de itens. Observe o uso do <xref:System.Web.UI.WebControls.Repeater.ItemTemplate%2A> para exibir cada item na fonte de dados.  
+  
+ [!code-aspx-csharp[Classic Repeater.ItemTemplate Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.ItemTemplate Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.ItemTemplate Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.ItemTemplate Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public virtual string ItemType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do tipo de modelo para vinculação de dados fortemente tipada.</summary>
+        <value>O nome do tipo de modelo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir essa propriedade e usar o <xref:System.Web.UI.WebControls.Repeater.SelectMethod%2A> propriedade, o tipo retornado pelo método Select deve ser do tipo especificado por essa propriedade ou deve ser capaz de ser convertido para o tipo especificado por essa propriedade.  
+  
+ A definição dessa propriedade automaticamente habilita a funcionalidade de dados dinâmicos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um objeto que representa o estado do controle a ser restaurado.</param>
+        <summary>Restaura as informações de estado de exibição de uma solicitação de página anterior que foi salvo usando o <see cref="M:System.Web.UI.WebControls.Repeater.SaveViewState" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gerará o evento <see cref="E:System.Web.UI.WebControls.Repeater.ItemCommand" /> se o parâmetro <paramref name="EventArgs" /> for uma instância de <see cref="T:System.Web.UI.WebControls.RepeaterCommandEventArgs" />.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="E:System.Web.UI.WebControls.Repeater.ItemCommand" /> tiver sido gerado, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.Repeater.OnDataBinding%2A> método em um controle de servidor personalizado para que, se o argumento do evento é um tipo de comando, o <xref:System.Web.UI.WebControls.Repeater> controle sempre chama o <xref:System.Web.UI.WebControls.Repeater.OnItemCommand%2A> e bolhas o evento ou retorna `false`e cancela o evento.  
+  
+ [!code-aspx-csharp[CustomRepeaterOnBubbleEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRepeaterOnBubbleEvent/CS/custom_repeater_onbubbleeventcs.aspx#1)]
+ [!code-aspx-vb[CustomRepeaterOnBubbleEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRepeaterOnBubbleEvent/VB/custom_repeater_onbubbleeventvb.aspx#1)]  
+  
+ [!code-csharp[CustomRepeaterOnBubbleEvent#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRepeaterOnBubbleEvent/CS/custom_repeater_onbubbleevent.cs#2)]
+ [!code-vb[CustomRepeaterOnBubbleEvent#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRepeaterOnBubbleEvent/VB/custom_repeater_onbubbleevent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreatingModelDataSource">
+      <MemberSignature Language="C#" Value="protected virtual void OnCreatingModelDataSource (System.Web.UI.WebControls.CreatingModelDataSourceEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCreatingModelDataSource(class System.Web.UI.WebControls.CreatingModelDataSourceEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnCreatingModelDataSource(System.Web.UI.WebControls.CreatingModelDataSourceEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.CreatingModelDataSourceEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto que fornece acesso para o <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> objeto que está sendo criado.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.Repeater.CreatingModelDataSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBinding">
+      <MemberSignature Language="C#" Value="protected override void OnDataBinding (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataBinding(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnDataBinding(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see langword="DataBinding" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Os exemplos de código a seguir demonstram como substituir o <xref:System.Web.UI.WebControls.Repeater.OnDataBinding%2A> método em um controle de servidor personalizado para que, se o argumento do evento é um tipo de comando, o <xref:System.Web.UI.WebControls.Repeater> controle sempre chama o <xref:System.Web.UI.WebControls.Repeater.OnItemCommand%2A> e bolhas o evento ou retorna `false`e cancela o evento.  
+  
+ [!code-aspx-csharp[CustomRepeaterOnDataBinding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRepeaterOnDataBinding/CS/custom_repeater_ondatabindingcs.aspx#1)]
+ [!code-aspx-vb[CustomRepeaterOnDataBinding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRepeaterOnDataBinding/VB/custom_repeater_ondatabindingvb.aspx#1)]  
+  
+ [!code-csharp[CustomRepeaterOnDataBinding#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRepeaterOnDataBinding/CS/custom_repeater_ondatabinding.cs#2)]
+ [!code-vb[CustomRepeaterOnDataBinding#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRepeaterOnDataBinding/VB/custom_repeater_ondatabinding.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataPropertyChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataPropertyChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnDataPropertyChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a associação de dados é necessária.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Repeater.OnDataPropertyChanged%2A> é um método auxiliar que é chamado quando o <xref:System.Web.UI.WebControls.Repeater.DataMember%2A>, <xref:System.Web.UI.WebControls.Repeater.DataSource%2A>, ou <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A> propriedade é alterada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <see cref="M:System.Web.UI.WebControls.Repeater.OnDataPropertyChanged" />é chamado durante a fase de associação de dados do controle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataSourceViewChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataSourceViewChanged (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataSourceViewChanged(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnDataSourceViewChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Conjuntos de <see cref="P:System.Web.UI.WebControls.Repeater.RequiresDataBinding" /> propriedade <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Repeater.OnDataSourceViewChanged%2A> é um método auxiliar que participa do processo de associação de dados. Este método é chamado quando o <xref:System.Web.UI.DataSourceView> objeto gera de controle de fonte de dados associados seu <xref:System.Web.UI.DataSourceView.DataSourceViewChanged> eventos. O evento faz com que o <xref:System.Web.UI.WebControls.Repeater> controle para vincular dados os dados atualizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.Init" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemCommand (System.Web.UI.WebControls.RepeaterCommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemCommand(class System.Web.UI.WebControls.RepeaterCommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnItemCommand(System.Web.UI.WebControls.RepeaterCommandEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.RepeaterCommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O objeto <see cref="T:System.Web.UI.WebControls.RepeaterCommandEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.Repeater.ItemCommand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra uma maneira de lidar com um <xref:System.Web.UI.WebControls.Repeater.ItemCommand> evento o <xref:System.Web.UI.WebControls.Repeater> controle. Informações sobre o botão são exibidas sempre que um <xref:System.Web.UI.WebControls.Button> controle dentro de <xref:System.Web.UI.WebControls.Repeater> controle é clicado.  
+  
+ [!code-aspx-csharp[Classic Repeater.ItemCommand Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.ItemCommand Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.ItemCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.ItemCommand Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Repeater.OnItemCommand(System.Web.UI.WebControls.RepeaterCommandEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Repeater.OnItemCommand(System.Web.UI.WebControls.RepeaterCommandEventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemCreated">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemCreated (System.Web.UI.WebControls.RepeaterItemEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemCreated(class System.Web.UI.WebControls.RepeaterItemEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnItemCreated(System.Web.UI.WebControls.RepeaterItemEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.RepeaterItemEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O objeto <see cref="T:System.Web.UI.WebControls.RepeaterItemEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.Repeater.ItemCreated" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra uma maneira de lidar com o <xref:System.Web.UI.WebControls.Repeater.ItemCreated> evento o <xref:System.Web.UI.WebControls.Repeater> controle. Uma nova linha de texto que indica o tipo de item é exibida sempre que um <xref:System.Web.UI.WebControls.Repeater> item é criado.  
+  
+ [!code-aspx-csharp[Classic Repeater.ItemCreated Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.ItemCreated Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.ItemCreated Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.ItemCreated Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Repeater.OnItemCreated(System.Web.UI.WebControls.RepeaterItemEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Repeater.OnItemCreated(System.Web.UI.WebControls.RepeaterItemEventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemDataBound">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemDataBound (System.Web.UI.WebControls.RepeaterItemEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemDataBound(class System.Web.UI.WebControls.RepeaterItemEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnItemDataBound(System.Web.UI.WebControls.RepeaterItemEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.RepeaterItemEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O objeto <see cref="T:System.Web.UI.WebControls.RepeaterItemEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.Repeater.ItemDataBound" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra uma maneira de lidar com o <xref:System.Web.UI.WebControls.Repeater.ItemDataBound> evento o <xref:System.Web.UI.WebControls.Repeater> controle. Os dados são modificados depois que está associado a um item de <xref:System.Web.UI.WebControls.Repeater> controle, mas antes é renderizado na página.  
+  
+ [!code-aspx-csharp[Classic Repeater.ItemDataBound Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.ItemDataBound Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.ItemDataBound Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.ItemDataBound Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Repeater.OnItemDataBound(System.Web.UI.WebControls.RepeaterItemEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Repeater.OnItemDataBound(System.Web.UI.WebControls.RepeaterItemEventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O objeto <see cref="T:System.Web.UI.WebControls.RepeaterItemEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.Load" /> e executa outra inicialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Repeater.OnLoad%2A> método notifica o <xref:System.Web.UI.WebControls.Repeater> controlar que ele deve executar as ações que são comuns a cada solicitação HTTP para a página que está associada, como configurar uma consulta de banco de dados. Esse estágio no ciclo de vida da página, controles de servidor na hierarquia são criados e inicializados, o estado de exibição é restaurado e controles de formulário refletem os dados no lado do cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O objeto <see cref="T:System.Web.UI.WebControls.RepeaterItemEventArgs" /> contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.PreRender" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Control.PreRender> eventos é usado para executar todas as atualizações antes da saída para o controle de servidor é renderizado para a página. As alterações no estado de exibição do controle de servidor podem ser salvo durante esse evento. Essas alterações feitas na fase de renderização não são salvas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresDataBinding">
+      <MemberSignature Language="C#" Value="protected bool RequiresDataBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresDataBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.RequiresDataBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.UI.WebControls.Repeater" /> controle precisa associar a fonte de dados especificado.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.Repeater" /> controle precisa associar a uma fonte de dados; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Repeater> controlar usa o <xref:System.Web.UI.WebControls.Repeater.RequiresDataBinding%2A> propriedade para determinar se o controle precisa chamar o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método para associar a fonte de dados especificado.  
+  
+ Cada vez que o acessador set é chamado em um a <xref:System.Web.UI.WebControls.Repeater.DataSource%2A>, <xref:System.Web.UI.WebControls.Repeater.DataSourceID%2A>, ou <xref:System.Web.UI.WebControls.Repeater.DataMember%2A> propriedade para alterar a fonte de dados após o <xref:System.Web.UI.WebControls.Repeater.OnInit%2A> método já foi chamado, o ASP.NET define o valor da <xref:System.Web.UI.WebControls.Repeater.RequiresDataBinding%2A> propriedade para `true`. O valor da <xref:System.Web.UI.WebControls.Repeater.RequiresDataBinding%2A> propriedade também é definida como `true` quando o <xref:System.Web.UI.WebControls.Repeater.OnDataSourceViewChanged%2A> método é chamado.  
+  
+ ASP.NET define o valor da <xref:System.Web.UI.WebControls.Repeater.RequiresDataBinding%2A> propriedade `false` imediatamente após o <xref:System.Web.UI.WebControls.Repeater.DataBind%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações de estado de exibição que ocorreram desde a hora em que a página foi postada no servidor.</summary>
+        <returns>Estado de exibição atual do controle. Se não houver um estado de exibição associado ao controle, esse método retornará <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectArguments">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.DataSourceSelectArguments SelectArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataSourceSelectArguments SelectArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.SelectArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.DataSourceSelectArguments" /> do objeto que o <see cref="T:System.Web.UI.WebControls.Repeater" /> usa o controle ao recuperar dados de um controle de fonte de dados.</summary>
+        <value>Um <see cref="T:System.Web.UI.DataSourceSelectArguments" /> objeto usado para recuperar dados. O padrão é o valor <see cref="P:System.Web.UI.DataSourceSelectArguments.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A primeira chamada para o <xref:System.Web.UI.DataSourceSelectArguments> objeto chama o <xref:System.Web.UI.WebControls.Repeater.CreateDataSourceSelectArguments%2A> método para criar o <xref:System.Web.UI.DataSourceSelectArguments.Empty%2A> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMethod">
+      <MemberSignature Language="C#" Value="public virtual string SelectMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.SelectMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do método a ser chamado para ler os dados.</summary>
+        <value>O nome do método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade faz com que a associação de modelo a ser usado como o método de associação de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate SeparatorTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate SeparatorTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Repeater.SeparatorTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.RepeaterItem))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a interface <see cref="T:System.Web.UI.ITemplate" /> que define como o separador entre itens é exibido.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> que define como o separador entre itens é exibido. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Repeater.SeparatorTemplate%2A> propriedade para criar um modelo que controla como o separador entre itens é exibido.  
+  
+> [!CAUTION]
+>  Você pode usar o <xref:System.Web.UI.WebControls.Repeater.SeparatorTemplate%2A> propriedade para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um modelo para controlar como separadores entre os itens são exibidos.  
+  
+ [!code-aspx-csharp[Classic Repeater.SeparatorTemplate Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Repeater.SeparatorTemplate Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic Repeater.SeparatorTemplate Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Repeater.SeparatorTemplate Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Repeater.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o controle de alterações de estado de exibição para o controle para que eles podem ser armazenados no controle do <see cref="T:System.Web.UI.StateBag" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

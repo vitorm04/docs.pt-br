@@ -1,0 +1,166 @@
+<Type Name="WebEventFormatter" FullName="System.Web.Management.WebEventFormatter">
+  <TypeSignature Language="C#" Value="public class WebEventFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebEventFormatter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebEventFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Formata informações sobre eventos de monitoramento de integridade do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de eventos responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ O <xref:System.Web.Management.WebEventFormatter> é um tipo de suporte usado para formatar uniformemente informações relacionadas ao evento, que é útil se os dados do evento devem ser registrados e posteriormente apresentados ao usuário.  
+  
+ Instâncias de <xref:System.Web.Management.WebEventFormatter> classe são transmitidos como argumentos para os métodos de formatação definidos pelos tipos de evento de integridade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.WebEventFormatter> para formatar informações de evento. Destina principalmente para mostrar a sintaxe correta para usar. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Management.WebBaseEvent> classe.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#17](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#17)]
+ [!code-vb[System.Web.Management.WebBaseEvent#17](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#17)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppendLine">
+      <MemberSignature Language="C#" Value="public void AppendLine (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendLine(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebEventFormatter.AppendLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres para adicionar as informações de evento.</param>
+        <summary>Acrescenta a cadeia de caracteres especificada e um retorno de carro para as informações do evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebEventFormatter.AppendLine%2A> método permite que você personalize as informações do evento adicionando seus próprios dados de eventos específicos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.WebEventFormatter.AppendLine%2A> método.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#20](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#20)]
+ [!code-vb[System.Web.Management.WebBaseEvent#20](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentationLevel">
+      <MemberSignature Language="C#" Value="public int IndentationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IndentationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebEventFormatter.IndentationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de recuo.</summary>
+        <value>O número de guias usado para o nível de recuo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebEventFormatter.IndentationLevel%2A> propriedade permite que você controle como as informações do evento são recuadas. A unidade básica de recuo é definida pelo <xref:System.Web.Management.WebEventFormatter.TabSize%2A> propriedade. Para cada nível de recuo, você aumenta a guia de um recuo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.WebEventFormatter.IndentationLevel%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#18](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#18)]
+ [!code-vb[System.Web.Management.WebBaseEvent#18](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabSize">
+      <MemberSignature Language="C#" Value="public int TabSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TabSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebEventFormatter.TabSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho da guia.</summary>
+        <value>O número de espaços em uma guia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebEventFormatter.TabSize%2A> propriedade permite que você controle o tamanho da tabulação usado ao gravar informações de evento. O <xref:System.Web.Management.WebEventFormatter.TabSize%2A> determina o número de espaços por unidade de recuo, controlado por <xref:System.Web.Management.WebEventFormatter.IndentationLevel%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.WebEventFormatter.TabSize%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Management.WebBaseEvent#19](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/CS/webbaseevent.cs#19)]
+ [!code-vb[System.Web.Management.WebBaseEvent#19](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebBaseEvent/VB/webbaseevent.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebEventFormatter.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna as informações de evento no formato de cadeia de caracteres.</summary>
+        <returns>As informações do evento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebEventFormatter> usa interno <xref:System.Text.StringBuilder> variável para armazenar as informações do evento. Isso <xref:System.Web.Management.WebEventFormatter.ToString%2A> método permite que você obtenha todas as informações em um formato de cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

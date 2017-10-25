@@ -1,0 +1,1013 @@
+<Type Name="BulletedList" FullName="System.Web.UI.WebControls.BulletedList">
+  <TypeSignature Language="C#" Value="public class BulletedList : System.Web.UI.WebControls.ListControl, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BulletedList extends System.Web.UI.WebControls.ListControl implements class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.BulletedList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ListControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Click")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("BulletStyle")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.BulletedListDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria um controle que gera uma lista de itens em um formato com marcadores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#Introduction)  
+  
+-   [Acessibilidade](#Accessibility)  
+  
+-   [Sintaxe declarativa](#DeclarativeSyntax)  
+  
+<a name="Introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ Use o <xref:System.Web.UI.WebControls.BulletedList> controle para criar uma lista de itens que são formatados com marcadores. Para especificar os itens de lista individual que você deseja exibir em uma <xref:System.Web.UI.WebControls.BulletedList> controlar, coloque uma <xref:System.Web.UI.WebControls.ListItem> objeto para cada entrada entre as marcas de abertura e fechamento do <xref:System.Web.UI.WebControls.BulletedList> controle.  
+  
+ Para especificar o tipo de marcador a ser usado para exibir itens de lista em uma <xref:System.Web.UI.WebControls.BulletedList> controlar, defina o <xref:System.Web.UI.WebControls.BulletedList.BulletStyle%2A> propriedade para um dos tipos de marcador são definidos pelo <xref:System.Web.UI.WebControls.BulletStyle> enumeração. A tabela a seguir lista os estilos de marcador disponíveis.  
+  
+|Estilo de marcador|Descrição|  
+|------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.BulletStyle.NotSet>|Não definida.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.Numbered>|Um número.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.LowerAlpha>|Uma letra minúscula.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.UpperAlpha>|Uma letra maiuscula.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.LowerRoman>|Um numeral romano em minúsculas.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.UpperRoman>|Um numeral romano em maiusculas.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.Disc>|Um círculo preenchido.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.Circle>|Um círculo vazio.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.Square>|Um quadrado preenchido.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.CustomImage>|Uma imagem personalizada.|  
+  
+ Use o <xref:System.Web.UI.WebControls.BulletedList.FirstBulletNumber%2A> propriedade para especificar o valor que inicia a numeração de itens de lista no ordenada <xref:System.Web.UI.WebControls.BulletedList> controle. O valor que é atribuído para o <xref:System.Web.UI.WebControls.BulletedList.FirstBulletNumber%2A> propriedade será ignorada se o <xref:System.Web.UI.WebControls.BulletedList.BulletStyle%2A> está definida como o <xref:System.Web.UI.WebControls.BulletStyle.Disc>, <xref:System.Web.UI.WebControls.BulletStyle.Square>, <xref:System.Web.UI.WebControls.BulletStyle.Circle>, ou <xref:System.Web.UI.WebControls.BulletStyle.CustomImage> campo. Se você definir o <xref:System.Web.UI.WebControls.BulletedList.BulletStyle%2A> o valor da propriedade <xref:System.Web.UI.WebControls.BulletStyle.CustomImage> para especificar uma imagem personalizada para o marcador, você deve definir o <xref:System.Web.UI.WebControls.BulletedList.BulletImageUrl%2A> propriedade também para especificar o local do arquivo de imagem.  
+  
+ Para especificar o comportamento de exibição dos itens de lista em uma <xref:System.Web.UI.WebControls.BulletedList>, defina o <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade para um dos valores que são definidos pelo <xref:System.Web.UI.WebControls.BulletedListDisplayMode> enumeração. Os comportamentos de exibição definidos são <xref:System.Web.UI.WebControls.BulletedListDisplayMode.Text>, <xref:System.Web.UI.WebControls.BulletedListDisplayMode.HyperLink>, e <xref:System.Web.UI.WebControls.BulletedListDisplayMode.LinkButton>.  
+  
+ Quando um hiperlink é clicado, ele navega para uma URL. Use o <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade para especificar a URL de um hiperlink navega para. Use o <xref:System.Web.UI.WebControls.BulletedList.Target%2A> propriedade para especificar o quadro ou janela que exibe a página da Web que é para onde navegar quando um hiperlink é clicado.  
+  
+ Quando o <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> está definida como <xref:System.Web.UI.WebControls.BulletedListDisplayMode.LinkButton>, o <xref:System.Web.UI.WebControls.BulletedList> controle exibe itens de lista como links postar de volta para o servidor quando clicado. Para controlar programaticamente as ações que são executadas quando um botão de link é clicado, fornecer um manipulador de eventos para o <xref:System.Web.UI.WebControls.BulletedList.Click> evento. Observe que o <xref:System.Web.UI.WebControls.BulletedList.SelectedIndex%2A> e <xref:System.Web.UI.WebControls.BulletedList.SelectedItem%2A> propriedades são herdadas do <xref:System.Web.UI.WebControls.ListControl> de classe e não são aplicáveis para o <xref:System.Web.UI.WebControls.BulletedList> controle. Usar os dados do evento de <xref:System.Web.UI.WebControls.BulletedListEventArgs> classe para determinar o índice do botão de link em um <xref:System.Web.UI.WebControls.BulletedList> que foi clicado.  
+  
+ O <xref:System.Web.UI.WebControls.BulletedList> controle também oferece suporte a associação de dados. Para associar o <xref:System.Web.UI.WebControls.BulletedList> para uma fonte de dados, você pode usar qualquer um dos mecanismos de associação de dados fornecidos. Para obter mais informações, consulte [para bancos de dados de associação](http://msdn.microsoft.com/en-us/ab7b2846-975b-4057-a948-45527497c742).  
+  
+<a name="Accessibility"></a>   
+## <a name="accessibility"></a>Acessibilidade  
+ A marcação processada por padrão para este controle pode não estar de acordo com os padrões de acessibilidade, como as diretrizes de prioridade 1 conteúdo WCAG Web Accessibility Guidelines 1.0 (). Para obter detalhes sobre o suporte de acessibilidade para este controle, consulte [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:BulletedList  
+    AccessKey="string"  
+    AppendDataBoundItems="True|False"  
+    AutoPostBack="True|False"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    BulletImageUrl="uri"  
+    BulletStyle="NotSet|Numbered|LowerAlpha|UpperAlpha|LowerRoman|  
+        UpperRoman|Disc|Circle|Square|CustomImage"  
+    CausesValidation="True|False"  
+    CssClass="string"  
+    DataMember="string"  
+    DataSource="string"  
+    DataSourceID="string"  
+    DataTextField="string"  
+    DataTextFormatString="string"  
+    DataValueField="string"  
+    DisplayMode="Text|HyperLink|LinkButton"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    FirstBulletNumber="integer"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|  
+        Medium|Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    ID="string"  
+    OnClick="Click event handler"  
+    OnDataBinding="DataBinding event handler"  
+    OnDataBound="DataBound event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnSelectedIndexChanged="SelectedIndexChanged event handler"  
+    OnTextChanged="TextChanged event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    Target="string|_blank|_parent|_search|_self|_top"  
+    ToolTip="string"  
+    ValidationGroup="string"  
+    Visible="True|False"  
+    Width="size"  
+>  
+            <asp:ListItem  
+                Enabled="True|False"  
+                Selected="True|False"  
+                Text="string"  
+                Value="string"  
+            />  
+</asp:BulletedList>  
+```  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> controle com itens de lista que são formatadas como botões de link. O segundo exemplo de código demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> usando associação de dados para especificar os itens da lista de controle.  
+  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> controle com itens de lista que são formatadas como botões de link. Texto é exibido em um <xref:System.Web.UI.WebControls.Label> controlar quando um item de lista é clicado.  
+  
+ [!code-aspx-csharp[BulletedListClassExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListClassExample/CS/bulletedlistclass1cs.aspx#1)]
+ [!code-aspx-vb[BulletedListClassExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListClassExample/VB/bulletedlistclass1vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> usando associação de dados para especificar os itens da lista de controle. Os itens da lista são formatados como botões de link. Texto é exibido em um <xref:System.Web.UI.WebControls.Label> controlar quando um item de lista é clicado.  
+  
+ [!code-aspx-csharp[BulletedListClassDataBindExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListClassDataBindExample/CS/bulletedlistclass2databindcs.aspx#1)]
+ [!code-aspx-vb[BulletedListClassDataBindExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListClassDataBindExample/VB/bulletedlistclass2databindvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BulletedList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BulletedList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.BulletedList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.BulletedList.%23ctor%2A> construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.BulletedList> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar uma nova instância do <xref:System.Web.UI.WebControls.BulletedList> classe.  
+  
+ [!code-aspx-csharp[BulletedListConstructor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListConstructor/CS/bulletedlistcstrcs.aspx#1)]
+ [!code-aspx-vb[BulletedListConstructor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListConstructor/VB/bulletedlistcstrvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BulletedList.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Adiciona os atributos HTML e estilos de uma <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle processe especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.AddAttributesToRender%2A> método é usado principalmente por desenvolvedores de controle para inserir os atributos apropriados e estilos para o <xref:System.Web.UI.HtmlTextWriter?displayProperty=nameWithType> fluxo de saída para um <xref:System.Web.UI.WebControls.BulletedList> controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.WebControls.BulletedList.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" /> substituições de método de <see cref="M:System.Web.UI.WebControls.ListControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoPostBack">
+      <MemberSignature Language="C#" Value="public override bool AutoPostBack { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoPostBack" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.AutoPostBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de <see cref="P:System.Web.UI.WebControls.ListControl.AutoPostBack" /> propriedade para a classe base.</summary>
+        <value>
+          <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.AutoPostBack%2A> propriedade é herdada do <xref:System.Web.UI.WebControls.ListControl> de classe e não é aplicável para o <xref:System.Web.UI.WebControls.BulletedList> controle. Não atribua um valor para o <xref:System.Web.UI.WebControls.BulletedList.AutoPostBack%2A> propriedade. Se você atribuir um valor para o <xref:System.Web.UI.WebControls.BulletedList.AutoPostBack%2A>, um <xref:System.NotSupportedException> exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra que o valor da <xref:System.Web.UI.WebControls.ListControl.AutoPostBack%2A> propriedade é sempre `false` para o <xref:System.Web.UI.WebControls.BulletedList> de controle e, portanto, não é aplicável a essa classe.  
+  
+ [!code-aspx-csharp[BulletedListAutoPostBack#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListAutoPostBack/CS/BulletedListAutoPostBackCS.aspx#1)]
+ [!code-aspx-vb[BulletedListAutoPostBack#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListAutoPostBack/VB/bulletedlistautopostbackvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa para atribuir um valor para o <see cref="P:System.Web.UI.WebControls.BulletedList.AutoPostBack" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BulletImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string BulletImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BulletImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.BulletImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho para uma imagem a ser exibido para cada marcador em um controle <see cref="T:System.Web.UI.WebControls.BulletedList" />.</summary>
+        <value>O caminho para uma imagem a ser exibido como um marcador individual em um <see cref="T:System.Web.UI.WebControls.BulletedList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.BulletedList.BulletImageUrl%2A> propriedade para especificar o caminho para uma imagem a ser exibida como cada marcador em um <xref:System.Web.UI.WebControls.BulletedList> controle. Para especificar uma imagem personalizada para os marcadores, você também deve definir o <xref:System.Web.UI.WebControls.BulletedList.BulletStyle%2A> propriedade para o valor <xref:System.Web.UI.WebControls.BulletStyle.CustomImage>.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.BulletedList> o controle não dá suporte a <xref:System.Web.UI.WebControls.Image.AlternateText%2A> propriedade porque os marcadores são inerentemente decorativos e não fornecer informações adicionais que precisam ser transmitidas por meio de tecnologia assistencial. No entanto, se você quiser usar uma imagem personalizada para representar um conceito ao usuário, adicionar texto para cada um dos itens de lista com marcadores ou usar um controle que permite que você especifique o texto alternativo para cada imagem.  
+  
+ Você pode especificar um relativo ou um caminho absoluto para a imagem. Um caminho relativo se relaciona a localização da imagem para o local da página da Web sem especificar um caminho completo no servidor. O caminho é relativo ao local da página da Web. Isso torna mais fácil mover todo o site para outro diretório no servidor sem atualizar o código.  
+  
+ O exemplo de código a seguir mostra um caminho relativo para um arquivo de imagem:  
+  
+```csharp  
+\\Images\\image1.jpg  
+```  
+  
+```vb  
+"Images\image1.jpg"  
+```  
+  
+ O exemplo de código a seguir mostra um caminho absoluto para um arquivo de imagem:  
+  
+```csharp  
+"c:\\MyImagesDir\\image1.jpg"   
+```  
+  
+```vb  
+"c"\MyImagesDir\image1.jpg"  
+```  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> controle e defina o <xref:System.Web.UI.WebControls.BulletedList.BulletImageUrl%2A> propriedade para especificar o caminho para uma imagem personalizada a ser usado para cada marcador.  
+  
+ [!code-aspx-csharp[BulletedListBulletImageurl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListBulletImageUrl/CS/bulletimageurlcs.aspx#1)]
+ [!code-aspx-vb[BulletedListBulletImageurl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListBulletImageUrl/VB/bulletimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BulletStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.BulletStyle BulletStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.BulletStyle BulletStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.BulletStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de marcador do controle <see cref="T:System.Web.UI.WebControls.BulletedList" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.BulletStyle" />. O padrão é <see cref="F:System.Web.UI.WebControls.BulletStyle.NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.BulletStyle> propriedade para especificar o estilo de marcador se aplicam aos itens de lista em um <xref:System.Web.UI.WebControls.BulletedList> controle. O <xref:System.Web.UI.WebControls.BulletStyle> propriedade é definida usando um do <xref:System.Web.UI.WebControls.BulletStyle> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Estilo de marcador|Descrição|  
+|------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.BulletStyle.NotSet>|Não definida.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.Numbered>|Um número.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.LowerAlpha>|Uma letra minúscula.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.UpperAlpha>|Uma letra maiuscula.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.LowerRoman>|Um numeral romano em minúsculas.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.UpperRoman>|Um numeral romano em maiusculas.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.Disc>|Um círculo preenchido.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.Circle>|Um círculo vazio.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.Square>|Um quadrado preenchido.|  
+|<xref:System.Web.UI.WebControls.BulletStyle.CustomImage>|Uma imagem personalizada.|  
+  
+ Especificando o <xref:System.Web.UI.WebControls.BulletStyle.CustomImage> valor permite que você forneça sua própria imagem para o marcador. Se você especificar o <xref:System.Web.UI.WebControls.BulletStyle.CustomImage> valor, você também deve definir o <xref:System.Web.UI.WebControls.BulletedList.BulletImageUrl%2A> propriedade para a URL da imagem personalizada para usar.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.BulletedList> o controle não dá suporte a <xref:System.Web.UI.WebControls.Image.AlternateText%2A> propriedade porque os marcadores são inerentemente decorativos e não fornecer informações adicionais que precisam ser transmitidas por meio de tecnologia assistencial. No entanto, se você quiser usar uma imagem personalizada para representar um conceito ao usuário, adicionar texto para cada um dos itens de lista com marcadores ou usar um controle que permite que você especifique o texto alternativo para cada imagem.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> controle. Um <xref:System.Web.UI.WebControls.ListBox> controle é populado com todos os disponíveis <xref:System.Web.UI.WebControls.BulletStyle> valores de enumeração. As alterações de estilo de marcador com base no estilo de que o usuário seleciona a caixa de listagem.  
+  
+ [!code-aspx-csharp[BulletedListStylesExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListStylesExample/CS/bulletedliststylescs.aspx#1)]
+ [!code-aspx-vb[BulletedListStylesExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListStylesExample/VB/bulletedliststylesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tipo especificado não é um dos valores <see cref="T:System.Web.UI.WebControls.BulletStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.BulletedListEventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.BulletedListEventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.BulletedList.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletedListEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre ao clicar em um botão de link em um controle <see cref="T:System.Web.UI.WebControls.BulletedList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.Click> evento é gerado quando um item de lista em um <xref:System.Web.UI.WebControls.BulletedList> controle é clicado. Para habilitar os itens de lista em uma <xref:System.Web.UI.WebControls.BulletedList> controle para gerar o <xref:System.Web.UI.WebControls.BulletedList.Click> evento, o <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade primeiro deve ser definida para o valor <xref:System.Web.UI.WebControls.BulletedListDisplayMode.LinkButton>.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como especificar e codificar um manipulador de eventos para o <xref:System.Web.UI.WebControls.BulletedList.Click> eventos de um <xref:System.Web.UI.WebControls.BulletedList> controle. Quando um item de lista é clicado, será exibida uma mensagem em uma <xref:System.Web.UI.WebControls.Label> controle na página. Todos os botões de link da lista com marcadores geram a mesma <xref:System.Web.UI.WebControls.BulletedList.Click> evento. Para determinar qual botão link gerou o evento, o <xref:System.Web.UI.WebControls.BulletedListEventArgs> argumento é examinado.  
+  
+ [!code-aspx-csharp[BulletedListClickEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListClickEvent/CS/bulletedlistclickeventcs.aspx#1)]
+ [!code-aspx-vb[BulletedListClickEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListClickEvent/VB/bulletedlistclickeventvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.ControlCollection" /> coleta para o controle.</summary>
+        <value>Uma coleção de controle para o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.Controls%2A> propriedade é herdada do <xref:System.Web.UI.Control> de classe e não é aplicável para o <xref:System.Web.UI.WebControls.BulletedList> controle. O <xref:System.Web.UI.WebControls.BulletedList.Controls%2A> coleção é substituída da classe base para sempre retornar o <xref:System.Web.UI.EmptyControlCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayMode">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.BulletedListDisplayMode DisplayMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.BulletedListDisplayMode DisplayMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.DisplayMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletedListDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de exibição da lista de conteúdo em um controle de <see cref="T:System.Web.UI.WebControls.BulletedList" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.BulletedListDisplayMode" />. O padrão é <see cref="F:System.Web.UI.WebControls.BulletedListDisplayMode.Text" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade para especificar o comportamento de exibição para aplicar ao conteúdo dos itens de lista em um <xref:System.Web.UI.WebControls.BulletedList> controle. O <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade é definida usando um do <xref:System.Web.UI.WebControls.BulletedListDisplayMode> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Valor|Exibido como|  
+|-----------|------------------|  
+|<xref:System.Web.UI.WebControls.BulletedListDisplayMode.Text>|Texto.|  
+|<xref:System.Web.UI.WebControls.BulletedListDisplayMode.HyperLink>|Hiperlinks.|  
+|<xref:System.Web.UI.WebControls.BulletedListDisplayMode.LinkButton>|Botões de link.|  
+  
+ O <xref:System.Web.UI.WebControls.BulletedListDisplayMode.HyperLink> valor permite que você exiba o conteúdo da lista como hiperlinks. Quando clicado, um hiperlink navega para uma URL. Use o <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade para especificar a URL de um hiperlink navega para.  
+  
+ O <xref:System.Web.UI.WebControls.BulletedListDisplayMode.LinkButton> campo permite que você exiba o conteúdo da lista como links. Use o <xref:System.Web.UI.WebControls.BulletedList.Click?displayProperty=nameWithType> evento postar de volta para o servidor quando um botão de link é clicado.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> controle e defina o <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade. Um <xref:System.Web.UI.WebControls.ListBox> controle é preenchido com o <xref:System.Web.UI.WebControls.BulletedListDisplayMode> valores de enumeração. O formato de lista item das alterações de conteúdo com base no modo de exibição que o usuário seleciona a caixa de listagem.  
+  
+ [!code-aspx-csharp[BulletedListDisplayMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListDisplayMode/CS/bulletedlistdisplaymodecs.aspx#1)]
+ [!code-aspx-vb[BulletedListDisplayMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListDisplayMode/VB/bulletedlistdisplaymodevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tipo especificado não é um dos valores <see cref="T:System.Web.UI.WebControls.BulletedListDisplayMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstBulletNumber">
+      <MemberSignature Language="C#" Value="public virtual int FirstBulletNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstBulletNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.FirstBulletNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor que inicia a numeração de itens de lista no ordenada <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle.</summary>
+        <value>O valor que inicia a numeração de itens de lista no ordenada <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle. O padrão é <c>1</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.BulletedList.FirstBulletNumber%2A> propriedade para especificar o valor que inicia a numeração de itens de lista no ordenada <xref:System.Web.UI.WebControls.BulletedList> controle. O valor que é atribuído para o <xref:System.Web.UI.WebControls.BulletedList.FirstBulletNumber%2A> propriedade será ignorada se o <xref:System.Web.UI.WebControls.BulletedList.BulletStyle%2A> está definida como o <xref:System.Web.UI.WebControls.BulletStyle.Disc>, <xref:System.Web.UI.WebControls.BulletStyle.Square>, <xref:System.Web.UI.WebControls.BulletStyle.Circle>, ou <xref:System.Web.UI.WebControls.BulletStyle.CustomImage> valores. Embora o valor de <xref:System.Web.UI.WebControls.BulletedList.FirstBulletNumber%2A> é um número inteiro, ele sempre não causa um marcador renderizar como um número. Por exemplo, se você definir o <xref:System.Web.UI.WebControls.BulletedList.FirstBulletNumber%2A> propriedade `4` e defina o <xref:System.Web.UI.WebControls.BulletedList.BulletStyle%2A> propriedade para o valor <xref:System.Web.UI.WebControls.BulletStyle.LowerAlpha>, o primeiro número de marcador será processada como um minúscula d.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> controle e defina o <xref:System.Web.UI.WebControls.BulletedList.FirstBulletNumber%2A> propriedade para especificar o valor que inicia a numeração de itens da lista de <xref:System.Web.UI.WebControls.BulletedList> controle. O valor que inicia a numeração das alterações de itens de lista com base no valor que o usuário insere na caixa de texto.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[BulletedListFirstBulletNumber#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListFirstBulletNumber/CS/firstbulletnumbercs.aspx#1)]
+ [!code-aspx-vb[BulletedListFirstBulletNumber#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListFirstBulletNumber/VB/firstbulletnumbervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick (System.Web.UI.WebControls.BulletedListEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick(class System.Web.UI.WebControls.BulletedListEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BulletedList.OnClick(System.Web.UI.WebControls.BulletedListEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.BulletedListEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Web.UI.WebControls.BulletedListEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.BulletedList.Click" /> do controle <see cref="T:System.Web.UI.WebControls.BulletedList" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.Click> evento é gerado quando um item de lista no <xref:System.Web.UI.WebControls.BulletedList> controle é clicado. Para habilitar os itens de lista em uma <xref:System.Web.UI.WebControls.BulletedList> controle para gerar o <xref:System.Web.UI.WebControls.BulletedList.Click> eventos, você deve primeiro definir a <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade para o valor <xref:System.Web.UI.WebControls.BulletedListDisplayMode.LinkButton>.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ O <xref:System.Web.UI.WebControls.BulletedList.OnClick%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como especificar e codificar um manipulador de eventos para o <xref:System.Web.UI.WebControls.BulletedList.Click> eventos de um <xref:System.Web.UI.WebControls.BulletedList> controle. Quando um item de lista é clicado, será exibida uma mensagem em uma <xref:System.Web.UI.WebControls.Label> controle na página.  
+  
+ [!code-aspx-csharp[BulletedListClickEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListClickEvent/CS/bulletedlistclickeventcs.aspx#1)]
+ [!code-aspx-vb[BulletedListClickEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListClickEvent/VB/bulletedlistclickeventvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir o <see cref="M:System.Web.UI.WebControls.BulletedList.OnClick(System.Web.UI.WebControls.BulletedListEventArgs)" /> método em uma classe derivada, certifique-se de chamar o <see cref="M:System.Web.UI.WebControls.BulletedList.OnClick(System.Web.UI.WebControls.BulletedListEventArgs)" /> método para a classe base para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BulletedList.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">A representação de cadeia de caracteres para o índice do item da lista que gerou o evento.</param>
+        <summary>Gera eventos para o <see cref="T:System.Web.UI.WebControls.BulletedList" /> controlar quando um formulário é enviado para o servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.RaisePostBackEvent%2A> método é usado internamente pelo <xref:System.Web.UI.WebControls.BulletedList> controlar quando um botão de link dentro da lista de item é clicado. O conteúdo da página especifica o índice do botão link clicado no `eventArgument` parâmetro, que é usado para inicializar o <xref:System.Web.UI.WebControls.BulletedListEventArgs.Index%2A> propriedade de um <xref:System.Web.UI.WebControls.BulletedListEventArgs> objeto. O <xref:System.Web.UI.WebControls.BulletedList.RaisePostBackEvent%2A> método gera uma <xref:System.Web.UI.WebControls.BulletedList.Click> evento passando o inicializado <xref:System.Web.UI.WebControls.BulletedListEventArgs> o objeto para o <xref:System.Web.UI.WebControls.BulletedList.OnClick%2A> método.  
+  
+ O <xref:System.Web.UI.WebControls.BulletedList.RaisePostBackEvent%2A> método opcionalmente pode executar a validação antes de acionar o <xref:System.Web.UI.WebControls.BulletedList.Click> evento para o controle. Para validar um grupo de controles na página quando um botão de link dentro a <xref:System.Web.UI.WebControls.BulletedList> é clicado, definir o <xref:System.Web.UI.WebControls.ListControl.CausesValidation%2A> propriedade para `true` e especifique o grupo de controles a serem validados o <xref:System.Web.UI.WebControls.ListControl.ValidationGroup%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BulletedList.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Grava o <see cref="T:System.Web.UI.WebControls.BulletedList" /> controlar o conteúdo especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto para exibição no cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.Render%2A> método é usado principalmente por desenvolvedores de controle.  
+  
+ O <xref:System.Web.UI.WebControls.BulletedList.Render%2A> método grava o conteúdo renderizado o <xref:System.Web.UI.WebControls.BulletedList> itens para o cliente usando fornecido <xref:System.Web.UI.HtmlTextWriter> objeto. Cada <xref:System.Web.UI.WebControls.BulletedList> item é representado por um elemento de <xref:System.Web.UI.WebControls.ListControl.Items%2A> coleção.  
+  
+ Se o <xref:System.Web.UI.WebControls.ListControl.Items%2A> propriedade o <xref:System.Web.UI.WebControls.BulletedList> controle estiver vazio, nenhum conteúdo é renderizado para o <xref:System.Web.UI.HtmlTextWriter>. Se houver pelo menos um item de lista no <xref:System.Web.UI.WebControls.ListControl.Items%2A> coleção, o <xref:System.Web.UI.WebControls.BulletedList.Render%2A> método grava o conteúdo HTML para o <xref:System.Web.UI.WebControls.BulletedList> controlar usando o <xref:System.Web.UI.WebControls.WebControl.RenderBeginTag%2A>, <xref:System.Web.UI.WebControls.BulletedList.RenderContents%2A>, e <xref:System.Web.UI.WebControls.WebControl.RenderEndTag%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBulletText">
+      <MemberSignature Language="C#" Value="protected virtual void RenderBulletText (System.Web.UI.WebControls.ListItem item, int index, System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderBulletText(class System.Web.UI.WebControls.ListItem item, int32 index, class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BulletedList.RenderBulletText(System.Web.UI.WebControls.ListItem,System.Int32,System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.ListItem" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="item">Uma coleção de <see cref="T:System.Web.UI.WebControls.ListItem" /> objetos em um <see cref="T:System.Web.UI.WebControls.BulletedList" />.</param>
+        <param name="index">O índice baseado em zero do <see cref="T:System.Web.UI.WebControls.ListItem" /> a ser recuperado da coleção.</param>
+        <param name="writer">O fluxo de saída que renderiza o conteúdo HTML para o cliente.</param>
+        <summary>Renderiza o texto com marcadores para cada item de lista em um <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.RenderBulletText%2A> método renderiza o texto com marcadores para cada item de lista em uma <xref:System.Web.UI.WebControls.BulletedList> controlar usando especificado <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BulletedList.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Renderiza os itens da lista de um <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle como marcadores especificado <see cref="T:System.Web.UI.HtmlTextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método renderiza os itens da lista de um <xref:System.Web.UI.WebControls.BulletedList> controle como marcadores especificado <xref:System.Web.UI.HtmlTextWriter?displayProperty=nameWithType>. Esse método é usado principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderWhenDataEmpty">
+      <MemberSignature Language="C#" Value="public virtual bool RenderWhenDataEmpty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderWhenDataEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.RenderWhenDataEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle é renderizado, se a fonte de dados não tem dados ou se o controle não está associado a dados.</summary>
+        <value>
+          <see langword="true" />Se o controle é processado, se a fonte de dados não tem dados ou se o controle não está associado a dados; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndex">
+      <MemberSignature Language="C#" Value="public override int SelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.SelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice de base zero do item atualmente selecionado em um <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle.</summary>
+        <value>Sempre retorna -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na classe base, <xref:System.Web.UI.WebControls.ListControl>, o <xref:System.Web.UI.WebControls.ListControl.SelectedIndex%2A> propriedade retorna um índice com base em zero do item atualmente selecionado. O padrão é -1, que indica que nada está selecionado. O <xref:System.Web.UI.WebControls.BulletedList.SelectedIndex%2A> propriedade não é aplicável para o <xref:System.Web.UI.WebControls.BulletedList> controle.  
+  
+ **Observação** quando você usa o `get` acessador para a <xref:System.Web.UI.WebControls.BulletedList.SelectedIndex%2A> propriedade sempre retorna `-1`. Uma tentativa de usar o `set` acessador para a <xref:System.Web.UI.WebControls.BulletedList.SelectedIndex%2A> propriedade gera uma <xref:System.NotSupportedException>.  
+  
+ Usar os dados do evento de <xref:System.Web.UI.WebControls.BulletedListEventArgs> classe para determinar o índice do botão de link em um <xref:System.Web.UI.WebControls.BulletedList> controle foi clicado.  
+  
+ Essa propriedade não é vinculável em designers visuais, mas é vinculável em tempo de execução. Para obter mais informações, consulte <xref:System.ComponentModel.BindableAttribute>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa para atribuir um valor para o <see cref="P:System.Web.UI.WebControls.BulletedList.SelectedIndex" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItem">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.ListItem SelectedItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ListItem SelectedItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.SelectedItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item atualmente selecionado em um <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle.</summary>
+        <value>
+          <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na classe base, <xref:System.Web.UI.WebControls.ListControl>, o <xref:System.Web.UI.WebControls.ListControl.SelectedItem%2A> propriedade retorna um <xref:System.Web.UI.WebControls.ListItem> objeto que representa o item atualmente selecionado em um <xref:System.Web.UI.WebControls.BulletedList> controle. O padrão é `null`. O <xref:System.Web.UI.WebControls.BulletedList.SelectedItem%2A> propriedade não é aplicável para o <xref:System.Web.UI.WebControls.BulletedList> controle.  
+  
+> [!NOTE]
+>  Se você usar o `get` acessador para a <xref:System.Web.UI.WebControls.BulletedList.SelectedItem%2A> propriedade para retornar o item selecionado para uma <xref:System.Web.UI.WebControls.BulletedList> controlar, sempre retornará `null`.  
+  
+ Usar os dados do evento de <xref:System.Web.UI.WebControls.BulletedListEventArgs> classe para determinar o índice do botão de link em um <xref:System.Web.UI.WebControls.BulletedList> que foi clicado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValue">
+      <MemberSignature Language="C#" Value="public override string SelectedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.SelectedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="P:System.Web.UI.WebControls.ListItem.Value" /> propriedade selecionados <see cref="T:System.Web.UI.WebControls.ListItem" /> objeto o <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle.</summary>
+        <value>O <see cref="P:System.Web.UI.WebControls.ListItem.Value" /> selecionados <see cref="T:System.Web.UI.WebControls.ListItem" /> no <see cref="T:System.Web.UI.WebControls.BulletedList" />; caso contrário, uma cadeia de caracteres vazia (""), se nenhum item selecionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.SelectedValue%2A> propriedade é herdada do <xref:System.Web.UI.WebControls.ListControl> de classe e não é aplicável para o <xref:System.Web.UI.WebControls.BulletedList> controle.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.BulletedList.SelectedValue%2A> propriedade é definida internamente com base no item na lista selecionada de <xref:System.Web.UI.WebControls.BulletedList> controle. Se você definir o <xref:System.Web.UI.WebControls.BulletedList.SelectedValue%2A> propriedade diretamente, um <xref:System.NotSupportedException> exceção será lançada.  
+  
+ Essa propriedade não é vinculável em designers visuais, mas é vinculável em tempo de execução. Para obter mais informações, consulte <xref:System.ComponentModel.BindableAttribute>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa para atribuir um valor para o <see cref="P:System.Web.UI.WebControls.BulletedList.SelectedValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.BulletedList.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Uma cadeia de caracteres que representa um argumento de evento opcionais para passar para o manipulador de eventos.</param>
+        <summary>Para obter uma descrição desse método, consulte <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.BulletedList> é convertida em uma interface de <xref:System.Web.UI.IPostBackEventHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagKey">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.HtmlTextWriterTag TagKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.HtmlTextWriterTag TagKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.TagKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.HtmlTextWriterTag" /> valor especificado <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle.</summary>
+        <value>O valor de marca de gravador de texto HTML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.BulletedList.TagKey%2A> propriedade para determinar a <xref:System.Web.UI.HtmlTextWriterTag> valor que está associado com o <xref:System.Web.UI.WebControls.BulletedList> controle. O <xref:System.Web.UI.WebControls.BulletedList.TagKey%2A> propriedade é usada principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public virtual string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.TargetConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a janela de destino ou quadro no qual exibir o conteúdo da página da Web vinculada quando um hiperlink em um controle <see cref="T:System.Web.UI.WebControls.BulletedList" /> é clicado.</summary>
+        <value>A janela de destino ou o quadro no qual carregar a página da Web vinculada quando um hiperlink em um <see cref="T:System.Web.UI.WebControls.BulletedList" /> é clicado. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores devem começar com uma letra no intervalo À Z (maiusculas de minúsculas), exceto para os valores especiais que são listados na tabela a seguir, que começam com um sublinhado.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|`_blank`|Renderiza o conteúdo em uma nova janela sem quadros.|  
+|`_parent`|Renderiza o conteúdo no conjunto de quadros pai imediato.|  
+|`_search`|Renderiza o conteúdo no painel de pesquisa.|  
+|`_self`|Renderiza o conteúdo do quadro com foco.|  
+|`_top`|Renderiza o conteúdo na janela inteira sem quadros.|  
+  
+> [!NOTE]
+>  Verifique a documentação do navegador para determinar se o `_search` valor tem suporte.  Por exemplo, Microsoft Internet Explorer 5.0 e posteriores dão suporte ao `_search` valor de destino.  
+  
+ Use o <xref:System.Web.UI.WebControls.BulletedList.Target%2A> propriedade para especificar o quadro ou janela que exibe a página da Web que está vinculada a quando um hiperlink em um <xref:System.Web.UI.WebControls.BulletedList> controle é clicado. Para exibir o conteúdo dos itens de lista como hiperlinks em uma <xref:System.Web.UI.WebControls.BulletedList> controlar, defina o <xref:System.Web.UI.WebControls.BulletedListDisplayMode> propriedade para o valor <xref:System.Web.UI.WebControls.BulletedListDisplayMode.HyperLink>. Em seguida, defina o <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade de cada item de lista para a URL da página da Web para navegar até.  
+  
+ Se o <xref:System.Web.UI.WebControls.BulletedList.Target%2A> propriedade não for definida, o navegador ou janela com foco atualizações quando o hiperlink é clicado.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.BulletedList.Target%2A> propriedade renderiza como um `target` atributo. O `target` atributo no `anchor` elementos não é permitido na definição do tipo de documento XHTML 1.1. Não defina o <xref:System.Web.UI.WebControls.BulletedList.Target%2A> propriedade se a saída renderizada para o <xref:System.Web.UI.WebControls.BulletedList> devem ser compatíveis com XHTML 1.1. Para obter mais informações, consulte o tópico [padrões XHTML no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>   
+>  Ao criar páginas da Web acessíveis, é altamente recomendável evitar o uso de <xref:System.Web.UI.WebControls.BulletedList.Target%2A> propriedade a outra janela de destino. Para obter mais informações, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13).  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> controle e defina o <xref:System.Web.UI.WebControls.BulletedList.Target%2A> propriedade. Quando o usuário seleciona o <xref:System.Web.UI.WebControls.BulletedListDisplayMode.HyperLink> exibir o modo de caixa de listagem, o <xref:System.Web.UI.WebControls.BulletedList.Target%2A> está definida como `_blank` para exibir a página vinculada em uma nova janela do navegador.  
+  
+ [!code-aspx-csharp[BulletedListDisplaymode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListDisplayMode/CS/bulletedlistdisplaymodecs.aspx#1)]
+ [!code-aspx-vb[BulletedListDisplaymode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListDisplayMode/VB/bulletedlistdisplaymodevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.BulletedList.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto para o <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle.</summary>
+        <value>O <see cref="P:System.Web.UI.WebControls.ListControl.SelectedValue" /> do <see cref="T:System.Web.UI.WebControls.BulletedList" />, se um dos itens no <see cref="T:System.Web.UI.WebControls.BulletedList" /> selecionado; caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedList.Text%2A> propriedade é herdada do <xref:System.Web.UI.WebControls.ListControl> de classe e não é aplicável para o <xref:System.Web.UI.WebControls.BulletedList> controle.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.BulletedList.Text%2A> propriedade é definida internamente com base no item na lista selecionada de <xref:System.Web.UI.WebControls.BulletedList> controle. Se você definir o <xref:System.Web.UI.WebControls.BulletedList.Text%2A> propriedade diretamente, um <xref:System.NotSupportedException> exceção será lançada.  
+  
+ Enquanto você não pode acessar o <xref:System.Web.UI.WebControls.BulletedList.Text%2A> propriedade de <xref:System.Web.UI.WebControls.BulletedList> controle, você pode usar os dados do evento de <xref:System.Web.UI.WebControls.BulletedListEventArgs> classe para determinar o índice do botão de link em um <xref:System.Web.UI.WebControls.BulletedList> que foi clicado. Você pode acessar o <xref:System.Web.UI.WebControls.LinkButton.Text%2A> propriedade o <xref:System.Web.UI.WebControls.LinkButton> controle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa para atribuir um valor para o <see cref="P:System.Web.UI.WebControls.BulletedList.Text" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

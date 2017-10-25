@@ -1,0 +1,91 @@
+<Type Name="IPlaybackControl" FullName="System.EnterpriseServices.IPlaybackControl">
+  <TypeSignature Language="C#" Value="public interface IPlaybackControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPlaybackControl" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IPlaybackControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("51372AFD-CAE7-11CF-BE81-00AA00A2FA25")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Funções em QC em anormal tratamento de erros de reprodução do lado do servidor e do lado do cliente de falhas do mecanismo de entrega de enfileiramento de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe de exceção definida para o componente no catálogo COM+ implementa ambos <xref:System.EnterpriseServices.IPlaybackControl> e a interface para a classe original. As implementações de método da interface de classe original são usadas para executar o manipulação de exceções para os métodos com falha na própria classe. Serão chamados após <xref:System.EnterpriseServices.IPlaybackControl.FinalClientRetry%2A> ou <xref:System.EnterpriseServices.IPlaybackControl.FinalServerRetry%2A> para processar exceções para o método chamado originalmente.  
+  
+ O Player de componentes na fila chama os métodos de <xref:System.EnterpriseServices.IPlaybackControl> para informar o objeto do manipulador de exceção que uma mensagem está prestes a ser colocado na fila final repousar ou mensagens mortas. O Player de componentes na fila, em seguida, chama o mesmo método no objeto de manipulador de exceção que falhou na chamada do método original. O objeto do manipulador de exceção pode implementar uma alternativa, por exemplo, coletando informações de diagnóstico do problema ou gerando um objeto ou uma mensagem que informa o cliente do problema. Se o aplicativo não implementa <xref:System.EnterpriseServices.IPlaybackControl>, a mensagem suspeita é colocada na fila repousar ou mensagens mortas final quando o Player de componentes na fila esvazia todas as novas tentativas.  
+  
+ Uma mensagem suspeita é uma mensagem que não pode ser processada por algum motivo, talvez devido a um problema com o servidor ou o sistema de enfileiramento de mensagens. A transação é revertida e a mensagem suspeita vai para o início da fila. Quando a mensagem é removida da fila novamente, ocorre a mesma condição. Essa mensagem pode continuar indefinidamente até que algo é feito para corrigir o problema. O serviço de componentes na fila lida com a mensagem suspeita usando uma série de novas tentativas. Após várias tentativas sem êxito, a mensagem é movida para uma fila de repouso final. Mensagens suspeitas permanecem na fila de repouso até movido manualmente usando a ferramenta de motor de mensagem de componentes na fila.  
+  
+ A situação de mensagem suspeita também pode ser resolvida programaticamente, usando o <xref:System.EnterpriseServices.IPlaybackControl.FinalServerRetry%2A> método, que informa o autor do componente do servidor que todas as tentativas para reproduzir a ativação adiada falharam.  
+  
+ Se você descobrir uma mensagem suspeita, você poderá resolver a causa do problema rapidamente. Por exemplo, se o servidor estiver offline por algum motivo, você pode colocar o servidor online novamente. Se você não conseguir resolver o problema rapidamente, você pode gerar automaticamente a outra transação que notifica o solicitante que a transação não tivesse ocorrido. O solicitante pode fazer em seguida, uma transação de compensação que reverte o efeito de uma transação que já foi confirmada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FinalClientRetry">
+      <MemberSignature Language="C#" Value="public void FinalClientRetry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FinalClientRetry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IPlaybackControl.FinalClientRetry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Informa o componente de tratamento de exceção do lado do cliente que foram rejeitadas todas as tentativas de enfileiramento de mensagens para enviar a mensagem para o servidor e terminou a mensagem na fila de mensagens mortas de Xact do lado do cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enquanto as mensagens chegam na fila de mensagens mortas de Xact, COM+ tentar invocar um manipulador de exceção do lado do cliente relacionado à classe de servidor para fornecer essa notificação. Isso é feito chamando primeiro <xref:System.EnterpriseServices.IPlaybackControl.FinalClientRetry%2A>, em seguida, chamar a versão de tratamento de exceção do método com falha no objeto do manipulador de exceção. Esse método de exceção, em seguida, poderá executar uma ação de exceção, como registrar a falha, enviando uma mensagem de email para o administrador ou executar uma ação de compensação do lado do cliente (Revertendo o efeito de uma transação anterior). Se o método de exceção não for bem-sucedida, a mensagem permanecerá na fila de mensagens mortas de Xact.  
+  
+ Fila de mensagens mortas de Xact pode ser exibida no Gerenciador de fila de mensagens da Microsoft (MSMQ).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalServerRetry">
+      <MemberSignature Language="C#" Value="public void FinalServerRetry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FinalServerRetry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IPlaybackControl.FinalServerRetry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Informa a implementação da classe de exceção do lado do servidor que todas as tentativas para reproduzir a ativação adiada para o servidor falharam e a mensagem está prestes a ser movida para a sua fila de repouso final.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enquanto as mensagens chegam na fila de mensagens mortas de Xact, COM+ tentar invocar um manipulador de exceção do lado do servidor relacionado à classe de servidor para fornecer essa notificação. Isso é feito chamando primeiro <xref:System.EnterpriseServices.IPlaybackControl.FinalServerRetry%2A>, em seguida, chamar a versão do método com falha no objeto do manipulador de exceção de manipulação de exceção. Esse método de exceção, em seguida, poderá executar uma ação de exceção, como registrar a falha, enviando uma mensagem de email para o administrador ou executar uma ação de compensação do lado do cliente (Revertendo o efeito de uma transação anterior). O objeto de servidor deve fazer todos os esforços para concluir a transação com êxito. Caso contrário, é necessária a intervenção manual para reprocessar a mensagem. Se o método de exceção não for bem-sucedida, a mensagem é movida para a fila de repouso final.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

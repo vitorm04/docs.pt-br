@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Services.Common">
+  <Docs>
+    <summary>Funcionalidade de implementa comum para ambos os tempos de execução do WCF Data Services cliente e servidor.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

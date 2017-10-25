@@ -1,0 +1,160 @@
+<Type Name="BookmarkResumptionRecord" FullName="System.Activities.Tracking.BookmarkResumptionRecord">
+  <TypeSignature Language="C#" Value="public sealed class BookmarkResumptionRecord : System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BookmarkResumptionRecord extends System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.BookmarkResumptionRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém os dados enviados para um participante de rastreamento, a infra-estrutura de controle de tempo de execução quando um <see cref="T:System.Activities.Bookmark" /> é retomado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BookmarkResumptionRecord (Guid instanceId, long recordNumber, Guid bookmarkScope, string bookmarkName, System.Activities.Tracking.ActivityInfo owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, int64 recordNumber, valuetype System.Guid bookmarkScope, string bookmarkName, class System.Activities.Tracking.ActivityInfo owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.BookmarkResumptionRecord.#ctor(System.Guid,System.Int64,System.Guid,System.String,System.Activities.Tracking.ActivityInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="recordNumber" Type="System.Int64" />
+        <Parameter Name="bookmarkScope" Type="System.Guid" />
+        <Parameter Name="bookmarkName" Type="System.String" />
+        <Parameter Name="owner" Type="System.Activities.Tracking.ActivityInfo" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">A ID de instância da atividade associada.</param>
+        <param name="recordNumber">Uma sequência que define a ordem na qual os registros de rastreamento são gerados.</param>
+        <param name="bookmarkScope">A ID da atividade associada <see cref="T:System.Activities.BookmarkScope" />.</param>
+        <param name="bookmarkName">O nome do indicador.</param>
+        <param name="owner">A atividade que estava aguardando o indicador a ser retomado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.Tracking.BookmarkResumptionRecord" /> classe usando a ID de instância especificado, o número de registro, escopo de indicadores, nome do indicador e proprietário.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BookmarkName">
+      <MemberSignature Language="C#" Value="public string BookmarkName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BookmarkName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.BookmarkResumptionRecord.BookmarkName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.Activities.Bookmark" /> que é retomada pelo mecanismo de execução de fluxo de trabalho.</summary>
+        <value>O nome do <see cref="T:System.Activities.Bookmark" /> que é referenciada por este <see cref="T:System.Activities.Tracking.BookmarkResumptionRecord" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BookmarkScope">
+      <MemberSignature Language="C#" Value="public Guid BookmarkScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid BookmarkScope" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.BookmarkResumptionRecord.BookmarkScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do escopo do <see cref="T:System.Activities.BookmarkScope" /> que está associado este indicador.</summary>
+        <value>A ID do escopo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Activities.Tracking.TrackingRecord Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Activities.Tracking.TrackingRecord Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.BookmarkResumptionRecord.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.TrackingRecord</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Activities.Tracking.ActivityInfo Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Tracking.ActivityInfo Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.BookmarkResumptionRecord.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.ActivityInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações o <see cref="T:System.Activities.Tracking.ActivityInfo" /> objeto estava aguardando o indicador a ser retomado.</summary>
+        <value>As informações de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Payload">
+      <MemberSignature Language="C#" Value="public object Payload { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Payload" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.BookmarkResumptionRecord.Payload" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que foi fornecido quando o <see cref="T:System.Activities.Bookmark" /> foi retomado.</summary>
+        <value>O valor que foi fornecido quando o <see cref="T:System.Activities.Bookmark" /> foi retomado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.BookmarkResumptionRecord.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> que representa o atual <see cref="T:System.Activities.Tracking.BookmarkResumptionRecord" /> objeto.</summary>
+        <returns>O objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

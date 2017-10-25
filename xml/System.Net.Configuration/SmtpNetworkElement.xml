@@ -1,0 +1,310 @@
+<Type Name="SmtpNetworkElement" FullName="System.Net.Configuration.SmtpNetworkElement">
+  <TypeSignature Language="C#" Value="public sealed class SmtpNetworkElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SmtpNetworkElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.SmtpNetworkElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento de rede no arquivo de configuração de SMTP. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta classe para configurar um cliente SMTP.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SmtpNetworkElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.SmtpNetworkElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Configuration.SmtpNetworkElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientDomain">
+      <MemberSignature Language="C#" Value="public string ClientDomain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientDomain" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpNetworkElement.ClientDomain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("clientDomain")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de domínio de cliente usado na solicitação de protocolo SMTP inicial para se conectar a um servidor de email SMTP.</summary>
+        <value>Uma cadeia de caracteres que representa o nome de domínio de cliente usado na solicitação de protocolo SMTP inicial para se conectar a um servidor de email SMTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A> propriedade permite que um aplicativo alterar o nome de domínio de cliente usado na solicitação inicial de protocolo SMTP para um servidor SMTP. Se o <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A> propriedade não for definida, o padrão é usar o nome de host local do computador local, enviando a solicitação.  
+  
+ RFC 2821 que define os detalhes do transporte de protocolo SMTP (Simple Mail). Essa RFC determina que um cliente SMTP deve usar um nome de domínio totalmente qualificado como parte de sua mensagem HELO ou HELO estendidos (EHLO) em um servidor.  
+  
+ O <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A> propriedade permite que um aplicativo alterar o nome de domínio do cliente (RFC usa o termo domínio na descrição do protocolo) para usar o nome de domínio totalmente qualificado do computador local, em vez do nome de host local que é usado por padrão. Isso fornece maior conformidade com os padrões de protocolo SMTP. No entanto, o nome de domínio totalmente qualificado pode expor informações particulares sobre o computador local.  
+  
+ Qualquer nome definido no <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A> propriedade deve obedecer às regras DNS para nomes de ASCII de 7 bits.  
+  
+ O valor padrão para este elemento de rede no arquivo de configuração de SMTP também pode ser alterado editando manualmente a máquina ou o aplicativo diretamente arquivos de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCredentials">
+      <MemberSignature Language="C#" Value="public bool DefaultCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DefaultCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultCredentials", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se as credenciais de usuário padrão são usadas para acessar um servidor SMTP. O valor padrão é <see langword="false" />.</summary>
+        <value>
+          <see langword="true" />indica que as credenciais serão usadas para acessar o servidor SMTP; o usuário padrão Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableSsl">
+      <MemberSignature Language="C#" Value="public bool EnableSsl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableSsl" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpNetworkElement.EnableSsl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableSsl", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o SSL é usado para acessar um servidor de email SMTP. O valor padrão é <see langword="false" />.</summary>
+        <value>
+          <see langword="true" /> indica que o SSL será usado para acessar o servidor de email SMTP; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A> propriedade indica se o SSL é usado para acessar um servidor de email SMTP. O <xref:System.Net.Mail.SmtpClient> classe só dá suporte à extensão do serviço SMTP para SMTP seguro em Transport Layer Security conforme definido na RFC 3207. Nesse modo, a sessão SMTP começa em um canal não criptografado, em seguida, um comando STARTTLS é emitido pelo cliente para o servidor para alternar para comunicações seguras usando SSL. Consulte RFC 3207 publicado pelo Engineering Task Force IETF (Internet) para obter mais informações.  
+  
+ Um método alternativo de conexão é em que uma sessão SSL é estabelecida com antecedência antes de qualquer protocolo de comandos são enviados. Esse método de conexão às vezes é chamado SMTPS e por padrão usa a porta 465. Atualmente, não há suporte para esse método alternativo de conexão usando SSL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public string Host { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Host" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpNetworkElement.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("host")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do servidor SMTP.</summary>
+        <value>Uma cadeia de caracteres que representa o nome do servidor SMTP para se conectar ao.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpNetworkElement.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("password")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a senha do usuário a ser usado para se conectar a um servidor de email SMTP.</summary>
+        <value>Uma cadeia de caracteres que representa a senha a ser usada para se conectar a um servidor de email SMTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A> tem precedência sobre a configuração <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A> e <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A>. <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A>e <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A> são usados somente se <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A> é definido como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpNetworkElement.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("port", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a porta que os clientes SMTP usam para se conectar a um servidor de email SMTP. O valor padrão é 25.</summary>
+        <value>Uma cadeia de caracteres que representa a porta para se conectar a um servidor de email SMTP.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.SmtpNetworkElement.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpNetworkElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetName">
+      <MemberSignature Language="C#" Value="public string TargetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpNetworkElement.TargetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("targetName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o serviço provedor SPN (nome) a ser usada para autenticação com proteção estendida para se conectar a um servidor de email SMTP.</summary>
+        <value>Uma cadeia de caracteres que representa o SPN a ser usada para autenticação com proteção estendida para se conectar a um servidor de email SMTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A> propriedade permite que um aplicativo obter ou definir o SPN a ser usado para autenticação quando a autenticação integrada do Windows com a proteção estendida. Se o <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A> propriedade não for definida, o valor padrão para este SPN será do formulário "SMTPSVC /\<host >" onde \<host > é o nome do host do servidor de email SMTP.  
+  
+ O valor padrão para este elemento de rede no arquivo de configuração de SMTP também pode ser alterado editando manualmente a máquina ou o aplicativo diretamente arquivos de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SmtpNetworkElement.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("userName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de usuário para se conectar a um servidor de email SMTP.</summary>
+        <value>Uma cadeia de caracteres que representa o nome de usuário para se conectar a um servidor de email SMTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A> tem precedência sobre a configuração <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A> e <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A>. <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A>e <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A> são usados somente se <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A> é definido como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

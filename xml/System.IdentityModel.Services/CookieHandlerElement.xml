@@ -1,0 +1,363 @@
+<Type Name="CookieHandlerElement" FullName="System.IdentityModel.Services.CookieHandlerElement">
+  <TypeSignature Language="C#" Value="public class CookieHandlerElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CookieHandlerElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.CookieHandlerElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o <see langword="&lt;cookieHandler&gt;" /> elemento de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `<cookieHandler>` é um elemento filho do `<federatedAuthentication>` elemento; o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A?displayProperty=nameWithType> propriedade é definida como uma instância do <xref:System.IdentityModel.Services.CookieHandlerElement> classe. O `<cookieHandler>` elemento é usado para configurar o manipulador de cookie usado por sessão de autenticação do módulo (SAM), que é representado pela <xref:System.IdentityModel.Services.SessionAuthenticationModule> classe.  
+  
+ Um manipulador de cookie pode ser configurado em uma das seguintes maneiras:  
+  
+-   Para configurar um manipulador de cookie em partes, defina o <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> propriedade como <xref:System.IdentityModel.Services.CookieHandlerMode.Default> ou <xref:System.IdentityModel.Services.CookieHandlerMode.Chunked> e defina o <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> propriedade com o elemento de configuração para o manipulador de cookie em partes. O <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> propriedade não deve ser definida.  
+  
+-   Para configurar um manipulador de cookie em partes com o tamanho da parte padrão, você pode definir o <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> propriedade conforme mencionado anteriormente, mas deixe ambos o <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> e <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> propriedades não definidas.  
+  
+-   Para configurar um manipulador de cookie personalizado, defina o <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> propriedade <xref:System.IdentityModel.Services.CookieHandlerMode.Custom> e defina o <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> propriedade com o elemento de configuração que identifica o tipo do seu manipulador de cookie personalizado. Esse tipo deve derivar do <xref:System.IdentityModel.Services.CookieHandler> classe. O <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> propriedade não deve ser definida.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CookieHandlerElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandlerElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Services.CookieHandlerElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChunkedCookieHandler">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.ChunkedCookieHandlerElement ChunkedCookieHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.ChunkedCookieHandlerElement ChunkedCookieHandler" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("chunkedCookieHandler", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.ChunkedCookieHandlerElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um manipulador de cookie em partes.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Services.ChunkedCookieHandlerElement" /> que fornece configuração adicional para o manipulador de cookie em partes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é equivalente a `<chunkedCookieHandler>` elemento filho do `<cookieHandler>` elemento. Especifica um manipulador de cookie em partes, uma instância do <xref:System.IdentityModel.Services.ChunkedCookieHandler> classe a ser usada. Se for definido, o <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> propriedade deve ser definida como <xref:System.IdentityModel.Services.CookieHandlerMode.Default> ou <xref:System.IdentityModel.Services.CookieHandlerMode.Chunked>. Se o <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> propriedade estiver definida para qualquer um desses valores, mas o <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> propriedade não for definido, um manipulador de cookie em partes com o tamanho da parte padrão (<xref:System.IdentityModel.Services.ChunkedCookieHandler.DefaultChunkSize?displayProperty=nameWithType>) está configurado.  
+  
+ Ambos os <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> propriedade ou o <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> propriedade pode ser conjunto, mas não ambos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomCookieHandler">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Configuration.CustomTypeElement CustomCookieHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Configuration.CustomTypeElement CustomCookieHandler" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("customCookieHandler", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Configuration.CustomTypeElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um tipo de manipulador de cookie personalizado. Essa propriedade deve ser definida quando um manipulador de cookie personalizado está sendo configurado.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Configuration.CustomTypeElement" /> que define o tipo de manipulador de cookie personalizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é equivalente a `<customCookieHandler>` elemento filho do `<cookieHandler>` elemento. Especifica um tipo de manipulador de cookie personalizado para usar. Se essa propriedade for definida, o <xref:System.IdentityModel.Services.CookieHandlerElement.Mode%2A> propriedade deve ser definida como <xref:System.IdentityModel.Services.CookieHandlerMode.Custom>. O tipo personalizado especificado por essa propriedade deve ser derivado de <xref:System.IdentityModel.Services.CookieHandler> classe.  
+  
+ Ambos os <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> propriedade ou o <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> propriedade pode ser conjunto, mas não ambos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("domain", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de domínio para o cookie gravado pelo manipulador.</summary>
+        <value>O valor de domínio. O padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o `domain` atributo o [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConfiguredCookieHandler">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.CookieHandler GetConfiguredCookieHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Services.CookieHandler GetConfiguredCookieHandler() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandlerElement.GetConfiguredCookieHandler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.CookieHandler</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um novo manipulador de cookie com base nas propriedades de configuração.</summary>
+        <returns>O manipulador de cookie. Isso será uma instância de <see cref="T:System.IdentityModel.Services.CookieHandler" /> ou <see cref="T:System.IdentityModel.Services.ChunkedCookieHandler" /> dependendo do tipo de manipulador que é configurada com as propriedades da instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna um manipulador de cookie que é consistente com a configuração. O manipulador de cookie retornado será um manipulador de cookie em partes ou um manipulador de cookie personalizado dependendo de como configurar as propriedades de configuração. Para obter mais informações, consulte <xref:System.IdentityModel.Services.CookieHandlerElement>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Não é possível criar um manipulador de cookie as propriedades da instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HideFromScript">
+      <MemberSignature Language="C#" Value="public bool HideFromScript { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HideFromScript" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.HideFromScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("hideFromScript", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o <see langword="httpOnly" /> propriedade dos cookies escritos por esse manipulador deverá ser definida.</summary>
+        <value>
+          <see langword="true" />Se o <see langword="httpOnly" /> propriedade deve ser definida; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controla se o sinalizador "HttpOnly" é emitido para qualquer cookie gravado. Alguns navegadores da Web aceitam esse sinalizador, mantendo o script do lado do cliente acessem o valor do cookie.  
+  
+ Representa o `hideFromScript` atributo o [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.CookieHandlerMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Services.CookieHandlerMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mode", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.CookieHandlerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de manipulador de cookie.</summary>
+        <value>Uma opção válida <see cref="T:System.IdentityModel.Services.CookieHandlerMode" /> valor que indica o tipo de manipulador de cookie que está sendo configurado. O valor padrão é <see cref="F:System.IdentityModel.Services.CookieHandlerMode.Default" />, que indica que um manipulador de cookie em partes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para manipuladores de cookie em partes (o <xref:System.IdentityModel.Services.CookieHandlerElement.ChunkedCookieHandler%2A> estiver definida), o modo deve ser definido para <xref:System.IdentityModel.Services.CookieHandlerMode.Chunked> ou <xref:System.IdentityModel.Services.CookieHandlerMode.Default>. Para um manipulador de cookie personalizado (o <xref:System.IdentityModel.Services.CookieHandlerElement.CustomCookieHandler%2A> estiver definida), o modo deve ser definido como <xref:System.IdentityModel.Services.CookieHandlerMode.Custom>.  
+  
+ Representa o `mode` atributo o [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de base para qualquer cookie gravado pelo manipulador.</summary>
+        <value>O nome de base para os cookies. O padrão é "FedAuth".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o `name` atributo o [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("path", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do caminho de cookie gravado pelo manipulador.</summary>
+        <value>Uma cadeia de caracteres que contém o caminho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum caminho for definido, o caminho definido pelo <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> propriedade é usada.  
+  
+ Representa o `path` atributo o [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistentSessionLifetime">
+      <MemberSignature Language="C#" Value="public TimeSpan PersistentSessionLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PersistentSessionLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.PersistentSessionLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("persistentSessionLifetime", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="365.0:0:0", MinValueString="0:0:0")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo de vida de cookies emitidos pelo manipulador.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> que representa o tempo de vida do cookie. O padrão é 0 dias ("0.0:0:0"). O valor deve ser um valor entre 0 ("0.0:0:0") e 365 dias ("365.0:0:0").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o `persistentSessionLifetime` atributo o [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireSsl">
+      <MemberSignature Language="C#" Value="public bool RequireSsl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireSsl" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandlerElement.RequireSsl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requireSsl", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o cookie deve ser usado somente com SSL.</summary>
+        <value>
+          <see langword="true" />Se o cookie deve ser usado apenas em uma conexão SSL; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controla se o sinalizador "Secure" é emitido para qualquer cookie gravado. Se esse valor for `true`, os cookies de sessão de entrada só estará disponíveis via HTTPS.  
+  
+ Representa o `requireSSL` atributo o [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

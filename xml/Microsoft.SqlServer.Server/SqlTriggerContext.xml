@@ -1,0 +1,143 @@
+<Type Name="SqlTriggerContext" FullName="Microsoft.SqlServer.Server.SqlTriggerContext">
+  <TypeSignature Language="C#" Value="public sealed class SqlTriggerContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlTriggerContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlTriggerContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações contextuais sobre o gatilho que foi disparado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações contextuais fornecidas incluem o tipo de ação que causou o gatilho, quais colunas foram modificadas em uma operação de atualização, e, no caso de uma definição de dados gatilho DDL (linguagem), uma estrutura XML EventData (consulte "Referência de Transact-SQL" nos manuais do SQL Server Online) que descreve a operação de acionamento.  
+  
+ Uma instância de <xref:Microsoft.SqlServer.Server.SqlTriggerContext> está disponível a partir o <xref:Microsoft.SqlServer.Server.SqlContext> classe, quando o código está em execução dentro de um gatilho por meio de <xref:Microsoft.SqlServer.Server.SqlContext.TriggerContext%2A> propriedade.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:Microsoft.SqlServer.Server.SqlTriggerContext> do objeto que está sendo usada para determinar se um <xref:Microsoft.SqlServer.Server.TriggerAction.Insert> ação aconteceu. Se uma linha foi inserida a `user`da tabela, o nome de usuário e o nome real são recuperados da linha inserida e depois adicionados ao **UserNameAudit** tabela.  
+  
+ [!code-csharp[DataWorks SqlTriggerContext Sample#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTriggerContext Sample/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlTriggerContext Sample#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTriggerContext Sample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnCount">
+      <MemberSignature Language="C#" Value="public int ColumnCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlTriggerContext.ColumnCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de colunas contidas na tabela de dados associado ao gatilho. Esta propriedade é somente para leitura.</summary>
+        <value>O número de colunas contidas na tabela de dados associada a disparador, como um número inteiro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.SqlServer.Server.SqlTriggerContext.ColumnCount%2A>propriedade é útil para determinar o ordinal máximo que <xref:Microsoft.SqlServer.Server.SqlTriggerContext.IsUpdatedColumn%2A> permite uma invocação de gatilho específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventData">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlXml EventData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.SqlTypes.SqlXml EventData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlTriggerContext.EventData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlXml</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados de evento específicas para a ação que acionou o gatilho.</summary>
+        <value>Os dados de evento específicos para a ação que acionou o gatilho como uma <see cref="T:System.Data.SqlTypes.SqlXml" /> se houver mais informações disponíveis. <see langword="null" /> caso contrário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essas informações estão disponíveis para gatilhos de language (DDL) de definição de dados. Nenhuma informação está disponível por meio de gatilhos DML (linguagem) de manipulação de dados da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUpdatedColumn">
+      <MemberSignature Language="C#" Value="public bool IsUpdatedColumn (int columnOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsUpdatedColumn(int32 columnOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlTriggerContext.IsUpdatedColumn(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnOrdinal">O ordinal baseado em zero da coluna.</param>
+        <summary>Retorna <see langword="true" /> se uma coluna foi afetada por uma instrução INSERT ou UPDATE.</summary>
+        <returns>
+          <see langword="true" />Se a coluna foi afetada por uma operação de inserção ou atualização.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Chamado no contexto de um gatilho onde o valor de <see cref="P:Microsoft.SqlServer.Server.SqlTriggerContext.TriggerAction" /> propriedade não é <see langword="Insert" /> ou <see langword="Update" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TriggerAction">
+      <MemberSignature Language="C#" Value="public Microsoft.SqlServer.Server.TriggerAction TriggerAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.SqlServer.Server.TriggerAction TriggerAction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlTriggerContext.TriggerAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.TriggerAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a ação que acionou o gatilho.</summary>
+        <value>A ação que acionou o gatilho como uma <see cref="T:Microsoft.SqlServer.Server.TriggerAction" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra um gatilho de auditoria. Se um <xref:Microsoft.SqlServer.Server.TriggerAction.Insert> ou <xref:Microsoft.SqlServer.Server.TriggerAction.Delete> ação ocorreu, as linhas afetadas são recuperadas das tabelas INSERTED e DELETED.  
+  
+ [!code-csharp[DataWorks SqlTriggerContext Sample#2](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTriggerContext Sample/CS/source.cs#2)]
+ [!code-vb[DataWorks SqlTriggerContext Sample#2](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTriggerContext Sample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,82 @@
+<Type Name="ColumnHeaderStyle" FullName="System.Windows.Forms.ColumnHeaderStyle">
+  <TypeSignature Language="C#" Value="public enum ColumnHeaderStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ColumnHeaderStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ColumnHeaderStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os estilos dos cabeçalhos de coluna em um controle <see cref="T:System.Windows.Forms.ListView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa enumeração para definir o valor da <xref:System.Windows.Forms.ListView.HeaderStyle%2A> propriedade o <xref:System.Windows.Forms.ListView> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ColumnHeaderStyle> enumeração para definir o <xref:System.Windows.Forms.ListView.HeaderStyle%2A?displayProperty=nameWithType> propriedade de um <xref:System.Windows.Forms.ListView> controle. Para executar este exemplo colar o código a seguir em um formulário e a chamada a `InitializeListView` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ListView1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView1/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clickable">
+      <MemberSignature Language="C#" Value="Clickable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ColumnHeaderStyle Clickable = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ColumnHeaderStyle.Clickable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnHeaderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os cabeçalhos de coluna funcionam como botões e podem realizar uma ação, como classificar, quando clicados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Nonclickable">
+      <MemberSignature Language="C#" Value="Nonclickable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ColumnHeaderStyle Nonclickable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ColumnHeaderStyle.Nonclickable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnHeaderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os cabeçalhos de coluna não respondem ao clique do mouse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ColumnHeaderStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ColumnHeaderStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ColumnHeaderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O cabeçalho de coluna não é exibido na exibição de relatório.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

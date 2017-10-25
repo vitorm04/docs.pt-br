@@ -1,0 +1,435 @@
+<Type Name="GroupStyle" FullName="System.Windows.Controls.GroupStyle">
+  <TypeSignature Language="C#" Value="public class GroupStyle : System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi GroupStyle extends System.Object implements class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.GroupStyle" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define qual você deseja que seja a aparência do grupo em cada nível.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Os exemplos a seguir mostram um <xref:System.Windows.Controls.ItemsControl> que está associado a um <xref:System.Windows.Data.XmlDataProvider> e o conteúdo de lógica que contém a lógica para adicionar e remover o agrupamento. Quando a caixa de seleção estiver marcada, o conteúdo do <xref:System.Windows.Controls.ItemsControl> é agrupado pelo `Type` atributo.  
+  
+ Cada grupo é do tipo <xref:System.Windows.Data.CollectionViewGroup>. O <xref:System.Windows.Controls.GroupStyle> <xref:System.Windows.Controls.GroupStyle.HeaderTemplate%2A> é especificada para que ele seja exibido como um <xref:System.Windows.Controls.TextBlock> que exibe o <xref:System.Windows.Data.CollectionViewGroup.Name%2A> de cada grupo. Nesse caso, o <xref:System.Windows.Data.CollectionViewGroup.Name%2A> é `Work` ou `Home`.  
+  
+ [!code-xaml[GroupingSample#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml#xaml)]  
+  
+ [!code-csharp[GroupingSample#Code](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml.cs#code)]
+ [!code-vb[GroupingSample#Code](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GroupingSample/visualbasic/window1.xaml.vb#code)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GroupStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GroupStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.GroupStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternationCount">
+      <MemberSignature Language="C#" Value="public int AlternationCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AlternationCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GroupStyle.AlternationCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de alternando <see cref="T:System.Windows.Controls.GroupItem" /> objetos.</summary>
+        <value>O número de alternando <see cref="T:System.Windows.Controls.GroupItem" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.GroupStyle.AlternationCount%2A> propriedade e o <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> propriedade anexada permitem que você especificar a aparência de duas ou mais alternando <xref:System.Windows.Controls.GroupItem> objetos. Por exemplo, você pode especificar cores de plano de fundo alternadas para todos os outros <xref:System.Windows.Controls.GroupItem> em um <xref:System.Windows.Controls.ItemsControl>.  O <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> é atribuído a cada <xref:System.Windows.Controls.GroupItem> no <xref:System.Windows.Controls.ItemsControl>.  <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>começa em 0, incrementos de até que ele seja <xref:System.Windows.Controls.GroupStyle.AlternationCount%2A> menos 1 e é reiniciado em 0. Por exemplo, se <xref:System.Windows.Controls.GroupStyle.AlternationCount%2A> 3 e há sete <xref:System.Windows.Controls.GroupItem> objetos no <xref:System.Windows.Controls.ItemsControl>, a seguinte tabela lista o <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> para cada item.  
+  
+|Posição de <xref:System.Windows.Controls.GroupItem> do<xref:System.Windows.Controls.ItemsControl>|<xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>|  
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|1|0|  
+|2|1|  
+|3|2|  
+|4|0|  
+|5|1|  
+|6|2|  
+|7|0|  
+  
+ Há vários métodos que você pode usar para especificar aparências diferentes para o alternados <xref:System.Windows.Controls.GroupItem> objetos. É um método ligar as propriedades no <xref:System.Windows.Controls.GroupStyle.HeaderTemplate%2A> ou <xref:System.Windows.Controls.GroupStyle.ContainerStyle%2A> do <xref:System.Windows.Controls.GroupStyle> para o <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>. Você pode usar um <xref:System.Windows.Controls.AlternationConverter> para especificar qual valor deve ser aplicado ao <xref:System.Windows.Controls.GroupItem> que tem um determinado <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> valor. Você também pode usar gatilhos para alterar o valor de uma propriedade dependendo do valor de seu <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ListBox> que está associado a um <xref:System.Windows.Data.CollectionViewSource> que agrupa os itens na coleção. O exemplo alterna o plano de fundo para o cabeçalho de cada <xref:System.Windows.Controls.GroupItem> entre duas cores, fazendo o seguinte:  
+  
+-   Conjuntos de <xref:System.Windows.Controls.GroupStyle.AlternationCount%2A> para 2.  
+  
+-   Cria um <xref:System.Windows.Controls.AlternationConverter> que retorna um <xref:System.Windows.Media.SolidColorBrush>, dependendo do valor de <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>.  
+  
+-   Associa o <xref:System.Windows.Controls.TextBlock.Background%2A> do <xref:System.Windows.Controls.TextBlock> no <xref:System.Windows.Controls.GroupStyle.HeaderTemplate%2A> para o <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType> propriedade e fornece o <xref:System.Windows.Controls.AlternationConverter>. Observe que o <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> propriedade anexada é ativada a <xref:System.Windows.Controls.GroupItem>e a associação usa <xref:System.Windows.Data.RelativeSourceMode.FindAncestor> para obter seu valor.  
+  
+ O exemplo também alterna o plano de fundo dos itens no <xref:System.Windows.Controls.ListBox> entre três cores definindo o <xref:System.Windows.Controls.ItemsControl.AlternationCount%2A> no <xref:System.Windows.Controls.ListBox> e associação a <xref:System.Windows.Controls.Control.Background%2A> de cada <xref:System.Windows.Controls.ListBox> para o <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A?displayProperty=nameWithType>. Nesse caso, o plano de fundo alterna entre três cores.  
+  
+ O <xref:System.Windows.Data.CollectionViewSource> que grupos de itens não é exibido.  Para obter informações sobre como item de grupo, consulte [como: Classificar e o grupo de dados usando um modo de exibição em XAML](~/docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md).  
+  
+ [!code-xaml[AlternationIndexSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/AlternationIndexSnippets/CS/Window1.xaml#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style ContainerStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style ContainerStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GroupStyle.ContainerStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo aplicado ao <see cref="T:System.Windows.Controls.GroupItem" /> gerado de cada item.</summary>
+        <value>O estilo aplicado ao <see cref="T:System.Windows.Controls.GroupItem" /> gerado para cada item. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é um raro caso em que a criação de um <xref:System.Windows.Style> embutida na sintaxe de elemento de propriedade, em vez de criar o estilo como um recurso, é uma metodologia de alternativa razoável.  
+  
+<a name="xamlAttributeUsage_ContainerStyle"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object ContainerStyle="{ResourceExtension StyleResourceKey}"/>  
+```  
+  
+<a name="xamlValues_ColumnHeaderContainerStyle"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *ResourceExtension*  
+ Um dos seguintes: `StaticResource`, ou `DynamicResource`. Consulte [recursos XAML](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ *StyleResourceKey*  
+ A chave que identifica o estilo que está sendo solicitado. A chave refere-se a um recurso existente em um <xref:System.Windows.ResourceDictionary>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerStyleSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.StyleSelector ContainerStyleSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.StyleSelector ContainerStyleSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GroupStyle.ContainerStyleSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.StyleSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite que o gravador de aplicativos fornecer lógica de seleção personalizada para um estilo a ser aplicado a cada gerado <see cref="T:System.Windows.Controls.GroupItem" />.</summary>
+        <value>Um objeto que deriva de <see cref="T:System.Windows.Controls.StyleSelector" />. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.GroupStyle Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Controls.GroupStyle Default" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GroupStyle.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GroupStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo padrão do grupo.</summary>
+        <value>O estilo padrão do grupo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_Default"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<object>  
+  <object.property>  
+    <x:Static Member="GroupStyle.Default" …/>  
+  </object.property>  
+</object>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultGroupPanel">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Controls.ItemsPanelTemplate DefaultGroupPanel;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Controls.ItemsPanelTemplate DefaultGroupPanel" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GroupStyle.DefaultGroupPanel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemsPanelTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o padrão <see cref="T:System.Windows.Controls.ItemsPanelTemplate" /> que cria o painel usado para o layout de itens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um painel padrão é necessário Este é o painel que é fornecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStringFormat">
+      <MemberSignature Language="C#" Value="public string HeaderStringFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderStringFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GroupStyle.HeaderStringFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres composta que especifica como formatar o cabeçalho se ele é exibido como uma cadeia de caracteres.</summary>
+        <value>Uma cadeia de caracteres composta que especifica como formatar o cabeçalho se ele é exibido como uma cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.GroupStyle.HeaderStringFormat%2A>pode ser um formato de cadeia de caracteres predefinidas, composto ou personalizadas. Para obter mais informações sobre formatos de cadeia de caracteres, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md). Se você definir o <xref:System.Windows.Controls.GroupStyle.HeaderTemplate%2A> ou <xref:System.Windows.Controls.GroupStyle.HeaderTemplateSelector%2A> propriedade de um <xref:System.Windows.Controls.GroupStyle>, o <xref:System.Windows.Controls.GroupStyle.HeaderStringFormat%2A> propriedade será ignorada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ListBox> que agrupa uma coleção de itens por faixa de preços.  O conversor `GroupByPrice`, retorna um valor inteiro que está acima do preço de cada item. Por exemplo, se o preço de um item estiver entre 0 e 100, o conversor retorna 100. O exemplo usa o <xref:System.Windows.Controls.GroupStyle.HeaderStringFormat%2A> para criar uma cadeia de caracteres que inclui o limite superior para cada intervalo de preços. Por exemplo, nos Estados Unidos, os itens que estão em 100 dólares são agrupados em um título de "Itens em US $100".  
+  
+ [!code-xaml[ContentStringSnippets#GroupStyleHeaderStringFormat](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentStringSnippets/CSharp/Window1.xaml#groupstyleheaderstringformat)]  
+  
+ A exemplo a seguir mostra o `GroupByPrice` classe, o `PurchaseItem` classe e a coleção que o <xref:System.Windows.Controls.ListBox> está associado ao.  
+  
+ [!code-csharp[ContentStringSnippets#GroupStyleData](~/samples/snippets/csharp/VS_Snippets_Wpf/ContentStringSnippets/CSharp/Window1.xaml.cs#groupstyledata)]
+ [!code-vb[ContentStringSnippets#GroupStyleData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContentStringSnippets/visualbasic/window1.xaml.vb#groupstyledata)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate HeaderTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate HeaderTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GroupStyle.HeaderTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo usado para exibir o cabeçalho do grupo.</summary>
+        <value>Um <see cref="T:System.Windows.DataTemplate" /> objeto que é usado para exibir o cabeçalho de grupo. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Os exemplos a seguir mostram um <xref:System.Windows.Controls.ItemsControl> que está associado a um <xref:System.Windows.Data.XmlDataProvider> e o conteúdo de lógica que contém a lógica para adicionar e remover o agrupamento. Quando a caixa de seleção estiver marcada, o conteúdo do <xref:System.Windows.Controls.ItemsControl> é agrupado pelo `Type` atributo.  
+  
+ Cada grupo é do tipo <xref:System.Windows.Data.CollectionViewGroup>. O <xref:System.Windows.Controls.GroupStyle> <xref:System.Windows.Controls.GroupStyle.HeaderTemplate%2A> é especificada para que ele seja exibido como um <xref:System.Windows.Controls.TextBlock> que exibe o <xref:System.Windows.Data.CollectionViewGroup.Name%2A> de cada grupo. Nesse caso, o <xref:System.Windows.Data.CollectionViewGroup.Name%2A> é `Work` ou `Home`.  
+  
+ [!code-xaml[GroupingSample#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml#xaml)]  
+  
+ [!code-csharp[GroupingSample#Code](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml.cs#code)]
+ [!code-vb[GroupingSample#Code](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GroupingSample/visualbasic/window1.xaml.vb#code)]  
+  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.GroupStyle.HeaderTemplate%2A> propriedade:  
+  
+ [!code-xaml[DataBindingLab#GroupStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#groupstyle)]  
+  
+ A seguir está a definição do `groupingHeaderTemplate` <xref:System.Windows.DataTemplate>:  
+  
+ [!code-xaml[DataBindingLab#HeaderTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#headertemplate)]  
+  
+ Para o exemplo completo, consulte [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataTemplateSelector HeaderTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GroupStyle.HeaderTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite que o gravador de aplicativos fornecer lógica de seleção personalizado para um modelo que é usado para exibir o cabeçalho de grupo.</summary>
+        <value>Um objeto que deriva de <see cref="T:System.Windows.Controls.DataTemplateSelector" />. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HidesIfEmpty">
+      <MemberSignature Language="C#" Value="public bool HidesIfEmpty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HidesIfEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GroupStyle.HidesIfEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os itens correspondentes aos grupos vazios devem ser exibidos.</summary>
+        <value>
+          <see langword="true" />para não exibir grupos em branco; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (System.ComponentModel.PropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(class System.ComponentModel.PropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GroupStyle.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.PropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos do evento que está sendo criado.</param>
+        <summary>Gera o <see cref="E:System.Windows.Controls.GroupStyle.PropertyChanged" /> eventos usando os argumentos fornecidos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Panel">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ItemsPanelTemplate Panel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ItemsPanelTemplate Panel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GroupStyle.Panel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemsPanelTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um modelo que cria o painel usado para o layout de itens.</summary>
+        <value>Um <see cref="T:System.Windows.Controls.ItemsPanelTemplate" /> objeto que cria o painel usado para layout de itens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.GroupStyle.PropertyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um valor de propriedade é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

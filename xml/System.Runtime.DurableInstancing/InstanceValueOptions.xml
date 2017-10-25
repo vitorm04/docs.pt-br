@@ -1,0 +1,89 @@
+<Type Name="InstanceValueOptions" FullName="System.Runtime.DurableInstancing.InstanceValueOptions">
+  <TypeSignature Language="C#" Value="public enum InstanceValueOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InstanceValueOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstanceValueOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém valores para a instância de opções para indicar que se os valores de instância são somente gravação, opcional, não há nenhum valor de instância.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.DurableInstancing.InstanceValueOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.DurableInstancing.InstanceValueOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceValueOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que não há nenhum valor de instância.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Optional">
+      <MemberSignature Language="C#" Value="Optional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.DurableInstancing.InstanceValueOptions Optional = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.DurableInstancing.InstanceValueOptions.Optional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceValueOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um host pode funcionar sem saber o valor do valor dessa instância.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteOnly">
+      <MemberSignature Language="C#" Value="WriteOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.DurableInstancing.InstanceValueOptions WriteOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.DurableInstancing.InstanceValueOptions.WriteOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceValueOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o valor da instância é somente gravação. O valor da instância pode ser usado para fins de administração.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,82 @@
+<Type Name="IThemeResolutionService" FullName="System.Web.UI.IThemeResolutionService">
+  <TypeSignature Language="C#" Value="public interface IThemeResolutionService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IThemeResolutionService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IThemeResolutionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface que os desenvolvedores podem usar para fornecer um conjunto de ferramenta do designer <see cref="T:System.Web.UI.ThemeProvider" /> objetos, que podem ser usados para aplicar temas e capas de controle para controles em um ambiente de tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores de páginas e autores de controle não usam o <xref:System.Web.UI.IThemeResolutionService> interface. O <xref:System.Web.UI.IThemeResolutionService> interface é implementada por desenvolvedores de ferramentas do designer para fornecer <xref:System.Web.UI.SkinBuilder> controlar construtores no ambiente de design.  
+  
+ O <xref:System.Web.UI.IThemeResolutionService> é um contêiner para um ou mais <xref:System.Web.UI.ThemeProvider> objetos, que por sua vez fornecem o <xref:System.Web.UI.SkinBuilder> objetos que se aplicam a temas e capas de controle para controles quando eles são criados em um designer. Uma instância do <xref:System.Web.UI.IThemeResolutionService> classe pode ser acessada de um determinado <xref:System.Web.UI.ControlBuilder> instância usando seu <xref:System.Web.UI.ControlBuilder.ThemeResolutionService%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAllThemeProviders">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ThemeProvider[] GetAllThemeProviders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.ThemeProvider[] GetAllThemeProviders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IThemeResolutionService.GetAllThemeProviders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ThemeProvider[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Array" /> de <see cref="T:System.Web.UI.ThemeProvider" /> objetos.</summary>
+        <returns>Um <see cref="T:System.Array" /> de <see cref="T:System.Web.UI.ThemeProvider" /> objetos associados com a atual <see cref="T:System.Web.UI.IThemeResolutionService" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStylesheetThemeProvider">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ThemeProvider GetStylesheetThemeProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.ThemeProvider GetStylesheetThemeProvider() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IThemeResolutionService.GetStylesheetThemeProvider" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ThemeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.ThemeProvider" /> objeto que representa o tema de personalização de uma folha de estilos.</summary>
+        <returns>Um <see cref="T:System.Web.UI.ThemeProvider" /> que representa o tema da página que é aplicado a um controle compilado pelo <see cref="T:System.Web.UI.ControlBuilder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetThemeProvider">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ThemeProvider GetThemeProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.ThemeProvider GetThemeProvider() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IThemeResolutionService.GetThemeProvider" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ThemeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.ThemeProvider" /> objeto que representa o tema de personalização em uma página ASP.NET.</summary>
+        <returns>Um <see cref="T:System.Web.UI.ThemeProvider" /> que representa o tema da página que é aplicado a um controle compilado pelo <see cref="T:System.Web.UI.ControlBuilder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

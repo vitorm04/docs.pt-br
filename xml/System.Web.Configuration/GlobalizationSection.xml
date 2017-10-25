@@ -1,0 +1,443 @@
+<Type Name="GlobalizationSection" FullName="System.Web.Configuration.GlobalizationSection">
+  <TypeSignature Language="C#" Value="public sealed class GlobalizationSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GlobalizationSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.GlobalizationSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define parâmetros de configuração que são usados para dar suporte à infraestrutura de globalização de aplicativos Web. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.GlobalizationSection> classe fornece uma maneira de acessar e modificar o conteúdo de programaticamente o `globalization` seção do arquivo de configuração.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como especificar valores declarativamente para vários atributos do `globalization` seção, que também pode ser acessada como membros de <xref:System.Web.Configuration.GlobalizationSection> classe.  
+  
+ O exemplo de arquivo de configuração a seguir mostra como especificar valores declarativamente para o `globalization` seção.  
+  
+```  
+<system.web>  
+  <globalization   
+    requestEncoding="utf-8"  
+    responseEncoding="utf-8"/>  
+</system.web>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.GlobalizationSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.GlobalizationSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/CS/GlobalizationSection.cs#1)]
+ [!code-vb[System.Web.Configuration.GlobalizationSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/VB/GlobalizationSection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GlobalizationSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.GlobalizationSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.GlobalizationSection" /> classe usando as configurações padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.GlobalizationSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.GlobalizationSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public string Culture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("culture", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a cultura padrão para processar as solicitações da Web de entrada.</summary>
+        <value>A cultura padrão do processamento de solicitações da Web de entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.GlobalizationSection.Culture%2A> propriedade retorna a cultura padrão para processar as solicitações da Web.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.GlobalizationSection.Culture%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.GlobalizationSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.GlobalizationSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/CS/GlobalizationSection.cs#2)]
+ [!code-vb[System.Web.Configuration.GlobalizationSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/VB/GlobalizationSection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableBestFitResponseEncoding">
+      <MemberSignature Language="C#" Value="public bool EnableBestFitResponseEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableBestFitResponseEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.EnableBestFitResponseEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableBestFitResponseEncoding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o melhor ajuste codificação de caracteres de uma resposta está habilitado.</summary>
+        <value>
+          <see langword="true" />Se a codificação de caracteres de melhor ajuste para uma resposta estiver habilitada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableClientBasedCulture">
+      <MemberSignature Language="C#" Value="public bool EnableClientBasedCulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableClientBasedCulture" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.EnableClientBasedCulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableClientBasedCulture", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as propriedades <see cref="P:System.Web.Configuration.GlobalizationSection.Culture" /> e <see cref="P:System.Web.Configuration.GlobalizationSection.UICulture" /> devem se basear no valor do campo de cabeçalho <see cref="F:System.Net.HttpRequestHeader.AcceptLanguage" /> enviado pelo navegador do cliente.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="P:System.Web.Configuration.GlobalizationSection.Culture" /> e o <see cref="P:System.Web.Configuration.GlobalizationSection.UICulture" /> precisarem ser baseados no valor de campo de cabeçalho <see cref="F:System.Net.HttpRequestHeader.AcceptLanguage" /> enviado pelo navegador do cliente; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.Configuration.GlobalizationSection.EnableClientBasedCulture%2A> propriedade estiver habilitada, o <xref:System.Web.Configuration.GlobalizationSection.Culture%2A> e <xref:System.Web.Configuration.GlobalizationSection.UICulture%2A> propriedades se baseiam o <xref:System.Net.HttpRequestHeader.AcceptLanguage> valor de campo de cabeçalho que é enviado pelo navegador do cliente. Se o <xref:System.Net.HttpRequestHeader.AcceptLanguage> o valor do cabeçalho não pode ser mapeado para uma cultura específica, o <xref:System.Web.Configuration.GlobalizationSection.Culture%2A> e <xref:System.Web.Configuration.GlobalizationSection.UICulture%2A> valores são usados. O valor padrão é `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.GlobalizationSection.EnableClientBasedCulture%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.GlobalizationSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.GlobalizationSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/CS/GlobalizationSection.cs#3)]
+ [!code-vb[System.Web.Configuration.GlobalizationSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/VB/GlobalizationSection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding FileEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding FileEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.FileEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("fileEncoding")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a codificação padrão para. aspx,. asmx e. asax ao analisar o arquivo.</summary>
+        <value>O valor de codificação padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.GlobalizationSection.FileEncoding%2A> propriedade especifica a codificação padrão que é usado para interpretar os dados que estão incluídos nos tipos de arquivo. aspx,. asmx e. asax. Se a codificação do arquivo é especificada no arquivo Web. config, o arquivo real deve ser salvo na mesma codificação. Arquivos Unicode e UTF-8 arquivos que são salvos com a ordem de byte prefixo da marca <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered%2A> propriedade são reconhecidas automaticamente, independentemente do valor de <xref:System.Web.Configuration.GlobalizationSection.FileEncoding%2A>.  
+  
+ Se o <xref:System.Web.Configuration.GlobalizationSection.FileEncoding%2A> definição de propriedade para o servidor ou o aplicativo está configurado para usar UTF-16, e se UTF-16 não tem a codificação usada para uma página. aspx no escopo do arquivo de configuração, a saída é enviada para o navegador do cliente está corrompida. Por esse motivo, certifique-se de que o configurado <xref:System.Web.Configuration.GlobalizationSection.FileEncoding%2A> valor corresponde a codificação usada na página. aspx.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.GlobalizationSection.FileEncoding%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.GlobalizationSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.GlobalizationSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/CS/GlobalizationSection.cs#4)]
+ [!code-vb[System.Web.Configuration.GlobalizationSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/VB/GlobalizationSection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.GlobalizationSection.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreSerialize">
+      <MemberSignature Language="C#" Value="protected override void PreSerialize (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreSerialize(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.GlobalizationSection.PreSerialize(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding RequestEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding RequestEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.RequestEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requestEncoding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a codificação do conteúdo de solicitações HTTP.</summary>
+        <value>A codificação do conteúdo de solicitações HTTP. O padrão é UTF-8.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.GlobalizationSection.RequestEncoding%2A> propriedade especifica a codificação assumida de cada solicitação HTTP de entrada, incluindo dados publicados e os dados de cadeia de caracteres de consulta. Se a solicitação é fornecido com um cabeçalho de solicitação que contém um <xref:System.Net.HttpRequestHeader.ContentType> campo, o <xref:System.Net.HttpRequestHeader.AcceptCharset> substituições de campo do cabeçalho da solicitação de <xref:System.Web.Configuration.GlobalizationSection.RequestEncoding%2A> da configuração.  
+  
+ A codificação padrão é UTF-8, especificada no `globalization` seção do arquivo Machine. config que foi criado quando o .NET Framework foi instalado. Se o <xref:System.Web.Configuration.GlobalizationSection.RequestEncoding%2A> propriedade não for especificada no arquivo Machine. config ou Web. config, codificação padrão é o `Regional Options` configuração local no computador. Para aplicativos de servidor único, o <xref:System.Web.Configuration.GlobalizationSection.RequestEncoding%2A> e <xref:System.Web.Configuration.GlobalizationSection.ResponseEncoding%2A> propriedades devem ser iguais. Ao usar vários aplicativos de servidor em que a codificação do servidor padrão é diferentes, você pode usar arquivos locais do Web. config para variar o <xref:System.Web.Configuration.GlobalizationSection.RequestEncoding%2A> e <xref:System.Web.Configuration.GlobalizationSection.ResponseEncoding%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.GlobalizationSection.RequestEncoding%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.GlobalizationSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.GlobalizationSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/CS/GlobalizationSection.cs#5)]
+ [!code-vb[System.Web.Configuration.GlobalizationSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/VB/GlobalizationSection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceProviderFactoryType">
+      <MemberSignature Language="C#" Value="public string ResourceProviderFactoryType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResourceProviderFactoryType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.ResourceProviderFactoryType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("resourceProviderFactoryType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de fábrica do provedor de recursos.</summary>
+        <value>O tipo de fábrica do provedor de recursos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding ResponseEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ResponseEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.ResponseEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("responseEncoding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a codificação do conteúdo das respostas HTTP.</summary>
+        <value>A codificação do conteúdo das respostas HTTP. O padrão é UTF-8.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.GlobalizationSection.ResponseEncoding%2A> propriedade obtém ou define um valor que especifica a codificação do conteúdo das respostas HTTP. A codificação padrão é UTF-8.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.GlobalizationSection.ResponseEncoding%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.GlobalizationSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.GlobalizationSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/CS/GlobalizationSection.cs#6)]
+ [!code-vb[System.Web.Configuration.GlobalizationSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/VB/GlobalizationSection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseHeaderEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding ResponseHeaderEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ResponseHeaderEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.ResponseHeaderEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("responseHeaderEncoding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a codificação do cabeçalho de respostas HTTP.</summary>
+        <value>O cabeçalho de codificação de respostas HTTP. O padrão é UTF-8.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.GlobalizationSection.ResponseHeaderEncoding%2A> propriedade obtém ou define um valor que especifica a codificação do cabeçalho de respostas HTTP. A codificação padrão é UTF-8.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.GlobalizationSection.ResponseHeaderEncoding%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.GlobalizationSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.GlobalizationSection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/CS/GlobalizationSection.cs#7)]
+ [!code-vb[System.Web.Configuration.GlobalizationSection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/VB/GlobalizationSection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UICulture">
+      <MemberSignature Language="C#" Value="public string UICulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UICulture" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.GlobalizationSection.UICulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("uiCulture", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a cultura padrão para processar pesquisas de recurso dependente de localidade.</summary>
+        <value>Procura a cultura padrão para processar o recurso dependente de localidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.GlobalizationSection.UICulture%2A> propriedade especifica a cultura padrão para processar pesquisas de recurso dependente de localidade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.GlobalizationSection.UICulture%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.GlobalizationSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.GlobalizationSection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/CS/GlobalizationSection.cs#8)]
+ [!code-vb[System.Web.Configuration.GlobalizationSection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.GlobalizationSection/VB/GlobalizationSection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

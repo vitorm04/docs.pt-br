@@ -1,0 +1,499 @@
+<Type Name="PropertyInformation" FullName="System.Configuration.PropertyInformation">
+  <TypeSignature Language="C#" Value="public sealed class PropertyInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PropertyInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.PropertyInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações de metadados em uma propriedade individual dentro da configuração. Esse tipo não pode ser herdado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.PropertyInformation> objeto contém as informações de metadados de uma propriedade individual dentro da configuração. Esse objeto pode ser usado ao validar e alterando as propriedades de um atributo individual.  
+  
+ O <xref:System.Configuration.PropertyInformation> objeto é derivado do associado <xref:System.Configuration.PropertyInformationCollection> objeto. O <xref:System.Configuration.PropertyInformationCollection> objeto é derivado do associado <xref:System.Configuration.ElementInformation> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation> tipo.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#1)]
+ [!code-vb[System.Configuration.PropertyInformation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Converter">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.TypeConverter Converter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.TypeConverter Converter" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.Converter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.TypeConverter" /> objeto relacionado ao atributo de configuração.</summary>
+        <value>Um objeto <see cref="T:System.ComponentModel.TypeConverter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.TypeConverter> objeto é usado para guiar como o valor de um atributo pode ser modificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public object DefaultValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que contém o valor padrão relacionado a um atributo de configuração.</summary>
+        <value>Um objeto que contém o valor padrão do atributo de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.DefaultValue%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#2)]
+ [!code-vb[System.Configuration.PropertyInformation#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição do objeto que corresponde a um atributo de configuração.</summary>
+        <value>A descrição do atributo de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKey">
+      <MemberSignature Language="C#" Value="public bool IsKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsKey" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.IsKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o atributo de configuração é uma chave.</summary>
+        <value>
+          <see langword="true" />Se o atributo de configuração é uma chave; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.IsKey%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#3)]
+ [!code-vb[System.Configuration.PropertyInformation#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocked">
+      <MemberSignature Language="C#" Value="public bool IsLocked { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocked" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.IsLocked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o atributo de configuração está bloqueado.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Configuration.PropertyInformation" /> objeto estiver bloqueada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.PropertyInformation.IsLocked%2A> propriedade retorna `true` quando o elemento relacionado está bloqueado pelo <xref:System.Configuration.ConfigurationElement.LockAttributes%2A> ou <xref:System.Configuration.ConfigurationElement.LockAllAttributesExcept%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.IsLocked%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#4)]
+ [!code-vb[System.Configuration.PropertyInformation#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="public bool IsModified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsModified" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.IsModified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o atributo de configuração foi modificado.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Configuration.PropertyInformation" /> objeto foi modificada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.IsModified%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#5)]
+ [!code-vb[System.Configuration.PropertyInformation#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequired">
+      <MemberSignature Language="C#" Value="public bool IsRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.IsRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o atributo de configuração é necessário.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Configuration.PropertyInformation" /> objeto é necessária; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.IsRequired%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#6)]
+ [!code-vb[System.Configuration.PropertyInformation#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número da linha no arquivo de configuração relacionado ao atributo de configuração.</summary>
+        <value>Um número de linha do arquivo de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número de linha associado ao arquivo de configuração de origem. Zero é retornada quando não há nenhum arquivo de configuração de origem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.LineNumber%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#7)]
+ [!code-vb[System.Configuration.PropertyInformation#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do objeto que corresponde a um atributo de configuração.</summary>
+        <value>O nome do objeto <see cref="T:System.Configuration.PropertyInformation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.LineNumber%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#8)]
+ [!code-vb[System.Configuration.PropertyInformation#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o arquivo de origem que corresponde a um atributo de configuração.</summary>
+        <value>O arquivo de origem de <see cref="T:System.Configuration.PropertyInformation" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.Source%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#9)]
+ [!code-vb[System.Configuration.PropertyInformation#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do objeto que corresponde a um atributo de configuração.</summary>
+        <value>O <see cref="T:System.Type" /> do <see cref="T:System.Configuration.PropertyInformation" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.Type%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#10)]
+ [!code-vb[System.Configuration.PropertyInformation#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validator">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationValidatorBase Validator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationValidatorBase Validator" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.Validator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationValidatorBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.ConfigurationValidatorBase" /> objeto relacionado ao atributo de configuração.</summary>
+        <value>Um objeto <see cref="T:System.Configuration.ConfigurationValidatorBase" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use retornado <xref:System.Configuration.ConfigurationValidatorBase> objeto para validar o atributo de configuração do valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.Type%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#11)]
+ [!code-vb[System.Configuration.PropertyInformation#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que contém o valor referente a um atributo de configuração.</summary>
+        <value>Um objeto que contém o valor para o <see cref="T:System.Configuration.PropertyInformation" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.Value%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#12)]
+ [!code-vb[System.Configuration.PropertyInformation#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueOrigin">
+      <MemberSignature Language="C#" Value="public System.Configuration.PropertyValueOrigin ValueOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.PropertyValueOrigin ValueOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.PropertyInformation.ValueOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.PropertyValueOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.PropertyValueOrigin" /> objeto relacionado ao atributo de configuração.</summary>
+        <value>Um objeto <see cref="T:System.Configuration.PropertyValueOrigin" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.PropertyValueOrigin> objeto descreve como o valor do atributo de configuração foi determinado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.PropertyInformation.ValueOrigin%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.PropertyInformation> classe.  
+  
+ [!code-csharp[System.Configuration.PropertyInformation#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.PropertyInformation/CS/PropertyInformation.cs#13)]
+ [!code-vb[System.Configuration.PropertyInformation#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.PropertyInformation/VB/PropertyInformation.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

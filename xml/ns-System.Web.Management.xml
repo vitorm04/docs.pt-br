@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Management">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Management" /> namespace contém classes e interfaces para gerenciar e monitorar a integridade de aplicativos da Web.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,52 @@
+<Type Name="IsExplicitlyDereferenced" FullName="System.Runtime.CompilerServices.IsExplicitlyDereferenced">
+  <TypeSignature Language="C#" Value="public static class IsExplicitlyDereferenced" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit IsExplicitlyDereferenced extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.IsExplicitlyDereferenced" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.CompilerServices.VisualC</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Indica que um ponteiro gerenciado representa um parâmetro de ponteiro em uma assinatura de método. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No C++, referências gerenciadas e ponteiros gerenciados são emitidas nos metadados como ponteiros.  Para distinguir entre os dois tipos de metadados, o compilador do C++ da Microsoft se aplica a esse modificador para ponteiros gerenciados.  Ele emite nenhum modificador em tipos de referência gerenciada.  Compiladores necessário conhecer a sintaxe de chamada correta durante a importação de um método de escopo de metadados.  O <xref:System.Runtime.CompilerServices.IsExplicitlyDereferenced> classe e seu parceiro, o <xref:System.Runtime.CompilerServices.IsImplicitlyDereferenced> da classe, a ambiguidade de parâmetros de referência dos parâmetros de ponteiro.  
+  
+ Compiladores emitem modificadores personalizados dentro dos metadados para alterar o maneira como o compilador just-in-time (JIT) manipula valores quando o comportamento padrão não é apropriado.  Quando o compilador JIT encontra um modificador personalizado, ele trata o valor da maneira que especifica o modificador.  Compiladores podem aplicar modificadores personalizados para os métodos, parâmetros e valores de retorno.  O compilador JIT deve responder às modificadores necessárias, mas pode ignorar modificadores opcionais.  
+  
+ Você pode emitir modificadores personalizados em metadados usando uma das seguintes técnicas:  
+  
+-   Usando métodos de <xref:System.Reflection.Emit.TypeBuilder> classe como <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineField%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineConstructor%2A>, e <xref:System.Reflection.Emit.TypeBuilder.DefineProperty%2A>.  
+  
+-   Gerar um arquivo de instrução do Microsoft intermediate language (MSIL) que contém chamadas para `modopt` e `modreq`e montar o arquivo com o [Ilasm.exe (IL Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md).  
+  
+-   Usando a API de reflexão não gerenciada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como emitir uma <xref:System.Runtime.CompilerServices.IsExplicitlyDereferenced> objeto em um assembly usando reflexão.  
+  
+ [!code-cpp[Runtime.CompilerServices.IsExplicitlyDereferenced#1](~/samples/snippets/cpp/VS_Snippets_CLR/Runtime.CompilerServices.IsExplicitlyDereferenced/cpp/sample.cpp#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

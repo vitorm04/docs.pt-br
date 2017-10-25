@@ -1,0 +1,721 @@
+<Type Name="XamlXmlReader" FullName="System.Xaml.XamlXmlReader">
+  <TypeSignature Language="C#" Value="public class XamlXmlReader : System.Xaml.XamlReader, System.Xaml.IXamlLineInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlXmlReader extends System.Xaml.XamlReader implements class System.Xaml.IXamlLineInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlXmlReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlReader</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xaml.IXamlLineInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Processa a marcação XAML de arquivos XML usando um intermediário do <see cref="T:System.Xml.XmlReader" /> e produz um fluxo de nó XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Xaml.XamlXmlReader>, uma <xref:System.Xml.XmlReader> é necessária. O objetivo deste design é usar estabelecida [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] APIs para processamento de XML para lidar com a entrada de fluxo, para obter um fluxo de um arquivo e assim por diante.  
+  
+ <xref:System.Xml.XmlReader>é o primeiro componente do caminho padrão de carga para operações de XAML e é incorporado pelo <xref:System.Xaml.XamlServices.Load%2A?displayProperty=nameWithType> bem como por várias implementações de XAML framework existente para carregamento XAML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo inicial para carregar no leitor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base em um fluxo.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.IO.TextReader textReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextReader textReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.IO.TextReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">A <see cref="T:System.IO.TextReader" /> a ser usada para inicialização.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base em um <see cref="T:System.IO.TextReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textReader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo XML para carregar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base no nome de arquivo de um arquivo a ser carregado em um leitor XML padrão.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.Xml.XmlReader xmlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.Xml.XmlReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">O <see cref="T:System.Xml.XmlReader" /> para usar como o processador XML intermediário.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe usando fornecido <see cref="T:System.Xml.XmlReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializar com esse construtor também define um contexto de esquema XAML padrão e configurações padrão do leitor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlReader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.IO.Stream stream, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.IO.Stream,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo inicial para carregar no leitor.</param>
+        <param name="schemaContext">O contexto do esquema XAML para processamento de XAML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base em um fluxo e usando um contexto de esquema XAML fornecido.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ou <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.IO.Stream stream, System.Xaml.XamlXmlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Xaml.XamlXmlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.IO.Stream,System.Xaml.XamlXmlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="settings" Type="System.Xaml.XamlXmlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo inicial para carregar no leitor.</param>
+        <param name="settings">As configurações específicas do leitor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base em um fluxo, com configurações específicas do XAML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializando com esse construtor tenta Mesclar algumas das configurações do leitor padrão junto com as configurações específicas do XAML em `settings`. Para obter mais informações, consulte <xref:System.Xaml.XamlXmlReaderSettings>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.IO.TextReader textReader, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextReader textReader, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.IO.TextReader,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">A <see cref="T:System.IO.TextReader" /> a ser usada para inicialização.</param>
+        <param name="schemaContext">O contexto do esquema XAML para processamento de XAML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base em um <see cref="T:System.IO.TextReader" />, com um contexto de esquema fornecido e configurações específicas do XAML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textReader" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.IO.TextReader textReader, System.Xaml.XamlXmlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextReader textReader, class System.Xaml.XamlXmlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.IO.TextReader,System.Xaml.XamlXmlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+        <Parameter Name="settings" Type="System.Xaml.XamlXmlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">A <see cref="T:System.IO.TextReader" /> a ser usada para inicialização.</param>
+        <param name="settings">As configurações específicas do leitor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base em um <see cref="T:System.IO.TextReader" />e usando configurações específicas do XAML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializando com esse construtor tenta Mesclar algumas das configurações do leitor padrão junto com as configurações específicas do XAML em `settings`. Para obter mais informações, consulte <xref:System.Xaml.XamlXmlReaderSettings>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textReader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (string fileName, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.String,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo a ser carregado.</param>
+        <param name="schemaContext">O contexto do esquema XAML para processamento de XAML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base no nome do arquivo de um arquivo para carregar em um leitor XML padrão, com um contexto de esquema XAML fornecido.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ou <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (string fileName, System.Xaml.XamlXmlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Xaml.XamlXmlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.String,System.Xaml.XamlXmlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="settings" Type="System.Xaml.XamlXmlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo XML para carregar.</param>
+        <param name="settings">As configurações específicas do leitor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base no nome do arquivo de um arquivo para carregar em um leitor XML padrão e, em seguida, usando configurações de leitor de XAML específicas.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.Xml.XmlReader xmlReader, System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.Xml.XmlReader,System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">O <see cref="T:System.Xml.XmlReader" /> para usar como o processador XML intermediário.</param>
+        <param name="schemaContext">O contexto do esquema XAML para processamento de XAML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe usando fornecido <see cref="T:System.Xml.XmlReader" /> e contexto do esquema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Também inicializar com esse construtor define o padrão definições do leitor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlReader" /> ou <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.Xml.XmlReader xmlReader, System.Xaml.XamlXmlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Xaml.XamlXmlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.Xml.XmlReader,System.Xaml.XamlXmlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="settings" Type="System.Xaml.XamlXmlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">O <see cref="T:System.Xml.XmlReader" /> para usar como o processador XML intermediário.</param>
+        <param name="settings">As configurações específicas do leitor XAML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe usando fornecido <see cref="T:System.Xml.XmlReader" /> e configurações do leitor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializando com esse construtor tenta Mesclar algumas das configurações fornecido `xmlReader` junto com as configurações específicas do XAML em `settings`. Também inicializar com esse construtor define o padrão definições do leitor. Para obter mais informações, consulte <xref:System.Xaml.XamlXmlReaderSettings>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlReader" /> ou <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.IO.Stream stream, System.Xaml.XamlSchemaContext schemaContext, System.Xaml.XamlXmlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.XamlXmlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.IO.Stream,System.Xaml.XamlSchemaContext,System.Xaml.XamlXmlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="settings" Type="System.Xaml.XamlXmlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo inicial para carregar no leitor.</param>
+        <param name="schemaContext">O contexto do esquema XAML para processamento de XAML.</param>
+        <param name="settings">As configurações específicas do leitor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base em um fluxo, com um contexto de esquema XAML fornecido e configurações específicas do XAML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializando com esse construtor tenta Mesclar algumas das configurações do leitor padrão junto com as configurações específicas do XAML em `settings`. Para obter mais informações, consulte <xref:System.Xaml.XamlXmlReaderSettings>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ou <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.IO.TextReader textReader, System.Xaml.XamlSchemaContext schemaContext, System.Xaml.XamlXmlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextReader textReader, class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.XamlXmlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.IO.TextReader,System.Xaml.XamlSchemaContext,System.Xaml.XamlXmlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="settings" Type="System.Xaml.XamlXmlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">A <see cref="T:System.IO.TextReader" /> a ser usada para inicialização.</param>
+        <param name="schemaContext">O contexto do esquema XAML para processamento de XAML.</param>
+        <param name="settings">As configurações específicas do leitor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base em um <see cref="T:System.IO.TextReader" />e usando um contexto de esquema fornecido e configurações específicas do XAML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializando com esse construtor tenta Mesclar algumas das configurações do leitor padrão junto com as configurações específicas do XAML em `settings`. Para obter mais informações, consulte <xref:System.Xaml.XamlXmlReaderSettings>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textReader" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (string fileName, System.Xaml.XamlSchemaContext schemaContext, System.Xaml.XamlXmlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.XamlXmlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.String,System.Xaml.XamlSchemaContext,System.Xaml.XamlXmlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="settings" Type="System.Xaml.XamlXmlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo XML para carregar.</param>
+        <param name="schemaContext">O contexto do esquema XAML para processamento de XAML.</param>
+        <param name="settings">As configurações específicas do leitor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe, com base no nome do arquivo de um arquivo para carregar em um leitor XML padrão e um contexto de esquema XAML fornecido e configurações de leitor de XAML específicas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializando com esse construtor tenta Mesclar algumas das configurações do leitor padrão junto com as configurações específicas do XAML em `settings`. Para obter mais informações, consulte <xref:System.Xaml.XamlXmlReaderSettings>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReader (System.Xml.XmlReader xmlReader, System.Xaml.XamlSchemaContext schemaContext, System.Xaml.XamlXmlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.XamlXmlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.#ctor(System.Xml.XmlReader,System.Xaml.XamlSchemaContext,System.Xaml.XamlXmlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="settings" Type="System.Xaml.XamlXmlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">O <see cref="T:System.Xml.XmlReader" /> para usar como o processador XML intermediário.</param>
+        <param name="schemaContext">O contexto do esquema XAML para processamento de XAML.</param>
+        <param name="settings">As configurações específicas do leitor XAML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReader" /> classe usando fornecido <see cref="T:System.Xml.XmlReader" />, contexto de esquema e as configurações do leitor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializando com esse construtor tenta Mesclar algumas das configurações fornecido `xmlReader` junto com as configurações específicas do XAML em `settings`. Para obter mais informações, consulte <xref:System.Xaml.XamlXmlReaderSettings>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlReader" /> ou <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasLineInfo">
+      <MemberSignature Language="C#" Value="public bool HasLineInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLineInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.HasLineInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se as informações de linha estão disponíveis.</summary>
+        <value>
+          <see langword="true" />Se as informações de linha estão disponíveis. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é parte do <xref:System.Xaml.IXamlLineInfo> implementação. O resultado parcial é baseado nas configurações leitor que foram usadas para inicializar este <xref:System.Xaml.XamlXmlReader>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEof">
+      <MemberSignature Language="C#" Value="public override bool IsEof { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEof" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.IsEof" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que informa se a posição do leitor no fluxo do nó XAML no final do arquivo.</summary>
+        <value>
+          <see langword="true" />Se a posição está no conceitual final do arquivo no fluxo do nó; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você estiver usando um leitor de subárvore, o leitor de subárvore relatórios <xref:System.Xaml.XamlXmlReader.IsEof%2A> após sair dos limites da subárvore. Para obter mais informações, consulte <xref:System.Xaml.XamlReader.ReadSubtree%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linha ao relatório.</summary>
+        <value>O número de linha ao relatório.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é parte do <xref:System.Xaml.IXamlLineInfo> implementação. Tipos de nós de <xref:System.Xaml.XamlNodeType.StartObject>, <xref:System.Xaml.XamlNodeType.StartMember>, <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, ou <xref:System.Xaml.XamlNodeType.Value> pode retornar um número de linha. Outros tipos de nó retornam um valor de 0. Todos os tipos de nó retornam 0 se <xref:System.Xaml.XamlXmlReader.HasLineInfo%2A> é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição da linha ao relatório.</summary>
+        <value>A posição da linha ao relatório.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é parte do <xref:System.Xaml.IXamlLineInfo> implementação. Tipos de nós de <xref:System.Xaml.XamlNodeType.StartObject>, <xref:System.Xaml.XamlNodeType.StartMember>, <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, ou <xref:System.Xaml.XamlNodeType.Value> pode retornar uma posição de linha. Outros tipos de nó retornam um valor de 0. Todos os tipos de nó retornam 0 se <xref:System.Xaml.XamlXmlReader.HasLineInfo%2A> é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlMember Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlMember Member" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlMember</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o membro atual na posição de leitor, se a posição atual do leitor estiver em um <see cref="F:System.Xaml.XamlNodeType.StartMember" />.</summary>
+        <value>O membro atual; ou <see langword="null" />, se a posição atual do leitor não está em um membro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public override System.Xaml.NamespaceDeclaration Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.NamespaceDeclaration Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.NamespaceDeclaration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace XAML do nó atual.</summary>
+        <value>O namespace XAML do nó atual, se ele está disponível. Caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade só tem um resultado não nulo se o <xref:System.Xaml.XamlXmlReader.NodeType%2A> da posição atual é <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>. Essa propriedade não relata o namespace XAML que se aplica a objetos ou membros de forma geral de escopo. Sua implementação deve armazenar em cache informações de namespace XAML se necessário para operações específicas. Para operações padrão que envolvem o contexto do esquema XAML carregado, o XAML age namespace é armazenado em cache internamente por implementações do gravador de XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xaml.XamlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do nó atual.</summary>
+        <value>Um valor de <see cref="T:System.Xaml.XamlNodeType" /> enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece o próximo nó XAML da fonte de carregado, se um nó XAML está disponível.</summary>
+        <returns>
+          <see langword="true" />Se um nó está disponível. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nó onde <xref:System.Xaml.XamlXmlReader.Read%2A> retorna `false` também retorna `true` para <xref:System.Xaml.XamlXmlReader.IsEof%2A>.  
+  
+ Chamando <xref:System.Xaml.XamlXmlReader.Read%2A> geralmente tem o efeito colateral de adiantamento de <xref:System.Xaml.XamlXmlReader.LineNumber%2A> ou <xref:System.Xaml.XamlXmlReader.LinePosition%2A>.  
+  
+ A próxima operação depois de chamar <xref:System.Xaml.XamlXmlReader.Read%2A> e obter um `true` resultado normalmente é verificar <xref:System.Xaml.XamlXmlReader.NodeType%2A>. Para obter mais informações sobre conceitos de fluxo do nó XAML, consulte [Noções básicas sobre estruturas de fluxo de nó de XAML e conceitos](~/docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaContext">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlSchemaContext SchemaContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlSchemaContext SchemaContext" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.SchemaContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que fornece informações de esquema para o conjunto de informações.</summary>
+        <value>Um objeto que fornece informações de esquema para o conjunto de informações.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é o contexto do esquema XAML padrão ou um contexto de esquema XAML especificamente derivado que é fornecido como informações de construtor. Contexto do esquema afeta muitos aspectos do comportamento de processamento de XAML. Em particular, o <xref:System.Xaml.XamlXmlReader.SchemaContext%2A> do leitor geralmente é usada por qualquer gravador associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xaml.XamlType" /> do nó atual.</summary>
+        <value>O <see cref="T:System.Xaml.XamlType" /> do nó atual; ou <see langword="null" />, se a posição não está em um objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade só tem um resultado não nulo se o <xref:System.Xaml.XamlXmlReader.NodeType%2A> da posição atual é <xref:System.Xaml.XamlNodeType.StartObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReader.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do nó atual.</summary>
+        <value>O valor do nó atual; ou <see langword="null" />, se a posição não está em um <see cref="F:System.Xaml.XamlNodeType.Value" /> tipo de nó.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

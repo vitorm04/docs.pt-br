@@ -1,0 +1,271 @@
+<Type Name="MessageQueueTransaction" FullName="System.Messaging.MessageQueueTransaction">
+  <TypeSignature Language="C#" Value="public class MessageQueueTransaction : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueueTransaction extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueTransaction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma transação interna do Enfileiramento de Mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para enviar ou receber uma mensagem como parte de uma transação, você pode usar o <xref:System.Messaging.MessageQueueTransaction> classe para criar uma transação e transmiti-la a uma sobrecarga de <xref:System.Messaging.MessageQueue.Send%2A?displayProperty=nameWithType> método ou o <xref:System.Messaging.MessageQueue.Receive%2A?displayProperty=nameWithType> método que utiliza um `transaction` parâmetro. As mensagens enviadas como parte de uma transação devem ser enviadas para filas transacionais. Mensagens recebidas de filas transacionais devem ser recebidas usando uma transação especificada.  
+  
+ Além de <xref:System.Messaging.MessageQueue.Receive%2A> método, você pode receber mensagens com um identificador especificado ou o identificador de correlação especificado. Consulte o <xref:System.Messaging.MessageQueue.ReceiveById%2A> e <xref:System.Messaging.MessageQueue.ReceiveByCorrelationId%2A> métodos para obter mais informações sobre seletivamente receber mensagens de filas transacionais.  
+  
+ Mensagens enviadas para filas transacionais são removidas se a transação for confirmada. Da mesma forma, as mensagens recebidas de filas transacionais são retornadas para a fila se a transação for revertida.  
+  
+ Se você criar uma instância de um <xref:System.Messaging.MessageQueueTransaction> e passá-lo para uma sobrecarga aplicável a <xref:System.Messaging.MessageQueue.Send%2A> método ou <xref:System.Messaging.MessageQueue.Receive%2A> método para enviar uma mensagem para uma fila não transacional ou receber uma mensagem de uma fila não transacional, o método gera uma exceção que indica "Uso de transação incorreto".  
+  
+ <xref:System.Messaging.MessageQueueTransaction>é de thread apartment com suporte, portanto, se o estado de apartment é `STA`, você não pode usar a transação em vários threads. Visual Basic define o estado do thread principal para `STA`, portanto, você deve aplicar o <xref:System.MTAThreadAttribute> no `Main` sub-rotina. Caso contrário, o envio de uma mensagem transacional usando outro thread gerará uma exceção <xref:System.Messaging.MessageQueueException>. Aplicar o <xref:System.MTAThreadAttribute> usando o seguinte fragmento.  
+  
+```vb  
+<System.MTAThreadAttribute>  
+ public sub Main()  
+```  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueTransaction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Messaging.MessageQueueTransaction" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.Messaging.MessageQueueTransaction.Status%2A> propriedade `Initialized`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueTransaction.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reverte a transação interna pendente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageQueueTransaction.Abort%2A>marca a conclusão bem-sucedida de um processo iniciado em uma chamada para <xref:System.Messaging.MessageQueueTransaction.Begin%2A>.  
+  
+ Normalmente, um faz uma chamada para <xref:System.Messaging.MessageQueueTransaction.Begin%2A> dentro de um `Try...Catch` bloco de tratamento de exceções, colocando uma chamada para <xref:System.Messaging.MessageQueueTransaction.Commit%2A> no `Try` cláusula e uma chamada para <xref:System.Messaging.MessageQueueTransaction.Abort%2A> no `Catch` cláusula.  
+  
+ <xref:System.Messaging.MessageQueueTransaction.Abort%2A>Reverte a transação inteira. Isso inclui todas as mensagens enviadas ou recebidas após a chamada a <xref:System.Messaging.MessageQueueTransaction.Begin%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A transação interna que você está tentando reverter não foi iniciado.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Ocorre um erro interno do serviço de enfileiramento de mensagens.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Begin">
+      <MemberSignature Language="C#" Value="public void Begin ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Begin() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueTransaction.Begin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia uma nova transação interna do enfileiramento de mensagens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageQueueTransaction.Begin%2A>marca o início do processamento que será confirmado ou revertido, dependendo o sucesso da transação. Se ocorrer uma exceção durante o processamento, a transação inteira é revertida. Isso inclui todas as mensagens enviadas ou recebidas após a chamada a <xref:System.Messaging.MessageQueueTransaction.Begin%2A>.  
+  
+ Normalmente, um faz uma chamada para <xref:System.Messaging.MessageQueueTransaction.Begin%2A> dentro de um `Try...Catch` bloco de tratamento de exceções, colocando uma chamada para <xref:System.Messaging.MessageQueueTransaction.Commit%2A> no `Try` cláusula e uma chamada para <xref:System.Messaging.MessageQueueTransaction.Abort%2A> no `Catch` cláusula.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A transação já foi iniciada.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Ocorre um erro interno do serviço de enfileiramento de mensagens.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueTransaction.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Confirma uma transação interna pendente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageQueueTransaction.Commit%2A>marca a conclusão bem-sucedida de processamento iniciado em uma chamada para <xref:System.Messaging.MessageQueueTransaction.Begin%2A>. Se uma exceção ocorrer entre a chamada a <xref:System.Messaging.MessageQueueTransaction.Begin%2A> e a chamada para <xref:System.Messaging.MessageQueueTransaction.Commit%2A>, a transação inteira é revertida. Isso inclui todas as mensagens enviadas ou recebidas após a chamada a <xref:System.Messaging.MessageQueueTransaction.Begin%2A>.  
+  
+ Normalmente, um faz uma chamada para <xref:System.Messaging.MessageQueueTransaction.Begin%2A> dentro de um `Try...Catch` bloco de tratamento de exceções, colocando uma chamada para <xref:System.Messaging.MessageQueueTransaction.Commit%2A> no `Try` cláusula e uma chamada para <xref:System.Messaging.MessageQueueTransaction.Abort%2A> no `Catch` cláusula.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A transação que você está tentando confirmar não foi iniciado.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Ocorre um erro interno do serviço de enfileiramento de mensagens.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueTransaction.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Messaging.MessageQueueTransaction" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Messaging.MessageQueueTransaction.Dispose%2A> permite que os recursos usados pelo <xref:System.Messaging.MessageQueueTransaction> para ser realocada para outros fins. Para obter mais informações sobre `Dispose`, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ Quaisquer transações internas pendentes serão revertidas por <xref:System.Messaging.MessageQueueTransaction.Dispose%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueTransaction.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Messaging.MessageQueueTransaction" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público <xref:System.Messaging.MessageQueueTransaction.Dispose%2A> e pelo método <xref:System.Object.Finalize%2A>. `Dispose` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Messaging.MessageQueueTransaction> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tome cuidado para não referenciar objetos que tenham sido descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see langword="Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~MessageQueueTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueTransaction.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos mantidos pela instância atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. O código do aplicativo não deve chamar este método; o método <xref:System.Messaging.MessageQueueTransaction.Finalize%2A> de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType>.  
+  
+ Para obter mais informações, consulte [métodos Finalize e destruidores](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md), e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueueTransactionStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessageQueueTransactionStatus Status" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueTransaction.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueTransactionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o status da transação.</summary>
+        <value>Uma da <see cref="T:System.Messaging.MessageQueueTransactionStatus" /> valores que indica se a transação foi confirmada, anulada, inicializado, ou se está pendente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma instância do <xref:System.Messaging.MessageQueueTransaction> classe tiver sido criada, o <xref:System.Messaging.MessageQueueTransaction.Status%2A> é definido pelo construtor para `Initialized`. Após uma chamada para <xref:System.Messaging.MessageQueueTransaction.Begin%2A> , mas antes de uma chamada para <xref:System.Messaging.MessageQueueTransaction.Commit%2A> ou <xref:System.Messaging.MessageQueueTransaction.Abort%2A>, o <xref:System.Messaging.MessageQueueTransaction.Status%2A> é `Pending`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

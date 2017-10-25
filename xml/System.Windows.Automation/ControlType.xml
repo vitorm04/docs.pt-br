@@ -1,0 +1,1066 @@
+<Type Name="ControlType" FullName="System.Windows.Automation.ControlType">
+  <TypeSignature Language="C#" Value="public class ControlType : System.Windows.Automation.AutomationIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlType extends System.Windows.Automation.AutomationIdentifier" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ControlType" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.AutomationIdentifier</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Identifica o tipo de controle de interface de usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.ControlType>herda de <xref:System.Windows.Automation.AutomationIdentifier> e é usado para identificar o tipo de um controle representado por um <xref:System.Windows.Automation.AutomationElement>. O tipo de controle é determinado pelo desenvolvedor do provedor de automação de interface do usuário.  
+  
+ Essa classe contém campos estáticos, que são <xref:System.Windows.Automation.ControlType> objetos, para identificar os tipos padrão de controle. Também há um <xref:System.Windows.Automation.ControlType.Custom> tipo para controles que não correspondem a um dos tipos definidos.  
+  
+ O único caso em que o tipo de controle do controle pode alterar em tempo de execução é onde o controle suporta <xref:System.Windows.Automation.MultipleViewPattern>. Um exemplo é o [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] lista de exibição, que pode ser um <xref:System.Windows.Automation.ControlType.DataGrid> ou <xref:System.Windows.Automation.ControlType.List>, dependendo do modo de exibição atual.  
+  
+ Tipos de controle não tem uma equivalência individual para padrões de controle. Um controle pode ser de apenas um tipo, mas ele pode dar suporte a vários padrões ou nenhum padrões, dependendo de sua funcionalidade específica.  
+  
+ Para obter informações detalhadas sobre os vários tipos de controle, consulte [tipos de controle de automação de interface do usuário](~/docs/framework/ui-automation/ui-automation-control-types.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Button">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Button;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Button" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Button" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de botão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Botões de executam uma única ação quando clicado.  
+  
+ Um botão pode ser usado como um controle autônomo ou como um subcontrole em outro tipo de controle. Por exemplo, a seta suspensa em um controle de caixa de combinação é um botão. Quando usado como um subcontrole, um botão está na exibição de controle de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore (não na exibição de conteúdo).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Calendar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Calendar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Calendar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Calendar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de calendário, como um seletor de data.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckBox">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType CheckBox;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType CheckBox" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.CheckBox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de caixa de seleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de seleção pode ser usada como um controle autônomo ou como um subcontrole em outro tipo de controle.  Por exemplo, uma caixa de seleção no início de uma linha em um controle de grade é usada para selecionar a linha (usada para manipular o conteúdo) aparece na exibição de controle, mas não na exibição de conteúdo. No entanto, uma caixa de seleção rotulada em um formulário que representa os dados é nas exibições de conteúdo e controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComboBox">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ComboBox;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ComboBox" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ComboBox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de caixa de combinação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há duas variações de controles de caixa de combinação. Uma caixa de combinação simples apresenta uma lista que um usuário pode selecionar. Uma caixa de combinação editável apresenta uma lista de opções e também tem uma área de texto editável em que um usuário pode digitar uma opção em vez de estar limitado para selecionar dentre as opções na lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Custom;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Custom" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle que não é um dos tipos de controle definidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Automation.ControlType.Custom> tipo de controle indica um controle que não for identificado como um dos tipos de controle predefinidos (como <xref:System.Windows.Automation.ControlType.Button> ou <xref:System.Windows.Automation.ControlType.Calendar>).  
+  
+ Os desenvolvedores de controle devem verificar os outros tipos de controle antes de designar seu controle como um <xref:System.Windows.Automation.ControlType.Custom> controle tipo para certificar-se de que o controle não oferece a mesma funcionalidade de um dos tipos de controle definidos.  
+  
+ Um <xref:System.Windows.Automation.ControlType.Custom> tipo de controle requer trabalho adicional para o provedor a implementar [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]. Além disso, os produtos de cliente de automação de interface do usuário não poderá prever a estrutura de controle, interação de teclado e padrões de controle possíveis com base no tipo de controle do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataGrid">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType DataGrid;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType DataGrid" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.DataGrid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de grade de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando as células contêm apenas texto, o tipo de controle deve ser <xref:System.Windows.Automation.ControlType.Table>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType DataItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType DataItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.DataItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de item de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.DataItem> é um item complexo que pode conter muitos outros controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Document;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Document" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Document" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um documento contém o conteúdo de texto de mais de uma linha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Edit;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Edit" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Edit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de edição, como uma caixa de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Edit> controle pode ser usado como um controle autônomo ou como um subcontrole em outro tipo de controle.  Por exemplo, a área em que um usuário pode digitar um valor em um controle de caixa de combinação é um <xref:System.Windows.Automation.ControlType.Edit> controle, e nesse caso o controle não faz parte da exibição de conteúdo.  
+  
+ <xref:System.Windows.Automation.ControlType.Edit>controles também podem representar os controles que contêm as senhas. O <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A> propriedade permite que produtos como leitores de tela para saber se é revelar o conteúdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNeverSupportedPatterns">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationPattern[] GetNeverSupportedPatterns ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationPattern[] GetNeverSupportedPatterns() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ControlType.GetNeverSupportedPatterns" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera os identificadores padrão que não há suporte para o tipo de controle.</summary>
+        <returns>Uma matriz de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] identificadores de padrão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil para clientes de automação de interface do usuário, como estruturas de teste para uma implementação de provedor que precisa localizar todos os padrões de controle que não são permitidos neste tipo de controle.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Windows.Automation.ControlType.GetNeverSupportedPatterns%2A> em todos os tipos de <xref:System.Windows.Automation.ControlType> contidos como um campo estático no <xref:System.Windows.Automation.ControlType> classe.  
+  
+ [!code-csharp[UIAControlTypePatterns_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAControlTypePatterns_snip/CSharp/GetPatternsForm.cs#101)]
+ [!code-vb[UIAControlTypePatterns_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAControlTypePatterns_snip/visualbasic/getpatternsform.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequiredPatternSets">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationPattern[][] GetRequiredPatternSets ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationPattern[][] GetRequiredPatternSets() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ControlType.GetRequiredPatternSets" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern[][]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz de conjuntos de padrões necessárias.</summary>
+        <returns>Uma matriz de conjuntos de padrões necessárias.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada elemento da matriz contém uma matriz de padrões, e cada elemento que tenha esse tipo de controle deve oferecer suporte a pelo menos um desses conjuntos.  
+  
+ Esse método é útil para clientes de automação de interface do usuário que precisam localizar todos os padrões possíveis, como estruturas de uma implementação de provedor de teste.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Windows.Automation.ControlType.GetRequiredPatternSets%2A> em todos os tipos de <xref:System.Windows.Automation.ControlType> contidos como um campo estático no <xref:System.Windows.Automation.ControlType> classe.  
+  
+ [!code-csharp[UIAControlTypePatterns_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAControlTypePatterns_snip/CSharp/GetPatternsForm.cs#101)]
+ [!code-vb[UIAControlTypePatterns_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAControlTypePatterns_snip/visualbasic/getpatternsform.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequiredProperties">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationProperty[] GetRequiredProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationProperty[] GetRequiredProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ControlType.GetRequiredProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz da propriedade necessária [!INCLUDE[TLA#tla_id#plural](~/includes/tlasharptla-idsharpplural-md.md)] para esse tipo de controle.</summary>
+        <returns>Uma matriz de propriedade [!INCLUDE[TLA2#tla_id#plural](~/includes/tla2sharptla-idsharpplural-md.md)].</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil para clientes de automação de interface do usuário que precisam localizar todas as propriedades possíveis, como estruturas de uma implementação de provedor de teste.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Group;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Group" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Group" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de grupo, que atua como um contêiner para outros controles.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um grupo é um controle de contêiner que contém diferentes tipos de controle e é usado para associar logicamente desses controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Header;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Header" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Header" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de cabeçalho, que é um contêiner para os rótulos de linhas e colunas de informações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType HeaderItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType HeaderItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.HeaderItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um item de cabeçalho, que é o rótulo de uma linha ou coluna de informações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hyperlink">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Hyperlink;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Hyperlink" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Hyperlink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de hiperlink.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de hiperlink navega para um especificado [!INCLUDE[TLA#tla_url](~/includes/tlasharptla-url-md.md)] quando um usuário clica no controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Image;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Image" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Image" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de imagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Image> tipo de controle pode ser usado como um controle autônomo ou como um subcontrole em outro tipo de controle.  Por exemplo, um botão pode usar uma imagem em vez de texto para indicar sua funcionalidade para o usuário.  
+  
+ Quando usado apenas para fins de decorativos, uma imagem aparece na exibição de controle de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore (não na exibição de conteúdo).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType List;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType List" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.List" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de lista, como uma caixa de listagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.List> é um tipo de controle que contém <xref:System.Windows.Automation.ControlType.ListItem> e (talvez) <xref:System.Windows.Automation.ControlType.Group> tipos de controle.  
+  
+ Um <xref:System.Windows.Automation.ControlType.List> controle pode ser usado como um controle autônomo ou como um subcontrole em outro tipo de controle. Por exemplo, uma caixa de combinação tem um <xref:System.Windows.Automation.ControlType.List> controle que contém opções que aparecem quando clicar no botão suspenso. Quando usado como um subcontrole um <xref:System.Windows.Automation.ControlType.List> está apenas na exibição de controle de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore (não no modo de exibição de conteúdo).  
+  
+ Quando usado como um subcontrole um <xref:System.Windows.Automation.ControlType.List> não tem um `Name` propriedade atribuída.  
+  
+ Um <xref:System.Windows.Automation.ControlType.List> pode conter <xref:System.Windows.Automation.ControlType.DataItem> controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ListItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ListItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ListItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de item de lista, que é um item filho de um controle de lista.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Header> também pode ser um filho de um controle de lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalizedControlType">
+      <MemberSignature Language="C#" Value="public string LocalizedControlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalizedControlType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ControlType.LocalizedControlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma descrição do tipo de controle.</summary>
+        <value>Uma descrição localizada do tipo de controle, como "button".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, todos os tipos de controle são encontrados por reflexão e seus <xref:System.Windows.Automation.ControlType.LocalizedControlType%2A> propriedades são saída juntamente com outras informações.  
+  
+ [!code-csharp[UIAControlTypePatterns_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAControlTypePatterns_snip/CSharp/GetPatternsForm.cs#101)]
+ [!code-vb[UIAControlTypePatterns_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAControlTypePatterns_snip/visualbasic/getpatternsform.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupById">
+      <MemberSignature Language="C#" Value="public static System.Windows.Automation.ControlType LookupById (int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Automation.ControlType LookupById(int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ControlType.LookupById(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="id">Identificador do tipo de controle.</param>
+        <summary>Recupera um <see cref="T:System.Windows.Automation.ControlType" /> que encapsula um identificador numérico especificado.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o tipo de um controle é identificado por um <xref:System.Windows.Automation.ControlType> objeto. Esse método permite que você construir esse tipo de objeto quando apenas o identificador numérico é conhecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Menu">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Menu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Menu" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Menu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de menu, como um menu de nível superior em uma janela do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um menu é um contêiner para uma coleção de itens de menu; Por exemplo, o controle que aparece abaixo **arquivo** quando você clica nele e que contém **novo**, **abrir**, e assim por diante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType MenuBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType MenuBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.MenuBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de barra de menu, que geralmente contém um conjunto de menus de nível superior.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.MenuBar> tipo de controle representa o contêiner para o conjunto de menus de nível superior de um aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType MenuItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType MenuItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.MenuItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.MenuItem> é um filho de um <xref:System.Windows.Automation.ControlType.Menu> ou <xref:System.Windows.Automation.ControlType.MenuBar> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pane">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Pane;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Pane" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Pane" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle do painel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Pane> é usado para separar visualmente o conteúdo dentro de um <xref:System.Windows.Automation.ControlType.Window>. Normalmente, o usuário navega entre os painéis pressionando TAB, F6 ou CTRL + TAB, dependendo do contexto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgressBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ProgressBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ProgressBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ProgressBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de barra de progresso, que indica visualmente o andamento de uma operação demorada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadioButton">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType RadioButton;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType RadioButton" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.RadioButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de botão de opção, que é um seleção mecanismo permite exatamente um item selecionado em um grupo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ScrollBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ScrollBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ScrollBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de barra de rolagem, como uma barra de rolagem em uma janela do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.ScrollBar> tipo de controle contém um conjunto de botões e um controle thumb que permitem que um usuário usando um mouse para rolar o conteúdo de uma janela ou item de contêiner.  
+  
+ Use o <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A> propriedade para diferenciar o <xref:System.Windows.Automation.ControlType.Button> elementos que correspondem aos botões grande incremento, decremento grande, pequeno incremento e decremento pequeno.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Separator">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Separator;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Separator" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Separator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um separador, que cria uma divisão visual em controles, como menus e barras de ferramentas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Slider">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Slider;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Slider" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Slider" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle deslizante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Slider> tipo de controle consiste em um conjunto de botões associados um <xref:System.Windows.Automation.ControlType.Edit> controle que permitem ao usuário escolher um conjunto de itens ou definir um valor numérico de dentro do intervalo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Spinner">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Spinner;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Spinner" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Spinner" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle giratório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Spinner> tipo de controle consiste em um conjunto de botões que permitem ao usuário escolher um conjunto de itens ou definir um valor numérico de dentro do intervalo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SplitButton">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType SplitButton;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType SplitButton" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.SplitButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um botão de divisão, que é um botão que executa uma ação padrão e também pode expandir para uma lista de outras ações possíveis.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType StatusBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType StatusBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.StatusBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de barra de status.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.ControlType.StatusBar>tipos de controle são geralmente subcontroles de <xref:System.Windows.Automation.ControlType.Window> tipo de controle [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elementos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tab">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Tab;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Tab" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Tab" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle guia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Tab> é um tipo de controle que contém pelo menos um <xref:System.Windows.Automation.ControlType.TabItem> controle filho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType TabItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType TabItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.TabItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de item de guia, que representa uma página de um controle guia.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Table;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Table" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Table" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica uma tabela.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Table> tipo de controle é semelhante a um <xref:System.Windows.Automation.ControlType.DataGrid> , mas contém somente texto. As tabelas também podem conter <xref:System.Windows.Automation.ControlType.Header> tipos de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Text;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Text" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de edição, como uma caixa de texto ou caixa de texto avançado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Text> controle pode ser usado como um controle autônomo, como um <xref:System.Windows.Automation.ControlType.Edit> controle, ou como um subcomponente, como a área de um <xref:System.Windows.Automation.ControlType.ComboBox> em que um usuário pode digitar um valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thumb">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Thumb;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Thumb" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Thumb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o controle em uma barra de rolagem que pode ser arrastado para uma posição diferente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Thumb> controle é usado como um subcontrole em um <xref:System.Windows.Automation.ControlType.ScrollBar> tipo de controle. Como uma subcontrole uma <xref:System.Windows.Automation.ControlType.Thumb> não tem um <xref:System.Windows.Automation.AutomationElement.NameProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType TitleBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType TitleBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.TitleBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a barra de legenda em uma janela.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolBar">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ToolBar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ToolBar" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ToolBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica uma barra de ferramentas, como o controle que contém um conjunto de botões de comando em uma janela do aplicativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType ToolTip;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType ToolTip" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.ToolTip" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de dica de ferramenta, uma janela informativa exibida como resultado de mover o ponteiro sobre um controle ou às vezes, quando tabulação para um controle usando o teclado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tree">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Tree;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Tree" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Tree" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um controle de árvore.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.Tree> tipo de controle é um contêiner para uma organização hierárquica de <xref:System.Windows.Automation.ControlType.TreeItem> ou <xref:System.Windows.Automation.ControlType.DataItem> tipos de controle.  
+  
+ Cada nó de uma árvore pode conter outros nós.  Um nó que contém o filho de nós podem ser exibidos como expandidos ou recolhidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreeItem">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType TreeItem;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType TreeItem" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.TreeItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um nó em um <see cref="F:System.Windows.Automation.ControlType.TreeItem" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Automation.ControlType.TreeItem> o tipo de controle pode ser usado apenas como um subcontrole de um <xref:System.Windows.Automation.ControlType.Tree> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Window">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.ControlType Window;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.ControlType Window" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ControlType.Window" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ControlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica um quadro de janela, que contém objetos filhos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles desse tipo sempre suportam <xref:System.Windows.Automation.WindowPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

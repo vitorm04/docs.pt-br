@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Services.BuildProvider">
+  <Docs>
+    <summary>Classes nesse namespace geram código c# ou Visual Basic para um aplicativo cliente do WCF Data Services com base nos metadados retornados pelo serviço de dados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,479 @@
+<Type Name="DataContractSerializerOperationBehavior" FullName="System.ServiceModel.Description.DataContractSerializerOperationBehavior">
+  <TypeSignature Language="C#" Value="public class DataContractSerializerOperationBehavior : System.ServiceModel.Description.IOperationBehavior, System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataContractSerializerOperationBehavior extends System.Object implements class System.ServiceModel.Description.IOperationBehavior, class System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.DataContractSerializerOperationBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IOperationBehavior</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IWsdlExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o comportamento de tempo de execução de <see cref="T:System.Runtime.Serialization.DataContractSerializer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> permite que o controle de <xref:System.Runtime.Serialization.DataContractSerializer> opções, como o <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> e <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> propriedades. Algumas dessas propriedades podem ser definidas apenas usando o construtor da classe.  Nesse caso, o <xref:System.Runtime.Serialization.DataContractSerializer> pode ser substituído usando o <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.CreateSerializer%2A> método. [!INCLUDE[crabout](~/includes/crabout-md.md)]contratos de dados, consulte [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]usando o <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> para substituir o <xref:System.Runtime.Serialization.IDataContractSurrogate> retornado pelo <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> propriedade, consulte [substitutos de contrato de dados](~/docs/framework/wcf/extending/data-contract-surrogates.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir localiza o <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> na coleção de comportamentos para uma operação e redefine o <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> e <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> propriedades.  
+  
+ [!code-csharp[DataContractSerializerOperationBehavior#1](~/samples/snippets/csharp/VS_Snippets_CFX/datacontractserializeroperationbehavior/cs/source.cs#1)]
+ [!code-vb[DataContractSerializerOperationBehavior#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/datacontractserializeroperationbehavior/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataContractSerializerOperationBehavior (System.ServiceModel.Description.OperationDescription operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.OperationDescription operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.#ctor(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operation">Um <see cref="T:System.ServiceModel.Description.OperationDescription" /> que representa a operação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.DataContractSerializerOperationBehavior" /> classe com a descrição da operação especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataContractSerializerOperationBehavior (System.ServiceModel.Description.OperationDescription operation, System.ServiceModel.DataContractFormatAttribute dataContractFormatAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.OperationDescription operation, class System.ServiceModel.DataContractFormatAttribute dataContractFormatAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.#ctor(System.ServiceModel.Description.OperationDescription,System.ServiceModel.DataContractFormatAttribute)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="dataContractFormatAttribute" Type="System.ServiceModel.DataContractFormatAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="operation">Um <see cref="T:System.ServiceModel.Description.OperationDescription" /> que representa a operação.</param>
+        <param name="dataContractFormatAttribute">Um <see cref="T:System.ServiceModel.DataContractFormatAttribute" /> que é usada para controlar o processo de serialização.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.DataContractSerializerOperationBehavior" /> classe com a descrição da operação especificado e o formato de contrato de dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSerializer">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Serialization.XmlObjectSerializer CreateSerializer (Type type, string name, string ns, System.Collections.Generic.IList&lt;Type&gt; knownTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Serialization.XmlObjectSerializer CreateSerializer(class System.Type type, string name, string ns, class System.Collections.Generic.IList`1&lt;class System.Type&gt; knownTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.CreateSerializer(System.Type,System.String,System.String,System.Collections.Generic.IList{System.Type})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.XmlObjectSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="knownTypes" Type="System.Collections.Generic.IList&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> para criar o serializador para.</param>
+        <param name="name">O nome do tipo gerado.</param>
+        <param name="ns">O namespace do tipo gerado.</param>
+        <param name="knownTypes">Um <see cref="T:System.Collections.Generic.IList`1" /> de <see cref="T:System.Type" /> que contém os tipos conhecidos.</param>
+        <summary>Cria uma instância de uma classe que herda de <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> para processos de serialização e desserialização.</summary>
+        <returns>Uma instância de uma classe que herda de <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> classe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o <xref:System.Runtime.Serialization.NetDataContractSerializer> e <xref:System.Runtime.Serialization.DataContractSerializer> herdam o <xref:System.Runtime.Serialization.XmlObjectSerializer> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSerializer">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Serialization.XmlObjectSerializer CreateSerializer (Type type, System.Xml.XmlDictionaryString name, System.Xml.XmlDictionaryString ns, System.Collections.Generic.IList&lt;Type&gt; knownTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Serialization.XmlObjectSerializer CreateSerializer(class System.Type type, class System.Xml.XmlDictionaryString name, class System.Xml.XmlDictionaryString ns, class System.Collections.Generic.IList`1&lt;class System.Type&gt; knownTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.CreateSerializer(System.Type,System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString,System.Collections.Generic.IList{System.Type})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.XmlObjectSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="name" Type="System.Xml.XmlDictionaryString" />
+        <Parameter Name="ns" Type="System.Xml.XmlDictionaryString" />
+        <Parameter Name="knownTypes" Type="System.Collections.Generic.IList&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo para serializar ou desserializar.</param>
+        <param name="name">O nome do tipo serializado.</param>
+        <param name="ns">Um <see cref="T:System.Xml.XmlDictionaryString" /> que contém o namespace do tipo serializado.</param>
+        <param name="knownTypes">Um <see cref="T:System.Collections.Generic.IList`1" /> de <see cref="T:System.Type" /> que contém os tipos conhecidos.</param>
+        <summary>Cria uma instância de uma classe que herda de <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> para serialização e desserialização de processos com um <see cref="T:System.Xml.XmlDictionaryString" /> que contém o namespace.</summary>
+        <returns>Uma instância de uma classe que herda de <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> classe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.NetDataContractSerializer> herdam o <xref:System.Runtime.Serialization.XmlObjectSerializer> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataContractFormatAttribute">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.DataContractFormatAttribute DataContractFormatAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.DataContractFormatAttribute DataContractFormatAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.DataContractFormatAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.DataContractFormatAttribute" /> associados à operação.</summary>
+        <value>O <see cref="T:System.ServiceModel.DataContractFormatAttribute" /> associado à operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataContractResolver">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.DataContractResolver DataContractResolver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.DataContractResolver DataContractResolver" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.DataContractResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma implementação de <see cref="T:System.Runtime.Serialization.DataContractResolver" /> que é usado para mapear dinamicamente os tipos durante processos de serialização e desserialização.</summary>
+        <value>Tipo:<see cref="T:System.Runtime.Serialization.DataContractResolver" />  
+  
+ Uma classe que mapeia um <see langword="xsi:type" /> para um tipo de contrato de dados conhecidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte o <xref:System.Runtime.Serialization.DataContractResolver> documento de classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataContractSurrogate">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.IDataContractSurrogate DataContractSurrogate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.IDataContractSurrogate DataContractSurrogate" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.IDataContractSurrogate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um substituto para ser usado durante a serialização e desserialização de processos.</summary>
+        <value>Um <see cref="T:System.Runtime.Serialization.IDataContractSurrogate" /> que é usado como um serializador substituta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreExtensionDataObject">
+      <MemberSignature Language="C#" Value="public bool IgnoreExtensionDataObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreExtensionDataObject" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se os dados fornecidos por uma extensão de um tipo (e, portanto, não no contrato de dados) é ignorado ou não.</summary>
+        <value>
+          <see langword="true" />para ignorar os dados. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando definido como `true`, os dados extras são retornados com quaisquer outros dados serializados. [!INCLUDE[crdefault](~/includes/crdefault-md.md)]o <xref:System.Runtime.Serialization.IExtensibleDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxItemsInObjectGraph">
+      <MemberSignature Language="C#" Value="public int MaxItemsInObjectGraph { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxItemsInObjectGraph" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de itens no gráfico de objeto para serializar ou desserializar.</summary>
+        <value>O número máximo de itens no gráfico de objeto para serializar ou desserializar. O padrão é <see cref="F:System.Int32.MaxValue" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.AddBindingParameters (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.AddBindingParameters(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#AddBindingParameters(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="description">O <see cref="T:System.ServiceModel.Description.OperationDescription" /> para adicionar os parâmetros.</param>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> que contém os parâmetros para adicionar.</param>
+        <summary>Adiciona uma coleção de parâmetros para o comportamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.ApplyClientBehavior (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Dispatcher.ClientOperation proxy);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Dispatcher.ClientOperation proxy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#ApplyClientBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.ClientOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="proxy" Type="System.ServiceModel.Dispatcher.ClientOperation" />
+      </Parameters>
+      <Docs>
+        <param name="description">O <see cref="T:System.ServiceModel.Description.OperationDescription" /> que representa a operação.</param>
+        <param name="proxy">Um <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" /> que representa um cliente.</param>
+        <summary>Anexa um comportamento do cliente para a operação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Dispatcher.DispatchOperation dispatch);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Dispatcher.DispatchOperation dispatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.DispatchOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="dispatch" Type="System.ServiceModel.Dispatcher.DispatchOperation" />
+      </Parameters>
+      <Docs>
+        <param name="description">Um <see cref="T:System.ServiceModel.Description.OperationDescription" /> que representa a operação.</param>
+        <param name="dispatch">O <see cref="T:System.ServiceModel.Dispatcher.DispatchOperation" /> para anexar o comportamento.</param>
+        <summary>Aplica o comportamento para a operação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.Validate (System.ServiceModel.Description.OperationDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.Validate(class System.ServiceModel.Description.OperationDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.System#ServiceModel#Description#IOperationBehavior#Validate(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">Um <see cref="T:System.ServiceModel.Description.OperationDescription" /> que representa a operação validar.</param>
+        <summary>Valida a operação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportContract">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportContract (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlContractConversionContext contractContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportContract(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlContractConversionContext contractContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.System#ServiceModel#Description#IWsdlExportExtension#ExportContract(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlContractConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="contractContext" Type="System.ServiceModel.Description.WsdlContractConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Um <see cref="T:System.ServiceModel.Description.WsdlExporter" /> a ser usado para a exportação.</param>
+        <param name="contractContext">Um <see cref="T:System.ServiceModel.Description.WsdlContractConversionContext" /> para o WSDL.</param>
+        <summary>Exporta a representação de WSDL da operação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportEndpoint (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.DataContractSerializerOperationBehavior.System#ServiceModel#Description#IWsdlExportExtension#ExportEndpoint(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlEndpointConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="endpointContext" Type="System.ServiceModel.Description.WsdlEndpointConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">Um <see cref="T:System.ServiceModel.Description.WsdlExporter" /> a ser usado para a exportação.</param>
+        <param name="endpointContext">Um <see cref="T:System.ServiceModel.Description.WsdlEndpointConversionContext" /> para o WSDL.</param>
+        <summary>Exporta a descrição do ponto de extremidade como um documento WSDL.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

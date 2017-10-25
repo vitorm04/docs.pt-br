@@ -1,0 +1,618 @@
+<Type Name="HttpServerChannel" FullName="System.Runtime.Remoting.Channels.Http.HttpServerChannel">
+  <TypeSignature Language="C#" Value="public class HttpServerChannel : System.Runtime.Remoting.Channels.BaseChannelWithProperties, System.Runtime.Remoting.Channels.IChannelReceiver, System.Runtime.Remoting.Channels.IChannelReceiverHook" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpServerChannel extends System.Runtime.Remoting.Channels.BaseChannelWithProperties implements class System.Runtime.Remoting.Channels.IChannel, class System.Runtime.Remoting.Channels.IChannelReceiver, class System.Runtime.Remoting.Channels.IChannelReceiverHook" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.Channels.BaseChannelWithProperties</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannelReceiver</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannelReceiverHook</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementa um canal de servidor para chamadas remotas, que usa o protocolo HTTP para transmitir mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de transporte de canais entre limites de comunicação remota (por exemplo, entre computadores em domínios de aplicativo). O <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> classe transporta mensagens usando o protocolo HTTP.  
+  
+ Canais são usados pela infraestrutura de comunicação remota do .NET Framework para chamadas remotas de transporte. Quando um cliente faz uma chamada para um objeto remoto, a chamada é serializada em uma mensagem que é enviada por um canal do cliente e recebida por um canal do servidor. Em seguida, é desserializado e processado. Os valores retornados são transmitidos pelo canal de servidor e recebidos pelo canal de cliente.  
+  
+ Para executar adicionais de processamento de mensagens no lado do servidor, você pode especificar uma implementação do <xref:System.Runtime.Remoting.Channels.IServerChannelSinkProvider> por meio da qual todas as mensagens processadas pelo <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> são passados.  
+  
+ O <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> aceita mensagens serializadas em formato SOAP ou binário.  
+  
+ Um <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> objeto associada propriedades de configuração que podem ser definidas no tempo de execução em um arquivo de configuração (invocando estático <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%2A?displayProperty=nameWithType> método) ou por meio de programação (passando um <xref:System.Collections.IDictionary> coleção para o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.%23ctor%2A> construtor). Para obter uma lista dessas propriedades de configuração, consulte a documentação para <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.%23ctor%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar um <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> objeto para configurar um servidor remoto e o seu cliente. O exemplo contém três partes:  
+  
+-   Um servidor  
+  
+-   Um cliente  
+  
+-   Um objeto remoto usado pelo servidor e cliente  
+  
+ O exemplo de código a seguir mostra um servidor.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#20](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/server.cpp#20)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#20](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/server.cs#20)]  
+  
+ O exemplo de código a seguir mostra um cliente para esse servidor.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#30](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/client.cpp#30)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#30](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/client.cs#30)]  
+  
+ O exemplo de código a seguir mostra o objeto remoto usado pelo servidor e o cliente.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#40](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/common.cpp#40)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#40](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/common.cs#40)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpServerChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpServerChannel (int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">A porta na qual o canal de escuta.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> que escuta na porta especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para solicitar uma porta disponível ser atribuídas dinamicamente, defina o `port` parâmetro como 0 (zero).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpServerChannel (System.Collections.IDictionary properties, System.Runtime.Remoting.Channels.IServerChannelSinkProvider sinkProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IDictionary properties, class System.Runtime.Remoting.Channels.IServerChannelSinkProvider sinkProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+        <Parameter Name="sinkProvider" Type="System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />
+      </Parameters>
+      <Docs>
+        <param name="properties">A <see cref="T:System.Collections.IDictionary" /> das propriedades de canal que armazenam as informações de configuração para o canal atual.</param>
+        <param name="sinkProvider">O <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> para usar com a nova instância do <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> com as propriedades de canal e os coletores especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre propriedades de configuração de canal, consulte [Channel e propriedades de configuração do formatador](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe).  
+  
+ Se não precisar da funcionalidade do coletor, defina o `sinkProvider` parâmetro `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar este construtor.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#12](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/server2.cpp#12)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#12](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/server2.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Uma propriedade de configuração foi formatada incorretamente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpServerChannel (string name, int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do canal.</param>
+        <param name="port">A porta na qual o canal de escuta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> classe com o nome fornecido e que escuta na porta especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelName%2A> propriedade usando o `name` parâmetro. Se você quiser registrar mais de um canal, cada canal deve ter um nome exclusivo.  
+  
+ Para solicitar uma porta disponível ser atribuídas dinamicamente, defina o `port` parâmetro como 0 (zero).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar este construtor.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#13](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/server2.cpp#13)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#13](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/server2.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpServerChannel (string name, int port, System.Runtime.Remoting.Channels.IServerChannelSinkProvider sinkProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int32 port, class System.Runtime.Remoting.Channels.IServerChannelSinkProvider sinkProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.String,System.Int32,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="sinkProvider" Type="System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do canal.</param>
+        <param name="port">A porta na qual o canal de escuta.</param>
+        <param name="sinkProvider">O <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> a ser usado pelo canal.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> classe na porta especificada com o nome fornecido, que escuta na porta especificada e, em seguida, usa o coletor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelName%2A> propriedade usando o `name` parâmetro.  
+  
+ Para solicitar uma porta disponível ser atribuídas dinamicamente, defina o `port` parâmetro como 0 (zero).  
+  
+ Se não precisar da funcionalidade do coletor, defina o `sinkProvider` parâmetro `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar este construtor.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#14](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/server2.cpp#14)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#14](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/server2.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHookChannelUri">
+      <MemberSignature Language="C#" Value="public void AddHookChannelUri (string channelUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddHookChannelUri(string channelUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.AddHookChannelUri(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="channelUri">Um URI no qual o gancho do canal deve escutar.</param>
+        <summary>Adiciona um URI no qual o gancho do canal deve escutar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelData">
+      <MemberSignature Language="C#" Value="public object ChannelData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ChannelData" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém dados específicos de canal.</summary>
+        <value>Um <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> instância que contém dados específicos do canal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora retornado como uma instância de <xref:System.Object?displayProperty=nameWithType>, o valor dessa propriedade pode ser convertido em uma instância de <xref:System.Runtime.Remoting.Channels.ChannelDataStore> descrevendo o canal ao qual o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> escuta do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelName">
+      <MemberSignature Language="C#" Value="public string ChannelName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChannelName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do canal atual.</summary>
+        <value>Um <see cref="T:System.String" /> objeto que contém o nome do canal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada canal registrado tem um nome exclusivo. Esse nome é usado para recuperar um canal específico ao chamar <xref:System.Runtime.Remoting.Channels.ChannelServices.GetChannel%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelPriority">
+      <MemberSignature Language="C#" Value="public int ChannelPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ChannelPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a prioridade do canal atual.</summary>
+        <value>Um inteiro que representa a prioridade atribuída ao canal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A prioridade controla a ordem na qual canal de dados aparecem em uma <xref:System.Runtime.Remoting.ObjRef> instância; canais de prioridade mais altas aparecer antes de canais de prioridade inferiores. Clientes tentarem se conectar aos canais na ordem em que eles estão listados no servidor a <xref:System.Runtime.Remoting.ObjRef> instância. A prioridade padrão é 1. prioridades negativas são permitidas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelScheme">
+      <MemberSignature Language="C#" Value="public string ChannelScheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChannelScheme" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de ouvinte para conectar ao (por exemplo, "http").</summary>
+        <value>O tipo de ouvinte para conectar ao.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor não diferencia maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelScheme%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#21](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/server.cpp#21)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#21](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/server.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelSinkChain">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IServerChannelSink ChannelSinkChain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Channels.IServerChannelSink ChannelSinkChain" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelSinkChain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IServerChannelSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de coletor de canal que está usando o canal atual.</summary>
+        <value>A cadeia de coletor de canal que está usando o canal atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelSinkChain%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#23](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/server.cpp#23)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#23](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/server.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChannelUri">
+      <MemberSignature Language="C#" Value="public string GetChannelUri ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetChannelUri() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.GetChannelUri" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o URI do canal atual.</summary>
+        <returns>O URI do canal atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.GetChannelUri%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#22](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/server.cpp#22)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#22](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/server.cs#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUrlsForUri">
+      <MemberSignature Language="C#" Value="public virtual string[] GetUrlsForUri (string objectUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetUrlsForUri(string objectUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.GetUrlsForUri(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objectUri">O URI do objeto para o qual as URLs são necessários.</param>
+        <summary>Retorna uma matriz de todas as URLs de um objeto com o URI especificado, hospedado em atual <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />.</summary>
+        <returns>Uma matriz de URLs para um objeto com o URI especificado, hospedado em atual <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método atual é usado pelo <xref:System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.GetUrlsForUri%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> classe.  
+  
+ [!code-cpp[HttpChannel.GetUrlsFromUri#1](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpChannel.GetUrlsFromUri/CPP/class1.cpp#1)]
+ [!code-csharp[HttpChannel.GetUrlsFromUri#1](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpChannel.GetUrlsFromUri/CS/class1.cs#1)]
+ [!code-vb[HttpChannel.GetUrlsFromUri#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpChannel.GetUrlsFromUri/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave da propriedade canal a recuperar.</param>
+        <summary>Retorna a propriedade de canal especificado.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa a propriedade de canal especificada pelo <paramref name="key" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public override System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> de chaves as propriedades do canal estão associadas.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> de chaves as propriedades do canal estão associadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades de canal são usadas para configurar o canal de tempo de execução. Para obter uma lista de propriedades de canal possíveis e um exemplo, consulte [&#91;\< Topic://cpconchannelformatterconfigurationproperties > &#93; ](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public string Parse (string url, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Parse(string url, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Parse(System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL do qual extrair os URIs.</param>
+        <param name="objectURI">Quando este método retorna, contém um <see cref="T:System.String" /> que contém o URI do objeto remoto conhecido. Este parâmetro é passado não inicializado.</param>
+        <summary>Extrai o URI do canal e o objeto remoto conhecido URI da URL especificada.</summary>
+        <returns>O URI do canal.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Parse%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#25](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/server.cpp#25)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#25](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/server.cs#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartListening">
+      <MemberSignature Language="C#" Value="public void StartListening (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartListening(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.StartListening(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Deve ser sempre <see langword="null" /> para <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />.</param>
+        <summary>Instrui o canal atual a iniciar a escuta de solicitações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário chamar este método para começar a escutar em um canal recentemente inicializado.  
+  
+ Use esse método para reiniciar a escuta em um canal após o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.StopListening%2A> método foi chamado para interromper o canal de escuta.  
+  
+ Se o seu canal usa um número de porta atribuída dinamicamente, o número da porta pode mudar quando você reiniciar a escuta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopListening">
+      <MemberSignature Language="C#" Value="public void StopListening (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopListening(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.StopListening(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Deve ser sempre <see langword="null" /> para <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />.</param>
+        <summary>Instrui o canal atual para parar a escuta de solicitações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para parar um canal de escuta. Para reiniciar a escuta, use o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.StartListening%2A> método.  
+  
+ Se o seu canal usa um número de porta atribuída dinamicamente, o número da porta pode mudar quando você reiniciar a escuta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WantsToListen">
+      <MemberSignature Language="C#" Value="public bool WantsToListen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WantsToListen" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.WantsToListen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> deseja ser conectado o serviço de escuta externa.</summary>
+        <value>Um valor booliano que indica se <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> deseja ser conectado o serviço de escuta externa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel.WantsToListen%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#24](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CPP/server.cpp#24)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Http.HttpServerChannel#24](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpServerChannel/CS/server.cs#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

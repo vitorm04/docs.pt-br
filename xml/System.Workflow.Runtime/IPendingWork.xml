@@ -1,0 +1,127 @@
+<Type Name="IPendingWork" FullName="System.Workflow.Runtime.IPendingWork">
+  <TypeSignature Language="C#" Value="public interface IPendingWork" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPendingWork" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.IPendingWork" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos para participar de um lote de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ O <xref:System.Workflow.Runtime.IPendingWork> interface é fornecida para o mecanismo de envio em lote do mecanismo de serviços que deseja que participem de tempo de execução do fluxo de trabalho. O mecanismo de envio em lote é especialmente útil para serviços que usam um armazenamento durável. Geralmente é importante para manter a consistência entre o armazenamento durável usado pelo serviço e o estado interno do mecanismo de tempo de execução do fluxo de trabalho nesses casos.  
+  
+ Se você deseja participar em lotes de transações de fluxo de trabalho fornecida pelo seu serviço de <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService>, você deve implementar os métodos definidos pelo <xref:System.Workflow.Runtime.IPendingWork> interface. O mecanismo de tempo de execução do fluxo de trabalho chamará o <xref:System.Workflow.Runtime.IPendingWork.Commit%2A> método no seu serviço para confirmar o lote.  
+  
+ A classe <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> implementa a interface <xref:System.Workflow.Runtime.IPendingWork>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit (System.Transactions.Transaction transaction, System.Collections.ICollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit(class System.Transactions.Transaction transaction, class System.Collections.ICollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.IPendingWork.Commit(System.Transactions.Transaction,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+        <Parameter Name="items" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">O <see cref="T:System.Transactions.Transaction" /> associado com o trabalho pendente.</param>
+        <param name="items">Os itens de trabalho para ser confirmada.</param>
+        <summary>Confirma a lista de itens de trabalho usando especificado <see cref="T:System.Transactions.Transaction" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As chamadas de mecanismo de tempo de execução do fluxo de trabalho de <xref:System.Workflow.Runtime.IPendingWork.Commit%2A> método quando seu semântica ditam que o trabalho pendente no lote de trabalho deve ser confirmado. Quando atingir um ponto de confirmação, o mecanismo de tempo de execução do fluxo de trabalho chama o <xref:System.Workflow.Runtime.IPendingWork.Commit%2A> método em cada <xref:System.Workflow.Runtime.IPendingWork> objeto em seu lote de trabalho; o mecanismo de tempo de execução do fluxo de trabalho passa a <xref:System.Workflow.Runtime.IPendingWork.Commit%2A> a coleção de itens associados a esse método de <xref:System.Workflow.Runtime.IPendingWork> objeto. Todo o trabalho em um lote obtenha êxito ou nada é bem-sucedida. Você deve lançar uma exceção se qualquer um dos itens de trabalho passada para o <xref:System.Workflow.Runtime.IPendingWork.Commit%2A> método em sua implementação não pode ser confirmado. Dependendo da implementação, você pode desejar executar alguns reversão em seu <xref:System.Workflow.Runtime.IPendingWork.Commit%2A> método se ele não é possível confirmar seus itens de trabalho. Se o mecanismo de tempo de execução do fluxo de trabalho confirmar todo o trabalho em lote de trabalho com êxito, ele chama <xref:System.Workflow.Runtime.IPendingWork.Complete%2A> com o `succeeded` parâmetro definido como `true`; caso contrário, ele chama <xref:System.Workflow.Runtime.IPendingWork.Complete%2A> com `succeeded` definido como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete (bool succeeded, System.Collections.ICollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Complete(bool succeeded, class System.Collections.ICollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.IPendingWork.Complete(System.Boolean,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="succeeded" Type="System.Boolean" />
+        <Parameter Name="items" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="succeeded">
+          <see langword="true" />Se a transação foi bem-sucedida. Caso contrário, <see langword="false" />.</param>
+        <param name="items">Um <see cref="T:System.Collections.ICollection" /> de itens de trabalho.</param>
+        <summary>Chamado quando a transação foi concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `succeeded` é `true`, a transação foi bem-sucedida e qualquer recurso usado pelo lote de trabalho pode ser liberado. Se `succeeded` é `false`, a transação falhou. Dependendo da implementação, você pode executar qualquer roll apropriado no trabalho em lote de trabalho quando a transação falhar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MustCommit">
+      <MemberSignature Language="C#" Value="public bool MustCommit (System.Collections.ICollection items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MustCommit(class System.Collections.ICollection items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.IPendingWork.MustCommit(System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="items">Um <see cref="T:System.Collections.ICollection" /> de itens de trabalho.</param>
+        <summary>Permite que os itens no lote de trabalho declarar se deve confirmar imediatamente.</summary>
+        <returns>
+          <see langword="true" />Se qualquer item na coleção deve ser confirmada imediatamente. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.Runtime.IPendingWork.MustCommit%2A> retorna `false`, o trabalho pode ser adiado para um ponto de confirmação futuras. Se qualquer um dos itens deve ser confirmada, em seguida, retornar `true` e todos os itens serão confirmados no ponto de confirmação atual. Para obter uma discussão sobre pontos de confirmação possíveis, consulte o <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

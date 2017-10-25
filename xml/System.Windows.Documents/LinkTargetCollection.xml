@@ -1,0 +1,211 @@
+<Type Name="LinkTargetCollection" FullName="System.Windows.Documents.LinkTargetCollection">
+  <TypeSignature Language="C#" Value="public sealed class LinkTargetCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LinkTargetCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.LinkTargetCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma coleção de todos os <see cref="T:System.Windows.Documents.LinkTarget" /> elementos em um <see cref="T:System.IO.Packaging.Package" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornecendo todo o potencial <xref:System.Windows.Documents.LinkTargetCollection> elementos em uma coleção, aplicativos de consumo podem determinar se um <xref:System.IO.Packaging.Package> contém um determinado link sem a necessidade de carregar toda a <xref:System.IO.Packaging.Package>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkTargetCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LinkTargetCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.LinkTargetCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Windows.Documents.LinkTarget value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Windows.Documents.LinkTarget value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LinkTargetCollection.Add(System.Windows.Documents.LinkTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Documents.LinkTarget" />
+      </Parameters>
+      <Docs>
+        <param name="value">O destino do link que é adicionado.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Documents.LinkTarget" /> à coleção.</summary>
+        <returns>O índice baseado em zero na coleção do <paramref name="value" /> adicionado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Documents.LinkTarget value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Documents.LinkTarget value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LinkTargetCollection.Contains(System.Windows.Documents.LinkTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Documents.LinkTarget" />
+      </Parameters>
+      <Docs>
+        <param name="value">O link para testar.</param>
+        <summary>Especifica um valor que indica se um determinado <see cref="T:System.Windows.Documents.LinkTarget" /> está na coleção.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> presente; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de pesquisar todo o documento, o <xref:System.Windows.Documents.LinkTargetCollection.Contains%2A> método fornece uma rápida significa para testar um link especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Windows.Documents.LinkTarget[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Windows.Documents.LinkTarget[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LinkTargetCollection.CopyTo(System.Windows.Documents.LinkTarget[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Windows.Documents.LinkTarget[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz de destino.</param>
+        <param name="index">O índice baseado em zero da posição da matriz em que o primeiro item é copiado.</param>
+        <summary>Copia os itens na coleção para o início da matriz especificada no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Documents.LinkTarget value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Documents.LinkTarget value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LinkTargetCollection.IndexOf(System.Windows.Documents.LinkTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Documents.LinkTarget" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser localizado na coleção.</param>
+        <summary>Obtém o índice do item especificado.</summary>
+        <returns>O índice do <paramref name="value" /> encontrado na coleção; caso contrário, -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Windows.Documents.LinkTarget value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Windows.Documents.LinkTarget value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LinkTargetCollection.Insert(System.Int32,System.Windows.Documents.LinkTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Windows.Documents.LinkTarget" />
+      </Parameters>
+      <Docs>
+        <param name="index">O ponto em que o destino do link é inserido.</param>
+        <param name="value">O destino para inserir.</param>
+        <summary>Insere o item especificado na coleção no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.LinkTarget this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.LinkTarget Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.LinkTargetCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.LinkTarget</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de destino que estão sendo gravados ou lidos.</param>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Documents.LinkTarget" /> no índice especificado.</summary>
+        <value>O <see cref="T:System.Windows.Documents.LinkTarget" /> no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Documents.LinkTarget value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Documents.LinkTarget value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LinkTargetCollection.Remove(System.Windows.Documents.LinkTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Documents.LinkTarget" />
+      </Parameters>
+      <Docs>
+        <param name="value">O destino do link a ser removido.</param>
+        <summary>Remove a primeira ocorrência de um objeto específico do <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os destinos de link que siga o destino removido mover para cima para ocupar o ponto vagas. Os índices dos elementos que são movidos também são atualizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

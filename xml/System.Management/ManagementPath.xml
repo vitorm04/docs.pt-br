@@ -1,0 +1,586 @@
+<Type Name="ManagementPath" FullName="System.Management.ManagementPath">
+  <TypeSignature Language="C#" Value="public class ManagementPath : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManagementPath extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ManagementPath" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Management.ManagementPathConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um wrapper para análise e criação de caminhos para objetos WMI.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Management.ManagementPath> classe analisa um caminho para um objeto WMI.  O caminho é analisado no exemplo é um caminho para uma instância de uma classe.  
+  
+ [!code-csharp[wminet_ManagementPath#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath/cs/ManagementPath.cs#1)]
+ [!code-vb[wminet_ManagementPath#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath/vb/ManagementPath.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementPath" /> que está vazia. Esse é o construtor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho do objeto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementPath" /> para o caminho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Management.ManagementPath> classe analisa um caminho para um objeto WMI.  O caminho é analisado no exemplo é um caminho para uma instância de uma classe.  
+  
+ [!code-csharp[wminet_ManagementPath-S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath-S/cs/ManagementPath-S.cs#1)]
+ [!code-vb[wminet_ManagementPath-S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath-S/vb/ManagementPath-S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a parte de classe do caminho.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém a parte de classe do caminho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém o nome da classe.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Management.ManagementPath> classe analisa um caminho para um objeto WMI. O caminho é analisado no exemplo é um caminho para uma instância de uma classe.  
+  
+ [!code-csharp[wminet_ManagementPath_ClassName#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_ClassName/cs/ManagementPath_ClassName.cs#1)]
+ [!code-vb[wminet_ManagementPath_ClassName#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_ClassName/vb/ManagementPath_ClassName.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementPath Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementPath Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cópia do <see cref="T:System.Management.ManagementPath" />.</summary>
+        <returns>O objeto clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPath">
+      <MemberSignature Language="C#" Value="public static System.Management.ManagementPath DefaultPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Management.ManagementPath DefaultPath" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.DefaultPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementPath</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do escopo padrão usado quando nenhum escopo for especificado. O escopo padrão é \\ \\.\root\cimv2 e pode ser alterado definindo essa propriedade.</summary>
+        <value>Retorna um <see cref="T:System.Management.ManagementPath" /> que contém o caminho de escopo (namespace) padrão usado quando nenhum escopo for especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Por padrão o valor de escopo é \\ \\.\root\cimv2 ou um caminho de escopo diferente se o padrão foi alterado.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClass">
+      <MemberSignature Language="C#" Value="public bool IsClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClass" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.IsClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se este é um caminho de classe.</summary>
+        <value>Retorna um <see cref="T:System.Boolean" /> valor que indica se este é um caminho de classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ `true`Se esse for um caminho de classe. Caso contrário, `false`.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Management.ManagementPath> classe analisa um caminho para um objeto WMI. O caminho é analisado no exemplo é um caminho para uma instância de uma classe.  
+  
+ [!code-csharp[wminet_ManagementPath_IsClass#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_IsClass/cs/ManagementPath_IsClass.cs#1)]
+ [!code-vb[wminet_ManagementPath_IsClass#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_IsClass/vb/ManagementPath_IsClass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInstance">
+      <MemberSignature Language="C#" Value="public bool IsInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.IsInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se este é um caminho de instância.</summary>
+        <value>Retorna um <see cref="T:System.Boolean" /> valor que indica se este é um caminho de instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ `true`Se esse for um caminho de instância; Caso contrário, `false`.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Management.ManagementPath> classe analisa um caminho para um objeto WMI. O caminho é analisado no exemplo é um caminho para uma instância de uma classe.  
+  
+ [!code-csharp[wminet_ManagementPath_IsInstance#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_IsInstance/cs/ManagementPath_IsInstance.cs#1)]
+ [!code-vb[wminet_ManagementPath_IsInstance#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_IsInstance/vb/ManagementPath_IsInstance.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSingleton">
+      <MemberSignature Language="C#" Value="public bool IsSingleton { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSingleton" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.IsSingleton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se este é um *singleton* caminho da instância.</summary>
+        <value>Retorna um <see cref="T:System.Boolean" /> valor que indica se este é um caminho de instância singleton.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ `true`Se esse for um caminho de instância singleton. Caso contrário, `false`.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespacePath">
+      <MemberSignature Language="C#" Value="public string NamespacePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespacePath" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.NamespacePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a parte do namespace do caminho. Observe que isso não inclui o nome do servidor, que pode ser recuperado separadamente.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém a parte do namespace do caminho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém a parte do namespace do caminho representados neste objeto.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Management.ManagementPath> classe analisa um caminho para um objeto WMI.  O caminho é analisado no exemplo é um caminho para uma instância de uma classe.  
+  
+ [!code-csharp[wminet_ManagementPath_NamespacePath#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_NamespacePath/cs/ManagementPath_NamespacePath.cs#1)]
+ [!code-vb[wminet_ManagementPath_NamespacePath#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_NamespacePath/vb/ManagementPath_NamespacePath.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a representação de cadeia de caracteres do caminho completo do objeto.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o caminho completo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém o caminho completo representado neste objeto.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Management.ManagementPath> classe analisa um caminho para um objeto WMI.  O caminho é analisado no exemplo é um caminho para uma instância de uma classe.  
+  
+ [!code-csharp[wminet_ManagementPath_Path#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_Path/cs/ManagementPath_Path.cs#1)]
+ [!code-vb[wminet_ManagementPath_Path#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_Path/vb/ManagementPath_Path.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePath">
+      <MemberSignature Language="C#" Value="public string RelativePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelativePath" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.RelativePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho relativo: nome e apenas chaves de classe.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o caminho relativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém o caminho relativo (não incluindo as partes do servidor e o namespace) representado neste objeto.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Management.ManagementPath> classe analisa um caminho para um objeto WMI.  O caminho é analisado no exemplo é um caminho para uma instância de uma classe.  
+  
+ [!code-csharp[wminet_ManagementPath_RelativePath#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_RelativePath/cs/ManagementPath_RelativePath.cs#1)]
+ [!code-vb[wminet_ManagementPath_RelativePath#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_RelativePath/vb/ManagementPath_RelativePath.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public string Server { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Server" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementPath.Server" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a parte do servidor do caminho.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o nome do servidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém o nome do servidor do caminho representado neste objeto.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Management.ManagementPath> classe analisa um caminho para um objeto WMI.  O caminho é analisado no exemplo é um caminho para uma instância de uma classe.  
+  
+ [!code-csharp[wminet_ManagementPath_Server#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementPath_Server/cs/ManagementPath_Server.cs#1)]
+ [!code-vb[wminet_ManagementPath_Server#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementPath_Server/vb/ManagementPath_Server.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAsClass">
+      <MemberSignature Language="C#" Value="public void SetAsClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAsClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.SetAsClass" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o caminho como um novo caminho de classe. Isso significa que o caminho deve ter um nome de classe, mas não os valores de chave.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAsSingleton">
+      <MemberSignature Language="C#" Value="public void SetAsSingleton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAsSingleton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.SetAsSingleton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o caminho como um novo *singleton* caminho do objeto. Isso significa que ele é um caminho para uma instância, mas nenhum valor de chave.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto que é uma cópia da instância atual.</summary>
+        <returns>Um novo objeto que é uma cópia dessa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementPath.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho do objeto completo como a representação de cadeia de caracteres.</summary>
+        <returns>Uma cadeia de caracteres que contém o caminho completo do objeto representado pelo objeto. Esse valor é equivalente ao valor da <see cref="P:System.Management.ManagementPath.Path" /> propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

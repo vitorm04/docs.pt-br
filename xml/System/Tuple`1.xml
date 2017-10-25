@@ -1,0 +1,588 @@
+<Type Name="Tuple&lt;T1&gt;" FullName="System.Tuple&lt;T1&gt;">
+  <TypeSignature Language="C#" Value="public class Tuple&lt;T1&gt; : IComparable, System.Collections.IStructuralComparable, System.Collections.IStructuralEquatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Tuple`1&lt;T1&gt; extends System.Object implements class System.Collections.IStructuralComparable, class System.Collections.IStructuralEquatable, class System.IComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Tuple`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T1" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IStructuralComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IStructuralEquatable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T1">O tipo do componente único da tupla.</typeparam>
+    <summary>Representa uma tupla de 1 ou unitária.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tupla é uma estrutura de dados que possui um número específico e uma sequência de valores. O <xref:System.Tuple%601> classe representa uma tupla de 1 ou singleton, que é uma tupla que tem um único componente. Um singleton é usado raramente comparativamente no desenvolvimento de aplicativos.  
+  
+ Você pode instanciar uma <xref:System.Tuple%601> objeto chamando o <xref:System.Tuple%601.%23ctor%2A> construtor ou estático <xref:System.Tuple.Create%2A?displayProperty=nameWithType> método. Você pode recuperar o valor de componente único da tupla usando somente leitura <xref:System.Tuple%601.Item1%2A> propriedade de instância.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Tuple (T1 item1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T1 item1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+      </Parameters>
+      <Docs>
+        <param name="item1">O valor do único componente da tupla.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Tuple`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode usar o static <xref:System.Tuple.Create%2A?displayProperty=nameWithType> método para instanciar um objeto de tupla de 1 sem a necessidade de especificar explicitamente o tipo do seu componente. O exemplo a seguir usa o <xref:System.Tuple.Create%2A> método para instanciar uma tupla de 1 cujo componente é do tipo <xref:System.Int32>.  
+  
+ [!code-csharp[System.Tuple.Create#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#1)]
+ [!code-vb[System.Tuple.Create#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#1)]  
+  
+ Isso é equivalente à seguinte chamada para o <xref:System.Tuple%601.%23ctor%2A> construtor de classe.  
+  
+ [!code-csharp[System.Tuple.Create#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#2)]
+ [!code-vb[System.Tuple.Create#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple`1.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com essa instância.</param>
+        <summary>Retorna um valor que indica se o objeto <see cref="T:System.Tuple`1" /> atual é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> caso a instância atual seja igual ao objeto especificado; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro `obj` deve ser considerado igual à instância atual nas seguintes circunstâncias:  
+  
+-   É um <xref:System.Tuple%601> objeto.  
+  
+-   É o único componente do mesmo tipo que a instância atual.  
+  
+-   O único componente é igual da instância atual. A igualdade é determinada pela comparação de igualdade do objeto padrão para cada componente.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Tuple%601.Equals%28System.Object%29?displayProperty=nameWithType> método para comparar um <xref:System.Tuple%601> objeto cujo componente é um <xref:System.Double> valor com três <xref:System.Tuple%601> objetos cujos componentes têm as seguintes características:  
+  
+-   Mesmo tipo (<xref:System.Double>) e o mesmo valor.  
+  
+-   Mesmo tipo (<xref:System.Double>), mas outro valor.  
+  
+-   Tipo diferente (<xref:System.Single>), mas o mesmo valor.  
+  
+ [!code-csharp[System.Tuple\`1.Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple`1.equals/cs/equals1.cs#1)]
+ [!code-vb[System.Tuple\`1.Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple`1.equals/vb/equals1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple`1.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o objeto <see cref="T:System.Tuple`1" /> atual.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item1">
+      <MemberSignature Language="C#" Value="public T1 Item1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T1 Item1" />
+      <MemberSignature Language="DocId" Value="P:System.Tuple`1.Item1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T1</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do componente único do objeto <see cref="T:System.Tuple`1" />.</summary>
+        <value>O valor do componente único do objeto <see cref="T:System.Tuple`1" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode determinar o tipo do <xref:System.Tuple%601.Item1%2A> componente em uma de duas maneiras:  
+  
+-   Chamando o método `GetType` no valor retornado pela propriedade <xref:System.Tuple%601.Item1%2A>.  
+  
+-   Recuperando o objeto <xref:System.Type> que representa o objeto <xref:System.Tuple%601> e recuperando o primeiro elemento da matriz que é retornada pelo método <xref:System.Type.GetGenericArguments%2A?displayProperty=nameWithType>.  
+  
+ O exemplo ilustra as duas abordagens.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe informações sobre duas singletons e seus componentes.  
+  
+ [!code-csharp[System.Tuple\`1.Item1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple`1.item1/cs/item1.cs#1)]
+ [!code-vb[System.Tuple\`1.Item1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple`1.item1/vb/item1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IStructuralComparable.CompareTo">
+      <MemberSignature Language="C#" Value="int IStructuralComparable.CompareTo (object other, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IStructuralComparable.CompareTo(object other, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple`1.System#Collections#IStructuralComparable#CompareTo(System.Object,System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="other">Um objeto a ser comparado com a instância atual.</param>
+        <param name="comparer">Um objeto que fornece regras personalizadas para comparação.</param>
+        <summary>Compara o objeto <see cref="T:System.Tuple`1" /> atual com um objeto especificado usando um comparador especificado e retorna um inteiro que indica se o objeto atual está antes, depois ou na mesma posição do objeto especificado na ordem de classificação.</summary>
+        <returns>Um inteiro assinado que indica a posição relativa dessa instância e <paramref name="other" /> na ordem de classificação, conforme mostrado na tabela a seguir.  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>Um inteiro negativo  
+  
+ </term><description>Essa instância precede <paramref name="other" />.  
+  
+ </description></item><item><term>Zero  
+  
+ </term><description>Essa instância e <paramref name="other" /> têm a mesma posição na ordem de classificação.  
+  
+ </description></item><item><term>Um número inteiro positivo  
+  
+ </term><description>Essa instância segue <paramref name="other" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora esse método pode ser chamado diretamente, geralmente é chamado pela coleção de métodos que incluem a classificação <xref:System.Collections.IComparer> parâmetros para ordenar os membros de uma coleção. Por exemplo, ele é chamado pelo método <xref:System.Array.Sort%28System.Array%2CSystem.Collections.IComparer%29?displayProperty=nameWithType> e pelo método <xref:System.Collections.SortedList.Add%2A> de um objeto <xref:System.Collections.SortedList> que é instanciado usando-se o construtor <xref:System.Collections.SortedList.%23ctor%28System.Collections.IComparer%29?displayProperty=nameWithType>.  
+  
+> [!CAUTION]
+>  O <xref:System.Tuple%601.System%23Collections%23IStructuralComparable%23CompareTo%2A> método destina-se ao uso em operações de classificação. Ele não deve ser usado quando a finalidade principal de uma comparação é determinar se dois objetos são iguais. Para determinar se dois objetos são iguais, chame o <xref:System.Tuple%601.System%23Collections%23IStructuralEquatable%23Equals%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma classe genérica denominada `DescendingComparer` que implementa o <xref:System.Collections.Generic.IComparer%601> interface. `DescendingComparer`classifica os objetos em ordem decrescente, em vez de ordem crescente por Revertendo o valor retornado pelo comparador padrão para um tipo específico. Uma instância do genérica `DescendingComparer` classe é então passada para o <xref:System.Array.Sort%28System.Array%2CSystem.Collections.IComparer%29?displayProperty=nameWithType> método para classificar uma matriz de <xref:System.Tuple%601> objetos em ordem decrescente. Observe que o exemplo não chama diretamente o <xref:System.Tuple%601.System%23Collections%23IStructuralComparable%23CompareTo%2A> método. Este método é chamado implicitamente pelo método <xref:System.Array.Sort%28System.Array%2CSystem.Collections.IComparer%29?displayProperty=nameWithType> para cada elemento na matriz.  
+  
+ [!code-csharp[System.Tuple\`1.CompareTo#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple`1.compareto/cs/compareto2.cs#2)]
+ [!code-vb[System.Tuple\`1.CompareTo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple`1.compareto/vb/compareto2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="other" /> não é um objeto <see cref="T:System.Tuple`1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IStructuralEquatable.Equals">
+      <MemberSignature Language="C#" Value="bool IStructuralEquatable.Equals (object other, System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IStructuralEquatable.Equals(object other, class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple`1.System#Collections#IStructuralEquatable#Equals(System.Object,System.Collections.IEqualityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="other">O objeto a ser comparado com essa instância.</param>
+        <param name="comparer">Um objeto que define o método a ser usado para avaliar se dois objetos são iguais.</param>
+        <summary>Retorna um valor que indica se o objeto <see cref="T:System.Tuple`1" /> atual é igual ao objeto especificado com base em um determinado método de comparação.</summary>
+        <returns>
+          <see langword="true" /> caso a instância atual seja igual ao objeto especificado; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Tuple%601> é convertida em uma interface de <xref:System.Collections.IStructuralEquatable>.  
+  
+ O <xref:System.Collections.IEqualityComparer.Equals%2A?displayProperty=nameWithType> implementação é chamada somente se `other` não é `null`, e se ele pode ser com êxito cast (em c#) ou convertido (no Visual Basic) em um <xref:System.Tuple%601> cujo único componente é do mesmo tipo que a instância atual do objeto. É passado para o método de <xref:System.Tuple%601.Item1%2A> componente da instância atual e o <xref:System.Tuple%601.Item1%2A> componente do <xref:System.Tuple%601> objeto representado pelo `other` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define um <xref:System.Collections.IEqualityComparer> implementação que considera dois valores de ponto flutuante são iguais se forem aproximadamente iguais ao outro (ou seja, se um valor está dentro de.01% das outras).  
+  
+ [!code-csharp[System.Tuple\`1.Equals#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple`1.equals/cs/equals2.cs#2)]
+ [!code-vb[System.Tuple\`1.Equals#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple`1.equals/vb/equals2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IStructuralEquatable.GetHashCode">
+      <MemberSignature Language="C#" Value="int IStructuralEquatable.GetHashCode (System.Collections.IEqualityComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IStructuralEquatable.GetHashCode(class System.Collections.IEqualityComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple`1.System#Collections#IStructuralEquatable#GetHashCode(System.Collections.IEqualityComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">Um objeto cujo <see cref="M:System.Collections.IEqualityComparer.GetHashCode(System.Object)" /> método calcula o código hash da atual <see cref="T:System.Tuple`1" /> objeto.</param>
+        <summary>Calcula o código hash para o objeto <see cref="T:System.Tuple`1" /> atual usando um método de computação especificado.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Tuple%601> é convertida em uma interface de <xref:System.Collections.IStructuralEquatable>.  
+  
+ O método simplesmente encapsula uma chamada para o objeto `comparer` na implementação <xref:System.Collections.IEqualityComparer.GetHashCode%2A?displayProperty=nameWithType>.  
+  
+ O algoritmo usado para calcular o código hash deve retornar o mesmo código hash para duas <xref:System.Tuple%601> objetos que são considerados iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IComparable.CompareTo">
+      <MemberSignature Language="C#" Value="int IComparable.CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.IComparable.CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple`1.System#IComparable#CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado com a instância atual.</param>
+        <summary>Compara o objeto <see cref="T:System.Tuple`1" /> atual a um objeto especificado e retorna um inteiro que indica se o objeto atual está antes, depois ou na mesma posição que o objeto especificado na ordem de classificação.</summary>
+        <returns>Um inteiro assinado que indica a posição relativa dessa instância e <paramref name="obj" /> na ordem de classificação, conforme mostrado na tabela a seguir.  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>Um inteiro negativo  
+  
+ </term><description>Essa instância precede <paramref name="obj" />.  
+  
+ </description></item><item><term>Zero  
+  
+ </term><description>Essa instância e <paramref name="obj" /> têm a mesma posição na ordem de classificação.  
+  
+ </description></item><item><term>Um número inteiro positivo  
+  
+ </term><description>Essa instância segue <paramref name="obj" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Tuple%601> é convertida em uma interface de <xref:System.IComparable>.  
+  
+ Esse método fornece o <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> implementação para o <xref:System.Tuple%601> classe. Embora possa ser chamado diretamente, o método é mais comumente chamado pelas sobrecargas padrão de métodos de classificação da coleção, como <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType> e <xref:System.Collections.SortedList.Add%2A?displayProperty=nameWithType>, para classificar os membros de uma coleção.  
+  
+> [!CAUTION]
+>  O <xref:System.Tuple%601.System%23IComparable%23CompareTo%2A?displayProperty=nameWithType> método destina-se ao uso em operações de classificação. Ele não deve ser usado quando a finalidade principal de uma comparação é determinar se dois objetos são iguais. Para determinar se dois objetos são iguais, chame o <xref:System.Tuple%601.Equals%2A> método.  
+  
+ O <xref:System.Tuple%601.System%23IComparable%23CompareTo%2A?displayProperty=nameWithType> método usa o comparador de objeto padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma matriz de singletons cujo componente é um <xref:System.Double> valor. Exibe o valor de cada componente de tupla na ordem não classificado, classifica a matriz e, em seguida, exibe os valores em ordem classificada. Observe que o exemplo não chama diretamente o <xref:System.Tuple%601.System%23IComparable%23CompareTo%2A?displayProperty=nameWithType> método. Este método é chamado implicitamente pelo método <xref:System.Array.Sort%28System.Array%29> para cada elemento na matriz.  
+  
+ [!code-csharp[System.Tuple\`1.CompareTo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple`1.compareto/cs/compareto1.cs#1)]
+ [!code-vb[System.Tuple\`1.CompareTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple`1.compareto/vb/compareto1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="obj" /> não é um objeto <see cref="T:System.Tuple`1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.CompilerServices.ITuple.Item">
+      <MemberSignature Language="C#" Value="object System.Runtime.CompilerServices.ITuple.Item[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Runtime.CompilerServices.ITuple.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Tuple`1.System#Runtime#CompilerServices#ITuple#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.CompilerServices.ITuple.Length">
+      <MemberSignature Language="C#" Value="int System.Runtime.CompilerServices.ITuple.Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Runtime.CompilerServices.ITuple.Length" />
+      <MemberSignature Language="DocId" Value="P:System.Tuple`1.System#Runtime#CompilerServices#ITuple#Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o valor desta instância <see cref="T:System.Tuple`1" />.</summary>
+        <returns>A representação de cadeia de caracteres desse objeto <see cref="T:System.Tuple`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada por este método assume a forma (*Item1*), onde *Item1* representa o valor da <xref:System.Tuple%601.Item1%2A> propriedade. Se o valor de <xref:System.Tuple%601.Item1%2A> é `null`, ela é representada como <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o <xref:System.Tuple%601.ToString%2A> método.  
+  
+ [!code-csharp[System.Tuple\`1.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple`1.tostring/cs/tostring1.cs#1)]
+ [!code-vb[System.Tuple\`1.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple`1.tostring/vb/tostring1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

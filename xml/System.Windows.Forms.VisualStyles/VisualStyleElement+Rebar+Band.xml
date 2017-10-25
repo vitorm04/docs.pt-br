@@ -1,0 +1,67 @@
+<Type Name="VisualStyleElement+Rebar+Band" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Rebar+Band">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Rebar.Band" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Rebar/Band extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar.Band" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> para uma faixa de rebar. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar.Band.Normal%2A> propriedade o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar.Band> classe retorna um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> que representa uma faixa de rebar.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar.Band.Normal%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElementRebarBand1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#207](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#207)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#207](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#207)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar.Band.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa uma faixa de rebar.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa uma faixa de rebar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar.Band.Normal%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar.Band.Normal%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElementRebarBand1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#207](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#207)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#207](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#207)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

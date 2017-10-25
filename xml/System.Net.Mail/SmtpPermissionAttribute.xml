@@ -1,0 +1,129 @@
+<Type Name="SmtpPermissionAttribute" FullName="System.Net.Mail.SmtpPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SmtpPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SmtpPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.SmtpPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Controla o acesso aos servidores SMTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Mail.SmtpPermission> e <xref:System.Net.Mail.SmtpPermissionAttribute> classes controlam o acesso a computadores de host SMTP. O <xref:System.Net.Mail.SmtpClient> classe demandas um <xref:System.Net.Mail.SmtpPermission> ao enviar emails para o host SMTP para entrega.  
+  
+ O <xref:System.Net.Mail.SmtpAccess> enumeração Especifica o nível de acesso controlado por uma instância dessa permissão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SmtpPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.SmtpPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Uma da <see cref="T:System.Security.Permissions.SecurityAction" /> valores que especifica o comportamento de permissão.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.SmtpPermissionAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ação de segurança define quais chamadores devem ter a permissão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="action" /> não é um <see cref="T:System.Security.Permissions.SecurityAction" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Access">
+      <MemberSignature Language="C#" Value="public string Access { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Access" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.SmtpPermissionAttribute.Access" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de acesso a servidores SMTP controlados pelo atributo.</summary>
+        <value>Um valor <see cref="T:System.String" />. Os valores válidos são "Conectar" e "None".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você especificar um valor inválido ao definir essa propriedade, o <xref:System.Net.Mail.SmtpPermissionAttribute.CreatePermission%2A> método lançará um <xref:System.ArgumentException> quando chamada pelo sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.SmtpPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um objeto de permissão que pode ser armazenado com o <see cref="T:System.Security.Permissions.SecurityAction" /> nos metadados de um assembly.</summary>
+        <returns>Uma instância <see cref="T:System.Net.Mail.SmtpPermission" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só deve ser chamado pelo sistema de segurança, nunca pelo código do aplicativo.  
+  
+ Em tempo de compilação, os atributos são convertidos em declarações de segurança e armazenados nos metadados do Microsoft intermediate language (MSIL). Em tempo de execução, as declarações de segurança nos metadados são usadas para criar objetos de permissão que são mapeados para o estado descrito nos metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

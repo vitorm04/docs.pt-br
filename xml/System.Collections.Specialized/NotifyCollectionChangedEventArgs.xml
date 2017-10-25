@@ -1,0 +1,555 @@
+<Type Name="NotifyCollectionChangedEventArgs" FullName="System.Collections.Specialized.NotifyCollectionChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class NotifyCollectionChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NotifyCollectionChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.ObjectModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso deve ser definido como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Reset" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve uma alteração <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Reset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, System.Collections.IList changedItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, class System.Collections.IList changedItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Collections.IList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="changedItems" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Pode ser definido como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Reset" />, <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Add" /> ou <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Remove" />.</param>
+        <param name="changedItems">Os itens que são afetados pela alteração.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve uma alteração de vários itens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, object changedItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, object changedItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="changedItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso pode ser definido como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Reset" />, <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Add" /> ou <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Remove" />.</param>
+        <param name="changedItem">O item afetado pela alteração.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve uma alteração de um item.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="action" /> não for Reset, Add nem Remove ou se <paramref name="action" /> for Reset e <paramref name="changedItem" /> não for nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, System.Collections.IList newItems, System.Collections.IList oldItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, class System.Collections.IList newItems, class System.Collections.IList oldItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Collections.IList,System.Collections.IList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="newItems" Type="System.Collections.IList" />
+        <Parameter Name="oldItems" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso pode ser definido apenas como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" />.</param>
+        <param name="newItems">Os novos itens que estão substituindo os itens originais.</param>
+        <param name="oldItems">Os itens originais que são substituídos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve uma alteração <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" /> de vários itens.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="action" /> não for Replace.</exception>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="oldItems" /> ou <paramref name="newItems" /> for nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, System.Collections.IList changedItems, int startingIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, class System.Collections.IList changedItems, int32 startingIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Collections.IList,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="changedItems" Type="System.Collections.IList" />
+        <Parameter Name="startingIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso pode ser definido como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Reset" />, <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Add" /> ou <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Remove" />.</param>
+        <param name="changedItems">Os itens afetados pela alteração.</param>
+        <param name="startingIndex">O índice no qual ocorreu a alteração.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve uma alteração de vários itens ou uma alteração de <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Reset" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="action" /> não for Reset, Add ou Remove, se <paramref name="action" /> for Reset e <paramref name="changedItems" /> não for nulo ou <paramref name="startingIndex" /> não for -1 ou se a ação for Add ou Remove e <paramref name="startingIndex" /> for menor que -1.</exception>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="action" /> for Add ou Remove e <paramref name="changedItems" /> for nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, object changedItem, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, object changedItem, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="changedItem" Type="System.Object" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso pode ser definido como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Reset" />, <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Add" /> ou <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Remove" />.</param>
+        <param name="changedItem">O item afetado pela alteração.</param>
+        <param name="index">O índice no qual ocorreu a alteração.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve uma alteração de um item.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="action" /> não for Reset, Add nem Remove ou se <paramref name="action" /> for Reset e <paramref name="changedItems" /> não for nulo ou <paramref name="index" /> não for -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, object newItem, object oldItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, object newItem, object oldItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="newItem" Type="System.Object" />
+        <Parameter Name="oldItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso pode ser definido apenas como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" />.</param>
+        <param name="newItem">O novo item que está substituindo o item original.</param>
+        <param name="oldItem">O item original é substituído.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve um item de uma classe <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" /> alterar.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="action" /> não for Replace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, System.Collections.IList newItems, System.Collections.IList oldItems, int startingIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, class System.Collections.IList newItems, class System.Collections.IList oldItems, int32 startingIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Collections.IList,System.Collections.IList,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="newItems" Type="System.Collections.IList" />
+        <Parameter Name="oldItems" Type="System.Collections.IList" />
+        <Parameter Name="startingIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso pode ser definido apenas como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" />.</param>
+        <param name="newItems">Os novos itens que estão substituindo os itens originais.</param>
+        <param name="oldItems">Os itens originais que são substituídos.</param>
+        <param name="startingIndex">O índice do primeiro item dos itens que estão sendo substituídos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve uma alteração <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" /> de vários itens.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="action" /> não for Replace.</exception>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="oldItems" /> ou <paramref name="newItems" /> for nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, System.Collections.IList changedItems, int index, int oldIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, class System.Collections.IList changedItems, int32 index, int32 oldIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Collections.IList,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="changedItems" Type="System.Collections.IList" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso pode ser definido apenas como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Move" />.</param>
+        <param name="changedItems">Os itens afetados pela alteração.</param>
+        <param name="index">O novo índice para os itens alterados.</param>
+        <param name="oldIndex">O índice antigo para os itens alterados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve uma alteração <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Move" /> de vários itens.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="action" /> não é mover ou <paramref name="index" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, object changedItem, int index, int oldIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, object changedItem, int32 index, int32 oldIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="changedItem" Type="System.Object" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso pode ser definido apenas como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Move" />.</param>
+        <param name="changedItem">O item foi afetado pela mudança.</param>
+        <param name="index">O novo índice do item alterado.</param>
+        <param name="oldIndex">O índice antigo para o item alterado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve um item de uma classe <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Move" /> alterar.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="action" /> não é mover ou <paramref name="index" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotifyCollectionChangedEventArgs (System.Collections.Specialized.NotifyCollectionChangedAction action, object newItem, object oldItem, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Collections.Specialized.NotifyCollectionChangedAction action, object newItem, object oldItem, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NotifyCollectionChangedEventArgs.#ctor(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Object,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Collections.Specialized.NotifyCollectionChangedAction" />
+        <Parameter Name="newItem" Type="System.Object" />
+        <Parameter Name="oldItem" Type="System.Object" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que causou o evento. Isso pode ser definido como <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" />.</param>
+        <param name="newItem">O novo item que está substituindo o item original.</param>
+        <param name="oldItem">O item original é substituído.</param>
+        <param name="index">O índice do item que está sendo substituído.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs" /> que descreve um item de uma classe <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" /> alterar.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="action" /> não for Replace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NotifyCollectionChangedAction Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.Specialized.NotifyCollectionChangedAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NotifyCollectionChangedAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ação que causou o evento.</summary>
+        <value>Um valor de <see cref="T:System.Collections.Specialized.NotifyCollectionChangedAction" /> que descreve a ação que causou o evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewItems">
+      <MemberSignature Language="C#" Value="public System.Collections.IList NewItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList NewItems" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.NewItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de novos itens envolvidos na alteração.</summary>
+        <value>A lista de novos itens envolvidos na alteração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewStartingIndex">
+      <MemberSignature Language="C#" Value="public int NewStartingIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewStartingIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.NewStartingIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice no qual a alteração ocorreu.</summary>
+        <value>O índice baseado em zero no qual a alteração ocorreu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldItems">
+      <MemberSignature Language="C#" Value="public System.Collections.IList OldItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList OldItems" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de itens afetados por uma ação de <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" />, Remover ou Mover.</summary>
+        <value>A lista de itens afetados por uma ação de <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Replace" />, Remover ou Mover.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldStartingIndex">
+      <MemberSignature Language="C#" Value="public int OldStartingIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OldStartingIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice no qual ocorreu uma ação <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Move" />, Remove ou Replace.</summary>
+        <value>O índice baseado em zero no qual ocorreu uma ação <see cref="F:System.Collections.Specialized.NotifyCollectionChangedAction.Move" />, Remove ou Replace.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

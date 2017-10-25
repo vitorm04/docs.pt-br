@@ -1,0 +1,161 @@
+<Type Name="DictationGrammar" FullName="System.Speech.Recognition.DictationGrammar">
+  <TypeSignature Language="C#" Value="public class DictationGrammar : System.Speech.Recognition.Grammar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DictationGrammar extends System.Speech.Recognition.Grammar" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.DictationGrammar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.Grammar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma gramática de reconhecimento de fala usada para ditado de texto livre.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece aplicativos com um modelo de idioma predefinido que pode processar a entrada do usuário falado em texto. Esta classe dá suporte ao padrão e personalizadas <xref:System.Speech.Recognition.DictationGrammar> objetos. Para obter informações sobre como selecionar uma gramática ditado, consulte o <xref:System.Speech.Recognition.DictationGrammar.%23ctor%28System.String%29> construtor.  
+  
+ Por padrão, o <xref:System.Speech.Recognition.DictationGrammar> modelo de idioma é livre de contexto. Não faz uso de palavras específicas ou para identificar e interpretar a entrada de áudio do word. Para adicionar o contexto para a gramática ditado, use o <xref:System.Speech.Recognition.DictationGrammar.SetDictationContext%2A> método.  
+  
+> [!NOTE]
+>  <xref:System.Speech.Recognition.DictationGrammar>objetos não dão suporte a <xref:System.Speech.Recognition.Grammar.Priority%2A> propriedade. <xref:System.Speech.Recognition.DictationGrammar>gera um <xref:System.NotSupportedException> se <xref:System.Speech.Recognition.Grammar.Priority%2A> está definido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria três gramáticas de ditado, adiciona-os para uma nova <xref:System.Speech.Recognition.SpeechRecognitionEngine> de objeto e retorna o novo objeto. A gramática a primeira é a gramática de ditado padrão. A gramática de segundo é a gramática de ditado de ortografia. A gramática de terceira é a gramática de ditado padrão que inclui uma frase de contexto. O <xref:System.Speech.Recognition.DictationGrammar.SetDictationContext%2A> método é usado para associar a frase de contexto a gramática do ditado depois que ela é carregada para o <xref:System.Speech.Recognition.SpeechRecognitionEngine> objeto.  
+  
+```csharp  
+  
+private SpeechRecognitionEngine LoadDictationGrammars()  
+{  
+  
+  // Create a default dictation grammar.  
+  DictationGrammar defaultDictationGrammar = new DictationGrammar();  
+  defaultDictationGrammar.Name = "default dictation";  
+  defaultDictationGrammar.Enabled = true;  
+  
+  // Create the spelling dictation grammar.  
+  DictationGrammar spellingDictationGrammar =  
+    new DictationGrammar("grammar:dictation#spelling");  
+  spellingDictationGrammar.Name = "spelling dictation";  
+  spellingDictationGrammar.Enabled = true;  
+  
+  // Create the question dictation grammar.  
+  DictationGrammar customDictationGrammar =  
+    new DictationGrammar("grammar:dictation");  
+  customDictationGrammar.Name = "question dictation";  
+  customDictationGrammar.Enabled = true;  
+  
+  // Create a SpeechRecognitionEngine object and add the grammars to it.  
+  SpeechRecognitionEngine recoEngine = new SpeechRecognitionEngine();  
+  recoEngine.LoadGrammar(defaultDictationGrammar);  
+  recoEngine.LoadGrammar(spellingDictationGrammar);  
+  recoEngine.LoadGrammar(customDictationGrammar);  
+  
+  // Add a context to customDictationGrammar.  
+  customDictationGrammar.SetDictationContext("How do you", null);  
+  
+  return recoEngine;  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DictationGrammar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.DictationGrammar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.DictationGrammar" /> classe para a gramática de ditado padrão fornecida pela tecnologia de fala de área de trabalho do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A gramática de ditado padrão emula práticas ditado padrão, inclusive a pontuação. Ele não oferece suporte a ortografia de uma palavra.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DictationGrammar (string topic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string topic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.DictationGrammar.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="topic" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="topic">Um XML compatível Universal URI (Resource Identifier) que especifica a gramática de ditado ou <c>gramática: ditado</c> ou <c>gramática: ditado #spelling</c>.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Speech.Recognition.DictationGrammar" /> com uma gramática de ditado específica.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Plataforma de fala usa uma sintaxe especializada do URI para definir a gramática ditado personalizado. O valor `grammar:dictation` indica a gramática de ditado padrão. O valor `grammar:dictation#spelling` indica a gramática de ditado de ortografia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDictationContext">
+      <MemberSignature Language="C#" Value="public void SetDictationContext (string precedingText, string subsequentText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDictationContext(string precedingText, string subsequentText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.DictationGrammar.SetDictationContext(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="precedingText" Type="System.String" />
+        <Parameter Name="subsequentText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="precedingText">Texto que indica o início de um contexto de ditado.</param>
+        <param name="subsequentText">Texto que indica o final de um contexto de ditado.</param>
+        <summary>Adiciona um contexto a uma gramática de ditado que foi carregada por um objeto <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a gramática ditado não fazer uso de palavras específicas ou para identificar e interpretar a entrada de áudio do word. Quando um contexto é adicionado a uma gramática ditado, usa o mecanismo de reconhecimento de `precedingText` e `subsequentText` para identificar quando interpretar fala como ditado.  
+  
+> [!NOTE]
+>  Uma gramática ditado deve ser carregada por um <xref:System.Speech.Recognition.SpeechRecognizer> ou <xref:System.Speech.Recognition.SpeechRecognitionEngine> objeto antes de usar <xref:System.Speech.Recognition.DictationGrammar.SetDictationContext%2A> para adicionar um contexto.  
+  
+ A tabela a seguir descreve como o mecanismo de reconhecimento usa dois parâmetros para determinar quando usar a gramática ditado.  
+  
+|`precedingText`|`subsequentText`|Descrição|  
+|---------------------|----------------------|-----------------|  
+|não é `null`|não é `null`|O mecanismo de reconhecimento usa os termos para colchete frases de candidato possível.|  
+|`null`|não é `null`|Usa o mecanismo de reconhecimento de `subsequentText` conclusão ditado.|  
+|não é `null`|`null`|Usa o mecanismo de reconhecimento de `precedingText` Iniciar ditado.|  
+|`null`|`null`|O mecanismo de reconhecimento não usar um contexto ao usar a gramática ditado.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

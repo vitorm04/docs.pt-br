@@ -1,0 +1,343 @@
+<Type Name="CngUIPolicy" FullName="System.Security.Cryptography.CngUIPolicy">
+  <TypeSignature Language="C#" Value="public sealed class CngUIPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CngUIPolicy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngUIPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula os parâmetros de configuração opcionais para a interface do usuário que a CNG (Cryptography Next Generation) exibe quando você acessa uma chave protegida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe permite que você crie uma política de interface do usuário para exibir avisos sobre operações de chave como um cartão inteligente que prompts de PIN. Também permite que você aplique a interação do usuário para acessar uma chave, mesmo se a chave é armazenada em um software armazenamento de chaves KSP (provedor) em vez de em um cartão inteligente. CNG exibe esses parâmetros de configuração para a interface do usuário ao acessar uma chave protegida.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Uma combinação bit a bit dos valores de enumeração que especificam o nível de proteção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.CngUIPolicy" /> classe usando o nível de proteção especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor define o nível de proteção para a chave em cenários de solicitação de interface do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+        <Parameter Name="friendlyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Uma combinação bit a bit dos valores de enumeração que especificam o nível de proteção.</param>
+        <param name="friendlyName">Um nome amigável para a chave a ser usada no prompt de interface do usuário. Especifique uma cadeia de caracteres nula para usar o nome padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.CngUIPolicy" /> classe usando o nível de proteção especificado e amigável para nome.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+        <Parameter Name="friendlyName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Uma combinação bit a bit dos valores de enumeração que especificam o nível de proteção.</param>
+        <param name="friendlyName">Um nome amigável para a chave a ser usada no prompt de interface do usuário. Especifique uma cadeia de caracteres nula para usar o nome padrão.</param>
+        <param name="description">A descrição de texto completo da chave. Especifique uma cadeia de caracteres nula para usar a descrição padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.CngUIPolicy" /> classe usando o nível de proteção especificado, o nome amigável e a descrição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description, string useContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description, string useContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+        <Parameter Name="friendlyName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="useContext" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Uma combinação bit a bit dos valores de enumeração que especificam o nível de proteção.</param>
+        <param name="friendlyName">Um nome amigável para a chave a ser usada no prompt de interface do usuário. Especifique uma cadeia de caracteres nula para usar o nome padrão.</param>
+        <param name="description">A descrição de texto completo da chave. Especifique uma cadeia de caracteres nula para usar a descrição padrão.</param>
+        <param name="useContext">Uma descrição de como a chave será usada. Especifique uma cadeia de caracteres nula para usar a descrição padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.CngUIPolicy" /> classe usando o nível de proteção especificado, o nome amigável, a cadeia de caracteres de descrição e use o contexto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngUIPolicy (System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description, string useContext, string creationTitle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.CngUIProtectionLevels protectionLevel, string friendlyName, string description, string useContext, string creationTitle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngUIPolicy.#ctor(System.Security.Cryptography.CngUIProtectionLevels,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionLevel" Type="System.Security.Cryptography.CngUIProtectionLevels" />
+        <Parameter Name="friendlyName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="useContext" Type="System.String" />
+        <Parameter Name="creationTitle" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="protectionLevel">Uma combinação bit a bit dos valores de enumeração que especificam o nível de proteção.</param>
+        <param name="friendlyName">Um nome amigável para a chave a ser usada no prompt de interface do usuário. Especifique uma cadeia de caracteres nula para usar o nome padrão.</param>
+        <param name="description">A descrição de texto completo da chave. Especifique uma cadeia de caracteres nula para usar a descrição padrão.</param>
+        <param name="useContext">Uma descrição de como a chave será usada. Especifique uma cadeia de caracteres nula para usar a descrição padrão.</param>
+        <param name="creationTitle">O título da caixa de diálogo que fornece o prompt da interface do usuário. Especifique uma cadeia de caracteres nula para usar o título padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.CngUIPolicy" /> classe usando o nível de proteção especificado nome amigável, cadeia de caracteres de descrição, o contexto de uso e título.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreationTitle">
+      <MemberSignature Language="C#" Value="public string CreationTitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CreationTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.CreationTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o título exibido pela interface do usuário do prompt.</summary>
+        <value>O título da caixa de diálogo que aparece quando a chave for acessada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de descrição é exibida pela interface do usuário do prompt.</summary>
+        <value>O texto de descrição para a caixa de diálogo que aparece quando a chave for acessada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FriendlyName">
+      <MemberSignature Language="C#" Value="public string FriendlyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FriendlyName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.FriendlyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome amigável que é exibido pela interface do usuário do prompt.</summary>
+        <value>O nome amigável que é usado para descrever a chave na caixa de diálogo que aparece quando a chave for acessada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CngUIProtectionLevels ProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.CngUIProtectionLevels ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngUIProtectionLevels</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nível de proteção de interface do usuário para a chave.</summary>
+        <value>Um objeto que descreve o nível de proteção de interface do usuário para aplicar à chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseContext">
+      <MemberSignature Language="C#" Value="public string UseContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UseContext" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngUIPolicy.UseContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição de como a chave será usada.</summary>
+        <value>A descrição de como a chave será usada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

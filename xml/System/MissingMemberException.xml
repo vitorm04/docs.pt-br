@@ -1,0 +1,450 @@
+<Type Name="MissingMemberException" FullName="System.MissingMemberException">
+  <TypeSignature Language="C#" Value="public class MissingMemberException : MemberAccessException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MissingMemberException extends System.MemberAccessException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.MissingMemberException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MemberAccessException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção gerada quando há uma tentativa de acessar dinamicamente um membro de classe que não existe ou que não está declarado como público. Se um membro em uma biblioteca de classes tiver sido removido ou renomeado, recompile todos os assemblies referenciam essa biblioteca.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um erro de compilação é gerado se o código tenta acessar um membro não existente de uma classe. <xref:System.MissingMemberException>foi projetado para lidar com casos em que um campo ou um método é excluído ou renomeado em um assembly e a alteração não será refletida em um segundo conjunto. Em tempo de execução, <xref:System.MissingMemberException> será lançada quando o código no segundo conjunto tenta acessar o membro ausente no assembly primeiro.  
+  
+ <xref:System.MissingMemberException>é a classe base para <xref:System.MissingFieldException> e <xref:System.MissingMethodException>. Em geral é melhor usar uma das classes derivadas da <xref:System.MissingMemberException> para indicar com mais precisão a natureza exata do erro. Gerar um <xref:System.MissingMemberException> se você só está interessado em capturar o caso geral de um erro de membro ausente.  
+  
+ <xref:System.MissingMemberException>usa o HRESULT COR_E_MISSINGMEMBER, que tem o valor 0x80131512.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.MissingMemberException>, consulte o <xref:System.MissingMemberException.%23ctor%2A> construtores.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra o que acontece se você tentar usar reflexão para chamar um método que não existe e o acesso um campo que não existe. O aplicativo recupera capturando o <xref:System.MissingMethodException>, <xref:System.MissingFieldException>, e <xref:System.MissingMemberException>.  
+  
+ [!code-cpp[MissingMethodException#1](~/samples/snippets/cpp/VS_Snippets_CLR/MissingMethodException/cpp/MissingMethodException.cpp#1)]
+ [!code-csharp[MissingMethodException#1](~/samples/snippets/csharp/VS_Snippets_CLR/MissingMethodException/CS/MissingMethodException.cs#1)]
+ [!code-vb[MissingMethodException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/MissingMethodException/vb/missingmethodexception.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingMemberException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingMemberException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.MissingMemberException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.MissingMemberException.Message%2A> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro, como "tentativa de acessar um membro ausente." Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.MissingMemberException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.MissingMemberException.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingMemberException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingMemberException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.MissingMemberException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo a `message` parâmetro deve ser compreendido pelo usuário. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.MissingMemberException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.MissingMemberException.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MissingMemberException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingMemberException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.MissingMemberException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo. Para obter mais informações, consulte [XML e serialização SOAP](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingMemberException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingMemberException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="inner">Uma instância de <see cref="T:System.Exception" /> que é a causa do atual <see langword="Exception" />. Se <c>interna</c> não é uma referência nula (<see langword="Nothing" /> no Visual Basic), em seguida, atual <see langword="Exception" /> é gerado em um bloco catch tratamento <c>interna</c>.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.MissingMemberException" /> classe com uma mensagem de erro especificada e uma referência à exceção interna que é a causa dessa exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior pode incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor ou uma referência nula (`Nothing` no Visual Basic) caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interna para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.MissingMemberException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência de exceção interna.|  
+|<xref:System.MissingMemberException.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingMemberException (string className, string memberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string className, string memberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingMemberException.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="memberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="className">O nome da classe no qual o acesso a um membro inexistente foi tentado.</param>
+        <param name="memberName">O nome do membro que não pode ser acessado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.MissingMemberException" /> classe com o nome da classe especificado e o nome do membro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="protected string ClassName;" />
+      <MemberSignature Language="ILAsm" Value=".field family string ClassName" />
+      <MemberSignature Language="DocId" Value="F:System.MissingMemberException.ClassName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o nome da classe do membro ausente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MissingMemberException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com o nome de classe, o nome do membro, a assinatura do membro ausente e informações adicionais de exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.TypeLoadException.GetObjectData%2A>define um <xref:System.Runtime.Serialization.SerializationInfo> com todos os dados do objeto de exceção destinados para a serialização. Durante a desserialização, o objeto de exceção é reconstituído a partir do <xref:System.Runtime.Serialization.SerializationInfo> transmitido pelo fluxo.  
+  
+ Para obter mais informações, consulte <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O objeto <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /> ação de segurança:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="protected string MemberName;" />
+      <MemberSignature Language="ILAsm" Value=".field family string MemberName" />
+      <MemberSignature Language="DocId" Value="F:System.MissingMemberException.MemberName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o nome do membro ausente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.MissingMemberException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de texto mostra o nome da classe, o nome do membro e a assinatura do membro ausente.</summary>
+        <value>A cadeia de caracteres da mensagem de erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o nome da classe não for especificado quando o objeto for construído, a cadeia de caracteres de texto padrão herdada da classe base é retornada.  
+  
+ Esta propriedade substitui <xref:System.Exception.Message%2A>. A mensagem de erro deve ser localizada.  
+  
+ Esta propriedade é somente para leitura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.MissingMemberException.Message%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.MissingMemberException> classe.  
+  
+ [!code-cpp[MissingMethodException#4](~/samples/snippets/cpp/VS_Snippets_CLR/MissingMethodException/cpp/MissingMethodException.cpp#4)]
+ [!code-csharp[MissingMethodException#4](~/samples/snippets/csharp/VS_Snippets_CLR/MissingMethodException/CS/MissingMethodException.cs#4)]
+ [!code-vb[MissingMethodException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MissingMethodException/vb/missingmethodexception.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signature">
+      <MemberSignature Language="C#" Value="protected byte[] Signature;" />
+      <MemberSignature Language="ILAsm" Value=".field family unsigned int8[] Signature" />
+      <MemberSignature Language="DocId" Value="F:System.MissingMemberException.Signature" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém a assinatura do membro ausente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.MissingMemberException.Signature>contém uma <xref:System.Byte> valor que representa a assinatura de membro ausente.  
+  
+ <xref:System.String.Format%2A>é usada para formatar a assinatura. Para obter mais informações, consulte <xref:System.Reflection.Emit.SignatureHelper>, <xref:System.Reflection.Emit.SignatureToken>, e <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

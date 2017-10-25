@@ -1,0 +1,135 @@
+<Type Name="ActiveDirectoryReplicationMetadata" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata">
+  <TypeSignature Language="C#" Value="public class ActiveDirectoryReplicationMetadata : System.Collections.DictionaryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveDirectoryReplicationMetadata extends System.Collections.DictionaryBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.DictionaryBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata" /> classe contém informações de replicação para um conjunto de atributos de serviços de domínio do Active Directory.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AttributeNames">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlyStringCollection AttributeNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReadOnlyStringCollection AttributeNames" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata.AttributeNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlyStringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes que estão contidos na coleção.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> objeto que contém o LDAP exibir nomes dos atributos nesta coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">O protocolo LDAP exibir nome do atributo a ser pesquisado.</param>
+        <summary>Determina se o atributo especificado está na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o atributo estiver na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.ActiveDirectory.AttributeMetadata[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.ActiveDirectory.AttributeMetadata[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata.CopyTo(System.DirectoryServices.ActiveDirectory.AttributeMetadata[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.DirectoryServices.ActiveDirectory.AttributeMetadata[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz de <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objetos que recebe os elementos desta coleção.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> onde esse método inicia a cópia desta coleção.</param>
+        <summary>Copia todos os <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objetos na coleção para a matriz especificada, iniciando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">A matriz de destino não é grande o suficiente para manter o número necessário de elementos.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />está fora do intervalo da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AttributeMetadata this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.AttributeMetadata Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AttributeMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de exibição do LDAP do atributo para obter.</param>
+        <summary>Obtém um <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objeto na coleção.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objeto que representa o atributo especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores contidos nesta coleção.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> objeto que contém o <see cref="T:System.DirectoryServices.ActiveDirectory.AttributeMetadata" /> objetos nesta coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

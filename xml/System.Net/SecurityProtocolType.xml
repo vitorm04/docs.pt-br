@@ -1,0 +1,203 @@
+<Type Name="SecurityProtocolType" FullName="System.Net.SecurityProtocolType">
+  <TypeSignature Language="C#" Value="public enum SecurityProtocolType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityProtocolType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.SecurityProtocolType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.ServicePoint</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os protocolos de segurança que têm suporte do pacote de segurança do Schannel.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração define os valores permitidos para o <xref:System.Net.ServicePointManager.SecurityProtocol%2A> propriedade e especifica os protocolos de segurança que são usados por instâncias do <xref:System.Net.Security.SslStream> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Net.Sockets.TcpClient> que usa o <xref:System.Net.Security.SslStream> classe para se comunicar com um servidor.  
+  
+ [!code-cpp[NclSslClientSync#0](~/samples/snippets/cpp/VS_Snippets_Remoting/NclSslClientSync/CPP/clientsync.cpp#0)]
+ [!code-csharp[NclSslClientSync#0](~/samples/snippets/csharp/VS_Snippets_Remoting/NclSslClientSync/CS/clientsync.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ssl3">
+      <MemberSignature Language="C#" Value="Ssl3" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.SecurityProtocolType Ssl3 = int32(48)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.SecurityProtocolType.Ssl3" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.ServicePoint</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.SecurityProtocolType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o protocolo de segurança SSL (Secure Socket Layer) 3.0.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ SSL 3.0 foi substituída pelo protocolo de segurança de camada de transporte (TLS) e é fornecida para fins de compatibilidade com versões anteriores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDefault">
+      <MemberSignature Language="C#" Value="SystemDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.SecurityProtocolType SystemDefault = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.SecurityProtocolType.SystemDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.ServicePoint</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.SecurityProtocolType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o protocolo de segurança do sistema padrão, conforme definido pela [Schannel](https://go.microsoft.com/fwlink/?linkid=833507).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tls">
+      <MemberSignature Language="C#" Value="Tls" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.SecurityProtocolType Tls = int32(192)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.SecurityProtocolType.Tls" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.ServicePoint</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.SecurityProtocolType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o protocolo de segurança TLS 1.0.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ TLS pressupõe que um protocolo orientado a conexão, normalmente TCP, está em uso. O protocolo TLS é definido no IETF RFC 2246.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tls11">
+      <MemberSignature Language="C#" Value="Tls11" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.SecurityProtocolType Tls11 = int32(768)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.SecurityProtocolType.Tls11" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.ServicePoint</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.SecurityProtocolType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o protocolo de segurança TLS 1.1.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ TLS pressupõe que um protocolo orientado a conexão, normalmente TCP, está em uso. O protocolo TLS 1.1 é definido em IETF RFC 4346.  
+  
+ Esse valor é suportado em [!INCLUDE[win7](~/includes/win7-md.md)] e posterior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tls12">
+      <MemberSignature Language="C#" Value="Tls12" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.SecurityProtocolType Tls12 = int32(3072)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.SecurityProtocolType.Tls12" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.ServicePoint</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.SecurityProtocolType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o protocolo de segurança TLS 1.2.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ TLS pressupõe que um protocolo orientado a conexão, normalmente TCP, está em uso. O protocolo TLS 1.2 é definido em IETF RFC 5246.  
+  
+ Esse valor é suportado em [!INCLUDE[win7](~/includes/win7-md.md)] e posterior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

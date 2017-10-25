@@ -1,0 +1,409 @@
+<Type Name="MarkupProperty" FullName="System.Windows.Markup.Primitives.MarkupProperty">
+  <TypeSignature Language="C#" Value="public abstract class MarkupProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MarkupProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Primitives.MarkupProperty" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe abstrata que fornece uma descrição de propriedade a ser usado ao gravar a marcação que encapsula o acesso a propriedades e seus valores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma propriedade ou é representada como uma cadeia de caracteres ou uma lista de itens.  
+  
+ Se a propriedade pode ser representada como uma cadeia de caracteres, <xref:System.Windows.Markup.Primitives.MarkupProperty.IsComposite%2A> é `false`.  
+  
+ Se <xref:System.Windows.Markup.Primitives.MarkupProperty.IsComposite%2A> é `true`, a propriedade é uma lista de itens.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public abstract System.ComponentModel.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém os atributos associados a este <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" />.</summary>
+        <value>A coleção de atributos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyProperty">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.DependencyProperty DependencyProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty DependencyProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.DependencyProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o <see cref="T:System.Windows.DependencyProperty" /> identificador para a propriedade de marcação se a propriedade é implementada como uma propriedade de dependência</summary>
+        <value>O identificador de propriedade de dependência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna o comportamento padrão `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAttached">
+      <MemberSignature Language="C#" Value="public virtual bool IsAttached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAttached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.IsAttached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, determina se este <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" /> é um conectado <see cref="T:System.Windows.DependencyProperty" />.</summary>
+        <value>
+          <see langword="true" />Se a propriedade for uma anexado <see cref="T:System.Windows.DependencyProperty" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão é retornar `false`.  
+  
+ Quando <xref:System.Windows.Markup.Primitives.MarkupProperty.IsAttached%2A> é `true`, <xref:System.Windows.Markup.Primitives.MarkupProperty.DependencyProperty%2A> não é `null` e <xref:System.Windows.Markup.Primitives.MarkupProperty.PropertyDescriptor%2A> pode ser `null`, mas não precisa ser.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsComposite">
+      <MemberSignature Language="C#" Value="public virtual bool IsComposite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsComposite" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.IsComposite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, determina se este <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" /> é uma propriedade composta.</summary>
+        <value>
+          <see langword="true" />Essa propriedade é uma propriedade composta; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão é retornar `false`.  
+  
+ Se <xref:System.Windows.Markup.Primitives.MarkupProperty.IsComposite%2A> é `false`, a propriedade pode ser representada como uma cadeia de caracteres e <xref:System.Windows.Markup.Primitives.MarkupProperty.Value%2A> e <xref:System.Windows.Markup.Primitives.MarkupProperty.StringValue%2A> são válidas para uso.  
+  
+ Se <xref:System.Windows.Markup.Primitives.MarkupProperty.IsComposite%2A> é `true`, a propriedade é um ou mais itens e <xref:System.Windows.Markup.Primitives.MarkupProperty.Items%2A> é válida para uso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConstructorArgument">
+      <MemberSignature Language="C#" Value="public virtual bool IsConstructorArgument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConstructorArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.IsConstructorArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, determina se este <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" /> representa um argumento de construtor.</summary>
+        <value>
+          <see langword="true" />Se esta propriedade representa um argumento de construtor; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão é retorno `false`.  
+  
+ Quando <xref:System.Windows.Markup.Primitives.MarkupProperty.IsConstructorArgument%2A> é `true`, <xref:System.Windows.Markup.Primitives.MarkupProperty.PropertyDescriptor%2A> e <xref:System.Windows.Markup.Primitives.MarkupProperty.DependencyProperty%2A> são ambos `null`.  
+  
+ XAML usa apenas <xref:System.Windows.Markup.Primitives.MarkupProperty.IsConstructorArgument%2A> que representa os argumentos do construtor de instâncias de <xref:System.Windows.Markup.MarkupExtension>. Consulte [extensões de marcação e WPF XAML](~/docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContent">
+      <MemberSignature Language="C#" Value="public virtual bool IsContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.IsContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, determina se este <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" /> representa direcionar o conteúdo de uma coleção.</summary>
+        <value>
+          <see langword="true" />Se a propriedade representa o conteúdo direto; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão é retornar `false`.  
+  
+ Quando <xref:System.Windows.Markup.Primitives.MarkupProperty.IsContent%2A> é `true`, <xref:System.Windows.Markup.Primitives.MarkupProperty.PropertyDescriptor%2A> e <xref:System.Windows.Markup.Primitives.MarkupProperty.DependencyProperty%2A> são ambos `null`.  
+  
+ Dicionários são incluídos para determinar se isso <xref:System.Windows.Markup.Primitives.MarkupProperty> representa direcionar o conteúdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKey">
+      <MemberSignature Language="C#" Value="public virtual bool IsKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.IsKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, determina se este <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" /> representa a chave usada pelo <see cref="T:System.Windows.Markup.Primitives.MarkupObject" /> para armazenar o item em um dicionário.</summary>
+        <value>
+          <see langword="true" />Se esta propriedade representa uma chave; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão é retornar `false`.  
+  
+ Quando <xref:System.Windows.Markup.Primitives.MarkupProperty.IsKey%2A> é `true`, <xref:System.Windows.Markup.Primitives.MarkupProperty.PropertyDescriptor%2A> e <xref:System.Windows.Markup.Primitives.MarkupProperty.DependencyProperty%2A> são `null`.  
+  
+ XAML usará a propriedade identificada como um `x:Key` atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValueAsString">
+      <MemberSignature Language="C#" Value="public virtual bool IsValueAsString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValueAsString" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.IsValueAsString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, determina se este <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" /> representa o texto que é passado para um conversor de tipo para criar uma instância da propriedade ou se um construtor deve ser usado.</summary>
+        <value>
+          <see langword="true" />, se este <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" /> representa uma cadeia de caracteres; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão é retornar`false.`  
+  
+ Quando <xref:System.Windows.Markup.Primitives.MarkupProperty.IsValueAsString%2A> é `true`, <xref:System.Windows.Markup.Primitives.MarkupProperty.PropertyDescriptor%2A> e <xref:System.Windows.Markup.Primitives.MarkupProperty.DependencyProperty%2A> são ambos `null`.  
+  
+ Se a propriedade é fornecida por meio de <xref:System.Windows.Markup.Primitives.MarkupObject.Properties%2A> e <xref:System.Windows.Markup.Primitives.MarkupProperty.IsValueAsString%2A> é `true`, ela será a única propriedade que fornece o tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Windows.Markup.Primitives.MarkupObject&gt; Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Markup.Primitives.MarkupObject&gt; Items" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Markup.Primitives.MarkupObject&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém os itens que compõem o valor dessa propriedade.</summary>
+        <value>Os itens que compõem o valor dessa propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a propriedade não é uma enumeração, somente um item será retornado.  
+  
+ Se a propriedade é uma enumeração ou enumerável, todos os itens serão retornados.  
+  
+ Pelo menos um item sempre é retornado porque <xref:System.Windows.Markup.Primitives.MarkupObject> não criará uma <xref:System.Windows.Markup.Primitives.MarkupProperty> para propriedades sem itens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um nome que é usado para relatórios de erros e de diagnóstico.</summary>
+        <value>O nome de propriedade do identificador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um serializador não deve usar esse valor. Ele deve usar o <xref:System.Windows.Markup.Primitives.MarkupProperty.PropertyDescriptor%2A> e/ou <xref:System.Windows.Markup.Primitives.MarkupProperty.DependencyProperty%2A> em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptor">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptor PropertyDescriptor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor PropertyDescriptor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.PropertyDescriptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o <see cref="T:System.ComponentModel.PropertyDescriptor" /> para a propriedade de marcação.</summary>
+        <value>O descritor da propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna o comportamento padrão `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public abstract Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo CLR da propriedade.</summary>
+        <value>O tipo CLR.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StringValue">
+      <MemberSignature Language="C#" Value="public abstract string StringValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StringValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.StringValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o valor de cadeia de caracteres deste <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" />.</summary>
+        <value>O valor da cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeReferences">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;Type&gt; TypeReferences { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; TypeReferences" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.TypeReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o conjunto de tipos que isso <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" /> fará referência ao serializar seu valor como uma cadeia de caracteres.</summary>
+        <value>O conjunto de tipos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.Primitives.MarkupProperty.TypeReferences%2A>permite que um serializador garantir que o serializador de tem informações suficientes para converter as referências a esses tipos de representações de cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupProperty.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o valor atual deste <see cref="T:System.Windows.Markup.Primitives.MarkupProperty" />.</summary>
+        <value>O valor atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

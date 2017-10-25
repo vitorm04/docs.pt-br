@@ -1,0 +1,225 @@
+<Type Name="ComboBoxItem" FullName="System.Windows.Controls.ComboBoxItem">
+  <TypeSignature Language="C#" Value="public class ComboBoxItem : System.Windows.Controls.ListBoxItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ComboBoxItem extends System.Windows.Controls.ListBoxItem" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ComboBoxItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ListBoxItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.ComboBox)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa um item selecionável em um <see cref="T:System.Windows.Controls.ComboBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Por padrão, o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> de um <xref:System.Windows.Controls.ComboBoxItem> é definido como <xref:System.Windows.HorizontalAlignment.Stretch>. A posição horizontal padrão de um <xref:System.Windows.Controls.StackPanel> é <xref:System.Windows.HorizontalAlignment.Center>. Se você definir o <xref:System.Windows.FrameworkElement.Width%2A> propriedade de um <xref:System.Windows.Controls.ComboBoxItem> por meio de um <xref:System.Windows.Controls.StackPanel>, padrão do painel é aplicada e o item será centralizado.  
+  
+ Um <xref:System.Windows.Controls.ComboBoxItem> é um <xref:System.Windows.Controls.ContentControl>, que significa que ele pode conter um único objeto de qualquer tipo (como uma cadeia de caracteres, uma imagem ou um painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ContentControl>.  
+  
+## <a name="customizing-the-comboboxitem-control"></a>Personalizando o controle ComboBoxItem  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.ComboBoxItem> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.ComboBoxItem>, consulte [modelos e estilos de caixa de combinação](~/docs/framework/wpf/controls/combobox-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.ComboBoxItem> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComboBoxItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBoxItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.ComboBoxItem" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHighlighted">
+      <MemberSignature Language="C#" Value="public bool IsHighlighted { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHighlighted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ComboBoxItem.IsHighlighted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o item está realçado.</summary>
+        <value>
+          <see langword="true" /> se um <see cref="T:System.Windows.Controls.ComboBoxItem" /> estiver realçado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser usada pelos estilos que precisam de um realce para indicar a seleção.  
+  
+ Começando com o .NET Framework versão 3.0 Service Pack 1, <xref:System.Windows.Controls.ComboBoxItem.IsHighlighted%2A> tem um setter protegido. Para usar essa funcionalidade, seu aplicativo deve ter como destino o .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+<a name="dependencyPropertyInfo_IsHighlighted"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ComboBoxItem.IsHighlightedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir altera a aparência de um <xref:System.Windows.Controls.ComboBoxItem> quando <xref:System.Windows.Controls.ComboBoxItem.IsHighlighted%2A> é `true`.  
+  
+ [!code-xaml[ComboBoxSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ComboBoxSimple/CSharp/Pane1.xaml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHighlightedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsHighlightedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsHighlightedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ComboBoxItem.IsHighlightedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ComboBoxItem.IsHighlighted" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnContentChanged (object oldContent, object newContent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContentChanged(object oldContent, object newContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBoxItem.OnContentChanged(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldContent" Type="System.Object" />
+        <Parameter Name="newContent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldContent">Conteúdo antigo.</param>
+        <param name="newContent">Novo conteúdo.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.Controls.ContentControl.Content" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotKeyboardFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotKeyboardFocus (System.Windows.Input.KeyboardFocusChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotKeyboardFocus(class System.Windows.Input.KeyboardFocusChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBoxItem.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyboardFocusChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos de eventos de entrada do teclado.</param>
+        <summary>Anunciar que o teclado está focalizado neste elemento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBoxItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Fornece dados para <see cref="T:System.Windows.Input.MouseEventArgs" />.</param>
+        <summary>Responde a um <see cref="E:System.Windows.UIElement.MouseEnter" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBoxItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Fornece dados para <see cref="T:System.Windows.Input.MouseButtonEventArgs" />.</param>
+        <summary>Responde a <see cref="E:System.Windows.UIElement.MouseLeftButtonDown" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ComboBoxItem.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Fornece dados para <see cref="T:System.Windows.Input.MouseButtonEventArgs" />.</param>
+        <summary>Responde a <see cref="E:System.Windows.UIElement.MouseLeftButtonUp" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

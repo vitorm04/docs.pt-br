@@ -1,0 +1,863 @@
+<Type Name="ParameterCollection" FullName="System.Web.UI.WebControls.ParameterCollection">
+  <TypeSignature Language="C#" Value="public class ParameterCollection : System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParameterCollection extends System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ParameterCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.StateManagedCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.ParameterCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos derivados de <see cref="T:System.Web.UI.WebControls.Parameter" /> e <see cref="T:System.Web.UI.WebControls.Parameter" /> usados por controles de fonte de dados em cenários de associação de dados avançados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ParameterCollection> classe representa uma coleção de <xref:System.Web.UI.WebControls.Parameter> objetos usados em cenários avançados de associação de dados com controles de fonte de dados. O <xref:System.Web.UI.WebControls.Parameter> objetos são usados para associar os valores contidos pelo local <xref:System.Web.UI.Page> variáveis, cookies HTTP, variáveis de sessão e valores de outros controles para controles de fonte de dados ao recuperar, atualizar, excluir e inserção de dados.  
+  
+ Use o <xref:System.Web.UI.WebControls.ParameterCollection> classe programaticamente para gerenciar um conjunto de <xref:System.Web.UI.WebControls.Parameter> objetos. Você pode adicionar, inserir e remover <xref:System.Web.UI.WebControls.Parameter> objetos usando os métodos apropriados do <xref:System.Web.UI.WebControls.ParameterCollection> classe. Para recuperar programaticamente <xref:System.Web.UI.WebControls.Parameter> objetos de uma coleção, use um dos seguintes métodos:  
+  
+-   Use o indexador para obter um único <xref:System.Web.UI.WebControls.Parameter> objeto da coleção por nome ou usando a notação de matriz.  
+  
+-   Use o <xref:System.Collections.IEnumerable.GetEnumerator%2A> método para criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-objeto implementado, que pode ser usada para obter itens da coleção.  
+  
+ O <xref:System.Web.UI.StateManagedCollection.Count%2A> propriedade especifica o número total de itens na coleção e é usada para determinar o limite superior da coleção. Você pode adicionar e remover itens da coleção usando o <xref:System.Web.UI.WebControls.ParameterCollection.Add%2A>, <xref:System.Web.UI.WebControls.ParameterCollection.Insert%2A>, <xref:System.Web.UI.WebControls.ParameterCollection.Remove%2A>, e <xref:System.Web.UI.WebControls.ParameterCollection.RemoveAt%2A> métodos.  
+  
+ Dependendo da implementação e a semântica de um controle de fonte de dados específico, a ordem na qual os parâmetros são armazenados no <xref:System.Web.UI.WebControls.ParameterCollection> coleção pode ser importante. Por exemplo, ao usar o <xref:System.Web.UI.WebControls.SqlDataSource> controle como uma fonte de dados ODBC, a ordem dos <xref:System.Web.UI.WebControls.Parameter> objetos no <xref:System.Web.UI.WebControls.ParameterCollection> coleção deve ser o mesmo que a ordem dos parâmetros em consultas de SQL com parâmetros que você usar. No entanto, ao usar o <xref:System.Web.UI.WebControls.SqlDataSource> controle com o Microsoft SQL Server, a ordem dos <xref:System.Web.UI.WebControls.Parameter> objetos não são importantes.  
+  
+> [!IMPORTANT]
+>  Quando você usa os controles de fonte de dados, os valores são inseridos em parâmetros de comando sem validação, que é uma possível ameaça à segurança. Use um evento no controle da fonte de dados para validar valores de parâmetro antes do comando é executado. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ A tabela a seguir lista as classes de parâmetros diferentes e como eles são usados.  
+  
+|Classe de parâmetro|Descrição|  
+|---------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Parameter>|A classe base do parâmetro. Usá-lo para vincular a uma variável local ou qualquer cadeia de caracteres estática usando o <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade.|  
+|<xref:System.Web.UI.WebControls.ControlParameter>|Valor de retorno de um parâmetro que pode ser usado para associar a propriedade ou método de um controle.|  
+|<xref:System.Web.UI.WebControls.CookieParameter>|Um parâmetro que pode ser usado para associar ao valor de um cookie.|  
+|<xref:System.Web.UI.WebControls.FormParameter>|Um parâmetro que pode ser usado para vincular a um atributo de página de Web Forms atual.|  
+|<xref:System.Web.UI.WebControls.QueryStringParameter>|Um parâmetro que pode ser usado para vincular a um valor passado a uma página Web Forms em uma cadeia de caracteres de consulta.|  
+|<xref:System.Web.UI.WebControls.SessionParameter>|Um parâmetro que pode ser usado para associar ao valor de uma variável de sessão.|  
+|<xref:System.Web.UI.WebControls.ProfileParameter>|Um parâmetro que pode ser usado para associar o valor de uma propriedade de perfil do ASP.NET.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.AccessDataSource> controle e um <xref:System.Web.UI.WebControls.FormParameter> para exibir informações de um banco de dados do Microsoft Access em um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.FormParameter> objeto é adicionado para o <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção usando o <xref:System.Web.UI.WebControls.ParameterCollection.Add%2A> método.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.FormParameter_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.FormParameter_2/CS/fp2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.FormParameter_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.FormParameter_2/VB/fp2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParameterCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a classe para uso por uma instância de classe herdada. Este construtor pode ser chamado somente por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.UI.WebControls.Parameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.UI.WebControls.Parameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.Add(System.Web.UI.WebControls.Parameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Web.UI.WebControls.Parameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">O <see cref="T:System.Web.UI.WebControls.Parameter" /> a ser acrescentado à coleção.</param>
+        <summary>Acrescenta o objeto <see cref="T:System.Web.UI.WebControls.Parameter" /> especificado ao final da coleção.</summary>
+        <returns>O valor de índice do item adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ParameterCollection.Add%28System.Web.UI.WebControls.Parameter%29> método acrescentar um <xref:System.Web.UI.WebControls.Parameter> objeto ao final da coleção. Essa implementação do método leva o <xref:System.Web.UI.WebControls.Parameter> objeto especificado pelo `param` parâmetro e o anexa à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.AccessDataSource> controle e um <xref:System.Web.UI.WebControls.FormParameter> objeto para exibir informações de um banco de dados do Microsoft Access em um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.FormParameter> objeto é adicionado para o <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção usando o <xref:System.Web.UI.WebControls.ParameterCollection.Add%28System.Web.UI.WebControls.Parameter%29> método.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.FormParameter_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.FormParameter_2/CS/fp2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.FormParameter_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.FormParameter_2/VB/fp2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="value">Uma cadeia de caracteres que serve como um valor padrão para o parâmetro.</param>
+        <summary>Cria um <see cref="T:System.Web.UI.WebControls.Parameter" /> do objeto com o nome especificado e o valor padrão e o anexa ao final da coleção.</summary>
+        <returns>O valor de índice do item adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ParameterCollection.Add%28System.String%2CSystem.String%29> método para criar e anexar um <xref:System.Web.UI.WebControls.Parameter> com um valor padrão para o final da coleção. Essa implementação do método cria a <xref:System.Web.UI.WebControls.Parameter> objeto usando o nome e o valor padrão especificado pelo `name` e `value` parâmetros, respectivamente e o anexa à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.WebControls.ParameterCollection.Add%28System.String%2CSystem.String%29> método pode ser usado para adicionar novos <xref:System.Web.UI.WebControls.Parameter> objetos para um <xref:System.Web.UI.WebControls.ParameterCollection> coleção fornecendo o `name` e `value` parâmetros. Neste exemplo, um <xref:System.Web.UI.WebControls.Parameter> objeto é adicionado a um comando de atualização de um controle de fonte de dados de acesso está associado ao valor de um <xref:System.Web.UI.WebControls.TextBox> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ParameterCollection_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ParameterCollection_2/CS/paramcoll2cs.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ParameterCollection_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ParameterCollection_2/VB/paramcoll2vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (string name, System.Data.DbType dbType, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(string name, valuetype System.Data.DbType dbType, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.Add(System.String,System.Data.DbType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.DbType" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="dbType">O tipo de banco de dados do parâmetro.</param>
+        <param name="value">O valor padrão para o parâmetro.</param>
+        <summary>Cria um objeto <see cref="T:System.Web.UI.WebControls.Parameter" /> com o nome especificado, tipo de banco de dados e valor padrão e o adiciona ao final da coleção.</summary>
+        <returns>O valor de índice do item adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é para tipos de banco de dados. Use o <xref:System.Web.UI.WebControls.ParameterCollection.Add%28System.String%2CSystem.TypeCode%2CSystem.String%29> método para tipos de CLR.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (string name, TypeCode type, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(string name, valuetype System.TypeCode type, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.Add(System.String,System.TypeCode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.TypeCode" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="type">O tipo do parâmetro.</param>
+        <param name="value">O valor padrão para o parâmetro.</param>
+        <summary>Cria um objeto <see cref="T:System.Web.UI.WebControls.Parameter" /> com o nome especificado, <see cref="T:System.TypeCode" /> e valor padrão e o acrescenta ao final da coleção.</summary>
+        <returns>O valor de índice do item adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ParameterCollection.Add%28System.String%2CSystem.TypeCode%2CSystem.String%29> método para criar e anexar um fortemente tipada <xref:System.Web.UI.WebControls.Parameter> com um valor padrão para o final da coleção. Essa implementação do método cria a <xref:System.Web.UI.WebControls.Parameter> objeto usando o nome, o tipo e o valor especificado pelo `name`, `type` e `value` parâmetros, respectivamente e o anexa à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.WebControls.ParameterCollection.Add%28System.String%2CSystem.TypeCode%2CSystem.String%29> método pode ser usado para adicionar novos <xref:System.Web.UI.WebControls.Parameter> objetos para um <xref:System.Web.UI.WebControls.ParameterCollection> coleção fornecendo o `name`, `value`, e `type` parâmetros. Neste exemplo, um <xref:System.Web.UI.WebControls.Parameter> objeto é adicionado a um comando de atualização de um controle de fonte de dados do Access que fornece o valor de hora do sistema atual. O parâmetro é adicionado com o <xref:System.TypeCode> de <xref:System.DateTime>.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ParameterCollection_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ParameterCollection_2/CS/paramcoll2cs.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ParameterCollection_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ParameterCollection_2/VB/paramcoll2vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.Parameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.Parameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.Contains(System.Web.UI.WebControls.Parameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Web.UI.WebControls.Parameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">O <see cref="T:System.Web.UI.WebControls.Parameter" /> a ser localizado no <see cref="T:System.Web.UI.WebControls.ParameterCollection" />.</param>
+        <summary>Determina se o <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> coleção contém um valor específico</summary>
+        <returns>
+          <see langword="true" /> se o objeto for encontrado no <see cref="T:System.Web.UI.WebControls.ParameterCollection" />; caso contrário, <see langword="false" />. Se <see langword="null" /> é passado o <paramref name="value" /> parâmetro <see langword="false" /> é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se um especificado <xref:System.Web.UI.WebControls.Parameter> objeto está no <xref:System.Web.UI.WebControls.ParameterCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.Parameter[] parameterArray, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.Parameter[] parameterArray, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.CopyTo(System.Web.UI.WebControls.Parameter[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterArray" Type="System.Web.UI.WebControls.Parameter[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterArray">Matriz de parâmetro do qual o valor em um índice especificado é a ser copiado do.</param>
+        <param name="index">O <see langword="integer" /> índice da <c>parameterArray</c> item que deve ser copiado.</param>
+        <summary>Copia um índice especificado de uma matriz de parâmetros para a coleção de parâmetros.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKnownType">
+      <MemberSignature Language="C#" Value="protected override object CreateKnownType (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateKnownType(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.CreateKnownType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do tipo de <see cref="T:System.Web.UI.WebControls.Parameter" /> criar na lista ordenada de tipos retornados por <see cref="M:System.Web.UI.WebControls.ParameterCollection.GetKnownTypes" />.</param>
+        <summary>Cria uma instância de um padrão <see cref="T:System.Web.UI.WebControls.Parameter" /> objeto.</summary>
+        <returns>Uma instância padrão de um <see cref="T:System.Web.UI.WebControls.Parameter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ParameterCollection.CreateKnownType%2A> método cria uma instância de um <xref:System.Web.UI.WebControls.Parameter> objeto de acordo com o índice do <xref:System.Type> retornado pelo <xref:System.Web.UI.WebControls.ParameterCollection.GetKnownTypes%2A> método. Os valores de índice correspondem aos tipos mostrados na tabela a seguir.  
+  
+|Índice|Tipo de parâmetro|  
+|-----------|--------------------|  
+|0|<xref:System.Web.UI.WebControls.ControlParameter>|  
+|1|<xref:System.Web.UI.WebControls.CookieParameter>|  
+|2|<xref:System.Web.UI.WebControls.FormParameter>|  
+|3|<xref:System.Web.UI.WebControls.Parameter>|  
+|4|<xref:System.Web.UI.WebControls.QueryStringParameter>|  
+|5|<xref:System.Web.UI.WebControls.SessionParameter>|  
+|6|<xref:System.Web.UI.WebControls.ProfileParameter>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice especificado não está dentro do intervalo reconhecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] GetKnownTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] GetKnownTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.GetKnownTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz de <see cref="T:System.Web.UI.WebControls.Parameter" /> tipos que o <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> coleção pode conter.</summary>
+        <returns>Uma matriz ordenada de <see cref="T:System.Type" /> que identificam os tipos de objetos <see cref="T:System.Web.UI.WebControls.Parameter" /> objetos que a coleção pode conter.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary GetValues (System.Web.HttpContext context, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Specialized.IOrderedDictionary GetValues(class System.Web.HttpContext context, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.GetValues(System.Web.HttpContext,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="context">Atual <see cref="T:System.Web.HttpRequest" /> que o <see cref="T:System.Web.UI.WebControls.Parameter" /> associa a.</param>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> instância que é passada para cada parâmetro <see cref="M:System.Web.UI.WebControls.ControlParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" /> método.</param>
+        <summary>Obtém uma coleção ordenada de <see cref="T:System.Web.UI.WebControls.Parameter" /> nomes de objetos e seus valores correspondentes contidas atualmente na coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> de pares nome/valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `control` parâmetro é usado pelo <xref:System.Web.UI.WebControls.Parameter> objetos contidos na coleção para recuperar o <xref:System.Web.UI.Page> atuais e <xref:System.Web.HttpRequest> do objeto que o <xref:System.Web.UI.WebControls.Parameter> objeto associa a.  
+  
+ Porque o <xref:System.Collections.Specialized.IOrderedDictionary> objeto deve exclusivamente nomeada entradas, mas o <xref:System.Web.UI.WebControls.ParameterCollection> coleção não precisa nem garante exclusiva <xref:System.Web.UI.WebControls.Parameter> nomes de objeto, a implementação desse método anexará um número ao final de cada <xref:System.Web.UI.WebControls.Parameter.Name%2A> propriedade para garantir a exclusividade na coleção retornada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.Parameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.Parameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.IndexOf(System.Web.UI.WebControls.Parameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Web.UI.WebControls.Parameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">O <see cref="T:System.Web.UI.WebControls.Parameter" /> a ser localizado no <see cref="T:System.Web.UI.WebControls.ParameterCollection" />.</param>
+        <summary>Determina o índice de um especificado <see cref="T:System.Web.UI.WebControls.Parameter" /> objeto o <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> coleção.</summary>
+        <returns>O índice do <paramref name="parameter" />, se ele está localizado na coleção; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar o índice de um parâmetro de <xref:System.Web.UI.WebControls.ParameterCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.Parameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.Parameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.Insert(System.Int32,System.Web.UI.WebControls.Parameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="parameter" Type="System.Web.UI.WebControls.Parameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual o <see cref="T:System.Web.UI.WebControls.Parameter" /> é inserido.</param>
+        <param name="parameter">O <see cref="T:System.Web.UI.WebControls.Parameter" /> a ser inserido.</param>
+        <summary>Insere especificado <see cref="T:System.Web.UI.WebControls.Parameter" /> objeto para o <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ParameterCollection.Insert%2A> método para adicionar um <xref:System.Web.UI.WebControls.Parameter> o objeto para um <xref:System.Web.UI.WebControls.ParameterCollection> coleção em um local específico. Neste exemplo, várias <xref:System.Web.UI.WebControls.QueryStringParameter> objetos são adicionados a um <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção, um <xref:System.Web.UI.WebControls.QueryStringParameter> é inserido na coleção, e a ordem da coleção é impresso quando a página for carregada.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.QueryStringParameter_7#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_7/CS/qsp7acs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.QueryStringParameter_7#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_7/VB/qsp7avb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é maior que <see langword="Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Parameter this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Parameter Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ParameterCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Parameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.UI.WebControls.Parameter" /> para recuperar da coleção.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.UI.WebControls.Parameter" /> objeto no índice especificado na coleção.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.Parameter" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para obter um <xref:System.Web.UI.WebControls.Parameter> objeto por sua localização no <xref:System.Web.UI.WebControls.ParameterCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Parameter this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Parameter Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ParameterCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Parameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="P:System.Web.UI.WebControls.Parameter.Name" /> do <see cref="T:System.Web.UI.WebControls.Parameter" /> para recuperar da coleção.</param>
+        <summary>Obtém ou define o objeto <see cref="T:System.Web.UI.WebControls.Parameter" /> com o nome especificado na coleção.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.Parameter" /> com o nome especificado na coleção. Se o <see cref="T:System.Web.UI.WebControls.Parameter" /> não foi encontrado na coleção, o indexador retorna <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para obter um <xref:System.Web.UI.WebControls.Parameter> objeto pelo nome do <xref:System.Web.UI.WebControls.ParameterCollection> conjunto, usando a notação de matriz.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ParameterCollection.Remove%2A> método e o <xref:System.Web.UI.WebControls.ParameterCollection.Item%2A> indexador para remover um <xref:System.Web.UI.WebControls.Parameter> de objeto um <xref:System.Web.UI.WebControls.ParameterCollection> coleção. Neste exemplo, várias <xref:System.Web.UI.WebControls.QueryStringParameter> objetos são adicionados a um <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção, um <xref:System.Web.UI.WebControls.QueryStringParameter> é removido da coleção, e a ordem da coleção é impresso quando a página for carregada.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.QueryStringParameter_6#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_6/CS/qsp6cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.QueryStringParameter_6#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_6/VB/qsp6vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearComplete">
+      <MemberSignature Language="C#" Value="protected override void OnClearComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClearComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.OnClearComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa processos personalizados adicionais depois de limpar o conteúdo da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ParameterCollection.OnClearComplete%2A> método é chamado para executar o processamento adicional após o <xref:System.Web.UI.StateManagedCollection.Clear%2A> método é concluído. Ele chama o <xref:System.Web.UI.WebControls.ParameterCollection.OnParametersChanged%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados após a exclusão de todos os elementos da coleção subjacente. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.  
+  
+ <see cref="M:System.Web.UI.StateManagedCollection.OnClear" />é chamado antes do padrão <see langword="Clear" /> comportamento, enquanto <see cref="M:System.Web.UI.WebControls.ParameterCollection.OnClearComplete" /> é invocado após o padrão <see langword="Clear" /> comportamento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice na coleção que o <see cref="T:System.Web.UI.WebControls.Parameter" /> é inserida no.</param>
+        <param name="value">O <see cref="T:System.Web.UI.WebControls.Parameter" /> que é inserido no <see cref="T:System.Web.UI.WebControls.ParameterCollection" />.</param>
+        <summary>Ocorre antes do <see cref="M:System.Web.UI.WebControls.ParameterCollection.Insert(System.Int32,System.Web.UI.WebControls.Parameter)" /> método é chamado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ParameterCollection.OnInsert%2A> método é chamado para executar o processamento adicional antes do <xref:System.Web.UI.WebControls.ParameterCollection.Insert%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados antes de inserir um elemento na coleção subjacente. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsertComplete">
+      <MemberSignature Language="C#" Value="protected override void OnInsertComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsertComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.OnInsertComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice na coleção que o <see cref="T:System.Web.UI.WebControls.Parameter" /> foi inserida no.</param>
+        <param name="value">O <see cref="T:System.Web.UI.WebControls.Parameter" /> que foi inserida a <see cref="T:System.Web.UI.WebControls.ParameterCollection" />.</param>
+        <summary>Ocorre após o <see cref="M:System.Web.UI.WebControls.ParameterCollection.Insert(System.Int32,System.Web.UI.WebControls.Parameter)" /> método é concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ParameterCollection.OnInsertComplete%2A> método é chamado para executar o processamento adicional após o <xref:System.Web.UI.WebControls.ParameterCollection.Insert%2A> método é concluído. Ele chama o <xref:System.Web.UI.WebControls.ParameterCollection.OnParametersChanged%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados após a inserção de um elemento na coleção subjacente. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParametersChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnParametersChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnParametersChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.OnParametersChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.ParameterCollection.ParametersChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveComplete">
+      <MemberSignature Language="C#" Value="protected override void OnRemoveComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemoveComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.OnRemoveComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice na coleção que o <see cref="T:System.Web.UI.WebControls.Parameter" /> foi removido.</param>
+        <param name="value">O <see cref="T:System.Web.UI.WebControls.Parameter" /> que foi removido do <see cref="T:System.Web.UI.WebControls.ParameterCollection" />.</param>
+        <summary>Ocorre após o <see cref="M:System.Web.UI.WebControls.ParameterCollection.Remove(System.Web.UI.WebControls.Parameter)" /> método é concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ParameterCollection.OnRemoveComplete%2A> método é chamado para executar o processamento adicional após o <xref:System.Web.UI.WebControls.ParameterCollection.Remove%2A> método é concluído. Ele chama o <xref:System.Web.UI.WebControls.ParameterCollection.OnParametersChanged%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método permite que os implementadores defina processos que devem ser executados depois de remover um elemento da coleção subjacente. Definindo esse método, os implementadores podem adicionar funcionalidade para métodos herdados sem a necessidade de substituir todos os outros métodos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see langword="object" /> que está sendo validado.</param>
+        <summary>Executa processos personalizados adicionais ao validar um valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ParameterCollection.OnValidate%2A> método determina se o objeto especificado no `o` parâmetro é um <xref:System.Web.UI.WebControls.Parameter> instância. Se não, ele lança uma <xref:System.ArgumentException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O objeto não é uma instância do <see cref="T:System.Web.UI.WebControls.Parameter" /> classe ou uma de suas classes derivadas.</exception>
+        <exception cref="T:System.ArgumentNullException">O objeto é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParametersChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ParametersChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ParametersChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.ParameterCollection.ParametersChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um ou mais <see cref="T:System.Web.UI.WebControls.Parameter" /> objetos contidos a coleção muda de estado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.WebControls.ParameterCollection> coleção está contida em um controle de fonte de dados, o <xref:System.Web.UI.WebControls.ParameterCollection.ParametersChanged> evento dispara o controle de fonte de dados `DataSourceChanged` evento, fazendo com que os controles de associação de dados associar novamente.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.Parameter.OnParameterChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.Parameter.OnParameterChanged" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.Parameter.OnParameterChanged" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.Parameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.Parameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.Remove(System.Web.UI.WebControls.Parameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Web.UI.WebControls.Parameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">O <see cref="T:System.Web.UI.WebControls.Parameter" /> a ser removido de <see cref="T:System.Web.UI.WebControls.ParameterCollection" />.</param>
+        <summary>Remove o objeto <see cref="T:System.Web.UI.WebControls.Parameter" /> especificado da coleção <see cref="T:System.Web.UI.WebControls.ParameterCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover especificado <xref:System.Web.UI.WebControls.Parameter> de objeto um <xref:System.Web.UI.WebControls.ParameterCollection> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ParameterCollection.Remove%2A> método e o <xref:System.Web.UI.WebControls.ParameterCollection.Item%2A> indexador para remover um <xref:System.Web.UI.WebControls.Parameter> de objeto um <xref:System.Web.UI.WebControls.ParameterCollection> coleção. Neste exemplo, várias <xref:System.Web.UI.WebControls.QueryStringParameter> objetos são adicionados a um <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção, um <xref:System.Web.UI.WebControls.QueryStringParameter> será removido da coleção e a ordem da coleção é impresso quando a página for carregada.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.QueryStringParameter_6#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_6/CS/qsp6cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.QueryStringParameter_6#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_6/VB/qsp6vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.UI.WebControls.Parameter" /> a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Web.UI.WebControls.Parameter" /> objeto no índice especificado do <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ParameterCollection.RemoveAt%2A> método para remover o <xref:System.Web.UI.WebControls.Parameter> objeto no índice especificado da coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ParameterCollection.RemoveAt%2A> método para remover um <xref:System.Web.UI.WebControls.Parameter> de objeto um <xref:System.Web.UI.WebControls.ParameterCollection> coleção em um local específico. Neste exemplo, várias <xref:System.Web.UI.WebControls.QueryStringParameter> objetos são adicionados a um <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção, um <xref:System.Web.UI.WebControls.QueryStringParameter> será removido da coleção e a ordem da coleção é impresso quando a página for carregada.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.QueryStringParameter_5#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_5/CS/qsp5cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.QueryStringParameter_5#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_5/VB/qsp5vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirtyObject">
+      <MemberSignature Language="C#" Value="protected override void SetDirtyObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDirtyObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.SetDirtyObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Web.UI.WebControls.Parameter" /> marcado como tendo sido alterado desde o último carregamento ou salvar o estado de exibição.</param>
+        <summary>Marca especificado <see cref="T:System.Web.UI.WebControls.Parameter" /> objeto como tendo sido alterado desde o último carregamento ou salvar o estado de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ParameterCollection.SetDirtyObject%2A> método é uma função auxiliar que é usada para marcar uma <xref:System.Web.UI.WebControls.Parameter> objeto como tendo sido alterado desde o último carregamento ou salvar o estado de exibição.  
+  
+> [!NOTE]
+>  Esse método é usado somente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateValues">
+      <MemberSignature Language="C#" Value="public void UpdateValues (System.Web.HttpContext context, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateValues(class System.Web.HttpContext context, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ParameterCollection.UpdateValues(System.Web.HttpContext,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="context">Atual <see cref="T:System.Web.HttpRequest" /> que o <see cref="T:System.Web.UI.WebControls.Parameter" /> associa a.</param>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> instância que é passada para cada parâmetro <see cref="M:System.Web.UI.WebControls.ControlParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" /> método.</param>
+        <summary>Itera por meio de <see cref="T:System.Web.UI.WebControls.Parameter" /> objetos contidos por coleção e chama o <see langword="Evaluate" /> método em cada um deles.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `control` parâmetro é usado pelo <xref:System.Web.UI.WebControls.Parameter> objetos contidos na coleção para recuperar o <xref:System.Web.UI.Page> atuais e <xref:System.Web.HttpRequest> do objeto que o <xref:System.Web.UI.WebControls.Parameter> objeto associa a.  
+  
+ Se o valor atual para o <xref:System.Web.UI.WebControls.Parameter> objeto é diferente do valor armazenado em cache no estado de exibição, o <xref:System.Web.UI.WebControls.Parameter.OnParameterChanged%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

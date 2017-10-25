@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Media.Animation">
+  <Docs>
+    <summary>Fornece tipos que dão suporte à funcionalidade de animação de propriedade, inclusive cronogramas, storyboards e quadros-chave.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,369 @@
+<Type Name="CommonDialog" FullName="System.Windows.Forms.CommonDialog">
+  <TypeSignature Language="C#" Value="public abstract class CommonDialog : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CommonDialog extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CommonDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a classe base usada para exibir caixas de diálogo na tela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes herdadas são necessários para implementar <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> invocando <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para criar uma caixa de diálogo comuns específicos. Classes herdadas podem, opcionalmente, substituir <xref:System.Windows.Forms.CommonDialog.HookProc%2A> para implementar a funcionalidade de gancho de caixa de diálogo específicas.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ColorDialog> implementação de <xref:System.Windows.Forms.CommonDialog> e ilustra a criação e exibição de uma caixa de diálogo. Este exemplo requer que o método é chamado de dentro de um formulário existente, que tem um <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.Button> colocada nela.  
+  
+ [!code-cpp[Classic ColorDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ColorDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ColorDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ColorDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic ColorDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ColorDialog Example/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommonDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.CommonDialog" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpRequest">
+      <MemberSignature Language="C#" Value="public event EventHandler HelpRequest;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HelpRequest" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.CommonDialog.HelpRequest" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica no botão Ajuda em uma caixa de diálogo comum.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a inicializar um <xref:System.Windows.Forms.ColorDialog> configuração do objeto de <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> propriedades. O <xref:System.Windows.Forms.ColorDialog> objeto não permite ao usuário definir uma cor personalizada, mas permite que o conjunto completo de cores básicas a serem exibidos. Definindo o <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> a propriedade como false, ele permite a exibição de cores que são combinações de outras cores em sistemas com cores de 256 ou menos. O exemplo também mostra a configuração de <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> propriedade e tratamento de um <xref:System.Windows.Forms.CommonDialog.HelpRequest> evento para uma caixa de diálogo. Para executar o exemplo, cole o seguinte código em um formulário e a chamada a `InitializeColorDialog` método no construtor do formulário ou `Load` método. Este exemplo requer que o `Click` eventos do botão é conectado ao manipulador de eventos definido no exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HookProc">
+      <MemberSignature Language="C#" Value="protected virtual IntPtr HookProc (IntPtr hWnd, int msg, IntPtr wparam, IntPtr lparam);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance native int HookProc(native int hWnd, int32 msg, native int wparam, native int lparam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.HookProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hWnd" Type="System.IntPtr" />
+        <Parameter Name="msg" Type="System.Int32" />
+        <Parameter Name="wparam" Type="System.IntPtr" />
+        <Parameter Name="lparam" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hWnd">O identificador para a janela da caixa de diálogo.</param>
+        <param name="msg">A mensagem que está sendo recebida.</param>
+        <param name="wparam">Informações adicionais sobre a mensagem.</param>
+        <param name="lparam">Informações adicionais sobre a mensagem.</param>
+        <summary>Define o procedimento de gancho de caixa de diálogo comum que é substituído para adicionar uma funcionalidade específica a uma caixa de diálogo comum.</summary>
+        <returns>Um valor de zero se o procedimento de caixa de diálogo padrão processar a mensagem; um valor diferente de zero se o procedimento de caixa de diálogo padrão ignorar a mensagem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um procedimento de gancho é um mecanismo pelo qual uma função pode interceptar eventos antes que elas atinjam um aplicativo. Quando você substituir o <xref:System.Windows.Forms.CommonDialog.HookProc%2A> método para um <xref:System.Windows.Forms.CommonDialog> classe, o sistema operacional invoca a substituição da função para enviar mensagens de sistema operacional para a janela.  
+  
+ Por padrão, o procedimento de gancho centraliza a caixa de diálogo na tela em resposta a uma mensagem WM_INITDIALOG.  
+  
+> [!NOTE]
+>  Esse método usa <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> impedir que ele está sendo chamado de código não confiável; apenas o chamador imediato é necessário ter <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> permissão. Se seu código pode ser chamado de código parcialmente confiável, não passe a entrada do usuário para <xref:System.Runtime.InteropServices.Marshal> métodos sem validação de classe. Para limitações importantes sobre como usar o `LinkDemand` membro, consulte [exigem vs. LinkDemand](http://msdn.microsoft.com/en-us/1ab877f2-70f4-4e0d-8116-943999dfe8f5).  
+  
+ Essa propriedade também usa o <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> atributo de segurança; para substituir esse membro, a classe derivada deve ter o `CustomPermission` permissão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.CommonDialog.HookProc%2A> método. O exemplo consiste em uma classe que herda de <xref:System.Windows.Forms.CommonDialog> classe. A classe <xref:System.Windows.Forms.CommonDialog.HookProc%2A> substituição, o exemplo avalia o método `msg` parâmetro com base nos valores de constantes mensagens específicas do Windows. Se o `msg` parâmetro for igual a constante especificada, o exemplo grava a saída de rastreamento identificando a mensagem do Windows que foi passada para o <xref:System.Windows.Forms.CommonDialog.HookProc%2A> método. Este exemplo supõe que a classe na qual o <xref:System.Windows.Forms.CommonDialog.HookProc%2A> método for declarado herda o <xref:System.Windows.Forms.CommonDialog> classe.  
+  
+ [!code-cpp[HookProc Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/HookProc Example/CPP/fontdialogoverride.cpp#1)]
+ [!code-csharp[HookProc Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/HookProc Example/CS/fontdialogoverride.cs#1)]
+ [!code-vb[HookProc Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/HookProc Example/VB/fontdialogoverride.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para o chamador imediato chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <block subset="none" type="overrides">
+          <para>Classes de herança pode substituir este método para adicionar funcionalidade específica a uma caixa de diálogo comum. Ao substituir <see cref="M:System.Windows.Forms.CommonDialog.HookProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.CommonDialog.HookProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHelpRequest">
+      <MemberSignature Language="C#" Value="protected virtual void OnHelpRequest (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHelpRequest(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.OnHelpRequest(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.HelpEventArgs" /> que fornece os dados de evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.CommonDialog.HelpRequest" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando o botão Ajuda é clicado. Classes de herança pode substituir este método para manipular o evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerWndProc">
+      <MemberSignature Language="C#" Value="protected virtual IntPtr OwnerWndProc (IntPtr hWnd, int msg, IntPtr wparam, IntPtr lparam);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance native int OwnerWndProc(native int hWnd, int32 msg, native int wparam, native int lparam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.OwnerWndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hWnd" Type="System.IntPtr" />
+        <Parameter Name="msg" Type="System.Int32" />
+        <Parameter Name="wparam" Type="System.IntPtr" />
+        <Parameter Name="lparam" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hWnd">O identificador de janela da mensagem a enviar.</param>
+        <param name="msg">A mensagem do Win32 para enviar.</param>
+        <param name="wparam">O <c>wparam</c> para enviar a mensagem.</param>
+        <param name="lparam">O <c>lparam</c> para enviar a mensagem.</param>
+        <summary>Define o procedimento de janela do proprietário que é substituído para adicionar funcionalidade específica a uma caixa de diálogo comum.</summary>
+        <returns>O resultado do processamento da mensagem, que é dependente da mensagem enviada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando as mensagens são enviadas para a janela do proprietário da caixa de diálogo comum, o controle é transferido aqui. Classes de herança pode substituir este método para adicionar funcionalidade específica a uma caixa de diálogo comum.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para o chamador imediato chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public abstract void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, redefine as propriedades de uma caixa de diálogo comum para seus valores padrão.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para código não gerenciado chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <block subset="none" type="overrides">
+          <para>Classes de herança pode substituir este método para redefinir suas propriedades.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RunDialog">
+      <MemberSignature Language="C#" Value="protected abstract bool RunDialog (IntPtr hwndOwner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool RunDialog(native int hwndOwner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.RunDialog(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwndOwner" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hwndOwner">Um valor que representa o identificador de janela da janela do proprietário da caixa de diálogo comum.</param>
+        <summary>Quando substituído em uma classe derivada, especifica uma caixa de diálogo comum.</summary>
+        <returns>
+          <see langword="true" /> se a caixa de diálogo tiver sido executada com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando o usuário de uma caixa de diálogo comum chama <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>, e deve ser substituído por classes herdadas de <xref:System.Windows.Forms.CommonDialog> para implementar uma caixa de diálogo comuns específica.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para código não gerenciado chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DialogResult ShowDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.DialogResult ShowDialog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.ShowDialog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa uma caixa de diálogo comum com um proprietário padrão.</summary>
+        <returns>
+          <see cref="F:System.Windows.Forms.DialogResult.OK" /> se o usuário clicar em OK na caixa de diálogo; caso contrário, <see cref="F:System.Windows.Forms.DialogResult.Cancel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método implementa <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ColorDialog> implementação de <xref:System.Windows.Forms.CommonDialog> e ilustra a criação e exibição de uma caixa de diálogo. Este exemplo requer que o método é chamado de dentro de um formulário existente, que tem um <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.Button> colocada nela.  
+  
+ [!code-cpp[Classic ColorDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ColorDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ColorDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ColorDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic ColorDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ColorDialog Example/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir a partir de um <see cref="T:System.Windows.Forms.PrintDialog" />. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DialogResult ShowDialog (System.Windows.Forms.IWin32Window owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.DialogResult ShowDialog(class System.Windows.Forms.IWin32Window owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CommonDialog.ShowDialog(System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Qualquer objeto que implementa <see cref="T:System.Windows.Forms.IWin32Window" /> e que representa a janela de nível superior que possuirá a caixa de diálogo modal.</param>
+        <summary>Executa uma caixa de diálogo comum com o proprietário especificado.</summary>
+        <returns>
+          <see cref="F:System.Windows.Forms.DialogResult.OK" /> se o usuário clicar em **OK** na caixa de diálogo; caso contrário, <see cref="F:System.Windows.Forms.DialogResult.Cancel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta versão do <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método permite que você especifique um formulário específico ou um controle que possuirá a caixa de diálogo é exibida. Se você usar a versão desse método que não tem parâmetros, a caixa de diálogo sendo mostrada deve pertencer automaticamente a janela ativa no momento do seu aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir a partir de um <see cref="T:System.Windows.Forms.PrintDialog" />. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">para seguras chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CommonDialog.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que contém dados sobre o controle.</summary>
+        <value>O objeto que contém dados sobre o <see cref="T:System.Windows.Forms.CommonDialog" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para armazenar informações arbitrárias sobre o controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

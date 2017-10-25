@@ -1,0 +1,1159 @@
+<Type Name="Stack&lt;T&gt;" FullName="System.Collections.Generic.Stack&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class Stack&lt;T&gt; : System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IReadOnlyCollection&lt;T&gt;, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Stack`1&lt;T&gt; extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;!T&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.Stack`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Generic.System_StackDebugView`1))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">Especifica o tipo dos elementos na pilha.</typeparam>
+    <summary>Representa uma coleção UEPS (último a entrar, primeiro a sair) de tamanho variável das instâncias do mesmo tipo especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.Stack%601>é implementado como uma matriz.  
+  
+ Pilhas e filas são úteis quando você precisa de armazenamento temporário para informações. ou seja, quando você quiser descartar um elemento após recuperar seu valor. Use <xref:System.Collections.Generic.Queue%601> se você precisar acessar as informações na mesma ordem em que ela está armazenada na coleção. Use <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType> se você precisar acessar as informações na ordem inversa.  
+  
+ Use o <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> tipos quando você precisa acessar a coleção de vários threads simultaneamente.  
+  
+ Um uso comum para <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType> é preservar a variáveis de estado durante chamadas a outros procedimentos.  
+  
+ Três operações principais podem ser executadas em um <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType> e seus elementos:  
+  
+-   <xref:System.Collections.Generic.Stack%601.Push%2A>Insere um elemento na parte superior do <xref:System.Collections.Stack>.  
+  
+-   <xref:System.Collections.Generic.Stack%601.Pop%2A>Remove um elemento da parte superior do <xref:System.Collections.Generic.Stack%601>.  
+  
+-   <xref:System.Collections.Generic.Stack%601.Peek%2A>Retorna um elemento que está na parte superior do <xref:System.Collections.Generic.Stack%601> , mas não removê-lo a <xref:System.Collections.Generic.Stack%601>.  
+  
+ A capacidade de um <xref:System.Collections.Generic.Stack%601> é o número de elementos de <xref:System.Collections.Generic.Stack%601> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Generic.Stack%601>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna. A capacidade pode ser diminuída chamando <xref:System.Collections.Generic.Stack%601.TrimExcess%2A>.  
+  
+ Se <xref:System.Collections.Generic.Stack%601.Count%2A> é menor que a capacidade da pilha, <xref:System.Collections.Generic.Stack%601.Push%2A> é uma operação de (1). Se a capacidade precisa ser aumentado para acomodar o novo elemento, <xref:System.Collections.Generic.Stack%601.Push%2A> se torna um O (`n`) operação, onde `n` é <xref:System.Collections.Generic.Stack%601.Count%2A>. <xref:System.Collections.Generic.Stack%601.Pop%2A>é uma operação de (1).  
+  
+ <xref:System.Collections.Generic.Stack%601>aceita `null` como um valor válido para a referência de tipos e permite que os elementos duplicados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra vários métodos de <xref:System.Collections.Generic.Stack%601> classe genérica. O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Um <see cref="T:System.Collections.Generic.Stack`1" /> pode dar suporte a vários leitores simultaneamente, desde que a coleção não é modificada.  Mesmo assim, enumerar através de uma coleção intrinsecamente não é um procedimento de thread-safe.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Stack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.Stack`1" /> que está vazia e tem a capacidade inicial padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Generic.Stack%601> é o número de elementos que o <xref:System.Collections.Generic.Stack%601> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Generic.Stack%601>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Generic.Stack%601>.  
+  
+ A capacidade pode ser diminuída chamando <xref:System.Collections.Generic.Stack%601.TrimExcess%2A>.  
+  
+ Este construtor é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra esse construtor e vários métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Stack (System.Collections.Generic.IEnumerable&lt;T&gt; collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="collection">A coleção da qual os elementos serão copiados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.Stack`1" />, que contém os elementos copiados da coleção especificada e tem capacidade suficiente para acomodar o número de elementos copiados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Generic.Stack%601> é o número de elementos que o <xref:System.Collections.Generic.Stack%601> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Generic.Stack%601>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Generic.Stack%601>.  
+  
+ A capacidade pode ser diminuída chamando <xref:System.Collections.Generic.Stack%601.TrimExcess%2A>.  
+  
+ Os elementos são copiados para o <xref:System.Collections.Generic.Stack%601> na mesma ordem em que são lidas pelo <xref:System.Collections.Generic.IEnumerator%601> da coleção.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é o número de elementos em `collection`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra esse construtor e vários métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Stack (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número inicial de elementos que o <see cref="T:System.Collections.Generic.Stack`1" /> pode conter.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.Stack`1" /> que está vazia e tem a capacidade inicial especificada ou a capacidade inicial padrão, a que for maior.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Generic.Stack%601> é o número de elementos que o <xref:System.Collections.Generic.Stack%601> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Generic.Stack%601>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Generic.Stack%601>.  
+  
+ A capacidade pode ser diminuída chamando <xref:System.Collections.Generic.Stack%601.TrimExcess%2A>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `capacity`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os objetos da <see cref="T:System.Collections.Generic.Stack`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.Stack%601.Count%2A>é definido como zero, e referências a outros objetos de elementos da coleção também são liberadas.  
+  
+ A capacidade permanece inalterada. Para redefinir a capacidade do <xref:System.Collections.Generic.Stack%601>, chame <xref:System.Collections.Generic.Stack%601.TrimExcess%2A>. Cortar vazio <xref:System.Collections.Generic.Stack%601> define a capacidade do <xref:System.Collections.Generic.Stack%601> à capacidade padrão.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.Stack%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra vários métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica, incluindo o <xref:System.Collections.Generic.Stack%601.Clear%2A> método.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser localizado no <see cref="T:System.Collections.Generic.Stack`1" />. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Determina se um elemento está no <see cref="T:System.Collections.Generic.Stack`1" />.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="item" /> for encontrado no <see cref="T:System.Collections.Generic.Stack`1" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método determina a igualdade usando o comparador de igualdade padrão <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> para `T`, o tipo de valores na lista.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.Stack%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra vários métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica, incluindo o <xref:System.Collections.Generic.Stack%601.Contains%2A> método.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(!T[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.Generic.Stack`1" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="arrayIndex">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia o <see cref="T:System.Collections.Generic.Stack`1" /> para um unidimensional <see cref="T:System.Array" /> existente, começando no índice da matriz especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos são copiados para a matriz na ordem do último a entrar, primeiro a sair (UEPS), semelhante à ordem dos elementos retornados por uma sucessão de chamadas para <xref:System.Collections.Generic.Stack%601.Pop%2A>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.Stack%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra vários métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica, incluindo o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">O número de elementos na origem <see cref="T:System.Collections.Generic.Stack`1" /> é maior do que o espaço disponível de <paramref name="arrayIndex" /> até o final do <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.Stack`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos no <see cref="T:System.Collections.Generic.Stack`1" />.</summary>
+        <value>O número de elementos contidos no <see cref="T:System.Collections.Generic.Stack`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade do <xref:System.Collections.Generic.Stack%601> é o número de elementos que o <xref:System.Collections.Generic.Stack%601> pode armazenar. <xref:System.Collections.Generic.Stack%601.Count%2A>é o número de elementos que estão realmente no <xref:System.Collections.Generic.Stack%601>.  
+  
+ A capacidade é sempre maior que ou igual a <xref:System.Collections.Generic.Stack%601.Count%2A>. Se <xref:System.Collections.Generic.Stack%601.Count%2A> excede a capacidade durante a adição de elementos, a capacidade é aumentada, automaticamente realocando a matriz interna antes de copiar os elementos antigos e adição de novos elementos.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra várias propriedades e métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica, incluindo o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Stack&lt;T&gt;.Enumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Generic.Stack`1/Enumerator&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Stack&lt;T&gt;+Enumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para o <see cref="T:System.Collections.Generic.Stack`1" />.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.Stack`1.Enumerator" /> para o <see cref="T:System.Collections.Generic.Stack`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. Nesta posição, <xref:System.Collections.Generic.Stack%601.Enumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.Generic.Stack%601.Enumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.Generic.Stack%601.Enumerator.Current%2A>.  
+  
+ <xref:System.Collections.Generic.Stack%601.Enumerator.Current%2A>Retorna o mesmo objeto até <xref:System.Collections.Generic.Stack%601.Enumerator.MoveNext%2A> é chamado. <xref:System.Collections.Generic.Stack%601.Enumerator.MoveNext%2A> define <xref:System.Collections.Generic.Stack%601.Enumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.Generic.Stack%601.Enumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.Generic.Stack%601.Enumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.Generic.Stack%601.Enumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.Generic.Stack%601.Enumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.Generic.Stack%601.Enumerator.Current%2A> está indefinido. Não é possível definir <xref:System.Collections.Generic.Stack%601.Enumerator.Current%2A> como o primeiro elemento da coleção novamente; você deve criar uma nova instância de enumerador em vez disso.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra que o <xref:System.Collections.Generic.Stack%601> classe genérica é enumerável. O `foreach` instrução (`For Each` no Visual Basic, `for each` em C++) é usada para enumerar a fila.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Peek">
+      <MemberSignature Language="C#" Value="public T Peek ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T Peek() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.Peek" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o objeto na parte superior do <see cref="T:System.Collections.Generic.Stack`1" /> sem removê-lo.</summary>
+        <returns>O objeto na parte superior do <see cref="T:System.Collections.Generic.Stack`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é semelhante do <xref:System.Collections.Generic.Stack%601.Pop%2A> método, mas <xref:System.Collections.Generic.Stack%601.Peek%2A> não modifica o <xref:System.Collections.Generic.Stack%601>.  
+  
+ Se tipo `T` é um tipo de referência, `null` pode ser enviado para o <xref:System.Collections.Generic.Stack%601> como um espaço reservado, se necessário.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra vários métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica, incluindo o <xref:System.Collections.Generic.Stack%601.Peek%2A> método.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Collections.Generic.Stack`1" /> está vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pop">
+      <MemberSignature Language="C#" Value="public T Pop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T Pop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.Pop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove e retorna o objeto na parte superior do <see cref="T:System.Collections.Generic.Stack`1" />.</summary>
+        <returns>O objeto foi removido da parte superior do <see cref="T:System.Collections.Generic.Stack`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é semelhante do <xref:System.Collections.Generic.Stack%601.Peek%2A> método, mas <xref:System.Collections.Generic.Stack%601.Peek%2A> não modifica o <xref:System.Collections.Generic.Stack%601>.  
+  
+ Se tipo `T` é um tipo de referência, `null` pode ser enviado para o <xref:System.Collections.Generic.Stack%601> como um espaço reservado, se necessário.  
+  
+ <xref:System.Collections.Generic.Stack%601>é implementado como uma matriz. Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra vários métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica, incluindo o <xref:System.Collections.Generic.Stack%601.Pop%2A> método.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Collections.Generic.Stack`1" /> está vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Push">
+      <MemberSignature Language="C#" Value="public void Push (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Push(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.Push(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser enviado por push para o <see cref="T:System.Collections.Generic.Stack`1" />. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Insere um objeto na parte superior do <see cref="T:System.Collections.Generic.Stack`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.Stack%601>é implementado como uma matriz.  
+  
+ Se <xref:System.Collections.Generic.Stack%601.Count%2A> já for igual à capacidade, a capacidade do <xref:System.Collections.Generic.Stack%601> é aumentado, automaticamente realocando matriz interna, e os elementos existentes são copiados para a nova matriz antes de adicionar o novo elemento.  
+  
+ Se tipo `T` é um tipo de referência, `null` pode ser enviado para o <xref:System.Collections.Generic.Stack%601> como um espaço reservado, se necessário. Ele ocupa um slot da pilha e é tratado como qualquer objeto.  
+  
+ Se <xref:System.Collections.Generic.Stack%601.Count%2A> é menor que a capacidade da pilha, <xref:System.Collections.Generic.Stack%601.Push%2A> é uma operação de (1). Se a capacidade precisa ser aumentado para acomodar o novo elemento, <xref:System.Collections.Generic.Stack%601.Push%2A> se torna um O (`n`) operação, onde `n` é <xref:System.Collections.Generic.Stack%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra vários métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica, incluindo o <xref:System.Collections.Generic.Stack%601.Push%2A> método.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;T&gt; IEnumerable&lt;T&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.System#Collections#Generic#IEnumerable&lt;T&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera pela coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerator`1" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. Nesta posição, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A>Retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> está indefinido. Não é possível definir <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o primeiro elemento da coleção novamente; você deve criar uma nova instância de enumerador em vez disso.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ICollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="arrayIndex">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos do <see cref="T:System.Collections.ICollection" /> para um <see cref="T:System.Array" />, começando em um determinado índice <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se o tipo da fonte de <xref:System.Collections.ICollection> não pode ser convertido automaticamente para o tipo de destino `array`, as implementações não genérica de <xref:System.Collections.ICollection.CopyTo%2A?displayProperty=nameWithType> gerar <xref:System.InvalidCastException>, enquanto as implementações genéricas lançam <xref:System.ArgumentException>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.Stack%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O <paramref name="array" /> não tem indexação baseada em zero.  
+  
+ -ou-  
+  
+ O número de elementos na origem <see cref="T:System.Collections.ICollection" /> é maior do que o espaço disponível de <paramref name="arrayIndex" /> até o final do <paramref name="array" /> de destino.  
+  
+ -ou-  
+  
+ O tipo do <see cref="T:System.Collections.ICollection" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.Stack`1.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.ICollection" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.  Na implementação padrão de <see cref="T:System.Collections.Generic.Stack`1" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Em casos raros em que enumerações enfrentar acessos de gravação, você deve bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ <xref:System.Collections.ICollection.SyncRoot%2A>Retorna um objeto que pode ser usado para sincronizar o acesso a <xref:System.Collections.ICollection>. A sincronização é eficaz somente se todos os threads bloquear este objeto antes de acessar a coleção.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.Stack`1.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.  Na implementação padrão da <see cref="T:System.Collections.Generic.Stack`1" />, essa propriedade sempre retorna a instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ <xref:System.Collections.ICollection.SyncRoot%2A>Retorna um objeto que pode ser usado para sincronizar o acesso a <xref:System.Collections.ICollection>. A sincronização é eficaz somente se todos os threads bloquear este objeto antes de acessar a coleção. O código a seguir mostra o uso do <xref:System.Collections.ICollection.SyncRoot%2A> propriedade para c#, C++ e Visual Basic.  
+  
+```csharp  
+ICollection ic = ...;  
+lock (ic.SyncRoot) {  
+   // Access the collection.  
+}  
+```  
+  
+```vb  
+Dim ic As ICollection = ...  
+SyncLock ic.SyncRoot  
+   ' Access the collection.  
+End SyncLock  
+```  
+  
+```cpp#  
+ICollection^ ic = ...;  
+try {  
+   Monitor::Enter(ic->SyncRoot);  
+   // Access the collection.  
+}  
+finally {  
+   Monitor::Exit(ic->SyncRoot);  
+}  
+```  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera em uma coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public T[] ToArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T[] ToArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.ToArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Copia o <see cref="T:System.Collections.Generic.Stack`1" /> em uma nova matriz.</summary>
+        <returns>Uma nova matriz que contém cópias dos elementos do <see cref="T:System.Collections.Generic.Stack`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos são copiados para a matriz na ordem do último a entrar, primeiro a sair (UEPS), semelhante à ordem dos elementos retornados por uma sucessão de chamadas para <xref:System.Collections.Generic.Stack%601.Pop%2A>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.Stack%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra vários métodos para o <xref:System.Collections.Generic.Stack%601> classe genérica, incluindo o <xref:System.Collections.Generic.Stack%601.ToArray%2A> método.  
+  
+ O exemplo de código cria uma pilha de cadeias de caracteres com capacidade padrão e usa o <xref:System.Collections.Generic.Stack%601.Push%2A> método para enviar por push cinco cadeias de caracteres para a pilha. Os elementos da pilha são enumerados, que não altera o estado da pilha. O <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para remover a primeira cadeia de caracteres na pilha. O <xref:System.Collections.Generic.Stack%601.Peek%2A> método é usado para examinar o próximo item na pilha e, em seguida, o <xref:System.Collections.Generic.Stack%601.Pop%2A> método é usado para pop-.  
+  
+ O <xref:System.Collections.Generic.Stack%601.ToArray%2A> método é usado para criar uma matriz e copiar os elementos de pilha para ele, em seguida, a matriz é passada para o <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor <xref:System.Collections.Generic.IEnumerable%601>, criando uma cópia da pilha com a ordem dos elementos invertidos. Os elementos da cópia são exibidos.  
+  
+ Uma matriz duas vezes o tamanho da pilha é criado e o <xref:System.Collections.Generic.Stack%601.CopyTo%2A> método é usado para copiar os elementos de matriz, começando no meio da matriz. O <xref:System.Collections.Generic.Stack%601.%23ctor%2A> construtor é usado novamente para criar uma cópia da pilha com a ordem dos elementos invertidos; assim, os três elementos nulo estão no final.  
+  
+ O <xref:System.Collections.Generic.Stack%601.Contains%2A> método é usado para mostrar que a cadeia de caracteres "quatro" é a primeira cópia da pilha, após o qual o <xref:System.Collections.Generic.Stack%601.Clear%2A> método limpa a cópia e o <xref:System.Collections.Generic.Stack%601.Count%2A> propriedade mostra que a pilha está vazia.  
+  
+ [!code-csharp[Generic.Stack#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.Stack/cs/source.cs#1)]
+ [!code-vb[Generic.Stack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.Stack/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimExcess">
+      <MemberSignature Language="C#" Value="public void TrimExcess ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrimExcess() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.TrimExcess" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Definirá a capacidade para o número real de elementos no <see cref="T:System.Collections.Generic.Stack`1" />, se esse número for menor que 90% da capacidade atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para minimizar a memória da coleção sobrecarga se nenhum elemento novo será adicionado à coleção. O custo de realocar e copiar uma grande <xref:System.Collections.Generic.Stack%601> pode ser considerável, no entanto, para que o <xref:System.Collections.Generic.Stack%601.TrimExcess%2A> método não fará nada se a lista estiver em mais de 90% da capacidade. Isso evita a incorrer em um custo de realocação grande para um ganho relativamente pequeno.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.Stack%601.Count%2A>.  
+  
+ Para redefinir um <xref:System.Collections.Generic.Stack%601> para seu estado inicial, chame o <xref:System.Collections.Generic.Stack%601.Clear%2A> método antes de chamar <xref:System.Collections.Generic.Stack%601.TrimExcess%2A> método. Cortar vazio <xref:System.Collections.Generic.Stack%601> define a capacidade do <xref:System.Collections.Generic.Stack%601> à capacidade padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryPeek">
+      <MemberSignature Language="C#" Value="public bool TryPeek (out T result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryPeek([out] !T&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.TryPeek(`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryPop">
+      <MemberSignature Language="C#" Value="public bool TryPop (out T result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryPop([out] !T&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.Stack`1.TryPop(`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

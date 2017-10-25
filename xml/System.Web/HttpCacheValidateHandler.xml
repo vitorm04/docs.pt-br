@@ -1,0 +1,42 @@
+<Type Name="HttpCacheValidateHandler" FullName="System.Web.HttpCacheValidateHandler">
+  <TypeSignature Language="C#" Value="public delegate void HttpCacheValidateHandler(HttpContext context, object data, ref HttpValidationStatus validationStatus);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpCacheValidateHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCacheValidateHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.Web.HttpContext" />
+    <Parameter Name="data" Type="System.Object" />
+    <Parameter Name="validationStatus" Type="System.Web.HttpValidationStatus&amp;" RefType="ref" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">O <see cref="T:System.Web.HttpContext" /> objeto que contém informações sobre a solicitação atual.</param>
+    <param name="data">Dados fornecidos pelo usuário usados para validar o item em cache.</param>
+    <param name="validationStatus">Um valor de enumeração <see cref="T:System.Web.HttpValidationStatus" />. O delegado deve definir esse valor para indicar o resultado da validação.</param>
+    <summary>Representa um método que é chamado para validar um item em cache antes do item é servido do cache.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um item em cache é invalidado dentro do escopo de <xref:System.Web.HttpCacheValidateHandler> método, ele é removido do cache e a solicitação para o item é tratada como um erro de cache.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar um novo delegado de validação de cache para um aplicativo.  
+  
+ [!code-csharp[System.WEb.HttpCacheValidateHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.WEb.HttpCacheValidateHandler/CS/validate.cs#1)]
+ [!code-vb[System.WEb.HttpCacheValidateHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.WEb.HttpCacheValidateHandler/VB/validate.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

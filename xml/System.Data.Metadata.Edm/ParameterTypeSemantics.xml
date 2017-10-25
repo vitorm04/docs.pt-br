@@ -1,0 +1,73 @@
+<Type Name="ParameterTypeSemantics" FullName="System.Data.Metadata.Edm.ParameterTypeSemantics">
+  <TypeSignature Language="C#" Value="public enum ParameterTypeSemantics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ParameterTypeSemantics extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.ParameterTypeSemantics" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a semântica do tipo que é usada para resolver as sobrecargas de função. Cada provedor de armazenamento deve usar esses sinalizadores de enumeração no arquivo de manifesto de provedor para cada definição de função.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Metadata.Edm.ParameterTypeSemantics> classe especifica a semântica de tipo para promotability, a conversão implícita e a conversão explícita para os tipos primitivos do provedor. [!INCLUDE[vstecado](~/includes/vstecado-md.md)]lê informações do arquivo de manifesto do provedor de armazenamento para o <xref:System.Data.Metadata.Edm.ParameterTypeSemantics> classe. Em seguida, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] usa o <xref:System.Data.Metadata.Edm.ParameterTypeSemantics> classe para determinar as definições de função apropriada com base nos tipos de parâmetro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowImplicitConversion">
+      <MemberSignature Language="C#" Value="AllowImplicitConversion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Metadata.Edm.ParameterTypeSemantics AllowImplicitConversion = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Metadata.Edm.ParameterTypeSemantics.AllowImplicitConversion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ParameterTypeSemantics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um sinalizador que indica a conversão implícita entre a determinado e os tipos de argumento formal. Esse é o tipo de conversão padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowImplicitPromotion">
+      <MemberSignature Language="C#" Value="AllowImplicitPromotion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Metadata.Edm.ParameterTypeSemantics AllowImplicitPromotion = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Metadata.Edm.ParameterTypeSemantics.AllowImplicitPromotion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ParameterTypeSemantics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um sinalizador que indica a promoção de tipo entre o determinado e os tipos de argumento formal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExactMatchOnly">
+      <MemberSignature Language="C#" Value="ExactMatchOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Metadata.Edm.ParameterTypeSemantics ExactMatchOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Metadata.Edm.ParameterTypeSemantics.ExactMatchOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ParameterTypeSemantics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um sinalizador que indica o uso de apenas equivalência estrito.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

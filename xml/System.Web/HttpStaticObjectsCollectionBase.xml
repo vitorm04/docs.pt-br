@@ -1,0 +1,262 @@
+<Type Name="HttpStaticObjectsCollectionBase" FullName="System.Web.HttpStaticObjectsCollectionBase">
+  <TypeSignature Language="C#" Value="public abstract class HttpStaticObjectsCollectionBase : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpStaticObjectsCollectionBase extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpStaticObjectsCollectionBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como a classe base para classes que fornecem uma coleção de objetos no escopo do aplicativo para o <see cref="P:System.Web.HttpApplicationState.StaticObjects" /> propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpStaticObjectsCollectionBase> classe é uma classe abstrata que contém os mesmos membros como o <xref:System.Web.HttpStaticObjectsCollection> classe. O <xref:System.Web.HttpStaticObjectsCollectionBase> classe permite que você crie classes derivadas que são semelhantes a <xref:System.Web.HttpStaticObjectsCollection> classe, mas que você pode personalizar e que trabalham fora o pipeline do ASP.NET. Quando você executa testes de unidade, você normalmente usar uma classe derivada para implementar membros com comportamento personalizado que atende o cenário que você está testando.  
+  
+ O <xref:System.Web.HttpStaticObjectsCollectionWrapper> classe deriva de <xref:System.Web.HttpStaticObjectsCollectionBase> classe. O <xref:System.Web.HttpStaticObjectsCollectionWrapper> classe serve como um wrapper para o <xref:System.Web.HttpStaticObjectsCollection> classe. Em tempo de execução, você normalmente usa uma instância do <xref:System.Web.HttpStaticObjectsCollectionWrapper> classe para chamar membros de <xref:System.Web.HttpStaticObjectsCollection> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpStaticObjectsCollectionBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a classe para uso por uma instância de classe herdada. Esse construtor só pode ser chamado por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz unidimensional que é o destino dos elementos que são copiados da coleção. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual começar a copiar.</param>
+        <summary>Quando substituído em uma classe derivada, copia os elementos da coleção para uma matriz, começando no índice especificado na matriz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de objetos na coleção.</summary>
+        <value>O número de objetos na coleção.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna um enumerador que pode ser usado para iterar pela coleção.</summary>
+        <returns>Um objeto que pode ser usado para iterar pela coleção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public virtual object GetObject (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.GetObject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de maiusculas e minúsculas do objeto para retornar.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o objeto que tem o nome especificado da coleção.</summary>
+        <returns>O objeto especificado pelo <paramref name="name" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public virtual bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se a coleção é thread-safe.</summary>
+        <value>
+          <see langword="true" />Se a coleção é thread-safe; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de maiusculas e minúsculas do objeto a ser obtido.</param>
+        <summary>Quando substituído em uma classe derivada, obtém o objeto que tem o nome especificado da coleção.</summary>
+        <value>O objeto especificado pelo <paramref name="name" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NeverAccessed">
+      <MemberSignature Language="C#" Value="public virtual bool NeverAccessed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NeverAccessed" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.NeverAccessed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se a coleção foi acessada.</summary>
+        <value>
+          <see langword="true" />Se a coleção nunca foi acessada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public virtual void Serialize (System.IO.BinaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.IO.BinaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpStaticObjectsCollectionBase.Serialize(System.IO.BinaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.BinaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O objeto a ser usado para gravar a coleção serializada em um fluxo ou de cadeia de caracteres codificada.</param>
+        <summary>Quando substituído em uma classe derivada, grava o conteúdo da coleção para um <see cref="T:System.IO.BinaryWriter" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public virtual object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpStaticObjectsCollectionBase.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,65 @@
+<Type Name="ServiceHostFactoryBase" FullName="System.ServiceModel.Activation.ServiceHostFactoryBase">
+  <TypeSignature Language="C#" Value="public abstract class ServiceHostFactoryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceHostFactoryBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.ServiceHostFactoryBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a implementação base para a fábrica que permite que o código do aplicativo participe na criação de hosts de serviço em ambientes de hospedagem gerenciados em que a instância de host é criada dinamicamente em resposta às mensagens de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os ambientes de hospedagem gerenciados que dão suporte a essa interface são os serviços de informações da Internet (IIS) ou serviços de ativação de processos do Windows (WAS). Implementar uma fábrica que deriva dessa classe quando você tiver implementado um personalizado derivado de <xref:System.ServiceModel.ServiceHostBase> nesses ambientes de hospedagem. Se você tiver implementado um personalizado derivado de <xref:System.ServiceModel.ServiceHost>, considere a derivação de <xref:System.ServiceModel.Activation.ServiceHostFactory> em vez disso.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServiceHostFactoryBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceHostFactoryBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activation.ServiceHostFactoryBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceHost">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.ServiceHostBase CreateServiceHost (string constructorString, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.ServiceHostBase CreateServiceHost(string constructorString, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.ServiceHostFactoryBase.CreateServiceHost(System.String,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHostBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constructorString" Type="System.String" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="constructorString">Os dados de inicialização que são passados para a <see cref="T:System.ServiceModel.ServiceHostBase" /> instância sendo construída pela fábrica.</param>
+        <param name="baseAddresses">Um <see cref="T:System.Array" /> do tipo <see cref="T:System.Uri" /> que contém os endereços de base do host.</param>
+        <summary>Quando substituído em uma classe derivada, cria um <see cref="T:System.ServiceModel.ServiceHostBase" /> com um endereço base específico usando dados de inicialização personalizada.</summary>
+        <returns>O <see cref="T:System.ServiceModel.ServiceHostBase" /> objeto com a base especificada endereços e inicializado com os dados de inicialização personalizada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

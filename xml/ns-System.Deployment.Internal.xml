@@ -1,0 +1,6 @@
+<Namespace Name="System.Deployment.Internal">
+  <Docs>
+    <summary>O <see cref="N:System.Deployment.Internal" /> namespace contém classes auxiliares para acessar os membros internos de <see cref="T:System.ActivationContext" /> e <see cref="T:System.ApplicationIdentity" /> objetos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,184 @@
+<Type Name="GenericEnumConverter" FullName="System.Configuration.GenericEnumConverter">
+  <TypeSignature Language="C#" Value="public sealed class GenericEnumConverter : System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GenericEnumConverter extends System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.GenericEnumConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationConverterBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte entre uma cadeia de caracteres e um tipo de enumeração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este tipo, como todos os outros conversor tipos de configuração, converte cadeias de caracteres encontradas no arquivo de configuração de e para as propriedades com rigidez de tipos relacionadas.  
+  
+ Em particular, o <xref:System.Configuration.GenericEnumConverter> objeto converte um <xref:System.String> valor atribuído a uma propriedade de configuração, como um <xref:System.Enum> valor e vice-versa.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar uma propriedade de seção personalizado que usa o <xref:System.Configuration.GenericEnumConverter> tipo.  
+  
+ [!code-csharp[System.Configuration.GenericEnumConverter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.GenericEnumConverter/CS/GenericEnumConverter.cs#1)]
+ [!code-vb[System.Configuration.GenericEnumConverter#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.GenericEnumConverter/VB/GenericEnumConverter.vb#1)]  
+  
+ O exemplo de código a seguir mostra como definir uma propriedade do enumerador personalizado acessada no exemplo anterior. Observe que não há necessidade de especificar o <xref:System.Configuration.GenericEnumConverter> digite; ele é chamado implicitamente pelo sistema.  
+  
+ [!code-csharp[System.Configuration.ConfigurationConvertersCustomSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationConvertersCustomSection/CS/ConfigurationConvertersCustomSection.cs#5)]
+ [!code-vb[System.Configuration.ConfigurationConvertersCustomSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationConvertersCustomSection/VB/ConfigurationConvertersCustomSection.vb#5)]  
+  
+ O exemplo a seguir é um trecho de configuração usado pelo exemplo anterior.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+  
+  <configSections>  
+    <section name="CustomSection"   
+      type="Samples.AspNet.CustomSection,   
+      ConfigurationConverters,   
+      Version=1.0.0.0, Culture=neutral,   
+      PublicKeyToken=null"   
+      allowDefinition="Everywhere"   
+      allowExeDefinition="MachineToApplication"   
+      restartOnExternalChanges="true" />  
+  </configSections>  
+  
+  <CustomSection fileName="default.txt" maxIdleTime="90" timeDelay="infinite" cdStr="str0, str1" permission="Read" maxUsers="Infinite"/>  
+  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericEnumConverter (Type typeEnum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type typeEnum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.GenericEnumConverter.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeEnum" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeEnum">O tipo de enumeração para converter.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.GenericEnumConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa os tipos de conversor fornecidos pelo sistema. A única vez em que você precisa usar o <xref:System.Configuration.GenericEnumConverter.%23ctor%2A> construtor é quando você cria seu próprio tipo de conversão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeEnum" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.GenericEnumConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="data">O <see cref="T:System.String" /> objeto converter.</param>
+        <summary>Converte um <see cref="T:System.String" /> para um <see cref="T:System.Enum" /> tipo.</summary>
+        <returns>O <see cref="T:System.Enum" /> tipo que representa o <paramref name="data" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa o <xref:System.Configuration.GenericEnumConverter.ConvertFrom%2A> método quando ele lê a partir de um arquivo de configuração para converter um <xref:System.String> valor para um <xref:System.Enum> tipo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="data" /> é nulo ou uma cadeia de caracteres vazia ("").  
+  
+ \- ou -  
+  
+ <paramref name="data" />começa com um caractere numérico.  
+  
+ \- ou -  
+  
+ <paramref name="data" />inclui o espaço em branco.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object value, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object value, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.GenericEnumConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="value">O valor a converter.</param>
+        <param name="type">O tipo para o qual converter.</param>
+        <summary>Converte um <see cref="T:System.Enum" /> de tipo para um <see cref="T:System.String" /> valor.</summary>
+        <returns>O <see cref="T:System.String" /> que representa o <paramref name="value" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa o <xref:System.Configuration.GenericEnumConverter.ConvertTo%2A> método ao gravar em um arquivo de configuração para converter um <xref:System.Enum> de tipo para um <xref:System.String> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

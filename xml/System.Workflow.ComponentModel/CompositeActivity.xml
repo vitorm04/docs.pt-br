@@ -1,0 +1,552 @@
+<Type Name="CompositeActivity" FullName="System.Workflow.ComponentModel.CompositeActivity">
+  <TypeSignature Language="C#" Value="public class CompositeActivity : System.Workflow.ComponentModel.Activity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompositeActivity extends System.Workflow.ComponentModel.Activity" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.CompositeActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Activity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer(typeof(System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer), typeof(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeDescriptionProvider(typeof(System.Workflow.ComponentModel.Serialization.CompositeActivityTypeDescriptorProvider))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Compiler.ActivityCodeGenerator(typeof(System.Workflow.ComponentModel.Compiler.CompositeActivityCodeGenerator))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Compiler.ActivityValidator(typeof(System.Workflow.ComponentModel.Compiler.CompositeActivityValidator))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Serialization.ContentProperty("Activities")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Derivado de <see cref="T:System.Workflow.ComponentModel.Activity" /> que é a classe base para todas as atividades que contêm outras atividades. Um <see cref="T:System.Workflow.ComponentModel.CompositeActivity" /> é responsável por gerenciar a execução de suas atividades filho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Um <xref:System.Workflow.ComponentModel.CompositeActivity> gerencia a execução de suas atividades filho usando <xref:System.Workflow.ComponentModel.ActivityExecutionContext> classe métodos e eventos definidos no <xref:System.Workflow.ComponentModel.Activity> classe.  Por exemplo, uma atividade filho é agendada para execução com o <xref:System.Workflow.ComponentModel.ActivityExecutionContext.ExecuteActivity%2A> de <xref:System.Workflow.ComponentModel.ActivityExecutionContext>. Um <xref:System.Workflow.ComponentModel.CompositeActivity> atividade pode ser notificada quando uma atividade filho conclui sua execução assinando o <xref:System.Workflow.ComponentModel.Activity.Closed> evento definido no <xref:System.Workflow.ComponentModel.Activity>.  
+  
+ O tempo de execução do fluxo de trabalho impõe determinadas restrições em <xref:System.Workflow.ComponentModel.CompositeActivity> execução, a maior parte fundamental dos quais é que um <xref:System.Workflow.ComponentModel.CompositeActivity> atividade não é possível mover para o <xref:System.Workflow.ComponentModel.Activity.Closed> estado se todas as atividades filho são ainda em uma <xref:System.Workflow.ComponentModel.Activity.Executing>, <xref:System.Workflow.ComponentModel.Activity.Canceling>, <xref:System.Workflow.ComponentModel.Activity.Compensating>, ou <xref:System.Workflow.ComponentModel.Activity.Faulting>, estado.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra um `CompositeActivity` que executa sua primeira atividade filho para execução. Quando a atividade filho é movido para o estado fechado, a atividade composta será notificada e, em seguida, concluir sua execução.  
+  
+```csharp  
+public class HasOneChildActivity : CompositeActivity  
+{  
+    protected override ActivityExecutionStatus Execute(ActivityExecutionContext executionContext)  
+    {  
+        Activity child = this.EnabledActivities[0];  
+        child.Closed += this.ChildClosed;  
+        executionContext.ExecuteActivity(child);  
+  
+        return ActivityExecutionStatus.Executing;  
+    }  
+  
+    void ChildClosed(object sender, ActivityExecutionStatusChangedEventArgs e)  
+    {  
+        e.Activity.Closed -= this.ChildClosed;  
+        ActivityExecutionContext executionContext = sender as ActivityExecutionContext;  
+  
+        executionContext.CloseActivity();  
+    }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositeActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.CompositeActivity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositeActivity (System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.Activity&gt; children);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Workflow.ComponentModel.Activity&gt; children) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.#ctor(System.Collections.Generic.IEnumerable{System.Workflow.ComponentModel.Activity})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="children" Type="System.Collections.Generic.IEnumerable&lt;System.Workflow.ComponentModel.Activity&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="children">O <see cref="T:System.Object" /> Implementando o <see cref="T:System.Collections.IEnumerable" /> interface com o tipo <see cref="T:System.Workflow.ComponentModel.Activity" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.CompositeActivity" /> classe um <see cref="T:System.Object" /> que implementa o <see cref="T:System.Collections.IEnumerable" /> interface com o tipo <see cref="T:System.Workflow.ComponentModel.Activity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositeActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.CompositeActivity" /> classe, juntamente com o nome para a atividade.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Activities">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityCollection Activities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.ActivityCollection Activities" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.CompositeActivity.Activities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que representa a coleção <see cref="T:System.Workflow.ComponentModel.ActivityCollection" />, de todas as atividades filho.</summary>
+        <value>
+          <see cref="T:System.Workflow.ComponentModel.ActivityCollection" />de todas as atividades filho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa a coleção de atividades filho gerenciados pela atividade composta. Essa coleção pode ser atualizada.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como criar atividades e adicioná-los como filhos a uma atividade composta e inclui a configuração de <xref:System.Workflow.ComponentModel.CompositeActivity.CanModifyActivities%2A> permissiva para este tipo.  
+  
+ Este exemplo de código é parte do exemplo Throw SDK e do arquivo de ThrowWorkFlow.cs. Para obter mais informações, consulte [exemplo lançar](http://msdn.microsoft.com/en-us/aa5b9546-ec95-4e43-8337-20e26f8d71cc).  
+  
+ [!code-csharp[WF_Samples#179](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#179)]
+ [!code-vb[WF_Samples#179](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#179)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyWorkflowChanges">
+      <MemberSignature Language="C#" Value="protected void ApplyWorkflowChanges (System.Workflow.ComponentModel.WorkflowChanges workflowChanges);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ApplyWorkflowChanges(class System.Workflow.ComponentModel.WorkflowChanges workflowChanges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.ApplyWorkflowChanges(System.Workflow.ComponentModel.WorkflowChanges)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowChanges" Type="System.Workflow.ComponentModel.WorkflowChanges" />
+      </Parameters>
+      <Docs>
+        <param name="workflowChanges">O <see cref="T:System.Workflow.ComponentModel.WorkflowChanges" /> a ser aplicado.</param>
+        <summary>Aplica-se a <see cref="T:System.Workflow.ComponentModel.WorkflowChanges" /> manifesto no parâmetro para esta instância.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="workflowChanges" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanModifyActivities">
+      <MemberSignature Language="C#" Value="protected bool CanModifyActivities { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanModifyActivities" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.CompositeActivity.CanModifyActivities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que controla se as atividades individuais em <see cref="P:System.Workflow.ComponentModel.CompositeActivity.Activities" /> pode ser modificado.</summary>
+        <value>
+          <see langword="true" />Se as atividades individuais em <see cref="P:System.Workflow.ComponentModel.CompositeActivity.Activities" /> pode ser modificada; caso contrário <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como criar atividades e adicioná-los como filhos a uma atividade composta e inclui a configuração de <xref:System.Workflow.ComponentModel.CompositeActivity.CanModifyActivities%2A> permissiva para este tipo.  
+  
+ Este exemplo de código é parte do exemplo Throw SDK e do arquivo de ThrowWorkFlow.cs. Para obter mais informações, consulte [exemplo lançar](http://msdn.microsoft.com/en-us/aa5b9546-ec95-4e43-8337-20e26f8d71cc).  
+  
+ [!code-csharp[WF_Samples#179](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#179)]
+ [!code-vb[WF_Samples#179](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#179)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar recursos gerenciados e usados por essa instância e todas as atividades filho desta instância; <see langword="false" /> para liberar apenas os recursos não gerenciados desta instância.</param>
+        <summary>Chamadas <see cref="M:System.Workflow.ComponentModel.DependencyObject.Dispose(System.Boolean)" /> nessa instância e, opcionalmente, chamadas <see cref="M:System.Workflow.ComponentModel.DependencyObject.Dispose" /> em todas as atividades filho desta instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao longo do tempo de vida de uma atividade, vários objetos do .NET podem ser criados ou descartados. Sempre que uma instância de fluxo de trabalho é descarregada da memória, o .NET objetos correspondente para as atividades na árvore de fluxo de trabalho são descartados (o <xref:System.Workflow.ComponentModel.DependencyObject.Dispose%2A> método é chamado em cada atividade). Quando a instância de fluxo de trabalho é carregada de volta na memória, um novo objeto .NET é criado para cada atividade com o estado de descarregar o correspondente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnabledActivities">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Activity&gt; EnabledActivities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.ComponentModel.Activity&gt; EnabledActivities" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.CompositeActivity.EnabledActivities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção somente leitura que representa o subconjunto de <see cref="P:System.Workflow.ComponentModel.CompositeActivity.Activities" /> que estão habilitados.</summary>
+        <value>A coleção somente leitura que representa o subconjunto de <see cref="P:System.Workflow.ComponentModel.CompositeActivity.Activities" /> que estão habilitados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicActivities">
+      <MemberSignature Language="C#" Value="protected System.Workflow.ComponentModel.Activity[] GetDynamicActivities (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Workflow.ComponentModel.Activity[] GetDynamicActivities(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.GetDynamicActivities(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">O <see cref="T:System.Workflow.ComponentModel.Activity" /> especificado.</param>
+        <summary>Retorna uma matriz que contém todas as instâncias em execução no momento da atividade especificada.</summary>
+        <returns>Uma matriz de instâncias de atividades que estão sendo executados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleFault">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus HandleFault (System.Workflow.ComponentModel.ActivityExecutionContext executionContext, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus HandleFault(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.HandleFault(System.Workflow.ComponentModel.ActivityExecutionContext,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> para essa instância.</param>
+        <param name="exception">O <see cref="T:System.Exception" /> que causou essa falha.</param>
+        <summary>Chamado quando uma exceção é gerada dentro do contexto de execução dessa instância.</summary>
+        <returns>O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" /> que resulta da tentativa de cancelar esta instância.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exception" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Initialize(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.Initialize(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O <see cref="T:System.IServiceProvider" /> especificado.</param>
+        <summary>Inicializa a todas as atividades filho apropriados de nessa instância e especificado <see cref="T:System.IServiceProvider" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="provider" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivityChangeAdd">
+      <MemberSignature Language="C#" Value="protected virtual void OnActivityChangeAdd (System.Workflow.ComponentModel.ActivityExecutionContext executionContext, System.Workflow.ComponentModel.Activity addedActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnActivityChangeAdd(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext, class System.Workflow.ComponentModel.Activity addedActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.OnActivityChangeAdd(System.Workflow.ComponentModel.ActivityExecutionContext,System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="addedActivity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> especificado.</param>
+        <param name="addedActivity">O <see cref="T:System.Workflow.ComponentModel.Activity" /> especificado.</param>
+        <summary>Chama quando uma atividade é adicionada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="addedActivity" />é uma referência nula (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivityChangeRemove">
+      <MemberSignature Language="C#" Value="protected virtual void OnActivityChangeRemove (System.Workflow.ComponentModel.ActivityExecutionContext executionContext, System.Workflow.ComponentModel.Activity removedActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnActivityChangeRemove(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext, class System.Workflow.ComponentModel.Activity removedActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.OnActivityChangeRemove(System.Workflow.ComponentModel.ActivityExecutionContext,System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="removedActivity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> especificado.</param>
+        <param name="removedActivity">O <see cref="T:System.Workflow.ComponentModel.Activity" /> especificado.</param>
+        <summary>Chamado quando uma atividade é removida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação atual não fornece nenhuma funcionalidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivityExecutionContextLoad">
+      <MemberSignature Language="C#" Value="protected override void OnActivityExecutionContextLoad (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnActivityExecutionContextLoad(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.OnActivityExecutionContextLoad(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um <see cref="T:System.Object" /> que implementa <see cref="T:System.IServiceProvider" /> e fornece serviços para essa instância.</param>
+        <summary>Chamado pelo mecanismo de tempo de execução de fluxo de trabalho sempre o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> para esta atividade é carregada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivityExecutionContextUnload">
+      <MemberSignature Language="C#" Value="protected override void OnActivityExecutionContextUnload (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnActivityExecutionContextUnload(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.OnActivityExecutionContextUnload(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um <see cref="T:System.Object" /> que implementa <see cref="T:System.IServiceProvider" /> e fornece serviços para essa instância.</param>
+        <summary>Chamado pelo mecanismo de tempo de execução de fluxo de trabalho sempre o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> para esta atividade é descarregada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnListChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnListChanged (System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnListChanged(class System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.OnListChanged(System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs" /> difusão pelo evento.</param>
+        <summary>Executa o processamento adicional quando a <see cref="P:System.Workflow.ComponentModel.CompositeActivity.Activities" /> alterações de propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnListChanging">
+      <MemberSignature Language="C#" Value="protected virtual void OnListChanging (System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnListChanging(class System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.OnListChanging(System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+          <see cref="T:System.EventArgs" />relacionado ao evento.</param>
+        <summary>Evento que ocorre antes de uma alteração feita para subjacente <see cref="P:System.Workflow.ComponentModel.CompositeActivity.Activities" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWorkflowChangesCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnWorkflowChangesCompleted (System.Workflow.ComponentModel.ActivityExecutionContext rootContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnWorkflowChangesCompleted(class System.Workflow.ComponentModel.ActivityExecutionContext rootContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.OnWorkflowChangesCompleted(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="rootContext">O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> associado a esta instância.</param>
+        <summary>Chamado depois que as alterações foram feitas à coleção <see cref="P:System.Workflow.ComponentModel.CompositeActivity.Activities" /> desta instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando substituído em uma classe derivada, fornece processamento para esse evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninitialize">
+      <MemberSignature Language="C#" Value="protected override void Uninitialize (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Uninitialize(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.CompositeActivity.Uninitialize(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um <see cref="T:System.Object" /> que implementa <see cref="T:System.IServiceProvider" /> e fornece serviços para essa instância.</param>
+        <summary>Chamado pelo mecanismo de tempo de execução de fluxo de trabalho quando uma atividade faz a transição para o <see cref="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Closed" /> estado do <see cref="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Initialized" /> estado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para limpeza de atividade, como propriedades de dependência de limpar e excluir filas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

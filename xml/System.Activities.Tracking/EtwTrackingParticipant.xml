@@ -1,0 +1,149 @@
+<Type Name="EtwTrackingParticipant" FullName="System.Activities.Tracking.EtwTrackingParticipant">
+  <TypeSignature Language="C#" Value="public sealed class EtwTrackingParticipant : System.Activities.Tracking.TrackingParticipant" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EtwTrackingParticipant extends System.Activities.Tracking.TrackingParticipant" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.EtwTrackingParticipant" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingParticipant</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um consumidor de dados de rastreamento de fluxo de trabalho que emite um Rastreamento de Eventos do evento do Windows (ETW) para uma sessão do ETW que contém os dados do registro de acompanhamento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EtwTrackingParticipant ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.EtwTrackingParticipant.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Tracking.EtwTrackingParticipant" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationReference">
+      <MemberSignature Language="C#" Value="public string ApplicationReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationReference" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.EtwTrackingParticipant.ApplicationReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de referência usado pelo provedor ETW criado por esse participante de rastreamento.</summary>
+        <value>O valor de referência.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTrack">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult BeginTrack (System.Activities.Tracking.TrackingRecord record, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.IAsyncResult BeginTrack(class System.Activities.Tracking.TrackingRecord record, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.EtwTrackingParticipant.BeginTrack(System.Activities.Tracking.TrackingRecord,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="System.Activities.Tracking.TrackingRecord" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="record">To be added.</param>
+        <param name="timeout">To be added.</param>
+        <param name="callback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTrack">
+      <MemberSignature Language="C#" Value="protected override void EndTrack (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void EndTrack(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.EtwTrackingParticipant.EndTrack(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EtwProviderId">
+      <MemberSignature Language="C#" Value="public Guid EtwProviderId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid EtwProviderId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.EtwTrackingParticipant.EtwProviderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do provedor usada pelo provedor ETW criado por esse participante de rastreamento.</summary>
+        <value>A ID do provedor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ID do provedor ETW padrão baseia-se para a funcionalidade. Rastreamento de aplicativo de emissão de todos os aplicativos que não especificam um ID do provedor de ETW em sua configuração e ID de eventos de rastreamento que usam o provedor padrão. Uma sessão do ETW pode escutar com a ID do provedor padrão e receber eventos de vários serviços. Se o isolamento de eventos é necessário, o aplicativo deve especificar uma ID de provedor ETW específicas do aplicativo na configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Track">
+      <MemberSignature Language="C#" Value="protected override void Track (System.Activities.Tracking.TrackingRecord record, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Track(class System.Activities.Tracking.TrackingRecord record, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.EtwTrackingParticipant.Track(System.Activities.Tracking.TrackingRecord,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="System.Activities.Tracking.TrackingRecord" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="record">To be added.</param>
+        <param name="timeout">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

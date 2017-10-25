@@ -1,0 +1,414 @@
+<Type Name="RemotingClientProxy" FullName="System.Runtime.Remoting.Services.RemotingClientProxy">
+  <TypeSignature Language="C#" Value="public abstract class RemotingClientProxy : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RemotingClientProxy extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Services.RemotingClientProxy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A classe base abstrata para proxies com objetos conhecidos que foram gerados pelo [Soapsuds ferramenta (Soapsuds.exe)](http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.Remoting.Services.RemotingClientProxy>fornece acesso para as propriedades frequentemente usadas para proxies gerados Soapsuds que apontam para os objetos conhecidos (XML Web services).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RemotingClientProxy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.RemotingClientProxy.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Runtime.Remoting.Services.RemotingClientProxy" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_tp">
+      <MemberSignature Language="C#" Value="protected object _tp;" />
+      <MemberSignature Language="ILAsm" Value=".field family object _tp" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Services.RemotingClientProxy._tp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O proxy transparente dentro do objeto de proxy do cliente de comunicação remota.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_type">
+      <MemberSignature Language="C#" Value="protected Type _type;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Type _type" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Services.RemotingClientProxy._type" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o tipo do objeto que representa o proxy atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Type> classe de tipo de objeto que representa o proxy atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_url">
+      <MemberSignature Language="C#" Value="protected string _url;" />
+      <MemberSignature Language="ILAsm" Value=".field family string _url" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Services.RemotingClientProxy._url" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a URL do objeto que representa o proxy atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A URL do objeto que representa o proxy atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowAutoRedirect">
+      <MemberSignature Language="C#" Value="public bool AllowAutoRedirect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowAutoRedirect" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.AllowAutoRedirect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a manipulação automática de redirecionamentos de servidor está habilitada.</summary>
+        <value>Um valor booliano que indica se a manipulação automática de redirecionamentos de servidor está habilitada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureProxy">
+      <MemberSignature Language="C#" Value="protected void ConfigureProxy (Type type, string url);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ConfigureProxy(class System.Type type, string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.RemotingClientProxy.ConfigureProxy(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> classe de tipo de objeto que representa o proxy atual.</param>
+        <param name="url">A URL do objeto que representa o proxy atual.</param>
+        <summary>Interno. Configura automaticamente o proxy carregando os canais, se eles já não são carregados e criar o proxy.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectProxy">
+      <MemberSignature Language="C#" Value="protected void ConnectProxy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ConnectProxy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.RemotingClientProxy.ConnectProxy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interno. Conecta-se o proxy para o canal de comunicação remota que é especificado pelo <see cref="P:System.Runtime.Remoting.Services.RemotingClientProxy.Url" /> propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="public object Cookies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Cookies" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.Cookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não está implementada atualmente. A propriedade retorna <see langword="null" /> (<see langword="Nothing" /> no Visual Basic).</summary>
+        <value>Os cookies para o proxy atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de domínio a ser usado para autenticação básica e a autenticação digest.</summary>
+        <value>O nome do domínio a ser usado para autenticação básica e a autenticação digest.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre métodos de autenticação e segurança de comunicação remota, consulte [segurança](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCookies">
+      <MemberSignature Language="C#" Value="public bool EnableCookies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableCookies" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.EnableCookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não está implementada atualmente. A propriedade lança um <see cref="T:System.NotSupportedException" />.</summary>
+        <value>Um valor booliano que indica se a manipulação de cookies recebidos do servidor está habilitada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a senha a ser usado para autenticação básica e a autenticação digest.</summary>
+        <value>A senha a ser usado para autenticação básica e a autenticação digest.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre métodos de autenticação e segurança de comunicação remota, consulte [segurança](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL base para o servidor para uso em solicitações.</summary>
+        <value>A URL base para o servidor para uso em solicitações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreAuthenticate">
+      <MemberSignature Language="C#" Value="public bool PreAuthenticate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreAuthenticate" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.PreAuthenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a pré-autenticação de solicitações está habilitada.</summary>
+        <value>Um valor booliano que indica se a pré-autenticação de solicitações está habilitada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyName">
+      <MemberSignature Language="C#" Value="public string ProxyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProxyName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.ProxyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do servidor proxy para uso em solicitações.</summary>
+        <value>O nome do servidor proxy para uso em solicitações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyPort">
+      <MemberSignature Language="C#" Value="public int ProxyPort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProxyPort" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.ProxyPort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da porta do servidor proxy para uso em solicitações.</summary>
+        <value>O número da porta do servidor proxy para uso em solicitações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite em milissegundos a ser usado para chamadas síncronas.</summary>
+        <value>O tempo limite em milissegundos a ser usado para chamadas síncronas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.Runtime.Remoting.Services.RemotingClientProxy.Timeout%2A> propriedade é -1 e indica que um tempo limite nunca ocorre (tempo limite infinito).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL base para o servidor para uso em solicitações.</summary>
+        <value>A URL base para o servidor para uso em solicitações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgent">
+      <MemberSignature Language="C#" Value="public string UserAgent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAgent" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.UserAgent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o agente do usuário cabeçalho HTTP para a solicitação.</summary>
+        <value>O cabeçalho HTTP do agente do usuário para a solicitação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Username">
+      <MemberSignature Language="C#" Value="public string Username { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Username" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Services.RemotingClientProxy.Username" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de usuário para enviar para autenticação básica e a autenticação digest.</summary>
+        <value>O nome de usuário para enviar para autenticação básica e a autenticação digest.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre métodos de autenticação e segurança de comunicação remota, consulte [segurança](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

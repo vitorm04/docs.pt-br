@@ -1,0 +1,58 @@
+<Type Name="IContributeServerContextSink" FullName="System.Runtime.Remoting.Contexts.IContributeServerContextSink">
+  <TypeSignature Language="C#" Value="public interface IContributeServerContextSink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContributeServerContextSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContributeServerContextSink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contribui com um coletor de interceptação no limite de contexto na extremidade do servidor de uma chamada de comunicação remota.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Contexts.IContributeServerContextSink> interface é implementada por propriedades de contexto em um <xref:System.Runtime.Remoting.Contexts.Context> classe que deseja contribuir um coletor de interceptação no limite de contexto na extremidade do servidor de uma chamada de comunicação remota.  
+  
+ A cadeia de contexto do servidor é composta dessas propriedades no contexto do servidor que implementam <xref:System.Runtime.Remoting.Contexts.IContributeServerContextSink> e que contribuem um coletor usando o <xref:System.Runtime.Remoting.Contexts.IContributeServerContextSink.GetServerContextSink%2A> chamada de método.  
+  
+ A serialização é um exemplo de uma propriedade de contexto. Nesse caso, o coletor de mensagem envolve colocar um bloqueio de primitivos de sincronização antes de processar uma chamada de qualquer adicional.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetServerContextSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink GetServerContextSink (System.Runtime.Remoting.Messaging.IMessageSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink GetServerContextSink(class System.Runtime.Remoting.Messaging.IMessageSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContributeServerContextSink.GetServerContextSink(System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="nextSink">A cadeia de Coletores composto até o momento.</param>
+        <summary>Usa o primeiro coletor da cadeia de Coletores composto até o momento e, em seguida, o coletor de mensagem na frente da cadeia já formada se encadeia.</summary>
+        <returns>A cadeia de composição de coletor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

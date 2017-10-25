@@ -1,0 +1,756 @@
+<Type Name="AddInToken" FullName="System.AddIn.Hosting.AddInToken">
+  <TypeSignature Language="C#" Value="public sealed class AddInToken : System.Collections.Generic.IEnumerable&lt;System.AddIn.Hosting.QualificationDataItem&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AddInToken extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;valuetype System.AddIn.Hosting.QualificationDataItem&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.AddInToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.AddIn.Hosting.QualificationDataItem&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um suplemento que pode ser ativado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.AddIn.Hosting.AddInToken> objeto representa um suplemento e seus segmentos de pipeline associado, que podem ser ativados. O token contém o nome, nome do assembly, descrição, publisher e versão do suplemento que ele representa.  
+  
+ Use o <xref:System.AddIn.Hosting.AddInStore.FindAddIns%2A?displayProperty=nameWithType> método para obter uma coleção de tokens que representam os suplementos cujos pipelines correspondem a uma exibição de host especificado. Use o <xref:System.AddIn.Hosting.AddInStore.FindAddIn%2A?displayProperty=nameWithType> método para obter uma coleção de tokens que representam todos os pipelines de um suplemento especificado que correspondem a uma exibição de host especificado.  
+  
+ Para ativar um suplemento, passe o token que representa o add-in desejado para o <xref:System.AddIn.Hosting.AddInToken.Activate%2A> método. Esse método retorna uma instância do tipo que representa o modo de host do suplemento.  
+  
+ O <xref:System.AddIn.Hosting.AddInToken.Activate%2A> método tem várias sobrecargas. Quando você usa uma sobrecarga que não exigem o nome de um domínio de aplicativo como um de seus parâmetros, um novo domínio de aplicativo para o suplemento é criado automaticamente.  
+  
+ Você pode usar métodos de extensão LINQ (consulta) para executar consultas em um <xref:System.AddIn.Hosting.AddInToken>, tratando o token como uma coleção de <xref:System.AddIn.Hosting.QualificationDataItem> estruturas.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos. O primeiro exemplo ativa um suplemento selecionado usando o `ChooseAddIn` método e o segundo exemplo mostra o `ChooseAddIn` método.  
+  
+ **Exemplo 1**  
+  
+ O exemplo a seguir mostra como ativar um suplemento com um token.  
+  
+ [!code-csharp[AddInP3Host#5](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#5)]
+ [!code-vb[AddInP3Host#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#5)]  
+  
+ **Exemplo 2**  
+  
+ O exemplo a seguir mostra personalizado `ChooseAddIn` método, que enumera um <xref:System.AddIn.Hosting.AddInToken> coleção. O usuário seleciona um token usando essa coleção para ativar o suplemento correspondente.  
+  
+ [!code-csharp[AddInP3Host#13](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#13)]
+ [!code-vb[AddInP3Host#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInEnvironment environment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.AddIn.Hosting.AddInEnvironment environment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInEnvironment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="environment" Type="System.AddIn.Hosting.AddInEnvironment" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">A interface ou tipo base abstrato que representa o modo de host do suplemento.</typeparam>
+        <param name="environment">O domínio de aplicativo e o processo que contém o suplemento original.</param>
+        <summary>Ativa um suplemento no ambiente de outro suplemento.</summary>
+        <returns>O modo de host do suplemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga de método ativa o suplemento no mesmo domínio de aplicativo e processo como o suplemento do qual `environment` foi obtido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ativa um suplemento em um domínio de aplicativo gerados automaticamente com um nível de segurança especificados. Ele será ativado, em seguida, um suplemento segundo no mesmo domínio de aplicativo e processo como o primeiro usando o primeiro suplemento <xref:System.AddIn.Hosting.AddInEnvironment> objeto.  
+  
+ [!code-csharp[AddInP3Host#8](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#8)]
+ [!code-vb[AddInP3Host#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInSecurityLevel trustLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(valuetype System.AddIn.Hosting.AddInSecurityLevel trustLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInSecurityLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="trustLevel" Type="System.AddIn.Hosting.AddInSecurityLevel" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">A interface ou tipo base abstrato que representa o modo de host do suplemento.</typeparam>
+        <param name="trustLevel">Um dos valores de enumeração que especifica o nível de confiança.</param>
+        <summary>Ativa um suplemento com um nível de confiança especificada em um novo domínio de aplicativo.</summary>
+        <returns>O modo de host do suplemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga de método carrega o suplemento em um domínio de aplicativo gerados automaticamente. Se você quiser especificar um nome para o novo domínio de aplicativo, use o <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%2CSystem.String%29> de sobrecarga.  
+  
+ Esse método define o diretório base para o domínio de aplicativo para o local do assembly do suplemento. Também procura para o arquivo de configuração [addinassemblyname].dll.config e, se encontrado, define-a para ser o arquivo de configuração para o novo domínio de aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como ativar um suplemento, identificado pelo token escolhido, em um domínio de aplicativo gerados automaticamente com um nível de segurança especificados.  
+  
+ [!code-csharp[AddInP3Host#5](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#5)]
+ [!code-vb[AddInP3Host#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (AppDomain target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.AppDomain target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AppDomain)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="System.AppDomain" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">A interface ou tipo base abstrato que representa o modo de host do suplemento.</typeparam>
+        <param name="target">O domínio de aplicativo que o suplemento deve ser ativado no.</param>
+        <summary>Ativa um suplemento em um domínio de aplicativo existente.</summary>
+        <returns>O modo de host do suplemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ativar um suplemento em um domínio de aplicativo gerados automaticamente, use o <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%29> sobrecarga para gerar um novo domínio de aplicativo com um nível de segurança especificados ou <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%2CSystem.String%29> sobrecarga para incluir um nome amigável para o domínio de aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ativa um suplemento em um domínio de aplicativo que está sendo usado por outro suplemento. O código para o primeiro suplemento é fornecido no <xref:System.AddIn.Hosting.AddInToken> classe.  
+  
+ [!code-csharp[AddInP3Host#9](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#9)]
+ [!code-vb[AddInP3Host#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Permissão de confiança total é exigida. Um chamador na cadeia de chamada não tem permissão suficiente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.Security.PermissionSet permissions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.Security.PermissionSet permissions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.Security.PermissionSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="permissions" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">A interface ou tipo base abstrato que representa o modo de host do suplemento.</typeparam>
+        <param name="permissions">As permissões concedidas para o suplemento.</param>
+        <summary>Ativa um suplemento com um conjunto em um novo domínio de aplicativo de permissões especificado.</summary>
+        <returns>O modo de host do suplemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga de método carrega o suplemento em um domínio de aplicativo gerados automaticamente. Define o diretório base para o domínio de aplicativo para o local do assembly do suplemento. Ele também procura o arquivo de configuração `[addinassemblyname].dll.config` e, se encontrado, define-o para o arquivo de configuração para o novo domínio de aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="permissions" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInProcess process, System.AddIn.Hosting.AddInSecurityLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.AddIn.Hosting.AddInProcess process, valuetype System.AddIn.Hosting.AddInSecurityLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInProcess,System.AddIn.Hosting.AddInSecurityLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="process" Type="System.AddIn.Hosting.AddInProcess" />
+        <Parameter Name="level" Type="System.AddIn.Hosting.AddInSecurityLevel" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">A interface ou tipo base abstrato que representa o modo de host do suplemento.</typeparam>
+        <param name="process">O processo externo no qual ativar o suplemento.</param>
+        <param name="level">Um dos valores de enumeração que especifica o nível de confiança.</param>
+        <summary>Ativa um suplemento em um processo externo, em um novo domínio de aplicativo e com um nível de confiança especificado.</summary>
+        <returns>O modo de host do suplemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define o diretório base para o domínio de aplicativo para o local do assembly do suplemento. Ele também procura o arquivo de configuração `[addinassemblyname].dll.config` e, se encontrado, define-o para o arquivo de configuração para o novo domínio de aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo processo e ativa um suplemento no processo com um nível de segurança de confiança total.  
+  
+ [!code-csharp[AddInP3Host#10](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#10)]
+ [!code-vb[AddInP3Host#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInProcess process, System.Security.PermissionSet permissionSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(class System.AddIn.Hosting.AddInProcess process, class System.Security.PermissionSet permissionSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInProcess,System.Security.PermissionSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="process" Type="System.AddIn.Hosting.AddInProcess" />
+        <Parameter Name="permissionSet" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">A interface ou tipo base abstrato que representa o modo de host do suplemento.</typeparam>
+        <param name="process">O processo externo no qual ativar o suplemento.</param>
+        <param name="permissionSet">A permissão necessária concedidas definido para o suplemento.</param>
+        <summary>Ativa um suplemento em um processo externo, em um novo domínio de aplicativo e com um conjunto de permissões especificado.</summary>
+        <returns>O modo de host do suplemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define o diretório base para o domínio de aplicativo para o local do assembly do suplemento. Ele também procura o arquivo de configuração `[addinassemblyname].dll.config` e, se encontrado, define-o para o arquivo de configuração para o novo domínio de aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Activate&lt;T&gt; (System.AddIn.Hosting.AddInSecurityLevel trustLevel, string appDomainName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Activate&lt;T&gt;(valuetype System.AddIn.Hosting.AddInSecurityLevel trustLevel, string appDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Activate``1(System.AddIn.Hosting.AddInSecurityLevel,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="trustLevel" Type="System.AddIn.Hosting.AddInSecurityLevel" />
+        <Parameter Name="appDomainName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">A interface ou tipo base abstrato que representa o modo de host do suplemento.</typeparam>
+        <param name="trustLevel">Um dos valores de enumeração que especifica o nível de confiança.</param>
+        <param name="appDomainName">O nome amigável para atribuir ao novo domínio de aplicativo.</param>
+        <summary>Ativa um suplemento em um novo domínio de aplicativo com um nível de confiança e de nome especificado.</summary>
+        <returns>O modo de host do suplemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não precisa especificar um nome de domínio de aplicativo, use o <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%29> de sobrecarga.  
+  
+ Esse método define o diretório base para o domínio de aplicativo para o local do assembly do suplemento. Ele também procura o arquivo de configuração `[addinassemblyname].dll.config` e, se encontrado, define-o para o arquivo de configuração para o novo domínio de aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddInFullName">
+      <MemberSignature Language="C#" Value="public string AddInFullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AddInFullName" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.AddInFullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace e o tipo de suplemento.</summary>
+        <value>O tipo do suplemento, qualificado completamente pelo seu namespace.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém o nome completo do suplemento como seria retornado pelo <xref:System.Type.FullName%2A?displayProperty=nameWithType> propriedade. Esse valor é sempre disponível em uma instância de um <xref:System.AddIn.Hosting.AddInToken> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor da <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, e <xref:System.AddIn.Hosting.AddInToken.Version%2A> propriedades para o console. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.AddIn.Hosting.AddInToken> classe.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyName AssemblyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.AssemblyName AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do assembly que contém o suplemento.</summary>
+        <value>O nome do assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém o nome para exibição do assembly que contém o suplemento, pois ele seria retornado pelo <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> propriedade. Esse valor é sempre disponível em uma instância de um <xref:System.AddIn.Hosting.AddInToken> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor da <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, e <xref:System.AddIn.Hosting.AddInToken.Version%2A> propriedades para o console. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.AddIn.Hosting.AddInToken> classe.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição do suplemento.</summary>
+        <value>Uma descrição do add-in, ou <see langword="null" /> se a descrição não for especificada no <see cref="T:System.AddIn.AddInAttribute" /> atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém a descrição do suplemento conforme especificado no <xref:System.AddIn.AddInAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor da <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, e <xref:System.AddIn.Hosting.AddInToken.Version%2A> propriedades para o console. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.AddIn.Hosting.AddInToken> classe.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDirectConnect">
+      <MemberSignature Language="C#" Value="public static bool EnableDirectConnect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool EnableDirectConnect" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.EnableDirectConnect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define um valor que indica se suplementos devem ser conectados diretamente a seus hosts quando as condições permitirem.</summary>
+        <value>
+          <see langword="true" />Se o suplemento deve ser conectado diretamente ao host; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As seguintes condições devem existir para a conexão direta ocorrer:  
+  
+-   Essa propriedade deve ser definida como `true`.  
+  
+-   O suplemento deve estar no mesmo domínio do aplicativo como o host.  
+  
+-   O modo de exibição e o modo de host do suplemento devem ser do mesmo tipo.  
+  
+-   Todos os segmentos de pipeline devem estar disponíveis.  
+  
+ Quando uma conexão direta é estabelecida, o adaptador do lado do suplemento e o adaptador do lado do host não serão instanciados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com a instância atual.</param>
+        <summary>Determina se um objeto especificado é igual à instância atual.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado e a instância atual forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.AddIn.Hosting.QualificationDataItem&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.AddIn.Hosting.QualificationDataItem&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.AddIn.Hosting.QualificationDataItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para os dados de qualificação dos segmentos de pipeline que estão associados este token.</summary>
+        <returns>Um enumerador que pode ser usado para iterar os dados de qualificação dos segmentos de pipeline que estão associados com o token atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para tratar um token como se fosse uma coleção de itens de dados de qualificação, por exemplo, em um `foreach` instrução (`For Each` no Visual Basic, `for each` no Visual C++).  
+  
+ Use o enumerador retornado por esse método para iterar os itens de dados de qualificação dos segmentos de pipeline associados ao token atual. Cada item de qualificação de dados é um <xref:System.AddIn.Hosting.QualificationDataItem> estrutura que identifica o segmento de pipeline e contém um par de nome/valor de uma <xref:System.AddIn.Pipeline.QualificationDataAttribute> atributo aplicado ao segmento.  
+  
+> [!NOTE]
+>  O modelo não usa dados de qualificação que são aplicados para o modo de host do suplemento. Como resultado, quando você enumerar qualificação de dados, você não encontrará os itens cuja <xref:System.AddIn.Hosting.QualificationDataItem.Segment%2A> é de propriedade <xref:System.AddIn.Hosting.AddInSegmentType?displayProperty=nameWithType>.  
+  
+ Como alternativa, você pode usar o <xref:System.AddIn.Hosting.AddInToken.QualificationData%2A> propriedade para obter um conjunto aninhado de dicionários que contêm os dados de qualificação dos segmentos de pipeline.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lista os dados de qualificação para os segmentos de pipeline associados a cada <xref:System.AddIn.Hosting.AddInToken> em uma coleção de tokens.  
+  
+ [!code-csharp[AddInP3Host#12](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#12)]
+ [!code-vb[AddInP3Host#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para um token.</summary>
+        <returns>Um código hash para o token atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do suplemento.</summary>
+        <value>O nome do suplemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém o nome do suplemento conforme especificado no <xref:System.AddIn.AddInAttribute> atributo. Esse valor é sempre disponível em uma instância de um <xref:System.AddIn.Hosting.AddInToken> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor da <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, e <xref:System.AddIn.Hosting.AddInToken.Version%2A> propriedades para o console. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.AddIn.Hosting.AddInToken> classe.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Publisher">
+      <MemberSignature Language="C#" Value="public string Publisher { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Publisher" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.Publisher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o Editor do suplemento.</summary>
+        <value>O publicador do add-in, ou <see langword="null" /> se o publicador não for especificado no <see cref="T:System.AddIn.AddInAttribute" /> atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém o Editor do suplemento conforme especificado no <xref:System.AddIn.AddInAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor da <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, e <xref:System.AddIn.Hosting.AddInToken.Version%2A> propriedades para o console. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.AddIn.Hosting.AddInToken> classe.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QualificationData">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.AddIn.Hosting.AddInSegmentType,System.Collections.Generic.IDictionary&lt;string,string&gt;&gt; QualificationData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;valuetype System.AddIn.Hosting.AddInSegmentType, class System.Collections.Generic.IDictionary`2&lt;string, string&gt;&gt; QualificationData" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.QualificationData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.AddIn.Hosting.AddInSegmentType,System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de dados sobre os segmentos no pipeline associado ao token atual.</summary>
+        <value>Um dicionário cujas chaves são os segmentos de pipeline e cujos valores são dicionários de nome/valor pares que representam os dados qualificação para cada segmento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para obter os dados que tem sido aplicados para o pipeline de segmentos com o <xref:System.AddIn.Pipeline.QualificationDataAttribute> atributo. Você pode usar esses dados para identificar e trabalhar com os tipos que compõem sua pipelines.  
+  
+ Essa propriedade retorna um dicionário de dicionários. O dicionário superior sempre tem seis chaves. Cada chave é um <xref:System.AddIn.Hosting.AddInSegmentType> valor para um segmento de pipeline. Cada valor é genérica <xref:System.Collections.Generic.IDictionary%602> de cadeias de caracteres com chaves de cadeia de caracteres que contém dados de qualificação do segmento.  
+  
+ As chaves e valores desses dicionários internos são os nomes e os valores especificados no <xref:System.AddIn.Pipeline.QualificationDataAttribute> atributos para os segmentos. Se nenhum dado de qualificação foi aplicado a um segmento, o dicionário está vazio.  
+  
+> [!NOTE]
+>  O modelo não usa dados de qualificação que são aplicados para o modo de host do suplemento. Como resultado, o dicionário de <xref:System.AddIn.Hosting.AddInSegmentType?displayProperty=nameWithType> sempre está vazia.  
+  
+ Como alternativa, você pode obter dados de qualificação enumerando uma <xref:System.AddIn.Hosting.AddInToken> como se fosse uma coleção de <xref:System.AddIn.Hosting.QualificationDataItem> estruturas, usando um `foreach` instrução (`For Each` no Visual Basic, `for each` no Visual C++). Consulte o exemplo fornecido para o <xref:System.AddIn.Hosting.QualificationDataItem> estrutura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como examinar qualificação de dados de um suplemento.  
+  
+ [!code-csharp[AddInP3Host#11](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#11)]
+ [!code-vb[AddInP3Host#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para os dados de qualificação dos segmentos de pipeline que estão associados este token.</summary>
+        <returns>Um enumerador que pode ser usado para iterar os dados de qualificação dos segmentos de pipeline que estão associados com o token atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que um token a ser tratada como uma coleção de itens de dados de qualificação, por exemplo em um `foreach` instrução (`For Each` no Visual Basic, `for each` no Visual C++).  
+  
+ Use o enumerador retornado por esse método para iterar os itens de dados de qualificação dos segmentos de pipeline associados ao token atual. Cada item de qualificação de dados é um <xref:System.AddIn.Hosting.QualificationDataItem> estrutura que identifica o segmento de pipeline e contém o par de nome/valor de uma <xref:System.AddIn.Pipeline.QualificationDataAttribute> atributo aplicado ao segmento.  
+  
+> [!NOTE]
+>  O modelo não usa dados de qualificação que são aplicados para o modo de host do suplemento. Como resultado, quando você enumerar qualificação de dados, você não encontrará os itens cuja <xref:System.AddIn.Hosting.QualificationDataItem.Segment%2A> é de propriedade <xref:System.AddIn.Hosting.AddInSegmentType?displayProperty=nameWithType>.  
+  
+ Como alternativa, você pode usar o <xref:System.AddIn.Hosting.AddInToken.QualificationData%2A> propriedade para obter um conjunto aninhado de dicionários que contém os dados de qualificação dos segmentos de pipeline.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInToken.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o token.</summary>
+        <returns>Uma cadeia de caracteres que representa o token.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInToken.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do suplemento, conforme especificado no <see cref="T:System.AddIn.AddInAttribute" /> atributo.</summary>
+        <value>A versão do add-in, ou <see langword="null" /> se o número de versão não for especificado no <see cref="T:System.AddIn.AddInAttribute" /> atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número de versão é uma cadeia de caracteres de forma livre.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor da <xref:System.AddIn.Hosting.AddInToken.Name%2A>, <xref:System.AddIn.Hosting.AddInToken.AddInFullName%2A>, <xref:System.AddIn.Hosting.AddInToken.Description%2A>, <xref:System.AddIn.Hosting.AddInToken.AssemblyName%2A>, <xref:System.AddIn.Hosting.AddInToken.Publisher%2A>, e <xref:System.AddIn.Hosting.AddInToken.Version%2A> propriedades para o console. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.AddIn.Hosting.AddInToken> classe.  
+  
+ [!code-csharp[AddInP3Host#7](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#7)]
+ [!code-vb[AddInP3Host#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,48 @@
+<Type Name="HttpContinueDelegate" FullName="System.Net.HttpContinueDelegate">
+  <TypeSignature Language="C#" Value="public delegate void HttpContinueDelegate(int StatusCode, WebHeaderCollection httpHeaders);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpContinueDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpContinueDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Requests</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="StatusCode" Type="System.Int32" />
+    <Parameter Name="httpHeaders" Type="System.Net.WebHeaderCollection" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="StatusCode">O valor numérico do status HTTP do servidor.</param>
+    <param name="httpHeaders">Os cabeçalhos retornados com a 100-continue a resposta do servidor.</param>
+    <summary>Representa o método que notifica os chamadores quando é recebida uma resposta de continuar pelo cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Net.HttpContinueDelegate> para especificar o método de retorno de chamada a ser chamado quando um HTTP 100-continue a resposta é recebida do servidor. Quando definido, o delegado é chamado sempre que o primeiro protocolo resposta do tipo <xref:System.Net.HttpStatusCode?displayProperty=nameWithType> é recebida. Essa é uma alteração de comportamento da versão 1.1 Framework.  
+  
+ O manipulador de eventos deve declarar os mesmos parâmetros que o <xref:System.Net.HttpContinueDelegate>.  
+  
+> [!NOTE]
+>  `StatusCode`é sempre <xref:System.Net.HttpStatusCode?displayProperty=nameWithType>.  
+  
+ Isso é útil quando o cliente deseja exibir o status dos dados que está sendo recebidos do servidor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

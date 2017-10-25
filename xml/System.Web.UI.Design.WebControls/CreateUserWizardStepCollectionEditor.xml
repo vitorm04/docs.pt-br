@@ -1,0 +1,97 @@
+<Type Name="CreateUserWizardStepCollectionEditor" FullName="System.Web.UI.Design.WebControls.CreateUserWizardStepCollectionEditor">
+  <TypeSignature Language="C#" Value="public class CreateUserWizardStepCollectionEditor : System.Web.UI.Design.WebControls.WizardStepCollectionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CreateUserWizardStepCollectionEditor extends System.Web.UI.Design.WebControls.WizardStepCollectionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.CreateUserWizardStepCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WizardStepCollectionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um editor em um host de design como Visual Studio 2005 para editar o <see cref="T:System.Web.UI.WebControls.WizardStepCollection" /> objeto de um <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> controle de servidor Web.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CreateUserWizardStepCollectionEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.CreateUserWizardStepCollectionEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> dos itens na coleção associada com o editor de coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.CreateUserWizardStepCollectionEditor" /> usando a <see cref="T:System.Type" /> fornecida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRemoveInstance">
+      <MemberSignature Language="C#" Value="protected override bool CanRemoveInstance (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanRemoveInstance(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.CreateUserWizardStepCollectionEditor.CanRemoveInstance(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Web.UI.WebControls.WizardStep" /> objeto para determinar se ele pode ser removido da coleção.</param>
+        <summary>Retorna um valor que indica se um objeto fornecido pode ser removido da coleção.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.WizardStep" /> pode ser removido da coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCollectionForm">
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.Design.CollectionEditor.CollectionForm CreateCollectionForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ComponentModel.Design.CollectionEditor/CollectionForm CreateCollectionForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.CreateUserWizardStepCollectionEditor.CreateCollectionForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CollectionEditor+CollectionForm</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma caixa de diálogo modal para editar o conteúdo de uma coleção de <see cref="T:System.Web.UI.WebControls.CreateUserWizardStep" /> objetos.</summary>
+        <returns>Um objeto <see cref="T:System.ComponentModel.Design.CollectionEditor.CollectionForm" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpTopic">
+      <MemberSignature Language="C#" Value="protected override string HelpTopic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpTopic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.CreateUserWizardStepCollectionEditor.HelpTopic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see langword="Help" /> palavra-chave usada para exibir o tópico da Ajuda ou uma lista de tópicos quando os usuários clicarem o **ajuda** botão ou pressione a tecla F1 na caixa de diálogo do editor.</summary>
+        <value>O <see langword="Help" /> palavra-chave para exibir o tópico da Ajuda ou uma lista de tópicos quando é solicitada ajuda do editor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

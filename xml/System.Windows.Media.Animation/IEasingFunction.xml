@@ -1,0 +1,52 @@
+<Type Name="IEasingFunction" FullName="System.Windows.Media.Animation.IEasingFunction">
+  <TypeSignature Language="C#" Value="public interface IEasingFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEasingFunction" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.IEasingFunction" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a funcionalidade básica de uma função de easing.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface permite que você crie suas próprias funções de atenuação colocando normalizado tempo (um valor entre 0 e 1) e retornando o valor desejado.  
+  
+ Essa interface representa uma transformação de tempo normalizado (progresso). Animações usá-lo para transformar seu progresso. Classes que implementam esta interface podem controlar a velocidade em que uma animação é executada.  
+  
+ Derivam de <xref:System.Windows.Media.Animation.EasingFunctionBase> funções de classe para implementar seu próprio atenuação personalizada.  
+  
+> [!NOTE]
+>  A implementação do WPF de atenuação funções é compatível com a implementação do Silverlight. Se você tiver o XAML que usa funções de atenuação em uma tecnologia, é usado sem modificação no outro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ease">
+      <MemberSignature Language="C#" Value="public double Ease (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 Ease(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.IEasingFunction.Ease(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Tempo normalizado (progresso) da animação.</param>
+        <summary>Transformações normalizado tempo para controlar o andamento de uma animação.</summary>
+        <returns>O progresso transformado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

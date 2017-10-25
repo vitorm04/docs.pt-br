@@ -1,0 +1,82 @@
+<Type Name="IContentResolutionService" FullName="System.Web.UI.Design.IContentResolutionService">
+  <TypeSignature Language="C#" Value="public interface IContentResolutionService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContentResolutionService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IContentResolutionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para acesso a uma página mestra em uma página de conteúdo em tempo de design, se fornecido por um host de design, como o Visual Studio 2005.</summary>
+    <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>Um designer de controle ou uma implementação de classe a <see cref="T:System.Web.UI.Design.IContentResolutionService" /> interface, não deve presumir que a disponibilidade do <see cref="T:System.Web.UI.Design.IContentResolutionService" /> de um host de design e, se não estiver disponível, deve falhar de maneira elegante.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="ContentDefinitions">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary ContentDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary ContentDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IContentResolutionService.ContentDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.Design.ContentDefinition" /> objetos para os espaços reservados de conteúdo que são identificados na página mestra.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> contendo identificadores e <see cref="T:System.Web.UI.Design.ContentDefinition" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentDesignerState">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.ContentDesignerState GetContentDesignerState (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Web.UI.Design.ContentDesignerState GetContentDesignerState(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IContentResolutionService.GetContentDesignerState(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ContentDesignerState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">O identificador para um conteúdo de espaço reservado.</param>
+        <summary>Recupera o estado atual do proprietário do local de conteúdo identificado.</summary>
+        <returns>O estado atual do espaço reservado para conteúdo identificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContentDesignerState">
+      <MemberSignature Language="C#" Value="public void SetContentDesignerState (string identifier, System.Web.UI.Design.ContentDesignerState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetContentDesignerState(string identifier, valuetype System.Web.UI.Design.ContentDesignerState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IContentResolutionService.SetContentDesignerState(System.String,System.Web.UI.Design.ContentDesignerState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+        <Parameter Name="state" Type="System.Web.UI.Design.ContentDesignerState" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">O identificador para um conteúdo de espaço reservado.</param>
+        <param name="state">Um <see cref="T:System.Web.UI.Design.ContentDesignerState" />.</param>
+        <summary>Define o estado atual do proprietário do local de conteúdo identificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

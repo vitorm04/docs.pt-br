@@ -1,0 +1,111 @@
+<Type Name="XmlSchemaKeyref" FullName="System.Xml.Schema.XmlSchemaKeyref">
+  <TypeSignature Language="C#" Value="public class XmlSchemaKeyref : System.Xml.Schema.XmlSchemaIdentityConstraint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaKeyref extends System.Xml.Schema.XmlSchemaIdentityConstraint" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaKeyref" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaIdentityConstraint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe representa o <see langword="keyref" /> elemento de XMLSchema conforme especificado pelo World Wide Web Consortium (W3C).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifica que um valor de atributo ou elemento (ou conjunto de valores) tem uma correspondência com aqueles dos especificado `key` ou `unique` elemento. O nome da restrição deve ser exclusivo dentro de um esquema.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um `key` elemento.  
+  
+ [!code-cpp[Classic Webdata XmlSchemaKeyRef Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic Webdata XmlSchemaKeyRef Example/CPP/key_sample.cpp#1)]
+ [!code-csharp[Classic Webdata XmlSchemaKeyRef Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic Webdata XmlSchemaKeyRef Example/CS/key_sample.cs#1)]
+ [!code-vb[Classic Webdata XmlSchemaKeyRef Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic Webdata XmlSchemaKeyRef Example/VB/key_sample.vb#1)]  
+  
+ O seguinte arquivo XML é gerado para o exemplo de código anterior.  
+  
+ [!code-xml[Classic Webdata XmlSchemaKeyRef Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic Webdata XmlSchemaKeyRef Example/XML/key_sample.xsd#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaKeyref ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaKeyref.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaKeyref" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refer">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName Refer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName Refer" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaKeyref.Refer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("refer")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da chave que essa restrição se refere a outro tipo simples ou complexos.</summary>
+        <value>O QName da chave que essa restrição se refere.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nome de um `key` ou `unique` elemento definido no esquema (ou outro esquema indicado pelo namespace especificado). O `Refer` o valor deve ser um QName. O `Refer` valor pode incluir um prefixo de namespace.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

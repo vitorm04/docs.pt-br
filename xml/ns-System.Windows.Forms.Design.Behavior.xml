@@ -1,0 +1,21 @@
+<Namespace Name="System.Windows.Forms.Design.Behavior">
+  <Docs>
+    <summary>O <see cref="N:System.Windows.Forms.Design.Behavior" /> namespace contém classes para criar o comportamento de interface de usuário personalizada para componentes em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A lista a seguir mostra as classes incluídas nesse namespace:  
+  
+-   Um <xref:System.Windows.Forms.Design.Behavior.Glyph> classe para manipular a pintura e teste de clique.  
+  
+-   Um <xref:System.Windows.Forms.Design.Behavior.Adorner> classe para gerenciar uma coleção de <xref:System.Windows.Forms.Design.Behavior.Glyph> objetos.  
+  
+-   Um <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe para gerenciar a interface de usuário personalizada em um designer.  
+  
+-   Um <xref:System.Windows.Forms.Design.Behavior.SnapLine> a classe que representa os segmentos de linha horizontal e vertical que ajudam os usuários Alinhando componentes em tempo de design.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

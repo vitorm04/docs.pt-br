@@ -1,0 +1,835 @@
+<Type Name="ISymbolWriter" FullName="System.Diagnostics.SymbolStore.ISymbolWriter">
+  <TypeSignature Language="C#" Value="public interface ISymbolWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISymbolWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.ISymbolWriter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um gravador de símbolo para código gerenciado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.SymbolStore.ISymbolWriter> interface fornece métodos que definem a documentos, pontos de sequência, escopos de léxicos e variáveis.  
+  
+> [!NOTE]
+>  Esta interface é a contraparte gerenciada do `ISymUnmanagedWriter` interface, que é uma das interfaces de armazenamento de símbolo não gerenciado que fornece uma maneira alternativa para ler e gravar informações de símbolo de depuração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha <see cref="T:System.Diagnostics.SymbolStore.ISymbolWriter" /> e confirma os símbolos para o armazenamento de símbolo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após essa chamada <xref:System.Diagnostics.SymbolStore.ISymbolWriter> se torna inválido para obter informações mais atualizadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseMethod">
+      <MemberSignature Language="C#" Value="public void CloseMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.CloseMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o método atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que um método é fechado, não é possível definir um símbolo de dentro dele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseNamespace">
+      <MemberSignature Language="C#" Value="public void CloseNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.CloseNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o namespace mais recente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseScope">
+      <MemberSignature Language="C#" Value="public void CloseScope (int endOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseScope(int32 endOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.CloseScope(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="endOffset">Os pontos após a última instrução no escopo.</param>
+        <summary>Fecha o escopo léxico atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que um escopo é fechado, você não pode definir uma variável de dentro dele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineDocument">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolDocumentWriter DefineDocument (string url, Guid language, Guid languageVendor, Guid documentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolDocumentWriter DefineDocument(string url, valuetype System.Guid language, valuetype System.Guid languageVendor, valuetype System.Guid documentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.DefineDocument(System.String,System.Guid,System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="language" Type="System.Guid" />
+        <Parameter Name="languageVendor" Type="System.Guid" />
+        <Parameter Name="documentType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL que identifica o documento.</param>
+        <param name="language">O idioma do documento. Esse parâmetro pode ser <see cref="F:System.Guid.Empty" />.</param>
+        <param name="languageVendor">A identidade do fornecedor para o idioma do documento. Esse parâmetro pode ser <see cref="F:System.Guid.Empty" />.</param>
+        <param name="documentType">O tipo do documento. Esse parâmetro pode ser <see cref="F:System.Guid.Empty" />.</param>
+        <summary>Define um documento de origem.</summary>
+        <returns>O objeto que representa o documento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineField">
+      <MemberSignature Language="C#" Value="public void DefineField (System.Diagnostics.SymbolStore.SymbolToken parent, string name, System.Reflection.FieldAttributes attributes, byte[] signature, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineField(valuetype System.Diagnostics.SymbolStore.SymbolToken parent, string name, valuetype System.Reflection.FieldAttributes attributes, unsigned int8[] signature, valuetype System.Diagnostics.SymbolStore.SymAddressKind addrKind, int32 addr1, int32 addr2, int32 addr3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.DefineField(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.FieldAttributes" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="addrKind" Type="System.Diagnostics.SymbolStore.SymAddressKind" />
+        <Parameter Name="addr1" Type="System.Int32" />
+        <Parameter Name="addr2" Type="System.Int32" />
+        <Parameter Name="addr3" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O tipo de metadados ou um método de token.</param>
+        <param name="name">O nome do campo.</param>
+        <param name="attributes">Uma combinação bit a bit dos atributos de campo.</param>
+        <param name="signature">A assinatura de campo.</param>
+        <param name="addrKind">O endereço de tipos para <c>addr1</c> e <c>addr2</c>.</param>
+        <param name="addr1">O primeiro endereço para a especificação de campo.</param>
+        <param name="addr2">O segundo endereço para a especificação de campo.</param>
+        <param name="addr3">O terceiro endereço para a especificação de campo.</param>
+        <summary>Define um campo em um tipo ou um campo global.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.SymbolStore.ISymbolWriter.DefineField%2A> método define uma única variável que não está dentro de um método usando campos especificados em classes, campos de bits e assim por diante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineGlobalVariable">
+      <MemberSignature Language="C#" Value="public void DefineGlobalVariable (string name, System.Reflection.FieldAttributes attributes, byte[] signature, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineGlobalVariable(string name, valuetype System.Reflection.FieldAttributes attributes, unsigned int8[] signature, valuetype System.Diagnostics.SymbolStore.SymAddressKind addrKind, int32 addr1, int32 addr2, int32 addr3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.DefineGlobalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.FieldAttributes" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="addrKind" Type="System.Diagnostics.SymbolStore.SymAddressKind" />
+        <Parameter Name="addr1" Type="System.Int32" />
+        <Parameter Name="addr2" Type="System.Int32" />
+        <Parameter Name="addr3" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da variável global.</param>
+        <param name="attributes">Uma combinação bit a bit dos atributos variáveis globais.</param>
+        <param name="signature">A assinatura de variável global.</param>
+        <param name="addrKind">O endereço de tipos para <c>addr1</c>, <c>addr2</c>, e <c>addr3</c>.</param>
+        <param name="addr1">O primeiro endereço para a especificação de variável global.</param>
+        <param name="addr2">O segundo endereço para a especificação de variável global.</param>
+        <param name="addr3">O terceiro endereço para a especificação de variável global.</param>
+        <summary>Define uma variável global.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineLocalVariable">
+      <MemberSignature Language="C#" Value="public void DefineLocalVariable (string name, System.Reflection.FieldAttributes attributes, byte[] signature, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3, int startOffset, int endOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineLocalVariable(string name, valuetype System.Reflection.FieldAttributes attributes, unsigned int8[] signature, valuetype System.Diagnostics.SymbolStore.SymAddressKind addrKind, int32 addr1, int32 addr2, int32 addr3, int32 startOffset, int32 endOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.DefineLocalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.FieldAttributes" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="addrKind" Type="System.Diagnostics.SymbolStore.SymAddressKind" />
+        <Parameter Name="addr1" Type="System.Int32" />
+        <Parameter Name="addr2" Type="System.Int32" />
+        <Parameter Name="addr3" Type="System.Int32" />
+        <Parameter Name="startOffset" Type="System.Int32" />
+        <Parameter Name="endOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da variável local.</param>
+        <param name="attributes">Uma combinação bit a bit dos atributos de variável locais.</param>
+        <param name="signature">A assinatura de variável local.</param>
+        <param name="addrKind">O endereço de tipos para <c>addr1</c>, <c>addr2</c>, e <c>addr3</c>.</param>
+        <param name="addr1">O primeiro endereço para a especificação de variável local.</param>
+        <param name="addr2">O segundo endereço para a especificação de variável local.</param>
+        <param name="addr3">O terceiro endereço para a especificação de variável local.</param>
+        <param name="startOffset">O deslocamento de início para a variável. Se esse parâmetro for zero, ele será ignorado e a variável é definida em toda a todo o escopo. Se o parâmetro for diferente de zero, a variável está dentro de deslocamentos do escopo atual.</param>
+        <param name="endOffset">O deslocamento de fim para a variável. Se esse parâmetro for zero, ele será ignorado e a variável é definida em toda a todo o escopo. Se o parâmetro for diferente de zero, a variável está dentro de deslocamentos do escopo atual.</param>
+        <summary>Define uma única variável no escopo léxico atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `startOffset` e `endOffset` parâmetros são opcionais. Se o valor for zero, elas são ignoradas e a variável é definida em toda a todo o escopo. Se o valor for diferente de zero, a variável está dentro de deslocamentos do escopo atual.  
+  
+ Você pode chamar <xref:System.Diagnostics.SymbolStore.ISymbolWriter.DefineLocalVariable%2A> várias vezes para uma variável de mesmo nome que ocorre várias vezes em diferentes intervalos de deslocamento ao longo de um escopo. (Nesse caso, os deslocamentos de início e de término não devem se sobrepor.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineParameter">
+      <MemberSignature Language="C#" Value="public void DefineParameter (string name, System.Reflection.ParameterAttributes attributes, int sequence, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineParameter(string name, valuetype System.Reflection.ParameterAttributes attributes, int32 sequence, valuetype System.Diagnostics.SymbolStore.SymAddressKind addrKind, int32 addr1, int32 addr2, int32 addr3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.DefineParameter(System.String,System.Reflection.ParameterAttributes,System.Int32,System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.ParameterAttributes" />
+        <Parameter Name="sequence" Type="System.Int32" />
+        <Parameter Name="addrKind" Type="System.Diagnostics.SymbolStore.SymAddressKind" />
+        <Parameter Name="addr1" Type="System.Int32" />
+        <Parameter Name="addr2" Type="System.Int32" />
+        <Parameter Name="addr3" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="attributes">Uma combinação bit a bit dos atributos de parâmetro.</param>
+        <param name="sequence">A assinatura do parâmetro.</param>
+        <param name="addrKind">O endereço de tipos para <c>addr1</c>, <c>addr2</c>, e <c>addr3</c>.</param>
+        <param name="addr1">O primeiro endereço para a especificação do parâmetro.</param>
+        <param name="addr2">O segundo endereço para a especificação do parâmetro.</param>
+        <param name="addr3">O terceiro endereço para a especificação do parâmetro.</param>
+        <summary>Define um único parâmetro no método atual. O tipo de cada parâmetro é obtido da sua posição dentro a assinatura do método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se os parâmetros são definidos nos metadados para um determinado método, não é necessário defini-las novamente com chamadas para esse método. Leitores de símbolo necessário verificar essas nos metadados normal primeiro e, em seguida, usar o armazenamento de símbolo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineSequencePoints">
+      <MemberSignature Language="C#" Value="public void DefineSequencePoints (System.Diagnostics.SymbolStore.ISymbolDocumentWriter document, int[] offsets, int[] lines, int[] columns, int[] endLines, int[] endColumns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineSequencePoints(class System.Diagnostics.SymbolStore.ISymbolDocumentWriter document, int32[] offsets, int32[] lines, int32[] columns, int32[] endLines, int32[] endColumns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.DefineSequencePoints(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Diagnostics.SymbolStore.ISymbolDocumentWriter" />
+        <Parameter Name="offsets" Type="System.Int32[]" />
+        <Parameter Name="lines" Type="System.Int32[]" />
+        <Parameter Name="columns" Type="System.Int32[]" />
+        <Parameter Name="endLines" Type="System.Int32[]" />
+        <Parameter Name="endColumns" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="document">O objeto de documento para o qual os pontos de sequência estão sendo definidos.</param>
+        <param name="offsets">Os deslocamentos de ponto de sequência medido a partir do início dos métodos.</param>
+        <param name="lines">As linhas do documento para os pontos de sequência.</param>
+        <param name="columns">As posições de documento para os pontos de sequência.</param>
+        <param name="endLines">As linhas de final do documento para os pontos de sequência.</param>
+        <param name="endColumns">As posições de final do documento para os pontos de sequência.</param>
+        <summary>Define um grupo de pontos de sequência dentro do método atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada linha e cada coluna definem o início de uma instrução dentro de um método. As matrizes devem ser classificadas em ordem crescente de deslocamentos. O deslocamento é sempre o deslocamento do início do método, em bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (IntPtr emitter, string filename, bool fFullBuild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(native int emitter, string filename, bool fFullBuild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.Initialize(System.IntPtr,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emitter" Type="System.IntPtr" />
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="fFullBuild" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="emitter">A interface do emissor de metadados.</param>
+        <param name="filename">O nome do arquivo para o qual são gravados os símbolos de depuração. Alguns criadores exigem um nome de arquivo e outros não. Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro é ignorado.</param>
+        <param name="fFullBuild">
+          <see langword="true" />indica que se trata de uma recriação completa; <see langword="false" /> indica que esta é uma compilação incremental.</param>
+        <summary>Define a interface do emissor de metadados para associar um gravador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.SymbolStore.ISymbolWriter.Initialize%2A>também define o nome do arquivo de saída onde os símbolos de depuração são gravados. Esse método pode ser chamado apenas uma vez e deve ser chamado antes de quaisquer outros métodos de gravador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMethod">
+      <MemberSignature Language="C#" Value="public void OpenMethod (System.Diagnostics.SymbolStore.SymbolToken method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenMethod(valuetype System.Diagnostics.SymbolStore.SymbolToken method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.OpenMethod(System.Diagnostics.SymbolStore.SymbolToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+      </Parameters>
+      <Docs>
+        <param name="method">O token de metadados para o método a ser aberto.</param>
+        <summary>Abre um método para colocar as informações de símbolo em.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método especificado torna-se o método atual para chamadas para definir pontos de sequência, parâmetros e escopos léxicos. Há um escopo léxico implícita ao redor de todo o método. Reabrir um método que foi fechado anteriormente apaga qualquer símbolos definidos anteriormente para o método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenNamespace">
+      <MemberSignature Language="C#" Value="public void OpenNamespace (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenNamespace(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.OpenNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do novo namespace.</param>
+        <summary>Abre um novo namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método antes de definir métodos ou variáveis que existem em um namespace. Namespaces podem ser aninhados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenScope">
+      <MemberSignature Language="C#" Value="public int OpenScope (int startOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 OpenScope(int32 startOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.OpenScope(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startOffset">O deslocamento, em bytes, do início do método para a primeira instrução de escopo léxico.</param>
+        <summary>Abre um novo escopo léxico no método atual.</summary>
+        <returns>Um identificador de escopo opaco que pode ser usado com <see cref="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)" /> para definir os deslocamentos de início e término de um escopo em um momento posterior. Nesse caso, os deslocamentos passado para <see cref="M:System.Diagnostics.SymbolStore.ISymbolWriter.OpenScope(System.Int32)" /> e <see cref="M:System.Diagnostics.SymbolStore.ISymbolWriter.CloseScope(System.Int32)" /> são ignorados. Um identificador de escopo é válido somente no método atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse escopo se torna o novo escopo atual e é enviada por push para uma pilha de escopos. Escopos devem formar uma hierarquia. Irmãos não podem se sobrepor.  
+  
+ Identificadores de escopo são válidos somente no método atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMethodSourceRange">
+      <MemberSignature Language="C#" Value="public void SetMethodSourceRange (System.Diagnostics.SymbolStore.ISymbolDocumentWriter startDoc, int startLine, int startColumn, System.Diagnostics.SymbolStore.ISymbolDocumentWriter endDoc, int endLine, int endColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetMethodSourceRange(class System.Diagnostics.SymbolStore.ISymbolDocumentWriter startDoc, int32 startLine, int32 startColumn, class System.Diagnostics.SymbolStore.ISymbolDocumentWriter endDoc, int32 endLine, int32 endColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetMethodSourceRange(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startDoc" Type="System.Diagnostics.SymbolStore.ISymbolDocumentWriter" />
+        <Parameter Name="startLine" Type="System.Int32" />
+        <Parameter Name="startColumn" Type="System.Int32" />
+        <Parameter Name="endDoc" Type="System.Diagnostics.SymbolStore.ISymbolDocumentWriter" />
+        <Parameter Name="endLine" Type="System.Int32" />
+        <Parameter Name="endColumn" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startDoc">O documento que contém a posição inicial.</param>
+        <param name="startLine">O número de linha inicial.</param>
+        <param name="startColumn">A coluna de início.</param>
+        <param name="endDoc">O documento que contém a posição final.</param>
+        <param name="endLine">O número de linha final.</param>
+        <param name="endColumn">O número de coluna final.</param>
+        <summary>Especifica o verdadeiro início e término de um método de dentro de um arquivo de origem. Use <see cref="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetMethodSourceRange(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32)" /> para especificar a extensão de um método, independente dos pontos de sequência que existem dentro do método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetScopeRange">
+      <MemberSignature Language="C#" Value="public void SetScopeRange (int scopeID, int startOffset, int endOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetScopeRange(int32 scopeID, int32 startOffset, int32 endOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopeID" Type="System.Int32" />
+        <Parameter Name="startOffset" Type="System.Int32" />
+        <Parameter Name="endOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="scopeID">O identificador de escopo léxico.</param>
+        <param name="startOffset">O deslocamento de bytes do início do escopo léxico.</param>
+        <param name="endOffset">O deslocamento de byte do final do escopo léxico.</param>
+        <summary>Define o intervalo de deslocamento para o escopo léxico especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSymAttribute">
+      <MemberSignature Language="C#" Value="public void SetSymAttribute (System.Diagnostics.SymbolStore.SymbolToken parent, string name, byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSymAttribute(valuetype System.Diagnostics.SymbolStore.SymbolToken parent, string name, unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O token de metadados para o qual o atributo é definido.</param>
+        <param name="name">O nome do atributo.</param>
+        <param name="data">O valor do atributo.</param>
+        <summary>Define um atributo quando é fornecido o nome do atributo e o valor do atributo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.SymbolStore.ISymbolWriter.SetSymAttribute%2A> método só está associado às informações simbólicas e não é um atributo de metadados personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUnderlyingWriter">
+      <MemberSignature Language="C#" Value="public void SetUnderlyingWriter (IntPtr underlyingWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetUnderlyingWriter(native int underlyingWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetUnderlyingWriter(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="underlyingWriter" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="underlyingWriter">Um ponteiro para o código que representa o gravador subjacente.</param>
+        <summary>Define a base <see langword="ISymUnmanagedWriter" /> (a não gerenciado correspondente interface) que um gerenciado <see cref="T:System.Diagnostics.SymbolStore.ISymbolWriter" /> para emitir símbolos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Subjacente `ISymUnmanagedWriter` (a interface correspondente não gerenciada) representa um gravador de símbolo para código gerenciado. A interface fornece métodos para definir documentos, pontos de sequência, escopos de léxicos e variáveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUserEntryPoint">
+      <MemberSignature Language="C#" Value="public void SetUserEntryPoint (System.Diagnostics.SymbolStore.SymbolToken entryMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetUserEntryPoint(valuetype System.Diagnostics.SymbolStore.SymbolToken entryMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.SetUserEntryPoint(System.Diagnostics.SymbolStore.SymbolToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entryMethod" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+      </Parameters>
+      <Docs>
+        <param name="entryMethod">Aponte o token de metadados para o método que é a entrada do usuário.</param>
+        <summary>Identifica o método definido pelo usuário como o ponto de entrada para o módulo atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso normalmente é o método principal, em vez de gerado pelo compilador stubs antes do método principal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsingNamespace">
+      <MemberSignature Language="C#" Value="public void UsingNamespace (string fullName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UsingNamespace(string fullName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolWriter.UsingNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fullName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fullName">O nome totalmente qualificado do namespace.</param>
+        <summary>Especifica que o nome totalmente qualificado de namespace fornecido é usado dentro do escopo léxico aberto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fechar o escopo atual impede que esse escopo usando o namespace. O namespace continua em uso em todos os escopos que herdam do escopo atual aberto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1071 @@
+<Type Name="ListItemCollection" FullName="System.Web.UI.WebControls.ListItemCollection">
+  <TypeSignature Language="C#" Value="public sealed class ListItemCollection : System.Collections.IList, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ListItemCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.ListItemsCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Uma coleção de <see cref="T:System.Web.UI.WebControls.ListItem" /> objetos em um controle de lista. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListItemCollection> classe representa uma coleção de <xref:System.Web.UI.WebControls.ListItem> objetos. O <xref:System.Web.UI.WebControls.ListItem> objetos, por sua vez, representam os itens exibidos em controles de lista, como o <xref:System.Web.UI.WebControls.ListBox>. Para recuperar programaticamente <xref:System.Web.UI.WebControls.ListItem> objetos de um controle de lista, use um dos seguintes métodos:  
+  
+-   Use o indexador para obter um único <xref:System.Web.UI.WebControls.ListItem> da coleção, usando a notação de matriz.  
+  
+-   Use o <xref:System.Web.UI.WebControls.ListItemCollection.CopyTo%2A> método para copiar o conteúdo da coleção para um <xref:System.Array?displayProperty=nameWithType> objeto, que pode ser usado para obter itens da coleção.  
+  
+-   Use o <xref:System.Web.UI.WebControls.ListItemCollection.GetEnumerator%2A> método para criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType> objeto implementado, que pode ser usado para obter itens da coleção.  
+  
+-   Use `foreach` (c#) ou `For Each` (Visual Basic) para iterar pela coleção.  
+  
+ O <xref:System.Web.UI.WebControls.ListItemCollection.Count%2A> propriedade especifica o número total de itens na coleção e é comumente usada para determinar o limite superior da coleção. Você pode adicionar e remover itens da coleção usando o <xref:System.Web.UI.WebControls.ListItemCollection.Add%2A> e <xref:System.Web.UI.WebControls.ListItemCollection.Remove%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar <xref:System.Web.UI.WebControls.ListItemCollection> objetos, adicionando itens das coleções e removendo itens das coleções. No exemplo, o <xref:System.Web.UI.WebControls.ListItemCollection> chamado `listBoxData` é usado como fonte de dados para um <xref:System.Web.UI.WebControls.ListBox> controle chamado `ListBox1`e o <xref:System.Web.UI.WebControls.ListItemCollection> chamado `ddBoxData` é usado como fonte de dados para um <xref:System.Web.UI.WebControls.DropDownList> controle chamado `DropDownList1`.  
+  
+ [!code-aspx-csharp[ListItemCollectionSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItemCollectionSample/CS/listitemcollection2cs.aspx#4)]
+ [!code-aspx-vb[ListItemCollectionSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItemCollectionSample/VB/listitemcollection2vb.aspx#4)]  
+  
+ [!code-aspx-csharp[ListBoxMultiSelectExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListBoxMultiSelectExample/CS/listitemcollectioncs.aspx#1)]
+ [!code-aspx-vb[ListBoxMultiSelectExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListBoxMultiSelectExample/VB/listitemcollectionvb.aspx#1)]  
+  
+ [!code-aspx-csharp[ListBoxMultiSelectExample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ListBoxMultiSelectExample/CS/listitemcollectioncs.aspx#3)]
+ [!code-aspx-vb[ListBoxMultiSelectExample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListBoxMultiSelectExample/VB/listitemcollectionvb.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListItemCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListItemCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListItemCollection> classe usando valores padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar <xref:System.Web.UI.WebControls.ListItemCollection> objetos, adicionando itens das coleções e removendo itens das coleções. Para exibir esse código em um exemplo de trabalho completamente, consulte o <xref:System.Web.UI.WebControls.WebControl> tópico sobre a classe.  
+  
+ [!code-csharp[ListItemCollectionSample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItemCollectionSample/CS/listitemcollection2cs.aspx#5)]
+ [!code-vb[ListItemCollectionSample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItemCollectionSample/VB/listitemcollection2vb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="item">Uma <see cref="T:System.String" /> que representa o item a ser adicionado ao final da coleção.</param>
+        <summary>Acrescenta uma <see cref="T:System.Web.UI.WebControls.ListItem" /> ao final da coleção que representa a cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Add%2A> método acrescentar um <xref:System.Web.UI.WebControls.ListItem> ao final da coleção. Essa implementação do método cria um <xref:System.Web.UI.WebControls.ListItem> representar o texto especificado pelo `item` parâmetro. Isso <xref:System.Web.UI.WebControls.ListItem> , em seguida, é acrescentado à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar <xref:System.Web.UI.WebControls.ListItemCollection> objetos, adicionando itens das coleções e removendo itens das coleções. Para exibir esse código em um exemplo de trabalho completamente, consulte o <xref:System.Web.UI.WebControls.WebControl> tópico sobre a classe.  
+  
+ [!code-csharp[ListItemCollectionSample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItemCollectionSample/CS/listitemcollection2cs.aspx#5)]
+ [!code-vb[ListItemCollectionSample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItemCollectionSample/VB/listitemcollection2vb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.WebControls.ListItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.WebControls.ListItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.Add(System.Web.UI.WebControls.ListItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.ListItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Web.UI.WebControls.ListItem" /> a ser acrescentado à coleção.</param>
+        <summary>Acrescenta o <see cref="T:System.Web.UI.WebControls.ListItem" /> especificado ao final da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Add%2A> método acrescentar um <xref:System.Web.UI.WebControls.ListItem> ao final da coleção. Essa implementação do método leva o <xref:System.Web.UI.WebControls.ListItem> especificado pelo `item` parâmetro e o anexa à coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Web.UI.WebControls.ListItem[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Web.UI.WebControls.ListItem[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.AddRange(System.Web.UI.WebControls.ListItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Web.UI.WebControls.ListItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="items">Uma matriz de <see cref="T:System.Web.UI.WebControls.ListItem" /> objetos que contêm os itens a serem adicionados à coleção.</param>
+        <summary>Adiciona os itens em uma matriz de <see cref="T:System.Web.UI.WebControls.ListItem" /> objetos na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.AddRange%2A> método para adicionar os itens na matriz de <xref:System.Web.UI.WebControls.ListItem> objetos especificados pelo `items` parâmetro. Isso permite que você adicione vários <xref:System.Web.UI.WebControls.ListItem> objetos para a coleção em uma única etapa.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="items" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public int Capacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Capacity" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItemCollection.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de itens que o <see cref="T:System.Web.UI.WebControls.ListItemCollection" /> pode armazenar.</summary>
+        <value>O número máximo de itens que o <see cref="T:System.Web.UI.WebControls.ListItemCollection" /> pode armazenar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Capacity%2A> para especificar ou determinar o número máximo de itens que o <xref:System.Web.UI.WebControls.ListItemCollection> pode armazenar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.UI.WebControls.ListItem" /> objetos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Clear%2A> método para remover todos os <xref:System.Web.UI.WebControls.ListItem> objetos. O <xref:System.Web.UI.WebControls.ListItemCollection.Count%2A> propriedade também é definida como `0`.  
+  
+> [!CAUTION]
+>  Quando você usar esse método, todos os <xref:System.Web.UI.WebControls.ListItem> objetos são removidos da coleção. Você não pode desfazer esta ação.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ListItemCollection_Remove#4](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItemCollection_Remove/CS/listitemcollection_remove.cs.aspx#4)]
+ [!code-vb[ListItemCollection_Remove#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItemCollection_Remove/VB/listitemcollection_remove.vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.ListItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.ListItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.Contains(System.Web.UI.WebControls.ListItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.ListItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um <see cref="T:System.Web.UI.WebControls.ListItem" /> a ser pesquisado na coleção.</param>
+        <summary>Determina se a coleção contém um o item especificado.</summary>
+        <returns>
+          <see langword="true" /> se a coleção contiver o item especificado, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Contains%2A> método para determinar se o <xref:System.Web.UI.WebControls.ListItem> especificado pelo `item` parâmetro está na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> de base zero que recebe os itens copiados do <see cref="T:System.Web.UI.WebControls.ListItemCollection" />.</param>
+        <param name="index">O primeiro índice especificado no <see cref="T:System.Array" /> para receber os itens.</param>
+        <summary>Copia os itens do <see cref="T:System.Web.UI.WebControls.ListItemCollection" /> para o <see cref="T:System.Array" /> especificado, começando com o índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para copiar o conteúdo do <xref:System.Web.UI.WebControls.ListItemCollection> especificado <xref:System.Array?displayProperty=nameWithType>, começando no índice especificado.  
+  
+> [!NOTE]
+>  O `array` parâmetro deve ser um com base em zero <xref:System.Array?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ListItemCollection_Remove#5](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItemCollection_Remove/CS/listitemcollection_remove.cs.aspx#5)]
+ [!code-vb[ListItemCollection_Remove#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItemCollection_Remove/VB/listitemcollection_remove.vb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItemCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de <see cref="T:System.Web.UI.WebControls.ListItem" /> objetos na coleção.</summary>
+        <value>O número de <see cref="T:System.Web.UI.WebControls.ListItem" /> objetos na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Count%2A> propriedade para determinar o número de <xref:System.Web.UI.WebControls.ListItem> objetos no <xref:System.Web.UI.WebControls.ListItemCollection>. O <xref:System.Web.UI.WebControls.ListItemCollection.Count%2A> propriedade normalmente é usada quando a iteração na coleção para determinar o superior associado da coleção.  
+  
+   
+  
+## Examples  
+ Para exibir o código a seguir um exemplo de trabalho completamente, consulte o <xref:System.Web.UI.WebControls.ListItemCollection> tópico sobre a classe.  
+  
+ [!code-csharp[ListBoxMultiSelectExample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/ListBoxMultiSelectExample/CS/listitemcollectioncs.aspx#4)]
+ [!code-vb[ListBoxMultiSelectExample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListBoxMultiSelectExample/VB/listitemcollectionvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByText">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListItem FindByText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.WebControls.ListItem FindByText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.FindByText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser pesquisado.</param>
+        <summary>Pesquisa a coleção para um <see cref="T:System.Web.UI.WebControls.ListItem" /> com uma propriedade <see cref="P:System.Web.UI.WebControls.ListItem.Text" /> igual ao texto especificado.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.ListItem" /> que contém o texto especificado pelo parâmetro <paramref name="text" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.FindByText%2A> método para pesquisar a coleção de um <xref:System.Web.UI.WebControls.ListItem> com um <xref:System.Web.UI.WebControls.ListItem.Text%2A> igual a texto especificado pela propriedade de `text` parâmetro. Esse método executa uma comparação diferencia maiusculas de minúsculas e não levam em conta a cultura. Esse método não faz pesquisas parciais ou pesquisas com curinga. Se um item não for encontrado na coleção usando esses critérios, `null` será retornado.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ListItemCollection_Search#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItemCollection_Search/CS/listitemcollection_search.cs.aspx#1)]
+ [!code-vb[ListItemCollection_Search#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItemCollection_Search/VB/listitemcollection_search.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByValue">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListItem FindByValue (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.WebControls.ListItem FindByValue(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.FindByValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser procurado.</param>
+        <summary>Pesquisa a coleção para um <see cref="T:System.Web.UI.WebControls.ListItem" /> com uma propriedade <see cref="P:System.Web.UI.WebControls.ListItem.Value" /> que contém o valor especificado.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.ListItem" /> que contém o valor especificado pelo parâmetro <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.FindByValue%2A> método para pesquisar a coleção de um <xref:System.Web.UI.WebControls.ListItem> com um <xref:System.Web.UI.WebControls.ListItem.Value%2A> que contém o valor especificado pela propriedade de `value` parâmetro. Esse método executa uma comparação diferencia maiusculas de minúsculas e não levam em conta a cultura. Esse método não faz pesquisas parciais ou pesquisas com curinga. Se um item não for encontrado na coleção usando esses critérios, `null` será retornado.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ListItemCollection_Search#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItemCollection_Search/CS/listitemcollection_search.cs.aspx#2)]
+ [!code-vb[ListItemCollection_Search#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItemCollection_Search/VB/listitemcollection_search.vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto implementado <see cref="T:System.Collections.IEnumerator" /> que contém todos os objetos <see cref="T:System.Web.UI.WebControls.ListItem" /> no <see cref="T:System.Web.UI.WebControls.ListItemCollection" />.</summary>
+        <returns>Um objeto implementado <see cref="T:System.Collections.IEnumerator" /> que contém todos os objetos <see cref="T:System.Web.UI.WebControls.ListItem" /> no <see cref="T:System.Web.UI.WebControls.ListItemCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType> que pode ser iterado por meio de obter cada <xref:System.Web.UI.WebControls.ListItem> objeto o <xref:System.Web.UI.WebControls.ListItemCollection>.  
+  
+ Use o <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> apontada propriedade para obter o item atualmente na coleção.  
+  
+ Use o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método para mover para o próximo item na coleção.  
+  
+ Use o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método para mover o enumerador de volta para a posição inicial.  
+  
+> [!NOTE]
+>  Depois de criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType> de objeto ou usar o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método para mover o enumerador para o primeiro item na coleção, você deve chamar o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método. Caso contrário, o item é representado pelo <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> propriedade está definida.  
+  
+   
+  
+## Examples  
+ [!code-csharp[DataListItemCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListItemCollection/CS/datalistitemcollection.cs.aspx#5)]
+ [!code-vb[DataListItemCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListItemCollection/VB/datalistitemcollection.vb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.ListItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.ListItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.IndexOf(System.Web.UI.WebControls.ListItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.ListItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um <see cref="T:System.Web.UI.WebControls.ListItem" /> a ser pesquisado na coleção.</param>
+        <summary>Determina o valor de índice que representa a posição do <see cref="T:System.Web.UI.WebControls.ListItem" /> especificado na coleção.</summary>
+        <returns>A posição de índice do <see cref="T:System.Web.UI.WebControls.ListItem" /> especificado na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.IndexOf%2A> método para determinar o valor de índice a <xref:System.Web.UI.WebControls.ListItem> especificado pelo `item` parâmetro na coleção. Se um item com esse critério não for encontrado na coleção, `-1` será retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, string item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, string item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.Insert(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na coleção para inserir o <see cref="T:System.Web.UI.WebControls.ListItem" />.</param>
+        <param name="item">Um <see cref="T:System.String" /> que representa o item a ser inserido na coleção.</param>
+        <summary>Insere um <see cref="T:System.Web.UI.WebControls.ListItem" /> que representa a cadeia de caracteres especificada na coleção no local do índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Insert%2A> método para adicionar um <xref:System.Web.UI.WebControls.ListItem> na coleção no índice especificado pelo `index` parâmetro. Essa implementação do método cria um <xref:System.Web.UI.WebControls.ListItem> representar o texto especificado pelo `item` parâmetro. O <xref:System.Web.UI.WebControls.ListItem.Text%2A> propriedade do novo <xref:System.Web.UI.WebControls.ListItem> tem o valor `item`e o <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade possui o valor `null`. Isso <xref:System.Web.UI.WebControls.ListItem> é inserido na coleção no índice especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.ListItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.ListItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.Insert(System.Int32,System.Web.UI.WebControls.ListItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Web.UI.WebControls.ListItem" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na coleção para inserir o <see cref="T:System.Web.UI.WebControls.ListItem" />.</param>
+        <param name="item">O <see cref="T:System.Web.UI.WebControls.ListItem" /> a adicionar à coleção.</param>
+        <summary>Insere especificado <see cref="T:System.Web.UI.WebControls.ListItem" /> na coleção no local do índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Insert%2A> método para adicionar um <xref:System.Web.UI.WebControls.ListItem> na coleção no índice especificado pelo `index` parâmetro. Essa implementação do método leva o <xref:System.Web.UI.WebControls.ListItem> especificado pelo `item` parâmetro e o insere na coleção no índice especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItemCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.ListItemCollection" /> é somente leitura.</summary>
+        <value>
+          <see langword="false" />para todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna `false` para indicar que o <xref:System.Web.UI.WebControls.ListItemCollection> podem ser gravados em todos os casos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItemCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso para o <see cref="T:System.Web.UI.WebControls.ListItemCollection" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" />para todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é derivada de <xref:System.Collections.ICollection?displayProperty=nameWithType> e é substituído para retornar sempre `false`.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.SelectedDatesCollection.IsSynchronized%2A> propriedade, consulte o <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ListItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do <see cref="T:System.Web.UI.WebControls.ListItem" /> a ser recuperado da coleção.</param>
+        <summary>Obtém um <see cref="T:System.Web.UI.WebControls.ListItem" /> no índice especificado na coleção.</summary>
+        <value>O objeto <see cref="T:System.Web.UI.WebControls.ListItem" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para obter um <xref:System.Web.UI.WebControls.ListItem> do <xref:System.Web.UI.WebControls.ListItemCollection> no índice especificado, usando a notação de matriz.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como selecionar vários itens de uma <xref:System.Web.UI.WebControls.ListBox> controlar e adicione os itens selecionados para um <xref:System.Web.UI.WebControls.DataGrid> controle. O exemplo usa um `foreach` para iterar por meio de <xref:System.Web.UI.WebControls.ListItem> objetos no <xref:System.Web.UI.WebControls.ListItemCollection> coleção do <xref:System.Web.UI.WebControls.ListBox> controle.  
+  
+ [!code-aspx-csharp[ListBoxMultiSelectExample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ListBoxMultiSelectExample/CS/listitemcollectioncs.aspx#3)]
+ [!code-aspx-vb[ListBoxMultiSelectExample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListBoxMultiSelectExample/VB/listitemcollectionvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um <see cref="T:System.String" /> que representa o item a ser removido da coleção.</param>
+        <summary>Remove um <see cref="T:System.Web.UI.WebControls.ListItem" /> da coleção que representa a cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Remove%2A> método para remover um <xref:System.Web.UI.WebControls.ListItem> objeto da coleção. Essa implementação do método cria um <xref:System.Web.UI.WebControls.ListItem> usando o texto do objeto a `item` parâmetro e, em seguida, remove isso <xref:System.Web.UI.WebControls.ListItem> da coleção. Especificado `item` parâmetro deve corresponder a <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade de um objeto existente <xref:System.Web.UI.WebControls.ListItem> objeto, ou nenhum item é removido da coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Web.UI.WebControls.ListItemCollection.Remove%2A> método o <xref:System.Web.UI.WebControls.ListItemCollection> classe. A página da Web contém uma <xref:System.Web.UI.WebControls.ListBox> controle com alguns itens de lista e um <xref:System.Web.UI.WebControls.TextBox> controle chamado `Delete`. O usuário insere o texto do item a ser excluído no <xref:System.Web.UI.WebControls.TextBox> controle. O <xref:System.Web.UI.WebControls.Button.Click> manipulador de eventos do `Button1` controle exclui o item selecionado do <xref:System.Web.UI.WebControls.ListItemCollection> objeto e, portanto, do <xref:System.Web.UI.WebControls.ListBox> controle.  
+  
+ [!code-csharp[ListItemCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItemCollection/CS/listitemcollection_addrange.cs.aspx#3)]
+ [!code-vb[ListItemCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItemCollection/VB/listitemcollection_addrange.vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.ListItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.ListItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.Remove(System.Web.UI.WebControls.ListItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.ListItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Web.UI.WebControls.ListItem" /> a ser removido da coleção.</param>
+        <summary>Remove o <see cref="T:System.Web.UI.WebControls.ListItem" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.Remove%2A> método para remover um <xref:System.Web.UI.WebControls.ListItem> da coleção. Essa implementação do método leva o <xref:System.Web.UI.WebControls.ListItem> especificado pelo `item` parâmetro e remove da coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar <xref:System.Web.UI.WebControls.ListItemCollection> objetos, adicionando itens das coleções e removendo itens das coleções. No exemplo, o <xref:System.Web.UI.WebControls.ListItemCollection> chamado `listBoxData` é usado como fonte de dados para um <xref:System.Web.UI.WebControls.ListBox> controle chamado `ListBox1`e o <xref:System.Web.UI.WebControls.ListItemCollection> chamado `ddBoxData` é usado como fonte de dados para um <xref:System.Web.UI.WebControls.DropDownList> controle chamado `DropDownList1`. Para exibir esse código em um exemplo de trabalho completamente, consulte o <xref:System.Web.UI.WebControls.WebControl> tópico sobre a classe.  
+  
+ [!code-csharp[ListItemCollectionSample#6](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItemCollectionSample/CS/listitemcollection2cs.aspx#6)]
+ [!code-vb[ListItemCollectionSample#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItemCollectionSample/VB/listitemcollection2vb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.UI.WebControls.ListItem" /> a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Web.UI.WebControls.ListItem" /> no índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItemCollection.RemoveAt%2A> método para remover o <xref:System.Web.UI.WebControls.ListItem> no índice especificado da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItemCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.Web.UI.WebControls.ListItemCollection" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado nesta implementação é o <xref:System.Web.UI.WebControls.ListItemCollection> objeto propriamente dito.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.SelectedDatesCollection.SyncRoot%2A> propriedade, consulte o <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Object" /> para adicionar ao <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Add(System.Object)" />.</summary>
+        <returns>O índice no qual o item foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Contains(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Object" /> for encontrado no <see cref="T:System.Collections.IList" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.IndexOf(System.Object)" />.</summary>
+        <returns>O índice de <paramref name="value" /> se encontrado na lista; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> devem ser inseridos.</param>
+        <param name="item">O <see cref="T:System.Object" /> para inserir o <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItemCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItemCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do elemento a ser obtido.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.Item(System.Int32)" />.</summary>
+        <value>O elemento como o índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Object" /> a ser removido de <see cref="T:System.Collections.IList" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Remove(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItemCollection.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IStateManager.IsTrackingViewState" />.</summary>
+        <value>
+          <see langword="true" />Se o controle de servidor para acompanhar as alterações de estado de exibição; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Object" /> que representa o estado de <see cref="T:System.Web.UI.WebControls.ListItemCollection" />.</param>
+        <summary>Carrega o estado salvo anteriormente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Objeto retorna que contém as alterações de estado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o estado de <see cref="T:System.Web.UI.WebControls.ListItemCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItemCollection.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia o estado das alterações de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItemCollection> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

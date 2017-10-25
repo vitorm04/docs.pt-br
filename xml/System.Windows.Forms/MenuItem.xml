@@ -1,0 +1,1684 @@
+<Type Name="MenuItem" FullName="System.Windows.Forms.MenuItem">
+  <TypeSignature Language="C#" Value="public class MenuItem : System.Windows.Forms.Menu" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MenuItem extends System.Windows.Forms.Menu" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MenuItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Menu</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Click")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um item individual que é exibido dentro de um <see cref="T:System.Windows.Forms.MainMenu" /> ou <see cref="T:System.Windows.Forms.ContextMenu" />. Embora <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> substitua e adicione funcionalidade ao controle <see cref="T:System.Windows.Forms.MenuItem" /> de versões anteriores, <see cref="T:System.Windows.Forms.MenuItem" /> é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para que um <xref:System.Windows.Forms.MenuItem> para serem exibidos, você deve adicioná-lo para um <xref:System.Windows.Forms.MainMenu> ou <xref:System.Windows.Forms.ContextMenu>. Para criar seus submenus, você pode adicionar <xref:System.Windows.Forms.MenuItem> objetos para o <xref:System.Windows.Forms.Menu.MenuItems%2A> propriedade do pai <xref:System.Windows.Forms.MenuItem>.  
+  
+ O <xref:System.Windows.Forms.MenuItem> classe fornece propriedades que permitem que você configure a aparência e a funcionalidade de um item de menu. Para exibir uma marca de seleção ao lado de um item de menu, use o <xref:System.Windows.Forms.MenuItem.Checked%2A> propriedade. Você pode usar esse recurso para identificar um item de menu é selecionado em uma lista de itens de menu mutuamente exclusivos. Por exemplo, se você tiver um conjunto de itens de menu para definir a cor do texto em uma <xref:System.Windows.Forms.TextBox> controle, você pode usar o <xref:System.Windows.Forms.MenuItem.Checked%2A> propriedade para identificar qual cor está selecionado no momento. O <xref:System.Windows.Forms.MenuItem.Shortcut%2A> propriedade pode ser usada para definir uma combinação de teclado que pode ser pressionada para selecionar o item de menu.  
+  
+ Para <xref:System.Windows.Forms.MenuItem> objetos exibidos em um aplicativo de Interface de documentos múltiplos (MDI), você pode usar o <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> método para mesclar os menus de um MDI pai para que seus formulários filho para criar uma estrutura de menu consolidados. Porque um <xref:System.Windows.Forms.MenuItem> não pode ser reutilizado em vários locais ao mesmo tempo, como em um <xref:System.Windows.Forms.MainMenu> e um <xref:System.Windows.Forms.ContextMenu>, você pode usar o <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> método para criar uma cópia de um <xref:System.Windows.Forms.MenuItem> para uso em outro local.  
+  
+ O <xref:System.Windows.Forms.MenuItem.Popup> evento permite que você execute tarefas antes de um menu é exibido. Por exemplo, você pode criar um manipulador de eventos para esse evento exibir ou ocultar itens de menu de acordo com o estado do seu código. O <xref:System.Windows.Forms.MenuItem.Select> evento permite que você execute tarefas como fornecer ajuda detalhada de itens de menu do aplicativo quando o usuário coloca o ponteiro do mouse sobre um item de menu.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma estrutura de menu de um formulário. O exemplo de código adiciona um <xref:System.Windows.Forms.MenuItem> representar o item de menu de nível superior, adiciona um item de submenu para selecionar um tamanho de fonte e, em seguida, adiciona dois itens de submenu para esse item de menu que representam as opções de fonte de grande e pequeno em um aplicativo. O exemplo requer que haja um <xref:System.Windows.Forms.MainMenu> objeto chamado `mainMenu1` e quatro <xref:System.Windows.Forms.MenuItem> objetos nomeados `menuItem1`, `menuItem2`, `menuItem3`, e `menuItem4`.  
+  
+ [!code-cpp[Classic Menu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Menu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Menu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Menu Example/CS/source.cs#1)]
+ [!code-vb[Classic Menu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Menu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa um <see cref="T:System.Windows.Forms.MenuItem" /> com uma legenda em branco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de criar um espaço em branco <xref:System.Windows.Forms.MenuItem> usando este construtor, você pode usar as propriedades e métodos do <xref:System.Windows.Forms.MenuItem> classe para especificar a aparência e comportamento do seu <xref:System.Windows.Forms.MenuItem>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.MenuItem> usando esta versão do construtor.  
+  
+ [!code-cpp[Classic MenuItem.MenuItem Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MenuItem Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MenuItem Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MenuItem Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MenuItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MenuItem Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">A legenda do item de menu.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.MenuItem" /> classe com uma legenda especificada para o item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você especificar uma legenda para o item de menu com o `text` parâmetro, você também pode especificar uma chave de acesso colocando um caractere '&' antes do caractere a ser usado como a chave de acesso. Por exemplo, para especificar a letra "F" em "Arquivo" como uma chave de acesso, você deve especificar a legenda para o item de menu como "& arquivo". Você pode usar esse recurso para fornecer a navegação de teclado para os menus.  
+  
+ Definindo o `text` parâmetro para "`-`" faz com que o item de menu a ser exibida como um separador (uma linha horizontal) em vez de um item de menu padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.MenuItem> que especifica a legenda do item de menu no momento é construído.  
+  
+ [!code-cpp[Classic MenuItem.MenuItem1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MenuItem1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MenuItem1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MenuItem1 Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MenuItem1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MenuItem1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (string text, EventHandler onClick);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.EventHandler onClick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.#ctor(System.String,System.EventHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="text">A legenda do item de menu.</param>
+        <param name="onClick">O <see cref="T:System.EventHandler" /> que manipula o evento <see cref="E:System.Windows.Forms.MenuItem.Click" /> deste item de menu.</param>
+        <summary>Inicializa uma nova instância da classe com uma legenda e um manipulador de eventos especificados para o evento <see cref="E:System.Windows.Forms.MenuItem.Click" /> do item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você especificar uma legenda para o item de menu com o `text` parâmetro, você também pode especificar uma chave de acesso colocando um '&' antes do caractere a ser usado como a chave de acesso. Por exemplo, para especificar a letra "F" em "Arquivo" como uma chave de acesso, você deve especificar a legenda para o item de menu como "& arquivo". Você pode usar esse recurso para fornecer a navegação de teclado para os menus.  
+  
+ Definindo o `text` parâmetro para "`-`" faz com que o item de menu a ser exibida como um separador (uma linha horizontal) em vez de um item de menu padrão.  
+  
+ Além disso, você pode usar esse construtor para especificar um representante que manipulará o <xref:System.Windows.Forms.MenuItem.Click> evento para o item de menu que está sendo criado. O <xref:System.EventHandler> que você passa para o construtor deve ser configurado para chamar um manipulador de eventos que pode lidar com o <xref:System.Windows.Forms.MenuItem.Click> evento. Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.MenuItem> objeto com uma legenda especificada e uma <xref:System.EventHandler> delegado conectado a um manipulador de eventos que tratará o <xref:System.Windows.Forms.MenuItem.Click> evento para o item de menu.  
+  
+ [!code-cpp[Classic MenuItem.MenuItem2 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MenuItem2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MenuItem2 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MenuItem2 Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MenuItem2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MenuItem2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (string text, System.Windows.Forms.MenuItem[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.Windows.Forms.MenuItem[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.#ctor(System.String,System.Windows.Forms.MenuItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="items" Type="System.Windows.Forms.MenuItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="text">A legenda do item de menu.</param>
+        <param name="items">Uma matriz de objetos <see cref="T:System.Windows.Forms.MenuItem" /> que contém os itens de submenu desse item de menu.</param>
+        <summary>Inicializa uma nova instância da classe com uma legenda especificada e uma matriz de itens de submenu definida para o item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você especificar uma legenda para o item de menu com o `text` parâmetro, você também pode especificar uma chave de acesso colocando um '&' antes do caractere a ser usado como a chave de acesso. Por exemplo, para especificar a letra "F" em "Arquivo" como uma chave de acesso, você deve especificar a legenda para o item de menu como "& arquivo". Você pode usar esse recurso para fornecer a navegação de teclado para os menus.  
+  
+ Definindo o `text` parâmetro para "`-`" faz com que o item de menu a ser exibida como um separador (uma linha horizontal) em vez de um item de menu padrão.  
+  
+ O `items` parâmetro permite que você atribua uma matriz de itens de menu para definir um submenu de item de menu. Cada item na matriz também pode ter uma matriz de itens de menu atribuído a ele. Isso permite que você criar estruturas de menu completa e atribuí-los para o construtor para o item de menu.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um objeto com uma legenda especificada, um manipulador de eventos conectado a um método que manipulará o evento de cada item de menu em uma matriz de itens de submenu.  
+  
+ [!code-cpp[Classic MenuItem.MenuItem4 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MenuItem4 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MenuItem4 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MenuItem4 Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MenuItem4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MenuItem4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (string text, EventHandler onClick, System.Windows.Forms.Shortcut shortcut);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.EventHandler onClick, valuetype System.Windows.Forms.Shortcut shortcut) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.#ctor(System.String,System.EventHandler,System.Windows.Forms.Shortcut)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+        <Parameter Name="shortcut" Type="System.Windows.Forms.Shortcut" />
+      </Parameters>
+      <Docs>
+        <param name="text">A legenda do item de menu.</param>
+        <param name="onClick">O <see cref="T:System.EventHandler" /> que manipula o evento <see cref="E:System.Windows.Forms.MenuItem.Click" /> deste item de menu.</param>
+        <param name="shortcut">Um dos valores de <see cref="T:System.Windows.Forms.Shortcut" />.</param>
+        <summary>Inicializa uma nova instância da classe com uma legenda especificada, o manipulador de eventos e a tecla de atalho associada para o item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você especificar uma legenda para o item de menu com o `text` parâmetro, você também pode especificar uma chave de acesso colocando um '&' antes do caractere a ser usado como a chave de acesso. Por exemplo, para especificar a letra "F" em "Arquivo" como uma chave de acesso, você deve especificar a legenda para o item de menu como "& arquivo". Você pode usar esse recurso para fornecer a navegação de teclado para os menus. Este construtor também permite que você especifique uma tecla de atalho, além de uma chave de acesso para fornecer uma navegação de teclado. Teclas de atalho permitem que você especifique uma combinação de teclas que podem ser usadas para ativar o item de menu.  
+  
+ Definindo o `text` parâmetro para "`-`" faz com que o item de menu a ser exibida como um separador (uma linha horizontal) em vez de um item de menu padrão.  
+  
+ Além disso, você pode usar esse construtor para especificar um representante que manipulará o <xref:System.Windows.Forms.MenuItem.Click> evento para o item de menu que está sendo criado. O <xref:System.EventHandler> que você passa para o construtor deve ser configurado para chamar um manipulador de eventos que pode lidar com o <xref:System.Windows.Forms.MenuItem.Click> evento. Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um objeto com uma legenda especificada, a tecla de atalho e um manipulador de eventos conectado a um método que manipulará o evento para o item de menu.  
+  
+ [!code-cpp[Classic MenuItem.MenuItem3 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MenuItem3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MenuItem3 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MenuItem3 Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MenuItem3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MenuItem3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem (System.Windows.Forms.MenuMerge mergeType, int mergeOrder, System.Windows.Forms.Shortcut shortcut, string text, EventHandler onClick, EventHandler onPopup, EventHandler onSelect, System.Windows.Forms.MenuItem[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.MenuMerge mergeType, int32 mergeOrder, valuetype System.Windows.Forms.Shortcut shortcut, string text, class System.EventHandler onClick, class System.EventHandler onPopup, class System.EventHandler onSelect, class System.Windows.Forms.MenuItem[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.#ctor(System.Windows.Forms.MenuMerge,System.Int32,System.Windows.Forms.Shortcut,System.String,System.EventHandler,System.EventHandler,System.EventHandler,System.Windows.Forms.MenuItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mergeType" Type="System.Windows.Forms.MenuMerge" />
+        <Parameter Name="mergeOrder" Type="System.Int32" />
+        <Parameter Name="shortcut" Type="System.Windows.Forms.Shortcut" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+        <Parameter Name="onPopup" Type="System.EventHandler" />
+        <Parameter Name="onSelect" Type="System.EventHandler" />
+        <Parameter Name="items" Type="System.Windows.Forms.MenuItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="mergeType">Um dos valores de <see cref="T:System.Windows.Forms.MenuMerge" />.</param>
+        <param name="mergeOrder">A posição relativa que tenham esse item de menu em um menu mesclado.</param>
+        <param name="shortcut">Um dos valores de <see cref="T:System.Windows.Forms.Shortcut" />.</param>
+        <param name="text">A legenda do item de menu.</param>
+        <param name="onClick">O <see cref="T:System.EventHandler" /> que manipula o evento <see cref="E:System.Windows.Forms.MenuItem.Click" /> deste item de menu.</param>
+        <param name="onPopup">O <see cref="T:System.EventHandler" /> que manipula o evento <see cref="E:System.Windows.Forms.MenuItem.Popup" /> deste item de menu.</param>
+        <param name="onSelect">O <see cref="T:System.EventHandler" /> que manipula o evento <see cref="E:System.Windows.Forms.MenuItem.Select" /> deste item de menu.</param>
+        <param name="items">Uma matriz de objetos <see cref="T:System.Windows.Forms.MenuItem" /> que contém os itens de submenu desse item de menu.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.MenuItem" /> classe com uma legenda especificada; manipuladores de eventos definidos para o <see cref="E:System.Windows.Forms.MenuItem.Click" />, <see cref="E:System.Windows.Forms.MenuItem.Select" /> e <see cref="E:System.Windows.Forms.MenuItem.Popup" /> eventos; uma tecla de atalho de um tipo de mesclagem; e a ordem especificada para o item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você especificar uma legenda para o item de menu com o `text` parâmetro, você também pode especificar uma chave de acesso colocando um '&' antes do caractere a ser usado como a chave de acesso. Por exemplo, para especificar a letra "F" em "Arquivo" como uma chave de acesso, você deve especificar a legenda para o item de menu como "& arquivo". Você pode usar esse recurso para fornecer a navegação de teclado para os menus.  
+  
+ Definindo o `text` parâmetro para "`-`" faz com que o item de menu a ser exibida como um separador (uma linha horizontal) em vez de um item de menu padrão.  
+  
+ O `items` parâmetro permite que você atribua uma matriz de itens de menu para definir um submenu de item de menu. Cada item na matriz também pode ter uma matriz de itens de menu atribuído a ele. Isso permite que você criar estruturas de menu completa e atribuí-los para o construtor para o item de menu.  
+  
+ O `mergeType` e `mergeOrder` parâmetros permitem que você determine como o item de menu irão se comportar quando o item de menu é mesclado com outro menu. Dependendo do valor que você especificar para o `mergeType` parâmetro, você pode adicionar, remova, substituir ou mesclar o item de menu e seus itens de submenu com o menu que está sendo mesclada com. O `mergeOrder` parâmetro determina onde o item de menu que está sendo criado será posicionado ao menu é mesclado.  
+  
+ Além disso, você pode usar esse construtor para criar um <xref:System.Windows.Forms.MenuItem> e que ele seja conectado a um manipulador de eventos no seu código que processará o clique do item de menu. O <xref:System.EventHandler> que você passa para esse construtor deve ser configurado para chamar um manipulador de eventos que pode lidar com o <xref:System.Windows.Forms.MenuItem.Click> evento. Usando esta versão do construtor, você também pode se conectar a <xref:System.Windows.Forms.MenuItem.Popup> e <xref:System.Windows.Forms.MenuItem.Select> eventos para determinar quando esse item de menu é selecionado. Você pode usar esses eventos para tarefas como determinar se deve ou não para exibir uma marca de seleção ao lado de itens de submenu ou habilitar ou desabilitar itens de menu com base no estado do aplicativo. O <xref:System.Windows.Forms.MenuItem.Select> e <xref:System.Windows.Forms.MenuItem.Click> os eventos são gerados apenas para <xref:System.Windows.Forms.MenuItem> objetos pai não itens de menu. Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um item de menu que tem uma chave de legenda e o atalho. O item de menu também tem manipuladores de eventos definidos para o <xref:System.Windows.Forms.MenuItem.Popup>, <xref:System.Windows.Forms.MenuItem.Click>, e <xref:System.Windows.Forms.MenuItem.Select> eventos. Se este item de menu é mesclado, ele adicionará o item de menu ao menu com a ordem de mesclagem de zero.  
+  
+ [!code-cpp[Classic MenuItem.MenuItem5 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MenuItem5 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MenuItem5 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MenuItem5 Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MenuItem5 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MenuItem5 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BarBreak">
+      <MemberSignature Language="C#" Value="public bool BarBreak { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BarBreak" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.BarBreak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.MenuItem" /> é colocado em uma nova linha (de um item de menu é adicionado a um <see cref="T:System.Windows.Forms.MainMenu" /> objeto) ou em uma nova coluna (para um item de submenu ou item de menu exibido em um <see cref="T:System.Windows.Forms.ContextMenu" />).</summary>
+        <value>
+          <see langword="true" />Se o item de menu é colocado em uma nova linha ou em uma nova coluna; <see langword="false" /> se o item de menu é deixado no seu posicionamento padrão. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.MenuItem.BarBreak%2A> propriedade para criar um menu no qual cada item de menu é colocada lado a lado horizontalmente em vez de em uma lista de vertical. Você também pode usar essa propriedade para criar uma barra de menu que contém várias linhas de itens de menu de nível superior.  
+  
+ Essa propriedade é diferente de <xref:System.Windows.Forms.MenuItem.Break%2A> propriedade em que será exibida uma barra à esquerda de cada item de menu que tem o <xref:System.Windows.Forms.MenuItem.Break%2A> propriedade definida como `true`. A barra é exibida somente quando o item de menu não é um item de menu de nível superior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.MenuItem> com dois itens de submenu. Os itens de dois submenu são exibidos horizontalmente em vez de usar verticalmente o <xref:System.Windows.Forms.MenuItem.BarBreak%2A> propriedade.  
+  
+ [!code-cpp[Classic MenuItem.BarBreak Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.BarBreak Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.BarBreak Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.BarBreak Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.BarBreak Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.BarBreak Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Break">
+      <MemberSignature Language="C#" Value="public bool Break { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Break" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.Break" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o item é colocado em uma nova linha (para um item de menu é adicionado a um <see cref="T:System.Windows.Forms.MainMenu" /> objeto) ou em uma nova coluna (para um item de menu ou item de submenu exibido em um <see cref="T:System.Windows.Forms.ContextMenu" />).</summary>
+        <value>
+          <see langword="true" />Se o item de menu é colocado em uma nova linha ou em uma nova coluna; <see langword="false" /> se o item de menu é deixado no seu posicionamento padrão. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.MenuItem.Break%2A> propriedade para criar um menu onde cada menu é colocada lado a lado horizontalmente em vez de em uma lista vertical. Você também pode usar essa propriedade para criar uma barra de menu que contém várias linhas de itens de menu de nível superior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um menu com dois itens de menu de nível superior na linha superior de um item de menu na linha inferior.  
+  
+ [!code-cpp[Classic MenuItem.Break Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.Break Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.Break Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.Break Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.Break Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.Break Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma marca de seleção aparece ao lado do texto do item de menu.</summary>
+        <value>
+          <see langword="true" /> se houver uma marca de seleção ao lado do item de menu; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.MenuItem.Checked%2A> propriedade em combinação com outros itens de menu em um menu de atalho para informar o estado de um aplicativo. Por exemplo, você pode colocar uma marca de seleção em um item de menu em um grupo de itens para identificar o tamanho da fonte a ser exibida para o texto em um aplicativo. Você também pode usar o <xref:System.Windows.Forms.MenuItem.Checked%2A> propriedade para identificar o item de menu selecionado em um grupo de itens de menu mutuamente exclusivos.  
+  
+> [!NOTE]
+>  Essa propriedade não pode ser definida como `true` para itens de menu de nível superior.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.MenuItem.Checked%2A> propriedade para fornecer o estado em um aplicativo. Neste exemplo, um grupo de itens de menu são usados para especificar a cor do texto em uma <xref:System.Windows.Forms.TextBox> controle. O manipulador de eventos fornecido é usado pelo <xref:System.Windows.Forms.MenuItem.Click> eventos de três itens de menu. Cada item de menu Especifica uma cor de texto, `menuItemRed` (vermelho), `menuItemGreen` (verde) ou `menuItemBlue` (azul). O manipulador de eventos determina qual item de menu foi clicado, coloca uma marca de seleção para o item de menu selecionado e altera a cor do texto no formato <xref:System.Windows.Forms.TextBox> controle. O exemplo requer que o <xref:System.Drawing> foi adicionado ao formulário que esse código é colocado no namespace. O exemplo também requer que um <xref:System.Windows.Forms.TextBox> foi adicionado ao formulário que esse código de exemplo está localizado na chamada `textBox1`.  
+  
+ [!code-cpp[Classic MenuItem.Checked Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.Checked Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.Checked Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.Checked Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.Checked Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.Checked Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Windows.Forms.MenuItem" /> é um menu de nível superior ou tem filhos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MenuItem.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre ao clicar ou selecionar o item de menu usando uma tecla de atalho ou tecla de acesso definida para o item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MenuItem.Click> evento ocorre quando este <xref:System.Windows.Forms.MenuItem> é clicado pelo usuário. Esse evento também ocorre se o usuário seleciona o item de menu usando o teclado e pressiona a tecla Enter. Ele também poderá ocorrer se uma chave de acesso ou a tecla de atalho é pressionada que está associado a <xref:System.Windows.Forms.MenuItem>. Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Se o <xref:System.Windows.Forms.Menu.MenuItems%2A> propriedade para o <xref:System.Windows.Forms.MenuItem> contém todos os itens, esse evento não será gerado. Esse evento não é gerado para itens de menu do pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MenuItem.Click> evento para executar as tarefas quando um <xref:System.Windows.Forms.MenuItem> é clicado. O exemplo cria um <xref:System.Windows.Forms.MainMenu> chamado `mainMenu1` e adiciona dois <xref:System.Windows.Forms.MenuItem> objetos, `topMenuItem` (`File`) e `menuItem1` (`Open`). Ele se conecta a `Click` eventos para o `menuItem1_Click` manipulador de eventos. Quando o usuário clica o `Open` item de menu, um <xref:System.Windows.Forms.OpenFileDialog> será inicializada e exibido. O exemplo requer que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[MenuItemClick#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuItemClick/CPP/form1.cpp#1)]
+ [!code-csharp[MenuItemClick#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuItemClick/CS/form1.cs#1)]
+ [!code-vb[MenuItemClick#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuItemClick/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneMenu">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.MenuItem CloneMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.MenuItem CloneMenu() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.CloneMenu" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia das <see cref="T:System.Windows.Forms.MenuItem" /> atuais.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.MenuItem" /> que representa o item de menu duplicados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.MenuItem>objetos não podem ser usados em mais de um local, a menos que você obtenha uma cópia do <xref:System.Windows.Forms.MenuItem>. Você pode chamar esse método para criar uma cópia deste item de menu para uso em um <xref:System.Windows.Forms.ContextMenu>, <xref:System.Windows.Forms.MainMenu>, ou outros <xref:System.Windows.Forms.MenuItem> dentro de seu aplicativo. Quando um item de menu é clonado, os manipuladores de evento especificados no item de menu original continuará a funcionar na versão do item de menu clonada. Por exemplo, se você tiver criado um <xref:System.Windows.Forms.MenuItem> conectados e seu <xref:System.Windows.Forms.MenuItem.Click> eventos para um manipulador de eventos. Quando o item de menu é clonado, o item de menu clonado chamará o mesmo manipulador de eventos.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo clones um <xref:System.Windows.Forms.MenuItem> e exibe-o em um <xref:System.Windows.Forms.ContextMenu>. O exemplo requer que um <xref:System.Windows.Forms.MenuItem> existe em um <xref:System.Windows.Forms.MainMenu> em um formulário com o nome do `menuItem1` e que um <xref:System.Windows.Forms.ContextMenu> objeto chamado `contextMenu1` também existe no formulário.  
+  
+ [!code-cpp[Classic MenuItem.CloneMenu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.CloneMenu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.CloneMenu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.CloneMenu Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.CloneMenu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.CloneMenu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneMenu">
+      <MemberSignature Language="C#" Value="protected void CloneMenu (System.Windows.Forms.MenuItem itemSrc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CloneMenu(class System.Windows.Forms.MenuItem itemSrc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.CloneMenu(System.Windows.Forms.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemSrc" Type="System.Windows.Forms.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="itemSrc">O <see cref="T:System.Windows.Forms.MenuItem" /> que representa o item de menu para copiar.</param>
+        <summary>Cria uma cópia do <see cref="T:System.Windows.Forms.MenuItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para criar cópias dos itens de menu que você criou para uso em um menu de atalho ou outra estrutura de menu dentro de seu aplicativo. Esta versão do <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> permite que você especifique um determinado <xref:System.Windows.Forms.MenuItem> para copiar em vez do item de menu que está chamando o método. Você pode usar esse método para inicializar uma nova <xref:System.Windows.Forms.MenuItem> objeto com uma cópia de outro <xref:System.Windows.Forms.MenuItem>. Quando um item de menu é clonado, os manipuladores de evento especificados no item de menu original continuará a funcionar na versão do item de menu clonada. Por exemplo, se você tiver criado um <xref:System.Windows.Forms.MenuItem> conectados e seu <xref:System.Windows.Forms.MenuItem.Click> eventos para um manipulador de eventos. Quando o item de menu é clonado, o item de menu clonado chamará o mesmo manipulador de eventos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir inicializa uma nova <xref:System.Windows.Forms.MenuItem> com uma cópia de um objeto existente <xref:System.Windows.Forms.MenuItem> que é usado em um <xref:System.Windows.Forms.MainMenu> em um formulário. O código, em seguida, adiciona o clonado <xref:System.Windows.Forms.MenuItem> para um <xref:System.Windows.Forms.ContextMenu> no formulário. Este exemplo requer que um <xref:System.Windows.Forms.MenuItem> já foi criado e denominado `menuItem1` e que um <xref:System.Windows.Forms.ContextMenu> controle foi criado e denominado `contextMenu1`.  
+  
+ [!code-cpp[Classic MenuItem.CloneMenu1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.CloneMenu1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.CloneMenu1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.CloneMenu1 Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.CloneMenu1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.CloneMenu1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultItem">
+      <MemberSignature Language="C#" Value="public bool DefaultItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DefaultItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.DefaultItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o item de menu é o item de menu padrão.</summary>
+        <value>
+          <see langword="true" />Se o item de menu é o item padrão em um menu. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O item de menu padrão para um menu negrito. Quando o usuário clica duas vezes em um submenu que contém um item padrão, o item padrão é selecionado e o submenu está fechado. Você pode usar o <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> propriedade para indicar a ação padrão que é esperada em um menu ou menu de atalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um item de menu com dois itens de submenu. O exemplo define `menuItem2` como o item de menu padrão usando o <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> propriedade.  
+  
+ [!code-cpp[Classic MenuItem.DefaultItem Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.DefaultItem Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.DefaultItem Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.DefaultItem Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.DefaultItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.DefaultItem Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Descarta os recursos (exceto a memória) usados pelo <see cref="T:System.Windows.Forms.MenuItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Windows.Forms.MenuItem.Dispose%2A> quando tiver terminado de usar o <xref:System.Windows.Forms.MenuItem>. O <xref:System.Windows.Forms.MenuItem.Dispose%2A> método deixa o <xref:System.Windows.Forms.MenuItem> em um estado inutilizável. Depois de chamar <xref:System.Windows.Forms.MenuItem.Dispose%2A>, você deve liberar todas as referências para o <xref:System.Windows.Forms.MenuItem> para a memória estava ocupando pode ser recuperada pela coleta de lixo.  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Windows.Forms.MenuItem.Dispose%2A> antes de liberar sua última referência para o <xref:System.Windows.Forms.MenuItem>. Caso contrário, os recursos de <xref:System.Windows.Forms.MenuItem> está usando não será liberada até que as chamadas de coleta de lixo a <xref:System.Windows.Forms.MenuItem> destruidor do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawItem">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DrawItemEventHandler DrawItem;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DrawItemEventHandler DrawItem" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MenuItem.DrawItem" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DrawItemEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.MenuItem.OwnerDraw" /> de um item de menu é definida como <see langword="true" /> e é feita uma solicitação para desenhar o item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DrawItemEventArgs> argumento passado para um <xref:System.Windows.Forms.MenuItem.DrawItem> manipulador de eventos fornece um <xref:System.Drawing.Graphics> objeto que permite que você execute o desenho e outras operações de gráficas na superfície do item de menu. Você pode usar este manipulador de eventos para criar menus personalizados que atendem às necessidades do seu aplicativo. Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar o <xref:System.Windows.Forms.MenuItem.DrawItem> evento. Este exemplo desenha um menu de item usando um <xref:System.Drawing.Brush> e um <xref:System.Drawing.Font>e, em seguida, usa um <xref:System.Drawing.Rectangle> ao redor do item de menu. O desenho é realizado por meio de <xref:System.Drawing.Graphics> objeto, que é passado para o manipulador de eventos no <xref:System.Windows.Forms.DrawItemEventArgs> parâmetro. Este exemplo requer que inicializou o <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A> propriedade do item para `true`. Para obter o exemplo c#, adicione o seguinte código no construtor do formulário, após `InitializeComponent`para ligar o evento:  
+  
+ `this.menuItem1.DrawItem += new DrawItemEventHandler(menuItem1_DrawItem);`  
+  
+ [!code-cpp[OwnerDraw example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/OwnerDraw example/CPP/form1.cpp#1)]
+ [!code-csharp[OwnerDraw example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/OwnerDraw example/CS/form1.cs#1)]
+ [!code-vb[OwnerDraw example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/OwnerDraw example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o item de menu está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o item de menu estiver habilitado; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.MenuItem> que é desabilitado é exibido em uma cor cinza para indicar seu estado. Quando um item de menu pai estiver desabilitado, todos os itens de submenu não são exibidos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MenuItem.Popup> evento para determinar se <xref:System.Windows.Forms.MenuItem> objetos que oferecem suporte para recortar, copiar e excluir operações estão ativados antes de elas são exibidas no menu é exibido. O exemplo determina se `textBox1`, um <xref:System.Windows.Forms.TextBox> controle no formulário, está habilitado, tem o foco de entrada e tem texto selecionado antes de habilitar o <xref:System.Windows.Forms.MenuItem> objetos. Este exemplo requer que três <xref:System.Windows.Forms.MenuItem> os objetos são criados nomeados `menuCut`, `menuCopy`, e `menuDelete` foram criados.  
+  
+ [!code-cpp[MenuItem.Popup#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuItem.Popup/CPP/form1.cpp#1)]
+ [!code-csharp[MenuItem.Popup#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuItem.Popup/CS/form1.cs#1)]
+ [!code-vb[MenuItem.Popup#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuItem.Popup/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a posição do item de menu em seu menu pai.</summary>
+        <value>O índice baseado em zero que representa a posição do item de menu no seu menu pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a posição indexada de um item de menu na coleção de itens de menu do seu menu pai. Você pode usar essa propriedade para reposicionar um item de menu para um local diferente em seu menu. Você também pode usar essa propriedade ao criar um <xref:System.Windows.Forms.MenuItem> para especificar sua posição em uma estrutura de menu no momento da criação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir alterna a posição de dois itens de menu em um menu. O exemplo de código a seguir requer que dois <xref:System.Windows.Forms.MenuItem> os objetos são criados nomeados `menuItem1` e `menuItem2`. O `menuItem1` item de menu move para baixo uma posição no menu, enquanto `menuItem2` move uma posição para cima.  
+  
+ [!code-cpp[Classic MenuItem.Index Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.Index Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.Index Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.Index Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.Index Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.Index Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor atribuído é menor que zero ou maior que contagem de itens.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsParent">
+      <MemberSignature Language="C#" Value="public override bool IsParent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsParent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.IsParent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o item de menu contém itens de menu filho.</summary>
+        <value>
+          <see langword="true" />Se o item de menu contém itens de menu filho; <see langword="false" /> se o menu é um item de menu autônomo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade com o <xref:System.Windows.Forms.MenuItem.Parent%2A> propriedade para navegar em código por meio de uma estrutura de menu inteiro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se há qualquer submenus associados com um <xref:System.Windows.Forms.MenuItem> chamado `menuItem1`. Se qualquer submenus existirem, ele desabilita definindo o <xref:System.Windows.Forms.MenuItem.Enabled%2A> propriedade `false`. O exemplo requer que haja um <xref:System.Windows.Forms.MenuItem> criado com o nome `menuItem1`.  
+  
+ [!code-cpp[Classic MenuItem.IsParent Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.IsParent Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.IsParent Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.IsParent Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.IsParent Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.IsParent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MdiList">
+      <MemberSignature Language="C#" Value="public bool MdiList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MdiList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.MdiList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o item de menu será populado com uma lista das janelas filho de MDI (interface de documentos múltiplos) que são exibidas no formulário associado.</summary>
+        <value>
+          <see langword="true" /> se uma lista de janelas filho MDI for exibida neste item de menu; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um item de menu é selecionado para exibir uma lista de janelas filho MDI, a lista é exibida como um submenu do item de menu. Somente os formulários são definidos como formulários filho MDI são exibidos na lista de janela. Apenas nove janelas de filho podem ser exibidas por vez. Se houver mais de nove janelas filho exibidas, um item de menu "Mais Windows..." é exibido no final da lista de janela. Clicar neste item de menu exibe uma caixa de diálogo com uma lista completa das janelas filho que estão ativas no momento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.MenuItem> que é usado para exibir a lista de formulários filho MDI abertos atualmente em um formulário MDI.  
+  
+ [!code-cpp[Classic MenuItem.MdiList Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MdiList Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MdiList Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MdiList Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MdiList Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MdiList Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureItem">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MeasureItemEventHandler MeasureItem;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MeasureItemEventHandler MeasureItem" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MenuItem.MeasureItem" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MeasureItemEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o menu precisa saber o tamanho de um item de menu antes do desenho-lo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para este evento a ser gerado, você deve ter o <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A> propriedade do item de menu definido como `true`. Esse evento é gerado antes de menus desenhados pelo proprietário são desenhadas para permitir o tamanho do item de menu a ser desenhada para ser especificado. Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.MenuItem.MeasureItem> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.MenuItem> chamado `MenuItem1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.MenuItem.MeasureItem> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#499](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#499)]
+ [!code-vb[System.Windows.Forms.EventExamples#499](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#499)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuID">
+      <MemberSignature Language="C#" Value="protected int MenuID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MenuID" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.MenuID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o identificador do Windows para este item de menu.</summary>
+        <value>O identificador do Windows para este item de menu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeMenu">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.MenuItem MergeMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.MenuItem MergeMenu() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.MergeMenu" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Mescla isso <see cref="T:System.Windows.Forms.MenuItem" /> com outra <see cref="T:System.Windows.Forms.MenuItem" /> e retorna a resultante mesclada <see cref="T:System.Windows.Forms.MenuItem" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.MenuItem" /> que representa o item de menu mesclado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar esta versão do <xref:System.Windows.Forms.MenuItem.MergeMenu%2A>, o <xref:System.Windows.Forms.MenuItem> retornado é uma cópia do menu item atual que pode ser mesclado com outro item de menu sem afetar a funcionalidade do item atual. Esta versão do <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> método é semelhante a chamar o <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> método que não contém parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeMenu">
+      <MemberSignature Language="C#" Value="public void MergeMenu (System.Windows.Forms.MenuItem itemSrc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MergeMenu(class System.Windows.Forms.MenuItem itemSrc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.MergeMenu(System.Windows.Forms.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemSrc" Type="System.Windows.Forms.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="itemSrc">Um <see cref="T:System.Windows.Forms.MenuItem" /> que especifica o item de menu para mesclar com este.</param>
+        <summary>Mescla a outro item de menu com esse item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Itens de menu são mesclados de acordo com o valor do item de menu <xref:System.Windows.Forms.MenuItem.MergeType%2A> e <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedades. Esta versão do <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> método permite que você para mesclar duas <xref:System.Windows.Forms.MenuItem> objetos (e seus submenus) em um único menu. Mesclagem de menu é tratado automaticamente quando um formulário pai de Interface de documentos múltiplos (MDI) e filho têm menus. Você pode usar essa versão do método para mesclar duas <xref:System.Windows.Forms.MenuItem> objetos (e seus itens de submenu) localizados em um <xref:System.Windows.Forms.MainMenu> controle em um único menu dentro de um <xref:System.Windows.Forms.ContextMenu>. Por exemplo, você pode chamar esta versão do <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> método para mesclar os itens de menu de um menu Arquivo e editar em um único <xref:System.Windows.Forms.MenuItem> que pode ser adicionado ao e exibidos por um <xref:System.Windows.Forms.ContextMenu>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa esta versão do <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> método para criar uma cópia de um <xref:System.Windows.Forms.MenuItem> e mesclá-lo com outro. O mesclada <xref:System.Windows.Forms.MenuItem> é adicionado a um <xref:System.Windows.Forms.ContextMenu> controle. Este exemplo requer que há dois itens de menu chamados `menuItem1` e `menuItem2` que contêm itens de submenu neles e um <xref:System.Windows.Forms.ContextMenu> chamado `contextMenu1` para exibir os itens de menu. `menuItem1`e `menuItem2` ter itens de menu diferentes contidos neles. Após a chamada a <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> é feita, um consolidados menu é criado.  
+  
+ [!code-cpp[Classic MenuItem.MergeMenu1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MergeMenu1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MergeMenu1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MergeMenu1 Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MergeMenu1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MergeMenu1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeOrder">
+      <MemberSignature Language="C#" Value="public int MergeOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MergeOrder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.MergeOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a posição relativa do item de menu quando ele é mesclado com outro.</summary>
+        <value>Um índice baseado em zero que representa a posição deste item de menu na ordem de mesclagem. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de mesclagem de um item de menu Especifica a posição relativa que este item de menu terá se o menu de estrutura que o <xref:System.Windows.Forms.MenuItem> está contida no é mesclado com outro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedade para controlar o modo de exibição de um menu mesclado. Este é um exemplo completo, pronto para ser executado depois de adicioná-lo ao seu projeto.  
+  
+ [!code-cpp[System.Windows.Forms.MenuItemMergeOrder#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MenuItemMergeOrder/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MenuItemMergeOrder#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MenuItemMergeOrder/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MenuItemMergeOrder#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MenuItemMergeOrder/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MenuMerge MergeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.MenuMerge MergeType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.MergeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuMerge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o comportamento do item de menu quando o menu é mesclado com outro.</summary>
+        <value>Um valor <see cref="T:System.Windows.Forms.MenuMerge" /> que representa o tipo de mesclagem do item de menu.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de mesclagem de um item de menu indica como o item de menu se comporta quando ela tem a mesma ordem de mesclagem como outro item de menu está sendo mesclado. Você pode usar os menus mescladas para criar um menu consolidado com base em dois ou mais menus existentes.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.MenuItem> com o <xref:System.Windows.Forms.MenuItem.MergeType%2A> e <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> especificado para que o item de menu é adicionado ao menu mesclado na primeira posição.  
+  
+ [!code-cpp[Classic MenuItem.MergeType Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MergeType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MergeType Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MergeType Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MergeType Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MergeType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.MenuMerge" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Mnemonic">
+      <MemberSignature Language="C#" Value="public char Mnemonic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char Mnemonic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.Mnemonic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o caractere mnemônico associado a esse item de menu.</summary>
+        <value>Um caractere que representa o caractere mnemônico associado a este item de menu. Retorna o caractere NUL (valor ASCII 0) se nenhum caractere mnemônico é especificado no texto do <see cref="T:System.Windows.Forms.MenuItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O caractere mnemônico é o primeiro caractere depois de um caractere e comercial (&) no texto do <xref:System.Windows.Forms.MenuItem>. Essa propriedade não retornará um mnemônico se dois caracteres de e comercial são colocados juntos, como o e comercial é usado para exibir um e comercial no texto do <xref:System.Windows.Forms.MenuItem> em vez de definir um caractere mnemônico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.OnClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.MenuItem.Click" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MenuItem.Click> evento para executar as tarefas quando um <xref:System.Windows.Forms.MenuItem> é clicado. O exemplo cria um <xref:System.Windows.Forms.MainMenu> chamado `mainMenu1` e adiciona dois <xref:System.Windows.Forms.MenuItem> objetos, `topMenuItem` (`File`) e `menuItem1` (`Open`). Ele se conecta a `Click` eventos para o `menuItem1_Click` manipulador de eventos. Quando o usuário clica o `Open` item de menu, um <xref:System.Windows.Forms.OpenFileDialog> será inicializada e exibido. O exemplo requer que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[MenuItemClick#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuItemClick/CPP/form1.cpp#1)]
+ [!code-csharp[MenuItemClick#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuItemClick/CS/form1.cs#1)]
+ [!code-vb[MenuItemClick#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuItemClick/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MenuItem.OnClick(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MenuItem.OnClick(System.EventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDrawItem">
+      <MemberSignature Language="C#" Value="protected virtual void OnDrawItem (System.Windows.Forms.DrawItemEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDrawItem(class System.Windows.Forms.DrawItemEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.OnDrawItem(System.Windows.Forms.DrawItemEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DrawItemEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DrawItemEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.MenuItem.DrawItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MenuItem.OnDrawItem(System.Windows.Forms.DrawItemEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MenuItem.OnDrawItem(System.Windows.Forms.DrawItemEventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitMenuPopup">
+      <MemberSignature Language="C#" Value="protected virtual void OnInitMenuPopup (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInitMenuPopup(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.OnInitMenuPopup(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.MenuItem.Popup" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMeasureItem">
+      <MemberSignature Language="C#" Value="protected virtual void OnMeasureItem (System.Windows.Forms.MeasureItemEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMeasureItem(class System.Windows.Forms.MeasureItemEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.OnMeasureItem(System.Windows.Forms.MeasureItemEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MeasureItemEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.MeasureItemEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.MenuItem.MeasureItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MenuItem.OnMeasureItem(System.Windows.Forms.MeasureItemEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MenuItem.OnMeasureItem(System.Windows.Forms.MeasureItemEventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPopup">
+      <MemberSignature Language="C#" Value="protected virtual void OnPopup (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPopup(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.OnPopup(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.MenuItem.Popup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MenuItem.Popup> evento para determinar se <xref:System.Windows.Forms.MenuItem> objetos que oferecem suporte para recortar, copiar e excluir operações estão ativados antes de elas são exibidas no menu é exibido. O exemplo determina se `textBox1`, um <xref:System.Windows.Forms.TextBox> controle no formulário, está habilitado, tem o foco de entrada e tem texto selecionado antes de habilitar o <xref:System.Windows.Forms.MenuItem> objetos. Este exemplo requer que três <xref:System.Windows.Forms.MenuItem> os objetos são criados nomeados `menuCut`, `menuCopy`, e `menuDelete` foram criados.  
+  
+ [!code-cpp[MenuItem.Popup#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuItem.Popup/CPP/form1.cpp#1)]
+ [!code-csharp[MenuItem.Popup#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuItem.Popup/CS/form1.cs#1)]
+ [!code-vb[MenuItem.Popup#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuItem.Popup/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MenuItem.OnPopup(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MenuItem.OnPopup(System.EventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelect">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelect (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelect(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.OnSelect(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.MenuItem.Select" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MenuItem.Select> eventos do <xref:System.Windows.Forms.MenuItem> classe para atribuir o texto de ajuda para um <xref:System.Windows.Forms.StatusBarPanel> de um <xref:System.Windows.Forms.StatusBar> controle. Este exemplo requer que <xref:System.Windows.Forms.MenuItem> objetos nomeados `menuOpen`, `menuSave`, e `menuExit` são adicionados a um <xref:System.Windows.Forms.MainMenu> controle em um formulário. O exemplo também requer que um <xref:System.Windows.Forms.StatusBar> controle, chamado `statusBar1` foi adicionado ao formulário. O <xref:System.Windows.Forms.StatusBar> controle deve conter um <xref:System.Windows.Forms.StatusBarPanel>.  
+  
+ [!code-cpp[MenuItem.Select#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuItem.Select/CPP/form1.cpp#1)]
+ [!code-csharp[MenuItem.Select#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuItem.Select/CS/form1.cs#1)]
+ [!code-vb[MenuItem.Select#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuItem.Select/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.MenuItem.OnSelect(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.MenuItem.OnSelect(System.EventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDraw">
+      <MemberSignature Language="C#" Value="public bool OwnerDraw { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OwnerDraw" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.OwnerDraw" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o código fornecido por você desenha o item de menu ou se o Windows desenha o item de menu.</summary>
+        <value>
+          <see langword="true" /> se o item de menu deve ser desenhado usando código; <see langword="false" /> se o item de menu deve ser desenhado pelo Windows. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A> está definida como `true`, você precisa tratar todos os desenhos de item de menu. Você pode usar esse recurso para criar suas próprias exibições de menu especial.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um menu com um item de menu desenhados pelo proprietário. Este conjunto de exemplo de <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A> propriedade e usa o `AddHandler` instrução e o `AddressOf` operador para designar um delegado para manipular o <xref:System.Windows.Forms.MenuItem.DrawItem> evento. Para executar o exemplo, cole-o em um formulário que importa o <xref:System>, <xref:System.Windows.Forms>, e <xref:System.Drawing> namespaces. Chamar `InitializeMenu` do construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.MenuItemOwnerDraw#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MenuItemOwnerDraw/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MenuItemOwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MenuItemOwnerDraw/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MenuItemOwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MenuItemOwnerDraw/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Menu Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Menu Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Menu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o menu que contém esse item de menu.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Menu" /> que representa o menu que contém esse item de menu.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para obter o <xref:System.Windows.Forms.Menu> objeto para um submenu. Você pode converter o <xref:System.Windows.Forms.Menu> objeto retornado por essa propriedade como um <xref:System.Windows.Forms.MenuItem> objeto manipulá-los.  
+  
+   
+  
+## Examples  
+ Neste exemplo, você criará um menu principal e um item de menu de nível superior, `menuItem1` (`File`). Você também criar dois itens de menu, `menuItem2` (`New`) e `menuItem3` (`Open`) e adicioná-los à lista de item de menu de `menuItem1`. Em seguida, verifique se `menuItem3` tem um pai menu, que é true e exibir as informações desse menu pai na caixa de mensagem. Este exemplo requer que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[ParentMenu#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ParentMenu/CPP/form1.cpp#1)]
+ [!code-csharp[ParentMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ParentMenu/CS/form1.cs#1)]
+ [!code-vb[ParentMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ParentMenu/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformClick">
+      <MemberSignature Language="C#" Value="public void PerformClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.PerformClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera um evento <see cref="E:System.Windows.Forms.Control.Click" /> para o <see cref="T:System.Windows.Forms.MenuItem" />, que simula um clique de um usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar este menu para ativar um item de menu por meio de código sem passar informações de evento. Por exemplo, se você deseja ativar um menu item com base em uma ação que ocorre em seu aplicativo, você pode chamar o <xref:System.Windows.Forms.MenuItem.PerformClick%2A> método para que <xref:System.Windows.Forms.MenuItem>.  
+  
+   
+  
+## Examples  
+ Neste exemplo você clicar programaticamente um item de menu usando o `PerformClick` método. Primeiro, crie um menu principal (`mainMenu1`) e adicione a ele dois itens de menu, `menuItem1` (`File`) e `menuItem2` (`Edit`). Você também usar o <xref:System.Windows.Forms.MenuItem.Click> evento para enviar dados para o manipulador de eventos quando um item de menu é clicado. Usar o `PerformClick` método clique o `File` item de menu. Quando você inicia o aplicativo, o `File` item de menu é ativado, e uma caixa de mensagem que contém o texto "O arquivo de menu é clicado." é exibida na tela. O exemplo requer que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[PerformClick#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PerformClick/CPP/form1.cpp#1)]
+ [!code-csharp[PerformClick#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PerformClick/CS/form1.cs#1)]
+ [!code-vb[PerformClick#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PerformClick/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformSelect">
+      <MemberSignature Language="C#" Value="public virtual void PerformSelect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PerformSelect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.PerformSelect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera o <see cref="E:System.Windows.Forms.MenuItem.Select" /> evento para este item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que você aumente o <xref:System.Windows.Forms.MenuItem.Select> evento sem passar informações para o manipulador de eventos.  
+  
+   
+  
+## Examples  
+ Neste exemplo, selecionar um item de menu programaticamente, usando o `PerformSelect` método. Primeiro, crie um menu principal (`mainMenu1`) e adicione a ele dois itens de menu, `menuItem1` (`File`) e `menuItem2` (`Edit`). Você também usar o <xref:System.Windows.Forms.MenuItem.Select> evento para enviar dados para o manipulador de eventos quando um item de menu é selecionado. Em seguida, usar o `PerformSelect` método para selecionar o `File` item de menu. Quando você inicia o aplicativo, o `File` item de menu é selecionado, e uma caixa de mensagem que contém o texto "O arquivo de menu é selecionado." é exibida na tela. O exemplo requer que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[PerformSelect#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PerformSelect/CPP/form1.cpp#1)]
+ [!code-csharp[PerformSelect#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PerformSelect/CS/form1.cs#1)]
+ [!code-vb[PerformSelect#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PerformSelect/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Popup">
+      <MemberSignature Language="C#" Value="public event EventHandler Popup;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Popup" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MenuItem.Popup" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes que a lista do item de menu seja exibida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre somente quando um item de menu tem itens de submenu a serem exibidos. Você pode usar este manipulador de eventos para adicionar, remover, habilitar, desabilitar, verifique ou desmarcar os itens de menu com base no estado do seu aplicativo antes que elas são exibidas. Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MenuItem.Popup> evento para determinar se <xref:System.Windows.Forms.MenuItem> objetos que oferecem suporte para recortar, copiar e excluir operações estão ativados antes de elas são exibidas no menu é exibido. O exemplo determina se `textBox1`, um <xref:System.Windows.Forms.TextBox> controle no formulário, está habilitado, tem o foco de entrada e tem texto selecionado antes de habilitar o <xref:System.Windows.Forms.MenuItem> objetos. Este exemplo requer que três <xref:System.Windows.Forms.MenuItem> os objetos são criados nomeados `menuCut`, `menuCopy`, e `menuDelete` foram criados.  
+  
+ [!code-cpp[MenuItem.Popup#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuItem.Popup/CPP/form1.cpp#1)]
+ [!code-csharp[MenuItem.Popup#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuItem.Popup/CS/form1.cs#1)]
+ [!code-vb[MenuItem.Popup#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuItem.Popup/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadioCheck">
+      <MemberSignature Language="C#" Value="public bool RadioCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RadioCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.RadioCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.MenuItem" />, quando marcado, exibe um botão de opção em vez de uma marca de seleção.</summary>
+        <value>
+          <see langword="true" /> se um botão de opção deve ser usado em vez de uma marca de seleção; <see langword="false" /> se a marca de seleção padrão deve ser exibida quando o item de menu está marcado. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Marcas de seleção não implica necessariamente um estado mutuamente exclusivo para um grupo de itens de menu. Você pode usar essa propriedade para indicar ao usuário que a marca de seleção de um item de menu é mutuamente exclusiva.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.MenuItem.Checked%2A> propriedade para alterar o estado de um aplicativo. No exemplo, um grupo de itens de menu são fornecidos para que são usados para especificar a cor do texto em uma <xref:System.Windows.Forms.TextBox> controle. No exemplo, o manipulador de eventos fornecido é usado pelo <xref:System.Windows.Forms.MenuItem.Click> evento dos itens do menu de três. Cada item de menu Especifica uma cor `menuItemRed`, `menuItemGreen`, ou `menuItemBlue`. O manipulador de eventos determina qual item de menu foi clicado, coloca uma marca de seleção para o item de menu selecionado e altera a cor do texto no formato <xref:System.Windows.Forms.TextBox> controle, chamado `textBox1`. O exemplo também usa o <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> propriedade para demonstrar como uma seleção do botão de opção é usada para exibir os itens de menu são mutuamente exclusivos. Este exemplo requer que o <xref:System.Drawing?displayProperty=nameWithType> namespace foi adicionado ao formulário que contém esse código.  
+  
+ [!code-cpp[Classic MenuItem.RadioCheck Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.RadioCheck Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.RadioCheck Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.RadioCheck Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.RadioCheck Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.RadioCheck Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public event EventHandler Select;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Select" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.MenuItem.Select" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário coloca o ponteiro sobre um item de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento geralmente é gerado quando o usuário coloca o ponteiro do mouse sobre o item de menu. O evento também pode ser gerado quando o usuário realça um item de menu usando o teclado, rolando para o item de menu com as teclas de direção. Você pode usar esse evento para exibir uma cadeia de caracteres de ajuda detalhadas referentes a este item de menu na barra de status de um aplicativo. Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Se o <xref:System.Windows.Forms.Menu.MenuItems%2A> propriedade para o <xref:System.Windows.Forms.MenuItem> contém todos os itens, esse evento não será gerado. Esse evento não é gerado para itens de menu do pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.MenuItem.Select> eventos do <xref:System.Windows.Forms.MenuItem> classe para atribuir o texto de ajuda para um <xref:System.Windows.Forms.StatusBarPanel> de um <xref:System.Windows.Forms.StatusBar> controle. Este exemplo requer que <xref:System.Windows.Forms.MenuItem> objetos nomeados `menuOpen`, `menuSave`, e `menuExit` são adicionados a um <xref:System.Windows.Forms.MainMenu> controle em um formulário. O exemplo também requer que um <xref:System.Windows.Forms.StatusBar> controle, chamado `statusBar1` foi adicionado ao formulário. O <xref:System.Windows.Forms.StatusBar> controle deve conter um <xref:System.Windows.Forms.StatusBarPanel>.  
+  
+ [!code-cpp[MenuItem.Select#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuItem.Select/CPP/form1.cpp#1)]
+ [!code-csharp[MenuItem.Select#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuItem.Select/CS/form1.cs#1)]
+ [!code-vb[MenuItem.Select#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuItem.Select/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shortcut">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Shortcut Shortcut { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Shortcut Shortcut" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.Shortcut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Shortcut</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a tecla de atalho associada ao item de menu.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.Shortcut" />. O padrão é <see langword="Shortcut.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Teclas de atalho fornecem um método para os usuários ativem frequentemente usadas itens de menu em seu sistema de menu e fornecer acesso de teclado ao seu aplicativo para os usuários que não têm acesso a um mouse ou outro dispositivo apontador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um item de menu, define a legenda, atribui uma tecla de atalho, faz com que o item de menu visível e mostra a exibição de teclas de atalho para o item de menu. O exemplo requer que um <xref:System.Windows.Forms.MenuItem> foi criado ou seja chamado `menuItem1`.  
+  
+ [!code-cpp[Classic MenuItem.Text Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.Text Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.Text Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.Text Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.Text Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.Text Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.Shortcut" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowShortcut">
+      <MemberSignature Language="C#" Value="public bool ShowShortcut { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowShortcut" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.ShowShortcut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a tecla de atalho que é associada ao item de menu é exibida ao lado da legenda do item de menu.</summary>
+        <value>
+          <see langword="true" />Se a combinação de teclas de atalho é exibida ao lado da legenda do item de menu; <see langword="false" /> se a combinação de teclas de atalho não será exibido. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para fornecer a opção para os usuários ocultem atalhos de menus para conservar o espaço de menu ou para ocultar uma tecla de atalho que está sendo exibida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um item de menu, define a legenda, atribui uma tecla de atalho, faz com que o item de menu visível e mostra a exibição de teclas de atalho para o item de menu. O exemplo requer que um <xref:System.Windows.Forms.MenuItem> foi criado ou seja chamado `menuItem1`.  
+  
+ [!code-cpp[Classic MenuItem.Text Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.Text Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.Text Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.Text Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.Text Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.Text Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a legenda do item de menu.</summary>
+        <value>A legenda de texto do item de menu.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você especificar uma legenda para o item de menu, você também pode especificar uma chave de acesso colocando um '&' antes do caractere a ser usado como a chave de acesso. Por exemplo, para especificar a letra "F" em "Arquivo" como uma chave de acesso, você deve especificar a legenda para o item de menu como "& arquivo". Você pode usar esse recurso para fornecer a navegação de teclado para os menus.  
+  
+ Definir essa propriedade como "`-`" faz com que o item de menu a ser exibida como um separador (uma linha horizontal) em vez de um item de menu padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um item de menu, define a legenda, atribui uma tecla de atalho, faz com que o item de menu visível e mostra a exibição de teclas de atalho para o item de menu. O exemplo requer que um <xref:System.Windows.Forms.MenuItem> foi criado ou seja chamado `menuItem1`.  
+  
+ [!code-cpp[Classic MenuItem.Text Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.Text Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.Text Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.Text Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.Text Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.Text Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MenuItem.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.MenuItem" />.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.MenuItem" /> atual. A cadeia de caracteres inclui o tipo e a propriedade <see cref="P:System.Windows.Forms.MenuItem.Text" /> do controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MenuItem.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o item de menu está visível.</summary>
+        <value>
+          <see langword="true" /> se o item de menu ficar visível no menu; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para modificar uma estrutura de menu sem a necessidade de mesclar menus ou desativar os menus. Por exemplo, se você quiser ocultar uma seção completa da funcionalidade de menus para seu aplicativo, você pode ocultá-las do usuário definindo essa propriedade como `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um item de menu, define a legenda, atribui uma tecla de atalho, faz com que o item de menu visível e mostra a exibição de teclas de atalho para o item de menu. O exemplo requer que um <xref:System.Windows.Forms.MenuItem> foi criado ou seja chamado `menuItem1`.  
+  
+ [!code-cpp[Classic MenuItem.Text Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.Text Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.Text Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.Text Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.Text Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.Text Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

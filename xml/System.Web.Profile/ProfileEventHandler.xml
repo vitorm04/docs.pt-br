@@ -1,0 +1,42 @@
+<Type Name="ProfileEventHandler" FullName="System.Web.Profile.ProfileEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ProfileEventHandler(object sender, ProfileEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProfileEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Profile.ProfileEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O <see cref="T:System.Web.Profile.ProfileModule" /> que gerou o <see cref="E:System.Web.Profile.ProfileModule.Personalize" /> evento.</param>
+    <param name="e">Um <see cref="T:System.Web.Profile.ProfileEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Web.Profile.ProfileModule.Personalize" /> de <see cref="T:System.Web.Profile.ProfileModule" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileEventHandler> delegado é definido para o <xref:System.Web.Profile.ProfileModule.Personalize> evento o <xref:System.Web.Profile.ProfileModule> classe. Você pode acessar o <xref:System.Web.Profile.ProfileModule.Personalize> evento o <xref:System.Web.Profile.ProfileModule> classe no arquivo global. asax para seu aplicativo ASP.NET usando o `Profile_Personalize` evento global, conforme mostrado no exemplo para este tópico.  
+  
+ Você pode usar o <xref:System.Web.Profile.ProfileModule.Personalize> evento para especificar um perfil de usuário personalizada. Se o <xref:System.Web.Profile.ProfileEventArgs.Profile%2A> propriedade do <xref:System.Web.Profile.ProfileEventArgs> parâmetro especificado para o <xref:System.Web.Profile.ProfileModule.Personalize> do evento <xref:System.Web.Profile.ProfileEventHandler> é definido como não nula valor quando o <xref:System.Web.Profile.ProfileModule.Personalize> evento for concluída, em seguida, o <xref:System.Web.Profile.ProfileModule> usará esse valor para o <xref:System.Web.HttpContext.Profile%2A> propriedade <xref:System.Web.HttpContext>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra o <xref:System.Web.Profile.ProfileModule.Personalize> evento declarado no arquivo global. asax para um aplicativo. O código de evento carrega um perfil de usuário para um usuário com base na associação de função.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/CS/global.asax#12)]
+ [!code-vb[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/VB/global.asax#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,236 @@
+<Type Name="Capture" FullName="System.Text.RegularExpressions.Capture">
+  <TypeSignature Language="C#" Value="public class Capture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Capture extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.Capture" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os resultados de uma única captura de subexpressão bem-sucedida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Text.RegularExpressions.Capture> objeto é imutável e não tem construtor público. Instâncias são retornadas por meio de <xref:System.Text.RegularExpressions.CaptureCollection> objeto, que é retornado pelo `Match.Captures` e <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> propriedades. No entanto, o `Match.Captures` propriedade fornece informações sobre a correspondência mesmo como o <xref:System.Text.RegularExpressions.Match> objeto.  
+  
+ Se você não aplicar um para um grupo de captura, o <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> propriedade retorna um <xref:System.Text.RegularExpressions.CaptureCollection> com um único <xref:System.Text.RegularExpressions.Capture> objeto que fornece informações sobre a captura mesmo como o <xref:System.Text.RegularExpressions.Group> objeto. Se você aplicar um quantificador a um grupo de captura, o `Group.Index`, `Group.Length`, e `Group.Value` propriedades fornecem informações somente sobre o último grupo capturado, enquanto o <xref:System.Text.RegularExpressions.Capture> objetos no <xref:System.Text.RegularExpressions.CaptureCollection> fornecem informações sobre todos os subexpressão capturados. O exemplo fornece uma ilustração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma expressão regular que corresponda sentenças que contenham sem pontuação, exceto um ponto (".").  
+  
+ [!code-csharp[System.Text.RegularExpressions.Capture.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.capture.class/cs/example1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Capture.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.capture.class/vb/example1.vb#1)]  
+  
+ O padrão de expressão regular `((\w+)[\s.])+` é definido conforme mostrado na tabela a seguir. Observe que, nesta expressão regular, um quantificador (+) é aplicado a toda a expressão regular.  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o segundo grupo de captura.|  
+|`[\s.])`|Corresponder um caractere de espaço em branco ou um ponto (".").|  
+|`((\w+)[\s.])`|Corresponde a um ou mais caracteres de palavra seguidos por um caractere de espaço em branco ou um ponto ("."). Este é o primeiro grupo de captura.|  
+|`((\w+)[\s.])+`|Corresponde a uma ou mais ocorrências de um caractere alfabético ou caracteres seguidos por um caractere de espaço em branco ou um ponto (".").|  
+  
+ Neste exemplo, a cadeia de caracteres de entrada consiste em duas frases. Como mostra a saída, a primeira sentença consiste em apenas uma palavra, portanto, o <xref:System.Text.RegularExpressions.CaptureCollection> objeto tem um único <xref:System.Text.RegularExpressions.Capture> objeto que representa a captura mesmo como o <xref:System.Text.RegularExpressions.Group> objeto. A segunda frase consiste em várias palavras, portanto, o <xref:System.Text.RegularExpressions.Group> objetos contêm apenas informações sobre a última subexpressão correspondente. Grupo 1, que representa a primeira captura, contém a última palavra da frase que tem um período de fechamento. O grupo 2, que representa a segunda captura, contém a última palavra da frase. No entanto, o <xref:System.Text.RegularExpressions.Capture> objetos do grupo <xref:System.Text.RegularExpressions.CaptureCollection> objeto capturar cada correspondência de subexpressão. O <xref:System.Text.RegularExpressions.Capture> objetos na coleção do grupo de captura primeiro de capturas contêm informações sobre cada palavra capturada e o caractere de espaço em branco ou o período. O <xref:System.Text.RegularExpressions.Capture> objetos na coleção do grupo de captura segundo de capturas contêm informações sobre cada palavra capturada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Capture.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A posição na cadeia de caracteres original em que foi encontrado o primeiro caractere da subcadeia capturada.</summary>
+        <value>A posição inicial baseada em zero da cadeia de caracteres original em que a subcadeia foi encontrada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Capture.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento da subcadeia de caracteres capturada.</summary>
+        <value>O comprimento da subcadeia de caracteres capturada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.Capture.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a subcadeia de caracteres capturada da cadeia de entrada chamando o <see cref="P:System.Text.RegularExpressions.Capture.Value" /> propriedade.</summary>
+        <returns>A subcadeia de caracteres que foram capturada pela correspondência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `ToString`é realmente uma chamada interna para o <xref:System.Text.RegularExpressions.Capture.Value%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Capture.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a subcadeia de caracteres capturada da cadeia de caracteres de entrada.</summary>
+        <value>A subcadeia de caracteres capturada pela correspondência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma chamada para o <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> método não conseguir encontrar uma correspondência, o valor retornado `Match.Value` é de propriedade <xref:System.String.Empty?displayProperty=nameWithType>. Se o mecanismo de expressão regular é não é possível corresponder a um grupo de captura. o valor retornado `Group.Value` é de propriedade <xref:System.String.Empty?displayProperty=nameWithType>. Consulte o segundo exemplo para obter uma ilustração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma expressão regular que corresponda sentenças que contenham sem pontuação, exceto um ponto ("."). O `Match.Value` propriedade exibe a cadeia de caracteres de resultado que consiste em uma frase de correspondência, para cada correspondência. O `Group.Value` propriedade exibe a cadeia de caracteres de resultado para cada grupo de captura, ele consiste em cadeia de última capturada por esse grupo de captura. O <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> propriedade exibe a cadeia de caracteres de resultado para cada captura.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Capture.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.capture.class/cs/example1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Capture.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.capture.class/vb/example1.vb#1)]  
+  
+ O padrão de expressão regular `((\w+)[\s.])+` é definido conforme mostrado na tabela a seguir. Observe que, nesta expressão regular, um quantificador (+) é aplicado a toda a expressão regular.  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o segundo grupo de captura.|  
+|`[\s.])`|Corresponder um caractere de espaço em branco ou um ponto (".").|  
+|`((\w+)[\s.])`|Corresponde a um ou mais caracteres de palavra seguidos por um caractere de espaço em branco ou um ponto ("."). Este é o primeiro grupo de captura.|  
+|`((\w+)[\s.])+`|Corresponde a uma ou mais ocorrências de um caractere alfabético ou caracteres seguidos por um caractere de espaço em branco ou um ponto (".").|  
+  
+ Neste exemplo, a cadeia de caracteres de entrada consiste em duas frases. Como mostra a saída, a primeira sentença consiste em apenas uma palavra, portanto, o <xref:System.Text.RegularExpressions.CaptureCollection> objeto tem um único <xref:System.Text.RegularExpressions.Capture> objeto que representa a captura mesmo como o <xref:System.Text.RegularExpressions.Group> objeto. A segunda frase consiste em várias palavras, portanto, o <xref:System.Text.RegularExpressions.Group> objetos contêm apenas informações sobre a última subexpressão correspondente. Grupo 1, que representa a primeira captura, contém a última palavra da frase que tem um período de fechamento. O grupo 2, que representa a segunda captura, contém a última palavra da frase. No entanto, o <xref:System.Text.RegularExpressions.Capture> objetos do grupo <xref:System.Text.RegularExpressions.CaptureCollection> objeto capturar cada correspondência de subexpressão. O <xref:System.Text.RegularExpressions.Capture> objetos na coleção do grupo de captura primeiro de capturas contêm informações sobre cada palavra capturada e o caractere de espaço em branco ou o período. O <xref:System.Text.RegularExpressions.Capture> objetos na coleção do grupo de captura segundo de capturas contêm informações sobre cada palavra capturada.  
+  
+ O exemplo a seguir usa um padrão de expressão regular, `^([a-z]+)(\d+)*\.([a-z]+(\d)*)$`, para corresponder a um número de produto que consiste em duas partes separadas por um período. Ambas as partes consistem em caracteres alfabéticos, seguidos por números opcionais. Porque a primeira cadeia de caracteres de entrada não corresponde ao padrão, o valor retornado <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> do objeto `Value` é de propriedade <xref:System.String.Empty?displayProperty=nameWithType>. Da mesma forma, quando o padrão de expressão regular é não é possível corresponder a um grupo de captura, o valor do <xref:System.Text.RegularExpressions.Group> do objeto `Value` é de propriedade <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Capture.Value#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.capture.value/cs/value1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Capture.Value#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.capture.value/vb/value1.vb#1)]  
+  
+ O padrão de expressão regular é definido como mostrado na tabela a seguir:  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`^`|Começar a correspondência no início da cadeia de caracteres.|  
+|`([a-z]+)`|Corresponde a uma ou mais ocorrências de qualquer caractere de um a z. Como o mecanismo de expressão regular é passado a <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> opção, a comparação diferencia maiusculas de minúsculas. Este é o primeiro grupo de captura.|  
+|`(\d+)?`|Corresponde a zero ou uma ocorrência de um ou mais dígitos decimais. Este é o segundo grupo de captura.|  
+|`\.`|Corresponde um caractere literal de ponto.|  
+|`([a-z]+`|Corresponde a uma ou mais ocorrências de qualquer caractere de um a z. A comparação diferencia maiusculas de minúsculas.|  
+|`(\d)*`|Corresponde a zero ou mais dígitos decimais. Um único dígito correspondente é o quarto grupo de captura.|  
+|`([a-z]+(\d)*)`|Corresponde a um ou mais caracteres alfabéticos de um a z seguido por zero, um ou mais dígitos decimais. Este é o quarto grupo de captura.|  
+|`$`|Conclua a correspondência no final da cadeia de caracteres.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

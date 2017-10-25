@@ -1,0 +1,115 @@
+<Type Name="GridResizeBehavior" FullName="System.Windows.Controls.GridResizeBehavior">
+  <TypeSignature Language="C#" Value="public enum GridResizeBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GridResizeBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.GridResizeBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica as linhas ou colunas que são redimensionadas por um controle <see cref="T:System.Windows.Controls.GridSplitter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada para definir o valor de <xref:System.Windows.Controls.GridSplitter.ResizeBehavior%2A> propriedade de um <xref:System.Windows.Controls.GridSplitter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BasedOnAlignment">
+      <MemberSignature Language="C#" Value="BasedOnAlignment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeBehavior BasedOnAlignment = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeBehavior.BasedOnAlignment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O espaço é redistribuído com base no valor das propriedades <see cref="P:System.Windows.FrameworkElement.HorizontalAlignment" /> e <see cref="P:System.Windows.FrameworkElement.VerticalAlignment" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor de <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> propriedade especifica que o espaço é redistribuído entre linhas, a redistribuição segue estas diretrizes:  
+  
+-   Quando o <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> está definida como <xref:System.Windows.VerticalAlignment.Top>, espaço é redistribuído entre a linha especificada para o <xref:System.Windows.Controls.GridSplitter> e a linha que está acima da linha.  
+  
+-   Quando o <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> está definida como <xref:System.Windows.VerticalAlignment.Bottom>, espaço é redistribuído entre a linha especificada para o <xref:System.Windows.Controls.GridSplitter> e a linha que está abaixo da linha.  
+  
+-   Quando o <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> está definida como <xref:System.Windows.VerticalAlignment.Center>, espaço é redistribuído entre a linha acima e a linha que está abaixo da linha que é especificada para o <xref:System.Windows.Controls.GridSplitter>.  
+  
+-   Quando o <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> está definida como <xref:System.Windows.VerticalAlignment.Stretch>, espaço é redistribuído entre a linha acima e a linha que está abaixo da linha que é especificada para o <xref:System.Windows.Controls.GridSplitter>.  
+  
+ Se o valor de <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> propriedade especifica que o espaço é redistribuído entre colunas, a redistribuição segue estas diretrizes:  
+  
+-   Quando o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> está definida como <xref:System.Windows.HorizontalAlignment.Left>, espaço é redistribuído entre a coluna especificada para o <xref:System.Windows.Controls.GridSplitter> e a coluna que está à esquerda.  
+  
+-   Quando o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> está definida como <xref:System.Windows.HorizontalAlignment.Right>, espaço é redistribuído entre a coluna especificada para o <xref:System.Windows.Controls.GridSplitter> e a coluna que está à direita.  
+  
+-   Quando o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> está definida como <xref:System.Windows.HorizontalAlignment.Center>, espaço é redistribuído entre as colunas que estão à esquerda e à direita da coluna especificada para o <xref:System.Windows.Controls.GridSplitter>.  
+  
+-   Quando o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> está definida como <xref:System.Windows.VerticalAlignment.Stretch>, espaço é redistribuído entre as colunas que estão à esquerda e à direita da coluna especificada para o <xref:System.Windows.Controls.GridSplitter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentAndNext">
+      <MemberSignature Language="C#" Value="CurrentAndNext" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeBehavior CurrentAndNext = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeBehavior.CurrentAndNext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para um <see cref="T:System.Windows.Controls.GridSplitter" /> horizontal, o espaço é redistribuído entre a linha especificada para o <see cref="T:System.Windows.Controls.GridSplitter" /> e a próxima linha abaixo dela. Para um <see cref="T:System.Windows.Controls.GridSplitter" /> vertical, o espaço é redistribuído entre a coluna especificada para o <see cref="T:System.Windows.Controls.GridSplitter" /> e a próxima coluna à direita.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousAndCurrent">
+      <MemberSignature Language="C#" Value="PreviousAndCurrent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeBehavior PreviousAndCurrent = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeBehavior.PreviousAndCurrent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para um <see cref="T:System.Windows.Controls.GridSplitter" /> horizontal, o espaço é redistribuído entre a linha especificada para o <see cref="T:System.Windows.Controls.GridSplitter" /> e a próxima linha acima dela. Para um <see cref="T:System.Windows.Controls.GridSplitter" /> vertical, o espaço é redistribuído entre a coluna especificada para o <see cref="T:System.Windows.Controls.GridSplitter" /> e a próxima coluna à esquerda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousAndNext">
+      <MemberSignature Language="C#" Value="PreviousAndNext" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.GridResizeBehavior PreviousAndNext = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridResizeBehavior.PreviousAndNext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para um <see cref="T:System.Windows.Controls.GridSplitter" /> horizontal, o espaço é redistribuído entre as linhas que estão acima e abaixo da linha especificada para o <see cref="T:System.Windows.Controls.GridSplitter" />. Para um <see cref="T:System.Windows.Controls.GridSplitter" /> vertical, o espaço é redistribuído entre as colunas que estão à esquerda e à direita da coluna especificada para o <see cref="T:System.Windows.Controls.GridSplitter" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

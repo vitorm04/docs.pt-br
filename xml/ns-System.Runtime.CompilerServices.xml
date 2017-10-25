@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.CompilerServices">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.CompilerServices" /> namespace fornece funcionalidade para autores de compilador que use gerenciado do código para especificar atributos nos metadados que afetam o comportamento de tempo de execução do common language runtime.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este namespace é principalmente para autores de compilador, embora várias de suas classes, como <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, são usados em uma ampla variedade de aplicativos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

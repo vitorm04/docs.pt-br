@@ -1,0 +1,290 @@
+<Type Name="PackingSize" FullName="System.Reflection.Emit.PackingSize">
+  <TypeSignature Language="C#" Value="public enum PackingSize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PackingSize extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.PackingSize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica um dos dois fatores que determinam o alinhamento de memória dos campos quando um tipo passa por marshaling.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tamanho de pacote afeta o alinhamento dos campos em estruturas e classes cuja organização é <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType>. O tamanho de empacotamento é um dos dois fatores que determinam o deslocamento de um campo quando a estrutura ou classe é empacotada; o outro fator é o tamanho efetivo do campo. Para determinar o deslocamento de um campo de:  
+  
+1.  O valor mínimo para o deslocamento de computação adicionando o tamanho do campo anterior para o deslocamento de campo anterior.  
+  
+2.  Calcule o tamanho de remessa natural para o campo: se o campo for um tipo de dados simples, use o tamanho. Se o campo for uma matriz, use o tamanho de um elemento de matriz. Se o campo é uma estrutura, compare o tamanho de remessa de estrutura para o tamanho do campo maior na estrutura e use o menor dos dois valores.  
+  
+3.  Calcule o tamanho de remessa efetivo, comparando o tamanho de empacotamento para o tamanho de remessa natural do campo calculado na etapa 2. Use o menor dos dois números.  
+  
+4.  O deslocamento de computação. O deslocamento é o primeiro local de memória que é igual ou maior que o mínimo e um múltiplo do tamanho da remessa efetivo é calculado na etapa 3.  
+  
+> [!NOTE]
+>  Depois que forem computados deslocamentos para todos os campos na classe ou estrutura, preenchimento é adicionado para que o tamanho geral é um múltiplo do tamanho da remessa.  
+  
+ Por exemplo, em uma classe que contém um `byte` e um `long`, usando o tamanho de pacote `Size1`, o deslocamento do `byte` campo é zero (0) e o deslocamento do `long` campo é um (1). Se o tamanho de empacotamento é `Size4`, o `long` campo tem deslocamento quatro (4). Em uma classe que contém duas `short` campos, usando qualquer tamanho de empacotamento, o deslocamento do segundo `short` campo é dois (2).  
+  
+> [!NOTE]
+>  Alterar o tamanho de remessa pode afetar o desempenho se ele faz com que os campos ser alinhado em deslocamentos que não sejam múltiplos de seu tamanho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Size1">
+      <MemberSignature Language="C#" Value="Size1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size1 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho de empacotamento é 1 byte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size128">
+      <MemberSignature Language="C#" Value="Size128" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size128 = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size128" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho de empacotamento é 128 bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size16">
+      <MemberSignature Language="C#" Value="Size16" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size16 = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size16" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho de empacotamento é 16 bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size2">
+      <MemberSignature Language="C#" Value="Size2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size2 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho de pacote é de 2 bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size32">
+      <MemberSignature Language="C#" Value="Size32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size32 = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho de empacotamento é 32 bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size4">
+      <MemberSignature Language="C#" Value="Size4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size4 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho de empacotamento é de 4 bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size64">
+      <MemberSignature Language="C#" Value="Size64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size64 = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho de empacotamento é 64 bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size8">
+      <MemberSignature Language="C#" Value="Size8" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Size8 = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Size8" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho de empacotamento é de 8 bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.PackingSize Unspecified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.PackingSize.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.PackingSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho de embalagem não está especificado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

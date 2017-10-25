@@ -1,0 +1,13 @@
+<Namespace Name="System.Windows.Xps.Serialization">
+  <Docs>
+    <summary>Fornece tipos que oferecem suporte a serialização de documentos XPS.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)], consulte o XML Paper Specification (XPS) disponível para download em [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

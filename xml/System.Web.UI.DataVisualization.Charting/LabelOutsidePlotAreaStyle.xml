@@ -1,0 +1,75 @@
+<Type Name="LabelOutsidePlotAreaStyle" FullName="System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle">
+  <TypeSignature Language="C#" Value="public enum LabelOutsidePlotAreaStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LabelOutsidePlotAreaStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o grau ao qual um rótulo pode ser desenhado fora de uma área de plotagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle> enumeração representa o grau ao qual um rótulo é permitido para deixar uma área de plotagem. Ele é usado em conjunto com o <xref:System.Web.UI.DataVisualization.Charting.SmartLabelStyle.AllowOutsidePlotArea%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.SmartLabelStyle> objeto.  
+  
+ Se você especificar um valor parcial, não mais do que 50% do rótulo podem ser desenhados fora da área de plotagem.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="No" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle No = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os rótulos não podem ser tirados da área de plotagem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Partial">
+      <MemberSignature Language="C#" Value="Partial" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle Partial = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Partial" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os rótulos podem ser tirados parcialmente da área de plotagem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="Yes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle Yes = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LabelOutsidePlotAreaStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os rótulos podem ser tirados da área de plotagem.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

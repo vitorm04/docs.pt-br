@@ -1,0 +1,178 @@
+<Type Name="OutputQuality" FullName="System.Printing.OutputQuality">
+  <TypeSignature Language="C#" Value="public enum OutputQuality" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OutputQuality extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.OutputQuality" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os tipos de qualidade de saída para um dispositivo de impressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os valores desse tipo principalmente para esses fins:  
+  
+-   Como membros do <xref:System.Printing.PrintCapabilities.OutputQualityCapability%2A> coleção, que é uma propriedade de <xref:System.Printing.PrintCapabilities>, esses valores indicam os tipos de qualidade de saída que dá suporte a uma impressora.  
+  
+-   Como o valor da <xref:System.Printing.PrintTicket.OutputQuality%2A> propriedade de um <xref:System.Printing.PrintTicket>, elas direcionar uma impressora para produzir uma qualidade específica.  
+  
+ O `Unknown` valor nunca é usado nas propriedades de <xref:System.Printing.PrintCapabilities> objetos.  
+  
+ Você nunca deve definir um <xref:System.Printing.PrintTicket> propriedade `Unknown`. Se algum outro <xref:System.Printing.PrintTicket> produzir aplicativo tiver criado um *documento PrintTicket* que define o recurso de qualidade de saída como uma opção não reconhecida (ou seja, uma opção que não está definida no [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397)), uma <xref:System.Printing.PrintTicket> objeto em um aplicativo que é construído com esse documento terá `Unknown` como o valor do <xref:System.Printing.PrintTicket.OutputQuality%2A> propriedade.  
+  
+ Embora o <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintCapabilities> classes não podem ser herdadas, você pode estender o [imprimir esquema](http://go.microsoft.com/fwlink/?LinkId=186397) para reconhecer os recursos de dispositivo de impressão que não são tratados do <xref:System.Printing.PrintTicket> ou <xref:System.Printing.PrintCapabilities> classes. Para obter mais informações, consulte [NOTINBUILD: como: estender o esquema de impressão e criar novas Classes de sistema de impressão](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+<a name="Photographic"></a>   
+## <a name="notes-on-outputqualityphotographic"></a>Observações sobre OutputQuality.Photographic  
+ Começando com o [!INCLUDE[net_v461](~/includes/net-v461-md.md)], a qualidade de saída obtida com o valor Photographic é aprimorada (em comparação com versões anteriores do .NET Framework) ao imprimir em uma impressora baseada em GDI ou durante a execução no Windows 7 e versões anteriores do sistema operacional Windows.  
+  
+ Produção de documentos com melhor qualidade de saída requer arquivos maiores de spooler de impressão e tempos de espera. Se esses efeitos colaterais indesejáveis, em vez disso, você pode usar o valor alto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como testar os recursos da impressora e configurar o trabalho de impressão para tirar proveito deles. .  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Automatic">
+      <MemberSignature Language="C#" Value="Automatic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputQuality Automatic = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputQuality.Automatic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seleciona automaticamente um tipo de qualidade com base no conteúdo de um trabalho de impressão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Draft">
+      <MemberSignature Language="C#" Value="Draft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputQuality Draft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputQuality.Draft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade de rascunho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fax">
+      <MemberSignature Language="C#" Value="Fax" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputQuality Fax = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputQuality.Fax" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade de fax.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputQuality High = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputQuality.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Maior qualidade normal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputQuality Normal = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputQuality.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade normal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Photographic">
+      <MemberSignature Language="C#" Value="Photographic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputQuality Photographic = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputQuality.Photographic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade Photographic. Para obter mais informações, consulte [Observações sobre OutputQuality.Photographic](#Photographic) na seção comentários.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputQuality Text = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputQuality.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade do texto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.OutputQuality Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.OutputQuality.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.OutputQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O recurso (cujas opções são representadas por esta enumeração) é definido como uma opção não definida no [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

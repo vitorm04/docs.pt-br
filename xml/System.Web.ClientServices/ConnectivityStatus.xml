@@ -1,0 +1,68 @@
+<Type Name="ConnectivityStatus" FullName="System.Web.ClientServices.ConnectivityStatus">
+  <TypeSignature Language="C#" Value="public static class ConnectivityStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ConnectivityStatus extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ClientServices.ConnectivityStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o status de conexão de rede do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.ClientServices.ConnectivityStatus> classe para especificar a conectividade de rede de aplicativos baseados no Windows que usam serviços de aplicativo cliente. Quando você define o <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> propriedade `true`, os provedores de serviço do cliente usam no cache offline em vez de tentar acessar os serviços da Web correspondentes. O status de off-line é armazenado em uma base por usuário e por aplicativo. Para obter mais informações, consulte [Como trabalhar offline com serviços de aplicativo cliente](http://msdn.microsoft.com/en-us/f792cb16-8520-4a0f-9dc9-07bfbc454e38).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar essa classe para atualizar o status offline, dependendo do valor de uma caixa de seleção. Neste exemplo, um <xref:System.Windows.Forms.CheckBox.CheckedChanged> manipulador de eventos atualiza o status offline. Se o usuário define o aplicativo para o estado online, o manipulador de eventos tentará revalidar o usuário. No entanto, se o servidor de autenticação não estiver disponível, o manipulador de eventos retorna o aplicativo para o estado offline.  
+  
+ [!code-csharp[ClientApplicationServices#315](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#315)]
+ [!code-vb[ClientApplicationServices#315](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#315)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsOffline">
+      <MemberSignature Language="C#" Value="public static bool IsOffline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsOffline" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.ConnectivityStatus.IsOffline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um aplicativo estiver no modo offline.</summary>
+        <value>
+          <see langword="true" />Se o aplicativo estiver no modo offline; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define o <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> propriedade, a <xref:System.Web.ClientServices.ConnectivityStatus> classe armazena em cache o valor para o sistema de arquivos local. Os provedores de serviço de cliente no <xref:System.Web.ClientServices.Providers> namespace verificar esse valor para determinar se deve usar o cache de dados offline em vez de tentar acessar associado [!INCLUDE[ajax_current_short](~/includes/ajax-current-short-md.md)] autenticação, funções e serviços de perfil.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar essa propriedade para atualizar o status offline, dependendo do valor de uma caixa de seleção. Neste exemplo, um <xref:System.Windows.Forms.CheckBox.CheckedChanged> manipulador de eventos atualiza o status offline. Se o usuário define o aplicativo para o estado online, o manipulador de eventos tentará revalidar o usuário. No entanto, se o servidor de autenticação não estiver disponível, o manipulador de eventos retorna o aplicativo para o estado offline.  
+  
+ [!code-csharp[ClientApplicationServices#315](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#315)]
+ [!code-vb[ClientApplicationServices#315](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#315)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

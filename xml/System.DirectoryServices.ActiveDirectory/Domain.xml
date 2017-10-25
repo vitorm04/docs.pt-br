@@ -1,0 +1,1195 @@
+<Type Name="Domain" FullName="System.DirectoryServices.ActiveDirectory.Domain">
+  <TypeSignature Language="C#" Value="public class Domain : System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Domain extends System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.Domain" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> representa um domínio do Active Directory.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainCollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DomainCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Domain.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os domínios que sejam filhos deste domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainCollection" /> objeto que contém os domínios filho.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLocalSideOfTrustRelationship">
+      <MemberSignature Language="C#" Value="public void CreateLocalSideOfTrustRelationship (string targetDomainName, System.DirectoryServices.ActiveDirectory.TrustDirection direction, string trustPassword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateLocalSideOfTrustRelationship(string targetDomainName, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection direction, string trustPassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.CreateLocalSideOfTrustRelationship(System.String,System.DirectoryServices.ActiveDirectory.TrustDirection,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+        <Parameter Name="direction" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+        <Parameter Name="trustPassword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio criada com a relação de confiança.</param>
+        <param name="direction">Uma da <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> membros que determina a direção da relação de confiança, relativo a esse domínio.</param>
+        <param name="trustPassword">A senha para a relação de confiança.</param>
+        <summary>Cria o lado local de uma relação de confiança com o domínio especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um lado de uma relação de confiança. A relação de confiança é estabelecida não até que os dois lados da relação de confiança foi criados.  
+  
+ O `trustPassword` parâmetro associa uma senha com a relação de confiança criada. Quando o outro lado da relação de confiança é criado, a mesma senha é fornecida e as duas relações de confiança locais, em seguida, são vinculadas entre si.  
+  
+ Para criar programaticamente os dois lados de uma relação de confiança em uma única chamada de método, use o <xref:System.DirectoryServices.ActiveDirectory.Domain.CreateTrustRelationship%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException">Já existe uma relação de confiança.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" />ou <paramref name="trustPassword" /> está vazio.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" /> ou <paramref name="trustPassword" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="direction" /> não é um valor <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTrustRelationship">
+      <MemberSignature Language="C#" Value="public void CreateTrustRelationship (System.DirectoryServices.ActiveDirectory.Domain targetDomain, System.DirectoryServices.ActiveDirectory.TrustDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateTrustRelationship(class System.DirectoryServices.ActiveDirectory.Domain targetDomain, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.CreateTrustRelationship(System.DirectoryServices.ActiveDirectory.Domain,System.DirectoryServices.ActiveDirectory.TrustDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomain" Type="System.DirectoryServices.ActiveDirectory.Domain" />
+        <Parameter Name="direction" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomain">Um <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> objeto que representa o domínio ao qual a relação de confiança que está sendo criada com.</param>
+        <param name="direction">Uma da <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> membros que determina a direção da relação de confiança, relativo a esse domínio.</param>
+        <summary>Cria os dois lados de uma relação de confiança com o domínio especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria os dois lados de uma relação de confiança com uma única chamada de método. O <xref:System.DirectoryServices.ActiveDirectory.Domain.CreateLocalSideOfTrustRelationship%2A?displayProperty=nameWithType> método é usado para criar apenas um dos lados de uma relação de confiança.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException">Já existe uma relação de confiança.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomain" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="direction" /> não é um valor <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteLocalSideOfTrustRelationship">
+      <MemberSignature Language="C#" Value="public void DeleteLocalSideOfTrustRelationship (string targetDomainName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteLocalSideOfTrustRelationship(string targetDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.DeleteLocalSideOfTrustRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio no qual existe a relação de confiança com.</param>
+        <summary>Exclui o lado local de uma relação de confiança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um lado de uma relação de confiança é excluído, existe a relação de confiança mais.  
+  
+ Para excluir os dois lados de uma relação de confiança com a chamada de um método, use o <xref:System.DirectoryServices.ActiveDirectory.Domain.DeleteTrustRelationship%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> que é especificado pelo <paramref name="targetDomainName" /> parâmetro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteTrustRelationship">
+      <MemberSignature Language="C#" Value="public void DeleteTrustRelationship (System.DirectoryServices.ActiveDirectory.Domain targetDomain);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteTrustRelationship(class System.DirectoryServices.ActiveDirectory.Domain targetDomain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.DeleteTrustRelationship(System.DirectoryServices.ActiveDirectory.Domain)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomain" Type="System.DirectoryServices.ActiveDirectory.Domain" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomain">Um <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> objeto que representa o domínio ao qual a relação de confiança existe com.</param>
+        <summary>Exclui os dois lados de uma relação de confiança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para excluir apenas um lado de uma relação de confiança, use o <xref:System.DirectoryServices.ActiveDirectory.Domain.DeleteLocalSideOfTrustRelationship%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com especificado <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomain" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainControllers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainControllerCollection DomainControllers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DomainControllerCollection DomainControllers" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Domain.DomainControllers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainControllerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os controladores de domínio nesse domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainControllerCollection" /> objeto que contém os controladores de domínio nesse domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainMode">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainMode DomainMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.DomainMode DomainMode" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Domain.DomainMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo que este domínio está operando.</summary>
+        <value>Uma da <see cref="T:System.DirectoryServices.ActiveDirectory.DomainMode" /> valores que indicam o que este domínio está operando no modo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainModeLevel">
+      <MemberSignature Language="C#" Value="public int DomainModeLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DomainModeLevel" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Domain.DomainModeLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nível de modo que este domínio está operando.</summary>
+        <value>O nível de modo de domínio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDiscoverableDomainControllers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAllDiscoverableDomainControllers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAllDiscoverableDomainControllers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.FindAllDiscoverableDomainControllers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainControllerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Localiza todos os controladores de domínio detectável nesse domínio.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainControllerCollection" /> que contém os objetos de controlador de domínio que foram encontrados por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode localizar controladores de domínio detectável consultando registros SRV do DNS. Somente os controladores de domínio que registrar o genérico, não específica de site, o registro SRV do controlador de domínio serão retornados por este método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDiscoverableDomainControllers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAllDiscoverableDomainControllers (string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAllDiscoverableDomainControllers(string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.FindAllDiscoverableDomainControllers(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainControllerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">O nome do site no qual pesquisar pelos controladores de domínio.</param>
+        <summary>Localiza todos os controladores de domínio detectáveis nesse domínio que também estão no site especificado.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainControllerCollection" /> que contém os objetos de controlador de domínio que foram encontrados por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode localizar controladores de domínio detectável consultando registros SRV do DNS.  Se um controlador de domínio não registra um registro SRV para o site especificado, ele não será retornado por esse método, mesmo se o controlador de domínio estiver localizado fisicamente nesse site.  
+  
+ Todos os controladores de domínio que registrar um registro SRV para o site especificado serão retornados por esse método, mesmo que não estejam localizados fisicamente nesse site.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDomainControllers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAllDomainControllers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAllDomainControllers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.FindAllDomainControllers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainControllerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Localiza todos os controladores de domínio nesse domínio.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainControllerCollection" /> que contém os objetos de controlador de domínio que foram encontrados por esse método.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllDomainControllers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAllDomainControllers (string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DomainControllerCollection FindAllDomainControllers(string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.FindAllDomainControllers(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainControllerCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">O nome do site no qual pesquisar pelos controladores de domínio.</param>
+        <summary>Localiza todos os controladores de domínio nesse domínio que também estão no site especificado.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainControllerCollection" /> que contém os objetos de controlador de domínio que foram encontrados por esse método.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou indisponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDomainController">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainController FindDomainController ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DomainController FindDomainController() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.FindDomainController" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Localiza qualquer controlador de domínio nesse domínio.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> que representa o controlador de domínio encontrado por este método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método localiza qualquer controlador de domínio no domínio. Não há nenhuma garantia de que o mesmo controlador de domínio será encontrado por outra chamada para esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não foi possível localizar um controlador de domínio.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDomainController">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainController FindDomainController (System.DirectoryServices.ActiveDirectory.LocatorOptions flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DomainController FindDomainController(valuetype System.DirectoryServices.ActiveDirectory.LocatorOptions flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.FindDomainController(System.DirectoryServices.ActiveDirectory.LocatorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flag" Type="System.DirectoryServices.ActiveDirectory.LocatorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Uma combinação de um ou mais dos membros <see cref="T:System.DirectoryServices.ActiveDirectory.LocatorOptions" /> que define o tipo de controlador de domínio a ser localizado.</param>
+        <summary>Localiza um controlador de domínio nesse domínio que atenda aos critérios especificados.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> que representa o controlador de domínio encontrado por este método.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não foi possível localizar um controlador de domínio.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço do diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="flag" /> contém um valor inválido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDomainController">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainController FindDomainController (string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DomainController FindDomainController(string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.FindDomainController(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">O nome do site para pesquisar o controlador de domínio.</param>
+        <summary>Localiza um controlador de domínio nesse domínio e no site especificado.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que representa o controlador de domínio que é encontrado por esse método.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não foi possível localizar um controlador de domínio.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="siteName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindDomainController">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainController FindDomainController (string siteName, System.DirectoryServices.ActiveDirectory.LocatorOptions flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.DomainController FindDomainController(string siteName, valuetype System.DirectoryServices.ActiveDirectory.LocatorOptions flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.FindDomainController(System.String,System.DirectoryServices.ActiveDirectory.LocatorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="siteName" Type="System.String" />
+        <Parameter Name="flag" Type="System.DirectoryServices.ActiveDirectory.LocatorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="siteName">O nome do site para pesquisar o controlador de domínio.</param>
+        <param name="flag">Uma combinação de um ou mais dos membros <see cref="T:System.DirectoryServices.ActiveDirectory.LocatorOptions" /> que define o tipo de controlador de domínio a ser localizado.</param>
+        <summary>Localiza um controlador de domínio nesse domínio e no site especificado que atenda aos critérios especificados.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que representa o controlador de domínio que é encontrado por esse método.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não foi possível localizar um controlador de domínio.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">Essa exceção ocorrerá para qualquer um dos motivos a seguir.  
+  
+-   <paramref name="siteName" /> é uma cadeia de caracteres vazia.  
+  
+-   <paramref name="flag" /> contém um valor inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Forest">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.Forest Forest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.Forest Forest" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Domain.Forest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Forest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a que este domínio é um membro da floresta.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> que representa a floresta que este domínio é um membro do objeto.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllTrustRelationships">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection GetAllTrustRelationships ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection GetAllTrustRelationships() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.GetAllTrustRelationships" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera todas as relações de confiança para este domínio.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection" /> que contém todas as relações de confiança para este domínio.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComputerDomain">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.Domain GetComputerDomain ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.Domain GetComputerDomain() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.GetComputerDomain" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Domain</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> que representa o domínio ao qual o computador local está associado.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> que representa o domínio ao qual o computador local está associado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno de <xref:System.DirectoryServices.ActiveDirectory.Domain.GetComputerDomain%2A> método é um <xref:System.DirectoryServices.ActiveDirectory.Domain> objeto que representa o domínio ao qual o computador que executa o aplicativo está associado.  Esse valor de retorno é independente das credenciais de domínio sob a qual o aplicativo é executado. Esse método recupera o domínio do computador, independentemente das credenciais de domínio de conta confiável em que é executado.  Para recuperar o <xref:System.DirectoryServices.ActiveDirectory.Domain> objeto que representa o domínio correspondente ao usuário credenciais em vigor para o contexto de segurança sob a qual o aplicativo está em execução, use o <xref:System.DirectoryServices.ActiveDirectory.Domain.GetCurrentDomain%2A> método em vez disso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Uma conexão para o domínio não pôde ser feita.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentDomain">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.Domain GetCurrentDomain ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.Domain GetCurrentDomain() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.GetCurrentDomain" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Domain</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> para as credenciais do usuário atuais em vigor para o contexto de segurança sob a qual o aplicativo é executado.</summary>
+        <returns>O objeto <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> que representa o domínio para as credenciais do usuário atuais em vigor para o contexto de segurança sob a qual o aplicativo é executado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.DirectoryServices.ActiveDirectory.Domain.GetCurrentDomain%2A>método é determinado pelas credenciais de domínio sob a qual o aplicativo está em execução.  Para recuperar o <xref:System.DirectoryServices.ActiveDirectory.Domain> objeto que representa o domínio ao qual o computador que executa o aplicativo está associado, independentemente das credenciais associadas a esse aplicativo, use o <xref:System.DirectoryServices.ActiveDirectory.Domain.GetComputerDomain%2A> método em vez disso.  
+  
+## <a name="see-also"></a>Consulte também  
+ <xref:System.DirectoryServices.ActiveDirectory.Domain.GetComputerDomain%2A>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Uma conexão para o contexto atual não pôde ser feita.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectoryEntry">
+      <MemberSignature Language="C#" Value="public override System.DirectoryServices.DirectoryEntry GetDirectoryEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.DirectoryServices.DirectoryEntry GetDirectoryEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.GetDirectoryEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um objeto <see cref="T:System.DirectoryServices.DirectoryEntry" /> que representa o contexto de nomenclatura padrão do domínio.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.DirectoryEntry" /> que representa o domínio.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDomain">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.Domain GetDomain (System.DirectoryServices.ActiveDirectory.DirectoryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.Domain GetDomain(class System.DirectoryServices.ActiveDirectory.DirectoryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.GetDomain(System.DirectoryServices.ActiveDirectory.DirectoryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Domain</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> que contém o destino e as credenciais a serem usados para recuperar o objeto. O tipo de contexto deve ser um servidor de diretório ou de domínio.</param>
+        <summary>Obtém o objeto <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> para o contexto especificado.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> que representa o domínio para o contexto especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Uma conexão com o destino especificado em <paramref name="context" /> não pôde ser realizada.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="context" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectiveAuthenticationStatus">
+      <MemberSignature Language="C#" Value="public bool GetSelectiveAuthenticationStatus (string targetDomainName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetSelectiveAuthenticationStatus(string targetDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.GetSelectiveAuthenticationStatus(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio que existe com a relação de confiança.</param>
+        <summary>Determina o tipo de autenticação de uma relação de confiança de entrada.</summary>
+        <returns>
+          <see langword="true" />Se a autenticação da relação de confiança é seletiva; <see langword="false" /> se a autenticação for todo o domínio.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> que é especificado pelo <paramref name="targetForestName" /> parâmetro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Falha na chamada para LsaQueryTrustedDomainInfoByName. Para obter mais informações, consulte o tópico [LsaQueryTrustedDomainInfoByName](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/secmgmt/security/lsaquerytrusteddomaininfobyname.asp) na biblioteca MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSidFilteringStatus">
+      <MemberSignature Language="C#" Value="public bool GetSidFilteringStatus (string targetDomainName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetSidFilteringStatus(string targetDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.GetSidFilteringStatus(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio que existe com a relação de confiança.</param>
+        <summary>Determina o status de uma relação de confiança de filtragem de SID.</summary>
+        <returns>
+          <see langword="true" />Se a filtragem de SID está habilitado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> que é especificado pelo <paramref name="targetForestName" /> parâmetro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTrustRelationship">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation GetTrustRelationship (string targetDomainName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation GetTrustRelationship(string targetDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.GetTrustRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio com o qual existe a relação de confiança.</param>
+        <summary>Obtém a relação de confiança entre este domínio e o domínio especificado.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objeto que representa a relação de confiança entre este domínio e o domínio especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" /> que é especificado pelo <paramref name="targetForestName" /> parâmetro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InfrastructureRoleOwner">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainController InfrastructureRoleOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DomainController InfrastructureRoleOwner" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Domain.InfrastructureRoleOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o proprietário da função de infra-estrutura para este domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que representa o controlador de domínio que detém a função de proprietário de infraestrutura.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.Domain Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.Domain Parent" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Domain.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.Domain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o domínio pai deste domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> objeto que representa o domínio pai deste domínio. <see langword="null" />Se este domínio não possui nenhum domínio pai.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PdcRoleOwner">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainController PdcRoleOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DomainController PdcRoleOwner" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Domain.PdcRoleOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que contém o controlador de domínio primário (PDC) para este domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que representa o controlador de domínio que detém a função de emulador PDC para esse domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseDomainFunctionality">
+      <MemberSignature Language="C#" Value="public void RaiseDomainFunctionality (System.DirectoryServices.ActiveDirectory.DomainMode domainMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseDomainFunctionality(valuetype System.DirectoryServices.ActiveDirectory.DomainMode domainMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.RaiseDomainFunctionality(System.DirectoryServices.ActiveDirectory.DomainMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="domainMode" Type="System.DirectoryServices.ActiveDirectory.DomainMode" />
+      </Parameters>
+      <Docs>
+        <param name="domainMode">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainMode" /> valor de enumeração que especifica o novo nível de operação para o domínio.</param>
+        <summary>Gera o modo de operação para o domínio.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DirectoryServices.ActiveDirectory.DomainMode> valor pode ser gerado, mas não reduzida. Isso significa que não é reversível aumentar o nível de funcionalidade do domínio e a decisão de fazer isso deve ser feita com cuidado.  
+  
+ Para obter mais informações sobre os modos operacionais de domínio, consulte [funcionalidade de domínio e floresta](http://www.microsoft.com/resources/documentation/WindowsServ/2003/standard/proddocs/en-us/sag_levels.asp).  
+  
+ A tabela a seguir define os valores válidos para `domainMode` com base no modo de operação atual do domínio.  
+  
+|Modo atual|O modo pode ser aumentado para o|  
+|------------------|---------------------------|  
+|<xref:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2000MixedDomain>|<xref:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2000NativeDomain><br /><br /> <xref:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2003InterimDomain><br /><br /> <xref:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2003Domain>|  
+|<xref:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2000NativeDomain>|<xref:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2003Domain>|  
+|<xref:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2003InterimDomain>|<xref:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2003Domain>|  
+|<xref:System.DirectoryServices.ActiveDirectory.DomainMode.Windows2003Domain>|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">Com base no modo de operação atual do domínio, o valor especificado para <paramref name="domainMode" /> não é válido.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="domainMode" /> não é um valor de enumeração <see cref="T:System.DirectoryServices.ActiveDirectory.DomainMode" /> válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseDomainFunctionalityLevel">
+      <MemberSignature Language="C#" Value="public void RaiseDomainFunctionalityLevel (int domainMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseDomainFunctionalityLevel(int32 domainMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.RaiseDomainFunctionalityLevel(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="domainMode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="domainMode">Um valor que representa o novo nível.</param>
+        <summary>Aumenta o nível de funcionalidade para o domínio.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepairTrustRelationship">
+      <MemberSignature Language="C#" Value="public void RepairTrustRelationship (System.DirectoryServices.ActiveDirectory.Domain targetDomain);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RepairTrustRelationship(class System.DirectoryServices.ActiveDirectory.Domain targetDomain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.RepairTrustRelationship(System.DirectoryServices.ActiveDirectory.Domain)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomain" Type="System.DirectoryServices.ActiveDirectory.Domain" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomain">Um <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> objeto que representa o domínio com o qual existe a relação de confiança.</param>
+        <summary>Repara uma relação de confiança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método repara a relação de confiança, redefinindo o canal seguro para a relação de confiança. Se a operação falhar redefinir o canal seguro, em seguida, ele também redefinirá a senha de relação de confiança.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> que é especificado pela <paramref name="targetDomain" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de origem ou de destino está ocupado ou indisponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomain" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RidRoleOwner">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainController RidRoleOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DomainController RidRoleOwner" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.Domain.RidRoleOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o detentor da função de mestre de RID para este domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainController" /> objeto que representa o controlador de domínio que detém a função de mestre de identificador relativo (RID) para este domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSelectiveAuthenticationStatus">
+      <MemberSignature Language="C#" Value="public void SetSelectiveAuthenticationStatus (string targetDomainName, bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSelectiveAuthenticationStatus(string targetDomainName, bool enable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.SetSelectiveAuthenticationStatus(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio com o qual existe a relação de confiança de entrada.</param>
+        <param name="enable">
+          <see langword="true" />Se a autenticação seletiva estiver habilitada; Caso contrário, <see langword="false" />.</param>
+        <summary>Habilita ou desabilita a autenticação seletiva para uma relação de confiança de entrada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o controlador de domínio que é especificado pelo <paramref name="targetDomainName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSidFilteringStatus">
+      <MemberSignature Language="C#" Value="public void SetSidFilteringStatus (string targetDomainName, bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSidFilteringStatus(string targetDomainName, bool enable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.SetSidFilteringStatus(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio com o qual existe a relação de confiança.</param>
+        <param name="enable">
+          <see langword="true" />Se a filtragem SID deve ser habilitado; Caso contrário, <see langword="false" />.</param>
+        <summary>Define o estado para o domínio especificado de filtragem de SID.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o domínio especificado por <paramref name="targetDomainName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto atual foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateLocalSideOfTrustRelationship">
+      <MemberSignature Language="C#" Value="public void UpdateLocalSideOfTrustRelationship (string targetDomainName, string newTrustPassword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateLocalSideOfTrustRelationship(string targetDomainName, string newTrustPassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.UpdateLocalSideOfTrustRelationship(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+        <Parameter Name="newTrustPassword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio com o qual existe uma relação de confiança.</param>
+        <param name="newTrustPassword">A nova senha para a relação de confiança.</param>
+        <summary>Atualiza a senha para o lado local de uma relação de confiança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para restabelecer a relação de confiança, ambos os lados da relação de confiança devem ser atualizados com a mesma senha.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o domínio especificado por <paramref name="targetDomainName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" /> ou <paramref name="newTrustPassword" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" /> ou <paramref name="newTrustPassword" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateLocalSideOfTrustRelationship">
+      <MemberSignature Language="C#" Value="public void UpdateLocalSideOfTrustRelationship (string targetDomainName, System.DirectoryServices.ActiveDirectory.TrustDirection newTrustDirection, string newTrustPassword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateLocalSideOfTrustRelationship(string targetDomainName, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection newTrustDirection, string newTrustPassword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.UpdateLocalSideOfTrustRelationship(System.String,System.DirectoryServices.ActiveDirectory.TrustDirection,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+        <Parameter Name="newTrustDirection" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+        <Parameter Name="newTrustPassword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio com o qual existe uma relação de confiança.</param>
+        <param name="newTrustDirection">Um <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> valor para a nova direção de confiança para a relação de confiança.</param>
+        <param name="newTrustPassword">A nova senha para a relação de confiança.</param>
+        <summary>Atualiza a direção de relação de confiança e senha para o lado local de uma relação de confiança.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o domínio que é especificado pelo <paramref name="targetDomainName" /> parâmetro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" /> ou <paramref name="newTrustPassword" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" />or <paramref name="newTrustPassword" /> are <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="newTrustDirection" /> não é um valor <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateTrustRelationship">
+      <MemberSignature Language="C#" Value="public void UpdateTrustRelationship (System.DirectoryServices.ActiveDirectory.Domain targetDomain, System.DirectoryServices.ActiveDirectory.TrustDirection newTrustDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateTrustRelationship(class System.DirectoryServices.ActiveDirectory.Domain targetDomain, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection newTrustDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.UpdateTrustRelationship(System.DirectoryServices.ActiveDirectory.Domain,System.DirectoryServices.ActiveDirectory.TrustDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomain" Type="System.DirectoryServices.ActiveDirectory.Domain" />
+        <Parameter Name="newTrustDirection" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomain">Um <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> objeto que representa o domínio com o qual existe a relação de confiança.</param>
+        <param name="newTrustDirection">Um <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> valor que especifica a direção da relação de confiança novo para a relação de confiança.</param>
+        <summary>Atualiza a direção da relação de confiança para uma relação de confiança. As instruções de confiança são atualizadas nos dois lados da relação de confiança.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o domínio que é especificado pelo <paramref name="targetDomain" /> parâmetro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomain" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="newTrustDirection" /> não é um valor <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyOutboundTrustRelationship">
+      <MemberSignature Language="C#" Value="public void VerifyOutboundTrustRelationship (string targetDomainName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void VerifyOutboundTrustRelationship(string targetDomainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.VerifyOutboundTrustRelationship(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomainName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomainName">O nome DNS do domínio com o qual existe a relação de confiança.</param>
+        <summary>Verifica se uma relação de confiança de saída já estabelecida com o domínio especificado é válida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para verificar uma relação de confiança foi estabelecida totalmente. A relação de confiança é estabelecida não até que os dois lados da relação de confiança foi criados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança de saída com o domínio especificado por <paramref name="targetDomainName" />.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="targetDomainName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomainName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyTrustRelationship">
+      <MemberSignature Language="C#" Value="public void VerifyTrustRelationship (System.DirectoryServices.ActiveDirectory.Domain targetDomain, System.DirectoryServices.ActiveDirectory.TrustDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void VerifyTrustRelationship(class System.DirectoryServices.ActiveDirectory.Domain targetDomain, valuetype System.DirectoryServices.ActiveDirectory.TrustDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.Domain.VerifyTrustRelationship(System.DirectoryServices.ActiveDirectory.Domain,System.DirectoryServices.ActiveDirectory.TrustDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDomain" Type="System.DirectoryServices.ActiveDirectory.Domain" />
+        <Parameter Name="direction" Type="System.DirectoryServices.ActiveDirectory.TrustDirection" />
+      </Parameters>
+      <Docs>
+        <param name="targetDomain">Um <see cref="T:System.DirectoryServices.ActiveDirectory.Domain" /> objeto que representa o domínio com o qual existe a relação de confiança.</param>
+        <param name="direction">Um <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> valor que especifica a direção, em relação a esse domínio, da relação de confiança.</param>
+        <summary>Verifica se uma relação de confiança estabelecida anteriormente com o domínio especificado é válida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método verifica se uma relação de confiança foi estabelecida totalmente. A relação de confiança é estabelecida não até que os dois lados da relação de confiança foi criados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Não há nenhuma relação de confiança com o domínio que é especificado pelo <paramref name="targetDomain" /> parâmetro ou o domínio de destino não tem a direção da relação de confiança especificada pelo <paramref name="direction" /> parâmetro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetDomain" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="direction" /> não é um valor <see cref="T:System.DirectoryServices.ActiveDirectory.TrustDirection" /> válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

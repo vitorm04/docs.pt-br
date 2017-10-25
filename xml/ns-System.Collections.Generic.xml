@@ -1,0 +1,13 @@
+<Namespace Name="System.Collections.Generic">
+  <Docs>
+    <summary>O <see cref="N:System.Collections.Generic" /> namespace contém interfaces e classes que definem coleções genéricas, que permitem aos usuários criar coleções fortemente tipadas que fornecem melhor segurança de tipos e desempenho do que coleções fortemente tipadas não genéricas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitos dos tipos de coleção genérica são diretamente análogos aos tipos não genérica. <xref:System.Collections.Generic.Dictionary%602>é uma versão genérica do <xref:System.Collections.Hashtable>; ele usa a estrutura genérica <xref:System.Collections.Generic.KeyValuePair%602> para enumeração em vez de <xref:System.Collections.DictionaryEntry>. <xref:System.Collections.Generic.List%601>é uma versão genérica do <xref:System.Collections.ArrayList>. Há genérico <xref:System.Collections.Generic.Queue%601> e <xref:System.Collections.Generic.Stack%601> classes que correspondem às versões não genéricas. Há versões genéricas e <xref:System.Collections.Generic.SortedList%602>. Ambas as versões são híbridas de um dicionário e uma lista. O <xref:System.Collections.Generic.SortedDictionary%602> classe genérica é um dicionário puro e não tem nenhum equivalente não genérico. O <xref:System.Collections.Generic.LinkedList%601> classe genérica é uma lista vinculada true e não tem nenhum equivalente não genérico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,171 @@
+<Type Name="MouseGestureConverter" FullName="System.Windows.Input.MouseGestureConverter">
+  <TypeSignature Language="C#" Value="public class MouseGestureConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MouseGestureConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseGestureConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte um objeto <see cref="T:System.Windows.Input.MouseGesture" /> de e em outros tipos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.MouseGestureConverter> classe converte apenas uma instância de <xref:System.Windows.Input.MouseGesture> para e de um <xref:System.String>.  
+  
+ O <xref:System.Windows.Input.MouseGestureConverter> converte para e de um <xref:System.String> usando o caractere "+" como o delimitador entre as teclas modificadoras e a ação do mouse.  Por exemplo, a cadeia de caracteres `Control+RightClick` será convertida em uma <xref:System.Windows.Input.MouseGesture> com um <xref:System.Windows.Input.MouseGesture.Modifiers%2A> propriedade igual a <xref:System.Windows.Input.ModifierKeys.Control> e <xref:System.Windows.Input.MouseGesture.MouseAction%2A> igual da propriedade <xref:System.Windows.Input.MouseAction.RightClick>.  
+  
+<a name="xamlTextUsage_MouseGestureConverter"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseGestureConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseGestureConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.MouseGestureConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseGestureConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto de formato que fornece informações sobre o ambiente do qual este conversor está sendo invocado.</param>
+        <param name="sourceType">O tipo que está sendo avaliado para conversão.</param>
+        <summary>Determina se um objeto do tipo especificado pode ser convertido em uma instância de <see cref="T:System.Windows.Input.MouseGesture" />, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="sourceType" /> for do tipo <see cref="T:System.String" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseGestureConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto de formato que fornece informações sobre o ambiente do qual este conversor está sendo invocado.</param>
+        <param name="destinationType">O tipo que está sendo avaliado para conversão.</param>
+        <summary>Determina se uma instância de <see cref="T:System.Windows.Input.MouseGesture" /> pode ser convertido no tipo especificado, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="destinationType" /> for do tipo <see cref="T:System.String" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseGestureConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto de formato que fornece informações sobre o ambiente do qual este conversor está sendo invocado.</param>
+        <param name="culture">Informações específicas da cultura.</param>
+        <param name="source">O objeto a ser convertido.</param>
+        <summary>Tenta converter o objeto especificado em um <see cref="T:System.Windows.Input.MouseGesture" />, usando o contexto especificado.</summary>
+        <returns>O objeto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.MouseGestureConverter> converte para e de um <xref:System.String> usando a chave "+" como o delimitador entre as teclas modificadoras e a ação do mouse.  Por exemplo, a cadeia de caracteres `Control+RightClick` será convertida em uma <xref:System.Windows.Input.MouseGesture> com um <xref:System.Windows.Input.MouseGesture.Modifiers%2A> propriedade igual a <xref:System.Windows.Input.ModifierKeys.Control> e <xref:System.Windows.Input.MouseGesture.MouseAction%2A> igual da propriedade <xref:System.Windows.Input.MouseAction.RightClick>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="source" />não pode ser convertido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseGestureConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto de formato que fornece informações sobre o ambiente do qual este conversor está sendo invocado.</param>
+        <param name="culture">Um contexto de formato que fornece informações sobre o ambiente do qual este conversor está sendo invocado.</param>
+        <param name="value">O objeto a ser convertido.</param>
+        <param name="destinationType">O tipo para converter o objeto.</param>
+        <summary>Tenta converter um <see cref="T:System.Windows.Input.MouseGesture" /> para o tipo especificado, usando o contexto especificado.</summary>
+        <returns>O objeto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `destinationType`deve ser <xref:System.String>.  
+  
+ O <xref:System.Windows.Input.MouseGestureConverter> converte para e de um <xref:System.String> usando a chave "+" como o delimitador entre as teclas modificadoras e a ação do mouse.  Por exemplo, um <xref:System.Windows.Input.MouseGesture> com um <xref:System.Windows.Input.MouseGesture.Modifiers%2A> propriedade igual a <xref:System.Windows.Input.ModifierKeys.Control> e <xref:System.Windows.Input.MouseGesture.MouseAction%2A> propriedade igual a <xref:System.Windows.Input.MouseAction.RightClick> converte a cadeia de caracteres `Control+RightClick`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destinationType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" />não pode ser convertido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

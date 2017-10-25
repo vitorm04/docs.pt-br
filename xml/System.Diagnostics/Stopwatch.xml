@@ -1,0 +1,663 @@
+<Type Name="Stopwatch" FullName="System.Diagnostics.Stopwatch">
+  <TypeSignature Language="C#" Value="public class Stopwatch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Stopwatch extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Stopwatch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de métodos e propriedades que você pode usar para medir com precisão o tempo decorrido.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para exibir o código-fonte do .NET Framework para este tipo, consulte o [fonte de referência](http://referencesource.microsoft.com/#System/services/monitoring/system/diagnosticts/Stopwatch.cs#ceb0ba9cc88de82e). Percorra o código-fonte online, baixe a referência para exibição offline e percorrer as fontes (incluindo atualizações e patches) durante a depuração; consulte [instruções](http://referencesource.microsoft.com/).  
+  
+ Um <xref:System.Diagnostics.Stopwatch> instância pode medir o tempo decorrido para um intervalo ou o total de tempo decorrido em vários intervalos. Em um típico <xref:System.Diagnostics.Stopwatch> cenário, você chama o <xref:System.Diagnostics.Stopwatch.Start%2A> método, chame eventualmente o <xref:System.Diagnostics.Stopwatch.Stop%2A> método e, em seguida, verifique o tempo decorrido usando o <xref:System.Diagnostics.Stopwatch.Elapsed%2A> propriedade.  
+  
+ Um <xref:System.Diagnostics.Stopwatch> instância está em execução ou parado; use <xref:System.Diagnostics.Stopwatch.IsRunning%2A> para determinar o estado atual de um <xref:System.Diagnostics.Stopwatch>. Use <xref:System.Diagnostics.Stopwatch.Start%2A> para começar a medir o tempo decorrido; use <xref:System.Diagnostics.Stopwatch.Stop%2A> para interromper a medir o tempo decorrido. O valor de tempo decorrido através das propriedades de consulta <xref:System.Diagnostics.Stopwatch.Elapsed%2A>, <xref:System.Diagnostics.Stopwatch.ElapsedMilliseconds%2A>, ou <xref:System.Diagnostics.Stopwatch.ElapsedTicks%2A>. Você pode consultar as propriedades de tempo decorrido, enquanto a instância está em execução ou parado. Durante o tempo decorrido propriedades aumentarem continuamente o <xref:System.Diagnostics.Stopwatch> está em execução; eles permanecem constantes quando a instância é interrompida.  
+  
+ Por padrão, o valor de tempo decorrido de um <xref:System.Diagnostics.Stopwatch> instância é igual ao total de todos os intervalos de tempo medido. Cada chamada para <xref:System.Diagnostics.Stopwatch.Start%2A> começa a contar ao tempo decorrido cumulativo; cada chamada para <xref:System.Diagnostics.Stopwatch.Stop%2A> termina a medição de intervalo atual e congela o valor de tempo decorrido cumulativo. Use o <xref:System.Diagnostics.Stopwatch.Reset%2A> método para limpar o tempo decorrido cumulativo em existente <xref:System.Diagnostics.Stopwatch> instância.  
+  
+ O <xref:System.Diagnostics.Stopwatch> mede o tempo decorrido pela contagem de tiques de timer no mecanismo de temporizador subjacente. Se o hardware instalado e o sistema operacional de um contador de desempenho de alta resolução, oferecer suporte a <xref:System.Diagnostics.Stopwatch> classe usa esse contador para medir o tempo decorrido. Caso contrário, o <xref:System.Diagnostics.Stopwatch> classe usa o timer do sistema para medir o tempo decorrido. Use o <xref:System.Diagnostics.Stopwatch.Frequency> e <xref:System.Diagnostics.Stopwatch.IsHighResolution> campos para determinar a precisão e a resolução do <xref:System.Diagnostics.Stopwatch> implementação de tempo.  
+  
+ O <xref:System.Diagnostics.Stopwatch> classe auxilia a manipulação de contadores de desempenho relacionado à temporização do código gerenciado. Especificamente, o <xref:System.Diagnostics.Stopwatch.Frequency> campo e <xref:System.Diagnostics.Stopwatch.GetTimestamp%2A> método pode ser usado no lugar das APIs do Win32 não gerenciado `QueryPerformanceFrequency` e `QueryPerformanceCounter`.  
+  
+> [!NOTE]
+>  Em um computador multiprocessador, não importa qual processador que o thread é executado no. No entanto, devido a erros no BIOS ou a camada de abstração de Hardware (HAL), você pode obter resultados diferentes em processadores diferentes. Para especificar a afinidade do processador para um segmento, use o <xref:System.Diagnostics.ProcessThread.ProcessorAffinity%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.Stopwatch> classe para determinar o tempo de execução para um aplicativo.  
+  
+ [!code-csharp[System.Diagnostics.Stopwatch#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/CS/source.cs#1)]
+ [!code-vb[System.Diagnostics.Stopwatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/VB/source.vb#1)]  
+  
+ O exemplo a seguir demonstra o uso da <xref:System.Diagnostics.Stopwatch> classe para calcular os dados de desempenho.  
+  
+ [!code-cpp[StopWatchPerfSample#1](~/samples/snippets/cpp/VS_Snippets_CLR/StopWatchPerfSample/CPP/source.cpp#1)]
+ [!code-csharp[StopWatchPerfSample#1](~/samples/snippets/csharp/VS_Snippets_CLR/StopWatchPerfSample/CS/source.cs#1)]
+ [!code-vb[StopWatchPerfSample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/StopWatchPerfSample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Stopwatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Stopwatch.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Stopwatch" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retornado <xref:System.Diagnostics.Stopwatch> instância é interrompida e a propriedade de tempo decorrido da instância é zero.  
+  
+ Use o <xref:System.Diagnostics.Stopwatch.Start%2A> método para começar a medir o tempo decorrido com o novo <xref:System.Diagnostics.Stopwatch> instância. Use o <xref:System.Diagnostics.Stopwatch.StartNew%2A> método para inicializar uma nova <xref:System.Diagnostics.Stopwatch> instância e inicie-o imediatamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa um <xref:System.Diagnostics.Stopwatch> instância usando o construtor de classe simples.  
+  
+ [!code-csharp[System.Diagnostics.Stopwatch#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/CS/source.cs#1)]
+ [!code-vb[System.Diagnostics.Stopwatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elapsed">
+      <MemberSignature Language="C#" Value="public TimeSpan Elapsed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Elapsed" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Stopwatch.Elapsed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tempo total decorrido, medido pela instância atual.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> somente leitura que representa o tempo total decorrido, medido pela instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um típico <xref:System.Diagnostics.Stopwatch> cenário, você chama o <xref:System.Diagnostics.Stopwatch.Start%2A> método, chame eventualmente o <xref:System.Diagnostics.Stopwatch.Stop%2A> método e, em seguida, verifique o tempo decorrido usando o <xref:System.Diagnostics.Stopwatch.Elapsed%2A> propriedade.  
+  
+ Use o <xref:System.Diagnostics.Stopwatch.Elapsed%2A> valor de propriedade para recuperar o tempo decorrido usando <xref:System.TimeSpan> métodos e propriedades. Por exemplo, você pode formatar retornado <xref:System.TimeSpan> instância em uma representação de texto ou passá-lo para outra classe que requer um <xref:System.TimeSpan> parâmetro.  
+  
+ Você pode consultar as propriedades <xref:System.Diagnostics.Stopwatch.Elapsed%2A>, <xref:System.Diagnostics.Stopwatch.ElapsedMilliseconds%2A>, e <xref:System.Diagnostics.Stopwatch.ElapsedTicks%2A> enquanto o <xref:System.Diagnostics.Stopwatch> instância está em execução ou parado. Durante o tempo decorrido propriedades aumentarem continuamente o <xref:System.Diagnostics.Stopwatch> está em execução; eles permanecem constantes quando a instância é interrompida.  
+  
+ Por padrão, o valor de tempo decorrido de um <xref:System.Diagnostics.Stopwatch> instância é igual ao total de todos os intervalos de tempo medido. Cada chamada para <xref:System.Diagnostics.Stopwatch.Start%2A> começa a contar ao tempo decorrido cumulativo; cada chamada para <xref:System.Diagnostics.Stopwatch.Stop%2A> termina a medição de intervalo atual e congela o valor de tempo decorrido cumulativo. Use o <xref:System.Diagnostics.Stopwatch.Reset%2A> método para limpar o tempo decorrido cumulativo em existente <xref:System.Diagnostics.Stopwatch> instância.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.Stopwatch.Elapsed%2A> para determinar o tempo de execução para um aplicativo.  
+  
+ [!code-csharp[System.Diagnostics.Stopwatch#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/CS/source.cs#1)]
+ [!code-vb[System.Diagnostics.Stopwatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElapsedMilliseconds">
+      <MemberSignature Language="C#" Value="public long ElapsedMilliseconds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ElapsedMilliseconds" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Stopwatch.ElapsedMilliseconds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tempo total decorrido, medido pela instância atual, em milissegundos.</summary>
+        <value>Um inteiro longo somente leitura que representa o número total de milissegundos medidos pela instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade representa o tempo decorrido arredondado para baixo para o valor de milissegundo inteiro mais próximo. Para medidas de precisão mais altas, use o <xref:System.Diagnostics.Stopwatch.Elapsed%2A> ou <xref:System.Diagnostics.Stopwatch.ElapsedTicks%2A> propriedades.  
+  
+ Você pode consultar as propriedades <xref:System.Diagnostics.Stopwatch.Elapsed%2A>, <xref:System.Diagnostics.Stopwatch.ElapsedMilliseconds%2A>, e <xref:System.Diagnostics.Stopwatch.ElapsedTicks%2A> enquanto o <xref:System.Diagnostics.Stopwatch> instância está em execução ou parado. Durante o tempo decorrido propriedades aumentarem continuamente o <xref:System.Diagnostics.Stopwatch> está em execução; eles permanecem constantes quando a instância é interrompida.  
+  
+ Por padrão, o valor de tempo decorrido de um <xref:System.Diagnostics.Stopwatch> instância é igual ao total de todos os intervalos de tempo medido. Cada chamada para <xref:System.Diagnostics.Stopwatch.Start%2A> começa a contar ao tempo decorrido cumulativo; cada chamada para <xref:System.Diagnostics.Stopwatch.Stop%2A> termina a medição de intervalo atual e congela o valor de tempo decorrido cumulativo. Use o <xref:System.Diagnostics.Stopwatch.Reset%2A> método para limpar o tempo decorrido cumulativo em existente <xref:System.Diagnostics.Stopwatch> instância.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa a <xref:System.Diagnostics.Stopwatch> classe para medir o desempenho de quatro implementações diferentes para analisar um número inteiro de uma cadeia de caracteres. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.Stopwatch> classe.  
+  
+ [!code-cpp[StopWatchPerfSample#3](~/samples/snippets/cpp/VS_Snippets_CLR/StopWatchPerfSample/CPP/source.cpp#3)]
+ [!code-csharp[StopWatchPerfSample#3](~/samples/snippets/csharp/VS_Snippets_CLR/StopWatchPerfSample/CS/source.cs#3)]
+ [!code-vb[StopWatchPerfSample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/StopWatchPerfSample/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElapsedTicks">
+      <MemberSignature Language="C#" Value="public long ElapsedTicks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ElapsedTicks" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Stopwatch.ElapsedTicks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tempo total decorrido, medido pela instância atual, em tiques do temporizador.</summary>
+        <value>Um inteiro longo somente leitura que representa o número total de tiques do temporizador medidos pela instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade representa o número de tiques decorridos em que o mecanismo subjacente do timer. Um tique é a menor unidade de tempo que o <xref:System.Diagnostics.Stopwatch> timer pode medir. Use o <xref:System.Diagnostics.Stopwatch.Frequency> campo para converter o <xref:System.Diagnostics.Stopwatch.ElapsedTicks%2A> valor em um número de segundos.  
+  
+ Você pode consultar as propriedades <xref:System.Diagnostics.Stopwatch.Elapsed%2A>, <xref:System.Diagnostics.Stopwatch.ElapsedMilliseconds%2A>, e <xref:System.Diagnostics.Stopwatch.ElapsedTicks%2A> enquanto o <xref:System.Diagnostics.Stopwatch> instância está em execução ou parado. Durante o tempo decorrido propriedades aumentarem continuamente o <xref:System.Diagnostics.Stopwatch> está em execução; eles permanecem constantes quando a instância é interrompida.  
+  
+ Por padrão, o valor de tempo decorrido de um <xref:System.Diagnostics.Stopwatch> instância é igual ao total de todos os intervalos de tempo medido. Cada chamada para <xref:System.Diagnostics.Stopwatch.Start%2A> começa a contar ao tempo decorrido cumulativo; cada chamada para <xref:System.Diagnostics.Stopwatch.Stop%2A> termina a medição de intervalo atual e congela o valor de tempo decorrido cumulativo. Use o <xref:System.Diagnostics.Stopwatch.Reset%2A> método para limpar o tempo decorrido cumulativo em existente <xref:System.Diagnostics.Stopwatch> instância.  
+  
+> [!NOTE]
+>  <xref:System.Diagnostics.Stopwatch>tiques são diferentes das <xref:System.DateTime.Ticks%2A?displayProperty=nameWithType>. Cada tique no <xref:System.DateTime.Ticks%2A?displayProperty=nameWithType> valor representa um intervalo de 100 nanossegundos. Cada tique no <xref:System.Diagnostics.Stopwatch.ElapsedTicks%2A> valor representa o intervalo de tempo igual a 1 segundo dividido pelo <xref:System.Diagnostics.Stopwatch.Frequency>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa a <xref:System.Diagnostics.Stopwatch> classe para medir o desempenho de quatro implementações diferentes para analisar um número inteiro de uma cadeia de caracteres. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.Stopwatch> classe.  
+  
+ [!code-cpp[StopWatchPerfSample#4](~/samples/snippets/cpp/VS_Snippets_CLR/StopWatchPerfSample/CPP/source.cpp#4)]
+ [!code-csharp[StopWatchPerfSample#4](~/samples/snippets/csharp/VS_Snippets_CLR/StopWatchPerfSample/CS/source.cs#4)]
+ [!code-vb[StopWatchPerfSample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/StopWatchPerfSample/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Frequency">
+      <MemberSignature Language="C#" Value="public static readonly long Frequency;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int64 Frequency" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Stopwatch.Frequency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a frequência do temporizador como o número de tiques por segundo. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A frequência de timer indica a precisão de timer e resolução. Por exemplo, uma frequência de timer de 2 milhões tiques por segundo é igual a uma resolução do timer de 500 nanossegundos por tique. Em outras palavras, como um segundo é igual a 1 bilhão nanossegundos, uma frequência de timer de 2 milhões de tiques por segundo é equivalente a 2 milhões de tiques por 1 bilhão nanossegundos, que podem ser simplificados para 1 tique por 500 nanossegundos.  
+  
+ O <xref:System.Diagnostics.Stopwatch.Frequency> valor depende da resolução do mecanismo de tempo subjacente. Se o hardware instalado e o sistema operacional de um contador de desempenho de alta resolução, oferecer suporte a <xref:System.Diagnostics.Stopwatch.Frequency> valor reflete a frequência de contador. Caso contrário, o <xref:System.Diagnostics.Stopwatch.Frequency> valor é baseado na frequência de timer de sistema.  
+  
+ Porque o <xref:System.Diagnostics.Stopwatch> frequência depende do hardware instalado e o sistema operacional, o <xref:System.Diagnostics.Stopwatch.Frequency> valor permanece constante enquanto o sistema está em execução.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe a frequência e a resolução de um <xref:System.Diagnostics.Stopwatch> timer. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.Stopwatch> classe.  
+  
+ [!code-cpp[StopWatchPerfSample#2](~/samples/snippets/cpp/VS_Snippets_CLR/StopWatchPerfSample/CPP/source.cpp#2)]
+ [!code-csharp[StopWatchPerfSample#2](~/samples/snippets/csharp/VS_Snippets_CLR/StopWatchPerfSample/CS/source.cs#2)]
+ [!code-vb[StopWatchPerfSample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/StopWatchPerfSample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTimestamp">
+      <MemberSignature Language="C#" Value="public static long GetTimestamp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 GetTimestamp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Stopwatch.GetTimestamp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o número de tiques atual no mecanismo de temporizador.</summary>
+        <returns>Um inteiro longo que representa o valor do contador de tiques do mecanismo de temporizador subjacente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Diagnostics.Stopwatch> classe usa um contador de desempenho de alta resolução, <xref:System.Diagnostics.Stopwatch.GetTimestamp%2A> retorna o valor atual do contador. Se o <xref:System.Diagnostics.Stopwatch> classe usa o timer do sistema, <xref:System.Diagnostics.Stopwatch.GetTimestamp%2A> retorna atual <xref:System.DateTime.Ticks%2A?displayProperty=nameWithType> propriedade o <xref:System.DateTime.Now%2A?displayProperty=nameWithType> instância.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Diagnostics.Stopwatch.GetTimestamp%2A> para atualizar um contador de desempenho.  
+  
+ [!code-cpp[PerformanceCounterType.ElapsedTime#2](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.ElapsedTime/CPP/elapsedtime.cpp#2)]
+ [!code-csharp[PerformanceCounterType.ElapsedTime#2](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.ElapsedTime/CS/elapsedtime.cs#2)]
+ [!code-vb[PerformanceCounterType.ElapsedTime#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.ElapsedTime/VB/elapsedtime.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHighResolution">
+      <MemberSignature Language="C#" Value="public static readonly bool IsHighResolution;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly bool IsHighResolution" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Stopwatch.IsHighResolution" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o timer é baseado em um contador de desempenho de alta resolução. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O timer usado pela <xref:System.Diagnostics.Stopwatch> classe depende do hardware do sistema e o sistema operacional. <xref:System.Diagnostics.Stopwatch.IsHighResolution>é `true` se o <xref:System.Diagnostics.Stopwatch> timer baseia-se em um contador de desempenho de alta resolução. Caso contrário, <xref:System.Diagnostics.Stopwatch.IsHighResolution> é `false`, que indica que o <xref:System.Diagnostics.Stopwatch> timer se baseia o timer do sistema.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe a frequência e a resolução de um <xref:System.Diagnostics.Stopwatch> timer. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.Stopwatch> classe.  
+  
+ [!code-cpp[StopWatchPerfSample#2](~/samples/snippets/cpp/VS_Snippets_CLR/StopWatchPerfSample/CPP/source.cpp#2)]
+ [!code-csharp[StopWatchPerfSample#2](~/samples/snippets/csharp/VS_Snippets_CLR/StopWatchPerfSample/CS/source.cs#2)]
+ [!code-vb[StopWatchPerfSample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/StopWatchPerfSample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunning">
+      <MemberSignature Language="C#" Value="public bool IsRunning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRunning" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Stopwatch.IsRunning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o temporizador de <see cref="T:System.Diagnostics.Stopwatch" /> está em execução.</summary>
+        <value>
+          <see langword="true" /> se a instância de <see cref="T:System.Diagnostics.Stopwatch" /> estiver em execução e medindo o tempo decorrido com relação a um intervalo; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Diagnostics.Stopwatch> instância começa a execução com uma chamada para <xref:System.Diagnostics.Stopwatch.Start%2A> ou <xref:System.Diagnostics.Stopwatch.StartNew%2A>. As paradas de instância em execução com uma chamada para <xref:System.Diagnostics.Stopwatch.Stop%2A> ou <xref:System.Diagnostics.Stopwatch.Reset%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Stopwatch.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe a medida de intervalo de tempo e redefine o tempo decorrido para zero.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Diagnostics.Stopwatch> instância calcula e retém o tempo decorrido cumulativo em vários intervalos de tempo, até que a instância seja redefinida. Use <xref:System.Diagnostics.Stopwatch.Stop%2A> para interromper a medição de intervalo atual e mantenha o valor de tempo decorrido cumulativo. Use <xref:System.Diagnostics.Stopwatch.Reset%2A> parar qualquer medida de intervalo em andamento e limpar o valor de tempo decorrido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Restart">
+      <MemberSignature Language="C#" Value="public void Restart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Restart() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Stopwatch.Restart" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe a medida de tempo de intervalo, redefine o tempo decorrido para zero e começa a medir o tempo decorrido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Diagnostics.Stopwatch> instância calcula e retém o tempo decorrido cumulativo em vários intervalos de tempo, até que a instância seja redefinida ou reiniciada. Use <xref:System.Diagnostics.Stopwatch.Stop%2A> para interromper a medição de intervalo atual e mantenha o valor de tempo decorrido cumulativo. Use <xref:System.Diagnostics.Stopwatch.Reset%2A> parar qualquer medida de intervalo em andamento e limpar o valor de tempo decorrido. Use <xref:System.Diagnostics.Stopwatch.Restart%2A> para interromper a medição de intervalo atual e iniciar uma nova medida de intervalo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Stopwatch.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia ou retoma a medição do tempo decorrido de um intervalo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um típico <xref:System.Diagnostics.Stopwatch> cenário, você chama o <xref:System.Diagnostics.Stopwatch.Start%2A> método, chame eventualmente o <xref:System.Diagnostics.Stopwatch.Stop%2A> método e, em seguida, verifique o tempo decorrido usando o <xref:System.Diagnostics.Stopwatch.Elapsed%2A> propriedade.  
+  
+ Uma vez iniciada, um <xref:System.Diagnostics.Stopwatch> timer mede o intervalo atual, em tiques de timer decorrido, até que a instância é interrompida ou redefinir. Iniciando um <xref:System.Diagnostics.Stopwatch> que é já em execução não alterar o estado do temporizador ou redefinir as propriedades de tempo decorrido.  
+  
+ Quando um <xref:System.Diagnostics.Stopwatch> instância medidas mais de um intervalo, o <xref:System.Diagnostics.Stopwatch.Start%2A> método retoma a medição de tempo do valor atual de tempo decorrido. Um <xref:System.Diagnostics.Stopwatch> instância calcula e retém o tempo decorrido cumulativo em vários intervalos de tempo, até que a instância seja redefinida. Use o <xref:System.Diagnostics.Stopwatch.Reset%2A> método antes de chamar <xref:System.Diagnostics.Stopwatch.Start%2A> para limpar o tempo decorrido cumulativo em um <xref:System.Diagnostics.Stopwatch> instância. Use o <xref:System.Diagnostics.Stopwatch.Restart%2A> método <xref:System.Diagnostics.Stopwatch.Reset%2A> e <xref:System.Diagnostics.Stopwatch.Start%2A> o <xref:System.Diagnostics.Stopwatch> com um único comando.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.Stopwatch.Start%2A> método para iniciar um temporizador que mede o tempo de execução de um aplicativo.  
+  
+ [!code-csharp[System.Diagnostics.Stopwatch#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/CS/source.cs#1)]
+ [!code-vb[System.Diagnostics.Stopwatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartNew">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.Stopwatch StartNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.Stopwatch StartNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Stopwatch.StartNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Stopwatch</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância <see cref="T:System.Diagnostics.Stopwatch" />, define a propriedade de tempo decorrido como zero e começa a medir o tempo decorrido.</summary>
+        <returns>Um <see cref="T:System.Diagnostics.Stopwatch" /> que acabou de iniciar a medição de tempo decorrido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é equivalente a chamar o <xref:System.Diagnostics.Stopwatch> construtor e, em seguida, chamar <xref:System.Diagnostics.Stopwatch.Start%2A> na nova instância.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa a <xref:System.Diagnostics.Stopwatch> classe para medir o desempenho de quatro implementações diferentes para analisar um número inteiro de uma cadeia de caracteres. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.Stopwatch> classe.  
+  
+ [!code-cpp[StopWatchPerfSample#4](~/samples/snippets/cpp/VS_Snippets_CLR/StopWatchPerfSample/CPP/source.cpp#4)]
+ [!code-csharp[StopWatchPerfSample#4](~/samples/snippets/csharp/VS_Snippets_CLR/StopWatchPerfSample/CS/source.cs#4)]
+ [!code-vb[StopWatchPerfSample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/StopWatchPerfSample/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Stopwatch.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para a medição do tempo decorrido de um intervalo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um típico <xref:System.Diagnostics.Stopwatch> cenário, você chama o <xref:System.Diagnostics.Stopwatch.Start%2A> método, chame eventualmente o <xref:System.Diagnostics.Stopwatch.Stop%2A> método e, em seguida, verifique o tempo decorrido usando o <xref:System.Diagnostics.Stopwatch.Elapsed%2A> propriedade.  
+  
+ O <xref:System.Diagnostics.Stopwatch.Stop%2A> método termina a medição de intervalo de tempo atual. Interrompendo um <xref:System.Diagnostics.Stopwatch> que é não está em execução não alterar o estado do temporizador ou redefinir as propriedades de tempo decorrido.  
+  
+ Quando um <xref:System.Diagnostics.Stopwatch> instância medidas mais de um intervalo, o <xref:System.Diagnostics.Stopwatch.Stop%2A> método é equivalente ao pausar a medida de tempo decorrido. Uma chamada subsequente para <xref:System.Diagnostics.Stopwatch.Start%2A> retoma a medição de tempo do valor atual de tempo decorrido. Use o <xref:System.Diagnostics.Stopwatch.Reset%2A> método para limpar o tempo decorrido cumulativo em um <xref:System.Diagnostics.Stopwatch> instância.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.Stopwatch.Stop%2A> método para interromper um temporizador que mede o tempo de execução de um aplicativo.  
+  
+ [!code-csharp[System.Diagnostics.Stopwatch#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/CS/source.cs#1)]
+ [!code-vb[System.Diagnostics.Stopwatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.Stopwatch/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

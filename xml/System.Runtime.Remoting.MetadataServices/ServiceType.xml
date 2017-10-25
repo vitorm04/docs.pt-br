@@ -1,0 +1,100 @@
+<Type Name="ServiceType" FullName="System.Runtime.Remoting.MetadataServices.ServiceType">
+  <TypeSignature Language="C#" Value="public class ServiceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.MetadataServices.ServiceType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Associa um tipo de objeto conhecido é passado para o gerador de WSDL Web Services Description Language () com um ponto de extremidade que pode processar as mensagens enviadas para um método do tipo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.MetadataServices.ServiceType> classe é usada para armazenar informações que são especificadas na linha de comando para o [Soapsuds ferramenta (Soapsuds.exe)](http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5) por meio de `-types` argumento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.ServiceType.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O objeto <see cref="T:System.Type" /> que é passado para o gerador de WSDL.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> classe com o objeto <see cref="T:System.Type" /> que é passado para o gerador de WSDL Web Services Description Language ().</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceType (Type type, string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.ServiceType.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O objeto <see cref="T:System.Type" /> que é passado para o gerador de WSDL.</param>
+        <param name="url">O ponto de extremidade bem conhecido que possa processar mensagens que são enviadas a um método no tipo de objeto que é especificado no <c>tipo</c> parâmetro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> classe com a URL e <see cref="T:System.Type" /> de um objeto que é passado para o gerador de WSDL Web Services Description Language ().</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public Type ObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.MetadataServices.ServiceType.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Type" /> que é passado para o gerador de WSDL Web Services Description Language ().</summary>
+        <value>O objeto <see cref="T:System.Type" /> que atual <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> foi criado para.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.MetadataServices.ServiceType.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL de um objeto <see cref="T:System.Type" /> que é passado para o gerador de WSDL Web Services Description Language ().</summary>
+        <value>A URL de um objeto <see cref="T:System.Type" /> que atual <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> foi criado para.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

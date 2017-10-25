@@ -1,0 +1,1369 @@
+<Type Name="SqlBinary" FullName="System.Data.SqlTypes.SqlBinary">
+  <TypeSignature Language="C#" Value="public struct SqlBinary : IComparable, System.Data.SqlTypes.INullable, System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit SqlBinary extends System.ValueType implements class System.Data.SqlTypes.INullable, class System.IComparable, class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlTypes.SqlBinary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.SqlTypes.INullable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlSchemaProvider("GetXsdType")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um fluxo de tamanho variável de dados binários a ser armazenado ou recuperado de um banco de dados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlBinary (byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">A matriz de bytes a serem armazenadas ou recuperado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura, definindo o <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> propriedade para o conteúdo da matriz de bytes fornecido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBinary Add (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBinary Add(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.Add(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Um <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Um <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Concatena duas especificado <see cref="T:System.Data.SqlTypes.SqlBinary" /> valores para criar um novo <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBinary" /> que é o valor concatenado de x e y.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `x`aparecerão primeiro na resultante <xref:System.Data.SqlTypes.SqlBinary>, seguido por `y`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CompareTo">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Compara essa instância com um objeto especificado e retorna uma indicação dos valores relativos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado para dar suporte a <xref:System.IComparable> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (System.Data.SqlTypes.SqlBinary value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 CompareTo(valuetype System.Data.SqlTypes.SqlBinary value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.CompareTo(System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto a ser comparado a este <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura.</param>
+        <summary>Compara este <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto fornecido <see cref="T:System.Data.SqlTypes.SqlBinary" /> de objeto e retorna uma indicação de seus valores relativos.</summary>
+        <returns>Um número assinado que indica os valores relativos deste <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura e o objeto.  
+  
+ <list type="table"><listheader><term>Valor de retorno  
+  
+ </term><description>Condição  
+  
+ </description></listheader><item><term>Menor que zero  
+  
+ </term><description>O valor deste <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto é menor que o objeto.  
+  
+ </description></item><item><term>Zero  
+  
+ </term><description>Isso <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto é o mesmo objeto.  
+  
+ </description></item><item><term>Maior que zero  
+  
+ </term><description>Isso <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto é maior que o objeto.  
+  
+ -ou-  
+  
+ O objeto é uma referência nula.  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser comparado a este <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura.</param>
+        <summary>Compara este <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto para o objeto fornecido e retorna uma indicação de seus valores relativos.</summary>
+        <returns>Um número assinado que indica os valores relativos deste <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura e o objeto.  
+  
+ <list type="table"><listheader><term>Valor de retorno  
+  
+ </term><description>Condição  
+  
+ </description></listheader><item><term>Menor que zero  
+  
+ </term><description>O valor deste <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto é menor que o objeto.  
+  
+ </description></item><item><term>Zero  
+  
+ </term><description>Isso <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto é o mesmo objeto.  
+  
+ </description></item><item><term>Maior que zero  
+  
+ </term><description>Isso <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto é maior que o objeto.  
+  
+ -ou-  
+  
+ O objeto é uma referência nula.  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Concat">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBinary Concat (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBinary Concat(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.Concat(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Concatena duas <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para criar um novo <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura.</summary>
+        <returns>Os valores concatenados do <paramref name="x" /> e <paramref name="y" /> parâmetros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser comparado.</param>
+        <summary>Compara o parâmetro de objeto fornecido com a propriedade <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> do objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</summary>
+        <returns>
+          <see langword="true" />Se o objeto é uma instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> e os dois são iguais; caso contrário <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean Equals (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean Equals(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.Equals(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se eles são iguais.</summary>
+        <returns>
+          <see langword="true" />Se os dois valores forem iguais. Caso contrário, <see langword="false" />. Se a instância for nula, o <see langword="SqlBinary" /> será nulo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXsdType">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlQualifiedName GetXsdType (System.Xml.Schema.XmlSchemaSet schemaSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlQualifiedName GetXsdType(class System.Xml.Schema.XmlSchemaSet schemaSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.GetXsdType(System.Xml.Schema.XmlSchemaSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaSet" Type="System.Xml.Schema.XmlSchemaSet" />
+      </Parameters>
+      <Docs>
+        <param name="schemaSet">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
+        <summary>Retorna a linguagem de definição de esquema XML (XSD) especificada <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <returns>Um <see langword="string" /> que indica o XSD especificado <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean GreaterThan (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean GreaterThan(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.GreaterThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se a primeira é maior que o segundo.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se a primeira instância for maior que a segunda instância. Caso contrário, <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean GreaterThanOrEqual (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean GreaterThanOrEqual(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se a primeira é maior que ou igual à segunda.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se a primeira instância é maior que ou igual à segunda instância. Caso contrário, <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlBinary.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se este <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura é nula. Esta propriedade é somente para leitura.</summary>
+        <value>
+          <see langword="true" /> se <see langword="null" />, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [tratar valores nulos](~/docs/framework/data/adonet/sql/handling-null-values.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public byte this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlBinary.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição de bytes a serem recuperados.</param>
+        <summary>Obtém um único byte do <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> propriedade localizada na posição indicada pelo parâmetro inteiro, <paramref name="index" />. Se <paramref name="index" /> indica uma posição além do fim da matriz de bytes, um <see cref="T:System.Data.SqlTypes.SqlNullValueException" /> será gerado. Esta propriedade é somente para leitura.</summary>
+        <value>O byte localizado na posição indicada pelo parâmetro inteiro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar gerar um <xref:System.Data.SqlTypes.SqlNullValueException>, sempre examinar o <xref:System.Data.SqlTypes.SqlBinary.IsNull%2A> propriedade e o <xref:System.Data.SqlTypes.SqlBinary.Length%2A> propriedade antes de ler esta propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">A propriedade é leitura quando o <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> propriedade contém<see cref="F:System.Data.SqlTypes.SqlBinary.Null" />  
+  
+ \- ou -  
+  
+ O <paramref name="index" /> parâmetro indica uma posição byond o comprimento da matriz de bytes, conforme indicado pelo <see cref="P:System.Data.SqlTypes.SqlBinary.Length" /> propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlBinary.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento em bytes do <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> propriedade. Esta propriedade é somente para leitura.</summary>
+        <value>O comprimento dos dados binários no <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar gerar um <xref:System.Data.SqlTypes.SqlNullValueException>, sempre examinar o <xref:System.Data.SqlTypes.SqlBinary.IsNull%2A> propriedade antes da leitura de <xref:System.Data.SqlTypes.SqlBinary.Length%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">O <see cref="P:System.Data.SqlTypes.SqlBinary.Length" /> propriedade é leitura quando o <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> propriedade contém <see cref="F:System.Data.SqlTypes.SqlBinary.Null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean LessThan (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean LessThan(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.LessThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se a primeira for menor que o segundo.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se a primeira instância for menor que a segunda instância. Caso contrário, <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean LessThanOrEqual (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean LessThanOrEqual(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.LessThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se a primeira é menor ou igual à segunda.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se a primeira instância é menor ou igual à segunda instância. Caso contrário, <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEquals">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean NotEquals (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.SqlTypes.SqlBoolean NotEquals(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.NotEquals(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se eles não são iguais.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se as duas instâncias não forem iguais ou <see cref="F:System.Data.SqlTypes.SqlBoolean.False" /> se duas instâncias são iguais. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.SqlTypes.SqlBinary Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.SqlTypes.SqlBinary Null" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlTypes.SqlBinary.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBinary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.DBNull" /> que pode ser atribuído a essa instância da estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`funciona como uma constante para o <xref:System.Data.SqlTypes.SqlBinary> estrutura. Para obter mais informações, consulte [tratar valores nulos](~/docs/framework/data/adonet/sql/handling-null-values.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBinary operator + (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBinary op_Addition(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_Addition(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Concatena dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> parâmetros para criar um novo <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura.</summary>
+        <returns>Os valores concatenados do <paramref name="x" /> e <paramref name="y" /> parâmetros.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `x`aparecerão primeiro na resultante <xref:System.Data.SqlTypes.SqlBinary>, seguido por `y`.  
+  
+ O método equivalente para esse operador é<xref:System.Data.SqlTypes.SqlBinary.Concat%28System.Data.SqlTypes.SqlBinary%2CSystem.Data.SqlTypes.SqlBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator == (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_Equality(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_Equality(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se eles são iguais.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se duas instâncias são iguais ou <see cref="F:System.Data.SqlTypes.SqlBoolean.False" /> se as duas instâncias não são iguais. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.SqlTypes.SqlBinary.Equals%28System.Data.SqlTypes.SqlBinary%2CSystem.Data.SqlTypes.SqlBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator byte[] (System.Data.SqlTypes.SqlBinary x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname unsigned int8[] op_Explicit(valuetype System.Data.SqlTypes.SqlBinary x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_Explicit(System.Data.SqlTypes.SqlBinary)~System.Byte[]" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Data.SqlTypes.SqlBinary (System.Data.SqlTypes.SqlGuid x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBinary op_Explicit(valuetype System.Data.SqlTypes.SqlGuid x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_Explicit(System.Data.SqlTypes.SqlGuid)~System.Data.SqlTypes.SqlBinary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlGuid" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator &gt; (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_GreaterThan(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_GreaterThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se a primeira é maior que o segundo.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se a primeira instância for maior que a segunda instância. Caso contrário, <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.SqlTypes.SqlBinary.GreaterThan%28System.Data.SqlTypes.SqlBinary%2CSystem.Data.SqlTypes.SqlBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator &gt;= (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_GreaterThanOrEqual(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_GreaterThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> structues para determinar se a primeira é maior que ou igual à segunda.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se a primeira instância é maior que ou igual à segunda instância. Caso contrário, <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.SqlTypes.SqlBinary.GreaterThanOrEqual%28System.Data.SqlTypes.SqlBinary%2CSystem.Data.SqlTypes.SqlBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Data.SqlTypes.SqlBinary (byte[] x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBinary op_Implicit(unsigned int8[] x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_Implicit(System.Byte[])~System.Data.SqlTypes.SqlBinary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBinary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator != (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_Inequality(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_Inequality(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se eles não são iguais.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se as duas instâncias não forem iguais ou <see cref="F:System.Data.SqlTypes.SqlBoolean.False" /> se duas instâncias são iguais. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.SqlTypes.SqlBinary.NotEquals%28System.Data.SqlTypes.SqlBinary%2CSystem.Data.SqlTypes.SqlBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator &lt; (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_LessThan(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_LessThan(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se a primeira for menor que o segundo.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se a primeira instância for menor que a segunda instância. Caso contrário, <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.SqlTypes.SqlBinary.LessThan%28System.Data.SqlTypes.SqlBinary%2CSystem.Data.SqlTypes.SqlBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.SqlTypes.SqlBoolean operator &lt;= (System.Data.SqlTypes.SqlBinary x, System.Data.SqlTypes.SqlBinary y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.SqlTypes.SqlBoolean op_LessThanOrEqual(valuetype System.Data.SqlTypes.SqlBinary x, valuetype System.Data.SqlTypes.SqlBinary y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.op_LessThanOrEqual(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.SqlTypes.SqlBinary" />
+        <Parameter Name="y" Type="System.Data.SqlTypes.SqlBinary" />
+      </Parameters>
+      <Docs>
+        <param name="x">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <param name="y">Um objeto <see cref="T:System.Data.SqlTypes.SqlBinary" />.</param>
+        <summary>Compara dois <see cref="T:System.Data.SqlTypes.SqlBinary" /> estruturas para determinar se a primeira é menor ou igual à segunda.</summary>
+        <returns>Um <see cref="T:System.Data.SqlTypes.SqlBoolean" /> que é <see cref="F:System.Data.SqlTypes.SqlBoolean.True" /> se a primeira instância é menor ou igual à segunda instância. Caso contrário, <see cref="F:System.Data.SqlTypes.SqlBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.SqlTypes.SqlBinary" /> for nulo, o <see cref="P:System.Data.SqlTypes.SqlBoolean.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBoolean" /> será <see cref="F:System.Data.SqlTypes.SqlBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.SqlTypes.SqlBinary.LessThanOrEqual%28System.Data.SqlTypes.SqlBinary%2CSystem.Data.SqlTypes.SqlBinary%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.GetSchema">
+      <MemberSignature Language="C#" Value="System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema System.Xml.Serialization.IXmlSerializable.GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.System#Xml#Serialization#IXmlSerializable#GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.Serialization.IXmlSerializable.GetSchema" />.</summary>
+        <returns>Uma instância <see cref="T:System.Xml.Schema.XMLSchema" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.SqlTypes.SqlBinary> é convertida em uma interface de <xref:System.Xml.Serialization.IXmlSerializable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.ReadXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.System#Xml#Serialization#IXmlSerializable#ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.SqlTypes.SqlBinary> é convertida em uma interface de <xref:System.Xml.Serialization.IXmlSerializable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.WriteXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.System#Xml#Serialization#IXmlSerializable#WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.SqlTypes.SqlBinary> é convertida em uma interface de <xref:System.Xml.Serialization.IXmlSerializable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSqlGuid">
+      <MemberSignature Language="C#" Value="public System.Data.SqlTypes.SqlGuid ToSqlGuid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.SqlTypes.SqlGuid ToSqlGuid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.ToSqlGuid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlTypes.SqlGuid</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte essa instância do <see cref="T:System.Data.SqlTypes.SqlBinary" /> para <see cref="T:System.Data.SqlTypes.SqlGuid" />.</summary>
+        <returns>Uma estrutura <see cref="T:System.Data.SqlTypes.SqlGuid" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlBinary.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte essa <see cref="T:System.Data.SqlTypes.SqlBinary" /> objeto como uma cadeia de caracteres.</summary>
+        <returns>Uma cadeia de caracteres que contém o <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> do <see cref="T:System.Data.SqlTypes.SqlBinary" />. Se o <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> é null conterá a cadeia de caracteres "null".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public byte[] Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlTypes.SqlBinary.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor da estrutura <see cref="T:System.Data.SqlTypes.SqlBinary" />. Esta propriedade é somente para leitura.</summary>
+        <value>O valor de <see cref="T:System.Data.SqlTypes.SqlBinary" /> estrutura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar gerar um SqlNullValueException, sempre examinar o <xref:System.Data.SqlTypes.SqlBinary.IsNull%2A> propriedade antes da leitura de <xref:System.Data.SqlTypes.SqlBinary.Value%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.SqlTypes.SqlNullValueException">O <see cref="P:System.Data.SqlTypes.SqlBinary.Value" /> propriedade é leitura quando a propriedade contém <see cref="F:System.Data.SqlTypes.SqlBinary.Null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

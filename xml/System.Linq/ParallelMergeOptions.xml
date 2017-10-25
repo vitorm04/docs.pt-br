@@ -1,0 +1,143 @@
+<Type Name="ParallelMergeOptions" FullName="System.Linq.ParallelMergeOptions">
+  <TypeSignature Language="C#" Value="public enum ParallelMergeOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ParallelMergeOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.ParallelMergeOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Parallel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo preferencial de *mesclagem de saída* a ser usado em uma consulta. Em outras palavras, ele indica como o PLINQ deve mesclar os resultados de várias partições novamente em uma sequência de resultados. Isso é apenas uma dica e pode não ser respeitado pelo sistema ao paralelizar todas as consultas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use `NotBuffered` para consultas que serão consumidas e como fluxos de saída, isso tem a menor latência entre a execução de consulta de início e elementos que estão sendo gerou. Para algumas consultas, como os que envolvem uma classificação (OrderBy, OrderByDescending), o buffer é essencial e uma dica de NotBuffered ou AutoBuffered será ignorada. No entanto, as consultas que são criadas usando o operador AsOrdered podem ser transmitidas como nenhuma classificação adicional é executada na própria consulta.  
+  
+ Use `AutoBuffered` na maioria dos casos; esse é o padrão. Apresenta um equilíbrio entre a latência e o desempenho geral.  
+  
+ Use `FullyBuffered` para consultas quando toda a saída pode ser processada antes que as informações são necessárias. Essa opção oferece o melhor desempenho quando toda a saída pode ser acumuladas antes gerando qualquer informação, embora ele não é adequado para o fluxo de processamento ou a exibição parcial resultados de consulta intermediário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoBuffered">
+      <MemberSignature Language="C#" Value="AutoBuffered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Linq.ParallelMergeOptions AutoBuffered = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Linq.ParallelMergeOptions.AutoBuffered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.ParallelMergeOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usar uma mesclagem com buffers de saída de um tamanho escolhido pelo sistema. Os resultados acumularão em um buffer de saída antes de estarem disponíveis para o consumidor da consulta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Linq.ParallelMergeOptions Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Linq.ParallelMergeOptions.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.ParallelMergeOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usar o tipo de mesclagem padrão, que é AutoBuffered.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullyBuffered">
+      <MemberSignature Language="C#" Value="FullyBuffered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Linq.ParallelMergeOptions FullyBuffered = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Linq.ParallelMergeOptions.FullyBuffered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.ParallelMergeOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usar uma mesclagem com buffers de saída cheios. O sistema acumulará todos os resultados antes de disponibilizá-los para o consumidor da consulta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotBuffered">
+      <MemberSignature Language="C#" Value="NotBuffered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Linq.ParallelMergeOptions NotBuffered = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Linq.ParallelMergeOptions.NotBuffered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.ParallelMergeOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usar uma mesclagem sem buffers de saída. Assim que os elementos de resultado tiverem sido computados, disponibilizar esse elemento para o consumidor na consulta.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

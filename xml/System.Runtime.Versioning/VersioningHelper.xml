@@ -1,0 +1,132 @@
+<Type Name="VersioningHelper" FullName="System.Runtime.Versioning.VersioningHelper">
+  <TypeSignature Language="C#" Value="public static class VersioningHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit VersioningHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Versioning.VersioningHelper" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para ajudar os desenvolvedores a escrever código de segurança da versão. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é destinada para facilitar o uso do <xref:System.Runtime.Versioning.ResourceConsumptionAttribute> e <xref:System.Runtime.Versioning.ResourceExposureAttribute> classes.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="MakeVersionSafeName">
+      <MemberSignature Language="C#" Value="public static string MakeVersionSafeName (string name, System.Runtime.Versioning.ResourceScope from, System.Runtime.Versioning.ResourceScope to);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string MakeVersionSafeName(string name, valuetype System.Runtime.Versioning.ResourceScope from, valuetype System.Runtime.Versioning.ResourceScope to) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.VersioningHelper.MakeVersionSafeName(System.String,System.Runtime.Versioning.ResourceScope,System.Runtime.Versioning.ResourceScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="from" Type="System.Runtime.Versioning.ResourceScope" />
+        <Parameter Name="to" Type="System.Runtime.Versioning.ResourceScope" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso.</param>
+        <param name="from">O escopo do recurso.</param>
+        <param name="to">O escopo de consumo de recurso desejado.</param>
+        <summary>Retorna um nome de versão de segurança com base no nome do recurso especificado e a fonte de consumo de recurso pretendido.</summary>
+        <returns>Um nome de versão-safe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome original será retornado com um sufixo relacionados do escopo. O sufixo pode incluir a identidade do processo atual <xref:System.AppDomain> identidade ou ambos.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MakeVersionSafeName">
+      <MemberSignature Language="C#" Value="public static string MakeVersionSafeName (string name, System.Runtime.Versioning.ResourceScope from, System.Runtime.Versioning.ResourceScope to, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string MakeVersionSafeName(string name, valuetype System.Runtime.Versioning.ResourceScope from, valuetype System.Runtime.Versioning.ResourceScope to, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.VersioningHelper.MakeVersionSafeName(System.String,System.Runtime.Versioning.ResourceScope,System.Runtime.Versioning.ResourceScope,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="from" Type="System.Runtime.Versioning.ResourceScope" />
+        <Parameter Name="to" Type="System.Runtime.Versioning.ResourceScope" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso.</param>
+        <param name="from">O início do intervalo do escopo.</param>
+        <param name="to">O fim do intervalo do escopo.</param>
+        <param name="type">O <see cref="T:System.Type" /> do recurso.</param>
+        <summary>Retorna um nome de versão de segurança com base no nome de recurso especificado, o escopo de consumo de recurso pretendido e o tipo usando o recurso.</summary>
+        <returns>Um nome de versão-safe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome original será retornado com um sufixo relacionados do escopo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Os valores para <paramref name="from" /> e <paramref name="to" /> são inválidos. O tipo de recurso no <see cref="T:System.Runtime.Versioning.ResourceScope" /> enumeração está indo de um tipo de recurso mais restritivo para um tipo de recurso mais geral.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

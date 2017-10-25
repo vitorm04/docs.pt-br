@@ -1,0 +1,204 @@
+<Type Name="XamlDuplicateMemberException" FullName="System.Xaml.XamlDuplicateMemberException">
+  <TypeSignature Language="C#" Value="public class XamlDuplicateMemberException : System.Xaml.XamlException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit XamlDuplicateMemberException extends System.Xaml.XamlException" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlDuplicateMemberException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é lançada quando um gravador XAML tenta gravar um valor para um membro duplicado no mesmo nó do objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tratar essa exceção de um fluxo do nó XAML, membros podem ser relatados como duplicatas em diversas situações possíveis. Por exemplo, um elemento de propriedade explícitas para uma propriedade de conteúdo XAML pode ser precedido por um espaço em branco é interpretado como o conteúdo, se a coleção é um espaço em branco significativo. Ou o gravador XAML pode estar tentando redefinir a propriedade que em vez disso, deve estar usando um `GetObject` valor padrão. Se você analisar nós individuais no fluxo do nó XAML, você geralmente pode determinar a origem do problema.  
+  
+ Se um gravador de objeto XAML fornece um tratamento especial para membros duplicados, pode impedir algumas exceções de membro duplicados se você especificar <xref:System.Xaml.XamlObjectWriterSettings.SkipDuplicatePropertyCheck%2A> como `true` na <xref:System.Xaml.XamlObjectWriterSettings> que inicializar o <xref:System.Xaml.XamlObjectWriter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlDuplicateMemberException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDuplicateMemberException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xaml.XamlDuplicateMemberException" /> com uma mensagem fornecida pelo sistema que descreve o erro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlDuplicateMemberException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDuplicateMemberException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve a exceção. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlDuplicateMemberException" /> classe com uma mensagem especificada que descreve o erro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XamlDuplicateMemberException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDuplicateMemberException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xaml.XamlDuplicateMemberException" /> com dados serializados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlDuplicateMemberException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDuplicateMemberException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve a exceção. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual. Se o <c>innerException</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xaml.XamlDuplicateMemberException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlDuplicateMemberException (System.Xaml.XamlMember member, System.Xaml.XamlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlMember member, class System.Xaml.XamlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDuplicateMemberException.#ctor(System.Xaml.XamlMember,System.Xaml.XamlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.Xaml.XamlMember" />
+        <Parameter Name="type" Type="System.Xaml.XamlType" />
+      </Parameters>
+      <Docs>
+        <param name="member">O identificador de membro XAML ao relatório.</param>
+        <param name="type">O identificador de tipo XAML para o relatório como o tipo de pai.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlDuplicateMemberException" /> classe com as informações relevantes de membro e o tipo de relatório.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DuplicateMember">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlMember DuplicateMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlMember DuplicateMember" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlDuplicateMemberException.DuplicateMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlMember</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de membro XAML para a propriedade de relatório como uma duplicata.</summary>
+        <value>O <see cref="T:System.Xaml.XamlMember" /> objeto (identificador de membro XAML) para o relatório.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDuplicateMemberException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xaml.XamlDuplicateMemberException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção que é transmitido em um fluxo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentType">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlType ParentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType ParentType" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlDuplicateMemberException.ParentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de tipo XAML para o relatório como o tipo de pai.</summary>
+        <value>O <see cref="T:System.Xaml.XamlType" /> objeto (identificador de tipo XAML) para o relatório como o tipo de pai.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

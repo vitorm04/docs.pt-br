@@ -1,0 +1,55 @@
+<Type Name="XmlValueGetter" FullName="System.Xml.Schema.XmlValueGetter">
+  <TypeSignature Language="C#" Value="public delegate object XmlValueGetter();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlValueGetter extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlValueGetter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Object</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Um <see langword="delegate" /> usado pelo <see cref="T:System.Xml.Schema.XmlSchemaValidator" /> classe passar valores de atributo, texto e espaços em branco como um tipo de tempo de execução de linguagem comum (CLR) compatível com o tipo de linguagem de definição de esquema XML (XSD) do atributo, texto ou espaço em branco.</summary>
+    <returns>Um objeto que contém o valor de atributo, texto ou espaço em branco. O objeto é um tipo CLR que corresponde ao tipo XSD do valor de atributo, texto ou espaço em branco.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Xml.Schema.XmlValueGetter> `delegate` é útil se o valor de um nó de atributo, texto ou espaço em branco do CLR já está disponível e evita o custo de convertê-lo para um `string` e análises-lo novamente para validação.  
+  
+ Para obter mais informações sobre o <xref:System.Xml.Schema.XmlSchemaValidator> de classe, consulte o [XmlSchemaValidator envio-de validação](~/docs/standard/data/xml/xmlschemavalidator-push-based-validation.md) tópico, ou o <xref:System.Xml.Schema.XmlSchemaValidator> documentação de referência de classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida o `contosoBooks.xml` arquivo em relação a `contosoBooks.xsd` esquema. O exemplo usa a classe de <xref:System.Xml.Serialization.XmlSerializer> para desserializar o arquivo de `contosoBooks.xml` e passar o valor de nós métodos de classe de <xref:System.Xml.Schema.XmlSchemaValidator> .  
+  
+ [!code-csharp[XmlSchemaValidatorExamples#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
+ [!code-vb[XmlSchemaValidatorExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#2](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
+  
+ O exemplo também usa `contosoBooks.xsd` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#3](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

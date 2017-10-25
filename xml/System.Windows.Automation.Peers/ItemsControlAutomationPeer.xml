@@ -1,0 +1,186 @@
+<Type Name="ItemsControlAutomationPeer" FullName="System.Windows.Automation.Peers.ItemsControlAutomationPeer">
+  <TypeSignature Language="C#" Value="public abstract class ItemsControlAutomationPeer : System.Windows.Automation.Peers.FrameworkElementAutomationPeer, System.Windows.Automation.Provider.IItemContainerProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ItemsControlAutomationPeer extends System.Windows.Automation.Peers.FrameworkElementAutomationPeer implements class System.Windows.Automation.Provider.IItemContainerProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.FrameworkElementAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IItemContainerProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Expõe <see cref="T:System.Windows.Controls.ItemsControl" /> tipos de automação de interface do usuário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ItemsControlAutomationPeer (System.Windows.Controls.ItemsControl owner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.ItemsControl owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemsControlAutomationPeer.#ctor(System.Windows.Controls.ItemsControl)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Controls.ItemsControl" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Controls.ItemsControl" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" />.</param>
+        <summary>Fornece a inicialização para valores de classe base quando chamado pelo construtor de uma classe derivada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItemAutomationPeer">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Automation.Peers.ItemAutomationPeer CreateItemAutomationPeer (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Automation.Peers.ItemAutomationPeer CreateItemAutomationPeer(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemsControlAutomationPeer.CreateItemAutomationPeer(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.ItemAutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item de dados que está associado a essa <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" />.</param>
+        <summary>Quando substituído em uma classe derivada, cria uma nova instância do <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" /> para um item de dados no <see cref="P:System.Windows.Controls.ItemsControl.Items" /> coleta deste <see cref="T:System.Windows.Controls.ItemsControl" />.</summary>
+        <returns>O novo <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" /> criado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindOrCreateItemAutomationPeer">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Automation.Peers.ItemAutomationPeer FindOrCreateItemAutomationPeer (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Windows.Automation.Peers.ItemAutomationPeer FindOrCreateItemAutomationPeer(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemsControlAutomationPeer.FindOrCreateItemAutomationPeer(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.ItemAutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item para obter um <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" /> para.</param>
+        <summary>Retorna um <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" /> para o objeto especificado.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.ItemAutomationPeer" /> para o objeto especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildrenCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.List`1&lt;class System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemsControlAutomationPeer.GetChildrenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a coleção de elementos filho de <see cref="T:System.Windows.Controls.ItemsControl" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" />.</summary>
+        <returns>A coleção de elementos filho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemsControlAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Um dos valores de enumeração.</param>
+        <summary>Obtém o padrão de controle para o <see cref="T:System.Windows.Controls.ItemsControl" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" />.</summary>
+        <returns>O <see cref="T:System.Windows.Automation.Peers.ScrollViewerAutomationPeer" /> que é associada a essa <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVirtualized">
+      <MemberSignature Language="C#" Value="protected virtual bool IsVirtualized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVirtualized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.ItemsControlAutomationPeer.IsVirtualized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" /> deve retornar <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objetos para os itens filho que não virtualizados.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" /> deve retornar <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objetos para os itens filho que não são virtualizados; <see langword="false" /> se o <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer" /> deve retornar <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objetos todos os itens filho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IItemContainerProvider.FindItemByProperty">
+      <MemberSignature Language="C#" Value="System.Windows.Automation.Provider.IRawElementProviderSimple IItemContainerProvider.FindItemByProperty (System.Windows.Automation.Provider.IRawElementProviderSimple startAfter, int propertyId, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple System.Windows.Automation.Provider.IItemContainerProvider.FindItemByProperty(class System.Windows.Automation.Provider.IRawElementProviderSimple startAfter, int32 propertyId, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.ItemsControlAutomationPeer.System#Windows#Automation#Provider#IItemContainerProvider#FindItemByProperty(System.Windows.Automation.Provider.IRawElementProviderSimple,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startAfter" Type="System.Windows.Automation.Provider.IRawElementProviderSimple" />
+        <Parameter Name="propertyId" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="startAfter">O item no contêiner depois do qual iniciar a pesquisa.</param>
+        <param name="propertyId">A propriedade que contém o valor a ser recuperado.</param>
+        <param name="value">Valor a ser recuperado.</param>
+        <summary>Recupera um elemento pelo valor da propriedade especificada.</summary>
+        <returns>O primeiro item que corresponda ao critério de pesquisa; Caso contrário, <see langword="null" /> se nenhum item corresponde.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.ItemsControlAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.IItemContainerProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

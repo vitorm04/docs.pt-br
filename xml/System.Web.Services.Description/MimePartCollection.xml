@@ -1,0 +1,313 @@
+<Type Name="MimePartCollection" FullName="System.Web.Services.Description.MimePartCollection">
+  <TypeSignature Language="C#" Value="public sealed class MimePartCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MimePartCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.MimePartCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de instâncias de <see cref="T:System.Web.Services.Description.MimePart" /> classe. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Web.Services.Description.MimePart> dentro da coleção representa um elemento de extensibilidade adicionado a um <xref:System.Web.Services.Description.MimeMultipartRelatedBinding>e especifica o tipo MIME para correspondente <xref:System.Web.Services.Description.MessagePart>.  
+  
+ Para obter mais informações sobre como especificar protocolos para XML Web services, consulte [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Para obter mais informações sobre WSDL Web Services Description Language (), consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso das propriedades e métodos expostos pelo `MimePartCollection` classe.  
+  
+ [!code-cpp[MimePartCollection_1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MimePartCollection_1/CPP/mimepartcollection_1.cpp#1)]
+ [!code-csharp[MimePartCollection_1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MimePartCollection_1/CS/mimepartcollection_1.cs#1)]
+ [!code-vb[MimePartCollection_1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimePartCollection_1/VB/mimepartcollection_1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MimePartCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimePartCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.MimePartCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.Services.Description.MimePart mimePart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.Services.Description.MimePart mimePart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimePartCollection.Add(System.Web.Services.Description.MimePart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mimePart" Type="System.Web.Services.Description.MimePart" />
+      </Parameters>
+      <Docs>
+        <param name="mimePart">O <see cref="T:System.Web.Services.Description.MimePart" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Services.Description.MimePart" /> ao final do <see cref="T:System.Web.Services.Description.MimePartCollection" />.</summary>
+        <returns>O índice de base zero onde o <paramref name="mimePart" /> parâmetro foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra um uso típico de `Add` método.  
+  
+ [!code-cpp[MimePartCollection_8#5](~/samples/snippets/cpp/VS_Snippets_Remoting/MimePartCollection_8/CPP/mimepartcollection_8.cpp#5)]
+ [!code-csharp[MimePartCollection_8#5](~/samples/snippets/csharp/VS_Snippets_Remoting/MimePartCollection_8/CS/mimepartcollection_8.cs#5)]
+ [!code-vb[MimePartCollection_8#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimePartCollection_8/VB/mimepartcollection_8.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.Services.Description.MimePart mimePart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.Services.Description.MimePart mimePart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimePartCollection.Contains(System.Web.Services.Description.MimePart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mimePart" Type="System.Web.Services.Description.MimePart" />
+      </Parameters>
+      <Docs>
+        <param name="mimePart">O <see cref="T:System.Web.Services.Description.MimePart" /> para verificar a associação da coleção.</param>
+        <summary>Retorna um valor que indica se especificado <see cref="T:System.Web.Services.Description.MimePart" /> é membro do <see cref="T:System.Web.Services.Description.MimePartCollection" />.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="mimePart" /> parâmetro for um membro do <see langword="MimePartCollection" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra um uso típico de `Contains` método.  
+  
+ [!code-cpp[MimePartCollection_8#6](~/samples/snippets/cpp/VS_Snippets_Remoting/MimePartCollection_8/CPP/mimepartcollection_8.cpp#6)]
+ [!code-csharp[MimePartCollection_8#6](~/samples/snippets/csharp/VS_Snippets_Remoting/MimePartCollection_8/CS/mimepartcollection_8.cs#6)]
+ [!code-vb[MimePartCollection_8#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimePartCollection_8/VB/mimepartcollection_8.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Services.Description.MimePart[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Services.Description.MimePart[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimePartCollection.CopyTo(System.Web.Services.Description.MimePart[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Services.Description.MimePart[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz do tipo <see cref="T:System.Web.Services.Description.MimePart" /> que serve como o destino para a ação de cópia.</param>
+        <param name="index">O índice baseado em zero no qual começar a colocar a coleção copiada.</param>
+        <summary>Copia todo o <see cref="T:System.Web.Services.Description.MimePartCollection" /> para uma matriz unidimensional compatível do tipo <see cref="T:System.Web.Services.Description.MimePart" />, começando no índice de base zero especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra um uso típico de `CopyTo` método.  
+  
+ [!code-cpp[MimePartCollection_8#7](~/samples/snippets/cpp/VS_Snippets_Remoting/MimePartCollection_8/CPP/mimepartcollection_8.cpp#7)]
+ [!code-csharp[MimePartCollection_8#7](~/samples/snippets/csharp/VS_Snippets_Remoting/MimePartCollection_8/CS/mimepartcollection_8.cs#7)]
+ [!code-vb[MimePartCollection_8#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimePartCollection_8/VB/mimepartcollection_8.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Services.Description.MimePart mimePart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Services.Description.MimePart mimePart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimePartCollection.IndexOf(System.Web.Services.Description.MimePart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mimePart" Type="System.Web.Services.Description.MimePart" />
+      </Parameters>
+      <Docs>
+        <param name="mimePart">O <see cref="T:System.Web.Services.Description.MimePart" /> para pesquisa de <see cref="T:System.Web.Services.Description.MimePartCollection" />.</param>
+        <summary>Procura especificado <see cref="T:System.Web.Services.Description.MimePart" /> e retorna o índice baseado em zero da primeira ocorrência na coleção.</summary>
+        <returns>Um inteiro com sinal de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra um uso típico de `IndexOf` método.  
+  
+ [!code-cpp[MimePartCollection_8#4](~/samples/snippets/cpp/VS_Snippets_Remoting/MimePartCollection_8/CPP/mimepartcollection_8.cpp#4)]
+ [!code-csharp[MimePartCollection_8#4](~/samples/snippets/csharp/VS_Snippets_Remoting/MimePartCollection_8/CS/mimepartcollection_8.cs#4)]
+ [!code-vb[MimePartCollection_8#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimePartCollection_8/VB/mimepartcollection_8.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.Services.Description.MimePart mimePart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.Services.Description.MimePart mimePart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimePartCollection.Insert(System.Int32,System.Web.Services.Description.MimePart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="mimePart" Type="System.Web.Services.Description.MimePart" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir o <c>mimePart</c> parâmetro.</param>
+        <param name="mimePart">O <see cref="T:System.Web.Services.Description.MimePart" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Services.Description.MimePart" /> para o <see cref="T:System.Web.Services.Description.MimePartCollection" /> no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o número de itens na coleção já for igual a capacidade da coleção, a capacidade é duplicada, automaticamente realocando a matriz interna antes do novo elemento é inserido.  
+  
+ Se o `index` parâmetro for igual ao <xref:System.Collections.CollectionBase.Count%2A>, o `mimePart` parâmetro é adicionado ao final do <xref:System.Web.Services.Description.MimePartCollection>.  
+  
+ Os elementos após o ponto de inserção se mover para baixo para acomodar o novo elemento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um uso típico de `Insert` método.  
+  
+ [!code-cpp[MimePartCollection_8#3](~/samples/snippets/cpp/VS_Snippets_Remoting/MimePartCollection_8/CPP/mimepartcollection_8.cpp#3)]
+ [!code-csharp[MimePartCollection_8#3](~/samples/snippets/csharp/VS_Snippets_Remoting/MimePartCollection_8/CS/mimepartcollection_8.cs#3)]
+ [!code-vb[MimePartCollection_8#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimePartCollection_8/VB/mimepartcollection_8.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O parâmetro <paramref name="index" /> é menor que zero.  
+  
+ \- ou -  
+  
+ O parâmetro <paramref name="index" /> é maior que <see cref="P:System.Collections.CollectionBase.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.MimePart this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.MimePart Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MimePartCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.MimePart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.Web.Services.Description.MimePart" /> cujo valor é modificado ou retornado.</param>
+        <summary>Obtém ou define o valor de um <see cref="T:System.Web.Services.Description.MimePart" /> no índice de base zero especificado.</summary>
+        <value>Um <see langword="MimePart" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de um índice com base em zero para recuperar um membro do `MimePartCollection`.  
+  
+ [!code-cpp[MimePartCollection_8#2](~/samples/snippets/cpp/VS_Snippets_Remoting/MimePartCollection_8/CPP/mimepartcollection_8.cpp#2)]
+ [!code-csharp[MimePartCollection_8#2](~/samples/snippets/csharp/VS_Snippets_Remoting/MimePartCollection_8/CS/mimepartcollection_8.cs#2)]
+ [!code-vb[MimePartCollection_8#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimePartCollection_8/VB/mimepartcollection_8.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Services.Description.MimePart mimePart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Services.Description.MimePart mimePart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimePartCollection.Remove(System.Web.Services.Description.MimePart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mimePart" Type="System.Web.Services.Description.MimePart" />
+      </Parameters>
+      <Docs>
+        <param name="mimePart">O <see cref="T:System.Web.Services.Description.MimePart" /> a ser removido da coleção.</param>
+        <summary>Remove a primeira ocorrência do <see cref="T:System.Web.Services.Description.MimePart" /> especificado do <see cref="T:System.Web.Services.Description.MimePartCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa uma pesquisa linear; Portanto, o tempo médio de execução é proporcional ao <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Os elementos que seguem o removido `MimePart` mover para cima para ocupar o ponto vagas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um uso típico de `Remove` método.  
+  
+ MimePartCollection_8 n º 8  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

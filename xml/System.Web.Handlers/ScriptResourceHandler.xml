@@ -1,0 +1,162 @@
+<Type Name="ScriptResourceHandler" FullName="System.Web.Handlers.ScriptResourceHandler">
+  <TypeSignature Language="C#" Value="public class ScriptResourceHandler : System.Web.IHttpHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScriptResourceHandler extends System.Object implements class System.Web.IHttpHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Handlers.ScriptResourceHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece um manipulador HTTP para processar solicitações para arquivos de script que são inseridos como recursos em um assembly. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Handlers.ScriptResourceHandler> classe processa todas as solicitações para arquivos de script inseridos que são referenciados por meio de <xref:System.Web.UI.ScriptManager> classe. O <xref:System.Web.Handlers.ScriptResourceHandler> objeto recupera a biblioteca de script incorporado e todos os recursos localizados para a biblioteca de script. Se o <xref:System.Web.UI.ScriptReference.NotifyScriptLoaded%2A> está definida como `true`, o <xref:System.Web.Handlers.ScriptResourceHandler> objeto adiciona uma chamada no final do arquivo de script para o método do objeto.  
+  
+ Por padrão, o <xref:System.Web.Handlers.ScriptResourceHandler> classe compacta e armazena em cache os arquivos de script inserido para o Internet Explorer 7. Você pode ativar a compactação e desativar o cache por meio de <xref:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCompression%2A> e <xref:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCaching%2A> propriedades da <xref:System.Web.Configuration.ScriptingScriptResourceHandlerSection> classe. Você pode definir essas propriedades no arquivo Web. config.  
+  
+> [!NOTE]
+>  Você pode ativar o compactação para versões anteriores do Internet Explorer, criando um alias para o Internet Explorer 7, na seção do arquivo Web. config. Você então definir programaticamente o valor da <xref:System.Web.UI.Page.ClientTarget%2A> propriedade alias. No entanto, não recomendamos essa abordagem porque ela fará com que uma diminuição no desempenho e ela introduz um alto risco de erros.  
+  
+ O arquivo de Web. config padrão para aplicativos da Web habilitado para AJAX do ASP.NET adiciona o <xref:System.Web.Handlers.ScriptResourceHandler> como um manipulador. Você pode adicionar manualmente o manipulador para o seu aplicativo, incluindo o seguinte elemento no arquivo Web. config:  
+  
+```  
+<httpHandlers>  
+  <add verb="GET,HEAD" path="ScriptResource.axd"   
+    type="System.Web.Handlers.ScriptResourceHandler,   
+    System.Web.Extensions, Version=1.0.61025.0, Culture=neutral,   
+    PublicKeyToken=31bf3856ad364e35" validate="false" />  
+</httpHandlers>  
+```  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Valor de permissão:<see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptResourceHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.ScriptResourceHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Handlers.ScriptResourceHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReusable">
+      <MemberSignature Language="C#" Value="protected virtual bool IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Handlers.ScriptResourceHandler.IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se outra solicitação pode usar a instância da classe.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequest">
+      <MemberSignature Language="C#" Value="protected virtual void ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.ScriptResourceHandler.ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Web.HttpContext" /> objeto que fornece referências a objetos do servidor intrínsecos (por exemplo, <see langword="Request" />, <see langword="Response" />, <see langword="Session" />, e <see langword="Server" />) que são usados para atender a solicitações HTTP.</param>
+        <summary>Quando substituído em uma classe derivada, processos HTTP solicitações da Web para um arquivo de script que será inserido como um recurso em um assembly.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.IsReusable">
+      <MemberSignature Language="C#" Value="bool System.Web.IHttpHandler.IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.IHttpHandler.IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Handlers.ScriptResourceHandler.System#Web#IHttpHandler#IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se outra solicitação pode usar o <see cref="T:System.Web.IHttpHandler" /> instância.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.Handlers.ScriptResourceHandler> é convertida em uma interface de <xref:System.Web.IHttpHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.ProcessRequest">
+      <MemberSignature Language="C#" Value="void IHttpHandler.ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpHandler.ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.ScriptResourceHandler.System#Web#IHttpHandler#ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Web.HttpContext" /> objeto que fornece referências a objetos do servidor intrínsecos (por exemplo, <see langword="Request" />, <see langword="Response" />, <see langword="Session" />, e <see langword="Server" />) que são usados para atender a solicitações HTTP.</param>
+        <summary>Processa solicitações de HTTP da Web para um arquivo de script que será inserido como um recurso em um assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.Handlers.ScriptResourceHandler> é convertida em uma interface de <xref:System.Web.IHttpHandler>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Os nomes de tipo para as versões de depuração e liberação do script inserido não correspondem.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

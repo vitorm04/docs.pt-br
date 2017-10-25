@@ -1,0 +1,604 @@
+<Type Name="CustomTypeDescriptor" FullName="System.ComponentModel.CustomTypeDescriptor">
+  <TypeSignature Language="C#" Value="public abstract class CustomTypeDescriptor : System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CustomTypeDescriptor extends System.Object implements class System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.CustomTypeDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICustomTypeDescriptor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma implementação padrão simples da interface <see cref="T:System.ComponentModel.ICustomTypeDescriptor" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como <xref:System.ComponentModel.TypeDescriptionProvider>, o <xref:System.ComponentModel.CustomTypeDescriptor> classe depende de um objeto pai do tipo <xref:System.ComponentModel.ICustomTypeDescriptor> fornecido durante a construção. Isso permite que classes que derivam de <xref:System.ComponentModel.CustomTypeDescriptor> para substituir os métodos seletivamente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CustomTypeDescriptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.CustomTypeDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é equivalente a chamar outros <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A?displayProperty=nameWithType> construtor com um parâmetro que é `null`.  
+  
+ Todos os métodos de um <xref:System.ComponentModel.CustomTypeDescriptor> criado com esse construtor retornará valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CustomTypeDescriptor (System.ComponentModel.ICustomTypeDescriptor parent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.ICustomTypeDescriptor parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.#ctor(System.ComponentModel.ICustomTypeDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.ComponentModel.ICustomTypeDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O descritor de tipo personalizado do pai.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.CustomTypeDescriptor" /> classe usando um descritor de tipo personalizado do pai.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `parent` parâmetro é `null`, todos os <xref:System.ComponentModel.CustomTypeDescriptor> métodos retornarão valores padrão. Caso contrário, todos os <xref:System.ComponentModel.CustomTypeDescriptor> métodos delegará para os métodos de `parent`.  
+  
+ A maioria dos <xref:System.ComponentModel.CustomTypeDescriptor> métodos retornam `null` por padrão. A tabela a seguir mostra os valores de retorno para os métodos que não retornam `null` por padrão.  
+  
+|Método|Valor de retorno padrão|  
+|------------|--------------------------|  
+|<xref:System.ComponentModel.CustomTypeDescriptor.GetAttributes%2A>|Uma coleção de atributos vazio (<xref:System.ComponentModel.AttributeCollection.Empty?displayProperty=nameWithType>).|  
+|<xref:System.ComponentModel.CustomTypeDescriptor.GetConverter%2A>|O padrão <xref:System.ComponentModel.TypeConverter> instância.|  
+|<xref:System.ComponentModel.CustomTypeDescriptor.GetEvents%2A>|Uma coleção de eventos vazio (<xref:System.ComponentModel.EventDescriptorCollection.Empty?displayProperty=nameWithType>).|  
+|<xref:System.ComponentModel.CustomTypeDescriptor.GetProperties%2A>|Uma coleção de propriedades vazio (<xref:System.ComponentModel.PropertyDescriptorCollection.Empty?displayProperty=nameWithType>).|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributes">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.AttributeCollection GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.AttributeCollection GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de atributos personalizados para o tipo representado por esse descritor de tipo.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.AttributeCollection" /> que contém os atributos para o tipo. O padrão é <see cref="F:System.ComponentModel.AttributeCollection.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetAttributes%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassName">
+      <MemberSignature Language="C#" Value="public virtual string GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome totalmente qualificado da classe representada por esse descritor de tipo.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém o nome de classe totalmente qualificado do tipo é descrevendo o descritor do tipo. O padrão é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  <xref:System.ComponentModel.CustomTypeDescriptor.GetClassName%2A>não é um método estático e, portanto, não é garantido para ser thread-safe.  
+  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetClassName%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComponentName">
+      <MemberSignature Language="C#" Value="public virtual string GetComponentName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetComponentName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetComponentName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome da classe representada por esse descritor de tipo.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém o nome da instância do componente é descrevendo o descritor do tipo. O padrão é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetComponentName%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConverter">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.TypeConverter GetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.TypeConverter GetConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um conversor de tipo para o tipo representado por esse descritor de tipo.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter" /> para o tipo representado por esse descritor de tipo. O padrão é criado recentemente <see cref="T:System.ComponentModel.TypeConverter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetConverter%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultEvent">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptor GetDefaultEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor GetDefaultEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetDefaultEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o descritor de evento para o evento padrão do objeto representado por esse descritor de tipo.</summary>
+        <returns>O <see cref="T:System.ComponentModel.EventDescriptor" /> para o evento padrão no objeto representado por esse descritor de tipo. O padrão é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetDefaultEvent%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultProperty">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptor GetDefaultProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor GetDefaultProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetDefaultProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o descritor de propriedade para a propriedade padrão do objeto representado por esse descritor de tipo.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> para a propriedade padrão no objeto representado por esse descritor de tipo. O padrão é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetDefaultProperty%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditor">
+      <MemberSignature Language="C#" Value="public virtual object GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">O tipo base do Editor para recuperar.</param>
+        <summary>Retorna um editor do tipo especificado deve ser associada com a classe representada por esse descritor de tipo.</summary>
+        <returns>Um editor do tipo especificado deve ser associada com a classe representada por esse descritor de tipo. O padrão é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetEditor%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetEvents">
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna uma coleção de descritores de eventos para o objeto representado por esse descritor de tipo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.CustomTypeDescriptor.GetEvents%2A> método retorna uma coleção de descritores de eventos para o objeto que está representando o descritor do tipo. Uma matriz opcional de atributo pode ser fornecida para filtrar a coleção que é retornada. Se nenhum pai for fornecido, o método retornará <xref:System.ComponentModel.EventDescriptorCollection.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptorCollection GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de descritores de eventos para o objeto representado por esse descritor de tipo.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.EventDescriptorCollection" /> que contém os descritores de eventos para o objeto representado por esse descritor de tipo. O padrão é <see cref="F:System.ComponentModel.EventDescriptorCollection.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetEvents%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.EventDescriptorCollection GetEvents (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection GetEvents(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetEvents(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Uma matriz de atributos a serem usados como um filtro. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna uma coleção filtrada de descritores de eventos para o objeto representado por esse descritor de tipo.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.EventDescriptorCollection" /> que contém as descrições de eventos para o objeto representado por esse descritor de tipo. O padrão é <see cref="F:System.ComponentModel.EventDescriptorCollection.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `attributes` parâmetro para filtrar a coleção que é retornada.  
+  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetEvents%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetProperties">
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna uma coleção de descritores de propriedade para o objeto representado por esse descritor de tipo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.CustomTypeDescriptor.GetProperties%2A> método retorna uma coleção de descritores de propriedade para o objeto que está representando o descritor do tipo. Uma matriz opcional de atributo pode ser fornecida para filtrar a coleção que é retornada. Se nenhum pai for fornecido, o método retornará <xref:System.ComponentModel.PropertyDescriptorCollection.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptorCollection GetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de descritores de propriedade para o objeto representado por esse descritor de tipo.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que contém as descrições de propriedade para o objeto representado por esse descritor de tipo. O padrão é <see cref="F:System.ComponentModel.PropertyDescriptorCollection.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetProperties%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptorCollection GetProperties (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Uma matriz de atributos a serem usados como um filtro. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna uma coleção filtrada de descritores de propriedade para o objeto representado por esse descritor de tipo.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que contém as descrições de propriedade para o objeto representado por esse descritor de tipo. O padrão é <see cref="F:System.ComponentModel.PropertyDescriptorCollection.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `attributes` parâmetro para filtrar a coleção que é retornada. Para regras de filtragem, consulte <xref:System.ComponentModel.TypeDescriptor.GetProperties%2A>.  
+  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetProperties%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyOwner">
+      <MemberSignature Language="C#" Value="public virtual object GetPropertyOwner (System.ComponentModel.PropertyDescriptor pd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPropertyOwner(class System.ComponentModel.PropertyDescriptor pd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.CustomTypeDescriptor.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pd" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="pd">O descritor de propriedade para o qual recuperar o objeto proprietário.</param>
+        <summary>Retorna um objeto que contém a propriedade descrita pelo descritor de propriedade especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que possui a propriedade fornecida especificada pelo descritor de tipo. O padrão é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um descritor de tipo personalizado pai foi passado para o <xref:System.ComponentModel.CustomTypeDescriptor.%23ctor%2A> construtor, o <xref:System.ComponentModel.CustomTypeDescriptor.GetPropertyOwner%2A> método chamará o método correspondente do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

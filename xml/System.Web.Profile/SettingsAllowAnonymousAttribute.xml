@@ -1,0 +1,192 @@
+<Type Name="SettingsAllowAnonymousAttribute" FullName="System.Web.Profile.SettingsAllowAnonymousAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SettingsAllowAnonymousAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SettingsAllowAnonymousAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.SettingsAllowAnonymousAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica se uma propriedade de perfil pode ser definida ou acessada por um usuário anônimo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.SettingsAllowAnonymousAttribute> classe é usada para identificar se uma propriedade de uma implementação personalizada de perfil pode ser acessada se o usuário for um usuário anônimo. Para obter informações sobre como habilitar identificação anônima, consulte a documentação fornecida para o elemento de configuração.  
+  
+ Se nenhum <xref:System.Web.Profile.SettingsAllowAnonymousAttribute> foi especificado para uma propriedade de perfil, o acesso anônimo da propriedade do perfil não é permitida.  
+  
+ Uma implementação personalizada de perfil é uma classe que herda de <xref:System.Web.Profile.ProfileBase> classe abstrata e define as propriedades do perfil de usuário que não são especificadas no elemento de configuração. Você pode especificar um tipo de perfil de usuário personalizada no arquivo de Web. config do aplicativo com o `inherits` atributo do elemento de configuração, conforme mostrado no exemplo a seguir.  
+  
+ `<configuration>`  
+  
+ `<connectionStrings>`  
+  
+ `<add`  
+  
+ `name="SqlServices"`  
+  
+ `connectionString="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />`  
+  
+ `</connectionStrings>`  
+  
+ `<system.web>`  
+  
+ `<authentication mode="Forms" >`  
+  
+ `<forms`  
+  
+ `loginUrl="login.aspx"`  
+  
+ `name=".ASPXFORMSAUTH" />`  
+  
+ `</authentication>`  
+  
+ `<authorization>`  
+  
+ `<deny users="?" />`  
+  
+ `</authorization>`  
+  
+ `<profile inherits="Samples.AspNet.Profile.EmployeeProfile"`  
+  
+ `defaultProvider="SqlProvider">`  
+  
+ `<providers>`  
+  
+ `<clear />`  
+  
+ `<add`  
+  
+ `name="SqlProvider"`  
+  
+ `type="System.Web.Profile.SqlProfileProvider"`  
+  
+ `connectionStringName="SqlServices"`  
+  
+ `description="SQL Profile Provider for Sample"/>`  
+  
+ `<add`  
+  
+ `name="EmployeeInfoProvider"`  
+  
+ `type="System.Web.Profile.SqlProfileProvider"`  
+  
+ `connectionStringName="SqlServices"`  
+  
+ `description="SQL Profile Provider for Employee Info"/>`  
+  
+ `</providers>`  
+  
+ `<properties>`  
+  
+ `<add name="GarmentSize" />`  
+  
+ `</properties>`  
+  
+ `</profile>`  
+  
+ `</system.web>`  
+  
+ `</configuration>`  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define uma classe que herda de <xref:System.Web.Profile.ProfileBase> para criar um perfil personalizado. O tipo do perfil personalizado é especificado no `inherits` atributo do elemento de configuração no arquivo Web. config para um aplicativo.  
+  
+ [!code-csharp[System.Web.Profile.ProfileBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/CS/employeeprofile.cs#1)]
+ [!code-vb[System.Web.Profile.ProfileBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/VB/employeeprofile.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsAllowAnonymousAttribute (bool allow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool allow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SettingsAllowAnonymousAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="allow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="allow">
+          <see langword="true" />Se usuários anônimos podem acessar a propriedade de perfil associados; Caso contrário, <see langword="false" />.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.Profile.SettingsAllowAnonymousAttribute" /> classe e especifica se deve permitir o acesso anônimo para a propriedade de perfil associados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.SettingsAllowAnonymousAttribute> classe é usada para identificar se uma propriedade de uma implementação personalizada de perfil pode ser acessada se o usuário for um usuário anônimo. Para obter informações sobre como habilitar identificação anônima, consulte o elemento de configuração.  
+  
+ Se nenhum <xref:System.Web.Profile.SettingsAllowAnonymousAttribute> foi especificado para uma propriedade de perfil, o acesso anônimo para a propriedade de perfil não é permitida.  
+  
+ Uma implementação personalizada de perfil é uma classe que herda de <xref:System.Web.Profile.ProfileBase> classe abstrata e define as propriedades do perfil de usuário que não são especificadas no elemento de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma classe que herda de <xref:System.Web.Profile.ProfileBase> classe para criar um perfil personalizado. O tipo do perfil personalizado é especificado no `inherits` atributo do elemento de configuração no arquivo Web. config para um aplicativo. Para obter um exemplo de um arquivo de configuração que especifica uma implementação personalizada de perfil, consulte o <xref:System.Web.Profile.SettingsAllowAnonymousAttribute> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Profile.ProfileBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/CS/employeeprofile.cs#1)]
+ [!code-vb[System.Web.Profile.ProfileBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/VB/employeeprofile.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Allow">
+      <MemberSignature Language="C#" Value="public bool Allow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Allow" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.SettingsAllowAnonymousAttribute.Allow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a propriedade associada de uma implementação personalizada de perfil pode ser acessada se o usuário for um usuário anônimo.</summary>
+        <value>
+          <see langword="true" />Se usuários anônimos podem acessar a propriedade de perfil associados; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.SettingsAllowAnonymousAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Web.Profile.SettingsAllowAnonymousAttribute.Allow" /> propriedade é definida como o valor padrão.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Web.Profile.SettingsAllowAnonymousAttribute.Allow" /> propriedade é definida como o valor padrão; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

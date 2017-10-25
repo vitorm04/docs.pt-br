@@ -1,0 +1,457 @@
+<Type Name="CryptoKeySecurity" FullName="System.Security.AccessControl.CryptoKeySecurity">
+  <TypeSignature Language="C#" Value="public sealed class CryptoKeySecurity : System.Security.AccessControl.NativeObjectSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CryptoKeySecurity extends System.Security.AccessControl.NativeObjectSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.CryptoKeySecurity" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.NativeObjectSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a capacidade de controlar o acesso a um objeto de chave de criptografia sem manipulação direta de uma ACL (lista de controle de acesso).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptoKeySecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.CryptoKeySecurity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptoKeySecurity (System.Security.AccessControl.CommonSecurityDescriptor securityDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.AccessControl.CommonSecurityDescriptor securityDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.#ctor(System.Security.AccessControl.CommonSecurityDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityDescriptor" Type="System.Security.AccessControl.CommonSecurityDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="securityDescriptor">O descritor de segurança do qual criar o novo <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> classe usando o descritor de segurança especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRightType">
+      <MemberSignature Language="C#" Value="public override Type AccessRightType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRightType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CryptoKeySecurity.AccessRightType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do objeto protegível associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</summary>
+        <value>O tipo do objeto protegível associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleFactory">
+      <MemberSignature Language="C#" Value="public override sealed System.Security.AccessControl.AccessRule AccessRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AccessRule AccessRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AccessRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">A identidade ao qual a regra de acesso se aplica.  Ele deve ser um objeto que pode ser convertido como um <see cref="T:System.Security.Principal.SecurityIdentifier" />.</param>
+        <param name="accessMask">A máscara de acesso dessa regra. A máscara de acesso é uma coleção de 32 bits de bits anônimas, o significado dos quais é definido pelos integradores individuais.</param>
+        <param name="isInherited">True se esta regra é herdada de um contêiner pai.</param>
+        <param name="inheritanceFlags">Especifica as propriedades de herança da regra de acesso.</param>
+        <param name="propagationFlags">Especifica se as regras de acesso herdado são propagadas automaticamente. Os sinalizadores de propagação serão ignorados se <c>inheritanceFlags</c> é definido como <see cref="F:System.Security.AccessControl.InheritanceFlags.None" />.</param>
+        <param name="type">Especifica o tipo de controle de acesso válido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.AccessRule" /> classe com os valores especificados.</summary>
+        <returns>O <see cref="T:System.Security.AccessControl.AccessRule" /> objeto criado por esse método.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleType">
+      <MemberSignature Language="C#" Value="public override Type AccessRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CryptoKeySecurity.AccessRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do objeto associado com as regras de acesso deste <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto. O <see cref="T:System.Type" /> objeto deve ser um objeto que pode ser convertido como um <see cref="T:System.Security.Principal.SecurityIdentifier" /> objeto.</summary>
+        <value>O tipo do objeto associado com as regras de acesso deste <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccessRule">
+      <MemberSignature Language="C#" Value="public void AddAccessRule (System.Security.AccessControl.CryptoKeyAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAccessRule(class System.Security.AccessControl.CryptoKeyAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.AddAccessRule(System.Security.AccessControl.CryptoKeyAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a adicionar.</param>
+        <summary>Aplica a regra de acesso especificada à DACL (Lista de Controle de Acesso Discricionário) associada a esse objeto <see cref="T:System.Security.AccessControl.CryptoKeySecurity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionar uma regra de acesso pode causar regras de acesso existentes na DACL a serem mesclados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAuditRule">
+      <MemberSignature Language="C#" Value="public void AddAuditRule (System.Security.AccessControl.CryptoKeyAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAuditRule(class System.Security.AccessControl.CryptoKeyAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.AddAuditRule(System.Security.AccessControl.CryptoKeyAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para adicionar.</param>
+        <summary>Adiciona a regra de auditoria para o acesso controle lista SACL (sistema) associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionar uma regra de auditoria pode gerar regras de acesso existentes nos SACL a serem mesclados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleFactory">
+      <MemberSignature Language="C#" Value="public override sealed System.Security.AccessControl.AuditRule AuditRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AuditRule AuditRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AuditRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">A identidade ao qual se aplica a regra de auditoria.  Ele deve ser um objeto que pode ser convertido como um <see cref="T:System.Security.Principal.SecurityIdentifier" />.</param>
+        <param name="accessMask">A máscara de acesso dessa regra. A máscara de acesso é uma coleção de 32 bits de bits anônimas, o significado dos quais é definido pelos integradores individuais.</param>
+        <param name="isInherited">
+          <see langword="true" />Se essa regra é herdada de um contêiner pai.</param>
+        <param name="inheritanceFlags">Especifica as propriedades de herança da regra de auditoria.</param>
+        <param name="propagationFlags">Especifica se as regras de auditoria herdadas são propagadas automaticamente. Os sinalizadores de propagação serão ignorados se <c>inheritanceFlags</c> é definido como <see cref="F:System.Security.AccessControl.InheritanceFlags.None" />.</param>
+        <param name="flags">Especifica as condições para a qual a regra é auditada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.AuditRule" /> classe com os valores especificados.</summary>
+        <returns>O <see cref="T:System.Security.AccessControl.AuditRule" /> objeto criado por esse método.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleType">
+      <MemberSignature Language="C#" Value="public override Type AuditRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AuditRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CryptoKeySecurity.AuditRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> objeto associado com as regras de auditoria deste <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto. O <see cref="T:System.Type" /> objeto deve ser um objeto que pode ser convertido como um <see cref="T:System.Security.Principal.SecurityIdentifier" /> objeto.</summary>
+        <value>O tipo do objeto associado com as regras de auditoria deste <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAccessRule (System.Security.AccessControl.CryptoKeyAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAccessRule(class System.Security.AccessControl.CryptoKeyAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.RemoveAccessRule(System.Security.AccessControl.CryptoKeyAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a ser removida.</param>
+        <summary>Remove as regras de acesso que contêm a mesma máscara de acesso e o identificador de segurança, como a regra de acesso especificada da DACL (lista de controle de acesso discricionário) associada a esse objeto <see cref="T:System.Security.AccessControl.CryptoKeySecurity" />.</summary>
+        <returns>
+          <see langword="true" /> se a regra de acesso for removida com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remoção de acesso é feita usando um algoritmo complexo que pode adicionar regras de controle de acesso além de removê-los.  
+  
+ Esse método falhar ao remover a regra de acesso e retorna `false` se as regras de herança associadas à regra de acesso são muito complexas para o algoritmo de remoção bem-sucedida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleAll">
+      <MemberSignature Language="C#" Value="public void RemoveAccessRuleAll (System.Security.AccessControl.CryptoKeyAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessRuleAll(class System.Security.AccessControl.CryptoKeyAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.RemoveAccessRuleAll(System.Security.AccessControl.CryptoKeyAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a ser removida.</param>
+        <summary>Remove todas as regras de acesso que tem o mesmo identificador de segurança, como a regra de acesso especificado da lista de controle de acesso (DACL) discricionário associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAccessRuleSpecific (System.Security.AccessControl.CryptoKeyAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessRuleSpecific(class System.Security.AccessControl.CryptoKeyAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.CryptoKeyAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a ser removida.</param>
+        <summary>Remove todas as regras de acesso que correspondem exatamente à regra de acesso especificado do acesso controle DACL (lista discricionário) associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAuditRule (System.Security.AccessControl.CryptoKeyAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAuditRule(class System.Security.AccessControl.CryptoKeyAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.RemoveAuditRule(System.Security.AccessControl.CryptoKeyAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para remover.</param>
+        <summary>Remove regras de auditoria que contêm a mesma máscara de acesso e o identificador de segurança, como a regra de auditoria do sistema acesso de controle de lista (SACL) associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se a regra de auditoria foi removida com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remoção de auditoria é realizada usando um algoritmo complexo que pode adicionar regras de controle de auditoria além de removê-los.  
+  
+ Esse método falhar ao remover a regra de auditoria e retorna `false` se as regras de herança associadas à regra de auditoria forem muito complexas para o algoritmo de remoção bem-sucedida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleAll">
+      <MemberSignature Language="C#" Value="public void RemoveAuditRuleAll (System.Security.AccessControl.CryptoKeyAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuditRuleAll(class System.Security.AccessControl.CryptoKeyAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.RemoveAuditRuleAll(System.Security.AccessControl.CryptoKeyAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para remover.</param>
+        <summary>Remove todas as regras de auditoria que tem o mesmo identificador de segurança, como a regra de auditoria do sistema acesso de controle de lista (SACL) associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAuditRuleSpecific (System.Security.AccessControl.CryptoKeyAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuditRuleSpecific(class System.Security.AccessControl.CryptoKeyAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.CryptoKeyAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para remover.</param>
+        <summary>Remove todas as regras de auditoria que correspondem exatamente a regra de auditoria do acesso controle lista SACL (sistema) associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAccessRule">
+      <MemberSignature Language="C#" Value="public void ResetAccessRule (System.Security.AccessControl.CryptoKeyAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetAccessRule(class System.Security.AccessControl.CryptoKeyAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.ResetAccessRule(System.Security.AccessControl.CryptoKeyAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso para redefinição.</param>
+        <summary>Remove todas as regras de acesso no acesso controle DACL (lista discricionário) associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> do objeto e, em seguida, adiciona a regra de acesso especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessRule">
+      <MemberSignature Language="C#" Value="public void SetAccessRule (System.Security.AccessControl.CryptoKeyAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessRule(class System.Security.AccessControl.CryptoKeyAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.SetAccessRule(System.Security.AccessControl.CryptoKeyAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso ao conjunto.</param>
+        <summary>Remove todas as regras de acesso que contêm o mesmo identificador de segurança e qualificador, como a regra de acesso especificado na lista de controle de acesso (DACL) discricionário associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> do objeto e, em seguida, adiciona a regra de acesso especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAuditRule">
+      <MemberSignature Language="C#" Value="public void SetAuditRule (System.Security.AccessControl.CryptoKeyAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAuditRule(class System.Security.AccessControl.CryptoKeyAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CryptoKeySecurity.SetAuditRule(System.Security.AccessControl.CryptoKeyAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.CryptoKeyAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para definir.</param>
+        <summary>Remove todas as regras de auditoria que contêm o mesmo identificador de segurança e qualificador, como a regra de auditoria no sistema acesso de controle de lista (SACL) associado a esta <see cref="T:System.Security.AccessControl.CryptoKeySecurity" /> do objeto e, em seguida, adiciona a regra de auditoria.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

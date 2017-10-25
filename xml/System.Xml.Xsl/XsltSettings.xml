@@ -1,0 +1,283 @@
+<Type Name="XsltSettings" FullName="System.Xml.Xsl.XsltSettings">
+  <TypeSignature Language="C#" Value="public sealed class XsltSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XsltSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.XsltSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os recursos de XSLT (linguagem XSL Transformation) que terão suporte durante a execução da folha de estilos XSLT.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inserido blocos de script e o XSLT `document()` função são recursos opcionais sobre o <xref:System.Xml.Xsl.XslCompiledTransform> classe. Esses recursos são desabilitados por padrão. O <xref:System.Xml.Xsl.XsltSettings> classe especifica qual desses recursos opcionais para dar suporte. Recursos são habilitados ou desabilitados usando as propriedades de classe. O objeto <xref:System.Xml.Xsl.XsltSettings> é então passado para o método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A?displayProperty=nameWithType>.  
+  
+> [!IMPORTANT]
+>  As folhas de estilos XSLT podem incluir referências a outros arquivos e blocos de script inseridos. Um usuário mal-intencionado pode aproveitar isso fornecendo a você com os dados ou folhas de estilo que quando executado pode fazer com que o sistema processar até que o computador ficar com pouco recursos. Não habilite o script ou o `document()` funcionar, a menos que a folha de estilo provenientes de uma fonte confiável. Se você não puder verificar a origem da folha de estilos ou a folha de estilos não vêm de uma fonte confiável, use as configurações de XSLT padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir carrega uma folha de estilos e habilita o suporte de script XSLT.  
+  
+ [!code-csharp[XslCompiledTransform.Load#6](~/samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#6)]
+ [!code-vb[XslCompiledTransform.Load#6](~/samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XsltSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Xsl.XsltSettings" /> com as configurações padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O novo <xref:System.Xml.Xsl.XsltSettings> objeto não oferece suporte para o XSLT `document()` function ou blocos de script incorporado.  
+  
+> [!IMPORTANT]
+>  O script XSLT deverá ser habilitado somente se você precisar de suporte a script e estiver trabalhando em um ambiente totalmente confiável. Se você habilitar o `document()` função, você pode restringir os recursos que podem ser acessados, passando um <xref:System.Xml.XmlSecureResolver> o objeto para o <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XsltSettings (bool enableDocumentFunction, bool enableScript);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enableDocumentFunction, bool enableScript) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltSettings.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enableDocumentFunction" Type="System.Boolean" />
+        <Parameter Name="enableScript" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enableDocumentFunction">
+          <see langword="true" />Para habilitar o suporte para o XSLT <c>Document ()</c> função; caso contrário, <see langword="false" />.</param>
+        <param name="enableScript">
+          <see langword="true" /> para habilitar o suporte a blocos de scripts inseridos, caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Xsl.XsltSettings" /> com as configurações especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O script XSLT deverá ser habilitado somente se você precisar de suporte a script e estiver trabalhando em um ambiente totalmente confiável. Se você habilitar o `document()` função, você pode restringir os recursos que podem ser acessados, passando um <xref:System.Xml.XmlSecureResolver> o objeto para o <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir carrega uma folha de estilos e habilita o suporte de script XSLT.  
+  
+ [!code-csharp[XslCompiledTransform.Load#6](~/samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#6)]
+ [!code-vb[XslCompiledTransform.Load#6](~/samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Xml.Xsl.XsltSettings Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xml.Xsl.XsltSettings Default" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.XsltSettings.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.XsltSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xml.Xsl.XsltSettings" /> objeto com as configurações padrão. Suporte para o XSLT <c>Document ()</c> função e script inserido blocos está desabilitado.</summary>
+        <value>Um <see cref="T:System.Xml.Xsl.XsltSettings" /> do objeto com o <see cref="P:System.Xml.Xsl.XsltSettings.EnableDocumentFunction" /> e <see cref="P:System.Xml.Xsl.XsltSettings.EnableScript" /> propriedades definidas como <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir carrega uma folha de estilo com as configurações de XSLT padrão.  
+  
+ [!code-csharp[XslCompiledTransform.Load#7](~/samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#7)]
+ [!code-vb[XslCompiledTransform.Load#7](~/samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDocumentFunction">
+      <MemberSignature Language="C#" Value="public bool EnableDocumentFunction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableDocumentFunction" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.XsltSettings.EnableDocumentFunction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deseja habilitar o suporte para o XSLT <c>Document ()</c> função.</summary>
+        <value>
+          <see langword="true" />para dar suporte a XSLT <c>Document ()</c> função; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Se você habilitar o `document()` função, você pode restringir os recursos que podem ser acessados, passando um <xref:System.Xml.XmlSecureResolver> o objeto para o <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableScript">
+      <MemberSignature Language="C#" Value="public bool EnableScript { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableScript" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.XsltSettings.EnableScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deseja habilitar o suporte para os blocos de script inserido.</summary>
+        <value>
+          <see langword="true" /> para dar suporte a blocos de script em folhas de estilos XSLT; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O script XSLT deverá ser habilitado somente se você precisar de suporte a script e estiver trabalhando em um ambiente totalmente confiável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedXslt">
+      <MemberSignature Language="C#" Value="public static System.Xml.Xsl.XsltSettings TrustedXslt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xml.Xsl.XsltSettings TrustedXslt" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.XsltSettings.TrustedXslt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.XsltSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xml.Xsl.XsltSettings" /> objeto que habilita o suporte para o XSLT <c>Document ()</c> função e blocos de script incorporado.</summary>
+        <value>Um <see cref="T:System.Xml.Xsl.XsltSettings" /> do objeto com o <see cref="P:System.Xml.Xsl.XsltSettings.EnableDocumentFunction" /> e <see cref="P:System.Xml.Xsl.XsltSettings.EnableScript" /> propriedades definidas como <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O script XSLT deverá ser habilitado somente se você precisar de suporte a script e estiver trabalhando em um ambiente totalmente confiável. Se você habilitar o `document()` função, você pode restringir os recursos que podem ser acessados, passando um <xref:System.Xml.XmlSecureResolver> o objeto para o <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir carrega uma folha de estilo com suporte para o XSLT `document()` função e script inserido bloqueia recursos habilitados.  
+  
+ [!code-csharp[XslCompiledTransform.Load#8](~/samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#8)]
+ [!code-vb[XslCompiledTransform.Load#8](~/samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

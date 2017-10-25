@@ -1,0 +1,2454 @@
+<Type Name="HttpBrowserCapabilitiesBase" FullName="System.Web.HttpBrowserCapabilitiesBase">
+  <TypeSignature Language="C#" Value="public abstract class HttpBrowserCapabilitiesBase : System.Web.UI.IFilterResolutionService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpBrowserCapabilitiesBase extends System.Object implements class System.Web.UI.IFilterResolutionService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpBrowserCapabilitiesBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IFilterResolutionService</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como a classe base para classes que habilitam o servidor a obter informações sobre os recursos do navegador que fez a solicitação atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpBrowserCapabilitiesBase> classe é uma classe abstrata que contém os mesmos membros como o <xref:System.Web.HttpBrowserCapabilities> classe. O <xref:System.Web.HttpBrowserCapabilitiesBase> classe permite que você criar classes derivadas que são semelhantes a <xref:System.Web.HttpBrowserCapabilities> classe, mas que você pode personalizar e que trabalham fora o pipeline do ASP.NET. Quando você executa testes de unidade, você normalmente usar uma classe derivada para implementar membros com comportamento personalizado que atende o cenário que você está testando.  
+  
+ O <xref:System.Web.HttpBrowserCapabilitiesWrapper> classe deriva de <xref:System.Web.HttpBrowserCapabilitiesBase> classe. O <xref:System.Web.HttpBrowserCapabilitiesWrapper> classe serve como um wrapper para o <xref:System.Web.HttpBrowserCapabilities> classe. Em tempo de execução, você normalmente usa uma instância do <xref:System.Web.HttpBrowserCapabilitiesWrapper> classe para chamar membros de <xref:System.Web.HttpBrowserCapabilities> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpBrowserCapabilitiesBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpBrowserCapabilitiesBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a classe para uso por uma instância de classe herdada. Esse construtor só pode ser chamado por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveXControls">
+      <MemberSignature Language="C#" Value="public virtual bool ActiveXControls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ActiveXControls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.ActiveXControls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador é capaz de dar suporte a controles ActiveX.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a controles ActiveX. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Adapters">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary Adapters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Adapters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Adapters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a coleção de adaptadores de controle disponíveis.</summary>
+        <value>Os adaptadores de controle registrado para o navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBrowser">
+      <MemberSignature Language="C#" Value="public virtual void AddBrowser (string browserName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBrowser(string browserName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpBrowserCapabilitiesBase.AddBrowser(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="browserName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="browserName">O nome do navegador para adicionar.</param>
+        <summary>Quando substituído em uma classe derivada, usada internamente para adicionar uma entrada à coleção interna de navegadores para os quais recursos são reconhecidos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AOL">
+      <MemberSignature Language="C#" Value="public virtual bool AOL { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AOL" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.AOL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o cliente é um navegador America Online (AOL).</summary>
+        <value>
+          <see langword="true" />Se o navegador é um navegador AOL; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundSounds">
+      <MemberSignature Language="C#" Value="public virtual bool BackgroundSounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BackgroundSounds" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.BackgroundSounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a reprodução de sons em segundo plano usando o <see langword="bgsounds" /> elemento HTML.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a reprodução de sons de fundo; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Beta">
+      <MemberSignature Language="C#" Value="public virtual bool Beta { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Beta" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Beta" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador é uma versão beta.</summary>
+        <value>
+          <see langword="true" />Se o navegador é uma versão beta. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Browser">
+      <MemberSignature Language="C#" Value="public virtual string Browser { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Browser" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Browser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o navegador de cadeia de caracteres (se houver) que foi enviada pelo navegador no <see langword="User-Agent" /> cabeçalho de solicitação.</summary>
+        <value>O conteúdo do <see langword="User-Agent" /> cabeçalho de solicitação foi enviado pelo navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Browsers">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ArrayList Browsers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList Browsers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Browsers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém uma coleção dos navegadores para os quais recursos são reconhecidos.</summary>
+        <value>Os navegadores para os quais recursos são reconhecidos.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCombineFormsInDeck">
+      <MemberSignature Language="C#" Value="public virtual bool CanCombineFormsInDeck { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCombineFormsInDeck" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanCombineFormsInDeck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a coleções que contêm várias formas, como cartões separados.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a coleções que contêm vários formulários; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanInitiateVoiceCall">
+      <MemberSignature Language="C#" Value="public virtual bool CanInitiateVoiceCall { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanInitiateVoiceCall" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanInitiateVoiceCall" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o dispositivo de navegador é capaz de iniciar uma chamada de voz.</summary>
+        <value>
+          <see langword="true" />Se o dispositivo de navegador é capaz de iniciar uma chamada de voz; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRenderAfterInputOrSelectElement">
+      <MemberSignature Language="C#" Value="public virtual bool CanRenderAfterInputOrSelectElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRenderAfterInputOrSelectElement" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanRenderAfterInputOrSelectElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a conteúdo da página seguinte WML <see langword="select" /> ou <see langword="input" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a conteúdo da página seguinte HTML <see langword="select" /> ou <see langword="input" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRenderEmptySelects">
+      <MemberSignature Language="C#" Value="public virtual bool CanRenderEmptySelects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRenderEmptySelects" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanRenderEmptySelects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a HTML vazia <see langword="select" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a HTML vazia <see langword="select" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRenderInputAndSelectElementsTogether">
+      <MemberSignature Language="C#" Value="public virtual bool CanRenderInputAndSelectElementsTogether { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRenderInputAndSelectElementsTogether" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanRenderInputAndSelectElementsTogether" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a WML <see langword="input" /> e <see langword="select" /> elementos juntos no mesmo cartão.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a WML <see langword="input" /> e <see langword="select" /> elementos juntos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRenderMixedSelects">
+      <MemberSignature Language="C#" Value="public virtual bool CanRenderMixedSelects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRenderMixedSelects" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanRenderMixedSelects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a WML <see langword="option" /> elementos que especifique <see langword="onpick" /> e <see langword="value" /> atributos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a WML <see langword="option" /> elementos que especifique <see langword="onpick" /> e <see langword="value" /> atributos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRenderOneventAndPrevElementsTogether">
+      <MemberSignature Language="C#" Value="public virtual bool CanRenderOneventAndPrevElementsTogether { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRenderOneventAndPrevElementsTogether" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanRenderOneventAndPrevElementsTogether" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a WML <see langword="onevent" /> e <see langword="prev" /> elementos no mesmo cartão.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a WML <see langword="onevent" /> e <see langword="prev" /> elementos WML a mesma placa; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRenderPostBackCards">
+      <MemberSignature Language="C#" Value="public virtual bool CanRenderPostBackCards { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRenderPostBackCards" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanRenderPostBackCards" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a cartões WML de postback.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a cartões WML para postagem; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRenderSetvarZeroWithMultiSelectionList">
+      <MemberSignature Language="C#" Value="public virtual bool CanRenderSetvarZeroWithMultiSelectionList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRenderSetvarZeroWithMultiSelectionList" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanRenderSetvarZeroWithMultiSelectionList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a WML <see langword="setvar" /> elementos que têm um <see langword="value" /> atributo 0.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a WML <see langword="setvar" /> elementos que têm um <see langword="value" /> atributo 0; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSendMail">
+      <MemberSignature Language="C#" Value="public virtual bool CanSendMail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSendMail" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CanSendMail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador dá suporte ao envio de mensagens de email usando o HTML <see langword="mailto" /> esquema.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte ao envio de mensagem de email usando HTML <see langword="mailto" /> esquema; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Capabilities">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary Capabilities { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Capabilities" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Capabilities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, usada internamente para obter os recursos definidos do navegador.</summary>
+        <value>Os recursos definidos do navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CDF">
+      <MemberSignature Language="C#" Value="public virtual bool CDF { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CDF" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.CDF" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador dá suporte ao formato de definição de canal (CDF) para difusão na Web.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a CDF; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClrVersion">
+      <MemberSignature Language="C#" Value="public virtual Version ClrVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ClrVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.ClrVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a versão do .NET Framework que está instalado no cliente.</summary>
+        <value>A versão de runtime (CLR) de linguagem comum.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareFilters">
+      <MemberSignature Language="C#" Value="public virtual int CompareFilters (string filter1, string filter2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareFilters(string filter1, string filter2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpBrowserCapabilitiesBase.CompareFilters(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter1" Type="System.String" />
+        <Parameter Name="filter2" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filter1">O primeiro filtro a ser comparado.</param>
+        <param name="filter2">O segundo filtro a ser comparado.</param>
+        <summary>Quando substituído em uma classe derivada, usada internamente para comparar os filtros.</summary>
+        <returns>1 se <paramref name="filter1" /> é pai de <paramref name="filter2" />;-1 se <paramref name="filter2" /> é pai de <paramref name="filter1" />; ou 0 se não houver nenhuma relação pai-filho entre <paramref name="filter1" /> e <paramref name="filter2" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="public virtual bool Cookies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cookies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Cookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador é capaz de dar suporte a cookies.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a cookies; Caso contrário, <see langword="false" />.  
+  
+ <block subset="none" type="note"><para>  
+ Essa propriedade não indica se os cookies estão habilitados no momento no navegador, somente se o navegador oferece suporte a cookies.  
+  
+</para></block></value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Crawler">
+      <MemberSignature Language="C#" Value="public virtual bool Crawler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Crawler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Crawler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador é um rastreador da Web de mecanismo de pesquisa.</summary>
+        <value>
+          <see langword="true" />Se o navegador é um rastreador de mecanismo de pesquisa; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHtmlTextWriter">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.HtmlTextWriter CreateHtmlTextWriter (System.IO.TextWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.HtmlTextWriter CreateHtmlTextWriter(class System.IO.TextWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpBrowserCapabilitiesBase.CreateHtmlTextWriter(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">O objeto a ser criado.</param>
+        <summary>Quando substituído em uma classe derivada, cria uma nova instância do <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto a ser usado para renderizar a marcação para o navegador.</summary>
+        <returns>Uma nova instância do objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSubmitButtonLimit">
+      <MemberSignature Language="C#" Value="public virtual int DefaultSubmitButtonLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultSubmitButtonLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.DefaultSubmitButtonLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número máximo de botões de envio que são permitidos para um formulário.</summary>
+        <value>O número máximo de botões de envio que são permitidos para um formulário.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableOptimizedCacheKey">
+      <MemberSignature Language="C#" Value="public virtual void DisableOptimizedCacheKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DisableOptimizedCacheKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpBrowserCapabilitiesBase.DisableOptimizedCacheKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, usada internamente para desabilitar o uso de uma chave de cache otimizado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EcmaScriptVersion">
+      <MemberSignature Language="C#" Value="public virtual Version EcmaScriptVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version EcmaScriptVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.EcmaScriptVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de versão de ECMAScript (JavaScript) que o navegador dá suporte.</summary>
+        <value>O número de versão de ECMAScript (JavaScript) que o navegador dá suporte.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateFilter">
+      <MemberSignature Language="C#" Value="public virtual bool EvaluateFilter (string filterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EvaluateFilter(string filterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpBrowserCapabilitiesBase.EvaluateFilter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filterName">O filtro avalie.</param>
+        <summary>Quando substituído em uma classe derivada, usada internamente para avaliar um filtro.</summary>
+        <returns>
+          <see langword="true" />Se o filtro tiver sido avaliado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Frames">
+      <MemberSignature Language="C#" Value="public virtual bool Frames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Frames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Frames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a quadros HTML.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a quadros. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayMajorVersion">
+      <MemberSignature Language="C#" Value="public virtual int GatewayMajorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GatewayMajorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.GatewayMajorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de versão principal do gateway sem fio que é usado para acessar o servidor, se conhecido.</summary>
+        <value>O número de versão principal do gateway sem fio que é usado para acessar o servidor, se conhecido.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayMinorVersion">
+      <MemberSignature Language="C#" Value="public virtual double GatewayMinorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 GatewayMinorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.GatewayMinorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de versão secundária de gateway sem fio que é usado para acessar o servidor, se conhecido.</summary>
+        <value>O número de versão secundária de gateway sem fio que é usado para acessar o servidor, se conhecido.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayVersion">
+      <MemberSignature Language="C#" Value="public virtual string GatewayVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GatewayVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.GatewayVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a versão do gateway sem fio que é usado para acessar o servidor, se conhecido.</summary>
+        <value>O número de versão do gateway sem fio que é usado para acessar o servidor, se conhecido.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClrVersions">
+      <MemberSignature Language="C#" Value="public virtual Version[] GetClrVersions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Version[] GetClrVersions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpBrowserCapabilitiesBase.GetClrVersions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém todas as versões do .NET Framework common language runtime (CLR) que estão instaladas no cliente.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Version" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBackButton">
+      <MemberSignature Language="C#" Value="public virtual bool HasBackButton { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasBackButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.HasBackButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador tem um botão Voltar dedicado.</summary>
+        <value>
+          <see langword="true" />Se o navegador tiver um botão Voltar dedicado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HidesRightAlignedMultiselectScrollbars">
+      <MemberSignature Language="C#" Value="public virtual bool HidesRightAlignedMultiselectScrollbars { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HidesRightAlignedMultiselectScrollbars" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.HidesRightAlignedMultiselectScrollbars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se a barra de rolagem de uma marca HTML <see langword="select multiple" /> elemento que tem um <see langword="align" /> valor de atributo <see langword="right" /> é obscurecida após o processamento.</summary>
+        <value>
+          <see langword="true" />Se a barra de rolagem de uma marca HTML <see langword="select multiple" /> elemento que tem um <see langword="align" /> valor de atributo <see langword="right" /> obscurecidas na renderização; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlTextWriter">
+      <MemberSignature Language="C#" Value="public virtual string HtmlTextWriter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HtmlTextWriter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.HtmlTextWriter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém ou define o nome de classe totalmente qualificado do <see cref="T:System.Web.UI.HtmlTextWriter" /> a ser usado para gravar caracteres de marcação e texto.</summary>
+        <value>O nome de classe totalmente qualificado do <see cref="T:System.Web.UI.HtmlTextWriter" /> a ser usado para gravar caracteres de marcação e texto.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public virtual string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o identificador interno do navegador conforme especificado no arquivo de definição do navegador.</summary>
+        <value>O identificador interno do navegador conforme especificado no arquivo de definição do navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InputType">
+      <MemberSignature Language="C#" Value="public virtual string InputType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InputType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.InputType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo de entrada que é compatível com o navegador.</summary>
+        <value>O tipo de entrada com suporte pelo navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBrowser">
+      <MemberSignature Language="C#" Value="public virtual bool IsBrowser (string browserName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsBrowser(string browserName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpBrowserCapabilitiesBase.IsBrowser(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="browserName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="browserName">O navegador especificado.</param>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador do cliente é o mesmo que o navegador especificado.</summary>
+        <returns>
+          <see langword="true" />Se o navegador do cliente é o mesmo que o navegador especificado. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsColor">
+      <MemberSignature Language="C#" Value="public virtual bool IsColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.IsColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador tem uma exibição de cores.</summary>
+        <value>
+          <see langword="true" />Se o navegador tiver uma exibição da cor; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMobileDevice">
+      <MemberSignature Language="C#" Value="public virtual bool IsMobileDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMobileDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.IsMobileDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador é um dispositivo móvel reconhecido.</summary>
+        <value>
+          <see langword="true" /> se o navegador for um dispositivo móvel reconhecido; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual string this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do recurso de navegador para recuperar.</param>
+        <summary>Quando substituído em uma classe derivada, obtém o valor do recurso de navegador especificado. No c#, essa propriedade é o indexador da classe.</summary>
+        <value>O recurso de navegador com o nome da chave especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="JavaApplets">
+      <MemberSignature Language="C#" Value="public virtual bool JavaApplets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool JavaApplets" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.JavaApplets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a Java.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte ao Java; Caso contrário, <see langword="false" />.  
+  
+ <block subset="none" type="note"><para>  
+ Essa propriedade não indica se o Java é habilitado no momento no navegador, somente se o navegador pode dar suporte a Java.  
+  
+</para></block></value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="JScriptVersion">
+      <MemberSignature Language="C#" Value="public virtual Version JScriptVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version JScriptVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.JScriptVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a versão de JScript dá suporte ao navegador.</summary>
+        <value>A versão do JScript dá suporte ao navegador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Número de versão de ECMAScript com suporte pelo navegador, consulte <xref:System.Web.HttpBrowserCapabilitiesBase.EcmaScriptVersion%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorVersion">
+      <MemberSignature Language="C#" Value="public virtual int MajorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MajorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.MajorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém as principais (inteiro) o número de versão do navegador.</summary>
+        <value>O número de versão principal do navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumHrefLength">
+      <MemberSignature Language="C#" Value="public virtual int MaximumHrefLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumHrefLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.MaximumHrefLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o comprimento máximo em caracteres para o <see langword="href" /> atributo de uma marca HTML <see langword="a" /> elemento (âncora).</summary>
+        <value>O comprimento máximo em caracteres para o <see langword="href" /> atributo de uma marca HTML <see langword="a" /> elemento (âncora).</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumRenderedPageSize">
+      <MemberSignature Language="C#" Value="public virtual int MaximumRenderedPageSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumRenderedPageSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.MaximumRenderedPageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o comprimento máximo da página, em bytes, que o navegador pode exibir.</summary>
+        <value>O comprimento máximo da página, em bytes, que o navegador pode exibir.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSoftkeyLabelLength">
+      <MemberSignature Language="C#" Value="public virtual int MaximumSoftkeyLabelLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumSoftkeyLabelLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.MaximumSoftkeyLabelLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o comprimento máximo do texto que pode exibir um rótulo de chave de software.</summary>
+        <value>O comprimento máximo do texto que pode exibir um rótulo de chave de software.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorVersion">
+      <MemberSignature Language="C#" Value="public virtual double MinorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.MinorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de versão (decimal) secundária do navegador.</summary>
+        <value>O número de versão secundária do navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorVersionString">
+      <MemberSignature Language="C#" Value="public virtual string MinorVersionString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MinorVersionString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.MinorVersionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de versão (decimal) secundária do navegador como uma cadeia de caracteres.</summary>
+        <value>Uma cadeia de caracteres que representa o número de versão secundária do navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MobileDeviceManufacturer">
+      <MemberSignature Language="C#" Value="public virtual string MobileDeviceManufacturer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MobileDeviceManufacturer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.MobileDeviceManufacturer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome do fabricante de um dispositivo móvel, se conhecido.</summary>
+        <value>O nome do fabricante de um dispositivo móvel, se conhecido.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MobileDeviceModel">
+      <MemberSignature Language="C#" Value="public virtual string MobileDeviceModel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MobileDeviceModel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.MobileDeviceModel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome do modelo de um dispositivo móvel, se conhecido.</summary>
+        <value>O nome do modelo de um dispositivo móvel, se conhecido.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MSDomVersion">
+      <MemberSignature Language="C#" Value="public virtual Version MSDomVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version MSDomVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.MSDomVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a versão da Microsoft HTML (MSHTML) modelo DOM (Document Object) que o navegador dá suporte.</summary>
+        <value>A versão de MSHTML DOM que o navegador dá suporte.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfSoftkeys">
+      <MemberSignature Language="C#" Value="public virtual int NumberOfSoftkeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfSoftkeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.NumberOfSoftkeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de teclas em um dispositivo móvel.</summary>
+        <value>O número de teclas tem suportados em um dispositivo móvel.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Platform">
+      <MemberSignature Language="C#" Value="public virtual string Platform { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Platform" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Platform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome do sistema operacional que o cliente está usando, se conhecido.</summary>
+        <value>O sistema operacional que o cliente está usando, se conhecido.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredImageMime">
+      <MemberSignature Language="C#" Value="public virtual string PreferredImageMime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreferredImageMime" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.PreferredImageMime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo MIME do tipo de conteúdo da imagem que o navegador normalmente prefere.</summary>
+        <value>O tipo MIME do tipo de conteúdo da imagem que o navegador normalmente prefere.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRenderingMime">
+      <MemberSignature Language="C#" Value="public virtual string PreferredRenderingMime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreferredRenderingMime" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.PreferredRenderingMime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo MIME do tipo de conteúdo que o navegador normalmente prefere.</summary>
+        <value>O tipo MIME do tipo de conteúdo que o navegador normalmente prefere.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRenderingType">
+      <MemberSignature Language="C#" Value="public virtual string PreferredRenderingType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreferredRenderingType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.PreferredRenderingType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome geral para o tipo de conteúdo preferido de navegador.</summary>
+        <value>Os valores "html32" ou "chtml10".</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRequestEncoding">
+      <MemberSignature Language="C#" Value="public virtual string PreferredRequestEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreferredRequestEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.PreferredRequestEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a codificação de solicitação que prefere o navegador.</summary>
+        <value>A solicitação de codificação que o navegador prefere.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredResponseEncoding">
+      <MemberSignature Language="C#" Value="public virtual string PreferredResponseEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreferredResponseEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.PreferredResponseEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a codificação de resposta que prefere o navegador.</summary>
+        <value>A resposta de codificação que o navegador prefere.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RendersBreakBeforeWmlSelectAndInput">
+      <MemberSignature Language="C#" Value="public virtual bool RendersBreakBeforeWmlSelectAndInput { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RendersBreakBeforeWmlSelectAndInput" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RendersBreakBeforeWmlSelectAndInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador renderiza uma quebra de linha antes de WML <see langword="select" /> ou <see langword="input" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador renderiza uma quebra de linha antes de <see langword="select" /> ou <see langword="input" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RendersBreaksAfterHtmlLists">
+      <MemberSignature Language="C#" Value="public virtual bool RendersBreaksAfterHtmlLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RendersBreaksAfterHtmlLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RendersBreaksAfterHtmlLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador renderiza uma quebra de linha depois de elementos de item de lista.</summary>
+        <value>
+          <see langword="true" />Se o navegador renderiza uma quebra de linha depois de elementos de item de lista; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RendersBreaksAfterWmlAnchor">
+      <MemberSignature Language="C#" Value="public virtual bool RendersBreaksAfterWmlAnchor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RendersBreaksAfterWmlAnchor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RendersBreaksAfterWmlAnchor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador renderiza uma quebra de linha após uma autônoma WML <see langword="a" /> elemento (âncora).</summary>
+        <value>
+          <see langword="true" />Se o navegador renderiza uma quebra de linha após uma autônoma WML <see langword="a" /> elemento (âncora); caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RendersBreaksAfterWmlInput">
+      <MemberSignature Language="C#" Value="public virtual bool RendersBreaksAfterWmlInput { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RendersBreaksAfterWmlInput" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RendersBreaksAfterWmlInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador renderiza uma quebra de linha após uma WML <see langword="input" /> elemento.</summary>
+        <value>
+          <see langword="true" />Se o navegador renderiza uma quebra de linha após uma WML <see langword="input" /> elemento; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RendersWmlDoAcceptsInline">
+      <MemberSignature Language="C#" Value="public virtual bool RendersWmlDoAcceptsInline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RendersWmlDoAcceptsInline" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RendersWmlDoAcceptsInline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador de dispositivo móvel processa um WML <see langword="do" /> formulário aceitar construção como um botão embutido em vez de como uma tecla de função.</summary>
+        <value>
+          <see langword="true" />Se o navegador de dispositivo móvel processa um WML <see langword="do" /> aceitar formulário de construção como um botão embutido; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RendersWmlSelectsAsMenuCards">
+      <MemberSignature Language="C#" Value="public virtual bool RendersWmlSelectsAsMenuCards { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RendersWmlSelectsAsMenuCards" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RendersWmlSelectsAsMenuCards" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador renderiza WML <see langword="select" /> elementos como cartões de menu, em vez de como uma caixa de combinação.</summary>
+        <value>
+          <see langword="true" />Se o navegador renderiza WML <see langword="select" /> elementos como cartões de menu; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredMetaTagNameValue">
+      <MemberSignature Language="C#" Value="public virtual string RequiredMetaTagNameValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequiredMetaTagNameValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiredMetaTagNameValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, usada internamente para produzir uma marca meta é necessária por alguns navegadores.</summary>
+        <value>Uma marca meta necessárias por alguns navegadores.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresAttributeColonSubstitution">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresAttributeColonSubstitution { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresAttributeColonSubstitution" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresAttributeColonSubstitution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer dois-pontos em valores de atributos do elemento a ser substituído com um caractere diferente.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer dois-pontos em valores de atributos do elemento a ser substituído com um caractere diferente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresContentTypeMetaTag">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresContentTypeMetaTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresContentTypeMetaTag" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresContentTypeMetaTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer um HTML <see langword="meta" /> elemento para o qual o <see langword="content-type" /> atributo é especificado.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer um HTML <see langword="meta" /> elemento para o qual o <see langword="content-type" /> atributo é especificado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresControlStateInSession">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresControlStateInSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresControlStateInSession" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresControlStateInSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer estado seja mantido em sessões de controle.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer controle estado seja mantido em sessões; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresDBCSCharacter">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresDBCSCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresDBCSCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresDBCSCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer um conjunto de caracteres de byte duplo.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer um conjunto de caracteres de byte duplo; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresHtmlAdaptiveErrorReporting">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresHtmlAdaptiveErrorReporting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresHtmlAdaptiveErrorReporting" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresHtmlAdaptiveErrorReporting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer que as mensagens de erro padrão.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer mensagens de erro padrão. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresLeadingPageBreak">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresLeadingPageBreak { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresLeadingPageBreak" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresLeadingPageBreak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador exige que o primeiro elemento no corpo de uma página da Web para ser um HTML <see langword="br" /> elemento.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer o primeiro elemento no corpo de uma página da Web para ser um HTML <see langword="br" /> elemento; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresNoBreakInFormatting">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresNoBreakInFormatting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresNoBreakInFormatting" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresNoBreakInFormatting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador não oferece suporte a HTML <see langword="br" /> elementos para formatar quebras de linha.</summary>
+        <value>
+          <see langword="true" />Se o navegador não oferece suporte a HTML <see langword="br" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresOutputOptimization">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresOutputOptimization { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresOutputOptimization" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresOutputOptimization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer páginas contenham um formulário otimizado de tamanho das marcas de linguagem de marcação.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer páginas contenham um formulário otimizado de tamanho das marcas de linguagem de marcação; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresPhoneNumbersAsPlainText">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresPhoneNumbersAsPlainText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresPhoneNumbersAsPlainText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresPhoneNumbersAsPlainText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a discagem telefônica com base em texto sem formatação, ou se ele requer marcação especial.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a discagem telefônica com base em texto sem formatação; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresSpecialViewStateEncoding">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresSpecialViewStateEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresSpecialViewStateEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresSpecialViewStateEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer valores de estado de exibição para ser codificado.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer valores de estado de exibição para ser codificado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresUniqueFilePathSuffix">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresUniqueFilePathSuffix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresUniqueFilePathSuffix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresUniqueFilePathSuffix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer URLs de ação de forma exclusiva.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer URLs de ação de forma exclusiva. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresUniqueHtmlCheckboxNames">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresUniqueHtmlCheckboxNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresUniqueHtmlCheckboxNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresUniqueHtmlCheckboxNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer exclusivo <see langword="name" /> valores de atributo HTML vários <see langword="input type=&quot;checkbox&quot;" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer exclusivo <see langword="name" /> valores de atributo HTML vários <see langword="input type=&quot;checkbox&quot;" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresUniqueHtmlInputNames">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresUniqueHtmlInputNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresUniqueHtmlInputNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresUniqueHtmlInputNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador requer exclusivo <see langword="name" /> valores de atributo HTML vários <see langword="input" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador requer exclusivo <see langword="name" /> valores de atributo HTML vários <see langword="input" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresUrlEncodedPostfieldValues">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresUrlEncodedPostfieldValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresUrlEncodedPostfieldValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.RequiresUrlEncodedPostfieldValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se os dados de postagem são enviados pelo navegador será codificado de URL.</summary>
+        <value>
+          <see langword="true" />Se os dados de postagem são enviados pelo navegador serão codificados de URL; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenBitDepth">
+      <MemberSignature Language="C#" Value="public virtual int ScreenBitDepth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScreenBitDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.ScreenBitDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a intensidade da tela, em bits por pixel.</summary>
+        <value>A profundidade da exibição, em bits por pixel.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenCharactersHeight">
+      <MemberSignature Language="C#" Value="public virtual int ScreenCharactersHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScreenCharactersHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.ScreenCharactersHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a altura aproximada da exibição, em linhas de caracteres.</summary>
+        <value>A altura aproximada da exibição, em linhas de caracteres.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenCharactersWidth">
+      <MemberSignature Language="C#" Value="public virtual int ScreenCharactersWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScreenCharactersWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.ScreenCharactersWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a largura aproximada da exibição, em caracteres.</summary>
+        <value>A largura aproximada da exibição, em caracteres.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenPixelsHeight">
+      <MemberSignature Language="C#" Value="public virtual int ScreenPixelsHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScreenPixelsHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.ScreenPixelsHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a altura aproximada da exibição, em pixels.</summary>
+        <value>A altura aproximada da exibição, em pixels.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenPixelsWidth">
+      <MemberSignature Language="C#" Value="public virtual int ScreenPixelsWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScreenPixelsWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.ScreenPixelsWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a largura aproximada da exibição, em pixels.</summary>
+        <value>A largura aproximada da tela, em pixels.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsAccesskeyAttribute">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsAccesskeyAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsAccesskeyAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsAccesskeyAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="accesskey" /> atributo HTML <see langword="a" /> (âncora) e <see langword="input" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="accesskey" /> atributo HTML <see langword="a" /> (âncora) e <see langword="input" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsBodyColor">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsBodyColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsBodyColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsBodyColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="bgcolor" /> atributo do HTML <see langword="body" /> elemento.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="bgcolor" /> atributo do HTML <see langword="body" /> elemento; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsBold">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsBold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsBold" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a HTML <see langword="b" /> elementos para formatar o texto em negrito.</summary>
+        <value>
+          <see langword="true" />Se o navegador dá suporte a HTML <see langword="b" /> elementos para formatar o texto em negrito; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsCacheControlMetaTag">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsCacheControlMetaTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsCacheControlMetaTag" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsCacheControlMetaTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="cache-control" /> valor para o <see langword="http-equiv" /> atributo HTML <see langword="meta" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="cache-control" /> valor para o <see langword="http-equiv" /> atributo HTML <see langword="meta" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsCallback">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsCallback { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a scripts de retorno de chamada.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a scripts de retorno de chamada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsCss">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsCss { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsCss" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsCss" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a folhas de estilo em cascata (CSS).</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a CSS; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDivAlign">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsDivAlign { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDivAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsDivAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="align" /> atributo HTML <see langword="div" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="align" /> atributo HTML <see langword="div" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDivNoWrap">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsDivNoWrap { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDivNoWrap" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsDivNoWrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="nowrap" /> atributo HTML <see langword="div" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="nowrap" /> HTML <see langword="div" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsEmptyStringInCookieValue">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsEmptyStringInCookieValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsEmptyStringInCookieValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsEmptyStringInCookieValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a cadeias de caracteres vazias em valores de cookie.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a cadeias de caracteres vazias em valores de cookie. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsFontColor">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsFontColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsFontColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsFontColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="color" /> atributo HTML <see langword="font" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="color" /> atributo HTML <see langword="font" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsFontName">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsFontName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsFontName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsFontName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="name" /> atributo HTML <see langword="font" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="name" /> atributo HTML <see langword="font" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsFontSize">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsFontSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsFontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsFontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="size" /> atributo HTML <see langword="font" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="size" /> atributo HTML <see langword="font" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsImageSubmit">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsImageSubmit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsImageSubmit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsImageSubmit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador suporta o uso de uma imagem personalizada no lugar de um botão de envio de formulário padrão.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte ao uso de uma imagem personalizada no lugar de um botão de envio de formulário padrão; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsIModeSymbols">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsIModeSymbols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsIModeSymbols" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsIModeSymbols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a símbolos de modo i.</summary>
+        <value>
+          <see langword="true" />Se o navegador dá suporte a símbolos de modo i; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsInputIStyle">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsInputIStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsInputIStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsInputIStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="istyle" /> atributo HTML <see langword="input" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="istyle" /> atributo HTML <see langword="input" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsInputMode">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsInputMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsInputMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsInputMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="mode" /> atributo HTML <see langword="input" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="mode" /> atributo HTML <see langword="input" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsItalic">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsItalic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsItalic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsItalic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a HTML <see langword="i" /> elementos para formatar o texto em itálico.</summary>
+        <value>
+          <see langword="true" />Se o navegador dá suporte a HTML <see langword="i" /> elementos para formatar o texto em itálico; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsJPhoneMultiMediaAttributes">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsJPhoneMultiMediaAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsJPhoneMultiMediaAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsJPhoneMultiMediaAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a atributos de multimídia J-Phone.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a atributos de multimídia J-Phone; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsJPhoneSymbols">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsJPhoneSymbols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsJPhoneSymbols" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsJPhoneSymbols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a símbolos de imagem J-telefone específico.</summary>
+        <value>
+          <see langword="true" />Se o navegador dá suporte a símbolos de imagem J-Phone específicos; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsQueryStringInFormAction">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsQueryStringInFormAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsQueryStringInFormAction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsQueryStringInFormAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a uma cadeia de caracteres de consulta no <see langword="action" /> valor de HTML do atributo <see langword="form" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferecer suporte a uma cadeia de caracteres de consulta no <see langword="action" /> valor de HTML do atributo <see langword="form" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsRedirectWithCookie">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsRedirectWithCookie { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsRedirectWithCookie" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsRedirectWithCookie" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a cookies no redirecionamento.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a cookies no redirecionamento. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsSelectMultiple">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsSelectMultiple { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsSelectMultiple" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsSelectMultiple" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a <see langword="multiple" /> atributo HTML <see langword="select" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a <see langword="multiple" /> atributo HTML <see langword="select" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsUncheck">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsUncheck { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsUncheck" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsUncheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se desmarcar uma HTML check <see langword="input type=&quot;checkbox&quot;" /> elemento é refletido nos dados de postagem.</summary>
+        <value>
+          <see langword="true" />Se estiver limpando uma HTML check <see langword="input type=&quot;checkbox&quot;" /> elemento é refletido nos dados de postagem; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsXmlHttp">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsXmlHttp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsXmlHttp" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.SupportsXmlHttp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a XML recebimento via HTTP.</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a recebimento XML sobre HTTP; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Tables">
+      <MemberSignature Language="C#" Value="public virtual bool Tables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Tables" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Tables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte a HTML <see langword="table" /> elementos.</summary>
+        <value>
+          <see langword="true" />Se o navegador dá suporte a HTML <see langword="table" /> elementos; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TagWriter">
+      <MemberSignature Language="C#" Value="public virtual Type TagWriter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TagWriter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.TagWriter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, usada internamente para obter o tipo do objeto que é usado para escrever marcações para o navegador.</summary>
+        <value>O tipo do objeto que é usado para escrever marcações para o navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public virtual string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome e o principal (inteiro) o número de versão do navegador.</summary>
+        <value>O nome e o número de versão principal do navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseOptimizedCacheKey">
+      <MemberSignature Language="C#" Value="public virtual bool UseOptimizedCacheKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseOptimizedCacheKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.UseOptimizedCacheKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, usada internamente para obter um valor que indica se deve usar uma chave de cache otimizado.</summary>
+        <value>
+          <see langword="true" />Para usar uma chave de cache otimizado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VBScript">
+      <MemberSignature Language="C#" Value="public virtual bool VBScript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool VBScript" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.VBScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o navegador oferece suporte ao Visual Basic Scripting edition (VBScript).</summary>
+        <value>
+          <see langword="true" />Se o navegador oferece suporte a VBScript; Caso contrário, <see langword="false" />.  
+  
+ <block subset="none" type="note"><para>  
+ Essa propriedade não indica se o VBScript está habilitado no momento no navegador, somente se o navegador pode dar suporte a VBScript.  
+  
+</para></block></value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public virtual string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de versão completa (inteiro e decimal) do navegador, como uma cadeia de caracteres.</summary>
+        <value>O número de versão completa do navegador, como uma cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="W3CDomVersion">
+      <MemberSignature Language="C#" Value="public virtual Version W3CDomVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version W3CDomVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.W3CDomVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a versão do World Wide Web Consortium (W3C) XML DOM Document Object Model () que o navegador dá suporte.</summary>
+        <value>O número do número de versão de DOM do W3C XML que dá suporte ao navegador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Win16">
+      <MemberSignature Language="C#" Value="public virtual bool Win16 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Win16" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Win16" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o cliente é um computador baseado em Win16.</summary>
+        <value>
+          <see langword="true" />Se o navegador estiver em execução em um computador baseado em Win16. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Win32">
+      <MemberSignature Language="C#" Value="public virtual bool Win32 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Win32" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpBrowserCapabilitiesBase.Win32" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o cliente é um computador baseado em Win32.</summary>
+        <value>
+          <see langword="true" />Se o cliente é um computador baseado em Win32; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

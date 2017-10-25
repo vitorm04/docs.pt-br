@@ -1,0 +1,31 @@
+<Type Name="VisualStyleElement+TrayNotify" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+TrayNotify">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.TrayNotify" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/TrayNotify extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém classes que fornecem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> objetos para o plano de fundo da área de notificação, que está localizado na extremidade direita da barra de tarefas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify> classe fornece uma base na qual as classes a seguir são definidas:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify.AnimateBackground>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify.Background>  
+  
+ Cada uma dessas classes fornece uma propriedade que retorna um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para o plano de fundo de área de notificação especificado pelo nome da classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

@@ -1,0 +1,113 @@
+<Type Name="ExportFactory&lt;T&gt;" FullName="System.ComponentModel.Composition.ExportFactory&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class ExportFactory&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExportFactory`1&lt;T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.ExportFactory`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O tipo de exportação.</typeparam>
+    <summary>Uma fábrica que cria novas instâncias de uma parte que fornece a exportação especificada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você referencia indiretamente uma parte usando um <xref:System.Lazy%601> objeto, o <xref:System.Lazy%601.Value%2A> propriedade sempre retorna uma referência ao mesmo objeto. Em algumas circunstâncias, convém cada referência resultará na criação de um novo objeto. <xref:System.ComponentModel.Composition.ExportFactory%601>foi projetado para esses cenários.  
+  
+ <xref:System.ComponentModel.Composition.ExportFactory%601>pode ser usado de forma semelhante ao <xref:System.Lazy%601> quando criar atribuído partes. Ou seja, um contrato de importação que é definido em <xref:System.ComponentModel.Composition.ExportFactory%601> com um parâmetro genérico do `T` corresponderá a uma exportação que é definida em `T`. Por exemplo, o acompanhamento exportar e importar correspondência:  
+  
+```csharp  
+[Export]  
+public String myData = "Example Data.";  
+  
+[Import]  
+public ExportFactory<String> theData { get; set; }  
+```  
+  
+```vb  
+<Export()>  
+Public myData As String = "Example Data."  
+  
+<Import()>  
+Public Property theData As ExportFactory(Of String)  
+```  
+  
+ O <xref:System.ComponentModel.Composition.ExportFactory%601.CreateExport%2A?displayProperty=nameWithType> método retorna um <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> objeto, que tem duas partes. O <xref:System.ComponentModel.Composition.ExportLifetimeContext%601.Value%2A?displayProperty=nameWithType> propriedade fornece acesso à parte criado. Chamando o <xref:System.ComponentModel.Composition.ExportLifetimeContext%601.Dispose%2A> método o <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> objeto limpa a parte criada e todas as suas dependências, permitindo assim que o tempo de vida da parte a ser gerenciado sem referência para o contêiner que o criou.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExportFactory (Func&lt;Tuple&lt;T,Action&gt;&gt; exportLifetimeContextCreator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;class System.Tuple`2&lt;!T, class System.Action&gt;&gt; exportLifetimeContextCreator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportFactory`1.#ctor(System.Func{System.Tuple{`0,System.Action}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exportLifetimeContextCreator" Type="System.Func&lt;System.Tuple&lt;T,System.Action&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="exportLifetimeContextCreator">Uma função que retorna o valor exportado e um <see cref="T:System.Action" /> que solta.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.ExportFactory`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExport">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.ExportLifetimeContext&lt;T&gt; CreateExport ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.ExportLifetimeContext`1&lt;!T&gt; CreateExport() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportFactory`1.CreateExport" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.ExportLifetimeContext&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância do tipo de exportação da fábrica.</summary>
+        <returns>Uma instância válida de fábrica de tipo exportado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFilterScopedCatalog">
+      <MemberSignature Language="C#" Value="protected virtual bool OnFilterScopedCatalog (System.ComponentModel.Composition.Primitives.ComposablePartDefinition composablePartDefinition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnFilterScopedCatalog(class System.ComponentModel.Composition.Primitives.ComposablePartDefinition composablePartDefinition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportFactory`1.OnFilterScopedCatalog(System.ComponentModel.Composition.Primitives.ComposablePartDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="composablePartDefinition" Type="System.ComponentModel.Composition.Primitives.ComposablePartDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="composablePartDefinition">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

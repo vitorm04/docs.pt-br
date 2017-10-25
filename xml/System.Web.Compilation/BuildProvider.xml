@@ -1,0 +1,606 @@
+<Type Name="BuildProvider" FullName="System.Web.Compilation.BuildProvider">
+  <TypeSignature Language="C#" Value="public abstract class BuildProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BuildProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.BuildProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um conjunto de propriedades e métodos para a geração de código-fonte no ambiente de compilação do ASP.NET. Esta classe é abstrata.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ASP.NET usa do ambiente de compilação <xref:System.Web.Compilation.BuildProvider> objetos para gerar o código-fonte para diferentes tipos de arquivo em um aplicativo. Classes derivadas de <xref:System.Web.Compilation.BuildProvider> predominantemente fornecer o código-fonte para páginas da Web, arquivos, recursos e outros itens personalizados.  
+  
+ Normalmente, você não criar uma instância do <xref:System.Web.Compilation.BuildProvider> classe diretamente. Em vez disso, você pode implementar uma classe que deriva de <xref:System.Web.Compilation.BuildProvider>e configure o <xref:System.Web.Compilation.BuildProvider> ambiente de compilação de implementação para uso dentro do ASP.NET.  
+  
+ Instâncias de <xref:System.Web.Compilation.BuildProvider> classe são usados com <xref:System.Web.Compilation.AssemblyBuilder> objetos para criar um ou mais arquivos em um assembly compilado. Um <xref:System.Web.Compilation.BuildProvider> instância gera o código-fonte no idioma adequado para arquivos individuais e o <xref:System.Web.Compilation.AssemblyBuilder> objeto combina a fonte de contribuição por cada <xref:System.Web.Compilation.BuildProvider> instância em um único assembly.  
+  
+ O ambiente de compilação do ASP.NET usa instâncias de <xref:System.Web.Compilation.BuildProvider> classe para criar arquivos de dentro de um aplicativo. O <xref:System.Web.Compilation.BuildProvider.VirtualPath%2A> propriedade o <xref:System.Web.Compilation.BuildProvider> classe indica o caminho do arquivo a ser criado. A extensão de arquivo de cada arquivo dentro de um aplicativo é mapeada para um provedor de compilação correspondentes. Inicializa do ambiente de compilação do ASP.NET um <xref:System.Web.Compilation.BuildProvider> instância para cada arquivo com base na extensão de arquivo e usa o <xref:System.Web.Compilation.BuildProvider> métodos para gerar o código-fonte para o arquivo. Passa de ambiente de compilação do ASP.NET um <xref:System.Web.Compilation.AssemblyBuilder> objeto com base no idioma preferencial do compilador e o contexto do arquivo para o <xref:System.Web.Compilation.BuildProvider> métodos ao criar um assembly de um ou mais arquivos, para que o <xref:System.Web.Compilation.BuildProvider> instância pode contribuir código-fonte para o seu arquivo de assembly global.  
+  
+ Para definir ações de compilação personalizada para um tipo de arquivo em um aplicativo ASP.NET, você deve derivar uma classe de <xref:System.Web.Compilation.BuildProvider>implementar membros de classe derivada para criar o tipo de arquivo e configurar o provedor de compilação para a extensão de arquivo correspondente no arquivo de configuração de aplicativo.  
+  
+ O Especifica a extensão de arquivo para arquivos com suporte, e se o provedor de compilação oferece suporte a arquivos de código, os arquivos da Web, arquivos de recurso ou todos os arquivos. Use o `type` atributo para especificar o nome de tipo totalmente qualificado da implementação do provedor de compilação. Use o <xref:System.Web.Compilation.BuildProviderAppliesToAttribute> classe para especificar se o provedor de compilação se aplica a arquivos no diretório App_Code, para arquivos em um diretório de conteúdo da Web, recursos como global ou locais ou para todos os arquivos. Use o `extension` atributo para especificar a extensão de arquivo usada para identificar os arquivos que o <xref:System.Web.Compilation.BuildProvider> classe oferece suporte. Use o <xref:System.Web.Configuration.BuildProviderCollection> provedores em um arquivo de configuração de compilação de classe para examinar. Para obter mais informações sobre como configurar um provedor de compilação, consulte [buildProviders elemento de compilação (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/40fa889d-5412-487a-b6a9-21eb011c2384).  
+  
+ Para implementar um provedor de compilação que gera o código-fonte para um tipo de arquivo personalizado, derive uma classe de <xref:System.Web.Compilation.BuildProvider>e substituir o <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> método para gerar o código-fonte para o tipo de arquivo com suporte. O código-fonte gerado é adicionado para o <xref:System.Web.Compilation.AssemblyBuilder> objeto na forma de um gráfico CodeDOM, ou como o conteúdo que representa um arquivo de código de origem físico. Se o provedor de compilação requer uma linguagem de programação específica, substituir o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A> propriedade para retornar um <xref:System.Web.Compilation.CompilerType> objeto para a linguagem de programação com suporte. Se o provedor de compilação não precisar de uma linguagem de programação específica, não substituem o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A> propriedade; use a implementação da classe base, que indica que o provedor de compilação pode usar qualquer linguagem do .NET Framework, como Visual Basic ou c#.  
+  
+ Para implementar um provedor de compilação que gera o código-fonte para o conteúdo da Web, derive uma classe de <xref:System.Web.Compilation.BuildProvider> e substituir o <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A> método para retornar o <xref:System.Type> para a classe gerada pelo <xref:System.Web.Compilation.BuildProvider>. Substituir o <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> método para gerar o código-fonte para o tipo fornecido pelo arquivo com suporte.  
+  
+> [!NOTE]
+>  Adicionando um personalizado <xref:System.Web.Compilation.BuildProvider> classe no arquivo Web. config funciona em um site da Web do ASP.NET, mas não funciona em um projeto de aplicativo da Web do ASP.NET. Em um projeto de aplicativo Web, o código gerado pelo <xref:System.Web.Compilation.BuildProvider> classe não pode ser incluída no aplicativo. Para obter mais informações, consulte [visão geral de pré-compilação projeto de aplicativo Web ASP.NET](http://msdn.microsoft.com/en-us/b940abbd-178d-4570-b441-52914fa7b887).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra uma implementação de provedor de compilação simples, herdando abstrata <xref:System.Web.Compilation.BuildProvider> classe base. O provedor de compilação substitui o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A>, <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A>, e <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> membros da classe base. O exemplo não inclui a implementação de `SampleClassGenerator` classe. Para obter mais informações, consulte o <xref:System.CodeDom.CodeCompileUnit> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Compilation.SampleBuildProvider_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.SampleBuildProvider_2/CS/Class1.cs#2)]
+ [!code-vb[System.Web.Compilation.SampleBuildProvider_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.SampleBuildProvider_2/VB/Class1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BuildProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Compilation.BuildProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.Compilation.BuildProvider> classe é abstrata, não é possível criar uma instância de <xref:System.Web.Compilation.BuildProvider> diretamente usando o construtor.  
+  
+ Ao derivar do <xref:System.Web.Compilation.BuildProvider> classe, substitua o construtor para implementar as ações de inicialização personalizada para sua implementação de provedor de compilação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeCompilerType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.Compilation.CompilerType CodeCompilerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Compilation.CompilerType CodeCompilerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.BuildProvider.CodeCompilerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.CompilerType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o tipo de compilador usado por um provedor de compilação para gerar o código-fonte para um tipo de arquivo personalizado.</summary>
+        <value>Somente leitura <see cref="T:System.Web.Compilation.CompilerType" /> que representa o gerador de código, o compilador de código e as configurações de compilador usadas para compilar o código-fonte para o caminho virtual. Retorna a classe base <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A> propriedade para fornecer as configurações para compilar o código-fonte para uma implementação de <xref:System.Web.Compilation.BuildProvider>. O <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A> é de propriedade `null` se o provedor de compilação não requer uma linguagem de código específico para gerar e compilar o código-fonte.  
+  
+ Para definir o valor para um <xref:System.Web.Compilation.CompilerType> objeto dentro de uma implementação de provedor de compilação, use o <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerType%2A> ou <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerTypeForLanguage%2A> método.  
+  
+ O <xref:System.Web.Compilation.CompilerType.CodeDomProviderType%2A> propriedade especifica o <xref:System.CodeDom.Compiler.CodeDomProvider> implementação que é usada para gerar e compilar o código-fonte para um provedor de compilação. O <xref:System.Web.Compilation.CompilerType.CompilerParameters%2A> propriedade define as configurações que são usadas para compilar o código-fonte em um assembly.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra uma implementação de provedor de compilação simples, herdando abstrata <xref:System.Web.Compilation.BuildProvider> classe base. O provedor de compilação substitui o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A>, <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A>, e <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> membros da classe base.  
+  
+ [!code-csharp[System.Web.Compilation.SampleBuildProvider_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.SampleBuildProvider_2/CS/Class1.cs#2)]
+ [!code-vb[System.Web.Compilation.SampleBuildProvider_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.SampleBuildProvider_2/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCode">
+      <MemberSignature Language="C#" Value="public virtual void GenerateCode (System.Web.Compilation.AssemblyBuilder assemblyBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateCode(class System.Web.Compilation.AssemblyBuilder assemblyBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.GenerateCode(System.Web.Compilation.AssemblyBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyBuilder" Type="System.Web.Compilation.AssemblyBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyBuilder">O construtor de assembly que referencia o código-fonte gerado pelo provedor de compilação.</param>
+        <summary>Gera o código-fonte para o caminho virtual do provedor de compilação e adiciona o código-fonte para um construtor de assembly especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para implementar um provedor de compilação que gera o código-fonte para um tipo de arquivo personalizado, derive uma classe a partir de <xref:System.Web.Compilation.BuildProvider> classe e substituir o <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> método para gerar o código-fonte para o tipo de arquivo com suporte.  
+  
+ Do normalmente, um provedor de compilação <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> leituras de implementação de <xref:System.Web.Compilation.BuildProvider.VirtualPath%2A> propriedade, analisa o conteúdo e adiciona o código-fonte gerado especificado <xref:System.Web.Compilation.AssemblyBuilder> objeto. Você pode contribuir código-fonte para o assembly na forma de um <xref:System.IO.TextWriter> objeto ou um gráfico CodeDOM. Para adicionar o código-fonte para o assembly por meio de um <xref:System.IO.TextWriter> de objeto, use o <xref:System.Web.Compilation.AssemblyBuilder.CreateCodeFile%2A> método. Para adicionar o código-fonte em um gráfico CodeDOM ao assembly, use o <xref:System.Web.Compilation.AssemblyBuilder.AddCodeCompileUnit%2A> método.  
+  
+ Se o provedor de compilação gera o código-fonte em uma linguagem de programação específica, você deve substituir o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A> propriedade para retornar um <xref:System.Web.Compilation.CompilerType> objeto para a linguagem de programação com suporte.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra uma implementação de provedor de compilação simples, herdando abstrata <xref:System.Web.Compilation.BuildProvider> classe base. O provedor de compilação substitui o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A>, <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A>, e <xref:System.Web.Compilation.BuildProvider.GenerateCode%2A> membros da classe base.  
+  
+ [!code-csharp[System.Web.Compilation.SampleBuildProvider_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Compilation.SampleBuildProvider_2/CS/Class1.cs#2)]
+ [!code-vb[System.Web.Compilation.SampleBuildProvider_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Compilation.SampleBuildProvider_2/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeCompileUnit">
+      <MemberSignature Language="C#" Value="protected virtual System.CodeDom.CodeCompileUnit GetCodeCompileUnit (out System.Collections.IDictionary linePragmasTable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.CodeDom.CodeCompileUnit GetCodeCompileUnit([out] class System.Collections.IDictionary&amp; linePragmasTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.GetCodeCompileUnit(System.Collections.IDictionary@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="linePragmasTable" Type="System.Collections.IDictionary&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="linePragmasTable">Quando este método retorna, contém um dicionário que contém todos os números de linha associado e pragmas de linha do código-fonte. Este parâmetro é passado não inicializado.</param>
+        <summary>Representa o contêiner para o gráfico de CodeDOM gerado.</summary>
+        <returns>O contêiner para o gráfico de CodeDOM gerado pelo <see cref="T:System.Web.Compilation.BuildProvider" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado por meio de <xref:System.Web.Compilation.ClientBuildManager> classe para suportam de realce de sintaxe e o designer no Visual Studio.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomString">
+      <MemberSignature Language="C#" Value="public virtual string GetCustomString (System.CodeDom.Compiler.CompilerResults results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetCustomString(class System.CodeDom.Compiler.CompilerResults results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.GetCustomString(System.CodeDom.Compiler.CompilerResults)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+      </Parameters>
+      <Docs>
+        <param name="results">Os resultados da compilação para o caminho virtual do provedor de compilação.</param>
+        <summary>Gera uma cadeia de caracteres a ser mantido no assembly compilado.</summary>
+        <returns>Uma cadeia de caracteres a ser mantido no ambiente de compilação, ou <see langword="null" /> se o <see cref="T:System.Web.Compilation.BuildProvider" /> instância não implementa <see cref="M:System.Web.Compilation.BuildProvider.GetCustomString(System.CodeDom.Compiler.CompilerResults)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.BuildManager.GetCompiledCustomString%2A> método de um <xref:System.Web.Compilation.BuildManager> objeto cria uma instância de um provedor de compilação para um caminho virtual de entrada e chama o <xref:System.Web.Compilation.BuildProvider.GetCustomString%2A> método no <xref:System.Web.Compilation.BuildProvider> objeto.  
+  
+ A base de <xref:System.Web.Compilation.BuildProvider> classe retorna `null` para o <xref:System.Web.Compilation.BuildProvider.GetCustomString%2A> método, indicando que <xref:System.Web.Compilation.BuildProvider.GetCustomString%2A> não está implementado.  
+  
+ Determinadas implementações do provedor de compilação podem implementar <xref:System.Web.Compilation.BuildProvider.GetCustomString%2A> em vez do <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A> método. Um <xref:System.Web.Compilation.BuildProvider> geralmente usa um objeto <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A> para retornar um <xref:System.Type> objeto para um caminho virtual. No entanto, o <xref:System.Web.Compilation.BuildProvider.GetCustomString%2A> método pode ser usado para indicar que um <xref:System.Web.Compilation.BuildProvider> objeto pode gerar vários tipos de um caminho virtual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultCompilerType">
+      <MemberSignature Language="C#" Value="protected System.Web.Compilation.CompilerType GetDefaultCompilerType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.Compilation.CompilerType GetDefaultCompilerType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.GetDefaultCompilerType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.CompilerType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna as configurações do compilador para o idioma padrão no aplicativo.</summary>
+        <returns>Um <see cref="T:System.Web.Compilation.CompilerType" /> que representa as configurações do compilador para o idioma padrão no aplicativo. A classe base retorna o compilador padrão com base no arquivo de configuração do aplicativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerType%2A> método para examinar o tipo de compilador padrão para um provedor de compilação. Use o <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerTypeForLanguage%2A> método para examinar o tipo de compilador configurado em um provedor de compilação para um nome de idioma específico.  
+  
+ A base de <xref:System.Web.Compilation.BuildProvider> classe determina o tipo de compilador padrão usando o `defaultLanguage` atributo valor na seção do arquivo de configuração do aplicativo. Se não houver nenhuma configuração de idioma padrão na seção de compilação, o tipo de compilador padrão é definido usando o <xref:Microsoft.VisualBasic.VBCodeProvider> provedor do idioma.  
+  
+ Ao derivar do <xref:System.Web.Compilation.BuildProvider> classe, você pode usar <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerType%2A> para definir o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A> propriedade dentro de sua implementação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultCompilerTypeForLanguage">
+      <MemberSignature Language="C#" Value="protected System.Web.Compilation.CompilerType GetDefaultCompilerTypeForLanguage (string language);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.Compilation.CompilerType GetDefaultCompilerTypeForLanguage(string language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.GetDefaultCompilerTypeForLanguage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.CompilerType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="language">Um nome de idioma de código.</param>
+        <summary>Retorna as configurações do compilador para o provedor de compilação com base no idioma especificado.</summary>
+        <returns>Um <see cref="T:System.Web.Compilation.CompilerType" /> que representa as configurações do compilador para o provedor de compilação com base no idioma especificado. A classe base retorna o padrão de configurações do compilador para o idioma com base no arquivo de configuração do aplicativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerTypeForLanguage%2A> método para examinar o tipo de compilador configurado no provedor de compilação para um nome de idioma específico. Use o <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerType%2A> método para examinar o tipo de compilador padrão para um provedor de compilação.  
+  
+ A base de <xref:System.Web.Compilation.BuildProvider> classe determina o tipo de compilador padrão usando o <xref:System.Web.Configuration.Compiler> elementos no <xref:System.Web.Configuration.CompilationSection.Compilers%2A> propriedade o <xref:System.Web.Configuration.CompilationSection> objeto para o arquivo de configuração. Isso é equivalente à examinando os elementos em elementos e seções do arquivo de configuração. Por exemplo, para o `language` valor VB, o método de classe base retorna um <xref:System.Web.Compilation.CompilerType> correspondente para as configurações definidas para uma instância do objeto <xref:Microsoft.VisualBasic.VBCodeProvider?displayProperty=nameWithType>.  
+  
+ Quando você deriva o <xref:System.Web.Compilation.BuildProvider> classe, você pode usar <xref:System.Web.Compilation.BuildProvider.GetDefaultCompilerTypeForLanguage%2A> para definir o <xref:System.Web.Compilation.BuildProvider.CodeCompilerType%2A> valor de propriedade para o idioma com suporte pela sua implementação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="language" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="language" />não coincide com um compilador configurado para o provedor de compilação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGeneratedType">
+      <MemberSignature Language="C#" Value="public virtual Type GetGeneratedType (System.CodeDom.Compiler.CompilerResults results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetGeneratedType(class System.CodeDom.Compiler.CompilerResults results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.GetGeneratedType(System.CodeDom.Compiler.CompilerResults)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+      </Parameters>
+      <Docs>
+        <param name="results">Os resultados da compilação para o caminho virtual do provedor de compilação.</param>
+        <summary>Retorna um tipo gerado pelo provedor de compilação do caminho virtual.</summary>
+        <returns>O tipo que é gerado pelo provedor de compilação para o caminho virtual. Retorna a classe base <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para implementar um provedor de compilação que gera o código-fonte para o conteúdo da Web como arquivos. aspx, derive uma classe a partir de <xref:System.Web.Compilation.BuildProvider> classe e substituir o <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A> método para retornar o tipo gerado pelo provedor de compilação.  
+  
+ O sistema de compilação do ASP.NET compila arquivos para cada provedor de compilação e gera um <xref:System.CodeDom.Compiler.CompilerResults> objeto, que é passado para o <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A> método. Do normalmente, um provedor de compilação <xref:System.Web.Compilation.BuildProvider.GetGeneratedType%2A> implementação usa o <xref:System.Reflection.Assembly.GetType%2A> método o <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> propriedade da entrada `results` objeto para retornar o tipo fornecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResultFlags">
+      <MemberSignature Language="C#" Value="public virtual System.Web.Compilation.BuildProviderResultFlags GetResultFlags (System.CodeDom.Compiler.CompilerResults results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Web.Compilation.BuildProviderResultFlags GetResultFlags(class System.CodeDom.Compiler.CompilerResults results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.GetResultFlags(System.CodeDom.Compiler.CompilerResults)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderResultFlags</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+      </Parameters>
+      <Docs>
+        <param name="results">Os resultados da compilação para o caminho virtual do provedor de compilação.</param>
+        <summary>Retorna um valor que indica a ações necessárias quando um caminho virtual é criado.</summary>
+        <returns>Um <see cref="T:System.Web.Compilation.BuildProviderResultFlags" /> valor que indica o ambiente de compilação de ações necessárias depois que o caminho virtual é criado dentro do ASP.NET.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.BuildProvider.GetResultFlags%2A> método é usado pelo ambiente de compilação do ASP.NET ao usar instâncias do <xref:System.Web.Compilation.BuildProvider> classe para criar arquivos e carregar os assemblies compilados.  
+  
+ A base de <xref:System.Web.Compilation.BuildProvider> classe método retorna o <xref:System.Web.Compilation.BuildProviderResultFlags.Default> valor do campo, que indica que nenhuma ação especial é necessária quando o caminho virtual é criado.  
+  
+ Ao derivar do <xref:System.Web.Compilation.BuildProvider> classe, você pode implementar o <xref:System.Web.Compilation.BuildProvider.GetResultFlags%2A> método para retornar um diferentes <xref:System.Web.Compilation.BuildProviderResultFlags> valor para o tipo de arquivo personalizado ou o caminho virtual. Por exemplo, se uma recriação de seu caminho virtual requer que o contém <xref:System.AppDomain> objeto a ser recarregado, você pode retornar o <xref:System.Web.Compilation.BuildProviderResultFlags.ShutdownAppDomainOnChange> valor de enumeração de seu <xref:System.Web.Compilation.BuildProvider.GetResultFlags%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenReader">
+      <MemberSignature Language="C#" Value="protected System.IO.TextReader OpenReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IO.TextReader OpenReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.OpenReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre um leitor de texto para leitura do caminho virtual do objeto de provedor de compilação atual.</summary>
+        <returns>Um open <see cref="T:System.IO.TextReader" /> que pode ser usado para ler o conteúdo do <see cref="P:System.Web.Compilation.BuildProvider.VirtualPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IO.TextReader.Read%2A> método retornado <xref:System.IO.TextReader> objeto para ler o conteúdo do <xref:System.Web.Compilation.BuildProvider.VirtualPath%2A> propriedade para um <xref:System.Web.Compilation.BuildProvider> objeto.  
+  
+ Depois de chamar o <xref:System.Web.Compilation.BuildProvider.OpenReader%2A> método, você deve usar o <xref:System.IO.TextReader.Close%2A> método para fechar o <xref:System.IO.TextReader> de objeto e liberar recursos do sistema associados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenReader">
+      <MemberSignature Language="C#" Value="protected System.IO.TextReader OpenReader (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IO.TextReader OpenReader(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.OpenReader(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual para leitura.</param>
+        <summary>Abre um leitor de texto para leitura de um caminho virtual especificado.</summary>
+        <returns>Um open <see cref="T:System.IO.TextReader" /> que pode ser usado para ler o conteúdo do caminho virtual especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IO.TextReader.Read%2A> método retornado <xref:System.IO.TextReader> objeto para ler o conteúdo do caminho virtual.  
+  
+ Depois de chamar o <xref:System.Web.Compilation.BuildProvider.OpenReader%2A> método, você deve usar o <xref:System.IO.TextReader.Close%2A> método para fechar o <xref:System.IO.TextReader> de objeto e liberar recursos do sistema associados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenStream">
+      <MemberSignature Language="C#" Value="protected System.IO.Stream OpenStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IO.Stream OpenStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.OpenStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre um fluxo para ler o caminho virtual do objeto de provedor de compilação atual.</summary>
+        <returns>Um open <see cref="T:System.IO.Stream" /> que pode ser usado para ler o conteúdo do <see cref="P:System.Web.Compilation.BuildProvider.VirtualPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IO.Stream.Read%2A> método retornado <xref:System.IO.Stream> objeto para ler o conteúdo do caminho virtual para o <xref:System.Web.Compilation.BuildProvider> objeto.  
+  
+ Depois de chamar o <xref:System.Web.Compilation.BuildProvider.OpenStream%2A> método, você deve usar o <xref:System.IO.Stream.Close%2A> método para fechar o <xref:System.IO.Stream> de objeto e liberar recursos do sistema associados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenStream">
+      <MemberSignature Language="C#" Value="protected System.IO.Stream OpenStream (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IO.Stream OpenStream(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.OpenStream(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual para leitura.</param>
+        <summary>Abre um fluxo para leitura de um caminho virtual especificado.</summary>
+        <returns>Um open <see cref="T:System.IO.Stream" /> que pode ser usado para ler o conteúdo do caminho virtual especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IO.Stream.Read%2A> método retornado <xref:System.IO.Stream> objeto para ler o conteúdo do caminho virtual.  
+  
+ Depois de chamar o <xref:System.Web.Compilation.BuildProvider.OpenStream%2A> método, você deve usar o <xref:System.IO.Stream.Close%2A> método para fechar o <xref:System.IO.Stream> de objeto e liberar recursos do sistema associados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCompileErrors">
+      <MemberSignature Language="C#" Value="public virtual void ProcessCompileErrors (System.CodeDom.Compiler.CompilerResults results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessCompileErrors(class System.CodeDom.Compiler.CompilerResults results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.ProcessCompileErrors(System.CodeDom.Compiler.CompilerResults)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="System.CodeDom.Compiler.CompilerResults" />
+      </Parameters>
+      <Docs>
+        <param name="results">Resultados do compilador.</param>
+        <summary>Quando substituído em uma classe derivada, permite que você revise as mensagens de erro do compilador para que você pode modificá-las para fornecer mais informações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você substitui esse método para que você possa modificar os erros do compilador antes de eles serem exibidos para tornar o texto de erro mais úteis para o usuário. Isso é útil em situações em que você sabe o contexto de certos erros e pode fornecer informações ao usuário sobre como corrigi-los. A mensagem de erro do compilador original é geralmente específica de uma construção de linguagem específica e não faz a causa real ou solução óbvia para o usuário.  
+  
+ Você pode acessar os erros usando o <xref:System.CodeDom.Compiler.CompilerResults> objeto que é passado para o método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedAssemblies">
+      <MemberSignature Language="C#" Value="protected System.Collections.ICollection ReferencedAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection ReferencedAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.BuildProvider.ReferencedAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa os assemblies para compilar com o código-fonte gerado pelo provedor de compilação.</summary>
+        <value>Uma coleção somente leitura de assemblies que podem ser referenciadas pelo código-fonte gerado pelo provedor de compilação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ASP.NET criar ambiente inicializa a coleção de assemblies que estão disponíveis para referência pelo provedor de compilação. O código-fonte gerado por um provedor de compilação pode usar os tipos públicos nos assemblies referenciados. A coleção de assembly referenciado consiste em outros assemblies criados no aplicativo ASP.NET e assemblies listados no elemento no arquivo de configuração.  
+  
+ Se o provedor de compilação gera o código-fonte que faz referência a assemblies adicionais, o provedor de compilação adiciona os assemblies adicionais usando o <xref:System.Web.Compilation.AssemblyBuilder.AddAssemblyReference%2A> método. O ambiente de compilação do ASP.NET resolve tipos externos durante a compilação do assembly usando ambos os assemblies referenciados adicionados por criar provedores e a coleção padrão de assemblies disponíveis para referência.  
+  
+ O <xref:System.Web.Compilation.BuildProvider.ReferencedAssemblies%2A> coleção inclui assemblies que são adicionados para referência por outros provedores de compilação por meio de <xref:System.Web.Compilation.AssemblyBuilder.AddAssemblyReference%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterBuildProvider">
+      <MemberSignature Language="C#" Value="public static void RegisterBuildProvider (string extension, Type providerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterBuildProvider(string extension, class System.Type providerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProvider.RegisterBuildProvider(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.String" />
+        <Parameter Name="providerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="extension">A extensão de nome de arquivo que é o provedor de compilação para.</param>
+        <param name="providerType">A classe de provedor de compilação.</param>
+        <summary>Registra um provedor de compilação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para registrar provedores de compilação em vez de defini-los no arquivo Web. config. Para obter mais informações sobre provedores de compilação, consulte o <xref:System.Web.Compilation.BuildProvider> classe e [buildProviders elemento de compilação (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/40fa889d-5412-487a-b6a9-21eb011c2384).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="protected string VirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.BuildProvider.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o arquivo a ser criado por esta implementação de provedor de compilação.</summary>
+        <value>Uma cadeia de somente leitura que especifica o caminho virtual de um arquivo a ser compilado por esse provedor de compilação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O caminho virtual de um <xref:System.Web.Compilation.BuildProvider> objeto é o caminho para o arquivo que está sendo compilado pelo provedor de compilação. Por exemplo, se você tiver configurado um personalizado <xref:System.Web.Compilation.BuildProvider> classe para criar todos os arquivos no site da Web com uma extensão personalizada de ABC, se seu site da Web é chamado WebSite1 e o site da Web contém um arquivo chamado Example.abc, o <xref:System.Web.Compilation.BuildProvider.VirtualPath%2A> propriedade contém o valor `/WebSite1/Example.abc`.  
+  
+ A extensão de arquivo de cada arquivo dentro do aplicativo determina o tipo de arquivo e o provedor de compilação para o tipo de arquivo correspondente. Inicializa do ambiente de compilação do ASP.NET um <xref:System.Web.Compilation.BuildProvider> do objeto para cada arquivo com base no tipo de arquivo e usa o <xref:System.Web.Compilation.BuildProvider> métodos para gerar código-fonte para cada arquivo.  
+  
+ Para obter mais informações sobre como configurar um provedor de compilação, consulte [buildProviders elemento de compilação (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/40fa889d-5412-487a-b6a9-21eb011c2384).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPathDependencies">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ICollection VirtualPathDependencies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection VirtualPathDependencies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.BuildProvider.VirtualPathDependencies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma coleção de caminhos virtuais que devem ser compilados antes do provedor de compilação gera o código.</summary>
+        <value>Uma coleção somente leitura de cadeias de caracteres que representa os caminhos virtuais que esta instância do provedor de compilação é dependente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.BuildProvider.VirtualPathDependencies%2A> propriedade é uma coleção de caminhos virtuais que devem ser compilados antes do <xref:System.Web.Compilation.BuildProvider> instância gera o código-fonte. Os assemblies de caminhos virtuais na <xref:System.Web.Compilation.BuildProvider.VirtualPathDependencies%2A> são adicionados como referências a compilação para a <xref:System.Web.Compilation.BuildProvider> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

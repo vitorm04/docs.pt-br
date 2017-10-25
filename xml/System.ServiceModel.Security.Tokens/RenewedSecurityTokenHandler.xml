@@ -1,0 +1,32 @@
+<Type Name="RenewedSecurityTokenHandler" FullName="System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler">
+  <TypeSignature Language="C#" Value="public delegate void RenewedSecurityTokenHandler(SecurityToken newSecurityToken, SecurityToken oldSecurityToken);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RenewedSecurityTokenHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.RenewedSecurityTokenHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="newSecurityToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="oldSecurityToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="newSecurityToken">O token renovado.</param>
+    <param name="oldSecurityToken">O token de segurança expirado.</param>
+    <summary>O delegado quando implementada é chamado antes de um token renovado é retornado ao cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O cliente faz solicitações de renovação para um token quando o token está prestes a expirar. O representante fornece um ponto de extensibilidade para inspecionar o token seja renovado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

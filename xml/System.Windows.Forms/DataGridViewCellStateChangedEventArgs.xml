@@ -1,0 +1,121 @@
+<Type Name="DataGridViewCellStateChangedEventArgs" FullName="System.Windows.Forms.DataGridViewCellStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewCellStateChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewCellStateChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellStateChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.DataGridView.CellStateChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.DataGridViewCellStateChangedEventArgs.Cell%2A> propriedade para determinar qual célula é alterado. Use o <xref:System.Windows.Forms.DataGridViewCellStateChangedEventArgs.StateChanged%2A> propriedade para determinar qual estado da célula é alterado.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso desse tipo.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewCellStateChangedEventArgs (System.Windows.Forms.DataGridViewCell dataGridViewCell, System.Windows.Forms.DataGridViewElementStates stateChanged);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridViewCell dataGridViewCell, valuetype System.Windows.Forms.DataGridViewElementStates stateChanged) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellStateChangedEventArgs.#ctor(System.Windows.Forms.DataGridViewCell,System.Windows.Forms.DataGridViewElementStates)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataGridViewCell" Type="System.Windows.Forms.DataGridViewCell" />
+        <Parameter Name="stateChanged" Type="System.Windows.Forms.DataGridViewElementStates" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridViewCell">O <see cref="T:System.Windows.Forms.DataGridViewCell" /> que tem um estado de alteração.</param>
+        <param name="stateChanged">Uma da <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> valores que indica o estado que foi alterado na célula.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewCellStateChangedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa os valores de parâmetro para inicializar o <xref:System.Windows.Forms.DataGridViewCellStateChangedEventArgs.Cell%2A> e <xref:System.Windows.Forms.DataGridViewCellStateChangedEventArgs.StateChanged%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataGridViewCell" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cell">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewCell Cell { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCell Cell" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStateChangedEventArgs.Cell" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.DataGridViewCell" /> que tem um estado de alteração.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGridViewCell" /> cujo estado é alterado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso desse tipo.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewElementStates StateChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewElementStates StateChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStateChangedEventArgs.StateChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewElementStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado que foi alterado na célula.</summary>
+        <value>Uma da <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> valores que indica o estado que foi alterado na célula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso desse tipo.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

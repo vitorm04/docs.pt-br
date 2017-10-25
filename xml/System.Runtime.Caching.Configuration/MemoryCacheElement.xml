@@ -1,0 +1,217 @@
+<Type Name="MemoryCacheElement" FullName="System.Runtime.Caching.Configuration.MemoryCacheElement">
+  <TypeSignature Language="C#" Value="public sealed class MemoryCacheElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MemoryCacheElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.Configuration.MemoryCacheElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um elemento usado para configurar um cache baseado na classe <see cref="T:System.Runtime.Caching.MemoryCache" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> classe define um elemento que você pode usar para configurar o cache. Várias instâncias de <xref:System.Runtime.Caching.MemoryCache> classe pode ser usada em um único aplicativo. Cada `memoryCache` elemento no arquivo de configuração pode conter configurações para um conjunto nomeado <xref:System.Runtime.Caching.MemoryCache> instância.  
+  
+ O `memoryCache` elemento requer uma `namedCaches` elemento filho. Para definir as configurações de nomeadas do cache além da configuração padrão, você pode adicionar `namedCaches` elementos. Para obter mais informações sobre como adicionar configurações de cache nomeado, consulte [ &lt;namedCaches&gt; (configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryCacheElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheElement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome exclusivo para uma configuração de cache específico.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMemoryLimitMegabytes">
+      <MemberSignature Language="C#" Value="public int CacheMemoryLimitMegabytes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CacheMemoryLimitMegabytes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.MemoryCacheElement.CacheMemoryLimitMegabytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cacheMemoryLimitMegabytes", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo de memória, em megabytes, que uma instância de um objeto <see cref="T:System.Runtime.Caching.MemoryCache" /> pode atingir.</summary>
+        <value>O valor do tamanho máximo de memória, em megabytes. O padrão é zero, o que indica que as instâncias de <see cref="T:System.Runtime.Caching.MemoryCache" /> gerenciam sua própria memória com base na quantidade de memória instalada no computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.Configuration.MemoryCacheElement.CacheMemoryLimitMegabytes%2A> representa o valor da propriedade de `cacheMemoryLimitMegabytes` atributo de configuração no `namedCaches` elemento de configuração.  
+  
+ Se o tamanho do cache excede o limite especificado, a implementação de cache de memória remove as entradas de cache.  
+  
+ Essa propriedade pode ser definida individualmente no `namedCaches` elementos, com cada `namedCaches` elemento correspondente a uma configuração de cache exclusivo.  
+  
+ As configurações para o <xref:System.Runtime.Caching.MemoryCache.CacheMemoryLimit%2A> propriedade pode ser lido o `cacheMemoryLimitMegabytes` atributo de configuração no arquivo de configuração. Como alternativa, as configurações podem ser passadas quando a <xref:System.Runtime.Caching.MemoryCache> classe é inicializada.  
+  
+ Para obter mais informações sobre como configurar o cache, consulte [ &lt;namedCaches&gt; (configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.MemoryCacheElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de uma configuração de cache específica.</summary>
+        <value>O nome de uma configuração de cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.Configuration.MemoryCacheElement.Name%2A> o valor da propriedade é o identificador exclusivo para uma configuração de cache nomeado específico. Cada configuração de cache deve ter uma ID exclusiva.  
+  
+ No `memoryCache` seção de um arquivo de configuração, uma configuração de cache exclusivo é definida por um `namedCaches` coleção de configuração. Cada entrada de cache nomeado requer um nome exclusivo no arquivo de configuração. Esse valor deve ter pelo menos um caractere.  
+  
+ Para obter mais informações sobre como configurar o cache, consulte [ &lt;namedCaches&gt; (configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalMemoryLimitPercentage">
+      <MemberSignature Language="C#" Value="public int PhysicalMemoryLimitPercentage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PhysicalMemoryLimitPercentage" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.MemoryCacheElement.PhysicalMemoryLimitPercentage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("physicalMemoryLimitPercentage", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=100, MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o percentual de memória do servidor que pode ser usada pelo cache.</summary>
+        <value>O percentual de memória física que o cache pode usar, expressa como um valor inteiro de 1 a 100. O padrão é zero, o que indica que as instâncias de <see cref="T:System.Runtime.Caching.MemoryCache" /> gerenciam sua própria memória com base na quantidade de memória instalada no computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tamanho do cache excede o limite especificado, a implementação de cache de memória remove as entradas de cache.  
+  
+ A configuração para o <xref:System.Runtime.Caching.MemoryCache.PhysicalMemoryLimit%2A> propriedade pode ser lido `physicalMemoryLimitPercentage` atributo de configuração no arquivo de configuração do aplicativo. Como alternativa, o valor pode ser transmitido quando o <xref:System.Runtime.Caching.MemoryCache> classe é inicializada.  
+  
+ Para obter mais informações sobre como configurar o cache, consulte [ &lt;namedCaches&gt; (configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PollingInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan PollingInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PollingInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.MemoryCacheElement.PollingInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("pollingInterval", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o intervalo de tempo após o qual a implementação de cache compara a carga de memória atual com os limites de memória absoluto e baseado em percentual que são definidos para a instância do cache.</summary>
+        <value>O intervalo de tempo após o qual a implementação de cache compara a carga de memória atual com os limites de memória absoluto e baseado em percentual que são definidos para a instância do cache. O padrão é dois minutos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.Configuration.MemoryCacheElement.PollingInterval%2A> propriedade corresponde do `pollingInterval` atributo de configuração do `namedCaches` elemento. As configurações para este atributo de configuração são especificadas no formato `HH:MM:SS` e pode ser lido o `pollingInterval` atributo de configuração na configuração do aplicativo. Como alternativa, o valor pode ser transmitido quando o <xref:System.Runtime.Caching.MemoryCache> classe é inicializada.  
+  
+ Para obter mais informações sobre como configurar o cache, consulte [ &lt;namedCaches&gt; (configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.MemoryCacheElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

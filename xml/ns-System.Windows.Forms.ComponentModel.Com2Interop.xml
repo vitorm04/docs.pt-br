@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Forms.ComponentModel.Com2Interop">
+  <Docs>
+    <summary>O <see cref="N:System.Windows.Forms.ComponentModel.Com2Interop" /> namespace contém classes auxiliares que o Visual Studio usa para exibir as páginas de propriedade no modo de design.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

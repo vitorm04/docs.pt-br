@@ -1,0 +1,130 @@
+<Type Name="MessageSecurityOverMsmqElement" FullName="System.ServiceModel.Configuration.MessageSecurityOverMsmqElement">
+  <TypeSignature Language="C#" Value="public sealed class MessageSecurityOverMsmqElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessageSecurityOverMsmqElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite configurar as propriedades de segurança de nível de mensagem a <see cref="T:System.ServiceModel.NetMsmqBinding" /> associação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageSecurityOverMsmqElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmSuite">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement.AlgorithmSuite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.SecurityAlgorithmSuiteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("algorithmSuite", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o pacote de algoritmos usado para mensagens de segurança no nível do SOAP.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" /> configuração para mensagens enviadas pelo <see cref="T:System.ServiceModel.NetMsmqBinding" /> associação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>define uma variedade de algoritmos como canonização, Digest, KeyWrap, assinatura, criptografia e KeyDerivation. Essa propriedade é mais relevante ao trabalhar com uma plataforma que usa um conjunto de algoritmos diferentes do padrão. Você deve conhecer as vantagens e desvantagens dos algoritmos relevantes ao fazer modificações para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCredentialType">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageCredentialType ClientCredentialType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MessageCredentialType ClientCredentialType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement.ClientCredentialType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("clientCredentialType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageCredentialType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.MessageCredentialType" /> configuração de segurança para mensagens enviadas por meio do transporte MSMQ.</summary>
+        <value>O <see cref="T:System.ServiceModel.MessageCredentialType" /> configuração de segurança para mensagens enviadas por meio do transporte MSMQ.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser definida como um dos valores a seguir:  
+  
+-   Nenhum: Isso permite que o serviço interaja com clientes anônimos. O serviço, nem o cliente requer uma credencial.  
+  
+-   Windows: Isso permite que as trocas SOAP estar sob o contexto autenticado de uma credencial do Windows. Isso sempre realiza a autenticação Kerberos.  
+  
+-   Nome de usuário: Isso permite que o serviço exigir que o cliente seja autenticado usando uma credencial de nome de usuário. Essa credencial precisa ser especificado usando <xref:System.ServiceModel.Description.ClientCredentials> classe.  
+  
+    > [!NOTE]
+    >  [!INCLUDE[indigo2](~/includes/indigo2-md.md)]não oferece suporte a enviar um resumo de senha ou a derivação de chaves usando a senha e essas chaves para segurança de mensagem. Como tal, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] impõe que o exchange é protegido ao usar credenciais de nome de usuário. Esse modo requer que o certificado de serviço seja especificado no lado do cliente usando serviceCertificate e o comportamento de ClientCredential.  
+  
+-   Certificado: Isso permite que o serviço exigir que o cliente seja autenticado usando um certificado. A credencial do cliente nesse caso deve ser especificado usando o <xref:System.ServiceModel.Description.ClientCredentials> classe ou comportamento ClientCredentials. A credencial de serviço nesse caso deve ser especificado usando o <xref:System.ServiceModel.Description.ClientCredentials> classe ou comportamento ClientCredentials especificando o serviceCertificate.  
+  
+-   O CardSpace: Isso permite que o serviço exigir que o cliente seja autenticado usando um [!INCLUDE[infocard1](~/includes/infocard1-md.md)]. O serviceCertiifcate deve ser provisionado no comportamento ClientCredential.  
+  
+ A credencial de certificado para o `MessageSecurityOverMsmq` é relevante apenas quando o modo de segurança é definido como `Both` ou `Message`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

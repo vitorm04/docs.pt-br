@@ -1,0 +1,439 @@
+<Type Name="FontWeights" FullName="System.Windows.FontWeights">
+  <TypeSignature Language="C#" Value="public static class FontWeights" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit FontWeights extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontWeights" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de valores estáticos predefinidos <see cref="T:System.Windows.FontWeight" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um peso de fonte descreve a importância relativa de uma fonte, em termos de luminosidade ou heaviness dos traços. Diferenças de peso geralmente são diferenciadas por um traço aumento ou espessura que está associada um determinado caractere em uma fonte, em comparação com um caractere "normal" da mesma fonte.  
+  
+ O <xref:System.Windows.FontWeights> valores correspondem do `usWeightClass` definição no [!INCLUDE[TLA2#tla_opentype](~/includes/tla2sharptla-opentype-md.md)] especificação. O `usWeightClass` representa um valor inteiro entre 1 e 999. Valores mais baixos indicam pesos mais claros; valores mais altos indicam pesos mais pesados.  
+  
+|Espessura da fonte|usWeightClass|  
+|-----------------|-------------------|  
+|<xref:System.Windows.FontWeights.Thin%2A>|100|  
+|<xref:System.Windows.FontWeights.ExtraLight%2A><br /><br /> <xref:System.Windows.FontWeights.UltraLight%2A>|200|  
+|<xref:System.Windows.FontWeights.Light%2A>|300|  
+|<xref:System.Windows.FontWeights.Normal%2A><br /><br /> <xref:System.Windows.FontWeights.Regular%2A>|400|  
+|<xref:System.Windows.FontWeights.Medium%2A>|500|  
+|<xref:System.Windows.FontWeights.DemiBold%2A><br /><br /> <xref:System.Windows.FontWeights.SemiBold%2A>|600|  
+|<xref:System.Windows.FontWeights.Bold%2A>|700|  
+|<xref:System.Windows.FontWeights.ExtraBold%2A><br /><br /> <xref:System.Windows.FontWeights.UltraBold%2A>|800|  
+|<xref:System.Windows.FontWeights.Black%2A><br /><br /> <xref:System.Windows.FontWeights.Heavy%2A>|900|  
+|<xref:System.Windows.FontWeights.ExtraBlack%2A><br /><br /> <xref:System.Windows.FontWeights.UltraBlack%2A>|950|  
+  
+ Para obter mais informações sobre o [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] `usWeightClass` valor, consulte o ["Tabelas de arquivo fonte"](http://www.microsoft.com/typography/otspec/otff.htm) seção o [!INCLUDE[TLA2#tla_opentype](~/includes/tla2sharptla-opentype-md.md)] especificação.  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, o <xref:System.Windows.FontWeight> é definido como "UltraBold".  
+  
+ [!code-xaml[FontSnippets#FontSnippet12](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml#fontsnippet12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Black">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight Black { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight Black" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.Black" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Preto".</summary>
+        <value>Um valor que representa um peso de fonte "Preto".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.Black%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.Heavy%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bold">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight Bold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight Bold" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.Bold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura da fonte “Negrito”.</summary>
+        <value>Um valor que representa uma espessura da fonte “Negrito”.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DemiBold">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight DemiBold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight DemiBold" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.DemiBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura da fonte "seminegrito".</summary>
+        <value>Um valor que representa uma espessura da fonte "seminegrito".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.DemiBold%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.SemiBold%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraBlack">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight ExtraBlack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight ExtraBlack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.ExtraBlack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Extra preto".</summary>
+        <value>Um valor que representa um peso de fonte "Extra preto".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.FontWeights.ExtraBlack%2A> espessura da fonte é o peso da fonte mais intenso. <xref:System.Windows.FontWeights.ExtraBlack%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.UltraBlack%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraBold">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight ExtraBold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight ExtraBold" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.ExtraBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Extra em negrito".</summary>
+        <value>Um valor que representa um peso de fonte "Extra em negrito".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.ExtraBold%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.UltraBold%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraLight">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight ExtraLight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight ExtraLight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.ExtraLight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Extra light".</summary>
+        <value>Um valor que representa um peso de fonte "Extra light".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.ExtraLight%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.UltraLight%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Heavy">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight Heavy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight Heavy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.Heavy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Grande".</summary>
+        <value>Um valor que representa uma espessura de fonte "Grande".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.Heavy%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.Black%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Light">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight Light { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight Light" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.Light" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Light".</summary>
+        <value>Um valor que representa um peso de fonte "Light".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight Medium { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight Medium" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.Medium" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Médio".</summary>
+        <value>Um valor que representa um peso de fonte "Médio".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Normal".</summary>
+        <value>Um valor que representa um peso de fonte "Normal".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.Normal%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.Regular%2A>.  
+  
+   
+  
+## Examples  
+ Um peso de fonte "Extremamente negrito" descreve um traço mais pesado de um peso normal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Regular">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight Regular { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight Regular" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.Regular" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Normal".</summary>
+        <value>Um valor que representa uma espessura de fonte "Normal".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.Regular%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.Normal%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SemiBold">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight SemiBold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight SemiBold" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.SemiBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura da fonte “Seminegrito”.</summary>
+        <value>Um valor que representa uma espessura da fonte “Seminegrito”.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.SemiBold%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.DemiBold%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thin">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight Thin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight Thin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.Thin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Dinâmico".</summary>
+        <value>Um valor que representa um peso de fonte "Dinâmico".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.FontWeights.Thin%2A> espessura da fonte é o nível de importância fonte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UltraBlack">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight UltraBlack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight UltraBlack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.UltraBlack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Extremamente preto".</summary>
+        <value>Um valor que representa um peso de fonte "Extremamente preto".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.FontWeights.UltraBlack%2A> espessura da fonte é o peso da fonte mais intenso. <xref:System.Windows.FontWeights.UltraBlack%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.ExtraBlack%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UltraBold">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight UltraBold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight UltraBold" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.UltraBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Extremamente negrito".</summary>
+        <value>Um valor que representa um peso de fonte "Extremamente negrito".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.UltraBold%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.ExtraBold%2A>.  
+  
+   
+  
+## Examples  
+ Um peso de fonte "Extremamente negrito" descreve um traço mais pesado de um peso normal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UltraLight">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight UltraLight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontWeight UltraLight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontWeights.UltraLight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma espessura de fonte "Extremamente light".</summary>
+        <value>Um valor que representa um peso de fonte "Extremamente leve".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.FontWeights.UltraLight%2A>equivale a espessura da fonte <xref:System.Windows.FontWeights.ExtraLight%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

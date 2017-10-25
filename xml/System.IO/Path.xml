@@ -1,0 +1,1406 @@
+<Type Name="Path" FullName="System.IO.Path">
+  <TypeSignature Language="C#" Value="public static class Path" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed Path extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Path" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Executa operações em instâncias de <see cref="T:System.String" /> que contêm informações de caminho de arquivo ou diretório. Essas operações são executadas de uma maneira em plataforma cruzada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para exibir o código-fonte do .NET Framework para este tipo, consulte o [fonte de referência](http://referencesource.microsoft.com/#mscorlib/system/io/path.cs#090eca8621a248ee). Percorra o código-fonte online, baixe a referência para exibição offline e percorrer as fontes (incluindo atualizações e patches) durante a depuração; consulte [instruções](http://referencesource.microsoft.com/).  
+  
+ O .NET Framework não dá suporte a acesso direto ao discos físicos por meio de caminhos que são nomes de dispositivo, como "\\\\. \PHYSICALDRIVE0".  
+  
+ Um caminho é uma cadeia de caracteres que fornece o local de um arquivo ou diretório. Um caminho não necessariamente aponta para um local no disco. Por exemplo, um caminho pode mapear para um local na memória ou em um dispositivo. O formato exato de um caminho é determinado pela plataforma atual. Por exemplo, em alguns sistemas, um caminho pode iniciar com uma letra de unidade ou volume, enquanto este elemento não está presente em outros sistemas. Em alguns sistemas, os caminhos de arquivo podem conter extensões, que indicam o tipo de informações armazenadas no arquivo. O formato de uma extensão de nome de arquivo é dependente de plataforma; Por exemplo, alguns sistemas limitam as extensões de três caracteres e outros não. A plataforma atual também determina o conjunto de caracteres usado para separar elementos de um caminho e o conjunto de caracteres que não pode ser usado ao especificar caminhos. Devido a essas diferenças, os campos do `Path` , bem como o comportamento exato de alguns membros de classe a `Path` classe dependem da plataforma.  
+  
+ Um caminho pode conter informações de local absoluto ou relativo. Caminhos absolutos totalmente especificam um local: o arquivo ou diretório pode ser identificado exclusivamente, independentemente da localização atual. Caminhos relativos especifique uma localização parcial: o local atual é usado como o ponto de partida ao localizar um arquivo especificado com um caminho relativo. Para determinar o diretório atual, chame <xref:System.IO.Directory.GetCurrentDirectory%2A?displayProperty=nameWithType>.  
+  
+ A maioria dos membros do `Path` classe não interagem com o sistema de arquivos e não verifica a existência do arquivo especificado por uma cadeia de caracteres de caminho. `Path`classe de membros que modificar uma cadeia de caracteres de caminho, como <xref:System.IO.Path.ChangeExtension%2A>, não têm nenhum efeito nos nomes de arquivos no sistema de arquivos. `Path`membros, no entanto, validar o conteúdo de uma cadeia de caracteres do caminho especificado e lançar um <xref:System.ArgumentException> exceção se a cadeia de caracteres contém caracteres que não são válidos em cadeias de caracteres de caminho, conforme definido em caracteres retornados do <xref:System.IO.Path.GetInvalidPathChars%2A> método. Por exemplo, em plataformas de desktop baseados no Windows, caracteres de caminho inválidos podem incluir aspas ("), menor que (\<), maior que (>), barra vertical (&#124;), backspace (\b), null (\0) e caracteres de Unicode 16 a 18 e 20 a 25.  
+  
+ Os membros de `Path` classe permitem que você rapidamente e facilmente executar operações comuns, como determinar se uma extensão de nome de arquivo é parte de um caminho e combinar duas cadeias de caracteres em nome de um caminho.  
+  
+ Todos os membros de `Path` classe são estática e, portanto, pode ser chamado sem a necessidade de uma instância de um caminho.  
+  
+> [!NOTE]
+>  Em membros que aceitam um caminho como uma cadeia de caracteres de entrada, esse caminho deve ser bem formado ou uma exceção é gerada. Por exemplo, se um caminho é totalmente qualificado, mas começa com um espaço, o caminho não é fragmentado em métodos da classe. Portanto, o caminho está malformado e uma exceção é gerada. Da mesma forma, um caminho ou uma combinação de caminhos não pode ser totalmente qualificada duas vezes. Por exemplo, "c:\temp c:\windows" também gera uma exceção na maioria dos casos. Certifique-se de que seus caminhos são formados ao usar os métodos que aceitam uma cadeia de caracteres de caminho.  
+  
+ Membros que aceitam um caminho, o caminho pode se referir a um arquivo ou apenas um diretório. O caminho especificado também pode se referir a um caminho relativo ou um caminho de convenção de nomenclatura Universal (UNC) para um nome de compartilhamento e servidor. Por exemplo, todos os seguintes são aceitáveis caminhos:  
+  
+-   "c:\\\MyDir\\\MyFile.txt" em c# ou "c:\MyDir\MyFile.txt" no Visual Basic.  
+  
+-   "c:\\\MyDir" em c# ou "c:\MyDir" no Visual Basic.  
+  
+-   "MyDir\\\MySubdir" em c# ou "MyDir\MySubDir" no Visual Basic.  
+  
+-   "\\\\\\\MyServer\\\MyShare" em c#, ou "\\\MyServer\MyShare" no Visual Basic.  
+  
+ Como todas essas operações são executadas em cadeias de caracteres, é impossível verificar se os resultados são válidos em todos os cenários. Por exemplo, o <xref:System.IO.Path.GetExtension%2A> método analisa uma cadeia de caracteres que você passa para ele e retorna a extensão da cadeia de caracteres. No entanto, isso não significa que existe um arquivo com a extensão no disco.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra alguns dos principais membros de `Path` classe.  
+  
+ [!code-cpp[path class#1](~/samples/snippets/cpp/VS_Snippets_CLR/Path Class/CPP/path class.cpp#1)]
+ [!code-csharp[path class#1](~/samples/snippets/csharp/VS_Snippets_CLR/Path Class/CS/path class.cs#1)]
+ [!code-vb[path class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Path Class/VB/path class.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AltDirectorySeparatorChar">
+      <MemberSignature Language="C#" Value="public static readonly char AltDirectorySeparatorChar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly char AltDirectorySeparatorChar" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Path.AltDirectorySeparatorChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um caractere alternativo específico da plataforma usado para separar os níveis de diretório em uma cadeia de caracteres de caminho que reflete uma organização do sistema de arquivos hierárquico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O caractere armazenado neste campo não pode estar em <xref:System.IO.Path.InvalidPathChars>. Este campo pode ser definido como o mesmo valor como <xref:System.IO.Path.DirectorySeparatorChar>. `AltDirectorySeparatorChar`e `DirectorySeparatorChar` são ambos válidos para separar os níveis em uma cadeia de caracteres do caminho do diretório.  
+  
+ O valor desse campo é uma barra invertida ('\\') em UNIX e uma barra ('/ ') em sistemas operacionais Windows e Macintosh.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um uso de `AltDirectorySeparatorChar` campo.  
+  
+ [!code-cpp[System.IO.Path Members#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#13)]
+ [!code-csharp[System.IO.Path Members#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#13)]
+ [!code-vb[System.IO.Path Members#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeExtension">
+      <MemberSignature Language="C#" Value="public static string ChangeExtension (string path, string extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ChangeExtension(string path, string extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.ChangeExtension(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="extension" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">As informações de caminho a serem modificadas. O caminho não pode conter nenhum dos caracteres definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</param>
+        <param name="extension">A nova extensão (com ou sem um ponto à esquerda). Especifique <see langword="null" /> para remover uma extensão existente do <c>caminho</c>.</param>
+        <summary>Altera a extensão de uma cadeia de caracteres do caminho.</summary>
+        <returns>As informações de caminho modificadas.  
+  
+ Em plataformas de área de trabalho baseadas no Windows, se <paramref name="path" /> for <see langword="null" /> ou uma cadeia de caracteres vazia (""), as informações de caminho serão retornadas sem modificações. Se <paramref name="extension" /> for <see langword="null" />, a cadeia de caracteres retornada conterá o caminho especificado com sua extensão removida. Se o <paramref name="path" /> não tiver uma extensão e <paramref name="extension" /> não for <see langword="null" />, a cadeia de caracteres de caminho retornada conterá <paramref name="extension" /> acrescentado ao final de <paramref name="path" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nem `path` nem `extension` contém um ponto (.), `ChangeExtension` adiciona o período.  
+  
+ O `extension` parâmetro pode conter vários períodos e quaisquer caracteres de caminho válido e pode ser de qualquer tamanho. Se `extension` é `null`, a cadeia de caracteres retornada contém o conteúdo do `path` com o último período e todos os caracteres seguintes removidos.  
+  
+ Se `extension` é uma cadeia de caracteres vazia, a cadeia de caracteres de caminho retornado contém o conteúdo de `path` com nenhum dos caracteres depois do último ponto removido.  
+  
+ Se `path` não tem uma extensão e `extension` não é `null`, a cadeia de caracteres retornada contém `path` seguido por `extension`.  
+  
+ Se `extension` não é `null` e não contém um ponto à esquerda, o período é adicionado.  
+  
+ Se `path` contém várias extensões separadas por vários pontos, a cadeia de caracteres retornada contém o conteúdo do `path` com o último período e todos os caracteres seguintes substituído por `extension`. Por exemplo, se `path` é "\Dir1\examples\pathtests.csx.txt" e `extension` é "cs", o caminho modificado é "\Dir1\examples\pathtests.csx.cs".  
+  
+ Não é possível verificar se os resultados retornados são válidos em todos os cenários. Por exemplo, se `path` está vazio, `extension` é anexado.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um uso de `ChangeExtension` método.  
+  
+ [!code-cpp[System.IO.Path Members#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#1)]
+ [!code-csharp[System.IO.Path Members#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#1)]
+ [!code-vb[System.IO.Path Members#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static string Combine (params string[] paths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Combine(string[] paths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.Combine(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paths" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="paths">Uma matriz de partes do caminho.</param>
+        <summary>Combina uma matriz de cadeias de caracteres em um caminho.</summary>
+        <returns>Os caminhos combinados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `paths`deve ser uma matriz das partes do caminho de combinar. Se um dos caminhos subsequentes é um caminho absoluto, a operação de combinar redefine começando com o caminho absoluto, descartando todos os caminhos combinados anteriores.  
+  
+ Cadeias de caracteres de comprimento zero são omitidas do caminho combinado.  
+  
+ Os parâmetros não são analisados se eles têm espaço em branco.  
+  
+ Nem todos os caracteres inválidos para nomes de diretório e arquivo são interpretados como inaceitável, o `Combine` método, porque você pode usar esses caracteres para caracteres curinga de pesquisa. Por exemplo, `Path.Combine("c:\\", "*.txt")` seria inválido se você criar um arquivo a partir dele, é válido como uma cadeia de caracteres de pesquisa. Portanto, é interpretado com êxito pelo `Combine` método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir combina uma matriz de cadeias de caracteres em um caminho.  
+  
+ [!code-csharp[System.IO.Path.Combine#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.path.combine/cs/program.cs#3)]
+ [!code-vb[System.IO.Path.Combine#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.path.combine/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Uma das cadeias de caracteres na matriz contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+        <exception cref="T:System.ArgumentNullException">Uma das cadeias de caracteres na matriz é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static string Combine (string path1, string path2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Combine(string path1, string path2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.Combine(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path1" Type="System.String" />
+        <Parameter Name="path2" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path1">O primeiro caminho a ser combinado.</param>
+        <param name="path2">O segundo caminho a ser combinado.</param>
+        <summary>Combina duas cadeias de caracteres em um caminho.</summary>
+        <returns>Os caminhos combinados. Se um dos caminhos especificados for uma cadeia de comprimento zero, esse método retornará o outro caminho. Se <paramref name="path2" /> contiver um caminho absoluto, esse método retornará <paramref name="path2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `path1` não é uma referência de unidade (ou seja, "C:" ou "D:") e não terminar com um caractere separador válido, conforme definido na <xref:System.IO.Path.DirectorySeparatorChar>, <xref:System.IO.Path.AltDirectorySeparatorChar>, ou <xref:System.IO.Path.VolumeSeparatorChar>, <xref:System.IO.Path.DirectorySeparatorChar> é acrescentado ao `path1` antes de concatenação.  
+  
+ Se `path2` não tem uma raiz (por exemplo, se `path2` não começa com um caractere separador ou uma especificação de unidade), o resultado é uma concatenação de dois Demarcadores, com um caractere separador intermediários. Se `path2` inclui uma raiz `path2` é retornado.  
+  
+ Os parâmetros não são analisados se eles têm espaço em branco. Portanto, se `path2` inclui o espaço em branco (por exemplo, "\file.txt"), o <xref:System.IO.Path.Combine%2A> método anexa `path2` para `path1` em vez de retornar somente `path2`.  
+  
+ Nem todos os caracteres inválidos para nomes de diretório e arquivo são interpretados como inaceitável, o `Combine` método, porque você pode usar esses caracteres para caracteres curinga de pesquisa. Por exemplo, `Path.Combine("c:\\", "*.txt")` seria inválido se você criar um arquivo a partir dele, é válido como uma cadeia de caracteres de pesquisa. Portanto, é interpretado com êxito pelo `Combine` método.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o `Combine` método em uma plataforma de área de trabalho baseados em Windows.  
+  
+ [!code-cpp[pathcombine#1](~/samples/snippets/cpp/VS_Snippets_CLR/pathcombine/CPP/pathcombine.cpp#1)]
+ [!code-csharp[pathcombine#1](~/samples/snippets/csharp/VS_Snippets_CLR/pathcombine/CS/pathcombine.cs#1)]
+ [!code-vb[pathcombine#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/pathcombine/VB/pathcombine.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path1" /> ou <paramref name="path2" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path1" /> ou <paramref name="path2" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static string Combine (string path1, string path2, string path3);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Combine(string path1, string path2, string path3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.Combine(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path1" Type="System.String" />
+        <Parameter Name="path2" Type="System.String" />
+        <Parameter Name="path3" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path1">O primeiro caminho a ser combinado.</param>
+        <param name="path2">O segundo caminho a ser combinado.</param>
+        <param name="path3">O terceiro caminho a ser combinado.</param>
+        <summary>Combina três cadeias de caracteres em um caminho.</summary>
+        <returns>Os caminhos combinados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `path1`deve ser um caminho absoluto (por exemplo, "d:\archives" ou "\\\archives\public"). Se `path2` ou `path3` também é um caminho absoluto, os caminhos de descarta todos os anteriormente combinado de operação de combinar e redefine para o caminho absoluto.  
+  
+ Cadeias de caracteres de comprimento zero são omitidas do caminho combinado.  
+  
+ Se `path1` não é uma referência de unidade (ou seja, "C:" ou "D:") e não terminar com um caractere separador válido, conforme definido na <xref:System.IO.Path.DirectorySeparatorChar>, <xref:System.IO.Path.AltDirectorySeparatorChar>, ou <xref:System.IO.Path.VolumeSeparatorChar>, <xref:System.IO.Path.DirectorySeparatorChar> é acrescentado ao `path1` antes de concatenação.  
+  
+ Se `path2` não tem uma raiz (por exemplo, se `path2` não começa com um caractere separador ou uma especificação de unidade), o resultado é uma concatenação de dois Demarcadores, com um caractere separador intermediários. Se `path2` inclui uma raiz `path2` é retornado.  
+  
+ Os parâmetros não são analisados se eles têm espaço em branco. Portanto, se `path2` inclui o espaço em branco (por exemplo, "\file.txt"), o <xref:System.IO.Path.Combine%2A> método anexa `path2` para `path1`.  
+  
+ Nem todos os caracteres inválidos para nomes de diretório e arquivo são interpretados como inaceitável, o `Combine` método, porque você pode usar esses caracteres para caracteres curinga de pesquisa. Por exemplo, `Path.Combine("c:\\", "*.txt")` seria inválido se você criar um arquivo a partir dele, é válido como uma cadeia de caracteres de pesquisa. Portanto, é interpretado com êxito pelo `Combine` método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir combina três caminhos.  
+  
+ [!code-csharp[System.IO.Path.Combine#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.path.combine/cs/program.cs#1)]
+ [!code-vb[System.IO.Path.Combine#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.path.combine/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path1" />, <paramref name="path2" /> ou <paramref name="path3" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path1" />, <paramref name="path2" /> ou <paramref name="path3" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static string Combine (string path1, string path2, string path3, string path4);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Combine(string path1, string path2, string path3, string path4) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.Combine(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path1" Type="System.String" />
+        <Parameter Name="path2" Type="System.String" />
+        <Parameter Name="path3" Type="System.String" />
+        <Parameter Name="path4" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path1">O primeiro caminho a ser combinado.</param>
+        <param name="path2">O segundo caminho a ser combinado.</param>
+        <param name="path3">O terceiro caminho a ser combinado.</param>
+        <param name="path4">O quarto caminho a ser combinado.</param>
+        <summary>Combina quatro cadeias de caracteres em um caminho.</summary>
+        <returns>Os caminhos combinados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `path1`deve ser um caminho absoluto (por exemplo, "d:\archives" ou "\\\archives\public"). Se um dos caminhos subsequentes também é um caminho absoluto, a operação de combinar descarta todos os caminhos combinados anteriormente e redefine para o caminho absoluto.  
+  
+ Cadeias de caracteres de comprimento zero são omitidas do caminho combinado.  
+  
+ Se `path1` não é uma referência de unidade (ou seja, "C:" ou "D:") e não terminar com um caractere separador válido, conforme definido na <xref:System.IO.Path.DirectorySeparatorChar>, <xref:System.IO.Path.AltDirectorySeparatorChar>, ou <xref:System.IO.Path.VolumeSeparatorChar>, <xref:System.IO.Path.DirectorySeparatorChar> é acrescentado ao `path1` antes de concatenação.  
+  
+ Se `path2` não tem uma raiz (por exemplo, se `path2` não começa com um caractere separador ou uma especificação de unidade), o resultado é uma concatenação de dois Demarcadores, com um caractere separador intermediários. Se `path2` inclui uma raiz `path2` é retornado.  
+  
+ Os parâmetros não são analisados se eles têm espaço em branco. Portanto, se `path2` inclui o espaço em branco (por exemplo, "\file.txt"), o <xref:System.IO.Path.Combine%2A> método anexa `path2` para `path1`.  
+  
+ Nem todos os caracteres inválidos para nomes de diretório e arquivo são interpretados como inaceitável, o `Combine` método, porque você pode usar esses caracteres para caracteres curinga de pesquisa. Por exemplo, `Path.Combine("c:\\", "*.txt")` seria inválido se você criar um arquivo a partir dele, é válido como uma cadeia de caracteres de pesquisa. Portanto, é interpretado com êxito pelo `Combine` método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir combina quatro caminhos.  
+  
+ [!code-csharp[System.IO.Path.Combine#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.path.combine/cs/program.cs#2)]
+ [!code-vb[System.IO.Path.Combine#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.path.combine/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path1" />, <paramref name="path2" />, <paramref name="path3" /> ou <paramref name="path4" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path1" />, <paramref name="path2" />, <paramref name="path3" /> ou <paramref name="path4" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectorySeparatorChar">
+      <MemberSignature Language="C#" Value="public static readonly char DirectorySeparatorChar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly char DirectorySeparatorChar" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Path.DirectorySeparatorChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um caractere específico da plataforma usado para separar os níveis de diretório em uma cadeia de caracteres de caminho que reflete uma organização do sistema de arquivos hierárquico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O caractere armazenado neste campo não pode estar em <xref:System.IO.Path.InvalidPathChars>. <xref:System.IO.Path.AltDirectorySeparatorChar>e `DirectorySeparatorChar` são ambos válidos para separar os níveis em uma cadeia de caracteres do caminho do diretório.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do `DirectorySeparatorChar` campo.  
+  
+ [!code-cpp[System.IO.Path Members#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#13)]
+ [!code-csharp[System.IO.Path Members#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#13)]
+ [!code-vb[System.IO.Path Members#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectoryName">
+      <MemberSignature Language="C#" Value="public static string GetDirectoryName (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDirectoryName(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetDirectoryName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho de um arquivo ou diretório.</param>
+        <summary>Retorna as informações de diretório para a cadeia de caracteres do caminho especificado.</summary>
+        <returns>Informações de diretório para <paramref name="path" /> ou <see langword="null" />, se <paramref name="path" /> denotar um diretório raiz ou for nulo. Retornará <see cref="F:System.String.Empty" /> se <paramref name="path" /> não contiver informações de diretório.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos casos, a cadeia de caracteres retornada por este método consiste em todos os caracteres no caminho até, mas não incluindo a última <xref:System.IO.Path.DirectorySeparatorChar> ou <xref:System.IO.Path.AltDirectorySeparatorChar>. Se o caminho consiste em um diretório raiz, como "c:\\", null será retornado. Observe que esse método não dá suporte a caminhos usando "arquivo:". Porque o caminho retornado não inclui o <xref:System.IO.Path.DirectorySeparatorChar> ou <xref:System.IO.Path.AltDirectorySeparatorChar>, passando o caminho retornado de volta para o <xref:System.IO.Path.GetDirectoryName%2A> método resultará em truncamento de um nível de pasta por uma chamada subsequente na cadeia de caracteres de resultado. Por exemplo, passando o caminho "C:\Directory\SubDirectory\test.txt" para o <xref:System.IO.Path.GetDirectoryName%2A> método retornará "C:\Directory\SubDirectory". Passar essa cadeia de caracteres, "C:\Directory\SubDirectory" para <xref:System.IO.Path.GetDirectoryName%2A> resultará em "C:\Directory".  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o `GetDirectoryName` método em uma plataforma de área de trabalho baseados em Windows.  
+  
+ [!code-cpp[System.IO.Path Members#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#3)]
+ [!code-csharp[System.IO.Path Members#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#3)]
+ [!code-vb[System.IO.Path Members#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="path" /> contém caracteres inválidos, está vazio ou contém apenas espaços em branco.</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), capturar a exceção de classe base, <see cref="T:System.IO.IOException" />, em vez disso.  
+  
+</para>
+          </block>  
+  
+ O parâmetro <paramref name="path" /> é maior que o comprimento máximo definido pelo sistema.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtension">
+      <MemberSignature Language="C#" Value="public static string GetExtension (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetExtension(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">A cadeia de caracteres do caminho do qual obter a extensão.</param>
+        <summary>Retorna a extensão da cadeia de caracteres do caminho especificado.</summary>
+        <returns>A extensão do caminho especificado (incluindo o ponto ".") ou <see langword="null" /> ou <see cref="F:System.String.Empty" />. Se <paramref name="path" /> for <see langword="null" />, <see cref="M:System.IO.Path.GetExtension(System.String)" /> retornará <see langword="null" />. Se <paramref name="path" /> não tiver informações de extensão, <see cref="M:System.IO.Path.GetExtension(System.String)" /> retornará <see cref="F:System.String.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A extensão de `path` é obtido por meio de pesquisa `path` para um ponto (.), começando com o último caractere no caminho e continuar em direção ao início do caminho. Se for encontrado um período antes de um <xref:System.IO.Path.DirectorySeparatorChar> ou <xref:System.IO.Path.AltDirectorySeparatorChar> caracteres, cadeia de caracteres retornada contém o período e os caracteres depois; caso contrário, <xref:System.String.Empty> será retornado.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o `GetExtension` método em uma plataforma de área de trabalho baseados em Windows.  
+  
+ [!code-cpp[System.IO.Path Members#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#4)]
+ [!code-csharp[System.IO.Path Members#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#4)]
+ [!code-vb[System.IO.Path Members#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileName">
+      <MemberSignature Language="C#" Value="public static string GetFileName (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFileName(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetFileName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">A cadeia de caracteres do caminho do qual o nome do arquivo e a extensão serão obtidos.</param>
+        <summary>Retorna o nome de arquivo e a extensão da cadeia de caracteres do caminho especificado.</summary>
+        <returns>Os caracteres após o último caractere de diretório em <paramref name="path" />. Se o último caractere de <paramref name="path" /> for um caractere de separador de diretório ou volume, esse método retornará <see cref="F:System.String.Empty" />. Se <paramref name="path" /> for <see langword="null" />, esse método retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado é `null` se o caminho do arquivo é `null`.  
+  
+ Os caracteres separadores usados para determinar o início do nome do arquivo são <xref:System.IO.Path.DirectorySeparatorChar> e <xref:System.IO.Path.AltDirectorySeparatorChar>.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o comportamento do `GetFileName` método em uma plataforma de área de trabalho baseados em Windows.  
+  
+ [!code-cpp[System.IO.Path Members#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#5)]
+ [!code-csharp[System.IO.Path Members#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#5)]
+ [!code-vb[System.IO.Path Members#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileNameWithoutExtension">
+      <MemberSignature Language="C#" Value="public static string GetFileNameWithoutExtension (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFileNameWithoutExtension(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetFileNameWithoutExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho do arquivo.</param>
+        <summary>Retorna o nome de arquivo da cadeia de caracteres do caminho especificado sem a extensão.</summary>
+        <returns>A cadeia de caracteres retornada por <see cref="M:System.IO.Path.GetFileName(System.String)" />, menos o último ponto (.) e todos os caracteres seguintes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não verifica se o nome de caminho ou arquivo existe.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um uso de `GetFileNameWithoutExtension` método.  
+  
+ [!code-cpp[System.IO.Path Members#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#6)]
+ [!code-csharp[System.IO.Path Members#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#6)]
+ [!code-vb[System.IO.Path Members#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFullPath">
+      <MemberSignature Language="C#" Value="public static string GetFullPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFullPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetFullPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O arquivo ou diretório para o qual as informações de caminho absoluto serão obtidas.</param>
+        <summary>Retorna o caminho absoluto para a cadeia de caracteres do caminho especificado.</summary>
+        <returns>O local totalmente qualificado de <paramref name="path" />, como "C:\MyFile.txt".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework não dá suporte a acesso direto ao discos físicos por meio de caminhos que são nomes de dispositivo, como "\\\\. \PHYSICALDRIVE0".  
+  
+ O caminho absoluto inclui todas as informações necessárias para localizar um arquivo ou diretório em um sistema.  
+  
+ O arquivo ou diretório especificado por `path` não precisa existir. Por exemplo, se c:\temp\newdir é o diretório atual, chamar `GetFullPath` em um arquivo de nome como test.txt retorna c:\temp\newdir\test.txt. O arquivo não precisa existir.  
+  
+ No entanto, se `path` existir, o chamador deve ter permissão para obter informações de caminho para `path`. Observe que, ao contrário da maioria dos membros do <xref:System.IO.Path> classe, esse método acessa o sistema de arquivos.  
+  
+ Esse método usa o diretório atual e informações de volume atual para qualificar totalmente `path`. Se você especificar um arquivo apenas no nome `path`, `GetFullPath` retorna o caminho totalmente qualificado do diretório atual.  
+  
+ Se você passar um nome curto de arquivo, ele é expandido para um nome de arquivo longos.  
+  
+ Se um caminho não contém nenhum caractere significativa é inválido, a menos que ele contém um ou mais "."caracteres seguidos por qualquer número de espaços, em seguida, ele será analisado como um"."ou"...".  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o `GetFullPath` método em uma plataforma de área de trabalho baseados em Windows.  
+  
+ [!code-cpp[System.IO.Path Members#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#7)]
+ [!code-csharp[System.IO.Path Members#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#7)]
+ [!code-vb[System.IO.Path Members#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de comprimento zero, contém somente espaços em branco ou contém um ou mais dos caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.  
+  
+ -ou-  
+  
+ O sistema não pôde recuperar o caminho absoluto.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem as permissões necessárias.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="path" />contém dois-pontos (":") que não faça parte de um identificador de volume (por exemplo, "c:\\").</exception>
+        <exception cref="T:System.IO.PathTooLongException">O caminho especificado, o nome de arquivo, ou ambos excedem o tamanho máximo definido pelo sistema. Por exemplo, em plataformas com base no Windows, os caminhos devem ter menos que 248 caracteres e os nomes de arquivo devem ter menos que 260 caracteres.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar o caminho.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInvalidFileNameChars">
+      <MemberSignature Language="C#" Value="public static char[] GetInvalidFileNameChars ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig char[] GetInvalidFileNameChars() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetInvalidFileNameChars" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz que contém os caracteres que não são permitidos em nomes de arquivo.</summary>
+        <returns>Uma matriz que contém os caracteres que não são permitidos em nomes de arquivo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz retornada por este método não é garantida para conter o conjunto completo de caracteres inválidos em nomes de arquivos e diretórios. O conjunto completo de caracteres inválidos pode variar por sistema de arquivos. Por exemplo, em plataformas de desktop baseados no Windows, caracteres de caminho inválidos podem incluir caracteres ASCII/Unicode de 1 a 31, bem como colocar entre aspas ("), menor que (\<), maior que (>), barra vertical (&#124;), backspace (\b), null (\0) e tabulação (\t).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.IO.Path.GetInvalidFileNameChars%2A> método e o <xref:System.IO.Path.GetInvalidPathChars%2A> método para recuperar os caracteres inválidos.  
+  
+ [!code-cpp[IO.Path.GetInvalidFile-PathChars#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.Path.GetInvalidFile-PathChars/cpp/example.cpp#1)]
+ [!code-csharp[IO.Path.GetInvalidFile-PathChars#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.Path.GetInvalidFile-PathChars/CS/example.cs#1)]
+ [!code-vb[IO.Path.GetInvalidFile-PathChars#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.Path.GetInvalidFile-PathChars/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInvalidPathChars">
+      <MemberSignature Language="C#" Value="public static char[] GetInvalidPathChars ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig char[] GetInvalidPathChars() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetInvalidPathChars" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz que contém os caracteres que não são permitidos em nomes de caminho.</summary>
+        <returns>Uma matriz que contém os caracteres que não são permitidos em nomes de caminho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz retornada por este método não é garantida para conter o conjunto completo de caracteres inválidos em nomes de arquivos e diretórios. O conjunto completo de caracteres inválidos pode variar por sistema de arquivos. Por exemplo, em plataformas de desktop baseados no Windows, caracteres de caminho inválidos podem incluir caracteres ASCII/Unicode de 1 a 31, bem como colocar entre aspas ("), menor que (\<), maior que (>), barra vertical (&#124;), backspace (\b), null (\0) e tabulação (\t).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.IO.Path.GetInvalidFileNameChars%2A> método e o <xref:System.IO.Path.GetInvalidPathChars%2A> método para recuperar os caracteres inválidos.  
+  
+ [!code-cpp[IO.Path.GetInvalidFile-PathChars#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.Path.GetInvalidFile-PathChars/cpp/example.cpp#1)]
+ [!code-csharp[IO.Path.GetInvalidFile-PathChars#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.Path.GetInvalidFile-PathChars/CS/example.cs#1)]
+ [!code-vb[IO.Path.GetInvalidFile-PathChars#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.Path.GetInvalidFile-PathChars/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathRoot">
+      <MemberSignature Language="C#" Value="public static string GetPathRoot (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPathRoot(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetPathRoot(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho do qual as informações do diretório raiz serão obtidas.</param>
+        <summary>Obtém as informações do diretório raiz do caminho especificado.</summary>
+        <returns>O diretório raiz de <paramref name="path" />, como "c:\\", ou <see langword="null" /> se <paramref name="path" /> é <see langword="null" />, ou vazio de cadeia de caracteres se <paramref name="path" /> não contém informações de diretório raiz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não verifica se o nome de caminho ou arquivo existe.  
+  
+ Padrões possíveis para a cadeia de caracteres retornada por este método são:  
+  
+-   Uma cadeia de caracteres vazia (`path` especificou um caminho relativo da unidade atual ou do volume).  
+  
+-   "/" (`path` especificado um caminho absoluto no disco).  
+  
+-   "X" (`path` especificou um caminho relativo em uma unidade, onde X representa uma letra de unidade ou volume).  
+  
+-   "X:/" (`path` especificado um caminho absoluto em uma determinada unidade).  
+  
+-   "\\\ComputerName\SharedFolder" (um caminho UNC).  
+  
+ O .NET Framework não dá suporte a acesso direto ao discos físicos por meio de caminhos que são nomes de dispositivo, como "\\\\. \PHYSICALDRIVE0".  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um uso de `GetPathRoot` método.  
+  
+ [!code-cpp[System.IO.Path Members#8](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#8)]
+ [!code-csharp[System.IO.Path Members#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#8)]
+ [!code-vb[System.IO.Path Members#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.  
+  
+ -ou-  
+  
+ <see cref="F:System.String.Empty" /> foi passado para <paramref name="path" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRandomFileName">
+      <MemberSignature Language="C#" Value="public static string GetRandomFileName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetRandomFileName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetRandomFileName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um nome de pasta ou nome de arquivo aleatório.</summary>
+        <returns>Um nome de pasta aleatório ou um nome de arquivo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Path.GetRandomFileName%2A> método retorna uma cadeia de caracteres forte criptograficamente aleatória que pode ser usada como um nome de pasta ou um nome de arquivo. Ao contrário de <xref:System.IO.Path.GetTempFileName%2A>, <xref:System.IO.Path.GetRandomFileName%2A> não cria um arquivo. Quando a segurança do seu sistema de arquivos é muito importante, esse método deve ser usado em vez de <xref:System.IO.Path.GetTempFileName%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a saída do <xref:System.IO.Path.GetRandomFileName%2A> método.  
+  
+ [!code-csharp[System.IO.Path Members#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers20.cs#20)]
+ [!code-vb[System.IO.Path Members#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers20.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelativePath">
+      <MemberSignature Language="C#" Value="public static string GetRelativePath (string relativeTo, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetRelativePath(string relativeTo, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetRelativePath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">To be added.</param>
+        <param name="path">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTempFileName">
+      <MemberSignature Language="C#" Value="public static string GetTempFileName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetTempFileName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetTempFileName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um arquivo temporário de zero byte nomeado exclusivamente no disco e retorna o caminho completo do arquivo.</summary>
+        <returns>O caminho completo do arquivo temporário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um arquivo temporário com um. Extensão de arquivo TMP. O arquivo temporário é criado na pasta temporária do usuário, que é o caminho retornado pelo <xref:System.IO.Path.GetTempPath%2A> método.  
+  
+ O <xref:System.IO.Path.GetTempFileName%2A> método gerará uma <xref:System.IO.IOException> se ele é usado para criar mais de 65.535 arquivos sem excluir os arquivos temporários anteriores.  
+  
+ O <xref:System.IO.Path.GetTempFileName%2A> método gerará uma <xref:System.IO.IOException> se nenhum nome de arquivo temporário exclusivo está disponível. Para resolver esse erro, exclua todos os arquivos temporários desnecessários.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S; por exemplo, não há um nome de arquivo temporário exclusivo disponível.  
+  
+ \- ou -  
+  
+ Não foi possível criar um arquivo temporário com este método.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para gravar no diretório temporário. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTempPath">
+      <MemberSignature Language="C#" Value="public static string GetTempPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetTempPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.GetTempPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho da pasta temporária do usuário atual.</summary>
+        <returns>O caminho para a pasta temporária, terminando com uma barra invertida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método verifica a existência de variáveis de ambiente na seguinte ordem e usa o primeiro caminho encontrado:  
+  
+1.  O caminho especificado pela variável de ambiente TMP.  
+  
+2.  O caminho especificado pela variável de ambiente TEMP.  
+  
+3.  O caminho especificado pela variável de ambiente USERPROFILE.  
+  
+4.  O diretório do Windows.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como chamar o <xref:System.IO.Path.GetTempPath%2A> método.  
+  
+```vb  
+result As String = Path.GetTempPath()  
+Console.WriteLine(result)  
+```  
+  
+```csharp  
+string result = Path.GetTempPath();  
+Console.WriteLine(result);  
+```  
+  
+ Este exemplo produz saída semelhante à seguinte.  
+  
+```  
+C:\Users\UserName\AppData\Local\Temp\  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem as permissões necessárias.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">Para obter acesso irrestrito a variáveis de ambiente. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HasExtension">
+      <MemberSignature Language="C#" Value="public static bool HasExtension (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool HasExtension(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.HasExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para pesquisar uma extensão.</param>
+        <summary>Determina se um caminho inclui uma extensão de nome de arquivo.</summary>
+        <returns>
+          <see langword="true" />Se o caractere que segue o último separador de diretório (\\\ ou /) ou o separador de volume (:) no caminho incluir um ponto (.) seguido por um ou mais caracteres; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A partir do final do `path`, esse método de pesquisa para um ponto (.) seguido pelo menos um caractere. Se esse padrão for encontrado antes de um <xref:System.IO.Path.DirectorySeparatorChar>, <xref:System.IO.Path.AltDirectorySeparatorChar>, ou <xref:System.IO.Path.VolumeSeparatorChar> caractere for encontrado, este método retorna `true`.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do `HasExtension` método.  
+  
+ [!code-cpp[System.IO.Path Members#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#11)]
+ [!code-csharp[System.IO.Path Members#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#11)]
+ [!code-vb[System.IO.Path Members#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidPathChars">
+      <MemberSignature Language="C#" Value="public static readonly char[] InvalidPathChars;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly char[] InvalidPathChars" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Path.InvalidPathChars" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("see GetInvalidPathChars and GetInvalidFileNameChars methods.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Char[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece uma matriz de caracteres específica da plataforma que não pode ser especificada nos argumentos de cadeia de caracteres de caminho passados para membros da classe <see cref="T:System.IO.Path" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz retornada por este método não é garantida para conter o conjunto completo de caracteres inválidos em nomes de arquivos e diretórios. O conjunto completo de caracteres inválidos pode variar por sistema de arquivos. Por exemplo, em plataformas de desktop baseados no Windows, caracteres de caminho inválidos podem incluir caracteres ASCII/Unicode de 1 a 31, bem como colocar entre aspas ("), menor que (\<), maior que (>), barra vertical (&#124;), backspace (\b), null (\0) e tabulação (\t).  
+  
+> [!CAUTION]
+>  Não use <xref:System.IO.Path.InvalidPathChars> se você achar que seu código pode ser executado no mesmo domínio do aplicativo como código não confiável. <xref:System.IO.Path.InvalidPathChars>é uma matriz, para que seus elementos podem ser substituídos. Se o código não confiável substituir os elementos de <xref:System.IO.Path.InvalidPathChars>, ele pode fazer com que o seu código para o funcionamento de maneiras que podem ser exploradas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do `InvalidPathChars` propriedade.  
+  
+ [!code-cpp[System.IO.Path Members#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#13)]
+ [!code-csharp[System.IO.Path Members#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#13)]
+ [!code-vb[System.IO.Path Members#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPathRooted">
+      <MemberSignature Language="C#" Value="public static bool IsPathRooted (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPathRooted(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Path.IsPathRooted(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho a ser testado.</param>
+        <summary>Obtém um valor que indica se a cadeia de caracteres do caminho especificado contém uma raiz.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="path" /> contém uma raiz; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Path.IsPathRooted%2A> método `true` se o primeiro caractere é um caractere separador de diretório, como "\\", ou se o caminho começa com uma letra de unidade e dois-pontos (:). Por exemplo, ele retorna `true` para `path` cadeias de caracteres, como "\\\MyDir\\\MyFile.txt", "c:\\\MyDir", ou "C:MyDir". Ele retorna `false` para `path` cadeias de caracteres como "MyDir".  
+  
+ Esse método não verifica se o nome de caminho ou arquivo existe.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o `IsPathRooted` método pode ser usado para testar três cadeias de caracteres.  
+  
+ [!code-cpp[System.IO.Path Members#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#12)]
+ [!code-csharp[System.IO.Path Members#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#12)]
+ [!code-vb[System.IO.Path Members#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> contém um ou mais caracteres inválidos definidos em <see cref="M:System.IO.Path.GetInvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PathSeparator">
+      <MemberSignature Language="C#" Value="public static readonly char PathSeparator;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly char PathSeparator" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Path.PathSeparator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um caractere separador específico da plataforma usado para separar cadeias de caracteres de caminho em variáveis de ambiente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em plataformas de desktop baseados no Windows, o valor desse campo é o ponto e vírgula (;) por padrão, mas podem variar em outras plataformas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do `PathSeparator` campo.  
+  
+ [!code-cpp[System.IO.Path Members#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#13)]
+ [!code-csharp[System.IO.Path Members#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#13)]
+ [!code-vb[System.IO.Path Members#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VolumeSeparatorChar">
+      <MemberSignature Language="C#" Value="public static readonly char VolumeSeparatorChar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly char VolumeSeparatorChar" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Path.VolumeSeparatorChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um caractere separador de volume específico à plataforma.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor desse campo é um dois-pontos (:) no Windows e Macintosh e uma barra (/) em sistemas operacionais UNIX. Isso é mais útil para analisar os caminhos como "c:\windows" ou "MacVolume:System pasta".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do `VolumeSeparatorChar` campo.  
+  
+ [!code-cpp[System.IO.Path Members#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Path Members/CPP/pathmembers.cpp#13)]
+ [!code-csharp[System.IO.Path Members#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Path Members/CS/pathmembers.cs#13)]
+ [!code-vb[System.IO.Path Members#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Path Members/VB/pathmembers.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

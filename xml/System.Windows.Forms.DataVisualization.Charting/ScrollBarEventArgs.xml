@@ -1,0 +1,235 @@
+<Type Name="ScrollBarEventArgs" FullName="System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs">
+  <TypeSignature Language="C#" Value="public class ScrollBarEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScrollBarEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado como um objeto de parâmetro no <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked" /> da raiz <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs> classe é exposta como o `e` parâmetro o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> evento.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs> classe contém as seguintes propriedades:  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ChartArea%2A> propriedade, que é usada para obter o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> que o evento foi gerado para o objeto. O <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.Name> propriedade obtém o nome da área do gráfico; outras propriedades da área do gráfico também podem ser definidas.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.Axis%2A> propriedade, que é usada para obter o <xref:System.Windows.Forms.DataVisualization.Charting.Axis> objeto ao qual pertence a barra de rolagem, usando o <xref:System.Windows.Forms.DataVisualization.Charting.Axis.AxisName%2A> propriedade. Outros <xref:System.Windows.Forms.DataVisualization.Charting.Axis> propriedades também podem ser definidas.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ButtonType%2A> propriedade, que é usada para obter o botão de barra de rolagem que o usuário final é clicado.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.IsHandled%2A> propriedade, que determina se o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle cancela o comportamento padrão do botão de barra de rolagem após o código no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> evento conclui a execução.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.MousePositionX%2A> propriedade, que representa a posição X do cursor do mouse no momento em que o usuário final clicar o elemento da barra de rolagem.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.MousePositionY%2A> propriedade, que representa a posição Y do cursor do mouse no momento em que o usuário final clicar o elemento da barra de rolagem.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollBarEventArgs (System.Windows.Forms.DataVisualization.Charting.Axis axis, int x, int y, System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType buttonType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataVisualization.Charting.Axis axis, int32 x, int32 y, valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType buttonType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.#ctor(System.Windows.Forms.DataVisualization.Charting.Axis,System.Int32,System.Int32,System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="axis" Type="System.Windows.Forms.DataVisualization.Charting.Axis" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="buttonType" Type="System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType" />
+      </Parameters>
+      <Docs>
+        <param name="axis">O <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> que contém a barra de rolagem.</param>
+        <param name="x">A posição X do cursor do mouse.</param>
+        <param name="y">A posição Y do cursor do mouse.</param>
+        <param name="buttonType">O tipo do botão clicado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs" /> classe com o eixo especificado, posições de X e Y do cursor do mouse e o tipo do botão clicado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Axis">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Axis Axis { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Axis Axis" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.Axis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> objeto ao qual pertence uma barra de rolagem.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> objeto que representa o eixo que pertence a barra de rolagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é exposta no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> evento da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto.  
+  
+ Essa propriedade pode ser usada para:  
+  
+-   Determinar o tipo de eixo – X, X2, Y ou Y2 — que o evento está sendo gerado, usando o <xref:System.Windows.Forms.DataVisualization.Charting.Axis.AxisName%2A> propriedade.  
+  
+-   Obter e definir propriedades do eixo, tais como <xref:System.Windows.Forms.DataVisualization.Charting.Axis.LineColor%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType ButtonType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType ButtonType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ButtonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de botão de barra de rolagem que o usuário final é clicado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType" /> valor de enumeração que representa o tipo de barra de rolagem botão o usuário final clicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é exposta no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> evento da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> de objeto e pode ser usado para determinar o tipo de botão de barra de rolagem, o usuário final é clicado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartArea">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartArea ChartArea { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.ChartArea ChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> objeto ao qual pertence a barra de rolagem.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é exposta no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> evento da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ChartArea%2A> propriedade pode ser usada para determinar a área do gráfico que pertence a barra de rolagem, acessando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.Name> propriedade. Essa propriedade também pode ser usada para obter e definir propriedades da área do gráfico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHandled">
+      <MemberSignature Language="C#" Value="public bool IsHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.IsHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se deve cancelar o comportamento padrão de eventos específicos de barra de rolagem.</summary>
+        <value>
+          <see langword="true" />Se o comportamento padrão do evento deve ser cancelado, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é exposta no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> evento da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto.  
+  
+ Essa propriedade pode ser usada para cancelar o comportamento padrão na barra de rolagem específico de eventos.  
+  
+ Se você clicar em um botão de barra de rolagem, ocorrerá a manipulação de padrão do modo de exibição.  
+  
+ A lista a seguir resume a esse comportamento padrão:  
+  
+-   Se o usuário clica no botão de redefinição/Zoom, a exibição anterior será exibida.  
+  
+-   Se o usuário clica no plano de fundo da barra de rolagem — ou seja, não no elevador rolagem, também conhecido como o rastreador — forma mais rápida e/ou diminui da barra de rolagem ocorrerá, com o tamanho do incremento de e/ou decremento sendo determinado pelo <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleView.Size%2A> propriedade.  
+  
+ Para desativar esses comportamentos padrão, defina o <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.IsHandled%2A> propriedade `true` depois de fornecer lógica personalizada no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MousePositionX">
+      <MemberSignature Language="C#" Value="public int MousePositionX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MousePositionX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.MousePositionX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição X do cursor do mouse no momento em que o <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked" /> evento foi gerado.</summary>
+        <value>Um <see langword="integer" /> valor que representa a posição do cursor do mouse X. A posição é expresso em pixels, com 0,0 sendo o canto superior esquerdo da imagem do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada para obter a posição do mouse X, em pixels, quando o usuário final clica em um elemento de barra de rolagem. A coordenada 0,0 representa o canto superior esquerdo do gráfico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MousePositionY">
+      <MemberSignature Language="C#" Value="public int MousePositionY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MousePositionY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.MousePositionY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição Y do cursor do mouse no momento em que o <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked" /> evento foi gerado.</summary>
+        <value>Um <see langword="integer" /> valor que representa a posição Y do cursor do mouse. A posição é expresso em pixels, com 0,0 sendo o canto superior esquerdo da imagem do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada para obter a posição do mouse Y, em pixels, quando o usuário final clica em um elemento de barra de rolagem. A coordenada 0,0 representa o canto superior esquerdo do gráfico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

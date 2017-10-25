@@ -1,0 +1,157 @@
+<Type Name="SoapEnvelopeProcessingElement" FullName="System.Web.Services.Configuration.SoapEnvelopeProcessingElement">
+  <TypeSignature Language="C#" Value="public sealed class SoapEnvelopeProcessingElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapEnvelopeProcessingElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Configuration.SoapEnvelopeProcessingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura um tempo limite que ajuda a reduzir ataques negação de serviço pelo encerramento qualquer solicitação que demora mais do que o <see cref="P:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.ReadTimeout" /> o valor da propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de tempo limite é verificado em todas as chamadas para <xref:System.Xml.XmlReader.Read%2A> e <xref:System.Xml.XmlReader.MoveToContent%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapEnvelopeProcessingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Configuration.SoapEnvelopeProcessingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapEnvelopeProcessingElement (int readTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 readTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="readTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="readTimeout">O valor do período de tempo limite.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Configuration.SoapEnvelopeProcessingElement" /> classe usando fornecido <see cref="T:System.Int32" /> valor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapEnvelopeProcessingElement (int readTimeout, bool strict);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 readTimeout, bool strict) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.#ctor(System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="readTimeout" Type="System.Int32" />
+        <Parameter Name="strict" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="readTimeout">O tempo de espera antes de encerrar as solicitações para <see cref="M:System.Xml.XmlReader.Read" /> e <see cref="M:System.Xml.XmlReader.MoveToContent" />.</param>
+        <param name="strict">Se gerar uma exceção se o serializador encontra elementos ou atributos que não estavam no esquema original. Para obter detalhes, consulte o <see cref="P:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.IsStrict" /> propriedade.</param>
+        <summary>Obtém ou define o período de tempo limite usado para determinar se deve encerrar solicitações para reduzir a ataques negação de serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStrict">
+      <MemberSignature Language="C#" Value="public bool IsStrict { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStrict" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.IsStrict" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("strict", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve lançar uma exceção se o serializador encontra elementos ou atributos.</summary>
+        <value>
+          <see langword="true" />Se o serializador de serviços da Web tenta detectar elementos ou atributos; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.IsStrict%2A> propriedade `true` para ajudar a depurar cenários de interoperabilidade. Em geral, quando o <xref:System.Xml.Serialization.XmlSerializer> classe atende a um elemento ou atributo que não espera que ele gera um <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> eventos e continua o processamento. (O mesmo é verdadeiro quando o <xref:System.Xml.Serialization.XmlArrayAttribute.Order%2A>, <xref:System.Xml.Serialization.XmlElementAttribute.Order%2A>, ou <xref:System.Xml.Serialization.XmlAnyElementAttribute.Order%2A> propriedades são usadas, mas os dados são enviados para fora de ordem.) Definindo o <xref:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.IsStrict%2A> propriedade `true` instrui o Runtime dos serviços Web para manipular o evento e lança um <xref:System.InvalidOperationException> que contém uma lista dos atributos e elementos esperados.  
+  
+> [!NOTE]
+>  Como as exceções não são lançadas para todos os elementos e atributos, o <xref:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.IsStrict%2A> propriedade não deve ser considerada exceto como um auxílio para depuração. Por exemplo, inesperado `xml:lang` e `xml:space` atributos não podem causar uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTimeout">
+      <MemberSignature Language="C#" Value="public int ReadTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReadTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.SoapEnvelopeProcessingElement.ReadTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteIntConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("readTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período de tempo limite usado para determinar se deve encerrar solicitações para reduzir a ataques negação de serviço.</summary>
+        <value>O tempo de espera antes de encerrar as solicitações para <see cref="M:System.Xml.XmlReader.Read" /> e <see cref="M:System.Xml.XmlReader.MoveToContent" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

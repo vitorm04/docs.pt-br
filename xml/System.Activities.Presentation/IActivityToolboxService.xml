@@ -1,0 +1,145 @@
+<Type Name="IActivityToolboxService" FullName="System.Activities.Presentation.IActivityToolboxService">
+  <TypeSignature Language="C#" Value="public interface IActivityToolboxService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IActivityToolboxService" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.IActivityToolboxService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um serviço usado para atualizar o conteúdo da caixa de ferramentas de um Designer.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddCategory">
+      <MemberSignature Language="C#" Value="public void AddCategory (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddCategory(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IActivityToolboxService.AddCategory(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Uma cadeia de caracteres que contém o nome da categoria a ser adicionado.</param>
+        <summary>Adiciona uma categoria para a caixa de ferramentas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddItem">
+      <MemberSignature Language="C#" Value="public void AddItem (string qualifiedTypeName, string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddItem(string qualifiedTypeName, string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IActivityToolboxService.AddItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qualifiedTypeName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="qualifiedTypeName">Uma cadeia de caracteres que contém o nome qualificado do item a ser adicionado.</param>
+        <param name="categoryName">Uma cadeia de caracteres que contém o nome da categoria à qual o novo item é adicionado.</param>
+        <summary>Adiciona um item a uma categoria específica na caixa de ferramentas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumCategories">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; EnumCategories ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;string&gt; EnumCategories() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IActivityToolboxService.EnumCategories" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um enumerador para todas as categorias dessa caixa de ferramentas.</summary>
+        <returns>Retorna <see cref="T:System.Collections.Generic.IList`1" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumItems">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; EnumItems (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;string&gt; EnumItems(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IActivityToolboxService.EnumItems(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Uma categoria na qual todos os itens serão retornados.</param>
+        <summary>Obtém um enumerador para todos os itens na categoria especificada nesta caixa de ferramentas.</summary>
+        <returns>Retorna <see cref="T:System.Collections.Generic.IList`1" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCategory">
+      <MemberSignature Language="C#" Value="public void RemoveCategory (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveCategory(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IActivityToolboxService.RemoveCategory(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Uma cadeia de caracteres que contém o nome da categoria a ser removido.</param>
+        <summary>Remove uma categoria da caixa de ferramentas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="public void RemoveItem (string qualifiedTypeName, string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveItem(string qualifiedTypeName, string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IActivityToolboxService.RemoveItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qualifiedTypeName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="qualifiedTypeName">Uma cadeia de caracteres que contém o nome qualificado do item a ser removido.</param>
+        <param name="categoryName">Uma cadeia de caracteres que contém o nome da categoria da qual o item é removido.</param>
+        <summary>Remove um item de uma categoria específica na caixa de ferramentas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,429 @@
+<Type Name="ServiceEndpoint" FullName="System.ServiceModel.Description.ServiceEndpoint">
+  <TypeSignature Language="C#" Value="public class ServiceEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceEndpoint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ServiceEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name={name}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Address={address}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o ponto de extremidade em um serviço que permite que os clientes do serviço localizem e se comuniquem com o serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ponto de extremidade de serviço contém as informações sobre o endereço, associação, contrato e comportamento exigido por um cliente para localizar e interagir com o serviço neste ponto de extremidade.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ServiceEndpoint#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/program.cs#0)]
+ [!code-vb[S_UE_ServiceEndpoint#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/program.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceEndpoint (System.ServiceModel.Description.ContractDescription contract);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ContractDescription contract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpoint.#ctor(System.ServiceModel.Description.ContractDescription)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ContractDescription" />
+      </Parameters>
+      <Docs>
+        <param name="contract">O <see cref="T:System.ServiceModel.Description.ContractDescription" /> do ponto de extremidade de serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> classe para um contrato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor quando a associação e o endereço do ponto de extremidade são fornecidos na configuração.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ServiceEndpoint#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/program.cs#1)]
+ [!code-vb[S_UE_ServiceEndpoint#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceEndpoint (System.ServiceModel.Description.ContractDescription contract, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ContractDescription contract, class System.ServiceModel.Channels.Binding binding, class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceEndpoint.#ctor(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="contract">O <see cref="T:System.ServiceModel.Description.ContractDescription" /> do ponto de extremidade de serviço.</param>
+        <param name="binding">O <see cref="T:System.ServiceModel.Channels.Binding" /> que especifica como o ponto de extremidade de serviço se comunica com o mundo.</param>
+        <param name="address">O <see cref="T:System.ServiceModel.EndpointAddress" /> do ponto de extremidade de serviço.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> com um contrato, uma associação e um endereço especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para especificar um ponto de extremidade de serviço imperativa no código.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ServiceEndpoint#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/snippet.cs#2)]
+ [!code-vb[S_UE_ServiceEndpoint#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/snippet.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceEndpoint.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço do ponto de extremidade para o ponto de extremidade de serviço.</summary>
+        <value>O <see cref="T:System.ServiceModel.EndpointAddress" /> que especifica o local do ponto de extremidade de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> no qual o ponto de extremidade de serviço escuta é fornecido pelo <xref:System.ServiceModel.EndpointAddress.Uri%2A> do <xref:System.ServiceModel.EndpointAddress> retornado por <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um <xref:System.ServiceModel.Description.ServiceEndpoint> um existente <xref:System.ServiceModel.ServiceHost> e exibir a propriedade de endereço:  
+  
+ [!code-csharp[S_UE_ServiceEndpoint#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/program.cs#3)]
+ [!code-vb[S_UE_ServiceEndpoint#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Behaviors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.KeyedByTypeCollection&lt;System.ServiceModel.Description.IEndpointBehavior&gt; Behaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.KeyedByTypeCollection`1&lt;class System.ServiceModel.Description.IEndpointBehavior&gt; Behaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceEndpoint.Behaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.KeyedByTypeCollection&lt;System.ServiceModel.Description.IEndpointBehavior&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os comportamentos de ponto de extremidade de serviço.</summary>
+        <value>A <see cref="T:System.Collections.Generic.KeyedByTypeCollection`1" /> do tipo <see cref="T:System.ServiceModel.Description.IEndpointBehavior" /> que contém os comportamentos especificados para o ponto de extremidade de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de comportamento que é acessível a partir da hierarquia de descrição tem como escopo o nível específico. Do <xref:System.ServiceModel.Description.ServiceEndpoint> o <xref:System.ServiceModel.Description.IEndpointBehavior> está acessível.  
+  
+ Se você precisa acessar o <xref:System.ServiceModel.Description.IContractBehavior> associada a um ponto de extremidade, você pode obter o contato para o ponto de extremidade usando o <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> propriedade. Em seguida, chame o <xref:System.ServiceModel.Description.ContractDescription.Behaviors%2A> propriedade para obter o <xref:System.Collections.Generic.KeyedByTypeCollection%601> do <xref:System.ServiceModel.Description.IContractBehavior> objetos associados com o ponto de extremidade.  
+  
+   
+  
+## Examples  
+ O código a seguir demonstra como adicionar um comportamento de ponto de extremidade personalizado e, em seguida, acessar esse comportamento.  
+  
+ [!code-csharp[S_UE_ServiceEndpoint#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/snippet.cs#4)]
+ [!code-vb[S_UE_ServiceEndpoint#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/snippet.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Binding Binding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.Binding Binding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceEndpoint.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a associação para o ponto de extremidade de serviço.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.Binding" /> do ponto de extremidade de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A associação para um ponto de extremidade também pode ser especificada no arquivo de configuração no [ &lt;associações&gt; ](~/docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ServiceEndpoint#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/snippet.cs#5)]
+ [!code-vb[S_UE_ServiceEndpoint#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/snippet.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ContractDescription Contract { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ContractDescription Contract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceEndpoint.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ContractDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contrato do ponto de extremidade de serviço.</summary>
+        <value>O <see cref="T:System.ServiceModel.Description.ContractDescription" /> que especifica o contrato do ponto de extremidade de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada ponto de extremidade de serviço tem um contrato exclusivo. Do <xref:System.ServiceModel.Description.ContractDescription>, o <xref:System.ServiceModel.Description.OperationDescriptionCollection> para métodos contidos no contrato podem ser acessados usando o <xref:System.ServiceModel.Description.ContractDescription.Operations%2A> propriedade.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ServiceEndpoint#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/snippet.cs#5)]
+ [!code-vb[S_UE_ServiceEndpoint#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/snippet.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointBehaviors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.KeyedCollection&lt;Type,System.ServiceModel.Description.IEndpointBehavior&gt; EndpointBehaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.KeyedCollection`2&lt;class System.Type, class System.ServiceModel.Description.IEndpointBehavior&gt; EndpointBehaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceEndpoint.EndpointBehaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.KeyedCollection&lt;System.Type,System.ServiceModel.Description.IEndpointBehavior&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os comportamentos de ponto de extremidade para o serviço.</summary>
+        <value>Os comportamentos de ponto de extremidade para o serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSystemEndpoint">
+      <MemberSignature Language="C#" Value="public bool IsSystemEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSystemEndpoint" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o ponto de extremidade de serviço é gerado pelo sistema em vez de estar definida pelo usuário.</summary>
+        <value>
+          <see langword="true" />Se o ponto de extremidade de serviço é gerado pelo sistema; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenUri">
+      <MemberSignature Language="C#" Value="public Uri ListenUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ListenUri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceEndpoint.ListenUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI em que o ponto de extremidade de serviço escuta.</summary>
+        <value>O <see cref="T:System.Uri" /> em que o ponto de extremidade de serviço escuta. O valor padrão é fornecido pelo <see cref="P:System.ServiceModel.EndpointAddress.Uri" /> do <see cref="T:System.ServiceModel.EndpointAddress" /> retornado por <see cref="P:System.ServiceModel.Description.ServiceEndpoint.Address" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor também pode ser definido usando o <xref:System.ServiceModel.Configuration.ServiceEndpointElement.ListenUri%2A> propriedade.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ServiceEndpoint#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/snippet.cs#5)]
+ [!code-vb[S_UE_ServiceEndpoint#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/snippet.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenUriMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ListenUriMode ListenUriMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Description.ListenUriMode ListenUriMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceEndpoint.ListenUriMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ListenUriMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define como o transporte trata o URI que é fornecido para o serviço de escuta.</summary>
+        <value>O <see cref="T:System.ServiceModel.Description.ListenUriMode" /> do ponto de extremidade de serviço. O valor padrão é <see cref="F:System.ServiceModel.Description.ListenUriMode.Explicit" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.ServiceModel.Description.ListenUriMode> é usado para determinar como o transporte trata o <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ServiceEndpoint#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/snippet.cs#5)]
+ [!code-vb[S_UE_ServiceEndpoint#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/snippet.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceEndpoint.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do ponto de extremidade de serviço.</summary>
+        <value>O nome do ponto de extremidade de serviço. O valor padrão é a concatenação do nome de associação e o nome de descrição do contrato. Por exemplo, <see cref="P:System.ServiceModel.Channels.Binding.Name" /> + '_' + <see cref="P:System.ServiceModel.Description.ContractDescription.Name" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serviços podem ter vários pontos de extremidade, portanto o ponto de extremidade <xref:System.ServiceModel.Description.ServiceEndpoint.Name%2A> é diferente do nome do serviço. O nome do serviço é acessado usando o <xref:System.ServiceModel.Description.ServiceDescription.Name%2A> propriedade.  
+  
+> [!NOTE]
+>  Quando acessado do serviço, essa propriedade é preenchida pelo < nome do ponto de extremidade = "`endpointName`"\> elemento de configuração. Quando for acessado no cliente, essa propriedade é `null`. Quando a propriedade getter é chamado (novamente no cliente) ele preenche essa propriedade com um valor padrão baseado no contrato e associação.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_ServiceEndpoint#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_serviceendpoint/cs/snippet.cs#5)]
+ [!code-vb[S_UE_ServiceEndpoint#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_serviceendpoint/vb/snippet.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

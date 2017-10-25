@@ -1,0 +1,785 @@
+<Type Name="DecimalKeyFrameCollection" FullName="System.Windows.Media.Animation.DecimalKeyFrameCollection">
+  <TypeSignature Language="C#" Value="public class DecimalKeyFrameCollection : System.Windows.Freezable, System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DecimalKeyFrameCollection extends System.Windows.Freezable implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa coleção é usada como parte de um <xref:System.Windows.Media.Animation.DecimalAnimationUsingKeyFrames> para animar uma <xref:System.Decimal> valor da propriedade ao longo de um conjunto de quadros-chave.  
+  
+<a name="xamlImplicitCollectionUsage_DecimalKeyFrameCollection"></a>   
+## <a name="xaml-implicit-collection-usage"></a>Uso de coleção implícita XAML  
+  
+```  
+<object>  
+  <object.property>  
+    oneOrMoreDecimalKeyFrameObjectElements  
+  </object.property>  
+</object>  
+```  
+  
+<a name="xamlValues_DecimalKeyFrameCollection"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *oneOrMoreDecimalKeyFrameObjectElements*  
+ Um ou mais <xref:System.Windows.Media.Animation.DecimalKeyFrame> objetos, declarados usando a sintaxe de elemento de objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DecimalKeyFrameCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Windows.Media.Animation.DecimalKeyFrame keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Windows.Media.Animation.DecimalKeyFrame keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.Add(System.Windows.Media.Animation.DecimalKeyFrame)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyFrame" Type="System.Windows.Media.Animation.DecimalKeyFrame" />
+      </Parameters>
+      <Docs>
+        <param name="keyFrame">O <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> para adicionar ao final da coleção.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> ao final da coleção.</summary>
+        <returns>O índice no qual o <paramref name="keyFrame" /> foi adicionado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> objetos da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.DecimalKeyFrameCollection Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.DecimalKeyFrameCollection Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.DecimalKeyFrameCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />, fazendo cópias em profundidade dos valores do objeto. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> era de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" /> para clonar.</param>
+        <summary>Isso faz com que uma cópia profunda de especificado da instância <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.Clone%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.Clone%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" /> para clonar.</param>
+        <summary>Torna essa instância de uma cópia em profundidade modificável especificada <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" /> usando os valores da propriedade atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.CloneCurrentValue%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.CloneCurrentValue%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValueCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Media.Animation.DecimalKeyFrame keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Media.Animation.DecimalKeyFrame keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.Contains(System.Windows.Media.Animation.DecimalKeyFrame)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyFrame" Type="System.Windows.Media.Animation.DecimalKeyFrame" />
+      </Parameters>
+      <Docs>
+        <param name="keyFrame">O <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> a ser localizado na coleção.</param>
+        <summary>Obtém um valor que indica se a coleção contém especificado <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" />.</summary>
+        <returns>
+          <see langword="true" />Se a coleção contém <paramref name="keyFrame" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa uma pesquisa linear; Portanto, o tempo médio de execução é proporcional ao <xref:System.Windows.Media.Animation.DecimalKeyFrameCollection.Count%2A>. Ou seja, esse método é um O (*n*) operação, onde * n * é <xref:System.Windows.Media.Animation.DecimalKeyFrameCollection.Count%2A>.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Windows.Media.Animation.DecimalKeyFrame[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Windows.Media.Animation.DecimalKeyFrame[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.CopyTo(System.Windows.Media.Animation.DecimalKeyFrame[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Windows.Media.Animation.DecimalKeyFrame[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Identifica a matriz para o qual o conteúdo é copiado.</param>
+        <param name="index">Posição de índice na matriz para o qual o conteúdo da coleção é copiado.</param>
+        <summary>Copia todos os <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> objetos em uma coleção para uma matriz especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.DecimalKeyFrameCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de quadros-chave contida no <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />.</summary>
+        <value>O número de quadros-chave contida no <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de congelada <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />.</summary>
+        <returns>Uma instância de congelamento de <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Animation.DecimalKeyFrameCollection Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Animation.DecimalKeyFrameCollection Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.DecimalKeyFrameCollection.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.DecimalKeyFrameCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um vazio <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" /> vazio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreezeCore">
+      <MemberSignature Language="C#" Value="protected override bool FreezeCore (bool isChecking);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool FreezeCore(bool isChecking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.FreezeCore(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isChecking" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isChecking">
+          <see langword="true" />Se esse método simplesmente deve determinar se esta instância pode ser congelada. <see langword="false" />Se esta instância, na verdade, deve congelar próprio quando este método é chamado.</param>
+        <summary>Faz com que esta instância do <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" /> somente leitura ou determina se ele pode ser feito somente leitura.</summary>
+        <returns>Se <paramref name="isChecking" /> for true, este método retorna <see langword="true" /> se esta instância pode se tornar somente leitura, ou <see langword="false" /> se ele não pode se tornar somente leitura. Se <paramref name="isChecking" /> for falsa, este método retorna <see langword="true" /> se esta instância agora é somente leitura, ou <see langword="false" /> se ele não pode tornar somente para leitura, com o efeito colateral de ter iniciado alterar o status de congelamento deste objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" /> objeto clonar e congelar.</param>
+        <summary>Isso torna a instância um clone do <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais. Observe que, se essas propriedades contêm referências de recurso ou associações de dados, <xref:System.Windows.Freezable.GetAsFrozen%2A> falhará quando tentar congelar o objeto e lançará um <xref:System.InvalidOperationException>.  
+  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.GetAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" /> para copiar e congelar.</param>
+        <summary>Torna isso um clone congelado especificada da instância <see cref="T:System.Windows.Media.Animation.DecimalKeyFrameCollection" />. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode iterar pela coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumeradores permitem apenas ler os dados na coleção. Enumeradores não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador está posicionado antes do primeiro item na coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição. AT isso posicionar, chamando <xref:System.Collections.IEnumerator.Current%2A> lança uma exceção. Portanto, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador para o primeiro item da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A>define <xref:System.Collections.IEnumerator.Current%2A> para o próximo item.  
+  
+ Após o final da coleção for passado, o enumerador está posicionado após o último item na coleção e chamada <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Se a última chamada <xref:System.Collections.IEnumerator.MoveNext%2A> retornou `false`, chamar <xref:System.Collections.IEnumerator.Current%2A> lança uma exceção. Para definir <xref:System.Collections.IEnumerator.Current%2A> para o primeiro item da coleção novamente, você pode chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido por <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações à coleção, como adicionar, modificar ou excluir itens, o enumerador será invalidado irrecuperavelmente e a próxima chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException>. Se a coleção é modificada entre <xref:System.Collections.IEnumerator.MoveNext%2A> e <xref:System.Collections.IEnumerator.Current%2A>, <xref:System.Collections.IEnumerator.Current%2A> retornará o item que está definido como, mesmo se o enumerador já é invalidado.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção é sincronizada, outros threads ainda podem modificar a coleção, o que faz com que o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Media.Animation.DecimalKeyFrame keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Media.Animation.DecimalKeyFrame keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.IndexOf(System.Windows.Media.Animation.DecimalKeyFrame)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyFrame" Type="System.Windows.Media.Animation.DecimalKeyFrame" />
+      </Parameters>
+      <Docs>
+        <param name="keyFrame">O <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> a ser localizado na coleção.</param>
+        <summary>Procura especificado <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> e retorna o índice baseado em zero da primeira ocorrência na coleção inteira.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de <paramref name="keyFrame" /> em toda a coleção, se encontrado; caso contrário, <c>-1</c>.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção é pesquisada forward iniciando no primeiro quadro chave e terminando no último quadro chave.  
+  
+ Esse método executa uma pesquisa linear; Portanto, o tempo médio de execução é proporcional ao <xref:System.Windows.Media.Animation.DecimalKeyFrameCollection.Count%2A>. Ou seja, esse método é um O (*n*) operação, onde * n * é <xref:System.Windows.Media.Animation.DecimalKeyFrameCollection.Count%2A>.  
+  
+ Este método determina a igualdade chamando <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Windows.Media.Animation.DecimalKeyFrame keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Windows.Media.Animation.DecimalKeyFrame keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.Insert(System.Int32,System.Windows.Media.Animation.DecimalKeyFrame)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="keyFrame" Type="System.Windows.Media.Animation.DecimalKeyFrame" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição de índice no qual o <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> é inserido.</param>
+        <param name="keyFrame">O <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> objeto a ser inserido na coleção.</param>
+        <summary>Insere um <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> em um local específico na coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.DecimalKeyFrameCollection.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o tamanho da coleção pode alterar.</summary>
+        <value>
+          <see langword="true" />Se a coleção está congelada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.DecimalKeyFrameCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.DecimalKeyFrameCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" />Se o acesso à coleção é sincronizado (thread-safe); Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção é sincronizada, outros threads ainda podem modificar a coleção, o que faz com que o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.DecimalKeyFrame this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.DecimalKeyFrame Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.DecimalKeyFrameCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.DecimalKeyFrame</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> para obter ou definir.</param>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> na posição de índice especificado.</summary>
+        <value>O <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A tentativa de modificar a coleção é inválida porque a coleção está congelada (seu <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade **true**).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Windows.Media.Animation.DecimalKeyFrameCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Media.Animation.DecimalKeyFrame keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Media.Animation.DecimalKeyFrame keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.Remove(System.Windows.Media.Animation.DecimalKeyFrame)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyFrame" Type="System.Windows.Media.Animation.DecimalKeyFrame" />
+      </Parameters>
+      <Docs>
+        <param name="keyFrame">Identifica o <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> para remover da coleção.</param>
+        <summary>Remove um <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> objeto da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Índice de posição do <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Windows.Media.Animation.DecimalKeyFrame" /> na posição de índice especificado da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.DecimalKeyFrameCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ICollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos do <see cref="T:System.Collections.ICollection" /> para um <see cref="T:System.Array" />, começando em um determinado índice <see cref="T:System.Array" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyFrame" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyFrame">O objeto a ser adicionado ao <see cref="T:System.Collections.IList" />.</param>
+        <summary>Adiciona um item ao <see cref="T:System.Collections.IList" />.</summary>
+        <returns>A posição na qual o novo elemento foi inserido, ou -1 para indicar que o item não foi inserido na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyFrame" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyFrame">O objeto a ser localizado no <see cref="T:System.Collections.IList" />.</param>
+        <summary>Determinará se o <see cref="T:System.Collections.IList" /> contiver um valor específico.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Object" /> for encontrado no <see cref="T:System.Collections.IList" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyFrame" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyFrame">O objeto a ser localizado no <see cref="T:System.Collections.IList" />.</param>
+        <summary>Determina o índice de um item específico em <see cref="T:System.Collections.IList" />.</summary>
+        <returns>O índice de <paramref name="value" /> se encontrado na lista; caso contrário, -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="keyFrame" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> devem ser inseridos.</param>
+        <param name="keyFrame">O objeto a ser inserido no <see cref="T:System.Collections.IList" />.</param>
+        <summary>Insere um item na <see cref="T:System.Collections.IList" /> no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.DecimalKeyFrameCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Obtém ou define o elemento no índice especificado.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object keyFrame);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object keyFrame) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.DecimalKeyFrameCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyFrame" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyFrame">O objeto a remover do <see cref="T:System.Collections.IList" />.</param>
+        <summary>Remove a primeira ocorrência de um objeto específico do <see cref="T:System.Collections.IList" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

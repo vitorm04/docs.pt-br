@@ -1,0 +1,857 @@
+<Type Name="ComponentTray" FullName="System.Windows.Forms.Design.ComponentTray">
+  <TypeSignature Language="C#" Value="public class ComponentTray : System.Windows.Forms.ScrollableControl, System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComponentTray extends System.Windows.Forms.ScrollableControl implements class System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.ComponentTray" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ScrollableControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("Location", typeof(System.ComponentModel.IComponent))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("TrayLocation", typeof(System.ComponentModel.IComponent))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece o comportamento de bandeja do componente de um designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bandeja de componentes representa os componentes que, caso contrário, não fornecem uma superfície visível no tempo de design e fornece uma maneira para que os usuários acessem e definir as propriedades desses componentes.  
+  
+ Alguns tipos de componentes, como um <xref:System.Timers.Timer>, talvez não tenha uma interface de usuário que pode ser exibida em tempo de design. Normalmente, esses componentes são representados por ícones mostrados na bandeja do componente.  
+  
+ Bandeja do componente é uma área retangular exibida na parte inferior da janela de exibição de design no modo de exibição de design, quando ele estiver ativo. Bandeja de componentes se torna ativa no modo de design depois que um componente que é exibido na bandeja do componente foi adicionado ao ou faz parte do documento atual.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentTray (System.ComponentModel.Design.IDesigner mainDesigner, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Design.IDesigner mainDesigner, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.#ctor(System.ComponentModel.Design.IDesigner,System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mainDesigner" Type="System.ComponentModel.Design.IDesigner" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="mainDesigner">O <see cref="T:System.ComponentModel.Design.IDesigner" /> que é o principal ou o designer do documento para o projeto atual.</param>
+        <param name="serviceProvider">Um <see cref="T:System.IServiceProvider" /> que pode ser usado para obter serviços de tempo de design.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.Design.ComponentTray" /> classe usando o designer especificado e o provedor de serviço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Bandeja do componente monitora adições de componentes e remoções e exibe os objetos de interface de usuário apropriado para representar os componentes que ele contém.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddComponent">
+      <MemberSignature Language="C#" Value="public virtual void AddComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.AddComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.ComponentModel.IComponent" /> para adicionar a bandeja.</param>
+        <summary>Adiciona um componente na bandeja.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoArrange">
+      <MemberSignature Language="C#" Value="public bool AutoArrange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoArrange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ComponentTray.AutoArrange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os itens de bandeja são alinhados automaticamente.</summary>
+        <value>
+          <see langword="true" />Se os itens de bandeja são organizados automaticamente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateComponentFromTool">
+      <MemberSignature Language="C#" Value="protected virtual bool CanCreateComponentFromTool (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanCreateComponentFromTool(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.CanCreateComponentFromTool(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">O <see cref="T:System.Drawing.Design.ToolboxItem" /> a ser testado.</param>
+        <summary>Obtém um valor que indica se a ferramenta especificada pode ser usada para criar um novo componente.</summary>
+        <returns>
+          <see langword="true" />Se a ferramenta especificada pode ser usada para criar um componente. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDisplayComponent">
+      <MemberSignature Language="C#" Value="protected virtual bool CanDisplayComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanDisplayComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.CanDisplayComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.ComponentModel.IComponent" /> a ser testado.</param>
+        <summary>Obtém um valor que indica se o componente especificado pode ser exibido.</summary>
+        <returns>
+          <see langword="true" />Se o componente pode ser exibido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método testa o componente especificado para a existência de um <xref:System.ComponentModel.DesignTimeVisibleAttribute>, que indica se o componente tem um usuário de interface que pode ser exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentCount">
+      <MemberSignature Language="C#" Value="public int ComponentCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ComponentCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ComponentTray.ComponentCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de componentes contidos na bandeja do.</summary>
+        <value>O número de componentes na bandeja do.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateComponentFromTool">
+      <MemberSignature Language="C#" Value="public void CreateComponentFromTool (System.Drawing.Design.ToolboxItem tool);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateComponentFromTool(class System.Drawing.Design.ToolboxItem tool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.CreateComponentFromTool(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tool" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="tool">O <see cref="T:System.Drawing.Design.ToolboxItem" /> para criar um componente do.</param>
+        <summary>Cria um componente do item de caixa de ferramentas especificado, adiciona o componente para o documento atual e exibe uma representação para o componente na bandeja do componente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método verifica o item para um número apropriado <xref:System.ComponentModel.DesignTimeVisibleAttribute> antes de tentar criar o componente e adicioná-lo à bandeja de componentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayError">
+      <MemberSignature Language="C#" Value="protected void DisplayError (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void DisplayError(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.DisplayError(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">A exceção sobre qual exibir informações.</param>
+        <summary>Exibe uma mensagem de erro para o usuário com informações sobre a exceção especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.Design.ComponentTray" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Windows.Forms.Design.ComponentTray> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocation">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point GetLocation (System.ComponentModel.IComponent receiver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point GetLocation(class System.ComponentModel.IComponent receiver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.GetLocation(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receiver" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="receiver">O <see cref="T:System.ComponentModel.IComponent" /> para recuperar o local do.</param>
+        <summary>Obtém o local do componente especificado, em relação ao canto superior esquerdo da bandeja do componente.</summary>
+        <returns>Um <see cref="T:System.Drawing.Point" /> indicando as coordenadas do componente especificado, ou vazio <see cref="T:System.Drawing.Point" /> se o componente especificado não pôde ser encontrado na bandeja do componente. Vazio <see cref="T:System.Drawing.Point" /> tem um <see cref="P:System.Drawing.Point.IsEmpty" /> propriedade igual a <see langword="true" /> e geralmente tem <see cref="P:System.Drawing.Point.X" /> e <see cref="P:System.Drawing.Point.Y" /> propriedades de cada iguais a zero.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.ComponentTray.GetLocation%2A>é um método de acessador para a propriedade de extensor do local que é adicionado a cada componente na bandeja do componente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextComponent">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent GetNextComponent (System.ComponentModel.IComponent component, bool forward);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.IComponent GetNextComponent(class System.ComponentModel.IComponent component, bool forward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.GetNextComponent(System.ComponentModel.IComponent,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="forward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente da qual iniciar a enumeração.</param>
+        <param name="forward">
+          <see langword="true" />para encaminhar enumerar através da lista; Caso contrário, <see langword="false" /> enumerar para trás.</param>
+        <summary>Semelhante ao <see cref="M:System.Windows.Forms.Control.GetNextControl(System.Windows.Forms.Control,System.Boolean)" />, esse método retorna o próximo componente na bandeja, dada um componente inicial.</summary>
+        <returns>O próximo componente na bandeja do componente, ou <see langword="null" />, se o final da lista for encontrado (ou o início, se <paramref name="forward" /> é <see langword="false" />).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected override object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço para recuperar.</param>
+        <summary>Obtém o tipo de serviço solicitado.</summary>
+        <returns>Uma instância do serviço solicitado, ou <see langword="null" /> se o serviço não pôde ser encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTrayLocation">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point GetTrayLocation (System.ComponentModel.IComponent receiver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point GetTrayLocation(class System.ComponentModel.IComponent receiver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.GetTrayLocation(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receiver" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="receiver">O <see cref="T:System.ComponentModel.IComponent" /> que recebe a propriedade de extensor do local.</param>
+        <summary>Obtém o valor de <see langword="Location" /> propriedade extender.</summary>
+        <returns>Um <see cref="T:System.Drawing.Point" /> que representa o local do <paramref name="receiver" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Location` propriedade extender é oferecida para todos os componentes não visuais. O valor retornado leva em consideração o valor de <xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A>. Se `receiver` does não tem uma exibição de componente, o valor retornado é vazio <xref:System.Drawing.Point>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrayComponent">
+      <MemberSignature Language="C#" Value="public bool IsTrayComponent (System.ComponentModel.IComponent comp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsTrayComponent(class System.ComponentModel.IComponent comp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.IsTrayComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comp" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="comp">O componente para testar a presença na bandeja do componente.</param>
+        <summary>Testa um componente presença na bandeja do componente.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="comp" /> está sendo exibido na bandeja do; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragDrop">
+      <MemberSignature Language="C#" Value="protected override void OnDragDrop (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragDrop(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnDragDrop(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Um <see cref="T:System.Windows.Forms.DragEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado quando um objeto que foi arrastado é descartado na bandeja do componente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragEnter">
+      <MemberSignature Language="C#" Value="protected override void OnDragEnter (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragEnter(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnDragEnter(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Um <see cref="T:System.Windows.Forms.DragEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado quando um objeto é arrastado sobre e entrou área pela bandeja do componente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragLeave">
+      <MemberSignature Language="C#" Value="protected override void OnDragLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnDragLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado quando um objeto é arrastado para fora da área na bandeja do componente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragOver">
+      <MemberSignature Language="C#" Value="protected override void OnDragOver (System.Windows.Forms.DragEventArgs de);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragOver(class System.Windows.Forms.DragEventArgs de) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnDragOver(System.Windows.Forms.DragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="de">Um <see cref="T:System.Windows.Forms.DragEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado quando um objeto é arrastado sobre bandeja do componente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGiveFeedback">
+      <MemberSignature Language="C#" Value="protected override void OnGiveFeedback (System.Windows.Forms.GiveFeedbackEventArgs gfevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGiveFeedback(class System.Windows.Forms.GiveFeedbackEventArgs gfevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnGiveFeedback(System.Windows.Forms.GiveFeedbackEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gfevent" Type="System.Windows.Forms.GiveFeedbackEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="gfevent">Um <see cref="T:System.Windows.Forms.GiveFeedbackEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado durante uma OLE arrastar e soltar de operação para fornecer uma oportunidade de bandeja do componente fornecer comentários ao usuário sobre os resultados de descartar o objeto em um momento específico.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Design.ComponentTray.OnGiveFeedback(System.Windows.Forms.GiveFeedbackEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Design.ComponentTray.OnGiveFeedback(System.Windows.Forms.GiveFeedbackEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayout">
+      <MemberSignature Language="C#" Value="protected override void OnLayout (System.Windows.Forms.LayoutEventArgs levent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayout(class System.Windows.Forms.LayoutEventArgs levent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnLayout(System.Windows.Forms.LayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="levent" Type="System.Windows.Forms.LayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="levent">Um <see cref="T:System.Windows.Forms.LayoutEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Layout" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostCapture">
+      <MemberSignature Language="C#" Value="protected virtual void OnLostCapture ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLostCapture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnLostCapture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando uma operação de seleção de arrastar do mouse é cancelada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDoubleClick">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDoubleClick (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDoubleClick(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnMouseDoubleClick(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado quando o mouse é double clicou na bandeja do componente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado quando o botão do mouse é pressionado.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Design.ComponentTray.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Design.ComponentTray.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado quando a posição do cursor do mouse é alterado.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Design.ComponentTray.OnMouseMove(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Design.ComponentTray.OnMouseMove(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado quando o botão do mouse foi liberado.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Design.ComponentTray.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Design.ComponentTray.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs pe);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs pe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pe" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pe">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> que fornece dados para o evento.</param>
+        <summary>Chamado quando o modo de exibição para a bandeja de componente deve ser atualizado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetCursor">
+      <MemberSignature Language="C#" Value="protected virtual void OnSetCursor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSetCursor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.OnSetCursor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado para definir o cursor do mouse.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir esse método para definir sua própria cursor do mouse.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveComponent">
+      <MemberSignature Language="C#" Value="public virtual void RemoveComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.RemoveComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.ComponentModel.IComponent" /> para remover da bandeja do.</param>
+        <summary>Remove o componente especificado da bandeja do.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLocation">
+      <MemberSignature Language="C#" Value="public void SetLocation (System.ComponentModel.IComponent receiver, System.Drawing.Point location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLocation(class System.ComponentModel.IComponent receiver, valuetype System.Drawing.Point location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.SetLocation(System.ComponentModel.IComponent,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receiver" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="location" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="receiver">O <see cref="T:System.ComponentModel.IComponent" /> para definir a localização do.</param>
+        <param name="location">Um <see cref="T:System.Drawing.Point" /> indicando que o novo local para o componente especificado.</param>
+        <summary>Define o local do componente especificado no local especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTrayLocation">
+      <MemberSignature Language="C#" Value="public void SetTrayLocation (System.ComponentModel.IComponent receiver, System.Drawing.Point location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTrayLocation(class System.ComponentModel.IComponent receiver, valuetype System.Drawing.Point location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.SetTrayLocation(System.ComponentModel.IComponent,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receiver" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="location" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="receiver">O <see cref="T:System.ComponentModel.IComponent" /> que recebe a propriedade de extensor do local.</param>
+        <param name="location">Um <see cref="T:System.Drawing.Point" /> que representa o local de <c>receptor</c>.</param>
+        <summary>Define o valor de <see langword="Location" /> propriedade extender.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Location` propriedade extender é oferecida para todos os componentes não visuais. O valor real leva em consideração o valor de <xref:System.Windows.Forms.ScrollableControl.AutoScrollPosition%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowLargeIcons">
+      <MemberSignature Language="C#" Value="public bool ShowLargeIcons { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowLargeIcons" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ComponentTray.ShowLargeIcons" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a bandeja exibe um ícone grande para representar cada componente na bandeja do.</summary>
+        <value>
+          <see langword="true" />Se forem exibidos ícones grandes; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IExtenderProvider.CanExtend">
+      <MemberSignature Language="C#" Value="bool IExtenderProvider.CanExtend (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.ComponentModel.IExtenderProvider.CanExtend(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.System#ComponentModel#IExtenderProvider#CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.Object" /> para receber as propriedades estendidas.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.IExtenderProvider.CanExtend(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" />Se este objeto puder fornecer propriedades estendidas ao objeto especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Design.ComponentTray> é convertida em uma interface de <xref:System.ComponentModel.IExtenderProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ComponentTray.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> a processar.</param>
+        <summary>Processa mensagens do Windows.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

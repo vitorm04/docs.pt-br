@@ -1,0 +1,227 @@
+<Type Name="ToolStripRenderEventArgs" FullName="System.Windows.Forms.ToolStripRenderEventArgs">
+  <TypeSignature Language="C#" Value="public class ToolStripRenderEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripRenderEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripRenderEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderImageMargin(System.Windows.Forms.ToolStripRenderEventArgs)" />, <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder(System.Windows.Forms.ToolStripRenderEventArgs)" />, e <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBackground(System.Windows.Forms.ToolStripRenderEventArgs)" /> métodos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderEventArgs> classe também fornece dados para o <xref:System.Windows.Forms.ToolStripRenderer.DrawImageMargin%2A>, <xref:System.Windows.Forms.ToolStripRenderer.DrawToolStripBorder%2A>, e <xref:System.Windows.Forms.ToolStripRenderer.DrawToolStripBackground%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder%2A> método para desenhar uma borda personalizada em torno de um <xref:System.Windows.Forms.ToolStrip> controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ToolStripRenderer> classe.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#12)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripRenderEventArgs (System.Drawing.Graphics g, System.Windows.Forms.ToolStrip toolStrip);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics g, class System.Windows.Forms.ToolStrip toolStrip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.ToolStrip)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="toolStrip" Type="System.Windows.Forms.ToolStrip" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usada para pintura.</param>
+        <param name="toolStrip">O <see cref="T:System.Windows.Forms.ToolStrip" /> para pintar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> classe especificado <see cref="T:System.Windows.Forms.ToolStrip" /> e usando especificado <see cref="T:System.Drawing.Graphics" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripRenderEventArgs (System.Drawing.Graphics g, System.Windows.Forms.ToolStrip toolStrip, System.Drawing.Rectangle affectedBounds, System.Drawing.Color backColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics g, class System.Windows.Forms.ToolStrip toolStrip, valuetype System.Drawing.Rectangle affectedBounds, valuetype System.Drawing.Color backColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.ToolStrip,System.Drawing.Rectangle,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="toolStrip" Type="System.Windows.Forms.ToolStrip" />
+        <Parameter Name="affectedBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="backColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usada para pintura.</param>
+        <param name="toolStrip">O <see cref="T:System.Windows.Forms.ToolStrip" /> para pintar.</param>
+        <param name="affectedBounds">O <see cref="T:System.Drawing.Rectangle" /> que representa os limites da área de pintura.</param>
+        <param name="backColor">O <see cref="T:System.Drawing.Color" /> que o plano de fundo do <see cref="T:System.Windows.Forms.ToolStrip" /> é pintado com.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> classe especificado <see cref="T:System.Windows.Forms.ToolStrip" />, usando especificado <see cref="T:System.Drawing.Graphics" /> para pintar os limites especificados com especificado <see cref="T:System.Drawing.Color" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle AffectedBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle AffectedBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripRenderEventArgs.AffectedBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Rectangle" /> que representa os limites da área de pintura.</summary>
+        <value>O <see cref="T:System.Drawing.Rectangle" /> que representa os limites da área de pintura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder%2A> método para desenhar uma borda personalizada em torno de um <xref:System.Windows.Forms.ToolStrip> controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ToolStripRenderer> classe.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#12)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripRenderEventArgs.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Color" /> que o plano de fundo do <see cref="T:System.Windows.Forms.ToolStrip" /> é pintado com.</summary>
+        <value>O <see cref="T:System.Drawing.Color" /> que o plano de fundo do <see cref="T:System.Windows.Forms.ToolStrip" /> é pintado com.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#584](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#584)]
+ [!code-vb[System.Windows.Forms.EventExamples#584](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#584)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectedArea">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle ConnectedArea { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle ConnectedArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripRenderEventArgs.ConnectedArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Rectangle" /> que representa a área de sobreposição entre uma <see cref="T:System.Windows.Forms.ToolStripDropDown" /> e sua <see cref="P:System.Windows.Forms.ToolStripDropDown.OwnerItem" />.</summary>
+        <value>O <see cref="T:System.Drawing.Rectangle" /> que representa a área de sobreposição entre uma <see cref="T:System.Windows.Forms.ToolStripDropDown" /> e sua <see cref="P:System.Windows.Forms.ToolStripDropDown.OwnerItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.ToolStrip> não é um <xref:System.Windows.Forms.ToolStripDropDown> ou <xref:System.Windows.Forms.ToolStripDropDown.OwnerItem%2A?displayProperty=nameWithType> é `null`, o <xref:System.Windows.Forms.ToolStripRenderEventArgs.ConnectedArea%2A> propriedade retorna vazio <xref:System.Drawing.Rectangle>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#584](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#584)]
+ [!code-vb[System.Windows.Forms.EventExamples#584](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#584)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripRenderEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Graphics" /> usado para pintar.</summary>
+        <value>O <see cref="T:System.Drawing.Graphics" /> usado para pintar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder%2A> método para desenhar uma borda personalizada em torno de um <xref:System.Windows.Forms.ToolStrip> controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ToolStripRenderer> classe.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#12)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolStrip">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStrip ToolStrip { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ToolStrip ToolStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripRenderEventArgs.ToolStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.ToolStrip" /> pintadas.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ToolStrip" /> pintadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBackground%2A> método para desenhar um gradiente de plano de fundo de um <xref:System.Windows.Forms.ToolStrip> controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ToolStripRenderer> classe.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#13)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,79 @@
+<Type Name="ResolveAddressCompletedEventArgs" FullName="System.Device.Location.ResolveAddressCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class ResolveAddressCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveAddressCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Location.ResolveAddressCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Device.Location.ICivicAddressResolver.ResolveAddressCompleted" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Device.Location.ResolveAddressCompletedEventArgs>.  
+  
+ [!code-csharp[System.Device.Location.ResolveCivicAddressAsync#2](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.resolvecivicaddressasync/cs/resolvecivicaddressasync.cs#2)]
+ [!code-vb[System.Device.Location.ResolveCivicAddressAsync#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.resolvecivicaddressasync/vb/resolvecivicaddressasync.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveAddressCompletedEventArgs (System.Device.Location.CivicAddress address, Exception error, bool cancelled, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Location.CivicAddress address, class System.Exception error, bool cancelled, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.ResolveAddressCompletedEventArgs.#ctor(System.Device.Location.CivicAddress,System.Exception,System.Boolean,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.Device.Location.CivicAddress" />
+        <Parameter Name="error" Type="System.Exception" />
+        <Parameter Name="cancelled" Type="System.Boolean" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="address">O <see cref="T:System.Device.Location.CivicAddress" /> que contém o endereço resolvido a partir do local de latitude/longitude, se for bem-sucedido.</param>
+        <param name="error">O objeto de exceção para qualquer exceção que possam ter ocorrido durante a tentativa de resolver o endereço.</param>
+        <param name="cancelled">
+          <see langword="true" />Se a operação foi cancelada; Caso contrário, <see langword="false" />.</param>
+        <param name="userState">Um token para a solicitação para resolver o endereço de controle. Pode ser <see langword="null" /> se não usado.</param>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Device.Location.ResolveAddressCompletedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é público para que classes de implementação de <xref:System.Device.Location.ICivicAddressResolver> interface pode criar esse objeto para disparar eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.Device.Location.CivicAddress Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.Location.CivicAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.ResolveAddressCompletedEventArgs.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.CivicAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Device.Location.CivicAddress" /> associados a <see cref="E:System.Device.Location.ICivicAddressResolver.ResolveAddressCompleted" /> eventos.</summary>
+        <value>O <see cref="T:System.Device.Location.CivicAddress" /> associados a <see cref="E:System.Device.Location.ICivicAddressResolver.ResolveAddressCompleted" /> eventos. Se o endereço não pôde ser resolvido, essa propriedade retornará <see cref="F:System.Device.Location.CivicAddress.Unknown" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

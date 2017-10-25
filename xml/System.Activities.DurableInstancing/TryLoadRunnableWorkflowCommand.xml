@@ -1,0 +1,110 @@
+<Type Name="TryLoadRunnableWorkflowCommand" FullName="System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand">
+  <TypeSignature Language="C#" Value="public sealed class TryLoadRunnableWorkflowCommand : System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TryLoadRunnableWorkflowCommand extends System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.DurableInstancing.InstancePersistenceCommand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o comando que um host de fluxo de trabalho é executada em um repositório de instância para instâncias executáveis no repositório de persistência de carga na memória.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância é *executável*, se ele não está em estado suspenso ou o estado concluído e satisfaça as seguintes condições:  
+  
+-   A instância é desbloqueada e tem um timer pendente que expirou.  
+  
+-   A instância está desbloqueada e seu status é **executando**.  
+  
+-   A instância tem um bloqueio expirado nele.  
+  
+ Periodicamente, um repositório de instâncias deve pesquisar por instâncias executáveis que pertencem a um host de fluxo de trabalho que usa o repositório. Ele deve gerar o <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> quando encontrar uma instância executável no repositório de persistência que corresponde a seu tipo de host de fluxo de trabalho. Se o repositório de instância não encontrar uma instância executável no repositório de persistência, ele deve continuar a monitorar o repositório de persistência para todas as instâncias executáveis.  
+  
+ Depois de gerar o HasRunnableWorkflowEvent, o repositório de instância deve parar de monitorar o repositório de persistência de instâncias executáveis até que ele recebe e executa o <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>. O monitoramento continua apenas se a execução de TryLoadRunnableWorkflowCommand não retorna qualquer instância executável.  
+  
+ Quando um host de fluxo de trabalho recebe o HasRunnableWorkflowEvent, ele executa o <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> em relação ao armazenamento de instância para carregar a instância na memória.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TryLoadRunnableWorkflowCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticallyAcquiringLock">
+      <MemberSignature Language="C#" Value="protected override bool AutomaticallyAcquiringLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticallyAcquiringLock" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand.AutomaticallyAcquiringLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTransactionEnlistmentOptional">
+      <MemberSignature Language="C#" Value="protected override bool IsTransactionEnlistmentOptional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTransactionEnlistmentOptional" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand.IsTransactionEnlistmentOptional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override void Validate (System.Runtime.DurableInstancing.InstanceView view);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Validate(class System.Runtime.DurableInstancing.InstanceView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand.Validate(System.Runtime.DurableInstancing.InstanceView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Runtime.DurableInstancing.InstanceView" />
+      </Parameters>
+      <Docs>
+        <param name="view">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

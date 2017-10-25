@@ -1,0 +1,32 @@
+<Type Name="StylusDownEventHandler" FullName="System.Windows.Input.StylusDownEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void StylusDownEventHandler(object sender, StylusDownEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StylusDownEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusDownEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.StylusDownEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Input.StylusDownEventArgs" /> que contém os dados do evento. .</param>
+    <summary>Representa o método que manipula o <see cref="E:System.Windows.Input.Stylus.StylusDown" /> eventos, bem como muitas variações, incluindo o evento de visualização correspondente. Também expõe novamente o evento em classes de elemento base.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, este delegado corresponde a um evento roteado. Verifique os dados de evento, especificamente o <xref:System.Windows.RoutedEventArgs.Source%2A> propriedade para determinar qual elemento gerou o evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

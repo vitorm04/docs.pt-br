@@ -1,0 +1,156 @@
+<Type Name="Blend" FullName="System.Drawing.Drawing2D.Blend">
+  <TypeSignature Language="C#" Value="public sealed class Blend" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Blend extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.Blend" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um padrão de mesclagem para um objeto <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gradientes são usadas para sombrear perfeitamente os interiores das formas. Um padrão de mesclagem é definido por duas matrizes (<xref:System.Drawing.Drawing2D.Blend.Factors%2A> e <xref:System.Drawing.Drawing2D.Blend.Positions%2A>) que contêm o mesmo número de elementos. Cada elemento do <xref:System.Drawing.Drawing2D.Blend.Positions%2A> matriz representa uma proporção da distância ao longo da linha de gradação. Cada elemento do <xref:System.Drawing.Drawing2D.Blend.Factors%2A> matriz representa a proporção de cores na mistura gradiente na posição ao longo da linha de gradação representada pelo elemento correspondente no inicial e final a <xref:System.Drawing.Drawing2D.Blend.Positions%2A> matriz.  
+  
+ Por exemplo, se correspondente elementos do <xref:System.Drawing.Drawing2D.Blend.Positions%2A> e <xref:System.Drawing.Drawing2D.Blend.Factors%2A> matrizes são 0.2 e 0,3, respectivamente, para um gradiente linear de azul para vermelho ao longo de uma linha de 100 pixels, e os pixels de cor 20 ao longo da linha (20 por cento da distância) consiste em 30 por cento azul e 70% de vermelho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir se destina a ser usado em um ambiente de Windows Forms. Ele demonstra como usar o <xref:System.Drawing.Drawing2D.Blend> classe junto com o <xref:System.Drawing.Drawing2D.LinearGradientBrush> classe para desenhar uma elipse na tela que tem as cores mescladas. Elipse é azul à esquerda, mesclagens em vermelho no centro, e mesclagens de volta para azul à direita. Isso é feito por meio das configurações no `myFactors` e `myPositions` matrizes usadas no <xref:System.Drawing.Drawing2D.Blend.Factors%2A> e <xref:System.Drawing.Drawing2D.Blend.Positions%2A> propriedades. Observe que o <xref:System.Drawing.Drawing2D.Blend> propriedade o <xref:System.Drawing.Drawing2D.LinearGradientBrush> objeto chamado `lgBrush2` devem ser feitas igual ao <xref:System.Drawing.Drawing2D.Blend> objeto `myBlend`.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMisc#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMisc#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMisc#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Blend ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Blend.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.Blend" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir se destina a ser usado em um ambiente de Windows Forms. Ele demonstra como usar o <xref:System.Drawing.Drawing2D.Blend> classe junto com o <xref:System.Drawing.Drawing2D.LinearGradientBrush> classe para desenhar uma elipse na tela que tem as cores mescladas. Elipse é azul à esquerda, mesclagens em vermelho no centro, e mesclagens de volta para azul à direita. Isso é feito por meio das configurações no `myFactors` e `myPositions` matrizes usadas no <xref:System.Drawing.Drawing2D.Blend.Factors%2A> e <xref:System.Drawing.Drawing2D.Blend.Positions%2A> propriedades. Observe que o <xref:System.Drawing.Drawing2D.Blend> propriedade o <xref:System.Drawing.Drawing2D.LinearGradientBrush> objeto chamado `lgBrush2` devem ser feitas igual ao <xref:System.Drawing.Drawing2D.Blend> objeto `myBlend`.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMisc#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMisc#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMisc#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Blend (int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Blend.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="count">O número de elementos de <see cref="P:System.Drawing.Drawing2D.Blend.Factors" /> e <see cref="P:System.Drawing.Drawing2D.Blend.Positions" /> matrizes.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Drawing2D.Blend" /> classe com o número especificado de posições e fatores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.Blend.%23ctor%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Factors">
+      <MemberSignature Language="C#" Value="public float[] Factors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32[] Factors" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.Blend.Factors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma matriz de fatores de mesclagem para o gradiente.</summary>
+        <value>Uma matriz de fatores de mesclagem que especificam as porcentagens da cor inicial e a cor final a ser usada na posição correspondente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, os elementos dessa matriz são um valor de 0.0 f por meio de 1.0 f. Esses elementos especificam a posição do blend as porcentagens da cor final e a cor inicial a ser usada em correspondente. Por exemplo, um valor de 0,2 indica que, na posição especificada, a cor combinada é composta de 20 por cento de cor final do gradiente e 80 por cento de cor inicial do gradiente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Drawing2D.Blend> classe definindo o <xref:System.Drawing.Drawing2D.Blend.Factors%2A> e <xref:System.Drawing.Drawing2D.Blend.Positions%2A> propriedades. Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário que importa o <xref:System.Drawing.Drawing2D> namespace. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DemonstrateBlend` método, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.Misc2#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.Misc2#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.Misc2#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Positions">
+      <MemberSignature Language="C#" Value="public float[] Positions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32[] Positions" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.Blend.Positions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma matriz de posições de mesclagem para o gradiente.</summary>
+        <value>Uma matriz de posições de mesclagem que especificam as porcentagens de distância ao longo da linha de gradação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos dessa matriz especificam porcentagens de distância ao longo da linha de gradação. Por exemplo, um valor de elemento de 0.2f Especifica que esse ponto é 20 por cento da distância total do ponto de partida. Os elementos nesta matriz são representados por valores de ponto flutuante entre 0.0 f e 1.0 f. O primeiro elemento da matriz deve ser 0.0 f e o último elemento deve ser 1.0 f.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Drawing2D.Blend> classe definindo o <xref:System.Drawing.Drawing2D.Blend.Factors%2A> e <xref:System.Drawing.Drawing2D.Blend.Positions%2A> propriedades. Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário que importa o <xref:System.Drawing.Drawing2D> namespace. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DemonstrateBlend` método, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.Misc2#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.Misc2#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.Misc2#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

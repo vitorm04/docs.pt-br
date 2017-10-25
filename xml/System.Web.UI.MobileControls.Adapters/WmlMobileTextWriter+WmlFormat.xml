@@ -1,0 +1,262 @@
+<Type Name="WmlMobileTextWriter+WmlFormat" FullName="System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter+WmlFormat">
+  <TypeSignature Language="C#" Value="protected class WmlMobileTextWriter.WmlFormat" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit WmlMobileTextWriter/WmlFormat extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena os atributos de formato de fonte. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat> classe é usada pelo <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WmlFormat (System.Web.UI.MobileControls.Style style, System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat currentFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.MobileControls.Style style, class System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter/WmlFormat currentFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.#ctor(System.Web.UI.MobileControls.Style,System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.MobileControls.Style" />
+        <Parameter Name="currentFormat" Type="System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter+WmlFormat" />
+      </Parameters>
+      <Docs>
+        <param name="style">O estilo para criar o novo formatador do.</param>
+        <param name="currentFormat">O formato para criar o novo formatador do.</param>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor procura primeiro para o estilo especificado para os valores de <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Bold%2A> <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Italic%2A> e <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Size%2A>. Se qualquer uma das propriedades correspondentes do `style` são <xref:System.Web.UI.MobileControls.BooleanOption.NotSet>, este construtor é para as propriedades correspondentes do `currentFormat` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WmlFormat (bool bold, bool italic, System.Web.UI.MobileControls.FontSize size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool bold, bool italic, valuetype System.Web.UI.MobileControls.FontSize size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.#ctor(System.Boolean,System.Boolean,System.Web.UI.MobileControls.FontSize)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bold" Type="System.Boolean" />
+        <Parameter Name="italic" Type="System.Boolean" />
+        <Parameter Name="size" Type="System.Web.UI.MobileControls.FontSize" />
+      </Parameters>
+      <Docs>
+        <param name="bold">
+          <see langword="true" />Para definir o formato para negrito; Caso contrário, <see langword="false" />.</param>
+        <param name="italic">
+          <see langword="true" />Para definir o formato para itálico; Caso contrário, <see langword="false" />.</param>
+        <param name="size">O tamanho da fonte a ser usado por escrito.</param>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bold">
+      <MemberSignature Language="C#" Value="public bool Bold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Bold" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Bold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou retorna se a fonte está em negrito. O valor padrão é <see cref="F:System.Web.UI.MobileControls.FontSize.NotSet" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" /> se a fonte estiver em negrito; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Bold%2A> propriedade usa um <xref:System.Web.UI.MobileControls.BooleanOption> enumeração, não é um valor booleano.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public virtual bool Compare (System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Compare(class System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter/WmlFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Compare(System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter+WmlFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">O objeto de formato a ser comparado.</param>
+        <summary>Compara uma <see cref="T:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat" /> objeto atual <see cref="T:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat" /> objeto. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Bold" />, <see cref="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Italic" />, e <see cref="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Size" /> propriedades têm os mesmos valores nas <see cref="T:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat" /> objetos; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Compare%2A> método é chamado internamente pelo <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Italic">
+      <MemberSignature Language="C#" Value="public bool Italic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Italic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Italic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a fonte está em itálico. O valor padrão é <see cref="F:System.Web.UI.MobileControls.FontSize.NotSet" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" /> se a fonte estiver em itálico; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Italic%2A> propriedade usa um <xref:System.Web.UI.MobileControls.BooleanOption> enumeração, não é um valor booleano.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.FontSize Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.FontSize Size" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho da fonte especificada. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Um valor enumerado que representa o tamanho da fonte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Deve ser do tipo <xref:System.Web.UI.MobileControls.FontSize>. O valor padrão é <xref:System.Web.UI.MobileControls.FontSize.NotSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrittenBold">
+      <MemberSignature Language="C#" Value="public bool WrittenBold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WrittenBold" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.WrittenBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o texto foi escrito com o atributo em negrito. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" />Se o texto foi escrito com o atributo negrito; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.WrittenBold%2A> propriedade e o <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat> classe são usados pela <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrittenItalic">
+      <MemberSignature Language="C#" Value="public bool WrittenItalic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WrittenItalic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.WrittenItalic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o texto foi escrito com o atributo itálico. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" />Se o texto foi escrito com o atributo itálico; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.WrittenItalic%2A> propriedade e o <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat> classe são usados pela <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrittenSize">
+      <MemberSignature Language="C#" Value="public bool WrittenSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WrittenSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.WrittenSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o texto foi escrito com o atributo de tamanho. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" />Se o texto foi escrito com o atributo de tamanho; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat.WrittenSize%2A> propriedade e o <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter.WmlFormat> classe são usados pela <xref:System.Web.UI.MobileControls.Adapters.WmlMobileTextWriter> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

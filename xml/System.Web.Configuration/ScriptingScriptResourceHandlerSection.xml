@@ -1,0 +1,130 @@
+<Type Name="ScriptingScriptResourceHandlerSection" FullName="System.Web.Configuration.ScriptingScriptResourceHandlerSection">
+  <TypeSignature Language="C#" Value="public sealed class ScriptingScriptResourceHandlerSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ScriptingScriptResourceHandlerSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ScriptingScriptResourceHandlerSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma seção de configuração <see langword="ScriptingScriptResourceHandler" /> no elemento <see langword="&lt;scripting&gt;" /> do arquivo de configuração. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse tipo para obter ou definir se o armazenamento em cache ou a compactação é habilitada para arquivos ECMAScript (JavaScript) que são inseridos como recursos em um assembly.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptingScriptResourceHandlerSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ScriptingScriptResourceHandlerSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.ScriptingScriptResourceHandlerSection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCaching">
+      <MemberSignature Language="C#" Value="public bool EnableCaching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableCaching" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCaching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableCaching", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o cache está habilitado para arquivos de script que são inseridos como recursos em um assembly.</summary>
+        <value>
+          <see langword="true" />Se o cache está habilitado para arquivos de script que são inseridos como recursos em um assembly. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCaching%2A> propriedade obtém ou define o valor para armazenar em cache os resultados do arquivo de script inserido, para armazenar em cache os possíveis objetos de localização e para o cache de scripts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCompression">
+      <MemberSignature Language="C#" Value="public bool EnableCompression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableCompression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCompression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableCompression", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a compactação está habilitada para arquivos de script que são inseridos como recursos em um assembly.</summary>
+        <value>
+          <see langword="true" />Se a compactação está habilitada para arquivos de script que são inseridos como recursos em um assembly. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ScriptingScriptResourceHandlerSection.EnableCompression%2A> propriedade obtém ou define o valor que indica se será compactado o seguinte:  
+  
+-   Arquivos de script que são inseridos como recursos em um assembly.  
+  
+-   Objetos de localização, como recursos de cadeia de caracteres que estão contidos em um arquivo de recurso (. resx).  
+  
+-   Scripts que são atendidas pelo manipulador de recursos de script.  
+  
+> [!NOTE]
+>  Se o navegador solicitante não tem suporte para compactação, essa propriedade não terá efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ScriptingScriptResourceHandlerSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

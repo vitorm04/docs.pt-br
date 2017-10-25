@@ -1,0 +1,807 @@
+<Type Name="TableRowCollection" FullName="System.Windows.Documents.TableRowCollection">
+  <TypeSignature Language="C#" Value="public sealed class TableRowCollection : System.Collections.Generic.ICollection&lt;System.Windows.Documents.TableRow&gt;, System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.TableRow&gt;, System.Collections.Generic.IList&lt;System.Windows.Documents.TableRow&gt;, System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TableRowCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;class System.Windows.Documents.TableRow&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Documents.TableRow&gt;, class System.Collections.Generic.IList`1&lt;class System.Windows.Documents.TableRow&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.TableRowCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Windows.Documents.TableRow&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.TableRow&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IList&lt;System.Windows.Documents.TableRow&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece recursos padrão para criar e gerenciar uma coleção fortemente tipada ordenada de <see cref="T:System.Windows.Documents.TableRow" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta coleção dá suporte a indexação com base em zero padrão.  
+  
+ O <xref:System.Windows.Documents.TableRowGroup.Rows%2A> propriedade fornecida pelo <xref:System.Windows.Documents.TableRowGroup> classe retorna um <xref:System.Windows.Documents.TableRowCollection>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Documents.TableRow item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Windows.Documents.TableRow item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.Add(System.Windows.Documents.TableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Documents.TableRow" />
+      </Parameters>
+      <Docs>
+        <param name="item">Uma linha de tabela para acrescentar à coleção ou linhas.</param>
+        <summary>Acrescenta um item especificado à coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Gerado quando *item* já pertence a uma coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">Gerado quando *item* é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public int Capacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Capacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableRowCollection.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a capacidade de item de coleção pré-alocado para esta coleção.</summary>
+        <value>A coleção pré-alocados item capacidade para esta coleção.  O valor padrão é **8**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.TableRowCollection.Capacity%2A> propriedade representa o número de slots pré-alocado para armazenar os itens na coleção, enquanto o <xref:System.Windows.Documents.TableRowCollection.Count%2A> propriedade representa o número real de itens atualmente na coleção.  O valor de <xref:System.Windows.Documents.TableRowCollection.Capacity%2A> é sempre pelo menos tão grande quanto o valor de <xref:System.Windows.Documents.TableRowCollection.Count%2A>.  
+  
+ Quando os itens de coleta recém-adicionado fazem com que a contagem da coleção exceder a capacidade de coleção, a capacidade é automaticamente aumentado para acomodar os itens da coleção recém-adicionada.  Aumentar a capacidade de coleção envolve alocar slots de coleta adicional, que resulta em desempenho e sobrecarga de memória.  Use o <xref:System.Windows.Documents.TableRowCollection.Capacity%2A> propriedade para otimizar a capacidade de coleção em casos em que o número máximo ou total de itens da coleção é conhecido antecipadamente.  Use o <xref:System.Windows.Documents.TableRowCollection.TrimToSize%2A> método para fazer com que a capacidade de coleção para equalizado com a contagem de coleção atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Gerado quando é feita uma tentativa de definir <see cref="P:System.Windows.Documents.TableCellCollection.Capacity" /> para um valor menor que o valor atual de <see cref="P:System.Windows.Documents.TableCellCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os itens da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de chamar <xref:System.Windows.Documents.TableRowCollection.Clear%2A>, o valor da <xref:System.Windows.Documents.TableRowCollection.Count%2A> propriedade torna-se **0** e o valor da <xref:System.Windows.Documents.TableRowCollection.Capacity%2A> propriedade é alterada. Para definir uma nova capacidade, chame <xref:System.Windows.Documents.TableRowCollection.TrimToSize%2A> ou definir explicitamente uma nova capacidade por meio de <xref:System.Windows.Documents.TableRowCollection.Capacity%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Documents.TableRow item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Windows.Documents.TableRow item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.Contains(System.Windows.Documents.TableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Documents.TableRow" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um item para consultar a presença na coleção.</param>
+        <summary>Consultas a presença de um item especificado na coleção.</summary>
+        <returns>**True** se especificado *item* está presente na coleção; caso contrário, **false**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz unidimensional no qual o conteúdo da coleção será copiado.  Essa matriz deve usar a indexação de base zero.</param>
+        <param name="index">Um índice de base zero em <c>matriz</c> especificando a posição na qual começar a inserir os objetos da coleção copiado.</param>
+        <summary>Copia o conteúdo da coleção e as insere em uma matriz especificada começando em uma posição de índice especificado na matriz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Gerado quando *matriz* inclui itens que não são compatíveis com o tipo <see cref="T:System.Windows.Documents.TableRow" />, ou se *arrayIndex* Especifica uma posição que está fora dos limites do *matriz*.</exception>
+        <exception cref="T:System.ArgumentNullException">Gerado quando *matriz* é **nulo**.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Gerado quando *arrayIndex* é menor que **0**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Windows.Documents.TableRow[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Windows.Documents.TableRow[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.CopyTo(System.Windows.Documents.TableRow[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Windows.Documents.TableRow[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um unidimensional <see cref="T:System.Windows.Documents.TableRow" /> de matriz para o qual o conteúdo da coleção será copiado.  Essa matriz deve usar a indexação de base zero.</param>
+        <param name="index">Um índice de base zero em <c>matriz</c> especificando a posição na qual começar a inserir os objetos da coleção copiado.</param>
+        <summary>Copia o conteúdo da coleção e as insere em determinado <see cref="T:System.Windows.Documents.TableRow" /> matriz de início em uma posição de índice especificado na matriz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Gerado quando *matriz* inclui itens que não são compatíveis com o tipo <see cref="T:System.Windows.Documents.TableRow" />, ou se *arrayIndex* Especifica uma posição que está fora dos limites do *matriz*.</exception>
+        <exception cref="T:System.ArgumentNullException">Gerado quando *matriz* é **nulo**.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Gerado quando *arrayIndex* é menor que **0**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableRowCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens atualmente contidas na coleção.</summary>
+        <value>O número de itens atualmente contidas na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.TableRowCollection.Capacity%2A> propriedade representa o número de slots pré-alocado para armazenar os itens na coleção, enquanto o <xref:System.Windows.Documents.TableRowCollection.Count%2A> propriedade representa o número real de itens atualmente na coleção.  O valor de <xref:System.Windows.Documents.TableRowCollection.Capacity%2A> é sempre pelo menos tão grande quanto o valor de <xref:System.Windows.Documents.TableRowCollection.Count%2A>.  
+  
+ Quando os itens de coleta recém-adicionado fazem com que a contagem da coleção exceder a capacidade de coleção, a capacidade é automaticamente aumentado para acomodar os itens da coleção recém-adicionada.  Aumentar a capacidade de coleção envolve alocar slots de coleta adicional, que resulta em desempenho e sobrecarga de memória.  Use o <xref:System.Windows.Documents.TableRowCollection.Capacity%2A> propriedade para otimizar a capacidade de coleção em casos em que o número máximo ou total de itens da coleção é conhecido antecipadamente.  Use o <xref:System.Windows.Documents.TableRowCollection.TrimToSize%2A> método para fazer com que a capacidade de coleção para equalizado com a contagem de coleção atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Documents.TableRow item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(class System.Windows.Documents.TableRow item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.IndexOf(System.Windows.Documents.TableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Documents.TableRow" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um item de coleta para retornar o índice do.</param>
+        <summary>Retorna o índice baseado em zero do item de coleção especificada.</summary>
+        <returns>O índice com base em zero do item de coleta especificado, ou **-1** se o item especificado não é um membro da coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Windows.Documents.TableRow item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, class System.Windows.Documents.TableRow item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.Insert(System.Int32,System.Windows.Documents.TableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Windows.Documents.TableRow" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um índice de base zero que especifica a posição na coleção na qual inserir <c>item</c>.</param>
+        <param name="item">Um item a ser inserido na coleção.</param>
+        <summary>Insere um item especificado na coleção em uma posição de índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Documents.TableRowCollection.Count%2A> é igual a <xref:System.Windows.Documents.TableRowCollection.Capacity%2A> para esta coleção, a capacidade de coleção automaticamente é aumentada para o novo item é inserido. Definir *índice* igual ao valor de <xref:System.Windows.Documents.TableRowCollection.Count%2A>para acrescentar um novo item de coleção à coleção.  
+  
+ Índices para itens de coleta existente podem ser ajustados para acomodar o item de coleta recentemente inseridas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Gerado quando *índice* é menor que **0**.</exception>
+        <exception cref="T:System.ArgumentNullException">Gerado quando *item* é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableRowCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <value>No momento, essa propriedade sempre retorna **false**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableRowCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <value>No momento, essa propriedade sempre retorna **false**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TableRow this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TableRow Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableRowCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TableRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um índice com base em zero que especifica a posição do item de coleção para recuperar.</param>
+        <summary>Obtém o item de coleção em um índice especificado.  Essa é uma propriedade indexada.</summary>
+        <value>O item de coleção no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa é uma propriedade indexada que oferece suporte à sintaxe de indexação padrão (semelhante àquela usada para acessar uma determinada célula em uma matriz).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Gerado quando *índice* é menor que zero, ou quando *índice* é maior que ou igual a <see cref="P:System.Windows.Documents.TableRowCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Windows.Documents.TableRow item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.Windows.Documents.TableRow item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.Remove(System.Windows.Documents.TableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Documents.TableRow" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um item a ser removido da coleção.</param>
+        <summary>Remove um item especificado da coleção.</summary>
+        <returns>**True** se o item especificado foi encontrado e removido; caso contrário, **false**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Índices para os demais itens de coleção podem ser ajustadas para refletir o item de coleta removido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Se gerado *item* não está presente na coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">Gerado quando *item* é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um índice de base zero que especifica o item de coleção para remover.</param>
+        <summary>Remove um item especificado pelo índice da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Índices para os demais itens de coleção podem ser ajustadas para refletir o item de coleta removido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Gerado quando *índice* é menor que zero, ou quando *índice* é maior que ou igual a <see cref="P:System.Windows.Documents.TableRowCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public void RemoveRange (int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveRange(int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.RemoveRange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um índice de base zero que indica o início de um intervalo de itens a serem removidos.</param>
+        <param name="count">O número de itens a serem removidos, a forma de início a posição especificada pelo <c>índice</c>.</param>
+        <summary>Remove um intervalo de itens, especificado pela partir do índice e a contagem da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Índices para os demais itens de coleção podem ser ajustadas para refletir os itens da coleção removido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Gerado quando *índice* ou *contagem* é menor que zero, ou quando *índice* é maior que ou igual a <see cref="P:System.Windows.Documents.TableRowCollection.Count" />.</exception>
+        <exception cref="T:System.ArgumentException">Gerado quando *índice* e *contagem* não especificar um intervalo válido na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableRowCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.TableRow&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Windows.Documents.TableRow&gt; IEnumerable&lt;TableRow&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.Documents.TableRow&gt; System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.TableRow&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.System#Collections#Generic#IEnumerable&lt;System#Windows#Documents#TableRow&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.Documents.TableRow&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.Generic.IEnumerable`1.GetEnumerator" />.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.Generic.IEnumerator`1" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> para adicionar ao <see cref="T:System.Windows.Documents.TableRowCollection" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Add(System.Object)" />.</summary>
+        <returns>A posição na qual o novo elemento foi inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>. Use a segurança de tipo <xref:System.Windows.Documents.TableRowCollection.Add%2A> método em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Clear" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>. Use a segurança de tipo <xref:System.Windows.Documents.TableRowCollection.Clear%2A> método em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Windows.Documents.TableRowCollection" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Contains(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Object" /> for encontrado no <see cref="T:System.Windows.Documents.TableRowCollection" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>. Use a segurança de tipo <xref:System.Windows.Documents.TableRowCollection.Contains%2A> método em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser localizado no <see cref="T:System.Windows.Documents.TableRowCollection" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.IndexOf(System.Object)" />.</summary>
+        <returns>O índice de <paramref name="value" /> se encontrado na lista; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>. Use a segurança de tipo <xref:System.Windows.Documents.TableRowCollection.IndexOf%2A> método em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir o <see cref="T:System.Object" />.</param>
+        <param name="value">O <see cref="T:System.Object" /> para inserir o <see cref="T:System.Windows.Documents.TableRowCollection" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>. Use a segurança de tipo <xref:System.Windows.Documents.TableRowCollection.Insert%2A> método em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableRowCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="true" />Se o o <see cref="T:System.Windows.Documents.TableRowCollection" /> tem um fixa tamanho; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableRowCollection.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.IsReadOnly" />.</summary>
+        <value>
+          <see langword="true" />Se o o <see cref="T:System.Windows.Documents.TableRowCollection" /> é somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.TableRowCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.Item(System.Int32)" />.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>. Use a segurança de tipo <xref:System.Windows.Documents.TableCellCollection.Item%2A> propriedade em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> a ser removido de <see cref="T:System.Windows.Documents.TableRowCollection" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Remove(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>. Use a segurança de tipo <xref:System.Windows.Documents.TableRowCollection.Remove%2A>, <xref:System.Windows.Documents.TableRowCollection.RemoveAt%2A>, ou <xref:System.Windows.Documents.TableRowCollection.RemoveRange%2A> métodos em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.RemoveAt(System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>. Use a segurança de tipo <xref:System.Windows.Documents.TableRowCollection.Remove%2A>, <xref:System.Windows.Documents.TableRowCollection.RemoveAt%2A>, ou <xref:System.Windows.Documents.TableRowCollection.RemoveRange%2A> métodos em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimToSize">
+      <MemberSignature Language="C#" Value="public void TrimToSize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrimToSize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.TableRowCollection.TrimToSize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Otimiza o consumo de memória para a coleção definindo a coleção subjacente <see cref="P:System.Windows.Documents.TableRowCollection.Capacity" /> igual a <see cref="P:System.Windows.Documents.TableRowCollection.Count" /> de itens atualmente na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para minimizar a sobrecarga de memória para uma coleção, especialmente se o conjunto de itens contidos na coleção deve ser estático.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

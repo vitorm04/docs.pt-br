@@ -1,0 +1,2030 @@
+<Type Name="ControlDesigner" FullName="System.Web.UI.Design.ControlDesigner">
+  <TypeSignature Language="C#" Value="public class ControlDesigner : System.Web.UI.Design.HtmlControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlDesigner extends System.Web.UI.Design.HtmlControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.HtmlControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe de designer de controle base para estender o comportamento do modo de design de um controle de servidor Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner> classe fornece uma classe do designer de base de controle que pode ser herdada de e estendida para oferecer suporte de tempo de design para um controle de servidor Web em um host de design, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ O modelo de objeto para trabalhar com o processamento de tempo de design é aprimorado em relação às versões anteriores, com as novas classes base para fornecer acesso ao modelo de objeto simplificado a seguir:  
+  
+-   <xref:System.Web.UI.Design.ControlDesigner>, que não é novo, mas foi significativamente aprimorado.  
+  
+-   <xref:System.Web.UI.Design.ContainerControlDesigner>.  
+  
+-   <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner>.  
+  
+## <a name="automatic-formatting"></a>Formatação automática  
+ Você pode criar uma variedade de formatos predefinidos e automática que pode simplificar o processo de desenvolvedores de página que estejam aplicando alterações de estilo complexas para controles de servidor Web. Por exemplo, o <xref:System.Web.UI.Design.WebControls.TableDesigner> controle, que deriva de <xref:System.Web.UI.Design.ControlDesigner> classe, fornece muitos formatos automática para escolher. Para implementar e fornecer formatação automática em seus controles personalizados, use os seguintes recursos:  
+  
+-   A propriedade de <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> .  
+  
+-   O método <xref:System.Web.UI.Design.ControlDesigner.OnAutoFormatApplied%2A>.  
+  
+-   O <xref:System.Web.UI.Design.DesignerAutoFormat> classe.  
+  
+-   O <xref:System.Web.UI.Design.DesignerAutoFormatStyle> classe.  
+  
+## <a name="action-lists-smart-tags"></a>Listas de ações (marcas inteligentes)  
+ Listas de ações são menus das tarefas importantes ou amplamente usadas que um desenvolvedor de página que usa um controle pode executar em uma tempo de design de interface do usuário (), como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)]. Por exemplo, o modo de exibição de tempo de design do seu controle pode fornecer um menu de tarefas disponíveis. Isso inclui uma tarefa para formatar o controle automaticamente. Para saber mais sobre listas de ações, comece com os seguintes recursos:  
+  
+-   A propriedade de <xref:System.Web.UI.Design.ControlDesigner.ActionLists%2A> .  
+  
+-   O <xref:System.ComponentModel.Design.DesignerActionList> classe.  
+  
+-   O método <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A>.  
+  
+-   O <xref:System.ComponentModel.Design.DesignerActionListCollection> classe.  
+  
+-   O <xref:System.ComponentModel.Design.DesignerActionMethodItem> classe.  
+  
+-   O <xref:System.ComponentModel.Design.DesignerActionPropertyItem> classe.  
+  
+## <a name="control-designer-regions"></a>Regiões de designer de controle  
+ Áreas são editáveis no modo de exibição de tempo de design de um controle de servidor Web. Esse recurso oferece WYSIWYG como edição de modelo, controles internos, propriedades e o conteúdo em tempo de design. Você pode fazer com que o designer de controle criar controles em regiões ou você pode usar a caixa de ferramentas para arrastar e soltar os controles em regiões. Regiões são gerenciadas com os seguintes recursos:  
+  
+-   O método <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A>.  
+  
+-   O <xref:System.Web.UI.Design.DesignerRegion> classe.  
+  
+-   O <xref:System.Web.UI.Design.EditableDesignerRegion> classe.  
+  
+-   O método <xref:System.Web.UI.Design.ControlDesigner.GetEditableDesignerRegionContent%2A>.  
+  
+-   O método <xref:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent%2A>.  
+  
+## <a name="templates"></a>Modelos  
+ O modelo para criar uma interface do usuário para edição em tempo de design de controles modelo, como o <xref:System.Web.UI.WebControls.GridView> controlar, foi consideravelmente aprimorado de versões anteriores. Você pode criar complexas controles personalizados que incluem modelos de várias partes do controle e seu designer personalizado de controle pode ajudar os desenvolvedores de página que estão modificando modelos com os seguintes recursos:  
+  
+-   A propriedade de <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> .  
+  
+-   A propriedade de <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A> .  
+  
+-   O <xref:System.Web.UI.Design.TemplateGroup> classe.  
+  
+## <a name="design-time-rendering"></a>Processamento de tempo de design  
+ O <xref:System.Web.UI.Design.ControlDesigner> classe possui os seguintes métodos para dar suporte ao processamento de tempo de design do controle do servidor Web. A maioria desses métodos é as mesmas que as versões anteriores:  
+  
+-   O método <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A>.  
+  
+-   O método <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A>.  
+  
+-   O método <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A>.  
+  
+-   O método <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A>.  
+  
+-   O método <xref:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma classe simples do designer que deriva de <xref:System.Web.UI.Design.ControlDesigner> classe. Esse designer de controle dá suporte a um personalizado `TextControl` classe e fornece um comando para alterar o tamanho do texto de um controle em tempo de design. O designer de controle é associado ao controle, especificando o designer de controle em um <xref:System.ComponentModel.DesignerAttribute> declaração do objeto no `TextControl` classe. A chave para persistir as alterações de propriedade do designer de controle para a marcação HTML foi encontrada no `ToggleTextSize` método personalizado `ActionList` classe.  
+  
+ Para testar o exemplo, adicione uma referência ao assembly System.Design.dll e compilar o código.  
+  
+ [!code-csharp[ControlDesignerSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlDesignerSample/cs/TextControlDesigner.cs#1)]
+ [!code-vb[ControlDesignerSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlDesignerSample/vb/TextControlDesigner.vb#1)]  
+[!code-aspx-csharp[ControlDesignerSample#8](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlDesignerSample/cs/TextControlDesigner.aspx#8)]
+[!code-aspx-vb[ControlDesignerSample#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlDesignerSample/vb/TextControlDesigner.aspx#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.ControlDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de lista de ação para o designer de controle.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> objeto que contém o <see cref="T:System.ComponentModel.Design.DesignerActionList" /> itens para o designer de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle composto simple com um <xref:System.Web.UI.WebControls.Label> e um <xref:System.Web.UI.WebControls.TextBox> controle, juntamente com as propriedades para definir as propriedades de texto em ambos os controles internos e também o <xref:System.Web.UI.WebControls.WebControl.Width%2A> e <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> Propriedades do <xref:System.Web.UI.WebControls.TextBox> controle. Uma classe do designer de controle associado cria três <xref:System.ComponentModel.Design.DesignerActionMethodItem> comandos, cada uma delas define duas propriedades do controle e pode ser revertida com a funcionalidade de desfazer do host de design.  
+  
+ [!code-csharp[DesignerInvokeTransactedChange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerInvokeTransactedChange/CS/InvokeTransactedChangeSample.cs#1)]
+ [!code-vb[DesignerInvokeTransactedChange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerInvokeTransactedChange/VB/InvokeTransactedChangeSample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para adicionar um menu de lista de ação para um controle personalizado no modo design, o designer de controle personalizado deve substituir o <see cref="P:System.Web.UI.Design.ControlDesigner.ActionLists" /> propriedade para retornar uma classe de controle personalizado que é derivada do <see cref="T:System.ComponentModel.Design.DesignerActionList" /> classe.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowResize">
+      <MemberSignature Language="C#" Value="public virtual bool AllowResize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowResize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.AllowResize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle pode ser redimensionado no ambiente de tempo de design.</summary>
+        <value>
+          <see langword="true" />, se o controle pode ser redimensionado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Design.ControlDesigner.AllowResize%2A> propriedade em uma classe do designer de controle personalizado.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> propriedade.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#3)]
+ [!code-vb[DesignerTemplateGroupSample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Use o <see cref="P:System.Web.UI.Design.ControlDesigner.AllowResize" /> propriedade em classes derivadas para habilitar ou desabilitar os desenvolvedores de páginas de redimensionamento seu controle no host de design.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFormats">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerAutoFormatCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de automático predefinida formatação esquemas para exibir o **AutoFormatação** caixa de diálogo para o controle associado em tempo de design.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" /> objeto que contém os esquemas predefinidos para o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de servidor Web completo inclui não apenas o controle, mas também, possivelmente, um correspondente controlar classe do designer que é derivado do <xref:System.Web.UI.Design.ControlDesigner> classe e uma classe de formatação que é derivada do <xref:System.Web.UI.Design.DesignerAutoFormat> classe. O <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> propriedade é uma coleção de instâncias de <xref:System.Web.UI.Design.DesignerAutoFormat> classe. Para um exemplo de formatação automática no [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], consulte <xref:System.Web.UI.WebControls.Calendar>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar o <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> propriedade em um designer personalizado de controle. O implementa designer controle derivado de <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> propriedade adicionando três instâncias de um formato personalizado automática que são derivados do <xref:System.Web.UI.Design.DesignerAutoFormat> classe.  
+  
+ [!code-csharp[DesignerAutoFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerAutoFormat/CS/DesignerAutoFormat.cs#1)]
+ [!code-vb[DesignerAutoFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerAutoFormat/VB/DesignerAutoFormat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Controles que expõem automaticamente AutoFormatação obter uma tarefa de comandos de seus formatos de lista e contexto. Quando você estiver usando formatos automática, use o <see cref="P:System.Web.UI.Design.ControlDesigner.ViewControl" /> propriedade para definir as propriedades na função de retorno de chamada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected string CreateErrorDesignTimeHtml (string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string CreateErrorDesignTimeHtml(string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessage">A mensagem de erro para incluir na marcação HTML gerada.</param>
+        <summary>Cria uma marcação HTML para exibir uma mensagem de erro especificada em tempo de design.</summary>
+        <returns>Uma cadeia de marcação HTML que contém a mensagem de erro especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%2A> método para criar uma marcação HTML para exibir uma mensagem de erro para um controle em tempo de design. O valor de `errorMessage` Especifica uma cadeia de caracteres localizada é exibida para o usuário do controle em tempo de design.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner> implementação da classe de <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%2A> método retorna uma tabela com duas linhas, da seguinte maneira:  
+  
+-   A primeira linha contém o nome de tipo e o nome do site para o <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> propriedade o <xref:System.Web.UI.Design.ControlDesigner> objeto.  
+  
+-   A segunda linha contém a cadeia de caracteres de mensagem de erro de entrada.  
+  
+ Para gerar uma marcação HTML para uma mensagem de erro com uma exceção associada, use o <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%28System.String%2CSystem.Exception%29> de sobrecarga. Para gerar uma marcação HTML para uma exceção sem especificar uma mensagem de erro localizada, use o <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String)" /> sobrecarga é funcionalmente equivalente a chamar o <see cref="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String,System.Exception)" /> método com e definido como <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected string CreateErrorDesignTimeHtml (string errorMessage, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string CreateErrorDesignTimeHtml(string errorMessage, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorMessage" Type="System.String" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessage">A mensagem de erro para incluir na cadeia de caracteres HTML gerada.</param>
+        <param name="e">A exceção a ser incluída na cadeia de caracteres HTML gerada.</param>
+        <summary>Cria a marcação HTML para exibir uma mensagem de erro de exceção especificada em tempo de design.</summary>
+        <returns>Marcação HTML que contém especificado <paramref name="errorMessage" /> e <paramref name="e" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%2A> método para fornecer uma marcação HTML simple que pode ser usada para exibir detalhes de erro e a exceção para um controle em tempo de design. O valor de `errorMessage` Especifica uma cadeia de caracteres localizada é exibida para o usuário do controle em tempo de design.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner> implementação da classe de <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%2A> método retorna uma tabela com duas linhas, da seguinte maneira:  
+  
+-   A primeira linha contém o nome de tipo e o nome do site para o <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> propriedade o <xref:System.Web.UI.Design.ControlDesigner> objeto.  
+  
+-   A segunda linha contém a mensagem de erro de entrada e o <xref:System.Exception.Message%2A> cadeia de caracteres da exceção.  
+  
+ Para gerar uma marcação HTML para uma mensagem de erro sem especificar uma exceção, use o <xref:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml%28System.String%29> de sobrecarga. Para gerar uma marcação HTML para uma exceção sem especificar uma mensagem de erro localizada, use o <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.Design.ControlDesigner.CreateErrorDesignTimeHtml(System.String,System.Exception)" /> método deve ser chamado a partir de <see cref="Overload:System.Web.UI.Design.ControlDesigner.GetViewRendering" /> ou <see cref="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" /> método quando ocorrerem exceções.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePlaceHolderDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected string CreatePlaceHolderDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string CreatePlaceHolderDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece uma representação de espaço reservado de retangular simples que exibe o tipo e a identificação do controle.</summary>
+        <returns>Uma cadeia de caracteres que contém a marcação HTML de tempo de design fornece informações básicas sobre o controle.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>O padrão de design comum é tentar obter uma marcação HTML por meio do controle associado e, em seguida, se um erro for encontrado, chame o <see cref="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" /> método. Se nenhuma marcação for retornada pelo controle, chame o <see cref="M:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml" /> método, que se ele não é substituído para fornecer a marcação específica, chama o <see cref="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml" /> método, que deve conter informações sobre o tipo e a identificação do controle.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePlaceHolderDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected string CreatePlaceHolderDesignTimeHtml (string instruction);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string CreatePlaceHolderDesignTimeHtml(string instruction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instruction" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instruction">Uma cadeia de caracteres que contém o texto e marcação para adicionar a saída HTML.</param>
+        <summary>Fornece uma representação de espaço reservado de retangular simples que exibe o tipo e a ID do controle e também instruções especificadas adicionais ou informações.</summary>
+        <returns>Uma cadeia de caracteres que contém a marcação HTML de tempo de design fornece informações sobre o controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método em um designer de modelo de controle. Uma cadeia de caracteres é passada como o `instruction` parâmetro em uma chamada para o <xref:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml%2A> método, que fornece a marcação HTML de tempo de design.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> propriedade.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#4)]
+ [!code-vb[DesignerTemplateGroupSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O padrão de design comum é tentar obter uma marcação HTML por meio do controle associado e, em seguida, se um erro for encontrado, chame o <see cref="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" /> método. Se nenhuma marcação for retornada pelo controle, chame o <see cref="M:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml" /> método, que se ele não é substituído para fornecer a marcação específica, chama o <see cref="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml" /> método, que deve conter informações sobre o tipo e a identificação do controle.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewControl">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.Control CreateViewControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.Control CreateViewControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.CreateViewControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cópia do controle associado para exibir ou renderização na superfície de design.</summary>
+        <returns>Um controle de servidor Web.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindingsEnabled">
+      <MemberSignature Language="C#" Value="protected virtual bool DataBindingsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DataBindingsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.DataBindingsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação de dados é suportada, a região que contém o controle associado.</summary>
+        <value>
+          <see langword="true" />, se o contêiner para o controle oferece suporte à associação de dados; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerState">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Design.ControlDesignerState DesignerState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.ControlDesignerState DesignerState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.DesignerState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ControlDesignerState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que é usado para manter os dados para o controle associado em tempo de design.</summary>
+        <value>Um <see cref="P:System.Web.UI.Design.ControlDesigner.DesignerState" /> propriedade implementa <see cref="T:System.Collections.IDictionary" /> e usa o <see cref="T:System.ComponentModel.Design.IComponentDesignerStateService" /> para manter dados de estado do controle associado em tempo de design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores para o <xref:System.Web.UI.Design.ControlDesigner.DesignerState%2A> propriedade são persistentes mesmo se o usuário alterna do Design para exibição da fonte, ou recarrega o documento, ou fecha e reabre o host de design.  
+  
+ Você pode obter e definir valores no objeto retornado, como você faria em um objeto, com os valores automaticamente persistido de IDictionary.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignTimeElementView">
+      <MemberSignature Language="C#" Value="protected object DesignTimeElementView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DesignTimeElementView" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.DesignTimeElementView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Error: This property can no longer be referenced, and is included to support existing compiled applications. The design-time element view architecture is no longer used. http://go.microsoft.com/fwlink/?linkid=14202", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de controle de exibição do designer de controle.</summary>
+        <value>
+          <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A> propriedade está obsoleta e não há nenhuma substituição para a funcionalidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignTimeHtmlRequiresLoadComplete">
+      <MemberSignature Language="C#" Value="public virtual bool DesignTimeHtmlRequiresLoadComplete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignTimeHtmlRequiresLoadComplete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o host de design deve concluir o carregamento antes do <see cref="Overload:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml" /> método pode ser chamado.</summary>
+        <value>
+          <see langword="true" />, se o carregamento deve ser concluído antes do <see cref="Overload:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml" /> método pode ser chamado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão da <xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A> propriedade retorna `false`.  
+  
+> [!NOTE]
+>  A propriedade <xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A> está obsoleta. Use o <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> método para a funcionalidade de designer de controle equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle GetBounds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Rectangle GetBounds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetBounds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera as coordenadas do retângulo que representa os limites do controle como exibido na superfície de design.</summary>
+        <returns>Um <see cref="T:System.Drawing.Rectangle" /> objeto que representa os limites para o controle na superfície de design em relação ao controle, não o documento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public virtual string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a marcação HTML que é usada para representar o controle em tempo de design.</summary>
+        <returns>A marcação HTML usada para representar o controle em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método em um designer personalizado de controle. Se a propriedade de texto para o controle associado estiver vazia, o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> chamadas de método de <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> método. Caso contrário, o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método cria e processa um controle de hiperlink.  
+  
+ [!code-csharp[System.Web.UI.Design.ControlDesigner_Example#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/CS/SimpleControlDesigner.cs#5)]
+ [!code-vb[System.Web.UI.Design.ControlDesigner_Example#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/VB/simplecontroldesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você estiver criando um controle de contêiner personalizado, certifique-se de que você processar o controle e todos os controles filho em tempo de design, independentemente se o <see cref="P:System.Web.UI.Control.Visible" /> está definida como <see langword="true" /> ou <see langword="false" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public virtual string GetDesignTimeHtml (System.Web.UI.Design.DesignerRegionCollection regions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetDesignTimeHtml(class System.Web.UI.Design.DesignerRegionCollection regions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="regions">Uma coleção de regiões de designer de controle para o controle associado.</param>
+        <summary>Recupera a marcação HTML para exibir o controle e preenche a coleção com as regiões de designer atual do controle.</summary>
+        <returns>A marcação HTML do tempo de design para o controle associado, incluindo todas as regiões de designer do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As chamadas de host de design de <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método para obter a marcação HTML de tempo de design e a lista atual de controle de regiões de designer. Usando o DesignerRegionCollection, o host de design pode solicitar a marcação de cada região de designer do controle editável.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método é fornecido para um designer de controle derivado, como o <xref:System.Web.UI.Design.WebControls.GridViewDesigner> classe, que deve processar o conteúdo para a região antes de chamar o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar marcação HTML usando o <xref:System.Web.UI.Design.DesignerRegionCollection> coleção.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#5](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#5)]
+ [!code-vb[SimpleMultiRegionControlDesigner#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeResourceProviderFactory">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.DesignTimeResourceProviderFactory GetDesignTimeResourceProviderFactory (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.DesignTimeResourceProviderFactory GetDesignTimeResourceProviderFactory(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetDesignTimeResourceProviderFactory(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignTimeResourceProviderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um <see cref="T:System.IServiceProvider" /> objeto que pode recuperar serviços globais e locais.</param>
+        <summary>Retorna uma fábrica de provedor de recursos apropriado, dependendo das configurações de globalização no arquivo de configuração para o site.</summary>
+        <returns>Um <see cref="T:System.Web.UI.Design.DesignTimeResourceProviderFactory" /> do objeto, se houver definido no arquivo de configuração; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma fábrica de provedor de recursos cria os provedores de recursos e os gravadores de recursos, dependendo das configurações atuais na seção system.web/globalization do arquivo de configuração (arquivos de Machine. config ou Web. config para recursos globais e locais). Se não há configurações de globalização forem encontradas, o `serviceProvider` parâmetro é usado para criar um <xref:System.Web.UI.Design.DesignTimeResourceProviderFactory> usando a implementação padrão para o host de design do objeto.  
+  
+ Normalmente, os desenvolvedores de controle não substituirá o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeResourceProviderFactory%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public virtual string GetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> objeto ao obter conteúdo.</param>
+        <summary>Retorna o conteúdo de uma área editável da exibição de tempo de design do controle associado.</summary>
+        <returns>O conteúdo persistente para a região, se o designer de controle oferece suporte a regiões editáveis; Caso contrário, uma cadeia de caracteres vazia ("").</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão da <xref:System.Web.UI.Design.ControlDesigner.GetEditableDesignerRegionContent%2A> método retorna uma cadeia de caracteres vazia ("").  
+  
+ Derivando de classes de <xref:System.Web.UI.Design.ControlDesigner> classe pode dar suporte a edição baseada em região na superfície de design e substituir o <xref:System.Web.UI.Design.ControlDesigner.GetEditableDesignerRegionContent%2A> método para retornar o conteúdo para uma região especificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter uma referência para o host de design e, em seguida, usar a referência para criar um <xref:System.Web.UI.Design.ControlParser> objeto que cria a marcação HTML para `region` e seu conteúdo.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#6](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#6)]
+ [!code-vb[SimpleMultiRegionControlDesigner#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected virtual string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a marcação HTML para representar um controle de servidor Web em tempo de design que não terão nenhuma representação visual em tempo de execução.</summary>
+        <returns>A marcação HTML usada para representar um controle em tempo de design que não teria nenhuma representação visual. O padrão é um retângulo que contém o tipo e a ID do componente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão do <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> método é retornar uma cadeia de caracteres que contém o nome do componente. O <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> método deve ser chamado na implementação do <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método quando há uma marcação HTML sem tempo de design.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método em um designer personalizado de controle. Se o `Text` propriedade para o controle associado estiver vazia, o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> chamadas de método <xref:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml%2A> método. Caso contrário, o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método cria e processa um `Hyperlink` controle.  
+  
+ [!code-csharp[System.Web.UI.Design.ControlDesigner_Example#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/CS/SimpleControlDesigner.cs#5)]
+ [!code-vb[System.Web.UI.Design.ControlDesigner_Example#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/VB/simplecontroldesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrorDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected virtual string GetErrorDesignTimeHtml (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetErrorDesignTimeHtml(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">A exceção que ocorreu.</param>
+        <summary>Recupera a marcação HTML que fornece informações sobre a exceção especificada.</summary>
+        <returns>A marcação HTML do tempo de design para a exceção especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml%2A> método normalmente é chamado se uma exceção será lançada <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como gerar uma marcação HTML em tempo de design para o controle quando ocorre um erro e chamar o <xref:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml%2A> método.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginDesigner#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginDesigner/CS/LoginDesigner.cs#2)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginDesigner/VB/LoginDesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O padrão de design comum é tentar obter uma marcação HTML por meio do controle associado e, em seguida, se um erro for encontrado, chame o <see cref="M:System.Web.UI.Design.ControlDesigner.GetErrorDesignTimeHtml(System.Exception)" /> método. Se nenhuma marcação for retornada pelo controle, chame o <see cref="M:System.Web.UI.Design.ControlDesigner.GetEmptyDesignTimeHtml" /> método, que se ele não é substituído para fornecer a marcação específica, chama o <see cref="M:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml" /> método, que deve conter informações sobre o tipo e a identificação do controle.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPersistenceContent">
+      <MemberSignature Language="C#" Value="public virtual string GetPersistenceContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetPersistenceContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetPersistenceContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a marcação HTML interna persistente do controle em tempo de design.</summary>
+        <returns>Uma cadeia de caracteres que representa a marcação HTML interna persistente para o controle associado. O padrão é <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.Web.UI.Design.ControlDesigner.GetPersistenceContent" /> método para fornecer manipulação personalizada da persistência de conteúdo interna para o host de design.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPersistInnerHtml">
+      <MemberSignature Language="C#" Value="public virtual string GetPersistInnerHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetPersistInnerHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is GetPersistenceContent(). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a marcação HTML interna persistente do controle.</summary>
+        <returns>Persistente interna marcação HTML do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A> método está obsoleto. Use o <xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A> método para a funcionalidade de designer de controle equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewRendering">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.ViewRendering GetViewRendering ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.Design.ViewRendering GetViewRendering() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetViewRendering" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewRendering</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um objeto que contém a marcação de tempo de design para o conteúdo e as regiões do controle associado.</summary>
+        <returns>Um objeto <see cref="T:System.Web.UI.Design.ViewRendering" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewRendering">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.ViewRendering GetViewRendering (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.ViewRendering GetViewRendering(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetViewRendering(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewRendering</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um objeto <see cref="T:System.Web.UI.Control" />.</param>
+        <summary>Recupera um objeto que contém a marcação de tempo de design para o conteúdo e as regiões do controle especificado.</summary>
+        <returns>Um objeto <see cref="T:System.Web.UI.Design.ViewRendering" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewRendering">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.ViewRendering GetViewRendering (System.Web.UI.Design.ControlDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.ViewRendering GetViewRendering(class System.Web.UI.Design.ControlDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.GetViewRendering(System.Web.UI.Design.ControlDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewRendering</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.ControlDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="designer">Um designer de controle que deriva de <see cref="T:System.Web.UI.Design.ControlDesigner" />.</param>
+        <summary>Recupera um objeto que contém a marcação de tempo de design para o conteúdo e as regiões do controle associado para o designer do controle especificado.</summary>
+        <returns>Um objeto <see cref="T:System.Web.UI.Design.ViewRendering" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HidePropertiesInTemplateMode">
+      <MemberSignature Language="C#" Value="protected virtual bool HidePropertiesInTemplateMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HidePropertiesInTemplateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.HidePropertiesInTemplateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as propriedades do controle associado forem ocultadas quando o controle está no modo de modelo.</summary>
+        <value>
+          <see langword="true" />, se as propriedades do controle associado forem ocultadas quando o controle está no modo de modelo; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade ID nunca é oculto. O <xref:System.Web.UI.Design.ControlDesigner.PreFilterProperties%2A> método usa o <xref:System.Web.UI.Design.ControlDesigner.HidePropertiesInTemplateMode%2A> propriedade para determinar se propriedades, que não seja a propriedade de ID devem ser ocultos de grades de propriedades enquanto o controle está no modo de edição de modelo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public virtual string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de identificação para o controle.</summary>
+        <value>A cadeia de caracteres de identificação para o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.ID%2A> propriedade é usada internamente dentro do designer de controle e para interação com a janela Propriedades. O <xref:System.Web.UI.Design.ControlDesigner.ID%2A> propriedade sombreia o tempo de execução <xref:System.Web.UI.Control.ID%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O controle que está sendo criado.</param>
+        <summary>Inicializa o designer de controle e carrega o componente especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.Initialize%2A> método é chamado pelo host de design para concluir as seguintes ações:  
+  
+-   Carregar o designer de controle com o componente de design.  
+  
+-   Configurar o modo de exibição usando o controle de <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> método.  
+  
+-   Verifique se o controle associado é do tipo correto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar uma classe de controle e uma classe do designer de controle que substituem o <xref:System.Web.UI.Design.ControlDesigner.Initialize%2A> método para inicializar variáveis internas.  
+  
+ [!code-csharp[System.Web.UI.Design.ControlDesigner_Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/CS/SimpleControlDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.ControlDesigner_Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.ControlDesigner_Example/VB/simplecontroldesigner.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InTemplateMode">
+      <MemberSignature Language="C#" Value="protected bool InTemplateMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InTemplateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.InTemplateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle está em um modelo, exibir ou editar o modo no host de design. O <see cref="P:System.Web.UI.Design.ControlDesigner.InTemplateMode" /> propriedade é somente leitura.</summary>
+        <value>
+          <see langword="true" />, se o controle está em um modelo, exibir ou Editar modo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de servidor Web está em modo de modelo quando um modelo somente leitura está sendo exibido no momento ou um modelo editável está sendo editado em um host de design como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner> classe fornece um padrão <xref:System.Web.UI.Design.ViewEventHandler> objeto para atualizar o <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A> valor quando o modo de modelo é alterado para o controle associado. Designers personalizados que são derivados do <xref:System.Web.UI.Design.TemplatedControlDesigner> classe pode substituir o <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> método para executar processamento adicional quando as alterações para um controle no host do design do modo de edição de modelo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Invalidate">
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Invalida o controle conforme exibido na superfície de design e faz com que o host de design chamar o <see cref="M:System.Web.UI.Design.ControlDesigner.OnPaint(System.Windows.Forms.PaintEventArgs)" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> também chama um método <xref:System.Web.UI.Design.ControlDesigner.Invalidate%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.Invalidate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invalida toda a área do controle que é exibido na superfície de design e sinaliza o designer de controle para redesenha o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para habilitar o designer de controle tratar eventos de pintura, use o <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> método o <xref:System.Web.UI.Design.ControlDesigner.Initialize%2A> método.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner.Invalidate%2A> método fornece o host de design com uma maneira para instruir o designer de controle para redesenha o controle. Essencialmente, isso é o mesmo que chamar <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> método, porque ele faz com que todo o controle seja redesenhado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate (System.Drawing.Rectangle rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate(valuetype System.Drawing.Rectangle rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.Invalidate(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rectangle">Um <see cref="T:System.Drawing.Rectangle" /> objeto que representa a área para invalidar em relação ao canto superior esquerdo do controle.</param>
+        <summary>Invalida a área especificada do controle que é exibido na superfície de design e sinaliza o designer de controle para redesenha o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para habilitar o designer de controle tratar eventos de pintura, use o <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> método o <xref:System.Web.UI.Design.ControlDesigner.Initialize%2A> método.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner.Invalidate%2A> método fornece o host de design com uma maneira para instruir o designer de controle para redesenhar uma parte específica do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeTransactedChange">
+      <MemberSignature Language="C#" Value="public static void InvokeTransactedChange (System.ComponentModel.IComponent component, System.Web.UI.Design.TransactedChangeCallback callback, object context, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeTransactedChange(class System.ComponentModel.IComponent component, class System.Web.UI.Design.TransactedChangeCallback callback, object context, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange(System.ComponentModel.IComponent,System.Web.UI.Design.TransactedChangeCallback,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="callback" Type="System.Web.UI.Design.TransactedChangeCallback" />
+        <Parameter Name="context" Type="System.Object" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="component">O controle associado com o designer de controle.</param>
+        <param name="callback">Um <see cref="T:System.Web.UI.Design.TransactedChangeCallback" /> objeto que representa uma função a ser chamada no designer de controle como parte da transação.</param>
+        <param name="context">Um objeto que contém o argumento de retorno de chamada.</param>
+        <param name="description">Uma descrição do efeito de permitir que a transação seja concluída, que é usada pelo host de design para que o usuário tenha a oportunidade para cancelar a transação.</param>
+        <summary>Encapsula uma série de alterações em uma transação, usando os parâmetros especificados que podem ser revertidos como uma unidade com a funcionalidade de desfazer do host de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação do <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> método notifica o host de design, que é determinado pelo <xref:System.Web.UI.Control.Site%2A> propriedade `component`, que uma alteração está ocorrendo no controle associado e, se a alteração não for cancelada pelo host de design, invoca especificado `callback` usando especificado `context`e notifica o host de design para que a alteração foi concluída.  
+  
+ Se o host de design ou o controle associado gera um estático `Canceled` campo de exceção de um <xref:System.ComponentModel.Design.CheckoutException> exceção, a transação é cancelada sem chamar `callback`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle composto simple com um <xref:System.Web.UI.WebControls.Label> e um <xref:System.Web.UI.WebControls.TextBox> controle, juntamente com as propriedades para definir o texto do rótulo e também o <xref:System.Web.UI.WebControls.TextBox.Text%2A>, <xref:System.Web.UI.WebControls.WebControl.Width%2A>, e <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> propriedades de o <xref:System.Web.UI.WebControls.TextBox> controle. Uma classe do designer de controle associado cria três <xref:System.ComponentModel.Design.DesignerActionMethodItem> comandos, cada uma delas define duas propriedades do controle. Usando o <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> método, você pode usar a funcionalidade de desfazer do host de design, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], reverter cada transação concluída como uma unidade.  
+  
+ [!code-csharp[DesignerInvokeTransactedChange#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerInvokeTransactedChange/CS/InvokeTransactedChangeSample.cs#1)]
+ [!code-vb[DesignerInvokeTransactedChange#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerInvokeTransactedChange/VB/InvokeTransactedChangeSample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="callback" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeTransactedChange">
+      <MemberSignature Language="C#" Value="public static void InvokeTransactedChange (System.ComponentModel.IComponent component, System.Web.UI.Design.TransactedChangeCallback callback, object context, string description, System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeTransactedChange(class System.ComponentModel.IComponent component, class System.Web.UI.Design.TransactedChangeCallback callback, object context, string description, class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange(System.ComponentModel.IComponent,System.Web.UI.Design.TransactedChangeCallback,System.Object,System.String,System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="callback" Type="System.Web.UI.Design.TransactedChangeCallback" />
+        <Parameter Name="context" Type="System.Object" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="component">O controle associado com o designer de controle.</param>
+        <param name="callback">Um <see cref="T:System.Web.UI.Design.TransactedChangeCallback" /> objeto que representa uma função a ser chamada no designer de controle como parte da transação.</param>
+        <param name="context">Um objeto que contém o argumento de retorno de chamada.</param>
+        <param name="description">Uma descrição do efeito de permitir que a transação seja concluída, que é usada pelo host de design para que o usuário tenha a oportunidade para cancelar a transação.</param>
+        <param name="member">Um <see cref="T:System.ComponentModel.MemberDescriptor" /> objeto (geralmente, um <see cref="T:System.ComponentModel.EventDescriptor" /> ou um <see cref="T:System.ComponentModel.PropertyDescriptor" /> objeto) que descreve o membro do controle associado que está sendo invocado como parte da transação.</param>
+        <summary>Encapsula uma série de alterações em uma transação, usando os parâmetros especificados que podem ser revertidos como uma unidade com a funcionalidade de desfazer do host de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação do <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> método notifica o host de design, que é determinado pelo <xref:System.Web.UI.Control.Site%2A> propriedade de `component`, que está ocorrendo uma alteração especificado `member` (propriedade ou método) do controle associado e, se a alteração não for cancelada pelo host de design, invoca especificado `callback` usando especificado `context` como argumento e notifica o host de design para que a alteração foi concluída.  
+  
+ Se o host de design ou de um controle associado gera um estático `Canceled` campo de exceção de um <xref:System.ComponentModel.Design.CheckoutException> exceção, a transação é cancelada sem chamar `callback`.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%28System.ComponentModel.IComponent%2CSystem.Web.UI.Design.TransactedChangeCallback%2CSystem.Object%2CSystem.String%29>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="callback" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeTransactedChange">
+      <MemberSignature Language="C#" Value="public static void InvokeTransactedChange (IServiceProvider serviceProvider, System.ComponentModel.IComponent component, System.Web.UI.Design.TransactedChangeCallback callback, object context, string description, System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeTransactedChange(class System.IServiceProvider serviceProvider, class System.ComponentModel.IComponent component, class System.Web.UI.Design.TransactedChangeCallback callback, object context, string description, class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange(System.IServiceProvider,System.ComponentModel.IComponent,System.Web.UI.Design.TransactedChangeCallback,System.Object,System.String,System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="callback" Type="System.Web.UI.Design.TransactedChangeCallback" />
+        <Parameter Name="context" Type="System.Object" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um <see cref="T:System.IServiceProvider" /> objeto que representa o host de design que fornece controle de serviços de designer para o controle associado.</param>
+        <param name="component">O controle associado com o designer de controle.</param>
+        <param name="callback">Um <see cref="T:System.Web.UI.Design.TransactedChangeCallback" /> objeto que representa uma função a ser chamada no designer de controle como parte da transação.</param>
+        <param name="context">Um objeto que contém o argumento de retorno de chamada.</param>
+        <param name="description">Uma descrição do efeito de permitir que a transação seja concluída, que é usada pelo host de design para que o usuário tenha a oportunidade para cancelar a transação.</param>
+        <param name="member">Um <see cref="T:System.ComponentModel.MemberDescriptor" /> objeto (geralmente um <see cref="T:System.ComponentModel.EventDescriptor" /> ou um <see cref="T:System.ComponentModel.PropertyDescriptor" /> objeto) que descreve o membro do controle associado que está sendo invocado como parte da transação.</param>
+        <summary>Encapsula uma série de alterações em uma transação, usando os parâmetros especificados que podem ser revertidos como uma unidade com a funcionalidade de desfazer do host de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação do <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> método notifica o host de design, que é representado por `serviceProvider`, que está ocorrendo uma alteração especificado `member` (propriedade ou método) do controle associado e, se a alteração não for cancelada pelo host de design, invoca especificado `callback` usando especificado `context` como argumento e notifica o host de design para que a alteração foi concluída.  
+  
+ Se o host de design ou o controle associado gera um estático `Canceled` campo de exceção de um <xref:System.ComponentModel.Design.CheckoutException> exceção, a transação é cancelada sem chamar `callback`.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="callback" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="serviceProvider" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is to use Tag.SetDirty() and Tag.IsDirty. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle de servidor Web foi marcado como alterada.</summary>
+        <value>
+          <see langword="true" />, se o controle de servidor Web tiver sido alterada desde a sua última persistente ou carregamento. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  A propriedade <xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A> está obsoleta. Use o <xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A> propriedade e o <xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A> método o <xref:System.Web.UI.Design.ControlDesigner.Tag%2A> propriedade para a funcionalidade de designer de controle equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPropertyBound">
+      <MemberSignature Language="C#" Value="public bool IsPropertyBound (string propName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPropertyBound(string propName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.IsPropertyBound(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is DataBindings.Contains(string). The DataBindings collection allows more control of the databindings associated with the control. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propName">A propriedade para testar a associação de dados.</param>
+        <summary>Recupera um valor que indica se a propriedade especificada para o controle associado é associado a dados.</summary>
+        <returns>
+          <see langword="true" />, se a propriedade é associado a dados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ControlDesigner.IsPropertyBound%2A> método está obsoleto. Use o <xref:System.Web.UI.DataBindingCollection.Contains%2A> método o <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A> propriedade para a funcionalidade de designer de controle equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Localize">
+      <MemberSignature Language="C#" Value="public void Localize (System.Web.UI.Design.IDesignTimeResourceWriter resourceWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Localize(class System.Web.UI.Design.IDesignTimeResourceWriter resourceWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.Localize(System.Web.UI.Design.IDesignTimeResourceWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceWriter" Type="System.Web.UI.Design.IDesignTimeResourceWriter" />
+      </Parameters>
+      <Docs>
+        <param name="resourceWriter">Um objeto derivado de <see cref="T:System.Web.UI.Design.IDesignTimeResourceWriter" /> objeto que é usado para gravar os recursos no fluxo de resposta de tempo de design.</param>
+        <summary>Usa o gravador de recurso fornecido para persistir as propriedades localizáveis do controle associado a um recurso no host de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.Localize%2A> método é chamado pelo host de design para criar as entradas de recurso para cada propriedade que está marcado com um <xref:System.ComponentModel.LocalizableAttribute> objeto e as propriedades que usam uma expressão de recurso explícita como um valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAutoFormatApplied">
+      <MemberSignature Language="C#" Value="public virtual void OnAutoFormatApplied (System.Web.UI.Design.DesignerAutoFormat appliedAutoFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnAutoFormatApplied(class System.Web.UI.Design.DesignerAutoFormat appliedAutoFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnAutoFormatApplied(System.Web.UI.Design.DesignerAutoFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appliedAutoFormat" Type="System.Web.UI.Design.DesignerAutoFormat" />
+      </Parameters>
+      <Docs>
+        <param name="appliedAutoFormat">Um <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> objeto que define um estilo.</param>
+        <summary>Chamado quando um esquema predefinido e automático de formatação foi aplicado para o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.OnAutoFormatApplied%2A> método é chamado após uma <xref:System.Web.UI.Design.DesignerAutoFormat> objeto aplicou um formato predefinido para o controle associado. Um <xref:System.Web.UI.Design.DesignerAutoFormat> objeto define as configurações automáticas de formatação esquema nome e o estilo que são aplicadas ao controle.  
+  
+ Derivando de classes de <xref:System.Web.UI.Design.ControlDesigner> classe substituir o <xref:System.Web.UI.Design.ControlDesigner.OnAutoFormatApplied%2A> método para executar processamento adicional quando um esquema de formatação automática é aplicado para o controle associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBindingsCollectionChanged">
+      <MemberSignature Language="C#" Value="protected override void OnBindingsCollectionChanged (string propName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBindingsCollectionChanged(string propName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnBindingsCollectionChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is to handle the Changed event on the DataBindings collection. The DataBindings collection allows more control of the databindings associated with the control. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propName">A propriedade para testar alterações em sua coleção de associações.</param>
+        <summary>Chamado quando a coleção de associação de dados é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.OnBindingsCollectionChanged%2A> método é chamado quando a coleção de associação de dados foi alterada por um chamador externo.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ControlDesigner.OnBindingsCollectionChanged%2A> método está obsoleto. Use o <xref:System.Web.UI.DataBindingCollection.Changed> evento no <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A> coleção para a funcionalidade de designer de controle equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick (System.Web.UI.Design.DesignerRegionMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick(class System.Web.UI.Design.DesignerRegionMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnClick(System.Web.UI.Design.DesignerRegionMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.Design.DesignerRegionMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Web.UI.Design.DesignerRegionMouseEventArgs" /> objeto que especifica o local e, possivelmente, a região de designer de controle que o usuário clicou.</param>
+        <summary>Chamado pelo host de design, quando o usuário clica no controle associado em tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> é gerado pelo host de design para determinadas ações em um controle na superfície de design. Por exemplo, um evento é gerado para as seguintes condições:  
+  
+-   O usuário clica no controle.  
+  
+-   Pinta designer controle na superfície de design.  
+  
+-   O usuário entra ou sai do modo para o controle de edição de modelo.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner> classe fornece um delegado de padrão para manipular o <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent?displayProperty=nameWithType> evento. Classes derivadas de <xref:System.Web.UI.Design.ControlDesigner> substituir o <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> método para processar os eventos que são gerados quando o usuário clica em um controle.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> método permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ A implementação padrão da <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> método retorna sem executar qualquer processamento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar um manipulador para o <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> eventos em uma região clicável do controle e use um <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> objeto para identificar a região que está sendo clicada.  
+  
+ Este exemplo de código é parte de um exemplo de código maior para o <xref:System.Web.UI.Design.EditableDesignerRegion> classe.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#4)]
+ [!code-vb[SimpleMultiRegionControlDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.Web.UI.Design.ControlDesigner.OnClick(System.Web.UI.Design.DesignerRegionMouseEventArgs)" /> método em uma classe derivando de <see cref="T:System.Web.UI.Design.ControlDesigner" /> eventos no controle de clique de classe para lidar com o tempo de design. Se <paramref name="e" /> é não nulo, a região clicada, se houver, é especificado no <see cref="P:System.Web.UI.Design.DesignerRegionMouseEventArgs.Region" /> propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public virtual void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="ce">Um objeto de <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Chamado quando o controle associado é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> método é chamado quando uma propriedade para o controle associado é alterada. Ele permite que o implementador de fazer qualquer processamento que pode ser necessário após uma alteração de propriedade. Chamando o <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> método faz com que o host de design chamar o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método. A implementação base do <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> método também mantém o controle na marcação da página.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.Web.UI.Design.ControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" /> método para fornecer processamento adicional antes de persistir o controle e antes de atualizar a marcação HTML de tempo de design.  
+  
+ Ao substituir o <see cref="M:System.Web.UI.Design.ControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" /> método em uma classe derivada, certifique-se de que você chamar o <see cref="M:System.Web.UI.Design.ControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" /> método para a classe base para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanging">
+      <MemberSignature Language="C#" Value="public virtual void OnComponentChanging (object sender, System.ComponentModel.Design.ComponentChangingEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnComponentChanging(object sender, class System.ComponentModel.Design.ComponentChangingEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnComponentChanging(System.Object,System.ComponentModel.Design.ComponentChangingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">O objeto que é a origem do evento.</param>
+        <param name="ce">Um objeto de <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Representa o método que manipulará o <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" /> evento para o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando tanto o <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> ou <xref:System.Web.UI.Design.ControlDesigner.Localize%2A> método é chamado, o <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanging> evento ocorre antes que as alterações são feitas para o controle associado. Depois que as alterações forem concluídas, o <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> método ocorre.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnControlResize">
+      <MemberSignature Language="C#" Value="protected virtual void OnControlResize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnControlResize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnControlResize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is OnComponentChanged(). OnComponentChanged is called when any property of the control is changed. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando o controle de servidor Web associado foi redimensionado no host de design em tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ControlDesigner.OnControlResize%2A> método está obsoleto. Use o <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> método para a funcionalidade de designer de controle equivalente.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner.OnControlResize%2A> método normalmente é chamado apenas pelo ambiente de tempo de design quando uma ação do usuário faz com que o controle de servidor Web associado a ser redimensionado. O <xref:System.Web.UI.Design.ControlDesigner.OnControlResize%2A> método pode ser chamado várias vezes durante o processo de redimensionamento para exibir o tamanho atualizado do controle antes do redimensionamento é concluído. As propriedades de largura e altura do controle são atualizadas antes do <xref:System.Web.UI.Design.ControlDesigner.OnControlResize%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected virtual void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> objeto que especifica os limites de gráficos e retângulo usados para desenhar o controle.</param>
+        <summary>Chamado quando o designer de controle desenha o controle associado na superfície de design, se o <see cref="F:System.Web.UI.Design.ViewFlags.CustomPaint" /> valor é <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> é gerado pelo host de design para determinadas ações em um controle na superfície de design. Por exemplo, um evento é gerado para as seguintes condições:  
+  
+-   O usuário clica no controle.  
+  
+-   A design host solicitações marcação HTML para renderizar o controle associado na superfície de design.  
+  
+-   O usuário entra ou sai do modo para o controle de edição de modelo.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner> classe fornece um delegado de padrão para manipular o <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent?displayProperty=nameWithType> evento. Classes derivadas de <xref:System.Web.UI.Design.ControlDesigner> deve definir o <xref:System.Web.UI.Design.ViewFlags?displayProperty=nameWithType> valor e substituir o <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A> método para processar os eventos que são gerados quando o host de design desenha o controle na superfície de design.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A> método permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ A implementação padrão da <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A> método retorna sem executar qualquer processamento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.Web.UI.Design.ControlDesigner.OnPaint(System.Windows.Forms.PaintEventArgs)" /> método em uma classe derivando de <see cref="T:System.Web.UI.Design.ControlDesigner" /> classe para manipular eventos de pintura para um controle na superfície de design. No entanto, o evento ocorre somente se o <see cref="F:System.Web.UI.Design.ViewFlags.CustomPaint" /> valor tiver sido definido com o <see cref="M:System.Web.UI.Design.ControlDesigner.SetViewFlags(System.Web.UI.Design.ViewFlags,System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">As propriedades da classe do componente.</param>
+        <summary>Adiciona propriedades ao ou remove propriedades da grade de propriedades em um host de design em tempo de design ou fornece novas propriedades de tempo de design que podem corresponder às propriedades do controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Web.UI.Design.ControlDesigner.PreFilterProperties%2A> método, você pode adicionar itens ao dicionário de propriedades que expõe um designer de controle por meio de um <xref:System.ComponentModel.TypeDescriptor> objeto.  
+  
+ As chaves no dicionário de propriedades são os nomes das propriedades. Os objetos são do tipo <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode modificar diretamente o dicionário que pode ser acessado por meio do parâmetro de propriedades, ou pode deixá-la inalterada. Se você substituir o <see cref="M:System.Web.UI.Design.ControlDesigner.PreFilterProperties(System.Collections.IDictionary)" /> método, chame a implementação base antes de executar seu próprio processo de filtragem.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseResizeEvent">
+      <MemberSignature Language="C#" Value="public void RaiseResizeEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseResizeEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this method is not recommended because resizing is handled by the OnComponentChanged() method. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aciona o evento <see cref="M:System.Web.UI.Design.ControlDesigner.OnControlResize" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent%2A> método está obsoleto e não há nenhuma substituição para esse recurso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is to inherit from ContainerControlDesigner instead and to use an EditableDesignerRegion. Regions allow for better control of the content in the designer. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as propriedades do controle são somente leitura em tempo de design.</summary>
+        <value>
+          <see langword="true" />, se as propriedades do controle são somente leitura em tempo de design; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner> classe é somente para leitura, por natureza. Recursos de leitura/gravação são fornecidos com a adição de um <xref:System.Web.UI.Design.DesignerRegion> objeto ou usando classes base, como o <xref:System.Web.UI.Design.ContainerControlDesigner> classe.  
+  
+> [!NOTE]
+>  A propriedade <xref:System.Web.UI.Design.ControlDesigner.ReadOnly%2A> está obsoleta. Derivam o <xref:System.Web.UI.Design.ContainerControlDesigner> para o qual você pode adicionar editáveis do designers de classe ou do <xref:System.Web.UI.Design.TemplatedControlDesigner> ao qual você pode criar designers editáveis nos modelos de objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterClone">
+      <MemberSignature Language="C#" Value="public void RegisterClone (object original, object clone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterClone(object original, object clone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.RegisterClone(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="original" Type="System.Object" />
+        <Parameter Name="clone" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="original">O controle associado com o designer de controle.</param>
+        <param name="clone">A cópia clonada do controle associado.</param>
+        <summary>Registra os dados internos em um controle clonado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sempre que um item for clonado, pode haver algumas estruturas de dados internas, como `meta:` atributos, que devem ser incluídos no controle clonado pelo designer de controle. Um desenvolvedor de página pode adicionar `meta:` atributos à marcação de um controle há nenhuma maneira, e também não há um motivo, para o controle distinguir o que essas marcas podem ser. Portanto, se o designer de controle fornece uma maneira para editar propriedades complexas ou formatos antes de aplicar as alterações a uma página, você deve criar um clone do controle, passar o controle original e o clone para isso <xref:System.Web.UI.Design.ControlDesigner.RegisterClone%2A> método, e, em seguida, quando as alterações são mantidas para a marca todas as `meta:` atributos também são persistidos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="original" /> é nulo.  
+  
+ -ou-  
+  
+ <paramref name="clone" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RootDesigner">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Design.WebFormsRootDesigner RootDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.WebFormsRootDesigner RootDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.RootDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.WebFormsRootDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o designer de controle para a página de Web Forms que contém o controle associado.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.WebFormsRootDesigner" /> objeto que pode ser usado em tempo de design para componentes de acesso na página de Web Forms que contém o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> propriedade representa o designer de controle para a página de Web Forms que contém o controle. Use o <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> propriedade para acessar e manipular o conteúdo da página Web Forms em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public virtual void SetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">Uma região de design editável contida dentro do controle.</param>
+        <param name="content">O conteúdo para atribuir para a região de design editável.</param>
+        <summary>Especifica o conteúdo de uma área editável do controle em tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivando de classes de <xref:System.Web.UI.Design.ControlDesigner> classe pode dar suporte a edição baseada em região na superfície de design e substituir o <xref:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent%2A> método para definir o conteúdo para uma região especificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter uma referência para o host de design e, em seguida, usar a referência para criar um <xref:System.Web.UI.Design.ControlParser> objeto ativa `content` em uma instância do <xref:System.Web.UI.ITemplate> interface e atribui o <xref:System.Web.UI.ITemplate> da instância para o modo de exibição apropriado.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#7](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#7)]
+ [!code-vb[SimpleMultiRegionControlDesigner#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRegionContent">
+      <MemberSignature Language="C#" Value="protected void SetRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.SetRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">Uma região de design editável contida na exibição do controle de tempo de design.</param>
+        <param name="content">O conteúdo para atribuir para a região de design editável.</param>
+        <summary>Especifica o conteúdo de uma área editável no modo de exibição de tempo de design do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.Web.UI.Design.ControlDesigner.SetRegionContent%2A> método não for substituído em designers derivadas. A classe base faz com que o host de design chamar o <xref:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent%2A> método para a região. Substituir o <xref:System.Web.UI.Design.ControlDesigner.SetRegionContent%2A> método quando dados personalizados são necessários para o controle antes de chamar <xref:System.Web.UI.Design.ControlDesigner.SetEditableDesignerRegionContent%2A> método.  
+  
+ Use o <xref:System.Web.UI.Design.ControlDesigner.SetRegionContent%2A> método para inserir uma marcação HTML em uma região do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetViewFlags">
+      <MemberSignature Language="C#" Value="protected void SetViewFlags (System.Web.UI.Design.ViewFlags viewFlags, bool setFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetViewFlags(valuetype System.Web.UI.Design.ViewFlags viewFlags, bool setFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.SetViewFlags(System.Web.UI.Design.ViewFlags,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewFlags" Type="System.Web.UI.Design.ViewFlags" />
+        <Parameter Name="setFlag" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="viewFlags">Um valor <see cref="T:System.Web.UI.Design.ViewFlags" />.</param>
+        <param name="setFlag">
+          <see langword="true" />definir o sinalizador <see langword="false" /> para remover o sinalizador.</param>
+        <summary>Atribui especificado bit a bit <see cref="T:System.Web.UI.Design.ViewFlags" /> enumeração para o valor de sinalizador especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Existem vários sinalizadores que podem ser definidos. Por exemplo, use o <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> método para definir o <xref:System.Web.UI.Design.ViewFlags.DesignTimeHtmlRequiresLoadComplete> valor atual <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade para o designer de controle, em vez de obsoleto <xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A> método para indicar que o modelo está em modo de edição.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#5)]
+ [!code-vb[DesignerTemplateGroupSample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Design.IControlDesignerTag Tag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IControlDesignerTag Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IControlDesignerTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que representa o elemento de marcação HTML para o controle associado.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.IControlDesignerTag" /> objeto que representa o elemento de marcação HTML para o controle associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.Web.UI.Design.ControlDesigner.Tag%2A> propriedade é usada apenas para comunicação entre o host de design e o designer de controle e não é usada por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de grupos de modelos, cada um contendo uma ou mais definições de modelo.</summary>
+        <value>Uma coleção de objetos <see cref="T:System.Web.UI.Design.TemplateGroup" /> . O padrão é um <see cref="T:System.Web.UI.Design.TemplateGroupCollection" /> vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma classe do designer de controle que deriva de <xref:System.Web.UI.Design.ControlDesigner> classe. Esse designer de controle dá suporte a um controle com quatro modelos possíveis.  
+  
+ Para experimentar, compile o código e, em seguida, em um design de host, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], exibir a página no modo de Design. Selecione o controle, clique na lista de ação para selecionar um modelo a ser modificado e, em seguida, usar o recurso de arrastar e soltar para mover os controles no modelo.  
+  
+ [!code-csharp[DesignerTemplateGroupSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerTemplateGroupSample/CS/TemplateGroupsSample.cs#1)]
+ [!code-vb[DesignerTemplateGroupSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.vb#1)]  
+[!code-aspx-vb[DesignerTemplateGroupSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerTemplateGroupSample/VB/TemplateGroupsSample.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode modificar o <see cref="P:System.Web.UI.Design.ControlDesigner.TemplateGroups" /> coleção diretamente, ou você pode deixá-la inalterada. Se você está substituindo o <see cref="P:System.Web.UI.Design.ControlDesigner.TemplateGroups" /> propriedade, chamar a implementação base antes de você adicionar grupos de modelo à coleção.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public virtual void UpdateDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza a marcação HTML de tempo de design para o controle de servidor Web associado ao chamar o <see cref="Overload:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> método é chamado pelo host de design para atualizar a exibição de controle de servidor Web associado em tempo de design, como quando o controle foi modificado. Além disso, um controle de designer pode chamar o <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> método depois de modificar os valores do controle para atualizar a exibição do controle.  
+  
+> [!NOTE]
+>  Se você estiver chamando o <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> evento ou usando o <xref:System.ComponentModel.PropertyDescriptor> objeto para definir propriedades, o <xref:System.ComponentModel.Design.IComponentChangeService> chamadas de interface de <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como responder a um `Click` eventos em um designer de controle para alterar o foco entre regiões em um controle de várias regiões e usar o <xref:System.Web.UI.Design.ControlDesigner.UpdateDesignTimeHtml%2A> para atualizar a aparência do controle no host de design.  
+  
+ Este exemplo de código é parte de um exemplo maior para o <xref:System.Web.UI.Design.EditableDesignerRegion> classe.  
+  
+ [!code-csharp[SimpleMultiRegionControlDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/CS/SimpleMultiRegionControlDesigner.cs#4)]
+ [!code-vb[SimpleMultiRegionControlDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SimpleMultiRegionControlDesigner/VB/SimpleMultiRegionControlDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected virtual bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer do controle usa um controle de visualização temporárias para gerar a marcação HTML de tempo de design.</summary>
+        <value>
+          <see langword="true" />, se o designer de controle usa uma cópia temporária do controle de visualização de tempo de design. Caso contrário, <see langword="false" />, se usar o designer de controle de <see cref="P:System.ComponentModel.Design.ComponentDesigner.Component" /> propriedade para o controle no designer de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> é de propriedade `true`, o <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade retorna uma cópia temporária do controle. As alterações no controle temporária não são persistentes no documento.  
+  
+ Se o <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> é de propriedade `false`, o <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade retorna uma instância do <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> propriedade do controle. A instância do controle de alterações são mantidas.  
+  
+ O <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> definindo no <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> objeto é usado para definir o valor da <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> propriedade. Portanto, o <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> determina o tipo de controle que é retornado pelo <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade na base de <xref:System.Web.UI.Design.ControlDesigner> classe. Se o <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> não for especificado na declaração do designer de controle, o <xref:System.Web.UI.Design.ControlDesigner> comportamento de objeto é equivalente a especificar o <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> a propriedade como `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Designers personalizados que são derivados do <see cref="T:System.Web.UI.Design.ControlDesigner" /> classe pode substituir o <see cref="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" /> propriedade e ignorar o <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> objeto. Em geral, para indicar que o <see cref="P:System.Web.UI.Design.ControlDesigner.ViewControl" /> propriedade sempre retorna uma cópia temporária do controle, substitua o <see cref="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" /> propriedade a retornar sempre <see langword="true" />. Para indicar que o <see cref="P:System.Web.UI.Design.ControlDesigner.ViewControl" /> propriedade sempre retorna uma instância do controle, substitua o <see cref="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" /> propriedade a retornar sempre <see langword="false" />. Por exemplo, o <see cref="T:System.Web.UI.Design.WebControls.PreviewControlDesigner" /> classe deriva o <see cref="T:System.Web.UI.Design.ControlDesigner" /> e sempre retorna <see langword="true" /> para o <see cref="P:System.Web.UI.Design.ControlDesigner.UsePreviewControl" /> propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewControl">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control ViewControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control ViewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ViewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um controle de servidor Web que pode ser usado para visualizar a marcação HTML de tempo de design.</summary>
+        <value>Um <see cref="T:System.Web.UI.Control" /> objeto usado pela classe base para gerar uma marcação HTML em tempo de design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade usa o <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> propriedade para determinar o valor de retorno.  
+  
+ Se o <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> é de propriedade `true`, o <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade retorna uma cópia temporária do controle. As alterações no controle temporária não são persistentes.  
+  
+ Se o <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> é de propriedade `false`, o <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade retorna uma instância do <xref:System.ComponentModel.Design.ComponentDesigner.Component%2A> propriedade do controle. A instância do controle de alterações são mantidas.  
+  
+ O <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> definindo no <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> objeto é usado para definir o valor da <xref:System.Web.UI.Design.ControlDesigner.UsePreviewControl%2A> propriedade. Portanto, o <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> determina o tipo de controle que é retornado pelo <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade na base de <xref:System.Web.UI.Design.ControlDesigner> classe. Se o <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> não for especificado na declaração do designer de controle, o <xref:System.Web.UI.Design.ControlDesigner> comportamento de objeto é equivalente a especificar o <xref:System.Web.UI.Design.SupportsPreviewControlAttribute.SupportsPreviewControl%2A> a propriedade como `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como marcar um designer de controle com o <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> atributo. O exemplo de código deriva de um controle de servidor Web do <xref:System.Web.UI.WebControls.Label> classe e associa o controle com uma implementação de designer do controle personalizado. A declaração de classe do designer de controle está marcada com o `SupportsPreviewControl` atributo definido como `true`. O designer de controle substitui o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método e, em seguida, exibe o <xref:System.Web.UI.WebControls.Label.Text%2A> propriedade do controle em itálico em tempo de design.  
+  
+ [!code-csharp[System.Web.UI.Design.SupportsPreviewControlAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.SupportsPreviewControlAttribute/CS/supportspreviewdesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.SupportsPreviewControlAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.SupportsPreviewControlAttribute/VB/supportspreviewdesigner.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewControlCreated">
+      <MemberSignature Language="C#" Value="public virtual bool ViewControlCreated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ViewControlCreated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.ViewControlCreated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um <see langword="View" /> controle foi criado para exibição na superfície de design.</summary>
+        <value>
+          <see langword="true" />, se um controle tiver sido criado para exibição na superfície de design; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="protected virtual bool Visible { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesigner.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle está visível no tempo de design.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

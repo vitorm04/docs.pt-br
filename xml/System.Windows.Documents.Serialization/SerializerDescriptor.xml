@@ -1,0 +1,359 @@
+<Type Name="SerializerDescriptor" FullName="System.Windows.Documents.Serialization.SerializerDescriptor">
+  <TypeSignature Language="C#" Value="public sealed class SerializerDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SerializerDescriptor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Serialization.SerializerDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre plug-ins de serializadores instalados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivam de classes do serializador de plug-in e implementar o <xref:System.Windows.Documents.Serialization.ISerializerFactory> interface.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir ilustram o uso de um <xref:System.Windows.Documents.Serialization.SerializerDescriptor> retornar informações sobre instalado serializadores plug-in.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do assembly que contém o serializador.</summary>
+        <value>O nome do assembly (geralmente uma DLL) que contém o serializador de plug-in.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyPath">
+      <MemberSignature Language="C#" Value="public string AssemblyPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho para o arquivo de assembly que contém o serializador.</summary>
+        <value>O caminho para o arquivo de assembly que contém o serializador de plug-in.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyVersion">
+      <MemberSignature Language="C#" Value="public Version AssemblyVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version AssemblyVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do assembly que contém o serializador.</summary>
+        <value>A versão do assembly que contém o serializador de plug-in.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFactoryInstance">
+      <MemberSignature Language="C#" Value="public static System.Windows.Documents.Serialization.SerializerDescriptor CreateFromFactoryInstance (System.Windows.Documents.Serialization.ISerializerFactory factoryInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Documents.Serialization.SerializerDescriptor CreateFromFactoryInstance(class System.Windows.Documents.Serialization.ISerializerFactory factoryInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerDescriptor.CreateFromFactoryInstance(System.Windows.Documents.Serialization.ISerializerFactory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.SerializerDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="factoryInstance" Type="System.Windows.Documents.Serialization.ISerializerFactory" />
+      </Parameters>
+      <Docs>
+        <param name="factoryInstance">A fonte de dados para o novo <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" />.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" /> por meio de um determinado <see cref="T:System.Windows.Documents.Serialization.ISerializerFactory" /> implementação.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" /> com suas propriedades inicializadas com valores da determinado <see cref="T:System.Windows.Documents.Serialization.ISerializerFactory" /> implementação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente os chamadores totalmente confiáveis podem usar esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="factoryInstance" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">Uma ou mais das seguintes propriedades de <paramref name="factoryInstance" /> é nulo: <see cref="P:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName" />, <see cref="P:System.Windows.Documents.Serialization.SerializerDescriptor.ManufacturerName" />, <see cref="P:System.Windows.Documents.Serialization.SerializerDescriptor.ManufacturerWebsite" />, e<see cref="P:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFileExtension">
+      <MemberSignature Language="C#" Value="public string DefaultFileExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultFileExtension" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a extensão padrão associada a arquivos que o serializador gera.</summary>
+        <value>A extensão padrão associada a arquivos que o serializador gera.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Os exemplos a seguir ilustram o uso de <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A> para retornar o padrão extensões de arquivo instalado serializadores plug-in.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de exibição públicos do serializador.</summary>
+        <value>O nome de exibição públicos do serializador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra o uso de <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> para obter e exibir o nome público de um serializador de plug-in.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerDescriptor.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com esse <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" />.</param>
+        <summary>Testa dois objetos <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" /> quanto à igualdade.</summary>
+        <returns>
+          <see langword="true" />Se ambos forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Serialization.SerializerDescriptor.Equals%2A>Retorna `true` mesmo se os dois objetos forem diferentes em uma ou mais das seguintes propriedades: <xref:System.Windows.Documents.Serialization.SerializerDescriptor.ManufacturerName%2A>, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.ManufacturerWebsite%2A>, e <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FactoryInterfaceName">
+      <MemberSignature Language="C#" Value="public string FactoryInterfaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FactoryInterfaceName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.FactoryInterfaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.Windows.Documents.Serialization.ISerializerFactory" /> derivado da classe que implementa o serializador.</summary>
+        <value>O nome do <see cref="T:System.Windows.Documents.Serialization.ISerializerFactory" /> derivado da classe que implementa o serializador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerDescriptor.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o valor de código hash exclusivo do serializador.</summary>
+        <returns>O valor de código hash exclusivo do serializador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de código hash exclusivo é criado com base no <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyName%2A>, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyPath%2A>, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyVersion%2A>, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.FactoryInterfaceName%2A>, e <xref:System.Windows.Documents.Serialization.SerializerDescriptor.WinFXVersion%2A> propriedades do serializador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoadable">
+      <MemberSignature Language="C#" Value="public bool IsLoadable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLoadable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o serializador pode ser carregado com a versão atualmente instalada do [!INCLUDE[TLA#tla_avalonwinfx](~/includes/tlasharptla-avalonwinfx-md.md)].</summary>
+        <value>
+          <see langword="true" />Se o assembly de serializador pode ser carregado; Caso contrário, <see langword="false" />.  O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>deve ser **false** , a menos que <xref:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyVersion%2A> tem o mesmo valor como <xref:System.Windows.Documents.Serialization.SerializerDescriptor.WinFXVersion%2A>.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir ilustram o uso de <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> para determinar se o serializador de plug-in associado pode ser carregado e usado.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManufacturerName">
+      <MemberSignature Language="C#" Value="public string ManufacturerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ManufacturerName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.ManufacturerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da empresa que desenvolveu o serializador.</summary>
+        <value>O nome da empresa que desenvolveu o serializador de plug-in.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivam de classes do serializador de plug-in e implementar o <xref:System.Windows.Documents.Serialization.ISerializerFactory> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManufacturerWebsite">
+      <MemberSignature Language="C#" Value="public Uri ManufacturerWebsite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ManufacturerWebsite" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.ManufacturerWebsite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço web da empresa que desenvolveu o serializador.</summary>
+        <value>O endereço web da empresa que desenvolveu o serializador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WinFXVersion">
+      <MemberSignature Language="C#" Value="public Version WinFXVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version WinFXVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerDescriptor.WinFXVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de [!INCLUDE[TLA#tla_avalonwinfx](~/includes/tlasharptla-avalonwinfx-md.md)] necessários para o serializador.</summary>
+        <value>A versão do [!INCLUDE[TLA#tla_avalonwinfx](~/includes/tlasharptla-avalonwinfx-md.md)] exigido pelo serializador de plug-in.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Serialization.SerializerDescriptor.WinFXVersion%2A>deve ter o mesmo valor que o <xref:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyVersion%2A> ou o assembly de serializador não pode ser carregado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

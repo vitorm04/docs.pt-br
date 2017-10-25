@@ -1,0 +1,46 @@
+<Type Name="AnonymousIdentificationEventHandler" FullName="System.Web.Security.AnonymousIdentificationEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void AnonymousIdentificationEventHandler(object sender, AnonymousIdentificationEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AnonymousIdentificationEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.AnonymousIdentificationEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Security.AnonymousIdentificationEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Web.Security.AnonymousIdentificationEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipula o **AnonymousIdentification_Creating** eventos de um <see cref="T:System.Web.Security.AnonymousIdentificationModule" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AnonymousIdentificationEventHandler> delegado é definido para o <xref:System.Web.Security.AnonymousIdentificationModule.Creating> evento o <xref:System.Web.Security.AnonymousIdentificationModule> classe. Você pode acessar o <xref:System.Web.Security.AnonymousIdentificationModule.Creating> evento o <xref:System.Web.Security.AnonymousIdentificationModule> classe especificando uma sub-rotina chamada **AnonymousIdentification_Creating** no arquivo global. asax para seu aplicativo ASP.NET. O <xref:System.Web.Security.AnonymousIdentificationModule.Creating> é gerado durante o <xref:System.Web.HttpApplication.PostAuthenticateRequest> evento.  
+  
+ O <xref:System.Web.Security.AnonymousIdentificationModule> constrói um <xref:System.Web.Security.AnonymousIdentificationEventArgs> usando atual do objeto <xref:System.Web.HttpContext> e o transmite para o **AnonymousIdentification_Creating** eventos.  
+  
+ Você pode usar o <xref:System.Web.Security.AnonymousIdentificationEventArgs.AnonymousID%2A> propriedade o <xref:System.Web.Security.AnonymousIdentificationEventArgs> objeto fornecido para o **AnonymousIdentification_Creating** evento para definir o identificador de anônimo para um valor personalizado. Se você não especificar um valor para o <xref:System.Web.Security.AnonymousIdentificationEventArgs.AnonymousID%2A> propriedade durante o **AnonymousIdentification_Creating** evento, um <xref:System.Guid> é usado.  
+  
+ O **AnonymousIdentification_Creating** evento é gerado somente quando é a identificação anônima <xref:System.Web.Security.AnonymousIdentificationModule.Enabled%2A> , definindo o elemento de configuração para `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o **AnonymousIdentification_Creating** evento para definir o identificador de anônimo para um valor personalizado.  
+  
+ [!code-csharp[System.Web.Security.AnonymousIdentificationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.AnonymousIdentificationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.AnonymousIdentificationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.AnonymousIdentificationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

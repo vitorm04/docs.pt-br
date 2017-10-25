@@ -1,0 +1,130 @@
+<Type Name="ActivityExecutionResult" FullName="System.Workflow.ComponentModel.ActivityExecutionResult">
+  <TypeSignature Language="C#" Value="public enum ActivityExecutionResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ActivityExecutionResult extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.ActivityExecutionResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enumeração de valores de resultado de atividade que qualifica o estado de um <see cref="T:System.Workflow.ComponentModel.Activity" /> que tem um <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" /> de <see langword="Closed" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Resultado representa o status final de um <xref:System.Workflow.ComponentModel.Activity> instância em uma instância de fluxo de trabalho. Os valores da enumeração baseiam-se um diagrama de estado de atividade que é determinado pelo contrato de mecanismo de atividade. Valores diferente de None são permitidos apenas para uma atividade cuja <xref:System.Workflow.ComponentModel.ActivityExecutionStatus> é <xref:System.Workflow.ComponentModel.ActivityExecutionStatus>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Canceled">
+      <MemberSignature Language="C#" Value="Canceled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionResult Canceled = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionResult.Canceled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A atividade tiver feito a transição para o estado closed do estado de cancelamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Compensated">
+      <MemberSignature Language="C#" Value="Compensated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionResult Compensated = unsigned int8(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionResult.Compensated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A atividade tiver feito a transição para o estado closed do estado de compensação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Faulted">
+      <MemberSignature Language="C#" Value="Faulted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionResult Faulted = unsigned int8(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionResult.Faulted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A atividade tiver feito a transição para o estado closed do estado com falha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionResult None = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionResult.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A atividade não está no <see cref="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Closed" /> estado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Succeeded">
+      <MemberSignature Language="C#" Value="Succeeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionResult Succeeded = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionResult.Succeeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A atividade tiver feito a transição para o estado closed do estado de execução.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninitialized">
+      <MemberSignature Language="C#" Value="Uninitialized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionResult Uninitialized = unsigned int8(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionResult.Uninitialized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A atividade tiver feito a transição para o estado closed do estado inicializado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,641 @@
+<Type Name="MasterPage" FullName="System.Web.UI.MasterPage">
+  <TypeSignature Language="C#" Value="public class MasterPage : System.Web.UI.UserControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MasterPage extends System.Web.UI.UserControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MasterPage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.UserControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("Microsoft.VisualStudio.Web.WebForms.MasterPageWebFormDesigner, Microsoft.VisualStudio.Web, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IRootDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.MasterPageControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Atua como contêiner de mesclagem e modelo para páginas compostas apenas por controles <see cref="T:System.Web.UI.WebControls.Content" /> e seus respectivos controles filho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma página mestra funciona como um contêiner de modelo e a mesclagem de página das páginas de conteúdo em seu aplicativo da Web do ASP.NET. Páginas mestras fornecem uma maneira conveniente para compartilhar a estrutura e o conteúdo em um conjunto de páginas de conteúdo. Você pode usar espaços reservados de conteúdo para definir as seções da página mestra para substituir o conteúdo das páginas de conteúdo.  
+  
+ Quando você usa uma página mestra e suas páginas de conteúdo relacionadas, você adiciona as marcas de documento XHTML necessárias (como `html`, `head`, e `body`) apenas para a página mestra e não está mais criar seus outros arquivos. aspx (páginas ASP.NET) como páginas da Web independentes. As páginas de conteúdo definem o conteúdo para inserir os espaços reservados na página mestra.  
+  
+ Quando é feita uma solicitação HTTP para uma página em tempo de execução, a página mestra e páginas de conteúdo são combinadas em uma única classe com o mesmo nome que as páginas de conteúdo. Classe mesclado resultante compilado, deriva de <xref:System.Web.UI.Page> classe.  
+  
+ Uma página mestra pode conter marcação direta e controles de servidor, bem como os controles de contêiner. Cada elemento que é colocado na página mestra fora de um <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle é processado em todas as páginas são provenientes de mesclagem, a página mestra e páginas de conteúdo.  
+  
+ Cada página de conteúdo que está relacionada à página mestra deve fazer referência a página mestra em um `MasterPageFile` atributo da sua diretiva. Conteúdo de páginas podem conter apenas um `@ Page` diretiva e uma ou mais <xref:System.Web.UI.WebControls.Content> controles. Todos os controles de servidor, texto e marcação de página devem ser colocados em <xref:System.Web.UI.WebControls.Content> controles. Identificar o <xref:System.Web.UI.WebControls.ContentPlaceHolder> página controle de um mestre de um <xref:System.Web.UI.WebControls.Content> controle está associado, definindo o <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> propriedade do <xref:System.Web.UI.WebControls.Content> controle.  
+  
+ No tempo de execução, o conteúdo dinâmico de cada <xref:System.Web.UI.WebControls.Content> controle em uma página solicitada é mesclada com a página mestra a localização exata de relacionado <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle. Qualquer marcação e controles na página mestra não são afetados. Manipuladores de eventos podem ser definidos na classe mestre e na página de conteúdo. Para obter mais informações, consulte [eventos no mestre do ASP.NET e páginas de conteúdo](http://msdn.microsoft.com/library/b3ab2d01-9e37-4788-82d0-c6065e3ff5bd).  
+  
+ O <xref:System.Web.UI.MasterPage> classe é associada a arquivos que têm uma extensão. master. Esses arquivos são compilados em tempo de execução como <xref:System.Web.UI.MasterPage> objetos e são armazenados em cache na memória do servidor.  
+  
+ A página mestra ficam disponível para a página de conteúdo por meio de <xref:System.Web.UI.Page.Master%2A> propriedade da base de <xref:System.Web.UI.Page> classe. O <xref:System.Web.UI.Page.Master%2A> propriedade retorna a instância da página mestra; no entanto, ele é digitado como a base de <xref:System.Web.UI.MasterPage> classe. Controles de acesso, propriedades e funções da página mestra, o <xref:System.Web.UI.Page.Master%2A> propriedade pode ser convertida em um <xref:System.Web.UI.MasterPage> objeto. O nome da classe da página mestra for definido usando o `ClassName` atributo da diretiva.  
+  
+> [!NOTE]
+>  Arquivos com extensões. master não são atendidos a um navegador.  
+  
+ As diretivas que são válidas em uma página mestre são as mesmas que estão disponíveis em um <xref:System.Web.UI.UserControl> objeto. Eles podem incluir os seguintes atributos:  
+  
+-   `AutoEventWireup`  
+  
+-   `ClassName`  
+  
+-   `CodeFile`  
+  
+-   `CompilerMode`  
+  
+-   `CompilerOptions`  
+  
+-   `Debug`  
+  
+-   `Description`  
+  
+-   `EnableTheming`  
+  
+-   `EnableViewState`  
+  
+-   `Explicit`  
+  
+-   `Inherits`  
+  
+-   `Language`  
+  
+-   `LinePragmas`  
+  
+-   `MasterPageFile`  
+  
+-   `Src`  
+  
+-   `Strict`  
+  
+-   `WarningLevel`  
+  
+ Diretivas de página mestra não substituem as diretivas nas páginas de conteúdo individuais.  
+  
+ Páginas mestras geralmente são criadas declarativamente. Se você quiser criar uma página mestra programaticamente, derivam diretamente a <xref:System.Web.UI.MasterPage> classe. Além de estender o <xref:System.Web.UI.MasterPage> classe, você deve criar o arquivo. master para exibir visualmente a interface do usuário (UI) que está associada com as classes que invocado no arquivo de origem.  
+  
+> [!NOTE]
+>  Quando você cria uma página mestra criando sua própria classe pela primeira vez, você deve incluir todos os namespaces que são necessários para as classes que são usadas pela página.  
+  
+ Para obter mais informações sobre páginas mestras, consulte [páginas mestras ASP.NET](http://msdn.microsoft.com/library/4e53eedf-8304-4e7a-aed1-691a2623b28b).  
+  
+   
+  
+## Examples  
+ Esta seção contém quatro exemplos de código:  
+  
+-   O primeiro exemplo de código demonstra como criar uma página mestra declarativamente.  
+  
+-   O segundo exemplo de código representa a página de conteúdo que está associada com a página mestra que foi criada no primeiro exemplo de código.  
+  
+-   O terceiro exemplo de código demonstra como adicionar uma propriedade a uma página mestra.  
+  
+-   O quarto exemplo de código demonstra como usar uma página de conteúdo para acessar uma propriedade pública na página mestra.  
+  
+ O exemplo a seguir demonstra como criar uma página mestra declarativamente e adicionar conteúdo a ele usando uma página de conteúdo. A primeira página da Web é a página. master chamada `MasterPageSample_1.master`.  
+  
+```csharp  
+<%@ Master Language="C#" %>  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+<html >  
+<head runat="server">  
+    <title>MasterPage Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+```vb  
+<%@ Master Language="VB" %>  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+<html >  
+<head runat="server">  
+    <title>MasterPage Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+ O exemplo a seguir representa a página de conteúdo que está associada com `MasterPageSample_1.master`. Ele contém um <xref:System.Web.UI.WebControls.Content> controlar e identifica o <xref:System.Web.UI.WebControls.ContentPlaceHolder> controle que o conteúdo é associado usando o <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> propriedade.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/MasterPageSample_1cs.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/MasterPageSample_1vb.master" Title="Content Page"%>  
+  
+<asp:content   
+    runat="server"  
+    contentplaceholderid="ContentPlaceHolder1" >Hello, Master Pages!</asp:content>  
+```  
+  
+ O exemplo a seguir demonstra como adicionar uma propriedade a uma página mestra. O `ClassName` atributo é usado para nomear a página mestra.  
+  
+```csharp  
+<%@ Master Language="C#" ClassName="MasterExample" %>  
+  
+<script runat="server">  
+        public string SiteName  
+        {  
+            get { return "My Site Name"; }  
+        }  
+</script>  
+  
+<html >  
+<head runat="server">  
+    <title>MasterPage Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+```vb  
+<%@ Master Language="VB" ClassName="MasterExample" %>  
+  
+<script runat="server">  
+  Public ReadOnly Property SiteName() As String  
+    Get  
+      Return "My Site Name"  
+    End Get  
+  End Property  
+  
+</script>  
+  
+<html >  
+<head runat="server">  
+    <title>MasterPage Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+ O exemplo a seguir mostra como usar uma página de conteúdo para acessar a propriedade pública `SiteName` na página mestre no exemplo de código anterior.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="MasterPage Example" %>  
+  
+<script runat="server">  
+  protected void Page_Load(object sender, EventArgs e)  
+  {  
+    MasterExample m = (MasterExample)Page.Master;  
+    mylabel.Text = m.SiteName;  
+  }  
+</script>  
+  
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">  
+    Hello, Master Pages!  
+    <asp:Label runat="server" Text="Label" ID="mylabel"></asp:Label>  
+</asp:Content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/MasterPage.master" Title="MasterPage Example" %>  
+  
+<script runat="server">  
+  
+  Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs)  
+    Dim m As MasterExample = CType(Page.Master, MasterPage)  
+    mylabel.Text = m.SiteName  
+  End Sub  
+</script>  
+  
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">  
+    Hello, Master Pages!  
+    <asp:Label runat="server" Text="Label" ID="mylabel"></asp:Label>  
+</asp:Content>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MasterPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MasterPage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.UI.MasterPage" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddContentTemplate">
+      <MemberSignature Language="C#" Value="protected void AddContentTemplate (string templateName, System.Web.UI.ITemplate template);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void AddContentTemplate(string templateName, class System.Web.UI.ITemplate template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MasterPage.AddContentTemplate(System.String,System.Web.UI.ITemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+        <Parameter Name="template" Type="System.Web.UI.ITemplate" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">Um nome exclusivo para o <see cref="T:System.Web.UI.WebControls.Content" />.</param>
+        <param name="template">O <see cref="T:System.Web.UI.WebControls.Content" />.</param>
+        <summary>Adiciona um <see cref="T:System.Web.UI.WebControls.Content" /> o controle para o <see cref="P:System.Web.UI.MasterPage.ContentTemplates" /> dicionário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas de página mestra podem adicionar <xref:System.Web.UI.WebControls.Content> controles para o <xref:System.Web.UI.MasterPage.ContentTemplates%2A> dicionário usando o <xref:System.Web.UI.MasterPage.AddContentTemplate%2A> método. Tipos derivados geralmente não substituem o <xref:System.Web.UI.MasterPage.AddContentTemplate%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Um <see cref="T:System.Web.UI.WebControls.Content" /> controle com o mesmo nome já existe o <see cref="P:System.Web.UI.MasterPage.ContentTemplates" /> dicionário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentPlaceHolders">
+      <MemberSignature Language="C#" Value="protected System.Collections.IList ContentPlaceHolders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList ContentPlaceHolders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MasterPage.ContentPlaceHolders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> controles que usa a página mestra para definir diferentes regiões de conteúdo.</summary>
+        <value>Um <see cref="T:System.Collections.IList" /> de <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> controles que usa a página mestra como espaços reservados para <see cref="T:System.Web.UI.WebControls.Content" /> controles encontrados em páginas de conteúdo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivado de acesso de classes de página mestra a <xref:System.Web.UI.MasterPage.ContentPlaceHolders%2A> propriedade à lista atual <xref:System.Web.UI.WebControls.ContentPlaceHolder> controles que estão contidos pelo mestre. Tipos derivados geralmente não substituem o <xref:System.Web.UI.MasterPage.ContentPlaceHolders%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplates">
+      <MemberSignature Language="C#" Value="protected System.Collections.IDictionary ContentTemplates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary ContentTemplates" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MasterPage.ContentTemplates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de controles de conteúdo que estão associados com a página mestra.</summary>
+        <value>Um <see cref="T:System.Collections.IList" /> de controles de conteúdo associados à página mestre.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivado de acesso de classes de página mestra a <xref:System.Web.UI.MasterPage.ContentTemplates%2A> propriedade a recuperar atual <xref:System.Web.UI.WebControls.Content> controla, conforme definido pelas páginas de conteúdo associadas. Tipos derivados geralmente não substituem o <xref:System.Web.UI.MasterPage.ContentTemplates%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstantiateInContentPlaceHolder">
+      <MemberSignature Language="C#" Value="public void InstantiateInContentPlaceHolder (System.Web.UI.Control contentPlaceHolder, System.Web.UI.ITemplate template);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InstantiateInContentPlaceHolder(class System.Web.UI.Control contentPlaceHolder, class System.Web.UI.ITemplate template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MasterPage.InstantiateInContentPlaceHolder(System.Web.UI.Control,System.Web.UI.ITemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentPlaceHolder" Type="System.Web.UI.Control" />
+        <Parameter Name="template" Type="System.Web.UI.ITemplate" />
+      </Parameters>
+      <Docs>
+        <param name="contentPlaceHolder">O controle que representa o contêiner do conteúdo.</param>
+        <param name="template">O <see cref="T:System.Web.UI.WebControls.Content" /> instância a ser usada.</param>
+        <summary>Fornece um método para definir o controle de modelo atual para uma página que possui a página mestra.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Master">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MasterPage Master { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MasterPage Master" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MasterPage.Master" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MasterPage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a página mestra pai da mestre atual em cenários de páginas mestras aninhadas.</summary>
+        <value>A página mestra que é o pai da página mestra atual. Caso contrário, <see langword="null" />, se a página mestra atual não tiver nenhum pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MasterPage.Master%2A> propriedade é somente leitura, porque as hierarquias de página mestra não podem ser construídas em tempo de execução.  
+  
+   
+  
+## Examples  
+ Esta seção contém três exemplos de código. O primeiro exemplo de código demonstra como criar uma página mestre aninhada`.` o segundo exemplo de código demonstra como fazer referência a página mestra que foi criada no primeiro exemplo de código. O terceiro exemplo de código demonstra como usar uma página de conteúdo para fazer referência a página mestra que foi criada no segundo exemplo de código.  
+  
+ O exemplo de código a seguir demonstra como criar uma página mestre aninhada e representa a página mestra pai denominada `ParentMasterPage_1`.  
+  
+```csharp  
+<%@ Master Language="C#" %>  
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+  
+<html >  
+<head runat="server">  
+    <title>Nested Master Page Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <h1>This is content in the parent master page.</h1>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+```vb  
+<%@ Master Language="VB" %>  
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+  
+<html >  
+<head runat="server">  
+    <title>Nested Master Page Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <h1>This is content in the parent master page.</h1>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar uma página mestre aninhada chamada `ChildMasterPage_1` que referencia a página mestra que foi criada no exemplo de código anterior.  
+  
+```csharp  
+<%@ Master Language="C#" MasterPageFile="~/ParentMasterPage_1cs.master" %>  
+  
+<asp:Content Runat="Server" ContentPlaceHolderID="ContentPlaceHolder1">  
+    <h2>This is the content of a nested Master Page.</h2>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+</asp:Content>  
+```  
+  
+```vb  
+<%@ Master Language="VB" MasterPageFile="~/ParentMasterPage_1vb.master" %>  
+  
+<asp:Content Runat="Server" ContentPlaceHolderID="ContentPlaceHolder1">  
+    <h2>This is the content of a nested Master Page.</h2>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+</asp:Content>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar uma página de conteúdo chamada `ContentPage` que faz referência a `ChildMasterPage_1` que foi criado no exemplo de código anterior.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/ChildMasterPage_1cs.master" Title="Untitled Page"%>  
+  
+<asp:content runat="server" contentplaceholderid="ContentPlaceHolder2">  
+This is the content of a Content control.  
+</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/ChildMasterPage_1vb.master" Title="Untitled Page"%>  
+  
+<asp:content runat="server" contentplaceholderid="ContentPlaceHolder2">  
+This is the content of a Content control.  
+</asp:content>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MasterPageFile">
+      <MemberSignature Language="C#" Value="public string MasterPageFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MasterPageFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MasterPage.MasterPageFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da página mestra que contém o conteúdo atual.</summary>
+        <value>O nome da página mestra que é o pai da página mestra atual; Caso contrário, <see langword="null" />, se a página mestra atual não tem nenhum pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Esta seção contém três exemplos de código. O primeiro exemplo de código demonstra como criar uma página mestre aninhada`.` o segundo exemplo de código demonstra como fazer referência a página mestra que foi criada no primeiro exemplo de código. O terceiro exemplo de código demonstra como usar uma página de conteúdo para fazer referência a página mestra que foi criada no segundo exemplo de código.  
+  
+ O exemplo de código a seguir demonstra como criar uma página mestre aninhada e representa a página mestra pai denominada `ParentMasterPage_1`.  
+  
+```csharp  
+<%@ Master Language="C#" %>  
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+  
+<html >  
+<head runat="server">  
+    <title>Nested Master Page Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <h1>This is content in the parent master page.</h1>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+```vb  
+<%@ Master Language="VB" %>  
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">  
+  
+<html >  
+<head runat="server">  
+    <title>Nested Master Page Example</title>  
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+    <h1>This is content in the parent master page.</h1>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+    </form>  
+</body>  
+</html>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar uma página mestre aninhada chamada `ChildMasterPage_1` que referencia a página mestra que foi criada no exemplo de código anterior.  
+  
+```csharp  
+<%@ Master Language="C#" MasterPageFile="~/ParentMasterPage_1cs.master" %>  
+  
+<asp:Content Runat="Server" ContentPlaceHolderID="ContentPlaceHolder1">  
+    <h2>This is the content of a nested Master Page.</h2>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+</asp:Content>  
+```  
+  
+```vb  
+<%@ Master Language="VB" MasterPageFile="~/ParentMasterPage_1vb.master" %>  
+  
+<asp:Content Runat="Server" ContentPlaceHolderID="ContentPlaceHolder1">  
+    <h2>This is the content of a nested Master Page.</h2>  
+    <div>  
+        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">  
+        </asp:contentplaceholder>  
+    </div>  
+</asp:Content>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar uma página de conteúdo chamada `ContentPage` que faz referência a `ChildMasterPage_1` que foi criado no exemplo de código anterior.  
+  
+```csharp  
+<%@ Page Language="C#" MasterPageFile="~/ChildMasterPage_1cs.master" Title="Untitled Page"%>  
+  
+<asp:content runat="server" contentplaceholderid="ContentPlaceHolder2">  
+This is the content of a Content control.  
+</asp:content>  
+```  
+  
+```vb  
+<%@ Page Language="VB" MasterPageFile="~/ChildMasterPage_1vb.master" Title="Untitled Page"%>  
+  
+<asp:content runat="server" contentplaceholderid="ContentPlaceHolder2">  
+This is the content of a Content control.  
+</asp:content>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Web.UI.MasterPage.MasterPageFile" /> propriedade só pode ser definida em ou antes do <see cref="E:System.Web.UI.Page.PreInit" /> evento.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

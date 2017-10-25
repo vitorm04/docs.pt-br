@@ -1,0 +1,313 @@
+<Type Name="ActivationContext" FullName="System.ActivationContext">
+  <TypeSignature Language="C#" Value="public sealed class ActivationContext : IDisposable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ActivationContext extends System.Object implements class System.IDisposable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.ActivationContext" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica o contexto de ativação para o aplicativo atual. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ActivationContext> classe contém um <xref:System.ApplicationIdentity> e fornece acesso somente interno para o manifesto do aplicativo. O contexto de ativação é usado durante a ativação baseada em manifesto para configurar a política de domínio e fornecer um modelo de segurança com base no aplicativo. Para obter mais informações, consulte a classe <xref:System.Security.Policy.ApplicationSecurityManager>.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.ActivationContext> para obter o <xref:System.ApplicationIdentity> para um aplicativo baseado no manifesto. Os resultados corretos, este exemplo de código deve ser executado como um aplicativo baseado no manifesto.  
+  
+ [!code-csharp[System.ActivationContext#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ActivationContext/cs/program.cs#1)]
+ [!code-vb[System.ActivationContext#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ActivationContext/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationManifestBytes">
+      <MemberSignature Language="C#" Value="public byte[] ApplicationManifestBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] ApplicationManifestBytes" />
+      <MemberSignature Language="DocId" Value="P:System.ActivationContext.ApplicationManifestBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o manifesto do aplicativo ClickOnce para o aplicativo atual.</summary>
+        <value>Uma matriz de bytes que contém o manifesto do aplicativo ClickOnce para o aplicativo que está associado a essa <see cref="T:System.ActivationContext" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o contexto de ativação é <xref:System.ActivationContext.ContextForm.Loose>, que significa que o aplicativo não está instalado no repositório do ClickOnce, o manifesto de implantação é lido da pasta de download temporário. Se o contexto de ativação é <xref:System.ActivationContext.ContextForm.StoreBounded>, que significa que o aplicativo está instalado no ClickOnce repositório, o manifesto de implantação é lidos no repositório de ClickOnce. Para obter mais informações sobre manifestos de implantação, consulte [manifesto de implantação do ClickOnce](http://msdn.microsoft.com/library/8457e615-e3b6-4990-8dcf-11bc590e4e9b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePartialActivationContext">
+      <MemberSignature Language="C#" Value="public static ActivationContext CreatePartialActivationContext (ApplicationIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ActivationContext CreatePartialActivationContext(class System.ApplicationIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ActivationContext.CreatePartialActivationContext(System.ApplicationIdentity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ActivationContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.ApplicationIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto que identifica um aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ActivationContext" /> classe usando a identidade do aplicativo especificado.</summary>
+        <returns>Um objeto com a identidade do aplicativo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ActivationContext.CreatePartialActivationContext%2A> método chama um construtor interno para criar um novo contexto de ativação. A implementação de <xref:System.ActivationContext> classe no .NET Framework versão 2.0 foi projetado para aplicativos que não são totalmente instalados em um repositório nem totalmente contidos em uma pasta. Esse método fornece compatibilidade com versões anteriores para versões posteriores, na qual os construtores públicos fornecem contextos de ativação completa.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Nenhuma identidade de implantação ou aplicativo é especificada em <paramref name="identity" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePartialActivationContext">
+      <MemberSignature Language="C#" Value="public static ActivationContext CreatePartialActivationContext (ApplicationIdentity identity, string[] manifestPaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ActivationContext CreatePartialActivationContext(class System.ApplicationIdentity identity, string[] manifestPaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ActivationContext.CreatePartialActivationContext(System.ApplicationIdentity,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ActivationContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.ApplicationIdentity" />
+        <Parameter Name="manifestPaths" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto que identifica um aplicativo.</param>
+        <param name="manifestPaths">Uma matriz de cadeia de caracteres de caminhos do manifesto do aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ActivationContext" /> classe usando a identidade de aplicativo especificado e uma matriz de caminhos do manifesto.</summary>
+        <returns>Um objeto com a identidade do aplicativo especificado e a matriz de caminhos do manifesto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ActivationContext.CreatePartialActivationContext%2A> método chama um construtor interno para criar um novo contexto de ativação. A implementação de <xref:System.ActivationContext> classe no .NET Framework versão 2.0 foi projetado para aplicativos que não são totalmente instalados em um repositório nem totalmente contidos em uma pasta. Esse método fornece compatibilidade com versões anteriores para versões posteriores, na qual os construtores públicos fornecem contextos de ativação completa.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="manifestPaths" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Nenhuma identidade de implantação ou aplicativo é especificada em <paramref name="identity" />.  
+  
+ -ou-  
+  
+ <paramref name="identity" />não corresponde à identidade nos manifestos.  
+  
+ -ou-  
+  
+ <paramref name="identity" />não tem o mesmo número de componentes que os caminhos do manifesto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentManifestBytes">
+      <MemberSignature Language="C#" Value="public byte[] DeploymentManifestBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] DeploymentManifestBytes" />
+      <MemberSignature Language="DocId" Value="P:System.ActivationContext.DeploymentManifestBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o manifesto de implantação do ClickOnce para o aplicativo atual.</summary>
+        <value>Uma matriz de bytes que contém o manifesto de implantação de ClickOnce para o aplicativo que está associado a essa <see cref="T:System.ActivationContext" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o contexto de ativação é <xref:System.ActivationContext.ContextForm.Loose>, que significa que o aplicativo não está instalado no repositório do ClickOnce, o manifesto de implantação é lido da pasta de download temporário. Se o contexto de ativação é <xref:System.ActivationContext.ContextForm.StoreBounded>, que significa que o aplicativo está instalado no ClickOnce repositório, o manifesto de implantação é lidos no repositório de ClickOnce. Para obter mais informações sobre manifestos de implantação, consulte [manifesto de implantação do ClickOnce](http://msdn.microsoft.com/library/8457e615-e3b6-4990-8dcf-11bc590e4e9b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ActivationContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.ActivationContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.ActivationContext.Dispose%2A> quando tiver terminado de usar o <xref:System.ActivationContext>. O <xref:System.ActivationContext.Dispose%2A> método deixa o <xref:System.ActivationContext> em um estado inutilizável. Depois de chamar <xref:System.ActivationContext.Dispose%2A>, você deve liberar todas as referências para o <xref:System.ActivationContext> para o coletor de lixo possa recuperar a memória que o <xref:System.ActivationContext> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.ActivationContext.Dispose%2A> antes de liberar sua última referência para o <xref:System.ActivationContext>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.ActivationContext> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ActivationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ActivationContext.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um <see cref="T:System.ActivationContext" /> objeto tente liberar recursos e realizar outras operações de limpeza antes do <see cref="T:System.ActivationContext" /> é recuperada pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Form">
+      <MemberSignature Language="C#" Value="public ActivationContext.ContextForm Form { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ActivationContext/ContextForm Form" />
+      <MemberSignature Language="DocId" Value="P:System.ActivationContext.Form" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ActivationContext+ContextForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o formulário ou o contexto do repositório para o aplicativo atual.</summary>
+        <value>Um dos valores de enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo baseado no manifesto não pode ser instalado no repositório de ClickOnce. Um aplicativo que não está no repositório, como uma execução de aplicativo ativado de manifesto em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], é classificado como <xref:System.ActivationContext.ContextForm.Loose>. Um aplicativo que está contido no repositório é classificado como <xref:System.ActivationContext.ContextForm.StoreBounded>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public ApplicationIdentity Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ApplicationIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:System.ActivationContext.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ApplicationIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identidade do aplicativo para o aplicativo atual.</summary>
+        <value>Um <see cref="T:System.ApplicationIdentity" /> objeto que identifica o aplicativo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ApplicationIdentity> identifica exclusivamente um aplicativo por seu nome completo e o local.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.ActivationContext> para obter o <xref:System.ApplicationIdentity> para um aplicativo baseado no manifesto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ActivationContext> classe.  
+  
+ [!code-csharp[System.ActivationContext#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ActivationContext/cs/program.cs#2)]
+ [!code-vb[System.ActivationContext#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ActivationContext/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ActivationContext.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto a ser preenchido com dados.</param>
+        <param name="context">A estrutura desta serialização.</param>
+        <summary>Popula um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar o objeto de destino.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,980 @@
+<Type Name="SignatureHelper" FullName="System.Reflection.Emit.SignatureHelper">
+  <TypeSignature Language="C#" Value="public sealed class SignatureHelper : System.Runtime.InteropServices._SignatureHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SignatureHelper extends System.Object implements class System.Runtime.InteropServices._SignatureHelper" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.SignatureHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._SignatureHelper</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._SignatureHelper))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos para a criação de assinaturas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Reflection.Emit.SignatureHelper> classe para criar um blob de assinatura que pode ser passado para o <xref:System.Reflection.Emit.DynamicILInfo.SetLocalSignature%2A> método o <xref:System.Reflection.Emit.DynamicILInfo> classe. Um <xref:System.Reflection.Emit.SignatureHelper> objeto também pode ser passado para o <xref:System.Reflection.Emit.ILGenerator.Emit%28System.Reflection.Emit.OpCode%2CSystem.Reflection.Emit.SignatureHelper%29?displayProperty=nameWithType> sobrecarga do método para inserir uma instrução e um token de assinatura em um fluxo do Microsoft intermediate language (MSIL). Para obter informações sobre blobs de assinatura e os metadados de assinatura, consulte a documentação de metadados da ECMA partição II.  
+  
+> [!NOTE]
+>  A documentação ECMA partição II está disponível online; consulte [ECMA para c# e padrões de infra-estrutura de linguagem comum](http://go.microsoft.com/fwlink/?LinkID=99212) no MSDN e [padrão ECMA-335 - infraestrutura de linguagem comum (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) no site da Ecma internacional.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddArgument">
+      <MemberSignature Language="C#" Value="public void AddArgument (Type clsArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddArgument(class System.Type clsArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.AddArgument(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clsArgument" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="clsArgument">O tipo do argumento.</param>
+        <summary>Adiciona um argumento para a assinatura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para adicionar um argumento com modificadores personalizadas necessárias ou opcionais, use o <xref:System.Reflection.Emit.SignatureHelper.AddArgument%28System.Type%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%29> sobrecarga do método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A assinatura já terminou.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="clsArgument" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddArgument">
+      <MemberSignature Language="C#" Value="public void AddArgument (Type argument, bool pinned);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddArgument(class System.Type argument, bool pinned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.AddArgument(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argument" Type="System.Type" />
+        <Parameter Name="pinned" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="argument">O tipo de argumento.</param>
+        <param name="pinned">
+          <see langword="true" />Se o argumento é fixado; Caso contrário, <see langword="false" />.</param>
+        <summary>Adiciona um argumento do tipo especificado para a assinatura, especificando se o argumento está fixado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para adicionar um argumento com modificadores personalizadas necessárias ou opcionais, use o <xref:System.Reflection.Emit.SignatureHelper.AddArgument%28System.Type%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%29> sobrecarga do método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="argument" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddArgument">
+      <MemberSignature Language="C#" Value="public void AddArgument (Type argument, Type[] requiredCustomModifiers, Type[] optionalCustomModifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddArgument(class System.Type argument, class System.Type[] requiredCustomModifiers, class System.Type[] optionalCustomModifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.AddArgument(System.Type,System.Type[],System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argument" Type="System.Type" />
+        <Parameter Name="requiredCustomModifiers" Type="System.Type[]" />
+        <Parameter Name="optionalCustomModifiers" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="argument">O tipo de argumento.</param>
+        <param name="requiredCustomModifiers">Uma matriz de tipos que representam os modificadores personalizados necessários para o argumento, como <see cref="T:System.Runtime.CompilerServices.IsConst" /> ou <see cref="T:System.Runtime.CompilerServices.IsBoxed" />. Se o argumento não contém nenhum modificadores personalizados necessários, especifique <see langword="null" />.</param>
+        <param name="optionalCustomModifiers">Uma matriz de tipos que representam os modificadores personalizados opcionais para o argumento, como <see cref="T:System.Runtime.CompilerServices.IsConst" /> ou <see cref="T:System.Runtime.CompilerServices.IsBoxed" />. Especifique se o argumento não opcionais modificadores personalizados <see langword="null" />.</param>
+        <summary>Adiciona um argumento para a assinatura, com os modificadores personalizados especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte o <xref:System.Runtime.CompilerServices> namespace para classes que representam os modificadores personalizados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="argument" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um elemento de <paramref name="requiredCustomModifiers" /> ou <paramref name="optionalCustomModifiers" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A assinatura já terminou.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é um tipo de matriz.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é um tipo genérico aberto. Ou seja, o <see cref="P:System.Type.ContainsGenericParameters" /> é de propriedade <see langword="true" /> para o modificador personalizado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddArguments">
+      <MemberSignature Language="C#" Value="public void AddArguments (Type[] arguments, Type[][] requiredCustomModifiers, Type[][] optionalCustomModifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddArguments(class System.Type[] arguments, class System.Type[][] requiredCustomModifiers, class System.Type[][] optionalCustomModifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.AddArguments(System.Type[],System.Type[][],System.Type[][])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Type[]" />
+        <Parameter Name="requiredCustomModifiers" Type="System.Type[][]" />
+        <Parameter Name="optionalCustomModifiers" Type="System.Type[][]" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Os tipos de argumentos a serem adicionados.</param>
+        <param name="requiredCustomModifiers">Uma matriz de matrizes de tipos. Cada matriz de tipos representa os modificadores personalizados necessários para o argumento correspondente, como <see cref="T:System.Runtime.CompilerServices.IsConst" /> ou <see cref="T:System.Runtime.CompilerServices.IsBoxed" />. Se um argumento específico não tiver nenhum modificadores personalizados necessários, especifique <see langword="null" /> em vez de uma matriz de tipos. Se nenhum dos argumentos exigi modificadores personalizadas, especifique <see langword="null" /> em vez de uma matriz de matrizes.</param>
+        <param name="optionalCustomModifiers">Uma matriz de matrizes de tipos. Cada matriz de tipos representa os modificadores personalizados opcionais para o argumento correspondente, como <see cref="T:System.Runtime.CompilerServices.IsConst" /> ou <see cref="T:System.Runtime.CompilerServices.IsBoxed" />. Especifique se um argumento específico não opcionais modificadores personalizados <see langword="null" /> em vez de uma matriz de tipos. Se nenhum dos argumentos tem modificadores personalizados opcionais, especifique <see langword="null" /> em vez de uma matriz de matrizes.</param>
+        <summary>Adiciona um conjunto de argumentos para a assinatura, com os modificadores personalizados especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os argumentos são adicionados ao final da assinatura, na ordem dos elementos de `arguments`.  
+  
+ Consulte o <xref:System.Runtime.CompilerServices> namespace para classes que representam os modificadores personalizados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um elemento de <paramref name="arguments" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é <see langword="null" />. (No entanto, <see langword="null" /> pode ser especificado para a matriz de modificadores personalizadas para qualquer argumento.)</exception>
+        <exception cref="T:System.ArgumentException">A assinatura já terminou.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é um tipo de matriz.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é um tipo genérico aberto. Ou seja, o <see cref="P:System.Type.ContainsGenericParameters" /> é de propriedade <see langword="true" /> para o modificador personalizado.  
+  
+ -ou-  
+  
+ O tamanho de <paramref name="requiredCustomModifiers" /> ou <paramref name="optionalCustomModifiers" /> não é igual ao tamanho de <paramref name="arguments" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSentinel">
+      <MemberSignature Language="C#" Value="public void AddSentinel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSentinel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.AddSentinel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Marca o final de um vararg parte fixa. Isso só é usado se o chamador é criar um site de chamada vararg assinatura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto com o qual esta instância deve ser comparada.</param>
+        <summary>Verifica se esta instância é igual ao objeto fornecido.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado é um <see langword="SignatureHelper" /> e representa a mesma assinatura; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldSigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetFieldSigHelper (System.Reflection.Module mod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetFieldSigHelper(class System.Reflection.Module mod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetFieldSigHelper(System.Reflection.Module)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mod" Type="System.Reflection.Module" />
+      </Parameters>
+      <Docs>
+        <param name="mod">O módulo dinâmico que contém o campo para o qual o <see langword="SignatureHelper" /> é solicitado.</param>
+        <summary>Retorna um auxiliar de assinatura para um campo.</summary>
+        <returns>O <see langword="SignatureHelper" /> objeto para um campo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um código hash para essa instância.</summary>
+        <returns>Retorna o código de hash com base no nome.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash é criado a partir do nome desta instância, o valor de retorno é o mesmo que o `GetHashCode` método foi chamado no valor da `Name` propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalVarSigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetLocalVarSigHelper ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetLocalVarSigHelper() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetLocalVarSigHelper" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um auxiliar de assinatura para uma variável local.</summary>
+        <returns>Um <see cref="T:System.Reflection.Emit.SignatureHelper" /> para uma variável local.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalVarSigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetLocalVarSigHelper (System.Reflection.Module mod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetLocalVarSigHelper(class System.Reflection.Module mod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetLocalVarSigHelper(System.Reflection.Module)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mod" Type="System.Reflection.Module" />
+      </Parameters>
+      <Docs>
+        <param name="mod">O módulo dinâmico que contém a variável local para o qual o <see langword="SignatureHelper" /> é solicitado.</param>
+        <summary>Retorna um auxiliar de assinatura para uma variável local.</summary>
+        <returns>O <see langword="SignatureHelper" /> objeto para uma variável local.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodSigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetMethodSigHelper (System.Reflection.CallingConventions callingConvention, Type returnType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetMethodSigHelper(valuetype System.Reflection.CallingConventions callingConvention, class System.Type returnType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetMethodSigHelper(System.Reflection.CallingConventions,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callingConvention" Type="System.Reflection.CallingConventions" />
+        <Parameter Name="returnType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="callingConvention">A convenção de chamada do método.</param>
+        <param name="returnType">O tipo de retorno do método, ou <see langword="null" /> para um tipo de retorno void (<see langword="Sub" /> procedimento no Visual Basic).</param>
+        <summary>Retorna um auxiliar de assinatura para um método que recebe o método do chamando convenção e o tipo de retorno.</summary>
+        <returns>O <see langword="SignatureHelper" /> objeto para um método.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodSigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetMethodSigHelper (System.Runtime.InteropServices.CallingConvention unmanagedCallingConvention, Type returnType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetMethodSigHelper(valuetype System.Runtime.InteropServices.CallingConvention unmanagedCallingConvention, class System.Type returnType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetMethodSigHelper(System.Runtime.InteropServices.CallingConvention,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unmanagedCallingConvention" Type="System.Runtime.InteropServices.CallingConvention" />
+        <Parameter Name="returnType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="unmanagedCallingConvention">A convenção de chamada não gerenciada do método.</param>
+        <param name="returnType">O tipo de retorno do método, ou <see langword="null" /> para um tipo de retorno void (<see langword="Sub" /> procedimento no Visual Basic).</param>
+        <summary>Retorna um auxiliar de assinatura para um método que recebe o tipo do método não gerenciado chamado convenção e retornar.</summary>
+        <returns>O <see langword="SignatureHelper" /> objeto para um método.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="unmanagedCallConv" />é uma convenção de chamada não gerenciada desconhecida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodSigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetMethodSigHelper (System.Reflection.Module mod, System.Reflection.CallingConventions callingConvention, Type returnType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetMethodSigHelper(class System.Reflection.Module mod, valuetype System.Reflection.CallingConventions callingConvention, class System.Type returnType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetMethodSigHelper(System.Reflection.Module,System.Reflection.CallingConventions,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mod" Type="System.Reflection.Module" />
+        <Parameter Name="callingConvention" Type="System.Reflection.CallingConventions" />
+        <Parameter Name="returnType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="mod">O <see cref="T:System.Reflection.Emit.ModuleBuilder" /> que contém o método para o qual o <see langword="SignatureHelper" /> é solicitado.</param>
+        <param name="callingConvention">A convenção de chamada do método.</param>
+        <param name="returnType">O tipo de retorno do método, ou <see langword="null" /> para um tipo de retorno void (<see langword="Sub" /> procedimento no Visual Basic).</param>
+        <summary>Retorna um auxiliar de assinatura para um método de determinado módulo do método, a convenção e o tipo de retorno de chamada.</summary>
+        <returns>O <see langword="SignatureHelper" /> objeto para um método.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mod" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mod" /> não é um <see cref="T:System.Reflection.Emit.ModuleBuilder" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodSigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetMethodSigHelper (System.Reflection.Module mod, System.Runtime.InteropServices.CallingConvention unmanagedCallConv, Type returnType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetMethodSigHelper(class System.Reflection.Module mod, valuetype System.Runtime.InteropServices.CallingConvention unmanagedCallConv, class System.Type returnType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetMethodSigHelper(System.Reflection.Module,System.Runtime.InteropServices.CallingConvention,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mod" Type="System.Reflection.Module" />
+        <Parameter Name="unmanagedCallConv" Type="System.Runtime.InteropServices.CallingConvention" />
+        <Parameter Name="returnType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="mod">O <see cref="T:System.Reflection.Emit.ModuleBuilder" /> que contém o método para o qual o <see langword="SignatureHelper" /> é solicitado.</param>
+        <param name="unmanagedCallConv">A convenção de chamada não gerenciada do método.</param>
+        <param name="returnType">O tipo de retorno do método, ou <see langword="null" /> para um tipo de retorno void (<see langword="Sub" /> procedimento no Visual Basic).</param>
+        <summary>Retorna um auxiliar de assinatura para um método de determinado módulo do método, não gerenciado a convenção de chamada e tipo de retorno.</summary>
+        <returns>O <see langword="SignatureHelper" /> objeto para um método.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mod" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mod" /> não é um <see cref="T:System.Reflection.Emit.ModuleBuilder" />.  
+  
+ -ou-  
+  
+ <paramref name="unmanagedCallConv" />é uma convenção de chamada não gerenciada desconhecida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodSigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetMethodSigHelper (System.Reflection.Module mod, Type returnType, Type[] parameterTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetMethodSigHelper(class System.Reflection.Module mod, class System.Type returnType, class System.Type[] parameterTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetMethodSigHelper(System.Reflection.Module,System.Type,System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mod" Type="System.Reflection.Module" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="mod">O <see cref="T:System.Reflection.Emit.ModuleBuilder" /> que contém o método para o qual o <see langword="SignatureHelper" /> é solicitado.</param>
+        <param name="returnType">O tipo de retorno do método, ou <see langword="null" /> para um tipo de retorno void (<see langword="Sub" /> procedimento no Visual Basic).</param>
+        <param name="parameterTypes">Os tipos de argumentos do método, ou <see langword="null" /> se o método não possui argumentos.</param>
+        <summary>Retorna um auxiliar de assinatura para um método com uma convenção de chamada padrão, de acordo com o método módulo, tipo de retorno e os tipos de argumento.</summary>
+        <returns>O <see langword="SignatureHelper" /> objeto para um método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga cria uma assinatura com uma convenção de chamada padrão.  
+  
+ Para criar uma assinatura de método com modificadores personalizados, use o <xref:System.Reflection.Emit.SignatureHelper.GetMethodSigHelper%28System.Reflection.Module%2CSystem.Reflection.CallingConventions%2CSystem.Type%29> de sobrecarga de método e, em seguida, use o <xref:System.Reflection.Emit.SignatureHelper.AddArgument%28System.Type%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%29> ou <xref:System.Reflection.Emit.SignatureHelper.AddArguments%28System.Type%5B%5D%2CSystem.Type%5B%5D%5B%5D%2CSystem.Type%5B%5D%5B%5D%29> sobrecargas do método para adicionar argumentos com modificadores personalizados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mod" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um elemento de <paramref name="parameterTypes" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mod" /> não é um <see cref="T:System.Reflection.Emit.ModuleBuilder" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertySigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetPropertySigHelper (System.Reflection.Module mod, Type returnType, Type[] parameterTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetPropertySigHelper(class System.Reflection.Module mod, class System.Type returnType, class System.Type[] parameterTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetPropertySigHelper(System.Reflection.Module,System.Type,System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mod" Type="System.Reflection.Module" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="mod">O <see cref="T:System.Reflection.Emit.ModuleBuilder" /> que contém a propriedade para o qual o <see cref="T:System.Reflection.Emit.SignatureHelper" /> é solicitado.</param>
+        <param name="returnType">O tipo de propriedade.</param>
+        <param name="parameterTypes">Os tipos de argumento, ou <see langword="null" /> se a propriedade não possui argumentos.</param>
+        <summary>Retorna um auxiliar de assinatura para uma propriedade, de acordo com o módulo dinâmico que contém a propriedade, o tipo de propriedade e os argumentos de propriedade.</summary>
+        <returns>Um <see cref="T:System.Reflection.Emit.SignatureHelper" /> objeto para uma propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar um auxiliar de assinatura para uma propriedade com modificadores personalizadas necessárias ou opcionais, use o <xref:System.Reflection.Emit.SignatureHelper.GetPropertySigHelper%28System.Reflection.Module%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%2CSystem.Type%5B%5D%5B%5D%2CSystem.Type%5B%5D%5B%5D%29> sobrecarga do método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mod" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um elemento de <paramref name="parameterTypes" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mod" /> não é um <see cref="T:System.Reflection.Emit.ModuleBuilder" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertySigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetPropertySigHelper (System.Reflection.Module mod, Type returnType, Type[] requiredReturnTypeCustomModifiers, Type[] optionalReturnTypeCustomModifiers, Type[] parameterTypes, Type[][] requiredParameterTypeCustomModifiers, Type[][] optionalParameterTypeCustomModifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetPropertySigHelper(class System.Reflection.Module mod, class System.Type returnType, class System.Type[] requiredReturnTypeCustomModifiers, class System.Type[] optionalReturnTypeCustomModifiers, class System.Type[] parameterTypes, class System.Type[][] requiredParameterTypeCustomModifiers, class System.Type[][] optionalParameterTypeCustomModifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetPropertySigHelper(System.Reflection.Module,System.Type,System.Type[],System.Type[],System.Type[],System.Type[][],System.Type[][])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mod" Type="System.Reflection.Module" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="requiredReturnTypeCustomModifiers" Type="System.Type[]" />
+        <Parameter Name="optionalReturnTypeCustomModifiers" Type="System.Type[]" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="requiredParameterTypeCustomModifiers" Type="System.Type[][]" />
+        <Parameter Name="optionalParameterTypeCustomModifiers" Type="System.Type[][]" />
+      </Parameters>
+      <Docs>
+        <param name="mod">O <see cref="T:System.Reflection.Emit.ModuleBuilder" /> que contém a propriedade para o qual o <see cref="T:System.Reflection.Emit.SignatureHelper" /> é solicitado.</param>
+        <param name="returnType">O tipo de propriedade.</param>
+        <param name="requiredReturnTypeCustomModifiers">Uma matriz de tipos que representam os modificadores personalizados necessários para o tipo de retorno, como <see cref="T:System.Runtime.CompilerServices.IsConst" /> ou <see cref="T:System.Runtime.CompilerServices.IsBoxed" />. Se o tipo de retorno não tiver modificadores personalizados obrigatórios, especifique <see langword="null" />.</param>
+        <param name="optionalReturnTypeCustomModifiers">Uma matriz de tipos que representam os modificadores personalizados opcionais para o tipo de retorno, como <see cref="T:System.Runtime.CompilerServices.IsConst" /> ou <see cref="T:System.Runtime.CompilerServices.IsBoxed" />. Se o tipo de retorno não tiver modificadores personalizados opcionais, especifique <see langword="null" />.</param>
+        <param name="parameterTypes">Os tipos de argumentos da propriedade, ou <see langword="null" /> se a propriedade não possui argumentos.</param>
+        <param name="requiredParameterTypeCustomModifiers">Uma matriz de matrizes de tipos. Cada matriz de tipos representa os modificadores personalizados necessários para o argumento correspondente da propriedade. Se um argumento específico não tiver nenhum modificadores personalizados necessários, especifique <see langword="null" /> em vez de uma matriz de tipos. Se a propriedade não possui argumentos, ou se nenhum dos argumentos exigi modificadores personalizados, especificar <see langword="null" /> em vez de uma matriz de matrizes.</param>
+        <param name="optionalParameterTypeCustomModifiers">Uma matriz de matrizes de tipos. Cada matriz de tipos representa os modificadores personalizados opcionais para o argumento correspondente da propriedade. Especifique se um argumento específico não opcionais modificadores personalizados <see langword="null" /> em vez de uma matriz de tipos. Se a propriedade não possui argumentos, ou se nenhum dos argumentos tem modificadores personalizados opcionais, especifique <see langword="null" /> em vez de uma matriz de matrizes.</param>
+        <summary>Retorna um auxiliar de assinatura para uma propriedade, de acordo com o módulo dinâmico que contém a propriedade, o tipo de propriedade, os argumentos de propriedade e modificadores personalizados para o tipo de retorno e argumentos.</summary>
+        <returns>Um <see cref="T:System.Reflection.Emit.SignatureHelper" /> objeto para uma propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte o <xref:System.Runtime.CompilerServices> namespace para classes que representam os modificadores personalizados.  
+  
+ Se uma propriedade não tiver nenhum modificador personalizado, use o <xref:System.Reflection.Emit.SignatureHelper.GetPropertySigHelper%28System.Reflection.Module%2CSystem.Type%2CSystem.Type%5B%5D%29> sobrecarga do método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mod" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um elemento de <paramref name="parameterTypes" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é <see langword="null" />. (No entanto, <see langword="null" /> pode ser especificado para a matriz de modificadores personalizadas para qualquer argumento.)</exception>
+        <exception cref="T:System.ArgumentException">A assinatura já terminou.  
+  
+ -ou-  
+  
+ <paramref name="mod" /> não é um <see cref="T:System.Reflection.Emit.ModuleBuilder" />.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é um tipo de matriz.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é um tipo genérico aberto. Ou seja, o <see cref="P:System.Type.ContainsGenericParameters" /> é de propriedade <see langword="true" /> para o modificador personalizado.  
+  
+ -ou-  
+  
+ O tamanho de <paramref name="requiredParameterTypeCustomModifiers" /> ou <paramref name="optionalParameterTypeCustomModifiers" /> não é igual ao tamanho de <paramref name="parameterTypes" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertySigHelper">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Emit.SignatureHelper GetPropertySigHelper (System.Reflection.Module mod, System.Reflection.CallingConventions callingConvention, Type returnType, Type[] requiredReturnTypeCustomModifiers, Type[] optionalReturnTypeCustomModifiers, Type[] parameterTypes, Type[][] requiredParameterTypeCustomModifiers, Type[][] optionalParameterTypeCustomModifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Emit.SignatureHelper GetPropertySigHelper(class System.Reflection.Module mod, valuetype System.Reflection.CallingConventions callingConvention, class System.Type returnType, class System.Type[] requiredReturnTypeCustomModifiers, class System.Type[] optionalReturnTypeCustomModifiers, class System.Type[] parameterTypes, class System.Type[][] requiredParameterTypeCustomModifiers, class System.Type[][] optionalParameterTypeCustomModifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetPropertySigHelper(System.Reflection.Module,System.Reflection.CallingConventions,System.Type,System.Type[],System.Type[],System.Type[],System.Type[][],System.Type[][])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureHelper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mod" Type="System.Reflection.Module" />
+        <Parameter Name="callingConvention" Type="System.Reflection.CallingConventions" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="requiredReturnTypeCustomModifiers" Type="System.Type[]" />
+        <Parameter Name="optionalReturnTypeCustomModifiers" Type="System.Type[]" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="requiredParameterTypeCustomModifiers" Type="System.Type[][]" />
+        <Parameter Name="optionalParameterTypeCustomModifiers" Type="System.Type[][]" />
+      </Parameters>
+      <Docs>
+        <param name="mod">O <see cref="T:System.Reflection.Emit.ModuleBuilder" /> que contém a propriedade para o qual o <see cref="T:System.Reflection.Emit.SignatureHelper" /> é solicitado.</param>
+        <param name="callingConvention">A convenção de chamada de acessadores de propriedade.</param>
+        <param name="returnType">O tipo de propriedade.</param>
+        <param name="requiredReturnTypeCustomModifiers">Uma matriz de tipos que representam os modificadores personalizados necessários para o tipo de retorno, como <see cref="T:System.Runtime.CompilerServices.IsConst" /> ou <see cref="T:System.Runtime.CompilerServices.IsBoxed" />. Se o tipo de retorno não tiver modificadores personalizados obrigatórios, especifique <see langword="null" />.</param>
+        <param name="optionalReturnTypeCustomModifiers">Uma matriz de tipos que representam os modificadores personalizados opcionais para o tipo de retorno, como <see cref="T:System.Runtime.CompilerServices.IsConst" /> ou <see cref="T:System.Runtime.CompilerServices.IsBoxed" />. Se o tipo de retorno não tiver modificadores personalizados opcionais, especifique <see langword="null" />.</param>
+        <param name="parameterTypes">Os tipos de argumentos da propriedade, ou <see langword="null" /> se a propriedade não possui argumentos.</param>
+        <param name="requiredParameterTypeCustomModifiers">Uma matriz de matrizes de tipos. Cada matriz de tipos representa os modificadores personalizados necessários para o argumento correspondente da propriedade. Se um argumento específico não tiver nenhum modificadores personalizados necessários, especifique <see langword="null" /> em vez de uma matriz de tipos. Se a propriedade não possui argumentos, ou se nenhum dos argumentos exigi modificadores personalizados, especificar <see langword="null" /> em vez de uma matriz de matrizes.</param>
+        <param name="optionalParameterTypeCustomModifiers">Uma matriz de matrizes de tipos. Cada matriz de tipos representa os modificadores personalizados opcionais para o argumento correspondente da propriedade. Especifique se um argumento específico não opcionais modificadores personalizados <see langword="null" /> em vez de uma matriz de tipos. Se a propriedade não possui argumentos, ou se nenhum dos argumentos tem modificadores personalizados opcionais, especifique <see langword="null" /> em vez de uma matriz de matrizes.</param>
+        <summary>Retorna um auxiliar de assinatura para uma propriedade, de acordo com o módulo dinâmico que contém a propriedade, a convenção de chamada, o tipo de propriedade, argumentos de propriedade e modificadores personalizados para o tipo de retorno e argumentos.</summary>
+        <returns>Um <see cref="T:System.Reflection.Emit.SignatureHelper" /> objeto para uma propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte o <xref:System.Runtime.CompilerServices> namespace para classes que representam os modificadores personalizados.  
+  
+ Se uma propriedade não tiver nenhum modificador personalizado, use o <xref:System.Reflection.Emit.SignatureHelper.GetPropertySigHelper%28System.Reflection.Module%2CSystem.Type%2CSystem.Type%5B%5D%29> sobrecarga do método.  
+  
+> [!NOTE]
+>  Essa sobrecarga de método foi introduzida no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mod" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um elemento de <paramref name="parameterTypes" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é <see langword="null" />. (No entanto, <see langword="null" /> pode ser especificado para a matriz de modificadores personalizadas para qualquer argumento.)</exception>
+        <exception cref="T:System.ArgumentException">A assinatura já terminou.  
+  
+ -ou-  
+  
+ <paramref name="mod" /> não é um <see cref="T:System.Reflection.Emit.ModuleBuilder" />.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é um tipo de matriz.  
+  
+ -ou-  
+  
+ Um dos modificadores personalizados especificados é um tipo genérico aberto. Ou seja, o <see cref="P:System.Type.ContainsGenericParameters" /> é de propriedade <see langword="true" /> para o modificador personalizado.  
+  
+ -ou-  
+  
+ O tamanho de <paramref name="requiredParameterTypeCustomModifiers" /> ou <paramref name="optionalParameterTypeCustomModifiers" /> não é igual ao tamanho de <paramref name="parameterTypes" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignature">
+      <MemberSignature Language="C#" Value="public byte[] GetSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.GetSignature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona o token final para a assinatura e marca a assinatura como concluída, portanto nenhuma tokens adicionais podem ser adicionados.</summary>
+        <returns>Retorna uma matriz de bytes composta da assinatura completa.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._SignatureHelper.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _SignatureHelper.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._SignatureHelper.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.System#Runtime#InteropServices#_SignatureHelper#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="rgszNames">Matriz passada de nomes a serem mapeados.</param>
+        <param name="cNames">Contagem dos nomes a serem mapeados.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar os nomes.</param>
+        <param name="rgDispId">Matriz alocada pelo chamador que recebe os IDs correspondentes aos nomes.</param>
+        <summary>Mapeia um conjunto de nomes para um conjunto correspondente de identificadores de expedição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetIDsOfNames`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._SignatureHelper.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _SignatureHelper.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._SignatureHelper.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.System#Runtime#InteropServices#_SignatureHelper#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">As informações de tipo a serem retornadas.</param>
+        <param name="lcid">O identificador de localidade das informações do tipo.</param>
+        <param name="ppTInfo">Recebe um ponteiro para o objeto de informações de tipo solicitado.</param>
+        <summary>Recupera as informações do tipo de um objeto, que podem ser usadas para obter informações de tipo para uma interface.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfo`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._SignatureHelper.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _SignatureHelper.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._SignatureHelper.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.System#Runtime#InteropServices#_SignatureHelper#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Aponta para um local que recebe o número de interfaces de informações de tipo fornecido pelo objeto.</param>
+        <summary>Retorna o número de interfaces de informações do tipo que um objeto fornece (0 ou 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfoCount`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._SignatureHelper.Invoke">
+      <MemberSignature Language="C#" Value="void _SignatureHelper.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._SignatureHelper.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.System#Runtime#InteropServices#_SignatureHelper#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Identifica o membro.</param>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar argumentos.</param>
+        <param name="wFlags">Sinalizadores que descrevem o contexto da chamada.</param>
+        <param name="pDispParams">Ponteiro para uma estrutura contendo uma matriz de argumentos, uma matriz de DISPIDs de argumento para argumentos nomeados e contagens para o número de elementos nas matrizes.</param>
+        <param name="pVarResult">Ponteiro para o local onde o resultado deve ser armazenado.</param>
+        <param name="pExcepInfo">Ponteiro para uma estrutura que contém informações de exceção.</param>
+        <param name="puArgErr">O índice do primeiro argumento que tem um erro.</param>
+        <summary>Fornece acesso a propriedades e métodos expostos por um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::Invoke`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureHelper.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.ILGeneration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa os argumentos de assinatura.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa os argumentos desta assinatura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

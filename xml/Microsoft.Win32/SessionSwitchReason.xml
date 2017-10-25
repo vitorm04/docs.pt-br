@@ -1,0 +1,169 @@
+<Type Name="SessionSwitchReason" FullName="Microsoft.Win32.SessionSwitchReason">
+  <TypeSignature Language="C#" Value="public enum SessionSwitchReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionSwitchReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.SessionSwitchReason" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os identificadores usados para representar o tipo de um evento de comutador de sessão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:Microsoft.Win32.SessionSwitchEventArgs> classe usa a <xref:Microsoft.Win32.SessionSwitchReason> classe que representa o tipo de um evento de chave de sessão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConsoleConnect">
+      <MemberSignature Language="C#" Value="ConsoleConnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.SessionSwitchReason ConsoleConnect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.SessionSwitchReason.ConsoleConnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma sessão foi conectada do console.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsoleDisconnect">
+      <MemberSignature Language="C#" Value="ConsoleDisconnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.SessionSwitchReason ConsoleDisconnect = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.SessionSwitchReason.ConsoleDisconnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma sessão foi desconectada do console.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteConnect">
+      <MemberSignature Language="C#" Value="RemoteConnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.SessionSwitchReason RemoteConnect = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.SessionSwitchReason.RemoteConnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma sessão foi conectada de uma conexão remota.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteDisconnect">
+      <MemberSignature Language="C#" Value="RemoteDisconnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.SessionSwitchReason RemoteDisconnect = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.SessionSwitchReason.RemoteDisconnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma sessão foi desconectada de uma conexão remota.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionLock">
+      <MemberSignature Language="C#" Value="SessionLock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.SessionSwitchReason SessionLock = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.SessionSwitchReason.SessionLock" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A sessão foi bloqueada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionLogoff">
+      <MemberSignature Language="C#" Value="SessionLogoff" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.SessionSwitchReason SessionLogoff = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.SessionSwitchReason.SessionLogoff" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um usuário fez logoff em uma sessão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionLogon">
+      <MemberSignature Language="C#" Value="SessionLogon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.SessionSwitchReason SessionLogon = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.SessionSwitchReason.SessionLogon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um usuário fez logon em uma sessão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionRemoteControl">
+      <MemberSignature Language="C#" Value="SessionRemoteControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.SessionSwitchReason SessionRemoteControl = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.SessionSwitchReason.SessionRemoteControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma sessão mudou seu status de ou para o modo controlado remoto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionUnlock">
+      <MemberSignature Language="C#" Value="SessionUnlock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.SessionSwitchReason SessionUnlock = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.SessionSwitchReason.SessionUnlock" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A sessão foi desbloqueada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

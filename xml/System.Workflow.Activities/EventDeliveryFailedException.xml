@@ -1,0 +1,90 @@
+<Type Name="EventDeliveryFailedException" FullName="System.Workflow.Activities.EventDeliveryFailedException">
+  <TypeSignature Language="C#" Value="public sealed class EventDeliveryFailedException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EventDeliveryFailedException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.EventDeliveryFailedException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é lançada quando um evento que é gerado a partir do host não pode ser entregue para a instância de fluxo de trabalho. Normalmente, o evento é gerado de um <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" /> em uma instância de fluxo de trabalho. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ A cadeia de caracteres a seguir é adicionada ao log de eventos quando essa exceção é gerada: tipo de evento "\\{1 \\}" na interface "{0}" para a instância id "2}" não pode ser entregue.  
+  
+ Ao usar um fluxo de trabalho de máquina de estado, você pode obter uma exceção com a mensagem "fila '{0}' não está habilitada." Isso ocorre quando o estado atual da máquina de estado não sabe como tratar um evento específico. Por exemplo, quando algum estado que não seja o estado atual contém o <xref:System.Workflow.Activities.EventDrivenActivity> que contém o <xref:System.Workflow.Activities.HandleExternalEventActivity> que é representada pela fila '{0}'.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventDeliveryFailedException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventDeliveryFailedException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.EventDeliveryFailedException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventDeliveryFailedException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventDeliveryFailedException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem de erro que explica o motivo da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.EventDeliveryFailedException" /> classe usando a mensagem de erro que explica o motivo da exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventDeliveryFailedException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventDeliveryFailedException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem de erro que explica o motivo da exceção.</param>
+        <param name="innerException">O <see cref="T:System.Exception" /> que provocou essa exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.EventDeliveryFailedException" /> classe usando a mensagem de erro que explica o motivo da exceção e o <see cref="T:System.Exception" /> que provocou essa exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

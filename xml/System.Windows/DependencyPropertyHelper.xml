@@ -1,0 +1,59 @@
+<Type Name="DependencyPropertyHelper" FullName="System.Windows.DependencyPropertyHelper">
+  <TypeSignature Language="C#" Value="public static class DependencyPropertyHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DependencyPropertyHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyPropertyHelper" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um método auxiliar único (<see cref="M:System.Windows.DependencyPropertyHelper.GetValueSource(System.Windows.DependencyObject,System.Windows.DependencyProperty)" />) que informa que a fonte de sistema de propriedade para o valor efetivo de uma propriedade de dependência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O[!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade é bastante complexo e se baseia em racionalizar os valores potencialmente provenientes de uma variedade de entradas, com base em uma precedência de determinação de valor estabelecida. Porque essas fontes potencialmente vêm de código de tempo de execução, da marcação compilado, ou mesmo de configurações de usuário de tempo de execução, pode ser útil saber exatamente qual participante no sistema de valor de propriedade de dependência estabelecer o valor que você obtenha ao chamar <xref:System.Windows.DependencyObject.GetValue%2A> em tempo de execução nessa propriedade. Se o valor é proveniente de uma fonte diferente que você pretendia, talvez seja necessário ajustar alguns aspectos do seu aplicativo. A fonte do valor pode ser um estilo, um tema, um valor local, uma animação, uma associação ou um valor baseado em tempo de execução, como configurações do sistema por meio de temas ou recursos do sistema. Para obter mais informações, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ Outro mecanismo de relatórios na propriedade em geral, em vez de uma instância específica da propriedade em um objeto, é que os metadados da propriedade. Os metadados da propriedade são localização chamando <xref:System.Windows.DependencyProperty.GetMetadata%2A> e examinando retornado <xref:System.Windows.PropertyMetadata> (ou uma das várias possíveis classes derivadas que os metadados de propriedade retornado são conversíveis para).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetValueSource">
+      <MemberSignature Language="C#" Value="public static System.Windows.ValueSource GetValueSource (System.Windows.DependencyObject dependencyObject, System.Windows.DependencyProperty dependencyProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.ValueSource GetValueSource(class System.Windows.DependencyObject dependencyObject, class System.Windows.DependencyProperty dependencyProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyHelper.GetValueSource(System.Windows.DependencyObject,System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ValueSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Windows.DependencyObject" />
+        <Parameter Name="dependencyProperty" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">O elemento que contém o <c>dependencyProperty</c> para relatar informações para.</param>
+        <param name="dependencyProperty">O identificador para a propriedade de dependência para relatar informações para.</param>
+        <summary>Retorna uma estrutura que relata várias características de sistema de propriedade e metadados de uma propriedade de dependência especificada em uma determinada <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <returns>Um <see cref="T:System.Windows.ValueSource" /> estrutura que relata as informações específicas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar esse método em um contexto de modo que tardia participantes na determinação de valor de propriedade são capazes de agir em uma propriedade. Por exemplo, associações não podem estar ativas em uma propriedade, a menos que todos os elementos de participantes na árvore de elementos carregados e a vinculação assíncrona é propagada, e o objeto de origem de associação é conectado. Da mesma forma, recursos, incluindo todos os dicionários de tema necessários devem estar disponíveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

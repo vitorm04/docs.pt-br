@@ -1,0 +1,265 @@
+<Type Name="ValidationError" FullName="System.Workflow.ComponentModel.Compiler.ValidationError">
+  <TypeSignature Language="C#" Value="public sealed class ValidationError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ValidationError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.ValidationError" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a classe base para todos os erros de validação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar e manipular os erros de validação como parte de uma rotina de validação personalizada.  
+  
+ Este exemplo de código é parte do exemplo enviar email SDK e do arquivo de SendEMailActivity.cs. Para obter mais informações, consulte [enviar email atividade](http://msdn.microsoft.com/en-us/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+  
+ [!code-csharp[WF_Samples#235](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#235)]
+ [!code-vb[WF_Samples#235](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#235)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationError" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como criar e manipular os erros de validação como parte de uma rotina de validação personalizada.  
+  
+ Este exemplo de código é parte do exemplo enviar email SDK e do arquivo de SendEMailActivity.cs. Para obter mais informações, consulte [enviar email atividade](http://msdn.microsoft.com/en-us/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+  
+ [!code-csharp[WF_Samples#235](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#235)]
+ [!code-vb[WF_Samples#235](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#235)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationError (string errorText, int errorNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string errorText, int32 errorNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ValidationError.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="errorNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="errorText">O texto do erro associado para esta instância.</param>
+        <param name="errorNumber">O número do erro para esse erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationError" /> classe; inicializa o texto de erro e os números de erro para essa instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationError (string errorText, int errorNumber, bool isWarning);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string errorText, int32 errorNumber, bool isWarning) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ValidationError.#ctor(System.String,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="errorNumber" Type="System.Int32" />
+        <Parameter Name="isWarning" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="errorText">O texto do erro associado para esta instância.</param>
+        <param name="errorNumber">O número do erro para esse erro.</param>
+        <param name="isWarning">Um booliano que é <see langword="true" /> se o erro for considerado um aviso e <see langword="false" /> caso contrário.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationError" /> da classe, inicializa o texto de erro, o número de erro e o tipo de erro para essa instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationError (string errorText, int errorNumber, bool isWarning, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string errorText, int32 errorNumber, bool isWarning, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ValidationError.#ctor(System.String,System.Int32,System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="errorNumber" Type="System.Int32" />
+        <Parameter Name="isWarning" Type="System.Boolean" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorText">O texto do erro associado para esta instância.</param>
+        <param name="errorNumber">O número do erro para esse erro.</param>
+        <param name="isWarning">Um booliano que é <see langword="true" /> se o erro for considerado um aviso e <see langword="false" /> caso contrário.</param>
+        <param name="propertyName">O nome da propriedade associada a este erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationError" /> classe Inicializando o texto de erro, o número do erro, o tipo de erro e o nome da propriedade associada ao erro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorNumber">
+      <MemberSignature Language="C#" Value="public int ErrorNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ErrorNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ValidationError.ErrorNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número do erro desta instância.</summary>
+        <value>O número do erro desta instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorText">
+      <MemberSignature Language="C#" Value="public string ErrorText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorText" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ValidationError.ErrorText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto de erro para essa instância.</summary>
+        <value>O texto de erro para essa instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNotSetValidationError">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.Compiler.ValidationError GetNotSetValidationError (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.Compiler.ValidationError GetNotSetValidationError(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ValidationError.GetNotSetValidationError(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">A propriedade associada a este erro.</param>
+        <summary>Cria um novo erro de validação definido para o tipo de erro de uma propriedade que não está sendo definido.</summary>
+        <returns>Um erro de validação novo definido para o tipo de erro de uma propriedade que não está sendo definido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWarning">
+      <MemberSignature Language="C#" Value="public bool IsWarning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWarning" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ValidationError.IsWarning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta instância é um aviso.</summary>
+        <value>
+          <see langword="true" />Se um aviso; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ValidationError.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade que falha ao validar.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome da propriedade que falha ao validar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada pelo designer para exibir erros de configuração e leve o usuário para as propriedades que contêm erros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ValidationError.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece uma representação de cadeia de caracteres desta instância incorporar o tipo de erro (erro ou aviso) o número do erro e o texto de erro.</summary>
+        <returns>Uma representação de cadeia de caracteres desta instância incorporar o tipo de erro (erro ou aviso) o número do erro e o texto de erro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ValidationError.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IDictionary" /> para a definição e o armazenamento de dados definido pelo usuário relacionados a esta instância.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> para a definição e o armazenamento de dados definido pelo usuário relacionados a esta instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,594 @@
+<Type Name="WorkflowServiceHost" FullName="System.ServiceModel.Activities.WorkflowServiceHost">
+  <TypeSignature Language="C#" Value="public class WorkflowServiceHost : System.ServiceModel.ServiceHostBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowServiceHost extends System.ServiceModel.ServiceHostBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.WorkflowServiceHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.ServiceHostBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um host para fluxos de trabalho. Dá suporte a recursos como atividades, várias instâncias e configuração de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe.  
+  
+ [!code-csharp[SendReceiveParameters#03](~/samples/snippets/csharp/VS_Snippets_CFX/sendreceiveparameters/cs/echoworkflowservice/program.cs#03)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowServiceHost ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activities.WorkflowServiceHost" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (System.Activities.Activity activity, params Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity activity, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.#ctor(System.Activities.Activity,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Activities.Activity" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="activity">A atividade raiz do serviço de fluxo de trabalho.</param>
+        <param name="baseAddresses">Uma matriz de endereços de base para o serviço de fluxo de trabalho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Activities.WorkflowServiceHost" /> classe usando a atividade especificada e os endereços de base.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar este construtor.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (object serviceImplementation, params Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object serviceImplementation, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.#ctor(System.Object,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceImplementation" Type="System.Object" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="serviceImplementation">A atividade raiz do serviço de fluxo de trabalho para ser hospedada.</param>
+        <param name="baseAddresses">Uma matriz de endereços de base para o serviço de fluxo de trabalho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Activities.WorkflowServiceHost" /> classe usando os endereços de base e o objeto de serviço especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (System.ServiceModel.Activities.WorkflowService serviceDefinition, params Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Activities.WorkflowService serviceDefinition, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.#ctor(System.ServiceModel.Activities.WorkflowService,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceDefinition" Type="System.ServiceModel.Activities.WorkflowService" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="serviceDefinition">O serviço de fluxo de trabalho para o host.</param>
+        <param name="baseAddresses">Uma matriz de endereços de base para o serviço hospedado do fluxo de trabalho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Activities.WorkflowServiceHost" /> classe usando a definição de serviço especificado e a coleção de endereços base.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Activity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Activity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.WorkflowServiceHost.Activity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atividade raiz do serviço hospedado do fluxo de trabalho.</summary>
+        <value>A atividade raiz do serviço hospedado do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public override void AddServiceEndpoint (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddServiceEndpoint(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.AddServiceEndpoint(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade de serviço para adicionar.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o host de serviço de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.ServiceModel.Activities.WorkflowServiceHost.AddServiceEndpoint%2A>.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (string implementedContract, System.ServiceModel.Channels.Binding binding, string address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(string implementedContract, class System.ServiceModel.Channels.Binding binding, string address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O contrato de serviço exposto pelo ponto de extremidade.</param>
+        <param name="binding">A associação para o ponto de extremidade.</param>
+        <param name="address">O endereço do ponto de extremidade.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o host de serviço de fluxo de trabalho usando o contrato especificado, a associação e o endereço.</summary>
+        <returns>Um ponto de extremidade de serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um ponto de extremidade de serviço usando esse método.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (string implementedContract, System.ServiceModel.Channels.Binding binding, Uri address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(string implementedContract, class System.ServiceModel.Channels.Binding binding, class System.Uri address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O contrato de serviço exposto pelo ponto de extremidade.</param>
+        <param name="binding">A associação para o ponto de extremidade.</param>
+        <param name="address">O endereço do ponto de extremidade.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o host de serviço de fluxo de trabalho usando o contrato especificado, a associação e o endereço.</summary>
+        <returns>Um ponto de extremidade de serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um ponto de extremidade de serviço usando esse método.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (string implementedContract, System.ServiceModel.Channels.Binding binding, string address, Uri listenUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(string implementedContract, class System.ServiceModel.Channels.Binding binding, string address, class System.Uri listenUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.String,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O contrato de serviço exposto pelo ponto de extremidade.</param>
+        <param name="binding">A associação para o ponto de extremidade.</param>
+        <param name="address">O endereço do ponto de extremidade.</param>
+        <param name="listenUri">O endereço no qual o ponto de extremidade de serviço escuta mensagens de entrada.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o host de serviço de fluxo de trabalho usando o contrato especificado, a associação, o endereço de ponto de extremidade e URI de escuta.</summary>
+        <returns>Um ponto de extremidade de serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um ponto de extremidade de serviço usando esse método.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (string implementedContract, System.ServiceModel.Channels.Binding binding, Uri address, Uri listenUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(string implementedContract, class System.ServiceModel.Channels.Binding binding, class System.Uri address, class System.Uri listenUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O contrato exposto pelo ponto de extremidade.</param>
+        <param name="binding">A associação para o ponto de extremidade.</param>
+        <param name="address">O endereço do endpoint.l</param>
+        <param name="listenUri">O endereço no qual o ponto de extremidade de serviço escuta mensagens de entrada.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o host de serviço de fluxo de trabalho usando o contrato especificado, a associação, o endereço de ponto de extremidade e URI de escuta.</summary>
+        <returns>Um ponto de extremidade de serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um ponto de extremidade de serviço usando esse método.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (System.Xml.Linq.XName serviceContractName, System.ServiceModel.Channels.Binding binding, string address, Uri listenUri = null, string behaviorConfigurationName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Xml.Linq.XName serviceContractName, class System.ServiceModel.Channels.Binding binding, string address, class System.Uri listenUri, string behaviorConfigurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.AddServiceEndpoint(System.Xml.Linq.XName,System.ServiceModel.Channels.Binding,System.String,System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceContractName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+        <Parameter Name="behaviorConfigurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceContractName">O contrato exposto pelo ponto de extremidade</param>
+        <param name="binding">A associação para o ponto de extremidade.</param>
+        <param name="address">O endereço do ponto de extremidade.</param>
+        <param name="listenUri">O endereço no qual o ponto de extremidade de serviço escuta mensagens de entrada.</param>
+        <param name="behaviorConfigurationName">O nome de configuração de comportamento de ponto de extremidade.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o host de serviço de fluxo de trabalho usando o contrato especificado, a associação, o endereço de ponto de extremidade, escutar o URI e o nome da configuração de comportamento.</summary>
+        <returns>Um ponto de extremidade de serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um ponto de extremidade de serviço usando esse método.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (System.Xml.Linq.XName serviceContractName, System.ServiceModel.Channels.Binding binding, Uri address, Uri listenUri = null, string behaviorConfigurationName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Xml.Linq.XName serviceContractName, class System.ServiceModel.Channels.Binding binding, class System.Uri address, class System.Uri listenUri, string behaviorConfigurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.AddServiceEndpoint(System.Xml.Linq.XName,System.ServiceModel.Channels.Binding,System.Uri,System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceContractName" Type="System.Xml.Linq.XName" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+        <Parameter Name="behaviorConfigurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceContractName">O contrato exposto pelo ponto de extremidade.</param>
+        <param name="binding">A associação para o ponto de extremidade.</param>
+        <param name="address">O endereço do ponto de extremidade.</param>
+        <param name="listenUri">O endereço no qual o ponto de extremidade de serviço escuta mensagens de entrada.</param>
+        <param name="behaviorConfigurationName">O nome da configuração de comportamento.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o host de serviço de fluxo de trabalho usando especificado implementado contrato, associação, o endereço do ponto de extremidade, escuta o URI e um nome de configuração de comportamento.</summary>
+        <returns>Um ponto de extremidade de serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um ponto de extremidade de serviço usando esse método.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDescription">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Description.ServiceDescription CreateDescription (out System.Collections.Generic.IDictionary&lt;string,System.ServiceModel.Description.ContractDescription&gt; implementedContracts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Description.ServiceDescription CreateDescription([out] class System.Collections.Generic.IDictionary`2&lt;string, class System.ServiceModel.Description.ContractDescription&gt;&amp; implementedContracts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.CreateDescription(System.Collections.Generic.IDictionary{System.String,System.ServiceModel.Description.ContractDescription}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContracts" Type="System.Collections.Generic.IDictionary&lt;System.String,System.ServiceModel.Description.ContractDescription&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContracts">Uma coleção de pares chave/valor que contém a descrição do contrato para o serviço hospedado do fluxo de trabalho.</param>
+        <summary>Cria uma descrição de serviço do serviço hospedado do fluxo de trabalho usando a coleção de par chave/valor especificado do endereço, associação, contrato e o comportamento de informações de ponto de extremidade de serviço.</summary>
+        <returns>Um serviço para o serviço hospedado do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substitua este método para controlar como a descrição do serviço do serviço hospedado do fluxo de trabalho é criada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DurableInstancingOptions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activities.DurableInstancingOptions DurableInstancingOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Activities.DurableInstancingOptions DurableInstancingOptions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.DurableInstancingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.Activities.DurableInstancingOptions" /> associado com o host de serviço de fluxo de trabalho.</summary>
+        <value>As opções de instância duráveis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRuntime">
+      <MemberSignature Language="C#" Value="protected override void InitializeRuntime ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeRuntime() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.InitializeRuntime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o tempo de execução para o host de serviço de fluxo de trabalho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAbort">
+      <MemberSignature Language="C#" Value="protected override void OnAbort ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAbort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.OnAbort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando o host de serviço de fluxo de trabalho foi anulado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginClose">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginClose (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginClose(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O período de tempo a que operação de fechamento assíncrona deve concluir antes do tempo limite.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão da operação de fechamento assíncrona.</param>
+        <param name="state">Dados de estado definidos pelo usuário que está associados com o assíncrona a operação de fechamento.</param>
+        <summary>Inicia uma operação assíncrona invocada quando o host de serviço de fluxo de trabalho é fechado.</summary>
+        <returns>Uma referência para a operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClose">
+      <MemberSignature Language="C#" Value="protected override void OnClose (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClose(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.OnClose(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O período de tempo a operação de fechamento deve concluir antes do tempo limite.</param>
+        <summary>Encerra o serviço hospedado, incluindo os distribuidores de canal e contextos de instância associada e ouvintes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tempo de execução do fluxo de trabalho tentará manter qualquer fluxo de trabalho hospedado quando <xref:System.ServiceModel.Activities.WorkflowServiceHost.OnClose%2A> é chamado, mas não há garantia de persistência neste cenário.  Se os dados de negócios importantes está sendo hospedados, as instâncias devem persistir com frequência (como após cada operação de envio, ou após um intervalo de tempo) para garantir que os dados não são perdidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndClose">
+      <MemberSignature Language="C#" Value="protected override void OnEndClose (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndClose(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.WorkflowServiceHost.OnEndClose(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Uma referência para a operação assíncrona.</param>
+        <summary>Conclui uma operação assíncrona invocada quando o host de serviço de fluxo de trabalho é fechado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedVersions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Activities.WorkflowService&gt; SupportedVersions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Activities.WorkflowService&gt; SupportedVersions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Activities.WorkflowService&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista das versões de fluxo de trabalho que são suportados por este host de serviço de fluxo de trabalho.</summary>
+        <value>Uma lista das versões de fluxo de trabalho que são suportados por este host de serviço de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowExtensions">
+      <MemberSignature Language="C#" Value="public System.Activities.Hosting.WorkflowInstanceExtensionManager WorkflowExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Hosting.WorkflowInstanceExtensionManager WorkflowExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Hosting.WorkflowInstanceExtensionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Activities.Hosting.WorkflowInstanceExtensionManager" /> objeto para adicionar ou remover extensões para a instância do serviço de fluxo de trabalho.</summary>
+        <value>Gerenciador de extensões de instância de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar uma extensão para o host de serviço de fluxo de trabalho.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

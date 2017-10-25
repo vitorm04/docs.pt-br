@@ -1,0 +1,13 @@
+<Namespace Name="System.Net.Mail">
+  <Docs>
+    <summary>O <see cref="N:System.Net.Mail" /> namespace contém classes usadas para enviar email para um servidor SMTP Simple Mail Transfer Protocol () para entrega.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Mail.MailMessage> classe representa o conteúdo de uma mensagem de email. O <xref:System.Net.Mail.SmtpClient> classe transmite o host SMTP que você designa para a entrega de mensagens de email. Você pode criar os anexos de email usando o <xref:System.Net.Mail.Attachment> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,86 @@
+<Type Name="ISymbolBinder" FullName="System.Diagnostics.SymbolStore.ISymbolBinder">
+  <TypeSignature Language="C#" Value="public interface ISymbolBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISymbolBinder" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.ISymbolBinder" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um associador de símbolo para código gerenciado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esta interface é a contraparte gerenciada do `ISymUnmanagedBinder` interface, que é uma das interfaces de armazenamento de símbolo não gerenciadas que fornecem uma maneira alternativa para ler e gravar informações de símbolo de depuração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetReader">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.ISymbolReader GetReader (int importer, string filename, string searchPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolReader GetReader(int32 importer, string filename, string searchPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.ISymbolBinder.GetReader(System.Int32,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.StackTrace</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This interface is not 64-bit clean.  Use ISymbolBinder1 instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.Int32" />
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="searchPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="importer">A interface de importação de metadados.</param>
+        <param name="filename">O nome do arquivo para o qual a interface de leitor é necessária.</param>
+        <param name="searchPath">O caminho de pesquisa usado para localizar o arquivo de símbolo.</param>
+        <summary>Obtém a interface do leitor de símbolo para o arquivo atual.</summary>
+        <returns>O <see cref="T:System.Diagnostics.SymbolStore.ISymbolReader" /> símbolos de interface que lê a depuração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando é fornecida uma interface de metadados, um nome de arquivo e um caminho de pesquisa, o <xref:System.Diagnostics.SymbolStore.ISymbolBinder.GetReader%2A> método retorna o <xref:System.Diagnostics.SymbolStore.ISymbolReader> interface que lê os símbolos de depuração associados com o módulo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

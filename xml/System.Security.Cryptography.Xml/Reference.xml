@@ -1,0 +1,474 @@
+<Type Name="Reference" FullName="System.Security.Cryptography.Xml.Reference">
+  <TypeSignature Language="C#" Value="public class Reference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Reference extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.Reference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento <see langword="&lt;reference&gt;" /> de uma assinatura XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.Reference> objeto representa o <`reference`> elemento de uma assinatura digital XML definido pela especificação de assinatura digital XML.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.Reference> objeto para especificar as seguintes informações:  
+  
+-   O algoritmo de digest usado para fazer logon do objeto de dados.  Esse valor é necessário.  
+  
+-   O identificador de URI (Uniform Resource) do objeto de dados para entrar. O URI pode especificar um caminho de arquivo ou elementos específicos dentro de um documento XML.  Esse valor é necessário.  
+  
+-   Uma cadeia de transformações para aplicar antes de gerar o resumo. Esse valor é opcional.  
+  
+-   O tipo de objeto para entrar.  Esse valor é opcional.  
+  
+-   Um identificador exclusivo usado para fazer referência atual `<reference>` elemento.  Esse valor é opcional.  
+  
+ Para obter mais informações sobre o <`reference`> elemento, consulte o W3C especificação em www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como gerar e verificar uma assinatura XML envelopado usando o <xref:System.Security.Cryptography.Xml.Reference> objeto.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Reference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Reference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.Reference" /> com propriedades padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como gerar e verificar uma assinatura XML envelopado usando o <xref:System.Security.Cryptography.Xml.Reference> objeto.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como gerar e verificar uma assinatura XML desanexado usando o <xref:System.Security.Cryptography.Xml.Reference> objeto.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CPP/xmldsigdetach.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CS/xmldsigdetach.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/VB/xmldsigdetach.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Reference (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Reference.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O <see cref="T:System.IO.Stream" /> com a qual inicializar a nova instância de <see cref="T:System.Security.Cryptography.Xml.Reference" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.Reference" /> classe com um valor de hash do <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Security.Cryptography.Xml.Reference> o valor de hash que corresponde ao objeto de `stream` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Reference (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Reference.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O <see cref="T:System.Uri" /> com a qual inicializar a nova instância de <see cref="T:System.Security.Cryptography.Xml.Reference" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.Reference" /> com o <see cref="T:System.Uri" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Security.Cryptography.Xml.Reference> objeto para os dados no URI com processamento especial para `""`, `#xpointer(/)`, e `#xxxx`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa a <xref:System.Security.Cryptography.Xml.Reference> classe para assinar e verificar um documento XML usando uma assinatura de envelope.  
+  
+ [!code-cpp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.Signature - Envelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.Signature - Envelope/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTransform">
+      <MemberSignature Language="C#" Value="public void AddTransform (System.Security.Cryptography.Xml.Transform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddTransform(class System.Security.Cryptography.Xml.Transform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Reference.AddTransform(System.Security.Cryptography.Xml.Transform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transform" Type="System.Security.Cryptography.Xml.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="transform">A transformação a ser adicionada à lista de transformações.</param>
+        <summary>Adiciona um objeto <see cref="T:System.Security.Cryptography.Xml.Transform" /> à lista de transformações a serem executadas nos dados antes de passá-los para o algoritmo de resumo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.Reference.AddTransform%2A> método modifica o `<Transform>` elemento e subelementos associados de uma assinatura digital XML.  
+  
+ São aplicadas na ordem na qual eles foram adicionados. Se nenhum transformações forem especificadas, o requisito mínimo de transformações são adicionadas automaticamente.  
+  
+ Para obter mais informações sobre assinaturas digitais XML, consulte a especificação do W3C em www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como gerar e verificar uma assinatura XML envelopado usando o <xref:System.Security.Cryptography.Xml.Reference> objeto.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como gerar e verificar uma assinatura XML desanexado usando o <xref:System.Security.Cryptography.Xml.Reference> objeto.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CPP/xmldsigdetach.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/CS/xmldsigdetach.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigDetached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigDetached/VB/xmldsigdetach.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="transform" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DigestMethod">
+      <MemberSignature Language="C#" Value="public string DigestMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DigestMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Reference.DigestMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método de resumo do URI (Uniform Resource Identifier) do <see cref="T:System.Security.Cryptography.Xml.Reference" /> atual.</summary>
+        <value>O URI do método de resumo do <see cref="T:System.Security.Cryptography.Xml.Reference" /> atual. O valor padrão é “http://www.w3.org/2000/09/xmldsig#sha1”.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.Reference.DigestMethod%2A> propriedade usa uma cadeia de caracteres do URI para representar o <`DigestMethod`> elemento de uma assinatura digital XML.  
+  
+ O método digest é o algoritmo usado para hash de <xref:System.Security.Cryptography.Xml.Reference>. O algoritmo padrão é <xref:System.Security.Cryptography.SHA1>.  
+  
+ Para obter mais informações sobre assinaturas digitais XML, consulte a especificação do W3C em www.w3.org/TR/xmldsig-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DigestValue">
+      <MemberSignature Language="C#" Value="public byte[] DigestValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] DigestValue" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Reference.DigestValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de resumo do <see cref="T:System.Security.Cryptography.Xml.Reference" /> atual.</summary>
+        <value>O valor de resumo do <see cref="T:System.Security.Cryptography.Xml.Reference" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.Reference.DigestValue%2A> propriedade usa uma matriz de bytes para representar o <`DigestValue`> elemento de uma assinatura digital XML.  
+  
+ O <xref:System.Security.Cryptography.Xml.Reference.DigestValue%2A> propriedade contém o valor de codificada em Base 64 do resumo do objeto descrito pelo <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> propriedade.  
+  
+ O <xref:System.Security.Cryptography.Xml.Reference.DigestValue%2A> propriedade é preenchida automaticamente com o valor apropriado sempre que você fizer uma chamada para <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature%2A>.  
+  
+ Para obter mais informações sobre assinaturas digitais XML, consulte a especificação do W3C em www.w3.org/TR/xmldsig-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Reference.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação XML do <see cref="T:System.Security.Cryptography.Xml.Reference" />.</summary>
+        <returns>A representação XML do <see cref="T:System.Security.Cryptography.Xml.Reference" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">A propriedade <see cref="P:System.Security.Cryptography.Xml.Reference.DigestMethod" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Security.Cryptography.Xml.Reference.DigestValue" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Reference.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID do <see cref="T:System.Security.Cryptography.Xml.Reference" /> atual.</summary>
+        <value>A ID do <see cref="T:System.Security.Cryptography.Xml.Reference" /> atual. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.Reference.Id%2A> propriedade a ser adicionada a uma ID de cadeia de caracteres para a representação XML do atual <xref:System.Security.Cryptography.Xml.Reference> elemento. A ID é usada como referência a <xref:System.Security.Cryptography.Xml.Reference> elemento de outro local.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.Reference.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">O elemento XML do qual carregar o <see cref="T:System.Security.Cryptography.Xml.Reference" /> estado.</param>
+        <summary>Carrega um estado <see cref="T:System.Security.Cryptography.Xml.Reference" /> de um elemento XML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <paramref name="value" /> parâmetro não contém quaisquer transformações.  
+  
+ -ou-  
+  
+ O <paramref name="value" /> parâmetro contém uma transformação desconhecida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformChain">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.TransformChain TransformChain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.TransformChain TransformChain" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Reference.TransformChain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.TransformChain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de transformação do atual <see cref="T:System.Security.Cryptography.Xml.Reference" />.</summary>
+        <value>A cadeia de transformação do atual <see cref="T:System.Security.Cryptography.Xml.Reference" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.Reference.TransformChain%2A> propriedade representa o <`Transform`> elemento e subelementos associados de uma assinatura digital XML.  
+  
+ A cadeia de transformação é uma lista ordenada de transformações. A saída dessas transformações constitui a entrada para o algoritmo de hash especificado no <xref:System.Security.Cryptography.Xml.Reference.DigestMethod%2A> propriedade.  
+  
+ Para obter mais informações sobre assinaturas digitais XML, consulte a especificação do W3C em www.w3.org/TR/xmldsig-core/.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Reference.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo do objeto que está sendo assinado.</summary>
+        <value>O tipo do objeto que está sendo assinado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.Reference.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Uri" /> do atual <see cref="T:System.Security.Cryptography.Xml.Reference" />.</summary>
+        <value>O <see cref="T:System.Uri" /> do atual <see cref="T:System.Security.Cryptography.Xml.Reference" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> propriedade usa uma cadeia de caracteres de identificador de recurso uniforme (URI) para representar o <`URI`> elemento de uma assinatura digital XML.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> propriedade para especificar o local de um documento para assinar e para especificar qual elemento do documento XML atual para assinar ou indicar que o documento inteiro deve ser assinado.  
+  
+ Para criar com êxito uma assinatura digital XML, você deve definir o <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> propriedade. A tabela a seguir descreve os valores que você pode passar para o <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> propriedade.  
+  
+|Objeto para entrar|Valor passado para o <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> propriedade|  
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Um documento XML inteiro usando uma assinatura envelopada.|Uma cadeia de caracteres vazia: ""|  
+|Um elemento específico dentro de um documento XML usando uma assinatura envelopada.|O nome de um elemento XML identificado por uma ID de nome de atributo. A cadeia de caracteres deve ter o formato a seguir onde `IDname` é o nome de uma ID de nome de atributo válido:<br /><br /> "#Idname"|  
+|Um arquivo usando uma assinatura separada.|O URI de um arquivo: "c:\data.jpg" ou "c:\data.xml".|  
+  
+ Para obter mais informações sobre assinaturas digitais XML, consulte o World Wide Web Consortium (W3C) [sintaxe de assinatura XML e a especificação de processamento](http://www.w3.org/TR/xmldsig-core/).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como gerar e verificar uma assinatura XML envelopado usando o <xref:System.Security.Cryptography.Xml.Reference> objeto.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

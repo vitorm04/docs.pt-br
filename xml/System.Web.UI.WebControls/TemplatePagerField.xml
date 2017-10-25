@@ -1,0 +1,330 @@
+<Type Name="TemplatePagerField" FullName="System.Web.UI.WebControls.TemplatePagerField">
+  <TypeSignature Language="C#" Value="public class TemplatePagerField : System.Web.UI.WebControls.DataPagerField" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplatePagerField extends System.Web.UI.WebControls.DataPagerField" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TemplatePagerField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataPagerField</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um campo <see cref="T:System.Web.UI.WebControls.DataPager" /> que permite criar uma interface do usuário de paginação personalizada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TemplatePagerField> objeto para exibir controles de navegação que permitem aos usuários para a página por meio de dados que são exibidos por um controle que implementa o <xref:System.Web.UI.WebControls.IPageableItemContainer> interface. (Um exemplo é o <xref:System.Web.UI.WebControls.ListView> controle.) Você também pode usar o <xref:System.Web.UI.WebControls.TemplatePagerField> objeto para exibir informações sobre a fonte de dados subjacente, como o número total de registros e o número da página atual.  
+  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField> campo tem interna de layout. Portanto, você deve criar o layout em explicitamente o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerTemplate%2A> modelo. Você pode formatar o conteúdo usando classes CSS (folhas) de estilo em cascata ou elementos de estilo embutido.  
+  
+ Você pode fazer referência a <xref:System.Web.UI.WebControls.DataPager> controle que contém o <xref:System.Web.UI.WebControls.TemplatePagerField> objeto usando o `Container` propriedade. Isso é útil quando você deseja criar expressões de associação para mostrar quantos registros foram recuperados, o número total de páginas e informações semelhantes. Essas expressões de associação podem usar propriedades de <xref:System.Web.UI.WebControls.DataPager> controlar como <xref:System.Web.UI.WebControls.DataPager.MaximumRows%2A>, <xref:System.Web.UI.WebControls.DataPager.PageSize%2A>, <xref:System.Web.UI.WebControls.DataPager.StartRowIndex%2A>, e <xref:System.Web.UI.WebControls.DataPager.TotalRowCount%2A>.  
+  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField> campo fornece o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand> evento, que normalmente é usado para executar uma tarefa quando um botão no <xref:System.Web.UI.WebControls.TemplatePagerField.PagerTemplate%2A> modelo é clicado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um <xref:System.Web.UI.WebControls.TemplatePagerField> campo um <xref:System.Web.UI.WebControls.DataPager> controle. Este exemplo usa o <xref:System.Web.UI.WebControls.TemplatePagerField> para exibir o número da página atual, o número total de páginas e o número total de registros. O <xref:System.Web.UI.WebControls.DataPager> controle também contém dois <xref:System.Web.UI.WebControls.NextPreviousPagerField> campos e um <xref:System.Web.UI.WebControls.NumericPagerField> campo para exibir controles de navegação que permitem aos usuários por meio de dados da página.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.TemplatePagerField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatePagerField/CS/TemplatePagerFieldCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.TemplatePagerField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatePagerField/VB/TemplatePagerFieldVB.aspx#1)]  
+  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand> evento para executar uma ação diferente, dependendo de qual botão foi clicado em uma <xref:System.Web.UI.WebControls.TemplatePagerField> campo. Este exemplo usa o <xref:System.Web.UI.WebControls.TemplatePagerField> para exibir controles de navegação que permitem aos usuários por meio de dados da página.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand/CS/OnPagerCommandCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand/VB/OnPagerCommandVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplatePagerField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplatePagerField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.TemplatePagerField" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado normalmente para adicionar dinamicamente os campos para um <xref:System.Web.UI.WebControls.DataPager> controle.  
+  
+ Para adicionar um <xref:System.Web.UI.WebControls.TemplatePagerField> dinamicamente ao objeto um <xref:System.Web.UI.WebControls.DataPager> controlar, crie um novo <xref:System.Web.UI.WebControls.TemplatePagerField> objeto. Defina suas propriedades, adicionar controles a ela e, em seguida, adicioná-lo à coleção de campos de <xref:System.Web.UI.WebControls.DataPager> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataPagerField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataPagerField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplatePagerField.CopyProperties(System.Web.UI.WebControls.DataPagerField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataPagerField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">O objeto ao qual as propriedades do atual <see cref="T:System.Web.UI.WebControls.TemplatePagerField" /> instância será copiada.</param>
+        <summary>Copia as propriedades do atual <see cref="T:System.Web.UI.WebControls.TemplatePagerField" /> objeto especificado <see cref="T:System.Web.UI.WebControls.DataPagerField" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField.CopyProperties%2A> é um método auxiliar. É usado pelo <xref:System.Web.UI.WebControls.DataPagerField.CloneField%2A> método para copiar as propriedades do atual <xref:System.Web.UI.WebControls.TemplatePagerField> o objeto para o <xref:System.Web.UI.WebControls.DataPagerField> objeto que é passado a `newField` parâmetro.  
+  
+   
+  
+## Examples  
+ [Visão geral do controle de servidor Web ListView](http://msdn.microsoft.com/library/8b4da934-2f5e-4b5a-b03d-fca5e15f85af)  
+  
+ <xref:System.Web.UI.WebControls.TemplatePagerField.CreateField%2A>  
+  
+ <xref:System.Web.UI.WebControls.DataPagerField>  
+  
+ <xref:System.Web.UI.WebControls.DataPagerField.CloneField%2A>  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.Web.UI.WebControls.TemplatePagerField.CopyProperties(System.Web.UI.WebControls.DataPagerField)" /> método para copiar as novas propriedades foram criadas na classe derivada. Chame a classe base <see cref="M:System.Web.UI.WebControls.TemplatePagerField.CopyProperties(System.Web.UI.WebControls.DataPagerField)" /> método para que as propriedades da <see cref="T:System.Web.UI.WebControls.TemplatePagerField" /> classe também serão copiados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDataPagers">
+      <MemberSignature Language="C#" Value="public override void CreateDataPagers (System.Web.UI.WebControls.DataPagerFieldItem container, int startRowIndex, int maximumRows, int totalRowCount, int fieldIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateDataPagers(class System.Web.UI.WebControls.DataPagerFieldItem container, int32 startRowIndex, int32 maximumRows, int32 totalRowCount, int32 fieldIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplatePagerField.CreateDataPagers(System.Web.UI.WebControls.DataPagerFieldItem,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Web.UI.WebControls.DataPagerFieldItem" />
+        <Parameter Name="startRowIndex" Type="System.Int32" />
+        <Parameter Name="maximumRows" Type="System.Int32" />
+        <Parameter Name="totalRowCount" Type="System.Int32" />
+        <Parameter Name="fieldIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="container">O contêiner que é usado para armazenar os controles.</param>
+        <param name="startRowIndex">O índice do primeiro registro na página.</param>
+        <param name="maximumRows">O número máximo de itens em uma única página.</param>
+        <param name="totalRowCount">O número total de itens.</param>
+        <param name="fieldIndex">O índice do campo de pager de dados no <see cref="P:System.Web.UI.WebControls.DataPager.Fields" /> coleção.</param>
+        <summary>Cria o usuário controles de interface do usuário para o objeto de campo do pager e os adiciona ao contêiner especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField.CreateDataPagers%2A> é um método auxiliar que é usado pelo <xref:System.Web.UI.WebControls.DataPager.CreatePagerFields%2A?displayProperty=nameWithType> método. O <xref:System.Web.UI.WebControls.TemplatePagerField.CreateDataPagers%2A> método preenche o <xref:System.Web.UI.WebControls.DataPagerFieldItem> objeto que é especificado pelo `container` parâmetro com os controles filho que estão contidos no <xref:System.Web.UI.WebControls.TemplatePagerField.PagerTemplate%2A> modelo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataPagerField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataPagerField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplatePagerField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataPagerField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma nova instância do <see cref="T:System.Web.UI.WebControls.TemplatePagerField" /> classe.</summary>
+        <returns>Uma nova instância da classe <see cref="T:System.Web.UI.WebControls.TemplatePagerField" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField.CreateField%2A> é um método auxiliar. Ele é usado pelo <xref:System.Web.UI.WebControls.DataPagerField.CloneField%2A> método da classe base para criar um vazio <xref:System.Web.UI.WebControls.TemplatePagerField> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.Web.UI.WebControls.TemplatePagerField.CreateField" /> método para retornar uma nova instância da classe derivada. Não chame o <see cref="M:System.Web.UI.WebControls.TemplatePagerField.CreateField" /> método da classe base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleEvent">
+      <MemberSignature Language="C#" Value="public override void HandleEvent (System.Web.UI.WebControls.CommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void HandleEvent(class System.Web.UI.WebControls.CommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplatePagerField.HandleEvent(System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Trata os eventos que ocorrem no <see cref="T:System.Web.UI.WebControls.TemplatePagerField" /> do objeto e executa a ação apropriada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField.HandleEvent%2A> é um método auxiliar. Ele é usado pelo <xref:System.Web.UI.WebControls.DataPager.OnBubbleEvent%2A?displayProperty=nameWithType> método para lidar com eventos que ocorrem no <xref:System.Web.UI.WebControls.TemplatePagerField> do objeto quando um botão dentro do controle é clicado.  
+  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField.HandleEvent%2A> método invoca o <xref:System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand%2A> método e examina o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewStartRowIndex%2A?displayProperty=nameWithType> propriedade. Se <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewStartRowIndex%2A?displayProperty=nameWithType> foi alterado, este método chama o <xref:System.Web.UI.WebControls.DataPager.SetPageProperties%2A?displayProperty=nameWithType> método para atualizar as propriedades de página do <xref:System.Web.UI.WebControls.DataPager> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPagerCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnPagerCommand (System.Web.UI.WebControls.DataPagerCommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPagerCommand(class System.Web.UI.WebControls.DataPagerCommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand(System.Web.UI.WebControls.DataPagerCommandEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.DataPagerCommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.TemplatePagerField.PagerCommand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand> é gerado quando um botão é clicado no <xref:System.Web.UI.WebControls.TemplatePagerField> objeto. Isso permite que você realize uma rotina personalizada sempre que esse evento ocorre.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum manipulador para o evento <see cref="E:System.Web.UI.WebControls.TemplatePagerField.PagerCommand" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Quando você substituir <see cref="M:System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand(System.Web.UI.WebControls.DataPagerCommandEventArgs)" /> em uma classe derivada, chame a classe base <see cref="M:System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand(System.Web.UI.WebControls.DataPagerCommandEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PagerCommand">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.DataPagerCommandEventArgs&gt; PagerCommand;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.DataPagerCommandEventArgs&gt; PagerCommand" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.TemplatePagerField.PagerCommand" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.DataPagerCommandEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um botão é clicado em uma <see cref="T:System.Web.UI.WebControls.TemplatePagerField" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand> é gerado quando um botão é clicado em uma <xref:System.Web.UI.WebControls.TemplatePagerField> objeto. Isso permite que você realize uma rotina personalizada sempre que esse evento ocorre.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand> evento para executar uma ação diferente, dependendo de qual botão foi clicado em uma <xref:System.Web.UI.WebControls.TemplatePagerField> objeto.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand/CS/OnPagerCommandCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatePagerField.OnPagerCommand/VB/OnPagerCommandVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagerTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate PagerTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate PagerTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatePagerField.PagerTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.DataPagerFieldItem), System.ComponentModel.BindingDirection.TwoWay)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo personalizado para o campo de paginação em um controle <see cref="T:System.Web.UI.WebControls.DataPager" />.</summary>
+        <value>Um objeto de modelo com o conteúdo personalizado para o campo de paginação em um controle <see cref="T:System.Web.UI.WebControls.DataPager" />. O padrão é <see langword="null" />, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerTemplate%2A> propriedade para definir uma interface de usuário personalizada (UI) para paginar os dados. O <xref:System.Web.UI.WebControls.TemplatePagerField.PagerTemplate%2A> modelo geralmente contém controles de navegação de página por meio de dados. Ele também pode ser usado para exibir informações sobre a fonte de dados subjacente, como o número total de registros ou o número da página atual.  
+  
+ Para criar um modelo personalizado declarativamente, coloque uma `PagerTemplate` elemento dentro do <xref:System.Web.UI.WebControls.TemplatePagerField> objeto. Você pode adicionar o conteúdo para o `PagerTemplate` elemento.  
+  
+ Você pode fazer referência a <xref:System.Web.UI.WebControls.DataPager> controle em expressões de associação de <xref:System.Web.UI.WebControls.TemplatePagerField.PagerTemplate%2A> modelo usando o `Container` propriedade. Esta propriedade fornece acesso às propriedades do <xref:System.Web.UI.WebControls.DataPager> controle, que inclui o <xref:System.Web.UI.WebControls.DataPager.StartRowIndex%2A>, <xref:System.Web.UI.WebControls.DataPager.MaximumRows%2A>, e <xref:System.Web.UI.WebControls.DataPager.TotalRowCount%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar controles para o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerTemplate%2A> que acessar propriedades do modelo de <xref:System.Web.UI.WebControls.DataPager> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.TemplatePagerField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatePagerField/CS/TemplatePagerFieldCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.TemplatePagerField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatePagerField/VB/TemplatePagerFieldVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

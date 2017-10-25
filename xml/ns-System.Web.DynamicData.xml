@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.DynamicData">
+  <Docs>
+    <summary>O <see cref="N:System.Web.DynamicData" /> namespace contém classes que fornecem a funcionalidade básica para Dynamic Data do ASP.NET. Ele também fornece recursos de extensibilidade que lhe permitem personalizar o comportamento de dados dinâmicos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

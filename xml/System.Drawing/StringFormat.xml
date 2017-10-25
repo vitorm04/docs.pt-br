@@ -1,0 +1,712 @@
+<Type Name="StringFormat" FullName="System.Drawing.StringFormat">
+  <TypeSignature Language="C#" Value="public sealed class StringFormat : MarshalByRefObject, ICloneable, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StringFormat extends System.MarshalByRefObject implements class System.ICloneable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.StringFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Encapsula as informações de layout de texto (como alinhamento, orientação e paradas de tabulação) manipulações de exibição (como inserção de reticências e substituição de dígitos nacionais) e recursos OpenType. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vários formatos comuns são fornecidos por meio de <xref:System.Drawing.StringFormatFlags> enumeração. <xref:System.Drawing.StringFormat>objetos podem ser alterados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringFormat ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa um novo objeto <see cref="T:System.Drawing.StringFormat" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.Drawing.StringFormat> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|FormatFlags|0 (nenhum sinalizador definido)|  
+|<xref:System.Drawing.StringFormat.HotkeyPrefix%2A>|<xref:System.Drawing.Text.HotkeyPrefix.None>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringFormat (System.Drawing.StringFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.StringFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.#ctor(System.Drawing.StringFormat)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="format" Type="System.Drawing.StringFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">O objeto <see cref="T:System.Drawing.StringFormat" /> do qual inicializar o novo objeto <see cref="T:System.Drawing.StringFormat" />.</param>
+        <summary>Inicializa um novo objeto <see cref="T:System.Drawing.StringFormat" /> do objeto <see cref="T:System.Drawing.StringFormat" /> existente especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra os seguintes membros:  
+  
+-   <xref:System.Drawing.Rectangle.%23ctor%2A>  
+  
+-   <xref:System.Drawing.StringFormat.%23ctor%2A>  
+  
+-   <xref:System.Drawing.StringFormat.%23ctor%2A>  
+  
+-   <xref:System.Drawing.StringFormat.Alignment%2A>  
+  
+-   <xref:System.Drawing.StringFormat.LineAlignment%2A>  
+  
+-   <xref:System.Drawing.StringAlignment>  
+  
+-   <xref:System.Drawing.StringFormatFlags>  
+  
+ Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário e uma chamada a `ShowLineAndAlignment` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.Misc2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Misc2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Misc2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringFormat (System.Drawing.StringFormatFlags options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.StringFormatFlags options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.#ctor(System.Drawing.StringFormatFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="System.Drawing.StringFormatFlags" />
+      </Parameters>
+      <Docs>
+        <param name="options">A enumeração <see cref="T:System.Drawing.StringFormatFlags" /> do novo objeto <see cref="T:System.Drawing.StringFormat" />.</param>
+        <summary>Inicializa um novo objeto <see cref="T:System.Drawing.StringFormat" /> com a enumeração <see cref="T:System.Drawing.StringFormatFlags" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra os seguintes membros:  
+  
+-   <xref:System.Drawing.Rectangle.%23ctor%2A>  
+  
+-   <xref:System.Drawing.StringFormat.%23ctor%2A>  
+  
+-   <xref:System.Drawing.StringFormat.%23ctor%2A>  
+  
+-   <xref:System.Drawing.StringFormat.Alignment%2A>  
+  
+-   <xref:System.Drawing.StringFormat.LineAlignment%2A>  
+  
+-   <xref:System.Drawing.StringAlignment>  
+  
+-   <xref:System.Drawing.StringFormatFlags>  
+  
+ Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário e uma chamada a `ShowLineAndAlignment` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.Misc2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Misc2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Misc2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StringFormat (System.Drawing.StringFormatFlags options, int language);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.StringFormatFlags options, int32 language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.#ctor(System.Drawing.StringFormatFlags,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="System.Drawing.StringFormatFlags" />
+        <Parameter Name="language" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="options">A enumeração <see cref="T:System.Drawing.StringFormatFlags" /> do novo objeto <see cref="T:System.Drawing.StringFormat" />.</param>
+        <param name="language">Um valor que indica o idioma do texto.</param>
+        <summary>Inicializa um novo objeto <see cref="T:System.Drawing.StringFormat" /> com a enumeração <see cref="T:System.Drawing.StringFormatFlags" /> e o idioma especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public System.Drawing.StringAlignment Alignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.StringAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.StringFormat.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento horizontal da cadeia de caracteres.</summary>
+        <value>Uma enumeração <see cref="T:System.Drawing.StringAlignment" /> que especifica o alinhamento horizontal da cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Drawing.StringFormat.LineAlignment%2A> para especificar o alinhamento vertical da cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.StringFormat.LineAlignment%2A> e <xref:System.Drawing.StringFormat.Alignment%2A> propriedades e o <xref:System.Drawing.StringAlignment> enumeração para alinhar as cadeias de caracteres. Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário e uma chamada a `ShowLineAndAlignment` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.Misc2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Misc2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Misc2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata desta <see cref="T:System.Drawing.StringFormat" /> objeto.</summary>
+        <returns>O <see cref="T:System.Drawing.StringFormat" /> cria esse método do objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DigitSubstitutionLanguage">
+      <MemberSignature Language="C#" Value="public int DigitSubstitutionLanguage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DigitSubstitutionLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.StringFormat.DigitSubstitutionLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o idioma que é usado quando os dígitos de local são substituídos dígitos ocidentais.</summary>
+        <value>Um identificador de idioma NLS (suporte ao idioma nacional) que identifica o idioma que será usado quando os dígitos locais forem substituídos por dígitos ocidentais. Você pode passar a propriedade <see cref="P:System.Globalization.CultureInfo.LCID" /> de um objeto <see cref="T:System.Globalization.CultureInfo" /> como o identificador de idioma NLS. Por exemplo, suponha que você crie um objeto <see cref="T:System.Globalization.CultureInfo" /> passando a cadeia de caracteres "ar-EG" para um construtor <see cref="T:System.Globalization.CultureInfo" />. Se você passar a propriedade <see cref="P:System.Globalization.CultureInfo.LCID" /> desse objeto <see cref="T:System.Globalization.CultureInfo" /> junto com <see cref="F:System.Drawing.StringDigitSubstitute.Traditional" /> para o método <see cref="M:System.Drawing.StringFormat.SetDigitSubstitution(System.Int32,System.Drawing.StringDigitSubstitute)" />, dígitos indo-arábicos serão substituídos por dígitos ocidentais no momento da exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DigitSubstitutionMethod">
+      <MemberSignature Language="C#" Value="public System.Drawing.StringDigitSubstitute DigitSubstitutionMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.StringDigitSubstitute DigitSubstitutionMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.StringFormat.DigitSubstitutionMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringDigitSubstitute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o método a ser usado para substituição de dígitos.</summary>
+        <value>Um <see cref="T:System.Drawing.StringDigitSubstitute" /> valor de enumeração que especifica como caracteres de substituição em uma cadeia de caracteres que não podem ser exibidos porque eles não são suportados pela fonte atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados por este <see cref="T:System.Drawing.StringFormat" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Drawing.StringFormat.Dispose%2A> permite que os recursos usados por este <xref:System.Drawing.StringFormat> objeto a ser realocada para outros fins.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~StringFormat ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um objeto tente liberar recursos e executar outras operações de limpeza antes de ser recuperado pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatFlags">
+      <MemberSignature Language="C#" Value="public System.Drawing.StringFormatFlags FormatFlags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.StringFormatFlags FormatFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.StringFormat.FormatFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormatFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma enumeração <see cref="T:System.Drawing.StringFormatFlags" /> que contém informações de formatação.</summary>
+        <value>Uma enumeração <see cref="T:System.Drawing.StringFormatFlags" /> que contém informações de formatação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericDefault">
+      <MemberSignature Language="C#" Value="public static System.Drawing.StringFormat GenericDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.StringFormat GenericDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.StringFormat.GenericDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto padrão <see cref="T:System.Drawing.StringFormat" /> genérico.</summary>
+        <value>O objeto padrão <see cref="T:System.Drawing.StringFormat" /> genérico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância padrão genérico de <xref:System.Drawing.StringFormat> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Drawing.StringFormat.FormatFlags%2A>|0|  
+|<xref:System.Drawing.StringFormat.Alignment%2A>|<xref:System.Drawing.StringAlignment.Near>|  
+|<xref:System.Drawing.StringFormat.LineAlignment%2A>|<xref:System.Drawing.StringAlignment.Near>|  
+|<xref:System.Drawing.StringFormat.Trimming%2A>|<xref:System.Drawing.StringTrimming.Character>|  
+|<xref:System.Drawing.StringFormat.HotkeyPrefix%2A>|<xref:System.Drawing.Text.HotkeyPrefix.None>|  
+|<xref:System.Drawing.StringFormat.DigitSubstitutionMethod%2A>|<xref:System.Drawing.StringDigitSubstitute.User>|  
+|<xref:System.Drawing.StringFormat.DigitSubstitutionLanguage%2A>|0|  
+  
+ Se você fizer alterações no <xref:System.Drawing.StringFormat> objeto retornado do <xref:System.Drawing.StringFormat.GenericDefault%2A> propriedade, essas alterações persistirão e futuras chamadas para o <xref:System.Drawing.StringFormat.GenericDefault%2A> propriedade reflete as alterações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericTypographic">
+      <MemberSignature Language="C#" Value="public static System.Drawing.StringFormat GenericTypographic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.StringFormat GenericTypographic" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.StringFormat.GenericTypographic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Drawing.StringFormat" /> tipográfico genérico.</summary>
+        <value>Um objeto <see cref="T:System.Drawing.StringFormat" /> tipográfico genérico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância tipográfica genérico do <xref:System.Drawing.StringFormat> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Drawing.StringFormat.FormatFlags%2A>|24580 (<xref:System.Drawing.StringFormatFlags.NoClip>, <xref:System.Drawing.StringFormatFlags.FitBlackBox> e <xref:System.Drawing.StringFormatFlags.LineLimit>.)|  
+|<xref:System.Drawing.StringFormat.Alignment%2A>|<xref:System.Drawing.StringAlignment.Near>|  
+|<xref:System.Drawing.StringFormat.LineAlignment%2A>|<xref:System.Drawing.StringAlignment.Near>|  
+|<xref:System.Drawing.StringFormat.Trimming%2A>|<xref:System.Drawing.StringTrimming.None>|  
+|<xref:System.Drawing.StringFormat.HotkeyPrefix%2A>|<xref:System.Drawing.Text.HotkeyPrefix.None>|  
+|<xref:System.Drawing.StringFormat.DigitSubstitutionMethod%2A>|<xref:System.Drawing.StringDigitSubstitute.User>|  
+|<xref:System.Drawing.StringFormat.DigitSubstitutionLanguage%2A>|0|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTabStops">
+      <MemberSignature Language="C#" Value="public float[] GetTabStops (out float firstTabOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32[] GetTabStops([out] float32&amp; firstTabOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.GetTabStops(System.Single@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstTabOffset" Type="System.Single&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="firstTabOffset">O número de espaços entre o início de uma linha de texto e a primeira parada de tabulação.</param>
+        <summary>Obtém as paradas de tabulação para este <see cref="T:System.Drawing.StringFormat" /> objeto.</summary>
+        <returns>Uma matriz de distâncias (em número de espaços) entre paradas de tabulação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Define as paradas de tabulação do <xref:System.Drawing.StringFormat>.  
+  
+-   Desenha a cadeia de caracteres e o retângulo de layout. Observe que a cadeia de caracteres contém guias. As configurações da guia do <xref:System.Drawing.StringFormat> especificam os deslocamentos do texto com guias.  
+  
+-   Obtém as paradas de tabulação e usa ou inspeciona os valores.  
+  
+ [!code-cpp[System.Drawing.ClassicStringFormatExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicStringFormatExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicStringFormatExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HotkeyPrefix">
+      <MemberSignature Language="C#" Value="public System.Drawing.Text.HotkeyPrefix HotkeyPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Text.HotkeyPrefix HotkeyPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.StringFormat.HotkeyPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Text.HotkeyPrefix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto <see cref="T:System.Drawing.Text.HotkeyPrefix" /> para esse objeto <see cref="T:System.Drawing.StringFormat" />.</summary>
+        <value>O objeto <see cref="T:System.Drawing.Text.HotkeyPrefix" /> para esse objeto <see cref="T:System.Drawing.StringFormat" />, o padrão é <see cref="F:System.Drawing.Text.HotkeyPrefix.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em uma interface gráfica do usuário, uma tecla de acesso é a letra sublinhada em uma palavra (geralmente combinada com outra chave, como a tecla Alt) que você pode pressionar no teclado para ativar a funcionalidade que representa a palavra.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir um atalho de teclado usando o <xref:System.Drawing.StringFormat.HotkeyPrefix%2A> propriedade. Ele também demonstra como usar o <xref:System.Drawing.SystemBrushes.FromSystemColor%2A> método. Para executar este exemplo, cole o código em um formulário, controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chame o método a seguir, passando e como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.MiscExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.MiscExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineAlignment">
+      <MemberSignature Language="C#" Value="public System.Drawing.StringAlignment LineAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.StringAlignment LineAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.StringFormat.LineAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento vertical da cadeia de caracteres.</summary>
+        <value>Uma enumeração <see cref="T:System.Drawing.StringAlignment" /> que representa o alinhamento da linha vertical.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Drawing.StringFormat.Alignment%2A> para especificar o alinhamento horizontal da cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.StringFormat.LineAlignment%2A> e <xref:System.Drawing.StringFormat.Alignment%2A> propriedades e o <xref:System.Drawing.StringAlignment> enumeração para alinhar as cadeias de caracteres. Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário e uma chamada a `ShowLineAndAlignment` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.Misc2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Misc2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Misc2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDigitSubstitution">
+      <MemberSignature Language="C#" Value="public void SetDigitSubstitution (int language, System.Drawing.StringDigitSubstitute substitute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDigitSubstitution(int32 language, valuetype System.Drawing.StringDigitSubstitute substitute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.SetDigitSubstitution(System.Int32,System.Drawing.StringDigitSubstitute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.Int32" />
+        <Parameter Name="substitute" Type="System.Drawing.StringDigitSubstitute" />
+      </Parameters>
+      <Docs>
+        <param name="language">Um identificador de idioma NLS (suporte ao idioma nacional) que identifica o idioma que será usado quando os dígitos locais forem substituídos por dígitos ocidentais. Você pode passar a propriedade <see cref="P:System.Globalization.CultureInfo.LCID" /> de um objeto <see cref="T:System.Globalization.CultureInfo" /> como o identificador de idioma NLS. Por exemplo, suponha que você crie um objeto <see cref="T:System.Globalization.CultureInfo" /> passando a cadeia de caracteres "ar-EG" para um construtor <see cref="T:System.Globalization.CultureInfo" />. Se você passar a propriedade <see cref="P:System.Globalization.CultureInfo.LCID" /> desse objeto <see cref="T:System.Globalization.CultureInfo" /> junto com <see cref="F:System.Drawing.StringDigitSubstitute.Traditional" /> para o método <see cref="M:System.Drawing.StringFormat.SetDigitSubstitution(System.Int32,System.Drawing.StringDigitSubstitute)" />, dígitos indo-arábicos serão substituídos por dígitos ocidentais no momento da exibição.</param>
+        <param name="substitute">Um elemento da enumeração <see cref="T:System.Drawing.StringDigitSubstitute" /> que especifica como os dígitos são exibidos.</param>
+        <summary>Especifica o idioma e o método a serem usados quando os números locais são substituídos por dígitos ocidentais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Conjuntos de, para o <xref:System.Drawing.StringFormat>, o idioma a ser usado e o método de substituição a ser usado.  
+  
+-   Desenha a cadeia de caracteres.  
+  
+-   Repete as duas etapas acima para dois idiomas diferentes (árabe e tailandês).  
+  
+ O método de substituição nacional e o método tradicional de substituição são demonstradas para cada um dos dois idiomas. O método National exibe dígitos de acordo com o idioma nacional oficial da localidade do usuário. O método tradicional exibe dígitos de acordo com o script do usuário nativa ou linguagem, que pode ser diferente do idioma nacional oficial.  
+  
+ [!code-cpp[System.Drawing.ClassicStringFormatExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicStringFormatExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicStringFormatExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMeasurableCharacterRanges">
+      <MemberSignature Language="C#" Value="public void SetMeasurableCharacterRanges (System.Drawing.CharacterRange[] ranges);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMeasurableCharacterRanges(valuetype System.Drawing.CharacterRange[] ranges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.SetMeasurableCharacterRanges(System.Drawing.CharacterRange[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ranges" Type="System.Drawing.CharacterRange[]" />
+      </Parameters>
+      <Docs>
+        <param name="ranges">Uma matriz de estruturas <see cref="T:System.Drawing.CharacterRange" /> que especifica os intervalos de caracteres medidos por uma chamada para o método <see cref="M:System.Drawing.Graphics.MeasureCharacterRanges(System.String,System.Drawing.Font,System.Drawing.RectangleF,System.Drawing.StringFormat)" />.</param>
+        <summary>Especifica uma matriz de estruturas <see cref="T:System.Drawing.CharacterRange" /> que representam os intervalos de caracteres medidos por uma chamada para o método <see cref="M:System.Drawing.Graphics.MeasureCharacterRanges(System.String,System.Drawing.Font,System.Drawing.RectangleF,System.Drawing.StringFormat)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir mais de 32 intervalos de caractere não é permitido e fará com que um <xref:System.OverflowException?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Define os intervalos de caracteres da <xref:System.Drawing.StringFormat>.  
+  
+-   Mede os intervalos de caracteres para um determinado retângulo de cadeia de caracteres e o layout.  
+  
+-   Desenha um retângulo a cadeia de caracteres e o layout.  
+  
+-   Pinta as regiões. Cada <xref:System.Drawing.Region> Especifica uma área ocupada por um intervalo de caracteres. Os valores nas regiões são definidos quando os intervalos de caracteres são avaliados de acordo o <xref:System.Drawing.Graphics.MeasureCharacterRanges%2A> método.  
+  
+-   Repete as quatro primeiras etapas, mas inclui espaços na medição de cada intervalo de caracteres à direita.  
+  
+-   Limpa os sinalizadores de formato da <xref:System.Drawing.StringFormat> para que os espaços à direita não são incluídos na medição de cada intervalo de caracteres.  
+  
+-   Repete as quatro primeiras etapas, mas usa um retângulo de layout diferente para demonstrar o retângulo de layout afeta as medidas dos intervalos de caractere. O tamanho da fonte também afetará a medida.  
+  
+ [!code-cpp[System.Drawing.ClassicStringFormatExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicStringFormatExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicStringFormatExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">Mais de 32 intervalos de caracteres foram definidos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTabStops">
+      <MemberSignature Language="C#" Value="public void SetTabStops (float firstTabOffset, float[] tabStops);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTabStops(float32 firstTabOffset, float32[] tabStops) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.SetTabStops(System.Single,System.Single[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstTabOffset" Type="System.Single" />
+        <Parameter Name="tabStops" Type="System.Single[]" />
+      </Parameters>
+      <Docs>
+        <param name="firstTabOffset">O número de espaços entre o início de uma linha de texto e a primeira parada de tabulação.</param>
+        <param name="tabStops">Uma matriz de distâncias entre as paradas de tabulação nas unidades especificadas pela propriedade <see cref="P:System.Drawing.Graphics.PageUnit" />.</param>
+        <summary>Define as paradas de tabulação para este objeto <see cref="T:System.Drawing.StringFormat" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada deslocamento de parada de tabulação no `tabStops` matriz, exceto a primeira, é relativo ao anterior. O primeiro deslocamento de parada de tabulação é relativo a posição inicial de deslocamento especificada pelo `firstTabOffset`. Por exemplo, se a posição de deslocamento inicial é 8 e o primeiro deslocamento de parada de tabulação é 50, em seguida, é a primeira parada de tabulação na posição 58. Se a posição de deslocamento inicial for zero, o primeiro deslocamento de parada de tabulação é em relação a posição 0, a origem da cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Define as paradas de tabulação do <xref:System.Drawing.StringFormat>.  
+  
+-   Desenha a cadeia de caracteres e o retângulo de layout. Observe que a cadeia de caracteres contém guias. As configurações da guia do <xref:System.Drawing.StringFormat> especificam os deslocamentos do texto com guias.  
+  
+-   Obtém as paradas de tabulação e usa ou inspeciona os valores.  
+  
+ [!code-cpp[System.Drawing.ClassicStringFormatExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassicStringFormatExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassicStringFormatExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.StringFormat.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte essa <see cref="T:System.Drawing.StringFormat" /> objeto como uma cadeia de caracteres legível.</summary>
+        <returns>Uma representação de cadeia de caracteres deste <see cref="T:System.Drawing.StringFormat" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o valor de <xref:System.Drawing.StringFormat.FormatFlags%2A> propriedade é convertida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Converte uma <xref:System.Drawing.StringFormat> objeto como uma cadeia de caracteres.  
+  
+-   Desenha a cadeia de caracteres.  
+  
+-   Altera algumas propriedades de <xref:System.Drawing.StringFormat> objeto.  
+  
+-   Desenha a cadeia de caracteres. A cadeia de caracteres será diferente porque as propriedades do <xref:System.Drawing.StringFormat> objeto foram alterados.  
+  
+ [!code-cpp[System.Drawing.ClassicStringFormatExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicStringFormatExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicStringFormatExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicStringFormatExamples/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trimming">
+      <MemberSignature Language="C#" Value="public System.Drawing.StringTrimming Trimming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.StringTrimming Trimming" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.StringFormat.Trimming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringTrimming</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a enumeração <see cref="T:System.Drawing.StringTrimming" /> para este objeto <see cref="T:System.Drawing.StringFormat" />.</summary>
+        <value>A enumeração <see cref="T:System.Drawing.StringTrimming" /> que indica como o texto desenhado com esse objeto <see cref="T:System.Drawing.StringFormat" /> é aparado quando ele excede as bordas do retângulo de layout.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Drawing.StringFormat.Trimming%2A> propriedade e como usar o <xref:System.Drawing.StringTrimming> enumeração. Este exemplo é projetado para ser usado com um Windows Form. Cole este código em um formulário e a chamada a `ShowStringTrimming` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> passagem de eventos, e como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.Misc2#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.Misc2#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.Misc2#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

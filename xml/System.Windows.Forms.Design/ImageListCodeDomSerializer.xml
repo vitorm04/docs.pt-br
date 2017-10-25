@@ -1,0 +1,91 @@
+<Type Name="ImageListCodeDomSerializer" FullName="System.Windows.Forms.Design.ImageListCodeDomSerializer">
+  <TypeSignature Language="C#" Value="public class ImageListCodeDomSerializer : System.ComponentModel.Design.Serialization.CodeDomSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageListCodeDomSerializer extends System.ComponentModel.Design.Serialization.CodeDomSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.ImageListCodeDomSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.Serialization.CodeDomSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Serializa os dicionários de cadeia de caracteres.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageListCodeDomSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ImageListCodeDomSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.ImageListCodeDomSerializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public override object Deserialize (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object codeObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Deserialize(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object codeObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ImageListCodeDomSerializer.Deserialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="codeObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Uma interface do Gerenciador de serialização que é usada durante o processo de desserialização.</param>
+        <param name="codeObject">Um objeto de CodeDOM serializado para desserializar.</param>
+        <summary>Desserializa o objeto de modelo de objeto de documento de código (CodeDOM) serializado em um objeto.</summary>
+        <returns>O objeto desserializado de CodeDOM.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.ImageListCodeDomSerializer.Deserialize%2A> método usa o Gerenciador de serialização para criar objetos e resolver os tipos de dados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> ou <paramref name="codeObject" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public override object Serialize (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Serialize(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ImageListCodeDomSerializer.Serialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de serialização para usar durante a serialização.</param>
+        <param name="value">O objeto a ser serializado.</param>
+        <summary>Serializa o objeto especificado em um objeto de modelo de objeto de documento de código (CodeDOM).</summary>
+        <returns>Um objeto de CodeDOM que representa o objeto que tem sido serializado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,105 @@
+<Type Name="ManipulationPivot" FullName="System.Windows.Input.ManipulationPivot">
+  <TypeSignature Language="C#" Value="public class ManipulationPivot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManipulationPivot extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ManipulationPivot" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica como uma rotação ocorre com um ponto de entrada do usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A?displayProperty=nameWithType> propriedade é um <xref:System.Windows.Input.ManipulationPivot>. Quando você define <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A> em um manipulador de eventos para o <xref:System.Windows.UIElement.ManipulationStarting> evento, a manipulação conterá dados rotação quando o usuário utiliza um dedo durante uma manipulação.  Isso é para simular situações reais onde você pode usar um dedo para girar um objeto, como uma parte do documento em uma tabela.  Se o <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A> é `null`, o usuário deve usar dois dedos para fazer com que a rotação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Windows.UIElement.ManipulationStarting> eventos e define o <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A?displayProperty=nameWithType> propriedade. Para testar este exemplo, siga as etapas em [passo a passo: Criando seu primeiro toque aplicativo](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md) e substitua o código na etapa 4 por este código.  
+  
+ [!code-csharp[BasicManipulation#ManipulationPivot](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/reportboundaryfeedbackexample.xaml.cs#manipulationpivot)]
+ [!code-vb[BasicManipulation#ManipulationPivot](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/reportboundaryfeedbackexample.xaml.vb#manipulationpivot)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManipulationPivot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationPivot.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.ManipulationPivot" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManipulationPivot (System.Windows.Point center, double radius);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point center, float64 radius) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationPivot.#ctor(System.Windows.Point,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="center" Type="System.Windows.Point" />
+        <Parameter Name="radius" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="center">O Centro de manipulação de um único ponto.</param>
+        <param name="radius">Na área ao redor dinâmico que é usado para determinar quanto rotação e a conversão ocorre quando um ponto único de contato inicia a manipulação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.ManipulationPivot" /> classe com o ponto especificado de manipulação de um único ponto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Center { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Center" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationPivot.Center" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o Centro de manipulação de um único ponto.</summary>
+        <value>O Centro de manipulação de um único ponto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Radius">
+      <MemberSignature Language="C#" Value="public double Radius { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Radius" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationPivot.Radius" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a área ao redor dinâmico que é usado para determinar quanto rotação e conversão ocorre quando um ponto único de contato inicia a manipulação.</summary>
+        <value>Na área ao redor dinâmico que é usado para determinar quanto rotação e a conversão ocorre quando um ponto único de contato inicia a manipulação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

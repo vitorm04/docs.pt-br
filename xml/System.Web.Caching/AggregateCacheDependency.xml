@@ -1,0 +1,177 @@
+<Type Name="AggregateCacheDependency" FullName="System.Web.Caching.AggregateCacheDependency">
+  <TypeSignature Language="C#" Value="public sealed class AggregateCacheDependency : System.Web.Caching.CacheDependency" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AggregateCacheDependency extends System.Web.Caching.CacheDependency" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.AggregateCacheDependency" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Caching.CacheDependency</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Combina várias dependências entre um item armazenado em um aplicativo ASP.NET <see cref="T:System.Web.Caching.Cache" /> objeto e uma matriz de <see cref="T:System.Web.Caching.CacheDependency" /> objetos. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Caching.AggregateCacheDependency> classe monitora uma coleção de objetos de dependência para que quando qualquer um deles alterar, o item em cache é removido automaticamente. Os objetos na matriz podem ser <xref:System.Web.Caching.CacheDependency> objetos, <xref:System.Web.Caching.SqlCacheDependency> objetos, objetos personalizados derivados de <xref:System.Web.Caching.CacheDependency>, ou qualquer combinação desses elementos.  
+  
+ O <xref:System.Web.Caching.AggregateCacheDependency> classe difere de <xref:System.Web.Caching.CacheDependency> classe permite que você associar várias dependências de tipos diferentes de um único item em cache. Por exemplo, se você criar uma página que importa dados de uma tabela de banco de dados do SQL Server e um arquivo XML, você pode criar um <xref:System.Web.Caching.SqlCacheDependency> objeto para representar uma dependência na tabela de banco de dados e um <xref:System.Web.Caching.CacheDependency> para representar a dependência no arquivo XML. Em vez de fazer uma <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> chamada de método para cada dependência, você pode criar uma instância do <xref:System.Web.Caching.AggregateCacheDependency> classe com cada dependência adicionada a ele. Você pode usar um único <xref:System.Web.Caching.Cache.Insert%2A> chamada para tornar a página dependente de <xref:System.Web.Caching.AggregateCacheDependency> instância.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Caching.AggregateCacheDependency> classe para adicionar um <xref:System.Data.DataSet>, denominado `XMLDataSet`, o cache é dependente de um arquivo de texto e um arquivo XML.  
+  
+ [!code-vb[CachingSamples_AggregateCacheDependency1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_AggregateCacheDependency1/VB/aggregatecachedependencysamplevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AggregateCacheDependency ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.AggregateCacheDependency.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Caching.AggregateCacheDependency" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o construtor padrão para o <xref:System.Web.Caching.AggregateCacheDependency> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Web.Caching.AggregateCacheDependency> de classe, usando o construtor que não usa nenhum argumento. Dois <xref:System.Web.Caching.CacheDependency> objetos são criados e adicionados a um <xref:System.Web.Caching.CacheDependency> matriz, `myDepArray`. Este construtor é usado em conjunto com o <xref:System.Web.Caching.AggregateCacheDependency.Add%2A> método para tornar o item armazenado na <xref:System.Web.Caching.Cache> dependente de ambos <xref:System.Web.Caching.CacheDependency> objetos.  
+  
+ [!code-vb[CachingSamples_AggregateCacheDependency1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_AggregateCacheDependency1/VB/aggregatecachedependencysamplevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (params System.Web.Caching.CacheDependency[] dependencies);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Caching.CacheDependency[] dependencies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.AggregateCacheDependency.Add(System.Web.Caching.CacheDependency[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencies" Type="System.Web.Caching.CacheDependency[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="dependencies">A matriz de <see cref="T:System.Web.Caching.CacheDependency" /> objetos para adicionar.</param>
+        <summary>Adiciona uma matriz de <see cref="T:System.Web.Caching.CacheDependency" /> objetos para o <see cref="T:System.Web.Caching.AggregateCacheDependency" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Caching.AggregateCacheDependency.Add%2A> método junto com o <xref:System.Web.Caching.AggregateCacheDependency.%23ctor%2A> construtor para criar dois <xref:System.Web.Caching.CacheDependency> objetos, adicioná-las a um <xref:System.Web.Caching.CacheDependency> matriz chamada `myDepArray`e, em seguida, torne o item no cache dependente desses dois <xref:System.Web.Caching.CacheDependency> objetos.  
+  
+ [!code-vb[CachingSamples_AggregateCacheDependency1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_AggregateCacheDependency1/VB/aggregatecachedependencysamplevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dependencies" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ Um <see cref="T:System.Web.Caching.CacheDependency" /> objeto <paramref name="dependencies" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Um <see cref="T:System.Web.Caching.CacheDependency" /> o objeto é referenciado mais de uma <see cref="T:System.Web.Caching.Cache" /> entrada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyDispose">
+      <MemberSignature Language="C#" Value="protected override void DependencyDispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DependencyDispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.AggregateCacheDependency.DependencyDispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDependencies">
+      <MemberSignature Language="C#" Value="public override string[] GetFileDependencies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetFileDependencies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.AggregateCacheDependency.GetFileDependencies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as dependências de arquivo.</summary>
+        <returns>As dependências de arquivo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUniqueID">
+      <MemberSignature Language="C#" Value="public override string GetUniqueID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetUniqueID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.AggregateCacheDependency.GetUniqueID" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um identificador exclusivo para o <see cref="T:System.Web.Caching.AggregateCacheDependency" /> objeto.</summary>
+        <returns>O identificador exclusivo para o <see cref="T:System.Web.Caching.AggregateCacheDependency" /> objeto. Se um dos objetos de dependência associado não tem um identificador exclusivo, o <see cref="M:System.Web.Caching.AggregateCacheDependency.GetUniqueID" /> método retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método atribui um identificador exclusivo para cada dependência na matriz e retorna cada um deles. O identificador é uma combinação do nome de arquivo (para uma dependência de arquivo) ou o nome da chave (para uma dependência de cache de chave) e uma cadeia de caracteres que atribui esse método para a dependência.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Caching.AggregateCacheDependency.GetUniqueID%2A> método para criar e exibir um identificador para uma instância do <xref:System.Web.Caching.AggregateCacheDependency> classe, denominada `aggDep`, uma vez que ela é criada e preenchida.  
+  
+ [!code-vb[CachingSamples_AggregateCacheDependency1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_AggregateCacheDependency1/VB/aggregatecachedependencysamplevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

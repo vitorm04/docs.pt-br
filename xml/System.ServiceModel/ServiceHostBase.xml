@@ -1,0 +1,1034 @@
+<Type Name="ServiceHostBase" FullName="System.ServiceModel.ServiceHostBase">
+  <TypeSignature Language="C#" Value="public abstract class ServiceHostBase : System.ServiceModel.Channels.CommunicationObject, IDisposable, System.ServiceModel.IExtensibleObject&lt;System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceHostBase extends System.ServiceModel.Channels.CommunicationObject implements class System.IDisposable, class System.ServiceModel.IExtensibleObject`1&lt;class System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ServiceHostBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.CommunicationObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IExtensibleObject&lt;System.ServiceModel.ServiceHostBase&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Estende a classe <see cref="T:System.ServiceModel.ServiceHostBase" /> para implementar os hosts que expõem os modelos de programação personalizados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.ServiceHostBase> classe para criar os hosts que fornecem um modelo de programação personalizado. O [!INCLUDE[indigo1](~/includes/indigo1-md.md)] serviço usos do modelo de programação de <xref:System.ServiceModel.ServiceHost> classe.  
+  
+ Observação especial para usuários de C++ gerenciado derivar desta classe:  
+  
+-   Coloque a limpeza código em (On) (início) feche (e/ou OnAbort), não em um destruidor.  
+  
+-   Evite destruidores; eles fazer com que o compilador gere automaticamente <xref:System.IDisposable>.  
+  
+-   Evitar membros de referência não; pode fazer com que o compilador gere automaticamente <xref:System.IDisposable>.  
+  
+-   Evitar finalizadores; mas se você incluir um, você deve suprimir o aviso de compilação e chamar <xref:System.GC.SuppressFinalize%28System.Object%29> e o finalizador automaticamente a partir (On) (início) feche (e/ou OnAbort) para emular o que seria o gerado automaticamente <xref:System.IDisposable> comportamento.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.ServiceModel.ServiceHost> classe, que é derivado de <xref:System.ServiceModel.ServiceHostBase>.  
+  
+ [!code-csharp[S_SelfHost#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#1)]
+ [!code-vb[S_SelfHost#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_selfhost/vb/wholeenchilada.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServiceHostBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.ServiceHostBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_SelfHost#30](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBaseAddress">
+      <MemberSignature Language="C#" Value="protected void AddBaseAddress (Uri baseAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddBaseAddress(class System.Uri baseAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.AddBaseAddress(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseAddress" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="baseAddress">Um <see cref="T:System.Uri" /> que contém o endereço base para serviços hospedados no host atual.</param>
+        <summary>Adiciona um endereço base para o host de serviço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade permite que os usuários estendendo <xref:System.ServiceModel.ServiceHostBase> para fornecer o endereço base depois que o host é construído. <xref:System.ServiceModel.ServiceHostBase.AddBaseAddress%28System.Uri%29>pode ser usado para adicionar endereços de base para um host existente, mas lança uma exceção se a descrição já foi inicializada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="baseAddress" /> não pode ser chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDefaultEndpoints">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; AddDefaultEndpoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; AddDefaultEndpoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona pontos de extremidade de serviço para todos os endereços base em cada contrato encontrado no host de serviço com a associação padrão.</summary>
+        <returns>Uma coleção somente leitura de pontos de extremidade padrão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public virtual void AddServiceEndpoint (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddServiceEndpoint(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade de serviço.</param>
+        <summary>Adiciona o ponto de extremidade de serviço especificado para o serviço hospedado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao usar o método, o host de serviço faz uma validação de "nome por configuração" na descrição do contrato. Em outras palavras, o host verifica que <xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A> existe na lista de nomes de configuração dos contratos de serviço implementados pelo serviço. Se a validação é bem-sucedida, a descrição no <xref:System.ServiceModel.Description.ServiceEndpoint> é usado como está, mesmo se o <xref:System.ServiceModel.Description.ContractDescription> refletido de serviço é diferente.  
+  
+ Por exemplo, suponha que a descrição no ServiceEndpoint e a descrição do contrato refletidas do serviço têm o mesmo nome, mas os comportamentos de operação diferente. A implicação de validação do "nome por configuração" é que não há nenhuma validação que os comportamentos são os mesmos e há um atualizações para uma descrição devido a descrição de outra.  
+  
+ Se o `address` é um URI relativo, um dos endereços de base de <xref:System.ServiceModel.ServiceHost> (dependendo do protocolo de associação) é usado como endereço base do ponto de extremidade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Endpoint" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O host não está em um estado de Criado ou Abrindo ou não há nenhum <see cref="T:System.ServiceModel.Description.ServiceDescription" /> para o serviço hospedado.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="Address" />, <paramref name="Binding" />, ou <paramref name="Contract" /> é de propriedade <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (string implementedContract, System.ServiceModel.Channels.Binding binding, string address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(string implementedContract, class System.ServiceModel.Channels.Binding binding, string address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O contrato implementado pelo ponto de extremidade.</param>
+        <param name="binding">O <see cref="T:System.ServiceModel.Channels.Binding" /> para o ponto de extremidade adicionado.</param>
+        <param name="address">O endereço do ponto de extremidade adicionado. Isso pode ser um URI absoluto ou relativo. Se ele é um URI relativo, um do endereço base do <see cref="T:System.ServiceModel.ServiceHost" /> (dependendo do protocolo de associação) é usado como endereço base do ponto de extremidade.</param>
+        <summary>Adiciona um ponto de extremidade de serviço ao serviço hospedado com um contrato, uma associação e um endereço do ponto de extremidade especificados.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> adicionado ao serviço hospedado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_SelfHost#40](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="implementedContract" /> ou <paramref name="binding" /> ou <paramref name="address" /> ou é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O host não está em um estado <see cref="F:System.ServiceModel.CommunicationState.Created" /> ou um estado <see cref="F:System.ServiceModel.CommunicationState.Opening" /> ou não há nenhum <see cref="T:System.ServiceModel.Description.ServiceDescription" /> para o serviço hospedado e, portanto, não é possível adicionar um ponto de extremidade ou a associação não tem um transporte de esquema de associação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (string implementedContract, System.ServiceModel.Channels.Binding binding, Uri address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(string implementedContract, class System.ServiceModel.Channels.Binding binding, class System.Uri address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O contrato implementado pelo ponto de extremidade.</param>
+        <param name="binding">O <see cref="T:System.ServiceModel.Channels.Binding" /> para o ponto de extremidade adicionado.</param>
+        <param name="address">O <see cref="T:System.Uri" /> que contém o endereço do ponto de extremidade adicionado. Isso pode ser um URI absoluto ou relativo. Se ele é um URI relativo, um do endereço base do <see cref="T:System.ServiceModel.ServiceHost" /> (dependendo do protocolo de associação) é usado como endereço base do ponto de extremidade.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o serviço hospedado com um contrato especificado, associação e um URI que contém o endereço do ponto de extremidade.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> adicionado ao serviço hospedado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="implementedContract" /> ou <paramref name="binding" /> ou <paramref name="address" /> ou é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O host não está em um estado <see cref="F:System.ServiceModel.CommunicationState.Created" /> ou um estado <see cref="F:System.ServiceModel.CommunicationState.Opening" /> ou não há nenhum <see cref="T:System.ServiceModel.Description.ServiceDescription" /> para o serviço hospedado e, portanto, não é possível adicionar um ponto de extremidade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (string implementedContract, System.ServiceModel.Channels.Binding binding, string address, Uri listenUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(string implementedContract, class System.ServiceModel.Channels.Binding binding, string address, class System.Uri listenUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.String,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O contrato implementado pelo ponto de extremidade.</param>
+        <param name="binding">O <see cref="T:System.ServiceModel.Channels.Binding" /> para o ponto de extremidade adicionado.</param>
+        <param name="address">O endereço do ponto de extremidade adicionado. Esse endereço pode ser um URI absoluto ou relativo. Se ele é um URI relativo, um do endereço base do <see cref="T:System.ServiceModel.ServiceHost" /> (dependendo do protocolo de associação) é usado como endereço base do ponto de extremidade.</param>
+        <param name="listenUri">O <see cref="T:System.Uri" /> que contém o endereço que o ponto de extremidade de escuta para mensagens de entrada. Esse URI pode ser relativo ou absoluto.</param>
+        <summary>Adiciona um ponto de extremidade de serviço ao serviço hospedado com um contrato especificado, associação, endereço do ponto de extremidade e URI que contém o endereço no qual ele escuta.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> adicionado ao serviço hospedado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `address` é um URI relativo, um dos endereços de base de <xref:System.ServiceModel.ServiceHost> (dependendo do protocolo de associação) é usado como endereço base do ponto de extremidade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="implementedContract" /> ou <paramref name="binding" /> ou <paramref name="address" /> ou é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O host não está em um estado <see cref="F:System.ServiceModel.CommunicationState.Created" /> ou um estado <see cref="F:System.ServiceModel.CommunicationState.Opening" /> ou não há nenhum <see cref="T:System.ServiceModel.Description.ServiceDescription" /> para o serviço hospedado e, portanto, não é possível adicionar um ponto de extremidade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (string implementedContract, System.ServiceModel.Channels.Binding binding, Uri address, Uri listenUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(string implementedContract, class System.ServiceModel.Channels.Binding binding, class System.Uri address, class System.Uri listenUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.AddServiceEndpoint(System.String,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.String" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O contrato implementado pelo ponto de extremidade.</param>
+        <param name="binding">O <see cref="T:System.ServiceModel.Channels.Binding" /> para o ponto de extremidade adicionado.</param>
+        <param name="address">O <see cref="T:System.Uri" /> que contém o endereço do ponto de extremidade adicionado. Se ele é um URI relativo, um do endereço base do <see cref="T:System.ServiceModel.ServiceHost" /> (dependendo do protocolo de associação) é usado como endereço base do ponto de extremidade.</param>
+        <param name="listenUri">O <see cref="T:System.Uri" /> que contém o endereço no qual o ponto de extremidade de escuta para mensagens de entrada.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o serviço hospedado com o contrato especificado, associação e URIs que contém o ponto de extremidade e endereços de escutando.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> adicionado ao serviço hospedado. Esse URI pode ser absoluta ou relativa.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="implementedContract" /> ou <paramref name="binding" /> ou <paramref name="address" /> ou é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O host não está em um estado <see cref="F:System.ServiceModel.CommunicationState.Created" /> ou um estado <see cref="F:System.ServiceModel.CommunicationState.Opening" /> ou não há nenhum <see cref="T:System.ServiceModel.Description.ServiceDescription" /> para o serviço hospedado e, portanto, não é possível adicionar um ponto de extremidade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected virtual void ApplyConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplyConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.ApplyConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Carrega as informações de descrição de serviço do arquivo de configuração e aplica-se ao tempo de execução que está sendo construído.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A descrição do serviço hospedado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Authentication">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceAuthenticationBehavior Authentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceAuthenticationBehavior Authentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.Authentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceAuthenticationBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comportamento de autenticação do serviço.</summary>
+        <value>O comportamento de autenticação do serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authorization">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceAuthorizationBehavior Authorization { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceAuthorizationBehavior Authorization" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.Authorization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceAuthorizationBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comportamento de autorização para o serviço hospedado.</summary>
+        <value>O <see cref="T:System.ServiceModel.Description.ServiceAuthorizationBehavior" /> para o serviço hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_SelfHost#36](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAddresses">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Uri&gt; BaseAddresses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Uri&gt; BaseAddresses" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.BaseAddresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os endereços básicos usados pelo serviço hospedado.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.Uri" /> que contém os endereços básicos do serviço hospedado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelDispatchers">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.ChannelDispatcherCollection ChannelDispatchers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.ChannelDispatcherCollection ChannelDispatchers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.ChannelDispatchers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.ChannelDispatcherCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de distribuidores de canal usado pelo host de serviço.</summary>
+        <value>O <see cref="T:System.ServiceModel.Dispatcher.ChannelDispatcherCollection" /> que contém os distribuidores de canal usados pelo host de serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan CloseTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.CloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tempo permitido para o host de serviço fechar.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo permitido para o host de serviço fechar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_SelfHost#33](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor, em milissegundos, é menor que zero ou maior <see cref="F:System.Int32.MaxValue" /> (2.147.483.647 ou em notação hexadecimal, 0X7FFFFFFF).</exception>
+        <exception cref="T:System.InvalidOperationException">O host está em um <see cref="F:System.ServiceModel.CommunicationState.Opening" /> ou <see cref="F:System.ServiceModel.CommunicationState.Closing" /> de estado e não pode ser modificado.</exception>
+        <exception cref="T:System.ObjectDisposedException">O host já está em um <see cref="F:System.ServiceModel.CommunicationState.Closed" /> de estado e não pode ser modificado.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">O host está em um estado <see cref="F:System.ServiceModel.CommunicationState.Faulted" /> e não pode ser modificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDescription">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Description.ServiceDescription CreateDescription (out System.Collections.Generic.IDictionary&lt;string,System.ServiceModel.Description.ContractDescription&gt; implementedContracts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Description.ServiceDescription CreateDescription([out] class System.Collections.Generic.IDictionary`2&lt;string, class System.ServiceModel.Description.ContractDescription&gt;&amp; implementedContracts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.CreateDescription(System.Collections.Generic.IDictionary{System.String,System.ServiceModel.Description.ContractDescription}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContracts" Type="System.Collections.Generic.IDictionary&lt;System.String,System.ServiceModel.Description.ContractDescription&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContracts">O <see cref="T:System.Collections.Generic.IDictionary`2" /> que contém o <see cref="T:System.ServiceModel.Description.ContractDescription" /> objetos para o serviço.</param>
+        <summary>Quando implementada em uma classe derivada, cria a descrição do serviço hospedado.</summary>
+        <returns>A <see cref="T:System.ServiceModel.Description.ServiceDescription" /> do serviço hospedado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_SelfHost#41](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceCredentials Credentials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceCredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a credencial para o serviço hospedado.</summary>
+        <value>O <see cref="T:System.ServiceModel.Description.ServiceCredentials" /> para o serviço hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_SelfHost#37](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#37)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCloseTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultCloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultCloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.DefaultCloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o intervalo de tempo permitido para o host de serviço fechar.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo permitido para o host de serviço fechar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOpenTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultOpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultOpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.DefaultOpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o intervalo de tempo permitido para o host de serviço abrir.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo permitido para o host de serviço abrir.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_SelfHost#35](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceDescription Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceDescription Description" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição do serviço hospedado.</summary>
+        <value>A <see cref="T:System.ServiceModel.Description.ServiceDescription" /> do serviço hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_SelfHost#38](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.IExtensionCollection&lt;System.ServiceModel.ServiceHostBase&gt; Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.IExtensionCollection`1&lt;class System.ServiceModel.ServiceHostBase&gt; Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.IExtensionCollection&lt;System.ServiceModel.ServiceHostBase&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as extensões para o host atual do serviço especificado.</summary>
+        <value>Um <see cref="T:System.ServiceModel.IExtensionCollection`1" /> do tipo <see cref="T:System.ServiceModel.ServiceHostBase" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementedContracts">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.IDictionary&lt;string,System.ServiceModel.Description.ContractDescription&gt; ImplementedContracts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.ServiceModel.Description.ContractDescription&gt; ImplementedContracts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.ImplementedContracts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.ServiceModel.Description.ContractDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera os contratos implementados pelo serviço hospedado.</summary>
+        <value>O <see cref="T:System.Collections.Generic.IDictionary`2" /> que contém o <see cref="T:System.ServiceModel.Description.ContractDescription" /> objetos para o serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementManualFlowControlLimit">
+      <MemberSignature Language="C#" Value="public int IncrementManualFlowControlLimit (int incrementBy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IncrementManualFlowControlLimit(int32 incrementBy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.IncrementManualFlowControlLimit(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="incrementBy" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="incrementBy">O número de mensagens pelo qual aumentar o limite de controle de fluxo.</param>
+        <summary>Aumenta o limite da taxa de fluxo de mensagens para o serviço hospedado por um incremento especificado.</summary>
+        <returns>O novo limite depois que o incremento for adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse limite pode ser acessado usando o <xref:System.ServiceModel.ServiceHostBase.ManualFlowControlLimit%2A> propriedade.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_SelfHost#42](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#42)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDescription">
+      <MemberSignature Language="C#" Value="protected void InitializeDescription (System.ServiceModel.UriSchemeKeyedCollection baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeDescription(class System.ServiceModel.UriSchemeKeyedCollection baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.InitializeDescription(System.ServiceModel.UriSchemeKeyedCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseAddresses" Type="System.ServiceModel.UriSchemeKeyedCollection" />
+      </Parameters>
+      <Docs>
+        <param name="baseAddresses">Um <see cref="T:System.ServiceModel.UriSchemeKeyedCollection" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Cria e inicializa o host de serviço com as descrições de contrato e serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRuntime">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeRuntime ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeRuntime() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.InitializeRuntime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o tempo de execução para o host de serviço.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A descrição do serviço hospedado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadConfigurationSection">
+      <MemberSignature Language="C#" Value="protected void LoadConfigurationSection (System.ServiceModel.Configuration.ServiceElement serviceSection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void LoadConfigurationSection(class System.ServiceModel.Configuration.ServiceElement serviceSection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.LoadConfigurationSection(System.ServiceModel.Configuration.ServiceElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceSection" Type="System.ServiceModel.Configuration.ServiceElement" />
+      </Parameters>
+      <Docs>
+        <param name="serviceSection">O <see cref="T:System.ServiceModel.Configuration.ServiceElement" /> para ser carregado a partir da configuração.</param>
+        <summary>Carrega o elemento de serviço do arquivo de configuração do serviço hospedado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceSection" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A descrição do serviço hospedado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ManualFlowControlLimit">
+      <MemberSignature Language="C#" Value="public int ManualFlowControlLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ManualFlowControlLimit" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.ManualFlowControlLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite de controle de fluxo para mensagens recebidas pelo serviço hospedado.</summary>
+        <value>O limite de controle de fluxo para mensagens recebidas pelo serviço hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse limite pode ser incrementado usando o <xref:System.ServiceModel.ServiceHostBase.IncrementManualFlowControlLimit%28System.Int32%29> método.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_SelfHost#39](~/samples/snippets/csharp/VS_Snippets_CFX/s_selfhost/cs/wholeenchilada.cs#39)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAbort">
+      <MemberSignature Language="C#" Value="protected override void OnAbort ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAbort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.OnAbort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Anula o serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginClose">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginClose (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginClose(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação no fechamento deve concluir antes do tempo limite.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação da conclusão operação assíncrona no fechamento.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas com a operação no fechamento assíncrona.</param>
+        <summary>Inicia uma operação assíncrona invocada no fechamento do host do serviço.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação no fechamento assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginOpen">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginOpen (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginOpen(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.OnBeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação em aberto deve concluir antes do tempo limite.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação de conclusão de ao abrir a operação assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas a operação assíncrona ao abrir.</param>
+        <summary>Inicia uma operação assíncrona invocada na abertura do host do serviço.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação no-open assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClose">
+      <MemberSignature Language="C#" Value="protected override void OnClose (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClose(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.OnClose(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação no fechamento deve concluir antes do tempo limite.</param>
+        <summary>Encerra o serviço hospedado, incluindo os distribuidores de canal e contextos de instância associada e ouvintes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.ServiceModel.ServiceHostBase.OnClose%28System.TimeSpan%29> faz o seguinte:  
+  
+-   Fecha todas as entradas para <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>, que também fecha seus respectivos <xref:System.ServiceModel.Channels.IChannelListener> instâncias. Isso impede que qualquer novos canais de sendo aceitar.  
+  
+-   Chamadas <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.CloseInput%2A> em todos os <xref:System.ServiceModel.InstanceContext> objetos, o que significam que eles pararem de aceitar novas mensagens.  
+  
+-   Aguarda até que todos os <xref:System.ServiceModel.InstanceContext> objetos de encerrar, o que acontece quando seus canais associados terminou de enviar todas as mensagens pendentes.  
+  
+-   Fecha o <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> objetos associados ao host.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected override void OnClosed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.OnClosed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos usados pelo host de serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndClose">
+      <MemberSignature Language="C#" Value="protected override void OnEndClose (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndClose(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.OnEndClose(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.ServiceHostBase.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclui uma operação assíncrona invocada no fechamento do host do serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndOpen">
+      <MemberSignature Language="C#" Value="protected override void OnEndOpen (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndOpen(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.OnEndOpen(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.ServiceHostBase.OnBeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclui uma operação assíncrona, invocada na abertura do host do serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpen">
+      <MemberSignature Language="C#" Value="protected override void OnOpen (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpen(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.OnOpen(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação em aberto deve concluir antes do tempo limite.</param>
+        <summary>Abre os distribuidores de canal.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpened">
+      <MemberSignature Language="C#" Value="protected override void OnOpened ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpened() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.OnOpened" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a credenciais de serviço, o comportamento de serviço de autenticação e autorização para o serviço hospedado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que esses comportamentos são inicializados ao abrir o serviço, não podem ser alterados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan OpenTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan OpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceHostBase.OpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um intervalo de tempo permitido para o host de serviço abrir.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo permitido para o host de serviço abrir.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que zero ou maior <see cref="F:System.Int32.MaxValue" /> (2.147.483.647 ou em notação hexadecimal, 0X7FFFFFFF).</exception>
+        <exception cref="T:System.InvalidOperationException">O host está em um <see cref="F:System.ServiceModel.CommunicationState.Opening" /> ou <see cref="F:System.ServiceModel.CommunicationState.Closing" /> de estado e não pode ser modificado.</exception>
+        <exception cref="T:System.ObjectDisposedException">O host já está em um <see cref="F:System.ServiceModel.CommunicationState.Closed" /> de estado e não pode ser modificado.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">O host está em um estado <see cref="F:System.ServiceModel.CommunicationState.Faulted" /> e não pode ser modificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleasePerformanceCounters">
+      <MemberSignature Language="C#" Value="protected void ReleasePerformanceCounters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReleasePerformanceCounters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.ReleasePerformanceCounters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os contadores de desempenho de distribuidor de serviço e canal para o serviço hospedado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é invocado quando se chama <xref:System.ServiceModel.ServiceHostBase.OnClose%28System.TimeSpan%29> e  
+  
+ <xref:System.ServiceModel.ServiceHostBase.OnEndClose%28System.IAsyncResult%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEndpointAddress">
+      <MemberSignature Language="C#" Value="public void SetEndpointAddress (System.ServiceModel.Description.ServiceEndpoint endpoint, string relativeAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEndpointAddress(class System.ServiceModel.Description.ServiceEndpoint endpoint, string relativeAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.SetEndpointAddress(System.ServiceModel.Description.ServiceEndpoint,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="relativeAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade de serviço.</param>
+        <param name="relativeAddress">O endereço do ponto de extremidade.</param>
+        <summary>Define o endereço do ponto de extremidade do ponto de extremidade especificado para o endereço especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceHostBase.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o host de serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownMessageReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ServiceModel.UnknownMessageReceivedEventArgs&gt; UnknownMessageReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ServiceModel.UnknownMessageReceivedEventArgs&gt; UnknownMessageReceived" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.ServiceHostBase.UnknownMessageReceived" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ServiceModel.UnknownMessageReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma mensagem desconhecida é recebida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!WARNING]
+>  Ao usar <xref:System.ServiceModel.WorkflowServiceHost>, expor um ponto de extremidade de hospedagem e um <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> exceção for lançada, o host passa a mensagem para o manipulador de eventos. Se for feita uma tentativa de ler a mensagem uma <xref:System.InvalidOperationException> é gerada. A descrição da exceção dirá "Esta mensagem não oferece suporte a operação porque foi lida."  A infraestrutura WCF lê a mensagem ao extrair os parâmetros da mensagem. Esta mensagem é então passada para o manipulador de eventos e qualquer tentativa de lê-lo causa uma exceção. Se você precisar acessar os parâmetros de mensagem em seu <xref:System.InvalidOperationException> manipulador de um ponto de extremidade de hospedagem, definir o contrato de ponto de extremidade de hospedagem usando MessageContract e colocar os dados necessários em um cabeçalho de mensagem. [!INCLUDE[crabout](~/includes/crabout-md.md)]pontos de extremidade de hospedagem consulte [extensibilidade de Host do serviço de fluxo de trabalho](~/docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

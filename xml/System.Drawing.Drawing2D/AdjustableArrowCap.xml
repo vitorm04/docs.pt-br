@@ -1,0 +1,182 @@
+<Type Name="AdjustableArrowCap" FullName="System.Drawing.Drawing2D.AdjustableArrowCap">
+  <TypeSignature Language="C#" Value="public sealed class AdjustableArrowCap : System.Drawing.Drawing2D.CustomLineCap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AdjustableArrowCap extends System.Drawing.Drawing2D.CustomLineCap" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.AdjustableArrowCap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Drawing2D.CustomLineCap</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma terminação de linha em forma de seta ajustável. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdjustableArrowCap (float width, float height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 width, float32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.AdjustableArrowCap.#ctor(System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="width">A largura da seta.</param>
+        <param name="height">A altura da seta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Drawing2D.AdjustableArrowCap" /> classe com a altura e largura especificada. As tampas de seta criadas com esse construtor sempre são preenchidas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.AdjustableArrowCap> objeto chamado `myArrow`.  
+  
+-   Cria um <xref:System.Drawing.Pen> objeto chamado `capPen`e define seu <xref:System.Drawing.Pen.CustomStartCap%2A> e <xref:System.Drawing.Pen.CustomEndCap%2A> propriedades iguais a `myArrow`.  
+  
+-   Usa o <xref:System.Drawing.Graphics.DrawLine%2A> método para desenhar uma linha controlada por duas setas na tela.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMisc#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMisc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMisc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AdjustableArrowCap (float width, float height, bool isFilled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 width, float32 height, bool isFilled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.AdjustableArrowCap.#ctor(System.Single,System.Single,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+        <Parameter Name="isFilled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="width">A largura da seta.</param>
+        <param name="height">A altura da seta.</param>
+        <param name="isFilled">
+          <see langword="true" />para preencher a extremidade da seta; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Drawing2D.AdjustableArrowCap" /> classe com a largura especificada, a altura e a propriedade de preenchimento. Se uma extremidade final de seta é preenchida depende do argumento passado para o <paramref name="isFilled" /> parâmetro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.AdjustableArrowCap> objeto chamado `myArrow`.  
+  
+-   Cria um <xref:System.Drawing.Pen> objeto chamado `capPen`e define seu <xref:System.Drawing.Pen.CustomStartCap%2A> e <xref:System.Drawing.Pen.CustomEndCap%2A> propriedades iguais a `myArrow`.  
+  
+-   Usa o <xref:System.Drawing.Graphics.DrawLine%2A> método para desenhar uma linha controlada por duas setas na tela.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMisc#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMisc#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMisc#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMisc/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filled">
+      <MemberSignature Language="C#" Value="public bool Filled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Filled" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.AdjustableArrowCap.Filled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a seta para a terminação está cheia.</summary>
+        <value>Esta propriedade é <see langword="true" /> se o limite de seta é preenchido; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public float Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.AdjustableArrowCap.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura da extremidade seta.</summary>
+        <value>A altura da extremidade seta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A altura da extremidade seta é dimensionada pela largura do <xref:System.Drawing.Pen> objeto usado para desenhar a linha que está sendo controlada. Por exemplo, se você estiver desenhando uma linha limitada com uma caneta que tem uma largura de 5 pixels e o <xref:System.Drawing.Drawing2D.AdjustableArrowCap> objeto possui uma altura de 3, em seguida, o limite de seta tem desenhados 15 pixels de altura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleInset">
+      <MemberSignature Language="C#" Value="public float MiddleInset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 MiddleInset" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.AdjustableArrowCap.MiddleInset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de unidades entre o contorno da extremidade seta e o preenchimento.</summary>
+        <value>O número de unidades entre o contorno da extremidade seta e o preenchimento da extremidade seta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public float Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.AdjustableArrowCap.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da extremidade seta.</summary>
+        <value>A largura, em unidades da extremidade seta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A largura da extremidade seta é dimensionada pela largura do <xref:System.Drawing.Pen> objeto usado para desenhar a linha que está sendo controlada. Por exemplo, se você estiver desenhando uma linha limitada com uma caneta que tem uma largura de 5 pixels e o <xref:System.Drawing.Drawing2D.AdjustableArrowCap> objeto tem uma largura de 3, em seguida, o limite de seta é desenhados 15 pixels de largura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,68 @@
+<Type Name="IValueSerializableExpression" FullName="System.Activities.XamlIntegration.IValueSerializableExpression">
+  <TypeSignature Language="C#" Value="public interface IValueSerializableExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IValueSerializableExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.XamlIntegration.IValueSerializableExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para converter expressões em cadeias de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os autores de atividades de expressão que desejam oferecer uma forma abreviada textual de expressões as atividades devem implementar essa interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanConvertToString">
+      <MemberSignature Language="C#" Value="public bool CanConvertToString (System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvertToString(class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.IValueSerializableExpression.CanConvertToString(System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Informações de contexto que são usadas para conversão.</param>
+        <summary>Determina se a expressão pode ser convertida em uma cadeia de caracteres.</summary>
+        <returns>
+          <see langword="true" />Se a expressão pode ser convertida em uma cadeia de caracteres; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public string ConvertToString (System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ConvertToString(class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.XamlIntegration.IValueSerializableExpression.ConvertToString(System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Informações de contexto que são usadas para conversão.</param>
+        <summary>Converte uma expressão em uma cadeia de caracteres.</summary>
+        <returns>Uma representação de cadeia de caracteres da expressão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

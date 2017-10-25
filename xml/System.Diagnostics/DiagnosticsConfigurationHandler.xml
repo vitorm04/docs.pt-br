@@ -1,0 +1,99 @@
+<Type Name="DiagnosticsConfigurationHandler" FullName="System.Diagnostics.DiagnosticsConfigurationHandler">
+  <TypeSignature Language="C#" Value="public class DiagnosticsConfigurationHandler : System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DiagnosticsConfigurationHandler extends System.Object implements class System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DiagnosticsConfigurationHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Configuration.IConfigurationSectionHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("This class is obsoleted")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Lida com a seção de diagnóstico dos arquivos de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DiagnosticsConfigurationHandler> método é um manipulador de seção que participa na resolução de configurações de [ &lt;System. Diagnostics&gt; ](~/docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md) parte dos arquivos de configuração.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiagnosticsConfigurationHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DiagnosticsConfigurationHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.DiagnosticsConfigurationHandler" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public virtual object Create (object parent, object configContext, System.Xml.XmlNode section);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Create(object parent, object configContext, class System.Xml.XmlNode section) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DiagnosticsConfigurationHandler.Create(System.Object,System.Object,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Object" />
+        <Parameter Name="configContext" Type="System.Object" />
+        <Parameter Name="section" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O objeto herdado do caminho pai</param>
+        <param name="configContext">Reservado. Usado no ASP.NET para transmitir o caminho virtual da configuração que está sendo avaliada.</param>
+        <param name="section">O nó raiz XML para lidar com a seção.</param>
+        <summary>Analisa as definições de configuração para o [ &lt;System. Diagnostics&gt; ](~/docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md) seção de arquivos de configuração.</summary>
+        <returns>Um novo objeto de configuração, na forma de um <see cref="T:System.Collections.Hashtable" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DiagnosticsConfigurationHandler.Create%2A> método preenche uma <xref:System.Collections.Hashtable> com os valores obtidos no [ &lt;System. Diagnostics&gt; ](~/docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md) seção de um arquivo de configuração e retorna a tabela de hash.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível encontrar a comutadores.  
+  
+ -ou-  
+  
+ Assert não pôde ser encontrado.  
+  
+ -ou-  
+  
+ Não foi possível encontrar o rastreamento.  
+  
+ -ou-  
+  
+ Contadores de desempenho não podem ser encontrados.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,903 @@
+<Type Name="UriBuilder" FullName="System.UriBuilder">
+  <TypeSignature Language="C#" Value="public class UriBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UriBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.UriBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um construtor personalizado para URIs (Uniform Resource Identifiers) e modifica URIs para a classe <see cref="T:System.Uri" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder> classe fornece uma maneira conveniente para modificar o conteúdo de um <xref:System.Uri> instância sem criar um novo <xref:System.Uri> instância para cada modificação.  
+  
+ O <xref:System.UriBuilder> propriedades fornecem acesso de leitura/gravação para somente leitura <xref:System.Uri> propriedades para que eles podem ser modificados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.UriBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão cria uma nova instância do <xref:System.UriBuilder> classe com suas propriedades inicializado da seguinte maneira.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|Fragmento|<xref:System.String.Empty>|  
+|Host|"loopback"|  
+|Senha|<xref:System.String.Empty>|  
+|Caminho|"/"|  
+|Porta|-1|  
+|Consulta|<xref:System.String.Empty>|  
+|Esquema|"http"|  
+|UserName|<xref:System.String.Empty>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriBuilder (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Uma cadeia de caracteres do URI.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.UriBuilder" /> com URI especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa uma nova instância do <xref:System.UriBuilder> classe com o <xref:System.UriBuilder.Fragment%2A>, <xref:System.UriBuilder.Host%2A>, <xref:System.UriBuilder.Path%2A>, <xref:System.UriBuilder.Port%2A>, <xref:System.UriBuilder.Query%2A>, <xref:System.UriBuilder.Scheme%2A>, e <xref:System.UriBuilder.Uri%2A> propriedades definidas como especificado em `uri`.  
+  
+ Se `uri` não especificar um esquema, o esquema padrão é "http:".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.UriFormatException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), capturar a exceção de classe base, <see cref="T:System.FormatException" />, em vez disso.  
+  
+</para>
+          </block>
+          <paramref name="uri" />é uma cadeia de caracteres de comprimento zero ou contém apenas espaços.  
+  
+ -ou-  
+  
+ A rotina de análise detectou um esquema em um formato inválido.  
+  
+ -ou-  
+  
+ O analisador detectou mais de duas barras consecutivas em um URI que não usa o esquema de "file".  
+  
+ -ou-  
+  
+ <paramref name="uri" /> não é um URI válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriBuilder (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Uma instância da classe <see cref="T:System.Uri" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.UriBuilder" /> com a instância <see cref="T:System.Uri" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa uma nova instância do <xref:System.UriBuilder> classe com o <xref:System.UriBuilder.Fragment%2A>, <xref:System.UriBuilder.Host%2A>, <xref:System.UriBuilder.Path%2A>, <xref:System.UriBuilder.Port%2A>, <xref:System.UriBuilder.Query%2A>, <xref:System.UriBuilder.Scheme%2A>, e <xref:System.UriBuilder.Uri%2A> propriedades definidas como especificado em `uri`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriBuilder (string schemeName, string hostName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string schemeName, string hostName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemeName" Type="System.String" />
+        <Parameter Name="hostName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="schemeName">Um protocolo de acesso à Internet.</param>
+        <param name="hostName">Um nome de domínio no estilo DNS ou endereço IP.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.UriBuilder" /> com o esquema e o host especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder> instância é inicializada com o <xref:System.UriBuilder.Scheme%2A> propriedade definida como `schemeName` e <xref:System.UriBuilder.Host%2A> propriedade definida como `hostName`. <xref:System.UriBuilder.Port%2A>é inicializada com o valor -1 para indicar a porta padrão para o esquema deve ser usado e o <xref:System.UriBuilder.Path%2A> está definida como o caractere de barra (/).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.UriBuilder> instância que contém o URI http://www.contoso.com/.  
+  
+ [!code-cpp[Classic UriBuilder.UriBuilder3 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UriBuilder.UriBuilder3 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder3 Example/CS/source.cs#1)]
+ [!code-vb[Classic UriBuilder.UriBuilder3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriBuilder (string scheme, string host, int portNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scheme, string host, int32 portNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.#ctor(System.String,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="host" Type="System.String" />
+        <Parameter Name="portNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="scheme">Um protocolo de acesso à Internet.</param>
+        <param name="host">Um nome de domínio no estilo DNS ou endereço IP.</param>
+        <param name="portNumber">Um número de porta IP para o serviço.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.UriBuilder" /> com o esquema, o host e a porta especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder> instância é inicializada com o <xref:System.UriBuilder.Scheme%2A> propriedade definida como `schemeName`, o <xref:System.UriBuilder.Host%2A> propriedade definida como `hostName`e o <xref:System.UriBuilder.Port%2A> propriedade definida como `portNumber`. O <xref:System.UriBuilder.Path%2A> está definida como o caractere de barra (/).  
+  
+ Se o `portNumber` é definido como um valor de -1, isso indica que o valor de porta padrão a `scheme` será usado para se conectar ao `host`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.UriBuilder> instância que contém o URI http://www.contoso.com:8080 /.  
+  
+ [!code-cpp[Classic UriBuilder.UriBuilder4 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder4 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UriBuilder.UriBuilder4 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder4 Example/CS/source.cs#1)]
+ [!code-vb[Classic UriBuilder.UriBuilder4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="portNumber" /> é menor que -1 ou maior que 65.535.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriBuilder (string scheme, string host, int port, string pathValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scheme, string host, int32 port, string pathValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.#ctor(System.String,System.String,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="host" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="pathValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scheme">Um protocolo de acesso à Internet.</param>
+        <param name="host">Um nome de domínio no estilo DNS ou endereço IP.</param>
+        <param name="port">Um número de porta IP para o serviço.</param>
+        <param name="pathValue">O caminho para o recurso de Internet.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.UriBuilder" /> com o esquema, o host, o número da porta e o caminho especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder> instância é inicializada com o <xref:System.UriBuilder.Scheme%2A> propriedade definida como `schemeName`, o <xref:System.UriBuilder.Host%2A> propriedade definida como `hostName`, o <xref:System.UriBuilder.Port%2A> propriedade definida como `portNumber` e <xref:System.UriBuilder.Path%2A> propriedade definida como `pathValue`.  
+  
+ Se o `portNumber` é definido como um valor de -1, isso indica que o valor de porta padrão a `scheme` será usado para se conectar ao `host`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.UriBuilder> instância que contém o URI http://www.contoso.com:8080/index.htm.  
+  
+ [!code-cpp[Classic UriBuilder.UriBuilder5 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder5 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UriBuilder.UriBuilder5 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder5 Example/CS/source.cs#1)]
+ [!code-vb[Classic UriBuilder.UriBuilder5 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder5 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="port" /> é menor que -1 ou maior que 65.535.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriBuilder (string scheme, string host, int port, string path, string extraValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scheme, string host, int32 port, string path, string extraValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.#ctor(System.String,System.String,System.Int32,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="host" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="extraValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scheme">Um protocolo de acesso à Internet.</param>
+        <param name="host">Um nome de domínio no estilo DNS ou endereço IP.</param>
+        <param name="port">Um número de porta IP para o serviço.</param>
+        <param name="path">O caminho para o recurso de Internet.</param>
+        <param name="extraValue">Um identificador de fragmento ou de cadeia de caracteres de consulta.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.UriBuilder" /> com o esquema, host, número da porta, caminho e cadeia de caracteres de consulta especificados ou o identificador do fragmento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder> instância é inicializada com o <xref:System.UriBuilder.Scheme%2A> propriedade definida como `schemeName`, o <xref:System.UriBuilder.Host%2A> propriedade definida como `hostName`, o <xref:System.UriBuilder.Port%2A> propriedade definida como `portNumber`e o <xref:System.UriBuilder.Path%2A> está definida como `pathValue`. Se `extraValue` começa com um sinal numérico (#), em seguida, <xref:System.UriBuilder.Fragment%2A> é definido como `extraValue`. Se `extraValue` começa com um ponto de interrogação (?), em seguida, <xref:System.UriBuilder.Query%2A> é definido como `extraValue`.  
+  
+ Se o `portNumber` é definido como um valor de -1, isso indica que o valor de porta padrão a `scheme` será usado para se conectar ao `host`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.UriBuilder> instância que contém o URI http://www.contoso.com:8080/index.htm#top.  
+  
+ [!code-cpp[Classic UriBuilder.UriBuilder6 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder6 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UriBuilder.UriBuilder6 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder6 Example/CS/source.cs#1)]
+ [!code-vb[Classic UriBuilder.UriBuilder6 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic UriBuilder.UriBuilder6 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="extraValue" />não é nem <see langword="null" /> nem <see cref="F:System.String.Empty" />, nem um identificador válido de fragmento de começa com um sinal de número (#), nem uma cadeia de caracteres de consulta válidos começam com um ponto de interrogação (?).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="port" /> é menor que -1 ou maior que 65.535.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object rparam);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object rparam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rparam" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="rparam">O objeto a ser comparado com a instância atual.</param>
+        <summary>Compara uma existente <see cref="T:System.Uri" /> instância com o conteúdo a <see cref="T:System.UriBuilder" /> para igualdade.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="rparam" /> representa o mesmo <see cref="T:System.Uri" /> como o <see cref="T:System.Uri" /> construído por este <see cref="T:System.UriBuilder" /> instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder.Equals%2A> método compara um especificado <xref:System.Uri> instância com o <xref:System.Uri> instância compilada pelo <xref:System.UriBuilder> instância. Se os dois são iguais, o <xref:System.UriBuilder.Equals%2A> método retornará `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fragment">
+      <MemberSignature Language="C#" Value="public string Fragment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Fragment" />
+      <MemberSignature Language="DocId" Value="P:System.UriBuilder.Fragment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a parte de fragmento do URI.</summary>
+        <value>A parte de fragmento do URI. O identificador do fragmento ("#") é adicionado ao início do fragmento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder.Fragment%2A> propriedade contém qualquer texto após um marcador de fragmento (#) no URI, incluindo o marcador em si. Ao definir o <xref:System.UriBuilder.Fragment%2A> propriedade, o marcador de fragmento é adicionado ao seu valor. **Observação** na versão 1.0 e 1.1 do .NET Framework, definindo o <xref:System.UriBuilder.Fragment%2A> propriedade como qualquer valor, incluindo `null`, limpa o <xref:System.UriBuilder.Query%2A> propriedade e configuração o <xref:System.UriBuilder.Fragment%2A> propriedade para `null` ou <xref:System.String.Empty?displayProperty=nameWithType> limpa a propriedade. Na versão 2.0, no entanto, o <xref:System.UriBuilder.Fragment%2A> e <xref:System.UriBuilder.Query%2A> propriedades são independentes.  
+  
+ **Observação** não anexar uma cadeia de caracteres diretamente para essa propriedade. Se o comprimento de <xref:System.UriBuilder.Fragment%2A> é maior que 1, recuperar o valor da propriedade como uma cadeia de caracteres, remova o sinal numérico à esquerda, acrescente a nova cadeia de caracteres de consulta e definir a propriedade com a cadeia de caracteres combinada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria o URI "http://www.contoso.com/index.htm#main".  
+  
+ [!code-cpp[Classic UriBuilder.Fragment Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic UriBuilder.Fragment Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UriBuilder.Fragment Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic UriBuilder.Fragment Example/CS/source.cs#1)]
+ [!code-vb[Classic UriBuilder.Fragment Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic UriBuilder.Fragment Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o URI.</summary>
+        <returns>O código de hash gerado para o URI.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash é gerado sem incluir qualquer fragmento. Os URIs http://www.contoso.com/index.htm#search e http://www.contoso.com/index.htm geram o mesmo código de hash.  
+  
+ O hash de códigos para <xref:System.Uri> A e B têm garantia de ser o mesmo quando é A.Equals(B) `true`.  
+  
+ Esse método implementa <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public string Host { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Host" />
+      <MemberSignature Language="DocId" Value="P:System.UriBuilder.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do host DNS (Sistema de Nomes de Domínio) ou o endereço IP de um servidor.</summary>
+        <value>O nome do host DNS ou o endereço IP do servidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder.Host%2A> propriedade contém o nome de host DNS totalmente qualificado ou o endereço IP do servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.UriBuilder.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a senha associada com o usuário que acessa o URI.</summary>
+        <value>A senha do usuário que acessa o URI.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.UriBuilder.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho para o recurso referenciado pelo URI.</summary>
+        <value>O caminho para o recurso referenciado pelo URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder.Path%2A> propriedade contém as informações de caminho que o servidor usa para resolver solicitações de informações. Normalmente isso é o caminho para as informações desejadas no sistema de arquivos do servidor; Embora ele também pode indicar o aplicativo ou script que o servidor deve executar para fornecer as informações.  
+  
+ As informações de caminho não incluem o esquema, o nome de host ou a parte de consulta do URI. O <xref:System.UriBuilder.Path%2A> propriedade sempre retorna pelo menos uma barra (/).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.UriBuilder.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da porta desse URI.</summary>
+        <value>O número da porta do URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número da porta define a porta de protocolo para entrar em contato com o host referenciado no URI. Se uma porta não for especificada como parte do URI de <xref:System.Uri.Port%2A> propriedade retorna o valor de -1 para indicar que o valor da porta padrão para o esquema de protocolo será usado para se conectar ao host. Se o <xref:System.Uri.Port%2A> propriedade é definida como um valor de -1, isso indica que o valor da porta padrão para o esquema de protocolo será usado para se conectar ao host.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A porta não pode ser definida como um valor menor que -1 ou maior do que 65.535.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="public string Query { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Query" />
+      <MemberSignature Language="DocId" Value="P:System.UriBuilder.Query" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações de consulta incluídas na URI.</summary>
+        <value>As informações de consulta incluídas na URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Uri.Query%2A> propriedade contém informações de consulta incluídas no URI. Informações de consulta são separadas das informações de caminho por um ponto de interrogação (?) e continua até o final do URI. As informações de consulta retornadas incluem o principal ponto de interrogação.  
+  
+ As informações de consulta são escapadas de acordo com RFC 2396.  
+  
+ **Observação** na versão 1.0 e 1.1 do .NET Framework, definindo o <xref:System.UriBuilder.Fragment%2A> propriedade como qualquer valor, incluindo `null`, limpa o <xref:System.UriBuilder.Query%2A> propriedade e configuração o <xref:System.UriBuilder.Fragment%2A> propriedade para `null` ou <xref:System.String.Empty?displayProperty=nameWithType> limpa a propriedade. Na versão 2.0, no entanto, o <xref:System.UriBuilder.Fragment%2A> e <xref:System.UriBuilder.Query%2A> propriedades são independentes.  
+  
+ **Observação** não anexar uma cadeia de caracteres diretamente para essa propriedade. Se o comprimento de <xref:System.UriBuilder.Query%2A> é maior que 1, recuperar o valor da propriedade como uma cadeia de caracteres, remova o principal ponto de interrogação, acrescente a nova cadeia de caracteres de consulta e definir a propriedade com a cadeia de caracteres combinada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.UriBuilder.Query%2A> propriedade.  
+  
+ [!code-cpp[UriBuilderSample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/UriBuilderSample/cpp/main.cpp#1)]
+ [!code-csharp[UriBuilderSample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/UriBuilderSample/cs/main.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public string Scheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.UriBuilder.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do esquema do URI.</summary>
+        <value>O esquema do URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir lista os nomes de esquema válido para o <xref:System.UriBuilder.Scheme%2A> propriedade.  
+  
+|Esquema|Descrição|  
+|------------|-----------------|  
+|Arquivo |O recurso é um arquivo no computador local.|  
+|FTP|O recurso é acessado por meio de FTP.|  
+|gopher|O recurso é acessado por meio do protocolo de Gopher.|  
+|HTTP|O recurso é acessado por meio de HTTP.|  
+|HTTPS|O recurso é acessado por meio de HTTP criptografada por SSL.|  
+|mailto|O recurso é um endereço de email e é acessado por meio de SMTP.|  
+|notícias|O recurso é acessado por meio do NNTP.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O esquema não pode ser definido como um nome de esquema inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriBuilder.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a cadeia de caracteres de exibição da instância <see cref="T:System.UriBuilder" /> especificada.</summary>
+        <returns>A cadeia de caracteres que contém a cadeia de caracteres de exibição sem escape de <see cref="T:System.UriBuilder" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contém a cadeia de caracteres de exibição o <xref:System.UriBuilder.Port%2A> se o valor de propriedade a <xref:System.UriBuilder.Port%2A> propriedade foi definida ou a porta foi especificada quando o <xref:System.UriBuilder> foi construído usando do <xref:System.UriBuilder.%23ctor%2A> métodos que aceitam um parâmetro de número de porta, exceto no caso quando o <xref:System.UriBuilder.Port%2A>.property valor foi definido como um valor de -1 para indicar a porta padrão.  
+  
+ A cadeia de caracteres de exibição não contém o <xref:System.UriBuilder.Port%2A> se o valor de propriedade de <xref:System.UriBuilder.Port%2A> propriedade não foi definida e uma porta não foi especificado quando o <xref:System.UriBuilder> foi construído. A cadeia de caracteres de exibição também não tem o <xref:System.UriBuilder.Port%2A> se o valor de propriedade de <xref:System.UriBuilder.Port%2A> propriedade ou número de porta para o construtor foi definido como um valor de -1.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UriFormatException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), capturar a exceção de classe base, <see cref="T:System.FormatException" />, em vez disso.  
+  
+</para>
+          </block>  
+  
+ A instância <see cref="T:System.UriBuilder" /> tem uma senha incorreta.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.UriBuilder.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância <see cref="T:System.Uri" /> construída pela instância <see cref="T:System.UriBuilder" /> especificada.</summary>
+        <value>Um <see cref="T:System.Uri" /> que contém o URI construído pela <see cref="T:System.UriBuilder" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriBuilder.Uri%2A> propriedade contém o <xref:System.Uri> criado pelo <xref:System.UriBuilder>. Todas as alterações feitas a <xref:System.UriBuilder> propriedades serão refletidas no <xref:System.UriBuilder.Uri%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UriFormatException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), capturar a exceção de classe base, <see cref="T:System.FormatException" />, em vez disso.  
+  
+</para>
+          </block>  
+  
+ O URI construído pelas propriedades <see cref="T:System.UriBuilder" /> é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.UriBuilder.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome de usuário associado ao usuário que acessa o URI.</summary>
+        <value>O nome de usuário do usuário que acessa o URI.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

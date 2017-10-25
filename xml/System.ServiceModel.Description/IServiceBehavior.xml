@@ -1,0 +1,191 @@
+<Type Name="IServiceBehavior" FullName="System.ServiceModel.Description.IServiceBehavior">
+  <TypeSignature Language="C#" Value="public interface IServiceBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IServiceBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IServiceBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um mecanismo para modificar ou inserir extensões personalizadas em um serviço inteiro, incluindo o <see cref="T:System.ServiceModel.ServiceHostBase" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar <xref:System.ServiceModel.Description.IServiceBehavior> para modificar, examinar ou estender algum aspecto da execução de todo o serviço no nível do aplicativo:  
+  
+-   Use o <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> método para alterar valores de propriedade de tempo de execução ou inserir objetos de extensão personalizada, como manipuladores de erro, os interceptadores de mensagem ou parâmetro, extensões de segurança e outros objetos de extensão personalizada.  
+  
+-   Use o <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> método para examinar a descrição antes [!INCLUDE[indigo1](~/includes/indigo1-md.md)] constrói o serviço em execução para confirmar que ela pode ser executada corretamente.  
+  
+-   Use o <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> método para passar para um elemento de associação as informações personalizadas para o serviço de forma que ela pode suportar o serviço corretamente.  
+  
+ <xref:System.ServiceModel.Description.IServiceBehavior>podem ser usados de qualquer um desses métodos, mas somente um é importante. Nesses casos, os métodos não utilizados podem retornar sem um valor.  
+  
+> [!NOTE]
+>  Todos os <xref:System.ServiceModel.Description.IServiceBehavior> métodos passam <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> e <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> objetos como parâmetros. O <xref:System.ServiceModel.Description.ServiceDescription> parâmetro para exame apenas; se você modificar esses objetos o comportamento de execução é indefinido.  
+  
+ Para executar a tarefa de personalização para a qual destina-se, o <xref:System.ServiceModel.Description.IServiceBehavior> objeto deve ser adicionado para o <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> propriedade antes da construção de tempo de execução do serviço. Há três maneiras de fazer isso:  
+  
+-   Adicionar programaticamente o comportamento de serviço personalizado para o <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> propriedade antes do ponto em que o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> método é chamado no <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> objeto.  
+  
+-   Criar um atributo personalizado que implementa <xref:System.ServiceModel.Description.IServiceBehavior> e usá-lo para marcar as classes de serviço devem ser modificada. Quando um <xref:System.ServiceModel.ServiceHost> objeto for construído, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] usa reflexão para descobrir os atributos do tipo de serviço. Se nenhum atributo implementar <xref:System.ServiceModel.Description.IServiceBehavior>, eles são adicionados à coleção de comportamentos em <xref:System.ServiceModel.Description.ServiceDescription>.  
+  
+-   Estender o <xref:System.ServiceModel.Configuration.BehaviorExtensionElement?displayProperty=nameWithType> classe para oferecer suporte a especificação do comportamento em um aplicativo ou arquivo de configuração de máquina. Consulte a seção de exemplo para obter mais informações.  
+  
+ Exemplos dos comportamentos de serviço no [!INCLUDE[indigo2](~/includes/indigo2-md.md)] incluem o <xref:System.ServiceModel.ServiceBehaviorAttribute> atributo, o <xref:System.ServiceModel.Description.ServiceThrottlingBehavior?displayProperty=nameWithType>, o <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType> e <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> comportamento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de um comportamento de serviço especificado em um arquivo de configuração para inserir um manipulador de erro personalizada em um aplicativo de serviço. Neste exemplo, o manipulador de erro captura todas as exceções e converte-os em um personalizado `GreetingFault` Falha SOAP que é retornada ao cliente.  
+  
+ O seguinte <xref:System.ServiceModel.Description.IServiceBehavior> implementação não adiciona nenhum objeto de parâmetro de associação, adiciona personalizado <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> objeto para cada <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A?displayProperty=nameWithType> propriedade e valida que cada operação do serviço ao qual o comportamento de serviço é aplicado e tem um <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>do tipo `GreetingFault`.  
+  
+ [!code-csharp[IErrorHandler#7](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#7)]
+ [!code-vb[IErrorHandler#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#7)]  
+  
+ Neste exemplo, a classe de comportamento também implementa <xref:System.ServiceModel.Configuration.BehaviorExtensionElement?displayProperty=nameWithType>, que permite que o comportamento de serviço a ser inserido usando-o em um arquivo de configuração do aplicativo, como o exemplo de código a seguir demonstra.  
+  
+ [!code-xml[IErrorHandler#4](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/hostapplication.exe.config#4)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public void AddBindingParameters (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase, System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase, class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.ServiceEndpoint&gt; endpoints, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+        <Parameter Name="endpoints" Type="System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.ServiceEndpoint&gt;" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">A descrição do serviço.</param>
+        <param name="serviceHostBase">O host do serviço.</param>
+        <param name="endpoints">Os pontos de extremidade de serviço.</param>
+        <param name="bindingParameters">Objetos personalizados aos quais os elementos de associação têm acesso.</param>
+        <summary>Fornece a capacidade de passar dados personalizados para elementos de associação para dar suporte à implementação do contrato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> objetos para adicionar dados personalizados para o `parameters` coleção de elementos de associação podem usar para adquirir informações adicionais para habilitar o suporte para o contrato.  
+  
+ Esse método é chamado uma vez para cada URI de escuta. Por exemplo, se um serviço tem quatro pontos de extremidade e duas delas têm o mesmo URI de escuta, em seguida, esse método é chamado de três vezes. A razão é que o `bindingParameters` cada pilha de canais de destino e não houver uma pilha de canais para cada URI de escuta. Como cada chamada recebe esses pontos de extremidade em que escutam URI, dois chama cada get um único <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>, e uma chamada obtém uma coleção de dois <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> objetos.  
+  
+> [!NOTE]
+>  Todos os <xref:System.ServiceModel.Description.IServiceBehavior> métodos passam <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> e <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> objetos como parâmetros. O <xref:System.ServiceModel.Description.ServiceDescription> parâmetro para exame e a inserção de personalizações apenas; se você modificar esses objetos o comportamento de execução é indefinido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyDispatchBehavior (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">A descrição do serviço.</param>
+        <param name="serviceHostBase">O host que está sendo criado.</param>
+        <summary>Fornece a capacidade de alterar valores de propriedade de tempo de execução ou inserir objetos de extensão personalizados, como manipuladores de erro, interceptores de mensagens ou parâmetros, extensões de segurança e outros objetos de extensão personalizados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> método inspecionar ou modificar o <xref:System.ServiceModel.ServiceHostBase> objeto que está sendo construído para oferecer suporte a alguns cenário de execução personalizado.  
+  
+> [!NOTE]
+>  Todos os <xref:System.ServiceModel.Description.IServiceBehavior> métodos passam <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> e <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> objetos como parâmetros. O <xref:System.ServiceModel.Description.ServiceDescription> parâmetro para exame e a inserção de personalizações apenas; se você modificar esses objetos o comportamento de execução é indefinido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de um comportamento de serviço especificado em um arquivo de configuração para inserir um manipulador de erro personalizada em um aplicativo de serviço. Neste exemplo, o manipulador de erro captura todas as exceções e converte-os em um personalizado `GreetingFault` Falha SOAP que é retornada ao cliente.  
+  
+ O seguinte <xref:System.ServiceModel.Description.IServiceBehavior> implementação não adiciona nenhum objeto de parâmetro de associação, adiciona personalizado <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> objeto para cada <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A?displayProperty=nameWithType> propriedade e valida que cada operação do serviço ao qual o comportamento de serviço é aplicado e tem um <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>do tipo `GreetingFault`.  
+  
+ [!code-csharp[IErrorHandler#7](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#7)]
+ [!code-vb[IErrorHandler#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#7)]  
+  
+ Neste exemplo, a classe de comportamento também implementa <xref:System.ServiceModel.Configuration.BehaviorExtensionElement?displayProperty=nameWithType>, que permite que o comportamento de serviço a ser inserido usando-o em um arquivo de configuração do aplicativo, como o exemplo de código a seguir demonstra.  
+  
+ [!code-xml[IErrorHandler#4](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/hostapplication.exe.config#4)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (System.ServiceModel.Description.ServiceDescription serviceDescription, System.ServiceModel.ServiceHostBase serviceHostBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.ServiceDescription serviceDescription, class System.ServiceModel.ServiceHostBase serviceHostBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IServiceBehavior.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.ServiceModel.Description.ServiceDescription" />
+        <Parameter Name="serviceHostBase" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">A descrição do serviço.</param>
+        <param name="serviceHostBase">O host de serviço que atualmente está sendo construído.</param>
+        <summary>Fornece a capacidade de inspecionar o host de serviço e a descrição do serviço para confirmar que o serviço pode ser executado com êxito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> método para confirmar se o serviço atual pode executar corretamente de acordo com a sua situação.  
+  
+> [!NOTE]
+>  Todos os <xref:System.ServiceModel.Description.IServiceBehavior> métodos passam <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> e <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> objetos como parâmetros. O <xref:System.ServiceModel.Description.ServiceDescription> parâmetro para exame e a inserção de personalizações apenas; se você modificar esses objetos o comportamento de execução é indefinido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de um comportamento de serviço especificado em um arquivo de configuração para inserir um manipulador de erro personalizada em um aplicativo de serviço. Neste exemplo, o manipulador de erro captura todas as exceções e converte-os em um personalizado `GreetingFault` Falha SOAP que é retornada ao cliente.  
+  
+ O seguinte <xref:System.ServiceModel.Description.IServiceBehavior> implementação não adiciona nenhum objeto de parâmetro de associação, adiciona personalizado <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> objeto para cada <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A?displayProperty=nameWithType> propriedade e valida que cada operação do serviço ao qual o comportamento de serviço é aplicado e tem um <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>do tipo `GreetingFault`.  
+  
+ [!code-csharp[IErrorHandler#7](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/ierrorhandler.cs#7)]
+ [!code-vb[IErrorHandler#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/ierrorhandler/vb/ierrorhandler.vb#7)]  
+  
+ Neste exemplo, a classe de comportamento também implementa <xref:System.ServiceModel.Configuration.BehaviorExtensionElement?displayProperty=nameWithType>, que permite que o comportamento de serviço a ser inserido usando-o em um arquivo de configuração do aplicativo, como o exemplo de código a seguir demonstra.  
+  
+ [!code-xml[IErrorHandler#4](~/samples/snippets/csharp/VS_Snippets_CFX/ierrorhandler/cs/hostapplication.exe.config#4)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

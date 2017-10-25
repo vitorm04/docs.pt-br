@@ -1,0 +1,2046 @@
+<Type Name="HttpRequest" FullName="System.Web.HttpRequest">
+  <TypeSignature Language="C#" Value="public sealed class HttpRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpRequest extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpRequest" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que o ASP.NET leia os valores HTTP enviados por um cliente durante uma solicitação da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os métodos e propriedades do <xref:System.Web.HttpRequest> classe são expostas por meio de `Request` propriedades do <xref:System.Web.HttpApplication>, <xref:System.Web.HttpContext>, <xref:System.Web.UI.Page>, e <xref:System.Web.UI.UserControl> classes.  
+  
+ Para acessar dados do <xref:System.Web.HttpRequest.QueryString%2A>, <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.Cookies%2A>, ou <xref:System.Web.HttpRequest.ServerVariables%2A> coleções, você pode escrever `Request["key"]`, conforme mostrado no exemplo para o <xref:System.Web.HttpRequest.QueryString%2A> propriedade.  
+  
+> [!NOTE]
+>  Suporte a Unicode para <xref:System.Web.HttpRequest> membros de classe requer o IIS versão 6.0 ou posterior.  
+  
+   
+  
+## Examples  
+ Acesso de exemplos a seguir o <xref:System.Web.HttpRequest> instância para a solicitação atual usando o <xref:System.Web.UI.Page.Request%2A> propriedade o <xref:System.Web.UI.Page> classe.  
+  
+ Você pode usar a sintaxe simplificada para acessar dados a partir de <xref:System.Web.HttpRequest.QueryString%2A>, <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.Cookies%2A>, ou <xref:System.Web.HttpRequest.ServerVariables%2A> coleções. Você pode escrever `Request["key"]`.  
+  
+ O primeiro exemplo mostra como recuperar um valor de cadeia de caracteres de consulta ao carregar uma página.  
+  
+```csharp  
+public partial class AddToCart : Page  
+{  
+    protected void Page_Load(object sender, EventArgs e)  
+    {  
+        string rawId = Request["ProductID"];  
+        int productId;  
+        if (!String.IsNullOrEmpty(rawId) && int.TryParse(rawId, out productId))  
+        {  
+            using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())  
+            {  
+                usersShoppingCart.AddToCart(productId);  
+            }  
+        }  
+        else  
+        {  
+            throw new Exception("Tried to call AddToCart.aspx without setting a ProductId.");  
+        }  
+        Response.Redirect("ShoppingCart.aspx");  
+    }  
+}  
+```  
+  
+```vb  
+Public Class AddToCart  
+    Inherits Page  
+  
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load  
+        Dim rawId = Request("ProductID")  
+        Dim productId As Integer  
+        If Not String.IsNullOrEmpty(rawId) And Integer.TryParse(rawId, productId) Then  
+            Using usersShoppingCart As New ShoppingCartActions()  
+                usersShoppingCart.AddToCart(productId)  
+            End Using  
+  
+        Else  
+            Throw New Exception("Tried to call AddToCart.aspx without setting a ProductId.")  
+        End If  
+        Response.Redirect("ShoppingCart.aspx")  
+    End Sub  
+End Class  
+```  
+  
+ O exemplo a seguir mostra como verificar se a solicitação é autenticada e recuperar a URL bruta.  
+  
+```csharp  
+public partial class RestrictedPage : Page  
+{  
+    protected void Page_Load(object sender, EventArgs e)  
+    {  
+        if (!Request.IsAuthenticated)  
+        {  
+            var rawUrl = Request.RawUrl;  
+            Response.Redirect("/Account/Login?ru=" + Server.HtmlEncode(rawUrl));  
+        }  
+    }  
+}  
+```  
+  
+```vb  
+Public Class RestrictedPage  
+    Inherits Page  
+  
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load  
+        If Not Request.IsAuthenticated Then  
+            Dim rawUrl = Request.RawUrl  
+            Response.Redirect("/Account/Login?ru=" + Server.HtmlEncode(rawUrl))  
+        End If  
+    End Sub  
+End Class  
+```  
+  
+ Um projeto de site da Web do Visual Studio com o código-fonte está disponível para acompanhar este tópico: [baixar](http://go.microsoft.com/fwlink/?LinkID=191455).  
+  
+ Este exemplo usa o <xref:System.IO.StreamWriter> classe para gravar os valores de várias <xref:System.Web.HttpRequest> propriedades para um arquivo de classe. Para propriedades que são do tipo cadeia de caracteres, os valores são HTML codificado como eles são gravados no arquivo. Propriedades que representam uma coleção retornarão pelo e cada par chave/valor que eles contêm é gravado no arquivo.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest_Sample1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpRequest_Sample1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequest (string filename, string url, string queryString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filename, string url, string queryString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="queryString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo associado à solicitação.</param>
+        <param name="url">As informações relacionadas à URL da solicitação atual.</param>
+        <param name="queryString">A cadeia de caracteres de consulta inteira enviada com a solicitação (tudo após o <c>'?' </c>).</param>
+        <summary>Inicializa uma objeto <see cref="T:System.Web.HttpRequest" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não precisa criar sua própria instância do <xref:System.Web.HttpRequest> classe. Os métodos e propriedades do <xref:System.Web.HttpRequest> classe são expostas por meio de `Request` propriedade do <xref:System.Web.HttpApplication>, <xref:System.Web.HttpContext>, <xref:System.Web.UI.Page>, e <xref:System.Web.UI.UserControl> classes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>A conexão TCP subjacente, fazendo com que qualquer e/s pendentes fazer o encerramento forçado. Você pode usar esse método em resposta a um ataque por um cliente mal-intencionado de HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é thread-safe. Qualquer thread pode chamá-lo a qualquer momento.  
+  
+ Esse método só pode ser usado no modo integrado. Se você chamá-lo em modo clássico, uma exceção será lançada. Para determinar o modo de pipeline, use <xref:System.Web.HttpRuntime.UsingIntegratedPipeline%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptTypes">
+      <MemberSignature Language="C#" Value="public string[] AcceptTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AcceptTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.AcceptTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de cadeia de caracteres de tipos de aceitação MIME do cliente com suporte.</summary>
+        <value>Uma matriz de cadeia de caracteres de tipos de aceitação MIME do cliente com suporte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir captura os vários valores retornados pelo <xref:System.Web.HttpRequest.AcceptTypes%2A> propriedade em uma variável de objeto e grava o número e o nome de cada valueto uma linha separada de HTTP de saída.  
+  
+ [!code-csharp[Classic HttpRequest.AcceptTypes Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.AcceptTypes Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.AcceptTypes Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.AcceptTypes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnonymousID">
+      <MemberSignature Language="C#" Value="public string AnonymousID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AnonymousID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.AnonymousID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador anônimo para o usuário, se houver.</summary>
+        <value>Uma cadeia de caracteres que representa o identificador de usuário anônimo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest.AnonymousID%2A> propriedade atribui um identificador exclusivo de vida útil longa para um usuário não autenticado, o que pode ser usado para acompanhar o usuário ou atribuir propriedades de perfil para o usuário sem armazenar dados em um `Session` objeto. Por padrão, o <xref:System.Web.HttpRequest.AnonymousID%2A> propriedade é controlada usando um cookie, mas ele pode ser definido para usar o URI quando o <xref:System.Web.Configuration.SessionStateSection.Cookieless%2A> atributo na seção de configuração identificação anônima é definido como o <xref:System.Web.HttpCookieMode.UseUri>, <xref:System.Web.HttpCookieMode.UseDeviceProfile>, ou <xref:System.Web.HttpCookieMode.AutoDetect> valor. Você deve limpar explicitamente o cookie, se você não quiser disponível, por exemplo quando um usuário anônimo é autenticado.  
+  
+ Identificação anônima é usada quando é necessário para identificar as entidades que não são autenticadas e autorização é necessária. Para obter mais informações, consulte [anonymousIdentification Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/2bd927ef-9057-4703-9c55-4cfb6d7d0929)  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.HttpRequest.AnonymousID%2A> propriedade manipulando o <xref:System.Web.Security.AnonymousIdentificationModule.Creating> eventos no arquivo global. asax. Este exemplo tem duas partes:  
+  
+-   Um método no arquivo global. asax que manipula o <xref:System.Web.Security.AnonymousIdentificationModule.Creating> evento.  
+  
+-   Uma página de Web Forms.  
+  
+ A primeira parte do exemplo de código mostra como definir o <xref:System.Web.HttpRequest.AnonymousID%2A> propriedade manipulando o <xref:System.Web.Security.AnonymousIdentificationModule.Creating> eventos no arquivo global. asax. O método chamado `AnonymousIdentification_Creating` define o <xref:System.Web.HttpRequest.AnonymousID%2A> propriedade quando uma identidade anônima é criada.  
+  
+ [!code-csharp[System.Web.HttpRequest_AnonymousID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_AnonymousID/CS/global_asax.cs#2)]
+ [!code-vb[System.Web.HttpRequest_AnonymousID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_AnonymousID/vb/global_asax.vb#2)]  
+  
+ A segunda parte do exemplo de código mostra como exibir o novo <xref:System.Web.HttpRequest.AnonymousID%2A> que é criado o `AnonymousIdentification_Creating` manipulador de eventos no exemplo anterior.  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest_AnonymousID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_AnonymousID/CS/anonid_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpRequest_AnonymousID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_AnonymousID/vb/anonid_vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationPath">
+      <MemberSignature Language="C#" Value="public string ApplicationPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.ApplicationPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho raiz do aplicativo virtual do aplicativo ASP.NET no servidor.</summary>
+        <value>O caminho virtual do aplicativo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para construir uma URL relativa à raiz do aplicativo de uma página ou controle de usuário da Web que não está no diretório raiz. Isso permite que a páginas e controles compartilhados que existem em diferentes níveis de uma estrutura de diretórios para usar o mesmo código para vincular a recursos locais fixas no aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.IO.StreamWriter.Write%2A> método para a codificação HTML e, em seguida, gravar o valor da <xref:System.Web.HttpRequest.ApplicationPath%2A> propriedade para um arquivo de texto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe. Ele pressupõe a existência de um <xref:System.IO.StreamWriter> objeto chamado `sw`.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#2)]
+ [!code-vb[System.Web.HttpRequest_Sample1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#2)]  
+  
+ O exemplo a seguir usa o <xref:System.Web.HttpRequest.ApplicationPath%2A> propriedade programaticamente construir um caminho para um recurso que está em um local fixo no aplicativo. A página que referencia o recurso não precisa estar localizado no mesmo diretório que o recurso.  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest.ApplicationPath#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest.ApplicationPath/CS/ApplicationPath.aspx#2)]
+ [!code-aspx-vb[System.Web.HttpRequest.ApplicationPath#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest.ApplicationPath/VB/ApplicationPath.aspx#2)]  
+  
+ Se você executar esse exemplo em um aplicativo Web chamado WebSite1, `/WebSite1` será exibido como o valor de <xref:System.Web.HttpRequest.ApplicationPath%2A> propriedade e `/WebSite1/images/Image1.gif` será exibido como o caminho completo da imagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppRelativeCurrentExecutionFilePath">
+      <MemberSignature Language="C#" Value="public string AppRelativeCurrentExecutionFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppRelativeCurrentExecutionFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da raiz do aplicativo e o torna relativo usando a notação de til (~) para a raiz do aplicativo (como em “~/page.aspx”).</summary>
+        <value>O caminho virtual da raiz do aplicativo da solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para fornecer informações de URL que permanecerão a mesma mesmo se o aplicativo altera o local. Isso permite que o mesmo código de mapeamento de URL a ser usado em um ambiente de teste e no ambiente de implantação final, ou para ser usado por cópias de aplicativos da Web em domínios diferentes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath%2A> propriedade para definir a URL de um <xref:System.Web.UI.WebControls.Image> controle a uma imagem no mesmo diretório que a página. Execute esta página em diferentes níveis de uma estrutura de diretórios para ver os resultante <xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath%2A> valores de propriedade.  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest.AppRelativeCurrentExecutionPath#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest.AppRelativeCurrentExecutionPath/CS/AppRelativeCurrentExecutionPathCS.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpRequest.AppRelativeCurrentExecutionPath#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest.AppRelativeCurrentExecutionPath/VB/AppRelativeCurrentExecutionPathVB.aspx#1)]  
+  
+ O exemplo a seguir usa o <xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath%2A> propriedade para definir o caminho para um recurso, com base no caminho da página atual.  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest.ApplicationPath#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest.ApplicationPath/CS/apprelativecurrentexecutionfilepath.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpRequest.ApplicationPath#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest.ApplicationPath/VB/apprelativecurrentexecutionfilepath.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryRead">
+      <MemberSignature Language="C#" Value="public byte[] BinaryRead (int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] BinaryRead(int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.BinaryRead(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="count">O número de bytes a serem lidos.</param>
+        <summary>Executa uma leitura binária de um número especificado de bytes do fluxo de entrada atual.</summary>
+        <returns>Uma matriz de bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest.BinaryRead%2A> método é fornecido para compatibilidade com o ASP.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> é 0.  
+  
+ \- ou -  
+  
+ <paramref name="count" /> é maior que o número de bytes disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Browser">
+      <MemberSignature Language="C#" Value="public System.Web.HttpBrowserCapabilities Browser { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpBrowserCapabilities Browser" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Browser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpBrowserCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações sobre as funcionalidades do navegador do cliente solicitante.</summary>
+        <value>Um objeto <see cref="T:System.Web.HttpBrowserCapabilities" /> que lista as funcionalidades do navegador do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir envia uma lista de recursos do navegador de volta para o cliente em uma página HTML.  
+  
+ [!code-csharp[Classic HttpRequest.Browser Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.Browser Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.Browser Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.Browser Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificate">
+      <MemberSignature Language="C#" Value="public System.Web.HttpClientCertificate ClientCertificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpClientCertificate ClientCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.ClientCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpClientCertificate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual certificado de segurança do cliente da solicitação.</summary>
+        <value>Um objeto <see cref="T:System.Web.HttpClientCertificate" /> que contém informações sobre as configurações de certificado de segurança do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir envia as configurações de certificado do cliente para o cliente em uma página HTML.  
+  
+ [!code-csharp[Classic HttpRequest.ClientCertificate Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.ClientCertificate Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.ClientCertificate Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.ClientCertificate Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding ContentEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ContentEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.ContentEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto de caracteres do corpo da entidade.</summary>
+        <value>Um objeto <see cref="T:System.Text.Encoding" /> que representa o conjunto de caracteres do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Codificação de conteúdo padrão pode ser especificado no [globalização Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7) de um arquivo de configuração. Se a codificação de conteúdo também é especificado pelo cliente, as configurações padrão serão substituídas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir atribui um valor que representa a descrição da HTTP codificação atual para uma variável de cadeia de caracteres.  
+  
+ [!code-csharp[Classic HttpRequest.ContentEncoding Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.ContentEncoding Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.ContentEncoding Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.ContentEncoding Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength">
+      <MemberSignature Language="C#" Value="public int ContentLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.ContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o tamanho, em bytes, do conteúdo enviado pelo cliente.</summary>
+        <value>O tamanho, em bytes, do conteúdo enviado pelo cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir atribui o valor que representa o comprimento do conteúdo da solicitação de entrada para uma variável de inteiro.  
+  
+ [!code-csharp[Classic HttpRequest.ContentLength Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.ContentLength Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.ContentLength Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.ContentLength Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de conteúdo MIME da solicitação recebida.</summary>
+        <value>Uma cadeia de caracteres que representa o tipo de conteúdo MIME da solicitação recebida, por exemplo, "text/html". Tipos MIME comuns adicionais incluem "audio.wav", "image/gif" e "application/pdf".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir atribui o valor que representa o tipo de conteúdo da solicitação de entrada para uma variável de cadeia de caracteres.  
+  
+ [!code-csharp[Classic HttpRequest.ContentType Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.ContentType Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.ContentType Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.ContentType Example/VB/source.vb#1)]  
+  
+ O exemplo a seguir mostra a saída que pode ser produzida por este código.  
+  
+ `GET`  
+  
+ `127.0.0.1`  
+  
+ `127.0.0.1`  
+  
+ `GET`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookieCollection Cookies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCookieCollection Cookies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Cookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cookies enviados pelo cliente.</summary>
+        <value>Um objeto <see cref="T:System.Web.HttpCookieCollection" /> que representa as variáveis de cookie do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ASP.NET inclui duas coleções de cookie intrínseco. A coleção acessada por meio de <xref:System.Web.HttpRequest.Cookies%2A> coleção de <xref:System.Web.HttpRequest> contém cookies transmitidos pelo cliente para o servidor no `Cookie` cabeçalho. A coleção acessada por meio de <xref:System.Web.HttpResponse.Cookies%2A> coleção de <xref:System.Web.HttpResponse> contém novos cookies criado no servidor e transmitidos para o cliente no `Set-Cookie` cabeçalho.  
+  
+> [!NOTE]
+>  Depois de adicionar um cookie usando o <xref:System.Web.HttpResponse.Cookies%2A?displayProperty=nameWithType> coleção, o cookie é imediatamente disponível no <xref:System.Web.HttpRequest.Cookies%2A?displayProperty=nameWithType> coleção, mesmo se a resposta não foi enviada ao cliente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir executa um loop em todos os cookies enviados pelo cliente e envia o nome, data de expiração, o parâmetro de segurança e valores de cada cookie para a saída HTTP.  
+  
+ [!code-csharp[Classic HttpRequest.Cookies Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.Cookies Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.Cookies Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.Cookies Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentExecutionFilePath">
+      <MemberSignature Language="C#" Value="public string CurrentExecutionFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentExecutionFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.CurrentExecutionFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da solicitação atual.</summary>
+        <value>O caminho virtual da solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpRequest.CurrentExecutionFilePath%2A>Retorna o caminho do arquivo para o manipulador de página em execução no momento. Para cenários de redirecionamento usando <xref:System.Web.HttpServerUtility.Execute%2A> e <xref:System.Web.HttpServerUtility.Transfer%2A> métodos, isso significa que o <xref:System.Web.HttpRequest.CurrentExecutionFilePath%2A> propriedade retorna o caminho para a página redirecionada para (página filho). No entanto, quando o cliente é redirecionado para outra página, o <xref:System.Web.HttpRequest.FilePath%2A> propriedade retorna o caminho para a página original.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.CurrentExecutionFilePath%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#2)]
+ [!code-vb[System.Web.HttpRequest_Sample1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentExecutionFilePathExtension">
+      <MemberSignature Language="C#" Value="public string CurrentExecutionFilePathExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentExecutionFilePathExtension" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.CurrentExecutionFilePathExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a extensão do nome do arquivo especificado no <see cref="P:System.Web.HttpRequest.CurrentExecutionFilePath" /> propriedade.</summary>
+        <value>A extensão do nome do arquivo especificado no <see cref="P:System.Web.HttpRequest.CurrentExecutionFilePath" /> propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public string FilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da solicitação atual.</summary>
+        <value>O caminho virtual da solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest.FilePath%2A> propriedade não inclui o <xref:System.Web.HttpRequest.PathInfo%2A> marcador. Por exemplo, para a URL http://www.contoso.com/virdir/page.html/tail, o <xref:System.Web.HttpRequest.FilePath%2A> valor é /virdir/page.html.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.FilePath%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#2)]
+ [!code-vb[System.Web.HttpRequest_Sample1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Files">
+      <MemberSignature Language="C#" Value="public System.Web.HttpFileCollection Files { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpFileCollection Files" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Files" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpFileCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de arquivos carregados pelo cliente, no formato MIME de diversas partes.</summary>
+        <value>Um objeto <see cref="T:System.Web.HttpFileCollection" /> que representa uma coleção de arquivos carregados pelo cliente. Os itens do objeto <see cref="T:System.Web.HttpFileCollection" /> são do tipo <see cref="T:System.Web.HttpPostedFile" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção de arquivos é populada somente quando a solicitação HTTP `Content-Type` valor é "multipart/dados de formulário".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os nomes de todos os arquivos de <xref:System.Web.HttpRequest.Files%2A> coleção.  
+  
+ [!code-csharp[Classic HttpRequest.Files Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.Files Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.Files Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.Files Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o filtro a ser usado ao ler o fluxo de entrada atual.</summary>
+        <value>Um objeto <see cref="T:System.IO.Stream" /> a ser usado como o filtro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria duas novas classes, `QQQ1` e `QQQ2` filtro a <xref:System.Web.HttpRequest.InputStream%2A>. Colocar as classes no arquivo global. asax no diretório de um aplicativo ASP.NET para que todas as entradas de todas as páginas da Web ASP.NET no aplicativo serão filtradas.  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest.Filter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest.Filter/CS/systemwebhttprequestfilter.cs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpRequest.Filter#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest.Filter/VB/systemwebhttprequestfilter.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O <see cref="T:System.IO.Stream" /> especificado é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Form">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Form { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Form" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Form" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de variáveis de formulário.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> que representa uma coleção de variáveis de formulário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest.Form%2A> propriedade é preenchida quando a solicitação HTTP `Content-Type` valor é "application/x-www-form-urlencoded" ou "multipart/dados de formulário".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como ler os valores na coleção de formulário postado a partir de um navegador. Cada par de nome/valor na coleção representa um controle no formulário e seu valor.  
+  
+ [!code-csharp[Classic HttpRequest.Form Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.Form Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.Form Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.Form Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBufferedInputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetBufferedInputStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetBufferedInputStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.GetBufferedInputStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é idêntico ao <xref:System.Web.HttpRequest.GetBufferlessInputStream%2A> exceto que ele também copia os bytes são lidos para o armazenamento interno que é usado pelo ASP.NET para preencher o <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.Files%2A>, e <xref:System.Web.HttpRequest.InputStream%2A> propriedades. Como essas informações são preservadas, código downstream como páginas Web Forms do ASP.NET (arquivos. aspx) serão executados com êxito. Isso não é o caso com o <xref:System.Web.HttpRequest.GetBufferlessInputStream%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O corpo da entidade da solicitação já foi carregado e analisado. Veja alguns exemplos de propriedades que fazem o corpo da entidade ser carregado e analisado:  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Form" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Files" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.InputStream" /> .  
+  
+-   O método <see cref="M:System.Web.HttpRequest.GetBufferlessInputStream" />.  
+  
+ Para evitar essa exceção, chame o método <see cref="P:System.Web.HttpRequest.ReadEntityBodyMode" /> primeiro. Essa exceção também será gerada se o cliente se desconectar enquanto o corpo da entidade é lido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBufferlessInputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetBufferlessInputStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetBufferlessInputStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.GetBufferlessInputStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método fornece uma alternativa ao uso de <xref:System.Web.HttpRequest.InputStream%2A> propriedade. O <xref:System.Web.HttpRequest.InputStream%2A> propriedade aguarda até que toda a solicitação foi recebida antes de retornar um <xref:System.IO.Stream> objeto. Em contraste, o <xref:System.Web.HttpRequest.GetBufferlessInputStream%2A> método retorna o <xref:System.IO.Stream> objeto imediatamente. Você pode usar o método para iniciar o processamento do corpo da entidade antes de todo o conteúdo do corpo foram recebido.  
+  
+ O corpo da entidade (ou máximo você solicitar e foi recebida) é retornado somente quando você usar o objeto que é retornado por este método para ler o fluxo chamando métodos, como o <xref:System.IO.Stream.Read%2A> método. Usar parâmetros de <xref:System.IO.Stream.Read%2A> método para especificar a quantidade de ler o corpo da entidade.  
+  
+ O <xref:System.IO.Stream> objeto retornado pelo ASP.NET deste método dá suporte a métodos de leitura síncronos e assíncronos. O <xref:System.IO.Stream> objeto implementa ambos o <xref:System.IO.Stream.BeginRead%2A> e <xref:System.IO.Stream.EndRead%2A> métodos. Os métodos assíncronos permitem que você leia assincronamente a entidade de solicitação em partes, ao ASP.NET libera o thread atual entre cada iteração de um loop de leitura assíncrona.  
+  
+ Esse método pode ser útil se a solicitação está carregando um arquivo grande e você deseja começar a acessar o conteúdo do arquivo antes que o carregamento for concluído. No entanto, você deve apenas usar esse método para cenários em que você deseja assumir todo o processamento do corpo da entidade. Isso significa que você não pode usar esse método em uma página. aspx, porque no momento em que uma página. aspx é executado, o corpo da entidade já foi lido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O corpo da entidade da solicitação já foi carregado e analisado. Veja alguns exemplos de propriedades que fazem o corpo da entidade ser carregado e analisado:  
+  
+-   <see cref="P:System.Web.HttpRequest.Form" />  
+  
+-   <see cref="P:System.Web.HttpRequest.InputStream" />  
+  
+-   <see cref="P:System.Web.HttpRequest.Files" />  
+  
+-   <see cref="M:System.Web.HttpRequest.GetBufferedInputStream" />  
+  
+ Para evitar essa exceção, chame o método <see cref="P:System.Web.HttpRequest.ReadEntityBodyMode" /> primeiro. Essa exceção também será gerada se o cliente se desconectar enquanto o corpo da entidade é lido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBufferlessInputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetBufferlessInputStream (bool disableMaxRequestLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetBufferlessInputStream(bool disableMaxRequestLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.GetBufferlessInputStream(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disableMaxRequestLength" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disableMaxRequestLength">
+          <see langword="true" /> para desabilitar o limite de tamanho de solicitação, caso contrário, <see langword="false" />.</param>
+        <summary>Obtém um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP recebida, opcionalmente desabilitando o limite de tamanho de solicitação definido na propriedade <see cref="P:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength" />.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre esse método, consulte o <xref:System.Web.HttpRequest.GetBufferlessInputStream> de sobrecarga.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O corpo da entidade da solicitação já foi carregado e analisado. Veja alguns exemplos de propriedades que fazem o corpo da entidade ser carregado e analisado:  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Form" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Files" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.InputStream" /> .  
+  
+-   O método <see cref="M:System.Web.HttpRequest.GetBufferedInputStream" />.  
+  
+ Para evitar essa exceção, chame o método <see cref="P:System.Web.HttpRequest.ReadEntityBodyMode" /> primeiro. Essa exceção também será gerada se o cliente se desconectar enquanto o corpo da entidade é lido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cabeçalhos HTTP.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> de cabeçalhos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de todos os cabeçalhos possíveis, consulte [campos de cabeçalho de solicitação](http://go.microsoft.com/fwlink/?LinkId=73147) no site do W3C.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os nomes e valores de todos os cabeçalhos na solicitação HTTP.  
+  
+ [!code-csharp[Classic HttpRequest.Headers Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.Headers Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.Headers Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.Headers Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpChannelBinding">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.ChannelBinding HttpChannelBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Authentication.ExtendedProtection.ChannelBinding HttpChannelBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.HttpChannelBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ChannelBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" /> objeto do atual <see cref="T:System.Web.HttpWorkerRequest" /> instância.</summary>
+        <value>O <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" /> objeto do atual <see cref="T:System.Web.HttpWorkerRequest" /> instância.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Atual <see cref="T:System.Web.HttpWorkerRequest" /> o objeto não é um <see langword="System.Web.Hosting.IIS7WorkerRequest" /> objeto ou uma <see langword="System.Web.Hosting.ISAPIWorkerRequestInProc" /> objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpMethod">
+      <MemberSignature Language="C#" Value="public string HttpMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.HttpMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método de transferência de dados HTTP (tal como <see langword="GET" />, <see langword="POST" /> ou <see langword="HEAD" />) usado pelo cliente.</summary>
+        <value>O método de transferência de dados HTTP usado pelo cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.HttpMethod%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#7)]
+ [!code-vb[System.Web.HttpRequest_Sample1#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#7)]  
+  
+ O exemplo a seguir mostra a saída que é produzida por esse código.  
+  
+ `GET`  
+  
+ `127.0.0.1`  
+  
+ `127.0.0.1`  
+  
+ `GET`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream InputStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream InputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.InputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conteúdo do corpo da entidade HTTP recebida.</summary>
+        <value>Um objeto <see cref="T:System.IO.Stream" /> que representa o conteúdo do corpo de conteúdo HTTP recebido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir copia o conteúdo de um <xref:System.Web.HttpRequest.InputStream%2A> em uma cadeia de caracteres.  
+  
+ [!code-csharp[Classic HttpRequest.InputStream Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.InputStream Example/cs/source.aspx#1)]
+ [!code-vb[Classic HttpRequest.InputStream Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.InputStream Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="InsertEntityBody">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fornece um wrapper gerenciado para o método IIS que insere um corpo de entidade de solicitação HTTP na memória.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest.InsertEntityBody%2A> sobrecargas do método oferecem acesso gerenciado ao IIS 7 `IHttpRequest::InsertEntityBody` método. O método IIS insere um corpo de entidade de solicitação HTTP (os dados que são lançados por um cliente) na memória. Isso é útil porque o IIS não manter uma cópia da entidade de solicitação depois que ele foi lido. O <xref:System.Web.HttpRequest.InsertEntityBody%2A> métodos criar uma cópia dos dados de entidade de solicitação HTTP e disponibilizá-lo para o IIS para manipulação personalizada adicional.  
+  
+> [!NOTE]
+>  O <xref:System.Web.HttpRequest.InsertEntityBody%2A> sobrecargas do método trabalho apenas no IIS 7.0 ou posterior, porque o `IHttpRequest::InsertEntityBody` método foi adicionado no IIS 7.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="InsertEntityBody">
+      <MemberSignature Language="C#" Value="public void InsertEntityBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertEntityBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.InsertEntityBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece ao IIS uma cópia do corpo da entidade de solicitação HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IIS não mantém uma cópia da solicitação depois que ele foi lido. Portanto, é recomendável que apenas o manipulador para uma solicitação HTTP deve ler a entidade de solicitação.  
+  
+ O <xref:System.Web.HttpRequest.InsertEntityBody%2A?displayProperty=nameWithType> sobrecarga do método fornece IIS com uma cópia da entidade de solicitação, se ele foi lido anteriormente pelo ASP.NET. Essa sobrecarga de método é útil para casos em que o ASP.NET tem ler a solicitação de entidade e deseja reutilizar os dados da solicitação existente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O método foi chamado em uma versão do IIS anteriores ao IIS 7.0.</exception>
+        <permission cref="T:System.Web.AspNetHostingPermission">Para a operação em um ambiente hospedado. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Web.AspNetHostingPermissionLevel.High" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertEntityBody">
+      <MemberSignature Language="C#" Value="public void InsertEntityBody (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertEntityBody(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.InsertEntityBody(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz que contém os dados de entidade de solicitação.</param>
+        <param name="offset">A posição de base zero em <c>buffer</c> no qual começar a armazenar os dados de entidade de solicitação.</param>
+        <param name="count">O número de bytes para leitura de <c>buffer</c> matriz.</param>
+        <summary>Fornece o IIS com uma cópia do corpo da entidade de solicitação HTTP e informações sobre o objeto de entidade de solicitação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IIS não mantém uma cópia da solicitação depois que ele foi lido. Portanto, é recomendável que apenas o manipulador para uma solicitação HTTP deve ler a entidade de solicitação.  
+  
+ O <xref:System.Web.HttpRequest.InsertEntityBody%2A?displayProperty=nameWithType> sobrecarga do método é útil quando você deseja realizar o processamento personalizado, como a inserção de um corpo de entidade diferente na memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O método foi chamado em uma versão do IIS anteriores ao IIS 7.0.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> é um valor negativo.</exception>
+        <exception cref="T:System.ArgumentException">O número de itens em <paramref name="count" /> é maior do que o espaço disponível na <paramref name="buffer" />, devido a <paramref name="offset" /> valor.</exception>
+        <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Web.AspNetHostingPermissionLevel.High" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticated">
+      <MemberSignature Language="C#" Value="public bool IsAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.IsAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a solicitação foi autenticada.</summary>
+        <value>
+          <see langword="true" /> se a solicitação foi autenticada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpRequest.IsAuthenticated%2A> propriedade para determinar se a solicitação atual foi autenticada. Se ele não foi autenticado, a solicitação é redirecionada para outra página onde os usuários podem inserir suas credenciais para o aplicativo Web. Isso é uma técnica comum usada na página padrão para um aplicativo.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample3/CS/isauthenticatedcs.aspx#1)]
+ [!code-vb[System.Web.HttpRequest_Sample3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample3/VB/isauthenticatedvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocal">
+      <MemberSignature Language="C#" Value="public bool IsLocal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocal" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.IsLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a solicitação é do computador local.</summary>
+        <value>
+          <see langword="true" /> se a solicitação for do computador local; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest.IsLocal%2A> propriedade retorna `true` se o endereço IP do originador de solicitação é 127.0.0.1 ou se o endereço IP da solicitação é o mesmo endereço IP do servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecureConnection">
+      <MemberSignature Language="C#" Value="public bool IsSecureConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecureConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.IsSecureConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a conexão HTTP usa SSL (ou seja, HTTPS).</summary>
+        <value>
+          <see langword="true" /> se a conexão for SSL; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir determina se o <xref:System.Web.HttpRequest.IsSecureConnection%2A> estiver definida como false. Se for, o <xref:System.Web.HttpResponse.SuppressContent%2A> propriedade é definida como true para interromper a resposta sendo enviada.  
+  
+ [!code-csharp[System.Web.HttpResponse_Sample5#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/CS/httpresponsesuppresscontentcs.aspx#3)]
+ [!code-vb[System.Web.HttpResponse_Sample5#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/VB/httpresponsesuppresscontentvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do membro da coleção a ser obtido.</param>
+        <summary>Obtém o objeto especificado das coleções <see cref="P:System.Web.HttpRequest.QueryString" />, <see cref="P:System.Web.HttpRequest.Form" />, <see cref="P:System.Web.HttpRequest.Cookies" /> ou <see cref="P:System.Web.HttpRequest.ServerVariables" />.</summary>
+        <value>O membro da coleção <see cref="P:System.Web.HttpRequest.QueryString" />, <see cref="P:System.Web.HttpRequest.Form" />, <see cref="P:System.Web.HttpRequest.Cookies" /> ou <see cref="P:System.Web.HttpRequest.ServerVariables" /> especificado no parâmetro <paramref name="key" />. Se o <paramref name="key" /> especificado não for encontrada, <see langword="null" /> será retornado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogonUserIdentity">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.WindowsIdentity LogonUserIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.WindowsIdentity LogonUserIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.LogonUserIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo <see cref="T:System.Security.Principal.WindowsIdentity" /> para o usuário atual.</summary>
+        <value>Um objeto <see cref="T:System.Security.Principal.WindowsIdentity" /> para as configurações de autenticação atuais dos Serviços de Informações da Internet da Microsoft (IIS).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest.LogonUserIdentity%2A> propriedade expõe as propriedades e métodos do <xref:System.Security.Principal.WindowsIdentity> objeto para o usuário conectado no momento para o Microsoft Internet Information Services (IIS). A instância do <xref:System.Security.Principal.WindowsIdentity> classe que é exposto pelo <xref:System.Web.HttpRequest.LogonUserIdentity%2A> controla o token de solicitação do IIS e fornece acesso fácil a esse token para a solicitação HTTP atual que está sendo processado dentro de ASP.NET. Uma instância do <xref:System.Security.Principal.WindowsIdentity> classe é criada automaticamente para que ele não precisa ser construída a fim de obter acesso a seus métodos e propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar o <xref:System.Web.HttpRequest.LogonUserIdentity%2A> propriedade para o usuário atual e a gravação, os valores de cada item em um arquivo de texto. Coloque esse código na página do ASP.NET referenciada pelo formulário de `ACTION` atributo.  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest_LogonUserIdentity#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_LogonUserIdentity/CS/logonuseridentity_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpRequest_LogonUserIdentity#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_LogonUserIdentity/VB/logonuseridentity_vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O aplicativo Web é executado no modo integrado do IIS 7 e o <see cref="E:System.Web.HttpApplication.PostAuthenticateRequest" /> eventos ainda não foi gerado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MapImageCoordinates">
+      <MemberSignature Language="C#" Value="public int[] MapImageCoordinates (string imageFieldName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32[] MapImageCoordinates(string imageFieldName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.MapImageCoordinates(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageFieldName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="imageFieldName">O nome do mapa de imagem do formulário.</param>
+        <summary>Parâmetro de formulário de mapas de um campo de imagem de entrada para os valores apropriados de coordenadas x e y.</summary>
+        <returns>Uma matriz bidimensional de números inteiros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPath">
+      <MemberSignature Language="C#" Value="public string MapPath (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string MapPath(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.MapPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual (absoluto ou relativo) para a solicitação atual.</param>
+        <summary>Mapeia o caminho virtual especificado para um caminho físico.</summary>
+        <returns>O caminho físico no servidor especificado por <paramref name="virtualPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  O <xref:System.Web.HttpRequest.MapPath%2A> propriedade potencialmente contém informações importantes sobre o ambiente de hospedagem. O valor de retorno não deve ser exibido aos usuários.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpRequest.MapPath%2A> método para converter um caminho virtual para um caminho físico totalmente qualificado do servidor. Este exemplo tem duas partes:  
+  
+-   Uma página. aspx mapeia o caminho, lê o arquivo e exibe os resultados da operação de leitura.  
+  
+-   Uma classe, `UpperCaseFilterStream`, que altera todos os caracteres passados em maiusculas.  
+  
+ A primeira parte do exemplo mostra como converter um caminho virtual para um caminho físico totalmente qualificado usando o <xref:System.Web.HttpRequest.MapPath%2A> método. Esse caminho físico é então passado para um <xref:System.IO.StreamReader> objeto, que obtém o conteúdo do arquivo. O <xref:System.Web.HttpResponse.Write%2A> método é chamado para exibir o conteúdo do arquivo na página. O <xref:System.Web.HttpResponse.Filter%2A> propriedade é usada para anexar um filtro para o fluxo de resposta que faz com que o texto exibido para a página de todas as letras maiusculas.  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest_Samples2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Samples2/CS/requestsamples2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpRequest_Samples2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Samples2/VB/requestsamples2vb.aspx#1)]  
+  
+ A segunda parte do exemplo mostra uma classe que herda de <xref:System.IO.Stream> e converte todos os caracteres em um fluxo em maiusculas. Coloque esse código no `App_Code` pasta para o seu aplicativo.  
+  
+ [!code-csharp[System.Web.HttpRequest_Samples2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Samples2/CS/responsefilter.cs#2)]
+ [!code-vb[System.Web.HttpRequest_Samples2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Samples2/VB/responsefilter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Nenhum objeto <see cref="T:System.Web.HttpContext" /> é definido para a solicitação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPath">
+      <MemberSignature Language="C#" Value="public string MapPath (string virtualPath, string baseVirtualDir, bool allowCrossAppMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string MapPath(string virtualPath, string baseVirtualDir, bool allowCrossAppMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.MapPath(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="baseVirtualDir" Type="System.String" />
+        <Parameter Name="allowCrossAppMapping" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual (absoluto ou relativo) para a solicitação atual.</param>
+        <param name="baseVirtualDir">O caminho do diretório base virtual usado para resolução relativa.</param>
+        <param name="allowCrossAppMapping">
+          <see langword="true" />para indicar que <c>virtualPath</c> podem pertencer a outro aplicativo; caso contrário, <see langword="false" />.</param>
+        <summary>Mapeia o caminho virtual especificado para um caminho físico.</summary>
+        <returns>O caminho físico no servidor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  O <xref:System.Web.HttpRequest.MapPath%2A> propriedade potencialmente contém informações importantes sobre o ambiente de hospedagem. O valor de retorno não deve ser exibido aos usuários.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Nenhum objeto <see cref="T:System.Web.HttpContext" /> é definido para a solicitação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MapRawImageCoordinates">
+      <MemberSignature Language="C#" Value="public double[] MapRawImageCoordinates (string imageFieldName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64[] MapRawImageCoordinates(string imageFieldName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.MapRawImageCoordinates(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageFieldName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="imageFieldName">O nome do campo de imagem.</param>
+        <summary>Mapeia um parâmetro de formulário de campo de imagem entrada em x apropriado e valores de coordenada de y.</summary>
+        <returns>Valores de coordenadas x e y.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Params">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Params { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Params" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Params" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção combinada dos itens <see cref="P:System.Web.HttpRequest.QueryString" />, <see cref="P:System.Web.HttpRequest.Form" />, <see cref="P:System.Web.HttpRequest.Cookies" /> e <see cref="P:System.Web.HttpRequest.ServerVariables" />.</summary>
+        <value>Um objeto <see cref="T:System.Collections.Specialized.NameValueCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pares de nome-valor são adicionados à coleção na seguinte ordem:  
+  
+1.  Parâmetros de cadeia de caracteres de consulta.  
+  
+2.  Campos do formulário.  
+  
+3.  Cookies.  
+  
+4.  Variáveis de servidor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como percorrer o <xref:System.Web.HttpRequest.Params%2A> propriedade para uma página e como exibir cada par chave/valor.  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest.Params#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest.Params/CS/requestparamscs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpRequest.Params#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest.Params/VB/requestparamsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da solicitação atual.</summary>
+        <value>O caminho virtual da solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest.Path%2A> é a concatenação do <xref:System.Web.HttpRequest.FilePath%2A> e <xref:System.Web.HttpRequest.PathInfo%2A> marcador. Por exemplo, para a URL http://www.contoso.com/virdir/page.html/tail, o <xref:System.Web.HttpRequest.Path%2A> é /virdir/page.html/tail.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.Path%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#2)]
+ [!code-vb[System.Web.HttpRequest_Sample1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PathInfo">
+      <MemberSignature Language="C#" Value="public string PathInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PathInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.PathInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações adicionais de caminho para um recurso com uma extensão de URL.</summary>
+        <value>As informações adicionais de caminho para um recurso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para Http://www.contoso.com/virdir/page.html/tail URL, o <xref:System.Web.HttpRequest.PathInfo%2A> valor é /tail.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se o <xref:System.Web.HttpRequest.PathInfo%2A> propriedade contém uma cadeia de caracteres vazia. Se isso acontecer, o <xref:System.IO.StreamWriter.Write%2A> método grava uma cadeia de caracteres indicando isso para um arquivo. Se não estiver, o <xref:System.Web.HttpUtility.HtmlEncode%2A> método HTML codifica o valor da <xref:System.Web.HttpRequest.PathInfo%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método grava o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#4)]
+ [!code-vb[System.Web.HttpRequest_Sample1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalApplicationPath">
+      <MemberSignature Language="C#" Value="public string PhysicalApplicationPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhysicalApplicationPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.PhysicalApplicationPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do sistema de arquivos físico do diretório raiz do aplicativo para servidores em execução.</summary>
+        <value>O caminho do sistema de arquivos do diretório raiz do aplicativo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.PhysicalApplicationPath%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#5)]
+ [!code-vb[System.Web.HttpRequest_Sample1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalPath">
+      <MemberSignature Language="C#" Value="public string PhysicalPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhysicalPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.PhysicalPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do sistema de arquivos físico correspondente à URL solicitada.</summary>
+        <value>O caminho do sistema de arquivos da solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em cenários de redirecionamento usando <xref:System.Web.HttpServerUtility.Execute%2A> e <xref:System.Web.HttpServerUtility.Transfer%2A>, o <xref:System.Web.HttpRequest.PhysicalPath%2A> propriedade retorna o caminho para a página original. Para localizar o caminho físico do uso de página em execução no momento o <xref:System.Web.HttpRequest.MapPath%2A> método com o argumento de entrada é definido como o <xref:System.Web.HttpRequest.CurrentExecutionFilePath%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.PhysicalPath%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#5)]
+ [!code-vb[System.Web.HttpRequest_Sample1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryString">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection QueryString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection QueryString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.QueryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de variáveis de cadeia de caracteres de consulta HTTP.</summary>
+        <value>As variáveis de cadeia de consulta enviadas pelo cliente. Chaves e valores são decodificados para URL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra duas maneiras de obter o valor de uma variável de cadeia de caracteres de consulta chamada "fullname". Em cada caso, se a URL for `http://www.contoso.com/default.aspx?fullname=Fadi%20Fakhouri`, em seguida, o valor retornado é "Fadi Fakhouri" porque o `%20` é decodificada para URL em um caractere de espaço. Se a URL não tem um `fullname` ID da cadeia de caracteres de consulta, o valor retornado será `null`.  
+  
+ A primeira linha de código procura a chave "fullname" somente na cadeia de caracteres de consulta; a segunda linha procura a chave "fullname" em todas as coleções de solicitação HTTP. Para obter mais informações sobre a segunda linha, consulte <xref:System.Web.HttpRequest.Item%2A>.  
+  
+```csharp  
+string fullname1 = Request.QueryString["fullname"];  
+string fullname2 = Request["fullname"];  
+  
+```  
+  
+```vb  
+Dim fullname1 As String = Request.QueryString("fullname")  
+Dim fullname2 As String = Request("fullname")  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawUrl">
+      <MemberSignature Language="C#" Value="public string RawUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RawUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.RawUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL bruta da solicitação atual.</summary>
+        <value>A URL bruta da solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A URL bruta é definida como parte da URL a seguir as informações de domínio. Http://www.contoso.com/articles/recent.aspx a cadeia de caracteres URL, a URL bruta é /articles/recent.aspx. A URL bruta inclui a cadeia de caracteres de consulta, se presente.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.RawUrl%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#5)]
+ [!code-vb[System.Web.HttpRequest_Sample1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadEntityBodyMode">
+      <MemberSignature Language="C#" Value="public System.Web.ReadEntityBodyMode ReadEntityBodyMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.ReadEntityBodyMode ReadEntityBodyMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.ReadEntityBodyMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ReadEntityBodyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o corpo da entidade de solicitação foi lido e, em caso afirmativo, como ele foi lido.</summary>
+        <value>O valor que indica como o corpo da entidade de solicitação foi lido ou se ele não foi lido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para evitar a exceção que é gerada se o corpo da entidade já foi lido e é feita uma tentativa de lê-lo usando um método incompatível. Métodos e propriedades que ler o corpo da entidade incluem o seguinte:  
+  
+-   A propriedade de <xref:System.Web.HttpRequest.Form%2A> .  
+  
+-   A propriedade de <xref:System.Web.HttpRequest.Files%2A> .  
+  
+-   A propriedade de <xref:System.Web.HttpRequest.InputStream%2A> .  
+  
+-   O método <xref:System.Web.HttpRequest.GetBufferedInputStream%2A>.  
+  
+-   O método <xref:System.Web.HttpRequest.GetBufferlessInputStream%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestContext">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.RequestContext RequestContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.RequestContext RequestContext" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.RequestContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RequestContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância <see cref="T:System.Web.Routing.RequestContext" /> da solicitação atual.</summary>
+        <value>A instância <see cref="T:System.Web.Routing.RequestContext" /> da solicitação atual. Para solicitações não roteadas, um objeto <see cref="T:System.Web.Routing.RequestContext" /> retornado está vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece acesso para o <xref:System.Web.Routing.RouteData> objeto para a solicitação atual. Para obter mais informações sobre roteamento ASP.NET, consulte. [Roteamento ASP.NET](http://msdn.microsoft.com/library/892441af-8f1d-483e-ab5f-b82c23576f5a).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestType">
+      <MemberSignature Language="C#" Value="public string RequestType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.RequestType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método de transferência de dados HTTP (<see langword="GET" /> ou <see langword="POST" />) usado pelo cliente.</summary>
+        <value>Uma cadeia de caracteres que representa o tipo de invocação de HTTP enviado pelo cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.RequestType%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#7)]
+ [!code-vb[System.Web.HttpRequest_Sample1#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public void SaveAs (string filename, bool includeHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveAs(string filename, bool includeHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.SaveAs(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="includeHeaders" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O caminho da unidade física.</param>
+        <param name="includeHeaders">Um valor booliano que especifica se um cabeçalho HTTP deve ser salvo em disco.</param>
+        <summary>Salva uma solicitação HTTP no disco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Salvar o contexto de solicitação para o disco pode ser útil na depuração.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama o <xref:System.Web.HttpRequest.SaveAs%2A> método quando uma página for carregada. A chamada especifica que a solicitação ser salvo como um arquivo de texto em um diretório em que a identidade do processo ASP.NET tiver recebida permissões de gravação e que qualquer informação de cabeçalho incluída na solicitação é incluída no arquivo.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample6#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample6/cs/requestsample6cs.aspx#1)]
+ [!code-vb[System.Web.HttpRequest_Sample6#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample6/vb/requestsample6vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A propriedade <see cref="P:System.Web.Configuration.HttpRuntimeSection.RequireRootedSaveAsPath" /> da <see cref="T:System.Web.Configuration.HttpRuntimeSection" /> é definida como <see langword="true" />, mas <paramref name="filename" /> não é um caminho absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerVariables">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection ServerVariables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection ServerVariables" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.ServerVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de variáveis de servidor Web.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> de variáveis do servidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de variáveis de servidor com suporte pelo IIS, consulte [variáveis de servidor IIS](http://go.microsoft.com/fwlink/?LinkId=52471).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os nomes e valores de todas as variáveis de servidor nomeado.  
+  
+ [!code-csharp[Classic HttpRequest.ServerVariables Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.ServerVariables Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.ServerVariables Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.ServerVariables Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimedOutToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken TimedOutToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken TimedOutToken" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.TimedOutToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Threading.CancellationToken" /> que é disparado quando uma solicitação expira.</summary>
+        <value>O token de cancelamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O período de tempo limite pode ser especificado no arquivo Web. config (consulte <xref:System.Web.Configuration.HttpRuntimeSection.ExecutionTimeout%2A?displayProperty=nameWithType>) ou por meio de programação (consulte <xref:System.Web.HttpServerUtility.ScriptTimeout%2A?displayProperty=nameWithType>). O período de tempo limite é medido desde o momento em que a solicitação chega. Se o tempo limite padrão de segundos 110 estiver em vigor, o token de cancelamento será retirado não anterior a 110 segundos após o início do processamento da solicitação. Você pode alterar o <xref:System.Web.HttpServerUtility.ScriptTimeout%2A?displayProperty=nameWithType> valor da propriedade, e como esse token de tempo não foi retirado ainda, o novo valor de tempo limite será respeitado.  
+  
+ Atualmente o token fornece apenas 15 granularidade segundo, que significa que, se o valor de tempo limite é 110 segundos, o token será ser disparado em algum momento entre 110 e 125 segundos após o início do processamento da solicitação. A granularidade pode ser alterado no futuro.  
+  
+ Embora essa propriedade é thread-safe, há restrições sobre seu uso. Para obter mais informações, consulte <xref:System.Web.HttpResponse.ClientDisconnectedToken%2A?displayProperty=nameWithType>.  
+  
+ Essa propriedade não faz sentida se tiver iniciado o processamento da solicitação WebSocket.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TlsTokenBindingInfo">
+      <MemberSignature Language="C#" Value="public System.Web.ITlsTokenBindingInfo TlsTokenBindingInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ITlsTokenBindingInfo TlsTokenBindingInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.TlsTokenBindingInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ITlsTokenBindingInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de associação de token de TLS. A propriedade permite que os aplicativos recuperem informações do token de solicitações HTTP de entrada para autenticação avançada.</summary>
+        <value>O token de associação para a conexão atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna `null` em plataformas não windows10.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalBytes">
+      <MemberSignature Language="C#" Value="public int TotalBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TotalBytes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.TotalBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de bytes no fluxo de entrada atual.</summary>
+        <value>O número de bytes no fluxo de entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir determina se o <xref:System.Web.HttpRequest.TotalBytes%2A> o valor da propriedade é maior que 1.000 bytes e grava essas informações em um arquivo.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#6)]
+ [!code-vb[System.Web.HttpRequest_Sample1#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unvalidated">
+      <MemberSignature Language="C#" Value="public System.Web.UnvalidatedRequestValues Unvalidated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UnvalidatedRequestValues Unvalidated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Unvalidated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UnvalidatedRequestValues</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores de solicitação HTTP sem disparar a validação de solicitação.</summary>
+        <value>Os valores de solicitação HTTP que não foram verificados usando a validação de solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Solicite verificações de validação de marcação HTML e script que pode indicar um ataque de script entre sites. Por padrão, todos os valores são verificados usando a validação de solicitação e se todos os valores contêm marcação ou script, o ASP.NET gera uma <xref:System.Web.HttpRequestValidationException> exceção. Use este método se você prevê que a solicitação contém marcação (por exemplo, está permitindo que os usuários publiquem conteúdo que contém a marcação) e você deseja obter o valor bruto de uma solicitação.  
+  
+> [!IMPORTANT]
+>  Se você usar essa propriedade, você deve verificar manualmente os dados para possíveis ataques de script entre sites.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public Uri Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações sobre a URL da solicitação atual.</summary>
+        <value>Um objeto <see cref="T:System.Uri" /> que contém a URL da solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir exemplo atribui o <xref:System.Uri> objeto da solicitação atual para uma variável de objeto e exibe o valor de duas propriedades de URL do objeto para a saída HTTP.  
+  
+ [!code-csharp[Classic HttpRequest.Url Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.Url Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.Url Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.Url Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlReferrer">
+      <MemberSignature Language="C#" Value="public Uri UrlReferrer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri UrlReferrer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.UrlReferrer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações sobre a URL da solicitação anterior do cliente vinculada à URL atual.</summary>
+        <value>Um objeto <see cref="T:System.Uri" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de duas propriedades de URL que chamadas, o cliente do aplicativo atual.  
+  
+ [!code-csharp[Classic HttpRequest.UrlReferrer Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.UrlReferrer Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.UrlReferrer Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.UrlReferrer Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UriFormatException">O cabeçalho da solicitação <see langword="Referer" /> HTTP está malformado e não pode ser convertido em um objeto <see cref="T:System.Uri" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgent">
+      <MemberSignature Language="C#" Value="public string UserAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAgent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.UserAgent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de agente do usuário bruto do navegador do cliente.</summary>
+        <value>A cadeia de caracteres de agente do usuário bruto do navegador do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir atribui a identificação de tipo de navegador do solicitante a uma variável de cadeia de caracteres.  
+  
+ [!code-csharp[Classic HttpRequest.UserAgent Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.UserAgent Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.UserAgent Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.UserAgent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserHostAddress">
+      <MemberSignature Language="C#" Value="public string UserHostAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserHostAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.UserHostAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço do host IP do cliente remoto.</summary>
+        <value>O endereço IP do cliente remoto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.UserHostAddress%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#7)]
+ [!code-vb[System.Web.HttpRequest_Sample1#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserHostName">
+      <MemberSignature Language="C#" Value="public string UserHostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserHostName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.UserHostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome DNS do cliente remoto.</summary>
+        <value>O nome DNS do cliente remoto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.HttpUtility.HtmlEncode%2A> método para a codificação HTML o valor da <xref:System.Web.HttpRequest.UserHostName%2A> propriedade e o <xref:System.IO.TextWriter.WriteLine%2A> método para gravar o valor codificado no arquivo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.HttpRequest> classe.  
+  
+ [!code-csharp[System.Web.HttpRequest_Sample1#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/CS/requestdetailscs.aspx#7)]
+ [!code-vb[System.Web.HttpRequest_Sample1#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Sample1/VB/requestdetailsvb.aspx#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserLanguages">
+      <MemberSignature Language="C#" Value="public string[] UserLanguages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] UserLanguages" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequest.UserLanguages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de cadeia de caracteres classificada de preferências de idioma do cliente.</summary>
+        <value>Obtém uma matriz de cadeia de caracteres classificada das preferências de idioma do cliente ou <see langword="null" /> se vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir captura os vários valores retornados pelo <xref:System.Web.HttpRequest.UserLanguages%2A> propriedade em uma matriz de cadeia de caracteres e grava o nome de cada idioma para uma linha separada de HTTP de saída.  
+  
+ Os nomes de idioma são fornecidos pelo navegador, e não há nenhuma lista definitiva de todas as possíveis códigos.  Normalmente consistem em um códigos de dois caracteres para o idioma, um hífen e um código de dois caracteres para a cultura, como "en-us" para os EUA Inglês e "fr-ca" para francês canadense.  
+  
+ [!code-csharp[Classic HttpRequest.UserLanguages Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpRequest.UserLanguages Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpRequest.UserLanguages Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpRequest.UserLanguages Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInput">
+      <MemberSignature Language="C#" Value="public void ValidateInput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ValidateInput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequest.ValidateInput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que a validação ocorra para as coleções acessadas por meio das propriedades <see cref="P:System.Web.HttpRequest.Cookies" />, <see cref="P:System.Web.HttpRequest.Form" /> e <see cref="P:System.Web.HttpRequest.QueryString" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest> classe usa sinalizadores de validação de entrada para controlar se deseja executar a validação nas coleções de solicitação acessadas por meio de <xref:System.Web.HttpRequest.Cookies%2A>, <xref:System.Web.HttpRequest.Form%2A>, e <xref:System.Web.HttpRequest.QueryString%2A> propriedades. O <xref:System.Web.HttpRequest.ValidateInput%2A> método define esses sinalizadores isso que, quando os acessadores get para a <xref:System.Web.HttpRequest.Cookies%2A>, <xref:System.Web.HttpRequest.Form%2A>, ou <xref:System.Web.HttpRequest.QueryString%2A> propriedade são invocados, validação de entrada é executada. Validação funciona verificando todos os dados de entrada em uma lista codificada de dados potencialmente perigosos.  
+  
+ Se o recurso de validação é habilitado pela diretiva de página ou de configuração, este método é chamado durante a página `ProcessRequest` fase de processamento. O <xref:System.Web.HttpRequest.ValidateInput%2A> método pode ser chamado pelo seu código, se o recurso de validação não está habilitado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpRequestValidationException">Dados potencialmente perigosos foram recebidos do cliente.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

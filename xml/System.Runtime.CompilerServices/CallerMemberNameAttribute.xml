@@ -1,0 +1,100 @@
+<Type Name="CallerMemberNameAttribute" FullName="System.Runtime.CompilerServices.CallerMemberNameAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CallerMemberNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CallerMemberNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.CallerMemberNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite obter o nome de método ou propriedade do chamador do método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicar o `CallerMemberName` de atributo para um parâmetro opcional que tem um valor padrão. Você deve especificar um valor padrão explícito para o parâmetro opcional. Você não pode aplicar esse atributo para parâmetros que não são especificados como opcional.  
+  
+ Para obter mais informações, consulte [Informações do chamador](http://msdn.microsoft.com/library/9cb2b8c0-c4f6-44b8-9c90-38948455b373).  
+  
+ Você pode usar o atributo `CallerMemberName` para evitar especificar o nome do membro como um argumento `String` ao método chamado. Ao usar essa técnica, você evita o problema de que a **Refatoração de Renomeação** não altera os valores de `String`. Isso é especialmente útil para as seguintes tarefas:  
+  
+-   Usar rotinas de rastreamento e diagnóstico.  
+  
+-   Implementando a interface <xref:System.ComponentModel.INotifyPropertyChanged> ao associar dados. Essa interface permite que a propriedade de um objeto notifique um controle associado sobre a alteração da propriedade de modo que o controle possa exibir as informações atualizadas. Sem o atributo `CallerMemberName`, você deve especificar o nome da propriedade como um literal.  
+  
+ O gráfico a seguir mostra os nomes de membros que são retornados quando você usa o atributo `CallerMemberName`.  
+  
+|Chamada ocorre dentro de|Resultado de nome de membro|  
+|-|-|  
+|Método, propriedade ou evento|O nome do método, da propriedade ou do evento em que a chamada foi originada.|  
+|Construtor|A cadeia de caracteres “.ctor”|  
+|Construtor estático|A cadeia de caracteres “.cctor”|  
+|Destruidor|A cadeia de caracteres "Finalize"|  
+|Operadores usuário ou conversões definidos pelo usuário|O nome gerado para o membro, por exemplo, “op_Addition”.|  
+|Construtor de atributos|O nome do membro ao qual o atributo se aplica. Se o atributo é qualquer elemento dentro de um membro (como um parâmetro, um valor de retorno, ou um parâmetro de tipo genérico), esse resultado é o nome do membro associado a esse elemento.|  
+|Nenhum membro de recipiente (por exemplo, o nível de assembly ou aplicados aos tipos de atributos)|O valor padrão do parâmetro opcional.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o `CallerMemberName` atributo. Em cada chamada para o `TraceMessage` método, as informações do chamador é substituído como um argumento para o parâmetro opcional.  
+  
+ [!code-csharp[csProgGuideAttributes#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideAttributes/CS/callerinfo.cs#51)]
+ [!code-vb[csProgGuideAttributes#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csProgGuideAttributes/vb/callerinfo.vb#51)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallerMemberNameAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.CallerMemberNameAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.CompilerServices.CallerMemberNameAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

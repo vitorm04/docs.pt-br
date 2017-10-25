@@ -1,0 +1,690 @@
+<Type Name="TaskScheduler" FullName="System.Threading.Tasks.TaskScheduler">
+  <TypeSignature Language="C#" Value="public abstract class TaskScheduler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TaskScheduler extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.TaskScheduler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Id={Id}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Threading.Tasks.TaskScheduler/SystemThreadingTasks_TaskSchedulerDebugView))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um objeto que manipula o trabalho de nível baixo de enfileirar tarefas em threads.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância do <xref:System.Threading.Tasks.TaskScheduler> classe representa um agendador de tarefas. Um agendador de tarefas garante que o trabalho de uma tarefa é executado eventualmente.  
+  
+ O Agendador de tarefas padrão baseia-se no pool de threads do .NET Framework 4, que fornece o roubo de trabalho para o balanceamento de carga, injeção de thread/desativação para taxa de transferência máxima e geral bom desempenho. Ele deve ser suficiente para a maioria dos cenários.  
+  
+ O <xref:System.Threading.Tasks.TaskScheduler> classe também serve como o ponto de extensão para toda a lógica de programação personalizável.  Isso inclui mecanismos como como agendar uma tarefa para execução e tarefas agendadas como deve ser exposto aos depuradores. Se você precisar de uma funcionalidade especial, você pode criar um agendador personalizado e habilitá-la para tarefas específicas ou consultas.  
+  
+ Neste tópico:  
+[O Agendador de tarefas padrão e o pool de threads](#Default)  
+ [A fila global versus filas locais](#Queues)  
+ [Roubo de trabalho](#Stealing)  
+ [Tarefas de longa execução](#LongRunning)  
+ [Tarefa inlining](#Inlining)  
+[Especificar um contexto de sincronização](#Sync)  
+  
+<a name="Default"></a>   
+## <a name="the-default-task-scheduler-and-the-thread-pool"></a>O Agendador de tarefas padrão e o pool de threads  
+ O agendador padrão para a biblioteca de tarefas paralelas e em PLINQ usa o pool de threads do .NET Framework, que é representado pela <xref:System.Threading.ThreadPool> classe, fila e executar o trabalho. O pool de threads usa as informações fornecidas pelo <xref:System.Threading.Tasks.Task> tipo eficiente suporte o paralelismo refinado (unidades de curta duração do trabalho) que paralelo de consultas e tarefas geralmente representam.  
+  
+<a name="Queues"></a>   
+### <a name="the-global-queue-vs-local-queues"></a>A fila global versus filas locais  
+ O pool de threads mantém a fila de threads em cada domínio de aplicativo de trabalho de um global PEPS (primeiro a entrar, primeiro a sair). Sempre que um programa chama o <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> (ou <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType>) método, o trabalho é colocado nessa fila compartilhada e eventualmente retirados da fila para o próximo segmento que fica disponível. Começando com o .NET Framework 4, essa fila foi aprimorada para usar um algoritmo sem bloqueio que é semelhante a <xref:System.Collections.Concurrent.ConcurrentQueue%601> classe. Usando essa implementação sem bloqueio, o pool de threads gasta menos tempo quando as filas e filas de itens de trabalho. Esse benefício de desempenho está disponível para todos os programas que usam o pool de threads.  
+  
+ Tarefas de nível superior, que são tarefas que não são criadas no contexto de outra tarefa, são colocadas na fila assim como qualquer outro item de trabalho global. No entanto, aninhados ou tarefas filho, que são criadas no contexto de outra tarefa, são tratadas de forma muito diferente. Um filho ou uma tarefa aninhada é colocada em uma fila local que é específica para o thread em que a tarefa pai está em execução. A tarefa pai pode ser uma tarefa de nível superior ou também pode ser o filho de outra tarefa. Quando esse thread está pronto para mais trabalho, primeiro procura na fila local. Se os itens de trabalho estiver esperando existe, eles podem ser acessados rapidamente. As filas locais são acessadas na ordem último a entrar, primeiro a sair (UEPS) para preservar a localidade do cache e reduzir a contenção. Para obter mais informações sobre tarefas filho e tarefas aninhadas, consulte [anexadas e desanexadas tarefas de filho](~/docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+  
+ O uso de filas locais não só reduz a pressão sobre a fila global, mas também aproveita localidade dos dados. Itens de trabalho no local da fila com frequência as estruturas de dados de referência que estão fisicamente próximos uns dos outros na memória. Nesses casos, os dados já estão em cache após a primeira tarefa foi executada e pode ser acessada rapidamente. Ambos [LINQ paralelo (PLINQ)](~/docs/standard/parallel-programming/parallel-linq-plinq.md) e <xref:System.Threading.Tasks.Parallel> classe use aninhado tarefas e tarefas filho extensivamente e obter aumentos de velocidade significativos usando as filas de trabalho local.  
+  
+<a name="Stealing"></a>   
+### <a name="work-stealing"></a>Roubo de trabalho  
+ Começando com o .NET Framework 4, o pool de threads também apresenta um algoritmo de roubo de trabalho para certificar-se de que nenhum thread está usando ocioso enquanto outros ainda têm trabalham em suas filas. Quando um thread do pool de threads está pronto para mais de trabalho, primeiro procura no início da sua fila local, em seguida, na fila de global e nas filas de local de outros threads. Se ele encontrar um item de trabalho na fila de local de outro thread, ele primeiro se aplica a heurística para certificar-se de que ele pode executar o trabalho com eficiência. Se for possível, ele eliminação enfileira o item de trabalho do fim (na ordem de PEPS). Isso reduz a contenção em cada fila local e preserva a localidade dos dados. Essa arquitetura ajuda o balanceamento de carga do pool thread trabalhem com mais eficiência do que as versões anteriores.  
+  
+<a name="LongRunning"></a>   
+### <a name="long-running-tasks"></a>Tarefas de longa execução  
+ Você talvez queira impedir explicitamente uma tarefa que está sendo colocada em uma fila local. Por exemplo, você pode saber o que um determinado item de trabalho será executado por um tempo relativamente longo e é provável que bloqueie todos os outros itens de trabalho na fila local. Nesse caso, você pode especificar o <xref:System.Threading.Tasks.TaskCreationOptions?displayProperty=nameWithType> opção, que fornece uma dica para o Agendador que um thread adicional pode ser necessário para a tarefa para que ele não bloqueia o progresso de outros threads ou itens de trabalho na fila local. Usando essa opção é evita o pool de threads completamente, incluindo as filas globais e locais.  
+  
+<a name="Inlining"></a>   
+### <a name="task-inlining"></a>Tarefa inlining  
+ Em alguns casos, quando um <xref:System.Threading.Tasks.Task> esperou, pode ser executado em modo síncrono no thread que está executando a operação de espera. Isso melhora o desempenho, evitando a necessidade de um thread adicional e em vez de usar o segmento existente, o que poderia ter bloqueado caso contrário. Para evitar erros devido a reentrada, tarefa inlining só ocorre quando o destino de espera é encontrado na fila local do thread relevantes.  
+  
+<a name="Sync"></a>   
+## <a name="specifying-a-synchronization-context"></a>Especificar um contexto de sincronização  
+ Você pode usar o <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> método para especificar que uma tarefa deve ser agendada para execução em um thread específico. Isso é útil em estruturas, como formulários do Windows e Windows Presentation Foundation onde o acesso aos objetos de interface do usuário geralmente é restrito ao código que está sendo executado no mesmo thread no qual o objeto de interface do usuário foi criado.  
+  
+ O exemplo a seguir usa o <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> método em um aplicativo do Windows Presentation Foundation (WPF) para agendar uma tarefa no mesmo thread em que o controle de interface do usuário foi criado.   O exemplo cria um mosaico de imagens que são selecionadas aleatoriamente de um diretório especificado. Os objetos do WPF são usados para carregar e redimensionar as imagens. Os pixels brutos são passados para uma tarefa que usa um <xref:System.Threading.Tasks.Parallel.For%2A> loop para gravar os dados de pixel em uma grande matriz de byte único. Nenhuma sincronização é necessária porque não há dois blocos ocupam os mesmos elementos de matriz. Os blocos também podem ser gravados em qualquer ordem, porque sua posição é calculada independentemente de qualquer outro bloco. A matriz grande é então passada para uma tarefa executada no thread da interface do usuário, onde os dados de pixel são carregados em um controle de imagem.  
+  
+ O exemplo move os dados do thread de interface do usuário, modifica-lo com o uso de loops paralelos e <xref:System.Threading.Tasks.Task> objetos e, em seguida, passa-lo de volta para uma tarefa executada no thread da interface do usuário. Essa abordagem é útil quando você precisa usar a biblioteca paralela de tarefas para executar operações que não são suportadas pela API do WPF, ou que não forem suficientemente rápidos. Outra maneira de criar um mosaico de imagem no WPF é usar um <xref:System.Windows.Controls.WrapPanel?displayProperty=nameWithType> controlar e adicionar imagens a ele. O <xref:System.Windows.Controls.WrapPanel> manipula o trabalho de posicionamento de blocos. No entanto, esse trabalho só pode ser executado no thread da interface do usuário.  
+  
+ [!code-csharp[TPL_SyncContext#01](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_synccontext/cs/mainwindow.xaml.cs#01)]
+ [!code-vb[TPL_SyncContext#01](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_synccontext/vb/MainWindow.xaml.vb#01)]  
+  
+ Para criar o exemplo, crie um projeto de aplicativo do WPF no Visual Studio e atribuir um nome de sua escolha. Em seguida, faça o seguinte:  
+  
+1.  No modo de design, arraste um <xref:System.Windows.Controls.Image> controlar do **caixa de ferramentas** à superfície de design. No modo de exibição XAML, especifique o alinhamento horizontal como "Esquerda". O tamanho não é importante porque o controle é redimensionado dinamicamente em tempo de execução. Aceite o nome padrão, "imagem".  
+  
+2.  Arraste um <xref:System.Windows.Controls.Button> controlar do **caixa de ferramentas** para a parte inferior esquerda da janela do aplicativo. Clique duas vezes no botão para adicionar um <xref:System.Windows.Controls.Primitives.ButtonBase.Click> manipulador de eventos. No modo de exibição XAML, especifique o <xref:System.Windows.Controls.ContentControl.Content%2A> propriedade do botão como "Fazer um mosaico" e especifique o alinhamento horizontal como "Esquerda". Aceite o nome padrão, "button".  
+  
+3.  Substitua todo o conteúdo do arquivo MainWindow.xaml.cs ou MainWindow.xaml.vb com o código deste exemplo. Certifique-se de que o nome do espaço de trabalho corresponde ao nome do projeto.  
+  
+4.  O exemplo lê as imagens JPEG de um diretório chamado C:\Users\Public\Pictures\Sample imagens\\. Crie o diretório e colocar algumas imagens nele ou altere o caminho para fazer referência a outro diretório que contém imagens.  
+  
+ Este exemplo tem algumas limitações. Por exemplo, há suporte para apenas 32-bits-por pixel imagens; imagens em outros formatos são corrompidas pelo <xref:System.Windows.Media.Imaging.BitmapImage> objeto durante a operação de redimensionamento. Além disso, as imagens de origem devem todas ser maiores que o tamanho do bloco. Como um exercício adicional, você pode adicionar funcionalidade para lidar com vários formatos de pixel e tamanhos de arquivos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é obtido a [exemplos de programação paralela com o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) no site da Web de galeria de código do MSDN.  Ele cria um agendador de tarefas personalizada que limita o número de threads usados pelo aplicativo. Em seguida, ele inicia dois conjuntos de tarefas e exibe informações sobre a tarefa e o thread em que a tarefa está em execução.  
+  
+ [!code-csharp[TPL_Schedulers#02](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_schedulers/cs/limitex1.cs#02)]
+ [!code-vb[TPL_Schedulers#02](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_schedulers/vb/module2.vb#02)]  
+  
+ Além disso, vários agendadores de tarefa de exemplo estão disponíveis na Galeria de códigos: [exemplos de programação paralela com o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717).  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Todos os membros do resumo <see cref="T:System.Threading.Tasks.TaskScheduler" /> tipo são thread-safe e podem ser usados em vários threads ao mesmo tempo.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TaskScheduler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o <see cref="T:System.Threading.Tasks.TaskScheduler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.TaskScheduler Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Threading.Tasks.TaskScheduler Current" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Threading.Tasks.TaskScheduler" /> associado à tarefa em execução no momento.</summary>
+        <value>Retorna o <see cref="T:System.Threading.Tasks.TaskScheduler" /> associado à tarefa em execução no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando chamado de uma tarefa não <xref:System.Threading.Tasks.TaskScheduler.Current%2A> retornará o <xref:System.Threading.Tasks.TaskScheduler.Default%2A> Agendador.  
+  
+ Para obter mais informações, consulte <xref:System.Threading.Tasks.TaskScheduler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.TaskScheduler Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Threading.Tasks.TaskScheduler Default" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância <see cref="T:System.Threading.Tasks.TaskScheduler" /> padrão, fornecida pelo .NET Framework.</summary>
+        <value>Retorna a instância padrão <see cref="T:System.Threading.Tasks.TaskScheduler" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [agendadores de tarefa](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromCurrentSynchronizationContext">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.TaskScheduler FromCurrentSynchronizationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.TaskScheduler FromCurrentSynchronizationContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Threading.Tasks.TaskScheduler" /> associado ao <see cref="T:System.Threading.SynchronizationContext" /> atual.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.TaskScheduler" /> associado ao <see cref="T:System.Threading.SynchronizationContext" /> atual, conforme determinado por <see cref="P:System.Threading.SynchronizationContext.Current" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os <xref:System.Threading.Tasks.Task> instâncias na fila para retornado Agendador será executado por meio de uma chamada para o <xref:System.Threading.SynchronizationContext.Post%2A> método nesse contexto.  
+  
+ Para obter mais informações, consulte [agendadores de tarefa](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O SynchronizationContext atual não pode ser usado como um TaskScheduler.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScheduledTasks">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.Generic.IEnumerable&lt;System.Threading.Tasks.Task&gt; GetScheduledTasks ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Threading.Tasks.Task&gt; GetScheduledTasks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.GetScheduledTasks" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Threading.Tasks.Task&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Apenas para o suporte do depurador, gera um enumerável de instâncias <see cref="T:System.Threading.Tasks.Task" /> atualmente na fila do Agendador aguardando ser executado.</summary>
+        <returns>Um enumerável que permite que um depurador percorra as tarefas atualmente na fila para este agendador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe derivada de <xref:System.Threading.Tasks.TaskScheduler> implementa este método para dar suporte à integração com depuradores. Esse método só será invocado pelo .NET Framework quando o depurador solicita acesso aos dados. O enumerável retornado será desviada por utilitários para acessar as tarefas de depuração atualmente na fila para este Agendador, permitindo que o depurador fornecer uma representação dessas informações na interface do usuário.  
+  
+ É importante observar que, quando esse método é chamado, todos os outros threads no processo serão congelados. Portanto, é importante evitar a sincronização com outros threads que podem resultar em bloqueio. Se a sincronização é necessária, e não é possível adquirir o bloqueio nesse método, você deve lançar uma exceção para que o depurador não pare de responder. O exemplo a seguir mostra uma abordagem possível em c#:  
+  
+```  
+protected override IEnumerable<Task> GetScheduledTasks()  
+{  
+    bool lockTaken = false;  
+    try  
+    {  
+        Monitor.TryEnter(_syncObj, ref lockTaken);  
+        if (lockTaken)  
+        {  
+            return _tasks.ToArray();  
+        }  
+        else throw new NotSupportedException();  
+    }  
+    finally  
+    {  
+    if (lockTaken) Monitor.Exit(_syncObj);  
+    }}  
+```  
+  
+ Além disso, este método e o enumerável retornado não modifique qualquer estado global visível.  
+  
+ O retornado enumerável nunca deve ser nulo. Se não houver nenhuma tarefa em fila no momento, um enumerável de vazio deve ser retornado.  
+  
+ Os desenvolvedores que estiverem implementando depuradores personalizados não devem chamar este método diretamente, mas deve usar o método wrapper interna `GetScheduledTasksForDebugger` em vez disso: `internal Task[] GetScheduledTasksForDebugger()`. Esse método wrapper retorna uma matriz de tarefas em vez de um enumerável. Para recuperar uma lista de agendadores active, use o método interno `internal static TaskScheduler[] GetTaskSchedulersForDebugger()`. Esse método estático retorna uma matriz de todos os ativos <xref:System.Threading.Tasks.TaskScheduler> instâncias. Você pode usar `GetScheduledTasksForDebugger` em cada instância de Agendador para recuperar a lista de tarefas agendadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Este Agendador não é capaz de gerar uma lista de tarefas em fila no momento.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID exclusiva para este <see cref="T:System.Threading.Tasks.TaskScheduler" />.</summary>
+        <value>Retorna a ID exclusiva para este <see cref="T:System.Threading.Tasks.TaskScheduler" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [agendadores de tarefa](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumConcurrencyLevel">
+      <MemberSignature Language="C#" Value="public virtual int MaximumConcurrencyLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumConcurrencyLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.MaximumConcurrencyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o nível de simultaneidade máximo ao qual esse <see cref="T:System.Threading.Tasks.TaskScheduler" /> pode dar suporte.</summary>
+        <value>Retorna um inteiro que representa o nível máximo de simultaneidade. O agendador padrão retorna <see cref="F:System.Int32.MaxValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [agendadores de tarefa](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueTask">
+      <MemberSignature Language="C#" Value="protected abstract void QueueTask (System.Threading.Tasks.Task task);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void QueueTask(class System.Threading.Tasks.Task task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.QueueTask(System.Threading.Tasks.Task)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" />
+      </Parameters>
+      <Docs>
+        <param name="task">O <see cref="T:System.Threading.Tasks.Task" /> a ser enfileirado.</param>
+        <summary>Enfileira um <see cref="T:System.Threading.Tasks.Task" /> no agendador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe derivada de <xref:System.Threading.Tasks.TaskScheduler> implementa este método para aceitar agendadas no Agendador de tarefas.  
+  
+ Uma implementação típica seria armazenar a tarefa em uma estrutura de dados interno, que deve ser atendida por threads que deve executar essas tarefas em algum momento no futuro.  
+  
+ Este método só deve ser chamado pelo .NET Framework e não deve ser chamado diretamente pela classe derivada. Isso é necessário para manter a consistência do sistema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="task" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryDequeue">
+      <MemberSignature Language="C#" Value="protected virtual bool TryDequeue (System.Threading.Tasks.Task task);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryDequeue(class System.Threading.Tasks.Task task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.TryDequeue(System.Threading.Tasks.Task)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" />
+      </Parameters>
+      <Docs>
+        <param name="task">O <see cref="T:System.Threading.Tasks.Task" /> a ser removido da fila.</param>
+        <summary>Tenta remover da fila um <see cref="T:System.Threading.Tasks.Task" /> que anteriormente havia sido enfileirado para esse agendador.</summary>
+        <returns>Um Booliano indicando se o argumento <paramref name="task" /> foi retirado da fila com êxito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [agendadores de tarefa](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ Esse método pode ser executada em um bloco finally; Portanto, ele deverá retornar assim que possível para que qualquer recursos como <xref:System.Threading.CancellationTokenRegistration> objetos podem ser descartados de maneira oportuna.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="task" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryExecuteTask">
+      <MemberSignature Language="C#" Value="protected bool TryExecuteTask (System.Threading.Tasks.Task task);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool TryExecuteTask(class System.Threading.Tasks.Task task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.TryExecuteTask(System.Threading.Tasks.Task)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" />
+      </Parameters>
+      <Docs>
+        <param name="task">Um objeto <see cref="T:System.Threading.Tasks.Task" /> a ser executado.</param>
+        <summary>Tenta executar o <see cref="T:System.Threading.Tasks.Task" /> fornecido neste agendador.</summary>
+        <returns>Um booliano que será true se <paramref name="task" /> tiver sido executado com êxito, false se não tiver sido executado com êxito. Uma razão comum para a falha de execução é que a tarefa havia sido executada anteriormente ou ela está sendo executado por outro thread.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações de Agendador são fornecidas com <xref:System.Threading.Tasks.Task> instâncias a ser executado por meio de <xref:System.Threading.Tasks.TaskScheduler.QueueTask%2A> método ou o <xref:System.Threading.Tasks.TaskScheduler.TryExecuteTaskInline%2A> método. Quando o Agendador considerar apropriado para executar a tarefa fornecida, <xref:System.Threading.Tasks.TaskScheduler.TryExecuteTask%2A> deve ser usado para fazer isso. TryExecuteTask trata todos os aspectos da execução de uma tarefa, incluindo a invocação de ação, tratamento de exceções, gerenciamento de estado e controle de ciclo de vida.  
+  
+ <xref:System.Threading.Tasks.TaskScheduler.TryExecuteTask%2A>deve ser usado somente para as tarefas fornecidas a este agendador pela infraestrutura do .NET Framework. Ele não deve ser usado para executar tarefas arbitrárias obtidas por meio de mecanismos personalizados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="task" /> não está associado a este agendador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryExecuteTaskInline">
+      <MemberSignature Language="C#" Value="protected abstract bool TryExecuteTaskInline (System.Threading.Tasks.Task task, bool taskWasPreviouslyQueued);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryExecuteTaskInline(class System.Threading.Tasks.Task task, bool taskWasPreviouslyQueued) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.TryExecuteTaskInline(System.Threading.Tasks.Task,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task" />
+        <Parameter Name="taskWasPreviouslyQueued" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="task">O <see cref="T:System.Threading.Tasks.Task" /> a ser executado.</param>
+        <param name="taskWasPreviouslyQueued">Um valor booleano que indica se ou não tarefa anteriormente foi enfileirada. Se esse parâmetro for True, em seguida, a tarefa pode foram anteriormente enfileirada (agendado); Se for False, em seguida, a tarefa é conhecida não foram enfileirados, e essa chamada é feita para executar o tarefa embutido sem enfileiramento de mensagens-lo.</param>
+        <summary>Determina se o <see cref="T:System.Threading.Tasks.Task" /> fornecido pode ser executado de forma síncrona nessa chamada e, se for possível, o executa.</summary>
+        <returns>Um valor booliano que indica se a tarefa foi executada embutida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe derivada de <xref:System.Threading.Tasks.TaskScheduler> implementa essa função para dar suporte a execução embutida de uma tarefa em um thread que inicia uma espera desse objeto de tarefa. Execução embutida é opcional, e a solicitação pode ser rejeitada retornando falso. No entanto, as tarefas mais que pode ser embutido, melhor o Agendador será dimensionado. Na verdade, um agendador que linhas internas muito pouco podem ser propensa a deadlocks. Uma implementação correta deve garantir que uma solicitação de execução sob as políticas de garantia pelo Agendador com êxito pode embutido. Por exemplo, se um agendador usa um thread dedicado para executar tarefas, todas as solicitações de thread inlining devem ser bem-sucedidos.  
+  
+ Se um agendador decide realizar a execução embutido, ele deve fazer isso por chamada para o TaskScheduler base <xref:System.Threading.Tasks.TaskScheduler.TryExecuteTask%2A> método com o objeto de tarefa fornecido, propagar o valor de retorno. Também pode ser apropriado para o Agendador remover uma tarefa embutida de suas estruturas de dados interna se decide consideram a solicitação de inlining. No entanto, observe que em algumas circunstâncias um agendador poderá ser solicitado a embutido uma tarefa que não foi fornecida anteriormente a ele com o <xref:System.Threading.Tasks.TaskScheduler.QueueTask%2A> método.  
+  
+ O Agendador derivado é responsável por garantir que o thread de chamada é adequado para executar a tarefa específica do ponto de vista suas próprias agendas e se preocupam com as políticas de execução.  
+  
+ Para obter mais informações, consulte [agendadores de tarefa](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="task" /> é nulo.</exception>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="task" /> já foi executado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnobservedTaskException">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Threading.Tasks.UnobservedTaskExceptionEventArgs&gt; UnobservedTaskException;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Threading.Tasks.UnobservedTaskExceptionEventArgs&gt; UnobservedTaskException" />
+      <MemberSignature Language="DocId" Value="E:System.Threading.Tasks.TaskScheduler.UnobservedTaskException" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Threading.Tasks.UnobservedTaskExceptionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a exceção não observada da tarefa com falha está prestes a disparar a política de escalonamento de exceção, que, por padrão, encerrará o processo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento de todo o domínio de aplicativo fornece um mecanismo para impedir que a diretiva de escalonamento de exceção (que, por padrão, encerra o processo) de disparo.  
+  
+ Para tornar mais fácil para os desenvolvedores a gravar código assíncrono baseado em tarefas, o [!INCLUDE[net_v45](~/includes/net-v45-md.md)] altera o comportamento de exceção padrão para exceções observadas. Embora a gerar exceções observadas ainda o <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> exceção, o processo não encerra por padrão. Em vez disso, a exceção é manipulada pelo tempo de execução depois que o evento é disparado, independentemente se um manipulador de eventos observa a exceção. Esse comportamento pode ser configurado. Começando com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)], você pode usar o elemento de configuração para reverter para o comportamento do [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] e encerrar o processo:  
+  
+```xml  
+<configuration>   
+   <runtime>   
+      <ThrowUnobservedTaskExceptions enabled="true"/>   
+   </runtime>   
+</configuration>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

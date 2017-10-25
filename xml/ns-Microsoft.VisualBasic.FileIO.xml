@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.VisualBasic.FileIO">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.VisualBasic.FileIO" /> namespace contém tipos que oferecem suporte a <see langword="My" /> objeto do sistema de arquivos no Visual Basic.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `My` objeto do sistema, consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

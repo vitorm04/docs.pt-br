@@ -1,0 +1,108 @@
+<Type Name="XmlFormatExtensionPointAttribute" FullName="System.Web.Services.Configuration.XmlFormatExtensionPointAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlFormatExtensionPointAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlFormatExtensionPointAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o namespace XML e um prefixo de namespace XML a ser usado para uma extensão de formato de descrição de serviço dentro de uma descrição de serviço. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma extensão de formato de descrição de serviço estende como uma descrição de serviço é gerada para um serviço Web XML criado usando ASP.NET. Especificamente, uma extensão de formato de descrição de serviço adiciona elementos XML para a descrição do serviço. Isso é útil quando uma extensão SOAP é criada para ser executado no lado do cliente e o servidor de um serviço da Web em XML, como informações sobre as extensões SOAP não são colocadas automaticamente na descrição do serviço. Se você adicionar informações sobre a extensão SOAP para a descrição do serviço, um cliente pode interpretar assim que ele deve executar a extensão SOAP específica. Um exemplo de uma extensão SOAP que deve ser executado no cliente e servidor é uma extensão SOAP de criptografia. Se uma criptografia extensão SOAP é executada somente no servidor, e ele criptografa os valores de retorno antes de enviá-los de volta ao cliente, o cliente deve ter a extensão SOAP em execução para descriptografar a mensagem SOAP. Caso contrário, o cliente não pode processar o valor de retorno.  
+  
+ Use as seguintes etapas para criar uma extensão de formato de descrição de serviço:  
+  
+1.  Criar uma classe que deriva de <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>.  
+  
+2.  Aplicar um <xref:System.Web.Services.Configuration.XmlFormatExtensionAttribute> à classe e especifique os pontos de extensão em que a extensão de formato de descrição de serviço deve ser executado.  
+  
+3.  Opcionalmente, aplique um <xref:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute> à classe e especifique um membro dentro da classe para agir como um novo ponto de extensão.  
+  
+4.  Opcionalmente, aplique um <xref:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute> à classe e especifique o prefixo de namespace XML para ser associado a elementos XML gerados pela extensão de formato de descrição de serviço.  
+  
+5.  Configurar a extensão de formato de descrição de serviço para ser executado no `serviceDescriptionFormatExtensionTypes` seção do arquivo de configuração.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#1)]
+ [!code-vb[ServiceDescriptionFormatExtension#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionPointAttribute (string memberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string memberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">O membro da classe que implementa a extensão do formato de descrição de serviço que pode ter uma extensão de formato de descrição de serviço associada a ele.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowElements">
+      <MemberSignature Language="C#" Value="public bool AllowElements { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowElements" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.AllowElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o membro da classe que implementa a extensão de formato de descrição de serviço especificada no <see cref="P:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.MemberName" /> propriedade pode aceitar os elementos XML brutos.</summary>
+        <value>
+          <see langword="true" />Se o membro da classe que implementa a descrição do serviço Formatar extensão especificada no <see cref="P:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.MemberName" /> propriedade pode aceitar os elementos XML brutos; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o membro da classe que implementa a extensão de formato de descrição de serviço pode ter uma extensão de formato de descrição de serviço associada a ele.</summary>
+        <value>O membro da classe que implementa a extensão do formato de descrição de serviço que pode ter uma extensão de formato de descrição de serviço associada a ele.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

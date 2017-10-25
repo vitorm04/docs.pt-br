@@ -1,0 +1,363 @@
+<Type Name="ComputerInfo" FullName="Microsoft.VisualBasic.Devices.ComputerInfo">
+  <TypeSignature Language="C#" Value="public class ComputerInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ComputerInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.ComputerInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(Microsoft.VisualBasic.Devices.ComputerInfo/ComputerInfoDebugView))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece propriedades para obter informações sobre memória, assemblies carregados, nome e sistema operacional do computador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades expostas pelo `My.Computer.Info` objeto retornam informações sobre o computador do qual o aplicativo é implantado, conforme determinado em tempo de execução. Normalmente, esses dados é diferente do que está disponível no computador de desenvolvimento.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Info.AvailablePhysicalMemory` propriedade para exibir a quantidade de memória física disponível para o computador no qual o código é executado.  
+  
+ [!code-vb[VbVbalrMyComputer#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComputerInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.ComputerInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.Devices.ComputerInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailablePhysicalMemory">
+      <MemberSignature Language="C#" Value="public ulong AvailablePhysicalMemory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 AvailablePhysicalMemory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ComputerInfo.AvailablePhysicalMemory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade total de memória física livre no computador.</summary>
+        <value>Um <see langword="ULong" /> que contém o número de bytes de memória física livre no computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Info.AvailablePhysicalMemory` propriedade requer o Windows XP, Windows 2000 Professional, Windows Server 2003, Windows 2000 Server ou Windows Vista.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Info.AvailablePhysicalMemory` propriedade para exibir a quantidade de memória física disponível para o computador no qual o código é executado.  
+  
+ [!code-vb[VbVbalrMyComputer#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">O aplicativo não pode obter o status da memória.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailableVirtualMemory">
+      <MemberSignature Language="C#" Value="public ulong AvailableVirtualMemory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 AvailableVirtualMemory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ComputerInfo.AvailableVirtualMemory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade total de espaço livre de endereço virtual do computador.</summary>
+        <value>Um <see langword="ULong" /> que contém o número de bytes do espaço livre do endereço virtual do computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Info.AvailableVirtualMemory` propriedade requer o Windows XP, Windows 2000 Professional, Windows Server 2003, Windows 2000 Server ou Windows Vista.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Info.AvailableVirtualMemory` propriedade para exibir a quantidade de memória virtual disponível para o computador no qual o código é executado.  
+  
+ [!code-vb[VbVbalrMyComputer#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">O aplicativo não pode obter o status da memória.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstalledUICulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo InstalledUICulture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo InstalledUICulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cultura de interface do usuário atual instalada com o sistema operacional.</summary>
+        <value>Um objeto <see cref="T:System.Globalization.CultureInfo" /> representa a cultura de interface do usuário instalada no computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Info.InstalledUICulture` propriedade tem o mesmo comportamento que o <xref:System.Globalization.CultureInfo.InstalledUICulture%2A> propriedade.  
+  
+ Em um sistema operacional localizado, como Windows 2000 Professional japonês, essa propriedade retorna a cultura do sistema operacional.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Info.InstalledUICulture` propriedade para exibir o nome da cultura da interface do usuário do sistema operacional.  
+  
+ [!code-vb[VbVbalrMyComputer#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OSFullName">
+      <MemberSignature Language="C#" Value="public string OSFullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OSFullName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome completo do sistema operacional.</summary>
+        <value>Um <see langword="String" /> que contém o nome do sistema operacional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna informações detalhadas sobre o nome do sistema operacional se o Windows Management Instrumentation (WMI) está instalado no computador. Caso contrário, essa propriedade retorna a mesma cadeia de caracteres como o `My.Computer.Info.OSPlatform` propriedade, que fornece informações menos detalhadas que o WMI pode fornecer.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Info.OSFullName` propriedade para exibir o nome do computador do sistema operacional.  
+  
+ [!code-vb[VbVbalrMyComputer#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O código de chamada não tem confiança total.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Controla a capacidade de acessar arquivos e pastas. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OSPlatform">
+      <MemberSignature Language="C#" Value="public string OSPlatform { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OSPlatform" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de plataforma do sistema operacional do computador.</summary>
+        <value>Um <see langword="String" /> que contém o identificador de plataforma do sistema operacional do computador, escolhido pelos nomes de membro da enumeração <see cref="T:System.PlatformID" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Info.OSPlatform` propriedade fornece funcionalidade semelhante para o <xref:System.OperatingSystem.Platform%2A> propriedade do objeto retornado pelo <xref:System.Environment.OSVersion%2A> propriedade.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Info.OSPlatform` propriedade para exibir a plataforma do computador do sistema operacional.  
+  
+ [!code-vb[VbVbalrMyComputer#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ExecutionEngineException">O aplicativo não pode obter as informações de plataforma do sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OSVersion">
+      <MemberSignature Language="C#" Value="public string OSVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OSVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do sistema operacional do computador.</summary>
+        <value>Uma <see langword="String" /> que contém o número de versão atual do sistema operacional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Info.OSVersion` propriedade formata a versão como "Revision".  
+  
+ O `My.Computer.Info.OSVersion` propriedade fornece funcionalidade semelhante para o <xref:System.OperatingSystem.Version%2A> propriedade do objeto retornado pelo <xref:System.Environment.OSVersion%2A> propriedade.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Info.OSVersion` propriedade para exibir a versão do computador do sistema operacional.  
+  
+ [!code-vb[VbVbalrMyComputer#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ExecutionEngineException">O aplicativo não pode obter as informações de versão do sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalPhysicalMemory">
+      <MemberSignature Language="C#" Value="public ulong TotalPhysicalMemory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 TotalPhysicalMemory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ComputerInfo.TotalPhysicalMemory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade total de memória física no computador.</summary>
+        <value>Um <see langword="ULong" /> que contém o número de bytes de memória física no computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Info.TotalPhysicalMemory` propriedade requer o Windows XP, Windows 2000 Professional, Windows Server 2003, Windows 2000 Server ou Windows Vista.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Info.TotalPhysicalMemory` propriedade para exibir a quantidade total de memória física para o computador no qual o código é executado.  
+  
+ [!code-vb[VbVbalrMyComputer#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">O aplicativo não pode obter o status da memória.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalVirtualMemory">
+      <MemberSignature Language="C#" Value="public ulong TotalVirtualMemory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 TotalVirtualMemory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade total de espaço de endereço virtual disponível para o computador.</summary>
+        <value>Um <see langword="ULong" /> que contém o número de bytes de espaço de endereço virtual disponível para o computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Info.TotalVirtualMemory` propriedade requer o Windows XP, Windows 2000 Professional, Windows Server 2003, Windows 2000 Server ou Windows Vista.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Info.TotalVirtualMemory` propriedade para exibir a quantidade total de memória virtual para o computador no qual o código é executado.  
+  
+ [!code-vb[VbVbalrMyComputer#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">O aplicativo não pode obter o status da memória.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

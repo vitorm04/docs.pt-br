@@ -1,0 +1,355 @@
+<Type Name="SecurityMessageProperty" FullName="System.ServiceModel.Security.SecurityMessageProperty">
+  <TypeSignature Language="C#" Value="public class SecurityMessageProperty : IDisposable, System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityMessageProperty extends System.Object implements class System.IDisposable, class System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.SecurityMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IMessageProperty</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contém propriedades relacionadas à segurança e está conectado a uma mensagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Resultados de autenticação de cliente são convertidos em uma instância de <xref:System.ServiceModel.ServiceSecurityContext>, que é anexado à mensagem usando um <xref:System.ServiceModel.Security.SecurityMessageProperty>. Essa propriedade pode ser usada por camadas superiores para implementar a lógica de autorização personalizada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityMessageProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityMessageProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.SecurityMessageProperty" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCopy">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.IMessageProperty CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IMessageProperty CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityMessageProperty.CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Clona a instância atual dessa classe.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IMessageProperty" /> clonado da instância atual dessa classe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para acessar os objetos de <xref:System.ServiceModel.Security.SecurityMessageProperty>, como <xref:System.ServiceModel.Security.SecurityMessageProperty.ServiceSecurityContext%2A>, <xref:System.ServiceModel.Security.SecurityMessageProperty.TransportToken%2A>, ou <xref:System.ServiceModel.Security.SecurityMessageProperty.IncomingSupportingTokens%2A>), uma cópia deve ser criada porque essas propriedades são indefinidas depois que a mensagem é descartada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityMessageProperty.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarta a instância atual dessa classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalAuthorizationPolicies">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ExternalAuthorizationPolicies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ExternalAuthorizationPolicies" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.ExternalAuthorizationPolicies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de políticas de autorização externas.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> chamado essas políticas de autorização como parte do processo que cria o <xref:System.ServiceModel.ServiceSecurityContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrCreate">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Security.SecurityMessageProperty GetOrCreate (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Security.SecurityMessageProperty GetOrCreate(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityMessageProperty.GetOrCreate(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" />.</param>
+        <summary>Obtém ou cria uma instância dessa classe de mensagem especificada.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Security.SecurityMessageProperty" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasIncomingSupportingTokens">
+      <MemberSignature Language="C#" Value="public bool HasIncomingSupportingTokens { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasIncomingSupportingTokens" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.HasIncomingSupportingTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a mensagem de entrada contém pelo menos um token de suporte de segurança.</summary>
+        <value>
+          <see langword="true" />Se <see cref="P:System.ServiceModel.Security.SecurityMessageProperty.IncomingSupportingTokens" /> contém pelo menos uma entrada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tokens de suporte fornecem declarações adicionais além daqueles contidos nos tokens principais para a associação. Os tokens de suporte podem ser definidas em um escopo diferente de associação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingSupportingTokens">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.SupportingTokenSpecification&gt; IncomingSupportingTokens { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.SupportingTokenSpecification&gt; IncomingSupportingTokens" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.IncomingSupportingTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.SupportingTokenSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de tokens de suporte de entrada.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.Collection`1" /> do tipo <see cref="T:System.ServiceModel.Security.SupportingTokenSpecification" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tokens de suporte fornecem declarações adicionais além daqueles contidos nos tokens principais para a associação. Os tokens de suporte podem ser definidas em um escopo diferente de associação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitiatorToken">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityTokenSpecification InitiatorToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityTokenSpecification InitiatorToken" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.InitiatorToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityTokenSpecification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.Security.SecurityTokenSpecification" /> token iniciador para esta mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.SecurityTokenSpecification" /> token iniciador para esta mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o padrão de mensagem requer várias mensagens, o Token do iniciador é usado para a assinatura da mensagem do iniciador para o destinatário e para criptografia do destinatário ao iniciador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingSupportingTokens">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.SupportingTokenSpecification&gt; OutgoingSupportingTokens { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.SupportingTokenSpecification&gt; OutgoingSupportingTokens" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.OutgoingSupportingTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.SupportingTokenSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de saída <see cref="T:System.ServiceModel.Security.SupportingTokenSpecification" /> objetos.</summary>
+        <value>Uma coleção de tokens de suporte de saída.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionToken">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityTokenSpecification ProtectionToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityTokenSpecification ProtectionToken" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.ProtectionToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityTokenSpecification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.Security.SecurityTokenSpecification" /> token de proteção para esta mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.SecurityTokenSpecification" /> token de proteção para esta mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tokens de proteção são usados em associações de segurança simétrica de assinatura e criptografia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecipientToken">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityTokenSpecification RecipientToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityTokenSpecification RecipientToken" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.RecipientToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityTokenSpecification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.Security.SecurityTokenSpecification" /> token destinatário desta mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.SecurityTokenSpecification" /> token destinatário desta mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o padrão de mensagem requer várias mensagens, o Token de destinatário é usado para criptografia de iniciador ao destinatário e para a assinatura da mensagem do destinatário ao iniciador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderIdPrefix">
+      <MemberSignature Language="C#" Value="public string SenderIdPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SenderIdPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.SenderIdPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o remetente o prefixo de ID para esta mensagem.</summary>
+        <value>O prefixo de ID do remetente para esta mensagem.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor da propriedade é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Nenhum caractere do valor da propriedade é alfabética, numérica ou igual a "_", ".", ou "-".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceSecurityContext">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ServiceSecurityContext ServiceSecurityContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.ServiceSecurityContext ServiceSecurityContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.ServiceSecurityContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceSecurityContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.ServiceSecurityContext" /> para essa mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.ServiceSecurityContext" /> objeto para esta mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa classe para obter informações sobre o contexto de segurança de tempo de execução. Um contexto de segurança é criado quando um cliente é autenticado com êxito. As informações de segurança do cliente e para a instância atual do serviço podem ser obtidas de uma instância dessa classe.  
+  
+ Um uso comum da classe é recuperar o conjunto atual de declarações para fins de autorização de um cliente ao acessar um método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportToken">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityTokenSpecification TransportToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityTokenSpecification TransportToken" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.SecurityMessageProperty.TransportToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityTokenSpecification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.Security.SecurityTokenSpecification" /> token de transporte para esta mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.SecurityTokenSpecification" /> token de transporte para esta mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um Token de transporte oferece segurança no nível do transporte. Um token usado pelo HTTPS é um exemplo de um Token de transporte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

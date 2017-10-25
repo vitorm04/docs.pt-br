@@ -1,0 +1,763 @@
+<Type Name="MessageHeader" FullName="System.ServiceModel.Channels.MessageHeader">
+  <TypeSignature Language="C#" Value="public abstract class MessageHeader : System.ServiceModel.Channels.MessageHeaderInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract MessageHeader extends System.ServiceModel.Channels.MessageHeaderInfo" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MessageHeader" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.MessageHeaderInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o conteúdo de um cabeçalho SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um cabeçalho de mensagem contém metadados opcionais que descrevem uma mensagem encapsulada pela <xref:System.ServiceModel.Channels.Message> classe.  
+  
+ Um <xref:System.ServiceModel.Channels.Message> pode ter zero ou mais cabeçalhos que são usados como um mecanismo de extensão para passar informações em mensagens que são específicos do aplicativo. Você pode usar <xref:System.ServiceModel.Channels.Message.Headers%2A> para adicionar cabeçalhos de mensagem para uma mensagem chamando o <xref:System.ServiceModel.Channels.MessageHeaders.Add%2A> método.  
+  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)]Fornece um número predefinido de cabeçalhos de mensagem, conforme mostrado na tabela a seguir.  
+  
+|Nome do cabeçalho|Descrição|  
+|-----------------|-----------------|  
+|Para|Contém a função que se destina a mensagem.|  
+|Ação|Fornece uma descrição de como a mensagem deve ser processada.|  
+|FaultTo|Contém o endereço do nó ao qual as falhas devem ser enviadas.|  
+|De|Contém o endereço do nó que enviou a mensagem.|  
+|Solicitação|Indica se a mensagem é uma solicitação.|  
+|MessageID|Contém a ID exclusiva da mensagem.|  
+|RelatesTo|Contém as IDs de mensagens que estão relacionadas a essa mensagem.|  
+|ReplyTo|Contém o endereço do nó para que uma resposta deve ser enviada para uma solicitação.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageHeader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.MessageHeader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Actor">
+      <MemberSignature Language="C#" Value="public override string Actor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Actor" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageHeader.Actor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o destinatário de destino do cabeçalho da mensagem.</summary>
+        <value>O destinatário de destino do cabeçalho da mensagem. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade estiver vazia, o cabeçalho é interpretado como destino para o destinatário final da mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHeader">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageHeader CreateHeader (string name, string ns, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageHeader CreateHeader(string name, string ns, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.CreateHeader(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do novo elemento XML de cabeçalho.</param>
+        <param name="ns">O URI do namespace do elemento XML do cabeçalho.</param>
+        <param name="value">O conteúdo do cabeçalho a ser criado.</param>
+        <summary>Cria um novo cabeçalho de mensagem com os dados especificados.</summary>
+        <returns>Um novo objeto <see cref="T:System.ServiceModel.Channels.MessageHeader" /> com os dados especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHeader">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageHeader CreateHeader (string name, string ns, object value, bool mustUnderstand);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageHeader CreateHeader(string name, string ns, object value, bool mustUnderstand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.CreateHeader(System.String,System.String,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="mustUnderstand" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do novo elemento XML de cabeçalho.</param>
+        <param name="ns">O URI do namespace do elemento XML do cabeçalho.</param>
+        <param name="value">O conteúdo do cabeçalho a ser criado.</param>
+        <param name="mustUnderstand">Um valor que indica se o cabeçalho deve ser compreendido.</param>
+        <summary>Cria um novo cabeçalho de mensagem com os dados especificados.</summary>
+        <returns>Um novo objeto <see cref="T:System.ServiceModel.Channels.MessageHeader" /> com os dados especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHeader">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageHeader CreateHeader (string name, string ns, object value, System.Runtime.Serialization.XmlObjectSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageHeader CreateHeader(string name, string ns, object value, class System.Runtime.Serialization.XmlObjectSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.CreateHeader(System.String,System.String,System.Object,System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do novo elemento XML de cabeçalho.</param>
+        <param name="ns">O URI do namespace do elemento XML do cabeçalho.</param>
+        <param name="value">O conteúdo do cabeçalho a ser criado.</param>
+        <param name="serializer">Um <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> que é usado para serializar o cabeçalho.</param>
+        <summary>Cria um cabeçalho de um objeto a ser serializado usando o XmlFormatter.</summary>
+        <returns>Um novo objeto <see cref="T:System.ServiceModel.Channels.MessageHeader" /> com os dados especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHeader">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageHeader CreateHeader (string name, string ns, object value, bool mustUnderstand, string actor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageHeader CreateHeader(string name, string ns, object value, bool mustUnderstand, string actor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.CreateHeader(System.String,System.String,System.Object,System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="mustUnderstand" Type="System.Boolean" />
+        <Parameter Name="actor" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do novo elemento XML de cabeçalho.</param>
+        <param name="ns">O URI do namespace do elemento XML do cabeçalho.</param>
+        <param name="value">O conteúdo do cabeçalho a ser criado.</param>
+        <param name="mustUnderstand">Um valor que indica se o cabeçalho deve ser compreendido.</param>
+        <param name="actor">O destinatário de destino do cabeçalho da mensagem.</param>
+        <summary>Cria um novo cabeçalho de mensagem com os dados especificados.</summary>
+        <returns>Um novo objeto <see cref="T:System.ServiceModel.Channels.MessageHeader" /> com os dados especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHeader">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageHeader CreateHeader (string name, string ns, object value, System.Runtime.Serialization.XmlObjectSerializer serializer, bool mustUnderstand);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageHeader CreateHeader(string name, string ns, object value, class System.Runtime.Serialization.XmlObjectSerializer serializer, bool mustUnderstand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.CreateHeader(System.String,System.String,System.Object,System.Runtime.Serialization.XmlObjectSerializer,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+        <Parameter Name="mustUnderstand" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do novo elemento XML de cabeçalho.</param>
+        <param name="ns">O URI do namespace do elemento XML do cabeçalho.</param>
+        <param name="value">O conteúdo do cabeçalho a ser criado.</param>
+        <param name="serializer">Um <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> que é usado para serializar o cabeçalho.</param>
+        <param name="mustUnderstand">Um valor que indica se o cabeçalho deve ser compreendido.</param>
+        <summary>Cria um novo cabeçalho de mensagem com os dados especificados.</summary>
+        <returns>Um novo objeto <see cref="T:System.ServiceModel.Channels.MessageHeader" /> com os dados especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHeader">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageHeader CreateHeader (string name, string ns, object value, bool mustUnderstand, string actor, bool relay);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageHeader CreateHeader(string name, string ns, object value, bool mustUnderstand, string actor, bool relay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.CreateHeader(System.String,System.String,System.Object,System.Boolean,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="mustUnderstand" Type="System.Boolean" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="relay" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do novo elemento XML de cabeçalho.</param>
+        <param name="ns">O URI do namespace do elemento XML do cabeçalho.</param>
+        <param name="value">O conteúdo do cabeçalho a ser criado.</param>
+        <param name="mustUnderstand">Um valor que indica se o cabeçalho deve ser compreendido.</param>
+        <param name="actor">O destinatário de destino do cabeçalho da mensagem.</param>
+        <param name="relay">Um valor que indica se o cabeçalho deve ser retransmitido.</param>
+        <summary>Cria um novo cabeçalho de mensagem com os dados especificados.</summary>
+        <returns>Um novo objeto <see cref="T:System.ServiceModel.Channels.MessageHeader" /> com os dados especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHeader">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageHeader CreateHeader (string name, string ns, object value, System.Runtime.Serialization.XmlObjectSerializer serializer, bool mustUnderstand, string actor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageHeader CreateHeader(string name, string ns, object value, class System.Runtime.Serialization.XmlObjectSerializer serializer, bool mustUnderstand, string actor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.CreateHeader(System.String,System.String,System.Object,System.Runtime.Serialization.XmlObjectSerializer,System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+        <Parameter Name="mustUnderstand" Type="System.Boolean" />
+        <Parameter Name="actor" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do novo elemento XML de cabeçalho.</param>
+        <param name="ns">O URI do namespace do elemento XML do cabeçalho.</param>
+        <param name="value">O conteúdo do cabeçalho a ser criado.</param>
+        <param name="serializer">Um <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> que é usado para serializar o cabeçalho.</param>
+        <param name="mustUnderstand">Um valor que indica se o cabeçalho deve ser compreendido.</param>
+        <param name="actor">O destinatário de destino do cabeçalho da mensagem.</param>
+        <summary>Cria um novo cabeçalho de mensagem com os dados especificados.</summary>
+        <returns>Um novo objeto <see cref="T:System.ServiceModel.Channels.MessageHeader" /> com os dados especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHeader">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageHeader CreateHeader (string name, string ns, object value, System.Runtime.Serialization.XmlObjectSerializer serializer, bool mustUnderstand, string actor, bool relay);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageHeader CreateHeader(string name, string ns, object value, class System.Runtime.Serialization.XmlObjectSerializer serializer, bool mustUnderstand, string actor, bool relay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.CreateHeader(System.String,System.String,System.Object,System.Runtime.Serialization.XmlObjectSerializer,System.Boolean,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+        <Parameter Name="mustUnderstand" Type="System.Boolean" />
+        <Parameter Name="actor" Type="System.String" />
+        <Parameter Name="relay" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do novo elemento XML de cabeçalho.</param>
+        <param name="ns">O URI do namespace do elemento XML do cabeçalho.</param>
+        <param name="value">O conteúdo do cabeçalho a ser criado.</param>
+        <param name="serializer">Um <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> que é usado para serializar o cabeçalho.</param>
+        <param name="mustUnderstand">Um valor que indica se o cabeçalho deve ser compreendido.</param>
+        <param name="actor">O destinatário de destino do cabeçalho da mensagem.</param>
+        <param name="relay">Um valor que indica se o cabeçalho deve ser retransmitido.</param>
+        <summary>Cria um novo cabeçalho de mensagem com os dados especificados.</summary>
+        <returns>Um novo objeto <see cref="T:System.ServiceModel.Channels.MessageHeader" /> com os dados especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMessageVersionSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsMessageVersionSupported (System.ServiceModel.Channels.MessageVersion messageVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsMessageVersionSupported(class System.ServiceModel.Channels.MessageVersion messageVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.IsMessageVersionSupported(System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageVersion" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="messageVersion">O objeto que contém informações relacionadas à versão do SOAP associado a uma mensagem e sua troca.</param>
+        <summary>Verifica se a versão de mensagem especificado tem suporte.</summary>
+        <returns>
+          <see langword="true" />Se houver suporte para a versão de mensagem especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReferenceParameter">
+      <MemberSignature Language="C#" Value="public override bool IsReferenceParameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReferenceParameter" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageHeader.IsReferenceParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se esse cabeçalho de mensagem contém parâmetros de referência de uma referência de ponto de extremidade.</summary>
+        <value>
+          <see langword="true" />Se esse cabeçalho de mensagem contém parâmetros de referência de uma referência de ponto de extremidade; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Corresponde um parâmetro de referência para o <`ReferenceParameters`> elemento descrito no no [especificação WS-Addressing](http://go.microsoft.com/fwlink/?LinkID=96163).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MustUnderstand">
+      <MemberSignature Language="C#" Value="public override bool MustUnderstand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MustUnderstand" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageHeader.MustUnderstand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cabeçalho deve ser compreendido, de acordo com a especificação de SOAP 1.1/1.2.</summary>
+        <value>
+          <see langword="true" />Se o cabeçalho deve ser compreendido; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade for `true` e o destinatário da mensagem não é possível interpretar o cabeçalho da mensagem, a mensagem não é processada e uma exceção será lançada. Se essa propriedade for `false`, o receptor pode ignorar o cabeçalho da mensagem e continuar o processamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteHeaderContents">
+      <MemberSignature Language="C#" Value="protected abstract void OnWriteHeaderContents (System.Xml.XmlDictionaryWriter writer, System.ServiceModel.Channels.MessageVersion messageVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteHeaderContents(class System.Xml.XmlDictionaryWriter writer, class System.ServiceModel.Channels.MessageVersion messageVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.OnWriteHeaderContents(System.Xml.XmlDictionaryWriter,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="messageVersion" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usado para serializar o conteúdo do cabeçalho.</param>
+        <param name="messageVersion">O objeto que contém informações relacionadas à versão do SOAP associado a uma mensagem e sua troca.</param>
+        <summary>Chamado quando o conteúdo do cabeçalho é serializado usando o gravador XML especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteStartHeader">
+      <MemberSignature Language="C#" Value="protected virtual void OnWriteStartHeader (System.Xml.XmlDictionaryWriter writer, System.ServiceModel.Channels.MessageVersion messageVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWriteStartHeader(class System.Xml.XmlDictionaryWriter writer, class System.ServiceModel.Channels.MessageVersion messageVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.OnWriteStartHeader(System.Xml.XmlDictionaryWriter,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="messageVersion" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usado para serializar o cabeçalho de início.</param>
+        <param name="messageVersion">O objeto que contém informações relacionadas à versão do SOAP associado a uma mensagem e sua troca.</param>
+        <summary>Chamado quando o cabeçalho de início é serializado usando o gravador XML especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Relay">
+      <MemberSignature Language="C#" Value="public override bool Relay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Relay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageHeader.Relay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o cabeçalho deve ser retransmitido.</summary>
+        <value>
+          <see langword="true" />Se o cabeçalho deve ser retransmitido; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ De acordo com a especificação de SOAP 1.1, esse valor é sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação de cadeia de caracteres de cabeçalho desta mensagem.</summary>
+        <returns>A representação de cadeia de caracteres do cabeçalho desta mensagem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteHeader">
+      <MemberSignature Language="C#" Value="public void WriteHeader (System.Xml.XmlDictionaryWriter writer, System.ServiceModel.Channels.MessageVersion messageVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteHeader(class System.Xml.XmlDictionaryWriter writer, class System.ServiceModel.Channels.MessageVersion messageVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.WriteHeader(System.Xml.XmlDictionaryWriter,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="messageVersion" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usado para serializar o cabeçalho.</param>
+        <param name="messageVersion">O objeto que contém informações relacionadas à versão do SOAP associado a uma mensagem e sua troca.</param>
+        <summary>Serializa o cabeçalho usando o gravador XML especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteHeader">
+      <MemberSignature Language="C#" Value="public void WriteHeader (System.Xml.XmlWriter writer, System.ServiceModel.Channels.MessageVersion messageVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteHeader(class System.Xml.XmlWriter writer, class System.ServiceModel.Channels.MessageVersion messageVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.WriteHeader(System.Xml.XmlWriter,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="messageVersion" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> que é usado para serializar o cabeçalho.</param>
+        <param name="messageVersion">O objeto que contém informações relacionadas à versão do SOAP associado a uma mensagem e sua troca.</param>
+        <summary>Serializa o cabeçalho usando o gravador XML especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteHeaderAttributes">
+      <MemberSignature Language="C#" Value="protected void WriteHeaderAttributes (System.Xml.XmlDictionaryWriter writer, System.ServiceModel.Channels.MessageVersion messageVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteHeaderAttributes(class System.Xml.XmlDictionaryWriter writer, class System.ServiceModel.Channels.MessageVersion messageVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.WriteHeaderAttributes(System.Xml.XmlDictionaryWriter,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="messageVersion" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usado para serializar os atributos de cabeçalho.</param>
+        <param name="messageVersion">O objeto que contém informações relacionadas à versão do SOAP associado a uma mensagem e sua troca.</param>
+        <summary>Serializa os atributos de cabeçalho usando o gravador XML especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteHeaderContents">
+      <MemberSignature Language="C#" Value="public void WriteHeaderContents (System.Xml.XmlDictionaryWriter writer, System.ServiceModel.Channels.MessageVersion messageVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteHeaderContents(class System.Xml.XmlDictionaryWriter writer, class System.ServiceModel.Channels.MessageVersion messageVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.WriteHeaderContents(System.Xml.XmlDictionaryWriter,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="messageVersion" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> que é usado para serializar o conteúdo do cabeçalho.</param>
+        <param name="messageVersion">O objeto que contém informações relacionadas à versão do SOAP associado a uma mensagem e sua troca.</param>
+        <summary>Serializa o conteúdo de cabeçalho usando o gravador XML especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartHeader">
+      <MemberSignature Language="C#" Value="public void WriteStartHeader (System.Xml.XmlDictionaryWriter writer, System.ServiceModel.Channels.MessageVersion messageVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteStartHeader(class System.Xml.XmlDictionaryWriter writer, class System.ServiceModel.Channels.MessageVersion messageVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageHeader.WriteStartHeader(System.Xml.XmlDictionaryWriter,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+        <Parameter Name="messageVersion" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlDictionaryWriter" /> que é usado para serializar o cabeçalho de início.</param>
+        <param name="messageVersion">Objeto que contém informações relacionadas à versão do SOAP associado a uma mensagem e sua troca.</param>
+        <summary>Serializa o cabeçalho de início usando o gravador XML especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

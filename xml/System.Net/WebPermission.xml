@@ -1,0 +1,716 @@
+<Type Name="WebPermission" FullName="System.Net.WebPermission">
+  <TypeSignature Language="C#" Value="public sealed class WebPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit WebPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Controla os direitos de acesso a recursos de Internet HTTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebPermission>Fornece um conjunto de métodos e propriedades para controlar o acesso aos recursos da Internet. Você pode usar um <xref:System.Net.WebPermission> fornecer acesso restrito ou irrestrito para seu recurso, com base no <xref:System.Security.Permissions.PermissionState> que é definida quando o <xref:System.Net.WebPermission> é criado.  
+  
+ Criar um <xref:System.Net.WebPermission> instância chamando seu construtor usando um dos seguintes conjuntos de parâmetros:  
+  
+-   Sem parâmetros. O padrão <xref:System.Security.Permissions.PermissionState> é <xref:System.Security.Permissions.PermissionState.None>.  
+  
+-   Um <xref:System.Security.Permissions.PermissionState>. Especifique o <xref:System.Security.Permissions.PermissionState.Unrestricted> para permitir que qualquer URI a ser usado na classe de destino, ou <xref:System.Security.Permissions.PermissionState.None> para permitir o acesso somente aos URIs que você especificar através do uso do <xref:System.Net.WebPermission.AddPermission%2A> método.  
+  
+-   Um <xref:System.Net.NetworkAccess> valor e uma cadeia de caracteres do URI. O URI especificado tem permissões concedidas pelo <xref:System.Net.NetworkAccess> valor.  
+  
+-   Um <xref:System.Net.NetworkAccess> especificador e URI de expressão regular.  
+  
+ O <xref:System.Net.WebPermission.ConnectList%2A> e <xref:System.Net.WebPermission.AcceptList%2A> mantenha os URIs para o qual você concedeu permissão de acesso. Para adicionar um URI para uma dessas listas, use <xref:System.Net.WebPermission.AddPermission%2A>. Se você passar <xref:System.Net.NetworkAccess.Accept> como o <xref:System.Net.NetworkAccess> parâmetro, o URI será adicionado para o <xref:System.Net.WebPermission.AcceptList%2A>. <xref:System.Net.WebPermission>permitirá conexões à sua classe de destino com URIs correspondentes a <xref:System.Net.WebPermission.AcceptList%2A>.  
+  
+> [!CAUTION]
+>  Para negar acesso a um recurso de Internet, você deve negar acesso a todos os caminhos possíveis para esse recurso. Isso requer a chamada <xref:System.Net.WebPermission.%23ctor%2A?displayProperty=nameWithType> com parâmetro de estado definido como <xref:System.Security.CodeAccessPermission.Deny%2A>. Uma abordagem melhor é permitir o acesso ao recurso específico. Para obter mais informações sobre este assunto, consulte o [NIB: usando o método Deny](http://msdn.microsoft.com/en-us/6b4d2e01-c504-4ac3-b50e-d6f5e7f5df25) tópico.  
+  
+> [!NOTE]
+>  É necessário negar o acesso usando apenas o caminho canônico do recurso. Não é necessário usar variações de sintática do todos os caminhos.  
+  
+> [!NOTE]
+>  Informações de porta padrão e de nome de usuário são tiradas do <xref:System.Uri> antes da comparação com o argumento de expressão regular que é fornecida para o <xref:System.Net.WebPermission.%23ctor%28System.Net.NetworkAccess%2CSystem.Text.RegularExpressions.Regex%29> construtor. Se a expressão regular contém informações sobre o usuário ou o número da porta padrão, todas as solicitações <xref:System.Uri>s não corresponde à expressão regular.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar uma nova instância da <xref:System.Net.WebPermission> usando um <xref:System.Text.RegularExpressions.Regex>. Hosts adicionais são adicionados ao conectar-se e aceitar a lista de <xref:System.Net.WebPermission>. Por fim, conecte-se e aceitar a lista é exibida no console.  
+  
+ [!code-cpp[WebPermission_Regex#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_Regex/CPP/regex.cpp#1)]
+ [!code-csharp[WebPermission_Regex#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_Regex/CS/regex.cs#1)]
+ [!code-vb[WebPermission_Regex#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_Regex/VB/regex.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Net.WebPermission" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria uma nova instância da classe <xref:System.Net.WebPermission>. Este construtor cria uma permissão vazia que não concede nenhum direito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um valor <see cref="T:System.Security.Permissions.PermissionState" />.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Net.WebPermission" /> classe que transmite todas as demandas ou falhar todas as demandas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da `state` parâmetro seja <xref:System.Security.Permissions.PermissionState?displayProperty=nameWithType> ou <xref:System.Security.Permissions.PermissionState?displayProperty=nameWithType>, respectivamente produzindo totalmente restrita ou irrestrita totalmente o acesso a todas as variáveis de segurança. Se você especificar <xref:System.Security.Permissions.PermissionState?displayProperty=nameWithType>, em seguida, você pode conceder acesso para URIs individuais usando <xref:System.Net.WebPermission.AddPermission%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância de <xref:System.Net.WebPermission> e concede direitos de acesso a URLs específicas.  
+  
+ [!code-cpp[WebPermission_Copy#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_Copy/CPP/webpermission_copy.cpp#1)]
+ [!code-csharp[WebPermission_Copy#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_Copy/CS/webpermission_copy.cs#1)]
+ [!code-vb[WebPermission_Copy#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_Copy/VB/webpermission_copy.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPermission (System.Net.NetworkAccess access, string uriString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.NetworkAccess access, string uriString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.#ctor(System.Net.NetworkAccess,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="access" Type="System.Net.NetworkAccess" />
+        <Parameter Name="uriString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Um valor de NetworkAccess que indica o tipo de acesso para conceder ao URI especificado. <see cref="F:System.Net.NetworkAccess.Accept" />indica que o aplicativo tem permissão para aceitar conexões da Internet em um recurso local. <see cref="F:System.Net.NetworkAccess.Connect" />indica que o aplicativo tem permissão para se conectar aos recursos da Internet específicos.</param>
+        <param name="uriString">Uma cadeia de caracteres URI para o qual o acesso direitos são concedidos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.WebPermission" /> classe com direitos de acesso especificado para o URI especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Net.WebPermission> e concede a permissão seu destino para fazer um controle remoto hospedar conexão ou aceitar uma conexão de host remoto usando o URI descrito pelo `uriString` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma nova instância da <xref:System.Net.WebPermission> com direitos de conexão para o URI especificado.  
+  
+ [!code-cpp[WebPermission_Union#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_Union/CPP/webpermission_union.cpp#1)]
+ [!code-csharp[WebPermission_Union#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_Union/CS/webpermission_union.cs#1)]
+ [!code-vb[WebPermission_Union#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_Union/VB/webpermission_union.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uriString" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPermission (System.Net.NetworkAccess access, System.Text.RegularExpressions.Regex uriRegex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.NetworkAccess access, class System.Text.RegularExpressions.Regex uriRegex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.#ctor(System.Net.NetworkAccess,System.Text.RegularExpressions.Regex)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="access" Type="System.Net.NetworkAccess" />
+        <Parameter Name="uriRegex" Type="System.Text.RegularExpressions.Regex" />
+      </Parameters>
+      <Docs>
+        <param name="access">Um <see cref="T:System.Net.NetworkAccess" /> valor que indica o tipo de acesso para conceder ao URI especificado. <see cref="F:System.Net.NetworkAccess.Accept" />indica que o aplicativo tem permissão para aceitar conexões da Internet em um recurso local. <see cref="F:System.Net.NetworkAccess.Connect" />indica que o aplicativo tem permissão para se conectar aos recursos da Internet específicos.</param>
+        <param name="uriRegex">Uma expressão regular que descreve o URI para o qual o acesso é para ser concedida.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.WebPermission" /> classe com direitos de acesso especificado para a expressão regular do URI especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Net.WebPermission> e concede a permissão seu destino para fazer um controle remoto hospedar conexão ou aceitar uma conexão de host remoto usando o URI descrito pelo `uriRegex` parâmetro.  
+  
+> [!NOTE]
+>  É recomendável que você crie `uriRegex` usando o <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>, e <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> sinalizadores.  
+  
+> [!NOTE]
+>  Um cadeia de caracteres do URI de candidato é verificado em relação a lista de expressões regulares relevantes (<xref:System.Net.WebPermission.AcceptList%2A> ou <xref:System.Net.WebPermission.ConnectList%2A>) de duas maneiras. Primeiro, o cadeia de caracteres do URI de candidato é verificado na lista de apropriado; em seguida, se não houver nenhuma correspondência, o cadeia de caracteres do URI de candidato é convertido em um <xref:System.Uri> e verificados em relação a lista apropriada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma nova instância da <xref:System.Net.WebPermission> com direitos de conexão especificado <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>.  
+  
+ [!code-cpp[WebPermission_Constructor4#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_Constructor4/CPP/webpermission_constructor4.cpp#1)]
+ [!code-csharp[WebPermission_Constructor4#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_Constructor4/CS/webpermission_constructor4.cs#1)]
+ [!code-vb[WebPermission_Constructor4#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_Constructor4/VB/webpermission_constructor4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptList">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator AcceptList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator AcceptList" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebPermission.AcceptList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade retorna uma enumeração de um único aceitar as permissões mantidas por este <see cref="T:System.Net.WebPermission" />. Os objetos de possíveis tipos contidos na enumeração retornada são <see cref="T:System.String" /> e <see cref="T:System.Text.RegularExpressions.Regex" />.</summary>
+        <value>O <see cref="T:System.Collections.IEnumerator" /> interface contém aceitar as permissões.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém uma lista dos recursos locais permitidos por essa <xref:System.Net.WebPermission>. A classe à qual você aplicou <xref:System.Net.WebPermission> só tem permissão para receber uma conexão de entrada para recursos locais encontrado nesta lista.  
+  
+> [!NOTE]
+>  Você pode adicionar URIs a essa lista usando <xref:System.Net.WebPermission.AddPermission%2A>.  
+  
+> [!NOTE]
+>  Um cadeia de caracteres do URI de candidato é verificado em relação a lista de expressões regulares relevantes (<xref:System.Net.WebPermission.AcceptList%2A> ou <xref:System.Net.WebPermission.ConnectList%2A>) de duas maneiras. Primeiro, o cadeia de caracteres do URI de candidato é verificado na lista de apropriado; em seguida, se não houver nenhuma correspondência, o cadeia de caracteres do URI de candidato é convertido em um <xref:System.Uri> e verificados em relação a lista apropriada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime as URLs de <xref:System.Net.WebPermission.AcceptList%2A> para o console.  
+  
+ [!code-cpp[WebPermission_AcceptConnectList#2](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_AcceptConnectList/CPP/webpermission_acceptconnectlist.cpp#2)]
+ [!code-csharp[WebPermission_AcceptConnectList#2](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_AcceptConnectList/CS/webpermission_acceptconnectlist.cs#2)]
+ [!code-vb[WebPermission_AcceptConnectList#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_AcceptConnectList/VB/webpermission_acceptconnectlist.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPermission">
+      <MemberSignature Language="C#" Value="public void AddPermission (System.Net.NetworkAccess access, string uriString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPermission(valuetype System.Net.NetworkAccess access, string uriString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.AddPermission(System.Net.NetworkAccess,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Net.NetworkAccess" />
+        <Parameter Name="uriString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Um <see cref="T:System.Net.NetworkAccess" /> que especifica os direitos de acesso que são concedidos para o URI.</param>
+        <param name="uriString">Uma cadeia de caracteres que descreve o URI para o qual o acesso direitos são concedidos.</param>
+        <summary>Adiciona a cadeia de caracteres do URI especificada com os direitos de acesso especificado para a atual <see cref="T:System.Net.WebPermission" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tiver especificado <xref:System.Security.Permissions.PermissionState.None> como o <xref:System.Security.Permissions.PermissionState>, use <xref:System.Net.WebPermission.AddPermission%2A> para permitir o uso de `uriString` na classe de destino. A forma como `uriString` pode ser usado pelo destino da classe é especificada pelo `access`. Especifique <xref:System.Net.NetworkAccess.Accept> como o parâmetro de acesso para adicionar o URI especificado pelo `uriString` parâmetro à lista de URI aceitam cadeias de caracteres, ou especifique <xref:System.Net.NetworkAccess.Connect> como o acesso de parâmetro para adicionar o URI para a lista de URI se conectar a cadeias de caracteres.  
+  
+> [!NOTE]
+>  Chamando <xref:System.Net.WebPermission.AddPermission%2A> na <xref:System.Security.Permissions.PermissionState.Unrestricted> <xref:System.Net.WebPermission> não terá efeito, porque a permissão é concedida a todos os URIs.  
+  
+> [!NOTE]
+>  Um cadeia de caracteres do URI de candidato é verificado em relação a lista de expressões regulares relevantes (<xref:System.Net.WebPermission.AcceptList%2A> ou <xref:System.Net.WebPermission.ConnectList%2A>) de duas maneiras. Primeiro, o cadeia de caracteres do URI de candidato é verificado na lista de apropriado; em seguida, se não houver nenhuma correspondência, o cadeia de caracteres do URI de candidato é convertido em um <xref:System.Uri> e verificados em relação a lista apropriada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar direitos de acesso para cadeias de caracteres de URL específicos.  
+  
+ [!code-cpp[WebPermission_Intersect#2](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_Intersect/CPP/webpermission_intersect.cpp#2)]
+ [!code-csharp[WebPermission_Intersect#2](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_Intersect/CS/webpermission_intersect.cs#2)]
+ [!code-vb[WebPermission_Intersect#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_Intersect/VB/webpermission_intersect.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uriString" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPermission">
+      <MemberSignature Language="C#" Value="public void AddPermission (System.Net.NetworkAccess access, System.Text.RegularExpressions.Regex uriRegex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPermission(valuetype System.Net.NetworkAccess access, class System.Text.RegularExpressions.Regex uriRegex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.AddPermission(System.Net.NetworkAccess,System.Text.RegularExpressions.Regex)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Net.NetworkAccess" />
+        <Parameter Name="uriRegex" Type="System.Text.RegularExpressions.Regex" />
+      </Parameters>
+      <Docs>
+        <param name="access">Um NetworkAccess que especifica os direitos de acesso que são concedidos para o URI.</param>
+        <param name="uriRegex">Uma expressão regular que descreve o conjunto de URIs que acesse os direitos são concedidos.</param>
+        <summary>Adiciona o URI especificado com os direitos de acesso especificado para a atual <see cref="T:System.Net.WebPermission" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tiver especificado <xref:System.Security.Permissions.PermissionState.None> como o <xref:System.Security.Permissions.PermissionState>, use <xref:System.Net.WebPermission.AddPermission%2A> para permitir o uso de `uriRegex` na classe de destino. Especifique <xref:System.Net.NetworkAccess.Accept> como o `access` parâmetro para adicionar o URI especificado pelo `uriRegex` parâmetro à lista de URI aceitam cadeias de caracteres, ou especifique <xref:System.Net.NetworkAccess.Connect> sequências de conexão do parâmetro para adicionar o URI para a lista de URI como o acesso.  
+  
+> [!NOTE]
+>  Chamando <xref:System.Net.WebPermission.AddPermission%2A> em uma <xref:System.Security.Permissions.PermissionState.Unrestricted> <xref:System.Net.WebPermission> instância não terá efeito, a permissão é concedida a todos os URIs.  
+  
+> [!NOTE]
+>  É recomendável que você crie `uriRegex` usando o <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>, e <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> sinalizadores.  
+  
+> [!NOTE]
+>  Um cadeia de caracteres do URI de candidato é verificado em relação a lista de expressões regulares relevantes (<xref:System.Net.WebPermission.AcceptList%2A> ou <xref:System.Net.WebPermission.ConnectList%2A>) de duas maneiras. Primeiro, o cadeia de caracteres do URI de candidato é verificado na lista de apropriado; em seguida, se não houver nenhuma correspondência, o cadeia de caracteres do URI de candidato é convertido em um <xref:System.Uri> e verificados em relação a lista apropriada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Net.WebPermission.AddPermission%2A> para conceder direitos de acesso para o URI especificado.  
+  
+ [!code-cpp[WebPermission_IsSubset#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_IsSubset/CPP/webpermission_issubset.cpp#1)]
+ [!code-csharp[WebPermission_IsSubset#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_IsSubset/CS/webpermission_issubset.cs#1)]
+ [!code-vb[WebPermission_IsSubset#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_IsSubset/VB/webpermission_issubset.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="uriRegex" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectList">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator ConnectList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator ConnectList" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebPermission.ConnectList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade retorna uma enumeração de um único conectar permissões mantidas por este <see cref="T:System.Net.WebPermission" />. Os objetos de possíveis tipos contidos na enumeração retornada são <see cref="T:System.String" /> e <see cref="T:System.Text.RegularExpressions.Regex" />.</summary>
+        <value>O <see cref="T:System.Collections.IEnumerator" /> interface que contém as permissões de conexão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém uma lista de recursos remotos que são permitidos por essa <xref:System.Net.WebPermission>. A classe à qual você aplicou <xref:System.Net.WebPermission> só tem permissão para se conectar com recursos encontrados nessa lista.  
+  
+> [!NOTE]
+>  Você pode adicionar URIs a essa lista usando <xref:System.Net.WebPermission.AddPermission%2A>.  
+  
+> [!NOTE]
+>  Um cadeia de caracteres do URI de candidato é verificado em relação a lista de expressões regulares relevantes (<xref:System.Net.WebPermission.AcceptList%2A> ou <xref:System.Net.WebPermission.ConnectList%2A>) de duas maneiras. Primeiro, o cadeia de caracteres do URI de candidato é verificado na lista de apropriado; em seguida, se não houver nenhuma correspondência, o cadeia de caracteres do URI de candidato é convertido em um <xref:System.Uri> e verificados em relação a lista apropriada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime as URLs de <xref:System.Net.WebPermission.ConnectList%2A> para o console.  
+  
+ [!code-cpp[WebPermission_AcceptConnectList#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_AcceptConnectList/CPP/webpermission_acceptconnectlist.cpp#1)]
+ [!code-csharp[WebPermission_AcceptConnectList#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_AcceptConnectList/CS/webpermission_acceptconnectlist.cs#1)]
+ [!code-vb[WebPermission_AcceptConnectList#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_AcceptConnectList/VB/webpermission_acceptconnectlist.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia de um <see cref="T:System.Net.WebPermission" />.</summary>
+        <returns>Uma nova instância do <see cref="T:System.Net.WebPermission" /> classe que tem os mesmos valores que o original.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.IPermission> retornado por esta representa método o mesmo acesso a recursos que o original <xref:System.Net.WebPermission>. Esse método substitui <xref:System.Security.CodeAccessPermission.Copy%2A> e é implementado para dar suporte a <xref:System.Security.IPermission> interface.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar uma segunda instância do <xref:System.Net.WebPermission> usando <xref:System.Net.WebPermission.Copy%2A>. Essa segunda instância é idêntica ao primeiro.  
+  
+ [!code-cpp[WebPermission_Copy#2](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_Copy/CPP/webpermission_copy.cpp#2)]
+ [!code-csharp[WebPermission_Copy#2](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_Copy/CS/webpermission_copy.cs#2)]
+ [!code-vb[WebPermission_Copy#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_Copy/VB/webpermission_copy.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement securityElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement securityElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="securityElement">A codificação de XML do qual reconstruir o <see cref="T:System.Net.WebPermission" />.</param>
+        <summary>Reconstrói um <see cref="T:System.Net.WebPermission" /> de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.WebPermission.FromXml%2A> método reconstrói um <xref:System.Net.WebPermission> de um XML de codificação que é definido pelo <xref:System.Security.SecurityElement> classe.  
+  
+ Use o <xref:System.Net.WebPermission.ToXml%2A> método para codificar o XML de <xref:System.Net.WebPermission>, incluindo informações de estado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Security.SecurityElement?displayProperty=nameWithType>, preenche os atributos e usa <xref:System.Net.WebPermission.FromXml%2A> para transferir essas informações para uma instância de <xref:System.Net.WebPermission>.  
+  
+ [!code-cpp[WebPermission_FromToXml#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_FromToXml/CPP/webpermission_fromtoxml.cpp#1)]
+ [!code-csharp[WebPermission_FromToXml#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_FromToXml/CS/webpermission_fromtoxml.cs#1)]
+ [!code-vb[WebPermission_FromToXml#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_FromToXml/VB/webpermission_fromtoxml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="securityElement" /> é <see langword="null." /></exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="securityElement" />não é um elemento de permissão para este tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">O <see cref="T:System.Net.WebPermission" /> para comparar com a instância atual.</param>
+        <summary>Retorna a interseção lógica de dois <see cref="T:System.Net.WebPermission" /> instâncias.</summary>
+        <returns>Um novo <see cref="T:System.Net.WebPermission" /> que representa a interseção da instância atual e o <paramref name="target" /> parâmetro. Se a interseção estiver vazia, o método retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebPermission.Intersect%2A>Retorna um <xref:System.Net.WebPermission> que contém essas permissões que são comuns em ambos os `target` e a instância atual.  
+  
+ Esse método substitui <xref:System.Security.CodeAccessPermission.Intersect%2A> e é implementado para dar suporte a <xref:System.Security.IPermission> interface.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma instância de <xref:System.Net.WebPermission> usando a interseção lógica existente dois <xref:System.Net.WebPermission> instâncias.  
+  
+ [!code-cpp[WebPermission_Intersect#3](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_Intersect/CPP/webpermission_intersect.cpp#3)]
+ [!code-csharp[WebPermission_Intersect#3](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_Intersect/CS/webpermission_intersect.cs#3)]
+ [!code-vb[WebPermission_Intersect#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_Intersect/VB/webpermission_intersect.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />não é <see langword="null" /> ou de tipo<see cref="T:System.Net.WebPermission" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">O <see cref="T:System.Net.WebPermission" /> para comparar com a atual <see cref="T:System.Net.WebPermission" />.</param>
+        <summary>Determina se o atual <see cref="T:System.Net.WebPermission" /> é um subconjunto do objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se a instância atual é um subconjunto do <paramref name="target" /> parâmetro; caso contrário, <see langword="false" />. Se o destino for <see langword="null" />, o método retorna <see langword="true" /> para uma permissão atual vazia que não é irrestrita e <see langword="false" /> caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o atual <xref:System.Net.WebPermission> Especifica um conjunto de recursos associados totalmente contido pelo `target` parâmetro e, em seguida, atual <xref:System.Net.WebPermission> é um subconjunto de `target`. Esse método substitui <xref:System.Net.WebPermission.IsSubsetOf%2A> e é implementado para dar suporte a <xref:System.Security.IPermission> interface.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Net.WebPermission.IsSubsetOf%2A> para determinar se os direitos de acesso encontrada em uma instância do <xref:System.Net.WebPermission> são encontrados em outra instância do <xref:System.Net.WebPermission>.  
+  
+ [!code-cpp[WebPermission_IsSubset2#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_IsSubset2/CPP/source.cpp#1)]
+ [!code-csharp[WebPermission_IsSubset2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_IsSubset2/CS/source.cs#1)]
+ [!code-vb[WebPermission_IsSubset2#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_IsSubset2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro de destino não é uma instância de <see cref="T:System.Net.WebPermission" />.</exception>
+        <exception cref="T:System.NotSupportedException">A instância atual contém um direito de Regex codificado e há não exatamente o mesmo direito encontrado na instância de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica o estado de permissão geral de <see cref="T:System.Net.WebPermission" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Net.WebPermission" /> foi criado com o <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> <see cref="T:System.Security.Permissions.PermissionState" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Net.WebPermission> é <xref:System.Security.Permissions.PermissionState.Unrestricted>, em seguida, a classe de destino pode usar todos os URIs. Caso contrário, a permissão específica deve ser fornecido para qualquer URI que você deseja usar com a classe de destino.  
+  
+> [!NOTE]
+>  Use <xref:System.Net.WebPermission.AddPermission%2A> para adicionar um URI e especifique suas permissões.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML de um <see cref="T:System.Net.WebPermission" /> e seu estado atual.</summary>
+        <returns>Um <see cref="T:System.Security.SecurityElement" /> que contém uma representação XML codificado do <see cref="T:System.Net.WebPermission" />, incluindo informações de estado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Net.WebPermission.FromXml%2A> método para restaurar as informações de estado de um <xref:System.Security.SecurityElement>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar <xref:System.Net.WebPermission.ToXml%2A> para criar um <xref:System.Security.SecurityElement?displayProperty=nameWithType> e seus atributos para o console de impressão.  
+  
+ [!code-cpp[WebPermission_FromToXml#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_FromToXml/CPP/webpermission_fromtoxml.cpp#1)]
+ [!code-csharp[WebPermission_FromToXml#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_FromToXml/CS/webpermission_fromtoxml.cs#1)]
+ [!code-vb[WebPermission_FromToXml#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_FromToXml/VB/webpermission_fromtoxml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">O <see cref="T:System.Net.WebPermission" /> para combinar com a atual <see cref="T:System.Net.WebPermission" />.</param>
+        <summary>Retorna a união lógica entre duas instâncias do <see cref="T:System.Net.WebPermission" /> classe.</summary>
+        <returns>Um <see cref="T:System.Net.WebPermission" /> que representa a união da instância atual e o <paramref name="target" /> parâmetro. Se qualquer um dos <see langword="WebPermission" /> é <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />, o método retorna um <see cref="T:System.Net.WebPermission" /> que é <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />. Se o destino for <see langword="null" />, o método retorna uma cópia do atual <see cref="T:System.Net.WebPermission" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebPermission.Union%2A>Retorna um <xref:System.Net.WebPermission> que contém todas as permissões em ambos os `target` e a instância atual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa a união lógica de dois <xref:System.Net.WebPermission> instâncias para criar uma terceira instância de <xref:System.Net.WebPermission>.  
+  
+ [!code-cpp[WebPermission_Union#2](~/samples/snippets/cpp/VS_Snippets_Remoting/WebPermission_Union/CPP/webpermission_union.cpp#2)]
+ [!code-csharp[WebPermission_Union#2](~/samples/snippets/csharp/VS_Snippets_Remoting/WebPermission_Union/CS/webpermission_union.cs#2)]
+ [!code-vb[WebPermission_Union#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebPermission_Union/VB/webpermission_union.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">o destino não é <see langword="null" /> ou do tipo <see cref="T:System.Net.WebPermission" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

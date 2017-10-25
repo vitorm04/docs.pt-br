@@ -1,0 +1,97 @@
+<Type Name="ValidationPropertyAttribute" FullName="System.Web.UI.ValidationPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ValidationPropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ValidationPropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ValidationPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o atributo de metadados que os controles do servidor ASP.NET usam para identificar uma propriedade de validação. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo normalmente é usado para controles de entrada com base em formulário.  
+  
+ Para obter mais informações sobre atributos, consulte [Atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.ValidationPropertyAttribute> classe ao criar um controle personalizado.  
+  
+ [!code-csharp[ValidationPropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidationPropertyAttribute/CS/validationpropertyattribute1.cs#1)]
+ [!code-vb[ValidationPropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidationPropertyAttribute/VB/validationpropertyattribute1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationPropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ValidationPropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade de validação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ValidationPropertyAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.ValidationPropertyAttribute> classe ao criar um controle personalizado.  
+  
+ [!code-csharp[ValidationPropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidationPropertyAttribute/CS/validationpropertyattribute1.cs#1)]
+ [!code-vb[ValidationPropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidationPropertyAttribute/VB/validationpropertyattribute1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ValidationPropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade de validação do controle de servidor ASP.NET.</summary>
+        <value>O nome da propriedade de validação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.ValidationPropertyAttribute> classe ao criar um controle personalizado.  
+  
+ [!code-csharp[ValidationPropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ValidationPropertyAttribute/CS/validationpropertyattribute1.cs#1)]
+ [!code-vb[ValidationPropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ValidationPropertyAttribute/VB/validationpropertyattribute1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

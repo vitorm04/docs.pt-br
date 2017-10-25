@@ -1,0 +1,213 @@
+<Type Name="DispatcherHooks" FullName="System.Windows.Threading.DispatcherHooks">
+  <TypeSignature Language="C#" Value="public sealed class DispatcherHooks" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DispatcherHooks extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherHooks" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações de evento adicionais sobre o processamento de <see cref="T:System.Windows.Threading.Dispatcher" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DispatcherInactive">
+      <MemberSignature Language="C#" Value="public event EventHandler DispatcherInactive;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DispatcherInactive" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.DispatcherHooks.DispatcherInactive" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o distribuidor não tem mais operações para processar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado pelo thread dispatcher quando não houver mais itens de trabalho pendente.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar ou remover um manipulador para este evento.  Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationAborted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Threading.DispatcherHookEventHandler OperationAborted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Threading.DispatcherHookEventHandler OperationAborted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.DispatcherHooks.OperationAborted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherHookEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação é anulada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer thread pode anular uma operação; Portanto, esse evento pode ser gerado por qualquer thread.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar ou remover um manipulador para este evento. Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationCompleted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Threading.DispatcherHookEventHandler OperationCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Threading.DispatcherHookEventHandler OperationCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.DispatcherHooks.OperationCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherHookEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação é concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado pelo thread dispatcher após a conclusão da operação.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar ou remover um manipulador para este evento. Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationPosted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Threading.DispatcherHookEventHandler OperationPosted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Threading.DispatcherHookEventHandler OperationPosted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.DispatcherHooks.OperationPosted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherHookEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação é postada para o distribuidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse evento ocorre durante uma chamada para <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  
+  
+ Esse evento pode ocorrer durante uma chamada para <xref:System.Windows.Threading.Dispatcher.Invoke%2A> se qualquer prioridade diferente <xref:System.Windows.Threading.DispatcherPriority.Send> for especificado, ou se o dispatcher de destino pertence a um thread diferente.  
+  
+ Qualquer thread pode postar operações; Portanto, esse evento pode ser gerado por qualquer thread.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar ou remover um manipulador para este evento. Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationPriorityChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Threading.DispatcherHookEventHandler OperationPriorityChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Threading.DispatcherHookEventHandler OperationPriorityChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.DispatcherHooks.OperationPriorityChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherHookEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a prioridade de uma operação é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer thread pode alterar a prioridade das operações; Portanto, esse evento pode ser gerado por qualquer thread.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar ou remover um manipulador para este evento. Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationStarted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Threading.DispatcherHookEventHandler OperationStarted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Threading.DispatcherHookEventHandler OperationStarted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.DispatcherHooks.OperationStarted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherHookEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação é invocada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,208 @@
+<Type Name="BamlLocalizer" FullName="System.Windows.Markup.Localizer.BamlLocalizer">
+  <TypeSignature Language="C#" Value="public class BamlLocalizer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BamlLocalizer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.BamlLocalizer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Extrai os recursos de um arquivo BAML e gera uma versão localizada de uma fonte de BAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é o ponto de entrada principal para a API de localização de BAML. Você deve criar uma instância dessa classe para cada fonte BAML localizar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.Windows.Markup.Localizer.BamlLocalizer>.  
+  
+ [!code-csharp[GrabBaml#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GrabBaml/CSharp/GrabBaml.cs#1)]
+ [!code-vb[GrabBaml#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GrabBaml/visualbasic/grabbaml.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BamlLocalizer (System.IO.Stream source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizer.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um fluxo de arquivos que contém o BAML de entrada a ser localizada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.Localizer.BamlLocalizer" /> classe com o fluxo de origem BAML especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BamlLocalizer (System.IO.Stream source, System.Windows.Markup.Localizer.BamlLocalizabilityResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream source, class System.Windows.Markup.Localizer.BamlLocalizabilityResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizer.#ctor(System.IO.Stream,System.Windows.Markup.Localizer.BamlLocalizabilityResolver)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.IO.Stream" />
+        <Parameter Name="resolver" Type="System.Windows.Markup.Localizer.BamlLocalizabilityResolver" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um fluxo de arquivos que contém o BAML de entrada a ser localizada.</param>
+        <param name="resolver">Uma instância de <see cref="T:System.Windows.Markup.Localizer.BamlLocalizabilityResolver" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.Localizer.BamlLocalizer" /> classe com o resolvedor de localização especificada e o fluxo de origem BAML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BamlLocalizer (System.IO.Stream source, System.Windows.Markup.Localizer.BamlLocalizabilityResolver resolver, System.IO.TextReader comments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream source, class System.Windows.Markup.Localizer.BamlLocalizabilityResolver resolver, class System.IO.TextReader comments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizer.#ctor(System.IO.Stream,System.Windows.Markup.Localizer.BamlLocalizabilityResolver,System.IO.TextReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.IO.Stream" />
+        <Parameter Name="resolver" Type="System.Windows.Markup.Localizer.BamlLocalizabilityResolver" />
+        <Parameter Name="comments" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um fluxo de arquivos que contém o BAML de entrada a ser localizada.</param>
+        <param name="resolver">Uma instância de <see cref="T:System.Windows.Markup.Localizer.BamlLocalizabilityResolver" />.</param>
+        <param name="comments">Lê os comentários XML localizados associados a essa entrada de BAML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.Localizer.BamlLocalizer" /> classe com o resolvedor de localização especificada, o fluxo de origem BAML e <see cref="T:System.IO.TextReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorNotify">
+      <MemberSignature Language="C#" Value="public event System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventHandler ErrorNotify;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventHandler ErrorNotify" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Markup.Localizer.BamlLocalizer.ErrorNotify" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Markup.Localizer.BamlLocalizer" /> encontra condições anormais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em circunstâncias normais, <xref:System.Windows.Markup.Localizer.BamlLocalizer> ignora erros e continua a localização de fonte de entrada de BAML. Como resultado, a saída BAML parcialmente está localizada. Monitorando erros esse evento pode ser usado para interromper o <xref:System.Windows.Markup.Localizer.BamlLocalizer> e parar o processamento de um arquivo de fonte de BAML.  
+  
+ O usuário mais comuns caso onde <xref:System.Windows.Markup.Localizer.BamlLocalizer.ErrorNotify> pode ser gerado é como resultado de uma <xref:System.Windows.Markup.Localizer.BamlLocalizer.UpdateBaml%2A> chamada onde a atualização continha erros. Por exemplo, o evento é gerado se uma tentativa de atualização definir uma chave duplicada, ou se o original e a atualização não tem valores UID que estão alinhados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractResources">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.Localizer.BamlLocalizationDictionary ExtractResources ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Markup.Localizer.BamlLocalizationDictionary ExtractResources() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizer.ExtractResources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.BamlLocalizationDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Extrai todos os recursos localizáveis de um fluxo BAML.</summary>
+        <returns>Uma cópia dos recursos de localizável de um fluxo BAML, na forma de um <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Markup.Localizer.BamlLocalizer.ExtractResources%2A> método.  
+  
+ [!code-csharp[GrabBaml#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GrabBaml/CSharp/GrabBaml.cs#1)]
+ [!code-vb[GrabBaml#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GrabBaml/visualbasic/grabbaml.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnErrorNotify">
+      <MemberSignature Language="C#" Value="protected virtual void OnErrorNotify (System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnErrorNotify(class System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizer.OnErrorNotify(System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos de evento necessário.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Markup.Localizer.BamlLocalizer.ErrorNotify" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você substituir esse método, chame base, a menos que você não quiser que a classe derivada para gerar o evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateBaml">
+      <MemberSignature Language="C#" Value="public void UpdateBaml (System.IO.Stream target, System.Windows.Markup.Localizer.BamlLocalizationDictionary updates);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateBaml(class System.IO.Stream target, class System.Windows.Markup.Localizer.BamlLocalizationDictionary updates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizer.UpdateBaml(System.IO.Stream,System.Windows.Markup.Localizer.BamlLocalizationDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.IO.Stream" />
+        <Parameter Name="updates" Type="System.Windows.Markup.Localizer.BamlLocalizationDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="target">O fluxo que receberá o BAML atualizado.</param>
+        <param name="updates">O recurso de atualizações a serem aplicadas à fonte de BAML.</param>
+        <summary>Aplica atualizações de recursos para a fonte de BAML e grava a versão atualizada em um fluxo especificado para criar uma versão localizada da fonte de BAML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" />or <paramref name="updates" /> are <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

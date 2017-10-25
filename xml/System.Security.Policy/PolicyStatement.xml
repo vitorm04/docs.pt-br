@@ -1,0 +1,491 @@
+<Type Name="PolicyStatement" FullName="System.Security.Policy.PolicyStatement">
+  <TypeSignature Language="C#" Value="public sealed class PolicyStatement : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PolicyStatement extends System.Object implements class System.Security.ISecurityEncodable, class System.Security.ISecurityPolicyEncodable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.PolicyStatement" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.ISecurityEncodable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Security.ISecurityPolicyEncodable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a instrução de um <see cref="T:System.Security.Policy.CodeGroup" /> que descreve as permissões e outras informações que se aplicam ao código com um conjunto específico de evidência. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Security.Policy.PolicyStatement> consiste em um conjunto de permissões concedidas e atributos especiais possíveis para o grupo de códigos.  
+  
+ Declarações de política normalmente são usadas como o valor de retorno de um <xref:System.Security.Policy.PolicyLevel.Resolve%2A> operação em um <xref:System.Security.Policy.PolicyLevel>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de membros de <xref:System.Security.Policy.PolicyStatement> classe  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#1)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#1)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PolicyStatement (System.Security.PermissionSet permSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.PermissionSet permSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PolicyStatement.#ctor(System.Security.PermissionSet)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permSet" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <param name="permSet">O <see cref="T:System.Security.PermissionSet" /> com a qual inicializar a nova instância.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Policy.PolicyStatement" /> com o <see cref="T:System.Security.PermissionSet" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.PolicyStatement.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#2)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#2)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PolicyStatement (System.Security.PermissionSet permSet, System.Security.Policy.PolicyStatementAttribute attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.PermissionSet permSet, valuetype System.Security.Policy.PolicyStatementAttribute attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PolicyStatement.#ctor(System.Security.PermissionSet,System.Security.Policy.PolicyStatementAttribute)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permSet" Type="System.Security.PermissionSet" />
+        <Parameter Name="attributes" Type="System.Security.Policy.PolicyStatementAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="permSet">O <see cref="T:System.Security.PermissionSet" /> com a qual inicializar a nova instância.</param>
+        <param name="attributes">Uma combinação bit a bit dos valores <see cref="T:System.Security.Policy.PolicyStatementAttribute" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Policy.PolicyStatement" /> classe com especificado <see cref="T:System.Security.PermissionSet" /> e atributos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.PolicyStatement.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#3)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#3)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.PolicyStatementAttribute Attributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Policy.PolicyStatementAttribute Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.PolicyStatement.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatementAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os atributos da declaração de política.</summary>
+        <value>Os atributos da declaração de política.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Policy.PolicyStatement.Attributes%2A> propriedade para definir o <xref:System.Security.Policy.PolicyStatementAttribute.All> sinalizador. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#4)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#4)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeString">
+      <MemberSignature Language="C#" Value="public string AttributeString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttributeString" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.PolicyStatement.AttributeString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma representação de cadeia de caracteres dos atributos da declaração de política.</summary>
+        <value>Uma cadeia de caracteres de texto que representa os atributos da declaração de política.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para obter uma cadeia de caracteres de texto dos atributos definidos atualmente para o <xref:System.Security.Policy.PolicyStatement>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Policy.PolicyStatement.AttributeString%2A> para alterar os atributos de instrução de política. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#13)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#13)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.PolicyStatement Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Policy.PolicyStatement Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PolicyStatement.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia equivalente da instrução de política atual.</summary>
+        <returns>Uma nova cópia do <see cref="T:System.Security.Policy.PolicyStatement" /> com <see cref="P:System.Security.Policy.PolicyStatement.PermissionSet" /> e <see cref="P:System.Security.Policy.PolicyStatement.Attributes" /> idênticas do atual <see cref="T:System.Security.Policy.PolicyStatement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Policy.PolicyStatement.Copy%2A> método para fazer uma cópia da declaração de política atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#9)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#9)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PolicyStatement.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Security.Policy.PolicyStatement" /> objeto a ser comparado com o atual <see cref="T:System.Security.Policy.PolicyStatement" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.Security.Policy.PolicyStatement" /> objeto é igual ao atual <see cref="T:System.Security.Policy.PolicyStatement" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Security.Policy.PolicyStatement" /> é igual à atual <see cref="T:System.Security.Policy.PolicyStatement" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte o método <xref:System.Object.Equals%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Policy.PolicyStatement.Equals%2A> método para determinar se um especificado <xref:System.Security.Policy.PolicyStatement> objeto é equivalente à atual <xref:System.Security.Policy.PolicyStatement> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#10)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#10)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement et);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement et) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PolicyStatement.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="et" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="et">O XML de codificação a ser usada para reconstruir o objeto de segurança.</param>
+        <summary>Reconstrói um objeto de segurança com um determinado estado de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Policy.PolicyStatement.FromXml%2A> método reconstruir um objeto de segurança de uma codificação de XML. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#7)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#7)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="et" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="et" /> parâmetro não é válido <see cref="T:System.Security.Policy.PolicyStatement" /> codificação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement et, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement et, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PolicyStatement.FromXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="et" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="et">O XML de codificação a ser usada para reconstruir o objeto de segurança.</param>
+        <param name="level">O <see cref="T:System.Security.Policy.PolicyLevel" /> contexto para a pesquisa de <see cref="T:System.Security.NamedPermissionSet" /> valores.</param>
+        <summary>Reconstrói um objeto de segurança com um determinado estado de uma codificação de XML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="et" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="et" /> parâmetro não é válido <see cref="T:System.Security.Policy.PolicyStatement" /> codificação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PolicyStatement.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para o <see cref="T:System.Security.Policy.PolicyStatement" /> objeto que é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Security.Policy.PolicyStatement" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash para duas instâncias da mesma permissão pode ser diferente, portanto, um código de hash não deve ser usado para comparar dois <xref:System.Security.Policy.PolicyStatement> objetos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Policy.PolicyStatement.GetHashCode%2A> método para obter o código hash para a instrução de política atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#12)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#12)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionSet">
+      <MemberSignature Language="C#" Value="public System.Security.PermissionSet PermissionSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.PermissionSet PermissionSet" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.PolicyStatement.PermissionSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Security.PermissionSet" /> da declaração de política.</summary>
+        <value>O <see cref="T:System.Security.PermissionSet" /> da declaração de política.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Policy.PolicyStatement.PermissionSet%2A> propriedade para adicionar permissões para a declaração de política. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#5)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#5)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PolicyStatement.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML do objeto de segurança e seu estado atual.</summary>
+        <returns>Uma codificação de XML do objeto de segurança, incluindo quaisquer informações de estado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Policy.PolicyStatement.ToXml%2A> método para criar uma codificação de XML do objeto de segurança. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.PolicyStatement> classe.  
+  
+ [!code-cpp[System.Security.Policy.PolicyStatement_Evt#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CPP/members.cpp#6)]
+ [!code-csharp[System.Security.Policy.PolicyStatement_Evt#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/CS/members.cs#6)]
+ [!code-vb[System.Security.Policy.PolicyStatement_Evt#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.PolicyStatement_Evt/VB/Form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml (System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml(class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.PolicyStatement.ToXml(System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">O <see cref="T:System.Security.Policy.PolicyLevel" /> contexto para a pesquisa de <see cref="T:System.Security.NamedPermissionSet" /> valores.</param>
+        <summary>Cria uma codificação de XML do objeto de segurança e seu estado atual.</summary>
+        <returns>Uma codificação de XML do objeto de segurança, incluindo quaisquer informações de estado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

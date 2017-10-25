@@ -1,0 +1,105 @@
+<Type Name="ReceiveContent" FullName="System.ServiceModel.Activities.ReceiveContent">
+  <TypeSignature Language="C#" Value="public abstract class ReceiveContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ReceiveContent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.ReceiveContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe base abstrata para classes que representam os dados recebidos por um serviço de fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ServiceModel.Activities.ReceiveContent> classe para especificar o conteúdo para um <xref:System.ServiceModel.Activities.Receive> atividade.  
+  
+ [!code-csharp[ContentBasedCorrelation#3](~/samples/snippets/csharp/VS_Snippets_CFX/contentbasedcorrelation/cs/client.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Activities.ReceiveMessageContent Create (System.Activities.OutArgument message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Activities.ReceiveMessageContent Create(class System.Activities.OutArgument message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.ReceiveContent.Create(System.Activities.OutArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.ReceiveMessageContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Activities.OutArgument" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Activities.ReceiveMessageContent" /> instância com a mensagem especificada.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Activities.ReceiveMessageContent" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ServiceModel.Activities.ReceiveContent.Create%2A> método para especificar o conteúdo para um <xref:System.ServiceModel.Activities.Receive> atividade.  
+  
+ [!code-csharp[ContentBasedCorrelation#3](~/samples/snippets/csharp/VS_Snippets_CFX/contentbasedcorrelation/cs/client.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Activities.ReceiveParametersContent Create (System.Collections.Generic.IDictionary&lt;string,System.Activities.OutArgument&gt; parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Activities.ReceiveParametersContent Create(class System.Collections.Generic.IDictionary`2&lt;string, class System.Activities.OutArgument&gt; parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.ReceiveContent.Create(System.Collections.Generic.IDictionary{System.String,System.Activities.OutArgument})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.ReceiveParametersContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Activities.OutArgument&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Os parâmetros.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Activities.ReceiveMessageContent" /> instância com os parâmetros especificados.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Activities.ReceiveParametersContent" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Activities.ReceiveMessageContent Create (System.Activities.OutArgument message, Type declaredMessageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Activities.ReceiveMessageContent Create(class System.Activities.OutArgument message, class System.Type declaredMessageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.ReceiveContent.Create(System.Activities.OutArgument,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.ReceiveMessageContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Activities.OutArgument" />
+        <Parameter Name="declaredMessageType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem.</param>
+        <param name="declaredMessageType">O tipo de mensagem.</param>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Activities.ReceiveMessageContent" /> instância com a mensagem especificada e o tipo de mensagem.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Activities.ReceiveMessageContent" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

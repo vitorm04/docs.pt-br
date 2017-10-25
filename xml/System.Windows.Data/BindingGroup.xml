@@ -1,0 +1,676 @@
+<Type Name="BindingGroup" FullName="System.Windows.Data.BindingGroup">
+  <TypeSignature Language="C#" Value="public class BindingGroup : System.Windows.DependencyObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BindingGroup extends System.Windows.DependencyObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.BindingGroup" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção de associações e <see cref="T:System.Windows.Controls.ValidationRule" /> objetos que são usados para validar um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Data.BindingGroup> cria uma relação entre várias associações, que pode ser validado e atualizados em conjunto. Por exemplo, suponha que um aplicativo solicita que o usuário insira um endereço. O aplicativo, em seguida, popula um objeto do tipo `Address`, que tem as propriedades, `Street`, `City`, `ZipCode`, e `Country`, com os valores fornecidos pelo usuário. O aplicativo tem um painel que contém quatro <xref:System.Windows.Controls.TextBox> controles, cada um deles é associados a uma das propriedades do objeto de dados. Você pode usar um <xref:System.Windows.Controls.ValidationRule> em uma <xref:System.Windows.Data.BindingGroup> para validar o `Address` objeto. Se as associações de participarem na mesma <xref:System.Windows.Data.BindingGroup>, você pode garantir que o código postal é válido para o país do endereço.  
+  
+ Definir o <xref:System.Windows.FrameworkElement.BindingGroup%2A> propriedade <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>. Elementos filho herdam o <xref:System.Windows.Data.BindingGroup> de seus elementos-pai, assim como com qualquer outra propriedade herdável. Uma associação em um elemento descendente é adicionada a um <xref:System.Windows.Data.BindingGroup> se uma das seguintes situações ocorre:  
+  
+-   Origem da associação e o <xref:System.Windows.FrameworkElement.DataContext%2A> do elemento que tem o <xref:System.Windows.Data.BindingGroup> são o mesmo objeto e o <xref:System.Windows.Data.BindingBase.BindingGroupName%2A> propriedade não está definida.  
+  
+-   O <xref:System.Windows.Data.BindingBase.BindingGroupName%2A> propriedade da associação é igual de <xref:System.Windows.Data.BindingGroup.Name%2A> do <xref:System.Windows.FrameworkContentElement.BindingGroup%2A> e não são explicitamente definidos como `null`.  
+  
+ No exemplo do endereço, suponha que o <xref:System.Windows.FrameworkElement.DataContext%2A> do <xref:System.Windows.Controls.Panel> é definido como o objeto do tipo `Address`. A associação para cada <xref:System.Windows.Controls.TextBox> é adicionada para o <xref:System.Windows.Data.BindingGroup> do painel.  
+  
+ Adicionar <xref:System.Windows.Controls.ValidationRule> objetos para um <xref:System.Windows.Data.BindingGroup>. O <xref:System.Windows.Data.BindingGroup> é passado como o primeiro parâmetro do <xref:System.Windows.Controls.ValidationRule.Validate%2A> método quando o <xref:System.Windows.Controls.ValidationRule> é executado. Você pode usar o <xref:System.Windows.Data.BindingGroup.TryGetValue%2A> ou <xref:System.Windows.Data.BindingGroup.GetValue%28System.Object%2CSystem.String%29> método em que <xref:System.Windows.Data.BindingGroup> para obter os valores propostos do objeto e o <xref:System.Windows.Data.BindingGroup.Items%2A> para alterar as fontes das associações.  
+  
+ Um <xref:System.Windows.Data.BindingGroup> atualiza as fontes da associação ao mesmo tempo, em vez de cada associação está sendo atualizada separadamente. Quando você chama um dos métodos para validar os dados (<xref:System.Windows.Data.BindingGroup.ValidateWithoutUpdate%2A>, <xref:System.Windows.Data.BindingGroup.UpdateSources%2A>, ou <xref:System.Windows.Data.BindingGroup.CommitEdit%2A>), a associação para cada <xref:System.Windows.Controls.TextBox> no exemplo é validado e potencialmente atualizado. Quando uma associação é parte de um <xref:System.Windows.Data.BindingGroup>, a origem da associação não é atualizada até que você chame <xref:System.Windows.Data.BindingGroup.UpdateSources%2A> ou <xref:System.Windows.Data.BindingGroup.CommitEdit%2A> no <xref:System.Windows.Data.BindingGroup>, a menos que você definir explicitamente o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir criam um aplicativo que solicita que o usuário insira a descrição e o preço de um item e a data em que a oferta expira. O aplicativo exibe as informações atuais para o item abaixo do formulário. O usuário pode enviar ou cancelar as alterações.  
+  
+ O aplicativo faz o seguinte para obter esse comportamento.  
+  
+-   Cria um <xref:System.Windows.Data.BindingGroup> e adiciona-o a raiz <xref:System.Windows.Controls.StackPanel> quando ele cria o [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] do aplicativo.  
+  
+-   Chamadas <xref:System.Windows.Data.BindingGroup.BeginEdit%2A>, <xref:System.Windows.Data.BindingGroup.CommitEdit%2A>, e <xref:System.Windows.Data.BindingGroup.CancelEdit%2A> na lógica do aplicativo para habilitar reverter alterações.  
+  
+-   Chamadas <xref:System.Windows.Data.BindingGroup.TryGetValue%2A> em um <xref:System.Windows.Controls.ValidationRule.Validate%2A> método para obter a entrada do usuário e, em seguida, verifique se um item de 100 dólares está disponível pelo menos sete dias.  
+  
+ O exemplo a seguir cria o [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] do aplicativo. A raiz <xref:System.Windows.Controls.StackPanel> tem um <xref:System.Windows.Data.BindingGroup> que contém um <xref:System.Windows.Controls.ValidationRule> que valida o item, conforme descrito anteriormente. Dos objetos de associação a `Price` propriedade e o `OfferExpires` parte propriedade se tornar o <xref:System.Windows.Data.BindingGroup> e cada associação tem um <xref:System.Windows.Controls.ValidationRule> para certificar-se de que o preço e data, respectivamente, são valores válidos. As regras de validação para as propriedades individuais executadas antes do <xref:System.Windows.Controls.ValidationRule> sobre o <xref:System.Windows.Data.BindingGroup>.  
+  
+ [!code-xaml[BindingGroupSnippets#WindowLayout](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml#windowlayout)]  
+  
+ O exemplo a seguir mostra os manipuladores de eventos para o aplicativo. Quando o usuário clica no botão Enviar, o aplicativo chama <xref:System.Windows.Data.BindingGroup.CommitEdit%2A> para executar cada <xref:System.Windows.Controls.ValidationRule> que está associado a <xref:System.Windows.Data.BindingGroup>. Se cada <xref:System.Windows.Controls.ValidationRule> for bem-sucedida, <xref:System.Windows.Data.BindingGroup.CommitEdit%2A> salva os valores para o objeto e termina a transação de edição. Se <xref:System.Windows.Data.BindingGroup.CommitEdit%2A> for bem-sucedida, o aplicativo começa a outra transação de edição. Quando um <xref:System.Windows.Controls.ValidationRule> falhar, o <xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType> evento ocorre porque o aplicativo definir <xref:System.Windows.Data.BindingGroup.NotifyOnValidationError%2A> para `true` no <xref:System.Windows.Data.BindingGroup> (no exemplo anterior). `ItemError`identificadores de <xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType> eventos e exibe informações sobre o erro de validação para o usuário. O exemplo também controla o <xref:System.Windows.FrameworkElement.Loaded> eventos para o <xref:System.Windows.Controls.StackPanel> e <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos para o **Cancelar** botão.  
+  
+ [!code-csharp[BindingGroupSnippets#WindowLogic](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml.cs#windowlogic)]
+ [!code-vb[BindingGroupSnippets#WindowLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window1.xaml.vb#windowlogic)]  
+  
+ O exemplo a seguir mostra personalizado <xref:System.Windows.Controls.ValidationRule> `ValidateDateAndPrice`, que foi adicionada para o <xref:System.Windows.Data.BindingGroup> no primeiro exemplo. O <xref:System.Windows.Controls.ValidationRule> usa o <xref:System.Windows.Data.BindingGroup> no seu <xref:System.Windows.Controls.ValidationRule.Validate%2A> método para obter os valores inserido pelo usuário na forma e verifica que se um item é mais de 100 dólares, ele estará disponível pelo menos sete dias.  
+  
+ [!code-csharp[BindingGroupSnippets#ValidateObject](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Data.cs#validateobject)]
+ [!code-vb[BindingGroupSnippets#ValidateObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/data.vb#validateobject)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Data.BindingGroup" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public void BeginEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingGroup.BeginEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia uma transação de edição nas fontes a <see cref="T:System.Windows.Data.BindingGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se as fontes a <xref:System.Windows.Data.BindingGroup> suporte descartar as alterações pendentes, você pode chamar <xref:System.Windows.Data.BindingGroup.BeginEdit%2A> para começar a editar transação, chame <xref:System.Windows.Data.BindingGroup.CommitEdit%2A> para salvar as alterações pendentes, chame <xref:System.Windows.Data.BindingGroup.CancelEdit%2A> para descartar as alterações pendentes.  
+  
+ Para cada objeto na <xref:System.Windows.Data.BindingGroup.Items%2A> que implementa <xref:System.ComponentModel.IEditableObject>, <xref:System.Windows.Data.BindingGroup.BeginEdit%2A> chamadas<xref:System.ComponentModel.IEditableObject.BeginEdit%2A?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Windows.Data.BindingGroup.BeginEdit%2A> quando uma janela é carregado para iniciar a transação de edição.  
+  
+ [!code-csharp[BindingGroupSnippets#BeginEdit](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml.cs#beginedit)]
+ [!code-vb[BindingGroupSnippets#BeginEdit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window1.xaml.vb#beginedit)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingExpressions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Windows.Data.BindingExpressionBase&gt; BindingExpressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Data.BindingExpressionBase&gt; BindingExpressions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.BindingExpressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Windows.Data.BindingExpressionBase&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Windows.Data.BindingExpression" /> objetos que contém informações para cada associação no <see cref="T:System.Windows.Data.BindingGroup" />.</summary>
+        <value>Uma coleção de <see cref="T:System.Windows.Data.BindingExpression" /> objetos que contém informações para cada associação no <see cref="T:System.Windows.Data.BindingGroup" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Data.BindingExpression> pertence a um <xref:System.Windows.Data.BindingGroup> se ocorrer um dos seguintes casos:  
+  
+-   Origem da associação e o <xref:System.Windows.FrameworkElement.DataContext%2A> do elemento que tem o <xref:System.Windows.Data.BindingGroup> são o mesmo objeto e o <xref:System.Windows.Data.BindingBase.BindingGroupName%2A> não está definido.  
+  
+-   O <xref:System.Windows.Data.BindingBase.BindingGroupName%2A> propriedade da associação e o <xref:System.Windows.Data.BindingGroup.Name%2A> do <xref:System.Windows.Data.BindingGroup> são definidos para o mesmo valor não nulo e o <xref:System.Windows.Data.BindingGroup> pertence a um elemento pai do elemento de destino da associação.  
+  
+-   Adicionar um <xref:System.Windows.Data.BindingExpression> para <xref:System.Windows.Data.BindingGroup.BindingExpressions%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public void CancelEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingGroup.CancelEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina a transação de edição e descarta as alterações pendentes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz com que as fontes descartar as alterações pendentes, se um objeto de origem é capaz de fazer isso e terminar a transação de edição. Em seguida, o método atualiza as propriedades de destino com os valores de origem salvo.  
+  
+ Para cada objeto na <xref:System.Windows.Data.BindingGroup.Items%2A> que implementa <xref:System.ComponentModel.IEditableObject>, <xref:System.Windows.Data.BindingGroup.CancelEdit%2A> chamadas<xref:System.ComponentModel.IEditableObject.CancelEdit%2A?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Windows.Data.BindingGroup.CancelEdit%2A> para descartar as alterações pendentes e, em seguida, chama <xref:System.Windows.Data.BindingGroup.BeginEdit%2A> para preparar a fonte a ser editada novamente.  
+  
+ [!code-csharp[BindingGroupSnippets#CancelEdit](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml.cs#canceledit)]
+ [!code-vb[BindingGroupSnippets#CancelEdit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window1.xaml.vb#canceledit)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRestoreValues">
+      <MemberSignature Language="C#" Value="public bool CanRestoreValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRestoreValues" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.CanRestoreValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se cada fonte na associação pode descartar as alterações pendentes e restaurar os valores originais.</summary>
+        <value>
+          <see langword="true" />Se cada fonte na associação pode descartar as alterações pendentes e restaurar os valores originais. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma fonte pode descartar as alterações pendentes se ele implementa <xref:System.ComponentModel.IEditableObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitEdit">
+      <MemberSignature Language="C#" Value="public bool CommitEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CommitEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingGroup.CommitEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa todas as <see cref="T:System.Windows.Controls.ValidationRule" /> objetos e atualiza as fontes de associação, se todas as regras de validação for bem-sucedida.</summary>
+        <returns>
+          <see langword="true" />Se cada <see cref="T:System.Windows.Controls.ValidationRule" /> for bem-sucedida e os valores são confirmadas para as fontes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se cada <xref:System.Windows.Controls.ValidationRule> for bem-sucedida, este método faz com que as fontes confirmar as alterações pendentes e terminar a transação de edição, se um objeto de origem é capaz de fazer isso.  
+  
+ Para cada objeto na <xref:System.Windows.Data.BindingGroup.Items%2A> que implementa <xref:System.ComponentModel.IEditableObject>, <xref:System.Windows.Data.BindingGroup.CommitEdit%2A> chamadas<xref:System.ComponentModel.IEditableObject.EndEdit%2A?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Windows.Data.BindingGroup.CommitEdit%2A> para salvar as alterações pendentes e, em seguida, chama <xref:System.Windows.Data.BindingGroup.BeginEdit%2A> para preparar a fonte a ser editada novamente.  
+  
+ [!code-csharp[BindingGroupSnippets#BeginEdit](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml.cs#beginedit)]
+ [!code-vb[BindingGroupSnippets#BeginEdit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window1.xaml.vb#beginedit)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (object item, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(object item, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingGroup.GetValue(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto que contém a propriedade especificada.</param>
+        <param name="propertyName">A propriedade cujo valor proposto para obter.</param>
+        <summary>Retorna o valor proposto para o item e a propriedade especificada.</summary>
+        <returns>O valor da propriedade proposta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método no <xref:System.Windows.Controls.ValidationRule.Validate%2A?displayProperty=nameWithType> método para obter o valor a serem passados para a fonte. O tipo do valor de retorno depende do estágio em que o <xref:System.Windows.Controls.ValidationRule> ocorre. Por exemplo, se um <xref:System.Windows.Controls.TextBox> dados que estão associados a uma propriedade de tipo inteiro e a <xref:System.Windows.Controls.ValidationRule> que chama <xref:System.Windows.Data.BindingGroup.GetValue%28System.Object%2CSystem.String%29> tem seu <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> definida como <xref:System.Windows.Controls.ValidationStep.RawProposedValue>, o método retorna uma cadeia de caracteres. Se o <xref:System.Windows.Controls.ValidationRule> tem seu <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> definida como <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>, o método retorna qualquer tipo que é retornado pelo conversor da associação. Neste exemplo, <xref:System.Windows.Data.BindingGroup.GetValue%28System.Object%2CSystem.String%29> normalmente retorna um inteiro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir faz parte de um aplicativo que solicita que o usuário insira vários clientes e atribuir um representante de vendas para cada cliente. O aplicativo verifica que o representante de vendas e o cliente pertencem à mesma região. O exemplo mostra o <xref:System.Windows.Controls.ValidationRule.Validate%2A> método, que usa o <xref:System.Windows.Data.BindingGroup.GetValue%28System.Object%2CSystem.String%29> método para obter valores que o cliente inserido.  
+  
+ [!code-csharp[BindingGroupSnippets#ItemBindGroupValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window2.xaml.cs#itembindgroupvalidationrule)]
+ [!code-vb[BindingGroupSnippets#ItemBindGroupValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window2.xaml.vb#itembindgroupvalidationrule)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há uma associação para o item especificado e a propriedade.</exception>
+        <exception cref="T:System.Windows.Data.ValueUnavailableException">O valor da propriedade especificada não estiver disponível, devido a um erro de conversão ou porque uma regra de validação anterior falhou.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValidationError">
+      <MemberSignature Language="C#" Value="public bool HasValidationError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasValidationError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.HasValidationError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Data.BindingGroup" /> tem uma regra de validação com falha.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Data.BindingGroup" /> tem uma regra de validação com falha; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Data.BindingGroup" /> contém um valor proposto que não foram gravado para a origem.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Data.BindingGroup" /> contém um valor proposto que não tenha sido escrito para a fonte; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Items" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as fontes que são usadas pelos objetos na associação a <see cref="T:System.Windows.Data.BindingGroup" />.</summary>
+        <value>As fontes que são usadas pelos objetos na associação a <see cref="T:System.Windows.Data.BindingGroup" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada objeto que é usado como uma fonte é adicionada para o <xref:System.Windows.Data.BindingGroup.Items%2A> propriedade uma vez, mesmo se o objeto é usado como a origem para várias associações. Normalmente, há apenas um item no <xref:System.Windows.Data.BindingGroup.Items%2A>, que é o objeto que é o <xref:System.Windows.FrameworkElement.DataContext%2A> do elemento que usa o <xref:System.Windows.Data.BindingGroup>. É possível que um <xref:System.Windows.Data.BindingGroup> tenha várias fontes, no entanto. Por exemplo, se os objetos de associação compartilham o mesmo <xref:System.Windows.Data.BindingBase.BindingGroupName%2A> , mas usar objetos de fonte diferente, cada objeto que é usado como uma fonte está em <xref:System.Windows.Data.BindingGroup.Items%2A>.  
+  
+ Também pode haver vários objetos em <xref:System.Windows.Data.BindingGroup.Items%2A> se o caminho de uma associação for resolvido para uma propriedade aninhada da origem. Por exemplo, suponha que um <xref:System.Windows.Controls.TextBox> associação do controle é parte de um <xref:System.Windows.Data.BindingGroup> e sua <xref:System.Windows.FrameworkElement.DataContext%2A> é um `Customer` objeto, que tem uma propriedade do tipo `Address`. Se o <xref:System.Windows.Data.Binding.Path%2A> do <xref:System.Windows.Data.Binding> é o `Address.ZipCode` propriedade, o `Address` é adicionado ao <xref:System.Windows.Data.BindingGroup.Items%2A> propriedade.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir fazem parte de um aplicativo que verifica se o usuário tiver definido as propriedades de dois objetos forem iguais aos valores. O primeiro exemplo cria dois <xref:System.Windows.Controls.TextBox> controles, cada um dos quais são os dados associados a uma fonte diferente. A associação do primeiro <xref:System.Windows.Controls.TextBox> obtém sua fonte, `object1`, do <xref:System.Windows.FrameworkElement.DataContext%2A> do <xref:System.Windows.Controls.TextBox> elemento do pai do controle (o <xref:System.Windows.Controls.StackPanel>). Na segunda <xref:System.Windows.Controls.TextBox>, a origem da associação está definida `object2`. O exemplo também cria um <xref:System.Windows.Controls.Label> que exibe erros de validação.  
+  
+ [!code-xaml[BindingGroupSnippets#BindingGroupName](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window3.xaml#bindinggroupname)]  
+[!code-xaml[BindingGroupSnippets#ValidationAdornerSite](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window3.xaml#validationadornersite)]  
+  
+ A exemplo a seguir mostra a <xref:System.Windows.Controls.ValidationRule> que usa o exemplo anterior. No <xref:System.Windows.Controls.ValidationRule.Validate%2A> método, o exemplo obtém cada objeto de origem do <xref:System.Windows.Data.BindingGroup> e verifica se as propriedades dos objetos são iguais.  
+  
+ [!code-csharp[BindingGroupSnippets#BindingGroupNameValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window3.xaml.cs#bindinggroupnamevalidationrule)]
+ [!code-vb[BindingGroupSnippets#BindingGroupNameValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window3.xaml.vb#bindinggroupnamevalidationrule)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome que identifica o <see cref="T:System.Windows.Data.BindingGroup" />, que pode ser usado para incluir e excluir objetos de associação no <see cref="T:System.Windows.Data.BindingGroup" />.</summary>
+        <value>O nome que identifica o <see cref="T:System.Windows.Data.BindingGroup" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Data.BindingGroup.Name%2A> é `null`, associações que tenham uma fonte que é o mesmo objeto como o <xref:System.Windows.FrameworkElement.DataContext%2A> do elemento que tem o <xref:System.Windows.Data.BindingGroup> participar de <xref:System.Windows.Data.BindingGroup>.  
+  
+ Pode incluir associações que tenham uma fonte diferente do <xref:System.Windows.FrameworkElement.DataContext%2A> do elemento pai que tem o <xref:System.Windows.Data.BindingGroup> definindo <xref:System.Windows.Data.BindingGroup.Name%2A> do <xref:System.Windows.Data.BindingGroup> e o <xref:System.Windows.Data.BindingBase.BindingGroupName%2A> propriedade de uma associação com o mesmo valor. Você pode excluir as associações que tenham a mesma fonte de <xref:System.Windows.FrameworkElement.DataContext%2A> do elemento pai que tem o <xref:System.Windows.Data.BindingGroup> definindo <xref:System.Windows.Data.BindingGroup.Name%2A> do <xref:System.Windows.Data.BindingGroup> e <xref:System.Windows.Data.BindingBase.BindingGroupName%2A> propriedade de uma associação com valores diferentes.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir fazem parte de um aplicativo que verifica se o usuário tiver definido as propriedades de dois objetos forem iguais aos valores. O primeiro exemplo cria dois <xref:System.Windows.Controls.TextBox> controles, cada um dos quais são os dados associados a uma fonte diferente. A associação do primeiro <xref:System.Windows.Controls.TextBox> faz parte do <xref:System.Windows.Data.BindingGroup> porque o <xref:System.Windows.Controls.TextBox> herda o <xref:System.Windows.FrameworkElement.DataContext%2A> e <xref:System.Windows.Data.BindingGroup> de seu pai <xref:System.Windows.Controls.StackPanel>.  
+  
+ A associação na segunda <xref:System.Windows.Controls.TextBox> faz parte do <xref:System.Windows.Data.BindingGroup> porque o <xref:System.Windows.Data.BindingGroup.Name%2A> do <xref:System.Windows.Data.BindingGroup> e <xref:System.Windows.Data.BindingBase.BindingGroupName%2A> do <xref:System.Windows.Data.Binding> são definidos como `bindingGroup`.  
+  
+ [!code-xaml[BindingGroupSnippets#BindingGroupName](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window3.xaml#bindinggroupname)]  
+[!code-xaml[BindingGroupSnippets#ValidationAdornerSite](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window3.xaml#validationadornersite)]  
+  
+ A exemplo a seguir mostra a <xref:System.Windows.Controls.ValidationRule> que usa o exemplo anterior. No <xref:System.Windows.Controls.ValidationRule.Validate%2A> método, o exemplo obtém cada objeto de origem do <xref:System.Windows.Data.BindingGroup> e verifica se as propriedades dos objetos são iguais.  
+  
+ [!code-csharp[BindingGroupSnippets#BindingGroupNameValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window3.xaml.cs#bindinggroupnamevalidationrule)]
+ [!code-vb[BindingGroupSnippets#BindingGroupNameValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window3.xaml.vb#bindinggroupnamevalidationrule)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyOnValidationError">
+      <MemberSignature Language="C#" Value="public bool NotifyOnValidationError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NotifyOnValidationError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.NotifyOnValidationError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o <see cref="E:System.Windows.Controls.Validation.Error" /> evento ocorre quando o estado de um <see cref="T:System.Windows.Controls.ValidationRule" /> alterações.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="E:System.Windows.Controls.Validation.Error" /> evento ocorre quando o estado de um <see cref="T:System.Windows.Controls.ValidationRule" /> alterações; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType> evento anexado ocorre no elemento que tem o <xref:System.Windows.Data.BindingGroup>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Data.BindingGroup> e define <xref:System.Windows.Data.BindingGroup.NotifyOnValidationError%2A> para `true` para que o aplicativo pode manipular o <xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType> eventos quando um <xref:System.Windows.Controls.ValidationRule> falhar.  
+  
+ [!code-xaml[BindingGroupSnippets#BindingGroup](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml#bindinggroup)]  
+  
+ A exemplo a seguir trata o <xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[BindingGroupSnippets#ErrorHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml.cs#errorhandler)]
+ [!code-vb[BindingGroupSnippets#ErrorHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window1.xaml.vb#errorhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObject Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que isso <see cref="T:System.Windows.Data.BindingGroup" /> é atribuído a.</summary>
+        <value>O objeto que este <see cref="T:System.Windows.Data.BindingGroup" /> é atribuído a.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharesProposedValues">
+      <MemberSignature Language="C#" Value="public bool SharesProposedValues { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SharesProposedValues" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.SharesProposedValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Data.BindingGroup" /> reutiliza os valores que não foram confirmados para a fonte de destino.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Data.BindingGroup" /> reutiliza destino valores que não foram confirmados para a fonte; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor proposto é um valor que foi alterado no destino de uma associação, mas não foi confirmado para o código-fonte. Por exemplo, suponha que há uma associação bidirecional em uma <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> está definida como <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>. Se o usuário altera o valor da <xref:System.Windows.Controls.TextBox>, o valor proposto é o valor que está no <xref:System.Windows.Controls.TextBox> antes que ele tem o compromisso de origem.  
+  
+ Quando <xref:System.Windows.Data.BindingGroup.SharesProposedValues%2A> é `true`, o <xref:System.Windows.Data.BindingGroup> usa o valor proposto quando uma associação deixa o BindingGroup e outra associação com a mesma fonte une o BindingGroup.  Por exemplo, suponha que um aplicativo permite que um usuário editar vários campos e atualizar o objeto de origem clicando em um botão. Quando um campo não está sendo editado, o aplicativo exibe-o em um <xref:System.Windows.Controls.TextBlock>. Quando o usuário começa a editar um campo, o aplicativo substituirá o <xref:System.Windows.Controls.TextBlock> com um <xref:System.Windows.Controls.TextBox>. Quando o usuário termina de editar esse campo, o aplicativo substituirá o <xref:System.Windows.Controls.TextBox> com um <xref:System.Windows.Controls.TextBlock>. Como a origem não for atualizada até que o usuário clica no botão, deve haver uma maneira para que o <xref:System.Windows.Controls.TextBlock> para exibir o valor proposto. Definindo <xref:System.Windows.Data.BindingGroup.SharesProposedValues%2A> para `true`, o aplicativo exibirá as alterações do usuário a um campo do mesmo quando a fonte não foi atualizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (object item, string propertyName, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetValue(object item, string propertyName, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingGroup.TryGetValue(System.Object,System.String,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto que contém a propriedade especificada.</param>
+        <param name="propertyName">A propriedade cujo valor proposto para obter.</param>
+        <param name="value">Quando este método retorna, contém um objeto que representa o valor da propriedade proposta. Este parâmetro é passado não inicializado.</param>
+        <summary>Tenta obter o valor proposto para o item e a propriedade especificada.</summary>
+        <returns>
+          <see langword="true" />Se o valor é o valor proposto para a propriedade especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.BindingGroup.TryGetValue%2A>Retorna `false` se não houver uma associação para o item especificado e a propriedade ou se o valor da propriedade especificada não estiver disponível, devido a um erro de conversão ou porque uma regra de validação anterior falhou.  
+  
+ Use esse método no <xref:System.Windows.Controls.ValidationRule.Validate%2A?displayProperty=nameWithType> método para obter o valor a serem passados para a fonte. O tipo `value` depende do estágio em que o <xref:System.Windows.Controls.ValidationRule> ocorre. Por exemplo, se um <xref:System.Windows.Controls.TextBox> é vinculados a uma propriedade de inteiro de tipo de dados `value` é uma cadeia de caracteres se o <xref:System.Windows.Controls.ValidationRule> que chama <xref:System.Windows.Data.BindingGroup.TryGetValue%2A> tem seu <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> definido como <xref:System.Windows.Controls.ValidationStep.RawProposedValue>. Se o <xref:System.Windows.Controls.ValidationRule> tem seu <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> definida como <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>, o tipo de `value` é qualquer tipo que é retornado pelo conversor da associação. Neste exemplo, `value` geralmente é um inteiro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um personalizado <xref:System.Windows.Controls.ValidationRule> chamado `ValidateDateAndPrice`. No <xref:System.Windows.Controls.ValidationRule.Validate%2A> método, o exemplo usa o <xref:System.Windows.Data.BindingGroup.TryGetValue%2A> método e o <xref:System.Windows.Data.BindingGroup.Items%2A> propriedade para obter os valores que o usuário inserido no formulário. Em seguida, o exemplo verifica que se um item é mais de 100 dólares, ele estará disponível pelo menos sete dias. Este exemplo é parte de um exemplo maior sobre a <xref:System.Windows.Data.BindingGroup> classe  
+  
+ [!code-csharp[BindingGroupSnippets#ValidateObject](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Data.cs#validateobject)]
+ [!code-vb[BindingGroupSnippets#ValidateObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/data.vb#validateobject)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSources">
+      <MemberSignature Language="C#" Value="public bool UpdateSources ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool UpdateSources() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingGroup.UpdateSources" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o conversor na associação e o <see cref="T:System.Windows.Controls.ValidationRule" /> objetos que têm o <see cref="P:System.Windows.Controls.ValidationRule.ValidationStep" /> propriedade definida como <see cref="F:System.Windows.Controls.ValidationStep.RawProposedValue" />, <see cref="F:System.Windows.Controls.ValidationStep.ConvertedProposedValue" />, ou <see cref="F:System.Windows.Controls.ValidationStep.UpdatedValue" /> e salva os valores dos destinos para os objetos de origem se todas as regras de validação for bem-sucedida.</summary>
+        <returns>
+          <see langword="true" />Se todas as regras de validação for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método atualiza a fonte se cada <xref:System.Windows.Controls.ValidationRule> for bem-sucedida, mas não faz com que as fontes confirmar as alterações pendentes e terminar a transação de edição. Ou seja, se o objeto de origem implementa <xref:System.ComponentModel.IEditableObject>. Chamar este método não causa <xref:System.ComponentModel.IEditableObject.EndEdit%2A> a ser chamado. Use o <xref:System.Windows.Data.BindingGroup.CommitEdit%2A> método para que as fontes de confirmar as alterações pendentes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir faz parte de um aplicativo que solicita que o usuário insira vários clientes e atribuir um representante de vendas para cada cliente. O aplicativo verifica que o representante de vendas e o cliente pertencem à mesma região. O exemplo chama <xref:System.Windows.Data.BindingGroup.UpdateSources%2A> para validar as associações e salvar os valores na fonte se todas as regras de validação for bem-sucedida.  
+  
+ [!code-csharp[BindingGroupSnippets#UpdateSources](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window2.xaml.cs#updatesources)]
+ [!code-vb[BindingGroupSnippets#UpdateSources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/window2.xaml.vb#updatesources)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatesOnNotifyDataError">
+      <MemberSignature Language="C#" Value="public bool ValidatesOnNotifyDataError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidatesOnNotifyDataError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.ValidatesOnNotifyDataError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a <see cref="T:System.Windows.Controls.NotifyDataErrorValidationRule" /> deve ser incluída.</summary>
+        <value>
+          <see langword="true" /> para incluir o <see cref="T:System.Windows.Controls.NotifyDataErrorValidationRule" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Data.BindingGroup.ValidatesOnNotifyDataError%2A> é `true`, a associação verifica e relata erros que são gerados por uma fonte de dados que implementa <xref:System.ComponentModel.INotifyDataErrorInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateWithoutUpdate">
+      <MemberSignature Language="C#" Value="public bool ValidateWithoutUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ValidateWithoutUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.BindingGroup.ValidateWithoutUpdate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o conversor na associação e o <see cref="T:System.Windows.Controls.ValidationRule" /> objetos que têm o <see cref="P:System.Windows.Controls.ValidationRule.ValidationStep" /> propriedade definida como <see cref="F:System.Windows.Controls.ValidationStep.RawProposedValue" /> ou <see cref="F:System.Windows.Controls.ValidationStep.ConvertedProposedValue" />.</summary>
+        <returns>
+          <see langword="true" />Se as regras de validação for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As fontes não são atualizadas quando você chamar esse método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationErrors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Controls.ValidationError&gt; ValidationErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Controls.ValidationError&gt; ValidationErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.ValidationErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Controls.ValidationError&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Windows.Controls.ValidationError" /> objetos que causou o <see cref="T:System.Windows.Data.BindingGroup" /> inválido.</summary>
+        <value>Uma coleção de <see cref="T:System.Windows.Controls.ValidationError" /> objetos que causou <see cref="T:System.Windows.Data.BindingGroup" /> inválido.  O valor é <see langword="null" /> se não houver nenhum erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationRules">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Windows.Controls.ValidationRule&gt; ValidationRules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Controls.ValidationRule&gt; ValidationRules" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.BindingGroup.ValidationRules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Windows.Controls.ValidationRule&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Windows.Controls.ValidationRule" /> objetos que validam os objetos de origem no <see cref="T:System.Windows.Data.BindingGroup" />.</summary>
+        <value>Uma coleção de <see cref="T:System.Windows.Controls.ValidationRule" /> objetos que validam os objetos de origem no <see cref="T:System.Windows.Data.BindingGroup" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Controls.ValidationRule> é adicionado a um <xref:System.Windows.Data.BindingGroup>, o <xref:System.Windows.Data.BindingGroup> é passado como o primeiro parâmetro do <xref:System.Windows.Controls.ValidationRule.Validate%2A> método. Você pode obter os valores propostos do objeto usando o <xref:System.Windows.Data.BindingGroup.TryGetValue%2A> ou <xref:System.Windows.Data.BindingGroup.GetValue%28System.Object%2CSystem.String%29> método. Você pode obter os objetos que são as origens das associações do <xref:System.Windows.Data.BindingGroup.Items%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona personalizado <xref:System.Windows.Controls.ValidationRule>, `ValidateDateAndPrice`, para o <xref:System.Windows.Data.BindingGroup>.  
+  
+ [!code-xaml[BindingGroupSnippets#BindingGroup](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Window1.xaml#bindinggroup)]  
+  
+ A exemplo a seguir mostra o `ValidateDateAndPrice` classe. O <xref:System.Windows.Controls.ValidationRule.Validate%2A> método usa o <xref:System.Windows.Data.BindingGroup> para obter os valores inserido pelo usuário na forma e verifica que se um item é mais de 100 dólares, ele estará disponível pelo menos sete dias.  
+  
+ [!code-csharp[BindingGroupSnippets#ValidateObject](~/samples/snippets/csharp/VS_Snippets_Wpf/BindingGroupSnippets/CSharp/Data.cs#validateobject)]
+ [!code-vb[BindingGroupSnippets#ValidateObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindingGroupSnippets/visualbasic/data.vb#validateobject)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

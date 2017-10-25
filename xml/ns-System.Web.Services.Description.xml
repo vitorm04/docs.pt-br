@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Services.Description">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Services.Description" /> namespace consiste das classes que permitem que você publicamente descrevem um serviço Web XML usando o WSDL Web Services Description Language (). Cada classe neste namespace corresponde a um elemento específico na especificação de WSDL e a hierarquia de classe corresponde à estrutura XML de um documento WSDL válido. Para obter mais informações sobre WSDL, consulte a especificação no site do W3C (http://www.w3.org/TR/wsdl/).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

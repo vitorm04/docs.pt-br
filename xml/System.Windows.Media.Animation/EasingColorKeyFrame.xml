@@ -1,0 +1,221 @@
+<Type Name="EasingColorKeyFrame" FullName="System.Windows.Media.Animation.EasingColorKeyFrame">
+  <TypeSignature Language="C#" Value="public class EasingColorKeyFrame : System.Windows.Media.Animation.ColorKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EasingColorKeyFrame extends System.Windows.Media.Animation.ColorKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.EasingColorKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.ColorKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe que permite associar funções de easing a uma animação de quadro chave <see cref="T:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter um exemplo do uso de um objeto semelhante a esse, consulte <xref:System.Windows.Media.Animation.EasingDoubleKeyFrame>.  
+  
+ Essa classe é usada como parte de um <xref:System.Windows.Media.Animation.ColorKeyFrameCollection> em conjunto com um <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> para animar uma <xref:System.Windows.Media.Color> valor da propriedade ao longo de um conjunto de quadros-chave. Isso <xref:System.Windows.Media.Animation.ColorKeyFrame> interpola entre o <xref:System.Windows.Media.Color> valor de quadro chave anterior e seu próprio valor linearmente com uma função de atenuação para produzir o valor de saída.  
+  
+<a name="xamlObjectElementUsage_EasingColorKeyFrame"></a>   
+## <a name="xaml-object-element-usage"></a>Uso de elemento Object do XAML  
+  
+```  
+<EasingColorKeyFrame .../>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingColorKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingColorKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.EasingColorKeyFrame" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingColorKeyFrame (System.Windows.Media.Color value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Color value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingColorKeyFrame.#ctor(System.Windows.Media.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Color" />
+      </Parameters>
+      <Docs>
+        <param name="value">Inicial <see cref="T:System.Windows.Media.Color" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.EasingColorKeyFrame" /> com o <see cref="T:System.Windows.Media.Color" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingColorKeyFrame (System.Windows.Media.Color value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Color value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingColorKeyFrame.#ctor(System.Windows.Media.Color,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Color" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Inicial <see cref="T:System.Windows.Media.Color" />.</param>
+        <param name="keyTime">A hora inicial de chave.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.EasingColorKeyFrame" /> classe com especificado <see cref="T:System.Windows.Media.Color" /> e chave de tempo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingColorKeyFrame (System.Windows.Media.Color value, System.Windows.Media.Animation.KeyTime keyTime, System.Windows.Media.Animation.IEasingFunction easingFunction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Color value, valuetype System.Windows.Media.Animation.KeyTime keyTime, class System.Windows.Media.Animation.IEasingFunction easingFunction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingColorKeyFrame.#ctor(System.Windows.Media.Color,System.Windows.Media.Animation.KeyTime,System.Windows.Media.Animation.IEasingFunction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Color" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+        <Parameter Name="easingFunction" Type="System.Windows.Media.Animation.IEasingFunction" />
+      </Parameters>
+      <Docs>
+        <param name="value">Inicial <see cref="T:System.Windows.Media.Color" />.</param>
+        <param name="keyTime">A hora inicial de chave.</param>
+        <param name="easingFunction">A função de easing.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.EasingColorKeyFrame" /> classe com especificado <see cref="T:System.Windows.Media.Color" />, chave de tempo e função de easing.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingColorKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Windows.Freezable" /> classe derivada. Ao criar uma classe derivada, você deve substituir esse método.</summary>
+        <returns>A nova instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de animação herdam indiretamente <xref:System.Windows.Freezable>. Por isso, você precisa substituir o <xref:System.Windows.Media.Animation.BackEase.CreateInstanceCore%2A> método para construir um objeto de animação personalizada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação típica de <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunction">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.IEasingFunction EasingFunction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.IEasingFunction EasingFunction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.EasingColorKeyFrame.EasingFunction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.IEasingFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a função de easing aplicada ao quadro chave.</summary>
+        <value>A função de atenuação aplicada ao quadro chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DP_ID_field_label](~/includes/dp-id-field-label-md.md)] <xref:System.Windows.Media.Animation.EasingColorKeyFrame.EasingFunctionProperty>  
+  
+<a name="xamlPropertyElementUsage_EasingFunction"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<EasingColorKeyFrameobject>  
+  <EasingColorKeyFrameobject.EasingFunction>  
+    easingFunction  
+  </EasingColorKeyFrameobject.EasingFunction >  
+</EasingColorKeyFrameobject>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunctionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EasingFunctionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EasingFunctionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.EasingColorKeyFrame.EasingFunctionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.EasingColorKeyFrame.EasingFunction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Color InterpolateValueCore (System.Windows.Media.Color baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Media.Color InterpolateValueCore(valuetype System.Windows.Media.Color baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingColorKeyFrame.InterpolateValueCore(System.Windows.Media.Color,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Windows.Media.Color" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor para animar do.</param>
+        <param name="keyFrameProgress">Um valor entre 0,0 e 1,0, inclusive, que especifica a porcentagem de tempo decorrido para este quadro-chave.</param>
+        <summary>Interpola, acordo com a função de easing usada entre o valor anterior de quadro-chave e o valor do quadro atual da chave, usando o incremento de andamento fornecido.</summary>
+        <returns>O valor de saída de quadro chave recebe o valor de base especificado e o andamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

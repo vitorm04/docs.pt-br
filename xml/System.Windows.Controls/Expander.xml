@@ -1,0 +1,389 @@
+<Type Name="Expander" FullName="System.Windows.Controls.Expander">
+  <TypeSignature Language="C#" Value="public class Expander : System.Windows.Controls.HeaderedContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Expander extends System.Windows.Controls.HeaderedContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Expander" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.HeaderedContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o controle que exibe um cabeçalho que tem uma janela recolhível que exibe conteúdo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Expander>é um <xref:System.Windows.Controls.HeaderedContentControl>, que significa que seu <xref:System.Windows.Controls.ContentControl.Content%2A> e <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> propriedades podem ser de qualquer tipo (como cadeia de caracteres, imagem ou painel).  Para obter mais informações, consulte a classe <xref:System.Windows.Controls.HeaderedContentControl>.  
+  
+ A ilustração a seguir mostra um <xref:System.Windows.Controls.Expander> controle.  
+  
+ ![Exemplo de expansor](~/add/media/expanderexample.JPG "exemplo expansor")  
+  
+ Se o conteúdo da janela expandida é muito grande para a janela, você pode encapsular o conteúdo a <xref:System.Windows.Controls.Expander> em um <xref:System.Windows.Controls.ScrollViewer> controle para fornecer conteúdo rolável. Rolar o recurso não for fornecida automaticamente pelo <xref:System.Windows.Controls.Expander> controle.  
+  
+ Para uma <xref:System.Windows.Controls.Expander> para funcionar corretamente, não especifique um <xref:System.Windows.FrameworkElement.Height%2A> no <xref:System.Windows.Controls.Expander> controlar quando o <xref:System.Windows.Controls.Expander.ExpandDirection%2A> está definida como <xref:System.Windows.Controls.ExpandDirection.Down> ou <xref:System.Windows.Controls.ExpandDirection.Up>. Da mesma forma, não especifique um <xref:System.Windows.FrameworkElement.Width%2A> no <xref:System.Windows.Controls.Expander> controlar quando o <xref:System.Windows.Controls.Expander.ExpandDirection%2A> está definida como <xref:System.Windows.Controls.ExpandDirection.Left> ou <xref:System.Windows.Controls.ExpandDirection.Right>. Quando você definir um tamanho no <xref:System.Windows.Controls.Expander> controlar na direção que o conteúdo expandido é exibido, a área que é definida pelo parâmetro de tamanho é exibida com uma borda ao redor dele. Essa área exibe até mesmo quando a janela é recolhida. Para definir o tamanho da janela expandida, defina dimensões de tamanho do conteúdo do <xref:System.Windows.Controls.Expander> controle ou <xref:System.Windows.Controls.ScrollViewer> que inclui o conteúdo.  
+  
+ Quando um <xref:System.Windows.Controls.Expander> controle é o último elemento em um <xref:System.Windows.Controls.DockPanel>, o <xref:System.Windows.Controls.Expander> é dimensionado para preencher a área restante do <xref:System.Windows.Controls.DockPanel>. Para evitar isso, defina o <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> propriedade o <xref:System.Windows.Controls.DockPanel> para `false`, ou certifique-se de que o <xref:System.Windows.Controls.Expander> não é o último elemento em um <xref:System.Windows.Controls.DockPanel>.  
+  
+ O alinhamento do <xref:System.Windows.Controls.Expander> conteúdo pode ser definido, definindo o <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> e <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> propriedades do controle. Essas propriedades são aplicadas para o cabeçalho e o conteúdo da janela expandida.  
+  
+## <a name="customizing-the-expander-control"></a>Personalizando o controle expansor  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.Expander> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.Expander>, consulte [expansor estilos e modelos](~/docs/framework/wpf/controls/expander-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.Expander> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um simples <xref:System.Windows.Controls.Expander> controle.  
+  
+ [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Expander ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Expander.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Expander" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapsed">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Collapsed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Collapsed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Expander.Collapsed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a janela de conteúdo de um controle <see cref="T:System.Windows.Controls.Expander" /> é fechada e somente o <see cref="P:System.Windows.Controls.HeaderedContentControl.Header" /> fica visível.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Expander.Collapsed> evento ocorre quando o <xref:System.Windows.Controls.Expander.IsExpanded%2A> propriedade muda de `true` para `false`.  
+  
+<a name="routedEventInfo_Collapsed"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Expander.CollapsedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como especificar o manipulador de eventos para o <xref:System.Windows.Controls.Expander.Collapsed> evento.  
+  
+ [!code-csharp[ExpanderSnips#Collapsed](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml.cs#collapsed)]
+ [!code-vb[ExpanderSnips#Collapsed](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderSnips/visualbasic/window1.xaml.vb#collapsed)]
+ [!code-xaml[ExpanderSnips#Collapsed](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml#collapsed)]  
+  
+ O exemplo a seguir mostra como definir o manipulador de eventos.  
+  
+ [!code-csharp[ExpanderSnips#CollapsedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml.cs#collapsedhandler)]
+ [!code-vb[ExpanderSnips#CollapsedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderSnips/visualbasic/window1.xaml.vb#collapsedhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollapsedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent CollapsedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent CollapsedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Expander.CollapsedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.Expander.Collapsed" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ExpandDirection ExpandDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ExpandDirection ExpandDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Expander.ExpandDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ExpandDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção na qual a janela de conteúdo do <see cref="T:System.Windows.Controls.Expander" /> se abre.</summary>
+        <value>Um dos valores <see cref="T:System.Windows.Controls.ExpandDirection" /> que define em qual direção a janela de conteúdo se abre. O padrão é <see cref="F:System.Windows.Controls.ExpandDirection.Down" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ExpandDirection"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Expander.ExpandDirectionProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Expander.ExpandDirection%2A> propriedade.  
+  
+ [!code-csharp[ExpanderSnips#ExpandDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml.cs#expanddirection)]
+ [!code-vb[ExpanderSnips#ExpandDirection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderSnips/visualbasic/window1.xaml.vb#expanddirection)]
+ [!code-xaml[ExpanderSnips#ExpandDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml#expanddirection)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ExpandDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ExpandDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Expander.ExpandDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Expander.ExpandDirection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expanded">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Expanded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Expanded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Expander.Expanded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a janela de conteúdo de um controle <see cref="T:System.Windows.Controls.Expander" /> se abre e exibe seu cabeçalho e seu conteúdo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Expander.Expanded> evento ocorre quando o <xref:System.Windows.Controls.Expander.IsExpanded%2A> propriedade muda de `false` para `true`.  
+  
+<a name="routedEventInfo_Expanded"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Expander.ExpandedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como especificar o manipulador de eventos para o <xref:System.Windows.Controls.Expander.Expanded> evento.  
+  
+ [!code-csharp[ExpanderSnips#Expanded](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml.cs#expanded)]
+ [!code-vb[ExpanderSnips#Expanded](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderSnips/visualbasic/window1.xaml.vb#expanded)]
+ [!code-xaml[ExpanderSnips#Expanded](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml#expanded)]  
+  
+ O exemplo a seguir mostra como definir o manipulador de eventos.  
+  
+ [!code-csharp[ExpanderSnips#ExpandedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml.cs#expandedhandler)]
+ [!code-vb[ExpanderSnips#ExpandedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderSnips/visualbasic/window1.xaml.vb#expandedhandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ExpandedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ExpandedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Expander.ExpandedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.Expander.Expanded" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExpanded">
+      <MemberSignature Language="C#" Value="public bool IsExpanded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsExpanded" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Expander.IsExpanded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a janela de conteúdo <see cref="T:System.Windows.Controls.Expander" /> está visível.</summary>
+        <value>
+          <see langword="true" /> se a janela de conteúdo está expandida; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsExpanded"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Expander.IsExpandedProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Expander.IsExpanded%2A> propriedade.  
+  
+ [!code-csharp[ExpanderSnips#IsExpanded](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml.cs#isexpanded)]
+ [!code-vb[ExpanderSnips#IsExpanded](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderSnips/visualbasic/window1.xaml.vb#isexpanded)]
+ [!code-xaml[ExpanderSnips#IsExpanded](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderSnips/CSharp/Window1.xaml#isexpanded)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExpandedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsExpandedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsExpandedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Expander.IsExpandedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Expander.IsExpanded" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollapsed">
+      <MemberSignature Language="C#" Value="protected virtual void OnCollapsed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCollapsed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Expander.OnCollapsed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera o <see cref="E:System.Windows.Controls.Expander.Collapsed" /> eventos quando o <see cref="P:System.Windows.Controls.Expander.IsExpanded" /> propriedade muda de <see langword="true" /> para <see langword="false" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Expander.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria a implementação de <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> para o <see cref="T:System.Windows.Controls.Expander" /> controle.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Automation.Peers.ExpanderAutomationPeer" /> para este <see cref="T:System.Windows.Controls.Expander" /> controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnExpanded">
+      <MemberSignature Language="C#" Value="protected virtual void OnExpanded ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnExpanded() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Expander.OnExpanded" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera o <see cref="E:System.Windows.Controls.Expander.Expanded" /> eventos quando o <see cref="P:System.Windows.Controls.Expander.IsExpanded" /> propriedade muda de <see langword="false" /> para <see langword="true" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

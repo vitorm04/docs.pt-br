@@ -1,0 +1,865 @@
+<Type Name="Point3D" FullName="System.Windows.Media.Media3D.Point3D">
+  <TypeSignature Language="C#" Value="public struct Point3D : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Point3D extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.Point3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.Media3D.Point3DConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.Media3D.Converters.Point3DValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um x, y e ponto de coordenada z em espaço 3D.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em XAML, o delimitador entre os valores de um <xref:System.Windows.Media.Media3D.Point3D> pode ser uma vírgula ou um espaço.  
+  
+ Algumas culturas podem usar o caractere de vírgula como delimitador, em vez do caractere de ponto decimal. XAML de processamento para a cultura invariável padrão é en-US na maioria das implementações de processador XAML e espera que o período como o delimitador de decimal. Você deve evitar usar o caractere de vírgula como delimitador decimal se especificando um <xref:System.Windows.Media.Media3D.Point3D> em XAML, porque que irá conflitar com a conversão de tipo de cadeia de caracteres de uma <xref:System.Windows.Media.Media3D.Point3D> valor do atributo em seus componentes.  
+  
+<a name="xamlAttributeUsage_Duration"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="x,y,z"/>  
+-or  
+<object property="x y z"/>  
+```  
+  
+<a name="xamlValues_MinWidth"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *x*  
+ A coordenada X deste <xref:System.Windows.Media.Media3D.Point3D>.  
+  
+ *y*  
+ A coordenada Y deste <xref:System.Windows.Media.Media3D.Point3D>.  
+  
+ *z*  
+ A coordenada z deste <xref:System.Windows.Media.Media3D.Point3D>.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como subtrair <xref:System.Windows.Media.Media3D.Point3D> estruturas e <xref:System.Windows.Media.Media3D.Vector3D> estruturas usando a subtração sobrecarregada (`-`) operador e o <xref:System.Windows.Media.Media3D.Point3D> estático <xref:System.Windows.Media.Media3D.Point3D.Subtract%2A> método.  
+  
+ O código a seguir ilustra como usar o <xref:System.Windows.Media.Media3D.Point3D> métodos de subtração.  Primeiro, o <xref:System.Windows.Media.Media3D.Point3D> estruturas e <xref:System.Windows.Media.Media3D.Vector3D> estruturas são instanciadas.  O <xref:System.Windows.Media.Media3D.Point3D> estruturas são subtraídas usando a subtração sobrecarregada (`-`) operador e, em seguida, eles são subtraídos usando estático <xref:System.Windows.Media.Media3D.Point3D.Subtract%2A> método. Em seguida, o <xref:System.Windows.Media.Media3D.Vector3D> estrutura é subtraída do primeiro <xref:System.Windows.Media.Media3D.Point3D> estrutura usando estático <xref:System.Windows.Media.Media3D.Point3D.Subtract%2A> método e, finalmente, o <xref:System.Windows.Media.Media3D.Point3D> estrutura é subtraída do <xref:System.Windows.Media.Media3D.Vector3D> usando a subtração sobrecarregada (`-`) operador.  
+  
+ [!code-csharp[3DGallery_procedural_snip#Subtract3DPointsExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#subtract3dpointsexample_csharp)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Point3D (double x, double y, double z);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 x, float64 y, float64 z) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.#ctor(System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+        <Parameter Name="z" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">O valor <see cref="P:System.Windows.Media.Media3D.Point3D.X" /> da nova estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" />.</param>
+        <param name="y">O valor <see cref="P:System.Windows.Media.Media3D.Point3D.Y" /> da nova estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" />.</param>
+        <param name="z">O valor <see cref="P:System.Windows.Media.Media3D.Point3D.Z" /> da nova estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" />.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Point3D Add (System.Windows.Media.Media3D.Point3D point, System.Windows.Media.Media3D.Vector3D vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Point3D Add(valuetype System.Windows.Media.Media3D.Point3D point, valuetype System.Windows.Media.Media3D.Vector3D vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.Add(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="vector" Type="System.Windows.Media.Media3D.Vector3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">A estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" /> a ser adicionada.</param>
+        <param name="vector">A estrutura <see cref="T:System.Windows.Media.Media3D.Vector3D" /> a ser adicionada.</param>
+        <summary>Adiciona uma estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" /> a um <see cref="T:System.Windows.Media.Media3D.Vector3D" /> e retorna o resultado como uma estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <returns>A soma de <paramref name="point" /> e <paramref name="vector" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionando um <xref:System.Windows.Media.Media3D.Point3D> estrutura para um <xref:System.Windows.Media.Media3D.Vector3D> estrutura é proibida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um <xref:System.Windows.Media.Media3D.Point3D> e um <xref:System.Windows.Media.Media3D.Vector3D>.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn4)]
+ [!code-vb[point3dsample#Mil3DPoints3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado.</param>
+        <summary>Determina se o objeto especificado é um <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura e nesse caso, se o <see cref="P:System.Windows.Media.Media3D.Point3D.X" />, <see cref="P:System.Windows.Media.Media3D.Point3D.Y" />, e <see cref="P:System.Windows.Media.Media3D.Point3D.Z" /> propriedades especificada <see cref="T:System.Object" /> são iguais para o <see cref="P:System.Windows.Media.Media3D.Point3D.X" />, <see cref="P:System.Windows.Media.Media3D.Point3D.Y" />, e <see cref="P:System.Windows.Media.Media3D.Point3D.Z" /> propriedades desse <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</summary>
+        <returns>
+          <see langword="true" />Se as instâncias forem iguais; Caso contrário, <see langword="false" />.  
+  
+ <see langword="true" />Se <paramref name="o" /> é um <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura e se ele também é idêntico a este <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `o` não é um <xref:System.Windows.Media.Media3D.Point3D> estrutura, este método retorna `false`.  
+  
+ Porque <xref:System.Double> valores podem perder precisão quando são executadas operações aritméticas neles, uma comparação entre dois <xref:System.Windows.Media.Media3D.Point3D> instâncias que são logicamente iguais podem falhar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como verificar se um objeto e <xref:System.Windows.Media.Media3D.Point3D> estrutura são iguais.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN14](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn14)]
+ [!code-vb[point3dsample#Mil3DPoints3DN14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Media.Media3D.Point3D value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Media.Media3D.Point3D value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.Equals(System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="value">A instância de <see cref="T:System.Windows.Media.Media3D.Point3D" /> para comparar a esta instância.</param>
+        <summary>Compara a igualdade de duas estruturas <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <returns>
+          <see langword="true" />Se as instâncias forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque <xref:System.Double> valores podem perder precisão quando são executadas operações aritméticas neles, uma comparação entre dois <xref:System.Windows.Media.Media3D.Point3D> instâncias que são logicamente iguais podem falhar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Media.Media3D.Point3D point1, System.Windows.Media.Media3D.Point3D point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Media.Media3D.Point3D point1, valuetype System.Windows.Media.Media3D.Point3D point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.Equals(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="point2" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point1">A primeira <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura a ser comparado.</param>
+        <param name="point2">O segundo <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura a ser comparado.</param>
+        <summary>Compara a igualdade de duas estruturas <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Media.Media3D.Point3D.X" />, <see cref="P:System.Windows.Media.Media3D.Point3D.Y" />, e <see cref="P:System.Windows.Media.Media3D.Point3D.Z" /> valores para <paramref name="point1" /> e <paramref name="point2" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Windows.Media.Media3D.Point3D> estruturas são iguais se os valores de suas <xref:System.Windows.Media.Media3D.Point3D.X%2A>, <xref:System.Windows.Media.Media3D.Point3D.Y%2A>, e <xref:System.Windows.Media.Media3D.Point3D.Z%2A> propriedades são as mesmas.  
+  
+ Porque <xref:System.Double> valores podem perder precisão quando são executadas operações aritméticas neles, uma comparação entre dois <xref:System.Windows.Media.Media3D.Point3D> instâncias que são logicamente iguais podem falhar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como verificar se dois <xref:System.Windows.Media.Media3D.Point3D> estruturas são iguais.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn13)]
+ [!code-vb[point3dsample#Mil3DPoints3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash desta estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <returns>Um código hash para este <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o código hash de um <xref:System.Windows.Media.Media3D.Point3D> estrutura.  
+  
+ [!code-csharp[point4dsample#Mil4DPoints3DN16](~/samples/snippets/csharp/VS_Snippets_Wpf/Point4DSample/CSharp/Window1.xaml.cs#mil4dpoints3dn16)]
+ [!code-vb[point4dsample#Mil4DPoints3DN16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point4DSample/visualbasic/window1.xaml.vb#mil4dpoints3dn16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Point3D Multiply (System.Windows.Media.Media3D.Point3D point, System.Windows.Media.Media3D.Matrix3D matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Point3D Multiply(valuetype System.Windows.Media.Media3D.Point3D point, valuetype System.Windows.Media.Media3D.Matrix3D matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.Multiply(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Matrix3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="matrix" Type="System.Windows.Media.Media3D.Matrix3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura para transformar.</param>
+        <param name="matrix">O <see cref="T:System.Windows.Media.Media3D.Matrix3D" /> estrutura a ser usada para a transformação.</param>
+        <summary>Transforma a estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" /> especificada pela estrutura <see cref="T:System.Windows.Media.Media3D.Matrix3D" /> especificada.</summary>
+        <returns>Um transformados <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura, o resultado da transformação <paramref name="point" /> por <paramref name="matrix" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (double offsetX, double offsetY, double offsetZ);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(float64 offsetX, float64 offsetY, float64 offsetZ) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.Offset(System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+        <Parameter Name="offsetZ" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offsetX">O quanto a coordenada <see cref="P:System.Windows.Media.Media3D.Point3D.X" /> dessa estrutura de <see cref="T:System.Windows.Media.Media3D.Point3D" /> deverá ser alterada.</param>
+        <param name="offsetY">O quanto a coordenada <see cref="P:System.Windows.Media.Media3D.Point3D.Y" /> dessa estrutura de <see cref="T:System.Windows.Media.Media3D.Point3D" /> deverá ser alterada.</param>
+        <param name="offsetZ">O quanto a coordenada <see cref="P:System.Windows.Media.Media3D.Point3D.Z" /> dessa estrutura de <see cref="T:System.Windows.Media.Media3D.Point3D" /> deverá ser alterada.</param>
+        <summary>Move a estrutura de <see cref="T:System.Windows.Media.Media3D.Point3D" /> de acordo com as quantidades especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é equivalente à adição de um <xref:System.Windows.Media.Media3D.Vector3D> estrutura para um <xref:System.Windows.Media.Media3D.Point3D> estrutura com a correspondente <xref:System.Windows.Media.Media3D.Vector3D.X%2A>, <xref:System.Windows.Media.Media3D.Vector3D.Y%2A>, e <xref:System.Windows.Media.Media3D.Vector3D.Z%2A> valores.  
+  
+ Observe que a chamada a <xref:System.Windows.Media.Media3D.Point3D.Offset%2A> método só terá efeito se você pode alterar o <xref:System.Windows.Media.Media3D.Point3D.X%2A>, <xref:System.Windows.Media.Media3D.Point3D.Y%2A>, e <xref:System.Windows.Media.Media3D.Point3D.Z%2A> propriedades diretamente. Porque <xref:System.Windows.Media.Media3D.Point3D> é um tipo de valor, se você referenciar um <xref:System.Windows.Media.Media3D.Point3D> objeto usando uma propriedade ou indexador, você obtém uma cópia do objeto, não uma referência ao objeto. Se você tentar alterar <xref:System.Windows.Media.Media3D.Point3D.X%2A>, <xref:System.Windows.Media.Media3D.Point3D.Y%2A>, ou <xref:System.Windows.Media.Media3D.Point3D.Z%2A> em uma referência de propriedade ou indexador, ocorre um erro do compilador. Da mesma forma, chamar <xref:System.Windows.Media.Media3D.Point3D.Offset%2A> na propriedade ou indexador não alterará o objeto subjacente.  Se você quiser alterar o valor de um <xref:System.Windows.Media.Media3D.Point3D> que é referenciada como uma propriedade ou indexador, crie um novo <xref:System.Windows.Media.Media3D.Point3D>, modificar seus campos e, em seguida, atribua o <xref:System.Windows.Media.Media3D.Point3D> para a propriedade ou indexador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como Deslocar um <xref:System.Windows.Media.Media3D.Point3D> estrutura.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN9](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn9)]
+ [!code-vb[point3dsample#Mil3DPoints3DN9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Point3D operator + (System.Windows.Media.Media3D.Point3D point, System.Windows.Media.Media3D.Vector3D vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Media.Media3D.Point3D op_Addition(valuetype System.Windows.Media.Media3D.Point3D point, valuetype System.Windows.Media.Media3D.Vector3D vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.op_Addition(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="vector" Type="System.Windows.Media.Media3D.Vector3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">O ponto de adicionar.</param>
+        <param name="vector">O vetor de adicionar.</param>
+        <summary>Adiciona uma estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" /> a um <see cref="T:System.Windows.Media.Media3D.Vector3D" /> e retorna o resultado como uma estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura que é a soma de <paramref name="point" /> e <paramref name="vector" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionando um <xref:System.Windows.Media.Media3D.Point3D> estrutura para um <xref:System.Windows.Media.Media3D.Point3D> estrutura é proibida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um <xref:System.Windows.Media.Media3D.Vector3D> estrutura para um <xref:System.Windows.Media.Media3D.Point3D> estrutura.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN3](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn3)]
+ [!code-vb[point3dsample#Mil3DPoints3DN3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Media.Media3D.Point3D point1, System.Windows.Media.Media3D.Point3D point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Media.Media3D.Point3D point1, valuetype System.Windows.Media.Media3D.Point3D point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.op_Equality(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="point2" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point1">A primeira <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura a ser comparado.</param>
+        <param name="point2">O segundo <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura a ser comparado.</param>
+        <summary>Compara a igualdade de duas estruturas <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Media.Media3D.Point3D.X" />, <see cref="P:System.Windows.Media.Media3D.Point3D.Y" />, e <see cref="P:System.Windows.Media.Media3D.Point3D.Z" /> coordenadas do <paramref name="point1" /> e <paramref name="point2" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Windows.Media.Media3D.Point3D> estruturas são iguais se os valores de suas <xref:System.Windows.Media.Media3D.Point3D.X%2A>, <xref:System.Windows.Media.Media3D.Point3D.Y%2A> , e <xref:System.Windows.Media.Media3D.Point3D.Z%2A> propriedades são as mesmas.  
+  
+ Porque <xref:System.Double> valores podem perder precisão quando são executadas operações aritméticas neles, uma comparação entre dois <xref:System.Windows.Media.Media3D.Point3D> instâncias que são logicamente iguais podem falhar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o operador de igualdade sobrecarregado para verificar se dois <xref:System.Windows.Media.Media3D.Point3D> estruturas são iguais.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN12](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn12)]
+ [!code-vb[point3dsample#Mil3DPoints3DN12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Windows.Media.Media3D.Point4D (System.Windows.Media.Media3D.Point3D point);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Media.Media3D.Point4D op_Explicit(valuetype System.Windows.Media.Media3D.Point3D point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.op_Explicit(System.Windows.Media.Media3D.Point3D)~System.Windows.Media.Media3D.Point4D" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point4D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Windows.Media.Media3D.Vector3D (System.Windows.Media.Media3D.Point3D point);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Media.Media3D.Vector3D op_Explicit(valuetype System.Windows.Media.Media3D.Point3D point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.op_Explicit(System.Windows.Media.Media3D.Point3D)~System.Windows.Media.Media3D.Vector3D" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Media.Media3D.Point3D point1, System.Windows.Media.Media3D.Point3D point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Media.Media3D.Point3D point1, valuetype System.Windows.Media.Media3D.Point3D point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.op_Inequality(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="point2" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point1">A primeira <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura a ser comparado.</param>
+        <param name="point2">O segundo <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura a ser comparado.</param>
+        <summary>Compara dois <see cref="T:System.Windows.Media.Media3D.Point3D" /> estruturas de desigualdade.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Media.Media3D.Point3D.X" />, <see cref="P:System.Windows.Media.Media3D.Point3D.Y" />, e <see cref="P:System.Windows.Media.Media3D.Point3D.Z" /> coordenadas do <paramref name="point1" /> e <paramref name="point2" /> forem diferentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Windows.Media.Media3D.Point3D> estruturas não são iguais se os valores de suas <xref:System.Windows.Media.Media3D.Point3D.X%2A>, <xref:System.Windows.Media.Media3D.Point3D.Y%2A>, e <xref:System.Windows.Media.Media3D.Point3D.Z%2A> propriedades são diferentes.  
+  
+ Porque <xref:System.Double> valores podem perder precisão quando são executadas operações aritméticas neles, uma comparação entre dois <xref:System.Windows.Media.Media3D.Point3D> instâncias que são logicamente iguais podem falhar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o operador de desigualdade sobrecarregado para verificar se dois <xref:System.Windows.Media.Media3D.Point3D> estruturas não são iguais.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN16](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn16)]
+ [!code-vb[point3dsample#Mil3DPoints3DN16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Multiply">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Point3D operator * (System.Windows.Media.Media3D.Point3D point, System.Windows.Media.Media3D.Matrix3D matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Media.Media3D.Point3D op_Multiply(valuetype System.Windows.Media.Media3D.Point3D point, valuetype System.Windows.Media.Media3D.Matrix3D matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.op_Multiply(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Matrix3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="matrix" Type="System.Windows.Media.Media3D.Matrix3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">O ponto a ser transformado.</param>
+        <param name="matrix">A matriz que é usada para transformar <c>ponto</c>.</param>
+        <summary>Transforma a estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" /> especificada pela estrutura <see cref="T:System.Windows.Media.Media3D.Matrix3D" /> especificada.</summary>
+        <returns>O resultado da transformação <paramref name="point" /> usando <paramref name="matrix" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o operador de multiplicação sobrecarregado para transformar uma <xref:System.Windows.Media.Media3D.Point3D> estrutura usando um <xref:System.Windows.Media.Media3D.Matrix3D> estrutura.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN10](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn10)]
+ [!code-vb[point3dsample#Mil3DPoints3DN10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Vector3D operator - (System.Windows.Media.Media3D.Point3D point1, System.Windows.Media.Media3D.Point3D point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Media.Media3D.Vector3D op_Subtraction(valuetype System.Windows.Media.Media3D.Point3D point1, valuetype System.Windows.Media.Media3D.Point3D point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.op_Subtraction(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="point2" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point1">O <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura na qual executar subtração.</param>
+        <param name="point2">O <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura para subtrair de <c>Ponto1</c>.</param>
+        <summary>Subtrai um <see cref="T:System.Windows.Media.Media3D.Point3D" /> da estrutura de um <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura e retorna o resultado como uma <see cref="T:System.Windows.Media.Media3D.Vector3D" /> estrutura.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Media3D.Vector3D" /> estrutura que representa a diferença entre <paramref name="point1" /> e <paramref name="point2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o operador de subtração sobrecarregados para subtrair um <xref:System.Windows.Media.Media3D.Point3D> da estrutura de um <xref:System.Windows.Media.Media3D.Point3D> estrutura.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN7](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn7)]
+ [!code-vb[point3dsample#Mil3DPoints3DN7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Point3D operator - (System.Windows.Media.Media3D.Point3D point, System.Windows.Media.Media3D.Vector3D vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Media.Media3D.Point3D op_Subtraction(valuetype System.Windows.Media.Media3D.Point3D point, valuetype System.Windows.Media.Media3D.Vector3D vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.op_Subtraction(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="vector" Type="System.Windows.Media.Media3D.Vector3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura do qual subtrair vetor.</param>
+        <param name="vector">O <see cref="T:System.Windows.Media.Media3D.Vector3D" /> estrutura para subtrair de ponto.</param>
+        <summary>Subtrai um <see cref="T:System.Windows.Media.Media3D.Vector3D" /> da estrutura de um <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura e retorna o resultado como uma <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</summary>
+        <returns>As alterações <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura, o resultado da subtração <paramref name="vector" /> de <paramref name="point" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o operador de subtração sobrecarregados para subtrair um <xref:System.Windows.Media.Media3D.Vector3D> da estrutura de um <xref:System.Windows.Media.Media3D.Point3D> estrutura.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn5)]
+ [!code-vb[point3dsample#Mil3DPoints3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Point3D Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Point3D Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.String" /> representação de ponto de 3D.</param>
+        <summary>Converte um <see cref="T:System.String" /> representação de um ponto de 3D para o equivalente <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</summary>
+        <returns>A estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" /> equivalente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como converter uma representação de cadeia de caracteres de um ponto 3D em uma <xref:System.Windows.Media.Media3D.Point3D> estrutura.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN15](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn15)]
+ [!code-vb[point3dsample#Mil3DPoints3DN15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Vector3D Subtract (System.Windows.Media.Media3D.Point3D point1, System.Windows.Media.Media3D.Point3D point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Vector3D Subtract(valuetype System.Windows.Media.Media3D.Point3D point1, valuetype System.Windows.Media.Media3D.Point3D point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.Subtract(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="point2" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point1">A estrutura <see cref="T:System.Windows.Media.Media3D.Point3D" /> da qual subtrair.</param>
+        <param name="point2">O <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura para subtrair de <c>Ponto1</c>.</param>
+        <summary>Subtrai um <see cref="T:System.Windows.Media.Media3D.Point3D" /> da estrutura de um <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura e retorna o resultado como uma <see cref="T:System.Windows.Media.Media3D.Vector3D" /> estrutura.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Media3D.Vector3D" /> estrutura que representa a diferença entre <paramref name="point1" /> e <paramref name="point2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como subtrair um <xref:System.Windows.Media.Media3D.Point3D> da estrutura de um <xref:System.Windows.Media.Media3D.Point3D> estrutura.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN8](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn8)]
+ [!code-vb[point3dsample#Mil3DPoints3DN8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Point3D Subtract (System.Windows.Media.Media3D.Point3D point, System.Windows.Media.Media3D.Vector3D vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Point3D Subtract(valuetype System.Windows.Media.Media3D.Point3D point, valuetype System.Windows.Media.Media3D.Vector3D vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.Subtract(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="vector" Type="System.Windows.Media.Media3D.Vector3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura do qual subtrair <c>vetor</c>.</param>
+        <param name="vector">O <see cref="T:System.Windows.Media.Media3D.Vector3D" /> estrutura para subtrair de <c>ponto</c>.</param>
+        <summary>Subtrai um <see cref="T:System.Windows.Media.Media3D.Vector3D" /> da estrutura de um <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura e retorna o resultado como uma <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</summary>
+        <returns>A diferença entre <paramref name="point" /> e <paramref name="vector" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como subtrair um <xref:System.Windows.Media.Media3D.Vector3D> da estrutura de um <xref:System.Windows.Media.Media3D.Point3D> estrutura.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn6)]
+ [!code-vb[point3dsample#Mil3DPoints3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">A cadeia de caracteres especificando o formato a ser usado.  
+  
+ -ou-  
+  
+ <see langword="null" />Para usar o formato padrão definido para o tipo do <see cref="T:System.IFormattable" /> implementação.</param>
+        <param name="provider">O <see langword="IFormatProvider" /> usado para formatar o valor.  
+  
+ -ou-  
+  
+ <see langword="null" />Para obter as informações de formato numérico da configuração de localidade atual do sistema operacional.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código. Para obter uma descrição desse membro, consulte <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+        <returns>Uma cadeia de caracteres que contém o valor da instância atual no formato especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.String" /> representação deste <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém o <see cref="P:System.Windows.Media.Media3D.Point3D.X" />, <see cref="P:System.Windows.Media.Media3D.Point3D.Y" />, e <see cref="P:System.Windows.Media.Media3D.Point3D.Z" /> valores deste <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Point3D.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">As informações de formatação específica da cultura.</param>
+        <summary>Cria um <see cref="T:System.String" /> representação deste <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém o <see cref="P:System.Windows.Media.Media3D.Point3D.X" />, <see cref="P:System.Windows.Media.Media3D.Point3D.Y" />, e <see cref="P:System.Windows.Media.Media3D.Point3D.Z" /> valores deste <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public double X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Point3D.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada x disso <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</summary>
+        <value>A coordenada x disso <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como configurar <xref:System.Windows.Media.Media3D.Point3D> propriedades.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn13)]
+ [!code-vb[point3dsample#Mil3DPoints3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public double Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Point3D.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada y disso <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</summary>
+        <value>A coordenada y disso <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como configurar <xref:System.Windows.Media.Media3D.Point3D> propriedades.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn13)]
+ [!code-vb[point3dsample#Mil3DPoints3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Z">
+      <MemberSignature Language="C#" Value="public double Z { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Z" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Point3D.Z" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada z deste <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</summary>
+        <value>A coordenada z deste <see cref="T:System.Windows.Media.Media3D.Point3D" /> estrutura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como configurar <xref:System.Windows.Media.Media3D.Point3D> propriedades.  
+  
+ [!code-csharp[point3dsample#Mil3DPoints3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/Point3DSample/CSharp/Window1.xaml.cs#mil3dpoints3dn13)]
+ [!code-vb[point3dsample#Mil3DPoints3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Point3DSample/visualbasic/window1.xaml.vb#mil3dpoints3dn13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

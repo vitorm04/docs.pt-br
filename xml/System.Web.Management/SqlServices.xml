@@ -1,0 +1,623 @@
+<Type Name="SqlServices" FullName="System.Web.Management.SqlServices">
+  <TypeSignature Language="C#" Value="public static class SqlServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SqlServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.SqlServices" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dá suporte à instalação e remoção de elementos de banco de dados do SQL Server de recursos do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar bancos de dados do SQL Server para armazenar informações de recursos do ASP.NET, como estado de sessão, associação, personalização de Web parts e gerenciamento de função. Esses recursos exigem que o banco de dados do SQL Server ao qual eles estão conectados corretamente ser configurado antes do uso. Você pode usar a ferramenta SQL de registro do ASP.NET (aspnet_regsql.exe) para fazer isso, ou você pode chamar os métodos estáticos expostos pelo <xref:System.Web.Management.SqlServices> classe diretamente no seu código.  
+  
+> [!NOTE]
+>  Usando a ferramenta aspnet_regsql.exe ou <xref:System.Web.Management.SqlServices> classe para configurar o banco de dados apenas configura o banco de dados que usam os provedores com as tabelas apropriadas, gatilhos e procedimentos armazenados. Configurar o banco de dados dessa maneira não modifica os arquivos de configuração para especificar que esses recursos usam os provedores de SQL para esses serviços.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#1)]
+ [!code-vb[System.Web.Management.SqlServices#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GenerateApplicationServicesScripts">
+      <MemberSignature Language="C#" Value="public static string GenerateApplicationServicesScripts (bool install, System.Web.Management.SqlFeatures features, string database);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GenerateApplicationServicesScripts(bool install, valuetype System.Web.Management.SqlFeatures features, string database) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.GenerateApplicationServicesScripts(System.Boolean,System.Web.Management.SqlFeatures,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="install" Type="System.Boolean" />
+        <Parameter Name="features" Type="System.Web.Management.SqlFeatures" />
+        <Parameter Name="database" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="install">
+          <see langword="true" />para gerar um script que instala os recursos especificados; <see langword="false" /> para gerar um script que remove os recursos.</param>
+        <param name="features">Uma combinação bit a bit do <see cref="T:System.Web.Management.SqlFeatures" /> valores, especificando os recursos específicos para o qual gerar scripts.</param>
+        <param name="database">O nome do banco de dados do SQL Server para usar os scripts gerados.</param>
+        <summary>Gera os scripts SQL para os recursos selecionados. Os scripts fará referência de banco de dados indicado pelo parâmetro de banco de dados.</summary>
+        <returns>Retorna o código de script gerado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSessionStateScripts">
+      <MemberSignature Language="C#" Value="public static string GenerateSessionStateScripts (bool install, System.Web.Management.SessionStateType type, string customDatabase);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GenerateSessionStateScripts(bool install, valuetype System.Web.Management.SessionStateType type, string customDatabase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.GenerateSessionStateScripts(System.Boolean,System.Web.Management.SessionStateType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="install" Type="System.Boolean" />
+        <Parameter Name="type" Type="System.Web.Management.SessionStateType" />
+        <Parameter Name="customDatabase" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="install">
+          <see langword="true" />para gerar um script que instala os recursos especificados; <see langword="false" /> para gerar um script que remove os recursos.</param>
+        <param name="type">Uma da <see cref="T:System.Web.Management.SessionStateType" /> valores, especificando o tipo de estado da sessão para o qual gerar scripts.</param>
+        <param name="customDatabase">O nome do banco de dados do SQL Server para usar os scripts gerados.</param>
+        <summary>Gera o script SQL para instalar ou remover o estado da sessão. O script irá referenciar o banco de dados indicado pelo parâmetro de banco de dados.</summary>
+        <returns>Retorna o código de script gerado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O tipo é <see langword="Custom" /> e <paramref name="customDatabase" /> valor não for fornecido, ou o tipo é <see langword="Temporary" /> ou <see langword="Persisted" /> e <paramref name="customDatabase" /> valor não seja nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public static void Install (string server, string database, System.Web.Management.SqlFeatures features);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Install(string server, string database, valuetype System.Web.Management.SqlFeatures features) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.Install(System.String,System.String,System.Web.Management.SqlFeatures)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="database" Type="System.String" />
+        <Parameter Name="features" Type="System.Web.Management.SqlFeatures" />
+      </Parameters>
+      <Docs>
+        <param name="server">O servidor de banco de dados no qual instalar os recursos.</param>
+        <param name="database">O banco de dados no qual instalar os recursos.</param>
+        <param name="features">Uma combinação bit a bit do <see cref="T:System.Web.Management.SqlFeatures" /> valores, especificando os recursos a serem instalados.</param>
+        <summary>Instala componentes para os recursos selecionados do ASP.NET em um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `database` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará o banco de dados padrão, `aspnetdb`. Se `server` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará a instância padrão do SQL Server.  
+  
+> [!NOTE]
+>  A conexão com o servidor de banco de dados é feita com uma conexão confiável.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.Install%28System.String%2CSystem.String%2CSystem.Web.Management.SqlFeatures%29> método o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#4)]
+ [!code-vb[System.Web.Management.SqlServices#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="features" /> valor contém um ou mais sinalizadores inválidos.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public static void Install (string database, System.Web.Management.SqlFeatures features, string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Install(string database, valuetype System.Web.Management.SqlFeatures features, string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.Install(System.String,System.Web.Management.SqlFeatures,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="database" Type="System.String" />
+        <Parameter Name="features" Type="System.Web.Management.SqlFeatures" />
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="database">O banco de dados no qual instalar os recursos.</param>
+        <param name="features">Uma combinação bit a bit do <see cref="T:System.Web.Management.SqlFeatures" /> valores, especificando os recursos a serem instalados.</param>
+        <param name="connectionString">A cadeia de caracteres de conexão para usar. A cadeia de caracteres de conexão só é usada para estabelecer uma conexão com o servidor de banco de dados.  Especificar um banco de dados na cadeia de conexão não tem nenhum efeito.</param>
+        <summary>Instala componentes para os serviços selecionados do ASP.NET em um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `database` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará o banco de dados padrão, `aspnetdb`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.Install%28System.String%2CSystem.Web.Management.SqlFeatures%2CSystem.String%29> método o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#2)]
+ [!code-vb[System.Web.Management.SqlServices#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="features" /> valor contém um ou mais sinalizadores inválidos.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public static void Install (string server, string user, string password, string database, System.Web.Management.SqlFeatures features);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Install(string server, string user, string password, string database, valuetype System.Web.Management.SqlFeatures features) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.Install(System.String,System.String,System.String,System.String,System.Web.Management.SqlFeatures)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="user" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="database" Type="System.String" />
+        <Parameter Name="features" Type="System.Web.Management.SqlFeatures" />
+      </Parameters>
+      <Docs>
+        <param name="server">O servidor de banco de dados no qual instalar os recursos.</param>
+        <param name="user">O nome de usuário a ser usado ao conectar-se ao banco de dados.</param>
+        <param name="password">A senha para usar ao se conectar ao banco de dados.</param>
+        <param name="database">O banco de dados no qual instalar os recursos.</param>
+        <param name="features">Uma combinação bit a bit do <see cref="T:System.Web.Management.SqlFeatures" /> valores, especificando os recursos a serem instalados.</param>
+        <summary>Instala componentes para os recursos selecionados do ASP.NET em um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `database` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará o banco de dados padrão, `aspnetdb`. Se `server` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará a instância padrão do SQL Server.  
+  
+> [!NOTE]
+>  A conexão com o servidor de banco de dados é feita com uma conexão confiável.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="features" /> valor contém um ou mais sinalizadores inválidos.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallSessionState">
+      <MemberSignature Language="C#" Value="public static void InstallSessionState (string server, string customDatabase, System.Web.Management.SessionStateType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InstallSessionState(string server, string customDatabase, valuetype System.Web.Management.SessionStateType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.InstallSessionState(System.String,System.String,System.Web.Management.SessionStateType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="customDatabase" Type="System.String" />
+        <Parameter Name="type" Type="System.Web.Management.SessionStateType" />
+      </Parameters>
+      <Docs>
+        <param name="server">A instância do SQL Server para instalar os componentes de estado de sessão.</param>
+        <param name="customDatabase">O banco de dados na qual deseja instalar os componentes de estado de sessão.</param>
+        <param name="type">Uma da <see cref="T:System.Web.Management.SessionStateType" /> valores, especificando o tipo de estado da sessão para instalar.</param>
+        <summary>Instala componentes para o estado da sessão ASP.NET em um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `server` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará a instância padrão do SQL Server.  
+  
+> [!NOTE]
+>  A conexão com o servidor de banco de dados é feita com uma conexão confiável.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.InstallSessionState%2A> método o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#10)]
+ [!code-vb[System.Web.Management.SqlServices#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo é <see langword="Custom" /> e <paramref name="customDatabase" /> valor não for fornecido, ou o tipo é <see langword="Temporary" /> ou <see langword="Persisted" /> e <paramref name="customDatabase" /> valor não seja nulo.</exception>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallSessionState">
+      <MemberSignature Language="C#" Value="public static void InstallSessionState (string customDatabase, System.Web.Management.SessionStateType type, string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InstallSessionState(string customDatabase, valuetype System.Web.Management.SessionStateType type, string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.InstallSessionState(System.String,System.Web.Management.SessionStateType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customDatabase" Type="System.String" />
+        <Parameter Name="type" Type="System.Web.Management.SessionStateType" />
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="customDatabase">O banco de dados na qual deseja instalar os componentes de estado de sessão.</param>
+        <param name="type">Uma da <see cref="T:System.Web.Management.SessionStateType" /> valores, especificando o tipo de estado da sessão para instalar.</param>
+        <param name="connectionString">A cadeia de caracteres de conexão para usar. A cadeia de caracteres de conexão só é usada para estabelecer uma conexão com o servidor de banco de dados.  Especificar um banco de dados na cadeia de conexão não tem nenhum efeito.</param>
+        <summary>Instala componentes para o estado da sessão ASP.NET em um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.InstallSessionState%28System.String%2CSystem.Web.Management.SessionStateType%2CSystem.String%29> método o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#8)]
+ [!code-vb[System.Web.Management.SqlServices#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo é <see langword="Custom" /> e <paramref name="customDatabase" /> valor não for fornecido, ou o tipo é <see langword="Temporary" /> ou <see langword="Persisted" /> e <paramref name="customDatabase" /> valor não seja nulo.</exception>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallSessionState">
+      <MemberSignature Language="C#" Value="public static void InstallSessionState (string server, string user, string password, string customDatabase, System.Web.Management.SessionStateType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InstallSessionState(string server, string user, string password, string customDatabase, valuetype System.Web.Management.SessionStateType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.InstallSessionState(System.String,System.String,System.String,System.String,System.Web.Management.SessionStateType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="user" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="customDatabase" Type="System.String" />
+        <Parameter Name="type" Type="System.Web.Management.SessionStateType" />
+      </Parameters>
+      <Docs>
+        <param name="server">A instância do SQL Server para instalar os componentes de estado de sessão.</param>
+        <param name="user">O nome de usuário a ser usado ao conectar-se ao banco de dados.</param>
+        <param name="password">A senha para usar ao se conectar ao banco de dados.</param>
+        <param name="customDatabase">O banco de dados na qual deseja instalar os componentes de estado de sessão.</param>
+        <param name="type">Uma da <see cref="T:System.Web.Management.SessionStateType" /> valores, especificando o tipo de estado da sessão para instalar.</param>
+        <summary>Instala componentes para o estado da sessão ASP.NET em um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `server` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará a instância padrão do SQL Server.  
+  
+> [!NOTE]
+>  A conexão com o servidor de banco de dados é feita com uma conexão confiável.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.InstallSessionState%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Web.Management.SessionStateType%29> método o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#12)]
+ [!code-vb[System.Web.Management.SqlServices#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo é <see langword="Custom" /> e <paramref name="customDatabase" /> valor não for fornecido, ou o tipo é <see langword="Temporary" /> ou <see langword="Persisted" /> e <paramref name="customDatabase" /> valor não seja nulo.</exception>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public static void Uninstall (string server, string database, System.Web.Management.SqlFeatures features);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Uninstall(string server, string database, valuetype System.Web.Management.SqlFeatures features) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.Uninstall(System.String,System.String,System.Web.Management.SqlFeatures)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="database" Type="System.String" />
+        <Parameter Name="features" Type="System.Web.Management.SqlFeatures" />
+      </Parameters>
+      <Docs>
+        <param name="server">A instância do SQL Server do qual remover os recursos.</param>
+        <param name="database">O banco de dados do qual remover os recursos.</param>
+        <param name="features">Uma combinação bit a bit do <see cref="T:System.Web.Management.SqlFeatures" /> valores, especificando os recursos a serem removidos.</param>
+        <summary>Remove componentes para recursos ASP.NET selecionados de um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `database` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará o banco de dados padrão, `aspnetdb`. Se `server` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará a instância padrão do SQL Server.  
+  
+> [!NOTE]
+>  A conexão com o servidor de banco de dados é feita com uma conexão confiável.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.Uninstall%28System.String%2CSystem.String%2CSystem.Web.Management.SqlFeatures%29> método o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#5)]
+ [!code-vb[System.Web.Management.SqlServices#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="features" /> valor continha um ou mais sinalizadores inválidos.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação, foi feita uma tentativa para desinstalar a partir de um banco de dados que não existe ou uma ou mais tabelas para os recursos no banco de dados especificado continham dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public static void Uninstall (string database, System.Web.Management.SqlFeatures features, string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Uninstall(string database, valuetype System.Web.Management.SqlFeatures features, string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.Uninstall(System.String,System.Web.Management.SqlFeatures,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="database" Type="System.String" />
+        <Parameter Name="features" Type="System.Web.Management.SqlFeatures" />
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="database">O banco de dados do qual remover os recursos.</param>
+        <param name="features">Uma combinação bit a bit do <see cref="T:System.Web.Management.SqlFeatures" /> valores, especificando os recursos a serem removidos.</param>
+        <param name="connectionString">A cadeia de caracteres de conexão para usar. A cadeia de caracteres de conexão só é usada para estabelecer uma conexão com o servidor de banco de dados. Especificar um banco de dados na cadeia de conexão não tem nenhum efeito.</param>
+        <summary>Remove componentes para recursos ASP.NET selecionados de um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `database` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará o banco de dados padrão `aspnetdb`.  
+  
+> [!NOTE]
+>  A conexão com o servidor de banco de dados é feita com uma conexão confiável.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.Uninstall%2A> método o <xref:System.Web.Management.SqlServices> tipo.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#3)]
+ [!code-vb[System.Web.Management.SqlServices#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="features" /> valor continha um ou mais sinalizadores inválidos.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação, foi feita uma tentativa para desinstalar a partir de um banco de dados que não existe ou uma ou mais tabelas para os recursos no banco de dados especificado continham dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public static void Uninstall (string server, string user, string password, string database, System.Web.Management.SqlFeatures features);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Uninstall(string server, string user, string password, string database, valuetype System.Web.Management.SqlFeatures features) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.Uninstall(System.String,System.String,System.String,System.String,System.Web.Management.SqlFeatures)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="user" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="database" Type="System.String" />
+        <Parameter Name="features" Type="System.Web.Management.SqlFeatures" />
+      </Parameters>
+      <Docs>
+        <param name="server">A instância do SQL Server do qual remover os recursos.</param>
+        <param name="user">O nome de usuário a ser usado ao conectar-se ao banco de dados.</param>
+        <param name="password">A senha para usar ao se conectar ao banco de dados.</param>
+        <param name="database">O banco de dados do qual remover os recursos.</param>
+        <param name="features">Uma combinação bit a bit do <see cref="T:System.Web.Management.SqlFeatures" /> valores, especificando os recursos a serem removidos.</param>
+        <summary>Remove componentes para recursos ASP.NET selecionados de um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `database` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará o banco de dados padrão, `aspnetdb`. Se `server` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará a instância padrão do SQL Server.  
+  
+> [!NOTE]
+>  A conexão com o servidor de banco de dados é feita com uma conexão confiável.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="features" /> valor continha um ou mais sinalizadores inválidos.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação, foi feita uma tentativa para desinstalar a partir de um banco de dados que não existe ou uma ou mais tabelas para os recursos no banco de dados especificado continham dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallSessionState">
+      <MemberSignature Language="C#" Value="public static void UninstallSessionState (string server, string customDatabase, System.Web.Management.SessionStateType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UninstallSessionState(string server, string customDatabase, valuetype System.Web.Management.SessionStateType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.UninstallSessionState(System.String,System.String,System.Web.Management.SessionStateType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="customDatabase" Type="System.String" />
+        <Parameter Name="type" Type="System.Web.Management.SessionStateType" />
+      </Parameters>
+      <Docs>
+        <param name="server">A instância do SQL Server do qual remover os componentes de estado de sessão.</param>
+        <param name="customDatabase">O banco de dados do qual remover os componentes de estado de sessão.</param>
+        <param name="type">Uma da <see cref="T:System.Web.Management.SessionStateType" /> valores, especificando o tipo de estado de sessão a ser removido.</param>
+        <summary>Remove componentes para o estado da sessão ASP.NET de um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `server` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará a instância padrão do SQL Server.  
+  
+ **Observação** a conexão com o servidor de banco de dados é feita com uma conexão confiável.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.UninstallSessionState%2A> método o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#11)]
+ [!code-vb[System.Web.Management.SqlServices#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo é <see langword="Custom" /> e <paramref name="customDatabase" /> valor não for fornecido, ou o tipo é <see langword="Temporary" /> ou <see langword="Persisted" /> e <paramref name="customDatabase" /> valor não seja nulo.</exception>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallSessionState">
+      <MemberSignature Language="C#" Value="public static void UninstallSessionState (string customDatabase, System.Web.Management.SessionStateType type, string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UninstallSessionState(string customDatabase, valuetype System.Web.Management.SessionStateType type, string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.UninstallSessionState(System.String,System.Web.Management.SessionStateType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customDatabase" Type="System.String" />
+        <Parameter Name="type" Type="System.Web.Management.SessionStateType" />
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="customDatabase">O banco de dados do qual remover os componentes de estado de sessão.</param>
+        <param name="type">Uma da <see cref="T:System.Web.Management.SessionStateType" /> valores, especificando o tipo de estado de sessão a ser removido.</param>
+        <param name="connectionString">A cadeia de caracteres de conexão para usar.  A cadeia de caracteres de conexão só é usada para estabelecer uma conexão com o servidor de banco de dados.  Especificar um banco de dados na cadeia de conexão não tem nenhum efeito.</param>
+        <summary>Remove componentes para o estado da sessão ASP.NET de um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.UninstallSessionState%28System.String%2CSystem.String%2CSystem.Web.Management.SessionStateType%29> método o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#9)]
+ [!code-vb[System.Web.Management.SqlServices#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo é <see langword="Custom" /> e <paramref name="customDatabase" /> valor não for fornecido, ou o tipo é <see langword="Temporary" /> ou <see langword="Persisted" /> e <paramref name="customDatabase" /> valor não seja nulo.</exception>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallSessionState">
+      <MemberSignature Language="C#" Value="public static void UninstallSessionState (string server, string user, string password, string customDatabase, System.Web.Management.SessionStateType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UninstallSessionState(string server, string user, string password, string customDatabase, valuetype System.Web.Management.SessionStateType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.SqlServices.UninstallSessionState(System.String,System.String,System.String,System.String,System.Web.Management.SessionStateType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="user" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="customDatabase" Type="System.String" />
+        <Parameter Name="type" Type="System.Web.Management.SessionStateType" />
+      </Parameters>
+      <Docs>
+        <param name="server">A instância do SQL Server do qual remover os componentes de estado de sessão.</param>
+        <param name="user">O nome de usuário a ser usado ao conectar-se ao banco de dados.</param>
+        <param name="password">A senha para usar ao se conectar ao banco de dados.</param>
+        <param name="customDatabase">O banco de dados do qual remover os componentes de estado de sessão.</param>
+        <param name="type">Uma da <see cref="T:System.Web.Management.SessionStateType" /> valores, especificando o tipo de estado de sessão a ser removido.</param>
+        <summary>Remove componentes para o estado da sessão ASP.NET de um banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `server` é `null` ou não fornecido, <xref:System.Web.Management.SqlServices> usará a instância padrão do SQL Server.  
+  
+ **Observação** a conexão com o servidor de banco de dados é feita com uma conexão confiável.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.SqlServices.UninstallSessionState%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Web.Management.SessionStateType%29> método o <xref:System.Web.Management.SqlServices> classe.  
+  
+ [!code-csharp[System.Web.Management.SqlServices#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.SqlServices/CS/usingsqlservices.cs#13)]
+ [!code-vb[System.Web.Management.SqlServices#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.SqlServices/VB/usingsqlservices.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo é <see langword="Custom" /> e <paramref name="customDatabase" /> valor não for fornecido, ou o tipo é <see langword="Temporary" /> ou <see langword="Persisted" /> e <paramref name="customDatabase" /> valor não seja nulo.</exception>
+        <exception cref="T:System.Web.HttpException">Não é possível conectar ao servidor de banco de dados especificado.</exception>
+        <exception cref="T:System.Web.Management.SqlExecutionException">Ocorreu uma exceção ao processar as instruções SQL necessárias para a operação.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

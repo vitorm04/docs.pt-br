@@ -1,0 +1,159 @@
+<Type Name="GroupByBehavior" FullName="System.Data.Common.GroupByBehavior">
+  <TypeSignature Language="C#" Value="public enum GroupByBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GroupByBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.GroupByBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a relação entre as colunas em uma cláusula GROUP BY e as colunas não agregadas na lista de seleção de uma instrução SELECT.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.GroupByBehavior> valores são mutuamente exclusivos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExactMatch">
+      <MemberSignature Language="C#" Value="ExactMatch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Common.GroupByBehavior ExactMatch = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Common.GroupByBehavior.ExactMatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.GroupByBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cláusula GROUP BY deve conter todas as colunas agregadas na lista de seleção e não deve conter outras colunas não estão na lista de seleção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MustContainAll">
+      <MemberSignature Language="C#" Value="MustContainAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Common.GroupByBehavior MustContainAll = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Common.GroupByBehavior.MustContainAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.GroupByBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cláusula GROUP BY deve conter todas as colunas agregadas na lista de seleção e pode conter outras colunas não estão na lista de seleção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSupported">
+      <MemberSignature Language="C#" Value="NotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Common.GroupByBehavior NotSupported = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Common.GroupByBehavior.NotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.GroupByBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há suporte para a cláusula GROUP BY.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Common.GroupByBehavior Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Common.GroupByBehavior.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.GroupByBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O suporte para a cláusula GROUP BY é desconhecido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unrelated">
+      <MemberSignature Language="C#" Value="Unrelated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Common.GroupByBehavior Unrelated = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Common.GroupByBehavior.Unrelated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.GroupByBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há nenhuma relação entre as colunas na cláusula GROUP BY e as colunas agregadas na lista de seleção. Você pode agrupar por qualquer coluna.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

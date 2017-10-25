@@ -1,0 +1,99 @@
+<Type Name="NameChangedEventArgs" FullName="System.Net.PeerToPeer.Collaboration.NameChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class NameChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NameChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.NameChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações de qualificação para um método de retorno de chamada quando um <see cref="E:System.Net.PeerToPeer.Collaboration.PeerEndPoint.NameChanged" /> evento ocorre.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.NameChangedEventArgs.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o novo <see cref="P:System.Net.PeerToPeer.Collaboration.PeerEndPoint.Name" /> para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.</summary>
+        <value>Obtém o novo <see cref="P:System.Net.PeerToPeer.Collaboration.PeerEndPoint.Name" /> para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que especificado, o valor padrão dessa propriedade é `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerContact">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerContact PeerContact { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerContact PeerContact" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.NameChangedEventArgs.PeerContact" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerContact</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.</summary>
+        <value>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerContact" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que especificado, o valor padrão desta propriedade é`null.`  
+  
+ Se o <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> não está associado um contato, essa propriedade retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerEndPoint">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerEndPoint PeerEndPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.NameChangedEventArgs.PeerEndPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> associado ao <see cref="P:System.Net.PeerToPeer.Collaboration.PeerEndPoint.Name" />.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />associado a <see cref="P:System.Net.PeerToPeer.Collaboration.PeerEndPoint.Name" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que especificado, o valor padrão desta propriedade é`null.`  
+  
+ Se o <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> não está associado um contato, essa propriedade retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,37 @@
+<Type Name="UnaryDelegate&lt;TArg,TResult&gt;" FullName="Microsoft.VisualC.StlClr.UnaryDelegate&lt;TArg,TResult&gt;">
+  <TypeSignature Language="C#" Value="public delegate TResult UnaryDelegate&lt;TArg,TResult&gt;(TArg A_0);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UnaryDelegate`2&lt;TArg, TResult&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.StlClr.UnaryDelegate`2" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TArg" />
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="A_0" Type="TArg" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>TResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TArg">O tipo do argumento de delegate.</typeparam>
+    <typeparam name="TResult">O tipo de retorno do delegado.</typeparam>
+    <param name="A_0">O argumento de delegate.</param>
+    <summary>Descreve um delegado de um argumento. Você pode usá-lo para especificar o argumento e retorna o tipo do delegado.</summary>
+    <returns>O tipo de retorno do delegado.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse delegado é o equivalente genérico STL/CLR `unary_delegate` classe. Para obter mais informações, consulte [unary_delegate (STL/CLR)](http://msdn.microsoft.com/library/b3ee253c-98e8-466e-a272-505e47aed061).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,45 @@
+<Type Name="PropertyValueUIItemInvokeHandler" FullName="System.Drawing.Design.PropertyValueUIItemInvokeHandler">
+  <TypeSignature Language="C#" Value="public delegate void PropertyValueUIItemInvokeHandler(ITypeDescriptorContext context, PropertyDescriptor descriptor, PropertyValueUIItem invokedItem);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PropertyValueUIItemInvokeHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.PropertyValueUIItemInvokeHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+    <Parameter Name="descriptor" Type="System.ComponentModel.PropertyDescriptor" />
+    <Parameter Name="invokedItem" Type="System.Drawing.Design.PropertyValueUIItem" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> para a propriedade associada ao ícone que foi clicado duas vezes.</param>
+    <param name="descriptor">A propriedade associada ao ícone que foi clicado duas vezes.</param>
+    <param name="invokedItem">O <see cref="T:System.Drawing.Design.PropertyValueUIItem" /> associado ao ícone que foi clicado duas vezes.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="P:System.Drawing.Design.PropertyValueUIItem.InvokeHandler" /> de <see cref="T:System.Drawing.Design.PropertyValueUIItem" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clicando duas vezes em um ícone na janela Propriedades irá gerar o <xref:System.Drawing.Design.PropertyValueUIItem.InvokeHandler%2A> evento o <xref:System.Drawing.Design.PropertyValueUIItem> o ícone associado. O <xref:System.Drawing.Design.PropertyValueUIItem.InvokeHandler%2A> evento normalmente inicia uma interface do usuário (UI) para editar o valor da propriedade. Adicionar um <xref:System.Drawing.Design.PropertyValueUIItemInvokeHandler> para o <xref:System.Drawing.Design.PropertyValueUIItem.InvokeHandler%2A> propriedade de um <xref:System.Drawing.Design.PropertyValueUIItem> para atribuir um manipulador de eventos para executar o comportamento adequado quando o ícone exibido ao lado do nome da propriedade é clicado duas vezes.  
+  
+ Quando você cria um <xref:System.Drawing.Design.PropertyValueUIItemInvokeHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir fornece uma <xref:System.Drawing.Design.PropertyValueUIItem> objeto para as propriedades do componente nomeado `HorizontalMargin` ou `VerticalMargin`. O <xref:System.Drawing.Design.PropertyValueUIItem> para essas propriedades fornece uma imagem, uma dica de ferramenta e um manipulador de eventos que exibe uma caixa de mensagem quando a imagem para a propriedade é clicada. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Drawing.Design.IPropertyValueUIService> interface.  
+  
+ [!code-cpp[IPropertyValueUIServiceExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/IPropertyValueUIServiceExample/CPP/propertyuicomponent.cpp#2)]
+ [!code-csharp[IPropertyValueUIServiceExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/IPropertyValueUIServiceExample/CS/propertyuicomponent.cs#2)]
+ [!code-vb[IPropertyValueUIServiceExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IPropertyValueUIServiceExample/VB/propertyuicomponent.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

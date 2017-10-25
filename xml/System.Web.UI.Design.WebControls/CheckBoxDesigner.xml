@@ -1,0 +1,92 @@
+<Type Name="CheckBoxDesigner" FullName="System.Web.UI.Design.WebControls.CheckBoxDesigner">
+  <TypeSignature Language="C#" Value="public class CheckBoxDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CheckBoxDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.CheckBoxDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Design.SupportsPreviewControl(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Estende o comportamento de tempo de design para o <see cref="T:System.Web.UI.WebControls.CheckBox" /> controle de servidor Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.CheckBoxDesigner> substituições de classe a <xref:System.Web.UI.Design.WebControls.CheckBoxDesigner.GetDesignTimeHtml%2A> método o <xref:System.Web.UI.Design.ControlDesigner> classe para garantir que o controle é exibido com uma representação significativa em tempo de design. Se o <xref:System.Web.UI.WebControls.CheckBox.Text%2A> propriedade estiver vazia, o <xref:System.Web.UI.Design.WebControls.CheckBoxDesigner.GetDesignTimeHtml%2A> método desta classe define o <xref:System.Web.UI.WebControls.CheckBox.Text%2A> propriedade do controle para o <xref:System.Web.UI.Control.ID%2A?displayProperty=nameWithType> propriedade do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma classe de designer personalizada, chamada `SampleCheckBoxDesigner`, que herda de <xref:System.Web.UI.Design.WebControls.CheckBoxDesigner> classe. Ela substitui o <xref:System.Web.UI.Design.WebControls.CheckBoxDesigner.GetDesignTimeHtml%2A> método. Se o <xref:System.Web.UI.WebControls.CheckBox.Text%2A?displayProperty=nameWithType> propriedade não tiver sido definida anteriormente, uma chamada para esse método define como uma cadeia de caracteres e exibe essa cadeia de caracteres na superfície de design. Se o <xref:System.Web.UI.WebControls.CheckBox.Text%2A> propriedade foi definida, o valor da propriedade existente é exibido.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls_CheckBoxDesignerSamples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_CheckBoxDesignerSamples/VB/customcheckbox.vb#1)]  
+  
+ O exemplo de código a seguir é uma classe simples, denominada `SampleCheckBox`, que herde o <xref:System.Web.UI.WebControls.CheckBox> classe e está associado a `SampleCheckBoxDesigner` classe pela <xref:System.ComponentModel.DesignerAttribute> classe.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls_CheckBoxDesignerSamples#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_CheckBoxDesignerSamples/VB/customcheckbox.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CheckBoxDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.CheckBoxDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.CheckBoxDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.CheckBoxDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a marcação que é usada para representar o controle em tempo de design.</summary>
+        <returns>A marcação que é usada para representar o controle em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.WebControls.Button.Text%2A> propriedade está vazia ou consiste apenas em espaços em branco, em seguida, o código HTML gerado contém o <xref:System.Web.UI.Control.ID%2A> do controle de caixa de seleção; caso contrário, o código HTML gerado contém o conteúdo do controle do <xref:System.Web.UI.WebControls.Button.Text%2A> propriedade.  
+  
+ Substitua este método para alterar o código HTML gerado.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo substitui o <xref:System.Web.UI.Design.WebControls.CheckBoxDesigner.GetDesignTimeHtml%2A> método. Se o <xref:System.Web.UI.WebControls.CheckBox.Text%2A?displayProperty=nameWithType> propriedade não tiver sido definida anteriormente, uma chamada para esse método define como uma cadeia de caracteres e exibe essa cadeia de caracteres na superfície de design. Se o <xref:System.Web.UI.WebControls.CheckBox.Text%2A> propriedade já foi definida, o valor da propriedade existente é exibido.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls_CheckBoxDesignerSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_CheckBoxDesignerSamples/VB/customcheckbox.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

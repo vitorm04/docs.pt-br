@@ -1,0 +1,99 @@
+<Type Name="HttpGetClientProtocol" FullName="System.Web.Services.Protocols.HttpGetClientProtocol">
+  <TypeSignature Language="C#" Value="public class HttpGetClientProtocol : System.Web.Services.Protocols.HttpSimpleClientProtocol" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpGetClientProtocol extends System.Web.Services.Protocols.HttpSimpleClientProtocol" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.HttpGetClientProtocol" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.HttpSimpleClientProtocol</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe base para proxies de cliente do serviço Web XML que usam o protocolo HTTP GET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um cliente de serviço Web XML usa o protocolo HTTP GET, parâmetros são codificados na URL e a resposta é retornada em XML simples.  
+  
+ Se você estiver criando um cliente de serviço Web XML usando o ASP.NET, em seguida, derivando indiretamente de uma classe de proxy ou diretamente do <xref:System.Web.Services.Protocols.WebClientProtocol> precisa ser criado para o serviço Web XML que você deseja chamar. Quando o cliente do serviço Web XML chama o serviço Web XML usando HTTP, derive a classe de proxy de <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol>, que por sua vez é derivada de <xref:System.Web.Services.Protocols.WebClientProtocol>.  
+  
+ <xref:System.Web.Services.Protocols.HttpGetClientProtocol>e <xref:System.Web.Services.Protocols.HttpPostClientProtocol> derivam <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol>, fornecendo o suporte para chamar um método de serviço Web XML usando os protocolos HTTP GET e POST HTTP, respectivamente. Clientes chamando um serviço Web XML usando SOAP devem derivar de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>.  
+  
+ Para obter detalhes sobre a criação de uma classe de proxy, consulte [&#91;\< Topic://cpconcreatingwebserviceproxy > &#93; ](http://msdn.microsoft.com/en-us/142d91f5-3249-4cfc-a431-1f3acb76d756).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é uma classe de proxy gerada pelo Wsdl.exe para o `Math` XML Web Services abaixo. A classe de proxy deriva <xref:System.Web.Services.Protocols.HttpGetClientProtocol>, que é derivado de abstrata <xref:System.Web.Services.Protocols.HttpSimpleClientProtocol> classe.  
+  
+ [!code-cpp[Classic HttpGetClientProtocol Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpGetClientProtocol Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HttpGetClientProtocol Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpGetClientProtocol Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpGetClientProtocol Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpGetClientProtocol Example/VB/source.vb#1)]  
+  
+ O exemplo a seguir é o `Math` XML Web Services, da qual a classe de proxy acima foi criada.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpGetClientProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpGetClientProtocol.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.HttpGetClientProtocol" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[HttpGetClientProtocol_Constructor#1](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpGetClientProtocol_Constructor/CPP/httpgetclientprotocol_constructor.cpp#1)]
+ [!code-csharp[HttpGetClientProtocol_Constructor#1](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpGetClientProtocol_Constructor/CS/httpgetclientprotocol_constructor.cs#1)]
+ [!code-vb[HttpGetClientProtocol_Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpGetClientProtocol_Constructor/VB/httpgetclientprotocol_constructor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebRequest">
+      <MemberSignature Language="C#" Value="protected override System.Net.WebRequest GetWebRequest (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Net.WebRequest GetWebRequest(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HttpGetClientProtocol.GetWebRequest(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O <see cref="T:System.Uri" /> a ser usado durante a criação do <see cref="T:System.Net.WebRequest" />.</param>
+        <summary>Cria um <see cref="T:System.Net.WebRequest" /> instância para o URI especificado.</summary>
+        <returns>A instância <see cref="T:System.Net.WebRequest" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui a versão base da <xref:System.Web.Services.Protocols.WebClientProtocol.GetWebRequest%2A> para especificar que a solicitação HTTP para o serviço Web XML é feita usando HTTP GET. Ao substituir esse método, personalizações adicionais podem ser feitas para o <xref:System.Net.WebRequest> antes que seja feita a solicitação de serviço da Web em XML do objeto. Por exemplo, você pode adicionar um cabeçalho personalizado para a solicitação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="uri" /> parâmetro é nulo ou tem comprimento zero.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

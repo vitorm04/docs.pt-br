@@ -1,0 +1,54 @@
+<Type Name="IUserControlTypeResolutionService" FullName="System.Web.UI.IUserControlTypeResolutionService">
+  <TypeSignature Language="C#" Value="public interface IUserControlTypeResolutionService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUserControlTypeResolutionService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IUserControlTypeResolutionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o método de que uma classe deve implementar para retornar o tipo de um controle para um prefixo especificado e o nome de marca.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores de páginas e autores de controle não usam o <xref:System.Web.UI.IUserControlTypeResolutionService> interface. O <xref:System.Web.UI.IUserControlTypeResolutionService> interface é implementada pelos desenvolvedores de ferramentas para retornar o <xref:System.Type> de um controle identificado por um prefixo de marca e o nome da marca.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string tagPrefix, string tagName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string tagPrefix, string tagName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IUserControlTypeResolutionService.GetType(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagPrefix" Type="System.String" />
+        <Parameter Name="tagName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagPrefix">O prefixo analisado de uma marca ASP.NET.</param>
+        <param name="tagName">O nome da marca do ASP.NET analisado.</param>
+        <summary>Recupera um tipo com base em um prefixo de marca analisado do ASP.NET e o nome da marca.</summary>
+        <returns>Um <see cref="T:System.Type" /> que representa o tipo de controle para identificam o prefixo e marca.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ambientes de designers implementam esse método para fornecer uma forma de analisadores ASP.NET e designers para resolver os tipos de controle de usuário em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

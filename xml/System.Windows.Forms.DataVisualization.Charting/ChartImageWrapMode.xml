@@ -1,0 +1,124 @@
+<Type Name="ChartImageWrapMode" FullName="System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode">
+  <TypeSignature Language="C#" Value="public enum ChartImageWrapMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ChartImageWrapMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o modo de desenho de uma imagem de plano de fundo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode> enumeração representa o modo de desenho de uma imagem de plano de fundo, conforme definido pelo <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageWrapMode%2A> propriedade o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle. Para definir uma imagem de plano de fundo para um elemento de gráfico, use o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImage%2A> propriedade.  
+  
+> [!NOTE]
+>  Se você especificar o valor de escala, o local onde a imagem é desenhada dependerá de <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageAlignment%2A> configuração de propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Scaled">
+      <MemberSignature Language="C#" Value="Scaled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode Scaled = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Imagem de plano de fundo é dimensionada para ajustar o elemento gráfico inteiro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tile">
+      <MemberSignature Language="C#" Value="Tile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode Tile = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Tile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Imagem de plano de fundo lado a lado para ajustar o elemento gráfico inteiro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TileFlipX">
+      <MemberSignature Language="C#" Value="TileFlipX" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode TileFlipX = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.TileFlipX" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada imagem de lado a lado é revertida ao redor do eixo x.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TileFlipXY">
+      <MemberSignature Language="C#" Value="TileFlipXY" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode TileFlipXY = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.TileFlipXY" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada imagem de lado a lado é revertida ao redor do eixo x e y.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TileFlipY">
+      <MemberSignature Language="C#" Value="TileFlipY" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode TileFlipY = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.TileFlipY" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada imagem de lado a lado é revertida ao redor do eixo y.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unscaled">
+      <MemberSignature Language="C#" Value="Unscaled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode Unscaled = int32(100)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Unscaled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Imagem de plano de fundo não é redimensionada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

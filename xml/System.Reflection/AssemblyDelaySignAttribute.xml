@@ -1,0 +1,130 @@
+<Type Name="AssemblyDelaySignAttribute" FullName="System.Reflection.AssemblyDelaySignAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyDelaySignAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyDelaySignAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyDelaySignAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que o assembly não estará totalmente assinado quando criado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando esse atributo é usado em um assembly, o espaço é reservado para a assinatura que é preenchida mais tarde por uma ferramenta de assinatura como o utilitário Sn.exe. Assinatura atrasada é usado quando o autor do assembly não tem acesso à chave privada que será usado para gerar a assinatura, como em `[assembly:AssemblyDelaySignAttribute(true)]`.  
+  
+ As classes em `System.Runtime.CompilerServices` são destinados para uso por compiladores somente. Eles não sejam usados, a menos que você está criando um compilador.  
+  
+ Para obter mais informações, consulte a documentação de infra-estrutura de linguagem comum (CLI), especialmente "partição II: metadados definição e semântica". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Reflection.AssemblyDelaySignAttribute> atributo com o <xref:System.Reflection.AssemblyKeyFileAttribute>. Para compilar este exemplo, você deve criar um arquivo de chave de nome forte chamado TestPublicKey.snk usando o [Sn.exe (ferramenta de nome forte)](~/docs/framework/tools/sn-exe-strong-name-tool.md):  
+  
+```  
+sn -k TestPublicKey.snk   
+```  
+  
+ Compile o exemplo como um arquivo. dll. Se você compilar na linha de comando, use o `/t:library` opção para c# ou Visual Basic, ou o `/LD` opção de vinculador do Visual C++.  
+  
+ [!code-cpp[AssemblyDelaySignattribute#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source.cpp#1)]
+ [!code-csharp[AssemblyDelaySignattribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source.cs#1)]
+ [!code-vb[AssemblyDelaySignattribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyDelaySignAttribute (bool delaySign);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool delaySign) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyDelaySignAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="delaySign" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="delaySign">
+          <see langword="true" />Se o recurso que representa esse atributo estiver ativado; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.AssemblyDelaySignAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelaySign">
+      <MemberSignature Language="C#" Value="public bool DelaySign { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DelaySign" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyDelaySignAttribute.DelaySign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o estado do atributo.</summary>
+        <value>
+          <see langword="true" />Se esse assembly foi compilado como assinado com atraso; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

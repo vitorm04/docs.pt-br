@@ -1,0 +1,127 @@
+<Type Name="MessageSecurityOverHttpElement" FullName="System.ServiceModel.Configuration.MessageSecurityOverHttpElement">
+  <TypeSignature Language="C#" Value="public class MessageSecurityOverHttpElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageSecurityOverHttpElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.MessageSecurityOverHttpElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define as configurações de segurança para a mensagem enviada usando HTTP.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlgorithmSuite">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverHttpElement.AlgorithmSuite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.SecurityAlgorithmSuiteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("algorithmSuite", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a criptografia de mensagens e os algoritmos de quebra a chave usados para proteger uma mensagem HTTP.</summary>
+        <value>Uma opção válida <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" /> valor que especifica os algoritmos de criptografia e chave de quebra de mensagem usados para proteger uma mensagem HTTP. O valor padrão é <see cref="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCredentialType">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageCredentialType ClientCredentialType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MessageCredentialType ClientCredentialType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverHttpElement.ClientCredentialType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("clientCredentialType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageCredentialType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente usando a segurança baseada em mensagem ou <see langword="TransportWithMessageCredential" />.</summary>
+        <value>Uma opção válida <see cref="T:System.ServiceModel.MessageCredentialType" /> valor que especifica o tipo de credencial a ser usada ao executar a autenticação de cliente usando a segurança baseada em mensagem ou <see langword="TransportWithMessageCredential" />. O valor padrão é <see cref="F:System.ServiceModel.MessageCredentialType.Windows" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NegotiateServiceCredential">
+      <MemberSignature Language="C#" Value="public bool NegotiateServiceCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NegotiateServiceCredential" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverHttpElement.NegotiateServiceCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("negotiateServiceCredential", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que especifica se a credencial de serviço é provisionada na cliente fora da banda ou é obtida do serviço ao cliente por meio de um processo de negociação.</summary>
+        <value>
+          <see langword="true" />Se a credencial de serviço é provisionada na cliente fora de banda; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica se a credencial de serviço é provisionada na cliente fora da banda ou é obtida do serviço ao cliente por meio de um processo de negociação. Tal uma negociação é um precursor para a troca de mensagens normal.  
+  
+ Se o <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> propriedade é igual ao anônimo, <xref:System.ServiceModel.MessageCredentialType.UserName>, ou <xref:System.ServiceModel.MessageCredentialType.Certificate>, definir essa propriedade como `false` implica que o certificado de serviço está disponível em que o cliente fora da banda, e que o cliente deve especificar o <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A> propriedade <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> classe. Este modo é interoperável com pilhas SOAP que implementa o WS-Trust e WS-SecureConversation.  
+  
+ Se o <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> propriedade é igual a <xref:System.ServiceModel.MessageCredentialType.Windows>, definir essa propriedade como `false` faz com que uma autenticação baseada em Kerberos. Isso requer que o cliente e o serviço ser parte de um domínio do Kerberos. Este modo é interoperável com pilhas SOAP que implementam o perfil de token do Kerberos (conforme definido na OASIS WSS TC), bem como WS-Trust e WS-SecureConversation.  
+  
+ Quando essa propriedade é `true`, faz com que uma negociação de SOAP .NET que túneis SPNego exchange nas mensagens SOAP.  
+  
+ Essa propriedade indica se a credencial de serviço é negociada automaticamente entre o cliente e o serviço. Se essa propriedade for `true`, então essa negociação ocorre. Se essa propriedade for `false`, em seguida, as credenciais do serviço devem ser especificadas no cliente para comunicação com o serviço pode ocorrer.  
+  
+ Se essa propriedade é definida como `false`e a associação está configurada para usar o Windows como um tipo de credencial de cliente, a conta de serviço deve ser associada com um Service Principal Name (SPN). Para fazer isso, execute o serviço sob a conta de serviço de rede ou a conta sistema LOCAL. Como alternativa, use a ferramenta SetSpn.exe para criar um SPN para a conta de serviço. Em ambos os casos, o cliente deve usar o SPN correto no [ &lt;servicePrincipalName&gt; ](~/docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento, ou usando o <xref:System.ServiceModel.EndpointAddress> construtor. Para obter mais informações, consulte [autenticação e identidade de serviço](~/docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.MessageSecurityOverHttpElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> instância que contém uma coleção de <see cref="T:System.Configuration.ConfigurationProperty" /> objetos que podem ser atributos ou <see cref="T:System.Configuration.ConfigurationElement" /> objetos deste elemento de configuração.</summary>
+        <value>Um <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> instância que contém uma coleção de <see cref="T:System.Configuration.ConfigurationProperty" /> objetos que podem ser atributos ou <see cref="T:System.Configuration.ConfigurationElement" /> objetos deste elemento de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

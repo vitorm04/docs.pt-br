@@ -1,0 +1,211 @@
+<Type Name="ManagementException" FullName="System.Management.ManagementException">
+  <TypeSignature Language="C#" Value="public class ManagementException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ManagementException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ManagementException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as exceções de gerenciamento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ManagementException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> destino desta serialização.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.ManagementException" /> classe que pode ser serializado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve o erro.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual.</param>
+        <summary>Inicializa uma nova instância vazia do <see cref="T:System.Management.ManagementException" /> classe. Se o <paramref name="innerException" /> parâmetro não é <see langword="null" />, a exceção atual é gerada em um bloco catch que manipula a exceção interna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementStatus ErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Management.ManagementStatus ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementException.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de erro informado pelo WMI, o que provocou essa exceção.</summary>
+        <value>Retorna um <see cref="T:System.Management.ManagementStatus" /> valor de enumeração que contém o código de erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Um <xref:System.Management.ManagementStatus> valor que representa o código de erro retornado pela operação de WMI.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorInformation">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementBaseObject ErrorInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementBaseObject ErrorInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementException.ErrorInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementBaseObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de erro estendida fornecido pelo WMI.</summary>
+        <value>Retorna um <see cref="T:System.Management.ManagementBaseObject" /> que contém informações de erro estendidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Um <xref:System.Management.ManagementBaseObject> que representa o objeto de erro estendida fornecido pelo WMI, se disponível. `null` caso contrário.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> destino desta serialização.</param>
+        <summary>Preenche o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar o <see cref="T:System.Management.ManagementException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado por código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

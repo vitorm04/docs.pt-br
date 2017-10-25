@@ -1,0 +1,279 @@
+<Type Name="RecipientInfoCollection" FullName="System.Security.Cryptography.Pkcs.RecipientInfoCollection">
+  <TypeSignature Language="C#" Value="public sealed class RecipientInfoCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RecipientInfoCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>O <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> classe representa uma coleção de <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> objetos. <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> implementa a interface <see cref="T:System.Collections.ICollection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe não tem um construtor público; Portanto, ele não pode ser publicamente instanciado. É uma classe somente leitura acessível a partir de <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.RecipientInfos%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.RecipientInfoCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> objeto ao qual o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> é coleção a ser copiado.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> onde o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção será copiada.</param>
+        <summary>O <see cref="M:System.Security.Cryptography.Pkcs.RecipientInfoCollection.CopyTo(System.Array,System.Int32)" /> método copia o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção para uma matriz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Um dos argumentos fornecidos a um método não era válido.</exception>
+        <exception cref="T:System.ArgumentNullException">Uma referência nula foi passada para um método que não a aceita como um argumento válido.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de um argumento estava fora do intervalo permitido de valores conforme definido pelo método chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Security.Cryptography.Pkcs.RecipientInfo[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Security.Cryptography.Pkcs.RecipientInfo[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.RecipientInfoCollection.CopyTo(System.Security.Cryptography.Pkcs.RecipientInfo[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Security.Cryptography.Pkcs.RecipientInfo[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz de <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> objetos onde o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> é coleção a ser copiado.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> onde o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção será copiada.</param>
+        <summary>O <see cref="M:System.Security.Cryptography.Pkcs.RecipientInfoCollection.CopyTo(System.Security.Cryptography.Pkcs.RecipientInfo[],System.Int32)" /> método copia o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção para um <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> matriz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Um dos argumentos fornecidos a um método não era válido.</exception>
+        <exception cref="T:System.ArgumentNullException">Uma referência nula foi passada para um método que não a aceita como um argumento válido.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de um argumento estava fora do intervalo permitido de valores conforme definido pelo método chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.Count" /> propriedade recupera o número de itens de <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção.</summary>
+        <value>Um valor inteiro que representa o número de itens na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.RecipientInfoEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.Pkcs.RecipientInfoEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.RecipientInfoCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.RecipientInfoEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>O <see cref="M:System.Security.Cryptography.Pkcs.RecipientInfoCollection.GetEnumerator" /> método retorna um <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoEnumerator" /> de objeto para o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoEnumerator" /> objeto que pode ser usado para enumerar o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.IsSynchronized" /> propriedade recupera se o acesso à coleção é sincronizado, ou thread-safe. Essa propriedade sempre retorna <see langword="false" />, que significa que a coleção não é thread-safe.</summary>
+        <value>Um <see cref="T:System.Boolean" /> valor <see langword="false" />, que significa que a coleção não é thread-safe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.RecipientInfo this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.RecipientInfo Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.RecipientInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um valor inteiro que representa o índice na coleção. O índice é baseado em zero.</param>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.Item(System.Int32)" /> propriedade recupera o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> objeto no índice especificado na coleção.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> objeto no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de um argumento estava fora do intervalo permitido de valores conforme definido pelo método chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.SyncRoot" /> propriedade recupera um <see cref="T:System.Object" /> objeto usado para sincronizar o acesso a <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção.</summary>
+        <value>Um <see cref="T:System.Object" /> objeto usado para sincronizar o acesso a <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfoCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.RecipientInfoCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>O <see cref="M:System.Security.Cryptography.Pkcs.RecipientInfoCollection.System#Collections#IEnumerable#GetEnumerator" /> método retorna um <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoEnumerator" /> de objeto para o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoEnumerator" /> objeto que pode ser usado para enumerar o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoCollection" /> coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

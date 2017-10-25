@@ -1,0 +1,193 @@
+<Type Name="VirtualFile" FullName="System.Web.Hosting.VirtualFile">
+  <TypeSignature Language="C#" Value="public abstract class VirtualFile : System.Web.Hosting.VirtualFileBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit VirtualFile extends System.Web.Hosting.VirtualFileBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.VirtualFile" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Hosting.VirtualFileBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto de arquivo em um espaço de arquivo ou recurso virtual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Hosting.VirtualFile> classe é a classe base para objetos que representam os arquivos em um sistema de arquivos virtual. Normalmente, você poderia implementar um descendente do <xref:System.Web.Hosting.VirtualFile> classe para cada <xref:System.Web.Hosting.VirtualPathProvider> objeto descendente no seu aplicativo Web.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um <xref:System.Web.Hosting.VirtualFile> implementação da classe que combina informações armazenadas em um <xref:System.Data.DataSet> objeto com um arquivo de modelo para retornar dados em HTML. Este exemplo de código funciona com os exemplos de código para o <xref:System.Web.Hosting.VirtualPathProvider> e <xref:System.Web.Hosting.VirtualDirectory> classes para fornecer recursos virtuais de dados de um repositório que são carregados em um <xref:System.Data.DataSet> objeto. Para as instruções completas para compilar e executar o exemplo, consulte a seção exemplo de <xref:System.Web.Hosting.VirtualPathProvider> visão geral da classe.  
+  
+ Este exemplo tem três partes: o <xref:System.Web.Hosting.VirtualFile> implementação da classe, um arquivo de dados XML usados para popular o <xref:System.Data.DataSet> objeto e o arquivo de modelo de página.  
+  
+ O primeiro exemplo de código é uma implementação de <xref:System.Web.Hosting.VirtualFile> classe. O construtor usa um método em um personalizado <xref:System.Web.Hosting.VirtualPathProvider> objeto para retornar um <xref:System.Data.DataSet> objeto. Ele pesquisa o <xref:System.Data.DataSet> objeto para recuperar as informações associadas com o caminho de arquivo virtual fornecido. No <xref:System.Web.Hosting.VirtualFile.Open%2A> método, ele combina as informações da <xref:System.Data.DataSet> objeto com um arquivo de modelo e retorna a combinação como um <xref:System.IO.Stream> objeto.  
+  
+ [!code-csharp[System.Web.Hosting.VirtualPathProvider#40](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/CS/SampleVirtualFile.cs#40)]
+ [!code-vb[System.Web.Hosting.VirtualPathProvider#40](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/VB/SampleVirtualFile.vb#40)]  
+  
+ O segundo exemplo é o arquivo de dados XML usado para popular o <xref:System.Data.DataSet> objeto retornado por personalizado <xref:System.Web.Hosting.VirtualPathProvider> objeto. Esses dados XML são usados para demonstrar o uso de <xref:System.Web.Hosting.VirtualPathProvider>, <xref:System.Web.Hosting.VirtualFile>, e <xref:System.Web.Hosting.VirtualDirectory> classes para recuperar dados de dados externos e não se destina para representar um repositório de dados de qualidade de produção.  
+  
+```  
+<?xml version="1.0" encoding="utf-8" ?>  
+<resource type="dir"   
+          path="/vrDir"   
+          parentPath=""   
+          content="">  
+  <resource type="file"   
+            path="/vrDir/Level1FileA.vrf"  
+            parentPath="/vrDir"   
+            content="This is the content of file Level1FileA.">  
+  </resource>  
+  <resource type="file"   
+            path="/vrDir/Level1FileB.vrf"  
+            parentPath="/vrDir"   
+            content="This is the content of file Level1FileB.">  
+  </resource>  
+  <resource type="dir"   
+            path="/vrDir/Level2DirA"   
+            parentPath="/vrDir"   
+            content="">  
+    <resource type="file"   
+              path="/vrDir/Level2DirA/Level2FileA.vrf"   
+              parentPath="/vrDir/Level2DirA"   
+              content="This is the content of file Level2FileA.">  
+    </resource>  
+    <resource type="file"   
+              path="/vrDir/Level2DirA/Level2FileB.vrf"  
+              parentPath="/vrDir/Level2DirA"   
+              content="This is the content of file Level2FileB.">  
+    </resource>  
+  </resource>  
+  <resource type="dir"   
+            path="/vrDir/Level2DirB"   
+            parentPath="/vrDir"   
+            content="">  
+    <resource type="file"   
+              path="/vrDir/Level2DirB/Level2FileA.vrf"   
+              parentPath="/vrDir/Level2DirB"   
+              content="This is the content of file Level2FileA.">  
+    </resource>  
+    <resource type="file"   
+              path="/vrDir/Level2DirB/Level2FileB.vrf"  
+              parentPath="/vrDir/Level2DirB"   
+              content="This is the content of file Level2FileB.">  
+    </resource>  
+  </resource>  
+</resource>  
+```  
+  
+ O terceiro exemplo é o arquivo de texto usado como modelo para o arquivo virtual. Espaços reservados no arquivo são representados por texto entre sinais de porcentagem (%)), como `%file%` e `%content%`. Os carimbos de hora são usados para monitorar as alterações nos dados armazenados em cache de arquivo virtual.  
+  
+```  
+<html>  
+  <head>  
+    <title>File name: %file%</title>  
+  </head>  
+  
+  <body>  
+    <h1>%file%</h1>  
+    <p>%content%</p>  
+    <p>Page timestamp: %pageTimestamp%<br>  
+       Data timestamp: %dataTimestamp%<br>  
+       Template timestamp: %templateTimestamp%</p>  
+  </body>  
+</html>  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar do <see cref="T:System.Web.Hosting.VirtualFile" /> classe, você deve substituir o <see cref="M:System.Web.Hosting.VirtualFile.Open" /> método para retornar um fluxo somente leitura para o conteúdo do recurso virtual.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected VirtualFile (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.VirtualFile.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual para o recurso representado por esta instância.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Hosting.VirtualFile" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir é uma implementação do <xref:System.Web.Hosting.VirtualFile.%23ctor%2A> construtor que recupera informações de arquivo virtual de um <xref:System.Data.DataSet> objeto fornecido por um personalizado <xref:System.Web.Hosting.VirtualPathProvider> objeto. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Hosting.VirtualFile> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Hosting.VirtualPathProvider#41](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/CS/SampleVirtualFile.cs#41)]
+ [!code-vb[System.Web.Hosting.VirtualPathProvider#41](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/VB/SampleVirtualFile.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectory">
+      <MemberSignature Language="C#" Value="public override bool IsDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.VirtualFile.IsDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica que esse é um recurso virtual que deve ser tratado como um arquivo.</summary>
+        <value>Sempre <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.VirtualFile.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna um fluxo somente leitura para o recurso virtual.</summary>
+        <returns>Um fluxo somente leitura para o arquivo virtual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Hosting.VirtualFile.Open%2A> método retorna um fluxo que contém os dados tratados como um arquivo com o <xref:System.Web.Hosting.VirtualPathProvider> classe. O fluxo é somente leitura e pode ser buscada (o <xref:System.IO.Stream.CanSeek%2A> propriedade é true).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é uma implementação do <xref:System.Web.Hosting.VirtualFile.Open%2A> método que combina informações específicas de arquivo virtual com um arquivo de modelo e, em seguida, retorna a combinação. O arquivo de modelo é armazenado em cache para reduzir a sobrecarga de leitura do sistema de arquivos várias vezes para recuperar o arquivo de modelo. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Hosting.VirtualFile> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Hosting.VirtualPathProvider#42](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/CS/SampleVirtualFile.cs#42)]
+ [!code-vb[System.Web.Hosting.VirtualPathProvider#42](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/VB/SampleVirtualFile.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Em classes derivadas de <see cref="M:System.Web.Hosting.VirtualFile.Open" /> método deve retornar um fluxo pesquisável. Se o método retorna um fluxo que não dá suporte para busca, uma <see cref="T:System.NotSupportedException" /> é gerada quando o fluxo é passado para o <see cref="T:System.Web.HttpResponse" /> objeto para gravar os dados. A exceção ocorre porque a resposta tenta ler o <see cref="P:System.IO.Stream.Length" /> propriedade, e em um fluxo não pesquisável, a tentativa de acessar a propriedade faz com que uma exceção. Para obter mais informações, consulte a propriedade <see cref="P:System.IO.Stream.CanSeek" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

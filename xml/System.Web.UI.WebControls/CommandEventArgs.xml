@@ -1,0 +1,193 @@
+<Type Name="CommandEventArgs" FullName="System.Web.UI.WebControls.CommandEventArgs">
+  <TypeSignature Language="C#" Value="public class CommandEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see langword="Command" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Command` é gerado quando um <xref:System.Web.UI.WebControls.Button> ou <xref:System.Web.UI.WebControls.ImageButton> controle é clicado.  
+  
+ O <xref:System.Web.UI.WebControls.CommandEventArgs> objeto contém dados sobre o `Command` evento que pode ser acessado no evento manipulador. Usando as propriedades disponíveis no <xref:System.Web.UI.WebControls.CommandEventArgs> classe, você pode determinar o nome do comando para executar, como `Sort`, além de um argumento opcional que complementam o comando, como `Ascending`.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.CommandEventArgs>, consulte o <xref:System.Web.UI.WebControls.CommandEventArgs.%23ctor%2A> construtor.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como acessar as propriedades no <xref:System.Web.UI.WebControls.CommandEventArgs> para determinar o comando para executar. Este exemplo especifica o manipulador de eventos declarativamente, usando o <xref:System.Web.UI.WebControls.Button.OnClick%2A> propriedade o <xref:System.Web.UI.WebControls.Button> controle.  
+  
+ [!code-aspx-csharp[ButtonCommandNameArgument#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommandNameArgument/CS/buttoncommandnamecs.aspx#1)]
+ [!code-aspx-vb[ButtonCommandNameArgument#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommandNameArgument/VB/buttoncommandnamevb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como especificar o manipulador de eventos e programaticamente adicioná-lo para o evento no `Page_Load` método.  
+  
+ [!code-aspx-csharp[ButtonCommand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommand/CS/buttoncommandcs.aspx#1)]
+ [!code-aspx-vb[ButtonCommand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommand/VB/buttoncommandvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandEventArgs (System.Web.UI.WebControls.CommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.CommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandEventArgs.#ctor(System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> que contém os dados do evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> classe com outro <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.CommandEventArgs> classe usando especificado <xref:System.Web.UI.WebControls.CommandEventArgs> objeto.  
+  
+ Quando uma instância de <xref:System.Web.UI.WebControls.CommandEventArgs> é criado por uma chamada para o construtor, as seguintes propriedades são inicializadas com os valores especificados.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|CommandName|O `e.CommandName` parâmetro.|  
+|CommandArgument|O `e.CommandArgument` parâmetro.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.CommandEventArgs> classe usando especificado <xref:System.Web.UI.WebControls.CommandEventArgs> objeto.  
+  
+ [!code-csharp[Classic CommandEventArgs.CommandEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CommandEventArgs.CommandEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic CommandEventArgs.CommandEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CommandEventArgs.CommandEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandEventArgs (string commandName, object argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string commandName, object argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CommandEventArgs.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandName" Type="System.String" />
+        <Parameter Name="argument" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="commandName">O nome do comando.</param>
+        <param name="argument">Um <see cref="T:System.Object" /> que contém os argumentos para o comando.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> classe com o nome do comando especificado e o argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.CommandEventArgs> usando o nome do comando especificado e o argumento de classe.  
+  
+ Quando uma instância de <xref:System.Web.UI.WebControls.CommandEventArgs> é criado por uma chamada para o construtor, as seguintes propriedades são inicializadas com os valores especificados.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|CommandName|O valor de `commandName` parâmetro.|  
+|CommandArgument|O valor de `argument` parâmetro.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.CommandEventArgs> usando o nome do comando especificado e o argumento de classe.  
+  
+ [!code-csharp[Classic CommandEventArgs.CommandEventArgs1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CommandEventArgs.CommandEventArgs1 Example/CS/source.cs#1)]
+ [!code-vb[Classic CommandEventArgs.CommandEventArgs1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CommandEventArgs.CommandEventArgs1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandArgument">
+      <MemberSignature Language="C#" Value="public object CommandArgument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandEventArgs.CommandArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o argumento para o comando.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém o argumento para o comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> pode conter qualquer cadeia de caracteres definida pelo programador. O <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> propriedade complementa o <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> propriedade, permitindo que você forneça informações adicionais para o comando. Por exemplo, você pode definir o <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> propriedade `Sort` e defina o <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> propriedade `Ascending` para especificar um comando para classificar em ordem crescente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> para determinar informações complementares para executar o comando.  
+  
+ [!code-aspx-csharp[ButtonCommandNameArgument#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommandNameArgument/CS/buttoncommandnamecs.aspx#1)]
+ [!code-aspx-vb[ButtonCommandNameArgument#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommandNameArgument/VB/buttoncommandnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandName">
+      <MemberSignature Language="C#" Value="public string CommandName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CommandEventArgs.CommandName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do comando.</summary>
+        <value>O nome do comando a se executar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> para determinar o comando para executar. O <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> propriedade pode conter qualquer cadeia de caracteres definida pelo programador. O programador pode identificar o nome do comando no código e executar as tarefas apropriadas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> para determinar programaticamente para executar o comando.  
+  
+ [!code-aspx-csharp[ButtonCommandNameArgument#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonCommandNameArgument/CS/buttoncommandnamecs.aspx#1)]
+ [!code-aspx-vb[ButtonCommandNameArgument#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonCommandNameArgument/VB/buttoncommandnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

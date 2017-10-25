@@ -1,0 +1,225 @@
+<Type Name="ComposablePartCatalog" FullName="System.ComponentModel.Composition.Primitives.ComposablePartCatalog">
+  <TypeSignature Language="C#" Value="public abstract class ComposablePartCatalog : IDisposable, System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ComposablePartCatalog extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt;, class System.Collections.IEnumerable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.ComponentModel.Composition.Primitives.ComposablePartCatalogDebuggerProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base abstrata para catálogos de parte combinável, que coletam e retornam objetos <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Este tipo é thread-safe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ComposablePartCatalog ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartCatalog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartCatalog.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.ComponentModel.Composition.Primitives.ComposablePartCatalog>. O `Dispose` método deixa o <xref:System.ComponentModel.Composition.Primitives.ComposablePartCatalog> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.ComponentModel.Composition.Primitives.ComposablePartCatalog> para o coletor de lixo possa recuperar a memória que o <xref:System.ComponentModel.Composition.Primitives.ComposablePartCatalog> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.ComponentModel.Composition.Primitives.ComposablePartCatalog>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.ComponentModel.Composition.Primitives.ComposablePartCatalog> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartCatalog.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartCatalog" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerator&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartCatalog.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do catálogo.</summary>
+        <returns>Um enumerador que pode ser usado para iterar por meio do catálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;Tuple&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt; GetExports (System.ComponentModel.Composition.Primitives.ImportDefinition definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Tuple`2&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition, class System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt; GetExports(class System.ComponentModel.Composition.Primitives.ImportDefinition definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartCatalog.GetExports(System.ComponentModel.Composition.Primitives.ImportDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Tuple&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">As condições do <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> objetos a serem retornadas.</param>
+        <summary>Obtém uma lista de definições de exportação que correspondem uma restrição definida por especificado <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> objeto.</summary>
+        <returns>Uma coleção de <see cref="T:System.Tuple`2" /> que contém o <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> objetos e seus respectivos <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> objetos para objetos que correspondem a restrição especificada por <paramref name="definition" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituições desse método devem retornar nunca `null`. Se nenhum <xref:System.ComponentModel.Composition.Primitives.ExportDefinition> corresponde às condições definidas pelo `definition`, retornar vazio <xref:System.Collections.Generic.IEnumerable%601> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartCatalog" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="definition" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parts">
+      <MemberSignature Language="C#" Value="public virtual System.Linq.IQueryable&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; Parts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.IQueryable`1&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; Parts" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ComposablePartCatalog.Parts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as definições de parte que estão contidas no catálogo.</summary>
+        <value>O <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartDefinition" /> contidas a <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituições dessa propriedade nunca devem retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartCatalog" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePartCatalog.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do catálogo.</summary>
+        <returns>Um enumerador que pode ser usado para iterar por meio do catálogo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.Composition.Primitives.ComposablePartCatalog> é convertida em uma interface de <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

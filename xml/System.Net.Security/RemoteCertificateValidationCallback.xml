@@ -1,0 +1,62 @@
+<Type Name="RemoteCertificateValidationCallback" FullName="System.Net.Security.RemoteCertificateValidationCallback">
+  <TypeSignature Language="C#" Value="public delegate bool RemoteCertificateValidationCallback(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RemoteCertificateValidationCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Security.RemoteCertificateValidationCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+    <Parameter Name="chain" Type="System.Security.Cryptography.X509Certificates.X509Chain" />
+    <Parameter Name="sslPolicyErrors" Type="System.Net.Security.SslPolicyErrors" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">Um objeto que contém informações de estado para essa validação.</param>
+    <param name="certificate">O certificado usado para autenticar a entidade remota.</param>
+    <param name="chain">A cadeia de autoridades de certificação associada ao certificado remoto.</param>
+    <param name="sslPolicyErrors">Um ou mais erros associados ao certificado remoto.</param>
+    <summary>Verifica o certificado SSL (protocolo SSL) remoto usado para autenticação.</summary>
+    <returns>Um valor de <see cref="T:System.Boolean" /> que determina se o certificado especificado é aceito para autenticação.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O representante `sslPolicyErrors` argumento contém erros de certificado retornados pelo SSPI durante a autenticação do cliente ou servidor. O <xref:System.Boolean> valor retornado pelo método invocado por este delegado determina se a autenticação pode ser bem-sucedida.  
+  
+ Este delegado é usado com o <xref:System.Net.Security.SslStream> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir implementa um método que é invocado por uma instância de <xref:System.Net.Security.RemoteCertificateValidationCallback> classe. Se houver erros de validação, este método exibe-os e retorna `false`, que impede a comunicação com o servidor não autenticado.  
+  
+ [!code-cpp[NCLSslClientSync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclSslClientSync/CPP/clientsync.cpp#1)]
+ [!code-csharp[NCLSslClientSync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclSslClientSync/CS/clientsync.cs#1)]  
+  
+ O exemplo de código a seguir cria o delegado usando o método definido no exemplo de código anterior.  
+  
+ [!code-cpp[NCLSslClientSync#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NclSslClientSync/CPP/clientsync.cpp#4)]
+ [!code-csharp[NCLSslClientSync#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NclSslClientSync/CS/clientsync.cs#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

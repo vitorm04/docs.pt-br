@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime" /> namespace contém tipos avançados que oferecem suporte a vários namespaces, como o <see langword="System" />, <see langword="Runtime" />e o <see langword="Security" /> namespaces.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos encontrados no namespace destinam-se para uso em desenvolvimento avançado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

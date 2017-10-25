@@ -1,0 +1,650 @@
+<Type Name="SimpleWorkerRequest" FullName="System.Web.Hosting.SimpleWorkerRequest">
+  <TypeSignature Language="C#" Value="public class SimpleWorkerRequest : System.Web.HttpWorkerRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SimpleWorkerRequest extends System.Web.HttpWorkerRequest" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.SimpleWorkerRequest" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.HttpWorkerRequest</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma implementação simples da classe abstrata <see cref="T:System.Web.HttpWorkerRequest" /> que pode ser usada para hospedar aplicativos do ASP.NET fora de um aplicativo de IIS (Serviços de Informações da Internet). Você pode empregar a <see langword="SimpleWorkerRequest" /> diretamente ou estendê-la.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação simple de `HttpWorkerRequest` fornece a URL de solicitação e a cadeia de caracteres de consulta e captura o corpo da saída em um <xref:System.IO.TextWriter>. Para obter funcionalidade avançada, como fornecimento de conteúdo publicado e cabeçalhos e capturar a cabeçalhos de resposta ou corpo de resposta como dados binários, você deve estender `SimpleWorkerRequest` e substituir apropriada `HttpWorkerRequest` métodos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SimpleWorkerRequest (string page, string query, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string page, string query, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.#ctor(System.String,System.String,System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="page" Type="System.String" />
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="page">A página deve ser solicitado (ou o caminho virtual para a página, relativo ao diretório do aplicativo).</param>
+        <param name="query">O texto da cadeia de caracteres de consulta.</param>
+        <param name="output">Um <see cref="T:System.IO.TextWriter" /> que captura a saída da resposta</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Hosting.SimpleWorkerRequest" /> classe quando o domínio de aplicativo de destino foi criado usando o <see cref="M:System.Web.Hosting.ApplicationHost.CreateApplicationHost(System.Type,System.String,System.String)" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SimpleWorkerRequest (string appVirtualDir, string appPhysicalDir, string page, string query, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string appVirtualDir, string appPhysicalDir, string page, string query, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.#ctor(System.String,System.String,System.String,System.String,System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appVirtualDir" Type="System.String" />
+        <Parameter Name="appPhysicalDir" Type="System.String" />
+        <Parameter Name="page" Type="System.String" />
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="appVirtualDir">O caminho virtual para o diretório de aplicativo; Por exemplo, "/ aplicativo".</param>
+        <param name="appPhysicalDir">O caminho físico para o diretório de aplicativo; Por exemplo, "c:\app".</param>
+        <param name="page">O caminho virtual para a solicitação (relativo ao diretório do aplicativo).</param>
+        <param name="query">O texto da cadeia de caracteres de consulta.</param>
+        <param name="output">Um <see cref="T:System.IO.TextWriter" /> que captura a saída da resposta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Hosting.SimpleWorkerRequest" /> classe para uso em um domínio de aplicativo arbitrário, quando o código de usuário cria um <see cref="T:System.Web.HttpContext" /> (passando o <see langword="SimpleWorkerRequest" /> como um argumento para o <see langword="HttpContext" /> construtor).</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">O <paramref name="appVirtualDir" /> parâmetro não pode ser substituído neste contexto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOfRequest">
+      <MemberSignature Language="C#" Value="public override void EndOfRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndOfRequest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.EndOfRequest" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o <see cref="T:System.Web.HttpWorkerRequest" /> que o processamento da solicitação atual for concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushResponse">
+      <MemberSignature Language="C#" Value="public override void FlushResponse (bool finalFlush);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FlushResponse(bool finalFlush) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.FlushResponse(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalFlush" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="finalFlush">
+          <see langword="true" />Se esta for os última vez que os dados de resposta serão liberados; Caso contrário, <see langword="false" />.</param>
+        <summary>Envia todos os dados de resposta pendentes ao cliente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAppPath">
+      <MemberSignature Language="C#" Value="public override string GetAppPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetAppPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetAppPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho virtual para o aplicativo de servidor em execução no momento.</summary>
+        <returns>O caminho virtual do aplicativo atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAppPathTranslated">
+      <MemberSignature Language="C#" Value="public override string GetAppPathTranslated ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetAppPathTranslated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetAppPathTranslated" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho UNC traduzidos para o aplicativo de servidor em execução no momento.</summary>
+        <returns>O caminho físico do aplicativo atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFilePath">
+      <MemberSignature Language="C#" Value="public override string GetFilePath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetFilePath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetFilePath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho físico para o URI solicitado.</summary>
+        <returns>O caminho físico para o URI solicitado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFilePathTranslated">
+      <MemberSignature Language="C#" Value="public override string GetFilePathTranslated ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetFilePathTranslated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetFilePathTranslated" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho de arquivo físico para o URI solicitado (e converte-o do caminho virtual para o caminho físico: por exemplo, "/ proj1/page.aspx" para "c:\dir\page.aspx")</summary>
+        <returns>O caminho de arquivo físico traduzido para o URI solicitado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHttpVerbName">
+      <MemberSignature Language="C#" Value="public override string GetHttpVerbName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetHttpVerbName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetHttpVerbName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o verbo de solicitação HTTP.</summary>
+        <returns>O verbo HTTP para esta solicitação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHttpVersion">
+      <MemberSignature Language="C#" Value="public override string GetHttpVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetHttpVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetHttpVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a cadeia de caracteres de versão HTTP da solicitação (por exemplo, "HTTP/1.1").</summary>
+        <returns>A cadeia de caracteres de versão HTTP retornada no cabeçalho da solicitação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalAddress">
+      <MemberSignature Language="C#" Value="public override string GetLocalAddress ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetLocalAddress() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetLocalAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o endereço IP do servidor da interface em que a solicitação foi recebida.</summary>
+        <returns>O endereço IP do servidor da interface em que a solicitação foi recebida.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalPort">
+      <MemberSignature Language="C#" Value="public override int GetLocalPort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetLocalPort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetLocalPort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o número da porta na qual a solicitação foi recebida.</summary>
+        <returns>O número de porta do servidor no qual a solicitação foi recebida.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathInfo">
+      <MemberSignature Language="C#" Value="public override string GetPathInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetPathInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetPathInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna informações de caminho adicionais para um recurso com uma extensão de URL. Ou seja, para /virdir/page.html/tail caminho, o valor de retorno é /tail.</summary>
+        <returns>Informações adicionais de caminho para um recurso.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryString">
+      <MemberSignature Language="C#" Value="public override string GetQueryString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetQueryString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetQueryString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a cadeia de caracteres de consulta especificada na URL da solicitação.</summary>
+        <returns>A cadeia de caracteres de consulta da solicitação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRawUrl">
+      <MemberSignature Language="C#" Value="public override string GetRawUrl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetRawUrl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetRawUrl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho da URL contido no cabeçalho com a cadeia de caracteres de consulta acrescentada.</summary>
+        <returns>O caminho bruto da URL do cabeçalho da solicitação.  
+  
+ <block subset="none" type="note"><para>  
+ A URL retornada não é normalizada. Usando a URL para o controle de acesso ou decisões de segurança pode expor seu aplicativo para vulnerabilidades de segurança de conversão em formato canônico.  
+  
+</para></block></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoteAddress">
+      <MemberSignature Language="C#" Value="public override string GetRemoteAddress ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetRemoteAddress() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetRemoteAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o endereço IP do cliente.</summary>
+        <returns>Endereço IP do cliente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemotePort">
+      <MemberSignature Language="C#" Value="public override int GetRemotePort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetRemotePort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetRemotePort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o número da porta do cliente.</summary>
+        <returns>Número da porta do cliente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServerVariable">
+      <MemberSignature Language="C#" Value="public override string GetServerVariable (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetServerVariable(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetServerVariable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da variável de servidor solicitada.</param>
+        <summary>Retorna uma variável de servidor único de um dicionário de variáveis de servidor associado à solicitação.</summary>
+        <returns>A variável de servidor solicitada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUriPath">
+      <MemberSignature Language="C#" Value="public override string GetUriPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetUriPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetUriPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho virtual para o URI solicitado.</summary>
+        <returns>O caminho para o URI solicitado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUserToken">
+      <MemberSignature Language="C#" Value="public override IntPtr GetUserToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance native int GetUserToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.GetUserToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um token de representação do cliente.</summary>
+        <returns>Um valor que representa o token de representação do cliente. O padrão é <see cref="F:System.IntPtr.Zero" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineConfigPath">
+      <MemberSignature Language="C#" Value="public override string MachineConfigPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineConfigPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.SimpleWorkerRequest.MachineConfigPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico completo para o arquivo Machine. config.</summary>
+        <value>O caminho físico para o arquivo Machine. config.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineInstallDirectory">
+      <MemberSignature Language="C#" Value="public override string MachineInstallDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineInstallDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.SimpleWorkerRequest.MachineInstallDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico para o diretório onde os binários ASP.NET estão instalados.</summary>
+        <value>O diretório físico para os arquivos binários do ASP.NET.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPath">
+      <MemberSignature Language="C#" Value="public override string MapPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string MapPath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.MapPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual.</param>
+        <summary>Retorna o caminho físico correspondente para o caminho virtual especificado.</summary>
+        <returns>O caminho físico que corresponde ao caminho virtual especificado no <paramref name="path" /> parâmetro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootWebConfigPath">
+      <MemberSignature Language="C#" Value="public override string RootWebConfigPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootWebConfigPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.SimpleWorkerRequest.RootWebConfigPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico completo para o arquivo Web. config de raiz.</summary>
+        <value>O caminho físico para o arquivo Web. config de raiz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendKnownResponseHeader">
+      <MemberSignature Language="C#" Value="public override void SendKnownResponseHeader (int index, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SendKnownResponseHeader(int32 index, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.SendKnownResponseHeader(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do cabeçalho. Por exemplo, <see cref="F:System.Web.HttpWorkerRequest.HeaderContentLength" />.</param>
+        <param name="value">O valor do cabeçalho.</param>
+        <summary>Adiciona um cabeçalho HTTP padrão à resposta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResponseFromFile">
+      <MemberSignature Language="C#" Value="public override void SendResponseFromFile (IntPtr handle, long offset, long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SendResponseFromFile(native int handle, int64 offset, int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.SendResponseFromFile(System.IntPtr,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="handle">O identificador de arquivo a ser enviado.</param>
+        <param name="offset">A posição inicial no arquivo.</param>
+        <param name="length">O número de bytes a serem enviados.</param>
+        <summary>Adiciona o conteúdo do arquivo com o identificador especificado para a resposta e especifica a posição inicial no arquivo e o número de bytes a enviar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResponseFromFile">
+      <MemberSignature Language="C#" Value="public override void SendResponseFromFile (string filename, long offset, long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SendResponseFromFile(string filename, int64 offset, int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.SendResponseFromFile(System.String,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo a ser enviado.</param>
+        <param name="offset">A posição inicial no arquivo.</param>
+        <param name="length">O número de bytes a serem enviados.</param>
+        <summary>Adiciona o conteúdo do arquivo com o nome especificado para a resposta e especifica a posição inicial no arquivo e o número de bytes a enviar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResponseFromMemory">
+      <MemberSignature Language="C#" Value="public override void SendResponseFromMemory (byte[] data, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SendResponseFromMemory(unsigned int8[] data, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.SendResponseFromMemory(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">A matriz de bytes a enviar.</param>
+        <param name="length">O número de bytes a serem enviados.</param>
+        <summary>Adiciona o conteúdo de uma matriz de bytes para a resposta e especifica o número de bytes a enviar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendStatus">
+      <MemberSignature Language="C#" Value="public override void SendStatus (int statusCode, string statusDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SendStatus(int32 statusCode, string statusDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.SendStatus(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="statusCode" Type="System.Int32" />
+        <Parameter Name="statusDescription" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="statusCode">O código de status para enviar</param>
+        <param name="statusDescription">A descrição de status a enviar.</param>
+        <summary>Especifica a descrição HTTP de status e o código de status da resposta; Por exemplo, SendStatus (200, "Okey").</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendUnknownResponseHeader">
+      <MemberSignature Language="C#" Value="public override void SendUnknownResponseHeader (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SendUnknownResponseHeader(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.SimpleWorkerRequest.SendUnknownResponseHeader(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cabeçalho a enviar.</param>
+        <param name="value">O valor do cabeçalho.</param>
+        <summary>Adiciona um cabeçalho HTTP padrão à resposta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

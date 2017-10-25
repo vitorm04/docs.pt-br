@@ -1,0 +1,15 @@
+<Namespace Name="System.Data.OleDb">
+  <Docs>
+    <summary>O <see cref="N:System.Data.OleDb" /> namespace é o.NET Framework Data Provider para OLE DB.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Provedor de dados.NET Framework para OLE DB descreve uma coleção de classes usadas para acessar uma fonte de dados OLE DB no espaço gerenciado. Usando o <xref:System.Data.OleDb.OleDbDataAdapter>, você pode preencher um residente na memória <xref:System.Data.DataSet> que você pode usar para consultar e atualizar a fonte de dados.  
+  
+ Para obter informações sobre como usar esse namespace, consulte o <xref:System.Data.OleDb.OleDbDataAdapter>, <xref:System.Data.OleDb.OleDbDataReader>, <xref:System.Data.OleDb.OleDbCommand>, e <xref:System.Data.OleDb.OleDbConnection> classes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

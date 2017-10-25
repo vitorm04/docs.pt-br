@@ -1,0 +1,102 @@
+<Type Name="XhtmlConformanceSection" FullName="System.Web.Configuration.XhtmlConformanceSection">
+  <TypeSignature Language="C#" Value="public sealed class XhtmlConformanceSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XhtmlConformanceSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.XhtmlConformanceSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura o <see langword="xhtmlConformance" /> seção. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.XhtmlConformanceSection> classe fornece uma maneira de acessar e modificar programaticamente o `xhtmlConformance` seção de um arquivo de configuração.  
+  
+> [!NOTE]
+>  ASP.NET permite que você crie páginas da Web que são compatíveis com os padrões XHTML 1.1. Para obter mais informações sobre o padrão XHTML 1.1, consulte o site do W3C. Por padrão, quando você estiver trabalhando com navegadores que oferecem suporte a HTML 4.0 ou posterior, páginas e controles ASP.NET processam marcação que é compatível com o padrão XHTML 1.0 Transitional. No entanto, em algumas circunstâncias, talvez não seja ASP.NET para renderizar marcação XHTML. Isso ocorre geralmente quando você tem páginas existentes que dependem de marcas ou atributos que normalmente estaria proibidos pelo XHTML.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Somente as alterações de renderização que possam violar aplicativos existentes são revertidas ao seu comportamento antigo. Não há nenhum mecanismo para reverter todas as alterações feitas em conformidade com a especificação de XHTML.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XhtmlConformanceSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.XhtmlConformanceSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.XhtmlConformanceSection" /> classe usando parâmetros padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.XhtmlConformanceSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.XhtmlConformanceSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.XhtmlConformanceMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.XhtmlConformanceMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.XhtmlConformanceSection.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.XhtmlConformanceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade <see cref="P:System.Web.Configuration.XhtmlConformanceSection.Mode" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Configuration.XhtmlConformanceMode" />. O padrão é <see cref="F:System.Web.Configuration.XhtmlConformanceMode.Transitional" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, quando você estiver trabalhando com navegadores que oferecem suporte a HTML 4.0 ou posterior, páginas e controles ASP.NET processam marcação que é compatível com o padrão XHTML 1.0 Transitional. No entanto, em algumas circunstâncias, talvez não seja ASP.NET para renderizar marcação XHTML. Isso ocorre geralmente quando você tem páginas existentes que dependem de marcas ou atributos que normalmente estaria proibidos pelo XHTML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.XhtmlConformanceSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,744 @@
+<Type Name="Track" FullName="System.Windows.Controls.Primitives.Track">
+  <TypeSignature Language="C#" Value="public class Track : System.Windows.FrameworkElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Track extends System.Windows.FrameworkElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.Track" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma primitiva de controle que manipula o posicionamento e dimensionamento de um controle de <see cref="T:System.Windows.Controls.Primitives.Thumb" /> e de dois controles de <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> que são usados para definir um <see cref="P:System.Windows.Controls.Primitives.Track.Value" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.Track> controle não tem um padrão <xref:System.Windows.Controls.ControlTemplate>. Seu <xref:System.Windows.Controls.ControlTemplate> é implementado como parte do <xref:System.Windows.Controls.ControlTemplate> do <xref:System.Windows.Controls.Primitives.ScrollBar> e <xref:System.Windows.Controls.Slider> controles. O <xref:System.Windows.Controls.Primitives.Track> tem um <xref:System.Windows.Controls.Primitives.Thumb> controle e dois <xref:System.Windows.Controls.Primitives.RepeatButton> controles que são usados para alterar o <xref:System.Windows.Controls.Primitives.Track.Value%2A> propriedade o <xref:System.Windows.Controls.Primitives.Track> controle.  
+  
+ A ilustração a seguir mostra um <xref:System.Windows.Controls.Primitives.Track> em um controle deslizante.  
+  
+ **Um controle em um controle deslizante**  
+  
+ ![RepeatButton, Thumb](~/add/media/trackonslider.png "RepeatButton, Thumb")  
+  
+ A tabela a seguir mostra o <xref:System.Windows.Controls.Primitives.Track> correspondente e propriedades <xref:System.Windows.Controls.Primitives.RangeBase> propriedades que eles se associam. Quando a propriedade for alterada, a propriedade associada também será alterado.  
+  
+|Propriedade <xref:System.Windows.Controls.Primitives.Track>|Propriedade <xref:System.Windows.Controls.Primitives.RangeBase>|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.Primitives.Track.Maximum%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.Track.Minimum%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.Track.Value%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>|  
+  
+ A tabela a seguir mostra o <xref:System.Windows.Controls.Primitives.Track> correspondente e propriedades <xref:System.Windows.Controls.Primitives.ScrollBar> propriedades ao qual eles vinculam quando um <xref:System.Windows.Controls.Primitives.Track> faz parte de um <xref:System.Windows.Controls.Primitives.ScrollBar> controle e o <xref:System.Windows.Controls.Primitives.Track> propriedades não são definidas explicitamente.  
+  
+|Propriedade <xref:System.Windows.Controls.Primitives.Track>|Propriedade <xref:System.Windows.Controls.Primitives.ScrollBar>|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.Primitives.Track.Orientation%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.ScrollBar.Orientation%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Primitives.ScrollBar.ViewportSize%2A?displayProperty=nameWithType>|  
+  
+ A tabela a seguir mostra o <xref:System.Windows.Controls.Primitives.Track> correspondente e propriedades <xref:System.Windows.Controls.Slider> propriedades ao qual eles vinculam quando um <xref:System.Windows.Controls.Primitives.Track> faz parte de um <xref:System.Windows.Controls.Slider> controle e o <xref:System.Windows.Controls.Primitives.Track> propriedades não são definidas explicitamente.  
+  
+|Propriedade <xref:System.Windows.Controls.Primitives.Track>|Propriedade <xref:System.Windows.Controls.Slider>|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.Primitives.Track.Orientation%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.Orientation%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A?displayProperty=nameWithType>|<xref:System.Windows.Controls.Slider.IsDirectionReversed%2A?displayProperty=nameWithType>|  
+  
+ Além disso, o <xref:System.Windows.Controls.Primitives.RepeatButton.Delay%2A> propriedades para o <xref:System.Windows.Controls.Primitives.RepeatButton> controla para um <xref:System.Windows.Controls.Slider> controle, associar a <xref:System.Windows.Controls.Primitives.RepeatButton.Delay%2A> propriedades para o <xref:System.Windows.Controls.Primitives.RepeatButton> controla do <xref:System.Windows.Controls.Primitives.Track> controle.  
+  
+ Quando um <xref:System.Windows.Controls.Primitives.Track> é usada para rolar o conteúdo, o tamanho do <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controle é proporcional a porcentagem do conteúdo que aparece na área visível ou visor. A ilustração a seguir mostra um exemplo de um <xref:System.Windows.Controls.ScrollViewer> controle que implementa um <xref:System.Windows.Controls.Primitives.Track> controle.  
+  
+ **Uma barra de rolagem com um controle de faixa**  
+  
+ ![Barra de rolagem illlustration](~/add/media/scrollbargeneric.png "illlustration da barra de rolagem")  
+  
+ O seguinte cálculo é usado para calcular o tamanho do <xref:System.Windows.Controls.Primitives.Track.Thumb%2A>.  
+  
+ tamanho de miniatura = (viewportSize/(maximum–minimum+viewportSize)) × trackLength  
+  
+ O parâmetro viewportSize é o valor da <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> propriedade. Os parâmetros de mínimos e máximo correspondem do <xref:System.Windows.Controls.Primitives.Track.Maximum%2A> e <xref:System.Windows.Controls.Primitives.Track.Minimum%2A> valores de propriedade. O valor da expressão máximo-mínimo + viewportSize é o tamanho do conteúdo rolável. Observe que o valor da <xref:System.Windows.Controls.Primitives.Track.Maximum%2A> propriedade representa o <xref:System.Windows.Controls.Primitives.Track.Value%2A> do <xref:System.Windows.Controls.Primitives.Track> quando o conteúdo é rolado para a parte inferior. Isso <xref:System.Windows.Controls.Primitives.Track.Maximum%2A> valor não é o mesmo que o comprimento ou a extensão do conteúdo. Para obter uma explicação mais detalhada, consulte <xref:System.Windows.Controls.Primitives.Track.Maximum%2A?displayProperty=nameWithType>.  
+  
+ O <xref:System.Windows.Controls.Primitives.Track.Value%2A> de um <xref:System.Windows.Controls.Primitives.Track> em uma <xref:System.Windows.Controls.Primitives.ScrollBar> aumenta de cima para baixo ou da esquerda para a direita, dependendo da orientação do <xref:System.Windows.Controls.Primitives.ScrollBar>. Da mesma forma, o <xref:System.Windows.Controls.Primitives.Track.Value%2A> de um <xref:System.Windows.Controls.Primitives.Track> em uma <xref:System.Windows.Controls.Slider> aumenta de baixo para cima ou da esquerda para a direita, dependendo da orientação do <xref:System.Windows.Controls.Slider>. Para alterar a direção de aumento do valor, defina o <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A> propriedade o <xref:System.Windows.Controls.Primitives.Track> para `true`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.Primitives.Track> controlar um <xref:System.Windows.Controls.Primitives.ScrollBar> <xref:System.Windows.Controls.ControlTemplate>.  
+  
+ [!code-xaml[ScrollBarTemplateExample#TrackDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#trackdefinition)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Track ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Track.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Track.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">A área que é fornecida para o <see cref="T:System.Windows.Controls.Primitives.Track" />.</param>
+        <summary>Cria o layout para o <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <returns>O <see cref="T:System.Windows.Size" /> a ser usado para o <see cref="T:System.Windows.Controls.Primitives.Track" /> conteúdo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseRepeatButton">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.RepeatButton DecreaseRepeatButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Primitives.RepeatButton DecreaseRepeatButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.DecreaseRepeatButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.RepeatButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> que diminui o <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> propriedade o <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <value>O <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> que reduz a <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> do <see cref="T:System.Windows.Controls.Primitives.Track" /> controlar quando o <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> é pressionado. O padrão é um controle <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> que tem configurações padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Controls.Primitives.Track> controle está em um <xref:System.Windows.Controls.Slider> controle, o <xref:System.Windows.Controls.Primitives.RepeatButton.Delay%2A> propriedades do <xref:System.Windows.Controls.Primitives.RepeatButton> controla do <xref:System.Windows.Controls.Primitives.Track> associar ao <xref:System.Windows.Controls.Primitives.RepeatButton.Delay%2A> propriedade do <xref:System.Windows.Controls.Slider> controle.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra como o <xref:System.Windows.Controls.Primitives.Track.DecreaseRepeatButton%2A> e <xref:System.Windows.Controls.Primitives.Track.IncreaseRepeatButton%2A> estilos são definidos dentro de <xref:System.Windows.Controls.Primitives.ScrollBar> modelo de controle quando o <xref:System.Windows.Controls.Primitives.Track.Orientation%2A> é de propriedade <xref:System.Windows.Controls.Orientation.Vertical>. Para o exemplo completo, consulte o [modelos e estilos de barra de rolagem](~/docs/framework/wpf/controls/scrollbar-styles-and-templates.md).  
+  
+ [!code-xaml[ScrollBarTemplateExample#RepeatButtonStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#repeatbuttonstyle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Track.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do filho.</param>
+        <summary>Obtém o filho do <see cref="T:System.Windows.Controls.Primitives.Track" /> no índice especificado.</summary>
+        <returns>Retorna o objeto do <see cref="T:System.Windows.Controls.Primitives.Track" /> no índice especificado na lista de elementos filho de visual. O índice deve ser um número entre zero (0) e o valor de <see cref="P:System.Windows.Controls.Primitives.Track.VisualChildrenCount" /> propriedade menos um (1).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especificar os elementos filho de um <xref:System.Windows.Controls.Primitives.Track> definindo o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A>, <xref:System.Windows.Controls.Primitives.Track.DecreaseRepeatButton%2A>, e <xref:System.Windows.Controls.Primitives.Track.IncreaseRepeatButton%2A> propriedades. Os elementos filho são indexados na ordem em que as propriedades são definidas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice especificado é maior que o valor de <see cref="P:System.Windows.Controls.Primitives.Track.VisualChildrenCount" /> propriedade menos um (1).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseRepeatButton">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.RepeatButton IncreaseRepeatButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Primitives.RepeatButton IncreaseRepeatButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.IncreaseRepeatButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.RepeatButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> que aumenta a <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> propriedade o <see cref="T:System.Windows.Controls.Primitives.Track" /> classe.</summary>
+        <value>O <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> que aumenta a <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> do <see cref="T:System.Windows.Controls.Primitives.Track" /> controlar quando o <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> é pressionado. O padrão é um controle <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> que tem configurações padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Controls.Primitives.Track> controle está em um <xref:System.Windows.Controls.Slider> controle, o <xref:System.Windows.Controls.Primitives.RepeatButton.Delay%2A> propriedades do <xref:System.Windows.Controls.Primitives.RepeatButton> controla do <xref:System.Windows.Controls.Primitives.Track> associar ao <xref:System.Windows.Controls.Primitives.RepeatButton.Delay%2A> propriedade do <xref:System.Windows.Controls.Slider> controle.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra como o <xref:System.Windows.Controls.Primitives.Track.DecreaseRepeatButton%2A> e <xref:System.Windows.Controls.Primitives.Track.IncreaseRepeatButton%2A> estilos são definidos dentro de <xref:System.Windows.Controls.Primitives.ScrollBar> modelo de controle quando o <xref:System.Windows.Controls.Primitives.Track.Orientation%2A> é de propriedade <xref:System.Windows.Controls.Orientation.Vertical>.  
+  
+ [!code-xaml[ScrollBarTemplateExample#RepeatButtonStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#repeatbuttonstyle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectionReversed">
+      <MemberSignature Language="C#" Value="public bool IsDirectionReversed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirectionReversed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.IsDirectionReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a direção do aumento de <see cref="P:System.Windows.Controls.Primitives.Track.Value" /> é invertida da direção padrão.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="P:System.Windows.Controls.Primitives.Track.IncreaseRepeatButton" /> e o <see cref="P:System.Windows.Controls.Primitives.Track.DecreaseRepeatButton" /> trocaram de posição e a direção do aumento do valor for invertida; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o valor de <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A> é definido como `true`, o <xref:System.Windows.Controls.Primitives.Track.DecreaseRepeatButton%2A> e <xref:System.Windows.Controls.Primitives.Track.IncreaseRepeatButton%2A> no <xref:System.Windows.Controls.Primitives.Track> locais do exchange.  
+  
+ <xref:System.Windows.Controls.Primitives.Track>valores aumentam da esquerda para a direita para ambos os horizontal <xref:System.Windows.Controls.Slider> e <xref:System.Windows.Controls.Primitives.ScrollBar> controles. No entanto, o <xref:System.Windows.Controls.Primitives.Track> valores para vertical <xref:System.Windows.Controls.Primitives.ScrollBar> aumentar de cima para baixo, enquanto para vertical <xref:System.Windows.Controls.Slider> esses valores aumentam de baixo para cima. Quando você define o <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A> propriedade `true`, inverte a direção de aumento do valor.  
+  
+ Se você implementar um <xref:System.Windows.Controls.Primitives.Track> como parte de um <xref:System.Windows.Controls.Slider> controle e você não definir explicitamente o <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A?displayProperty=nameWithType> propriedade, o <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A?displayProperty=nameWithType> propriedade associa ao <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A?displayProperty=nameWithType> propriedade.  
+  
+<a name="dependencyPropertyInfo_IsDirectionReversed"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Track.IsDirectionReversedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra como o <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A> propriedade é definida dentro do <xref:System.Windows.Controls.Primitives.ScrollBar> modelo de controle quando o <xref:System.Windows.Controls.Primitives.Track.Orientation%2A> é de propriedade <xref:System.Windows.Controls.Orientation.Vertical>.  
+  
+ [!code-xaml[ScrollBarTemplateExample#RepeatButtonStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#repeatbuttonstyle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectionReversedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsDirectionReversedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsDirectionReversedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Track.IsDirectionReversedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Track.IsDirectionReversed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public double Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o máximo possível <see cref="P:System.Windows.Controls.Primitives.Track.Value" /> do <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <value>O maior permitido <see cref="P:System.Windows.Controls.Primitives.Track.Value" /> para o <see cref="T:System.Windows.Controls.Primitives.Track" />. O padrão é 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Controls.Primitives.Track> controle está em um <xref:System.Windows.Controls.Primitives.RangeBase> controle e o <xref:System.Windows.Controls.Primitives.Track.Maximum%2A?displayProperty=nameWithType> propriedade não está definida explicitamente, essa propriedade automaticamente associa com o <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A?displayProperty=nameWithType> propriedade.  
+  
+ O <xref:System.Windows.Controls.Primitives.Track.Maximum%2A> valor para um <xref:System.Windows.Controls.Primitives.ScrollBar> controle é equivalente ao tamanho do conteúdo rolável menos o tamanho do visor ou área de conteúdo visível. Por exemplo, se o tamanho do conteúdo é 100 e o tamanho do <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> propriedade é 30, o valor da <xref:System.Windows.Controls.Primitives.Track.Maximum%2A> propriedade é 70. Isso é verdadeiro porque o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> propriedade o <xref:System.Windows.Controls.Primitives.ScrollBar> controle corresponde à posição no conteúdo rolável que aparece na parte superior do visor. Quando o conteúdo é rolado para a parte mais inferior neste exemplo, 30 por cento do conteúdo ainda aparece no visor. Portanto, o <xref:System.Windows.Controls.Primitives.Track.Value%2A> que corresponde à parte superior do visor é 70 e o <xref:System.Windows.Controls.Primitives.Track.Maximum%2A> valor é 70.  
+  
+ A ilustração a seguir mostra como o <xref:System.Windows.Controls.Primitives.Track.Value%2A> corresponde a uma posição de <xref:System.Windows.Controls.Primitives.ScrollBar> de um <xref:System.Windows.Controls.ScrollViewer> controle.  
+  
+ ![Valor corresponde à posição do conteúdo](~/add/media/scrollbarvalueeqmaximum.png "valor corresponde à posição do conteúdo")  
+  
+<a name="dependencyPropertyInfo_Maximum"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Track.MaximumProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> propriedade para um <xref:System.Windows.Controls.Slider> que se torna a origem de associação para o <xref:System.Windows.Controls.Primitives.Track.Maximum%2A?displayProperty=nameWithType> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaximumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaximumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Track.MaximumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Track.Maximum" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.Track.Maximum%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size availableSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size availableSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Track.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="availableSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="availableSize">O tamanho do espaço disponível para o controle.</param>
+        <summary>Mede o tamanho de layout que é necessário para o <see cref="T:System.Windows.Controls.Primitives.Track" /> e seus componentes.</summary>
+        <returns>O layout <see cref="T:System.Windows.Size" /> que é necessário para o <see cref="T:System.Windows.Controls.Primitives.Track" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public double Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o mínimo possível <see cref="P:System.Windows.Controls.Primitives.Track.Value" /> do <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <value>Menor permitido <see cref="P:System.Windows.Controls.Primitives.Track.Value" /> para o <see cref="T:System.Windows.Controls.Primitives.Track" />. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Controls.Primitives.Track> controle está em um <xref:System.Windows.Controls.Primitives.RangeBase> controle e o <xref:System.Windows.Controls.Primitives.Track.Minimum%2A?displayProperty=nameWithType> propriedade não está definida explicitamente, essa propriedade automaticamente associa com o <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A?displayProperty=nameWithType> propriedade.  
+  
+<a name="dependencyPropertyInfo_Minimum"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Track.MinimumProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> propriedade para um <xref:System.Windows.Controls.Slider> que se torna a origem de associação para o <xref:System.Windows.Controls.Primitives.Track.Minimum%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinimumProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinimumProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Track.MinimumProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Track.Minimum" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.Track.Minimum%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Orientation Orientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Orientation Orientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Controls.Primitives.Track" /> é exibido horizontal ou verticalmente.</summary>
+        <value>Um <see cref="T:System.Windows.Controls.Orientation" /> valor de enumeração que indica se o <see cref="T:System.Windows.Controls.Primitives.Track" /> é exibido horizontal ou verticalmente. O padrão é <see cref="F:System.Windows.Controls.Orientation.Horizontal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você implementar um <xref:System.Windows.Controls.Primitives.Track> como parte de um <xref:System.Windows.Controls.Primitives.ScrollBar> controle e você não definir explicitamente o <xref:System.Windows.Controls.Primitives.Track.Orientation%2A> propriedade, o <xref:System.Windows.Controls.Primitives.Track.Orientation%2A?displayProperty=nameWithType> propriedade associa ao <xref:System.Windows.Controls.Primitives.ScrollBar.Orientation%2A?displayProperty=nameWithType>.  
+  
+ Se você implementar um <xref:System.Windows.Controls.Primitives.Track> como parte de um <xref:System.Windows.Controls.Slider> controle e você não definir explicitamente o <xref:System.Windows.Controls.Primitives.Track.Orientation%2A> propriedade, o <xref:System.Windows.Controls.Primitives.Track.Orientation%2A?displayProperty=nameWithType> propriedade associa ao <xref:System.Windows.Controls.Slider.Orientation%2A?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_Orientation"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Track.OrientationProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrientationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OrientationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OrientationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Track.OrientationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Track.Orientation" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.Track.Orientation%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thumb">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.Thumb Thumb { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Primitives.Thumb Thumb" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.Thumb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.Thumb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle <see cref="T:System.Windows.Controls.Primitives.Thumb" /> usado para alterar o <see cref="P:System.Windows.Controls.Primitives.Track.Value" /> de um <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <value>O controle <see cref="T:System.Windows.Controls.Primitives.Thumb" /> que é usado com o <see cref="T:System.Windows.Controls.Primitives.Track" />. O padrão é um controle <see cref="T:System.Windows.Controls.Primitives.Thumb" /> que tem configurações padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O posicionamento do <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controle corresponde do <xref:System.Windows.Controls.Primitives.Track.Value%2A> do <xref:System.Windows.Controls.Primitives.Track> controle. O tamanho do <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controlar um <xref:System.Windows.Controls.Primitives.Track> controle reflete a quantidade de conteúdo que está visível no momento. O tamanho do <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controle do <xref:System.Windows.Controls.Primitives.Track> é calculado das seguintes maneiras:  
+  
+-   Se o <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> propriedade não for especificada, o tamanho do <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> é um valor padrão fixo. Isso é como o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> de uma faixa de funções dentro de um <xref:System.Windows.Controls.Slider> controle.  
+  
+-   Se o <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> propriedade for especificada e o tamanho do conteúdo é maior do que o <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A>, a fórmula a seguir é usada:  
+  
+     Tamanho de miniatura = TrackLength * ViewportSize / (máximo-mínimo + ViewportSize)  
+  
+     Em que os parâmetros são definidos da seguinte maneira:  
+  
+    |||  
+    |-|-|  
+    |Tamanho de miniatura|O tamanho do <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controle nas mesmas unidades como a TrackLength.|  
+    |TrackLength|O comprimento do <xref:System.Windows.Controls.Primitives.Track>.|  
+    |ViewportSize|O tamanho da área rolável que está visível nas unidades de conteúdo, como o número de páginas de um documento.|  
+    |Máximo|O valor máximo do conteúdo em unidades de conteúdo, como a página 10 de um documento de página de 10.|  
+    |Mínimo|O valor mínimo do conteúdo em unidades de conteúdo, como página 1 de um documento.|  
+  
+     A ilustração a seguir mostra uma representação visual de alguns desses parâmetros em um <xref:System.Windows.Controls.Primitives.ScrollBar> controle.  
+  
+     ![Tamanho do visor, tamanho de miniatura e acompanhar comprimento](~/add/media/scrollbarthumbsizemath.png "tamanho do visor, tamanho de miniatura e controlar o comprimento")  
+  
+-   Se o tamanho do conteúdo for menor que um <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A>, o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> não aparece e o <xref:System.Windows.UIElement.Visibility%2A> propriedade de <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> é definido como `false`.  
+  
+ Dimensiona o mínimo de um <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controle são determinados pelos dois parâmetros de sistema, <xref:System.Windows.SystemParameters.VerticalScrollBarButtonHeight%2A> e <xref:System.Windows.SystemParameters.HorizontalScrollBarThumbWidth%2A>. O tamanho mínimo para um <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controle na vertical <xref:System.Windows.Controls.Primitives.Track> é 1/2 * <xref:System.Windows.SystemParameters.VerticalScrollBarButtonHeight%2A> e o tamanho mínimo para um <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controle em um horizontal <xref:System.Windows.Controls.Primitives.Track> é 1/2 * <xref:System.Windows.SystemParameters.HorizontalScrollBarThumbWidth%2A>.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra como o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> estilo é definido dentro do <xref:System.Windows.Controls.Primitives.ScrollBar> <xref:System.Windows.Controls.ControlTemplate> quando o <xref:System.Windows.Controls.Primitives.Track.Orientation%2A> é de propriedade <xref:System.Windows.Controls.Orientation.Vertical>.  
+  
+ [!code-xaml[ScrollBarTemplateExample#RepeatButtonStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarTemplateExample/CS/Window1.xaml#repeatbuttonstyle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor atual de <see cref="T:System.Windows.Controls.Primitives.Track" /> conforme determinado pela posição do <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> controle.</summary>
+        <value>O valor atual de <see cref="T:System.Windows.Controls.Primitives.Track" />. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.Track.Value%2A> representa um valor entre o <xref:System.Windows.Controls.Primitives.Track.Minimum%2A> e <xref:System.Windows.Controls.Primitives.Track.Maximum%2A> valores de propriedade.  
+  
+ Quando um <xref:System.Windows.Controls.Primitives.Track> controle faz parte de um <xref:System.Windows.Controls.Primitives.RangeBase> controle e o <xref:System.Windows.Controls.Primitives.Track.Value%2A?displayProperty=nameWithType> propriedade não está definida explicitamente, essa propriedade automaticamente associa com o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType> propriedade.  
+  
+<a name="dependencyPropertyInfo_Value"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Track.ValueProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueFromDistance">
+      <MemberSignature Language="C#" Value="public virtual double ValueFromDistance (double horizontal, double vertical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 ValueFromDistance(float64 horizontal, float64 vertical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Track.ValueFromDistance(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="horizontal" Type="System.Double" />
+        <Parameter Name="vertical" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="horizontal">O deslocamento horizontal do <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" />.</param>
+        <param name="vertical">O deslocamento vertical do <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" />.</param>
+        <summary>Calcula a alteração no <see cref="P:System.Windows.Controls.Primitives.Track.Value" /> do <see cref="T:System.Windows.Controls.Primitives.Track" /> quando o <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> move.</summary>
+        <returns>A alteração no <see cref="P:System.Windows.Controls.Primitives.Track.Value" /> que corresponde ao deslocamento do <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> do <see cref="T:System.Windows.Controls.Primitives.Track" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueFromPoint">
+      <MemberSignature Language="C#" Value="public virtual double ValueFromPoint (System.Windows.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 ValueFromPoint(valuetype System.Windows.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Track.ValueFromPoint(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O ponto especificado.</param>
+        <summary>Calcula a distância entre o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> para um ponto especificado ao longo de <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <returns>A distância entre o <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> e especificado <paramref name="pt" /> valor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ValueProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ValueProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Track.ValueProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Track.Value" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.Track.Value%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportSize">
+      <MemberSignature Language="C#" Value="public double ViewportSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.ViewportSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho da parte do conteúdo rolável que está visível.</summary>
+        <value>O tamanho da área visível do conteúdo rolável. O padrão é <see cref="F:System.Double.NaN" />, que significa que o tamanho do conteúdo não está definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> propriedade é usada para calcular o tamanho do <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controlar um <xref:System.Windows.Controls.Primitives.ScrollBar> quando o <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> não é <xref:System.Double.NaN?displayProperty=nameWithType>. Para obter mais informações, consulte os comentários para o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> propriedade.  
+  
+ Para definir explicitamente o tamanho do <xref:System.Windows.Controls.Primitives.Thumb>, criar um objeto que deriva o <xref:System.Windows.Controls.Primitives.Track> classe e fornecer substituições para <xref:System.Windows.Controls.Primitives.Track.MeasureOverride%2A> e <xref:System.Windows.Controls.Primitives.Track.ArrangeOverride%2A>.  
+  
+ Se você implementar um <xref:System.Windows.Controls.Primitives.Track> como parte de um <xref:System.Windows.Controls.Primitives.ScrollBar> controle e você não definir explicitamente o <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A?displayProperty=nameWithType> propriedade, o <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A?displayProperty=nameWithType> propriedade associa ao <xref:System.Windows.Controls.Primitives.ScrollBar.ViewportSize%2A?displayProperty=nameWithType> propriedade.  
+  
+ O valor da <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> propriedade de um <xref:System.Windows.Controls.Primitives.Track> controle que é implementado em um <xref:System.Windows.Controls.Slider> controle é sempre <xref:System.Double.NaN?displayProperty=nameWithType>, pois o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> controle não altera o tamanho.  
+  
+<a name="dependencyPropertyInfo_ViewportSize"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.Track.ViewportSizeProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewportSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewportSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Track.ViewportSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.Track.ViewportSize" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Track.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos filho de um <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+        <value>Um número inteiro entre 0 e 2 que especifica o número de elementos filho no <see cref="T:System.Windows.Controls.Primitives.Track" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especificar os elementos filho de um <xref:System.Windows.Controls.Primitives.Track> definindo o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A>, <xref:System.Windows.Controls.Primitives.Track.DecreaseRepeatButton%2A>, e <xref:System.Windows.Controls.Primitives.Track.IncreaseRepeatButton%2A> propriedades. Os elementos filho são indexados na ordem em que as propriedades são definidas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,133 @@
+<Type Name="ManipulationPivot2D" FullName="System.Windows.Input.Manipulations.ManipulationPivot2D">
+  <TypeSignature Language="C#" Value="public sealed class ManipulationPivot2D : System.Windows.Input.Manipulations.ManipulationParameters2D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManipulationPivot2D extends System.Windows.Input.Manipulations.ManipulationParameters2D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.ManipulationPivot2D" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.Manipulations.ManipulationParameters2D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa informações usadas por um processador de manipulação de único manipulator rotações de tabela dinâmica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Input.Manipulations.ManipulationPivot2D> objeto é atribuído para o <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Pivot%2A> propriedade de um <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> do objeto, ele afeta como o processador de manipulação calcula rotação alterações a um elemento quando o elemento está sendo manipulado por um único manipulator. Se mais de um manipulator está sendo aplicada ao elemento durante a manipulação, a propriedade dinâmica será ignorada.  
+  
+ Em um cenário de único manipulator, um elemento pode girar como está sendo arrastado. O <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.X%2A> e <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Y%2A> propriedades do <xref:System.Windows.Input.Manipulations.ManipulationPivot2D> objeto determinar que o elemento gira em torno, a posição e o <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Radius%2A> propriedade é usada pelo processador de manipulação para calcular a quantidade de alterações de rotação.  
+  
+ Por exemplo, se for o único manipulator perto da borda externa do ponto dinâmico, a alteração de rotação para o elemento está sendo arrastado será muito grande (dependendo do tamanho do elemento). Se o manipulator está próximo do centro do ponto dinâmico, ocorrerá rotação muito pouco (se houver).  
+  
+ Normalmente, o <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.X%2A> e <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Y%2A> propriedades representam o centro do elemento que está sendo manipulado, e o <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Radius%2A> propriedade representa a distância do centro do elemento para a borda mais distante.  
+  
+ Como move o elemento, o <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.X%2A> e <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Y%2A> propriedades do <xref:System.Windows.Input.Manipulations.ManipulationPivot2D> objeto precisa ser atualizado para que a rotação continuará a ocorrer em torno do ponto apropriado.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra como o <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.X%2A> e <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Y%2A> propriedades de um ponto de pivot são atualizadas para corresponder o centro do elemento que está sendo manipulado.  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_ManipulationProcessor2D](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_manipulationprocessor2d)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManipulationPivot2D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.ManipulationPivot2D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.Manipulations.ManipulationPivot2D" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Radius">
+      <MemberSignature Language="C#" Value="public float Radius { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Radius" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationPivot2D.Radius" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância do ponto dinâmico para a borda da região de manipulatable.</summary>
+        <value>A distância do ponto dinâmico até a borda da região de manipulatable.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Radius%2A> propriedade deve ser um valor positivo finito maior ou igual a 1.0, ou `NaN`. `NaN`indica que não há nenhum limite. O valor padrão é `NaN`.  
+  
+ Na prática, o ponto pivô normalmente é o centro do objeto que está sendo manipulado, e o <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Radius%2A> valor é a distância do ponto dinâmico até a borda mais distante do objeto. Qualquer dinamização ocorre dentro de <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Radius%2A> distância é amortecida. Consulte <xref:System.Windows.Input.Manipulations.ManipulationPivot2D> para obter mais informações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public float X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationPivot2D.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição X do eixo.</summary>
+        <value>A posição X do eixo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.X%2A> propriedade deve ser um valor finito ou `NaN`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public float Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.ManipulationPivot2D.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição Y do eixo.</summary>
+        <value>A posição Y do eixo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Manipulations.ManipulationPivot2D.Y%2A> propriedade deve ser um valor finito ou `NaN`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,152 @@
+<Type Name="PassportAuthentication" FullName="System.Web.Configuration.PassportAuthentication">
+  <TypeSignature Language="C#" Value="public sealed class PassportAuthentication : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PassportAuthentication extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.PassportAuthentication" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("This type is obsolete. The Passport authentication product is no longer supported and has been superseded by Live ID.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Configura a autenticação do Passport em aplicativos ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.PassportAuthentication> classe permite que você acesse e configure um nó no arquivo de configuração Machine. config ou Web. config, identificado pelo `passport` marca.  
+  
+ Esse tipo é parte de um grupo que inclui o <xref:System.Web.Configuration.AuthenticationSection>, <xref:System.Web.Configuration.FormsAuthenticationConfiguration>, e <xref:System.Web.Configuration.AuthenticationMode> tipos.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.PassportAuthentication> classe pode gravar informações para a seção correspondente do arquivo de configuração no computador, site ou somente no nível do aplicativo. Qualquer tentativa de gravar em um arquivo de configuração em um nível diferente na hierarquia resulta em uma mensagem de erro gerada pelo analisador. Você pode usar essa classe para ler informações de configuração em qualquer nível na hierarquia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.PassportAuthentication> objeto do arquivo de configuração de um aplicativo Web existente. Também é mostrado é um exemplo de configuração.  
+  
+```  
+<authentication>  
+  <passport redirectUrl="Login.aspx"/>  
+</authentication>  
+```  
+  
+ [!code-csharp[System.Web.Configuration.PassportAuthentication#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PassportAuthentication/CS/passportauthentication.cs#1)]
+ [!code-vb[System.Web.Configuration.PassportAuthentication#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PassportAuthentication/VB/passportauthentication.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PassportAuthentication ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.PassportAuthentication.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.PassportAuthentication" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Web.Configuration.PassportAuthentication> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.PassportAuthentication#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PassportAuthentication/CS/passportauthentication.cs#2)]
+ [!code-vb[System.Web.Configuration.PassportAuthentication#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PassportAuthentication/VB/passportauthentication.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementProperty">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElementProperty ElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationElementProperty ElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.PassportAuthentication.ElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.PassportAuthentication.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectUrl">
+      <MemberSignature Language="C#" Value="public string RedirectUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RedirectUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.PassportAuthentication.RedirectUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("redirectUrl", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL à qual a solicitação é redirecionada.</summary>
+        <value>A URL da página para o qual a solicitação é redirecionada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.PassportAuthentication.RedirectUrl%2A> Especifica a URL da página para o qual a solicitação deverá ser redirecionada se a autenticação de Passport é necessária e o usuário não tiver se conectado usando a autenticação do Passport.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.PassportAuthentication.RedirectUrl%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.PassportAuthentication#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PassportAuthentication/CS/passportauthentication.cs#3)]
+ [!code-vb[System.Web.Configuration.PassportAuthentication#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PassportAuthentication/VB/passportauthentication.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

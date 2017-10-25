@@ -1,0 +1,115 @@
+<Type Name="CallbackValidator" FullName="System.Configuration.CallbackValidator">
+  <TypeSignature Language="C#" Value="public sealed class CallbackValidator : System.Configuration.ConfigurationValidatorBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CallbackValidator extends System.Configuration.ConfigurationValidatorBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.CallbackValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationValidatorBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a validação dinâmica de um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar essa classe, você precisa implementar um <xref:System.Configuration.ValidatorCallback> delegar para o tipo de objeto que você deseja validar. Quando você cria uma instância dessa classe, você passar o tipo de objeto e uma referência ao representante. Em seguida, você pode chamar <xref:System.Configuration.CallbackValidator.CanValidate%2A> para determinar se um objeto é do tipo correto ou <xref:System.Configuration.CallbackValidator.Validate%2A> para executar o delegado no objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallbackValidator (Type type, System.Configuration.ValidatorCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Configuration.ValidatorCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CallbackValidator.#ctor(System.Type,System.Configuration.ValidatorCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="callback" Type="System.Configuration.ValidatorCallback" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de objeto que será validado.</param>
+        <param name="callback">O <see cref="T:System.Configuration.ValidatorCallback" /> usado como o delegado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.CallbackValidator" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidate">
+      <MemberSignature Language="C#" Value="public override bool CanValidate (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanValidate(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CallbackValidator.CanValidate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de objeto.</param>
+        <summary>Determina se o tipo de objeto pode ser validado.</summary>
+        <returns>
+          <see langword="true" />Se o <see langword="type" /> parâmetro corresponde ao tipo usado como o primeiro parâmetro ao criar uma instância de <see cref="T:System.Configuration.CallbackValidator" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override void Validate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Validate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.CallbackValidator.Validate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de um objeto.</param>
+        <summary>Determina se o valor de um objeto é válido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.CallbackValidator> classe contém o tipo e o delegado necessário para validar um objeto. O tipo e o delegado são estabelecidos quando uma instância do <xref:System.Configuration.CallbackValidator> classe é criada. O objeto para validar é passado como um parâmetro de <xref:System.Configuration.CallbackValidator.Validate%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

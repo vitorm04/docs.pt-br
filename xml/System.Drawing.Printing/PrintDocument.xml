@@ -1,0 +1,632 @@
+<Type Name="PrintDocument" FullName="System.Drawing.Printing.PrintDocument">
+  <TypeSignature Language="C#" Value="public class PrintDocument : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrintDocument extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Printing.PrintDocument" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("PrintPage")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("DocumentName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Drawing.Printing")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um objeto reutilizável que envia a saída para uma impressora ao imprimir usando um aplicativo do Windows Forms.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você cria uma instância do <xref:System.Drawing.Printing.PrintDocument> classe, defina propriedades, como o <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> e <xref:System.Drawing.Printing.PrintDocument.PrinterSettings%2A>e chamar o <xref:System.Drawing.Printing.PrintDocument.Print%2A> método para iniciar o processo de impressão. Lidar com o <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos em que você especificar que a saída de impressão, usando o <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> <xref:System.Drawing.Graphics> propriedade o <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+  
+ Para obter mais informações sobre a impressão de um aplicativo de formulário do Windows, consulte o [suporte de impressão do Windows Forms](~/docs/framework/winforms/advanced/windows-forms-print-support.md). Se você quiser imprimir a partir de um aplicativo do Windows Presentation Foundation, consulte o <xref:System.Printing> namespace.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir imprime o arquivo chamado C:\My Documents\MyFile.txt na impressora padrão. Para executar o exemplo, crie um novo projeto de formulários do Windows e cole o código de exemplo no formulário, substituindo o conteúdo do arquivo. Para c#, você precisará excluir o arquivo Form1 Designer.cs. Além disso, altere o caminho para o arquivo que você deseja imprimir.  
+  
+> [!NOTE]
+>  O exemplo requer que cada linha se ajuste na largura da página.  
+  
+ Use o <xref:System.ComponentModel>, <xref:System.Windows.Forms>, <xref:System.Drawing>, <xref:System.Drawing.Printing>, e <xref:System.IO> namespaces para este exemplo.  
+  
+ [!code-cpp[Classic PrintDocument Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic PrintDocument Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PrintDocument Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic PrintDocument Example/CS/source.cs#1)]
+ [!code-vb[Classic PrintDocument Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic PrintDocument Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintDocument.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Printing.PrintDocument" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão inicializa todos os campos com base na impressora padrão. Normalmente, depois de criar um novo <xref:System.Drawing.Printing.PrintDocument>, defina as configurações de impressora e a página que afetam a saída por meio de <xref:System.Drawing.Printing.PrintDocument.PrinterSettings%2A> e <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> propriedades, respectivamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define a orientação da página do documento para paisagem e imprime o documento.  
+  
+ Use o <xref:System.Drawing>, <xref:System.Drawing.Printing>, e <xref:System.IO> namespaces para este exemplo.  
+  
+ [!code-cpp[Classic PrintDocument Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic PrintDocument Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PrintDocument Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic PrintDocument Example/CS/source.cs#1)]
+ [!code-vb[Classic PrintDocument Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic PrintDocument Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginPrint">
+      <MemberSignature Language="C#" Value="public event System.Drawing.Printing.PrintEventHandler BeginPrint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Drawing.Printing.PrintEventHandler BeginPrint" />
+      <MemberSignature Language="DocId" Value="E:System.Drawing.Printing.PrintDocument.BeginPrint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o método <see cref="M:System.Drawing.Printing.PrintDocument.Print" /> é chamado antes da impressão da primeira página do documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você manipula o <xref:System.Drawing.Printing.PrintDocument.BeginPrint> evento para inicializar fontes, fluxos de arquivos e outros recursos usados durante o processo de impressão.  
+  
+ Para associar o evento com o manipulador de eventos, adicione uma instância do <xref:System.Drawing.Printing.PrintEventHandler> delegar para o evento. O manipulador de eventos é chamado sempre que o evento ocorre. Para obter mais informações sobre como manipular eventos com delegados, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPageSettings">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PageSettings DefaultPageSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PageSettings DefaultPageSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrintDocument.DefaultPageSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PageSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as configurações de página usadas como padrões para todas as páginas a serem impressas.</summary>
+        <value>Um <see cref="T:System.Drawing.Printing.PageSettings" /> que especifica as configurações de página padrão do documento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar várias configurações de página padrão por meio de <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> propriedade. Por exemplo, o <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> propriedade especifica se a página será impressa na cor, o <xref:System.Drawing.Printing.PageSettings.Landscape%2A?displayProperty=nameWithType> propriedade especifica a orientação de paisagem ou retrato e o <xref:System.Drawing.Printing.PageSettings.Margins%2A?displayProperty=nameWithType> propriedade especifica as margens da página.  
+  
+ Para especificar as configurações de página por página, tratar o <xref:System.Drawing.Printing.PrintDocument.PrintPage> ou <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> eventos e modificar o <xref:System.Drawing.Printing.PrintPageEventArgs.PageSettings%2A> argumento incluído no <xref:System.Drawing.Printing.PrintPageEventArgs> ou <xref:System.Drawing.Printing.QueryPageSettingsEventArgs>, respectivamente.  
+  
+> [!NOTE]
+>  Depois de iniciar a impressão, alterações às configurações de página por meio de <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> propriedade não afetará as páginas seja impressas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define a orientação da página do documento para paisagem e imprime o documento. O exemplo faz três suposições: que uma variável chamada `filePath` foi definido para o caminho do arquivo para imprimir; que um método chamado `pd_PrintPage`, que trata o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento, foi definido; e uma variável chamada `printer` foi Defina como o nome da impressora.  
+  
+ Use o <xref:System.Drawing>, <xref:System.Drawing.Printing>, e <xref:System.IO> namespaces para este exemplo.  
+  
+ [!code-cpp[Classic PrintDocument.PrintDocument Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic PrintDocument.PrintDocument Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PrintDocument.PrintDocument Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic PrintDocument.PrintDocument Example/CS/source.cs#1)]
+ [!code-vb[Classic PrintDocument.PrintDocument Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic PrintDocument.PrintDocument Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentName">
+      <MemberSignature Language="C#" Value="public string DocumentName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentName" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrintDocument.DocumentName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("document")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de documento a ser exibido (por exemplo, em uma caixa de diálogo de status de impressão ou em uma fila de impressão) enquanto o documento está sendo impresso.</summary>
+        <value>O nome do documento a ser exibido ao imprimir o documento. O padrão é "documento".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> propriedade não especifica o arquivo para imprimir. Em vez disso, você pode especificar a saída de impressão manipulando o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento. Para obter um exemplo, consulte o <xref:System.Drawing.Printing.PrintDocument> visão geral da classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir imprime um documento com a primeira página na cor, se a impressora oferece suporte a ele e define o <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> para um nome amigável. O exemplo requer que um <xref:System.Drawing.Printing.PrintDocument> variável chamada `printDoc` tiver sido criado e o <xref:System.Drawing.Printing.PrintDocument.PrintPage> e <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> eventos são processados.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Drawing.Printing> namespaces para este exemplo.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#6](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#6)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#6](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#6)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPrint">
+      <MemberSignature Language="C#" Value="public event System.Drawing.Printing.PrintEventHandler EndPrint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Drawing.Printing.PrintEventHandler EndPrint" />
+      <MemberSignature Language="DocId" Value="E:System.Drawing.Printing.PrintDocument.EndPrint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a última página do documento for impressa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você manipula o <xref:System.Drawing.Printing.PrintDocument.EndPrint> evento para liberar fontes, fluxos de arquivos e outros recursos usados durante o processo de impressão, como fontes.  
+  
+ Você indica que não existem mais páginas para imprimir, definindo o <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A?displayProperty=nameWithType> propriedade `false` no <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento. O <xref:System.Drawing.Printing.PrintDocument.EndPrint> evento também ocorre se o processo de impressão foi cancelado ou ocorrerá uma exceção durante o processo de impressão.  
+  
+ Para associar o evento com o manipulador de eventos, adicione uma instância do <xref:System.Drawing.Printing.PrintEventHandler> delegar para o evento. O manipulador de eventos é chamado sempre que o evento ocorre. Para obter mais informações sobre como manipular eventos com delegados, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginPrint">
+      <MemberSignature Language="C#" Value="protected virtual void OnBeginPrint (System.Drawing.Printing.PrintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBeginPrint(class System.Drawing.Printing.PrintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintDocument.OnBeginPrint(System.Drawing.Printing.PrintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Drawing.Printing.PrintDocument.BeginPrint" />. Ele é chamado depois que o método <see cref="M:System.Drawing.Printing.PrintDocument.Print" /> é chamado e antes da impressão da primeira página do documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Printing.PrintDocument.OnBeginPrint%2A> método permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ Quando uma classe derivada chama o <xref:System.Drawing.Printing.PrintDocument.OnBeginPrint%2A> método, ele gera o <xref:System.Drawing.Printing.PrintDocument.BeginPrint> evento invocando o manipulador de eventos por meio de um representante. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Drawing.Printing.PrintDocument.OnBeginPrint(System.Drawing.Printing.PrintEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Drawing.Printing.PrintDocument.OnBeginPrint(System.Drawing.Printing.PrintEventArgs)" /> método para que registrado delegados receber o evento. Esse método é um bom lugar para inicialização.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndPrint">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndPrint (System.Drawing.Printing.PrintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndPrint(class System.Drawing.Printing.PrintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintDocument.OnEndPrint(System.Drawing.Printing.PrintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Drawing.Printing.PrintDocument.EndPrint" />. É chamado quando a última página do documento for impressa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Printing.PrintDocument.OnEndPrint%2A> método permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada. O <xref:System.Drawing.Printing.PrintDocument.OnEndPrint%2A> método também é chamado se o processo de impressão foi cancelado ou ocorrerá uma exceção durante o processo de impressão.  
+  
+ Quando uma classe derivada chama o <xref:System.Drawing.Printing.PrintDocument.OnEndPrint%2A> método, ele gera o <xref:System.Drawing.Printing.PrintDocument.EndPrint> evento invocando o manipulador de eventos por meio de um representante. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Drawing.Printing.PrintDocument.OnEndPrint(System.Drawing.Printing.PrintEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Drawing.Printing.PrintDocument.OnEndPrint(System.Drawing.Printing.PrintEventArgs)" /> método para que registrado delegados receber o evento. Esse método é um bom lugar para cancelamento inicialização.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPrintPage">
+      <MemberSignature Language="C#" Value="protected virtual void OnPrintPage (System.Drawing.Printing.PrintPageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPrintPage(class System.Drawing.Printing.PrintPageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintDocument.OnPrintPage(System.Drawing.Printing.PrintPageEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintPageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintPageEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Drawing.Printing.PrintDocument.PrintPage" />. Ele é chamado antes da impressão de uma página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Printing.PrintDocument.OnPrintPage%2A> método permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ Quando uma classe derivada chama o <xref:System.Drawing.Printing.PrintDocument.OnPrintPage%2A> método, ele gera o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento invocando o manipulador de eventos por meio de um representante. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Drawing.Printing.PrintDocument.OnPrintPage(System.Drawing.Printing.PrintPageEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Drawing.Printing.PrintDocument.OnPrintPage(System.Drawing.Printing.PrintPageEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQueryPageSettings">
+      <MemberSignature Language="C#" Value="protected virtual void OnQueryPageSettings (System.Drawing.Printing.QueryPageSettingsEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnQueryPageSettings(class System.Drawing.Printing.QueryPageSettingsEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintDocument.OnQueryPageSettings(System.Drawing.Printing.QueryPageSettingsEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Drawing.Printing.QueryPageSettingsEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.QueryPageSettingsEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Drawing.Printing.PrintDocument.QueryPageSettings" />. Ele é chamado imediatamente antes de cada <see cref="E:System.Drawing.Printing.PrintDocument.PrintPage" /> eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Printing.PrintDocument.OnQueryPageSettings%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ Quando uma classe derivada chama o <xref:System.Drawing.Printing.PrintDocument.OnQueryPageSettings%2A> método, ele gera o <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> evento invocando o manipulador de eventos por meio de um representante. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Drawing.Printing.PrintDocument.OnQueryPageSettings(System.Drawing.Printing.QueryPageSettingsEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Drawing.Printing.PrintDocument.OnQueryPageSettings(System.Drawing.Printing.QueryPageSettingsEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginAtMargins">
+      <MemberSignature Language="C#" Value="public bool OriginAtMargins { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OriginAtMargins" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrintDocument.OriginAtMargins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a posição de um objeto de elementos gráficos associado a uma página está localizada dentro das margens especificadas pelo usuário ou no canto superior esquerdo da área imprimível da página.</summary>
+        <value>
+          <see langword="true" /> se a origem dos elementos gráficos começa nas margens da página; <see langword="false" /> se a origem dos elementos gráficos está no canto superior esquerdo da página para impressão. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Calcular a área disponível para impressão requer a saber o tamanho físico do papel, as margens da página e o local do <xref:System.Drawing.Graphics> origem do objeto. Quando <xref:System.Drawing.Printing.PrintDocument.OriginAtMargins%2A> é `true`, o <xref:System.Drawing.Graphics> local do objeto leva em conta a <xref:System.Drawing.Printing.PageSettings.Margins%2A?displayProperty=nameWithType> o valor da propriedade e da área de impressão da página. Quando <xref:System.Drawing.Printing.PrintDocument.OriginAtMargins%2A> é `false`, somente a área de impressão da página é usada para determinar o local do <xref:System.Drawing.Graphics> objeto de origem, o <xref:System.Drawing.Printing.PageSettings.Margins%2A?displayProperty=nameWithType> valor é ignorado.  
+  
+ Por exemplo, se <xref:System.Drawing.Printing.PrintDocument.OriginAtMargins%2A> é `true`, e <xref:System.Drawing.Printing.PageSettings.Margins%2A?displayProperty=nameWithType> está definido para 1 polegada em cada lado, o <xref:System.Drawing.Graphics> objeto incluído no <xref:System.Drawing.Printing.PrintPageEventArgs> está localizada 1 polegada da esquerda e da parte superior da página. Se a área de impressão da página é.25 de polegada em cada lado e <xref:System.Drawing.Printing.PrintDocument.OriginAtMargins%2A> é `false`, o <xref:System.Drawing.Graphics> objeto está localizado.25 de polegada da esquerda e da parte superior da página.  
+  
+> [!NOTE]
+>  A área de impressão de uma página varia da impressora e não é garantia de ser simétricos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public void Print ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Print() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintDocument.Print" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia o processo de impressão do documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifique a saída de impressão manipulando o <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos e usando o <xref:System.Drawing.Graphics> incluídos no <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+  
+ Use o <xref:System.Drawing.Printing.PrinterSettings.PrinterName%2A?displayProperty=nameWithType> propriedade para especificar qual impressora deve imprimir o documento.  
+  
+ O <xref:System.Drawing.Printing.PrintDocument.Print%2A> método imprime o documento sem usar uma caixa de diálogo de impressão. Use um <xref:System.Windows.Forms.PrintDialog> quando você deseja oferecer ao usuário a capacidade de escolher as configurações de impressão.  
+  
+> [!NOTE]
+>  Se uma exceção não tratada pelo <xref:System.Drawing.Printing.PrintDocument.Print%2A> método é gerado durante a impressão, a impressão do documento será anulada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir imprime o arquivo especificado por meio da linha de comando para a impressora padrão.  
+  
+> [!NOTE]
+>  O exemplo requer que cada linha se ajuste na largura da página.  
+  
+ Use o <xref:System.ComponentModel>, <xref:System.Drawing>, <xref:System.Drawing.Printing>, <xref:System.IO>, e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[Classic PrintDocument.PrintPage Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic PrintDocument.PrintPage Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PrintDocument.PrintPage Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic PrintDocument.PrintPage Example/CS/source.cs#1)]
+ [!code-vb[Classic PrintDocument.PrintPage Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic PrintDocument.PrintPage Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">A impressora nomeada na propriedade <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> não existe.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir segura em uma caixa de diálogo restrita. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintController">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrintController PrintController { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrintController PrintController" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrintDocument.PrintController" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrintController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o controlador da impressora que guia o processo de impressão.</summary>
+        <value>O <see cref="T:System.Drawing.Printing.PrintController" /> que guia o processo de impressão. O padrão é uma nova instância da classe <see cref="T:System.Windows.Forms.PrintControllerWithStatusDialog" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controlador de impressão orienta o processo de impressão de várias maneiras. Por exemplo, para imprimir um documento, você precisa convertê-lo para um <xref:System.Drawing.Graphics> objeto. Um <xref:System.Drawing.Printing.PrintController> Especifica onde desenhar o elemento gráfico em uma imagem de uma visualização de impressão ou em uma impressora, na verdade, imprimir o documento. Um controlador de impressão também pode especificar se deseja imprimir um documento imediatamente ou aguardar um intervalo especificado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exige que você tenha criado uma instância do <xref:System.Drawing.Printing.PrintDocument> classe denominada `myPrintDocument`. O exemplo cria uma nova instância do <xref:System.Drawing.Printing.PrintController> classe e o atribui para a <xref:System.Drawing.Printing.PrintDocument.PrintController%2A> propriedade `myPrintDocument`e imprime o documento.  
+  
+ Use o <xref:System.Drawing.Printing> e <xref:System.Windows.Forms> namespaces para este exemplo.  
+  
+ [!code-cpp[Classic PrintDocument.PrintController Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic PrintDocument.PrintController Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PrintDocument.PrintController Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic PrintDocument.PrintController Example/CS/source.cs#1)]
+ [!code-vb[Classic PrintDocument.PrintController Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic PrintDocument.PrintController Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir segura em uma caixa de diálogo restrita. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PrinterSettings">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrinterSettings PrinterSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrinterSettings PrinterSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PrintDocument.PrinterSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrinterSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a impressora que imprime o documento.</summary>
+        <value>Um <see cref="T:System.Drawing.Printing.PrinterSettings" /> que especifica em que local e como o documento é impresso. O padrão é um <see cref="T:System.Drawing.Printing.PrinterSettings" /> com as propriedades definidas para seus valores padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar várias configurações de impressora por meio de <xref:System.Drawing.Printing.PrintDocument.PrinterSettings%2A> propriedade. Por exemplo, use o <xref:System.Drawing.Printing.PrinterSettings.Copies%2A?displayProperty=nameWithType> propriedade para especificar o número de cópias que deseja imprimir, o <xref:System.Drawing.Printing.PrinterSettings.PrinterName%2A?displayProperty=nameWithType> propriedade para especificar a impressora a ser usado e o <xref:System.Drawing.Printing.PrinterSettings.PrintRange%2A?displayProperty=nameWithType> propriedade para especificar o intervalo de páginas que você deseja imprimir.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir imprime um documento na impressora especificada. O exemplo faz três suposições: que um nomes de variável `filePath` foi definido para o caminho do arquivo para imprimir; que um método chamado `pd_PrintPage`, que trata o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento, foi definido; e uma variável chamada `printer` foi Defina como o nome da impressora.  
+  
+ Use o <xref:System.Drawing>, <xref:System.Drawing.Printing>, e <xref:System.IO> namespaces para este exemplo.  
+  
+ [!code-cpp[Classic PrintDocument.PrinterSettings Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic PrintDocument.PrinterSettings Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PrintDocument.PrinterSettings Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic PrintDocument.PrinterSettings Example/CS/source.cs#1)]
+ [!code-vb[Classic PrintDocument.PrinterSettings Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic PrintDocument.PrinterSettings Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintPage">
+      <MemberSignature Language="C#" Value="public event System.Drawing.Printing.PrintPageEventHandler PrintPage;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Drawing.Printing.PrintPageEventHandler PrintPage" />
+      <MemberSignature Language="DocId" Value="E:System.Drawing.Printing.PrintDocument.PrintPage" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrintPageEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a saída de impressão da página atual é necessária.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para especificar a saída de impressão, use o <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> propriedade o <xref:System.Drawing.Printing.PrintPageEventArgs>. Por exemplo, para especificar uma linha de texto que deve ser impresso, desenhar o texto usando o <xref:System.Drawing.Graphics.DrawString%2A?displayProperty=nameWithType> método.  
+  
+ Além de especificar a saída, você pode indicar se há páginas adicionais para imprimir, definindo o <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A?displayProperty=nameWithType> propriedade `true`. O padrão é `false`, que indica que não existem mais páginas para imprimir. Configurações de página individuais também podem ser modificadas por meio de <xref:System.Drawing.Printing.PageSettings> e o trabalho de impressão pode ser cancelado definindo o <xref:System.Drawing.Printing.PrintPageEventArgs.Cancel%2A?displayProperty=nameWithType> propriedade `true`. Para imprimir cada página de um documento usando as configurações de página diferentes, tratar o <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> evento.  
+  
+ Para associar o evento com o manipulador de eventos, adicione uma instância do <xref:System.Drawing.Printing.PrintPageEventHandler> delegar para o evento. O manipulador de eventos é chamado sempre que o evento ocorre. Para obter mais informações sobre como manipular eventos com delegados, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a manipulação de <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos.  
+  
+ Outro exemplo, consulte [como: imprimir um arquivo de texto com várias páginas no Windows Forms](~/docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).  
+  
+ Use o <xref:System.Drawing>, <xref:System.Drawing.Printing>, e <xref:System.IO> namespaces para este exemplo.  
+  
+ [!code-cpp[Classic PrintDocument Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic PrintDocument Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PrintDocument Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic PrintDocument Example/CS/source.cs#1)]
+ [!code-vb[Classic PrintDocument Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic PrintDocument Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryPageSettings">
+      <MemberSignature Language="C#" Value="public event System.Drawing.Printing.QueryPageSettingsEventHandler QueryPageSettings;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Drawing.Printing.QueryPageSettingsEventHandler QueryPageSettings" />
+      <MemberSignature Language="DocId" Value="E:System.Drawing.Printing.PrintDocument.QueryPageSettings" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.QueryPageSettingsEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre imediatamente antes de cada evento <see cref="E:System.Drawing.Printing.PrintDocument.PrintPage" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É possível imprimir cada página de um documento usando as configurações de página diferentes. Definir configurações de página, modificando as propriedades individuais do <xref:System.Drawing.Printing.QueryPageSettingsEventArgs.PageSettings%2A?displayProperty=nameWithType> propriedade ou definindo a propriedade como um <xref:System.Drawing.Printing.PageSettings>. As alterações feitas a <xref:System.Drawing.Printing.PageSettings> afetam apenas a página atual, não do documento padrão configurações de página. O trabalho de impressão também pode ser cancelado, definindo a <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade `true` para o <xref:System.Drawing.Printing.QueryPageSettingsEventArgs>.  
+  
+ Para associar o evento com o manipulador de eventos, adicione uma instância do <xref:System.Drawing.Printing.QueryPageSettingsEventHandler> delegar para o evento. O manipulador de eventos é chamado sempre que o evento ocorre. Para obter mais informações sobre como manipular eventos com delegados, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir imprime um documento com a primeira página na cor, se a impressora oferecer suporte a ele. O exemplo requer que um <xref:System.Drawing.Printing.PrintDocument> variável chamada `printDoc` tiver sido criado e o <xref:System.Drawing.Printing.PrintDocument.PrintPage> e <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> eventos são processados. O `currentPageNumber` variável é incrementada depois de cada página é impressa no <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento, que não é exibido.  
+  
+ Use o <xref:System.Drawing> e <xref:System.Drawing.Printing> namespaces para este exemplo.  
+  
+ [!code-cpp[PaperSource and PaperSize Example with Resolution#6](~/samples/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp#6)]
+ [!code-csharp[PaperSource and PaperSize Example with Resolution#6](~/samples/snippets/csharp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CS/source.cs#6)]
+ [!code-vb[PaperSource and PaperSize Example with Resolution#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PrintDocument.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece informações sobre o documento de impressão, na forma de cadeia de caracteres.</summary>
+        <returns>Uma cadeia de caracteres.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

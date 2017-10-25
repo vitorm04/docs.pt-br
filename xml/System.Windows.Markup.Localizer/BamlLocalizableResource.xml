@@ -1,0 +1,262 @@
+<Type Name="BamlLocalizableResource" FullName="System.Windows.Markup.Localizer.BamlLocalizableResource">
+  <TypeSignature Language="C#" Value="public class BamlLocalizableResource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BamlLocalizableResource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.BamlLocalizableResource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um recurso localizável em um fluxo BAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Markup.Localizer.BamlLocalizableResource> classe é o componente de valor de pares chave-valor encontrado em um <xref:System.Windows.Markup.Localizer.BamlLocalizationDictionary>.  
+  
+<a name="xamlTextUsage_BamlLocalizableResource"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.Windows.Markup.Localizer.BamlLocalizableResource>.  
+  
+ [!code-csharp[GrabBaml#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GrabBaml/CSharp/GrabBaml.cs#1)]
+ [!code-vb[GrabBaml#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GrabBaml/visualbasic/grabbaml.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BamlLocalizableResource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BamlLocalizableResource (string content, string comments, System.Windows.LocalizationCategory category, bool modifiable, bool readable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string content, string comments, valuetype System.Windows.LocalizationCategory category, bool modifiable, bool readable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResource.#ctor(System.String,System.String,System.Windows.LocalizationCategory,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="comments" Type="System.String" />
+        <Parameter Name="category" Type="System.Windows.LocalizationCategory" />
+        <Parameter Name="modifiable" Type="System.Boolean" />
+        <Parameter Name="readable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="content">O valor localizável.</param>
+        <param name="comments">Comentários usados para localização.</param>
+        <param name="category">A categoria de cadeia de caracteres do recurso.</param>
+        <param name="modifiable">
+          <see langword="true" />Se o recurso deve ser modificável; Caso contrário, <see langword="false" />.</param>
+        <param name="readable">
+          <see langword="true" />Se o recurso deve estar visível para fins de tradução, porque ele é potencialmente legível como texto na interface do usuário; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResource" /> classe com o valor localizável especificado, comentários de localização, categoria de recursos, status de bloqueio de localização e visibilidade do recurso.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public System.Windows.LocalizationCategory Category { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LocalizationCategory Category" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizationCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a categoria de localização de um recurso.</summary>
+        <value>A categoria de localização, como um valor da enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Category"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comments">
+      <MemberSignature Language="C#" Value="public string Comments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comments" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Comments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os comentários de localização associados a um recurso.</summary>
+        <value>A cadeia de caracteres de comentário de localização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Comentários de localização são criados pelo desenvolvedor para fornecer regras ou dicas para os localizadores. Os comentários são cadeias de caracteres de forma livre que são extraídas de [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] ou de arquivos de comentários de localização. Para anexar os comentários a um elemento [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], use o <xref:System.Windows.Localization.Comments%2A?displayProperty=nameWithType> propriedade anexada para obter mais informações sobre essa propriedade anexada, consulte [atributos de localização e comentários](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+<a name="xamlTextUsage_Comments"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public string Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo localizável.</summary>
+        <value>A cadeia de caracteres de conteúdo localizável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementos filho por padrão são representados como espaços reservados. O espaço reservado começa com um caractere "#", em seguida, o UID do elemento filho, em seguida, um ";". Por exemplo, "#TextBlock1; #TextBlock2;". Normal "#" e ";" caracteres dentro do conteúdo são substituídos com um "\\". Isso se aplica a real "\\" de caracteres em si. A remoção de espaços reservados de filho no conteúdo não é permitida porque um elemento pode ser referenciado no código, que pode fazer com que o aplicativo localizado falhar em tempo de execução. No entanto, é permitido para reordená-las em suas localizações.  
+  
+ Elementos filho no conteúdo também podem ser formatados como uma marcação XML para melhorar a legibilidade. Para fazer isso, quando <xref:System.Windows.Markup.Localizer.BamlLocalizer> consultas a <xref:System.Windows.Markup.Localizer.ElementLocalizability> de um elemento desejado, defina o <xref:System.Windows.Markup.Localizer.ElementLocalizability.FormattingTag%2A> propriedade para o nome de marca desejada.  
+  
+<a name="xamlTextUsage_Content"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResource.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResource" /> testar a igualdade de objeto.</param>
+        <summary>Determina se um especificado <see cref="T:System.Windows.Markup.Localizer.BamlLocalizableResource" /> objeto é igual a este objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="other" /> é igual a este objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizableResource.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código de hash de número inteiro que representa esta instância.</summary>
+        <returns>Um código de hash de número inteiro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiable">
+      <MemberSignature Language="C#" Value="public bool Modifiable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Modifiable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Modifiable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o recurso localizável é modificável.</summary>
+        <value>
+          <see langword="true" />Se o recurso é modificável; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Modifiable"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Readable">
+      <MemberSignature Language="C#" Value="public bool Readable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Readable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizableResource.Readable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o recurso está visível para a conversão.</summary>
+        <value>
+          <see langword="true" />Se o recurso está visível para a conversão; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Markup.Localizer.BamlLocalizableResource.Readable%2A> valor serve como uma recomendação para o localizador sobre se o conteúdo do recurso localizável pode ser convertido diretamente como cadeias de caracteres simples.  
+  
+ Por exemplo, quando a cadeia de caracteres "Vermelho" é usada como uma cadeia de caracteres da interface do usuário, ele pode ser diretamente convertido em outro idioma. Nesse caso o <xref:System.Windows.Markup.Localizer.BamlLocalizableResource.Readable%2A> propriedade deve ser definida como `true`.  
+  
+ Quando a cadeia de caracteres "Vermelho" é usada como um valor de cor predefinidos de um <xref:System.Windows.Media.Brush>, ele não pode ser convertido. Portanto, o <xref:System.Windows.Markup.Localizer.BamlLocalizableResource.Readable%2A> propriedade deve ser definida como `false`.  
+  
+<a name="xamlTextUsage_Readable"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

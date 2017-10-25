@@ -1,0 +1,154 @@
+<Type Name="TouchFrameEventArgs" FullName="System.Windows.Input.TouchFrameEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class TouchFrameEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TouchFrameEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.TouchFrameEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Input.Touch.FrameReported" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Touch.FrameReported> evento está incluído em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] para oferecer suporte à compatibilidade com o Silverlight. Se você não tiver que garantir a compatibilidade com o Silverlight, use os eventos de toque, como <xref:System.Windows.UIElement.TouchDown> e <xref:System.Windows.UIElement.TouchMove>, na <xref:System.Windows.UIElement>, <xref:System.Windows.UIElement3D>, ou <xref:System.Windows.ContentElement>.  
+  
+ Use o <xref:System.Windows.Input.TouchFrameEventArgs> para obter o <xref:System.Windows.Input.TouchPoint> valores que são relevantes para o evento de toque. Do <xref:System.Windows.Input.TouchPoint>, você pode obter o <xref:System.Windows.Input.TouchPoint.Position%2A> de toque e determine se o <xref:System.Windows.Input.TouchAction> foi uma <xref:System.Windows.Input.TouchAction.Down>, <xref:System.Windows.Input.TouchAction.Move>, ou <xref:System.Windows.Input.TouchAction.Up> ação. Você também pode usar o <xref:System.Windows.Input.TouchPoint> para obter o <xref:System.Windows.Input.TouchDevice>. Do <xref:System.Windows.Input.TouchDevice>, você pode determinar o dispositivo <xref:System.Windows.Input.TouchDevice.Id%2A> e obter informações sobre o elemento que é alterado.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir trata o <xref:System.Windows.Input.Touch.FrameReported> eventos e acessa os dados de toque no <xref:System.Windows.Input.TouchFrameEventArgs>. Quando um toque é pressionado <xref:System.Windows.Controls.Canvas>, o <xref:System.Windows.Input.TouchDevice> é capturado para o <xref:System.Windows.Controls.Canvas>. Quando o toque é eliminado, o <xref:System.Windows.Input.TouchDevice> é liberado. Quando um toque percorre o <xref:System.Windows.Controls.Canvas>, o <xref:System.Windows.Input.TouchDevice.Id%2A> é verificada. Se a movimentação de onde veio o toque primeiro, seu local será registrado. Se a movimentação de onde veio o segundo toque, uma linha é desenhada da posição da primeira toque para a posição do segundo toque.  
+  
+ Este exemplo é parte de um exemplo maior que está disponível na <xref:System.Windows.Input.Touch> visão geral da classe.  
+  
+ [!code-csharp[TouchFrameSample#110](~/samples/snippets/csharp/VS_Snippets_Wpf/touchframesample/cs/mainwindow.xaml.cs#110)]
+ [!code-vb[TouchFrameSample#110](~/samples/snippets/visualbasic/VS_Snippets_Wpf/touchframesample/vb/mainwindow.xaml.vb#110)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetPrimaryTouchPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.TouchPoint GetPrimaryTouchPoint (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.TouchPoint GetPrimaryTouchPoint(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TouchFrameEventArgs.GetPrimaryTouchPoint(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TouchPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">O elemento que define o espaço de coordenadas. Para usar coordenadas absolutas de WPF, especifique <c>relativeTo</c> como <see langword="null" />.</param>
+        <summary>Retorna o ponto de toque atual do dispositivo primário toque em relação ao elemento especificado.</summary>
+        <returns>A posição atual do primário <see cref="T:System.Windows.Input.TouchDevice" /> em relação ao elemento especificado; ou <see langword="null" /> se o primário <see cref="T:System.Windows.Input.TouchDevice" /> não está ativa.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um conjunto ativo dispositivos sensíveis ao toque, o primeiro dispositivo para ser <xref:System.Windows.Input.TouchDevice.Activated> é o dispositivo primário toque. Por exemplo, se dois dedos tocam a tela, o dedo indicador que está inativo é representado pelo dispositivo primário toque. Se o dedo indicador é eliminado enquanto o segundo dedo ainda está inoperante, o dispositivo de contato primário se torna `null`.  
+  
+   
+  
+## Examples  
+ O código a seguir processa os pontos de toque que são recuperados a partir de <xref:System.Windows.Input.TouchFrameEventArgs>. Quando um toque é pressionado <xref:System.Windows.Controls.Canvas>, o <xref:System.Windows.Input.TouchDevice> é capturado para o <xref:System.Windows.Controls.Canvas>. Quando o toque é eliminado, o <xref:System.Windows.Input.TouchDevice> é liberado. Quando um toque percorre o <xref:System.Windows.Controls.Canvas>, o <xref:System.Windows.Input.TouchDevice.Id%2A> é verificada. Se o <xref:System.Windows.Input.TouchDevice.Id%2A> corresponde a <xref:System.Windows.Input.TouchDevice.Id%2A> do ponto de contato primário, que indica o primeiro toque, sua localização é registrada. Se a movimentação de onde veio o segundo toque, uma linha é desenhada da posição da primeira toque para a posição do segundo toque.  
+  
+ Este exemplo é parte de um exemplo maior que está disponível na <xref:System.Windows.Input.Touch> visão geral da classe.  
+  
+ [!code-csharp[TouchFrameSample#120](~/samples/snippets/csharp/VS_Snippets_Wpf/touchframesample/cs/mainwindow.xaml.cs#120)]
+ [!code-vb[TouchFrameSample#120](~/samples/snippets/visualbasic/VS_Snippets_Wpf/touchframesample/vb/mainwindow.xaml.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTouchPoints">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.TouchPointCollection GetTouchPoints (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.TouchPointCollection GetTouchPoints(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TouchFrameEventArgs.GetTouchPoints(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TouchPointCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">O elemento que define o espaço de coordenadas. Para usar coordenadas absolutas de WPF, especifique <c>relativeTo</c> como <see langword="null" />.</param>
+        <summary>Retorna uma coleção que contém o ponto de toque atual para cada dispositivo de toque ativo em relação ao elemento especificado.</summary>
+        <returns>Uma coleção que contém o atual <see cref="T:System.Windows.Input.TouchPoint" /> para cada ativo <see cref="T:System.Windows.Input.TouchDevice" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir processos os pontos de toque são obtidos a <xref:System.Windows.Input.TouchFrameEventArgs>. Quando é pressionado um toque na tela, o <xref:System.Windows.Input.TouchDevice> é capturado para a tela. Quando o toque é gerado, o <xref:System.Windows.Input.TouchDevice> é liberado. Quando se move um toque na tela, o <xref:System.Windows.Input.TouchDevice.Id%2A> é verificada. Se o <xref:System.Windows.Input.TouchDevice.Id%2A> corresponde a <xref:System.Windows.Input.TouchDevice.Id%2A> do ponto de contato primário, que indica o primeiro toque, sua localização é registrada. Se a movimentação de onde veio o segundo toque, uma linha é desenhada da posição da primeira toque para a posição do segundo toque.  
+  
+ Este exemplo é parte de um exemplo maior que está disponível na <xref:System.Windows.Input.Touch> visão geral da classe.  
+  
+ [!code-csharp[TouchFrameSample#120](~/samples/snippets/csharp/VS_Snippets_Wpf/touchframesample/cs/mainwindow.xaml.cs#120)]
+ [!code-vb[TouchFrameSample#120](~/samples/snippets/visualbasic/VS_Snippets_Wpf/touchframesample/vb/mainwindow.xaml.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuspendMousePromotionUntilTouchUp">
+      <MemberSignature Language="C#" Value="public void SuspendMousePromotionUntilTouchUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SuspendMousePromotionUntilTouchUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.TouchFrameEventArgs.SuspendMousePromotionUntilTouchUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este membro não está implementado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para compatibilidade do Silverlight. Devido às diferenças de implementação do dispositivo, ele não é implementado no WPF.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="public int Timestamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timestamp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.TouchFrameEventArgs.Timestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o carimbo de hora para esse evento.</summary>
+        <value>O carimbo de hora para esse evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

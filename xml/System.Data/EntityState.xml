@@ -1,0 +1,115 @@
+<Type Name="EntityState" FullName="System.Data.EntityState">
+  <TypeSignature Language="C#" Value="public enum EntityState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EntityState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.EntityState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DataAnnotations.BindableType(IsBindable=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O estado de um objeto de entidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto de objeto deve saber o estado de um objeto para salvar alterações de volta para a fonte de dados. <xref:System.Data.Objects.ObjectStateEntry>repositório de objetos <xref:System.Data.EntityState> informações. O `SaveChanges` métodos do <xref:System.Data.Objects.ObjectContext> processar entidades que estão anexadas ao contexto e atualizar a fonte de dados, dependendo da <xref:System.Data.EntityState> de cada objeto. Para obter mais informações, consulte [criando, adicionando, modificando e excluindo objetos](http://msdn.microsoft.com/en-us/f76f1fad-c553-4b59-820b-89b3dec2fad1).  
+  
+ O estado dos objetos dentro de um contexto de objeto é gerenciado pelo <xref:System.Data.Objects.ObjectStateManager>. Para descobrir o estado de um objeto, chame um dos seguintes <xref:System.Data.Objects.ObjectStateManager> métodos: <xref:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry%2A>, <xref:System.Data.Objects.ObjectStateManager.GetObjectStateEntry%2A>, ou <xref:System.Data.Objects.ObjectStateManager.GetObjectStateEntries%2A>. O <xref:System.Data.Objects.ObjectStateEntry.State%2A> propriedade o <xref:System.Data.Objects.ObjectStateEntry> define o estado do objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Added">
+      <MemberSignature Language="C#" Value="Added" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.EntityState Added = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.EntityState.Added" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto é novo, foi adicionado ao contexto de objeto e o método <see cref="M:System.Data.Objects.ObjectContext.SaveChanges" /> não foi chamado. Depois de salvar as alterações, o estado do objeto é alterado para <see cref="F:System.Data.EntityState.Unchanged" />. Objetos no estado <see cref="F:System.Data.EntityState.Added" /> não têm valores originais no <see cref="T:System.Data.Objects.ObjectStateEntry" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleted">
+      <MemberSignature Language="C#" Value="Deleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.EntityState Deleted = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.EntityState.Deleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto foi excluído do contexto de objeto. Depois de salvar as alterações, o estado do objeto é alterado para <see cref="F:System.Data.EntityState.Detached" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Detached">
+      <MemberSignature Language="C#" Value="Detached" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.EntityState Detached = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.EntityState.Detached" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto existe, mas não está sendo acompanhado. Uma entidade está nesse estado imediatamente após ter sido criada e antes de ser adicionada ao contexto de objeto. Uma entidade também está nesse estado depois de ser removida do contexto ao chamar o método <see cref="M:System.Data.Objects.ObjectContext.Detach(System.Object)" /> ou se ela é carregada com o uso de um <see cref="F:System.Data.Objects.MergeOption.NoTracking" /><see cref="T:System.Data.Objects.MergeOption" />. Não há nenhuma instância <see cref="T:System.Data.Objects.ObjectStateEntry" /> associada aos objetos no estado <see cref="F:System.Data.EntityState.Detached" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modified">
+      <MemberSignature Language="C#" Value="Modified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.EntityState Modified = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.EntityState.Modified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma das propriedades escalares do objeto foi modificada e o método <see cref="M:System.Data.Objects.ObjectContext.SaveChanges" /> não foi chamado. Em entidades POCO sem proxies de controle de alterações, o estado das propriedades modificadas muda para <see cref="F:System.Data.EntityState.Modified" /> quando o método <see cref="M:System.Data.Objects.ObjectContext.DetectChanges" /> é chamado. Depois de salvar as alterações, o estado do objeto é alterado para <see cref="F:System.Data.EntityState.Unchanged" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unchanged">
+      <MemberSignature Language="C#" Value="Unchanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.EntityState Unchanged = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.EntityState.Unchanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto não foi modificado desde que foi anexado ao contexto ou desde a última vez que o método <see cref="M:System.Data.Objects.ObjectContext.SaveChanges" /> foi chamado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,175 @@
+<Type Name="DynamicRouteExpression" FullName="System.Web.DynamicData.DynamicRouteExpression">
+  <TypeSignature Language="C#" Value="public class DynamicRouteExpression : System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicRouteExpression extends System.Web.UI.WebControls.Expressions.DataSourceExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.DynamicRouteExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Expressions.DataSourceExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Obtém a chave primária de informações de roteamento para executar a filtragem de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.DynamicRouteExpression> classe é usada com a <xref:System.Web.UI.WebControls.QueryExtender> controle na marcação da página. O <xref:System.Web.DynamicData.DynamicRouteExpression> classe obtém a chave primária de informações de roteamento que estão contidas em uma solicitação da Web. O <xref:System.Web.UI.WebControls.QueryExtender> controle, em seguida, usa a chave em um `Where` cláusula. Isso modifica a consulta da fonte de dados, que retorna linhas da tabela filtradas pela chave.  
+  
+ Você também pode filtrar dados usando uma chave estrangeira que você especifica usando o <xref:System.Web.DynamicData.DynamicRouteExpression.ColumnName%2A> propriedade.  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:DynamicRouteExpression  
+  ColumnName="Name of the foreign key column"/>  
+```  
+  
+   
+  
+## Examples  
+ Um projeto do Visual Studio com o código-fonte está disponível para acompanhar este tópico: [Scaffolding de dados dinâmicos](http://go.microsoft.com/fwlink/?LinkId=168914).  
+  
+ O exemplo a seguir mostra um modelo personalizado de página List.aspx para a tabela de produtos. Ele usa o <xref:System.Web.DynamicData.DynamicRouteExpression.ColumnName%2A> propriedade para especificar a chave estrangeira ProductCategory para filtrar as linhas de produtos.  
+  
+ A página List.aspx personalizada exibe uma coluna que contém links das categorias que são contidas pela coluna de chave estrangeira ProductCategory. Quando o usuário clica em um desses links, a página de List.aspx exibe somente as linhas que contêm a categoria selecionada.  
+  
+ O exemplo requer o seguinte:  
+  
+-   Um site da Web dinâmico de dados. Para obter mais informações, consulte [passo a passo: Criando um novo dinâmico dados de Site da Web usando o Scaffolding](http://msdn.microsoft.com/library/1564aef2-9103-436a-9806-c8ad7abd616a).  
+  
+-   O banco de dados de exemplo AdventureWorksLT. Para obter mais informações, consulte [como: conectar-se ao banco de dados AdventureWorksLT usando um. Arquivo MDF](http://msdn.microsoft.com/library/d34ffbac-607d-40f1-b088-0a3304ea032b).  
+  
+ [!code-aspx-csharp[System.Web.DynamicData.DynamicRouteExpression#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.dynamicdata.dynamicrouteexpression/cs/list.aspx#1)]
+ [!code-aspx-vb[System.Web.DynamicData.DynamicRouteExpression#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.dynamicdata.dynamicrouteexpression/vb/list.aspx#1)]  
+  
+ [!code-csharp[System.Web.DynamicData.DynamicRouteExpression#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.dynamicdata.dynamicrouteexpression/cs/list.aspx.cs#3)]
+ [!code-vb[System.Web.DynamicData.DynamicRouteExpression#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.dynamicdata.dynamicrouteexpression/vb/list.aspx.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicRouteExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicRouteExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.DynamicData.DynamicRouteExpression" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente não chama o <xref:System.Web.DynamicData.DynamicRouteExpression.%23ctor%2A> construtor. Em vez disso, você usar o <xref:System.Web.DynamicData.DynamicRouteExpression> classe na marcação da página e a classe são inicializados quando a página for carregada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnName">
+      <MemberSignature Language="C#" Value="public string ColumnName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ColumnName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicRouteExpression.ColumnName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de uma coluna que contém uma chave estrangeira que é usada para consultar a fonte de dados.</summary>
+        <value>O nome da coluna de chave estrangeira.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.DynamicRouteExpression.ColumnName%2A> propriedade representa uma chave estrangeira. Essa chave é usada para modificar a consulta da fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como especificar a coluna de chave estrangeira ProductCategory para filtrar os produtos para exibir. Este exemplo é parte do exemplo maior fornecido para a <xref:System.Web.DynamicData.DynamicRouteExpression> classe.  
+  
+```  
+<asp:QueryExtender TargetControlID="GridDataSource"   
+    ID="GridQueryExtender" runat="server">  
+  <asp:DynamicRouteExpression ColumnName="ProductCategory" />  
+</asp:QueryExtender>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryable">
+      <MemberSignature Language="C#" Value="public override System.Linq.IQueryable GetQueryable (System.Linq.IQueryable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.IQueryable GetQueryable(class System.Linq.IQueryable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicRouteExpression.GetQueryable(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="source">A consulta para modificar.</param>
+        <summary>Obtém a consulta da fonte de dados.</summary>
+        <returns>Uma instância de consulta modificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A consulta da fonte de dados, representado pelo `source` parâmetro, é modificado, aplicando a chave primária ou estrangeira que é as informações de rota atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContext">
+      <MemberSignature Language="C#" Value="public override void SetContext (System.Web.UI.Control owner, System.Web.HttpContext context, System.Web.UI.WebControls.IQueryableDataSource dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetContext(class System.Web.UI.Control owner, class System.Web.HttpContext context, class System.Web.UI.WebControls.IQueryableDataSource dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicRouteExpression.SetContext(System.Web.UI.Control,System.Web.HttpContext,System.Web.UI.WebControls.IQueryableDataSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="dataSource" Type="System.Web.UI.WebControls.IQueryableDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O controle que contém o <see cref="T:System.Web.DynamicData.DynamicRouteExpression" /> instância. Este é um <see cref="T:System.Web.UI.WebControls.QueryExtender" /> controle.</param>
+        <param name="context">O contexto de solicitação da Web.</param>
+        <param name="dataSource">Fonte de dados de destino para a <see cref="T:System.Web.DynamicData.DynamicRouteExpression" /> instância.</param>
+        <summary>Define o contexto HTTP do <see cref="T:System.Web.DynamicData.DynamicRouteExpression" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

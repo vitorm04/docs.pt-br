@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Metadata.W3cXsd2001">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Metadata.W3cXsd2001" /> namespace contém a definição de esquema de XML (XSD) definida pelo World Wide Web Consortium (W3C) em 2001. O esquema XML parte 2: Especificação de tipos de dados do W3C identifica o formato e o comportamento de vários tipos de dados. Este namespace contém classes de wrapper para os tipos de dados que estão em conformidade com a especificação do W3C. Todos os tipos de data e hora está de acordo com a especificação de padrões ISO.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o esquema XML parte 2: especificação de tipos de dados, consulte http://www.w3.org/TR/xmlschema-2/.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,86 @@
+<Type Name="InvalidBodyAccessException" FullName="System.ServiceModel.Dispatcher.InvalidBodyAccessException">
+  <TypeSignature Language="C#" Value="public abstract class InvalidBodyAccessException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit InvalidBodyAccessException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um <see langword="abstract" /> a classe base para as exceções que são geradas, se for feita uma tentativa de acessar o corpo de uma mensagem quando não é permitido.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InvalidBodyAccessException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.InvalidBodyAccessException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao criar um personalizado <see cref="T:System.ServiceModel.Dispatcher.MessageFilterTable`1" /> é responsabilidade do implementador de passar os parâmetros relevantes para o construtor chamado para gerar o <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InvalidBodyAccessException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.InvalidBodyAccessException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" /> classe com informações contextuais e serializadas especificadas.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao criar um personalizado <see cref="T:System.ServiceModel.Dispatcher.MessageFilterTable`1" /> é responsabilidade do implementador de passar os parâmetros relevantes para o construtor chamado para gerar o <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InvalidBodyAccessException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.InvalidBodyAccessException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao criar um personalizado <see cref="T:System.ServiceModel.Dispatcher.MessageFilterTable`1" /> é responsabilidade do implementador de passar os parâmetros relevantes para o construtor chamado para gerar o <see cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

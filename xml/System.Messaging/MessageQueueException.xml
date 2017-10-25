@@ -1,0 +1,134 @@
+<Type Name="MessageQueueException" FullName="System.Messaging.MessageQueueException">
+  <TypeSignature Language="C#" Value="public class MessageQueueException : System.Runtime.InteropServices.ExternalException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MessageQueueException extends System.Runtime.InteropServices.ExternalException" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.InteropServices.ExternalException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é lançada se ocorrer um erro interno do Enfileiramento de Mensagens da Microsoft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exceções associadas a <xref:System.Messaging.MessageQueueException> classe são gerados por erros internos dentro de enfileiramento de mensagens que devem ser resolvidas por meio do seu código.  
+  
+ Cada exceção consiste em um código de erro e uma cadeia de caracteres de texto que descreve a origem do erro. Consulte o <xref:System.Messaging.MessageQueueErrorCode> classe para obter uma lista desses códigos de erro e suas descrições.  
+  
+ Se <xref:System.Messaging.MessageQueue> abrir uma fila com o parâmetro `sharedModeDenyReceive` definido como verdadeiro, qualquer <xref:System.Messaging.MessageQueue> que tentar ler a fila depois disso gerará uma exceção <xref:System.Messaging.MessageQueueException> devido a uma violação de compartilhamento. A mesma exceção será lançada se uma <xref:System.Messaging.MessageQueue> tenta acessar a fila em modo exclusivo quando outra <xref:System.Messaging.MessageQueue> já tiver acesso não exclusivo à fila.  
+  
+> **Não há suporte para a marca alerta!!!**  
+> O <xref:System.Messaging.MessageQueueTransaction> tem reconhecimento a apartments threading. Visual Basic define o estado do thread principal para `STA`, portanto, você deve aplicar o <xref:System.MTAThreadAttribute> no `Main` sub-rotina. Caso contrário, o envio de uma mensagem transacional usando outro thread gerará uma exceção <xref:System.Messaging.MessageQueueException>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[MessageQueue.ExistsDelete#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.ExistsDelete/CPP/mqexistsdelete.cpp#1)]
+ [!code-csharp[MessageQueue.ExistsDelete#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.ExistsDelete/CS/mqexistsdelete.cs#1)]
+ [!code-vb[MessageQueue.ExistsDelete#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.ExistsDelete/VB/mqexistsdelete.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageQueueException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contém os dados serializados associados a <see cref="T:System.Messaging.MessageQueueException" />.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém a origem e o destino do fluxo serializado associado a <see cref="T:System.Messaging.MessageQueueException" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Messaging.MessageQueueException" /> com dados serializados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contém os dados serializados associados a <see cref="T:System.Messaging.MessageQueueException" />.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém a origem e o destino do fluxo serializado associado a <see cref="T:System.Messaging.MessageQueueException" />.</param>
+        <summary>Popula um objeto de informações de serialização com os dados necessários para serializar o <see cref="T:System.Messaging.MessageQueueException" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="info" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que descreve o erro do serviço de enfileiramento de mensagens.</summary>
+        <value>A descrição do serviço de enfileiramento de mensagens interno erro que gerou este <see cref="T:System.Messaging.MessageQueueException" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você receber essa propriedade, o método tenta recuperar a cadeia de caracteres de texto associada a <xref:System.Messaging.MessageQueueException.MessageQueueErrorCode%2A> propriedade. Se o método for não é possível interpretar o código de erro gerado do enfileiramento de mensagens, o <xref:System.Messaging.MessageQueueException.Message%2A> propriedade obtém o valor `UnknownError`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageQueueErrorCode">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueueErrorCode MessageQueueErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessageQueueErrorCode MessageQueueErrorCode" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueException.MessageQueueErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o código de erro associado a essa exceção.</summary>
+        <value>Um <see cref="T:System.Messaging.MessageQueueErrorCode" /> que identifica o tipo de erro gerado do enfileiramento de mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueueException.Message%2A> propriedade contém uma cadeia de caracteres associada a esta <xref:System.Messaging.MessageQueueException.MessageQueueErrorCode%2A> que descreve mais detalhadamente a origem do erro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

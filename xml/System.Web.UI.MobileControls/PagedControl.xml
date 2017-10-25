@@ -1,0 +1,438 @@
+<Type Name="PagedControl" FullName="System.Web.UI.MobileControls.PagedControl">
+  <TypeSignature Language="C#" Value="public abstract class PagedControl : System.Web.UI.MobileControls.MobileControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PagedControl extends System.Web.UI.MobileControls.MobileControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.PagedControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.MobileControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Funciona como uma classe base usada por todos os controles que oferecem suporte à paginação interna. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.PagedControl> classe expõe determinadas propriedades, métodos e eventos comuns a todos os controles que são capazes de paginação interna.  
+  
+ Todos os controles que herdam a <xref:System.Web.UI.MobileControls.PagedControl> classe também oferecem suporte a paginação personalizada, conhecida como agrupamento.  
+  
+ Como o <xref:System.Web.UI.MobileControls.ItemPager> classe, essa classe é usada para controles que têm o comprimento do texto longo, como um <xref:System.Web.UI.MobileControls.List>, <xref:System.Web.UI.MobileControls.LiteralText>, ou <xref:System.Web.UI.MobileControls.ObjectList>.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PagedControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.UI.MobileControls.PagedControl" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstVisibleItemIndex">
+      <MemberSignature Language="C#" Value="public int FirstVisibleItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstVisibleItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.FirstVisibleItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro item visível na página atual do formulário. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O primeiro item visível na página atual do formulário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o controle não estiver visível na página atual do formulário, esse valor será -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalItemCount">
+      <MemberSignature Language="C#" Value="protected abstract int InternalItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InternalItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.InternalItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens no controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O número de itens no controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.Web.UI.MobileControls.PagedControl> devem substituir essa propriedade herdada.  
+  
+ A diferença entre o <xref:System.Web.UI.MobileControls.PagedControl.InternalItemCount%2A> propriedade e o <xref:System.Web.UI.MobileControls.ArrayListCollectionBase.Count%2A> propriedade o <xref:System.Web.UI.MobileControls.List> e <xref:System.Web.UI.MobileControls.ObjectList> classes é que, se o <xref:System.Web.UI.MobileControls.PagedControl.InternalItemCount%2A> propriedade é chamada antes do estado de exibição de controle é carregado, ele retorna o número de itens no estado de exibição, ao contrário do comportamento do <xref:System.Web.UI.MobileControls.ArrayListCollectionBase.Count%2A> propriedade, que retorna zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCount">
+      <MemberSignature Language="C#" Value="public int ItemCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.ItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a contagem de itens no controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A contagem de itens no controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Paginação personalizada deve ser habilitada. O padrão é 0, indicando que você não pode usar a paginação personalizada.  
+  
+ As unidades usadas para um item dependem do controle. Por exemplo, um <xref:System.Web.UI.MobileControls.List> controle pode usar itens de lista como unidades, enquanto um <xref:System.Web.UI.MobileControls.TextView> controle pode usar caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsPerPage">
+      <MemberSignature Language="C#" Value="public int ItemsPerPage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemsPerPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.ItemsPerPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de itens exibidos por página depois de paginação. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O número de itens exibidos por página depois de paginação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for zero, a paginação não é afetada por essa propriedade. Se for diferente de zero, substituições de itens exibidos por página, quando o formulário é paginado. O valor padrão é zero.  
+  
+ Controles para dispositivos móveis que oferecem suporte à paginação interna também fornecem um recurso chamado paginação personalizada. Normalmente, esses controles exigem que você forneça todos os dados que eles podem exibir. Os desenvolvedores de especificam o número total de itens que estão na lista de <xref:System.Web.UI.MobileControls.PagedControl.ItemCount%2A> propriedade. O <xref:System.Web.UI.MobileControls.PagedControl.ItemsPerPage%2A> propriedade especifica quantos itens exibe o controle por página.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.UI.MobileControls.PagedControl.ItemsPerPage%2A> propriedade renderizar oito itens de uma lista de 200 itens por página.  
+  
+ [!code-aspx-csharp[MobileLoadListEventArgsSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileLoadListEventArgsSample/cs/default.aspx#1)]
+ [!code-aspx-vb[MobileLoadListEventArgsSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileLoadListEventArgsSample/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemWeight">
+      <MemberSignature Language="C#" Value="protected virtual int ItemWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.ItemWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o peso aproximado de um único item no controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O peso aproximado de um único item no controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor de -1 indica que o peso padrão para o elemento deve ser usado. A classe de herança deve substituir essa propriedade. Para obter mais informações sobre como substituir essa propriedade, consulte [suporte paginação](http://msdn.microsoft.com/en-us/78f2786d-0b5b-4760-9616-5027357713c2).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e usa um controle de lista personalizada. O exemplo demonstra como substituir o <xref:System.Web.UI.MobileControls.PagedControl.ItemWeight%2A> propriedade de um <xref:System.Web.UI.MobileControls.List> classe para especificar um peso de controle de novo.  
+  
+ [!code-aspx-csharp[MobilePagedControlSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobilePagedControlSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobilePagedControlSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobilePagedControlSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadItems">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.MobileControls.LoadItemsEventHandler LoadItems;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.MobileControls.LoadItemsEventHandler LoadItems" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.PagedControl.LoadItems" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.LoadItemsEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um controle é paginado personalizado e precisa de mais dados. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o controle é personalizado-paginado, você não associar explicitamente o controle. Depois de paginação, o controle gera esse evento, que indica qual parte dos dados é necessária. O aplicativo pode lidar com esse evento e associar o controle com os dados necessários.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.MobileControls.PagedControl.ItemsPerPage%2A> propriedade renderizar oito itens de uma lista de 200 itens por página.  
+  
+ [!code-aspx-csharp[MobileLoadListEventArgsSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileLoadListEventArgsSample/cs/default.aspx#1)]
+ [!code-aspx-vb[MobileLoadListEventArgsSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileLoadListEventArgsSample/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPrivateViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadPrivateViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadPrivateViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.LoadPrivateViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Nenhum</param>
+        <summary>Carrega o estado de exibição particular. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoadItems">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoadItems (System.Web.UI.MobileControls.LoadItemsEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoadItems(class System.Web.UI.MobileControls.LoadItemsEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.OnLoadItems(System.Web.UI.MobileControls.LoadItemsEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.LoadItemsEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto definido por um <see cref="T:System.EventArgs" /> objeto que contém dados do evento.</param>
+        <summary>Chamado quando o controle for personalizado paginado e precisa de mais dados. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A padrão implementação gera o <xref:System.Web.UI.MobileControls.PagedControl.LoadItems> evento. Classes de herança pode substituir este método para recuperar os dados necessários.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPageChange">
+      <MemberSignature Language="C#" Value="protected override void OnPageChange (int oldPageIndex, int newPageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPageChange(int32 oldPageIndex, int32 newPageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.OnPageChange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldPageIndex" Type="System.Int32" />
+        <Parameter Name="newPageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="oldPageIndex">Nenhum</param>
+        <param name="newPageIndex">Nenhum</param>
+        <summary>Pagina um controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Nenhum</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.PreRender" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaginateRecursive">
+      <MemberSignature Language="C#" Value="public override void PaginateRecursive (System.Web.UI.MobileControls.ControlPager pager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PaginateRecursive(class System.Web.UI.MobileControls.ControlPager pager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.PaginateRecursive(System.Web.UI.MobileControls.ControlPager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pager" Type="System.Web.UI.MobileControls.ControlPager" />
+      </Parameters>
+      <Docs>
+        <param name="pager">Nenhum</param>
+        <summary>Pagina o controle e seus filhos. Chamado internamente pelo ASP.NET. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePrivateViewState">
+      <MemberSignature Language="C#" Value="protected override object SavePrivateViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SavePrivateViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.PagedControl.SavePrivateViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações de estado de exibição privadas que ocorreram desde que a página foi carregada de persistência. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>nenhuma.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleItemCount">
+      <MemberSignature Language="C#" Value="public int VisibleItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisibleItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.VisibleItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens que estão visíveis na página ASP.NET atual móvel formulários da Web. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O número de itens que estão visíveis na página ASP.NET atual móvel formulários da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o controle não estiver visível na página atual do formulário, esse valor é 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleWeight">
+      <MemberSignature Language="C#" Value="public override int VisibleWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisibleWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.PagedControl.VisibleWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o peso aproximado do controle, em caracteres. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>nenhuma.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,111 @@
+<Type Name="ExpressionsCollectionEditor" FullName="System.Web.UI.Design.ExpressionsCollectionEditor">
+  <TypeSignature Language="C#" Value="public class ExpressionsCollectionEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExpressionsCollectionEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ExpressionsCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface de usuário para selecionar e editar expressões de associação de coleção em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância do <xref:System.Web.UI.Design.ExpressionsCollectionEditor> classe é um <xref:System.Drawing.Design.UITypeEditor> objeto que pode ser usado para selecionar e editar uma coleção de associações de expressão em tempo de design e atribuir as expressões a uma propriedade de controle.  
+  
+ Um designer de host, tais como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], usa o <xref:System.Web.Compilation.ExpressionBuilder> e <xref:System.Web.UI.Design.ExpressionEditor> classe implementações com o <xref:System.Web.UI.Design.ExpressionsCollectionEditor> e <xref:System.Web.UI.Design.ExpressionsCollectionConverter> classes para definir as associações de expressão de propriedades de controle em tempo de design e o <xref:System.Web.UI.Design.ControlPersister> classe para manter as expressões de tempo de execução. Cadeias de caracteres de expressão fazem referência a um recurso localizável, uma configuração de aplicativo, uma cadeia de caracteres de conexão ou um tipo de expressão personalizada. A cadeia de caracteres de expressão é associada à propriedade de controle em tempo de design e, em seguida, usada em tempo de execução para determinar o valor da propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionsCollectionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionsCollectionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.ExpressionsCollectionEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionsCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> objeto que pode ser usado para obter informações de contexto adicional, como o controle associado.</param>
+        <param name="provider">Um objeto de provedor de serviço por meio do qual edição services pode ser obtido.</param>
+        <param name="value">Uma instância do objeto que está sendo editado.</param>
+        <summary>Edita o valor do objeto especificado com o provedor de serviço especificado e o contexto.</summary>
+        <returns>Um <see cref="T:System.Web.UI.ExpressionBindingCollection" /> objeto que contém as expressões selecionadas; caso contrário, se nenhuma expressão for selecionada, o <paramref name="value" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ExpressionsCollectionEditor.EditValue%2A> método inicia a interface do usuário para edição de `value` objeto. O host de designer chama o <xref:System.Web.UI.Design.ExpressionsCollectionEditor.EditValue%2A> método quando você tentar editar o valor de uma propriedade que este editor está associado. O provedor de serviços de entrada é usado para obter os serviços de edição que devem estar dentro do <xref:System.Web.UI.Design.ExpressionsCollectionEditor.EditValue%2A>.  
+  
+ Um designer de host, tais como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], usa o <xref:System.Web.Compilation.ExpressionBuilder> e <xref:System.Web.UI.Design.ExpressionEditor> classe implementações com o <xref:System.Web.UI.Design.ExpressionsCollectionEditor> e <xref:System.Web.UI.Design.ExpressionsCollectionConverter> classes para definir as associações de expressão de propriedades de controle em tempo de design e o <xref:System.Web.UI.Design.ControlPersister> classe para manter as expressões de tempo de execução. Cadeias de caracteres de expressão fazem referência a um recurso localizável, uma configuração de aplicativo, uma cadeia de caracteres de conexão ou um tipo de expressão personalizada. A cadeia de caracteres de expressão é associada à propriedade de controle em tempo de design e, em seguida, usada em tempo de execução para determinar o valor da propriedade.  
+  
+ Se o usuário cancelar a interface do usuário sem modificar a expressão de associação de coleção, o <xref:System.Web.UI.Design.ExpressionsCollectionEditor.EditValue%2A> método retorna a entrada `value` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionsCollectionEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> objeto que pode ser usado para obter informações de contexto adicional.</param>
+        <summary>Obtém o estilo de edição que está associado este editor para o contexto especificado.</summary>
+        <returns>Um <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> valor de enumeração que indica a edição de estilo para a interface de usuário fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ExpressionsCollectionEditor.GetEditStyle%2A> método retorna o <xref:System.Drawing.Design.UITypeEditorEditStyle.Modal> valor por padrão.  
+  
+ Se <xref:System.Web.UI.Design.ExpressionsCollectionEditor.GetEditStyle%2A> não há suporte para o contexto especificado, o <xref:System.Web.UI.Design.ExpressionsCollectionEditor.GetEditStyle%2A> retorna <xref:System.Drawing.Design.UITypeEditorEditStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

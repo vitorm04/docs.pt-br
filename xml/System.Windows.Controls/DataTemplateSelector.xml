@@ -1,0 +1,118 @@
+<Type Name="DataTemplateSelector" FullName="System.Windows.Controls.DataTemplateSelector">
+  <TypeSignature Language="C#" Value="public class DataTemplateSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataTemplateSelector extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataTemplateSelector" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira de escolher um <see cref="T:System.Windows.DataTemplate" /> com base no objeto de dados e no elemento de associação de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você cria um <xref:System.Windows.Controls.DataTemplateSelector> quando há mais de um <xref:System.Windows.DataTemplate> para o mesmo tipo de objetos e você deseja fornecer sua própria lógica para escolher um <xref:System.Windows.DataTemplate> aplicar com base nas propriedades de cada objeto de dados. Observe que, se você tiver objetos de diferentes tipos que você pode definir o <xref:System.Windows.DataTemplate.DataType%2A> propriedade o <xref:System.Windows.DataTemplate>. Se você fizer isso, não é necessário para criar um <xref:System.Windows.Controls.DataTemplateSelector>. Além disso, se você tiver objetos do mesmo tipo, mas com propriedades diferentes, você também pode considerar usando um <xref:System.Windows.DataTrigger> ou um conversor de dados. Para obter mais informações, consulte [Visão geral de modelagem de dados](~/docs/framework/wpf/data/data-templating-overview.md).  
+  
+ Para criar um seletor de modelo, crie uma classe que herda de <xref:System.Windows.Controls.DataTemplateSelector> e substituir o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método. Depois que a classe é definida, você pode atribuir uma instância da classe para a propriedade de seletor de modelo do seu elemento.  
+  
+   
+  
+## Examples  
+ Neste exemplo, a fonte da associação é uma lista de `Task` objetos. Uma das propriedades de um `Task` objeto é `Priority`. Há dois modelos de dados definidos, `myTaskTemplate` e `importantTaskTemplate`.  
+  
+ Para fornecer a lógica para escolher quais <xref:System.Windows.DataTemplate> para usar com base no `Priority` valor do objeto de dados, criar uma subclasse de <xref:System.Windows.Controls.DataTemplateSelector> e substituir o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método. No exemplo a seguir, o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método fornece lógica para retornar o modelo apropriado com base no valor da `Priority` propriedade. O modelo a ser retornado é encontrado nos recursos de envolvimento <xref:System.Windows.Window> elemento.  
+  
+ [!code-csharp[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/TaskListDataTemplateSelector.cs#dtsclass)]
+ [!code-vb[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataTemplatingIntro_snip/visualbasic/tasklistdatatemplateselector.vb#dtsclass)]  
+  
+ Em seguida, podemos declarar o `TaskListDataTemplateSelector` como um recurso:  
+  
+ [!code-xaml[DataTemplatingIntro_snip#R1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r1)]  
+[!code-xaml[DataTemplatingIntro_snip#DTS](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#dts)]  
+[!code-xaml[DataTemplatingIntro_snip#R2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r2)]  
+  
+ Para usar o recurso do seletor de modelo, atribua-o para o <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> propriedade o <xref:System.Windows.Controls.ListBox>. O <xref:System.Windows.Controls.ListBox> chama o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método do `TaskListDataTemplateSelector` para cada um dos itens na coleção subjacente. A chamada passa o objeto de dados como o parâmetro de item. O <xref:System.Windows.DataTemplate> que é retornado pelo método é então aplicado a esse objeto de dados.  
+  
+ [!code-xaml[DataTemplatingIntro_snip#ItemTemplateSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemtemplateselector)]  
+  
+ Para ver a amostra completa, consulte [Amostra da introdução à modelagem de dados](http://go.microsoft.com/fwlink/?LinkID=160009).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTemplateSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataTemplateSelector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.DataTemplateSelector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.DataTemplate SelectTemplate (object item, System.Windows.DependencyObject container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.DataTemplate SelectTemplate(object item, class System.Windows.DependencyObject container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataTemplateSelector.SelectTemplate(System.Object,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="container" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto de dados para o qual você seleciona o modelo.</param>
+        <param name="container">O objeto de associação de dados.</param>
+        <summary>Quando substituído em uma classe derivada, retorna um <see cref="T:System.Windows.DataTemplate" /> com base em lógica personalizada.</summary>
+        <returns>Retorna um <see cref="T:System.Windows.DataTemplate" /> ou <see langword="null" />. O valor padrão é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa um seletor de modelo quando você tiver mais de um modelo de dados definido para o mesmo tipo de objetos. Por exemplo, se sua fonte de associação for uma lista de objetos do aluno e você deseja aplicar um modelo específico para os alunos meio expediente. Você pode fazer isso criando uma classe que herda de <xref:System.Windows.Controls.DataTemplateSelector> e substituindo o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método. Depois que a classe é definida, você pode atribuir uma instância da classe para a propriedade de seletor de modelo do seu elemento.  
+  
+   
+  
+## Examples  
+ Neste exemplo, a fonte da associação é uma lista de `Task` objetos. Uma das propriedades de um `Task` objeto é `Priority`. Há dois modelos de dados definidos, `myTaskTemplate` e `importantTaskTemplate`.  
+  
+ Para fornecer a lógica para escolher quais <xref:System.Windows.DataTemplate> para usar com base no `Priority` valor do objeto de dados, criar uma subclasse de <xref:System.Windows.Controls.DataTemplateSelector> e substituir o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método. No exemplo a seguir, o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método fornece lógica para retornar o modelo apropriado com base no valor da `Priority` propriedade. O modelo a ser retornado é encontrado nos recursos de envolvimento <xref:System.Windows.Window> elemento.  
+  
+ [!code-csharp[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/TaskListDataTemplateSelector.cs#dtsclass)]
+ [!code-vb[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataTemplatingIntro_snip/visualbasic/tasklistdatatemplateselector.vb#dtsclass)]  
+  
+ Em seguida, podemos declarar o `TaskListDataTemplateSelector` como um recurso:  
+  
+ [!code-xaml[DataTemplatingIntro_snip#R1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r1)]  
+[!code-xaml[DataTemplatingIntro_snip#DTS](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#dts)]  
+[!code-xaml[DataTemplatingIntro_snip#R2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r2)]  
+  
+ Para usar o recurso do seletor de modelo, atribua-o para o <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> propriedade o <xref:System.Windows.Controls.ListBox>. O <xref:System.Windows.Controls.ListBox> chama o <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> método do `TaskListDataTemplateSelector` para cada um dos itens na coleção subjacente. A chamada passa o objeto de dados como o parâmetro de item. O <xref:System.Windows.DataTemplate> que é retornado pelo método é então aplicado a esse objeto de dados.  
+  
+ [!code-xaml[DataTemplatingIntro_snip#ItemTemplateSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemtemplateselector)]  
+  
+ Para ver a amostra completa, consulte [Amostra da introdução à modelagem de dados](http://go.microsoft.com/fwlink/?LinkID=160009).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

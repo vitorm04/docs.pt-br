@@ -1,0 +1,108 @@
+<Type Name="TransportHeaders" FullName="System.Runtime.Remoting.Channels.TransportHeaders">
+  <TypeSignature Language="C#" Value="public class TransportHeaders : System.Runtime.Remoting.Channels.ITransportHeaders" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TransportHeaders extends System.Object implements class System.Runtime.Remoting.Channels.ITransportHeaders" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.TransportHeaders" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.ITransportHeaders</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Armazena uma coleção de cabeçalhos usados no canal de Coletores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `foreach` instrução para iterar sobre o conteúdo da lista de cabeçalho que contém objetos do tipo <xref:System.Collections.DictionaryEntry>. As chaves para os cabeçalhos devem ser cadeias de caracteres e as comparações são feitas em uma base de maiusculas e minúsculas.  
+  
+ Essa classe faz uma demanda de link e uma demanda de herança no nível de classe. Um <xref:System.Security.SecurityException> é gerada quando o chamador imediato ou classe derivada não tem permissão de infraestrutura. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md) e [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransportHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.TransportHeaders.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Channels.TransportHeaders" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.TransportHeaders.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador dos cabeçalhos de transporte armazenado.</summary>
+        <returns>Um enumerador dos cabeçalhos de transporte armazenado.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.TransportHeaders.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">O <see cref="T:System.String" /> que o cabeçalho solicitado está associado.</param>
+        <summary>Obtém ou define um cabeçalho de transporte que está associado com a chave especificada.</summary>
+        <value>Um cabeçalho de transporte que está associado com a chave especificada, ou <see langword="null" /> se a chave não foi encontrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `key` parâmetro deve ser um <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,480 @@
+<Type Name="KeyContainerPermissionAccessEntryCollection" FullName="System.Security.Permissions.KeyContainerPermissionAccessEntryCollection">
+  <TypeSignature Language="C#" Value="public sealed class KeyContainerPermissionAccessEntryCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit KeyContainerPermissionAccessEntryCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry>objetos especificam direitos de acesso para contêineres de chave específicos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermissionAccessEntryCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Security.Permissions.KeyContainerPermissionAccessEntry accessEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Security.Permissions.KeyContainerPermissionAccessEntry accessEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Add(System.Security.Permissions.KeyContainerPermissionAccessEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessEntry" Type="System.Security.Permissions.KeyContainerPermissionAccessEntry" />
+      </Parameters>
+      <Docs>
+        <param name="accessEntry">O objeto <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> a ser adicionado.</param>
+        <summary>Adiciona um objeto de <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> à coleção.</summary>
+        <returns>O índice no qual o novo elemento foi inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> objeto é adicionado ao final da coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="accessEntry" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> objetos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para esvaziar o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Security.Permissions.KeyContainerPermissionAccessEntry[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Security.Permissions.KeyContainerPermissionAccessEntry[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.CopyTo(System.Security.Permissions.KeyContainerPermissionAccessEntry[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Security.Permissions.KeyContainerPermissionAccessEntry[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O unidimensional <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> matriz que é o destino dos elementos copiados da coleção atual.</param>
+        <param name="index">O índice em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos da coleção para uma matriz unidimensional compatível, iniciando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que o limite inferior de <paramref name="array" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O número de elementos na coleção é maior que o espaço disponível do <paramref name="index" /> até o final do destino <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção.</summary>
+        <value>O número de <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> objetos na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Count%2A> propriedade para determinar o número de <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> objetos no <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection> coleção. O <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Count%2A> propriedade normalmente é usada quando a iteração na coleção para determinar o superior associado da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator" /> objeto que pode ser usado para iterar por meio dos objetos na coleção.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator" /> objeto que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar um <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator> objeto que pode ser usado para iterar pela coleção para colocar cada item.  
+  
+ Use o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> apontada propriedade do enumerador para obter o item atualmente na coleção.  
+  
+ Use o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> método do enumerador para mover para o próximo item na coleção.  
+  
+ Use o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> método do enumerador para mover para a posição inicial.  
+  
+> [!NOTE]
+>  Depois de criar um <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator> de objeto ou usar o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> método para mover o enumerador para o primeiro item na coleção, você deve chamar o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> método. Caso contrário, o item é representado pelo <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> propriedade está definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Security.Permissions.KeyContainerPermissionAccessEntry accessEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Security.Permissions.KeyContainerPermissionAccessEntry accessEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.IndexOf(System.Security.Permissions.KeyContainerPermissionAccessEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessEntry" Type="System.Security.Permissions.KeyContainerPermissionAccessEntry" />
+      </Parameters>
+      <Docs>
+        <param name="accessEntry">O objeto <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> a ser localizado.</param>
+        <summary>Obtém o índice na coleção especificada <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> do objeto, se ele existe na coleção.</summary>
+        <returns>O índice especificado <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> do objeto na coleção, ou -1 se nenhuma correspondência for encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar o número de índice especificada <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> objeto na coleção. Se especificado <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> objeto não for encontrado, será retornado um valor igual a-1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é sincronizada (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade implementa o <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> propriedade e sempre retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.KeyContainerPermissionAccessEntry this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Permissions.KeyContainerPermissionAccessEntry Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionAccessEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento para acessar.</param>
+        <summary>Obtém o item no índice especificado na coleção.</summary>
+        <value>O objeto <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para obter um <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> de objeto o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection> no índice especificado, usando a notação de matriz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />é maior que ou igual à contagem de coleção.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="index" /> é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Security.Permissions.KeyContainerPermissionAccessEntry accessEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Security.Permissions.KeyContainerPermissionAccessEntry accessEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Remove(System.Security.Permissions.KeyContainerPermissionAccessEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessEntry" Type="System.Security.Permissions.KeyContainerPermissionAccessEntry" />
+      </Parameters>
+      <Docs>
+        <param name="accessEntry">O objeto <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> objeto de thecollection.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você remover um item da coleção, os valores de índice alterar subsequentes itens na coleção. Todas as informações sobre o item removido são excluídas. Use esse método quando quiser remover um item específico, especificando o item real para remover. Para remover todos os itens da lista, use o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.Clear%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="accessEntry" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado nesta implementação é o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection> objeto propriamente dito.  
+  
+ Para obter mais informações sobre o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.SyncRoot%2A> propriedade, consulte o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz unidimensional que é o destino dos elementos copiados da coleção atual.</param>
+        <param name="index">O índice em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos da coleção para uma matriz unidimensional compatível, iniciando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que o limite inferior de <paramref name="array" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O número de elementos na coleção é maior que o espaço disponível do <paramref name="index" /> até o final do destino <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator" /> objeto que pode ser usado para iterar por meio dos objetos na coleção.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator" /> objeto que pode ser usado para iterar pela coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

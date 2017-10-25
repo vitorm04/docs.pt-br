@@ -1,0 +1,224 @@
+<Type Name="WebErrorEvent" FullName="System.Web.Management.WebErrorEvent">
+  <TypeSignature Language="C#" Value="public class WebErrorEvent : System.Web.Management.WebBaseErrorEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebErrorEvent extends System.Web.Management.WebBaseErrorEvent" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebErrorEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebBaseErrorEvent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre erros de sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de eventos responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ O <xref:System.Web.Management.WebErrorEvent> fornece informações sobre erros causados por problemas com o código de aplicativo ou configuração. Um exemplo é o erro emitido pelo ASP.NET quando um erro é encontrado em uma página.  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `healthMonitoring` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de derivar do <xref:System.Web.Management.WebErrorEvent> de classe, consulte o exemplo fornecido neste tópico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como derivar o <xref:System.Web.Management.WebErrorEvent> classe para criar um evento personalizado.  
+  
+ Também é mostrado é um trecho do arquivo de configuração que permite que o ASP.NET usar este evento personalizado.  
+  
+```  
+<healthMonitoring   
+  enabled="true" heartBeatInterval="0">  
+  
+  <eventMappings>  
+  
+    <add  name="SampleWebErrorEvent" type="SamplesAspNet.SampleWebErrorEvent,weberrorevent,Version=1.0.1573.21549, Culture=neutral, PublicKeyToken=2a0b23915ac7352b, processorArchitecture=MSIL"/>  
+  
+  </eventMappings>  
+  
+  <profiles>  
+    <add name="Custom"  
+      minInstances="1"  
+      maxLimit="Infinite"  
+      minInterval="00:00:00" />  
+  </profiles>  
+  
+  <rules>  
+    <clear />  
+  
+    <add name="Custom Web Error Event"   
+      eventName="SampleWebErrorEvent"  
+      provider="EventLogProvider"   
+      profile="Custom" />  
+  </rules>  
+  
+</healthMonitoring>  
+```  
+  
+ [!code-csharp[System.Web.Management.WebErrorEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/CS/weberrorevent.cs#1)]
+ [!code-vb[System.Web.Management.WebErrorEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/VB/weberrorevent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebErrorEvent (string message, object eventSource, int eventCode, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebErrorEvent.#ctor(System.String,System.Object,System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A descrição do evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O código associado ao evento. Quando você implementa um evento personalizado, o código de evento deve ser maior que <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="exception">O <see cref="T:System.Exception" /> associado ao erro.</param>
+        <summary>Inicializa o <see cref="T:System.Web.Management.WebErrorEvent" /> classe usando os parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebErrorEvent.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo ASP.NET. Você pode chamar o <xref:System.Web.Management.WebErrorEvent.%23ctor%2A> construtor ao derivar do <xref:System.Web.Management.WebErrorEvent> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como personalizar este construtor.  
+  
+ [!code-csharp[System.Web.Management.WebErrorEvent#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/CS/weberrorevent.cs#2)]
+ [!code-vb[System.Web.Management.WebErrorEvent#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/VB/weberrorevent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebErrorEvent (string message, object eventSource, int eventCode, int eventDetailCode, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, int32 eventDetailCode, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebErrorEvent.#ctor(System.String,System.Object,System.Int32,System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventDetailCode" Type="System.Int32" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A descrição do evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O código associado ao evento. Quando você implementa um evento personalizado, o código de evento deve ser maior que <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="eventDetailCode">O <see cref="T:System.Web.Management.WebEventCodes" /> valor que especifica o identificador detalhado para o evento.</param>
+        <param name="exception">O <see cref="T:System.Exception" /> associado ao erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Management.WebErrorEvent" /> classe usando os parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebErrorEvent.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo ASP.NET. Você pode chamar o <xref:System.Web.Management.WebErrorEvent.%23ctor%2A> construtor ao derivar do <xref:System.Web.Management.WebErrorEvent> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como derivar o <xref:System.Web.Management.WebErrorEvent> classe para criar um evento personalizado.  
+  
+ [!code-csharp[System.Web.Management.WebErrorEvent#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/CS/weberrorevent.cs#3)]
+ [!code-vb[System.Web.Management.WebErrorEvent#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/VB/weberrorevent.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementPerfCounters">
+      <MemberSignature Language="C#" Value="protected override void IncrementPerfCounters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void IncrementPerfCounters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebErrorEvent.IncrementPerfCounters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Usada internamente para incrementar os contadores de desempenho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestInformation">
+      <MemberSignature Language="C#" Value="public System.Web.Management.WebRequestInformation RequestInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Management.WebRequestInformation RequestInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebErrorEvent.RequestInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.WebRequestInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de solicitação de aplicativo.</summary>
+        <value>Um <see cref="T:System.Web.Management.WebRequestInformation" /> objeto que contém informações sobre a solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Management.WebErrorEvent.RequestInformation%2A> valor.  
+  
+ [!code-csharp[System.Web.Management.WebErrorEvent#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/CS/weberrorevent.cs#5)]
+ [!code-vb[System.Web.Management.WebErrorEvent#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/VB/weberrorevent.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadInformation">
+      <MemberSignature Language="C#" Value="public System.Web.Management.WebThreadInformation ThreadInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Management.WebThreadInformation ThreadInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebErrorEvent.ThreadInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.WebThreadInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de thread de aplicativo.</summary>
+        <value>Um <see cref="T:System.Web.Management.WebThreadInformation" /> objeto que contém informações sobre o thread atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o aplicativo <xref:System.Web.Management.WebErrorEvent.ThreadInformation%2A> valor.  
+  
+ [!code-csharp[System.Web.Management.WebErrorEvent#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/CS/weberrorevent.cs#6)]
+ [!code-vb[System.Web.Management.WebErrorEvent#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebErrorEvent/VB/weberrorevent.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

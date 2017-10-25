@@ -1,0 +1,323 @@
+<Type Name="Task" FullName="Microsoft.Build.Utilities.Task">
+  <TypeSignature Language="C#" Value="public abstract class Task : Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Task extends System.Object implements class Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.Task" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITask</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Quando substituído em um formulário derivado, fornece funcionalidade para tarefas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe abstrata fornece implementações padrão para os métodos e propriedades do <xref:Microsoft.Build.Framework.ITask> interface.  
+  
+ Essa classe só pode ser instanciada em um formulário derivado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o código de uma tarefa que cria um ou mais diretórios.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Task ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.Task.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Utilities.Task" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Task (System.Resources.ResourceManager taskResources);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Resources.ResourceManager taskResources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.Task.#ctor(System.Resources.ResourceManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskResources" Type="System.Resources.ResourceManager" />
+      </Parameters>
+      <Docs>
+        <param name="taskResources">Os recursos da tarefa.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Utilities.Task" /> com o <see cref="P:Microsoft.Build.Utilities.Task.TaskResources" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite que classes derivadas de tarefas registrar os seus recursos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Task (System.Resources.ResourceManager taskResources, string helpKeywordPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Resources.ResourceManager taskResources, string helpKeywordPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.Task.#ctor(System.Resources.ResourceManager,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskResources" Type="System.Resources.ResourceManager" />
+        <Parameter Name="helpKeywordPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskResources">Os recursos da tarefa.</param>
+        <param name="helpKeywordPrefix">O prefixo para acrescentar a recursos de cadeia de caracteres para criar as palavras-chave de Ajuda.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Utilities.Task" /> com o <see cref="P:Microsoft.Build.Utilities.Task.TaskResources" /> e <see cref="P:Microsoft.Build.Utilities.Task.HelpKeywordPrefix" /> especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite que classes derivadas de tarefas registrar os seus recursos, bem como fornecer um prefixo para compor as palavras-chave de ajuda de nomes de recursos de cadeia de caracteres. Se `helpKeywordPrefix` é uma cadeia de caracteres vazia, recursos de cadeia de caracteres nomes serão usados textualmente como palavras-chave de Ajuda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine BuildEngine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine BuildEngine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.BuildEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a instância do <see cref="T:Microsoft.Build.Framework.IBuildEngine" /> objeto usado pela tarefa.</summary>
+        <value>O <see cref="T:Microsoft.Build.Framework.IBuildEngine" /> disponíveis para tarefas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de compilação automaticamente define essa propriedade para permitir que tarefas de retorno de chamada para ele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine2">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine2 BuildEngine2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine2 BuildEngine2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.BuildEngine2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância do <see cref="T:Microsoft.Build.Framework.IBuildEngine2" /> objeto usado pela tarefa.</summary>
+        <value>O <see cref="T:Microsoft.Build.Framework.IBuildEngine2" /> disponíveis para tarefas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine3">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine3 BuildEngine3 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine3 BuildEngine3" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.BuildEngine3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância do <see cref="T:Microsoft.Build.Framework.IBuildEngine3" /> objeto usado pela tarefa.</summary>
+        <value>O <see cref="T:Microsoft.Build.Framework.IBuildEngine3" /> disponíveis para tarefas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEngine4">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IBuildEngine4 BuildEngine4 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IBuildEngine4 BuildEngine4" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.BuildEngine4" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IBuildEngine4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância do <see cref="T:Microsoft.Build.Framework.IBuildEngine4" /> objeto usado pela tarefa.</summary>
+        <value>Retorna o <see cref="T:Microsoft.Build.Framework.IBuildEngine4" /> disponíveis para tarefas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.Task.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, executa a tarefa.</summary>
+        <returns>
+          <see langword="true" />Se a tarefa foi executada com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe deve ser substituída em uma classe derivada e é usada para executar a lógica de execução da tarefa.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o código de uma tarefa que cria um ou mais diretórios.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeywordPrefix">
+      <MemberSignature Language="C#" Value="protected string HelpKeywordPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeywordPrefix" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.HelpKeywordPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o prefixo usado para compor as palavras-chave de ajuda de nomes de recursos.</summary>
+        <value>O prefixo usado para compor as palavras-chave de ajuda de nomes de recursos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma tarefa não tiver as palavras-chave de Ajuda associadas com suas mensagens, pode ignorar essa propriedade ou defina-o como `null`. Se essa propriedade é definida como vazio <xref:System.String>, nomes de recursos serão usados textualmente como palavras-chave de Ajuda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskHost HostObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskHost HostObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.HostObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de host associado à tarefa.</summary>
+        <value>O objeto de host associado à tarefa. Este valor pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o IDE do host foi associado a um objeto de host com essa tarefa específica, o mecanismo de compilação define essa propriedade.  
+  
+ O objeto de host é fornecido pelo <xref:Microsoft.Build.Execution.HostServices>. O Visual Studio determina o objeto de host por meio de uma chave de registro do sistema. Para obter mais informações, consulte <xref:Microsoft.VisualStudio.Shell.Interop.IVsMSBuildHostObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Utilities.TaskLoggingHelper Log { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Utilities.TaskLoggingHelper Log" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.Log" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.TaskLoggingHelper</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma instância de um <see cref="T:Microsoft.Build.Utilities.TaskLoggingHelper" /> classe que contém métodos de registro em log da tarefa.</summary>
+        <value>O objeto auxiliar de registro em log.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra o código de uma tarefa que cria um ou mais diretórios.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskResources">
+      <MemberSignature Language="C#" Value="protected System.Resources.ResourceManager TaskResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Resources.ResourceManager TaskResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.Task.TaskResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResourceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os recursos específicos de cultura associados à tarefa.</summary>
+        <value>Os recursos específicos de cultura associados à tarefa. Este valor pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se as classes derivadas têm localizado cadeias de caracteres, eles devem registrar seus recursos durante a construção ou através desta propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

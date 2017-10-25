@@ -1,0 +1,80 @@
+<Type Name="IXmlJsonWriterInitializer" FullName="System.Runtime.Serialization.Json.IXmlJsonWriterInitializer">
+  <TypeSignature Language="C#" Value="public interface IXmlJsonWriterInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlJsonWriterInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Json.IXmlJsonWriterInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+    <AssemblyVersion>4.0.4.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.ServiceModel.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a interface para inicializar um gravador de notação JSON (JavaScript Object) quando podem ser reutilizados para gravar em um fluxo de saída específico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlDictionaryWriter> objetos criados pelo <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter%2A> métodos implementam essa interface e quando criados são imediatamente pronto para escrever dados codificados em JSON. Porém, se um usuário quiser reutilizar o mesmo <xref:System.Xml.XmlDictionaryWriter> objeto para gravar um novo documento JSON para outro fluxo de saída, em seguida, o gravador deve ser inicializado com o fluxo apropriado usando a <xref:System.Runtime.Serialization.Json.IXmlJsonWriterInitializer.SetOutput%28System.IO.Stream%2CSystem.Text.Encoding%2CSystem.Boolean%29> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SetOutput">
+      <MemberSignature Language="C#" Value="public void SetOutput (System.IO.Stream stream, System.Text.Encoding encoding, bool ownsStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOutput(class System.IO.Stream stream, class System.Text.Encoding encoding, bool ownsStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Json.IXmlJsonWriterInitializer.SetOutput(System.IO.Stream,System.Text.Encoding,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Json</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="ownsStream" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">A saída <see cref="T:System.IO.Stream" /> para que o gravador grava.</param>
+        <param name="encoding">O <see cref="T:System.Text.Encoding" /> que especifica a codificação de caractere do fluxo de saída.</param>
+        <param name="ownsStream">Se <see langword="true" />, o fluxo de saída é fechado pelo gravador quando feito; caso contrário <see langword="false" />.</param>
+        <summary>Inicializa ou reinicializa um gravador de notação JSON (JavaScript Object) em um fluxo de saída especificado com a codificação de caractere especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlDictionaryWriter> objetos criados pelo <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory.CreateJsonWriter%2A> métodos implementam essa interface e quando criados são imediatamente pronto para escrever dados codificados em JSON. Porém, se um usuário quiser reutilizar o mesmo <xref:System.Xml.XmlDictionaryWriter> objeto para gravar um novo documento JSON para outro fluxo de saída, em seguida, o gravador deve ser inicializado com o fluxo apropriado usando a <xref:System.Runtime.Serialization.Json.IXmlJsonWriterInitializer.SetOutput%28System.IO.Stream%2CSystem.Text.Encoding%2CSystem.Boolean%29> método.  
+  
+ Os gravadores criados pelo <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> pode lidar com UTF-8 e as codificações UTF-16 (big ou little-endian).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

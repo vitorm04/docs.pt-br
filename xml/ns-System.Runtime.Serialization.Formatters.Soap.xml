@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Serialization.Formatters.Soap">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Serialization.Formatters.Soap" /> namespace contém o <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> classe, que pode ser usado para serializar e desserializar objetos no formato SOAP. Ao criar aplicativos que usa os tipos neste namespace, você deve referenciar o assembly System.Runtime.Serialization.Formatters.Soap.dll.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

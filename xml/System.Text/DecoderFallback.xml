@@ -1,0 +1,228 @@
+<Type Name="DecoderFallback" FullName="System.Text.DecoderFallback">
+  <TypeSignature Language="C#" Value="public abstract class DecoderFallback" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit DecoderFallback extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.DecoderFallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um mecanismo de tratamento de falha, chamado um fallback, para uma sequência de bytes codificados de entrada que não pode ser convertida em um caractere de saída.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma codificação mapeia um caractere Unicode para uma sequência codificada de bytes. Uma codificação específica é representada por um tipo que deriva de <xref:System.Text.Encoding> classe. Especificamente, um caractere é codificado como uma sequência de bytes chamando o tipo de codificação <xref:System.Text.Encoding.GetBytes%2A?displayProperty=nameWithType> método e a sequência de bytes é decodificada para uma matriz de caracteres ou uma cadeia de caracteres chamando o <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> ou <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> método.  
+  
+ Uma operação de decodificação pode falhar se a sequência de bytes de entrada não pode ser mapeada pela codificação. Por exemplo, um <xref:System.Text.ASCIIEncoding> objeto não é possível decodificar uma sequência de bytes se essa sequência representa um caractere que tem um valor de ponto de código que está fora do intervalo de U + 0000 a U + 007F.  
+  
+ Quando uma conversão de decodificação não pode ser executada, o .NET Framework fornece um mecanismo de tratamento de falha chamado fallback. Seu aplicativo pode usar sequências de decodificador predefinidas do .NET Framework, ou pode criar um decodificador personalizado fallback derivado de <xref:System.Text.DecoderFallback> e <xref:System.Text.DecoderFallbackBuffer> classes.  
+  
+ <xref:System.Text.DecoderFallback>e <xref:System.Text.DecoderFallbackBuffer> são as classes base para todos os manipuladores de fallbacks no .NET Framework de decodificação. Eles suportam os seguintes três tipos de mecanismos de manipulação de fallback:  
+  
+-   Fallback melhor ajuste, que mapeia os caracteres Unicode válidos que não podem ser decodificados para um equivalente aproximado. Por exemplo, um manipulador de fallback mais adequado para o <xref:System.Text.ASCIIEncoding> classe pode mapear Æ (U + 00 C 6) para AE (U + 0041 + U + 0045). Um manipulador de fallback de melhor ajuste também pode ser implementado para transliterate um alfabeto (como cirílico) para outro (como latino ou romano). O .NET Framework não fornece as implementações de fallbacks de melhor ajuste públicas.  
+  
+-   Substituição de fallback, que substitui cada caractere que não pode ser decodificada com uma cadeia de caracteres predefinida. O .NET Framework fornece um manipulador de fallback de substituição predefinidos. O <xref:System.Text.DecoderReplacementFallback> classe substitui cada sequência de bytes que não pode ser decodificada com um caractere de ponto de interrogação ("?", ou U + 003F) ou um CARACTERE de substituição (U + FFFD). Você pode personalizar a cadeia de caracteres de substituição, especificando um substituto na chamada para o <xref:System.Text.DecoderReplacementFallback.%23ctor%28System.String%29?displayProperty=nameWithType> construtor. Depois que a cadeia de caracteres de substituição é emitida, a operação de decodificação continua convertendo o restante da entrada.  
+  
+-   Exceção de fallback, que gera uma exceção quando uma sequência de bytes não pode ser decodificada. O .NET Framework fornece um manipulador de fallback de exceção predefinida. O <xref:System.Text.DecoderExceptionFallback> classe lança um <xref:System.Text.DecoderFallbackException> quando uma sequência de bytes inválido é encontrada e encerra a operação de decodificação.  
+  
+ Se você optar por implementar uma solução personalizada, você deve substituir os seguintes membros abstratos do <xref:System.Text.DecoderFallback> classe:  
+  
+-   O <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A> método, que retorna uma instância da classe derivada de <xref:System.Text.DecoderFallbackBuffer>. Dependendo do tipo de manipulador de fallback que você está desenvolvendo, o <xref:System.Text.DecoderFallbackBuffer> implementação é responsável por executar o mapeamento ou substituição, ou para gerar a exceção.  
+  
+-   O <xref:System.Text.DecoderFallback.MaxCharCount%2A> propriedade, que retorna o número máximo de caracteres que pode retornar a implementação de fallback. Para um manipulador de fallback de exceção, seu valor deve ser zero.  
+  
+ Para obter mais informações sobre codificação, decodificação e estratégias de fallbacks, consulte [codificação de caracteres no .NET Framework](~/docs/standard/base-types/character-encoding.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DecoderFallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderFallback.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Text.DecoderFallback" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFallbackBuffer">
+      <MemberSignature Language="C#" Value="public abstract System.Text.DecoderFallbackBuffer CreateFallbackBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Text.DecoderFallbackBuffer CreateFallbackBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderFallback.CreateFallbackBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.DecoderFallbackBuffer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Text.DecoderFallbackBuffer" /> classe.</summary>
+        <returns>Um objeto que fornece um buffer de fallback para um decodificador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna um objeto derivado de <xref:System.Text.DecoderFallbackBuffer> que é responsável por executar a operação de fallback. Por exemplo, de predefinida <xref:System.Text.DecoderFallback> implementações do .NET Framework, o <xref:System.Text.DecoderReplacementFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> método retorna um <xref:System.Text.DecoderReplacementFallbackBuffer> objeto e o <xref:System.Text.DecoderExceptionFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> método retorna um <xref:System.Text.DecoderExceptionFallbackBuffer> objeto.  
+  
+ O <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A> método é chamado por um decodificador quando ele encontra o primeiro byte que não é possível decodificar. O <xref:System.Text.DecoderFallbackBuffer> objeto retornado por este método fornece a implementação de fallback e é responsável por retornar a cadeia de caracteres que substitui o byte ou bytes não podem ser decodificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionFallback">
+      <MemberSignature Language="C#" Value="public static System.Text.DecoderFallback ExceptionFallback { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.DecoderFallback ExceptionFallback" />
+      <MemberSignature Language="DocId" Value="P:System.Text.DecoderFallback.ExceptionFallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.DecoderFallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que gera uma exceção quando uma sequência de bytes de entrada não pode ser decodificada.</summary>
+        <value>Um tipo derivado de <see cref="T:System.Text.DecoderFallback" /> classe. O valor padrão é um <see cref="T:System.Text.DecoderExceptionFallback" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCharCount">
+      <MemberSignature Language="C#" Value="public abstract int MaxCharCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxCharCount" />
+      <MemberSignature Language="DocId" Value="P:System.Text.DecoderFallback.MaxCharCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número máximo de caracteres atual <see cref="T:System.Text.DecoderFallback" /> objeto pode retornar.</summary>
+        <value>O número máximo de caracteres atual <see cref="T:System.Text.DecoderFallback" /> objeto pode retornar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para um manipulador de exceção de fallback, esta propriedade deve retornar zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacementFallback">
+      <MemberSignature Language="C#" Value="public static System.Text.DecoderFallback ReplacementFallback { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.DecoderFallback ReplacementFallback" />
+      <MemberSignature Language="DocId" Value="P:System.Text.DecoderFallback.ReplacementFallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.DecoderFallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que gera uma cadeia de caracteres de substituição no lugar de uma sequência de bytes de entrada que não pode ser decodificada.</summary>
+        <value>Um tipo derivado de <see cref="T:System.Text.DecoderFallback" /> classe. O valor padrão é um <see cref="T:System.Text.DecoderReplacementFallback" /> objeto que emite o caractere de ponto de INTERROGAÇÃO ("?", U + 003F) no lugar de sequências de bytes desconhecido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

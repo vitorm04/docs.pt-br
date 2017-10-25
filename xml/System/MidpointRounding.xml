@@ -1,0 +1,133 @@
+<Type Name="MidpointRounding" FullName="System.MidpointRounding">
+  <TypeSignature Language="C#" Value="public enum MidpointRounding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MidpointRounding extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.MidpointRounding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica como métodos de arredondamento matemático devem processar um número que esteja entre dois números.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.MidpointRounding> com sobrecargas apropriadas de <xref:System.Math.Round%2A?displayProperty=nameWithType> para fornecer maior controle sobre o processo de arredondamento.  
+  
+ Uma operação de arredondamento recebe um número original com uma precisão especificada ou implícita; examina o próximo dígito, que é em que a precisão mais um; e retorna o número mais próximo com a mesma precisão como o número original. Para números positivos, se o dígito Avançar é de 0 a 4, o número mais próximo é para o infinito negativo. Se o dígito Avançar é de 6 a 9, o número mais próximo é para o infinito positivo. Para números negativos, se o dígito Avançar é de 0 a 4, o número mais próximo é para o infinito positivo. Se o dígito Avançar é de 6 a 9, o número mais próximo é infinito negativo.  
+  
+ Nos casos anteriores, o <xref:System.MidpointRounding> enumeração não afeta o resultado da operação de arredondamento. No entanto, se o próximo dígito for 5, que é o ponto médio entre dois resultados possíveis e todos os dígitos restantes são zero ou nenhum dígitos restantes, o número mais próximo é ambíguo. Nesse caso, o <xref:System.MidpointRounding> enumeração permite que você especifique se a operação de arredondamento retorna o número mais próximo longe de zero ou o número par mais próximo.  
+  
+ A tabela a seguir demonstra os resultados de arredondamento alguns números negativos e positivos em conjunto com os valores de <xref:System.MidpointRounding>. A precisão usada para arredondar o número é zero, o que significa o número após o ponto decimal afeta a operação de arredondamento. Por exemplo, para o número -2.5, os dígitos após o ponto decimal é 5. Como esse dígito é o ponto central, você pode usar um <xref:System.MidpointRounding> valor para determinar o resultado do arredondamento. Se AwayFromZero for especificado, -3 é retornado porque é o próximo número diferente de zero com uma precisão de zero. Se ToEven for especificado, -2 é retornado porque é o número par mais próximo com uma precisão de zero.  
+  
+|Número original|AwayFromZero|ToEven|  
+|---------------------|------------------|------------|  
+|3.5|4|4|  
+|2.8|3|3|  
+|2.5|3|2|  
+|2.1|2|2|  
+|-2.1|-2|-2|  
+|-2.5|-3|-2|  
+|-2.8|-3|-3|  
+|-3.5|-4|-4|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Math.Round%2A> método junto com o <xref:System.MidpointRounding.ToEven> enumeração.  
+  
+ [!code-cpp[math.midpointrounding#1](~/samples/snippets/cpp/VS_Snippets_CLR/math.midpointrounding/cpp/mpr.cpp#1)]
+ [!code-csharp[math.midpointrounding#1](~/samples/snippets/csharp/VS_Snippets_CLR/math.midpointrounding/CS/mpr.cs#1)]
+ [!code-vb[math.midpointrounding#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/math.midpointrounding/VB/mpr.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AwayFromZero">
+      <MemberSignature Language="C#" Value="AwayFromZero" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.MidpointRounding AwayFromZero = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.MidpointRounding.AwayFromZero" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MidpointRounding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando um número está a meio caminho entre outros dois, ele é arredondado para o número mais próximo que esteja distante de zero.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ToEven">
+      <MemberSignature Language="C#" Value="ToEven" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.MidpointRounding ToEven = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.MidpointRounding.ToEven" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MidpointRounding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando um número está a meio caminho entre outros dois, ele é arredondado para o número par mais próximo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

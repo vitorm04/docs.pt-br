@@ -1,0 +1,201 @@
+<Type Name="Saml2AuthenticationStatement" FullName="System.IdentityModel.Tokens.Saml2AuthenticationStatement">
+  <TypeSignature Language="C#" Value="public class Saml2AuthenticationStatement : System.IdentityModel.Tokens.Saml2Statement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2AuthenticationStatement extends System.IdentityModel.Tokens.Saml2Statement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Saml2AuthenticationStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.Saml2Statement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento AuthnStatement especificado em [Saml2Core 2.7.2].</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o elemento que essa classe representa, consulte a especificação principal do SAML v 2.0.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AuthenticationStatement (System.IdentityModel.Tokens.Saml2AuthenticationContext authenticationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.Saml2AuthenticationContext authenticationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AuthenticationStatement.#ctor(System.IdentityModel.Tokens.Saml2AuthenticationContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="authenticationContext" Type="System.IdentityModel.Tokens.Saml2AuthenticationContext" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationContext">O contexto de autenticação dessa instrução.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.Saml2AuthenticationStatement" /> classe com o contexto de autenticação especificado e a hora atual como a autenticação instantânea.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade <xref:System.IdentityModel.Tokens.Saml2AuthenticationStatement.AuthenticationInstant%2A> é definida como <xref:System.DateTime.UtcNow%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="authenticationContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AuthenticationStatement (System.IdentityModel.Tokens.Saml2AuthenticationContext authenticationContext, DateTime authenticationInstant);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.Saml2AuthenticationContext authenticationContext, valuetype System.DateTime authenticationInstant) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AuthenticationStatement.#ctor(System.IdentityModel.Tokens.Saml2AuthenticationContext,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="authenticationContext" Type="System.IdentityModel.Tokens.Saml2AuthenticationContext" />
+        <Parameter Name="authenticationInstant" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationContext">O contexto de autenticação dessa instrução.</param>
+        <param name="authenticationInstant">A hora da autenticação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.Saml2AuthenticationStatement" /> classe com o contexto de autenticação especificado e o momento da autenticação.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="authenticationContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationContext">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.Saml2AuthenticationContext AuthenticationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.Saml2AuthenticationContext AuthenticationContext" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthenticationStatement.AuthenticationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.Saml2AuthenticationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contexto usado pela autoridade de autenticação até e incluindo o evento de autenticação que gerou essa instrução. 2.7.2 [Saml2Core]</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.Saml2AuthenticationContext" /> que representa o contexto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento AuthnContext. Esse elemento é necessário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Tentativa de definir um valor que é <see langword="null" /> ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationInstant">
+      <MemberSignature Language="C#" Value="public DateTime AuthenticationInstant { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime AuthenticationInstant" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthenticationStatement.AuthenticationInstant" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora em que a autenticação foi feita. 2.7.2 [Saml2Core]</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o tempo de autenticação em UTC.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O atributo AuthnInstant. Esse atributo é necessário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionIndex">
+      <MemberSignature Language="C#" Value="public string SessionIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionIndex" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthenticationStatement.SessionIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice de uma determinada sessão entre a entidade de segurança identificada, o assunto e da autoridade de autenticação. 2.7.2 [Saml2Core]</summary>
+        <value>Uma cadeia de caracteres que contém o índice de sessão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O atributo SessionIndex.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionNotOnOrAfter">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; SessionNotOnOrAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; SessionNotOnOrAfter" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthenticationStatement.SessionNotOnOrAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo de instantâneo no qual a sessão entre a entidade de segurança identificada, o assunto e a autoridade SAML essa instrução de emissão deve ser considerada terminou. 2.7.2 [Saml2Core]</summary>
+        <value>Retorna um valor nulo <see cref="T:System.DateTime" /> que representa a hora de expiração de sessão em UTC. Um <see langword="null" /> valor indica que o atributo não for especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O atributo SessionNotOnOrAfter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubjectLocality">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.Saml2SubjectLocality SubjectLocality { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.Saml2SubjectLocality SubjectLocality" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthenticationStatement.SubjectLocality" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.Saml2SubjectLocality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de domínio DNS e endereço IP para o sistema do qual o assunto de asserção foi autenticado aparentemente. 2.7.2 [Saml2Core]</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.Saml2SubjectLocality" /> que especifica o nome de domínio DNS e endereço IP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento SubjectLocality.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

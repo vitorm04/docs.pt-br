@@ -1,0 +1,228 @@
+<Type Name="ParallelForEach&lt;T&gt;" FullName="System.Activities.Statements.ParallelForEach&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ParallelForEach&lt;T&gt; : System.Activities.NativeActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ParallelForEach`1&lt;T&gt; extends System.Activities.NativeActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.ParallelForEach`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.NativeActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Body")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">O tipo dos valores fornecidos na coleção <see cref="P:System.Activities.Statements.ParallelForEach`1.Values" />.</typeparam>
+    <summary>Enumera os elementos de uma coleção e executa uma declaração inserida para cada elemento da coleção em paralelo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instruções inseridas são agendadas juntos e executados de forma assíncrona, mas a menos que as atividades agendadas próprios são assíncronas (como atividades de mensagens, <xref:System.Activities.Statements.InvokeMethod>, ou atividades que derivam de <xref:System.Activities.AsyncCodeActivity>), não são executados em threads separados, cada atividade sucessiva só será executada quando a atividade agendada anteriormente é concluída ou fica ocioso.  Se nenhuma das atividades filho desta atividade são assíncronas ou ficar ociosa, essa atividade é executada da mesma forma que um <xref:System.Activities.Statements.ForEach%601> atividade faz.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.ParallelForEach%601> atividade. Este exemplo é proveniente de [o processo de compra corporativo](~/docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemplo.  
+  
+ [!code-csharp[wfs_PurchaseProcess#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_purchaseprocess/cs/purchaseprocessworkflow.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParallelForEach ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.ParallelForEach`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Statements.ParallelForEach`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.ParallelForEach%601> atividade. Este exemplo é proveniente de [o processo de compra corporativo](~/docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemplo.  
+  
+ [!code-csharp[wfs_PurchaseProcess#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_purchaseprocess/cs/purchaseprocessworkflow.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public System.Activities.ActivityAction&lt;T&gt; Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.ActivityAction`1&lt;!T&gt; Body" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.ParallelForEach`1.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityAction&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Activities.ActivityAction" /> que é executada uma vez para cada valor contido no <see cref="P:System.Activities.Statements.ParallelForEach`1.Values" /> coleção.</summary>
+        <value>A ação de atividade contida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra definindo a propriedade de corpo de uma <xref:System.Activities.Statements.ParallelForEach%601> atividade. Este exemplo é proveniente de [o processo de compra corporativo](~/docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemplo.  
+  
+ [!code-csharp[wfs_PurchaseProcess#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_purchaseprocess/cs/purchaseprocessworkflow.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.NativeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.NativeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.ParallelForEach`1.CacheMetadata(System.Activities.NativeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.NativeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletionCondition">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;bool&gt; CompletionCondition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;bool&gt; CompletionCondition" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.ParallelForEach`1.CompletionCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Avaliado após cada iteração completa.</summary>
+        <value>A expressão de conclusão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for avaliada como `true`, então o agendada durante iterações é cancelado. Se esta propriedade não for definida, todas as instruções agendados executam até a conclusão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override void Execute (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Execute(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.ParallelForEach`1.Execute(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateDynamicUpdateMap">
+      <MemberSignature Language="C#" Value="protected override void OnCreateDynamicUpdateMap (System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata metadata, System.Activities.Activity originalActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateDynamicUpdateMap(class System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata metadata, class System.Activities.Activity originalActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.ParallelForEach`1.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata" />
+        <Parameter Name="originalActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <param name="originalActivity">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;System.Collections.Generic.IEnumerable&lt;T&gt;&gt; Values { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;class System.Collections.Generic.IEnumerable`1&lt;!T&gt;&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.ParallelForEach`1.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Activities.RequiredArgument</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.Collections.Generic.IEnumerable&lt;T&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A coleção de valores usados como parâmetros para a atividade contida em cada iteração do <see cref="P:System.Activities.Statements.ParallelForEach`1.Body" />.</summary>
+        <value>A coleção de valores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a definição da propriedade de valores de um <xref:System.Activities.Statements.ParallelForEach%601> atividade. Este exemplo é proveniente de [o processo de compra corporativo](~/docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemplo.  
+  
+ [!code-csharp[wfs_PurchaseProcess#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_purchaseprocess/cs/purchaseprocessworkflow.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,98 @@
+<Type Name="SettingsGroupNameAttribute" FullName="System.Configuration.SettingsGroupNameAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SettingsGroupNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SettingsGroupNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsGroupNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica um nome para o grupo de propriedade de configurações do aplicativo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe de configurações de aplicativo, derivada de <xref:System.Configuration.ApplicationSettingsBase>, define uma ou mais propriedades que pertencem ao mesmo grupo de propriedade de configurações de aplicativo. Por padrão, o grupo é atribuído o nome da classe de configurações. No entanto, <xref:System.Configuration.SettingsGroupNameAttribute> pode ser usado para especificar explicitamente um nome para o grupo de propriedades. Esse nome pode ser útil organizar grandes conjuntos de propriedades, para obter assistência em ferramentas de programação de tempo de design e ferramentas administrativas do tempo de execução e assim por diante. O provedor de configurações associadas ainda pode usar esse nome para organizar as configurações no repositório de dados.  
+  
+ O <xref:System.Configuration.SettingsGroupNameAttribute> só pode ser aplicada no nível de classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsGroupNameAttribute (string groupName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string groupName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsGroupNameAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">Um <see cref="T:System.String" /> que contém o nome do grupo de propriedades de configurações de aplicativo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.SettingsGroupNameAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o comprimento máximo teórico do `groupName` parâmetro é restrita por limites superiores de um <xref:System.Int32>, limites práticos, determinados pelo uso e limitações de cota impostas pelo provedor de configurações, será muito menores.  
+  
+> [!NOTE]
+>  O nome do grupo de configurações não precisa ser exclusivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsGroupNameAttribute.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do grupo de propriedades de configurações de aplicativo.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome do grupo de propriedades de configurações de aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingsGroupNameAttribute.GroupName%2A> o valor da propriedade é definido <xref:System.Configuration.SettingsGroupNameAttribute.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

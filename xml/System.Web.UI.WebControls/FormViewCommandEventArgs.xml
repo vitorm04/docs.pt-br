@@ -1,0 +1,157 @@
+<Type Name="FormViewCommandEventArgs" FullName="System.Web.UI.WebControls.FormViewCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.FormView.ItemCommand" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.FormView.ItemCommand> evento é gerado quando um botão dentro de <xref:System.Web.UI.WebControls.FormView> controle é clicado. Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada sempre que esse evento ocorre.  
+  
+ Botões dentro de um <xref:System.Web.UI.WebControls.FormView> controle também pode invocar alguns dos recursos internos do controle. Para executar uma dessas operações, defina o `CommandName` propriedade de um botão para um dos valores na tabela a seguir.  
+  
+|Valor CommandName|Descrição|  
+|-----------------------|-----------------|  
+|"Cancelar"|Cancela uma operação de edição ou de inserção e retorna o <xref:System.Web.UI.WebControls.FormView> controle para o modo especificado pelo <xref:System.Web.UI.WebControls.FormView.DefaultMode%2A> propriedade. Gera o <xref:System.Web.UI.WebControls.FormView.ModeChanged> e <xref:System.Web.UI.WebControls.FormView.ModeChanging> eventos.|  
+|"Delete"|Exclui o registro atual. Gera o <xref:System.Web.UI.WebControls.FormView.ItemDeleted> e <xref:System.Web.UI.WebControls.FormView.ItemDeleting> eventos.|  
+|"Edit"|Coloca o <xref:System.Web.UI.WebControls.FormView> controle no modo de edição. Gera o <xref:System.Web.UI.WebControls.FormView.ModeChanged> e <xref:System.Web.UI.WebControls.FormView.ModeChanging> eventos.|  
+|"Inserir"|Insere o registro atual na fonte de dados. Gera o <xref:System.Web.UI.WebControls.FormView.ItemInserted> e <xref:System.Web.UI.WebControls.FormView.ItemInserting> eventos.|  
+|"Novo"|Coloca o <xref:System.Web.UI.WebControls.FormView> controle no modo de inserção. Gera o <xref:System.Web.UI.WebControls.FormView.ModeChanged> e <xref:System.Web.UI.WebControls.FormView.ModeChanging> eventos.|  
+|"Página"|Executa uma operação de paginação. Definir o `CommandArgument` propriedade do botão para "Primeira", "último", "Próximo", "Anterior" ou um número de página para especificar o tipo de operação de paginação para executar. Gera o <xref:System.Web.UI.WebControls.FormView.PageIndexChanged> e <xref:System.Web.UI.WebControls.FormView.PageIndexChanging> eventos.|  
+|"Atualização"|Atualiza o registro atual na fonte de dados. Gera o <xref:System.Web.UI.WebControls.FormView.ItemUpdated> e <xref:System.Web.UI.WebControls.FormView.ItemUpdating> eventos.|  
+  
+ Embora o <xref:System.Web.UI.WebControls.FormView.ItemCommand> evento é gerado quando um botão listado na tabela anterior é clicado, é recomendável que você use os eventos listados na tabela para a operação.  
+  
+ Um <xref:System.Web.UI.WebControls.FormViewCommandEventArgs> objeto é passado para o método de manipulação de eventos, que permite que você determine o nome do comando e o argumento de comando do botão clicado. Para determinar o nome do comando e o argumento de comando, use o <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> e <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> propriedades, respectivamente. Você também pode acessar o controle de botão que gerou o evento usando o <xref:System.Web.UI.WebControls.DetailsViewCommandEventArgs.CommandSource%2A> propriedade.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FormViewCommandEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.FormViewCommandEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FormViewCommandEventArgs> objeto passado para o método de manipulação de eventos para o <xref:System.Web.UI.WebControls.DetailsView.ItemCommand> evento para determinar qual botão dentro de um <xref:System.Web.UI.WebControls.FormView> controle foi clicado pelo usuário.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewItemCommandEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewItemCommandEventArgs/CS/formviewcommandeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewItemCommandEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewItemCommandEventArgs/VB/formviewcommandeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewCommandEventArgs (object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewCommandEventArgs.#ctor(System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="commandSource">A origem do comando.</param>
+        <param name="originalArgs">Um <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> que contém dados do evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.FormViewCommandEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.FormViewCommandEventArgs> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Web.UI.WebControls.FormViewCommandEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A>|O valor da <xref:System.Web.UI.WebControls.CommandEventArgs.CommandArgument%2A> propriedade o <xref:System.Web.UI.WebControls.CommandEventArgs> contidos no `originalArgs` parâmetro.|  
+|<xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A>|O valor da <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> propriedade o <xref:System.Web.UI.WebControls.CommandEventArgs> contidos no `originalArgs` parâmetro.|  
+|<xref:System.Web.UI.WebControls.FormViewCommandEventArgs.CommandSource%2A>|O objeto contido no `commandSource` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle que gerou o evento.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o controle que disparou o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FormViewCommandEventArgs.CommandSource%2A> propriedade para acessar as propriedades do controle que disparou o evento. No caso de um <xref:System.Web.UI.WebControls.FormViewCommandEventArgs> do objeto, o controle é o botão foi clicado pelo usuário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FormViewCommandEventArgs.CommandSource%2A> propriedade para acessar as propriedades do controle de botão que gerou o <xref:System.Web.UI.WebControls.FormView.ItemCommand> evento.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormViewItemCommandEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewItemCommandEventArgs/CS/formviewcommandeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewItemCommandEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewItemCommandEventArgs/VB/formviewcommandeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewCommandEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle tratou o evento.</summary>
+        <value>
+          <see langword="true" />Se o código de associação de dados de evento foi ignorado ou foi concluída; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como `true` no manipulador de eventos para especificar que o <xref:System.Web.UI.WebControls.FormView> controle não deve manipular o evento porque você lidar com isso em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,143 @@
+<Type Name="SoapMessageStage" FullName="System.Web.Services.Protocols.SoapMessageStage">
+  <TypeSignature Language="C#" Value="public enum SoapMessageStage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SoapMessageStage extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapMessageStage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o estágio de processamento de uma mensagem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ASP.NET fornece um mecanismo de extensibilidade para chamar serviços Web usando SOAP. O mecanismo de extensibilidade gira em torno de um <xref:System.Web.Services.Protocols.SoapExtension> que pode inspecionar ou modificar uma mensagem em estágios específicos na mensagem de processamento no cliente ou no servidor. Esta enumeração Especifica o estágio de processamento do <xref:System.Web.Services.Protocols.SoapMessage>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um fragmento de uma extensão SOAP, que implementa o <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A> método. Dentro de <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A> método, o processamento de um <xref:System.Web.Services.Protocols.SoapMessage> é tratado específicas para o <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+ [!code-cpp[SoapMessageState#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessageState/CPP/SoapMessageState.cpp#1)]
+ [!code-csharp[SoapMessageState#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessageState/CS/soapmessagestate.cs#1)]
+ [!code-vb[SoapMessageState#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessageState/VB/soapmessagestate.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterDeserialize">
+      <MemberSignature Language="C#" Value="AfterDeserialize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapMessageStage AfterDeserialize = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapMessageStage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estágio imediatamente após um <see cref="T:System.Web.Services.Protocols.SoapMessage" /> ser desserializado de uma mensagem SOAP para um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a <xref:System.Web.Services.Protocols.SoapClientMessage> de processamento, o estágio de AfterDeserialize ocorre depois que a mensagem SOAP que contém a resposta de uma invocação de método de serviço Web XML tiver sido desserializada em um objeto, mas antes do cliente recebe os resultados desserializados.  
+  
+ Durante a <xref:System.Web.Services.Protocols.SoapServerMessage> o processamento, o estágio de AfterDeserialize ocorre depois que uma solicitação de rede que contém uma mensagem SOAP que representa uma invocação de método de serviço da Web em XML é desserializada em um objeto, mas antes do método no objeto que representa o XML Web é chamado de método de serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AfterSerialize">
+      <MemberSignature Language="C#" Value="AfterSerialize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapMessageStage AfterSerialize = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapMessageStage.AfterSerialize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapMessageStage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estágio imediatamente após um <see cref="T:System.Web.Services.Protocols.SoapMessage" /> ser serializada, mas antes da mensagem SOAP ser enviada pela rede.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a <xref:System.Web.Services.Protocols.SoapClientMessage> o processamento, o estágio de AfterSerialize ocorre depois que um cliente invoca um método de serviço da Web em XML e os parâmetros são serializados em XML, mas antes do SOAP que contém esse XML de mensagem é enviada pela rede.  
+  
+ Durante a <xref:System.Web.Services.Protocols.SoapServerMessage> o processamento, o estágio de AfterSerialize ocorre depois que um método de serviço Web XML retorna e quaisquer valores de retorno é serializado em XML, mas antes do SOAP que contém esse XML de mensagem é enviada pela rede.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeDeserialize">
+      <MemberSignature Language="C#" Value="BeforeDeserialize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapMessageStage BeforeDeserialize = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapMessageStage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estágio imediatamente antes de um <see cref="T:System.Web.Services.Protocols.SoapMessage" /> ser desserializado da mensagem SOAP enviada pela rede para um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a <xref:System.Web.Services.Protocols.SoapClientMessage> o processamento, o estágio de BeforeDeserialize ocorre depois que a resposta de rede de uma invocação de método de serviço Web XML foi recebida, mas antes da resposta que contém o SOAP mensagem é desserializada em um objeto.  
+  
+ Durante a <xref:System.Web.Services.Protocols.SoapServerMessage> o processamento, o estágio de BeforeDeserialize ocorre depois que uma solicitação de rede que contém a mensagem SOAP para uma invocação de método de serviço da Web em XML é recebida pelo servidor Web, mas antes da mensagem SOAP que está sendo desserializado em um objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeSerialize">
+      <MemberSignature Language="C#" Value="BeforeSerialize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Services.Protocols.SoapMessageStage BeforeSerialize = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapMessageStage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estágio imediatamente antes de um <see cref="T:System.Web.Services.Protocols.SoapMessage" /> que está sendo serializado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a <xref:System.Web.Services.Protocols.SoapClientMessage> o processamento, a etapa BeforeSerialize ocorre depois que um cliente invoca um método de serviço da Web em XML, mas antes da chamada que está sendo serializado.  
+  
+ Durante a <xref:System.Web.Services.Protocols.SoapServerMessage> de processamento, a etapa BeforeSerialize ocorre depois da chamada para o XML Web retorna do método de serviço, mas antes dos valores de retorno que está sendo serializado e enviado pela conexão de volta ao cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.DataAnnotations.Schema">
+  <Docs>
+    <summary>O <see cref="N:System.ComponentModel.DataAnnotations.Schema" /> namespace fornece suporte para classes de atributos que são usados para definir metadados para controles de dados do ASP.NET MVC e ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

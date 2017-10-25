@@ -1,0 +1,71 @@
+<Type Name="CachingSectionGroup" FullName="System.Runtime.Caching.Configuration.CachingSectionGroup">
+  <TypeSignature Language="C#" Value="public sealed class CachingSectionGroup : System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CachingSectionGroup extends System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.Configuration.CachingSectionGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSectionGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma configuração seção no.NET Framework cache. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.Configuration.CachingSectionGroup> classe define uma seção de cache (`system.runtime.caching`) para arquivos de configuração. Esta seção contém os elementos que são usados para configurar vários tipos de cache. No ASP.NET, o único elemento que está disponível na seção de cache é o elemento. Esse elemento configura caches que se baseiam o <xref:System.Runtime.Caching.MemoryCache> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CachingSectionGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.CachingSectionGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Caching.Configuration.CachingSectionGroup" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryCaches">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.Configuration.MemoryCacheSection MemoryCaches { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.Configuration.MemoryCacheSection MemoryCaches" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.CachingSectionGroup.MemoryCaches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("memoryCache")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.Configuration.MemoryCacheSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de objetos <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheElement" />.</summary>
+        <value>A coleção de objetos do cache de seção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.Configuration.CachingSectionGroup.MemoryCaches%2A> propriedade retorna a coleção de <xref:System.Runtime.Caching.Configuration.MemoryCacheSection> objetos do cache seção pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

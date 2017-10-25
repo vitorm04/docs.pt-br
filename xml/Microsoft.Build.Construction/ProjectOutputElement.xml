@@ -1,0 +1,207 @@
+<Type Name="ProjectOutputElement" FullName="Microsoft.Build.Construction.ProjectOutputElement">
+  <TypeSignature Language="C#" Value="public class ProjectOutputElement : Microsoft.Build.Construction.ProjectElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectOutputElement extends Microsoft.Build.Construction.ProjectElement" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectOutputElement" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Construction.ProjectElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name={Name} TaskParameter={TaskParameter} ItemName={ItemName} PropertyName={PropertyName} Condition={Condition}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um [elemento Output (MSBuild)](http://msdn.microsoft.com/library/34bc7cd1-efd3-4b57-b691-4584eeb6a0e9) em um projeto do MSBuild.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsOutputItem">
+      <MemberSignature Language="C#" Value="public bool IsOutputItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutputItem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.IsOutputItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se este elemento output representa um item de saída, em vez de uma propriedade de saída.</summary>
+        <value>Retornará true se este elemento output representa um item de saída; FALSO caso contrário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutputProperty">
+      <MemberSignature Language="C#" Value="public bool IsOutputProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutputProperty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.IsOutputProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se este elemento de saída representa uma propriedade de saída, em vez de um item de saída.</summary>
+        <value>Retornará true se este elemento de saída representa uma propriedade de saída; FALSO caso contrário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public string ItemType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do atributo ItemType.</summary>
+        <value>Obtém ou define o valor do atributo ItemType retorna vazio de cadeia de caracteres se o atributo não estiver presente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remove o atributo ItemType se o valor a ser definido é definido como nulo ou uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTypeLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ItemTypeLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ItemTypeLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.ItemTypeLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local de atributo de tipo de item, se houver</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do atributo PropertyName.</summary>
+        <value>Obtém ou define o valor do atributo PropertyName. Retorna uma cadeia de caracteres vazia caso o atributo não esteja presente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remove o atributo PropertyName se o valor a ser definido é definido como nulo ou uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyNameLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation PropertyNameLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation PropertyNameLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.PropertyNameLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do atributo de nome de propriedade, se houver</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskParameter">
+      <MemberSignature Language="C#" Value="public string TaskParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskParameter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.TaskParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de atributo TaskParameter.</summary>
+        <value>Obtém ou define o valor do atributo TaskParameter. Retorna uma cadeia de caracteres vazia caso o atributo não esteja presente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remove o atributo TaskParameter se o valor a ser definido é definido como nulo ou uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskParameterLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation TaskParameterLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation TaskParameterLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.TaskParameterLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do atributo de parâmetro de tarefa</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

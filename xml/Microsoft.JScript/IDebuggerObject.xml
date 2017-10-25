@@ -1,0 +1,136 @@
+<Type Name="IDebuggerObject" FullName="Microsoft.JScript.IDebuggerObject">
+  <TypeSignature Language="C#" Value="public interface IDebuggerObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDebuggerObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.IDebuggerObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("8E93D770-6168-4b68-B896-A71B74C7076A")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define métodos que fornecem informações sobre objetos do depurador. Essa interface é implementada por todos os <see cref="T:System.Reflection.IReflect" /> objetos que são implementados pelo depurador. Atualmente, essa interface serve apenas para esses objetos para que o mecanismo de script do sinalizador.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="HasEnumerableMember">
+      <MemberSignature Language="C#" Value="public bool HasEnumerableMember (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasEnumerableMember(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebuggerObject.HasEnumerableMember(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do membro a ser pesquisado.</param>
+        <summary>Quando implementada em uma classe, determina se o objeto atual tem um membro que tem o nome especificado e que é enumerável.</summary>
+        <returns>
+          <see langword="true" />Se o objeto atual tiver um membro enumerável chamado <paramref name="name" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsCOMObject">
+      <MemberSignature Language="C#" Value="public bool IsCOMObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsCOMObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebuggerObject.IsCOMObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe, determina se o objeto atual é um objeto COM true ou um proxy para um objeto gerenciado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto atual é um objeto COM. <see langword="false" /> se o objeto atual é um proxy para um objeto gerenciado.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsEqual">
+      <MemberSignature Language="C#" Value="public bool IsEqual (Microsoft.JScript.IDebuggerObject o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEqual(class Microsoft.JScript.IDebuggerObject o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebuggerObject.IsEqual(Microsoft.JScript.IDebuggerObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="Microsoft.JScript.IDebuggerObject" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto para testar a igualdade.</param>
+        <summary>Quando implementada em uma classe, determina se o objeto atual é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto atual é o mesmo que <paramref name="o" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsScriptFunction">
+      <MemberSignature Language="C#" Value="public bool IsScriptFunction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsScriptFunction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebuggerObject.IsScriptFunction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe, determina se o objeto atual é um proxy para uma função JScript gerenciada.</summary>
+        <returns>
+          <see langword="true" />Se o objeto atual é um proxy para uma função JScript gerenciado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsScriptObject">
+      <MemberSignature Language="C#" Value="public bool IsScriptObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsScriptObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IDebuggerObject.IsScriptObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe, determina se o objeto atual é um proxy para um objeto gerenciado do JScript.</summary>
+        <returns>
+          <see langword="true" />Se o objeto atual é um proxy para um objeto gerenciado do JScript; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

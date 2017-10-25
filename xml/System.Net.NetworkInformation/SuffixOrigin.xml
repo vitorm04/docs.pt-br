@@ -1,0 +1,202 @@
+<Type Name="SuffixOrigin" FullName="System.Net.NetworkInformation.SuffixOrigin">
+  <TypeSignature Language="C#" Value="public enum SuffixOrigin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SuffixOrigin extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.SuffixOrigin" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como um sufixo de host do endereço IP foi localizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Endereços IP são divididos em duas partes: o prefixo e o sufixo. O prefixo de endereço identifica a parte de um endereço IP de rede e o sufixo de endereço identifica a parte do host. Prefixos são atribuídos por autoridades global e sufixos são atribuídos por administradores de sistema local.  
+  
+ Essa enumeração é usada pela classe de <xref:System.Net.NetworkInformation.UnicastIPAddressInformation> . As instâncias dessa classe são retornadas ao recuperar as informações de endereço de unicast para uma <xref:System.Net.NetworkInformation.NetworkInterface> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de prefixo e sufixo para o endereço de unicast.  
+  
+ [!code-cpp[NclNetInfo2#45](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#45)]
+ [!code-csharp[NclNetInfo2#45](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#45)]
+ [!code-vb[NclNetInfo2#45](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#45)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LinkLayerAddress">
+      <MemberSignature Language="C#" Value="LinkLayerAddress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.SuffixOrigin LinkLayerAddress = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.SuffixOrigin.LinkLayerAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.SuffixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sufixo é um sufixo de local de link.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Manual">
+      <MemberSignature Language="C#" Value="Manual" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.SuffixOrigin Manual = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.SuffixOrigin.Manual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.SuffixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sufixo foi configurado manualmente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginDhcp">
+      <MemberSignature Language="C#" Value="OriginDhcp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.SuffixOrigin OriginDhcp = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.SuffixOrigin.OriginDhcp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.SuffixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sufixo foi fornecido por um servidor de protocolo de configuração de Host dinâmico (DHCP).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.SuffixOrigin Other = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.SuffixOrigin.Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.SuffixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sufixo foi localizado usando uma origem não especificada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Random">
+      <MemberSignature Language="C#" Value="Random" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.SuffixOrigin Random = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.SuffixOrigin.Random" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.SuffixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sufixo aleatoriamente foi atribuído.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WellKnown">
+      <MemberSignature Language="C#" Value="WellKnown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.SuffixOrigin WellKnown = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.SuffixOrigin.WellKnown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.SuffixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sufixo é um sufixo bem conhecido. Sufixos Well-Known estão especificados na solicitação de rastreamento padrão para documentos de comentários (RFC) e atribuídos pela Internet Assigned Numbers Authority (Iana) ou um registro de endereço. Esses sufixos são reservados para fins especiais.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,220 @@
+<Type Name="IssuerNameRegistry" FullName="System.IdentityModel.Tokens.IssuerNameRegistry">
+  <TypeSignature Language="C#" Value="public abstract class IssuerNameRegistry : System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IssuerNameRegistry extends System.Object implements class System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.IssuerNameRegistry" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IdentityModel.Configuration.ICustomIdentityConfiguration</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A classe base abstrata para um Registro do nome do emissor. Um Registro do nome do emissor é usado para associar um nome mnemônico ao material criptográfico que é necessário para verificar as assinaturas dos tokens produzidos pelo emissor correspondente. O Registro do nome do emissor mantém uma lista de emissores confiáveis para um aplicativo RP (de terceira parte confiável).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O registro do nome do emissor é usado para associar um mnemônico nome para o material criptográfico necessário para verificar as assinaturas dos tokens produzidos pelo emissor correspondente. Esse nome é usado para definir o <xref:System.Security.Claims.Claim.Issuer%2A> ou <xref:System.Security.Claims.Claim.OriginalIssuer%2A> propriedade de uma declaração. Os métodos expostos pelo <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe são chamados do pipeline, o manipulador de token de segurança que está processando o token. Tokens assinados por material não é mapeado por um registro de nome do emissor são descartados como não confiável. O nome retornado pelo registro de nome do emissor deve ser exclusivo dentro do contexto de um aplicativo do RP.  
+  
+ No código, você pode especificar o registro de nome do emissor para usar definindo o <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.IssuerNameRegistry%2A?displayProperty=nameWithType> propriedade. Em um arquivo de configuração, o registro do nome do emissor pode ser especificado com a especificação de [ &lt;issuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md) elemento sob o [ &lt;securityTokenHandlerConfiguration &gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elemento.  
+  
+ Windows Identity Foundation (WIF) fornece uma implementação do <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe predefinido: o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. Quando você usar essa implementação pode especificar a lista de emissores confiáveis no arquivo de configuração do aplicativo RP sob o [ &lt;trustedIssuers&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) elemento, que é um elemento filho do `<issuerNameRegistry>`elemento quando o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>. class é referenciada nesse elemento `type` atributo. Sob o `<trustedIssuers>` elemento, cada nome de emissor é mapeado para o certificado x. 509 que deve ser usado para verificar sua assinatura.  
+  
+ Para criar um registro de nome de emissor personalizado, você deve substituir o <xref:System.IdentityModel.Tokens.IssuerNameRegistry.GetIssuerName%28System.IdentityModel.Tokens.SecurityToken%29?displayProperty=nameWithType> método. Esse método retorna o nome do emissor do token de segurança especificados. Opcionalmente, você pode substituir o <xref:System.IdentityModel.Tokens.IssuerNameRegistry.GetIssuerName%28System.IdentityModel.Tokens.SecurityToken%2CSystem.String%29?displayProperty=nameWithType> método para fornecer um mecanismo dicas ao recuperar nomes de emissor e o <xref:System.IdentityModel.Tokens.IssuerNameRegistry.GetWindowsIssuerName%2A> método se desejar fornecer um nome de emissor para Windows tokens que é diferente do <xref:System.Security.Claims.ClaimsIdentity.DefaultIssuer>. Substituir o <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> método para habilitar o registro de nome de emissor seja inicializada em um arquivo de configuração.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra uma implementação de <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe que aceita apenas emissores que usam certificados com o assunto "CN = localhost".  
+  
+> [!WARNING]
+>  O código a seguir é apenas para fins ilustrativos. Não é uma prática recomendada validar certificados com base no nome da entidade. Este código não deve ser usado porque está em produção.  
+  
+ [!code-csharp[WifIssuerNameRegistry#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifissuernameregistry/cs/mvcwepapp/trustedissuernameregistry.cs#1)]  
+  
+ A seguir mostra o XML necessário para configurar um aplicativo com o registro de nome de emissor confiável.  
+  
+```xml  
+<system.identityModel>  
+  <identityConfiguration>  
+    <issuerNameRegistry type="System.IdentityModel.Samples.TrustedIssuerNameRegistry, MyApp" />  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IssuerNameRegistry ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerNameRegistry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.IssuerNameRegistry" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetIssuerName">
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna o nome do emissor do token de segurança especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamado do pipeline do processamento, o manipulador de token de segurança que está processando o token. O método deve retornar um nome exclusivo para o emissor dentro do contexto do aplicativo RP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetIssuerName">
+      <MemberSignature Language="C#" Value="public abstract string GetIssuerName (System.IdentityModel.Tokens.SecurityToken securityToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetIssuerName(class System.IdentityModel.Tokens.SecurityToken securityToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerNameRegistry.GetIssuerName(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">O token de segurança para o qual retornar o nome do emissor.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o nome do emissor do token de segurança especificados.</summary>
+        <returns>O nome do emissor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações devem retornar uma cadeia de caracteres nulas e não vazio para identificar um emissor reconhecido ou uma cadeia de caracteres nula para identificar um emissor não reconhecido.  
+  
+ Chamado do pipeline do processamento, o manipulador de token de segurança que está processando o token. O método deve retornar um nome exclusivo para o emissor dentro do contexto do aplicativo RP.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra o <xref:System.IdentityModel.Tokens.IssuerNameRegistry.GetIssuerName%2A> método para um registro de nome do emissor. O exemplo completo está no <xref:System.IdentityModel.Tokens.IssuerNameRegistry> tópico de visão geral da classe.  
+  
+> [!WARNING]
+>  O código a seguir é apenas para fins ilustrativos. Não é uma prática recomendada validar certificados com base no nome da entidade. Este código não deve ser usado porque está em produção.  
+  
+ [!code-csharp[WifIssuerNameRegistry#2](~/samples/snippets/csharp/VS_Snippets_Misc/wifissuernameregistry/cs/mvcwepapp/trustedissuernameregistry.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIssuerName">
+      <MemberSignature Language="C#" Value="public virtual string GetIssuerName (System.IdentityModel.Tokens.SecurityToken securityToken, string requestedIssuerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetIssuerName(class System.IdentityModel.Tokens.SecurityToken securityToken, string requestedIssuerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerNameRegistry.GetIssuerName(System.IdentityModel.Tokens.SecurityToken,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="requestedIssuerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">O token de segurança para o qual retornar o nome do emissor.</param>
+        <param name="requestedIssuerName">Um nome de emissor a serem considerados na solicitação.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o nome do emissor do token de segurança especificados. O nome do emissor especificado pode ser considerado para determinar o nome do emissor para retornar.</summary>
+        <returns>O nome do emissor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão ignora o `requestedIssuerName` parâmetro e simplesmente chama o <xref:System.IdentityModel.Tokens.IssuerNameRegistry.GetIssuerName%28System.IdentityModel.Tokens.SecurityToken%29?displayProperty=nameWithType> método.  
+  
+ Chamado do pipeline do processamento, o manipulador de token de segurança que está processando o token. O método deve retornar um nome exclusivo para o emissor dentro do contexto do aplicativo RP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWindowsIssuerName">
+      <MemberSignature Language="C#" Value="public virtual string GetWindowsIssuerName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetWindowsIssuerName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerNameRegistry.GetWindowsIssuerName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome do emissor padrão a ser usada para declarações do Windows.</summary>
+        <returns>O nome do emissor padrão para declarações do Windows.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão retorna <xref:System.Security.Claims.ClaimsIdentity.DefaultIssuer>.  
+  
+ Chamado do pipeline do processamento, o manipulador de token de segurança que está processando o token. O método deve retornar um nome exclusivo para o emissor dentro do contexto do aplicativo RP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public virtual void LoadCustomConfiguration (System.Xml.XmlNodeList nodelist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList nodelist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodelist" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodelist">Os elementos XML de configuração. Cada nó na lista é do tipo <see cref="T:System.Xml.XmlElement" />.</param>
+        <summary>Quando substituído em uma classe derivada, carrega a configuração personalizada do XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> método é chamado pela infraestrutura de configuração. Quando este método é chamado, o `nodelist` conterá os elementos filho de nível superior do [ &lt;issuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md) elemento do arquivo de configuração. Cada um deles pode, por sua vez, contêm atributos ou elementos filho dependendo do esquema de configuração que você definir para a sua classe derivada.  
+  
+ A implementação padrão gera um <xref:System.NotImplementedException>. Substitua este método em sua classe derivada para habilitar a inicialização do registro de nome do emissor de um arquivo de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

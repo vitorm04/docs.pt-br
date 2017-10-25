@@ -1,0 +1,79 @@
+<Type Name="DatabindExprRegex" FullName="System.Web.RegularExpressions.DatabindExprRegex">
+  <TypeSignature Language="C#" Value="public class DatabindExprRegex : System.Text.RegularExpressions.Regex" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DatabindExprRegex extends System.Text.RegularExpressions.Regex" />
+  <TypeSignature Language="DocId" Value="T:System.Web.RegularExpressions.DatabindExprRegex" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.RegularExpressions.Regex</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma expressão regular para analisar uma expressão de associação de dados do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.RegularExpressions.DatabindExprRegex> classe fornece uma expressão regular compilada para analisar uma expressão de associação de dados do ASP.NET (`<%#` ... `%>`).  
+  
+> [!NOTE]
+>  O <xref:System.Web.RegularExpressions> classes são usadas internamente pelo .NET Framework para analisar as páginas ASP.NET.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DatabindExprRegex ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.RegularExpressions.DatabindExprRegex.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.RegularExpressions.DatabindExprRegex" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma expressão regular compilada cujo padrão de expressão regular predefinida é `\G<%#(?<code>.*?)?%>`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DatabindExprRegex (TimeSpan A_1);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(valuetype System.TimeSpan A_1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.RegularExpressions.DatabindExprRegex.#ctor(System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="A_1" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="A_1">Um intervalo de tempo limite ou <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> se operações de correspondência deve sem tempo limite.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.RegularExpressions.DatabindExprRegex" /> classe com um valor de tempo limite especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `A_1` parâmetro representa o intervalo de tempo máximo durante o qual o mecanismo de expressão regular tenta localizar uma correspondência antes da operação expira e um <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> expressão é gerada.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

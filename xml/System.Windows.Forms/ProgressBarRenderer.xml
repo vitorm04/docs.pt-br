@@ -1,0 +1,342 @@
+<Type Name="ProgressBarRenderer" FullName="System.Windows.Forms.ProgressBarRenderer">
+  <TypeSignature Language="C#" Value="public sealed class ProgressBarRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProgressBarRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ProgressBarRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos usados para renderizar um controle de barra de progresso com estilos visuais. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBarRenderer> classe fornece um conjunto de `static` métodos que podem ser usados para renderizar um controle de barra de progresso com o estilo visual atual do sistema operacional. Renderizar um controle refere-se a desenhar a interface do usuário de um controle. Isso é útil se você estiver desenhando um controle personalizado que deve ter a aparência do estilo visual atual. Para desenhar uma barra de progresso, use o <xref:System.Windows.Forms.ProgressBarRenderer.DrawHorizontalBar%2A> ou <xref:System.Windows.Forms.ProgressBarRenderer.DrawVerticalBar%2A> métodos para desenhar a barra vazia e, em seguida, use o <xref:System.Windows.Forms.ProgressBarRenderer.DrawHorizontalChunks%2A> ou <xref:System.Windows.Forms.ProgressBarRenderer.DrawVerticalChunks%2A> métodos para desenhar os elementos que preencham a barra.  
+  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados à área de cliente do aplicativo windows, os métodos dessa classe desenhará a barra de progresso com o estilo visual atual. Caso contrário, os métodos e as propriedades dessa classe lançará um <xref:System.InvalidOperationException>. Para determinar se os membros dessa classe podem ser usados, você pode verificar o valor de <xref:System.Windows.Forms.ProgressBarRenderer.IsSupported%2A> propriedade.  
+  
+ Essa classe encapsula a funcionalidade de um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> está definido como um dos elementos expostos pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar.Bar?displayProperty=nameWithType>, <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar.BarVertical?displayProperty=nameWithType>, <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar.Chunk?displayProperty=nameWithType>, e <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar.ChunkVertical?displayProperty=nameWithType> classes. Para obter mais informações, consulte [renderização de controles com estilos visuais](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle personalizado que usa o <xref:System.Windows.Forms.ProgressBarRenderer.DrawVerticalBar%2A> e <xref:System.Windows.Forms.ProgressBarRenderer.DrawVerticalChunks%2A> métodos para desenhar uma barra de progresso vertical. O controle usa um <xref:System.Windows.Forms.Timer> para redesenhar a barra de progresso com uma parte adicionada a cada segundo. O `SetupProgressBar` método usa o <xref:System.Windows.Forms.ProgressBarRenderer.ChunkThickness%2A> e <xref:System.Windows.Forms.ProgressBarRenderer.ChunkSpaceThickness%2A> propriedades para calcular a altura de cada retângulo progressivamente maior que é desenhada.  
+  
+ [!code-cpp[System.Windows.Forms.ProgressBarRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.ProgressBarRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.ProgressBarRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChunkSpaceThickness">
+      <MemberSignature Language="C#" Value="public static int ChunkSpaceThickness { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ChunkSpaceThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBarRenderer.ChunkSpaceThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura, em pixels, do espaço entre cada parte interna da barra de progresso.</summary>
+        <value>A largura, em pixels, do espaço entre cada parte interna da barra de progresso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é determinado pelo estilo visual atual do sistema operacional.  
+  
+ Antes de acessar essa propriedade, você deve verificar se o <xref:System.Windows.Forms.ProgressBarRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ProgressBarRenderer.ChunkSpaceThickness%2A> propriedade para determinar o tamanho de cada retângulo que representa um incremento da barra de progresso desenhada pelo <xref:System.Windows.Forms.ProgressBarRenderer.DrawVerticalChunks%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ProgressBarRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.ProgressBarRenderer#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.ProgressBarRenderer#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.ProgressBarRenderer#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChunkThickness">
+      <MemberSignature Language="C#" Value="public static int ChunkThickness { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ChunkThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBarRenderer.ChunkThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura, em pixels, de uma única parte interna da barra de progresso.</summary>
+        <value>A largura, em pixels, de uma única parte interna da barra de progresso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é determinado pelo estilo visual atual do sistema operacional.  
+  
+ Antes de acessar essa propriedade, você deve verificar se o <xref:System.Windows.Forms.ProgressBarRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ProgressBarRenderer.ChunkThickness%2A> propriedade para determinar o tamanho de cada retângulo que representa um incremento da barra de progresso desenhada pelo <xref:System.Windows.Forms.ProgressBarRenderer.DrawVerticalChunks%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ProgressBarRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.ProgressBarRenderer#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.ProgressBarRenderer#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.ProgressBarRenderer#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawHorizontalBar">
+      <MemberSignature Language="C#" Value="public static void DrawHorizontalBar (System.Drawing.Graphics g, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawHorizontalBar(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBarRenderer.DrawHorizontalBar(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a barra de progresso.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da barra de progresso.</param>
+        <summary>Desenha um controle de barra de progresso em branco preenche horizontalmente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de usar esse método, você deve verificar se o <xref:System.Windows.Forms.ProgressBarRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawHorizontalChunks">
+      <MemberSignature Language="C#" Value="public static void DrawHorizontalChunks (System.Drawing.Graphics g, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawHorizontalChunks(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBarRenderer.DrawHorizontalChunks(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a barra de progresso.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites devem ser preenchidas por partes da barra de progresso.</param>
+        <summary>Desenha um conjunto de peças de barra de progresso que preenchem uma barra de progresso horizontal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada parte da barra de progresso desenhada por esse método abrange a altura do `bounds` parâmetro. O número de partes de barra de progresso desenhada é determinado pela largura de `bounds` e os valores retornados pelo <xref:System.Windows.Forms.ProgressBarRenderer.ChunkSpaceThickness%2A> e <xref:System.Windows.Forms.ProgressBarRenderer.ChunkThickness%2A> propriedades.  
+  
+ Antes de usar esse método, você deve verificar se o <xref:System.Windows.Forms.ProgressBarRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawVerticalBar">
+      <MemberSignature Language="C#" Value="public static void DrawVerticalBar (System.Drawing.Graphics g, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawVerticalBar(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBarRenderer.DrawVerticalBar(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a barra de progresso.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da barra de progresso.</param>
+        <summary>Desenha um controle de barra de progresso em branco que preenche verticalmente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de usar esse método, você deve verificar se o <xref:System.Windows.Forms.ProgressBarRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ProgressBarRenderer.DrawVerticalBar%2A> método em um controle personalizado <xref:System.Windows.Forms.Control.OnPaint%2A> método para desenhar uma barra de progresso em branco. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ProgressBarRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.ProgressBarRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ProgressBarRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ProgressBarRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawVerticalChunks">
+      <MemberSignature Language="C#" Value="public static void DrawVerticalChunks (System.Drawing.Graphics g, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawVerticalChunks(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBarRenderer.DrawVerticalChunks(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a barra de progresso.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites devem ser preenchidas por partes da barra de progresso.</param>
+        <summary>Desenha um conjunto de peças de barra de progresso que preenchem uma barra de progresso vertical.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada parte da barra de progresso desenhada por este método ocupa a largura do `bounds` parâmetro. O número de partes de barra de progresso desenhada é determinado pela altura do `bounds` e os valores retornados por <xref:System.Windows.Forms.ProgressBarRenderer.ChunkSpaceThickness%2A> e <xref:System.Windows.Forms.ProgressBarRenderer.ChunkThickness%2A>.  
+  
+ Antes de usar esse método, você deve verificar se o <xref:System.Windows.Forms.ProgressBarRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ProgressBarRenderer.DrawVerticalChunks%2A> método em um <xref:System.Windows.Forms.Timer.Tick?displayProperty=nameWithType> manipulador de eventos para desenhar cada incremento de uma barra de progresso. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ProgressBarRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.ProgressBarRenderer#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/cpp/form1.cpp#6)]
+ [!code-csharp[System.Windows.Forms.ProgressBarRenderer#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/CS/form1.cs#6)]
+ [!code-vb[System.Windows.Forms.ProgressBarRenderer#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public static bool IsSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBarRenderer.IsSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Forms.ProgressBarRenderer" /> classe pode ser usada para desenhar um controle de barra de progresso com estilos visuais.</summary>
+        <value>
+          <see langword="true" />Se o usuário habilitou estilos visuais no sistema operacional e estilos visuais são aplicados à área de cliente do windows do aplicativo. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade for `false`, os métodos e as propriedades dessa classe lançará um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ProgressBarRenderer.IsSupported%2A> propriedade para determinar se a chamada a <xref:System.Windows.Forms.ProgressBarRenderer.DrawVerticalBar%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ProgressBarRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.ProgressBarRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ProgressBarRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ProgressBarRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ProgressBarRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

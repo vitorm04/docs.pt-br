@@ -1,0 +1,221 @@
+<Type Name="AsnEncodedDataEnumerator" FullName="System.Security.Cryptography.AsnEncodedDataEnumerator">
+  <TypeSignature Language="C#" Value="public sealed class AsnEncodedDataEnumerator : System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AsnEncodedDataEnumerator extends System.Object implements class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.AsnEncodedDataEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a capacidade de navegar por meio de um <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> objeto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe implementa o <xref:System.Collections.IEnumerator> interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedDataEnumerator> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.AsnEncodedData Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.AsnEncodedData Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedDataEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsnEncodedData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual <see cref="T:System.Security.Cryptography.AsnEncodedData" /> do objeto em um <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> objeto.</summary>
+        <value>Atual <see cref="T:System.Security.Cryptography.AsnEncodedData" /> objeto na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que um enumerador é criado, o <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.MoveNext%2A> método deve ser chamado para avançar o enumerador para o primeiro elemento da coleção antes de ler o valor da <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.Current%2A> propriedade; caso contrário, <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.Current%2A> retorna `null` ou lança uma exceção.  
+  
+ <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.Current%2A>também retorna `null` ou gera uma exceção se a última chamada <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.MoveNext%2A> retorna `false`, que indica que o final da coleção foi atingido.  
+  
+ <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.Current%2A>não move a posição do enumerador e chamadas consecutivas para <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.Current%2A> retornar o mesmo objeto até <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.MoveNext%2A> é chamado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedDataEnumerator> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança para o próximo <see cref="T:System.Security.Cryptography.AsnEncodedData" /> do objeto em um <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> objeto.</summary>
+        <returns>
+          <see langword="true" />, se o enumerador foi avançado com êxito para o próximo elemento; <see langword="false" />, se o enumerador tiver passado o final da coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que um enumerador é criado, ele está posicionado antes do primeiro elemento da coleção e a primeira chamada para o <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.MoveNext%2A> método Move o enumerador sobre o primeiro elemento da coleção. As chamadas subsequentes para <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.MoveNext%2A> Avançar o enumerador após elementos subsequentes.  
+  
+ Após o final da coleção for passado, chamadas para <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.MoveNext%2A> retornar `false`.  
+  
+ Um enumerador é válido desde que a coleção permaneça inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador se torna inválido e a próxima chamada para <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.MoveNext%2A> pode lançar um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedDataEnumerator> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção foi modificada depois da criação do enumerador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedDataEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define um enumerador como sua posição inicial.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição inicial de um enumerador está antes do primeiro elemento de <xref:System.Security.Cryptography.AsnEncodedDataCollection> objeto. Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador se torna inválido e a próxima chamada para o <xref:System.Security.Cryptography.AsnEncodedDataEnumerator.Reset%2A> método lança um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedDataEnumerator> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção foi modificada depois da criação do enumerador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedDataEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual <see cref="T:System.Security.Cryptography.AsnEncodedData" /> do objeto em um <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> objeto.</summary>
+        <value>O objeto <see cref="T:System.Security.Cryptography.AsnEncodedData" /> atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

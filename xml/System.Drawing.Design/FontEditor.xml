@@ -1,0 +1,112 @@
+<Type Name="FontEditor" FullName="System.Drawing.Design.FontEditor">
+  <TypeSignature Language="C#" Value="public class FontEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FontEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.FontEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma interface de usuário para selecionar e configurar um <see cref="T:System.Drawing.Font" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Design.FontEditor>é um <xref:System.Drawing.Design.UITypeEditor> que fornece uma interface do usuário para escolher e configurar um <xref:System.Drawing.Font> de uma lista de fontes disponíveis.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.ComponentModel.EditorAttribute> para associar o <xref:System.Drawing.Design.FontEditor> com uma propriedade.  
+  
+ [!code-cpp[EditorAttributesExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/EditorAttributesExample/CPP/class1.cpp#2)]
+ [!code-csharp[EditorAttributesExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/EditorAttributesExample/CS/class1.cs#2)]
+ [!code-vb[EditorAttributesExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/EditorAttributesExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+    <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.FontEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Design.FontEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.FontEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <param name="provider">Um <see cref="T:System.IServiceProvider" /> que este editor pode usar para obter serviços.</param>
+        <param name="value">O objeto para editar.</param>
+        <summary>Edições, o valor do objeto especificado usando o estilo de editor é indicado pelo <see cref="M:System.Drawing.Design.FontEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />.</summary>
+        <returns>O novo valor do objeto. Se o valor do objeto não foi alterado, isso deve retornar o mesmo objeto que foi passado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor de serviço é fornecido para que todos os serviços necessários edição podem ser obtidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.FontEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <summary>Obtém o estilo de editor usado pelo <see cref="M:System.Drawing.Design.FontEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> método.</summary>
+        <returns>Um <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> valor que indica o estilo do editor usado pelo <see cref="M:System.Drawing.Design.FontEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

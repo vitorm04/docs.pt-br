@@ -1,0 +1,90 @@
+<Type Name="RecipientInfoType" FullName="System.Security.Cryptography.Pkcs.RecipientInfoType">
+  <TypeSignature Language="C#" Value="public enum RecipientInfoType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RecipientInfoType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.RecipientInfoType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>O <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoType" /> enumeração define os tipos de informações do destinatário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="KeyAgreement">
+      <MemberSignature Language="C#" Value="KeyAgreement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.Pkcs.RecipientInfoType KeyAgreement = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Pkcs.RecipientInfoType.KeyAgreement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.RecipientInfoType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Informações sobre o destinatário acordo de chave.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTransport">
+      <MemberSignature Language="C#" Value="KeyTransport" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.Pkcs.RecipientInfoType KeyTransport = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Pkcs.RecipientInfoType.KeyTransport" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.RecipientInfoType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Informações de destinatário do transporte de chaves.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.Pkcs.RecipientInfoType Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.Pkcs.RecipientInfoType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.RecipientInfoType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo de informações do destinatário é desconhecido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

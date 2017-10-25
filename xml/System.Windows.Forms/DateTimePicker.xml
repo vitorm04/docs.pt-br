@@ -1,0 +1,2148 @@
+<Type Name="DateTimePicker" FullName="System.Windows.Forms.DateTimePicker">
+  <TypeSignature Language="C#" Value="public class DateTimePicker : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DateTimePicker extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DateTimePicker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ValueChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.DateTimePickerDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle do Windows que permite ao usuário selecionar uma data e uma hora e exibir a data e hora com um formato especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DateTimePicker> controle é usado para permitir que o usuário selecione uma data e hora e exibir a data e hora no formato especificado. O <xref:System.Windows.Forms.DateTimePicker> controle torna mais fácil trabalhar com datas e horas como ele trata muitas da validação de dados automaticamente.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.DateTimePicker> controle só oferece suporte a calendários do calendário gregoriano.  
+  
+ Quando usado para representar uma data, o <xref:System.Windows.Forms.DateTimePicker> controle aparece em duas partes: uma lista suspensa com uma data representado em texto e um calendário que aparece quando você clica na seta para baixo ao lado da lista. O calendário é semelhante a <xref:System.Windows.Forms.MonthCalendar> controle, que pode ser usado para selecionar várias datas. Para obter mais informações sobre o <xref:System.Windows.Forms.MonthCalendar> , consulte [visão geral do controle MonthCalendar](~/docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).  
+  
+ Você pode alterar a aparência da parte do controle de calendário, definindo o <xref:System.Windows.Forms.DateTimePicker.CalendarForeColor%2A>, <xref:System.Windows.Forms.DateTimePicker.CalendarFont%2A>, <xref:System.Windows.Forms.DateTimePicker.CalendarTitleBackColor%2A>, <xref:System.Windows.Forms.DateTimePicker.CalendarTitleForeColor%2A>, <xref:System.Windows.Forms.DateTimePicker.CalendarTrailingForeColor%2A>, e <xref:System.Windows.Forms.DateTimePicker.CalendarMonthBackground%2A> propriedades.  
+  
+ Para usar um controle de botão de rotação (também conhecido como um controle acima-abaixo) para ajustar o valor de data/hora, defina o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade `true`. O calendário não será suspensa quando o controle está selecionado. A data e hora podem ser ajustadas selecionando cada elemento individualmente e usando o backup botões e para baixo para alterar o valor.  
+  
+ O <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade contém a data e hora atual do controle é definido como. Você pode usar o <xref:System.Windows.Forms.DateTimePicker.Text%2A> propriedade ou o membro apropriado da <xref:System.Windows.Forms.DateTimePicker.Value%2A> para obter o valor de data e hora. Para obter mais informações, consulte [como: definir e retornar datas com o controle DateTimePicker dos Windows Forms](~/docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md). Você pode limitar as datas e horários que podem ser selecionados, definindo o <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> e <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> propriedades.  
+  
+ Os valores podem ser exibidos em quatro formatos, que são definidos pelo <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriedade: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, ou <xref:System.Windows.Forms.DateTimePickerFormat.Custom>. A data padrão <xref:System.Windows.Forms.DateTimePicker.Format%2A> é <xref:System.Windows.Forms.DateTimePickerFormat?displayProperty=nameWithType>.  
+  
+ Se você quiser que o <xref:System.Windows.Forms.DateTimePicker> a ser exibido como um controle para separação ou editando tempos, em vez de datas, defina o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade `true` e o <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriedade para <xref:System.Windows.Forms.DateTimePickerFormat.Time>. Para obter mais informações, consulte [como: exibe o tempo com o controle DateTimePicker](~/docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).  
+  
+ Se o <xref:System.Windows.Forms.DateTimePicker.Format%2A> está definida como <xref:System.Windows.Forms.DateTimePickerFormat?displayProperty=nameWithType>, você pode criar seu próprio estilo de formato, definindo o <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedade e criar uma cadeia de caracteres de formato personalizado. A cadeia de caracteres de formato personalizado pode ser uma combinação de caracteres de campo personalizados e outros caracteres literais. Por exemplo, você pode exibir a data como "Junho 01, 2012 – sexta-feira", definindo o <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedade como "MMMM dd, AAAA - ddd". Para obter mais informações, consulte [como: exibir uma data em um formato personalizado com o controle DateTimePicker dos Windows Forms](~/docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+> [!CAUTION]
+>  Quando um <xref:System.Windows.Forms.DateTimePicker> é associado a dados e o backup valor é alterado para `null`, o valor da <xref:System.Windows.Forms.DateTimePicker> não será atualizado e o valor anterior será retido. Em situações em que esse comportamento não é desejável (por exemplo, ao usar um conjunto de controles associados a dados para a página por meio de um conjunto de registros), use o <xref:System.Windows.Forms.Binding.Format> eventos do <xref:System.Windows.Forms.Binding> classe para definir o <xref:System.Windows.Forms.DateTimePicker> para um valor reconhecido como um `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de um <xref:System.Windows.Forms.DateTimePicker> de controle e a inicializa. O controle <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> está definida. Além disso, o <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> propriedade é definida para que o controle exibe um <xref:System.Windows.Forms.CheckBox>e o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade é definida para que o controle é exibido como um controle de botão de rotação. Para executar este exemplo, cole o seguinte código em um formulário e a chamada a `CreateMyDateTimePicker` método no construtor do formulário de exemplo ou <xref:System.Windows.Forms.Form.Load> método de manipulação de eventos.  
+  
+ [!code-cpp[Classic DateTimePicker Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DateTimePicker Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DateTimePicker Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DateTimePicker Example/CS/source.cs#1)]
+ [!code-vb[Classic DateTimePicker Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DateTimePicker Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DateTimePicker ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DateTimePicker" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de um <xref:System.Windows.Forms.DateTimePicker> de controle e a inicializa. O controle <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> está definida. Além disso, o <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> propriedade é definida para que o controle exibe um <xref:System.Windows.Forms.CheckBox>e o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade é definida para que o controle é exibido como um controle de botão de rotação (também conhecido como um controle acima-abaixo).  
+  
+ [!code-cpp[Classic DateTimePicker Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DateTimePicker Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DateTimePicker Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DateTimePicker Example/CS/source.cs#1)]
+ [!code-vb[Classic DateTimePicker Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DateTimePicker Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a cor da tela de fundo do controle <see cref="T:System.Windows.Forms.DateTimePicker" />.</summary>
+        <value>A tela de fundo <see cref="T:System.Drawing.Color" /> do <see cref="T:System.Windows.Forms.DateTimePicker" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.DateTimePicker.BackColor%2A> não tem nenhum efeito na aparência do <xref:System.Windows.Forms.DateTimePicker>. Para definir a cor de plano de fundo para o calendário suspenso da <xref:System.Windows.Forms.DateTimePicker>, consulte o <xref:System.Windows.Forms.DateTimePicker.CalendarMonthBackground%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.BackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DateTimePicker.BackColor" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem de plano de fundo do controle.</summary>
+        <value>A imagem de plano de fundo do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade/método/evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DateTimePicker.BackgroundImage" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o layout da imagem de plano de fundo a <see cref="T:System.Windows.Forms.DateTimePicker" /> controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImageLayout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.ProgressBar.BackgroundImageLayout%2A> propriedade não tem nenhum efeito na aparência do <xref:System.Windows.Forms.DateTimePicker> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DateTimePicker.BackgroundImageLayout" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarFont">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font CalendarFont { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font CalendarFont" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.CalendarFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.AmbientValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da fonte aplicado ao calendário.</summary>
+        <value>Um <see cref="T:System.Drawing.Font" /> que representa o estilo da fonte aplicado ao calendário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar o <xref:System.Windows.Forms.DateTimePicker.CalendarFont%2A> propriedade. Este exemplo cria um novo <xref:System.Windows.Forms.DateTimePicker> controlar, adiciona-o para o <xref:System.Windows.Forms.Control.Controls%2A> coleção de um <xref:System.Windows.Forms.Form>e, em seguida, inicializa o <xref:System.Windows.Forms.DateTimePicker.CalendarFont%2A> propriedade a ser definida dinamicamente <xref:System.Drawing.Font>.  
+  
+ [!code-cpp[DateTimePicker.CalendarFont#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DateTimePicker.CalendarFont/CPP/calendarfont.cpp#1)]
+ [!code-csharp[DateTimePicker.CalendarFont#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DateTimePicker.CalendarFont/CS/calendarfont.cs#1)]
+ [!code-vb[DateTimePicker.CalendarFont#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DateTimePicker.CalendarFont/VB/calendarfont.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color CalendarForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CalendarForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.CalendarForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano do calendário.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano do calendário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.DateTimePicker> é criado, essa propriedade é inicialmente definida como o <xref:System.Windows.Forms.Control.ForeColor%2A> o valor da propriedade.  
+  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar o <xref:System.Windows.Forms.DateTimePicker.CalendarForeColor%2A> propriedade. Este exemplo cria um novo <xref:System.Windows.Forms.DateTimePicker>, adiciona-o para o <xref:System.Windows.Forms.Control.Controls%2A> coleção e, em seguida, inicializa seu <xref:System.Windows.Forms.DateTimePicker.CalendarForeColor%2A> propriedade para o <xref:System.Drawing.Color.Aqua%2A> constante.  
+  
+ [!code-cpp[DateTimePicker.CalendarForeColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DateTimePicker.CalendarForeColor/CPP/calendarforecolor.cpp#1)]
+ [!code-csharp[DateTimePicker.CalendarForeColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DateTimePicker.CalendarForeColor/CS/calendarforecolor.cs#1)]
+ [!code-vb[DateTimePicker.CalendarForeColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DateTimePicker.CalendarForeColor/VB/calendarforecolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor atribuído é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarMonthBackground">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color CalendarMonthBackground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CalendarMonthBackground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.CalendarMonthBackground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo do mês do calendário.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor da tela de fundo do mês do calendário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.DateTimePicker> é criado, essa propriedade é inicialmente definida como o <xref:System.Windows.Forms.DateTimePicker.DefaultMonthBackColor> valor do campo.  
+  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar o <xref:System.Windows.Forms.DateTimePicker.CalendarMonthBackground%2A> propriedade. Depois de criar um <xref:System.Windows.Forms.DateTimePicker> e adicioná-lo para um <xref:System.Windows.Forms.Form>, inicializa o exemplo o <xref:System.Windows.Forms.DateTimePicker.CalendarMonthBackground%2A> propriedade para um <xref:System.Drawing.Color> constante.  
+  
+ [!code-cpp[DateTimePicker.CalendarMonthBackground#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DateTimePicker.CalendarMonthBackground/CPP/calendarmonthbackground.cpp#1)]
+ [!code-csharp[DateTimePicker.CalendarMonthBackground#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DateTimePicker.CalendarMonthBackground/CS/calendarmonthbackground.cs#1)]
+ [!code-vb[DateTimePicker.CalendarMonthBackground#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DateTimePicker.CalendarMonthBackground/VB/calendarmonthbackground.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor atribuído é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarTitleBackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color CalendarTitleBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CalendarTitleBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.CalendarTitleBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo do título do calendário.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de plano de fundo do título do calendário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.DateTimePicker> é criado, essa propriedade é inicialmente definida como o <xref:System.Windows.Forms.DateTimePicker.DefaultTitleBackColor> valor do campo.  
+  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor atribuído é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarTitleForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color CalendarTitleForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CalendarTitleForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.CalendarTitleForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano do título do calendário.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano do título do calendário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.DateTimePicker> é criado, essa propriedade é inicialmente definida como o <xref:System.Windows.Forms.DateTimePicker.DefaultTitleForeColor> valor do campo.  
+  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor atribuído é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CalendarTrailingForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color CalendarTrailingForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CalendarTrailingForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.CalendarTrailingForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano, as datas de calendário à direita.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano do calendário à direita de datas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.DateTimePicker> é criado, essa propriedade é inicialmente definida como o <xref:System.Windows.Forms.DateTimePicker.DefaultTrailingForeColor> valor do campo.  
+  
+ As datas à direita são as datas de finais do mês anterior ou as datas de início do próximo mês usado para preencher o calendário.  
+  
+ Começando com o Windows Vista e, dependendo do tema, a definição dessa propriedade pode não alteram a aparência do calendário. Por exemplo, se Windows é configurado para usar o tema Aero, a definição dessa propriedade não terá efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se você quiser usar essa propriedade e habilitar a versão anterior do calendário, você pode desabilitar estilos visuais para seu aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor atribuído é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a propriedade <see cref="P:System.Windows.Forms.DateTimePicker.Value" /> foi definida com um valor de data/hora válido e o valor exibido pode ser atualizado.</summary>
+        <value>
+          <see langword="true" /> se a propriedade <see cref="P:System.Windows.Forms.DateTimePicker.Value" /> tiver sido definida com um valor <see cref="T:System.DateTime" /> válido e o valor exibido puder ser atualizado; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada para obter o estado da caixa de seleção será exibida se o <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> é o valor da propriedade `true`. Se o <xref:System.Windows.Forms.DateTimePicker.Checked%2A> é o valor da propriedade `true`, o <xref:System.Windows.Forms.DateTimePicker> controle exibe corretamente formatado <xref:System.Windows.Forms.DateTimePicker.Value%2A> valor da propriedade; caso contrário, o controle exibe o último valor de data/hora válido atribuído para o <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade ou a data e hora atuais (<xref:System.DateTime.Now%2A?displayProperty=nameWithType>) se nenhum valor jamais foi atribuído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário clica no controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseUp">
+      <MemberSignature Language="C#" Value="public event EventHandler CloseUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CloseUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.CloseUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o calendário suspenso é ignorado e desaparece.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DateTimePicker.CloseUp> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DateTimePicker> chamado `DateTimePicker1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DateTimePicker.CloseUp> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#376](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#376)]
+ [!code-vb[System.Windows.Forms.EventExamples#376](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#376)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto de acessibilidade para o <see cref="T:System.Windows.Forms.DateTimePicker" /> controle.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Forms.DateTimePicker.DateTimePickerAccessibleObject" /> para o controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não chamar explicitamente o <xref:System.Windows.Forms.DateTimePicker.CreateAccessibilityInstance%2A> método, ele será chamado quando o <xref:System.Windows.Forms.Control.AccessibilityObject%2A> propriedade é referenciada.  
+  
+> [!NOTE]
+>  Para obter ou definir o <xref:System.Windows.Forms.Control.AccessibilityObject%2A> propriedade, você deve adicionar uma referência para o `Accessibility` assembly instalado com o .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DateTimePicker.CreateAccessibilityInstance" /> em uma classe derivada, você não deve chamar a classe base <see cref="M:System.Windows.Forms.DateTimePicker.CreateAccessibilityInstance" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandle">
+      <MemberSignature Language="C#" Value="protected override void CreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.CreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria o identificador de janela físico.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de criação necessários quando a alça de controle é criada.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.CreateParams" /> que contém os parâmetros de criação necessários quando a alça de controle é criada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomFormat">
+      <MemberSignature Language="C#" Value="public string CustomFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.CustomFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de formato de data/hora personalizado.</summary>
+        <value>Uma cadeia de caracteres que representa o formato de data/hora personalizado. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para literais de cadeia de caracteres de exibição que contêm separadores de data e hora ou cadeias de caracteres de formato, você deve usar caracteres de escape na subcadeia de caracteres. Por exemplo, para exibir a data como "15 de junho às 12:00", defina o <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedade como "MMMM dd 'at' t:mm tt". Se a subcadeia de caracteres "arroba" não é delimitada por caracteres de escape, o resultado é "15 de junho Pacífico 12:00 PM" porque o caractere "t" é lido como o AM/PM uma letra. cadeia de caracteres de formato (consulte a tabela de cadeia de caracteres de formato abaixo).  
+  
+ As cadeias de caracteres de formato podem ser combinadas para formatar a data e hora. Por exemplo, para exibir a data e hora como 15/06/2001 12:00 PM, essa propriedade deve ser definida como "MM '/' dd hh de aaaa '/' ':'mm tt". Para obter mais informações, consulte [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriedade deve ser definida como <xref:System.Windows.Forms.DateTimePickerFormat?displayProperty=nameWithType> para essa propriedade afetar a formatação da data exibida e hora.  
+  
+ A tabela a seguir lista todas as cadeias de caracteres de formato válido e suas descrições.  
+  
+|Cadeia de caracteres de formato|Descrição|  
+|-------------------|-----------------|  
+|d|O dia de um ou dois dígitos.|  
+|dd|O dia de dois dígitos. Valores de dia de dígito único são precedidos por um 0.|  
+|ddd|A abreviação de dia de semana de três caracteres.|  
+|dddd|O nome completo de dia da semana.|  
+|h|A hora de um ou dois dígitos no formato de 12 horas.|  
+|hh|A hora de dois dígitos no formato de 12 horas. Valores de dígito único são precedidos por um 0.|  
+|H|A hora de um ou dois dígitos no formato de 24 horas.|  
+|HH|A hora de dois dígitos no formato de 24 horas. Valores de dígito único são precedidos por um 0.|  
+|m|O minuto de um ou dois dígitos.|  
+|mm|O minuto de dois dígitos. Valores de dígito único são precedidos por um 0.|  
+|M|O número do mês de um ou dois dígitos.|  
+|MM|O número do mês de dois dígitos. Valores de dígito único são precedidos por um 0.|  
+|MMM|A abreviação de mês de três caracteres.|  
+|MMMM|O nome completo do mês.|  
+|s|Os segundos de um ou dois dígitos.|  
+|ss|Os segundos de dois dígitos. Valores de dígito único são precedidos por um 0.|  
+|t|O AM/PM uma letra. abreviação (A.M. é exibido como "A").|  
+|tt|As duas letras AM/PM. abreviação (A.M. é exibido como "AM").|  
+|y|O ano de um dígito (2001 é exibido como "1").|  
+|yy|Os dois últimos dígitos do ano (2001 é exibido como "01").|  
+|yyyy|O ano inteiro (2001 é exibido como "2001").|  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedade para que o <xref:System.Windows.Forms.DateTimePicker> exibirá a data como "Junho 01, 2001 – sexta-feira". Esse código supõe que uma instância de um <xref:System.Windows.Forms.DateTimePicker> controle tiver sido criado em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic DateTimePicker.CustomFormat Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DateTimePicker.CustomFormat Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DateTimePicker.CustomFormat Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DateTimePicker.CustomFormat Example/CS/source.cs#1)]
+ [!code-vb[Classic DateTimePicker.CustomFormat Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DateTimePicker.CustomFormat Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMonthBackColor">
+      <MemberSignature Language="C#" Value="protected static readonly System.Drawing.Color DefaultMonthBackColor;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly valuetype System.Drawing.Color DefaultMonthBackColor" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePicker.DefaultMonthBackColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a cor de fundo de mês de padrão de <see cref="T:System.Windows.Forms.DateTimePicker" /> controle. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do controle.</summary>
+        <value>O <see cref="T:System.Drawing.Size" /> padrão do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTitleBackColor">
+      <MemberSignature Language="C#" Value="protected static readonly System.Drawing.Color DefaultTitleBackColor;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly valuetype System.Drawing.Color DefaultTitleBackColor" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePicker.DefaultTitleBackColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a cor de fundo de título padrão da <see cref="T:System.Windows.Forms.DateTimePicker" /> controle. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTitleForeColor">
+      <MemberSignature Language="C#" Value="protected static readonly System.Drawing.Color DefaultTitleForeColor;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly valuetype System.Drawing.Color DefaultTitleForeColor" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePicker.DefaultTitleForeColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a cor de primeiro plano do título padrão da <see cref="T:System.Windows.Forms.DateTimePicker" /> controle. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTrailingForeColor">
+      <MemberSignature Language="C#" Value="protected static readonly System.Drawing.Color DefaultTrailingForeColor;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly valuetype System.Drawing.Color DefaultTrailingForeColor" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePicker.DefaultTrailingForeColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o padrão à direita de cor de primeiro plano o <see cref="T:System.Windows.Forms.DateTimePicker" /> controle. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestroyHandle">
+      <MemberSignature Language="C#" Value="protected override void DestroyHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DestroyHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.DestroyHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Destrói o identificador de janela físico.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleBuffered">
+      <MemberSignature Language="C#" Value="protected override bool DoubleBuffered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DoubleBuffered" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.DoubleBuffered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se este o controle deve redesenhar sua superfície usando um buffer secundário. A definição dessa propriedade não tem nenhum efeito o <see cref="T:System.Windows.Forms.DateTimePicker" /> controle.</summary>
+        <value>
+          <see langword="true" />Se o controle deve redesenhar sua superfície usando um buffer secundário; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.DateTimePicker.DoubleBuffered%2A> propriedade não tem efeito sobre o <xref:System.Windows.Forms.DateTimePicker> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário clica duas vezes no controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDown">
+      <MemberSignature Language="C#" Value="public event EventHandler DropDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DropDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.DropDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o calendário suspenso é mostrado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a manipulação de <xref:System.Windows.Forms.DateTimePicker.DropDown> eventos de um <xref:System.Windows.Forms.DateTimePicker> e usando o <xref:System.Windows.Forms.DateTimePicker.MinDateTime> e <xref:System.Windows.Forms.DateTimePicker.MaxDateTime> campos. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.DateTimePicker> chamado `DateTimePicker1`.  
+  
+ [!code-cpp[System.Windows.Forms.DateTimePicker#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.DateTimePicker#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.DateTimePicker#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownAlign">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.LeftRightAlignment DropDownAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.LeftRightAlignment DropDownAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.DropDownAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LeftRightAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do calendário suspenso no controle <see cref="T:System.Windows.Forms.DateTimePicker" />.</summary>
+        <value>O alinhamento do calendário suspenso no controle. O padrão é <see cref="F:System.Windows.Forms.LeftRightAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O calendário suspenso pode ser alinhado à esquerda ou direita do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a inicializar um <xref:System.Windows.Forms.DateTimePicker> definindo o <xref:System.Windows.Forms.DateTimePicker.DropDownAlign%2A>, <xref:System.Windows.Forms.DateTimePicker.Value%2A>, <xref:System.Windows.Forms.DateTimePicker.Format%2A>, e <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedades. Para executar este exemplo, cole o seguinte código em um formulário e chamada `InitializeDateTimePicker` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.DateTimePicker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.DateTimePicker#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.DateTimePicker#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.LeftRightAlignment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano do controle <see cref="T:System.Windows.Forms.DateTimePicker" />.</summary>
+        <value>O <see cref="T:System.Drawing.Color" /> de primeiro plano do <see cref="T:System.Windows.Forms.DateTimePicker" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.DateTimePicker.ForeColor%2A> propriedade não tem nenhum efeito na aparência do <xref:System.Windows.Forms.DateTimePicker> controle.  
+  
+ Para definir a cor de primeiro plano para o calendário suspenso da <xref:System.Windows.Forms.DateTimePicker>, consulte o <xref:System.Windows.Forms.DateTimePicker.CalendarForeColor%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DateTimePicker.ForeColor" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado se o <xref:System.Windows.Forms.DateTimePicker.ForeColor%2A> propriedade é alterada por uma modificação programática ou por meio da interação.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DateTimePickerFormat Format { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DateTimePickerFormat Format" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DateTimePickerFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formato de data e hora exibido no controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DateTimePickerFormat" />. O padrão é <see cref="F:System.Windows.Forms.DateTimePickerFormat.Long" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina o formato de data/hora, que a data é exibida no. O formato de data/hora é baseado nas configurações regionais do usuário em seu sistema operacional.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriedade deve ser definida como <xref:System.Windows.Forms.DateTimePickerFormat?displayProperty=nameWithType> para o <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedade para afetar a formatação da data exibida e hora.  
+  
+ Para exibir a única vez em um <xref:System.Windows.Forms.DateTimePicker>, defina o <xref:System.Windows.Forms.DateTimePicker.Format%2A> para <xref:System.Windows.Forms.DateTimePickerFormat.Time>e o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> propriedade para que o <xref:System.Windows.Forms.DateTimePicker> exibirá a data como "Junho 01, 2001 – sexta-feira". Esse código supõe que uma instância de um <xref:System.Windows.Forms.DateTimePicker> controle tiver sido criado em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic DateTimePicker.CustomFormat Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DateTimePicker.CustomFormat Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DateTimePicker.CustomFormat Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DateTimePicker.CustomFormat Example/CS/source.cs#1)]
+ [!code-vb[Classic DateTimePicker.CustomFormat Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DateTimePicker.CustomFormat Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.DateTimePickerFormat" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FormatChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FormatChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.FormatChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DateTimePicker.Format" /> é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DateTimePicker.FormatChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DateTimePicker> chamado `DateTimePicker1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DateTimePicker.FormatChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#374](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#374)]
+ [!code-vb[System.Windows.Forms.EventExamples#374](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#374)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInputKey">
+      <MemberSignature Language="C#" Value="protected override bool IsInputKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsInputKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.IsInputKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Um dos valores de <see cref="T:System.Windows.Forms.Keys" />.</param>
+        <summary>Determina se a chave especificada é uma chave de entrada regular ou uma chave especial que exige o pré-processamento.</summary>
+        <returns>
+          <see langword="true" /> se a chave especificada for uma chave de entrada regular; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método durante o pré-processamento para determinar se a chave especificada é uma chave de entrada normal que deve ser enviada diretamente para o controle ou uma chave especial (por exemplo, PAGE UP e PAGE DOWN) que deve pré-processados de mensagem de janela. No último caso, envie a chave para o controle somente se ele não é consumido pela fase de pré-processamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDate">
+      <MemberSignature Language="C#" Value="public DateTime MaxDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MaxDate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.MaxDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a data e hora máximas que podem ser selecionadas no controle.</summary>
+        <value>A data máxima e a hora que pode ser selecionada no controle. O padrão é determinado como o mínimo de calendário do CurrentCulture do <see cref="P:System.Globalization.Calendar.MaxSupportedDateTime" /> propriedade e 31 de dezembro 9998 12 am.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de um <xref:System.Windows.Forms.DateTimePicker> de controle e a inicializa. O controle <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> está definida. Além disso, o <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> propriedade é definida para que o controle exibe um <xref:System.Windows.Forms.CheckBox>e o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade é definida para que o controle é exibido como um controle de botão de rotação (também conhecido como um controle acima-abaixo).  
+  
+ [!code-cpp[Classic DateTimePicker Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DateTimePicker Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DateTimePicker Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DateTimePicker Example/CS/source.cs#1)]
+ [!code-vb[Classic DateTimePicker Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DateTimePicker Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor atribuído é menor que o valor <see cref="P:System.Windows.Forms.DateTimePicker.MinDate" />.</exception>
+        <exception cref="T:System.SystemException">O valor atribuído é maior que o valor <see cref="F:System.Windows.Forms.DateTimePicker.MaxDateTime" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDateTime">
+      <MemberSignature Language="C#" Value="public static readonly DateTime MaxDateTime;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.DateTime MaxDateTime" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePicker.MaxDateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o valor de data máximo do controle <see cref="T:System.Windows.Forms.DateTimePicker" />. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A data máxima é definida como 31/12/9998 23:59:59.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a manipulação de <xref:System.Windows.Forms.DateTimePicker.DropDown> eventos de um <xref:System.Windows.Forms.DateTimePicker> e usando o <xref:System.Windows.Forms.DateTimePicker.MinDateTime> e <xref:System.Windows.Forms.DateTimePicker.MaxDateTime> campos. Para executar este exemplo, cole o código a seguir em um formulário que contém um <xref:System.Windows.Forms.DateTimePicker> chamado `DateTimePicker1`.  
+  
+ [!code-cpp[System.Windows.Forms.DateTimePicker#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.DateTimePicker#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.DateTimePicker#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePicker/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumDateTime">
+      <MemberSignature Language="C#" Value="public static DateTime MaximumDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.DateTime MaximumDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.MaximumDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de data máximo permitido para o controle <see cref="T:System.Windows.Forms.DateTimePicker" />.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o valor de data máximo para o controle <see cref="P:System.Windows.Forms.DateTimePicker.MaximumDateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A data máxima é definida como 31 de dezembro 9998.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinDate">
+      <MemberSignature Language="C#" Value="public DateTime MinDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MinDate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.MinDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a data e hora mínimas que podem ser selecionadas no controle.</summary>
+        <value>A data mínima e a hora que pode ser selecionada no controle. O padrão é 1/1/1753 00:00:00.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de um <xref:System.Windows.Forms.DateTimePicker> de controle e a inicializa. O controle <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> está definida. Além disso, o <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> propriedade é definida para que o controle exibe um <xref:System.Windows.Forms.CheckBox>e o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade é definida para que o controle é exibido como um controle de botão de rotação (também conhecido como um controle acima-abaixo).  
+  
+ [!code-cpp[Classic DateTimePicker Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DateTimePicker Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DateTimePicker Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DateTimePicker Example/CS/source.cs#1)]
+ [!code-vb[Classic DateTimePicker Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DateTimePicker Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor atribuído não é menor do que o <see cref="P:System.Windows.Forms.DateTimePicker.MaxDate" /> valor.</exception>
+        <exception cref="T:System.SystemException">O valor atribuído é menor que o valor <see cref="F:System.Windows.Forms.DateTimePicker.MinDateTime" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MinDateTime">
+      <MemberSignature Language="C#" Value="public static readonly DateTime MinDateTime;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.DateTime MinDateTime" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DateTimePicker.MinDateTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de data mínimo do controle <see cref="T:System.Windows.Forms.DateTimePicker" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A data mínima é definida como 1/1/1753 00:00:00.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumDateTime">
+      <MemberSignature Language="C#" Value="public static DateTime MinimumDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.DateTime MinimumDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.MinimumDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de data mínimo permitido para o controle <see cref="T:System.Windows.Forms.DateTimePicker" />.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o valor de data mínimo para o controle <see cref="P:System.Windows.Forms.DateTimePicker.MaximumDateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A data mínima é definida como 1 de janeiro de 1753.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.MouseClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando se clica no controle com o mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é clicado duas vezes com o mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCloseUp">
+      <MemberSignature Language="C#" Value="protected virtual void OnCloseUp (EventArgs eventargs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCloseUp(class System.EventArgs eventargs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.OnCloseUp(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventargs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventargs">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DateTimePicker.CloseUp" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DateTimePicker.CloseUp> evento ocorre quando o calendário suspenso é descartado e desaparece.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DateTimePicker.OnCloseUp%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DateTimePicker.OnCloseUp(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DateTimePicker.OnCloseUp(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDropDown">
+      <MemberSignature Language="C#" Value="protected virtual void OnDropDown (EventArgs eventargs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDropDown(class System.EventArgs eventargs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.OnDropDown(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventargs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventargs">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DateTimePicker.DropDown" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DateTimePicker.DropDown> evento ocorre quando o calendário suspenso é exibido.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DateTimePicker.OnDropDown%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DateTimePicker.OnDropDown(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DateTimePicker.OnDropDown(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.FontChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DateTimePicker.OnFontChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DateTimePicker.OnFontChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DateTimePicker.OnFontChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFormatChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnFormatChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFormatChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.OnFormatChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DateTimePicker.FormatChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DateTimePicker.FormatChanged> evento ocorre quando o <xref:System.Windows.Forms.DateTimePicker.Format%2A> o valor da propriedade foi alterada.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DateTimePicker.OnFormatChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DateTimePicker.OnFormatChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DateTimePicker.OnFormatChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HandleCreated" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DateTimePicker.OnHandleCreated%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DateTimePicker.OnHandleCreated(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DateTimePicker.OnHandleCreated(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleDestroyed">
+      <MemberSignature Language="C#" Value="protected override void OnHandleDestroyed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleDestroyed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.OnHandleDestroyed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HandleDestroyed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DateTimePicker.OnHandleDestroyed%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DateTimePicker.OnHandleDestroyed(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DateTimePicker.OnHandleDestroyed(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnRightToLeftLayoutChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRightToLeftLayoutChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.OnRightToLeftLayoutChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="P:System.Windows.Forms.DateTimePicker.RightToLeftLayout" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DateTimePicker.OnRightToLeftLayoutChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DateTimePicker.OnRightToLeftLayoutChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DateTimePicker.OnRightToLeftLayoutChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSystemColorsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSystemColorsChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSystemColorsChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.OnSystemColorsChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnSystemColorsChanged(System.EventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnValueChanged (EventArgs eventargs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValueChanged(class System.EventArgs eventargs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.OnValueChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventargs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventargs">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DateTimePicker.ValueChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DateTimePicker.ValueChanged> evento ocorre quando o valor do controle é alterado.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DateTimePicker.OnValueChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DateTimePicker.OnValueChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DateTimePicker.OnValueChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o espaçamento entre o conteúdo do controle <see cref="T:System.Windows.Forms.DateTimePicker" /> e suas bordas.</summary>
+        <value>
+          <see cref="F:System.Windows.Forms.Padding.Empty" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.DateTimePicker.Padding%2A> propriedade não tem efeito sobre o <xref:System.Windows.Forms.DateTimePicker> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DateTimePicker.Padding" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.Paint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PaintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é redesenhado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredHeight">
+      <MemberSignature Language="C#" Value="public int PreferredHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PreferredHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.PreferredHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura preferencial a <see cref="T:System.Windows.Forms.DateTimePicker" /> controle.</summary>
+        <value>A altura preferencial, em pixels, do <see cref="T:System.Windows.Forms.DateTimePicker" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A altura preferencial é a altura mínima necessária para acomodar o texto exibido com atribuída <xref:System.Drawing.Font> aplicado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayout">
+      <MemberSignature Language="C#" Value="public virtual bool RightToLeftLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RightToLeftLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.RightToLeftLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o conteúdo do <see cref="T:System.Windows.Forms.DateTimePicker" /> são dispostos da direita para esquerda.</summary>
+        <value>
+          <see langword="true" />Se o layout do <see cref="T:System.Windows.Forms.DateTimePicker" /> conteúdo é da direita para a esquerda; caso contrário, <see langword="false" />. O padrão é <see langword="false." /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DateTimePicker.RightToLeftLayout%2A> propriedade é usada para aplicativos internacionais onde o idioma é escrito da direita para a esquerda, como hebraico ou árabe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.RightToLeftLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.DateTimePicker.RightToLeftLayout" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DateTimePicker.RightToLeftLayoutChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DateTimePicker> chamado `DateTimePicker1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DateTimePicker.RightToLeftLayoutChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#377](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#377)]
+ [!code-vb[System.Windows.Forms.EventExamples#377](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#377)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCheckBox">
+      <MemberSignature Language="C#" Value="public bool ShowCheckBox { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowCheckBox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.ShowCheckBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma caixa de seleção é mostrada à esquerda da data selecionada.</summary>
+        <value>
+          <see langword="true" /> se uma caixa de seleção for exibida à esquerda da data selecionada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> está definida como `true`, é exibida uma caixa de seleção à esquerda da data no controle. Quando a caixa de seleção é selecionada, o valor de data/hora pode ser atualizado. Quando a caixa de seleção é desmarcada, o valor de data/hora é não pode ser alterado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de um <xref:System.Windows.Forms.DateTimePicker> de controle e a inicializa. O controle <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> está definida. Além disso, o <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> propriedade é definida para que o controle exibe um <xref:System.Windows.Forms.CheckBox>e o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade é definida para que o controle é exibido como um controle de botão de rotação (também conhecido como um controle acima-abaixo).  
+  
+ [!code-cpp[Classic DateTimePicker Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DateTimePicker Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DateTimePicker Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DateTimePicker Example/CS/source.cs#1)]
+ [!code-vb[Classic DateTimePicker Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DateTimePicker Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowUpDown">
+      <MemberSignature Language="C#" Value="public bool ShowUpDown { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowUpDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.ShowUpDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um controle de botão de rotação (também conhecido como um controle superior/inferior) é usado para ajustar o valor de data/hora.</summary>
+        <value>
+          <see langword="true" /> se um controle de botão de rotação for usado para ajustar o valor de data/hora; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> está definida como `true`, um controle de botão de rotação (também conhecido como um controle acima-abaixo), em vez de um calendário suspenso, é usado para ajustar os valores de tempo. A data e hora podem ser ajustadas selecionando cada elemento individualmente e usando o backup botões e para baixo para alterar o valor.  
+  
+ Para exibir a única vez em um <xref:System.Windows.Forms.DateTimePicker>, defina o <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriedade <xref:System.Windows.Forms.DateTimePickerFormat.Time>e o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de um <xref:System.Windows.Forms.DateTimePicker> de controle e a inicializa. O controle <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> está definida. Além disso, o <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> propriedade é definida para que o controle exibe um <xref:System.Windows.Forms.CheckBox>e o <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> propriedade é definida para que o controle é exibido como um controle de botão de rotação.  
+  
+ [!code-cpp[Classic DateTimePicker Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DateTimePicker Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DateTimePicker Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DateTimePicker Example/CS/source.cs#1)]
+ [!code-vb[Classic DateTimePicker Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DateTimePicker Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto associado a esse controle.</summary>
+        <value>Uma cadeia de caracteres que representa o texto associado a este controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada por esta propriedade é equivalente a <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade com a formatação apropriado ou a formatação personalizada aplicada. Por exemplo, se o <xref:System.Windows.Forms.DateTimePicker.Value%2A> está definida como 01/06/2001 12:00:00 AM durante a <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> estiver definida como "dddd, dd MMMM aaaa", o <xref:System.Windows.Forms.DateTimePicker.Text%2A> valor da propriedade é "Sexta-feira, 01 de junho de 2001".  
+  
+ Ao definir essa propriedade, a cadeia de caracteres deve ser conversível em uma instância do <xref:System.DateTime> classe. É possível definir um formato personalizado que resulta em uma cadeia de caracteres que não pode ser convertida em um válido <xref:System.DateTime> valor. Por isso, a cadeia de caracteres retornados do <xref:System.Windows.Forms.DateTimePicker.Text%2A> propriedade pode causar um erro se ele é passado de volta para o <xref:System.Windows.Forms.DateTimePicker.Text%2A> propriedade. Se a cadeia de caracteres não pode ser convertida em um valor de data/hora, o <xref:System.DateTime> classe lança um <xref:System.FormatException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DateTimePicker.Text" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o controle <see cref="T:System.Windows.Forms.DateTimePicker" /> atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.DateTimePicker" /> atual. A cadeia de caracteres inclui o tipo e a propriedade <see cref="P:System.Windows.Forms.DateTimePicker.Value" /> do controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public DateTime Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DateTimePicker.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de data/hora atribuído ao controle.</summary>
+        <value>O valor <see cref="T:System.DateTime" /> atribuído ao controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade não foi alterada no código ou pelo usuário, ele é definido como a data e hora atuais (<xref:System.DateTime.Now%2A?displayProperty=nameWithType>).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade para recuperar o valor da data atual. Primeiro, o exemplo exibe o <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade. O exemplo, em seguida, incrementos de <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade por um dia e exibe o valor da propriedade novamente.  
+  
+ [!code-cpp[DateTimePicker.Value#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DateTimePicker.Value/CPP/value.cpp#1)]
+ [!code-csharp[DateTimePicker.Value#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DateTimePicker.Value/CS/value.cs#1)]
+ [!code-vb[DateTimePicker.Value#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DateTimePicker.Value/VB/value.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor definido é menor que <see cref="P:System.Windows.Forms.DateTimePicker.MinDate" /> ou maior que <see cref="P:System.Windows.Forms.DateTimePicker.MaxDate" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ValueChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DateTimePicker.ValueChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.DateTimePicker.Value" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entrada do usuário é validada antes desse evento é gerado. Esse evento não é gerado quando a data inserida é anterior à <xref:System.Windows.Forms.DateTimePicker.MinDateTime> ou posterior <xref:System.Windows.Forms.DateTimePicker.MaxDateTime>.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DateTimePicker.ValueChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DateTimePicker> chamado `DateTimePicker1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DateTimePicker.ValueChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#378](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#378)]
+ [!code-vb[System.Windows.Forms.EventExamples#378](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#378)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DateTimePicker.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> do Windows a ser processado.</param>
+        <summary>Processa mensagens do Windows.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

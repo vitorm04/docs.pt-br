@@ -1,0 +1,73 @@
+<Type Name="ResolvedImport" FullName="Microsoft.Build.Evaluation.ResolvedImport">
+  <TypeSignature Language="C#" Value="public struct ResolvedImport" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ResolvedImport extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ResolvedImport" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula uma relação de importação em um projeto avaliado entre um ProjectImportElement e ProjectRootElement do projeto importado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ImportedProject">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectRootElement ImportedProject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ProjectRootElement ImportedProject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ResolvedImport.ImportedProject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dos projetos importados.</summary>
+        <value>Retorna um <see cref="T:Microsoft.Build.Construction.ProjectRootElement" /> que representa o projeto importado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportingElement">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ProjectImportElement ImportingElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ProjectImportElement ImportingElement" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ResolvedImport.ImportingElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ProjectImportElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento fazendo a importação.</summary>
+        <value>Retorna o <see cref="T:Microsoft.Build.Construction.ProjectImportElement" /> que representa o elemento fazendo a importação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImported">
+      <MemberSignature Language="C#" Value="public bool IsImported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ResolvedImport.IsImported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um sinalizador que determina se o elemento de importação é importado.</summary>
+        <value>Retorna <see langword="true" /> se o elemento for importado, <see langword="false" /> caso contrário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,219 @@
+<Type Name="PerspectiveCamera" FullName="System.Windows.Media.Media3D.PerspectiveCamera">
+  <TypeSignature Language="C#" Value="public sealed class PerspectiveCamera : System.Windows.Media.Media3D.ProjectionCamera" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PerspectiveCamera extends System.Windows.Media.Media3D.ProjectionCamera" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.PerspectiveCamera" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.ProjectionCamera</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma câmera de projeção de perspectiva.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.PerspectiveCamera>Especifica uma projeção de uma [!INCLUDE[TLA#tla_3d](~/includes/tlasharptla-3d-md.md)] modelo para um [!INCLUDE[TLA#tla_2d](~/includes/tlasharptla-2d-md.md)] superfície visual. Esta projeção inclui perspectiva desaparecendo no infinito.  Em outras palavras, o <xref:System.Windows.Media.Media3D.PerspectiveCamera> descreve um frustrum cujos lados convergem para um ponto de vista.  Objetos mais próximo à câmera pareçam maiores e objetos mais distantes da câmera pareça menores.  
+  
+ O diagrama a seguir mostra a diferença entre as projeções de câmera foreshortened perspectiva e ortográfica.  
+  
+ ![Projeção de perspectiva e ortográfica](~/add/media/camera-projections4.png "projeção ortográfica e perspectiva")  
+  
+   
+  
+## Examples  
+ [!code-xaml[3dgallery_snip#ApplyDrawingToMaterialExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialexamplewholepage)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerspectiveCamera ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.PerspectiveCamera.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Media3D.PerspectiveCamera" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-xaml[basic3d#Basic3DXAML3DN1](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerspectiveCamera (System.Windows.Media.Media3D.Point3D position, System.Windows.Media.Media3D.Vector3D lookDirection, System.Windows.Media.Media3D.Vector3D upDirection, double fieldOfView);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Point3D position, valuetype System.Windows.Media.Media3D.Vector3D lookDirection, valuetype System.Windows.Media.Media3D.Vector3D upDirection, float64 fieldOfView) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.PerspectiveCamera.#ctor(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="position" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="lookDirection" Type="System.Windows.Media.Media3D.Vector3D" />
+        <Parameter Name="upDirection" Type="System.Windows.Media.Media3D.Vector3D" />
+        <Parameter Name="fieldOfView" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="position">Point3D que especifica a posição da câmera.</param>
+        <param name="lookDirection">Vector3D que especifica a direção da projeção da câmera.</param>
+        <param name="upDirection">Vector3D que especifica a direção para cima de acordo com a perspectiva do observador.</param>
+        <param name="fieldOfView">Largura do ângulo da câmera de projeção, especificada em graus.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Media3D.PerspectiveCamera" /> classe usando a posição especificada, a direção e o campo de visualização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[hittest3d#HitTest3D3DN12](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn12)]
+ [!code-vb[hittest3d#HitTest3D3DN12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.PerspectiveCamera Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.PerspectiveCamera Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.PerspectiveCamera.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.PerspectiveCamera</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.Media3D.PerspectiveCamera" />, fazendo cópias em profundidade dos valores do objeto. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> era de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.PerspectiveCamera CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.PerspectiveCamera CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.PerspectiveCamera.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.PerspectiveCamera</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.Media3D.PerspectiveCamera" />, fazendo cópias em profundidade dos valores do objeto atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.PerspectiveCamera.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldOfView">
+      <MemberSignature Language="C#" Value="public double FieldOfView { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FieldOfView" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.PerspectiveCamera.FieldOfView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa o campo de exibição horizontal da câmera.</summary>
+        <value>O campo de exibição horizontal da câmera, em graus. O valor padrão é <c>45</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para <xref:System.Windows.Media.Media3D.PerspectiveCamera>, "campo de visualização" é os horizontais limites da projeção da câmera entre a posição da câmera e o plano de imagem.  
+  
+<a name="dependencyPropertyInfo_FieldOfView"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Media3D.PerspectiveCamera.FieldOfViewProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ [!code-xaml[animate3drotation#Animate3DRotation3DN3](~/samples/snippets/csharp/VS_Snippets_Wpf/Animate3DRotation/CS/Window1.xaml#animate3drotation3dn3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldOfViewProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FieldOfViewProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FieldOfViewProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.PerspectiveCamera.FieldOfViewProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Media3D.PerspectiveCamera.FieldOfView" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

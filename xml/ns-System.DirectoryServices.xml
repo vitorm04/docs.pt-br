@@ -1,0 +1,39 @@
+<Namespace Name="System.DirectoryServices">
+  <Docs>
+    <summary>O <see cref="N:System.DirectoryServices" /> namespace fornece acesso fácil aos serviços de domínio do Active Directory do código gerenciado. O namespace contém duas classes de componente, <see cref="T:System.DirectoryServices.DirectoryEntry" /> e <see cref="T:System.DirectoryServices.DirectorySearcher" />, que usam a tecnologia de Interfaces de serviços do Active Directory (ADSI). ADSI é o conjunto de interfaces que a Microsoft fornece uma ferramenta flexível para trabalhar com uma variedade de provedores de rede. ADSI dá ao administrador a capacidade de localizar e gerenciar recursos em uma rede com relativa facilidade, independentemente do tamanho da rede.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes nesse namespace podem ser usadas com nenhum dos provedores de serviço de serviços de domínio do Active Directory. Os provedores atuais são: WinNT, LDAP Lightweight Directory Access Protocol (), Novell NetWare Directory Service (NDS) e serviços de informações da Internet (IIS).  
+  
+ ADSI é uma interface programática para o Microsoft Active Directory Domain Services que permite que seus aplicativos para interagir com vários diretórios em uma rede usando uma única interface. Usando o ADSI, você pode criar aplicativos que executem tarefas comuns, como backup de bancos de dados, acessando impressoras e administração de contas de usuário.  
+  
+ Presume-se que você tenha uma compreensão geral dos serviços de domínio Active Directory antes de usar essas classes. Para obter mais informações sobre os serviços de domínio do Active Directory, consulte os tópicos [Introdução aos objetos do Active Directory](http://go.microsoft.com/fwlink/?LinkID=121193&clcid=0x409) e [Backgrounder de tecnologia do Active Directory](http://go.microsoft.com/fwlink/?LinkID=121194&clcid=0x409), bem como os seguintes tópicos na biblioteca MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library):  
+  
+-   [Usando os serviços de domínio do Active Directory](http://go.microsoft.com/fwlink/?LinkID=121195&clcid=0x409)  
+  
+-   [Interfaces de serviço do Active Directory](http://go.microsoft.com/fwlink/?LinkID=121197&clcid=0x409)  
+  
+-   [Lightweight Directory Access Protocol](http://go.microsoft.com/fwlink/?LinkID=121198&clcid=0x409)  
+  
+-   [Provedores de Interfaces de implementação de serviço do Active Directory](http://go.microsoft.com/fwlink/?LinkID=121199&clcid=0x409)  
+  
+-   [Associando a um objeto ADSI](http://go.microsoft.com/fwlink/?LinkID=121200&clcid=0x409)  
+  
+-   [IADsOpenDSObject::OpenDSObject](http://go.microsoft.com/fwlink/?LinkID=121201&clcid=0x409)  
+  
+ Serviços de domínio do Active Directory usam uma estrutura de árvore. Cada nó na árvore contém um conjunto de propriedades. Use esse namespace para percorrer, pesquisar e modificar a árvore e ler e gravar as propriedades de um nó.  
+  
+ A classe <xref:System.DirectoryServices.DirectoryEntry> encapsula um nó ou um objeto na hierarquia do Active Directory Domain Services. Use esta classe para associando a objetos, propriedades de leitura e atualizar atributos. Junto com as classes auxiliares, <xref:System.DirectoryServices.DirectoryEntry> fornece suporte para o ciclo de vida de métodos de gerenciamento e navegação, incluindo criar, excluir, renomear, mover um nó filho e enumeração de filhos.  
+  
+ Use o <xref:System.DirectoryServices.DirectorySearcher> classe para executar consultas em relação a hierarquia de serviços de domínio do Active Directory. LDAP é o único fornecido pelo sistema do Active Directory Service Interfaces (ADSI) provedor que dá suporte à pesquisa.  
+  
+ Uma pesquisa da hierarquia do Active Directory Domain Services por meio de <xref:System.DirectoryServices.DirectorySearcher> retorna instâncias de <xref:System.DirectoryServices.SearchResult>, que estão contido em uma instância do <xref:System.DirectoryServices.SearchResultCollection> classe.  
+  
+ Observação: Muitos das classes, métodos e propriedades de <xref:System.DirectoryServices> namespace, use o <xref:System.Security.Permissions.SecurityAction.LinkDemand> opção de segurança de acesso de código. Isso significa que a demanda de segurança de acesso do código só ocorre durante a compilação just-in-time e que a demanda é executada somente no assembly de chamada e não a pilha de chamadas inteira. Por isso, os chamadores não devem passar objetos que são criados a partir esse namespace em tempo de execução de código que não é confiável.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

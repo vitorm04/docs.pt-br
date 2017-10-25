@@ -1,0 +1,156 @@
+<Type Name="RemotePropertyData" FullName="System.AddIn.Contract.Automation.RemotePropertyData">
+  <TypeSignature Language="C#" Value="public struct RemotePropertyData" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit RemotePropertyData extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.RemotePropertyData" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre uma propriedade de um tipo que podem acessar componentes nos limites de domínio e o processo do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Contract.Automation.RemotePropertyData> estrutura fornece informações sobre uma propriedade de um objeto que implementa o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Reflection.PropertyAttributes Attributes;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Reflection.PropertyAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemotePropertyData.Attributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa os atributos da propriedade que esse <see cref="T:System.AddIn.Contract.Automation.RemotePropertyData" /> descreve.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor desse campo é <xref:System.Reflection.PropertyAttributes.None> se este <xref:System.AddIn.Contract.Automation.RemotePropertyData> descreve uma propriedade de um objeto COM.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public bool CanRead;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool CanRead" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemotePropertyData.CanRead" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se este <see cref="T:System.AddIn.Contract.Automation.RemotePropertyData" /> descreve uma propriedade legível.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor desse campo é `true` se este <xref:System.AddIn.Contract.Automation.RemotePropertyData> descreve uma propriedade legível; caso contrário, o valor desse campo é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public bool CanWrite;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool CanWrite" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemotePropertyData.CanWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se este <see cref="T:System.AddIn.Contract.Automation.RemotePropertyData" /> descreve uma propriedade gravável.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor desse campo é `true` se este <xref:System.AddIn.Contract.Automation.RemotePropertyData> descreve uma propriedade gravável; caso contrário, o valor desse campo é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexParameters">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemoteParameterData[] IndexParameters;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.AddIn.Contract.Automation.RemoteParameterData[] IndexParameters" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemotePropertyData.IndexParameters" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemoteParameterData[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa os parâmetros de índice para a propriedade que esse <see cref="T:System.AddIn.Contract.Automation.RemotePropertyData" /> descreve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberData">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemoteMemberData MemberData;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.AddIn.Contract.Automation.RemoteMemberData MemberData" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemotePropertyData.MemberData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemoteMemberData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa os dados de membro para a propriedade que esse <see cref="T:System.AddIn.Contract.Automation.RemotePropertyData" /> descreve.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dados de membro incluem o nome da propriedade e o tipo que declara a propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.IRemoteTypeContract PropertyType;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.AddIn.Contract.Automation.IRemoteTypeContract PropertyType" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemotePropertyData.PropertyType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteTypeContract</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o tipo da propriedade que esse <see cref="T:System.AddIn.Contract.Automation.RemotePropertyData" /> descreve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

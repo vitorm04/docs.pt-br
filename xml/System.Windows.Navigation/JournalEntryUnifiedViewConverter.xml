@@ -1,0 +1,234 @@
+<Type Name="JournalEntryUnifiedViewConverter" FullName="System.Windows.Navigation.JournalEntryUnifiedViewConverter">
+  <TypeSignature Language="C#" Value="public sealed class JournalEntryUnifiedViewConverter : System.Windows.Data.IMultiValueConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JournalEntryUnifiedViewConverter extends System.Object implements class System.Windows.Data.IMultiValueConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.JournalEntryUnifiedViewConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Data.IMultiValueConverter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+      <see cref="T:System.Windows.Navigation.JournalEntryUnifiedViewConverter" />Mescla o histórico de navegação Voltar e o histórico de navegação direta (como expostos por <see cref="T:System.Windows.Controls.Frame" /> ou <see cref="T:System.Windows.Navigation.NavigationWindow" />) em um menu de navegação de estilo de 7 único, do Windows Internet Explorer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ambos <xref:System.Windows.Controls.Frame> e <xref:System.Windows.Navigation.NavigationWindow> exibir cromo de navegação que oferece suporte à navegação de histórico usando os seguintes mecanismos:  
+  
+-   Um botão de navegação de volta uma parte do conteúdo de cada vez.  
+  
+-   Um botão de navegação direta uma parte em um momento.  
+  
+-   Um [!INCLUDE[TLA#tla_ie7](~/includes/tlasharptla-ie7-md.md)]-lista suspensa de estilo que mostra:  
+  
+    -   Uma lista combinada de até nove itens no histórico de navegação e até nove itens no histórico de navegação de avanço.  
+  
+    -   A posição do item atual do conteúdo em relação ao voltar e o histórico de navegação de avanço.  
+  
+ O histórico de navegação é armazenado pelo <xref:System.Windows.Navigation.NavigationWindow> e <xref:System.Windows.Controls.Frame> nas seguintes propriedades:  
+  
+ **Fazer o histórico de navegação**: <xref:System.Windows.Controls.Frame.BackStack%2A?displayProperty=nameWithType>, <xref:System.Windows.Navigation.NavigationWindow.BackStack%2A?displayProperty=nameWithType>.  
+  
+ **Encaminhar o histórico de navegação**: <xref:System.Windows.Controls.Frame.ForwardStack%2A?displayProperty=nameWithType>, <xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A?displayProperty=nameWithType>.  
+  
+ Para criar o [!INCLUDE[TLA#tla_ie7](~/includes/tlasharptla-ie7-md.md)]-lista suspensa de estilo, <xref:System.Windows.Navigation.NavigationWindow> e <xref:System.Windows.Controls.Frame> usar <xref:System.Windows.Navigation.JournalEntryUnifiedViewConverter> mesclar seu histórico de navegação regressiva individuais e encaminhar o histórico de navegação em uma única lista de navegação de entradas de histórico. A lista resultante contém até nove entradas de histórico de navegação e até nove entradas do histórico de navegação de avanço, além de uma entrada para o conteúdo atual.  
+  
+ Se você criar navegação personalizados [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)]e precisa fornecer um [!INCLUDE[TLA#tla_ie7](~/includes/tlasharptla-ie7-md.md)]-lista suspensa de estilo, você pode usar <xref:System.Windows.Navigation.JournalEntryUnifiedViewConverter> para efeito semelhante.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Essa classe não é usada normalmente em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como construir um menu de histórico de navegação baseado em texto. Usa o menu <xref:System.Windows.Navigation.JournalEntryUnifiedViewConverter> para combinar os back e o histórico de navegação de avanço de hospedado <xref:System.Windows.Controls.Frame> navegador.  
+  
+ [!code-xaml[JournalEntryUnifiedPositionConverterSnippets#JournalEntryUnifiedPositionConverterWithMenuXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/JournalEntryUnifiedPositionConverterSnippets/CS/mainwindow.xaml#journalentryunifiedpositionconverterwithmenuxaml)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JournalEntryUnifiedViewConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.JournalEntryUnifiedViewConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Navigation.JournalEntryUnifiedViewConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object[] values, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object[] values, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.JournalEntryUnifiedViewConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz de duas pilhas de navegação.</param>
+        <param name="targetType">Este parâmetro não é usado.</param>
+        <param name="parameter">Este parâmetro não é usado.</param>
+        <param name="culture">Este parâmetro não é usado.</param>
+        <summary>Mescla duas pilhas de histórico de navegação.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerable" /> que pode ser usado para enumerar a lista mesclada de pilhas de histórico de navegação, se nenhuma pilha de navegação passado é <see langword="null" />. <see langword="null" />, caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para <xref:System.Windows.Controls.Frame>, as pilhas de navegação estão disponíveis as seguintes propriedades:  
+  
+-   <xref:System.Windows.Controls.Frame.BackStack%2A>  
+  
+-   <xref:System.Windows.Controls.Frame.ForwardStack%2A>  
+  
+ Para <xref:System.Windows.Navigation.NavigationWindow>, as pilhas de navegação estão disponíveis as seguintes propriedades:  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.BackStack%2A>  
+  
+ <xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A>  
+  
+ As duas pilhas de navegação passado são combinadas em uma pilha de navegação única que contém até nove itens de cada pilha de navegação e o item atual.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe ou não são geralmente usados em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ou não pode ser usado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertBack">
+      <MemberSignature Language="C#" Value="public object[] ConvertBack (object value, Type[] targetTypes, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] ConvertBack(object value, class System.Type[] targetTypes, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.JournalEntryUnifiedViewConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetTypes" Type="System.Type[]" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Este parâmetro não é usado.</param>
+        <param name="targetTypes">Este parâmetro não é usado.</param>
+        <param name="parameter">Este parâmetro não é usado.</param>
+        <param name="culture">Este parâmetro não é usado.</param>
+        <summary>Não implementado.</summary>
+        <returns>Sempre retorna <see cref="F:System.Windows.Data.Binding.DoNothing" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe ou não são geralmente usados em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ou não pode ser usado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJournalEntryPosition">
+      <MemberSignature Language="C#" Value="public static System.Windows.Navigation.JournalEntryPosition GetJournalEntryPosition (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Navigation.JournalEntryPosition GetJournalEntryPosition(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.JournalEntryUnifiedViewConverter.GetJournalEntryPosition(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.JournalEntryPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual obter o valor da propriedade anexada.</param>
+        <summary>Obtém o <see cref="P:System.Windows.Navigation.JournalEntryUnifiedViewConverter.JournalEntryPosition" /> anexado a propriedade para o elemento especificado.</summary>
+        <returns>O valor de <see cref="P:System.Windows.Navigation.JournalEntryUnifiedViewConverter.JournalEntryPosition" /> anexado a propriedade da entrada de diário para o elemento especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JournalEntryPositionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty JournalEntryPositionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty JournalEntryPositionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.JournalEntryUnifiedViewConverter.JournalEntryPositionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Navigation.JournalEntryUnifiedViewConverter.JournalEntryPosition" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetJournalEntryPosition">
+      <MemberSignature Language="C#" Value="public static void SetJournalEntryPosition (System.Windows.DependencyObject element, System.Windows.Navigation.JournalEntryPosition position);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetJournalEntryPosition(class System.Windows.DependencyObject element, valuetype System.Windows.Navigation.JournalEntryPosition position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.JournalEntryUnifiedViewConverter.SetJournalEntryPosition(System.Windows.DependencyObject,System.Windows.Navigation.JournalEntryPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="position" Type="System.Windows.Navigation.JournalEntryPosition" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento no qual definir o valor da propriedade anexada.</param>
+        <param name="position">Posição do <see cref="T:System.Windows.Navigation.JournalEntryPosition" /> objeto.</param>
+        <summary>Define o <see cref="F:System.Windows.Navigation.JournalEntryUnifiedViewConverter.JournalEntryPositionProperty" /> anexado a propriedade do elemento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe ou não são geralmente usados em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ou não pode ser usado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

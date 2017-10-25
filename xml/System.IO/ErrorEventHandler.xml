@@ -1,0 +1,50 @@
+<Type Name="ErrorEventHandler" FullName="System.IO.ErrorEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ErrorEventHandler(object sender, ErrorEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.IO.ErrorEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.IO.ErrorEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um objeto <see cref="T:System.IO.ErrorEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.IO.FileSystemWatcher.Error" /> de um objeto <see cref="T:System.IO.FileSystemWatcher" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.IO.ErrorEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o método de manipulação de eventos, adicione uma instância do representante ao evento. O método de manipulação de eventos é chamado sempre que o evento ocorre, a menos que você remova o delegado. Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um `FileSystemWatcher` objeto para monitorar as alterações de arquivo (cria, exclui, renomeia alterações) que ocorrem em uma unidade de disco. O exemplo também mostra como corretamente receber notificações de erro.  
+  
+ [!code-csharp[FileSystemWatcher#1](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemWatcher/cs/filesystemwatcher.cs#1)]
+ [!code-vb[FileSystemWatcher#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemWatcher/VB/FileSystemWatcher.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

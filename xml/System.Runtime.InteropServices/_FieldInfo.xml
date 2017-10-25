@@ -1,0 +1,1157 @@
+<Type Name="_FieldInfo" FullName="System.Runtime.InteropServices._FieldInfo">
+  <TypeSignature Language="C#" Value="public interface _FieldInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract _FieldInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices._FieldInfo" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("8A7C1442-A9FB-366B-80D8-4939FFA6DBE0")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibImportClass(typeof(System.Reflection.FieldInfo))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe os membros públicos da classe <see cref="T:System.Reflection.FieldInfo" /> a código não gerenciado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamado de código gerenciado.  
+  
+ Essa interface preserva a ordem de vtable do <xref:System.Reflection.FieldInfo?displayProperty=nameWithType> classe membros que podem ser acessados por objetos COM não gerenciados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Reflection.FieldAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.FieldAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.Attributes" />.</summary>
+        <value>O <see cref="T:System.Reflection.FieldAttributes" /> para esse campo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.Attributes%2A> propriedade obtém os atributos associados a esse campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public Type DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.MemberInfo.DeclaringType" />.</summary>
+        <value>O objeto <see cref="T:System.Type" /> para a classe que declara esse membro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.MemberInfo.DeclaringType%2A> propriedade obtém a classe que declara a esse membro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Object" />.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Object" /> especificado for igual ao <see cref="T:System.Object" /> atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Object.Equals%2A> método determina se o especificado <xref:System.Object> é igual à atual <xref:System.Object>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldHandle">
+      <MemberSignature Language="C#" Value="public RuntimeFieldHandle FieldHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeFieldHandle FieldHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.FieldHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeFieldHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.FieldHandle" />.</summary>
+        <value>Um identificador para a representação interna de metadados de um campo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.FieldHandle%2A> propriedade obtém um <xref:System.RuntimeFieldHandle>, que é um identificador para a representação interna de metadados de um campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldType">
+      <MemberSignature Language="C#" Value="public Type FieldType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type FieldType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.FieldType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.FieldType" />.</summary>
+        <value>O tipo deste objeto de campo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.FieldType%2A> propriedade obtém o tipo de objeto neste campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetCustomAttributes">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fornece objetos de acesso independentes de versão para o <see cref="Overload:System.Reflection.MemberInfo.GetCustomAttributes" /> métodos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> métodos retornam todos os atributos aplicados a este membro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Especifica se deve pesquisar a cadeia de herança deste membro para encontrar os atributos.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean)" />.</summary>
+        <returns>Uma matriz que contém todos os atributos personalizados, ou uma matriz com zero elemento se nenhum atributo estiver definido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> método retorna uma matriz que contém todos os atributos personalizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">O tipo de atributo a ser pesquisado. Somente os atributos pode ser atribuídos a esse tipo são retornados.</param>
+        <param name="inherit">Especifica se deve pesquisar a cadeia de herança deste membro para encontrar os atributos.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.MemberInfo.GetCustomAttributes(System.Type,System.Boolean)" />.</summary>
+        <returns>Uma matriz de atributos personalizados aplicados a este membro, ou uma matriz com zero elementos (0) se nenhum atributo tiverem sido aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> método retorna uma matriz de atributos personalizados identificado por <xref:System.Type>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Object.GetHashCode" />.</summary>
+        <returns>O código hash da instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Object.GetHashCode%2A> método serve como uma função de hash para um tipo específico. <xref:System.Object.GetHashCode%2A>é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIDsOfNames">
+      <MemberSignature Language="C#" Value="public void GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="rgszNames">Matriz passada de nomes a serem mapeados.</param>
+        <param name="cNames">Contagem dos nomes a serem mapeados.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar os nomes.</param>
+        <param name="rgDispId">Matriz alocada pelo chamador que recebe os IDs correspondentes aos nomes.</param>
+        <summary>Mapeia um conjunto de nomes para um conjunto correspondente de identificadores de expedição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetIDsOfNames`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Object.GetType" />.</summary>
+        <returns>Um objeto <see cref="T:System.Type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Object.GetType%2A> método obtém o tipo da instância atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfo">
+      <MemberSignature Language="C#" Value="public void GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">As informações de tipo a serem retornadas.</param>
+        <param name="lcid">O identificador de localidade das informações do tipo.</param>
+        <param name="ppTInfo">Recebe um ponteiro para o objeto de informações de tipo solicitado.</param>
+        <summary>Recupera as informações do tipo de um objeto, que podem ser usadas para obter informações de tipo para uma interface.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfo`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="public void GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Aponta para um local que recebe o número de interfaces de informações de tipo fornecido pelo objeto.</param>
+        <summary>Retorna o número de interfaces de informações do tipo que um objeto fornece (0 ou 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfoCount`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.GetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto cujo valor do campo será retornado.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.FieldInfo.GetValue(System.Object)" />.</summary>
+        <returns>Um objeto que contém o valor do campo refletido por essa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.GetValue%2A> método retornará o valor de um campo que tem suportado por um determinado objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueDirect">
+      <MemberSignature Language="C#" Value="public object GetValueDirect (TypedReference obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValueDirect(valuetype System.TypedReference obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.GetValueDirect(System.TypedReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.TypedReference" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Uma estrutura <see cref="T:System.TypedReference" /> que encapsula um ponteiro gerenciado para um local e uma representação de tempo de execução do tipo que pode ser armazenado nesse local.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.FieldInfo.GetValueDirect(System.TypedReference)" />.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém um valor de campo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.GetValueDirect%2A> método retornará o valor de um campo que tem suportado por um determinado objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Identifica o membro.</param>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar argumentos.</param>
+        <param name="wFlags">Sinalizadores que descrevem o contexto da chamada.</param>
+        <param name="pDispParams">Ponteiro para uma estrutura contendo uma matriz de argumentos, uma matriz de DISPIDs de argumento para argumentos nomeados e contagens para o número de elementos nas matrizes.</param>
+        <param name="pVarResult">Ponteiro para o local onde o resultado deve ser armazenado.</param>
+        <param name="pExcepInfo">Ponteiro para uma estrutura que contém informações de exceção.</param>
+        <param name="puArgErr">O índice do primeiro argumento que tem um erro.</param>
+        <summary>Fornece acesso a propriedades e métodos expostos por um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::Invoke`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssembly">
+      <MemberSignature Language="C#" Value="public bool IsAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsAssembly" />.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="Assembly" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsAssembly%2A> propriedade obtém um valor que indica se este campo tem `Assembly` de nível de visibilidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">O <see cref="T:System.Type" /> do objeto ao qual os atributos personalizados são aplicados.</param>
+        <param name="inherit">Especifica se deve pesquisar a cadeia de herança deste membro para encontrar os atributos.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.MemberInfo.IsDefined(System.Type,System.Boolean)" />.</summary>
+        <returns>
+          <see langword="true" />Se um ou mais instância de <paramref name="attributeType" /> é aplicado a este membro; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.MemberInfo.IsDefined%2A> método indica se uma ou mais instância de `attributeType` é aplicado a esse membro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFamily">
+      <MemberSignature Language="C#" Value="public bool IsFamily { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsFamily" />.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="Family" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsFamily%2A> propriedade obtém um valor que indica se este campo tem `Family` de nível de visibilidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFamilyAndAssembly">
+      <MemberSignature Language="C#" Value="public bool IsFamilyAndAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFamilyAndAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsFamilyAndAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsFamilyAndAssembly" />.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="FamANDAssem" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsFamilyAndAssembly%2A> propriedade obtém um valor que indica se este campo tem `FamilyAndAssembly` de nível de visibilidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFamilyOrAssembly">
+      <MemberSignature Language="C#" Value="public bool IsFamilyOrAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFamilyOrAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsFamilyOrAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsFamilyOrAssembly" />.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="FamORAssem" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsFamilyOrAssembly%2A> propriedade obtém um valor que indica se este campo tem `FamilyOrAssembly` de nível de visibilidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitOnly">
+      <MemberSignature Language="C#" Value="public bool IsInitOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsInitOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsInitOnly" />.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="InitOnly" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsInitOnly%2A> propriedade obtém um valor que indica se o campo só pode ser definido no corpo do construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiteral">
+      <MemberSignature Language="C#" Value="public bool IsLiteral { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLiteral" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsLiteral" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsLiteral" />.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="Literal" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsLiteral%2A> propriedade obtém um valor que indica se o valor é gravado em tempo de compilação e não pode ser alterado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNotSerialized">
+      <MemberSignature Language="C#" Value="public bool IsNotSerialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNotSerialized" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsNotSerialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsNotSerialized" />.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="NotSerialized" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsNotSerialized%2A> propriedade obtém um valor que indica se este campo tem o `NotSerialized` atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinvokeImpl">
+      <MemberSignature Language="C#" Value="public bool IsPinvokeImpl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPinvokeImpl" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsPinvokeImpl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsPinvokeImpl" />.</summary>
+        <value>
+          <see langword="true" />Se o <see langword="PinvokeImpl" /> atributo é definido <see cref="T:System.Reflection.FieldAttributes" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsPinvokeImpl%2A> propriedade obtém um valor que indica se o correspondente `PinvokeImpl` atributo é definido <xref:System.Reflection.FieldAttributes>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrivate">
+      <MemberSignature Language="C#" Value="public bool IsPrivate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrivate" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsPrivate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsPrivate" />.</summary>
+        <value>
+          <see langword="true" />Se o campo for privado; Caso contrário; <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsPrivate%2A> propriedade obtém um valor que indica se o campo é privado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublic">
+      <MemberSignature Language="C#" Value="public bool IsPublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPublic" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsPublic" />.</summary>
+        <value>
+          <see langword="true" />Se esse campo for público; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsPublic%2A> propriedade obtém um valor que indica se o campo é público.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSpecialName">
+      <MemberSignature Language="C#" Value="public bool IsSpecialName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSpecialName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsSpecialName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsSpecialName" />.</summary>
+        <value>
+          <see langword="true" />Se o <see langword="SpecialName" /> atributo é definido <see cref="T:System.Reflection.FieldAttributes" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsSpecialName%2A> propriedade obtém um valor que indica se o correspondente `SpecialName` atributo é definido no <xref:System.Reflection.FieldAttributes> enumerador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStatic">
+      <MemberSignature Language="C#" Value="public bool IsStatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStatic" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.IsStatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.IsStatic" />.</summary>
+        <value>
+          <see langword="true" />Se esse campo é estático; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.IsStatic%2A> propriedade obtém um valor que indica se o campo é estático.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public System.Reflection.MemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.FieldInfo.MemberType" />.</summary>
+        <value>Um <see cref="T:System.Reflection.MemberTypes" /> indicando que esse membro é um campo de valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.MemberType%2A> propriedade obtém um <xref:System.Reflection.MemberTypes> indicando que esse membro é um campo de valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.MemberInfo.Name" />.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome do computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.MemberInfo.Name%2A> propriedade obtém o nome do membro atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedType">
+      <MemberSignature Language="C#" Value="public Type ReflectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices._FieldInfo.ReflectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso independente da versão para objetos COM à propriedade <see cref="P:System.Reflection.MemberInfo.ReflectedType" />.</summary>
+        <value>O <see cref="T:System.Type" /> por meio do qual esse objeto foi obtido do objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é para acesso para classes gerenciadas do código não gerenciado e não deve ser chamada de código gerenciado.  
+  
+ O <xref:System.Reflection.MemberInfo.ReflectedType%2A> propriedade obtém o objeto da classe que foi usado para obter essa instância do <xref:System.Reflection.MemberInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SetValue">
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Fornece objetos de acesso independentes de versão para o <see cref="Overload:System.Reflection.FieldInfo.SetValue" /> métodos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.SetValue%2A> métodos definir o valor do campo para o objeto fornecido como o valor especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (object obj, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(object obj, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.SetValue(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto cujo valor de campo será definido.</param>
+        <param name="value">O valor a ser atribuído ao campo.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.FieldInfo.SetValue(System.Object,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.SetValue%2A> método define o valor do campo que tem suportado pelo objeto fornecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (object obj, object value, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(object obj, object value, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto cujo valor de campo será definido.</param>
+        <param name="value">O valor a ser atribuído ao campo.</param>
+        <param name="invokeAttr">Um campo de <see cref="T:System.Reflection.Binder" /> que especifica o tipo de associação que é desejado (por exemplo, <see langword="Binder.CreateInstance" /> ou <see langword="Binder.ExactBinding" />).</param>
+        <param name="binder">Um conjunto de propriedades que habilita a associação, coerção de tipos de argumento e invocação de membros usando a reflexão. Se <c>associador</c> é <see langword="null" />, em seguida, <see langword="Binder.DefaultBinding" /> é usado.</param>
+        <param name="culture">As preferências de software de uma determinada cultura.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.PropertyInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.PropertyInfo.SetValue%2A> método define o valor do campo que tem suportado pelo objeto fornecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValueDirect">
+      <MemberSignature Language="C#" Value="public void SetValueDirect (TypedReference obj, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValueDirect(valuetype System.TypedReference obj, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.SetValueDirect(System.TypedReference,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.TypedReference" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto cujo valor de campo será definido.</param>
+        <param name="value">O valor a ser atribuído ao campo.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.FieldInfo.SetValueDirect(System.TypedReference,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ O <xref:System.Reflection.FieldInfo.SetValueDirect%2A> método define o valor do campo que tem suportado pelo objeto fornecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices._FieldInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Object.ToString" />.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Object" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

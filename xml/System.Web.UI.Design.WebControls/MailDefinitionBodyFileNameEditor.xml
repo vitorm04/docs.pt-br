@@ -1,0 +1,124 @@
+<Type Name="MailDefinitionBodyFileNameEditor" FullName="System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor">
+  <TypeSignature Language="C#" Value="public class MailDefinitionBodyFileNameEditor : System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MailDefinitionBodyFileNameEditor extends System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.UrlEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um editor para selecionar os arquivos de corpo de mensagem em uma <see cref="T:System.Web.UI.WebControls.MailDefinition" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor> classe fornece uma interface do usuário para selecionar um arquivo para o <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade de um <xref:System.Web.UI.WebControls.MailDefinition> objeto. O <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> Especifica o arquivo que contém o corpo da mensagem de email.  
+  
+ O <xref:System.Web.UI.WebControls.MailDefinition> objetos definem o conteúdo e o formato das mensagens de notificação de email que são enviadas por controles. Por exemplo, o <xref:System.Web.UI.WebControls.CreateUserWizard>, <xref:System.Web.UI.WebControls.ChangePassword> e <xref:System.Web.UI.WebControls.PasswordRecovery> controla o uso de <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor>.  
+  
+ O <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor> é invocado, por exemplo, selecionando as reticências (**... **) no botão de **BodyFileName** propriedade, em **MailDefinition**, no **propriedades** grade do visual designer.  
+  
+ O <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.Caption%2A> propriedade especifica a legenda apareça no <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor> formulário. O <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.Filter%2A> propriedade retorna a lista de tipos de arquivo que deve ser aceito pelo <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MailDefinitionBodyFileNameEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor> classe quando você invocar o editor em um controle que encapsula uma <xref:System.Web.UI.WebControls.MailDefinition> objeto. Por exemplo, selecione as reticências (**... **) no botão de **BodyFileName** propriedade, em **MailDefinition**, no **propriedades** grade do visual designer, durante a criação de um <xref:System.Web.UI.WebControls.CreateUserWizard>, <xref:System.Web.UI.WebControls.ChangePassword> ou <xref:System.Web.UI.WebControls.PasswordRecovery> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="protected override string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a legenda apareça no <see cref="T:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor" /> formulário.</summary>
+        <value>Uma cadeia de caracteres que é a legenda a ser exibida no formulário de editor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para o <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.Caption%2A> propriedade é uma mensagem solicitando que o usuário selecionar um arquivo de email.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="P:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.Caption" /> propriedade para retornar um valor que é diferente do padrão. O valor padrão é localizado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="protected override string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de tipos de arquivo para o <see cref="T:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor" /> objeto para aceitar.</summary>
+        <value>Uma cadeia de caracteres especificando um nome amigável para cada aceita o tipo de arquivo e especificações de arquivo para cada tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato para o <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.Filter%2A> para cada tipo é o seguinte:  
+  
+1.  Uma descrição amigável.  
+  
+2.  Uma barra vertical (`|`).  
+  
+3.  Arquivo, separados por ponto e vírgula (`;`).  
+  
+4.  Outra barra vertical (`|`).  
+  
+ Por exemplo, um filtro que especifica todos os arquivos, arquivos de texto e arquivos HTML seria semelhante ao seguinte exemplo, na localidade EN-US:  
+  
+ `Text Files(*.txt)|*.txt|HTML Files(*.htm;*.html)|*.htm;*.html|All Files(*.*)|*.*|`  
+  
+ Uma versão localizada da cadeia de caracteres é o valor padrão para o <xref:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.Filter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="P:System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor.Filter" /> propriedade para retornar um valor que é diferente do padrão.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

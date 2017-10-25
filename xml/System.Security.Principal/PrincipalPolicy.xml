@@ -1,0 +1,116 @@
+<Type Name="PrincipalPolicy" FullName="System.Security.Principal.PrincipalPolicy">
+  <TypeSignature Language="C#" Value="public enum PrincipalPolicy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PrincipalPolicy extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Principal.PrincipalPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Principal</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica como os objetos principal e identidade devem ser criados para um domínio de aplicativo. O padrão é <see langword="UnauthenticatedPrincipal" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por motivos de desempenho, o padrão principal e os objetos de identidade não são criados até que eles são necessários. Se uma entidade de segurança explicitamente é adicionada ao segmento atual, uma entidade de segurança padrão não é criada e a configuração de política de entidade será ignorada.  
+  
+ Um host confiável pode substituir a política de entidade padrão especificando outro esses valores usando o <xref:System.AppDomain.SetPrincipalPolicy%2A> método de um <xref:System.AppDomain>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NoPrincipal">
+      <MemberSignature Language="C#" Value="NoPrincipal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.PrincipalPolicy NoPrincipal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.PrincipalPolicy.NoPrincipal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.PrincipalPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum objeto de entidade de segurança ou identidade deve ser criado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnauthenticatedPrincipal">
+      <MemberSignature Language="C#" Value="UnauthenticatedPrincipal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.PrincipalPolicy UnauthenticatedPrincipal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.PrincipalPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Objetos de entidade de segurança e identidade para a entidade não autenticada devem ser criados. Uma entidade não autenticada tem <see cref="P:System.Security.Principal.GenericIdentity.Name" /> definido como a cadeia de caracteres vazia ("") e <see cref="P:System.Security.Principal.GenericIdentity.IsAuthenticated" /> definido como <see langword="false" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsPrincipal">
+      <MemberSignature Language="C#" Value="WindowsPrincipal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.PrincipalPolicy WindowsPrincipal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.PrincipalPolicy.WindowsPrincipal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.PrincipalPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Objetos de entidade de segurança e de identidade que refletem o token do sistema operacional associado ao thread de execução atual devem ser criados e os grupos do sistema operacional associado devem ser mapeados em funções.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

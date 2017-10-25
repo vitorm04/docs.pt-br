@@ -1,0 +1,1244 @@
+<Type Name="TextRunTypographyProperties" FullName="System.Windows.Media.TextFormatting.TextRunTypographyProperties">
+  <TypeSignature Language="C#" Value="public abstract class TextRunTypographyProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextRunTypographyProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextRunTypographyProperties" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe abstrata para dar suporte a propriedades de tipografia para <see cref="T:System.Windows.Media.TextFormatting.TextRun" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O cliente de layout de texto usa o <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties> classe para gerar um conjunto de recursos que são processados pelo mecanismo de layout de OpenType.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextRunTypographyProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRunTypographyProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.TextFormatting.TextRunTypographyProperties" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationAlternates">
+      <MemberSignature Language="C#" Value="public abstract int AnnotationAlternates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AnnotationAlternates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.AnnotationAlternates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice de um formulário de anotação alternativa.</summary>
+        <value>O índice na forma de anotação alternativa. O padrão é 0 (zero).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formulários de anotação incluem glifos colocados em aberto ou sólidos círculos, quadrados, parênteses, losangos ou caixas arredondadas.  
+  
+ Se o valor de <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.AnnotationAlternates%2A> é maior que 0 e selecionado fonte não dá suporte a anotação alternativas, o formulário padrão da letra é exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capitals">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontCapitals Capitals { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontCapitals Capitals" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Capitals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontCapitals</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o formato de capital da fonte selecionada.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.FontCapitals" />. O padrão é <see cref="F:System.Windows.FontCapitals.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As letras maiúsculas são um conjunto de formas tipográficas que renderizam texto em glifos no estilo maiúsculo. Normalmente, quando o texto inteiro é renderizado em letras maiúsculas, o espaçamento entre elas pode parecer muito apertado, e o peso e a proporção das letras, muito pesados. OpenType dá suporte a um número de formatos de estilo para maiusculas, incluindo maiusculas pequenas, minimaiusculas, títulos e espaçamento de maiusculas. Esses formatos de estilo permitem controlar a aparência das letras maiúsculas.  
+  
+ O texto a seguir exibe letras maiúsculas padrão para a fonte Pescadero, seguidas pelas letras nos estilos “SmallCaps” e “AllSmallCaps”. Nesse caso, o mesmo tamanho de fonte é usado para todas as três palavras.  
+  
+ ![Texto usando maiusculas OpenType](~/add/media/opentypefont11.gif "texto usando maiusculas OpenType")  
+Exemplo de maiusculas  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapitalSpacing">
+      <MemberSignature Language="C#" Value="public abstract bool CapitalSpacing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CapitalSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.CapitalSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o espaçamento entre glifos para texto de todas as maiusculas globalmente é ajustado para melhorar a legibilidade.</summary>
+        <value>
+          <see langword="true" />Se o espaçamento é ajustado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O espaçamento de letras maiúsculas é um recurso que permite oferecer um espaçamento maior ao usar somente letras maiúsculas no texto. Letras maiusculas são normalmente criadas para combinar com letras minúsculas. Espaçamento que parece atraente entre e uma letra maiuscula e minúscula podem parecer muito apertados quando todas as letras maiusculas são usadas. O texto a seguir exibe espaçamento normal e de maiusculas para a fonte Pescadero.  
+  
+ ![Texto usando espaçamento de maiusculas OpenType](~/add/media/opentypefont21.gif "texto usando espaçamento de maiusculas OpenType")  
+Exemplo de espaçamento normal e de maiusculas  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaseSensitiveForms">
+      <MemberSignature Language="C#" Value="public abstract bool CaseSensitiveForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CaseSensitiveForms" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.CaseSensitiveForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os glifos ajustar sua posição vertical para melhorar o alinhamento com os glifos de maiusculas.</summary>
+        <value>
+          <see langword="true" />Se a posição vertical é ajustada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualAlternates">
+      <MemberSignature Language="C#" Value="public abstract bool ContextualAlternates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContextualAlternates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualAlternates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os formulários de glifos personalizados podem ser usados com base no contexto do texto que está sendo processado.</summary>
+        <value>
+          <see langword="true" />Se os formulários de glifos personalizados podem ser usados; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os alternativos contextuais aleatórios fornecem vários glifos substitutos para um único caractere. Quando implementado com fontes do tipo de script, esse recurso pode simular manuscrito por meio de um conjunto de glifos escolhidos aleatoriamente com pequenas diferenças na aparência. O texto a seguir usa alternativas contextuais aleatórias para a fonte Lindsey. Observe que a letra "a" varia ligeiramente de aparência  
+  
+ ![Texto usando alternativas contextuais aleatórias OpenType](~/add/media/opentypefont23.gif "texto usando alternativas contextuais OpenType aleatórias")  
+Exemplo de alternativas contextuais aleatórias  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualLigatures">
+      <MemberSignature Language="C#" Value="public abstract bool ContextualLigatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContextualLigatures" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualLigatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se ligaduras contextuais estão habilitadas.</summary>
+        <value>
+          <see langword="true" />Se ligaduras contextuais estão habilitadas; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ligaduras contextuais são projetadas para melhorar a legibilidade, fornecendo um melhor comportamento de ligação entre os caracteres que compõem a Ligadura.  
+  
+ Se o valor de <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualLigatures%2A> é `true` e a fonte selecionada não oferece suporte a ligaduras contextuais, o formulário padrão da letra é exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualSwashes">
+      <MemberSignature Language="C#" Value="public abstract int ContextualSwashes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContextualSwashes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualSwashes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica o índice de um formulário swashes contextuais.</summary>
+        <value>O índice do formulário swashes padrão. O padrão é 0 (zero).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas combinações de glifos swash podem causar uma aparência pouco atraente, como descendentes sobrepostos em letras adjacentes. Usar um Ornamento contextual permite que você use um glifo de Ornamento substituto que produz uma melhor aparência. O texto a seguir mostra a mesma palavra antes e depois um Ornamento contextual é aplicado.  
+  
+ ![Texto usando swashes contextuais OpenType](~/add/media/opentypefont19.gif "texto usando swashes contextuais OpenType")  
+Exemplo de um Ornamento contextual  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscretionaryLigatures">
+      <MemberSignature Language="C#" Value="public abstract bool DiscretionaryLigatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DiscretionaryLigatures" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.DiscretionaryLigatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se ligaduras estão habilitadas.</summary>
+        <value>
+          <see langword="true" />Se ligaduras estão habilitadas; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ligaduras são projetadas para serem ornamental e não foram especificamente projetadas para facilitar a leitura. O texto a seguir exibe glifos com ligadura discricionária para a fonte Pericles.  
+  
+ ![Texto usando ligaduras OpenType](~/add/media/opentypefont05.gif "texto usando ligaduras OpenType")  
+Exemplo de conjunto discricionário de ligaturas  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EastAsianExpertForms">
+      <MemberSignature Language="C#" Value="public abstract bool EastAsianExpertForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EastAsianExpertForms" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.EastAsianExpertForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os formulários de fonte japonês padrão foram substituídos por formulários tipográficos preferenciais correspondentes.</summary>
+        <value>
+          <see langword="true" />Se os formulários de fonte japonês padrão foram substituídos por formulários tipográficos preferenciais correspondentes; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EastAsianLanguage">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontEastAsianLanguage EastAsianLanguage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontEastAsianLanguage EastAsianLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.EastAsianLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a versão de glifos a ser usado para um idioma ou o sistema de escrita específico.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.FontEastAsianLanguage" />. O padrão é <see cref="F:System.Windows.FontEastAsianLanguage.Normal" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EastAsianWidths">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontEastAsianWidths EastAsianWidths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontEastAsianWidths EastAsianWidths" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.EastAsianWidths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianWidths</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a largura proporcional a ser usada para caracteres latinos em uma fonte do Leste Asiático.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.FontEastAsianWidths" />. O padrão é <see cref="F:System.Windows.FontEastAsianWidths.Normal" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fraction">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontFraction Fraction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontFraction Fraction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Fraction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontFraction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o estilo de fração.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.FontFraction" />. O padrão é <see cref="F:System.Windows.FontFraction.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As fontes OpenType oferecem suporte a estilos para frações, incluindo cortado e empilhadas.  
+  
+ O texto a seguir exibe estilos de fração para a fonte Palatino Linotype.  
+  
+ ![Texto usando OpenType e com barras diagonais frações](~/add/media/opentypefont12.gif "texto usando OpenType e com barras diagonais frações")  
+Exemplo de estilos de frações empilhadas e cortados  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoricalForms">
+      <MemberSignature Language="C#" Value="public abstract bool HistoricalForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HistoricalForms" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.HistoricalForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as formas históricas são habilitadas.</summary>
+        <value>
+          <see langword="true" />Se formatos históricos estão habilitados; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As formas históricas são convenções tipográficas que foram comuns no passado. O texto a seguir exibe a frase "Boston, Massachusetts" usando um formulário de histórico de glifos para a fonte Palatino Linotype.  
+  
+ ![Texto usando formatos históricos OpenType](~/add/media/opentypefont10.gif "texto usando formatos históricos OpenType")  
+Exemplo de formatos históricos  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoricalLigatures">
+      <MemberSignature Language="C#" Value="public abstract bool HistoricalLigatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HistoricalLigatures" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.HistoricalLigatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se ligaturas históricas estão habilitadas.</summary>
+        <value>
+          <see langword="true" />Se ligaturas históricas estão habilitadas; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ligaturas históricas são usados na tipografia histórica que criadores de fontes podem adicionar às suas fontes de formulários tipográficos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kerning">
+      <MemberSignature Language="C#" Value="public abstract bool Kerning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Kerning" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Kerning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o ajuste de espaço está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o kerning estiver habilitado; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Kerning é uma função tipográfica que ajusta o espaçamento entre caracteres para melhorar a forma do word.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MathematicalGreek">
+      <MemberSignature Language="C#" Value="public abstract bool MathematicalGreek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MathematicalGreek" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.MathematicalGreek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se formulários padrão fonte tipográficas de glifos gregos foram substituídos por correspondente formulários de fonte usados na notação matemática.</summary>
+        <value>
+          <see langword="true" />Se os formulários gregos matemáticos estão habilitados; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor de <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.MathematicalGreek%2A> é `true` e a fonte selecionada não oferece suporte a matemáticos formulários gregos, o formulário padrão da letra é exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumeralAlignment">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontNumeralAlignment NumeralAlignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontNumeralAlignment NumeralAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.NumeralAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o alinhamento de larguras ao usar algarismos.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.FontNumeralAlignment" />. O padrão é <see cref="F:System.Windows.FontNumeralAlignment.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As fontes OpenType oferecem suporte a um recurso de figura proporcional ou tabular para controlar o alinhamento de larguras ao usar algarismos. As figuras proporcionais tratam cada numeral como tendo uma largura diferente — “1” é mais estreito do que “5”. Figuras tabulares são tratadas como numerais de largura igual para que eles se alinhem verticalmente, que aumenta a legibilidade de informações numéricas.  
+  
+ O texto a seguir exibe duas figuras proporcionais na primeira coluna, usando a fonte Miramonte. Observe a diferença de largura entre os algarismos "5" e "1". A segunda coluna mostra os mesmos valores numéricos com suas larguras ajustadas usando o recurso de figura tabular.  
+  
+ ![Texto usando valores proporcionais e tabulares de OpenType](~/add/media/opentypefont22.gif "texto usando valores proporcionais e tabulares de OpenType")  
+Exemplo de figuras proporcionais e com guias  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumeralStyle">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontNumeralStyle NumeralStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontNumeralStyle NumeralStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.NumeralStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontNumeralStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o conjunto de glifos que são usados para renderizar formulários fonte alternativa numérica.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.FontNumeralStyle" />. O padrão é <see cref="F:System.Windows.FontNumeralStyle.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As fontes OpenType oferecem suporte a um formato de numerais de estilo antigo. Esse formato é útil para exibir numerais em estilos que não são mais padrão. O texto a seguir exibe uma data de século de 18 nos formatos numerais padrão e de estilo antigo para a fonte Palatino Linotype.  
+  
+ ![Texto usando numerais de estilo antigo OpenType](~/add/media/opentypefont24.gif "texto usando numerais de estilo antigo OpenType")  
+Exemplo de numerais de estilo antigo e padrão  
+  
+ O texto a seguir exibe numerais padrão para a fonte Palatino Linotype, seguido de numerais de estilo antigo.  
+  
+ ![Texto usando conjuntos de números com estilo antigos OpenType](~/add/media/opentypefont13.gif "texto usando conjuntos de números com estilo antigos OpenType")  
+Exemplo de conjuntos de numerais de estilo antigo e padrão  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertiesChanged">
+      <MemberSignature Language="C#" Value="protected void OnPropertiesChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnPropertiesChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRunTypographyProperties.OnPropertiesChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Corrige o estado interno para uma <see cref="T:System.Windows.Media.TextFormatting.TextRunTypographyProperties" /> sempre que qualquer um de classe derivada <see cref="T:System.Windows.Media.TextFormatting.TextRunTypographyProperties" /> propriedade altera seu valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método de acessadores set de uma <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties> substituição de propriedade, se o valor for alterado como parte do setter.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SlashedZero">
+      <MemberSignature Language="C#" Value="public abstract bool SlashedZero { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SlashedZero" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.SlashedZero" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um nominal zero formulário de fonte deve ser substituído por um zero cortado.</summary>
+        <value>
+          <see langword="true" /> se formulários com zero cortado estão habilitados; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As fontes OpenType suportam um cortado zero formato numérico para enfatizar a diferença entre a letra "O" e o número "0". Muitas vezes, o número zero cortado é utilizado para identificadores em informações financeiras e comerciais.  
+  
+ O texto a seguir exibe um identificador de pedido de exemplo usando a fonte Miramonte. A primeira linha usa numerais padrão. A segunda linha usada zeros se cortados para fornecer um melhor contraste com a letra "O" maiuscula.  
+  
+ ![Texto usando OpenType zeros cortados](~/add/media/opentypefont17.gif "texto usando OpenType zeros cortados")  
+Exemplo de zeros cortados  
+  
+ Se o valor de <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.SlashedZero%2A> é `true` , e a fonte selecionada não tem suporte algarismo zero formulários, o formulário padrão do número é exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardLigatures">
+      <MemberSignature Language="C#" Value="public abstract bool StandardLigatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StandardLigatures" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardLigatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se ligaduras padrão estão habilitadas.</summary>
+        <value>
+          <see langword="true" />Se ligaduras padrão estão habilitadas; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O texto a seguir exibe glifos com ligadura padrão para a fonte Pericles.  
+  
+ ![Texto usando ligaduras padrão OpenType](~/add/media/opentypefont04.gif "texto usando ligaduras padrão OpenType")  
+Exemplo de um conjunto padrão de ligaturas  
+  
+ Por padrão, as fontes OpenType no [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] habilitam ligaduras padrão. Por exemplo, se a fonte Palatino Linotype for usada, as ligaduras padrão “fi”, “ff” e “fl” aparecerão como um glifo de caracteres combinados. Observe que os caracteres de cada ligadura padrão tocam um ao outro.  
+  
+ ![Texto usando ligaduras padrão OpenType](~/add/media/opentypefont06.gif "texto usando ligaduras padrão OpenType")  
+Exemplo de ligaduras padrão habilitado por padrão  
+  
+ No entanto, é possível desabilitar os recursos de ligadura padrão para que uma ligadura padrão como “ff” seja exibida como dois glifos separados, em vez de como um glifo de caracteres combinados.  
+  
+ ![Texto usando ligaduras padrão OpenType desabilitadas](~/add/media/opentypefont07.gif "texto usando ligaduras padrão OpenType desabilitadas")  
+Exemplo de ligaduras padrão desabilitados  
+  
+ Se o valor de <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardLigatures%2A> é `true` e a fonte selecionada não oferece suporte a ligaduras padrão, o formulário padrão da letra é exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardSwashes">
+      <MemberSignature Language="C#" Value="public abstract int StandardSwashes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StandardSwashes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardSwashes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice de um formulário swashes padrão.</summary>
+        <value>O índice do formulário swashes padrão. O padrão é 0 (zero).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Swashes são glifos decorativos que utilizam ornamentação elaborada, geralmente associada à caligrafia. O texto a seguir exibe glifos padrão e decorados para a fonte Pescadero.  
+  
+ ![Texto usando glifos de OpenType padrão e decorados](~/add/media/opentypefont08.gif "texto usando glifos de OpenType padrão e decorados")  
+Exemplo de glifos padrão e decorados  
+  
+ Muitas vezes, os swashes são utilizados como elementos decorativos em frases curtas, como anúncios de eventos. O texto a seguir usa swashes para enfatizar as letras maiusculas do nome do evento.  
+  
+ ![Texto usando swashes OpenType](~/add/media/opentypefont09.gif "texto usando swashes OpenType")  
+Exemplo de swashes usado para letras maiusculas  
+  
+ Se o valor de <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardSwashes%2A> é maior que 0 e selecionado fonte não dá suporte a formulários swashes padrão do valor de índice fornecido, o formulário padrão da letra é exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticAlternates">
+      <MemberSignature Language="C#" Value="public abstract int StylisticAlternates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StylisticAlternates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticAlternates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice de um formulário de alternativas estilísticas.</summary>
+        <value>O índice do formulário de alternativas estilísticas. O padrão é 0 (zero).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os alternativos são glifos que podem ser substituídos por um glifo padrão. As fontes OpenType, como a fonte usada nos exemplos a seguir, Pericles contém glifos alternativos que você pode usar para criar aparências diferentes para o texto. O texto a seguir exibe glifos padrão para a fonte Pericles.  
+  
+ ![Texto usando glifos padrão OpenType](~/add/media/opentypefont01.gif "texto usando glifos padrão OpenType")  
+Exemplo de um conjunto padrão de glifos  
+  
+ A fonte OpenType Pericles contém glifos adicionais que fornecem alternativas estilísticas ao conjunto padrão de glifos. O texto a seguir exibe glifos alternativos estilísticos.  
+  
+ ![Texto usando glifos de alternativas estilísticos OpenType](~/add/media/opentypefont02.gif "texto usando glifos de alternativas estilísticos OpenType")  
+Exemplo de glifos alternativos estilos  
+  
+ O texto a seguir exibe vários glifos alternativos estilos para a fonte Pericles.  
+  
+ ![Texto usando glifos de alternativas estilísticos OpenType](~/add/media/opentypefont03.gif "texto usando glifos de alternativas estilísticos OpenType")  
+Exemplo de outros estilos glifos alternativos  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet1">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet1" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet10">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet10 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet10" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet11">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet11 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet11" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet11" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet12">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet12 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet12" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet12" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet13">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet13 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet13" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet13" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet14">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet14 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet14" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet14" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet15">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet15 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet15" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet15" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet16">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet16 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet16" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet16" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet17">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet17 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet17" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet17" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet18">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet18 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet18" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet18" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet19">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet19 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet19" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet19" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet2">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet2" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet20">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet20 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet20" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet20" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet3">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet3 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet3" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet4">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet4 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet4" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet4" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet5">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet5 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet5" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet5" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet6">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet6 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet6" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet6" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet7">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet7 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet7" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet7" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet8">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet8 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet8" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet8" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StylisticSet9">
+      <MemberSignature Language="C#" Value="public abstract bool StylisticSet9 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StylisticSet9" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet9" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um conjunto de estilo de um formulário de fonte está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o conjunto de estilo do formulário fonte estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas fontes contenham estilos glifos variantes que correspondem a partes de um conjunto de caracteres. Glifos em conjuntos de estilos podem ser criados; trazer harmonia Visual, interagem de maneiras específicas ou trabalham em conjunto de outras maneiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Variants">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.FontVariants Variants { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontVariants Variants" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Variants" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontVariants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica uma variação do formulário tipográfica padrão a ser usado.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.FontVariants" />. O padrão é <see cref="F:System.Windows.FontVariants.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Variantes são semelhantes aos formulários fonte sobrescrito ou subscrito. É possível para um formulário de fonte conter diferentes conjuntos de glifo entre sobrescrito e o formulário ordinal ou entre formulários subscritos e inferiores. O <xref:System.Windows.Media.TextFormatting.TextRunTypographyProperties.Variants%2A> propriedade permite que você defina valores sobrescrito e subscrito para uma fonte OpenType.  
+  
+ O texto a seguir exibe sobrescritos para a fonte Palatino Linotype.  
+  
+ ![Texto usando sobrescritos OpenType](~/add/media/opentypefont14.gif "texto usando sobrescritos OpenType")  
+Exemplo de sobrescritos  
+  
+ O texto a seguir exibe subscritos para a fonte Palatino Linotype.  
+  
+ ![Texto usando subscritos OpenType](~/add/media/opentypefont15.gif "texto usando subscritos OpenType")  
+Exemplo de subscritos  
+  
+ Fontes que não oferecem suporte a variantes podem ter uma aproximação algorítmica na forma de fonte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

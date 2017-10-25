@@ -1,0 +1,105 @@
+<Type Name="VisualStateChangedEventArgs" FullName="System.Windows.VisualStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class VisualStateChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit VisualStateChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.VisualStateChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de <see cref="E:System.Windows.VisualStateGroup.CurrentStateChanging" /> e de <see cref="E:System.Windows.VisualStateGroup.CurrentStateChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.VisualStateGroup> que gera o evento é definido no <xref:System.Windows.Controls.ControlTemplate> de um controle, o <xref:System.Windows.VisualStateChangedEventArgs.Control%2A> propriedade é o controle que possui o <xref:System.Windows.Controls.ControlTemplate>. Quando o <xref:System.Windows.VisualStateGroup> é definido em um <xref:System.Windows.FrameworkElement> que não está em um <xref:System.Windows.Controls.ControlTemplate>, o <xref:System.Windows.VisualStateChangedEventArgs.Control%2A> é de propriedade `null` e você deve usar o <xref:System.Windows.VisualStateChangedEventArgs.StateGroupsRoot%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Windows.FrameworkElement Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.FrameworkElement Control" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualStateChangedEventArgs.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento que está fazendo a transição de estados.</summary>
+        <value>O elemento que está fazendo a transição de estados se o <see cref="T:System.Windows.VisualStateGroup" /> está em um <see cref="T:System.Windows.Controls.ControlTemplate" />; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.VisualStateGroup> é definido em um <xref:System.Windows.FrameworkElement> que não está em um <xref:System.Windows.Controls.ControlTemplate>, o <xref:System.Windows.VisualStateChangedEventArgs.Control%2A> é de propriedade `null` e você deve usar o <xref:System.Windows.VisualStateChangedEventArgs.StateGroupsRoot%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewState">
+      <MemberSignature Language="C#" Value="public System.Windows.VisualState NewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.VisualState NewState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualStateChangedEventArgs.NewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.VisualState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado que está em transição para ou fez a transição para o elemento.</summary>
+        <value>O estado que está em transição para ou fez a transição para o elemento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldState">
+      <MemberSignature Language="C#" Value="public System.Windows.VisualState OldState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.VisualState OldState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualStateChangedEventArgs.OldState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.VisualState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado em que o elemento está em transição para ou deixou de ser.</summary>
+        <value>O estado em que o elemento está em transição para ou deixou de ser.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateGroupsRoot">
+      <MemberSignature Language="C#" Value="public System.Windows.FrameworkElement StateGroupsRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.FrameworkElement StateGroupsRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualStateChangedEventArgs.StateGroupsRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento raiz que contém o <see cref="T:System.Windows.VisualStateManager" />.</summary>
+        <value>Um elemento raiz que contém o <see cref="T:System.Windows.VisualStateManager" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

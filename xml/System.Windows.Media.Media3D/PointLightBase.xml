@@ -1,0 +1,345 @@
+<Type Name="PointLightBase" FullName="System.Windows.Media.Media3D.PointLightBase">
+  <TypeSignature Language="C#" Value="public abstract class PointLightBase : System.Windows.Media.Media3D.Light" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract PointLightBase extends System.Windows.Media.Media3D.Light" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.PointLightBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.Light</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe base abstrata que representa um objeto leve que tem uma posição no espaço e projeta sua luz em todas as direções.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A taxa na qual a intensidade da luz diminui com a distância é determinada por suas propriedades de intervalo e atenuação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.PointLightBase Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.PointLightBase Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.PointLightBase.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.PointLightBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável <see cref="T:System.Windows.Media.Media3D.PointLightBase" /> objeto, fazendo cópias profundas dos valores do objeto. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> era de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.PointLightBase CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Media3D.PointLightBase CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.PointLightBase.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.PointLightBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.Animation.ByteAnimationUsingKeyFrames" />, fazendo cópias em profundidade dos valores do objeto atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstantAttenuation">
+      <MemberSignature Language="C#" Value="public double ConstantAttenuation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ConstantAttenuation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.PointLightBase.ConstantAttenuation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor constante pela qual a intensidade da luz diminui à distância.</summary>
+        <value>Por que a intensidade da luz diminui com a distância de Double.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ConstantAttenuation"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Media3D.PointLightBase.ConstantAttenuationProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define essa propriedade no código.  
+  
+ [!code-csharp[Show3Dlights#Show3DLights3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/Show3DLights/CSharp/MyLights.cs#show3dlights3dn5)]
+ [!code-vb[Show3Dlights#Show3DLights3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Show3DLights/visualbasic/mylights.vb#show3dlights3dn5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstantAttenuationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ConstantAttenuationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ConstantAttenuationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.PointLightBase.ConstantAttenuationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Media3D.PointLightBase.ConstantAttenuation" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinearAttenuation">
+      <MemberSignature Language="C#" Value="public double LinearAttenuation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LinearAttenuation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.PointLightBase.LinearAttenuation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o diminution linear de intensidade da luz à distância.</summary>
+        <value>Duplo que especifica o diminution linear de intensidade da luz à distância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_LinearAttenuation"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Media3D.PointLightBase.LinearAttenuationProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinearAttenuationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LinearAttenuationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LinearAttenuationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.PointLightBase.LinearAttenuationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Media3D.PointLightBase.LinearAttenuation" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Point3D Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Point3D Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.PointLightBase.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Media.Media3D.Point3D" /> que especifica a posição da luz no espaço de mundo.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.Point3D" />que especifica a posição da luz no espaço de mundo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Position"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Media3D.PointLightBase.PositionProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PositionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PositionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.PointLightBase.PositionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Media3D.PointLightBase.Position" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuadraticAttenuation">
+      <MemberSignature Language="C#" Value="public double QuadraticAttenuation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 QuadraticAttenuation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.PointLightBase.QuadraticAttenuation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o diminution do efeito da luz distância, calculado por uma operação quadrática.</summary>
+        <value>Duplo que especifica o diminution do efeito da luz distância, calculado por uma operação quadrática.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Media3D.PointLightBase.QuadraticAttenuation%2A> propriedade é o coeficiente de quadrado da distância.  
+  
+<a name="dependencyPropertyInfo_QuadraticAttenuation"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Media3D.PointLightBase.QuadraticAttenuationProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuadraticAttenuationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty QuadraticAttenuationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty QuadraticAttenuationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.PointLightBase.QuadraticAttenuationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Media3D.PointLightBase.QuadraticAttenuation" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="public double Range { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Range" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.PointLightBase.Range" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância além do qual a luz não tem nenhum efeito.</summary>
+        <value>Duplo que especifica a distância além do qual a luz não tem nenhum efeito.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Range"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Media3D.PointLightBase.RangeProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define essa propriedade no código.  
+  
+ [!code-csharp[Show3Dlights#Show3DLights3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/Show3DLights/CSharp/MyLights.cs#show3dlights3dn5)]
+ [!code-vb[Show3Dlights#Show3DLights3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Show3DLights/visualbasic/mylights.vb#show3dlights3dn5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RangeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RangeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Media3D.PointLightBase.RangeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Media3D.PointLightBase.Range" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

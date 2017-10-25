@@ -1,0 +1,845 @@
+<Type Name="ResourceDictionary" FullName="System.Windows.ResourceDictionary">
+  <TypeSignature Language="C#" Value="public class ResourceDictionary : System.Collections.IDictionary, System.ComponentModel.ISupportInitialize, System.Windows.Markup.INameScope, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ResourceDictionary extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable, class System.ComponentModel.ISupportInitialize, class System.Windows.Markup.INameScope, class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ResourceDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.INameScope</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Ignore)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.UsableDuringInitialization(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma tabela de hash / implementação de dicionário que contém recursos do WPF usado por componentes e outros elementos de um aplicativo do WPF.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os itens em uma <xref:System.Windows.ResourceDictionary> não são processadas imediatamente quando o código do aplicativo é carregado por um [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] carregador. Em vez disso, o <xref:System.Windows.ResourceDictionary> persistir como um objeto, e os valores individuais são processados somente quando especificamente forem solicitados.  
+  
+ O <xref:System.Windows.ResourceDictionary> classe não é derivada de <xref:System.Collections.DictionaryBase>. Em vez disso, o <xref:System.Windows.ResourceDictionary> classe implementa <xref:System.Collections.IDictionary> , mas depende de um <xref:System.Collections.Hashtable> internamente.  
+  
+ Em [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], o <xref:System.Windows.ResourceDictionary> classe normalmente é um elemento de coleção implícita que é o valor do elemento do objeto de várias `Resources` propriedades, quando é fornecido na sintaxe de elemento de propriedade. Para obter detalhes sobre coleções implícita em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], consulte [XAML sintaxe em detalhes](~/docs/framework/wpf/advanced/xaml-syntax-in-detail.md). Uma exceção é quando você deseja especificar um dicionário mesclado; Para obter detalhes, consulte [dicionários de recursos mesclados](~/docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
+  
+ Outro possível [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] é de uso para declarar um dicionário de recursos como um discretos [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] arquivo e o carregá-lo em tempo de execução com <xref:System.Windows.Markup.XamlReader.Load%2A> ou incluí-lo em um projeto (confiança total) como um recurso ou arquivo flexível. Nesse caso, <xref:System.Windows.ResourceDictionary> pode ser declarado como um elemento de objeto, que serve como o elemento raiz da [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Você deve mapear os valores apropriados de namespace XML (padrão para o [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] namespace e geralmente `x:` para o [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] namespace) para o <xref:System.Windows.ResourceDictionary> elemento se você planeja usá-lo como o elemento raiz. Em seguida, você pode adicionar elementos filho que definem os recursos, cada um com um valor.  
+  
+<a name="xamlImplicitCollectionUsage_ResourceDictionary"></a>   
+## <a name="xaml-implicit-collection-usage"></a>Uso de coleção implícita XAML  
+  
+```  
+<object>  
+  <object.resourcesProperty>  
+    oneOrMoreResources  
+  </object.resourcesProperty>  
+</object>  
+```  
+  
+<a name="xamlValues_ResourceDictionary"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *resourcesProperty*  
+ Uma propriedade especificando um elemento de propriedade, em que o tipo de valor dessa propriedade é <xref:System.Windows.ResourceDictionary>. Normalmente, isso é o `Resources` propriedade <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>, ou de <xref:System.Windows.Application> um caso de recursos do aplicativo.  
+  
+ *oneOrMoreResources*  
+ Um ou mais recursos especificados como elementos de objeto. Cada recurso que você especificar deve ter uma [diretiva X:Key](~/docs/framework/xaml-services/x-key-directive.md) atribuído.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.ResourceDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome da chave a ser adicionada.</param>
+        <param name="value">O valor do recurso para adicionar.</param>
+        <summary>Adiciona um recurso por chave para este <see cref="T:System.Windows.ResourceDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tentativa de adicionar uma chave duplicada gerará uma exceção.  
+  
+ Chaves sempre são adicionadas ao dicionário de base. As chaves em <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> no atual <xref:System.Windows.ResourceDictionary> não são verificadas para eliminação de duplicação, somente o dicionário de base é verificado para duplicatas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.ResourceDictionary" /> está bloqueado ou somente leitura.</exception>
+        <exception cref="T:System.ArgumentException">Já existe um elemento com a mesma chave no <see cref="T:System.Collections.Hashtable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Começa a fase de inicialização para este <see cref="T:System.Windows.ResourceDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método é uma indicação de que o conteúdo do <xref:System.Windows.ResourceDictionary> está prestes a ser carregado. A próxima etapa no processo é chamar <xref:System.Windows.ResourceDictionary.EndInit%2A>.  
+  
+ Não chame <xref:System.Windows.ResourceDictionary.BeginInit%2A> mais de uma vez, antes de chamar <xref:System.Windows.ResourceDictionary.EndInit%2A>. Isso gerará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Chamado <see cref="M:System.Windows.ResourceDictionary.BeginInit" /> mais de uma vez antes de <see cref="M:System.Windows.ResourceDictionary.EndInit" /> foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todas as chaves (e valores) na base de <see cref="T:System.Windows.ResourceDictionary" />. Isso não limpa qualquer mescladas itens do dicionário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você precisa limpar itens do dicionário mesclado, obtenha o dicionário específico a partir do <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> coleta e especificamente chamada <xref:System.Windows.ResourceDictionary.Clear%2A> naquele <xref:System.Windows.ResourceDictionary>, embora normalmente os dicionários são remotos e talvez você não tenha acesso. Como alternativa, remova todo o <xref:System.Windows.ResourceDictionary> de <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> chamando remover na coleção genérica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Windows.ResourceDictionary" />.</param>
+        <summary>Determina se o <see cref="T:System.Windows.ResourceDictionary" /> contém um elemento com a chave especificada.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="T:System.Windows.ResourceDictionary" /> contém um par chave-valor com a chave; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a chave solicitada não estiver neste dicionário de recurso, a lógica de pesquisa de recurso também verificará dicionários mesclados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Collections.DictionaryEntry[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(valuetype System.Collections.DictionaryEntry[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.CopyTo(System.Collections.DictionaryEntry[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.DictionaryEntry[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz unidimensional que é o destino do <see cref="T:System.Collections.DictionaryEntry" /> objetos copiados do <see cref="T:System.Windows.ResourceDictionary" /> instância. A matriz deve ter indexação com base em zero.</param>
+        <param name="arrayIndex">O índice com base em zero do <c>matriz</c> onde a cópia começa.</param>
+        <summary>Copia o <see cref="T:System.Windows.ResourceDictionary" /> elementos para um unidimensional <see cref="T:System.Collections.DictionaryEntry" /> no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa ação copia somente o dicionário de base. A matriz de resultados terá não <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> se ele for reconstituído para ser um <xref:System.Windows.ResourceDictionary> novamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de entradas na base de <see cref="T:System.Windows.ResourceDictionary" />.</summary>
+        <value>O número atual de entradas no dicionário de base.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeferrableContent">
+      <MemberSignature Language="C#" Value="public System.Windows.DeferrableContent DeferrableContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DeferrableContent DeferrableContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.DeferrableContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DeferrableContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo de adiável para esse dicionário de recursos.</summary>
+        <value>Sempre retorna <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina a fase de inicialização e invalida a árvore anterior, de modo que todas as alterações feitas às chaves durante a fase de inicialização podem ser consideradas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.ResourceDictionary.BeginInit%2A>e <xref:System.Windows.ResourceDictionary.EndInit%2A> segue um modelo da transação. <xref:System.Windows.ResourceDictionary.BeginInit%2A>marca o dicionário não inicializado e <xref:System.Windows.ResourceDictionary.EndInit%2A> marcas que ele é inicializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindName">
+      <MemberSignature Language="C#" Value="public object FindName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object FindName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.FindName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O identificador de nome para o objeto que está sendo solicitado.</param>
+        <summary>Não é suportada por esta implementação de dicionário.</summary>
+        <returns>Sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.ResourceDictionary> classe não oferece suporte a registro de nome. Ele usa chaves em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IDictionaryEnumerator" /> que pode ser usado para iterar por meio de <see cref="T:System.Windows.ResourceDictionary" />.</summary>
+        <returns>Um enumerador especializado para a <see cref="T:System.Windows.ResourceDictionary" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O iterador é para o dicionário base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se este <see cref="T:System.Windows.ResourceDictionary" /> é de tamanho fixo.</summary>
+        <value>
+          <see langword="true" />Se a tabela de hash é de tamanho fixo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão retorna o <xref:System.Collections.Hashtable> padrão, que é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se este <see cref="T:System.Windows.ResourceDictionary" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se a tabela de hash é somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o <xref:System.Collections.Hashtable> padrão, que é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave desejada a ser obtida ou definida.</param>
+        <summary>Obtém ou define o valor associado à chave especificada.</summary>
+        <value>Valor da chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a chave solicitada não estiver neste dicionário de recurso, o sistema de recursos de framework também verificará dicionários mesclados.  
+  
+ Verificando um <xref:System.Windows.ResourceDictionary> por item ou o índice não é geralmente a melhor maneira de recuperar os recursos. Em vez disso, você deve chamar métodos que são capazes de participar do processo de pesquisa de recurso cheia e pesquisar recursos por suas chaves, e que pode encontrar os recursos em aplicativos ou temas. <xref:System.Windows.FrameworkElement.FindResource%2A>é um método tal e está presente em qualquer <xref:System.Windows.FrameworkElement>. Caso contrário, a tentativa de localizar o recurso não coincide com o comportamento de tempo de execução true.  
+  
+ No entanto, a obtenção de recursos diretamente de um dicionário individual pode ser apropriado se você estiver recuperando recursos de um conhecido <xref:System.Windows.ResourceDictionary> local e estão fazendo, portanto, para evitar possíveis implicações de desempenho e o escopo de pesquisa de chave de tempo de execução.  
+  
+ Você não usar indexadores para definir os membros de coleção em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Em vez disso, você crie elementos filho na marcação. Os elementos filho são qualquer um dos elementos filho do <xref:System.Windows.ResourceDictionary>, ou de um elemento de propriedade em que o tipo de propriedade é `ResourceDictionary`. Para obter detalhes, consulte o [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] uso seções em <xref:System.Windows.ResourceDictionary>.  
+  
+<a name="xamlTextUsage_Item"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Consulte Observações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todas as chaves contidas neste <see cref="T:System.Windows.ResourceDictionary" />.</summary>
+        <value>A coleção de todas as chaves.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade existe porque é exigida pelo <xref:System.Collections.IDictionary>, mas <xref:System.Windows.ResourceDictionary.Keys%2A> geralmente não é útil para a maioria dos <xref:System.Windows.ResourceDictionary> cenários.  
+  
+ As chaves retornadas não incluem chaves dentro de <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>. Além disso, a coleção de chaves é um instantâneo das chaves no dicionário de base. Se você subsequentemente alterar isso <xref:System.Windows.ResourceDictionary>, um armazenado <xref:System.Windows.ResourceDictionary.Keys%2A> não refletirá as alterações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergedDictionaries">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Windows.ResourceDictionary&gt; MergedDictionaries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Windows.ResourceDictionary&gt; MergedDictionaries" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.MergedDictionaries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Windows.ResourceDictionary&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção dos dicionários <see cref="T:System.Windows.ResourceDictionary" /> que constituem os vários dicionários de recursos nos dicionários mesclados.</summary>
+        <value>A coleção de dicionários mesclados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dicionários são mesclados com a adição de um <xref:System.Windows.ResourceDictionary> à coleção genérica referenciada por <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>. Um mesclada <xref:System.Windows.ResourceDictionary> não tem elementos de recursos definidos dentro na marcação. Em vez disso, o dicionário mesclado é um <xref:System.Windows.ResourceDictionary> com nenhum elemento filho de marcação definido (ou sem elementos adicionados por meio de código), mas com um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] especificado para <xref:System.Windows.ResourceDictionary.Source%2A>. O <xref:System.Windows.ResourceDictionary.Source%2A> designação permite que o dicionário mesclado provenientes de uma fonte externa, como um assembly de recursos separado que é fornecido com o aplicativo "flexível [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]", ou uma localização específica ou um assembly de recursos globais.  
+  
+ Especificação de elementos de recursos dentro de um <xref:System.Windows.ResourceDictionary> com <xref:System.Windows.ResourceDictionary.Source%2A> especificado não tem suporte.  
+  
+ Comportamento de pesquisa dentro do <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> coleção pesquisará o último adicionado <xref:System.Windows.ResourceDictionary> primeiro e a pesquisa é interrompida assim que uma chave solicitada foi encontrada. Chaves duplicadas na coleção de dicionários mesclados não são inválidas. Para obter mais informações sobre o comportamento do dicionário mesclado, consulte [dicionários de recursos mesclados](~/docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
+  
+<a name="xamlPropertyElementUsage_MergedDictionaries"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<object>  
+  <object.MergedDictionaries>  
+    oneOrMoreResourceDictionaries  
+  </object.MergedDictionaries>  
+</object>  
+  
+```  
+  
+<a name="xamlValues_MergedDictionaries"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *oneOrMoreResourceDictionaries*  
+ Um ou mais <xref:System.Windows.ResourceDictionary> elementos de objeto. Um <xref:System.Windows.ResourceDictionary> usado para <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> não tem conteúdo da coleção e especifica um <xref:System.Windows.ResourceDictionary.Source%2A> atributo que referencia completo <xref:System.Windows.ResourceDictionary> remotamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir especifica dois <xref:System.Windows.ResourceDictionary> elementos a serem mesclados primário <xref:System.Windows.ResourceDictionary>.  
+  
+ [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGettingValue">
+      <MemberSignature Language="C#" Value="protected virtual void OnGettingValue (object key, ref object value, out bool canCache);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGettingValue(object key, object&amp; value, [out] bool&amp; canCache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.OnGettingValue(System.Object,System.Object@,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="canCache" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave de recurso a ser obtido.</param>
+        <param name="value">O valor do recurso solicitado.</param>
+        <param name="canCache">
+          <see langword="true" />Se o recurso pode ser salvo e usado mais tarde; Caso contrário, <see langword="false" />.</param>
+        <summary>Ocorre quando o <see cref="T:System.Windows.ResourceDictionary" /> recebe uma solicitação para um recurso.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterName">
+      <MemberSignature Language="C#" Value="public void RegisterName (string name, object scopedElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterName(string name, object scopedElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.RegisterName(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="scopedElement" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Não há suporte.</param>
+        <param name="scopedElement">Não há suporte.</param>
+        <summary>Não é suportada por esta implementação de dicionário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.ResourceDictionary> classe não oferece suporte a registro de nome. Ele usa chaves em vez disso. Os métodos do namescope XAML são implementados como versões inoperantes em <xref:System.Windows.ResourceDictionary> para tornar claro que XAML nomes não se aplicam aos recursos.  
+  
+ Chamar esse método fará com que um <xref:System.NotSupportedException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Em todos os casos quando este método é chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Chave da entrada a ser removida.</param>
+        <summary>Remove a entrada com a chave especificada do dicionário de base.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.ResourceDictionary> não contém um elemento com a chave especificada, o <xref:System.Windows.ResourceDictionary> permanece inalterado. Nenhuma exceção é gerada.  
+  
+ Esse método não remove as chaves do <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>. Você deve obter específico <xref:System.Windows.ResourceDictionary> da coleção para remover as chaves, mas que talvez não seja possível como um dicionário tal normalmente estão acessando remotamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.ResourceDictionary" /> está bloqueado ou somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para carregar recursos.</summary>
+        <value>O local de origem de um dicionário de recursos externos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, <xref:System.Windows.ResourceDictionary.Source%2A> é especificado como um URI de pacote, que faz referência ao local de um dicionário de recursos que é incluído como uma ação de compilação de recursos ou o conteúdo não compilada pelo seu projeto de compilação do aplicativo. Para obter detalhes sobre o formato de URI de pacote, consulte [URIs de pacote no WPF](~/docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
+  
+ Em geral, o <xref:System.Windows.ResourceDictionary.Source%2A> propriedade é definida somente para um <xref:System.Windows.ResourceDictionary> que é especificada para o <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> propriedade (como um elemento de propriedade em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ou como um <xref:System.Windows.ResourceDictionary> item da coleção no código). Nesse contexto, definindo o valor de <xref:System.Windows.ResourceDictionary.Source%2A> mescla o conteúdo do dicionário encontrado em fornecido [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] em atual <xref:System.Windows.ResourceDictionary>. As falhas de carregamento fará com que uma exceção seja lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir especifica dois <xref:System.Windows.ResourceDictionary> elementos a serem mesclados primário <xref:System.Windows.ResourceDictionary>.  
+  
+ [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> de base zero que recebe os itens copiados do <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" />.</param>
+        <param name="arrayIndex">A primeira posição no <see cref="T:System.Array" /> especificada para receber o conteúdo copiado.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.ResourceDictionary> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="true" />Se acessar a <see cref="T:System.Windows.ResourceDictionary" /> é sincronizado (thread-safe); caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.ResourceDictionary> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso <see cref="T:System.Windows.ResourceDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.ResourceDictionary> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.ResourceDictionary> é convertida em uma interface de <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Windows.Markup.IUriContext.BaseUri" />.</summary>
+        <value>A base [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do contexto atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.ResourceDictionary> é convertida em uma interface de <xref:System.Windows.Markup.IUriContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterName">
+      <MemberSignature Language="C#" Value="public void UnregisterName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ResourceDictionary.UnregisterName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Não há suporte.</param>
+        <summary>Não é suportada por esta implementação de dicionário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.ResourceDictionary> classe não oferece suporte a registro de nome. Ele usa chaves em vez disso. Chamar esse método não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ResourceDictionary.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todos os valores associados às chaves contidas nesta <see cref="T:System.Windows.ResourceDictionary" />.</summary>
+        <value>A coleção de todos os valores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade existe porque é exigida pelo <xref:System.Collections.IDictionary>, mas geralmente não é útil para a maioria dos <xref:System.Windows.ResourceDictionary> cenários.  
+  
+ Os valores retornados não incluem valores dentro de <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>. Além disso, a coleção é um instantâneo dos valores no dicionário de base. Se você subsequentemente alterar isso <xref:System.Windows.ResourceDictionary>, um armazenado <xref:System.Windows.ResourceDictionary.Values%2A> não refletirá as alterações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

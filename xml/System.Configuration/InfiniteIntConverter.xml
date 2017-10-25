@@ -1,0 +1,144 @@
+<Type Name="InfiniteIntConverter" FullName="System.Configuration.InfiniteIntConverter">
+  <TypeSignature Language="C#" Value="public sealed class InfiniteIntConverter : System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InfiniteIntConverter extends System.Configuration.ConfigurationConverterBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.InfiniteIntConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationConverterBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte entre uma cadeia de caracteres e o padrão de infinito ou valor inteiro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este tipo, como todos os outros conversor tipos de configuração, converte cadeias de caracteres encontradas no arquivo de configuração de e para as propriedades com rigidez de tipos relacionadas.  
+  
+ Em particular, o <xref:System.Configuration.InfiniteIntConverter> classe converte valores de cadeia de caracteres, atribuídos a uma propriedade de configuração, como valores inteiros e vice-versa. Se a propriedade de configuração tem um valor de cadeia de caracteres de "infinito", ele converte esse valor para <xref:System.Int32.MaxValue> e vice-versa.  
+  
+ O conversor é usado com tipos de inteiro. O valor infinito é mantido como <xref:System.Int32.MaxValue>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.InfiniteIntConverter> quando aplicado a uma propriedade personalizada de seção.  
+  
+ [!code-csharp[System.Configuration.ConfigurationConvertersCustomSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationConvertersCustomSection/CS/ConfigurationConvertersCustomSection.cs#5)]
+ [!code-vb[System.Configuration.ConfigurationConvertersCustomSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationConvertersCustomSection/VB/ConfigurationConvertersCustomSection.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InfiniteIntConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.InfiniteIntConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.InfiniteIntConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa os tipos de conversor fornecidos pelo sistema. A única vez em que você precisa usar o <xref:System.Configuration.InfiniteIntConverter.%23ctor%2A> construtor é quando você cria seu próprio tipo de conversão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.InfiniteIntConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="data">O <see cref="T:System.String" /> objeto converter.</param>
+        <summary>Converte um <see cref="T:System.String" /> para um <see cref="T:System.Int32" />.</summary>
+        <returns>O <see cref="F:System.Int32.MaxValue" />, se o <paramref name="data" /> parâmetro é o <see cref="T:System.String" /> "infinito"; caso contrário, o <see cref="T:System.Int32" /> que representa o <paramref name="data" /> valor do parâmetro inteiro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa o <xref:System.Configuration.InfiniteIntConverter.ConvertFrom%2A> método durante a leitura de um arquivo de configuração para converter um <xref:System.String> valor <xref:System.Int32>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object value, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object value, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.InfiniteIntConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="value">O valor a converter.</param>
+        <param name="type">O tipo para o qual converter.</param>
+        <summary>Converte um <see cref="T:System.Int32" />até um <see cref="T:System.String" />.</summary>
+        <returns>O <see cref="T:System.String" /> "infinito" se o <paramref name="value" /> é <see cref="F:System.Int32.MaxValue" />; caso contrário, o <see cref="T:System.String" /> que representa o <paramref name="value" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa o <xref:System.Configuration.InfiniteIntConverter.ConvertTo%2A> método ao gravar em um arquivo de configuração para converter um <xref:System.Int32> para um <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

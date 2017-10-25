@@ -1,0 +1,1165 @@
+<Type Name="RectangleF" FullName="System.Drawing.RectangleF">
+  <TypeSignature Language="C#" Value="public struct RectangleF" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit RectangleF extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.RectangleF" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Armazena um conjunto de quatro números de ponto flutuante que representam o local e o tamanho de um retângulo. Para funções de região mais avançadas, use um objeto <see cref="T:System.Drawing.Region" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um retângulo é definido pela largura, altura e canto superior esquerdo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RectangleF (System.Drawing.PointF location, System.Drawing.SizeF size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.PointF location, valuetype System.Drawing.SizeF size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.#ctor(System.Drawing.PointF,System.Drawing.SizeF)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="location" Type="System.Drawing.PointF" />
+        <Parameter Name="size" Type="System.Drawing.SizeF" />
+      </Parameters>
+      <Docs>
+        <param name="location">Um <see cref="T:System.Drawing.PointF" /> que representa o canto superior esquerdo da região retangular.</param>
+        <param name="size">Um <see cref="T:System.Drawing.SizeF" /> que representa a largura e a altura da região retangular.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.RectangleF" /> com o local e o tamanho especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.RectangleF.op_Implicit%2A>, <xref:System.Drawing.RectangleF.%23ctor%2A>, e <xref:System.Drawing.RectangleF.op_Equality%2A> membros. Este exemplo é projetado para uso com um Windows Form. Cole este código em um formulário e a chamada a `ConvertRectangleToRectangleF` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RectangleF (float x, float y, float width, float height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 x, float32 y, float32 width, float32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.#ctor(System.Single,System.Single,System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada X do canto superior esquerdo do retângulo.</param>
+        <param name="y">A coordenada y do canto superior esquerdo do retângulo.</param>
+        <param name="width">A largura do retângulo.</param>
+        <param name="height">A altura do retângulo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.RectangleF" /> com o local e o tamanho especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.RectangleF.%23ctor%2A>, <xref:System.Drawing.Rectangle.Round%2A> e <xref:System.Drawing.Rectangle.Truncate%2A> membros. Este exemplo é projetado para uso com um Windows Form.  Cole este código em um formulário e a chamada a `RoundingAndTruncatingRectangles` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public float Bottom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada y é a soma de <see cref="P:System.Drawing.RectangleF.Y" /> e <see cref="P:System.Drawing.RectangleF.Height" /> deste <see cref="T:System.Drawing.RectangleF" /> estrutura.</summary>
+        <value>A coordenada y é a soma de <see cref="P:System.Drawing.RectangleF.Y" /> e <see cref="P:System.Drawing.RectangleF.Height" /> deste <see cref="T:System.Drawing.RectangleF" /> estrutura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.RectangleF.Bottom%2A> valor representa a coordenada y do primeiro ponto na borda inferior do retângulo que não está contido no retângulo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Drawing.PointF pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Drawing.PointF pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Contains(System.Drawing.PointF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.PointF" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O <see cref="T:System.Drawing.PointF" /> a ser testado.</param>
+        <summary>Determina se o ponto especificado está contido nessa estrutura <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <returns>Este método retorna <see langword="true" /> se o ponto representado pelo <paramref name="pt" /> parâmetro está contido dentro deste <see cref="T:System.Drawing.RectangleF" /> estrutura; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Contains(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.RectangleF" /> a ser testado.</param>
+        <summary>Determina se a região retangular representada por <paramref name="rect" /> está inteiramente contida dentro desta estrutura <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <returns>Este método retorna <see langword="true" /> se a região retangular representados por <paramref name="rect" /> totalmente contido dentro da região retangular representada por esse <see cref="T:System.Drawing.RectangleF" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (float x, float y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(float32 x, float32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Contains(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada X do ponto a ser testado.</param>
+        <param name="y">A coordenada Y do ponto a ser testado.</param>
+        <summary>Determina se o ponto especificado está contido nessa estrutura <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <returns>Este método retorna <see langword="true" /> se o ponto definido por <paramref name="x" /> e <paramref name="y" /> está contida dentro deste <see cref="T:System.Drawing.RectangleF" /> estrutura; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.RectangleF Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Drawing.RectangleF Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.RectangleF.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma ocorrência da <see cref="T:System.Drawing.RectangleF" /> classe com seus membros não inicializado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros do novo <xref:System.Drawing.RectangleF> são deixados não inicializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Drawing.RectangleF other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Drawing.RectangleF other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Equals(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> a ser testado.</param>
+        <summary>Testes se <paramref name="obj" /> é um <see cref="T:System.Drawing.RectangleF" /> com o mesmo local e tamanho <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <returns>Este método retorna <see langword="true" /> se <paramref name="obj" /> é um <see cref="T:System.Drawing.RectangleF" /> e sua <see langword="X" />, <see langword="Y" />, <see langword="Width" />, e <see langword="Height" /> propriedades são iguais das propriedades correspondentes disso <see cref="T:System.Drawing.RectangleF" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromLTRB">
+      <MemberSignature Language="C#" Value="public static System.Drawing.RectangleF FromLTRB (float left, float top, float right, float bottom);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.RectangleF FromLTRB(float32 left, float32 top, float32 right, float32 bottom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.FromLTRB(System.Single,System.Single,System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Single" />
+        <Parameter Name="top" Type="System.Single" />
+        <Parameter Name="right" Type="System.Single" />
+        <Parameter Name="bottom" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="left">A coordenada X do canto superior esquerdo da região retangular.</param>
+        <param name="top">A coordenada y do canto superior esquerdo da região retangular.</param>
+        <param name="right">A coordenada X do canto inferior direito da região retangular.</param>
+        <param name="bottom">A coordenada y do canto inferior direito da região retangular.</param>
+        <summary>Cria uma estrutura <see cref="T:System.Drawing.RectangleF" /> com o canto superior esquerdo e o canto inferior direito nos locais especificados.</summary>
+        <returns>O novo <see cref="T:System.Drawing.RectangleF" /> criado por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um <xref:System.Drawing.RectangleF> com os cantos superior esquerdo e direito inferior especificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash para este <see cref="T:System.Drawing.RectangleF" /> estrutura. Para obter informações sobre o uso de códigos hash, consulte <see langword="Object.GetHashCode" />.</summary>
+        <returns>O código hash para este <see cref="T:System.Drawing.RectangleF" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public float Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura desta estrutura <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <value>A altura desta estrutura <see cref="T:System.Drawing.RectangleF" />. O padrão é 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public void Inflate (System.Drawing.SizeF size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Inflate(valuetype System.Drawing.SizeF size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Inflate(System.Drawing.SizeF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Drawing.SizeF" />
+      </Parameters>
+      <Docs>
+        <param name="size">O valor para inflar esse retângulo.</param>
+        <summary>Amplia esse <see cref="T:System.Drawing.RectangleF" /> de acordo com o valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método aumenta esse retângulo, não uma cópia dele. O retângulo é ampliado em ambas as direções ao longo do eixo. Por exemplo, se um retângulo 50 por 50 é inflado por 50 no eixo x, o retângulo resultante será 150 unidades longo (o original 50, 50 na direção menos e 50 na direção adição) manter centro Geométrico do retângulo.  
+  
+   
+  
+## Examples  
+ Este exemplo é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> e, em um objeto de evento OnPaint. O código cria um <xref:System.Drawing.RectangleF> e desenha na tela em preto. Observe que ele deve ser convertido em um <xref:System.Drawing.Rectangle> para fins de desenho. Em seguida, aumenta o código a <xref:System.Drawing.RectangleF>, novamente o converte em um <xref:System.Drawing.Rectangle>e desenha a tela em vermelho. Observe que o retângulo (preto) original é expandido em ambas as direções ao longo do eixo x por 100 pontos.  
+  
+ [!code-cpp[System.Drawing.ClassicRectangleFExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleFExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicRectangleFExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleFExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicRectangleFExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRectangleFExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public void Inflate (float x, float y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Inflate(float32 x, float32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Inflate(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">O valor para aumentar esse <see cref="T:System.Drawing.RectangleF" /> estrutura horizontalmente.</param>
+        <param name="y">O valor para aumentar esse <see cref="T:System.Drawing.RectangleF" /> estrutura verticalmente.</param>
+        <summary>Amplia isso <see cref="T:System.Drawing.RectangleF" /> estrutura pelo valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método aumenta esse retângulo, não uma cópia dele. O retângulo é ampliado em ambas as direções ao longo do eixo. Por exemplo, se um retângulo 50 por 50 é inflado por 50 no eixo x, o retângulo resultante será 150 unidades longo (o original 50, 50 na direção menos e 50 na direção adição) manter centro Geométrico do retângulo.  
+  
+ Se qualquer um dos `x` ou `y` for negativo, o <xref:System.Drawing.RectangleF> está vazio na direção correspondente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public static System.Drawing.RectangleF Inflate (System.Drawing.RectangleF rect, float x, float y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.RectangleF Inflate(valuetype System.Drawing.RectangleF rect, float32 x, float32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Inflate(System.Drawing.RectangleF,System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Drawing.RectangleF" /> a serem copiados. Este retângulo não é modificado.</param>
+        <param name="x">O valor para ampliar a cópia do retângulo horizontalmente.</param>
+        <param name="y">O valor para ampliar a cópia do retângulo verticalmente.</param>
+        <summary>Cria e retorna uma cópia ampliada da estrutura <see cref="T:System.Drawing.RectangleF" /> especificada. A cópia é ampliada pelo valor especificado e o retângulo original permanece inalterado.</summary>
+        <returns>O <see cref="T:System.Drawing.RectangleF" /> ampliado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz uma cópia do `rect`, aumenta a cópia e, em seguida, retorna a cópia ampliada. O retângulo é ampliado em ambas as direções ao longo do eixo. Por exemplo, se um retângulo 50 por 50 é inflado por 50 no eixo x, o retângulo resultante será 150 unidades longo (o original 50, 50 na direção menos e 50 na direção adição) manter centro Geométrico do retângulo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public void Intersect (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Intersect(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Intersect(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O retângulo se cruzam.</param>
+        <summary>Substitui esse <see cref="T:System.Drawing.RectangleF" /> estrutura com a interseção de si mesmo e especificado <see cref="T:System.Drawing.RectangleF" /> estrutura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public static System.Drawing.RectangleF Intersect (System.Drawing.RectangleF a, System.Drawing.RectangleF b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.RectangleF Intersect(valuetype System.Drawing.RectangleF a, valuetype System.Drawing.RectangleF b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Intersect(System.Drawing.RectangleF,System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Drawing.RectangleF" />
+        <Parameter Name="b" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="a">Um retângulo a fazer interseção.</param>
+        <param name="b">Um retângulo a fazer interseção.</param>
+        <summary>Retorna um <see cref="T:System.Drawing.RectangleF" /> estrutura que representa a interseção de dois retângulos. Se não houver nenhuma interseção e vazio <see cref="T:System.Drawing.RectangleF" /> é retornado.</summary>
+        <returns>Um terceiro <see cref="T:System.Drawing.RectangleF" /> estrutura do tamanho que representa a área sobreposta dos dois retângulos especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.OnPaint%2A> objeto de evento. O código cria dois <xref:System.Drawing.RectangleF> objetos e desenha-os na tela em preto e vermelho. Observe que eles precisam ser convertidos para <xref:System.Drawing.Rectangle> objetos para fins de desenho. Em seguida, o código cria um terceiro <xref:System.Drawing.RectangleF> usando o <xref:System.Drawing.RectangleF.Intersect%2A> método, converte-o para um <xref:System.Drawing.Rectangle>e desenha a tela em azul. Observe que o terceiro retângulo (azul) é a área de sobreposição de dois retângulos:  
+  
+ [!code-cpp[System.Drawing.ClassicRectangleFExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleFExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicRectangleFExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleFExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicRectangleFExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRectangleFExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntersectsWith">
+      <MemberSignature Language="C#" Value="public bool IntersectsWith (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IntersectsWith(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.IntersectsWith(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O retângulo a ser testado.</param>
+        <summary>Determina se esse retângulo faz interseção com <paramref name="rect" />.</summary>
+        <returns>Este método retorna <see langword="true" /> se não houver nenhuma interseção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Testes se o <see cref="P:System.Drawing.RectangleF.Width" /> ou <see cref="P:System.Drawing.RectangleF.Height" /> propriedade deste <see cref="T:System.Drawing.RectangleF" /> tem um valor de zero.</summary>
+        <value>Essa propriedade retorna <see langword="true" /> se o <see cref="P:System.Drawing.RectangleF.Width" /> ou <see cref="P:System.Drawing.RectangleF.Height" /> propriedade deste <see cref="T:System.Drawing.RectangleF" /> tem um valor de zero; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public float Left { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada X da borda superior esquerda desta estrutura <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <value>A coordenada X da borda superior esquerda desta estrutura <see cref="T:System.Drawing.RectangleF" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Drawing.PointF Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.PointF Location" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as coordenadas do canto superior esquerdo desta estrutura <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <value>Um <see cref="T:System.Drawing.PointF" /> que representa o canto superior esquerdo desta estrutura <see cref="T:System.Drawing.RectangleF" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (System.Drawing.PointF pos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(valuetype System.Drawing.PointF pos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Offset(System.Drawing.PointF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pos" Type="System.Drawing.PointF" />
+      </Parameters>
+      <Docs>
+        <param name="pos">O valor para o local de deslocamento.</param>
+        <summary>Ajusta o local desse retângulo pelo valor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (float x, float y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(float32 x, float32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Offset(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">O valor para o local de deslocamento horizontal.</param>
+        <param name="y">O valor para o local de deslocamento verticalmente.</param>
+        <summary>Ajusta o local desse retângulo pelo valor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Drawing.RectangleF left, System.Drawing.RectangleF right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Drawing.RectangleF left, valuetype System.Drawing.RectangleF right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.op_Equality(System.Drawing.RectangleF,System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Drawing.RectangleF" />
+        <Parameter Name="right" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="left">O <see cref="T:System.Drawing.RectangleF" /> estrutura está à esquerda do operador de igualdade.</param>
+        <param name="right">O <see cref="T:System.Drawing.RectangleF" /> estrutura está à direita do operador de igualdade.</param>
+        <summary>Testa se dois <see cref="T:System.Drawing.RectangleF" /> estruturas têm igual local e o tamanho.</summary>
+        <returns>Esse operador retorna <see langword="true" /> se as duas <see cref="T:System.Drawing.RectangleF" /> estruturas têm igual <see cref="P:System.Drawing.RectangleF.X" />, <see cref="P:System.Drawing.RectangleF.Y" />, <see cref="P:System.Drawing.RectangleF.Width" />, e <see cref="P:System.Drawing.RectangleF.Height" /> propriedades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.RectangleF.op_Implicit%2A>, <xref:System.Drawing.RectangleF.%23ctor%2A> e <xref:System.Drawing.RectangleF.op_Equality%2A> membros. Este exemplo é projetado para uso com um Windows Form. Cole este código em um formulário e a chamada a `ConvertRectangleToRectangleF` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.RectanglesAndPoints#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.RectanglesAndPoints#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.RectanglesAndPoints#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RectanglesAndPoints/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Drawing.RectangleF (System.Drawing.Rectangle r);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Drawing.RectangleF op_Implicit(valuetype System.Drawing.Rectangle r) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.op_Implicit(System.Drawing.Rectangle)~System.Drawing.RectangleF" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="r">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Drawing.RectangleF left, System.Drawing.RectangleF right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Drawing.RectangleF left, valuetype System.Drawing.RectangleF right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.op_Inequality(System.Drawing.RectangleF,System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Drawing.RectangleF" />
+        <Parameter Name="right" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="left">O <see cref="T:System.Drawing.RectangleF" /> estrutura está à esquerda do operador de desigualdade.</param>
+        <param name="right">O <see cref="T:System.Drawing.RectangleF" /> estrutura está à direita do operador de desigualdade.</param>
+        <summary>Testa se dois <see cref="T:System.Drawing.RectangleF" /> estruturas diferem no local ou tamanho.</summary>
+        <returns>Esse operador retorna <see langword="true" /> se qualquer uma da <see cref="P:System.Drawing.RectangleF.X" /> , <see cref="P:System.Drawing.RectangleF.Y" />, <see cref="P:System.Drawing.RectangleF.Width" />, ou <see cref="P:System.Drawing.RectangleF.Height" /> propriedades dos dois <see cref="T:System.Drawing.Rectangle" /> estruturas forem diferentes; caso contrário <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public float Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada x é a soma de <see cref="P:System.Drawing.RectangleF.X" /> e <see cref="P:System.Drawing.RectangleF.Width" /> deste <see cref="T:System.Drawing.RectangleF" /> estrutura.</summary>
+        <value>A coordenada x é a soma de <see cref="P:System.Drawing.RectangleF.X" /> e <see cref="P:System.Drawing.RectangleF.Width" /> deste <see cref="T:System.Drawing.RectangleF" /> estrutura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.RectangleF.Right%2A> valor representa a coordenada x do primeiro ponto na borda direita do retângulo que não está contido no retângulo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.SizeF Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.SizeF Size" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.SizeF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho desse <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <value>O <see cref="T:System.Drawing.SizeF" /> que representa a largura e altura desta estrutura <see cref="T:System.Drawing.RectangleF" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public float Top { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada y da borda superior dessa estrutura <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <value>A coordenada y da borda superior dessa estrutura <see cref="T:System.Drawing.RectangleF" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte o <see langword="Location" /> e <see cref="T:System.Drawing.Size" /> deste <see cref="T:System.Drawing.RectangleF" /> em uma cadeia de caracteres legível.</summary>
+        <returns>Uma cadeia de caracteres que contém a posição, largura e altura deste <see cref="T:System.Drawing.RectangleF" /> estrutura. Por exemplo, "{X = 20, 20 = Y, largura = 100, altura = 50}".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public static System.Drawing.RectangleF Union (System.Drawing.RectangleF a, System.Drawing.RectangleF b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.RectangleF Union(valuetype System.Drawing.RectangleF a, valuetype System.Drawing.RectangleF b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.RectangleF.Union(System.Drawing.RectangleF,System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Drawing.RectangleF" />
+        <Parameter Name="b" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="a">Um retângulo a se unir.</param>
+        <param name="b">Um retângulo a se unir.</param>
+        <summary>Cria o menor possível terceiro retângulo que pode conter ambos dois retângulos que formam uma união.</summary>
+        <returns>Um terceiro <see cref="T:System.Drawing.RectangleF" /> estrutura que contém os dois retângulos que formam a união.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um dos dois retângulos estiver vazio, o que significa que todos os seus valores são zero, o <xref:System.Drawing.Rectangle.Union%2A> método retorna um retângulo com um ponto de partida de (0, 0) e a altura e a largura do retângulo não vazio. Por exemplo, se você tiver dois = de retângulos A (0, 0; 0, 0) e B = (1, 1; 2, 2), em seguida, a união de A e B é (0, 0; 2, 2).  
+  
+   
+  
+## Examples  
+ Este exemplo é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> e, uma <xref:System.Windows.Forms.Control.OnPaint%2A> objeto de evento. O código cria dois <xref:System.Drawing.RectangleF> s e desenha-os na tela em preto e vermelho. Observe que eles precisam ser convertidos para <xref:System.Drawing.Rectangle> s para fins de desenho. Em seguida, o código cria um terceiro <xref:System.Drawing.RectangleF> usando o <xref:System.Drawing.RectangleF.Union%2A> método, converte-o para um <xref:System.Drawing.Rectangle>e desenha a tela em azul. Observe que o terceiro retângulo (azul) é o menor possível retângulo que pode conter ambos os dois retângulos:  
+  
+ [!code-cpp[System.Drawing.ClassicRectangleFExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleFExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicRectangleFExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRectangleFExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicRectangleFExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRectangleFExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public float Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura desta estrutura <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <value>A largura dessa estrutura <see cref="T:System.Drawing.RectangleF" />. O padrão é 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public float X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada X do canto superior esquerdo da estrutura de <see cref="T:System.Drawing.RectangleF" />.</summary>
+        <value>A coordenada X do canto superior esquerdo da estrutura de <see cref="T:System.Drawing.RectangleF" />. O padrão é 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public float Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.RectangleF.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada y do canto superior esquerdo desta <see cref="T:System.Drawing.RectangleF" /> estrutura.</summary>
+        <value>A coordenada Y do canto superior esquerdo dessa estrutura <see cref="T:System.Drawing.RectangleF" />. O padrão é 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

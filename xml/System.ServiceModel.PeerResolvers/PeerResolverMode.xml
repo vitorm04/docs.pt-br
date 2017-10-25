@@ -1,0 +1,81 @@
+<Type Name="PeerResolverMode" FullName="System.ServiceModel.PeerResolvers.PeerResolverMode">
+  <TypeSignature Language="C#" Value="public enum PeerResolverMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PeerResolverMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.PeerResolverMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina o tipo de resolvedor peer que está sendo usado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o resolvedor peer especificado não estiver disponível, um <xref:System.InvalidOperationException> será lançada quando é feita uma tentativa de usar o resolvedor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.PeerResolvers.PeerResolverMode Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.PeerResolvers.PeerResolverMode.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.PeerResolverMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina automaticamente o tipo de resolvedor usar das informações definido na associação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se estiver disponível, um resolvedor personalizado é usado.  Se um estiver indisponível, o resolvedor peer PNRP é usado. Um resolvedor peer é considerado "disponível" se o <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings.Address%2A> e <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings.Binding%2A> propriedades são definidas nela.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.PeerResolvers.PeerResolverMode Custom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.PeerResolvers.PeerResolverMode.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.PeerResolverMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um resolvedor personalizado é usado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pnrp">
+      <MemberSignature Language="C#" Value="Pnrp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.PeerResolvers.PeerResolverMode Pnrp = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.PeerResolvers.PeerResolverMode.Pnrp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.PeerResolverMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O resolvedor PNRP é usado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

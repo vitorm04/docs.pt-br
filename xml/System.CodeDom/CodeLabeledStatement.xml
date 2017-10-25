@@ -1,0 +1,168 @@
+<Type Name="CodeLabeledStatement" FullName="System.CodeDom.CodeLabeledStatement">
+  <TypeSignature Language="C#" Value="public class CodeLabeledStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeLabeledStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeLabeledStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma instrução rotulada ou um rótulo autônomo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeLabeledStatement>representa um rótulo e, opcionalmente, uma instrução associada. Um rótulo pode ser usado para indicar o destino de um <xref:System.CodeDom.CodeGotoStatement>.  
+  
+ O <xref:System.CodeDom.CodeLabeledStatement.Statement%2A> propriedade é opcional. Para criar um rótulo, deixe o <xref:System.CodeDom.CodeLabeledStatement.Statement%2A> propriedade não inicializada.  
+  
+> [!NOTE]
+>  Nem todos os idiomas oferecem suporte a `goto` instruções e rótulos, assim, você deve testar se um gerador de código oferece suporte a `goto` instruções e rótulos chamando o <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> método com o <xref:System.CodeDom.Compiler.GeneratorSupport.GotoStatements> sinalizador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.CodeDom.CodeGotoStatement> e um <xref:System.CodeDom.CodeLabeledStatement> para redirecionar o fluxo do programa.  
+  
+ [!code-cpp[CodeGotoStatementExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeGotoStatementExample/CPP/codegotostatementexample.cpp#2)]
+ [!code-csharp[CodeGotoStatementExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeGotoStatementExample/CS/codegotostatementexample.cs#2)]
+ [!code-vb[CodeGotoStatementExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeGotoStatementExample/VB/codegotostatementexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeLabeledStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeLabeledStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeLabeledStatement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeLabeledStatement (string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeLabeledStatement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="label">O nome do rótulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeLabeledStatement" /> classe usando o nome de rótulo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeLabeledStatement (string label, System.CodeDom.CodeStatement statement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string label, class System.CodeDom.CodeStatement statement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeLabeledStatement.#ctor(System.String,System.CodeDom.CodeStatement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="statement" Type="System.CodeDom.CodeStatement" />
+      </Parameters>
+      <Docs>
+        <param name="label">O nome do rótulo.</param>
+        <param name="statement">O <see cref="T:System.CodeDom.CodeStatement" /> para associar ao rótulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeLabeledStatement" /> usando o nome de rótulo especificado e a declaração de classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeLabeledStatement.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do rótulo.</summary>
+        <value>O nome do rótulo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Statement">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeStatement Statement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeStatement Statement" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeLabeledStatement.Statement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeStatement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a instrução associada opcional.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeStatement" /> que indica a instrução associada com o rótulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade não é definida, o <xref:System.CodeDom.CodeLabeledStatement> representa um rótulo, em vez de uma instrução rotulada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

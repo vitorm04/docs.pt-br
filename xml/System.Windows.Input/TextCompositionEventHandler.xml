@@ -1,0 +1,56 @@
+<Type Name="TextCompositionEventHandler" FullName="System.Windows.Input.TextCompositionEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void TextCompositionEventHandler(object sender, TextCompositionEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextCompositionEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.TextCompositionEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.TextCompositionEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto em que o manipulador de eventos está anexado.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipulará os eventos roteados relacionados às classes <see cref="T:System.Windows.Input.TextComposition" /> e <see cref="T:System.Windows.Input.TextCompositionManager" />, por exemplo, <see cref="E:System.Windows.UIElement.TextInput" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado é usado com os seguintes eventos anexados:  
+  
+-   <xref:System.Windows.Input.TextCompositionManager.TextInput?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.TextCompositionManager.TextInputStart?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.TextCompositionManager.TextInputUpdate?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.TextCompositionManager.PreviewTextInput?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.TextCompositionManager.PreviewTextInputStart?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.TextCompositionManager.PreviewTextInputUpdate?displayProperty=nameWithType>  
+  
+ Este delegado também é usado com os seguintes eventos roteados em elementos de base. Esses eventos roteados encaminham alguns dos eventos anexados listados anteriormente para torná-los mais acessível para o modelo de elemento geral em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.TextInput?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewTextInput?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.TextInput?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewTextInput?displayProperty=nameWithType>  
+  
+ Os eventos anexados e os eventos roteado de elemento base compartilham seus dados de evento e bolha e túnel versões dos eventos roteados também compartilham dados de evento. Isso pode afetar as características manipuladas do evento conforme ela se desloca a rota de evento. Para obter detalhes, consulte [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

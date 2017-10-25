@@ -1,0 +1,237 @@
+<Type Name="XpsSerializationManager" FullName="System.Windows.Xps.Serialization.XpsSerializationManager">
+  <TypeSignature Language="C#" Value="public class XpsSerializationManager : System.Windows.Xps.Serialization.PackageSerializationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsSerializationManager extends System.Windows.Xps.Serialization.PackageSerializationManager" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Serialization.XpsSerializationManager" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Xps.Serialization.PackageSerializationManager</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia síncrona serializadores de XML Paper Specification (XPS) e conversores de tipo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Serialization.XpsSerializationManager>gerencia os serializadores síncronos e conversores de tipo para gravar o conteúdo em um <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ <xref:System.Windows.Xps.Serialization.XpsSerializationManagerAsync>gerencia os serializadores assíncronos e conversores de tipo que armazenam o conteúdo para um <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XpsSerializationManager (System.Windows.Xps.Serialization.BasePackagingPolicy packagingPolicy, bool batchMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Xps.Serialization.BasePackagingPolicy packagingPolicy, bool batchMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.#ctor(System.Windows.Xps.Serialization.BasePackagingPolicy,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="packagingPolicy" Type="System.Windows.Xps.Serialization.BasePackagingPolicy" />
+        <Parameter Name="batchMode" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="packagingPolicy">Um objeto que fornece métodos para adquirir os leitores de serialização e gravadores para diferentes partes de um [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] documento.</param>
+        <param name="batchMode">
+          <see langword="true" />para especificar o modo de lote. Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Xps.Serialization.XpsSerializationManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public virtual void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Confirma todas as alterações e grava todos os dados armazenados em buffer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBatchMode">
+      <MemberSignature Language="C#" Value="public bool IsBatchMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBatchMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializationManager.IsBatchMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o Gerenciador de serialização está em modo de lote.</summary>
+        <value>
+          <see langword="true" />Se o Gerenciador estiver em modo de lote; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Modo de lote é definido no `batchMode` parâmetro o <xref:System.Windows.Xps.Serialization.XpsSerializationManager.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAsXaml">
+      <MemberSignature Language="C#" Value="public override void SaveAsXaml (object serializedObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SaveAsXaml(object serializedObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.SaveAsXaml(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">O [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] serializado do objeto a ser salvo.</param>
+        <summary>Salva um especificado [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] serializado do objeto para o pacote do documento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontSubsettingCountPolicy">
+      <MemberSignature Language="C#" Value="public void SetFontSubsettingCountPolicy (int countPolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontSubsettingCountPolicy(int32 countPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.SetFontSubsettingCountPolicy(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="countPolicy" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="countPolicy">O número de páginas ou de documentos para processar de uma vez para subconjuntos de fontes.</param>
+        <summary>Define o número de páginas ou de documentos para processar de subconjuntos de fontes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os subconjuntos de fontes padrão `countPolicy` é 1.  
+  
+ `countPolicy`define um número de páginas ou documentos dependentes de <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies> valor de enumeração especificado para o <xref:System.Windows.Xps.Serialization.XpsSerializationManager.SetFontSubsettingPolicy%2A> método.  
+  
+|FontSubsetterCommitPolicy|CountPolicy|  
+|-------------------------------|-----------------|  
+|<xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitEntireSequence>|Sempre 1 (a sequência de todo o documento).|  
+|<xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerDocument>|Número de documentos.|  
+|<xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerPage>|Número de páginas.|  
+|<xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.None>|Não aplicável.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontSubsettingPolicy">
+      <MemberSignature Language="C#" Value="public void SetFontSubsettingPolicy (System.Windows.Xps.Serialization.FontSubsetterCommitPolicies policy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFontSubsettingPolicy(valuetype System.Windows.Xps.Serialization.FontSubsetterCommitPolicies policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationManager.SetFontSubsettingPolicy(System.Windows.Xps.Serialization.FontSubsetterCommitPolicies)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="policy" Type="System.Windows.Xps.Serialization.FontSubsetterCommitPolicies" />
+      </Parameters>
+      <Docs>
+        <param name="policy">Um dos valores de enumeração que especifica a política de subconjuntos de fontes.</param>
+        <summary>Define a granularidade em que os subconjuntos de fontes é executado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A política de subconjuntos de fontes padrão é <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitEntireSequence>.  
+  
+ Quando os glifos de fonte para o texto em uma [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento são salvas no pacote do documento, o texto do documento exibe forma idêntica em qualquer computador ou impressora.  Se os glifos não são salvas no documento e a fonte necessária não está instalada no computador local ou impressora, o dispositivo de renderização deve substituir glifos de outra fonte.  Substituir glifos pode alterar a aparência do texto quando uma fonte diferente é usada.  
+  
+ <xref:System.Windows.Xps.Serialization.XpsSerializationManager.SetFontSubsettingPolicy%2A>Determina a granularidade de subconjuntos de fontes.  
+  
+ <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitEntireSequence>(padrão) é o mais eficiente e permite que as páginas de todos os documentos em uma sequência de documento para compartilhar um subconjunto de fonte que contém somente os glifos que, na verdade, são usados.  
+  
+ Quando criar intercaladas documentos, subconjuntos de fontes em uma sequência de documento podem exigir uma grande quantidade de memória para manter o documento completo até que o subconjunto de fonte final pode ser determinado.  <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerPage>ou <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerDocument> pode ser especificado para reduzir os requisitos ao criar intercaladas documentos de memória de aplicativo.  
+  
+ Quando `policy` é <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.None>, todos os glifos para todas as fontes usadas no [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento são salvos, até mesmo glifos de caracteres que na verdade não usados no texto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XpsSerializationPrintTicketRequired">
+      <MemberSignature Language="C#" Value="public event System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventHandler XpsSerializationPrintTicketRequired;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventHandler XpsSerializationPrintTicketRequired" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Xps.Serialization.XpsSerializationManager.XpsSerializationPrintTicketRequired" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsSerializationPrintTicketRequiredEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] serializador solicitações um <see cref="T:System.Printing.PrintTicket" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre manipuladores de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XpsSerializationProgressChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler XpsSerializationProgressChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler XpsSerializationProgressChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Xps.Serialization.XpsSerializationManager.XpsSerializationProgressChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma página ou documento finaliza a serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre manipuladores de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

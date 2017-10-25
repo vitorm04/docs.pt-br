@@ -1,0 +1,87 @@
+<Type Name="SupportedAddressingMode" FullName="System.ServiceModel.Channels.SupportedAddressingMode">
+  <TypeSignature Language="C#" Value="public enum SupportedAddressingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SupportedAddressingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.SupportedAddressingMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se um serviço oferece suporte a respostas de enviadas para endereços anônimos apenas, somente endereços não anônimas, ou em ambos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada para especificar a capacidade de um servidor, que, por sua vez, impõe uma necessidade em seus clientes.  
+  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)]tem uma variedade de controles de endereçamento para especificar onde as mensagens devem ser enviadas. Por exemplo, há lógico <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> endereço para o destino da mensagem, físico endereço, usado pelo transporte, em que um serviço de escuta, ("Via") e o <xref:System.ServiceModel.Channels.MessageHeaders.ReplyTo%2A> endereço do ponto de extremidade que fornece o endereço do ponto de extremidade do cliente.  
+  
+ No caso mais básico, quando duas partes da trocam de mensagens entre si só, não é necessário especificar esses endereços separadamente. Mas como trocas podem envolver outros destinos de mensagens, você deve ser capaz de especificar quando os endereços devem ser fornecidos explicitamente. Até mesmo entre apenas duas partes essa capacidade às vezes é necessária, como com HTTP dupla onde o servidor deve criar sua própria solicitação HTTP. Os seguintes tipos de relações são definidos pelo <xref:System.ServiceModel.Channels.SupportedAddressingMode> enumeração para capturar esses padrões de mensagens:  
+  
+-   Endereços anônimos são a forma mais básica de endereçamento. Endereçamento anônima é usada quando há um caminho padrão para uma resposta. O TCP é um transporte de comunicação bidirecional e a resposta a uma mensagem TCP pode ser enviada para o outro lado do soquete que enviou a mensagem original. Da mesma forma, o modelo de solicitação-resposta de HTTP envia respostas por meio do canal de resposta HTTP. Nenhuma dessas respostas requer a especificação de onde as mensagens de resposta serão. Quando um servidor requer anônimas respostas do cliente, ele usa o valor anônimo da enumeração. O [!INCLUDE[indigo2](~/includes/indigo2-md.md)] fornecido pelo sistema <xref:System.ServiceModel.NetTcpBinding>, <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.WSHttpBinding> associações sempre usam endereços anônimos.  
+  
+-   Endereços não anônimos são usados ao enviar a resposta requer a criação de um novo canal de comunicação. O [!INCLUDE[indigo2](~/includes/indigo2-md.md)] fornecido pelo sistema <xref:System.ServiceModel.WSDualHttpBinding> associação usa um endereço não anônimos. Com dois HTTP, o cliente cria uma solicitação HTTP para enviar uma mensagem e, em seguida, o servidor deve criar sua própria solicitação HTTP para enviar uma resposta. Porque o servidor está iniciando o envio, ele deve ter um ponto de extremidade específico para estabelecer a conexão. Você deve fornecer o endereço de um ponto de extremidade do servidor para sua resposta. Da mesma forma, se um serviço deve responder a uma mensagem unidirecional que recebeu, ele também requer um não anônimos endereço porque não há nenhum canal de retorno disponível para comunicação. Se o servidor envia uma mensagem, é necessária uma operação completamente separada daquele usado para enviar a primeira mensagem.  
+  
+-   Misto é uma terceira forma de endereçamento que combina endereços anônimo e não anônimos, dependendo da mensagem que está sendo enviado. Um exemplo típico de endereçamento de modo misto é o uso de um computador dedicado para processamento de mensagens de confirmação ou de falha. Se a sequência padrão do exchange para respostas HTTP ou TCP, as respostas usam endereçamento anônima mas as falhas usam endereçamento não anônimas. Enquanto [!INCLUDE[indigo2](~/includes/indigo2-md.md)] não fornece Mixed abordar a funcionalidade de uma das suas associações padrão, é possível gravar um canal que permite que o serviço enviar respostas diretamente no back-channel (quando o endereço de resposta é anônimo) ou em um canal separado (quando o endereço de resposta não anônimos). Nesse caso, o elemento de associação do canal é usado para definir <xref:System.ServiceModel.Channels.SupportedAddressingMode> como Mixed.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Anonymous">
+      <MemberSignature Language="C#" Value="Anonymous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.SupportedAddressingMode Anonymous = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.SupportedAddressingMode.Anonymous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SupportedAddressingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O servidor só oferece suporte a endereços anônimos e clientes devem fornecer um endereço de resposta anônimo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mixed">
+      <MemberSignature Language="C#" Value="Mixed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.SupportedAddressingMode Mixed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.SupportedAddressingMode.Mixed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SupportedAddressingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O servidor dá suporte a endereços anônimos e não anônima e os clientes podem optar por usar um ou ambos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonAnonymous">
+      <MemberSignature Language="C#" Value="NonAnonymous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.SupportedAddressingMode NonAnonymous = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.SupportedAddressingMode.NonAnonymous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SupportedAddressingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O servidor só oferece suporte a endereços não anônimas e clientes devem fornecer um endereço de resposta não anônimas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

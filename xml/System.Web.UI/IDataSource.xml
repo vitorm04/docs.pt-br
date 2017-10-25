@@ -1,0 +1,140 @@
+<Type Name="IDataSource" FullName="System.Web.UI.IDataSource">
+  <TypeSignature Language="C#" Value="public interface IDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma fonte de dados abstrata à qual os controles ligados a dados são associados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET oferece suporte a uma arquitetura de associação de dados de controle que permite que os controles de servidor Web associar aos dados de uma maneira consistente. Controles de servidor Web que associar aos dados são conhecidos como controles associados a dados e as classes que facilitam que são chamados de vinculação de controles da fonte de dados. Controles de fonte de dados podem representar qualquer fonte de dados: um banco de dados relacional, um arquivo, um fluxo, um objeto comercial e assim por diante. Fonte de dados controla apresentar dados de uma maneira consistente para controles associados a dados, independentemente da origem ou o formato dos dados subjacentes.  
+  
+ Implementar o <xref:System.Web.UI.IDataSource> interface quando você deseja implementar seu próprio controle de fonte de dados personalizado do ASP.NET.  
+  
+ Qualquer classe que implementa o <xref:System.Web.UI.IDataSource> interface é um controle de fonte de dados. O <xref:System.Web.UI.IDataSource> interface serve como a base para a fonte de dados ASP.NET todos os controles e define os conceitos fundamentais de arquitetura de associação de dados com seus dois métodos: o <xref:System.Web.UI.IDataSource.GetView%2A> método e o <xref:System.Web.UI.IDataSource.GetViewNames%2A> método. Esse conceito é que todos os controles de fonte de dados oferecer suporte a uma ou mais exibições nomeadas em seus dados. O objeto de exibição de fonte de dados é semelhante para o <xref:System.Data.DataView> abstração no <xref:System.Data> namespace: personalizado uma ligação de dados, modo de exibição de dados para classificação, filtragem e outras operações de dados que define o modo de exibição. Essencialmente, uma fonte de dados de controle não faz nada mais do que recuperar exibições de dados.  
+  
+ Um controle de fonte de dados pode ter um ou mais objetos de exibição de fonte de dados associado. Alguns dados de origem controles, incluindo aqueles que representam os bancos de dados relacionais como <xref:System.Web.UI.WebControls.SqlDataSource> e <xref:System.Web.UI.WebControls.AccessDataSource>, suporte a apenas um modo de exibição. Outros dados de origem controles, incluindo controles de fonte de dados hierárquicos, como <xref:System.Web.UI.WebControls.SiteMapDataSource>, suporte a vários modos de exibição. O modo de exibição de fonte de dados define os recursos de uma fonte de dados e as operações que ele suporta.  
+  
+ Em resumo, implementam controles de fonte de dados a <xref:System.Web.UI.IDataSource> interface, suporte a um ou mais denominado exibições nos dados que eles representam e sempre oferecem suporte à recuperação de dados da fonte de dados que eles representam. Controles de fonte de dados sempre recuperam dados sob demanda, como quando `DataBind` é chamado em um controle associado a dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como uma classe pode implementar os métodos definidos pelo <xref:System.Web.UI.IDataSource> interface para fornecer dados a controles associados a dados. O controle de fonte de dados neste exemplo atua como uma fonte de dados em um arquivo de valores separados por vírgulas e pode ser usado por qualquer controle associado a dados para exibir dados de arquivo delimitado por vírgula. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.DataSourceControl> classe.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#1)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataSourceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DataSourceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DataSourceChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.IDataSource.DataSourceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um controle de fonte de dados foi alterado de alguma forma que afeta o controles associados a dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IDataSource.DataSourceChanged> é gerado quando as propriedades de um controle associado a dados ou os dados subjacentes foi alterado de alguma forma que afeta as associações de dados entre um controle associado a dados e seus dados. Por exemplo, o evento é gerado se um arquivo de nome de propriedade, como o <xref:System.Web.UI.WebControls.AccessDataSource.DataFile%2A> propriedade, é alterada em um controle de fonte de dados com base em arquivo.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataSourceView GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.DataSourceView GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IDataSource.GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">O nome da exibição a ser recuperada.</param>
+        <summary>Obtém a exibição de fonte de dados nomeada associada ao controle de fonte de dados.</summary>
+        <returns>Retorna o <see cref="T:System.Web.UI.DataSourceView" /> nomeado associado a <see cref="T:System.Web.UI.IDataSource" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de controle de fonte de dados podem dar suporte a uma ou mais exibições em seus dados subjacentes. Essas exibições são representadas por instâncias de <xref:System.Web.UI.DataSourceView> classe. O modo de exibição de fonte de dados define os recursos de um controle de fonte de dados e executa todo o trabalho necessário para recuperar dados de armazenamento de dados subjacente e executar operações como classificação, inserção, exclusão e atualização.  
+  
+ Classes de controle de fonte de dados que implementam o <xref:System.Web.UI.IDataSource> implementar interface o <xref:System.Web.UI.IDataSource.GetView%2A> método para retornar fortemente tipada exibir objetos associados à classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como uma classe de controle de fonte de dados que implementa o <xref:System.Web.UI.IDataSource> interface implementa o <xref:System.Web.UI.IDataSource.GetView%2A> método, retornar uma instância com rigidez de tipos do <xref:System.Web.UI.DataSourceView> classe. Como o controle de fonte de dados oferece suporte a apenas um modo de exibição, ele ignora o nome e retorna uma exibição nomeada com o nome de exibição padrão. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.DataSourceControl> classe.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#3)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IDataSource.GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma coleção de nomes que representa a lista de objetos de exibição associada a <see cref="T:System.Web.UI.IDataSource" /> interface.</summary>
+        <returns>Um <see cref="T:System.Collections.ICollection" /> que contém os nomes das exibições associadas a <see cref="T:System.Web.UI.IDataSource" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de controle de fonte de dados podem dar suporte a uma ou mais exibições nomeadas em seus dados subjacentes. O <xref:System.Web.UI.IDataSource.GetViewNames%2A> método retorna uma coleção de nomes de exibição associada atualmente com a instância de controle de fonte de dados. Os chamadores podem iterar a coleção de nomes de exibição e recuperar individuais <xref:System.Web.UI.DataSourceView> objetos com o <xref:System.Web.UI.IDataSource.GetView%2A> método.  
+  
+ Classes de controle de fonte de dados que implementam o <xref:System.Web.UI.IDataSource> implementar interface o <xref:System.Web.UI.IDataSource.GetViewNames%2A> método para retornar uma coleção de nomes que representa a fonte de dados exibir objetos associados a classe de controle de fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como um controle de fonte de dados que implementa o <xref:System.Web.UI.IDataSource> interface implementa o <xref:System.Web.UI.IDataSource.GetViewNames%2A> método, retornando um <xref:System.Collections.ICollection> coleção de nomes. Como a fonte de dados oferece suporte a apenas um modo de exibição, o método retorna uma coleção de um elemento usando o nome padrão para o modo de exibição. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.DataSourceControl> classe.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.CsvDataSource_1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/CS/csvdatasource.cs#4)]
+ [!code-vb[Urtue.Samples.Alexkr.CsvDataSource_1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.CsvDataSource_1/VB/csvdatasource.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,104 @@
+<Type Name="IPostBackDataHandler" FullName="System.Web.UI.IPostBackDataHandler">
+  <TypeSignature Language="C#" Value="public interface IPostBackDataHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPostBackDataHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IPostBackDataHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos que os controles do servidor ASP.NET devem implementar para carregar dados de postback automaticamente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve implementar o <xref:System.Web.UI.IPostBackDataHandler> interface durante a criação de um controle de servidor que precisa examinar os dados de formulário que são lançados para o servidor pelo cliente. O contrato que define essa interface permite que um controle de servidor para determinar se o seu estado deve ser alterado como resultado de postback e a geração de eventos apropriados. Para obter mais informações, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um controle de servidor de caixa de texto personalizado que implementa o <xref:System.Web.UI.IPostBackDataHandler> interface. O <xref:System.Web.UI.WebControls.TextBox.Text%2A> propriedade é alterada como resultado de postback, e o controle de servidor gera um <xref:System.Web.UI.WebControls.TextBox.TextChanged> evento após os dados de postagem foi carregados.  
+  
+ [!code-csharp[Classic IPostBackDataHandler Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic IPostBackDataHandler Example/CS/source.cs#1)]
+ [!code-vb[Classic IPostBackDataHandler Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic IPostBackDataHandler Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="public bool LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IPostBackDataHandler.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">O identificador da chave do controle.</param>
+        <param name="postCollection">A coleção de todos os valores de nome de entrada.</param>
+        <summary>Quando implementado por uma classe, processa dados de postback para um controle de servidor ASP.NET.</summary>
+        <returns>
+          <see langword="true" /> se o estado do controle do servidor mudar como resultado do postback; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A estrutura de página ASP.NET controla todos os controles de servidor que retornam `true` para esta chamada de método e, em seguida, invoca o <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A> método nesses controles.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um controle de servidor que implementa uma versão do <xref:System.Web.UI.IPostBackDataHandler.LoadPostData%2A> método.  
+  
+ [!code-csharp[Classic IPostBackDataHandler.LoadPostData Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic IPostBackDataHandler.LoadPostData Example/CS/source.cs#1)]
+ [!code-vb[Classic IPostBackDataHandler.LoadPostData Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic IPostBackDataHandler.LoadPostData Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="public void RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado por uma classe, sinaliza o controle de servidor para notificar o aplicativo ASP.NET de que o estado do controle foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A> método dispara qualquer evento de alteração para o controle de servidor que implementa o <xref:System.Web.UI.IPostBackDataHandler> interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como um controle de servidor pode implementar o <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A> método.  
+  
+ [!code-csharp[Classic IPostBackDataHandler.RaisePostDataChangedEvent Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic IPostBackDataHandler.RaisePostDataChangedEvent Example/CS/source.cs#1)]
+ [!code-vb[Classic IPostBackDataHandler.RaisePostDataChangedEvent Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic IPostBackDataHandler.RaisePostDataChangedEvent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

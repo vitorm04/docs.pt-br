@@ -1,0 +1,1479 @@
+<Type Name="XmlDataSource" FullName="System.Web.UI.WebControls.XmlDataSource">
+  <TypeSignature Language="C#" Value="public class XmlDataSource : System.Web.UI.HierarchicalDataSourceControl, System.ComponentModel.IListSource, System.Web.UI.IDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDataSource extends System.Web.UI.HierarchicalDataSourceControl implements class System.ComponentModel.IListSource, class System.Web.UI.IDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.XmlDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HierarchicalDataSourceControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IListSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Transforming")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("DataFile")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.XmlDataSourceDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.UI.WebControls.XmlDataSource))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma fonte de dados XML para controles ligados a dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Fontes de dados XML](#source_of_xml_data)  
+  
+-   [Atualização de dados XML](#updating_xml_data)  
+  
+-   [Especificando uma transformação XSL](#specifying_an_xsl_transformation)  
+  
+-   [Usando uma expressão XPath de filtragem](#filtering_using_an_xpath_expression)  
+  
+-   [Cache](#caching)  
+  
+-   [Recursos adicionais](#additional_features)  
+  
+-   [Objeto de exibição de dados](#data_view_object)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ O <xref:System.Web.UI.WebControls.XmlDataSource> controle é um controle de fonte de dados que apresenta dados XML em controles associados a dados. O <xref:System.Web.UI.WebControls.XmlDataSource> controle pode ser usado por controles de associação de dados para exibir dados hierárquicos e tabulares. O <xref:System.Web.UI.WebControls.XmlDataSource> controle normalmente é usado para exibir dados hierárquicos XML em cenários de somente leitura. Porque o <xref:System.Web.UI.WebControls.XmlDataSource> controle estende o <xref:System.Web.UI.HierarchicalDataSourceControl> classe, ele funciona com dados hierárquicos. O <xref:System.Web.UI.WebControls.XmlDataSource> controlar também implementa o <xref:System.Web.UI.IDataSource> interface e funciona com a tabela, ou estilo de lista, os dados.  
+  
+> [!NOTE]
+>  Para fins de segurança, nenhum do <xref:System.Web.UI.WebControls.XmlDataSource> propriedades de controle são armazenadas no estado de exibição. Desde que seja tecnicamente possível decodificar o conteúdo do estado de exibição no cliente, armazenar informações importantes sobre a estrutura de dados ou seu conteúdo pode expor você a uma ameaça de divulgação de informações. Observe que, se você precisa armazenar informações como <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade em estado de exibição, você pode habilitar a criptografia proteger o conteúdo, definindo <xref:System.Web.UI.Page.ViewStateEncryptionMode%2A> no `@ Page` diretiva.  
+  
+ Página desenvolvedores use o <xref:System.Web.UI.WebControls.XmlDataSource> controle para exibir os dados XML usando controles associados a dados.  
+  
+<a name="source_of_xml_data"></a>   
+## <a name="sources-of-xml-data"></a>Fontes de dados XML  
+ O <xref:System.Web.UI.WebControls.XmlDataSource> normalmente carrega dados XML de um arquivo XML, que é especificado pelo <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> propriedade. Dados XML também podem ser armazenados diretamente pelo controle de fonte de dados no formulário de cadeia de caracteres usando o <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedade. Se você deseja transformar os dados XML antes de ser exibido por um controle associado a dados, você pode fornecer uma folha de estilo Extensible Stylesheet Language (XSL) para a transformação. Como com os dados XML, você normalmente carrega a folha de estilo de um arquivo, indicado pelo <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedade, mas você pode também armazená-lo no formulário de cadeia de caracteres diretamente usando o <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> propriedade.  
+  
+<a name="updating_xml_data"></a>   
+## <a name="updating-xml-data"></a>Atualização de dados XML  
+ O <xref:System.Web.UI.WebControls.XmlDataSource> controle é geralmente usado em cenários de dados somente leitura em que um controle associado a dados exibe dados XML. No entanto, você também pode usar o <xref:System.Web.UI.WebControls.XmlDataSource> controle para editar dados XML. Para editar os dados XML, chame o <xref:System.Web.UI.WebControls.XmlDataSource.GetXmlDocument%2A> método para recuperar um <xref:System.Xml.XmlDataDocument> objeto que é uma representação na memória dos dados XML. Você pode usar o modelo de objeto exposto pelo <xref:System.Xml.XmlDataDocument> e <xref:System.Xml.XmlNode> objetos contém ou usar uma expressão de filtragem XPath para manipular dados no documento. Quando você tiver feito alterações à representação em memória dos dados XML, você pode salvá-lo no disco chamando o <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> método.  
+  
+ Há algumas restrições para os recursos de edição de <xref:System.Web.UI.WebControls.XmlDataSource> controle:  
+  
+-   Os dados XML devem ser carregados de um arquivo XML que é indicado pelo <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> propriedade, não da embutido XML especificado no <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedade.  
+  
+-   Nenhuma transformação XSLT pode ser especificada no <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> ou <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedades.  
+  
+-   O <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> método não manipula operações simultâneas de salvar por diferentes solicitações. Se mais de um usuário estiver editando um arquivo XML por meio de <xref:System.Web.UI.WebControls.XmlDataSource>, não há nenhuma garantia de que todos os usuários estão trabalhando com os mesmos dados. Também é possível para um <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> operação falhar devido a estes mesmos problemas de simultaneidade.  
+  
+<a name="specifying_an_xsl_transformation"></a>   
+## <a name="specifying-an-xsl-transformation"></a>Especificando uma transformação XSL  
+ Uma operação comum executada com dados XML é transformá-los de um conjunto de dados XML em outro. O <xref:System.Web.UI.WebControls.XmlDataSource> controle suporta transformações de XML com o <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> e <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedades, que especifica uma folha de estilos XSL para aplicar aos dados XML antes de ser passado para um controle associado a dados, e o <xref:System.Web.UI.WebControls.XmlDataSource.TransformArgumentList%2A> propriedade, que permite que você forneça argumentos dinâmicos de folha de estilos XSLT a ser usado por uma folha de estilos XSL durante a transformação. Se você especificar uma expressão usando a filtragem de XPath do <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade, ela é aplicada após a transformação ocorrer.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.XmlDataSource> classe usa preterido <xref:System.Xml.Xsl.XslTransform> classe para executar transformações XSL. Se você quiser usar os recursos de folha de estilo que foram introduzidos após o <xref:System.Xml.Xsl.XslTransform> classe foi substituída, aplicar as transformações manualmente usando o <xref:System.Xml.Xsl.XslCompiledTransform> classe.  
+  
+<a name="filtering_using_an_xpath_expression"></a>   
+## <a name="filtering-using-an-xpath-expression"></a>Usando uma expressão XPath de filtragem  
+ Por padrão, o <xref:System.Web.UI.WebControls.XmlDataSource> controle carrega todos os dados XML no arquivo XML identificada pelo <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> propriedade ou embutido encontrado no <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedade, mas você pode filtrar os dados usando uma expressão XPath. O <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade oferece suporte a um filtro de sintaxe XPath que é aplicado depois que os dados XML são carregados e transformados.  
+  
+<a name="caching"></a>   
+## <a name="caching"></a>Cache  
+ Por motivos de desempenho, o cache está habilitado para o <xref:System.Web.UI.WebControls.XmlDataSource> controle por padrão. Abrir e ler um arquivo XML no servidor sempre que uma página solicitada podem reduzir o desempenho do seu aplicativo. O cache permite que você reduzir a carga de processamento em seu servidor às custas de memória no servidor Web. Na maioria dos casos, isso é uma boa troca. O <xref:System.Web.UI.WebControls.XmlDataSource> automaticamente os dados em cache quando o <xref:System.Web.UI.WebControls.XmlDataSource.EnableCaching%2A> está definida como `true`e o <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> propriedade é definida como o número de segundos que o cache armazena os dados antes do cache é invalidado. Você pode usar o <xref:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy%2A> para ajustar mais o comportamento de cache do controle de fonte de dados.  
+  
+<a name="additional_features"></a>   
+## <a name="additional-features"></a>Recursos adicionais  
+ A tabela a seguir lista recursos adicionais que são suportados pelo <xref:System.Web.UI.WebControls.XmlDataSource> controle.  
+  
+|Recurso|Descrição|  
+|----------------|-----------------|  
+|Classificação|Não tem suportada a <xref:System.Web.UI.WebControls.XmlDataSource> controle.|  
+|Filtragem|O <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade pode ser usada para filtrar os dados XML usando uma expressão XPath apropriada.|  
+|Paginação|Não tem suportada a <xref:System.Web.UI.WebControls.XmlDataSource> controle.|  
+|Atualizando|Suporte ao manipular o <xref:System.Xml.XmlDataDocument> diretamente e, em seguida, chamar o <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> método.|  
+|Excluindo|Suporte ao manipular o <xref:System.Xml.XmlDataDocument> diretamente e, em seguida, chamar o <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> método.|  
+|Inserindo|Suporte ao manipular o <xref:System.Xml.XmlDataDocument> diretamente e, em seguida, chamar o <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> método.|  
+|Cache|Habilitado por padrão, com o <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> propriedade definida como 0 (infinito) e o <xref:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy%2A> propriedade definida como <xref:System.Web.UI.DataSourceCacheExpiry.Absolute>.|  
+  
+<a name="data_view_object"></a>   
+## <a name="data-view-object"></a>Objeto de exibição de dados  
+ Porque o <xref:System.Web.UI.WebControls.XmlDataSource> controle oferece suporte para controles associados a dados que exibem dados hierárquicos, como também os controles que exibem dados de tabela, o controle de fonte de dados oferece suporte a vários tipos de objetos de exibição de fonte de dados em seus dados XML subjacentes. O <xref:System.Web.UI.WebControls.XmlDataSource> controle recupera uma única chamada <xref:System.Web.UI.WebControls.XmlDataSourceView> objeto quando usado com um controle associado a dados que exibe dados de tabela. O <xref:System.Web.UI.IDataSource.GetViewNames%2A> método identifica essa única chamada de modo de exibição. Quando usado com um controle associado a dados que exibe dados hierárquicos, o <xref:System.Web.UI.WebControls.XmlDataSource> controlar recupera um <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView> para qualquer caminho hierárquico exclusivo passado para o <xref:System.Web.UI.WebControls.XmlDataSource.GetHierarchicalView%2A> método.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:XmlDataSource  
+    CacheDuration="string|Infinite"  
+    CacheExpirationPolicy="Absolute|Sliding"  
+    CacheKeyDependency="string"  
+    DataFile="string"  
+    EnableCaching="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnTransforming="Transforming event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    TransformArgumentList="string"  
+    TransformFile="string"  
+    Visible="True|False"  
+    XPath="string"  
+>  
+    <Data>string</Data>  
+    <Transform>string</Transform>  
+</asp:XmlDataSource>  
+```  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controlar com um <xref:System.Web.UI.WebControls.TreeView> controle para exibir os dados XML de exemplo de arquivo XML. O segundo exemplo demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir dados XML.  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controlar com um <xref:System.Web.UI.WebControls.TreeView> controle para exibir dados XML. O <xref:System.Web.UI.WebControls.XmlDataSource> carrega dados XML do arquivo XML identificado pelo <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> propriedade.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_1/CS/xmlds1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_1/VB/xmlds1vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<books>  
+   <computerbooks>  
+     <book title="Secrets of Silicon Valley" author="Sheryl Hunter"/>  
+     <book title="Straight Talk About Computers" author="Dean Straight"/>  
+     <book title="You Can Combat Computer Stress!" author="Marjorie Green"/>                  
+   </computerbooks>  
+   <cookbooks>  
+     <book title="Silicon Valley Gastronomic Treats" author="Innes del Castill"/>  
+   </cookbooks>  
+</books>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir dados XML. O <xref:System.Web.UI.WebControls.Repeater> usa controle itens dentro do XML de uma expressão de associação de dados XPath para associar aos dados de documentos que o <xref:System.Web.UI.WebControls.XmlDataSource> representa. Para obter mais informações sobre `XPath` e `XPathSelect` sintaxe de associação de dados, consulte o <xref:System.Web.UI.XPathBinder> classe.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_14#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_14/CS/xmlds14cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_14#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_14/VB/xmlds14vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<?xml version="1.0" encoding="iso-8859-1"?>  
+ <orders>  
+   <order>  
+     <customer id="12345" />  
+     <customername>  
+         <firstn>John</firstn>  
+         <lastn>Smith</lastn>  
+     </customername>  
+     <transaction id="12345" />  
+     <shipaddress>  
+         <address1>1234 Tenth Avenue</address1>  
+         <city>Bellevue</city>  
+         <state>Washington</state>  
+         <zip>98001</zip>  
+     </shipaddress>  
+     <summary>  
+         <item dept="tools">screwdriver</item>  
+         <item dept="tools">hammer</item>  
+         <item dept="plumbing">fixture</item>  
+     </summary>  
+   </order>  
+</orders>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.UI.WebControls.XmlDataSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheDuration">
+      <MemberSignature Language="C#" Value="public virtual int CacheDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CacheDuration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.CacheDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataSourceCacheDurationConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período de tempo, em segundos, que o controle de fonte de dados armazena dados em cache que foi recuperado.</summary>
+        <value>O número de segundos que o <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle armazena em cache os resultados de uma operação de recuperação de dados. O valor padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.XmlDataSource> controle automaticamente os dados em cache quando o seguinte se aplica:  
+  
+-   A propriedade <xref:System.Web.UI.WebControls.XmlDataSource.EnableCaching%2A> é definida como `true`.  
+  
+-   O <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> propriedade é definida como um valor maior que 0, que indica o número de segundos que o cache armazena os dados antes do cache é invalidado.  
+  
+ Qualquer alteração de <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedade ou o conteúdo do arquivo que contém os dados XML faz com que o cache seja invalidado.  
+  
+ Por padrão, o <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> propriedade é definida como 0, que indica que um cache indefinido, e a fonte de dados armazenará em cache dados até que o arquivo XML que depende é alterado.  
+  
+ O comportamento do cache é controlado por uma combinação da duração e o <xref:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy%2A> configuração. Se <xref:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy%2A> é definido como <xref:System.Web.UI.DataSourceCacheExpiry.Absolute>, o <xref:System.Web.UI.WebControls.XmlDataSource> controle armazena em cache dados a primeira operação de recuperação de dados, mantém na memória pelo período de tempo especificado por <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A>e invalida depois que o tempo expirou. O cache é atualizado, em seguida, após a próxima operação. Se <xref:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy%2A> é definido como <xref:System.Web.UI.DataSourceCacheExpiry.Sliding>, o controle de fonte de dados armazena em cache dados a primeira operação de recuperação de dados, mas redefine a janela de tempo que mantém o cache após cada operação subsequente. O cache só expirará se não houver nenhuma atividade por um período igual de <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> desde a última recuperação de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como habilitar o cache ao usar o <xref:System.Web.UI.WebControls.XmlDataSource> controle para exibir dados contidos em um arquivo XML. O cache é habilitado quando o <xref:System.Web.UI.WebControls.XmlDataSource.EnableCaching%2A> está definida como `true` e o <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> é definido como o número de segundos em que os dados são armazenados em cache pelo controle de fonte de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_16#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_16/CS/xmlds16cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_16#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_16/VB/xmlds16vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<books>  
+   <computerbooks>  
+     <book title="Secrets of Silicon Valley" author="Sheryl Hunter"/>  
+     <book title="Straight Talk About Computers" author="Dean Straight"/>  
+     <book title="You Can Combat Computer Stress!" author="Marjorie Green"/>  
+   </computerbooks>  
+   <cookbooks>  
+     <book title="Silicon Valley Gastronomic Treats" author="Innes del Castill"/>  
+   </cookbooks>  
+</books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheExpirationPolicy">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataSourceCacheExpiry CacheExpirationPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataSourceCacheExpiry CacheExpirationPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceCacheExpiry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a política de expiração de cache que é combinada com a duração do cache para descrever o comportamento de cache do cache que usa o controle de fonte de dados.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.DataSourceCacheExpiry" />. A configuração de política de expiração de cache padrão é <see cref="F:System.Web.UI.DataSourceCacheExpiry.Absolute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento do cache é controlado por uma combinação da <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> e <xref:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy%2A> configurações. Se o <xref:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy%2A> é definido como <xref:System.Web.UI.DataSourceCacheExpiry.Absolute>, o <xref:System.Web.UI.WebControls.XmlDataSource> armazena em cache dados a primeira operação de recuperação de dados, mantém na memória pelo período de tempo especificado por <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A>e invalida depois que o tempo expirou. O cache é atualizado, em seguida, após a próxima operação. Se o <xref:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy%2A> é definido como <xref:System.Web.UI.DataSourceCacheExpiry.Sliding>, o controle de fonte de dados armazena em cache dados a primeira operação de recuperação de dados, mas redefine a janela de tempo que mantém o cache após cada operação subsequente. O cache expirará somente se não houver nenhuma atividade por um período igual de <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> desde a última recuperação de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como habilitar o cache ao usar o <xref:System.Web.UI.WebControls.XmlDataSource> controle para exibir dados contidos em um arquivo XML. O cache é habilitado quando o <xref:System.Web.UI.WebControls.XmlDataSource.EnableCaching%2A> está definida como `true` e o <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> é definido como o número de segundos em que os dados são armazenados em cache pelo controle de fonte de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_16#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_16/CS/xmlds16cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_16#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_16/VB/xmlds16vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<books>  
+   <computerbooks>  
+     <book title="Secrets of Silicon Valley" author="Sheryl Hunter"/>  
+     <book title="Straight Talk About Computers" author="Dean Straight"/>  
+     <book title="You Can Combat Computer Stress!" author="Marjorie Green"/>                  
+   </computerbooks>  
+   <cookbooks>  
+     <book title="Silicon Valley Gastronomic Treats" author="Innes del Castill"/>  
+   </cookbooks>  
+</books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheKeyContext">
+      <MemberSignature Language="C#" Value="public virtual string CacheKeyContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CacheKeyContext" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.CacheKeyContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da chave de cache para o controle de fonte de dados do estado de exibição ou adiciona a chave de cache para estado de exibição.</summary>
+        <value>O valor da chave de cache ou uma cadeia de caracteres vazia se a chave de cache não está em estado de exibição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.XmlDataSource.CacheKeyContext%2A> propriedade permite que você crie manualmente uma chave de cache para o <xref:System.Web.UI.WebControls.XmlDataSource> controle. Isso é necessário apenas se você estiver atribuindo um objeto que contém os dados XML ou XSLT para o controle em vez de especificar um arquivo que contém os dados. Quando você atribui dados para o controle, os dados não são usados para gerar a chave de cache. Em vez disso, você deve gerar uma chave exclusiva do cache manualmente se você pretende atualizar o objeto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheKeyDependency">
+      <MemberSignature Language="C#" Value="public virtual string CacheKeyDependency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CacheKeyDependency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.CacheKeyDependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma dependência de chave definidas pelo usuário que está vinculada a todos os objetos de cache de dados criados pelo controle da fonte de dados. Todos os objetos de cache expirarem explicitamente quando a chave expira.</summary>
+        <value>Uma chave que identifica todos os objetos de cache criado pelo <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.XmlDataSource> controle oferece suporte ao cache de dados. Enquanto os dados em cache, o <xref:System.Web.UI.WebControls.XmlDataSource> recupera dados do cache em vez do arquivo de dados subjacente. Quando o cache expira, ele recupera dados do arquivo subjacente e novamente armazena em cache os dados.  
+  
+ Você pode definir o <xref:System.Web.UI.WebControls.XmlDataSource.CacheKeyDependency%2A> propriedade para criar uma dependência entre todas as entradas de cache criado pelo <xref:System.Web.UI.WebControls.XmlDataSource> controle e a chave. Programaticamente, você pode invalidar todas as entradas de cache a qualquer momento por meio da expiração da chave.  
+  
+ Devido as propriedades usadas para criar o <xref:System.Web.UI.WebControls.XmlDataSource.CacheKeyDependency%2A>, é possível que várias <xref:System.Web.UI.WebControls.XmlDataSource> controles podem usar o mesmo cache em cenários onde eles carregar os mesmos dados do mesmo arquivo XML e o arquivo de transformação e têm o mesmo <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> e <xref:System.Web.UI.WebControls.XmlDataSource.CacheExpirationPolicy%2A> definido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public virtual string Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Data" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.MultilineStringEditor,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.ComponentModel.MultilineStringConverter,System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um bloco de dados XML ao qual o controle de fonte de dados é associado.</summary>
+        <value>Uma cadeia de caracteres de dados XML embutidos à qual o controle <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> é associado. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em cenários declarativos, o <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> a propriedade é especificada como uma propriedade interna combinada do <xref:System.Web.UI.WebControls.XmlDataSource> objeto. Uma propriedade interna é compatível com dados XML, porque ela permite que você formate os dados XML de qualquer forma e ignorar problemas de preenchimento de caractere, como preenchimento de caracteres de aspas.  
+  
+ Se o <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> e <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> propriedade terá precedência e os dados no arquivo XML são usados em vez dos dados XML especificados no <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedade.  
+  
+ Se você alterar o valor da <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedade, o <xref:System.Web.UI.IDataSource.DataSourceChanged> é gerado. Se o cache está habilitado e você alterar o valor de <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A>, o cache é invalidado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle para exibir dados XML embutido contidos pelo <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedade com um <xref:System.Web.UI.WebControls.TreeView> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_10#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_10/CS/xmlds10cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_10#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_10/VB/xmlds10vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O documento está carregando.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFile">
+      <MemberSignature Language="C#" Value="public virtual string DataFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.DataFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.XmlDataFileEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o nome do arquivo de um arquivo XML ao qual a fonte de dados é associada.</summary>
+        <value>O caminho físico absoluto ou relativo do arquivo XML que contém os dados que o controle <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> representa. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> e <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> propriedade terá precedência e os dados no arquivo XML são usados em vez dos dados XML especificados no <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedade.  
+  
+ Se você alterar o valor da <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> propriedade, o <xref:System.Web.UI.IDataSource.DataSourceChanged> é gerado. Se o cache está habilitado e você alterar o valor de <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A>, o cache é invalidado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle para exibir os dados XML contidos em um arquivo com um <xref:System.Web.UI.WebControls.TreeView> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_1/CS/xmlds1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_1/VB/xmlds1vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<books>  
+   <computerbooks>  
+     <book title="Secrets of Silicon Valley" author="Sheryl Hunter"/>  
+     <book title="Straight Talk About Computers" author="Dean Straight"/>  
+     <book title="You Can Combat Computer Stress!" author="Marjorie Green"/>                  
+   </computerbooks>  
+   <cookbooks>  
+     <book title="Silicon Valley Gastronomic Treats" author="Innes del Castill"/>  
+   </cookbooks>  
+</books>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O documento está carregando.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCaching">
+      <MemberSignature Language="C#" Value="public virtual bool EnableCaching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableCaching" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.EnableCaching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> tem o cache de dados habilitado.</summary>
+        <value>
+          <see langword="true" /> se o cache de dados estiver habilitado para o controle de fonte de dados; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.XmlDataSource> controle automaticamente os dados em cache quando o <xref:System.Web.UI.WebControls.XmlDataSource.EnableCaching%2A> está definida como `true`. Por padrão, o <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> propriedade é definida como 0, que indica que um cache indefinido, e a fonte de dados armazenará em cache dados até que o arquivo XML que depende é alterado. Se você definir o <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> propriedade para um valor maior que 0, o cache armazena dados para ou número de segundos antes de recuperar um novo conjunto.  
+  
+ Se o <xref:System.Web.UI.WebControls.XmlDataSource.EnableCaching%2A> está definida como `true` e o <xref:System.Web.UI.WebControls.XmlDataSource.TransformArgumentList%2A> estiver definida, as entradas de cache não são invalidadas automaticamente quando alterar os parâmetros na lista de argumentos de transformações. Nesse caso, você deve escrever código para invalidar o cache, definindo o <xref:System.Web.UI.WebControls.XmlDataSource.CacheKeyDependency%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como habilitar o cache ao usar o <xref:System.Web.UI.WebControls.XmlDataSource> controle para exibir dados contidos em um arquivo XML. O cache é habilitado quando o <xref:System.Web.UI.WebControls.XmlDataSource.EnableCaching%2A> está definida como `true` e o <xref:System.Web.UI.WebControls.XmlDataSource.CacheDuration%2A> é definido como o número de segundos em que os dados são armazenados em cache pelo controle de fonte de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_16#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_16/CS/xmlds16cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_16#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_16/VB/xmlds16vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<books>  
+   <computerbooks>  
+     <book title="Secrets of Silicon Valley" author="Sheryl Hunter"/>  
+     <book title="Straight Talk About Computers" author="Dean Straight"/>  
+     <book title="You Can Combat Computer Stress!" author="Marjorie Green"/>                  
+   </computerbooks>  
+   <cookbooks>  
+     <book title="Silicon Valley Gastronomic Treats" author="Innes del Castill"/>  
+   </cookbooks>  
+</books>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHierarchicalView">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.HierarchicalDataSourceView GetHierarchicalView (string viewPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.HierarchicalDataSourceView GetHierarchicalView(string viewPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSource.GetHierarchicalView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewPath">Uma expressão XPath que identifica um nó do qual a exibição hierárquica atual é criada.</param>
+        <summary>Obtém o objeto de exibição de fonte de dados para o <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle. O <paramref name="viewPath" /> parâmetro pode ser uma expressão XPath.</summary>
+        <returns>Retorna um <see cref="T:System.Web.UI.WebControls.XmlHierarchicalDataSourceView" /> objeto que representa uma única exibição dos dados a partir do nó de dados identificado por <paramref name="viewPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode chamar o <xref:System.Web.UI.WebControls.XmlDataSource.GetHierarchicalView%2A> método para recuperar um <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView> objeto associado a <xref:System.Web.UI.WebControls.XmlDataSource> controle. Se você especificar `viewPath` valor, o <xref:System.Web.UI.WebControls.XmlDataSource> controle retorna um objeto de exibição de fonte de dados que representa o modo de exibição do nó identificado por `viewPath`, juntamente com todos os seus nós filho. Se você definir `viewPath` para <xref:System.String.Empty?displayProperty=nameWithType>, o <xref:System.Web.UI.WebControls.XmlDataSource> verificações de controle de <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade para determinar o nó raiz para criar a exibição de fonte de dados. Se o <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade for definida, o <xref:System.Web.UI.WebControls.XmlDataSource> controle utiliza para retornar uma exibição da fonte de dados da mesma forma, o `viewPath` expressão é usada. Se o <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade não for definida, o <xref:System.Web.UI.WebControls.XmlDataSource> controle retorna uma exibição de todos os nós de dados nos dados XML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlDocument">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDocument GetXmlDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlDocument GetXmlDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSource.GetXmlDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDocument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Carrega os dados XML na memória, diretamente do armazenamento de dados subjacente ou do cache e o retorna no formato de um objeto <see cref="T:System.Xml.XmlDataDocument" />.</summary>
+        <returns>Um objeto <see cref="T:System.Xml.XmlDataDocument" /> que representa o XML especificado na propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.Data" /> ou no arquivo identificado pela propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" />, com todas as transformações e consultas <see cref="P:System.Web.UI.WebControls.XmlDataSource.XPath" /> aplicadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.XmlDataSource.GetXmlDocument%2A> método de acesso direto a uma representação na memória dos dados XML subjacentes.  
+  
+ Você pode manipular retornado <xref:System.Xml.XmlDataDocument> de objeto e, em seguida, chamar <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> para manter suas alterações para o arquivo XML especificado pelo <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> propriedade. Vários requisitos devem ser atendidos antes do <xref:System.Xml.XmlDataDocument> objeto pode ser salvo com êxito. Para obter mais informações, consulte o método <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A>.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controlar com um <xref:System.Web.UI.WebControls.TreeView> controle para exibir e editar dados XML contidos em um arquivo XML. O segundo exemplo demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir e editar dados XML contidos em um arquivo XML.  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controlar com um <xref:System.Web.UI.WebControls.TreeView> controle para exibir e editar dados XML contidos em um arquivo XML. Os dados são manipulados na memória usando o <xref:System.Web.UI.WebControls.XmlDataSource.GetXmlDocument%2A> método sempre que você seleciona um <xref:System.Web.UI.WebControls.TreeView> nó e, em seguida, é salvo no arquivo XML. Por fim, <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> é chamado de <xref:System.Web.UI.WebControls.TreeView> controle para atualizar os dados que ele exibe.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_17#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_17/CS/xmlds17cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_17#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_17/VB/xmlds17vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir e editar dados XML contidos em um arquivo XML. Como com o exemplo anterior, os dados são manipulados na memória usando o <xref:System.Xml.XmlDataDocument> recuperados pelo <xref:System.Web.UI.WebControls.XmlDataSource.GetXmlDocument%2A> método. Por fim, <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> é chamado de <xref:System.Web.UI.WebControls.TreeView> controle para atualizar os dados que ele exibe.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_18#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_18/CS/xmlds18cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_18#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_18/VB/xmlds18vb.aspx#1)]  
+  
+ O arquivo XML nos exemplos de código tem os seguintes dados:  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+ <bookstore xmlns:bk="urn:samples">  
+   <book genre="novel" publicationdate="1999" bk:ISBN="0000000000">  
+     <title>Secrets of Silicon Valley</title>  
+     <author>  
+       <first-name>Sheryl</first-name>  
+       <last-name>Hunter</last-name>  
+     </author>  
+     <price>24.95</price>"   
+     </book>  
+   <book genre="novel" publicationdate="1985" bk:ISBN="1111111111">  
+     <title>Straight Talk About Computers</title>  
+     <author>  
+       <first-name>Dean</first-name>  
+       <last-name>Straight</last-name>  
+     </author>  
+     <price>29.95</price>  
+   </book>  
+</bookstore>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Uma URL é especificada para o <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" /> propriedade; no entanto, o <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle não tem as permissões corretas para o recurso da Web.</exception>
+        <exception cref="T:System.NotSupportedException">Uma URL é especificada para a propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" />; no entanto, ela não é uma URL baseada em HTTP.  
+  
+ \- ou -  
+  
+ Um caminho relativo em tempo de design não foi mapeado corretamente pelo designer antes do uso do controle <see cref="T:System.Web.UI.WebControls.XmlDataSource" />.  
+  
+ \- ou -  
+  
+ A representação de cache e de cliente está habilitada. O <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle não oferece suporte para cache quando a representação do cliente está habilitada.</exception>
+        <exception cref="T:System.Web.HttpException">O acesso é negado para o caminho especificado da propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTransforming">
+      <MemberSignature Language="C#" Value="protected virtual void OnTransforming (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTransforming(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSource.OnTransforming(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Web.UI.WebControls.XmlDataSource.Transforming" /> evento antes do <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle executa uma transformação XSLT em seus dados XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ O <xref:System.Web.UI.WebControls.XmlDataSource.OnTransforming%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controlar com um <xref:System.Web.UI.WebControls.TreeView> transformados de controle para exibir dados XML. A transformação de XML é executada usando a folha de estilo indicada pelo <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedade. Além disso, a folha de estilo usa transformação argumentos que são passados para o controle de fonte de dados em um <xref:System.Xml.Xsl.XsltArgumentList> objeto em tempo de execução. O exemplo de código demonstra como passar o <xref:System.Xml.Xsl.XsltArgumentList> objeto para o controle de fonte de dados ao manipular o <xref:System.Web.UI.WebControls.XmlDataSource.Transforming> evento com um manipulador de evento personalizado, que é identificado pelo nome do método definido para o <xref:System.Web.UI.WebControls.XmlDataSource.OnTransforming%2A> método.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_9#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_9/CS/xmlds9cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_9#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_9/VB/xmlds9vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<bookstore>  
+   <genre name="fiction">  
+     <book ISBN="0000000000">  
+       <title>Secrets of Silicon Valley</title>  
+       <price>12.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />             
+         <chapter num="2" name="Body" />            
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+   <genre name="novel">  
+     <book genre="novel" ISBN="1111111111">  
+       <title>Straight Talk About Computers</title>  
+       <price>24.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />   
+         <chapter num="2" name="Body" />  
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+</bookstore>  
+```  
+  
+ A transformação de XML é executada usando a folha de estilo a seguir.  
+  
+```  
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
+ <xsl:param name="purchdate"/>  
+ <xsl:template match="bookstore">  
+   <bookstore>  
+     <xsl:apply-templates select="genre"/>  
+   </bookstore>  
+ </xsl:template>  
+ <xsl:template match="genre">  
+   <genre>  
+     <xsl:attribute name="name">  
+       <xsl:value-of select="@name"/>  
+     </xsl:attribute>  
+     <xsl:apply-templates select="book"/>  
+   </genre>  
+ </xsl:template>  
+ <xsl:template match="book">  
+   <book>  
+     <xsl:attribute name="ISBN">  
+       <xsl:value-of select="@ISBN"/>  
+     </xsl:attribute>  
+     <xsl:attribute name="title">  
+       <xsl:value-of select="title"/>  
+       Price: <xsl:value-of select="price"/>  
+           15% discount if purchased by: <xsl:value-of select="$purchdate"/>        
+     </xsl:attribute>  
+     <xsl:apply-templates select="chapters/chapter" />  
+   </book>  
+ </xsl:template>  
+ <xsl:template match="chapter">  
+   <chapter>  
+     <xsl:attribute name="num">  
+       <xsl:value-of select="@num"/>  
+     </xsl:attribute>  
+     <xsl:attribute name="name">  
+       <xsl:value-of select="@name"/>  
+     </xsl:attribute>  
+     <xsl:apply-templates/>  
+   </chapter>  
+ </xsl:template>  
+</xsl:stylesheet>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.XmlDataSource.OnTransforming(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar o <see cref="M:System.Web.UI.WebControls.XmlDataSource.OnTransforming(System.EventArgs)" /> método da classe base, de modo que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSource.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva os dados XML atualmente mantidos na memória, o <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle no disco se o <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" /> está definida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enquanto o <xref:System.Web.UI.WebControls.XmlDataSource> controle normalmente é usado em cenários de associação de dados somente leitura, você pode usar o <xref:System.Web.UI.WebControls.XmlDataSource> controle para editar dados XML no arquivo de dados XML subjacente. Nesses cenários, os dados XML são carregados de um arquivo XML de <xref:System.Web.UI.WebControls.XmlDataSource> controle. Modificar o <xref:System.Xml.XmlDataDocument> na memória usando o <xref:System.Web.UI.WebControls.XmlDataSource.GetXmlDocument%2A> método e, em seguida, salvar em arquivo de dados XML, chamando o <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> método. Este cenário XML editável é possível quando as seguintes condições forem atendidas:  
+  
+-   Os dados XML são carregados de um arquivo XML indicado pelo <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> não de dados XML embutido especificados na propriedade o <xref:System.Web.UI.WebControls.XmlDataSource.Data%2A> propriedade.  
+  
+-   Nenhuma transformação XSLT é especificada no <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> ou <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedades.  
+  
+ O <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> método não manipula operações simultâneas de salvar por diferentes solicitações. Se mais de um usuário estiver editando um arquivo XML por meio de <xref:System.Web.UI.WebControls.XmlDataSource> controlar, não há nenhuma garantia de que todos os usuários estão trabalhando com os mesmos dados. Também é possível para um <xref:System.Web.UI.WebControls.XmlDataSource.Save%2A> operação falhar devido a estes mesmos problemas de simultaneidade.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controlar com um <xref:System.Web.UI.WebControls.TreeView> controle para exibir e editar dados XML contidos em um arquivo XML. O segundo exemplo de código demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir e editar dados XML contidos em um arquivo XML.  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controlar com um <xref:System.Web.UI.WebControls.TreeView> controle para exibir e editar dados XML contidos em um arquivo XML. Os dados são manipulados na memória usando o <xref:System.Web.UI.WebControls.XmlDataSource.GetXmlDocument%2A> método sempre que você seleciona um <xref:System.Web.UI.WebControls.TreeView> nó e, em seguida, é salvo no arquivo XML. Por fim, <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> é chamado de <xref:System.Web.UI.WebControls.TreeView> controle para atualizar os dados que ele exibe.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_17#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_17/CS/xmlds17cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_17#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_17/VB/xmlds17vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir e editar dados XML contidos em um arquivo XML. Como com o exemplo anterior, os dados são manipulados na memória usando o <xref:System.Xml.XmlDataDocument> objeto recuperado pelo <xref:System.Web.UI.WebControls.XmlDataSource.GetXmlDocument%2A> método. Por fim, <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> é chamado de <xref:System.Web.UI.WebControls.TreeView> controle para atualizar os dados que ele exibe.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_18#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_18/CS/xmlds18cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_18#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_18/VB/xmlds18vb.aspx#1)]  
+  
+ O arquivo XML nos exemplos de código tem os seguintes dados:  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+ <bookstore xmlns:bk="urn:samples">  
+   <book genre="novel" publicationdate="1999" bk:ISBN="0000000000">  
+     <title>Secrets of Silicon Valley</title>  
+     <author>  
+       <first-name>Sheryl</first-name>  
+       <last-name>Hunter</last-name>  
+     </author>  
+     <price>24.95</price>"   
+     </book>  
+   <book genre="novel" publicationdate="1985" bk:ISBN="1111111111">  
+     <title>Straight Talk About Computers</title>  
+     <author>  
+       <first-name>Dean</first-name>  
+       <last-name>Straight</last-name>  
+     </author>  
+     <price>29.95</price>  
+   </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Carregar dados XML usando o <see cref="P:System.Web.UI.WebControls.XmlDataSource.Data" /> propriedade em vez do <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" /> propriedade.  
+  
+ \- ou -  
+  
+ Uma URL é especificada para o <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" /> propriedade; no entanto, o <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle não tem as permissões corretas para o recurso da Web.</exception>
+        <exception cref="T:System.NotSupportedException">Uma URL é especificada para a propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" />; no entanto, ela não é uma URL baseada em HTTP.  
+  
+ \- ou -  
+  
+ Um caminho relativo em tempo de design não foi mapeado corretamente pelo designer antes do uso do controle <see cref="T:System.Web.UI.WebControls.XmlDataSource" />.</exception>
+        <exception cref="T:System.Web.HttpException">O acesso é negado para o caminho especificado da propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.ContainsListCollection">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IListSource.ContainsListCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IListSource.ContainsListCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.System#ComponentModel#IListSource#ContainsListCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.ComponentModel.IListSource.ContainsListCollection" />.</summary>
+        <value>
+          <see langword="true" /> se a coleção for uma coleção de objetos <see cref="T:System.Collections.IList" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.XmlDataSource> instância é convertida para o <xref:System.ComponentModel.IListSource> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.GetList">
+      <MemberSignature Language="C#" Value="System.Collections.IList IListSource.GetList ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IList System.ComponentModel.IListSource.GetList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSource.System#ComponentModel#IListSource#GetList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.IListSource.GetList" />.</summary>
+        <returns>Um objeto que implementa <see cref="T:System.Collections.IList" /> que pode ser associado a uma fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.XmlDataSource> instância é convertida para o <xref:System.ComponentModel.IListSource> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataSource.GetView">
+      <MemberSignature Language="C#" Value="System.Web.UI.DataSourceView IDataSource.GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Web.UI.DataSourceView System.Web.UI.IDataSource.GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSource.System#Web#UI#IDataSource#GetView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">O nome da exibição a ser recuperada. Se <see cref="F:System.String.Empty" /> for especificado, a exibição padrão para o <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle é recuperado.</param>
+        <summary>Obtém a exibição de fonte de dados nomeada associada ao controle de fonte de dados.</summary>
+        <returns>Retorna o nome <see cref="T:System.Web.UI.WebControls.XmlDataSourceView" /> objeto associado a <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataSource.GetViewNames">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection IDataSource.GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.ICollection System.Web.UI.IDataSource.GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlDataSource.System#Web#UI#IDataSource#GetViewNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IDataSource.GetViewNames" />.</summary>
+        <returns>Um objeto que implementa <see cref="T:System.Collections.ICollection" /> contendo nomes que representa a lista de objetos de exibição associada a <see cref="T:System.Web.UI.IDataSource" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.XmlDataSource> instância é convertida para o <xref:System.Web.UI.IDataSource> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public virtual string Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.MultilineStringEditor,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.ComponentModel.MultilineStringConverter,System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um bloco de dados de folha de estilos XSL linguagem extensível () que define uma transformação XSLT a ser executada nos dados XML gerenciados pelo <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle.</summary>
+        <value>Uma cadeia de caracteres de inline XSL que define uma transformação XML a ser executada nos dados contidos no <see cref="P:System.Web.UI.WebControls.XmlDataSource.Data" /> ou <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" /> propriedades. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em cenários declarativos, o <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> a propriedade é especificada como uma propriedade interna combinada do <xref:System.Web.UI.WebControls.XmlDataSource> objeto. Uma propriedade interna é compatível com dados de folha de estilo XSL, porque ela permite que você formate a folha de estilos de qualquer forma e ignorar problemas de preenchimento de caractere, como preenchimento de caracteres de aspas.  
+  
+ Se o <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> e <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedade terá precedência e os dados no arquivo de folha de estilos XSL (. xsl) são usados em vez dos elementos de folha de estilo especificados no <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> propriedade. Se uma expressão XPath é definida usando o <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade, ela é aplicada depois que os dados XML são transformados.  
+  
+ Se você alterar o valor da <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> propriedade, o <xref:System.Web.UI.IDataSource.DataSourceChanged> é gerado. Se o cache está habilitado e você alterar o valor de <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A>, o cache é invalidado.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.XmlDataSource> classe usa preterido <xref:System.Xml.Xsl.XslTransform> classe para executar transformações XSL. Se você quiser usar os recursos de folha de estilo que foram introduzidos após o <xref:System.Xml.Xsl.XslTransform> classe foi substituída, aplicar as transformações manualmente usando o <xref:System.Xml.Xsl.XslCompiledTransform> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> transformados de controle para exibir dados XML. A folha de estilos que executa a transformação é definidas embutidas pelo <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> propriedade do controle de fonte de dados.  
+  
+  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<?xml version="1.0" encoding="iso-8859-1"?>  
+ <orders>  
+   <order>  
+     <customer id="12345" />  
+     <customername>  
+         <firstn>Todd</firstn>  
+         <lastn>Rowe</lastn>  
+     </customername>  
+     <transaction id="12345" />  
+     <shipaddress>  
+         <address1>1234 Tenth Avenue</address1>  
+         <city>Bellevue</city>  
+         <state>Washington</state>  
+         <zip>98001</zip>  
+     </shipaddress>  
+     <summary>  
+         <item dept="tools">screwdriver</item>  
+         <item dept="tools">hammer</item>  
+         <item dept="plumbing">fixture</item>  
+     </summary>  
+   </order>  
+</orders>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O documento está carregando.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformArgumentList">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.Xsl.XsltArgumentList TransformArgumentList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Xsl.XsltArgumentList TransformArgumentList" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.TransformArgumentList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.XsltArgumentList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece uma lista de argumentos XSLT que são usadas com a folha de estilo definida pelo <see cref="P:System.Web.UI.WebControls.XmlDataSource.Transform" /> ou <see cref="P:System.Web.UI.WebControls.XmlDataSource.TransformFile" /> propriedades para executar uma transformação nos dados XML.</summary>
+        <value>Um <see cref="T:System.Xml.Xsl.XsltArgumentList" /> objeto que contém parâmetros XSLT e objetos a ser aplicado aos dados XML quando ele é carregado pelo <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.UI.WebControls.XmlDataSource.TransformArgumentList%2A> propriedade quando o <xref:System.Web.UI.WebControls.XmlDataSource.Transforming> é gerado para garantir que os parâmetros XSLT estão disponíveis no momento em que a transformação XSLT é aplicada aos dados XML.  
+  
+ Se o <xref:System.Web.UI.WebControls.XmlDataSource.EnableCaching%2A> está definida como `true` e o <xref:System.Web.UI.WebControls.XmlDataSource.TransformArgumentList%2A> estiver definida, as entradas de cache não são invalidadas automaticamente quando alterar os parâmetros na lista de argumentos de transformações. Nesse caso, você deve escrever código para invalidar o cache, definindo o <xref:System.Web.UI.WebControls.XmlDataSource.CacheKeyDependency%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> com um <xref:System.Web.UI.WebControls.TreeView> transformados de controle para exibir dados XML. A transformação de XML é executada usando a folha de estilo indicada pelo <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedade. Além disso, a folha de estilo usa transformação argumentos que são passados para o controle de fonte de dados em um <xref:System.Xml.Xsl.XsltArgumentList> objeto em tempo de execução. O exemplo de código demonstra como passar o <xref:System.Xml.Xsl.XsltArgumentList> para o controle de fonte de dados ao manipular o <xref:System.Web.UI.WebControls.XmlDataSource.Transforming> evento com um manipulador de eventos personalizados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_9#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_9/CS/xmlds9cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_9#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_9/VB/xmlds9vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<bookstore>  
+   <genre name="fiction">  
+     <book ISBN="0000000000">  
+       <title>Secrets of Silicon Valley</title>  
+       <price>12.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />             
+         <chapter num="2" name="Body" />            
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+   <genre name="novel">  
+     <book genre="novel" ISBN="1111111111">  
+       <title>Straight Talk About Computers</title>  
+       <price>24.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />   
+         <chapter num="2" name="Body" />  
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+</bookstore>  
+```  
+  
+ A transformação dos dados XML é feita com a folha de estilo a seguir.  
+  
+```  
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
+ <xsl:param name="purchdate"/>  
+ <xsl:template match="bookstore">  
+   <bookstore>  
+     <xsl:apply-templates select="genre"/>  
+   </bookstore>  
+ </xsl:template>  
+ <xsl:template match="genre">  
+   <genre>  
+     <xsl:attribute name="name">  
+       <xsl:value-of select="@name"/>  
+     </xsl:attribute>  
+     <xsl:apply-templates select="book"/>  
+   </genre>  
+ </xsl:template>  
+ <xsl:template match="book">  
+   <book>  
+     <xsl:attribute name="ISBN">  
+       <xsl:value-of select="@ISBN"/>  
+     </xsl:attribute>  
+     <xsl:attribute name="title">  
+       <xsl:value-of select="title"/>  
+       Price: <xsl:value-of select="price"/>  
+           15% discount if purchased by: <xsl:value-of select="$purchdate"/>        
+     </xsl:attribute>  
+     <xsl:apply-templates select="chapters/chapter" />  
+   </book>  
+ </xsl:template>  
+ <xsl:template match="chapter">  
+   <chapter>  
+     <xsl:attribute name="num">  
+       <xsl:value-of select="@num"/>  
+     </xsl:attribute>  
+     <xsl:attribute name="name">  
+       <xsl:value-of select="@name"/>  
+     </xsl:attribute>  
+     <xsl:apply-templates/>  
+   </chapter>  
+ </xsl:template>  
+</xsl:stylesheet>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformFile">
+      <MemberSignature Language="C#" Value="public virtual string TransformFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransformFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.TransformFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.XslTransformFileEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o nome do arquivo de um arquivo de folha de estilos XSL linguagem extensível () (. xsl) que define uma transformação XSLT a ser executada nos dados XML gerenciados pelo <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle.</summary>
+        <value>O caminho físico absoluto ou um caminho relativo do arquivo de folha de estilo XSL que define uma transformação XML a ser executada nos dados contidos no <see cref="P:System.Web.UI.WebControls.XmlDataSource.Data" /> ou <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" /> propriedades. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> e <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> propriedades forem definidas, o <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedade terá precedência e os dados no arquivo de folha de estilos XSL (. xsl) são usados em vez dos elementos de folha de estilo especificados no <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> propriedade. Se uma expressão XPath é definida usando o <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade, ela é aplicada depois que os dados XML são transformados.  
+  
+ Se você alterar o valor da <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A> propriedade, o <xref:System.Web.UI.IDataSource.DataSourceChanged> é gerado. Se o cache está habilitado e você alterar o valor de <xref:System.Web.UI.WebControls.XmlDataSource.Transform%2A>, o cache é invalidado.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.XmlDataSource> classe usa preterido <xref:System.Xml.Xsl.XslTransform> classe para executar transformações XSL. Se você quiser usar os recursos de folha de estilo que foram introduzidos após o <xref:System.Xml.Xsl.XslTransform> classe foi substituída, aplicar as transformações manualmente usando o <xref:System.Xml.Xsl.XslCompiledTransform> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle e um <xref:System.Web.UI.WebControls.TreeView> transformados de controle para exibir dados XML em um formulário da Web. A transformação é executada usando a folha de estilo indicada pelo <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedade. Opcionalmente, você pode fornecer argumentos de transformação para a folha de estilo usando um <xref:System.Xml.Xsl.XsltArgumentList>. Para obter mais informações, consulte a propriedade <xref:System.Web.UI.WebControls.XmlDataSource.TransformArgumentList%2A>.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_5#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_5/CS/xmlds5cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_5#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_5/VB/xmlds5vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<bookstore>  
+   <genre name="fiction">  
+     <book ISBN="0000000000">  
+       <title>Secrets of Silicon Valley</title>  
+       <price>12.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />             
+         <chapter num="2" name="Body" />            
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+   <genre name="novel">  
+     <book genre="novel" ISBN="1111111111">  
+       <title>Straight Talk About Computers</title>  
+       <price>24.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />   
+         <chapter num="2" name="Body" />  
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+</bookstore>  
+```  
+  
+ Folha de estilos XSL que executa a transformação XML tem a seguinte estrutura:  
+  
+```  
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
+ <xsl:template match="bookstore">  
+   <bookstore>  
+     <xsl:apply-templates select="genre"/>  
+   </bookstore>  
+ </xsl:template>  
+ <xsl:template match="genre">  
+   <genre>  
+     <xsl:attribute name="name">  
+       <xsl:value-of select="@name"/>  
+     </xsl:attribute>  
+     <xsl:apply-templates select="book"/>  
+   </genre>  
+ </xsl:template>  
+ <xsl:template match="book">  
+   <book>  
+     <xsl:attribute name="ISBN">  
+       <xsl:value-of select="@ISBN"/>  
+     </xsl:attribute>  
+     <xsl:attribute name="title">  
+       <xsl:value-of select="title"/>  
+     </xsl:attribute>  
+     <xsl:attribute name="price">  
+       <xsl:value-of select="price"/>  
+     </xsl:attribute>  
+     <xsl:apply-templates select="chapters/chapter" />  
+   </book>  
+ </xsl:template>  
+ <xsl:template match="chapter">  
+   <chapter>  
+     <xsl:attribute name="num">  
+       <xsl:value-of select="@num"/>  
+     </xsl:attribute>  
+     <xsl:attribute name="name">  
+       <xsl:value-of select="@name"/>  
+     </xsl:attribute>  
+     <xsl:apply-templates/>  
+   </chapter>  
+ </xsl:template>  
+</xsl:stylesheet>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O documento está carregando.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transforming">
+      <MemberSignature Language="C#" Value="public event EventHandler Transforming;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Transforming" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.XmlDataSource.Transforming" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes da folha de estilo é definida pelo <see cref="P:System.Web.UI.WebControls.XmlDataSource.Transform" /> propriedade ou identificados pelo <see cref="P:System.Web.UI.WebControls.XmlDataSource.TransformFile" /> propriedade é aplicada aos dados XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.XmlDataSource.Transforming> evento para definir o <xref:System.Web.UI.WebControls.XmlDataSource.TransformArgumentList%2A> propriedade com um <xref:System.Xml.Xsl.XsltArgumentList> objeto antes do <xref:System.Web.UI.WebControls.XmlDataSource> controle executa uma transformação XML.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controlar com um <xref:System.Web.UI.WebControls.TreeView> transformados de controle para exibir dados XML. A transformação de XML é executada usando a folha de estilo indicada pelo <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedade. Além disso, a folha de estilo usa transformação argumentos que são passados para o controle de fonte de dados em um <xref:System.Xml.Xsl.XsltArgumentList> em tempo de execução. O exemplo de código demonstra como passar o <xref:System.Xml.Xsl.XsltArgumentList> objeto para o controle de fonte de dados ao manipular o <xref:System.Web.UI.WebControls.XmlDataSource.Transforming> evento com um manipulador de eventos personalizados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_9#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_9/CS/xmlds9cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_9#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_9/VB/xmlds9vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<bookstore>  
+   <genre name="fiction">  
+     <book ISBN="0000000000">  
+       <title>Secrets of Silicon Valley</title>  
+       <price>12.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />             
+         <chapter num="2" name="Body" />            
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+   <genre name="novel">  
+     <book genre="novel" ISBN="1111111111">  
+       <title>Straight Talk About Computers</title>  
+       <price>24.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />   
+         <chapter num="2" name="Body" />  
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+</bookstore>  
+```  
+  
+ A transformação dos dados XML é executada com a folha de estilos a seguir:  
+  
+```  
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
+ <xsl:param name="purchdate"/>  
+ <xsl:template match="bookstore">  
+   <bookstore>  
+     <xsl:apply-templates select="genre"/>  
+   </bookstore>  
+ </xsl:template>  
+ <xsl:template match="genre">  
+   <genre>  
+     <xsl:attribute name="name">  
+       <xsl:value-of select="@name"/>  
+     </xsl:attribute>  
+     <xsl:apply-templates select="book"/>  
+   </genre>  
+ </xsl:template>  
+ <xsl:template match="book">  
+   <book>  
+     <xsl:attribute name="ISBN">  
+       <xsl:value-of select="@ISBN"/>  
+     </xsl:attribute>  
+     <xsl:attribute name="title">  
+       <xsl:value-of select="title"/>  
+       Price: <xsl:value-of select="price"/>  
+           15% discount if purchased by: <xsl:value-of select="$purchdate"/>        
+     </xsl:attribute>  
+     <xsl:apply-templates select="chapters/chapter" />  
+   </book>  
+ </xsl:template>  
+ <xsl:template match="chapter">  
+   <chapter>  
+     <xsl:attribute name="num">  
+       <xsl:value-of select="@num"/>  
+     </xsl:attribute>  
+     <xsl:attribute name="name">  
+       <xsl:value-of select="@name"/>  
+     </xsl:attribute>  
+     <xsl:apply-templates/>  
+   </chapter>  
+ </xsl:template>  
+</xsl:stylesheet>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="public virtual string XPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.XmlDataSource.XPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma expressão XPath a ser aplicada aos dados XML contidos na propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.Data" /> ou pelo arquivo XML indicado pela propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" />.</summary>
+        <value>Uma cadeia de caracteres que representa uma expressão XPath que pode ser usada para filtrar os dados contidos na propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.Data" /> ou pelo arquivo XML indicado pela propriedade <see cref="P:System.Web.UI.WebControls.XmlDataSource.DataFile" />. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre expressões de associação de dados XPath, consulte [associando um controle Tabular ao controle XmlDataSource](http://msdn.microsoft.com/en-us/d6bf202f-6454-45fd-9424-e17f6c7eafe8).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir os dados XML que foi filtrados usando uma expressão XPath. Neste exemplo, a sintaxe XPath é usado para filtrar os dados XML quando o <xref:System.Web.UI.WebControls.XmlDataSource.XPath%2A> propriedade do controle de fonte de dados é definida e também associa elementos do <xref:System.Web.UI.WebControls.Repeater> modelo de controle para os dados XML.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_8#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_8/CS/xmlds8cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_8#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_8/VB/xmlds8vb.aspx#1)]  
+  
+ O arquivo XML no código de exemplo tem os seguintes dados:  
+  
+```  
+<bookstore>  
+   <genre name="fiction">  
+     <book ISBN="0000000000">  
+       <title>Secrets of Silicon Valley</title>  
+       <price>12.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />             
+         <chapter num="2" name="Body" />            
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+   <genre name="novel">  
+     <book genre="novel" ISBN="1111111111">  
+       <title>Straight Talk About Computers</title>  
+       <price>24.95</price>  
+       <chapters>  
+         <chapter num="1" name="Introduction" />   
+         <chapter num="2" name="Body" />  
+         <chapter num="3" name="Conclusion" />  
+       </chapters>  
+     </book>  
+   </genre>  
+</bookstore>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O documento está carregando.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

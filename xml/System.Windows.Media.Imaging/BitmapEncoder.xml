@@ -1,0 +1,330 @@
+<Type Name="BitmapEncoder" FullName="System.Windows.Media.Imaging.BitmapEncoder">
+  <TypeSignature Language="C#" Value="public abstract class BitmapEncoder : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BitmapEncoder extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Codifica uma coleção de objetos <see cref="T:System.Windows.Media.Imaging.BitmapFrame" /> em um fluxo de imagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um codec derivado também pode fornecer suporte para propriedades de codificação especializadas, que são usadas para determinar como um bitmap é codificado. Por exemplo, um codec deve dar suporte a rotinas de compactação especializado ou entrelaçamento de uma imagem codificada.  
+  
+ Você pode especificar várias estruturas para qualquer codificador derivada, mesmo se o formato de bitmap só dá suporte a um quadro. Nesse caso, somente o primeiro quadro é salvo.  
+  
+ A coleção de quadros pode ser codificado em um momento para qualquer número de fluxos de arquivos.  
+  
+ Codificação não funciona em confiança parcial. Consulte [segurança de confiança parcial do WPF](~/docs/framework/wpf/wpf-partial-trust-security.md) para obter informações sobre a relação de confiança parcial.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o derivada <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> classe para codificar uma imagem.  
+  
+ [!code-csharp[bitmapframeexample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[bitmapframeexample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BitmapEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Imaging.BitmapEncoder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodecInfo">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapCodecInfo CodecInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapCodecInfo CodecInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapEncoder.CodecInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapCodecInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações que descrevem esse codec.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapCodecInfo" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Media.Imaging.BitmapCodecInfo> implementação é necessária para cada codec.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como ler as informações de um <xref:System.Windows.Media.Imaging.BitmapCodecInfo> de objeto e enviá-lo para uma cadeia de caracteres.  
+  
+ [!code-csharp[bitmapframeexample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[bitmapframeexample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorContexts">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.ColorContext&gt; ColorContexts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Media.ColorContext&gt; ColorContexts" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapEncoder.ColorContexts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.ColorContext&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa o perfil de cor associado ao codificador.</summary>
+        <value>A coleção de <see cref="T:System.Windows.Media.ColorContext" /> objetos que representa os perfis de cor que usa esse codificador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O codificador não dá suporte a perfis de cor.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor <see cref="T:System.Windows.Media.ColorContext" /> passado ao codificador é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapEncoder Create (Guid containerFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapEncoder Create(valuetype System.Guid containerFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapEncoder.Create(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapEncoder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="containerFormat" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="containerFormat">Identifica o formato de codificação de bitmap desejado.</param>
+        <summary>Cria um <see cref="T:System.Windows.Media.Imaging.BitmapEncoder" /> de um <see cref="T:System.Guid" /> que identifica o formato de bitmap desejado.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Imaging.BitmapEncoder" /> que pode codificar especificado <paramref name="containerFormat" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para fins de extensibilidade. Autores de codec devem gerar seus próprios <xref:System.Guid> para identificar seu codificador recém-criado. Use derivada <xref:System.Windows.Media.Imaging.BitmapEncoder> classes, como o <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> classe para criar um codificador para um codec interno.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="containerFormat" /> é <see langword="Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Frames">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IList&lt;System.Windows.Media.Imaging.BitmapFrame&gt; Frames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Windows.Media.Imaging.BitmapFrame&gt; Frames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapEncoder.Frames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Windows.Media.Imaging.BitmapFrame&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os quadros individuais dentro de uma imagem.</summary>
+        <value>Uma coleção de objetos <see cref="T:System.Windows.Media.Imaging.BitmapFrame" /> dentro da imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_gif](~/includes/tlasharptla-gif-md.md)], e [!INCLUDE[TLA#tla_wdp](~/includes/tlasharptla-wdp-md.md)] imagens oferecem suporte a mais de um quadro. Tentativas de adicionar quadros adicionais para formatos que não oferecem suporte a isso resulta em apenas o primeiro quadro que está sendo codificado.  
+  
+<a name="xamlTextUsage_Frames"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você não pode usar essa propriedade em [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um quadro para um codificador.  
+  
+ [!code-csharp[bitmapframeexample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[bitmapframeexample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor <see cref="T:System.Windows.Media.Imaging.BitmapFrame" /> passado ao codificador é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapMetadata Metadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapMetadata Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapEncoder.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os metadados que serão associados esse bitmap durante a codificação.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Suporte a imagens de bitmap e armazenar os metadados de maneira diferente. Para obter mais informações sobre os tipos de metadados que têm suporte para cada bitmap, consulte o <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O codificador não dá suporte a metadados globais.</exception>
+        <exception cref="T:System.ArgumentNullException">É feita uma tentativa para gravar metadados em um formato incompatível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Palette">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapPalette Palette { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapPalette Palette" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapEncoder.Palette" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapPalette</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa o <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> de um bitmap codificado.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapPalette" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] e [!INCLUDE[TLA#tla_gif](~/includes/tlasharptla-gif-md.md)] imagens (e algumas mais antiga, não-padrão [!INCLUDE[TLA#tla_bmp](~/includes/tlasharptla-bmp-md.md)] imagens) paletas de suporte.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como aplicar uma paleta personalizada para um [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] da imagem e subsequentemente codificá-lo.  
+  
+ [!code-csharp[bitmapframeexample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#1)]
+ [!code-vb[bitmapframeexample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> passado ao codificador é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Preview">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapSource Preview { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapSource Preview" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapEncoder.Preview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a visualização global de um bitmap, se houver um.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a visualização de um bitmap.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O bitmap não oferece suporte a visualização.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public virtual void Save (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapEncoder.Save(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Identifica o fluxo de arquivos ao qual esse bitmap é codificado.</param>
+        <summary>Codifica uma imagem de bitmap para um <see cref="T:System.IO.Stream" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No contexto deste [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)], "Salvar" e "codificar" é sinônimos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como salvar uma imagem de bitmap em um fluxo de arquivos usando o derivada <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> classe.  
+  
+ [!code-csharp[bitmapframeexample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[bitmapframeexample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O bitmap já foi codificado.</exception>
+        <exception cref="T:System.NotSupportedException">A contagem <see cref="P:System.Windows.Media.Imaging.BitmapEncoder.Frames" /> é menor ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Thumbnail">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapSource Thumbnail { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapSource Thumbnail" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapEncoder.Thumbnail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a miniatura incorporada global.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a miniatura do bitmap.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O bitmap não oferece suporte a miniaturas.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

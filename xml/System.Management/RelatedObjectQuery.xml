@@ -1,0 +1,563 @@
+<Type Name="RelatedObjectQuery" FullName="System.Management.RelatedObjectQuery">
+  <TypeSignature Language="C#" Value="public class RelatedObjectQuery : System.Management.WqlObjectQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RelatedObjectQuery extends System.Management.WqlObjectQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Management.RelatedObjectQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.WqlObjectQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um WQL *ASSOCIADORES de* consulta de dados. Ele pode ser usado para instâncias e consultas de esquema.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelatedObjectQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.RelatedObjectQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.RelatedObjectQuery" />. Esse é o construtor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelatedObjectQuery (string queryOrSourceObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string queryOrSourceObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.RelatedObjectQuery.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="queryOrSourceObject" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="queryOrSourceObject">A cadeia de caracteres de consulta ou o caminho do objeto de origem.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.RelatedObjectQuery" />. Se a cadeia de caracteres especificada pode ser analisada com êxito como uma consulta WQL, ele será considerado para ser a cadeia de caracteres de consulta; Caso contrário, será considerado para ser o caminho do objeto de origem para a consulta. Nesse caso, a consulta é considerada para uma consulta de instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelatedObjectQuery (string sourceObject, string relatedClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceObject, string relatedClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.RelatedObjectQuery.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceObject" Type="System.String" />
+        <Parameter Name="relatedClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceObject">O caminho do objeto de origem para essa consulta.</param>
+        <param name="relatedClass">Classe os objetos relacionados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.RelatedObjectQuery" /> classe para o objeto de origem especificado e a classe relacionada. A consulta é considerada uma consulta de instância (em vez de uma consulta de esquema).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelatedObjectQuery (bool isSchemaQuery, string sourceObject, string relatedClass, string relationshipClass, string relatedQualifier, string relationshipQualifier, string relatedRole, string thisRole);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isSchemaQuery, string sourceObject, string relatedClass, string relationshipClass, string relatedQualifier, string relationshipQualifier, string relatedRole, string thisRole) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.RelatedObjectQuery.#ctor(System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isSchemaQuery" Type="System.Boolean" />
+        <Parameter Name="sourceObject" Type="System.String" />
+        <Parameter Name="relatedClass" Type="System.String" />
+        <Parameter Name="relationshipClass" Type="System.String" />
+        <Parameter Name="relatedQualifier" Type="System.String" />
+        <Parameter Name="relationshipQualifier" Type="System.String" />
+        <Parameter Name="relatedRole" Type="System.String" />
+        <Parameter Name="thisRole" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="isSchemaQuery">
+          <see langword="true" />para indicar que este é um esquema de consulta; Caso contrário, <see langword="false" /> .</param>
+        <param name="sourceObject">O caminho da classe de origem.</param>
+        <param name="relatedClass">Classe de base necessário os objetos relacionados.</param>
+        <param name="relationshipClass">O tipo de relação.</param>
+        <param name="relatedQualifier">O qualificador deve estar presente em objetos relacionados.</param>
+        <param name="relationshipQualifier">O qualificador deve estar presente nas relações.</param>
+        <param name="relatedRole">A função que os objetos relacionados são necessários para executar na relação.</param>
+        <param name="thisRole">A função que a classe de origem é necessária para executar na relação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.RelatedObjectQuery" /> classe para uma consulta de esquema usando o determinado conjunto de parâmetros. Este construtor é usado para consultas de esquema somente: o primeiro parâmetro deve ser definido como <see langword="true" /> .</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelatedObjectQuery (string sourceObject, string relatedClass, string relationshipClass, string relatedQualifier, string relationshipQualifier, string relatedRole, string thisRole, bool classDefinitionsOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceObject, string relatedClass, string relationshipClass, string relatedQualifier, string relationshipQualifier, string relatedRole, string thisRole, bool classDefinitionsOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.RelatedObjectQuery.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceObject" Type="System.String" />
+        <Parameter Name="relatedClass" Type="System.String" />
+        <Parameter Name="relationshipClass" Type="System.String" />
+        <Parameter Name="relatedQualifier" Type="System.String" />
+        <Parameter Name="relationshipQualifier" Type="System.String" />
+        <Parameter Name="relatedRole" Type="System.String" />
+        <Parameter Name="thisRole" Type="System.String" />
+        <Parameter Name="classDefinitionsOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceObject">O caminho do objeto de origem.</param>
+        <param name="relatedClass">Classe necessária os objetos relacionados.</param>
+        <param name="relationshipClass">O tipo de relação.</param>
+        <param name="relatedQualifier">O qualificador deve estar presente em objetos relacionados.</param>
+        <param name="relationshipQualifier">O qualificador deve estar presente nas relações.</param>
+        <param name="relatedRole">A função que os objetos relacionados são necessários para executar na relação.</param>
+        <param name="thisRole">A função que o objeto de origem é necessário para executar na relação.</param>
+        <param name="classDefinitionsOnly">
+          <see langword="true" />para retornar somente as definições de classe dos objetos relacionados; Caso contrário, false.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.RelatedObjectQuery" /> classe para um determinado conjunto de parâmetros. A consulta é considerada uma consulta de instância (em vez de uma consulta de esquema).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildQuery">
+      <MemberSignature Language="C#" Value="protected void BuildQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void BuildQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.RelatedObjectQuery.BuildQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria a cadeia de caracteres de consulta acordo com os valores de propriedade atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassDefinitionsOnly">
+      <MemberSignature Language="C#" Value="public bool ClassDefinitionsOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ClassDefinitionsOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Management.RelatedObjectQuery.ClassDefinitionsOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica que, para todas as instâncias que aderir à consulta, apenas as definições de classe ser retornado. Esse parâmetro só é válido para consultas de instância.</summary>
+        <value>Retorna um <see cref="T:System.Boolean" /> valor que indica que todas as instâncias que aderem à consulta, apenas as definições de classe serão retornados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esse valor de propriedade substitui qualquer valor anterior armazenado no objeto. A cadeia de caracteres de consulta é recriada para refletir o novo sinalizador.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ `true`Se a consulta solicita somente definições de classe do conjunto de resultados; Caso contrário, `false`.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.RelatedObjectQuery.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do objeto.</summary>
+        <returns>O objeto copiado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSchemaQuery">
+      <MemberSignature Language="C#" Value="public bool IsSchemaQuery { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSchemaQuery" />
+      <MemberSignature Language="DocId" Value="P:System.Management.RelatedObjectQuery.IsSchemaQuery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se este é um esquema de consulta ou uma consulta de instância.</summary>
+        <value>Retorna um <see cref="T:System.Boolean" /> valor que indica se este é um esquema de consulta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esse valor de propriedade substitui qualquer valor anterior armazenado no objeto. A cadeia de caracteres de consulta é recriada para refletir o novo tipo de consulta.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ `true`Se essa consulta deve ser avaliada sobre o esquema; `false` se a consulta deve ser avaliada em instâncias.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseQuery">
+      <MemberSignature Language="C#" Value="protected override void ParseQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void ParseQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.RelatedObjectQuery.ParseQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">A cadeia de caracteres de consulta a ser analisada.</param>
+        <summary>Analisa a cadeia de caracteres de consulta e define os valores de propriedade adequadamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedClass">
+      <MemberSignature Language="C#" Value="public string RelatedClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelatedClass" />
+      <MemberSignature Language="DocId" Value="P:System.Management.RelatedObjectQuery.RelatedClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a classe dos objetos de ponto de extremidade (a classe relacionada).</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o nome de classe relacionada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esse valor de propriedade substitui qualquer valor anterior armazenado no objeto. A cadeia de caracteres de consulta é recriada para refletir a nova classe relacionada.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém o nome de classe relacionada.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma classe WMI para serem relacionados a um <xref:System.Management.RelatedObjectQuery>.  
+  
+ [!code-csharp[wminet_RelatedObjectQuery_RelatedClass#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_RelatedObjectQuery_RelatedClass/cs/RelatedObjectQuery_RelatedClass.cs#1)]
+ [!code-vb[wminet_RelatedObjectQuery_RelatedClass#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_RelatedObjectQuery_RelatedClass/vb/RelatedObjectQuery_RelatedClass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedQualifier">
+      <MemberSignature Language="C#" Value="public string RelatedQualifier { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelatedQualifier" />
+      <MemberSignature Language="DocId" Value="P:System.Management.RelatedObjectQuery.RelatedQualifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um qualificador deve ser definido em objetos relacionados.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o nome do qualificador de necessárias sobre o objeto relacionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esse valor de propriedade substitui qualquer valor anterior armazenado no objeto. A cadeia de caracteres de consulta é recriada para refletir o novo qualificador.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém o nome do qualificador de necessárias nos objetos relacionados.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedRole">
+      <MemberSignature Language="C#" Value="public string RelatedRole { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelatedRole" />
+      <MemberSignature Language="DocId" Value="P:System.Management.RelatedObjectQuery.RelatedRole" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a função que os objetos relacionados retornados devem ser executar na relação.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém a função dos objetos relacionados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esse valor de propriedade substitui qualquer valor anterior armazenado no objeto. A cadeia de caracteres de consulta é recriada para refletir a nova função.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém a função dos objetos relacionados.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipClass">
+      <MemberSignature Language="C#" Value="public string RelationshipClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelationshipClass" />
+      <MemberSignature Language="DocId" Value="P:System.Management.RelatedObjectQuery.RelationshipClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de relação (associação).</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o nome da classe de relação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esse valor de propriedade substitui qualquer valor anterior armazenado no objeto. A cadeia de caracteres de consulta é recriada para refletir a nova classe de relação.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém o nome de classe de relação.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o tipo de relação entre uma classe WMI e um <xref:System.Management.RelatedObjectQuery>.  
+  
+ [!code-csharp[wminet_RelatedObjectQuery_RelationshipClass#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_RelatedObjectQuery_RelationshipClass/cs/RelatedObjectQuery_RelationshipClass.cs#1)]
+ [!code-vb[wminet_RelatedObjectQuery_RelationshipClass#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_RelatedObjectQuery_RelationshipClass/vb/RelatedObjectQuery_RelationshipClass.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipQualifier">
+      <MemberSignature Language="C#" Value="public string RelationshipQualifier { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelationshipQualifier" />
+      <MemberSignature Language="DocId" Value="P:System.Management.RelatedObjectQuery.RelationshipQualifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um qualificador deve ser definida nos objetos de relação.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o nome do qualificador de necessárias nos objetos de relação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esse valor de propriedade substitui qualquer valor anterior armazenado no objeto. A cadeia de caracteres de consulta é recriada para refletir o novo qualificador.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém o nome do qualificador de necessárias nos objetos de relação.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceObject">
+      <MemberSignature Language="C#" Value="public string SourceObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceObject" />
+      <MemberSignature Language="DocId" Value="P:System.Management.RelatedObjectQuery.SourceObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de origem a ser usado para a consulta. Para consultas de instância, isso geralmente é um caminho de instância. Para consultas de esquema, isso é geralmente um nome de classe.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o caminho do objeto a ser usado para a consulta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esse valor de propriedade substitui qualquer valor anterior armazenado no objeto. A cadeia de caracteres de consulta é recriada para refletir o novo objeto de origem.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que representa o caminho do objeto a ser usado para a consulta.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThisRole">
+      <MemberSignature Language="C#" Value="public string ThisRole { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThisRole" />
+      <MemberSignature Language="DocId" Value="P:System.Management.RelatedObjectQuery.ThisRole" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a função que o objeto de origem deve ser executado na relação.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém a função deste objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esse valor de propriedade substitui qualquer valor anterior armazenado no objeto. A cadeia de caracteres de consulta é recriada para refletir a nova função.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Uma cadeia de caracteres que contém a função deste objeto.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

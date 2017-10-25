@@ -1,0 +1,1043 @@
+<Type Name="HwndHost" FullName="System.Windows.Interop.HwndHost">
+  <TypeSignature Language="C#" Value="public abstract class HwndHost : System.Windows.FrameworkElement, IDisposable, System.Windows.Interop.IKeyboardInputSink, System.Windows.Interop.IWin32Window" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract HwndHost extends System.Windows.FrameworkElement implements class System.IDisposable, class System.Windows.Interop.IKeyboardInputSink, class System.Windows.Interop.IWin32Window" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.HwndHost" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Interop.IKeyboardInputSink</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Interop.IWin32Window</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Hospeda uma janela do Win32, como um elemento dentro do conteúdo do Windows Presentation Foundation (WPF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para hospedar um [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] janela, crie uma classe que deriva de <xref:System.Windows.Interop.HwndHost>. Substituir o <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> método e criar seu [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] janela como um filho da janela pai que é passado para o método.  
+  
+> [!IMPORTANT]
+>  Embora <xref:System.Windows.Interop.HwndHost> deriva <xref:System.Windows.FrameworkElement>, várias propriedades de <xref:System.Windows.Interop.HwndHost> que vêm de <xref:System.Windows.FrameworkElement> e outras classes intermediários, como <xref:System.Windows.UIElement> geralmente não são mapeados para possível [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] equivalentes. Além disso, nem todos os <xref:System.Windows.FrameworkElement>  /  <xref:System.Windows.UIElement> transferência de eventos de entrada nos limites de interoperação. <xref:System.Windows.Interop.HwndHost>deriva <xref:System.Windows.FrameworkElement> principalmente para que um <xref:System.Windows.Interop.HwndHost> instância pode ser inserida na mais ampla variedade de modelos de conteúdo possíveis e assim que padrão <xref:System.Windows.FrameworkElement> podem aplicar as características de layout. Para obter mais detalhes sobre <xref:System.Windows.Interop.HwndHost>, consulte [WPF e Win32 interoperação](~/docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HwndHost ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Interop.HwndHost" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildWindowCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Runtime.InteropServices.HandleRef BuildWindowCore (System.Runtime.InteropServices.HandleRef hwndParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Runtime.InteropServices.HandleRef BuildWindowCore(valuetype System.Runtime.InteropServices.HandleRef hwndParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.HandleRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwndParent" Type="System.Runtime.InteropServices.HandleRef" />
+      </Parameters>
+      <Docs>
+        <param name="hwndParent">O identificador de janela da janela pai.</param>
+        <summary>Quando substituído em uma classe derivada, cria a janela a ser hospedada.</summary>
+        <returns>O identificador para o filho [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] janela criar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementação desse método é chamada de dentro da implementação interna de <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+  
+ A janela filho será criada somente se a janela é de propriedade de thread de chamada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para criar a janela que está sendo hospedada.  
+  
+ A janela que você retornar deve ser um filho da janela especificada por <paramref name="hwndParent" />.  
+  
+ Além disso, a janela filho só será criada se a janela é de propriedade de thread de chamada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DestroyWindowCore">
+      <MemberSignature Language="C#" Value="protected abstract void DestroyWindowCore (System.Runtime.InteropServices.HandleRef hwnd);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DestroyWindowCore(valuetype System.Runtime.InteropServices.HandleRef hwnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.Runtime.InteropServices.HandleRef" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">Uma estrutura que contém o identificador de janela.</param>
+        <summary>Quando substituído em uma classe derivada, destrói a janela hospedada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para destruir a janela hospedada como criado pelo <see cref="M:System.Windows.Interop.HwndHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)" />. O <paramref name="hwnd" /> parâmetro deve ser o identificador como retornado por <see cref="M:System.Windows.Interop.HwndHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Dispose">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Libera imediatamente quaisquer recursos do sistema que o objeto pode manter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+  
+ Classes derivadas podem substituir este método (pelo <xref:System.Windows.Interop.HwndHost.Dispose%28System.Boolean%29> assinatura) se precisam para realizar limpeza adicional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera imediatamente quaisquer recursos do sistema que o objeto pode manter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+>   
+>  Este método pode ser substituído, mas não por essa assinatura. Consulte <xref:System.Windows.Interop.HwndHost.Dispose%28System.Boolean%29> para a assinatura substituível. Esta assinatura sem parâmetros é aquela exigida pelo contrato de interface e efetivamente chama ativo <xref:System.Windows.Interop.HwndHost.Dispose%28System.Boolean%29> implementação com `disposing` sendo `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Definido como <see langword="true" /> se chamado de um disposer explícita e <see langword="false" /> caso contrário.</param>
+        <summary>Libera imediatamente quaisquer recursos do sistema que o objeto pode manter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+  
+ Classes derivadas podem substituir esse método se precisam para realizar limpeza adicional. No entanto, eles também devem chamar a implementação base para garantir que todos os recursos sejam liberados. A implementação base funciona bastante significativa para liberar recursos que são conhecidos para a classe base.  
+  
+ Se uma janela está sendo hospedada, ele será destruído.  
+  
+ O thread de chamada deve ser o mesmo que o distribuidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.DpiChangedEventHandler DpiChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.DpiChangedEventHandler DpiChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Interop.HwndHost.DpiChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DpiChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre depois que o DPI da tela na qual o HwndHost é exibido é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DpiChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DpiChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Interop.HwndHost.DpiChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.Windows.RoutedEvent" /> para quando o DPI da tela de HwndHost é sobre as alterações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~HwndHost ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a limpeza final antes do coletor de lixo destrói o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como a maioria dos finalizadores, chama `Dispose(false)`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndHost.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de janela da janela hospedada.</summary>
+        <value>O identificador da janela.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para obter esse objeto. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFocusWithinCore">
+      <MemberSignature Language="C#" Value="protected virtual bool HasFocusWithinCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool HasFocusWithinCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.HasFocusWithinCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o coletor ou um de seus componentes independentes tem foco.</summary>
+        <returns>
+          <see langword="true" />Se o coletor ou um de seus componentes independentes tem foco. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">O tamanho do <see cref="T:System.Windows.Interop.HwndHost" /> objeto.</param>
+        <summary>Retorna o tamanho da janela representada pelo <see cref="T:System.Windows.Interop.HwndHost" /> do objeto, conforme solicitado por operações de mecanismo de layout.</summary>
+        <returns>O tamanho do <see cref="T:System.Windows.Interop.HwndHost" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para ajustar o layout (fazendo com que o mecanismo de layout agir sobre a região hospedada). Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <block subset="none" type="overrides">
+          <para>Em [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)], uma janela deve ser o tamanho solicitado pelo layout no momento em que a janela é criada. Classes derivadas devem substituir este método somente se elas tiverem informações adicionais sobre o tamanho da janela necessária.  
+  
+ A implementação específica aqui já é uma substituição do <see cref="T:System.Windows.FrameworkElement" /> membro virtual, que baseia restrições de tamanho no identificador de janela e trata um valor zero em uma ou mais dimensões como uma restrição não. O <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> classe também substitui um <see cref="M:System.Windows.Forms.Integration.WindowsFormsHost.MeasureOverride(System.Windows.Size)" /> implementação resultará em um clipe de forma se ele é muito grande.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageHook">
+      <MemberSignature Language="C#" Value="public event System.Windows.Interop.HwndSourceHook MessageHook;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Interop.HwndSourceHook MessageHook" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Interop.HwndHost.MessageHook" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>add: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>remove: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.HwndSourceHook</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre para cada mensagem sem tratamento recebida pela janela hospedada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para adicionar ou remover manipuladores desse evento. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> para <see cref="T:System.Windows.Interop.HwndHost" /> .</summary>
+        <returns>A implementação de <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> específica ao tipo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação deste método é normalmente chamar o construtor de um determinado <xref:System.Windows.Automation.Peers.AutomationPeer> implementação e retorná-lo como o valor de retorno. O <xref:System.Windows.Interop.HwndHost> implementação de <xref:System.Windows.Interop.HwndHost.OnCreateAutomationPeer%2A> faz isso, mas o par de automação que ela retorna é uma classe interna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDpiChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDpiChanged (System.Windows.DpiScale oldDpi, System.Windows.DpiScale newDpi);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDpiChanged(valuetype System.Windows.DpiScale oldDpi, valuetype System.Windows.DpiScale newDpi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.OnDpiChanged(System.Windows.DpiScale,System.Windows.DpiScale)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldDpi" Type="System.Windows.DpiScale" />
+        <Parameter Name="newDpi" Type="System.Windows.DpiScale" />
+      </Parameters>
+      <Docs>
+        <param name="oldDpi">A escala DPI original configuração.</param>
+        <param name="newDpi">A nova configuração da escala de DPI.</param>
+        <summary>Chamado quando o DPI no qual este HwndHost é renderizado alterações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando a janela hospedada recebe um [WM_KEYDOWN](http://go.microsoft.com/fwlink/?LinkId=161282) mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+>   
+>  Isso é uma substituição do manipulador de classe <xref:System.Windows.UIElement.OnKeyDown%2A> e fornece o comportamento da conversão a [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] de mensagem em uma [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] evento marcando o evento tratados sempre que apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyUp">
+      <MemberSignature Language="C#" Value="protected override void OnKeyUp (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyUp(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.OnKeyUp(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando a janela hospedada recebe um [WM_KEYUP](http://go.microsoft.com/fwlink/?LinkId=161283) mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+>   
+>  Isso é uma substituição do manipulador de classe <xref:System.Windows.UIElement.OnKeyUp%2A> e fornece o comportamento da conversão a [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)] de mensagem em uma [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] evento marcando o evento tratados sempre que apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMnemonicCore">
+      <MemberSignature Language="C#" Value="protected virtual bool OnMnemonicCore (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnMnemonicCore(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.OnMnemonicCore(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem para os dados associados e mnemônicos.</param>
+        <param name="modifiers">Teclas modificadoras.</param>
+        <summary>Chamado quando um o mnemônico (chaves de acesso) para esse coletor é invocado.</summary>
+        <returns>Sempre retorna <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWindowPositionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnWindowPositionChanged (System.Windows.Rect rcBoundingBox);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnWindowPositionChanged(valuetype System.Windows.Rect rcBoundingBox) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.OnWindowPositionChanged(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rcBoundingBox" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rcBoundingBox">A posição da janela.</param>
+        <summary>Chamado quando a posição da janela hospedado é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>As subclasses podem substituir este método para redimensionar a janela com base nas dimensões fornecidas <paramref name="rcBoundingBox" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterKeyboardInputSinkCore">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Interop.IKeyboardInputSite RegisterKeyboardInputSinkCore (System.Windows.Interop.IKeyboardInputSink sink);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Interop.IKeyboardInputSite RegisterKeyboardInputSinkCore(class System.Windows.Interop.IKeyboardInputSink sink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.RegisterKeyboardInputSinkCore(System.Windows.Interop.IKeyboardInputSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.IKeyboardInputSite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sink" Type="System.Windows.Interop.IKeyboardInputSink" />
+      </Parameters>
+      <Docs>
+        <param name="sink">O <see cref="T:System.Windows.Interop.IKeyboardInputSink" /> coletor do componente independente.</param>
+        <summary>Registra o <see cref="T:System.Windows.Interop.IKeyboardInputSink" /> interface de um componente independente.</summary>
+        <returns>O <see cref="T:System.Windows.Interop.IKeyboardInputSite" /> site do componente independente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Interop.IKeyboardInputSink.HasFocusWithin">
+      <MemberSignature Language="C#" Value="bool IKeyboardInputSink.HasFocusWithin ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Windows.Interop.IKeyboardInputSink.HasFocusWithin() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.System#Windows#Interop#IKeyboardInputSink#HasFocusWithin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Media.FamilyTypefaceCollection.System#Collections#IList#Remove(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" />Se o coletor ou um de seus componentes independentes tem foco. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Interop.HwndHost> é convertida em uma interface de <xref:System.Windows.Interop.IKeyboardInputSink>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Interop.IKeyboardInputSink.KeyboardInputSite">
+      <MemberSignature Language="C#" Value="System.Windows.Interop.IKeyboardInputSite System.Windows.Interop.IKeyboardInputSink.KeyboardInputSite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Interop.IKeyboardInputSite System.Windows.Interop.IKeyboardInputSink.KeyboardInputSite" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndHost.System#Windows#Interop#IKeyboardInputSink#KeyboardInputSite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.IKeyboardInputSite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Windows.Interop.IKeyboardInputSink.KeyboardInputSite" />.</summary>
+        <value>Uma referência para o contêiner <see cref="T:System.Windows.Interop.IKeyboardInputSite" /> interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Interop.HwndHost> é convertida em uma interface de <xref:System.Windows.Interop.IKeyboardInputSink>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Interop.IKeyboardInputSink.OnMnemonic">
+      <MemberSignature Language="C#" Value="bool IKeyboardInputSink.OnMnemonic (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Windows.Interop.IKeyboardInputSink.OnMnemonic(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.System#Windows#Interop#IKeyboardInputSink#OnMnemonic(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem para os dados associados e mnemônicos. Não modifique esta estrutura de mensagem. Ele é passado por referência por razões de desempenho apenas.</param>
+        <param name="modifiers">Teclas modificadoras.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Interop.IKeyboardInputSink.OnMnemonic(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi tratada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Interop.HwndHost> é convertida em uma interface de <xref:System.Windows.Interop.IKeyboardInputSink>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Interop.IKeyboardInputSink.RegisterKeyboardInputSink">
+      <MemberSignature Language="C#" Value="System.Windows.Interop.IKeyboardInputSite IKeyboardInputSink.RegisterKeyboardInputSink (System.Windows.Interop.IKeyboardInputSink sink);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Windows.Interop.IKeyboardInputSite System.Windows.Interop.IKeyboardInputSink.RegisterKeyboardInputSink(class System.Windows.Interop.IKeyboardInputSink sink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.System#Windows#Interop#IKeyboardInputSink#RegisterKeyboardInputSink(System.Windows.Interop.IKeyboardInputSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.IKeyboardInputSite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sink" Type="System.Windows.Interop.IKeyboardInputSink" />
+      </Parameters>
+      <Docs>
+        <param name="sink">O <see cref="T:System.Windows.Interop.IKeyboardInputSink" /> coletor do componente independente.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Interop.IKeyboardInputSink.RegisterKeyboardInputSink(System.Windows.Interop.IKeyboardInputSink)" />.</summary>
+        <returns>O <see cref="T:System.Windows.Interop.IKeyboardInputSite" /> site do componente independente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Interop.HwndHost> é convertida em uma interface de <xref:System.Windows.Interop.IKeyboardInputSink>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Interop.IKeyboardInputSink.TabInto">
+      <MemberSignature Language="C#" Value="bool IKeyboardInputSink.TabInto (System.Windows.Input.TraversalRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Windows.Interop.IKeyboardInputSink.TabInto(class System.Windows.Input.TraversalRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.System#Windows#Interop#IKeyboardInputSink#TabInto(System.Windows.Input.TraversalRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Windows.Input.TraversalRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Especifica se o foco deve ser definido para a primeira ou a última parada de tabulação.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Interop.IKeyboardInputSink.TabInto(System.Windows.Input.TraversalRequest)" />.</summary>
+        <returns>
+          <see langword="true" /> se o foco tiver sido definido como solicitado; <see langword="false" />, se não houver nenhuma parada de tabulação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Interop.HwndHost> é convertida em uma interface de <xref:System.Windows.Interop.IKeyboardInputSink>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator">
+      <MemberSignature Language="C#" Value="bool IKeyboardInputSink.TranslateAccelerator (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.System#Windows#Interop#IKeyboardInputSink#TranslateAccelerator(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem e dados associados. Não modifique esta estrutura. Ele é passado por referência por razões de desempenho apenas.</param>
+        <param name="modifiers">Teclas modificadoras.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi tratada pela implementação de método; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Interop.HwndHost> é convertida em uma interface de <xref:System.Windows.Interop.IKeyboardInputSink>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Interop.IKeyboardInputSink.TranslateChar">
+      <MemberSignature Language="C#" Value="bool IKeyboardInputSink.TranslateChar (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Windows.Interop.IKeyboardInputSink.TranslateChar(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.System#Windows#Interop#IKeyboardInputSink#TranslateChar(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem e dados associados. Não modifique esta estrutura. Ele é passado por referência por razões de desempenho apenas.</param>
+        <param name="modifiers">Teclas modificadoras.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Interop.IKeyboardInputSink.TranslateChar(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi processada e <see cref="M:System.Windows.Interop.IKeyboardInputSink.OnMnemonic(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" /> não deve ser chamado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Interop.HwndHost> é convertida em uma interface de <xref:System.Windows.Interop.IKeyboardInputSink>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIntoCore">
+      <MemberSignature Language="C#" Value="protected virtual bool TabIntoCore (System.Windows.Input.TraversalRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TabIntoCore(class System.Windows.Input.TraversalRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.TabIntoCore(System.Windows.Input.TraversalRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Windows.Input.TraversalRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Especifica se o foco deve ser definido para a primeira ou a última parada de tabulação.</param>
+        <summary>Define se o foco estará na primeira parada de tabulação ou na última parada de tabulação do coletor.</summary>
+        <returns>Sempre retorna <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateAcceleratorCore">
+      <MemberSignature Language="C#" Value="protected virtual bool TranslateAcceleratorCore (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TranslateAcceleratorCore(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.TranslateAcceleratorCore(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem e dados associados. Não modifique esta estrutura. Ele é passado por referência por razões de desempenho apenas.</param>
+        <param name="modifiers">Teclas modificadoras.</param>
+        <summary>Processa a entrada do teclado no nível da mensagem keydown.</summary>
+        <returns>Sempre retorna <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateCharCore">
+      <MemberSignature Language="C#" Value="protected virtual bool TranslateCharCore (ref System.Windows.Interop.MSG msg, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TranslateCharCore(valuetype System.Windows.Interop.MSG&amp; msg, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.TranslateCharCore(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem e dados associados. Não modifique esta estrutura. Ele é passado por referência por razões de desempenho apenas.</param>
+        <param name="modifiers">Teclas modificadoras.</param>
+        <summary>Processa mensagens de entrada WM_CHAR, WM_SYSCHAR, WM_DEADCHAR e WM_SYSDEADCHAR antes do <see cref="M:System.Windows.Interop.IKeyboardInputSink.OnMnemonic(System.Windows.Interop.MSG@,System.Windows.Input.ModifierKeys)" /> método é chamado.</summary>
+        <returns>Sempre retorna <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateWindowPos">
+      <MemberSignature Language="C#" Value="public void UpdateWindowPos ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateWindowPos() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.UpdateWindowPos" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza o tamanho da janela filho, visibilidade e posição para refletir o estado atual do elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected virtual IntPtr WndProc (IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance native int WndProc(native int hwnd, int32 msg, native int wParam, native int lParam, bool&amp; handled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndHost.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.IntPtr" />
+        <Parameter Name="msg" Type="System.Int32" />
+        <Parameter Name="wParam" Type="System.IntPtr" />
+        <Parameter Name="lParam" Type="System.IntPtr" />
+        <Parameter Name="handled" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">O identificador de janela da janela hospedada.</param>
+        <param name="msg">A mensagem a ser tratada.</param>
+        <param name="wParam">Informações que podem ser relevantes para tratar a mensagem. Isso normalmente é usado para armazenar pequenas partes de informações, como sinalizadores.</param>
+        <param name="lParam">Informações que podem ser relevantes para tratar a mensagem. Isso normalmente é usado para fazer referência a um objeto.</param>
+        <param name="handled">Se eventos resultantes devem ser marcado como tratado.</param>
+        <summary>Quando substituído em uma classe derivada, acessa o processo de janela (identificador) da janela filho hospedada.</summary>
+        <returns>O identificador de janela da janela filho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esse tipo ou membro não está disponível na zona de segurança da Internet.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar esse método. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <block subset="none" type="overrides">
+          <para>A implementação base em <see cref="T:System.Windows.Interop.HwndHost" /> não retorna um processo prático, mas retornará <c>IntPtr</c> como um mecanismo seguro.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

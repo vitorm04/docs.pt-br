@@ -1,0 +1,19 @@
+<Namespace Name="Microsoft.SqlServer.Server">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.SqlServer.Server" /> namespace contém classes, interfaces e enumerações que são específicas da integração do Microsoft .NET Framework common language runtime (CLR) no Microsoft SQL Server e o ambiente de execução do mecanismo de processo do banco de dados do SQL Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando o atributo de classes de <xref:Microsoft.SqlServer.Server> namespace, você pode criar procedimentos armazenados, disparadores, tipos definidos pelo usuário, funções definidas pelo usuário (escalares e com valor de tabela) e suporte de funções de agregação definida pelo usuário em qualquer linguagem do .NET Framework. Você também pode registrá-los no SQL Server.  
+  
+ Consulta o <xref:Microsoft.SqlServer.Server.SqlContext> classe para determinar se o código em execução no momento está em execução no processo do mecanismo de banco de dados do SQL Server. Isso também fornece o contexto do chamador, quando um usuário chama um procedimento armazenado gerenciado ou uma função no servidor, ou quando uma ação do usuário dispara um gatilho de código gerenciado.  
+  
+ O <xref:Microsoft.SqlServer.Server.SqlContext> classe fornece um <xref:Microsoft.SqlServer.Server.SqlPipe> objeto, por meio do qual os resultados são retornados ao cliente de um procedimento armazenado, um <xref:Microsoft.SqlServer.Server.SqlTriggerContext> objeto, que fornece informações sobre a operação que causou um gatilho ser acionado, e um <xref:System.Security.Principal.WindowsIdentity> objeto, que pode ser usado para determinar a identidade do cliente da chamada quando o cliente usar segurança integrada para autenticação.  
+  
+ Para obter mais informações sobre a integração de CLR do SQL Server e as APIs no <xref:Microsoft.SqlServer.Server> namespace, consulte os Manuais Online do SQL Server.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

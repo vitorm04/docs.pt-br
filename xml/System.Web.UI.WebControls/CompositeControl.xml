@@ -1,0 +1,215 @@
+<Type Name="CompositeControl" FullName="System.Web.UI.WebControls.CompositeControl">
+  <TypeSignature Language="C#" Value="public abstract class CompositeControl : System.Web.UI.WebControls.WebControl, System.Web.UI.INamingContainer, System.Web.UI.WebControls.ICompositeControlDesignerAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CompositeControl extends System.Web.UI.WebControls.WebControl implements class System.Web.UI.INamingContainer, class System.Web.UI.WebControls.ICompositeControlDesignerAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CompositeControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.ICompositeControlDesignerAccessor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.CompositeControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa a funcionalidade básica necessária por controles da Web que contêm controles filho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeControl> classe é uma classe abstrata que fornece funcionalidade designer nomeação de contêiner e controle para controles personalizados que incluem controles filho em sua totalidade ou usam a funcionalidade de outros controles. Esta classe é herdada por todos os controles, como <xref:System.Web.UI.WebControls.Login>, e <xref:System.Web.UI.WebControls.Wizard>. Você não pode usar essa classe diretamente.  
+  
+ A classe <xref:System.Web.UI.WebControls.CompositeControl> implementa a interface <xref:System.Web.UI.INamingContainer>. Isso é necessário para garantir que todos os atributos de identificação do controle filho são exclusivos e podem ser localizados na postagem de volta para a associação de dados.  
+  
+ Para criar um controle composto personalizado, derivam de <xref:System.Web.UI.WebControls.CompositeControl> classe. A funcionalidade que essa classe fornece verificação interna criança controle tiver sido criado antes que está sendo acessado e permite o ambiente de tempo de design recriar a coleção de controles filho. O <xref:System.Web.UI.WebControls.CompositeControl.Controls%2A> propriedade garante que todos os controles filho foram criados antes de acessar o <xref:System.Web.UI.ControlCollection>. O <xref:System.Web.UI.WebControls.CompositeControl.DataBind%2A> método verifica se todos os controles filho foram criados antes da associação a uma fonte de dados.  
+  
+ Os desenvolvedores de controle podem usar o <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner> classe para criar um designer personalizado para um controle composto derivado de <xref:System.Web.UI.WebControls.CompositeControl>. Um controle de designer é uma classe que define como um controle é exibido e manipulado no modo de design. Para obter mais informações, consulte <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CompositeControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CompositeControl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeControl> construtor é chamado pelo ASP.NET para criar uma instância do <xref:System.Web.UI.WebControls.CompositeControl>. Este construtor não se destina a ser usado em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeControl.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.ControlCollection" /> controla o objeto que representa o filho em um <see cref="T:System.Web.UI.WebControls.CompositeControl" />.</summary>
+        <value>Um <see cref="T:System.Web.UI.ControlCollection" /> que representa os controles filho no <see cref="T:System.Web.UI.WebControls.CompositeControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeControl.Controls%2A> propriedade substitui a implementação base para garantir que todos os controles filho foram criados antes de retornar o <xref:System.Web.UI.ControlCollection> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.CompositeControl.Controls%2A> propriedade permite que você acesse programaticamente o <xref:System.Web.UI.ControlCollection> para o <xref:System.Web.UI.WebControls.CompositeControl>. É possível adicionar controles para, ou remova os controles da coleção e iterar por meio dos controles na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public override void DataBind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.DataBind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Associa uma fonte de dados para o <see cref="T:System.Web.UI.WebControls.CompositeControl" /> e todos os seus controles filhos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeControl.DataBind%2A> método associa uma fonte de dados para o <xref:System.Web.UI.WebControls.CompositeControl> e todos os seus controles filho. Isso <xref:System.Web.UI.WebControls.CompositeControl.DataBind%2A> método substitui sua implementação base para verificar se todos os controles filho foram criados antes da associação a uma fonte de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecreateChildControls">
+      <MemberSignature Language="C#" Value="protected virtual void RecreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RecreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.RecreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recria os controles filho em um controle derivado de <see cref="T:System.Web.UI.WebControls.CompositeControl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeControl.RecreateChildControls%2A> método é usado principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Grava o <see cref="T:System.Web.UI.WebControls.CompositeControl" /> conteúdo especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto para exibição no cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeControl.Render%2A> método grava o conteúdo renderizado do controle e seus controles filhos para o cliente usando especificado <xref:System.Web.UI.HtmlTextWriter>. Esse método substitui a implementação base para garantir que todos os controles filho no <xref:System.Web.UI.WebControls.CompositeControl.Controls%2A> coleção são criados e, em seguida, processa o controle e seu filho usando a base de controles <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> e <xref:System.Web.UI.Control.RenderChildren%2A?displayProperty=nameWithType> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeControl.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle deve definir o atributo <see langword="disabled" /> do elemento HTML renderizado para "desabilitado" quando a propriedade do controle <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" /> é <see langword="false" />.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> propriedade indica uma versão do ASP.NET inferior <c>4.0</c>; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica como ASP.NET devem renderizar HTML para um controle quando o controle está desabilitado. Se essa propriedade for `true`, o ASP.NET processa um `disabled` atributo quando um controle está desabilitado. Se essa propriedade for `false`, o ASP.NET processa um `class` atributo quando um controle está desabilitado. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls">
+      <MemberSignature Language="C#" Value="void ICompositeControlDesignerAccessor.RecreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.ICompositeControlDesignerAccessor.RecreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeControl.System#Web#UI#WebControls#ICompositeControlDesignerAccessor#RecreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um designer recriar a coleção do controle composto de controles filho no ambiente de tempo de design.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

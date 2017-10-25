@@ -1,0 +1,104 @@
+<Type Name="ElementLocalizability" FullName="System.Windows.Markup.Localizer.ElementLocalizability">
+  <TypeSignature Language="C#" Value="public class ElementLocalizability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ElementLocalizability extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.ElementLocalizability" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as configurações de localização de um elemento de BAML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ElementLocalizability ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.ElementLocalizability.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.Localizer.ElementLocalizability" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ElementLocalizability (string formattingTag, System.Windows.LocalizabilityAttribute attribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string formattingTag, class System.Windows.LocalizabilityAttribute attribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.ElementLocalizability.#ctor(System.String,System.Windows.LocalizabilityAttribute)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="formattingTag" Type="System.String" />
+        <Parameter Name="attribute" Type="System.Windows.LocalizabilityAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="formattingTag">Um nome de marca de formatação. Atribua um valor não vazio para esse parâmetro para indicar a formatação embutido.</param>
+        <param name="attribute">Atributo de localização do elemento associado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.Localizer.ElementLocalizability" /> classe com um atributo especificado e formatação de marca e localização.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attribute">
+      <MemberSignature Language="C#" Value="public System.Windows.LocalizabilityAttribute Attribute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.LocalizabilityAttribute Attribute" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.ElementLocalizability.Attribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizabilityAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o atributo de localização do elemento associado.</summary>
+        <value>Atributo de localização do elemento associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o atributo de localização indica que o elemento não é localizável, o <xref:System.Windows.Markup.Localizer.ElementLocalizability.FormattingTag%2A> valor será ignorado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormattingTag">
+      <MemberSignature Language="C#" Value="public string FormattingTag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormattingTag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.ElementLocalizability.FormattingTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a marca de formatação do elemento associado.</summary>
+        <value>A cadeia de marca de formatação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor for uma cadeia de caracteres vazia, o elemento não será formatado embutido. Em vez disso, o elemento será representado por um espaço reservado de filho no conteúdo do pai.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

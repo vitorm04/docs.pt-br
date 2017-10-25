@@ -1,0 +1,549 @@
+<Type Name="VirtualPathUtility" FullName="System.Web.VirtualPathUtility">
+  <TypeSignature Language="C#" Value="public static class VirtualPathUtility" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit VirtualPathUtility extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.VirtualPathUtility" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos de utilitário para operações comuns de caminho virtual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.VirtualPathUtility> classe fornece métodos de utilitário para operações comuns que envolvem caminhos virtuais. Para controles de servidor ASP.NET e código do servidor, caminhos virtuais usando o operador de raiz do aplicativo Web, o til (~), geralmente são usadas em vez de caminhos relativos e absolutos. Para obter mais informações, consulte [caminhos de projetos Web ASP.NET](http://msdn.microsoft.com/library/2447f50c-b849-483c-8093-85ed53e7a5bd).  
+  
+ Use o <xref:System.Web.VirtualPathUtility> classe quando você precisa converter caminhos relativos a aplicativos em caminhos virtuais absolutos, como pode ser o caso no desenvolvimento de um manipulador de serviço da Web personalizado.  
+  
+ Um caminho virtual absoluto inicia com a literal barra (/). Um caminho virtual relativo é relativo ao diretório raiz do aplicativo, se ele é apenas um til (~) ou começa com o til e uma barra invertida dupla (~\\\\) ou o til e uma barra (~ /). Fazer um caminho virtual relativo torna o caminho independente do aplicativo.  
+  
+ O diretório virtual para o aplicativo pode ser obtido o <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> e <xref:System.Web.HttpRequest.ApplicationPath%2A> propriedades.  
+  
+> [!NOTE]
+>  O <xref:System.Web.VirtualPathUtility> classe não é apenas para fins de segurança ou de conversão em formato canônico. Para obter mais informações sobre a segurança de aplicativo Web, consulte [visão geral da Web aplicativo contra ameaças à segurança](http://msdn.microsoft.com/library/88d61678-f84e-4622-ae80-53128821855a). Para a funcionalidade de processamento de URL genérica, consulte <xref:System.Uri>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.VirtualPathUtility> classe e alguns de seus métodos. Primeiro, o <xref:System.Web.HttpRequest.FilePath%2A> propriedade gera o caminho virtual para a página da Web. O <xref:System.Web.VirtualPathUtility.GetFileName%2A>, <xref:System.Web.VirtualPathUtility.GetExtension%2A>, e <xref:System.Web.VirtualPathUtility.GetDirectory%2A> métodos retornam informações sobre o caminho virtual. Em seguida, o <xref:System.Web.HttpRequest.CurrentExecutionFilePath%2A> propriedade gera um caminho virtual da solicitação atual, que pode ser diferente de <xref:System.Web.HttpRequest.FilePath%2A> propriedade, se um <xref:System.Web.HttpResponse.Redirect%2A> método foi chamado. O <xref:System.Web.VirtualPathUtility.IsAbsolute%2A>, <xref:System.Web.VirtualPathUtility.IsAppRelative%2A>, e <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> métodos retornam informações sobre o caminho virtual.  
+  
+ [!code-aspx-csharp[System.Web.VirtualPathUtility#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#1)]
+ [!code-aspx-vb[System.Web.VirtualPathUtility#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppendTrailingSlash">
+      <MemberSignature Language="C#" Value="public static string AppendTrailingSlash (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string AppendTrailingSlash(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.AppendTrailingSlash(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual ao qual a barra “/” será acrescentada.</param>
+        <summary>Acrescenta a barra “/” literal ao final do caminho virtual se ainda não existe.</summary>
+        <returns>O caminho virtual modificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se existir a literal barra (/) no final do caminho virtual, o caminho virtual não é modificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static string Combine (string basePath, string relativePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Combine(string basePath, string relativePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.Combine(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="basePath" Type="System.String" />
+        <Parameter Name="relativePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="basePath">O caminho base.</param>
+        <param name="relativePath">O caminho relativo.</param>
+        <summary>Combina um caminho base e um caminho relativo.</summary>
+        <returns>Os caminhos <paramref name="basePath" /> e <paramref name="relativePath" /> combinados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.VirtualPathUtility.Combine%2A> método retornará o valor de <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> propriedade se o caminho relativo será exatamente um til (~).  
+  
+ O <xref:System.Web.VirtualPathUtility.Combine%2A> método usa o <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> valor de propriedade em vez do caminho base, se o caminho relativo começa com um til e uma barra (~ /); caso contrário, o <xref:System.Web.VirtualPathUtility.Combine%2A> método usa o caminho base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          O <paramref name="relativePath" /> é um caminho físico.  
+  
+ -ou-  
+  
+ <paramref name="relativePath" />inclui um ou mais de dois-pontos.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="relativePath" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="basePath" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectory">
+      <MemberSignature Language="C#" Value="public static string GetDirectory (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDirectory(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.GetDirectory(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual.</param>
+        <summary>Retorna a parte do diretório de um caminho virtual.</summary>
+        <returns>O diretório referenciado no caminho virtual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `virtualPath` não tem raiz; ou seja, ele não é igual para o operador de raiz (o til [~]), não inicia com um til (~), como um til e uma barra (~ /) ou um til e uma barra invertida dupla (~ / /), ou não começa com uma barra (/), um <xref:System.ArgumentException> exceção será lançada.  
+  
+ Se o caminho virtual que é passado para o <xref:System.Web.VirtualPathUtility.GetDirectory%2A> método `"/images/image1.gif"`, o diretório retornado é `"/images"`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.VirtualPathUtility.GetFileName%2A>, <xref:System.Web.VirtualPathUtility.GetExtension%2A>, e <xref:System.Web.VirtualPathUtility.GetDirectory%2A> métodos.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#2)]
+ [!code-vb[System.Web.VirtualPathUtility#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="virtualPath" /> não tem raiz.  
+  
+ \- ou -  
+  
+ <paramref name="virtualPath" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtension">
+      <MemberSignature Language="C#" Value="public static string GetExtension (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetExtension(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.GetExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual.</param>
+        <summary>Recupera a extensão do arquivo que é referenciado no caminho virtual.</summary>
+        <returns>O literal de cadeia de extensão da nome de arquivo, incluindo o ponto (.), <see langword="null" />, ou uma cadeia de caracteres vazia ("").</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o caminho virtual que é passado para o <xref:System.Web.VirtualPathUtility.GetExtension%2A> método `"/images/image1.gif"`, a extensão retornada é `".gif"`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.VirtualPathUtility.GetFileName%2A>, <xref:System.Web.VirtualPathUtility.GetExtension%2A>, e <xref:System.Web.VirtualPathUtility.GetDirectory%2A> métodos.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#2)]
+ [!code-vb[System.Web.VirtualPathUtility#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="virtualPath" />contém um ou mais caracteres que não são válidos, conforme definido em <see cref="F:System.IO.Path.InvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileName">
+      <MemberSignature Language="C#" Value="public static string GetFileName (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFileName(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.GetFileName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual.</param>
+        <summary>Recupera o nome do arquivo do arquivo que é referenciado no caminho virtual.</summary>
+        <returns>O nome do arquivo literal após o último caractere diretório <paramref name="virtualPath" />; caso contrário, o último diretório nome se for o último caractere do <paramref name="virtualPath" /> é um caractere separador de diretório ou volume.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o caminho virtual que é passado para o <xref:System.Web.VirtualPathUtility.GetFileName%2A> método `"/images/image1.gif"`, o nome de arquivo retornado é `"image1.gif"`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.VirtualPathUtility.GetFileName%2A>, <xref:System.Web.VirtualPathUtility.GetExtension%2A>, e <xref:System.Web.VirtualPathUtility.GetDirectory%2A> métodos.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#2)]
+ [!code-vb[System.Web.VirtualPathUtility#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="virtualPath" />contém um ou mais caracteres que não são válidos, conforme definido em <see cref="F:System.IO.Path.InvalidPathChars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAbsolute">
+      <MemberSignature Language="C#" Value="public static bool IsAbsolute (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsAbsolute(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.IsAbsolute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual para verificar.</param>
+        <summary>Retorna um valor booliano que indica se o caminho virtual especificado é absoluto; ou seja, ele começa com uma literal de barra (/).</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="virtualPath" /> é um caminho absoluto e não <see langword="null" /> ou uma cadeia de caracteres vazia (""); Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um caminho virtual é absoluto se ela começa com uma literal barra (/). Por exemplo, o <xref:System.Web.HttpRequest.Path%2A> propriedade retorna um caminho virtual absoluto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.VirtualPathUtility.IsAbsolute%2A>, <xref:System.Web.VirtualPathUtility.IsAppRelative%2A>, e <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> métodos.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#3)]
+ [!code-vb[System.Web.VirtualPathUtility#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="virtualPath" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAppRelative">
+      <MemberSignature Language="C#" Value="public static bool IsAppRelative (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsAppRelative(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.IsAppRelative(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual para verificar.</param>
+        <summary>Retorna um valor booliano que indica se o caminho virtual especificado é relativo ao aplicativo.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="virtualPath" /> relativo para o aplicativo; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O caminho virtual pode ser apenas o operador de raiz (o til [~]), ou ele pode começar com o operador de raiz. Se `virtualPath` é `null`, um <xref:System.ArgumentNullException> exceção será gerada. Se `virtualPath` é uma cadeia de caracteres vazia (""), o <xref:System.Web.VirtualPathUtility.IsAppRelative%2A> método retornará `false`.  
+  
+> [!NOTE]
+>  `"~``filename` `"` não é um caminho virtual válido e retorna `false` para o <xref:System.Web.VirtualPathUtility.IsAppRelative%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.VirtualPathUtility.IsAbsolute%2A>, <xref:System.Web.VirtualPathUtility.IsAppRelative%2A>, e <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> métodos.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#3)]
+ [!code-vb[System.Web.VirtualPathUtility#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="virtualPath" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeRelative">
+      <MemberSignature Language="C#" Value="public static string MakeRelative (string fromPath, string toPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string MakeRelative(string fromPath, string toPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.MakeRelative(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromPath" Type="System.String" />
+        <Parameter Name="toPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fromPath">O caminho virtual inicial do qual o caminho virtual relativo é retornado.</param>
+        <param name="toPath">O caminho virtual final para o qual o caminho virtual relativo é retornado.</param>
+        <summary>Retorna o caminho virtual relativo de um caminho virtual que contém o operador raiz (o til [~]) para outro.</summary>
+        <returns>O caminho virtual relativo de <paramref name="fromPath" /> para <paramref name="toPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `fromPath` e `toPath` parâmetros não estão vinculados; isto é, eles não são iguais para o operador de raiz (o til [~]), não começam com um til (~), como um til e uma barra (~ /) ou um til e uma barra invertida dupla (~ / /), ou não iniciar com uma barra (/), um <xref:System.ArgumentException> exceção será lançada.  
+  
+ Parâmetros de cadeia de caracteres de consulta e âncoras HTML que são usadas no URI não são usadas para determinar o caminho relativo.  
+  
+ Se `fromPath` é `"/directory1/file1.aspx"` e `toPath` é `"/directory2/file2.aspx"`, o <xref:System.Web.VirtualPathUtility.MakeRelative%2A> método retornará `"../directory2/file2.aspx"`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="fromPath" /> não tem raiz.  
+  
+ \- ou -  
+  
+ O <paramref name="toPath" /> não tem raiz.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveTrailingSlash">
+      <MemberSignature Language="C#" Value="public static string RemoveTrailingSlash (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string RemoveTrailingSlash(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.RemoveTrailingSlash(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual do qual remover qualquer barra “/” à direita.</param>
+        <summary>Remover uma barra “/” à direita de um caminho virtual.</summary>
+        <returns>Um caminho virtual sem uma barra “/” à direita, se o caminho virtual já não é o diretório raiz ("/"); caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.VirtualPathUtility.RemoveTrailingSlash%2A> método Remove uma barra (/) a partir do final do caminho virtual. Se o caminho virtual já é o diretório raiz (`"/"`), nenhuma ação será tomada. Se o caminho virtual é `null` ou uma cadeia de caracteres vazia (""), o <xref:System.Web.VirtualPathUtility.RemoveTrailingSlash%2A> método retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToAbsolute">
+      <MemberSignature Language="C#" Value="public static string ToAbsolute (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToAbsolute(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.ToAbsolute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual a ser convertido em um caminho relativo do aplicativo.</param>
+        <summary>Converte um caminho virtual em um caminho absoluto do aplicativo.</summary>
+        <returns>A representação de caminho absoluto do caminho virtual especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um caminho absoluto do aplicativo é um onde o caminho do aplicativo é usado em vez do operador de raiz (o til [~]).  
+  
+ Se `virtualPath` é:  
+  
+-   Absoluto, o <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> método retorna o caminho virtual inalterado.  
+  
+-   Relativo ao aplicativo, o <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> método anexa o caminho de diretório virtual do aplicativo atual para o início do `virtualPath`. Por exemplo, o caminho de diretório virtual do aplicativo atual pode ser acessado do <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> propriedade.  
+  
+-   Não tem raiz, o <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> método gera um <xref:System.ArgumentOutOfRangeException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          O <paramref name="virtualPath" /> não tem raiz.</exception>
+        <exception cref="T:System.Web.HttpException">Um ponto duplo à esquerda (.) é usado para sair acima do diretório superior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToAbsolute">
+      <MemberSignature Language="C#" Value="public static string ToAbsolute (string virtualPath, string applicationPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToAbsolute(string virtualPath, string applicationPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.ToAbsolute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="applicationPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual a ser convertido em um caminho relativo do aplicativo.</param>
+        <param name="applicationPath">O caminho do aplicativo a ser usado para converter <c>virtualPath</c> como um caminho relativo.</param>
+        <summary>Converte um caminho virtual em um caminho absoluto do aplicativo usando o caminho de aplicativo especificado.</summary>
+        <returns>A representação de caminho virtual absoluta do <paramref name="virtualPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> de sobrecarga do <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> método usa o caminho do aplicativo fornecido em vez do caminho do aplicativo atual.  
+  
+ Se `virtualPath` é:  
+  
+-   Absoluto, o <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> método retorna o caminho virtual sem alterações.  
+  
+-   Relativo ao aplicativo, o <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> método adiciona `applicationPath` para o início do caminho virtual.  
+  
+-   Não tem raiz, o <xref:System.Web.VirtualPathUtility.ToAbsolute%2A> método gera um <xref:System.ArgumentOutOfRangeException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          O <paramref name="applicationPath" /> não tem raiz.</exception>
+        <exception cref="T:System.Web.HttpException">Um ponto duplo à esquerda (.) é usado no caminho do aplicativo para sair acima do diretório superior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToAppRelative">
+      <MemberSignature Language="C#" Value="public static string ToAppRelative (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToAppRelative(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.ToAppRelative(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual a ser convertido em um caminho relativo do aplicativo.</param>
+        <summary>Converte um caminho virtual em um caminho relativo do aplicativo usando o caminho virtual do aplicativo que está na propriedade <see cref="P:System.Web.HttpRuntime.AppDomainAppVirtualPath" />.</summary>
+        <returns>A representação de caminho relativo do aplicativo de <paramref name="virtualPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o caminho virtual para o aplicativo é `"myapp"` e o caminho virtual `"/myApp/sub/default.asp"` é passado para o <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> , o caminho relativo de aplicativo resultante é `"~/sub/default.aspx"`.  
+  
+ Se `virtualPath` não começa com o caminho do aplicativo atual, o <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> método retorna o caminho virtual inalterado.  
+  
+ Se `virtualPath` é o mesmo que o caminho do aplicativo, o operador de raiz (o til [~]), será retornado. Por exemplo, o caminho de diretório virtual do aplicativo atual pode ser acessado do <xref:System.Web.HttpRuntime.AppDomainAppVirtualPath%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.VirtualPathUtility.IsAbsolute%2A>, <xref:System.Web.VirtualPathUtility.IsAppRelative%2A>, e <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> métodos.  
+  
+ [!code-csharp[System.Web.VirtualPathUtility#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.VirtualPathUtility/cs/virtualpathutilitycs.aspx#3)]
+ [!code-vb[System.Web.VirtualPathUtility#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.VirtualPathUtility/vb/virtualpathutilityvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="virtualPath" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToAppRelative">
+      <MemberSignature Language="C#" Value="public static string ToAppRelative (string virtualPath, string applicationPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToAppRelative(string virtualPath, string applicationPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.VirtualPathUtility.ToAppRelative(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="applicationPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual a ser convertido em um caminho relativo do aplicativo.</param>
+        <param name="applicationPath">O caminho do aplicativo a ser usado para converter <c>virtualPath</c> como um caminho relativo.</param>
+        <summary>Converte um caminho virtual em um caminho relativo de aplicativo usando um caminho de aplicativo especificado.</summary>
+        <returns>A representação de caminho relativo do aplicativo de <paramref name="virtualPath" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> de sobrecarga do <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> método usa `applicationPath` em vez do caminho do aplicativo atual. Se `virtualPath` não começa com `applicationPath`, o <xref:System.Web.VirtualPathUtility.ToAppRelative%2A> método retorna o caminho virtual inalterado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

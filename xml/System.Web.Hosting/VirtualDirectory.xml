@@ -1,0 +1,224 @@
+<Type Name="VirtualDirectory" FullName="System.Web.Hosting.VirtualDirectory">
+  <TypeSignature Language="C#" Value="public abstract class VirtualDirectory : System.Web.Hosting.VirtualFileBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit VirtualDirectory extends System.Web.Hosting.VirtualFileBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.VirtualDirectory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Hosting.VirtualFileBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto de diretório em um arquivo virtual ou espaço de recurso.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Hosting.VirtualDirectory> classe é a classe base para objetos que representam diretórios em um sistema de arquivos virtual. Normalmente, você poderia implementar um descendente do <xref:System.Web.Hosting.VirtualDirectory> classe para cada <xref:System.Web.Hosting.VirtualPathProvider> classe descendente no seu aplicativo Web.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um <xref:System.Web.Hosting.VirtualDirectory> implementação da classe que retorna informações de diretório virtual armazenadas em um <xref:System.Data.DataSet> objeto. Esse código funciona com os exemplos de código para o <xref:System.Web.Hosting.VirtualPathProvider> e <xref:System.Web.Hosting.VirtualFile> classes para fornecer recursos virtuais de dados de um repositório que são carregados em um <xref:System.Data.DataSet> objeto. Para as instruções completas para compilar e executar o exemplo, consulte a seção exemplo de <xref:System.Web.Hosting.VirtualPathProvider> visão geral da classe.  
+  
+ Este exemplo tem duas partes, o <xref:System.Web.Hosting.VirtualDirectory> implementação da classe e o arquivo de dados XML usados para popular o <xref:System.Data.DataSet> objeto.  
+  
+ O primeiro exemplo de código é uma implementação de <xref:System.Web.Hosting.VirtualDirectory> classe. No construtor, ele usa um método em um personalizado <xref:System.Web.Hosting.VirtualPathProvider> objeto para retornar um <xref:System.Data.DataSet> objeto. Ele pesquisa o <xref:System.Data.DataSet> objeto para recuperar as informações de diretório associadas com o caminho virtual fornecido.  
+  
+ [!code-csharp[System.Web.Hosting.VirtualPathProvider#30](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/CS/SampleVirtualDirectory.cs#30)]
+ [!code-vb[System.Web.Hosting.VirtualPathProvider#30](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/VB/SampleVirtualDirectory.vb#30)]  
+  
+ O segundo exemplo é o arquivo de dados XML usado para popular o <xref:System.Data.DataSet> objeto retornado por personalizado <xref:System.Web.Hosting.VirtualPathProvider> objeto. Esses dados XML são usados para demonstrar o uso de <xref:System.Web.Hosting.VirtualPathProvider>, <xref:System.Web.Hosting.VirtualFile>, e <xref:System.Web.Hosting.VirtualDirectory> classes para recuperar dados de dados externos e não se destina para representar um repositório de dados de qualidade de produção.  
+  
+```  
+<?xml version="1.0" encoding="utf-8" ?>  
+  <resource type="dir"   
+    path="/vrDir"   
+    parentPath=""   
+    content="">  
+    <resource type="file"   
+      path="/vrDir/Level1FileA.vrf"  
+      parentPath="/vrDir"   
+      content="This is the content of file Level1FileA." >  
+    </resource>  
+    <resource type="file"   
+      path="/vrDir/Level1FileB.vrf"  
+      parentPath="/vrDir"   
+      content="This is the content of file Level1FileB.">  
+    </resource>  
+    <resource type="dir"   
+      path="/vrDir/Level2DirA"   
+      parentPath="/vrDir"   
+      content="">  
+        <resource type="file"   
+          path="/vrDir/Level2DirA/Level2FileA.vrf"   
+          parentPath="/vrDir/Level2DirA"   
+          content="This is the content of file Level2FileA." >  
+        </resource>  
+        <resource type="file"   
+          path="/vrDir/Level2DirA/Level2FileB.vrf"  
+          parentPath="/vrDir/Level2DirA"   
+          content="This is the content of file Level2FileB.">  
+        </resource>  
+    </resource>  
+    <resource type="dir"   
+      path="/vrDir/Level2DirB"   
+      parentPath="/vrDir"   
+      content="">  
+      <resource type="file"   
+        path="/vrDir/Level2DirB/Level2FileA.vrf"   
+        parentPath="/vrDir/Level2DirB"   
+        content="This is the content of file Level2FileA." >  
+      </resource>  
+      <resource type="file"   
+        path="/vrDir/Level2DirB/Level2FileB.vrf"  
+        parentPath="/vrDir/Level2DirB"   
+        content="This is the content of file Level2FileB.">  
+       </resource>  
+    </resource>  
+  </resource>  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar do <see cref="T:System.Web.Hosting.VirtualDirectory" /> classe, você deve substituir o <see cref="P:System.Web.Hosting.VirtualDirectory.Children" />, <see cref="P:System.Web.Hosting.VirtualDirectory.Directories" />, e <see cref="P:System.Web.Hosting.VirtualDirectory.Files" /> propriedades para retornar um objeto que implementa o <see cref="T:System.Collections.IEnumerable" /> interface.  
+  
+ Se a estrutura de diretório virtual contiver números moderados a grande de recursos virtuais, você deve ter cuidado para minimizar os recursos do sistema consumidos ao enumerar o diretório virtual chamando o <see cref="P:System.Web.Hosting.VirtualDirectory.Children" />, <see cref="P:System.Web.Hosting.VirtualDirectory.Directories" />, ou <see cref="P:System.Web.Hosting.VirtualDirectory.Files" />propriedades.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected VirtualDirectory (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.VirtualDirectory.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual para o recurso representado por esta instância.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Hosting.VirtualDirectory" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir é uma implementação do <xref:System.Web.Hosting.VirtualDirectory.%23ctor%2A> construtor que recupera informações de arquivo virtual de um <xref:System.Data.DataSet> objeto fornecido por um personalizado <xref:System.Web.Hosting.VirtualPathProvider> objeto. Ele inclui o `GetData` método usado para popular o <xref:System.Web.Hosting.VirtualDirectory> instância. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Hosting.VirtualDirectory> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Hosting.VirtualPathProvider#31](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/CS/SampleVirtualDirectory.cs#31)]
+ [!code-vb[System.Web.Hosting.VirtualPathProvider#31](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.hosting.virtualpathprovider/VB/SampleVirtualDirectory.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerable Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable Children" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.VirtualDirectory.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de arquivos e subpastas contidas neste diretório virtual.</summary>
+        <value>Um objeto que implementa o <see cref="T:System.Collections.IEnumerable" /> interface contendo <see cref="T:System.Web.Hosting.VirtualFile" /> e <see cref="T:System.Web.Hosting.VirtualDirectory" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Hosting.VirtualDirectory.Children%2A> propriedade contém <xref:System.Web.Hosting.VirtualFile> e <xref:System.Web.Hosting.VirtualDirectory> objetos que representam os arquivos e pastas contidas neste diretório virtual. Para retornar apenas o <xref:System.Web.Hosting.VirtualFile> objetos, use o <xref:System.Web.Hosting.VirtualDirectory.Files%2A> propriedade. Para retornar apenas o <xref:System.Web.Hosting.VirtualDirectory> objetos, use o <xref:System.Web.Hosting.VirtualDirectory.Directories%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se a estrutura de diretório virtual contiver números moderados a grande de recursos virtuais, você deve ter cuidado para minimizar os recursos de sistema consumidos Enumerando o diretório virtual.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Directories">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerable Directories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable Directories" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.VirtualDirectory.Directories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de todas as subpastas contidos nessa pasta.</summary>
+        <value>Um objeto que implementa o <see cref="T:System.Collections.IEnumerable" /> interface contendo <see cref="T:System.Web.Hosting.VirtualDirectory" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Hosting.VirtualDirectory.Directories%2A> propriedade contém <xref:System.Web.Hosting.VirtualDirectory> objetos que representam os diretórios contidos neste diretório virtual. Para retornar o <xref:System.Web.Hosting.VirtualFile> objetos, use o <xref:System.Web.Hosting.VirtualDirectory.Files%2A> propriedade. Para retornar as <xref:System.Web.Hosting.VirtualFile> e <xref:System.Web.Hosting.VirtualDirectory> objetos, use o <xref:System.Web.Hosting.VirtualDirectory.Children%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se a estrutura de diretório virtual contiver números moderados a grande de recursos virtuais, você deve ter cuidado para minimizar os recursos de sistema consumidos Enumerando o diretório virtual.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Files">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerable Files { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable Files" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.VirtualDirectory.Files" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de todos os arquivos contidos nessa pasta.</summary>
+        <value>Um objeto que implementa o <see cref="T:System.Collections.IEnumerable" /> interface contendo <see cref="T:System.Web.Hosting.VirtualFile" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Hosting.VirtualDirectory.Files%2A> propriedade contém <xref:System.Web.Hosting.VirtualFile> objetos que representam os arquivos contidos neste diretório virtual. Para retornar o <xref:System.Web.Hosting.VirtualDirectory> objetos, use o <xref:System.Web.Hosting.VirtualDirectory.Directories%2A> propriedade. Para retornar as <xref:System.Web.Hosting.VirtualFile> e <xref:System.Web.Hosting.VirtualDirectory> objetos, use o <xref:System.Web.Hosting.VirtualDirectory.Children%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se a estrutura de diretório virtual contiver números moderados a grande de recursos virtuais, você deve ter cuidado para minimizar os recursos de sistema consumidos Enumerando o diretório virtual.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectory">
+      <MemberSignature Language="C#" Value="public override bool IsDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Hosting.VirtualDirectory.IsDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica que esse é um recurso virtual que deve ser tratado como um diretório.</summary>
+        <value>Sempre <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,191 @@
+<Type Name="ConfigurationBasedIssuerNameRegistry" FullName="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry">
+  <TypeSignature Language="C#" Value="public class ConfigurationBasedIssuerNameRegistry : System.IdentityModel.Tokens.IssuerNameRegistry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigurationBasedIssuerNameRegistry extends System.IdentityModel.Tokens.IssuerNameRegistry" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.IssuerNameRegistry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um Registro do nome do emissor que mantém uma lista de emissores confiáveis carregado de elementos no arquivo de configuração de aplicativo que associa cada nome de emissor para o certificado X.509 que é necessário para verificar a assinatura de tokens produzidos pelo emissor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe mantém um dicionário de emissores confiáveis, mapeando o certificado de cada emissor confiável para um nome que se refere a esse emissor. Os certificados são especificados usando o ASN. 1 codificados formulário da impressão digital. O nome do emissor pode ser qualquer cadeia de caracteres, desde que seja exclusivo dentro do escopo do aplicativo. Esse dicionário pode ser acessado por meio de <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers%2A> propriedade. A classe somente pode resolver certificados x. 509.  
+  
+ O mapa de emissores confiáveis é especificado em um arquivo de configuração adicionando entradas na [ &lt;trustedIssuers&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) elemento. O `<trustedIssuers>` é um elemento filho do [ &lt;issuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md) elemento e é válido quando o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe especificada no `type` atributo do elemento. Para obter mais informações, consulte a documentação de cada um desses elementos no [esquema de configuração do WIF](http://msdn.microsoft.com/library/4d4f6d76-49a5-4bad-b345-097b2e2844e9). Para obter mais informações sobre os registros de nome de emissor, consulte o <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe.  
+  
+ Você pode derivar de <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> para implementar seu próprio registro de nome de emissor com base de configuração. Quais métodos você substituir dependerão da sua implementação. Por exemplo, você pode substituir o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.LoadCustomConfiguration%2A> método ao carregar a configuração de um esquema de configuração personalizada.  
+  
+   
+  
+## Examples  
+ O XML a seguir mostra a configuração para um <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> adicionado para uma coleção de manipuladores de token de segurança. O `<trustedIssuers>` elemento se comporta como uma coleção de configuração .NET clássica, permitindo que o `<add>`, `<delete>` e `<clear>` elementos como elementos filho.  
+  
+```  
+<system.identityModel>  
+  <identityConfiguration>  
+    <securityTokenHandlersCollection>  
+      <securityTokenHandlerConfiguration>  
+        <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel">  
+          <trustedIssuers>  
+             <add thumbprint="97249e … 158de" name="contoso.com" />  
+         </trustedIssuers>  
+        </issuerNameRegistry>  
+      </securityTokenHandlerConfiguration>  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationBasedIssuerNameRegistry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTrustedIssuer">
+      <MemberSignature Language="C#" Value="public void AddTrustedIssuer (string certificateThumbprint, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddTrustedIssuer(string certificateThumbprint, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.AddTrustedIssuer(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateThumbprint" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="certificateThumbprint">ASN. 1 codificado em forma de impressão digital do certificado do emissor.</param>
+        <param name="name">O nome do emissor.</param>
+        <summary>Adiciona um emissor para o dicionário de emissores confiáveis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode chamar esse método para adicionar os emissores para os <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers%2A> dicionário. Em classes derivadas, você pode chamar esse método a partir de <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.LoadCustomConfiguration%2A> para adicionar emissores ao dicionário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="certificateThumbprint" /> é <see langword="null" /> ou vazio.  
+  
+ -ou-  
+  
+ <paramref name="name" /> é <see langword="null" /> ou vazio.</exception>
+        <exception cref="T:System.InvalidOperationException">O emissor especificado pelo <paramref name="certificateThumbprint" /> já foi configurada. (O emissor já existe o <see cref="P:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers" /> dicionário.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfiguredTrustedIssuers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; ConfiguredTrustedIssuers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; ConfiguredTrustedIssuers" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o dicionário de emissores confiáveis que foram configurados para essa instância.</summary>
+        <value>Um dicionário que contém os emissores confiáveis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave para dicionário é o ASN. 1 codificado em forma de impressão digital do certificado do emissor confiável e o valor é o nome do emissor. O dicionário contém os emissores que foram especificados na configuração e nenhum emissor adicionais que foram adicionados com o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.AddTrustedIssuer%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIssuerName">
+      <MemberSignature Language="C#" Value="public override string GetIssuerName (System.IdentityModel.Tokens.SecurityToken securityToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetIssuerName(class System.IdentityModel.Tokens.SecurityToken securityToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.GetIssuerName(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">O token de segurança para o qual o nome do emissor é solicitado. Deve ser atribuído como <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</param>
+        <summary>Retorna o nome do emissor associado ao <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> mapeando a impressão digital do certificado para um nome no dicionário de emissores confiáveis.</summary>
+        <returns>O nome do emissor se existe uma entrada para a impressão digital do certificado do token no <see cref="P:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers" /> dicionário; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As pesquisas de implementação padrão de <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.ConfiguredTrustedIssuers%2A> dicionário para a impressão digital do certificado x. 509 especificada na `securityToken`. Se for encontrada uma entrada, o nome do emissor é retornado; Caso contrário, `null` será retornado. Se `securityToken` não é atribuível da <xref:System.IdentityModel.Tokens.X509SecurityToken>, `null` será retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityToken" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public override void LoadCustomConfiguration (System.Xml.XmlNodeList customConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList customConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customConfiguration" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="customConfiguration">O XML que representa o mapa de emissores confiáveis especificado no arquivo de configuração.</param>
+        <summary>Carrega os emissores confiáveis de configuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry.LoadCustomConfiguration%2A> método é chamado pela infraestrutura de configuração. Quando este método é chamado, o `nodelist` conterá os elementos filho de nível superior do [ &lt;issuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md) elemento do arquivo de configuração. Cada um deles pode, por sua vez, contêm atributos ou elementos filho dependendo do esquema de configuração que você definir para a sua classe derivada.  
+  
+ Este método é chamado pela infraestrutura de configuração. A implementação padrão carrega a configuração de um [ &lt;trustedIssuers&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) elemento (configurado com o [ &lt;issuerNameRegistry&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)elemento). Você pode substituir esse método para fornecer suporte para elementos de configuração personalizada em classes derivadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="customConfiguration" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A configuração contém um ou mais elementos que não são reconhecidos.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

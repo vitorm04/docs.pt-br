@@ -1,0 +1,229 @@
+<Type Name="PlacementMode" FullName="System.Windows.Controls.Primitives.PlacementMode">
+  <TypeSignature Language="C#" Value="public enum PlacementMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PlacementMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.PlacementMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve o posicionamento em que um controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> aparece na tela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa classe de enumeração para definir o valor da <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriedade de um <xref:System.Windows.Controls.Primitives.Popup> controle. O <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> valor da propriedade, junto com os valores da <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propriedades, determina onde e como um <xref:System.Windows.Controls.Primitives.Popup> aparece na tela. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria quatro <xref:System.Windows.Controls.Primitives.Popup> controles que estão em relação a uma imagem. Cada <xref:System.Windows.Controls.Primitives.Popup> tem um valor diferente para a propriedade de posicionamento.  
+  
+ [!code-xaml[PopupPositionSnippet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#3)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Absolute">
+      <MemberSignature Language="C#" Value="Absolute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Absolute = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Absolute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> em relação ao canto superior esquerdo da tela e em um deslocamento que é definido pelos valores das propriedades <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> e <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />. Quando a borda da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona-se para alinhar-se à borda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AbsolutePoint">
+      <MemberSignature Language="C#" Value="AbsolutePoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode AbsolutePoint = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> em relação ao canto superior esquerdo da tela e em um deslocamento que é definido pelos valores das propriedades <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> e <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />. Quando a borda da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle estende-se na direção oposta ao eixo definido pelo <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> ou <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />=.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Bottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> no qualele alinha sua borda superior à borda inferior do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> e alinha sua borda esquerda à borda esquerda do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Se a borda inferior de tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, reposiciona o controle em si para que a borda inferior alinhe com a borda superior do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Quando a borda superior da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona-se para que sua borda superior se alinhe à borda superior da tela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Center = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> em que ele fica centralizado no <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Quando uma borda da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona-se para alinhar-se à borda da tela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Custom = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um comportamento de posicionamento e reposicionamento do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> que é definido pelo delegado <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacementCallback" /> especificado pela propriedade <see cref="P:System.Windows.Controls.Primitives.Popup.CustomPopupPlacementCallback" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Left = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> que alinha sua borda direita à borda esquerda do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> e alinha sua borda superior à borda superior do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Se a borda esquerda de tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o <see cref="T:System.Windows.Controls.Primitives.Popup" /> reposiciona em si para que sua borda esquerda alinhe com a borda direita do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Se a tela-borda direita ocultará o <see cref="T:System.Windows.Controls.Primitives.Popup" />, a borda direita do controle se alinha com a borda direita de tela. Quando borda superior ou inferior da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona-se para alinhar-se à borda da tela obscurecida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mouse">
+      <MemberSignature Language="C#" Value="Mouse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Mouse = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Mouse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> que alinha sua borda superior à borda inferior da caixa delimitadora do mouse e alinha sua borda esquerda à borda esquerda da caixa delimitadora do mouse. Se a borda inferior de tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, ele reposiciona automaticamente para alinhar com a borda superior da caixa delimitadora do mouse. Quando a borda superior da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona-se para alinhar-se à borda superior da tela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MousePoint">
+      <MemberSignature Language="C#" Value="MousePoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode MousePoint = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.MousePoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> em relação à dica do cursor do mouse e em um deslocamento definido pelos valores das propriedades <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> e <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />. Se uma borda horizontal ou vertical da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, ele é aberto na direção oposta da borda obscuring. Quando a borda oposta da tela também obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle alinha-se à borda da tela obscurecida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Relative">
+      <MemberSignature Language="C#" Value="Relative" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Relative = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Relative" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> em relação ao canto superior esquerdo do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> e em um deslocamento que é definido pelos valores das propriedades <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> e <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />. Quando a borda da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona-se para alinhar-se à borda da tela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePoint">
+      <MemberSignature Language="C#" Value="RelativePoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode RelativePoint = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.RelativePoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> em relação ao canto superior esquerdo do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> e em um deslocamento que é definido pelos valores das propriedades <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> e <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />. Se uma borda de tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o <see cref="T:System.Windows.Controls.Primitives.Popup" /> estende na direção oposta a direção do eixo definido pelo <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> ou <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />. Quando a borda oposta da tela também obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle alinha-se à borda da tela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Right = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> que alinha sua borda esquerda à borda direita do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> e alinha sua borda superior à borda superior do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Se a borda direita de tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona em si para que sua borda esquerda alinhe com a borda esquerda do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Se a borda esquerda de tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona em si para que sua borda esquerda alinhe com a borda esquerda de tela. Quando a borda superior ou inferior da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona-se para alinhar-se à borda da tela obscurecida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.PlacementMode Top = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.PlacementMode.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma posição do controle de <see cref="T:System.Windows.Controls.Primitives.Popup" /> que alinha sua borda inferior à borda superior do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" /> e alinha sua borda esquerda à borda esquerda do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Se a borda superior de tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, o controle reposiciona em si para que a borda superior alinhe com a borda inferior do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />. Se a borda inferior de tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, a borda inferior do controle se alinha com a borda inferior de tela. Quando a borda esquerda ou direita da tela obscurece o <see cref="T:System.Windows.Controls.Primitives.Popup" />, ele reposiciona-se para alinhar-se à tela obscurecida.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

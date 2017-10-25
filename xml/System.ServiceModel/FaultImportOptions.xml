@@ -1,0 +1,53 @@
+<Type Name="FaultImportOptions" FullName="System.ServiceModel.FaultImportOptions">
+  <TypeSignature Language="C#" Value="public class FaultImportOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FaultImportOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.FaultImportOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Indica se deve usar o <see cref="T:System.Xml.Serialization.XmlSerializer" /> para leitura e gravação falhas.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultImportOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.FaultImportOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.FaultImportOptions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseMessageFormat">
+      <MemberSignature Language="C#" Value="public bool UseMessageFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseMessageFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.FaultImportOptions.UseMessageFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica que o <see cref="T:System.Xml.Serialization.XmlSerializer" /> deve ser usado para ler e gravar falhas.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Xml.Serialization.XmlSerializer" /> deve ser usado para ler e gravar falhas. <see langword="false" /> se o <see cref="T:System.Runtime.Serialization.DataContractSerializer" /> deve ser usado. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

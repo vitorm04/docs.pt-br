@@ -1,0 +1,742 @@
+<Type Name="DBNull" FullName="System.DBNull">
+  <TypeSignature Language="C#" Value="public sealed class DBNull : IConvertible, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DBNull extends System.Object implements class System.IConvertible, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.DBNull" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IConvertible</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um valor inexistente. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DBNull> classe representa um valor que não existe. Em um banco de dados, por exemplo, uma coluna em uma linha de uma tabela pode não conter qualquer qualquer tipo de dados. Ou seja, a coluna é considerada não existirem em vez de simplesmente não ter um valor. Um <xref:System.DBNull> objeto representa a coluna que não existe. Além disso, usa a interoperabilidade COM o <xref:System.DBNull> classe para distinguir entre uma variante VT_NULL, que indica um valor que não existe e uma variante VT_EMPTY, que indica um valor não especificado.  
+  
+ O <xref:System.DBNull> tipo é uma classe singleton, que significa que somente um <xref:System.DBNull> objeto existe. O <xref:System.DBNull.Value?displayProperty=nameWithType> membro representa a única <xref:System.DBNull> objeto. <xref:System.DBNull.Value?displayProperty=nameWithType>pode ser usado para atribuir um valor inexistente explicitamente a um campo de banco de dados, embora a maioria dos provedores de dados ADO.NET atribui automaticamente valores de <xref:System.DBNull> quando um campo não tem um valor válido. Você pode determinar se um valor recuperado de um campo de banco de dados é um <xref:System.DBNull> valor passando o valor do campo para o `DBNull.Value.Equals` método. No entanto, algumas linguagens e objetos de banco de dados fornecem métodos que tornam mais fácil de determinar se o valor de um campo de banco de dados é <xref:System.DBNull.Value?displayProperty=nameWithType>. Isso inclui o Visual Basic `IsDBNull` função, o <xref:System.Convert.IsDBNull%2A?displayProperty=nameWithType> método, o <xref:System.Data.DataTableReader.IsDBNull%2A?displayProperty=nameWithType> método e o <xref:System.Data.IDataRecord.IsDBNull%2A?displayProperty=nameWithType> método.  
+  
+ Não confunda a noção de `null` em uma linguagem de programação orientada a objeto com um <xref:System.DBNull> objeto. Em uma linguagem de programação orientada a objeto, `null` significa a ausência de uma referência a um objeto. <xref:System.DBNull>representa uma coluna de banco de dados que não existe ou variant não inicializado.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o `DBNull.Value.Equals` método para determinar se um campo de banco de dados em um banco de dados de contatos tem um valor válido. Se isso acontecer, o valor do campo é anexado à saída de cadeia de caracteres em um rótulo.  
+  
+ [!code-csharp[System.DBNull.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.DBNull.Class/cs/DBNullExamples.cs#1)]
+ [!code-vb[System.DBNull.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DBNull.Class/vb/DBNullExamples.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto que contém informações necessárias para serializar o <see cref="T:System.DBNull" /> objeto.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> objeto que contém a origem e destino do fluxo serializado associado a <see cref="T:System.DBNull" /> objeto.</param>
+        <summary>Implementa o <see cref="T:System.Runtime.Serialization.ISerializable" /> interface e retorna os dados necessários para serializar o <see cref="T:System.DBNull" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeCode">
+      <MemberSignature Language="C#" Value="public TypeCode GetTypeCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TypeCode GetTypeCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.GetTypeCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.TypeCode" /> valor para <see cref="T:System.DBNull" />.</summary>
+        <returns>O <see cref="T:System.TypeCode" /> valor para <see cref="T:System.DBNull" />, que é <see cref="F:System.TypeCode.DBNull" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToBoolean">
+      <MemberSignature Language="C#" Value="bool IConvertible.ToBoolean (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.IConvertible.ToBoolean(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToBoolean(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToByte">
+      <MemberSignature Language="C#" Value="byte IConvertible.ToByte (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int8 System.IConvertible.ToByte(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToByte(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToChar">
+      <MemberSignature Language="C#" Value="char IConvertible.ToChar (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance char System.IConvertible.ToChar(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToChar(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToDateTime">
+      <MemberSignature Language="C#" Value="DateTime IConvertible.ToDateTime (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.DateTime System.IConvertible.ToDateTime(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToDateTime(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToDecimal">
+      <MemberSignature Language="C#" Value="decimal IConvertible.ToDecimal (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.Decimal System.IConvertible.ToDecimal(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToDecimal(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToDouble">
+      <MemberSignature Language="C#" Value="double IConvertible.ToDouble (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance float64 System.IConvertible.ToDouble(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToDouble(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToInt16">
+      <MemberSignature Language="C#" Value="short IConvertible.ToInt16 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int16 System.IConvertible.ToInt16(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToInt16(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToInt32">
+      <MemberSignature Language="C#" Value="int IConvertible.ToInt32 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.IConvertible.ToInt32(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToInt32(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToInt64">
+      <MemberSignature Language="C#" Value="long IConvertible.ToInt64 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int64 System.IConvertible.ToInt64(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToInt64(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToSByte">
+      <MemberSignature Language="C#" Value="sbyte IConvertible.ToSByte (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int8 System.IConvertible.ToSByte(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToSByte(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToSingle">
+      <MemberSignature Language="C#" Value="float IConvertible.ToSingle (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance float32 System.IConvertible.ToSingle(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToSingle(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToType">
+      <MemberSignature Language="C#" Value="object IConvertible.ToType (Type type, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IConvertible.ToType(class System.Type type, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToType(System.Type,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo para converter atual <see cref="T:System.DBNull" /> do objeto.</param>
+        <param name="provider">Um objeto que implementa o <see cref="T:System.IFormatProvider" /> interface e é usado para aumentar a conversão. Se <see langword="null" /> for especificado, as informações de formato são obtidas da cultura atual.</param>
+        <summary>Converte atual <see cref="T:System.DBNull" /> objeto para o tipo especificado.</summary>
+        <returns>O equivalente demarcado atual <see cref="T:System.DBNull" /> do objeto, se a conversão tiver suporte; caso contrário, uma exceção será lançada e nenhum valor é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há suporte para conversões de três: se o `type` parâmetro especifica <xref:System.Object> ou <xref:System.DBNull>, o valor de retorno é atual <xref:System.DBNull> objeto propriamente dito. Se o `type` parâmetro especifica <xref:System.String>, o valor de retorno é a cadeia de caracteres retornada pelo <xref:System.DBNull.ToString%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToUInt16">
+      <MemberSignature Language="C#" Value="ushort IConvertible.ToUInt16 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int16 System.IConvertible.ToUInt16(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToUInt16(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToUInt32">
+      <MemberSignature Language="C#" Value="uint IConvertible.ToUInt32 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int32 System.IConvertible.ToUInt32(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToUInt32(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IConvertible.ToUInt64">
+      <MemberSignature Language="C#" Value="ulong IConvertible.ToUInt64 (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance unsigned int64 System.IConvertible.ToUInt64(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.System#IConvertible#ToUInt64(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um objeto que implementa a interface do <see cref="T:System.IFormatProvider" />. (Este parâmetro não é usado; especifique <see langword="null" />.)</param>
+        <summary>Esta conversão não é suportada. Tentativa de fazer essa conversão lança um <see cref="T:System.InvalidCastException" />.</summary>
+        <returns>nenhuma. O valor de retorno desse membro não é usado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">Não há suporte para essa conversão para o <see cref="T:System.DBNull" /> tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres vazia (<see cref="F:System.String.Empty" />).</summary>
+        <returns>Uma cadeia de caracteres vazia (<see cref="F:System.String.Empty" />).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DBNull.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O <see cref="T:System.IFormatProvider" /> a ser usado para formatar o valor de retorno.  
+  
+ -ou-  
+  
+ <see langword="null" />Para obter as informações de formato da configuração de localidade atual do sistema operacional.</param>
+        <summary>Retorna uma cadeia de caracteres vazia usando especificado <see cref="T:System.IFormatProvider" />.</summary>
+        <returns>Uma cadeia de caracteres vazia (<see cref="F:System.String.Empty" />).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public static readonly DBNull Value;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.DBNull Value" />
+      <MemberSignature Language="DocId" Value="F:System.DBNull.Value" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DBNull</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a instância exclusiva da classe <see cref="T:System.DBNull" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.DBNull>é uma classe singleton, que significa que pode existir apenas essa instância dessa classe.  
+  
+ Se um campo de banco de dados tiver dados ausentes, você pode usar o <xref:System.DBNull.Value?displayProperty=nameWithType> propriedade para atribuir explicitamente um <xref:System.DBNull> valor para o campo do objeto. No entanto, a maioria dos provedores de dados faz isso automaticamente.  
+  
+ Para avaliar os campos de banco de dados para determinar se seus valores são <xref:System.DBNull>, você pode passar o valor do campo para o `DBNull.Value.Equals` método. No entanto, esse método raramente é usado porque há um número de outras maneiras de avaliar um campo de banco de dados para dados ausentes. Isso inclui o Visual Basic `IsDBNull` função, o <xref:System.Convert.IsDBNull%2A?displayProperty=nameWithType> método, o <xref:System.Data.DataTableReader.IsDBNull%2A?displayProperty=nameWithType> método, o <xref:System.Data.IDataRecord.IsDBNull%2A?displayProperty=nameWithType> método e vários outros métodos.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o `DBNull.Value.Equals` método para determinar se um campo de banco de dados em um banco de dados de contatos tem um valor válido. Se isso acontecer, o valor do campo é anexado à saída de cadeia de caracteres em um rótulo.  
+  
+ [!code-csharp[System.DBNull.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.DBNull.Class/cs/DBNullExamples.cs#1)]
+ [!code-vb[System.DBNull.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DBNull.Class/vb/DBNullExamples.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

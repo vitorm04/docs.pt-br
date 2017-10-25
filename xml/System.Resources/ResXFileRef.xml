@@ -1,0 +1,184 @@
+<Type Name="ResXFileRef" FullName="System.Resources.ResXFileRef">
+  <TypeSignature Language="C#" Value="public class ResXFileRef" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ResXFileRef extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.ResXFileRef" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Resources.ResXFileRef/Converter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um link para um recurso externo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResXFileRef> classe é usada para incluir referências a arquivos em um arquivo de recurso (. resx) do XML. Um <xref:System.Resources.ResXFileRef> objeto representa um link para um recurso externo em um arquivo de recurso (. resx) do XML. Adicionar o <xref:System.Resources.ResXFileRef> objeto para um arquivo. resx chamando o <xref:System.Resources.ResXResourceWriter.AddResource%28System.Resources.ResXDataNode%29?displayProperty=nameWithType> método.  
+  
+ Em uma entrada de dados em um arquivo. resx, o tipo é <xref:System.Resources.ResXFileRef>, e o valor é o local do caminho no disco. Quando o Gerenciador de recursos desserializa o objeto, o <xref:System.Resources.ResXFileRef> executa a e/s para obter o arquivo. Este é um exemplo de um arquivo. resx.  
+  
+```  
+<data name="iconclip" type="System.Resources.ResXFileRef, System.Windows.Forms">  
+ <value>lookout.bmp;System.Drawing.Bitmap, System.Drawing</value>  
+</data>  
+<data name="mailbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">  
+ <value>mailbackground.bmp;System.Drawing.Bitmap, System.Drawing</value>  
+</data>  
+<data name="xplogo" type="System.Resources.ResXFileRef, System.Windows.Forms">  
+ <value>xplogo.png;System.Drawing.Bitmap, System.Drawing</value>  
+</data>  
+```  
+  
+ Para adicionar um <xref:System.Resources.ResXFileRef> o objeto para um arquivo. resx programaticamente, você chama o <xref:System.Resources.ResXDataNode.%23ctor%28System.String%2CSystem.Resources.ResXFileRef%29?displayProperty=nameWithType> construtor para instanciar um <xref:System.Resources.ResXDataNode> objeto. Em seguida, transmita esse <xref:System.Resources.ResXDataNode> o objeto para o <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> método.  
+  
+ Quando você compila um arquivo. resx com [Resgen.exe (gerador de arquivo)](~/docs/framework/tools/resgen-exe-resource-file-generator.md), os recursos especificados no arquivo. resx são inseridos no arquivo de recurso de documento resultante.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXFileRef (string fileName, string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXFileRef.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O arquivo de referência.</param>
+        <param name="typeName">O tipo de recurso que é referenciado.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Resources.ResXFileRef" /> classe que faz referência ao arquivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo referenciado pelo `typeName` parâmetro deve oferecer suporte a um construtor público que aceita uma <xref:System.IO.Stream> objeto como um parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> ou <paramref name="typeName" /> é <see langword="null" />.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXFileRef (string fileName, string typeName, System.Text.Encoding textFileEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string typeName, class System.Text.Encoding textFileEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXFileRef.#ctor(System.String,System.String,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="textFileEncoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O arquivo de referência.</param>
+        <param name="typeName">O nome do tipo de recurso que é referenciado.</param>
+        <param name="textFileEncoding">A codificação usada no arquivo referenciado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXFileRef" /> classe que faz referência ao arquivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo referenciado pelo `typeName` parâmetro deve oferecer suporte a um construtor público que aceita uma <xref:System.IO.Stream> objeto como um parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResXFileRef.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo especificado no atual <see cref="Overload:System.Resources.ResXFileRef.#ctor" /> construtor.</summary>
+        <value>O nome do arquivo referenciado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextFileEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding TextFileEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding TextFileEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResXFileRef.TextFileEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a codificação especificada no atual <see cref="Overload:System.Resources.ResXFileRef.#ctor" /> construtor.</summary>
+        <value>A codificação usada no arquivo referenciado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXFileRef.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a representação de texto do atual <see cref="T:System.Resources.ResXFileRef" /> objeto.</summary>
+        <returns>Uma cadeia de caracteres que consiste de representações de texto concatenado dos parâmetros especificados no atual <see cref="Overload:System.Resources.ResXFileRef.#ctor" /> construtor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResXFileRef.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do tipo especificado no atual <see cref="Overload:System.Resources.ResXFileRef.#ctor" /> construtor.</summary>
+        <value>O nome do tipo de recurso que é referenciado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1285 @@
+<Type Name="HttpTransportBindingElement" FullName="System.ServiceModel.Channels.HttpTransportBindingElement">
+  <TypeSignature Language="C#" Value="public class HttpTransportBindingElement : System.ServiceModel.Channels.TransportBindingElement, System.ServiceModel.Description.IPolicyExportExtension, System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpTransportBindingElement extends System.ServiceModel.Channels.TransportBindingElement implements class System.ServiceModel.Description.IPolicyExportExtension, class System.ServiceModel.Description.IWsdlExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.HttpTransportBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Http</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.TransportBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IWsdlExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o elemento de associação usado para especificar um transporte HTTP para transmissão de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.HttpTransportBindingElement> classe é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte HTTP. O HTTP é o transporte primário usado para fins de interoperabilidade. Esse transporte é suportado pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] para garantir a interoperabilidade com outros não -[!INCLUDE[indigo2](~/includes/indigo2-md.md)] pilhas de serviços da Web.  
+  
+ O [!INCLUDE[indigo2](~/includes/indigo2-md.md)] modelo de serviço usa essa classe para criar objetos de fábrica que implementam o <xref:System.ServiceModel.Channels.IChannelFactory> e <xref:System.ServiceModel.Channels.IChannelListener> interfaces. Esses objetos de fábrica, por sua vez, criam os canais e ouvintes que transmitem mensagens SOAP usando o protocolo HTTP.  
+  
+ Configurar as fábricas de que essa classe cria definindo suas propriedades, como <xref:System.ServiceModel.Channels.HttpTransportBindingElement.AuthenticationScheme%2A>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement.HostNameComparisonMode%2A>, e <xref:System.ServiceModel.Channels.HttpTransportBindingElement.MaxBufferSize%2A>.  
+  
+ Você também pode definir propriedades na classe base, <xref:System.ServiceModel.Channels.TransportBindingElement>, como <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A>, <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A>, e <xref:System.ServiceModel.Channels.TransportBindingElement.MaxBufferPoolSize%2A>. Para obter uma lista completa das propriedades, consulte <xref:System.ServiceModel.Channels.TransportBindingElement>.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como usar imperativa o <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.  
+  
+ [!code-csharp[S_Imperative#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
+ [!code-vb[S_Imperative#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
+  
+ `HttpTransportBindingElement`também pode ser usado em um arquivo de configuração conforme mostrado na configuração a seguir.  
+  
+```xml  
+<bindings>  
+  <customBinding>  
+    <binding name="Binding1">  
+      <reliableSession acknowledgementInterval="00:00:00.2000000" enableFlowControl="true"  
+                        maxTransferWindowSize="32" inactivityTimeout="00:10:00" maxPendingChannels="128"  
+                        maxRetryCount="8" ordered="true" />  
+      <security mode="None"/>  
+      <httpTransport authenticationScheme="Anonymous" bypassProxyOnLocal="false"  
+                    hostNameComparisonMode="StrongWildcard"   
+                    proxyAuthenticationScheme="Anonymous" realm=""   
+                    useDefaultWebProxy="true" />  
+    </binding>  
+  </customBinding>  
+</bindings>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpTransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.HttpTransportBindingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpTransportBindingElement (System.ServiceModel.Channels.HttpTransportBindingElement elementToBeCloned);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.HttpTransportBindingElement elementToBeCloned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.#ctor(System.ServiceModel.Channels.HttpTransportBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.HttpTransportBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="elementToBeCloned">Um <see cref="T:System.ServiceModel.Channels.HttpTransportBindingElement" /> objeto usado para inicializar esta instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.HttpTransportBindingElement" /> usando outro elemento de associação de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para a associação de clonar um construtor de cópia.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o construtor de cópia em uma classe derivada.  
+  
+```csharp  
+public class MyBindingElement : HttpTransportBindingElement  
+{  
+    public MyBindingElement(MyBindingElement elementToBeCloned) : base(elementToBeCloned)  
+    {  
+    }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCookies">
+      <MemberSignature Language="C#" Value="public bool AllowCookies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowCookies" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.AllowCookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cliente aceita cookies e os propaga em solicitações futuras.</summary>
+        <value>
+          <see langword="true" />Se os cookies são permitidos; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é fornecida como uma conveniência para interagir com os serviços Web ASMX que usam cookies para certificar-se de que os cookies retornados do servidor são copiados automaticamente para todas as solicitações de cliente futuras desse serviço.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define essa propriedade para indicar que todos os cookies do servidor devem ser copiados para solicitações futuras.  
+  
+```csharp  
+HttpTransportBindingElement httpBindingElement = new HttpBindingElement();  
+httpBindingElement.AllowCookies = true;  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationScheme">
+      <MemberSignature Language="C#" Value="public System.Net.AuthenticationSchemes AuthenticationScheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.AuthenticationSchemes AuthenticationScheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.AuthenticationScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o esquema de autenticação usado para autenticar solicitações de cliente sendo processadas por um ouvinte HTTP.</summary>
+        <value>Um dos valores de enumeração da enumeração <see cref="T:System.Net.AuthenticationSchemes" /> que especifica os protocolos usados para a autenticação de cliente. O padrão é <see cref="F:System.Net.AuthenticationSchemes.Anonymous" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O esquema de autenticação só pode ser definido uma vez.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define essa propriedade para usar quando autenticar solicitações de cliente.  
+  
+```csharp  
+[ServiceContract]  
+interface ICalculator  
+{  
+     [OperationContract]  
+            Int Add(int a, int b);  
+}  
+  
+HttpTransportBindingElement httpBinding = new HttpTransportBindingElement();  
+httpBinding.AuthenticationScheme = AuthenticationSchemes.Digest;  
+CustomBinding binding = new CustomBinding(new TextMessageEncodingBindingElement(), httpBinding);  
+  
+EndpointAddress endpoint = new EndpointAddress(address);  
+ChannelFactory<ICalculator> proxy = new ChannelFactory<ICalculator>(binding, endpoint);  
+  
+proxy.Credentials.Windows.ClientCredential = new NetworkCredential("user", "password", "domain");  
+proxy.Credentials.Windows.AllowedImpersonationLevel = System.Security.Principal.TokenImpersonationLevel.Impersonation;  
+proxy.Open();  
+  
+ICalculator calc = proxy.CreateChannel();  
+  
+int odd=calc.Add(5,4);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor para o <see cref="T:System.Net.AuthenticationSchemes" /> já foi definido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de fábrica de canais.</typeparam>
+        <param name="context">
+          <see cref="T:System.ServiceModel.Channels.BindingContext" />membros que descrevem as associações, comportamentos, contratos e outras informações necessárias para criar a fábrica de canais.</param>
+        <summary>Cria uma fábrica de canais que pode ser usada para criar um canal.</summary>
+        <returns>Uma fábrica de canais do tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para obter uma fábrica de canais para enviar mensagens com base na configuração do elemento de associação de transporte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um argumento inválido foi passado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de fábrica de canais.</typeparam>
+        <param name="context">
+          <see cref="T:System.ServiceModel.Channels.BindingContext" />membros que descrevem as associações, comportamentos, contratos e outras informações necessárias para criar a fábrica de canais.</param>
+        <summary>Cria um ouvinte de canal do tipo especificado.</summary>
+        <returns>Um ouvinte de canal do tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para obter um ouvinte de canal para receber mensagens com base na configuração do elemento de associação de transporte.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um argumento inválido foi passado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BypassProxyOnLocal">
+      <MemberSignature Language="C#" Value="public bool BypassProxyOnLocal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BypassProxyOnLocal" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.BypassProxyOnLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os proxies são ignorados para endereços locais.</summary>
+        <value>
+          <see langword="true" /> se os proxys forem ignorados para endereços locais; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um endereço local é aquele que está na rede local ou intranet.  
+  
+ [!INCLUDE[indigo2](~/includes/indigo2-md.md)]sempre ignora o proxy se o endereço do serviço começa com `http://localhost`. Você deve usar o nome do host (em vez de `localhost`) se desejar que os clientes para passar por um proxy ao conversar com serviços no mesmo computador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define essa propriedade para usar ao executar solicitações na associação.  
+  
+```csharp  
+HttpTransportBindingElement httpBinding = new HttpTransportBindingElement();  
+httpBinding.BypassProxyOnLocal = true;  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal para verificar.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> para o canal.</param>
+        <summary>Determina se uma fábrica de canais do tipo especificado pode ser criada.</summary>
+        <returns>
+          <see langword="true" />Se uma fábrica de canais pode ser criada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal para verificar.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> para o canal.</param>
+        <summary>Determina se um ouvinte de canal do tipo especificado pode ser criado.</summary>
+        <returns>
+          <see langword="true" />Se um ouvinte de canal pode ser compilado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância que é uma cópia do elemento de associação atual.</summary>
+        <returns>Uma nova instância que é uma cópia do elemento de associação atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir copia o elemento de associação especificado.  
+  
+```csharp  
+HttpBindingElement bindingElement = elementToClone.Clone();  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecompressionEnabled">
+      <MemberSignature Language="C#" Value="public bool DecompressionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DecompressionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.DecompressionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o processo para retornar dados de mensagem compactado ao seu tamanho original e o formato está habilitado.</summary>
+        <value>
+          <see langword="true" />Se a descompactação estiver habilitada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedProtectionPolicy">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy ExtendedProtectionPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy ExtendedProtectionPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.ExtendedProtectionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da política de segurança estendida usada pelo servidor para validar as conexões de cliente de entrada.</summary>
+        <value>O valor da política de segurança estendida usada pelo servidor para validar as conexões de cliente de entrada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de propriedade a ser obtida.</typeparam>
+        <param name="context">Um <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Obtém uma propriedade especificado <see cref="T:System.ServiceModel.Channels.BindingContext" />.</summary>
+        <returns>A propriedade especificado <see cref="T:System.ServiceModel.Channels.BindingContext" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostNameComparisonMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.HostNameComparisonMode HostNameComparisonMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.HostNameComparisonMode HostNameComparisonMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.HostNameComparisonMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HostNameComparisonMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o nome do host é usado para acessar o serviço ao fazer correspondência no URI.</summary>
+        <value>O <see cref="P:System.ServiceModel.Configuration.WSDualHttpBindingElement.HostNameComparisonMode" /> valor de enumeração que indica se o nome do host está incluído ao rotear solicitações de entrada para um ponto de extremidade URI. O valor padrão é <see cref="F:System.ServiceModel.HostNameComparisonMode.StrongWildcard" />, que ignora o nome do host na correspondência.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor configurado não está definido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepAliveEnabled">
+      <MemberSignature Language="C#" Value="public bool KeepAliveEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool KeepAliveEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma conexão persistente para um ponto de extremidade de serviço.</summary>
+        <value>
+          <see langword="true" />Se a solicitação para o ponto de extremidade do serviço deve conter um cabeçalho HTTP de Conexão com o valor <see langword="Keep-alive" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como `true` para enviar um cabeçalho HTTP de Conexão com o valor `Keep-alive`. Um cliente usa essa propriedade para indicar a preferência de conexões persistentes. Quando essa propriedade é `true`, a conexão que o cliente faz um ponto de extremidade de serviço é persistente, se o ponto de extremidade de serviço dá suporte a esse.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir essa propriedade.  
+  
+ [!code-csharp[PoxSample#1](~/samples/snippets/csharp/VS_Snippets_CFX/poxsample/cs/client/httpclient.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegacyExtendedProtectionPolicy">
+      <MemberSignature Language="C#" Value="public object LegacyExtendedProtectionPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object LegacyExtendedProtectionPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.LegacyExtendedProtectionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use ExtendedProtectionPolicy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferSize">
+      <MemberSignature Language="C#" Value="public int MaxBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.MaxBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(65536)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo do buffer a ser usado. Para mensagens em buffer, esse valor é o mesmo que <see cref="P:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize" />. Para mensagens transmitidas, esse valor é o tamanho máximo dos cabeçalhos SOAP, que devem ser lidos no modo de buffer.</summary>
+        <value>O tamanho máximo do buffer, em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para mensagens em fluxo, se o tamanho dos cabeçalhos de mensagem é maior do que essa propriedade, em seguida, um <xref:System.ServiceModel.QuotaExceededException> é gerada. Para uma mensagem transmitida não, se o tamanho da mensagem é maior do que essa propriedade, em seguida, a mensagem é descartada.  
+  
+ Se não for especificado, o padrão é 65536.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define essa propriedade para usar ao executar solicitações na associação.  
+  
+```csharp  
+HttpTransportBindingElement httpBinding = new HttpTransportBindingElement();  
+httpBinding.MaxBufferSize = 16384;  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingAccepts">
+      <MemberSignature Language="C#" Value="public int MaxPendingAccepts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingAccepts" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.MaxPendingAccepts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de conexões que o serviço pode aceitar simultaneamente.</summary>
+        <value>O número máximo de conexões que o serviço pode aceitar simultaneamente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.ServiceModel.Channels.HttpTransportBindingElement.MaxPendingAccepts%2A> é 0, o que significa que o WCF irá configurar o valor para você. Você pode aumentar o número para melhor desempenho. No caso de auto-hospedado, essa propriedade controla o número máximo de chamadas simultâneas de BeginGetContext que invocará o WCF. Cada vez que BeginGetContext é chamado de memória é fixado no heap gerenciado para armazenamento em buffer. Se muitos buffers estão fixados, fragmentação excessiva de heap pode ocorrer. Essa propriedade é ignorada no caso da web hospedado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageHandlerFactory">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.HttpMessageHandlerFactory MessageHandlerFactory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.HttpMessageHandlerFactory MessageHandlerFactory" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.MessageHandlerFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.HttpMessageHandlerFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fábrica de manipulador de mensagens de transporte Http.</summary>
+        <value>A fábrica de manipulador de mensagens de transporte Http.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAddress">
+      <MemberSignature Language="C#" Value="public Uri ProxyAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ProxyAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.ProxyAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.UriTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um URI que contém o endereço do proxy a ser usado para solicitações HTTP.</summary>
+        <value>O <see cref="T:System.Uri" /> que contém o endereço do proxy. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define essa propriedade para usar ao executar solicitações na associação. Todas as solicitações são roteadas através desse proxy, a menos que <xref:System.ServiceModel.Channels.HttpTransportBindingElement.BypassProxyOnLocal%2A> é definido como `true` e o ponto de extremidade é um ponto de extremidade local.  
+  
+```csharp  
+HttpTransportBindingElement httpBinding = new HttpTransportBindingElement();  
+httpBinding.ProxyAddress = new Uri(http://proxyserver);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAuthenticationScheme">
+      <MemberSignature Language="C#" Value="public System.Net.AuthenticationSchemes ProxyAuthenticationScheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.AuthenticationSchemes ProxyAuthenticationScheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.ProxyAuthenticationScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o esquema de autenticação usado para autenticar solicitações de cliente processadas por um proxy HTTP.</summary>
+        <value>O <see cref="T:System.Net.AuthenticationSchemes" /> enumeração que especifica os protocolos usados para autenticação de cliente no proxy. O padrão é <see cref="F:System.Net.AuthenticationSchemes.Anonymous" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define essa propriedade para usar ao enviar solicitações ao proxy especificado no <xref:System.ServiceModel.Channels.HttpTransportBindingElement.ProxyAddress%2A> propriedade.  
+  
+```csharp  
+HttpTransportBindingElement httpBinding = new HttpTransportBindingElement();  
+httpBinding.ProxyAddress = new Uri(http://proxyserver);  
+httpBinding.ProxyAuthenticationScheme = AuthenticationSchemes.Digest;  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Realm">
+      <MemberSignature Language="C#" Value="public string Realm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Realm" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.Realm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o realm de autenticação.</summary>
+        <value>O realm de autenticação. O valor padrão é "".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Servidores usam realms para particionar a recursos protegidos; cada partição pode ter seu próprio banco de dados de autorização ou esquema de autenticação. Territórios são usados apenas para basic e a autenticação digest. Depois que um cliente é autenticado com êxito, a autenticação é válida para todos os recursos de um determinado território. Para obter uma descrição detalhada de territórios, consulte [RFC 2617](http://go.microsoft.com/fwlink/?LinkID=95943).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestInitializationTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan RequestInitializationTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RequestInitializationTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.RequestInitializationTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.TimeSpan), "00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite da inicialização solicitada.</summary>
+        <value>O tempo limite da inicialização solicitada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o esquema de URI para o transporte.</summary>
+        <value>Um <see cref="F:System.Uri.UriSchemeHttp" /> objeto que representa o esquema de URI para o transporte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada para validar associações em endereços base.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir produz o esquema da associação para o console.  
+  
+```csharp  
+HttpTransportBindingElement httpBinding = new HttpTransportBindingElement();  
+Console.WriteLine("The scheme of the binding is {0}.",httpBinding.Scheme);  
+```  
+  
+ A saída é: "o esquema da associação é http."  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeExtendedProtectionPolicy">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeExtendedProtectionPolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeExtendedProtectionPolicy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.ShouldSerializeExtendedProtectionPolicy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma valueindicating que não é possível XAML serializar a política de proteção estendida.</summary>
+        <returns>
+          <see langword="false" />
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMessageHandlerFactory">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMessageHandlerFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMessageHandlerFactory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.ShouldSerializeMessageHandlerFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a fábrica de manipulador de mensagens deve ser serializada.</summary>
+        <returns>
+          <see langword="true" />Se a fábrica de manipulador de mensagens deve ser serializada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeWebSocketSettings">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeWebSocketSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeWebSocketSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.ShouldSerializeWebSocketSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se as configurações de soquete da web devem ser serializadas.</summary>
+        <returns>
+          <see langword="true" />Se as configurações de soquete da web devem ser serializadas; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">O <see cref="T:System.ServiceModel.Description.MetadataExporter" /> que você pode usar para modificar o processo de exportação.</param>
+        <param name="context">O <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> que você pode usar para inserir a declaração de política personalizada.</param>
+        <summary>Exporta uma declaração de política personalizadas sobre associações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava instruções relacionadas à associação para as informações de WSDL expostas por um contrato específico e é usado pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] para se comunicar com clientes a existência desse elemento de associação personalizada na pilha de associação.  
+  
+ Esse método usa dois parâmetros: o <xref:System.ServiceModel.Description.MetadataExporter> e <xref:System.ServiceModel.Description.PolicyConversionContext> objetos. Use o <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A>, e <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> métodos de obter conjuntos de declarações de política que já foram exportados em vários escopos. Use esse método para adicionar suas próprias declarações de política para a coleção apropriada.  
+  
+ O <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A> propriedade expõe o <xref:System.ServiceModel.Description.ContractDescription> para o ponto de extremidade que está sendo exportado. Isso permite que esse método definir o escopo de suas declarações de política exportados corretamente. Por exemplo, os atributos de segurança no código podem adicionar comportamentos para o <xref:System.ServiceModel.Description.ContractDescription> que indicam onde as declarações de política de segurança devem ser adicionadas.  
+  
+ Depois de declarações de política personalizadas foram anexadas às informações WSDL, clientes podem detectar e importar as asserções de associação personalizada implementando um <xref:System.ServiceModel.Description.IPolicyImportExtension> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportContract">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportContract (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlContractConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportContract(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlContractConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.System#ServiceModel#Description#IWsdlExportExtension#ExportContract(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlContractConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.WsdlContractConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">O <see cref="T:System.ServiceModel.Description.WsdlExporter" /> que exporta as informações de contrato.</param>
+        <param name="context">Um contexto que fornece os mapeamentos de elementos WSDL exportados para a descrição do contrato.</param>
+        <summary>Grava elementos personalizados de WSDL Web Services Description Language () para o WSDL gerado de um contrato.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint">
+      <MemberSignature Language="C#" Value="void IWsdlExportExtension.ExportEndpoint (System.ServiceModel.Description.WsdlExporter exporter, System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint(class System.ServiceModel.Description.WsdlExporter exporter, class System.ServiceModel.Description.WsdlEndpointConversionContext endpointContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.System#ServiceModel#Description#IWsdlExportExtension#ExportEndpoint(System.ServiceModel.Description.WsdlExporter,System.ServiceModel.Description.WsdlEndpointConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.WsdlExporter" />
+        <Parameter Name="endpointContext" Type="System.ServiceModel.Description.WsdlEndpointConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">O <see cref="T:System.ServiceModel.Description.WsdlExporter" /> que exporta as informações de contrato.</param>
+        <param name="endpointContext">Um contexto de ponto de extremidade que fornece os mapeamentos de elementos WSDL exportados para a descrição do ponto de extremidade.</param>
+        <summary>Grava os elementos personalizados de WSDL Web Services Description Language () para o WSDL gerado para um ponto de extremidade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.TransferMode TransferMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.TransferMode TransferMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.TransferMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransferMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de transferência.</summary>
+        <value>Um dos seguintes valores de membro de <see cref="P:System.ServiceModel.Channels.HttpTransportBindingElement.TransferMode" />:  
+  
+-   Em buffer  
+  
+-   Streaming  
+  
+-   StreamedRequest  
+  
+-   StreamedResponse</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especificando <xref:System.ServiceModel.Channels.HttpTransportBindingElement.TransferMode%2A> = Streamed implica ambos `StreamedRequest` e `StreamedResponse`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsafeConnectionNtlmAuthentication">
+      <MemberSignature Language="C#" Value="public bool UnsafeConnectionNtlmAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnsafeConnectionNtlmAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.UnsafeConnectionNtlmAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o Compartilhamento de Conexão Não Segura está habilitado no servidor. Se estiver habilitado, a autenticação NTLM será executada uma vez em cada conexão TCP.</summary>
+        <value>
+          <see langword="true" /> se o Compartilhamento de Conexão Não Segura estiver habilitado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true` e a primeira solicitação em uma determinada conexão é autenticada usando NTLM, solicitações subsequentes durante a mesma conexão são processadas usando informações de autenticação no <xref:System.Security.Principal.IIdentity> da solicitação inicial.  
+  
+ Essa propriedade não tem efeito quando o NTLM não será o protocolo de autenticação.  
+  
+> [!NOTE]
+>  Ao configurar essa propriedade como `true` aumenta o desempenho porque outros desafios de autenticação NTLM não são enviados, há um risco de segurança no não exigir todas as solicitações para fornecer informações de autenticação. Você deve determinar se o aumento no desempenho é vale a pena esse risco.  
+  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)] <xref:System.Net.HttpListener.UnsafeConnectionNtlmAuthentication%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define a propriedade para habilitar o compartilhamento de Conexão não segura.  
+  
+```csharp  
+HttpTransportBindingElement httpBinding = new HttpTransportBindingElement();  
+httpBinding.AuthenticationScheme = AuthenticationSchemes.Ntlm;  
+httpBinding.UnsafeConnectionNtlmAuthentication = true;  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateAuthenticationSchemes">
+      <MemberSignature Language="C#" Value="protected void UpdateAuthenticationSchemes (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UpdateAuthenticationSchemes(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpTransportBindingElement.UpdateAuthenticationSchemes(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto de associação.</param>
+        <summary>Atualiza os esquemas de autenticação de transporte que contém o contexto de associação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultWebProxy">
+      <MemberSignature Language="C#" Value="public bool UseDefaultWebProxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultWebProxy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.UseDefaultWebProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as configurações de proxy de todo o computador são usadas em vez de configurações específicas do usuário.</summary>
+        <value>
+          <see langword="true" />Se as configurações de proxy de todo o computador são usadas; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir faz com que as configurações de proxy específicas do usuário a ser usado.  
+  
+```csharp  
+HttpTransportBindingElement httpBinding = new HttpTransportBindingElement();  
+httpBinding.UseDefaultWebProxy = false;  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebSocketSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.WebSocketTransportSettings WebSocketSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.WebSocketTransportSettings WebSocketSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpTransportBindingElement.WebSocketSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.WebSocketTransportSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a configuração de soquete da Web do elemento de associação.</summary>
+        <value>As configurações de soquete da Web.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

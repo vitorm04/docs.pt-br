@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.InteropServices">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.InteropServices" /> namespace fornece uma ampla variedade de membros que a invocação de plataforma e interoperabilidade de suporte COM os serviços. Se você estiver familiarizado com esses serviços, consulte [interoperação com código não gerenciado](~/docs/framework/interop/index.md).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Membros desse namespace fornecem várias categorias de funcionalidade, conforme mostrado na tabela a seguir. Atributos controlam o comportamento de marshaling como representam cadeias de caracteres ou como organizar estruturas. Os atributos mais importantes são <xref:System.Runtime.InteropServices.DllImportAttribute>, que você usa para definir a plataforma chamar métodos para acessar APIs não gerenciadas, e <xref:System.Runtime.InteropServices.MarshalAsAttribute>, que você usa para especificar como os dados são empacotados entre gerenciados e memória.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

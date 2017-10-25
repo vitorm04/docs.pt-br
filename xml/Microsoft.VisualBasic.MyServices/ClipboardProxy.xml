@@ -1,0 +1,1214 @@
+<Type Name="ClipboardProxy" FullName="Microsoft.VisualBasic.MyServices.ClipboardProxy">
+  <TypeSignature Language="C#" Value="public class ClipboardProxy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ClipboardProxy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.MyServices.ClipboardProxy" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos para manipular a Área de Transferência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Itens movidos ou copiados para a área de transferência persistem mesmo após o aplicativo é encerrado.  
+  
+ Dados na área de transferência podem estar em qualquer formato de dados, também chamado de um formato de área de transferência. Para obter uma lista de formatos predefinidos para uso com a área de transferência, consulte <xref:System.Windows.Forms.DataFormats>. Quando um item é movido ou copiado para a área de transferência, itens em outros formatos são desmarcadas. Para tornar outros formatos persistentes, use <xref:Microsoft.VisualBasic.VariantType.DataObject>, que copia todos os itens existentes na área de transferência atual, incluindo itens colados de outros aplicativos. Colocar dados na área de transferência em vários formatos para maximizar a possibilidade de que um aplicativo de destino, cujos requisitos de formato você talvez não saiba, pode recuperar com êxito os dados.  
+  
+ Como todos os aplicativos Windows compartilham a área de transferência do sistema, o conteúdo pode mudar quando você alternar para outro aplicativo.  
+  
+ Uma classe deve ser serializada para que ela seja colocada na área de transferência. Consulte [serialização](http://msdn.microsoft.com/library/f7570c09-7db5-44f2-983a-e8859caeb0d5) para obter mais informações.  
+  
+ Ao acessar a área de transferência remotamente, um <xref:System.Threading.ThreadStateException> é gerada, a menos que o segmento acessando opere no modo STA (single-threaded apartment). Para resolver esse problema, defina o `ThreadApartmentState` para `STA`. Para obter mais informações, consulte <xref:System.STAThreadAttribute>.  
+  
+ Para obter mais informações, consulte [armazenando dados e lendo da área de transferência](~/docs/visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo lê o texto da área de transferência para a cadeia de caracteres `textOnClipboard`.  
+  
+ [!code-vb[VbVbcnMyClipboard#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#6)]  
+  
+ Este exemplo falhará se não houver nenhum texto na área de transferência.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Permissions.UIPermission> classe controla o acesso à área de transferência e associado <xref:System.Security.Permissions.UIPermissionClipboard> valor de enumeração indica o nível de acesso. Para obter mais informações, consulte [considerações adicionais de segurança no Windows Forms](~/docs/framework/winforms/additional-security-considerations-in-windows-forms.md).  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo limpa a área de transferência.  
+  
+```  
+My.Computer.Clipboard.Clear()  
+```  
+  
+ Isso remove todos os dados da área de transferência.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsAudio">
+      <MemberSignature Language="C#" Value="public bool ContainsAudio ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsAudio() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se a área de transferência contém dados de áudio.</summary>
+        <returns>
+          <see langword="True" />Se os dados de áudio são armazenados na área de transferência; Caso contrário, <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo determina se a área de transferência contém dados de áudio e exibe o resultado.  
+  
+ [!code-vb[VbRefClipbd#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsData">
+      <MemberSignature Language="C#" Value="public bool ContainsData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see langword="String" />. Nome do formato personalizado a ser verificada. Necessário.</param>
+        <summary>Indica se a área de transferência contém dados em um formato personalizado especificado.</summary>
+        <returns>
+          <see langword="True" />Se os dados em um formato personalizado especificado estiver armazenados na área de transferência; Caso contrário, <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tiver colocado dados formatados personalizados na área de transferência, esse método permite que você verifique a área de transferência de dados em formato.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo verifica dados em um formato personalizado `specialFormat`.  
+  
+ [!code-vb[VbRefClipbd#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#6)]  
+  
+ Substituir `specialFormat` com o nome do formato personalizado que você deseja verificar.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFileDropList">
+      <MemberSignature Language="C#" Value="public bool ContainsFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see langword="Boolean" /> que indica se a área de transferência contém uma lista de arquivos.</summary>
+        <returns>
+          <see langword="True" />Se remover um arquivo de lista é armazenada na área de transferência; Caso contrário, <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma lista de arquivos é uma coleção de cadeias de caracteres que contém informações de caminho para arquivos.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo determina se há uma lista de arquivos na área de transferência e adiciona a lista para o `ListBox.lstFiles` se existirem.  
+  
+ [!code-vb[VbRefClipbd#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#12)]  
+  
+ Esse código cria uma exceção se não houver nenhum `ListBox` chamado `lstFiles`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsImage">
+      <MemberSignature Language="C#" Value="public bool ContainsImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see langword="Boolean" /> que indica se uma imagem é armazenada na área de transferência.</summary>
+        <returns>
+          <see langword="True" />Se uma imagem é armazenada na área de transferência; Caso contrário, <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo verifica se há uma imagem na área de transferência e, nesse caso, obtém a imagem e o adiciona à `PictureBox1`.  
+  
+ [!code-vb[VbRefClipbd#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#8)]  
+  
+ Este exemplo depende da existência de um `PictureBox` chamado `PictureBox1`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public bool ContainsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se há texto na área de transferência.</summary>
+        <returns>
+          <see langword="True" />Se a área de transferência contém texto. Caso contrário, <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os possíveis formatos são <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> e <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo determina se o texto HTML é armazenado na área de transferência e leituras da área de transferência em caso afirmativo.  
+  
+ [!code-vb[VbRefClipbd#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public bool ContainsText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool ContainsText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see cref="T:System.Windows.Forms.TextDataFormat" />. Se especificado, identifica o formato de texto a ser verificada. Necessário.</param>
+        <summary>Determina se há texto na área de transferência.</summary>
+        <returns>
+          <see langword="True" />Se a área de transferência contém texto. Caso contrário, <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os possíveis formatos são <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> e <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo determina se o texto HTML é armazenado na área de transferência e leituras da área de transferência em caso afirmativo.  
+  
+ [!code-vb[VbRefClipbd#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAudioStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetAudioStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Stream GetAudioStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um fluxo de áudio da área de transferência.</summary>
+        <returns>Um <see cref="T:System.IO.Stream" /> objeto que contém dados de áudio ou <see langword="Nothing" /> se a área de transferência não contém nenhum dado de áudio.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo recupera um fluxo de áudio da área de transferência e reproduz.  
+  
+ [!code-vb[VbRefClipbd#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see langword="String" />. Nome do formato de dados. Necessário.</param>
+        <summary>Recupera dados em um formato personalizado da área de transferência.</summary>
+        <returns>Um <see langword="Object" /> que representa os dados de área de transferência ou <see langword="Nothing" /> se a área de transferência não contém todos os dados que estão no formato especificado ou podem ser convertidos para aquele formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo lê os dados no formato `specialformat` da área de transferência e os grava no arquivo.  
+  
+ [!code-vb[VbRefClipbd#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#7)]  
+  
+ Substituir `specialformat` com o formato de dados personalizado que deseja recuperar.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataObject">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IDataObject GetDataObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.Windows.Forms.IDataObject GetDataObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetDataObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IDataObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera dados da área de transferência como uma <see cref="T:System.Windows.Forms.IDataObject" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.IDataObject" /> objeto que representa os dados no momento, a área de transferência ou <see langword="Nothing" /> se não houver dados na área de transferência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um membro avançado; ele não aparece no IntelliSense, a menos que você clique no **todas as** guia.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo lê dados da área de transferência na forma de um <xref:System.Windows.Forms.IDataObject> e grava-o em um arquivo.  
+  
+ [!code-vb[VbRefClipbd#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#1)]  
+  
+ Substituir `C:\mylogfile` com o nome do arquivo para o qual você deseja gravar.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDropList">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection GetFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.Collections.Specialized.StringCollection GetFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de cadeias de caracteres que representa os nomes de arquivo da área de transferência.</summary>
+        <returns>Um <see cref="T:System.Collections.Specialized.StringCollection" /> que contém nomes de arquivo ou <see langword="Nothing" /> se a Área de Transferência não contiver dados que estejam no formato <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> ou que possam ser convertidos nesse formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método está disponível somente para aplicativos de servidor não.  
+  
+ Uma lista de arquivos é uma coleção de cadeias de caracteres que contém informações de caminho para arquivos.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo determina se há uma lista de arquivos na área de transferência e adiciona a lista para o `ListBox.lstFiles` se existirem.  
+  
+ [!code-vb[VbRefClipbd#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#9)]  
+  
+ Esse código cria uma exceção se não houver nenhum `ListBox` chamado `lstFiles`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image GetImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.Drawing.Image GetImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma imagem da área de transferência.</summary>
+        <returns>Um <see cref="T:System.Drawing.Image" /> que representa os dados de imagem da área de transferência ou <see langword="Nothing" /> se a área de transferência não contiver dados que estejam no formato <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> ou que possam ser convertidos nesse formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo verifica se há alguma imagem na Área de Transferência antes de recuperá-la e atribuí-la à `PictureBox1`.  
+  
+ [!code-vb[VbRefClipbd#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#4)]  
+  
+ Para esse exemplo funcione corretamente, deve haver uma `PictureBox` chamado `PictureBox1` do formulário.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public string GetText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance string GetText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera texto da Área de Transferência.</summary>
+        <returns>Os dados de texto da Área de Transferência ou de uma cadeia de caracteres vazia se a Área de Transferência não contiver dados no formato <see cref="F:System.Windows.Forms.DataFormats.Text" /> ou <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />, dependendo do sistema operacional.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os possíveis formatos são <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> e <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo lê o texto da área de transferência para a cadeia de caracteres `textOnClipboard`.  
+  
+ [!code-vb[VbVbcnMyClipboard#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#6)]  
+  
+ Este exemplo falhará se não houver nenhum texto na área de transferência.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public string GetText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance string GetText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see cref="T:System.Windows.Forms.TextDataFormat" />. Se especificado, identifica o formato de texto deve ser recuperado. O padrão é <see cref="F:System.Windows.Forms.TextDataFormat.CommaSeparatedValue" />. Necessário.</param>
+        <summary>Recupera texto da Área de Transferência.</summary>
+        <returns>Os dados de texto da área de transferência ou uma cadeia de caracteres vazia se a área de transferência não contém dados no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os possíveis formatos são <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> e <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo lê o texto da área de transferência para a cadeia de caracteres `textOnClipboard`.  
+  
+ [!code-vb[VbVbcnMyClipboard#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#6)]  
+  
+ Este exemplo falhará se não houver nenhum texto na área de transferência.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public void SetAudio (byte[] audioBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetAudio(unsigned int8[] audioBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioBytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="audioBytes">
+          Matriz <see langword="Byte" />. Dados de áudio a serem gravados na área de transferência. Necessário.</param>
+        <summary>Grava dados de áudio na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo cria a matriz de bytes `musicReader`, lê o arquivo `cool.wav` nela e o grava na Área de Transferência.  
+  
+ [!code-vb[VbRefClipbd#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#2)]  
+  
+ Substituir `cool.wav` com o nome e caminho do arquivo que você deseja ler.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public void SetAudio (System.IO.Stream audioStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetAudio(class System.IO.Stream audioStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="audioStream">
+          <see cref="T:System.IO.Stream" />Dados de áudio a serem gravados na área de transferência. Necessário.</param>
+        <summary>Grava dados de áudio na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo cria a matriz de bytes `musicReader`, lê o arquivo `cool.wav` nela e o grava na Área de Transferência.  
+  
+ [!code-vb[VbRefClipbd#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#2)]  
+  
+ Substituir `cool.wav` com o nome e caminho do arquivo que você deseja ler.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+          <see langword="String" />. Formato de dados. Necessário.</param>
+        <param name="data">
+          <see langword="Object" />. Objeto de dados a serem gravados na área de transferência. Necessário.</param>
+        <summary>Grava dados em um formato personalizado para a área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo grava o `DataObject.dataChunk` na Área de Transferência no formato personalizado `specialFormat`.  
+  
+ [!code-vb[VbVbcnMyClipboard#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#7)]  
+  
+ Este exemplo depende da existência do formato de dados personalizado `specialFormat`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public void SetDataObject (System.Windows.Forms.DataObject data);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetDataObject(class System.Windows.Forms.DataObject data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject(System.Windows.Forms.DataObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Windows.Forms.DataObject" />
+      </Parameters>
+      <Docs>
+        <param name="data">
+          <see cref="T:System.Windows.Forms.DataObject" />. Objeto de dados a serem gravados na área de transferência. Necessário.</param>
+        <summary>Grava um <see cref="T:System.Windows.Forms.DataObject" /> na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um membro avançado; ele não aparece no IntelliSense, a menos que você clique no **todas as** guia.  
+  
+> [!IMPORTANT]
+>  Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo grava o objeto de dados `dataChunk` na área de transferência.  
+  
+ [!code-vb[VbVbcnMyClipboard#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#9)]  
+  
+ Este exemplo depende da existência do objeto de dados `dataChunk`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileDropList">
+      <MemberSignature Language="C#" Value="public void SetFileDropList (System.Collections.Specialized.StringCollection filePaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetFileDropList(class System.Collections.Specialized.StringCollection filePaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetFileDropList(System.Collections.Specialized.StringCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePaths" Type="System.Collections.Specialized.StringCollection" />
+      </Parameters>
+      <Docs>
+        <param name="filePaths">
+          <see cref="T:System.Collections.Specialized.StringCollection" />. Lista de nomes de arquivo. Necessário.</param>
+        <summary>Grava um conjunto de cadeias de caracteres que representa os caminhos de arquivo na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma lista de arquivos é uma coleção de cadeias de caracteres que representa os nomes de arquivo.  
+  
+> [!IMPORTANT]
+>  Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo obtém a coleção de nomes de arquivos **Meus documentos**, converte-o em uma lista de arquivos e grava-o para a área de transferência.  
+  
+ [!code-vb[VbRefClipbd#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRefClipbd/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImage">
+      <MemberSignature Language="C#" Value="public void SetImage (System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetImage(class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetImage(System.Drawing.Image)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="image">
+          <see cref="T:System.Drawing.Image" />. Imagem a ser gravado. Necessário.</param>
+        <summary>Grava uma imagem na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo grava a imagem `coolPicture` na área de transferência.  
+  
+ [!code-vb[VbVbcnMyClipboard#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#8)]  
+  
+ Este exemplo depende da existência da imagem `coolPicture`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public void SetText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">
+          <see langword="String" />. Texto a ser gravado. Necessário.</param>
+        <summary>Grava texto na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os possíveis formatos são <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> e <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+ Formatos de área de transferência anteriores não são preservados.  
+  
+> [!IMPORTANT]
+>  Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo grava a cadeia de caracteres `This is a test string.` na área de transferência.  
+  
+ [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="text" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> é <see langword="Nothing" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public void SetText (string text, System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetText(string text, valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText(System.String,System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="text">
+          <see langword="String" />. Texto a ser gravado. Necessário.</param>
+        <param name="format">
+          <see cref="T:System.Windows.Forms.TextDataFormat" />. Formato a ser usado ao gravar o texto. O padrão é <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />. Necessário.</param>
+        <summary>Grava texto na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os possíveis formatos são <xref:System.Windows.Forms.TextDataFormat.CommaSeparatedValue>, <xref:System.Windows.Forms.TextDataFormat.Html>, <xref:System.Windows.Forms.TextDataFormat.Rtf> e <xref:System.Windows.Forms.TextDataFormat.UnicodeText>.  
+  
+ Formatos de área de transferência anteriores não são preservados.  
+  
+> [!IMPORTANT]
+>  Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|------------------|---------------|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo grava a cadeia de caracteres `This is a test string.` na área de transferência.  
+  
+ [!code-vb[VbVbcnMyClipboard#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="text" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> é <see langword="Nothing" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">
+          <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />permissão é necessária para acessar a área de transferência do sistema.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

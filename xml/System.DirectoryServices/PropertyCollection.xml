@@ -1,0 +1,720 @@
+<Type Name="PropertyCollection" FullName="System.DirectoryServices.PropertyCollection">
+  <TypeSignature Language="C#" Value="public class PropertyCollection : System.Collections.IDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.PropertyCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.PropertyCollection" /> contém as propriedades de um <see cref="T:System.DirectoryServices.DirectoryEntry" />.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+      <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+    </permission>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade a ser localizada.</param>
+        <summary>Determina se a propriedade especificada está nesta coleção.</summary>
+        <returns>O valor de retorno é <see langword="true" /> se a propriedade especificada pertence a esta coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.PropertyValueCollection[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.PropertyValueCollection[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyCollection.CopyTo(System.DirectoryServices.PropertyValueCollection[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.DirectoryServices.PropertyValueCollection[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz de <see cref="T:System.DirectoryServices.PropertyValueCollection" /> objetos que recebe os elementos desta coleção.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> onde esse método inicia a cópia desta coleção.</param>
+        <summary>Copia todos os objetos dessa coleção em uma matriz, começando no índice especificado na matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Erro durante a chamada à interface subjacente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de propriedades na coleção.</summary>
+        <value>O número de propriedades na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serviços de informações da Internet (IIS) e provedores de WinNT dão suporte atualmente não <xref:System.DirectoryServices.PropertyCollection.Count%2A>, portanto, cada um gerará um <xref:System.NotSupportedException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Erro durante a chamada à interface subjacente.</exception>
+        <exception cref="T:System.NotSupportedException">O diretório não pode relatar o número de propriedades.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que você pode usar para percorrer essa coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IDictionaryEnumerator" /> que você pode usar para percorrer essa coleção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Erro durante a chamada à interface subjacente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.PropertyValueCollection this[string propertyName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.PropertyValueCollection Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.PropertyValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade a ser recuperada.</param>
+        <summary>Obtém a propriedade especificada.</summary>
+        <value>O valor da propriedade especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No c#, essa propriedade é o indexador de <xref:System.DirectoryServices.PropertyCollection> classe.  
+  
+ No JScript, você pode usar as propriedades indexadas padrão definidas por um tipo, mas você não pode definir explicitamente as suas próprias. No entanto, especificar o atributo expando em uma classe fornece automaticamente um padrão propriedade com um tipo de objeto e um tipo de índice indexada <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection PropertyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection PropertyNames" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.PropertyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes das propriedades nesta coleção.</summary>
+        <value>Um objeto <see cref="T:System.Collections.ICollection" /> que contém os nomes das propriedades nesta coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao acessar membros do <xref:System.DirectoryServices.PropertyCollection.PropertyNames%2A> propriedade, um <xref:System.Runtime.InteropServices.COMException> pode ser gerada devido a um erro ao acessar a interface subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ICollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos do <see cref="T:System.Collections.ICollection" /> para um <see cref="T:System.Array" />, começando em um determinado índice <see cref="T:System.Array" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ - ou -  
+  
+ O número de elementos na origem <see cref="T:System.Collections.ICollection" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.ICollection" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.ICollection" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.ICollection.SyncRoot%2A>Retorna um objeto, que pode ser usado para sincronizar o acesso a <xref:System.Collections.ICollection>.  
+  
+ Coleta a maioria das classes de <xref:System.Collections?displayProperty=nameWithType> namespace também implementa um método sincronizado, que fornece um wrapper sincronizado para a coleção subjacente.  
+  
+ Enumerar através de uma coleção intrinsecamente não é um procedimento de segurança do thread. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir a segurança de thread durante a enumeração, você pode bloquear a coleção durante toda a enumeração ou capture as exceções que são provenientes de alterações feitas por outros threads.  
+  
+ [Visual Basic, C#]  
+  
+ O exemplo a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ICollection.SyncRoot%2A> durante toda a enumeração:  
+  
+```csharp  
+ICollection myCollection = new ICollection();  
+  lock(myCollection.SyncRoot) {  
+  foreach (Object item in myCollection) {  
+  // Insert your code here.  
+  }  
+ }  
+```  
+  
+```vb  
+Dim myCollection As New ICollection()  
+ Dim item As Object  
+ SyncLock myCollection.SyncRoot  
+  For Each item In myCollection  
+  ' Insert your code here.  
+  Next item  
+ End SyncLock  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para coleções cujo repositório subjacente não está disponível publicamente, a implementação esperada é retornar a instância atual. Observe que o ponteiro para a instância atual pode não ser suficiente para coleções que agrupam outras coleções; aqueles devem retornar a propriedade de SyncRoot da coleção subjacente.  
+  
+ Coleta a maioria das classes de <xref:System.Collections?displayProperty=nameWithType> namespace também implementa um método sincronizado, que fornece um wrapper sincronizado para a coleção subjacente. No entanto, as classes derivadas podem fornecer sua própria versão sincronizada de coleção usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Collections.ICollection.SyncRoot%2A> da coleção, não diretamente na coleção. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando a instância de coleção.  
+  
+ Na ausência de um método sincronizado em uma coleção, o uso esperado para <xref:System.Collections.ICollection.SyncRoot%2A> tem esta aparência:  
+  
+```csharp  
+ICollection MyCollection =...  
+ lock(MyCollection.SyncRoot) {  
+  // Some operation on the collection, which is now thread safe.  
+ }  
+```  
+  
+```vb  
+Dim myCollection as New ICollection()  
+ SyncLock myCollection.SyncRoot  
+  ' Some operation on the collection, which is now thread safe.  
+ End SyncLock  
+```  
+  
+ Enumerar através de uma coleção intrinsecamente não é um procedimento de segurança do thread. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ [Visual Basic, C#]  
+  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ICollection.SyncRoot%2A> durante toda a enumeração:  
+  
+```csharp  
+ICollection myCollection = new ICollection();  
+ lock(myCollection.SyncRoot) {  
+  foreach (Object item in myCollection) {  
+  // Insert your code here.  
+  }  
+ }  
+```  
+  
+```vb  
+Dim myCollection As New ICollection()  
+ Dim item As Object  
+ SyncLock myCollection.SyncRoot  
+  For Each item In myCollection  
+  ' Insert your code here.  
+  Next item  
+ End SyncLock  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Add">
+      <MemberSignature Language="C#" Value="void IDictionary.Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyCollection.System#Collections#IDictionary#Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">O <see cref="T:System.Object" /> a ser usado como chave do elemento a ser adicionado.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser usado como valor do elemento a ser adicionado.</param>
+        <summary>Adiciona um elemento com a chave e o valor fornecidos ao objeto <see cref="T:System.Collections.IDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode usar o <xref:System.Collections.IDictionary.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no dicionário (por exemplo, `myCollection["myNonexistentKey"] = myValue`). No entanto, se a chave especificada já existe no dicionário, configurando o <xref:System.Collections.IDictionary.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.IDictionary.Add%2A> método não modifica os elementos existentes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como implementar o <xref:System.Collections.IDictionary.Add%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.IDictionary> classe.  
+  
+ [!code-cpp[Dictionary#9](~/samples/snippets/cpp/VS_Snippets_CLR/Dictionary/cpp/Dictionary.cpp#9)]
+ [!code-csharp[Dictionary#9](~/samples/snippets/csharp/VS_Snippets_CLR/Dictionary/CS/Dictionary.cs#9)]
+ [!code-vb[Dictionary#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/Dictionary/VB/Dictionary.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Já existe um elemento com a mesma chave no objeto <see cref="T:System.Collections.IDictionary" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.IDictionary" /> é somente leitura.  
+  
+ - ou -  
+  
+ O <see cref="T:System.Collections.IDictionary" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Clear">
+      <MemberSignature Language="C#" Value="void IDictionary.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyCollection.System#Collections#IDictionary#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os elementos do objeto <see cref="T:System.Collections.IDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como implementar o <xref:System.Collections.IDictionary.Clear%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Collections.IDictionary> classe.  
+  
+ [!code-cpp[Dictionary#8](~/samples/snippets/cpp/VS_Snippets_CLR/Dictionary/cpp/Dictionary.cpp#8)]
+ [!code-csharp[Dictionary#8](~/samples/snippets/csharp/VS_Snippets_CLR/Dictionary/CS/Dictionary.cs#8)]
+ [!code-vb[Dictionary#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Dictionary/VB/Dictionary.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O objeto <see cref="T:System.Collections.IDictionary" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Contains">
+      <MemberSignature Language="C#" Value="bool IDictionary.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IDictionary.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyCollection.System#Collections#IDictionary#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">A chave a ser localizada no objeto <see cref="T:System.Collections.IDictionary" />.</param>
+        <summary>Determina se o objeto <see cref="T:System.Collections.IDictionary" /> contém um elemento com a chave especificada.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.IDictionary" /> contiver um elemento com a chave; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como implementar o <xref:System.Collections.IDictionary.Contains%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Collections.IDictionary> classe.  
+  
+ [!code-cpp[Dictionary#5](~/samples/snippets/cpp/VS_Snippets_CLR/Dictionary/cpp/Dictionary.cpp#5)]
+ [!code-csharp[Dictionary#5](~/samples/snippets/csharp/VS_Snippets_CLR/Dictionary/CS/Dictionary.cs#5)]
+ [!code-vb[Dictionary#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Dictionary/VB/Dictionary.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.System#Collections#IDictionary#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.IDictionary" /> objeto tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Collections.IDictionary" /> objeto tem um fixa tamanho; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção com um tamanho fixo não permite a adição ou remoção de elementos após a coleção é criada, mas permitir a modificação de elementos existentes.  
+  
+ Uma coleção com um tamanho fixo é simplesmente uma coleção com um wrapper que impede a adição e a remoção de elementos; por isso, caso as alterações sejam feitas na coleção subjacente, inclusive a adição ou a remoção de elementos, a coleção de tamanho fixo reflete essas alterações.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como implementar o <xref:System.Collections.IDictionary.IsFixedSize%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.IDictionary> classe.  
+  
+ [!code-cpp[Dictionary#6](~/samples/snippets/cpp/VS_Snippets_CLR/Dictionary/cpp/Dictionary.cpp#6)]
+ [!code-csharp[Dictionary#6](~/samples/snippets/csharp/VS_Snippets_CLR/Dictionary/CS/Dictionary.cs#6)]
+ [!code-vb[Dictionary#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Dictionary/VB/Dictionary.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.System#Collections#IDictionary#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto <see cref="T:System.Collections.IDictionary" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o objeto <see cref="T:System.Collections.IDictionary" /> for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção que seja somente leitura não permite a adição, a remoção ou a modificação de elementos após a coleção ser criada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como implementar a <xref:System.Collections.IDictionary.IsReadOnly%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.IDictionary> classe.  
+  
+ [!code-cpp[Dictionary#4](~/samples/snippets/cpp/VS_Snippets_CLR/Dictionary/cpp/Dictionary.cpp#4)]
+ [!code-csharp[Dictionary#4](~/samples/snippets/csharp/VS_Snippets_CLR/Dictionary/CS/Dictionary.cs#4)]
+ [!code-vb[Dictionary#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Dictionary/VB/Dictionary.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IDictionary.Item[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IDictionary.Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.System#Collections#IDictionary#Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser obtida ou adicionada.</param>
+        <summary>Obtém ou define o elemento com a chave especificada.</summary>
+        <value>O elemento com a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[key]`.  
+  
+ Você também pode usar o <xref:System.Collections.IDictionary.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no dicionário (por exemplo, `myCollection["myNonexistentKey"] = myValue`). No entanto, se a chave especificada já existe no dicionário, configurando o <xref:System.Collections.IDictionary.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.IDictionary.Add%2A> método não modifica os elementos existentes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como implementar a <xref:System.Collections.IDictionary.Item%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.IDictionary> classe.  
+  
+ [!code-cpp[Dictionary#13](~/samples/snippets/cpp/VS_Snippets_CLR/Dictionary/cpp/Dictionary.cpp#13)]
+ [!code-csharp[Dictionary#13](~/samples/snippets/csharp/VS_Snippets_CLR/Dictionary/CS/Dictionary.cs#13)]
+ [!code-vb[Dictionary#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Dictionary/VB/Dictionary.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">A propriedade é definida e o objeto <see cref="T:System.Collections.IDictionary" /> é somente leitura.  
+  
+ -ou-  
+  
+ A propriedade é definida, <paramref name="key" /> não existe na coleção e o <see cref="T:System.Collections.IDictionary" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Keys">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection System.Collections.IDictionary.Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection System.Collections.IDictionary.Keys" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.System#Collections#IDictionary#Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Collections.ICollection" /> que contém as chaves do objeto <see cref="T:System.Collections.IDictionary" />.</summary>
+        <value>Um objeto <see cref="T:System.Collections.ICollection" /> que contém as chaves do objeto <see cref="T:System.Collections.IDictionary" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem das chaves no retornado <xref:System.Collections.ICollection> objeto não for especificado, mas é garantido para ser a mesma ordem que os valores correspondentes no <xref:System.Collections.ICollection> retornado pelo <xref:System.Collections.IDictionary.Values%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como implementar a <xref:System.Collections.IDictionary.Keys%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.IDictionary> classe.  
+  
+ [!code-cpp[Dictionary#10](~/samples/snippets/cpp/VS_Snippets_CLR/Dictionary/cpp/Dictionary.cpp#10)]
+ [!code-csharp[Dictionary#10](~/samples/snippets/csharp/VS_Snippets_CLR/Dictionary/CS/Dictionary.cs#10)]
+ [!code-vb[Dictionary#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/Dictionary/VB/Dictionary.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Remove">
+      <MemberSignature Language="C#" Value="void IDictionary.Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyCollection.System#Collections#IDictionary#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser removido.</param>
+        <summary>Remove o elemento com a chave especificada do objeto <see cref="T:System.Collections.IDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como implementar o <xref:System.Collections.IDictionary.Remove%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Collections.IDictionary> classe.  
+  
+ [!code-cpp[Dictionary#7](~/samples/snippets/cpp/VS_Snippets_CLR/Dictionary/cpp/Dictionary.cpp#7)]
+ [!code-csharp[Dictionary#7](~/samples/snippets/csharp/VS_Snippets_CLR/Dictionary/CS/Dictionary.cs#7)]
+ [!code-vb[Dictionary#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Dictionary/VB/Dictionary.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">O objeto <see cref="T:System.Collections.IDictionary" /> é somente leitura.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Collections.IDictionary" /> tem um tamanho fixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto <see cref="T:System.Collections.IEnumerable" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerable" />.object.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [Visual Basic, C#]  
+  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, usando `foreach` é recomendado em vez de manipulação direta do enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, o <xref:System.Collections.IEnumerator.Current%2A> propriedade está definida. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.PropertyCollection.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores das propriedades nesta coleção.</summary>
+        <value>Uma <see cref="T:System.Collections.ICollection" /> que contém os valores das propriedades nesta coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao acessar membros do <xref:System.DirectoryServices.PropertyCollection.Values%2A> propriedade, um <xref:System.Runtime.InteropServices.COMException> exceção pode ser gerada devido a um erro ao acessar a interface subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

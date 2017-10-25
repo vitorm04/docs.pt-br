@@ -1,0 +1,28 @@
+<Type Name="ITemplateable" FullName="System.Web.UI.MobileControls.ITemplateable">
+  <TypeSignature Language="C#" Value="public interface ITemplateable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITemplateable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ITemplateable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Atua como uma interface de marcador e não tem nenhum membro de qualquer tipo. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementada por todos os controles do ASP.NET móveis que oferecem suporte a conjuntos de modelo.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members />
+</Type>

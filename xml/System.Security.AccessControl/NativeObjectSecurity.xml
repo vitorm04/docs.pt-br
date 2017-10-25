@@ -1,0 +1,395 @@
+<Type Name="NativeObjectSecurity" FullName="System.Security.AccessControl.NativeObjectSecurity">
+  <TypeSignature Language="C#" Value="public abstract class NativeObjectSecurity : System.Security.AccessControl.CommonObjectSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit NativeObjectSecurity extends System.Security.AccessControl.CommonObjectSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.NativeObjectSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.CommonObjectSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a capacidade de controlar o acesso a objetos nativo sem a manipulação direta de listas de controle de acesso (ACLs). Tipos de objeto nativo são definidos pela enumeração <see cref="T:System.Security.AccessControl.ResourceType" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NativeObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.#ctor(System.Boolean,System.Security.AccessControl.ResourceType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> é um objeto recipiente.</param>
+        <param name="resourceType">O tipo de objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> classe com os valores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NativeObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType, System.Runtime.InteropServices.SafeHandle handle, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType, class System.Runtime.InteropServices.SafeHandle handle, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.#ctor(System.Boolean,System.Security.AccessControl.ResourceType,System.Runtime.InteropServices.SafeHandle,System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+        <Parameter Name="handle" Type="System.Runtime.InteropServices.SafeHandle" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> é um objeto recipiente.</param>
+        <param name="resourceType">O tipo de objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="handle">O identificador do objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="includeSections">Uma da <see cref="T:System.Security.AccessControl.AccessControlSections" /> valores de enumeração que especifica as seções do descritor de segurança (regras de acesso, as regras de auditoria, proprietário, grupo primário) do objeto protegível para incluir na <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> classe com os valores especificados. É recomendável que os valores da <paramref name="includeSections" /> parâmetros passados para o construtor e manter os métodos ser idênticos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a persistência de um <xref:System.Security.AccessControl.NativeObjectSecurity> do objeto, se o valor da `includeSections` parâmetro passado para o <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método não é idêntico ao valor da `includeSections` parâmetro passado para o construtor usado para criar esse <xref:System.Security.AccessControl.NativeObjectSecurity> objeto, seções de persistente <xref:System.Security.AccessControl.NativeObjectSecurity> objeto pode conter valores imprevisíveis. Por exemplo, se um construtor for chamado com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.Access>e posteriormente um <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método é chamado no objeto com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.All>, resultante persistentes <xref:System.Security.AccessControl.NativeObjectSecurity> objeto conterá valores imprevisíveis para suas regras de auditoria, o grupo e o proprietário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NativeObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType, System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType, class System.Security.AccessControl.NativeObjectSecurity/ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.#ctor(System.Boolean,System.Security.AccessControl.ResourceType,System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+        <Parameter Name="exceptionFromErrorCode" Type="System.Security.AccessControl.NativeObjectSecurity+ExceptionFromErrorCode" />
+        <Parameter Name="exceptionContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> é um objeto recipiente.</param>
+        <param name="resourceType">O tipo de objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="exceptionFromErrorCode">Um delegado implementado por integradores que fornece exceções personalizadas.</param>
+        <param name="exceptionContext">Um objeto que contém informações contextuais sobre a origem ou destino da exceção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> usando os valores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NativeObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType, string name, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType, string name, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.#ctor(System.Boolean,System.Security.AccessControl.ResourceType,System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> é um objeto recipiente.</param>
+        <param name="resourceType">O tipo de objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="name">O nome do objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="includeSections">Uma da <see cref="T:System.Security.AccessControl.AccessControlSections" /> valores de enumeração que especifica as seções do descritor de segurança (regras de acesso, as regras de auditoria, proprietário, grupo primário) do objeto protegível para incluir na <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> classe com os valores especificados. É recomendável que os valores da <paramref name="includeSections" /> parâmetros passados para o construtor e manter os métodos ser idênticos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a persistência de um <xref:System.Security.AccessControl.NativeObjectSecurity> do objeto, se o valor da `includeSections` parâmetro passado para o <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método não é idêntico ao valor da `includeSections` parâmetro passado para o construtor usado para criar esse <xref:System.Security.AccessControl.NativeObjectSecurity> objeto, seções de persistente <xref:System.Security.AccessControl.NativeObjectSecurity> objeto pode conter valores imprevisíveis. Por exemplo, se um construtor for chamado com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.Access>e posteriormente um <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método é chamado no objeto com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.All>, resultante persistentes <xref:System.Security.AccessControl.NativeObjectSecurity> objeto conterá valores imprevisíveis para suas regras de auditoria, o grupo e o proprietário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NativeObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType, System.Runtime.InteropServices.SafeHandle handle, System.Security.AccessControl.AccessControlSections includeSections, System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType, class System.Runtime.InteropServices.SafeHandle handle, valuetype System.Security.AccessControl.AccessControlSections includeSections, class System.Security.AccessControl.NativeObjectSecurity/ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.#ctor(System.Boolean,System.Security.AccessControl.ResourceType,System.Runtime.InteropServices.SafeHandle,System.Security.AccessControl.AccessControlSections,System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+        <Parameter Name="handle" Type="System.Runtime.InteropServices.SafeHandle" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+        <Parameter Name="exceptionFromErrorCode" Type="System.Security.AccessControl.NativeObjectSecurity+ExceptionFromErrorCode" />
+        <Parameter Name="exceptionContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> é um objeto recipiente.</param>
+        <param name="resourceType">O tipo de objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="handle">O identificador do objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="includeSections">Uma da <see cref="T:System.Security.AccessControl.AccessControlSections" /> valores de enumeração que especifica as seções do descritor de segurança (regras de acesso, as regras de auditoria, proprietário, grupo primário) do objeto protegível para incluir na <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto.</param>
+        <param name="exceptionFromErrorCode">Um delegado implementado por integradores que fornece exceções personalizadas.</param>
+        <param name="exceptionContext">Um objeto que contém informações contextuais sobre a origem ou destino da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> classe com os valores especificados. É recomendável que os valores da <paramref name="includeSections" /> parâmetros passados para o construtor e manter os métodos ser idênticos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a persistência de um <xref:System.Security.AccessControl.NativeObjectSecurity> do objeto, se o valor da `includeSections` parâmetro passado para o <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método não é idêntico ao valor da `includeSections` parâmetro passado para o construtor usado para criar esse <xref:System.Security.AccessControl.NativeObjectSecurity> objeto, seções de persistente <xref:System.Security.AccessControl.NativeObjectSecurity> objeto pode conter valores imprevisíveis. Por exemplo, se um construtor for chamado com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.Access>e posteriormente um <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método é chamado no objeto com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.All>, resultante persistentes <xref:System.Security.AccessControl.NativeObjectSecurity> objeto conterá valores imprevisíveis para suas regras de auditoria, o grupo e o proprietário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NativeObjectSecurity (bool isContainer, System.Security.AccessControl.ResourceType resourceType, string name, System.Security.AccessControl.AccessControlSections includeSections, System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer, valuetype System.Security.AccessControl.ResourceType resourceType, string name, valuetype System.Security.AccessControl.AccessControlSections includeSections, class System.Security.AccessControl.NativeObjectSecurity/ExceptionFromErrorCode exceptionFromErrorCode, object exceptionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.#ctor(System.Boolean,System.Security.AccessControl.ResourceType,System.String,System.Security.AccessControl.AccessControlSections,System.Security.AccessControl.NativeObjectSecurity.ExceptionFromErrorCode,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="resourceType" Type="System.Security.AccessControl.ResourceType" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+        <Parameter Name="exceptionFromErrorCode" Type="System.Security.AccessControl.NativeObjectSecurity+ExceptionFromErrorCode" />
+        <Parameter Name="exceptionContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> é um objeto recipiente.</param>
+        <param name="resourceType">O tipo de objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="name">O nome do objeto protegível com a qual o novo <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="includeSections">Uma da <see cref="T:System.Security.AccessControl.AccessControlSections" /> valores de enumeração que especifica as seções do descritor de segurança (regras de acesso, as regras de auditoria, proprietário, grupo primário) do objeto protegível para incluir na <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto.</param>
+        <param name="exceptionFromErrorCode">Um delegado implementado por integradores que fornece exceções personalizadas.</param>
+        <param name="exceptionContext">Um objeto que contém informações contextuais sobre a origem ou destino da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> classe com os valores especificados. É recomendável que os valores da <paramref name="includeSections" /> parâmetros passados para o construtor e manter os métodos ser idênticos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a persistência de um <xref:System.Security.AccessControl.NativeObjectSecurity> do objeto, se o valor da `includeSections` parâmetro passado para o <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método não é idêntico ao valor da `includeSections` parâmetro passado para o construtor usado para criar esse <xref:System.Security.AccessControl.NativeObjectSecurity> objeto, seções de persistente <xref:System.Security.AccessControl.NativeObjectSecurity> objeto pode conter valores imprevisíveis. Por exemplo, se um construtor for chamado com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.Access>e posteriormente um <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método é chamado no objeto com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.All>, resultante persistentes <xref:System.Security.AccessControl.NativeObjectSecurity> objeto conterá valores imprevisíveis para suas regras de auditoria, o grupo e o proprietário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="protected override sealed void Persist (System.Runtime.InteropServices.SafeHandle handle, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Persist(class System.Runtime.InteropServices.SafeHandle handle, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.Persist(System.Runtime.InteropServices.SafeHandle,System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.Runtime.InteropServices.SafeHandle" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="handle">O identificador do objeto protegível à qual essa <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="includeSections">Uma da <see cref="T:System.Security.AccessControl.AccessControlSections" /> valores de enumeração que especifica as seções do descritor de segurança (regras de acesso, as regras de auditoria, proprietário, grupo primário) do objeto protegível para salvar.</param>
+        <summary>Salva as seções especificadas do descritor de segurança associado a esta <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto no armazenamento permanente. Estamos recommend.persist que os valores da <paramref name="includeSections" /> parâmetros passados para o construtor e manter métodos ser idênticos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a persistência de um <xref:System.Security.AccessControl.NativeObjectSecurity> do objeto, se o valor da `includeSections` parâmetro passado para o <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método não é idêntico ao valor da `includeSections` parâmetro passado para o construtor usado para criar esse <xref:System.Security.AccessControl.NativeObjectSecurity> objeto, seções de persistente <xref:System.Security.AccessControl.NativeObjectSecurity> objeto pode conter valores imprevisíveis. Por exemplo, se um construtor for chamado com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.Access>e posteriormente um <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método é chamado no objeto com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.All>, resultante persistentes <xref:System.Security.AccessControl.NativeObjectSecurity> objeto conterá valores imprevisíveis para suas regras de auditoria, o grupo e o proprietário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">O objeto protegível à qual essa <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado é um diretório ou um arquivo e diretório ou o arquivo não pôde ser encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="protected override sealed void Persist (string name, System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Persist(string name, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.Persist(System.String,System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto protegível à qual essa <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="includeSections">Uma da <see cref="T:System.Security.AccessControl.AccessControlSections" /> valores de enumeração que especifica as seções do descritor de segurança (regras de acesso, as regras de auditoria, proprietário, grupo primário) do objeto protegível para salvar.</param>
+        <summary>Salva as seções especificadas do descritor de segurança associado a esta <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto no armazenamento permanente. É recomendável que os valores da <paramref name="includeSections" /> parâmetros passados para o construtor e manter os métodos ser idênticos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a persistência de um <xref:System.Security.AccessControl.NativeObjectSecurity> do objeto, se o valor da `includeSections` parâmetro passado para o <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método não é idêntico ao valor da `includeSections` parâmetro passado para o construtor usado para criar esse <xref:System.Security.AccessControl.NativeObjectSecurity> objeto, seções de persistente <xref:System.Security.AccessControl.NativeObjectSecurity> objeto pode conter valores imprevisíveis. Por exemplo, se um construtor for chamado com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.Access>e posteriormente um <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método é chamado no objeto com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.All>, resultante persistentes <xref:System.Security.AccessControl.NativeObjectSecurity> objeto conterá valores imprevisíveis para suas regras de auditoria, o grupo e o proprietário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">O objeto protegível à qual essa <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado é um diretório ou um arquivo e diretório ou o arquivo não pôde ser encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="protected void Persist (System.Runtime.InteropServices.SafeHandle handle, System.Security.AccessControl.AccessControlSections includeSections, object exceptionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Persist(class System.Runtime.InteropServices.SafeHandle handle, valuetype System.Security.AccessControl.AccessControlSections includeSections, object exceptionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.Persist(System.Runtime.InteropServices.SafeHandle,System.Security.AccessControl.AccessControlSections,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.Runtime.InteropServices.SafeHandle" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+        <Parameter Name="exceptionContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="handle">O identificador do objeto protegível à qual essa <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="includeSections">Uma da <see cref="T:System.Security.AccessControl.AccessControlSections" /> valores de enumeração que especifica as seções do descritor de segurança (regras de acesso, as regras de auditoria, proprietário, grupo primário) do objeto protegível para salvar.</param>
+        <param name="exceptionContext">Um objeto que contém informações contextuais sobre a origem ou destino da exceção.</param>
+        <summary>Salva as seções especificadas do descritor de segurança associado a esta <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto no armazenamento permanente. É recomendável que os valores da <paramref name="includeSections" /> parâmetros passados para o construtor e manter os métodos ser idênticos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a persistência de um <xref:System.Security.AccessControl.NativeObjectSecurity> do objeto, se o valor da `includeSections` parâmetro passado para o <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método não é idêntico ao valor da `includeSections` parâmetro passado para o construtor usado para criar esse <xref:System.Security.AccessControl.NativeObjectSecurity> objeto, seções de persistente <xref:System.Security.AccessControl.NativeObjectSecurity> objeto pode conter valores imprevisíveis. Por exemplo, se um construtor for chamado com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.Access>e posteriormente um <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método é chamado no objeto com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.All>, resultante persistentes <xref:System.Security.AccessControl.NativeObjectSecurity> objeto conterá valores imprevisíveis para suas regras de auditoria, o grupo e o proprietário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">O objeto protegível à qual essa <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado é um diretório ou um arquivo e diretório ou o arquivo não pôde ser encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="protected void Persist (string name, System.Security.AccessControl.AccessControlSections includeSections, object exceptionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Persist(string name, valuetype System.Security.AccessControl.AccessControlSections includeSections, object exceptionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.NativeObjectSecurity.Persist(System.String,System.Security.AccessControl.AccessControlSections,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+        <Parameter Name="exceptionContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto protegível à qual essa <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado.</param>
+        <param name="includeSections">Uma da <see cref="T:System.Security.AccessControl.AccessControlSections" /> valores de enumeração que especifica as seções do descritor de segurança (regras de acesso, as regras de auditoria, proprietário, grupo primário) do objeto protegível para salvar.</param>
+        <param name="exceptionContext">Um objeto que contém informações contextuais sobre a origem ou destino da exceção.</param>
+        <summary>Salva as seções especificadas do descritor de segurança associado a esta <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto no armazenamento permanente. É recomendável que os valores da <paramref name="includeSections" /> parâmetros passados para o construtor e manter os métodos ser idênticos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a persistência de um <xref:System.Security.AccessControl.NativeObjectSecurity> do objeto, se o valor da `includeSections` parâmetro passado para o <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método não é idêntico ao valor da `includeSections` parâmetro passado para o construtor usado para criar esse <xref:System.Security.AccessControl.NativeObjectSecurity> objeto, seções de persistente <xref:System.Security.AccessControl.NativeObjectSecurity> objeto pode conter valores imprevisíveis. Por exemplo, se um construtor for chamado com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.Access>e posteriormente um <xref:System.Security.AccessControl.NativeObjectSecurity.Persist%2A> método é chamado no objeto com um `includeSections` valor de <xref:System.Security.AccessControl.AccessControlSections.All>, resultante persistentes <xref:System.Security.AccessControl.NativeObjectSecurity> objeto conterá valores imprevisíveis para suas regras de auditoria, o grupo e o proprietário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">O objeto protegível à qual essa <see cref="T:System.Security.AccessControl.NativeObjectSecurity" /> objeto está associado é um diretório ou um arquivo e diretório ou o arquivo não pôde ser encontrado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

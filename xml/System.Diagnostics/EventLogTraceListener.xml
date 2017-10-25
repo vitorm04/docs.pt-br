@@ -1,0 +1,487 @@
+<Type Name="EventLogTraceListener" FullName="System.Diagnostics.EventLogTraceListener">
+  <TypeSignature Language="C#" Value="public sealed class EventLogTraceListener : System.Diagnostics.TraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventLogTraceListener extends System.Diagnostics.TraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um ouvinte simples que direciona a saída do rastreamento ou da depuração para um <see cref="T:System.Diagnostics.EventLog" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância deste <xref:System.Diagnostics.EventLogTraceListener> podem ser adicionados para o <xref:System.Diagnostics.Debug.Listeners%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, ou <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> coleções para enviar a saída do rastreamento ou a depuração para um <xref:System.Diagnostics.EventLog>. Você pode adicionar a instância em seu código ou especificá-lo no arquivo de configuração do aplicativo. Para adicionar um <xref:System.Diagnostics.EventLogTraceListener> usando um arquivo de configuração do aplicativo, edite o arquivo que corresponde ao nome do seu aplicativo ou o arquivo App. config em um [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] projeto. Nesse arquivo, insira um elemento para uma <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> tipo.  
+  
+ O exemplo a seguir adiciona uma <xref:System.Diagnostics.EventLogTraceListener> objeto chamado `myListener` para o <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> coleção. O `initializeData` parâmetro especifica o nome da origem do log de eventos que deve ser passado para o <xref:System.Diagnostics.EventLogTraceListener.%23ctor%28System.String%29> construtor.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="myListener"  
+          type="System.Diagnostics.EventLogTraceListener"  
+          initializeData="TraceListenerLog" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Para obter mais informações sobre como adicionar ouvintes de rastreamento no arquivo de configuração do aplicativo, consulte ou.  
+  
+> [!NOTE]
+>  Se o <xref:System.Diagnostics.EventLog.Source%2A> para o log de eventos que está associado com o <xref:System.Diagnostics.EventLogTraceListener> instância não existir, uma nova fonte de evento é criada. Para criar uma fonte de evento no Windows Vista, Windows XP Professional ou Windows Server 2003, você deve ter privilégios administrativos.  
+>   
+>  O motivo disso é que todos os logs de eventos, incluindo segurança, devem ser pesquisados para determinar se a origem do evento é exclusiva. No Windows Vista, os usuários não têm permissão para acessar o log de segurança; Portanto, um <xref:System.Security.SecurityException> é gerada.  
+>   
+>  No Windows Vista, o controle de conta de usuário (UAC) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa o log de segurança, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+ A classe fornece a <xref:System.Diagnostics.EventLogTraceListener.EventLog%2A> propriedade para obter ou definir o log de eventos que recebe o rastreamento ou depuração da saída, e o <xref:System.Diagnostics.EventLogTraceListener.Name%2A> propriedade para armazenar o nome do <xref:System.Diagnostics.EventLogTraceListener>.  
+  
+ O <xref:System.Diagnostics.EventLogTraceListener.Close%2A> método fecha o log de eventos para que ele não recebe do rastreamento ou a saída de depuração. O <xref:System.Diagnostics.EventLogTraceListener.Write%2A> e <xref:System.Diagnostics.EventLogTraceListener.WriteLine%2A> métodos gravar uma mensagem no log de eventos.  
+  
+> [!NOTE]
+>  Para evitar a possibilidade de gravar grandes quantidades de dados para o log de eventos, o <xref:System.Diagnostics.EventLogTraceListener> de saída não os dados de rastreamento opcionais especificados pelo <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um ouvinte de rastreamento que envia saída para um log de eventos. Primeiro, o código cria um novo <xref:System.Diagnostics.EventLogTraceListener> que usa a fonte `myEventLogSource`. Em seguida, `myTraceListener` é adicionada para o <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> coleção. Por fim, o exemplo envia uma linha de saída para o <xref:System.Diagnostics.Trace.Listeners%2A> objeto.  
+  
+ [!code-cpp[Classic EventLogTraceListener Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic EventLogTraceListener Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic EventLogTraceListener Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic EventLogTraceListener Example/CS/source.cs#1)]
+ [!code-vb[Classic EventLogTraceListener Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic EventLogTraceListener Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogTraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.EventLogTraceListener" /> classe sem um ouvinte de rastreamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogTraceListener (System.Diagnostics.EventLog eventLog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.EventLog eventLog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.#ctor(System.Diagnostics.EventLog)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventLog" Type="System.Diagnostics.EventLog" />
+      </Parameters>
+      <Docs>
+        <param name="eventLog">O log de eventos para gravar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.EventLogTraceListener" /> classe usando o log de eventos especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogTraceListener (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">O nome da origem de um log de eventos existente.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.EventLogTraceListener" /> usando a origem especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o log de eventos para que ele não recebe a saída de rastreamento ou de depuração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventLog">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.EventLog EventLog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.EventLog EventLog" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogTraceListener.EventLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLog</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o log de eventos para gravar.</summary>
+        <value>O log de eventos para gravar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogTraceListener.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome deste <see cref="T:System.Diagnostics.EventLogTraceListener" />.</summary>
+        <value>O nome do ouvinte de rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade padroniza como o nome de origem do log de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto que contém o atual ID do processo, ID do thread e informações de rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída; Normalmente, o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">To be added.</param>
+        <param name="id">Um identificador numérico do evento. A combinação de <c>fonte</c> e <c>id</c> identifica exclusivamente um evento.</param>
+        <param name="data">Um objeto de dados para gravar no arquivo de saída ou o fluxo.</param>
+        <summary>Grava informações de rastreamento, um objeto de dados e informações de evento para o log de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Diagnostics.EventLogTraceListener.TraceData%2A> métodos não se destinam a ser chamado pelo código do aplicativo. Eles são chamados pelos métodos do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes de dados de rastreamento de saída.  
+  
+ O <xref:System.Diagnostics.EventLogTraceListener.TraceData%2A> método, como o <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> método destina-se ferramentas automatizadas, mas também permite que a anexação de objetos adicionais, por exemplo uma instância de exceção, o rastreamento.  
+  
+ O `eventCache` e `source` parâmetros são usados para determinar se o evento deve ser rastreado. `id`é usado para criar um <xref:System.Diagnostics.EventInstance> objeto e o <xref:System.Diagnostics.TraceEventType> equivale a um <xref:System.Diagnostics.EventLogEntryType> para o <xref:System.Diagnostics.EventInstance.EntryType%2A> propriedade. O <xref:System.Diagnostics.EventInstance> é gravada no log de evento com o `data` object, formatada como uma cadeia de caracteres usando o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método.  
+  
+> [!NOTE]
+>  O valor máximo de `id` parâmetro é de 65.535. Se o `id` valor especificado é maior que 65.535, o valor máximo é usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="source" /> não está especificado.  
+  
+ -ou-  
+  
+ A cadeia de caracteres de entrada de log excede 32.766 caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto que contém o atual ID do processo, ID do thread e informações de rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída; Normalmente, o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">To be added.</param>
+        <param name="id">Um identificador numérico do evento. A combinação de <c>fonte</c> e <c>id</c> identifica exclusivamente um evento.</param>
+        <param name="data">Uma matriz de objetos de dados.</param>
+        <summary>Grava informações de rastreamento, uma matriz de objetos de dados e informações de evento para o log de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Diagnostics.EventLogTraceListener.TraceData%2A> métodos não se destinam a ser chamado pelo código do aplicativo. Eles são chamados pelos métodos do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes de dados de rastreamento de saída.  
+  
+ O <xref:System.Diagnostics.EventLogTraceListener.TraceData%2A> método, como o <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> método destina-se ferramentas automatizadas, mas também permite que a anexação de objetos adicionais, por exemplo uma instância de exceção, o rastreamento.  
+  
+ O `severity` e `id` dados do parâmetro são usados para criar um <xref:System.Diagnostics.EventInstance> objeto, que é gravado no log de eventos com os dados da matriz de objetos de dados.  
+  
+ O `eventCache` e `source` parâmetros são usados para determinar se o evento deve ser rastreado. `id`é usado para criar um <xref:System.Diagnostics.EventInstance> objeto e o <xref:System.Diagnostics.TraceEventType> equivale a um <xref:System.Diagnostics.EventLogEntryType> para o <xref:System.Diagnostics.EventInstance.EntryType%2A> propriedade. O <xref:System.Diagnostics.EventInstance> é gravada no log de evento com o `data` matriz object, formatada como uma matriz de cadeia de caracteres, usando o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método.  
+  
+> [!NOTE]
+>  O valor máximo de `id` parâmetro é de 65.535. Se o `id` valor especificado é maior que 65.535, o valor máximo é usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="source" /> não está especificado.  
+  
+ -ou-  
+  
+ A cadeia de caracteres de entrada de log excede 32.766 caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto que contém o atual ID do processo, ID do thread e informações de rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída; Normalmente, o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">To be added.</param>
+        <param name="id">Um identificador numérico do evento. A combinação de <c>fonte</c> e <c>id</c> identifica exclusivamente um evento.</param>
+        <param name="message">A mensagem de rastreamento.</param>
+        <summary>Grava informações de evento para o log de eventos, uma mensagem e informações de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> métodos não se destinam a ser chamado pelo código do aplicativo. Esses métodos são chamados pelos métodos do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes para gravar dados de rastreamento.  
+  
+ O <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> método destina-se para eventos de rastreamento que podem ser processados automaticamente por ferramentas. Por exemplo uma ferramenta de monitoramento pode notificar um administrador, se um evento específico é rastreado por uma fonte específica.  
+  
+ O `eventCache` e `source` parâmetros são usados para determinar se o evento deve ser rastreado. `id`é usado para criar um <xref:System.Diagnostics.EventInstance> objeto e o <xref:System.Diagnostics.TraceEventType> equivale a um <xref:System.Diagnostics.EventLogEntryType> para o <xref:System.Diagnostics.EventInstance.EntryType%2A> propriedade. O <xref:System.Diagnostics.EventInstance> é gravada no log de evento com o `message` dados usando o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método.  
+  
+> [!NOTE]
+>  O valor máximo de `id` parâmetro é de 65.535. Se o `id` valor especificado é maior que 65.535, o valor máximo é usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="source" /> não está especificado.  
+  
+ -ou-  
+  
+ A cadeia de caracteres de entrada de log excede 32.766 caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto que contém o atual ID do processo, ID do thread e informações de rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída; Normalmente, o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">To be added.</param>
+        <param name="id">Um identificador numérico do evento. A combinação de <c>fonte</c> e <c>id</c> identifica exclusivamente um evento.</param>
+        <param name="format">Uma cadeia de caracteres de formato que contém zero ou mais itens de formato que correspondem aos objetos de <c>args</c> matriz.</param>
+        <param name="args">Uma matriz <see langword="object" /> que contém zero ou mais objetos a serem formatados.</param>
+        <summary>Grava informações de rastreamento, uma matriz formatada de objetos e informações de evento para o log de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> métodos não se destinam a ser chamado pelo código do aplicativo. Esses métodos são chamados pelos métodos do <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, e <xref:System.Diagnostics.TraceSource> classes para gravar dados de rastreamento.  
+  
+ O <xref:System.Diagnostics.EventLogTraceListener.TraceEvent%2A> método destina-se para eventos de rastreamento que podem ser processados automaticamente por ferramentas. Por exemplo uma ferramenta de monitoramento pode notificar um administrador, se um evento específico é rastreado por uma fonte específica.  
+  
+ O `eventCache` e `source` parâmetros são usados para determinar se o evento deve ser rastreado. `id`é usado para criar um <xref:System.Diagnostics.EventInstance> objeto e o <xref:System.Diagnostics.TraceEventType> equivale a um <xref:System.Diagnostics.EventLogEntryType> para o <xref:System.Diagnostics.EventInstance.EntryType%2A> propriedade. O <xref:System.Diagnostics.EventInstance> é gravada no log de eventos usando o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método, com a mensagem obtido o `format` e `args` parâmetros. O `args` matriz de objeto é convertido em uma cadeia de caracteres usando o <xref:System.String.Format%2A> método, passando o `format` cadeia de caracteres e `args` matriz para a cadeia de caracteres de formato da mensagem para o log de eventos.  
+  
+> [!NOTE]
+>  O valor máximo de `id` parâmetro é de 65.535. Se o `id` valor especificado é maior que 65.535, o valor máximo é usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="source" /> não está especificado.  
+  
+ -ou-  
+  
+ A cadeia de caracteres de entrada de log excede 32.766 caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser gravada.</param>
+        <summary>Grava uma mensagem no log de eventos para essa instância.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="message" />excede 32.766 caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogTraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser gravada.</param>
+        <summary>Grava uma mensagem no log de eventos para essa instância.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="message" />excede 32.766 caracteres.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

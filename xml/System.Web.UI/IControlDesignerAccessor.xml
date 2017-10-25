@@ -1,0 +1,132 @@
+<Type Name="IControlDesignerAccessor" FullName="System.Web.UI.IControlDesignerAccessor">
+  <TypeSignature Language="C#" Value="public interface IControlDesignerAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IControlDesignerAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IControlDesignerAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso a um designer de controle para armazenar dados temporários de tempo de design associados ao controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade e métodos definidos no <xref:System.Web.UI.IControlDesignerAccessor> interface oferecem uma maneira conveniente para o designer de controle acessar um controle para passar e recuperar os dados temporários de tempo de design. A interface é implementada pelo <xref:System.Web.UI.Control> classe. Designers de controle usam a implementação dessa interface para o controle de acesso.  
+  
+ Dados temporários de tempo de design não é persistente com o próprio controle. Para persistir os dados de tempo de design para um controle, você deve recuperar o conteúdo de <xref:System.Web.UI.IControlDesignerAccessor.UserData%2A> propriedade e armazená-las em um local específico do designer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetDesignModeState">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary GetDesignModeState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionary GetDesignModeState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IControlDesignerAccessor.GetDesignModeState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada, obtém o estado do controle durante o uso na superfície de design.</summary>
+        <returns>Um <see cref="T:System.Collections.IDictionary" /> do estado do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado apenas pelos designers de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesignModeState">
+      <MemberSignature Language="C#" Value="public void SetDesignModeState (System.Collections.IDictionary data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDesignModeState(class System.Collections.IDictionary data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IControlDesignerAccessor.SetDesignModeState(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="data">O <see cref="T:System.Collections.IDictionary" /> que contém o estado do controle.</param>
+        <summary>Quando implementada, define o estado de controle antes de renderizá-lo na superfície de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em controles substituídos, esse método é usado para manter e definir o estado do controle durante o modo de tempo de design. Esse método é usado apenas pelos designers de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOwnerControl">
+      <MemberSignature Language="C#" Value="public void SetOwnerControl (System.Web.UI.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOwnerControl(class System.Web.UI.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IControlDesignerAccessor.SetOwnerControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O controle para atuar como proprietário.</param>
+        <summary>Quando implementada, especifica o controle que atua como o proprietário para o controle de implementação deste método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um cenário de recipiente composto onde um controle contém outro controle, o contêiner é o proprietário do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IControlDesignerAccessor.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado, obtém uma coleção de informações que podem ser acessadas por um designer de controle.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> que contém informações sobre o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades e o conteúdo de um controle podem ser persistentes, para que o controle mantém o estado no ambiente de tempo de design. Esta propriedade é usada somente por designers de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

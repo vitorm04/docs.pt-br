@@ -1,0 +1,94 @@
+<Type Name="DeviceFontSubstitution" FullName="System.Printing.DeviceFontSubstitution">
+  <TypeSignature Language="C#" Value="public enum DeviceFontSubstitution" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeviceFontSubstitution extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.DeviceFontSubstitution" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se a substituição de fontes do dispositivo está habilitada em uma impressora.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A impressão é mais rápido quando somente o texto, e não a fonte é enviado para a impressora. Algumas impressoras têm fontes que são armazenadas permanentemente na sua memória. Essas impressoras permitem que os usuários substituir uma fonte residentes da impressora para cada fonte que é usado pelo aplicativo de impressão.  
+  
+ Os valores desse tipo são usados principalmente para esses fins:  
+  
+-   Como membros do <xref:System.Printing.PrintCapabilities.DeviceFontSubstitutionCapability%2A> coleção, uma propriedade de <xref:System.Printing.PrintCapabilities>, eles representam os recursos da impressora.  
+  
+-   Como o valor da <xref:System.Printing.PrintTicket.DeviceFontSubstitution%2A> propriedade de um <xref:System.Printing.PrintTicket>, eles instruem a impressora para habilitar ou desabilitar substituição de fontes de dispositivo para o trabalho de impressão.  
+  
+ O valor Unknown nunca é usado nas propriedades de <xref:System.Printing.PrintCapabilities> objetos.  
+  
+ Você nunca deve definir um <xref:System.Printing.PrintTicket> propriedade desconhecida. Se algum outro <xref:System.Printing.PrintTicket> produzir aplicativo tiver criado um documento PrintTicket que define o recurso de substituição de fontes de dispositivo como uma opção não reconhecida (ou seja, uma opção que não está definida no [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397)), uma <xref:System.Printing.PrintTicket> objeto em um aplicativo que é construído com esse documento terá desconhecido como o valor da <xref:System.Printing.PrintTicket.DeviceFontSubstitution%2A> propriedade.  
+  
+ Embora o <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintCapabilities> classes não podem ser herdadas, você pode estender o [imprimir esquema](http://go.microsoft.com/fwlink/?LinkId=186397) para reconhecer os recursos de dispositivo de impressão que não são tratados do <xref:System.Printing.PrintTicket.DeviceFontSubstitution%2A> ou <xref:System.Printing.PrintCapabilities> classes. Para obter mais informações, consulte [NOTINBUILD: como: estender o esquema de impressão e criar novas Classes de sistema de impressão](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como determinar os recursos de impressora e configurar o trabalho de impressão para tirar proveito deles.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Off">
+      <MemberSignature Language="C#" Value="Off" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.DeviceFontSubstitution Off = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.DeviceFontSubstitution.Off" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.DeviceFontSubstitution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substituição de fontes do dispositivo está desabilitada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="On">
+      <MemberSignature Language="C#" Value="On" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.DeviceFontSubstitution On = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.DeviceFontSubstitution.On" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.DeviceFontSubstitution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substituição de fontes do dispositivo está habilitada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.DeviceFontSubstitution Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.DeviceFontSubstitution.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.DeviceFontSubstitution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O recurso (cujas opções são representadas por esta enumeração) é definido como uma opção não definida no [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

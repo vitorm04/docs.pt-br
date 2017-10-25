@@ -1,0 +1,52 @@
+<Type Name="ResolveEventHandler" FullName="System.ResolveEventHandler">
+  <TypeSignature Language="C#" Value="public delegate System.Reflection.Assembly ResolveEventHandler(object sender, ResolveEventArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ResolveEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ResolveEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="args" Type="System.ResolveEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Reflection.Assembly</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="args">Os dados do evento.</param>
+    <summary>Representa um método que manipula o evento <see cref="E:System.AppDomain.TypeResolve" />, <see cref="E:System.AppDomain.ResourceResolve" /> ou <see cref="E:System.AppDomain.AssemblyResolve" /> de um <see cref="T:System.AppDomain" />.</summary>
+    <returns>O assembly que resolve o tipo, assembly ou recurso; ou <see langword="null" /> se o assembly não puder ser resolvido.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o carregador de classe de tempo de execução não pode resolver uma referência a um assembly, tipo ou recurso, os eventos correspondentes são gerados para dar o retorno de chamada a oportunidade para informar o tempo de execução qual assembly do assembly referenciado, tipo ou recurso está em. É responsabilidade do <xref:System.ResolveEventHandler> para retornar o assembly que resolve o tipo, assembly ou recurso, ou para retornar null se o assembly não é reconhecido. Para obter mais informações, consulte [Resolvendo carregamentos de Assembly](~/docs/framework/app-domains/resolve-assembly-loads.md) e <xref:System.AppDomain.ResourceResolve?displayProperty=nameWithType>, <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>, e <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> eventos.  
+  
+> [!IMPORTANT]
+>  Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o <xref:System.ResolveEventHandler?displayProperty=nameWithType> é gerado para todos os assemblies, incluindo módulos de recursos. Em versões anteriores, o evento não foi gerado para módulos de recursos. Se o sistema operacional está localizado, o manipulador pode ser chamado várias vezes: uma vez para cada cultura na cadeia de fallback.  
+  
+ Cada classe derivada de <xref:System.Delegate> e <xref:System.MulticastDelegate> tem um construtor e um `Invoke` método. Consulte o exemplo de código C++ na descrição de <xref:System.Delegate> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

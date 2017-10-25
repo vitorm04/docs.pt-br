@@ -1,0 +1,494 @@
+<Type Name="NetworkInformationPermission" FullName="System.Net.NetworkInformation.NetworkInformationPermission">
+  <TypeSignature Language="C#" Value="public sealed class NetworkInformationPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit NetworkInformationPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.NetworkInformationPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Controla o acesso às informações de rede e às estatísticas de tráfego do computador local. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa permissão é usada para proteger os dados retornados pelas classes de <xref:System.Net.NetworkInformation> namespace.  
+  
+ Para obter segurança declarativa, use o <xref:System.Net.NetworkInformation.NetworkInformationPermissionAttribute> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de permissão irrestrita.  
+  
+ [!code-cpp[NclNetworkInfoPerms#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#1)]
+ [!code-csharp[NclNetworkInfoPerms#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#1)]
+ [!code-vb[NclNetworkInfoPerms#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetworkInformationPermission (System.Net.NetworkInformation.NetworkInformationAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Net.NetworkInformation.NetworkInformationAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.#ctor(System.Net.NetworkInformation.NetworkInformationAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="access" Type="System.Net.NetworkInformation.NetworkInformationAccess" />
+      </Parameters>
+      <Docs>
+        <param name="access">Um dos valores de <see cref="T:System.Net.NetworkInformation.NetworkInformationAccess" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.NetworkInformationPermission" />, usando o valor <see cref="T:System.Net.NetworkInformation.NetworkInformationAccess" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão criada por este construtor pode ser usada para proteger o acesso a informações de rede.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de permissão que controla o acesso às informações de rede.  
+  
+ [!code-cpp[NclNetworkInfoPerms#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#3)]
+ [!code-csharp[NclNetworkInfoPerms#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#3)]
+ [!code-vb[NclNetworkInfoPerms#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetworkInformationPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um dos valores de <see cref="T:System.Security.Permissions.PermissionState" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.NetworkInformationPermission" /> com o <see cref="T:System.Security.Permissions.PermissionState" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão criada por este construtor pode ser usada para proteger o acesso a informações de rede.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de permissão irrestrita.  
+  
+ [!code-cpp[NclNetworkInfoPerms#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#1)]
+ [!code-csharp[NclNetworkInfoPerms#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#1)]
+ [!code-vb[NclNetworkInfoPerms#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Access">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.NetworkInformationAccess Access { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.NetworkInformation.NetworkInformationAccess Access" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.NetworkInformationPermission.Access" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetworkInformationAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nível de acesso a informações de rede controladas por essa permissão.</summary>
+        <value>Um dos valores de <see cref="T:System.Net.NetworkInformation.NetworkInformationAccess" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Net.NetworkInformation.NetworkInformationPermission> criado com <xref:System.Security.Permissions.PermissionState?displayProperty=nameWithType> recebe <xref:System.Net.NetworkInformation.NetworkInformationAccess.Ping> &#124; <xref:System.Net.NetworkInformation.NetworkInformationAccess.Read> acesso. Um <xref:System.Net.NetworkInformation.NetworkInformationPermission> criado com <xref:System.Security.Permissions.PermissionState?displayProperty=nameWithType> recebe <xref:System.Net.NetworkInformation.NetworkInformationAccess.None> acesso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Net.NetworkInformation.NetworkInformationPermission>, adiciona um <xref:System.Net.NetworkInformation.NetworkInformationAccess> valor a ele e exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NclNetworkInfoPerms#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#7)]
+ [!code-csharp[NclNetworkInfoPerms#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#7)]
+ [!code-vb[NclNetworkInfoPerms#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPermission">
+      <MemberSignature Language="C#" Value="public void AddPermission (System.Net.NetworkInformation.NetworkInformationAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPermission(valuetype System.Net.NetworkInformation.NetworkInformationAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.AddPermission(System.Net.NetworkInformation.NetworkInformationAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Net.NetworkInformation.NetworkInformationAccess" />
+      </Parameters>
+      <Docs>
+        <param name="access">Um dos valores de <see cref="T:System.Net.NetworkInformation.NetworkInformationAccess" />.</param>
+        <summary>Adiciona o valor especificado para essa permissão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para modificar o acesso às informações de rede, adicionando ao estado da permissão atual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de permissão vazio e, em seguida, adiciona a ele.  
+  
+ [!code-cpp[NclNetworkInfoPerms#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#7)]
+ [!code-csharp[NclNetworkInfoPerms#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#7)]
+ [!code-vb[NclNetworkInfoPerms#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia idêntica dessa permissão.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.NetworkInformationPermission" /> que é idêntica à permissão atual</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia de uma permissão representa o mesmo acesso a recursos como a permissão original.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma cópia de um objeto de permissão.  
+  
+ [!code-cpp[NclNetworkInfoPerms#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#4)]
+ [!code-csharp[NclNetworkInfoPerms#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#4)]
+ [!code-vb[NclNetworkInfoPerms#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement securityElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement securityElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="securityElement">Um <see cref="T:System.Security.SecurityElement" /> que contém o XML de codificação a ser usada para definir o estado da permissão atual</param>
+        <summary>Define o estado dessa permissão usando a codificação de XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado pelo sistema de segurança e normalmente não é chamado pelo código do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityElement" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="securityElement" />não é uma permissão de codificação.  
+  
+ -ou-  
+  
+ <paramref name="securityElement" />não tem uma codificação de um <see cref="T:System.Net.NetworkInformation.NetworkInformationPermission" />.  
+  
+ -ou-  
+  
+ <paramref name="securityElement" />tem inválido <see cref="T:System.Net.NetworkInformation.NetworkInformationAccess" /> valores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Um <see cref="T:System.Security.IPermission" /> a interseção com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria e retorna uma permissão que é a interseção de permissão atual e da permissão especificada.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.NetworkInformationPermission" /> que representa a interseção de permissão atual e a permissão especificada. Essa nova permissão é <see langword="null" /> se a interseção está vazia ou <paramref name="target" /> é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A interseção de duas permissões é uma permissão que descreve o estado de que ambas descrevem em comum. Somente uma demanda que passa as permissões originais passará a interseção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de permissão que é a interseção de objetos de permissão existente.  
+  
+ [!code-cpp[NclNetworkInfoPerms#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#6)]
+ [!code-csharp[NclNetworkInfoPerms#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#6)]
+ [!code-vb[NclNetworkInfoPerms#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" /> não é um <see cref="T:System.Net.NetworkInformation.NetworkInformationPermission" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Um <see cref="T:System.Security.IPermission" /> que será testado para a relação de subconjunto. Essa permissão deve ser o mesmo tipo da permissão atual</param>
+        <summary>Determina se a permissão atual é um subconjunto de permissão especificada.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é um subconjunto da permissão especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão atual é um subconjunto de permissão especificada se a permissão atual especifica um estado totalmente contido pelo conjunto de permissões especificado. Se esse método retornar true, a permissão atual não representa nenhum mais acesso ao recurso protegido que a permissão especificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe a relação entre duas permissões de subconjunto.  
+  
+ [!code-cpp[NclNetworkInfoPerms#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#5)]
+ [!code-csharp[NclNetworkInfoPerms#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#5)]
+ [!code-vb[NclNetworkInfoPerms#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se a permissão atual é irrestrita.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é irrestrita; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma permissão irrestrita é criada usando o <xref:System.Net.NetworkInformation.NetworkInformationPermission.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de permissão e exibe seu estado.  
+  
+ [!code-cpp[NclNetworkInfoPerms#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#2)]
+ [!code-csharp[NclNetworkInfoPerms#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#2)]
+ [!code-vb[NclNetworkInfoPerms#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML do estado dessa permissão.</summary>
+        <returns>Um <see cref="T:System.Security.SecurityElement" /> que contém a codificação XML da permissão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado pelo sistema de segurança e normalmente não é chamado pelo código do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.NetworkInformationPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Um <see cref="T:System.Net.NetworkInformation.NetworkInformationPermission" /> permissão para combinar com a permissão atual.</param>
+        <summary>Cria uma permissão que é a união dessa permissão e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a união de permissão atual e a permissão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.NetworkInformationPermission.Union%2A> método retorna uma permissão que representa todos os estados representados pela permissão atual e a permissão especificada. Qualquer solicitação que passa a ter a permissão passa seu union.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um objeto de permissão que é a união de objetos de permissão existente.  
+  
+ [!code-cpp[NclNetworkInfoPerms#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNetworkInfoPerms/CPP/NclNetworkInfoPerms.cpp#5)]
+ [!code-csharp[NclNetworkInfoPerms#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNetworkInfoPerms/CS/permissionexample.cs#5)]
+ [!code-vb[NclNetworkInfoPerms#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclNetworkInfoPerms/VB/permissionexample.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

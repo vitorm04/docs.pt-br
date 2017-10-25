@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Linq.SqlClient">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Linq.SqlClient" /> namespace contém classes de provedor para se comunicar com o SQL Server e classes que contêm métodos de auxiliares de consulta.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

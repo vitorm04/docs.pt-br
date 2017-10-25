@@ -1,0 +1,745 @@
+<Type Name="XPathExpression" FullName="System.Xml.XPath.XPathExpression">
+  <TypeSignature Language="C#" Value="public abstract class XPathExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XPathExpression extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XPath.XPathExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XPath</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe de tipo que representa uma expressão XPath compilada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é retornada como o resultado da <xref:System.Xml.XPath.XPathNavigator.Compile%2A> método o <xref:System.Xml.XPath.XPathNavigator> classe. É um parâmetro para o <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>, <xref:System.Xml.XPath.XPathNavigator.Matches%2A>, <xref:System.Xml.XPath.XPathNavigator.Select%2A>, e <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> métodos de <xref:System.Xml.XPath.XPathNavigator> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o tipo de retorno do XPath para determinar como processar a expressão XPath.  
+  
+ [!code-cpp[XPathExpression.ReturnType#1](~/samples/snippets/cpp/VS_Snippets_Data/XPathExpression.ReturnType/CPP/returntype.cpp#1)]
+ [!code-csharp[XPathExpression.ReturnType#1](~/samples/snippets/csharp/VS_Snippets_Data/XPathExpression.ReturnType/CS/returntype.cs#1)]
+ [!code-vb[XPathExpression.ReturnType#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathExpression.ReturnType/VB/returntype.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+```xml  
+  
+<?xml version="1.0" encoding="utf-8" ?>  
+<bookstore xmlns="http://www.contoso.com/books">  
+    <book genre="autobiography" publicationdate="1981-03-22" ISBN="1-861003-11-0">  
+        <title>The Autobiography of Benjamin Franklin</title>  
+        <author>  
+            <first-name>Benjamin</first-name>  
+            <last-name>Franklin</last-name>  
+        </author>  
+        <price>8.99</price>  
+    </book>  
+    <book genre="novel" publicationdate="1967-11-17" ISBN="0-201-63361-2">  
+        <title>The Confidence Man</title>  
+        <author>  
+            <first-name>Herman</first-name>  
+            <last-name>Melville</last-name>  
+        </author>  
+        <price>11.99</price>  
+    </book>  
+    <book genre="philosophy" publicationdate="1991-02-15" ISBN="1-861001-57-6">  
+        <title>The Gorgias</title>  
+        <author>  
+            <name>Plato</name>  
+        </author>  
+        <price>9.99</price>  
+    </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você herda o <see cref="T:System.Xml.XPath.XPathExpression" /> classe, você deve substituir os seguintes membros:  
+  
+-   <see cref="M:System.Xml.XPath.XPathExpression.AddSort(System.Object,System.Collections.IComparer)" /><see cref="M:System.Xml.XPath.XPathExpression.AddSort(System.Object,System.Xml.XPath.XmlSortOrder,System.Xml.XPath.XmlCaseOrder,System.String,System.Xml.XPath.XmlDataType)" />  
+  
+-   <see cref="M:System.Xml.XPath.XPathExpression.Clone" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathExpression.Expression" />  
+  
+-   <see cref="P:System.Xml.XPath.XPathExpression.ReturnType" />  
+  
+-   <see cref="M:System.Xml.XPath.XPathExpression.SetContext(System.Xml.IXmlNamespaceResolver)" />  
+  
+-   <see cref="M:System.Xml.XPath.XPathExpression.SetContext(System.Xml.XmlNamespaceManager)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="AddSort">
+      <MemberSignature Language="C#" Value="public abstract void AddSort (object expr, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddSort(object expr, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathExpression.AddSort(System.Object,System.Collections.IComparer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expr" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="expr">Um objeto que representa a chave de classificação. Isso pode ser o <see langword="string" /> valor do nó ou um <see cref="T:System.Xml.XPath.XPathExpression" /> objeto com uma expressão XPath compilado.</param>
+        <param name="comparer">Um <see cref="T:System.Collections.IComparer" /> objeto que fornece as comparações de tipo de dados específico para comparar dois objetos para equivalência.</param>
+        <summary>Quando substituído em uma classe derivada, classifica os nós selecionados pela expressão XPath acordo com especificado <see cref="T:System.Collections.IComparer" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XPath.XPathExpression.AddSort%2A> método permite aos usuários classificar objetos por tipo de dados em vez de cadeia de caracteres ou número. O <xref:System.Collections.IComparer> objeto fornece uma implementação do <xref:System.Collections.IComparer.Compare%2A> método que dá suporte à classificação em classes definidas pelo usuário.  
+  
+ No exemplo a seguir, os registros são classificados pelo número ISBN, onde `isbn` é um objeto que implementa o <xref:System.Collections.IComparer> interface.  
+  
+```vb  
+Dim expression As XPathExpression = navigator.Compile("bookstore/book")  
+Dim isbn As ISBN = New ISBN()  
+expression.AddSort("@ISBN", (IComparer)isbn)  
+```  
+  
+```csharp  
+XPathExpression expression = navigator.Compile("bookstore/book");  
+ISBN isbn = new ISBN();  
+expression.AddSort("@ISBN", (IComparer)isbn);  
+```  
+  
+ Eis as observações importantes a considerar ao usar o <xref:System.Xml.XPath.XPathExpression.AddSort%2A> método.  
+  
+-   A ordem na qual as classificações são adicionadas fornece a classificação ordem de chave.  
+  
+-   Se o <xref:System.Xml.XPath.XPathExpression> ou a chave de classificação requer que a resolução de namespace, você deve usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método para fornecer um <xref:System.Xml.XmlNamespaceManager> para resolução de namespace.  
+  
+-   Se o <xref:System.Xml.XPath.XPathExpression> não inclui um prefixo, presume-se que o identificador de recurso uniforme (URI) do namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deve usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método e fornecer um <xref:System.Xml.XmlNamespaceManager> que contém um prefixo e namespace URI para lidar com o namespace padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XPath.XPathException">O <see cref="T:System.Xml.XPath.XPathExpression" /> ou a chave de classificação inclui um prefixo e um <see cref="T:System.Xml.XmlNamespaceManager" /> não é fornecido ou o prefixo não pode ser encontrado no <see cref="T:System.Xml.XmlNamespaceManager" /> fornecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSort">
+      <MemberSignature Language="C#" Value="public abstract void AddSort (object expr, System.Xml.XPath.XmlSortOrder order, System.Xml.XPath.XmlCaseOrder caseOrder, string lang, System.Xml.XPath.XmlDataType dataType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddSort(object expr, valuetype System.Xml.XPath.XmlSortOrder order, valuetype System.Xml.XPath.XmlCaseOrder caseOrder, string lang, valuetype System.Xml.XPath.XmlDataType dataType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathExpression.AddSort(System.Object,System.Xml.XPath.XmlSortOrder,System.Xml.XPath.XmlCaseOrder,System.String,System.Xml.XPath.XmlDataType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expr" Type="System.Object" />
+        <Parameter Name="order" Type="System.Xml.XPath.XmlSortOrder" />
+        <Parameter Name="caseOrder" Type="System.Xml.XPath.XmlCaseOrder" />
+        <Parameter Name="lang" Type="System.String" />
+        <Parameter Name="dataType" Type="System.Xml.XPath.XmlDataType" />
+      </Parameters>
+      <Docs>
+        <param name="expr">Um objeto que representa a chave de classificação. Isso pode ser o <see langword="string" /> valor do nó ou um <see cref="T:System.Xml.XPath.XPathExpression" /> objeto com uma expressão XPath compilado.</param>
+        <param name="order">Um <see cref="T:System.Xml.XPath.XmlSortOrder" /> valor que indica a ordem de classificação.</param>
+        <param name="caseOrder">Um <see cref="T:System.Xml.XPath.XmlCaseOrder" /> valor que indica como classificar letras maiusculas e minúsculas.</param>
+        <param name="lang">O idioma a ser usado para comparação. Usa a classe <see cref="T:System.Globalization.CultureInfo" /> que pode ser passada para o método <see cref="Overload:System.String.Compare" /> para os tipos de idioma, por exemplo, “us-en” para inglês dos EUA. Se uma cadeia de caracteres vazia for especificada, o ambiente do sistema será usado para determinar a <see cref="T:System.Globalization.CultureInfo" />.</param>
+        <param name="dataType">Um <see cref="T:System.Xml.XPath.XmlDataType" /> valor que indica a ordem de classificação para o tipo de dados.</param>
+        <summary>Quando substituído em uma classe derivada, classifica os nós selecionados pela expressão XPath de acordo com os parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   A ordem na qual as classificações são adicionadas fornece a classificação ordem de chave.  
+  
+-   Se o <xref:System.Xml.XPath.XPathExpression> ou a chave de classificação requer que a resolução de namespace, você deve usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método para fornecer um <xref:System.Xml.XmlNamespaceManager> para resolução de namespace.  
+  
+-   Se o <xref:System.Xml.XPath.XPathExpression> não inclui um prefixo, presume-se que o identificador de recurso uniforme (URI) do namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deve usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método e fornecer um <xref:System.Xml.XmlNamespaceManager> que contém um prefixo e namespace URI para lidar com o namespace padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como classificar o documento de livros por preço em ordem decrescente.  
+  
+ [!code-vb[XPathXMLExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathXMLExamples/vb/xpathexpression.addsort.vb#4)]  
+  
+ [!code-csharp[XPathXMLExamples#5](~/samples/snippets/csharp/VS_Snippets_Data/XPathXMLExamples/cs/xpathexpression.addsort.cs#5)]  
+  
+ O exemplo usa o arquivo `books.xml` como entrada.  
+  
+```xml  
+  
+<?xml version="1.0" encoding="utf-8" ?>   
+<bookstore>  
+    <book genre="autobiography" publicationdate="1981-03-22" ISBN="1-861003-11-0">  
+        <title>The Autobiography of Benjamin Franklin</title>  
+        <author>  
+            <first-name>Benjamin</first-name>  
+            <last-name>Franklin</last-name>  
+        </author>  
+        <price>8.99</price>  
+    </book>  
+    <book genre="novel" publicationdate="1967-11-17" ISBN="0-201-63361-2">  
+        <title>The Confidence Man</title>  
+        <author>  
+            <first-name>Herman</first-name>  
+            <last-name>Melville</last-name>  
+        </author>  
+        <price>11.99</price>  
+    </book>  
+    <book genre="philosophy" publicationdate="1991-02-15" ISBN="1-861001-57-6">  
+        <title>The Gorgias</title>  
+        <author>  
+            <name>Plato</name>  
+        </author>  
+        <price>9.99</price>  
+    </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XPath.XPathException">O <see cref="T:System.Xml.XPath.XPathExpression" /> ou a chave de classificação inclui um prefixo e um <see cref="T:System.Xml.XmlNamespaceManager" /> não é fornecido ou o prefixo não pode ser encontrado no <see cref="T:System.Xml.XmlNamespaceManager" /> fornecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathExpression Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathExpression Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathExpression.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathExpression</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna um clone deste <see cref="T:System.Xml.XPath.XPathExpression" />.</summary>
+        <returns>Um novo objeto <see cref="T:System.Xml.XPath.XPathExpression" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando substituído em uma classe derivada, o <xref:System.Xml.XPath.XPathExpression.Clone%2A> método retorna um clone desse <xref:System.Xml.XPath.XPathExpression> objeto com o mesmo estado que isso <xref:System.Xml.XPath.XPathExpression> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public static System.Xml.XPath.XPathExpression Compile (string xpath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XPath.XPathExpression Compile(string xpath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathExpression.Compile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xpath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xpath">Uma expressão XPath.</param>
+        <summary>Compila a expressão XPath especificada e retorna um objeto <see cref="T:System.Xml.XPath.XPathExpression" /> que representa a expressão XPath.</summary>
+        <returns>Um objeto <see cref="T:System.Xml.XPath.XPathExpression" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma expressão XPath é avaliada para produzir um dos seguintes tipos de resultado.  
+  
+-   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
+  
+-   <xref:System.Xml.XPath.XPathResultType.Boolean>  
+  
+-   <xref:System.Xml.XPath.XPathResultType.Number>  
+  
+-   <xref:System.Xml.XPath.XPathResultType.String>  
+  
+> [!NOTE]
+>  Se uma função definida pelo usuário com um número inválido de argumentos (ou uma função de definido pelo usuário não implementada) for especificada na expressão XPath, uma exceção ocorre somente em tempo de execução. Funções definidas pelo usuário não são verificadas no momento da compilação e exceções que resultam de funções definidas pelo usuário ocorrem apenas se a execução avalia a expressão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o tipo de retorno do XPath para determinar como processar a expressão XPath. O exemplo usa o <xref:System.Xml.XPath.XPathExpression.Compile%2A> método para retornar o novo <xref:System.Xml.XPath.XPathExpression> objetos.  
+  
+ [!code-cpp[XPathExpression.ReturnType#1](~/samples/snippets/cpp/VS_Snippets_Data/XPathExpression.ReturnType/CPP/returntype.cpp#1)]
+ [!code-csharp[XPathExpression.ReturnType#1](~/samples/snippets/csharp/VS_Snippets_Data/XPathExpression.ReturnType/CS/returntype.cs#1)]
+ [!code-vb[XPathExpression.ReturnType#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathExpression.ReturnType/VB/returntype.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+```xml  
+  
+<?xml version="1.0" encoding="utf-8" ?>  
+<bookstore xmlns="http://www.contoso.com/books">  
+    <book genre="autobiography" publicationdate="1981-03-22" ISBN="1-861003-11-0">  
+        <title>The Autobiography of Benjamin Franklin</title>  
+        <author>  
+            <first-name>Benjamin</first-name>  
+            <last-name>Franklin</last-name>  
+        </author>  
+        <price>8.99</price>  
+    </book>  
+    <book genre="novel" publicationdate="1967-11-17" ISBN="0-201-63361-2">  
+        <title>The Confidence Man</title>  
+        <author>  
+            <first-name>Herman</first-name>  
+            <last-name>Melville</last-name>  
+        </author>  
+        <price>11.99</price>  
+    </book>  
+    <book genre="philosophy" publicationdate="1991-02-15" ISBN="1-861001-57-6">  
+        <title>The Gorgias</title>  
+        <author>  
+            <name>Plato</name>  
+        </author>  
+        <price>9.99</price>  
+    </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro de expressão XPath não é uma expressão XPath válida.</exception>
+        <exception cref="T:System.Xml.XPath.XPathException">A expressão XPath não é válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public static System.Xml.XPath.XPathExpression Compile (string xpath, System.Xml.IXmlNamespaceResolver nsResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XPath.XPathExpression Compile(string xpath, class System.Xml.IXmlNamespaceResolver nsResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathExpression.Compile(System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xpath" Type="System.String" />
+        <Parameter Name="nsResolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="xpath">Uma expressão XPath.</param>
+        <param name="nsResolver">Um objeto que implementa o <see cref="T:System.Xml.IXmlNamespaceResolver" /> interface para a resolução de namespace.</param>
+        <summary>A expressão XPath especificada, é compilado com o <see cref="T:System.Xml.IXmlNamespaceResolver" /> o objeto especificado para resolução de namespace e retorna um <see cref="T:System.Xml.XPath.XPathExpression" /> objeto que representa a expressão XPath.</summary>
+        <returns>Um objeto <see cref="T:System.Xml.XPath.XPathExpression" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma expressão XPath é avaliada para produzir um dos seguintes tipos de resultado.  
+  
+-   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
+  
+-   <xref:System.Xml.XPath.XPathResultType.Boolean>  
+  
+-   <xref:System.Xml.XPath.XPathResultType.Number>  
+  
+-   <xref:System.Xml.XPath.XPathResultType.String>  
+  
+> [!NOTE]
+>  Se uma função definida pelo usuário com um número inválido de argumentos (ou uma função de definido pelo usuário não implementada) for especificada na expressão XPath, uma exceção ocorre somente em tempo de execução. Funções definidas pelo usuário não são verificadas no momento da compilação e exceções resultantes de funções definidas pelo usuário ocorrem apenas se a execução avalia a expressão.  
+  
+> [!NOTE]
+>  Não é possível compilar um <xref:System.Xml.XPath.XPathExpression> com um contexto personalizado em uma única etapa passando um <xref:System.Xml.Xsl.XsltContext>, que implementa <xref:System.Xml.IXmlNamespaceResolver>, como um argumento para esse método. Para usar um <xref:System.Xml.XPath.XPathExpression> com um contexto personalizado, você deve chamar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método depois de compilar a expressão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro de expressão XPath não é uma expressão XPath válida.</exception>
+        <exception cref="T:System.Xml.XPath.XPathException">A expressão XPath não é válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public abstract string Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathExpression.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um <see langword="string" /> representação do <see cref="T:System.Xml.XPath.XPathExpression" />.</summary>
+        <value>Um <see langword="string" /> representação do <see cref="T:System.Xml.XPath.XPathExpression" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathResultType ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XPath.XPathResultType ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathExpression.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathResultType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo de resultado da expressão XPath.</summary>
+        <value>Um <see cref="T:System.Xml.XPath.XPathResultType" /> valor que representa o tipo de resultado da expressão XPath.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o tipo de retorno do XPath para determinar como processar a expressão XPath.  
+  
+ [!code-cpp[XPathExpression.ReturnType#1](~/samples/snippets/cpp/VS_Snippets_Data/XPathExpression.ReturnType/CPP/returntype.cpp#1)]
+ [!code-csharp[XPathExpression.ReturnType#1](~/samples/snippets/csharp/VS_Snippets_Data/XPathExpression.ReturnType/CS/returntype.cs#1)]
+ [!code-vb[XPathExpression.ReturnType#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathExpression.ReturnType/VB/returntype.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+```xml  
+  
+<?xml version="1.0" encoding="utf-8" ?>  
+<bookstore xmlns="http://www.contoso.com/books">  
+    <book genre="autobiography" publicationdate="1981-03-22" ISBN="1-861003-11-0">  
+        <title>The Autobiography of Benjamin Franklin</title>  
+        <author>  
+            <first-name>Benjamin</first-name>  
+            <last-name>Franklin</last-name>  
+        </author>  
+        <price>8.99</price>  
+    </book>  
+    <book genre="novel" publicationdate="1967-11-17" ISBN="0-201-63361-2">  
+        <title>The Confidence Man</title>  
+        <author>  
+            <first-name>Herman</first-name>  
+            <last-name>Melville</last-name>  
+        </author>  
+        <price>11.99</price>  
+    </book>  
+    <book genre="philosophy" publicationdate="1991-02-15" ISBN="1-861001-57-6">  
+        <title>The Gorgias</title>  
+        <author>  
+            <name>Plato</name>  
+        </author>  
+        <price>9.99</price>  
+    </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContext">
+      <MemberSignature Language="C#" Value="public abstract void SetContext (System.Xml.IXmlNamespaceResolver nsResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetContext(class System.Xml.IXmlNamespaceResolver nsResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathExpression.SetContext(System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nsResolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="nsResolver">Um objeto que implementa o <see cref="T:System.Xml.IXmlNamespaceResolver" /> interface a ser usado para resolução de namespace.</param>
+        <summary>Quando substituído em uma classe derivada, especifica o objeto <see cref="T:System.Xml.IXmlNamespaceResolver" /> a ser usado para resolução de namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há suporte para resolução de Namespace usando as classes que implementam o <xref:System.Xml.IXmlNamespaceResolver> interface, como o <xref:System.Xml.XmlNamespaceManager> classe. O <xref:System.Xml.XmlNamespaceManager> armazena os mapeamentos de identificador de recurso uniforme (URI) de prefixo e namespace. Se o <xref:System.Xml.XPath.XPathExpression> requer o par de namespace resolução, o prefixo e namespace URI deve ser adicionado a um objeto, como o <xref:System.Xml.XmlNamespaceManager> de classe que implementa o <xref:System.Xml.IXmlNamespaceResolver> interface e o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método deve ser chamado para especificar o <xref:System.Xml.IXmlNamespaceResolver> objeto interface a ser usado para resolução de namespace.  
+  
+ Eis as observações importantes a considerar ao usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método.  
+  
+-   Se o <xref:System.Xml.XPath.XPathExpression> não inclui um prefixo, presume-se que o URI de namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deve usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método e fornecer um objeto que contém um prefixo e namespace URI para lidar com o namespace padrão.  
+  
+-   Você também pode fornecer um <xref:System.Xml.IXmlNamespaceResolver> o objeto de interface para a resolução de namespace para o <xref:System.Xml.XPath.XPathExpression.Compile%2A> método quando você cria sua <xref:System.Xml.XPath.XPathExpression> objeto.  
+  
+-   <xref:System.Xml.XPath.XPathExpression.SetContext%2A>aceita <xref:System.Xml.Xsl.XsltContext> como um resolvedor de namespace, portanto você pode implementar um contexto personalizado e usar funções e variáveis com base em <xref:System.Xml.Xsl.IXsltContextFunction> e <xref:System.Xml.Xsl.IXsltContextVariable>. A expressão XPath irão executá-las. Para obter mais informações, consulte [variáveis e funções definidas pelo usuário](~/docs/standard/data/xml/user-defined-functions-and-variables.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o tipo de retorno do XPath para determinar como processar a expressão XPath e como usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método para fornecer um <xref:System.Xml.XmlNamespaceManager> objeto para a resolução de namespace.  
+  
+ [!code-cpp[XPathExpression.ReturnType#1](~/samples/snippets/cpp/VS_Snippets_Data/XPathExpression.ReturnType/CPP/returntype.cpp#1)]
+ [!code-csharp[XPathExpression.ReturnType#1](~/samples/snippets/csharp/VS_Snippets_Data/XPathExpression.ReturnType/CS/returntype.cs#1)]
+ [!code-vb[XPathExpression.ReturnType#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathExpression.ReturnType/VB/returntype.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+```xml  
+  
+<?xml version="1.0" encoding="utf-8" ?>  
+<bookstore xmlns="http://www.contoso.com/books">  
+    <book genre="autobiography" publicationdate="1981-03-22" ISBN="1-861003-11-0">  
+        <title>The Autobiography of Benjamin Franklin</title>  
+        <author>  
+            <first-name>Benjamin</first-name>  
+            <last-name>Franklin</last-name>  
+        </author>  
+        <price>8.99</price>  
+    </book>  
+    <book genre="novel" publicationdate="1967-11-17" ISBN="0-201-63361-2">  
+        <title>The Confidence Man</title>  
+        <author>  
+            <first-name>Herman</first-name>  
+            <last-name>Melville</last-name>  
+        </author>  
+        <price>11.99</price>  
+    </book>  
+    <book genre="philosophy" publicationdate="1991-02-15" ISBN="1-861001-57-6">  
+        <title>The Gorgias</title>  
+        <author>  
+            <name>Plato</name>  
+        </author>  
+        <price>9.99</price>  
+    </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XPath.XPathException">O <see cref="T:System.Xml.IXmlNamespaceResolver" /> parâmetro de objeto não é derivado de <see cref="T:System.Xml.IXmlNamespaceResolver" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContext">
+      <MemberSignature Language="C#" Value="public abstract void SetContext (System.Xml.XmlNamespaceManager nsManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetContext(class System.Xml.XmlNamespaceManager nsManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathExpression.SetContext(System.Xml.XmlNamespaceManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nsManager" Type="System.Xml.XmlNamespaceManager" />
+      </Parameters>
+      <Docs>
+        <param name="nsManager">Um objeto <see cref="T:System.Xml.XmlNamespaceManager" /> a ser usado para resolução de namespace.</param>
+        <summary>Quando substituído em uma classe derivada, especifica o objeto <see cref="T:System.Xml.XmlNamespaceManager" /> a ser usado para resolução de namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há suporte para resolução de Namespace usando o <xref:System.Xml.XmlNamespaceManager> classe que armazena os mapeamentos de identificador de recurso uniforme (URI) de prefixo e namespace. Se o <xref:System.Xml.XPath.XPathExpression> requer o par de namespace resolução, o prefixo e namespace URI deve ser adicionado para o <xref:System.Xml.XmlNamespaceManager> objeto e o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método deve ser chamado para especificar o <xref:System.Xml.XmlNamespaceManager> objeto a ser usado para resolução de namespace.  
+  
+ Eis as observações importantes a considerar ao usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método.  
+  
+-   Se o <xref:System.Xml.XPath.XPathExpression> não inclui um prefixo, presume-se que o URI de namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deve usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método e fornecer um <xref:System.Xml.XmlNamespaceManager> objeto que contém um prefixo e namespace URI para lidar com o namespace padrão.  
+  
+-   Você também pode fornecer um <xref:System.Xml.IXmlNamespaceResolver> objeto para a resolução de namespace para o <xref:System.Xml.XPath.XPathExpression.Compile%2A> método quando você cria sua <xref:System.Xml.XPath.XPathExpression> objeto.  
+  
+-   <xref:System.Xml.XPath.XPathExpression.SetContext%2A>aceita <xref:System.Xml.Xsl.XsltContext> como um resolvedor de namespace, portanto você pode implementar um contexto personalizado e usar funções e variáveis com base em <xref:System.Xml.Xsl.IXsltContextFunction> e <xref:System.Xml.Xsl.IXsltContextVariable>. A expressão XPath irão executá-las. Para obter mais informações, consulte [variáveis e funções definidas pelo usuário](~/docs/standard/data/xml/user-defined-functions-and-variables.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o tipo de retorno do XPath para determinar como processar a expressão XPath e como usar o <xref:System.Xml.XPath.XPathExpression.SetContext%2A> método para fornecer um <xref:System.Xml.XmlNamespaceManager> objeto para a resolução de namespace.  
+  
+ [!code-cpp[XPathExpression.ReturnType#1](~/samples/snippets/cpp/VS_Snippets_Data/XPathExpression.ReturnType/CPP/returntype.cpp#1)]
+ [!code-csharp[XPathExpression.ReturnType#1](~/samples/snippets/csharp/VS_Snippets_Data/XPathExpression.ReturnType/CS/returntype.cs#1)]
+ [!code-vb[XPathExpression.ReturnType#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XPathExpression.ReturnType/VB/returntype.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+```xml  
+  
+<?xml version="1.0" encoding="utf-8" ?>  
+<bookstore xmlns="http://www.contoso.com/books">  
+    <book genre="autobiography" publicationdate="1981-03-22" ISBN="1-861003-11-0">  
+        <title>The Autobiography of Benjamin Franklin</title>  
+        <author>  
+            <first-name>Benjamin</first-name>  
+            <last-name>Franklin</last-name>  
+        </author>  
+        <price>8.99</price>  
+    </book>  
+    <book genre="novel" publicationdate="1967-11-17" ISBN="0-201-63361-2">  
+        <title>The Confidence Man</title>  
+        <author>  
+            <first-name>Herman</first-name>  
+            <last-name>Melville</last-name>  
+        </author>  
+        <price>11.99</price>  
+    </book>  
+    <book genre="philosophy" publicationdate="1991-02-15" ISBN="1-861001-57-6">  
+        <title>The Gorgias</title>  
+        <author>  
+            <name>Plato</name>  
+        </author>  
+        <price>9.99</price>  
+    </book>  
+</bookstore>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XPath.XPathException">O <see cref="T:System.Xml.XmlNamespaceManager" /> parâmetro de objeto não é derivado de <see cref="T:System.Xml.XmlNamespaceManager" /> classe.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

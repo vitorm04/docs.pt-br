@@ -1,0 +1,441 @@
+<Type Name="SessionIDManager" FullName="System.Web.SessionState.SessionIDManager">
+  <TypeSignature Language="C#" Value="public class SessionIDManager : System.Web.SessionState.ISessionIDManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionIDManager extends System.Object implements class System.Web.SessionState.ISessionIDManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.SessionIDManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.SessionState.ISessionIDManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gerencia o estado de sessão ASP.NET de identificadores exclusivos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionIDManager> classe for um módulo HTTP que gerencia os identificadores de sessão exclusiva para uso com o estado da sessão ASP.NET. O identificador exclusivo de uma sessão do ASP.NET é a <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> propriedade, que pode ser acessada a partir de <xref:System.Web.HttpContext.Session%2A> propriedade <xref:System.Web.HttpContext> ou <xref:System.Web.UI.Page>. O identificador de sessão do ASP.NET é um número gerado aleatoriamente codificado em uma cadeia de caracteres de 24 caracteres consiste em caracteres minúsculos de um z e números de 0 a 5.  
+  
+ Por padrão, o <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> valor é enviado em um cookie com cada solicitação para o aplicativo ASP.NET. O nome do cookie que contém o <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> valor é ASP.NET SessionID por padrão. Você pode configurar um nome de cookie diferentes definindo a `cookieName` atributo o [sessionState Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/bda6fb8c-0076-43e3-9ce2-8cf1f8bdaa7d) para o nome do cookie desejado.  
+  
+ Se você deseja desabilitar o uso de cookies em seu aplicativo ASP.NET e ainda usar estado de sessão, você pode configurar seu aplicativo para armazenar o identificador de sessão na URL em vez de um cookie definindo o `cookieless` atributo do `sessionState` elemento `true` no arquivo Web. config para seu aplicativo. Para obter mais informações, consulte a propriedade <xref:System.Web.SessionState.HttpSessionStateContainer.IsCookieless%2A>.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Você pode substituir o identificador de sessão ASP.NET com seu próprio identificador de sessão personalizadas, criando uma classe que herda de <see cref="T:System.Web.SessionState.SessionIDManager" /> classe e substituir o <see cref="M:System.Web.SessionState.SessionIDManager.CreateSessionID(System.Web.HttpContext)" /> e <see cref="M:System.Web.SessionState.SessionIDManager.Validate(System.String)" /> métodos com suas próprias implementações personalizadas. Para obter um exemplo de substituição de <see cref="T:System.Web.SessionState.SessionIDManager" /> de classe e a implementação desses métodos, consulte o exemplo fornecido para o <see cref="M:System.Web.SessionState.SessionIDManager.CreateSessionID(System.Web.HttpContext)" /> método.  
+  
+ Você pode substituir toda a <see cref="T:System.Web.SessionState.SessionIDManager" /> com um Gerenciador de ID de sessão personalizadas, criando uma classe que implementa o <see cref="T:System.Web.SessionState.ISessionIDManager" /> interface. Se o Gerenciador de ID de sessão personalizado oferece suporte a identificadores de sessão sem cookies, você precisará implementar uma solução para enviar e recuperar identificadores de sessão na URL, como um filtro ISAPI. Para obter mais informações sobre como criar uma ID de sessão personalizada manager, consulte <see cref="T:System.Web.SessionState.ISessionIDManager" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionIDManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Web.SessionState.SessionIDManager" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não se destina a ser chamado no código do aplicativo.  
+  
+ ASP.NET chama este construtor para criar uma instância do <xref:System.Web.SessionState.SessionIDManager> classe. Depois de chamar o construtor, ASP.NET chama o <xref:System.Web.SessionState.SessionIDManager.Initialize%2A> método para inicializar o novo <xref:System.Web.SessionState.SessionIDManager> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSessionID">
+      <MemberSignature Language="C#" Value="public virtual string CreateSessionID (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateSessionID(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.CreateSessionID(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O objeto <see cref="T:System.Web.HttpContext" /> atual que faz referência a objetos de servidor usados para processar solicitações HTTP (por exemplo, as propriedades <see cref="P:System.Web.HttpContext.Request" /> e <see cref="P:System.Web.HttpContext.Response" />).</param>
+        <summary>Cria um identificador de sessão exclusivo para a sessão.</summary>
+        <returns>Um identificador de sessão exclusivo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ O <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> método retorna um identificador exclusivo que é um número gerado aleatoriamente codificado em uma cadeia de caracteres de 24 caracteres consiste em caracteres minúsculos de um z e números de 0 a 5.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma classe que herda a <xref:System.Web.SessionState.SessionIDManager> classe e substituições de <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> e <xref:System.Web.SessionState.SessionIDManager.Validate%2A> métodos com métodos que fornecem e validar uma <xref:System.Guid> como o <xref:System.Web.SessionState.HttpSessionState.SessionID%2A>.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionIDModule#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/CS/GuidSessionIDModule.cs#7)]
+ [!code-vb[System.Web.SessionState.ISessionIDModule#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/VB/GuidSessionIDModule.vb#7)]  
+  
+ Para usar a classe personalizada demonstrada neste exemplo, configure o atributo sessionIDManagerType do [sessionState Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/bda6fb8c-0076-43e3-9ce2-8cf1f8bdaa7d) elemento, conforme mostrado no exemplo a seguir.  
+  
+```  
+<sessionState  
+  Mode="InProc"  
+  stateConnectionString="tcp=127.0.0.1:42424"  
+  stateNetworkTimeout="10"  
+  sqlConnectionString="data source=127.0.0.1;Integrated Security=SSPI"  
+  sqlCommandTimeout="30"  
+  customProvider=""  
+  cookieless="false"  
+  regenerateExpiredSessionId="false"  
+  timeout="20"  
+  sessionIDManagerType="Your.ID.Manager.Type,  
+    CustomAssemblyNameInBinFolder"  
+/>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode fornecer um identificador de sessão personalizado a ser usado por estado de sessão ASP.NET, criando uma classe que herda de <see cref="T:System.Web.SessionState.SessionIDManager" /> classe e substituir o <see cref="M:System.Web.SessionState.SessionIDManager.CreateSessionID(System.Web.HttpContext)" /> e <see cref="M:System.Web.SessionState.SessionIDManager.Validate(System.String)" /> métodos com suas próprias implementações personalizadas. Se sua ID de sessão personalizado não atender as restrições de caracteres impostas pela implementação padrão da <see cref="M:System.Web.SessionState.SessionIDManager.Validate(System.String)" /> método, você deve substituir o <see cref="M:System.Web.SessionState.SessionIDManager.Validate(System.String)" /> método para fornecer validação de seu identificador de sessão personalizadas. Nesse caso, o <see cref="T:System.Web.SessionState.SessionIDManager" /> classe garantirá que o identificador de sessão personalizado é codificado na resposta HTTP de URLs e decodificada da solicitação HTTP usando o <see cref="M:System.Web.SessionState.SessionIDManager.Encode(System.String)" /> e <see cref="M:System.Web.SessionState.SessionIDManager.Decode(System.String)" /> métodos, respectivamente.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public virtual string Decode (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Decode(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.Decode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">O identificador de sessão a decodificar.</param>
+        <summary>Decodifica um identificador de sessão codificada por URL obtido de um cookie ou URL.</summary>
+        <returns>O identificador de sessão decodificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ Esse método é usado internamente pelo <xref:System.Web.SessionState.SessionIDManager> classe decodificar personalizado <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> valores criados por classes que herdam o <xref:System.Web.SessionState.SessionIDManager> classe e substituir o <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> e <xref:System.Web.SessionState.SessionIDManager.Validate%2A> métodos. Para garantir a fidelidade de um valor de identificador de sessão personalizado recuperado da solicitação de HTTP, o <xref:System.Web.SessionState.SessionIDManager.GetSessionID%2A> método, o <xref:System.Web.SessionState.SessionIDManager> decodifica o valor personalizado usando o <xref:System.Web.HttpUtility.UrlDecode%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para obter um exemplo de uma classe que herda de <see cref="T:System.Web.SessionState.SessionIDManager" /> classe e substituições de <see cref="M:System.Web.SessionState.SessionIDManager.CreateSessionID(System.Web.HttpContext)" /> e <see cref="M:System.Web.SessionState.SessionIDManager.Validate(System.String)" /> métodos, consulte o exemplo fornecido para o <see cref="M:System.Web.SessionState.SessionIDManager.CreateSessionID(System.Web.HttpContext)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public virtual string Encode (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Encode(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.Encode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">O identificador de sessão para codificar.</param>
+        <summary>Codifica o identificador de sessão para salvá-lo em um cookie ou a URL.</summary>
+        <returns>O identificador de sessão codificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ Esse método é usado internamente pelo <xref:System.Web.SessionState.SessionIDManager> classe para codificar personalizado <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> valores criados por classes que herdam o <xref:System.Web.SessionState.SessionIDManager> classe e substituir o <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> e <xref:System.Web.SessionState.SessionIDManager.Validate%2A> métodos. Para garantir a fidelidade de um valor de identificador de sessão personalizado armazenado na resposta HTTP, o <xref:System.Web.SessionState.SessionIDManager.SaveSessionID%2A> método, o <xref:System.Web.SessionState.SessionIDManager> codifica o valor personalizado usando o <xref:System.Web.HttpUtility.UrlEncode%2A> método.  
+  
+ Para obter um exemplo de uma classe que herda de <xref:System.Web.SessionState.SessionIDManager> classe e substituições de <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> e <xref:System.Web.SessionState.SessionIDManager.Validate%2A> métodos, consulte o <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSessionID">
+      <MemberSignature Language="C#" Value="public string GetSessionID (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetSessionID(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.GetSessionID(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O objeto <see cref="T:System.Web.HttpContext" /> atual que faz referência a objetos de servidor usados para processar solicitações HTTP (por exemplo, as propriedades <see cref="P:System.Web.HttpContext.Request" /> e <see cref="P:System.Web.HttpContext.Response" />).</param>
+        <summary>Obtém o valor do identificador de sessão da solicitação da Web atual.</summary>
+        <returns>O <see cref="P:System.Web.SessionState.HttpSessionState.SessionID" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ O <xref:System.Web.SessionState.SessionStateModule> chama o <xref:System.Web.SessionState.SessionIDManager.GetSessionID%2A> método durante o <xref:System.Web.HttpApplication.AcquireRequestState> evento para recuperar o <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> do atual <xref:System.Web.HttpRequest>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O tamanho do valor do identificador de sessão recuperado da solicitação HTTP excede o valor <see cref="P:System.Web.SessionState.SessionIDManager.SessionIDMaxLength" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o <see cref="T:System.Web.SessionState.SessionIDManager" /> objeto com informações de arquivos de configuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionIDManager.Initialize%2A> método lê os dados de configuração de sessão a [sessionState Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/bda6fb8c-0076-43e3-9ce2-8cf1f8bdaa7d) elemento de configuração dos arquivos de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRequest">
+      <MemberSignature Language="C#" Value="public bool InitializeRequest (System.Web.HttpContext context, bool suppressAutoDetectRedirect, out bool supportSessionIDReissue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool InitializeRequest(class System.Web.HttpContext context, bool suppressAutoDetectRedirect, [out] bool&amp; supportSessionIDReissue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.InitializeRequest(System.Web.HttpContext,System.Boolean,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="suppressAutoDetectRedirect" Type="System.Boolean" />
+        <Parameter Name="supportSessionIDReissue" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="context">O objeto <see cref="T:System.Web.HttpContext" /> que contém informações sobre a solicitação atual.</param>
+        <param name="suppressAutoDetectRedirect">
+          <see langword="true" />Redirecionar para determinar o suporte a cookie; Caso contrário, <see langword="false" /> para suprimir o redirecionamento automático para determinar o suporte a cookie.</param>
+        <param name="supportSessionIDReissue">Quando este método retorna, contém um valor booleano que indica se o <see cref="T:System.Web.SessionState.SessionIDManager" /> objeto dá suporte à emissão de nova sessão IDs quando a ID original está desatualizada. Este parâmetro é passado não inicializado.</param>
+        <summary>Realiza a inicialização do objeto <see cref="T:System.Web.SessionState.SessionIDManager" /> segundo a solicitação.</summary>
+        <returns>
+          <see langword="true" /> para indicar que o objeto <see cref="T:System.Web.SessionState.SessionIDManager" /> fez um redirecionamento para determinar o suporte ao cookie; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o `cookieless` atributo o `sessionState` é definido como `AutoDetect`, o <xref:System.Web.SessionState.SessionIDManager> objeto será redirecionado para o mesmo caminho para determinar se o navegador a conexão dá suporte a cookies. Se o `suppressAutoDetectRedirect` parâmetro é `false`, o servidor não executará esse redirecionamento.  
+  
+ O `supportSessionIDReissue` parâmetro será retornado `false` se a solicitação é usar cookies para identificação de sessão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSessionID">
+      <MemberSignature Language="C#" Value="public void RemoveSessionID (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveSessionID(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.RemoveSessionID(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O objeto <see cref="T:System.Web.HttpContext" /> atual que faz referência a objetos de servidor usados para processar solicitações HTTP (por exemplo, as propriedades <see cref="P:System.Web.HttpContext.Request" /> e <see cref="P:System.Web.HttpContext.Response" />).</param>
+        <summary>Exclui o cookie identificador de sessão da resposta HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ O <xref:System.Web.SessionState.SessionStateModule> chamadas a <xref:System.Web.SessionState.SessionIDManager.RemoveSessionID%2A> método durante o <xref:System.Web.HttpApplication.ReleaseRequestState> evento remova o identificador da sessão do <xref:System.Web.HttpResponse.Cookies%2A> coleção do <xref:System.Web.HttpResponse> se uma nova sessão foi criada, mas não foi usada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveSessionID">
+      <MemberSignature Language="C#" Value="public void SaveSessionID (System.Web.HttpContext context, string id, out bool redirected, out bool cookieAdded);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveSessionID(class System.Web.HttpContext context, string id, [out] bool&amp; redirected, [out] bool&amp; cookieAdded) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.SaveSessionID(System.Web.HttpContext,System.String,System.Boolean@,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="redirected" Type="System.Boolean&amp;" RefType="out" />
+        <Parameter Name="cookieAdded" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="context">O objeto <see cref="T:System.Web.HttpContext" /> atual que faz referência a objetos de servidor usados para processar solicitações HTTP (por exemplo, as propriedades <see cref="P:System.Web.HttpContext.Request" /> e <see cref="P:System.Web.HttpContext.Response" />).</param>
+        <param name="id">O identificador da sessão.</param>
+        <param name="redirected">Quando este método retorna, contém um valor booliano que é <see langword="true" /> se a resposta é redirecionado para a URL atual com o identificador de sessão adicionado para a URL; caso contrário, <see langword="false" />.</param>
+        <param name="cookieAdded">Quando este método retorna, contém um valor booliano que é <see langword="true" /> se um cookie tiver sido adicionado à resposta HTTP; caso contrário, <see langword="false" />.</param>
+        <summary>Salva um identificador de sessão recém-criado para a resposta HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ O <xref:System.Web.SessionState.SessionIDManager.SaveSessionID%2A> método é chamado pelo <xref:System.Web.SessionState.SessionStateModule> objeto durante a <xref:System.Web.HttpApplication.AcquireRequestState> eventos. O <xref:System.Web.SessionState.SessionIDManager.SaveSessionID%2A> método armazena o identificador de sessão a URL (quando o estado de sessão sem cookie é usado) ou em um cookie de sessão que não expira.  
+  
+ Por padrão, o <xref:System.Web.SessionState.SessionIDManager> coloca um identificador de sessão exclusiva em um cookie de sessão que não expira e define o `cookieAdded` parâmetro `true`.  
+  
+ Para um estado de sessão sem cookies, o <xref:System.Web.SessionState.SessionIDManager> insere um identificador de sessão exclusiva a URL atual de objeto, redireciona o navegador para a nova URL que inclui o identificador de sessão e, em seguida, define o `redirected` parâmetro `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A resposta já foi enviada.  
+  
+ -ou-  
+  
+ A validação da ID da sessão passada para esse método falhou.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionIDMaxLength">
+      <MemberSignature Language="C#" Value="public static int SessionIDMaxLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 SessionIDMaxLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.SessionIDManager.SessionIDMaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento máximo de um identificador de sessão válido.</summary>
+        <value>O comprimento máximo de um identificador de sessão válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comprimento máximo de um identificador de sessão é 80 caracteres.  
+  
+ Enquanto os identificadores de sessão criados pelo <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> método são 24 caracteres de comprimento, o comprimento máximo de um identificador de sessão permitido pelo <xref:System.Web.SessionState.SessionIDManager> classe é 80 caracteres. Isso é especialmente importante se você implementar um personalizado <xref:System.Web.SessionState.SessionIDManager>. O <xref:System.Web.SessionState.SessionIDManager.GetSessionID%2A> método, que recupera os valores de identificador de sessão do atual <xref:System.Web.HttpRequest>, garante que os valores não exceda o <xref:System.Web.SessionState.SessionIDManager.SessionIDMaxLength%2A> valor e o identificador de sessão é uma cadeia de caracteres de 24 caracteres que contém apenas caracteres em minúsculas um z e os números de 0 a 5 chamando o <xref:System.Web.SessionState.SessionIDManager.Validate%2A> método. Se você implementar um personalizado <xref:System.Web.SessionState.SessionIDManager> classe que herda a <xref:System.Web.SessionState.SessionIDManager> classe e substituições de <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> método, mas não o <xref:System.Web.SessionState.SessionIDManager.Validate%2A> método, os valores de identificador de sessão personalizado devem atender as restrições acima. Para obter um exemplo de substituição de <xref:System.Web.SessionState.SessionIDManager> de classe e a implementação desses métodos, consulte o exemplo fornecido para o <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public virtual bool Validate (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Validate(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionIDManager.Validate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">O identificador de sessão a ser validado.</param>
+        <summary>Obtém um valor que indica se um identificador de sessão é válido.</summary>
+        <returns>
+          <see langword="true" />Se o identificador de sessão é válido. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ O <xref:System.Web.SessionState.SessionIDManager.Validate%2A> método verifica se fornecido `id` é uma cadeia de caracteres de 24 caracteres consiste em caracteres minúsculos de um z e números de 0 a 5 e que o comprimento máximo da sessão de ID não exceder 80 caracteres.  
+  
+ O <xref:System.Web.SessionState.SessionIDManager.GetSessionID%2A> chamadas de método de <xref:System.Web.SessionState.SessionIDManager.Validate%2A> método ao recuperar um identificador de sessão de uma solicitação HTTP, para garantir que o identificador de sessão fornecido está formatado corretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma classe que herda a <xref:System.Web.SessionState.SessionIDManager> classe e substituições de <xref:System.Web.SessionState.SessionIDManager.CreateSessionID%2A> e <xref:System.Web.SessionState.SessionIDManager.Validate%2A> métodos com métodos que fornecem e validar uma <xref:System.Guid> como o <xref:System.Web.SessionState.HttpSessionState.SessionID%2A>.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionIDModule#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/CS/GuidSessionIDModule.cs#7)]
+ [!code-vb[System.Web.SessionState.ISessionIDModule#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionIDModule/VB/GuidSessionIDModule.vb#7)]  
+  
+ Para usar a classe personalizada demonstrada neste exemplo, substitua o `SessionID` módulo HTTP no seu arquivo Web. config com sua classe personalizada, conforme mostrado no exemplo a seguir.  
+  
+```  
+<httpModules>  
+  <remove name="SessionID" />  
+  <add name="SessionID"  
+       type="Samples.AspNet.Session.GuidSessionIDManager" />  
+</httpModules>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode fornecer um identificador de sessão personalizado a ser usado por estado de sessão ASP.NET, criando uma classe que herda de <see cref="T:System.Web.SessionState.SessionIDManager" /> classe e substituir o <see cref="M:System.Web.SessionState.SessionIDManager.CreateSessionID(System.Web.HttpContext)" /> e <see cref="M:System.Web.SessionState.SessionIDManager.Validate(System.String)" /> métodos com sua própria implementação personalizada. Mesmo quando você cria um identificador de sessão personalizadas, a ID de sessão é limitada a 80 caracteres pela <see cref="T:System.Web.SessionState.SessionIDManager" /> classe.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,65 @@
+<Type Name="AutomationEvent" FullName="System.Windows.Automation.AutomationEvent">
+  <TypeSignature Language="C#" Value="public class AutomationEvent : System.Windows.Automation.AutomationIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AutomationEvent extends System.Windows.Automation.AutomationIdentifier" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationEvent" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.AutomationIdentifier</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Identifica um evento de automação de interface do usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os identificadores desses tipos são encontrados como campos de várias classes para identificar os eventos; Por exemplo, <xref:System.Windows.Automation.InvokePattern.InvokedEvent>. Eles também são encontrados no evento argumentos passados para clientes de automação de interface do usuário.  
+  
+ Não é possível criar eventos personalizados.  
+  
+   
+  
+## Examples  
+ No manipulador de eventos de exemplo a seguir, o <xref:System.Windows.Automation.AutomationEvent> no evento argumentos é comparado com o <xref:System.Windows.Automation.AutomationEvent> que identifica o evento Invoked.  
+  
+ [!code-csharp[UIAClient_snip#173](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#173)]
+ [!code-vb[UIAClient_snip#173](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#173)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LookupById">
+      <MemberSignature Language="C#" Value="public static System.Windows.Automation.AutomationEvent LookupById (int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Automation.AutomationEvent LookupById(int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.AutomationEvent.LookupById(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="id">Identificador do evento.</param>
+        <summary>Recupera um <see cref="T:System.Windows.Automation.AutomationEvent" /> que encapsula o identificador numérico especificado.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.AutomationEvent" /> que encapsula o identificador numérico especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, os eventos são identificados por um <xref:System.Windows.Automation.AutomationEvent> objeto. Esse método pode ser usado por provedores de automação de interface do usuário para criar esse tipo de objeto quando apenas o identificador numérico (o <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> herdado de <xref:System.Windows.Automation.AutomationIdentifier>) é conhecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

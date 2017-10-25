@@ -1,0 +1,563 @@
+<Type Name="WorkflowDesignerLoader" FullName="System.Workflow.ComponentModel.Design.WorkflowDesignerLoader">
+  <TypeSignature Language="C#" Value="public abstract class WorkflowDesignerLoader : System.ComponentModel.Design.Serialization.BasicDesignerLoader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract WorkflowDesignerLoader extends System.ComponentModel.Design.Serialization.BasicDesignerLoader" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.Serialization.BasicDesignerLoader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a funcionalidade de carregador de designer comum que pode ser usada para implementar carregadores de designer de fluxo de trabalho personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ O carregador de designer classes é usado para carregar o designer e salvar as alterações para o estado do designer, quando então instrui o usuário. O <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> classe pode ser implementada para dar suporte a carregamento personalizado de um designer de fluxo de trabalho e componentes do designer de fluxo de trabalho. Um carregador de designer de fluxo de trabalho também é responsável por gravar alterações para um documento aberto para o armazenamento o carregador usado ao carregar o documento após o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Flush%2A> método é chamado.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader" />, você deve substituir os seguintes membros: <see cref="P:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.FileName" />, <see cref="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.ForceReload" />, <see cref="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.GetFileReader(System.String)" /> e <see cref="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.GetFileWriter(System.String)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowDesignerLoader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como criar uma nova instância de um <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> objeto. Nesse caso, o `WorkflowLoader` classe é derivada de <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader>. Quando o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> é criado, um <xref:System.ComponentModel.Design.DesignSurface> também é criado e associado a <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> usando o `BeginLoad` método.  
+  
+ [!code-csharp[WF_Samples#47](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#47)]
+ [!code-vb[WF_Samples#47](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#47)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddActivityToDesigner">
+      <MemberSignature Language="C#" Value="public void AddActivityToDesigner (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddActivityToDesigner(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.AddActivityToDesigner(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">
+          <see cref="T:System.Workflow.ComponentModel.Activity" />Para adicionar.</param>
+        <summary>Adiciona uma atividade para o host de designer depois que ele foi adicionado à coleção de atividades pai.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar um <xref:System.Workflow.Activities.CodeActivity> para o designer. Antes que a atividade é adicionada ao designer usando o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.AddActivityToDesigner%2A> método, ele é adicionado à coleção de atividades da atividade raiz no fluxo de trabalho.  
+  
+ [!code-csharp[WF_Samples#55](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#55)]
+ [!code-vb[WF_Samples#55](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#55)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Dispose%2A>versões todos os serviços usados pelo host do designer, mas não grava as alterações pendentes para o carregador do designer. Se você deseja salvar as alterações pendentes antes de liberar todos os recursos, chame <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Flush%2A> antes de chamar <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Dispose%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma implementação de <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Dispose%2A> método. Nessa implementação, vários serviços que foram adicionados ao objeto LoaderHost são removidos na preparação para fechar o aplicativo. Este exemplo é um exemplo de controle SDK do criador de perfil de. Para obter mais informações, consulte [exemplo criador de perfil do controle](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[WF_Samples#121](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#121)]
+ [!code-vb[WF_Samples#121](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#121)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public abstract string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome do arquivo do designer para carregar.</summary>
+        <value>Uma cadeia de caracteres que contém o nome do arquivo do designer para carregar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como substituir o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.FileName%2A> propriedade para retornar o caminho do arquivo de fluxo de trabalho atualmente carregado usado pelo <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader>.  
+  
+ [!code-csharp[WF_Samples#32](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#32)]
+ [!code-vb[WF_Samples#32](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava as alterações pendentes para o local onde o designer foi carregado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como substituir o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Flush%2A> método para serializar um fluxo de trabalho usando o <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer>. Neste exemplo, substituído <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Flush%2A> delega para o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.PerformFlush%2A> método definido no <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> classe derivada.  
+  
+ [!code-csharp[WF_Samples#35](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#35)]
+ [!code-vb[WF_Samples#35](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceReload">
+      <MemberSignature Language="C#" Value="public virtual void ForceReload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ForceReload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.ForceReload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, faz com que <see cref="T:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader" /> para recarregar o designer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileReader">
+      <MemberSignature Language="C#" Value="public abstract System.IO.TextReader GetFileReader (string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.TextReader GetFileReader(string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.GetFileReader(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">Uma cadeia de caracteres que contém um caminho para o arquivo para leitura do.</param>
+        <summary>Quando substituído em uma classe derivada, recupera um objeto que <see cref="T:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader" /> usa para ler do arquivo especificado.</summary>
+        <returns>Um <see cref="T:System.IO.TextReader" /> para ler o arquivo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar e retornar um `TextReader` objeto quando o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.GetFileReader%2A> é chamado de método sobrecarregado.  
+  
+ [!code-csharp[WF_Samples#33](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#33)]
+ [!code-vb[WF_Samples#33](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileWriter">
+      <MemberSignature Language="C#" Value="public abstract System.IO.TextWriter GetFileWriter (string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.TextWriter GetFileWriter(string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.GetFileWriter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">Uma cadeia de caracteres que contém o caminho para o arquivo para gravação.</param>
+        <summary>Quando substituído em uma classe derivada, obtém um objeto que o <see cref="T:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader" /> usa para gravar o arquivo especificado.</summary>
+        <returns>Um <see cref="T:System.IO.TextWriter" /> para gravar o arquivo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como criar e retornar um `TextWriter` objeto quando o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.GetFileWriter%2A> é chamado de método sobrecarregado.  
+  
+ [!code-csharp[WF_Samples#34](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#34)]
+ [!code-vb[WF_Samples#34](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InDebugMode">
+      <MemberSignature Language="C#" Value="public virtual bool InDebugMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InDebugMode" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.InDebugMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo de trabalho deve ser carregado no modo de depuração.</summary>
+        <value>
+          <see langword="true" />Se o fluxo de trabalho deve ser carregado no modo de depuração; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O método a seguir determina se o designer de fluxo de trabalho está bloqueado pelo depurador, se o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.InDebugMode%2A> propriedade `WorkflowDesignerLoader` retorna `true`.  
+  
+ [!code-csharp[WF_Samples#54](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#54)]
+ [!code-vb[WF_Samples#54](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o <see cref="T:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader" /> com todos os serviços necessários pelo host do carregador de designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como substituir o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.Initialize%2A> método em uma classe derivada para adicionar os serviços necessários para o designer. Os serviços podem variar com base no nível de suporte de serviço exigido pelo seu aplicativo.  
+  
+ [!code-csharp[WF_Samples#31](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#31)]
+ [!code-vb[WF_Samples#31](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadDesignerLayout">
+      <MemberSignature Language="C#" Value="protected void LoadDesignerLayout (System.Xml.XmlReader layoutReader, out System.Collections.IList layoutLoadErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void LoadDesignerLayout(class System.Xml.XmlReader layoutReader, [out] class System.Collections.IList&amp; layoutLoadErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.LoadDesignerLayout(System.Xml.XmlReader,System.Collections.IList@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="layoutReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="layoutLoadErrors" Type="System.Collections.IList&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="layoutReader">Um <see cref="T:System.Xml.XmlReader" /> que é criado para o layout serializado.</param>
+        <param name="layoutLoadErrors">Lista de erros que ocorreram durante a desserialização.</param>
+        <summary>Aplica-se o layout serializado para o designer raiz no host do designer atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como carregar o layout de uma definição de fluxo de trabalho específico usando o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.LoadDesignerLayout%2A> método. Um <xref:System.Xml.XmlReader> objeto é criado usando o nome do arquivo de um arquivo de layout do designer que foi criado usando <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.SaveDesignerLayout%2A>. Quando o layout terminou o carregamento, os erros que possam ter ocorrido são exibidos ao usuário.  
+  
+ [!code-csharp[WF_Samples#39](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#39)]
+ [!code-vb[WF_Samples#39](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadDesignerLayoutFromResource">
+      <MemberSignature Language="C#" Value="protected void LoadDesignerLayoutFromResource (Type type, string manifestResourceName, out System.Collections.IList errors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void LoadDesignerLayoutFromResource(class System.Type type, string manifestResourceName, [out] class System.Collections.IList&amp; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.LoadDesignerLayoutFromResource(System.Type,System.String,System.Collections.IList@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="manifestResourceName" Type="System.String" />
+        <Parameter Name="errors" Type="System.Collections.IList&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+          <see cref="T:System.Type" />Se o recurso está associado.</param>
+        <param name="manifestResourceName">Nome do recurso.</param>
+        <param name="errors">Erros encontrados durante a chamada para <see cref="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.LoadDesignerLayout(System.Xml.XmlReader,System.Collections.IList@)" />.</param>
+        <summary>Recupera o recurso especificado e chama o <see cref="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.LoadDesignerLayout(System.Xml.XmlReader,System.Collections.IList@)" /> método que aplica o layout serializado para o designer raiz no host do designer atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndLoad">
+      <MemberSignature Language="C#" Value="protected override void OnEndLoad (bool successful, System.Collections.ICollection errors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndLoad(bool successful, class System.Collections.ICollection errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.OnEndLoad(System.Boolean,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="successful" Type="System.Boolean" />
+        <Parameter Name="errors" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="successful">
+          <see langword="true" />Se a operação de carregamento for bem-sucedida; Caso contrário, <see langword="false" />.</param>
+        <param name="errors">Contém os erros de carregamento.</param>
+        <summary>Chamado quando o carregamento do designer é concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como substituir o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.OnEndLoad%2A> método para exibir os erros que possam ter ocorrido durante o carregamento de um fluxo de trabalho.  
+  
+ [!code-csharp[WF_Samples#36](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#36)]
+ [!code-vb[WF_Samples#36](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformFlush">
+      <MemberSignature Language="C#" Value="protected override void PerformFlush (System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PerformFlush(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.PerformFlush(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Classe que implementa o <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> interface, que gerencia a serialização de tempo de design.</param>
+        <summary>Gravações em cache as alterações para o local que o designer foi carregado por.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como substituir o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.PerformFlush%2A> método para serializar o fluxo de trabalho usando o <xref:System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer>.  
+  
+ [!code-csharp[WF_Samples#35](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#35)]
+ [!code-vb[WF_Samples#35](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformLoad">
+      <MemberSignature Language="C#" Value="protected override void PerformLoad (System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PerformLoad(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager serializationManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.PerformLoad(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationManager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="serializationManager">Classe que implementa o <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> interface, que gerencia a serialização de tempo de design.</param>
+        <summary>Carrega o designer de um documento de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como substituir o `PerformLoad` método para desserializar um fluxo de trabalho e carregá-lo no designer usando o `AddObjectGraphToDesignerHost` método auxiliar.  
+  
+ [!code-csharp[WF_Samples#37](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#37)]
+ [!code-vb[WF_Samples#37](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#37)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveActivityFromDesigner">
+      <MemberSignature Language="C#" Value="public void RemoveActivityFromDesigner (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveActivityFromDesigner(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.RemoveActivityFromDesigner(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">Atividade a ser removido do designer.</param>
+        <summary>Remove uma atividade do host de designer depois que ele foi adicionado à coleção de atividades pai.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como remover uma atividade a partir de <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader>. Antes que a última atividade filho no fluxo de trabalho é removida o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader>, primeiro, ele é removido do fluxo de trabalho <xref:System.Workflow.ComponentModel.CompositeActivity.Activities%2A> coleção.  
+  
+ [!code-csharp[WF_Samples#40](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#40)]
+ [!code-vb[WF_Samples#40](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveDesignerLayout">
+      <MemberSignature Language="C#" Value="protected void SaveDesignerLayout (System.Xml.XmlWriter layoutWriter, System.Workflow.ComponentModel.Design.ActivityDesigner rootDesigner, out System.Collections.IList layoutSaveErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SaveDesignerLayout(class System.Xml.XmlWriter layoutWriter, class System.Workflow.ComponentModel.Design.ActivityDesigner rootDesigner, [out] class System.Collections.IList&amp; layoutSaveErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.SaveDesignerLayout(System.Xml.XmlWriter,System.Workflow.ComponentModel.Design.ActivityDesigner,System.Collections.IList@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="layoutWriter" Type="System.Xml.XmlWriter" />
+        <Parameter Name="rootDesigner" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="layoutSaveErrors" Type="System.Collections.IList&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="layoutWriter">
+          <see langword="XmlWriter" />que é usado para serializar o layout em.</param>
+        <param name="rootDesigner">Atividade de raiz de onde obter as informações de layout.</param>
+        <param name="layoutSaveErrors">Erros encontrados durante a serialização.</param>
+        <summary>Serializa o layout do designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como salvar as informações de layout de design de um fluxo de trabalho usando o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.SaveDesignerLayout%2A> método. Após o <xref:System.Xml.XmlWriter> objeto é criado, o <xref:System.Workflow.ComponentModel.Design.ActivityDesigner> para o `RootComponent` do fluxo de trabalho é recuperado e passado para o <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.SaveDesignerLayout%2A> método. Para carregar o arquivo de layout que é gerado por esse método, consulte <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.LoadDesignerLayout%2A>.  
+  
+ [!code-csharp[WF_Samples#38](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#38)]
+ [!code-vb[WF_Samples#38](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameworkTypeDescriptionProvider">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.TypeDescriptionProvider TargetFrameworkTypeDescriptionProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.TypeDescriptionProvider TargetFrameworkTypeDescriptionProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader.TargetFrameworkTypeDescriptionProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeDescriptionProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.TypeDescriptor" /> metadados do destino [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</summary>
+        <value>O <see cref="T:System.ComponentModel.TypeDescriptor" /> metadados do destino [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

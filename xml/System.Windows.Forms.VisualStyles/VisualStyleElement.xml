@@ -1,0 +1,154 @@
+<Type Name="VisualStyleElement" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement">
+  <TypeSignature Language="C#" Value="public class VisualStyleElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VisualStyleElement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Identifica um elemento de controle ou da interface do usuário que é desenhado com estilos visuais.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> classe identifica um elemento de interface do usuário com Windows controle ou de usuário que é definido pelo estilo visual atual do sistema operacional. Um elemento de estilo visual é definido em termos de *classe*, *parte*, e *estado*:  
+  
+-   O *classe* identifica um grupo de elementos de estilo visual relacionados que normalmente são desenhados em conjunto. A classe for especificada o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName%2A> propriedade.  
+  
+-   O *parte* define um membro discreto de uma classe. A parte for especificada o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Part%2A> propriedade.  
+  
+-   O *estado* descreve o estado visual atual do elemento definido pela classe e parte. O estado é especificado o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.State%2A> propriedade.  
+  
+ O <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace expõe centenas de <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementos que podem ser definidos por um estilo visual da interface de objetos que representam os controles e o usuário. Esses objetos são expostos como `static` propriedades de classes aninhadas de <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>. Para cada propriedade, o nome qualificado da classe que representa a classe e a parte do elemento desenhado, e o nome da propriedade representa o estado do elemento. Por exemplo, o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.PushButton.Pressed%2A?displayProperty=nameWithType> propriedade retorna um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> que pode ser usado para desenhar um botão no estado pressionado com estilos visuais. O `Pressed` nome da propriedade corresponde ao estado, `PushButton` corresponde à parte, e `Button` identifica a classe do elemento de estilo visual.  
+  
+ Para desenhar um elemento de estilo visual, crie um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>, defina-a como o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> deseja desenhar e, em seguida, chamar o <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> método. Para determinar se o estilo visual atual fornece uma definição para um elemento específico, chame o <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A> método com o elemento como o argumento.  
+  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>e <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> empacotar a funcionalidade dos estilos visuais API da parte do Shell do Windows do SDK da plataforma Windows. Para obter mais informações sobre estilos visuais, consulte "Usando o Windows XP estilos visuais" na parte do Platform SDK da biblioteca do MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library/).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um aplicativo completo que fornece uma interface de usuário para navegação e desenho todos o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> objetos expostos pelo <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace. Para exibir um elemento, use o <xref:System.Windows.Forms.ListView> controle no lado esquerdo da janela para navegar até o nó que representa o estado do elemento que você deseja desenhar e, em seguida, clique no nó. Este exemplo desenhará o elemento selecionado, somente se o elemento for definido pelo estilo visual atual.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleElement#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleElement/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleElement#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleElement/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleElement#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleElement/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da classe do elemento de estilo visual que isso <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> representa.</summary>
+        <value>Uma cadeia de caracteres que representa o nome da classe de um elemento de estilo visual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nome de classe se refere a um grupo de elementos de estilo visual relacionados que normalmente são desenhados em conjunto. Um nome de classe pode corresponder a um controle, como "Barra de ROLAGEM" e "TRACKBAR", mas também pode se referir a um nome de classe para um grupo de elementos que não correspondem a um controle específico, como "EXPLORERBAR" e "STARTPANEL".  
+  
+ Para obter mais informações sobre classes de estilo visual, peças e estados, consulte "Partes e estados" na documentação do Shell do Windows em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateElement">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement CreateElement (string className, int part, int state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Forms.VisualStyles.VisualStyleElement CreateElement(string className, int32 part, int32 state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.VisualStyles.VisualStyleElement.CreateElement(System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="part" Type="System.Int32" />
+        <Parameter Name="state" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="className">Uma cadeia de caracteres que representa o nome da classe do elemento de estilo visual a ser criado.</param>
+        <param name="part">Um valor que representa a parte do elemento de estilo visual a ser criado.</param>
+        <param name="state">Um valor que representa o estado do elemento de estilo visual a ser criado.</param>
+        <summary>Cria um novo elemento de estilo visual na classe especificada, parte e valores de estado.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> com o <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName" />, <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Part" />, e <see cref="P:System.Windows.Forms.VisualStyles.VisualStyleElement.State" /> propriedades inicializadas para o <paramref name="className" />, <paramref name="part" />, e <paramref name="state" /> parâmetros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Part">
+      <MemberSignature Language="C#" Value="public int Part { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Part" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Part" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a parte do elemento de estilo visual que este <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> representa.</summary>
+        <value>Um valor que representa a parte de um elemento de estilo visual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma parte é um membro discreto de uma classe de elementos do estilo visual. Por exemplo, os elementos de estilo visual que representam uma caixa de seleção, o botão de opção e o botão de ação são todas as partes consideradas da classe "BUTTON".  
+  
+ Parte valores são inteiros que variam de 1 para o número de partes definidas para uma determinada classe. Para obter mais informações sobre classes de estilo visual, peças e estados, consulte "Partes e estados" na documentação do Shell do Windows em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public int State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o estado do elemento de estilo visual que este <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> representa.</summary>
+        <value>Um valor que representa o estado de um elemento de estilo visual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma parte do estilo visual pode ter um ou mais estados visuais. Por exemplo, um elemento de estilo visual que representa um botão de opção pode estar no estado desabilitado, marcado ou desmarcado.  
+  
+ Valores de estado são números inteiros que variam de 1 para o número de estados definidos para uma determinada parte. Para obter mais informações sobre classes de estilo visual, peças e estados, consulte "Partes e estados" na documentação do Shell do Windows localizado em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

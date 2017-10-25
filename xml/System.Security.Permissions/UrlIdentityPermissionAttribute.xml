@@ -1,0 +1,136 @@
+<Type Name="UrlIdentityPermissionAttribute" FullName="System.Security.Permissions.UrlIdentityPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class UrlIdentityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit UrlIdentityPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.UrlIdentityPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as ações de segurança para <see cref="T:System.Security.Permissions.UrlIdentityPermission" /> sejam aplicadas ao código usando a segurança declarativa. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A URL completa é considerada, incluindo o protocolo (HTTP, HTTPS, FTP) e o arquivo. Por exemplo, http://www.fourthcoffee.com/process/grind.htm é uma URL completa.  
+  
+ O escopo da declaração que é permitido depende do <xref:System.Security.Permissions.SecurityAction> que é usado.  
+  
+> [!IMPORTANT]
+>  Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], as permissões de identidade não são usadas.  
+>   
+>  Nas versões do .NET Framework 1.0 e 1.1, demandas sobre as permissões de identidade são efetivas mesmo quando o assembly de chamada é totalmente confiável. Ou seja, embora o assembly de chamada tenha confiança total, uma solicitação de uma permissão de identidade falhará se o assembly não atendem aos critérios necessárias. No .NET Framework versão 2.0, demandas de permissões de identidade são ineficazes se o assembly de chamada tem confiança total. Isso garante a consistência de todas as permissões, eliminando o tratamento de permissões de identidade como um caso especial.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. Atributos de segurança são usados apenas para a segurança declarativa. Para segurança obrigatória, use a classe de permissão correspondente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlIdentityPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UrlIdentityPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores de <see cref="T:System.Security.Permissions.SecurityAction" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.UrlIdentityPermissionAttribute" /> com o <see cref="T:System.Security.Permissions.SecurityAction" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.UrlIdentityPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um novo <see cref="T:System.Security.Permissions.UrlIdentityPermission" />.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.UrlIdentityPermission" /> que corresponde a este atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só deve ser chamado pelo sistema de segurança, nunca pelo código do aplicativo.  
+  
+ Em tempo de compilação, atributos convertem declarações de segurança para um formato serializado em metadados. Dados de segurança declarativa em metadados são criados a partir da permissão que esse método retorna que corresponde a este atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.UrlIdentityPermissionAttribute.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL completa do código de chamada.</summary>
+        <value>A URL para corresponder com a URL especificada pelo host.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A URL completa é considerada, incluindo o protocolo HTTP, HTTPS, FTP e o arquivo, por exemplo: http://www.fourthcoffee.com/process/grind.htm/.  
+  
+ URLs podem ser correspondam exatamente ou por um caractere curinga na posição final, por exemplo: http://www.fourthcoffee.com/process/ *.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

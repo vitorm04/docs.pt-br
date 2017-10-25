@@ -1,0 +1,983 @@
+<Type Name="LinearGradientBrush" FullName="System.Drawing.Drawing2D.LinearGradientBrush">
+  <TypeSignature Language="C#" Value="public sealed class LinearGradientBrush : System.Drawing.Brush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LinearGradientBrush extends System.Drawing.Brush" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.LinearGradientBrush" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Brush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula um <see cref="T:System.Drawing.Brush" /> com um gradiente linear. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe encapsula gradientes duas cores e gradientes várias cores personalizadas.  
+  
+ Todos os gradientes lineares são definidos ao longo da linha especificada pela largura de um retângulo ou por dois pontos.  
+  
+ Por padrão, um gradiente linear de duas cores é uma combinação linear mesmo horizontal da cor inicial para a cor final ao longo da linha especificada. Personalizar o padrão de mesclagem usando o <xref:System.Drawing.Drawing2D.Blend> classe, o <xref:System.Drawing.Drawing2D.LinearGradientBrush.SetSigmaBellShape%2A> métodos, ou o <xref:System.Drawing.Drawing2D.LinearGradientBrush.SetBlendTriangularShape%2A> métodos. Personalizar a direção do gradiente especificando o <xref:System.Drawing.Drawing2D.LinearGradientMode> de enumeração ou o ângulo no construtor.  
+  
+ Use o <xref:System.Drawing.Drawing2D.LinearGradientBrush.InterpolationColors%2A> propriedade para criar um gradiente de várias cores.  
+  
+ O <xref:System.Drawing.Drawing2D.LinearGradientBrush.Transform%2A> propriedade especifica uma transformação geométrica local aplicada ao gradiente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um horizontal <xref:System.Drawing.Drawing2D.LinearGradientBrush>; os componentes de cor linearmente alteram conforme você mover de uma coordenada horizontal de 0 para uma coordenada horizontal de 200. Por exemplo, um ponto cuja primeira coordenada esteja a meio caminho entre 0 e 200 terá um componente azul a meio caminho entre 0 e 255. Este exemplo é projetado para uso com o Windows Forms. O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer o <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+  
+ [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.Point point1, System.Drawing.Point point2, System.Drawing.Color color1, System.Drawing.Color color2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Point point1, valuetype System.Drawing.Point point2, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.Point,System.Drawing.Point,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Drawing.Point" />
+        <Parameter Name="point2" Type="System.Drawing.Point" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Uma estrutura <see cref="T:System.Drawing.Point" /> que representa o ponto inicial do gradiente linear.</param>
+        <param name="point2">Uma estrutura <see cref="T:System.Drawing.Point" /> que representa o ponto de extremidade do gradiente linear.</param>
+        <param name="color1">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor inicial do gradiente linear.</param>
+        <param name="color2">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor final do gradiente linear.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> com os pontos e as cores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.PointF point1, System.Drawing.PointF point2, System.Drawing.Color color1, System.Drawing.Color color2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.PointF point1, valuetype System.Drawing.PointF point2, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.PointF,System.Drawing.PointF,System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Drawing.PointF" />
+        <Parameter Name="point2" Type="System.Drawing.PointF" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="point1">Uma estrutura <see cref="T:System.Drawing.PointF" /> que representa o ponto inicial do gradiente linear.</param>
+        <param name="point2">Uma estrutura <see cref="T:System.Drawing.PointF" /> que representa o ponto de extremidade do gradiente linear.</param>
+        <param name="color1">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor inicial do gradiente linear.</param>
+        <param name="color2">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor final do gradiente linear.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> com os pontos e as cores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.Rectangle rect, System.Drawing.Color color1, System.Drawing.Color color2, System.Drawing.Drawing2D.LinearGradientMode linearGradientMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, valuetype System.Drawing.Drawing2D.LinearGradientMode linearGradientMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color,System.Drawing.Drawing2D.LinearGradientMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="linearGradientMode" Type="System.Drawing.Drawing2D.LinearGradientMode" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.Rectangle" /> que especifica os limites de gradiente linear.</param>
+        <param name="color1">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor inicial do gradiente.</param>
+        <param name="color2">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor final do gradiente.</param>
+        <param name="linearGradientMode">Um elemento de enumeração <see cref="T:System.Drawing.Drawing2D.LinearGradientMode" /> que especifica a orientação do gradiente. A orientação determina os pontos inicial e final do gradiente. Por exemplo, <see langword="LinearGradientMode.ForwardDiagonal" /> especifica que o ponto inicial é o canto superior esquerdo do retângulo e o ponto final é o canto inferior direito do retângulo.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> com base em um retângulo, cores de início e fim e orientação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.Rectangle rect, System.Drawing.Color color1, System.Drawing.Color color2, float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.Rectangle" /> que especifica os limites de gradiente linear.</param>
+        <param name="color1">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor inicial do gradiente.</param>
+        <param name="color2">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor final do gradiente.</param>
+        <param name="angle">O ângulo, medido em graus no sentido horário de eixo x da linha de orientação do gradiente.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> classe com base em um retângulo, inicial e final de um ângulo de orientação e cores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os pontos ao longo de qualquer linha perpendicular à linha de orientação são da mesma cor.  
+  
+ A linha inicial perpendicular à linha de orientação e passa por um dos cantos do retângulo. Todos os pontos na linha de início são a cor inicial. Terminando linha perpendicular à linha de orientação e passa por um dos cantos do retângulo. Todos os pontos na linha final são a cor final.  
+  
+ O ângulo da linha de orientação determina quais cantos o início e término linhas de passagem. Por exemplo, se o ângulo estiver entre 0 e 90 graus, a linha inicial transmite o canto superior esquerdo e a linha final transmite o canto inferior direito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.RectangleF rect, System.Drawing.Color color1, System.Drawing.Color color2, System.Drawing.Drawing2D.LinearGradientMode linearGradientMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.RectangleF rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, valuetype System.Drawing.Drawing2D.LinearGradientMode linearGradientMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.RectangleF,System.Drawing.Color,System.Drawing.Color,System.Drawing.Drawing2D.LinearGradientMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="linearGradientMode" Type="System.Drawing.Drawing2D.LinearGradientMode" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.RectangleF" /> que especifica os limites de gradiente linear.</param>
+        <param name="color1">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor inicial do gradiente.</param>
+        <param name="color2">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor final do gradiente.</param>
+        <param name="linearGradientMode">Um elemento de enumeração <see cref="T:System.Drawing.Drawing2D.LinearGradientMode" /> que especifica a orientação do gradiente. A orientação determina os pontos inicial e final do gradiente. Por exemplo, <see langword="LinearGradientMode.ForwardDiagonal" /> especifica que o ponto inicial é o canto superior esquerdo do retângulo e o ponto final é o canto inferior direito do retângulo.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> com base em um retângulo, inicial e final de cores e um modo de orientação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.RectangleF rect, System.Drawing.Color color1, System.Drawing.Color color2, float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.RectangleF rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.RectangleF,System.Drawing.Color,System.Drawing.Color,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.RectangleF" /> que especifica os limites de gradiente linear.</param>
+        <param name="color1">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor inicial do gradiente.</param>
+        <param name="color2">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor final do gradiente.</param>
+        <param name="angle">O ângulo, medido em graus no sentido horário de eixo x da linha de orientação do gradiente.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> classe com base em um retângulo, inicial e final de um ângulo de orientação e cores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os pontos ao longo de qualquer linha perpendicular à linha de orientação são da mesma cor.  
+  
+ A linha inicial perpendicular à linha de orientação e passa por um dos cantos do retângulo. Todos os pontos na linha de início são a cor inicial. Terminando linha perpendicular à linha de orientação e passa por um dos cantos do retângulo. Todos os pontos na linha final são a cor final.  
+  
+ O ângulo da linha de orientação determina quais cantos o início e término linhas de passagem. Por exemplo, se o ângulo estiver entre 0 e 90 graus, a linha inicial transmite o canto superior esquerdo e a linha final transmite o canto inferior direito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.Rectangle rect, System.Drawing.Color color1, System.Drawing.Color color2, float angle, bool isAngleScaleable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, float32 angle, bool isAngleScaleable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.Rectangle,System.Drawing.Color,System.Drawing.Color,System.Single,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="isAngleScaleable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.Rectangle" /> que especifica os limites de gradiente linear.</param>
+        <param name="color1">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor inicial do gradiente.</param>
+        <param name="color2">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor final do gradiente.</param>
+        <param name="angle">O ângulo, medido em graus no sentido horário de eixo x da linha de orientação do gradiente.</param>
+        <param name="isAngleScaleable">Definido como <see langword="true" /> para especificar que o ângulo é afetado pela transformação associada a esta <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />; caso contrário, <see langword="false" />.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> classe com base em um retângulo, inicial e final de um ângulo de orientação e cores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os pontos ao longo de qualquer linha perpendicular à linha de orientação são da mesma cor.  
+  
+ A linha inicial perpendicular à linha de orientação e passa por um dos cantos do retângulo. Todos os pontos na linha de início são a cor inicial. Terminando linha perpendicular à linha de orientação e passa por um dos cantos do retângulo. Todos os pontos na linha final são a cor final.  
+  
+ O ângulo da linha de orientação determina quais cantos o início e término linhas de passagem. Por exemplo, se o ângulo estiver entre 0 e 90 graus, a linha inicial transmite o canto superior esquerdo e a linha final transmite o canto inferior direito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearGradientBrush (System.Drawing.RectangleF rect, System.Drawing.Color color1, System.Drawing.Color color2, float angle, bool isAngleScaleable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.RectangleF rect, valuetype System.Drawing.Color color1, valuetype System.Drawing.Color color2, float32 angle, bool isAngleScaleable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.#ctor(System.Drawing.RectangleF,System.Drawing.Color,System.Drawing.Color,System.Single,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="color1" Type="System.Drawing.Color" />
+        <Parameter Name="color2" Type="System.Drawing.Color" />
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="isAngleScaleable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.RectangleF" /> que especifica os limites de gradiente linear.</param>
+        <param name="color1">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor inicial do gradiente.</param>
+        <param name="color2">Uma estrutura <see cref="T:System.Drawing.Color" /> que representa a cor final do gradiente.</param>
+        <param name="angle">O ângulo, medido em graus no sentido horário de eixo x da linha de orientação do gradiente.</param>
+        <param name="isAngleScaleable">Definido como <see langword="true" /> para especificar que o ângulo é afetado pela transformação associada a esta <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />; caso contrário, <see langword="false" />.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> classe com base em um retângulo, inicial e final de um ângulo de orientação e cores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os pontos ao longo de qualquer linha perpendicular à linha de orientação são da mesma cor.  
+  
+ A linha inicial perpendicular à linha de orientação e passa por um dos cantos do retângulo. Todos os pontos na linha de início são a cor inicial. Terminando linha perpendicular à linha de orientação e passa por um dos cantos do retângulo. Todos os pontos na linha final são a cor final.  
+  
+ O ângulo da linha de orientação determina quais cantos o início e término linhas de passagem. Por exemplo, se o ângulo estiver entre 0 e 90 graus, a linha inicial transmite o canto superior esquerdo e a linha final transmite o canto inferior direito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Blend">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.Blend Blend { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.Blend Blend" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.Blend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.Blend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Drawing.Drawing2D.Blend" /> que especifica posições e os fatores que definem uma queda personalizada para o gradiente.</summary>
+        <value>Um <see cref="T:System.Drawing.Drawing2D.Blend" /> que representa uma queda personalizada para o gradiente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Drawing2D.Blend> contém matrizes correspondentes de posições e fatores de mesclagem. Os fatores blend especificam as porcentagens da cor inicial e final a cor a ser usada na posição correspondente. As posições são fornecidas como uma porcentagem da distância ao longo da linha de gradação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata deste <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> que esse método cria, convertido como um objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um novo <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Desenha uma elipse para a tela usando esse pincel.  
+  
+-   Clones de <xref:System.Drawing.Drawing2D.LinearGradientBrush> (`clonedLGBrush`).  
+  
+-   Desenha uma elipse na tela diretamente abaixo da primeira elipse, usando o pincel clonado.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GammaCorrection">
+      <MemberSignature Language="C#" Value="public bool GammaCorrection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GammaCorrection" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a correção gama está habilitada para este <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</summary>
+        <value>O valor é <see langword="true" /> se a correção gama está habilitada para esta <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolationColors">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.ColorBlend InterpolationColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.ColorBlend InterpolationColors" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.InterpolationColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.ColorBlend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Drawing.Drawing2D.ColorBlend" /> que define um gradiente linear multicolorido.</summary>
+        <value>Um <see cref="T:System.Drawing.Drawing2D.ColorBlend" /> que define um gradiente linear multicolorido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Drawing2D.ColorBlend> contém matrizes correspondentes de cores e de posições. As posições são valores entre 0 e 1 que especifica a porcentagem da distância ao longo da linha de gradação onde se encontra a cor correspondente.  
+  
+ A definição dessa propriedade cria um gradiente de várias cores com uma cor em cada posição ao longo da linha de gradação. A definição dessa propriedade anula todas as configurações de cor, a posição e queda anteriores para este <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinearColors">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color[] LinearColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color[] LinearColors" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.LinearColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as cores inicial e final do gradiente.</summary>
+        <value>Uma matriz de duas estruturas <see cref="T:System.Drawing.Color" /> que representa as cores inicial e final do gradiente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiplyTransform">
+      <MemberSignature Language="C#" Value="public void MultiplyTransform (System.Drawing.Drawing2D.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MultiplyTransform(class System.Drawing.Drawing2D.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">O <see cref="T:System.Drawing.Drawing2D.Matrix" /> pela qual multiplicar a transformação geométrica.</param>
+        <summary>Multiplica o <see cref="T:System.Drawing.Drawing2D.Matrix" /> que representa a transformação geométrica local deste <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> por especificado <see cref="T:System.Drawing.Drawing2D.Matrix" /> acrescentando especificado <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiplyTransform">
+      <MemberSignature Language="C#" Value="public void MultiplyTransform (System.Drawing.Drawing2D.Matrix matrix, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MultiplyTransform(class System.Drawing.Drawing2D.Matrix matrix, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">O <see cref="T:System.Drawing.Drawing2D.Matrix" /> pela qual multiplicar a transformação geométrica.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica a ordem na qual multiplicar duas matrizes.</param>
+        <summary>Multiplica o <see cref="T:System.Drawing.Drawing2D.Matrix" /> que representa a transformação geométrica local deste <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> por especificado <see cref="T:System.Drawing.Drawing2D.Matrix" /> na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um novo <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Desenha uma elipse para a tela usando esse pincel.  
+  
+-   Chamadas de <xref:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform%2A> método para transformar o <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Desenha uma elipse na tela diretamente abaixo da primeira elipse, usando o pincel transformado.  
+  
+ Observe que a elipse inferior é alongada na direção horizontal, e que o gradiente é esticado para coincidir com a nova forma.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.RectangleF Rectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.RectangleF Rectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.Rectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma região retangular que define os pontos iniciais e final do gradiente.</summary>
+        <value>Um <see cref="T:System.Drawing.RectangleF" /> estrutura que especifica o início e término pontos do gradiente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O lado esquerdo do retângulo Especifica o ponto inicial do gradiente linear e à direita do retângulo Especifica o ponto de extremidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetTransform">
+      <MemberSignature Language="C#" Value="public void ResetTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetTransform() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.ResetTransform" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o <see cref="P:System.Drawing.Drawing2D.LinearGradientBrush.Transform" /> propriedade de identidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um novo <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Desenha uma elipse para a tela usando esse pincel.  
+  
+-   Chamadas de <xref:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform%2A> método para transformar o <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Desenha uma elipse na tela diretamente abaixo da primeira elipse, usando o pincel transformado.  
+  
+-   Redefine a transformação.  
+  
+-   Desenha uma elipse terceira para a tela abaixo as duas primeiras.  
+  
+ Observe que a elipse mais baixa é desenhada do mesmo tamanho como a primeira e que, devido à chamada para o <xref:System.Drawing.Drawing2D.LinearGradientBrush.ResetTransform%2A> método, o gradiente foi reduzido para corresponder.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateTransform">
+      <MemberSignature Language="C#" Value="public void RotateTransform (float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateTransform(float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.RotateTransform(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="angle">O ângulo de rotação.</param>
+        <summary>Gira a transformação geométrica local pelo valor especificado. Esse método precede a rotação à transformação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.LinearGradientBrush.RotateTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateTransform">
+      <MemberSignature Language="C#" Value="public void RotateTransform (float angle, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateTransform(float32 angle, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="angle">O ângulo de rotação.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica se deve ser acrescentam ou precedem a matriz de rotação.</param>
+        <summary>Gira a transformação geométrica local a quantidade especificada na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código  
+  
+-   Cria um novo <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Desenha uma elipse para a tela usando esse pincel.  
+  
+-   Gira o <xref:System.Drawing.Drawing2D.LinearGradientBrush> 45 graus chamando o <xref:System.Drawing.Drawing2D.LinearGradientBrush.RotateTransform%2A> método.  
+  
+-   Desenha uma elipse na tela diretamente abaixo da elipse primeiro, usando o pincel girado.  
+  
+ Observe que o gradiente da elipse inferior é em um ângulo de 45 graus para o eixo x da elipse superior. Observe também que uma chamada para o <xref:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform%2A> método é usado para justificar a borda esquerda do preenchimento de gradiente com a borda esquerda da elipse inferior.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleTransform">
+      <MemberSignature Language="C#" Value="public void ScaleTransform (float sx, float sy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleTransform(float32 sx, float32 sy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.ScaleTransform(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sx" Type="System.Single" />
+        <Parameter Name="sy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="sx">O valor pelo qual a escala para a transformação a direção do eixo x.</param>
+        <param name="sy">O valor pelo qual a escala para a transformação a direção do eixo y.</param>
+        <summary>Escalas local Geométrico transform os valores especificados. Esse método precede a matriz de dimensionamento para a transformação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.LinearGradientBrush.ScaleTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleTransform">
+      <MemberSignature Language="C#" Value="public void ScaleTransform (float sx, float sy, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleTransform(float32 sx, float32 sy, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sx" Type="System.Single" />
+        <Parameter Name="sy" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="sx">O valor pelo qual a escala para a transformação a direção do eixo x.</param>
+        <param name="sy">O valor pelo qual a escala para a transformação a direção do eixo y.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica se deve ser acrescentam ou precedem a matriz de escala.</param>
+        <summary>Escalas local Geométrico transform os valores especificados na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um novo <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Desenha uma elipse à tela usando esse pincel.  
+  
+-   Dimensiona o <xref:System.Drawing.Drawing2D.LinearGradientBrush> por um fator de dois no eixo x.  
+  
+-   Desenha uma elipse na tela diretamente abaixo da elipse primeiro, usando o pincel em escala.  
+  
+ Observe que o gradiente da elipse inferior é ampliado por um fator de dois. Observe também que uma chamada para o <xref:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform%2A> método é usado para justificar a borda esquerda do preenchimento de gradiente com a borda esquerda da elipse.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBlendTriangularShape">
+      <MemberSignature Language="C#" Value="public void SetBlendTriangularShape (float focus);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBlendTriangularShape(float32 focus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.SetBlendTriangularShape(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Um valor entre 0 e 1 que especifica o centro do gradiente (o ponto em que o gradiente é composto de apenas a cor final).</param>
+        <summary>Cria um gradiente linear com uma cor central e uma queda linear para uma única cor em ambas as extremidades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Especifica um `focus`, que é o ponto em que o gradiente é composto apenas da cor final. O `focus` parâmetro representa um local como uma proporção da distância ao longo da linha de gradação. Gradiente fica para a cor inicial linearmente para ambos os lados.  
+  
+   
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.LinearGradientBrush.SetBlendTriangularShape%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBlendTriangularShape">
+      <MemberSignature Language="C#" Value="public void SetBlendTriangularShape (float focus, float scale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBlendTriangularShape(float32 focus, float32 scale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.SetBlendTriangularShape(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+        <Parameter Name="scale" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Um valor entre 0 e 1 que especifica o centro do gradiente (o ponto em que o gradiente é composto de apenas a cor final).</param>
+        <param name="scale">Um valor de 0 through1 que especifica a rapidez com que a queda de cores da cor inicial para <c>foco</c> (terminando cor)</param>
+        <summary>Cria um gradiente linear com uma cor central e uma queda linear para uma única cor em ambas as extremidades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Especifica um `focus`, que é o ponto em que o gradiente é composto apenas da cor final. O `focus` parâmetro representa um local como uma proporção da distância ao longo da linha de gradação. Gradiente fica para a cor inicial linearmente para ambos os lados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um novo <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Usa esse pincel para desenhar uma elipse na tela que tenha uma transição linear, esquerda para direita de cores.  
+  
+-   Transforma o <xref:System.Drawing.Drawing2D.LinearGradientBrush> em uma forma triangular com seu horário de pico no centro.  
+  
+-   Desenha uma elipse segundo para a tela usando o pincel transformado.  
+  
+ Observe que o gradiente da elipse inferior faz a transição de azul para vermelho e, em seguida, voltar para azul.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSigmaBellShape">
+      <MemberSignature Language="C#" Value="public void SetSigmaBellShape (float focus);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSigmaBellShape(float32 focus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.SetSigmaBellShape(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Um valor entre 0 e 1 que especifica o centro do gradiente (o ponto onde a cor inicial e final de cor são mesclados igualmente).</param>
+        <summary>Cria uma queda de gradiente com base em uma curva em forma de sino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Especifica um `focus`, que é o ponto em que o gradiente é composto apenas da cor final. O `focus` parâmetro representa um local como uma proporção da distância ao longo da linha de gradação. Gradiente fica para a cor inicial com base em uma forma de curva de sino (distribuição normal) para um dos lados.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo, consulte<xref:System.Drawing.Drawing2D.LinearGradientBrush.SetSigmaBellShape%2A>`.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSigmaBellShape">
+      <MemberSignature Language="C#" Value="public void SetSigmaBellShape (float focus, float scale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSigmaBellShape(float32 focus, float32 scale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.SetSigmaBellShape(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+        <Parameter Name="scale" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Um valor entre 0 e 1 que especifica o centro do gradiente (o ponto em que o gradiente é composto de apenas a cor final).</param>
+        <param name="scale">Um valor entre 0 e 1 que especifica a rapidez com que a queda de cores do <c>foco</c>.</param>
+        <summary>Cria uma queda de gradiente com base em uma curva em forma de sino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Especifica um `focus`, que é o ponto em que o gradiente é composto apenas da cor final. O `focus` parâmetro representa um local como uma proporção da distância ao longo da linha de gradação. Gradiente fica para a cor inicial com base em uma forma de curva de sino (distribuição normal) para um dos lados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um novo <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Usa esse pincel para desenhar uma elipse na tela que tenha uma transição linear, esquerda para direita de cores.  
+  
+-   Transforma o <xref:System.Drawing.Drawing2D.LinearGradientBrush> com uma curva de sino em forma com um pico no centro.  
+  
+-   Desenha uma elipse segundo para a tela usando o pincel em forma de sino.  
+  
+ Observe que o gradiente da elipse inferior faz a transição de azul para vermelho e, em seguida, voltar para azul.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.Matrix Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.Matrix Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cópia <see cref="T:System.Drawing.Drawing2D.Matrix" /> que define uma transformação geométrica local para este <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</summary>
+        <value>Uma cópia do <see cref="T:System.Drawing.Drawing2D.Matrix" /> que define uma transformação geométrica que só se aplica a preenchimentos desenhados com isso <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma transformação geométrica pode ser usada para traduzir, dimensionar, girar ou inclinar o preenchimento de gradiente. Porque a matriz retornada e pela <xref:System.Drawing.Drawing2D.LinearGradientBrush.Transform%2A> é uma cópia da transformação geométrica do pincel, descarte da matriz quando você não precisa mais dela.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateTransform">
+      <MemberSignature Language="C#" Value="public void TranslateTransform (float dx, float dy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TranslateTransform(float32 dx, float32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="dx">O valor da conversão em x.</param>
+        <param name="dy">O valor da conversão em y.</param>
+        <summary>Converte a transformação geométrica local, as dimensões especificadas. Esse método precede a tradução para a transformação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateTransform">
+      <MemberSignature Language="C#" Value="public void TranslateTransform (float dx, float dy, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TranslateTransform(float32 dx, float32 dy, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="dx">O valor da conversão em x.</param>
+        <param name="dy">O valor da conversão em y.</param>
+        <param name="order">A ordem (preceda ou acrescentar) na qual aplicar a conversão.</param>
+        <summary>Converte a transformação geométrica local, as dimensões especificadas na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um novo <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+  
+-   Usa esse pincel para desenhar um retângulo para a tela que possui uma transição linear, esquerda para direita de cores.  
+  
+-   Gira o <xref:System.Drawing.Drawing2D.LinearGradientBrush> 90 graus e dimensiona o gradiente.  
+  
+-   Desenha o retângulo, com gradiente girado e escala, para a tela.  
+  
+-   Converte o retângulo para que ele tem um gradiente linear executando de cima para baixo.  
+  
+-   Desenha o retângulo traduzido para a tela.  
+  
+ Observe que há três retângulos exibido a uma superior mostrando da esquerda para direita gradiente, um meio mostrando gradiente girado e escala e a inferior mostrando o gradiente final, traduzido.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicLinearGradientBrush#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicLinearGradientBrush#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicLinearGradientBrush/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapMode">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.WrapMode WrapMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Drawing2D.WrapMode WrapMode" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.LinearGradientBrush.WrapMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.WrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Drawing.Drawing2D.WrapMode" /> enumeração que indica o modo de quebra para este <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Drawing2D.WrapMode" /> que especifica como preenchimentos desenhados com essa <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> colocadas lado a lado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

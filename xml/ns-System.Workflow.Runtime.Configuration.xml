@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.Runtime.Configuration">
+  <Docs>
+    <summary>Contém classes que são usadas para configurar o mecanismo de tempo de execução do fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

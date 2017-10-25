@@ -1,0 +1,125 @@
+<Type Name="StringTrimming" FullName="System.Drawing.StringTrimming">
+  <TypeSignature Language="C#" Value="public enum StringTrimming" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StringTrimming extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.StringTrimming" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como cortar caracteres de uma cadeia de caracteres que não caiba completamente em uma forma de layout.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Drawing.StringFormat.Trimming%2A> propriedade e como usar o <xref:System.Drawing.StringTrimming> enumeração. Este exemplo é projetado para ser usado com um Windows Form. Cole este código em um formulário e chame o método de ShowStringTrimming ao lidar com o formulário `Paint` passagem de eventos, e como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.Misc2#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.Misc2#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.Misc2#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Character">
+      <MemberSignature Language="C#" Value="Character" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringTrimming Character = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringTrimming.Character" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringTrimming</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o texto é cortado até o caractere mais próximo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EllipsisCharacter">
+      <MemberSignature Language="C#" Value="EllipsisCharacter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringTrimming EllipsisCharacter = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringTrimming.EllipsisCharacter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringTrimming</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o texto é cortado até o caractere mais próximo e um sinal de reticências é inserido no final de uma linha cortada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EllipsisPath">
+      <MemberSignature Language="C#" Value="EllipsisPath" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringTrimming EllipsisPath = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringTrimming.EllipsisPath" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringTrimming</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O centro é removido das linhas cortadas e substituído por um sinal de reticências. O algoritmo mantém o máximo possível do último segmento delimitado por barra "/" da linha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EllipsisWord">
+      <MemberSignature Language="C#" Value="EllipsisWord" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringTrimming EllipsisWord = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringTrimming.EllipsisWord" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringTrimming</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o texto é cortado até a palavra mais próxima e um sinal de reticências é inserido no final de uma linha cortada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringTrimming None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringTrimming.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringTrimming</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não especifica nenhum corte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Word">
+      <MemberSignature Language="C#" Value="Word" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringTrimming Word = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringTrimming.Word" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringTrimming</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o texto é cortado até a palavra mais próxima.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

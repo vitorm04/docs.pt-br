@@ -1,0 +1,109 @@
+<Type Name="TextChange" FullName="System.Windows.Controls.TextChange">
+  <TypeSignature Language="C#" Value="public class TextChange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextChange extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.TextChange" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações sobre as alterações que ocorrem no evento <see cref="E:System.Windows.Controls.Primitives.TextBoxBase.TextChanged" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.TextChange> objeto Especifica onde uma alteração ocorreu em um <xref:System.Windows.Controls.TextBox> ou <xref:System.Windows.Controls.RichTextBox>. O <xref:System.Windows.Controls.TextChange.Offset%2A> propriedade especifica a posição da alteração de <xref:System.Windows.Controls.TextChange.AddedLength%2A> propriedade especifica quantas símbolos foram adicionados e o <xref:System.Windows.Controls.TextChange.RemovedLength%2A> propriedade especifica quantas símbolos foram removidos. Quando a alteração ocorre em um <xref:System.Windows.Controls.TextBox>, um símbolo é um caractere único.  Quando ocorre uma alteração em um <xref:System.Windows.Controls.RichTextBox>, um símbolo é um dos seguintes:  
+  
+-   Uma abertura ou marca de fechamento para um <xref:System.Windows.Documents.TextElement> elemento.  
+  
+-   Um <xref:System.Windows.UIElement> elemento contido em um <xref:System.Windows.Documents.InlineUIContainer> ou <xref:System.Windows.Documents.BlockUIContainer>.  Observe que essa um <xref:System.Windows.UIElement> sempre são contados como exatamente um símbolo; qualquer conteúdo adicional ou elementos contidos pela <xref:System.Windows.UIElement> não são contadas como símbolos.  
+  
+-   Cada 16-bit [!INCLUDE[TLA#tla_unicode](~/includes/tlasharptla-unicode-md.md)] caracteres dentro de um texto <xref:System.Windows.Documents.Run> elemento.  
+  
+ <xref:System.Windows.Controls.TextChange>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddedLength">
+      <MemberSignature Language="C#" Value="public int AddedLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AddedLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextChange.AddedLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de símbolos que foram adicionados ao controle.</summary>
+        <value>O número de símbolos que foram adicionados ao controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.TextChange>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public int Offset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextChange.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição em que a alteração ocorreu.</summary>
+        <value>A posição em que a alteração ocorreu.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.TextChange>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedLength">
+      <MemberSignature Language="C#" Value="public int RemovedLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RemovedLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextChange.RemovedLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de símbolos que foram removidos do controle.</summary>
+        <value>O número de símbolos que foram removidos do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.TextChange>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Automation.Text">
+  <Docs>
+    <summary>Contém as enumerações que especificam a formatação de texto e o comportamento relacionado para automação de interface do usuário do Windows Presentation Foundation (WPF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

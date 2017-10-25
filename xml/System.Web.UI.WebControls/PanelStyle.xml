@@ -1,0 +1,380 @@
+<Type Name="PanelStyle" FullName="System.Web.UI.WebControls.PanelStyle">
+  <TypeSignature Language="C#" Value="public class PanelStyle : System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PanelStyle extends System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.PanelStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Style</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o estilo de um <see cref="T:System.Web.UI.WebControls.Panel" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PanelStyle> classe é usada para representar as configurações de estilo para um painel de controle. Ele encapsula as propriedades que controlam a aparência de um painel e podem ser aplicadas a vários controles de painel para fornecer uma aparência comum.  
+  
+ Você pode especificar uma imagem a ser exibida no plano de fundo do painel, definindo o <xref:System.Web.UI.WebControls.PanelStyle.BackImageUrl%2A> propriedade. O alinhamento horizontal do conteúdo do painel é indicado pelo <xref:System.Web.UI.WebControls.PanelStyle.HorizontalAlign%2A> propriedade. A direção dos controles que contêm o texto dentro do painel de controle pode ser especificada definindo a <xref:System.Web.UI.WebControls.PanelStyle.Direction%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.PanelStyle> objeto e definindo suas propriedades. Este exemplo tem duas partes:  
+  
+ Uma classe parcial, `PanelStylecs_aspx`, que demonstra como criar um novo <xref:System.Web.UI.WebControls.PanelStyle> objeto e definindo suas propriedades.  
+  
+ Uma página de Web Forms que usa o `PanelStylecs_aspx` exemplo de como seu arquivo code-behind.  
+  
+ A primeira parte do exemplo demonstra como criar um <xref:System.Web.UI.WebControls.PanelStyle> objeto, `myPanelStyle`e defina suas propriedades. O <xref:System.Web.UI.WebControls.WebControl.ApplyStyle%2A> método é chamado para ambos os `Panel1` painel e o `Panel2` painel, e `myPanelStyle` é aplicada a ambos.  
+  
+ [!code-csharp[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/CS/panelstyle.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/VB/panelstyle.vb#2)]  
+  
+ A segunda parte do exemplo mostra um arquivo. aspx que é usado com o exemplo anterior.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.PanelStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/CS/panelstylecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.PanelStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/VB/panelstylevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PanelStyle (System.Web.UI.StateBag bag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.StateBag bag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PanelStyle.#ctor(System.Web.UI.StateBag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bag" Type="System.Web.UI.StateBag" />
+      </Parameters>
+      <Docs>
+        <param name="bag">Um <see cref="T:System.Web.UI.StateBag" /> objeto que representa o recipiente de estado para armazenar informações de estilo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.PanelStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string BackImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PanelStyle.BackImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da imagem de tela de fundo do controle do painel.</summary>
+        <value>A URL da imagem de tela de fundo para o controle do painel. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PanelStyle.BackImageUrl%2A> propriedade especifica a URL da imagem do plano de fundo para o controle de painel. Para esta propriedade funcione, um arquivo de imagem deve existir no local especificado. Se o arquivo de imagem especificado não estiver acessível, o controle de painel é exibido sem uma imagem de plano de fundo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir aplica-se a mesma imagem de plano de fundo para dois controles de painel, `Panel1` e `Panel2`. Para esse exemplo funcione corretamente, você deve fornecer sua própria imagem. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.PanelStyle> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/CS/panelstyle.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/VB/panelstyle.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A propriedade <see cref="P:System.Web.UI.WebControls.PanelStyle.BackImageUrl" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PanelStyle.CopyFrom(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Um <see cref="T:System.Web.UI.WebControls.Style" /> objeto que representa as configurações de estilo para copiar.</param>
+        <summary>Duplica as propriedades de estilo do <see cref="T:System.Web.UI.WebControls.Style" /> objeto para a instância atual do <see cref="T:System.Web.UI.WebControls.PanelStyle" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.PanelStyle.CopyFrom%2A> método para duplicar as configurações de estilo especificada <xref:System.Web.UI.WebControls.Style> objeto para a instância atual do <xref:System.Web.UI.WebControls.PanelStyle> classe.  
+  
+ O <xref:System.Web.UI.WebControls.PanelStyle.CopyFrom%2A> método copia os elementos não estão em branco especificado <xref:System.Web.UI.WebControls.Style> objeto `s`. Qualquer elemento que é definido em `s` substitui qualquer elemento que é definido no <xref:System.Web.UI.WebControls.PanelStyle> objeto. Para substituir somente as configurações de estilo deixadas em branco no <xref:System.Web.UI.WebControls.PanelStyle> de objeto, use o <xref:System.Web.UI.WebControls.PanelStyle.MergeWith%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ContentDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ContentDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PanelStyle.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção na qual exibir controles que incluem texto em um painel de controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.ContentDirection" />. O padrão é <see cref="F:System.Web.UI.WebControls.ContentDirection.NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PanelStyle.Direction%2A> propriedade especifica a direção na qual exibir controles que incluem texto em um painel de controle.  
+  
+ O <xref:System.Web.UI.WebControls.PanelStyle.Direction%2A> propriedade é definida usando um do <xref:System.Web.UI.WebControls.ContentDirection> valores. A tabela a seguir lista os valores possíveis.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|`NotSet`|A direção de conteúdo não está definida.|  
+|`LeftToRight`|Controles filho que incluem texto são exibidos da esquerda para a direita.|  
+|`RightToLeft`|Controles filho que incluem texto são exibidos da direita para esquerda.|  
+  
+ Se você especificar <xref:System.Web.UI.WebControls.ContentDirection.LeftToRight>, controles filho que incluam texto de exibição da esquerda para a direita. Se você especificar <xref:System.Web.UI.WebControls.ContentDirection.RightToLeft>, controles filho que incluem texto exibem da direita para esquerda. Use <xref:System.Web.UI.WebControls.ContentDirection.RightToLeft> para exibir o texto para idiomas que são escritos da direita para a esquerda, como árabe ou hebraico.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.PanelStyle.Direction%2A> propriedades de dois controles de painel, `Panel1` e `Panel2`, para o `ContentDirection.LeftToRight` valor de enumeração. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.PanelStyle> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/CS/panelstyle.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/VB/panelstyle.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A direção não é um do <see cref="T:System.Web.UI.WebControls.ContentDirection" /> valores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.HorizontalAlign HorizontalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HorizontalAlign HorizontalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PanelStyle.HorizontalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HorizontalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento horizontal do conteúdo dentro de um painel de controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.HorizontalAlign" />. O padrão é <see cref="F:System.Web.UI.WebControls.HorizontalAlign.NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PanelStyle.HorizontalAlign%2A> propriedade especifica o alinhamento horizontal do conteúdo dentro de um painel de controle.  
+  
+ O <xref:System.Web.UI.WebControls.PanelStyle.HorizontalAlign%2A> propriedade é definida usando um do <xref:System.Web.UI.WebControls.HorizontalAlign> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|`NotSet`|O alinhamento horizontal não foi definido.|  
+|`Left`|O conteúdo do painel é alinhado à esquerda.|  
+|`Center`|O conteúdo do painel está centralizado.|  
+|`Right`|O conteúdo do painel é alinhado à direita.|  
+  
+> [!NOTE]
+>  . Se o <xref:System.Web.UI.WebControls.PanelStyle.HorizontalAlign%2A> está definida como <xref:System.Web.UI.WebControls.HorizontalAlign.NotSet> , mas a propriedade é definida no controle que contém o controle de painel, a configuração é herdada do controle que contém.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.PanelStyle.HorizontalAlign%2A> propriedades de dois controles de painel, `Panel1` e `Panel2`, para o `HorizontalAlign.Center` valor de enumeração. Para um arquivo. aspx que pode ser usado para executar o exemplo, consulte o <xref:System.Web.UI.WebControls.PanelStyle> tópico.  
+  
+ [!code-csharp[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/CS/panelstyle.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/VB/panelstyle.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O alinhamento horizontal não é um dos valores <see cref="T:System.Web.UI.WebControls.HorizontalAlign" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public override void MergeWith (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MergeWith(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PanelStyle.MergeWith(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Um <see cref="T:System.Web.UI.WebControls.Style" /> objeto que representa as configurações de estilo para combinar com a <see cref="T:System.Web.UI.WebControls.PanelStyle" /> objeto.</param>
+        <summary>Combina as configurações de estilo especificada <see cref="T:System.Web.UI.WebControls.Style" /> objeto com a instância atual do <see cref="T:System.Web.UI.WebControls.PanelStyle" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.PanelStyle.MergeWith%2A> método para combinar as configurações de estilo especificada <xref:System.Web.UI.WebControls.Style> objeto com a instância atual do <xref:System.Web.UI.WebControls.PanelStyle> classe.  
+  
+ O <xref:System.Web.UI.WebControls.PanelStyle.MergeWith%2A> método copia os elementos não estão em branco especificado <xref:System.Web.UI.WebControls.Style> objeto, `s`, mas não substitui as configurações de estilo existentes no <xref:System.Web.UI.WebControls.PanelStyle> objeto. Para substituir as configurações de estilo de <xref:System.Web.UI.WebControls.PanelStyle> objeto com as configurações de estilo em `s`, use o <xref:System.Web.UI.WebControls.PanelStyle.CopyFrom%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PanelStyle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove as definições de estilo definido do <see cref="T:System.Web.UI.WebControls.PanelStyle" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para remover todas as configurações de estilo definido do <xref:System.Web.UI.WebControls.PanelStyle> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollBars">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ScrollBars ScrollBars { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ScrollBars ScrollBars" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PanelStyle.ScrollBars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a visibilidade e a posição das barras de rolagem em um painel de controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.ScrollBars" />. O padrão é <see cref="F:System.Web.UI.WebControls.ScrollBars.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PanelStyle.ScrollBars%2A> propriedade especifica a visibilidade e a posição das barras de rolagem em um painel de controle.  
+  
+ O <xref:System.Web.UI.WebControls.PanelStyle.ScrollBars%2A> propriedade é definida usando um do <xref:System.Web.UI.WebControls.ScrollBars> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|`None`|Nenhuma barra de rolagem é mostrada.|  
+|`Horizontal`|Somente uma barra de rolagem horizontal é mostrada.|  
+|`Vertical`|Somente uma barra de rolagem vertical é mostrada.|  
+|`Both`|As barras de rolagem horizontais e verticais são mostradas.|  
+|`Auto`|Se necessário, horizontal, vertical, ou ambas as barras de rolagem são mostrados. Caso contrário, nenhuma barra de rolagem é mostrada.|  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.PanelStyle.ScrollBars%2A> propriedades de dois controles de painel, `Panel1` e `Panel2`, para o `ScrollBars.Both` valor de enumeração. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.PanelStyle> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/CS/panelstyle.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/VB/panelstyle.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade <see cref="P:System.Web.UI.WebControls.PanelStyle.ScrollBars" /> não é um dos valores <see cref="T:System.Web.UI.WebControls.ScrollBars" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public virtual bool Wrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrap" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PanelStyle.Wrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o conteúdo será quebrado dentro do painel.</summary>
+        <value>
+          <see langword="true" /> se o conteúdo for quebrado dentro do painel; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PanelStyle.Wrap%2A> propriedade indica se o conteúdo quebra dentro do painel. Quando o <xref:System.Web.UI.WebControls.PanelStyle.Wrap%2A> está definida como `false` e <xref:System.Web.UI.WebControls.PanelStyle.ScrollBars%2A> está definida como <xref:System.Web.UI.WebControls.ScrollBars.Auto>, se o conteúdo do painel é maior do que o que caberá no painel, o conteúdo do painel será exibido em uma linha com uma barra de rolagem horizontal. Quando o <xref:System.Web.UI.WebControls.PanelStyle.Wrap%2A> está definida como `false` e <xref:System.Web.UI.WebControls.PanelStyle.ScrollBars%2A> está definida como <xref:System.Web.UI.WebControls.ScrollBars.None>, o painel será estendido e se for necessário a página da Web terá uma barra de rolagem horizontal.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.PanelStyle.Wrap%2A> propriedade `false` para dois controles do painel `Panel1` e `Panel2`. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.PanelStyle> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/CS/panelstyle.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.PanelStyle#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.PanelStyle/VB/panelstyle.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

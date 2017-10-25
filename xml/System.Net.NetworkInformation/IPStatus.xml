@@ -1,0 +1,670 @@
+<Type Name="IPStatus" FullName="System.Net.NetworkInformation.IPStatus">
+  <TypeSignature Language="C#" Value="public enum IPStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IPStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.IPStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Ping</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Relata o status de envio de uma mensagem de eco do protocolo ICMP para um computador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.Ping> classe usa os valores nesta enumeração para definir o <xref:System.Net.NetworkInformation.PingReply.Status%2A?displayProperty=nameWithType> propriedade. O <xref:System.Net.NetworkInformation.Ping> classe retorna <xref:System.Net.NetworkInformation.PingReply> objetos quando você chama o <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> ou <xref:System.Net.NetworkInformation.Ping.SendAsync%2A?displayProperty=nameWithType> métodos para verificar se você pode acessar um computador pela rede.  
+  
+> [!WARNING]
+>  Os valores de enumeração DestinationProhibited e DestinationProtocolUnreachable têm o mesmo valor numérico. Isso é possível porque DestinationProhibited se aplica somente ao IPv6 e DestinationProtocolUnreachable se aplica somente IPv4.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia uma mensagem de eco ICMP e verifica o status.  
+  
+ [!code-cpp[NclPingSync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingSync/CPP/syncping.cpp#1)]
+ [!code-csharp[NclPingSync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingSync/CS/syncping.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BadDestination">
+      <MemberSignature Language="C#" Value="BadDestination" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus BadDestination = int32(11018)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.BadDestination" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o endereço IP de destino não pode receber solicitações de eco ICMP ou nunca deve aparecer no campo de endereço de destino de qualquer datagrama IP. Por exemplo, chamar <see cref="Overload:System.Net.NetworkInformation.Ping.Send" /> e especificar o endereço IP "000.0.0.0" retorna esse status.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadHeader">
+      <MemberSignature Language="C#" Value="BadHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus BadHeader = int32(11042)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.BadHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o cabeçalho é inválido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadOption">
+      <MemberSignature Language="C#" Value="BadOption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus BadOption = int32(11007)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.BadOption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque ela contém uma opção inválida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadRoute">
+      <MemberSignature Language="C#" Value="BadRoute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus BadRoute = int32(11012)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.BadRoute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque não há nenhuma rota válida entre os computadores de origem e de destino.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationHostUnreachable">
+      <MemberSignature Language="C#" Value="DestinationHostUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationHostUnreachable = int32(11003)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationHostUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o computador de destino não está acessível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationNetworkUnreachable">
+      <MemberSignature Language="C#" Value="DestinationNetworkUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationNetworkUnreachable = int32(11002)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationNetworkUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque a rede que contém o computador de destino não está acessível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationPortUnreachable">
+      <MemberSignature Language="C#" Value="DestinationPortUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationPortUnreachable = int32(11005)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationPortUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque a porta no computador de destino não está disponível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationProhibited">
+      <MemberSignature Language="C#" Value="DestinationProhibited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationProhibited = int32(11004)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationProhibited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMPv6 falhou porque o contato com o computador de destino é proibido administrativamente. Esse valor se aplica somente ao IPv6.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationProtocolUnreachable">
+      <MemberSignature Language="C#" Value="DestinationProtocolUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationProtocolUnreachable = int32(11004)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationProtocolUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o computador de destino especificado em uma mensagem de eco ICMP está inacessível porque ele não dá suporte ao protocolo do pacote. Esse valor se aplica somente ao IPv4. Esse valor é descrito no IETF RFC 1812 como Comunicação Proibida Administrativamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationScopeMismatch">
+      <MemberSignature Language="C#" Value="DestinationScopeMismatch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationScopeMismatch = int32(11045)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationScopeMismatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o endereço de origem e o endereço de destino especificados em uma mensagem de eco ICMP não estão no mesmo escopo. Isso geralmente é causado por um roteador encaminhando um pacote usando uma interface que está fora do escopo do endereço de origem. Os escopos de endereço (vínculo local, site local e escopo global) determinam onde na rede um endereço é válido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationUnreachable">
+      <MemberSignature Language="C#" Value="DestinationUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus DestinationUnreachable = int32(11040)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.DestinationUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o computador de destino especificado em uma mensagem de eco ICMP está inacessível, a causa exata do problema é desconhecida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HardwareError">
+      <MemberSignature Language="C#" Value="HardwareError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus HardwareError = int32(11008)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.HardwareError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou devido a um erro de hardware.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IcmpError">
+      <MemberSignature Language="C#" Value="IcmpError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus IcmpError = int32(11044)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.IcmpError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou devido a um erro de protocolo ICMP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoResources">
+      <MemberSignature Language="C#" Value="NoResources" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus NoResources = int32(11006)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.NoResources" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou devido a recursos de rede insuficientes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PacketTooBig">
+      <MemberSignature Language="C#" Value="PacketTooBig" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus PacketTooBig = int32(11009)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.PacketTooBig" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o pacote que contém a solicitação é maior do que a MTU (Unidade Máxima de Transmissão) de um nó (roteador ou gateway) localizado entre a origem e o destino. A MTU define o tamanho máximo de um pacote transmissível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterProblem">
+      <MemberSignature Language="C#" Value="ParameterProblem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus ParameterProblem = int32(11015)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.ParameterProblem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque um nó (roteador ou gateway) encontrou problemas ao processar o cabeçalho do pacote. Este será o status se, por exemplo, o cabeçalho contiver dados de campo inválidos ou uma opção não reconhecida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceQuench">
+      <MemberSignature Language="C#" Value="SourceQuench" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus SourceQuench = int32(11016)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.SourceQuench" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o pacote foi descartado. Isso ocorre quando a fila de saída do computador de origem tem espaço de armazenamento insuficiente ou quando os pacotes chegam ao destino rápido demais para serem processados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP foi bem-sucedida, foi recebida uma resposta de eco ICMP. Quando você obtém esse código de status, as outras propriedades <see cref="T:System.Net.NetworkInformation.PingReply" /> contêm dados válidos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TimedOut">
+      <MemberSignature Language="C#" Value="TimedOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus TimedOut = int32(11010)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.TimedOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A resposta de eco do ICMP não foi recebida dentro do tempo alocado. O tempo padrão permitido para respostas é 5 segundos. Você pode alterar esse valor usando o <see cref="Overload:System.Net.NetworkInformation.Ping.Send" /> ou <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> métodos que usam um <paramref name="timeout" /> parâmetro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeExceeded">
+      <MemberSignature Language="C#" Value="TimeExceeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus TimeExceeded = int32(11041)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.TimeExceeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque seu valor de TTL (vida útil) chegou a zero, fazendo o nó de encaminhamento (roteador ou gateway) descartar o pacote.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TtlExpired">
+      <MemberSignature Language="C#" Value="TtlExpired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus TtlExpired = int32(11013)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.TtlExpired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque seu valor de TTL (vida útil) chegou a zero, fazendo o nó de encaminhamento (roteador ou gateway) descartar o pacote.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TtlReassemblyTimeExceeded">
+      <MemberSignature Language="C#" Value="TtlReassemblyTimeExceeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus TtlReassemblyTimeExceeded = int32(11014)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.TtlReassemblyTimeExceeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o pacote foi dividido em fragmentos para transmissão e todos os fragmentos não foram recebidos dentro do tempo alocado para a remontagem. O RFC 2460 (disponível em www.ietf.org) especifica 60 segundos como o limite de tempo no qual todos os fragmentos de pacote devem ser recebidos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou por motivo desconhecido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnrecognizedNextHeader">
+      <MemberSignature Language="C#" Value="UnrecognizedNextHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.IPStatus UnrecognizedNextHeader = int32(11043)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.IPStatus.UnrecognizedNextHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A solicitação de eco ICMP falhou porque o campo Próximo Cabeçalho não contém um valor reconhecido. O campo Próximo Cabeçalho indica o tipo de cabeçalho de extensão (se houver) ou o protocolo acima da camada IP, por exemplo, TCP ou UDP.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

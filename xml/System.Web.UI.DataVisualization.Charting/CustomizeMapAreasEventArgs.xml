@@ -1,0 +1,79 @@
+<Type Name="CustomizeMapAreasEventArgs" FullName="System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs">
+  <TypeSignature Language="C#" Value="public class CustomizeMapAreasEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomizeMapAreasEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento CustomizeMapAreas o <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece dados para o <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeMapAreas> eventos do controle de gráfico.  
+  
+ A única propriedade dessa classe é o <xref:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems%2A>propriedade s, que permite aos desenvolvedores:  
+  
+-   Excluir ou personalizar áreas de mapa que foram criadas para um objeto de gráfico. qualquer <xref:System.Web.UI.DataVisualization.Charting.DataPoint>, <xref:System.Web.UI.DataVisualization.Charting.Series>, <xref:System.Web.UI.DataVisualization.Charting.LegendItem> ou <xref:System.Web.UI.DataVisualization.Charting.StripLine> objeto que tem uma não-vazia `Url`, `MapAreaAttributes` ou `ToolTip` propriedade terá um objeto da área de mapa associado.  
+  
+-   Adicione áreas de mapa personalizado que tenham uma forma definida pelo usuário e as coordenadas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomizeMapAreasEventArgs (System.Web.UI.DataVisualization.Charting.MapAreasCollection areaItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.DataVisualization.Charting.MapAreasCollection areaItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.#ctor(System.Web.UI.DataVisualization.Charting.MapAreasCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="areaItems" Type="System.Web.UI.DataVisualization.Charting.MapAreasCollection" />
+      </Parameters>
+      <Docs>
+        <param name="areaItems">Uma coleção de áreas de mapa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs" /> classe com a coleção de áreas do mapa especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapAreaItems">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.MapAreasCollection MapAreaItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.MapAreasCollection MapAreaItems" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.MapAreasCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Web.UI.DataVisualization.Charting.MapAreasCollection" /> objeto. Pode ser usado para remover ou modificar áreas do mapa que correspondem a um objeto de gráfico, ou para adicionar as áreas de mapa personalizado.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.DataVisualization.Charting.MapAreasCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você:  
+  
+-   Excluir ou personalizar áreas de mapa que foram criadas para um objeto de gráfico. qualquer <xref:System.Web.UI.DataVisualization.Charting.DataPoint>, <xref:System.Web.UI.DataVisualization.Charting.Series>, <xref:System.Web.UI.DataVisualization.Charting.LegendItem> ou <xref:System.Web.UI.DataVisualization.Charting.StripLine> objeto que tem uma não-vazia `Url`, `MapAreaAttributes` ou `ToolTip` propriedade terá um objeto da área de mapa associado.  
+  
+-   Adicione áreas de mapa personalizado que tenham uma forma definida pelo usuário e as coordenadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

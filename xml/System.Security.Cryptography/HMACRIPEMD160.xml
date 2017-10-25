@@ -1,0 +1,106 @@
+<Type Name="HMACRIPEMD160" FullName="System.Security.Cryptography.HMACRIPEMD160">
+  <TypeSignature Language="C#" Value="public class HMACRIPEMD160 : System.Security.Cryptography.HMAC" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HMACRIPEMD160 extends System.Security.Cryptography.HMAC" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.HMACRIPEMD160" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.HMAC</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Calcula um HMAC (Hash-based Message Authentication Code) usando a função de hash <see cref="T:System.Security.Cryptography.RIPEMD160" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.HMACRIPEMD160>é um tipo de algoritmo de hash com chave que é construído com a função de hash de 160 RIPEMD e usado como um Hash-based HMAC Message Authentication Code (). O processo HMAC mescla uma chave secreta com os dados da mensagem, hashes o resultado com a função de hash, combine esse valor de hash com a chave secreta novamente e, em seguida, aplica-se a função de hash uma segunda vez. O hash de saída é 160 bits de comprimento.  
+  
+ Um HMAC pode ser usado para determinar se uma mensagem enviada por um canal inseguro foi violada, desde que o remetente e o destinatário compartilham uma chave secreta. O remetente calcula o valor de hash para os dados originais e envia os dados originais e o valor de hash como uma única mensagem. O receptor recalcula o valor de hash na mensagem recebida e verifica se o HMAC computado corresponde o HMAC transmitido.  
+  
+ Qualquer alteração de dados ou o valor de hash resulta em uma incompatibilidade, porque é necessário conhecimento da chave secreta para alterar a mensagem e reproduza o valor de hash correto. Portanto, se os valores de hash computado e original corresponderem, a mensagem é autenticada.  
+  
+ <xref:System.Security.Cryptography.HMACRIPEMD160>aceita as chaves de qualquer tamanho e produz uma sequência de hash é de 160 bits de comprimento.  
+  
+ O algoritmo de hash RIPEMD e seus sucessores foram desenvolvidos pelo projeto Europeu pronta. O algoritmo RIPEMD original foi projetado para substituir MD4 e MD5 e foi posteriormente reforçado e renomeado RIPEMD 160. O algoritmo de hash de 160 RIPEMD produz um valor de hash de 160 bits. Designers do algoritmo tem colocado no domínio público.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como assinar um arquivo usando o <xref:System.Security.Cryptography.HMACRIPEMD160> objeto e, em seguida, como verificar o arquivo.  
+  
+ [!code-cpp[HMACRIPEMD160#1](~/samples/snippets/cpp/VS_Snippets_CLR/HMACRIPEMD160/CPP/hmacripemd160.cpp#1)]
+ [!code-csharp[HMACRIPEMD160#1](~/samples/snippets/csharp/VS_Snippets_CLR/HMACRIPEMD160/CS/hmacripemd160.cs#1)]
+ [!code-vb[HMACRIPEMD160#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/HMACRIPEMD160/vb/hmacripemd160.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HMACRIPEMD160 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACRIPEMD160.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.HMACRIPEMD160" /> classe com uma chave gerada aleatoriamente de 64 bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.HMACRIPEMD160>é um tipo de algoritmo de hash com chave que é construído com a função de hash de 160 RIPEMD e usado como um Hash-based HMAC Message Authentication Code (). O processo HMAC mescla uma chave secreta com os dados da mensagem, hashes o resultado com a função de hash, combine esse valor de hash com a chave secreta novamente e, em seguida, aplica-se a função de hash uma segunda vez. O hash de saída é 160 bytes de comprimento.  
+  
+ Este construtor usa uma chave gerada aleatoriamente de 64 bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HMACRIPEMD160 (byte[] key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACRIPEMD160.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave secreta para a criptografia <see cref="T:System.Security.Cryptography.HMACRIPEMD160" />. A chave pode ser de qualquer tamanho, mas se for mais de 64 bytes hash (usando o SHA-1) para derivar uma chave de 64 bytes. Portanto, o tamanho recomendado da chave secreta é de 64 bytes.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.HMACRIPEMD160" /> com os dados de chave especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.HMACRIPEMD160>é um tipo de algoritmo de hash com chave que é construído com a função de hash de 160 RIPEMD e usado como um Hash-based HMAC Message Authentication Code (). O processo HMAC mescla uma chave secreta com os dados da mensagem, hashes o resultado com a função de hash, combine esse valor de hash com a chave secreta novamente e, em seguida, aplica-se a função de hash uma segunda vez. O hash de saída é 160 bytes de comprimento.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de como usar esse construtor, consulte o <xref:System.Security.Cryptography.HMACRIPEMD160> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

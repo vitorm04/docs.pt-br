@@ -1,0 +1,101 @@
+<Type Name="IHttpHandlerFactory" FullName="System.Web.IHttpHandlerFactory">
+  <TypeSignature Language="C#" Value="public interface IHttpHandlerFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHttpHandlerFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Web.IHttpHandlerFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o contrato que as fábricas de classes devem implementar para criar novos objetos <see cref="T:System.Web.IHttpHandler" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe que implementa o <xref:System.Web.IHttpHandlerFactory> interface não tem nenhum comportamento exceto ao dinamicamente fabricar novas instâncias de classes que implementam o <xref:System.Web.IHttpHandler> interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHandler">
+      <MemberSignature Language="C#" Value="public System.Web.IHttpHandler GetHandler (System.Web.HttpContext context, string requestType, string url, string pathTranslated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.IHttpHandler GetHandler(class System.Web.HttpContext context, string requestType, string url, string pathTranslated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IHttpHandlerFactory.GetHandler(System.Web.HttpContext,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="requestType" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="pathTranslated" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Uma instância da classe <see cref="T:System.Web.HttpContext" /> fornece referências aos objetos intrínsecos do servidor (por exemplo, <see langword="Request" />, <see langword="Response" />, <see langword="Session" /> e <see langword="Server" />) usados para atender solicitações HTTP.</param>
+        <param name="requestType">Método de transferência de dados HTTP (<see langword="GET" /> ou <see langword="POST" />) que o cliente usa.</param>
+        <param name="url">O <see cref="P:System.Web.HttpRequest.RawUrl" /> do recurso solicitado.</param>
+        <param name="pathTranslated">O <see cref="P:System.Web.HttpRequest.PhysicalApplicationPath" /> do recurso solicitado.</param>
+        <summary>Retorna uma instância de uma classe que implementa a interface <see cref="T:System.Web.IHttpHandler" />.</summary>
+        <returns>Um novo objeto <see cref="T:System.Web.IHttpHandler" /> que processa a solicitação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar objetos de manipulador personalizado em resposta a uma solicitação de cliente. O exemplo tem duas partes:  
+  
+-   Uma classe de fábrica de manipulador.  
+  
+-   Um trecho do arquivo Web. config.  
+  
+ A primeira parte do exemplo mostra como criar objetos de manipulador personalizado em resposta a uma solicitação de cliente para uma página chamada abc.aspx ou xyz.aspx. A classe de fábrica de manipulador denominada `hwf` cria o objeto de manipulador adequado dependendo da página solicitada.  
+  
+ [!code-csharp[Classic IHttpHandlerFactory.GetHandler Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic IHttpHandlerFactory.GetHandler Example/CS/source.cs#1)]
+ [!code-vb[Classic IHttpHandlerFactory.GetHandler Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic IHttpHandlerFactory.GetHandler Example/VB/source.vb#1)]  
+  
+ A segunda parte do exemplo mostra um trecho do arquivo Web. config. Para usar o manipulador acima, adicione as seguintes linhas ao arquivo Web. config.  
+  
+```  
+<configuration>   
+  <system.web>   
+    <httpHandlers>   
+      <add verb="*" path="abc.aspx" type="test.MyFactory,HandlerFactoryTest" />   
+      <add verb="*" path="xyz.aspx" type="test.MyFactory,HandlerFactoryTest" />   
+    </httpHandlers>   
+  </system.web>  
+</configuration>   
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseHandler">
+      <MemberSignature Language="C#" Value="public void ReleaseHandler (System.Web.IHttpHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseHandler(class System.Web.IHttpHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IHttpHandlerFactory.ReleaseHandler(System.Web.IHttpHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.IHttpHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">O <see cref="T:System.Web.IHttpHandler" /> objeto reutilizar.</param>
+        <summary>Permite que uma fábrica para reutilizar uma instância existente do manipulador.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,160 @@
+<Type Name="WindowInteropHelper" FullName="System.Windows.Interop.WindowInteropHelper">
+  <TypeSignature Language="C#" Value="public sealed class WindowInteropHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WindowInteropHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.WindowInteropHelper" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ajuda a interoperação entre o Windows Presentation Foundation (WPF) e o código do Win32.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Membros dessa classe permite que o chamador tenha acesso interno para o [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] HWND e o HWND pai de um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window>.  As verificações de segurança apropriadas são realizadas pelos membros.  
+  
+ Use essa classe, sempre que você precisa de um objeto mais específico com base em HWND.  
+  
+ Um cenário de exemplo é se você precisa hospedar um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] da caixa de diálogo um [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] aplicativo. Inicializar o <xref:System.Windows.Interop.WindowInteropHelper> com um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] objeto window para a caixa de diálogo. Em seguida, você pode obter o [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] identificador de janela (HWND) do <xref:System.Windows.Interop.WindowInteropHelper.Handle%2A> propriedade e especifique o proprietário do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] janela com o <xref:System.Windows.Interop.WindowInteropHelper.Owner%2A> propriedade. O exemplo de código a seguir mostra como usar <xref:System.Windows.Interop.WindowInteropHelper> ao hospedar um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] da caixa de diálogo um [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] aplicativo.  
+  
+ [!code-csharp[CorePseudocode#WindowInteropHelper](~/samples/snippets/csharp/VS_Snippets_Wpf/CorePseudocode/CSharp/corepseudocode.cs#windowinterophelper)]
+ [!code-vb[CorePseudocode#WindowInteropHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CorePseudocode/visualbasic/corepseudocode.vb#windowinterophelper)]  
+  
+ Outro cenário suportado por esta classe é obter um <xref:System.Windows.Interop.HwndSource> de objeto um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> objeto. O <xref:System.Windows.Interop.HwndSource> permite direcionar o processamento de [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] mensagens por meio de <xref:System.Windows.Interop.HwndSource.AddHook%2A> método. Usando <xref:System.Windows.Interop.HwndSource> e <xref:System.Windows.Interop.HwndSource.AddHook%2A> no lugar de um <xref:System.Windows.Window> você ainda pode manipular mensagens não equivalente ou manipulação em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Criar um <xref:System.Windows.Interop.WindowInteropHelper> com o <xref:System.Windows.Window> de origem, em seguida, chame <xref:System.Windows.Interop.WindowInteropHelper.Handle%2A> no <xref:System.Windows.Interop.WindowInteropHelper> obter de HWND para <xref:System.Windows.Interop.HwndSource>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowInteropHelper (System.Windows.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.WindowInteropHelper.#ctor(System.Windows.Window)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">Um objeto de janela [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Interop.WindowInteropHelper" /> para a janela [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A janela pode ser uma caixa de diálogo ou uma janela que não é adequada para que está sendo hospedado dentro dos limites do caso contrário, um [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureHandle">
+      <MemberSignature Language="C#" Value="public IntPtr EnsureHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int EnsureHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.WindowInteropHelper.EnsureHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Criará o HWND da janela se o HWND ainda não tiver sido criado.</summary>
+        <returns>Um <see cref="T:System.IntPtr" /> que representa o HWND.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> método quando quiser separar a criação do identificador (HWND) de janela de mostrando o real de gerenciado <xref:System.Windows.Window>. Isso é útil quando você tem um cliente de automação que pode realizar suas tarefas sem a necessidade de mostrar uma janela.  
+  
+ Se a janela nativo ainda não tiver sido criada, esse método cria a janela nativo, conjuntos de <xref:System.Windows.Interop.WindowInteropHelper.Handle%2A> propriedade e retorna o HWND. Se a janela nativo já foi criada, o identificador da janela existente nativo é retornado.  
+  
+ Se a janela nativo é criada como resultado de chamar esse método, o <xref:System.Windows.Window.SourceInitialized> é gerado.  
+  
+ Consultando o <xref:System.Windows.Interop.WindowInteropHelper.Handle%2A> propriedade após o <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> é chamado de método retorna o identificador de janela existente. A árvore visual não está anexada a janela até após o <xref:System.Windows.Window.Show%2A> método é chamado.  
+  
+ Chamar o <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> método mais de uma vez não cria novos identificadores de janela. Chamando o <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> método quando o identificador já foi criado por uma chamada para o <xref:System.Windows.Window.Show%2A> método não cria um novo identificador de janela. Uma janela nativo é criada somente quando nenhum identificador existe quando o <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> método é chamado.  
+  
+ Propriedades da janela que são definidas usando APIs de janela nativo por meio de p/invoke não podem aparecer na janela gerenciada APIs. Por exemplo, se você definir a janela para ser mais alto, usando o sinalizador MS_EX_TOPMOST nativo após o <xref:System.Windows.Interop.WindowInteropHelper.EnsureHandle%2A> método é chamado, o <xref:System.Windows.Window.Topmost%2A> propriedade não é garantida para refletir a configuração nativo.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para criar e acessar um identificador de janela. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.WindowInteropHelper.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de janela para um [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] janela que é usada para criar esse <see cref="T:System.Windows.Interop.WindowInteropHelper" />.</summary>
+        <value>O HWND (identificador de janela) [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)].</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para obter um identificador de janela. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public IntPtr Owner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.WindowInteropHelper.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador do [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] janela do proprietário.</summary>
+        <value>O identificador de janela de proprietário (HWND).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode reassociar windows definindo essa propriedade. Como é verdadeiro para geral [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] de programação, não reassociar windows que já estão em uso.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para obter ou definir o valor dessa propriedade. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

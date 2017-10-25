@@ -1,0 +1,212 @@
+<Type Name="MetaFunction" FullName="System.Data.Linq.Mapping.MetaFunction">
+  <TypeSignature Language="C#" Value="public abstract class MetaFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MetaFunction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Mapping.MetaFunction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o mapeamento entre um método de contexto e uma função de banco de dados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MetaFunction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Mapping.MetaFunction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Linq.Mapping.MetaFunction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasMultipleResults">
+      <MemberSignature Language="C#" Value="public abstract bool HasMultipleResults { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasMultipleResults" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaFunction.HasMultipleResults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se o procedimento armazenado tem vários tipos de resultado.</summary>
+        <value>
+          <see langword="true" />Se o procedimento armazenado tem vários tipos de resultado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsComposable">
+      <MemberSignature Language="C#" Value="public abstract bool IsComposable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsComposable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaFunction.IsComposable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se a função pode ser composta dentro de uma consulta.</summary>
+        <value>
+          <see langword="true" />Se a função pode ser composta dentro de uma consulta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um procedimento armazenado não pode ser composto em uma consulta. Métodos que representam os procedimentos armazenados retornam `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MappedName">
+      <MemberSignature Language="C#" Value="public abstract string MappedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MappedName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaFunction.MappedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da função de banco de dados ou do procedimento.</summary>
+        <value>Uma cadeia de caracteres que representa o nome da função de banco de dados ou do procedimento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.MethodInfo Method { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo Method" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaFunction.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o método do contexto subjacente.</summary>
+        <value>Um <see cref="T:System.Reflection.MethodInfo" /> objeto corresponde com o método de contexto subjacente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Model">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.MetaModel Model { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.Mapping.MetaModel Model" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaFunction.Model" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.MetaModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.Linq.Mapping.MetaModel" /> que contém essa função.</summary>
+        <value>O <see cref="T:System.Data.Linq.Mapping.MetaModel" /> objeto que contém essa função.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaFunction.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do método.</summary>
+        <value>Um <see langword="string" /> que representa o nome do método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o mesmo nome que o <xref:System.Reflection.MethodInfo> nome.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Linq.Mapping.MetaParameter&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Linq.Mapping.MetaParameter&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaFunction.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Linq.Mapping.MetaParameter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma enumeração dos parâmetros de função.</summary>
+        <value>Uma coleção de parâmetros.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResultRowTypes">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Linq.Mapping.MetaType&gt; ResultRowTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Linq.Mapping.MetaType&gt; ResultRowTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaFunction.ResultRowTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Linq.Mapping.MetaType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a enumeração dos resultados possíveis tipos de linha.</summary>
+        <value>Uma coleção de tipos possíveis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnParameter">
+      <MemberSignature Language="C#" Value="public abstract System.Data.Linq.Mapping.MetaParameter ReturnParameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.Mapping.MetaParameter ReturnParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.MetaFunction.ReturnParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.MetaParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o parâmetro de retorno.</summary>
+        <value>O <see cref="T:System.Data.Linq.Mapping.MetaParameter" /> que corresponde ao parâmetro de retorno.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,89 @@
+<Type Name="ContentsResizedEventArgs" FullName="System.Windows.Forms.ContentsResizedEventArgs">
+  <TypeSignature Language="C#" Value="public class ContentsResizedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContentsResizedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ContentsResizedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.RichTextBox.ContentsResized" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando o retângulo delimitador necessário para aceitar o novo texto é alterado. Se o texto dentro do controle se estenda por várias linhas, o retângulo solicitado sempre será a largura do controle. Você pode manipular esse evento em seu controle para implementar o redimensionamento automático para várias linhas <xref:System.Windows.Forms.RichTextBox> controles. O <xref:System.Windows.Forms.ContentsResizedEventArgs> identifica o tamanho solicitado do <xref:System.Windows.Forms.RichTextBox>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.RichTextBox.ContentsResized> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.RichTextBox> chamado `RichTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.RichTextBox.ContentsResized> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#537](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#537)]
+ [!code-vb[System.Windows.Forms.EventExamples#537](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#537)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentsResizedEventArgs (System.Drawing.Rectangle newRectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle newRectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContentsResizedEventArgs.#ctor(System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newRectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="newRectangle">Um <see cref="T:System.Drawing.Rectangle" /> que especifica as dimensões solicitadas do <see cref="T:System.Windows.Forms.RichTextBox" /> controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ContentsResizedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle NewRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle NewRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContentsResizedEventArgs.NewRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o tamanho solicitado do <see cref="T:System.Windows.Forms.RichTextBox" /> controle.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que representa o tamanho solicitado do <see cref="T:System.Windows.Forms.RichTextBox" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o texto é inserido no <xref:System.Windows.Forms.RichTextBox> controle, o <xref:System.Windows.Forms.RichTextBox> controle determina o tamanho adequado do controle para exibir todo o conteúdo do controle. Você pode usar o <xref:System.Windows.Forms.ContentsResizedEventArgs.NewRectangle%2A> propriedade em um manipulador de eventos para o <xref:System.Windows.Forms.RichTextBox.ContentsResized> eventos do <xref:System.Windows.Forms.RichTextBox> controle para dimensionar corretamente o controle para exibir todo o conteúdo do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.RichTextBox.ContentsResized?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.RichTextBox> chamado `RichTextBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.RichTextBox.ContentsResized?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#537](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#537)]
+ [!code-vb[System.Windows.Forms.EventExamples#537](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#537)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

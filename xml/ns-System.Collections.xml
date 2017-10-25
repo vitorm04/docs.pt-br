@@ -1,0 +1,6 @@
+<Namespace Name="System.Collections">
+  <Docs>
+    <summary>O <see cref="N:System.Collections" /> namespace contém interfaces e classes que definem várias coleções de objetos, como listas, filas, matrizes de bits, tabelas de hash e dicionários.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

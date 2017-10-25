@@ -1,0 +1,2259 @@
+<Type Name="XmlNodeReader" FullName="System.Xml.XmlNodeReader">
+  <TypeSignature Language="C#" Value="public class XmlNodeReader : System.Xml.XmlReader, System.Xml.IXmlNamespaceResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlNodeReader extends System.Xml.XmlReader implements class System.Xml.IXmlNamespaceResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlNodeReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlReader</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.IXmlNamespaceResolver</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um leitor que fornece acesso rápido não armazenado em cache e somente de encaminhamento aos dados XML em um <see cref="T:System.Xml.XmlNode" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em vez de usar o <xref:System.Xml.XmlNodeReader>, recomendamos que você crie <xref:System.Xml.XmlReader> instâncias usando o <xref:System.Xml.XmlReaderSettings> classe e o <xref:System.Xml.XmlReader.Create%2A> método. Isso permite que você tire proveito de verificação de conformidade e de conformidade para a recomendação XML 1.0.  
+  
+ O `XmlNodeReader` tem a capacidade de ler uma subárvore XML DOM. Essa classe não oferece suporte a definição de tipo de documento (DTD) ou validação de esquema. No entanto, você pode criar um <xref:System.Xml.XmlReader> objeto envolve o <xref:System.Xml.XmlNodeReader> objeto para validar os dados armazenados no <xref:System.Xml.XmlNodeReader> do objeto, como mostrado na seção de exemplos.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um arquivo XML é carregado em um documento XML e alterado. O documento XML é passado para <xref:System.Xml.XmlNodeReader>, que é então passado para o método de <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> . Quando o leitor validando analisa o arquivo, pode validar as alterações feitas no arquivo XML.  
+  
+ [!code-csharp[XmlReader_Validate_DOM#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader_Validate_DOM/CS/valid_dom.cs#1)]
+ [!code-vb[XmlReader_Validate_DOM#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader_Validate_DOM/VB/valid_dom.vb#1)]  
+  
+## <a name="input"></a>Entrada  
+ Os seguintes arquivos são usados como entrada.  
+  
+#### <a name="bookschemaxml"></a>bookSchema.xml  
+ [!code-xml[XML_Core_Files#8](~/samples/snippets/xml/VS_Snippets_Data/XML_Core_Files/XML/booksschema.xml#8)]  
+  
+#### <a name="booksxsd"></a>books.xsd  
+ [!code-xml[XML_Core_Files#9](~/samples/snippets/xml/VS_Snippets_Data/XML_Core_Files/XML/books.xsd#9)]  
+  
+## <a name="output"></a>Saída  
+ Erro de validação: O atributo “editor” não está declarado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlNodeReader (System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.#ctor(System.Xml.XmlNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see langword="XmlNode" /> que você deseja ler.</param>
+        <summary>Cria uma instância da classe <see langword="XmlNodeReader" /> usando o <see cref="T:System.Xml.XmlNode" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Para obter mais informações e exemplos de código usado para criar um `XmlNodeReader`, consulte <xref:System.Xml.XmlReader> e sobrecargas do <xref:System.Xml.XmlReader.Create%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeCount">
+      <MemberSignature Language="C#" Value="public override int AttributeCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AttributeCount" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.AttributeCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de atributos no nó atual.</summary>
+        <value>O número de atributos no nó atual. Esse número inclui atributos padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esta propriedade é relevante para `Element`, `DocumentType` e `XmlDeclaration` apenas nós. (Outros tipos de nó não tem atributos.)  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê todos os atributos no nó raiz.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseURI">
+      <MemberSignature Language="C#" Value="public override string BaseURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.BaseURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o URI base do nó atual.</summary>
+        <value>O URI de base do nó atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Um documento XML em rede é composto de partes de dados agregados usando vários mecanismos de inclusão padrão do W3C e, portanto, contém nós que vêm de diferentes locais. Entidades DTD são um exemplo disto, mas isso não é limitado para DTDs. A base de URI informa onde veio esses nós. Se não houver nenhum URI de base para os nós que estão sendo retornados (por exemplo, eles foram analisados de uma cadeia de caracteres na memória), Empty é retornado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir analisa um arquivo e exibe o URI de base de cada um de nós.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.BaseURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.BaseURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.BaseURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.BaseURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.BaseURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.BaseURI Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo de `uri.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNodeReader.BaseURI Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNodeReader.BaseURI Example/XML/source.xml#2)]  
+  
+ O `style.xml` arquivo contém o texto XML `<style>hardcover</style>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadBinaryContent">
+      <MemberSignature Language="C#" Value="public override bool CanReadBinaryContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReadBinaryContent" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.CanReadBinaryContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Xml.XmlNodeReader" /> implementa o conteúdo binário de métodos de leitura.</summary>
+        <value>
+          <see langword="true" />Se os métodos de leitura de conteúdo binários são implementados; Caso contrário, <see langword="false" />. O <see cref="T:System.Xml.XmlNodeReader" /> classe sempre retorna <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ O conteúdo binário de leitura métodos incluem o <xref:System.Xml.XmlNodeReader.ReadContentAsBase64%2A>, <xref:System.Xml.XmlNodeReader.ReadContentAsBinHex%2A>, <xref:System.Xml.XmlNodeReader.ReadElementContentAsBase64%2A>, e <xref:System.Xml.XmlNodeReader.ReadElementContentAsBinHex%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResolveEntity">
+      <MemberSignature Language="C#" Value="public override bool CanResolveEntity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanResolveEntity" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.CanResolveEntity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este leitor pode analisar e resolver entidades.</summary>
+        <value>
+          <see langword="true" />Se o leitor pode analisar e resolver entidades; Caso contrário, <see langword="false" />. <see langword="XmlNodeReader" />sempre retorna <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Altera o <see cref="P:System.Xml.XmlNodeReader.ReadState" /> para <see langword="Closed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esse método também libera os recursos mantidos durante a leitura. Se `Close` já foi chamado, nenhuma ação é executada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir analisa um arquivo e fecha o leitor.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo de `items.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNodeReader.Name Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public override int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a profundidade do nó atual no documento XML.</summary>
+        <value>A profundidade do nó atual no documento XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EOF">
+      <MemberSignature Language="C#" Value="public override bool EOF { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EOF" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.EOF" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o leitor está posicionado no final do fluxo.</summary>
+        <value>
+          <see langword="true" />Se o leitor está posicionado no final do fluxo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="public override string GetAttribute (int attributeIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetAttribute(int32 attributeIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.GetAttribute(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="attributeIndex">O índice do atributo. O índice é baseado em zero. (O primeiro atributo tem índice 0.)</param>
+        <summary>Obtém o valor do atributo com o índice especificado.</summary>
+        <returns>O valor do atributo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esse método não move o leitor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="i" /> parâmetro é menor que 0 ou maior que ou igual a <see cref="P:System.Xml.XmlNodeReader.AttributeCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="public override string GetAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome qualificado do atributo.</param>
+        <summary>Obtém o valor do atributo com o nome especificado.</summary>
+        <returns>O valor do atributo especificado. Se o atributo não for encontrado, <see langword="null" /> será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esse método não move o leitor.  
+  
+ Se o leitor estiver posicionado em um `DocumentType` nó, esse método pode ser usado para obter os literais PUBLIC e do sistema, por exemplo,`reader.GetAttribute("PUBLIC")`  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o valor do atributo ISBN.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.GetAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.GetAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.GetAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.GetAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.GetAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.GetAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="public override string GetAttribute (string name, string namespaceURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetAttribute(string name, string namespaceURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.GetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do atributo.</param>
+        <param name="namespaceURI">O URI do namespace do atributo.</param>
+        <summary>Obtém o valor do atributo com o nome do local e o URI de namespace especificados.</summary>
+        <returns>O valor do atributo especificado. Se o atributo não for encontrado, <see langword="null" /> será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ O XML a seguir contém um atributo em um namespace específico:  
+  
+```  
+<test xmlns:dt="urn:datatypes" dt:type="int"/>  
+```  
+  
+ Você pode pesquisar o `dt:type` de atributo usando um argumento (prefixo e o nome local) ou dois argumentos (nome local e URI de namespace):  
+  
+```  
+String dt = reader.GetAttribute("dt:type");  
+String dt2 = reader.GetAttribute("type","urn:datatypes");  
+```  
+  
+ A pesquisa de `xmlns:dt` atributo, use um dos seguintes argumentos:  
+  
+```  
+String dt3 = reader.GetAttribute("xmlns:dt");  
+String dt4 = reader.GetAttribute("dt",http://www.w3.org/2000/xmlns/);  
+```  
+  
+ Você também pode obter essas informações usando o <xref:System.Xml.XmlNodeReader.Prefix%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAttributes">
+      <MemberSignature Language="C#" Value="public override bool HasAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.HasAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó atual tem atributos.</summary>
+        <value>
+          <see langword="true" />Se o nó atual possui atributos; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê todos os atributos no nó raiz.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValue">
+      <MemberSignature Language="C#" Value="public override bool HasValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasValue" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.HasValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó atual pode ter um <see cref="P:System.Xml.XmlNodeReader.Value" />.</summary>
+        <value>
+          <see langword="true" /> se o nó em que o leitor está posicionado no momento puder ter um <see langword="Value" />, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ A tabela a seguir lista os tipos de nós que têm um valor a ser retornado.  
+  
+|Tipo de nó|Valor|  
+|---------------|-----------|  
+|`Attribute`|O valor do atributo.|  
+|`CDATA`|O conteúdo da seção CDATA.|  
+|`Comment`|O conteúdo do comentário.|  
+|`DocumentType`|O subconjunto interno.|  
+|`ProcessingInstruction`|Todo o conteúdo, exceto o destino.|  
+|`SignificantWhitespace`|O espaço em branco entre a marcação em um modelo de conteúdo misto.|  
+|`Text`|O conteúdo do nó de texto.|  
+|`Whitespace`|Espaço em branco entre a marcação.|  
+|`XmlDeclaration`|O conteúdo da declaração.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor para cada nó que pode ter um valor.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.HasValue Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.HasValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.HasValue Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.HasValue Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.HasValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.HasValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="public override bool IsDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.IsDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó atual é um atributo que foi gerado a partir do valor padrão definido na definição de tipo de documento (DTD) ou esquema.</summary>
+        <value>
+          <see langword="true" />Se o nó atual é um atributo cujo valor foi gerado a partir o valor padrão definido no DTD ou no esquema; <see langword="false" /> se o valor de atributo foi definido explicitamente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Essa propriedade aplica-se a nós de atributo apenas. Se o leitor não está posicionado em um nó de atributo, essa propriedade retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmptyElement">
+      <MemberSignature Language="C#" Value="public override bool IsEmptyElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmptyElement" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.IsEmptyElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó atual é um elemento vazio (por exemplo, <c> &lt;MyElement /&gt;</c>).</summary>
+        <value>
+          <see langword="true" />Se o nó atual é um elemento (<see cref="P:System.Xml.XmlNodeReader.NodeType" /> é igual a <see langword="XmlNodeType.Element" />) e termina com <c> / &gt; </c>; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Essa propriedade permite determinar a diferença entre o seguinte:  
+  
+ `<item num="123"/>`(`IsEmptyElement` is `true`).  
+  
+ `<item num="123">`(`IsEmptyElement` é `false`, embora o conteúdo do elemento está vazio).  
+  
+ Correspondente `EndElement` nó não é gerado para elementos vazios.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo do texto de cada elemento.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.IsEmptyElement Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.IsEmptyElement Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.IsEmptyElement Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.IsEmptyElement Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.IsEmptyElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.IsEmptyElement Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public override string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome local do nó atual.</summary>
+        <value>O nome do nó atual com o prefixo removido. Por exemplo, <see langword="LocalName" /> é <see langword="book" /> para o elemento <c> &lt;bk:book&gt;</c>.  
+  
+ Para tipos de nós que não têm um nome (como <see langword="Text" />, <see langword="Comment" />e assim por diante), essa propriedade retorna Empty.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o nome local de cada nó, e, se existir, o prefixo e URI de namespace.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.NamespaceURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.NamespaceURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.NamespaceURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.NamespaceURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.NamespaceURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.NamespaceURI Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupNamespace">
+      <MemberSignature Language="C#" Value="public override string LookupNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string LookupNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.LookupNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo cujo namespace URI que você deseja resolver. Para combinar o namespace padrão, passe uma cadeia de caracteres vazia. Essa cadeia de caracteres não precisa ser atomizada.</param>
+        <summary>Resolve um prefixo de namespace no escopo do elemento atual.</summary>
+        <returns>O URI de namespace para o qual mapeia o prefixo ou <see langword="null" /> se nenhum prefixo correspondente for encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Na seguinte cadeia XML, se o leitor estiver posicionado no `href` de atributo, o prefixo `a` é resolvido chamando `reader.LookupNamespace("a")`. A cadeia de caracteres retornada é `urn:456`.  
+  
+```  
+<root xmlns:a="urn:456">  
+ <item>  
+ <ref href="a:b"/>  
+ </item>  
+</root>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToAttribute">
+      <MemberSignature Language="C#" Value="public override void MoveToAttribute (int attributeIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MoveToAttribute(int32 attributeIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.MoveToAttribute(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="attributeIndex">O índice do atributo.</param>
+        <summary>Move para o atributo com o índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê todos os atributos no nó raiz.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="i" /> parâmetro é menor que 0 ou maior que ou igual a <see cref="P:System.Xml.XmlReader.AttributeCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToAttribute">
+      <MemberSignature Language="C#" Value="public override bool MoveToAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.MoveToAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome qualificado do atributo.</param>
+        <summary>Move para o atributo com o nome especificado.</summary>
+        <returns>
+          <see langword="true" />Se o atributo for encontrado; Caso contrário, <see langword="false" />. Se <see langword="false" />, a posição do leitor não será alterada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Depois de chamar esse método, o <xref:System.Xml.XmlNodeReader.Name%2A>, <xref:System.Xml.XmlNodeReader.NamespaceURI%2A>, e <xref:System.Xml.XmlNodeReader.Prefix%2A> propriedades refletem as propriedades desse atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToAttribute">
+      <MemberSignature Language="C#" Value="public override bool MoveToAttribute (string name, string namespaceURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToAttribute(string name, string namespaceURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.MoveToAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome local do atributo.</param>
+        <param name="namespaceURI">O URI do namespace do atributo.</param>
+        <summary>Move para o atributo com o nome do local especificado e o URI de namespace.</summary>
+        <returns>
+          <see langword="true" />Se o atributo for encontrado; Caso contrário, <see langword="false" />. Se <see langword="false" />, a posição do leitor não será alterada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Depois de chamar esse método, o <xref:System.Xml.XmlNodeReader.Name%2A>, <xref:System.Xml.XmlNodeReader.NamespaceURI%2A>, e <xref:System.Xml.XmlNodeReader.Prefix%2A> propriedades refletem as propriedades desse atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToElement">
+      <MemberSignature Language="C#" Value="public override bool MoveToElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.MoveToElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Move para o elemento que contém o nó de atributo atual.</summary>
+        <returns>
+          <see langword="true" /> se o leitor estiver posicionado em um atributo (o leitor se move para o elemento que possui o atributo); <see langword="false" /> se o leitor não estiver posicionado em um atributo (a posição do leitor não é alterada).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Use este método para retornar a um elemento depois de navegar por meio de seus atributos. Esse método Move o leitor para um dos seguintes tipos de nó: `Element`, `DocumentType`, ou `XmlDeclaration`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê todos os atributos no nó raiz.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.AttributeCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.AttributeCount Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToFirstAttribute">
+      <MemberSignature Language="C#" Value="public override bool MoveToFirstAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToFirstAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.MoveToFirstAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Move para o primeiro atributo.</summary>
+        <returns>
+          <see langword="true" />Se um atributo existir (o leitor é movido para o primeiro atributo). Caso contrário, <see langword="false" /> (a posição do leitor não alterar).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você a aproveitar ao máximo todos os novos recursos introduzidos no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o valor do primeiro atributo do nó raiz.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.MoveToFirstAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.MoveToFirstAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.MoveToFirstAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.MoveToFirstAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.MoveToFirstAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.MoveToFirstAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToNextAttribute">
+      <MemberSignature Language="C#" Value="public override bool MoveToNextAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveToNextAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.MoveToNextAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Move para o próximo atributo.</summary>
+        <returns>
+          <see langword="true" /> se houver um atributo seguinte; <see langword="false" /> se não houver mais nenhum atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Se o nó atual não é um nó de atributo, esse método é equivalente a <xref:System.Xml.XmlNodeReader.MoveToFirstAttribute%2A>. Se `MoveToNextAttribute` retorna `true`, o leitor se move para o próximo atributo; caso contrário, a posição do leitor não é alterado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê um livro.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.MoveToNextAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.MoveToNextAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.MoveToNextAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.MoveToNextAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.MoveToNextAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.MoveToNextAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome qualificado do nó atual.</summary>
+        <value>O nome qualificado do nó atual. Por exemplo, <see langword="Name" /> é <see langword="bk:book" /> para o elemento <c> &lt;bk:book&gt;</c>.  
+  
+ O nome retornado depende do <see cref="P:System.Xml.XmlNodeReader.NodeType" /> do nó. Os seguintes tipos de nó retornam os valores listados. Todos os outros tipos de nó retornam uma cadeia de caracteres vazia.  
+  
+ <list type="table"><listheader><term>Tipo de nó  
+  
+ </term><description>Nome  
+  
+ </description></listheader><item><term><see langword="Attribute" /></term><description>O nome do atributo.  
+  
+ </description></item><item><term><see langword="DocumentType" /></term><description>O nome do tipo de documento.  
+  
+ </description></item><item><term><see langword="Element" /></term><description>O nome da marca.  
+  
+ </description></item><item><term><see langword="EntityReference" /></term><description>O nome da entidade referenciada.  
+  
+ </description></item><item><term><see langword="ProcessingInstruction" /></term><description>O destino da instrução de processamento.  
+  
+ </description></item><item><term><see langword="XmlDeclaration" /></term><description>A cadeia de caracteres literal <see langword="xml" />.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê um XML e exibe cada um de nós.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo de `items.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNodeReader.Name Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceURI">
+      <MemberSignature Language="C#" Value="public override string NamespaceURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.NamespaceURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace URI (conforme definido na especificação do W3C Namespace) do nó em que o leitor está posicionado.</summary>
+        <value>O URI do namespace do nó atual; caso contrário, uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esta propriedade é relevante para `Element` e `Attribute` apenas nós.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o nome local de cada nó, e, se existir, o prefixo e URI de namespace.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.NamespaceURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.NamespaceURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.NamespaceURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.NamespaceURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.NamespaceURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.NamespaceURI Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameTable">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNameTable NameTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNameTable NameTable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.NameTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNameTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.XmlNameTable" /> associado à essa implementação.</summary>
+        <value>O <see langword="XmlNameTable" /> que permite obter a versão atomizada de uma cadeia de caracteres no nó.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Todos os nomes de nó e o atributo retornados dessa classe são atomizados usando o `NameTable`. Quando o mesmo nome é retornado várias vezes (por exemplo, `Customer`), em seguida, o mesmo `String` objeto é retornado para esse nome. Isso possibilita que você escreva código eficiente que o objeto comparações sobre essas cadeias de caracteres em vez de comparações de cadeia de caracteres caro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do nó atual.</summary>
+        <value>Um dos valores <see cref="T:System.Xml.XmlNodeType" /> que representa o tipo do nó atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê um XML e exibe cada um de nós.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo de `items.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNodeReader.Name Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public override string Prefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o prefixo de namespace associado ao nó atual.</summary>
+        <value>O prefixo de namespace associado ao nó atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o nome local de cada nó, e, se existir, o prefixo e URI de namespace.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.NamespaceURI Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.NamespaceURI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.NamespaceURI Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.NamespaceURI Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.NamespaceURI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.NamespaceURI Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê o próximo nó do fluxo.</summary>
+        <returns>
+          <see langword="true" /> se o próximo nó for lido com êxito; <see langword="false" /> se não houver mais nenhum nó para ler.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Quando um leitor primeiro é criado e inicializado, nenhuma informação está disponível. Você deve chamar `Read` para ler o primeiro nó.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê um XML e exibe cada nó.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo de `items.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNodeReader.Name Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAttributeValue">
+      <MemberSignature Language="C#" Value="public override bool ReadAttributeValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ReadAttributeValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.ReadAttributeValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Analisa o valor do atributo em um ou mais nós <see langword="Text" />, <see langword="EntityReference" /> ou <see langword="EndEntity" />.</summary>
+        <returns>
+          <see langword="true" /> se houver nós para retornar.  
+  
+ <see langword="false" /> se o leitor não estiver posicionado em um nó de atributo quando a chamada inicial for feita ou se todos os valores de atributo tiverem sido lidos.  
+  
+ Atributo vazio, como <c>misc = ""</c>, retorna <see langword="true" /> com um único nó com um valor de Empty.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Use este método depois de chamar <xref:System.Xml.XmlNodeReader.MoveToAttribute%2A> ler os nós de referência de entidade ou de texto que compõem o valor do atributo. O <xref:System.Xml.XmlNodeReader.Depth%2A> de nós de valor de atributo é um mais a profundidade do nó de atributo; ele aumenta e diminui em um quando você entrar e sair de referências de entidade geral.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê um atributo conosco de referência de entidade e de texto.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.ReadAttributeValue Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.ReadAttributeValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.ReadAttributeValue Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.ReadAttributeValue Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.ReadAttributeValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.ReadAttributeValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadContentAsBase64">
+      <MemberSignature Language="C#" Value="public override int ReadContentAsBase64 (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadContentAsBase64(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.ReadContentAsBase64(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer para o qual o texto resultante será copiado. Este valor pode não ser <see langword="null" />.</param>
+        <param name="index">O deslocamento do buffer onde começar a copiar o resultado.</param>
+        <param name="count">O número máximo de bytes a serem copiados para o buffer. O número real de bytes copiados é retornado deste método.</param>
+        <summary>Lê o conteúdo e retorna os bytes binários decodificados de Base64.</summary>
+        <returns>O número de bytes gravados no buffer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esse método transmite o conteúdo, decodifica o conteúdo de Base64 e retorna os bytes binários codificados (por exemplo, um embutido Base64 codificada imagem GIF) no buffer. Esse método pode ser chamado sucessivamente para ler grandes fluxos de texto inserido. Para obter mais informações, consulte RFC 1521, "parte MIME (Multipurpose Internet Mail Extensions) uma: mecanismos para especificar e que descreve o formato de corpos de mensagens da Internet". Você pode obter RFCs de solicitação de comentários do site em http://www.rfc-editor.org.  
+  
+> [!NOTE]
+>  Você não deve acessar qualquer uma das propriedades leitor entre as chamadas para o <xref:System.Xml.XmlNodeReader.ReadContentAsBase64%2A> método até que o método retorna o valor 0.  
+  
+ Esse método tem o seguinte comportamento:  
+  
+-   <xref:System.Xml.XmlNodeReader.ReadContentAsBase64%2A>Retorna o valor 0 quando atingir o final do fluxo de bytes que ele estava funcionando em. O leitor é posicionado no primeiro nó de conteúdo não.  
+  
+-   Se você pedir menos ou o número exato, de bytes que são deixados no fluxo, o leitor permanece na posição atual.  
+  
+-   <xref:System.Xml.XmlNodeReader.ReadContentAsBase64%2A>Não há suporte para os seguintes tipos de nós XML: elemento, XmlDeclaration, None, documentos, DocumentType, notação, entidade, DocumentFragment.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          Não há suporte para <see cref="M:System.Xml.XmlNodeReader.ReadContentAsBase64(System.Byte[],System.Int32,System.Int32)" /> no nó atual.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice de buffer ou de índice + contagem é maior que o tamanho do buffer alocado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadContentAsBinHex">
+      <MemberSignature Language="C#" Value="public override int ReadContentAsBinHex (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadContentAsBinHex(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.ReadContentAsBinHex(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer para o qual o texto resultante será copiado. Este valor pode não ser <see langword="null" />.</param>
+        <param name="index">O deslocamento do buffer onde começar a copiar o resultado.</param>
+        <param name="count">O número máximo de bytes a serem copiados para o buffer. O número real de bytes copiados é retornado deste método.</param>
+        <summary>Lê o conteúdo e retorna que o BinHex decodificar bytes binários.</summary>
+        <returns>O número de bytes gravados no buffer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esse método transmite o conteúdo, decodifica o conteúdo BinHex e retorna os bytes binários codificados (por exemplo, um embutido BinHex codificado imagem GIF) no buffer. Esse método pode ser chamado sucessivamente para ler grandes fluxos de texto inserido.  
+  
+> [!NOTE]
+>  Você não deve acessar qualquer uma das propriedades leitor entre as chamadas para o <xref:System.Xml.XmlNodeReader.ReadContentAsBinHex%2A> método até que o método retorna o valor 0.  
+  
+ Esse método tem o seguinte comportamento:  
+  
+-   <xref:System.Xml.XmlNodeReader.ReadContentAsBinHex%2A>Retorna o valor 0 quando atingir o final do fluxo de bytes que ele estava funcionando em. O leitor é posicionado no primeiro nó de conteúdo não.  
+  
+-   Se você pedir menos ou o número exato, de bytes que são deixados no fluxo, o leitor permanece na posição atual.  
+  
+-   <xref:System.Xml.XmlNodeReader.ReadContentAsBinHex%2A>Não há suporte para os seguintes tipos de nós XML: elemento, XmlDeclaration, None, documentos, DocumentType, notação, entidade, DocumentFragment.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          Não há suporte para <see cref="M:System.Xml.XmlNodeReader.ReadContentAsBinHex(System.Byte[],System.Int32,System.Int32)" /> no nó atual.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice de buffer ou de índice + contagem é maior que o tamanho do buffer alocado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadElementContentAsBase64">
+      <MemberSignature Language="C#" Value="public override int ReadElementContentAsBase64 (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadElementContentAsBase64(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.ReadElementContentAsBase64(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer para o qual o texto resultante será copiado. Este valor pode não ser <see langword="null" />.</param>
+        <param name="index">O deslocamento do buffer onde começar a copiar o resultado.</param>
+        <param name="count">O número máximo de bytes a serem copiados para o buffer. O número real de bytes copiados é retornado deste método.</param>
+        <summary>Lê o elemento e decodifica o conteúdo de Base64.</summary>
+        <returns>O número de bytes gravados no buffer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esse método lê o conteúdo, decodifica usando a codificação Base64 e retorna os bytes binários codificados (por exemplo, um embutido Base64 codificada imagem GIF) no buffer. Para obter mais informações, consulte RFC 1521, "parte MIME (Multipurpose Internet Mail Extensions) uma: mecanismos para especificar e que descreve o formato de corpos de mensagens da Internet". Você pode obter RFCs de solicitação de comentários do site em http://www.rfc-editor.org.  
+  
+ Esse método somente pode ler os elementos de conteúdo simples. O elemento pode conter texto, o espaço em branco, espaço em branco significativo, seções CDATA, comentários e instruções de processamento. Ele também pode conter referências de entidade, que são expandidas automaticamente. O elemento não pode ter elementos filho.  
+  
+ Esse método é muito semelhante de <xref:System.Xml.XmlNodeReader.ReadContentAsBase64%2A> método, exceto que ela só pode ser chamado em tipos de nó de elemento.  
+  
+ Se o valor de contagem é maior do que o número de bytes no documento, ou se é igual ao número de bytes no documento, o <xref:System.Xml.XmlNodeReader> lê todos os bytes restantes no documento e retorna o número de bytes lidos. O próximo <xref:System.Xml.XmlNodeReader.ReadElementContentAsBase64%2A> chamada de método retorna um zero e move o leitor para o nó após o <xref:System.Xml.XmlNodeType.EndElement> nó.  
+  
+ Se você chamar <xref:System.Xml.XmlNodeReader.Read%2A> antes de todo o conteúdo do elemento é consumido, o leitor pode se comportar como se o conteúdo foi consumido e, em seguida, o <xref:System.Xml.XmlNodeReader.Read%2A> método foi chamado. Isso significa que o leitor lê todo o texto até que o elemento final seja encontrado. Ele lê o nó de marca de fim, ler o próximo nó e, em seguida, se posicionar no próximo nó subsequente.  
+  
+   
+  
+## Examples  
+ Consulte <xref:System.Xml.XmlReader.ReadElementContentAsBase64%2A?displayProperty=nameWithType> para ver um exemplo que usa esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O nó atual não é um nó de elemento.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice de buffer ou de índice + contagem é maior que o tamanho do buffer alocado.</exception>
+        <exception cref="T:System.Xml.XmlException">O elemento tem conteúdo misto.</exception>
+        <exception cref="T:System.FormatException">Não é possível converter conteúdo no tipo solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadElementContentAsBinHex">
+      <MemberSignature Language="C#" Value="public override int ReadElementContentAsBinHex (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadElementContentAsBinHex(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.ReadElementContentAsBinHex(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer para o qual o texto resultante será copiado. Este valor pode não ser <see langword="null" />.</param>
+        <param name="index">O deslocamento do buffer onde começar a copiar o resultado.</param>
+        <param name="count">O número máximo de bytes a serem copiados para o buffer. O número real de bytes copiados é retornado deste método.</param>
+        <summary>Lê o elemento e decodifica o conteúdo BinHex.</summary>
+        <returns>O número de bytes gravados no buffer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esse método lê o conteúdo de elemento, decodifica usando a codificação BinHex e retorna os bytes binários codificados (por exemplo, um embutido BinHex codificado imagem GIF) no buffer.  
+  
+ Esse método somente pode ler os elementos de conteúdo simples. O elemento pode conter texto, o espaço em branco, espaço em branco significativo, seções CDATA, comentários e instruções de processamento. Ele também pode conter referências de entidade, que são expandidas automaticamente. O elemento não pode ter elementos filho.  
+  
+ Esse método é muito semelhante de <xref:System.Xml.XmlNodeReader.ReadContentAsBinHex%2A> método, exceto que ela só pode ser chamado em tipos de nó de elemento.  
+  
+ Se o valor de contagem é maior do que o número de bytes no documento, ou se é igual ao número de bytes no documento, o <xref:System.Xml.XmlNodeReader> lê todos os bytes restantes no documento e retorna o número de bytes lidos. O próximo <xref:System.Xml.XmlNodeReader> chamada de método retorna um zero e move o leitor para o nó após o <xref:System.Xml.XmlNodeType.EndElement> nó.  
+  
+ Se você chamar <xref:System.Xml.XmlNodeReader.Read%2A> antes de todo o conteúdo do elemento é consumido, o leitor pode se comportar como se o conteúdo foi consumido e, em seguida, o <xref:System.Xml.XmlNodeReader.Read%2A> método foi chamado. Isso significa que o leitor lê todo o texto até que o elemento final seja encontrado. Ele lê o nó de marca de fim, ler o próximo nó e, em seguida, se posicionar no próximo nó subsequente.  
+  
+   
+  
+## Examples  
+ Consulte <xref:System.Xml.XmlReader.ReadElementContentAsBinHex%2A?displayProperty=nameWithType> para ver um exemplo que usa esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O nó atual não é um nó de elemento.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice de buffer ou de índice + contagem é maior que o tamanho do buffer alocado.</exception>
+        <exception cref="T:System.Xml.XmlException">O elemento tem conteúdo misto.</exception>
+        <exception cref="T:System.FormatException">Não é possível converter conteúdo no tipo solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadState">
+      <MemberSignature Language="C#" Value="public override System.Xml.ReadState ReadState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.ReadState ReadState" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.ReadState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ReadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do leitor.</summary>
+        <value>Um dos valores de <see cref="T:System.Xml.ReadState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadString">
+      <MemberSignature Language="C#" Value="public override string ReadString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ReadString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.ReadString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê o conteúdo de um nó de elemento ou texto como uma cadeia de caracteres.</summary>
+        <returns>O conteúdo do elemento ou nó de texto semelhantes (Isso pode incluir CDATA, nós de texto e assim por diante). Isso pode ser uma cadeia de caracteres vazia se o leitor estiver posicionado em algo diferente de um nó de elemento ou de texto, ou se não houver nenhum conteúdo de texto mais para retornar no contexto atual.  
+  
+ <see langword="Note:" />O nó de texto pode ser um elemento ou um nó de texto do atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Se posicionado em um elemento `ReadString` concatena todos os texto, espaço em branco significativo, o espaço em branco e tipos de nó de seção CData e retorna os dados concatenados como o conteúdo do elemento. É interrompido quando qualquer marcação for encontrada. Isso pode ocorrer em um modelo de conteúdo misto ou quando uma marca de fim de elemento for lida.  
+  
+ Se posicionado em um nó de texto semelhantes, `ReadString` executa a mesma concatenação do nó de texto para a marca de fim do elemento. Se o leitor for posicionado em um nó de texto de atributo, o `ReadString` terá a mesma funcionalidade de um leitor posicionado na marca de início de elemento. Ele retornará todos os nós de texto de elemento concatenados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo de texto de cada um dos elementos.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.IsEmptyElement Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.IsEmptyElement Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.IsEmptyElement Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.IsEmptyElement Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.IsEmptyElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.IsEmptyElement Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveEntity">
+      <MemberSignature Language="C#" Value="public override void ResolveEntity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResolveEntity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.ResolveEntity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Resolve a referência de entidade para <see langword="EntityReference" /> nós.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Se o leitor estiver posicionado em uma `EntityReference` nó (`XmlNodeType.EntityReference`), se <xref:System.Xml.XmlNodeReader.Read%2A> é chamado depois de chamar esse método, o texto de substituição da entidade é analisado. Quando o texto de substituição da entidade for concluído, um `EndEntity` nó é retornado para fechar o escopo de referência de entidade.  
+  
+> [!NOTE]
+>  Depois de chamar esse método, se a entidade fizer parte de um valor de atributo, você deve chamar <xref:System.Xml.XmlNodeReader.ReadAttributeValue%2A> para entrar na entidade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa `ResolveEntity` para expandir uma entidade geral.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.ResolveEntity Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.ResolveEntity Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.ResolveEntity Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.ResolveEntity Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.ResolveEntity Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.ResolveEntity Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O leitor não está posicionado em um <see langword="EntityReference" /> nó.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaInfo">
+      <MemberSignature Language="C#" Value="public override System.Xml.Schema.IXmlSchemaInfo SchemaInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.IXmlSchemaInfo SchemaInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.SchemaInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.IXmlSchemaInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de esquema que foi atribuídas ao nó atual.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Schema.IXmlSchemaInfo" /> que contém as informações de esquema para o nó atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ O <xref:System.Xml.Schema.IXmlSchemaInfo> interface representa a postagem do esquema de validação Infoset psvi (POST) do nó XML subjacente. O conteúdo de psvi POST dessa propriedade é definido depois que o nó é validado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="public override void Skip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Skip() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.Skip" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ignora os filhos do nó atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Por exemplo, suponha que você tem o seguinte XML de entrada:  
+  
+```  
+<a name="bob" age="123">  
+   <x/>abc<y/>  
+ </a>  
+ <b>  
+...  
+ </b>  
+```  
+  
+ Se o leitor estiver posicionado no "\<um >" nó ou qualquer um de seus atributos, chamando `Skip` posiciona o leitor para o "\<b >" nó.  
+  
+ Se o leitor está posicionado em um nó folha já (como "x" do elemento ou o nó de texto "abc"), chamando `Skip` é o mesmo que chamar <xref:System.Xml.XmlNodeReader.Read%2A>.  
+  
+ Este método verifica XML bem formado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê o nó de elemento de preço no documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.Skip Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.Skip Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.Skip Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.Skip Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.Skip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.Skip Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.IXmlNamespaceResolver.GetNamespacesInScope">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IDictionary&lt;string,string&gt; IXmlNamespaceResolver.GetNamespacesInScope (System.Xml.XmlNamespaceScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(valuetype System.Xml.XmlNamespaceScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.System#Xml#IXmlNamespaceResolver#GetNamespacesInScope(System.Xml.XmlNamespaceScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Xml.XmlNamespaceScope" />
+      </Parameters>
+      <Docs>
+        <param name="scope">
+          Objeto <see cref="T:System.Xml.XmlNamespaceScope" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)" />.</summary>
+        <returns>
+          <see cref="T:System.Collections.IDictionary" />objeto que contém os namespaces que estão no escopo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.XmlNodeReader> é convertida em uma interface de <xref:System.Xml.IXmlNamespaceResolver>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.IXmlNamespaceResolver.LookupNamespace">
+      <MemberSignature Language="C#" Value="string IXmlNamespaceResolver.LookupNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Xml.IXmlNamespaceResolver.LookupNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.System#Xml#IXmlNamespaceResolver#LookupNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">
+          <see cref="T:System.String" />que contém o prefixo de namespace.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)" />.</summary>
+        <returns>
+          <see cref="T:System.String" />que contém o nome do namespace.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.XmlNodeReader> é convertida em uma interface de <xref:System.Xml.IXmlNamespaceResolver>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.IXmlNamespaceResolver.LookupPrefix">
+      <MemberSignature Language="C#" Value="string IXmlNamespaceResolver.LookupPrefix (string namespaceName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Xml.IXmlNamespaceResolver.LookupPrefix(string namespaceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNodeReader.System#Xml#IXmlNamespaceResolver#LookupPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">
+          <see cref="T:System.String" />objeto que identifica o namespace.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)" />.</summary>
+        <returns>
+          <see cref="T:System.String" />objeto que contém o prefixo de namespace.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.XmlNodeReader> é convertida em uma interface de <xref:System.Xml.IXmlNamespaceResolver>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de texto do nó atual.</summary>
+        <value>O valor retornado depende do <see cref="P:System.Xml.XmlNodeReader.NodeType" /> do nó. A tabela a seguir lista os tipos de nós que têm um valor a ser retornado. Todos os outros tipos de nó retornam Empty.  
+  
+ <list type="table"><listheader><term>Tipo de nó  
+  
+ </term><description>Valor  
+  
+ </description></listheader><item><term><see langword="Attribute" /></term><description>O valor do atributo.  
+  
+ </description></item><item><term><see langword="CDATA" /></term><description>O conteúdo da seção CDATA.  
+  
+ </description></item><item><term><see langword="Comment" /></term><description>O conteúdo do comentário.  
+  
+ </description></item><item><term><see langword="DocumentType" /></term><description>O subconjunto interno.  
+  
+ </description></item><item><term><see langword="ProcessingInstruction" /></term><description>Todo o conteúdo, exceto o destino.  
+  
+ </description></item><item><term><see langword="SignificantWhitespace" /></term><description>O espaço em branco entre a marcação em um modelo de conteúdo misto.  
+  
+ </description></item><item><term><see langword="Text" /></term><description>O conteúdo do nó de texto.  
+  
+ </description></item><item><term><see langword="Whitespace" /></term><description>O espaço em branco entre a marcação.  
+  
+ </description></item><item><term><see langword="XmlDeclaration" /></term><description>O conteúdo da declaração.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir lê um XML e exibe cada nó.  
+  
+ [!code-cpp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNodeReader.Name Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo de `items.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNodeReader.Name Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNodeReader.Name Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlLang">
+      <MemberSignature Language="C#" Value="public override string XmlLang { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlLang" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.XmlLang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o escopo de <see langword="xml:lang" /> atual.</summary>
+        <value>Atual <see langword="xml:lang" /> escopo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ Esta propriedade representa o escopo de XML: lang no qual reside o nó atual. Por exemplo, aqui está um fragmento XML com `xml:lang` definido como inglês (EUA) no elemento raiz:  
+  
+```  
+<root xml:lang="en-us">   
+<name>Fred</name>   
+</root>   
+```  
+  
+ Quando o leitor está posicionado no `name` elemento, você pode usar essa propriedade para encontrar-se no escopo de um inglês americano `xml:lang` atributo.  
+  
+ A cadeia de caracteres retornada também está na <xref:System.Xml.XmlNodeReader.NameTable%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSpace">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlSpace XmlSpace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlSpace XmlSpace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNodeReader.XmlSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o escopo de <see langword="xml:space" /> atual.</summary>
+        <value>Um dos valores de <see cref="T:System.Xml.XmlSpace" />. Se nenhum <see langword="xml:space" /> existe escopo, essa propriedade padroniza como <see langword="XmlSpace.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], a prática recomendada é criar instâncias de <xref:System.Xml.XmlReader> que usam a classe de <xref:System.Xml.XmlReaderSettings> e o método de <xref:System.Xml.XmlReader.Create%2A> . Isso permite que você veja as vantagens de todos os novos recursos introduzidos em [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte a seção comentários a <xref:System.Xml.XmlReader> página de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

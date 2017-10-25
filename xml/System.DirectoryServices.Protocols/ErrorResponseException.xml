@@ -1,0 +1,193 @@
+<Type Name="ErrorResponseException" FullName="System.DirectoryServices.Protocols.ErrorResponseException">
+  <TypeSignature Language="C#" Value="public class ErrorResponseException : System.DirectoryServices.Protocols.DirectoryException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ErrorResponseException extends System.DirectoryServices.Protocols.DirectoryException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.ErrorResponseException" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.Protocols.ErrorResponseException" /> classe é uma exceção que ocorre quando o servidor retorna um <see langword="&lt;errorResponse&gt;" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorResponseException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O construtor <see cref="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor" /> cria uma instância da classe <see cref="T:System.DirectoryServices.Protocols.ErrorResponseException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorResponseException (System.DirectoryServices.Protocols.DsmlErrorResponse response);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.Protocols.DsmlErrorResponse response) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.DirectoryServices.Protocols.DsmlErrorResponse)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="response" Type="System.DirectoryServices.Protocols.DsmlErrorResponse" />
+      </Parameters>
+      <Docs>
+        <param name="response">O <see cref="T:System.DirectoryServices.Protocols.DsmlErrorResponse" /> objeto retornado pelo servidor que corresponde do <see langword="&lt;errorResponse&gt;" />.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.DirectoryServices.Protocols.DsmlErrorResponse)" /> construtor cria uma instância de <see cref="T:System.DirectoryServices.Protocols.ErrorResponseException" /> classe usando o objeto de resposta especificado. A mensagem padrão exibida para o cliente é "&lt;errorResponse&gt; retornado".</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorResponseException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem exibida para o cliente quando a exceção ocorrer.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.String)" /> construtor cria uma instância de <see cref="T:System.DirectoryServices.Protocols.ErrorResponseException" /> classe usando a mensagem especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorResponseException (System.DirectoryServices.Protocols.DsmlErrorResponse response, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.Protocols.DsmlErrorResponse response, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.DirectoryServices.Protocols.DsmlErrorResponse,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="response" Type="System.DirectoryServices.Protocols.DsmlErrorResponse" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="response">O <see cref="T:System.DirectoryServices.Protocols.DsmlErrorResponse" /> objeto retornado pelo servidor que corresponde do <see langword="&lt;errorResponse&gt;" />.</param>
+        <param name="message">A mensagem exibida para o cliente quando a exceção ocorrer.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.DirectoryServices.Protocols.DsmlErrorResponse,System.String)" /> construtor cria uma instância do <see cref="T:System.DirectoryServices.Protocols.ErrorResponseException" /> classe usando o objeto de resposta especificado e a mensagem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ErrorResponseException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Dados necessários para serializar o parâmetro.</param>
+        <param name="context">A origem e destino do fluxo serializado associado ao parâmetro.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> construtor cria uma instância do <see cref="T:System.DirectoryServices.Protocols.ErrorResponseException" /> classe usando os dados de serialização e contexto de streaming.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorResponseException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem exibida para o cliente quando a exceção ocorrer.</param>
+        <param name="inner">O <see cref="P:System.Exception.InnerException" />, se houver, que lançou a exceção.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.String,System.Exception)" /> construtor cria uma instância de <see cref="T:System.DirectoryServices.Protocols.ErrorResponseException" /> classe usando a mensagem especificada e a exceção interna.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorResponseException (System.DirectoryServices.Protocols.DsmlErrorResponse response, string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.Protocols.DsmlErrorResponse response, string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.DirectoryServices.Protocols.DsmlErrorResponse,System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="response" Type="System.DirectoryServices.Protocols.DsmlErrorResponse" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="response">O <see cref="T:System.DirectoryServices.Protocols.DsmlErrorResponse" /> objeto retornado pelo servidor que corresponde do <see langword="&lt;errorResponse&gt;" />.</param>
+        <param name="message">A mensagem exibida para o cliente quando a exceção ocorrer.</param>
+        <param name="inner">O <see cref="P:System.Exception.InnerException" />, se houver, que lançou a exceção.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.ErrorResponseException.#ctor(System.DirectoryServices.Protocols.DsmlErrorResponse,System.String,System.Exception)" /> construtor cria uma instância de <see cref="T:System.DirectoryServices.Protocols.ErrorResponseException" /> classe usando o objeto de resposta especificado, a mensagem e a exceção interna.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ErrorResponseException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Dados necessários para serializar o parâmetro.</param>
+        <param name="streamingContext">A origem e destino do fluxo serializado associado ao parâmetro.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.ErrorResponseException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> método preenche o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com os dados necessários para serializar o parâmetro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DsmlErrorResponse Response { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.DsmlErrorResponse Response" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.ErrorResponseException.Response" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DsmlErrorResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.ErrorResponseException.Response" /> propriedade contém o <see cref="T:System.DirectoryServices.Protocols.DsmlErrorResponse" /> que corresponde ao objeto de <see langword="&lt;errorResponse&gt;" />.</summary>
+        <value>O <see cref="T:System.DirectoryServices.Protocols.DsmlErrorResponse" /> que corresponde ao objeto de <see langword="&lt;errorResponse&gt;" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

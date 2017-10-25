@@ -1,0 +1,1272 @@
+<Type Name="ComponentCommands" FullName="System.Windows.Input.ComponentCommands">
+  <TypeSignature Language="C#" Value="public static class ComponentCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ComponentCommands extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ComponentCommands" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto padrão de comandos relacionados ao componente, que tem gestos de entrada chave predefinidos e propriedades <see cref="P:System.Windows.Input.RoutedUICommand.Text" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os comandos de <xref:System.Windows.Input.ComponentCommands> classe e comandos no outro comando classes de biblioteca, tais como <xref:System.Windows.Input.ApplicationCommands> e <xref:System.Windows.Input.NavigationCommands>, serve para representar um conjunto de comandos comuns que os programadores de aplicativos com frequência encontram.  Os comandos representam apenas a instância das <xref:System.Windows.Input.RoutedCommand> e não a lógica de implementação do comando. A lógica de implementação é associada ao comando por meio de um <xref:System.Windows.UIElement.CommandBindings%2A>. Por exemplo, se o <xref:System.Windows.Input.ComponentCommands.MoveLeft%2A> comando é executado em um controle (o destino do comando), a lógica que executa o <xref:System.Windows.Input.ComponentCommands.MoveLeft%2A> comando não pode ser fornecido pelo destino de comando, portanto o gravador de aplicativos é responsável por gravar a lógica que determina como o destino do comando lida com o comando.  
+  
+ Muitos controles fornecer lógica de implementação, no entanto, para muitos dos comandos na biblioteca de comandos.  Por exemplo, o <xref:System.Windows.Controls.TextBox> classe fornece lógica para o <xref:System.Windows.Input.ApplicationCommands.Paste%2A> comando <xref:System.Windows.Input.ApplicationCommands.Cut%2A> comando, <xref:System.Windows.Input.ApplicationCommands.Copy%2A> comando, <xref:System.Windows.Input.ApplicationCommands.Undo%2A> comando, e <xref:System.Windows.Input.ApplicationCommands.Redo%2A> comando. Consulte a documentação da classe para classes de controle específico para obter mais informações.  
+  
+ Para obter mais informações sobre comandos e comandos, consulte [visão geral do comando](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExtendSelectionDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ExtendSelectionDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ExtendSelectionDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ExtendSelectionDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando estender seleção para baixo.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>SHIFT + seta para baixo  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Estender seleção para baixo  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de estender a seleção para baixo.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ExtendSelectionDown"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ExtendSelectionDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendSelectionLeft">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ExtendSelectionLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ExtendSelectionLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ExtendSelectionLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando de estender a seleção para a esquerda.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>SHIFT + seta à esquerda  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Estender seleção para a esquerda  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de estender a seleção à esquerda.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ExtendSelectionLeft"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ExtendSelectionLeft"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendSelectionRight">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ExtendSelectionRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ExtendSelectionRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ExtendSelectionRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando de estender a seleção para a direita.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>SHIFT + seta para direita  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Estender seleção para a direita  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de estender a seleção à direita.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ExtendSelectionRight"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ExtendSelectionRight"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendSelectionUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ExtendSelectionUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ExtendSelectionUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ExtendSelectionUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando estender seleção para cima.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>SHIFT + seta para cima  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Estender seleção para cima  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de estender a seleção para cima.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ExtendSelectionUp"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ExtendSelectionUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover para baixo.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Para baixo  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover para baixo  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de estender a seleção para baixo.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveDown"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusBack">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusBack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusBack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Move o foco novamente.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + esquerda  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover foco para trás  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de estender a seleção com versões anteriores.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveFocusBack"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveFocusBack"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover foco para baixo.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + seta para baixo  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover foco para baixo  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de estender mover o foco para baixo.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveFocusDown"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveFocusDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusForward">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusForward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover foco para frente.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + seta para direita  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover foco para frente  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover o foco para frente.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveFocusForward"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveFocusForward"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusPageDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusPageDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusPageDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusPageDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover foco página para baixo.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Ctrl + PageDown  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover foco com Page Down  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover o foco de uma página para baixo.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveFocusPageDown"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveFocusPageDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusPageUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusPageUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusPageUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusPageUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover foco página para cima.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Ctrl + PageUp  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover foco com Page Up  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover o foco de uma página para cima.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveFocusPageUp"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveFocusPageUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveFocusUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveFocusUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveFocusUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveFocusUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover foco para cima.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + seta para cima  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover foco para cima  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover o foco para cima.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveFocusUp"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveFocusUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveLeft">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover para a esquerda.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>À esquerda  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover para a esquerda  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover a seleção à esquerda.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveLeft"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveLeft"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveRight">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover para a direita.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Certo  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover para a direita  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover a seleção para a direita.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveRight"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveRight"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveToEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Move a extremidade.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Final  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover para o fim  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover a seleção para o último item.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveToEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveToEnd"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToHome">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToHome { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToHome" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveToHome" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover a página inicial.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Casa  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover para a página inicial  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover a seleção para o primeiro item.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveToHome"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveToHome"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToPageDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToPageDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToPageDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveToPageDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover a página para baixo.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>PageDown  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover para Page Down  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover a seleção uma página para baixo.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveToPageDown"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveToPageDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToPageUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToPageUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToPageUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveToPageUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover a página para cima.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Página para cima  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover para Page Up  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover a seleção uma página para cima.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveToPageUp"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveToPageUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.MoveUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Mover para cima.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Para cima  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Mover para cima  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de mover a seleção para cima.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_MoveUp"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o Role pela linha de comando.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Nenhum gesto definido  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Rolar por linha  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de rolagem vertical para cima por um determinado número de linhas.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ScrollByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ScrollByLine"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollPageDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollPageDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollPageDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando página rolar para baixo.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>PageDown  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Rolar página para baixo  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de rolagem vertical para baixo por uma página.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ScrollPageDown"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ScrollPageDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageLeft">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollPageLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollPageLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollPageLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando de página de rolagem à esquerda.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Nenhum gesto definido.  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Página de rolagem à esquerda  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção para rolar uma página para a esquerda.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ScrollPageLeft"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ScrollPageLeft"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageRight">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollPageRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollPageRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollPageRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando de página de rolagem à direita.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Nenhum gesto definido.  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Página de rolagem à direita  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção para rolar uma página para a direita.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ScrollPageRight"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ScrollPageRight"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollPageUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ScrollPageUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ScrollPageUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.ScrollPageUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando página rolar para cima.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Página para cima  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Rolar página para cima  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de rolagem vertical para cima por uma página.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ScrollPageUp"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ScrollPageUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.SelectToEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Selecionar a ponta.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>SHIFT + End  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Selecione para final  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de selecionar os itens do item atual para o último item.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_SelectToEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectToEnd"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToHome">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToHome { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToHome" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.SelectToHome" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Selecionar a página inicial.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Shift + Home  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Selecione a página inicial  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de estender selecione os itens a partir do item atual para o primeiro item.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_SelectToHome"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectToHome"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToPageDown">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToPageDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToPageDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.SelectToPageDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Selecionar a página para baixo.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>SHIFT + PageDown  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Selecione para Page Down  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de selecionar do item atual de uma página para baixo.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_SelectToPageDown"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectToPageDown"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToPageUp">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToPageUp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToPageUp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ComponentCommands.SelectToPageUp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Selecionar a página anterior.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>SHIFT + PageUp  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Selecione para Page Up  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de selecionar do item atual de uma página para cima.  
+  
+ Não há necessariamente uma implementação real responder ao comando de qualquer objeto especificado; em muitos casos, a implementação em resposta a esse comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_SelectToPageUp"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectToPageUp"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

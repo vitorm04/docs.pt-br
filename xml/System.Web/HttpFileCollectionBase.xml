@@ -1,0 +1,310 @@
+<Type Name="HttpFileCollectionBase" FullName="System.Web.HttpFileCollectionBase">
+  <TypeSignature Language="C#" Value="public abstract class HttpFileCollectionBase : System.Collections.Specialized.NameObjectCollectionBase, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpFileCollectionBase extends System.Collections.Specialized.NameObjectCollectionBase implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpFileCollectionBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.NameObjectCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como a classe base para as classes que fornecem acesso a arquivos que foram carregados por um cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpFileCollectionBase> classe é uma classe abstrata que contém os mesmos membros como o <xref:System.Web.HttpFileCollection> classe. O <xref:System.Web.HttpFileCollectionBase> classe permite que você crie classes derivadas que são semelhantes a <xref:System.Web.HttpFileCollection> classe, mas que você pode personalizar e que trabalham fora o pipeline do ASP.NET. Quando você executa testes de unidade, você normalmente usar uma classe derivada para implementar membros com comportamento personalizado que atende o cenário que você está testando.  
+  
+ O <xref:System.Web.HttpFileCollectionWrapper> classe deriva de <xref:System.Web.HttpFileCollectionBase> classe. O <xref:System.Web.HttpFileCollectionWrapper> classe serve como um wrapper para o <xref:System.Web.HttpFileCollection> classe. Em tempo de execução, você normalmente usa uma instância do <xref:System.Web.HttpFileCollectionWrapper> classe para chamar membros de <xref:System.Web.HttpFileCollection> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpFileCollectionBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollectionBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a classe para uso por uma instância de classe herdada. Esse construtor só pode ser chamado por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public virtual string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpFileCollectionBase.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém uma matriz que contém as chaves (nomes) de todos os objetos de arquivo postado na coleção.</summary>
+        <value>Uma matriz de nomes de arquivo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollectionBase.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">A matriz unidimensional que é o destino dos elementos copiados da coleção. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Quando substituído em uma classe derivada, copia os elementos da coleção para uma matriz, começando no índice especificado na matriz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpFileCollectionBase.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de objetos de arquivo postado na coleção.</summary>
+        <value>O número de objetos na coleção.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpPostedFileBase Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.HttpPostedFileBase Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollectionBase.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFileBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do objeto a ser retornado.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o objeto de arquivo postado no índice especificado.</summary>
+        <returns>O objeto de arquivo postado especificado pelo <paramref name="index" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpPostedFileBase Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.HttpPostedFileBase Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollectionBase.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFileBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto a ser retornado.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o objeto de arquivo publicado que tem o nome especificado da coleção.</summary>
+        <returns>O objeto de arquivo publicado que é especificado pelo <paramref name="name" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollectionBase.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna um enumerador que pode ser usado para iterar pela coleção.</summary>
+        <returns>Um objeto que pode ser usado para iterar pela coleção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public virtual string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollectionBase.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do objeto para retornar.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o nome do objeto de arquivo postado no índice especificado.</summary>
+        <returns>O nome do objeto postados de arquivo que é especificado pelo <paramref name="index" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMultiple">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IList&lt;System.Web.HttpPostedFileBase&gt; GetMultiple (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;class System.Web.HttpPostedFileBase&gt; GetMultiple(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollectionBase.GetMultiple(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Web.HttpPostedFileBase&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser comparado.</param>
+        <summary>Quando implementado em uma classe derivada, retorna todos os arquivos que correspondem ao nome especificado.</summary>
+        <returns>A coleção de arquivos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public virtual bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpFileCollectionBase.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o acesso à coleção é thread-safe.</summary>
+        <value>
+          <see langword="true" />Se o acesso é sincronizado (thread-safe); Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpPostedFileBase this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpPostedFileBase Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpFileCollectionBase.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFileBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do objeto a ser obtido.</param>
+        <summary>Quando substituído em uma classe derivada, obtém o objeto de arquivo postado no índice especificado.</summary>
+        <value>O objeto de arquivo postado especificado pelo <paramref name="index" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpPostedFileBase this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpPostedFileBase Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpFileCollectionBase.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFileBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto a ser retornado.</param>
+        <summary>Quando substituído em uma classe derivada, obtém o objeto de arquivo publicado que tem o nome especificado da coleção.</summary>
+        <value>O objeto de arquivo publicado que é especificado pelo <paramref name="name" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public virtual object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpFileCollectionBase.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

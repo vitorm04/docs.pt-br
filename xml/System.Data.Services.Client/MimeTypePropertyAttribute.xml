@@ -1,0 +1,93 @@
+<Type Name="MimeTypePropertyAttribute" FullName="System.Data.Services.Client.MimeTypePropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MimeTypePropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MimeTypePropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.MimeTypePropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Anota uma propriedade em uma classe que tenha sido anotada com a <see cref="T:System.Data.Services.Client.MediaEntryAttribute" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `MimeTypePropertyAttribute` usa o nome da propriedade que contém o tipo de mime para associar a propriedade especificada no <xref:System.Data.Services.Client.MediaEntryAttribute>. A propriedade especificada é definida automaticamente como o tipo de mime dos dados quando um recurso de mídia associado à entrada de link de mídia é carregada com atraso, o <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método.  
+  
+ O sistema também lê o tipo mime dessa propriedade e usa para definir o `Content-Type` cabeçalho em uma POSTAGEM de solicitação para uma mídia de entrada do link. Uma entrada de link de mídia é uma construção de protocolo de AtomPub para lidar com dados binários e metadados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MimeTypePropertyAttribute (string dataPropertyName, string mimeTypePropertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string dataPropertyName, string mimeTypePropertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.MimeTypePropertyAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataPropertyName" Type="System.String" />
+        <Parameter Name="mimeTypePropertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataPropertyName">Uma cadeia de caracteres que contém o nome do novo atributo de propriedade.</param>
+        <param name="mimeTypePropertyName">Uma cadeia de caracteres que contém o tipo Mime do novo atributo de propriedade.</param>
+        <summary>Cria uma nova instância do <see langword="MimeTypePropertyAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataPropertyName">
+      <MemberSignature Language="C#" Value="public string DataPropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataPropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.MimeTypePropertyAttribute.DataPropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see langword="MimeTypePropertyAttribute" />.</summary>
+        <value>Uma cadeia de caracteres que contém o nome do atributo de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MimeTypePropertyName">
+      <MemberSignature Language="C#" Value="public string MimeTypePropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MimeTypePropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.MimeTypePropertyAttribute.MimeTypePropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo Mime das<see langword="MimeTypePropertyAttribute" /></summary>
+        <value>Uma cadeia de caracteres que contém o tipo Mime do atributo de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

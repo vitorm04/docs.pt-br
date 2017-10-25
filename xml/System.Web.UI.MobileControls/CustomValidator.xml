@@ -1,0 +1,194 @@
+<Type Name="CustomValidator" FullName="System.Web.UI.MobileControls.CustomValidator">
+  <TypeSignature Language="C#" Value="public class CustomValidator : System.Web.UI.MobileControls.BaseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomValidator extends System.Web.UI.MobileControls.BaseValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.CustomValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.BaseValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ServerValidate")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:CustomValidator runat="server" ErrorMessage="CustomValidator"&gt;&lt;/{0}:CustomValidator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um controle que pode executar a validação personalizada em relação a outro controle. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe se comporta de forma idêntica ao <xref:System.Web.UI.WebControls.CustomValidator?displayProperty=nameWithType> controle de servidor Web. Os desenvolvedores podem escolher seu próprios representante de tempo de execução linguagem comum para usar para validação.  
+  
+ Por padrão, <xref:System.Web.UI.MobileControls.Command> controles em um formulário geram eventos de validação no formulário para executar a validação quando o formulário é enviado ao servidor. Para desabilitar a validação automática, defina o <xref:System.Web.UI.MobileControls.Command.CausesValidation%2A> propriedade o <xref:System.Web.UI.MobileControls.Command> controles para `false`.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir verifica se o valor que um usuário coloca no <xref:System.Web.UI.MobileControls.TextBox> controle é um número par. Se o valor for um número par, a página é válida. Se não, a página não é válida e o <xref:System.Web.UI.MobileControls.CustomValidator> exibe o <xref:System.Web.UI.MobileControls.BaseValidator.ErrorMessage%2A> propriedade.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[MobileCustomValidatorSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCustomValidatorSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileCustomValidatorSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCustomValidatorSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.CustomValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.MobileControls.CustomValidator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPropertiesValid">
+      <MemberSignature Language="C#" Value="protected override bool ControlPropertiesValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ControlPropertiesValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.CustomValidator.ControlPropertiesValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se as propriedades a serem validadas são válidas. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se as propriedades de controle a ser validado são válidas. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebValidator">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.BaseValidator CreateWebValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.BaseValidator CreateWebValidator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.CustomValidator.CreateWebValidator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BaseValidator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Método virtual de classe derivada para criar seu próprio validados Web agregados. O validador de Web destina-se a obtenção e a configuração das propriedades comuns de validador de base da Web. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Um validador de Web agregado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected override bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.CustomValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado durante o estágio de validação quando o ASP.NET processa um formulário da Web móvel. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se o validador for válido, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnServerValidate">
+      <MemberSignature Language="C#" Value="protected virtual bool OnServerValidate (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnServerValidate(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.CustomValidator.OnServerValidate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser validado.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.MobileControls.CustomValidator.ServerValidate" />.</summary>
+        <returns>
+          <see langword="true" /> se o valor especificado pelo parâmetro <paramref name="value" /> passa a validação; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerValidate">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.ServerValidateEventHandler ServerValidate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.ServerValidateEventHandler ServerValidate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.CustomValidator.ServerValidate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ServerValidateEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Web.UI.MobileControls.CustomValidator" /> valida o valor da <see cref="P:System.Web.UI.MobileControls.BaseValidator.ControlToValidate" /> propriedade. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um método é registrado com esse evento, ele é chamado com o valor de <xref:System.Web.UI.MobileControls.BaseValidator.ControlToValidate%2A> propriedade. Validação só terá sucesso se este manipulador de eventos retorna `true`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como interceptar o <xref:System.Web.UI.MobileControls.CustomValidator.ServerValidate> evento para adicionar lógica para validar a página.  
+  
+ [!code-aspx-csharp[MobileCustomValidatorSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCustomValidatorSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileCustomValidatorSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCustomValidatorSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

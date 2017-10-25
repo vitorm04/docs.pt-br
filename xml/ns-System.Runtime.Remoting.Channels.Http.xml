@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Channels.Http">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Channels.Http" /> namespace contém canais que usam o protocolo HTTP para mensagens de transporte e objetos para e de locais remotos. Por padrão, os canais HTTP codificar objetos e chamadas de método em formato SOAP para transmissão, mas outros coletores de formatador de codificação e decodificação podem ser especificados nas propriedades de configuração de um canal. Uma das classes mais importantes do <see cref="N:System.Runtime.Remoting.Channels.Http" /> namespace é o <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Channels.Http.HttpChannel> classe combina o <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> classe e o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> de classe e pode ser usado para receber e enviar mensagens usando o protocolo HTTP.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

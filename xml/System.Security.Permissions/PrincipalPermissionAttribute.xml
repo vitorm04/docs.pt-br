@@ -1,0 +1,217 @@
+<Type Name="PrincipalPermissionAttribute" FullName="System.Security.Permissions.PrincipalPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PrincipalPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PrincipalPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.PrincipalPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as ações de segurança para <see cref="T:System.Security.Permissions.PrincipalPermission" /> sejam aplicadas ao código usando a segurança declarativa. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Permissions.PrincipalPermissionAttribute>pode ser usado para declarativamente exigem que os usuários executando seu código pertencerem a uma função especificada ou tenha sido autenticado. O uso de <xref:System.Security.Permissions.PermissionState.Unrestricted> cria um <xref:System.Security.Permissions.PrincipalPermission> com <xref:System.Security.Permissions.PrincipalPermissionAttribute.Authenticated%2A> definida como `true` e <xref:System.Security.Permissions.PrincipalPermissionAttribute.Name%2A> e <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> definido como `null`.  
+  
+ O escopo da declaração que é permitido depende do <xref:System.Security.Permissions.SecurityAction> que é usado. <xref:System.Security.Permissions.PrincipalPermissionAttribute>não pode ser aplicado no nível de assembly.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. Atributos de segurança são usados apenas para a segurança declarativa. Para segurança obrigatória, use a classe de permissão correspondente.  
+  
+> [!IMPORTANT]
+>  Antes de usar essa classe para permissão de demanda principal, você deve definir a política de entidade do atual domínio de aplicativo para o valor de enumeração <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>. Por padrão, a política de entidade de segurança é definida como <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal>. Se você não definir a política de entidade <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>, uma solicitação de permissão principal falhará. O código a seguir deve ser executado antes que a permissão principal é exigida:`AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal).`  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Security.Permissions.PrincipalPermissionAttribute> classe é usada declarativamente para solicitar que o usuário atual seja um administrador.  
+  
+> [!NOTE]
+>  No Windows Vista, o controle de conta de usuário (UAC) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que você deve ser um administrador, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+ [!code-cpp[Classic PrincipalPermissionAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermissionAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PrincipalPermissionAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermissionAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic PrincipalPermissionAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic PrincipalPermissionAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrincipalPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.PrincipalPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores de <see cref="T:System.Security.Permissions.SecurityAction" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.PrincipalPermissionAttribute" /> com o <see cref="T:System.Security.Permissions.SecurityAction" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Demand`, `InheritanceDemand`, e `LinkDemand` são os únicos valores de <xref:System.Security.Permissions.SecurityAction> que têm significado para este atributo. Outras ações não se aplicam às permissões que não são as permissões de acesso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Security.Permissions.PrincipalPermissionAttribute.%23ctor%2A> construtor para solicitar que o usuário atual seja um administrador.  
+  
+> [!NOTE]
+>  No Windows Vista, o controle de conta de usuário (UAC) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que você deve ser um administrador, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+ [!code-cpp[Classic PrincipalPermissionAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermissionAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic PrincipalPermissionAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermissionAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic PrincipalPermissionAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic PrincipalPermissionAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="public bool Authenticated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Authenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PrincipalPermissionAttribute.Authenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a entidade de segurança atual foi autenticada pelo provedor de segurança baseada em função subjacente.</summary>
+        <value>
+          <see langword="true" />Se o servidor principal atual tiver sido autenticado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.PrincipalPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um novo <see cref="T:System.Security.Permissions.PrincipalPermission" />.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.PrincipalPermission" /> que corresponde a este atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só deve ser chamado pelo sistema de segurança, nunca pelo código do aplicativo.  
+  
+ Em tempo de compilação, atributos convertem declarações de segurança para um formato serializado em metadados. Dados de segurança declarativa em metadados são criados a partir da permissão que esse método retorna que corresponde a este atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PrincipalPermissionAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da identidade associada à entidade atual.</summary>
+        <value>Um nome para corresponder em que são fornecidas pelo provedor de segurança baseada em função subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o provedor de autenticação do Windows NT, <xref:System.Security.Permissions.PrincipalPermissionAttribute.Name%2A> é o mesmo nome de logon do usuário do Windows NT (no formato "DomainName\UserName"). Verifique a documentação do host para determinar qual provedor de autenticação que usa e como ele determina a identidade da entidade de segurança atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public string Role { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Role" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.PrincipalPermissionAttribute.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a associação em uma função de segurança especificada.</summary>
+        <value>O nome de uma função do provedor de segurança baseado em função subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As funções disponíveis serão diferentes com base no provedor de autenticação em uso pelo host. Se o provedor de autenticação do Windows NT, as funções são grupos de usuário do Windows NT (na forma "DomainName\GroupName"). Verifique a documentação do host para determinar qual provedor de autenticação que usa e o que os usuários de funções podem pertencer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

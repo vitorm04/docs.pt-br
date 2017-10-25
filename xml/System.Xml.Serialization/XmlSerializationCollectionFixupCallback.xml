@@ -1,0 +1,46 @@
+<Type Name="XmlSerializationCollectionFixupCallback" FullName="System.Xml.Serialization.XmlSerializationCollectionFixupCallback">
+  <TypeSignature Language="C#" Value="public delegate void XmlSerializationCollectionFixupCallback(object collection, object collectionItems);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlSerializationCollectionFixupCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSerializationCollectionFixupCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="collection" Type="System.Object" />
+    <Parameter Name="collectionItems" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="collection">A coleção na qual a matriz de itens da coleção é copiada.</param>
+    <param name="collectionItems">Uma matriz de itens a serem copiados para o <c>coleção de objetos</c>.</param>
+    <summary>Delegado usado pelo <see cref="T:System.Xml.Serialization.XmlSerializer" /> tipos de classe para desserialização de dados XML de codificação SOAP que são mapeados para coleções ou enumerações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a inicialização, a infraestrutura de serialização de XML do .NET Framework gera e dinamicamente compila uma classe temporária para desserialização derivado de <xref:System.Xml.Serialization.XmlSerializationReader> classe. Durante esse processo, o .NET Framework gera os métodos de correção de coleta que usam o <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback> delegate. Isso ocorre para conjuntos de codificação SOAP ou codificadas em SOAP, a referência de vários elementos cujos tipos de dados, em qualquer caso, o mapeamento para coleções do .NET Framework ou enumerações. Conforme necessário, o método de correção de coleta é chamado durante a desserialização.  
+  
+ Você não deve instanciar diretamente <xref:System.Xml.Serialization.XmlSerializationCollectionFixupCallback>.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

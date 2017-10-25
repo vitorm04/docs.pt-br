@@ -1,0 +1,23 @@
+<Namespace Name="System.Printing.IndexedProperties">
+  <Docs>
+    <summary>Fornece classes que permitem copiar rapidamente as configurações de propriedade de um objeto do sistema de impressão para outro objeto do mesmo tipo. Além disso, permite a iteração por meio de propriedades dos objetos do sistema de impressão e a descoberta de seus tipos em tempo de execução sem usando reflexão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este namespace contém as classes principais a seguir:  
+  
+-   O <xref:System.Printing.IndexedProperties.PrintProperty> classe, que é a classe base para a maioria das outras classes.  
+  
+-   O <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>, que é um <xref:System.Collections.Hashtable> cujas entradas são todas as instâncias de classes derivadas de <xref:System.Printing.IndexedProperties.PrintProperty>.  
+  
+ Esse namespace, é possível descobrir em tempo de execução sem o uso de reflexão, os tipos de propriedades de objetos do sistema de impressão, como <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, ou <xref:System.Printing.PrintSystemJobInfo>.  
+  
+ Para obter exemplos que mostram o uso das classes nesse namespace, consulte <xref:System.Printing.IndexedProperties.PrintBooleanProperty>, <xref:System.Printing.IndexedProperties.PrintProperty>, e <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>.  
+  
+ Este namespace é parte dos serviços de impressão aprimorados fornecidos com [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]. Os desenvolvedores de código gerenciado usando [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] devem usar o [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] no <xref:System.Drawing.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

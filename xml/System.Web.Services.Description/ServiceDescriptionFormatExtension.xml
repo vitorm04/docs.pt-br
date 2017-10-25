@@ -1,0 +1,129 @@
+<Type Name="ServiceDescriptionFormatExtension" FullName="System.Web.Services.Description.ServiceDescriptionFormatExtension">
+  <TypeSignature Language="C#" Value="public abstract class ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceDescriptionFormatExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento de extensibilidade adicionado a um serviço Web XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em uma classe derivada, a `ServiceDescriptionFormatExtension` classe permite que os usuários definam elementos de extensibilidade além daqueles definidos na especificação de WSDL Web Services Description Language (). Elementos de extensibilidade podem ser adicionados a um <xref:System.Web.Services.Description.ServiceDescription> em qualquer um dos vários níveis na hierarquia de classe. Portanto, muitas classes derivadas do <xref:System.Web.Services.Description.DocumentableItem> classe (incluindo o <xref:System.Web.Services.Description.ServiceDescription> classe) tem um `Extensions` propriedade, que retorna um <xref:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServiceDescriptionFormatExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionFormatExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionFormatExtension.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> é usado pelo processo de importação quando o elemento de extensibilidade é importado.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> é usada pelo processo de importação; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe derivada, que representa um elemento de extensibilidade adicionado a um serviço Web XML, pode ser anexada a um <xref:System.Web.Services.Description.ServiceDescription> usando o <xref:System.Web.Services.Description.ServiceDescriptionImporter.Import%2A> método (que é usado pela ferramenta wsdl.exe). Você também pode usar uma classe personalizada derivada do <xref:System.Web.Services.Description.SoapExtensionImporter> classe para estender o processo de importação para lidar com os elementos de extensibilidade personalizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionFormatExtension.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai do <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />.</summary>
+        <value>O pai do <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando substituído em uma classe derivada, a classe retornada por essa propriedade será uma classe derivada dentro de <xref:System.Web.Services.Description> namespace em vez de base de <xref:System.Object> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="public bool Required { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Required" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionFormatExtension.Required" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("required", Namespace="http://schemas.xmlsoap.org/wsdl/")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> é necessário para a ação à qual se refere.</summary>
+        <value>
+          <see langword="true" /> se a <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtension" /> for necessária, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

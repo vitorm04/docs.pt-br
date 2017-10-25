@@ -1,0 +1,144 @@
+<Type Name="InstanceData" FullName="System.Diagnostics.InstanceData">
+  <TypeSignature Language="C#" Value="public class InstanceData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstanceData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.InstanceData" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Mantém os dados da instância associados a uma amostra do contador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe o conteúdo do <xref:System.Diagnostics.InstanceData> objetos que existem em uma determinada <xref:System.Diagnostics.PerformanceCounterCategory> no computador local. Exibe uma lista numerada de primeiro <xref:System.Diagnostics.PerformanceCounter> categorias. Depois que o usuário insere o número de uma das categorias, o exemplo exibe, para cada <xref:System.Diagnostics.PerformanceCounter> no <xref:System.Diagnostics.PerformanceCounterCategory>, os dados de instância associados a cada instância do <xref:System.Diagnostics.PerformanceCounter>.  
+  
+ [!code-cpp[System.Diagnostics.InstanceData.CopyTo#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CPP/instdatacopyto.cpp#1)]
+ [!code-csharp[System.Diagnostics.InstanceData.CopyTo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CS/instdatacopyto.cs#1)]
+ [!code-vb[System.Diagnostics.InstanceData.CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/VB/instdatacopyto.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceData (string instanceName, System.Diagnostics.CounterSample sample);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string instanceName, valuetype System.Diagnostics.CounterSample sample) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.InstanceData.#ctor(System.String,System.Diagnostics.CounterSample)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceName" Type="System.String" />
+        <Parameter Name="sample" Type="System.Diagnostics.CounterSample" />
+      </Parameters>
+      <Docs>
+        <param name="instanceName">O nome de uma instância associado com o contador de desempenho.</param>
+        <param name="sample">Um <see cref="T:System.Diagnostics.CounterSample" /> obtido a instância especificada pelo <c>instanceName</c> parâmetro.</param>
+        <summary>Inicializa uma nova instância da classe InstanceData, usando a instância de contador de desempenho e exemplo especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.InstanceData> e exibe os valores de alguns de seus campos.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.CopyTo#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CS/instdatacopyto.cs#3)]
+ [!code-vb[System.Diagnostics.InstanceData.CopyTo#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/VB/instdatacopyto.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceName">
+      <MemberSignature Language="C#" Value="public string InstanceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InstanceName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.InstanceData.InstanceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de instância associado a esses dados de instância.</summary>
+        <value>O nome de uma instância associado com o contador de desempenho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.InstanceData> e exibe o valor de seu <xref:System.Diagnostics.InstanceData.InstanceName%2A> propriedade e outras propriedades.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.CopyTo#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CS/instdatacopyto.cs#3)]
+ [!code-vb[System.Diagnostics.InstanceData.CopyTo#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/VB/instdatacopyto.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawValue">
+      <MemberSignature Language="C#" Value="public long RawValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RawValue" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.InstanceData.RawValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de dados brutos associado com a amostra do contador de desempenho.</summary>
+        <value>O valor bruto lido por amostra do contador de desempenho associados a <see cref="P:System.Diagnostics.InstanceData.Sample" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.InstanceData> e exibe o valor de seu <xref:System.Diagnostics.InstanceData.RawValue%2A> propriedade e outras propriedades.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.CopyTo#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CS/instdatacopyto.cs#3)]
+ [!code-vb[System.Diagnostics.InstanceData.CopyTo#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/VB/instdatacopyto.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sample">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.CounterSample Sample { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.CounterSample Sample" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.InstanceData.Sample" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.CounterSample</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a amostra do contador de desempenho que gerou a esses dados.</summary>
+        <value>Um <see cref="T:System.Diagnostics.CounterSample" /> obtido a instância especificada pelo <see cref="P:System.Diagnostics.InstanceData.InstanceName" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.InstanceData> e obtém o valor do seu <xref:System.Diagnostics.InstanceData.Sample%2A> propriedade, que é uma referência a um <xref:System.Diagnostics.CounterSample>. O exemplo, em seguida, exibe os campos do <xref:System.Diagnostics.CounterSample>.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.CopyTo#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CS/instdatacopyto.cs#3)]
+ [!code-vb[System.Diagnostics.InstanceData.CopyTo#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/VB/instdatacopyto.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

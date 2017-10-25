@@ -1,0 +1,212 @@
+<Type Name="ByteArrayContent" FullName="System.Net.Http.ByteArrayContent">
+  <TypeSignature Language="C#" Value="public class ByteArrayContent : System.Net.Http.HttpContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ByteArrayContent extends System.Net.Http.HttpContent" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.ByteArrayContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Http.HttpContent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece conteúdo HTTP baseado em uma matriz de bytes.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ByteArrayContent (byte[] content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.ByteArrayContent.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="content">O conteúdo usado para inicializar o <see cref="T:System.Net.Http.ByteArrayContent" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Http.ByteArrayContent" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="content" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ByteArrayContent (byte[] content, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] content, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.ByteArrayContent.#ctor(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="content">O conteúdo usado para inicializar o <see cref="T:System.Net.Http.ByteArrayContent" />.</param>
+        <param name="offset">O deslocamento, em bytes, no <c>conteúdo</c> parâmetro usado para inicializar o <see cref="T:System.Net.Http.ByteArrayContent" />.</param>
+        <param name="count">O número de bytes no <c>conteúdo</c> a partir de <c>deslocamento</c> parâmetro usado para inicializar o <see cref="T:System.Net.Http.ByteArrayContent" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Http.ByteArrayContent" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o intervalo especificado pelo `offset` parâmetro e o `count` parâmetro é usado como conteúdo. Sintaxe  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="content" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="offset" /> é menor que zero.  
+  
+ -ou-  
+  
+ O <paramref name="offset" /> parâmetro for maior que o tamanho do conteúdo especificado pelo <paramref name="content" /> parâmetro.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="count" /> é menor que zero.  
+  
+ -ou-  
+  
+ O <paramref name="count" /> parâmetro for maior que o tamanho do conteúdo especificado pelo <paramref name="content" /> parâmetro - menos o <paramref name="offset" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContentReadStreamAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;System.IO.Stream&gt; CreateContentReadStreamAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.IO.Stream&gt; CreateContentReadStreamAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.ByteArrayContent.CreateContentReadStreamAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um fluxo de conteúdo HTTP como uma operação assíncrona para leitura de repositório de cujo backup é memória a partir de <see cref="T:System.Net.Http.ByteArrayContent" />.</summary>
+        <returns>O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após todo o fluxo de conteúdo foi criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeToStreamAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task SerializeToStreamAsync (System.IO.Stream stream, System.Net.TransportContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Threading.Tasks.Task SerializeToStreamAsync(class System.IO.Stream stream, class System.Net.TransportContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.ByteArrayContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="context" Type="System.Net.TransportContext" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de destino.</param>
+        <param name="context">Informações sobre o transporte, como token de associação de canal. Esse parâmetro pode ser <see langword="null" />.</param>
+        <summary>Serialize e grave a matriz de bytes fornecida no construtor para um fluxo de conteúdo HTTP como uma operação assíncrona.</summary>
+        <returns>O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação não bloquear. Quando retornado <xref:System.Threading.Tasks.Task> objeto for concluído, a matriz de bytes inteira foi gravada para o `stream` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryComputeLength">
+      <MemberSignature Language="C#" Value="protected override bool TryComputeLength (out long length);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool TryComputeLength([out] int64&amp; length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.ByteArrayContent.TryComputeLength(System.Int64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int64&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="length">O comprimento em bytes da matriz de bytes.</param>
+        <summary>Determina se uma matriz de bytes tem um tamanho válido em bytes.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="length" /> for um comprimento válido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Http.ByteArrayContent.TryComputeLength%2A> método permite que um tipo de conteúdo derivado para calcular o tamanho do conteúdo. Isso é útil para tipos de conteúdo que pode facilmente calcular o tamanho do conteúdo. Se o comprimento do conteúdo não é possível ou cara (exigiria que o sistema para todo o conteúdo em que a serialização poderia ser caro ou exigem que o sistema para alocar muita memória do buffer) de computação, esse método pode retornar `false`. Se esse método retornar `false`, isso significa que é necessária a transferência em partes ou o conteúdo deve obter armazenados em buffer antes de serem enviados ao servidor.  
+  
+ Esse método sempre retornado `true` para <xref:System.Net.Http.ByteArrayContent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,87 @@
+<Type Name="ImpersonationOption" FullName="System.ServiceModel.ImpersonationOption">
+  <TypeSignature Language="C#" Value="public enum ImpersonationOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ImpersonationOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ImpersonationOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o comportamento de representação para uma operação de serviço em uma instância de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.ImpersonationOption> enumeração a representação de controle no [!INCLUDE[indigo1](~/includes/indigo1-md.md)] aplicativos.  
+  
+ Esta configuração interage com uma propriedade de configuração em <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement.ImpersonateCallerForAllOperations%2A> na tabela a seguir.  
+  
+   
+  
+## Examples  
+ O exemplo de código no serviço mostra como ter um método representar o chamador usando a <xref:System.ServiceModel.OperationBehaviorAttribute> para definir o nível de representação.  
+  
+ [!code-csharp[S_Basic_Service_Behaviors_Security_Impersonation#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_basic_service_behaviors_security_impersonation/cs/service.cs#2)]
+ [!code-vb[S_Basic_Service_Behaviors_Security_Impersonation#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_basic_service_behaviors_security_impersonation/vb/service.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Allowed">
+      <MemberSignature Language="C#" Value="Allowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ImpersonationOption Allowed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ImpersonationOption.Allowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ImpersonationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A representação é realizada se as credenciais estão disponíveis e <see cref="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.ImpersonateCallerForAllOperations" /> é igual a <see langword="true" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAllowed">
+      <MemberSignature Language="C#" Value="NotAllowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ImpersonationOption NotAllowed = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ImpersonationOption.NotAllowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ImpersonationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A representação não é executada. Se <see cref="P:System.ServiceModel.Configuration.ServiceAuthorizationElement.ImpersonateCallerForAllOperations" /> é igual a <see langword="true" />, uma exceção de validação ocorre no tempo de inicialização do serviço.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="Required" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ImpersonationOption Required = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ImpersonationOption.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ImpersonationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A representação é necessária.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

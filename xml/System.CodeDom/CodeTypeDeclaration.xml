@@ -1,0 +1,441 @@
+<Type Name="CodeTypeDeclaration" FullName="System.CodeDom.CodeTypeDeclaration">
+  <TypeSignature Language="C#" Value="public class CodeTypeDeclaration : System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeTypeDeclaration extends System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeTypeDeclaration" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeTypeMember</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma declaração de tipo de uma classe, estrutura, interface ou enumeração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeTypeDeclaration>pode ser usado para representar o código declara uma classe, estrutura, interface ou enumeração. <xref:System.CodeDom.CodeTypeDeclaration>pode ser usado para declarar um tipo aninhado dentro de outro tipo.  
+  
+ O <xref:System.CodeDom.CodeTypeDeclaration.BaseTypes%2A> propriedade especifica o tipo base ou tipos de base do tipo que está sendo declarado. O <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> propriedade contém os membros de tipo, que podem incluir métodos, campos, propriedades, comentários e outros tipos. O <xref:System.CodeDom.CodeTypeDeclaration.TypeAttributes%2A> propriedade indica a <xref:System.Reflection.TypeAttributes> valores para o tipo de declaração, que indicam a categoria de tipo do tipo. O <xref:System.CodeDom.CodeTypeDeclaration.IsClass%2A>, <xref:System.CodeDom.CodeTypeDeclaration.IsStruct%2A>, <xref:System.CodeDom.CodeTypeDeclaration.IsEnum%2A>, e <xref:System.CodeDom.CodeTypeDeclaration.IsInterface%2A> métodos indicam se o tipo é uma classe, estrutura, enumeração ou tipo de interface, respectivamente.  
+  
+> [!NOTE]
+>  Algumas linguagens de programação dão suporte apenas a declaração de tipos de referência, ou classes. Para verificar um gerador de código específico do idioma CodeDOM para obter suporte para declarar interfaces, enumerações ou tipos de valor, chame o <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> método para testar as <xref:System.CodeDom.Compiler.GeneratorSupport> sinalizadores. <xref:System.CodeDom.Compiler.GeneratorSupport.DeclareInterfaces>indica suporte para interfaces, <xref:System.CodeDom.Compiler.GeneratorSupport.DeclareEnums> indica suporte para enumerações, e <xref:System.CodeDom.Compiler.GeneratorSupport.DeclareValueTypes> indica suporte para tipos de valor como estruturas.  
+  
+ Você pode criar uma classe ou uma implementação de estrutura em uma declaração completa ou abrange a implementação de várias declarações. O <xref:System.CodeDom.CodeTypeDeclaration.IsPartial%2A> propriedade indica se o tipo de declaração completa ou parcial. Nem todos os geradores de código oferecem suporte a declarações de tipo parcial, assim, você deve testar esse suporte chamando o <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> método com o sinalizador <xref:System.CodeDom.Compiler.GeneratorSupport.PartialTypes>.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como usar um <xref:System.CodeDom.CodeTypeDeclaration> para declarar um tipo.  
+  
+ [!code-cpp[CodeTypeDeclarationExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeDeclarationExample/CPP/codetypedeclarationexample.cpp#2)]
+ [!code-csharp[CodeTypeDeclarationExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeDeclarationExample/CS/codetypedeclarationexample.cs#2)]
+ [!code-vb[CodeTypeDeclarationExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeDeclarationExample/VB/codetypedeclarationexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeDeclaration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeDeclaration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeTypeDeclaration" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeDeclaration (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeDeclaration.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome para o novo tipo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeTypeDeclaration" /> com o nome especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseTypes">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReferenceCollection BaseTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReferenceCollection BaseTypes" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDeclaration.BaseTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os tipos base do tipo.</summary>
+        <value>Um objeto <see cref="T:System.CodeDom.CodeTypeReferenceCollection" /> que indica os tipos base do tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para gerar uma classe no Visual Basic que não herda de um tipo base, mas que implementa uma ou mais interfaces, você deve incluir <xref:System.Object> como o primeiro item a <xref:System.CodeDom.CodeTypeDeclaration.BaseTypes%2A> coleção.  
+  
+> [!NOTE]
+>  No .NET Framework versão 2.0 não é necessário o <xref:System.CodeDom.CodeTypeReference> para <xref:System.Object> se a interface que você estiver implementando já existe e se está fazendo referência a ele por tipo. Por exemplo, se você estiver implementando o <xref:System.Collections.ICollection> de interface e adicioná-lo à coleção com esta instrução `ctd.BaseTypes.Add(New CodeTypeReference(typeof(ICollection)))`, você não precisa anterior `ctd.BaseTypes.Add(New CodeTypeReference(GetType(Object)))` instrução.  
+  
+ O código a seguir ilustra a adição de um <xref:System.CodeDom.CodeTypeReference> à coleção que se refere a <xref:System.Object>.  
+  
+```vb  
+Dim ctd As New CodeTypeDeclaration("Class1")  
+ctd.IsClass = True  
+ctd.BaseTypes.Add(New CodeTypeReference(GetType(Object)))  
+ctd.BaseTypes.Add(New CodeTypeReference("Interface1"))  
+```  
+  
+```csharp  
+CodeTypeDeclaration ctd = new CodeTypeDeclaration("Class1");  
+ctd.IsClass = true;  
+ctd.BaseTypes.Add(new CodeTypeReference(typeof(Object)));  
+ctd.BaseTypes.Add(new CodeTypeReference("Interface1"));  
+```  
+  
+ O código anterior gera o equivalente do seguinte código do Visual Basic.  
+  
+```vb  
+Public Class Class1  
+Implements Interface1  
+```  
+  
+ No entanto, o código do Visual Basic, na verdade, gerado é o seguinte.  
+  
+```vb  
+Public Class Class1  
+Inherits Object  
+Implements Interface1  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClass">
+      <MemberSignature Language="C#" Value="public bool IsClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClass" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDeclaration.IsClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o tipo é um tipo de classe ou referência.</summary>
+        <value>
+          <see langword="true" />Se o tipo for um tipo de classe ou de referência; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnum">
+      <MemberSignature Language="C#" Value="public bool IsEnum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnum" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDeclaration.IsEnum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o tipo é uma enumeração.</summary>
+        <value>
+          <see langword="true" />Se o tipo é uma enumeração; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInterface">
+      <MemberSignature Language="C#" Value="public bool IsInterface { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInterface" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDeclaration.IsInterface" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o tipo é uma interface.</summary>
+        <value>
+          <see langword="true" />Se o tipo é uma interface. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPartial">
+      <MemberSignature Language="C#" Value="public bool IsPartial { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPartial" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDeclaration.IsPartial" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o tipo de declaração é completa ou parcial.</summary>
+        <value>
+          <see langword="true" />Se a declaração de classe ou estrutura é uma representação parcial da implementação; <see langword="false" /> se a declaração é uma implementação completa da classe ou estrutura. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode criar uma implementação de classe ou estrutura em uma declaração completa ou abrange a implementação de várias declarações. Implementações geralmente são fornecidas na declaração de um tipo de conclusão. Nesse caso, defina o tipo de declaração <xref:System.CodeDom.CodeTypeDeclaration.IsPartial%2A> propriedade `false`, que indica o tipo de declaração representa todos os detalhes para a implementação de classe ou estrutura.  
+  
+ Uma declaração de tipo parcial torna mais fácil criar diferentes partes de uma implementação de classe ou estrutura em diferentes módulos do seu aplicativo. As declarações de tipo parcial podem ser armazenadas em um arquivo de origem, ou distribuídas em vários arquivos de origem que eventualmente são compilados juntos para formar a implementação do tipo combinado.  
+  
+ A linguagem c# dá suporte a declarações de tipo parcial de classes e estruturas por meio de `partial` palavra-chave. Visual Basic oferece suporte a declarações de tipo parcial de classes e estruturas com o `Partial` palavra-chave. Nem todos os geradores de código oferecem suporte a declarações de tipo parcial, assim, você deve testar esse suporte chamando o <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> método com o sinalizador <xref:System.CodeDom.Compiler.GeneratorSupport.PartialTypes>.  
+  
+> [!NOTE]
+>  Declarações de tipo parcial têm suporte para classes e estruturas. Se você especificar uma declaração de tipo parcial para uma interface ou enumeração, o código gerado gera erros de compilador.  
+  
+ Ao fornecer uma implementação de classe ou estrutura em várias declarações, defina o <xref:System.CodeDom.CodeTypeDeclaration.IsPartial%2A> propriedade `true` para a declaração inicial e todas as declarações complementares. A declaração inicial totalmente deve especificar o tipo de assinatura, incluindo os modificadores de acesso, herdadas de tipos e interfaces implementadas. As declarações suplementares não precisa especificar novamente a assinatura de tipo. Normalmente, um erro do compilador resulta se você redefinir a assinatura de tipo em uma declaração suplementar.  
+  
+ Visual Studio 2005 usa tipos parciais para separar o código gerado pelo usuário de código de designer. Em projetos de aplicativo do Windows Visual Basic, o código de usuário é colocado em uma classe parcial não está qualificada pelo `Partial` palavra-chave; o designer fornecida pelo código aparece na classe parcial que tem o `Partial` palavra-chave. No c#, o código do usuário e o código de designer aparecem em classes parciais identificadas pelo `partial` palavra-chave.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como usar um <xref:System.CodeDom.CodeTypeDeclaration> para fornecer uma implementação da classe em várias declarações. O exemplo cria a instrução de declaração de classe inicial e define o <xref:System.CodeDom.CodeTypeDeclaration.IsPartial%2A> propriedade `true`.  
+  
+ [!code-cpp[CodeDomPartialTypeExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomPartialTypeExample/CPP/source.cpp#3)]
+ [!code-csharp[CodeDomPartialTypeExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomPartialTypeExample/CS/source.cs#3)]
+ [!code-vb[CodeDomPartialTypeExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomPartialTypeExample/VB/source.vb#3)]  
+  
+ Um método diferente do exemplo estende a implementação da classe. Este método cria uma nova instrução de declaração de tipo para a classe existente e conjuntos de <xref:System.CodeDom.CodeTypeDeclaration.IsPartial%2A> propriedade `true`. O compilador combina as duas declarações de tipo parcial para a implementação de classe completo.  
+  
+ [!code-cpp[CodeDomPartialTypeExample#7](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomPartialTypeExample/CPP/source.cpp#7)]
+ [!code-csharp[CodeDomPartialTypeExample#7](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomPartialTypeExample/CS/source.cs#7)]
+ [!code-vb[CodeDomPartialTypeExample#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomPartialTypeExample/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStruct">
+      <MemberSignature Language="C#" Value="public bool IsStruct { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStruct" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDeclaration.IsStruct" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o tipo é um tipo de valor (struct).</summary>
+        <value>
+          <see langword="true" />Se o tipo for um tipo de valor. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Members">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeMemberCollection Members { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeMemberCollection Members" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDeclaration.Members" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeMemberCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de membros de classe para o tipo representado.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeTypeMemberCollection" /> objeto que indica os membros de classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateBaseTypes">
+      <MemberSignature Language="C#" Value="public event EventHandler PopulateBaseTypes;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PopulateBaseTypes" />
+      <MemberSignature Language="DocId" Value="E:System.CodeDom.CodeTypeDeclaration.PopulateBaseTypes" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.CodeDom.CodeTypeDeclaration.BaseTypes" /> coleção é acessada pela primeira vez.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateMembers">
+      <MemberSignature Language="C#" Value="public event EventHandler PopulateMembers;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PopulateMembers" />
+      <MemberSignature Language="DocId" Value="E:System.CodeDom.CodeTypeDeclaration.PopulateMembers" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.CodeDom.CodeTypeDeclaration.Members" /> coleção é acessada pela primeira vez.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeAttributes">
+      <MemberSignature Language="C#" Value="public System.Reflection.TypeAttributes TypeAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.TypeAttributes TypeAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDeclaration.TypeAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.TypeAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os atributos do tipo.</summary>
+        <value>Um objeto <see cref="T:System.Reflection.TypeAttributes" /> que indica os atributos do tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.TypeAttributes> propriedade contém os mesmos tipos de valores usados pelo <xref:System.Reflection> ao investigar um tipo em tempo de execução. Muitos desses sinalizadores não correspondem a sintaxe de declaração de tipo para alguns idiomas. Como resultado, apenas os seguintes sinalizadores são significativos para <xref:System.CodeDom.CodeTypeDeclaration> : <xref:System.Reflection.TypeAttributes.Class>, <xref:System.Reflection.TypeAttributes.Interface>, <xref:System.Reflection.TypeAttributes.Abstract>, <xref:System.Reflection.TypeAttributes.Sealed>, <xref:System.Reflection.TypeAttributes.Public>, <xref:System.Reflection.TypeAttributes.NotPublic>, <xref:System.Reflection.TypeAttributes.NestedPublic>, e <xref:System.Reflection.TypeAttributes.NestedPrivate>.  
+  
+> [!NOTE]
+>  Alguns dos sinalizadores como <xref:System.Reflection.TypeAttributes.Abstract> sobrepõe o significado dos sinalizadores a <xref:System.CodeDom.CodeTypeMember.Attributes%2A> propriedade de <xref:System.CodeDom.CodeTypeDeclaration> que é herdada do <xref:System.CodeDom.CodeTypeMember>. O <xref:System.CodeDom.CodeTypeMember.Attributes%2A> propriedade é um efeito colateral o <xref:System.CodeDom.CodeTypeDeclaration> classe herdando <xref:System.CodeDom.CodeTypeMember> para que as classes podem ser aninhadas. Os sinalizadores no <xref:System.CodeDom.CodeTypeDeclaration.TypeAttributes%2A> propriedade deve ser usada em vez de sinalizadores no <xref:System.CodeDom.CodeTypeMember.Attributes%2A> propriedade.  
+  
+> [!NOTE]
+>  O padrão para definir os sinalizadores de visibilidade (sinalizadores que contêm as palavras `Public` ou `Nested`) é para mascarar a visibilidade de todos os sinalizadores usando o <xref:System.Reflection.TypeAttributes.VisibilityMask> e, em seguida, defina o sinalizador de visibilidade desejado. Por exemplo, a c# declaração de código para identificar o <xref:System.CodeDom.CodeTypeDeclaration> (denominado `cd`) como uma classe interna é `cd.TypeAttributes = (cd.TypeAttributes & ~TypeAttributes.VisibilityMask) | TypeAttributes.NotPublic;`.  O código para definir o mesmo valor no Visual Basic é `cd.TypeAttributes = (cd.TypeAttributes And (TypeAttributes.VisibilityMask Xor -1)) Or TypeAttributes.NotPublic`. Definindo o <xref:System.CodeDom.CodeTypeDeclaration.TypeAttributes%2A> propriedade diretamente a um sinalizador de visibilidade (`cd.TypeAttributes = TypeAttributes.NotPublic;`) apaga todos os outros sinalizadores que podem ser definidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeParameters">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeParameterCollection TypeParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeParameterCollection TypeParameters" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDeclaration.TypeParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de tipo para o tipo de declaração.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeTypeParameterCollection" /> que contém os parâmetros de tipo para o tipo de declaração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma declaração de tipo genérico contém um ou mais tipos conhecidos como parâmetros de tipo não for especificado. Representa um nome de parâmetro de tipo para o tipo de dentro do corpo da declaração genérico. Por exemplo, a declaração de genérica para o <xref:System.Collections.Generic.List%601> classe contém o parâmetro de tipo `T`.  
+  
+ Para obter mais informações sobre genéricos, consulte [genéricos na biblioteca de classes .NET Framework](~/docs/csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

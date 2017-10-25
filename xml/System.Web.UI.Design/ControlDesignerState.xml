@@ -1,0 +1,48 @@
+<Type Name="ControlDesignerState" FullName="System.Web.UI.Design.ControlDesignerState">
+  <TypeSignature Language="C#" Value="public sealed class ControlDesignerState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlDesignerState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ControlDesignerState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso ao estado do designer de controle no host de design por meio de <see cref="T:System.ComponentModel.Design.IComponentDesignerStateService" /> interface. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesignerState> classe é um wrapper para o <xref:System.ComponentModel.Design.IComponentDesignerStateService> interface, que é a interface entre um designer e um host de design, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ControlDesignerState.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item a ser definido ou recuperado da coleção de estado.</param>
+        <summary>Representa um elemento, identificado por determinada chave, na coleção de estado de um controle de designer.</summary>
+        <value>O objeto identificado pelo <paramref name="key" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,34 @@
+<Type Name="Application+MessageLoopCallback" FullName="System.Windows.Forms.Application+MessageLoopCallback">
+  <TypeSignature Language="C#" Value="public delegate bool Application.MessageLoopCallback();" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed Application/MessageLoopCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Application.MessageLoopCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Representa um método que irá verificar se o ambiente de hospedagem ainda estiver enviando mensagens.</summary>
+    <returns>
+      <see langword="true" />Se o ambiente de hospedagem ainda estiver enviando mensagens. Caso contrário, <see langword="false" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado é usado com o <xref:System.Windows.Forms.Application.RegisterMessageLoop%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

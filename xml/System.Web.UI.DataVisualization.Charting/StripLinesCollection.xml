@@ -1,0 +1,32 @@
+<Type Name="StripLinesCollection" FullName="System.Web.UI.DataVisualization.Charting.StripLinesCollection">
+  <TypeSignature Language="C#" Value="public class StripLinesCollection : System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.StripLine&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StripLinesCollection extends System.Web.UI.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Web.UI.DataVisualization.Charting.StripLine&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.StripLinesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.StripLine&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Web.UI.DataVisualization.Charting.StripLine</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.UI.DataVisualization.Charting.StripLine" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.StripLinesCollection> classe representa uma coleção de <xref:System.Web.UI.DataVisualization.Charting.StripLine> objetos e é implementado como o <xref:System.Web.UI.DataVisualization.Charting.Axis.StripLines%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Axis> classe.  
+  
+ <xref:System.Web.UI.DataVisualization.Charting.StripLine>objetos podem ser anexados, inseridos ou removidos da coleção em tempo de design e tempo de execução.  
+  
+ **Observação** faixas podem ser exibidas uma vez ou repetidamente para um intervalo definido.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

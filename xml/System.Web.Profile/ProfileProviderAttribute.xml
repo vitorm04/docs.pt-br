@@ -1,0 +1,131 @@
+<Type Name="ProfileProviderAttribute" FullName="System.Web.Profile.ProfileProviderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ProfileProviderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProfileProviderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileProviderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica o provedor de perfil para uma propriedade de perfil de usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProviderAttribute> classe é usada para identificar o provedor de perfil de uma propriedade de uma implementação personalizada de perfil. Uma implementação personalizada de perfil é uma classe que herda de <xref:System.Web.Profile.ProfileBase> classe abstrata e define as propriedades do perfil de usuário que não são especificadas no elemento de configuração. Você pode especificar um tipo personalizado para o perfil de usuário usando o `inherits` atributo do elemento de configuração no arquivo Web. config para um aplicativo, conforme mostrado no exemplo a seguir.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString=  
+      "Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx"  
+        name=".ASPXFORMSAUTH" />  
+    </authentication>  
+  
+    <authorization>  
+      <deny users="?" />  
+    </authorization>  
+  
+    <profile inherits="Samples.AspNet.Profile.EmployeeProfile"  
+      defaultProvider="SqlProvider">  
+      <providers>  
+        <clear />  
+        <add  
+          name="SqlProvider"  
+          type="System.Web.Profile.SqlProfileProvider"   
+          connectionStringName="SqlServices"   
+          description="SQL Profile Provider for Sample"/>   
+        <add  
+          name="EmployeeInfoProvider"  
+          type="System.Web.Profile.SqlProfileProvider"   
+          connectionStringName="SqlServices"   
+          description="SQL Profile Provider for Employee Info"/>   
+      </providers>  
+  
+      <properties>  
+        <add name="GarmentSize" />  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define uma classe que herda de <xref:System.Web.Profile.ProfileBase> classe para criar um perfil personalizado. O tipo do perfil personalizado é especificado no `inherits` atributo do elemento de configuração no arquivo Web. config para um aplicativo.  
+  
+ [!code-csharp[System.Web.Profile.ProfileBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/CS/employeeprofile.cs#1)]
+ [!code-vb[System.Web.Profile.ProfileBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/VB/employeeprofile.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileProviderAttribute (string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProviderAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">O nome do provedor de perfil para a propriedade.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.Profile.ProfileProviderAttribute" /> classe com o nome do provedor de perfil especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProviderAttribute> classe é usada para identificar o provedor de perfil de uma propriedade de uma implementação personalizada de perfil. Uma implementação personalizada de perfil é uma classe que herda de <xref:System.Web.Profile.ProfileBase> classe abstrata e define as propriedades do perfil de usuário que não são especificadas no elemento de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define uma classe que herda de <xref:System.Web.Profile.ProfileBase> classe para criar um perfil personalizado. O tipo do perfil personalizado é especificado no `inherits` atributo do elemento de configuração no arquivo Web. config para um aplicativo. Para obter um exemplo de um arquivo de configuração que especifica uma implementação personalizada de perfil, consulte o <xref:System.Web.Profile.ProfileProviderAttribute> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Profile.ProfileBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/CS/employeeprofile.cs#1)]
+ [!code-vb[System.Web.Profile.ProfileBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileBase/VB/employeeprofile.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileProviderAttribute.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do provedor de perfil para a propriedade de perfil de usuário.</summary>
+        <value>O nome do provedor de perfil para a propriedade de perfil de usuário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

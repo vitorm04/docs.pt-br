@@ -1,0 +1,126 @@
+<Type Name="XmlSchemaCompilationSettings" FullName="System.Xml.Schema.XmlSchemaCompilationSettings">
+  <TypeSignature Language="C#" Value="public sealed class XmlSchemaCompilationSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlSchemaCompilationSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaCompilationSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece opções de compilação de esquema para o <see cref="T:System.Xml.Schema.XmlSchemaSet" /> classe essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlSchemaCompilationSettings> classe fornece opções de compilação de esquema para o <xref:System.Xml.Schema.XmlSchemaSet> classe. Por exemplo, o <xref:System.Xml.Schema.XmlSchemaCompilationSettings.EnableUpaCheck%2A> propriedade especifica que o <xref:System.Xml.Schema.XmlSchemaSet> deve verificar se há violações de atribuição de partícula exclusiva (UPA) quando esquemas de <xref:System.Xml.Schema.XmlSchemaSet> são compilados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaCompilationSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaCompilationSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaCompilationSettings" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableUpaCheck">
+      <MemberSignature Language="C#" Value="public bool EnableUpaCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableUpaCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaCompilationSettings.EnableUpaCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Xml.Schema.XmlSchemaSet" /> deve verificar se há violações de atribuição de partícula exclusiva (UPA).</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Xml.Schema.XmlSchemaSet" /> deve verificar se há violações de atribuição de partícula exclusiva (UPA); caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Xml.Schema.XmlSchemaCompilationSettings.EnableUpaCheck%2A> está definida como `false`, a validação será executada com base nas seguintes regras.  
+  
+1.  Se houver uma escolha entre um tipo forte e um caractere curinga, o <xref:System.Xml.Schema.XmlSchemaSet> escolherá a partícula fortemente tipada como ilustrado no seguinte esquema e exemplos de Xml.  
+  
+ `<xs:sequence>`  
+  
+ `<xs:any namespace="##any"/>`  
+  
+ `<xs:element name="A" type="xs:string" minOccurs="0"/>`  
+  
+ `</xs:sequence>`  
+  
+ No Xml a seguir, o `A` elemento será associado `<xs:element name="A" type="xs:string" minOccurs="0"/>` no esquema.  
+  
+ `<A>some text</A>`  
+  
+1.  Se houver uma escolha entre dois elementos com rigidez de tipos, o <xref:System.Xml.Schema.XmlSchemaSet> escolherá o primeiro deles.  
+  
+ `<xs:sequence>`  
+  
+ `<xs:element name="A" type="xs:string"/>`  
+  
+ `<xs:element name="B" type="xs:string" minOccurs="0"/>`  
+  
+ `<xs:element name="B" type="xs:string"/>`  
+  
+ `</xs:sequence>`  
+  
+ No Xml a seguir, o `B` elemento será associado `<xs:element name="B" type="xs:string" minOccurs="0"/>` no esquema.  
+  
+ `<A/>`  
+  
+ `<B/>`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

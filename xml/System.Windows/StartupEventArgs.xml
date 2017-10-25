@@ -1,0 +1,37 @@
+<Type Name="StartupEventArgs" FullName="System.Windows.StartupEventArgs">
+  <TypeSignature Language="C#" Value="public class StartupEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StartupEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.StartupEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém os argumentos para o evento <see cref="E:System.Windows.Application.Startup" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Args">
+      <MemberSignature Language="C#" Value="public string[] Args { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Args" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.StartupEventArgs.Args" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os argumentos de linha de comando que foram passados para o aplicativo do prompt de comando ou da área de trabalho.</summary>
+        <value>Uma matriz de cadeia de caracteres que contém os argumentos de linha de comando que foram passados para o aplicativo do prompt de comando ou a área de trabalho. Se nenhum argumento de linha de comando foi passado, a cadeia de caracteres como zero itens da matriz.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

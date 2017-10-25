@@ -1,0 +1,165 @@
+<Type Name="IDesignerOptionService" FullName="System.ComponentModel.Design.IDesignerOptionService">
+  <TypeSignature Language="C#" Value="public interface IDesignerOptionService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerOptionService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IDesignerOptionService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso às opções de designer localizado no **ferramentas** menu sob o **opções** comando no ambiente de desenvolvimento do Visual Studio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.IDesignerOptionService>Fornece uma interface que pode ser usada para recuperar e atualizar os valores das opções de Designer de formulários do Windows, que são listados na caixa de diálogo exibida o **opções** comando do **ferramentas** menu do ambiente de desenvolvimento do Visual Studio. O <xref:System.ComponentModel.Design.IDesignerOptionService.GetOptionValue%2A> método recupera o valor de uma opção especificada. O <xref:System.ComponentModel.Design.IDesignerOptionService.SetOptionValue%2A> método define um valor especificado para a opção especificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o acesso a <xref:System.ComponentModel.Design.IDesignerOptionService> para exibir os valores atuais das opções padrão.  
+  
+ [!code-cpp[IDesignerOptionServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IDesignerOptionServiceExample/CPP/idesigneroptionservicecontrol.cpp#1)]
+ [!code-csharp[IDesignerOptionServiceExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IDesignerOptionServiceExample/CS/idesigneroptionservicecontrol.cs#1)]
+ [!code-vb[IDesignerOptionServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IDesignerOptionServiceExample/VB/idesigneroptionservicecontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetOptionValue">
+      <MemberSignature Language="C#" Value="public object GetOptionValue (string pageName, string valueName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOptionValue(string pageName, string valueName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesignerOptionService.GetOptionValue(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pageName">O nome da página que define a opção.</param>
+        <param name="valueName">O nome da propriedade de opção.</param>
+        <summary>Obtém o valor da opção de Windows Forms Designer especificado.</summary>
+        <returns>O valor da opção especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `pageName` deve consistir em parâmetro "WindowsFormsDesigner\\*CategoryName*", onde *CategoryName* é um nome de categoria de opções sem nenhum caractere de espaço em branco. O nome da categoria é normalmente "geral". Portanto, você pode acessar a categoria de opções do designer "Geral" com o nome de página em inglês "WindowsFormsDesigner\General".  
+  
+> [!NOTE]
+>  Os nomes de página e o valor espera-se sempre em inglês. Portanto, a tabela a seguir é fornecida para ajudá-lo a acessar as opções desejadas.  
+  
+ A tabela a seguir indica os nomes de valor em inglês, o formato de dados e uma descrição de cada:  
+  
+|Nome do valor|Formato de valor|Descrição|  
+|----------------|------------------|-----------------|  
+|GridSize|<xref:System.Drawing.Size>|O tamanho de cada quadrado da grade.|  
+|GridSize.Width|<xref:System.Int32>|A largura de cada quadrado da grade. Essa propriedade aninhada é somente leitura quando acessados por meio do serviço de opção designer.|  
+|GridSize.Height|<xref:System.Int32>|A altura de cada quadrado da grade. Essa propriedade aninhada é somente leitura quando acessados por meio do serviço de opção designer.|  
+|Display|<xref:System.Boolean>|`true`Se a grade deve ser exibida; `false` se a grade não deve ser mostrada.|  
+|SnapToGrid|<xref:System.Boolean>|`true`Se as posições dos componentes devem ser alinhadas à grade; `false` se as posições necessariamente não devem ser alinhadas.|  
+|LayoutMode|`Microsoft.VisualStudio.Windows.Forms.LayoutMode`|`SnapLines`Para usar guias de alinhamento, ou `SnapToGrid` para alinhar os controles à grade,|  
+|ObjectBoundSmartTagAutoShow|<xref:System.Boolean>|`true`para permitir que o painel de marcas inteligentes do componente abrir automaticamente após a criação. Caso contrário, `false`.|  
+|AutoToolboxPopulate|<xref:System.Boolean>|`true`Para adicionar automaticamente uma solução personalizados controles e componentes para o **caixa de ferramentas**; caso contrário, `false`.|  
+|UseOptimizedCodeGeneration|<xref:System.Boolean>|`true`Se o cache de componente está habilitado; Caso contrário, `false`.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.Design.IDesignerOptionService.GetOptionValue%2A> método para a consulta para o valor da `GridSize` opção.  
+  
+ [!code-cpp[IDesignerOptionServiceExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/IDesignerOptionServiceExample/CPP/idesigneroptionservicecontrol.cpp#2)]
+ [!code-csharp[IDesignerOptionServiceExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/IDesignerOptionServiceExample/CS/idesigneroptionservicecontrol.cs#2)]
+ [!code-vb[IDesignerOptionServiceExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IDesignerOptionServiceExample/VB/idesigneroptionservicecontrol.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOptionValue">
+      <MemberSignature Language="C#" Value="public void SetOptionValue (string pageName, string valueName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOptionValue(string pageName, string valueName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesignerOptionService.SetOptionValue(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="pageName">O nome da página que define a opção.</param>
+        <param name="valueName">O nome da propriedade de opção.</param>
+        <param name="value">O novo valor.</param>
+        <summary>Define o valor da opção de Windows Forms Designer especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `pageName` deve consistir em parâmetro "WindowsFormsDesigner\C*ategoryName*", onde *CategoryName* é um nome de categoria de opções sem nenhum caractere de espaço em branco. O nome da categoria é normalmente "geral". Portanto, você pode acessar a categoria de opções do designer "Geral" com o nome de página em inglês "WindowsFormsDesigner\General".  
+  
+> [!NOTE]
+>  Os nomes de página e o valor espera-se sempre em inglês. Portanto, a tabela a seguir é fornecida para ajudá-lo a acessar as opções desejadas.  
+  
+ A tabela a seguir indica os nomes de valor em inglês, o formato de dados e uma descrição de cada:  
+  
+|Nome do valor|Formato de valor|Descrição|  
+|----------------|------------------|-----------------|  
+|GridSize|<xref:System.Drawing.Size>|O tamanho de cada quadrado da grade.|  
+|GridSize.Width|<xref:System.Int32>|A largura de cada quadrado da grade. Essa propriedade aninhada é somente leitura quando acessados por meio do serviço de opção designer.|  
+|GridSize.Height|<xref:System.Int32>|A altura de cada quadrado da grade. Essa propriedade aninhada é somente leitura quando acessados por meio do serviço de opção designer.|  
+|Display|<xref:System.Boolean>|`true`Se a grade deve ser exibida; `false` se a grade não deve ser mostrada.|  
+|SnapToGrid|<xref:System.Boolean>|`true`Se as posições dos componentes devem ser alinhadas à grade; `false` se as posições necessariamente não devem ser alinhadas.|  
+|LayoutMode|`Microsoft.VisualStudio.Windows.Forms.LayoutMode`|`SnapLines`Para usar guias de alinhamento, ou `SnapToGrid` para alinhar os controles à grade,|  
+|ObjectBoundSmartTagAutoShow|<xref:System.Boolean>|`true`para permitir que o painel de marcas inteligentes do componente abrir automaticamente após a criação. Caso contrário, `false`.|  
+|AutoToolboxPopulate|<xref:System.Boolean>|`true`Para adicionar automaticamente uma solução personalizados controles e componentes para o **caixa de ferramentas**; caso contrário, `false`.|  
+|UseOptimizedCodeGeneration|<xref:System.Boolean>|`true`Se o cache de componente está habilitado; Caso contrário, `false`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

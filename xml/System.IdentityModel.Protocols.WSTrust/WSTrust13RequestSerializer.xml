@@ -1,0 +1,272 @@
+<Type Name="WSTrust13RequestSerializer" FullName="System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer">
+  <TypeSignature Language="C#" Value="public class WSTrust13RequestSerializer : System.IdentityModel.Protocols.WSTrust.WSTrustRequestSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WSTrust13RequestSerializer extends System.IdentityModel.Protocols.WSTrust.WSTrustRequestSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Protocols.WSTrust.WSTrustRequestSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe de serialização e desserialização de mensagens WS-Trust 1.3 RequestSecurityToken (primeira).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSTrust13RequestSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanRead(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer.CanRead(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> objeto do qual ler.</param>
+        <summary>Verifica se o leitor fornecido está posicionado em um <see langword="RequestSecurityToken" /> elemento com o namespace "http://docs.oasis-open.org/ws-sx/ws-trust/200512".</summary>
+        <returns>
+          <see langword="true" />Se o leitor está posicionado em um elemento RequestSecurityToken com namespace "http://docs.oasis-open.org/ws-sx/ws-trust/200512"; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSecondaryParameters">
+      <MemberSignature Language="C#" Value="protected virtual System.IdentityModel.Protocols.WSTrust.RequestSecurityToken ReadSecondaryParameters (System.Xml.XmlReader reader, System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken ReadSecondaryParameters(class System.Xml.XmlReader reader, class System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer.ReadSecondaryParameters(System.Xml.XmlReader,System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.RequestSecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="context" Type="System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> objeto apontando para o <see langword="SecondaryParameters" /> elemento dentro a primeira.</param>
+        <param name="context">Um <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" /> que contém o contexto atual de serialização.</param>
+        <summary>Um caso especial para leitura <see langword="SecondaryParameters" /> dentro de uma primeira 1.3 de WS-Trust.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> que contém o SecondaryParameters encontrado na primeira.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A especificação de estados que um `SecondaryParameters` elemento não pode estar dentro de outro `SecondaryParameters` elemento. Substitua este método para fornecer processamento personalizado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationException">Uma interna <see langword="SecondaryParameter" /> elemento foi encontrado durante o processamento externo <see langword="SecondaryParameter" /> elemento.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXml">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Protocols.WSTrust.RequestSecurityToken ReadXml (System.Xml.XmlReader reader, System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken ReadXml(class System.Xml.XmlReader reader, class System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer.ReadXml(System.Xml.XmlReader,System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.RequestSecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="context" Type="System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um leitor de XML sobre a primeira.</param>
+        <param name="context">Um <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" /> que contém o contexto atual de serialização.</param>
+        <summary>Desserializa a primeira de um <see cref="T:System.Xml.XmlReader" /> o objeto para um <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> objeto.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> objeto se a desserialização foi bem-sucedida.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationException">Ocorreu um erro ao analisar a primeira.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadXmlElement">
+      <MemberSignature Language="C#" Value="public override void ReadXmlElement (System.Xml.XmlReader reader, System.IdentityModel.Protocols.WSTrust.RequestSecurityToken rst, System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReadXmlElement(class System.Xml.XmlReader reader, class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken rst, class System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer.ReadXmlElement(System.Xml.XmlReader,System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="rst" Type="System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" />
+        <Parameter Name="context" Type="System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> objeto posicionado em um elemento ler dentro a primeira.</param>
+        <param name="rst">O <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> objeto que está sendo populado do leitor.</param>
+        <param name="context">Um <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" /> que contém o contexto atual de serialização.</param>
+        <summary>Lê um elemento filho dentro a primeira. Substituição do método da classe base.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="rst" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationException">Não é possível desserializar o parâmetro atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKnownRequestElement">
+      <MemberSignature Language="C#" Value="public override void WriteKnownRequestElement (System.IdentityModel.Protocols.WSTrust.RequestSecurityToken rst, System.Xml.XmlWriter writer, System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteKnownRequestElement(class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken rst, class System.Xml.XmlWriter writer, class System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer.WriteKnownRequestElement(System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.Xml.XmlWriter,System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rst" Type="System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" />
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="context" Type="System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="rst">O <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> que está sendo serializado do objeto.</param>
+        <param name="writer">O objeto <see cref="T:System.Xml.XmlWriter" /> de gravação.</param>
+        <param name="context">Um <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" /> que contém o contexto atual de serialização.</param>
+        <summary>Grava os elementos com suporte no <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> objeto no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substitua este método se a <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> classe tenha sido derivada e mais propriedades os tiveram adicionado a ele.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rst" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="writer" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXml">
+      <MemberSignature Language="C#" Value="public override void WriteXml (System.IdentityModel.Protocols.WSTrust.RequestSecurityToken request, System.Xml.XmlWriter writer, System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteXml(class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken request, class System.Xml.XmlWriter writer, class System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer.WriteXml(System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.Xml.XmlWriter,System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" />
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="context" Type="System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="request">O <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> objeto a ser serializado.</param>
+        <param name="writer">O objeto <see cref="T:System.Xml.XmlWriter" /> de gravação.</param>
+        <param name="context">Um <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" /> que contém o contexto atual de serialização.</param>
+        <summary>Serializa especificado <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> objeto para o <see cref="T:System.Xml.XmlWriter" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="request" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="writer" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteXmlElement">
+      <MemberSignature Language="C#" Value="public override void WriteXmlElement (System.Xml.XmlWriter writer, string elementName, object elementValue, System.IdentityModel.Protocols.WSTrust.RequestSecurityToken rst, System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteXmlElement(class System.Xml.XmlWriter writer, string elementName, object elementValue, class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken rst, class System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer.WriteXmlElement(System.Xml.XmlWriter,System.String,System.Object,System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="elementValue" Type="System.Object" />
+        <Parameter Name="rst" Type="System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" />
+        <Parameter Name="context" Type="System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> do objeto para o qual a primeira está sendo serializada.</param>
+        <param name="elementName">O nome local do elemento a ser gravado.</param>
+        <param name="elementValue">O valor do elemento.</param>
+        <param name="rst">O <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> objeto que está sendo serializado.</param>
+        <param name="context">Um <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" /> que contém o contexto atual de serialização.</param>
+        <summary>Grava o parâmetro da primeira especificado para o fluxo de saída. Substituição do método da classe base.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="elementName" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,86 @@
+<Type Name="FontFraction" FullName="System.Windows.FontFraction">
+  <TypeSignature Language="C#" Value="public enum FontFraction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontFraction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontFraction" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o estilo de fração de um <see cref="T:System.Windows.Documents.Typography" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As fontes OpenType oferecem suporte a estilos para frações, incluindo cortado e empilhadas. O texto a seguir exibe estilos de fração para a fonte Palatino Linotype.  
+  
+ ![Texto usando OpenType e com barras diagonais frações](~/add/media/opentypefont12.gif "texto usando OpenType e com barras diagonais frações")  
+Exemplo de estilos de frações empilhadas e cortados  
+  
+> [!NOTE]
+>  A maioria das fontes OpenType expõem apenas um subconjunto dos recursos de OpenType total disponíveis. Se uma fonte especificada não dá suporte a um recurso específico, os glifos padrão são usados em vez disso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir estilos de frações para a fonte Palatino Linotype, usando as propriedades do <xref:System.Windows.Documents.Typography> objeto.  
+  
+ [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontFraction Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontFraction.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontFraction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Estilo de padrão é usado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Slashed">
+      <MemberSignature Language="C#" Value="Slashed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontFraction Slashed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontFraction.Slashed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontFraction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Estilo de fração cortado é usado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stacked">
+      <MemberSignature Language="C#" Value="Stacked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontFraction Stacked = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontFraction.Stacked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontFraction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Estilo de Fração Empilhada é usado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

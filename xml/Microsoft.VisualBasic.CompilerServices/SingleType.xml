@@ -1,0 +1,190 @@
+<Type Name="SingleType" FullName="Microsoft.VisualBasic.CompilerServices.SingleType">
+  <TypeSignature Language="C#" Value="public sealed class SingleType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SingleType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.SingleType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Essa classe foi preterida a partir do Visual Basic 2005.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece métodos para manipular dados potencialmente representa um `Single` valor.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="FromObject">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um <see langword="Single" /> valor que corresponde ao objeto especificado e informações de formato de número opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromObject">
+      <MemberSignature Language="C#" Value="public static float FromObject (object Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 FromObject(object Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.SingleType.FromObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Objeto para converter para um <see langword="Single" /> valor.</param>
+        <summary>Retorna um <see langword="Single" /> valor que corresponde ao objeto especificado.</summary>
+        <returns>O <see langword="Single" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromObject">
+      <MemberSignature Language="C#" Value="public static float FromObject (object Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 FromObject(object Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.SingleType.FromObject(System.Object,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Objeto para converter para um <see langword="Single" /> valor.</param>
+        <param name="NumberFormat">Um <see cref="T:System.Globalization.NumberFormatInfo" /> objeto que define como os valores numéricos são formatados e exibidos, dependendo da cultura.</param>
+        <summary>Retorna um <see langword="Single" /> valor que corresponde ao objeto especificado.</summary>
+        <returns>O <see langword="Single" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="FromString">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um <see langword="Single" /> valor que corresponde à cadeia de caracteres especificada e informações de formato de número opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromString">
+      <MemberSignature Language="C#" Value="public static float FromString (string Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 FromString(string Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.SingleType.FromString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Cadeia de caracteres para converter um <see langword="Single" /> valor.</param>
+        <summary>Retorna um <see langword="Single" /> valor que corresponde à cadeia de caracteres especificada.</summary>
+        <returns>O <see langword="Single" /> valor que corresponde à <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromString">
+      <MemberSignature Language="C#" Value="public static float FromString (string Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 FromString(string Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.SingleType.FromString(System.String,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Cadeia de caracteres para converter um <see langword="Single" /> valor.</param>
+        <param name="NumberFormat">Um <see cref="T:System.Globalization.NumberFormatInfo" /> objeto que define como os valores numéricos são formatados e exibidos, dependendo da cultura.</param>
+        <summary>Retorna um <see langword="Single" /> valor que corresponde à cadeia de caracteres especificada e informações de formato de número.</summary>
+        <returns>O <see langword="Single" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

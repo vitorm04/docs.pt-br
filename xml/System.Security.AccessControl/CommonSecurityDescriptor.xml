@@ -1,0 +1,615 @@
+<Type Name="CommonSecurityDescriptor" FullName="System.Security.AccessControl.CommonSecurityDescriptor">
+  <TypeSignature Language="C#" Value="public sealed class CommonSecurityDescriptor : System.Security.AccessControl.GenericSecurityDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CommonSecurityDescriptor extends System.Security.AccessControl.GenericSecurityDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.CommonSecurityDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.GenericSecurityDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um descritor de segurança. Um descritor de segurança inclui um proprietário, um grupo primário, uma DACL (Lista de Controle de Acesso Discricionário) e uma SACL (Lista de Controle de Acesso do Sistema).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommonSecurityDescriptor (bool isContainer, bool isDS, System.Security.AccessControl.RawSecurityDescriptor rawSecurityDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isContainer, bool isDS, class System.Security.AccessControl.RawSecurityDescriptor rawSecurityDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.RawSecurityDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="isDS" Type="System.Boolean" />
+        <Parameter Name="rawSecurityDescriptor" Type="System.Security.AccessControl.RawSecurityDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo descritor de segurança está associado um objeto de contêiner.</param>
+        <param name="isDS">
+          <see langword="true" />Se o novo descritor de segurança está associado um objeto de diretório.</param>
+        <param name="rawSecurityDescriptor">O <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto do qual criar o novo <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> classe especificado <see cref="T:System.Security.AccessControl.RawSecurityDescriptor" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o descritor de segurança subjacente do qual o novo <xref:System.Security.AccessControl.RawSecurityDescriptor> objeto é criado contém `null` para sua lista de controle de acesso discricionário (DACL), uma entrada de controle de acesso (ACE) que permite que todos acesso completo (AEFA) é adicionado à DACL. Se um aplicativo modifica a DACL de um descritor de segurança para o qual uma ACE AEFA foi adicionada, a ACE AEFA é mantida com a DACL quando essa DACL é mantido.  
+  
+ Isso pode resultar em um aplicativo, inadvertidamente, permitindo o acesso a entidades de segurança. Por isso, um aplicativo deve verificar a existência de uma ACE AEFA e removê-lo antes de modificar qualquer descritor de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommonSecurityDescriptor (bool isContainer, bool isDS, string sddlForm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isContainer, bool isDS, string sddlForm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="isDS" Type="System.Boolean" />
+        <Parameter Name="sddlForm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo descritor de segurança está associado um objeto de contêiner.</param>
+        <param name="isDS">
+          <see langword="true" />Se o novo descritor de segurança está associado um objeto de diretório.</param>
+        <param name="sddlForm">A cadeia de caracteres SDDL do qual criar o novo <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> classe de cadeia de caracteres de linguagem de definição do descritor de segurança (SDDL) especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o descritor de segurança subjacente do qual o novo <xref:System.Security.AccessControl.RawSecurityDescriptor> objeto é criado contém `null` para sua lista de controle de acesso discricionário (DACL), uma entrada de controle de acesso (ACE) que permite que todos acesso completo (AEFA) é adicionado à DACL. Se um aplicativo modifica a DACL de um descritor de segurança para o qual uma ACE AEFA foi adicionada, a ACE AEFA é mantida com a DACL quando essa DACL é mantido.  
+  
+ Isso pode resultar em um aplicativo, inadvertidamente, permitindo o acesso a entidades de segurança. Por isso, um aplicativo deve verificar a existência de uma ACE AEFA e removê-lo antes de modificar qualquer descritor de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommonSecurityDescriptor (bool isContainer, bool isDS, byte[] binaryForm, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isContainer, bool isDS, unsigned int8[] binaryForm, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="isDS" Type="System.Boolean" />
+        <Parameter Name="binaryForm" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo descritor de segurança está associado um objeto de contêiner.</param>
+        <param name="isDS">
+          <see langword="true" />Se o novo descritor de segurança está associado um objeto de diretório.</param>
+        <param name="binaryForm">A matriz de valores de byte do qual criar o novo <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</param>
+        <param name="offset">O deslocamento no <c>binaryForm</c> matriz no qual começar a copiar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> classe da matriz especificada de valores de byte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o descritor de segurança subjacente do qual o novo <xref:System.Security.AccessControl.RawSecurityDescriptor> objeto é criado contém `null` para sua lista de controle de acesso discricionário (DACL), uma entrada de controle de acesso (ACE) que permite que todos acesso completo (AEFA) é adicionado à DACL. Se um aplicativo modifica a DACL de um descritor de segurança para o qual uma ACE AEFA foi adicionada, a ACE AEFA é mantida com a DACL quando essa DACL é mantido.  
+  
+ Isso pode resultar em um aplicativo, inadvertidamente, permitindo o acesso a entidades de segurança. Por isso, um aplicativo deve verificar a existência de uma ACE AEFA e removê-lo antes de modificar qualquer descritor de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommonSecurityDescriptor (bool isContainer, bool isDS, System.Security.AccessControl.ControlFlags flags, System.Security.Principal.SecurityIdentifier owner, System.Security.Principal.SecurityIdentifier group, System.Security.AccessControl.SystemAcl systemAcl, System.Security.AccessControl.DiscretionaryAcl discretionaryAcl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isContainer, bool isDS, valuetype System.Security.AccessControl.ControlFlags flags, class System.Security.Principal.SecurityIdentifier owner, class System.Security.Principal.SecurityIdentifier group, class System.Security.AccessControl.SystemAcl systemAcl, class System.Security.AccessControl.DiscretionaryAcl discretionaryAcl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.#ctor(System.Boolean,System.Boolean,System.Security.AccessControl.ControlFlags,System.Security.Principal.SecurityIdentifier,System.Security.Principal.SecurityIdentifier,System.Security.AccessControl.SystemAcl,System.Security.AccessControl.DiscretionaryAcl)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+        <Parameter Name="isDS" Type="System.Boolean" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.ControlFlags" />
+        <Parameter Name="owner" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="group" Type="System.Security.Principal.SecurityIdentifier" />
+        <Parameter Name="systemAcl" Type="System.Security.AccessControl.SystemAcl" />
+        <Parameter Name="discretionaryAcl" Type="System.Security.AccessControl.DiscretionaryAcl" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo descritor de segurança está associado um objeto de contêiner.</param>
+        <param name="isDS">
+          <see langword="true" />Se o novo descritor de segurança está associado um objeto de diretório.</param>
+        <param name="flags">Sinalizadores que especificam o comportamento do novo <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</param>
+        <param name="owner">O proprietário do novo <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</param>
+        <param name="group">O grupo primário para o novo <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</param>
+        <param name="systemAcl">O acesso controle lista SACL (sistema) para o novo <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</param>
+        <param name="discretionaryAcl">O acesso controle DACL (lista discricionário) para o novo <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> classe das informações especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o descritor de segurança subjacente do qual o novo <xref:System.Security.AccessControl.RawSecurityDescriptor> objeto é criado contém `null` para sua lista de controle de acesso discricionário (DACL), uma entrada de controle de acesso (ACE) que permite que todos acesso completo (AEFA) é adicionado à DACL. Se um aplicativo modifica a DACL de um descritor de segurança para o qual uma ACE AEFA foi adicionada, a ACE AEFA é mantida com a DACL quando essa DACL é mantido.  
+  
+ Isso pode resultar em um aplicativo, inadvertidamente, permitindo o acesso a entidades de segurança. Por isso, um aplicativo deve verificar a existência de uma ACE AEFA e removê-lo antes de modificar qualquer descritor de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDiscretionaryAcl">
+      <MemberSignature Language="C#" Value="public void AddDiscretionaryAcl (byte revision, int trusted);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddDiscretionaryAcl(unsigned int8 revision, int32 trusted) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.AddDiscretionaryAcl(System.Byte,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="revision" Type="System.Byte" />
+        <Parameter Name="trusted" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="revision">O nível de revisão do novo <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> objeto.</param>
+        <param name="trusted">O número de entradas de controle de acesso (ACEs) isso <see cref="T:System.Security.AccessControl.DiscretionaryAcl" /> objeto pode conter. Esse número é a ser usado apenas como uma dica.</param>
+        <summary>Define o <see cref="P:System.Security.AccessControl.CommonSecurityDescriptor.DiscretionaryAcl" /> propriedade para este <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> instância e define o <see cref="F:System.Security.AccessControl.ControlFlags.DiscretionaryAclPresent" /> sinalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor para o <xref:System.Security.AccessControl.DiscretionaryAcl> usa o <xref:System.Security.AccessControl.CommonSecurityDescriptor.IsContainer%2A> e <xref:System.Security.AccessControl.CommonSecurityDescriptor.IsDS%2A> propriedades para este <xref:System.Security.AccessControl.CommonSecurityDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSystemAcl">
+      <MemberSignature Language="C#" Value="public void AddSystemAcl (byte revision, int trusted);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSystemAcl(unsigned int8 revision, int32 trusted) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.AddSystemAcl(System.Byte,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="revision" Type="System.Byte" />
+        <Parameter Name="trusted" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="revision">O nível de revisão do novo <see cref="T:System.Security.AccessControl.SystemAcl" /> objeto.</param>
+        <param name="trusted">To be added.</param>
+        <summary>Define o <see cref="P:System.Security.AccessControl.CommonSecurityDescriptor.SystemAcl" /> propriedade para este <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> instância e define o <see cref="F:System.Security.AccessControl.ControlFlags.SystemAclPresent" /> sinalizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor para o <xref:System.Security.AccessControl.SystemAcl> usa o <xref:System.Security.AccessControl.CommonSecurityDescriptor.IsContainer%2A> e <xref:System.Security.AccessControl.CommonSecurityDescriptor.IsDS%2A> propriedades para este <xref:System.Security.AccessControl.CommonSecurityDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlFlags">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.ControlFlags ControlFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.ControlFlags ControlFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonSecurityDescriptor.ControlFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.ControlFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores que especificam o comportamento do <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</summary>
+        <value>Um ou mais valores da <see cref="T:System.Security.AccessControl.ControlFlags" /> enumeração combinado com uma operação OR lógica.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscretionaryAcl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.DiscretionaryAcl DiscretionaryAcl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.AccessControl.DiscretionaryAcl DiscretionaryAcl" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonSecurityDescriptor.DiscretionaryAcl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.DiscretionaryAcl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de controle de acesso discricionário (DACL) para este <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto. A DACL contém regras de acesso.</summary>
+        <value>A DACL para este <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade é definida como `null`, uma entrada de controle de acesso (ACE) que permite que todos acesso completo (AEFA) é adicionado à DACL. Se um aplicativo modifica a DACL de um descritor de segurança para o qual uma ACE AEFA foi adicionada, a ACE AEFA é mantida com a DACL quando essa DACL é mantido.  
+  
+ Isso pode resultar em um aplicativo, inadvertidamente, permitindo o acesso a entidades de segurança. Por isso, um aplicativo deve verificar a existência de uma ACE AEFA e removê-lo antes de modificar qualquer descritor de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.SecurityIdentifier Group { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.SecurityIdentifier Group" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonSecurityDescriptor.Group" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o grupo primário para este <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</summary>
+        <value>O grupo primário <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContainer">
+      <MemberSignature Language="C#" Value="public bool IsContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonSecurityDescriptor.IsContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booleano que especifica se o objeto associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> é um objeto recipiente.</summary>
+        <value>
+          <see langword="true" />Se o objeto associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> é um objeto recipiente; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDiscretionaryAclCanonical">
+      <MemberSignature Language="C#" Value="public bool IsDiscretionaryAclCanonical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDiscretionaryAclCanonical" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonSecurityDescriptor.IsDiscretionaryAclCanonical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booleano que especifica se a lista de controle acesso discricionário (DACL) associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto está em ordem canônica.</summary>
+        <value>
+          <see langword="true" />Se a DACL associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto está em ordem canônica; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDS">
+      <MemberSignature Language="C#" Value="public bool IsDS { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDS" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonSecurityDescriptor.IsDS" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booleano que especifica se o objeto associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> é um objeto de diretório.</summary>
+        <value>
+          <see langword="true" />Se o objeto associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> é um objeto de diretório; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSystemAclCanonical">
+      <MemberSignature Language="C#" Value="public bool IsSystemAclCanonical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSystemAclCanonical" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonSecurityDescriptor.IsSystemAclCanonical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booleano que especifica se a lista de controle de acesso (SACL) do sistema associado com esse <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto está em ordem canônica.</summary>
+        <value>
+          <see langword="true" />Se a SACL associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto está em ordem canônica; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.SecurityIdentifier Owner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.SecurityIdentifier Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonSecurityDescriptor.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o proprietário do objeto associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</summary>
+        <value>O proprietário do objeto associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PurgeAccessControl">
+      <MemberSignature Language="C#" Value="public void PurgeAccessControl (System.Security.Principal.SecurityIdentifier sid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PurgeAccessControl(class System.Security.Principal.SecurityIdentifier sid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.PurgeAccessControl(System.Security.Principal.SecurityIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="sid">O identificador de segurança do qual remover regras de acesso.</param>
+        <summary>Remove todas as regras de acesso para o identificador de segurança especificados da lista de controle de acesso (DACL) discricionário associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar, inadvertidamente, permitindo o acesso a entidades de segurança, aplicativos devem verificar a existência de uma permissão todos completa a entrada de controle de acesso (ACE) de acesso (AEFA) e removê-la antes de modificar uma DACL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PurgeAudit">
+      <MemberSignature Language="C#" Value="public void PurgeAudit (System.Security.Principal.SecurityIdentifier sid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PurgeAudit(class System.Security.Principal.SecurityIdentifier sid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.PurgeAudit(System.Security.Principal.SecurityIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="sid">O identificador de segurança do qual remover as regras de auditoria.</param>
+        <summary>Remove todas as regras de auditoria para o identificador de segurança especificado do sistema acesso de controle de lista (SACL) associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDiscretionaryAclProtection">
+      <MemberSignature Language="C#" Value="public void SetDiscretionaryAclProtection (bool isProtected, bool preserveInheritance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDiscretionaryAclProtection(bool isProtected, bool preserveInheritance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.SetDiscretionaryAclProtection(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isProtected" Type="System.Boolean" />
+        <Parameter Name="preserveInheritance" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isProtected">
+          <see langword="true" />para proteger a DACL de herança.</param>
+        <param name="preserveInheritance">
+          <see langword="true" />para manter herdada regras de acesso na DACL; <see langword="false" /> para remover as regras de acesso herdado da DACL.</param>
+        <summary>Define a proteção de herança para a lista de controle acesso discricionário (DACL) associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto. DACLs protegidos não herdam as regras de acesso de contêineres pai.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSystemAclProtection">
+      <MemberSignature Language="C#" Value="public void SetSystemAclProtection (bool isProtected, bool preserveInheritance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSystemAclProtection(bool isProtected, bool preserveInheritance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonSecurityDescriptor.SetSystemAclProtection(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isProtected" Type="System.Boolean" />
+        <Parameter Name="preserveInheritance" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isProtected">
+          <see langword="true" />para proteger a SACL de herança.</param>
+        <param name="preserveInheritance">
+          <see langword="true" />para manter as regras de auditoria herdadas em SACL; <see langword="false" /> para remover as regras herdadas de auditoria da SACL.</param>
+        <summary>Define a proteção de herança para a lista de controle de acesso (SACL) do sistema associado a esta <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto. SACLs protegidos não herdam as regras de auditoria de contêineres pai.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemAcl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.SystemAcl SystemAcl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.AccessControl.SystemAcl SystemAcl" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CommonSecurityDescriptor.SystemAcl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.SystemAcl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de controle de acesso (SACL) do sistema para este <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto. A SACL contém regras de auditoria.</summary>
+        <value>A SACL para este <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

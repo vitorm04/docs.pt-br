@@ -1,0 +1,290 @@
+<Type Name="VisualStyleElement+Button+RadioButton" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Button+RadioButton">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Button.RadioButton" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Button/RadioButton extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> controle de botão de objetos para os diferentes estados do rádio. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada propriedade do <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton> classe retorna um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para um estado diferente de controle de botão de opção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Button_RadioButton1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#6)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CheckedDisabled">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement CheckedDisabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement CheckedDisabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedDisabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de opção desabilitada no estado de ativação.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de opção desabilitada no estado de ativação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedDisabled%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedDisabled%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Button_RadioButton8` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#13)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedHot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement CheckedHot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement CheckedHot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedHot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de opção ativa no estado de ativação.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de opção ativa no estado de ativação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedHot%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedHot%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Button_RadioButton6` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedNormal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement CheckedNormal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement CheckedNormal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedNormal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de opção normal no estado de ativação.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de opção normal no estado de ativação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedNormal%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedNormal%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Button_RadioButton5` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedPressed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement CheckedPressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement CheckedPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão pressionado no estado de ativação.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão pressionado no estado de ativação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedPressed%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.CheckedPressed%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Button_RadioButton7` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#12)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UncheckedDisabled">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement UncheckedDisabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement UncheckedDisabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedDisabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de opção desabilitada no estado desmarcado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de opção desabilitada no estado desmarcado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedDisabled%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedDisabled%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Button_RadioButton4` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#9)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UncheckedHot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement UncheckedHot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement UncheckedHot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedHot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de opção ativa no estado desmarcado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de opção ativa no estado desmarcado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedHot%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedHot%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Button_RadioButton2` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#7)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UncheckedNormal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement UncheckedNormal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement UncheckedNormal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedNormal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de opção normal no estado desmarcado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de opção normal no estado desmarcado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedNormal%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UncheckedPressed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement UncheckedPressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement UncheckedPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão pressionado no estado desmarcado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão pressionado no estado desmarcado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedPressed%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.RadioButton.UncheckedPressed%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Button_RadioButton3` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#8)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

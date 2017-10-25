@@ -1,0 +1,1273 @@
+<Type Name="HttpRequestWrapper" FullName="System.Web.HttpRequestWrapper">
+  <TypeSignature Language="C#" Value="public class HttpRequestWrapper : System.Web.HttpRequestBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpRequestWrapper extends System.Web.HttpRequestBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpRequestWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.HttpRequestBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula o objeto HTTP intrínseco que permite que o ASP.NET leia os valores HTTP enviados por um cliente durante uma solicitação da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequestWrapper> classe deriva o <xref:System.Web.HttpRequestBase> classe e serve como um wrapper para o <xref:System.Web.HttpRequest> classe. Essa classe expõe a funcionalidade do <xref:System.Web.HttpRequest> classe e expõe o <xref:System.Web.HttpRequestBase> tipo. O <xref:System.Web.HttpRequestBase> classe permite que você substitua a implementação original do <xref:System.Web.HttpRequest> em seu aplicativo com uma implementação personalizada, como quando você executa fora o pipeline do ASP.NET de teste de unidade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRequestWrapper (System.Web.HttpRequest httpRequest);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpRequest httpRequest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.#ctor(System.Web.HttpRequest)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="httpRequest" Type="System.Web.HttpRequest" />
+      </Parameters>
+      <Docs>
+        <param name="httpRequest">O objeto a que essa classe wrapper fornece acesso.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.HttpRequestWrapper" /> usando o objeto de solicitação especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="httpRequest" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public override void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>A conexão TCP subjacente, fazendo com que qualquer e/s pendentes fazer o encerramento forçado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é thread-safe. Qualquer thread pode chamá-lo a qualquer momento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptTypes">
+      <MemberSignature Language="C#" Value="public override string[] AcceptTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AcceptTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.AcceptTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de MIME com suporte cliente aceita tipos.</summary>
+        <value>Uma matriz de MIME com suporte cliente aceitar tipos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnonymousID">
+      <MemberSignature Language="C#" Value="public override string AnonymousID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AnonymousID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.AnonymousID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de anônimo para o usuário, se ele estiver disponível.</summary>
+        <value>O identificador de usuário anônimo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationPath">
+      <MemberSignature Language="C#" Value="public override string ApplicationPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.ApplicationPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da raiz do aplicativo ASP.NET no servidor.</summary>
+        <value>O caminho da raiz virtual do aplicativo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppRelativeCurrentExecutionFilePath">
+      <MemberSignature Language="C#" Value="public override string AppRelativeCurrentExecutionFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppRelativeCurrentExecutionFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.AppRelativeCurrentExecutionFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da raiz do aplicativo e o torna relativo usando a notação de til (~) para a raiz do aplicativo (como em “~/page.aspx”).</summary>
+        <value>O caminho virtual da raiz do aplicativo para a solicitação atual com o operador til adicionado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryRead">
+      <MemberSignature Language="C#" Value="public override byte[] BinaryRead (int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] BinaryRead(int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.BinaryRead(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="count">O número de bytes a serem lidos.</param>
+        <summary>Executa uma leitura binária de um número especificado de bytes do fluxo de entrada atual.</summary>
+        <returns>Uma matriz que contém os dados binários.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> é menor que 0.  
+  
+ \- ou -  
+  
+ <paramref name="count" /> é maior que o número de bytes disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Browser">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpBrowserCapabilitiesBase Browser { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpBrowserCapabilitiesBase Browser" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Browser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpBrowserCapabilitiesBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações sobre recursos do navegador do cliente solicitante.</summary>
+        <value>Um objeto que representa as funcionalidades do navegador do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificate">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpClientCertificate ClientCertificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpClientCertificate ClientCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.ClientCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpClientCertificate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual certificado de segurança do cliente da solicitação.</summary>
+        <value>Certificado de segurança do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEncoding">
+      <MemberSignature Language="C#" Value="public override System.Text.Encoding ContentEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ContentEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.ContentEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto de caracteres dos dados que foi fornecidos pelo cliente.</summary>
+        <value>Conjunto de caracteres do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength">
+      <MemberSignature Language="C#" Value="public override int ContentLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.ContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento, em bytes, do conteúdo que foi enviado pelo cliente.</summary>
+        <value>O comprimento, em bytes, do conteúdo que foi enviado pelo cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public override string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de conteúdo MIME da solicitação.</summary>
+        <value>O tipo de conteúdo MIME da solicitação, como "text/html".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpCookieCollection Cookies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCookieCollection Cookies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Cookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de cookies enviados pelo cliente.</summary>
+        <value>Cookies do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentExecutionFilePath">
+      <MemberSignature Language="C#" Value="public override string CurrentExecutionFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentExecutionFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.CurrentExecutionFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da solicitação atual.</summary>
+        <value>O caminho virtual do manipulador de página que está sendo executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequestWrapper.CurrentExecutionFilePath%2A> propriedade retorna o caminho do arquivo do manipulador de página em execução no momento.  
+  
+ Quando você redirecionar uma solicitação usando o <xref:System.Web.HttpServerUtility.Execute%2A?displayProperty=nameWithType> método ou o <xref:System.Web.HttpServerUtility.Transfer%2A?displayProperty=nameWithType> método, o <xref:System.Web.HttpRequestWrapper.CurrentExecutionFilePath%2A> propriedade retorna o caminho da página que você estiver redirecionando para (a página filho).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentExecutionFilePathExtension">
+      <MemberSignature Language="C#" Value="public override string CurrentExecutionFilePathExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentExecutionFilePathExtension" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.CurrentExecutionFilePathExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a extensão do nome do arquivo especificado no <see cref="P:System.Web.HttpRequest.CurrentExecutionFilePath" /> propriedade.</summary>
+        <value>A extensão do nome do arquivo especificado no <see cref="P:System.Web.HttpRequest.CurrentExecutionFilePath" /> propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public override string FilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da solicitação atual.</summary>
+        <value>O caminho virtual da solicitação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Files">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpFileCollectionBase Files { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpFileCollectionBase Files" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Files" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpFileCollectionBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de arquivos que foram carregados pelo cliente, no formato MIME de várias partes.</summary>
+        <value>Os arquivos que foram carregados pelo cliente. Os itens no objeto <see cref="T:System.Web.HttpFileCollection" /> são do tipo <see cref="T:System.Web.HttpPostedFile" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o filtro a ser usado quando o fluxo de entrada atual está sendo lido.</summary>
+        <value>Um objeto a ser usado como o filtro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Form">
+      <MemberSignature Language="C#" Value="public override System.Collections.Specialized.NameValueCollection Form { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Form" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Form" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de variáveis de formulário que foram enviadas pelo cliente.</summary>
+        <value>As variáveis do formulário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBufferedInputStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream GetBufferedInputStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.Stream GetBufferedInputStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.GetBufferedInputStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é idêntico ao <xref:System.Web.HttpRequest.GetBufferlessInputStream%2A> exceto que ele também copia os bytes são lidos para o armazenamento interno que é usado pelo ASP.NET para preencher o <xref:System.Web.HttpRequest.Form%2A>, <xref:System.Web.HttpRequest.Files%2A>, e <xref:System.Web.HttpRequest.InputStream%2A> propriedades. Como essas informações são preservadas, código downstream como páginas Web Forms do ASP.NET (arquivos. aspx) serão executados com êxito. Isso não é o caso com o <xref:System.Web.HttpRequest.GetBufferlessInputStream%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O corpo da entidade da solicitação já foi carregado e analisado. Veja alguns exemplos de propriedades que fazem o corpo da entidade ser carregado e analisado:  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Form" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Files" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.InputStream" /> .  
+  
+-   O método <see cref="M:System.Web.HttpRequest.GetBufferlessInputStream" />.  
+  
+ Para evitar essa exceção, chame o método <see cref="P:System.Web.HttpRequest.ReadEntityBodyMode" /> primeiro. Essa exceção também será gerada se o cliente se desconectar enquanto o corpo da entidade é lido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBufferlessInputStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream GetBufferlessInputStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.Stream GetBufferlessInputStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.GetBufferlessInputStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">O corpo da entidade da solicitação já foi carregado e analisado. Veja alguns exemplos de propriedades que fazem o corpo da entidade ser carregado e analisado:  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Form" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.InputStream" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Files" /> .  
+  
+-   O método <see cref="M:System.Web.HttpRequest.GetBufferedInputStream" />.  
+  
+ Para evitar essa exceção, chame o método <see cref="P:System.Web.HttpRequest.ReadEntityBodyMode" /> primeiro. Essa exceção também será gerada se o cliente se desconectar enquanto o corpo da entidade é lido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBufferlessInputStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream GetBufferlessInputStream (bool disableMaxRequestLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.Stream GetBufferlessInputStream(bool disableMaxRequestLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.GetBufferlessInputStream(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disableMaxRequestLength" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disableMaxRequestLength">
+          <see langword="true" />Para desabilitar o limite de comprimento da solicitação; Caso contrário, <see langword="false" />.</param>
+        <summary>Obtém um <see cref="T:System.IO.Stream" /> objeto que pode ser usado para ler a entidade HTTP de entrada do corpo, se desejar desabilitar o limite de tamanho de solicitação que está definido no <see cref="P:System.Web.Configuration.HttpRuntimeSection.MaxRequestLength" /> propriedade.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" /> que pode ser usado para ler o corpo da entidade HTTP de entrada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">O corpo da entidade da solicitação já foi carregado e analisado. Veja alguns exemplos de propriedades que fazem o corpo da entidade ser carregado e analisado:  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Form" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.Files" /> .  
+  
+-   A propriedade de <see cref="P:System.Web.HttpRequest.InputStream" /> .  
+  
+-   O método <see cref="M:System.Web.HttpRequest.GetBufferedInputStream" />.  
+  
+ Para evitar essa exceção, chame o método <see cref="P:System.Web.HttpRequest.ReadEntityBodyMode" /> primeiro. Essa exceção também será gerada se o cliente se desconectar enquanto o corpo da entidade é lido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public override System.Collections.Specialized.NameValueCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de cabeçalhos HTTP que foram enviadas pelo cliente.</summary>
+        <value>Os cabeçalhos de solicitação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpChannelBinding">
+      <MemberSignature Language="C#" Value="public override System.Security.Authentication.ExtendedProtection.ChannelBinding HttpChannelBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Authentication.ExtendedProtection.ChannelBinding HttpChannelBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.HttpChannelBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ChannelBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" /> objeto do atual <see cref="T:System.Web.HttpWorkerRequest" /> instância.</summary>
+        <value>O <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" /> objeto do atual <see cref="T:System.Web.HttpWorkerRequest" /> instância.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Atual <see cref="T:System.Web.HttpWorkerRequest" /> o objeto não é um <see langword="System.Web.Hosting.IIS7WorkerRequest" /> objeto ou uma <see langword="System.Web.Hosting.ISAPIWorkerRequestInProc" /> objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpMethod">
+      <MemberSignature Language="C#" Value="public override string HttpMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.HttpMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o método de transferência de dados HTTP (como <see langword="GET" />, <see langword="POST" />, ou <see langword="HEAD" />) que foi usada pelo cliente.</summary>
+        <value>O método de transferência de dados HTTP que foi usado pelo cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream InputStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream InputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.InputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conteúdo do corpo da entidade HTTP recebida.</summary>
+        <value>O conteúdo de entrada HTTP corpo de conteúdo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertEntityBody">
+      <MemberSignature Language="C#" Value="public override void InsertEntityBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InsertEntityBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.InsertEntityBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece uma cópia do corpo da entidade de solicitação HTTP para IIS.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O método foi chamado em uma versão do IIS anteriores ao IIS 7.0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertEntityBody">
+      <MemberSignature Language="C#" Value="public override void InsertEntityBody (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InsertEntityBody(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.InsertEntityBody(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz que contém os dados de entidade de solicitação.</param>
+        <param name="offset">A posição de base zero em <c>buffer</c> no qual começar a armazenar os dados de entidade de solicitação.</param>
+        <param name="count">O número de bytes para leitura de <c>buffer</c> matriz.</param>
+        <summary>Fornece o IIS com uma cópia do corpo da entidade de solicitação HTTP e informações sobre o objeto de entidade de solicitação.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O método foi chamado em uma versão do IIS anteriores ao IIS 7.0.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> é um valor negativo.</exception>
+        <exception cref="T:System.ArgumentException">O número de itens em <paramref name="count" /> é maior do que o espaço disponível na <paramref name="buffer" />, devido a <paramref name="offset" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticated">
+      <MemberSignature Language="C#" Value="public override bool IsAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.IsAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a solicitação foi autenticada.</summary>
+        <value>
+          <see langword="true" />Se a solicitação foi autenticada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocal">
+      <MemberSignature Language="C#" Value="public override bool IsLocal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocal" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.IsLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a solicitação é o computador local.</summary>
+        <value>
+          <see langword="true" /> se a solicitação for do computador local; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecureConnection">
+      <MemberSignature Language="C#" Value="public override bool IsSecureConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecureConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.IsSecureConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a conexão HTTP usa SSL (protocolo HTTPS).</summary>
+        <value>
+          <see langword="true" />Se a conexão é uma conexão SSL que usa o protocolo HTTPS. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override string this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do membro da coleção a ser obtido.</param>
+        <summary>Obtém o objeto especificado das coleções <see cref="P:System.Web.HttpRequest.Cookies" />, <see cref="P:System.Web.HttpRequest.Form" />, <see cref="P:System.Web.HttpRequest.QueryString" /> ou <see cref="P:System.Web.HttpRequest.ServerVariables" />.</summary>
+        <value>O <see cref="P:System.Web.HttpRequest.QueryString" />, <see cref="P:System.Web.HttpRequest.Form" />, <see cref="P:System.Web.HttpRequest.Cookies" />, ou <see cref="P:System.Web.HttpRequest.ServerVariables" /> membro da coleção que é especificado pelo <paramref name="key" />. Se especificado <paramref name="key" /> valor não for encontrado, <see langword="null" /> será retornado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogonUserIdentity">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.WindowsIdentity LogonUserIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.WindowsIdentity LogonUserIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.LogonUserIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo <see cref="T:System.Security.Principal.WindowsIdentity" /> para o usuário atual.</summary>
+        <value>A identidade do usuário atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapImageCoordinates">
+      <MemberSignature Language="C#" Value="public override int[] MapImageCoordinates (string imageFieldName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32[] MapImageCoordinates(string imageFieldName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.MapImageCoordinates(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageFieldName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="imageFieldName">O nome do mapa de imagem.</param>
+        <summary>Parâmetro de formulário de mapas de um campo de imagem de entrada para os valores apropriados de coordenadas x e y.</summary>
+        <returns>Uma matriz bidimensional de números inteiros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPath">
+      <MemberSignature Language="C#" Value="public override string MapPath (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string MapPath(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.MapPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual (absoluto ou relativo) para mapear para um caminho físico.</param>
+        <summary>O caminho virtual especificado é mapeado para um caminho físico no servidor.</summary>
+        <returns>O caminho físico no servidor que é especificado pelo <paramref name="virtualPath" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPath">
+      <MemberSignature Language="C#" Value="public override string MapPath (string virtualPath, string baseVirtualDir, bool allowCrossAppMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string MapPath(string virtualPath, string baseVirtualDir, bool allowCrossAppMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.MapPath(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="baseVirtualDir" Type="System.String" />
+        <Parameter Name="allowCrossAppMapping" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual (absoluto ou relativo) para mapear para um caminho físico.</param>
+        <param name="baseVirtualDir">O caminho do diretório base virtual que é usado para resolução relativa.</param>
+        <param name="allowCrossAppMapping">
+          <see langword="true" />para indicar que <c>virtualPath</c> pode pertencer a outro aplicativo; caso contrário, <see langword="false" />.</param>
+        <summary>O caminho virtual especificado é mapeado para um caminho físico no servidor.</summary>
+        <returns>O caminho físico no servidor.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">Nenhum objeto <see cref="T:System.Web.HttpContext" /> é definido para a solicitação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MapRawImageCoordinates">
+      <MemberSignature Language="C#" Value="public override double[] MapRawImageCoordinates (string imageFieldName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float64[] MapRawImageCoordinates(string imageFieldName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.MapRawImageCoordinates(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageFieldName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="imageFieldName">O nome do campo de imagem.</param>
+        <summary>Mapeia um parâmetro de formulário de campo de imagem entrada em x apropriado e valores de coordenada de y.</summary>
+        <returns>Valores de coordenadas x e y.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Params">
+      <MemberSignature Language="C#" Value="public override System.Collections.Specialized.NameValueCollection Params { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Params" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Params" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção combinada dos itens <see cref="P:System.Web.HttpRequest.QueryString" />, <see cref="P:System.Web.HttpRequest.Form" />, <see cref="P:System.Web.HttpRequest.ServerVariables" /> e <see cref="P:System.Web.HttpRequest.Cookies" />.</summary>
+        <value>A coleção de valores combinados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public override string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual da solicitação atual.</summary>
+        <value>O caminho virtual da solicitação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PathInfo">
+      <MemberSignature Language="C#" Value="public override string PathInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PathInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.PathInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações de caminho adicionais para um recurso que tem uma extensão de URL.</summary>
+        <value>As informações de caminho adicionais para o recurso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para Http://www.contoso.com/virdir/page.html/tail URL, o <xref:System.Web.HttpRequestWrapper.PathInfo%2A> valor é /tail.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalApplicationPath">
+      <MemberSignature Language="C#" Value="public override string PhysicalApplicationPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhysicalApplicationPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.PhysicalApplicationPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do sistema de arquivos físico do diretório raiz do aplicativo atual.</summary>
+        <value>O caminho do sistema de arquivos do diretório raiz do aplicativo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalPath">
+      <MemberSignature Language="C#" Value="public override string PhysicalPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhysicalPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.PhysicalPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico do sistema de arquivos do recurso solicitado.</summary>
+        <value>O caminho do sistema de arquivos do recurso solicitado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryString">
+      <MemberSignature Language="C#" Value="public override System.Collections.Specialized.NameValueCollection QueryString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection QueryString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.QueryString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de variáveis de cadeia de caracteres de consulta HTTP.</summary>
+        <value>As variáveis de cadeia de caracteres de consulta que foram enviadas pelo cliente na URL da solicitação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawUrl">
+      <MemberSignature Language="C#" Value="public override string RawUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RawUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.RawUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL completa da solicitação atual.</summary>
+        <value>A URL completa da solicitação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadEntityBodyMode">
+      <MemberSignature Language="C#" Value="public override System.Web.ReadEntityBodyMode ReadEntityBodyMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.ReadEntityBodyMode ReadEntityBodyMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.ReadEntityBodyMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ReadEntityBodyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o corpo da entidade de solicitação foi lido e, em caso afirmativo, como ele foi lido.</summary>
+        <value>O valor que indica como o corpo da entidade de solicitação foi lido ou se ele não foi lido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestContext">
+      <MemberSignature Language="C#" Value="public override System.Web.Routing.RequestContext RequestContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.RequestContext RequestContext" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.RequestContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RequestContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância <see cref="T:System.Web.Routing.RequestContext" /> da solicitação atual.</summary>
+        <value>A instância <see cref="T:System.Web.Routing.RequestContext" /> da solicitação atual. Para solicitações não roteadas, um objeto <see cref="T:System.Web.Routing.RequestContext" /> retornado está vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece acesso para o <xref:System.Web.Routing.RouteData> objeto para a solicitação atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestType">
+      <MemberSignature Language="C#" Value="public override string RequestType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.RequestType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método de transferência de dados HTTP (<see langword="GET" /> ou <see langword="POST" />) que foi usada pelo cliente.</summary>
+        <value>O tipo de método de transferência de dados HTTP que foi usado pelo cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public override void SaveAs (string filename, bool includeHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SaveAs(string filename, bool includeHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.SaveAs(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="includeHeaders" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O caminho da unidade física.</param>
+        <param name="includeHeaders">Um valor que especifica se é necessário salvar os cabeçalhos HTTP para o disco.</param>
+        <summary>Salva uma solicitação HTTP no disco.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerVariables">
+      <MemberSignature Language="C#" Value="public override System.Collections.Specialized.NameValueCollection ServerVariables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection ServerVariables" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.ServerVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de variáveis de servidor Web.</summary>
+        <value>As variáveis de servidor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimedOutToken">
+      <MemberSignature Language="C#" Value="public override System.Threading.CancellationToken TimedOutToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken TimedOutToken" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.TimedOutToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Threading.CancellationToken" /> que é disparado quando uma solicitação expira.</summary>
+        <value>O token de cancelamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Web.HttpRequest.TimedOutToken%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TlsTokenBindingInfo">
+      <MemberSignature Language="C#" Value="public override System.Web.ITlsTokenBindingInfo TlsTokenBindingInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ITlsTokenBindingInfo TlsTokenBindingInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.TlsTokenBindingInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ITlsTokenBindingInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de token de associação de Tls.</summary>
+        <value>As informações de token de associação de Tls.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalBytes">
+      <MemberSignature Language="C#" Value="public override int TotalBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TotalBytes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.TotalBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de bytes no fluxo de entrada atual.</summary>
+        <value>O número de bytes no fluxo de entrada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unvalidated">
+      <MemberSignature Language="C#" Value="public override System.Web.UnvalidatedRequestValuesBase Unvalidated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UnvalidatedRequestValuesBase Unvalidated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Unvalidated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UnvalidatedRequestValuesBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um acesso aos valores de solicitação HTTP sem disparar a validação de solicitação.</summary>
+        <value>Os valores de solicitação inválida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a validação de solicitação, consulte <xref:System.Web.UnvalidatedRequestValues>.  
+  
+> [!IMPORTANT]
+>  Se você usar essa propriedade, você deve verificar manualmente os dados para possíveis ataques de script entre sites.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public override Uri Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações sobre a URL da solicitação atual.</summary>
+        <value>Um objeto que contém informações sobre a URL da solicitação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlReferrer">
+      <MemberSignature Language="C#" Value="public override Uri UrlReferrer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri UrlReferrer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.UrlReferrer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações sobre a URL da solicitação do cliente vinculada à URL atual.</summary>
+        <value>A URL da página que é vinculada à solicitação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgent">
+      <MemberSignature Language="C#" Value="public override string UserAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAgent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.UserAgent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de agente do usuário completa do cliente.</summary>
+        <value>A cadeia de caracteres de agente do usuário completa do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserHostAddress">
+      <MemberSignature Language="C#" Value="public override string UserHostAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserHostAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.UserHostAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço IP do host do cliente.</summary>
+        <value>O endereço IP do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserHostName">
+      <MemberSignature Language="C#" Value="public override string UserHostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserHostName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.UserHostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome DNS do cliente.</summary>
+        <value>O nome DNS do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserLanguages">
+      <MemberSignature Language="C#" Value="public override string[] UserLanguages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] UserLanguages" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRequestWrapper.UserLanguages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz classificada de preferências de idioma do cliente.</summary>
+        <value>Uma matriz classificada de preferências de idioma do cliente, ou <see langword="null" /> se a matriz está vazia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInput">
+      <MemberSignature Language="C#" Value="public override void ValidateInput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ValidateInput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRequestWrapper.ValidateInput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que a validação ocorre para as coleções que são acessadas por meio de <see cref="P:System.Web.HttpRequest.Cookies" />, <see cref="P:System.Web.HttpRequest.Form" />, e <see cref="P:System.Web.HttpRequest.QueryString" /> propriedades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRequest> classe usa sinalizadores de validação de entrada para determinar se deve executar a validação nas coleções de solicitação que são acessadas por meio de <xref:System.Web.HttpRequest.Cookies%2A>, <xref:System.Web.HttpRequest.Form%2A>, e <xref:System.Web.HttpRequest.QueryString%2A> propriedades. O <xref:System.Web.HttpRequestWrapper.ValidateInput%2A> método define esses sinalizadores de forma que, quando o `get` acessadores do <xref:System.Web.HttpRequest.Cookies%2A>, <xref:System.Web.HttpRequest.Form%2A>, ou <xref:System.Web.HttpRequest.QueryString%2A> propriedades são invocadas, validação de entrada é executada. Validação funciona verificando todos os dados de entrada em uma lista codificada de dados potencialmente perigosos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

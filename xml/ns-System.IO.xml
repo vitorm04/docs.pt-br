@@ -1,0 +1,6 @@
+<Namespace Name="System.IO">
+  <Docs>
+    <summary>Namespace System.IO contém tipos que permitem leitura e gravação em arquivos e fluxos de dados e tipos que fornecem suporte de diretório e arquivo básico.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

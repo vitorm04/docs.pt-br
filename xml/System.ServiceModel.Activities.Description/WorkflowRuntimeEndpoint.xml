@@ -1,0 +1,187 @@
+<Type Name="WorkflowRuntimeEndpoint" FullName="System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint">
+  <TypeSignature Language="C#" Value="public class WorkflowRuntimeEndpoint : System.ServiceModel.Activities.WorkflowHostingEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowRuntimeEndpoint extends System.ServiceModel.Activities.WorkflowHostingEndpoint" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.WorkflowServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activities.WorkflowHostingEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The WF3 types are deprecated.  Instead, please use the new WF4 types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O <see cref="T:System.Activities.DurableInstancing.SqlWorkflowInstanceStore" /> adiciona um ponto de extremidade de controle padrão usando essa classe se o &lt; <see langword="workflowInstanceControl" /> &gt; subelemento no &lt; <see langword="sqlWorkflowInstanceStoreBehavior" /> &gt; elemento não for especificado explicitamente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <`workflowInstanceControl`> subelemento no elemento SqlWorkflowInstanceStore é um elemento opcional que especifica os parâmetros para um ponto de extremidade de controle de instância de fluxo de trabalho. O serviço de gerenciamento de fluxo de trabalho usa este ponto de extremidade para emitir comandos de controle para o host de serviço.  
+  
+ Se o <`workflowInstanceControl`> subelemento no elemento SqlWorkflowInstanceStore for omitido, o SqlWorkflowInstanceStore ainda adiciona um ponto de extremidade de controle padrão usando o <xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowRuntimeEndpoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddService">
+      <MemberSignature Language="C#" Value="public void AddService (object service);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddService(object service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint.AddService(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="service">O objeto de serviço que deve ser adicionado à lista de serviços de tempo de execução.</param>
+        <summary>Adiciona o serviço especificado à lista de serviços de tempo de execução com suporte na instância de tempo de execução do fluxo de trabalho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo do serviço cujo objeto devem ser recuperados da lista de objetos.</param>
+        <summary>Obtém o objeto de serviço para o tipo de serviço especificado na lista de objetos de serviço.</summary>
+        <returns>O objeto de serviço para o tipo de serviço especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetService&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetService&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint.GetService``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de serviço para obter.</typeparam>
+        <summary>Obtém o objeto de serviço que corresponde ao tipo de serviço especificado como um parâmetro de modelo.</summary>
+        <returns>O objeto de serviço que corresponde ao tipo de serviço.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetInstanceId">
+      <MemberSignature Language="C#" Value="protected override Guid OnGetInstanceId (object[] inputs, System.ServiceModel.OperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Guid OnGetInstanceId(object[] inputs, class System.ServiceModel.OperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint.OnGetInstanceId(System.Object[],System.ServiceModel.OperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Object[]" />
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Os objetos de entrada.</param>
+        <param name="operationContext">As informações de contexto de operação.</param>
+        <summary>Obtém o identificador de instância com base no contexto de operação passados como parâmetros e entradas.</summary>
+        <returns>O identificador de instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResolveBookmark">
+      <MemberSignature Language="C#" Value="protected override System.Activities.Bookmark OnResolveBookmark (object[] inputs, System.ServiceModel.OperationContext operationContext, System.ServiceModel.Activities.WorkflowHostingResponseContext responseContext, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Activities.Bookmark OnResolveBookmark(object[] inputs, class System.ServiceModel.OperationContext operationContext, class System.ServiceModel.Activities.WorkflowHostingResponseContext responseContext, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint.OnResolveBookmark(System.Object[],System.ServiceModel.OperationContext,System.ServiceModel.Activities.WorkflowHostingResponseContext,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Bookmark</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Object[]" />
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+        <Parameter Name="responseContext" Type="System.ServiceModel.Activities.WorkflowHostingResponseContext" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">Os objetos de entrada.</param>
+        <param name="operationContext">As informações de contexto de operação.</param>
+        <param name="responseContext">As informações de contexto de resposta.</param>
+        <param name="value">O objeto de valor.</param>
+        <summary>Resolve um indicador.</summary>
+        <returns>Um indicador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveService">
+      <MemberSignature Language="C#" Value="public void RemoveService (object service);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveService(object service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint.RemoveService(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="service">O objeto de serviço que deve ser removido da lista de serviços com suporte de tempo de execução.</param>
+        <summary>Remove o serviço especificado na lista de serviços de tempo de execução com suporte na instância de tempo de execução do fluxo de trabalho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

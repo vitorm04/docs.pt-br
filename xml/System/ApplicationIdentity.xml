@@ -1,0 +1,274 @@
+<Type Name="ApplicationIdentity" FullName="System.ApplicationIdentity">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationIdentity : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ApplicationIdentity extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.ApplicationIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a capacidade de identificar com exclusividade um aplicativo ativado por manifesto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ApplicationIdentity> classe é usada na ativação de aplicativos baseados no manifesto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.ActivationContext> para obter o <xref:System.ApplicationIdentity> para um aplicativo baseado no manifesto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ActivationContext> classe.  
+  
+ [!code-csharp[System.ActivationContext#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ActivationContext/cs/program.cs#2)]
+ [!code-vb[System.ActivationContext#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ActivationContext/vb/program.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationIdentity (string applicationIdentityFullName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string applicationIdentityFullName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ApplicationIdentity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="applicationIdentityFullName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="applicationIdentityFullName">O nome completo do aplicativo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ApplicationIdentity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato da `applicationIdentityFullName` parâmetro é uma cadeia Unicode delimitado por vírgulas que começa com o nome, da seguinte maneira:  
+  
+```  
+  
+applicationURL  
+#  
+deploymentIdentity  
+\  
+applicationIdentity  
+  
+```  
+  
+ Onde *deploymentIdentity* =  
+  
+```  
+  
+deploymentManifest  
+, Version =   
+Major.Minor.Build.Revision  
+, Culture =   
+CultureInfo  
+, PublicKeyToken=  
+TokenNumber  
+, processorArchitecture=  
+processorArchitecture  
+  
+```  
+  
+ E *applicationIdentity* =  
+  
+```  
+  
+applicationName  
+, Version =   
+Major.Minor.Build.Revision  
+, Culture =   
+CultureInfo  
+, PublicKeyToken=  
+TokenNumber  
+, processorArchitecture=  
+processorArchitecture  
+, type=  
+OsType  
+  
+```  
+  
+ Este é um exemplo do nome completo para um aplicativo chamado ActivationContext:  
+  
+```  
+http://testserver/ActivationContext/ActivationContext.application  
+#ActivationContext.application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae13aad84c1a3490, processorArchitecture=msil  
+\ActivationContext.exe, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae13aad84c1a3490, processorArchitecture=msil, type=win32  
+```  
+  
+ O valor padrão para a arquitetura do processador é "msil", e o valor padrão para o tipo é "win32".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="applicationIdentityFullName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeBase">
+      <MemberSignature Language="C#" Value="public string CodeBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CodeBase" />
+      <MemberSignature Language="DocId" Value="P:System.ApplicationIdentity.CodeBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do manifesto de implantação como uma URL.</summary>
+        <value>A URL do manifesto de implantação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seguir estão dois exemplos de <xref:System.ApplicationIdentity.CodeBase%2A> valores de propriedade para um aplicativo chamado ActivationContext:  
+  
+-   http://TestServer/ActivationContext/ActivationContext.Application  
+  
+-   file://C:/UserFiles/username/SolutionName/ActivationContext/Publish/ActivationContext.Application.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.ApplicationIdentity> para obter o valor da <xref:System.ApplicationIdentity.CodeBase%2A> propriedade para um aplicativo baseado no manifesto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ActivationContext> classe.  
+  
+ [!code-csharp[System.ActivationContext#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ActivationContext/cs/program.cs#3)]
+ [!code-vb[System.ActivationContext#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ActivationContext/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.ApplicationIdentity.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome completo do aplicativo.</summary>
+        <value>O nome completo do aplicativo, também conhecido como o nome para exibição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma descrição do formato da <xref:System.ApplicationIdentity.FullName%2A> propriedade, consulte o <xref:System.ApplicationIdentity.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.ApplicationIdentity> para obter o valor da <xref:System.ApplicationIdentity.FullName%2A> propriedade para um aplicativo baseado no manifesto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ActivationContext> classe.  
+  
+ [!code-csharp[System.ActivationContext#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ActivationContext/cs/program.cs#3)]
+ [!code-vb[System.ActivationContext#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ActivationContext/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ApplicationIdentity.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" />) estrutura para a serialização.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com os dados necessários para serializar o objeto de destino.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ApplicationIdentity.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome completo do aplicativo ativado de manifesto.</summary>
+        <returns>O nome completo do aplicativo ativado de manifesto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma descrição do formato de um nome completo para um aplicativo ativado manifesto, consulte o <xref:System.ApplicationIdentity.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

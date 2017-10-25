@@ -1,0 +1,204 @@
+<Type Name="PropertyAccessRule" FullName="System.DirectoryServices.PropertyAccessRule">
+  <TypeSignature Language="C#" Value="public sealed class PropertyAccessRule : System.DirectoryServices.ActiveDirectoryAccessRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PropertyAccessRule extends System.DirectoryServices.ActiveDirectoryAccessRule" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.PropertyAccessRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.ActiveDirectoryAccessRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.PropertyAccessRule" /> classe representa um tipo específico de regra de acesso que é usado para permitir ou negar acesso a uma propriedade de serviços de domínio do Active Directory.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é fornecida para simplificar a construção de uma regra de acesso para uma propriedade de serviços de domínio do Active Directory.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.PropertyAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.PropertyAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.PropertyAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="access" Type="System.DirectoryServices.PropertyAccess" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="access">Uma da <see cref="T:System.DirectoryServices.PropertyAccess" /> valores de enumeração que especifica a propriedade tipo de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.PropertyAccessRule" /> classe com a referência de identidade especificado, o tipo de controle de acesso e o acesso à propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usar esse construtor, ele cria uma regra de acesso de propriedade se aplica a todos os tipos de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.PropertyAccess access, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.PropertyAccess access, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.PropertyAccess,System.DirectoryServices.ActiveDirectorySecurityInheritance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="access" Type="System.DirectoryServices.PropertyAccess" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="access">Uma da <see cref="T:System.DirectoryServices.PropertyAccess" /> valores de enumeração que especifica a propriedade tipo de acesso.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.PropertyAccessRule" /> classe com a referência de identidade especificado, o tipo de controle de acesso, acesso de propriedade e herança de segurança de serviços de domínio do Active Directory.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usar esse construtor, ele cria uma regra de acesso de propriedade se aplica a todos os tipos de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.PropertyAccess access, Guid propertyType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.PropertyAccess access, valuetype System.Guid propertyType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.PropertyAccess,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="access" Type="System.DirectoryServices.PropertyAccess" />
+        <Parameter Name="propertyType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="access">Uma da <see cref="T:System.DirectoryServices.PropertyAccess" /> valores de enumeração que especifica a propriedade tipo de acesso.</param>
+        <param name="propertyType">O GUID da propriedade que esta regra de acesso se aplica ao esquema. Se isso for <see cref="F:System.Guid.Empty" />, em seguida, a regra de acesso se aplica a todos os tipos de propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.PropertyAccessRule" /> classe com a referência de identidade especificado, o tipo de controle de acesso, acesso de propriedade e tipo de propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.PropertyAccess access, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.PropertyAccess access, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.PropertyAccess,System.DirectoryServices.ActiveDirectorySecurityInheritance,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="access" Type="System.DirectoryServices.PropertyAccess" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="access">Uma da <see cref="T:System.DirectoryServices.PropertyAccess" /> valores de enumeração que especifica a propriedade tipo de acesso.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <param name="inheritedObjectType">O GUID de esquema do tipo de objeto filho que pode herdar essa regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.PropertyAccessRule" /> classe com referência de identidade especificado, o tipo de controle de acesso, acesso de propriedade, herança de segurança do Active Directory Domain Services e o tipo de objeto herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usar esse construtor, ele cria uma regra de acesso de propriedade se aplica a todos os tipos de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.PropertyAccess access, Guid propertyType, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.PropertyAccess access, valuetype System.Guid propertyType, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.PropertyAccess,System.Guid,System.DirectoryServices.ActiveDirectorySecurityInheritance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="access" Type="System.DirectoryServices.PropertyAccess" />
+        <Parameter Name="propertyType" Type="System.Guid" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="access">Uma da <see cref="T:System.DirectoryServices.PropertyAccess" /> valores de enumeração que especifica a propriedade tipo de acesso.</param>
+        <param name="propertyType">O GUID da propriedade que esta regra de acesso se aplica ao esquema. Se isso for <see cref="F:System.Guid.Empty" />, em seguida, a regra de acesso se aplica a todos os tipos de propriedade.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.PropertyAccessRule" /> classe com referência de identidade especificado, o tipo de controle de acesso, o acesso à propriedade, tipo de propriedade e herança de segurança de serviços de domínio do Active Directory.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.PropertyAccess access, Guid propertyType, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.PropertyAccess access, valuetype System.Guid propertyType, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.PropertyAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.PropertyAccess,System.Guid,System.DirectoryServices.ActiveDirectorySecurityInheritance,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="access" Type="System.DirectoryServices.PropertyAccess" />
+        <Parameter Name="propertyType" Type="System.Guid" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Uma da <see cref="T:System.Security.AccessControl.AccessControlType" /> valores de enumeração que especifica o tipo de regra de acesso.</param>
+        <param name="access">Uma da <see cref="T:System.DirectoryServices.PropertyAccess" /> valores de enumeração que especifica a propriedade tipo de acesso.</param>
+        <param name="propertyType">O GUID da propriedade que esta regra de acesso se aplica ao esquema. Se isso for <see cref="F:System.Guid.Empty" />, em seguida, a regra de acesso se aplica a todos os tipos de propriedade.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <param name="inheritedObjectType">O GUID de esquema do tipo de objeto filho que pode herdar essa regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.PropertyAccessRule" /> classe com a referência de identidade especificado, o tipo de controle de acesso, acesso de propriedade, tipo de propriedade, herança de segurança do Active Directory Domain Services e tipo de objeto herdado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

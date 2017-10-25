@@ -1,0 +1,62 @@
+<Type Name="BuildDependencySet" FullName="System.Web.Compilation.BuildDependencySet">
+  <TypeSignature Language="C#" Value="public sealed class BuildDependencySet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BuildDependencySet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.BuildDependencySet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as dependências retornadas pelo Gerenciador de compilação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.BuildDependencySet> para um aplicativo pode ser recuperado por meio do objeto de <xref:System.Web.Compilation.BuildManager.GetCachedBuildDependencySet%2A> método. Ele contém as propriedades que representam a lista de dependências.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HashCode">
+      <MemberSignature Language="C#" Value="public string HashCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.BuildDependencySet.HashCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que representa o código de hash de caminhos virtuais dependentes.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o código de hash de caminhos virtuais dependentes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPaths">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable VirtualPaths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable VirtualPaths" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.BuildDependencySet.VirtualPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de dependências do caminho virtual.</summary>
+        <value>Um <see cref="T:System.Collections.IEnumerable" /> que contém as dependências de caminho virtual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

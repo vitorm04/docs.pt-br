@@ -1,0 +1,349 @@
+<Type Name="DataObjectAttribute" FullName="System.ComponentModel.DataObjectAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DataObjectAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataObjectAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataObjectAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica um tipo como um objeto adequado para ser associado a um objeto <see cref="T:System.Web.UI.WebControls.ObjectDataSource" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ComponentModel.DataObjectAttribute> atributo para identificar um objeto adequado para uso por um <xref:System.Web.UI.WebControls.ObjectDataSource> objeto. Classes de tempo de design como o <xref:System.Web.UI.Design.WebControls.ObjectDataSourceDesigner> classe use o <xref:System.ComponentModel.DataObjectAttribute> atributo para apresentar os objetos adequados para vincular um <xref:System.Web.UI.WebControls.ObjectDataSource> objeto.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode aplicar o <xref:System.ComponentModel.DataObjectAttribute> atributo para indicar que um objeto é adequado para associação a um <xref:System.Web.UI.WebControls.ObjectDataSource> objeto. Neste exemplo, o `NorthwindData` objeto é destinado para uso com um <xref:System.Web.UI.WebControls.ObjectDataSource> objeto.  
+  
+ [!code-csharp[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs#3)]
+ [!code-vb[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.DataObjectAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.DataObjectAttribute.IsDataObject%2A> está definida como `true` quando você usa o <xref:System.ComponentModel.DataObjectAttribute.%23ctor> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.DataObjectAttribute.%23ctor> construtor.  
+  
+ [!code-csharp[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs#3)]
+ [!code-vb[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObjectAttribute (bool isDataObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isDataObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isDataObject" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isDataObject">
+          <see langword="true" />Se o objeto é adequado para associação a um <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> objeto; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.DataObjectAttribute" /> classe e indica se um objeto é adequado para associação a um <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ComponentModel.DataObjectAttribute.%23ctor%28System.Boolean%29> construtor para indicar a uma classe de tempo de design, como o <xref:System.Web.UI.Design.WebControls.ObjectDataSourceDesigner> classe que um objeto deve ser excluído da lista de objetos adequados para associação a um <xref:System.Web.UI.WebControls.ObjectDataSource> objeto.  
+  
+ O <xref:System.ComponentModel.DataObjectAttribute.IsDataObject%2A> propriedade é definida como o valor de `isDataObject` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataObject">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DataObjectAttribute DataObject;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DataObjectAttribute DataObject" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectAttribute.DataObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a classe é adequada para associação a um <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> objeto em tempo de design. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.DataObjectAttribute.DataObject> campo retorna um novo <xref:System.ComponentModel.DataObjectAttribute> do objeto com o <xref:System.ComponentModel.DataObjectAttribute.IsDataObject%2A> propriedade definida como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DataObjectAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DataObjectAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o valor padrão de <see cref="T:System.ComponentModel.DataObjectAttribute" /> classe, que indica se a classe é adequada para associação a um <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> objeto em tempo de design. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.DataObjectAttribute.Default> campo define uma instância do <xref:System.ComponentModel.DataObjectAttribute> classe inicializada com o <xref:System.ComponentModel.DataObjectAttribute.%23ctor%2A> construtor, que define o <xref:System.ComponentModel.DataObjectAttribute.IsDataObject%2A> propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado com esta instância de <see cref="T:System.ComponentModel.DataObjectAttribute" />.</param>
+        <summary>Determina se esta instância do <see cref="T:System.ComponentModel.DataObjectAttribute" /> correspondam ao padrão de outro objeto.</summary>
+        <returns>
+          <see langword="true" />Se esta instância é o mesmo que a instância especificada pelo <paramref name="obj" /> parâmetro; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método determina se esta instância do <xref:System.ComponentModel.DataObjectAttribute> correspondam ao padrão de outro objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataObject">
+      <MemberSignature Language="C#" Value="public bool IsDataObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDataObject" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataObjectAttribute.IsDataObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um objeto deve ser considerado adequado para associação a um <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> objeto em tempo de design.</summary>
+        <value>
+          <see langword="true" />Se o objeto deve ser considerado adequado para associação a um <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> objeto; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o valor atual do atributo é o valor padrão para o atributo.</summary>
+        <returns>
+          <see langword="true" />Se o valor atual do atributo é o padrão. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NonDataObject">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.DataObjectAttribute NonDataObject;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.DataObjectAttribute NonDataObject" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectAttribute.NonDataObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a classe não é adequada para associação a um <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> objeto em tempo de design. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.DataObjectAttribute.NonDataObject> campo retorna um novo <xref:System.ComponentModel.DataObjectAttribute> do objeto com o <xref:System.ComponentModel.DataObjectAttribute.IsDataObject%2A> propriedade definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

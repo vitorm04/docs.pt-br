@@ -1,0 +1,399 @@
+<Type Name="ContextMenu" FullName="System.Windows.Forms.ContextMenu">
+  <TypeSignature Language="C#" Value="public class ContextMenu : System.Windows.Forms.Menu" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContextMenu extends System.Windows.Forms.Menu" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ContextMenu" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Menu</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Popup")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um menu de atalho. Embora <see cref="T:System.Windows.Forms.ContextMenuStrip" /> substitua e adicione funcionalidade ao controle <see cref="T:System.Windows.Forms.ContextMenu" /> de versões anteriores, <see cref="T:System.Windows.Forms.ContextMenu" /> é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ContextMenu> classe representa os menus de atalho que podem ser exibidos quando o usuário clica no botão direito do mouse sobre um controle ou a área do formulário. Menus de atalho são normalmente usados para combinar os itens de menu diferente de um <xref:System.Windows.Forms.MainMenu> de um formulário que são úteis para o usuário, considerando o contexto do aplicativo. Por exemplo, você pode usar um menu de atalho atribuído a um <xref:System.Windows.Forms.TextBox> controle para fornecer itens de menu para alterar a fonte do texto, para localizar texto dentro do controle, ou recursos de área de transferência para copiar e colar o texto. Você também pode exibir novos <xref:System.Windows.Forms.MenuItem> objetos em um menu de atalho que não estão localizados em um <xref:System.Windows.Forms.MainMenu> para fornecer comandos específicos de situação que não são apropriados para o <xref:System.Windows.Forms.MainMenu> para exibir.  
+  
+ Normalmente, um menu de atalho é exibido quando um usuário clica no botão direito do mouse sobre um controle ou o próprio formulário. Controles visíveis e <xref:System.Windows.Forms.Form> tem um <xref:System.Windows.Forms.Control.ContextMenu%2A> propriedade que associa o <xref:System.Windows.Forms.ContextMenu> classe para o controle que exibe o menu de atalho. Mais de um controle pode usar um <xref:System.Windows.Forms.ContextMenu>. Você pode usar o <xref:System.Windows.Forms.ContextMenu.SourceControl%2A> para determinar qual controle exibidos do menu de atalho para executar tarefas específicas para o controle ou para modificar o menu de atalho exibido para o controle.  
+  
+ Você talvez queira saber quando o menu de atalho que está sendo exibido para definir marcas de seleção, desabilitar itens e executar outras tarefas de menu antes do menu é exibido ao usuário. Você pode manipular o <xref:System.Windows.Forms.ContextMenu.Popup> evento para determinar quando o menu de atalho está sendo exibido.  
+  
+> [!NOTE]
+>  Para reutilizar <xref:System.Windows.Forms.MenuItem> objetos que são exibidos em um <xref:System.Windows.Forms.MainMenu> para uso em um <xref:System.Windows.Forms.ContextMenu>, você deve criar uma cópia do menu usando o <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> método o <xref:System.Windows.Forms.MenuItem> classe. Você também pode mesclar itens de menu e seus itens de submenu em um único <xref:System.Windows.Forms.MenuItem> objeto usando o <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> método o <xref:System.Windows.Forms.MenuItem> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um manipulador de eventos para o <xref:System.Windows.Forms.ContextMenu.Popup> evento o <xref:System.Windows.Forms.ContextMenu>. O código no manipulador de eventos determina qual dos dois controles um <xref:System.Windows.Forms.PictureBox> chamado `pictureBox1` e um <xref:System.Windows.Forms.TextBox> chamado `textBox1` é o controle que exibe o menu de atalho. Dependendo de qual controle causada o <xref:System.Windows.Forms.ContextMenu> para exibir o menu de atalho, o controle adiciona apropriada <xref:System.Windows.Forms.MenuItem> objetos para o <xref:System.Windows.Forms.ContextMenu>. Este exemplo requer que você tenha uma instância do <xref:System.Windows.Forms.ContextMenu> classe, denominada `contextMenu1`, definido dentro do formulário. Este exemplo também requer que você tenha um <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.PictureBox> adicionado a um formulário e que o <xref:System.Windows.Forms.Control.ContextMenu%2A> desses controles é definida como `contextMenu1`.  
+  
+ [!code-cpp[Classic ContextMenu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ContextMenu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ContextMenu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ContextMenu Example/CS/source.cs#1)]
+ [!code-vb[Classic ContextMenu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ContextMenu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ContextMenu" /> classe sem itens de menu especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que você usou esta versão do construtor, você pode adicionar itens de menu a <xref:System.Windows.Forms.ContextMenu> usando o <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método o <xref:System.Windows.Forms.Menu.MenuItemCollection> classe. Você pode acessar o <xref:System.Windows.Forms.Menu.MenuItemCollection> por meio de <xref:System.Windows.Forms.Menu.MenuItems%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextMenu (System.Windows.Forms.MenuItem[] menuItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.MenuItem[] menuItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.#ctor(System.Windows.Forms.MenuItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="menuItems" Type="System.Windows.Forms.MenuItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="menuItems">Uma matriz de objetos <see cref="T:System.Windows.Forms.MenuItem" /> que representam os itens de menu para adicionar ao menu de atalho.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ContextMenu" /> com conjunto de objetos <see cref="T:System.Windows.Forms.MenuItem" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esta versão do construtor para criar um <xref:System.Windows.Forms.ContextMenu> com seus itens de menu especificados no momento em que ele é criado. Depois que você usou esta versão do construtor, você pode adicionar itens de menu adicionais para o <xref:System.Windows.Forms.ContextMenu> usando o <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método o <xref:System.Windows.Forms.Menu.MenuItemCollection> classe. Você pode acessar o <xref:System.Windows.Forms.Menu.MenuItemCollection> por meio de <xref:System.Windows.Forms.Menu.MenuItems%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a construir um menu de atalho e usando o <xref:System.Windows.Forms.ContextMenu.Show%2A> método. Para executar o exemplo, cole o código a seguir em um formulário que contém um botão denominado Button1. Certifique-se de que todos os eventos estão associados com os métodos de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapse">
+      <MemberSignature Language="C#" Value="public event EventHandler Collapse;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Collapse" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ContextMenu.Collapse" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o menu de atalho é recolhido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ContextMenu.Collapse> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ContextMenu> chamado `ContextMenu1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ContextMenu.Collapse> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#170)]
+ [!code-vb[System.Windows.Forms.EventExamples#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#170)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollapse">
+      <MemberSignature Language="C#" Value="protected virtual void OnCollapse (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnCollapse(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.OnCollapse(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ContextMenu.Collapse" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPopup">
+      <MemberSignature Language="C#" Value="protected virtual void OnPopup (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnPopup(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.OnPopup(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Windows.Forms.ContextMenu.Popup" /> evento</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Popup">
+      <MemberSignature Language="C#" Value="public event EventHandler Popup;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Popup" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ContextMenu.Popup" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes que o menu de atalho é exibido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse evento para inicializar o <xref:System.Windows.Forms.MenuItem> objetos antes de eles serem exibidos. Por exemplo, se você usar um <xref:System.Windows.Forms.ContextMenu> para três <xref:System.Windows.Forms.TextBox> controles e você deseja desabilitar determinados itens de menu no <xref:System.Windows.Forms.ContextMenu> dependendo de qual <xref:System.Windows.Forms.TextBox> é exibir o menu de atalho, você pode criar um manipulador de eventos para esse evento. Você pode usar o <xref:System.Windows.Forms.ContextMenu.SourceControl%2A> propriedade para determinar qual <xref:System.Windows.Forms.TextBox> está prestes a exibir o <xref:System.Windows.Forms.ContextMenu> e desabilitar apropriada <xref:System.Windows.Forms.MenuItem> objetos.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um manipulador de eventos para o <xref:System.Windows.Forms.ContextMenu.Popup> evento o <xref:System.Windows.Forms.ContextMenu>. O código no manipulador de eventos determina qual dos dois controles um <xref:System.Windows.Forms.PictureBox> chamado `pictureBox1` e um <xref:System.Windows.Forms.TextBox> chamado `textBox1` é o controle que exibe o menu de atalho. Dependendo de qual controle causada o <xref:System.Windows.Forms.ContextMenu> para exibir o menu de atalho, o controle adiciona apropriada <xref:System.Windows.Forms.MenuItem> objetos para o <xref:System.Windows.Forms.ContextMenu>. Este exemplo requer que você tenha uma instância do <xref:System.Windows.Forms.ContextMenu> classe, denominada `contextMenu1`, definido dentro do formulário. Este exemplo também requer que você tenha um <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.PictureBox> adicionado a um formulário e que o <xref:System.Windows.Forms.Control.ContextMenu%2A> desses controles é definida como `contextMenu1`.  
+  
+ [!code-cpp[Classic ContextMenu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ContextMenu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ContextMenu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ContextMenu Example/CS/source.cs#1)]
+ [!code-vb[Classic ContextMenu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ContextMenu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCmdKey">
+      <MemberSignature Language="C#" Value="protected virtual bool ProcessCmdKey (ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData, System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ProcessCmdKey(valuetype System.Windows.Forms.Message&amp; msg, valuetype System.Windows.Forms.Keys keyData, class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys,System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Um <see cref="T:System.Windows.Forms.Message" />, passado por referência, que representa a mensagem de janela a ser processada.</param>
+        <param name="keyData">Um dos valores <see cref="T:System.Windows.Forms.Keys" /> que representa a chave a ser processada.</param>
+        <param name="control">O controle ao qual se aplica a chave de comando.</param>
+        <summary>Processa uma chave de comando.</summary>
+        <returns>
+          <see langword="true" /> se o caractere foi processado pelo controle; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado durante o pré-processamento de mensagem para manipular as teclas de comando. As chaves de comando são chaves que sempre têm precedência sobre as chaves de entrada regulares. Aceleradores e atalhos do menu são exemplos de teclas de comando. O método deve retornar `true` para indicar que ele processou a chave de comando, ou `false` para indicar que a chave não é uma chave de comando. Este método é chamado apenas quando o controle é hospedado em um aplicativo Windows Forms ou como um controle ActiveX.  
+  
+ O <xref:System.Windows.Forms.ContextMenu.ProcessCmdKey%2A> método primeiro determina se o controle tem um <xref:System.Windows.Forms.ContextMenu>e nesse caso, permite que o <xref:System.Windows.Forms.ContextMenu> para processar a chave de comando. Se a chave de comando não é um atalho do menu e o controle tem um pai, a chave é passada para o pai <xref:System.Windows.Forms.ContextMenu.ProcessCmdKey%2A> método. O efeito líquido é comando chaves "transferidas" até a hierarquia de controle. Além da chave que o usuário pressionou, os dados de chave também indicam que, se houver, teclas modificadoras foram pressionadas no mesmo momento que a chave. Teclas modificadoras incluem as teclas SHIFT, CTRL e ALT.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para o chamador imediato chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <block subset="none" type="overrides">
+          <para>Ao substituir o <see cref="M:System.Windows.Forms.Control.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" /> método em uma classe derivada, um controle deve retornar <see langword="true" /> para indicar que ele processou a chave. Para chaves que não são processadas pelo controle, o resultado de chamar a classe base <see cref="M:System.Windows.Forms.Control.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" /> método deve ser retornado. Controles raramente, ou nunca, precisará substituir este método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.RightToLeft RightToLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.RightToLeft RightToLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContextMenu.RightToLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RightToLeft</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o texto exibido pelo controle é exibido da direita para a esquerda.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.RightToLeft" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que os menus dar suporte a idiomas que são escritos da direita para esquerda. Quando essa propriedade é definida como `RightToLeft.Yes`, o texto do item de menu é exibido da direita para a esquerda em vez do padrão da esquerda para direita método.  
+  
+> [!NOTE]
+>  Para obter mais informações sobre como habilitar o alinhamento da direita para esquerda afeta a controles de formulários do Windows, consulte o <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído à propriedade não é um membro válido do <see cref="T:System.Windows.Forms.RightToLeft" /> enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (System.Windows.Forms.Control control, System.Drawing.Point pos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(class System.Windows.Forms.Control control, valuetype System.Drawing.Point pos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.Show(System.Windows.Forms.Control,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="pos" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um <see cref="T:System.Windows.Forms.Control" /> que especifica o controle ao qual esse menu de atalho está associado.</param>
+        <param name="pos">Um <see cref="T:System.Drawing.Point" /> que especifica as coordenadas na qual exibir o menu. Essas coordenadas são especificadas em relação as coordenadas do cliente do controle especificado no <c>controle</c> parâmetro.</param>
+        <summary>Exibe o menu de atalho na posição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um <xref:System.Windows.Forms.ContextMenu> é exibido quando o usuário clica no botão direito do mouse em um controle ou área de forma que o <xref:System.Windows.Forms.ContextMenu> está associado ao. Você pode usar esse método para exibir o menu de atalho em um local específico e associá-lo com um controle específico manualmente. Este método não retorna até que o menu é descartado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a construir um menu de atalho e usando o <xref:System.Windows.Forms.ContextMenu.Show%2A> método. Para executar o exemplo, cole o código a seguir em um formulário que contém um botão denominado Button1. Certifique-se de que todos os eventos estão associados com os métodos de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ManualContextMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ManualContextMenu/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="control" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O identificador do controle não existe ou o controle não está visível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (System.Windows.Forms.Control control, System.Drawing.Point pos, System.Windows.Forms.LeftRightAlignment alignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(class System.Windows.Forms.Control control, valuetype System.Drawing.Point pos, valuetype System.Windows.Forms.LeftRightAlignment alignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContextMenu.Show(System.Windows.Forms.Control,System.Drawing.Point,System.Windows.Forms.LeftRightAlignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="pos" Type="System.Drawing.Point" />
+        <Parameter Name="alignment" Type="System.Windows.Forms.LeftRightAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um <see cref="T:System.Windows.Forms.Control" /> que especifica o controle ao qual esse menu de atalho está associado.</param>
+        <param name="pos">Um <see cref="T:System.Drawing.Point" /> que especifica as coordenadas na qual exibir o menu. Essas coordenadas são especificadas em relação as coordenadas do cliente do controle especificado no <c>controle</c> parâmetro.</param>
+        <param name="alignment">Um <see cref="T:System.Windows.Forms.LeftRightAlignment" /> que especifica o alinhamento do controle relativo para o <c>pos</c> parâmetro.</param>
+        <summary>Exibe o menu de atalho na posição especificada e com o alinhamento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceControl">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control SourceControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control SourceControl" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContextMenu.SourceControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle que está exibindo o menu de atalho.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Control" /> que representa o controle que está exibindo o menu de atalho. Se nenhum controle tiver exibido o menu de atalho, a propriedade retornará <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você determine que controlam atualmente exibe o menu de atalho definido no <xref:System.Windows.Forms.ContextMenu>. Se o menu de atalho não é exibido no momento, você pode usar essa propriedade para determinar qual controle exibidos do menu de atalho. Você pode usar essa propriedade no <xref:System.Windows.Forms.ContextMenu.Popup> evento para garantir que o controle exibe os itens de menu apropriado. Você também pode usar essa propriedade para passar uma referência para o controle para um método que executa as tarefas associadas a um comando de menu exibido no menu de atalho. Como o <xref:System.Windows.Forms.Form> classe herda de <xref:System.Windows.Forms.Control>, você também pode usar essa propriedade se o <xref:System.Windows.Forms.ContextMenu> está associado um formulário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um manipulador de eventos para o <xref:System.Windows.Forms.ContextMenu.Popup> evento o <xref:System.Windows.Forms.ContextMenu>. O código no manipulador de eventos determina qual dos dois controles um <xref:System.Windows.Forms.PictureBox> chamado `pictureBox1` e um <xref:System.Windows.Forms.TextBox> chamado `textBox1` é o controle que exibe o menu de atalho. Dependendo de qual controle causada o <xref:System.Windows.Forms.ContextMenu> para exibir o menu de atalho, o controle adiciona apropriada <xref:System.Windows.Forms.MenuItem> objetos para o <xref:System.Windows.Forms.ContextMenu>. Este exemplo requer que você tenha uma instância do <xref:System.Windows.Forms.ContextMenu> classe, denominada `contextMenu1`, definido dentro do formulário. Este exemplo também requer que você tenha um <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.PictureBox> adicionado a um formulário e que o <xref:System.Windows.Forms.Control.ContextMenu%2A> desses controles é definida como `contextMenu1`.  
+  
+ [!code-cpp[Classic ContextMenu Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ContextMenu Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ContextMenu Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ContextMenu Example/CS/source.cs#1)]
+ [!code-vb[Classic ContextMenu Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ContextMenu Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

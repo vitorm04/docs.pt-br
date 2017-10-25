@@ -1,0 +1,192 @@
+<Type Name="WebApplicationLifetimeEvent" FullName="System.Web.Management.WebApplicationLifetimeEvent">
+  <TypeSignature Language="C#" Value="public class WebApplicationLifetimeEvent : System.Web.Management.WebManagementEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebApplicationLifetimeEvent extends System.Web.Management.WebManagementEvent" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebApplicationLifetimeEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebManagementEvent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um evento significativo no tempo de vida de um aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de eventos responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ Eventos de tempo de vida do aplicativo incluem eventos como a inicialização do aplicativo e eventos de desligamento. Se um aplicativo for encerrado, você pode determinar o motivo pela exibição do campo de mensagem de evento relacionadas.  
+  
+ Quando um <xref:System.Web.Management.WebApplicationLifetimeEvent> instância ocorre, o monitoramento de integridade do ASP.NET atualiza o contador de desempenho de eventos de tempo de vida do aplicativo. Você pode registrar esses eventos, adicionando o <xref:System.Web.Management.WebApplicationLifetimeEvent> o objeto para o `rules` subseção do `healthMonitoring` seção do arquivo de configuração, conforme mostrado no exemplo a seguir.  
+  
+```  
+<rules>  
+  <add name="Application Events"  
+    eventName="Application Lifetime Events"  
+    provider="EventLogProvider"  
+    profile="Default"  
+    minInterval="00:01:00" />  
+</rules>  
+  
+```  
+  
+ O contador de desempenho eventos de tempo de vida do aplicativo contém a soma total de todos os eventos de tempo de vida do ASP.NET. Para exibir esse contador de desempenho no Monitor do sistema (PerfMon), no **adicionar contadores** janela Selecione **ASP.NET** do **objeto de desempenho** lista suspensa. Selecione o **eventos de tempo de vida do aplicativo** contador de desempenho e clique no **adicionar** botão. Para obter mais informações, consulte "Usando o Monitor do sistema (PerfMon) com aplicativos ASP.NET" em [MSDN](http://go.microsoft.com/fwlink/?linkid=37118). Se você permitir que eventos sejam registrados pelo padrão <xref:System.Web.Management.EventLogWebEventProvider>, você pode exibi-los no Visualizador de eventos, selecionando o **aplicativo** log. Para obter mais informações, consulte [Visualizador de eventos](http://go.microsoft.com/fwlink/?linkid=24845&clcid=0x409) na documentação do Windows Server 2003 no TechNet.  
+  
+> [!CAUTION]
+>  Porque o <xref:System.Web.Management.WebApplicationLifetimeEvent> objeto é um evento de alto volume, o log ele é o uso intensivo de recursos e pode reduzir a velocidade do sistema. Também pode causar outros eventos a serem substituídos no caso do <xref:System.Web.Management.EventLogWebEventProvider> classe devido ao alto volume de eventos e a maneira como o funciona o log de eventos.  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `healthMonitoring` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de derivar do <xref:System.Web.Management.WebApplicationLifetimeEvent> de classe, consulte o exemplo fornecido neste tópico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como derivar o <xref:System.Web.Management.WebApplicationLifetimeEvent> classe para criar um evento personalizado.  
+  
+ [!code-csharp[System.Web.Management.WebApplicationLifetimeEvent#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebApplicationLifetimeEvent/CS/webapplicationlifetimeevent.cs#1)]
+ [!code-vb[System.Web.Management.WebApplicationLifetimeEvent#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebApplicationLifetimeEvent/VB/webapplicationlifetimeevent.vb#1)]  
+  
+ O trecho de arquivo de configuração a seguir mostra como configurar o `healthMonitoring` seção de um arquivo de configuração para adicionar o `SampleWebApplicationLifetimeEvent` código definido acima para o sistema de monitoramento de integridade do ASP.NET. Para adicionar o evento para o sistema, você deve definir o evento adicionando uma nova entrada para o `eventMappings` seção e mapear o evento para um provedor, adicionando uma nova entrada para o `rules` seção.  
+  
+```  
+<healthMonitoring  
+  enabled="true"  
+  heartBeatInterval="0">  
+  
+    <eventMappings>  
+       <clear />  
+       <!-- Configure the application lifetime event -->  
+       <!-- object to handle the Web application events. -->  
+       <add name="SampleApplicationLifetimeEvents"  
+         type="System.Web.Management.SampleWebApplicationLifetimeEvent,  
+         System.Web,Version=2.0.3600.0,  
+         Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" />  
+     </eventMappings>  
+  
+    <rules>  
+      <clear/>  
+       // Configure the connection between the   
+       // application lifetime event object   
+       // and the provider that must process it.  
+       <add name="Custom Application Events"  
+         eventName="SampleApplicationLifetimeEvents"  
+         provider="EventLogProvider"  
+         profile="Default"  
+         minInterval="00:01:00" />  
+    </rules>  
+  
+</healthMonitoring>  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao formatar suas informações de evento personalizados para exibição, substitua o <see cref="M:System.Web.Management.WebBaseEvent.FormatCustomEventDetails(System.Web.Management.WebEventFormatter)" /> método em vez de <see cref="Overload:System.Web.Management.WebBaseEvent.ToString" /> método. Isso pode evitar a substituição ou violação com informações confidenciais.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebApplicationLifetimeEvent (string message, object eventSource, int eventCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebApplicationLifetimeEvent.#ctor(System.String,System.Object,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem associada ao evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O código associado ao evento. Quando você implementa um evento personalizado, o código de evento deve ser maior que <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <summary>Inicializa o <see cref="T:System.Web.Management.WebApplicationLifetimeEvent" /> classe usando os parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo sistema de monitoramento de integridade do ASP.NET. Você nunca usará para criar uma instância do <xref:System.Web.Management.WebApplicationLifetimeEvent> classe, mas você pode chamar esse construtor ao implementar seu próprio tipo de evento que herda dessa classe.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Management.WebApplicationLifetimeEvent.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo ASP.NET. Você pode chamar o <xref:System.Web.Management.WebApplicationLifetimeEvent.%23ctor%2A> construtor ao derivar do <xref:System.Web.Management.WebApplicationLifetimeEvent> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.WebApplicationLifetimeEvent.%23ctor%2A> em um evento de integridade personalizado do ASP.NET. Este exemplo de código destina-se principalmente para mostrar a sintaxe correta para usar.  
+  
+ [!code-csharp[System.Web.Management.WebApplicationLifetimeEvent#2](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebApplicationLifetimeEvent/CS/webapplicationlifetimeevent.cs#2)]
+ [!code-vb[System.Web.Management.WebApplicationLifetimeEvent#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebApplicationLifetimeEvent/VB/webapplicationlifetimeevent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebApplicationLifetimeEvent (string message, object eventSource, int eventCode, int eventDetailCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(string message, object eventSource, int32 eventCode, int32 eventDetailCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebApplicationLifetimeEvent.#ctor(System.String,System.Object,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventDetailCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem associada ao evento.</param>
+        <param name="eventSource">O objeto que é a origem do evento.</param>
+        <param name="eventCode">O código associado ao evento. Quando você implementa um evento personalizado, o código de evento deve ser maior que <see cref="F:System.Web.Management.WebEventCodes.WebExtendedBase" />.</param>
+        <param name="eventDetailCode">O <see cref="T:System.Web.Management.WebEventCodes" /> valor que especifica o identificador detalhado para o evento.</param>
+        <summary>Inicializa o <see cref="T:System.Web.Management.WebApplicationLifetimeEvent" /> classe usando os parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo sistema de monitoramento de integridade do ASP.NET. Você nunca usará para criar uma instância do <xref:System.Web.Management.WebApplicationLifetimeEvent> classe, mas você pode chamar esse construtor ao implementar seu próprio tipo de evento que herda dessa classe.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Management.WebApplicationLifetimeEvent.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo ASP.NET. Você pode chamar o <xref:System.Web.Management.WebApplicationLifetimeEvent.%23ctor%2A> construtor ao derivar do <xref:System.Web.Management.WebApplicationLifetimeEvent> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.WebApplicationLifetimeEvent.%23ctor%2A> em um evento de integridade personalizado do ASP.NET. Este exemplo de código destina-se principalmente para mostrar a sintaxe correta para usar.  
+  
+ [!code-csharp[System.Web.Management.WebApplicationLifetimeEvent#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.management.WebApplicationLifetimeEvent/CS/webapplicationlifetimeevent.cs#3)]
+ [!code-vb[System.Web.Management.WebApplicationLifetimeEvent#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.management.WebApplicationLifetimeEvent/VB/webapplicationlifetimeevent.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementPerfCounters">
+      <MemberSignature Language="C#" Value="protected override void IncrementPerfCounters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void IncrementPerfCounters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebApplicationLifetimeEvent.IncrementPerfCounters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Usada internamente para incrementar os contadores de desempenho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

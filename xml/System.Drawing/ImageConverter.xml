@@ -1,0 +1,215 @@
+<Type Name="ImageConverter" FullName="System.Drawing.ImageConverter">
+  <TypeSignature Language="C#" Value="public class ImageConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.ImageConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+      <see cref="T:System.Drawing.ImageConverter" /> é uma classe que pode ser usada para converter objetos <see cref="T:System.Drawing.Image" /> de um tipo de dados para outro. Acesse essa classe por meio do objeto <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.ImageConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="sourceType">Um <see cref="T:System.Type" /> que especifica o tipo que você deseja converter.</param>
+        <summary>Determina se este <see cref="T:System.Drawing.ImageConverter" /> pode converter uma instância de um tipo especificado para um <see cref="T:System.Drawing.Image" />, usando o contexto especificado.</summary>
+        <returns>Este método retorna <see langword="true" /> se este <see cref="T:System.Drawing.ImageConverter" /> pode executar a conversão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `true` somente se `sourceType` é igual a uma matriz de bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="destinationType">Um <see cref="T:System.Type" /> que especifica o tipo que você deseja converter.</param>
+        <summary>Determina se este <see cref="T:System.Drawing.ImageConverter" /> pode converter um <see cref="T:System.Drawing.Image" /> para uma instância de um tipo especificado, usando o contexto especificado.</summary>
+        <returns>Este método retorna <see langword="true" /> se este <see cref="T:System.Drawing.ImageConverter" /> pode executar a conversão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `true` somente se `sourceType` é igual a uma cadeia de caracteres ou matriz de bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> que contém informações sobre uma cultura específica.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte um objeto especificado em um <see cref="T:System.Drawing.Image" />.</summary>
+        <returns>Se esse método for bem-sucedido, ele retornará o <see cref="T:System.Drawing.Image" /> que ele criou por meio da conversão do objeto especificado. Caso contrário, ele gera uma exceção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não foi possível concluir a conversão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto do formatador. Esse objeto pode ser usado para obter mais informações sobre o ambiente que esse conversor está sendo chamado. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> objeto que especifica as convenções de formatação usadas por uma determinada cultura.</param>
+        <param name="value">O <see cref="T:System.Drawing.Image" /> a ser convertido.</param>
+        <param name="destinationType">O <see cref="T:System.Type" /> para converter o <see cref="T:System.Drawing.Image" /> para.</param>
+        <summary>Converte um <see cref="T:System.Drawing.Image" /> (ou um objeto que pode ser convertido em um <see cref="T:System.Drawing.Image" />) para o tipo especificado.</summary>
+        <returns>Esse método retorna o objeto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A conversão de tipo mais comum é para e de um tipo de cadeia de caracteres. A implementação padrão chama o <xref:System.Object.ToString%2A> método do objeto se o objeto é válido e se o tipo de destino é a cadeia de caracteres. Se esse método não é possível converter o objeto especificado para o tipo de destino, ele gerará uma <xref:System.NotSupportedException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não foi possível concluir a conversão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.PropertyDescriptorCollection GetProperties (System.ComponentModel.ITypeDescriptorContext context, object value, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(class System.ComponentModel.ITypeDescriptorContext context, object value, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um descritor de tipo por meio do qual o contexto adicional pode ser fornecido.</param>
+        <param name="value">O valor do objeto para obter as propriedades.</param>
+        <param name="attributes">Uma matriz de <see cref="T:System.Attribute" /> objetos que descrevem as propriedades.</param>
+        <summary>Obtém o conjunto de propriedades para este tipo.</summary>
+        <returns>O conjunto de propriedades que devem ser expostos para esse tipo de dados. Se nenhuma propriedade deve ser exposta, isso poderá retornar <see langword="null" />. A implementação padrão sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um tipo não retorna todas as propriedades. Uma implementação fácil este método chama o <xref:System.ComponentModel.TypeConverter.GetProperties%2A> método para o tipo de dados correto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetPropertiesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetPropertiesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um descritor de tipo por meio do qual o contexto adicional pode ser fornecido.</param>
+        <summary>Indica se esse objeto oferece suporte às propriedades. Por padrão, isso é <see langword="false" />.</summary>
+        <returns>Este método retorna <see langword="true" /> se o <see cref="Overload:System.Drawing.ImageConverter.GetProperties" /> método deve ser chamado para localizar as propriedades desse objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

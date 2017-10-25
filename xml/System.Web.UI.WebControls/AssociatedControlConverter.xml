@@ -1,0 +1,76 @@
+<Type Name="AssociatedControlConverter" FullName="System.Web.UI.WebControls.AssociatedControlConverter">
+  <TypeSignature Language="C#" Value="public class AssociatedControlConverter : System.Web.UI.WebControls.ControlIDConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssociatedControlConverter extends System.Web.UI.WebControls.ControlIDConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.AssociatedControlConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ControlIDConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conversor de tipo que recupera uma lista de <see cref="T:System.Web.UI.WebControls.WebControl" /> controles no contêiner atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.AssociatedControlConverter> classe deriva o <xref:System.Web.UI.WebControls.ControlIDConverter> classe e fornece um conversor de tipo especificamente para controles que derivam de <xref:System.Web.UI.WebControls.WebControl> classe. Ele é usado pelo <xref:System.Web.UI.WebControls.Label.AssociatedControlID%2A> propriedade o <xref:System.Web.UI.WebControls.Label> controle.  
+  
+ Para obter mais informações sobre conversores de tipo, consulte [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56) ou [conversão do tipo generalizada](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssociatedControlConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.AssociatedControlConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.AssociatedControlConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** você nunca deve acessar um conversor de tipo diretamente. Em vez disso, chame o conversor apropriado usando um <xref:System.ComponentModel.TypeDescriptor> objeto. Para obter mais informações, consulte os exemplos em <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterControl">
+      <MemberSignature Language="C#" Value="protected override bool FilterControl (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool FilterControl(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.AssociatedControlConverter.FilterControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">A instância de controle para testar se é um <see cref="T:System.Web.UI.WebControls.WebControl" />.</param>
+        <summary>Indica se o controle fornecido herda de <see cref="T:System.Web.UI.WebControls.WebControl" />.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="control" /> herda o <see cref="T:System.Web.UI.WebControls.WebControl" /> classe; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>A implementação do <see cref="M:System.Web.UI.WebControls.AssociatedControlConverter.FilterControl(System.Web.UI.Control)" /> método <see langword="true" /> quando o controle é uma instância do <see cref="T:System.Web.UI.WebControls.WebControl" /> classe. Classes que derivam de <see cref="T:System.Web.UI.WebControls.AssociatedControlConverter" /> substituir esse método para fornecer sua próprias de filtragem de mecanismo.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,177 @@
+<Type Name="FlowLayoutSettings" FullName="System.Windows.Forms.FlowLayoutSettings">
+  <TypeSignature Language="C#" Value="public class FlowLayoutSettings : System.Windows.Forms.LayoutSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FlowLayoutSettings extends System.Windows.Forms.LayoutSettings" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FlowLayoutSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.LayoutSettings</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("FlowDirection")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Coleta as características associadas layouts de fluxo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.FlowLayoutSettings> classe coleta e gerencia as características associadas o esquema de layout de fluxo. Essa classe é usada internamente pelo <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.ToolStrip> classes, bem como o mecanismo de layout de fluxo. O <xref:System.Windows.Forms.FlowLayoutSettings> classe é usada pelo mecanismo de layout para determinar como ao layout com do contêiner controles filho.  
+  
+ O <xref:System.Windows.Forms.FlowLayoutSettings> classe gerencia as seguintes informações:  
+  
+-   A direção do fluxo de controles consecutivos.  
+  
+-   Se o conteúdo deve ser quebrado ou cortado se os controles filho não podem ser contidos em seu pai.  
+  
+ <xref:System.Windows.Forms.FlowLayoutSettings>não tem um construtor público.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FlowDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FlowDirection FlowDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FlowDirection FlowDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FlowLayoutSettings.FlowDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a direção do fluxo de controles consecutivos.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.FlowDirection" /> indicando a direção do fluxo de controles consecutivas no contêiner. O padrão é <see cref="F:System.Windows.Forms.FlowDirection.LeftToRight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.FlowLayoutSettings.FlowDirection%2A>é a propriedade padrão para o <xref:System.Windows.Forms.FlowLayoutSettings> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFlowBreak">
+      <MemberSignature Language="C#" Value="public bool GetFlowBreak (object child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetFlowBreak(object child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FlowLayoutSettings.GetFlowBreak(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="child">O controle filho.</param>
+        <summary>Retorna um valor que representa o fluxo de interrompe a configuração do controle.</summary>
+        <returns>
+          <see langword="true" />Se a interrupção do fluxo for definida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutEngine">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Layout.LayoutEngine LayoutEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Layout.LayoutEngine LayoutEngine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FlowLayoutSettings.LayoutEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Layout.LayoutEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mecanismo de layout do fluxo atual.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Layout.LayoutEngine" /> está sendo usado atualmente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutSettings.LayoutEngine%2A> propriedade normalmente é usada em dois contextos:  
+  
+-   Um contêiner que usa um layout de fluxo.  
+  
+-   Um controle contido em um contêiner de layout de fluxo (por exemplo, um botão contido em uma célula de uma <xref:System.Windows.Forms.FlowLayoutPanel>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFlowBreak">
+      <MemberSignature Language="C#" Value="public void SetFlowBreak (object child, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFlowBreak(object child, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FlowLayoutSettings.SetFlowBreak(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Object" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="child">O controle filho.</param>
+        <param name="value">O valor de quebra de fluxo definido.</param>
+        <summary>Define o valor que representa o fluxo de interromper a configuração do controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapContents">
+      <MemberSignature Language="C#" Value="public bool WrapContents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WrapContents" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FlowLayoutSettings.WrapContents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o conteúdo deve ser encapsulado ou cortado quando ele excede os limites originais do seu contêiner.</summary>
+        <value>
+          <see langword="true" />Se o conteúdo deve ser encapsulado; Caso contrário, <see langword="false" /> se o conteúdo deve ser recortado. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a área do contêiner é muito pequena para exibir todos os controles filho, pelo menos um controle será recortado independentemente do <xref:System.Windows.Forms.FlowLayoutSettings.WrapContents%2A> valor.  
+  
+ Redimensionando subsequentes do contêiner para reaplicar o layout em controles contidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

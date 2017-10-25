@@ -1,0 +1,524 @@
+<Type Name="TraceSwitch" FullName="System.Diagnostics.TraceSwitch">
+  <TypeSignature Language="C#" Value="public class TraceSwitch : System.Diagnostics.Switch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TraceSwitch extends System.Diagnostics.Switch" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceSwitch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.Switch</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.SwitchLevel(typeof(System.Diagnostics.TraceLevel))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma opção em vários níveis para controlar o rastreamento e depurar a saída sem recompilar o código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar uma opção de rastreamento para filtrar as mensagens com base em sua importância. O <xref:System.Diagnostics.TraceSwitch> classe fornece a <xref:System.Diagnostics.TraceSwitch.TraceError%2A>, <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A>, <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A>, e <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A> propriedades para testar o nível do comutador. O <xref:System.Diagnostics.TraceSwitch.Level%2A> propriedade obtém ou define a opção <xref:System.Diagnostics.TraceLevel>.  
+  
+ Você pode definir o nível de um <xref:System.Diagnostics.TraceSwitch> por meio do arquivo de configuração do aplicativo e, em seguida, use configurado <xref:System.Diagnostics.TraceSwitch> nível em seu aplicativo. Como alternativa, você pode criar um <xref:System.Diagnostics.TraceSwitch> no seu código e defina o nível diretamente como instrumentar uma seção de código.  
+  
+ Para configurar um <xref:System.Diagnostics.TraceSwitch>, edite o para seu aplicativo. Nesse arquivo, você pode adicionar ou remover um comutador, definir valor do comutador ou limpar todas as opções definidas anteriormente pelo aplicativo. O arquivo de configuração deve ser formatado como o exemplo a seguir:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="mySwitch" value="1" />  
+    </switches>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Esta seção de configuração define um <xref:System.Diagnostics.TraceSwitch> com o <xref:System.Diagnostics.Switch.DisplayName%2A> definida como `mySwitch`e o <xref:System.Diagnostics.TraceSwitch.Level%2A> definido como 1, que corresponde ao valor de enumeração <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, `true` para um <xref:System.Diagnostics.BooleanSwitch> ou o texto que representa um valor de enumeração, como `Error` para um <xref:System.Diagnostics.TraceSwitch>. A linha `<add name="mySwitch" value="Error" />` é equivalente a `<add name="mySwitch" value="1" />`.  
+  
+ Em seu aplicativo, você pode usar o nível do comutador configurado, criando um <xref:System.Diagnostics.TraceSwitch> com o mesmo nome, conforme mostrado no exemplo a seguir:  
+  
+ [!code-cpp[Classic TraceSwitch.TraceError Example#3](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CPP/remarks.cpp#3)]
+ [!code-csharp[Classic TraceSwitch.TraceError Example#3](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CS/remarks.cs#3)]
+ [!code-vb[Classic TraceSwitch.TraceError Example#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/VB/remarks.vb#3)]  
+  
+ Por padrão, a opção <xref:System.Diagnostics.TraceSwitch.Level%2A> propriedade é definida usando o valor especificado no arquivo de configuração. Se o <xref:System.Diagnostics.TraceSwitch.%23ctor%2A> construtor não é possível localizar as configurações de comutador inicial no arquivo de configuração, o <xref:System.Diagnostics.TraceSwitch.Level%2A> do novo comutador padrão é <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ Você deve habilitar o rastreamento ou a depuração para usar uma opção. A sintaxe a seguir é específico do compilador. Se você usar compiladores que não seja o c# ou Visual Basic, consulte a documentação para o compilador.  
+  
+-   Para habilitar a depuração em c#, adicione o `/d:DEBUG` sinalizador para a linha de comando do compilador quando você compila o código ou adiciona `#define DEBUG` à parte superior do seu arquivo. No Visual Basic, adicione o `/d:DEBUG=True` sinalizador para a linha de comando do compilador.  
+  
+-   Para habilitar o rastreamento em c#, adicione o `/d:TRACE` sinalizador para a linha de comando do compilador quando você compila o código ou adiciona `#define TRACE` à parte superior do seu arquivo. No Visual Basic, adicione o `/d:TRACE=True` sinalizador para a linha de comando do compilador.  
+  
+> [!NOTE]
+>  Esses depurar e opções de compilador de rastreamento não são necessárias ao usar o <xref:System.Diagnostics.TraceSwitch> classe isoladamente. São necessárias apenas em conjunto com <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.Debug> métodos que são compilados condicionalmente.  
+  
+ Para obter mais informações sobre como instrumentar seu aplicativo, consulte <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace>. Para obter mais informações sobre como configurar e usar as opções de rastreamento, consulte [opções de rastreamento](~/docs/framework/debug-trace-profile/trace-switches.md).  
+  
+> [!NOTE]
+>  Para melhorar o desempenho, você pode fazer <xref:System.Diagnostics.TraceSwitch> membros `static` em sua classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Diagnostics.TraceSwitch> e usa a opção para determinar se as mensagens de erro. O comutador é criado no nível de classe. `MyMethod`grava a primeira mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType> ou superior. No entanto, `MyMethod` não grava a segunda mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> é menor que <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CS/source.cs#1)]
+ [!code-vb[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceSwitch (string displayName, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSwitch.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">O nome a ser exibido em uma interface de usuário.</param>
+        <param name="description">A descrição do comutador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.TraceSwitch" /> de classe, usando o nome de exibição especificado e uma descrição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o nível de seu <xref:System.Diagnostics.TraceSwitch>, edite o arquivo de configuração que corresponde ao nome do seu aplicativo. Nesse arquivo, você pode adicionar um comutador e defina seu valor, remova um comutador ou desmarcar todas as opções definidas anteriormente pelo aplicativo. O arquivo de configuração deve ser formatado como o exemplo a seguir:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="mySwitch" value="1" />  
+    </switches>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+> [!NOTE]
+>  No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, `true` para um <xref:System.Diagnostics.BooleanSwitch> ou o texto que representa um valor de enumeração, como `Error` para um <xref:System.Diagnostics.TraceSwitch>. A linha `<add name="mySwitch" value="Error" />` é equivalente a `<add name="mySwitch" value="1" />`.  
+  
+ Em seu aplicativo, você pode usar o nível do comutador configurado, criando um <xref:System.Diagnostics.TraceSwitch> com o mesmo nome, conforme mostrado no exemplo a seguir:  
+  
+ [!code-cpp[Classic TraceSwitch.TraceError Example#3](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CPP/remarks.cpp#3)]
+ [!code-csharp[Classic TraceSwitch.TraceError Example#3](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CS/remarks.cs#3)]
+ [!code-vb[Classic TraceSwitch.TraceError Example#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/VB/remarks.vb#3)]  
+  
+ Quando o <xref:System.Diagnostics.TraceSwitch.%23ctor%2A> construtor não é possível localizar as configurações de comutador inicial no arquivo de configuração, o <xref:System.Diagnostics.TraceSwitch.Level%2A> propriedade da nova opção está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ O <xref:System.Diagnostics.TraceSwitch> classe fornece a <xref:System.Diagnostics.TraceSwitch.TraceError%2A>, <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A>, <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A>, e <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A> propriedades para testar o <xref:System.Diagnostics.TraceSwitch.Level%2A> do comutador. O <xref:System.Diagnostics.TraceSwitch.Level%2A> propriedade obtém ou define a opção <xref:System.Diagnostics.TraceLevel>.  
+  
+> [!NOTE]
+>  Para melhorar o desempenho, você pode fazer <xref:System.Diagnostics.TraceSwitch> membros `static` em sua classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Diagnostics.TraceSwitch> e usa a opção para determinar se as mensagens de erro. O comutador é criado no nível de classe. `MyMethod`grava a primeira mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType> ou superior. No entanto, `MyMethod` não grava a segunda mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> é menor que <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CS/source.cs#1)]
+ [!code-vb[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceSwitch (string displayName, string description, string defaultSwitchValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string description, string defaultSwitchValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSwitch.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="defaultSwitchValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">O nome a ser exibido em uma interface de usuário.</param>
+        <param name="description">A descrição do comutador.</param>
+        <param name="defaultSwitchValue">O valor padrão do comutador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.TraceSwitch" /> de classe, usando o nome de exibição especificado, a descrição e o valor padrão para o comutador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `displayName` parâmetro é usado para definir o valor da <xref:System.Diagnostics.Switch.DisplayName%2A> propriedade, o `description` parâmetro é usado para definir o valor da <xref:System.Diagnostics.Switch.Description%2A> propriedade e o `defaultSwitchValue` parâmetro é salvo como um campo e usado para inicializar o <xref:System.Diagnostics.Switch.Value%2A> propriedade na primeira referência. Consulte o <xref:System.Diagnostics.TraceSwitch.%23ctor%28System.String%2CSystem.String%29> construtor para obter mais informações e um exemplo de código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.TraceLevel Level { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.TraceLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSwitch.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de rastreamento que determina as mensagens que o comutador permite.</summary>
+        <value>Um dos valores <see cref="T:System.Diagnostics.TraceLevel" /> que especifica o nível das mensagens que são permitidas pelo comutador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o nível de seu <xref:System.Diagnostics.TraceSwitch>, edite o arquivo de configuração que corresponde ao nome do seu aplicativo. Nesse arquivo, você pode adicionar um comutador e defina seu valor, remova um comutador ou desmarcar todas as opções definidas anteriormente pelo aplicativo. O arquivo de configuração deve ser formatado como o exemplo a seguir:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="mySwitch" value="0" />  
+      <add name="myNewSwitch" value="3" />  
+      <remove name="mySwitch" />  
+      <clear/>  
+    </switches>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+> [!NOTE]
+>  No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, `true` para um <xref:System.Diagnostics.BooleanSwitch> ou o texto que representa um valor de enumeração, como `Error` para um <xref:System.Diagnostics.TraceSwitch>. A linha `<add name="mySwitch" value="Error" />` é equivalente a `<add name="mySwitch" value="1" />`.  
+  
+ Quando o <xref:System.Diagnostics.TraceSwitch.%23ctor%2A> construtor não é possível localizar as configurações de comutador inicial no arquivo de configuração, o <xref:System.Diagnostics.TraceSwitch.Level%2A> propriedade da nova opção está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ Configuração desta propriedade atualiza o <xref:System.Diagnostics.TraceSwitch.TraceError%2A>, <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A>, <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A>, e <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A> propriedades para refletir o novo valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Diagnostics.TraceSwitch> e usa a opção para determinar se as mensagens de erro. O comutador é criado no nível de classe. `MyMethod`grava a primeira mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType> ou superior. No entanto, `MyMethod` não grava a segunda mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> é menor que <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic TraceSwitch.Level Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TraceSwitch.Level Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TraceSwitch.Level Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TraceSwitch.Level Example/CS/source.cs#1)]
+ [!code-vb[Classic TraceSwitch.Level Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TraceSwitch.Level Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Diagnostics.TraceSwitch.Level" /> é definido para um valor que não é um dos valores <see cref="T:System.Diagnostics.TraceLevel" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSwitchSettingChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSwitchSettingChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSwitchSettingChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSwitch.OnSwitchSettingChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza e corrige o nível para esse comutador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSwitch.OnSwitchSettingChanged%2A> método é usado pelo .NET framework para validar e corrija o valor de um comutador inicializado por meio de um arquivo de configuração. Uma mensagem é gravada para todos os ouvintes de rastreamento, se o valor de opção especificado no arquivo de configuração não é definido pelo <xref:System.Diagnostics.TraceLevel> enumeração e o comutador é definido como um valor definido.  
+  
+ Se você tentar em seu código para definir o <xref:System.Diagnostics.TraceSwitch.Level%2A> propriedade para um valor que não é definida pelo <xref:System.Diagnostics.TraceLevel> enumeração, um <xref:System.ArgumentException> exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected override void OnValueChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValueChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSwitch.OnValueChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Conjuntos de <see cref="P:System.Diagnostics.Switch.SwitchSetting" /> propriedade equivalente inteiro do <see cref="P:System.Diagnostics.Switch.Value" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado internamente quando o <xref:System.Diagnostics.Switch.Value%2A> propriedade das alterações de comutador. O método garante que as propriedades relacionadas ao valor da opção refletem o novo valor.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para substituir essa propriedade, converter o valor de cadeia de caracteres da <see cref="P:System.Diagnostics.Switch.Value" /> propriedade binário e, em seguida, defina o <see cref="P:System.Diagnostics.TraceSwitch.Level" /> propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceError">
+      <MemberSignature Language="C#" Value="public bool TraceError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TraceError" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSwitch.TraceError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a opção permite mensagens de tratamento de erro.</summary>
+        <value>
+          <see langword="true" /> se a propriedade <see cref="P:System.Diagnostics.TraceSwitch.Level" /> estiver definida como <see cref="F:System.Diagnostics.TraceLevel.Error" />, <see cref="F:System.Diagnostics.TraceLevel.Warning" />, <see cref="F:System.Diagnostics.TraceLevel.Info" /> ou <see cref="F:System.Diagnostics.TraceLevel.Verbose" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Diagnostics.TraceSwitch.TraceError%2A>, <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A>, <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A>, e <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A> propriedades em conjunto com o <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> classes de emissão de todas as mensagens com uma prioridade especificada ou superior. Quando o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como maior importância, <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>, <xref:System.Diagnostics.TraceLevel.Error> , somente as mensagens de tratamento de erros são emitidas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Diagnostics.TraceSwitch> e usa a opção para determinar se deve emitir mensagens de erro. O comutador é criado no nível de classe. `MyMethod`grava a primeira mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType> ou superior. No entanto, `MyMethod` não grava a segunda mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> é menor que <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CS/source.cs#1)]
+ [!code-vb[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceInfo">
+      <MemberSignature Language="C#" Value="public bool TraceInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TraceInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSwitch.TraceInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a opção permite mensagens informativas.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Diagnostics.TraceSwitch.Level" /> está definida como <see cref="F:System.Diagnostics.TraceLevel.Info" /> ou <see cref="F:System.Diagnostics.TraceLevel.Verbose" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Diagnostics.TraceSwitch.TraceError%2A>, <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A>, <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A>, e <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A> propriedades em conjunto com o <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> classes de emissão de todas as mensagens com uma prioridade especificada ou superior. Quando o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>, mensagens informativas, avisos e mensagens de tratamento de erros são emitidas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Diagnostics.TraceSwitch> e usa a opção para determinar se deve emitir mensagens de erro. O comutador é criado no nível de classe. `MyMethod`grava a primeira mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType> ou superior. No entanto, `MyMethod` não grava a segunda mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> é menor que <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic TraceSwitch.TraceInfo Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceInfo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TraceSwitch.TraceInfo Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceInfo Example/CS/source.cs#1)]
+ [!code-vb[Classic TraceSwitch.TraceInfo Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceInfo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceVerbose">
+      <MemberSignature Language="C#" Value="public bool TraceVerbose { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TraceVerbose" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSwitch.TraceVerbose" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a opção permite todas as mensagens.</summary>
+        <value>
+          <see langword="true" /> se a propriedade <see cref="P:System.Diagnostics.TraceSwitch.Level" /> estiver definida como <see cref="F:System.Diagnostics.TraceLevel.Verbose" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Diagnostics.TraceSwitch.TraceError%2A>, <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A>, <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A>, e <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A> propriedades em conjunto com o <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> classes de emissão de todas as mensagens com uma prioridade especificada ou superior. Quando o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>, todas as de depuração e rastreamento de mensagens são transmitidas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Diagnostics.TraceSwitch> e usa a opção para determinar se deve emitir mensagens de erro. O comutador é criado no nível de classe. `MyMethod`grava as mensagens de erro quando o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/CS/source.cs#1)]
+ [!code-vb[Classic TraceSwitch.TraceError Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceWarning">
+      <MemberSignature Language="C#" Value="public bool TraceWarning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TraceWarning" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSwitch.TraceWarning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a opção permite que as mensagens de aviso.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Diagnostics.TraceSwitch.Level" /> está definida como <see cref="F:System.Diagnostics.TraceLevel.Warning" />, <see cref="F:System.Diagnostics.TraceLevel.Info" />, ou <see cref="F:System.Diagnostics.TraceLevel.Verbose" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Diagnostics.TraceSwitch.TraceError%2A>, <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A>, <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A>, e <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A> propriedades em conjunto com o <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> classes de emissão de todas as mensagens com uma prioridade especificada ou superior. Quando o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>, mensagens de tratamento de erros e avisos são emitidas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Diagnostics.TraceSwitch> e usa a opção para determinar se deve emitir mensagens de erro. O comutador é criado no nível de classe. `MyMethod`grava a primeira mensagem de erro se o <xref:System.Diagnostics.TraceSwitch.Level%2A> está definida como <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType> ou superior. No entanto, `MyMethod` não gravação a segunda mensagem de erro quando o <xref:System.Diagnostics.TraceSwitch.Level%2A> é menor que <xref:System.Diagnostics.TraceLevel?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Classic TraceSwitch.TraceWarning Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceWarning Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TraceSwitch.TraceWarning Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceWarning Example/CS/source.cs#1)]
+ [!code-vb[Classic TraceSwitch.TraceWarning Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TraceSwitch.TraceWarning Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

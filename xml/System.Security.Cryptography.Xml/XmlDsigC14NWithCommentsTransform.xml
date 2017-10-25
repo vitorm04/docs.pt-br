@@ -1,0 +1,95 @@
+<Type Name="XmlDsigC14NWithCommentsTransform" FullName="System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform">
+  <TypeSignature Language="C#" Value="public class XmlDsigC14NWithCommentsTransform : System.Security.Cryptography.Xml.XmlDsigC14NTransform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDsigC14NWithCommentsTransform extends System.Security.Cryptography.Xml.XmlDsigC14NTransform" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.XmlDsigC14NTransform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a transformação de conversão em formato canônico C14N XML para uma assinatura digital, conforme definido pelo World Wide Web Consortium (W3C), com comentários.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform> classe representa a transformação de conversão em formato canônico C14N XML que descreve a forma canônica de um documento XML.  Essa transformação permite que um assinante criar um resumo usando a forma canônica de um documento XML.  Um destinatário pode, em seguida, verifique se a assinatura digital usando a mesma forma canônica do documento XML com a mesma transformação.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform> classe quando é necessário assinar um documento XML que contém comentários.  
+  
+ Observe que você não pode criar uma nova instância de uma classe de transformação de canonização diretamente.  Para especificar uma transformação de conversão em formato canônico, passe o URI Uniform Resource Identifier () que descreve a transformação de <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethod%2A> propriedade, que é acessível a partir de <xref:System.Security.Cryptography.Xml.SignedXml.SignedInfo%2A> propriedade.  Para obter uma referência para a transformação de conversão em formato canônico, use o <xref:System.Security.Cryptography.Xml.SignedInfo.CanonicalizationMethodObject%2A> propriedade, que é acessível a partir de <xref:System.Security.Cryptography.Xml.SignedXml.SignedInfo%2A> propriedade.  
+  
+ O URI que descreve o <xref:System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform> classe é definida pelo <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigExcC14NWithCommentsTransformUrl> campo.  
+  
+ O URI que descreve o <xref:System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform> classe é definida pelo <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigC14NWithCommentsTransformUrl> campo e o <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigCanonicalizationWithCommentsUrl> campo.  
+  
+ Para obter mais informações sobre o C14N com comentários transformação, consulte a seções 6.5 e 6.6.1 da especificação XMLDSIG, que está disponível na World Wide Web Consortium (W3C) em www.w3.org/TR/xmldsig-core/. O algoritmo de conversão em formato canônico é definido na especificação XML canônico do W3C, que está disponível em www.w3.org/TR/xml-c14n.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo demonstra como assinar um arquivo XML usando uma assinatura separada. Este exemplo cria uma assinatura de www.microsoft.com em um arquivo XML e, em seguida, verifica o arquivo. O segundo exemplo demonstra como assinar um arquivo XML usando uma assinatura de envelope.  Este exemplo cria uma assinatura de um arquivo XML e, em seguida, salva a assinatura no novo arquivo XML.  
+  
+ **Exemplo &#1;**  
+  
+ [!code-cpp[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached/CPP/sampledetached.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached/CS/sampledetached.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached/VB/sampledetached.vb#1)]  
+  
+ **Exemplo &#2;**  
+  
+ [!code-cpp[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope/CPP/sampleenvelope.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope/CS/sampleenvelope.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope/VB/sampleenvelope.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigC14NWithCommentsTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo demonstra como assinar um arquivo XML usando uma assinatura separada. Este exemplo cria uma assinatura de www.microsoft.com em um arquivo XML e, em seguida, verifica o arquivo. O segundo exemplo demonstra como assinar um arquivo XML usando uma assinatura de envelope.  Este exemplo cria uma assinatura de um arquivo XML e, em seguida, salva a assinatura no novo arquivo XML.  
+  
+ **Exemplo &#1;**  
+  
+ [!code-cpp[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached/CPP/sampledetached.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached/CS/sampledetached.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Detached/VB/sampledetached.vb#1)]  
+  
+ **Exemplo &#2;**  
+  
+ [!code-cpp[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope/CPP/sampleenvelope.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope/CS/sampleenvelope.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML.XmlDsigC14NWithCommentsTransform_Envelope/VB/sampleenvelope.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

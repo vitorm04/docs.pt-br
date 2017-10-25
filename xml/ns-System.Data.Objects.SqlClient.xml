@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Objects.SqlClient">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Objects.SqlClient" /> namespace fornece o <see cref="T:System.Data.Objects.SqlClient.SqlFunctions" /> classe que contém métodos language runtime (CLR) comuns traduzam para funções de banco de dados. Métodos de <see cref="T:System.Data.Objects.SqlClient.SqlFunctions" /> classe só pode ser usada em LINQ para consultas de entidades.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

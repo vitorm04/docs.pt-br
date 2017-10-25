@@ -1,0 +1,56 @@
+<Type Name="IContributeClientContextSink" FullName="System.Runtime.Remoting.Contexts.IContributeClientContextSink">
+  <TypeSignature Language="C#" Value="public interface IContributeClientContextSink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContributeClientContextSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContributeClientContextSink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contribui com um coletor de interceptação no limite do contexto no lado do cliente de uma chamada de comunicação remota.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Contexts.IContributeClientContextSink> interface é implementada por propriedades de contexto em um <xref:System.Runtime.Remoting.Contexts.Context> classe que deseja contribuir um coletor de interceptação no limite do contexto no lado do cliente de uma chamada de comunicação remota.  
+  
+ A cadeia de contexto do cliente é composta dessas propriedades no contexto do cliente que implementam <xref:System.Runtime.Remoting.Contexts.IContributeClientContextSink>, que contribuem para um coletor por meio de <xref:System.Runtime.Remoting.Contexts.IContributeClientContextSink.GetClientContextSink%2A> chamada de método. Esta cadeia é armazenada em cache para uso futuro.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetClientContextSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink GetClientContextSink (System.Runtime.Remoting.Messaging.IMessageSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink GetClientContextSink(class System.Runtime.Remoting.Messaging.IMessageSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContributeClientContextSink.GetClientContextSink(System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="nextSink">A cadeia de Coletores composto até o momento.</param>
+        <summary>Usa o primeiro coletor da cadeia de Coletores composto até o momento e, em seguida, o coletor de mensagem na frente da cadeia já formada se encadeia.</summary>
+        <returns>A cadeia de composição de coletor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

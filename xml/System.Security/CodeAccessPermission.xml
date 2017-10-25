@@ -1,0 +1,879 @@
+<Type Name="CodeAccessPermission" FullName="System.Security.CodeAccessPermission">
+  <TypeSignature Language="C#" Value="public abstract class CodeAccessPermission : System.Security.IPermission, System.Security.IStackWalk" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit CodeAccessPermission extends System.Object implements class System.Security.IPermission, class System.Security.ISecurityEncodable, class System.Security.IStackWalk" />
+  <TypeSignature Language="DocId" Value="T:System.Security.CodeAccessPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.IPermission</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Security.IStackWalk</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define a estrutura subjacente de todas as permissões de acesso do código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permissões de acesso de código usam um exame da pilha para garantir que todos os chamadores do código receberam uma permissão. Se for um objeto de permissão `null`, ela será manipulada o mesmo que um objeto de permissão com o estado <xref:System.Security.Permissions.PermissionState?displayProperty=nameWithType>.  
+  
+ A pilha de chamadas é representada geralmente como crescimento para baixo, para que os métodos superiores na pilha de chamadas chamam métodos inferior na pilha de chamadas.  
+  
+ Herdeiros do <xref:System.Security.CodeAccessPermission> classe deve ser concedida confiança total para funcionar corretamente, estendendo a infraestrutura de segurança de permissões. Para determinar que os herdeiros são totalmente confiáveis, <xref:System.Security.CodeAccessPermission> problemas um <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> para <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence>  =  `true` e <xref:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy>  =  `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma permissão que deriva de <xref:System.Security.CodeAccessPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.NameIdPermission#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CPP/nameidpermission.cpp#1)]
+ [!code-csharp[System.Security.Permissions.NameIdPermission#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CS/nameidpermission.cs#1)]
+ [!code-vb[System.Security.Permissions.NameIdPermission#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/VB/nameidpermission.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">a capacidade de herdeiros para fornecer evidências e exibir e modificar a política. Enumerações associadas: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence" />, <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" />.</permission>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Security.CodeAccessPermission" />, você também deve implementar o <see cref="T:System.Security.Permissions.IUnrestrictedPermission" /> interface.  
+  
+ O seguinte <see cref="T:System.Security.CodeAccessPermission" /> membros devem ser substituídos: <see cref="M:System.Security.CodeAccessPermission.Copy" />, <see cref="M:System.Security.CodeAccessPermission.Intersect(System.Security.IPermission)" />, <see cref="M:System.Security.CodeAccessPermission.IsSubsetOf(System.Security.IPermission)" />, <see cref="M:System.Security.CodeAccessPermission.ToXml" />, <see cref="M:System.Security.CodeAccessPermission.FromXml(System.Security.SecurityElement)" />, e <see cref="M:System.Security.CodeAccessPermission.Union(System.Security.IPermission)" />.  
+  
+ Você também deve definir um construtor que aceita um <see cref="T:System.Security.Permissions.PermissionState" /> como seu único parâmetro.  
+  
+ Você deve aplicar o <see cref="T:System.SerializableAttribute" /> atributo a uma classe que herda de <see cref="T:System.Security.CodeAccessPermission" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeAccessPermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.CodeAccessPermission" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado para inicializar o estado no tipo sempre que uma instância da classe derivada é criada. Embora você pode chamar explicitamente esse construtor na declaração de construtor do construtor de classe derivada, isso geralmente não é necessário; a maioria dos compiladores gerará automaticamente a chamada para você.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public void Assert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Assert() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.Assert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Declara que o código de chamada pode acessar o recurso protegido por uma demanda de permissão através do código que chama este método, mesmo que os chamadores na pilha não tenham recebido permissão para acessar o recurso. Usar <see cref="M:System.Security.CodeAccessPermission.Assert" /> pode criar problemas de segurança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A pilha de chamadas é representada geralmente como crescimento para baixo, para que os métodos superiores na pilha de chamadas chamam métodos inferior na pilha de chamadas. Chamando <xref:System.Security.CodeAccessPermission.Assert%2A> impede que um exame da pilha de origem inferior na pilha de chamadas de continuar a pilha de chamadas além do código que chama esse método. Portanto, mesmo que os chamadores superior na pilha de chamadas não tem as permissões necessárias para acessar um recurso, eles ainda podem acessá-lo por meio do código que chama esse método em que a permissão necessária. Uma asserção é eficaz somente se o código que chama <xref:System.Security.CodeAccessPermission.Assert%2A> passa na verificação de segurança para a permissão que está declarando.  
+  
+ A chamada para <xref:System.Security.CodeAccessPermission.Assert%2A> é eficiente, até que o código de chamada retorna ao chamador. Apenas um <xref:System.Security.CodeAccessPermission.Assert%2A> podem estar ativas em um quadro. Uma tentativa de chamar <xref:System.Security.CodeAccessPermission.Assert%2A> quando um ativo <xref:System.Security.CodeAccessPermission.Assert%2A> existe nos resultados do quadro um <xref:System.Security.SecurityException>. Chamar <xref:System.Security.CodeAccessPermission.RevertAssert%2A> ou <xref:System.Security.CodeAccessPermission.RevertAll%2A> para remover um ativo <xref:System.Security.CodeAccessPermission.Assert%2A>.  
+  
+ <xref:System.Security.CodeAccessPermission.Assert%2A>é ignorado para uma permissão concedida não porque uma solicitação de permissão não terá êxito. No entanto, se inferior na pilha de chamadas de código chama <xref:System.Security.CodeAccessPermission.Demand%2A> para essa permissão, um <xref:System.Security.SecurityException> é gerada quando a movimentação da pilha atinge o código que tentou chamar <xref:System.Security.CodeAccessPermission.Assert%2A>. Isso ocorre porque o código que chamou <xref:System.Security.CodeAccessPermission.Assert%2A> não recebeu a permissão, mesmo que ele tentou <xref:System.Security.CodeAccessPermission.Assert%2A> -lo.  
+  
+> [!CAUTION]
+>  Como chamar <xref:System.Security.CodeAccessPermission.Assert%2A> remove o requisito de que todos os código da cadeia de chamada deve ter permissão para acessar o recurso especificado, ele poderá abrir problemas de segurança se usado incorretamente ou inadequadamente. Portanto, ele deve ser usado com cuidado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O código de chamada não tem <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Assertion" />.  
+  
+ -ou-  
+  
+ Já existe um <see cref="M:System.Security.CodeAccessPermission.Assert" /> ativo para o quadro atual.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de chamar <see cref="M:System.Security.CodeAccessPermission.Assert" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Assertion" /></permission>
+        <block subset="none" type="overrides">
+          <para>Você não pode substituir esse método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public abstract System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado por uma classe derivada, cria e retorna uma cópia idêntica do objeto de permissão atual.</summary>
+        <returns>Uma cópia do objeto de permissão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia de um objeto de permissão representa o mesmo acesso a recursos como o objeto de permissão original.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma substituição do <xref:System.Security.CodeAccessPermission.Copy%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.CodeAccessPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.NameIdPermission#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CPP/nameidpermission.cpp#2)]
+ [!code-csharp[System.Security.Permissions.NameIdPermission#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CS/nameidpermission.cs#2)]
+ [!code-vb[System.Security.Permissions.NameIdPermission#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/VB/nameidpermission.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir esse método em uma classe derivada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Demand">
+      <MemberSignature Language="C#" Value="public void Demand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Demand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.Demand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Força um <see cref="T:System.Security.SecurityException" /> no tempo de execução se todos os chamadores no topo da pilha de chamadas não receberam as permissões especificadas pela instância atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é usado pelas bibliotecas seguras para garantir que os chamadores tem permissão para acessar um recurso. Por exemplo, uma classe de arquivo em uma biblioteca de classe seguro chama <xref:System.Security.CodeAccessPermission.Demand%2A> para necessários <xref:System.Security.Permissions.FileIOPermission> antes de executar uma operação de arquivo solicitada pelo chamador.  
+  
+ As permissões do código que chama esse método não são examinadas; a seleção começa o chamador imediato do código e continua na pilha. A pilha de chamadas é representada geralmente como crescimento para baixo, para que os métodos superiores na pilha de chamadas chamam métodos inferior na pilha de chamadas. <xref:System.Security.CodeAccessPermission.Demand%2A>é realizada somente se nenhuma <xref:System.Security.SecurityException> é gerado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador superior na pilha de chamadas não tem a permissão especificada na instância atual.  
+  
+ -ou-  
+  
+ Um chamador superior na pilha de chamadas chamou <see cref="M:System.Security.CodeAccessPermission.Deny" /> no objeto de permissão atual.</exception>
+        <block subset="none" type="overrides">
+          <para>Você não pode substituir esse método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Deny">
+      <MemberSignature Language="C#" Value="public void Deny ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Deny() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.Deny" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Impede que os chamadores no nível superior da pilha de chamadas usem o código que chama esse método para acessar o recurso especificado pela instância atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Security.CodeAccessPermission.Deny%2A> método deve ser usado apenas para proteger os recursos do access acidental por código totalmente confiável. Ele não deve ser usado para proteger recursos contra uso inadequado intencional por código não confiável. Por exemplo, se método `A` problemas um <xref:System.Security.CodeAccessPermission.Deny%2A> para uma permissão e, em seguida, o método de chamadas `B`, método `B` evidentemente pode substituir o <xref:System.Security.CodeAccessPermission.Deny%2A> emitindo um <xref:System.Security.CodeAccessPermission.Assert%2A>. O método chamado é sempre superior na pilha. Portanto, se método `B` tenta acessar um recurso protegido, o sistema de segurança começa a verificação de permissões com ele como método `B` é o chamador imediato e aborda abaixo da pilha para confirmar se há nenhum <xref:System.Security.CodeAccessPermission.Deny%2A> ou <xref:System.Security.CodeAccessPermission.PermitOnly%2A> inferior na pilha. Método `B`, que está tentando acessar o recurso, pode parar a movimentação da pilha imediatamente usando o <xref:System.Security.CodeAccessPermission.Assert%2A> método. Nesse caso, o <xref:System.Security.CodeAccessPermission.Deny%2A> colocado na pilha pelo método `A` (o método de chamada) nunca é descoberto.  
+  
+ Esse método impede que os chamadores mais acima na pilha de chamadas acessando o recurso protegido por meio do código que chama esse método, mesmo que os chamadores tiverem permissão para acessá-lo. A pilha de chamadas é representada geralmente como crescimento para baixo, para que os métodos superiores na pilha de chamadas chamam métodos inferior na pilha de chamadas.  
+  
+ <xref:System.Security.CodeAccessPermission.Deny%2A>pode limitar a responsabilidade do programador ou ajudar a evitar problemas de segurança acidental, pois ajuda a impedir que o método que chama <xref:System.Security.CodeAccessPermission.Deny%2A> seja usado para acessar o recurso protegido pela permissão negada. Se chama um método <xref:System.Security.CodeAccessPermission.Deny%2A> em uma permissão e se um <xref:System.Security.CodeAccessPermission.Demand%2A> para essa permissão é invocado por um chamador inferior na pilha de chamadas, essa verificação de segurança falharão quando atingir o <xref:System.Security.CodeAccessPermission.Deny%2A>.  
+  
+ A chamada para <xref:System.Security.CodeAccessPermission.Deny%2A> é eficiente, até que o código de chamada retorna ao chamador. Apenas um <xref:System.Security.CodeAccessPermission.Deny%2A> podem estar ativas em um quadro. Uma tentativa de chamar <xref:System.Security.CodeAccessPermission.Deny%2A> quando um ativo <xref:System.Security.CodeAccessPermission.Deny%2A> existe nos resultados do quadro um <xref:System.Security.SecurityException>. Chamar <xref:System.Security.CodeAccessPermission.RevertDeny%2A> ou <xref:System.Security.CodeAccessPermission.RevertAll%2A> para remover um ativo <xref:System.Security.CodeAccessPermission.Deny%2A>. <xref:System.Security.CodeAccessPermission.Deny%2A>é ignorado para uma permissão concedida não porque uma solicitação de permissão não terá êxito.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Já existe um <see cref="M:System.Security.CodeAccessPermission.Deny" /> ativo para o quadro atual.</exception>
+        <block subset="none" type="overrides">
+          <para>Você não pode substituir esse método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Security.CodeAccessPermission" /> objeto a ser comparado com o atual <see cref="T:System.Security.CodeAccessPermission" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.Security.CodeAccessPermission" /> objeto é igual ao atual <see cref="T:System.Security.CodeAccessPermission" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Security.CodeAccessPermission" /> objeto é igual ao atual <see cref="T:System.Security.CodeAccessPermission" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Object.Equals%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public abstract void FromXml (System.Security.SecurityElement elem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement elem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elem" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="elem">O XML de codificação a ser usada para reconstruir o objeto de segurança.</param>
+        <summary>Quando substituído em uma classe derivada, reconstrói um objeto de segurança com um estado especificado de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código personalizado que estende os objetos de segurança necessário para implementar o <xref:System.Security.CodeAccessPermission.ToXml%2A> e <xref:System.Security.CodeAccessPermission.FromXml%2A> métodos para tornar os objetos de segurança-pode ser codificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma substituição do <xref:System.Security.CodeAccessPermission.FromXml%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.CodeAccessPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.NameIdPermission#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CPP/nameidpermission.cpp#10)]
+ [!code-csharp[System.Security.Permissions.NameIdPermission#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CS/nameidpermission.cs#10)]
+ [!code-vb[System.Security.Permissions.NameIdPermission#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/VB/nameidpermission.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="elem" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="elem" /> parâmetro não contém a codificação XML para uma instância do mesmo tipo que a instância atual.  
+  
+ -ou-  
+  
+ O número de versão de <paramref name="elem" /> parâmetro não é suportado.</exception>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir esse método em uma classe derivada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para o <see cref="T:System.Security.CodeAccessPermission" /> objeto que é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Security.CodeAccessPermission" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash para duas instâncias da mesma permissão pode ser diferente, portanto, um código de hash não deve ser usado para comparar dois <xref:System.Security.CodeAccessPermission> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public abstract System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a interseção com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Quando implementado por uma classe derivada, cria e retorna uma permissão que é a interseção de permissão atual e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a interseção de permissão atual e a permissão especificada. Essa nova permissão é <see langword="null" /> se a interseção estiver vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A interseção de duas permissões é uma permissão que descreve o conjunto de operações que ambas descrevem em comum. Somente uma demanda que passa as permissões originais passará a interseção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma substituição do <xref:System.Security.CodeAccessPermission.Intersect%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.CodeAccessPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.NameIdPermission#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CPP/nameidpermission.cpp#5)]
+ [!code-csharp[System.Security.Permissions.NameIdPermission#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CS/nameidpermission.cs#5)]
+ [!code-vb[System.Security.Permissions.NameIdPermission#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/VB/nameidpermission.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="target" /> parâmetro não é <see langword="null" /> e não é uma instância da classe mesmo como a permissão atual.</exception>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir esse método em uma classe derivada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public abstract bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a ser testado para a relação de subconjunto. Essa permissão deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Quando implementado por uma classe derivada, determina se a permissão atual é um subconjunto de permissão especificada.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é um subconjunto da permissão especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão atual é um subconjunto de permissão especificada se a permissão atual especifica um conjunto de operações é totalmente contido pelo conjunto de permissões especificado. Por exemplo, uma permissão que representa acesso à C:\example.txt é um subconjunto de uma permissão que representa acesso na unidade c:\\. Se esse método retornar `true`, a permissão atual não representa nenhum mais acesso ao recurso protegido que a permissão especificada.  
+  
+ As instruções a seguir são necessárias para ser `true` para todas as substituições do <xref:System.Security.CodeAccessPermission.IsSubsetOf%2A> método. *X*, *Y*, e *Z* representar objetos de permissão de acesso de código personalizado que não são referências nulas, *U* representa uma permissão de acesso do código irrestrito, e *N* representa uma permissão vazia com um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.None>.  
+  
+-   *X*. IsSubsetOf (*X*) retorna `true`.  
+  
+-   *X*. IsSubsetOf (*Y*) retorna o mesmo valor como *Y*. IsSubsetOf (*X*) somente se *X* e *Y* representar o mesmo conjunto de permissões.  
+  
+-   If *X*. IsSubsetOf(*Y*) and *Y*. IsSubsetOf(*Z*) both return `true`, *X*. IsSubsetOf (*Z*) retorna `true`.  
+  
+-   *X*. IsSubsetOf (*U*) retorna `true`.  
+  
+-   *X*. IsSubsetOf (*N*) retorna `false`.  
+  
+-   *N*. IsSubsetOf (*X*) retorna `true`.  
+  
+ Se *X* e *Y* representar objetos de permissão de acesso de código personalizado que são referências nulas, *X*. IsSubsetOf (*Y*) retorna `true`. Se *Z* também será null, operação de definição do composto *X*. Union(*Y*). IsSubsetOf (*Z*) também retorna `true` porque a união de duas permissões nulo é uma permissão de nulo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma substituição do <xref:System.Security.CodeAccessPermission.IsSubsetOf%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.CodeAccessPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.NameIdPermission#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CPP/nameidpermission.cpp#4)]
+ [!code-csharp[System.Security.Permissions.NameIdPermission#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CS/nameidpermission.cs#4)]
+ [!code-vb[System.Security.Permissions.NameIdPermission#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/VB/nameidpermission.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="target" /> não é <see langword="null" /> e não é do mesmo tipo que a permissão atual.</exception>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir esse método em uma classe derivada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PermitOnly">
+      <MemberSignature Language="C#" Value="public void PermitOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PermitOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.PermitOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Impede que os chamadores no topo da pilha de chamadas usem o código que chama esse método para acessar todos os recursos, com exceção do recurso especificado pela instância atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.Security.CodeAccessPermission.PermitOnly%2A> método deve ser usado apenas para proteger os recursos do access acidental por código totalmente confiável. Ele não deve ser usado para proteger recursos contra uso inadequado intencional por código não confiável. Por exemplo, se método `A` problemas um <xref:System.Security.CodeAccessPermission.PermitOnly%2A> para uma permissão e, em seguida, o método de chamadas `B`, método `B` evidentemente pode substituir o <xref:System.Security.CodeAccessPermission.PermitOnly%2A> emitindo um <xref:System.Security.CodeAccessPermission.Assert%2A>. O método chamado é sempre superior na pilha. Portanto, se método `B` tenta acessar um recurso protegido, o sistema de segurança começa a verificação de permissões com ele como método `B` é o chamador imediato e aborda abaixo da pilha para confirmar se há nenhum <xref:System.Security.CodeAccessPermission.Deny%2A> ou <xref:System.Security.CodeAccessPermission.PermitOnly%2A> inferior na pilha. Método `B`, que está tentando acessar o recurso, pode parar a movimentação da pilha imediatamente usando o <xref:System.Security.CodeAccessPermission.Assert%2A> método. Nesse caso, o <xref:System.Security.CodeAccessPermission.PermitOnly%2A> colocado na pilha pelo método `A` (o método de chamada) nunca é descoberto.  
+  
+ <xref:System.Security.CodeAccessPermission.PermitOnly%2A>é semelhante ao <xref:System.Security.CodeAccessPermission.Deny%2A>, ambos causam movimentações de pilha falhe quando eles conseguirão caso contrário. A diferença é que <xref:System.Security.CodeAccessPermission.Deny%2A> Especifica as permissões que fará com que a movimentação da pilha falhe, mas <xref:System.Security.CodeAccessPermission.PermitOnly%2A> Especifica as permissões somente que fazem com que a movimentação da pilha falha.  
+  
+ Chame este método para garantir que seu código pode ser usado para acessar somente os recursos especificados. A chamada para <xref:System.Security.CodeAccessPermission.PermitOnly%2A> é eficiente, até que o código de chamada retorna ao chamador. Apenas um <xref:System.Security.CodeAccessPermission.PermitOnly%2A> podem estar ativas em um quadro. Uma tentativa de chamar <xref:System.Security.CodeAccessPermission.PermitOnly%2A> quando um ativo <xref:System.Security.CodeAccessPermission.PermitOnly%2A> existe nos resultados do quadro um <xref:System.Security.SecurityException>. Chamar <xref:System.Security.CodeAccessPermission.RevertPermitOnly%2A> ou <xref:System.Security.CodeAccessPermission.RevertAll%2A> para remover um ativo <xref:System.Security.CodeAccessPermission.PermitOnly%2A>.  
+  
+ <xref:System.Security.CodeAccessPermission.PermitOnly%2A>é ignorado para uma permissão concedida não porque uma solicitação de permissão não terá êxito. No entanto, se o código inferior na chamada de pilha mais tarde chamadas <xref:System.Security.CodeAccessPermission.Demand%2A> para essa permissão, um <xref:System.Security.SecurityException> é gerada quando a movimentação da pilha atinge o código que tentou chamar <xref:System.Security.CodeAccessPermission.PermitOnly%2A>. Isso ocorre porque o código chamado <xref:System.Security.CodeAccessPermission.PermitOnly%2A> não recebeu a permissão, mesmo que ela chamou <xref:System.Security.CodeAccessPermission.PermitOnly%2A> para essa permissão. A pilha de chamadas é representada geralmente como crescimento para baixo, para que os métodos superiores na pilha de chamadas chamam métodos inferior na pilha de chamadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Já existe um <see cref="M:System.Security.CodeAccessPermission.PermitOnly" /> ativo para o quadro atual.</exception>
+        <block subset="none" type="overrides">
+          <para>Você não pode substituir esse método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RevertAll">
+      <MemberSignature Language="C#" Value="public static void RevertAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RevertAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.RevertAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que todas as substituições anteriores para o quadro atual a ser removido e não mais em vigor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhum substituições (<xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A>, ou <xref:System.Security.CodeAccessPermission.PermitOnly%2A>) para o quadro atual, um <xref:System.ExecutionEngineException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há anterior não <see cref="M:System.Security.CodeAccessPermission.Assert" />, <see cref="M:System.Security.CodeAccessPermission.Deny" />, ou <see cref="M:System.Security.CodeAccessPermission.PermitOnly" /> para o quadro atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RevertAssert">
+      <MemberSignature Language="C#" Value="public static void RevertAssert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RevertAssert() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.RevertAssert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que um <see cref="M:System.Security.CodeAccessPermission.Assert" /> anterior do quadro atual seja removido e não entre mais em vigor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhum <xref:System.Security.CodeAccessPermission.Assert%2A> para o quadro atual, um <xref:System.ExecutionEngineException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum <see cref="M:System.Security.CodeAccessPermission.Assert" /> anterior para o quadro atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RevertDeny">
+      <MemberSignature Language="C#" Value="public static void RevertDeny ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RevertDeny() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.RevertDeny" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que um <see cref="M:System.Security.CodeAccessPermission.Deny" /> anterior do quadro atual seja removido e não entre mais em vigor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhum <xref:System.Security.CodeAccessPermission.Deny%2A> para o quadro atual, um <xref:System.ExecutionEngineException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum <see cref="M:System.Security.CodeAccessPermission.Deny" /> anterior para o quadro atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RevertPermitOnly">
+      <MemberSignature Language="C#" Value="public static void RevertPermitOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RevertPermitOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.RevertPermitOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que um <see cref="M:System.Security.CodeAccessPermission.PermitOnly" /> anterior do quadro atual seja removido e não entre mais em vigor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhum <xref:System.Security.CodeAccessPermission.PermitOnly%2A> para o quadro atual, um <xref:System.ExecutionEngineException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum <see cref="M:System.Security.CodeAccessPermission.PermitOnly" /> anterior para o quadro atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Security.IPermission.Demand">
+      <MemberSignature Language="C#" Value="void IPermission.Demand ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Security.IPermission.Demand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.System#Security#IPermission#Demand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Security.IStackWalk.Assert">
+      <MemberSignature Language="C#" Value="void IStackWalk.Assert ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Security.IStackWalk.Assert() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.System#Security#IStackWalk#Assert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Security.IStackWalk.Demand">
+      <MemberSignature Language="C#" Value="void IStackWalk.Demand ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Security.IStackWalk.Demand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.System#Security#IStackWalk#Demand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Security.IStackWalk.Deny">
+      <MemberSignature Language="C#" Value="void IStackWalk.Deny ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Security.IStackWalk.Deny() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.System#Security#IStackWalk#Deny" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Security.IStackWalk.PermitOnly">
+      <MemberSignature Language="C#" Value="void IStackWalk.PermitOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Security.IStackWalk.PermitOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.System#Security#IStackWalk#PermitOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma representação de cadeia de caracteres do objeto de permissão atual.</summary>
+        <returns>Uma representação de cadeia de caracteres do objeto de permissão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil para depuração quando você precisa de permissão são exibidas como uma cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public abstract System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cria uma codificação de XML do objeto de segurança e seu estado atual.</summary>
+        <returns>Uma codificação de XML do objeto de segurança, incluindo quaisquer informações de estado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código personalizado que estende os objetos de segurança necessário para implementar o <xref:System.Security.CodeAccessPermission.ToXml%2A> e <xref:System.Security.CodeAccessPermission.FromXml%2A> métodos para tornar os objetos de segurança-pode ser codificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma substituição do <xref:System.Security.CodeAccessPermission.ToXml%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.CodeAccessPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.NameIdPermission#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CPP/nameidpermission.cpp#11)]
+ [!code-csharp[System.Security.Permissions.NameIdPermission#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CS/nameidpermission.cs#11)]
+ [!code-vb[System.Security.Permissions.NameIdPermission#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/VB/nameidpermission.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir esse método em uma classe derivada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public virtual System.Security.IPermission Union (System.Security.IPermission other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission Union(class System.Security.IPermission other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.CodeAccessPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="other">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Quando substituído em uma classe derivada, cria uma permissão que é a união de permissão atual e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a união de permissão atual e a permissão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O resultado de uma chamada para <xref:System.Security.CodeAccessPermission.Union%2A> é uma permissão que representa todas as operações representadas pela permissão atual e a permissão especificada. Qualquer solicitação que passa a ter a permissão passa seu union.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma substituição do <xref:System.Security.CodeAccessPermission.Union%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.CodeAccessPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.NameIdPermission#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CPP/nameidpermission.cpp#12)]
+ [!code-csharp[System.Security.Permissions.NameIdPermission#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/CS/nameidpermission.cs#12)]
+ [!code-vb[System.Security.Permissions.NameIdPermission#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.NameIdPermission/VB/nameidpermission.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O parâmetro <paramref name="other" /> não é <see langword="null" />. Esse método só tem suporte nesse nível passadas <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir esse método em uma classe derivada. Você deve retornar uma cópia da permissão se o valor de <paramref name="other" /> parâmetro é <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,82 @@
+<Type Name="Readability" FullName="System.Windows.Readability">
+  <TypeSignature Language="C#" Value="public enum Readability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Readability extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Readability" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o valor de legibilidade de um <see cref="T:System.Windows.LocalizabilityAttribute" /> para uma classe de XAML (BAML) binário ou membro de classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.LocalizabilityAttribute> atributo pode ser aplicado a um método, classe ou propriedade.  
+  
+ Para obter mais informações sobre como usar atributos de localização, consulte [atributos de localização e comentários](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o valor de legibilidade de um <xref:System.Windows.LocalizabilityAttribute> definido para um botão.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Attributes.xaml#attributessnippet1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Inherit">
+      <MemberSignature Language="C#" Value="Inherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Readability Inherit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Readability.Inherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Readability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Leitura do valor de destino é herdada do nó pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Readable">
+      <MemberSignature Language="C#" Value="Readable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Readability Readable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Readability.Readable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Readability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor de destino é um texto legível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unreadable">
+      <MemberSignature Language="C#" Value="Unreadable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Readability Unreadable = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Readability.Unreadable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Readability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor de destino não é legível.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

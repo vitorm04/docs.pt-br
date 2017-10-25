@@ -1,0 +1,751 @@
+<Type Name="Claim" FullName="System.IdentityModel.Claims.Claim">
+  <TypeSignature Language="C#" Value="public class Claim" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Claim extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Claims.Claim" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract(Namespace="http://schemas.xmlsoap.org/ws/2005/05/identity")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma declaração associada a uma entidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modelo de identidade é um sistema de autorização baseada em declarações. Declarações descrevem os recursos associados a uma entidade no sistema, geralmente um usuário do sistema. O conjunto de declarações associado a uma determinada entidade pode ser pensado como uma chave. As declarações específicas definem a forma de chave; como uma chave física é usado para abrir um bloqueio em uma porta. Dessa forma, as declarações são usadas para obter acesso aos recursos. Acesso a um determinado recurso protegido é determinado comparando as declarações necessárias para acessar o recurso com as declarações associadas à entidade que tentativas de acesso.  
+  
+ Uma declaração é a expressão de um direito em relação a um valor específico. Pode ser um direito de leitura, gravação ou possuir. Um valor pode ser um banco de dados, um arquivo, uma caixa de correio ou uma propriedade. Declarações também têm um tipo de declaração. A combinação de tipo de declaração e direita fornece o mecanismo de recursos sendo especificados em relação o valor. Por exemplo, uma declaração de tipo `file` com o direito `read` sobre o valor `biography.doc` indica que a entidade com uma ação tem acesso de leitura para o arquivo biography.doc. Uma declaração de nome de tipo com o direito <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> sobre o valor `Martin` indica que a entidade com a declaração tem um `Name` propriedade com o valor `Martin`.  
+  
+ Embora vários tipos de declaração de direitos são definidos como parte do modelo de identidade, o sistema é extensível. Criando sobre o modelo de identidade infraestrutura pode definir vários sistemas de declaração tipos e direitos conforme necessário.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_Claim#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_claim/cs/source.cs#1)]
+ [!code-vb[c_Claim#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claim/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Claim (string claimType, object resource, string right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType, object resource, string right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.#ctor(System.String,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="resource" Type="System.Object" />
+        <Parameter Name="right" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">Um URI (Uniform Resource Identifier) que representa um tipo de declaração.</param>
+        <param name="resource">O objeto ao qual a nova declaração está associada.</param>
+        <param name="right">O URI do direito associado à declaração.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Claims.Claim" /> com o tipo, o recurso e o direito especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)]é fornecido um conjunto de declaração predefinido tipos e direitos que é representado como membros de <xref:System.IdentityModel.Claims.ClaimTypes> e <xref:System.IdentityModel.Claims.Rights> classes.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="claimType" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="right" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="claimType" /> tem tamanho zero.  
+  
+ -ou-  
+  
+ <paramref name="right" /> tem tamanho zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimType">
+      <MemberSignature Language="C#" Value="public string ClaimType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClaimType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.ClaimType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo da declaração.</summary>
+        <value>Um URI que representa o tipo da declaração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> propriedade pode ser um dos tipos de declaração predefinidos que são representados por propriedades estáticas do <xref:System.IdentityModel.Claims.ClaimTypes> classe.  
+  
+ Tipos de declaração de especificam o tipo de declaração que está sendo declarada, como um endereço de email.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_Claim#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_claim/cs/source.cs#2)]
+ [!code-vb[c_Claim#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claim/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDenyOnlyWindowsSidClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateDenyOnlyWindowsSidClaim (System.Security.Principal.SecurityIdentifier identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateDenyOnlyWindowsSidClaim(class System.Security.Principal.SecurityIdentifier identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateDenyOnlyWindowsSidClaim(System.Security.Principal.SecurityIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">To be added.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> especificado de objeto que representa um deny somente o identificador de segurança (SID).</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Claims.Claim" /> que representa o SID especificado no <paramref name="identifier" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O SID somente de negação é uma estrutura SID_AND_ATTRIBUTES com o sinalizador SE_GROUP_USE_FOR_SENY_ONLY definido.  
+  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.DenyOnlySid%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `sid` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identifier" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDnsClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateDnsClaim (string dns);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateDnsClaim(string dns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateDnsClaim(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dns">O nome DNS da entidade associado à declaração. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa o nome de sistema de nome de domínio (DNS) especificado.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Dns%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `dns` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="dns" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHashClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateHashClaim (byte[] hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateHashClaim(unsigned int8[] hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateHashClaim(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hash" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hash">Uma matriz de valores de byte que especifica um valor de hash. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa o valor de hash especificado.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Hash%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `hash` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="hash" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMailAddressClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateMailAddressClaim (System.Net.Mail.MailAddress mailAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateMailAddressClaim(class System.Net.Mail.MailAddress mailAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateMailAddressClaim(System.Net.Mail.MailAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mailAddress" Type="System.Net.Mail.MailAddress" />
+      </Parameters>
+      <Docs>
+        <param name="mailAddress">Um <see cref="T:System.Net.Mail.MailAddress" /> que especifica o endereço de email que representa esta declaração. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa o endereço de email especificado.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Email%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `mailAddress` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="mailAddress" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNameClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateNameClaim (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateNameClaim(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateNameClaim(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da entidade que está associado à declaração. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa o nome especificado.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `name` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRsaClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateRsaClaim (System.Security.Cryptography.RSA rsa);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateRsaClaim(class System.Security.Cryptography.RSA rsa) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateRsaClaim(System.Security.Cryptography.RSA)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rsa" Type="System.Security.Cryptography.RSA" />
+      </Parameters>
+      <Docs>
+        <param name="rsa">Um <see cref="T:System.Security.Cryptography.RSA" /> objeto que representa uma chave de criptografia de RSA. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa a chave RSA especificada.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `rsa` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rsa" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSpnClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateSpnClaim (string spn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateSpnClaim(string spn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateSpnClaim(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="spn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="spn">O SPN da entidade associada com esta declaração. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa o especificado Service Principal Name (SPN).</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Spn%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `spn` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="spn" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateThumbprintClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateThumbprintClaim (byte[] thumbprint);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateThumbprintClaim(unsigned int8[] thumbprint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateThumbprintClaim(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thumbprint" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="thumbprint">Uma matriz de valores de byte que especifica a impressão digital da entidade associada à declaração. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa a impressão digital especificada.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `thumbprint` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="thumbprint" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUpnClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateUpnClaim (string upn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateUpnClaim(string upn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateUpnClaim(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="upn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="upn">O UPN da entidade associada com esta declaração. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa o especificado Universal Nome Principal (UPN).</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Upn%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `upn` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="upn" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUriClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateUriClaim (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateUriClaim(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateUriClaim(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Um <see cref="T:System.Uri" /> que representa a URL da entidade associada com esta declaração. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa o Uniform Resource localizador (URL) especificado.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Uri%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `uri` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="uri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWindowsSidClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateWindowsSidClaim (System.Security.Principal.SecurityIdentifier sid);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateWindowsSidClaim(class System.Security.Principal.SecurityIdentifier sid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateWindowsSidClaim(System.Security.Principal.SecurityIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="sid">Um <see cref="T:System.Security.Principal.SecurityIdentifier" /> que representa o SID.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa o identificador de segurança especificados (SID).</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Claims.Claim" /> que representa o SID especificado no <paramref name="sid" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Claims.Claim.ClaimType%2A>|<xref:System.IdentityModel.Claims.ClaimTypes.Sid%2A>|  
+|<xref:System.IdentityModel.Claims.Claim.Resource%2A>|O valor de `sid` parâmetro.|  
+|<xref:System.IdentityModel.Claims.Claim.Right%2A>|<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sid" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateX500DistinguishedNameClaim">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim CreateX500DistinguishedNameClaim (System.Security.Cryptography.X509Certificates.X500DistinguishedName x500DistinguishedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Claims.Claim CreateX500DistinguishedNameClaim(class System.Security.Cryptography.X509Certificates.X500DistinguishedName x500DistinguishedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim(System.Security.Cryptography.X509Certificates.X500DistinguishedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x500DistinguishedName" Type="System.Security.Cryptography.X509Certificates.X500DistinguishedName" />
+      </Parameters>
+      <Docs>
+        <param name="x500DistinguishedName">Um <see cref="T:System.Security.Cryptography.X509Certificates.X500DistinguishedName" /> que especifica o nome diferenciado do x. 500 da entidade associado à declaração. Esse parâmetro não deve ser <see langword="null" />. Se esse parâmetro for <see langword="null" />, este método lança um <see cref="T:System.ArgumentNullException" /> exceção.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Claims.Claim" /> nome distinto do objeto que representa a x. 500 especificado.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Claims.Claim" /> cria esse método do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Claims.Claim> objeto cria esse método tem os valores de propriedade mostrados na tabela a seguir.  
+  
+ <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>  
+ <xref:System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName%2A>  
+  
+ <xref:System.IdentityModel.Claims.Claim.Resource%2A>  
+ O valor de `x500DistinguishedName` parâmetro.  
+  
+ <xref:System.IdentityModel.Claims.Claim.Right%2A>  
+ <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="x500DistinguishedName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultComparer">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEqualityComparer&lt;System.IdentityModel.Claims.Claim&gt; DefaultComparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IEqualityComparer`1&lt;class System.IdentityModel.Claims.Claim&gt; DefaultComparer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.DefaultComparer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEqualityComparer&lt;System.IdentityModel.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode comparar dois <see cref="T:System.IdentityModel.Claims.Claim" /> objetos para igualdade.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> interface implementação que compara dois <see cref="T:System.IdentityModel.Claims.Claim" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o valor de <xref:System.IdentityModel.Claims.Claim.DefaultComparer%2A> propriedade para corresponder a qualquer um dos tipos de declaração predefinidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com o <see cref="T:System.IdentityModel.Claims.Claim" /> atual.</param>
+        <summary>Determina se o objeto especificado representa a mesma declaração atual <see cref="T:System.IdentityModel.Claims.Claim" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> representa a mesma declaração atual <see cref="T:System.IdentityModel.Claims.Claim" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Object.Equals%2A> método para fornecer comparações de igualdade para <xref:System.IdentityModel.Claims.Claim> objetos. A comparação consiste em três comparações em valores da <xref:System.IdentityModel.Claims.Claim.Right%2A>, <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>, e <xref:System.IdentityModel.Claims.Claim.Resource%2A> propriedades. O algoritmo de comparação que é usado no <xref:System.IdentityModel.Claims.Claim.Resource%2A> propriedade depende do valor da <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> propriedade. A tabela a seguir fornece detalhes sobre o algoritmo de comparação que é usado para o tipo de declaração especificado.  
+  
+|Tipo de declaração|Comparação|  
+|----------------|----------------|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Dns%2A>|Comparação de cadeia de caracteres de maiusculas e minúsculas do recurso.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Hash%2A>|Comparação de byte por byte.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>|Comparação de byte por byte nas partes do algoritmo de módulo e o expoente.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>|Comparação de byte por byte.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.Upn%2A>|Comparação de SID.|  
+|<xref:System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName%2A>|Comparação de dados brutos de x. 500 normalizada.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código hash para a declaração atual.</summary>
+        <returns>O código hash para a declaração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método gera o mesmo código de hash de dois objetos são iguais de acordo com o <xref:System.IdentityModel.Claims.Claim.Equals%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resource">
+      <MemberSignature Language="C#" Value="public object Resource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Resource" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o recurso com o qual este <see cref="T:System.IdentityModel.Claims.Claim" /> objeto está associado.</summary>
+        <value>O recurso com o qual este <see cref="T:System.IdentityModel.Claims.Claim" /> objeto está associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[c_Claim#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_claim/cs/source.cs#2)]
+ [!code-vb[c_Claim#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claim/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public string Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Right" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma representação de cadeia de caracteres de um uniform resource identifier (URI) que especifica o direito associado a esta <see cref="T:System.IdentityModel.Claims.Claim" /> objeto. Direitos predefinidos estão disponíveis como propriedades estáticas do <see cref="T:System.IdentityModel.Claims.Rights" /> classe.</summary>
+        <value>Um URI que especifica o direito associado a esta <see cref="T:System.IdentityModel.Claims.Claim" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores predefinidos incluem <xref:System.IdentityModel.Claims.Rights.Identity%2A> e <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_Claim#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_claim/cs/source.cs#2)]
+ [!code-vb[c_Claim#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_claim/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Claims.Claim System { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Claims.Claim System" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Claims.Claim.System" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma declaração predefinida que representa a entidade do sistema.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Claims.Claim" /> objeto que representa a entidade do sistema. Isso <see cref="T:System.IdentityModel.Claims.Claim" /> objeto tem os valores de propriedade mostrados na tabela a seguir.  
+  
+ <list type="table"><listheader><term>Propriedade  
+  
+ </term><description>Valor  
+  
+ </description></listheader><item><term><see cref="P:System.IdentityModel.Claims.Claim.ClaimType" /></term><description><see cref="P:System.IdentityModel.Claims.ClaimTypes.System" /></description></item><item><term><see cref="P:System.IdentityModel.Claims.Claim.Resource" /></term><description><see langword="System" /></description></item><item><term><see cref="P:System.IdentityModel.Claims.Claim.Right" /></term><description><see cref="P:System.IdentityModel.Claims.Rights.Identity" /></description></item></list></value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Claims.Claim.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres deste <see cref="T:System.IdentityModel.Claims.Claim" /> objeto.</summary>
+        <returns>Isso <see cref="T:System.IdentityModel.Claims.Claim" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retorna contém os valores de <xref:System.IdentityModel.Claims.Claim.Right%2A> e <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

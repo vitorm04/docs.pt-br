@@ -1,0 +1,171 @@
+<Type Name="TransferEncoding" FullName="System.Net.Mime.TransferEncoding">
+  <TypeSignature Language="C#" Value="public enum TransferEncoding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransferEncoding extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mime.TransferEncoding" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica as informações do cabeçalho Content-Transfer-Encoding de um anexo de email.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores de <xref:System.Net.Mime.TransferEncoding> enumeração são usados com o <xref:System.Net.Mail.AttachmentBase.TransferEncoding?displayProperty=nameWithType> propriedade.  
+  
+ O cabeçalho de codificação de transferência de conteúdo especifica a codificação do corpo da mensagem associado para que ele atende aos requisitos de SMTP. SMTP exige que os dados para o transporte em caracteres US-ASCII de 7 bits com linhas não mais de 1000 caracteres.  
+  
+ Valores de codificação de transferência de conteúdo são descritos detalhadamente na seção de RFC 2045 6, disponível em [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ O código a seguir exibe exemplo <xref:System.Net.Mime.TransferEncoding> usado por um anexo.  
+  
+ [!code-cpp[NclMailSync#21](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#21)]
+ [!code-csharp[NclMailSync#21](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Base64">
+      <MemberSignature Language="C#" Value="Base64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mime.TransferEncoding Base64 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mime.TransferEncoding.Base64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.TransferEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Codifica dados baseados em fluxo. Consulte a seção 6.8 do RFC 2406.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EightBit">
+      <MemberSignature Language="C#" Value="EightBit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mime.TransferEncoding EightBit = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mime.TransferEncoding.EightBit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.TransferEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados estão em caracteres de 8 bits que podem representar caracteres internacionais com um comprimento total de linha de até mil caracteres de 8 bits. Para obter mais informações sobre essa extensão de transporte MIME de 8 bits, consulte IETF RFC 6152.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QuotedPrintable">
+      <MemberSignature Language="C#" Value="QuotedPrintable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mime.TransferEncoding QuotedPrintable = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mime.TransferEncoding.QuotedPrintable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.TransferEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Codifica os dados que consistem em caracteres imprimíveis no conjunto de caracteres US-ASCII. Consulte a seção 6.7 do RFC 2406.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SevenBit">
+      <MemberSignature Language="C#" Value="SevenBit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mime.TransferEncoding SevenBit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mime.TransferEncoding.SevenBit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.TransferEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado para dados que não estão codificados. Os dados estão em caracteres US-ASCII de 7 bits com um comprimento total de linha de até mil caracteres. Consulte a seção 2.7 do RFC2406.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mime.TransferEncoding Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mime.TransferEncoding.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.TransferEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a codificação de transferência é desconhecida.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

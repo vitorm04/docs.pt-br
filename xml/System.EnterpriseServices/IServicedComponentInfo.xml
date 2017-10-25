@@ -1,0 +1,66 @@
+<Type Name="IServicedComponentInfo" FullName="System.EnterpriseServices.IServicedComponentInfo">
+  <TypeSignature Language="C#" Value="public interface IServicedComponentInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IServicedComponentInfo" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IServicedComponentInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("8165B19E-8D3A-4d0b-80C8-97DE310DB583")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementado pelo <see cref="T:System.EnterpriseServices.ServicedComponent" /> classe para obter informações sobre o componente por meio de <see cref="M:System.EnterpriseServices.IServicedComponentInfo.GetComponentInfo(System.Int32@,System.String[]@)" /> método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.IServicedComponentInfo> interface não precisam ser implementados diretamente no seu código. Ele é usado internamente pela infraestrutura do .NET Framework.  
+  
+ O <xref:System.EnterpriseServices.IServicedComponentInfo.GetComponentInfo%2A> método não aparece a <xref:System.EnterpriseServices.ServicedComponent> interface de classe. Em vez disso, <xref:System.EnterpriseServices.ServicedComponent> explicitamente implementa <xref:System.EnterpriseServices.IServicedComponentInfo>.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+    <altmember cref="T:System.EnterpriseServices.ServicedComponent" />
+  </Docs>
+  <Members>
+    <Member MemberName="GetComponentInfo">
+      <MemberSignature Language="C#" Value="public void GetComponentInfo (ref int infoMask, out string[] infoArray);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetComponentInfo(int32&amp; infoMask, [out] string[]&amp; infoArray) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IServicedComponentInfo.GetComponentInfo(System.Int32@,System.String[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="infoMask" Type="System.Int32&amp;" RefType="ref" />
+        <Parameter Name="infoArray" Type="System.String[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="infoMask">Um bitmask onde 0x00000001 é uma chave para a ID de processo do componente de serviço, 0x00000002 é uma chave para a ID de domínio de aplicativo e 0x00000004 é uma chave para o URI do componente de serviço remoto.</param>
+        <param name="infoArray">Uma matriz de cadeia de caracteres que pode conter qualquer ou todos os seguintes, em ordem: o componente de serviço processar ID, a ID de domínio de aplicativo e URI do componente de serviço remoto.</param>
+        <summary>Obtém a certas informações sobre o <see cref="T:System.EnterpriseServices.ServicedComponent" /> instância da classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.IServicedComponentInfo.GetComponentInfo%2A> método não pertence à interface publicada do <xref:System.EnterpriseServices.ServicedComponent> de classe e não precisa ser implementado em outro lugar.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

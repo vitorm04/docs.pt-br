@@ -1,0 +1,1900 @@
+<Type Name="SecurityBindingElement" FullName="System.ServiceModel.Channels.SecurityBindingElement">
+  <TypeSignature Language="C#" Value="public abstract class SecurityBindingElement : System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityBindingElement extends System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.SecurityBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Security</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe abstrata que, quando implementada, representa um elemento de associação que dá suporte à segurança de mensagens SOAP de canal.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é a classe base para a segurança de mensagem SOAP elementos de associação em [!INCLUDE[indigo2](~/includes/indigo2-md.md)]. Há três implementações desta classe abstrata: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>, e <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>. Essas implementações do modelo as associações definidas na especificação WS-Security Policy.  
+  
+ Uma associação personalizada contém uma coleção de elementos organizados em uma ordem específica de associação: o elemento que representa a parte superior da pilha de associação é adicionado pela primeira vez, o próximo elemento para baixo na pilha de associação é adicionado em segundo lugar, e assim por diante.  
+  
+ Para adicionar essa classe para uma associação, faça o seguinte:  
+  
+1.  Criará um <xref:System.ServiceModel.Channels.BindingElementCollection>.  
+  
+2.  Criar um elemento de associação personalizada que está acima deste elemento de associação da pilha de associação, como opcional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> e <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
+  
+3.  Adicionar estes elementos na ordem descrita anteriormente para o <xref:System.ServiceModel.Channels.BindingElementCollection> usando o <xref:System.ServiceModel.Channels.BindingElementCollection.InsertItem%2A> método.  
+  
+4.  Criar uma instância de um elemento de associação de segurança derivado <xref:System.ServiceModel.Channels.SecurityBindingElement>, como <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, ou <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>.  
+  
+5.  Adicione o elemento de associação de segurança derivada à coleção.  
+  
+6.  Adicione todos os elementos adicionais associação personalizada à coleção, como <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]usando um <xref:System.ServiceModel.Channels.SecurityBindingElement>, consulte [modos de autenticação SecurityBindingElement](~/docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) e [como: criar um personalizado de associação usando o SecurityBindingElement](~/docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+  
+> [!NOTE]
+>  Uma vez um <xref:System.ServiceModel.Channels.SecurityBindingElement> objeto é criado, você deve tratar suas propriedades como imutável. Chamando `set` em algumas propriedades podem ter efeitos imprevisíveis: a associação pode se comportar como se a propriedade retida seu valor antigo, com uma falha de tempo de execução, sendo a única indicação de um problema. Duas propriedades conhecidas se comporta dessa maneira são <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> e <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A>. Pode haver outras propriedades de que isso também é verdadeiro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowInsecureTransport">
+      <MemberSignature Language="C#" Value="public bool AllowInsecureTransport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowInsecureTransport" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.AllowInsecureTransport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as mensagens seguras de modo misto podem ser enviadas por um transporte não seguro, como HTTP.</summary>
+        <value>
+          <see langword="true" /> se as mensagens seguras de modo misto puderem ser enviadas por um transporte não seguro; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de fábrica de canais.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Cria uma fábrica de canais com base no <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> passado configurações e o contexto de associação. A fábrica de canais criada é uma SOAP mensagem segurança fábrica de canais, que internamente tem uma referência para a fábrica de canais que corresponde ao contexto de associação (que inclui a fábrica de canais de transporte).</summary>
+        <returns>Uma fábrica de canais com base no <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> passado configurações e o contexto de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fábrica de canais criada é uma SOAP mensagem segurança fábrica de canais, que internamente tem uma referência para a fábrica de canais que corresponde ao contexto de associação (que inclui a fábrica de canais de transporte).  
+  
+ Esse método não a verificação de erros do parâmetro e, em seguida, chama <xref:System.ServiceModel.Channels.SecurityBindingElement.BuildChannelFactoryCore%2A>. Esse método, quando implementada em uma classe derivada, cria uma fábrica de canais, que é usada para criar um canal que processa mensagens de saída para esta associação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um canal do tipo <paramref name="TChannel" /> não tem suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactoryCore&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactoryCore&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactoryCore&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.BuildChannelFactoryCore``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de fábrica de canais.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Quando implementada, cria uma fábrica de canais de um tipo especificado.</summary>
+        <returns>Uma fábrica de canais de um tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement.BuildChannelFactory%2A>, que faz a verificação de erros, chama esse método. Quando esse método é implementado em uma classe derivada, cria uma fábrica de canais, que é usada para criar um canal que processa mensagens de saída para esta associação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um canal do tipo <paramref name="TChannel" /> não tem suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de ouvinte de canal.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Cria um ouvinte de canal com base no <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> passado configurações e o contexto de associação.</summary>
+        <returns>Um ouvinte de canal com base no <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> passado configurações e o contexto de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fábrica de canais criada é um SOAP mensagem segurança canal ouvinte, que internamente tem uma referência para o ouvinte de canal que corresponde ao contexto de associação, o que inclui a escuta de canal de transporte.  
+  
+ Esse método não a verificação de erros do parâmetro e, em seguida, chama <xref:System.ServiceModel.Channels.SecurityBindingElement.BuildChannelListenerCore%2A>. Esse método, quando implementada em uma classe derivada, cria um ouvinte de canal, que é usado para criar um canal que processa mensagens de entrada para essa associação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um canal do tipo <paramref name="TChannel" /> não tem suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListenerCore&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="protected abstract System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListenerCore&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListenerCore&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.BuildChannelListenerCore``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de ouvinte de canal.</typeparam>
+        <param name="context">O objeto <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Quando implementada, cria um ouvinte de canal de um tipo especificado.</summary>
+        <returns>Um ouvinte de canal de um tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement.BuildChannelListener%2A>, que faz a verificação de erros, chama esse método. Quando esse método é implementado em uma classe derivada, cria um ouvinte de canal, que é usado para criar um canal que processa mensagens de saída para esta associação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um canal do tipo <paramref name="TChannel" /> não tem suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de fábrica de canais.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Determina se uma fábrica de canais do tipo especificado pode ser criada.</summary>
+        <returns>
+          <see langword="true" />Se uma fábrica de canais do tipo especificado pode ser criada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar esse método antes de tentar criar uma fábrica de canais.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de ouvinte de canal.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Determina se um ouvinte de canal do tipo especificado pode ser criado.</summary>
+        <returns>
+          <see langword="true" />Se um ouvinte de canal do tipo especificado pode ser criado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar esse método antes de tentar criar um ouvinte de canal.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAnonymousForCertificateBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateAnonymousForCertificateBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateAnonymousForCertificateBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para autenticação de cliente anônimo e autenticação baseada em certificado de servidor.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" /> que contém a nova associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O cliente e o servidor devem ser configurados fora de banda com o certificado de serviço.  
+  
+ A associação é criada com <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A> definida como <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11%2A> e <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> definido como `true`.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como chamar esse método.  
+  
+ [!code-csharp[c_CustomBindingsAuthMode#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
+ [!code-vb[c_CustomBindingsAuthMode#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateCertificateOverTransportBindingElement">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria um elemento de associação de segurança que espera que os clientes façam a autenticação baseada em certificado usando a segurança de mensagem SOAP. Esse elemento de associação espera o transporte para fornecer autenticação de servidor, bem como a proteção de mensagem (por exemplo, HTTPS).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O cliente deve ser configurado com um certificado usado para a autenticação.  
+  
+> [!NOTE]
+>  Uma vez um <xref:System.ServiceModel.Channels.SecurityBindingElement> objeto é criado ao chamar esse método, o <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A> propriedade deve ser tratada como imutável. Comportamento de associação inconsistente pode ocorrer se esse valor é modificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateCertificateOverTransportBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.TransportSecurityBindingElement CreateCertificateOverTransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.TransportSecurityBindingElement CreateCertificateOverTransportBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateCertificateOverTransportBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransportSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança que espera que os clientes façam a autenticação baseada em certificado usando a segurança de mensagem SOAP.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.TransportSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento de associação espera o transporte para fornecer autenticação de servidor, bem como a proteção de mensagem (por exemplo, HTTPS).  
+  
+ O elemento de associação está configurado para usar o <xref:System.ServiceModel.MessageSecurityVersion.Default%2A> propriedade o <xref:System.ServiceModel.MessageSecurityVersion> classe.  
+  
+ A associação criada tem <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> definido como `true`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCertificateOverTransportBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.TransportSecurityBindingElement CreateCertificateOverTransportBindingElement (System.ServiceModel.MessageSecurityVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.TransportSecurityBindingElement CreateCertificateOverTransportBindingElement(class System.ServiceModel.MessageSecurityVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateCertificateOverTransportBindingElement(System.ServiceModel.MessageSecurityVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransportSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.MessageSecurityVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">O <see cref="T:System.ServiceModel.MessageSecurityVersion" /> para a associação.</param>
+        <summary>Cria um elemento de associação de segurança que espera que os clientes façam a autenticação baseada em certificado usando a segurança de mensagem SOAP.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.TransportSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento de associação espera o transporte para fornecer autenticação de servidor, bem como a proteção de mensagem (por exemplo, HTTPS). O elemento de associação é configurado com o <xref:System.ServiceModel.MessageSecurityVersion>.  
+  
+ A associação criada tem <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> definido como `true`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCertificateSignatureBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.AsymmetricSecurityBindingElement CreateCertificateSignatureBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.AsymmetricSecurityBindingElement CreateCertificateSignatureBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateCertificateSignatureBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AsymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação usando um certificado para assinar mensagens. Este elemento de associação pode ser usado apenas para trocas de mensagens unidirecionais e só é capaz de autenticar a mensagem.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.AsymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ Esse elemento de associação requer que o cliente configurar um certificado para fins de autenticação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateIssuedTokenBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateIssuedTokenBindingElement (System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateIssuedTokenBindingElement(class System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement(System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="issuedTokenParameters" Type="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="issuedTokenParameters">Um <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> que representa a chave simétrica com base em token emitido.</param>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para exigir a autenticação de cliente usando uma chave simétrica com base em emitiu o token.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os parâmetros de token emitidos devem ter um tipo de chave simétrico.  
+  
+> [!NOTE]
+>  Uma vez um <xref:System.ServiceModel.Channels.SecurityBindingElement> objeto é criado ao chamar esse método, o <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> propriedade deve ser tratada como imutável. Comportamento de associação inconsistente pode ocorrer se esse valor é modificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="issuedTokenParameters" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tipo de chave <paramref name="issuedTokenParameters" /> não é simétrica.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateIssuedTokenForCertificateBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateIssuedTokenForCertificateBindingElement (System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateIssuedTokenForCertificateBindingElement(class System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement(System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="issuedTokenParameters" Type="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="issuedTokenParameters">Um <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> que representa a chave simétrica com base em token emitido.</param>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para exigir autenticação de servidor com base em certificado do servidor e autenticação de cliente com base em um token emitido.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token emitido pode ter um simétrica ou uma chave assimétrica. O cliente e o servidor devem ser provisionados com o certificado do servidor.  
+  
+ A associação criada tem <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> definida como `true` e <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A> definido como <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11%2A>.  
+  
+> [!NOTE]
+>  Uma vez um <xref:System.ServiceModel.Channels.SecurityBindingElement> objeto é criado ao chamar esse método, o <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> propriedade deve ser tratada como imutável. Comportamento de associação inconsistente pode ocorrer se esse valor é modificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="issuedTokenParameters" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateIssuedTokenForSslBindingElement">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para exigir autenticação de servidor com base em certificado do servidor e autenticação de cliente com base em um token emitido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token emitido pode ter um simétrica ou uma chave assimétrica. O cliente autentica o servidor usando o protocolo SSL do nível de SOAP.  
+  
+ As duas sobrecargas usam uma <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters> parâmetro. Um deles inclui um parâmetro que especifica se o cancelamento é necessário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateIssuedTokenForSslBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement (System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement(class System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement(System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="issuedTokenParameters" Type="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="issuedTokenParameters">Um <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />.</param>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para exigir autenticação de servidor com base em certificado do servidor e autenticação de cliente com base em um token emitido.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O servidor emite um token de contexto de segurança baseada em cookie na extremidade do protocolo SSL.  
+  
+ A associação criada tem <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> definida como `true` e <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A> definido como <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="issuedTokenParameters" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateIssuedTokenForSslBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement (System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters, bool requireCancellation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateIssuedTokenForSslBindingElement(class System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters, bool requireCancellation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement(System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="issuedTokenParameters" Type="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="issuedTokenParameters">Um <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />.</param>
+        <param name="requireCancellation">
+          <see langword="true" />Se o cancelamento é obrigatório. Caso contrário, <see langword="false" />. Definindo-a como <see langword="false" /> permite que um token de contexto de segurança que é útil em cenários de farm da Web, porque nesse modo, o estado da sessão é codificado dentro de segurança estabelecida token de contexto em vez de ser mantido na memória do servidor.</param>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para exigir autenticação de servidor com base em certificado do servidor e autenticação de cliente com base em um token emitido.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A associação criada tem <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> definida como `true` e <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A> definido como <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="issuedTokenParameters" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateIssuedTokenOverTransportBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.TransportSecurityBindingElement CreateIssuedTokenOverTransportBindingElement (System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.TransportSecurityBindingElement CreateIssuedTokenOverTransportBindingElement(class System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters issuedTokenParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement(System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransportSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="issuedTokenParameters" Type="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="issuedTokenParameters">Um <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />.</param>
+        <summary>Cria um elemento de associação de segurança configurado para exigir autenticação de cliente com base de segurança SOAP usando um token emitido. Esse elemento de associação requer o transporte para fornecer autenticação de servidor e a proteção de mensagem (por exemplo, HTTPS).</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.TransportSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A associação criada tem <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> definido como `true`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+> [!NOTE]
+>  Uma vez um <xref:System.ServiceModel.Channels.SecurityBindingElement> objeto é criado ao chamar esse método, o <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> propriedade deve ser tratada como imutável. Comportamento de associação inconsistente pode ocorrer se esse valor é modificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="issuedTokenParameters" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKerberosBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateKerberosBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateKerberosBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para exigir autenticação de cliente com base em token do Kerberos do cliente.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para fazer a autenticação Kerberos, o servidor deve executar em uma conta que tenha um serviço de nome de entidade registrado com o Active Directory. NetworkService é dessa conta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKerberosOverTransportBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.TransportSecurityBindingElement CreateKerberosOverTransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.TransportSecurityBindingElement CreateKerberosOverTransportBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransportSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança que está configurado para exigir segurança SOAP com base em autenticação de cliente usando o token do cliente Kerberos. Esse elemento de associação requer o transporte para fornecer autenticação de servidor e a proteção de mensagem (por exemplo, HTTPS).</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.TransportSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para fazer a autenticação Kerberos, o servidor deve executar em uma conta que tenha um serviço de nome de entidade registrado com o Active Directory. NetworkService é dessa conta.  
+  
+ A associação criada tem <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> definido como `true`. O <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateMutualCertificateBindingElement">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria um elemento de associação de segurança assimétrica que está configurado para exigir autenticação de cliente baseada em certificado, bem como autenticação de servidor com base em certificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O cliente deve ser configurado com seu certificado, bem como o certificado do servidor. O servidor deve ser configurado com seu certificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateMutualCertificateBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SecurityBindingElement CreateMutualCertificateBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SecurityBindingElement CreateMutualCertificateBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança assimétrica que está configurado para exigir autenticação de cliente baseada em certificado, bem como autenticação de servidor com base em certificado.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A associação está configurada para que uma nova chave simétrica aleatória (criptografada para o servidor) é gerada para cada solicitação pelo cliente e é usada para proteger a solicitação, bem como a resposta do servidor. O certificado do cliente é usado como um token de suporte de endosso na solicitação.  
+  
+ Um <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> é realmente criado.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como chamar esse método.  
+  
+ [!code-csharp[c_CreateSecureSession#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMutualCertificateBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SecurityBindingElement CreateMutualCertificateBindingElement (System.ServiceModel.MessageSecurityVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SecurityBindingElement CreateMutualCertificateBindingElement(class System.ServiceModel.MessageSecurityVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement(System.ServiceModel.MessageSecurityVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.MessageSecurityVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">A versão de segurança de mensagem.</param>
+        <summary>Cria um elemento de associação de segurança assimétrica que está configurado para exigir autenticação de cliente baseada em certificado, bem como autenticação de servidor com base em certificado.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a versão for WSSecurity10, o elemento de associação é configurado de forma que a solicitação do cliente é conectada por seu certificado e criptografado com o certificado do servidor.  
+  
+ Se a versão for WSSecurity11, o elemento de associação está configurado para que uma nova chave simétrica aleatória (criptografada para o servidor) é gerada para cada solicitação pelo cliente e é usada para proteger a solicitação, bem como a resposta do servidor. O certificado do cliente é usado como um token de suporte de endosso na solicitação.  
+  
+> [!NOTE]
+>  Uma vez um <xref:System.ServiceModel.Channels.SecurityBindingElement> objeto é criado ao chamar esse método, o <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A> propriedade é imutável. Chamando `set` por ele não alterá-lo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMutualCertificateBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SecurityBindingElement CreateMutualCertificateBindingElement (System.ServiceModel.MessageSecurityVersion version, bool allowSerializedSigningTokenOnReply);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SecurityBindingElement CreateMutualCertificateBindingElement(class System.ServiceModel.MessageSecurityVersion version, bool allowSerializedSigningTokenOnReply) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement(System.ServiceModel.MessageSecurityVersion,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.MessageSecurityVersion" />
+        <Parameter Name="allowSerializedSigningTokenOnReply" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="version">A versão de segurança de mensagem.</param>
+        <param name="allowSerializedSigningTokenOnReply">
+          <see langword="true" />para permitir que um serializado assinatura de token na resposta; Caso contrário, <see langword="false" />.</param>
+        <summary>Cria um elemento de associação de segurança assimétrica que está configurado para exigir autenticação de cliente baseada em certificado, bem como autenticação de servidor com base em certificado.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `allowSerializedSigningTokenOnReply` parâmetro, quando `true`, permite a interoperabilidade com versões mais antigas do WSE Web Services Enhancements ().  
+  
+> [!NOTE]
+>  Uma vez um <xref:System.ServiceModel.Channels.SecurityBindingElement> objeto é criado ao chamar esse método, o <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A> propriedade deve ser tratada como imutável. Comportamento de associação inconsistente pode ocorrer se esse valor é modificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMutualCertificateDuplexBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.AsymmetricSecurityBindingElement CreateMutualCertificateDuplexBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.AsymmetricSecurityBindingElement CreateMutualCertificateDuplexBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateDuplexBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AsymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança assimétrica que está configurado para exigir autenticação de cliente baseada em certificado, bem como autenticação de servidor com base em certificado. Esse modo de autenticação pode ser usado para proteger os padrões de troca de mensagens duplex e requer que o serviço seja configurado com o certificado do cliente fora da banda.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.AsymmetricSecurityBindingElement" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMutualCertificateDuplexBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.AsymmetricSecurityBindingElement CreateMutualCertificateDuplexBindingElement (System.ServiceModel.MessageSecurityVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.AsymmetricSecurityBindingElement CreateMutualCertificateDuplexBindingElement(class System.ServiceModel.MessageSecurityVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateDuplexBindingElement(System.ServiceModel.MessageSecurityVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AsymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.ServiceModel.MessageSecurityVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">A versão de segurança de mensagem.</param>
+        <summary>Cria um elemento de associação de segurança assimétrica que está configurado para exigir autenticação de cliente baseada em certificado, bem como autenticação de servidor com base em certificado. Esse modo de autenticação pode ser usado para proteger os padrões de troca de mensagens duplex e requer que o serviço seja configurado com o certificado do cliente fora da banda.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.AsymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Uma vez um <xref:System.ServiceModel.Channels.SecurityBindingElement> objeto é criado ao chamar esse método, o <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A> propriedade deve ser tratada como imutável. Comportamento de associação inconsistente pode ocorrer se esse valor é modificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="version" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSecureConversationBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SecurityBindingElement CreateSecureConversationBindingElement (System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SecurityBindingElement CreateSecureConversationBindingElement(class System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement(System.ServiceModel.Channels.SecurityBindingElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bootstrapSecurity" Type="System.ServiceModel.Channels.SecurityBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="bootstrapSecurity">Um <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> que contém a especificação em como as mensagens de handshake de conversa segura são protegidas.</param>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para estabelecer uma conversa segura entre o cliente e o serviço. O token de contexto de segurança emitido no final do handshake conversa segura é usado para proteger as mensagens. O elemento de associação de segurança de inicialização especifica como as mensagens de handshake de conversa segura são protegidas.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento de associação está configurado para usar os tokens de contexto de segurança baseada em sessão.  
+  
+ O `bootstrapSecurity` é usado para indicar a associação de segurança e a política usada para solicitar um token de conversa segura do serviço.  
+  
+ Se `bootstrapSecurity` é um <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, o elemento de associação retornado por este método também é um, e <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> é definido como `true`; e o <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`; e o <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ Caso contrário, um <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> for retornado, com <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> definido como `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bootstrapSecurity" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSecureConversationBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SecurityBindingElement CreateSecureConversationBindingElement (System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurity, bool requireCancellation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SecurityBindingElement CreateSecureConversationBindingElement(class System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurity, bool requireCancellation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement(System.ServiceModel.Channels.SecurityBindingElement,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bootstrapSecurity" Type="System.ServiceModel.Channels.SecurityBindingElement" />
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="bootstrapSecurity">Um <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> que contém a especificação em como as mensagens de handshake de conversa segura são protegidas.</param>
+        <param name="requireCancellation">
+          <see langword="true" />Se o cancelamento é obrigatório. Caso contrário, <see langword="false" />. Definir esse parâmetro para <see langword="false" /> permite que um token de contexto de segurança que é útil em cenários de farm da Web, porque nesse modo, o estado da sessão é codificado dentro de segurança estabelecida token de contexto em vez de ser mantido na memória do servidor.</param>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para estabelecer uma conversa segura entre o cliente e o serviço. O token de contexto de segurança emitido no final do handshake conversa segura é usado para proteger as mensagens.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `requireCancellation` é `false`, tokens de contexto de segurança baseada em cookie são emitidos; caso contrário, os tokens de contexto de segurança baseadas em sessão são emitidos.  
+  
+ O `bootstrapSecurity` é usado para indicar a associação de segurança e a política usada para solicitação um `SecureConversationToken` do serviço.  
+  
+ Se `bootstrapSecurity` é um <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, o elemento de associação retornado por este método também é um `TransportSecurityBindingElement`, e <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> é definido como `true`; e o <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`; e o <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ Caso contrário, um <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> for retornado, com <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> definido como `false`.  
+  
+> [!NOTE]
+>  Quando a representação é necessária em [!INCLUDE[wxp](~/includes/wxp-md.md)], use uma sessão segura sem um token de contexto de segurança. Quando os tokens de contexto de segurança são usadas com representação um <xref:System.InvalidOperationException> é gerada. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Cenários sem suporte](~/docs/framework/wcf/feature-details/unsupported-scenarios.md). [!INCLUDE[crabout](~/includes/crabout-md.md)]sessões seguras, consulte [sessões seguras](~/docs/framework/wcf/feature-details/secure-sessions.md).  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como chamar esse método.  
+  
+ [!code-csharp[c_CreateSecureSession#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bootstrapSecurity" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSecureConversationBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SecurityBindingElement CreateSecureConversationBindingElement (System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurity, bool requireCancellation, System.ServiceModel.Security.ChannelProtectionRequirements bootstrapProtectionRequirements);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SecurityBindingElement CreateSecureConversationBindingElement(class System.ServiceModel.Channels.SecurityBindingElement bootstrapSecurity, bool requireCancellation, class System.ServiceModel.Security.ChannelProtectionRequirements bootstrapProtectionRequirements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement(System.ServiceModel.Channels.SecurityBindingElement,System.Boolean,System.ServiceModel.Security.ChannelProtectionRequirements)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bootstrapSecurity" Type="System.ServiceModel.Channels.SecurityBindingElement" />
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+        <Parameter Name="bootstrapProtectionRequirements" Type="System.ServiceModel.Security.ChannelProtectionRequirements" />
+      </Parameters>
+      <Docs>
+        <param name="bootstrapSecurity">Um <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> que contém a especificação em como as mensagens de handshake de conversa segura são protegidas.</param>
+        <param name="requireCancellation">
+          <see langword="true" />Se o cancelamento é obrigatório. Caso contrário, <see langword="false" />. Definir esse parâmetro para <see langword="false" /> permite que um token de contexto de segurança que é útil em cenários de farm da Web, porque nesse modo, o estado da sessão é codificado dentro de segurança estabelecida token de contexto em vez de ser mantido na memória do servidor.</param>
+        <param name="bootstrapProtectionRequirements">O <see cref="T:System.ServiceModel.Security.ChannelProtectionRequirements" /> objeto que especifica os requisitos para proteção de canal.</param>
+        <summary>Cria um elemento de associação de segurança simétrica que está configurado para estabelecer uma conversa segura entre o cliente e o serviço. O token de contexto de segurança emitido no final do handshake conversa segura é usado para proteger as mensagens. O elemento de associação de segurança de inicialização especifica como as mensagens de handshake de conversa segura são protegidas.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `bootstrapProtectionRequirements` parâmetro permite personalização de como as mensagens trocadas como parte do handshake conversa segura são protegidas.  
+  
+ O `bootstrapSecurity` é usado para indicar a associação de segurança e a política usada para solicitar um token de conversa segura do serviço.  
+  
+ Se `bootstrapSecurity` é um <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, o elemento de associação retornado por este método também é um `TransportSecurityBindingElement`, e <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> é definido como `true`; e o <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`; e o <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ Caso contrário, um <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> for retornado, com <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> definido como `false`.  
+  
+> [!NOTE]
+>  Quando a representação é necessária em [!INCLUDE[wxp](~/includes/wxp-md.md)], use uma sessão segura sem um token de contexto de segurança. Quando os tokens de contexto de segurança são usadas com representação um <xref:System.InvalidOperationException> é gerada. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Cenários sem suporte](~/docs/framework/wcf/feature-details/unsupported-scenarios.md). [!INCLUDE[crabout](~/includes/crabout-md.md)]sessões seguras, consulte [sessões seguras](~/docs/framework/wcf/feature-details/secure-sessions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bootstrapSecurity" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSslNegotiationBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateSslNegotiationBindingElement (bool requireClientCertificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateSslNegotiationBindingElement(bool requireClientCertificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requireClientCertificate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="requireClientCertificate">
+          <see langword="true" />Se um certificado de cliente é necessário durante a negociação SSL.</param>
+        <summary>Cria um elemento de associação de segurança simétrica estiver configurado para fazer a negociação de nível de SOAP SSL entre o cliente e servidor, indicando se é necessário um certificado de cliente.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" /> que contém a nova associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token de contexto de segurança emitido após a negociação SSL é baseada em cookie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSslNegotiationBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateSslNegotiationBindingElement (bool requireClientCertificate, bool requireCancellation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateSslNegotiationBindingElement(bool requireClientCertificate, bool requireCancellation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requireClientCertificate" Type="System.Boolean" />
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="requireClientCertificate">
+          <see langword="true" />Se um certificado de cliente é necessário durante a negociação SSL.</param>
+        <param name="requireCancellation">
+          <see langword="true" />Se o cancelamento é necessário. Definindo-a como <see langword="false" /> permite que um token de contexto de segurança que é útil em cenários de farm da Web, porque nesse modo, o estado da sessão é codificado dentro de segurança estabelecida token de contexto em vez de ser mantido na memória do servidor.</param>
+        <summary>Cria um elemento de associação de segurança simétrica que realiza a negociação SSL de SOAP, observando se um certificado de cliente e o cancelamento é necessária.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" /> que contém a nova associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token de contexto de segurança emitido após a negociação SSL baseado em sessão é `requireCancellation` é `true`; caso contrário, ela é baseada em cookie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSspiNegotiationBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança simétrica que realiza a negociação SSPI de SOAP com base no pacote de autenticação Negotiate.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token de contexto de segurança emitido ao final da negociação de SSPI é baseada em cookie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSspiNegotiationBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement (bool requireCancellation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateSspiNegotiationBindingElement(bool requireCancellation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="requireCancellation">Especifica se o cancelamento é necessário. Definindo-a como <see langword="false" /> permite que um token de contexto de segurança que é útil em cenários de farm da Web, porque nesse modo, o estado da sessão é codificado dentro de segurança estabelecida token de contexto em vez de ser mantido na memória do servidor.</param>
+        <summary>Cria um elemento de associação de segurança simétrica que realiza a negociação SSPI de SOAP com base no pacote de autenticação Negotiate.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `requireCancellation` é `false`, o token de contexto de segurança emitido ao final da negociação de SSPI é baseada em cookie; caso contrário, ele é baseado em sessão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSspiNegotiationOverTransportBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.TransportSecurityBindingElement CreateSspiNegotiationOverTransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.TransportSecurityBindingElement CreateSspiNegotiationOverTransportBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationOverTransportBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransportSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança que está configurado para autenticação de cliente com base na negociação de SSPI de SOAP usando o pacote de autenticação Negotiate. O elemento de associação requer o transporte para fornecer a autenticação do servidor e a proteção de mensagem (por exemplo, HTTPS).</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.TransportSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token de contexto de segurança emitido no final da negociação SSPI é baseada em cookie.  
+  
+ A associação criada tem <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> definido como `true`. O <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSspiNegotiationOverTransportBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.TransportSecurityBindingElement CreateSspiNegotiationOverTransportBindingElement (bool requireCancellation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.TransportSecurityBindingElement CreateSspiNegotiationOverTransportBindingElement(bool requireCancellation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationOverTransportBindingElement(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransportSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="requireCancellation">Especifica se o cancelamento é necessário. Definindo-a como <see langword="false" /> permite que um token de contexto de segurança que é útil em cenários de farm da Web, porque nesse modo, o estado da sessão é codificado dentro de segurança estabelecida token de contexto em vez de ser mantido na memória do servidor.</param>
+        <summary>Cria um elemento de associação de segurança que está configurado para autenticação de cliente com base na negociação de SSPI de SOAP usando o pacote de autenticação Negotiate. O elemento de associação requer o transporte para fornecer a autenticação do servidor e a proteção de mensagem (por exemplo, HTTPS).</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.TransportSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `requireCancellation` é `false`, tokens de contexto de segurança baseada em cookie são emitidos; caso contrário, os tokens de contexto de segurança baseadas em sessão são emitidos.  
+  
+ A associação criada tem <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> definido como `true`. O <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUserNameForCertificateBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateUserNameForCertificateBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateUserNameForCertificateBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança simétrico configurado para exigir a autenticação de cliente baseada em nome e em senha do usuário e a autenticação de servidor baseada em certificado. O elemento de associação criado exige que o cliente seja configurado com um certificado de serviço fora de banda antes de abrir um canal de comunicação com um serviço.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O certificado do servidor deve ser configurado fora da banda no cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUserNameForSslBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateUserNameForSslBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateUserNameForSslBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForSslBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança simétrico configurado para exigir a autenticação de cliente baseada em nome e em senha do usuário e a autenticação de servidor baseada em certificado. O cliente autentica o servidor usando o protocolo SSL do nível de SOAP.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token de contexto de segurança emitido no final da negociação SSPI é baseada em cookie.  
+  
+ O cliente não precisa ser provisionado com o certificado do servidor porque ele obtém como parte do protocolo SSL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUserNameForSslBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateUserNameForSslBindingElement (bool requireCancellation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.SymmetricSecurityBindingElement CreateUserNameForSslBindingElement(bool requireCancellation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForSslBindingElement(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SymmetricSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requireCancellation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="requireCancellation">Especifica se o cancelamento é necessário. Definindo-a como <see langword="false" /> permite que um token de contexto de segurança que é útil em cenários de farm da Web, porque nesse modo, o estado da sessão é codificado dentro de segurança estabelecida token de contexto em vez de ser mantido na memória do servidor.</param>
+        <summary>Cria um elemento de associação de segurança simétrico configurado para exigir a autenticação de cliente baseada em nome e em senha do usuário e a autenticação de servidor baseada em certificado. O cliente autentica o servidor usando o protocolo SSL do nível de SOAP.</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `requireCancellation` é `false`, tokens de contexto de segurança com monitoração de estado são emitidos; caso contrário, os tokens de contexto de segurança sem monitoração de estado são emitidos.  
+  
+ O cliente não precisa ser provisionado com o certificado do servidor porque ele obtém como parte do protocolo SSL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUserNameOverTransportBindingElement">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.TransportSecurityBindingElement CreateUserNameOverTransportBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.TransportSecurityBindingElement CreateUserNameOverTransportBindingElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransportSecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um elemento de associação de segurança que é configurado para a autenticação do cliente com base em um nome de usuário e senha enviados como parte da mensagem SOAP. O elemento de associação requer o transporte para fornecer a autenticação do servidor e a proteção de mensagem (por exemplo, HTTPS).</summary>
+        <returns>Um objeto <see cref="T:System.ServiceModel.Channels.TransportSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A associação criada tem <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> definido como `true`. O <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ O <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto retornado de <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> tem seu <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.DetectReplays%2A> propriedade definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAlgorithmSuite">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityAlgorithmSuite DefaultAlgorithmSuite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityAlgorithmSuite DefaultAlgorithmSuite" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.DefaultAlgorithmSuite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a criptografia de mensagem e os algoritmos de encapsulamento de chave.</summary>
+        <value>O objeto <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" /> que representa a criptografia de mensagem e os algoritmos de encapsulamento de chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> objeto que contém várias propriedades que especificam os algoritmos de segurança que devem ser usados para assinatura, criptografia, derivação de chaves e outras operações criptográficas. Ela também controla os tamanhos de chave que são usados para executar estas operações criptográficas.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir essa propriedade.  
+  
+ [!code-csharp[c_CustomBindingsAuthMode#8](~/samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#8)]   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor é null em um <see langword="set" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableUnsecuredResponse">
+      <MemberSignature Language="C#" Value="public bool EnableUnsecuredResponse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableUnsecuredResponse" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.EnableUnsecuredResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se [!INCLUDE[indigo2](~/includes/indigo2-md.md)] pode enviar e receber respostas desprotegidas a solicitações protegidas.</summary>
+        <value>
+          <see langword="true" /> se [!INCLUDE[indigo2](~/includes/indigo2-md.md)] puder enviar e receber respostas desprotegidas a solicitações protegidas. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointSupportingTokenParameters">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.Tokens.SupportingTokenParameters EndpointSupportingTokenParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.Tokens.SupportingTokenParameters EndpointSupportingTokenParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SupportingTokenParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o ponto de extremidade que dá suporte a parâmetros de token.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.Tokens.SupportingTokenParameters" /> objeto que representa o ponto de extremidade que dá suporte a parâmetros de token.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tokens de suporte fornecem declarações adicionais além daqueles contidos nos tokens primários para a associação. A coleção retornada pelo <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A> contém parâmetros adicionais de token (<xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>) para todas as operações definidas por um ponto de extremidade. Os parâmetros de token principais encontram-se em uma a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> (ambos herdam o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe). No caso do <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, os parâmetros de token primários são retornados pelo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.ProtectionTokenParameters%2A> propriedade. Sobre o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> elemento são duas propriedades de parâmetro, o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.InitiatorTokenParameters%2A> e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RecipientTokenParameters%2A> propriedades.  
+  
+> [!NOTE]
+>  As propriedades são chamadas de parâmetros porque elas especificam apenas o tipo de token de segurança, não os valores reais.  
+>   
+>  Os tokens de suporte podem ser definidas no nível do ponto de extremidade, caso em que estão incluídos em todas as mensagens protegidas enviadas pelo cliente para o serviço. O serviço aplica todas as mensagens protegidas do cliente contém os tipos de token de suporte configurados por esta propriedade.  
+>   
+>  Para oferecer suporte a tokens apenas para uma operação (nem todas as operações em um ponto de extremidade), use o <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">A propriedade a ser obtida.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Obtém um objeto especificado usando especificado <see cref="T:System.ServiceModel.Channels.BindingContext" />.</summary>
+        <returns>O objeto especificado do <see cref="T:System.ServiceModel.Channels.BindingContext" /> ou <see langword="null" /> se o objeto não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método obtém o objeto especificado da classe base ou um dos ancestrais dessa classe. O objeto retornado normalmente é uma coleção de propriedades, por exemplo, um objeto que implementa <xref:System.ServiceModel.Channels.ISecurityCapabilities>.  
+  
+ Se o `SecurityBindingElement` não reconhece o tipo da propriedade solicitada, ela delega a chamada para a pilha de elemento de associação abaixo dela, passando o parâmetro de contexto de associação. Os tipos de propriedades que o `SecurityBindingElement` pode fornecer são <xref:System.ServiceModel.Channels.ISecurityCapabilities> e <xref:System.ServiceModel.Security.IdentityVerifier>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeTimestamp">
+      <MemberSignature Language="C#" Value="public bool IncludeTimestamp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeTimestamp" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se carimbos de data/hora são incluídos em cada mensagem.</summary>
+        <value>
+          <see langword="true" /> se os carimbos de hora são incluídos em cada mensagem. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> é de propriedade `true` e se `DetectReplays` é `true`, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] detecta um ataque de repetição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyEntropyMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityKeyEntropyMode KeyEntropyMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Security.SecurityKeyEntropyMode KeyEntropyMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityKeyEntropyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a origem da entropia usada para criar chaves.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.SecurityKeyEntropyMode" /> usado para criar chaves. O valor padrão é <see cref="F:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode%2A> Especifica como a chave para tokens (como <xref:System.ServiceModel.Security.Tokens.SecurityContextSecurityToken>) emitido por serviço é computado: se ela é computada com base no cliente material de chave, somente o material de chave de serviço ou uma combinação de ambos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalClientSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.LocalClientSecuritySettings LocalClientSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.LocalClientSecuritySettings LocalClientSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.LocalClientSecuritySettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as propriedades de associação específico para as configurações de segurança local usadas pelo cliente.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.LocalClientSecuritySettings" /> que representa as propriedades de associação específicas para as configurações de segurança local usadas pelo cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As configurações são locais no sentido de que eles não são as configurações derivadas da política de segurança do serviço. Você pode obter o <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> do objeto e usá-lo para definir propriedades de segurança para essa associação.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como acessar essa propriedade para definir uma propriedade de outro objeto.  
+  
+ [!code-csharp[c_MaxClockSkew#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_maxclockskew/cs/source.cs#1)]
+ [!code-vb[c_MaxClockSkew#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_maxclockskew/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalServiceSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.LocalServiceSecuritySettings LocalServiceSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.LocalServiceSecuritySettings LocalServiceSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.LocalServiceSecuritySettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as propriedades de associação específico para as configurações de segurança local usadas pelo serviço.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.LocalServiceSecuritySettings" /> objeto que representa as propriedades de associação específicas para as configurações de segurança local usadas pelo serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As configurações são locais porque eles não são publicados como parte da política de segurança do serviço e não afetam a associação do cliente.  
+  
+ As seguintes propriedades do <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> objeto pode ajudar a reduzir o ataque de segurança uma negação de serviço (DOS):  
+  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: controla o número máximo de limitada de tempo `SecurityContextToken`s que são armazenados em cache pelo servidor depois de fazer negociação SPNEGO ou SSL.  
+  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: controla o tempo de vida de `SecurityContextToken`s são emitidas pelo servidor após a negociação SPNEGO ou SSL. Os caches de servidor a `SecurityContextToken`s para esse período de tempo.  
+  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: controla o número máximo de conversas seguras que são estabelecidas no servidor, mas para que nenhum aplicativo de mensagens foram processado. Essa cota impede que os clientes estabelecendo conversas seguras no serviço, causando o serviço manter o estado para cada cliente, mas nunca usá-los.  
+  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: controla o tempo máximo que o serviço mantém uma conversa segura ativo sem nunca receber uma mensagem de aplicativo. Essa cota impede que os clientes estabelecendo conversas seguras no serviço, causando o serviço manter o estado para cada cliente, mas nunca usá-los.  
+  
+ Em uma sessão de conversa segura, observe que tanto <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A> e `ReceiveTimeout` propriedade na associação de afetar o tempo limite da sessão. O menor dos dois determina quando o tempo limite seja excedido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageSecurityVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageSecurityVersion MessageSecurityVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.MessageSecurityVersion MessageSecurityVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão de segurança da mensagem.</summary>
+        <value>O objeto <see cref="T:System.ServiceModel.MessageSecurityVersion" /> que representa a versão de segurança da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.MessageSecurityVersion> contém várias propriedades que especificam os números de versão diferentes das especificações de segurança usados ao proteger mensagens trocadas no canal.  
+  
+> [!NOTE]
+>  Uma vez um <xref:System.ServiceModel.Channels.SecurityBindingElement> objeto é criado, essa propriedade é imutável. Chamando `set` por ele não alterá-lo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see langword="set" /> com um valor nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationSupportingTokenParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,System.ServiceModel.Security.Tokens.SupportingTokenParameters&gt; OperationSupportingTokenParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.ServiceModel.Security.Tokens.SupportingTokenParameters&gt; OperationSupportingTokenParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.ServiceModel.Security.Tokens.SupportingTokenParameters&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros de token de suporte de operação.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> tipos <see cref="T:System.String" /> (chave) e <see cref="T:System.ServiceModel.Security.Tokens.SupportingTokenParameters" /> (valor).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tokens de suporte fornecem declarações adicionais além daqueles contidos nos tokens primários para a associação.  
+  
+ A coleção retornada pelo <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A> propriedade contém os parâmetros adicionais de token (<xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>) para operações específicas definidas. Os parâmetros de token principais encontram-se em uma a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> (ambos herdam o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe). No caso do <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, os parâmetros de token primários são retornados pelo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.ProtectionTokenParameters%2A> propriedade. Sobre o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> há duas propriedades de parâmetro, o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.InitiatorTokenParameters%2A> e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.RecipientTokenParameters%2A> propriedades.  
+  
+> [!NOTE]
+>  As propriedades são chamadas de parâmetros porque elas especificam apenas o tipo de token de segurança, não os valores reais.  
+  
+ Os tokens de suporte podem ser definidas em um escopo diferente a associação, neste caso, a operação, caso que eles estão incluídos no protegido todas as mensagens enviadas pelo cliente para serviços que têm a ação especificada.  
+  
+ Para oferecer suporte a tokens apenas para uma operação (nem todas as operações em um ponto de extremidade), use o <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionalEndpointSupportingTokenParameters">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.Tokens.SupportingTokenParameters OptionalEndpointSupportingTokenParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.Tokens.SupportingTokenParameters OptionalEndpointSupportingTokenParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SupportingTokenParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de token de suporte opcionais para o ponto de extremidade de serviço.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.Tokens.SupportingTokenParameters" /> do ponto de extremidade de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tokens de suporte fornecem declarações adicionais além daqueles contidos nos tokens primários para a associação. Os tokens de suporte podem ser definidas em um escopo diferente a associação, neste caso, o ponto de extremidade. O serviço não rejeitar a mensagem caso ele não contém tokens que correspondem aos tipos de token especificados no <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionalOperationSupportingTokenParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,System.ServiceModel.Security.Tokens.SupportingTokenParameters&gt; OptionalOperationSupportingTokenParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.ServiceModel.Security.Tokens.SupportingTokenParameters&gt; OptionalOperationSupportingTokenParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.ServiceModel.Security.Tokens.SupportingTokenParameters&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros de token de suporte de operação opcional.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> tipos <see cref="T:System.String" /> (chave) e <see cref="T:System.ServiceModel.Security.Tokens.SupportingTokenParameters" /> (valor).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tokens de suporte fornecem declarações adicionais além daqueles contidos nos tokens primários para a associação. Os tokens de suporte podem ser definidas em um escopo diferente a associação, neste caso, a operação. O serviço não rejeitar a mensagem caso ele não contém tokens que correspondem aos tipos de token especificados no <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectTokens">
+      <MemberSignature Language="C#" Value="public bool ProtectTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProtectTokens" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.ProtectTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o elemento de associação de segurança protege tokens.</summary>
+        <value>
+          <see langword="true" />Se o elemento de associação de segurança protege tokens; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityHeaderLayout">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.SecurityHeaderLayout SecurityHeaderLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Channels.SecurityHeaderLayout SecurityHeaderLayout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElement.SecurityHeaderLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityHeaderLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ordenação dos elementos no cabeçalho de segurança para essa associação.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.SecurityHeaderLayout" /> que representa a ordem dos elementos no cabeçalho de segurança para essa associação. O padrão é <see cref="F:System.ServiceModel.Channels.SecurityHeaderLayout.Strict" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.SecurityHeaderLayout> enumeração contém os seguintes membros:  
+  
+-   <xref:System.ServiceModel.Channels.SecurityHeaderLayout.Strict>: Os itens são adicionados ao cabeçalho de segurança de acordo com o princípio geral de "declarar antes do uso".  
+  
+-   <xref:System.ServiceModel.Channels.SecurityHeaderLayout.Lax>: Os itens são adicionados ao cabeçalho de segurança em qualquer ordem compatível com WSS: segurança de mensagem SOAP.  
+  
+-   <xref:System.ServiceModel.Channels.SecurityHeaderLayout.LaxTimestampFirst>: Os itens são adicionados ao cabeçalho de segurança em qualquer ordem compatível com WSS: segurança de mensagens de SOAP, exceto que o primeiro elemento no cabeçalho de segurança deve ser um `wsse:Timestamp` elemento.  
+  
+-   <xref:System.ServiceModel.Channels.SecurityHeaderLayout.LaxTimestampLast>: Os itens são adicionados ao cabeçalho de segurança em qualquer ordem compatível com WSS: segurança de mensagens de SOAP, exceto que o último elemento no cabeçalho de segurança deve ser um `wsse:Timestamp` elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um valor <see cref="T:System.ServiceModel.Channels.SecurityHeaderLayout" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIssuerBindingContextIfRequired">
+      <MemberSignature Language="C#" Value="protected static void SetIssuerBindingContextIfRequired (System.ServiceModel.Security.Tokens.SecurityTokenParameters parameters, System.ServiceModel.Channels.BindingContext issuerBindingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig void SetIssuerBindingContextIfRequired(class System.ServiceModel.Security.Tokens.SecurityTokenParameters parameters, class System.ServiceModel.Channels.BindingContext issuerBindingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.SetIssuerBindingContextIfRequired(System.ServiceModel.Security.Tokens.SecurityTokenParameters,System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+        <Parameter Name="issuerBindingContext" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" />.</param>
+        <param name="issuerBindingContext">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> objeto que representa a chave para a propriedade do requisito de token cujo valor é BindingContext usado para se comunicar com a parte de emissão.</param>
+        <summary>Define a chave para a propriedade do requisito de token cujo valor é usado para se comunicar com a parte de emissão, se o requisito é para um token emitido BindingContext.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Reservado para uso do sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKeyDerivation">
+      <MemberSignature Language="C#" Value="public virtual void SetKeyDerivation (bool requireDerivedKeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetKeyDerivation(bool requireDerivedKeys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.SetKeyDerivation(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requireDerivedKeys" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="requireDerivedKeys">
+          <see langword="true" />para exigir chaves derivadas; Caso contrário, <see langword="false" />.</param>
+        <summary>Define um valor que indica se as chaves derivadas são necessárias.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como chamar esse método.  
+  
+ [!code-csharp[c_CreateSecureSession#7](~/samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElement.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Security</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma descrição dessa classe.</summary>
+        <returns>Uma descrição do atual <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informações retornadas por <xref:System.ServiceModel.Channels.SecurityBindingElement.ToString%2A> inclui o <xref:System.ServiceModel.Channels.SecurityBindingElement.DefaultAlgorithmSuite%2A>, <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>, <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A>, <xref:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode%2A>, <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>, <xref:System.ServiceModel.Channels.SecurityBindingElement.SecurityHeaderLayout%2A>, e <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A> valores da instância atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

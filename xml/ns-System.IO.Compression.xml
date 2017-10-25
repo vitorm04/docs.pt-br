@@ -1,0 +1,6 @@
+<Namespace Name="System.IO.Compression">
+  <Docs>
+    <summary>O <see cref="N:System.IO.Compression" /> namespace contém classes que fornecem serviços básicos de compactação e descompactação de fluxos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

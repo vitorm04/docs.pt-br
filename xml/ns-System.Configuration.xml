@@ -1,0 +1,6 @@
+<Namespace Name="System.Configuration">
+  <Docs>
+    <summary>O <see cref="N:System.Configuration" /> namespace contém os tipos que fornecem o modelo de programação para lidar com dados de configuração.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

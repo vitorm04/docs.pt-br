@@ -1,0 +1,100 @@
+<Type Name="TrackingExtract" FullName="System.Workflow.Runtime.Tracking.TrackingExtract">
+  <TypeSignature Language="C#" Value="public abstract class TrackingExtract" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit TrackingExtract extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingExtract" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O <see langword="abstract" /> classe base que representa um campo ou uma propriedade a ser extraído de uma instância de fluxo de trabalho e suas anotações associadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.Tracking.TrackingExtract>é o `abstract` base da classe da qual o <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> classe e o <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> são derivadas. Um <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> Especifica um campo ou uma propriedade a ser extraído da atividade associada a um evento de rastreamento e um <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> Especifica um campo ou uma propriedade a ser extraído da atividade de raiz da instância do fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TrackingExtract ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingExtract.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.TrackingExtract" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public abstract System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingExtract.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado em uma classe derivada, obtém as anotações associadas com os dados extraídos.</summary>
+        <value>O <see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" /> associado com os dados extraídos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As anotações são `strings` definir que contêm informações para associar os dados extraídos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public abstract string Member { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Member" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingExtract.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém ou define o nome do campo ou propriedade a ser extraído.</summary>
+        <value>O ponto delimitados por nome de um campo ou uma propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.TrackingExtract.Member%2A>pode ser definido para especificar um campo ou uma propriedade; um membro de um campo ou uma propriedade; ou um único elemento de um campo ou uma propriedade (ou um membro da) que implementa o <xref:System.Collections.IEnumerable> interface. Por exemplo, um único elemento em um `array` pode ser especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

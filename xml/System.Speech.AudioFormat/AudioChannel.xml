@@ -1,0 +1,57 @@
+<Type Name="AudioChannel" FullName="System.Speech.AudioFormat.AudioChannel">
+  <TypeSignature Language="C#" Value="public enum AudioChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AudioChannel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.AudioFormat.AudioChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera valores que indicam o número de canais no formato de áudio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.AudioFormat.SpeechAudioFormatInfo.ChannelCount%2A> propriedade obtém um membro de <xref:System.Speech.AudioFormat.AudioChannel> que indica o número de canais para o formato de áudio.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Mono">
+      <MemberSignature Language="C#" Value="Mono" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.AudioFormat.AudioChannel Mono = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.AudioFormat.AudioChannel.Mono" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.AudioFormat.AudioChannel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formato de áudio tem um canal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stereo">
+      <MemberSignature Language="C#" Value="Stereo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.AudioFormat.AudioChannel Stereo = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.AudioFormat.AudioChannel.Stereo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.AudioFormat.AudioChannel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formato de áudio tem dois canais.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

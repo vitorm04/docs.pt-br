@@ -1,0 +1,362 @@
+<Type Name="BindingElement" FullName="System.ServiceModel.Channels.BindingElement">
+  <TypeSignature Language="C#" Value="public abstract class BindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BindingElement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.BindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Os elementos de associação que compilam as fábricas de canais e ouvintes de canais para vários tipos de canais que são usados para processar mensagens de entrada e saída.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma associação consiste em um conjunto ordenado de elementos herdam desta classe base abstrata de associação.  O <xref:System.ServiceModel.Channels.TransportBindingElement> classe herda o <xref:System.ServiceModel.Channels.BindingElement> classe.  
+  
+ Criando uma associação e um elemento de associação para o transporte é opcional se você estiver usando apenas o modelo de canal. É possível fazer tudo o que precisa por meio da fábrica de canal e ouvinte desde que eles são tornados públicos.  
+  
+ O [!INCLUDE[indigo1](~/includes/indigo1-md.md)] modelo de serviço usa um padrão de fábrica em que a associação é usada para criar a pilha de canais. Se você quiser usar o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviço de modelo, é necessário usar um elemento de associação de transporte. Colocar esse elemento de associação em uma associação é uma boa prática, porque ela remove a necessidade dos usuários criem seu próprios associação personalizada para o transporte. É melhor criar uma associação e o elemento de associação e para ocultar a fábrica de canal e ouvinte dentro do assembly.  
+  
+ No lado de envio, uma associação é usada para criar um <xref:System.ServiceModel.Channels.IChannelFactory>, que por sua vez compilações um canal de pilha e retorna uma referência para a parte superior do canal na pilha. O aplicativo, em seguida, pode usar esse canal para enviar mensagens.  
+  
+ Da mesma forma, no lado de recepção uma associação é usada para criar um <xref:System.ServiceModel.Channels.IChannelListener>, que verifica se há mensagens de entrada. O <xref:System.ServiceModel.Channels.IChannelListener> fornece mensagens para o aplicativo de escuta criando pilhas de canal e entregar o aplicativo de uma referência para o canal superior. Em seguida, o aplicativo usa esse canal para receber mensagens de entrada.  
+  
+> [!NOTE]
+>  Se você estiver adicionando mensagem cabeçalhos que devem ser criptografado, você deve retornar um <xref:System.ServiceModel.Security.ChannelProtectionRequirements> instância com seus requisitos do <xref:System.ServiceModel.Channels.BindingElement.GetProperty%60%601%28System.ServiceModel.Channels.BindingContext%29> método quando for solicitado para <xref:System.ServiceModel.Security.ChannelProtectionRequirements>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um elemento de associação de transporte para uma associação personalizada e, em seguida, criar um ouvinte de canal que pode aceitar mensagens de entrada.  
+  
+ [!code-csharp[S_UEChannels#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uechannels/cs/servicesnippets.cs#1)]
+ [!code-vb[S_UEChannels#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uechannels/vb/servicesnippets.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.BindingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BindingElement (System.ServiceModel.Channels.BindingElement elementToBeCloned);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.BindingElement elementToBeCloned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingElement.#ctor(System.ServiceModel.Channels.BindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.BindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="elementToBeCloned">O <see cref="T:System.ServiceModel.Channels.BindingElement" /> a ser clonado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.BindingElement" /> classe a partir de um elemento de associação especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Cria o tipo de fábrica de canal.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> que fornece o contexto para o elemento de associação.</param>
+        <summary>Inicializa uma fábrica de canais para produzir canais de um tipo especificado do contexto de associação.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> do tipo <paramref name="TChannel" /> inicializada a partir de <paramref name="context" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UEChannels#16](~/samples/snippets/csharp/VS_Snippets_CFX/s_uechannels/cs/clientsnippets.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal do ouvinte é criado para aceitar.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> que fornece o contexto para o elemento de associação.</param>
+        <summary>Inicializa um ouvinte de canal para aceitar os canais de um tipo especificado do contexto de associação.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <see cref="T:System.ServiceModel.Channels.IChannel" /> inicializada a partir de <paramref name="context" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UEChannels#17](~/samples/snippets/csharp/VS_Snippets_CFX/s_uechannels/cs/servicesnippets.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal que produz a fábrica de canais.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> que fornece o contexto para o elemento de associação.</param>
+        <summary>Retorna um valor que indica se o elemento de associação pode criar uma fábrica de canais para um tipo específico de canal.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> do tipo <paramref name="TChannel" /> pode ser criada para o elemento de associação; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você deseja verificar se a fábrica de canais para canais de tipo `TChannel` pode ser compilado para o `context` fornecido antes de tentar criar a fábrica. Como alternativa, crie a fábrica de canais chamando <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> e capturar a exceção gerada se ele não pode ser criado.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEChannels#18](~/samples/snippets/csharp/VS_Snippets_CFX/s_uechannels/cs/clientsnippets.cs#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Aceita o tipo de canal do ouvinte.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> que fornece o contexto para o elemento de associação.</param>
+        <summary>Retorna um valor que indica se o elemento de associação pode criar um ouvinte para um tipo específico de canal.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <see cref="T:System.ServiceModel.Channels.IChannel" /> pode ser criada para o elemento de associação; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você deseja verificar que a escuta de canal para canais de tipo `TChannel` pode ser compilado para o `context` fornecido antes de tentar criar o ouvinte. Como alternativa, crie o ouvinte de canal chamando <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> e capturar a exceção gerada se ele não pode ser criado.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEChannels#19](~/samples/snippets/csharp/VS_Snippets_CFX/s_uechannels/cs/servicesnippets.cs#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna uma cópia do objeto de elemento de associação.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.BindingElement" /> objeto que é um clone profundo do original.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> método para retornar um clone profundo do seu elemento de associação. Retornar um clone permite que o tempo de execução suportar o caso em que várias associações personalizadas compartilham um elemento de associação personalizada. Se um clone não for retornado, o comportamento de tempo de execução é indefinido.  
+  
+ Um clone profundo de um objeto cria uma cópia do objeto e uma cópia de tudo direta ou indiretamente referenciado por esse objeto. (Isso também é chamado copiar o gráfico de objeto inteiro.) Um clone superficial de um objeto, por outro lado, é uma cópia do objeto somente. Se o objeto contiver referências a outros objetos, a cópia superficial não cria cópias dos objetos chamados; em vez disso, ele copia somente as referências a objetos originais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public abstract T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.BindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O objeto com tipo para o qual o método está consultando.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> para o elemento de associação.</param>
+        <summary>Quando substituído em uma classe derivada, retorna um objeto com tipo solicitado, se presente, da camada da pilha de associação apropriada.</summary>
+        <returns>O objeto de tipo <paramref name="T" /> solicitado se ele estiver presente ou <see langword="null" /> se não estiver presente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use isto para recuperar recursos, requisitos e parâmetros da pilha de elemento de associação. Se um elemento de associação suporta retornar o objeto solicitado, ele retorna. Se não, ela delega a chamada para o próximo elemento de associação na pilha. Se ele obtém a parte inferior da pilha de nenhum elemento de associação de suporte para o objeto solicitado e o método retornará `null`.  
+  
+> [!NOTE]
+>  Se você estiver adicionando mensagem cabeçalhos que devem ser criptografado, você deve retornar um <xref:System.ServiceModel.Security.ChannelProtectionRequirements> instância com seus requisitos desse método quando for solicitado para <xref:System.ServiceModel.Security.ChannelProtectionRequirements>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEChannels#20](~/samples/snippets/csharp/VS_Snippets_CFX/s_uechannels/cs/servicesnippets.cs#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

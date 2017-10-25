@@ -1,0 +1,320 @@
+<Type Name="Acknowledgment" FullName="System.Messaging.Acknowledgment">
+  <TypeSignature Language="C#" Value="public enum Acknowledgment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed Acknowledgment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.Acknowledgment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o resultado de uma tentativa da entrega de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Acknowledgment> classe define os tipos de mensagens de confirmação que envia de enfileiramento de mensagens na fila de administração e as condições que causam uma mensagem de confirmação a ser enviado. Tipos de confirmação podem ser divididos em larga escala em quatro grupos: confirmações de chegada positivo, confirmações de leitura positivas, confirmações de chegada negativa e confirmações de leitura negativas.  
+  
+ A fila de administração associada com a mensagem especificada no <xref:System.Messaging.Message.AdministrationQueue%2A?displayProperty=nameWithType> propriedade.  
+  
+ Conjuntos de enfileiramento de mensagens a <xref:System.Messaging.Message.Acknowledgment%2A?displayProperty=nameWithType> propriedade para um do <xref:System.Messaging.Acknowledgment> valores de enumeração quando ele cria uma mensagem de confirmação. O <xref:System.Messaging.Message.Acknowledgment%2A?displayProperty=nameWithType> o valor da propriedade é normalmente significativa apenas quando a instância se refere a uma mensagem de confirmação enviadas pelo sistema. Lendo o <xref:System.Messaging.Message.Acknowledgment%2A?displayProperty=nameWithType> propriedade para uma mensagem que não seja uma mensagem de confirmação lança uma exceção.  
+  
+ O Message Queuing não envia uma mensagem de confirmação, a menos que o aplicativo de envio solicita que ele faça isso. O aplicativo faz a solicitação, definindo o valor apropriado para o <xref:System.Messaging.Message.AcknowledgeType%2A?displayProperty=nameWithType> propriedade. O Message Queuing envia todas as mensagens de confirmação para a fila de administração especificada no <xref:System.Messaging.Message.AdministrationQueue%2A> propriedade do original <xref:System.Messaging.Message>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia e recebe uma mensagem contendo um pedido de e para uma fila. Ele solicita uma confirmação positiva especificamente quando a mensagem original atinge ou é recuperada da fila.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessDenied">
+      <MemberSignature Language="C#" Value="AccessDenied" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment AccessDenied = int32(32772)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.AccessDenied" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que o aplicativo de envio não tem os direitos necessários para enviar uma mensagem à fila de destino.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadDestinationQueue">
+      <MemberSignature Language="C#" Value="BadDestinationQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment BadDestinationQueue = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.BadDestinationQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que a fila de destino não está disponível para o aplicativo de envio.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadEncryption">
+      <MemberSignature Language="C#" Value="BadEncryption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment BadEncryption = int32(32775)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.BadEncryption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que o Gerenciador de fila de destino não foi possível descriptografar uma mensagem particular.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadSignature">
+      <MemberSignature Language="C#" Value="BadSignature" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment BadSignature = int32(32774)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.BadSignature" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que a assinatura digital da mensagem original não é válida e não pôde ser autenticada pelo enfileiramento de mensagens.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CouldNotEncrypt">
+      <MemberSignature Language="C#" Value="CouldNotEncrypt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment CouldNotEncrypt = int32(32776)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.CouldNotEncrypt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que o Gerenciador de fila de origem não pôde criptografar uma mensagem particular.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HopCountExceeded">
+      <MemberSignature Language="C#" Value="HopCountExceeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment HopCountExceeded = int32(32773)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.HopCountExceeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que a contagem de saltos da mensagem original (que indica o número de servidores intermediários) foi excedida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A contagem máxima de saltos, 15, é definida pelo enfileiramento de mensagens e é imutável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A mensagem não é uma mensagem de confirmação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotTransactionalMessage">
+      <MemberSignature Language="C#" Value="NotTransactionalMessage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment NotTransactionalMessage = int32(32778)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.NotTransactionalMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que uma mensagem não transacional foi enviada para uma fila transacional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotTransactionalQueue">
+      <MemberSignature Language="C#" Value="NotTransactionalQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment NotTransactionalQueue = int32(32777)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.NotTransactionalQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que uma mensagem transacional foi enviada para uma fila não transacional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Purged">
+      <MemberSignature Language="C#" Value="Purged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment Purged = int32(32769)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.Purged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que a mensagem foi removida antes de alcançar a fila de destino.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueDeleted">
+      <MemberSignature Language="C#" Value="QueueDeleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment QueueDeleted = int32(49152)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.QueueDeleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um resultado negativo ler confirmação indicando que a fila foi excluída antes da mensagem pode ser lida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueExceedMaximumSize">
+      <MemberSignature Language="C#" Value="QueueExceedMaximumSize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment QueueExceedMaximumSize = int32(32771)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.QueueExceedMaximumSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que a mensagem original não foi entregue porque sua fila de destino está cheia.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueuePurged">
+      <MemberSignature Language="C#" Value="QueuePurged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment QueuePurged = int32(49153)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.QueuePurged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um resultado negativo ler confirmação indicando que a fila foi removida antes da mensagem pode ser lida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReachQueue">
+      <MemberSignature Language="C#" Value="ReachQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment ReachQueue = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.ReachQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada positivo que indica que a mensagem original alcançou sua fila de destino.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReachQueueTimeout">
+      <MemberSignature Language="C#" Value="ReachQueueTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment ReachQueueTimeout = int32(32770)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.ReachQueueTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma confirmação de chegada negativa, indicando que o timer de tempo para alcançar a fila ou o tempo de recebimento expirou antes da mensagem original pode acessar a fila de destino.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive">
+      <MemberSignature Language="C#" Value="Receive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment Receive = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.Receive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um positivo que indica que a mensagem original foi recebida pelo aplicativo de recebimento de confirmação de leitura.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveTimeout">
+      <MemberSignature Language="C#" Value="ReceiveTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.Acknowledgment ReceiveTimeout = int32(49154)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Acknowledgment.ReceiveTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um resultado negativo ler a confirmação indicando que a mensagem original não foi recebida da fila antes do timer de tempo de recebimento expirou.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,353 @@
+<Type Name="CALLCONV" FullName="System.Runtime.InteropServices.ComTypes.CALLCONV">
+  <TypeSignature Language="C#" Value="public enum CALLCONV" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CALLCONV extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.CALLCONV" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifica a convenção de chamada usada por um método descrito em uma [METHODDATA](https://msdn.microsoft.com/library/85fd7121-3eed-4a83-9ba2-caa81fa1e048) estrutura.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As convenções de chamada nesta classe descrevem como funções passam argumentos e valores de retorno. Eles especificam a ordem em que os parâmetros estão configurados para as funções de chamada, em que os parâmetros são armazenados (nos registros ou na memória) e que (chamador ou função de chamada) é responsável pela limpeza da pilha depois que a função retorna. Por exemplo:  
+  
+-   CC_CDECL usa as convenções de nomenclatura e chamadas da linguagem C. O chamador envia os parâmetros para a pilha na ordem inversa de (direita para esquerda) e limpa a pilha depois que a função retorna. Essa convenção de chamada permite que você chame funções com `varargs`, que tornam isso apropriado para uso com métodos que aceitam um número variável de parâmetros, como as funções de tempo de execução C [printf, printf_l, and wprintf, wprintf_l](https://docs.microsoft.com/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l).  
+  
+-   CC_PASCAL usa a convenção de chamada do Pascal. O chamador envia os parâmetros para a pilha na ordem da esquerda para direita. A função chamada limpa a pilha antes de retornar.  
+  
+-   CC_STDCALL é a convenção de chamada padrão para funções do Win32. É a convenção padrão invocar chamando funções não gerenciadas com a plataforma. O chamador envia os parâmetros para a pilha na ordem inversa (direita para esquerda), e a função chamada limpa a pilha antes de retornar.  
+  
+-   CC_SYSCALL é semelhante à CDECL argumentos são enviados por push da direita para esquerda. Registra o EAX, ECX e EDX não é preservadas.  
+  
+ Esses identificadores de convenção de chamada são usados pelo [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], o [!INCLUDE[wince](~/includes/wince-md.md)] plataforma e por automação.  
+  
+ Para obter informações adicionais sobre <xref:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_CDECL>, consulte a biblioteca MSDN.  
+  
+ O common language runtime lança uma exceção quando um método COM em código nativo retorna um HRESULT. Para obter mais informações, consulte [como: mapear HRESULTs e exceções](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CC_CDECL">
+      <MemberSignature Language="C#" Value="CC_CDECL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_CDECL = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_CDECL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a declaração de C (CDECL) convenção de chamada é usada para um método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CC_MACPASCAL">
+      <MemberSignature Language="C#" Value="CC_MACPASCAL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_MACPASCAL = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_MACPASCAL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o Pascal de Macintosh (MACPASCAL) convenção de chamada é usada para um método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CC_MAX">
+      <MemberSignature Language="C#" Value="CC_MAX" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_MAX = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_MAX" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o fim do <see cref="T:System.Runtime.InteropServices.ComTypes.CALLCONV" /> enumeração.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CC_MPWCDECL">
+      <MemberSignature Language="C#" Value="CC_MPWCDECL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_MPWCDECL = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_MPWCDECL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que Workbench (MPW) convenção de chamada CDECL os programadores a Macintosh é usada para um método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CC_MPWPASCAL">
+      <MemberSignature Language="C#" Value="CC_MPWPASCAL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_MPWPASCAL = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_MPWPASCAL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que Workbench (MPW) PASCAL os programadores a Macintosh convenção de chamada é usado para um método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CC_MSCPASCAL">
+      <MemberSignature Language="C#" Value="CC_MSCPASCAL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_MSCPASCAL = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_MSCPASCAL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o Pascal de MSC (MSCPASCAL) convenção de chamada é usada para um método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CC_PASCAL">
+      <MemberSignature Language="C#" Value="CC_PASCAL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_PASCAL = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_PASCAL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a convenção de chamada do Pascal é usado para um método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CC_RESERVED">
+      <MemberSignature Language="C#" Value="CC_RESERVED" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_RESERVED = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_RESERVED" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse valor é reservado para uso futuro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CC_STDCALL">
+      <MemberSignature Language="C#" Value="CC_STDCALL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_STDCALL = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_STDCALL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a convenção de chamada padrão (STDCALL) é usada para um método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CC_SYSCALL">
+      <MemberSignature Language="C#" Value="CC_SYSCALL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.CALLCONV CC_SYSCALL = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.CALLCONV.CC_SYSCALL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.CALLCONV</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o padrão SYSCALL convenção de chamada é usada para um método.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

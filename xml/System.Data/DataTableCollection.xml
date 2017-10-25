@@ -1,0 +1,1105 @@
+<Type Name="DataTableCollection" FullName="System.Data.DataTableCollection">
+  <TypeSignature Language="C#" Value="public sealed class DataTableCollection : System.Data.InternalDataCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataTableCollection extends System.Data.InternalDataCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataTableCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.InternalDataCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("CollectionChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.TablesCollectionEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a coleção de tabelas para o <see cref="T:System.Data.DataSet" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTableCollection> contém todos os <xref:System.Data.DataTable> objetos para um determinado <xref:System.Data.DataSet>. Para acessar o <xref:System.Data.DataTableCollection> de um <xref:System.Data.DataSet>, use o <xref:System.Data.DataSet.Tables%2A> propriedade.  
+  
+ O <xref:System.Data.DataTableCollection> usa métodos como <xref:System.Data.DataTableCollection.Add%2A>, <xref:System.Data.DataTableCollection.Clear%2A>, e <xref:System.Data.DataTableCollection.Remove%2A> para gerenciar os itens na coleção.  
+  
+ Use o <xref:System.Data.DataTableCollection.Contains%2A> método para determinar se uma tabela específica (especificada por nome ou índice) está na coleção.  
+  
+ Para navegar de uma tabela para outra, use o <xref:System.Data.DataTable.ChildRelations%2A> ou <xref:System.Data.DataTable.ParentRelations%2A> propriedade o <xref:System.Data.DataTable> para acessar sua coleção de <xref:System.Data.DataRelation> objetos. Você também pode usar o <xref:System.Data.DataSet.Relations%2A> propriedade percorrer as relações pai/filho do `DataTables` em uma determinada <xref:System.Data.DataSet> coleção.  
+  
+   
+  
+## Examples  
+ O primeiro procedimento neste exemplo recupera o <xref:System.Data.DataTableCollection> de um <xref:System.Data.DataSet> e imprime o valor de cada coluna, em cada linha, de cada tabela. O segundo procedimento cria um novo <xref:System.Data.DataTable> com duas colunas e adiciona-o para o <xref:System.Data.DataTableCollection>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é seguro para operações de leitura e multithread. Você deve sincronizar todas as operações de gravação.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable Add ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable Add() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Add" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto <see cref="T:System.Data.DataTable" /> usando um nome padrão e o adiciona à coleção.</summary>
+        <returns>O <see cref="T:System.Data.DataTable" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque nenhum nome for especificado, o `DataTable` é criado usando um nome padrão, em relação a sua ordem de adição. O nome padrão é "Table1."  
+  
+ O <xref:System.Data.DataTableCollection.CollectionChanged> evento ocorre quando uma tabela é adicionada com êxito à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona três novas <xref:System.Data.DataTable> objetos para o <xref:System.Data.DataTableCollection> usando o <xref:System.Data.DataTableCollection.Add%2A> método sem argumentos.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Add2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Add2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.Add2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Add2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Data.DataTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Data.DataTable table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Add(System.Data.DataTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Data.DataTable" />
+      </Parameters>
+      <Docs>
+        <param name="table">O objeto <see langword="DataTable" /> a ser adicionado.</param>
+        <summary>Adiciona o <see langword="DataTable" /> especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTableCollection.CollectionChanged> evento ocorre quando uma tabela é adicionada com êxito à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.DataTable> e adiciona-o para o <xref:System.Data.DataTableCollection> de um <xref:System.Data.DataSet>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Add Example/CS/source.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado para a tabela é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A tabela já pertence a essa coleção ou a outra coleção.</exception>
+        <exception cref="T:System.Data.DuplicateNameException">Uma tabela na coleção tem o mesmo nome. A comparação não diferencia maiúsculas de minúsculas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable Add (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable Add(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser atribuído a criado <see cref="T:System.Data.DataTable" />.</param>
+        <summary>Cria um <see cref="T:System.Data.DataTable" /> usando o nome especificado e o adiciona à coleção.</summary>
+        <returns>O <see cref="T:System.Data.DataTable" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se qualquer um dos `null` ou uma cadeia de caracteres vazia ("") for passado, recebe um nome padrão para o recém-criado `DataTable`. Esse nome se baseia a ordem na qual a tabela foi adicionada ("Table1", "Tabela2" e assim por diante).  
+  
+ O <xref:System.Data.DataTableCollection.CollectionChanged> evento ocorrerá se a tabela foi adicionada com êxito à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona uma <xref:System.Data.DataTable> com o nome fornecido para o <xref:System.Data.DataTableCollection>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Add1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Add1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DuplicateNameException">Uma tabela na coleção tem o mesmo nome. (A comparação não diferencia maiúsculas de minúsculas.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable Add (string name, string tableNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataTable Add(string name, string tableNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="tableNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser atribuído a criado <see cref="T:System.Data.DataTable" />.</param>
+        <param name="tableNamespace">O namespace para dar o criado <see cref="T:System.Data.DataTable" />.</param>
+        <summary>Cria um <see cref="T:System.Data.DataTable" /> usando o nome especificado e o adiciona à coleção.</summary>
+        <returns>O <see cref="T:System.Data.DataTable" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se qualquer um dos `null` ou uma cadeia de caracteres vazia ("") for passado, recebe um nome padrão para o recém-criado `DataTable`. Esse nome se baseia a ordem na qual a tabela foi adicionada ("Table1", "Tabela2" e assim por diante).  
+  
+ O <xref:System.Data.DataTableCollection.CollectionChanged> evento ocorrerá se a tabela foi adicionada com êxito à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona uma <xref:System.Data.DataTable> com o nome fornecido para o <xref:System.Data.DataTableCollection>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Add1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Add1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DuplicateNameException">Uma tabela na coleção tem o mesmo nome. (A comparação não diferencia maiúsculas de minúsculas.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Data.DataTable[] tables);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Data.DataTable[] tables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.AddRange(System.Data.DataTable[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tables" Type="System.Data.DataTable[]" />
+      </Parameters>
+      <Docs>
+        <param name="tables">A matriz de objetos <see cref="T:System.Data.DataTable" /> a ser adicionada à coleção.</param>
+        <summary>Copia os elementos da matriz <see cref="T:System.Data.DataTable" /> especificada para o fim da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria dois <xref:System.Data.DataTable> objetos e adiciona-os para o <xref:System.Data.DataTableCollection> de um <xref:System.Data.DataSet>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.AddRange Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.AddRange Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.AddRange Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.AddRange Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRemove">
+      <MemberSignature Language="C#" Value="public bool CanRemove (System.Data.DataTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanRemove(class System.Data.DataTable table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.CanRemove(System.Data.DataTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Data.DataTable" />
+      </Parameters>
+      <Docs>
+        <param name="table">O <see langword="DataTable" /> na coleção para executar a verificação.</param>
+        <summary>Verifica se o especificado <see cref="T:System.Data.DataTable" /> objeto pode ser removido da coleção.</summary>
+        <returns>
+          <see langword="true" />Se a tabela pode ser removida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataTableCollection.CanRemove%2A> para testar se cada tabela pode ser removida de um <xref:System.Data.DataSet>. Nesse caso, o <xref:System.Data.DataTableCollection.Remove%2A> método é chamado para remover a tabela.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.CanRemove Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.CanRemove Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.CanRemove Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.CanRemove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção de todos os <see cref="T:System.Data.DataTable" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para remover um determinado `DataTable` da coleção, use o <xref:System.Data.DataTableCollection.Remove%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o <xref:System.Data.DataTableCollection> de um <xref:System.Data.DataSet>e, em seguida, limpa a coleção de todas as tabelas.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CollectionChangeEventHandler CollectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CollectionChangeEventHandler CollectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Data.DataTableCollection.CollectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CollectionChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre após o <see cref="T:System.Data.DataTableCollection" /> é alterado devido <see cref="T:System.Data.DataTable" /> objetos que estão sendo adicionados ou removidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Data.DataTableCollection.CollectionChanged> evento.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.CollectionChanged Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.CollectionChanged Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.CollectionChanged Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.CollectionChanged Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionChanging">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CollectionChangeEventHandler CollectionChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CollectionChangeEventHandler CollectionChanging" />
+      <MemberSignature Language="DocId" Value="E:System.Data.DataTableCollection.CollectionChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CollectionChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre enquanto o <see cref="T:System.Data.DataTableCollection" /> está sendo alterado porque <see cref="T:System.Data.DataTable" /> objetos que estão sendo adicionados ou removidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Data.DataTableCollection.CollectionChanging> evento.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.CollectionChanging Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.CollectionChanging Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.CollectionChanging Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.CollectionChanging Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Data.DataTable" /> a ser localizado.</param>
+        <summary>Obtém um valor que indica se um objeto <see cref="T:System.Data.DataTable" /> com o nome especificado existe na coleção.</summary>
+        <returns>
+          <see langword="true" /> se a tabela especificada existir. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifique o nome do <xref:System.Data.DataTable> objeto usando o <xref:System.Data.DataTable.TableName%2A> propriedade. Se você adicionar um <xref:System.Data.DataTable> à coleção com o <xref:System.Data.DataTableCollection.Add%2A> método, passando sem argumentos, a tabela tem um nome padrão, com base na ordem em que a tabela foi adicionada ("Table1", "Tabela2" e assim por diante).  
+  
+ Para obter o índice de um <xref:System.Data.DataTable>, use o <xref:System.Data.DataTableCollection.IndexOf%2A> método.  
+  
+> [!NOTE]
+>  Retorna `false` quando duas ou mais tabelas tiverem o mesmo nome mas diferentes namespaces. A chamada não êxito se houver qualquer ambiguidade durante a correspondência de um nome de tabela para exatamente uma tabela.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir testa se uma tabela com os nome "fornecedores" existe no <xref:System.Data.DataTableCollection>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Contains Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Contains Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.Contains Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Contains Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name, string tableNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name, string tableNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Contains(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="tableNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Data.DataTable" /> a ser localizado.</param>
+        <param name="tableNamespace">O nome do <see cref="T:System.Data.DataTable" /> namespace para pesquisar no.</param>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Data.DataTable" /> objeto com o namespace de nome e a tabela especificado existe na coleção.</summary>
+        <returns>
+          <see langword="true" /> se a tabela especificada existir. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifique o nome do <xref:System.Data.DataTable> objeto usando o <xref:System.Data.DataTable.TableName%2A> propriedade. Se você adicionar um <xref:System.Data.DataTable> à coleção com o <xref:System.Data.DataTableCollection.Add%2A> método, passando sem argumentos, a tabela tem um nome padrão, com base na ordem em que a tabela foi adicionada ("Table1", "Tabela2" e assim por diante).  
+  
+> [!NOTE]
+>  Retorna `false` quando duas ou mais tabelas tiverem o mesmo nome mas diferentes namespaces. A chamada não êxito se houver qualquer ambiguidade durante a correspondência de um nome de tabela para exatamente uma tabela.  
+  
+ Para obter o índice de um <xref:System.Data.DataTable>, use o <xref:System.Data.DataTableCollection.IndexOf%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir testa se uma tabela com os nome "fornecedores" existe no <xref:System.Data.DataTableCollection>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Contains Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Contains Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.Contains Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Contains Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.DataTable[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.DataTable[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.CopyTo(System.Data.DataTable[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.DataTable[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional para o qual os elementos do objeto <see cref="T:System.Data.DataTableCollection" /> atual serão copiados.</param>
+        <param name="index">O índice <see cref="T:System.Array" /> de destino no qual a cópia é iniciada.</param>
+        <summary>Copia todos os elementos do <see cref="T:System.Data.DataTableCollection" /> atual para um <see cref="T:System.Array" /> unidimensional, começando no índice da matriz de destino especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método pode ser substituído por uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Data.DataTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Data.DataTable table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.IndexOf(System.Data.DataTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Data.DataTable" />
+      </Parameters>
+      <Docs>
+        <param name="table">O <see langword="DataTable" /> a ser pesquisado.</param>
+        <summary>Obtém o índice do objeto <see cref="T:System.Data.DataTable" /> especificado.</summary>
+        <returns>O índice baseado em zero da tabela ou -1 se a tabela não for encontrada na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.DataTableCollection.IndexOf%2A> método para determinar o índice exato de uma determinada tabela.  
+  
+ Antes de chamar <xref:System.Data.DataTableCollection.IndexOf%2A>, você pode testar a existência de uma tabela (especificada por nome ou índice) usando o <xref:System.Data.DataTableCollection.Contains%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir retorna o índice de cada tabela no <xref:System.Data.DataTableCollection>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.IndexOf Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.IndexOf Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.IndexOf Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.IndexOf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string tableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(string tableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tableName">O nome do <see langword="DataTable" /> objeto a ser pesquisada.</param>
+        <summary>Obtém o índice na coleção do <see cref="T:System.Data.DataTable" /> objeto com o nome especificado.</summary>
+        <returns>O índice de base zero de <see langword="DataTable" /> com o nome especificado, ou -1 se a tabela não existe na coleção.  
+  
+ <block subset="none" type="note"><para>  
+ Retorna -1 quando duas ou mais tabelas tiverem o mesmo nome mas diferentes namespaces. A chamada não êxito se houver qualquer ambiguidade durante a correspondência de um nome de tabela para exatamente uma tabela.  
+  
+</para></block></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifique o nome do `DataTable` objeto usando o <xref:System.Data.DataTable.TableName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir retorna o índice de uma tabela nomeada no <xref:System.Data.DataTableCollection>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.IndexOf1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.IndexOf1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.IndexOf1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.IndexOf1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string tableName, string tableNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(string tableName, string tableNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.IndexOf(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tableName" Type="System.String" />
+        <Parameter Name="tableNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tableName">O nome do <see cref="T:System.Data.DataTable" /> objeto a ser pesquisada.</param>
+        <param name="tableNamespace">O nome do <see cref="T:System.Data.DataTable" /> namespace para pesquisar no.</param>
+        <summary>Obtém o índice na coleção especificada <see cref="T:System.Data.DataTable" /> objeto.</summary>
+        <returns>O índice de base zero de <see cref="T:System.Data.DataTable" /> com o nome especificado, ou -1 se a tabela não existe na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifique o nome do <xref:System.Data.DataTable> objeto usando o <xref:System.Data.DataTable.TableName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir retorna o índice de uma tabela nomeada no <xref:System.Data.DataTableCollection>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.IndexOf1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.IndexOf1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.IndexOf1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.IndexOf1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do <see cref="T:System.Data.DataTable" /> a ser localizado.</param>
+        <summary>Obtém o objeto <see cref="T:System.Data.DataTable" /> no índice especificado.</summary>
+        <value>Um <see cref="T:System.Data.DataTable" /> com o índice especificado; caso contrário, <see langword="null" /> se o <see cref="T:System.Data.DataTable" /> não existe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.DataTableCollection.Contains%2A> método para determinar se existe uma tabela com um índice específico.  
+  
+ Se você tem o nome de uma tabela, mas não seu índice, use o <xref:System.Data.DataTableCollection.IndexOf%2A> método para retornar o índice.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir recupera um <xref:System.Data.DataTable> por seu índice.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O valor de índice é maior que o número de itens na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see langword="DataTable" /> a ser localizado.</param>
+        <summary>Obtém o objeto <see cref="T:System.Data.DataTable" /> com o nome especificado.</summary>
+        <value>Um <see cref="T:System.Data.DataTable" /> com o nome especificado; caso contrário, <see langword="null" /> se o <see cref="T:System.Data.DataTable" /> não existir.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um <xref:System.Data.DataTable> nome existe que corresponda a ocorrência da cadeia de caracteres de pesquisa, ela será retornada. Caso contrário, é executada uma pesquisa diferencia maiusculas de minúsculas e se um <xref:System.Data.DataTable> nome for encontrado que corresponda a pesquisa, ela será retornada.  
+  
+ Use o <xref:System.Data.DataTableCollection.Contains%2A> método para determinar se existe uma tabela com um índice ou um nome específico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir recupera uma única tabela por nome a partir de <xref:System.Data.DataTableCollection>.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable this[string name, string tableNamespace] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Item(string, string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableCollection.Item(System.String,System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="tableNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see langword="DataTable" /> a ser localizado.</param>
+        <param name="tableNamespace">O nome do <see cref="T:System.Data.DataTable" /> namespace para pesquisar no.</param>
+        <summary>Obtém o <see cref="T:System.Data.DataTable" /> objeto com o nome especificado no namespace especificado.</summary>
+        <value>Um <see cref="T:System.Data.DataTable" /> com o nome especificado; caso contrário, <see langword="null" /> se o <see cref="T:System.Data.DataTable" /> não existir.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ArrayList List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList List" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableCollection.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Data.DataTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Data.DataTable table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Remove(System.Data.DataTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Data.DataTable" />
+      </Parameters>
+      <Docs>
+        <param name="table">O <see langword="DataTable" /> a ser removido.</param>
+        <summary>Remove o objeto <see cref="T:System.Data.DataTable" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTableCollection.CollectionChanged> evento ocorre quando uma tabela for removida com êxito.  
+  
+ Para determinar se uma determinada tabela existe e pode ser removida antes de chamar <xref:System.Data.DataTableCollection.Remove%2A>, use o <xref:System.Data.DataTableCollection.Contains%2A> e <xref:System.Data.DataTableCollection.CanRemove%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataTableCollection.CanRemove%2A> método para testar se cada tabela pode ser removida de um <xref:System.Data.DataSet>. Nesse caso, o <xref:System.Data.DataTableCollection.Remove%2A> método é chamado para remover a tabela.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado para a tabela é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A tabela não pertence a esta coleção.  
+  
+ -ou-  
+  
+ A tabela é parte de uma relação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Data.DataTable" /> objeto a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Data.DataTable" /> objeto com o nome especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTableCollection.CollectionChanged> evento ocorre quando uma tabela for removida com êxito.  
+  
+ Para determinar se uma determinada tabela existe e pode ser removida antes de chamar <xref:System.Data.DataTableCollection.Remove%2A>, use o <xref:System.Data.DataTableCollection.Contains%2A> e <xref:System.Data.DataTableCollection.CanRemove%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataTableCollection.Contains%2A> e <xref:System.Data.DataTableCollection.CanRemove%2A> métodos para testar se uma tabela nomeada existe e pode ser removida. Nesse caso, o <xref:System.Data.DataTableCollection.Remove%2A> método é chamado para remover a tabela.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Remove1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Remove1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.Remove1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Remove1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A coleção não tem uma tabela com o nome especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name, string tableNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name, string tableNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.Remove(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="tableNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Data.DataTable" /> objeto a ser removido.</param>
+        <param name="tableNamespace">O nome do <see cref="T:System.Data.DataTable" /> namespace para pesquisar no.</param>
+        <summary>Remove o <see cref="T:System.Data.DataTable" /> objeto com o nome especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTableCollection.CollectionChanged> evento ocorre quando uma tabela for removida com êxito.  
+  
+ Para determinar se uma determinada tabela existe e pode ser removida antes de chamar <xref:System.Data.DataTableCollection.Remove%2A>, use o <xref:System.Data.DataTableCollection.Contains%2A> e <xref:System.Data.DataTableCollection.CanRemove%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataTableCollection.Contains%2A> e <xref:System.Data.DataTableCollection.CanRemove%2A> métodos para testar se uma tabela nomeada existe e pode ser removida. Nesse caso, o <xref:System.Data.DataTableCollection.Remove%2A> método é chamado para remover a tabela.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.Remove1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Remove1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.Remove1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.Remove1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A coleção não tem uma tabela com o nome especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see langword="DataTable" /> a ser removido.</param>
+        <summary>Remove o objeto <see cref="T:System.Data.DataTable" /> no índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTableCollection.CollectionChanged> evento ocorre quando uma tabela for removida com êxito.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataTableCollection.Contains%2A> e <xref:System.Data.DataTableCollection.CanRemove%2A> métodos para testar se existe uma tabela com o índice de 10. Nesse caso, o <xref:System.Data.DataTableCollection.RemoveAt%2A> método é chamado para remover a tabela.  
+  
+ [!code-csharp[Classic WebData DataTableCollection.RemoveAt#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.RemoveAt/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableCollection.RemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableCollection.RemoveAt/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A coleção não tem uma tabela no índice especificado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,951 @@
+<Type Name="SemaphoreSlim" FullName="System.Threading.SemaphoreSlim">
+  <TypeSignature Language="C#" Value="public class SemaphoreSlim : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SemaphoreSlim extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.SemaphoreSlim" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Current Count = {m_currentCount}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma alternativa leve para <see cref="T:System.Threading.Semaphore" /> que limita o número de threads que podem acessar um recurso ou um pool de recursos simultaneamente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ São sinais de dois tipos: locais semáforos e semáforos sistema nomeado. O primeiro é local para um aplicativo. O último é visível em todo o sistema operacional e é adequado para a sincronização entre processos. O <xref:System.Threading.SemaphoreSlim> é uma alternativa leve para a <xref:System.Threading.Semaphore> classe que não usa semáforos de kernel do Windows. Ao contrário de <xref:System.Threading.Semaphore> classe, o <xref:System.Threading.SemaphoreSlim> classe não oferece suporte para o sistema nomeado semáforos. Você pode usá-lo como um semáforo local apenas. O <xref:System.Threading.SemaphoreSlim> classe é o sinal recomendado para a sincronização em um único aplicativo.  
+  
+ Um semáforo leve controla o acesso a um pool de recursos que é local para seu aplicativo. Quando você cria uma instância de um sinal, você pode especificar o número máximo de threads que podem entrar no sinal simultaneamente. Você também pode especificar o número inicial de threads que podem entrar no sinal simultaneamente. Isso define a contagem do sinal.  
+  
+ A contagem é decrementada cada vez que um thread entra o semáforo e incrementado toda vez que um thread libera o sinal. Para inserir o sinal, um thread chama uma da <xref:System.Threading.SemaphoreSlim.Wait%2A> ou <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> sobrecargas. Para liberar o semáforo, ele chama uma da <xref:System.Threading.SemaphoreSlim.Release%2A> sobrecargas. Quando a contagem atinge zero, as chamadas subsequentes para uma da `Wait` métodos bloqueiam até que outros threads de liberar o semáforo. Se vários threads são bloqueados, não há nenhuma garantia de ordem, como PEPS ou UEPS, que controla quando threads insere o sinal.  
+  
+ A estrutura básica de código que usa um sinal para proteger recursos é:  
+  
+```  
+  
+' Enter semaphore by calling one of the Wait or WaitAsync methods.  
+SemaphoreSlim.Wait()  
+'   
+' Execute code protected by the semaphore.   
+'  
+SemaphoreSlim.Release()  
+  
+```  
+  
+ Depois que todos os threads libera o sinal, a contagem é o valor máximo especificada quando o semáforo foi criado. Contagem de semáforo está disponível a partir do <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Threading.SemaphoreSlim> classe não impõe a identidade do thread ou tarefa em chamadas para o <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.SemaphoreSlim.WaitAsync%2A>, e <xref:System.Threading.SemaphoreSlim.Release%2A> métodos. Além disso, se o <xref:System.Threading.SemaphoreSlim.%23ctor%28System.Int32%29> construtor é usado para instanciar o <xref:System.Threading.SemaphoreSlim> objeto, o <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade pode aumentar além do valor definido pelo construtor. É responsabilidade do programador para garantir que as chamadas para <xref:System.Threading.SemaphoreSlim.Wait%2A> ou <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> métodos adequadamente são emparelhados com chamadas para <xref:System.Threading.SemaphoreSlim.Release%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um semáforo com uma contagem máxima de três threads e uma contagem inicial de zero threads. O exemplo inicia cinco tarefas, que bloqueado aguardando o sinal. As chamadas do thread principal de <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29> sobrecarga para aumentar a contagem de semáforo ao seu máximo, o que permite que as três tarefas entrar no sinal. Cada vez que o sinal é liberado, a contagem de semáforo anterior é exibida. Console mensagens controlar o uso do sinal. O intervalo de trabalho simulada aumenta um pouco para cada thread facilitar a leitura de saída.  
+  
+ [!code-csharp[System.Threading.SemaphoreSlim#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.semaphoreslim/cs/example.cs#1)]
+ [!code-vb[System.Threading.SemaphoreSlim#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.semaphoreslim/vb/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Todos os membros protegidos e públicos da <see cref="T:System.Threading.SemaphoreSlim" /> são thread-safe e podem ser usados simultaneamente em vários segmentos, com exceção de <see cref="M:System.Threading.SemaphoreSlim.Dispose" />, que deve ser usado somente quando todas as outras operações no <see cref="T:System.Threading.SemaphoreSlim" /> concluiu.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SemaphoreSlim (int initialCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialCount">O número inicial de solicitações para o semáforo que podem ser concedidas ao mesmo tempo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.SemaphoreSlim" />, especificando o número inicial de solicitações que podem ser concedidas simultaneamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `initialCount` parâmetro define o número de solicitações simultâneas para inserir o semáforo que pode ser concedido. No entanto, ele não define o número máximo de solicitações que podem ser concedidas ao mesmo tempo. Um <xref:System.Threading.SemaphoreSlim> objeto instanciado chamando este construtor não lançar uma <xref:System.Threading.SemaphoreFullException> exceção se uma chamada para o <xref:System.Threading.SemaphoreSlim.Release%2A> método aumenta o valor da <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade além `initialCount`. Isso ocorre se houver mais chamadas para <xref:System.Threading.SemaphoreSlim.Release%2A> métodos que são para <xref:System.Threading.SemaphoreSlim.Wait%2A> ou <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> métodos. Para definir o número máximo de solicitações simultâneas para inserir o semáforo que pode ser concedido, chame o <xref:System.Threading.SemaphoreSlim.%23ctor%28System.Int32%2CSystem.Int32%29> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="initialCount" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SemaphoreSlim (int initialCount, int maxCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialCount, int32 maxCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialCount" Type="System.Int32" />
+        <Parameter Name="maxCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialCount">O número inicial de solicitações para o semáforo que podem ser concedidas ao mesmo tempo.</param>
+        <param name="maxCount">O número máximo de solicitações para o semáforo que podem ser concedidas ao mesmo tempo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.SemaphoreSlim" />, especificando o número inicial e o máximo de solicitações que podem ser concedidas simultaneamente.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="initialCount" /> é menor que 0, <paramref name="initialCount" /> é maior que <paramref name="maxCount" /> ou <paramref name="maxCount" /> é igual ou menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailableWaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle AvailableWaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle AvailableWaitHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SemaphoreSlim.AvailableWaitHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Threading.WaitHandle" /> que pode ser usado para aguardar o semáforo.</summary>
+        <value>Um <see cref="T:System.Threading.WaitHandle" /> que pode ser usado para aguardar o semáforo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade somente quando você deve aguardar um SemaphoreSlim junto com outros objetos de sincronização baseado em kernel com o mesmo identificador de espera. Uma espera bem-sucedida no <xref:System.Threading.SemaphoreSlim.AvailableWaitHandle%2A> não implica uma espera bem-sucedida no <xref:System.Threading.SemaphoreSlim> em si, nem-diminuir a contagem do sinal. Depois que o identificador de espera disponível é sinalizado, você deve aguardar o <xref:System.Threading.SemaphoreSlim> especificamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Threading.SemaphoreSlim" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentCount">
+      <MemberSignature Language="C#" Value="public int CurrentCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentCount" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.SemaphoreSlim.CurrentCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de threads restantes que podem inserir o objeto <see cref="T:System.Threading.SemaphoreSlim" />.</summary>
+        <value>O número de threads restantes que podem inserir o semáforo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor inicial de <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade é definida pela chamada para o <xref:System.Threading.SemaphoreSlim.%23ctor%2A> construtor da classe. É diminuído em cada chamada para o <xref:System.Threading.SemaphoreSlim.Wait%2A> ou <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> método e incrementado em cada chamada para o <xref:System.Threading.SemaphoreSlim.Release%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Threading.SemaphoreSlim" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Threading.SemaphoreSlim>. O `Dispose` método deixa o <xref:System.Threading.SemaphoreSlim> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Threading.SemaphoreSlim> para o coletor de lixo possa recuperar a memória que o <xref:System.Threading.SemaphoreSlim> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Threading.SemaphoreSlim>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Threading.SemaphoreSlim> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Threading.SemaphoreSlim" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário da maioria dos membros de <xref:System.Threading.SemaphoreSlim>, <xref:System.Threading.SemaphoreSlim.Dispose%2A> não é thread-safe e não podem ser usadas simultaneamente com outros membros desta instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Release">
+      <MemberSignature Language="C#" Value="public int Release ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Release() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Release" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera o objeto <see cref="T:System.Threading.SemaphoreSlim" /> uma única vez.</summary>
+        <returns>A contagem anterior do <see cref="T:System.Threading.SemaphoreSlim" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chamada para o <xref:System.Threading.SemaphoreSlim.Release> incrementos de método de <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade por um. Se o valor da <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> é zero antes que este método é chamado, o método também permite que um thread ou tarefa bloqueado por uma chamada para o <xref:System.Threading.SemaphoreSlim.Wait%2A> ou <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> método para entrar no sinal.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.Threading.SemaphoreFullException">O <see cref="T:System.Threading.SemaphoreSlim" /> já atingiu seu tamanho máximo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Release">
+      <MemberSignature Language="C#" Value="public int Release (int releaseCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Release(int32 releaseCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Release(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="releaseCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="releaseCount">O número de vezes para sair do sinal.</param>
+        <summary>Libera o objeto <see cref="T:System.Threading.SemaphoreSlim" /> um número de vezes especificado.</summary>
+        <returns>A contagem anterior do <see cref="T:System.Threading.SemaphoreSlim" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chamada para o <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29> incrementos de método de <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade `releaseCount`. Se o valor da <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade é zero antes que este método é chamado, o método também permite `releaseCount` threads ou tarefas bloqueadas por uma chamada para o <xref:System.Threading.SemaphoreSlim.Wait%2A> ou <xref:System.Threading.SemaphoreSlim.WaitAsync%2A> método para entrar no sinal.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="releaseCount" /> é menor que 1.</exception>
+        <exception cref="T:System.Threading.SemaphoreFullException">O <see cref="T:System.Threading.SemaphoreSlim" /> já atingiu seu tamanho máximo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public void Wait ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Wait() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bloqueia o thread atual até que o <see cref="T:System.Threading.SemaphoreSlim" /> possa ser inserido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um thread ou uma tarefa é capaz de entrar no sinal, ele diminui a <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade por um.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">O número de milissegundos de espera, <see cref="F:System.Threading.Timeout.Infinite" />(-1) a aguardar indefinidamente ou zero para testar o estado do identificador de espera e retornar imediatamente.</param>
+        <summary>Bloqueia o thread atual até que ele possa inserir o <see cref="T:System.Threading.SemaphoreSlim" />, usando um inteiro com sinal de 32 bits que especifica o tempo limite.</summary>
+        <returns>
+          <see langword="true" />Se o thread atual inseridas com êxito o <see cref="T:System.Threading.SemaphoreSlim" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks 
+Se o tempo limite é definido como-1 milissegundos, o método aguarda indefinidamente.
+ 
+Se o tempo limite é definido como zero milissegundos, o método não bloquear. Ele testa o estado do identificador de espera e retorna imediatamente.
+
+Se um thread ou uma tarefa é capaz de entrar no sinal, ele diminui a <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade por um.  
+  
+Se um thread ou uma tarefa é bloqueada durante a chamada <xref:System.Threading.SemaphoreSlim.Wait%28System.Int32%29> e o intervalo de tempo limite especificado pelo `millisecondsTimeout` expirar:
+
+- O thread ou a tarefa não insira o sinal.
+- O <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade não é reduzida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />é um número negativo que não seja -1, que representa um infinito ou tempo limite-- é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public void Wait (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Wait(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">O token <see cref="T:System.Threading.CancellationToken" /> a ser observado.</param>
+        <summary>Bloqueia o thread atual até que ele possa inserir o <see cref="T:System.Threading.SemaphoreSlim" />, enquanto observar uma <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um thread ou uma tarefa é capaz de entrar no sinal, ele diminui a <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade por um.  
+  
+ Se `cancellationToken` é cancelado, a tarefa ou o thread não insira o sinal e o <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade não é reduzida. Em vez disso, o método gera uma <xref:System.OperationCanceledException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">
+          O <paramref name="cancellationToken" /> foi cancelado.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Threading.CancellationTokenSource" /> que criou <paramref name="cancellationToken" /> já foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que representa o número de milissegundos de espera, um <see cref="T:System.TimeSpan" /> que representa-1 milissegundos de espera indefinidamente, ou um <see cref="T:System.TimeSpan" /> que representa 0 milissegundo para testar o identificador de espera e retornar imediatamente.</param>
+        <summary>Bloqueia o thread atual até que ele possa inserir o <see cref="T:System.Threading.SemaphoreSlim" />, usando um <see cref="T:System.TimeSpan" /> para especificar o tempo limite.</summary>
+        <returns>
+          <see langword="true" />Se o thread atual inseridas com êxito o <see cref="T:System.Threading.SemaphoreSlim" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Se o tempo limite é definido como-1 milissegundos, o método aguarda indefinidamente.
+ 
+Se o tempo limite é definido como zero milissegundos, o método não bloquear. Ele testa o estado do identificador de espera e retorna imediatamente. 
+ 
+Se um thread ou uma tarefa é capaz de entrar no sinal, ele diminui a <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade por um.  
+  
+Se um thread ou uma tarefa é bloqueada durante a chamada <xref:System.Threading.SemaphoreSlim.Wait%28System.TimeSpan%29> e o intervalo de tempo limite especificado pelo `millisecondsTimeout` expirar:
+
+- O thread ou a tarefa não insira o sinal.
+- O <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade não é reduzida.   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />é um número negativo que não seja -1, que representa um infinito ou tempo limite-- é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância semaphoreSlim foi descartada<paramref name="." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (int millisecondsTimeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(int32 millisecondsTimeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">O número de milissegundos de espera, <see cref="F:System.Threading.Timeout.Infinite" />(-1) a aguardar indefinidamente ou zero para testar o estado do identificador de espera e retornar imediatamente.</param>
+        <param name="cancellationToken">O <see cref="T:System.Threading.CancellationToken" /> a ser observado.</param>
+        <summary>Bloqueia o thread atual até que ele possa inserir o <see cref="T:System.Threading.SemaphoreSlim" />, usando um inteiro com sinal de 32 bits que especifica o tempo limite, observando simultaneamente um <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <returns>
+          <see langword="true" />Se o thread atual inseridas com êxito o <see cref="T:System.Threading.SemaphoreSlim" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Se o tempo limite é definido como-1 milissegundos, o método aguarda indefinidamente.
+ 
+Se o tempo limite é definido como zero milissegundos, o método não bloquear. Ele testa o estado do identificador de espera e retorna imediatamente.
+
+Se um thread ou uma tarefa é capaz de entrar no sinal, ele diminui a <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade por um.  
+  
+Se `cancellationToken` é cancelado, ou se um thread ou uma tarefa é bloqueada durante a chamada <xref:System.Threading.SemaphoreSlim.Wait%28System.Int32%2CSystem.Threading.CancellationToken%29> e o intervalo de tempo limite especificado pelo `millisecondsTimeout` expirar:
+
+- O thread ou a tarefa não insira o sinal.
+- O <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade não é reduzida.  
+ 
+Se `cancellationToken` é cancelado, o método gera uma <xref:System.OperationCanceledException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">
+          O <paramref name="cancellationToken" /> foi cancelado.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />é um número negativo que não seja -1, que representa um infinito ou tempo limite-- é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância de <see cref="T:System.Threading.SemaphoreSlim" /> foi descartada ou o <see cref="T:System.Threading.CancellationTokenSource" /> que criou <paramref name="cancellationToken" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wait">
+      <MemberSignature Language="C#" Value="public bool Wait (TimeSpan timeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Wait(valuetype System.TimeSpan timeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.Wait(System.TimeSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que representa o número de milissegundos de espera, um <see cref="T:System.TimeSpan" /> que representa-1 milissegundos de espera indefinidamente, ou um <see cref="T:System.TimeSpan" /> que representa 0 milissegundo para testar o identificador de espera e retornar imediatamente.</param>
+        <param name="cancellationToken">O <see cref="T:System.Threading.CancellationToken" /> a ser observado.</param>
+        <summary>Bloqueia o thread atual até que ele pode inserir o <see cref="T:System.Threading.SemaphoreSlim" />usando um <see cref="T:System.TimeSpan" /> que especifica o tempo limite, ao observar um <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <returns>
+          <see langword="true" />Se o thread atual inseridas com êxito o <see cref="T:System.Threading.SemaphoreSlim" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Se o tempo limite é definido como-1 milissegundos, o método aguarda indefinidamente.
+ 
+Se o tempo limite é definido como zero milissegundos, o método não bloquear. Ele testa o estado do identificador de espera e retorna imediatamente. 
+
+Se um thread ou uma tarefa é capaz de entrar no sinal, ele diminui a <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade por um.  
+  
+Se `cancellationToken` é cancelado, ou se um thread ou uma tarefa é bloqueada durante a chamada <xref:System.Threading.SemaphoreSlim.Wait%28System.TimeSpan%2CSystem.Threading.CancellationToken%29> e o intervalo de tempo limite especificado pelo `millisecondsTimeout` expirar:
+
+- O thread ou a tarefa não insira o sinal.
+- O <xref:System.Threading.SemaphoreSlim.CurrentCount%2A> propriedade não é reduzida.  
+
+Se `cancellationToken` é cancelado, o método gera uma <xref:System.OperationCanceledException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">
+          O <paramref name="cancellationToken" /> foi cancelado.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />é um número negativo que não seja -1, que representa um infinito ou tempo limite-- é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância semaphoreSlim foi descartada<paramref name="." /><paramref name="-or-" />  
+  
+ O <see cref="T:System.Threading.CancellationTokenSource" /> que criou <paramref name="cancellationToken" /> já foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WaitAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task WaitAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Espera assincronamente para inserir o <see cref="T:System.Threading.SemaphoreSlim" />.</summary>
+        <returns>Uma tarefa que será concluída quando o semáforo for inserido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; WaitAsync (int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; WaitAsync(int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">O número de milissegundos de espera, <see cref="F:System.Threading.Timeout.Infinite" /> (-1) a aguardar indefinidamente ou zero para testar o estado do identificador de espera e retornar imediatamente.</param>
+        <summary>Aguarda de forma assíncrona para inserir o <see cref="T:System.Threading.SemaphoreSlim" />, usando um inteiro com sinal de 32 bits para medir o intervalo de tempo.</summary>
+        <returns>Uma tarefa que será concluída com um resultado <see langword="true" /> se o thread atual inseridas com êxito o <see cref="T:System.Threading.SemaphoreSlim" />, caso contrário, com um resultado <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tempo limite é definido como-1 milissegundos, o método aguarda indefinidamente.
+ 
+ Se o tempo limite é definido como zero milissegundos, o método não bloquear. Ele testa o estado do identificador de espera e retorna imediatamente. 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />é um número negativo que não seja -1, que representa um infinito ou tempo limite-- é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WaitAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task WaitAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">O token <see cref="T:System.Threading.CancellationToken" /> a ser observado.</param>
+        <summary>Espera assincronamente para inserir o <see cref="T:System.Threading.SemaphoreSlim" />, ao observar um <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <returns>Uma tarefa que será concluída quando o semáforo for inserido.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.OperationCanceledException">
+          O <paramref name="cancellationToken" /> foi cancelado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; WaitAsync (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; WaitAsync(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que representa o número de milissegundos de espera, um <see cref="T:System.TimeSpan" /> que representa-1 milissegundos de espera indefinidamente, ou um <see cref="T:System.TimeSpan" /> que representa 0 milissegundo para testar o identificador de espera e retornar imediatamente.</param>
+        <summary>Espera assincronamente para inserir o <see cref="T:System.Threading.SemaphoreSlim" />, usando um <see cref="T:System.TimeSpan" /> para medir o intervalo de tempo.</summary>
+        <returns>Uma tarefa que será concluída com um resultado <see langword="true" /> se o thread atual inseridas com êxito o <see cref="T:System.Threading.SemaphoreSlim" />, caso contrário, com um resultado <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tempo limite é definido como-1 milissegundos, o método aguarda indefinidamente.
+ 
+ Se o tempo limite é definido como zero milissegundos, o método não bloquear. Ele testa o estado do identificador de espera e retorna imediatamente. 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />é um número negativo que não seja -1, que representa um infinito ou tempo limite-- é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; WaitAsync (int millisecondsTimeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; WaitAsync(int32 millisecondsTimeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">O número de milissegundos de espera, <see cref="F:System.Threading.Timeout.Infinite" /> (-1) a aguardar indefinidamente ou zero para testar o estado do identificador de espera e retornar imediatamente.</param>
+        <param name="cancellationToken">O <see cref="T:System.Threading.CancellationToken" /> a ser observado.</param>
+        <summary>Assincronamente aguarda para inserir o <see cref="T:System.Threading.SemaphoreSlim" />, usando um inteiro assinado de 32 bits para medir o intervalo de tempo ao observar um <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <returns>Uma tarefa que será concluída com um resultado <see langword="true" /> se o thread atual inseridas com êxito o <see cref="T:System.Threading.SemaphoreSlim" />, caso contrário, com um resultado <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tempo limite é definido como-1 milissegundos, o método aguarda indefinidamente.
+ 
+ Se o tempo limite é definido como zero milissegundos, o método não bloquear. Ele testa o estado do identificador de espera e retorna imediatamente. 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />é um número diferente de -1, que representa um infinito ou tempo limite-- é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.OperationCanceledException">
+          O <paramref name="cancellationToken" /> foi cancelado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; WaitAsync (TimeSpan timeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; WaitAsync(valuetype System.TimeSpan timeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.SemaphoreSlim.WaitAsync(System.TimeSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que representa o número de milissegundos de espera, um <see cref="T:System.TimeSpan" /> que representa-1 milissegundos de espera indefinidamente, ou um <see cref="T:System.TimeSpan" /> que representa 0 milissegundo para testar o identificador de espera e retornar imediatamente.</param>
+        <param name="cancellationToken">O token <see cref="T:System.Threading.CancellationToken" /> a ser observado.</param>
+        <summary>Espera assincronamente para inserir o <see cref="T:System.Threading.SemaphoreSlim" />, usando um <see cref="T:System.TimeSpan" /> para medir o intervalo de tempo, enquanto observa um <see cref="T:System.Threading.CancellationToken" />.</summary>
+        <returns>Uma tarefa que será concluída com um resultado <see langword="true" /> se o thread atual inseridas com êxito o <see cref="T:System.Threading.SemaphoreSlim" />, caso contrário, com um resultado <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tempo limite é definido como-1 milissegundos, o método aguarda indefinidamente.
+
+ Se o tempo limite é definido como zero milissegundos, o método não bloquear. Ele testa o estado do identificador de espera e retorna imediatamente. 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" />é um número negativo que não seja -1, que representa um infinito ou tempo limite-- é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.OperationCanceledException">
+          O <paramref name="cancellationToken" /> foi cancelado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

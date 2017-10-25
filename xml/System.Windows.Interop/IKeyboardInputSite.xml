@@ -1,0 +1,113 @@
+<Type Name="IKeyboardInputSite" FullName="System.Windows.Interop.IKeyboardInputSite">
+  <TypeSignature Language="C#" Value="public interface IKeyboardInputSite" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IKeyboardInputSite" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.IKeyboardInputSite" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia o foco do teclado dentro do contêiner.  Essa interface implementa o gerenciamento de mensagens de teclado em cenários de interoperação WPF Win32.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um contêiner deve fornecer uma instância exclusiva dessa interface para cada um de seus componentes independentes.  
+  
+ O <xref:System.Windows.Interop.IKeyboardInputSite> interface e o <xref:System.Windows.Interop.IKeyboardInputSink> são usados juntos para fornecer suporte para ações de teclado em limites de interoperação. Um site (<xref:System.Windows.Interop.IKeyboardInputSite> implementação) representa um pai de um coletor (<xref:System.Windows.Interop.IKeyboardInputSink>). O coletor (<xref:System.Windows.Interop.IKeyboardInputSink>) implementa a maioria do comportamento do teclado. Cada site também deve fornecer um coletor, pois o coletor específicas do site é retornado por uma propriedade do <xref:System.Windows.Interop.IKeyboardInputSite> interface.  
+  
+ Para obter uma discussão da arquitetura de entrada implementada especificamente para [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] interoperação, consulte [Windows Forms e arquitetura de entrada de interoperabilidade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md).  
+  
+ Para obter mais informações sobre [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] - [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] cenários de interoperabilidade, consulte [WPF e Win32 interoperação](~/docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnNoMoreTabStops">
+      <MemberSignature Language="C#" Value="public bool OnNoMoreTabStops (System.Windows.Input.TraversalRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnNoMoreTabStops(class System.Windows.Input.TraversalRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops(System.Windows.Input.TraversalRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Windows.Input.TraversalRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Especifica se o foco deve ser definido para a primeira ou a última parada de tabulação.</param>
+        <summary>Chamado por um componente independente quando ele atingiu seu último parada de tabulação e nenhuma outra tem itens para a guia para.</summary>
+        <returns>Se esse método retornar <see langword="true" />, o site tiver alterado o foco para outro componente. Se esse método retornar <see langword="false" />, foco ainda está dentro do componente de chamada. O componente deve ser "delimitado" e definir o foco para a sua primeira parada de tabulação independente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamada de componentes <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> quando o componente tenta mover um foco solicitada, mas não há nenhuma outra guia interrompe nessa direção dentro do próprio componente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sink">
+      <MemberSignature Language="C#" Value="public System.Windows.Interop.IKeyboardInputSink Sink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Interop.IKeyboardInputSink Sink" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IKeyboardInputSite.Sink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.IKeyboardInputSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o coletor de teclado associado a este site.</summary>
+        <value>O site atual <see cref="T:System.Windows.Interop.IKeyboardInputSink" /> interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não retorna o pai <xref:System.Windows.Interop.IKeyboardInputSink> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public void Unregister ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Unregister() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.IKeyboardInputSite.Unregister" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela o registro de um coletor de entrada de teclado do filho deste site.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não afeta o site no contêiner.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

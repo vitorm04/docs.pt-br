@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Tasks.Deployment.ManifestUtilities">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.Build.Tasks.Deployment.ManifestUtilities" /> namespace contém classes que usa o MSBuild.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

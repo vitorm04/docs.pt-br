@@ -1,0 +1,58 @@
+<Type Name="StandardOleMarshalObject" FullName="System.Runtime.InteropServices.StandardOleMarshalObject">
+  <TypeSignature Language="C#" Value="public class StandardOleMarshalObject : MarshalByRefObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StandardOleMarshalObject extends System.MarshalByRefObject" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.StandardOleMarshalObject" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.MonoLimitation("The runtime does nothing special apart from what it already does with marshal-by-ref objects")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Substitui o marshaler free-thread padrão do CLR (Common Language Runtime) pelo marshaler OLE STA padrão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.InteropServices.StandardOleMarshalObject> classe evita que as chamadas feitas em um objeto de hospedagem pelo OLE insiram threads que não seja o thread de interface do usuário.  
+  
+ Você deve derivar de classe a partir de <xref:System.Runtime.InteropServices.StandardOleMarshalObject> classe para obter essa funcionalidade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StandardOleMarshalObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.StandardOleMarshalObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.StandardOleMarshalObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve derivar de classe a partir de <xref:System.Runtime.InteropServices.StandardOleMarshalObject> classe-.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

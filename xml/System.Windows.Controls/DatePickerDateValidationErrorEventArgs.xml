@@ -1,0 +1,120 @@
+<Type Name="DatePickerDateValidationErrorEventArgs" FullName="System.Windows.Controls.DatePickerDateValidationErrorEventArgs">
+  <TypeSignature Language="C#" Value="public class DatePickerDateValidationErrorEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DatePickerDateValidationErrorEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DatePickerDateValidationErrorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Controls.DatePicker.DateValidationError" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.DatePicker.DateValidationError?displayProperty=nameWithType> evento ocorre quando <xref:System.Windows.Controls.DatePicker.Text%2A?displayProperty=nameWithType> é definido como um valor que não pode ser interpretada como uma data ou quando a data não pode ser selecionada. Você pode assinar esse evento e especificar se uma exceção é gerada, definindo o <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A> propriedade. Se <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A?displayProperty=nameWithType> é `true`, ocorrerá uma das seguintes exceções:  
+  
+|Tipo de exceção|Condição|  
+|--------------------|---------------|  
+|<xref:System.FormatException>|O texto inserido não pode ser analisado como uma data válida, e a exceção não será suprimida.|  
+|<xref:System.ArgumentOutOfRangeException>|Analisa o texto inserido em uma data que não podem ser selecionada.|  
+  
+ Se <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A?displayProperty=nameWithType> é `false`, o aplicativo continua a execução como de costume.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.DatePicker> que exibe as datas em agosto de 2009 e especifica que cada sábado e domingo não selecionável. O <xref:System.Windows.Controls.DatePicker> identificadores de <xref:System.Windows.Controls.DatePicker.DateValidationError> eventos. Se o usuário insere uma data que não podem ser selecionada, o exemplo exibe uma mensagem. Se o usuário insere o texto que não é uma data válida, uma exceção será lançada.  
+  
+ [!code-csharp[DatePickerSnippets#2](~/samples/snippets/csharp/VS_Snippets_Wpf/datepickersnippets/csharp/window1.xaml.cs#2)]
+ [!code-vb[DatePickerSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datepickersnippets/visualbasic/window1.xaml.vb#2)]
+ [!code-xaml[DatePickerSnippets#2](~/samples/snippets/xaml/VS_Snippets_Wpf/datepickersnippets/xaml/window1.xaml#2)]  
+  
+ [!code-csharp[DatePickerSnippets#3](~/samples/snippets/csharp/VS_Snippets_Wpf/datepickersnippets/csharp/window1.xaml.cs#3)]
+ [!code-vb[DatePickerSnippets#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datepickersnippets/visualbasic/window1.xaml.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DatePickerDateValidationErrorEventArgs (Exception exception, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception exception, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.#ctor(System.Exception,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="exception">A exceção inicial do <see cref="E:System.Windows.Controls.DatePicker.DateValidationError" /> evento.</param>
+        <param name="text">O texto que causou o <see cref="E:System.Windows.Controls.DatePicker.DateValidationError" /> evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.DatePickerDateValidationErrorEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exceção inicial associada a <see cref="E:System.Windows.Controls.DatePicker.DateValidationError" /> eventos.</summary>
+        <value>A exceção associada a falha de validação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto que causou o <see cref="E:System.Windows.Controls.DatePicker.DateValidationError" /> evento.</summary>
+        <value>O texto que causou a falha de validação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowException">
+      <MemberSignature Language="C#" Value="public bool ThrowException { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowException" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se <see cref="P:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.Exception" /> deverá ser lançada.</summary>
+        <value>
+          <see langword="true" />Se a exceção deve ser gerada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

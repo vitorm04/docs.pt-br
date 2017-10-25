@@ -1,0 +1,154 @@
+<Type Name="FileDialogPermissionAttribute" FullName="System.Security.Permissions.FileDialogPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class FileDialogPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit FileDialogPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.FileDialogPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as ações de segurança para <see cref="T:System.Security.Permissions.FileDialogPermission" /> sejam aplicadas ao código usando a segurança declarativa. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O escopo da declaração que é permitido depende do <xref:System.Security.Permissions.SecurityAction> que é usado.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. Atributos de segurança são usados apenas para a segurança declarativa. Para segurança obrigatória, use a classe de permissão correspondente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como solicitar que o código de chamada <xref:System.Security.Permissions.FileDialogPermission>. Demandas geralmente são feitas em bibliotecas gerenciadas (DLLs) para ajudar a proteger os métodos ou classes de código potencialmente prejudicial.  
+  
+ [!code-cpp[Classic FileDialogPermissionAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileDialogPermissionAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic FileDialogPermissionAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileDialogPermissionAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic FileDialogPermissionAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileDialogPermissionAttribute Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileDialogPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileDialogPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores de <see cref="T:System.Security.Permissions.SecurityAction" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.FileDialogPermissionAttribute" /> com o <see cref="T:System.Security.Permissions.SecurityAction" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileDialogPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um novo <see cref="T:System.Security.Permissions.FileDialogPermission" />.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.FileDialogPermission" /> que corresponde a este atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só deve ser chamado pelo sistema de segurança, nunca pelo código do aplicativo.  
+  
+ Em tempo de compilação, atributos convertem declarações de segurança para um formato serializado em metadados. Dados de segurança declarativa em metadados são criados a partir da permissão que esse método retorna que corresponde a este atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public bool Open { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Open" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.FileDialogPermissionAttribute.Open" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a permissão para abrir arquivos usando a caixa de diálogo de arquivo é declarada.</summary>
+        <value>
+          <see langword="true" />Se a permissão para abrir arquivos usando a caixa de diálogo de arquivo for declarado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public bool Save { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Save" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.FileDialogPermissionAttribute.Save" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a permissão para salvar arquivos usando a caixa de diálogo de arquivo é declarada.</summary>
+        <value>
+          <see langword="true" />Se a permissão para salvar arquivos usando a caixa de diálogo de arquivo for declarado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

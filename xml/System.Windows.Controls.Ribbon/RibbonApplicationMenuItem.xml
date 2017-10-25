@@ -1,0 +1,267 @@
+<Type Name="RibbonApplicationMenuItem" FullName="System.Windows.Controls.Ribbon.RibbonApplicationMenuItem">
+  <TypeSignature Language="C#" Value="public class RibbonApplicationMenuItem : System.Windows.Controls.Ribbon.RibbonMenuItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi RibbonApplicationMenuItem extends System.Windows.Controls.Ribbon.RibbonMenuItem" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Ribbon.RibbonMenuItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="ItemContainerStyle", StyleTargetType=typeof(System.Windows.Controls.Ribbon.RibbonApplicationMenuItem))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um item de menu em um <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenu" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa um <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> para invocar um comando quando o item de menu é clicado. Para obter mais informações sobre como usar comandos com itens de menu, consulte [como: adicionar um comando a um MenuItem](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370).  
+  
+ Um <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> pode ter submenus. O submenu de <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> é composto dos objetos no <xref:System.Windows.Controls.ItemsControl.Items%2A> coleção de um <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem>. É comum para um <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> para conter outros <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> objetos para criar submenus aninhadas.  
+  
+ Um <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> não pode ter submenus e também invocar um comando. Se o <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> tem um submenu, o comando associado a <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> não é invocada. Quando você precisa de um controle que atua como um cabeçalho de menu e invoca um comando, use um <xref:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem>.  
+  
+ A ilustração a seguir mostra o Menu de aplicativo para um controle de faixa de opções. O **abrir**, **salvar**, e **Configurar página** itens são exemplos de como o <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> controle.  
+  
+ ![Menu de aplicativo de faixa de opções](~/add/media/wpfribbon-appmenu.png "Menu de aplicativo de faixa de opções")  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra os itens de menu do Menu do aplicativo mostrado anteriormente. O <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem> objetos são hospedados diretamente no <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu> e, em um <xref:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem>.  
+  
+ [!code-xaml[Ribbon_Snippets#AppMenuItems](~/samples/snippets/csharp/VS_Snippets_Wpf/ribbon_snippets/cs/ribbonwindow1.xaml#appmenuitems)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonApplicationMenuItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetContainerForItemOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.DependencyObject GetContainerForItemOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.GetContainerForItemOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um novo objeto <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" />.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" /> objeto contêiner que é usado para exibir um item a partir de <see cref="P:System.Windows.Controls.ItemsControl.Items" /> coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainerOverride">
+      <MemberSignature Language="C#" Value="protected override bool IsItemItsOwnContainerOverride (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemItsOwnContainerOverride(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.IsItemItsOwnContainerOverride(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item de teste.</param>
+        <summary>Retorna um valor que indica se o item especificado está (ou é elegível para ser) seu próprio contêiner.</summary>
+        <returns>
+          <see langword="true" />Se o item for uma <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" />, um <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem" />, um <see cref="T:System.Windows.Controls.Ribbon.RibbonSeparator" />, ou um <see cref="T:System.Windows.Controls.Ribbon.RibbonGallery" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.RibbonApplicationMenuItemLevel Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Ribbon.RibbonApplicationMenuItemLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonApplicationMenuItemLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica em que nível o item de menu é exibido.</summary>
+        <value>Um valores de enumeração que especifica em qual nível o item de menu é exibido. O padrão registrado é <see cref="F:System.Windows.Controls.Ribbon.RibbonApplicationMenuItemLevel.Top" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Level"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.LevelProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LevelProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LevelProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LevelProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.LevelProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.Level" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivatingKeyTip">
+      <MemberSignature Language="C#" Value="protected override void OnActivatingKeyTip (System.Windows.Controls.ActivatingKeyTipEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnActivatingKeyTip(class System.Windows.Controls.ActivatingKeyTipEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.OnActivatingKeyTip(System.Windows.Controls.ActivatingKeyTipEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ActivatingKeyTipEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Contém dados sobre a ativação.</param>
+        <summary>Chamado quando a chave KeyTip ou acelerador é pressionada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria a árvore visual para o <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" /> quando um novo modelo é aplicado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado sempre que o código do aplicativo ou um processo interno, como uma passagem de layout de recriação, chama o <xref:System.Windows.FrameworkElement.ApplyTemplate%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.KeyDown" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override void PrepareContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PrepareContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento que é usado para exibir o item.</param>
+        <param name="item">O item para exibir a partir de <see cref="P:System.Windows.Controls.ItemsControl.Items" /> coleção.</param>
+        <summary>Prepara o elemento especificado para exibir o item especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldApplyItemContainerStyle">
+      <MemberSignature Language="C#" Value="protected override bool ShouldApplyItemContainerStyle (System.Windows.DependencyObject container, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ShouldApplyItemContainerStyle(class System.Windows.DependencyObject container, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem.ShouldApplyItemContainerStyle(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="container">O elemento de contêiner.</param>
+        <param name="item">O item que é o contêiner para.</param>
+        <summary>Retorna um valor que indica se deve aplicar o estilo de <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyle" /> ou <see cref="P:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector" /> propriedade para o elemento de contêiner do item especificado.</summary>
+        <returns>
+          <see langword="false" />Se <paramref name="container" /> é um <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem" />, <see cref="T:System.Windows.Controls.Ribbon.RibbonSeparator" />, ou <see cref="T:System.Windows.Controls.Ribbon.RibbonGallery" />; caso contrário, o valor retornado pela implementação de base.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

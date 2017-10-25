@@ -1,0 +1,64 @@
+<Type Name="XmlSchemaKey" FullName="System.Xml.Schema.XmlSchemaKey">
+  <TypeSignature Language="C#" Value="public class XmlSchemaKey : System.Xml.Schema.XmlSchemaIdentityConstraint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaKey extends System.Xml.Schema.XmlSchemaIdentityConstraint" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaIdentityConstraint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe representa o <see langword="key" /> elemento de XMLSchema conforme especificado pelo World Wide Web Consortium (W3C).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifica que um valor de atributo ou elemento (ou conjunto de valores) deve ser uma chave dentro do escopo especificado. Uma chave deve ser exclusivo, não anulável/não-anulável e sempre presente. O nome da restrição deve ser exclusivo dentro de um esquema.  
+  
+   
+  
+## Examples  
+ Consulte <xref:System.Xml.Schema.XmlSchemaKeyref> para obter um exemplo de uso dessa classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaKey" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

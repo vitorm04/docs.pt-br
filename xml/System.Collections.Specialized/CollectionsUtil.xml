@@ -1,0 +1,231 @@
+<Type Name="CollectionsUtil" FullName="System.Collections.Specialized.CollectionsUtil">
+  <TypeSignature Language="C#" Value="public class CollectionsUtil" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CollectionsUtil extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Specialized.CollectionsUtil" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Cria coleções que ignoram maiúsculas e minúsculas em cadeias de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses métodos de geram uma instância de maiusculas e minúsculas da coleção com maiusculas e minúsculas implementações do provedor de código de hash e o comparador. A instância resultante pode ser usada como qualquer outra instância da classe, embora ele pode se comportar de maneira diferente.  
+  
+ Por exemplo, suponha que dois objetos com as chaves "Olá" e "HELLO" devem ser adicionadas a uma tabela de hash. Uma tabela de hash diferencia maiusculas de minúsculas cria duas entradas diferentes; Por outro lado, uma tabela de hash de maiusculas e minúsculas lançaria uma exceção ao adicionar o segundo objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa duas coleções, uma tabela de hash e uma lista classificada, para armazenar valores de população para um grupo de cidades. Os valores são recuperados das coleções usando nomes de cidades como chaves. Os nomes de cidade são em maiusculas e minúsculas para mostrar seu uso como chaves de maiusculas e minúsculas.  
+  
+ [!code-cpp[System.Collections.Specialized.CollectionsUtil#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.collections.specialized.collectionsutil/cpp/source.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.CollectionsUtil#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.specialized.collectionsutil/cs/source.cs#1)]
+ [!code-vb[System.Collections.Specialized.CollectionsUtil#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.specialized.collectionsutil/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Um <see cref="T:System.Collections.Hashtable" /> pode dar suporte a um gravador e a vários leitores simultaneamente. Para dar suporte a vários autores, todas as operações devem ser feitas por meio de wrapper retornado pelo <see cref="M:System.Collections.Hashtable.Synchronized(System.Collections.Hashtable)" /> método.  
+  
+ Um <see cref="T:System.Collections.SortedList" /> pode dar suporte a vários leitores simultaneamente, desde que a coleção não é modificada. Para garantir a segurança de thread do <see cref="T:System.Collections.SortedList" />, todas as operações devem ser feitas por meio do wrapper retornado pelo <see cref="M:System.Collections.SortedList.Synchronized(System.Collections.SortedList)" /> método.  
+  
+ Enumerar através de uma coleção intrinsecamente não é um procedimento de segurança do thread. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CollectionsUtil ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.CollectionsUtil" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCaseInsensitiveHashtable">
+      <MemberSignature Language="C#" Value="public static System.Collections.Hashtable CreateCaseInsensitiveHashtable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Hashtable CreateCaseInsensitiveHashtable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de maiusculas e minúsculas da <see cref="T:System.Collections.Hashtable" /> classe com a capacidade inicial padrão.</summary>
+        <returns>Uma nova instância de maiusculas e minúsculas da <see cref="T:System.Collections.Hashtable" /> classe com a capacidade inicial padrão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de usar o <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A> método, use o <xref:System.Collections.Hashtable.%23ctor%28System.Collections.IEqualityComparer%29?displayProperty=nameWithType> construtor para criar um maiusculas de minúsculas <xref:System.Collections.Hashtable> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCaseInsensitiveHashtable">
+      <MemberSignature Language="C#" Value="public static System.Collections.Hashtable CreateCaseInsensitiveHashtable (System.Collections.IDictionary d);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Hashtable CreateCaseInsensitiveHashtable(class System.Collections.IDictionary d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="d">O <see cref="T:System.Collections.IDictionary" /> para copiar para um novo maiusculas de minúsculas <see cref="T:System.Collections.Hashtable" />.</param>
+        <summary>Copia as entradas do dicionário especificado para uma nova instância de maiusculas e minúsculas da <see cref="T:System.Collections.Hashtable" /> classe com a mesma capacidade inicial como o número de entradas copiado.</summary>
+        <returns>Uma nova instância de maiusculas e minúsculas da <see cref="T:System.Collections.Hashtable" /> classe que contém as entradas de especificado <see cref="T:System.Collections.IDictionary" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de usar o <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A> método, use o <xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IEqualityComparer%29?displayProperty=nameWithType> construtor para criar um maiusculas de minúsculas <xref:System.Collections.Hashtable> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCaseInsensitiveHashtable">
+      <MemberSignature Language="C#" Value="public static System.Collections.Hashtable CreateCaseInsensitiveHashtable (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Hashtable CreateCaseInsensitiveHashtable(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Hashtable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número aproximado de entradas que o <see cref="T:System.Collections.Hashtable" /> inicialmente pode conter.</param>
+        <summary>Cria uma nova instância de maiusculas e minúsculas da <see cref="T:System.Collections.Hashtable" /> classe com a capacidade inicial especificada.</summary>
+        <returns>Uma nova instância de maiusculas e minúsculas da <see cref="T:System.Collections.Hashtable" /> classe com a capacidade inicial especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de usar o <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A> método, use o <xref:System.Collections.Hashtable.%23ctor%28System.Int32%2CSystem.Collections.IEqualityComparer%29?displayProperty=nameWithType> construtor para criar um maiusculas de minúsculas <xref:System.Collections.Hashtable> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCaseInsensitiveSortedList">
+      <MemberSignature Language="C#" Value="public static System.Collections.SortedList CreateCaseInsensitiveSortedList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.SortedList CreateCaseInsensitiveSortedList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveSortedList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.SortedList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Collections.SortedList" /> classe que diferencia maiusculas de minúsculas de cadeias de caracteres.</summary>
+        <returns>Uma nova instância do <see cref="T:System.Collections.SortedList" /> classe que diferencia maiusculas de minúsculas de cadeias de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O novo <xref:System.Collections.SortedList> instância é classificada de acordo com o <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

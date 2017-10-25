@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.ConstrainedExecution">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.ConstrainedExecution" /> namespace define um conjunto de tipos que enumere e definir um contrato de confiabilidade entre o autor de algum código e os desenvolvedores que assumir uma dependência que o código. Os tipos no <see cref="N:System.Runtime.ConstrainedExecution" /> namespace são destinados para uso em regiões de execução restrita (CERs).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

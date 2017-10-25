@@ -1,0 +1,1078 @@
+<Type Name="IWorkflowInstanceManagement" FullName="System.ServiceModel.Activities.IWorkflowInstanceManagement">
+  <TypeSignature Language="C#" Value="public interface IWorkflowInstanceManagement" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWorkflowInstanceManagement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.IWorkflowInstanceManagement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.Activities.Description.WorkflowContractBehavior</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceContract(Name="IWorkflowInstanceManagement", Namespace="http://schemas.datacontract.org/2008/10/WorkflowServices")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um contrato de serviço que define um conjunto de operações que permitem que você controle instâncias de fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public void Abandon (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Abandon(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.Abandon(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="Abandon")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para abandonar.</param>
+        <param name="reason">O motivo para abandonar a instância de fluxo de trabalho.</param>
+        <summary>As tentativas de abandonar a instância de fluxo de trabalho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação só é válida para uma instância de fluxo de trabalho que está atualmente carregada na memória. Se a instância de fluxo de trabalho especificado não está carregada ou foi concluída, esta operação é não operacional. Esta operação não está ciente da transação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAbandon">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAbandon (Guid instanceId, string reason, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAbandon(valuetype System.Guid instanceId, string reason, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginAbandon(System.Guid,System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="Abandon")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para abandonar.</param>
+        <param name="reason">O motivo para abandonar a instância de fluxo de trabalho.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas à operação de abandono assíncrona.</param>
+        <summary>Inicia uma operação assíncrona para abandonar a instância de fluxo de trabalho especificado.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de abandono encerra a instância de fluxo de trabalho, destrói todos os objetos associados e libera os recursos associados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCancel">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginCancel (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginCancel(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginCancel(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="Cancel")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para cancelar.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas com a operação de cancelamento assíncrono.</param>
+        <summary>Inicia uma operação assíncrona para cancelar a instância de fluxo de trabalho especificado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de cancelamento fecha uma instância de fluxo de trabalho e retorna ao estado anterior sem salvar as alterações que o fluxo de trabalho pode ter feito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRun">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRun (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginRun(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginRun(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="Run")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para executar.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas à operação de execução assíncrona.</param>
+        <summary>Inicia uma operação assíncrona para executar a instância de fluxo de trabalho especificado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSuspend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSuspend (Guid instanceId, string reason, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginSuspend(valuetype System.Guid instanceId, string reason, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginSuspend(System.Guid,System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="Suspend")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para suspender.</param>
+        <param name="reason">O motivo para suspender a instância de fluxo de trabalho.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Um objeto especificado pelo aplicativo, que contém informações de estado associadas a assíncrona suspender a operação.</param>
+        <summary>Inicia uma operação assíncrona para suspender a instância de fluxo de trabalho especificado.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de suspender temporariamente interrompe uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (Guid instanceId, string reason, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginTerminate(valuetype System.Guid instanceId, string reason, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTerminate(System.Guid,System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="Terminate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para encerrar.</param>
+        <param name="reason">O motivo para encerrar a instância de fluxo de trabalho.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Um objeto especificado pelo aplicativo, que contém informações de estado associadas a assíncrona encerrar a operação.</param>
+        <summary>Inicia uma operação assíncrona para encerrar a instância de fluxo de trabalho especificado.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de encerramento traz uma extremidade de uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransactedCancel">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTransactedCancel (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginTransactedCancel(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedCancel(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="TransactedCancel")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para cancelar.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas com a operação de cancelamento assíncrono.</param>
+        <summary>Inicia uma operação de cancelamento assíncrono em uma transação.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de cancelamento fecha uma instância de fluxo de trabalho e retorna ao estado anterior sem salvar as alterações que o fluxo de trabalho pode ter feito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransactedRun">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTransactedRun (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginTransactedRun(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedRun(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="TransactedRun")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para executar.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas à operação de execução assíncrona.</param>
+        <summary>Inicia uma operação assíncrona que executa uma instância de fluxo de trabalho em uma transação.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransactedSuspend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTransactedSuspend (Guid instanceId, string reason, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginTransactedSuspend(valuetype System.Guid instanceId, string reason, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedSuspend(System.Guid,System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="TransactedSuspend")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para suspender.</param>
+        <param name="reason">O motivo para suspender a instância de fluxo de trabalho.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Um objeto especificado pelo aplicativo, que contém informações de estado associadas a assíncrona suspender a operação.</param>
+        <summary>Inicia uma operação assíncrona que suspende a instância de fluxo de trabalho especificado.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de suspender temporariamente interrompe uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransactedTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTransactedTerminate (Guid instanceId, string reason, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginTransactedTerminate(valuetype System.Guid instanceId, string reason, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedTerminate(System.Guid,System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="TransactedTerminate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para encerrar.</param>
+        <param name="reason">O motivo para encerrar a instância de fluxo de trabalho.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Um objeto especificado pelo aplicativo, que contém informações de estado associadas a assíncrona encerrar a operação.</param>
+        <summary>Inicia uma operação assíncrona que finaliza uma instância de fluxo de trabalho em uma transação.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de encerramento traz uma extremidade de uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransactedUnsuspend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTransactedUnsuspend (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginTransactedUnsuspend(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedUnsuspend(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="TransactedUnsuspend")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para cancelar a suspensão.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Operação de suspensão de um objeto especificado pelo aplicativo, que contém informações de estado associadas a assíncrona.</param>
+        <summary>Inicia uma operação assíncrona que retoma a instância de fluxo de trabalho especificado dentro de uma transação.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de unsuspend retoma uma instância de fluxo de trabalho interrompido temporariamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUnsuspend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUnsuspend (Guid instanceId, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginUnsuspend(valuetype System.Guid instanceId, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginUnsuspend(System.Guid,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(AsyncPattern=true, Name="Unsuspend")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para continuar.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Operação de suspensão de um objeto especificado pelo aplicativo, que contém informações de estado associadas a assíncrona.</param>
+        <summary>Inicia uma operação assíncrona que retoma a instância de fluxo de trabalho especificado.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de unsuspend retoma uma instância de fluxo de trabalho interrompido temporariamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cancel(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.Cancel(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="Cancel")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para cancelar.</param>
+        <summary>Cancela a instância de fluxo de trabalho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a instância identificada pela ID de instância não existe na memória, é feita uma tentativa para carregar a instância do armazenamento de instância (se tiver sido habilitada persistência). Se não tiver sido habilitada persistência ou a instância não foi mantida uma falha é retornada ao chamador. Depois que a instância de memória foi carregada ou identificada, esta operação cancelará a instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAbandon">
+      <MemberSignature Language="C#" Value="public void EndAbandon (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndAbandon(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndAbandon(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginAbandon(System.Guid,System.String,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclui uma operação assíncrona abandono.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCancel">
+      <MemberSignature Language="C#" Value="public void EndCancel (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndCancel(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndCancel(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginCancel(System.Guid,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclui uma operação de cancelamento assíncrono.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de cancelamento fecha uma instância de fluxo de trabalho e retorna ao estado anterior sem salvar as alterações que o fluxo de trabalho pode ter feito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRun">
+      <MemberSignature Language="C#" Value="public void EndRun (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndRun(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndRun(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginRun(System.Guid,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclui uma operação de execução assíncrona.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSuspend">
+      <MemberSignature Language="C#" Value="public void EndSuspend (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndSuspend(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndSuspend(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginSuspend(System.Guid,System.String,System.AsyncCallback,System.Object)" /> operação</param>
+        <summary>Conclusão assíncrona suspender a operação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de suspender temporariamente interrompe uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTerminate(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTerminate(System.Guid,System.String,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclusão assíncrona encerrar a operação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de encerramento traz uma extremidade de uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTransactedCancel">
+      <MemberSignature Language="C#" Value="public void EndTransactedCancel (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndTransactedCancel(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedCancel(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedCancel(System.Guid,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclui uma operação assíncrona Cancelar transacionado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTransactedRun">
+      <MemberSignature Language="C#" Value="public void EndTransactedRun (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndTransactedRun(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedRun(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedRun(System.Guid,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclui uma operação de execução assíncrona transacionada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTransactedSuspend">
+      <MemberSignature Language="C#" Value="public void EndTransactedSuspend (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndTransactedSuspend(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedSuspend(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedSuspend(System.Guid,System.String,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclusão assíncrona transacionado suspender a operação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de suspender temporariamente interrompe uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTransactedTerminate">
+      <MemberSignature Language="C#" Value="public void EndTransactedTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndTransactedTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedTerminate(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedTerminate(System.Guid,System.String,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclusão assíncrona transacionado encerrar a operação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de encerramento traz uma extremidade de uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTransactedUnsuspend">
+      <MemberSignature Language="C#" Value="public void EndTransactedUnsuspend (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndTransactedUnsuspend(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndTransactedUnsuspend(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginTransactedUnsuspend(System.Guid,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclusão assíncrona transacionado cancelar a operação de suspensão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de unsuspend retoma uma instância de fluxo de trabalho interrompido temporariamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUnsuspend">
+      <MemberSignature Language="C#" Value="public void EndUnsuspend (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndUnsuspend(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.EndUnsuspend(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.BeginUnsuspend(System.Guid,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclusão assíncrona cancelar a operação de suspensão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de unsuspend retoma uma instância de fluxo de trabalho interrompido temporariamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public void Run (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Run(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.Run(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="Run")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para executar.</param>
+        <summary>Inicia a execução da instância de fluxo de trabalho especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Suspend">
+      <MemberSignature Language="C#" Value="public void Suspend (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Suspend(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.Suspend(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="Suspend")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">A instância de fluxo de trabalho para suspender.</param>
+        <param name="reason">O motivo para suspender a instância de fluxo de trabalho.</param>
+        <summary>Suspende a instância de fluxo de trabalho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de suspender temporariamente interrompe uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="public void Terminate (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Terminate(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.Terminate(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="Terminate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para encerrar.</param>
+        <param name="reason">O motivo para encerrar a instância de fluxo de trabalho.</param>
+        <summary>Encerra a instância de fluxo de trabalho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação combina a funcionalidade de uma operação de anulação seguida por uma operação de persistência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactedCancel">
+      <MemberSignature Language="C#" Value="public void TransactedCancel (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TransactedCancel(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedCancel(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="TransactedCancel")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceModel.TransactionFlow(System.ServiceModel.TransactionFlowOption.Allowed)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para cancelar.</param>
+        <summary>Cancela a instância de fluxo de trabalho especificado dentro de uma transação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactedRun">
+      <MemberSignature Language="C#" Value="public void TransactedRun (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TransactedRun(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedRun(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="TransactedRun")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceModel.TransactionFlow(System.ServiceModel.TransactionFlowOption.Allowed)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para executar.</param>
+        <summary>Executa a instância de fluxo de trabalho especificado dentro de uma transação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactedSuspend">
+      <MemberSignature Language="C#" Value="public void TransactedSuspend (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TransactedSuspend(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedSuspend(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="TransactedSuspend")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceModel.TransactionFlow(System.ServiceModel.TransactionFlowOption.Allowed)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para suspender.</param>
+        <param name="reason">O motivo pelo qual a instância de fluxo de trabalho é suspenso.</param>
+        <summary>Suspende a instância de fluxo de trabalho especificado dentro de uma transação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de suspender temporariamente interrompe uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactedTerminate">
+      <MemberSignature Language="C#" Value="public void TransactedTerminate (Guid instanceId, string reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TransactedTerminate(valuetype System.Guid instanceId, string reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedTerminate(System.Guid,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="TransactedTerminate")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceModel.TransactionFlow(System.ServiceModel.TransactionFlowOption.Allowed)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="reason" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para encerrar.</param>
+        <param name="reason">O motivo para encerrar a instância de fluxo de trabalho.</param>
+        <summary>Encerra a instância de fluxo de trabalho especificado dentro de uma transação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de encerramento traz uma extremidade de uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactedUnsuspend">
+      <MemberSignature Language="C#" Value="public void TransactedUnsuspend (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TransactedUnsuspend(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedUnsuspend(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="TransactedUnsuspend")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceModel.TransactionFlow(System.ServiceModel.TransactionFlowOption.Allowed)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para continuar.</param>
+        <summary>Retoma a instância de fluxo de trabalho especificado dentro de uma transação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processo de unsuspend retoma uma instância de fluxo de trabalho interrompido temporariamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsuspend">
+      <MemberSignature Language="C#" Value="public void Unsuspend (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Unsuspend(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.IWorkflowInstanceManagement.Unsuspend(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Name="Unsuspend")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador GUID da instância do fluxo de trabalho para continuar.</param>
+        <summary>Retoma a instância de fluxo de trabalho especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

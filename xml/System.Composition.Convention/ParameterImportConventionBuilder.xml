@@ -1,0 +1,80 @@
+<Type Name="ParameterImportConventionBuilder" FullName="System.Composition.Convention.ParameterImportConventionBuilder">
+  <TypeSignature Language="C#" Value="public abstract class ParameterImportConventionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ParameterImportConventionBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Convention.ParameterImportConventionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Convention</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um tipo auxiliar que é usado ao configurar um <see cref="T:System.Composition.Convention.PartConventionBuilder`1" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada somente em expressões; instâncias deste tipo nunca são criadas.
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Import&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Import&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Import&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ParameterImportConventionBuilder.Import``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo a ser importado.</typeparam>
+        <summary>Importa o tipo especificado.</summary>
+        <returns>A instância importada.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Import&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Import&lt;T&gt; (Action&lt;System.Composition.Convention.ImportConventionBuilder&gt; configure);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Import&lt;T&gt;(class System.Action`1&lt;class System.Composition.Convention.ImportConventionBuilder&gt; configure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ParameterImportConventionBuilder.Import``1(System.Action{System.Composition.Convention.ImportConventionBuilder})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="configure" Type="System.Action&lt;System.Composition.Convention.ImportConventionBuilder&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo a ser importado.</typeparam>
+        <param name="configure">A configuração da importação.</param>
+        <summary>Importa o tipo genérico especificado usando a configuração especificada.</summary>
+        <returns>A instância importada.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

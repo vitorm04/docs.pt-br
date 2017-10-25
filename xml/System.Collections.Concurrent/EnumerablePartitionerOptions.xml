@@ -1,0 +1,95 @@
+<Type Name="EnumerablePartitionerOptions" FullName="System.Collections.Concurrent.EnumerablePartitionerOptions">
+  <TypeSignature Language="C#" Value="public enum EnumerablePartitionerOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed EnumerablePartitionerOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Concurrent.EnumerablePartitionerOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Concurrent</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.14.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica opções para controlar o comportamento de armazenamento em buffer de um particionador</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Particionadores integrados são criados com um conjunto de comportamentos padrão. Por exemplo, por padrão, alguma forma de buffering e agrupamento será usada para alcançar um desempenho ideal no cenário comum onde um <xref:System.Collections.Generic.IEnumerable%601> implementação é rápida e sem bloqueio. Esses comportamentos podem ser substituídos por esta enumeração usando o <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NoBuffering">
+      <MemberSignature Language="C#" Value="NoBuffering" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Collections.Concurrent.EnumerablePartitionerOptions NoBuffering = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Collections.Concurrent.EnumerablePartitionerOptions.NoBuffering" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.EnumerablePartitionerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cria um particionador que recebe itens da fonte enumerável, um de cada vez e não usa o armazenamento intermediário que pode ser acessado de forma mais eficiente por vários threads. Essa opção dá suporte à baixa latência (os itens serão processados assim que estiverem disponíveis da fonte) e dá suporte parcial às dependências entre os itens (um thread não pode ficar em deadlock esperando um item que o próprio thread é responsável por processar).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Collections.Concurrent.EnumerablePartitionerOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Collections.Concurrent.EnumerablePartitionerOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.EnumerablePartitionerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o comportamento padrão, que é usar o armazenamento em buffer para obter o desempenho ideal.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

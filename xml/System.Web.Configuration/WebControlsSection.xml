@@ -1,0 +1,137 @@
+<Type Name="WebControlsSection" FullName="System.Web.Configuration.WebControlsSection">
+  <TypeSignature Language="C#" Value="public sealed class WebControlsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebControlsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.WebControlsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura o <see langword="webControls" /> seção. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.WebControlsSection> classe fornece uma maneira de acessar e modificar programaticamente o `webControls` seção de um arquivo de configuração.  
+  
+> [!NOTE]
+>  ASP.NET fornece um local compartilhado para o cliente, os arquivos de script, onde eles podem ser acessados de várias páginas e todos os aplicativos.  O <xref:System.Web.Configuration.WebControlsSection> pode ler e gravar informações de e para a seção correspondente do arquivo de configuração de acordo com a propriedade de seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.Everywhere>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.WebControlsSection> objeto do arquivo de configuração associado a um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.WebControlsSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebControlsSection/CS/webcontrolssection.cs#1)]
+ [!code-vb[System.Web.Configuration.WebControlsSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebControlsSection/VB/vb_webcontrolssection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebControlsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebControlsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de <see cref="T:System.Web.Configuration.WebControlsSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.WebControlsSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.WebControlsSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientScriptsLocation">
+      <MemberSignature Language="C#" Value="public string ClientScriptsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientScriptsLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebControlsSection.ClientScriptsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("clientScriptsLocation", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cliente scripts local.</summary>
+        <value>A localização dos scripts de cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter detalhes sobre os scripts de cliente e seu uso, consulte [Script de cliente em páginas da Web do ASP.NET](http://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.WebControlsSection.ClientScriptsLocation%2A>.  
+  
+ [!code-csharp[System.Web.Configuration.WebControlsSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebControlsSection/CS/webcontrolssection.cs#1)]
+ [!code-vb[System.Web.Configuration.WebControlsSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebControlsSection/VB/vb_webcontrolssection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeObject">
+      <MemberSignature Language="C#" Value="protected override object GetRuntimeObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetRuntimeObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebControlsSection.GetRuntimeObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebControlsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

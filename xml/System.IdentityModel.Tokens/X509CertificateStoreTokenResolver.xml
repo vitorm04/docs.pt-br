@@ -1,0 +1,200 @@
+<Type Name="X509CertificateStoreTokenResolver" FullName="System.IdentityModel.Tokens.X509CertificateStoreTokenResolver">
+  <TypeSignature Language="C#" Value="public class X509CertificateStoreTokenResolver : System.IdentityModel.Selectors.SecurityTokenResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509CertificateStoreTokenResolver extends System.IdentityModel.Selectors.SecurityTokenResolver" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenResolver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um resolvedor de token que pode ser resolvidas tokens do tipo <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> em relação a um repositório de certificados x. 509 especificado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509CertificateStoreTokenResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver" /> classe com um repositório de certificados x. 509.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O local de armazenamento padrão é <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. O nome do repositório padrão é <xref:System.Security.Cryptography.X509Certificates.StoreName.My>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509CertificateStoreTokenResolver (System.Security.Cryptography.X509Certificates.StoreName storeName, System.Security.Cryptography.X509Certificates.StoreLocation storeLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.X509Certificates.StoreName storeName, valuetype System.Security.Cryptography.X509Certificates.StoreLocation storeLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver.#ctor(System.Security.Cryptography.X509Certificates.StoreName,System.Security.Cryptography.X509Certificates.StoreLocation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="storeName" Type="System.Security.Cryptography.X509Certificates.StoreName" />
+        <Parameter Name="storeLocation" Type="System.Security.Cryptography.X509Certificates.StoreLocation" />
+      </Parameters>
+      <Docs>
+        <param name="storeName">Um dos valores de enumeração que especifica o nome do certificado x. 509 de repositório.</param>
+        <param name="storeLocation">Um dos valores de enumeração que especificam o local do certificado x. 509 de repositório.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver" /> classe que usa o certificado x. 509 armazenar com o local especificado e nome para resolver tokens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509CertificateStoreTokenResolver (string storeName, System.Security.Cryptography.X509Certificates.StoreLocation storeLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string storeName, valuetype System.Security.Cryptography.X509Certificates.StoreLocation storeLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver.#ctor(System.String,System.Security.Cryptography.X509Certificates.StoreLocation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="storeName" Type="System.String" />
+        <Parameter Name="storeLocation" Type="System.Security.Cryptography.X509Certificates.StoreLocation" />
+      </Parameters>
+      <Docs>
+        <param name="storeName">O nome do repositório de certificados x. 509.</param>
+        <param name="storeLocation">Um dos valores de enumeração que especificam o local de um certificado x. 509 de repositório.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver" /> classe que usa o certificado x. 509 armazenar com o local especificado e nome para resolver tokens.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="storeLocation" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreLocation">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.StoreLocation StoreLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.StoreLocation StoreLocation" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver.StoreLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do repositório de certificados x. 509 que é usado por este resolvedor de token.</summary>
+        <value>Um dos valores de enumeração que especificam o local de um certificado x. 509 de repositório.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreName">
+      <MemberSignature Language="C#" Value="public string StoreName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StoreName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver.StoreName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do repositório de certificados x. 509 que é usado por este resolvedor de token.</summary>
+        <value>O nome do repositório de certificados x. 509 que é usado por este resolvedor de token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveSecurityKeyCore">
+      <MemberSignature Language="C#" Value="protected override bool TryResolveSecurityKeyCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryResolveSecurityKeyCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityKey&amp; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver.TryResolveSecurityKeyCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityKey@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="key" Type="System.IdentityModel.Tokens.SecurityKey&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">A cláusula de identificador de chave do qual resolver a chave de segurança.</param>
+        <param name="key">Quando este método retorna, contém a chave de segurança que foi resolvida a cláusula de identificador de chave. Esse parâmetro é tratado como não inicializado.</param>
+        <summary>Tenta resolver a cláusula de identificador de chave especificado para uma chave de segurança.</summary>
+        <returns>
+          <see langword="true" />Se a cláusula de identificador de chave é resolvida com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifier,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">O identificador de chave para resolver.</param>
+        <param name="token">Quando este método retorna, contém o token de segurança que foi resolvido do identificador de chave. Esse parâmetro é tratado como não inicializado.</param>
+        <summary>Resolve o identificador de chave especificado para um token de segurança.</summary>
+        <returns>
+          <see langword="true" />Se o identificador de chave é resolvido com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected override bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509CertificateStoreTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">A cláusula de identificador de chave para resolver.</param>
+        <param name="token">Quando este método retorna, contém o token de segurança que foi resolvido a partir da cláusula de identificador de chave. Esse parâmetro é tratado como não inicializado.</param>
+        <summary>Resolve a cláusula de identificador de chave especificado para um token de segurança.</summary>
+        <returns>
+          <see langword="true" />Se a cláusula de identificador de chave é resolvida com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

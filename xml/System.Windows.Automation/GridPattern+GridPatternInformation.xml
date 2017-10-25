@@ -1,0 +1,97 @@
+<Type Name="GridPattern+GridPatternInformation" FullName="System.Windows.Automation.GridPattern+GridPatternInformation">
+  <TypeSignature Language="C#" Value="public struct GridPattern.GridPatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit GridPattern/GridPatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.GridPattern.GridPatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso aos valores de propriedade de um <see cref="T:System.Windows.Automation.GridPattern" /> objeto usando seu <see cref="P:System.Windows.Automation.GridPattern.Current" /> ou <see cref="P:System.Windows.Automation.GridPattern.Cached" /> acessadores.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnCount">
+      <MemberSignature Language="C#" Value="public int ColumnCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de colunas em uma grade.</summary>
+        <value>O número total de colunas em uma grade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Linhas e colunas, dependendo da implementação de provedor, podem ser carregadas no [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] de árvore e, portanto, serão refletidas no <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> e <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> propriedades. Se as linhas e colunas ocultas tem ainda não foram carregadas não são contados.  
+  
+ O valor padrão é 0.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um ouvinte de evento é configurar uma alteração de estrutura de grade, como uma linha ou coluna de grade item sendo adicionado ou removido da grade.  
+  
+ [!code-csharp[UIAGridPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#102)]
+ [!code-vb[UIAGridPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#102)]  
+[!code-csharp[UIAGridPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#103)]
+[!code-vb[UIAGridPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#103)]  
+[!code-csharp[UIAGridPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#101)]
+[!code-vb[UIAGridPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCount">
+      <MemberSignature Language="C#" Value="public int RowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de linhas em uma grade.</summary>
+        <value>O número total de linhas em uma grade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Linhas e colunas, dependendo da implementação de provedor, podem ser carregadas no [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] de árvore e, portanto, serão refletidas no <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> e <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> propriedades. Se as linhas e colunas ocultas tem ainda não foram carregadas eles não serão contados.  
+  
+ O valor padrão é 0.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um ouvinte de evento é configurar uma alteração de estrutura de grade, como uma linha ou coluna de grade item sendo adicionado ou removido da grade.  
+  
+ [!code-csharp[UIAGridPattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#102)]
+ [!code-vb[UIAGridPattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#102)]  
+[!code-csharp[UIAGridPattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#103)]
+[!code-vb[UIAGridPattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#103)]  
+[!code-csharp[UIAGridPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAGridPattern_snip/CSharp/UIAGridPattern_snippets.cs#101)]
+[!code-vb[UIAGridPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAGridPattern_snip/VisualBasic/UIAGridPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

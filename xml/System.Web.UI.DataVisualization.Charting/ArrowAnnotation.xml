@@ -1,0 +1,180 @@
+<Type Name="ArrowAnnotation" FullName="System.Web.UI.DataVisualization.Charting.ArrowAnnotation">
+  <TypeSignature Language="C#" Value="public class ArrowAnnotation : System.Web.UI.DataVisualization.Charting.Annotation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArrowAnnotation extends System.Web.UI.DataVisualization.Charting.Annotation" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ArrowAnnotation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.Annotation</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma anotação de seta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anotações da seta podem ser usadas para se conectar a pontos no gráfico ou realçar uma única área de gráfico.  
+  
+ Tamanhos e estilos de seta diferentes podem ser aplicados à anotação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrowAnnotation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ArrowAnnotation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataVisualization.Charting.ArrowAnnotation" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnchorAlignment">
+      <MemberSignature Language="C#" Value="public override System.Drawing.ContentAlignment AnchorAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment AnchorAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ArrowAnnotation.AnchorAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.ContentAlignment), "TopLeft")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento da posição da anotação para o ponto de ancoragem.</summary>
+        <value>Um <see cref="T:System.Drawing.ContentAlignment" /> valor de enumeração que representa o alinhamento da anotação para o ponto de ancoragem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A anotação deve ser ancorada usando <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorDataPoint%2A>, ou o <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorX%2A> e <xref:System.Web.UI.DataVisualization.Charting.Annotation.AnchorY%2A> propriedades.  
+  
+ Seu <xref:System.Web.UI.DataVisualization.Charting.Annotation.X%2A> e <xref:System.Web.UI.DataVisualization.Charting.Annotation.Y%2A> propriedades devem ser definidas como <xref:System.Double.NaN>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationType">
+      <MemberSignature Language="C#" Value="public override string AnnotationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AnnotationType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ArrowAnnotation.AnnotationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do tipo de anotação. Não deve ser usado para uso interno.</summary>
+        <value>Um <see langword="string" /> valor que representa o nome do tipo de anotação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obtém o nome de cada tipo de anotação como linha, retângulo, elipse e assim por diante.  
+  
+ Essa propriedade é para uso interno e está oculta em tempo de design e tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrowSize">
+      <MemberSignature Language="C#" Value="public virtual int ArrowSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ArrowSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ArrowAnnotation.ArrowSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(5)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um tamanho da seta, em pixels.</summary>
+        <value>Um <see langword="integer" /> valor que representa o tamanho da seta — ou seja, sua espessura, em pixels.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrowStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.ArrowStyle ArrowStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ArrowStyle ArrowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ArrowAnnotation.ArrowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ArrowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de seta.</summary>
+        <value>O <see cref="T:System.Web.UI.DataVisualization.Charting.ArrowStyle" /> de uma anotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

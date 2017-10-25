@@ -1,0 +1,364 @@
+<Type Name="ProviderMetadata" FullName="System.Diagnostics.Eventing.Reader.ProviderMetadata">
+  <TypeSignature Language="C#" Value="public class ProviderMetadata : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProviderMetadata extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.ProviderMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contém informações estáticas sobre um provedor de eventos, como o nome e a id do provedor e a coleção de eventos definidos no provedor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Por exemplo de código usando esta classe, consulte [como: recuperar informações sobre um publicador do evento](http://msdn.microsoft.com/en-us/2a3e897f-25a9-4dad-8541-171ac49970a3).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProviderMetadata (string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.ProviderMetadata.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">O nome do provedor de eventos que você deseja recuperar informações sobre.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.Reader.ProviderMetadata" /> classe especificando o nome do provedor que você deseja recuperar informações sobre.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProviderMetadata (string providerName, System.Diagnostics.Eventing.Reader.EventLogSession session, System.Globalization.CultureInfo targetCultureInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerName, class System.Diagnostics.Eventing.Reader.EventLogSession session, class System.Globalization.CultureInfo targetCultureInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.ProviderMetadata.#ctor(System.String,System.Diagnostics.Eventing.Reader.EventLogSession,System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="session" Type="System.Diagnostics.Eventing.Reader.EventLogSession" />
+        <Parameter Name="targetCultureInfo" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">O nome do provedor de eventos que você deseja recuperar informações sobre.</param>
+        <param name="session">O <see cref="T:System.Diagnostics.Eventing.Reader.EventLogSession" /> objeto que especifica se deve obter as informações do provedor de um provedor no computador local ou um provedor em um computador remoto.</param>
+        <param name="targetCultureInfo">A cultura que especifica o idioma que as informações devem ser retornadas no.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.Reader.ProviderMetadata" /> classe especificando o nome do provedor que você deseja recuperar informações sobre o serviço de log de eventos que o provedor está registrado com o e o idioma que você deseja retornar as informações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome localizado do provedor de eventos.</summary>
+        <value>Retorna uma cadeia de caracteres que contém o nome localizado do provedor de eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.ProviderMetadata.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados por este objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.ProviderMetadata.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados por este objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Diagnostics.Eventing.Reader.EventMetadata&gt; Events { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Diagnostics.Eventing.Reader.EventMetadata&gt; Events" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Diagnostics.Eventing.Reader.EventMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventMetadata" /> objetos, cada um deles representa um evento que é definido no provedor.</summary>
+        <value>Retorna uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventMetadata" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpLink">
+      <MemberSignature Language="C#" Value="public Uri HelpLink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri HelpLink" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.HelpLink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a base da URL usada para solicitações de ajuda de formulários para os eventos neste provedor de eventos.</summary>
+        <value>Retorna um valor <see cref="T:System.Uri" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Guid Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Id" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador global exclusivo (GUID) para o provedor de eventos.</summary>
+        <value>Retorna o valor GUID para o provedor de eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keywords">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventKeyword&gt; Keywords { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Diagnostics.Eventing.Reader.EventKeyword&gt; Keywords" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.Keywords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventKeyword&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventKeyword" /> objetos, que representam uma palavra-chave do evento que está no evento definido pelo provedor.</summary>
+        <value>Retorna uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventKeyword" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Levels">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventLevel&gt; Levels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Diagnostics.Eventing.Reader.EventLevel&gt; Levels" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.Levels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventLevel&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventLevel" /> objetos, cada um deles representa um nível de eventos definido pelo provedor.</summary>
+        <value>Retorna uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventLevel" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogLinks">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventLogLink&gt; LogLinks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Diagnostics.Eventing.Reader.EventLogLink&gt; LogLinks" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.LogLinks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventLogLink&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventLogLink" /> objetos, cada um deles representa um link para um log de eventos que é usado pelo provedor de eventos.</summary>
+        <value>Retorna uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventLogLink" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageFilePath">
+      <MemberSignature Language="C#" Value="public string MessageFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.MessageFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do arquivo que contém o recurso de tabela que tem as cadeias de caracteres associadas com os metadados do provedor.</summary>
+        <value>Retorna uma cadeia de caracteres que contém o caminho do provedor de arquivo de mensagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome exclusivo do provedor de eventos.</summary>
+        <value>Retorna uma cadeia de caracteres que contém o nome exclusivo do provedor de eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opcodes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventOpcode&gt; Opcodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Diagnostics.Eventing.Reader.EventOpcode&gt; Opcodes" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.Opcodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventOpcode&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventOpcode" /> objetos, cada um deles representa um código de operação que está no evento definido pelo provedor.</summary>
+        <value>Retorna uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventOpcode" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterFilePath">
+      <MemberSignature Language="C#" Value="public string ParameterFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParameterFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.ParameterFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do arquivo que contém o recurso de tabela que tem as cadeias de caracteres usadas para substituições de parâmetro nas descrições de eventos.</summary>
+        <value>Retorna uma cadeia de caracteres que contém o caminho do arquivo que contém o recurso de tabela que tem as cadeias de caracteres usadas para substituições de parâmetro nas descrições de eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceFilePath">
+      <MemberSignature Language="C#" Value="public string ResourceFilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResourceFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.ResourceFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho para o arquivo que contém os metadados associados ao provedor.</summary>
+        <value>Retorna uma cadeia de caracteres que contém o caminho para o arquivo que contém os metadados associados ao provedor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tasks">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventTask&gt; Tasks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Diagnostics.Eventing.Reader.EventTask&gt; Tasks" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.ProviderMetadata.Tasks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventTask&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventTask" /> objetos, cada um deles representa uma tarefa que é definida no evento pelo provedor.</summary>
+        <value>Retorna uma coleção enumerável de <see cref="T:System.Diagnostics.Eventing.Reader.EventTask" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

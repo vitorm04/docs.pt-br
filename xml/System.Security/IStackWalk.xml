@@ -1,0 +1,179 @@
+<Type Name="IStackWalk" FullName="System.Security.IStackWalk">
+  <TypeSignature Language="C#" Value="public interface IStackWalk" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IStackWalk" />
+  <TypeSignature Language="DocId" Value="T:System.Security.IStackWalk" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gerencia a movimentação da pilha que determina se todos os chamadores na pilha de chamadas têm as permissões necessárias para acessar um recurso protegido.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código parcialmente confiável sempre apresenta um risco de segurança. Às vezes, podem ser manipulado para executar ações em nome de um código mal-intencionado que não tem permissão para acessar um recurso. Dessa forma, o código mal-intencionado pode alcançar maior acesso de segurança que ele deve ter permissão.  
+  
+ O common language runtime ajuda a proteger o código gerenciado contra esses ataques executando um exame da pilha em todas as chamadas. A movimentação da pilha requer que todo o código na pilha de chamadas tem permissão para acessar um recurso protegido. Porque o código de tentativa de ataque sempre será em algum lugar na pilha de chamadas, será possível exceder suas próprias permissões de segurança.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public void Assert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Assert() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IStackWalk.Assert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Declara que o código de chamada pode acessar o recurso identificado pelo objeto de permissão atual, mesmo que os chamadores mais acima na pilha não recebeu permissão para acessar o recurso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Security.IStackWalk.Assert%2A> interrompe a verificação de permissão chamadores mais acima na pilha de chamadas. Portanto, mesmo se esses chamadores não tem as permissões necessárias, eles ainda podem acessar recursos. Uma asserção é eficaz somente se o código que chama <xref:System.Security.IStackWalk.Assert%2A> passa na verificação de segurança para a permissão que está declarando.  
+  
+ Uma chamada para <xref:System.Security.IStackWalk.Assert%2A> é eficiente, até que o código de chamada retorna ao chamador ou até que uma chamada subsequente para <xref:System.Security.IStackWalk.Assert%2A> renderiza a declaração anterior ineficazes. Além disso, <xref:System.Security.CodeAccessPermission.RevertAssert%2A> ou <xref:System.Security.CodeAccessPermission.RevertAll%2A> remove um pendente <xref:System.Security.IStackWalk.Assert%2A>.  
+  
+ <xref:System.Security.IStackWalk.Assert%2A>é ignorado para uma permissão concedida não porque uma solicitação de permissão não terá êxito. No entanto, se inferior na pilha de chamadas de código chama <xref:System.Security.IStackWalk.Demand%2A> para essa permissão, um <xref:System.Security.SecurityException> é gerada quando a movimentação da pilha atinge o código que tentou chamar <xref:System.Security.IStackWalk.Assert%2A>. Isso ocorre porque o código que chamou <xref:System.Security.IStackWalk.Assert%2A> não recebeu a permissão, mesmo que ele tentou <xref:System.Security.IStackWalk.Assert%2A> -lo.  
+  
+> [!CAUTION]
+>  Como chamar <xref:System.Security.IStackWalk.Assert%2A> remove o requisito de que todos os código da cadeia de chamada deve ter permissão para acessar o recurso especificado, ele pode abrir vulnerabilidades de segurança se usado incorretamente ou inadequadamente. Portanto, ele deve ser usado com cuidado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O código de chamada não tem <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Assertion" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Demand">
+      <MemberSignature Language="C#" Value="public void Demand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Demand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IStackWalk.Demand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina o tempo de execução se todos os chamadores na pilha de chamadas tiverem a permissão especificada pelo objeto de permissão atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é usado pelas bibliotecas seguras para garantir que os chamadores tem permissão para acessar um recurso. Por exemplo, uma classe de arquivo em uma biblioteca de classe seguro chama <xref:System.Security.IStackWalk.Demand%2A> para necessários <xref:System.Security.Permissions.FileIOPermission> antes de executar uma operação de arquivo solicitada pelo chamador.  
+  
+ As permissões do código que chama esse método não são examinadas; a seleção começa o chamador imediato do código e continua na pilha. <xref:System.Security.IStackWalk.Demand%2A>é realizada somente se nenhuma <xref:System.Security.SecurityException> é gerado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador superior na pilha de chamadas não tem a permissão especificada pelo objeto de permissão atual.  
+  
+ -ou-  
+  
+ Um chamador na pilha de chamadas chamou <see cref="M:System.Security.IStackWalk.Deny" /> no objeto da permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deny">
+      <MemberSignature Language="C#" Value="public void Deny ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Deny() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IStackWalk.Deny" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que cada <see cref="M:System.Security.IStackWalk.Demand" /> para o objeto atual que passa pelo código de chamada falhe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método impede que os chamadores mais acima na pilha de chamadas acessando o recurso protegido por meio do código que chama esse método, mesmo que os chamadores tiverem permissão para acessá-lo. A pilha de chamadas é representada geralmente como crescimento para baixo, para que os métodos superiores na pilha de chamadas chamam métodos inferior na pilha de chamadas.  
+  
+ <xref:System.Security.IStackWalk.Deny%2A>pode limitar a responsabilidade do programador ou ajudar a evitar vulnerabilidades de segurança acidental, pois ajuda a impedir que o método que chama <xref:System.Security.IStackWalk.Deny%2A> seja usado para acessar o recurso protegido pela permissão negada. Se chama um método <xref:System.Security.IStackWalk.Deny%2A> em uma permissão e se um <xref:System.Security.IStackWalk.Demand%2A> para essa permissão é invocado por um chamador inferior na pilha de chamadas, essa verificação de segurança falharão quando atingir o <xref:System.Security.IStackWalk.Deny%2A>.  
+  
+ <xref:System.Security.IStackWalk.Deny%2A>é ignorado para uma permissão concedida não porque uma solicitação de permissão não terá êxito.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você não pode substituir esse método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PermitOnly">
+      <MemberSignature Language="C#" Value="public void PermitOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PermitOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.IStackWalk.PermitOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que cada <see cref="M:System.Security.IStackWalk.Demand" /> para todos os objetos, exceto o atual que passa pelo código de chamada falhe, mesmo se superior na pilha de chamadas de código tem permissão para acessar outros recursos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.IStackWalk.PermitOnly%2A>é semelhante ao <xref:System.Security.IStackWalk.Deny%2A>, ambos causam movimentações de pilha falhe quando eles conseguirão caso contrário. A diferença é que <xref:System.Security.IStackWalk.Deny%2A> Especifica as permissões que fará com que a movimentação da pilha falhe, mas <xref:System.Security.IStackWalk.PermitOnly%2A> Especifica as permissões somente que fazem com que a movimentação da pilha falha. Chame este método para garantir que seu código pode ser usado para acessar somente os recursos especificados.  
+  
+ <xref:System.Security.IStackWalk.PermitOnly%2A>é ignorado para uma permissão concedida não porque uma solicitação de permissão não terá êxito. No entanto, se o código inferior na chamada de pilha mais tarde chamadas <xref:System.Security.IStackWalk.Demand%2A> para essa permissão, um <xref:System.Security.SecurityException> é gerada quando a movimentação da pilha atinge o código que tentou chamar <xref:System.Security.IStackWalk.PermitOnly%2A>. Isso ocorre porque o código chamado <xref:System.Security.IStackWalk.PermitOnly%2A> não recebeu a permissão, mesmo que ela chamou <xref:System.Security.IStackWalk.PermitOnly%2A> para essa permissão. A pilha de chamadas é representada geralmente como crescimento para baixo, para que os métodos superiores na pilha de chamadas chamam métodos inferior na pilha de chamadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

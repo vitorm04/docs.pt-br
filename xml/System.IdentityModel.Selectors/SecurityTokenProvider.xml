@@ -1,0 +1,725 @@
+<Type Name="SecurityTokenProvider" FullName="System.IdentityModel.Selectors.SecurityTokenProvider">
+  <TypeSignature Language="C#" Value="public abstract class SecurityTokenProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityTokenProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SecurityTokenProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um provedor de token de segurança que manipula tokens de segurança para um remetente da mensagem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe quando tokens de segurança personalizadas são necessários. A função de um provedor de token de segurança é obter um token de segurança quando uma mensagem SOAP é enviada por um cliente e um token de segurança é usado para autenticar o cliente ou para proteger a mensagem SOAP. Especificamente, o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> método é chamado para obter um token de segurança. O provedor de token de segurança também pode ser chamado para cancelar e renovar uma segurança usando o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.CancelToken%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenProvider.RenewToken%2A> métodos.  
+  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenManager> implementação de classe a <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> método para determinar qual segurança o provedor de token é necessário para um token de segurança.  
+  
+ O <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> classes fornecem as implementações do padrão de segurança internas tipos de token. Para cenários de token de segurança personalizada, você deve derivar uma classe de uma da <xref:System.IdentityModel.Selectors.SecurityTokenManager>, <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, ou <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> classes e fornece a funcionalidade para criar o provedor de token de segurança, o autenticador de token de segurança e o serializador de token de segurança para o token de segurança personalizada. [!INCLUDE[crabout](~/includes/crabout-md.md)]criar um token personalizado, consulte [como: criar um Token personalizado](~/docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+  
+   
+  
+## Examples  
+ [!code-csharp[SecurityTokenProvider#0](~/samples/snippets/csharp/VS_Snippets_CFX/securitytokenprovider/cs/samlsecuritytokenprovider.cs#0)]
+ [!code-vb[SecurityTokenProvider#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/securitytokenprovider/vb/samlsecuritytokenprovider.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityTokenProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCancelToken">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginCancelToken (TimeSpan timeout, System.IdentityModel.Tokens.SecurityToken token, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginCancelToken(valuetype System.TimeSpan timeout, class System.IdentityModel.Tokens.SecurityToken token, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginCancelToken(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que cancela o token de segurança.</param>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> para cancelar.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação de conclusão da operação de fechamento assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas com a operação assíncrona.</param>
+        <summary>Inicia uma operação assíncrona para cancelar um token de segurança.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação de cancelamento assíncrono.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança que pode ser cancelado, como aquele que é emitido, permite que um cliente que solicitou um token de segurança para cancelá-la quando tiver terminado com ele.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginCancelTokenCore(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" /> método é chamado pelo <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginCancelToken(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" /> método.  
+  
+ Os métodos assíncronos, que têm um prefixo de início e de término, não precisam ser substituído nas classes derivadas. O <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" /> classe base fornece uma implementação assíncrona com base em métodos síncronos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCancelTokenCore">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult BeginCancelTokenCore (TimeSpan timeout, System.IdentityModel.Tokens.SecurityToken token, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult BeginCancelTokenCore(valuetype System.TimeSpan timeout, class System.IdentityModel.Tokens.SecurityToken token, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginCancelTokenCore(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que cancela o token de segurança.</param>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> para cancelar.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação de conclusão da operação de fechamento assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas com a operação assíncrona.</param>
+        <summary>Inicia uma operação assíncrona para cancelar um token de segurança.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação de cancelamento assíncrono.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança que pode ser cancelado, como aquele que é emitido, permite que um cliente que solicitou um token de segurança para cancelá-la quando tiver terminado com ele.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" /> classe não é necessário para substituir os métodos assíncronos, como o <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" /> classe base fornece suporte assíncrono com base em métodos síncronos. Portanto, você não precisa substituir o <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginCancelTokenCore(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" /> método, a menos que você precisa fornecer sua própria implementação assíncrona.  
+  
+ O <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginCancelTokenCore(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" /> método é chamado pelo <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginCancelToken(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" /> método.  
+  
+ Os métodos assíncronos, que têm um prefixo de início e de término, não precisam ser substituído nas classes derivadas. O <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" /> classe base fornece uma implementação assíncrona com base em métodos síncronos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetToken">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetToken (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetToken(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginGetToken(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que obtém o token de segurança.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação de conclusão da operação de fechamento assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas com a operação assíncrona.</param>
+        <summary>Inicia uma operação assíncrona para obter um token de segurança.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginGetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginGetTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Os métodos assíncronos, que têm um prefixo de início e de término, não precisam ser substituído nas classes derivadas. O <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" /> classe base fornece uma implementação assíncrona com base em métodos síncronos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetTokenCore">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult BeginGetTokenCore (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult BeginGetTokenCore(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginGetTokenCore(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que obtém o token de segurança.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação de conclusão da operação de fechamento assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas com a operação assíncrona.</param>
+        <summary>Inicia uma operação assíncrona para obter um token de segurança.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao herdar do <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe não é necessário para substituir os métodos assíncronos, como o <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe base fornece suporte assíncrono com base em métodos síncronos. Portanto, você não precisa substituir o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginGetTokenCore%2A> método, a menos que você deve fornecer sua própria implementação assíncrona.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginGetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginGetTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Os métodos assíncronos, que têm um prefixo de início e de término, não precisam ser substituído nas classes derivadas. O <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" /> classe base fornece uma implementação assíncrona com base em métodos síncronos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRenewToken">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRenewToken (TimeSpan timeout, System.IdentityModel.Tokens.SecurityToken token, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRenewToken(valuetype System.TimeSpan timeout, class System.IdentityModel.Tokens.SecurityToken token, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginRenewToken(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="tokenToBeRenewed" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que renova o token de segurança.</param>
+        <param name="token">To be added.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação de conclusão da operação de fechamento assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas com a operação assíncrona.</param>
+        <summary>Inicia uma operação assíncrona que renova um token de segurança.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginRenewToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginRenewTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Os métodos assíncronos, que têm um prefixo de início e de término, não precisam ser substituído nas classes derivadas. O <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" /> classe base fornece uma implementação assíncrona com base em métodos síncronos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRenewTokenCore">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult BeginRenewTokenCore (TimeSpan timeout, System.IdentityModel.Tokens.SecurityToken token, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult BeginRenewTokenCore(valuetype System.TimeSpan timeout, class System.IdentityModel.Tokens.SecurityToken token, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginRenewTokenCore(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="tokenToBeRenewed" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que renova o token de segurança.</param>
+        <param name="token">To be added.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação de conclusão da operação de fechamento assíncrona.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas com a operação assíncrona.</param>
+        <summary>Inicia uma operação assíncrona que renova um token de segurança.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao herdar do <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe não é necessário para substituir os métodos assíncronos, como o <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe base fornece suporte assíncrono com base em métodos síncronos. Portanto, você não precisa substituir o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginRenewTokenCore%2A> método, a menos que você deve fornecer sua própria implementação assíncrona.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginRenewToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.BeginRenewTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelToken">
+      <MemberSignature Language="C#" Value="public void CancelToken (TimeSpan timeout, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelToken(valuetype System.TimeSpan timeout, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.CancelToken(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que cancela o token de segurança.</param>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> para cancelar.</param>
+        <summary>Cancela um token de segurança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança que pode ser cancelado, como aquele que é emitido, permite que um cliente que solicitou um token de segurança para cancelá-la quando tiver terminado com ele.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.CancelToken%2A> chamadas de método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.CancelTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelTokenCore">
+      <MemberSignature Language="C#" Value="protected virtual void CancelTokenCore (TimeSpan timeout, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CancelTokenCore(valuetype System.TimeSpan timeout, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.CancelTokenCore(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que cancela o token de segurança.</param>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> para cancelar.</param>
+        <summary>Cancela um token de segurança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança que pode ser cancelado, como aquele que é emitido, permite que um cliente que solicitou um token de segurança para cancelá-la quando tiver terminado com ele.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.CancelToken%2A> chamadas de método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.CancelTokenCore%2A> método.  
+  
+ Quando o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.CancelTokenCore%2A> método é substituído e o token de segurança passado para o parâmetro de token não pode ser cancelado, gerar o <xref:System.IdentityModel.Tokens.SecurityTokenException> exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCancelToken">
+      <MemberSignature Language="C#" Value="public void EndCancelToken (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndCancelToken(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.EndCancelToken(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> que é retornado por uma chamada para o método <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginCancelToken(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Conclui uma operação assíncrona para cancelar um token de segurança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança que pode ser cancelado, como aquele que é emitido, permite que um cliente que solicitou um token de segurança para cancelá-la quando tiver terminado com ele.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndCancelToken%2A> chamadas de método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndCancelTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Os métodos assíncronos, que têm um prefixo de início e de término, não precisam ser substituído nas classes derivadas. O <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" /> classe base fornece uma implementação assíncrona com base em métodos síncronos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCancelTokenCore">
+      <MemberSignature Language="C#" Value="protected virtual void EndCancelTokenCore (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndCancelTokenCore(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.EndCancelTokenCore(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> que é retornado por uma chamada para o método <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginCancelTokenCore(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Conclui uma operação assíncrona para cancelar um token de segurança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança que pode ser cancelado, como aquele que é emitido, permite que um cliente que solicitou um token de segurança para cancelá-la quando tiver terminado com ele.  
+  
+ Ao herdar do <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe não é necessário para substituir os métodos assíncronos, como o <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe base fornece suporte assíncrono com base em métodos síncronos. Portanto, você não precisa substituir o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndCancelTokenCore%2A> método, a menos que você deve fornecer sua própria implementação assíncrona.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndCancelToken%2A> chamadas de método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndCancelTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken EndGetToken (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken EndGetToken(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.EndGetToken(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> que é retornado por uma chamada para o método <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginGetToken(System.TimeSpan,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Conclui uma operação assíncrona para obter um token de segurança.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndGetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndGetTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetTokenCore">
+      <MemberSignature Language="C#" Value="protected virtual System.IdentityModel.Tokens.SecurityToken EndGetTokenCore (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken EndGetTokenCore(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.EndGetTokenCore(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> que é retornado por uma chamada para o método <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginGetTokenCore(System.TimeSpan,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Conclui uma operação assíncrona para obter um token de segurança.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao herdar do <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe não é necessário para substituir os métodos assíncronos, como o <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe base fornece suporte assíncrono com base em métodos síncronos. Portanto, você não precisa substituir o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndGetTokenCore%2A> método, a menos que você deve fornecer sua própria implementação assíncrona.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndGetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndGetTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRenewToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken EndRenewToken (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken EndRenewToken(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.EndRenewToken(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> que é retornado por uma chamada para o método <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginRenewToken(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Conclui uma operação assíncrona para renovar um token de segurança.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança for renovado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndRenewToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndRenewTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRenewTokenCore">
+      <MemberSignature Language="C#" Value="protected virtual System.IdentityModel.Tokens.SecurityToken EndRenewTokenCore (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken EndRenewTokenCore(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.EndRenewTokenCore(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> que é retornado por uma chamada para o método <see cref="M:System.IdentityModel.Selectors.SecurityTokenProvider.BeginRenewTokenCore(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Conclui uma operação assíncrona para renovar o token de segurança.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança for renovado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao herdar do <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe não é necessário para substituir os métodos assíncronos, como o <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe base fornece suporte assíncrono com base em métodos síncronos. Portanto, você não precisa substituir o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndRenewTokenCore%2A> método, a menos que você deve fornecer sua própria implementação assíncrona.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndRenewToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.EndRenewTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken GetToken (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken GetToken(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que obtém o token de segurança.</param>
+        <summary>Obtém um token de segurança.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança para obter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> método é chamado pelo <xref:System.ServiceModel.Description.ClientCredentials> classe quando um cliente envia uma mensagem SOAP e um token de segurança é necessário.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> método.  
+  
+ Na maioria dos casos o `timeout` parâmetro não for usado por classes derivadas de <xref:System.IdentityModel.Selectors.SecurityTokenProvider> como <xref:System.IdentityModel.Selectors.UserNameSecurityTokenProvider>. No entanto, às vezes, recuperar um token de segurança envolve mensagens distribuídas. Um exemplo é <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenProvider> usada em um serviço federado. Nesses casos o `timeout` parâmetro é usado para evitar exceções causadas por falhas de rede, perda de mensagens e outras condições de erro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract System.IdentityModel.Tokens.SecurityToken GetTokenCore (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken GetTokenCore(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que obtém o token de segurança.</param>
+        <summary>Obtém um token de segurança.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança para obter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> método é substituído e não é possível obter o token de segurança passado para o parâmetro de token, gerar o <xref:System.IdentityModel.Tokens.SecurityTokenException> exceção.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> método é chamado pelo <xref:System.ServiceModel.Description.ClientCredentials> classe quando um cliente envia uma mensagem SOAP e um token de segurança é necessário.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> método.  
+  
+   
+  
+## Examples  
+ [!code-csharp[SecurityTokenProvider#1](~/samples/snippets/csharp/VS_Snippets_CFX/securitytokenprovider/cs/samlsecuritytokenprovider.cs#1)]
+ [!code-vb[SecurityTokenProvider#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/securitytokenprovider/vb/samlsecuritytokenprovider.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenewToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken RenewToken (TimeSpan timeout, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken RenewToken(valuetype System.TimeSpan timeout, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.RenewToken(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="tokenToBeRenewed" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que renova o token de segurança.</param>
+        <param name="token">To be added.</param>
+        <summary>Renova um token de segurança.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança for renovado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança emitido é renovável permite que um cliente renová-la quando o token de segurança está prestes a ou expirou.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.RenewToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.RenewTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenewTokenCore">
+      <MemberSignature Language="C#" Value="protected virtual System.IdentityModel.Tokens.SecurityToken RenewTokenCore (TimeSpan timeout, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken RenewTokenCore(valuetype System.TimeSpan timeout, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenProvider.RenewTokenCore(System.TimeSpan,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="tokenToBeRenewed" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que renova o token de segurança.</param>
+        <param name="token">To be added.</param>
+        <summary>Renova um token de segurança.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança for renovado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança emitido é renovável permite que um cliente renová-la quando o token de segurança está prestes a ou expirou.  
+  
+ Quando o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.RenewTokenCore%2A> método é substituído e o token de segurança passado para o parâmetro de token não pode ser renovado, gerar o <xref:System.IdentityModel.Tokens.SecurityTokenException> exceção.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.RenewToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.RenewTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsTokenCancellation">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsTokenCancellation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsTokenCancellation" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenProvider.SupportsTokenCancellation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o token de segurança pode ser cancelado.</summary>
+        <value>
+          <see langword="true" />Se o token de segurança pode ser cancelado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança que pode ser cancelado, como aquele que é emitido, permite que um cliente que solicitou um token de segurança para cancelá-la quando tiver terminado com ele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsTokenRenewal">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsTokenRenewal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsTokenRenewal" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenProvider.SupportsTokenRenewal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o token de segurança é renovável.</summary>
+        <value>
+          <see langword="true" />Se o token de segurança poderá ser renovado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança emitido é renovável permite que um cliente renová-la quando o token de segurança está prestes a ou expirou.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

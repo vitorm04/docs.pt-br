@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.WebControls.Adapters">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.WebControls.Adapters" /> namespace contém classes que você pode usar para substituir os estágios do ciclo de vida de um controle da Web. As classes permitem modificar a marcação de um controle ou o comportamento para novos padrões de marcação ou navegadores específicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> classe é herdada por <xref:System.Web.UI.WebControls.Adapters.MenuAdapter> e <xref:System.Web.UI.WebControls.Adapters.DataBoundControlAdapter> classes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

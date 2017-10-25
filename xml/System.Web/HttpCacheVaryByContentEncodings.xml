@@ -1,0 +1,127 @@
+<Type Name="HttpCacheVaryByContentEncodings" FullName="System.Web.HttpCacheVaryByContentEncodings">
+  <TypeSignature Language="C#" Value="public sealed class HttpCacheVaryByContentEncodings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpCacheVaryByContentEncodings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpCacheVaryByContentEncodings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira de tipo seguro para definir o <see cref="P:System.Web.HttpCachePolicy.VaryByContentEncodings" /> propriedade o <see cref="T:System.Web.HttpCachePolicy" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpCachePolicy.VaryByContentEncodings%2A> propriedade é usada para especificar se as respostas compactadas dinamicamente são armazenados em cache. Armazenamento em cache as respostas compactadas dinamicamente significa que o custo de compactação incorrido apenas uma vez, durante a primeira solicitação para o recurso (ou após uma reinicialização do aplicativo) e quando o item de cache expira.  
+  
+ O <xref:System.Web.HttpCachePolicy.VaryByContentEncodings%2A> propriedade o <xref:System.Web.HttpCachePolicy> classe identifica quais parâmetros de cabeçalho de solicitação ASP.NET usa para identificar exclusivamente uma variação da resposta, se houver várias respostas em cache para um recurso. Isso é útil quando uma resposta depende de um conjunto de entradas de cliente, como cabeçalhos, parâmetros ou codificações de conteúdo.  
+  
+ O <xref:System.Web.HttpCacheVaryByContentEncodings> classe não está diretamente relacionada aos cabeçalhos de controle de cache HTTP. No entanto, ele ajuda a garantir que uma resposta a um cliente ou um proxy varia de acordo com a codificação do conteúdo especificado. Configurar o cache variam de acordo com a codificação de conteúdo permite que o ASP.NET variar a resposta a `Accept-Encoding` cabeçalho. Quando uma solicitação é processada, o `Accept-Encoding` cabeçalho estiver marcado e a primeira codificação aceitável é identificada e usada para executar uma das seguintes ações:  
+  
+-   Se uma codificação correspondente também é encontrada na <xref:System.Web.HttpCachePolicy.VaryByContentEncodings%2A> lista e uma resposta em cache existir, a resposta armazenada em cache é enviada.  
+  
+-   Se uma codificação correspondente também é encontrada na <xref:System.Web.HttpCachePolicy.VaryByContentEncodings%2A> lista, mas uma resposta em cache não existir, uma resposta é gerada e inserida no cache.  
+  
+-   Se uma codificação correspondente não foi encontrada no <xref:System.Web.HttpCachePolicy.VaryByContentEncodings%2A> lista, o cache é pesquisada por uma resposta sem codificação, também conhecida como a resposta de identidade. Se a resposta de identidade for encontrada, ele será enviado. Caso contrário, uma nova resposta sem codificação é gerada e armazenada no cache.  
+  
+ Para obter mais informações sobre o <xref:System.Web.HttpCachePolicy.VaryByContentEncodings%2A> propriedade, consulte a RFC 2616: Hypertext Transfer Protocol--HTTP/1.1, disponível no [World Wide Web Consortium (W3C) Web site](http://go.microsoft.com/fwlink/?linkid=37125). Consulte a seção 14, "Definições de campo de cabeçalho", para obter detalhes completos.  
+  
+ Você pode definir o <xref:System.Web.HttpCachePolicy.VaryByContentEncodings%2A> propriedade usando a diretiva ou pela adição de um perfil para o elemento no arquivo Web. config.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como habilitar uma resposta dinamicamente compactada que pode ser atendida do cache de saída. A codificação é aceitável é "gzip" e é definida usando o `VaryByContentEncodings` atributo da diretiva. Se o servidor Web que hospeda a página não tiver habilitada a compactação dinâmica, o cache de saída não terá uma resposta em cache para a codificação do conteúdo especificado.  
+  
+ [!code-aspx-csharp[System.Web.HttpCachePolicy.VaryByContentEncodings#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpCachePolicy.VaryByContentEncodings/CS/default.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpCachePolicy.VaryByContentEncodings#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpCachePolicy.VaryByContentEncodings/VB/default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCacheVaryByContentEncodings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCacheVaryByContentEncodings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.HttpCacheVaryByContentEncodings" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentEncodings">
+      <MemberSignature Language="C#" Value="public string[] GetContentEncodings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetContentEncodings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz de valores que especificam as codificações de conteúdo a ser usado para variar o cache.</summary>
+        <returns>Uma matriz de valores que contêm as codificações de conteúdo para variar o cache.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public bool this[string contentEncoding] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpCacheVaryByContentEncodings.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentEncoding" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentEncoding">O nome da codificação do conteúdo.</param>
+        <summary>Obtém ou define um valor que indica se o cache varia de acordo com a codificação do conteúdo especificado.</summary>
+        <value>
+          <see langword="true" />Se o cache deve variar de acordo com o conteúdo codificação especificada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">A codificação do conteúdo é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContentEncodings">
+      <MemberSignature Language="C#" Value="public void SetContentEncodings (string[] contentEncodings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetContentEncodings(string[] contentEncodings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentEncodings" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="contentEncodings">Uma matriz de valores que contêm as codificações de conteúdo para variar o cache.</param>
+        <summary>Define uma matriz de valores que especificam as codificações de conteúdo a ser usado para variar o cache.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,80 @@
+<Type Name="ComUnregisterFunctionAttribute" FullName="System.Runtime.InteropServices.ComUnregisterFunctionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComUnregisterFunctionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComUnregisterFunctionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o método a ser chamado quando você cancelar o registro de um assembly para uso do COM; Isso permite a execução de código escrito pelo usuário durante o processo de cancelamento de registro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para métodos.  
+  
+ <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>permite que você adicione o código que reverte as operações executadas por um método de registro. Se você aplicar o <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> para fornecer um método de registro, você também deve fornecer um método de cancelamento de registro para inverter as operações realizadas no método de registro. Você pode ter apenas um método de cancelamento de registro de uma classe.  
+  
+ O common language runtime chama o método com esse atributo quando seu assembly contendo é não (direta ou indiretamente) com o [Regasm.exe (ferramenta de registro de Assembly)](~/docs/framework/tools/regasm-exe-assembly-registration-tool.md) ou por meio de <xref:System.Runtime.InteropServices.RegistrationServices.UnregisterAssembly%2A?displayProperty=nameWithType> método API. Métodos com esse atributo podem ter qualquer visibilidade (pública, privada e assim por diante), mas devem ser `static` e é necessário executar uma única <xref:System.Type> parâmetro para o <xref:System.Type> para cancelar o registro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a aplicação de <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> e <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> para métodos com a assinatura apropriada.  
+  
+ [!code-cpp[Classic ComRegisterFunctionAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ComRegisterFunctionAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ComRegisterFunctionAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ComRegisterFunctionAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic ComRegisterFunctionAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ComRegisterFunctionAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComUnregisterFunctionAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComUnregisterFunctionAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,178 @@
+<Type Name="DataGridRowClipboardEventArgs" FullName="System.Windows.Controls.DataGridRowClipboardEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridRowClipboardEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridRowClipboardEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridRowClipboardEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Controls.DataGrid.CopyingRowClipboardContent" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridRowClipboardEventArgs (object item, int startColumnDisplayIndex, int endColumnDisplayIndex, bool isColumnHeadersRow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object item, int32 startColumnDisplayIndex, int32 endColumnDisplayIndex, bool isColumnHeadersRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRowClipboardEventArgs.#ctor(System.Object,System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="startColumnDisplayIndex" Type="System.Int32" />
+        <Parameter Name="endColumnDisplayIndex" Type="System.Int32" />
+        <Parameter Name="isColumnHeadersRow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item de dados para a linha para a qual o evento ocorreu.</param>
+        <param name="startColumnDisplayIndex">O <see cref="P:System.Windows.Controls.DataGridColumn.DisplayIndex" /> valor da coluna que contém a primeira célula na linha selecionada.</param>
+        <param name="endColumnDisplayIndex">O <see cref="P:System.Windows.Controls.DataGridColumn.DisplayIndex" /> valor da coluna que contém a última célula selecionada na linha.</param>
+        <param name="isColumnHeadersRow">Um valor que indica se a linha para a qual o evento ocorreu representa os cabeçalhos de coluna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.DataGridRowClipboardEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipboardRowContent">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Windows.Controls.DataGridClipboardCellContent&gt; ClipboardRowContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;valuetype System.Windows.Controls.DataGridClipboardCellContent&gt; ClipboardRowContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowClipboardEventArgs.ClipboardRowContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Windows.Controls.DataGridClipboardCellContent&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> valores que representam os valores de texto das células que estão sendo copiados.</summary>
+        <value>Uma lista de <see cref="T:System.Windows.Controls.DataGridClipboardCellContent" /> valores que representam os valores de texto das células que estão sendo copiados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade representa os valores de célula antes de serem copiadas para a área de transferência. Você pode modificar a lista ou seus valores para personalizar o que é copiado para a área de transferência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndColumnDisplayIndex">
+      <MemberSignature Language="C#" Value="public int EndColumnDisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndColumnDisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowClipboardEventArgs.EndColumnDisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Windows.Controls.DataGridColumn.DisplayIndex" /> valor da coluna que contém a última célula selecionada na linha.</summary>
+        <value>O <see cref="P:System.Windows.Controls.DataGridColumn.DisplayIndex" /> valor da coluna que contém a última célula selecionada na linha.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatClipboardCellValues">
+      <MemberSignature Language="C#" Value="public string FormatClipboardCellValues (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string FormatClipboardCellValues(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRowClipboardEventArgs.FormatClipboardCellValues(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato de dados no qual serializar os valores de célula.</param>
+        <summary>Retorna o <see cref="P:System.Windows.Controls.DataGridRowClipboardEventArgs.ClipboardRowContent" /> valores como uma cadeia de caracteres no formato especificado.</summary>
+        <returns>A cadeia de caracteres formatada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.DataGrid> usa esse método para formatar valores de célula antes de copiá-los para a área de transferência. Este método suporta os seguintes formatos de dados:  
+  
+-   <xref:System.Windows.DataFormats.CommaSeparatedValue>  
+  
+-   <xref:System.Windows.DataFormats.Text>  
+  
+-   <xref:System.Windows.DataFormats.UnicodeText>  
+  
+-   <xref:System.Windows.DataFormats.Html>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsColumnHeadersRow">
+      <MemberSignature Language="C#" Value="public bool IsColumnHeadersRow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsColumnHeadersRow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowClipboardEventArgs.IsColumnHeadersRow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a linha para a qual o evento ocorreu representa os cabeçalhos de coluna.</summary>
+        <value>
+          <see langword="true" />Se a linha representa os cabeçalhos de coluna; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowClipboardEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item de dados para a linha para a qual o evento ocorreu.</summary>
+        <value>O item de dados para a linha para a qual o evento ocorreu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartColumnDisplayIndex">
+      <MemberSignature Language="C#" Value="public int StartColumnDisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartColumnDisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowClipboardEventArgs.StartColumnDisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Windows.Controls.DataGridColumn.DisplayIndex" /> valor da coluna que contém a primeira célula na linha selecionada.</summary>
+        <value>O <see cref="P:System.Windows.Controls.DataGridColumn.DisplayIndex" /> valor da coluna que contém a primeira célula na linha selecionada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

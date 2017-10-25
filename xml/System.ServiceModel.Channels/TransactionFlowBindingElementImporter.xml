@@ -1,0 +1,70 @@
+<Type Name="TransactionFlowBindingElementImporter" FullName="System.ServiceModel.Channels.TransactionFlowBindingElementImporter">
+  <TypeSignature Language="C#" Value="public sealed class TransactionFlowBindingElementImporter : System.ServiceModel.Description.IPolicyImportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TransactionFlowBindingElementImporter extends System.Object implements class System.ServiceModel.Description.IPolicyImportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.TransactionFlowBindingElementImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyImportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Importa a política de transação (asserções WS-Policy) de um ponto de extremidade de serviço, adiciona a implementação de elementos de associação para a associação no cliente e os atributos de fluxo de transação para operações adequadas no proxy do serviço. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ponto de extremidade de serviço deve ter habilitado o fluxo de transações e seus métodos devem fluir transações. As declarações de política convertido todos aderem ao padrão WS-PolicyAssertions.  
+  
+ Essa classe é usada principalmente pela infraestrutura do quando ele cria um proxy para um serviço que está habilitado para fluxo de transações. Chamando o <xref:System.ServiceModel.Channels.TransactionFlowBindingElementImporter.System%23ServiceModel%23Description%23IPolicyImportExtension%23ImportPolicy%2A> método adiciona uma <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> de instância para o <xref:System.ServiceModel.Description.PolicyConversionContext> coleção de elementos de associação. Isso também adiciona <xref:System.ServiceModel.TransactionFlowAttribute> instâncias, conforme apropriado, no `Operations` coleção presente no contrato do contexto de conversão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionFlowBindingElementImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElementImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.TransactionFlowBindingElementImporter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyImportExtension.ImportPolicy (System.ServiceModel.Description.MetadataImporter importer, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy(class System.ServiceModel.Description.MetadataImporter importer, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.TransactionFlowBindingElementImporter.System#ServiceModel#Description#IPolicyImportExtension#ImportPolicy(System.ServiceModel.Description.MetadataImporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.ServiceModel.Description.MetadataImporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="importer">O objeto <see cref="T:System.ServiceModel.Description.MetadataImporter" /> a ser usado.</param>
+        <param name="context">O <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> que contém as declarações de política podem ser importadas e as coleções de elementos a que a implementação de elementos de associação pode ser adicionado de associação.</param>
+        <summary>Importa as declarações de política personalizada e adiciona os elementos de associação de implementação. Esse método não pode ser herdado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

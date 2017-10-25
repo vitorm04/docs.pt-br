@@ -1,0 +1,389 @@
+<Type Name="LocalizationExtenderProvider" FullName="System.ComponentModel.Design.LocalizationExtenderProvider">
+  <TypeSignature Language="C#" Value="public class LocalizationExtenderProvider : IDisposable, System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LocalizationExtenderProvider extends System.Object implements class System.ComponentModel.IExtenderProvider, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.LocalizationExtenderProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("Language", typeof(System.Object))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("LoadLanguage", typeof(System.Object))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("Localizable", typeof(System.Object))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("This class has been deprecated. Use CodeDomLocalizationProvider instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece suporte de tempo de design para recursos de localização para um designer raiz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.LocalizationExtenderProvider>pode estender uma <xref:System.ComponentModel.Design.IRootDesigner> com um conjunto de propriedades e métodos que oferecem suporte para a arquitetura de localização do .NET Framework. Para obter mais informações sobre o uso de recursos, consulte [localização](~/docs/standard/globalization-localization/localization.md).  
+  
+ A arquitetura de suporte de localização permite que os designers de inicializar as propriedades do componente usando arquivos de recursos que podem ser trocados em tempo de execução para dar suporte a uma variedade de linguagens, estilos específicos de cultura e recursos configuráveis dinamicamente. Você pode usar os métodos dessa classe para habilitar os designers e serializadores de geração de código carregar de recursos e compilar o código de inicialização que usa os recursos de localização.  
+  
+ Os serializadores padrão que vêm com o Visual Studio já são capazes de localização de componentes e controles, mas eles somente fazem isso se localizar suporte para a arquitetura de localização do .NET Framework. Para detectar a presença de suporte de localização, o sistema de serialização deve localizar um público <xref:System.Boolean> propriedade denominada "Localizable" no componente designer raiz. Se um serializador encontrar essa propriedade, ele procura por uma propriedade de tipo <xref:System.Globalization.CultureInfo> chamado "Language" para determinar a configuração atual do recurso. Os serializadores padrão usam essas propriedades para determinar se ele deve localizar qualquer recurso localizável do componente e, nesse caso, o que <xref:System.Globalization.CultureInfo> as informações de recurso devem ser salvo no formato de.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona um <xref:System.ComponentModel.Design.LocalizationExtenderProvider> para um componente.  
+  
+ [!code-cpp[LocalizationExtenderProviderExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CPP/class1.cpp#2)]
+ [!code-csharp[LocalizationExtenderProviderExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CS/class1.cs#2)]
+ [!code-vb[LocalizationExtenderProviderExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LocalizationExtenderProviderExample/VB/class1.vb#2)]  
+  
+ O exemplo de código a seguir inclui um componente de exemplo e um designer. O designer usa um <xref:System.ComponentModel.Design.LocalizationExtenderProvider> para adicionar propriedades de suporte de localização para o componente.  
+  
+ [!code-cpp[LocalizationExtenderProviderExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CPP/class1.cpp#1)]
+ [!code-csharp[LocalizationExtenderProviderExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CS/class1.cs#1)]
+ [!code-vb[LocalizationExtenderProviderExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LocalizationExtenderProviderExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalizationExtenderProvider (System.ComponentModel.ISite serviceProvider, System.ComponentModel.IComponent baseComponent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.ISite serviceProvider, class System.ComponentModel.IComponent baseComponent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.#ctor(System.ComponentModel.ISite,System.ComponentModel.IComponent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.ComponentModel.ISite" />
+        <Parameter Name="baseComponent" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um provedor de serviços para o componente especificado.</param>
+        <param name="baseComponent">O componente de base para localizar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.LocalizationExtenderProvider" /> classe usando o componente de base e o provedor de serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um novo <xref:System.ComponentModel.Design.LocalizationExtenderProvider> define o idioma atual <xref:System.Globalization.CultureInfo.InvariantCulture%2A>, que é a configuração de recurso de idioma padrão e genérico. Essa configuração faz com que um designer gerar o código que referencia o recurso de linguagem genérica. Você pode criar outros <xref:System.Globalization.CultureInfo> localizadas de objetos para representar e identificar outros dados de recurso que pode usar um programa em tempo de execução.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.ComponentModel.Design.LocalizationExtenderProvider> objeto.  
+  
+ [!code-cpp[LocalizationExtenderProviderExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CPP/class1.cpp#2)]
+ [!code-csharp[LocalizationExtenderProviderExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CS/class1.cs#2)]
+ [!code-vb[LocalizationExtenderProviderExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LocalizationExtenderProviderExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public bool CanExtend (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExtend(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto para receber as propriedades estendidas.</param>
+        <summary>Indica se este objeto puder fornecer suas propriedades estendidas ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se este objeto puder fornecer propriedades estendidas ao objeto especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarta os recursos (exceto a memória) usados pelo <see cref="T:System.ComponentModel.Design.LocalizationExtenderProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose%2A> quando tiver terminado de usar o <xref:System.ComponentModel.Design.LocalizationExtenderProvider>. O <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose%2A> método deixa o <xref:System.ComponentModel.Design.LocalizationExtenderProvider> em um estado inutilizável. Depois de chamar <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose%2A>, você deve liberar todas as referências para o <xref:System.ComponentModel.Design.LocalizationExtenderProvider> para o coletor de lixo possa recuperar a memória que o <xref:System.ComponentModel.Design.LocalizationExtenderProvider> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose%2A> antes de liberar sua última referência para o <xref:System.ComponentModel.Design.LocalizationExtenderProvider>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.ComponentModel.Design.LocalizationExtenderProvider> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.ComponentModel.Design.LocalizationExtenderProvider" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.ComponentModel.Design.LocalizationExtenderProvider> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLanguage">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo GetLanguage (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Globalization.CultureInfo GetLanguage(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.GetLanguage(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto para obter a cultura atual do recurso para o.</param>
+        <summary>Obtém a cultura atual do recurso para o objeto especificado.</summary>
+        <returns>Um <see cref="T:System.Globalization.CultureInfo" /> indicando a variedade de recursos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna a cultura atual do recurso usada para acessar dados de recurso para o objeto especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLoadLanguage">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo GetLoadLanguage (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Globalization.CultureInfo GetLoadLanguage(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.GetLoadLanguage(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto para obter a cultura de recurso para o.</param>
+        <summary>Obtém a cultura de recursos padrão para usar ao inicializar os valores de um objeto localizado no tempo de design.</summary>
+        <returns>Um <see cref="T:System.Globalization.CultureInfo" /> que indica a cultura de recurso a ser usado para inicializar os valores do objeto especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalizable">
+      <MemberSignature Language="C#" Value="public bool GetLocalizable (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetLocalizable(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.GetLocalizable(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto para verificar se há suporte de localização.</param>
+        <summary>Obtém um valor que indica se o objeto especificado oferece suporte a localização do recurso.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado oferece suporte a localização do recurso; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetLanguage">
+      <MemberSignature Language="C#" Value="public void ResetLanguage (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetLanguage(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.ResetLanguage(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto para redefinir a cultura de recurso para o.</param>
+        <summary>Redefine a cultura de recurso para o objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o objeto especificado foi inicializado com os recursos localizados quando o designer foi carregado, esse método define a cultura de recurso para o objeto especificado para a cultura do recurso usada para inicializar os valores do objeto especificado quando o designer foi carregado. Se o objeto especificado não tiver nenhuma configuração de cultura de recursos anterior, a cultura atual do recurso é definida como <xref:System.Globalization.CultureInfo.InvariantCulture%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLanguage">
+      <MemberSignature Language="C#" Value="public void SetLanguage (object o, System.Globalization.CultureInfo language);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLanguage(object o, class System.Globalization.CultureInfo language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.SetLanguage(System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="language" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="o">O componente de base para definir a cultura de recurso para o.</param>
+        <param name="language">Um <see cref="T:System.Globalization.CultureInfo" /> que indica a cultura de recurso a ser usado.</param>
+        <summary>Define a cultura atual do recurso para o objeto especificado para a cultura do recurso especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLocalizable">
+      <MemberSignature Language="C#" Value="public void SetLocalizable (object o, bool localizable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLocalizable(object o, bool localizable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.SetLocalizable(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="localizable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="o">O componente de base para definir como localizável ou não localizável.</param>
+        <param name="localizable">
+          <see langword="true" />Se o objeto der suporte a localização do recurso; Caso contrário, <see langword="false" />.</param>
+        <summary>Define um valor que indica se o objeto especificado oferece suporte a recursos localizados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeLanguage">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeLanguage (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeLanguage(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.LocalizationExtenderProvider.ShouldSerializeLanguage(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto para obter o idioma suporte sinalizador de persistência para.</param>
+        <summary>Obtém um valor que indica que se o objeto especificado deve ter seus valores localizáveis persistente em um recurso.</summary>
+        <returns>
+          <see langword="true" />Se os valores localizáveis devem ser persistidos em recursos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

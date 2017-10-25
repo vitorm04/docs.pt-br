@@ -1,0 +1,72 @@
+<Type Name="MimeReturnReader" FullName="System.Web.Services.Protocols.MimeReturnReader">
+  <TypeSignature Language="C#" Value="public abstract class MimeReturnReader : System.Web.Services.Protocols.MimeFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MimeReturnReader extends System.Web.Services.Protocols.MimeFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.MimeReturnReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.MimeFormatter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma implementação de base comum para os leitores de valores de retorno de resposta de entrada para clientes de serviço Web implementados usando HTTP, mas sem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.MimeReturnReader>e outras classes de <xref:System.Web.Services.Protocols> namespace oferece suporte às implementações do .NET Framework do Web services por meio de operações de HTTP GET e POST HTTP. Os leitores e gravadores de serviço web serializar e desserializar, respectivamente, entre os parâmetros ou objetos de retorno de métodos Web e os fluxos de solicitação ou resposta HTTP. Os leitores e gravadores de serviço da web usam o HTTP para o transporte, mas não trocam mensagens usando o padrão SOAP.  
+  
+ O <xref:System.Web.Services.Protocols.MimeReturnReader> classe estabelece um comum <xref:System.Web.Services.Protocols.MimeReturnReader.Read%2A> interface para leitura de cliente todos os fluxos de resposta HTTP em valores de retorno de método da Web.  
+  
+ Você normalmente não precisará usar <xref:System.Web.Services.Protocols.MimeReturnReader> ou seus descendentes classes diretamente. Em vez disso, quando a ferramenta Wsdl.exe gera o código de proxy do cliente de acordo com as implementações de HTTP GET ou POST HTTP, ela se aplica a <xref:System.Web.Services.Protocols.HttpMethodAttribute> para cada método Web e define o atributo <xref:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter%2A> propriedade para o <xref:System.Web.Services.Protocols.XmlReturnReader> classe, que é derivado de <xref:System.Web.Services.Protocols.MimeReturnReader>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MimeReturnReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.MimeReturnReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.MimeReturnReader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public abstract object Read (System.Net.WebResponse response, System.IO.Stream responseStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Read(class System.Net.WebResponse response, class System.IO.Stream responseStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.MimeReturnReader.Read(System.Net.WebResponse,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="response" Type="System.Net.WebResponse" />
+        <Parameter Name="responseStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="response">Um <see cref="T:System.Net.WebResponse" /> objeto que contém a mensagem de saída para uma operação.</param>
+        <param name="responseStream">Um <see cref="T:System.IO.Stream" /> cujo conteúdo é o corpo da resposta HTTP representado pelo <see cref="T:System.Net.WebResponse" /> parâmetro.</param>
+        <summary>Quando substituído em uma classe derivada, desserializa uma resposta HTTP em um valor de retorno do método da Web.</summary>
+        <returns>Uma resposta HTTP desserializada em um valor de retorno do método da Web.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

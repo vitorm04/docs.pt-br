@@ -1,0 +1,101 @@
+<Type Name="IWebPartParameters" FullName="System.Web.UI.WebControls.WebParts.IWebPartParameters">
+  <TypeSignature Language="C#" Value="public interface IWebPartParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebPartParameters" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.IWebPartParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o contrato que implementa um controle de Web Parts para passar um valor de parâmetro em uma conexão de Web Parts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, os dados são enviados de um provedor para um consumidor em uma conexão de Web Parts. No entanto, em alguns casos, um provedor precisa de um parâmetro do consumidor para determinar quais valores devem enviar de volta. O <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters> interface define os membros para implementar que facilitam a passagem de um parâmetro de um consumidor para um provedor.  
+  
+ A classe <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> implementa a interface <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters>. Transformadores são usadas para converter dados entre dois controles de Web Parts com pontos de conexão incompatível. Um <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> objeto transforma os dados de um provedor de implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> interface quando o provedor precisa de um parâmetro do consumidor.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData%2A> método recupera os dados do provedor e fornece um método de retorno de chamada para processar os dados para o consumidor. O método de retorno de chamada pode ser um método personalizado no consumidor que define os valores de retorno adequadamente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetParametersData">
+      <MemberSignature Language="C#" Value="public void GetParametersData (System.Web.UI.WebControls.WebParts.ParametersCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetParametersData(class System.Web.UI.WebControls.WebParts.ParametersCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData(System.Web.UI.WebControls.WebParts.ParametersCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.UI.WebControls.WebParts.ParametersCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Método a ser chamado para processar os dados do provedor.</param>
+        <summary>Obtém o valor dos dados do provedor de conexão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData%2A> método é usado para recuperar os valores do provedor com base em um parâmetro. O método representado pelo `callback` parâmetro processa os dados para uso pelo consumidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptorCollection Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebPartParameters.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os descritores de propriedade para os dados a ser recebido pelo consumidor.</summary>
+        <value>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que descrevem os dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters.Schema%2A> propriedade fornece informações de propriedade de dados transmitidos pela interface. Controles de transformador e o consumidor podem consultar esta propriedade para obter informações sobre o tipo de conteúdo, e outros detalhes do campo contido na <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters> instância da interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetConsumerSchema">
+      <MemberSignature Language="C#" Value="public void SetConsumerSchema (System.ComponentModel.PropertyDescriptorCollection schema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetConsumerSchema(class System.ComponentModel.PropertyDescriptorCollection schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IWebPartParameters.SetConsumerSchema(System.ComponentModel.PropertyDescriptorCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.ComponentModel.PropertyDescriptorCollection" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> retornado por <see cref="P:System.Web.UI.WebControls.WebParts.IWebPartParameters.Schema" />.</param>
+        <summary>Define o descritor de propriedade para as propriedades que o consumidor recebe ao chamar o <see cref="M:System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData(System.Web.UI.WebControls.WebParts.ParametersCallback)" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

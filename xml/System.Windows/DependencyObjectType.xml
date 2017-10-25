@@ -1,0 +1,230 @@
+<Type Name="DependencyObjectType" FullName="System.Windows.DependencyObjectType">
+  <TypeSignature Language="C#" Value="public class DependencyObjectType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DependencyObjectType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyObjectType" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa um cache do tipo subjacente para todos os tipos derivados <see cref="T:System.Windows.DependencyObject" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DependencyObjectType>representa um determinado sistema subjacente ([!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)]) <xref:System.Type> de um <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObjectType>é essencialmente um wrapper para a ([!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)]) <xref:System.Type> para que ela pode estender alguns de seus recursos.  
+  
+ Essa classe não tem construtor público. As instâncias dessa classe só podem ser obtidas por meio de propriedades em outros objetos (como <xref:System.Windows.DependencyObject.DependencyObjectType%2A?displayProperty=nameWithType>), ou por meio do método estático <xref:System.Windows.DependencyObjectType.FromSystemType%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BaseType">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObjectType BaseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObjectType BaseType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyObjectType.BaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObjectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.DependencyObjectType" /> da classe base imediata do atual <see cref="T:System.Windows.DependencyObjectType" />.</summary>
+        <value>O tipo da classe base.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromSystemType">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyObjectType FromSystemType (Type systemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyObjectType FromSystemType(class System.Type systemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObjectType.FromSystemType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObjectType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="systemType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="systemType">O sistema ([!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)]) tipo para converter.</param>
+        <summary>Retorna um <see cref="T:System.Windows.DependencyObjectType" /> que representa um determinado sistema ([!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)]) tipo.</summary>
+        <returns>Um <see cref="T:System.Windows.DependencyObjectType" /> que representa o sistema ([!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)]) tipo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Windows.DependencyObject> mantém um <xref:System.Windows.DependencyObject.DependencyObjectType%2A> propriedade que retorna um <xref:System.Windows.DependencyObjectType>, mas isso é necessário ter um determinado <xref:System.Windows.DependencyObject> instância. Você pode usar esse método utilitário estático, se você ainda não tiver um <xref:System.Windows.DependencyObject> instância e exigem um <xref:System.Windows.DependencyObjectType>.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Windows.DependencyObjectType.FromSystemType%2A> , criando um <xref:System.Windows.DependencyObjectType> com base no tipo do <xref:System.Windows.Window> classe.  
+  
+ [!code-csharp[PropertiesOvwSupport#DOTFromSystemType](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#dotfromsystemtype)]
+ [!code-vb[PropertiesOvwSupport#DOTFromSystemType](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#dotfromsystemtype)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObjectType.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este <see cref="T:System.Windows.DependencyObjectType" />.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação é vinculada ao valor da <xref:System.Windows.DependencyObjectType.Id%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyObjectType.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo com base em zero para operações de pesquisa de matriz de tempo constante.</summary>
+        <value>Um identificador interno.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não use para funções gerais de hash. Não há nenhuma garantia nesse valor. Ela pode variar entre o aplicativo é executado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInstanceOfType">
+      <MemberSignature Language="C#" Value="public bool IsInstanceOfType (System.Windows.DependencyObject dependencyObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsInstanceOfType(class System.Windows.DependencyObject dependencyObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObjectType.IsInstanceOfType(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">O objeto a ser comparado com o <see cref="T:System.Windows.DependencyObjectType" /> atual.</param>
+        <summary>Determina se o objeto especificado é uma instância do <see cref="T:System.Windows.DependencyObjectType" /> atual.</summary>
+        <returns>
+          <see langword="true" />Se a classe representados por atual <see cref="T:System.Windows.DependencyObjectType" /> na hierarquia de herança do <see cref="T:System.Windows.DependencyObject" /> passado como <paramref name="d" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos de exatamente o mesmo tipo de retorno `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubclassOf">
+      <MemberSignature Language="C#" Value="public bool IsSubclassOf (System.Windows.DependencyObjectType dependencyObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsSubclassOf(class System.Windows.DependencyObjectType dependencyObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObjectType.IsSubclassOf(System.Windows.DependencyObjectType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObjectType" Type="System.Windows.DependencyObjectType" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObjectType">O <see cref="T:System.Windows.DependencyObjectType" /> para comparar.</param>
+        <summary>Determina se o <see cref="T:System.Windows.DependencyObjectType" /> atual deriva do <see cref="T:System.Windows.DependencyObjectType" /> especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="dependencyObjectType" /> parâmetro e atual <see cref="T:System.Windows.DependencyObjectType" /> representam tipos de classes e a classe representado pelo atual <see cref="T:System.Windows.DependencyObjectType" /> deriva da classe representada pelo <paramref name="dependencyObjectType" />. Caso contrário, <see langword="false" />. Esse método também retorna <see langword="false" /> se <paramref name="dependencyObjectType" /> e atual <see cref="T:System.Windows.DependencyObjectType" /> representar a mesma classe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyObjectType.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do representado [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] tipo de sistema.</summary>
+        <value>O nome do representado [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] tipo de sistema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Windows.DependencyObjectType.Name%2A> é a mesma cadeia de caracteres como o nome do nome do tipo de <xref:System.Type>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemType">
+      <MemberSignature Language="C#" Value="public Type SystemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type SystemType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyObjectType.SystemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] tipo de sistema representado por esse <see cref="T:System.Windows.DependencyObjectType" />.</summary>
+        <value>O [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] tipo de sistema representado por esse <see cref="T:System.Windows.DependencyObjectType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

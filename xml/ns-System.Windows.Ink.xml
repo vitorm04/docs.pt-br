@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Ink">
+  <Docs>
+    <summary>Fornece classes para interagir com e manipular tinta na plataforma Windows Presentation Foundation (WPF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

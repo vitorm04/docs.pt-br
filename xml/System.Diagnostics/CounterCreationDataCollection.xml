@@ -1,0 +1,440 @@
+<Type Name="CounterCreationDataCollection" FullName="System.Diagnostics.CounterCreationDataCollection">
+  <TypeSignature Language="C#" Value="public class CounterCreationDataCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CounterCreationDataCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.CounterCreationDataCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma coleção fortemente tipada de objetos <see cref="T:System.Diagnostics.CounterCreationData" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.CounterCreationDataCollection> classe. O exemplo cria uma nova instância da classe e usa vários métodos para adicionar instruções à coleção, retornar seu índice e adicionar ou remover atributos em um ponto de índice específico.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CounterCreationDataCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> classe, sem nenhum associado <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CounterCreationDataCollection (System.Diagnostics.CounterCreationData[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.CounterCreationData[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.#ctor(System.Diagnostics.CounterCreationData[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.CounterCreationData[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias com o qual inicializar isso <see cref="T:System.Diagnostics.CounterCreationDataCollection" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> classe usando a matriz especificada de <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Diagnostics.CounterCreationDataCollection> objeto usando um <xref:System.Diagnostics.CounterCreationData> matriz.  
+  
+ [!code-cpp[CounterCreationDataCollection_CounterCreationData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CounterCreationDataCollection_CounterCreationData/CPP/countercreationdatacollection_ctor.cpp#1)]
+ [!code-csharp[CounterCreationDataCollection_CounterCreationData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CounterCreationDataCollection_CounterCreationData/CS/countercreationdatacollection_ctor.cs#1)]
+ [!code-vb[CounterCreationDataCollection_CounterCreationData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CounterCreationDataCollection_CounterCreationData/VB/countercreationdatacollection_ctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CounterCreationDataCollection (System.Diagnostics.CounterCreationDataCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.CounterCreationDataCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.#ctor(System.Diagnostics.CounterCreationDataCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.CounterCreationDataCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> que contém <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias com o qual inicializar isso <see cref="T:System.Diagnostics.CounterCreationDataCollection" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> classe usando o conjunto especificado de <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Diagnostics.CounterCreationDataCollection> objeto usando <xref:System.Diagnostics.CounterCreationData> objetos de outro <xref:System.Diagnostics.CounterCreationDataCollection>.  
+  
+ [!code-cpp[CounterCreationDataCollection_CounterCreationDataCollection#1](~/samples/snippets/cpp/VS_Snippets_CLR/CounterCreationDataCollection_CounterCreationDataCollection/CPP/countercreationdatacollection_ctor.cpp#1)]
+ [!code-csharp[CounterCreationDataCollection_CounterCreationDataCollection#1](~/samples/snippets/csharp/VS_Snippets_CLR/CounterCreationDataCollection_CounterCreationDataCollection/CS/countercreationdatacollection_ctor_countercreationdatacollection.cs#1)]
+ [!code-vb[CounterCreationDataCollection_CounterCreationDataCollection#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CounterCreationDataCollection_CounterCreationDataCollection/VB/countercreationdatacollection_ctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Diagnostics.CounterCreationData value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Diagnostics.CounterCreationData value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.Add(System.Diagnostics.CounterCreationData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.CounterCreationData" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Diagnostics.CounterCreationData" /> objeto a ser acrescentado à coleção existente.</param>
+        <summary>Adiciona uma instância do <see cref="T:System.Diagnostics.CounterCreationData" /> classe à coleção.</summary>
+        <returns>O índice do novo objeto <see cref="T:System.Diagnostics.CounterCreationData" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.CounterCreationDataCollection.Add%2A> método para adicionar um <xref:System.Diagnostics.CounterCreationData> o objeto para um <xref:System.Diagnostics.CounterCreationDataCollection>.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é um objeto <see cref="T:System.Diagnostics.CounterCreationData" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Diagnostics.CounterCreationData[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Diagnostics.CounterCreationData[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.AddRange(System.Diagnostics.CounterCreationData[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.CounterCreationData[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias acrescentado à coleção existente.</param>
+        <summary>Adiciona a matriz especificada de <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias na coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Diagnostics.CounterCreationDataCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Diagnostics.CounterCreationDataCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.AddRange(System.Diagnostics.CounterCreationDataCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.CounterCreationDataCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma coleção de <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias acrescentado à coleção existente.</param>
+        <summary>Adiciona o conjunto especificado de <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.CounterCreationDataCollection.AddRange%28System.Diagnostics.CounterCreationDataCollection%29> sobrecarga do método para adicionar <xref:System.Diagnostics.CounterCreationData> objetos de um <xref:System.Diagnostics.CounterCreationDataCollection> para outro <xref:System.Diagnostics.CounterCreationDataCollection>.  
+  
+ [!code-cpp[CounterCreationDataCollection_AddRange#2](~/samples/snippets/cpp/VS_Snippets_CLR/CounterCreationDataCollection_AddRange/CPP/countercreationdatacollection_addrange.cpp#2)]
+ [!code-csharp[CounterCreationDataCollection_AddRange#2](~/samples/snippets/csharp/VS_Snippets_CLR/CounterCreationDataCollection_AddRange/CS/countercreationdatacollection_addrange.cs#2)]
+ [!code-vb[CounterCreationDataCollection_AddRange#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CounterCreationDataCollection_AddRange/VB/countercreationdatacollection_addrange.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Diagnostics.CounterCreationData value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Diagnostics.CounterCreationData value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.Contains(System.Diagnostics.CounterCreationData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.CounterCreationData" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Diagnostics.CounterCreationData" /> objeto a ser encontrado na coleção.</param>
+        <summary>Determina se um <see cref="T:System.Diagnostics.CounterCreationData" /> instância existe na coleção.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Diagnostics.CounterCreationData" /> objeto existe na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.CounterCreationDataCollection.Contains%2A> método para encontrar um <xref:System.Diagnostics.CounterCreationData> do objeto em um <xref:System.Diagnostics.CounterCreationDataCollection>.  
+  
+ [!code-cpp[CounterCreationDataCollection_Contains#1](~/samples/snippets/cpp/VS_Snippets_CLR/CounterCreationDataCollection_Contains/CPP/countercreationdatacollection_contains.cpp#1)]
+ [!code-csharp[CounterCreationDataCollection_Contains#1](~/samples/snippets/csharp/VS_Snippets_CLR/CounterCreationDataCollection_Contains/CS/countercreationdatacollection_contains.cs#1)]
+ [!code-vb[CounterCreationDataCollection_Contains#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CounterCreationDataCollection_Contains/VB/countercreationdatacollection_contains.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Diagnostics.CounterCreationData[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Diagnostics.CounterCreationData[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.CopyTo(System.Diagnostics.CounterCreationData[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Diagnostics.CounterCreationData[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz de <see cref="T:System.Diagnostics.CounterCreationData" /> instâncias a ser adicionada à coleção.</param>
+        <param name="index">O local no qual você deseja adicionar as novas instâncias.</param>
+        <summary>Copia os elementos de <see cref="T:System.Diagnostics.CounterCreationData" /> para uma matriz, começando no índice especificado da matriz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que 0.</exception>
+        <exception cref="T:System.ArgumentException">O número de elementos no <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> é maior que o espaço disponível do <paramref name="index" /> ao final da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Diagnostics.CounterCreationData value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Diagnostics.CounterCreationData value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.IndexOf(System.Diagnostics.CounterCreationData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.CounterCreationData" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Diagnostics.CounterCreationData" /> objeto a ser localizado na coleção.</param>
+        <summary>Retorna o índice de um <see cref="T:System.Diagnostics.CounterCreationData" /> objeto na coleção.</summary>
+        <returns>O índice de base zero especificado <see cref="T:System.Diagnostics.CounterCreationData" />, se ele foi encontrado na coleção; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir recupera <xref:System.Diagnostics.CounterCreationData> entradas de um <xref:System.Diagnostics.CounterCreationDataCollection> e usa o <xref:System.Diagnostics.CounterCreationDataCollection.IndexOf%2A> método para exibir os nomes e os índices.  
+  
+ [!code-cpp[CounterCreationDataCollection_Insert_IndexOf#1](~/samples/snippets/cpp/VS_Snippets_CLR/CounterCreationDataCollection_Insert_IndexOf/CPP/countercreationdatacollection_insert_indexof.cpp#1)]
+ [!code-csharp[CounterCreationDataCollection_Insert_IndexOf#1](~/samples/snippets/csharp/VS_Snippets_CLR/CounterCreationDataCollection_Insert_IndexOf/CS/countercreationdatacollection_insert_indexof.cs#1)]
+ [!code-vb[CounterCreationDataCollection_Insert_IndexOf#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CounterCreationDataCollection_Insert_IndexOf/VB/countercreationdatacollection_insert_indexof.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Diagnostics.CounterCreationData value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Diagnostics.CounterCreationData value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.Insert(System.Int32,System.Diagnostics.CounterCreationData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Diagnostics.CounterCreationData" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do local em que o <see cref="T:System.Diagnostics.CounterCreationData" /> deve ser inserido.</param>
+        <param name="value">O <see cref="T:System.Diagnostics.CounterCreationData" /> a ser inserido na coleção.</param>
+        <summary>Insere um <see cref="T:System.Diagnostics.CounterCreationData" /> objeto na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.CounterCreationDataCollection.Insert%2A> método para inserir um <xref:System.Diagnostics.CounterCreationData> do objeto em um <xref:System.Diagnostics.CounterCreationDataCollection>.  
+  
+ [!code-cpp[CounterCreationDataCollection_Insert_IndexOf#1](~/samples/snippets/cpp/VS_Snippets_CLR/CounterCreationDataCollection_Insert_IndexOf/CPP/countercreationdatacollection_insert_indexof.cpp#1)]
+ [!code-csharp[CounterCreationDataCollection_Insert_IndexOf#1](~/samples/snippets/csharp/VS_Snippets_CLR/CounterCreationDataCollection_Insert_IndexOf/CS/countercreationdatacollection_insert_indexof.cs#1)]
+ [!code-vb[CounterCreationDataCollection_Insert_IndexOf#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CounterCreationDataCollection_Insert_IndexOf/VB/countercreationdatacollection_insert_indexof.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é um objeto <see cref="T:System.Diagnostics.CounterCreationData" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que 0.  
+  
+ -ou-  
+  
+ <paramref name="index" />é maior que o número de itens na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.CounterCreationData this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.CounterCreationData Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterCreationDataCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.CounterCreationData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um índice para o <see cref="T:System.Diagnostics.CounterCreationDataCollection" />.</param>
+        <summary>Índices de <see cref="T:System.Diagnostics.CounterCreationData" /> coleção.</summary>
+        <value>O índice da coleção, que é usado para acessar elementos individuais da coleção.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que 0.  
+  
+ -ou-  
+  
+ <paramref name="index" />é igual a ou maior que o número de itens na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto que será validado.</param>
+        <summary>Verifica se o objeto especificado para determinar se ele é um válido <see cref="T:System.Diagnostics.CounterCreationData" /> tipo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.CounterCreationDataCollection.OnValidate%2A> método determina se o objeto especificado no `value` parâmetro é um <xref:System.Diagnostics.CounterCreationData> instância. Se não, ele lança um <xref:System.ArgumentException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é um objeto <see cref="T:System.Diagnostics.CounterCreationData" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (System.Diagnostics.CounterCreationData value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(class System.Diagnostics.CounterCreationData value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationDataCollection.Remove(System.Diagnostics.CounterCreationData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.CounterCreationData" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Diagnostics.CounterCreationData" /> a ser removido da coleção.</param>
+        <summary>Remove um <see cref="T:System.Diagnostics.CounterCreationData" /> objeto da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Diagnostics.CounterCreationDataCollection.Remove%2A> método para excluir um <xref:System.Diagnostics.CounterCreationData> de objeto o <xref:System.Diagnostics.CounterCreationDataCollection>.  
+  
+ [!code-cpp[CounterCreationDataCollection_Contains#2](~/samples/snippets/cpp/VS_Snippets_CLR/CounterCreationDataCollection_Contains/CPP/countercreationdatacollection_contains.cpp#2)]
+ [!code-csharp[CounterCreationDataCollection_Contains#2](~/samples/snippets/csharp/VS_Snippets_CLR/CounterCreationDataCollection_Contains/CS/countercreationdatacollection_contains.cs#2)]
+ [!code-vb[CounterCreationDataCollection_Contains#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CounterCreationDataCollection_Contains/VB/countercreationdatacollection_contains.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é um objeto <see cref="T:System.Diagnostics.CounterCreationData" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />não existe na coleção.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

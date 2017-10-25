@@ -1,0 +1,393 @@
+<Type Name="SecurityTokenResolver" FullName="System.IdentityModel.Selectors.SecurityTokenResolver">
+  <TypeSignature Language="C#" Value="public abstract class SecurityTokenResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityTokenResolver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SecurityTokenResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma classe de utilitário que pode recuperar tokens ou chaves de segurança quando há um identificador de chave ou cláusula de identificador de chave.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Selectors.SecurityTokenResolver> classe para recuperar uma chave ou a segurança quando você tem uma cláusula de identificador de chave ou identificador de chave de token. O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> métodos de recuperar um token, já que há uma cláusula de identificador de chave ou identificador de chave. O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A> recuperar uma chave, já que há uma cláusula de identificador de chave. Os métodos com um `Try` prefixo retorno `false` quando a recuperação for bem-sucedida, enquanto os métodos sem um `Try` prefixo lançar uma exceção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityTokenResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultSecurityTokenResolver">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Selectors.SecurityTokenResolver CreateDefaultSecurityTokenResolver (System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityToken&gt; tokens, bool canMatchLocalId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Selectors.SecurityTokenResolver CreateDefaultSecurityTokenResolver(class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Tokens.SecurityToken&gt; tokens, bool canMatchLocalId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.CreateDefaultSecurityTokenResolver(System.Collections.ObjectModel.ReadOnlyCollection{System.IdentityModel.Tokens.SecurityToken},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokens" Type="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityToken&gt;" />
+        <Parameter Name="canMatchLocalId" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tokens">Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que contém o conjunto de tokens de segurança para o qual este resolvedor de token de segurança pode resolver identificadores de chave e cláusulas de identificador de chave.</param>
+        <param name="canMatchLocalId">
+          <see langword="true" />Para resolver o <see langword="&lt;SecurityTokenReference&gt;" /> chave cláusulas de identificador que fazem referência a uma chave de segurança que está localizada em algum outro lugar na mensagem SOAP; caso contrário, <see langword="false" />.</param>
+        <summary>Cria um resolvedor de token de segurança padrão para os tokens de segurança especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" /> que resolve identificadores de chave e cláusulas que correspondem os tokens de segurança especificados no <paramref name="tokens" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usa o resolvedor de token de segurança que é retornado deste método, o <xref:System.IdentityModel.Tokens.SecurityToken.MatchesKeyIdentifierClause%2A> e <xref:System.IdentityModel.Tokens.SecurityToken.ResolveKeyIdentifierClause%2A> métodos em tokens de segurança especificado para resolver os identificadores de chave e cláusulas de identificador de chave.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public virtual void LoadCustomConfiguration (System.Xml.XmlNodeList nodelist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList nodelist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodelist" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodelist">Os elementos de configuração personalizados.</param>
+        <summary>Quando substituído em uma classe derivada, carrega a configuração personalizada do XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, gera um <xref:System.NotImplementedException>. Você pode substituir esse método para fornecer a funcionalidade em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveSecurityKey">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKey ResolveSecurityKey (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityKey ResolveSecurityKey(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> para recuperar a chave.</param>
+        <summary>Obtém a chave é referenciada na cláusula de identificador de chave especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> que é a chave referenciada na cláusula de identificador de chave especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A> métodos diferem no que acontece quando a cláusula de identificador de chave não pode ser resolvida para uma chave. O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A> método `false`, enquanto o <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A> método lançará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Não foi possível recuperar uma chave para a cláusula de identificador de chave especificada no <paramref name="keyIdentifierClause" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken ResolveToken (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken ResolveToken(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken(System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">O <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> para criar um token de segurança para.</param>
+        <summary>Recupera um token de segurança que corresponde a uma das cláusulas de identificador de chave de segurança contidas dentro do identificador de chave especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o identificador de chave especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> métodos diferem no que acontece quando o identificador de chave não pode ser resolvido para um token de segurança. O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> método `false`, enquanto o <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> método lançará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Um token de segurança não pode ser criado para o identificador de chave especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken ResolveToken (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken ResolveToken(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">O <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> para criar um token de segurança para.</param>
+        <summary>Recupera o token de segurança que corresponda a cláusula de identificador de chave especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa a cláusula de identificador de chave especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> métodos diferem no que acontece quando a cláusula de identificador de chave não pode ser resolvida para um token de segurança. O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> método `false`, enquanto o <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> método lançará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveSecurityKey">
+      <MemberSignature Language="C#" Value="public bool TryResolveSecurityKey (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryResolveSecurityKey(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityKey&amp; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityKey@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="key" Type="System.IdentityModel.Tokens.SecurityKey&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> para recuperar a chave.</param>
+        <param name="key">Quando este método retorna, contém um <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> que contém a chave que é referenciada na cláusula de identificador de chave especificado. Este parâmetro é passado não inicializado.</param>
+        <summary>Tenta recuperar a chave que é referenciada na cláusula de identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando uma chave pode ser recuperada para a cláusula de identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A> métodos diferem no que acontece quando a cláusula de identificador de chave não pode ser resolvida para uma chave. O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A> método `false`, enquanto o <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A> método lançará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveSecurityKeyCore">
+      <MemberSignature Language="C#" Value="protected abstract bool TryResolveSecurityKeyCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryResolveSecurityKeyCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityKey&amp; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKeyCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityKey@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="key" Type="System.IdentityModel.Tokens.SecurityKey&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> para recuperar a chave.</param>
+        <param name="key">Quando este método retorna, contém um <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> que contém a chave que é referenciada na cláusula de identificador de chave especificado. Este parâmetro é passado não inicializado.</param>
+        <summary>Tenta recuperar a chave que é referenciada na cláusula de identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando uma chave pode ser recuperada para a cláusula de identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKeyCore%2A> método é chamado pelo <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveSecurityKey%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveSecurityKey%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveToken">
+      <MemberSignature Language="C#" Value="public bool TryResolveToken (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryResolveToken(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken(System.IdentityModel.Tokens.SecurityKeyIdentifier,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">O <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> para criar um token de segurança para.</param>
+        <param name="token">Quando este método retorna, contém um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o identificador de chave especificado. Este parâmetro é passado não inicializado.</param>
+        <summary>Tenta recuperar o token de segurança que corresponde a uma das cláusulas de identificador de chave contidas dentro do identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando um token de segurança pode ser recuperado para o identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> métodos diferem no que acontece quando o identificador de chave não pode ser resolvido para um token de segurança. O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> método `false`, enquanto o <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> método lançará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveToken">
+      <MemberSignature Language="C#" Value="public bool TryResolveToken (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryResolveToken(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">O <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> para criar um token de segurança para.</param>
+        <param name="token">Quando este método retorna, contém um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa a cláusula de identificador de chave especificado. Este parâmetro é passado não inicializado.</param>
+        <summary>Tenta recuperar o token de segurança que corresponda a cláusula de identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando um token de segurança pode ser recuperado para a cláusula de identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> métodos diferem no que acontece quando a cláusula de identificador de chave não pode ser resolvida para um token de segurança. O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> método `false`, enquanto o <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> método lançará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifier,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">O <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> para criar um token de segurança para.</param>
+        <param name="token">Quando este método retorna, contém um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o identificador de chave especificado. Este parâmetro é passado não inicializado.</param>
+        <summary>Quando substituído em uma classe derivada, tenta recuperar o token de segurança que corresponde a pelo menos uma das cláusulas de identificador de chave contidas dentro do identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando um token de segurança pode ser recuperado para o identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveTokenCore%2A> método é chamado pelo <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract bool TryResolveTokenCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, out System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryResolveTokenCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause, [out] class System.IdentityModel.Tokens.SecurityToken&amp; token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveTokenCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityToken@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">O <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> para criar um token de segurança para.</param>
+        <param name="token">Quando este método retorna, contém um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa a cláusula de identificador de chave especificado. Este parâmetro é passado não inicializado.</param>
+        <summary>Quando substituído em uma classe derivada, tenta resolver o token de segurança que corresponda a cláusula de identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando um token de segurança pode ser recuperado para a cláusula de identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveTokenCore%2A> método é chamado pelo <xref:System.IdentityModel.Selectors.SecurityTokenResolver.TryResolveToken%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenResolver.ResolveToken%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

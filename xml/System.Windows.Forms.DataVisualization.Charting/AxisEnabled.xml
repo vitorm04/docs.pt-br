@@ -1,0 +1,75 @@
+<Type Name="AxisEnabled" FullName="System.Windows.Forms.DataVisualization.Charting.AxisEnabled">
+  <TypeSignature Language="C#" Value="public enum AxisEnabled" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AxisEnabled extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.AxisEnabled" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o estado de um eixo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.AxisEnabled> enumeração é usada com a <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Enabled%2A> propriedade para habilitar ou desabilitar um eixo.  
+  
+ Se o <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Enabled%2A> propriedade está definida como Auto, um eixo pode ou não pode ser exibido, dependendo se ele está sendo usado para plotar um <xref:System.Windows.Forms.DataVisualization.Charting.Series>. Os eixos usados para plotar dados para uma série são determinados pelo <xref:System.Windows.Forms.DataVisualization.Charting.Series.XAxisType%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.Series.YAxisType%2A> as configurações de propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.AxisEnabled Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.AxisEnabled.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisEnabled</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O eixo é habilitado apenas se usado para plotar um <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="False">
+      <MemberSignature Language="C#" Value="False" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.AxisEnabled False = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisEnabled</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O eixo nunca está habilitado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="True">
+      <MemberSignature Language="C#" Value="True" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.AxisEnabled True = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisEnabled</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O eixo sempre está habilitado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

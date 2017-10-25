@@ -1,0 +1,602 @@
+<Type Name="ImmutableInterlocked" FullName="System.Collections.Immutable.ImmutableInterlocked">
+  <TypeSignature Language="C#" Value="public static class ImmutableInterlocked" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ImmutableInterlocked extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.ImmutableInterlocked" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém exchange interlocked mecanismos para coleções imutáveis.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>To be added.</remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="AddOrUpdate&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static TValue AddOrUpdate&lt;TKey,TValue&gt; (ref System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt; location, TKey key, Func&lt;TKey,TValue&gt; addValueFactory, Func&lt;TKey,TValue,TValue&gt; updateValueFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TValue AddOrUpdate&lt;TKey, TValue&gt;(class System.Collections.Immutable.ImmutableDictionary`2&lt;!!TKey, !!TValue&gt;&amp; location, !!TKey key, class System.Func`2&lt;!!TKey, !!TValue&gt; addValueFactory, class System.Func`3&lt;!!TKey, !!TValue, !!TValue&gt; updateValueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.AddOrUpdate``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}@,``0,System.Func{``0,``1},System.Func{``0,``1,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="addValueFactory" Type="System.Func&lt;TKey,TValue&gt;" />
+        <Parameter Name="updateValueFactory" Type="System.Func&lt;TKey,TValue,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">To be added.</typeparam>
+        <typeparam name="TValue">To be added.</typeparam>
+        <param name="location">A variável ou o campo atomicamente atualizar se especificado não está no dicionário.</param>
+        <param name="key">A chave para o valor adicionar ou atualizar.</param>
+        <param name="addValueFactory">A função que recebe a chave e retorna um novo valor para adicionar ao dicionário quando nenhum valor existe anteriormente.</param>
+        <param name="updateValueFactory">A função que recebe a chave e o valor anterior e retorna o novo valor com o qual deseja atualizar o dicionário.</param>
+        <summary>Obtém o valor de um dicionário depois de ter adicionado ou atualizado uma entrada existente.</summary>
+        <returns>O valor adicionado ou atualizado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrUpdate&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static TValue AddOrUpdate&lt;TKey,TValue&gt; (ref System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt; location, TKey key, TValue addValue, Func&lt;TKey,TValue,TValue&gt; updateValueFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TValue AddOrUpdate&lt;TKey, TValue&gt;(class System.Collections.Immutable.ImmutableDictionary`2&lt;!!TKey, !!TValue&gt;&amp; location, !!TKey key, !!TValue addValue, class System.Func`3&lt;!!TKey, !!TValue, !!TValue&gt; updateValueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.AddOrUpdate``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}@,``0,``1,System.Func{``0,``1,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="addValue" Type="TValue" />
+        <Parameter Name="updateValueFactory" Type="System.Func&lt;TKey,TValue,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">To be added.</typeparam>
+        <typeparam name="TValue">To be added.</typeparam>
+        <param name="location">A variável ou o campo atomicamente atualizar se especificado não está no dicionário.</param>
+        <param name="key">A chave para o valor adicionar ou atualizar.</param>
+        <param name="addValue">O valor a ser usado se não existe nenhum valor anterior.</param>
+        <param name="updateValueFactory">A função que recebe a chave e o valor anterior e retorna o novo valor com o qual deseja atualizar o dicionário.</param>
+        <summary>Obtém o valor de um dicionário depois de ter adicionado ou atualizado uma entrada existente.</summary>
+        <returns>O valor adicionado ou atualizado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enqueue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void Enqueue&lt;T&gt; (ref System.Collections.Immutable.ImmutableQueue&lt;T&gt; location, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Enqueue&lt;T&gt;(class System.Collections.Immutable.ImmutableQueue`1&lt;!!T&gt;&amp; location, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.Enqueue``1(System.Collections.Immutable.ImmutableQueue{``0}@,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableQueue&lt;T&gt;&amp;" RefType="ref" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de itens contidos na coleção</typeparam>
+        <param name="location">A variável ou o campo para atualizar de forma atômica.</param>
+        <param name="value">O valor para enfileirar.</param>
+        <summary>Enfileira atomicamente um elemento ao final de uma fila.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrAdd&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static TValue GetOrAdd&lt;TKey,TValue&gt; (ref System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt; location, TKey key, Func&lt;TKey,TValue&gt; valueFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TValue GetOrAdd&lt;TKey, TValue&gt;(class System.Collections.Immutable.ImmutableDictionary`2&lt;!!TKey, !!TValue&gt;&amp; location, !!TKey key, class System.Func`2&lt;!!TKey, !!TValue&gt; valueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.GetOrAdd``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}@,``0,System.Func{``0,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="valueFactory" Type="System.Func&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">O tipo das chaves contidos na coleção.</typeparam>
+        <typeparam name="TValue">O tipo dos valores contidos na coleção.</typeparam>
+        <param name="location">A variável ou o campo atomicamente atualizar se especificado não está no dicionário.</param>
+        <param name="key">A chave para o valor recuperar ou adicionar.</param>
+        <param name="valueFactory">A função a ser executada para obter o valor a ser inserido no dicionário de se a chave não for encontrada. Este delegado não será chamado mais de uma vez.</param>
+        <summary>Obtém o valor para a chave especificada do dicionário, ou se a chave não foi encontrada, adiciona um novo valor ao dicionário.</summary>
+        <returns>O valor na chave especificada ou <paramref name="valueFactory" /> se a chave não estava presente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrAdd&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static TValue GetOrAdd&lt;TKey,TValue&gt; (ref System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt; location, TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TValue GetOrAdd&lt;TKey, TValue&gt;(class System.Collections.Immutable.ImmutableDictionary`2&lt;!!TKey, !!TValue&gt;&amp; location, !!TKey key, !!TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.GetOrAdd``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}@,``0,``1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">O tipo das chaves contidos na coleção.</typeparam>
+        <typeparam name="TValue">O tipo dos valores contidos na coleção.</typeparam>
+        <param name="location">A variável ou o campo atomicamente atualizar se a chave especificada não está no dicionário.</param>
+        <param name="key">A chave para o valor obter ou adicionar.</param>
+        <param name="value">O valor para adicionar ao dicionário a chave não foi encontrado.</param>
+        <summary>Obtém o valor para a chave especificada do dicionário, ou se a chave não foi encontrada, adiciona um novo valor ao dicionário.</summary>
+        <returns>O valor na chave especificada ou <paramref name="valueFactory" /> se a chave não estava presente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrAdd&lt;TKey,TValue,TArg&gt;">
+      <MemberSignature Language="C#" Value="public static TValue GetOrAdd&lt;TKey,TValue,TArg&gt; (ref System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt; location, TKey key, Func&lt;TKey,TArg,TValue&gt; valueFactory, TArg factoryArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TValue GetOrAdd&lt;TKey, TValue, TArg&gt;(class System.Collections.Immutable.ImmutableDictionary`2&lt;!!TKey, !!TValue&gt;&amp; location, !!TKey key, class System.Func`3&lt;!!TKey, !!TArg, !!TValue&gt; valueFactory, !!TArg factoryArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.GetOrAdd``3(System.Collections.Immutable.ImmutableDictionary{``0,``1}@,``0,System.Func{``0,``2,``1},``2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+        <TypeParameter Name="TArg" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="valueFactory" Type="System.Func&lt;TKey,TArg,TValue&gt;" />
+        <Parameter Name="factoryArgument" Type="TArg" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">O tipo das chaves contidos na coleção.</typeparam>
+        <typeparam name="TValue">O tipo dos valores contidos na coleção.</typeparam>
+        <typeparam name="TArg">To be added.</typeparam>
+        <param name="location">A variável ou o campo Atualizar se especificado não está no dicionário.</param>
+        <param name="key">A chave para o valor recuperar ou adicionar.</param>
+        <param name="valueFactory">A função a ser executada para obter o valor a ser inserido no dicionário de se a chave não for encontrada.</param>
+        <param name="factoryArgument">O argumento para passar para o alocador de valor.</param>
+        <summary>Obtém o valor para a chave especificada do dicionário, ou se a chave não foi encontrada, adiciona um novo valor ao dicionário.</summary>
+        <returns>O valor na chave especificada ou <paramref name="valueFactory" /> se a chave não estava presente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterlockedCompareExchange&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; InterlockedCompareExchange&lt;T&gt; (ref System.Collections.Immutable.ImmutableArray&lt;T&gt; location, System.Collections.Immutable.ImmutableArray&lt;T&gt; value, System.Collections.Immutable.ImmutableArray&lt;T&gt; comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; InterlockedCompareExchange&lt;T&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt;&amp; location, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; value, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.InterlockedCompareExchange``1(System.Collections.Immutable.ImmutableArray{``0}@,System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" />
+        <Parameter Name="comparand" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de elemento armazenado na matriz.</typeparam>
+        <param name="location">O destino, cujo valor é comparado com <c>termo de comparação</c> e possivelmente substituído.</param>
+        <param name="value">O valor que substitui o valor de destino quando a comparação resulta em igualdade.</param>
+        <param name="comparand">O valor que é comparado com o valor no <c>local</c>.</param>
+        <summary>  
+  
+ Compara duas matrizes imutáveis para igualdade e, se eles forem iguais, substitui uma das matrizes.</summary>
+        <returns>O valor original em <paramref name="location" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterlockedExchange&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; InterlockedExchange&lt;T&gt; (ref System.Collections.Immutable.ImmutableArray&lt;T&gt; location, System.Collections.Immutable.ImmutableArray&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; InterlockedExchange&lt;T&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt;&amp; location, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.InterlockedExchange``1(System.Collections.Immutable.ImmutableArray{``0}@,System.Collections.Immutable.ImmutableArray{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de elemento armazenado na matriz.</typeparam>
+        <param name="location">A matriz para definir como o valor especificado.</param>
+        <param name="value">O valor para o qual o <c>local</c> parâmetro está definido.</param>
+        <summary>  
+  
+ Define uma matriz para a matriz especificada e retorna uma referência para a matriz original, como uma operação atômica.</summary>
+        <returns>O valor original de <paramref name="location" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterlockedInitialize&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool InterlockedInitialize&lt;T&gt; (ref System.Collections.Immutable.ImmutableArray&lt;T&gt; location, System.Collections.Immutable.ImmutableArray&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool InterlockedInitialize&lt;T&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt;&amp; location, valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.InterlockedInitialize``1(System.Collections.Immutable.ImmutableArray{``0}@,System.Collections.Immutable.ImmutableArray{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;&amp;" RefType="ref" />
+        <Parameter Name="value" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de elemento armazenado na matriz.</typeparam>
+        <param name="location">A matriz para definir como o valor especificado.</param>
+        <param name="value">O valor para o qual o <c>local</c> parâmetro estiver definido, se ele não foi inicializado.</param>
+        <summary>  
+  
+ Define uma matriz para a matriz especificada se a matriz não foi inicializada.</summary>
+        <returns>
+          <see langword="true" />Se a matriz foi atribuída o valor especificado;  Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Push&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void Push&lt;T&gt; (ref System.Collections.Immutable.ImmutableStack&lt;T&gt; location, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Push&lt;T&gt;(class System.Collections.Immutable.ImmutableStack`1&lt;!!T&gt;&amp; location, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.Push``1(System.Collections.Immutable.ImmutableStack{``0}@,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableStack&lt;T&gt;&amp;" RefType="ref" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de itens na pilha.</typeparam>
+        <param name="location">A pilha para atualizar.</param>
+        <param name="value">O valor para enviar por push na pilha.</param>
+        <summary>Envia um novo elemento na pilha.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAdd&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryAdd&lt;TKey,TValue&gt; (ref System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt; location, TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryAdd&lt;TKey, TValue&gt;(class System.Collections.Immutable.ImmutableDictionary`2&lt;!!TKey, !!TValue&gt;&amp; location, !!TKey key, !!TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.TryAdd``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}@,``0,``1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">O tipo das chaves contidos na coleção.</typeparam>
+        <typeparam name="TValue">O tipo dos valores contidos na coleção.</typeparam>
+        <param name="location">O dicionário para atualizar com a chave especificada e o valor.</param>
+        <param name="key">A chave para adicionar, se já não estiver definida no dicionário.</param>
+        <param name="value">O valor a ser adicionado.</param>
+        <summary>Adiciona a chave especificada e o valor ao dicionário se a chave não está no dicionário.</summary>
+        <returns>
+          <see langword="true" />Se a chave não está no dicionário. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryDequeue&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryDequeue&lt;T&gt; (ref System.Collections.Immutable.ImmutableQueue&lt;T&gt; location, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryDequeue&lt;T&gt;(class System.Collections.Immutable.ImmutableQueue`1&lt;!!T&gt;&amp; location, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.TryDequeue``1(System.Collections.Immutable.ImmutableQueue{``0}@,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableQueue&lt;T&gt;&amp;" RefType="ref" />
+        <Parameter Name="value" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de itens na fila.</typeparam>
+        <param name="location">A variável ou o campo para atualizar de forma atômica.</param>
+        <param name="value">Definido como o valor do cabeçalho da fila, se a fila não vazia.</param>
+        <summary>Atomicamente remove e retorna o elemento especificado no início da fila, se a fila não está vazia.</summary>
+        <returns>
+          <see langword="true" />Se a fila não está vazia e o elemento head for removido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryPop&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryPop&lt;T&gt; (ref System.Collections.Immutable.ImmutableStack&lt;T&gt; location, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryPop&lt;T&gt;(class System.Collections.Immutable.ImmutableStack`1&lt;!!T&gt;&amp; location, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.TryPop``1(System.Collections.Immutable.ImmutableStack{``0}@,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableStack&lt;T&gt;&amp;" RefType="ref" />
+        <Parameter Name="value" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de itens na pilha.</typeparam>
+        <param name="location">A pilha para atualizar.</param>
+        <param name="value">Recebe o valor removido da pilha, se a pilha não está vazia.</param>
+        <summary>Remove um elemento da parte superior da pilha, se houver um elemento a ser removido.</summary>
+        <returns>
+          <see langword="true" />Se um elemento for removido da pilha; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryRemove&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryRemove&lt;TKey,TValue&gt; (ref System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt; location, TKey key, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryRemove&lt;TKey, TValue&gt;(class System.Collections.Immutable.ImmutableDictionary`2&lt;!!TKey, !!TValue&gt;&amp; location, !!TKey key, [out] !!TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.TryRemove``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}@,``0,``1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">O tipo das chaves contidos na coleção.</typeparam>
+        <typeparam name="TValue">O tipo dos valores contidos na coleção.</typeparam>
+        <param name="location">O dicionário para atualizar.</param>
+        <param name="key">A chave a ser removido.</param>
+        <param name="value">Recebe o valor do item removido, se o dicionário não está vazio.</param>
+        <summary>Remove o elemento com a chave especificada, se a chave existir.</summary>
+        <returns>
+          <see langword="true" />Se a chave foi encontrada e removida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryUpdate&lt;TKey,TValue&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryUpdate&lt;TKey,TValue&gt; (ref System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt; location, TKey key, TValue newValue, TValue comparisonValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryUpdate&lt;TKey, TValue&gt;(class System.Collections.Immutable.ImmutableDictionary`2&lt;!!TKey, !!TValue&gt;&amp; location, !!TKey key, !!TValue newValue, !!TValue comparisonValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.TryUpdate``2(System.Collections.Immutable.ImmutableDictionary{``0,``1}@,``0,``1,``1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="System.Collections.Immutable.ImmutableDictionary&lt;TKey,TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="newValue" Type="TValue" />
+        <Parameter Name="comparisonValue" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">O tipo das chaves contidos na coleção.</typeparam>
+        <typeparam name="TValue">O tipo dos valores contidos na coleção.</typeparam>
+        <param name="location">O dicionário para atualizar.</param>
+        <param name="key">A chave para atualizar.</param>
+        <param name="newValue">O novo valor a ser definido.</param>
+        <param name="comparisonValue">O valor atual para <c>chave</c> para que a atualização seja bem-sucedida.</param>
+        <summary>Define a chave especificada para o valor especificado se a chave especificada já está definida como um valor específico.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="key" /> e <paramref name="comparisonValue" /> está presente no dicionário e comparação foi atualizada para <paramref name="newValue" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool Update&lt;T&gt; (ref T location, Func&lt;T,T&gt; transformer) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Update&lt;class T&gt;(!!T&amp; location, class System.Func`2&lt;!!T, !!T&gt; transformer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.Update``1(``0@,System.Func{``0,``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="T&amp;" RefType="ref" />
+        <Parameter Name="transformer" Type="System.Func&lt;T,T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de dados.</typeparam>
+        <param name="location">A variável ou o campo a ser alterado, que pode ser acessado por vários threads.</param>
+        <param name="transformer">Uma função que muda o valor. Essa função deve ser efeito colateral livre, ela poderá ser executada várias vezes quando corridas ocorrem com outros threads.</param>
+        <summary>Muda de um valor no local com semântica de transação de bloqueio otimista por meio de uma função de transformação especificado.             A transformação é repetida quantas vezes forem necessárias para ganhar a corrida de bloqueio otimista.</summary>
+        <returns>
+          <c>True</c> se o valor do local será alterado aplicando o resultado da <paramref name="transformer" /> função;             <c>false</c> se o valor do local permanece o mesmo, pois a última chamada do <paramref name="transformer" /> retornou o valor existente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update&lt;T,TArg&gt;">
+      <MemberSignature Language="C#" Value="public static bool Update&lt;T,TArg&gt; (ref T location, Func&lt;T,TArg,T&gt; transformer, TArg transformerArgument) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Update&lt;class T, TArg&gt;(!!T&amp; location, class System.Func`3&lt;!!T, !!TArg, !!T&gt; transformer, !!TArg transformerArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableInterlocked.Update``2(``0@,System.Func{``0,``1,``0},``1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="location" Type="T&amp;" RefType="ref" />
+        <Parameter Name="transformer" Type="System.Func&lt;T,TArg,T&gt;" />
+        <Parameter Name="transformerArgument" Type="TArg" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de dados.</typeparam>
+        <typeparam name="TArg">O tipo do argumento passado para o <c>transformador</c>.</typeparam>
+        <param name="location">A variável ou o campo a ser alterado, que pode ser acessado por vários threads.</param>
+        <param name="transformer">Uma função que muda o valor. Essa função deve ser efeito colateral livre, ela poderá ser executada várias vezes quando corridas ocorrem com outros threads.</param>
+        <param name="transformerArgument">O argumento para passar para <c>transformador</c>.</param>
+        <summary>Muda de um valor no local com semântica de transação de bloqueio otimista por meio de uma função de transformação especificado.             A transformação é repetida quantas vezes forem necessárias para ganhar a corrida de bloqueio otimista.</summary>
+        <returns>
+          <c>True</c> se o valor do local será alterado aplicando o resultado da <paramref name="transformer" /> função;             <c>false</c> se o valor do local permanece o mesmo, pois a última chamada do <paramref name="transformer" /> retornou o valor existente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

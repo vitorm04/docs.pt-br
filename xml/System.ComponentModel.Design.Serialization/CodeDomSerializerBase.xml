@@ -1,0 +1,1095 @@
+<Type Name="CodeDomSerializerBase" FullName="System.ComponentModel.Design.Serialization.CodeDomSerializerBase">
+  <TypeSignature Language="C#" Value="public abstract class CodeDomSerializerBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeDomSerializerBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.CodeDomSerializerBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma classe base para <see cref="T:System.ComponentModel.Design.Serialization.CodeDomSerializer" /> classes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase> classe é usada como base compartilhada entre o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializer> e <xref:System.ComponentModel.Design.Serialization.TypeCodeDomSerializer> classes. Público <xref:System.ComponentModel.Design.Serialization.CodeDomSerializer> derivam de classes de <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase> classe. Cada classe pública define sua própria API pública. O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase> classe não define nenhuma API pública, mas oferece uma variedade de métodos de utilitário que pode ser usado para ajudar no processo de serialização.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeserializeExpression">
+      <MemberSignature Language="C#" Value="protected object DeserializeExpression (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, string name, System.CodeDom.CodeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object DeserializeExpression(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, string name, class System.CodeDom.CodeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializeExpression(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.String,System.CodeDom.CodeExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="name">O nome do objeto que é o resultado da expressão. Pode ser <see langword="null" /> se não é necessário para o objeto.</param>
+        <param name="expression">O <see cref="T:System.CodeDom.CodeExpression" /> interpretar.</param>
+        <summary>Desserializa a expressão especificada em um objeto de memória.</summary>
+        <returns>Um objeto resultante da interpretação <paramref name="expression" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um auxiliar pode chamada do método que classes derivadas para desserializar uma expressão. Ele desserializa a instrução, interpretar e executar a expressão de CodeDOM especificada pelo `expression` parâmetro e, em seguida, retorna os resultados. Se um objeto precisa ser criado como resultado dessa expressão, ela receberá o nome especificado pelo `name` parâmetro. O nome pode ser `null` se não é necessário para o objeto. A tabela a seguir descreve expressões específicas como são tratados.  
+  
+|Expressão|Comportamento|  
+|----------------|--------------|  
+|<xref:System.CodeDom.CodeThisReferenceExpression>|Essa expressão representa `this` ou `Me`. Para localizar o objeto que está associado esta expressão, o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializeExpression%2A> método examinará a pilha de contexto para um <xref:System.ComponentModel.Design.Serialization.RootContext>. Este objeto contém o objeto raiz do gráfico e a expressão que o representa. Se o objeto está presente e a expressão corresponde, o objeto raiz será retornado. Um erro será relatado se uma instância não pode ser localizada.|  
+|<xref:System.CodeDom.CodeFieldReferenceExpression>|Se o destino da referência do campo for avaliada como o objeto raiz, o <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance%2A> método do parâmetro Gerenciador será usado para recuperar a instância do objeto com base no nome. Caso contrário, reflexão padrão é usado em relação ao objeto de destino para localizar o campo solicitado. Um erro será relatado se o campo não pode ser localizado.|  
+|<xref:System.CodeDom.CodeVariableReferenceExpression>|O <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance%2A> método o `manager` parâmetro é usado para localizar a instância que representa o nome da variável especificado. Um erro será relatado se uma instância não pode ser localizada.|  
+  
+ <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializeExpression%2A>continua a interpretar expressões até que eles são completamente resolvidos para um objeto ou ele não pode simplificar a expressão. Nesse caso, <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializeExpression%2A> retornará um <xref:System.CodeDom.CodeExpression> que contém a expressão mais simplificada. Não há suporte para as expressões a seguir:  
+  
+-   <xref:System.CodeDom.CodeEventReferenceExpression>  
+  
+-   <xref:System.CodeDom.CodeMethodReferenceExpression>  
+  
+-   <xref:System.CodeDom.CodeDelegateCreateExpression>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeInstance">
+      <MemberSignature Language="C#" Value="protected virtual object DeserializeInstance (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, Type type, object[] parameters, string name, bool addToContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object DeserializeInstance(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.Type type, object[] parameters, string name, bool addToContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializeInstance(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Type,System.Object[],System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="addToContainer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="type">O <see cref="T:System.Type" /> da instância para retornar.</param>
+        <param name="parameters">Os parâmetros para passar para o construtor para <c>tipo</c>.</param>
+        <param name="name">O nome do objeto desserializado.</param>
+        <param name="addToContainer">
+          <see langword="true" />Para adicionar esse objeto para o contêiner de design; Caso contrário, <see langword="false" />. O objeto deve implementar <see cref="T:System.ComponentModel.IComponent" /> para que isso tenha efeito.</param>
+        <summary>Retorna uma instância do tipo em questão.</summary>
+        <returns>Uma instância de <paramref name="type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializeInstance%2A> método é chamado durante a desserialização para obter uma instância de um objeto. Quando isso é chamado, uma instância do tipo solicitado deve ser retornada. A implementação padrão chama o <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance%2A> método o `manager` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> ou <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializePropertiesFromResources">
+      <MemberSignature Language="C#" Value="protected void DeserializePropertiesFromResources (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, Attribute[] filter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void DeserializePropertiesFromResources(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, class System.Attribute[] filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializePropertiesFromResources(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="filter" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto do qual as propriedades devem ser desserializado.</param>
+        <param name="filter">Um <see cref="T:System.Attribute" /> matriz que filtra as propriedades que serão desserializadas.</param>
+        <summary>Desserializa propriedades em um determinado objeto de pacote de recursos da cultura invariável.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializePropertiesFromResources%2A> método é um método auxiliar que classes derivadas pode chamar. Ele procura por propriedades no objeto especificado e tenta carregar seus valores fora do pacote de recursos da cultura invariável. Isso geralmente é usado para lidar com as propriedades de tempo de design que não são emitidas no código-fonte. Ele não deve ser usado para propriedades localizadas, porque ela opera somente a cultura invariável.  
+  
+ Esse método verifica se todas as propriedades do `value` que corresponde aos atributos especificados pelo parâmetro de `filter` parâmetro e, em seguida, procura essas propriedades em um objeto de recurso binário. Isso é útil para desserializar propriedades que não podem ser representadas no código, como as propriedades de tempo de design.  
+  
+ Esse método requer que um carregador de designer oferece um <xref:System.ComponentModel.Design.IResourceService> para ler recursos. Se o <xref:System.ComponentModel.Design.IResourceService> fornece um <xref:System.Resources.ResXResourceReader> para a cultura invariável, em seguida, <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializePropertiesFromResources%2A> lerá os recursos da seção de metadados do arquivo de recurso (. resx) XML, que não está incluída no final código compilado. Se esse serviço não estiver disponível, não há recursos serão lidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeStatement">
+      <MemberSignature Language="C#" Value="protected void DeserializeStatement (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, System.CodeDom.CodeStatement statement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void DeserializeStatement(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.CodeDom.CodeStatement statement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializeStatement(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.CodeDom.CodeStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="statement" Type="System.CodeDom.CodeStatement" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="statement">O <see cref="T:System.CodeDom.CodeStatement" /> a ser desserializado.</param>
+        <summary>Desserializa uma instrução, interpretar e executar uma instrução de CodeDOM.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.DeserializeStatement%2A> método é um método auxiliar que classes derivadas pode chamar. Ele interpreta o `statement` parâmetro.  
+  
+ O <xref:System.CodeDom.CodeStatement> que está sendo desserializado será enviado na pilha de contexto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributesFromTypeHelper">
+      <MemberSignature Language="C#" Value="protected static System.ComponentModel.AttributeCollection GetAttributesFromTypeHelper (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.ComponentModel.AttributeCollection GetAttributesFromTypeHelper(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetAttributesFromTypeHelper(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de serialização.</param>
+        <param name="type">O tipo de destino.</param>
+        <summary>Obtém uma coleção de atributos conforme definido na versão de destino do projeto do .NET Framework.</summary>
+        <returns>Uma coleção de atributos conforme definido na versão de destino do projeto do .NET Framework.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributesHelper">
+      <MemberSignature Language="C#" Value="protected static System.ComponentModel.AttributeCollection GetAttributesHelper (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.ComponentModel.AttributeCollection GetAttributesHelper(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetAttributesHelper(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de serialização.</param>
+        <param name="instance">Um objeto do tipo de destino.</param>
+        <summary>Obtém uma coleção de atributos conforme definido na versão de destino do projeto do .NET Framework.</summary>
+        <returns>Uma coleção de atributos conforme definido na versão de destino do projeto do .NET Framework.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEventsHelper">
+      <MemberSignature Language="C#" Value="protected static System.ComponentModel.EventDescriptorCollection GetEventsHelper (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object instance, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.ComponentModel.EventDescriptorCollection GetEventsHelper(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object instance, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetEventsHelper(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de serialização.</param>
+        <param name="instance">Um objeto do tipo de destino.</param>
+        <param name="attributes">Uma matriz de atributos para passar para a versão de destino do .NET Framework.</param>
+        <summary>Obtém uma coleção de eventos conforme definido na versão de destino do projeto do .NET Framework.</summary>
+        <returns>Uma coleção de eventos conforme definido na versão de destino do projeto do .NET Framework.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpression">
+      <MemberSignature Language="C#" Value="protected System.CodeDom.CodeExpression GetExpression (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.CodeDom.CodeExpression GetExpression(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto para o qual obter uma expressão.</param>
+        <summary>Retorna uma expressão para o objeto fornecido.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeExpression" /> representar <paramref name="value" />, ou <see langword="null" /> se não houver nenhuma expressão existente para <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> método retorna uma expressão que representa o objeto fornecido. Ele pode retornar `null`, indicando que nenhuma expressão foi definido que descreve o objeto. Expressões são adquiridas em uma destas três maneiras:  
+  
+-   A expressão pode ser o resultado de uma chamada anterior para o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression%2A> método.  
+  
+-   A expressão foi encontrada no <xref:System.ComponentModel.Design.Serialization.RootContext>.  
+  
+-   A expressão pode ser derivada por meio de <xref:System.ComponentModel.Design.IReferenceService>.  
+  
+ Para derivar expressões por meio de <xref:System.ComponentModel.Design.IReferenceService>, o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> método consulta o serviço de referência para um nome para o objeto fornecido. Se o serviço de expressão retorna um nome válido, <xref:System.ComponentModel.Design.IReferenceService>, o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> método verifica se há um "." no nome. Isso indica que o serviço de expressão encontrado esse objeto como o valor de retorno de uma propriedade somente leitura em outro objeto. Se houver um ".", <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> dividirá a referência em partes. A parte mais à esquerda é um nome que será avaliado com o <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance%2A> método. Para cada parte subsequente, uma expressão de referência de propriedade será criada. A expressão de final, em seguida, será retornada.  
+  
+ Se o objeto não tiver uma expressão definida ou se o objeto não foi encontrado no serviço de referência, <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> retornará `null`, indicando que há uma expressão existente para o objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesHelper">
+      <MemberSignature Language="C#" Value="protected static System.ComponentModel.PropertyDescriptorCollection GetPropertiesHelper (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object instance, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.ComponentModel.PropertyDescriptorCollection GetPropertiesHelper(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object instance, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetPropertiesHelper(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de serialização.</param>
+        <param name="instance">Um objeto do tipo de destino.</param>
+        <param name="attributes">Uma matriz de atributos para passar para a versão de destino do .NET Framework.</param>
+        <summary>Obtém uma coleção de propriedades, conforme definido na versão de destino do projeto do .NET Framework.</summary>
+        <returns>Uma coleção de propriedades conforme definido na versão de destino do projeto do .NET Framework.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReflectionTypeFromTypeHelper">
+      <MemberSignature Language="C#" Value="protected static Type GetReflectionTypeFromTypeHelper (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Type GetReflectionTypeFromTypeHelper(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetReflectionTypeFromTypeHelper(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de serialização.</param>
+        <param name="type">O tipo para usar os metadados do.</param>
+        <summary>Obtém um tipo de reflexão gerado a partir de metadados do tipo.</summary>
+        <returns>Um tipo de reflexão gerado a partir de metadados do <paramref name="type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno não serão igual a `type` e não deve ser usado para comparação com os tipos de não-reflexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReflectionTypeHelper">
+      <MemberSignature Language="C#" Value="protected static Type GetReflectionTypeHelper (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Type GetReflectionTypeHelper(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetReflectionTypeHelper(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de serialização.</param>
+        <param name="instance">O objeto para usar os metadados do.</param>
+        <summary>Obtém um tipo de reflexão gerado a partir de metadados do objeto.</summary>
+        <returns>Um tipo de reflexão gerado a partir de metadados do <paramref name="object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno não será igual ao tipo de objeto e não deve ser usado para comparação com os tipos de não-reflexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializer">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.Serialization.CodeDomSerializer GetSerializer (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.ComponentModel.Design.Serialization.CodeDomSerializer GetSerializer(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetSerializer(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.CodeDomSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto que especifica o serializador para recuperar.</param>
+        <summary>Localiza um serializador para o valor do objeto especificado.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.Design.Serialization.CodeDomSerializer" /> que é apropriado para <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetSerializer%2A> método é uma extensão para o <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer%2A?displayProperty=nameWithType> método. O <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer%2A?displayProperty=nameWithType> método usa um tipo de objeto, em vez de um valor de objeto. Se um participante externo tinha substituído metadados para um objeto específico por meio de <xref:System.ComponentModel.TypeDescriptor>, essa substituição de metadados não deve ser considerada pelo <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer%2A?displayProperty=nameWithType> método, que usa apenas um tipo. O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetSerializer%2A> método verifica os metadados do valor e o tipo do valor. Se os dois forem diferentes, <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetSerializer%2A> parecerá para ver se há um atributo de serializador designer personalizado no valor. Nesse caso, <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetSerializer%2A> tentar usá-la. Caso contrário, ele irá passar para <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializer">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.Serialization.CodeDomSerializer GetSerializer (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, Type valueType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.ComponentModel.Design.Serialization.CodeDomSerializer GetSerializer(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.Type valueType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetSerializer(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.CodeDomSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="valueType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="valueType">O <see cref="T:System.Type" /> especificando o serializador para recuperar.</param>
+        <summary>Localiza um serializador de determinado tipo.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.Design.Serialization.CodeDomSerializer" /> que é apropriado para <paramref name="valueType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetSerializer%2A> método é uma extensão para o <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer%2A?displayProperty=nameWithType> método. O <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer%2A?displayProperty=nameWithType> método usa um tipo de objeto, em vez de um valor de objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> ou <paramref name="valueType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTargetFrameworkProvider">
+      <MemberSignature Language="C#" Value="protected static System.ComponentModel.TypeDescriptionProvider GetTargetFrameworkProvider (IServiceProvider provider, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.ComponentModel.TypeDescriptionProvider GetTargetFrameworkProvider(class System.IServiceProvider provider, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetTargetFrameworkProvider(System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeDescriptionProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O serviço de provedor de descrição de tipo.</param>
+        <param name="instance">Um objeto do qual o serviço de provedor de descrição de tipo pode ser derivado, se <c>provedor</c> é <see langword="null" />.</param>
+        <summary>Obtém um <see cref="T:System.ComponentModel.TypeDescriptionProvider" /> que está ciente de que a versão de destino do .NET Framework, para uso na filtragem de tipo.</summary>
+        <returns>Um provedor de descrição de tipo com reconhecimento de .NET Framework.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUniqueName">
+      <MemberSignature Language="C#" Value="protected string GetUniqueName (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetUniqueName(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetUniqueName(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto para o qual o nome será recuperado.</param>
+        <summary>Retorna um nome exclusivo para o objeto fornecido.</summary>
+        <returns>Um nome exclusivo para <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetUniqueName%2A> chamadas de método de <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetName%2A> método. Se esse método não retorna um nome, em seguida, <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetUniqueName%2A> usa <xref:System.ComponentModel.Design.Serialization.INameCreationService> para fabricar um nome válido para o objeto. Se o serviço não estiver disponível, <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetUniqueName%2A> será fabricar um nome com base no nome do tipo curto combinado com um número de índice para torná-lo exclusivo. O nome resultante é associado com o Gerenciador de serialização chamando o <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SetName%2A> método antes do novo nome será retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSerialized">
+      <MemberSignature Language="C#" Value="protected bool IsSerialized (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool IsSerialized(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.IsSerialized(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto a ser testado para serialização anterior.</param>
+        <summary>Retorna um valor que indica se o objeto fornecido foi serializado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> foi serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o `value` serializado de parâmetro a serem considerados, o `manager` parâmetro ou outro serializador deve ter chamado o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression%2A> método para criar uma relação entre `value` e uma expressão de referência.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSerialized">
+      <MemberSignature Language="C#" Value="protected bool IsSerialized (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, bool honorPreset);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool IsSerialized(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, bool honorPreset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.IsSerialized(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="honorPreset" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto a ser testado para serialização anterior.</param>
+        <param name="honorPreset">
+          <see langword="true" />para incluir expressões predefinidas; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna um valor que indica se o objeto fornecido foi serializado, opcionalmente, considerando expressões predefinidas.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> foi serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o `value` serializado de parâmetro a serem considerados, o `manager` parâmetro ou outro serializador deve ter chamado o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression%2A> método para criar uma relação entre `value` e uma expressão de referência.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeCreationExpression">
+      <MemberSignature Language="C#" Value="protected System.CodeDom.CodeExpression SerializeCreationExpression (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, out bool isComplete);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.CodeDom.CodeExpression SerializeCreationExpression(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, [out] bool&amp; isComplete) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeCreationExpression(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="isComplete" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto a ser serializado.</param>
+        <param name="isComplete">
+          <see langword="true" />Se <c>valor</c> foi totalmente serializado; caso contrário, <see langword="false" />.</param>
+        <summary>Retorna uma expressão que representa a criação do objeto especificado.</summary>
+        <returns>Uma expressão que representa a criação de <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeCreationExpression%2A> método pode ser usado para serializar uma expressão que representa a criação do `value` parâmetro. Ele está ciente de descritores de instância.  
+  
+ O `isComplete` parâmetro está definido como `true` se a expressão representa um objeto totalmente configurado, ou `false` se ainda mais a serialização deve ser feita em Propriedades do objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeEvent">
+      <MemberSignature Language="C#" Value="protected void SerializeEvent (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, System.CodeDom.CodeStatementCollection statements, object value, System.ComponentModel.EventDescriptor descriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SerializeEvent(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.CodeDom.CodeStatementCollection statements, object value, class System.ComponentModel.EventDescriptor descriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeEvent(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.CodeDom.CodeStatementCollection,System.Object,System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="statements" Type="System.CodeDom.CodeStatementCollection" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="descriptor" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="statements">O <see cref="T:System.CodeDom.CodeStatementCollection" /> em que o evento será serializado.</param>
+        <param name="value">O objeto ao qual <c>descritor</c> está associado.</param>
+        <param name="descriptor">Um <see cref="T:System.ComponentModel.EventDescriptor" /> especificando o evento para serializar.</param>
+        <summary>Serializa o evento para a coleção de instrução fornecida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeEvent%2A> método é um método auxiliar que classes derivadas pode chamar para serializar um único evento para o determinado <xref:System.CodeDom.CodeStatementCollection>. <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeEvent%2A>consulta o Gerenciador de serialização para um <xref:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer> para um determinado evento e, em seguida, pede a <xref:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer> para serializá-lo.  
+  
+ <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeEvent%2A>coloca o `statements` e `descriptor` parâmetros sobre o <xref:System.ComponentModel.Design.Serialization.ContextStack>.  
+  
+ <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeEvent%2A>requer um <xref:System.ComponentModel.Design.IEventBindingService> para descobrir associações de evento para métodos que não são compilados. Se esse serviço não estiver presente, associações de evento para métodos não compilada não serão gravadas. Associações de evento para métodos compilados ainda serão serializadas se os objetos aos quais os eventos são vinculados podem ser convertidos em expressões.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" />, <paramref name="value" />, <paramref name="statements" /> ou <paramref name="descriptor" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Design.Serialization.CodeDomSerializerException">
+          <see cref="T:System.ComponentModel.Design.IEventBindingService" /> não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeEvents">
+      <MemberSignature Language="C#" Value="protected void SerializeEvents (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, System.CodeDom.CodeStatementCollection statements, object value, params Attribute[] filter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SerializeEvents(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.CodeDom.CodeStatementCollection statements, object value, class System.Attribute[] filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeEvents(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.CodeDom.CodeStatementCollection,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="statements" Type="System.CodeDom.CodeStatementCollection" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="filter" Type="System.Attribute[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="statements">O <see cref="T:System.CodeDom.CodeStatementCollection" /> em que o evento será serializado.</param>
+        <param name="value">O objeto no qual os eventos poderão ser serializados.</param>
+        <param name="filter">Um <see cref="T:System.Attribute" /> matriz que filtra os eventos que serão serializados.</param>
+        <summary>Serializa os eventos especificados para a coleção de instrução fornecida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeEvents%2A> método é um método auxiliar que classes derivadas pode chamar. Examina a eventos `value` parâmetro que corresponda a `filter` parâmetro e, em seguida, ele chama o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeEvent%2A> método para cada evento.  
+  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeEvents%2A> método coloca o <xref:System.ComponentModel.InheritanceAttribute> para `value` no <xref:System.ComponentModel.Design.Serialization.ContextStack>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" />, <paramref name="value" /> ou <paramref name="statements" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeProperties">
+      <MemberSignature Language="C#" Value="protected void SerializeProperties (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, System.CodeDom.CodeStatementCollection statements, object value, Attribute[] filter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SerializeProperties(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.CodeDom.CodeStatementCollection statements, object value, class System.Attribute[] filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeProperties(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.CodeDom.CodeStatementCollection,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="statements" Type="System.CodeDom.CodeStatementCollection" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="filter" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="statements">O <see cref="T:System.CodeDom.CodeStatementCollection" /> em que as propriedades serão serializadas.</param>
+        <param name="value">O objeto no qual as propriedades serão serializadas.</param>
+        <param name="filter">Um <see cref="T:System.Attribute" /> matriz que filtra as propriedades que serão serializadas.</param>
+        <summary>Serializa as propriedades no objeto especificado na coleção de instrução fornecida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeProperties%2A> método é um método auxiliar que classes derivadas pode chamar. Ele analisa as propriedades `value` parâmetro que corresponda a `filter` parâmetro e, em seguida, ele chama o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeProperty%2A> método para cada propriedade.  
+  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeProperties%2A> método coloca o <xref:System.ComponentModel.InheritanceAttribute> para `value` no <xref:System.ComponentModel.Design.Serialization.ContextStack>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" />, <paramref name="value" /> ou <paramref name="statements" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializePropertiesToResources">
+      <MemberSignature Language="C#" Value="protected void SerializePropertiesToResources (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, System.CodeDom.CodeStatementCollection statements, object value, Attribute[] filter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SerializePropertiesToResources(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.CodeDom.CodeStatementCollection statements, object value, class System.Attribute[] filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializePropertiesToResources(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.CodeDom.CodeStatementCollection,System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="statements" Type="System.CodeDom.CodeStatementCollection" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="filter" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="statements">Não usado.</param>
+        <param name="value">O objeto cujas propriedades serão serializadas.</param>
+        <param name="filter">Um <see cref="T:System.Attribute" /> matriz que filtra as propriedades que serão serializadas.</param>
+        <summary>Serializa as propriedades no objeto fornecido no pacote de recursos da cultura invariável.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializePropertiesToResources%2A> método é um método auxiliar que classes derivadas pode chamar. Ele analisa as propriedades `value` parâmetro que corresponda a `filter` parâmetro e, em seguida, serializa as propriedades para o pacote de recursos de cultura invariável. Se o serviço de recurso retorna um <xref:System.Resources.ResXResourceWriter>, os valores de propriedade serão armazenados na seção de metadados do arquivo de recurso (. resx) de XML. O `statements` parâmetro não for usado.  
+  
+ Para ser serializada como um recurso, uma propriedade deve ser simples (não uma propriedade de conteúdo) e seu valor devem ser serializáveis. Propriedades que não está de acordo com esse padrão serão ignoradas.  
+  
+ <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializePropertiesToResources%2A>requer um <xref:System.ComponentModel.Design.IResourceService> para obter um <xref:System.Resources.ResourceWriter> gravar recursos para a cultura invariável. Se esse serviço não estiver disponível, não há recursos serão gravados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" />, <paramref name="value" /> ou <paramref name="statements" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeProperty">
+      <MemberSignature Language="C#" Value="protected void SerializeProperty (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, System.CodeDom.CodeStatementCollection statements, object value, System.ComponentModel.PropertyDescriptor propertyToSerialize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SerializeProperty(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, class System.CodeDom.CodeStatementCollection statements, object value, class System.ComponentModel.PropertyDescriptor propertyToSerialize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeProperty(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.CodeDom.CodeStatementCollection,System.Object,System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="statements" Type="System.CodeDom.CodeStatementCollection" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="propertyToSerialize" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="statements">O <see cref="T:System.CodeDom.CodeStatementCollection" /> no qual a propriedade será serializada.</param>
+        <param name="value">O objeto no qual a propriedade será serializada.</param>
+        <param name="propertyToSerialize">A propriedade para serializar.</param>
+        <summary>Serializa uma propriedade no objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeProperty%2A> método recupera um <xref:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer> para o `propertyToSerialize` parâmetro e delegados a ele.  
+  
+ <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeProperty%2A>coloca o `statements` e `propertyToSerialize` parâmetros sobre o <xref:System.ComponentModel.Design.Serialization.ContextStack>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" />, <paramref name="value" />, <paramref name="statements" /> ou <paramref name="propertyToSerialize" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeResource">
+      <MemberSignature Language="C#" Value="protected void SerializeResource (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, string resourceName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SerializeResource(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, string resourceName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeResource(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="resourceName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="resourceName">O nome do conjunto de recursos no qual <c>valor</c> será serializado.</param>
+        <param name="value">O objeto a ser serializado.</param>
+        <summary>Serializa o objeto fornecido em um pacote de recursos usando o nome do recurso especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeResource%2A> é um método auxiliar que serializa um valor para um pacote de recursos sob o nome fornecido. A cultura que o recurso é gravado é determinada por meio de pesquisa do Gerenciador de serialização <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties%2A> coleção para uma propriedade chamada `ResourceCulture`. Se essa propriedade existir, recursos serão gravados para aquela cultura. Caso contrário, os recursos serão gravados para a cultura invariável. O `value` parâmetro deve ser serializável.  
+  
+ <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeResource%2A>requer um <xref:System.ComponentModel.Design.IResourceService> para obter um <xref:System.Resources.ResourceWriter> gravar recursos para a cultura correto. Se esse serviço não estiver disponível, <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeResource%2A> em vez disso, criará um objeto binário no código que representa o recurso.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>
+            <see langword="ResourceCulture" />é uma propriedade de leitura / gravação que é acessada por meio do Gerenciador de serialização <see cref="P:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties" /> coleção. O <see cref="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeResource(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.String,System.Object)" /> método não altera o valor dessa propriedade; ele simplesmente lê-la para identificar a cultura para o qual serão gravadas. A propriedade é definida durante a desserialização como recursos são analisados e carregados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeResourceInvariant">
+      <MemberSignature Language="C#" Value="protected void SerializeResourceInvariant (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, string resourceName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SerializeResourceInvariant(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, string resourceName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeResourceInvariant(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="resourceName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="resourceName">O nome do conjunto de recursos no qual <c>valor</c> será serializado.</param>
+        <param name="value">O objeto a ser serializado.</param>
+        <summary>Serializa o objeto fornecido em um pacote de recursos usando o nome do recurso especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O recurso é sempre gravado para a cultura invariável. O `value` parâmetro deve ser serializável.  
+  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeResourceInvariant%2A> método exige um <xref:System.ComponentModel.Design.IResourceService> para obter um <xref:System.Resources.ResourceWriter> gravar recursos para a cultura correto. Se esse serviço não estiver disponível, <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeResource%2A> em vez disso, criará um objeto binário no código que representa o recurso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeToExpression">
+      <MemberSignature Language="C#" Value="protected System.CodeDom.CodeExpression SerializeToExpression (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.CodeDom.CodeExpression SerializeToExpression(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto a ser serializado. Pode ser <see langword="null" />.</param>
+        <summary>Serializa o objeto fornecido em uma expressão.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeExpression" /> objeto se <paramref name="value" /> pode ser serializado; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `value` parâmetro pode ser `null`, caso em que uma expressão primitivo será retornada.  
+  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> método usa as seguintes regras para serialização de tipos:  
+  
+1.  Primeiro, ele chama o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> método para ver se uma expressão já foi criada para o objeto. Nesse caso, ele retorna a expressão existente.  
+  
+2.  Ela localiza o serializador do objeto e pede que ele serializar.  
+  
+3.  Se o valor de retorno do serializador do objeto é um <xref:System.CodeDom.CodeExpression>, a expressão é retornada.  
+  
+4.  Faz uma última chamada para <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> para ver se o serializador adicionada uma expressão.  
+  
+5.  Finalmente, ele retorna `null`.  
+  
+ Se nenhuma expressão pode ser criado e nenhum serializador adequado foi encontrado, um erro será relatado por meio do Gerenciador de serialização. Nenhum erro será relatado se um serializador foi encontrado, mas ele não conseguiu produzir uma expressão. Nesse caso, será considerado que o serializador ou já relatou o erro ou não houve tentativa serializar o objeto.  
+  
+ Se o serializador retornado de uma instrução ou uma coleção de instruções, essas instruções não serão descartadas. O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> método primeiro procurará um <xref:System.ComponentModel.Design.Serialization.StatementContext> no contexto de pilha e adicione instruções para o objeto de contexto de instrução <xref:System.ComponentModel.Design.Serialization.StatementContext.StatementCollection%2A> propriedade. Se não houver nenhum contexto de instrução, o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> método examinará o contexto para um <xref:System.CodeDom.CodeStatementCollection> e adicione as instruções existe. Se o local pode ser encontrado para adicionar as instruções, um erro será gerado.  
+  
+> [!NOTE]
+>  Você não deve chamar o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> método dentro de <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService.Serialize%2A> ao serializar seu próprio objeto. Em vez disso, você deve chamar <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A>. Se ele retorna `null`, criar sua própria expressão e chamada <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression%2A>. Prossiga com o restante da sua serialização.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeToResourceExpression">
+      <MemberSignature Language="C#" Value="protected System.CodeDom.CodeExpression SerializeToResourceExpression (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.CodeDom.CodeExpression SerializeToResourceExpression(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToResourceExpression(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto a ser serializado.</param>
+        <summary>Serializa o objeto fornecido em uma expressão.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeExpression" /> contendo <paramref name="value" /> como uma expressão serializada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToResourceExpression%2A> é um método auxiliar que serializa um valor para uma expressão de recurso. Isso é, em comparação com o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeResource%2A> método, que grava um valor em um objeto de recurso binário. <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToResourceExpression%2A>vai mais além e retorna uma expressão que pode ser usada para recuperar o recurso. Por exemplo, o valor de retorno pode ser "rm. GetValue("SomeBitmap"); ". O nome do recurso é calculado a partir de <xref:System.ComponentModel.Design.Serialization.ExpressionContext>, se um pode ser encontrado na pilha de contexto.  
+  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToResourceExpression%2A> método aparecerão no <xref:System.ComponentModel.Design.Serialization.ContextStack> para os seguintes objetos:  
+  
+-   <xref:System.CodeDom.CodeStatementCollection>– uma coleção de instruções para adicionar um Gerenciador de recursos, se um precisa ser declarada.  
+  
+-   <xref:System.ComponentModel.Design.Serialization.RootContext>– a expressão de raiz, que é necessário para criar um recurso de Gerenciador.  
+  
+-   <xref:System.ComponentModel.Design.Serialization.ExpressionContext>– usado para fabricar um nome para o recurso e decidir que tipo de chamada de Gerenciador de recursos para fazer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeToResourceExpression">
+      <MemberSignature Language="C#" Value="protected System.CodeDom.CodeExpression SerializeToResourceExpression (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, bool ensureInvariant);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.CodeDom.CodeExpression SerializeToResourceExpression(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, bool ensureInvariant) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToResourceExpression(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="ensureInvariant" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto a ser serializado.</param>
+        <param name="ensureInvariant">
+          <see langword="true" />para serializar para a cultura invariável; Caso contrário, <see langword="false" />.</param>
+        <summary>Serializa o objeto fornecido em uma expressão apropriada para a cultura invariável.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeExpression" /> contendo <paramref name="value" /> como uma expressão serializada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `ensureInvariant` parâmetro é `true`, o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToResourceExpression%2A> método também gravará o valor do recurso no arquivo de recursos da cultura invariável se atual `ResourceCulture` não é a cultura invariável.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExpression">
+      <MemberSignature Language="C#" Value="protected void SetExpression (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, System.CodeDom.CodeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetExpression(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, class System.CodeDom.CodeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.CodeDom.CodeExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto a ser serializado.</param>
+        <param name="expression">O <see cref="T:System.CodeDom.CodeExpression" /> ao qual associar <c>valor</c>.</param>
+        <summary>Associa um objeto com uma expressão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression%2A> é um método auxiliar que associa um <xref:System.CodeDom.CodeExpression> com um objeto. Objetos que foram associados a expressões dessa maneira são acessíveis por meio de <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> método. <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression%2A>armazena sua tabela de expressão como um objeto anexado na pilha de contexto, de forma que ela é acessível por qualquer serializador <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" />, <paramref name="value" /> ou <paramref name="expression" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExpression">
+      <MemberSignature Language="C#" Value="protected void SetExpression (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, System.CodeDom.CodeExpression expression, bool isPreset);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetExpression(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, class System.CodeDom.CodeExpression expression, bool isPreset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.CodeDom.CodeExpression,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="isPreset" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" /> a ser usado para serialização.</param>
+        <param name="value">O objeto a ser serializado.</param>
+        <param name="expression">O <see cref="T:System.CodeDom.CodeExpression" /> ao qual associar <c>valor</c>.</param>
+        <param name="isPreset">
+          <see langword="true" />para especificar uma expressão predefinida; Caso contrário, <see langword="false" />.</param>
+        <summary>Associa um objeto com uma expressão, e, opcionalmente, especificando uma expressão predefinida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression%2A> é um método auxiliar que associa um <xref:System.CodeDom.CodeExpression> com um objeto. Objetos que foram associados a expressões dessa maneira são acessíveis por meio de <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> método. O <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SetExpression%2A> armazena sua tabela de expressão como um objeto anexado na pilha de contexto, de forma que ela é acessível por qualquer serializador <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,233 @@
+<Type Name="MissingManifestResourceException" FullName="System.Resources.MissingManifestResourceException">
+  <TypeSignature Language="C#" Value="public class MissingManifestResourceException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MissingManifestResourceException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.MissingManifestResourceException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é lançada se o assembly principal não contiver os recursos para a cultura neutra e um assembly satélite adequado está ausente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="desktop-apps"></a>Aplicativos de área de trabalho  
+ Em aplicativos de área de trabalho, <xref:System.Resources.MissingManifestResourceException> é lançada quando a tentativa de recuperar um recurso falha porque não foi possível carregar o conjunto de recursos para a cultura neutra de um assembly específico. Embora a exceção é gerada quando você tenta recuperar um recurso específico, ela é causada por uma falha ao carregar o conjunto de recursos, em vez de uma falha ao localizar o recurso.  
+  
+> [!NOTE]
+>  Para obter mais informações, consulte a seção "Tratamento de exceção MissingManifestResourceException" o <xref:System.Resources.ResourceManager> tópico sobre a classe.  
+  
+ As principais causas da exceção incluem o seguinte:  
+  
+-   O conjunto de recursos não é identificado por seu nome totalmente qualificado. Por exemplo, se o `baseName` parâmetro na chamada para o <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29?displayProperty=nameWithType> método Especifica o nome da raiz do recurso definido sem um namespace, mas o conjunto de recursos é atribuído um namespace quando ela é armazenada em seu assembly, a chamada para o <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> método lança esta exceção.  
+  
+     Se você tiver inserido o arquivo. Resources que contém os recursos da cultura padrão em seu executável e seu aplicativo está gerando um <xref:System.Resources.MissingManifestResourceException>, você pode usar uma ferramenta de reflexão como determinar o nome totalmente qualificado do recurso. ILDasm, clique duas vezes no executável **manifesto** rótulo para abrir o **manifesto** janela. Os recursos são exibidos como `.mresource` itens e são listados depois de referências de assembly externo e atributos de nível de assembly personalizados. Você também pode compilar o utilitário simple a seguir, que lista os nomes totalmente qualificados dos recursos incorporados no assembly cujo nome é passado a ele como um parâmetro de linha de comando.  
+  
+     [!code-csharp[System.Resources.ResourceManager.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcemanager.class/cs/resourcenames.cs#4)]
+     [!code-vb[System.Resources.ResourceManager.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcemanager.class/vb/resourcenames.vb#4)]  
+  
+-   Você identifica o recurso definido por seu nome de arquivo de recurso (juntamente com seu namespace opcional) e sua extensão de arquivo em vez de seu nome de arquivo raiz e namespace autônomo. Por exemplo, essa exceção é gerada se o conjunto de recursos da cultura neutra é chamado `GlobalResources` e fornecer um valor de `GlobalResources.resources` (em vez de `GlobalResources`) para o `baseName` parâmetro o <xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29?displayProperty=nameWithType> construtor.  
+  
+-   Não é possível encontrar o conjunto de recursos específicos de cultura que é identificado em uma chamada de método e o conjunto de recursos de fallback não pode ser carregado. Por exemplo, se você criar assemblies satélite para o inglês (Estados Unidos) e culturas (Russo) Rússia, mas você não fornecer um conjunto de recursos para a cultura neutra, essa exceção é gerada se a cultura atual do aplicativo é inglês (Grã-Bretanha).  
+  
+ <xref:System.Resources.MissingManifestResourceException>usa o HRESULT COR_E_MISSINGMANIFESTRESOURCE, que tem o valor 0x80131532.  
+  
+ <xref:System.Resources.MissingManifestResourceException>usa o padrão <xref:System.Object.Equals%2A> implementação, que oferece suporte a igualdade de referência.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Resources.MissingManifestResourceException>, consulte o <xref:System.Resources.MissingManifestResourceException.%23ctor%2A> construtores.  
+  
+> [!NOTE]
+>  É recomendável que você inclua um conjunto neutro de recursos em seu assembly principal, para que seu aplicativo não falhará se um assembly satélite não estiver disponível.  
+  
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>Aplicativos do [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]  
+ Ao contrário de aplicativos de área de trabalho, o qual implantar recursos localizados em assemblies satélites e normalmente armazenam os recursos de cultura neutra na assembly principal, [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos implantar recursos para várias culturas, incluindo a cultura neutra, em um arquivo de índice (PRI) de recurso único pacote. Como resultado, em um [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativo, se não não possível encontrar recursos para a cultura preferencial, o <xref:System.Resources.MissingManifestResourceException> é gerada em qualquer uma das seguintes condições:  
+  
+-   O aplicativo não tem um arquivo. PRI ou não foi possível abrir o arquivo. PRI.  
+  
+-   Arquivos de PRI do aplicativo não contém um conjunto de recursos para o nome de raiz específico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingManifestResourceException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.MissingManifestResourceException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.MissingManifestResourceException" /> com propriedades padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Resources.MissingManifestResourceException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A mensagem de erro localizada para <xref:System.Resources.MissingManifestResourceException>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingManifestResourceException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.MissingManifestResourceException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.MissingManifestResourceException" /> com a mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Resources.MissingManifestResourceException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|O `message` cadeia de caracteres.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MissingManifestResourceException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.MissingManifestResourceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou destino da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.MissingManifestResourceException" /> classe a partir de dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MissingManifestResourceException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.MissingManifestResourceException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="inner">A exceção que é a causa da exceção atual. Se o <c>interna</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.MissingManifestResourceException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Resources.MissingManifestResourceException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência de exceção interna.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

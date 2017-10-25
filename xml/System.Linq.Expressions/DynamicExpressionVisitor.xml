@@ -1,0 +1,102 @@
+<Type Name="DynamicExpressionVisitor" FullName="System.Linq.Expressions.DynamicExpressionVisitor">
+  <TypeSignature Language="C#" Value="public abstract class DynamicExpressionVisitor : System.Linq.Expressions.ExpressionVisitor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DynamicExpressionVisitor extends System.Linq.Expressions.ExpressionVisitor" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.DynamicExpressionVisitor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Linq.Expressions.ExpressionVisitor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um visitante ou regravador de árvores de expressão dinâmica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe foi projetada para ser herdada para criar classes mais especializadas cuja funcionalidade requer atravessando, examinando ou copiando uma árvore de expressão dinâmica.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DynamicExpressionVisitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.DynamicExpressionVisitor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Linq.Expressions.DynamicExpressionVisitor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisitDynamic">
+      <MemberSignature Language="C#" Value="protected override System.Linq.Expressions.Expression VisitDynamic (System.Linq.Expressions.DynamicExpression node);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Linq.Expressions.Expression VisitDynamic(class System.Linq.Expressions.DynamicExpression node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.DynamicExpressionVisitor.VisitDynamic(System.Linq.Expressions.DynamicExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Linq.Expressions.DynamicExpression" />
+      </Parameters>
+      <Docs>
+        <param name="node">A expressão a ser visitada.</param>
+        <summary>Visita os filhos de <see cref="T:System.Linq.Expressions.DynamicExpression" />.</summary>
+        <returns>Retorna <see cref="T:System.Linq.Expressions.Expression" />, a expressão modificada, se ele ou qualquer subexpressão for modificada; caso contrário, retorna a expressão original.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

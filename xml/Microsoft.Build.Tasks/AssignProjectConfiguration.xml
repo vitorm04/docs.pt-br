@@ -1,0 +1,335 @@
+<Type Name="AssignProjectConfiguration" FullName="Microsoft.Build.Tasks.AssignProjectConfiguration">
+  <TypeSignature Language="C#" Value="public class AssignProjectConfiguration : Microsoft.Build.Tasks.ResolveProjectBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssignProjectConfiguration extends Microsoft.Build.Tasks.ResolveProjectBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.AssignProjectConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.ResolveProjectBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Atribui configurações de projeto XML para itens de tarefas de referência de projeto.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssignProjectConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AssignProjectConfiguration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.AssignProjectConfiguration" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddSyntheticProjectReferencesForSolutionDependencies">
+      <MemberSignature Language="C#" Value="public bool AddSyntheticProjectReferencesForSolutionDependencies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AddSyntheticProjectReferencesForSolutionDependencies" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.AddSyntheticProjectReferencesForSolutionDependencies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se a usar as informações de dependência de solução passados no blob de solução para adicionar referências de projeto sintético para fins de ordenação de compilação.</summary>
+        <value>Retorna o sinalizador.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AssignedProjects">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] AssignedProjects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] AssignedProjects" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.AssignedProjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de caminhos de referência de projeto resolvido preservando os atributos de referência de projeto original.</summary>
+        <value>A lista de caminhos de referência de projeto resolvido.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentProject">
+      <MemberSignature Language="C#" Value="public string CurrentProject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentProject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho completo do projeto.</summary>
+        <value>Retorna o caminho completo do projeto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentProjectConfiguration">
+      <MemberSignature Language="C#" Value="public string CurrentProjectConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentProjectConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProjectConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a configuração do projeto atual.</summary>
+        <value>Retorna a configuração do projeto atual.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentProjectPlatform">
+      <MemberSignature Language="C#" Value="public string CurrentProjectPlatform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentProjectPlatform" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.CurrentProjectPlatform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a plataforma do projeto atual.</summary>
+        <value>Retorna a plataforma do projeto atual.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultToVcxPlatformMapping">
+      <MemberSignature Language="C#" Value="public string DefaultToVcxPlatformMapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultToVcxPlatformMapping" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.DefaultToVcxPlatformMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista separada por ponto-e-vírgula de mapeamentos dos nomes de plataforma usados pela maioria dos tipos de VS aos usados pelo .vcxprojs.</summary>
+        <value>Retorna uma lista separada por ponto-e-vírgula de mapeamentos dos nomes de plataforma usados pela maioria dos tipos de VS aos usados pelo .vcxprojs.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo "AnyCPU = Win32"  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.AssignProjectConfiguration.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o <c>AssignProjectConfiguration</c> tarefa.</summary>
+        <returns>
+          <see langword="true" /> caso a execução da tarefa seja bem-sucedida; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration">
+      <MemberSignature Language="C#" Value="public bool OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se as referências devem ser criadas, mesmo se eles foram desabilitados na configuração do projeto.</summary>
+        <value>Retorna <see langword="true" />. Se as referências devem ser criadas; <see langword="false" /> caso contrário. Assume o padrão de <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OutputType">
+      <MemberSignature Language="C#" Value="public string OutputType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OutputType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.OutputType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de saída para o projeto.</summary>
+        <value>Retorna o tipo de saída para o projeto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveConfigurationPlatformUsingMappings">
+      <MemberSignature Language="C#" Value="public bool ResolveConfigurationPlatformUsingMappings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ResolveConfigurationPlatformUsingMappings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.ResolveConfigurationPlatformUsingMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma opção que especifica se os mapeamentos padrão devem ser usados para resolver a configuração/plataforma do projeto passado faz referência.</summary>
+        <value>Retorna VERDADEIRO se os mapeamentos padrão devem ser usados; FALSO caso contrário.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldUnsetParentConfigurationAndPlatform">
+      <MemberSignature Language="C#" Value="public bool ShouldUnsetParentConfigurationAndPlatform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldUnsetParentConfigurationAndPlatform" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.ShouldUnsetParentConfigurationAndPlatform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma opção que determina se é necessário definir os metadados de GlobalPropertiesToRemove na referência de projeto, de modo que, em uma chamada do MSBuild, os metadados de configuração e plataforma será unset, permitindo que o projeto filho em sua configuração padrão de compilação / plataforma.</summary>
+        <value>Retorna VERDADEIRO se os metadados de configuração e plataforma serão unset; FALSO caso contrário. O padrão é falso.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SolutionConfigurationContents">
+      <MemberSignature Language="C#" Value="public string SolutionConfigurationContents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SolutionConfigurationContents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.SolutionConfigurationContents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres XML que contém a configuração do projeto.</summary>
+        <value>Uma cadeia de caracteres XML que contém a configuração do projeto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnassignedProjects">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] UnassignedProjects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] UnassignedProjects" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.UnassignedProjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de projeto de itens de referência que não puderam ser resolvidos usando a lista previamente resolvida de saídas.</summary>
+        <value>A lista de itens de projeto de referência que não puderam ser resolvidos usando a lista previamente resolvida de saídas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] somente pré-resolve não[!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] projetos, isso significa que as referências de projeto nessa lista são no [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] formato.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="VcxToDefaultPlatformMapping">
+      <MemberSignature Language="C#" Value="public string VcxToDefaultPlatformMapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VcxToDefaultPlatformMapping" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.AssignProjectConfiguration.VcxToDefaultPlatformMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista separada por ponto-e-vírgula de mapeamentos de nomes de plataforma. vcxproj para o uso de nomes de plataforma pela maioria dos outros tipos de projeto do VS.</summary>
+        <value>Retorna a lista separada por ponto-e-vírgula de mapeamentos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo "Win32 = AnyCPU"  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

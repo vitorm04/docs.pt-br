@@ -1,0 +1,136 @@
+<Type Name="TerminateWorkflow" FullName="System.Activities.Statements.TerminateWorkflow">
+  <TypeSignature Language="C#" Value="public sealed class TerminateWorkflow : System.Activities.NativeActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TerminateWorkflow extends System.Activities.NativeActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.TerminateWorkflow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.NativeActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encerra a instância de fluxo de trabalho em execução, dispara o <see cref="P:System.Activities.WorkflowApplication.Completed" /> evento no host e relata informações de erro. Depois que o fluxo de trabalho é encerrado, ela não pode ser retomada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TerminateWorkflow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.TerminateWorkflow.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Statements.TerminateWorkflow" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.NativeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.NativeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.TerminateWorkflow.CacheMetadata(System.Activities.NativeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.NativeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;Exception&gt; Exception { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;class System.Exception&gt; Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.TerminateWorkflow.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.Exception&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a exceção que provoked o encerramento de instância.</summary>
+        <value>A exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A exceção que é passada para <xref:System.Activities.WorkflowApplication.Terminate%2A> é um <xref:System.Activities.WorkflowApplicationTerminatedException> se apenas <xref:System.Activities.Statements.TerminateWorkflow.Reason%2A> está definido. Se apenas <xref:System.Activities.Statements.TerminateWorkflow.Exception%2A> for definido, que a exceção é transmitida para <xref:System.Activities.WorkflowApplication.Terminate%2A>. Se ambos os <xref:System.Activities.Statements.TerminateWorkflow.Reason%2A> e <xref:System.Activities.Statements.TerminateWorkflow.Exception%2A> são definidos, um <xref:System.Activities.WorkflowApplicationTerminatedException> é passado com especificado <xref:System.Activities.Statements.TerminateWorkflow.Reason%2A>, e <xref:System.Activities.Statements.TerminateWorkflow.Exception%2A> é definido como a exceção <xref:System.Exception.InnerException%2A> propriedade. Se não for definido, um padrão <xref:System.Activities.WorkflowApplicationTerminatedException> é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override void Execute (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Execute(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.TerminateWorkflow.Execute(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;string&gt; Reason { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;string&gt; Reason" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.TerminateWorkflow.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um argumento de entrada da cadeia de caracteres com o motivo para a terminação de instância de fluxo de trabalho.</summary>
+        <value>O motivo do término do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A exceção que é passada para <xref:System.Activities.WorkflowApplication.Terminate%2A> é um <xref:System.Activities.WorkflowApplicationTerminatedException> se apenas <xref:System.Activities.Statements.TerminateWorkflow.Reason%2A> está definido. Se apenas <xref:System.Activities.Statements.TerminateWorkflow.Exception%2A> for definido, que a exceção é transmitida para <xref:System.Activities.WorkflowApplication.Terminate%2A>. Se ambos os <xref:System.Activities.Statements.TerminateWorkflow.Reason%2A> e <xref:System.Activities.Statements.TerminateWorkflow.Exception%2A> são definidos, um <xref:System.Activities.WorkflowApplicationTerminatedException> é passado com especificado <xref:System.Activities.Statements.TerminateWorkflow.Reason%2A>, e <xref:System.Activities.Statements.TerminateWorkflow.Exception%2A> é definido como a exceção <xref:System.Exception.InnerException%2A> propriedade. Se não for definido, um padrão <xref:System.Activities.WorkflowApplicationTerminatedException> é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

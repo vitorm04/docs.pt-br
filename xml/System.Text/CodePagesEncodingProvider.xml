@@ -1,0 +1,120 @@
+<Type Name="CodePagesEncodingProvider" FullName="System.Text.CodePagesEncodingProvider">
+  <TypeSignature Language="C#" Value="public sealed class CodePagesEncodingProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CodePagesEncodingProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.CodePagesEncodingProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encoding.CodePages</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece acesso a um provedor de codificação de páginas de código com suporte no .NET Framework da área de trabalho, mas não em aplicativos UWP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Text.CodePagesEncodingProvider> classe há suporte para a implementação .NET nativo do .NET Core somente.  
+  
+ O .NET Framework para a área de trabalho do Windows oferece suporte a um grande conjunto de codificações de página de Unicode e código. A plataforma Universal do Windows e .NET nativo, por outro lado, oferecem suporte apenas as seguintes codificações:  
+  
+-   ASCII (página de código 20127), que é retornado pelo <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> propriedade.  
+  
+-   ISO 8859-1 (página de código 28591).  
+  
+-   UTF-7 (página de código 65000), que é retornado pelo <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType> propriedade.  
+  
+-   UTF-8 (página de código 65001), que é retornado pelo <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> propriedade.  
+  
+-   UTF-16 e UTF-16LE (página de código 1200), que é retornado pelo <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> propriedade.  
+  
+-   UTF-16BE (página de código 1201), que é instanciado chamando o <xref:System.Text.UnicodeEncoding.%23ctor%2A?displayProperty=nameWithType> ou <xref:System.Text.UnicodeEncoding.%23ctor%2A?displayProperty=nameWithType> construtor com um `bigEndian` valor `true`.  
+  
+-   UTF-32 e UTF-32LE (página de código 12000), que é retornado pelo <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType> propriedade.  
+  
+-   UTF-32BE (página de código 12001), que é instanciado chamando um <xref:System.Text.UTF32Encoding> construtor que tenha uma `bigEndian` parâmetro e fornecendo um valor de `true` na chamada do método.  
+  
+ Diferente de página de código 20127, não há suporte para codificações de página de código.  
+  
+ O <xref:System.Text.CodePagesEncodingProvider> estende a classe <xref:System.Text.EncodingProvider> para tornar essas páginas de código disponíveis para aplicativos .NET Native e Windows UWP (plataforma Universal). Para usar essas páginas de código adicionais, faça o seguinte:  
+  
+-   Adicione uma referência ao assembly System.Text.Encoding.CodePages.dll ao seu projeto.  
+  
+-   Recuperar um <xref:System.Text.CodePagesEncodingProvider> objeto de estático <xref:System.Text.CodePagesEncodingProvider.Instance%2A?displayProperty=nameWithType> propriedade.  
+  
+-   Passe o objeto de <xref:System.Text.CodePagesEncodingProvider> para o método de <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> .  
+  
+ Após um <xref:System.Text.EncodingProvider> o objeto foi registrado, as codificações que ele suporta estão disponíveis chamando as sobrecargas de <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>; você não deve chamar o <xref:System.Text.EncodingProvider.GetEncoding%2A?displayProperty=nameWithType> sobrecargas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="public static System.Text.EncodingProvider Instance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.EncodingProvider Instance" />
+      <MemberSignature Language="DocId" Value="P:System.Text.CodePagesEncodingProvider.Instance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding.CodePages</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.EncodingProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um provedor de codificação de páginas de código com suporte na área de trabalho do .NET Framework, mas não na plataforma atual do .NET Framework.</summary>
+        <value>Um provedor de codificação que permita o acesso para codificações que não tem suportados na plataforma atual do .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.CodePagesEncodingProvider.Instance%2A> propriedade retorna um <xref:System.Text.EncodingProvider> objeto que disponibiliza codificações para aplicativos que têm como destino o [!INCLUDE[net_v46](~/includes/net-v46-md.md)] ou uma versão posterior e que outra forma estão disponíveis apenas no .NET Framework da área de trabalho do Windows.  
+  
+ O .NET Framework da área de trabalho do Windows oferece suporte a um grande número de páginas de código e codificações de caracteres. Você pode obter uma lista completa de codificações chamando o <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> método, que está disponível no .NET Framework completo na área de trabalho do Windows. .NET native para aplicativos UWP, por outro lado, oferece suporte somente para as seguintes codificações por padrão:  
+  
+-   ASCII (página de código 20127), que é retornado pelo <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> propriedade.  
+  
+-   ISO 8859-1 (página de código 28591).  
+  
+-   UTF-7 (página de código 65000), que é retornado pelo <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType> propriedade.  
+  
+-   UTF-8 (página de código 65001), que é retornado pelo <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> propriedade.  
+  
+-   UTF-16 e UTF-16LE (página de código 1200), que é retornado pelo <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> propriedade.  
+  
+-   UTF-16BE (página de código 1201), que é instanciado chamando o <xref:System.Text.UnicodeEncoding.%23ctor%2A?displayProperty=nameWithType> ou <xref:System.Text.UnicodeEncoding.%23ctor%2A?displayProperty=nameWithType> construtor com um `bigEndian` valor `true`.  
+  
+-   UTF-32 e UTF-32LE (página de código 12000), que é retornado pelo <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType> propriedade.  
+  
+-   UTF-32BE (página de código 12001), que é instanciado chamando um <xref:System.Text.UTF32Encoding> construtor que tenha uma `bigEndian` parâmetro e fornecendo um valor de `true` na chamada do método.  
+  
+ Para recuperar uma codificação está presente no .NET Framework da área de trabalho do Windows, mas não em aplicativos UWP, faça o seguinte:  
+  
+-   Adicione uma referência ao assembly System.Text.Encoding.CodePages.dll ao seu projeto.  
+  
+-   Obter o <xref:System.Text.EncodingProvider> objeto de estático <xref:System.Text.CodePagesEncodingProvider.Instance%2A?displayProperty=nameWithType> propriedade.  
+  
+-   Passar o <xref:System.Text.EncodingProvider> o objeto para o <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> método para fazer as codificações fornecidas pelo <xref:System.Text.EncodingProvider> objeto disponível para o common language runtime.  
+  
+-   Chamar um <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> sobrecarga para recuperar a codificação. O <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> será chamada de método correspondente <xref:System.Text.EncodingProvider.GetEncoding%2A?displayProperty=nameWithType> método para determinar se ele pode fornecer a codificação solicitada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

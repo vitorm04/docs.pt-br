@@ -1,0 +1,76 @@
+<Type Name="NonDualMessageSecurityOverHttpElement" FullName="System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement">
+  <TypeSignature Language="C#" Value="public sealed class NonDualMessageSecurityOverHttpElement : System.ServiceModel.Configuration.MessageSecurityOverHttpElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NonDualMessageSecurityOverHttpElement extends System.ServiceModel.Configuration.MessageSecurityOverHttpElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.MessageSecurityOverHttpElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as definições de configuração para a segurança de uma mensagem enviada usando HTTP para contratos de serviço não-duplex. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NonDualMessageSecurityOverHttpElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EstablishSecurityContext">
+      <MemberSignature Language="C#" Value="public bool EstablishSecurityContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EstablishSecurityContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement.EstablishSecurityContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("establishSecurityContext", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que especifica se o contexto de segurança é estabelecido.</summary>
+        <value>
+          <see langword="true" />Se o contexto de segurança é estabelecido. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

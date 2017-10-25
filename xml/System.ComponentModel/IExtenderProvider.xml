@@ -1,0 +1,93 @@
+<Type Name="IExtenderProvider" FullName="System.ComponentModel.IExtenderProvider">
+  <TypeSignature Language="C#" Value="public interface IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExtenderProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.IExtenderProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a interface para estender propriedades para outros componentes em um contêiner.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor do extensor é um componente que fornece propriedades para outros componentes. Por exemplo, o <xref:System.Windows.Forms.ToolTip> controle é um provedor do extensor. Quando você adiciona um <xref:System.Windows.Forms.ToolTip> o controle para um <xref:System.Windows.Forms.Form>, todos os outros controles no formulário tem um <xref:System.Windows.Forms.ToolTip> propriedade adicionada à sua lista de propriedades.  
+  
+ Qualquer componente que fornece propriedades estendidas deve implementar <xref:System.ComponentModel.IExtenderProvider>. Um designer visual pode chamar <xref:System.ComponentModel.IExtenderProvider.CanExtend%2A> para determinar quais objetos em um contêiner devem receber as propriedades estendidas.  
+  
+ Para obter mais informações sobre os provedores de extensão, consulte [como: implementar um provedor de extensor](http://msdn.microsoft.com/library/d824f40e-b20b-464c-ac22-97974d5ab4fe).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar o <xref:System.ComponentModel.IExtenderProvider> interface. Este exemplo é parte de um exemplo maior discutido [como: implementar um provedor de extensor HelpLabel](http://msdn.microsoft.com/library/21e34929-ff78-4f3f-aee8-a16a4ef5ac9d).  
+  
+ [!code-csharp[System.Windows.Forms.HelpLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpLabel/CS/HelpLabel.cs#1)]
+ [!code-vb[System.Windows.Forms.HelpLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpLabel/VB/HelpLabel.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public bool CanExtend (object extendee);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExtend(object extendee) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.IExtenderProvider.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extendee" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="extendee">O <see cref="T:System.Object" /> para receber as propriedades estendidas.</param>
+        <summary>Especifica se este objeto puder fornecer suas propriedades estendidas ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se este objeto puder fornecer propriedades estendidas ao objeto especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre propriedades estendidas, consulte [como: implementar um provedor de extensor](http://msdn.microsoft.com/library/d824f40e-b20b-464c-ac22-97974d5ab4fe).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar o <xref:System.ComponentModel.IExtenderProvider.CanExtend%2A> propriedade. Este exemplo é parte de um exemplo maior discutido [como: implementar um provedor de extensor HelpLabel](http://msdn.microsoft.com/library/21e34929-ff78-4f3f-aee8-a16a4ef5ac9d).  
+  
+ [!code-csharp[System.Windows.Forms.HelpLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpLabel/CS/HelpLabel.cs#1)]
+ [!code-vb[System.Windows.Forms.HelpLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpLabel/VB/HelpLabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

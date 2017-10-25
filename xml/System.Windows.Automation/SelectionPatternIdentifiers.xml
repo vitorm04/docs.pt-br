@@ -1,0 +1,148 @@
+<Type Name="SelectionPatternIdentifiers" FullName="System.Windows.Automation.SelectionPatternIdentifiers">
+  <TypeSignature Language="C#" Value="public static class SelectionPatternIdentifiers" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SelectionPatternIdentifiers extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.SelectionPatternIdentifiers" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém valores usados como identificadores para <see cref="T:System.Windows.Automation.Provider.ISelectionProvider" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses identificadores são usados por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar os campos equivalentes em <xref:System.Windows.Automation.SelectionPattern>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanSelectMultipleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty CanSelectMultipleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty CanSelectMultipleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionPatternIdentifiers.CanSelectMultipleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.SelectionPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidatedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent InvalidatedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent InvalidatedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento que é gerado quando uma seleção em um contêiner mudou significativamente e requer envio de mais eventos de adição e remoção de que o <see cref="F:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit" /> permite constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um evento inválido é gerado quando uma seleção em um contêiner mudou significativamente e requer envio mais eventos de adição e remoção de que o <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> permite constante.  
+  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.SelectionPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionRequiredProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty IsSelectionRequiredProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty IsSelectionRequiredProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionPatternIdentifiers.IsSelectionRequiredProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.SelectionPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionPatternIdentifiers.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.SelectionPattern" /> padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.SelectionPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty SelectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty SelectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.SelectionPatternIdentifiers.SelectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade que obtém os itens selecionados em um contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.SelectionPattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,432 @@
+<Type Name="ContextDataSourceView" FullName="System.Web.UI.WebControls.ContextDataSourceView">
+  <TypeSignature Language="C#" Value="public abstract class ContextDataSourceView : System.Web.UI.WebControls.QueryableDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ContextDataSourceView extends System.Web.UI.WebControls.QueryableDataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ContextDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.QueryableDataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Oferece suporte a <see cref="T:System.Web.UI.WebControls.ContextDataSource" /> controlar e fornece uma interface para controles associados a dados executar operações de dados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ContextDataSourceView (System.Web.UI.DataSourceControl owner, string viewName, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.DataSourceControl owner, string viewName, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.#ctor(System.Web.UI.DataSourceControl,System.String,System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.DataSourceControl" />
+        <Parameter Name="viewName" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="owner">A fonte de dados de controle que o <see cref="T:System.Web.UI.WebControls.ContextDataSourceView" /> objeto está associado.</param>
+        <param name="viewName">O nome exclusivo para a exibição de fonte de dados no escopo do controle de fonte de dados que ele pertence.</param>
+        <param name="context">A instância <see cref="T:System.Web.HttpContext" /> atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ContextDataSourceView" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="protected object Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSourceView.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contexto de dados atual.</summary>
+        <value>O contexto de dados atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextType">
+      <MemberSignature Language="C#" Value="public virtual Type ContextType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContextType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSourceView.ContextType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do contexto de dados.</summary>
+        <value>O tipo que está associado com a classe de contexto de dados que é especificada no <see cref="P:System.Web.UI.WebControls.ContextDataSourceView.ContextTypeName" /> propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextTypeName">
+      <MemberSignature Language="C#" Value="public virtual string ContextTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContextTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSourceView.ContextTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da classe de contexto de dados que contém o campo ou propriedade que é especificada no <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.TableName" /> propriedade.</summary>
+        <value>O nome da classe de contexto de dados que contém o campo ou propriedade que é especificada no <see cref="P:System.Web.UI.WebControls.LinqDataSourceView.TableName" /> propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContext">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.ContextDataSourceContextData CreateContext (System.Web.UI.DataSourceOperation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.ContextDataSourceContextData CreateContext(valuetype System.Web.UI.DataSourceOperation operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.CreateContext(System.Web.UI.DataSourceOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContextDataSourceContextData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="System.Web.UI.DataSourceOperation" />
+      </Parameters>
+      <Docs>
+        <param name="operation">O tipo de operação de dados a ser executada.</param>
+        <summary>Cria uma instância do contexto de dados e do tipo de conjunto de entidades para a operação especificada.</summary>
+        <returns>Uma instância do contexto de dados e do tipo de conjunto de entidades para a operação especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeContext">
+      <MemberSignature Language="C#" Value="protected void DisposeContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void DisposeContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.DisposeContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarta o contexto depois que uma operação é executada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeContext">
+      <MemberSignature Language="C#" Value="protected virtual void DisposeContext (object dataContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DisposeContext(object dataContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.DisposeContext(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataContext">O contexto de dados dispose.</param>
+        <summary>Descarta o contexto de dados especificado depois que uma operação é executada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySet">
+      <MemberSignature Language="C#" Value="protected object EntitySet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object EntitySet" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSourceView.EntitySet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que contém o valor dos dados a recuperar.</summary>
+        <value>O objeto que contém o valor dos dados a recuperar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySetName">
+      <MemberSignature Language="C#" Value="public string EntitySetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntitySetName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSourceView.EntitySetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade ou campo na classe de contexto de dados que representa uma coleção de dados.</summary>
+        <value>O nome da propriedade ou campo na classe de contexto de dados que representa uma coleção de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySetType">
+      <MemberSignature Language="C#" Value="protected Type EntitySetType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EntitySetType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSourceView.EntitySetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do objeto que é criado para uma inserção, exclusão ou operação de atualização.</summary>
+        <value>O nome do objeto que é criado para uma inserção, exclusão ou operação de atualização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityType">
+      <MemberSignature Language="C#" Value="protected override Type EntityType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EntityType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSourceView.EntityType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que é criado para uma inserção, exclusão ou operação de atualização.</summary>
+        <value>O objeto que é criado para uma inserção, exclusão ou operação de atualização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityTypeName">
+      <MemberSignature Language="C#" Value="public string EntityTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntityTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSourceView.EntityTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do objeto que é criado para uma inserção, exclusão ou operação de atualização.</summary>
+        <value>O nome do objeto que é criado para uma inserção, exclusão ou operação de atualização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventContextCreated">
+      <MemberSignature Language="C#" Value="protected static readonly object EventContextCreated;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly object EventContextCreated" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ContextDataSourceView.EventContextCreated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um evento ocorreu depois que uma instância do objeto de tipo de contexto foi criada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventContextCreating">
+      <MemberSignature Language="C#" Value="protected static readonly object EventContextCreating;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly object EventContextCreating" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ContextDataSourceView.EventContextCreating" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um evento ocorre antes de uma instância do objeto de tipo de contexto é criada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventContextDisposing">
+      <MemberSignature Language="C#" Value="protected static readonly object EventContextDisposing;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly object EventContextDisposing" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ContextDataSourceView.EventContextDisposing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um evento ocorre antes de uma instância do objeto de tipo de contexto for descartada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDelete">
+      <MemberSignature Language="C#" Value="protected override int ExecuteDelete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteDelete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.ExecuteDelete(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Um dicionário de valores de chave de linha para os registros a serem excluídos.</param>
+        <param name="oldValues">Um dicionário de pares nome/valor que representam os elementos de dados e seus valores originais, que é usado para detectar conflitos de dados.</param>
+        <summary>Executa uma operação de exclusão usando as chaves especificadas e valores de linha são usados para detectar conflitos.</summary>
+        <returns>O número de linhas que foram excluídas da fonte de dados ou objetos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteInsert">
+      <MemberSignature Language="C#" Value="protected override int ExecuteInsert (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteInsert(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.ExecuteInsert(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Um dicionário de pares nome/valor que representam os elementos de dados e seus novos valores.</param>
+        <summary>Executa uma operação de inserção, usando os valores especificados em uma coleção.</summary>
+        <returns>O número de linhas que foram inseridas na fonte de dados ou objetos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteUpdate">
+      <MemberSignature Language="C#" Value="protected override int ExecuteUpdate (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ExecuteUpdate(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.ExecuteUpdate(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Um dicionário de valores de chave de linha para os registros atualizar.</param>
+        <param name="values">Um dicionário de pares nome/valor que representam os elementos de dados e seus novos valores.</param>
+        <param name="oldValues">Um dicionário de pares nome/valor que representam os elementos de dados e seus valores originais, que é usado para detectar conflitos de dados.</param>
+        <summary>Executa uma operação de atualização usando os valores de chave de linha especificados, os valores de linha e os valores de linha são usados para detectar conflitos.</summary>
+        <returns>O número de linhas que foram atualizados na fonte de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataObjectType">
+      <MemberSignature Language="C#" Value="protected virtual Type GetDataObjectType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Type GetDataObjectType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.GetDataObjectType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de dados de objeto a ser usado para a operação.</param>
+        <summary>Recupera o tipo de objeto de dados a ser usado para operações de atualização, delete e insert.</summary>
+        <returns>O tipo do objeto de dados que foi usado para a exclusão, inserção ou operações de atualização.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntitySetType">
+      <MemberSignature Language="C#" Value="protected virtual Type GetEntitySetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Type GetEntitySetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.GetEntitySetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a entidade definida como uma propriedade, campo ou contexto de dados.</summary>
+        <returns>O conjunto de entidades que foi recuperado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSource">
+      <MemberSignature Language="C#" Value="protected override object GetSource (System.Web.UI.WebControls.QueryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetSource(class System.Web.UI.WebControls.QueryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSourceView.GetSource(System.Web.UI.WebControls.QueryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.UI.WebControls.QueryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto de consulta atual.</param>
+        <summary>Recupera a origem do contexto da consulta.</summary>
+        <returns>A fonte de dados para aplicar a consulta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

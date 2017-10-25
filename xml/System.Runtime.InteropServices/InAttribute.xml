@@ -1,0 +1,94 @@
+<Type Name="InAttribute" FullName="System.Runtime.InteropServices.InAttribute">
+  <TypeSignature Language="C#" Value="public sealed class InAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.InAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que os dados devem passar por marshaling pelo chamador para o receptor, mas não de volta para o chamador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para parâmetros.  
+  
+ O <xref:System.Runtime.InteropServices.InAttribute> é opcional. Há suporte para interoperabilidade COM o atributo e apenas a invocação de plataforma. Na ausência de configurações explícitas, interop marshaler pressupõe que as regras com base no parâmetro de tipo, se o parâmetro é passado por referência ou por valor e se o tipo é blittable ou não blittable. Por exemplo, a <xref:System.Text.StringBuilder> classe sempre deve para ser de entrada/saída e uma matriz de cadeias de caracteres transmitida por valor é considerada como no.  
+  
+ Não é possível aplicar o <xref:System.Runtime.InteropServices.InAttribute> para um parâmetro modificado com o c#-estilo `out` palavra-chave. Para evitar confundir o `In` palavra-chave no Visual Basic com o <xref:System.Runtime.InteropServices.InAttribute>, menos o atributo, use o `<[In]>` formulário com o atributo entre colchetes.  
+  
+ Combinando o <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> é particularmente útil quando aplicado a matrizes e formatados, não blittable tipos. Os chamadores ver as alterações que um receptor torna a esses tipos somente quando você aplicar dois atributos. Como esses tipos exigem a cópia durante o empacotamento, você pode usar <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> para reduzir o desnecessárias cópias.  
+  
+ Para obter mais informações sobre o efeito de <xref:System.Runtime.InteropServices.InAttribute> no comportamento de marshaling, consulte [atributos direcionais](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como aplicar o <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> para uma plataforma de invocar o protótipo que passa uma matriz como um parâmetro. A combinação de atributos direcionais permite que o chamador ver as alterações feitas pelo receptor.  
+  
+ [!code-cpp[Interop InOutParameters#1](~/samples/snippets/cpp/VS_Snippets_CLR/Interop InOutParameters/CPP/inout.cpp#1)]
+ [!code-csharp[Interop InOutParameters#1](~/samples/snippets/csharp/VS_Snippets_CLR/Interop InOutParameters/CS/inout.cs#1)]
+ [!code-vb[Interop InOutParameters#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Interop InOutParameters/VB/inout.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.InAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.InAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

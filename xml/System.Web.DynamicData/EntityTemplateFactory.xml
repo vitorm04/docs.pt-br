@@ -1,0 +1,127 @@
+<Type Name="EntityTemplateFactory" FullName="System.Web.DynamicData.EntityTemplateFactory">
+  <TypeSignature Language="C#" Value="public class EntityTemplateFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityTemplateFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.EntityTemplateFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Cria um modelo de entidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.EntityTemplateFactory> classe é usada em tempo de execução por dados dinâmicos para obter uma instância de um modelo de entidade para uma tabela. Modelos de entidade são controles de usuário que se aplicam a uma linha da tabela inteira em vez de um único campo de dados, assim como acontece com modelos de campo. Os modelos de entidade são exibidos em uma página usando o <xref:System.Web.DynamicData.DynamicEntity> classe. Eles usam modelos de campo para exibir os valores do modelo de dados.  
+  
+ Dados dinâmicos fornecem modelos de entidade que são encontrados na pasta ~\DynamicData\EntityTemplates de padrão. Você pode modificar esses modelos de entidade padrão ou criar os personalizadas para alterar a aparência e comportamento de uma tabela. Há modelos para exibir, editar e operações de inserção.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de como usar modelos de entidade, consulte [passo a passo: Personalizando tabela Layout usando entidade modelos](http://msdn.microsoft.com/library/03d33a22-d3c0-41df-a717-82ce86329a08).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityTemplateFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.DynamicData.EntityTemplateFactory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildEntityTemplateVirtualPath">
+      <MemberSignature Language="C#" Value="public virtual string BuildEntityTemplateVirtualPath (string templateName, System.Web.UI.WebControls.DataBoundControlMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string BuildEntityTemplateVirtualPath(string templateName, valuetype System.Web.UI.WebControls.DataBoundControlMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateFactory.BuildEntityTemplateVirtualPath(System.String,System.Web.UI.WebControls.DataBoundControlMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="templateName" Type="System.String" />
+        <Parameter Name="mode" Type="System.Web.UI.WebControls.DataBoundControlMode" />
+      </Parameters>
+      <Docs>
+        <param name="templateName">O nome do modelo de entidade para a qual criar o caminho.</param>
+        <param name="mode">O modo de exibição do modelo de entidade.</param>
+        <summary>Cria o caminho do modelo de entidade para a tabela especificada.</summary>
+        <returns>O caminho do modelo de entidade para a tabela especificada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="templateName" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEntityTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.EntityTemplateUserControl CreateEntityTemplate (System.Web.DynamicData.MetaTable table, System.Web.UI.WebControls.DataBoundControlMode mode, string uiHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.DynamicData.EntityTemplateUserControl CreateEntityTemplate(class System.Web.DynamicData.MetaTable table, valuetype System.Web.UI.WebControls.DataBoundControlMode mode, string uiHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateFactory.CreateEntityTemplate(System.Web.DynamicData.MetaTable,System.Web.UI.WebControls.DataBoundControlMode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.EntityTemplateUserControl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="mode" Type="System.Web.UI.WebControls.DataBoundControlMode" />
+        <Parameter Name="uiHint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="table">Os metadados para a tabela à qual se aplica o modelo de entidade.</param>
+        <param name="mode">O modo de exibição do modelo de entidade.</param>
+        <param name="uiHint">O nome do modelo a ser usado.</param>
+        <summary>Cria uma instância do modelo de entidade para a tabela especificada.</summary>
+        <returns>Uma instância da classe <see cref="T:System.Web.DynamicData.EntityTemplateUserControl" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">A tabela é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityTemplateVirtualPath">
+      <MemberSignature Language="C#" Value="public virtual string GetEntityTemplateVirtualPath (System.Web.DynamicData.MetaTable table, System.Web.UI.WebControls.DataBoundControlMode mode, string uiHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetEntityTemplateVirtualPath(class System.Web.DynamicData.MetaTable table, valuetype System.Web.UI.WebControls.DataBoundControlMode mode, string uiHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateFactory.GetEntityTemplateVirtualPath(System.Web.DynamicData.MetaTable,System.Web.UI.WebControls.DataBoundControlMode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable" />
+        <Parameter Name="mode" Type="System.Web.UI.WebControls.DataBoundControlMode" />
+        <Parameter Name="uiHint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="table">Os metadados para a tabela à qual se aplica o modelo de entidade.</param>
+        <param name="mode">O modo de exibição do modelo de entidade.</param>
+        <param name="uiHint">O nome do modelo a ser usado.</param>
+        <summary>Obtém o caminho virtual do modelo de entidade para a tabela especificada.</summary>
+        <returns>O caminho virtual do modelo de entidade para a tabela especificada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">A tabela é **nulo**.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

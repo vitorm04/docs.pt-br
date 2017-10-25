@@ -1,0 +1,144 @@
+<Type Name="LocalizedNameDescriptionPair" FullName="System.Security.RightsManagement.LocalizedNameDescriptionPair">
+  <TypeSignature Language="C#" Value="public class LocalizedNameDescriptionPair" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LocalizedNameDescriptionPair extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.RightsManagement.LocalizedNameDescriptionPair" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical(System.Security.SecurityCriticalScope.Everything)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um par imutável (somente leitura) de cadeias de caracteres "Nome" e "Descrição".</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.RightsManagement.LocalizedNameDescriptionPair>é um bloco de construção básico para estruturas que informações específicas da localidade express para uma <xref:System.Security.RightsManagement.UnsignedPublishLicense>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalizedNameDescriptionPair (string name, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.LocalizedNameDescriptionPair.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O valor para a localidade <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Name" /> propriedade.</param>
+        <param name="description">O valor para a localidade <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Description" /> propriedade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.RightsManagement.LocalizedNameDescriptionPair" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Ambos os <paramref name="name" /> parâmetro ou <paramref name="description" /> parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição de localidade.</summary>
+        <value>A descrição de localidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.RightsManagement.LocalizedNameDescriptionPair.Description%2A> propriedade é definida como um parâmetro para o <xref:System.Security.RightsManagement.LocalizedNameDescriptionPair.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.LocalizedNameDescriptionPair.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado a <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Name" /> e <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Description" /> propriedades de.</param>
+        <summary>Indica se o <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Name" /> e <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Description" /> propriedades de um determinado objeto correspondem desse <see cref="T:System.Security.RightsManagement.LocalizedNameDescriptionPair" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Name" /> e <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Description" /> propriedades do objeto fornecido correspondem desta instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.LocalizedNameDescriptionPair.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código de hash calculado se baseia o <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Name" /> e <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Description" /> propriedades.</summary>
+        <returns>Um código de hash calculado se baseia o <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Name" /> e <see cref="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Description" /> propriedades desse <see cref="T:System.Security.RightsManagement.LocalizedNameDescriptionPair" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.RightsManagement.LocalizedNameDescriptionPair.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da localidade.</summary>
+        <value>O nome da localidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.RightsManagement.LocalizedNameDescriptionPair.Name%2A> propriedade é definida como um parâmetro para o <xref:System.Security.RightsManagement.LocalizedNameDescriptionPair.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

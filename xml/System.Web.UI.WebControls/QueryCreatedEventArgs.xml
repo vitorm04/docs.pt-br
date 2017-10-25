@@ -1,0 +1,55 @@
+<Type Name="QueryCreatedEventArgs" FullName="System.Web.UI.WebControls.QueryCreatedEventArgs">
+  <TypeSignature Language="C#" Value="public class QueryCreatedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QueryCreatedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.QueryCreatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa dados de evento para o <see cref="E:System.Web.UI.WebControls.QueryableDataSource.QueryCreated" /> evento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryCreatedEventArgs (System.Linq.IQueryable query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.IQueryable query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryCreatedEventArgs.#ctor(System.Linq.IQueryable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="query">O objeto de consulta para usar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.QueryCreatedEventArgs" /> classe usando um <see cref="T:System.Linq.IQueryable`1" /> objeto de consulta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="public System.Linq.IQueryable Query { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.IQueryable Query" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryCreatedEventArgs.Query" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Linq.IQueryable`1" /> objeto a ser usado para o <see cref="T:System.Web.UI.WebControls.QueryCreatedEventArgs" /> classe.</summary>
+        <value>O <see cref="T:System.Linq.IQueryable`1" /> objeto a ser usado para o <see cref="T:System.Web.UI.WebControls.QueryCreatedEventArgs" /> classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

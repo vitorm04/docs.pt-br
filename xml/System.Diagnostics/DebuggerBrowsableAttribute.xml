@@ -1,0 +1,142 @@
+<Type Name="DebuggerBrowsableAttribute" FullName="System.Diagnostics.DebuggerBrowsableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerBrowsableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DebuggerBrowsableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggerBrowsableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Determina se e como um membro é exibido nas janelas de variáveis do depurador. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  No .NET Framework versão 2.0, o <xref:System.Diagnostics.DebuggerBrowsableAttribute> classe não é suportada pelo Visual Basic. Usando o c#, você pode adicionar expansões para dados personalizados usando o <xref:System.Diagnostics.DebuggerTypeProxyAttribute>, <xref:System.Diagnostics.DebuggerDisplayAttribute>, e <xref:System.Diagnostics.DebuggerBrowsableAttribute>. Visual Basic oferece suporte a <xref:System.Diagnostics.DebuggerDisplayAttribute> atributo mas não o <xref:System.Diagnostics.DebuggerBrowsableAttribute> atributo.  
+  
+ Esse atributo pode ser aplicado somente como uma única instância para os campos e propriedades. Ele não pode ser aplicado aos assemblies.  
+  
+ O construtor desse atributo usa um dos valores de enumeração <xref:System.Diagnostics.DebuggerBrowsableState>, que especifica um dos seguintes estados:  
+  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.Never> indica que o membro não é exibido na janela de dados.  Por exemplo, o uso desse valor para o <xref:System.Diagnostics.DebuggerBrowsableAttribute> em um campo remove o campo da hierarquia; o campo não é exibido quando você expande o tipo delimitador clicando no sinal de adição (+) da instância de tipo.  
+  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> indica que o membro é exibido, mas não expandido por padrão.  Este é o comportamento padrão.  
+  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indica que o próprio membro não é mostrado, mas seus objetos constituintes são exibidos, se ele é uma matriz ou uma coleção.  
+  
+ Para obter um exemplo do uso desse atributo e o <xref:System.Diagnostics.DebuggerDisplayAttribute> e <xref:System.Diagnostics.DebuggerTypeProxyAttribute> atributos, consulte o exemplo fornecido para o <xref:System.Diagnostics.DebuggerDisplayAttribute> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerBrowsableAttribute (System.Diagnostics.DebuggerBrowsableState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.DebuggerBrowsableState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerBrowsableAttribute.#ctor(System.Diagnostics.DebuggerBrowsableState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Diagnostics.DebuggerBrowsableState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Uma da <see cref="T:System.Diagnostics.DebuggerBrowsableState" /> valores que especifica como exibir o membro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.DebuggerBrowsableAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo pode ser aplicado apenas para os campos e propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de um <xref:System.Diagnostics.DebuggerBrowsableAttribute> atributo para instruir o depurador para não exibir a raiz (nome da propriedade) da `Keys` propriedade, mas para exibir os elementos da matriz que `Keys` obtém. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.DebuggerDisplayAttribute> classe.  
+  
+ [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#6)]
+ [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#6)]
+ [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="state" /> não é um dos valores <see cref="T:System.Diagnostics.DebuggerBrowsableState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.DebuggerBrowsableState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.DebuggerBrowsableState State" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerBrowsableAttribute.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.DebuggerBrowsableState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado de exibição para o atributo.</summary>
+        <value>Um dos valores de <see cref="T:System.Diagnostics.DebuggerBrowsableState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggerBrowsableAttribute.%23ctor%2A> construtor usa o valor de `state` parâmetro para definir esse valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

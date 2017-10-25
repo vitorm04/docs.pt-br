@@ -1,0 +1,45 @@
+<Type Name="PeerInvitationResponse" FullName="System.Net.PeerToPeer.Collaboration.PeerInvitationResponse">
+  <TypeSignature Language="C#" Value="public class PeerInvitationResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PeerInvitationResponse extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma resposta recebida de um outro computador remoto na rede para um convite enviado por meio de <see cref="M:System.Net.PeerToPeer.Collaboration.Peer.Invite" /> ou <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.Invite" /> método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe não tem um construtor público. O <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType> classe é usada para encapsular a resposta para acomodar o retorno de dados adicionais com uma versão futura.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PeerInvitationResponseType">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType PeerInvitationResponseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType PeerInvitationResponseType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse.PeerInvitationResponseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a resposta para o convite do par remoto especificado por <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType" /> classe.</summary>
+        <value>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponseType" />objeto que contém a resposta de um convite para um outro computador remoto na rede.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,32 @@
+<Type Name="FieldCallback" FullName="System.Web.UI.WebControls.WebParts.FieldCallback">
+  <TypeSignature Language="C#" Value="public delegate void FieldCallback(object fieldValue);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FieldCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.FieldCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="fieldValue" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="fieldValue">O método de retorno de chamada.</param>
+    <summary>Referencia o método a ser chamado quando a recuperação de dados do campo de um provedor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um controle de Web Parts fornece dados por meio de <xref:System.Web.UI.WebControls.WebParts.IWebPartField> interface, o consumidor ou transformador deve recuperar e processar os dados do campo do provedor. O <xref:System.Web.UI.WebControls.WebParts.FieldCallback> delegate representa o método a ser chamado para processar os dados do provedor.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue%2A?displayProperty=nameWithType> método contém um <xref:System.Web.UI.WebControls.WebParts.FieldCallback> delegar o parâmetro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

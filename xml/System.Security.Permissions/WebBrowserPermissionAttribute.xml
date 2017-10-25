@@ -1,0 +1,147 @@
+<Type Name="WebBrowserPermissionAttribute" FullName="System.Security.Permissions.WebBrowserPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WebBrowserPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebBrowserPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.WebBrowserPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as ações de segurança para <see cref="T:System.Security.Permissions.WebBrowserPermission" /> sejam aplicadas ao código usando a segurança declarativa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Permissions.WebBrowserPermissionAttribute>Controla a capacidade de um controle de navegador da Web para ser executado em um aplicativo do Windows Presentation Foundation (WPF). O escopo da declaração que é permitido depende do <xref:System.Security.Permissions.SecurityAction> que é usado.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. Atributos de segurança são usados apenas para a segurança declarativa. Para segurança obrigatória, use a classe de permissão correspondente, <xref:System.Security.Permissions.WebBrowserPermission>.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Essa classe não é usada normalmente em XAML.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como solicitar que o código de chamada tem permissão para criar um controle de navegador da Web irrestrita.  
+  
+ [!code-csharp[WebBrowserPermissionsSnippets#WebBrowserPermissionAttribute3](~/samples/snippets/csharp/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/CSharp/Window1.xaml.cs#webbrowserpermissionattribute3)]
+ [!code-vb[WebBrowserPermissionsSnippets#WebBrowserPermissionAttribute3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/visualbasic/window1.xaml.vb#webbrowserpermissionattribute3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores de <see cref="T:System.Security.Permissions.SecurityAction" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.WebBrowserPermissionAttribute" /> com o <see cref="T:System.Security.Permissions.SecurityAction" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.Security.Permissions.WebBrowserPermissionAttribute.Level%2A> é de propriedade <xref:System.Security.Permissions.WebBrowserPermissionLevel.None>.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe ou não são geralmente usados em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ou não pode ser usado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um <xref:System.Security.Permissions.WebBrowserPermissionAttribute>.  
+  
+ [!code-csharp[WebBrowserPermissionsSnippets#WebBrowserPermissionAttribute4](~/samples/snippets/csharp/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/CSharp/Window1.xaml.cs#webbrowserpermissionattribute4)]
+ [!code-vb[WebBrowserPermissionsSnippets#WebBrowserPermissionAttribute4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/visualbasic/window1.xaml.vb#webbrowserpermissionattribute4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma nova instância do <see cref="T:System.Security.Permissions.WebBrowserPermission" /> classe.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.WebBrowserPermission" /> correspondente à declaração de segurança.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Permissions.WebBrowserPermissionAttribute.CreatePermission%2A> método é chamado pelo sistema de segurança, não pelo código do aplicativo.  
+  
+ As informações de segurança descritas por <xref:System.Security.Permissions.WebBrowserPermissionAttribute> é armazenado nos metadados do atributo de destino, que é a classe à qual <xref:System.Security.Permissions.WebBrowserPermissionAttribute> é aplicada. O sistema acessa as informações em tempo de execução. O sistema usa o <xref:System.Security.Permissions.WebBrowserPermission> retornado por <xref:System.Security.Permissions.WebBrowserPermissionAttribute.CreatePermission%2A> para converter as informações de segurança do destino do atributo a um formulário serializável armazenado nos metadados.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe ou não são geralmente usados em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ou não pode ser usado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.WebBrowserPermissionLevel Level { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.WebBrowserPermissionLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.WebBrowserPermissionAttribute.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.WebBrowserPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a permissão de navegador da Web atual nível para o <see cref="T:System.Security.Permissions.WebBrowserPermissionAttribute" />.</summary>
+        <value>O estado do nível de permissão de navegador da Web atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é <xref:System.Security.Permissions.WebBrowserPermissionLevel.None>.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe ou não são geralmente usados em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ou não pode ser usado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como solicitar que o código de chamada tem permissão para criar um controle de navegador da Web que é executado em um nível de seguro.  
+  
+ [!code-csharp[WebBrowserPermissionsSnippets#WebBrowserPermissionAttribute2](~/samples/snippets/csharp/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/CSharp/Window1.xaml.cs#webbrowserpermissionattribute2)]
+ [!code-vb[WebBrowserPermissionsSnippets#WebBrowserPermissionAttribute2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/visualbasic/window1.xaml.vb#webbrowserpermissionattribute2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

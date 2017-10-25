@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Construction">
+  <Docs>
+    <summary>Contém tipos que usa o modelo de objeto do MSBuild para construir as raízes de projeto com valores não avaliados. Cada raiz do projeto corresponde a um arquivo de projeto ou destinos. Para obter informações, consulte <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

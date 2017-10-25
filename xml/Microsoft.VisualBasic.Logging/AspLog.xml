@@ -1,0 +1,128 @@
+<Type Name="AspLog" FullName="Microsoft.VisualBasic.Logging.AspLog">
+  <TypeSignature Language="C#" Value="public class AspLog : Microsoft.VisualBasic.Logging.Log" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi AspLog extends Microsoft.VisualBasic.Logging.Log" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Logging.AspLog" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualBasic.Logging.Log</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma propriedade e métodos para gravar informações de evento e de exceção para os ouvintes de log do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Application.Log` objeto fornece um ponto de entrada simples de acessar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]do log de serviços. O `WriteEntry` e `WriteException` métodos gravam mensagens de ouvintes de log do aplicativo. Os ouvintes podem ser configurados pelo arquivo de configuração do aplicativo. Para obter mais informações, consulte [passo a passo: alterando onde My.Application.Log grava informações](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md) e [trabalhando com Logs de aplicativo](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ O `My.Application.Log` objeto está disponível somente para aplicativos cliente. Para aplicativos Web, use `My.Log`. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>.  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Application.Log` objeto.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Gravar informações de evento para ouvintes de log do aplicativo|[Como gravar mensagens de log](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
+|Gravar informações de exceção para os ouvintes de log do aplicativo|[Como registrar em log as exceções](~/docs/visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|Determinar onde `My.Application.Log` grava informações|[Instruções passo a passo: determinando onde My.Application.Log grava informações](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o método `My.Application.Log.WriteEntry` para registrar em log informações de rastreamento. Para obter mais informações, consulte [como: gravar mensagens de Log](~/docs/visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md).  
+  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AspLog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.AspLog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.Logging.AspLog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Log` objeto fornece um ponto de entrada simples de acessar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]do log de serviços. O `WriteEntry` e `WriteException` métodos gravam mensagens de ouvintes de log do aplicativo. Os ouvintes podem ser configurados pelo arquivo de configuração do aplicativo. Para obter mais informações, consulte [passo a passo: alterando onde My.Application.Log grava informações](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md) e [trabalhando com Logs de aplicativo](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AspLog (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.AspLog.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+          <see cref="T:System.String" />. O nome a ser atribuído para o <see cref="P:Microsoft.VisualBasic.Logging.Log.TraceSource" /> objeto property.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.Logging.AspLog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Log` objeto fornece um ponto de entrada simples de acessar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]do log de serviços. O `WriteEntry` e `WriteException` métodos gravam mensagens de ouvintes de log do aplicativo. Os ouvintes podem ser configurados pelo arquivo de configuração do aplicativo. Para obter mais informações, consulte [passo a passo: alterando onde My.Application.Log grava informações](~/docs/visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md) e [trabalhando com Logs de aplicativo](~/docs/visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeWithDefaultsSinceNoConfigExists">
+      <MemberSignature Language="C#" Value="protected override void InitializeWithDefaultsSinceNoConfigExists ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeWithDefaultsSinceNoConfigExists() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Logging.AspLog.InitializeWithDefaultsSinceNoConfigExists" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> e adiciona-o para o <see cref="P:System.Diagnostics.TraceSource.Listeners" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um novo <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>, define seu nome como `FileLog`e configura-o para registrar em log mensagens com nível de severidade <xref:System.Diagnostics.SourceLevels.Information> e maior. O novo <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> objeto é adicionado para o <xref:System.Diagnostics.TraceSource.Listeners%2A> coleção.  
+  
+ O <xref:Microsoft.VisualBasic.Logging.Log.%23ctor%2A> chama o método, se o <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> propriedade não foi configurada. A origem de rastreamento pode ser configurada no arquivo de configuração do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

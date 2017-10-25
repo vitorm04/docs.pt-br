@@ -1,0 +1,208 @@
+<Type Name="ProjectItemDefinition" FullName="Microsoft.Build.Evaluation.ProjectItemDefinition">
+  <TypeSignature Language="C#" Value="public class ProjectItemDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectItemDefinition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ProjectItemDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{itemType} #Metadata={MetadataCount}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma definição de item avaliado para um determinado tipo de item.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definições de item não são os mesmos itens. Itens, definições de item podem ter metadados. Como propriedades, os novos metadados podem substituir metadados antigos com o mesmo nome.  
+  
+ Durante a avaliação, todas as definições de item para um tipo de item são coletadas juntos (supondo que suas condições forem verdadeiras) para criar um ProjectItemDefinition para cada tipo. Por esse motivo, uma definição de item de projeto pode fazer referência a mais de um elemento de definição de item de projeto. Os metadados dentro de uma definição de item de projeto, no entanto, se refere a um elemento de metadados de projeto único, que pode ser adicionado, removido e modificado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectMetadata GetMetadata (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Evaluation.ProjectMetadata GetMetadata(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItemDefinition.GetMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de metadados a serem recuperados.</param>
+        <summary>Obter todos os metadados na definição do item com o nome fornecido.</summary>
+        <returns>Obter todos os metadados na definição do item com o nome fornecido. Retorna nulo se nenhum metadado com esse nome.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataValue">
+      <MemberSignature Language="C#" Value="public string GetMetadataValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetMetadataValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItemDefinition.GetMetadataValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do item cujo valor de metadados é a ser recuperado.</param>
+        <summary>Obter o valor de todos os metadados no item que tem o nome especificado.</summary>
+        <returns>Retorna o valor de todos os metadados no item que tem o nome especificado. Caso contrário, retornará null.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public string ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItemDefinition.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de item desta definição de item.</summary>
+        <value>Retorna o tipo de item desta definição de item.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Evaluation.ProjectMetadata&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItemDefinition.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador sobre todos os metadados para a definição do item.</summary>
+        <value>Retorna um enumerador sobre todos os metadados para a definição do item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma coleção somente leitura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataCount">
+      <MemberSignature Language="C#" Value="public int MetadataCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MetadataCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItemDefinition.MetadataCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a contagem dos metadados na definição de item.</summary>
+        <value>Retorna a contagem dos metadados na definição de item.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Project">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Project Project { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Evaluation.Project Project" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectItemDefinition.Project" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Project</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o projeto que contém a definição de item.</summary>
+        <value>Retorna o projeto que contém esta definição de item, que nunca é nulo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMetadataValue">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ProjectMetadata SetMetadataValue (string name, string unevaluatedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.ProjectMetadata SetMetadataValue(string name, string unevaluatedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.ProjectItemDefinition.SetMetadataValue(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ProjectMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="unevaluatedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome dos metadados em conjunto.</param>
+        <param name="unevaluatedValue">O novo valor não avaliado dos metadados.</param>
+        <summary>Define o valor dos metadados fornecidos na definição do item.</summary>
+        <returns>Retorna os metadados com o nome fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor não avaliado será considerado para conter as sequências de escape de caractere, conforme necessário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,102 @@
+<Type Name="IMessageFormatter" FullName="System.Messaging.IMessageFormatter">
+  <TypeSignature Language="C#" Value="public interface IMessageFormatter : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMessageFormatter implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.IMessageFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Messaging.Design.MessageFormatterConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serializa ou desserializa objetos do corpo de uma mensagem do Enfileiramento de Mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um aplicativo envia uma mensagem à fila utilizando uma instância do <xref:System.Messaging.MessageQueue> classe, o formatador serializa o objeto (o que pode ser uma instância de qualquer classe) em um fluxo e o insere no corpo da mensagem. Durante a leitura de uma fila usando um <xref:System.Messaging.MessageQueue>, o formatador desserializa os dados da mensagem para o <xref:System.Messaging.Message.Body%2A> propriedade de um <xref:System.Messaging.Message>.  
+  
+ <xref:System.Messaging.BinaryMessageFormatter>e <xref:System.Messaging.ActiveXMessageFormatter> fornecer a taxa de transferência mais rápida que o <xref:System.Messaging.XmlMessageFormatter>. O <xref:System.Messaging.ActiveXMessageFormatter> permite a interoperabilidade com aplicativos de enfileiramento de mensagens do Visual Basic 6.0. O <xref:System.Messaging.XmlMessageFormatter> é livremente acoplada, o que significa que o servidor e o cliente podem o tipo que é enviado e recebido independentemente da versão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public bool CanRead (System.Messaging.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanRead(class System.Messaging.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.IMessageFormatter.CanRead(System.Messaging.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Messaging.Message" /> para inspecionar.</param>
+        <summary>Quando implementada em uma classe, determina se o formatador pode desserializar o conteúdo da mensagem.</summary>
+        <returns>
+          <see langword="true" />Se o formatador pode desserializar a mensagem. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public object Read (System.Messaging.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Read(class System.Messaging.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.IMessageFormatter.Read(System.Messaging.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Messaging.Message" /> a ser desserializado.</param>
+        <summary>Quando implementada em uma classe, lê o conteúdo da mensagem determinada e cria um objeto que contém os dados da mensagem.</summary>
+        <returns>A mensagem desserializada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.Messaging.Message message, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Messaging.Message message, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.IMessageFormatter.Write(System.Messaging.Message,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Messaging.Message" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Messaging.Message" /> que conterá o objeto serializado.</param>
+        <param name="obj">O objeto a ser serializado na mensagem.</param>
+        <summary>Quando implementada em uma classe, serializa um objeto no corpo da mensagem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

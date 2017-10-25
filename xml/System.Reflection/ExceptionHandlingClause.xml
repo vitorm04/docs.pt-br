@@ -1,0 +1,521 @@
+<Type Name="ExceptionHandlingClause" FullName="System.Reflection.ExceptionHandlingClause">
+  <TypeSignature Language="C#" Value="public class ExceptionHandlingClause" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi beforefieldinit ExceptionHandlingClause extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ExceptionHandlingClause" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma cláusula em um bloco de tratamento de exceções estruturado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.ExceptionHandlingClause> classe fornece informações sobre as cláusulas em um `try`... `catch`…`finally` bloco (`Try`... `Catch`…`Finally` no Visual Basic). Para obter uma lista de cláusulas de tratamento de exceção em um método, obter um <xref:System.Reflection.MethodInfo> que representa o método. Use o <xref:System.Reflection.MethodBase.GetMethodBody%2A> método para obter um <xref:System.Reflection.MethodBody> objeto e, em seguida, use o <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> propriedade para obter a lista de cláusulas.  
+  
+> [!NOTE]
+>  Trabalhar com as cláusulas de tratamento de exceção requer um entendimento completo dos metadados e formatos de instrução do Microsoft intermediate language (MSIL). Informações podem ser encontradas na documentação do Common Language Infrastructure (CLI), "especialmente partição II: metadados definição e semântica" e "Partição III: conjunto de instruções CIL". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um método de teste chamado `MethodBodyExample`e exibe suas informações de variáveis locais e cláusulas de tratamento de exceção. O <xref:System.Reflection.MethodBase.GetMethodBody%2A?displayProperty=nameWithType> método é usado para obter um <xref:System.Reflection.MethodBody> objeto para o método de teste. O <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> propriedade é usada para obter uma lista de <xref:System.Reflection.ExceptionHandlingClause> objetos e exibir suas propriedades.  
+  
+ Você pode usar Ildasm.exe para examinar o MSIL para o exemplo de código compilado, para ver como os deslocamentos e comprimentos são calculados.  
+  
+> [!NOTE]
+>  Nem todos os idiomas do computador podem gerar <xref:System.Reflection.ExceptionHandlingClauseOptions?displayProperty=nameWithType> cláusulas. O exemplo do Visual Basic mostra uma cláusula de filtro, usando um Visual Basic `When` expressão, que é omitido dos exemplos para outros idiomas.  
+  
+ Esse código é parte de um exemplo maior localizado no <xref:System.Reflection.MethodBody> tópico sobre a classe.  
+  
+ [!code-cpp[MethodBody#2](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#2)]
+ [!code-csharp[MethodBody#2](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#2)]
+ [!code-vb[MethodBody#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#2)]  
+[!code-cpp[MethodBody#4](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#4)]
+[!code-csharp[MethodBody#4](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#4)]
+[!code-vb[MethodBody#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#4)]  
+[!code-cpp[MethodBody#5](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#5)]
+[!code-csharp[MethodBody#5](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#5)]
+[!code-vb[MethodBody#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#5)]  
+[!code-cpp[MethodBody#7](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#7)]
+[!code-csharp[MethodBody#7](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#7)]
+[!code-vb[MethodBody#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExceptionHandlingClause ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ExceptionHandlingClause.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.ExceptionHandlingClause" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado por classes derivadas durante a construção do <xref:System.Reflection.ExceptionHandlingClause> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CatchType">
+      <MemberSignature Language="C#" Value="public virtual Type CatchType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CatchType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ExceptionHandlingClause.CatchType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de exceção tratada por essa cláusula.</summary>
+        <value>Um <see cref="T:System.Type" /> objeto que representa o tipo de exceção tratada por essa cláusula, ou <see langword="null" /> se o <see cref="P:System.Reflection.ExceptionHandlingClause.Flags" /> é de propriedade <see cref="F:System.Reflection.ExceptionHandlingClauseOptions.Filter" /> ou <see cref="F:System.Reflection.ExceptionHandlingClauseOptions.Finally" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Trabalhar com as cláusulas de tratamento de exceção requer um entendimento completo dos metadados e formatos de instrução do Microsoft intermediate language (MSIL). Informações podem ser encontradas na documentação do Common Language Infrastructure (CLI), "especialmente partição II: metadados definição e semântica" e "Partição III: conjunto de instruções CIL". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um método de teste chamado `MethodBodyExample`e exibe suas informações de variáveis locais e cláusulas de tratamento de exceção. O <xref:System.Reflection.MethodBase.GetMethodBody%2A?displayProperty=nameWithType> método é usado para obter um <xref:System.Reflection.MethodBody> objeto para o método de teste. O <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> propriedade é usada para obter uma lista de <xref:System.Reflection.ExceptionHandlingClause> objetos e exibir suas propriedades.  
+  
+> [!NOTE]
+>  Nem todos os idiomas do computador podem gerar <xref:System.Reflection.ExceptionHandlingClauseOptions?displayProperty=nameWithType> cláusulas. O exemplo do Visual Basic mostra uma cláusula de filtro, usando um Visual Basic `When` expressão, que é omitido dos exemplos para outros idiomas.  
+  
+ Esse código é parte de um exemplo maior localizado no <xref:System.Reflection.MethodBody> tópico sobre a classe.  
+  
+ [!code-cpp[MethodBody#2](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#2)]
+ [!code-csharp[MethodBody#2](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#2)]
+ [!code-vb[MethodBody#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#2)]  
+[!code-cpp[MethodBody#4](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#4)]
+[!code-csharp[MethodBody#4](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#4)]
+[!code-vb[MethodBody#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#4)]  
+[!code-cpp[MethodBody#5](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#5)]
+[!code-csharp[MethodBody#5](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#5)]
+[!code-vb[MethodBody#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#5)]  
+[!code-cpp[MethodBody#7](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#7)]
+[!code-csharp[MethodBody#7](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#7)]
+[!code-vb[MethodBody#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Uso inválido da propriedade para o estado do objeto atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterOffset">
+      <MemberSignature Language="C#" Value="public virtual int FilterOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FilterOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ExceptionHandlingClause.FilterOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento dentro do corpo de método, em bytes, do código do filtro fornecido pelo usuário.</summary>
+        <value>O deslocamento dentro do corpo de método, em bytes, do código do filtro fornecido pelo usuário. O valor dessa propriedade não tem nenhum significado se o <see cref="P:System.Reflection.ExceptionHandlingClause.Flags" /> propriedade tem qualquer valor diferente de <see cref="F:System.Reflection.ExceptionHandlingClauseOptions.Filter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cláusula de filtro contém suppliedMicrosoft usuário intermediate language (MSIL) que determina se uma exceção é manipulada por esta cláusula. Por exemplo, qualquer cláusula que contém o Visual Basic `When` palavra-chave é um <xref:System.Reflection.ExceptionHandlingClauseOptions?displayProperty=nameWithType> cláusula.  
+  
+> [!NOTE]
+>  Trabalhar com as cláusulas de tratamento de exceção requer um entendimento completo dos metadados e formatos de instrução MSIL. Informações podem ser encontradas na documentação do Common Language Infrastructure (CLI), "especialmente partição II: metadados definição e semântica" e "Partição III: conjunto de instruções CIL". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não é possível obter o deslocamento como a cláusula de tratamento de exceção não é um filtro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.ExceptionHandlingClauseOptions Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.ExceptionHandlingClauseOptions Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ExceptionHandlingClause.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ExceptionHandlingClauseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta cláusula de manipulação de exceção é uma cláusula finally, uma cláusula de filtro de tipo ou uma cláusula de filtro de usuário.</summary>
+        <value>Um <see cref="T:System.Reflection.ExceptionHandlingClauseOptions" /> valor que indica o tipo de ação essa cláusula executa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Trabalhar com as cláusulas de tratamento de exceção requer um entendimento completo dos metadados e formatos de instrução do Microsoft intermediate language (MSIL). Informações podem ser encontradas na documentação do Common Language Infrastructure (CLI), "especialmente partição II: metadados definição e semântica" e "Partição III: conjunto de instruções CIL". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um método de teste chamado `MethodBodyExample`e exibe suas informações de variáveis locais e cláusulas de tratamento de exceção. O <xref:System.Reflection.MethodBase.GetMethodBody%2A?displayProperty=nameWithType> método é usado para obter um <xref:System.Reflection.MethodBody> objeto para o método de teste. O <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> propriedade é usada para obter uma lista de <xref:System.Reflection.ExceptionHandlingClause> objetos e exibir suas propriedades.  
+  
+> [!NOTE]
+>  Nem todos os idiomas do computador podem gerar <xref:System.Reflection.ExceptionHandlingClauseOptions?displayProperty=nameWithType> cláusulas. O exemplo do Visual Basic mostra uma cláusula de filtro, usando um Visual Basic `When` expressão, que é omitido dos exemplos para outros idiomas.  
+  
+ Esse código é parte de um exemplo maior localizado no <xref:System.Reflection.MethodBody> tópico sobre a classe.  
+  
+ [!code-cpp[MethodBody#2](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#2)]
+ [!code-csharp[MethodBody#2](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#2)]
+ [!code-vb[MethodBody#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#2)]  
+[!code-cpp[MethodBody#4](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#4)]
+[!code-csharp[MethodBody#4](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#4)]
+[!code-vb[MethodBody#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#4)]  
+[!code-cpp[MethodBody#5](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#5)]
+[!code-csharp[MethodBody#5](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#5)]
+[!code-vb[MethodBody#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#5)]  
+[!code-cpp[MethodBody#7](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#7)]
+[!code-csharp[MethodBody#7](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#7)]
+[!code-vb[MethodBody#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlerLength">
+      <MemberSignature Language="C#" Value="public virtual int HandlerLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HandlerLength" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ExceptionHandlingClause.HandlerLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento, em bytes, do corpo dessa cláusula de tratamento de exceção.</summary>
+        <value>Um inteiro que representa o tamanho, em bytes, do MSIL que forma o corpo dessa cláusula de tratamento de exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Trabalhar com as cláusulas de tratamento de exceção requer um entendimento completo dos metadados e formatos de instrução do Microsoft intermediate language (MSIL). Informações podem ser encontradas na documentação do Common Language Infrastructure (CLI), "especialmente partição II: metadados definição e semântica" e "Partição III: conjunto de instruções CIL". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um método de teste chamado `MethodBodyExample`e exibe suas informações de variáveis locais e cláusulas de tratamento de exceção. O <xref:System.Reflection.MethodBase.GetMethodBody%2A?displayProperty=nameWithType> método é usado para obter um <xref:System.Reflection.MethodBody> objeto para o método de teste. O <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> propriedade é usada para obter uma lista de <xref:System.Reflection.ExceptionHandlingClause> objetos e exibir suas propriedades.  
+  
+> [!NOTE]
+>  Nem todos os idiomas do computador podem gerar <xref:System.Reflection.ExceptionHandlingClauseOptions?displayProperty=nameWithType> cláusulas. O exemplo do Visual Basic mostra uma cláusula de filtro, usando um Visual Basic `When` expressão, que é omitido dos exemplos para outros idiomas.  
+  
+ Esse código é parte de um exemplo maior localizado no <xref:System.Reflection.MethodBody> tópico sobre a classe.  
+  
+ [!code-cpp[MethodBody#2](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#2)]
+ [!code-csharp[MethodBody#2](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#2)]
+ [!code-vb[MethodBody#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#2)]  
+[!code-cpp[MethodBody#4](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#4)]
+[!code-csharp[MethodBody#4](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#4)]
+[!code-vb[MethodBody#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#4)]  
+[!code-cpp[MethodBody#5](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#5)]
+[!code-csharp[MethodBody#5](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#5)]
+[!code-vb[MethodBody#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#5)]  
+[!code-cpp[MethodBody#7](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#7)]
+[!code-csharp[MethodBody#7](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#7)]
+[!code-vb[MethodBody#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlerOffset">
+      <MemberSignature Language="C#" Value="public virtual int HandlerOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HandlerOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ExceptionHandlingClause.HandlerOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento dentro do corpo de método, em bytes, dessa cláusula de tratamento de exceção.</summary>
+        <value>Um inteiro que representa o deslocamento dentro do corpo de método, em bytes, dessa cláusula de tratamento de exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Trabalhar com as cláusulas de tratamento de exceção requer um entendimento completo dos metadados e formatos de instrução do Microsoft intermediate language (MSIL). Informações podem ser encontradas na documentação do Common Language Infrastructure (CLI), "especialmente partição II: metadados definição e semântica" e "Partição III: conjunto de instruções CIL". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um método de teste chamado `MethodBodyExample`e exibe suas informações de variáveis locais e cláusulas de tratamento de exceção. O <xref:System.Reflection.MethodBase.GetMethodBody%2A?displayProperty=nameWithType> método é usado para obter um <xref:System.Reflection.MethodBody> objeto para o método de teste. O <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> propriedade é usada para obter uma lista de <xref:System.Reflection.ExceptionHandlingClause> objetos e exibir suas propriedades.  
+  
+> [!NOTE]
+>  Nem todos os idiomas do computador podem gerar <xref:System.Reflection.ExceptionHandlingClauseOptions?displayProperty=nameWithType> cláusulas. O exemplo do Visual Basic mostra uma cláusula de filtro, usando um Visual Basic `When` expressão, que é omitido dos exemplos para outros idiomas.  
+  
+ Esse código é parte de um exemplo maior localizado no <xref:System.Reflection.MethodBody> tópico sobre a classe.  
+  
+ [!code-cpp[MethodBody#2](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#2)]
+ [!code-csharp[MethodBody#2](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#2)]
+ [!code-vb[MethodBody#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#2)]  
+[!code-cpp[MethodBody#4](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#4)]
+[!code-csharp[MethodBody#4](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#4)]
+[!code-vb[MethodBody#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#4)]  
+[!code-cpp[MethodBody#5](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#5)]
+[!code-csharp[MethodBody#5](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#5)]
+[!code-vb[MethodBody#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#5)]  
+[!code-cpp[MethodBody#7](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#7)]
+[!code-csharp[MethodBody#7](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#7)]
+[!code-vb[MethodBody#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ExceptionHandlingClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Uma representação de cadeia de caracteres da cláusula de tratamento de exceção.</summary>
+        <returns>Uma cadeia de caracteres que lista os valores de propriedade adequados para o tipo de cláusula de filtro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryLength">
+      <MemberSignature Language="C#" Value="public virtual int TryLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TryLength" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ExceptionHandlingClause.TryLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O comprimento total, em bytes, do bloco try que inclui essa cláusula de tratamento de exceção.</summary>
+        <value>O comprimento total, em bytes, do bloco try que inclui essa cláusula de tratamento de exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um inteiro que representa o tamanho total, em bytes, do bloco try que inclui essa cláusula de tratamento de exceção.  
+  
+> [!NOTE]
+>  Trabalhar com as cláusulas de tratamento de exceção requer um entendimento completo dos metadados e formatos de instrução do Microsoft intermediate language (MSIL). Informações podem ser encontradas na documentação do Common Language Infrastructure (CLI), "especialmente partição II: metadados definição e semântica" e "Partição III: conjunto de instruções CIL". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um método de teste chamado `MethodBodyExample`e exibe suas informações de variáveis locais e cláusulas de tratamento de exceção. O <xref:System.Reflection.MethodBase.GetMethodBody%2A?displayProperty=nameWithType> método é usado para obter um <xref:System.Reflection.MethodBody> objeto para o método de teste. O <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> propriedade é usada para obter uma lista de <xref:System.Reflection.ExceptionHandlingClause> objetos e exibir suas propriedades.  
+  
+> [!NOTE]
+>  Nem todos os idiomas do computador podem gerar <xref:System.Reflection.ExceptionHandlingClauseOptions?displayProperty=nameWithType> cláusulas. O exemplo do Visual Basic mostra uma cláusula de filtro, usando um Visual Basic `When` expressão, que é omitido dos exemplos para outros idiomas.  
+  
+ Esse código é parte de um exemplo maior localizado no <xref:System.Reflection.MethodBody> tópico sobre a classe.  
+  
+ [!code-cpp[MethodBody#2](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#2)]
+ [!code-csharp[MethodBody#2](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#2)]
+ [!code-vb[MethodBody#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#2)]  
+[!code-cpp[MethodBody#4](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#4)]
+[!code-csharp[MethodBody#4](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#4)]
+[!code-vb[MethodBody#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#4)]  
+[!code-cpp[MethodBody#5](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#5)]
+[!code-csharp[MethodBody#5](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#5)]
+[!code-vb[MethodBody#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#5)]  
+[!code-cpp[MethodBody#7](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#7)]
+[!code-csharp[MethodBody#7](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#7)]
+[!code-vb[MethodBody#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryOffset">
+      <MemberSignature Language="C#" Value="public virtual int TryOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TryOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ExceptionHandlingClause.TryOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento dentro do método, em bytes, do bloco try que inclui essa cláusula de tratamento de exceção.</summary>
+        <value>Um inteiro que representa o deslocamento dentro do método, em bytes, do bloco try que inclui essa cláusula de tratamento de exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Trabalhar com as cláusulas de tratamento de exceção requer um entendimento completo dos metadados e formatos de instrução do Microsoft intermediate language (MSIL). Informações podem ser encontradas na documentação do Common Language Infrastructure (CLI), "especialmente partição II: metadados definição e semântica" e "Partição III: conjunto de instruções CIL". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um método de teste chamado `MethodBodyExample`e exibe suas informações de variáveis locais e cláusulas de tratamento de exceção. O <xref:System.Reflection.MethodBase.GetMethodBody%2A?displayProperty=nameWithType> método é usado para obter um <xref:System.Reflection.MethodBody> objeto para o método de teste. O <xref:System.Reflection.MethodBody.ExceptionHandlingClauses%2A> propriedade é usada para obter uma lista de <xref:System.Reflection.ExceptionHandlingClause> objetos e exibir suas propriedades.  
+  
+> [!NOTE]
+>  Nem todos os idiomas do computador podem gerar <xref:System.Reflection.ExceptionHandlingClauseOptions?displayProperty=nameWithType> cláusulas. O exemplo do Visual Basic mostra uma cláusula de filtro, usando um Visual Basic `When` expressão, que é omitido dos exemplos para outros idiomas.  
+  
+ Esse código é parte de um exemplo maior localizado no <xref:System.Reflection.MethodBody> tópico sobre a classe.  
+  
+ [!code-cpp[MethodBody#2](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#2)]
+ [!code-csharp[MethodBody#2](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#2)]
+ [!code-vb[MethodBody#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#2)]  
+[!code-cpp[MethodBody#4](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#4)]
+[!code-csharp[MethodBody#4](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#4)]
+[!code-vb[MethodBody#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#4)]  
+[!code-cpp[MethodBody#5](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#5)]
+[!code-csharp[MethodBody#5](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#5)]
+[!code-vb[MethodBody#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#5)]  
+[!code-cpp[MethodBody#7](~/samples/snippets/cpp/VS_Snippets_CLR/MethodBody/cpp/source.cpp#7)]
+[!code-csharp[MethodBody#7](~/samples/snippets/csharp/VS_Snippets_CLR/MethodBody/CS/source.cs#7)]
+[!code-vb[MethodBody#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/MethodBody/VB/source.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

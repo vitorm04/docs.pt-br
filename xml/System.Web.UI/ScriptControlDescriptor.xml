@@ -1,0 +1,101 @@
+<Type Name="ScriptControlDescriptor" FullName="System.Web.UI.ScriptControlDescriptor">
+  <TypeSignature Language="C#" Value="public class ScriptControlDescriptor : System.Web.UI.ScriptComponentDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScriptControlDescriptor extends System.Web.UI.ScriptComponentDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ScriptControlDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ScriptComponentDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um objeto de controle do cliente.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptControlDescriptor (string type, string elementID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string elementID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptControlDescriptor.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="elementID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto de controle do cliente para criar.</param>
+        <param name="elementID">A ID do elemento HTML que representa o objeto de controle para criar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ScriptControlDescriptor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientID">
+      <MemberSignature Language="C#" Value="public override string ClientID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptControlDescriptor.ClientID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do componente cliente.</summary>
+        <value>A ID do componente cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ScriptControlDescriptor.ClientID%2A> propriedade o <xref:System.Web.UI.ScriptControlDescriptor> classe sempre retorna o valor da <xref:System.Web.UI.ScriptControlDescriptor.ElementID%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementID">
+      <MemberSignature Language="C#" Value="public string ElementID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptControlDescriptor.ElementID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID de HTML do objeto de controle do cliente.</summary>
+        <value>A ID de HTML do objeto de controle do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public override string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptControlDescriptor.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID da atual <see cref="T:System.Web.UI.ScriptControlDescriptor" /> instância.</summary>
+        <value>A ID da atual <see cref="T:System.Web.UI.ScriptControlDescriptor" /> instância, se definida; caso contrário, uma cadeia de caracteres vazia ("").</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de definir a propriedade <see cref="P:System.Web.UI.ScriptControlDescriptor.ID" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,235 @@
+<Type Name="ModelBindingContext" FullName="System.Web.ModelBinding.ModelBindingContext">
+  <TypeSignature Language="C#" Value="public class ModelBindingContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ModelBindingContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.ModelBindingContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece o contexto no qual uma funções de associador de modelo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModelBindingContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelBindingContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.ModelBinding.ModelBindingContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModelBindingContext (System.Web.ModelBinding.ModelBindingContext bindingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.ModelBinding.ModelBindingContext bindingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.ModelBindingContext.#ctor(System.Web.ModelBinding.ModelBindingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bindingContext" Type="System.Web.ModelBinding.ModelBindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="bindingContext">O contexto de associação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.ModelBinding.ModelBindingContext" /> classe por meio de uma instância da classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Model">
+      <MemberSignature Language="C#" Value="public object Model { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Model" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.Model" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo.</summary>
+        <value>O modelo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Metadados do modelo devem ser definido antes de acessar essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelBinderProviders">
+      <MemberSignature Language="C#" Value="public System.Web.ModelBinding.ModelBinderProviderCollection ModelBinderProviders { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ModelBinding.ModelBinderProviderCollection ModelBinderProviders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.ModelBinderProviders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ModelBinderProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de provedores de associador de modelo.</summary>
+        <value>A coleção de provedores de associador de modelo. Se a coleção ainda não existir, uma nova coleção de provedores de associador de modelo é criada e retornada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelMetadata">
+      <MemberSignature Language="C#" Value="public System.Web.ModelBinding.ModelMetadata ModelMetadata { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ModelBinding.ModelMetadata ModelMetadata" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.ModelMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ModelMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os metadados para o modelo.</summary>
+        <value>Metadados para o modelo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelName">
+      <MemberSignature Language="C#" Value="public string ModelName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModelName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.ModelName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do modelo.</summary>
+        <value>O nome do modelo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelState">
+      <MemberSignature Language="C#" Value="public System.Web.ModelBinding.ModelStateDictionary ModelState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ModelBinding.ModelStateDictionary ModelState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.ModelState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ModelStateDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estado do modelo.</summary>
+        <value>O estado do modelo ou uma nova instância da <see cref="T:System.Web.ModelBinding.ModelStateDictionary" /> se o estado do modelo ainda não existir.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelType">
+      <MemberSignature Language="C#" Value="public Type ModelType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ModelType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.ModelType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do modelo.</summary>
+        <value>O tipo do modelo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Metadados do modelo devem ser definido antes de acessar essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyMetadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,System.Web.ModelBinding.ModelMetadata&gt; PropertyMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class System.Web.ModelBinding.ModelMetadata&gt; PropertyMetadata" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.PropertyMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Web.ModelBinding.ModelMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os metadados de propriedades do modelo.</summary>
+        <value>Metadados de propriedades do modelo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateRequest">
+      <MemberSignature Language="C#" Value="public bool ValidateRequest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateRequest" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.ValidateRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a entrada do cliente é validada.</summary>
+        <value>
+          <see langword="true" />Se a entrada do cliente é validada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationNode">
+      <MemberSignature Language="C#" Value="public System.Web.ModelBinding.ModelValidationNode ValidationNode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ModelBinding.ModelValidationNode ValidationNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.ValidationNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ModelValidationNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nó de validação.</summary>
+        <value>O nó de validação ou uma nova instância do <see cref="T:System.Web.ModelBinding.ModelValidationNode" /> classe se o nó de validação ainda não existir.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueProvider">
+      <MemberSignature Language="C#" Value="public System.Web.ModelBinding.IValueProvider ValueProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.ModelBinding.IValueProvider ValueProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.ModelBindingContext.ValueProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.IValueProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o provedor de valor.</summary>
+        <value>O provedor de valor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

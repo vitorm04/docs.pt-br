@@ -1,0 +1,63 @@
+<Type Name="PeerNameType" FullName="System.Net.PeerToPeer.PeerNameType">
+  <TypeSignature Language="C#" Value="public enum PeerNameType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PeerNameType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.PeerNameType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define o tipo de <see cref="T:System.Net.PeerToPeer.PeerName" /> para criar. Um nome de ponto a ponto está protegido ou não segura. Um nome de ponto a ponto segura fornece uma prova de propriedade do nome. Um nome de ponto a ponto segura não tem nenhuma identidade associada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nó deve ter acesso à chave privada associada à chave pública, usado na criação de seguro <xref:System.Net.PeerToPeer.PeerName>para comprovar a propriedade. O nó não tem uma relação com uma chave pública.  
+  
+ O formato de um nome de ponto a ponto é: *Authority.Classifier*. O valor de <xref:System.Net.PeerToPeer.PeerName.Authority%2A> depende se o nome é um nome de ponto a ponto segura ou um nome de ponto a ponto segura. O <xref:System.Net.PeerToPeer.PeerName.Classifier%2A> parte do nome pode ser definido como qualquer cadeia de caracteres que contém a 15 caracteres Unicode, incluindo o `null` terminador. Uma vez o <xref:System.Net.PeerToPeer.PeerName.Authority%2A>, <xref:System.Net.PeerToPeer.PeerName.Classifier%2A> e nível de segurança de um par foram estabelecidas, um par também pode ser chamado com um nome relativo ou um nome de host.  
+  
+ Somente o proprietário ou host de ponto a ponto, pode registrar um nome de ponto a ponto segura com o [API do provedor de Namespace PNRP](http://go.microsoft.com/fwlink?LinkID=92731). Qualquer nó pode declarar a propriedade a qualquer desprotegido <xref:System.Net.PeerToPeer.PeerName>.  
+  
+ **Observação** usando um protegidos <xref:System.Net.PeerToPeer.PeerName> não garante a segurança geral de um aplicativo de rede. A segurança do aplicativo depende de implementação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Secured">
+      <MemberSignature Language="C#" Value="Secured" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.PeerToPeer.PeerNameType Secured = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.PeerToPeer.PeerNameType.Secured" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Criar um protegido <see cref="T:System.Net.PeerToPeer.PeerName" /> usando a identidade do usuário atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsecured">
+      <MemberSignature Language="C#" Value="Unsecured" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.PeerToPeer.PeerNameType Unsecured = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.PeerToPeer.PeerNameType.Unsecured" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerNameType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Criar um segura <see cref="T:System.Net.PeerToPeer.PeerName" /> usando a identidade do usuário atual.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

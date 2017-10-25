@@ -1,0 +1,223 @@
+<Type Name="IQueryProvider" FullName="System.Linq.IQueryProvider">
+  <TypeSignature Language="C#" Value="public interface IQueryProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IQueryProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.IQueryProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos para criar e executar consultas que são descritas por um objeto <see cref="T:System.Linq.IQueryable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq.IQueryProvider> interface destina implementação por provedores de consulta.  
+  
+ Para obter mais informações sobre como criar seu próprio provedor LINQ, consulte [LINQ: Criando um provedor IQueryable](http://go.microsoft.com/fwlink/?LinkID=112370) blogs do MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateQuery">
+      <MemberSignature Language="C#" Value="public System.Linq.IQueryable CreateQuery (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.IQueryable CreateQuery(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.IQueryProvider.CreateQuery(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Uma árvore de expressão que representa uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</param>
+        <summary>Constrói um objeto <see cref="T:System.Linq.IQueryable" /> que pode avaliar a consulta representada por uma árvore de expressão especificada.</summary>
+        <returns>Um objeto <see cref="T:System.Linq.IQueryable" /> que pode avaliar a consulta representada pela árvore de expressão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Linq.IQueryable.Expression%2A> propriedade retornado <xref:System.Linq.IQueryable> objeto é igual a `expression`.  
+  
+ O <xref:System.Linq.IQueryProvider.CreateQuery%2A> método é usado para criar novos <xref:System.Linq.IQueryable> objetos, dado uma árvore de expressão. A consulta que é representada pelo objeto retornado está associada um provedor LINQ.  
+  
+ Vários métodos de operador de consulta padrão definidos no <xref:System.Linq.Queryable>, como <xref:System.Linq.Queryable.OfType%2A> e <xref:System.Linq.Queryable.Cast%2A>, chamar este método. Eles passá-lo um <xref:System.Linq.Expressions.MethodCallExpression> que representa um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateQuery&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public System.Linq.IQueryable&lt;TElement&gt; CreateQuery&lt;TElement&gt; (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.IQueryable`1&lt;!!TElement&gt; CreateQuery&lt;TElement&gt;(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.IQueryProvider.CreateQuery``1(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">O tipo dos elementos do <see cref="T:System.Linq.IQueryable`1" /> que é retornado.</typeparam>
+        <param name="expression">Uma árvore de expressão que representa uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</param>
+        <summary>Constrói um objeto <see cref="T:System.Linq.IQueryable`1" /> que pode avaliar a consulta representada por uma árvore de expressão especificada.</summary>
+        <returns>Um objeto <see cref="T:System.Linq.IQueryable`1" /> que pode avaliar a consulta representada pela árvore de expressão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Linq.IQueryable.Expression%2A> propriedade retornado <xref:System.Linq.IQueryable%601> objeto é igual a `expression`.  
+  
+ O <xref:System.Linq.IQueryProvider.CreateQuery%2A> método é usado para criar novos <xref:System.Linq.IQueryable%601> objetos, dado uma árvore de expressão. A consulta que é representada pelo objeto retornado está associada um provedor LINQ.  
+  
+ A maioria do <xref:System.Linq.Queryable> métodos de operador de consulta padrão que retornam resultados enumeráveis chamam este método. Eles passá-lo um <xref:System.Linq.Expressions.MethodCallExpression> que representa um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public object Execute (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Execute(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.IQueryProvider.Execute(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Uma árvore de expressão que representa uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</param>
+        <summary>Executa a consulta representada por uma árvore de expressão especificada.</summary>
+        <returns>O valor resultante da execução da consulta especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq.IQueryProvider.Execute%2A> método executa consultas que retornam um único valor (em vez de uma sequência enumerável de valores). Árvores de expressão que representam as consultas que retornam resultados enumeráveis são executadas quando seus respectivos <xref:System.Linq.IQueryable> objeto enumerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public TResult Execute&lt;TResult&gt; (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!TResult Execute&lt;TResult&gt;(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.IQueryProvider.Execute``1(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo do valor resultante da execução da consulta.</typeparam>
+        <param name="expression">Uma árvore de expressão que representa uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</param>
+        <summary>Executa a consulta fortemente tipada representada por uma árvore de expressão especificada.</summary>
+        <returns>O valor resultante da execução da consulta especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq.IQueryProvider.Execute%2A> método executa consultas que retornam um único valor (em vez de uma sequência enumerável de valores). Árvores de expressão que representam as consultas que retornam resultados enumeráveis são executados quando o <xref:System.Linq.IQueryable%601> objeto que contém a árvore de expressão é enumerado.  
+  
+ O <xref:System.Linq.Queryable> métodos de operador de consulta padrão que retornam singleton resultados chamada <xref:System.Linq.IQueryProvider.Execute%2A>. Eles passá-lo um <xref:System.Linq.Expressions.MethodCallExpression> que representa um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

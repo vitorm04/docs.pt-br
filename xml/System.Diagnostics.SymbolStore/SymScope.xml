@@ -1,0 +1,271 @@
+<Type Name="SymScope" FullName="System.Diagnostics.SymbolStore.SymScope">
+  <TypeSignature Language="C#" Value="public class SymScope : System.Diagnostics.SymbolStore.SymScopeBase, IDisposable, System.Diagnostics.SymbolStore.ISymbolScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SymScope extends System.Diagnostics.SymbolStore.SymScopeBase implements class System.Diagnostics.SymbolStore.ISymbolScope, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.SymScope" />
+  <AssemblyInfo>
+    <AssemblyName>ISymWrapper</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.SymbolStore.SymScopeBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Diagnostics.SymbolStore.ISymbolScope</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um escopo léxico <see cref="T:System.Diagnostics.SymbolStore.SymMethod" />, fornecendo acesso ao início e término deslocamentos de escopo, bem como escopos pai e filho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.SymbolStore.SymScope> classe também fornece acesso a todos os locais definidos no escopo atual.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymScope (System.Diagnostics.SymbolStore.Private.ISymUnmanagedScope* pScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.SymbolStore.Private.ISymUnmanagedScope* pScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymScope.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedScope*)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pScope" Type="System.Diagnostics.SymbolStore.Private.ISymUnmanagedScope*" />
+      </Parameters>
+      <Docs>
+        <param name="pScope">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymScope.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pela instância atual da classe <see cref="T:System.Diagnostics.SymbolStore.SymScope" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymScope.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">
+          <see langword="true" />para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Chamado pelo <see cref="M:System.Diagnostics.SymbolStore.SymScope.Dispose" /> e <see cref="M:System.Diagnostics.SymbolStore.SymScope.Finalize" /> métodos para liberar os recursos gerenciados e não gerenciados usados pela instância atual do <see cref="T:System.Diagnostics.SymbolStore.SymScope" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado somente pelo público <xref:System.Diagnostics.SymbolStore.SymScope.Dispose%2A> e <xref:System.Diagnostics.SymbolStore.SymScope.Finalize%2A> métodos; não chame este método diretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOffset">
+      <MemberSignature Language="C#" Value="public virtual int EndOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymScope.EndOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento de final do escopo léxico atual.</summary>
+        <value>O deslocamento final de linguagem intermediária (MSIL) do Microsoft. É o deslocamento do início do método do escopo léxico atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~SymScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymScope.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos não gerenciados e executa outras operações de limpeza antes que <see cref="T:System.Diagnostics.SymbolStore.SymScope" /> seja recuperado pela coleta de lixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui  <xref:System.Object.Finalize%2A>. O código do aplicativo não deve chamar este método; o método `Finalize` de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolScope[] GetChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolScope[] GetChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymScope.GetChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolScope[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o filho lexicais escopos do escopo léxico atual.</summary>
+        <returns>Os escopos lexicais entre o escopo léxico atual.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para atender à solicitação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocals">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolVariable[] GetLocals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolVariable[] GetLocals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymScope.GetLocals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolVariable[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as variáveis locais dentro do escopo léxico atual.</summary>
+        <returns>As variáveis locais dentro do escopo léxico atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As variáveis locais são retornadas em nenhuma ordem específica. Se uma variável local altera seu endereço dentro do escopo atual, essa variável é retornada várias vezes, cada um com um intervalo de deslocamento diferente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para atender à solicitação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamespaces">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolNamespace[] GetNamespaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolNamespace[] GetNamespaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymScope.GetNamespaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolNamespace[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> em todos os casos.</summary>
+        <returns>Gera um <see cref="T:System.NotSupportedException" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolMethod Method { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.SymbolStore.ISymbolMethod Method" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymScope.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o método que contém o escopo léxico atual.</summary>
+        <value>O método que contém o escopo léxico atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolScope Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.SymbolStore.ISymbolScope Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymScope.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai escopo léxico do escopo atual.</summary>
+        <value>Escopo léxico delimitador do escopo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartOffset">
+      <MemberSignature Language="C#" Value="public virtual int StartOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymScope.StartOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento de início do escopo léxico atual.</summary>
+        <value>O deslocamento inicial de linguagem intermediária (MSIL) do Microsoft. É o deslocamento do início do método do escopo léxico atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

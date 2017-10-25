@@ -1,0 +1,89 @@
+<Type Name="EnumProperty" FullName="Microsoft.Build.Framework.XamlTypes.EnumProperty">
+  <TypeSignature Language="C#" Value="public sealed class EnumProperty : Microsoft.Build.Framework.XamlTypes.BaseProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EnumProperty extends Microsoft.Build.Framework.XamlTypes.BaseProperty" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.XamlTypes.EnumProperty" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.XamlTypes.BaseProperty</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("AdmissibleValues")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o esquema de uma propriedade de enumeração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe herda o <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty.Default%2A> propriedade a partir de <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> classe, que não tem nenhum significado para essa propriedade. Use o <xref:Microsoft.Build.Framework.XamlTypes.EnumValue.IsDefault%2A> propriedade o <xref:Microsoft.Build.Framework.XamlTypes.EnumValue> em vez disso, para marcar o valor padrão para essa propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnumProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.EnumProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O construtor de propriedade de enumeração padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdmissibleValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Microsoft.Build.Framework.XamlTypes.EnumValue&gt; AdmissibleValues { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Microsoft.Build.Framework.XamlTypes.EnumValue&gt; AdmissibleValues" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.EnumProperty.AdmissibleValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Microsoft.Build.Framework.XamlTypes.EnumValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de valores possíveis para essa propriedade.</summary>
+        <value>Retorna a lista de valores possíveis para essa propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa lista deve ter pelo menos um valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public override void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.EnumProperty.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Consulte <see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

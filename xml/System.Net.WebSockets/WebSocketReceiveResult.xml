@@ -1,0 +1,248 @@
+<Type Name="WebSocketReceiveResult" FullName="System.Net.WebSockets.WebSocketReceiveResult">
+  <TypeSignature Language="C#" Value="public class WebSocketReceiveResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebSocketReceiveResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebSockets.WebSocketReceiveResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebSockets</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma instância dessa classe representa o resultado da execução de uma única operação ReceiveAsync em um WebSocket.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebSocketReceiveResult (int count, System.Net.WebSockets.WebSocketMessageType messageType, bool endOfMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 count, valuetype System.Net.WebSockets.WebSocketMessageType messageType, bool endOfMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.WebSocketReceiveResult.#ctor(System.Int32,System.Net.WebSockets.WebSocketMessageType,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="messageType" Type="System.Net.WebSockets.WebSocketMessageType" />
+        <Parameter Name="endOfMessage" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="count">O número de bytes recebidos.</param>
+        <param name="messageType">O tipo de mensagem foi recebida.</param>
+        <param name="endOfMessage">Indica se esta é a mensagem final.</param>
+        <summary>Cria uma instância de <see cref="T:System.Net.WebSockets.WebSocketReceiveResult" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebSocketReceiveResult (int count, System.Net.WebSockets.WebSocketMessageType messageType, bool endOfMessage, Nullable&lt;System.Net.WebSockets.WebSocketCloseStatus&gt; closeStatus, string closeStatusDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 count, valuetype System.Net.WebSockets.WebSocketMessageType messageType, bool endOfMessage, valuetype System.Nullable`1&lt;valuetype System.Net.WebSockets.WebSocketCloseStatus&gt; closeStatus, string closeStatusDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebSockets.WebSocketReceiveResult.#ctor(System.Int32,System.Net.WebSockets.WebSocketMessageType,System.Boolean,System.Nullable{System.Net.WebSockets.WebSocketCloseStatus},System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="messageType" Type="System.Net.WebSockets.WebSocketMessageType" />
+        <Parameter Name="endOfMessage" Type="System.Boolean" />
+        <Parameter Name="closeStatus" Type="System.Nullable&lt;System.Net.WebSockets.WebSocketCloseStatus&gt;" />
+        <Parameter Name="closeStatusDescription" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="count">O número de bytes recebidos.</param>
+        <param name="messageType">O tipo de mensagem foi recebida.</param>
+        <param name="endOfMessage">Indica se esta é a mensagem final.</param>
+        <param name="closeStatus">Indica a <see cref="T:System.Net.WebSockets.WebSocketCloseStatus" /> da conexão.</param>
+        <param name="closeStatusDescription">A descrição do <c>closeStatus</c>.</param>
+        <summary>Cria uma instância de <see cref="T:System.Net.WebSockets.WebSocketReceiveResult" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseStatus">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Net.WebSockets.WebSocketCloseStatus&gt; CloseStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Net.WebSockets.WebSocketCloseStatus&gt; CloseStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.WebSocketReceiveResult.CloseStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Net.WebSockets.WebSocketCloseStatus&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o motivo por que o ponto de extremidade remoto iniciado o fechamento de handshake.</summary>
+        <value>Retorna <see cref="T:System.Net.WebSockets.WebSocketCloseStatus" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseStatusDescription">
+      <MemberSignature Language="C#" Value="public string CloseStatusDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CloseStatusDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.WebSocketReceiveResult.CloseStatusDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna a descrição opcional que descreve o motivo pelo qual o fechamento de handshake foi iniciada pelo ponto de extremidade remoto.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.WebSocketReceiveResult.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o número de bytes que recebeu o WebSocket.</summary>
+        <value>Retorna <see cref="T:System.Int32" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contagem pode ser 0 em dois casos:  
+  
+1.  O WebSocket recebeu uma mensagem vazia. Nesse caso o <xref:System.Net.WebSockets.WebSocketReceiveResult.CloseStatus%2A> propriedade é None.  
+  
+2.  O WebSocket recebeu um fechamento foi recebida do ponto de extremidade remoto. Nesse caso o <xref:System.Net.WebSockets.WebSocketReceiveResult.CloseStatus%2A> propriedade é definida como um valor diferente de None.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOfMessage">
+      <MemberSignature Language="C#" Value="public bool EndOfMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EndOfMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.WebSocketReceiveResult.EndOfMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a mensagem foi recebida completamente.</summary>
+        <value>Retorna <see cref="T:System.Boolean" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageType">
+      <MemberSignature Language="C#" Value="public System.Net.WebSockets.WebSocketMessageType MessageType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.WebSockets.WebSocketMessageType MessageType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.WebSocketReceiveResult.MessageType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebSockets</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebSockets.WebSocketMessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a mensagem atual é uma mensagem de UTF-8 ou binários.</summary>
+        <value>Retorna <see cref="T:System.Net.WebSockets.WebSocketMessageType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

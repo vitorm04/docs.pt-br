@@ -1,0 +1,914 @@
+<Type Name="BitmapMetadata" FullName="System.Windows.Media.Imaging.BitmapMetadata">
+  <TypeSignature Language="C#" Value="public class BitmapMetadata : System.Windows.Media.ImageMetadata, System.Collections.Generic.IEnumerable&lt;string&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BitmapMetadata extends System.Windows.Media.ImageMetadata implements class System.Collections.Generic.IEnumerable`1&lt;string&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.ImageMetadata</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.String&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Dá suporte para ler e gravar metadados para e de uma imagem de bitmap.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadados que está associado uma imagem são dados que descreve a imagem, mas não é necessário para exibir a imagem. Cada suporte metadados de identificadores de formato de imagem de bitmap de forma diferente, mas o recurso para ler e gravar metadados é o mesmo.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]suporta os seguintes esquemas de metadados de imagem: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], texto ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] dados textuais), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], e [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+ Se um <xref:System.Windows.Media.Imaging.BitmapMetadata> é exposto por um <xref:System.Windows.Media.Imaging.BitmapFrame> que é obtida usando um <xref:System.Windows.Media.Imaging.BitmapDecoder>, ele é somente leitura por padrão e operações mutáveis lançará uma exceção. Se ele é exposto por um <xref:System.Windows.Media.Imaging.BitmapFrame> que encapsula a outro <xref:System.Windows.Media.Imaging.BitmapSource>, é mutável em construção.  
+  
+ O <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> e <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> métodos podem ser usados para construir e consultas de metadados de leitura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como gravar metadados para um [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] imagem usando o IFD e [!INCLUDE[TLA2#tla_exif](~/includes/tla2sharptla-exif-md.md)] esquemas.  
+  
+ [!code-csharp[BitmapFrameExample#7](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#7)]
+ [!code-vb[BitmapFrameExample#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapMetadata (string containerFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string containerFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="containerFormat" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="containerFormat">O formato da imagem de bitmap, especificado como "gif", "jpg", "png" ou "tiff".</param>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> para uso com o formato de imagem especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como gravar metadados para um [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] imagem usando o IFD e [!INCLUDE[TLA2#tla_exif](~/includes/tla2sharptla-exif-md.md)] esquemas.  
+  
+ [!code-csharp[BitmapFrameExample#7](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#7)]
+ [!code-vb[BitmapFrameExample#7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="containerFormat" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que identifica o nome do aplicativo que foi usado para criar ou alterar um arquivo de imagem.</summary>
+        <value>O nome do aplicativo que foi usado para criar ou alterar um arquivo de imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar metadados para uma imagem de bitmap usando propriedades amigáveis do <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Author">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; Author { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; Author" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Author" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa o autor de uma imagem.</summary>
+        <value>O autor da imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar metadados para uma imagem de bitmap usando propriedades amigáveis do <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CameraManufacturer">
+      <MemberSignature Language="C#" Value="public string CameraManufacturer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CameraManufacturer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.CameraManufacturer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que identifica o fabricante da câmera que está associada a uma imagem.</summary>
+        <value>O fabricante da câmera que está associada a uma imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar metadados para uma imagem de bitmap usando propriedades amigáveis do <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CameraModel">
+      <MemberSignature Language="C#" Value="public string CameraModel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CameraModel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.CameraModel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que identifica o modelo de câmera que foi usado para capturar a imagem.</summary>
+        <value>O modelo de câmera que foi usado para capturar a imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar metadados para uma imagem de bitmap usando propriedades amigáveis do <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapMetadata Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.BitmapMetadata Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapMetadata</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />, fazendo cópias em profundidade dos valores do objeto.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> para clonar.</param>
+        <summary>Isso faz com que uma cópia profunda de especificado da instância <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.Clone%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.Clone%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCore%2A?displayProperty=nameWithType>.  
+  
+ Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> para clonar.</param>
+        <summary>Torna essa instância de uma cópia em profundidade modificável especificada <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> usando os valores da propriedade atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.CloneCurrentValue%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.CloneCurrentValue%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValueCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="public string Comment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Comment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa um comentário associado ao arquivo de imagem.</summary>
+        <value>Um comentário associado ao arquivo de imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar metadados para uma imagem de bitmap usando propriedades amigáveis do <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsQuery">
+      <MemberSignature Language="C#" Value="public bool ContainsQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.ContainsQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Identifica a cadeia de caracteres que está sendo consultada no objeto <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> atual.</param>
+        <summary>Determina se uma cadeia de caracteres de consulta existe dentro de um <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se a cadeia de caracteres de consulta é encontrada no repositório de metadados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadados que está associado uma imagem são dados que descreve a imagem, mas que não é necessário para a exibição da imagem. Cada suporte metadados de identificadores de formato de imagem de bitmap de forma diferente, mas o recurso para ler e gravar metadados é o mesmo.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]suporta os seguintes esquemas de metadados de imagem: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], texto ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] dados textuais), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], e [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="query" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copyright">
+      <MemberSignature Language="C#" Value="public string Copyright { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Copyright" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Copyright" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica as informações de direitos autorais que está associadas com o arquivo de imagem.</summary>
+        <value>As informações de direitos autorais que está associadas com o arquivo de imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar metadados para uma imagem de bitmap usando propriedades amigáveis do <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Uma implementação de <see cref="M:System.Windows.Freezable.CreateInstance" />.</summary>
+        <returns>A nova instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTaken">
+      <MemberSignature Language="C#" Value="public string DateTaken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DateTaken" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.DateTaken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a data em que a imagem foi capturada.</summary>
+        <value>A data em que a imagem foi capturada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar metadados para uma imagem de bitmap usando propriedades amigáveis do <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica o formato da imagem.</summary>
+        <value>O formato da imagem de bitmap.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como ler várias propriedades do <xref:System.Windows.Media.Imaging.BitmapMetadata> de objeto e enviam os valores para um <xref:System.Windows.MessageBox> como cadeias de caracteres.  
+  
+ [!code-csharp[BitmapFrameExample#9](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#9)]
+ [!code-vb[BitmapFrameExample#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> objeto clonar e congelar.</param>
+        <summary>Isso torna a instância um clone do <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais. Observe que, se essas propriedades contêm referências de recurso ou associações de dados, <xref:System.Windows.Freezable.GetAsFrozen%2A> falhará quando tentar congelar o objeto e lançará um <xref:System.InvalidOperationException>.  
+  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.GetAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> para copiar e congelar.</param>
+        <summary>Torna isso um clone congelado especificada da instância <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQuery">
+      <MemberSignature Language="C#" Value="public object GetQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.GetQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Identifica a cadeia de caracteres que está sendo consultada no objeto <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> atual.</param>
+        <summary>Fornece acesso a um leitor de consultas de metadados que pode extrair metadados de um arquivo de imagem de bitmap.</summary>
+        <returns>Os metadados no local de consulta especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadados que está associado uma imagem são dados que descreve a imagem, mas que não é necessário para a exibição da imagem. Cada suporte metadados de identificadores de formato de imagem de bitmap de forma diferente, mas o recurso para ler e gravar metadados é o mesmo.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]suporta os seguintes esquemas de metadados de imagem: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], texto ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] dados textuais), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], e [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> método gravar metadados para um [!INCLUDE[TLA#tla_png](~/includes/tlasharptla-png-md.md)] arquivo.  
+  
+ [!code-cpp[bitmapmetadata#SetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
+ [!code-csharp[bitmapmetadata#SetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
+ [!code-vb[bitmapmetadata#SetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
+  
+ Depois que os metadados são gravados, o <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> método é usado para ler esses dados e emiti-lo como uma cadeia de caracteres de texto.  
+  
+ [!code-cpp[bitmapmetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
+ [!code-csharp[bitmapmetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
+ [!code-vb[bitmapmetadata#GetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="query" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que determina se o <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> objeto tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> é fixa tamanho; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como ler várias propriedades do <xref:System.Windows.Media.Imaging.BitmapMetadata> de objeto e enviam os valores para um <xref:System.Windows.MessageBox> como cadeias de caracteres.  
+  
+ [!code-csharp[BitmapFrameExample#9](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#9)]
+ [!code-vb[BitmapFrameExample#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os metadados que está associado uma imagem são somente leitura.</summary>
+        <value>
+          <see langword="true" />Se os metadados são somente leitura; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como ler várias propriedades do <xref:System.Windows.Media.Imaging.BitmapMetadata> de objeto e enviam os valores para um <xref:System.Windows.MessageBox> como cadeias de caracteres.  
+  
+ [!code-csharp[BitmapFrameExample#9](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#9)]
+ [!code-vb[BitmapFrameExample#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keywords">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; Keywords { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; Keywords" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Keywords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de palavras-chave que descrevem a imagem de bitmap.</summary>
+        <value>Uma coleção somente leitura de cadeias de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public string Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica o local base dos metadados associados a uma imagem.</summary>
+        <value>O local base dos metadados de imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como ler várias propriedades do <xref:System.Windows.Media.Imaging.BitmapMetadata> de objeto e enviam os valores para um <xref:System.Windows.MessageBox> como cadeias de caracteres.  
+  
+ [!code-csharp[BitmapFrameExample#9](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#9)]
+ [!code-vb[BitmapFrameExample#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rating">
+      <MemberSignature Language="C#" Value="public int Rating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Rating" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Rating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que identifica a classificação de imagem.</summary>
+        <value>O valor de classificação entre 0 e 5.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveQuery">
+      <MemberSignature Language="C#" Value="public void RemoveQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveQuery(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.RemoveQuery(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">A consulta de metadados a ser removido.</param>
+        <summary>Remove uma consulta de metadados de uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadados que está associado uma imagem são dados que descreve a imagem, mas que não é necessário para a exibição da imagem. Cada suporte metadados de identificadores de formato de imagem de bitmap de forma diferente, mas o recurso para ler e gravar metadados é o mesmo.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]suporta os seguintes esquemas de metadados de imagem: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], texto ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] dados textuais), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], e [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="query" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Ocorre quando os metadados de imagem são somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetQuery">
+      <MemberSignature Language="C#" Value="public void SetQuery (string query, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetQuery(string query, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.SetQuery(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="query">Identifica o local dos metadados a serem gravados.</param>
+        <param name="value">O valor dos metadados a serem gravados.</param>
+        <summary>Fornece acesso a um gravador de consultas de metadados que pode gravar metadados em um arquivo de imagem de bitmap.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadados que está associado uma imagem são dados que descreve a imagem, mas que não é necessário para a exibição da imagem. Cada suporte metadados de identificadores de formato de imagem de bitmap de forma diferente, mas o recurso para ler e gravar metadados é o mesmo.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]suporta os seguintes esquemas de metadados de imagem: [!INCLUDE[TLA#tla_exif](~/includes/tlasharptla-exif-md.md)], texto ([!INCLUDE[TLA2#tla_png](~/includes/tla2sharptla-png-md.md)] dados textuais), [!INCLUDE[TLA#tla_ifd](~/includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](~/includes/tlasharptla-iptc-md.md)], e [!INCLUDE[TLA#tla_xmp](~/includes/tlasharptla-xmp-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> método gravar metadados para um [!INCLUDE[TLA#tla_png](~/includes/tlasharptla-png-md.md)] arquivo.  
+  
+ [!code-cpp[bitmapmetadata#SetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
+ [!code-csharp[bitmapmetadata#SetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
+ [!code-vb[bitmapmetadata#SetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
+  
+ Depois que os metadados são gravados, o <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> método é usado para ler esses dados e emiti-lo como uma cadeia de caracteres de texto.  
+  
+ [!code-cpp[bitmapmetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
+ [!code-csharp[bitmapmetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
+ [!code-vb[bitmapmetadata#GetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o assunto da imagem de bitmap.</summary>
+        <value>O assunto da imagem de bitmap.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar metadados para uma imagem de bitmap usando propriedades amigáveis do <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.String&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;string&gt; IEnumerable&lt;string&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;string&gt; System.Collections.Generic.IEnumerable&lt;System.String&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.System#Collections#Generic#IEnumerable&lt;System#String&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.Generic.IEnumerable`1.GetEnumerator" />.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.Generic.IEnumerator`1" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Media.Imaging.BitmapMetadata> é convertida em uma interface de <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapMetadata.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Media.Imaging.BitmapMetadata> é convertida em uma interface de <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapMetadata.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que identifica o título de um arquivo de imagem.</summary>
+        <value>O título de um arquivo de imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como gravar metadados para uma imagem de bitmap usando propriedades amigáveis do <xref:System.Windows.Media.Imaging.BitmapMetadata> classe.  
+  
+ [!code-csharp[BitmapFrameExample#8](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#8)]
+ [!code-vb[BitmapFrameExample#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

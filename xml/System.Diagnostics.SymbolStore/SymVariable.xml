@@ -1,0 +1,332 @@
+<Type Name="SymVariable" FullName="System.Diagnostics.SymbolStore.SymVariable">
+  <TypeSignature Language="C#" Value="public class SymVariable : System.Diagnostics.SymbolStore.SymVariableBase, IDisposable, System.Diagnostics.SymbolStore.ISymbolVariable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SymVariable extends System.Diagnostics.SymbolStore.SymVariableBase implements class System.Diagnostics.SymbolStore.ISymbolVariable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.SymVariable" />
+  <AssemblyInfo>
+    <AssemblyName>ISymWrapper</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.SymbolStore.SymVariableBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Diagnostics.SymbolStore.ISymbolVariable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma variável em um armazenamento de símbolo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.SymbolStore.SymVariable> objeto pode ser um parâmetro, uma variável local ou um campo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymVariable (System.Diagnostics.SymbolStore.Private.ISymUnmanagedVariable* pVariable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.SymbolStore.Private.ISymUnmanagedVariable* pVariable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymVariable.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedVariable*)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pVariable" Type="System.Diagnostics.SymbolStore.Private.ISymUnmanagedVariable*" />
+      </Parameters>
+      <Docs>
+        <param name="pVariable">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressField1">
+      <MemberSignature Language="C#" Value="public virtual int AddressField1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AddressField1" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymVariable.AddressField1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro endereço de uma variável.</summary>
+        <value>O primeiro endereço da variável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o uso dessa propriedade, consulte o <xref:System.Diagnostics.SymbolStore.SymAddressKind> enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressField2">
+      <MemberSignature Language="C#" Value="public virtual int AddressField2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AddressField2" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymVariable.AddressField2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o segundo endereço de uma variável.</summary>
+        <value>O segundo endereço da variável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o uso dessa propriedade, consulte o <xref:System.Diagnostics.SymbolStore.SymAddressKind> enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressField3">
+      <MemberSignature Language="C#" Value="public virtual int AddressField3 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AddressField3" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymVariable.AddressField3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o terceiro endereço de uma variável.</summary>
+        <value>O terceiro endereço da variável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o uso dessa propriedade, consulte o <xref:System.Diagnostics.SymbolStore.SymAddressKind> enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressKind">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.SymAddressKind AddressKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.SymbolStore.SymAddressKind AddressKind" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymVariable.AddressKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.SymAddressKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" /> valor que descreve o tipo de endereço.</summary>
+        <value>O tipo de endereço. Um dos valores de <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Desconhecido <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public virtual object Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymVariable.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos da variável.</summary>
+        <value>Os atributos de variável.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymVariable.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pela instância atual da classe <see cref="T:System.Diagnostics.SymbolStore.SymVariable" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymVariable.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">
+          <see langword="true" />para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Chamado pelo <see cref="M:System.Diagnostics.SymbolStore.SymVariable.Dispose" /> e <see cref="M:System.Diagnostics.SymbolStore.SymVariable.Finalize" /> métodos para liberar os recursos gerenciados e não gerenciados usados pela instância atual do <see cref="T:System.Diagnostics.SymbolStore.SymVariable" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado somente pelo público <xref:System.Diagnostics.SymbolStore.SymVariable.Dispose%2A> e <xref:System.Diagnostics.SymbolStore.SymVariable.Finalize%2A> métodos; não chame este método diretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOffset">
+      <MemberSignature Language="C#" Value="public virtual int EndOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymVariable.EndOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento de final de uma variável no escopo da variável.</summary>
+        <value>O deslocamento de fim da variável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade só se aplica a variáveis locais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~SymVariable ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymVariable.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos não gerenciados e executa outras operações de limpeza antes que <see cref="T:System.Diagnostics.SymbolStore.SymVariable" /> seja recuperado pela coleta de lixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui  <xref:System.Object.Finalize%2A>. O código do aplicativo não deve chamar este método; o método `Finalize` de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignature">
+      <MemberSignature Language="C#" Value="public virtual byte[] GetSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymVariable.GetSignature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a assinatura de variável.</summary>
+        <returns>A assinatura de variável como um blob opaco.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymVariable.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da variável.</summary>
+        <value>O nome da variável.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartOffset">
+      <MemberSignature Language="C#" Value="public virtual int StartOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymVariable.StartOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento inicial da variável no escopo da variável.</summary>
+        <value>O deslocamento inicial da variável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade se aplica somente à variável local.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

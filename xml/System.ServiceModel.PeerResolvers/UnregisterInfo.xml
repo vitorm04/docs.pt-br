@@ -1,0 +1,125 @@
+<Type Name="UnregisterInfo" FullName="System.ServiceModel.PeerResolvers.UnregisterInfo">
+  <TypeSignature Language="C#" Value="public class UnregisterInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UnregisterInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.UnregisterInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém as informações usadas para remover uma entrada de registro de um serviço resolvedor de pares.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias dessa classe são usadas principalmente para transmitir informações de solicitação de remoção de registro para o serviço de resolução de um cliente de rede desse serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnregisterInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.UnregisterInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.ServiceModel.PeerResolvers.UnregisterInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnregisterInfo (string meshId, Guid registrationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string meshId, valuetype System.Guid registrationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.UnregisterInfo.#ctor(System.String,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="meshId" Type="System.String" />
+        <Parameter Name="registrationId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="meshId">
+          <see cref="T:System.String" />que especifica a ID de malha do par no nível cuja entrada será removido.</param>
+        <param name="registrationId">
+          <see cref="T:System.Guid" />que identifica exclusivamente a entrada para remover da tabela de pesquisa do serviço resolvedor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.PeerResolvers.UnregisterInfo" /> classe com a ID de malha e o registro do par para remover da tabela de pesquisa de registro no serviço do resolvedor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.UnregisterInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o corpo da mensagem que contém uma instância serializada desse tipo é formado corretamente.</summary>
+        <returns>True se o corpo de informações de remoção do registro está formado corretamente pelo remetente; False se não for.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeshId">
+      <MemberSignature Language="C#" Value="public string MeshId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MeshId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.UnregisterInfo.MeshId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID de malha do par no nível cuja entrada será removido.</summary>
+        <value>
+          <see cref="T:System.String" />que especifica a ID de malha do par no nível cuja entrada será removido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationId">
+      <MemberSignature Language="C#" Value="public Guid RegistrationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid RegistrationId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.UnregisterInfo.RegistrationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID exclusiva da entrada a ser removido da tabela de pesquisa do serviço resolvedor.</summary>
+        <value>
+          <see cref="T:System.Guid" />que identifica exclusivamente a entrada para remover da tabela de pesquisa do serviço resolvedor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

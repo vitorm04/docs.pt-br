@@ -1,0 +1,149 @@
+<Type Name="EntityChangedParams" FullName="System.Data.Services.Client.EntityChangedParams">
+  <TypeSignature Language="C#" Value="public sealed class EntityChangedParams" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EntityChangedParams extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.EntityChangedParams" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula os argumentos de uma <see cref="E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged" /> delegar</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A seguinte página de code-behind para o arquivo XAML cria um <xref:System.Data.Services.Client.DataServiceCollection%601> com métodos personalizados que são chamados quando ocorrem alterações nos dados que são associados a coleção de associação. Quando o <xref:System.Collections.ObjectModel.ObservableCollection%601.CollectionChanged> evento ocorrer, o método fornecido impede que um item que foi removido da coleção de associação seja excluído do serviço de dados. Quando o <xref:System.Collections.ObjectModel.ObservableCollection%601.PropertyChanged> evento ocorrer, o `ShipDate` valor é validado para garantir que as alterações não são feitas para pedidos que já tenham sido fornecidos.  
+  
+ [!code-csharp[Astoria Northwind Client#WpfDataBindingCustom](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#wpfdatabindingcustom)]
+ [!code-vb[Astoria Northwind Client#WpfDataBindingCustom](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#wpfdatabindingcustom)]
+ [!code-vb[Astoria Northwind Client#WpfDataBindingCustom](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#wpfdatabindingcustom)]  
+  
+ O código XAML a seguir define a janela para o exemplo anterior.  
+  
+ [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.Client.DataServiceContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityChangedParams.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O contexto que é associado ao objeto de entidade que foi alterado.</summary>
+        <value>O contexto que está acompanhando o objeto alterado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Entity">
+      <MemberSignature Language="C#" Value="public object Entity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Entity" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityChangedParams.Entity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto de entidade que foi alterado.</summary>
+        <value>O objeto alterado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityChangedParams.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome da propriedade no objeto de entidade que faz referência ao objeto de destino.</summary>
+        <value>O nome da propriedade alterada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyValue">
+      <MemberSignature Language="C#" Value="public object PropertyValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PropertyValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityChangedParams.PropertyValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto que está sendo referenciado por uma propriedade alterada no objeto de entidade.</summary>
+        <value>O valor atual que faz referência a uma entidade de destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceEntitySet">
+      <MemberSignature Language="C#" Value="public string SourceEntitySet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceEntitySet" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityChangedParams.SourceEntitySet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conjunto de entidades do objeto de origem.</summary>
+        <value>Nome do conjunto de uma entidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetEntitySet">
+      <MemberSignature Language="C#" Value="public string TargetEntitySet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetEntitySet" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.EntityChangedParams.TargetEntitySet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A entidade definida ao qual pertence o objeto de entidade de destino</summary>
+        <value>Nome do conjunto de uma entidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

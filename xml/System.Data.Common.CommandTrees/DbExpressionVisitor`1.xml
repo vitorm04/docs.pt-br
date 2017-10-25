@@ -1,0 +1,998 @@
+<Type Name="DbExpressionVisitor&lt;TResultType&gt;" FullName="System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt;">
+  <TypeSignature Language="C#" Value="public abstract class DbExpressionVisitor&lt;TResultType&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbExpressionVisitor`1&lt;TResultType&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbExpressionVisitor`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResultType" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TResultType">O tipo do resultado produzido pelo visitante.</typeparam>
+    <summary>Define a funcionalidade básica que deve ser implementada por visitantes que retornam um valor de resultado de um tipo específico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.CommandTrees.DbExpressionVisitor%601> é uma classe abstrata que descreve a passagem de expressão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbExpressionVisitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbAndExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbAndExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbAndExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbAndExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbAndExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbAndExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbApplyExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbApplyExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbApplyExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbApplyExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbApplyExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbApplyExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbArithmeticExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbArithmeticExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbArithmeticExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbArithmeticExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbArithmeticExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbArithmeticExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbCaseExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbCaseExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbCaseExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbCaseExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbCaseExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbCaseExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbCastExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbCastExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbCastExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbCastExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbCastExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbCastExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbComparisonExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbComparisonExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbComparisonExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbComparisonExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbComparisonExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbComparisonExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbConstantExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbConstantExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbConstantExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbConstantExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbConstantExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbConstantExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbCrossJoinExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbCrossJoinExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbCrossJoinExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbCrossJoinExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbCrossJoinExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbCrossJoinExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbDerefExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbDerefExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbDerefExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbDerefExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbDerefExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbDerefExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbDistinctExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbDistinctExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbDistinctExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbDistinctExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbDistinctExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbDistinctExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbElementExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbElementExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbElementExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbElementExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbElementExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbElementExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbEntityRefExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbEntityRefExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbEntityRefExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbEntityRefExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbEntityRefExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbEntityRefExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbExceptExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbExceptExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbExceptExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbExceptExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbExceptExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbExceptExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, manipula qualquer expressão de um tipo não reconhecido.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando não reconhecido de uma expressão de um tipo é encontrado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbFilterExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbFilterExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbFilterExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbFilterExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbFilterExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbFilterExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbFunctionExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbFunctionExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbFunctionExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbFunctionExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbFunctionExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbFunctionExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbGroupByExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbGroupByExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbGroupByExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbGroupByExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbGroupByExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbGroupByExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbIntersectExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbIntersectExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbIntersectExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbIntersectExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbIntersectExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbIntersectExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbIsEmptyExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbIsEmptyExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbIsEmptyExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbIsEmptyExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbIsEmptyExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbIsEmptyExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbIsNullExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbIsNullExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbIsNullExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbIsNullExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbIsNullExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbIsNullExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbIsOfExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbIsOfExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbIsOfExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbIsOfExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbIsOfExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbIsOfExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbJoinExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbJoinExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbJoinExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbJoinExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbJoinExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbJoinExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public virtual TResultType Visit (System.Data.Common.CommandTrees.DbLambdaExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbLambdaExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbLambdaExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbLambdaExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbLambdaExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implemente o método padrão de visitante para <see cref="T:System.Data.Common.CommandTrees.DbLambdaExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbLikeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbLikeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbLikeExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbLikeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbLikeExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbLikeExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbLimitExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbLimitExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbLimitExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbLimitExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbLimitExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbLimitExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbNewInstanceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbNewInstanceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbNewInstanceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbNewInstanceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbNewInstanceExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbNewInstanceExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbNotExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbNotExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbNotExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbNotExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbNotExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbNotExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbNullExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbNullExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbNullExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbNullExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbNullExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbNullExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbOfTypeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbOfTypeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbOfTypeExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbOfTypeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbOfTypeExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbOfTypeExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbOrExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbOrExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbOrExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbOrExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbOrExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbOrExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbParameterReferenceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbParameterReferenceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbParameterReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbParameterReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbParameterReferenceExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbParameterReferenceExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbProjectExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbProjectExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbProjectExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbProjectExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbProjectExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbProjectExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbPropertyExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbPropertyExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbPropertyExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbPropertyExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbPropertyExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbPropertyExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbQuantifierExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbQuantifierExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbQuantifierExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbQuantifierExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbQuantifierExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbQuantifierExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbRefExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbRefExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbRefExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbRefExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbRefExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbRefExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbRefKeyExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbRefKeyExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbRefKeyExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbRefKeyExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbRefKeyExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbRefKeyExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbRelationshipNavigationExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbRelationshipNavigationExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbRelationshipNavigationExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbRelationshipNavigationExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbRelationshipNavigationExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbRelationshipNavigationExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbScanExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbScanExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbScanExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbScanExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbScanExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbScanExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbSkipExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbSkipExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbSkipExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbSkipExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbSkipExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbSkipExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbSortExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbSortExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbSortExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbSortExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbSortExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbSortExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbTreatExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbTreatExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbTreatExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbTreatExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbTreatExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbTreatExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbUnionAllExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbUnionAllExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbUnionAllExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbUnionAllExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbUnionAllExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbUnionAllExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visit">
+      <MemberSignature Language="C#" Value="public abstract TResultType Visit (System.Data.Common.CommandTrees.DbVariableReferenceExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TResultType Visit(class System.Data.Common.CommandTrees.DbVariableReferenceExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Common.CommandTrees.DbVariableReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Data.Common.CommandTrees.DbVariableReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O <see cref="T:System.Data.Common.CommandTrees.DbVariableReferenceExpression" /> que está sendo visitado.</param>
+        <summary>Quando substituído em uma classe derivada, implementa o padrão do visitante para <see cref="T:System.Data.Common.CommandTrees.DbVariableReferenceExpression" />.</summary>
+        <returns>Um valor de resultado de um tipo específico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,120 @@
+<Type Name="MessageDescriptionCollection" FullName="System.ServiceModel.Description.MessageDescriptionCollection">
+  <TypeSignature Language="C#" Value="public class MessageDescriptionCollection : System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MessageDescription&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageDescriptionCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.MessageDescription&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MessageDescriptionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MessageDescription&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.ServiceModel.Description.MessageDescription</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma coleção que é usada para armazenar as descrições das mensagens que compõem uma operação que pertence a um contrato.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ServiceModel.Description.ContractDescription> é usado para descrever os contratos e suas operações associadas. Cada operação tem um correspondente <xref:System.ServiceModel.Description.OperationDescription> que descreve os aspectos da operação, por exemplo, se a operação é unidirecional ou solicitação/resposta. Cada <xref:System.ServiceModel.Description.OperationDescription> por sua vez, descreve as mensagens que formam a operação usando uma coleção de <xref:System.ServiceModel.Description.MessageDescription>.  
+  
+   
+  
+## Examples  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.MessageDescription Find (string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.MessageDescription Find(string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MessageDescriptionCollection.Find(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MessageDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação da mensagem foi encontrada.</param>
+        <summary>Localiza e retorna a descrição da primeira mensagem em uma coleção para uma mensagem com uma ação especificada.</summary>
+        <returns>A primeira <see cref="T:System.ServiceModel.Description.MessageDescription" /> da coleção cuja mensagem foi especificado <paramref name="action" /> e <see langword="null" /> se nenhuma correspondência <paramref name="action" /> foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você precisa localizar todos os <xref:System.ServiceModel.Description.MessageDescription> objetos na coleção que correspondem à cadeia `action`, usar o <xref:System.ServiceModel.Description.MessageDescriptionCollection.FindAll%28System.String%29> método em vez disso.  
+  
+   
+  
+## Examples  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MessageDescription&gt; FindAll (string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.MessageDescription&gt; FindAll(string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MessageDescriptionCollection.FindAll(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.MessageDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação de mensagens foi encontrada.</param>
+        <summary>Localiza e retorna todas as descrições de mensagem em uma coleção cujas mensagens tem uma ação especificada.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Description.MessageDescriptionCollection" /> que contém as descrições de mensagem de coleta da coleção atual cujas mensagens tem especificado <paramref name="action" />. Se nenhuma correspondência <see cref="T:System.ServiceModel.Description.MessageDescription" /> objetos forem encontrados, uma coleção vazia será retornada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você precisa localizar a primeira ocorrência da <xref:System.ServiceModel.Description.MessageDescription> na coleção que correspondem à cadeia `action`, usar o <xref:System.ServiceModel.Description.MessageDescriptionCollection.Find%28System.String%29> método em vez disso.  
+  
+   
+  
+## Examples  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

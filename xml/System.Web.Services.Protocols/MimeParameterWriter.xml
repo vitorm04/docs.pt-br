@@ -1,0 +1,196 @@
+<Type Name="MimeParameterWriter" FullName="System.Web.Services.Protocols.MimeParameterWriter">
+  <TypeSignature Language="C#" Value="public abstract class MimeParameterWriter : System.Web.Services.Protocols.MimeFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MimeParameterWriter extends System.Web.Services.Protocols.MimeFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.MimeParameterWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.MimeFormatter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma implementação de base comum para os autores de saída em parâmetros de solicitação para clientes de serviço Web implementados usando HTTP, mas sem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.MimeParameterWriter>e outras classes de <xref:System.Web.Services.Protocols> namespace oferece suporte às implementações do .NET Framework do Web services por meio de operações de HTTP GET e POST HTTP. Os leitores e gravadores de serviço web serializar e desserializar, respectivamente, entre os parâmetros ou objetos de retorno de métodos Web e os fluxos de solicitação ou resposta HTTP. Os leitores e gravadores de serviço da web usam o HTTP para o transporte, mas não trocam mensagens usando o padrão SOAP.  
+  
+ O <xref:System.Web.Services.Protocols.MimeParameterWriter> classe estabelece um formato comum de solicitação de gravação para gravação do lado do cliente de parâmetros de método da Web em fluxos de solicitação HTTP.  
+  
+ Você normalmente não precisará usar <xref:System.Web.Services.Protocols.MimeParameterWriter> ou seus descendentes classes diretamente. Em vez disso, quando a ferramenta Wsdl.exe gera o código de proxy do cliente de acordo com as implementações de HTTP GET ou POST HTTP, ela se aplica a <xref:System.Web.Services.Protocols.HttpMethodAttribute> para cada método Web e define o atributo <xref:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter%2A> propriedade para o tipo apropriado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MimeParameterWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.MimeParameterWriter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.MimeParameterWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequestUrl">
+      <MemberSignature Language="C#" Value="public virtual string GetRequestUrl (string url, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetRequestUrl(string url, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.MimeParameterWriter.GetRequestUrl(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="url">Original Uniform Resource Locator (URL da solicitação HTTP).</param>
+        <param name="parameters">Os valores de parâmetro de método da Web a ser adicionado à URL, se necessário.</param>
+        <summary>Quando substituído em uma classe derivada, modifica solicitação URL a solicitações HTTP de saída (Uniform Locator).</summary>
+        <returns>Um <see cref="T:System.String" /> que contém a modificação do objeto, o localizador de solicitação uniforme (URL) da solicitação de HTTP de saída.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes derivadas de <xref:System.Web.Services.Protocols.MimeParameterWriter>, apenas <xref:System.Web.Services.Protocols.UrlParameterWriter> modifica a URL da solicitação HTTP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRequest">
+      <MemberSignature Language="C#" Value="public virtual void InitializeRequest (System.Net.WebRequest request, object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeRequest(class System.Net.WebRequest request, object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.MimeParameterWriter.InitializeRequest(System.Net.WebRequest,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.WebRequest" />
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="request">A solicitação de saída daí, onde o <see cref="T:System.Net.WebRequest" /> classe permite que os protocolos de transporte além do HTTP.</param>
+        <param name="values">Os valores de parâmetro do método da Web.</param>
+        <summary>Quando substituído em uma classe derivada, inicializa a out-indo solicitação HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes derivadas de <xref:System.Web.Services.Protocols.MimeParameterWriter>, apenas <xref:System.Web.Services.Protocols.HtmlFormParameterWriter> implementa o <xref:System.Web.Services.Protocols.MimeParameterWriter> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestEncoding">
+      <MemberSignature Language="C#" Value="public virtual System.Text.Encoding RequestEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding RequestEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.MimeParameterWriter.RequestEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a codificação usada para gravar os parâmetros para a solicitação HTTP.</summary>
+        <value>A codificação usada para gravar os parâmetros para a solicitação HTTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma codificação, conforme representado pelo <xref:System.Text.Encoding> da classe, que define como transformar caracteres em uma sequência de bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesWriteRequest">
+      <MemberSignature Language="C#" Value="public virtual bool UsesWriteRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesWriteRequest" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.MimeParameterWriter.UsesWriteRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se valores de parâmetro de método da Web são serializados para o corpo da solicitação HTTP out-daí.</summary>
+        <value>
+          <see langword="true" />Se os valores de parâmetro de método da Web são serializados para o corpo da solicitação HTTP out-daí; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.MimeParameterWriter.UsesWriteRequest%2A> propriedade determina se o <xref:System.Web.Services.Protocols.MimeParameterWriter.WriteRequest%2A> método é invocado.  
+  
+ O <xref:System.Web.Services.Protocols.MimeParameterWriter> implementação da classe de <xref:System.Web.Services.Protocols.MimeParameterWriter.UsesWriteRequest%2A> retorna um valor de `false`. A única classe que substitui derivada <xref:System.Web.Services.Protocols.MimeParameterWriter.UsesWriteRequest%2A> é <xref:System.Web.Services.Protocols.HtmlFormParameterWriter>, cuja implementação retorna um valor de `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRequest">
+      <MemberSignature Language="C#" Value="public virtual void WriteRequest (System.IO.Stream requestStream, object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteRequest(class System.IO.Stream requestStream, object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.MimeParameterWriter.WriteRequest(System.IO.Stream,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestStream" Type="System.IO.Stream" />
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="requestStream">Um fluxo de entrada para o corpo da solicitação de HTTP saída.</param>
+        <param name="values">Os valores de parâmetro do método da Web.</param>
+        <summary>Quando substituído em uma classe derivada, serializa os valores de parâmetro de método da Web em um fluxo que representa o corpo da solicitação HTTP saído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes derivadas de <xref:System.Web.Services.Protocols.MimeParameterWriter>, apenas <xref:System.Web.Services.Protocols.HtmlFormParameterWriter> implementa o <xref:System.Web.Services.Protocols.MimeParameterWriter.WriteRequest%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

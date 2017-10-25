@@ -1,0 +1,446 @@
+<Type Name="AnonymousIdentificationSection" FullName="System.Web.Configuration.AnonymousIdentificationSection">
+  <TypeSignature Language="C#" Value="public sealed class AnonymousIdentificationSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AnonymousIdentificationSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.AnonymousIdentificationSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura a identificação anônima para usuários que não são autenticadas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AnonymousIdentificationSection> classe permite que você acessar e modificar programaticamente o `anonymousIdentification` elemento de um arquivo de configuração.  
+  
+ A finalidade de identificação anônima é atribuir, no nível de máquina e do aplicativo, uma identidade exclusiva para um usuário não autenticado. Essa identidade exclusiva, em seguida, pode ser usada para acompanhar o usuário. Identificação anônima conforme usado neste contexto não têm nenhuma relação com a identidade do emissor da solicitação da Web ou a outros aspectos de segurança relacionados ao usuário; ele simplesmente atribui uma identidade exclusiva para o gerenciamento de estado do usuário e fins de controle.  
+  
+ Usuários anônimos geralmente são controlados usando o `Session` identificador. Os principais problemas com essa abordagem são a não exclusividade do identificador e a sobrecarga envolvida no armazenamento de dados para definir um `Session` valor de estado, que deve ser feito para atribuir um identificador de sessão a um usuário. Identificação anônima resolve esses problemas fornecendo um identificador exclusivo para cada usuário não autenticado e não exigir que o usuário armazenar dados para definir o identificador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.Web.Configuration.AnonymousIdentificationSection> objeto do arquivo de configuração subjacentes. Você pode usar esse objeto para obter ou definir os valores de configuração relacionados.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#2)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnonymousIdentificationSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AnonymousIdentificationSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.AnonymousIdentificationSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AnonymousIdentificationSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.AnonymousIdentificationSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookieless">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookieMode Cookieless { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.HttpCookieMode Cookieless" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.Cookieless" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieless", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve usar cookies.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.HttpCookieMode" />. O valor padrão é <see cref="F:System.Web.HttpCookieMode.UseDeviceProfile" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AnonymousIdentificationSection.Cookieless%2A> propriedade define quando um cookie deve ser usado para manter informações sobre o usuário.  
+  
+ Quando o <xref:System.Web.Configuration.AnonymousIdentificationSection.Cookieless%2A> está definida como <xref:System.Web.HttpCookieMode.UseCookies>, identificador do usuário é armazenado em um cookie. Para obter mais informações, consulte <xref:System.Web.HttpCookieMode>.  
+  
+> [!NOTE]
+>  ASP.NET armazena o identificador de anônimo do usuário dentro do caminho URI (ou seja, ele é executado no modo sem cookies) se o <xref:System.Web.Configuration.AnonymousIdentificationSection.Cookieless%2A> propriedade é definida como um dos seguintes valores: <xref:System.Web.HttpCookieMode.UseUri>; <xref:System.Web.HttpCookieMode.UseDeviceProfile> quando o perfil de navegador indica que não há suporte para cookies; ou <xref:System.Web.HttpCookieMode.AutoDetect> quando o processo de detecção automática determina que o navegador não oferece suporte a cookies. Por fim, se o tamanho do URI e o identificador anônimo excede o comprimento permitido, o identificador anônimo não é aplicado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar o <xref:System.Web.Configuration.AnonymousIdentificationSection.Cookieless%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#3)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieName">
+      <MemberSignature Language="C#" Value="public string CookieName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CookieName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.CookieName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do cookie.</summary>
+        <value>O nome do cookie. O valor padrão é ". ASPXANONYMOUS".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieName%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#4)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookiePath">
+      <MemberSignature Language="C#" Value="public string CookiePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CookiePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.CookiePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookiePath", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho onde o cookie é armazenado.</summary>
+        <value>O caminho do cookie HTTP a ser usado para a identificação do usuário anônimo. O valor padrão é uma barra (/), que representa a raiz do aplicativo Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AnonymousIdentificationSection.CookiePath%2A> propriedade indica onde o cookie de autenticação reside e é transmitido junto com o cookie de autenticação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.AnonymousIdentificationSection.CookiePath%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#5)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieProtection">
+      <MemberSignature Language="C#" Value="public System.Web.Security.CookieProtection CookieProtection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Security.CookieProtection CookieProtection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.CookieProtection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieProtection", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.CookieProtection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de criptografia usado para criptografar o cookie.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Security.CookieProtection" />. O valor padrão é <see cref="F:System.Web.Security.CookieProtection.All" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para melhorar a proteção de seus cookies, convém definir também a <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieRequireSSL%2A> propriedade `true`.  
+  
+ Certifique-se de usar o valor padrão para essa propriedade se desejar que a validação de dados e criptografia para ajudar a proteger o cookie. Essa opção usa o algoritmo de validação de dados configurado, com base no elemento. DES triplo (3DES) é usado para criptografia, se disponível e se a chave for longa o bastante (48 bytes ou mais).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieProtection%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#6)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieRequireSSL">
+      <MemberSignature Language="C#" Value="public bool CookieRequireSSL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CookieRequireSSL" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.CookieRequireSSL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieRequireSSL", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma conexão Secure Sockets Layer (SSL) é necessária durante a transmissão de informações de autenticação.</summary>
+        <value>
+          <see langword="true" />Se uma conexão SSL é obrigatória. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieRequireSSL%2A> é `true`, um navegador compatível não retorna a menos que a conexão é sobre SSL.  
+  
+> [!NOTE]
+>  Quando o identificador anônimo é armazenado no caminho de URI, em vez de em um cookie, o <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieRequireSSL%2A> configuração não afeta o comportamento do módulo identificação anônima. Isso é consistente com o comportamento de autenticação de formulários.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieRequireSSL%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#7)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieSlidingExpiration">
+      <MemberSignature Language="C#" Value="public bool CookieSlidingExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CookieSlidingExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.CookieSlidingExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieSlidingExpiration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o valor de tempo limite do cookie será redefinido em cada solicitação.</summary>
+        <value>
+          <see langword="true" /> se a expiração deslizante estiver habilitada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieSlidingExpiration%2A> é definido como `true`, para cada solicitação emitida durante uma única sessão, o intervalo de tempo durante o qual o cookie é válido é redefinida para o período de tempo especificado no <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieTimeout%2A> propriedade. Quando <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieSlidingExpiration%2A> é definido como `false`, o cookie expira em um conjunto de ponto no tempo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieSlidingExpiration%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#8)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan CookieTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CookieTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.CookieTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanMinutesOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo, em minutos, após o qual a autenticação expira.</summary>
+        <value>A quantidade de tempo, em minutos, após o qual a autenticação expira. O valor padrão é 100000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser definida com um valor arbitrariamente grande, mas internamente o <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieTimeout%2A> valor é limitado a um valor máximo de dois anos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.AnonymousIdentificationSection.CookieTimeout%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#9)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("domain")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o domínio do cookie.</summary>
+        <value>O nome do domínio do cookie. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este atributo permite o compartilhamento do cookie de identificação anônima em domínios que têm um namespace DNS comum (por exemplo, todos os sites que terminam em "contoso.com"). Os seguintes requisitos devem ser atendidos para que os cookies de identificação anônima ser compartilhado:  
+  
+-   Os sites que deseja compartilhar o cookie precisam ter chaves de validação e descriptografia comuns.  
+  
+-   Outra configuração de identificação anônima atributos como o caminho do cookie e o nome do cookie deve ser o mesmo para todos os sites.  
+  
+ Para obter mais informações, consulte o <xref:System.Web.HttpCookie> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.AnonymousIdentificationSection.Domain%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#10)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a identificação anônima está habilitada.</summary>
+        <value>
+          <see langword="true" />Se a identificação anônima está ativada. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Configuration.AnonymousIdentificationSection.Enabled%2A> é definido como `true`, um cookie é usado para gerenciar informações de estado do usuário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.AnonymousIdentificationSection.Enabled%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AnonymousIdentificationSection#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/CS/AnonymousIdentificationSection.cs#11)]
+ [!code-vb[System.Web.Configuration.AnonymousIdentificationSection#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AnonymousIdentificationSection/VB/AnonymousIdentificationSection.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AnonymousIdentificationSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

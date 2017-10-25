@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Resources">
+  <Docs>
+    <summary>Fornece classes de baixo nível que dão suporte ao modelo de recurso do Windows Presentation Foundation (WPF) e os recursos de compilação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

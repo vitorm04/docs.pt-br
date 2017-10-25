@@ -1,0 +1,426 @@
+<Type Name="ClientSettingsProvider" FullName="System.Web.ClientServices.Providers.ClientSettingsProvider">
+  <TypeSignature Language="C#" Value="public class ClientSettingsProvider : System.Configuration.SettingsProvider, System.Configuration.IApplicationSettingsProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClientSettingsProvider extends System.Configuration.SettingsProvider implements class System.Configuration.IApplicationSettingsProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ClientServices.Providers.ClientSettingsProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.SettingsProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Configuration.IApplicationSettingsProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que aplicativos baseados em Windows para recuperar as configurações de usuário de um serviço de configurações da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar serviços de aplicativo cliente para recuperar as configurações de usuário de um serviço de configurações da Web existente ao configurar seu aplicativo para usar o <xref:System.Web.ClientServices.Providers.ClientSettingsProvider> classe. Para obter mais informações, consulte [Como configurar serviços de aplicativo cliente](~/docs/framework/common-client-technologies/how-to-configure-client-application-services.md). Após a configuração, você pode obter e definir configurações de usuário por meio de uma classe de configurações do aplicativo é derivada de <xref:System.Configuration.ApplicationSettingsBase> e configurado para usar o <xref:System.Web.ClientServices.Providers.ClientSettingsProvider> classe. Você pode usar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] para gerar um `Settings` classe para seu projeto (acessada como `Properties.Settings.Default` em c# e `My.Settings` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]). Para obter mais informações sobre as configurações de aplicativo, consulte [Visão geral sobre configurações de aplicativo](~/docs/framework/winforms/advanced/application-settings-overview.md).  
+  
+ Você pode recuperar atual <xref:System.Web.ClientServices.Providers.ClientSettingsProvider> por meio de <xref:System.Configuration.ApplicationSettingsBase.Providers%2A?displayProperty=nameWithType> propriedade usando o totalmente qualificado <xref:System.Web.ClientServices.Providers.ClientSettingsProvider> nome de classe como uma chave. Você também pode recuperar o provedor por meio de <xref:System.Configuration.SettingsLoadedEventArgs.Provider%2A?displayProperty=nameWithType> propriedade ao manipular o <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded?displayProperty=nameWithType> evento.  
+  
+> [!NOTE]
+>  Essa classe contém um <xref:System.Security.SecurityCriticalAttribute> no nível de classe que se aplica a todos os membros da classe. Uma exceção de tempo de execução é gerada se o chamador imediato é transparente de segurança ou parcialmente confiável. Para obter mais informações sobre segurança crítica tipos e membros, consulte [código transparente de segurança, nível 2](~/docs/framework/misc/security-transparent-code-level-2.md).  
+  
+> [!NOTE]
+>  Essa classe contém uma demanda de herança no nível de classe que se aplica a todos os membros. Um <xref:System.Security.SecurityException> é gerada quando a classe derivada não tem permissão de confiança total. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md) e [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar esse evento para exibir uma lista de configurações que não foram salvas com êxito.  
+  
+ [!code-csharp[ClientApplicationServices#304](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#304)]
+ [!code-vb[ClientApplicationServices#304](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#304)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+    <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Essa classe não pode ser usada por código parcialmente confiável ou transparente.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientSettingsProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.ClientSettingsProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.ClientServices.Providers.ClientSettingsProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Essa classe contém um <xref:System.Security.SecurityCriticalAttribute> no nível de classe que se aplica a todos os membros da classe. Uma exceção de tempo de execução é gerada se o chamador imediato é transparente de segurança ou parcialmente confiável. Para obter mais informações sobre segurança crítica tipos e membros, consulte [código transparente de segurança, nível 2](~/docs/framework/misc/security-transparent-code-level-2.md).  
+  
+> [!NOTE]
+>  Essa classe contém uma demanda de herança no nível de classe que se aplica a todos os membros. Um <xref:System.Security.SecurityException> é gerada quando a classe derivada não tem permissão de confiança total. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md) e [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public override string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.Providers.ClientSettingsProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é usada por essa classe.</summary>
+        <value>O nome do aplicativo para o provedor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade não tem nenhum efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreviousVersion">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsPropertyValue GetPreviousVersion (System.Configuration.SettingsContext context, System.Configuration.SettingsProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Configuration.SettingsPropertyValue GetPreviousVersion(class System.Configuration.SettingsContext context, class System.Configuration.SettingsProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.ClientSettingsProvider.GetPreviousVersion(System.Configuration.SettingsContext,System.Configuration.SettingsProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="property" Type="System.Configuration.SettingsProperty" />
+      </Parameters>
+      <Docs>
+        <param name="context">Esse parâmetro não é usado por este método.</param>
+        <param name="property">Representa a propriedade para obter a versão anterior do.</param>
+        <summary>Obtém a versão anterior da propriedade especificada.</summary>
+        <returns>Representa a versão anterior da propriedade especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado internamente pelo sistema de configurações de aplicativo e ele não se destina a ser usado pelo código do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.WebException">O <see cref="P:System.Web.ClientServices.ConnectivityStatus.IsOffline" /> é o valor da propriedade <see langword="false" /> e o serviço de configurações da Web no <see cref="P:System.Web.ClientServices.Providers.ClientSettingsProvider.ServiceUri" /> local não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyMetadata">
+      <MemberSignature Language="C#" Value="public static System.Configuration.SettingsPropertyCollection GetPropertyMetadata (string serviceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.SettingsPropertyCollection GetPropertyMetadata(string serviceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.ClientSettingsProvider.GetPropertyMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceUri">O serviço de configurações da Web para recuperar metadados de propriedade de.</param>
+        <summary>Obtém uma coleção de metadados para todas as propriedades recuperadas do serviço de configurações da Web especificado.</summary>
+        <returns>Os metadados da propriedade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValues">
+      <MemberSignature Language="C#" Value="public override System.Configuration.SettingsPropertyValueCollection GetPropertyValues (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyCollection propertyCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Configuration.SettingsPropertyValueCollection GetPropertyValues(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyCollection propertyCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.ClientSettingsProvider.GetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="propertyCollection" Type="System.Configuration.SettingsPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Configuration.SettingsContext" /> que descreve o uso do aplicativo atual.</param>
+        <param name="propertyCollection">Um <see cref="T:System.Configuration.SettingsPropertyCollection" /> que contém o grupo de propriedade de configurações cujos valores devem ser recuperados.</param>
+        <summary>Retorna a coleção de valores da propriedade de configurações para a instância do aplicativo e o grupo de propriedades de configurações especificados.</summary>
+        <returns>Um <see cref="T:System.Configuration.SettingsPropertyValueCollection" /> que contém os valores para o grupo de propriedades de configurações especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.ClientSettingsProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome amigável do provedor.</param>
+        <param name="config">Uma coleção de pares de nome/valor que representa os atributos específicos do provedor especificados na configuração para esse provedor.</param>
+        <summary>Inicializa o provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado internamente pelo sistema de configurações de aplicativo e ele não se destina a ser usado pelo código do aplicativo.  
+  
+ O [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] chamadas de modelo de extensibilidade de <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.Initialize%2A> método para inicializar o <xref:System.Web.ClientServices.Providers.ClientSettingsProvider> usando informações em seu arquivo de configuração do aplicativo. Esse método reconhece que as seguintes configurações de Web atributos de configuração de serviço:  
+  
+-   name  
+  
+-   descrição  
+  
+-   connectionStringName  
+  
+-   serviceUri  
+  
+ Para obter mais informações sobre esses atributos, consulte [como: configurar serviços de aplicativo cliente](~/docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see cref="F:System.String.Empty" />.  
+  
+ -ou-  
+  
+ <paramref name="config" />contém um valor não reconhecido.</exception>
+        <exception cref="T:System.InvalidOperationException">Isso <see cref="T:System.Web.ClientServices.Providers.ClientRoleProvider" /> já foi inicializado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset (System.Configuration.SettingsContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset(class System.Configuration.SettingsContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.ClientSettingsProvider.Reset(System.Configuration.SettingsContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Esse parâmetro não é usado por este método.</param>
+        <summary>Redefine todas as configurações de usuário para seus valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado internamente pelo sistema de configurações de aplicativo e ele não se destina a ser usado pelo código do aplicativo. Para redefinir as configurações da Web para seus valores padrão, normalmente você usará o <xref:System.Configuration.ApplicationSettingsBase.Reset%2A?displayProperty=nameWithType> método do seu projeto `Settings` classe (normalmente acessados como `Properties.Settings.Default` em c# e `My.Settings` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]). Você também pode reverter as configurações de Web para os valores armazenados em cache anteriormente chamando o <xref:System.Configuration.ApplicationSettingsBase.Reload%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.WebException">O <see cref="P:System.Web.ClientServices.ConnectivityStatus.IsOffline" /> é o valor da propriedade <see langword="false" /> e o serviço de configurações da Web no <see cref="P:System.Web.ClientServices.Providers.ClientSettingsProvider.ServiceUri" /> local não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceUri">
+      <MemberSignature Language="C#" Value="public static string ServiceUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ServiceUri" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.Providers.ClientSettingsProvider.ServiceUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local do serviço de configurações da Web.</summary>
+        <value>O URI do serviço de configurações da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir o <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.ServiceUri%2A> propriedade no código do aplicativo, mas normalmente definirá o valor no arquivo de configuração de aplicativo. Isso permite que você altere o local do serviço sem recompilar seu código.  
+  
+ Quando você define o local do serviço por meio de programação, você deve especificar o URI, que sempre termina com "Profile_JSON_AppService" de serviço concluído.  
+  
+> [!NOTE]
+>  Essa classe contém uma demanda de link no nível de classe que se aplica a todos os membros. Um <xref:System.Security.SecurityException> é gerada quando o chamador imediato não tem permissão de confiança total. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar essa propriedade para definir as configurações da Web local do serviço.  
+  
+ [!code-csharp[ClientApplicationServices#303](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#303)]
+ [!code-vb[ClientApplicationServices#303](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#303)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValues">
+      <MemberSignature Language="C#" Value="public override void SetPropertyValues (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyValueCollection propertyValueCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetPropertyValues(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyValueCollection propertyValueCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.ClientSettingsProvider.SetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="propertyValueCollection" Type="System.Configuration.SettingsPropertyValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Configuration.SettingsContext" /> que descreve o uso do aplicativo atual.</param>
+        <param name="propertyValueCollection">Um <see cref="T:System.Configuration.SettingsPropertyValueCollection" /> que representa o grupo de configurações de propriedade a ser definido.</param>
+        <summary>Define os valores do grupo especificado de configurações de propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingsSaved">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.ClientServices.Providers.SettingsSavedEventArgs&gt; SettingsSaved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.ClientServices.Providers.SettingsSavedEventArgs&gt; SettingsSaved" />
+      <MemberSignature Language="DocId" Value="E:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.ClientServices.Providers.SettingsSavedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre depois que o provedor de configurações tenta salvar os valores de propriedade para o serviço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre depois que o provedor de configurações acessa o serviço de configurações, mesmo se as configurações não foram salvas com êxito. Um motivo que o provedor pode falhar salvar as configurações é se o usuário atual foi desconectado. Você pode usar o <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList%2A?displayProperty=nameWithType> para determinar se as configurações não foram salvas com êxito.  
+  
+ Esse evento não ocorrerá se o provedor de configurações não pode acessar o serviço de configurações, o que faz com que o provedor lançar um <xref:System.Net.WebException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar esse evento para exibir uma lista de configurações que não foram salvas com êxito.  
+  
+ [!code-csharp[ClientApplicationServices#304](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#304)]
+ [!code-vb[ClientApplicationServices#304](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#304)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Upgrade">
+      <MemberSignature Language="C#" Value="public void Upgrade (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyCollection properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Upgrade(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyCollection properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.ClientSettingsProvider.Upgrade(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="properties" Type="System.Configuration.SettingsPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Não usado.</param>
+        <param name="properties">Não usado.</param>
+        <summary>Esse método não é usado por esta classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método não tem nenhum efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

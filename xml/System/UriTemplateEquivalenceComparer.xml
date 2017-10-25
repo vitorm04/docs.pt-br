@@ -1,0 +1,150 @@
+<Type Name="UriTemplateEquivalenceComparer" FullName="System.UriTemplateEquivalenceComparer">
+  <TypeSignature Language="C#" Value="public class UriTemplateEquivalenceComparer : System.Collections.Generic.IEqualityComparer&lt;UriTemplate&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UriTemplateEquivalenceComparer extends System.Object implements class System.Collections.Generic.IEqualityComparer`1&lt;class System.UriTemplate&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.UriTemplateEquivalenceComparer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEqualityComparer&lt;System.UriTemplate&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Uma classe usada para comparar <see cref="T:System.UriTemplate" /> instâncias para equivalência estrutural (em vez de referência).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.UriTemplate>instâncias são comparadas usando igualdade de referência por padrão. O <xref:System.UriTemplateEquivalenceComparer> classe avalia equivalência usando <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> em vez da igualdade de referência padrão verificar. Essa classe é útil quando você deseja comparar dois <xref:System.UriTemplate> instâncias com base nos URIs que elas correspondam, em vez de igualdade de referência estrito.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a diferença entre a igualdade de referência e de igualdade estrutural. Ele também mostra como usar o <xref:System.UriTemplateEquivalenceComparer> como um comparador de um dicionário.  
+  
+ [!code-csharp[UriTemplateEquivalenceComparer#0](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplateequivalencecomparer/cs/program.cs#0)]
+ [!code-vb[UriTemplateEquivalenceComparer#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplateequivalencecomparer/vb/program.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriTemplateEquivalenceComparer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplateEquivalenceComparer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.UriTemplateEquivalenceComparer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como chamar o construtor para essa classe.  
+  
+ [!code-csharp[UriTemplateEquivalenceComparer#1](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplateequivalencecomparer/cs/program.cs#1)]
+ [!code-vb[UriTemplateEquivalenceComparer#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplateequivalencecomparer/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (UriTemplate x, UriTemplate y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.UriTemplate x, class System.UriTemplate y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplateEquivalenceComparer.Equals(System.UriTemplate,System.UriTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.UriTemplate" />
+        <Parameter Name="y" Type="System.UriTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma instância de <see cref="T:System.UriTemplate" />.</param>
+        <param name="y">Uma instância de <see cref="T:System.UriTemplate" />.</param>
+        <summary>Compara dois <see cref="T:System.UriTemplate" /> instâncias para equivalência.</summary>
+        <returns>Um valor que indica se os dois <see cref="T:System.UriTemplate" /> instâncias forem equivalentes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não é normalmente chamado diretamente. Ele é chamado por outra classe que está comparando dois <xref:System.UriTemplate> instâncias.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como chamar o <xref:System.UriTemplateEquivalenceComparer.Equals%2A> método.  
+  
+ [!code-csharp[UriTemplateEquivalenceComparer#2](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplateequivalencecomparer/cs/snippets.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode (UriTemplate obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode(class System.UriTemplate obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplateEquivalenceComparer.GetHashCode(System.UriTemplate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.UriTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="obj">A instância <see cref="T:System.UriTemplate" />.</param>
+        <summary>Obtém um código hash especificado <see cref="T:System.UriTemplate" /> instância.</summary>
+        <returns>O código hash.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não é normalmente chamado diretamente. Ele é chamado por outra classe que requer um hash de uma <xref:System.UriTemplate> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

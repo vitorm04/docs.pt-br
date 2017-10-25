@@ -1,0 +1,95 @@
+<Type Name="NameValueFileSectionHandler" FullName="System.Configuration.NameValueFileSectionHandler">
+  <TypeSignature Language="C#" Value="public class NameValueFileSectionHandler : System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NameValueFileSectionHandler extends System.Object implements class System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.NameValueFileSectionHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Configuration.IConfigurationSectionHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece acesso a um arquivo de configuração. Esse tipo dá suporte à infraestrutura de configuração .NET Framework e não se destina à utilização diretamente do seu código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `file` atributo o `<appSettings>` seção especifica um caminho relativo para um arquivo externo que contém as definições de configuração de aplicativo personalizadas. Os detalhes fornecidos no arquivo de atuam como um `<appSettings>` seção no arquivo de configuração. O arquivo é acessado usando o <xref:System.Configuration.NameValueFileSectionHandler> classe. Elemento de raiz do arquivo deve corresponder a seção que faz referência a ele.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NameValueFileSectionHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.NameValueFileSectionHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.NameValueFileSectionHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public object Create (object parent, object configContext, System.Xml.XmlNode section);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Create(object parent, object configContext, class System.Xml.XmlNode section) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.NameValueFileSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Object" />
+        <Parameter Name="configContext" Type="System.Object" />
+        <Parameter Name="section" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O objeto pai.</param>
+        <param name="configContext">O objeto de contexto de configuração.</param>
+        <param name="section">O nó XML da seção.</param>
+        <summary>Cria um novo manipulador de configuração e o adiciona à coleção de manipulador de seção com base em parâmetros especificados.</summary>
+        <returns>Um objeto de configuração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `parent` parâmetro de objeto atua como as definições de configuração na seção de configuração pai correspondente. O `configContext` parâmetro de objeto é o caminho virtual para o qual o manipulador de seção de configuração calcula os valores de configuração. Normalmente esse parâmetro é reservado e é `null`. O `section` parâmetro é o <xref:System.Xml.XmlNode> que contém as informações de configuração a ser manipulada. O `section` parâmetro fornece acesso direto ao conteúdo XML da seção de configuração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O arquivo especificado no <see langword="file" /> atributo de <paramref name="section" /> existe mas não pode ser carregado.  
+  
+ \- ou -  
+  
+ O <see langword="name" /> atributo de <paramref name="section" /> não coincide com o elemento raiz do arquivo especificado no <see langword="file" /> atributo.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

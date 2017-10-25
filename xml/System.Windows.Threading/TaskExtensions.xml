@@ -1,0 +1,117 @@
+<Type Name="TaskExtensions" FullName="System.Windows.Threading.TaskExtensions">
+  <TypeSignature Language="C#" Value="public static class TaskExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TaskExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.TaskExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de métodos <see langword="static" /> que estende a classe <see cref="T:System.Threading.Tasks.Task" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os métodos nesta classe são definidos como métodos de extensão que estendem o <xref:System.Threading.Tasks.Task> classe. Isso significa que eles podem ser chamados como um método de instância em qualquer <xref:System.Threading.Tasks.Task> objeto. Os métodos dessa classe operam em <xref:System.Threading.Tasks.Task> objetos que estão associados um <xref:System.Windows.Threading.Dispatcher> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DispatcherOperationWait">
+      <MemberSignature Language="C#" Value="public static System.Windows.Threading.DispatcherOperationStatus DispatcherOperationWait (this System.Threading.Tasks.Task this);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Threading.DispatcherOperationStatus DispatcherOperationWait(class System.Threading.Tasks.Task this) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.TaskExtensions.DispatcherOperationWait(System.Threading.Tasks.Task)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="this" Type="System.Threading.Tasks.Task" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="this">O <see cref="T:System.Threading.Tasks.Task" /> que está associado a <see cref="T:System.Windows.Threading.DispatcherOperation" />.</param>
+        <summary>Aguarda indefinidamente subjacente <see cref="T:System.Windows.Threading.DispatcherOperation" /> para concluir.</summary>
+        <returns>O status de subjacente <see cref="T:System.Windows.Threading.DispatcherOperation" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.Windows.Threading.TaskExtensions.IsDispatcherOperationTask%2A> método para verificar se o <xref:System.Threading.Tasks.Task> está associado com um <xref:System.Windows.Threading.DispatcherOperation> antes de chamar esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Threading.Tasks.Task" /> não está associado com um <see cref="T:System.Windows.Threading.DispatcherOperation" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatcherOperationWait">
+      <MemberSignature Language="C#" Value="public static System.Windows.Threading.DispatcherOperationStatus DispatcherOperationWait (this System.Threading.Tasks.Task this, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Threading.DispatcherOperationStatus DispatcherOperationWait(class System.Threading.Tasks.Task this, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.TaskExtensions.DispatcherOperationWait(System.Threading.Tasks.Task,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="this" Type="System.Threading.Tasks.Task" RefType="this" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="this">O <see cref="T:System.Threading.Tasks.Task" /> que está associado a <see cref="T:System.Windows.Threading.DispatcherOperation" />.</param>
+        <param name="timeout">A quantidade de tempo de espera.</param>
+        <summary>Aguarda até que a quantidade especificada de tempo para subjacente <see cref="T:System.Windows.Threading.DispatcherOperation" /> para concluir.</summary>
+        <returns>O status de subjacente <see cref="T:System.Windows.Threading.DispatcherOperation" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.Windows.Threading.TaskExtensions.IsDispatcherOperationTask%2A> método para verificar se o <xref:System.Threading.Tasks.Task> está associado com um <xref:System.Windows.Threading.DispatcherOperation> antes de chamar esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Threading.Tasks.Task" /> não está associado com um <see cref="T:System.Windows.Threading.DispatcherOperation" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDispatcherOperationTask">
+      <MemberSignature Language="C#" Value="public static bool IsDispatcherOperationTask (this System.Threading.Tasks.Task this);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDispatcherOperationTask(class System.Threading.Tasks.Task this) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.TaskExtensions.IsDispatcherOperationTask(System.Threading.Tasks.Task)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="this" Type="System.Threading.Tasks.Task" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="this">O <see cref="T:System.Threading.Tasks.Task" /> a ser verificado.</param>
+        <summary>Retorna um valor que indica se este <see cref="T:System.Threading.Tasks.Task" /> está associado com um <see cref="T:System.Windows.Threading.DispatcherOperation" />.</summary>
+        <returns>O status de subjacente <see cref="T:System.Windows.Threading.DispatcherOperation" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `true`Se o <xref:System.Threading.Tasks.Task> está associado com um <xref:System.Windows.Threading.DispatcherOperation>; caso contrário, `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,265 @@
+<Type Name="RepeaterItem" FullName="System.Web.UI.WebControls.RepeaterItem">
+  <TypeSignature Language="C#" Value="public class RepeaterItem : System.Web.UI.Control, System.Web.UI.IDataItemContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RepeaterItem extends System.Web.UI.Control implements class System.Web.UI.IDataItemContainer, class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RepeaterItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataItemContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um item no controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.RepeaterItem> objeto representa um item no <xref:System.Web.UI.WebControls.Repeater> controle, como a seção de cabeçalho, rodapé seção ou um item de dados.  
+  
+ Os itens de dados do <xref:System.Web.UI.WebControls.Repeater> controle são armazenados em um <xref:System.Web.UI.WebControls.RepeaterItemCollection> objeto que pode ser acessado usando o <xref:System.Web.UI.WebControls.Repeater.Items%2A> propriedade do <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ Você pode usar um <xref:System.Web.UI.WebControls.RepeaterItem> objeto para acessar as propriedades de um item de forma programática o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.Web.UI.WebControls.RepeaterItem> objeto para exibir o conteúdo de cada item de dados no <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-aspx-csharp[Classic RepeaterItem Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RepeaterItem Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RepeaterItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RepeaterItem Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RepeaterItem (int itemIndex, System.Web.UI.WebControls.ListItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 itemIndex, valuetype System.Web.UI.WebControls.ListItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RepeaterItem.#ctor(System.Int32,System.Web.UI.WebControls.ListItemType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item no controle <see cref="T:System.Web.UI.WebControls.Repeater" /> da coleção <see cref="P:System.Web.UI.WebControls.Repeater.Items" /> do controle.</param>
+        <param name="itemType">Um dos valores de <see cref="T:System.Web.UI.WebControls.ListItemType" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.RepeaterItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.RepeaterItem> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.RepeaterItem> classe.  
+  
+ [!code-csharp[Classic RepeaterItem.RepeaterItem Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RepeaterItem.RepeaterItem Example/CS/source.cs#1)]
+ [!code-vb[Classic RepeaterItem.RepeaterItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RepeaterItem.RepeaterItem Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public virtual object DataItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItem.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um item de dados associado ao objeto <see cref="T:System.Web.UI.WebControls.RepeaterItem" /> no controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa um item de dados no controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.RepeaterItem.DataItem%2A> para especificar ou determinar as propriedades de um item de dados associado a <xref:System.Web.UI.WebControls.RepeaterItem> objeto o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+> [!NOTE]
+>  Essa propriedade só se aplica a itens de dados a <xref:System.Web.UI.WebControls.Repeater> controle. O <xref:System.Web.UI.WebControls.RepeaterItem.ItemType%2A> propriedade deve ser definida como `ListItemType.Item`, `ListItemType.AlternatingItem`, `ListItemType.SelectedItem`, ou `ListItemType.EditItem`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public virtual int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItem.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do item no controle <see cref="T:System.Web.UI.WebControls.Repeater" /> da coleção <see cref="P:System.Web.UI.WebControls.Repeater.Items" /> do controle.</summary>
+        <value>O índice do item no controle <see cref="T:System.Web.UI.WebControls.Repeater" /> da coleção <see cref="P:System.Web.UI.WebControls.Repeater.Items" /> do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.RepeaterItem.ItemIndex%2A> propriedade para determinar o número de índice do item no <xref:System.Web.UI.WebControls.Repeater> controlar do <xref:System.Web.UI.WebControls.Repeater.Items%2A> coleção do controle.  
+  
+> [!NOTE]
+>  Essa propriedade só se aplica a itens de dados a <xref:System.Web.UI.WebControls.Repeater> controle. O <xref:System.Web.UI.WebControls.RepeaterItem.ItemType%2A> propriedade deve ser definida como `ListItemType.Item`, `ListItemType.AlternatingItem`, `ListItemType.SelectedItem`, ou `ListItemType.EditItem`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.RepeaterItem.ItemIndex%2A> propriedade para exibir o número de índice do item no <xref:System.Web.UI.WebControls.Repeater> controlar do <xref:System.Web.UI.WebControls.Repeater.Items%2A> coleção do controle.  
+  
+ [!code-aspx-csharp[Classic RepeaterItem.ItemIndex Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RepeaterItem.ItemIndex Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RepeaterItem.ItemIndex Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RepeaterItem.ItemIndex Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ListItemType ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ListItemType ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItem.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do item no controle <see cref="T:System.Web.UI.WebControls.Repeater" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.ListItemType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.RepeaterItem.ItemType%2A> propriedade para determinar o tipo de um item de <xref:System.Web.UI.WebControls.Repeater> controle. A tabela a seguir lista os tipos de item diferentes.  
+  
+|Tipo de item|Descrição|  
+|---------------|-----------------|  
+|Cabeçalho|A seção de cabeçalho do <xref:System.Web.UI.WebControls.Repeater> controle.|  
+|Rodapé|Seção de rodapé a <xref:System.Web.UI.WebControls.Repeater> controle.|  
+|Item|Em um item de <xref:System.Web.UI.WebControls.Repeater> controle.|  
+|AlternatingItem|Um item de alternância no <xref:System.Web.UI.WebControls.Repeater> controle.|  
+|SelectedItem|O item selecionado no <xref:System.Web.UI.WebControls.Repeater> controle.|  
+|EditItem|O item selecionado para edição no <xref:System.Web.UI.WebControls.Repeater> controle.|  
+|Separador|Um separador entre os itens do <xref:System.Web.UI.WebControls.Repeater> controle.|  
+|Pager|Seção da página seleção de <xref:System.Web.UI.WebControls.Repeater> controle.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.RepeaterItem.ItemType%2A> propriedade para determinar o tipo de item de um item de <xref:System.Web.UI.WebControls.Repeater> controle. A ordem em que os itens são criados no <xref:System.Web.UI.WebControls.Repeater> controle são exibidos juntamente com o tipo de item.  
+  
+ [!code-aspx-csharp[Classic RepeaterItem.ItemType Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RepeaterItem.ItemType Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RepeaterItem.ItemType Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RepeaterItem.ItemType Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RepeaterItem.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Atribui a qualquer fonte do evento e suas informações para o pai <see cref="T:System.Web.UI.WebControls.Repeater" /> de controle, se o <see cref="T:System.EventArgs" /> parâmetro é uma instância de <see cref="T:System.Web.UI.WebControls.RepeaterCommandEventArgs" />.</summary>
+        <returns>
+          <see langword="true" />Se o evento atribuído ao pai foi gerado, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DataItemIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DataItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DataItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItem.System#Web#UI#IDataItemContainer#DataItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IDataItemContainer.DataItemIndex" />.</summary>
+        <value>Um <see cref="P:System.Web.UI.WebControls.RepeaterItem.ItemIndex" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.RepeaterItem> instância é convertida para o <xref:System.Web.UI.IDataItemContainer> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DisplayIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RepeaterItem.System#Web#UI#IDataItemContainer#DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IDataItemContainer.DisplayIndex" />.</summary>
+        <value>Um <see cref="P:System.Web.UI.WebControls.RepeaterItem.ItemIndex" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.RepeaterItem> instância é convertida para o <xref:System.Web.UI.IDataItemContainer> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

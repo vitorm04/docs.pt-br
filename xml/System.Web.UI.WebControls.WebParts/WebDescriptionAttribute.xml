@@ -1,0 +1,225 @@
+<Type Name="WebDescriptionAttribute" FullName="System.Web.UI.WebControls.WebParts.WebDescriptionAttribute">
+  <TypeSignature Language="C#" Value="public class WebDescriptionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebDescriptionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o valor de cadeia de caracteres a ser usado como uma dica de ferramenta para uma propriedade de um controle de Web Parts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle fornece uma interface de usuário genérica (UI) que permite aos usuários editar propriedades personalizadas em <xref:System.Web.UI.WebControls.WebParts.WebPart> e controles de servidor colocado no <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zonas. A interface do usuário de edição é fornecida para propriedades que são marcadas no código-fonte com o `WebBrowsable` atributo (da <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute> classe). Quando uma propriedade é marcada com esse atributo, um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle cria a interface do usuário de edição com base no tipo da propriedade e usa um <xref:System.ComponentModel.PropertyDescriptor> se necessário para converter o valor em cada controle de edição para o tipo da propriedade do objeto.  
+  
+ O `WebDescription` atributo (da <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute> classe) permite que você especifique a dica de ferramenta que aparece com cada controle na edição IU quando o ponteiro do mouse é posicionado sobre o controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute> atributo para atribuir uma dica de ferramenta para uma propriedade em um controle de Web Parts. Personalizado `UserJobType` propriedade recebe a dica de ferramenta "Selecione a categoria que corresponde a seu trabalho." Para exibir o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. Este exemplo é parte de um exemplo maior encontrado no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> visão geral da classe.  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebDescriptionAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.%23ctor%2A> construtor define o <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.Description%2A> propriedade como uma cadeia de caracteres vazia ("").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebDescriptionAttribute (string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="description">A dica de ferramenta a ser usado em um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute" /> classe com a descrição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.%23ctor%2A> construtor define o <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.Description%2A> propriedade `description`. O `description` parâmetro é o valor que será exibido como uma dica de ferramenta para uma propriedade em um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute> atributo para atribuir uma dica de ferramenta para uma propriedade em um controle de Web Parts. Personalizado `UserJobType` propriedade recebe a dica de ferramenta "Selecione a categoria que corresponde a seu trabalho." Para exibir o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. A dica de ferramenta é atribuída por meio de <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.%23ctor%2A> construtor. Este exemplo é parte de um exemplo maior encontrado no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> visão geral da classe.  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.WebDescriptionAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.WebDescriptionAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebDescriptionAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma ocorrência da <see cref="T:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute" /> classe com o <see cref="P:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.Description" /> propriedade definida como uma cadeia de caracteres vazia ("").</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.Default> campo retorna o mesmo resultado de chamar o <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.%23ctor> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a dica de ferramenta para uma propriedade para exibir em um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> controle.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o valor a ser exibido em um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DescriptionValue">
+      <MemberSignature Language="C#" Value="protected string DescriptionValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DescriptionValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.DescriptionValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a dica de ferramenta para exibir o <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> controle.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o valor a ser exibido em um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.DescriptionValue%2A> propriedade obtém ou define o mesmo valor que é acessado por meio de <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.Description%2A> propriedade. O <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.DescriptionValue%2A> propriedade é protegido e, portanto, somente acessível na classe ou por meio de uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com esta instância, ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o valor de nome de exibição.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a instância atual está definida como o valor padrão.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute" /> é igual a <see cref="F:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute.Default" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

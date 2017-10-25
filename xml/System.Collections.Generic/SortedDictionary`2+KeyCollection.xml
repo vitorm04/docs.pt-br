@@ -1,0 +1,720 @@
+<Type Name="SortedDictionary&lt;TKey,TValue&gt;+KeyCollection" FullName="System.Collections.Generic.SortedDictionary&lt;TKey,TValue&gt;+KeyCollection">
+  <TypeSignature Language="C#" Value="public sealed class SortedDictionary&lt;TKey,TValue&gt;.KeyCollection : System.Collections.Generic.ICollection&lt;TKey&gt;, System.Collections.Generic.IEnumerable&lt;TKey&gt;, System.Collections.Generic.IReadOnlyCollection&lt;TKey&gt;, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi serializable sealed beforefieldinit SortedDictionary`2/KeyCollection&lt;TKey, TValue&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;!TKey&gt;, class System.Collections.Generic.IEnumerable`1&lt;!TKey&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;!TKey&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;TKey&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;TKey&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;TKey&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Generic.System_DictionaryKeyCollectionDebugView`2))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a coleção de chaves em um <see cref="T:System.Collections.Generic.SortedDictionary`2" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.Generic.SortedDictionary%602.Keys%2A?displayProperty=nameWithType> propriedade retorna uma instância desse tipo, que contém todas as chaves em que <xref:System.Collections.Generic.SortedDictionary%602>.  A ordem das chaves no <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection> é o mesmo que a ordem dos elementos no <xref:System.Collections.Generic.SortedDictionary%602>, o mesmo que a ordem dos valores associados a <xref:System.Collections.Generic.SortedDictionary%602.ValueCollection> retornado pelo <xref:System.Collections.Generic.SortedDictionary%602.Values%2A?displayProperty=nameWithType> propriedade.  
+  
+ O <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection> não é uma cópia estática; em vez disso, o <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection> refere-se novamente para as chaves no original <xref:System.Collections.Generic.SortedDictionary%602>. Portanto, as alterações para o <xref:System.Collections.Generic.SortedDictionary%602> continuar sejam refletidas no <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection>.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Um <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" /> pode dar suporte a vários leitores simultaneamente, desde que a coleção não é modificada.  Mesmo assim, enumerar através de uma coleção intrinsecamente não é um procedimento de thread-safe.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyCollection (System.Collections.Generic.SortedDictionary&lt;TKey,TValue&gt; dictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.SortedDictionary`2&lt;!TKey, !TValue&gt; dictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.#ctor(System.Collections.Generic.SortedDictionary{`0,`1})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Generic.SortedDictionary&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">O <see cref="T:System.Collections.Generic.SortedDictionary`2" /> cujas chaves são refletidas no novo <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" /> classe que reflete as chaves do <see cref="T:System.Collections.Generic.SortedDictionary`2" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection> não é uma cópia estática; em vez disso, o <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection> refere-se novamente para as chaves no original <xref:System.Collections.Generic.SortedDictionary%602>. Portanto, as alterações para o <xref:System.Collections.Generic.SortedDictionary%602> continuar sejam refletidas no <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection>.  
+  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dictionary" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (TKey[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!TKey[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="TKey[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz unidimensional que é o destino dos elementos copiados do <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia o <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" /> elementos em uma matriz unidimensional existente, começando no índice de matriz especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos são copiados para a matriz na mesma ordem em que o enumerador que itera por meio de <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que 0.</exception>
+        <exception cref="T:System.ArgumentException">O número de elementos na origem <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedDictionary`2.KeyCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos no <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />.</summary>
+        <value>O número de elementos contidos no <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A obtenção do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SortedDictionary&lt;TKey,TValue&gt;.KeyCollection.Enumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Generic.SortedDictionary`2/KeyCollection/Enumerator&lt;!TKey, !TValue&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SortedDictionary&lt;TKey,TValue&gt;+KeyCollection+Enumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />.</summary>
+        <returns>A estrutura <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection.Enumerator" /> do <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. Nesta posição, o <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.Current%2A> propriedade está definida. Por isso, você deve chamar o método <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.Current%2A>.  
+  
+ O <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.Current%2A> propriedade retorna o mesmo objeto até <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.MoveNext%2A> é chamado. <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.MoveNext%2A> define <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.Current%2A> está indefinido. Não é possível definir <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Enumerator.Current%2A> como o primeiro elemento da coleção novamente; você deve criar uma nova instância de enumerador em vez disso.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções no namespace <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;TKey&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;TKey&gt;.Add (TKey item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;TKey&gt;.Add(!TKey item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#Generic#ICollection&lt;TKey&gt;#Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser adicionado ao <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        <summary>Adiciona um item ao <see cref="T:System.Collections.Generic.ICollection`1" />.  Essa implementação sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Sempre gerada; a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;TKey&gt;.Clear">
+      <MemberSignature Language="C#" Value="void ICollection&lt;TKey&gt;.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;TKey&gt;.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#Generic#ICollection&lt;TKey&gt;#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens do <see cref="T:System.Collections.Generic.ICollection`1" />.  Essa implementação sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.Generic.ICollection%601.Count%2A> propriedade é definida como 0, e referências a outros objetos de elementos da coleção também são liberadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre gerada; a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;TKey&gt;.Contains">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;TKey&gt;.Contains (TKey item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;TKey&gt;.Contains(!TKey item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#Generic#ICollection&lt;TKey&gt;#Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser localizado no <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        <summary>Determina se o <see cref="T:System.Collections.Generic.ICollection`1" /> contém o valor especificado.</summary>
+        <returns>
+          <see langword="true" />Se o item está localizado no <see cref="T:System.Collections.Generic.ICollection`1" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações podem variar em como elas determinam a igualdade de objetos; Por exemplo, <xref:System.Collections.Generic.List%601> usa <xref:System.Collections.Generic.Comparer%601.Default%2A>, enquanto <xref:System.Collections.Generic.SortedDictionary%602> permite que o usuário especifique o <xref:System.Collections.Generic.IComparer%601> implementação a ser usado para comparação de chaves.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;TKey&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;TKey&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;TKey&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#Generic#ICollection&lt;TKey&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.Generic.ICollection`1" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.ICollection`1" /> for somente leitura; caso contrário, <see langword="false" />.  Na implementação padrão de <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção que seja somente leitura não permite a adição, a remoção ou a modificação de elementos após a coleção ser criada.  
+  
+ A obtenção do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;TKey&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;TKey&gt;.Remove (TKey item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;TKey&gt;.Remove(!TKey item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#Generic#ICollection&lt;TKey&gt;#Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a remover do <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        <summary>Remove a primeira ocorrência de um objeto específico do <see cref="T:System.Collections.Generic.ICollection`1" />.  Essa implementação sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <returns>
+          <see langword="true" />Se o item for removido com êxito o <see cref="T:System.Collections.Generic.ICollection`1" />; caso contrário, <see langword="false" />. Esse método também retorna <see langword="false" /> se o item não foi encontrado no <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações podem variar em como elas determinam a igualdade de objetos; Por exemplo, <xref:System.Collections.Generic.List%601> usa <xref:System.Collections.Generic.Comparer%601.Default%2A>, enquanto <xref:System.Collections.Generic.SortedDictionary%602> permite que o usuário especifique o <xref:System.Collections.Generic.IComparer%601> implementação a ser usado para comparação de chaves.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre gerada; a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;TKey&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;TKey&gt; IEnumerable&lt;TKey&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!TKey&gt; System.Collections.Generic.IEnumerable&lt;TKey&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#Generic#IEnumerable&lt;TKey&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera pela coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerator`1" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. Nesta posição, o <xref:System.Collections.Generic.IEnumerator%601.Current%2A> propriedade está definida. Por isso, você deve chamar o método <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+  
+ O <xref:System.Collections.Generic.IEnumerator%601.Current%2A> propriedade retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o próximo elemento.  
+  
+ Se <xref:System.Collections.IEnumerator.MoveNext%2A> passa o final da coleção, o enumerador está posicionado após o último elemento da coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna false. Quando o enumerador está nessa posição, chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornará false. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> está indefinido. Não é possível definir <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o primeiro elemento da coleção novamente; você deve criar uma nova instância de enumerador em vez disso.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções no namespace <xref:System.Collections.Generic> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz unidimensional que é o destino dos elementos copiados do <see cref="T:System.Collections.ICollection" />. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos de <see cref="T:System.Collections.ICollection" /> em uma matriz, começando em um índice de matriz específico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se o tipo da fonte de <xref:System.Collections.ICollection> não pode ser convertido automaticamente para o tipo de destino `array`, as implementações não genéricas de <xref:System.Collections.ICollection.CopyTo%2A?displayProperty=nameWithType> lançar um <xref:System.InvalidCastException>, enquanto as implementações genéricas lançam um <xref:System.ArgumentException>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.SortedDictionary%602.KeyCollection.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que 0.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O <paramref name="array" /> não tem indexação baseada em zero.  
+  
+ -ou-  
+  
+ O número de elementos na origem <see cref="T:System.Collections.ICollection" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.  
+  
+ -ou-  
+  
+ O tipo do <see cref="T:System.Collections.ICollection" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.ICollection" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.  Na implementação padrão de <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As implementações padrão de coleções no namespace <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ O <xref:System.Collections.ICollection.SyncRoot%2A> propriedade retorna um objeto que pode ser usado para sincronizar o acesso a <xref:System.Collections.ICollection>. A sincronização é eficaz somente se todos os threads de bloquear o objeto antes de acessar a coleção.  
+  
+ A obtenção do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.  Na implementação padrão da <see cref="T:System.Collections.Generic.SortedDictionary`2.KeyCollection" />, essa propriedade sempre retorna a instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As implementações padrão de coleções no namespace <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ O <xref:System.Collections.ICollection.SyncRoot%2A> propriedade retorna um objeto que pode ser usado para sincronizar o acesso a <xref:System.Collections.ICollection>. A sincronização é eficaz somente se todos os threads de bloquear o objeto antes de acessar a coleção. O código a seguir mostra o uso do <xref:System.Collections.ICollection.SyncRoot%2A> propriedade para c#, C++ e Visual Basic.  
+  
+```csharp  
+ICollection ic = ...;  
+lock (ic.SyncRoot)   
+{  
+    // Access the collection.  
+}  
+```  
+  
+```vb  
+Dim ic As ICollection = ...  
+SyncLock ic.SyncRoot  
+    ' Access the collection.  
+End SyncLock  
+```  
+  
+```cpp#  
+ICollection^ ic = ...;  
+try   
+{  
+    Monitor::Enter(ic->SyncRoot);  
+    // Access the collection.  
+}  
+finally   
+{  
+    Monitor::Exit(ic->SyncRoot);  
+}  
+```  
+  
+ A obtenção do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SortedDictionary`2.KeyCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera pela coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` em C++, `For Each` no Visual Basic) oculta a complexidade de enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, o <xref:System.Collections.IEnumerator.Current%2A> propriedade está definida. Por isso, você deve chamar o método <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ O <xref:System.Collections.IEnumerator.Current%2A> propriedade retorna o mesmo objeto até que o <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> é chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções no namespace <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

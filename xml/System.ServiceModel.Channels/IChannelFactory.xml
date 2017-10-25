@@ -1,0 +1,79 @@
+<Type Name="IChannelFactory" FullName="System.ServiceModel.Channels.IChannelFactory">
+  <TypeSignature Language="C#" Value="public interface IChannelFactory : System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannelFactory implements class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IChannelFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.ICommunicationObject</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define a interface que deve ser implementada por uma fábrica de canais para produzir canais.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IChannelFactory> interface representa a interface base para fábricas de canais.  
+  
+ Fábricas de canais e seus canais associados são geralmente usados pelos clientes que iniciam a comunicação de um serviço. Fábricas de ouvinte que implementam o <xref:System.ServiceModel.Channels.IChannelListener> interface e seus ouvintes associados, por outro lado, fornecem os mecanismos usados para aceitar os canais por meio do qual a comunicação com um serviço é iniciada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannelFactory.GetProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O objeto com tipo para o qual o método está consultando.</typeparam>
+        <summary>Retorna um objeto com tipo solicitado, se presente, a camada apropriada na pilha de canais.</summary>
+        <returns>O objeto de tipo <paramref name="T" /> solicitado, se estiver presente, ou <see langword="null" /> se não for.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use isto para solicitar um objeto de tipo como uma interface para definir propriedades ou obter o status da camada de apropriado na pilha de canais. Se uma camada de suporte para retornar o objeto solicitado, ele retorna. Caso contrário, ela delega a chamada para a próxima camada da pilha. Se ele obtém a parte inferior da pilha de nenhuma camada de canal suporte para o objeto solicitado e o método retornará `null`.  
+  
+ Você deve implementar <xref:System.ServiceModel.Channels.IChannelFactory.GetProperty%2A> sempre que você implementa uma fábrica de canais. <xref:System.ServiceModel.Channels.IChannelFactory.GetProperty%2A>é uma excelente maneira de comunicar informações ao longo da pilha de fábrica de canais sem precisar saber o que são fábricas de canais abaixo, ou quais fábricas de canais anteriormente, você estão interessadas na execução de consultas. Defina interfaces para as pessoas a consulta em quaisquer informações interessantes que você tem. Sempre que você não reconhece o argumento de tipo para <xref:System.ServiceModel.Channels.IChannelFactory.GetProperty%2A>, delegar até a fábrica de canais Avançar na pilha ou retornar `null` se você estiver criando um novo canal de transporte na parte inferior da pilha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

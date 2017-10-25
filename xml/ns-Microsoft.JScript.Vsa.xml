@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.JScript.Vsa">
+  <Docs>
+    <summary>O namespace Microsoft.JScript.Vsa contém interfaces que permitem a você integrar o Script para mecanismos de script do.NET Framework em JScript e compilar e executar o código em tempo de execução.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

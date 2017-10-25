@@ -1,0 +1,97 @@
+<Type Name="UpdatePanelControlTrigger" FullName="System.Web.UI.UpdatePanelControlTrigger">
+  <TypeSignature Language="C#" Value="public abstract class UpdatePanelControlTrigger : System.Web.UI.UpdatePanelTrigger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UpdatePanelControlTrigger extends System.Web.UI.UpdatePanelTrigger" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UpdatePanelControlTrigger" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.UpdatePanelTrigger</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base comum para controles que podem ser gatilhos para <see cref="T:System.Web.UI.UpdatePanel" /> controles.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UpdatePanelControlTrigger ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelControlTrigger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.UpdatePanelControlTrigger" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlID">
+      <MemberSignature Language="C#" Value="public string ControlID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanelControlTrigger.ControlID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que representa o <see cref="P:System.Web.UI.Control.ID" /> do controle que é um disparador para o <see cref="T:System.Web.UI.UpdatePanel" /> controle.</summary>
+        <value>Uma cadeia de caracteres que contém o <see cref="P:System.Web.UI.Control.ID" /> do controle. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.UpdatePanelControlTrigger.ControlID%2A> propriedade deve ser definida para a ID de um controle que implementa o <xref:System.Web.UI.INamingContainer>, <xref:System.Web.UI.IPostBackDataHandler>, ou <xref:System.Web.UI.IPostBackEventHandler> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindTargetControl">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Control FindTargetControl (bool searchNamingContainers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.UI.Control FindTargetControl(bool searchNamingContainers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchNamingContainers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="searchNamingContainers">Um valor booliano que indica se deve procurar recursivamente o controle na nomeação de contêineres que contêm atual <see cref="T:System.Web.UI.UpdatePanel" /> controle.</param>
+        <summary>Procura o controle especificado no <see cref="P:System.Web.UI.UpdatePanelControlTrigger.ControlID" /> propriedade.</summary>
+        <returns>Um controle que tem o ID correspondente o <see cref="P:System.Web.UI.UpdatePanelControlTrigger.ControlID" /> propriedade.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Web.UI.UpdatePanelControlTrigger.ControlID" /> propriedade o <see cref="T:System.Web.UI.UpdatePanelControlTrigger" /> é <see langword="null" /> ou vazio.  
+  
+ \- ou -  
+  
+ O controle com especificado <see cref="P:System.Web.UI.UpdatePanelControlTrigger.ControlID" /> não foi encontrado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

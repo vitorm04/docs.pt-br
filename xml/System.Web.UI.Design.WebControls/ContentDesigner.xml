@@ -1,0 +1,264 @@
+<Type Name="ContentDesigner" FullName="System.Web.UI.Design.WebControls.ContentDesigner">
+  <TypeSignature Language="C#" Value="public class ContentDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContentDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.ContentDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Estende o comportamento de tempo de design para o <see cref="T:System.Web.UI.WebControls.Content" /> controle de servidor Web.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ContentDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.ContentDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.ContentDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> objeto para este designer.</summary>
+        <value>O <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> associado a este designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.WebControls.ContentDesigner>Adicionar objetos <xref:System.ComponentModel.Design.DesignerActionItem> elementos para o <xref:System.ComponentModel.Design.DesignerActionListCollection> para o <xref:System.Web.UI.WebControls.Content> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowResize">
+      <MemberSignature Language="C#" Value="public override bool AllowResize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowResize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.ContentDesigner.AllowResize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle pode ser redimensionado na superfície do designer visual.</summary>
+        <value>
+          <see langword="true" /> se o controle puder ser redimensionado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml (System.Web.UI.Design.DesignerRegionCollection regions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml(class System.Web.UI.Design.DesignerRegionCollection regions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ContentDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="regions">O <see cref="T:System.Web.UI.Design.DesignerRegionCollection" /> associado com a marcação de tempo de design gerada pelo <see cref="M:System.Web.UI.Design.WebControls.ContentDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" />.</param>
+        <summary>Obtém a marcação que é usada para representar o controle em tempo de design especificado <see cref="T:System.Web.UI.Design.DesignerRegionCollection" /> objeto.</summary>
+        <returns>A marcação que é usada para representar o controle em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A marcação gerada pelo <xref:System.Web.UI.Design.WebControls.ContentDesigner.GetDesignTimeHtml%2A> inclui identificadores de região. <xref:System.Web.UI.Design.WebControls.ContentDesigner.GetDesignTimeHtml%2A>Adicione <xref:System.Web.UI.Design.DesignerRegion> elementos para o <xref:System.Web.UI.Design.DesignerRegionCollection> especificado pelo `regions` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override string GetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ContentDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> da qual obter o conteúdo.</param>
+        <summary>Obtém o conteúdo especificado <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> objeto.</summary>
+        <returns>A cadeia de caracteres de persistência para o conteúdo do <see cref="T:System.Web.UI.Design.EditableDesignerRegion" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.UI.Design.EditableDesignerRegion> elementos são definidos no <xref:System.Web.UI.Design.DesignerRegionCollection> e a marcação de tempo de design contém identificadores de região, o <xref:System.Web.UI.Design.WebControls.ContentDesigner.GetEditableDesignerRegionContent%2A> método é usado para retornar o conteúdo para cada <xref:System.Web.UI.Design.EditableDesignerRegion> no<xref:System.Web.UI.Design.DesignerRegionCollection>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPersistenceContent">
+      <MemberSignature Language="C#" Value="public override string GetPersistenceContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetPersistenceContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ContentDesigner.GetPersistenceContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a marcação interna do controle.</summary>
+        <returns>A marcação interna do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma região não é uma propriedade do controle, para que conteúdo persistente, esse método deve retornar a marcação HTML interna do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PostFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ContentDesigner.PostFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> objetos que representam as propriedades da classe do componente. As chaves no dicionário de propriedades são nomes de propriedade.</param>
+        <summary>Quando substituído em uma classe derivada, permite que um designer alterar ou remover itens do conjunto de propriedades que expõe por meio de um <see cref="T:System.ComponentModel.TypeDescriptor" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método fornece uma maneira de alterar ou remover itens no dicionário de propriedades que são expostas por meio de um <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ As chaves no dicionário de propriedades são os nomes das propriedades. Os objetos são do tipo <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ Neste método substituído, o designer limpa todas as propriedades, exceto <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A> e <xref:System.Web.UI.Design.ControlDesigner.ID%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Diretamente, você pode filtrar o dicionário que pode ser acessado por meio de <paramref name="properties" /> parâmetro, ou você pode deixá-la inalterada. Se você está substituindo esse método, chame a implementação base depois de executar seus próprios recursos de filtragem.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterEvents">
+      <MemberSignature Language="C#" Value="protected override void PreFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ContentDesigner.PreFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">O <see cref="T:System.ComponentModel.EventDescriptor" /> objetos que representam os eventos da classe do componente. As chaves no dicionário de eventos são nomes de evento.</param>
+        <summary>Quando substituído em uma classe derivada, permite que um designer adicionar itens ao conjunto de eventos que expõe por meio de um <see cref="T:System.ComponentModel.TypeDescriptor" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método fornece uma maneira de adicionar itens ao dicionário de eventos que expõe um designer por meio de um <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ As chaves no dicionário de eventos são os nomes dos eventos. Os objetos são do tipo <xref:System.ComponentModel.EventDescriptor>.  
+  
+ Neste método substituído, o designer limpa todos os eventos para este controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode modificar diretamente o dicionário que pode ser acessado por meio de <paramref name="events" /> parâmetro, ou você pode deixá-la inalterada. Se você está substituindo esse método, chame a implementação base antes de executar seu próprio processo de filtragem.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override void SetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ContentDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> no qual definir o conteúdo.</param>
+        <param name="content">A cadeia de caracteres de persistência para os <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> conteúdo.</param>
+        <summary>Define o conteúdo do <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores geralmente serão mantido o conteúdo para o controle ou uma propriedade que representa a região.  
+  
+ Se <xref:System.Web.UI.Design.EditableDesignerRegion> elementos são definidos no <xref:System.Web.UI.Design.DesignerRegionCollection> e a marcação de tempo de design contém identificadores de região, o <xref:System.Web.UI.Design.WebControls.ContentDesigner.SetEditableDesignerRegionContent%2A> método é usado para definir o conteúdo para cada <xref:System.Web.UI.Design.EditableDesignerRegion> no <xref:System.Web.UI.Design.DesignerRegionCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

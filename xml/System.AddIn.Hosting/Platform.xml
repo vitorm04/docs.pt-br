@@ -1,0 +1,113 @@
+<Type Name="Platform" FullName="System.AddIn.Hosting.Platform">
+  <TypeSignature Language="C#" Value="public enum Platform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed Platform extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.Platform" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os bits por palavra do processo no qual um suplemento de fora do processo é executado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra como o valor de enumeração afeta o bits por palavra do processo em diferentes sistemas operacionais:  
+  
+||Sistema operacional de 32 bits|Sistema operacional de 64 bits|  
+|-|------------------------------|------------------------------|  
+|Host|32 bits|Mesmo que o processo de host|  
+|AnyCPU|32 bits|64 bits|  
+|X86|32 bits|32 bits|  
+|X64|Exceção|64 bits|  
+||32 bits|N/D|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AnyCpu">
+      <MemberSignature Language="C#" Value="AnyCpu" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.Platform AnyCpu = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.Platform.AnyCpu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.Platform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O suplemento é carregado em um processo externo com o mesmo bits por palavra como o sistema operacional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ARM">
+      <MemberSignature Language="C#" Value="ARM" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.Platform ARM = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.Platform.ARM" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.Platform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O suplemento é carregado em um processo de 32 bits em um processador ARM.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="Host" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.Platform Host = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.Platform.Host" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.Platform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O suplemento é carregado em um processo externo com o mesmo bits por palavra como o processo do host.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="X64">
+      <MemberSignature Language="C#" Value="X64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.Platform X64 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.Platform.X64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.Platform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O suplemento é carregado em um processo externo de 64 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="X86">
+      <MemberSignature Language="C#" Value="X86" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.Platform X86 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.Platform.X86" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.Platform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O suplemento é carregado em um processo externo de 32 bits.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

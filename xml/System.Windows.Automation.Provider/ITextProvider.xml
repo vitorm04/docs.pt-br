@@ -1,0 +1,204 @@
+<Type Name="ITextProvider" FullName="System.Windows.Automation.Provider.ITextProvider">
+  <TypeSignature Language="C#" Value="public interface ITextProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITextProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.ITextProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("3589c92c-63f3-4367-99bb-ada653b77cf2")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades para dar suporte ao acesso do cliente de Automação da Interface do Usuário para controles que contêm texto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementado em um provedor de automação de interface do usuário que deve dar suporte a <xref:System.Windows.Automation.TextPattern> padrão de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DocumentRange">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider DocumentRange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Provider.ITextRangeProvider DocumentRange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITextProvider.DocumentRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um intervalo de texto que inclui o texto principal de um documento.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algum texto auxiliar, como cabeçalhos, notas ou anotações não pode ser incluído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelection">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider[] GetSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider[] GetSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextProvider.GetSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de intervalos de separação de texto associados com a seleção de texto atual ou seleções.</summary>
+        <returns>Uma coleção de intervalos de texto separado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para provedores de automação de interface do usuário que suportam a seleção de texto, o provedor deve implementar esse método e também retornar um <xref:System.Windows.Automation.Provider.ITextProvider.SupportedTextSelection%2A> valor.  
+  
+ Se nenhum texto estiver selecionado, <xref:System.Windows.Automation.Provider.ITextProvider.GetSelection%2A> retorna o intervalo de texto degenerado (intervalo vazio) na posição do cursor do sistema (ponto de inserção de texto).  
+  
+ Se o cursor do sistema (ponto de inserção de texto) não estiver presente, <xref:System.Windows.Automation.Provider.ITextProvider.GetSelection%2A> pode retornar uma referência nula (`Nothing` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Se o provedor de automação de interface do usuário não não seleção de texto de suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisibleRanges">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider[] GetVisibleRanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider[] GetVisibleRanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextProvider.GetVisibleRanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz de intervalos de texto separado de um contêiner de texto onde cada intervalo de texto começa com a primeira linha parcialmente visível por meio de até o final da última linha parcialmente visível.</summary>
+        <returns>A coleção de intervalos de texto visível dentro do contêiner ou uma matriz vazia. Uma referência nula (<see langword="Nothing" /> em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) nunca é retornada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Provedores de automação de interface do usuário devem garantir que elas retornam, no máximo, os intervalos de texto são visíveis dentro do contêiner.  
+  
+ Disjunção intervalos podem ocorrer quando qualquer conteúdo de um contêiner de texto é obscurecido por uma janela de sobreposição ou outro objeto, ou quando um contêiner de texto com um layout de várias coluna tem um ou mais colunas rolagem parcialmente fora da exibição de texto.  
+  
+ Se nenhum texto estiver visível, um intervalo de texto (vazio) degenerado é retornado. Esse intervalo vazio pode ser retornado se o contêiner de texto está vazio ou quando todo o texto é rolado para fora da exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeFromChild">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider RangeFromChild (System.Windows.Automation.Provider.IRawElementProviderSimple childElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider RangeFromChild(class System.Windows.Automation.Provider.IRawElementProviderSimple childElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextProvider.RangeFromChild(System.Windows.Automation.Provider.IRawElementProviderSimple)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="childElement" Type="System.Windows.Automation.Provider.IRawElementProviderSimple" />
+      </Parameters>
+      <Docs>
+        <param name="childElement">O objeto contido.</param>
+        <summary>Recupera um intervalo de texto que envolve um elemento filho, como uma imagem, hiperlink ou outro objeto inserido.</summary>
+        <returns>Um intervalo que abrange o elemento filho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor de automação de interface do usuário deve verificar que o elemento passado é um filho do recipiente de texto.  
+  
+ Se não houver nenhum texto no intervalo em que o elemento filho existe, um intervalo de degenerado (vazio) será retornado.  
+  
+ O `childElement` parâmetro é um filho do <xref:System.Windows.Automation.AutomationElement> associado com um <xref:System.Windows.Automation.TextPattern> ou da matriz de filhos de um <xref:System.Windows.Automation.Text.TextPatternRange>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Se o elemento filho for uma referência nula (<see langword="Nothing" /> em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeFromPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.ITextRangeProvider RangeFromPoint (System.Windows.Point screenLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.ITextRangeProvider RangeFromPoint(valuetype System.Windows.Point screenLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITextProvider.RangeFromPoint(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.ITextRangeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="screenLocation" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="screenLocation">O local em coordenadas da tela.</param>
+        <summary>Retorna o intervalo de texto (vazio) degenerado mais próximos as coordenadas de tela especificado.</summary>
+        <returns>Um intervalo degenerado mais próximo do local especificado. Uma referência nula (<see langword="Nothing" /> em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) nunca é retornada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um intervalo de texto que inclui um objeto filho será retornado se as coordenadas de tela são em coordenadas de uma imagem, hiperlink ou outro objeto inserido.  
+  
+ Como texto oculto não é ignorado por <xref:System.Windows.Automation.Provider.ITextProvider.RangeFromPoint%2A> um intervalo degenerado do texto visível próximo ao ponto especificado será retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Se um determinado ponto estiver fora do [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento associado com o padrão de texto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedTextSelection">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.SupportedTextSelection SupportedTextSelection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.SupportedTextSelection SupportedTextSelection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITextProvider.SupportedTextSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.SupportedTextSelection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se um provedor de texto oferece suporte a seleção e, em caso afirmativo, suporte para o tipo de seleção.</summary>
+        <value>Um dos <see langword="None" />, <see langword="Single" />, ou <see langword="Multiple" /> de <see cref="T:System.Windows.Automation.SupportedTextSelection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

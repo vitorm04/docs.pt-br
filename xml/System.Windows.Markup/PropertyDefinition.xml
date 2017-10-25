@@ -1,0 +1,137 @@
+<Type Name="PropertyDefinition" FullName="System.Windows.Markup.PropertyDefinition">
+  <TypeSignature Language="C#" Value="public class PropertyDefinition : System.Windows.Markup.MemberDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyDefinition extends System.Windows.Markup.MemberDefinition" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.PropertyDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MemberDefinition</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Oferece suporte a uma técnica de marcação da definição de propriedades de uma classe em XAML declarativa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Suporte para o recurso geral de definição de membros de uma classe em XAML declarativa não é autossuficiente nessa API. Essa API fornece somente as definições de marcação que possibilitam as declarações em XAML. A manipulação de tarefa de compilação real de como esse XAML é interpretado é específica para tarefas de compilação individual e as estruturas ou tecnologias que faz referência a eles.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.PropertyDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.PropertyDefinition" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Attribute&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Attribute&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.PropertyDefinition.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Attribute&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de atributos associados do CLR.</summary>
+        <value>Uma lista de atributos associados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifier">
+      <MemberSignature Language="C#" Value="public string Modifier { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Modifier" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.PropertyDefinition.Modifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de acesso da propriedade definida.</summary>
+        <value>O nível de acesso da propriedade definido, como uma cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres fornecida aqui é interpretada no contexto da ação de compilação. Ações de compilação são potencialmente dependentes de idioma e pode usar as convenções de nível de palavra-chave de acesso do idioma.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.PropertyDefinition.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade para definir.</summary>
+        <value>O nome da propriedade para definir.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlType Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.PropertyDefinition.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Xaml.Schema.XamlTypeTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Xaml.XamlType" /> da propriedade para definir.</summary>
+        <value>O identificador de tipo XAML da propriedade para definir.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade usa a conversão de tipo por meio de <xref:System.Xaml.Schema.XamlTypeTypeConverter>, conforme indicado a <xref:System.ComponentModel.TypeConverterAttribute> aplicado à propriedade em sua definição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

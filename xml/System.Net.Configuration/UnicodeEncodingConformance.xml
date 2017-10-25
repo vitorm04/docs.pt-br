@@ -1,0 +1,75 @@
+<Type Name="UnicodeEncodingConformance" FullName="System.Net.Configuration.UnicodeEncodingConformance">
+  <TypeSignature Language="C#" Value="public enum UnicodeEncodingConformance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UnicodeEncodingConformance extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.UnicodeEncodingConformance" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Controla como os caracteres Unicode são produzidos pelo <see cref="Overload:System.Net.WebUtility.HtmlEncode" /> métodos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como caracteres Unicode devem ser codificada em HTML, consulte [usar o caractere de escape na marcação e CSS](http://go.microsoft.com/fwlink/?LinkId=256607).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.UnicodeEncodingConformance Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.UnicodeEncodingConformance.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.UnicodeEncodingConformance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o comportamento automático. O comportamento de codificação Unicode é determinado pelo Framework de destino do aplicativo atual. Para [!INCLUDE[net_v45](~/includes/net-v45-md.md)] e posterior, o comportamento de codificação de Unicode é estrito.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Compat">
+      <MemberSignature Language="C#" Value="Compat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.UnicodeEncodingConformance Compat = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.UnicodeEncodingConformance.Compat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.UnicodeEncodingConformance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o comportamento compatível. Especifica que os pontos de código de substitutos UTF-16 individuais são saída como-quando um dos <see cref="Overload:System.Net.WebUtility.HtmlEncode" /> métodos é chamado. Por exemplo, dada uma cadeia de caracteres "\uD84C\uDFB4" (ou "\U000233B4"), a saída de <see cref="Overload:System.Net.WebUtility.HtmlEncode" /> é "\uD84C\uDFB4" (a entrada não é codificada).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strict">
+      <MemberSignature Language="C#" Value="Strict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Configuration.UnicodeEncodingConformance Strict = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Configuration.UnicodeEncodingConformance.Strict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.UnicodeEncodingConformance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use comportamento estrito. Especifica que os pontos individuais de código de substitutos UTF-16 são combinados em um único ponto de código quando um do <see cref="Overload:System.Net.WebUtility.HtmlEncode" /> métodos é chamado. Por exemplo, dada a cadeia de caracteres de entrada "\uD84C\uDFB4" (ou "\U000233B4"), a saída de <see cref="Overload:System.Net.WebUtility.HtmlEncode" /> métodos é "&amp;#144308;".  
+  
+ Se a entrada for uma cadeia de caracteres UTF-16 malformada (ele contém substitutos não emparelhados, por exemplo), os pontos de código incorreto serão substituídos por U + FFFD (caractere de substituição Unicode) antes de ser codificada em HTML.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

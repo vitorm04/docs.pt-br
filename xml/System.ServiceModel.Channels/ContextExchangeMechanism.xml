@@ -1,0 +1,84 @@
+<Type Name="ContextExchangeMechanism" FullName="System.ServiceModel.Channels.ContextExchangeMechanism">
+  <TypeSignature Language="C#" Value="public enum ContextExchangeMechanism" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ContextExchangeMechanism extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ContextExchangeMechanism" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se um cookie HTTP ou um cabeçalho SOAP é o mecanismo usado para contexto de uma conversa entre um cliente e o serviço do exchange.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> propriedade ou o <xref:System.ServiceModel.Channels.ContextBindingElement.%23ctor%28System.Net.Security.ProtectionLevel%2CSystem.ServiceModel.Channels.ContextExchangeMechanism%29> construtor para especificar o valor da <xref:System.ServiceModel.Channels.ContextExchangeMechanism> para uma conversa entre um cliente e o serviço.  
+  
+ Pontos de extremidade de serviço que requer suporte para o protocolo de intercâmbio de contexto podem tornar esse requisito explícito em sua política publicada. Declarações de política que representam o requisito para o cliente suportar o protocolo de intercâmbio de contexto no nível de SOAP ou que exigem a habilitação do suporte a cookie HTTP podem ser publicadas por um ponto de extremidade. A geração dessas declarações para a diretiva do serviço é controlada pelo valor da <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> propriedade da seguinte maneira:  
+  
+-   Para HttpCookie, a declaração a seguir é gerada:  
+  
+    ```  
+    <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
+    ```  
+  
+-   Para ContextSoapHeader, a declaração a seguir é gerada:  
+  
+    ```  
+    <IncludeContext   
+    xmlns="http://schemas.microsoft.com/ws/2006/05/context"  
+    protectionLevel="Sign" />  
+    ```  
+  
+ A enumeração HttpCookie é implementada na camada de transporte. Isso pode ser usado no caso de comunicação simples, onde o cliente faz uma solicitação inicial e o contexto é fornecido pelo serviço de resposta correspondente. Todas as mensagens subsequentes entre o serviço e o cliente para o tempo de vida da conversa contém o contexto. Para pontos de extremidade de serviço que usam um transporte HTTP e os clientes que concordam em permitir que o uso de cookies HTTP, a enumeração HttpCookie pode ser usada para trocar o contexto do aplicativo. Quando HTTP cookies são usados para propagar o contexto, eles devem ser protegidos usando a segurança de transporte. Esse mecanismo não pode ser usado com transportes não HTTP.  
+  
+ A enumeração de ContextSoapHeader fornece uma alternativa que é implementado em um canal de contexto personalizado e que pode ser usado com transportes não HTTP e outro padrão de troca de mensagens, como solicitação-resposta e uma sessão duplex. Esse protocolo de troca de contexto fornece um equivalente baseado em SOAP do recurso oferecido por cookies HTTP na camada de transporte. Apresenta um novo `wsc:Context` cabeçalho SOAP para representar as informações de contexto. O `wsc:Context` cabeçalho deve ser protegido contra modificações ao mesmo tempo em trânsito pela mesma razão como cabeçalhos de WS-Addressing devem ser protegidos: na chegada, esses cabeçalhos são usados para enviar a mensagem para as instâncias de fluxo de trabalho correto. O `wsc:Context` cabeçalho, portanto, é necessário ser assinada digitalmente no nível de transporte ou SOAP quando a associação oferece o recurso de proteção de mensagem.  
+  
+ A camada do canal comunica-se o contexto de e para a camada de aplicativo usando <xref:System.ServiceModel.Channels.ContextMessageProperty>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContextSoapHeader">
+      <MemberSignature Language="C#" Value="ContextSoapHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.ContextExchangeMechanism ContextSoapHeader = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.ContextExchangeMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um cabeçalho SOAP é usado para a troca de contexto. Isso é o mecanismo de troca padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpCookie">
+      <MemberSignature Language="C#" Value="HttpCookie" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.ContextExchangeMechanism HttpCookie = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.ContextExchangeMechanism</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um cookie HTTP é usado para a troca de contexto.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

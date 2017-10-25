@@ -1,0 +1,102 @@
+<Type Name="TypeBrowserEditor" FullName="System.Workflow.ComponentModel.Design.TypeBrowserEditor">
+  <TypeSignature Language="C#" Value="public class TypeBrowserEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TypeBrowserEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.TypeBrowserEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma interface de usuário para representar e editar os valores de tipos de Windows Workflow Foundation em um navegador de objeto associado a um designer de fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Essa classe permite aos usuários abrir pesquisadores de objetos associados a qualquer designer de fluxo de trabalho e exibir todos os tipos e membros que residem nos namespaces Windows Workflow Foundation.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeBrowserEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Design.TypeBrowserEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, IServiceProvider serviceProvider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext, class System.IServiceProvider serviceProvider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <param name="serviceProvider">Um <see cref="T:System.IServiceProvider" /> que o editor pode usar para obter serviços.</param>
+        <param name="value">O <see cref="T:System.Object" /> para editar.</param>
+        <summary>Edições, o valor do objeto especificado usando o estilo de editor é indicado pelo <see cref="Overload:System.Workflow.ComponentModel.Design.TypeBrowserEditor.GetEditStyle" />.</summary>
+        <returns>O novo valor do objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="typeDescriptorContext" />ou <paramref name="serviceProvider" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.Exception">
+          <see cref="M:System.IServiceProvider.GetService(System.Type)" />Retorna uma referência nula (<see langword="Nothing" />) quando ele tenta obter o provedor de tipo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext typeDescriptorContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext typeDescriptorContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.TypeBrowserEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeDescriptorContext" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="typeDescriptorContext">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <summary>Retorna o estilo de editor usado pelo <see cref="Overload:System.Workflow.ComponentModel.Design.TypeBrowserEditor.EditValue" /> método.</summary>
+        <returns>Um <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> valor que indica o estilo do editor usado pelo <see cref="Overload:System.Workflow.ComponentModel.Design.TypeBrowserEditor.EditValue" />. A menos que substituído por uma classe herdada, este método retorna <see cref="F:System.Drawing.Design.UITypeEditorEditStyle.Modal" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

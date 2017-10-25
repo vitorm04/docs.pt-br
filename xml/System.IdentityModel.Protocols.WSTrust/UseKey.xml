@@ -1,0 +1,165 @@
+<Type Name="UseKey" FullName="System.IdentityModel.Protocols.WSTrust.UseKey">
+  <TypeSignature Language="C#" Value="public class UseKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UseKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.UseKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o conteúdo do elemento wst:UseKey.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento opcional permite que o cliente solicite o provedor de identidade para emitir um token que contém a chave pública que é especificada no elemento wst:UseKey. No entanto, o cliente tem que comprovar a posse da chave. Em uma mensagem SOAP baseada em WS-Security, o cliente pode adicionar seu certificado como um token de endosso ao cabeçalho de segurança para comprovar a posse da chave.  
+  
+ Para obter mais informações sobre o elemento que essa classe representa, consulte a versão da especificação WS-Trust que se aplica ao seu cenário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UseKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.UseKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Protocols.WSTrust.UseKey" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor para extensibilidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UseKey (System.IdentityModel.Tokens.SecurityKeyIdentifier ski);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityKeyIdentifier ski) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.UseKey.#ctor(System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ski" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="ski">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> que representa a chave existente que deve ser usada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.UseKey" /> classe usando o identificador de chave de segurança especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor se o solicitante sabe como converter o token para um identificador de chave de segurança ou se o token já é um identificador de chave de segurança.  
+  
+ O <xref:System.IdentityModel.Protocols.WSTrust.UseKey.Token%2A> está definida como `null` no novo <xref:System.IdentityModel.Protocols.WSTrust.UseKey> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UseKey (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.UseKey.#ctor(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa a chave existente que deve ser usada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.UseKey" /> classe usando o token de segurança especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Protocols.WSTrust.UseKey.SecurityKeyIdentifier%2A> está definida como `null` no novo <xref:System.IdentityModel.Protocols.WSTrust.UseKey> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UseKey (System.IdentityModel.Tokens.SecurityKeyIdentifier ski, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityKeyIdentifier ski, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.UseKey.#ctor(System.IdentityModel.Tokens.SecurityKeyIdentifier,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ski" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="ski">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> que representa a chave existente que deve ser usada.</param>
+        <param name="token">Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa a chave existente que deve ser usada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.UseKey" /> classe usando o identificador de chave de segurança especificado e o token de segurança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para passar mais informações para o serviço de token de segurança (STS) do serializador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKeyIdentifier">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifier SecurityKeyIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityKeyIdentifier SecurityKeyIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.UseKey.SecurityKeyIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de chave de segurança</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> que representa o identificador de chave de segurança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken Token { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityToken Token" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.UseKey.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o token de segurança se o serializador não é possível convertê-la para o identificador de chave de segurança.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

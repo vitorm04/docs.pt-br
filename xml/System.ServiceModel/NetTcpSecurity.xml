@@ -1,0 +1,180 @@
+<Type Name="NetTcpSecurity" FullName="System.ServiceModel.NetTcpSecurity">
+  <TypeSignature Language="C#" Value="public sealed class NetTcpSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NetTcpSecurity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.NetTcpSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os tipos de segurança dos níveis de transporte e de mensagem usados por um ponto de extremidade configurado com um <see cref="T:System.ServiceModel.NetTcpBinding" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada uma das associações padrão fornece parâmetros para controlar os requisitos de segurança de transferência. Normalmente, esses parâmetros incluem o modo de segurança especificado se a segurança de nível de mensagem ou nível de transporte é usada e a escolha do tipo de credencial de cliente. Com base na escolha das opções esses parâmetros presentes, uma pilha de canais é construído com a segurança apropriada.  
+  
+ As associações fornecidas pelo sistema fornecidas pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] são um conjunto projetado para atender a alguns dos requisitos do cenário mais comuns. Cada uma dessas vinculações permite a especificação dos requisitos de segurança para alguns cenários de destino específicos.  
+  
+ <xref:System.ServiceModel.NetTcpSecurity>Fornece as especificações de segurança para <xref:System.ServiceModel.NetTcpBinding>. Isso é uma associação segura, confiável e otimizada adequada para comunicação entre computadores. Por padrão, ele gera uma pilha de comunicação de tempo de execução que oferece suporte a TCP para entrega de mensagens e a segurança do Windows para segurança de mensagem e autenticação, WS-ReliableMessaging de confiabilidade e a codificação de mensagem binária.  
+  
+ Essa classe é instanciada pelo <xref:System.ServiceModel.NetTcpBinding>e pode ser acessado por uma propriedade somente leitura chamada <xref:System.ServiceModel.NetTcpBinding.Security%2A>. Como essa propriedade é somente leitura, você não pode fazer alterações para o objeto retornado. Se você quiser controlar a criação do <xref:System.ServiceModel.NetTcpSecurity> do objeto, você pode derivar uma classe de <xref:System.ServiceModel.NetTcpBinding>.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como recuperar o <xref:System.ServiceModel.NetTcpSecurity> de objeto um <xref:System.ServiceModel.NetTcpBinding> e imprime as várias configurações que ele contém:  
+  
+ [!code-csharp[S_UE_TcpSecurity#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_tcpsecurity/cs/service.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetTcpSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.NetTcpSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.NetTcpSecurity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageSecurityOverTcp Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.MessageSecurityOverTcp Message" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetTcpSecurity.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityOverTcp</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de requisitos de segurança de nível de mensagem para um serviço configurado com um <see cref="T:System.ServiceModel.NetTcpBinding" />.</summary>
+        <value>O <see cref="T:System.ServiceModel.MessageSecurityOverTcp" /> que indica o tipo de requisitos de segurança de nível de mensagem para um ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.NetTcpSecurity.Message%2A>usa mensagem de nível de segurança para a integridade e confidencialidade da mensagem SOAP e para a autenticação mútua de pares de comunicação. Se este modo de segurança é selecionado em uma associação, a pilha de canais é configurada com elementos de associação de segurança de mensagem e as mensagens SOAP são protegidas em conformidade com o WS-Security * padrões.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_TcpSecurity#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_tcpsecurity/cs/service.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.SecurityMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.SecurityMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetTcpSecurity.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.SecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a segurança de nível de transporte e a segurança de nível de mensagem serão usadas por um ponto de extremidade configurado com um <see cref="T:System.ServiceModel.NetTcpBinding" />.</summary>
+        <value>Um valor de <see cref="T:System.ServiceModel.SecurityMode" /> que indica se a segurança de nível de mensagem ou a segurança de nível de transporte é usada por um ponto de extremidade. O valor padrão é <see cref="F:System.ServiceModel.SecurityMode.Transport" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modo de segurança determina o tipo de segurança necessário para um ponto de extremidade. [!INCLUDE[indigo1](~/includes/indigo1-md.md)]segurança oferece uma variedade de mecanismos para proteger a transferência de mensagens que estão configurados com as associações fornecidas pelo sistema. Cada uma das associações suporta um subconjunto desses modos de segurança. O modo determina os mecanismos pelos quais mensagem funções de segurança de transferência (integridade, confidencialidade e autenticação) são necessárias.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_TcpSecurity#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_tcpsecurity/cs/service.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não está definido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.TcpTransportSecurity Transport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.TcpTransportSecurity Transport" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.NetTcpSecurity.Transport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TcpTransportSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo dos requisitos de segurança em nível de mensagem de um ponto de extremidade configurado com um <see cref="T:System.ServiceModel.NetTcpBinding" />.</summary>
+        <value>O <see cref="T:System.ServiceModel.TcpTransportSecurity" /> que indica o tipo de requisitos de segurança em nível de transporte de um ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.ServiceModel.NetTcpSecurity.Transport%2A> segurança para integridade e confidencialidade da mensagem SOAP e de autenticação mútua. Se este modo de segurança é selecionado em uma associação, a pilha de canais é configurada por meio de um transporte seguro e as mensagens SOAP são protegidas usando a segurança de transporte, como HTTPS ou SSL sobre TCP.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_TcpSecurity#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_tcpsecurity/cs/service.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

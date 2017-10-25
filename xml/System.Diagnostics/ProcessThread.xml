@@ -1,0 +1,786 @@
+<Type Name="ProcessThread" FullName="System.Diagnostics.ProcessThread">
+  <TypeSignature Language="C#" Value="public class ProcessThread : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProcessThread extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.ProcessThread" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Process</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Diagnostics.Design.ProcessThreadDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um thread de processo do sistema operacional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Diagnostics.ProcessThread> para obter informações sobre um thread que está sendo executado no sistema. Isso permite, por exemplo, para monitorar as características de desempenho do thread.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Um thread é um caminho de execução por meio de um programa. É a menor unidade de execução que a agenda de Win32. Ele consiste em uma pilha, o estado de registros de CPU e uma entrada na lista de execução do Agendador de sistema.  
+  
+ Um processo consiste em um ou mais threads e o código, dados e outros recursos de um programa na memória. Recursos do programa típicos são arquivos abertos, semáforos e a memória alocada dinamicamente. Cada recurso de um processo é compartilhado por todos os threads de processo.  
+  
+ Um programa é executado quando o Agendador de sistema fornece controle de execução para um dos threads do programa. O Agendador determina quais segmentos devem ser executado e quando. Um thread de prioridade mais baixa pode ser forçado para aguardar enquanto os threads de prioridade mais alta concluem suas tarefas. Em computadores com vários processadores, o Agendador pode mover segmentos individuais para processadores diferentes, assim, balanceamento de carga de CPU.  
+  
+ Cada processo começa com um único thread, o que é conhecido como o thread principal. Qualquer thread pode criar threads adicionais. Todos os threads em um processo compartilham o espaço de endereço do processo.  
+  
+ O thread principal não é necessariamente localizado no primeiro índice na coleção.  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, a capacidade de dados do contador de desempenho de referência em outros computadores foi eliminada para muitas das propriedades e métodos do .NET Framework. Essa alteração foi feita para melhorar o desempenho e permitir a não administradores usem o <xref:System.Diagnostics.ProcessThread> classe. Como resultado, alguns aplicativos que não obtiveram exceções em versões anteriores do .NET Framework agora podem obter um <xref:System.NotSupportedException>. Os métodos e propriedades afetadas são muito numerosos para serem listados aqui, mas as informações de exceção foi adicionadas para os tópicos de membro afetados.  
+  
+ Os threads de um processo execute individualmente e não estiver ciente uns dos outros, a menos que você torná-las visíveis uns aos outros. No entanto, os threads que compartilham recursos comuns, devem coordenar o trabalho deles usando semáforos ou outro método de comunicação entre processos.  
+  
+ Para obter uma coleção de todos os a <xref:System.Diagnostics.ProcessThread> objetos associados com o processo atual, obter o <xref:System.Diagnostics.Process.Threads%2A> propriedade o <xref:System.Diagnostics.Process> instância.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BasePriority">
+      <MemberSignature Language="C#" Value="public int BasePriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BasePriority" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.BasePriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The base priority of this thread.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a prioridade base do thread.</summary>
+        <value>A prioridade base do segmento, que calcula o sistema operacional, combinando a classe de prioridade do processo com o nível de prioridade do thread associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.ProcessThread.BasePriority%2A> é a prioridade inicial para o thread de processo. Você pode exibir informações sobre a prioridade base por meio de contador Base de prioridade do Monitor do sistema.  
+  
+ O sistema operacional calcula a prioridade base do thread, combinando o intervalo de nível de prioridade do thread com classe de prioridade do processo. Você pode definir o processo <xref:System.Diagnostics.Process.PriorityClass%2A?displayProperty=nameWithType> propriedade para um dos valores a <xref:System.Diagnostics.ProcessPriorityClass> enumeração, que são <xref:System.Diagnostics.ProcessPriorityClass.Idle>, <xref:System.Diagnostics.ProcessPriorityClass.Normal>, <xref:System.Diagnostics.ProcessPriorityClass.High>, <xref:System.Diagnostics.ProcessPriorityClass.AboveNormal>, <xref:System.Diagnostics.ProcessPriorityClass.BelowNormal>, ou <xref:System.Diagnostics.ProcessPriorityClass.RealTime>. Você pode definir o thread <xref:System.Diagnostics.ProcessThread.PriorityLevel%2A> propriedade a um intervalo de valores dos limites da prioridade básica do thread. Win32 usa quatro classes de prioridade com sete níveis de prioridade básica por classe.  
+  
+ A prioridade do segmento atual pode evitar a prioridade base. Por exemplo, o sistema operacional pode alterar o <xref:System.Diagnostics.ProcessThread.CurrentPriority%2A> propriedade com base no tempo decorrido ou outros aumenta quando um processo deve ser colocada antes dos outros para acesso ao processador. Além disso, você pode definir o <xref:System.Diagnostics.Process.PriorityBoostEnabled%2A> propriedade para fazer com que o sistema para temporariamente aumentar a prioridade de thread sempre que o processo fica fora do estado de espera. A prioridade será redefinida quando o processo de volta para o estado de espera.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPriority">
+      <MemberSignature Language="C#" Value="public int CurrentPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.CurrentPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The current priority of this thread.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a prioridade de thread atual.</summary>
+        <value>A prioridade atual do thread, pode desviar da prioridade de base com base em como o sistema operacional está programando o thread. A prioridade pode ser ampliada temporariamente para um thread ativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A prioridade do segmento atual pode evitar a prioridade base. Por exemplo, o sistema operacional pode alterar o <xref:System.Diagnostics.ProcessThread.CurrentPriority%2A> propriedade com base no tempo decorrido ou outros aumenta, quando um processo deve ser colocada antes dos outros para acesso ao processador. Além disso, você pode definir o <xref:System.Diagnostics.Process.PriorityBoostEnabled%2A> propriedade para fazer com que o sistema para temporariamente aumentar a prioridade de thread sempre que o processo fica fora do estado de espera. A prioridade será redefinida quando o processo de volta para o estado de espera.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The ID of this thread.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador exclusivo do thread.</summary>
+        <value>O identificador exclusivo associado a um segmento específico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema operacional reutiliza os números de identificação de thread, que identificam os threads somente durante suas vidas úteis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdealProcessor">
+      <MemberSignature Language="C#" Value="public int IdealProcessor { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IdealProcessor" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.IdealProcessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o processador preferencial para execução desse thread.</summary>
+        <value>O processador preferencial para o thread, usado quando o sistema agenda threads, para determinar em qual processador o thread deve ser executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.ProcessThread.IdealProcessor%2A> valor é baseado em zero.  Em outras palavras, para definir a afinidade de thread para o primeiro processador, defina a propriedade como zero.  
+  
+ O sistema agenda threads em seus processadores preferenciais sempre que possível.  
+  
+ Um thread de processo pode ser migrados do processador, com cada migração recarregando o cache do processador. Especificar um processador para um thread pode melhorar o desempenho sob cargas de sistema pesadas, reduzindo o número de vezes que o cache de processador é recarregado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como definir a <xref:System.Diagnostics.ProcessThread.IdealProcessor%2A> propriedade para uma instância do bloco de notas para o primeiro processador.  
+  
+ [!code-csharp[ProcessThreadIdealProcessor#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessThreadIdealProcessor/CS/program.cs#1)]
+ [!code-vb[ProcessThreadIdealProcessor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessThreadIdealProcessor/VB/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">O sistema não pôde definir o thread para ser iniciado no processador especificado.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PriorityBoostEnabled">
+      <MemberSignature Language="C#" Value="public bool PriorityBoostEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PriorityBoostEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.PriorityBoostEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Thread gets a priority boot when interactively used by a user.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o sistema operacional deve aumentar temporariamente a prioridade do thread associado sempre que a janela principal do processo do thread recebe o foco.</summary>
+        <value>
+          <see langword="true" />para aumentar a prioridade do segmento quando o usuário interage com o processo da interface; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Diagnostics.ProcessThread.PriorityBoostEnabled%2A> é `true`, o sistema aumenta a prioridade do segmento temporariamente sempre que o processo associado é realizado fora do estado de espera. Essa ação impede que outros processos a interromper o processamento do thread atual. O <xref:System.Diagnostics.ProcessThread.PriorityBoostEnabled%2A> configuração afeta todos os threads existentes, bem como qualquer threads criados posteriormente pelo processo. Para restaurar o comportamento normal, defina o <xref:System.Diagnostics.Process.PriorityBoostEnabled%2A> propriedade `false`.  
+  
+ <xref:System.Diagnostics.ProcessThread.PriorityBoostEnabled%2A>tem efeito somente quando o thread está em execução em um processo que tenha uma <xref:System.Diagnostics.Process.PriorityClass%2A> definido como um dos valores de enumeração prioridade dinâmica (<xref:System.Diagnostics.ProcessPriorityClass.Normal>, <xref:System.Diagnostics.ProcessPriorityClass.High>, ou <xref:System.Diagnostics.ProcessPriorityClass.RealTime>).  
+  
+> [!NOTE]
+>  Aumentando demais a prioridade pode esgotar os recursos essenciais do sistema operacional e as funções de rede. Isso pode causar problemas com outras tarefas do sistema operacional.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Não foi possível recuperar as informações de aumento de prioridade.  
+  
+ -ou-  
+  
+ Não foi possível definir as informações de aumento de prioridade.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PriorityLevel">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.ThreadPriorityLevel PriorityLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.ThreadPriorityLevel PriorityLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.PriorityLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The priority level of this thread.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ThreadPriorityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de prioridade do thread.</summary>
+        <value>Uma da <see cref="T:System.Diagnostics.ThreadPriorityLevel" /> valores, especificando um intervalo de limites de prioridade do thread.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nível de prioridade não é um único valor, mas em vez disso, um intervalo de valores. O sistema operacional calcula a prioridade do segmento base por meio do processo <xref:System.Diagnostics.Process.PriorityClass%2A> para escolher um valor do intervalo especificado na <xref:System.Diagnostics.ProcessThread.PriorityLevel%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Não foi possível recuperar as informações de nível de prioridade de thread.  
+  
+ -ou-  
+  
+ Não foi possível definir o nível de prioridade de thread.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivilegedProcessorTime">
+      <MemberSignature Language="C#" Value="public TimeSpan PrivilegedProcessorTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PrivilegedProcessorTime" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.PrivilegedProcessorTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The amount of CPU time used in privileged mode.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade de tempo que o thread gastou executando código dentro do núcleo do sistema operacional.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> indicando a quantidade de tempo que o thread gastou executando código dentro do núcleo do sistema operacional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Windows usa vários mecanismos de proteção diferentes e na raiz de todas elas é a diferença entre o modo de usuário e o modo privilegiado. <xref:System.Diagnostics.ProcessThread.PrivilegedProcessorTime%2A>corresponde à quantidade de tempo que o aplicativo passou em execução no modo privilegiado, dentro do núcleo do sistema operacional. O <xref:System.Diagnostics.ProcessThread.UserProcessorTime%2A> propriedade indica a quantidade de tempo que o aplicativo de gastou executando código no modo de usuário, fora do núcleo do sistema.  
+  
+ Modo de usuário restringe o aplicativo de duas maneiras importantes. Primeiro, o aplicativo não pode acessar diretamente os periféricos, mas em vez disso, deve chamar o núcleo do sistema operacional para obter ou definir dados periféricos. O sistema operacional pode, portanto, certifique-se de que um aplicativo não destruir dados periféricos que é necessária para outro. Segundo, o aplicativo não pode ler ou alterar dados que mantém o próprio sistema operacional. Essa restrição impede que aplicativos inadvertidamente ou intencionalmente corrupção do núcleo. Se o aplicativo precisa que o sistema operacional para executar uma operação, ele chama rotinas do sistema. Muitos desses transição para o modo privilegiado, executar a operação e retornar sem problemas para o modo de usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Não foi possível recuperar o tempo do thread.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessorAffinity">
+      <MemberSignature Language="C#" Value="public IntPtr ProcessorAffinity { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ProcessorAffinity" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.ProcessorAffinity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define os processadores em que o thread associado pode ser executado.</summary>
+        <value>Um <see cref="T:System.IntPtr" /> que aponta para um conjunto de bits, cada um representando um processador no qual o thread pode ser executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A afinidade do processador de um thread é o conjunto de processadores tem uma relação com. Em outras palavras, os. que podem ser agendado para execução.  
+  
+ <xref:System.Diagnostics.ProcessThread.ProcessorAffinity%2A>representa cada processador como um pouco. Bit 0 representa o processador de uma, bit 1 representa o processador de dois e assim por diante. A tabela a seguir mostra um subconjunto dos possíveis <xref:System.Diagnostics.ProcessThread.ProcessorAffinity%2A> para um sistema de quatro processadores.  
+  
+|Valor da propriedade (em hexadecimal)|Processadores válidos|  
+|---------------------------------------|----------------------|  
+|0x0001|1|  
+|0x0002|2|  
+|0x0003|1 ou 2|  
+|0x0004|3|  
+|0x0005|1 ou 3|  
+|0x0007|1, 2 ou 3|  
+|0x000F|1, 2, 3 ou 4|  
+  
+ Você também pode especificar o processador único, preferencial para um thread, definindo o <xref:System.Diagnostics.ProcessThread.IdealProcessor%2A> propriedade. Um thread de processo pode ser migrados do processador, com cada migração recarregando o cache do processador. Especificar um processador para um thread pode melhorar o desempenho sob cargas de sistema pesadas, reduzindo o número de vezes que o cache de processador é recarregado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Diagnostics.ProcessThread.ProcessorAffinity%2A> propriedade para uma instância do bloco de notas para o primeiro processador.  
+  
+ [!code-csharp[ProcessThreadIdealProcessor#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProcessThreadIdealProcessor/CS/program.cs#1)]
+ [!code-vb[ProcessThreadIdealProcessor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProcessThreadIdealProcessor/VB/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Não foi possível definir a afinidade do processador.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetIdealProcessor">
+      <MemberSignature Language="C#" Value="public void ResetIdealProcessor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetIdealProcessor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ProcessThread.ResetIdealProcessor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o processador ideal para esse thread indicar que não há nenhum processador ideal. Em outras palavras, para que qualquer processador é ideal.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Não foi possível redefinir o processador ideal.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartAddress">
+      <MemberSignature Language="C#" Value="public IntPtr StartAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int StartAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.StartAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The start address in memory of this thread.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço de memória da função que o sistema operacional chamou e que iniciou esse thread.</summary>
+        <value>O endereço inicial do thread, que aponta para a função definida pelo aplicativo que o thread executa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada processo começa com um único thread, o que é conhecido como o thread principal. Qualquer thread pode criar threads adicionais.  
+  
+ Um processo tem um espaço de endereço virtual, código executável, dados, os identificadores de objeto, variáveis de ambiente, uma prioridade básica e mínimo e máximo tamanhos de conjunto de trabalho. Todos os threads de um processo de compartilham seus recursos de sistema e o espaço de endereço virtual. Além disso, cada thread mantém manipuladores de exceção, uma prioridade de agendamento e um conjunto de estruturas em que o sistema salva o contexto do thread enquanto o thread está esperando para ser agendado. O contexto do thread inclui o conjunto do thread de registros de máquina, a pilha de kernel, um bloco de ambiente de thread e uma pilha de usuários no espaço de endereço de processo do thread.  
+  
+ Cada thread do Windows, na verdade, inicia a execução em uma função fornecida pelo sistema, não a função fornecida pelo aplicativo. O endereço inicial para o thread principal é, portanto, o mesmo (que representa o endereço da função fornecida pelo sistema) para cada processo do Windows no sistema. No entanto, o <xref:System.Diagnostics.ProcessThread.StartAddress%2A> propriedade permite que você obtenha o endereço inicial de função que é específico para seu aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartTime">
+      <MemberSignature Language="C#" Value="public DateTime StartTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime StartTime" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.StartTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The time this thread was started.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a hora em que o sistema operacional iniciou o thread.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa a hora em que estava no sistema quando o sistema operacional iniciou o thread.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Não foi possível recuperar o tempo do thread.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadState">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.ThreadState ThreadState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.ThreadState ThreadState" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.ThreadState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The current state of this thread.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ThreadState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual deste thread.</summary>
+        <value>Um <see cref="T:System.Diagnostics.ThreadState" /> que indica a execução do thread, por exemplo, em execução, aguardando ou terminada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.ProcessThread.WaitReason%2A> o valor da propriedade é válido somente quando o <xref:System.Diagnostics.ProcessThread.ThreadState%2A> valor é <xref:System.Diagnostics.ThreadState.Wait>. Portanto, verifique se o <xref:System.Diagnostics.ProcessThread.ThreadState%2A> valor antes de obter o <xref:System.Diagnostics.ProcessThread.WaitReason%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalProcessorTime">
+      <MemberSignature Language="C#" Value="public TimeSpan TotalProcessorTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TotalProcessorTime" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.TotalProcessorTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The total amount of CPU time used.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade total de tempo que esse thread gastou usando o processador.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> que indica a quantidade de tempo que o thread teve o controle do processador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.ProcessThread.TotalProcessorTime%2A> propriedade indica a quantidade total de tempo que o sistema foi tirado o thread do estado de espera e priorizados-lo em qualquer processador. Em um sistema de processador várias, esse valor seria incluem o tempo gasto em cada processador, se o thread usado mais de um processador.  
+  
+ O <xref:System.Diagnostics.ProcessThread.TotalProcessorTime%2A> propriedade é a soma da <xref:System.Diagnostics.ProcessThread.UserProcessorTime%2A> e <xref:System.Diagnostics.ProcessThread.PrivilegedProcessorTime%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Não foi possível recuperar o tempo do thread.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserProcessorTime">
+      <MemberSignature Language="C#" Value="public TimeSpan UserProcessorTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan UserProcessorTime" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.UserProcessorTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The amount of CPU time used in user mode.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tempo que o thread associado gastou executando código no aplicativo.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> que indica o tempo que o thread gastou executando código no aplicativo em vez de no núcleo do sistema operacional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows NT usa vários mecanismos de proteção diferentes e, na raiz de todas elas é a diferença entre o modo de usuário e o modo privilegiado. <xref:System.Diagnostics.ProcessThread.UserProcessorTime%2A>corresponde à quantidade de tempo que o aplicativo passou em execução no modo de usuário, fora do núcleo do sistema operacional. O <xref:System.Diagnostics.ProcessThread.PrivilegedProcessorTime%2A> corresponde à quantidade de tempo que o aplicativo de gastou executando código em modo privilegiado, dentro do núcleo do sistema.  
+  
+ Modo de usuário restringe o aplicativo de duas maneiras importantes. Primeiro, o aplicativo não pode acessar diretamente os periféricos, mas em vez disso, deve chamar o núcleo do sistema operacional para obter ou definir dados periféricos. O sistema operacional pode, portanto, certifique-se de que um aplicativo não destruir dados periféricos que é necessária para outro. Segundo, o aplicativo não pode ler ou alterar dados que mantém o próprio sistema operacional. Essa restrição impede que aplicativos inadvertidamente ou intencionalmente corrupção do núcleo. Se o aplicativo precisa que o sistema operacional para executar uma operação, ele chama rotinas do sistema. Muitos desses transição para o modo privilegiado, executar a operação e retornar sem problemas para o modo de usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Não foi possível recuperar o tempo do thread.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitReason">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.ThreadWaitReason WaitReason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.ThreadWaitReason WaitReason" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.ProcessThread.WaitReason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("The reason why this thread is waiting.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ThreadWaitReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o motivo pelo qual o thread está aguardando.</summary>
+        <value>Um <see cref="T:System.Diagnostics.ThreadWaitReason" /> que representa o motivo pelo qual o thread está em estado de espera.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.ProcessThread.WaitReason%2A> propriedade é válido somente quando o <xref:System.Diagnostics.ProcessThread.ThreadState%2A> é <xref:System.Diagnostics.ThreadState.Wait>. Portanto, verifique se o <xref:System.Diagnostics.ProcessThread.ThreadState%2A> valor antes de obter o <xref:System.Diagnostics.ProcessThread.WaitReason%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O thread não está no estado de espera.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma é o Windows 98 ou o Windows Millennium Edition.</exception>
+        <exception cref="T:System.NotSupportedException">O processador está em um computador remoto.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

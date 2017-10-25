@@ -1,0 +1,67 @@
+<Type Name="ADODC+BOFActionEnum" FullName="Microsoft.VisualBasic.Compatibility.VB6.ADODC+BOFActionEnum">
+  <TypeSignature Language="C#" Value="public enum ADODC.BOFActionEnum" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ADODC/BOFActionEnum extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece constantes para compatibilidade com a propriedade <see langword="BOFAction" /> do Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No Visual Basic 6.0, o `BOFAction` propriedade foi usada para determinar qual ação o `ADODC` usa quando o `BOF` propriedade é true.  
+  
+ Constantes permitem que o código que foi atualizado do Visual Basic 6.0 para continuar a ser executados sem modificações adicionais.  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="adDoMoveFirst">
+      <MemberSignature Language="C#" Value="adDoMoveFirst" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ADODC/BOFActionEnum adDoMoveFirst = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum.adDoMoveFirst" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ADODC+BOFActionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Mantém o primeiro registro como o registro atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="adStayBOF">
+      <MemberSignature Language="C#" Value="adStayBOF" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ADODC/BOFActionEnum adStayBOF = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum.adStayBOF" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ADODC+BOFActionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Movendo depois do início de uma <see langword="Recordset" /> gatilhos o <see langword="Validate" /> evento no primeiro registro, seguido por um evento de reposição no registro (BOF) inválido. Neste ponto, o **mover anterior** botão o <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC" /> está desabilitado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

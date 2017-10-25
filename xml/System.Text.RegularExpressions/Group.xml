@@ -1,0 +1,196 @@
+<Type Name="Group" FullName="System.Text.RegularExpressions.Group">
+  <TypeSignature Language="C#" Value="public class Group : System.Text.RegularExpressions.Capture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Group extends System.Text.RegularExpressions.Capture" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.Group" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.RegularExpressions.Capture</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os resultados de um único grupo de captura.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um grupo de captura pode capturar zero, um ou mais cadeias de caracteres em um única correspondência devido quantificadores. (Para obter mais informações, consulte [quantificadores](~/docs/standard/base-types/quantifiers-in-regular-expressions.md).) Todas as subcadeias de caracteres correspondidas por um único grupo de captura estão disponíveis a partir de <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> propriedade. Informações sobre a última subcadeia de caracteres capturada podem ser acessadas diretamente a partir de `Value` e `Index` propriedades. (Que é, o <xref:System.Text.RegularExpressions.Group> instância é equivalente ao último item da coleção retornada pelo <xref:System.Text.RegularExpressions.Group.Captures%2A> propriedade, que reflete a último captura feita pelo grupo de captura.)  
+  
+ Um exemplo de ajuda para esclarecer esse relação entre um <xref:System.Text.RegularExpressions.Group> objeto e o <xref:System.Text.RegularExpressions.CaptureCollection?displayProperty=nameWithType> que é retornado pelo <xref:System.Text.RegularExpressions.Group.Captures%2A> propriedade. O padrão de expressão regular `(\b(\w+?)[,:;]?\s?)+[?.!]` corresponde sentenças inteiras. A expressão regular é definida como mostrado na tabela a seguir.  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`\b`|Começa a correspondência em um limite de palavra.|  
+|`(\w+?)`|Corresponder a um ou mais caracteres de palavra, mas o menor número de caracteres possível. Este é o segundo grupo de capturando (interno). (O primeiro grupo de capturando inclui o `\b` elemento de linguagem.)|  
+|`[,:;]?`|Corresponde a zero ou uma ocorrência de uma vírgula, vírgula ou ponto e vírgula.|  
+|`\s?`|Corresponde a zero ou uma ocorrência de um caractere de espaço em branco.|  
+|`(\b(\w+?)[,:;]?\s?)+`|Corresponde ao padrão consiste em um limite de palavra, um ou mais caracteres de texto, um símbolo de pontuação e um caractere de espaço em branco uma ou mais vezes. Este é o primeiro grupo de captura.|  
+|`[?.!]`|Corresponde qualquer ocorrência de um período, o ponto de interrogação ou o ponto de exclamação.|  
+  
+ Nesse padrão de expressão regular, o subpadrão `(\w+?)` foi projetado para corresponder a várias palavras dentro de uma sentença. No entanto, o valor da <xref:System.Text.RegularExpressions.Group> objeto representa somente o último corresponder `(\w+?)` captura, enquanto o <xref:System.Text.RegularExpressions.Group.Captures%2A> propriedade retorna um <xref:System.Text.RegularExpressions.CaptureCollection> que representa o texto capturado todos os. Como mostra a saída, o <xref:System.Text.RegularExpressions.CaptureCollection> para o segundo grupo de captura contém quatro objetos. A última delas corresponde do <xref:System.Text.RegularExpressions.Group> objeto.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Group.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.group.class/cs/groupandcaptures1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Group.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.group.class/vb/groupandcaptures1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Captures">
+      <MemberSignature Language="C#" Value="public System.Text.RegularExpressions.CaptureCollection Captures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.RegularExpressions.CaptureCollection Captures" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Group.Captures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.CaptureCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todas as capturas correspondida pelo grupo de captura, na primeira ordem interna mais à esquerda (ou primeira ordem interna mais à direita se a expressão regular for modificada com a opção <see cref="F:System.Text.RegularExpressions.RegexOptions.RightToLeft" />). A coleção pode ter zero ou mais itens.</summary>
+        <value>A coleção de subcadeias de caracteres correspondida pelo grupo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um quantificador não é aplicado a captura de um grupo, a coleção retornada pelo <xref:System.Text.RegularExpressions.Group.Captures%2A> propriedade contém um único <xref:System.Text.RegularExpressions.Capture> objeto que fornece informações sobre a mesma subcadeia de caracteres como o <xref:System.Text.RegularExpressions.Group> objeto. Isso é ilustrado no exemplo a seguir. Define uma expressão regular, `\b(\w+)\b`, que extrai uma única palavra de uma sentença. O <xref:System.Text.RegularExpressions.Group> objeto captura a palavra "This" e o único objeto no <xref:System.Text.RegularExpressions.CaptureCollection> contém informações sobre a captura do mesmo.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Group.Captures#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.group.captures/cs/captures1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Group.Captures#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.group.captures/vb/captures1.vb#1)]  
+  
+ O utilitário real do <xref:System.Text.RegularExpressions.Group.Captures%2A> propriedade ocorre quando um quantificador é aplicado a um grupo de captura para que o grupo de captura vários subcadeias de caracteres em uma única expressão regular. Nesse caso, o <xref:System.Text.RegularExpressions.Group> objeto contém informações sobre o último substring capturada, enquanto o <xref:System.Text.RegularExpressions.Group.Captures%2A> propriedade contém informações sobre todas as subcadeias de caracteres capturada pelo grupo. No exemplo a seguir, a expressão regular `\b(\w+\s*)+\.` corresponde a uma frase inteira que termina em um período. O grupo `(\w+\s*)+` captura as palavras individuais na coleção. Porque o <xref:System.Text.RegularExpressions.Group> coleção contém informações somente sobre a última subcadeia de caracteres capturada, captura a última palavra da frase "sentença". No entanto, cada palavra capturada pelo grupo está disponível na coleção retornada pelo <xref:System.Text.RegularExpressions.Group.Captures%2A> propriedade.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Group.Captures#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.group.captures/cs/captures2.cs#2)]
+ [!code-vb[System.Text.RegularExpressions.Group.Captures#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.group.captures/vb/captures2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Group.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o nome do grupo de captura representando pela instância atual.</summary>
+        <value>O nome do grupo de captura representado pela instância atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="public bool Success { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Success" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Group.Success" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a correspondência foi bem-sucedida.</summary>
+        <value>
+          <see langword="true" /> se a correspondência for bem-sucedida, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Success` propriedade é true se pelo menos uma subcadeia de caracteres foi capturada por esse grupo. Isso é equivalente à expressão booliana (Group.Captures.Count > 0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="public static System.Text.RegularExpressions.Group Synchronized (System.Text.RegularExpressions.Group inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Text.RegularExpressions.Group Synchronized(class System.Text.RegularExpressions.Group inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.Group.Synchronized(System.Text.RegularExpressions.Group)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Group</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inner" Type="System.Text.RegularExpressions.Group" />
+      </Parameters>
+      <Docs>
+        <param name="inner">A entrada <see cref="T:System.Text.RegularExpressions.Group" /> objeto.</param>
+        <summary>Retorna um <see langword="Group" /> objeto equivalente a um fornecido é seguro compartilhar entre vários threads.</summary>
+        <returns>Uma expressão regular <see langword="Group" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

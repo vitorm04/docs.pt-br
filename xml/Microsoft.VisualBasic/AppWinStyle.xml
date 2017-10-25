@@ -1,0 +1,123 @@
+<Type Name="AppWinStyle" FullName="Microsoft.VisualBasic.AppWinStyle">
+  <TypeSignature Language="C#" Value="public enum AppWinStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AppWinStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.AppWinStyle" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica o estilo da janela a ser usado para o programa invocado ao chamar a função <see langword="Shell" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você emitir `Shell` comandos, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ O `Style` argumento leva o `AppWinStyle` membros de enumeração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hide">
+      <MemberSignature Language="C#" Value="Hide" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle Hide = int16(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.Hide" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A janela está oculta e o foco é passado para a janela oculta. Esse membro é equivalente à constante <see langword="vbHide" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximizedFocus">
+      <MemberSignature Language="C#" Value="MaximizedFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle MaximizedFocus = int16(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.MaximizedFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A janela é maximizada com foco. Esse membro é equivalente à constante <see langword="vbMaximizedFocus" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimizedFocus">
+      <MemberSignature Language="C#" Value="MinimizedFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle MinimizedFocus = int16(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.MinimizedFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A janela é exibida como um ícone com foco. Esse membro é equivalente à constante <see langword="vbMinimizedFocus" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimizedNoFocus">
+      <MemberSignature Language="C#" Value="MinimizedNoFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle MinimizedNoFocus = int16(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.MinimizedNoFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A janela é exibida como um ícone. A janela ativa no momento permanece ativa. Esse membro é equivalente à constante <see langword="vbMinimizedNoFocus" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalFocus">
+      <MemberSignature Language="C#" Value="NormalFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle NormalFocus = int16(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.NormalFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A janela tem foco e é restaurada ao seu tamanho e posição originais. Esse membro é equivalente à constante <see langword="vbNormalFocus" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalNoFocus">
+      <MemberSignature Language="C#" Value="NormalNoFocus" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle NormalNoFocus = int16(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AppWinStyle.NormalNoFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A janela é restaurada ao seu tamanho e posição mais recentes. A janela ativa no momento permanece ativa. Esse membro é equivalente à constante <see langword="vbNormalNoFocus" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

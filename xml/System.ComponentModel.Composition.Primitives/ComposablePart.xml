@@ -1,0 +1,227 @@
+<Type Name="ComposablePart" FullName="System.ComponentModel.Composition.Primitives.ComposablePart">
+  <TypeSignature Language="C#" Value="public abstract class ComposablePart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ComposablePart extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Primitives.ComposablePart" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define a classe base abstrata para partes combináveis, que importam objetos e produzem objetos exportados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ComposablePart ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate">
+      <MemberSignature Language="C#" Value="public virtual void Activate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Activate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePart.Activate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando todas as importações da parte foram definidas e exportações podem ser recuperadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando este método é chamado, não importa adicional pode ser definida, a menos que uma chamada é feita para desativar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExportDefinitions">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt; ExportDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.ExportDefinition&gt; ExportDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ComposablePart.ExportDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ExportDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção do <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> objetos que descrevem os objetos exportados fornecidos pela parte.</summary>
+        <value>Uma coleção de <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> objetos que descrevem os objetos exportados fornecidos pelo <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.ComponentModel.Composition.Primitives.ComposablePart> objeto foi criado de um <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition> de objeto, esta propriedade deve retornar o resultado de <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition.ExportDefinitions%2A>.  
+  
+ Substituições dessa propriedade nunca devem retornar `null`. Se o <xref:System.ComponentModel.Composition.Primitives.ComposablePart> não tem exportações, retornar vazio <xref:System.Collections.Generic.IEnumerable%601> coleção em vez disso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportedValue">
+      <MemberSignature Language="C#" Value="public abstract object GetExportedValue (System.ComponentModel.Composition.Primitives.ExportDefinition definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetExportedValue(class System.ComponentModel.Composition.Primitives.ExportDefinition definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePart.GetExportedValue(System.ComponentModel.Composition.Primitives.ExportDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ExportDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">Uma da <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> de objetos a partir de <see cref="P:System.ComponentModel.Composition.Primitives.ComposablePart.ExportDefinitions" /> propriedade que descreve o objeto exportado para retornar.</param>
+        <summary>Obtém o objeto exportado descrito pelo especificado <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> objeto.</summary>
+        <returns>O objeto exportado descrito por <paramref name="definition" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="definition" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException">Erro ao obter o objeto exportado descrito pelo <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="definition" />não são provenientes de <see cref="P:System.ComponentModel.Composition.Primitives.ComposablePart.ExportDefinitions" /> propriedade o <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Importações de um ou mais pré-requisitos, indicado por <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.IsPrerequisite" />, não foi definido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImportDefinitions">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ImportDefinition&gt; ImportDefinitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.ImportDefinition&gt; ImportDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ComposablePart.ImportDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.ImportDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção do <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> objetos que descrevem os objetos importados exigidos pela parte.</summary>
+        <value>Uma coleção de <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> objetos que descrevem os objetos importados necessários para o <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.ComponentModel.Composition.Primitives.ComposablePart> objeto foi criado de um <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition> de objeto, esta propriedade deve retornar o resultado de <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition.ImportDefinitions%2A>.  
+  
+ Substituições dessa propriedade nunca devem retornar `null`. Se o <xref:System.ComponentModel.Composition.Primitives.ComposablePart> não tem importações, retornar vazio <xref:System.Collections.Generic.IEnumerable%601> coleção em vez disso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,object&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ComposablePart.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os metadados da <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objeto.</summary>
+        <value>Os metadados da <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objeto. O padrão é vazio, somente leitura <see cref="T:System.Collections.Generic.IDictionary`2" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.ComponentModel.Composition.Primitives.ComposablePart> objeto foi criado de um <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition> de objeto, esta propriedade deve retornar o resultado de <xref:System.ComponentModel.Composition.Primitives.ComposablePartDefinition.Metadata%2A>.  
+  
+ Substituições dessa propriedade devem retornar somente leitura <xref:System.Collections.Generic.IDictionary%602> objeto com uma comparação não linguística, diferencia maiusculas de minúsculas, como <xref:System.StringComparer.Ordinal%2A>e nunca deve retornar `null`. Se o <xref:System.ComponentModel.Composition.Primitives.ComposablePart> não contém metadados, retornar vazio <xref:System.Collections.Generic.IDictionary%602> em vez disso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImport">
+      <MemberSignature Language="C#" Value="public abstract void SetImport (System.ComponentModel.Composition.Primitives.ImportDefinition definition, System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt; exports);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetImport(class System.ComponentModel.Composition.Primitives.ImportDefinition definition, class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.Export&gt; exports) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ComposablePart.SetImport(System.ComponentModel.Composition.Primitives.ImportDefinition,System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.Primitives.Export})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+        <Parameter Name="exports" Type="System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="definition">Um dos objetos do <see cref="P:System.ComponentModel.Composition.Primitives.ComposablePart.ImportDefinitions" /> propriedade que especifica a importação a ser definido.</param>
+        <param name="exports">Uma coleção de <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos da qual definir a importação descrita por <c>definição</c>.</param>
+        <summary>Define a importação descrita pelo especificado <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> objeto a ser atendidas pelas exportações especificadas.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="definition" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="exports" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Composition.Primitives.ComposablePartException">Erro ao configurar a importação descrita pelo <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> objeto.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="definition" />não são provenientes de <see cref="P:System.ComponentModel.Composition.Primitives.ComposablePart.ImportDefinitions" /> propriedade o <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" />.  
+  
+ -ou-  
+  
+ <paramref name="exports" />contém um elemento que é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="exports" />está vazio e <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality" /> é <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne" />.  
+  
+ -ou-  
+  
+ <paramref name="exports" />contém mais de um elemento e <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality" /> é <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ZeroOrOne" /> ou <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.ComponentModel.Composition.Primitives.ComposablePart.SetImport(System.ComponentModel.Composition.Primitives.ImportDefinition,System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.Primitives.Export})" />foi chamado anteriormente e <see cref="P:System.ComponentModel.Composition.Primitives.ImportDefinition.IsRecomposable" /> é <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1218 @@
+<Type Name="BitArray" FullName="System.Collections.BitArray">
+  <TypeSignature Language="C#" Value="public sealed class BitArray : ICloneable, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit BitArray extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.BitArray" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gerencia uma matriz compacta de valores em bits, que é representada com boolianos, em que <see langword="true" /> indica que o bit está em (1) e <see langword="false" /> indica que o bit está desativado (0).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.BitArray> classe é uma classe de coleção na qual a capacidade é sempre o mesmo que a contagem. Os elementos são adicionados a um <xref:System.Collections.BitArray> aumentando o <xref:System.Collections.BitArray.Length%2A> propriedade; elementos são excluídos diminuindo o <xref:System.Collections.BitArray.Length%2A> propriedade. O tamanho de um <xref:System.Collections.BitArray> é controlado pelo cliente; indexação após o término do <xref:System.Collections.BitArray> lança um <xref:System.ArgumentException>. O <xref:System.Collections.BitArray> classe fornece métodos que não são encontrados em outras coleções, incluindo aqueles que permitem que vários elementos sejam modificados ao mesmo tempo usando um filtro, como <xref:System.Collections.BitArray.And%2A>, <xref:System.Collections.BitArray.Or%2A>, <xref:System.Collections.BitArray.Xor%2A> , <xref:System.Collections.BitArray.Not%2A>, e <xref:System.Collections.BitArray.SetAll%2A>.  
+  
+ O <xref:System.Collections.Specialized.BitVector32> classe é uma estrutura que fornece a mesma funcionalidade que <xref:System.Collections.BitArray>, mas com um desempenho mais rápido. <xref:System.Collections.Specialized.BitVector32>é mais rápido porque é um tipo de valor e, portanto, alocado na pilha, enquanto <xref:System.Collections.BitArray> é um tipo de referência e, portanto, alocado no heap.  
+  
+ <xref:System.Collections.Specialized.BitVector32?displayProperty=nameWithType>pode armazenar exatamente 32 bits, enquanto <xref:System.Collections.BitArray> pode armazenar um número de bits variável. <xref:System.Collections.Specialized.BitVector32>armazena sinalizadores de bit e inteiros pequenos, tornando-o assim ideal para dados que não são expostos ao usuário. No entanto, se o número de sinalizadores de bit necessário for desconhecido, é a variável ou é maior do que 32, use <xref:System.Collections.BitArray> em vez disso.  
+  
+ <xref:System.Collections.BitArray>está no <xref:System.Collections> namespace; <xref:System.Collections.Specialized.BitVector32> está no <xref:System.Collections.Specialized> namespace.  
+  
+ Elementos nesta coleção podem ser acessados usando um índice de inteiro.  Índices nesta coleção são baseadas em zero.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar e inicializar um <xref:System.Collections.BitArray> e como imprimir seus valores.  
+  
+ [!code-cpp[Classic BitArray Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BitArray Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray Example/CS/source.cs#1)]
+ [!code-vb[Classic BitArray Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Esta implementação não oferece um sincronizado wrapper (thread-safe) para um <see cref="T:System.Collections.BitArray" />.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitArray (bool[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.#ctor(System.Boolean[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="values" Type="System.Boolean[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz de boolianos a serem copiados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.BitArray" /> que contém valores de bit copiados da matriz de boolianos especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é um O (`n`) operação, onde `n` é o número de elementos em `values`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="values" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitArray (byte[] bytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] bytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Uma matriz de bytes que contém os valores a se copiar, em que cada byte representa oito bits consecutivos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.BitArray" /> que contém valores de bit copiados da matriz de bytes especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O primeiro byte na matriz representa bits de 0 a 7, o segundo byte representa 8 15 por meio de bits e assim por diante. O Bit menos significativo de cada byte representa o valor de índice mais baixo: " `bytes` [0] & 1" representa o bit 0, " `bytes` [0] & 2" representa os bits 1, " `bytes` [0] &" 4" representa bit 2 e assim por diante.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é o número de elementos em `bytes`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O comprimento de <paramref name="bytes" /> é maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitArray (System.Collections.BitArray bits);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.BitArray bits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.#ctor(System.Collections.BitArray)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bits" Type="System.Collections.BitArray" />
+      </Parameters>
+      <Docs>
+        <param name="bits">O <see cref="T:System.Collections.BitArray" /> para cópia.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.BitArray" /> que contém valores de bit copiados do <see cref="T:System.Collections.BitArray" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é um O (`n`) operação, onde `n` é o número de elementos em `bits`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bits" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitArray (int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="length">O número de valores de bit no novo <see cref="T:System.Collections.BitArray" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.BitArray" /> que pode conter o número especificado de valores de bits, que são definidos inicialmente como <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é um O (`n`) operação, onde `n` é `length`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="length" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitArray (int[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.#ctor(System.Int32[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="values" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz de inteiros que contém os valores a serem copiados, em que cada inteiro representa 32 bits consecutivos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.BitArray" /> que contém valores de bit copiados da matriz especificada de inteiros de 32 bits.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número na primeira `values` elemento da matriz representa bits de 0 a 31, o segundo número na matriz representa bits 63 até 32 e assim por diante. O Bit menos significativo de cada inteiro representa o valor de índice mais baixo: " `values` [0] & 1" representa o bit 0, " `values` [0] & 2" representa os bits 1, " `values` [0] &" 4" representa bit 2 e assim por diante.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é o número de elementos em `values`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="values" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho de <paramref name="values" /> é maior que <see cref="F:System.Int32.MaxValue" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitArray (int length, bool defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 length, bool defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.#ctor(System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="defaultValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="length">O número de valores de bit no novo <see cref="T:System.Collections.BitArray" />.</param>
+        <param name="defaultValue">O valor booliano a ser atribuído a cada bit.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.BitArray" /> que pode conter o número especificado de valores de bits, que são definidos inicialmente com o valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é um O (`n`) operação, onde `n` é `length`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="length" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="And">
+      <MemberSignature Language="C#" Value="public System.Collections.BitArray And (System.Collections.BitArray value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.BitArray And(class System.Collections.BitArray value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.And(System.Collections.BitArray)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.BitArray</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Collections.BitArray" />
+      </Parameters>
+      <Docs>
+        <param name="value">A matriz usada para executar a operação AND bit a bit.</param>
+        <summary>Executa a operação AND bit a bit entre os elementos do objeto <see cref="T:System.Collections.BitArray" /> atual e os elementos correspondentes na matriz especificada. O objeto <see cref="T:System.Collections.BitArray" /> atual será modificado para armazenar o resultado da operação AND bit a bit.</summary>
+        <returns>Uma matriz que contém o resultado da operação AND bit a bit, que é uma referência ao objeto <see cref="T:System.Collections.BitArray" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A operação AND bit a bit retorna `true` se ambos os operandos forem `true`e retorna `false` se um ou ambos os operandos forem `false`.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.BitArray.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como executar a operação AND bit a bit entre dois <xref:System.Collections.BitArray> objetos.  
+  
+ [!code-cpp[Classic BitArray.And Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray.And Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BitArray.And Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray.And Example/CS/source.cs#1)]
+ [!code-vb[Classic BitArray.And Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray.And Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="value" /> e o <see cref="T:System.Collections.BitArray" /> atual não têm o mesmo número de elementos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia superficial do <see cref="T:System.Collections.BitArray" />.</summary>
+        <returns>Uma cópia superficial do <see cref="T:System.Collections.BitArray" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia superficial de uma coleção copia apenas os elementos da coleção, se eles são tipos de referência ou tipos de valor, mas não copia os objetos que se referem as referências a. As referências na nova coleção apontam para os mesmos objetos que as referências na coleção original apontem para.  
+  
+ Em contraste, uma cópia profunda de uma coleção copia os elementos e tudo direta ou indiretamente referenciado por elementos.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.BitArray.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.BitArray" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia todo o <see cref="T:System.Collections.BitArray" /> em um <see cref="T:System.Array" /> unidimensional compatível, começando no índice especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz especificada deve ser de um tipo compatível. Somente `bool`, `int`, e `byte` tipos de matrizes têm suporte.  
+  
+ Este método usa <xref:System.Array.Copy%2A?displayProperty=nameWithType> para copiar os elementos.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.BitArray.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como copiar um <xref:System.Collections.BitArray> em um unidimensional <xref:System.Array>.  
+  
+ [!code-cpp[Classic BitArray.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BitArray.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic BitArray.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ - ou -  
+  
+ O número de elementos na origem <see cref="T:System.Collections.BitArray" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.BitArray" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.BitArray.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos no <see cref="T:System.Collections.BitArray" />.</summary>
+        <value>O número de elementos contidos no <see cref="T:System.Collections.BitArray" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.BitArray.Length%2A>e <xref:System.Collections.BitArray.Count%2A> retornam o mesmo valor. <xref:System.Collections.BitArray.Length%2A>pode ser definido como um valor específico, mas <xref:System.Collections.BitArray.Count%2A> é somente leitura.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public bool Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do valor a ser obtido.</param>
+        <summary>Obtém o valor do bit em uma posição específica no <see cref="T:System.Collections.BitArray" />.</summary>
+        <returns>O valor do bit na posição <paramref name="index" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir e obter elementos específicos de um <xref:System.Collections.BitArray>.  
+  
+ [!code-cpp[Classic BitArray.Get Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray.Get Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BitArray.Get Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray.Get Example/CS/source.cs#1)]
+ [!code-vb[Classic BitArray.Get Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray.Get Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" /> é maior ou igual ao número de elementos no <see cref="T:System.Collections.BitArray" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do <see cref="T:System.Collections.BitArray" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para todo o <see cref="T:System.Collections.BitArray" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.BitArray.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.BitArray" /> é somente leitura.</summary>
+        <value>Esta propriedade é sempre <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.BitArray>implementa o <xref:System.Collections.BitArray.IsReadOnly%2A> propriedade porque ele é necessário para o <xref:System.Collections.IList?displayProperty=nameWithType> interface.  
+  
+ Uma coleção que seja somente leitura não permite a adição, a remoção ou a modificação de elementos após a coleção ser criada.  
+  
+ Uma coleção somente leitura é apenas uma coleção com um wrapper que impede a modificação da coleção; por isso, caso as alterações sejam feitas na coleção subjacente, a coleção somente leitura reflete as alterações.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.BitArray.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.BitArray" /> é sincronizado (thread-safe).</summary>
+        <value>Esta propriedade é sempre <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.BitArray>implementa o <xref:System.Collections.BitArray.IsSynchronized%2A> propriedade porque ele é necessário para o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.BitArray.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[Classic BitArray Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic BitArray Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray Example/CS/source2.cs#2)]
+ [!code-vb[Classic BitArray Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray Example/VB/source2.vb#2)]  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public bool this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.BitArray.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do valor a ser obtido ou definido.</param>
+        <summary>Obtém ou define o valor do bit em uma posição específica no <see cref="T:System.Collections.BitArray" />.</summary>
+        <value>O valor do bit na posição <paramref name="index" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[index]`.  
+  
+ A linguagem c# usa a palavra-chave para definir os indexadores em vez de implementar o <xref:System.Collections.BitArray.Item%2A> propriedade. Visual Basic implementa <xref:System.Collections.BitArray.Item%2A> como uma propriedade padrão, que fornece a mesma funcionalidade de indexação.  
+  
+ Recuperar o valor dessa propriedade é uma operação de (1); definindo a propriedade também é uma operação de (1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Collections.BitArray.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftShift">
+      <MemberSignature Language="C#" Value="public System.Collections.BitArray LeftShift (int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.BitArray LeftShift(int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.LeftShift(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.BitArray</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="count">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.BitArray.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de elementos no <see cref="T:System.Collections.BitArray" />.</summary>
+        <value>O número de elementos em <see cref="T:System.Collections.BitArray" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.BitArray.Length%2A>e <xref:System.Collections.BitArray.Count%2A> retornam o mesmo valor. <xref:System.Collections.BitArray.Length%2A>pode ser definido como um valor específico, mas <xref:System.Collections.BitArray.Count%2A> é somente leitura.  
+  
+ Se <xref:System.Collections.BitArray.Length%2A> é definido como um valor que é menor que <xref:System.Collections.BitArray.Count%2A>, o <xref:System.Collections.BitArray> será truncado e os elementos após o índice `value` -1 são excluídos.  
+  
+ Se <xref:System.Collections.BitArray.Length%2A> é definido como um valor que é maior do que <xref:System.Collections.BitArray.Count%2A>, os novos elementos são definidos como `false`.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1). A definição dessa propriedade é um O (`n`) operação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade foi definida como um valor menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Not">
+      <MemberSignature Language="C#" Value="public System.Collections.BitArray Not ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.BitArray Not() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.Not" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.BitArray</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inverte os valores de bit no atual <see cref="T:System.Collections.BitArray" />, de modo que os elementos definidos como <see langword="true" /> são alterados para <see langword="false" />, e os elementos definidos como <see langword="false" /> são alterados para <see langword="true" />.</summary>
+        <returns>A instância atual com valores de bit invertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.BitArray.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como aplicar não para um <xref:System.Collections.BitArray>.  
+  
+ [!code-cpp[Classic BitArray.Not Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray.Not Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BitArray.Not Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray.Not Example/CS/source.cs#1)]
+ [!code-vb[Classic BitArray.Not Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray.Not Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Or">
+      <MemberSignature Language="C#" Value="public System.Collections.BitArray Or (System.Collections.BitArray value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.BitArray Or(class System.Collections.BitArray value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.Or(System.Collections.BitArray)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.BitArray</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Collections.BitArray" />
+      </Parameters>
+      <Docs>
+        <param name="value">A matriz com a qual a operação OR bit a bit será executada.</param>
+        <summary>Executa a operação OR bit a bit entre os elementos do objeto <see cref="T:System.Collections.BitArray" /> atual e os elementos correspondentes na matriz especificada. O objeto <see cref="T:System.Collections.BitArray" /> atual será modificado para armazenar o resultado da operação OR bit a bit.</summary>
+        <returns>Uma matriz que contém o resultado da operação OR bit a bit, que é uma referência ao objeto <see cref="T:System.Collections.BitArray" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A operação OR bit a bit retorna `true` se um ou ambos os operandos forem `true`e retorna `false` se ambos os operandos forem `false`.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.BitArray.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como executar a operação ou entre dois <xref:System.Collections.BitArray> objetos.  
+  
+ [!code-cpp[Classic BitArray.Or Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray.Or Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BitArray.Or Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray.Or Example/CS/source.cs#1)]
+ [!code-vb[Classic BitArray.Or Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray.Or Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="value" /> e o <see cref="T:System.Collections.BitArray" /> atual não têm o mesmo número de elementos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RightShift">
+      <MemberSignature Language="C#" Value="public System.Collections.BitArray RightShift (int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.BitArray RightShift(int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.RightShift(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.BitArray</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="count">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (int index, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(int32 index, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.Set(System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do bit a ser definido.</param>
+        <param name="value">O valor booliano a ser atribuído a cada bit.</param>
+        <summary>Obtém o bit em uma posição específica no <see cref="T:System.Collections.BitArray" /> para o valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir e obter elementos específicos de um <xref:System.Collections.BitArray>.  
+  
+ [!code-cpp[Classic BitArray.Get Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray.Get Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BitArray.Get Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray.Get Example/CS/source.cs#1)]
+ [!code-vb[Classic BitArray.Get Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray.Get Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" /> é maior ou igual ao número de elementos no <see cref="T:System.Collections.BitArray" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAll">
+      <MemberSignature Language="C#" Value="public void SetAll (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAll(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.SetAll(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor booliano a ser atribuído a todos os bits.</param>
+        <summary>Define todos os bits no <see cref="T:System.Collections.BitArray" /> como o valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.BitArray.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir e obter elementos específicos de um <xref:System.Collections.BitArray>.  
+  
+ [!code-cpp[Classic BitArray.Get Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray.Get Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BitArray.Get Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray.Get Example/CS/source.cs#1)]
+ [!code-vb[Classic BitArray.Get Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray.Get Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.BitArray.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.BitArray" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.BitArray" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas podem fornecer sua própria versão sincronizada de <xref:System.Collections.BitArray> usando o <xref:System.Collections.BitArray.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Collections.BitArray.SyncRoot%2A> do <xref:System.Collections.BitArray>, não diretamente no <xref:System.Collections.BitArray>. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.Collections.BitArray> objeto.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.BitArray.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[Classic BitArray Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic BitArray Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray Example/CS/source2.cs#2)]
+ [!code-vb[Classic BitArray Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray Example/VB/source2.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.BitArray.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.BitArray.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.BitArray.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xor">
+      <MemberSignature Language="C#" Value="public System.Collections.BitArray Xor (System.Collections.BitArray value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.BitArray Xor(class System.Collections.BitArray value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.BitArray.Xor(System.Collections.BitArray)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.BitArray</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Collections.BitArray" />
+      </Parameters>
+      <Docs>
+        <param name="value">A matriz usada para executar a operação OR exclusiva bit a bit.</param>
+        <summary>Executa a operação OR exclusiva bit a bit entre os elementos do objeto <see cref="T:System.Collections.BitArray" /> atual em relação aos elementos correspondentes na matriz especificada. O objeto <see cref="T:System.Collections.BitArray" /> atual será modificado para armazenar o resultado da operação OR exclusiva bit a bit.</summary>
+        <returns>Uma matriz que contém o resultado da operação OR exclusiva bit a bit, que é uma referência ao objeto <see cref="T:System.Collections.BitArray" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A operação OR exclusiva bit a bit retorna `true` se exatamente um operando for `true`e retorna `false` se ambos os operandos têm o mesmo valor booliano.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.BitArray.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como executar a operação de XOR entre dois <xref:System.Collections.BitArray> objetos.  
+  
+ [!code-cpp[Classic BitArray.Xor Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic BitArray.Xor Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BitArray.Xor Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic BitArray.Xor Example/CS/source.cs#1)]
+ [!code-vb[Classic BitArray.Xor Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic BitArray.Xor Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="value" /> e o <see cref="T:System.Collections.BitArray" /> atual não têm o mesmo número de elementos.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

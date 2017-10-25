@@ -1,0 +1,25 @@
+<Type Name="IssuedSecurityTokenHandler" FullName="System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler">
+  <TypeSignature Language="C#" Value="public delegate void IssuedSecurityTokenHandler(SecurityToken issuedToken, EndpointAddress tokenRequestor);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IssuedSecurityTokenHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="issuedToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+    <Parameter Name="tokenRequestor" Type="System.ServiceModel.EndpointAddress" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="issuedToken">O token a ser emitido para o cliente.</param>
+    <param name="tokenRequestor">O ponto de extremidade para o qual o token é solicitado. Este é o ponto de extremidade ao qual o cliente apresentará o token emitido.</param>
+    <summary>Este delegado aponta para um método que, quando implementada vai ser chamado pelos autenticadores antes do token é emitido para o cliente.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

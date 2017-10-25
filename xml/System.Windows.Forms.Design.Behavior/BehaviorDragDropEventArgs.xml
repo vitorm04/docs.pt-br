@@ -1,0 +1,55 @@
+<Type Name="BehaviorDragDropEventArgs" FullName="System.Windows.Forms.Design.Behavior.BehaviorDragDropEventArgs">
+  <TypeSignature Language="C#" Value="public class BehaviorDragDropEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BehaviorDragDropEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.Behavior.BehaviorDragDropEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de <see cref="E:System.Windows.Forms.Design.Behavior.BehaviorService.BeginDrag" /> e de <see cref="E:System.Windows.Forms.Design.Behavior.BehaviorService.EndDrag" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BehaviorDragDropEventArgs (System.Collections.ICollection dragComponents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection dragComponents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorDragDropEventArgs.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dragComponents" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="dragComponents">O <see cref="T:System.Collections.ICollection" /> de <see cref="T:System.ComponentModel.IComponent" /> objetos sendo arrastados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorDragDropEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragComponents">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection DragComponents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection DragComponents" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.BehaviorDragDropEventArgs.DragComponents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de <see cref="T:System.ComponentModel.IComponent" /> objetos sendo arrastados.</summary>
+        <value>O <see cref="T:System.Collections.ICollection" /> de <see cref="T:System.ComponentModel.IComponent" /> objetos sendo arrastados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

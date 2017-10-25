@@ -1,0 +1,6 @@
+<Namespace Name="System.Activities.Presentation.ViewState">
+  <Docs>
+    <summary>Fornece classes relacionadas aos dados de estado de exibição e gerenciamento de estados de exibição.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

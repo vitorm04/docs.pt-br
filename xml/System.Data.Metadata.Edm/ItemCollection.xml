@@ -1,0 +1,500 @@
+<Type Name="ItemCollection" FullName="System.Data.Metadata.Edm.ItemCollection">
+  <TypeSignature Language="C#" Value="public abstract class ItemCollection : System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.GlobalItem&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ItemCollection extends System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1&lt;class System.Data.Metadata.Edm.GlobalItem&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.ItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.GlobalItem&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Data.Metadata.Edm.GlobalItem</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Uma classe base para <see cref="T:System.Data.Metadata.Edm.ObjectItemCollection" />, <see cref="T:System.Data.Metadata.Edm.EdmItemCollection" />, e <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> classes. Um <see cref="T:System.Data.Metadata.Edm.ItemCollection" /> classe é uma classe abstrata e fornece a API principal para carregar e mantendo os metadados na memória. Essa classe é derivada da classe <see cref="T:System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [coleções de itens (metadados)](http://msdn.microsoft.com/en-us/3051a40a-ff45-42f8-8f93-7545e427a404).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataSpace">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.DataSpace DataSpace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.DataSpace DataSpace" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.ItemCollection.DataSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.DataSpace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modelo de dados associado a esta coleção de itens.</summary>
+        <value>O modelo de dados associado a esta coleção de itens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna <xref:System.Data.Metadata.Edm.DataSpace.OSpace> para <xref:System.Data.Metadata.Edm.ObjectItemCollection>; <xref:System.Data.Metadata.Edm.DataSpace.CSpace> for <xref:System.Data.Metadata.Edm.EdmItemCollection>; and <xref:System.Data.Metadata.Edm.DataSpace.CSSpace> for <xref:System.Data.Mapping.StorageMappingItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityContainer">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EntityContainer GetEntityContainer (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EntityContainer GetEntityContainer(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetEntityContainer(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EntityContainer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do contêiner de entidade.</param>
+        <summary>Retorna um <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> objeto usando o nome do contêiner de entidade especificada.</summary>
+        <returns>Se não houver nenhum contêiner de entidade, esse método retorna nulo. Caso contrário, ele retornará o primeiro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntityContainer">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EntityContainer GetEntityContainer (string name, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EntityContainer GetEntityContainer(string name, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetEntityContainer(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EntityContainer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do contêiner de entidade.</param>
+        <param name="ignoreCase">
+          <see langword="true" />para executar a pesquisa diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna um <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> objeto usando o nome do contêiner de entidade especificada.</summary>
+        <returns>Se não houver nenhum contêiner de entidade, esse método retorna nulo. Caso contrário, ele retorna o primeiro contêiner de entidade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFunctions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions (string functionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions(string functionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetFunctions(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="functionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="functionName">O nome completo da função.</param>
+        <summary>Retorna todas as sobrecargas de funções usando o nome especificado da coleção item.</summary>
+        <returns>Uma coleção de tipo <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> que contém todas as funções que têm o nome especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFunctions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions (string functionName, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions(string functionName, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetFunctions(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="functionName" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="functionName">O nome completo da função.</param>
+        <param name="ignoreCase">
+          <see langword="true" />para executar a pesquisa diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna todas as sobrecargas de funções usando o nome especificado da coleção item.</summary>
+        <returns>Uma coleção de tipo <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> que contém todas as funções que têm o nome especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFunctions">
+      <MemberSignature Language="C#" Value="protected static System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions (System.Collections.Generic.Dictionary&lt;string,System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt;&gt; functionCollection, string functionName, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.EdmFunction&gt; GetFunctions(class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.EdmFunction&gt;&gt; functionCollection, string functionName, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetFunctions(System.Collections.Generic.Dictionary{System.String,System.Collections.ObjectModel.ReadOnlyCollection{System.Data.Metadata.Edm.EdmFunction}},System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="functionCollection" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt;&gt;" />
+        <Parameter Name="functionName" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="functionCollection">Um dicionário de funções.</param>
+        <param name="functionName">O nome completo da função.</param>
+        <param name="ignoreCase">
+          <see langword="true" />para executar a pesquisa diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna todas as sobrecargas de funções usando o nome especificado da coleção item.</summary>
+        <returns>Uma coleção de tipo ReadOnlyCollection que contém todas as funções que têm o nome especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetItem&lt;T&gt; (string identity) where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetItem&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;(string identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetItem``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo retornado pelo método.</typeparam>
+        <param name="identity">A identidade do item.</param>
+        <summary>Retorna um fortemente tipada <see cref="T:System.Data.Metadata.Edm.GlobalItem" /> objeto usando a identidade especificada.</summary>
+        <returns>O item especificado pela identidade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetItem&lt;T&gt; (string identity, bool ignoreCase) where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetItem&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;(string identity, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetItem``1(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo retornado pelo método.</typeparam>
+        <param name="identity">A identidade do item.</param>
+        <param name="ignoreCase">
+          <see langword="true" />para executar a pesquisa diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna um fortemente tipada <see cref="T:System.Data.Metadata.Edm.GlobalItem" /> objeto usando a identidade especificada com a pesquisa diferencia maiusculas de minúsculas ou maiusculas de minúsculas.</summary>
+        <returns>O item especificado pela identidade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;T&gt; GetItems&lt;T&gt; () where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;!!T&gt; GetItems&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetItems``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo retornado pelo método.</typeparam>
+        <summary>Retorna todos os itens do tipo especificado desta coleção do item.</summary>
+        <returns>Uma coleção de tipo <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> que contém todos os itens do tipo especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EdmType GetType (string name, string namespaceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EdmType GetType(string name, string namespaceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetType(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EdmType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do tipo.</param>
+        <param name="namespaceName">O namespace do tipo.</param>
+        <summary>Retorna um <see cref="T:System.Data.Metadata.Edm.EdmType" /> objeto usando o nome do tipo especificado e o nome do namespace nesta coleção de item.</summary>
+        <returns>Um <see cref="T:System.Data.Metadata.Edm.EdmType" /> objeto que representa o tipo que corresponde ao nome do tipo especificado e o nome do namespace nesta coleção de item. Se não houver nenhum tipo de correspondência, esse método retornará nulo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EdmType GetType (string name, string namespaceName, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.EdmType GetType(string name, string namespaceName, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.GetType(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EdmType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do tipo.</param>
+        <param name="namespaceName">O namespace do tipo.</param>
+        <param name="ignoreCase">
+          <see langword="true" />para executar a pesquisa diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna um <see cref="T:System.Data.Metadata.Edm.EdmType" /> objeto usando o nome do tipo especificado e o nome do namespace dessa coleção de item.</summary>
+        <returns>Um <see cref="T:System.Data.Metadata.Edm.EdmType" /> objeto que representa o tipo que corresponde ao nome do tipo especificado e o nome do namespace nesta coleção de item. Se não houver nenhum tipo de correspondência, esse método retornará nulo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetEntityContainer">
+      <MemberSignature Language="C#" Value="public bool TryGetEntityContainer (string name, out System.Data.Metadata.Edm.EntityContainer entityContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetEntityContainer(string name, [out] class System.Data.Metadata.Edm.EntityContainer&amp; entityContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.TryGetEntityContainer(System.String,System.Data.Metadata.Edm.EntityContainer@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="entityContainer" Type="System.Data.Metadata.Edm.EntityContainer&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do contêiner de entidade.</param>
+        <param name="entityContainer">Quando este método retorna, contém um <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> objeto. Se não houver nenhum contêiner de entidade, este parâmetro de saída contém nulo. Caso contrário, ele contém o primeiro contêiner de entidade.</param>
+        <summary>Retorna um <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> objeto usando o nome do contêiner de entidade especificada. Se não houver nenhum contêiner de entidade, o parâmetro de saída contém nulo. Caso contrário, ele contém o primeiro contêiner de entidade.</summary>
+        <returns>
+          <see langword="true" />Se houver um contêiner de entidade que corresponde aos critérios de pesquisa; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetEntityContainer">
+      <MemberSignature Language="C#" Value="public bool TryGetEntityContainer (string name, bool ignoreCase, out System.Data.Metadata.Edm.EntityContainer entityContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetEntityContainer(string name, bool ignoreCase, [out] class System.Data.Metadata.Edm.EntityContainer&amp; entityContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.TryGetEntityContainer(System.String,System.Boolean,System.Data.Metadata.Edm.EntityContainer@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="entityContainer" Type="System.Data.Metadata.Edm.EntityContainer&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do contêiner de entidade.</param>
+        <param name="ignoreCase">
+          <see langword="true" />para executar a pesquisa diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />.</param>
+        <param name="entityContainer">Quando este método retorna, contém um <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> objeto. Se não houver nenhum contêiner de entidade, este parâmetro de saída contém nulo. Caso contrário, ele contém o primeiro contêiner de entidade.</param>
+        <summary>Retorna um <see cref="T:System.Data.Metadata.Edm.EntityContainer" /> objeto usando o nome do contêiner de entidade especificada. Se não houver nenhum contêiner de entidade, este parâmetro de saída contém nulo. Caso contrário, ele contém o primeiro contêiner de entidade.</summary>
+        <returns>
+          <see langword="true" />Se houver um contêiner de entidade que corresponde aos critérios de pesquisa; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetItem&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetItem&lt;T&gt; (string identity, out T item) where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetItem&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;(string identity, [out] !!T&amp; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.TryGetItem``1(System.String,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="item" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo retornado pelo método.</typeparam>
+        <param name="identity">A identidade do item.</param>
+        <param name="item">Quando esse método for retornado, o parâmetro de saída conterá um objeto <see cref="T:System.Data.Metadata.Edm.GlobalItem" />. Se não houver nenhum item global com a identidade especificada na coleção de itens, esse parâmetro de saída conterá nulo.</param>
+        <summary>Retorna um objeto <see cref="T:System.Data.Metadata.Edm.GlobalItem" /> fortemente tipado usando a identidade especificada dessa coleção de itens.</summary>
+        <returns>
+          <see langword="true" /> se houver um item que corresponde aos critérios de pesquisa; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetItem&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetItem&lt;T&gt; (string identity, bool ignoreCase, out T item) where T : System.Data.Metadata.Edm.GlobalItem;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetItem&lt;(class System.Data.Metadata.Edm.GlobalItem) T&gt;(string identity, bool ignoreCase, [out] !!T&amp; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.TryGetItem``1(System.String,System.Boolean,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.Data.Metadata.Edm.GlobalItem</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="item" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo retornado pelo método.</typeparam>
+        <param name="identity">A identidade do item.</param>
+        <param name="ignoreCase">
+          <see langword="true" />para executar a pesquisa diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />.</param>
+        <param name="item">Quando esse método for retornado, o parâmetro de saída conterá um objeto <see cref="T:System.Data.Metadata.Edm.GlobalItem" />. Se não houver nenhum item global com a identidade especificada na coleção de itens, esse parâmetro de saída conterá nulo.</param>
+        <summary>Retorna um objeto <see cref="T:System.Data.Metadata.Edm.GlobalItem" /> fortemente tipado usando a identidade especificada dessa coleção de itens.</summary>
+        <returns>
+          <see langword="true" /> se houver um item que corresponde aos critérios de pesquisa; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetType">
+      <MemberSignature Language="C#" Value="public bool TryGetType (string name, string namespaceName, out System.Data.Metadata.Edm.EdmType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetType(string name, string namespaceName, [out] class System.Data.Metadata.Edm.EdmType&amp; type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.TryGetType(System.String,System.String,System.Data.Metadata.Edm.EdmType@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="type" Type="System.Data.Metadata.Edm.EdmType&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do tipo.</param>
+        <param name="namespaceName">O namespace do tipo.</param>
+        <param name="type">Quando este método retorna, este parâmetro de saída contém um <see cref="T:System.Data.Metadata.Edm.EdmType" /> objeto. Se não houver nenhum tipo com o nome especificado e o nome de namespace nesta coleção de item, este parâmetro de saída contém nulo.</param>
+        <summary>Retorna um <see cref="T:System.Data.Metadata.Edm.EdmType" /> objeto usando o nome do tipo especificado e o nome do namespace dessa coleção de item.</summary>
+        <returns>
+          <see langword="true" />Se houver um tipo que corresponde aos critérios de pesquisa; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetType">
+      <MemberSignature Language="C#" Value="public bool TryGetType (string name, string namespaceName, bool ignoreCase, out System.Data.Metadata.Edm.EdmType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetType(string name, string namespaceName, bool ignoreCase, [out] class System.Data.Metadata.Edm.EdmType&amp; type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.ItemCollection.TryGetType(System.String,System.String,System.Boolean,System.Data.Metadata.Edm.EdmType@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+        <Parameter Name="type" Type="System.Data.Metadata.Edm.EdmType&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do tipo.</param>
+        <param name="namespaceName">O namespace do tipo.</param>
+        <param name="ignoreCase">
+          <see langword="true" />para executar a pesquisa diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />.</param>
+        <param name="type">Quando este método retorna, este parâmetro de saída contém um <see cref="T:System.Data.Metadata.Edm.EdmType" /> objeto. Se não houver nenhum tipo com o nome especificado e o nome de namespace nesta coleção de item, este parâmetro de saída contém nulo.</param>
+        <summary>Retorna um <see cref="T:System.Data.Metadata.Edm.EdmType" /> objeto usando o nome do tipo especificado e o nome do namespace dessa coleção de item.</summary>
+        <returns>
+          <see langword="true" />Se houver um tipo que corresponde aos critérios de pesquisa; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

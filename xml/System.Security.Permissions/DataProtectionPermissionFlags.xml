@@ -1,0 +1,129 @@
+<Type Name="DataProtectionPermissionFlags" FullName="System.Security.Permissions.DataProtectionPermissionFlags">
+  <TypeSignature Language="C#" Value="public enum DataProtectionPermissionFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed DataProtectionPermissionFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.DataProtectionPermissionFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as permissões de acesso para criptografar dados e memória.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Security.Permissions.DataProtectionPermission> e <xref:System.Security.Permissions.DataProtectionPermissionAttribute> classes para proteger o acesso aos dados criptografados e o uso de memória de <xref:System.Security.Cryptography.ProtectedData> e <xref:System.Security.Cryptography.ProtectedMemory> classes.  
+  
+> [!CAUTION]
+>  Muitos desses sinalizadores podem ter efeitos avançados e devem ser concedidos somente para código altamente confiável.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllFlags">
+      <MemberSignature Language="C#" Value="AllFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.DataProtectionPermissionFlags AllFlags = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.DataProtectionPermissionFlags.AllFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.DataProtectionPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de criptografar dados, memória de criptografar, descriptografar dados e retirar a memória.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFlags">
+      <MemberSignature Language="C#" Value="NoFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.DataProtectionPermissionFlags NoFlags = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.DataProtectionPermissionFlags.NoFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.DataProtectionPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há recursos de proteção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectData">
+      <MemberSignature Language="C#" Value="ProtectData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.DataProtectionPermissionFlags ProtectData = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.DataProtectionPermissionFlags.ProtectData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.DataProtectionPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de criptografar dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectMemory">
+      <MemberSignature Language="C#" Value="ProtectMemory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.DataProtectionPermissionFlags ProtectMemory = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.DataProtectionPermissionFlags.ProtectMemory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.DataProtectionPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de criptografar a memória.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnprotectData">
+      <MemberSignature Language="C#" Value="UnprotectData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.DataProtectionPermissionFlags UnprotectData = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.DataProtectionPermissionFlags.UnprotectData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.DataProtectionPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de descriptografar dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnprotectMemory">
+      <MemberSignature Language="C#" Value="UnprotectMemory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.DataProtectionPermissionFlags UnprotectMemory = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.DataProtectionPermissionFlags.UnprotectMemory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.DataProtectionPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de descriptografar a memória.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

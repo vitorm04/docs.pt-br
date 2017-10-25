@@ -1,0 +1,582 @@
+<Type Name="IDataObject" FullName="System.Windows.Forms.IDataObject">
+  <TypeSignature Language="C#" Value="public interface IDataObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IDataObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um mecanismo independente de formato para a transferência de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `IDataObject` interface é usada pelo <xref:System.Windows.Forms.Clipboard> classe e nas operações de arrastar e soltar.  
+  
+ Quando implementado em uma classe, o <xref:System.Windows.Forms.IDataObject> métodos permitem que o usuário armazenar dados em vários formatos em uma instância da classe. Armazenando dados em mais de um formato aumenta a chance de que um aplicativo de destino, cujos requisitos de formato você talvez não saiba, pode recuperar os dados armazenados. Para armazenar dados em uma instância do <xref:System.Windows.Forms.IDataObject>, chame o <xref:System.Windows.Forms.IDataObject.SetData%2A> método e especificar o formato de dados no `format` parâmetro. Definir o `autoConvert` parâmetro `false` se você não quiser que os dados armazenados a ser convertido em outro formato, quando ele é recuperado. Invocar <xref:System.Windows.Forms.IDataObject.SetData%2A> várias vezes em uma instância de <xref:System.Windows.Forms.IDataObject> para armazenar dados em mais de um formato.  
+  
+ Recuperar dados armazenados de um <xref:System.Windows.Forms.IDataObject> chamando o <xref:System.Windows.Forms.IDataObject.GetData%2A> método e especificando os dados de formato no `format` parâmetro. Definir o `autoConvert` parâmetro `false` para recuperar apenas os dados que foram armazenados no formato especificado. Para converter os dados armazenados no formato especificado, defina `autoConvert` para `true`, ou não use `autoConvert`.  
+  
+ Para determinar os formatos dos dados armazenados em um <xref:System.Windows.Forms.IDataObject>, use a seguinte <xref:System.Windows.Forms.IDataObject> métodos.  
+  
+-   Chamar o <xref:System.Windows.Forms.IDataObject.GetFormats%2A> método para recuperar uma matriz de todos os formatos na qual os dados estão disponíveis. Definir o `autoConvert` parâmetro `false` para obter apenas os formatos na qual os dados são armazenados. Para obter todos os formatos na qual os dados estão disponíveis, defina `autoConvert` para `true`, ou não use esse parâmetro.  
+  
+-   Chamar o <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> método para determinar se os dados armazenados estão disponíveis em um determinado formato. Se você não deseja dados armazenados a ser convertido no formato especificado, defina o `autoConvert` parâmetro `false`.  
+  
+ Consulte o <xref:System.Windows.Forms.DataObject> classe para uma implementação desta interface. Consulte o <xref:System.Windows.Forms.DataFormats> classe para predefinida <xref:System.Windows.Forms.Clipboard> formatos de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato dos dados a serem recuperados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <summary>Recupera os dados associados ao formato de dados especificado.</summary>
+        <returns>Os dados associados ao formato especificado ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse método não pode localizar os dados no formato especificado, ele tentará converter os dados no formato. Se os dados não podem ser convertidos no formato especificado, este método retorna `null`.  
+  
+ Para determinar se a dados estão associados, ou podem ser convertidos em um formato, chame <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> antes de chamar <xref:System.Windows.Forms.IDataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.IDataObject.GetFormats%2A> para obter uma lista de formatos válidos para os dados armazenados nesta instância.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject,` para demonstrar o uso do `GetData` método. O método é usado para recuperar os dados armazenados em `myDataObject`, que está associado a `Text` formato. O exemplo supõe que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1` e um <xref:System.Windows.Forms.TextBox> chamado `textBox1`.  
+  
+ [!code-cpp[GetData1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetData1/CPP/getdata1.cpp#1)]
+ [!code-csharp[GetData1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetData1/CS/getdata1.cs#1)]
+ [!code-vb[GetData1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetData1/VB/getdata1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (Type format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(class System.Type format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.GetData(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um <see cref="T:System.Type" /> que representa o formato dos dados a serem recuperados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <summary>Recupera os dados associados ao formato do tipo de classe especificado.</summary>
+        <returns>Os dados associados ao formato especificado ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse método não pode localizar os dados no formato especificado, ele tentará converter os dados no formato. Se os dados não podem ser convertidos no formato especificado, este método retorna `null`.  
+  
+ Para determinar se a dados estão associados, ou podem ser convertidos em um formato, chame <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> antes de chamar <xref:System.Windows.Forms.IDataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.IDataObject.GetFormats%2A> para obter uma lista de formatos válidos para os dados armazenados nesta instância.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `GetData` método. O método é usado para recuperar os dados armazenados em `myObject`, que está associado um tipo específico, `myType`. O tipo dos dados recuperados é exibido em uma caixa de mensagem. O exemplo supõe que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[GetData2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetData2/CPP/getdata2.cpp#1)]
+ [!code-csharp[GetData2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetData2/CS/getdata2.cs#1)]
+ [!code-vb[GetData2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetData2/VB/getdata2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (string format, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(string format, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.GetData(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato dos dados a serem recuperados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="autoConvert">
+          <see langword="true" />Para converter os dados no formato especificado; Caso contrário, <see langword="false" />.</param>
+        <summary>Recupera os dados associados com o formato de dados especificado, usando um valor booliano para determinar se os dados devem ou não ser convertidos para o formato.</summary>
+        <returns>Os dados associados ao formato especificado ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `autoConvert` parâmetro é `true` e esse método não é possível localizar os dados no formato especificado, ele tenta converter os dados no formato. Se os dados não podem ser convertidos no formato especificado, ou se os dados foram armazenados com o `autoConvert` parâmetro definido como `false`, esse método retornará `null`.  
+  
+ Se o `autoConvert` parâmetro é `false`, esse método retorna dados no formato especificado, ou `null` se nenhum dado neste formato pode ser encontrado.  
+  
+ Para determinar se a dados estão associados, ou podem ser convertidos em um formato, chame <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> antes de chamar <xref:System.Windows.Forms.IDataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.IDataObject.GetFormats%2A> para obter uma lista de formatos válidos para os dados armazenados nesta instância.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `GetData` método. O exemplo recupera os dados armazenados em um `DataObject`, usando o `autoConvert` para especificar se deseja ou não converter o formato de dados. Primeiro, `myDataObject` é criado com dados de texto. O exemplo tenta duas vezes recuperar os dados. Na primeira avaliação, ele especifica seu formato como uma cadeia de caracteres e define o `autoConvert` parâmetro `false`. Esta avaliação falha e o resultado é exibido em uma caixa de mensagem rotulada "Mensagem #1". A segunda versão de avaliação, o exemplo recupera os mesmos dados com o `autoConvert` parâmetro definido como `true`. Esta avaliação for bem-sucedida e o resultado é exibido em uma caixa de mensagem rotulada "Mensagem #2". O exemplo supõe que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[GetData3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetData3/CPP/getdata3.cpp#1)]
+ [!code-csharp[GetData3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetData3/CS/getdata3.cs#1)]
+ [!code-vb[GetData3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetData3/VB/getdata3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public bool GetDataPresent (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.GetDataPresent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato pelo qual verificar. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <summary>Determina se os dados armazenados nesta instância estão associados ao formato especificado ou podem ser convertidos para ele.</summary>
+        <returns>
+          <see langword="true" /> se os dados armazenados nesta instância estão associados ao formato especificado ou podem ser convertidos para ele; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar se um formato existe neste <xref:System.Windows.Forms.DataObject> antes de chamar <xref:System.Windows.Forms.IDataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.IDataObject.GetFormats%2A> para os formatos que estão disponíveis nesta instância.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `GetDataPresent` método. Primeiro, ele cria um objeto de dados usando uma cadeia de caracteres e o `Text` formato. Em seguida, ele verifica se os dados estão presentes no `Text` Formatar e exibe os resultados em uma caixa de mensagem. O exemplo supõe que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[GetDataPresent1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetDataPresent1/CPP/getdatapresent1.cpp#1)]
+ [!code-csharp[GetDataPresent1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetDataPresent1/CS/getdatapresent1.cs#1)]
+ [!code-vb[GetDataPresent1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetDataPresent1/VB/getdatapresent1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public bool GetDataPresent (Type format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(class System.Type format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.GetDataPresent(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um <see cref="T:System.Type" /> que representa o formato para o qual verificar. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <summary>Determina se os dados armazenados nesta instância estão associados ao formato especificado ou podem ser convertidos para ele.</summary>
+        <returns>
+          <see langword="true" /> se os dados armazenados nesta instância estiverem associados ao formato especificado ou puderem ser convertidos para ele, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar se um formato existe neste <xref:System.Windows.Forms.DataObject> antes de chamar <xref:System.Windows.Forms.IDataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.IDataObject.GetFormats%2A> para os formatos que estão disponíveis nesta instância.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `GetDataPresent` método. Primeiro, ele cria um componente (`myComponent`) e o armazena em um objeto de dados (`myDataObject`). Em seguida, ele verifica se os dados especificados são armazenados em `myDataObject`. Se o teste for avaliada `true`, ele exibe o resultado em uma caixa de mensagem e exibe o tipo de dados em uma caixa de texto. Este exemplo supõe que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1` e um <xref:System.Windows.Forms.TextBox> chamado `textBox1`.  
+  
+ [!code-cpp[GetDataPresent2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetDataPresent2/CPP/getdatapresent2.cpp#1)]
+ [!code-csharp[GetDataPresent2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetDataPresent2/CS/getdatapresent2.cs#1)]
+ [!code-vb[GetDataPresent2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetDataPresent2/VB/getdatapresent2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public bool GetDataPresent (string format, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(string format, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.GetDataPresent(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato pelo qual verificar. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="autoConvert">
+          <see langword="true" />para determinar se os dados armazenados nesta instância pode ser convertido no formato especificado; <see langword="false" /> para verificar se os dados estão no formato especificado.</param>
+        <summary>Determina se os dados armazenados nesta instância são associados ao formato especificado, usando um valor booliano para determinar se deve converter os dados para o formato.</summary>
+        <returns>
+          <see langword="true" /> se os dados estiverem no formato especificado ou puderem ser convertidos nele; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar se um formato existe neste <xref:System.Windows.Forms.DataObject> antes de chamar <xref:System.Windows.Forms.IDataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.IDataObject.GetFormats%2A> para os formatos que estão disponíveis nesta instância.  
+  
+ Este método retorna `true` quando:  
+  
+-   O `autoConvert` parâmetro é `true` e os dados estão em um formato que pode ser convertido para o formato apropriado.  
+  
+-   O `autoConvert` parâmetro é `false` e os dados estão no formato apropriado.  
+  
+ Este método retorna `false` quando:  
+  
+-   O `autoConvert` parâmetro é `true` e esse método não é possível localizar os dados no formato especificado e não pode converter dados para o formato especificado, ou os dados foram armazenados com `autoConvert` definido como `false`.  
+  
+-   O `autoConvert` parâmetro é `false`, e os dados não existe nesta instância no formato especificado.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.GetDataPresent%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `GetDataPresent` método. Primeiro, ele cria um objeto de dados (`myDataObject`) usando uma cadeia de caracteres e o `Text` formato. Em seguida, ele consulta o objeto de dados associados a `Text` formato, com o `autoConvert` parâmetro definido como `false`. Esta avaliação falha e o resultado é exibido em uma caixa de mensagem rotulada "Mensagem #1". Na segunda avaliação, ele define o `autoConvert` parâmetro `true`. Esta avaliação for bem-sucedida e o resultado é exibido em uma caixa de mensagem rotulada "Mensagem #2". O exemplo supõe que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[GetDataPresent3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetDataPresent3/CPP/getdatapresent3.cpp#1)]
+ [!code-csharp[GetDataPresent3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetDataPresent3/CS/getdatapresent3.cs#1)]
+ [!code-vb[GetDataPresent3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetDataPresent3/VB/getdatapresent3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormats">
+      <MemberSignature Language="C#" Value="public string[] GetFormats ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetFormats() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.GetFormats" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista de todos os formatos aos quais os dados armazenados nessa instância estão associados ou nos quais eles podem ser convertidos.</summary>
+        <returns>Uma matriz de nomes que representa uma lista de todos os formatos com suporte nos dados armazenados nesse objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para obter os formatos de dados com suporte antes de chamar o <xref:System.Windows.Forms.IDataObject.GetData%2A> método. Consulte o <xref:System.Windows.Forms.DataFormats> classe para formatos predefinidos.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.GetFormats%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `GetFormats` método. Primeiro, ele cria um objeto de dados (`myDataObject`) usando uma cadeia de caracteres e o `Text` formato. Em seguida, ele recupera todos os formatos de dados e formatos de conversão de dados no objeto de dados e exibe a lista resultante em uma caixa de mensagem. Este exemplo supõe que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[GetFormats1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetFormats1/CPP/getformats1.cpp#1)]
+ [!code-csharp[GetFormats1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetFormats1/CS/getformats1.cs#1)]
+ [!code-vb[GetFormats1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetFormats1/VB/getformats1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormats">
+      <MemberSignature Language="C#" Value="public string[] GetFormats (bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetFormats(bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.GetFormats(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="autoConvert">
+          <see langword="true" />para recuperar todos os formatos que os dados armazenados nesta instância estão associados ou podem ser convertidos em; <see langword="false" /> para recuperar apenas os formatos de dados nativos.</param>
+        <summary>Obtém uma lista de todos os formatos de dados armazenados nesta instância estão associados ou podem ser convertidos, usando um valor booleano para determinar se recuperar todos os formatos de dados podem ser convertidos em ou somente dados nativos formatos.</summary>
+        <returns>Uma matriz de nomes que representa uma lista de todos os formatos com suporte nos dados armazenados nesse objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para obter os formatos de dados com suporte antes de chamar o <xref:System.Windows.Forms.IDataObject.GetData%2A> método. Consulte o <xref:System.Windows.Forms.DataFormats> classe para formatos predefinidos.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.GetFormats%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `GetFormats` método. Primeiro, ele cria um objeto de dados (`myDataObject`) usando uma cadeia de caracteres e o `UnicodeText` formato. Em seguida, ele faz duas consultas para obter os formatos associados aos dados. Na primeira consulta, ele define o `autoConvert` parâmetro `false` : nesse caso, apenas o formato nativo dos dados é retornado. Na segunda consulta, ele define o `autoConvert` parâmetro `true`, de modo que ele obtém a lista de formatos, incluindo os formatos de dados podem ser convertidos em. Em cada caso, a lista resultante é exibida em uma caixa de mensagem. Este exemplo supõe que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[GetFormats2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/GetFormats2/CPP/getformats2.cpp#1)]
+ [!code-csharp[GetFormats2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/GetFormats2/CS/getformats2.cs#1)]
+ [!code-vb[GetFormats2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GetFormats2/VB/getformats2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.SetData(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Armazena os dados especificados nesta instância, usando a classe dos dados para o formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato é derivado da classe de dados.  
+  
+ Dados armazenados usando esse método podem ser convertidos em um formato compatível quando ele é recuperado.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `SetData` método. Primeiro, ele cria um componente (`myComponent`) e o armazena em um objeto de dados (`myDataObject`). Em seguida, ele verifica se os dados especificados são armazenados no objeto de dados e exibe o resultado em uma caixa de mensagem. O exemplo supõe que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[SetData1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SetData1/CPP/setdata1.cpp#1)]
+ [!code-csharp[SetData1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SetData1/CS/setdata1.cs#1)]
+ [!code-vb[SetData1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SetData1/VB/setdata1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato associado a esses dados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Armazena os dados especificados e seu formato associado nesta instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não souber o formato do aplicativo de destino, você pode armazenar dados em vários formatos, usando esse método.  
+  
+ Dados armazenados usando esse método podem ser convertidos em um formato compatível quando ele é recuperado.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `SetData` método. Primeiro, ele cria um objeto de dados (`myDataObject`) e armazena uma cadeia de caracteres do objeto para especificar o `UnicodeText` formato. Em seguida, ele recupera os dados armazenados em objetos especificando o `Text` Formatar, de modo que os dados são convertidos para o `Text` formato. O resultado é exibido em uma caixa de mensagem. Este exemplo supõe que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[SetData2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SetData2/CPP/setdata2.cpp#1)]
+ [!code-csharp[SetData2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SetData2/CS/setdata2.cs#1)]
+ [!code-vb[SetData2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SetData2/VB/setdata2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (Type format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(class System.Type format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.SetData(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um <see cref="T:System.Type" /> que representa o formato associado aos dados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Armazena os dados especificados e seu tipo de classe associada nesta instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não souber o formato do aplicativo de destino, você pode armazenar dados em vários formatos, usando esse método.  
+  
+ Dados armazenados usando esse método podem ser convertidos em um formato compatível quando ele é recuperado.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `SetData` método. Primeiro, ele cria um componente (`myComponent`) e o armazena em um objeto de dados (`myDataObject`), usando `myType` para especificar o formato de dados. Em seguida, ele verifica se os dados do tipo especificado são armazenados no objeto e exibe o resultado em uma caixa de mensagem. O exemplo supõe que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[SetData3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SetData3/CPP/setdata3.cpp#1)]
+ [!code-csharp[SetData3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SetData3/CS/setdata3.cs#1)]
+ [!code-vb[SetData3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SetData3/VB/setdata3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (string format, bool autoConvert, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(string format, bool autoConvert, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataObject.SetData(System.String,System.Boolean,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato associado a esses dados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="autoConvert">
+          <see langword="true" />para permitir que os dados a ser convertido em outro formato; Caso contrário, <see langword="false" />.</param>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Armazena os dados especificados e seu formato associado nesta instância, usando um valor booliano para especificar se os dados podem ser convertidos para outro formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não souber o formato do aplicativo de destino, você pode armazenar dados em vários formatos, usando esse método.  
+  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.DataObject.SetData%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:System.Windows.Forms.DataObject> de classe que implementa `IDataObject`, para demonstrar o uso do `SetData` método. Primeiro, ele cria um objeto de dados (`myDataObject`) e armazena uma `UnicodeText` cadeia de caracteres, com o `autoConvert` parâmetro definido como `false`. Em seguida, ele recupera o format(s) associado aos dados armazenados no objeto e exibe o resultado em uma caixa de mensagem. O único formato associado aos dados é o `UnicodeText` formato. Este exemplo supõe que você tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[SetData4#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SetData4/CPP/form1.cpp#1)]
+ [!code-csharp[SetData4#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SetData4/CS/form1.cs#1)]
+ [!code-vb[SetData4#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SetData4/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

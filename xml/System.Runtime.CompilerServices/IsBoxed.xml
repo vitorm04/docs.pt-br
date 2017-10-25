@@ -1,0 +1,52 @@
+<Type Name="IsBoxed" FullName="System.Runtime.CompilerServices.IsBoxed">
+  <TypeSignature Language="C#" Value="public static class IsBoxed" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit IsBoxed extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.IsBoxed" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.CompilerServices.VisualC</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Indica que o tipo de referência modificado é um tipo de valor Demarcado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O compilador do C++ da Microsoft oferece suporte a tipos de valor boxed diretamente na linguagem.  Obter informações sobre tipos de valor boxed são emitidas nos metadados como um modificador personalizado, onde o modificador decora uma referência para o tipo de valor que está sendo realizado.  
+  
+ Compiladores emitem modificadores personalizados dentro dos metadados para alterar o maneira como o compilador just-in-time (JIT) manipula valores quando o comportamento padrão não é apropriado.  Quando o compilador JIT encontra um modificador personalizado, ele trata o valor da maneira que especifica o modificador.  Compiladores podem aplicar modificadores personalizados para os métodos, parâmetros e valores de retorno.  O compilador JIT deve responder às modificadores necessárias, mas pode ignorar modificadores opcionais.  
+  
+ Você pode emitir modificadores personalizados em metadados usando uma das seguintes técnicas:  
+  
+-   Usando métodos de <xref:System.Reflection.Emit.TypeBuilder> classe como <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineField%2A>, <xref:System.Reflection.Emit.TypeBuilder.DefineConstructor%2A>, e <xref:System.Reflection.Emit.TypeBuilder.DefineProperty%2A>.  
+  
+-   Gerar um arquivo de instrução do Microsoft intermediate language (MSIL) que contém chamadas para `modopt` e `modreq`e montar o arquivo com o [Ilasm.exe (IL Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md).  
+  
+-   Usando a API de reflexão não gerenciada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como emitir uma <xref:System.Runtime.CompilerServices.IsBoxed> objeto em um assembly usando reflexão.  
+  
+ [!code-cpp[Runtime.CompilerServices.IsBoxed#1](~/samples/snippets/cpp/VS_Snippets_CLR/Runtime.CompilerServices.IsBoxed/cpp/sample.cpp#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

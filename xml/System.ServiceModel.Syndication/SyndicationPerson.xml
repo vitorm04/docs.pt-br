@@ -1,0 +1,573 @@
+<Type Name="SyndicationPerson" FullName="System.ServiceModel.Syndication.SyndicationPerson">
+  <TypeSignature Language="C#" Value="public class SyndicationPerson" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SyndicationPerson extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.SyndicationPerson" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um autor ou colaborador do conteúdo de distribuição.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Syndication.SyndicationPerson>objetos podem ser adicionados às coleções de autores e colaboradores na <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> objetos.  
+  
+ Quando serializado Atom 1.0, o <xref:System.ServiceModel.Syndication.SyndicationPerson> é gravado como um `<author>` ou `<contributor>` elemento.  
+  
+ Quando serializado para RSS 2.0, um <xref:System.ServiceModel.Syndication.SyndicationPerson> instância é gravada como um `<managingEditor>`, `<a10:author>`, ou `<a10:contributor>` elemento. Como um <xref:System.ServiceModel.Syndication.SyndicationPerson> é serializado depende do número de <xref:System.ServiceModel.Syndication.SyndicationPerson> objetos adicionados a um <xref:System.ServiceModel.Syndication.SyndicationFeed> ou <xref:System.ServiceModel.Syndication.SyndicationItem>, qual coleção de <xref:System.ServiceModel.Syndication.SyndicationPerson> instâncias são adicionadas e o valor da `SerializeExtensionAsAtom` parâmetro para o <xref:System.ServiceModel.Syndication.Rss20ItemFormatter.%23ctor%28System.ServiceModel.Syndication.SyndicationItem%2CSystem.Boolean%29> construtor. Se houver apenas uma <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionada para o <xref:System.ServiceModel.Syndication.SyndicationFeed.Authors%2A> (ou <xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A>) coleção, o <xref:System.ServiceModel.Syndication.SyndicationPerson> é serializado como um `<managingEditor>` elemento. Se mais de um <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado ao <xref:System.ServiceModel.Syndication.SyndicationFeed.Authors%2A> (ou <xref:System.ServiceModel.Syndication.SyndicationItem.Authors%2A>) coleta e `SerializeExtensionsAsAtom` é definido como `true`, todos os do <xref:System.ServiceModel.Syndication.SyndicationPerson> objetos são serializados para `<a10:author>` elementos. Se `SerializeExtensionsAsAtom` é definido como `false`, o <xref:System.ServiceModel.Syndication.SyndicationPerson> instâncias não é serializado. Qualquer <xref:System.ServiceModel.Syndication.SyndicationPerson> instâncias adicionadas para o <xref:System.ServiceModel.Syndication.SyndicationFeed.Contributors%2A> (ou <xref:System.ServiceModel.Syndication.SyndicationItem.Contributors%2A>) coleção só são serializados se `SerializeExtensionsAsAtom` é definido como `true`, caso em que eles são serializados para `<a10:contributor>` elementos.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como adicionar um <xref:System.ServiceModel.Syndication.SyndicationPerson> à coleção de autores um <xref:System.ServiceModel.Syndication.SyndicationFeed> instância.  
+  
+ [!code-csharp[SyndicationPerson#8](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationperson/cs/program.cs#8)]
+ [!code-vb[SyndicationPerson#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationperson/vb/snippets.vb#8)]  
+  
+ O XML a seguir mostra como um <xref:System.ServiceModel.Syndication.SyndicationPerson> é serializado como Atom 1.0.  
+  
+ [!code-xml[SyndicationPerson#0](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/atom.xml#0)]  
+  
+ O XML a seguir mostra como um <xref:System.ServiceModel.Syndication.SyndicationPerson> é serializado como RSS 2.0.  
+  
+ [!code-xml[SyndicationPerson#1](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/rss.xml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationPerson ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationPerson.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SyndicationPerson (System.ServiceModel.Syndication.SyndicationPerson source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Syndication.SyndicationPerson source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationPerson.#ctor(System.ServiceModel.Syndication.SyndicationPerson)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.ServiceModel.Syndication.SyndicationPerson" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" /> instância para inicializar a nova instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" /> classe com a instância especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationPerson (string email);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string email) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationPerson.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="email" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="email">O endereço de email da pessoa.</param>
+        <summary>Inicializa uma nova <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" /> instância com o endereço de email especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como chamar este construtor.  
+  
+ [!code-csharp[SyndicationPerson#2](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationperson/cs/program.cs#2)]
+ [!code-vb[SyndicationPerson#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationperson/vb/snippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationPerson (string email, string name, string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string email, string name, string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationPerson.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="email" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="email">O endereço de email da pessoa.</param>
+        <param name="name">O nome da pessoa.</param>
+        <param name="uri">O URI da página de Web da pessoa.</param>
+        <summary>Inicializa uma nova <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" /> instância com o endereço de email especificado, o nome e o identificador de recurso uniforme (URI).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como chamar este construtor.  
+  
+ [!code-csharp[SyndicationPerson#3](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationperson/cs/program.cs#3)]
+ [!code-vb[SyndicationPerson#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationperson/vb/snippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeExtensions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,string&gt; AttributeExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;class System.Xml.XmlQualifiedName, string&gt; AttributeExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationPerson.AttributeExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Xml.XmlQualifiedName,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as extensões de atributo para o <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />.</summary>
+        <value>Um dicionário que contém uma coleção de extensões de atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modelo de objeto de distribuição permite que você adicione atributos personalizados para um <xref:System.ServiceModel.Syndication.SyndicationPerson> instância. Você pode adicionar qualquer XML atributo/valor válido.  
+  
+ Quando serializado para Atom 1.0, qualquer atributo/valor personalizado é gravado como um atributo no `<author>` ou `<contributor>` elementos. Quando serializado para RSS 2.0, qualquer atributo/valor personalizado é gravado como um atributo no `<managingEditor>`, `<a10:contributor>`, ou `<a10:author>` elementos.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como adicionar uma extensão de atributo para um <xref:System.ServiceModel.Syndication.SyndicationPerson> instância.  
+  
+ [!code-csharp[SyndicationPerson#9](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationperson/cs/program.cs#9)]
+ [!code-vb[SyndicationPerson#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationperson/vb/snippets.vb#9)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.AttributeExtensions%2A> coleção é serializada como Atom 1.0.  
+  
+ [!code-xml[SyndicationPerson#4](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/atom.xml#4)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.AttributeExtensions%2A> coleção é serializada como RSS 2.0.  
+  
+ [!code-xml[SyndicationPerson#5](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/rss.xml#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Syndication.SyndicationPerson Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Syndication.SyndicationPerson Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationPerson.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationPerson</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do existente <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" /> instância.</summary>
+        <returns>Um novo <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como clonar um <xref:System.ServiceModel.Syndication.SyndicationPerson> instância.  
+  
+ [!code-csharp[SyndicationPerson#14](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationperson/cs/program.cs#14)]
+ [!code-vb[SyndicationPerson#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationperson/vb/snippets.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementExtensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Syndication.SyndicationElementExtensionCollection ElementExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Syndication.SyndicationElementExtensionCollection ElementExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationPerson.ElementExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Syndication.SyndicationElementExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as extensões de elemento para o <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtensionCollection" /> que contém as extensões do elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modelo de objeto de distribuição permite que você adicione elementos XML personalizados para um <xref:System.ServiceModel.Syndication.SyndicationPerson> instância. Você pode adicionar qualquer elemento XML válido desde que o namespace do elemento e o namespace contendo são diferentes.  
+  
+ Quando serializado Atom 1.0, qualquer elemento personalizado é gravado como um elemento XML dentro de um `<author>` ou `<contributor>` elemento.  
+  
+ Quando serializado para RSS 2.0, qualquer elemento personalizado é gravado como um elemento XML dentro de `<managingEditor>`, `<a10:contributor>`, ou `<a10:author>` elementos.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como adicionar uma extensão de elemento para uma <xref:System.ServiceModel.Syndication.SyndicationPerson> instância.  
+  
+ [!code-csharp[SyndicationPerson#10](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationperson/cs/program.cs#10)]
+ [!code-vb[SyndicationPerson#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationperson/vb/snippets.vb#10)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.ElementExtensions%2A> coleção é serializada como Atom 1.0.  
+  
+ [!code-xml[SyndicationPerson#6](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/atom.xml#6)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.ElementExtensions%2A> coleção é serializada como RSS 2.0.  
+  
+ [!code-xml[SyndicationPerson#7](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/rss.xml#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Email">
+      <MemberSignature Language="C#" Value="public string Email { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Email" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationPerson.Email" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o endereço de email a <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />.</summary>
+        <value>O endereço de email da pessoa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando serializado Atom 1.0, o <xref:System.ServiceModel.Syndication.SyndicationPerson> propriedade é gravada como um `<email>` elemento. O `<email>` elemento aparece dentro de um `<author>` ou `<contributor>` elemento, que depende de qual coleção (os autores ou colaboradores) a <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado ao.  
+  
+ Quando serializado para RSS 2.0, esse valor é gravado como um `<a10:email>` elemento. O `<a10:email>` elemento aparece dentro de um `<managingEditor>`, `<a10:author>`, ou `<a10:contributor>` elemento. Se houver apenas uma <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado à coleção de autores, o `<email>` elemento é gravado no `<managingEditor>` elemento. Se mais de um <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado à coleção de autores, o `<email>` elemento é gravado em um `<a10:author>` elemento. Se o <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado à coleção colaboradores, o `<email>` elemento é gravado em um `<a10:contributor>` elemento.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir o endereço de email de um <xref:System.ServiceModel.Syndication.SyndicationPerson> instância.  
+  
+ [!code-csharp[SyndicationPerson#11](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationperson/cs/program.cs#11)]
+ [!code-vb[SyndicationPerson#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationperson/vb/snippets.vb#11)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.Email%2A> é serializado do Atom 1.0.  
+  
+ [!code-xml[SyndicationPerson#0](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/atom.xml#0)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.Email%2A> é serializado para RSS 2.0.  
+  
+ [!code-xml[SyndicationPerson#1](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/rss.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationPerson.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o nome do <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />.</summary>
+        <value>O nome da pessoa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando serializado Atom 1.0, o <xref:System.ServiceModel.Syndication.SyndicationPerson.Name%2A> propriedade é gravada como um `<name>` elemento. O `<name>` elemento aparece dentro de um `<author>` ou `<contributor>` elemento, que depende de qual coleção (os autores ou colaboradores) a <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado ao.  
+  
+ Quando serializado para RSS 2.0, o <xref:System.ServiceModel.Syndication.SyndicationPerson.Name%2A> propriedade é gravada como um `<a10:name>` elemento. O `<a10:name>` elemento aparece dentro de um `<managingEditor>`, `<a10:author>`, ou `<a10:contributor>` elemento. Se houver apenas uma <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado à coleção de autores, o `<a10:name>` elemento é gravado no `<managingEditor>` elemento. Se mais de um <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado à coleção de autores, o `<a10:name>` elemento é gravado no `<a10:author>` elemento. Se o <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado à coleção colaboradores, o `<a10:name>` elemento é gravado no `<a10:contributor>` elemento.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir o nome de um <xref:System.ServiceModel.Syndication.SyndicationPerson>.  
+  
+ [!code-csharp[SyndicationPerson#12](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationperson/cs/program.cs#12)]
+ [!code-vb[SyndicationPerson#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationperson/vb/snippets.vb#12)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.Name%2A> é serializado do Atom 1.0.  
+  
+ [!code-xml[SyndicationPerson#0](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/atom.xml#0)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.Name%2A> é serializado para RSS 2.0.  
+  
+ [!code-xml[SyndicationPerson#1](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/rss.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseAttribute">
+      <MemberSignature Language="C#" Value="protected virtual bool TryParseAttribute (string name, string ns, string value, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryParseAttribute(string name, string ns, string value, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationPerson.TryParseAttribute(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do elemento.</param>
+        <param name="ns">O namespace do elemento.</param>
+        <param name="value">O atributo para analisar.</param>
+        <param name="version">A versão de distribuição para usar durante a análise.</param>
+        <summary>Tenta analisar uma extensão de atributo.</summary>
+        <returns>Um valor que especifica se a extensão de atributo foi analisada com êxito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Extensões de atributo são os atributos personalizados que não são definidos pelas especificações Atom 1.0 ou RSS 2.0. Elas são serializadas como um atributo do `<author>` ou `<contributor>` elemento Atom 1.0 ou `<managingEditor>`, `<a10:author>`, ou `<a10:contributor>` elemento para RSS 2.0. Esse método é um ponto de extensão que permite que você manipule a desserialização de uma extensão de atributo personalizado. Para fazer isso, você deve derivar uma classe de <xref:System.ServiceModel.Syndication.SyndicationPerson> e substitua esse método. Este método é chamado para todas as extensões de atributo não reconhecido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">XML inválido encontrado durante a leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseElement">
+      <MemberSignature Language="C#" Value="protected virtual bool TryParseElement (System.Xml.XmlReader reader, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryParseElement(class System.Xml.XmlReader reader, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationPerson.TryParseElement(System.Xml.XmlReader,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> para leitura.</param>
+        <param name="version">A versão de distribuição para usar durante a análise.</param>
+        <summary>Tenta analisar uma extensão de elemento.</summary>
+        <returns>Um valor que especifica se a extensão de elemento foi analisada com êxito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Extensões de elemento são os elementos XML válidos que não são especificados nas especificações do Atom 1.0 ou o RSS 2.0. Você pode adicionar qualquer elemento XML válido como uma extensão, desde que o namespace é diferente do namespace delimitador. Esse método é um ponto de extensão que permite que você manipule a desserialização de uma extensão de elemento personalizado. Para fazer isso, você deve derivar uma classe de <xref:System.ServiceModel.Syndication.SyndicationPerson> e substitua esse método. Este método é chamado para todas as extensões de elemento não reconhecido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XmlException">XML inválido encontrado durante a leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationPerson.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o URI do <see cref="T:System.ServiceModel.Syndication.SyndicationPerson" />.</summary>
+        <value>O URI do site da pessoa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando serializado Atom 1.0, o <xref:System.ServiceModel.Syndication.SyndicationPerson.Uri%2A> propriedade é gravada como um `<uri>` elemento. O `<uri>` elemento aparece dentro de um `<author>` ou `<contributor>` elemento, que depende de qual coleção (os autores ou colaboradores) a <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado ao.  
+  
+ Quando serializado para RSS 2.0, o <xref:System.ServiceModel.Syndication.SyndicationPerson.Uri%2A> propriedade é gravada como um `<a10:uri>` elemento. O `<a10:uri>` elemento aparece dentro de um `<managingEditor>`, `<a10:author>`, ou `<a10:contributor>` elemento. Se houver apenas uma <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado à coleção de autores, o `<a10:uri>` elemento é gravado no `<managingEditor>` elemento. Se mais de um <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado à coleção de autores, o `<a10:uri>` elemento é gravado no `<a10:author>` elemento. Se o <xref:System.ServiceModel.Syndication.SyndicationPerson> é adicionado à coleção colaboradores, o `<a10:uri>` elemento é gravado no `<a10:contributor>` elemento.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir o URI para um <xref:System.ServiceModel.Syndication.SyndicationPerson> instância.  
+  
+ [!code-csharp[SyndicationPerson#13](~/samples/snippets/csharp/VS_Snippets_CFX/syndicationperson/cs/program.cs#13)]
+ [!code-vb[SyndicationPerson#13](~/samples/snippets/visualbasic/VS_Snippets_CFX/syndicationperson/vb/snippets.vb#13)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.Name%2A> é serializado do Atom 1.0.  
+  
+ [!code-xml[SyndicationPerson#0](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/atom.xml#0)]  
+  
+ O XML a seguir mostra como o <xref:System.ServiceModel.Syndication.SyndicationPerson.Name%2A> é serializado para RSS 2.0.  
+  
+ [!code-xml[SyndicationPerson#1](~/samples/snippets/common/VS_Snippets_CFX/syndicationperson/common/rss.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAttributeExtensions">
+      <MemberSignature Language="C#" Value="protected virtual void WriteAttributeExtensions (System.Xml.XmlWriter writer, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void WriteAttributeExtensions(class System.Xml.XmlWriter writer, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationPerson.WriteAttributeExtensions(System.Xml.XmlWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlReader" /> no qual ocorrerá a gravação.</param>
+        <param name="version">A versão de distribuição para usar durante a gravação.</param>
+        <summary>Grava as extensões de atributo especificado <see cref="T:System.Xml.XmlWriter" /> usando a versão de distribuição especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Extensões de atributo são os atributos personalizados que não são definidos pelas especificações Atom 1.0 ou RSS 2.0. Elas são serializadas como um atributo do `<author>` ou `<contributor>` elemento Atom 1.0 ou `<managingEditor>`, `<a10:author>`, ou `<a10:contributor>` elemento para RSS 2.0. Esse método é um ponto de extensão que permite que você manipule a serialização de extensões do atributo personalizado. Para fazer isso, você deve derivar uma classe de <xref:System.ServiceModel.Syndication.SyndicationLink> e substitua esse método. Este método é chamado para todas as extensões de atributo não reconhecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteElementExtensions">
+      <MemberSignature Language="C#" Value="protected virtual void WriteElementExtensions (System.Xml.XmlWriter writer, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void WriteElementExtensions(class System.Xml.XmlWriter writer, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationPerson.WriteElementExtensions(System.Xml.XmlWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlReader" /> no qual ocorrerá a gravação.</param>
+        <param name="version">A versão de distribuição para usar durante a gravação.</param>
+        <summary>Grava as extensões do elemento especificado <see cref="T:System.Xml.XmlWriter" /> usando a versão de distribuição especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Extensões de elemento são os elementos XML válidos que não são especificados nas especificações do Atom 1.0 ou o RSS 2.0. Você pode adicionar qualquer elemento XML válido como uma extensão, desde que o namespace é diferente do namespace delimitador. Esse método é um ponto de extensão que permite que você manipule a serialização de extensões de elemento personalizado. Para fazer isso, você deve derivar uma classe de <xref:System.ServiceModel.Syndication.SyndicationPerson> e substitua esse método. Este método é chamado para todas as extensões de elemento não reconhecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

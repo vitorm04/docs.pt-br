@@ -1,0 +1,334 @@
+<Type Name="ICollection&lt;T&gt;" FullName="System.Collections.Generic.ICollection&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface ICollection&lt;T&gt; : System.Collections.Generic.IEnumerable&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICollection`1&lt;T&gt; implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.ICollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo dos elementos na coleção.</typeparam>
+    <summary>Define métodos para manipular coleções genéricas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.Generic.ICollection%601> interface é a interface base para classes de <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.  
+  
+ O <xref:System.Collections.Generic.ICollection%601> estende a interface <xref:System.Collections.Generic.IEnumerable%601>; <xref:System.Collections.Generic.IDictionary%602> e <xref:System.Collections.Generic.IList%601> são mais especializadas interfaces que estendem <xref:System.Collections.Generic.ICollection%601>. Um <xref:System.Collections.Generic.IDictionary%602> implementação é uma coleção de pares chave/valor, como o <xref:System.Collections.Generic.Dictionary%602> classe. Um <xref:System.Collections.Generic.IList%601> implementação é uma coleção de valores e seus membros podem ser acessados por índice, como o <xref:System.Collections.Generic.List%601> classe.  
+  
+ Se nem o <xref:System.Collections.Generic.IDictionary%602> interface nem o <xref:System.Collections.Generic.IList%601> interface atender aos requisitos da coleção necessária, derive a classe de coleção novo do <xref:System.Collections.Generic.ICollection%601> interface em vez disso, para obter mais flexibilidade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa a <xref:System.Collections.Generic.ICollection%601> interface para criar uma coleção de personalizado `Box` objetos nomeados `BoxCollection`. Cada `Box` tem propriedades de largura, que são usadas para definir a igualdade, comprimento e altura. Igualdade pode ser definida como sendo a mesma ou o volume sendo a mesma de todas as dimensões. O `Box` classe implementa o <xref:System.IEquatable%601> interface para definir a igualdade padrão como as dimensões que está sendo o mesmo.  
+  
+ O `BoxCollection` classe implementa o <xref:System.Collections.Generic.ICollection%601.Contains%2A> método a igualdade de padrão para determinar se um `Box` está na coleção. Esse método é usado pelo <xref:System.Collections.Generic.ICollection%601.Add%2A> método para que cada `Box` adicionado à coleção tem um conjunto exclusivo de dimensões. O `BoxCollection` classe também fornece uma sobrecarga o <xref:System.Collections.Generic.ICollection%601.Contains%2A> método que utiliza um especificado <xref:System.Collections.Generic.EqualityComparer%601> objeto, como `BoxSameDimensions` e `BoxSameVol` classes no exemplo.  
+  
+ Este exemplo também implementa uma <xref:System.Collections.Generic.IEnumerator%601> a interface para o `BoxCollection` de classe para que a coleção pode ser enumerada.  
+  
+ [!code-csharp[System.Collections.Generic.BoxExamples#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.boxexamples/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.BoxExamples#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.boxexamples/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser adicionado ao <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        <summary>Adiciona um item ao <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.Generic.ICollection`1" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens do <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.ICollection%601.Count%2A>deve ser definido como 0, e referências a outros objetos de elementos da coleção devem ser liberadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.Generic.ICollection`1" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser localizado no <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        <summary>Determinará se o <see cref="T:System.Collections.Generic.ICollection`1" /> contiver um valor específico.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="item" /> for encontrado no <see cref="T:System.Collections.Generic.ICollection`1" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações podem variar em como elas determinam a igualdade de objetos; Por exemplo, <xref:System.Collections.Generic.List%601> usa <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>, enquanto <xref:System.Collections.Generic.Dictionary%602> permite que o usuário especifique o <xref:System.Collections.Generic.IComparer%601> implementação a ser usado para comparação de chaves.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!T[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.Generic.ICollection`1" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="arrayIndex">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos do <see cref="T:System.Collections.Generic.ICollection`1" /> para um <see cref="T:System.Array" />, começando em um determinado índice <see cref="T:System.Array" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" /> é menor que 0.</exception>
+        <exception cref="T:System.ArgumentException">O número de elementos na origem <see cref="T:System.Collections.Generic.ICollection`1" /> é maior do que o espaço disponível de <paramref name="arrayIndex" /> até o final do <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.ICollection`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos no <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+        <value>O número de elementos contidos no <see cref="T:System.Collections.Generic.ICollection`1" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.ICollection`1.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.Generic.ICollection`1" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.ICollection`1" /> for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção que é somente leitura não permite a adição ou remoção de elementos após a criação da coleção. Observe que somente leitura neste contexto não indica se os elementos individuais da coleção podem ser modificados, desde o <xref:System.Collections.Generic.ICollection%601> interface só dá suporte a operações de adição e remoção. Por exemplo, o <xref:System.Collections.Generic.ICollection%601.IsReadOnly%2A> propriedade de uma matriz que é convertida ou convertida em um <xref:System.Collections.Generic.ICollection%601> objeto retorna `true`, mesmo que os elementos individuais da matriz podem ser modificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.ICollection`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a remover do <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        <summary>Remove a primeira ocorrência de um objeto específico do <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="item" /> tiver sido removido com êxito do <see cref="T:System.Collections.Generic.ICollection`1" />; caso contrário, <see langword="false" />. Esse método também retornará <see langword="false" /> se o <paramref name="item" /> não for encontrado no <see cref="T:System.Collections.Generic.ICollection`1" /> original.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações podem variar em como elas determinam a igualdade de objetos; Por exemplo, <xref:System.Collections.Generic.List%601> usa <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>, enquanto, <xref:System.Collections.Generic.Dictionary%602> permite que o usuário especifique o <xref:System.Collections.Generic.IComparer%601> implementação a ser usado para comparação de chaves.  
+  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o elemento removido sobem para ocupar o ponto vazio. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.Generic.ICollection`1" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

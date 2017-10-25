@@ -1,0 +1,100 @@
+<Type Name="XpsSerializationProgressChangedEventArgs" FullName="System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class XpsSerializationProgressChangedEventArgs : System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsSerializationProgressChangedEventArgs extends System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.ProgressChangedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Xps.Serialization.XpsSerializationManager.XpsSerializationProgressChanged" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XpsSerializationProgressChangedEventArgs (System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel writingLevel, int pageNumber, int progressPercentage, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel writingLevel, int32 pageNumber, int32 progressPercentage, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.#ctor(System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel,System.Int32,System.Int32,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writingLevel" Type="System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel" />
+        <Parameter Name="pageNumber" Type="System.Int32" />
+        <Parameter Name="progressPercentage" Type="System.Int32" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="writingLevel">Um valor que especifica se a alteração em andamento é uma página adicional foi concluída ou um documento adicional foi concluída.</param>
+        <param name="pageNumber">Um valor que especifica o número total de páginas ou o número de documentos que são serializados no momento do evento.</param>
+        <param name="progressPercentage">Um valor que especifica a porcentagem do trabalho total de serialização que foi concluído.</param>
+        <param name="userToken">Um objeto fornecido pelo usuário que fornece informações adicionais para o manipulador de eventos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `writingLevel` é <xref:System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel.FixedPageWritingProgress>, `pageNumber` é o número de páginas. Quando `writingLevel` é <xref:System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel.FixedDocumentWritingProgress>, `pageNumber` é o número de documentos fixos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageNumber">
+      <MemberSignature Language="C#" Value="public int PageNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.PageNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de páginas ou documentos que tiverem sido serializados.</summary>
+        <value>O total de páginas ou documentos tiverem sido serializados no ponto quando o evento ocorreu.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.WritingLevel%2A> é <xref:System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel.FixedPageWritingProgress>, em seguida, <xref:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.PageNumber%2A> é o número de páginas. Quando <xref:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.WritingLevel%2A> é <xref:System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel.FixedDocumentWritingProgress>, em seguida, <xref:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.PageNumber%2A> é o número de documentos fixos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingLevel">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel WritingLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel WritingLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.WritingLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.XpsWritingProgressChangeLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o escopo do indicador de progresso.</summary>
+        <value>O escopo do indicador de progresso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.WritingLevel%2A> propriedade identifica se o evento refere-se para o progresso na serialização de uma sequência de documentos ou as páginas em um único documento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

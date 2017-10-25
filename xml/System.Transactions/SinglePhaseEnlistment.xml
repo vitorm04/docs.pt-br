@@ -1,0 +1,216 @@
+<Type Name="SinglePhaseEnlistment" FullName="System.Transactions.SinglePhaseEnlistment">
+  <TypeSignature Language="C#" Value="public class SinglePhaseEnlistment : System.Transactions.Enlistment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SinglePhaseEnlistment extends System.Transactions.Enlistment" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.SinglePhaseEnlistment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Transactions.Enlistment</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de retornos de chamada que facilitam a comunicação entre um participante inscrito para confirmação de fase única e o Gerenciador de transações quando o <see cref="M:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit(System.Transactions.SinglePhaseEnlistment)" /> notificação é recebida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a implementação do Gerenciador de recursos de <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> é chamado e uma instância desse tipo é passsed no, o participante notifica o Gerenciador de transações por meio de <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A> método ou o <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A> método para indicar se a transação deve ser confirmada ou revertida.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="Aborted">
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Representa um retorno de chamada que é usado para indicar para o Gerenciador de transações que a transação deve ser revertida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um participante da transação usa esse método para notificar o Gerenciador de transações que a transação deve ser revertida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Aborted">
+      <MemberSignature Language="C#" Value="public void Aborted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Aborted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.Aborted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa um retorno de chamada que é usado para indicar para o Gerenciador de transações que a transação deve ser revertida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um participante de transação Implementando o <xref:System.Transactions.ISinglePhaseNotification> interface usa esse método para notificar o Gerenciador de transações não confirmadas e que a transação deve ser revertida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Aborted">
+      <MemberSignature Language="C#" Value="public void Aborted (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Aborted(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.Aborted(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Uma explicação de por que uma reversão é iniciada.</param>
+        <summary>Representa um retorno de chamada que é usado para indicar para o Gerenciador de transações que a transação deve ser revertida e fornece uma explicação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Committed">
+      <MemberSignature Language="C#" Value="public void Committed ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Committed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.Committed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa um retorno de chamada que é usado para indicar para o Gerenciador de transações que o SinglePhaseCommit foi bem-sucedida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um participante de transação Implementando o <xref:System.Transactions.ISinglePhaseNotification> interface usa esse método para notificar o Gerenciador de transações que a transação deve ser confirmada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InDoubt">
+      <MemberSignature Language="C#" Value="public void InDoubt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InDoubt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.InDoubt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa um retorno de chamada que é usado para indicar para o Gerenciador de transações que o status da transação é em dúvida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um participante de transação Implementando o <xref:System.Transactions.ISinglePhaseNotification> interface usa esse método para notificar o Gerenciador de transações que a transação está em dúvida. Uma transação está em dúvida quando um ou mais dos gerenciadores de recursos listados não podem ser contatado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InDoubt">
+      <MemberSignature Language="C#" Value="public void InDoubt (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InDoubt(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.SinglePhaseEnlistment.InDoubt(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Obter uma explicação de por que a transação está em dúvida.</param>
+        <summary>Representa um retorno de chamada que é usado para indicar para o Gerenciador de transações que o status da transação em dúvida e fornece uma explicação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

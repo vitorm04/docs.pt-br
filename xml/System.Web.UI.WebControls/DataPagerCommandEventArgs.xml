@@ -1,0 +1,244 @@
+<Type Name="DataPagerCommandEventArgs" FullName="System.Web.UI.WebControls.DataPagerCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class DataPagerCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataPagerCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataPagerCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Web.UI.WebControls.TemplatePagerField.PagerCommand" /> evento o <see cref="T:System.Web.UI.WebControls.TemplatePagerField" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TemplatePagerField> objeto gera o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand> eventos quando um <xref:System.Web.UI.WebControls.Button>, <xref:System.Web.UI.WebControls.LinkButton>, ou <xref:System.Web.UI.WebControls.ImageButton> controle que está dentro do campo do pager é clicado. Esses botões são controles filho que podem ser definidos no <xref:System.Web.UI.WebControls.TemplatePagerField.PagerTemplate%2A> modelo de um <xref:System.Web.UI.WebControls.TemplatePagerField> campo.  
+  
+ Durante o evento, você pode executar tarefas como alterar o número de linhas que serão exibidos ou o índice do primeiro item na página.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> objeto para permitir que o usuário especifique qual página de dados será exibida no <xref:System.Web.UI.WebControls.ListView> controle. O <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> objeto é passado para o manipulador para o <xref:System.Web.UI.WebControls.TemplatePagerField.PagerCommand> evento o <xref:System.Web.UI.WebControls.TemplatePagerField> classe.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.DataPagerCommandEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/CS/DataPagerCommandEventArgsCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.DataPagerCommandEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/VB/DataPagerCommandEventArgsVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataPagerCommandEventArgs (System.Web.UI.WebControls.DataPagerField pagerField, int totalRowCount, System.Web.UI.WebControls.CommandEventArgs originalArgs, System.Web.UI.WebControls.DataPagerFieldItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.DataPagerField pagerField, int32 totalRowCount, class System.Web.UI.WebControls.CommandEventArgs originalArgs, class System.Web.UI.WebControls.DataPagerFieldItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataPagerCommandEventArgs.#ctor(System.Web.UI.WebControls.DataPagerField,System.Int32,System.Web.UI.WebControls.CommandEventArgs,System.Web.UI.WebControls.DataPagerFieldItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pagerField" Type="System.Web.UI.WebControls.DataPagerField" />
+        <Parameter Name="totalRowCount" Type="System.Int32" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+        <Parameter Name="item" Type="System.Web.UI.WebControls.DataPagerFieldItem" />
+      </Parameters>
+      <Docs>
+        <param name="pagerField">O objeto que contém o botão de comando que foi clicado.</param>
+        <param name="totalRowCount">O número total de registros.</param>
+        <param name="originalArgs">O nome do comando e o argumento de comando do botão que foi clicado.</param>
+        <param name="item">O objeto que contém o <see cref="T:System.Web.UI.WebControls.DataPagerField" /> objeto e seu contêiner <see cref="T:System.Web.UI.WebControls.DataPager" /> objeto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DataPagerCommandEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> classe.  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> classe  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.PagerField%2A>|O valor de `pagerField` parâmetro.|  
+|<xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.TotalRowCount%2A>|O valor de `totalRowCount` parâmetro.|  
+|<xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.Item%2A>|O valor de `item` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataPagerFieldItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataPagerFieldItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataPagerCommandEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataPagerFieldItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.WebControls.DataPagerFieldItem" /> objeto que contém o <see cref="T:System.Web.UI.WebControls.DataPagerField" /> objeto e o <see cref="T:System.Web.UI.WebControls.DataPagerField" /> contêiner do objeto <see cref="T:System.Web.UI.WebControls.DataPager" /> objeto.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.DataPagerFieldItem" /> objeto que contém o <see cref="T:System.Web.UI.WebControls.DataPagerField" /> objeto e o <see cref="T:System.Web.UI.WebControls.DataPagerField" /> contêiner do objeto <see cref="T:System.Web.UI.WebControls.DataPager" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataPagerField> objeto, que está contido no <xref:System.Web.UI.WebControls.DataPagerFieldItem> objeto retornado por essa propriedade contém o botão que foi clicado. Como alternativa, você pode usar o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.PagerField%2A> propriedade para recuperar o <xref:System.Web.UI.WebControls.DataPagerField> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.Item%2A> propriedade para recuperar um <xref:System.Web.UI.WebControls.TextBox> controle que está contido no <xref:System.Web.UI.WebControls.TemplatePagerField> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/CS/DataPagerCommandEventArgsCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/VB/DataPagerCommandEventArgsVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewMaximumRows">
+      <MemberSignature Language="C#" Value="public int NewMaximumRows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewMaximumRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewMaximumRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de registros a serem exibidos em cada página de dados.</summary>
+        <value>O número máximo de registros a serem exibidos em cada página de dados. O padrão é -1, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define um valor para o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewStartRowIndex%2A> propriedade, você também deve definir o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewMaximumRows%2A> propriedade. Se você não quiser alterar o valor atual, você pode definir o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewMaximumRows%2A> propriedade para o valor da <xref:System.Web.UI.WebControls.DataPager.MaximumRows%2A> propriedade o <xref:System.Web.UI.WebControls.DataPager> controle. Você pode acessar o <xref:System.Web.UI.WebControls.DataPager> controlar por meio de <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.Item%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewMaximumRows%2A> propriedade para definir o número máximo de registros a serem exibidos em cada página de dados. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/CS/DataPagerCommandEventArgsCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/VB/DataPagerCommandEventArgsVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewStartRowIndex">
+      <MemberSignature Language="C#" Value="public int NewStartRowIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewStartRowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewStartRowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice do primeiro registro para exibir em uma página de dados.</summary>
+        <value>O índice do primeiro registro que será exibido em uma página de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você definir essa propriedade para alterar o número da página que está sendo exibido atualmente.  
+  
+ Quando você define um valor para o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewStartRowIndex%2A> propriedade, você também deve definir o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewMaximumRows%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.NewStartRowIndex%2A> propriedade para definir o índice do primeiro registro para exibir em um <xref:System.Web.UI.WebControls.ListView> controle. O registro a exibir baseia-se no número de página especificado pelo usuário. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/CS/DataPagerCommandEventArgsCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/VB/DataPagerCommandEventArgsVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagerField">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataPagerField PagerField { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataPagerField PagerField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataPagerCommandEventArgs.PagerField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataPagerField</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.WebControls.DataPagerField" /> objeto que contém o botão que foi clicado.</summary>
+        <value>O objeto que contém o botão que foi clicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.PagerField%2A> propriedade para recuperar o <xref:System.Web.UI.WebControls.DataPagerField> objeto. O <xref:System.Web.UI.WebControls.DataPagerField> objeto contém o botão que foi clicado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalRowCount">
+      <MemberSignature Language="C#" Value="public int TotalRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataPagerCommandEventArgs.TotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de registros a serem exibidos.</summary>
+        <value>O número total de registros a serem exibidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.TotalRowCount%2A> propriedade para recuperar o número total de registros na fonte de dados associada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs.TotalRowCount%2A> propriedade para verificar se o usuário solicitou um item que não existe no <xref:System.Web.UI.WebControls.ListView> controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataPagerCommandEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/CS/DataPagerCommandEventArgsCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.DataPagerCommandEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.DataPagerCommandEventArgs/VB/DataPagerCommandEventArgsVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

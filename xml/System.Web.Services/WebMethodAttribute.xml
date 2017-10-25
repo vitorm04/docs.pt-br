@@ -1,0 +1,500 @@
+<Type Name="WebMethodAttribute" FullName="System.Web.Services.WebMethodAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WebMethodAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebMethodAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.WebMethodAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Adicionar esse atributo para um método em um XML Web Services criado usando ASP.NET torna o método pode ser chamado de clientes remotos da Web. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Métodos dentro de uma classe que têm esse atributo definido são chamados os métodos de serviço da Web em XML. O método e a classe devem ser público e em execução dentro de um aplicativo Web ASP.NET.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir o método `GetMachineName` pode ser chamada remotamente através da Web, porque ele tem um <xref:System.Web.Services.WebMethodAttribute>. `GetUserName`não pode ser chamada remotamente, porque ele não tem um <xref:System.Web.Services.WebMethodAttribute>, mesmo que seja `public`.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebMethodAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebMethodAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.WebMethodAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebMethodAttribute (bool enableSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enableSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebMethodAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enableSession" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enableSession">Inicializa se o estado da sessão é habilitado para o método de serviço da Web em XML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.WebMethodAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebMethodAttribute (bool enableSession, System.EnterpriseServices.TransactionOption transactionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enableSession, valuetype System.EnterpriseServices.TransactionOption transactionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebMethodAttribute.#ctor(System.Boolean,System.EnterpriseServices.TransactionOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enableSession" Type="System.Boolean" />
+        <Parameter Name="transactionOption" Type="System.EnterpriseServices.TransactionOption" />
+      </Parameters>
+      <Docs>
+        <param name="enableSession">Inicializa se o estado da sessão é habilitado para o método de serviço da Web em XML.</param>
+        <param name="transactionOption">Inicializa o suporte a transações de um método de serviço da Web em XML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.WebMethodAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chamada de serviço da web só pode ser a raiz de uma transação, devido à natureza sem monitoração de estado do protocolo HTTP. Isso significa que as duas configurações a seguir são equivalentes, com cada chamada ao criar uma nova transação:  
+  
+```  
+[WebMethod(TransactionOption = TransactionOption.Required)]  
+[WebMethod(TransactionOption = TransactionOption.RequiresNew)]  
+```  
+  
+ Isso também significa que todas as configurações a seguir são equivalentes; o que significa que não há suporte a transações:  
+  
+```  
+[WebMethod] // TransactionOption.Disabled is the default  
+[WebMethod(TransactionOption = TransactionOption.Disabled)]  
+[WebMethod(TransactionOption = Transaction.NotSupported)]  
+[WebMethod(TransactionOption = Transaction.Supported)]  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebMethodAttribute (bool enableSession, System.Web.Services.TransactionOption transactionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enableSession, valuetype System.Web.Services.TransactionOption transactionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebMethodAttribute.#ctor(System.Boolean,System.Web.Services.TransactionOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enableSession" Type="System.Boolean" />
+        <Parameter Name="transactionOption" Type="System.Web.Services.TransactionOption" />
+      </Parameters>
+      <Docs>
+        <param name="enableSession">To be added.</param>
+        <param name="transactionOption">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebMethodAttribute (bool enableSession, System.EnterpriseServices.TransactionOption transactionOption, int cacheDuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enableSession, valuetype System.EnterpriseServices.TransactionOption transactionOption, int32 cacheDuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebMethodAttribute.#ctor(System.Boolean,System.EnterpriseServices.TransactionOption,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enableSession" Type="System.Boolean" />
+        <Parameter Name="transactionOption" Type="System.EnterpriseServices.TransactionOption" />
+        <Parameter Name="cacheDuration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="enableSession">Inicializa se o estado da sessão é habilitado para o método de serviço da Web em XML.</param>
+        <param name="transactionOption">Inicializa o suporte a transações de um método de serviço da Web em XML.</param>
+        <param name="cacheDuration">Inicializa o número de segundos que a resposta é armazenada em cache.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.WebMethodAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chamada de serviço da web só pode ser a raiz de uma transação, devido à natureza sem monitoração de estado do protocolo HTTP.  Isso significa que as duas configurações a seguir são equivalentes, com cada chamada ao criar uma nova transação:  
+  
+```  
+[WebMethod(TransactionOption = TransactionOption.Required)]  
+[WebMethod(TransactionOption = TransactionOption.RequiresNew)]  
+```  
+  
+ Isso também significa que todas as configurações a seguir são equivalentes; o que significa que não há suporte a transações:  
+  
+```  
+[WebMethod] // TransactionOption.Disabled is the default  
+[WebMethod(TransactionOption = TransactionOption.Disabled)]  
+[WebMethod(TransactionOption = Transaction.NotSupported)]  
+[WebMethod(TransactionOption = Transaction.Supported)]  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebMethodAttribute (bool enableSession, System.Web.Services.TransactionOption transactionOption, int cacheDuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enableSession, valuetype System.Web.Services.TransactionOption transactionOption, int32 cacheDuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebMethodAttribute.#ctor(System.Boolean,System.Web.Services.TransactionOption,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enableSession" Type="System.Boolean" />
+        <Parameter Name="transactionOption" Type="System.Web.Services.TransactionOption" />
+        <Parameter Name="cacheDuration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="enableSession">To be added.</param>
+        <param name="transactionOption">To be added.</param>
+        <param name="cacheDuration">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebMethodAttribute (bool enableSession, System.EnterpriseServices.TransactionOption transactionOption, int cacheDuration, bool bufferResponse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enableSession, valuetype System.EnterpriseServices.TransactionOption transactionOption, int32 cacheDuration, bool bufferResponse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebMethodAttribute.#ctor(System.Boolean,System.EnterpriseServices.TransactionOption,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enableSession" Type="System.Boolean" />
+        <Parameter Name="transactionOption" Type="System.EnterpriseServices.TransactionOption" />
+        <Parameter Name="cacheDuration" Type="System.Int32" />
+        <Parameter Name="bufferResponse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enableSession">Inicializa se o estado da sessão é habilitado para o método de serviço da Web em XML.</param>
+        <param name="transactionOption">Inicializa o suporte a transações de um método de serviço da Web em XML.</param>
+        <param name="cacheDuration">Inicializa o número de segundos que a resposta é armazenada em cache.</param>
+        <param name="bufferResponse">Inicializa se a resposta para esta solicitação é armazenada em buffer.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.WebMethodAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chamada de serviço da web só pode ser a raiz de uma transação, devido à natureza sem monitoração de estado do protocolo HTTP.  Isso significa que as duas configurações a seguir são equivalentes, com cada chamada ao criar uma nova transação:  
+  
+```  
+[WebMethod(TransactionOption = TransactionOption.Required)]  
+[WebMethod(TransactionOption = TransactionOption.RequiresNew)]  
+```  
+  
+ Isso também significa que todas as configurações a seguir são equivalentes; o que significa que não há suporte a transações:  
+  
+```  
+[WebMethod] // TransactionOption.Disabled is the default  
+[WebMethod(TransactionOption = TransactionOption.Disabled)]  
+[WebMethod(TransactionOption = Transaction.NotSupported)]  
+[WebMethod(TransactionOption = Transaction.Supported)]  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebMethodAttribute (bool enableSession, System.Web.Services.TransactionOption transactionOption, int cacheDuration, bool bufferResponse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enableSession, valuetype System.Web.Services.TransactionOption transactionOption, int32 cacheDuration, bool bufferResponse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.WebMethodAttribute.#ctor(System.Boolean,System.Web.Services.TransactionOption,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enableSession" Type="System.Boolean" />
+        <Parameter Name="transactionOption" Type="System.Web.Services.TransactionOption" />
+        <Parameter Name="cacheDuration" Type="System.Int32" />
+        <Parameter Name="bufferResponse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enableSession">To be added.</param>
+        <param name="transactionOption">To be added.</param>
+        <param name="cacheDuration">To be added.</param>
+        <param name="bufferResponse">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferResponse">
+      <MemberSignature Language="C#" Value="public bool BufferResponse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BufferResponse" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebMethodAttribute.BufferResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a resposta para essa solicitação é armazenada em buffer.</summary>
+        <value>
+          <see langword="true" /> se a resposta para essa solicitação for armazenada em buffer; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração <xref:System.Web.Services.WebMethodAttribute.BufferResponse%2A> para `true`, serializa a resposta do método de serviço da Web em XML em um buffer de memória, até que a resposta é serializada completamente ou o buffer estiver cheio. Depois que a resposta é armazenada em buffer, ele é retornado para o cliente do serviço Web XML pela rede. Quando <xref:System.Web.Services.WebMethodAttribute.BufferResponse%2A> é `false`, a resposta para o método de serviço Web XML é enviada de volta ao cliente como ele é serializado. Em geral, você deseja apenas definir <xref:System.Web.Services.WebMethodAttribute.BufferResponse%2A> para `false`, se sabe que um método de serviço Web XML retorna grandes quantidades de dados para o cliente. Para pequenas quantidades de dados, o desempenho do serviço Web XML é melhor com <xref:System.Web.Services.WebMethodAttribute.BufferResponse%2A> para `true`.  
+  
+ Quando <xref:System.Web.Services.WebMethodAttribute.BufferResponse%2A> é `false`, extensões SOAP estão desabilitadas para o método de serviço da Web em XML.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.Services.WebMethodAttribute.BufferResponse%2A> propriedade `false` e controla o fluxo de um arquivo de texto para o cliente. O exemplo de código demonstra como transmitir uma grande parte dos dados de volta para o cliente usando uma classe que implementa o <xref:System.Collections.IEnumerable> interface.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheDuration">
+      <MemberSignature Language="C#" Value="public int CacheDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CacheDuration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebMethodAttribute.CacheDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de segundos que a resposta deve ser mantida no cache.</summary>
+        <value>O número de segundos que a resposta deve ser mantida no cache. O padrão é 0, o que significa que a resposta não é armazenada em cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o cache é ativado solicitações e respostas são mantidas na memória no servidor para pelo menos a duração do cache para que cuidado deve ser usado se você espera que a solicitações ou respostas para ser muito grande ou se espera que solicitações para variar muito.  
+  
+ Há dois problemas que podem afetar o cache de saída em um aplicativo de serviço Web do ASP.NET 2.0.  
+  
+ No ASP.NET 2.0 HTTP método da página de teste foi alterado de GET, POST. No entanto, postagens não são normalmente armazenadas. Se você alterar a página de teste em um aplicativo de serviço Web do ASP.NET 2.0 para usar obter cache funciona corretamente.  
+  
+ Além disso, o HTTP indica que um agente do usuário (navegador ou aplicativo de chamada) deve ser capaz de substituir o servidor de cache definindo a "Cache-Control" para "no-cache". Aplicativos ASP.NET, portanto, ignoram os resultados em cache quando encontrar um cabeçalho "no-cache".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir coloca o resultado da chamada para o `ServiceUsage` método de serviço da Web em XML no cache por 60 segundos. Sempre que um XML Web service cliente executa o `ServiceUsage` método XML Web service durante esse tempo, o mesmo resultado é retornado.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebMethodAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma mensagem descritiva que descreve o método de serviço Web XML.</summary>
+        <value>Uma mensagem descritiva que descreve o método de serviço Web XML. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A mensagem descritiva é exibida para potenciais consumidores do serviço Web XML quando os documentos de descrição para o serviço da Web em XML são gerados, como a descrição do serviço e o serviço de página de Ajuda.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, a cadeia de caracteres `Obtains the Server Computer Name` é usado para descrever o método de serviço Web XML na descrição do serviço e página de ajuda de serviço para o serviço Web XML.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableSession">
+      <MemberSignature Language="C#" Value="public bool EnableSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableSession" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebMethodAttribute.EnableSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o estado de sessão é habilitado para um método de serviço Web XML.</summary>
+        <value>
+          <see langword="true" /> se o estado de sessão é habilitado para um método de serviço Web XML. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para armazenar o estado de sessão no ASP.NET <xref:System.Web.SessionState.HttpSessionState> do objeto, o serviço Web XML deve herdar de <xref:System.Web.Services.WebService> e um <xref:System.Web.Services.WebMethodAttribute> aplicados ao método de serviço da Web em XML, definindo a <xref:System.Web.Services.WebMethodAttribute.EnableSession%2A> propriedade `true`. Se o estado da sessão não é necessária para um método de serviço da Web em XML, em seguida, desativá-lo pode melhorar o desempenho.  
+  
+ Um cliente de serviço Web XML é identificado exclusivamente por um cookie HTTP retornado por um serviço Web XML. Para um serviço Web XML manter o estado de sessão para um cliente, o cliente deve manter o cookie. Os clientes podem receber o cookie HTTP, criando uma nova instância da <xref:System.Net.CookieContainer> e atribuindo-à <xref:System.Web.Services.Protocols.HttpWebClientProtocol.CookieContainer%2A> propriedade da classe de proxy antes de chamar o método de serviço da Web em XML. Se você precisar manter o estado de sessão além quando a instância da classe proxy sai do escopo, o cliente deve manter o cookie HTTP entre as chamadas para o serviço Web XML. Por exemplo, um cliente de Web Forms pode persistir o cookie HTTP salvando o <xref:System.Net.CookieContainer> em seu próprio estado de sessão. Porque nem todos os serviços Web XML usam o estado de sessão e, portanto, os clientes não são sempre necessário para usar o <xref:System.Web.Services.Protocols.HttpWebClientProtocol.CookieContainer%2A> propriedade de um proxy do cliente, a documentação para o serviço Web XML deve indicar se o estado da sessão é usado.  
+  
+   
+  
+## Examples  
+ O exemplo abaixo usa o estado de sessão para determinar quantas vezes uma determinada sessão acessa o método de serviço da Web em XML `SessionHitCounter`.  
+  
+  
+  
+ O exemplo de código a seguir é um cliente de formulários da Web de um serviço da Web em XML que usa o estado de sessão. O cliente mantém o cookie HTTP que identifica exclusivamente a sessão, armazenando-a em estado de sessão do cliente.  
+  
+ [!code-aspx-csharp[HttpWebClientProtocol.CookieContainer#1](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpWebClientProtocol.CookieContainer/CS/serverusageclientcs.aspx#1)]
+ [!code-aspx-vb[HttpWebClientProtocol.CookieContainer#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpWebClientProtocol.CookieContainer/VB/serverusageclientvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageName">
+      <MemberSignature Language="C#" Value="public string MessageName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebMethodAttribute.MessageName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome usado para o método de serviço Web XML nos dados passados e retornados de um método de serviço Web XML.</summary>
+        <value>O nome usado para o método de serviço Web XML nos dados passados de e para um método de serviço Web XML. O padrão é o nome do método de serviço Web XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.WebMethodAttribute.MessageName%2A> propriedade pode ser usada para alias nomes de método ou propriedade. O uso mais comum dos <xref:System.Web.Services.WebMethodAttribute.MessageName%2A> propriedade será para identificar exclusivamente os métodos polimórficos. Por padrão, <xref:System.Web.Services.WebMethodAttribute.MessageName%2A> é definido como o nome do método de serviço da Web em XML. Portanto, se um serviço Web XML contém dois ou mais métodos de serviço Web XML com o mesmo nome, você pode identificar exclusivamente os métodos do serviço Web XML individuais pelas definindo o <xref:System.Web.Services.WebMethodAttribute.MessageName%2A> para um nome exclusivo dentro do serviço da Web em XML, sem alterar o nome do método real no código.  
+  
+ Quando dados são passados para um serviço Web XML, ela é enviada em uma solicitação e quando ele é retornado que em uma resposta ser enviada. Dentro da solicitação e resposta, o nome usado para o método de serviço Web XML é seu <xref:System.Web.Services.WebMethodAttribute.MessageName%2A> propriedade.  
+  
+ O nome da mensagem associado a um método de serviço Web XML deve ser exclusivo dentro do serviço da Web em XML.  
+  
+ Se um novo método de serviço Web XML com o mesmo nome mas com parâmetros diferentes é adicionado após os clientes estão chamando o método original, deve ser especificado um nome de mensagem diferente para o novo método, mas o nome original da mensagem deve ser deixado como está garantir a compatibilidade com os clientes existentes.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, <xref:System.Web.Services.WebMethodAttribute.MessageName%2A> usada para desambiguar os dois `Add` métodos.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionOption">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.TransactionOption TransactionOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.TransactionOption TransactionOption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.WebMethodAttribute.TransactionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.TransactionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o suporte a transações de um método de serviço Web XML.</summary>
+        <value>O suporte a transações de um método de serviço Web XML. O padrão é <see cref="F:System.EnterpriseServices.TransactionOption.Disabled" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Métodos de serviço Web XML podem participar apenas como o objeto raiz em uma transação, devido à natureza sem monitoração de estado do protocolo HTTP. Métodos de serviço Web XML podem chamar objetos COM que participam na mesma transação como o método de serviço da Web em XML, se o objeto COM está marcado para ser executado em uma transação na ferramenta administrativa Serviços de componentes. Se um método de serviço Web XML com um <xref:System.Web.Services.WebMethodAttribute.TransactionOption%2A> propriedade de `Required` ou `RequiresNew` chama outro método de serviço da Web em XML com um <xref:System.Web.Services.WebMethodAttribute.TransactionOption%2A> propriedade de `Required` ou `RequiresNew`, cada método de serviço Web XML participa em sua própria transação, como um método de serviço Web XML só pode agir como o objeto raiz em uma transação.  
+  
+|Item|Descrição|  
+|----------|-----------------|  
+|Disabled|Indica que o método de serviço da Web em XML não é executado dentro do escopo de uma transação. Quando uma solicitação é processada, o método de serviço Web XML é executado sem uma transação.<br /><br /> [WebMethod (TransactionOption = `TransactionOption.Disabled`)]|  
+|Não suportado|Indica que o método de serviço da Web em XML não é executado dentro do escopo de uma transação. Quando uma solicitação é processada, o método de serviço Web XML é executado sem uma transação.<br /><br /> [WebMethod (TransactionOption = `TransactionOption.NotSupported`)]|  
+|Com suporte|Indica que o método de serviço da Web em XML não é executado dentro do escopo das transações. Quando uma solicitação é processada, o serviço Web XML é criado sem uma transação.<br /><br /> [WebMethod (TransactionOption = `TransactionOption.Supported`)]|  
+|Necessária|Indica que o método de serviço Web XML requer uma transação. Como os métodos do serviço Web XML podem participar apenas como o objeto raiz em uma transação, uma nova transação será criada para o método de serviço da Web em XML.<br /><br /> [WebMethod (TransactionOption = `TransactionOption.Required`)]|  
+|RequiresNew|Indica que o método de serviço Web XML requer uma nova transação. Quando uma solicitação é processada, o serviço Web XML é criado em uma nova transação.<br /><br /> [WebMethod (TransactionOption = `TransactionOption.RequiresNew`)]|  
+  
+ Se uma exceção for lançada ou não detectada por um método de serviço da Web em XML, a transação será anulada automaticamente. Se nenhuma exceção ocorre a transação é confirmada automaticamente, a menos que explicitamente chama o método `SetAbort`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicia uma nova transação quando o `Transfer` método é chamado.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

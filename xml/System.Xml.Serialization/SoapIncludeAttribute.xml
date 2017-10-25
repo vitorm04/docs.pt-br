@@ -1,0 +1,139 @@
+<Type Name="SoapIncludeAttribute" FullName="System.Xml.Serialization.SoapIncludeAttribute">
+  <TypeSignature Language="C#" Value="public class SoapIncludeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapIncludeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SoapIncludeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Method | System.AttributeTargets.Interface, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que o <see cref="T:System.Xml.Serialization.XmlSerializer" /> reconheça um tipo ao serializar ou desserializar um objeto como XML de SOAP codificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.SoapIncludeAttribute> classe pertence a uma família de atributos que controla como o <xref:System.Xml.Serialization.XmlSerializer> serializa ou desserializa um objeto como XML de SOAP codificado. O XML resultante está em conformidade com a seção 5 do documento na World Wide Web Consortium (www.w3.org), "Simple Object Access Protocol (SOAP) 1.1". Para obter uma lista completa de atributos semelhantes, consulte [atributos que controle codificado serialização SOAP](~/docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+  
+ Para serializar um objeto como uma mensagem SOAP codificado, você deve construir o <xref:System.Xml.Serialization.XmlSerializer> usando um <xref:System.Xml.Serialization.XmlTypeMapping> criado com o <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> método o <xref:System.Xml.Serialization.SoapReflectionImporter> classe.  
+  
+ Ao aplicar o <xref:System.Xml.Serialization.SoapIncludeAttribute>, especifique o <xref:System.Type> da classe derivada. Quando o <xref:System.Xml.Serialization.XmlSerializer> serializa objetos que incluem a base e classes derivadas, que, em seguida, pode reconhecer os dois tipos de objeto.  
+  
+ Você pode usar o <xref:System.Xml.Serialization.SoapIncludeAttribute> para incluir classes derivadas em documentos de descrição de serviço que são escritos no WSDL Web Services Description Language (). Por exemplo, se um método retorna um <xref:System.Object>, aplicar o <xref:System.Xml.Serialization.SoapIncludeAttribute> para o método e especificar os tipos reais que devem ser retornados.  
+  
+ Para obter mais informações sobre WSDL, consulte a especificação de World Wide Web Consortium (www.w3.org), "Web Services Description Language (WSDL) 1.1".  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir se aplica a <xref:System.Xml.Serialization.SoapIncludeAttribute> duas vezes para um método de serviço da Web em XML. O método retorna um objeto do tipo `Vehicle` (uma classe base). O <xref:System.Xml.Serialization.SoapIncludeAttribute> permite que o método retornar instâncias de classes derivadas do `Vehicle` classe.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapIncludeAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapIncludeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de objeto para incluir.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.SoapIncludeAttribute" /> classe usando o tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicar várias instâncias do <xref:System.Xml.Serialization.SoapIncludeAttribute> para um campo ou propriedade que retorna ou uma matriz de objetos, um <xref:System.Collections.ArrayList> que contém uma coleção de objetos, ou um objeto que pode retornar vários tipos. Definir o <xref:System.Xml.Serialization.SoapIncludeAttribute.Type%2A> propriedade para cada tipo que você deseja que o campo ou propriedade para conter.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir se aplica a <xref:System.Xml.Serialization.SoapIncludeAttribute> duas vezes em um XML Web services método. O método retorna um objeto do tipo `Vehicle` (uma classe base). O <xref:System.Xml.Serialization.SoapIncludeAttribute> permite que o método retornar instâncias de classes derivadas do `Vehicle` classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.SoapIncludeAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de objeto a ser usado ao serializar ou desserializar um objeto.</summary>
+        <value>O tipo de objeto para incluir.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicar várias instâncias do <xref:System.Xml.Serialization.SoapIncludeAttribute> para um campo ou propriedade que retorna ou uma matriz de objetos, um <xref:System.Collections.ArrayList> que contém uma coleção de objetos, ou um objeto que pode retornar vários tipos. Definir o <xref:System.Xml.Serialization.SoapIncludeAttribute.Type%2A> propriedade para cada tipo que você deseja que o campo ou propriedade para conter.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir se aplica a <xref:System.Xml.Serialization.SoapIncludeAttribute> duas vezes em um XML Web services método. O método retorna um objeto do tipo `Vehicle` (uma classe base). O <xref:System.Xml.Serialization.SoapIncludeAttribute> permite que o método retornar instâncias de classes derivadas do `Vehicle` classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

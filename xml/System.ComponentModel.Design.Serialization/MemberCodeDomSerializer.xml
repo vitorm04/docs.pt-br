@@ -1,0 +1,111 @@
+<Type Name="MemberCodeDomSerializer" FullName="System.ComponentModel.Design.Serialization.MemberCodeDomSerializer">
+  <TypeSignature Language="C#" Value="public abstract class MemberCodeDomSerializer : System.ComponentModel.Design.Serialization.CodeDomSerializerBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MemberCodeDomSerializer extends System.ComponentModel.Design.Serialization.CodeDomSerializerBase" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.Serialization.CodeDomSerializerBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a classe base para serializar um primitivo de reflexão no gráfico do objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer> classe é um serializador "meta"; ou seja, se um serializador que não serializa parte do gráfico do objeto, mas em vez disso, serializa um primitivo de reflexão no gráfico do objeto. Por exemplo, um <xref:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer> deve ser associado com um <xref:System.ComponentModel.PropertyDescriptor> que serializar uma propriedade. <xref:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer>objetos habilitar construções, como propriedades e os eventos, lógica, em vez de exigir que ele tenha um backup físico no código.  
+  
+ Ao contrário de <xref:System.ComponentModel.Design.Serialization.CodeDomSerializer> classes, <xref:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer> objetos devem ser capazes de ser desserializado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MemberCodeDomSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public abstract void Serialize (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, System.ComponentModel.MemberDescriptor descriptor, System.CodeDom.CodeStatementCollection statements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, class System.ComponentModel.MemberDescriptor descriptor, class System.CodeDom.CodeStatementCollection statements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer.Serialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.ComponentModel.MemberDescriptor,System.CodeDom.CodeStatementCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="descriptor" Type="System.ComponentModel.MemberDescriptor" />
+        <Parameter Name="statements" Type="System.CodeDom.CodeStatementCollection" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O gerenciador de serialização a ser usado para serialização.</param>
+        <param name="value">O objeto ao qual o membro está associado.</param>
+        <param name="descriptor">O descritor do membro para serializar.</param>
+        <param name="statements">O <see cref="T:System.CodeDom.CodeStatementCollection" /> na qual <c>descritor</c> é serializado.</param>
+        <summary>Serializa o descritor de determinado membro o valor fornecido para uma coleção de instrução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa, na verdade, a serialização. Quando o membro é serializado as instruções necessárias serão adicionadas à coleção de instruções.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerialize">
+      <MemberSignature Language="C#" Value="public abstract bool ShouldSerialize (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, System.ComponentModel.MemberDescriptor descriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldSerialize(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value, class System.ComponentModel.MemberDescriptor descriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.MemberCodeDomSerializer.ShouldSerialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="descriptor" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O gerenciador de serialização a ser usado para serialização.</param>
+        <param name="value">O objeto ao qual o membro está associado.</param>
+        <param name="descriptor">O descritor do membro para serializar.</param>
+        <summary>Determina se o membro fornecido deve ser serializado.</summary>
+        <returns>
+          <see langword="true" />, se o membro é descrito por <paramref name="descriptor" /> deve ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `true` se o descritor de determinado membro deve ser serializado, ou `false` se não é necessário para serializar o membro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

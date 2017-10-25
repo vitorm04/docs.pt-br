@@ -1,0 +1,75 @@
+<Type Name="ClockState" FullName="System.Windows.Media.Animation.ClockState">
+  <TypeSignature Language="C#" Value="public enum ClockState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClockState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ClockState" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve os estados possíveis de um cronograma <see cref="T:System.Windows.Media.Animation.Clock" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que <xref:System.Windows.Media.Animation.ClockState> não indica se um relógio está em pausa ou a direção na qual o tempo está fluindo.  
+  
+ Essas explicações contam com o conceito de tiques; Para obter uma explicação detalhada, consulte o [visão geral do sistema de controle de tempo e animação](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Active">
+      <MemberSignature Language="C#" Value="Active" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.ClockState Active = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.ClockState.Active" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.ClockState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Atual <see cref="T:System.Windows.Media.Animation.Clock" /> sempre que for alterado em relação direta a de seu pai. Se a linha do tempo é uma animação, ele está afetando ativamente propriedades de destino, para seu valor pode ser alterado do *escala* (um ponto de amostragem no tempo) para a escala. Se a linha do tempo tiver filhos, eles podem ser <see cref="F:System.Windows.Media.Animation.ClockState.Active" />, <see cref="F:System.Windows.Media.Animation.ClockState.Filling" />, ou <see cref="F:System.Windows.Media.Animation.ClockState.Stopped" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Filling">
+      <MemberSignature Language="C#" Value="Filling" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.ClockState Filling = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.ClockState.Filling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.ClockState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Media.Animation.Clock" /> tempo continuará, mas não é alterado em relação ao de seu pai. Se a linha do tempo é uma animação, ativamente está afetando a propriedades de destino, mas seus valores não altere a escala de escala. Se a linha do tempo tiver filhos, eles podem ser <see cref="F:System.Windows.Media.Animation.ClockState.Active" />, <see cref="F:System.Windows.Media.Animation.ClockState.Filling" />, ou <see cref="F:System.Windows.Media.Animation.ClockState.Stopped" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stopped">
+      <MemberSignature Language="C#" Value="Stopped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.ClockState Stopped = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.ClockState.Stopped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.ClockState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Media.Animation.Clock" /> tempo é interrompido, tornando o relógio hora atual e os valores de progresso indefinidos. Se essa linha do tempo é uma animação, ele não afeta mais propriedades de destino. Se essa linha do tempo tiver filhos, eles também são <see cref="F:System.Windows.Media.Animation.ClockState.Stopped" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

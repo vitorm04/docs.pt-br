@@ -1,0 +1,132 @@
+<Type Name="IFormatProvider" FullName="System.IFormatProvider">
+  <TypeSignature Language="C#" Value="public interface IFormatProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFormatProvider" />
+  <TypeSignature Language="DocId" Value="T:System.IFormatProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um mecanismo para recuperar um objeto para controlar a formatação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IFormatProvider> interface fornece um objeto que fornece informações de formatação para formatação e análise de operações. Operações de formatação converter o valor de um tipo para a representação de cadeia de caracteres do valor. Métodos de formatação típicos são o `ToString` métodos de um tipo, bem como <xref:System.String.Format%2A>. Operações de análise convertem a representação de cadeia de caracteres de um valor para um tipo com esse valor. Métodos de análise típicos são `Parse` e `TryParse`.  
+  
+ O <xref:System.IFormatProvider> interface consiste em um único método, <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A>é um método de retorno de chamada: A análise ou formatação método chamá-lo e transmite um <xref:System.Type> objeto que representa o tipo de objeto que a formatação ou analisar o método espera fornecerá informações de formatação. O <xref:System.IFormatProvider.GetFormat%2A> método é responsável por retornar um objeto desse tipo.  
+  
+ <xref:System.IFormatProvider>implementações geralmente são usadas por formatação e análise métodos implicitamente. Por exemplo, o <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> método usa implicitamente um <xref:System.IFormatProvider> implementação que representa a cultura atual do sistema. <xref:System.IFormatProvider>implementações também podem ser especificadas explicitamente por métodos que têm um parâmetro de tipo <xref:System.IFormatProvider>, como <xref:System.Int32.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>.  
+  
+ O .NET Framework inclui as três seguintes predefinidas <xref:System.IFormatProvider> implementações para fornecer informações específicas de cultura que são usadas na formatação ou análise de valores numéricos e a data e hora:  
+  
+-   O <xref:System.Globalization.NumberFormatInfo> classe, que fornece informações que são usadas para formatar números, como moeda, milhares separador e símbolos do separador decimal para uma determinada cultura. Para obter informações sobre as cadeias de caracteres de formato predefinida reconhecido por um <xref:System.Globalization.NumberFormatInfo> de objeto e usado em operações de formatação numérica, consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizado](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   O <xref:System.Globalization.DateTimeFormatInfo> classe, que fornece informações que são usadas para formatar datas e horas, como os símbolos de separador de data e hora para uma cultura específica ou a ordem e o formato de ano, mês e componentes de dia de uma data. Para obter informações sobre as cadeias de caracteres de formato predefinida reconhecido por um <xref:System.Globalization.DateTimeFormatInfo> de objeto e usado em operações de formatação numérica, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+-   O <xref:System.Globalization.CultureInfo> classe que representa uma cultura específica. Seu <xref:System.IFormatProvider.GetFormat%2A> método retorna uma cultura específica <xref:System.Globalization.NumberFormatInfo> ou <xref:System.Globalization.DateTimeFormatInfo> objeto, dependendo se o <xref:System.Globalization.CultureInfo> objeto é usado em uma formatação ou análise de operação que envolva números ou datas e horas.  
+  
+ O .NET Framework também dá suporte à formatação personalizada. Isso normalmente envolve a criação de uma classe de formatação que implementa ambos <xref:System.IFormatProvider> e <xref:System.ICustomFormatter>. Uma instância dessa classe é passada como um parâmetro para um método que executa uma operação de formatação personalizada, como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o exemplo fornece uma ilustração de tal uma implementação personalizada que formata um número como um número de conta de 12 dígitos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como um <xref:System.IFormatProvider> implementação pode alterar a representação de um valor de data e hora. Nesse caso, uma única data é exibida, usando <xref:System.Globalization.CultureInfo> objetos que representam quatro culturas diferentes.  
+  
+ [!code-csharp[System.IFormatProvider.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IFormatProvider.Class/cs/provider2.cs#3)]
+ [!code-vb[System.IFormatProvider.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IFormatProvider.Class/vb/provider2.vb#3)]  
+  
+ O exemplo a seguir ilustra o uso de uma classe que implementa o <xref:System.IFormatProvider> interface e o <xref:System.IFormatProvider.GetFormat%2A> método. O `AcctNumberFormat` classe converte um <xref:System.Int64> valor que representa um número de conta para um número de conta formatado de 12 dígitos. Seu `GetFormat` método retorna uma referência ao atual `AcctNumberFormat` instância se o `formatType` parâmetro faz referência a uma classe que implementa <xref:System.ICustomFormatter>; caso contrário, `GetFormat` retorna `null`.  
+  
+ [!code-csharp[System.IFormatProvider.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IFormatProvider.Class/cs/Provider.cs#2)]
+ [!code-vb[System.IFormatProvider.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IFormatProvider.Class/vb/Provider.vb#2)]  
+  
+ A classe que implementa <xref:System.IFormatProvider> pode ser usado em uma chamada para uma formatação e análise de operação. Por exemplo, o código a seguir chama o <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> método para gerar uma cadeia de caracteres que contém um número de conta formatado de 12 dígitos.  
+  
+ [!code-csharp[System.IFormatProvider.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IFormatProvider.Class/cs/Provider.cs#1)]
+ [!code-vb[System.IFormatProvider.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IFormatProvider.Class/vb/Provider.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetFormat">
+      <MemberSignature Language="C#" Value="public object GetFormat (Type formatType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetFormat(class System.Type formatType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IFormatProvider.GetFormat(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="formatType">Um objeto que especifica o tipo de objeto de formato a ser retornado.</param>
+        <summary>Retorna um objeto que fornece serviços de formatação para o tipo especificado.</summary>
+        <returns>Uma instância do objeto especificado por <paramref name="formatType" />, se a implementação <see cref="T:System.IFormatProvider" /> pode fornecer esse tipo de objeto; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IFormatProvider.GetFormat%2A>é um método de retorno de chamada de invocação para recuperar informações sobre o formato da cadeia de caracteres de entrada na análise de operações ou o formato da cadeia de caracteres de saída em operações de formatação de formatação e métodos. No `formatType` parâmetro, a formatação ou análise do método passa o tipo de objeto, ele necessita para executar sua operação. Se o <xref:System.IFormatProvider> implementação pode fornecer essa formatação ou objeto de análise, ele retorna esse objeto. Se não, ele retorna `null`.  
+  
+ Por exemplo, na chamada para o <xref:System.Int32.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> , o argumento de método é um <xref:System.IFormatProvider> objeto que fornece informações sobre como a representação de cadeia de caracteres da instância atual de inteiro pode ser formatada. Quando o tempo de execução executa o método, ele chama o <xref:System.IFormatProvider> do objeto <xref:System.IFormatProvider.GetFormat%2A> método e o transmite um <xref:System.Type> objeto que representa o <xref:System.Globalization.NumberFormatInfo> tipo. Se o <xref:System.IFormatProvider> objeto pode fornecer um <xref:System.Globalization.NumberFormatInfo> do objeto, ele retorna o objeto. Se ele não pode fornecer um objeto desse tipo, ele retorna `null`.  
+  
+ Você pode implementar o <xref:System.IFormatProvider> interface e o <xref:System.IFormatProvider.GetFormat%2A> método nas classes que fornecem a formatação personalizada ou serviços de análise. O <xref:System.IFormatProvider> implementação é passada como um argumento para qualquer sobrecarga de uma análise ou método que tem um parâmetro de tipo de formatação <xref:System.IFormatProvider>, como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, ou <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso de uma classe que implementa o <xref:System.IFormatProvider> interface e o <xref:System.IFormatProvider.GetFormat%2A> método. O `AcctNumberFormat` classe converte um <xref:System.Int64> valor que representa um número de conta para um número de conta formatado de 12 dígitos. Seu `GetFormat` método retorna uma referência a mesmo se o `formatType` parâmetro faz referência a uma classe que implementa <xref:System.ICustomFormatter>; caso contrário, `GetFormat` retorna `null`.  
+  
+ [!code-csharp[System.IFormatProvider.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IFormatProvider.Class/cs/Provider.cs#2)]
+ [!code-vb[System.IFormatProvider.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IFormatProvider.Class/vb/Provider.vb#2)]  
+  
+ Uma instância do `AcctNumberFormat` classe pode ser passada como um argumento para um método que fornece a formatação ou os serviços de análise. Por exemplo, o código a seguir passa um `AcctNumberFormat` de classe para o <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> método para gerar um número de conta formatado de 12 dígitos.  
+  
+ [!code-csharp[System.IFormatProvider.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IFormatProvider.Class/cs/Provider.cs#1)]
+ [!code-vb[System.IFormatProvider.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IFormatProvider.Class/vb/Provider.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

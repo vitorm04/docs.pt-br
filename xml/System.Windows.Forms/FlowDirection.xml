@@ -1,0 +1,102 @@
+<Type Name="FlowDirection" FullName="System.Windows.Forms.FlowDirection">
+  <TypeSignature Language="C#" Value="public enum FlowDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FlowDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FlowDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define as constantes que especificam a direção na qual os elementos consecutivos da interface do usuário são colocados em um contêiner de layout linear</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.FlowDirection> enumeração descreve a direção do fluxo de elementos de interface do usuário consecutivos, normalmente controles em uma superfície de design ou contêiner, como um formulário. Essa enumeração é usada pelos contêineres de layout linear como <xref:System.Windows.Forms.FlowLayoutPanel>, que armazena essas informações em internamente o <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A?displayProperty=nameWithType> propriedade.  
+  
+ O <xref:System.Windows.Forms.FlowDirection> determina onde um novo controle é colocado por padrão quando ele é adicionado a um contêiner de suporte. A direção do fluxo do contêiner, juntamente com o <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> propriedades de cada contidas controle, determine a reorganização de controles quando o contêiner é redimensionado.  
+  
+ O <xref:System.Windows.Forms.FlowLayoutPanel> controle fornece uma `FlowBreak` propriedade para seus controles filhos. Definindo o valor da `FlowBreak` propriedade `true` faz com que o <xref:System.Windows.Forms.FlowLayoutPanel> controle parar dispor controles no contorno para a próxima linha ou coluna e direção do fluxo atual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> propriedade em um <xref:System.Windows.Forms.FlowLayoutPanel> controle. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.FlowLayoutPanel> controle.  
+  
+ [!code-cpp[System.Windows.Forms.FlowLayoutPanel#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.FlowLayoutPanel#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.FlowLayoutPanel#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel/VB/form1.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BottomUp">
+      <MemberSignature Language="C#" Value="BottomUp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlowDirection BottomUp = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlowDirection.BottomUp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os elementos fluem da parte inferior da superfície de design para a parte superior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftToRight">
+      <MemberSignature Language="C#" Value="LeftToRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlowDirection LeftToRight = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlowDirection.LeftToRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os elementos fluem da borda esquerda da superfície de design para a borda direita.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="RightToLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlowDirection RightToLeft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlowDirection.RightToLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os elementos fluem da borda direita da superfície de design para a borda esquerda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopDown">
+      <MemberSignature Language="C#" Value="TopDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FlowDirection TopDown = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FlowDirection.TopDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os elementos fluem da parte superior da superfície de design para a parte inferior.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

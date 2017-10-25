@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.Contracts.Internal">
+  <Docs>
+    <summary>O <see cref="N:System.Diagnostics.Contracts.Internal" /> namespace fornece classes que o regravador binário pode usar para lidar com uma falha de contrato.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

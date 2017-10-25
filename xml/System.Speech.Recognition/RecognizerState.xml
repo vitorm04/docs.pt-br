@@ -1,0 +1,84 @@
+<Type Name="RecognizerState" FullName="System.Speech.Recognition.RecognizerState">
+  <TypeSignature Language="C#" Value="public enum RecognizerState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RecognizerState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.RecognizerState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os valores do estado do reconhecedor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Speech.Recognition.RecognizerState>encapsula o estado de execução do mecanismo de reconhecimento de fala padrão para os clientes que usam <xref:System.Speech.Recognition.SpeechRecognizer> para acessar o serviço de tecnologia de reconhecimento de fala de área de trabalho do Windows.  
+  
+ Os aplicativos podem obter o estado atual do mecanismo de reconhecimento de área de trabalho como um <xref:System.Speech.Recognition.RecognizerState> objeto consultando o <xref:System.Speech.Recognition.SpeechRecognizer.State%2A> propriedade em um <xref:System.Speech.Recognition.SpeechRecognizer> instância.  Para obter o estado do mecanismo de reconhecimento de área de trabalho depois que ele é alterado, os aplicativos podem consultar o <xref:System.Speech.Recognition.StateChangedEventArgs.RecognizerState%2A> propriedade o <xref:System.Speech.Recognition.StateChangedEventArgs> objeto passado para um manipulador para <xref:System.Speech.Recognition.SpeechRecognizer.StateChanged> eventos.  
+  
+> [!NOTE]
+>  <xref:System.Speech.Recognition.SpeechRecognitionEngine>instâncias executadas no processo e o estado de execução está sob o controle do aplicativo. Portanto, <xref:System.Speech.Recognition.SpeechRecognitionEngine> não contém uma propriedade para retornar um <xref:System.Speech.Recognition.RecognizerState> objeto.  
+  
+ O estado de um servidor de reconhecimento de fala de área de trabalho é uma propriedade somente leitura e não pode ser controlado por meio de programação. Os usuários podem alterar o estado do reconhecedor de fala compartilhada usando a interface de usuário de reconhecimento de fala (UI) ou por meio de **o reconhecimento de fala** membro do Windows **painel de controle**.  
+  
+ Ambos o **na** e **suspensão** configurações na interface de usuário de reconhecimento de fala correspondem ao `Listening` estado. O **Off** configuração na interface de usuário de reconhecimento de fala corresponde à parado.  
+  
+ <xref:System.Speech.Recognition.SpeechRecognizer.Enabled%2A>é outra propriedade que afeta a preparação de um mecanismo de reconhecimento de fala compartilhado para receber e processar a entrada de fala. Você pode usar <xref:System.Speech.Recognition.SpeechRecognizer.Enabled%2A> para controlar ou não do mecanismo de reconhecimento de fala compartilhado são ativos para o reconhecimento. No entanto, alterar o <xref:System.Speech.Recognition.SpeechRecognizer.Enabled%2A> propriedade não tem efeito sobre o <xref:System.Speech.Recognition.RecognizerState> propriedade.  
+  
+ Informações como a descrição e o nome do mecanismo de reconhecimento e formatos de áudio e a cultura com suporte são encapsuladas no <xref:System.Speech.Recognition.RecognizerInfo> tipo.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um aplicativo exibe o estado de um identificador em sua implementação de um manipulador para o <xref:System.Speech.Recognition.SpeechRecognizer.StateChanged> evento.  
+  
+```  
+  
+_recognizer.StateChanged +=  
+    delegate(object sender, StateChangedEventArgs eventArgs) {  
+        _recognizerStateLabel.Text = "Speech Recognizer State: " + eventArgs.RecognizerState.ToString();  
+    };  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Listening">
+      <MemberSignature Language="C#" Value="Listening" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.RecognizerState Listening = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.RecognizerState.Listening" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognizerState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O mecanismo de reconhecimento está disponível para receber e analisar a entrada de áudio.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stopped">
+      <MemberSignature Language="C#" Value="Stopped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.RecognizerState Stopped = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.RecognizerState.Stopped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.RecognizerState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O mecanismo de reconhecimento não está recebendo ou analisar a entrada de áudio.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

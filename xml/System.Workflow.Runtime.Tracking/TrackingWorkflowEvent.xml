@@ -1,0 +1,242 @@
+<Type Name="TrackingWorkflowEvent" FullName="System.Workflow.Runtime.Tracking.TrackingWorkflowEvent">
+  <TypeSignature Language="C#" Value="public enum TrackingWorkflowEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed TrackingWorkflowEvent extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica um tipo de evento de status do fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Uma instância de fluxo de trabalho pode passar por vários estados durante o curso de sua execução. Por exemplo, uma instância de fluxo de trabalho pode ficar ociosa, ou ele pode ser suspenso. Toda vez que a instância de fluxo de trabalho muda de estado, ele emite um evento de status do fluxo de trabalho para a infra-estrutura de controle de tempo de execução. <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent>Enumera os possíveis tipos de evento de status do fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Aborted">
+      <MemberSignature Language="C#" Value="Aborted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Aborted = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Aborted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho foi anulada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="Changed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Changed = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Changed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma alteração de fluxo de trabalho foi executada na instância do fluxo de trabalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="Completed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Completed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Completed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho foi concluído.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Created">
+      <MemberSignature Language="C#" Value="Created" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Created = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Created" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho foi criada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="Exception" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Exception = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Exception" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorreu uma exceção sem tratamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Idle">
+      <MemberSignature Language="C#" Value="Idle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Idle = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho está ociosa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loaded">
+      <MemberSignature Language="C#" Value="Loaded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Loaded = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Loaded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho foi carregada na memória.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Persisted">
+      <MemberSignature Language="C#" Value="Persisted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Persisted = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Persisted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho é persistente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Resumed">
+      <MemberSignature Language="C#" Value="Resumed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Resumed = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Resumed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma instância de fluxo de trabalho suspenso anteriormente continuou em execução.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Started">
+      <MemberSignature Language="C#" Value="Started" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Started = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Started" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho foi iniciada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Suspended">
+      <MemberSignature Language="C#" Value="Suspended" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Suspended = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Suspended" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho foi suspenso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminated">
+      <MemberSignature Language="C#" Value="Terminated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Terminated = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Terminated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho foi encerrada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unloaded">
+      <MemberSignature Language="C#" Value="Unloaded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.Runtime.Tracking.TrackingWorkflowEvent Unloaded = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Unloaded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingWorkflowEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância de fluxo de trabalho foi descarregada da memória.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

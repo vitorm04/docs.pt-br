@@ -1,0 +1,226 @@
+<Type Name="AccessControlEntry" FullName="System.Messaging.AccessControlEntry">
+  <TypeSignature Language="C#" Value="public class AccessControlEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AccessControlEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.AccessControlEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os direitos de acesso para um objeto de confiança (usuário, grupo ou computador) para realizar as implementações específicas ao aplicativo de tarefas comuns.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitos aplicativos têm operações semelhantes ao qual um objeto de confiança pode ser atribuído direitos, por exemplo, leitura, gravação e exclusão de objetos. Quando você atribuir direitos para essas operações em gerais, o aplicativo interpreta de uma maneira específica para esse aplicativo. Por exemplo, o enfileiramento de mensagens interpreta a operação de leitura como receber ou exibir mensagens de uma fila. O <xref:System.Messaging.AccessControlEntry> classe fornece acesso a esses direitos comuns.  
+  
+ Ao trabalhar com entradas de controle de acesso, você pode especificar um objeto de confiança para o qual você está atribuindo direitos. Você deve definir pelo menos uma da <xref:System.Messaging.AccessControlEntry.GenericAccessRights%2A>, <xref:System.Messaging.AccessControlEntry.StandardAccessRights%2A>, ou <xref:System.Messaging.AccessControlEntry.CustomAccessRights%2A> propriedades para indicar quais direitos para o objeto de confiança. Você pode definir o <xref:System.Messaging.AccessControlEntry.EntryType%2A> propriedade para especificar se os direitos que você indique devem ser concedidos ou negados. O tipo de entrada padrão é permitir que os direitos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AccessControlEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlEntry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.AccessControlEntry" /> classe que especifica um objeto de confiança, nem conjunto de direitos para aplicar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Messaging.AccessControlEntry.Trustee%2A> propriedade e pelo menos uma da <xref:System.Messaging.AccessControlEntry.GenericAccessRights%2A>, <xref:System.Messaging.AccessControlEntry.StandardAccessRights%2A>, ou <xref:System.Messaging.AccessControlEntry.CustomAccessRights%2A> propriedades antes de usar este <xref:System.Messaging.AccessControlEntry> instância definir direitos de acesso para um objeto de confiança.  
+  
+ Você pode definir opcionalmente o <xref:System.Messaging.AccessControlEntry.EntryType%2A> propriedade, embora o padrão é `Allow` se você optar por não fazer isso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AccessControlEntry (System.Messaging.Trustee trustee);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Messaging.Trustee trustee) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlEntry.#ctor(System.Messaging.Trustee)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trustee" Type="System.Messaging.Trustee" />
+      </Parameters>
+      <Docs>
+        <param name="trustee">Um <see cref="T:System.Messaging.Trustee" /> que especifica um usuário, grupo, computador, domínio ou alias.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.AccessControlEntry" /> classe que especifica um objeto de confiança para o qual os direitos são concedidos ou negados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Messaging.AccessControlEntry.EntryType%2A> propriedade e pelo menos uma da <xref:System.Messaging.AccessControlEntry.GenericAccessRights%2A>, <xref:System.Messaging.AccessControlEntry.StandardAccessRights%2A>, ou <xref:System.Messaging.AccessControlEntry.CustomAccessRights%2A> propriedades antes de usar este <xref:System.Messaging.AccessControlEntry> instância definir direitos de acesso para um objeto de confiança.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="trustee" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AccessControlEntry (System.Messaging.Trustee trustee, System.Messaging.GenericAccessRights genericAccessRights, System.Messaging.StandardAccessRights standardAccessRights, System.Messaging.AccessControlEntryType entryType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Messaging.Trustee trustee, valuetype System.Messaging.GenericAccessRights genericAccessRights, valuetype System.Messaging.StandardAccessRights standardAccessRights, valuetype System.Messaging.AccessControlEntryType entryType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.AccessControlEntry.#ctor(System.Messaging.Trustee,System.Messaging.GenericAccessRights,System.Messaging.StandardAccessRights,System.Messaging.AccessControlEntryType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trustee" Type="System.Messaging.Trustee" />
+        <Parameter Name="genericAccessRights" Type="System.Messaging.GenericAccessRights" />
+        <Parameter Name="standardAccessRights" Type="System.Messaging.StandardAccessRights" />
+        <Parameter Name="entryType" Type="System.Messaging.AccessControlEntryType" />
+      </Parameters>
+      <Docs>
+        <param name="trustee">Um <see cref="T:System.Messaging.Trustee" /> que especifica um usuário, grupo, computador, domínio ou alias.</param>
+        <param name="genericAccessRights">Uma combinação bit a bit dos valores <see cref="T:System.Messaging.GenericAccessRights" />.</param>
+        <param name="standardAccessRights">Uma combinação bit a bit dos valores <see cref="T:System.Messaging.StandardAccessRights" />.</param>
+        <param name="entryType">Uma da <see cref="T:System.Messaging.AccessControlEntryType" /> valores, que especifica se deve permitir, negar, definir ou revogar os direitos especificados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.AccessControlEntry" /> classe que especifica um objeto de confiança, direitos e se deseja conceder ou negar esses direitos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga dos conjuntos de construtor o <xref:System.Messaging.AccessControlEntry.CustomAccessRights%2A> propriedade a uma combinação bit a bit do `genericAccessRights` e `standardAccessRights` parâmetros que você especificar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="trustee" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O <paramref name="genericAccessRights" />, <paramref name="standardAccessRights" />, ou <paramref name="entryType" /> parâmetros não são valores de enumeração válidos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomAccessRights">
+      <MemberSignature Language="C#" Value="protected int CustomAccessRights { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CustomAccessRights" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.AccessControlEntry.CustomAccessRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os direitos de acesso personalizados.</summary>
+        <value>Direitos de acesso específicas do aplicativo, geralmente definidos como um sinalizador de bit.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryType">
+      <MemberSignature Language="C#" Value="public System.Messaging.AccessControlEntryType EntryType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.AccessControlEntryType EntryType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.AccessControlEntry.EntryType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AccessControlEntryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica como os direitos de acesso se aplicam ao objeto de confiança.</summary>
+        <value>Uma da <see cref="T:System.Messaging.AccessControlEntryType" /> valores, que especifica se deve permitir, negar, definir ou revogar os direitos especificados. O padrão é <see langword="Allow" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O tipo de entrada não é válido <see cref="T:System.Messaging.AccessControlEntryType" /> valor de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericAccessRights">
+      <MemberSignature Language="C#" Value="public System.Messaging.GenericAccessRights GenericAccessRights { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.GenericAccessRights GenericAccessRights" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.AccessControlEntry.GenericAccessRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.GenericAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um conjunto comum de direitos de acesso que mapeiam para ambos os direitos de acesso padrão e específica de objetos para leitura, gravação e execução.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Messaging.GenericAccessRights" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos protegíveis usam os quatro bits de ordem superior do Windows 2000 e Windows NT formato de máscara de acesso para especificar os direitos de acesso genérico. Cada tipo de objeto protegível mapeia esses bits para um conjunto de seus direitos de acesso padrão e específica de objetos. Aplicativos que definem objetos protegíveis privados também podem usar os direitos de acesso genérico.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor definido não é uma combinação válida de <see cref="T:System.Messaging.GenericAccessRights" /> membros de sinalizador de bit.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardAccessRights">
+      <MemberSignature Language="C#" Value="public System.Messaging.StandardAccessRights StandardAccessRights { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.StandardAccessRights StandardAccessRights" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.AccessControlEntry.StandardAccessRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.StandardAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um conjunto padrão de direitos de acesso que correspondem às operações comuns à maioria dos tipos de objetos protegíveis.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Messaging.StandardAccessRights" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato de máscara de acesso do Windows 2000 e Windows NT inclui um conjunto de bits para os direitos de acesso padrão. Cada tipo de objeto protegível tem um conjunto de direitos de acesso que correspondem às operações específicas para esse tipo de objeto. Além desses direitos de acesso de objeto específico, há um conjunto padrão de direitos de acesso que correspondem às operações comuns à maioria dos tipos de objetos protegíveis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor definido não é uma combinação válida de <see cref="T:System.Messaging.StandardAccessRights" /> membros de sinalizador de bit.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Trustee">
+      <MemberSignature Language="C#" Value="public System.Messaging.Trustee Trustee { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.Trustee Trustee" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.AccessControlEntry.Trustee" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Trustee</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o usuário, grupo, domínio ou alias ao qual você está atribuindo direitos de acesso.</summary>
+        <value>Um <see cref="T:System.Messaging.Trustee" /> que especifica uma conta de usuário, a conta de grupo ou a sessão de logon para o qual um <see cref="T:System.Messaging.AccessControlEntry" /> se aplica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os usuários e programas, como os serviços de Win32, usam contas de usuário para fazer logon no computador local. Contas de grupo não pode ser usadas para fazer logon um computador, mas são úteis para <xref:System.Messaging.AccessControlEntry> instâncias para permitir ou negar a um conjunto de direitos de acesso para uma ou mais contas de usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A propriedade <see cref="P:System.Messaging.AccessControlEntry.Trustee" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

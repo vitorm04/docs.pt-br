@@ -1,0 +1,13 @@
+<Namespace Name="System.Security.Authentication.ExtendedProtection">
+  <Docs>
+    <summary>O namespace <see cref="N:System.Security.Authentication.ExtendedProtection" /> dá suporte à autenticação usando proteção estendida para aplicativos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O design do Windows IWA (autenticação integrada) permite que algumas respostas de desafio de credencial ser universal, o que significa que podem ser usados novamente ou encaminhadas. Se esse recurso de design específico não for necessária, em seguida, o desafio respostas devem ser construído com, no mínimo, informações específicas do destino e, na melhor das hipóteses, também algumas canal informações específicas. Serviços, em seguida, podem fornecer proteção estendida para garantir que as respostas de desafio de credencial contêm informações específicas do serviço (um nome de provedor de serviço ou SPN) e, se necessário, canal específicas informações (um token de associação de canal ou CBT). Com essas informações em trocas de credencial, os serviços são capazes de melhor proteção contra o uso de respostas de desafio de credencial que pode ter sido obtido incorretamente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

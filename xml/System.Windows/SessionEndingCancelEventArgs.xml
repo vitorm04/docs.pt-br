@@ -1,0 +1,37 @@
+<Type Name="SessionEndingCancelEventArgs" FullName="System.Windows.SessionEndingCancelEventArgs">
+  <TypeSignature Language="C#" Value="public class SessionEndingCancelEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionEndingCancelEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.SessionEndingCancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém os argumentos de evento para o evento <see cref="E:System.Windows.Application.SessionEnding" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReasonSessionEnding">
+      <MemberSignature Language="C#" Value="public System.Windows.ReasonSessionEnding ReasonSessionEnding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.ReasonSessionEnding ReasonSessionEnding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ReasonSessionEnding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o motivo pelo qual a sessão está terminando.</summary>
+        <value>Um <see cref="T:System.Windows.ReasonSessionEnding" /> valor que indica o motivo pelo qual a sessão foi finalizada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

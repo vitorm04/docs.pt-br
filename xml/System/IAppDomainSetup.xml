@@ -1,0 +1,286 @@
+<Type Name="IAppDomainSetup" FullName="System.IAppDomainSetup">
+  <TypeSignature Language="C#" Value="public interface IAppDomainSetup" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAppDomainSetup" />
+  <TypeSignature Language="DocId" Value="T:System.IAppDomainSetup" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("27FFF232-A7A8-40dd-8D4A-734AD59FCD41")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa as informações de associação de assembly que podem ser adicionadas a uma instância de <see cref="T:System.AppDomain" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros desta interface são usados com o <xref:System.AppDomain.GetData%2A?displayProperty=nameWithType> e <xref:System.AppDomain.SetData%2A?displayProperty=nameWithType> métodos para identificar o <xref:System.AppDomain> dados a serem usados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationBase">
+      <MemberSignature Language="C#" Value="public string ApplicationBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationBase" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ApplicationBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do diretório que contém o aplicativo.</summary>
+        <value>Um <see cref="T:System.String" /> contendo o nome do diretório base do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado ao obter ou definir variável APPBASE do Gerenciador de cache de assembly. Este é o diretório onde o Gerenciador de assembly deve começar a investigação de assemblies. Essa propriedade não pode ser alterada após o <xref:System.AppDomain> concluiu sua primeira ligação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do aplicativo.</summary>
+        <value>Um <see cref="T:System.String" /> que é o nome do aplicativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachePath">
+      <MemberSignature Language="C#" Value="public string CachePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CachePath" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.CachePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o nome de uma área específica ao aplicativo onde os arquivos são copiados de sombra.</summary>
+        <value>Um <see cref="T:System.String" /> que é o nome totalmente qualificado do nome de arquivo e caminho do diretório onde os arquivos são copiados de sombra.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationFile">
+      <MemberSignature Language="C#" Value="public string ConfigurationFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationFile" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ConfigurationFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o nome do arquivo de configuração para um domínio de aplicativo.</summary>
+        <value>Um <see cref="T:System.String" /> que especifica o nome do arquivo de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo de configuração descreve as regras de pesquisa e dados de configuração para o domínio de aplicativo. O host que cria o domínio de aplicativo é responsável por fornecer esses dados como o valor significativo variar a situação.  
+  
+ Por exemplo, os dados de configuração para aplicativos ASP.NET são armazenados para cada aplicativo, o site e o computador, enquanto os dados de configuração para um arquivo executável são armazenados para cada aplicativo, usuário e computador. Somente o coordenador conhece as especificações dos dados de configuração para uma circunstância específica.  
+  
+ Essa propriedade não pode ser alterada após o <xref:System.AppDomain> concluiu sua primeira ligação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicBase">
+      <MemberSignature Language="C#" Value="public string DynamicBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DynamicBase" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.DynamicBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o diretório onde os arquivos gerados dinamicamente são armazenados e acessados.</summary>
+        <value>Um <see cref="T:System.String" /> que especifica o diretório que contém os assemblies dinâmicos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.AppDomain> é criado, um diretório chamado no diretório dinâmico pode ser especificado para armazenar conjuntos dinâmicos. Este diretório logicamente está localizado sob o <xref:System.AppDomainSetup.ApplicationBase%2A>, embora ele pode residir em outra parte do diretório.  
+  
+ Essa propriedade não pode ser alterada após o <xref:System.AppDomain> concluiu sua primeira ligação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LicenseFile">
+      <MemberSignature Language="C#" Value="public string LicenseFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LicenseFile" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.LicenseFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local do arquivo de licença associado a esse domínio.</summary>
+        <value>Um <see cref="T:System.String" /> que especifica o nome do arquivo de licença.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateBinPath">
+      <MemberSignature Language="C#" Value="public string PrivateBinPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrivateBinPath" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.PrivateBinPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de diretórios é combinado com o <see cref="P:System.AppDomainSetup.ApplicationBase" /> diretório para investigação de assemblies privados.</summary>
+        <value>Um <see cref="T:System.String" /> que contém uma lista de nomes de diretórios, onde cada nome é separado por ponto e vírgula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Assemblies privados são implantados na mesma estrutura de diretório do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateBinPathProbe">
+      <MemberSignature Language="C#" Value="public string PrivateBinPathProbe { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrivateBinPathProbe" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.PrivateBinPathProbe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho de diretório binário privada usado para localizar um aplicativo.</summary>
+        <value>Um <see cref="T:System.String" /> que contém uma lista de nomes de diretórios, onde cada nome é separado por ponto e vírgula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade para excluir o caminho de diretório de aplicativo da pesquisa para o aplicativo. A pesquisa é restrita a caminhos de diretório binário privativos e globais e o cache de assembly global.  
+  
+ Essa propriedade não pode ser alterada após o <xref:System.AppDomain> concluiu sua primeira ligação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowCopyDirectories">
+      <MemberSignature Language="C#" Value="public string ShadowCopyDirectories { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShadowCopyDirectories" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ShadowCopyDirectories" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os nomes dos diretórios que contêm assemblies a serem copiados em sombra.</summary>
+        <value>Um <see cref="T:System.String" /> que contém uma lista de nomes de diretórios, onde cada nome é separado por ponto e vírgula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os diretórios especificados por <xref:System.AppDomainSetup.PrivateBinPath%2A>, incluindo o diretório especificado por <xref:System.AppDomainSetup.ApplicationBase%2A>, são copiados por padrão, se essa propriedade não está definida de sombra.  
+  
+ Se um arquivo executável está em uso, as atualizações para o arquivo executável são armazenadas em um diretório de cópia de sombra. Usuários existentes continuam usando o arquivo executável original até que ele termina, ao usam os novos usuários a sombra copiado arquivo executável.  
+  
+ Essa propriedade não pode ser alterada após o <xref:System.AppDomain> concluiu sua primeira ligação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowCopyFiles">
+      <MemberSignature Language="C#" Value="public string ShadowCopyFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ShadowCopyFiles" />
+      <MemberSignature Language="DocId" Value="P:System.IAppDomainSetup.ShadowCopyFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que indica se a cópia de sombra é ativada ou desativada.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o valor "true" para indicar que essa cópia de sombra está ativado; ou "false" para indicar que essa cópia de sombra está desativada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não pode ser alterada após o <xref:System.AppDomain> concluiu sua primeira ligação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

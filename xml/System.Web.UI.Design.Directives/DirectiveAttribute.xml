@@ -1,0 +1,151 @@
+<Type Name="DirectiveAttribute" FullName="System.Web.UI.Design.Directives.DirectiveAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DirectiveAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DirectiveAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.Directives.DirectiveAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica um atributo personalizado de uma diretiva.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectiveAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.Directives.DirectiveAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.Directives.DirectiveAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedOnMobilePages">
+      <MemberSignature Language="C#" Value="public bool AllowedOnMobilePages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowedOnMobilePages" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.Directives.DirectiveAttribute.AllowedOnMobilePages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um atributo de uma diretiva que especifica se o atributo é permitido em páginas de celular.</summary>
+        <value>
+          <see langword="true" />Se o atributo é permitido em páginas móveis; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuilderType">
+      <MemberSignature Language="C#" Value="public string BuilderType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BuilderType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.Directives.DirectiveAttribute.BuilderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo que está associado com o atributo.</summary>
+        <value>O tipo que está associado com o atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public bool Culture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.Directives.DirectiveAttribute.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se um valor de cultura que é associado ao atributo.</summary>
+        <value>
+          <see langword="true" />Se um valor de cultura que é associado ao atributo; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenameType">
+      <MemberSignature Language="C#" Value="public string RenameType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RenameType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.Directives.DirectiveAttribute.RenameType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa o tipo renomeado do atributo.</summary>
+        <value>Um valor que representa o tipo renomeado do atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerLanguageExtensions">
+      <MemberSignature Language="C#" Value="public bool ServerLanguageExtensions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ServerLanguageExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.Directives.DirectiveAttribute.ServerLanguageExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as extensões de linguagem do servidor estão disponíveis.</summary>
+        <value>
+          <see langword="true" />Se as extensões de linguagem de servidor estiverem disponíveis; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerLanguageNames">
+      <MemberSignature Language="C#" Value="public bool ServerLanguageNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ServerLanguageNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.Directives.DirectiveAttribute.ServerLanguageNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os nomes de idiomas do servidor estão disponíveis.</summary>
+        <value>
+          <see langword="true" />Se os nomes de idioma do servidor estão disponíveis; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,970 @@
+<Type Name="UnicodeCategory" FullName="System.Globalization.UnicodeCategory">
+  <TypeSignature Language="C#" Value="public enum UnicodeCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed UnicodeCategory extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.UnicodeCategory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define a categoria Unicode de um caractere.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um membro do <xref:System.Globalization.UnicodeCategory> retornada pela enumeração o <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> e <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory%2A?displayProperty=nameWithType> métodos. O <xref:System.Globalization.UnicodeCategory> enumeração também é usada para dar suporte a <xref:System.Char> métodos, como <xref:System.Char.IsUpper%28System.Char%29>. Esses métodos determinam se um caractere especificado é um membro de uma determinada categoria geral de Unicode. Uma categoria Unicode geral define a abrangente classificação de um caractere, ou seja, a designação como um tipo de letra, dígito decimal, separador, símbolo matemático, pontuação e assim por diante.  
+  
+ Essa enumeração é baseada no Unicode Standard, versão 5.0. Para obter mais informações, consulte os subtópicos "Formato de arquivo UCD" e "Valores de categoria geral" no [Banco de dados de caractere Unicode](http://go.microsoft.com/fwlink/?LinkId=57650).  
+  
+ O padrão Unicode define o seguinte:  
+  
+ Um par substituto é uma representação de caracteres codificado para um único caractere abstrato que consiste em uma sequência de duas unidades de código, onde a primeira unidade do par é um substituto alto e o segundo é um substituto baixo. Um substituto alto é um ponto de código Unicode no intervalo de U + D800 a U + DBFF e um substituto baixo é um ponto de código Unicode no intervalo de U + DC00 a U + DFFF.  
+  
+ A combinação de sequência de caracteres é uma combinação de um caractere base e um ou mais caracteres de combinação. Um par substituto representa um caractere base ou um caractere de combinação. Um caractere de combinação é espaçamento ou sem espaçamento. Uma combinação de caracteres de espaçamento ocupa uma posição de espaçamento sozinho quando renderizado, enquanto um sem espaçamento combinando caractere não. Sinais diacríticos são um exemplo de sem espaçamento combinação de caracteres.  
+  
+ Uma letra de modificador é um caractere de espaçamento independente que, como um caractere de combinação, indica as modificações de uma letra precedente.  
+  
+ Uma marca de fechamento é um sem espaçamento a combinação de caracteres ao redor de todos os caracteres anteriores até e incluindo um caractere base.  
+  
+ Um caractere de formato é um caractere que normalmente não é processado, mas que afeta o layout do texto ou a operação de processos de texto.  
+  
+ O padrão Unicode define diversas variações para alguns sinais de pontuação. Por exemplo, um hífen pode ser um dos vários valores de código que representam um hífen, como U + 002D (menos hífen) ou U + 00AD (hífen flexível) ou U + 2010 (hífen) ou U + 2011 (hífen incondicional). O mesmo é verdadeiro para aspas, caracteres de espaço e traços.  
+  
+ O padrão Unicode também atribui códigos para representações de dígitos decimais que são específicas para um determinado script ou o idioma, por exemplo, U + 0030 (dígito zero) e U + 0660 (dígito zero do árabe índicos).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe os caracteres e seus pontos de código correspondente para caracteres na categoria UppercaseLetter. Você pode modificar o exemplo para exibir as letras em qualquer outra categoria, substituindo UppercaseLetter com a categoria de interesse da atribuição de `category` variável. Observe que a saída para algumas categorias pode ser extenso.  
+  
+ [!code-csharp[System.Globalization.UnicodeCategory#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Globalization.UnicodeCategory/cs/Characters1.cs#1)]
+ [!code-vb[System.Globalization.UnicodeCategory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Globalization.UnicodeCategory/vb/Characters1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClosePunctuation">
+      <MemberSignature Language="C#" Value="ClosePunctuation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory ClosePunctuation = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.ClosePunctuation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de fechamento de uma das marcas de pontuação paralelas, como parênteses, colchetes e chaves. Demonstrado pela designação de Unicode “Pe” (pontuação, fechamento). O valor é 21.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectorPunctuation">
+      <MemberSignature Language="C#" Value="ConnectorPunctuation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory ConnectorPunctuation = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.ConnectorPunctuation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de pontuação de conector que conecta dois caracteres. Demonstrado pela designação de Unicode “Pc” (pontuação, conector). O valor é 18.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="Control" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory Control = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.Control" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de código de controle, com um valor Unicode de U+007F ou no intervalo de U+0000 a U+001F ou de U+0080 a U+009F. Demonstrado pela designação de Unicode “Cc” (outros, controle). O valor é 14.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrencySymbol">
+      <MemberSignature Language="C#" Value="CurrencySymbol" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory CurrencySymbol = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.CurrencySymbol" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de símbolo de moeda. Demonstrado pela designação de Unicode “Sc” (símbolo, moeda). O valor é 26.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DashPunctuation">
+      <MemberSignature Language="C#" Value="DashPunctuation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory DashPunctuation = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.DashPunctuation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de traço ou hífen. Demonstrado pela designação de Unicode “Pd” (pontuação, traço). O valor é 19.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DecimalDigitNumber">
+      <MemberSignature Language="C#" Value="DecimalDigitNumber" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory DecimalDigitNumber = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.DecimalDigitNumber" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de dígito decimal, ou seja, um caractere no intervalo de 0 a 9. Demonstrado pela designação de Unicode “Nd” (número, dígito decimal). O valor é 8.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnclosingMark">
+      <MemberSignature Language="C#" Value="EnclosingMark" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory EnclosingMark = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.EnclosingMark" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Circunscrever um caractere de marca, que é um caractere de combinação sem espaçamento ao redor de todos os caracteres anteriores um caractere base, inclusive. Demonstrado pela designação de Unicode “Me” (marca, fechamento). O valor é 7.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalQuotePunctuation">
+      <MemberSignature Language="C#" Value="FinalQuotePunctuation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory FinalQuotePunctuation = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.FinalQuotePunctuation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de aspas de fechamento ou final. Demonstrado pela designação de Unicode “Pf” (pontuação, aspas finais). O valor é 23.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="Format" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory Format = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.Format" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de formato que afeta o layout do texto ou a operação de processos de texto, mas que não é renderizado normalmente. Demonstrado pela designação de Unicode “Cf” (outros, formato). O valor é 15.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialQuotePunctuation">
+      <MemberSignature Language="C#" Value="InitialQuotePunctuation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory InitialQuotePunctuation = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.InitialQuotePunctuation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de aspas de abertura ou inicial. Demonstrado pela designação de Unicode “Pi” (pontuação, aspas iniciais). O valor é 22.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LetterNumber">
+      <MemberSignature Language="C#" Value="LetterNumber" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory LetterNumber = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.LetterNumber" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Número representado por uma letra, em vez de um dígito decimal, por exemplo, o numeral romano para cinco, que é “V”. O indicador é demonstrado pela designação de Unicode “Nl” (número, letra). O valor é 9.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LineSeparator">
+      <MemberSignature Language="C#" Value="LineSeparator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory LineSeparator = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.LineSeparator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere usado para separar linhas de texto. Demonstrado pela designação de Unicode “Zl” (separador, linha). O valor é 12.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LowercaseLetter">
+      <MemberSignature Language="C#" Value="LowercaseLetter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory LowercaseLetter = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.LowercaseLetter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Letra minúscula. Demonstrado pela designação de Unicode “Ll” (letra, minúscula). O valor é 1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MathSymbol">
+      <MemberSignature Language="C#" Value="MathSymbol" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory MathSymbol = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.MathSymbol" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de símbolo matemático, como “+” ou “=”. Demonstrado pela designação de Unicode “Sm” (símbolo, matemática). O valor é 25.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifierLetter">
+      <MemberSignature Language="C#" Value="ModifierLetter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory ModifierLetter = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.ModifierLetter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de letra modificadora, que é um caractere de espaçamento independente que indica as modificações de uma letra anterior. Demonstrado pela designação de Unicode “Lm” (letra, modificador). O valor é 3.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifierSymbol">
+      <MemberSignature Language="C#" Value="ModifierSymbol" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory ModifierSymbol = int32(27)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.ModifierSymbol" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de símbolo modificador, que indica as modificações de caracteres ao redor. Por exemplo, a barra de fração indica que o número à esquerda é o numerador e o número à direita, o denominador. O indicador é demonstrado pela designação de Unicode “Sk” (símbolo, modificador). O valor é 27.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonSpacingMark">
+      <MemberSignature Language="C#" Value="NonSpacingMark" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory NonSpacingMark = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.NonSpacingMark" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere sem espaçamento que indica as modificações de um caractere base. Demonstrado pela designação de Unicode “Mn” (marca, não espaçamento). O valor é 5.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPunctuation">
+      <MemberSignature Language="C#" Value="OpenPunctuation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory OpenPunctuation = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.OpenPunctuation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de abertura de uma das marcas de pontuação paralelas, como parênteses, colchetes e chaves. Demonstrado pela designação de Unicode “Ps” (pontuação, abertura). O valor é 20.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OtherLetter">
+      <MemberSignature Language="C#" Value="OtherLetter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory OtherLetter = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.OtherLetter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Letra que não é uma letra maiúscula, uma letra minúscula, uma letra de capitalização de título nem uma letra de modificador. Demonstrado pela designação de Unicode “Lo” (letra, outros). O valor é 4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OtherNotAssigned">
+      <MemberSignature Language="C#" Value="OtherNotAssigned" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory OtherNotAssigned = int32(29)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.OtherNotAssigned" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere que não está atribuído a nenhuma categoria Unicode. Demonstrado pela designação de Unicode “Cn” (outros, não atribuído). O valor é 29.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OtherNumber">
+      <MemberSignature Language="C#" Value="OtherNumber" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory OtherNumber = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.OtherNumber" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Número que não é um dígito decimal nem um número de letra, por exemplo, a fração 1/2. O indicador é demonstrado pela designação de Unicode “No” (número, outros). O valor é 10.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OtherPunctuation">
+      <MemberSignature Language="C#" Value="OtherPunctuation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory OtherPunctuation = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.OtherPunctuation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de pontuação que não é um conector, um traço, pontuação de abertura, pontuação de fechamento, aspas iniciais nem aspas finais. Demonstrado pela designação de Unicode “Po” (pontuação, outros). O valor é 24.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OtherSymbol">
+      <MemberSignature Language="C#" Value="OtherSymbol" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory OtherSymbol = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.OtherSymbol" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de símbolo que não é um símbolo matemático, símbolo de moeda ou símbolo de modificador. Demonstrado pela designação de Unicode “So” (símbolo, outros). O valor é 28.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParagraphSeparator">
+      <MemberSignature Language="C#" Value="ParagraphSeparator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory ParagraphSeparator = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.ParagraphSeparator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere usado para separar parágrafos. Demonstrado pela designação de Unicode “Zp” (separador, parágrafo). O valor é 13.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateUse">
+      <MemberSignature Language="C#" Value="PrivateUse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory PrivateUse = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.PrivateUse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de uso particular, com um valor Unicode no intervalo de U+E000 a U+F8FF. Demonstrado pela designação de Unicode “Co” (outros, uso particular). O valor é 17.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SpaceSeparator">
+      <MemberSignature Language="C#" Value="SpaceSeparator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory SpaceSeparator = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.SpaceSeparator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de espaço, que não tem glifo, mas que não é um caractere de controle nem de formato. Demonstrado pela designação de Unicode "Zs" (separador, espaço). O valor é 11.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SpacingCombiningMark">
+      <MemberSignature Language="C#" Value="SpacingCombiningMark" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory SpacingCombiningMark = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.SpacingCombiningMark" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere de espaçamento que indica as modificações de um caractere base e afeta a largura do glifo desse caractere base. Demonstrado pela designação de Unicode “Mc” (marca, combinação de espaçamento). O valor é 6.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Surrogate">
+      <MemberSignature Language="C#" Value="Surrogate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory Surrogate = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.Surrogate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caractere alternativo alto ou baixo. Os valores de código alternativos estão no intervalo de U+D800 a U+DFFF. Demonstrado pela designação de Unicode “Cs” (outros, alternativo). O valor é 16.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TitlecaseLetter">
+      <MemberSignature Language="C#" Value="TitlecaseLetter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory TitlecaseLetter = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.TitlecaseLetter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Letra de capitalização de título. Demonstrado pela designação de Unicode “Lt” (letra, capitalização de título). O valor é 2.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UppercaseLetter">
+      <MemberSignature Language="C#" Value="UppercaseLetter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.UnicodeCategory UppercaseLetter = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.UnicodeCategory.UppercaseLetter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.UnicodeCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Letra maiúscula. Demonstrado pela designação de Unicode “Lu” (letra, maiúscula). O valor é 0.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

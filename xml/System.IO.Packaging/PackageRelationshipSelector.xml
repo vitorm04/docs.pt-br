@@ -1,0 +1,161 @@
+<Type Name="PackageRelationshipSelector" FullName="System.IO.Packaging.PackageRelationshipSelector">
+  <TypeSignature Language="C#" Value="public sealed class PackageRelationshipSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PackageRelationshipSelector extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackageRelationshipSelector" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Packaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define <see cref="T:System.IO.Packaging.PackageRelationship" /> critérios para selecionar as relações de nível de parte ou pacote.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackageRelationshipSelector>é usado pelo <xref:System.IO.Packaging.PackageDigitalSignatureManager.Sign%2A> método o <xref:System.IO.Packaging.PackageDigitalSignatureManager> classe para especificar uma lista de <xref:System.IO.Packaging.PackageRelationship> partes sejam assinados.  
+  
+ <xref:System.IO.Packaging.PackageRelationshipSelector>é usado pelo <xref:System.IO.Packaging.PackageDigitalSignature.SignedRelationshipSelectors%2A> propriedade o <xref:System.IO.Packaging.PackageDigitalSignature> classe para obter uma lista de <xref:System.IO.Packaging.PackageRelationship> partes que foram assinados com a assinatura digital fornecida.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PackageRelationshipSelector (Uri sourceUri, System.IO.Packaging.PackageRelationshipSelectorType selectorType, string selectionCriteria);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri sourceUri, valuetype System.IO.Packaging.PackageRelationshipSelectorType selectorType, string selectionCriteria) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceUri" Type="System.Uri" />
+        <Parameter Name="selectorType" Type="System.IO.Packaging.PackageRelationshipSelectorType" />
+        <Parameter Name="selectionCriteria" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceUri">O [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] do <see cref="T:System.IO.Packaging.PackagePart" /> ou <see cref="T:System.IO.Packaging.Package" /> (<c>SourceUri</c>= "/") que é proprietária do relacionamento.</param>
+        <param name="selectorType">O tipo do <c>selectionCriteria</c>, por relação <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Id" /> ou relação <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Type" />.</param>
+        <param name="selectionCriteria">A cadeia de caracteres de qualificação que é usada para selecionar as relações com base no <c>selectorType</c>.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Packaging.PackageRelationshipSelector" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sourceUri" /> ou <paramref name="selectionCriteria" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="selectorType" /> não é válido.</exception>
+        <exception cref="T:System.Xml.XmlException">O <paramref name="selectorType" /> parâmetro é <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Id" /> mas <paramref name="selectionCriteria" /> não é válido [!INCLUDE[TLA#tla_xsd](~/includes/tlasharptla-xsd-md.md)] [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)].</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="sourceUri" /> não é o <see cref="T:System.IO.Packaging.Package" /> raiz ("/") e também não é válido <see cref="T:System.IO.Packaging.PackagePart" /> [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.IO.Packaging.PackageRelationship&gt; Select (System.IO.Packaging.Package package);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class System.IO.Packaging.PackageRelationship&gt; Select(class System.IO.Packaging.Package package) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageRelationshipSelector.Select(System.IO.Packaging.Package)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.IO.Packaging.PackageRelationship&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="package" Type="System.IO.Packaging.Package" />
+      </Parameters>
+      <Docs>
+        <param name="package">O pacote da qual selecionar as relações com base nos critérios de seleção.</param>
+        <summary>Retorna uma lista de <see cref="T:System.IO.Packaging.PackageRelationship" /> objetos que correspondem a definido <see cref="P:System.IO.Packaging.PackageRelationshipSelector.SourceUri" />, <see cref="P:System.IO.Packaging.PackageRelationshipSelector.SelectorType" />, e <see cref="P:System.IO.Packaging.PackageRelationshipSelector.SelectionCriteria" />.</summary>
+        <returns>Uma lista de relações que correspondem aos parâmetros de seleção especificados para o <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)" /> construtor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionCriteria">
+      <MemberSignature Language="C#" Value="public string SelectionCriteria { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectionCriteria" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageRelationshipSelector.SelectionCriteria" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os critérios de seleção especificados para o <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)" /> construtor.</summary>
+        <value>Os critérios de seleção com base no <see cref="P:System.IO.Packaging.PackageRelationshipSelector.SelectorType" /> de <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Id" /> ou <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Type" /> especificado para o <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)" /> construtor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectorType">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageRelationshipSelectorType SelectorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Packaging.PackageRelationshipSelectorType SelectorType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageRelationshipSelector.SelectorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageRelationshipSelectorType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.IO.Packaging.PackageRelationshipSelectorType" /> especificado para o <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)" /> construtor.</summary>
+        <value>O tipo de seletor de <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Id" /> ou <see cref="F:System.IO.Packaging.PackageRelationshipSelectorType.Type" /> especificado para o <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)" /> construtor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceUri">
+      <MemberSignature Language="C#" Value="public Uri SourceUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SourceUri" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackageRelationshipSelector.SourceUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a raiz do pacote URI ("/") ou parte <see cref="P:System.IO.Packaging.PackagePart.Uri" /> especificado para o <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)" /> construtor como o proprietário da relação.</summary>
+        <value>O pacote de raiz URI ("/") ou a parte <see cref="P:System.IO.Packaging.PackagePart.Uri" /> especificado para o <see cref="M:System.IO.Packaging.PackageRelationshipSelector.#ctor(System.Uri,System.IO.Packaging.PackageRelationshipSelectorType,System.String)" /> construtor como o proprietário da relação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

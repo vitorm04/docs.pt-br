@@ -1,0 +1,136 @@
+<Type Name="WebColorConverter" FullName="System.Web.UI.WebControls.WebColorConverter">
+  <TypeSignature Language="C#" Value="public class WebColorConverter : System.Drawing.ColorConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebColorConverter extends System.Drawing.ColorConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebColorConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.ColorConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte um nome de cor predefinido ou um valor de cor RGB para e de um objeto <see cref="T:System.Drawing.Color" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebColorConverter> classe é usada para converter um <xref:System.Drawing.Color?displayProperty=nameWithType> objeto para um nome de cor predefinidos ou um valor de cor RGB. Ele também é usado para converter um nome de cor predefinidos ou um valor de cor RGB para um <xref:System.Drawing.Color?displayProperty=nameWithType> objeto.  
+  
+> [!CAUTION]
+>  Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando <xref:System.ComponentModel.TypeDescriptor?displayProperty=nameWithType>. Para obter mais informações, consulte os exemplos na visão geral da classe <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>.  
+  
+ A lista a seguir contém os nomes de cor predefinidos HTML dezesseis que você pode usar:  
+  
+-   Preto  
+  
+-   Azul  
+  
+-   Ciano  
+  
+-   Cinza  
+  
+-   Verde  
+  
+-   Verde-limão  
+  
+-   Magenta  
+  
+-   Bordô  
+  
+-   Azul marinho  
+  
+-   Oliva  
+  
+-   Roxo  
+  
+-   Vermelho  
+  
+-   Prata  
+  
+-   Azul-petróleo  
+  
+-   Branco  
+  
+-   Amarelo  
+  
+ Você também pode especificar uma cor personalizada usando um número hexadecimal, precedido pelo caractere de libra (#), no formato `#RRGGBB`. `RR`, `GG`, e `BB` representar valores hexadecimais de 0 a 255 que indicam os componentes vermelhos, verdes e azuis da cor, respectivamente. Por exemplo, o valor `#0000FF` representa a cor azul. Especifica o valor mínimo (`00`) para os componentes vermelhos e verdes, ao especificar o valor máximo (`FF`) para o componente azul.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebColorConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebColorConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebColorConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebColorConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que indica o contexto do objeto a ser convertido.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> objeto que representa informações sobre uma cultura, como o idioma, o sistema de calendário e assim por diante. Esse parâmetro não é usado neste método. Isso está reservado para versões futuras deste método. Você poderá opcionalmente passar <see langword="null" /> para esse parâmetro.</param>
+        <param name="value">O objeto a ser convertido.</param>
+        <summary>Converte o valor fornecido para o tipo do conversor.</summary>
+        <returns>O objeto resultante da conversão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebColorConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> instância que indica o contexto do objeto a ser convertido.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> objeto que representa informações sobre uma cultura, como o idioma, o sistema de calendário e assim por diante. Esse parâmetro não é usado neste método. Isso está reservado para versões futuras deste método. Você poderá opcionalmente passar <see langword="null" /> para esse parâmetro.</param>
+        <param name="value">O objeto a ser convertido.</param>
+        <param name="destinationType">O tipo para o qual converter.</param>
+        <summary>Converte o objeto especificado em um tipo especificado.</summary>
+        <returns>O objeto resultante da conversão.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destinationType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

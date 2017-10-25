@@ -1,0 +1,51 @@
+<Type Name="InviteCompletedEventArgs" FullName="System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class InviteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InviteCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações de qualificação para um método de retorno de chamada quando um <see cref="E:System.Net.PeerToPeer.Collaboration.Peer.InviteCompleted" /> evento ocorre.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.PeerToPeer.Collaboration.Peer.InviteCompleted> é gerado quando um par remoto responde a um convite para colaborar com um host de ponto a ponto ou um aplicativo host. Isso ocorre quando o convite é concluída, independentemente se o par de convidados pretende colaborar. Métodos usados para gerenciar convites de ponto a ponto são no <xref:System.Net.PeerToPeer.Collaboration.PeerContact> e <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> subclasses e <xref:System.Net.PeerToPeer.Collaboration.Peer> classe abstrata. Método de retorno de chamada, o delegado e o ponteiro de função de tipo seguro são sinônimos para os métodos de delegação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InviteResponse">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerInvitationResponse InviteResponse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerInvitationResponse InviteResponse" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs.InviteResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> para uma operação de convite.</summary>
+        <value>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> para o convite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que especificado, o valor padrão dessa propriedade é `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

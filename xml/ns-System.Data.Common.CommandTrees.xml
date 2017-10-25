@@ -1,0 +1,13 @@
+<Namespace Name="System.Data.Common.CommandTrees">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Common.CommandTrees" /> namespace fornece classes para criar expressões que formam uma árvore de comando.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um árvores de comando é uma representação do modelo de objeto de uma consulta que pode ser usada para representar a consulta, atualizar, inserir e excluir comandos nos metadados do modelo de dados de entidade ADO.NET (EDM) e armazenamento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

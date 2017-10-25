@@ -1,0 +1,112 @@
+<Type Name="StructureChangedEventArgs" FullName="System.Windows.Automation.StructureChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class StructureChangedEventArgs : System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StructureChangedEventArgs extends System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.StructureChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.AutomationEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações sobre o evento que é gerado quando a estrutura de árvore de automação de interface do usuário foi alterado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StructureChangedEventArgs (System.Windows.Automation.StructureChangeType structureChangeType, int[] runtimeId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Automation.StructureChangeType structureChangeType, int32[] runtimeId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.StructureChangedEventArgs.#ctor(System.Windows.Automation.StructureChangeType,System.Int32[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="structureChangeType" Type="System.Windows.Automation.StructureChangeType" />
+        <Parameter Name="runtimeId" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="structureChangeType">Um único valor que especifica o tipo de alteração.</param>
+        <param name="runtimeId">O tempo de execução [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] do [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento cuja estrutura é alterado.</param>
+        <summary>Inicializa uma nova instância do <see cref="P:System.Windows.Automation.StructureChangedEventArgs.StructureChangeType" /> classe, especificando o tipo de alteração e o [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] do elemento cuja estrutura é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores que podem ser retornados em `structureChangeType` dependem da implementação do provedor de automação de interface do usuário. Por exemplo, quando itens são adicionados ou removidos de um [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] caixa de listagem, se o provedor não é possível determinar o número de itens adicionados ou removidos, ele pode especificar <xref:System.Windows.Automation.StructureChangeType.ChildrenInvalidated> e não <xref:System.Windows.Automation.StructureChangeType.ChildAdded> ou <xref:System.Windows.Automation.StructureChangeType.ChildRemoved>.  
+  
+ A tabela a seguir descreve as informações no evento recebido pelo <xref:System.Windows.Automation.StructureChangedEventHandler> para alterações de estrutura diferente.  
+  
+|`structureChangeType`|Origem do evento|`runtimeId`|  
+|---------------------------|------------------|-----------------|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildAdded>|O filho que foi adicionado.|O filho que foi adicionado.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildRemoved>|O pai do filho que foi removido.|O filho que foi removido.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenBulkAdded>|O pai dos filhos que foram adicionados.|O pai dos filhos que foram adicionados.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenBulkRemoved>|O pai dos filhos que foram removidos.|O pai dos filhos que foram removidos.|  
+|<xref:System.Windows.Automation.StructureChangeType.ChildrenInvalidated>|O pai dos filhos que foram invalidados.|O pai dos filhos que foram invalidados|  
+  
+ Controles personalizados podem não ser capazes de fornecer um valor significativo em `runtimeId`. Para obter mais informações, consulte <xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como construir e geram um evento quando filhos são adicionados a ou removido de uma caixa de lista personalizada.  
+  
+ [!code-csharp[FragmentProvider#101](~/samples/snippets/csharp/VS_Snippets_Wpf/FragmentProvider/CSharp/ListFragment.cs#101)]
+ [!code-vb[FragmentProvider#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FragmentProvider/VisualBasic/ListFragment.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeId">
+      <MemberSignature Language="C#" Value="public int[] GetRuntimeId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32[] GetRuntimeId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.StructureChangedEventArgs.GetRuntimeId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] tempo de execução [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] do [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento cuja estrutura é alterado.</summary>
+        <returns>O tempo de execução [!INCLUDE[TLA2#tla_id](~/includes/tla2sharptla-id-md.md)] do [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento cuja estrutura é alterado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno pode ser o identificador do filho que foi adicionado ou removido ou, no caso de vários filhos que está sendo adicionado, removido ou invalidada, o identificador do pai. Para obter mais informações, consulte <xref:System.Windows.Automation.StructureChangedEventArgs.%23ctor%2A>.  
+  
+ Controles personalizados não podem fornecer um identificador válido do tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StructureChangeType">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.StructureChangeType StructureChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.StructureChangeType StructureChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.StructureChangedEventArgs.StructureChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.StructureChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o tipo de alteração que ocorreu no [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] estrutura de árvore.</summary>
+        <value>O tipo de alterado que ocorreu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

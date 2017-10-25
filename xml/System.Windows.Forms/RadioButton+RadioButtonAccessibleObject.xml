@@ -1,0 +1,131 @@
+<Type Name="RadioButton+RadioButtonAccessibleObject" FullName="System.Windows.Forms.RadioButton+RadioButtonAccessibleObject">
+  <TypeSignature Language="C#" Value="public class RadioButton.RadioButtonAccessibleObject : System.Windows.Forms.ButtonBase.ButtonBaseAccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit RadioButton/RadioButtonAccessibleObject extends System.Windows.Forms.ButtonBase/ButtonBaseAccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RadioButton.RadioButtonAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ButtonBase+ButtonBaseAccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações sobre o controle <see cref="T:System.Windows.Forms.RadioButton" /> para aplicativos cliente de acessibilidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms tem suporte de acessibilidade interno e fornece informações sobre o aplicativo que lhe permite trabalhar com aplicativos cliente de acessibilidade. Exemplos de aplicativos cliente de acessibilidade tela utilitários ampliador e revisor, utilitários de entrada de voz, teclados na tela, dispositivos de entrada alternativos e os utilitários de aprimoramento de teclado. O <xref:System.Windows.Forms.RadioButton.RadioButtonAccessibleObject> classe herda o <xref:System.Windows.Forms.Control.ControlAccessibleObject> classe para fornecer informações sobre o <xref:System.Windows.Forms.RadioButton> controle para aplicativos cliente de acessibilidade.  
+  
+ Há instâncias quando você deve fornecer informações personalizadas, como nome ou descrição, para aplicativos cliente de acessibilidade de um controle. Há duas maneiras de fornecer essas informações. Para fornecer informações de acessibilidade limitada para controles existentes, defina o controle <xref:System.Windows.Forms.Control.AccessibleName%2A>, <xref:System.Windows.Forms.Control.AccessibleDescription%2A>, <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A>, e <xref:System.Windows.Forms.Control.AccessibleRole%2A> valores de propriedade, que serão relatados para aplicativos cliente de acessibilidade.  
+  
+ Se você precisar de mais informações sobre acessibilidade para ser incluído no seu controle, você pode escrever sua própria classe que deriva de <xref:System.Windows.Forms.AccessibleObject> ou <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes. Por exemplo, se você estiver escrevendo seu próprio controle que não é derivado de controles comuns, ou exigem operações como teste de clique dentro do controle, você deve criar um <xref:System.Windows.Forms.Control.ControlAccessibleObject> para seu controle chamando o <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RadioButtonAccessibleObject (System.Windows.Forms.RadioButton owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.RadioButton owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.RadioButtonAccessibleObject.#ctor(System.Windows.Forms.RadioButton)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.RadioButton" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.RadioButton" /> esse objeto fornece informações para.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.RadioButton.RadioButtonAccessibleObject" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAction">
+      <MemberSignature Language="C#" Value="public override string DefaultAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.RadioButtonAccessibleObject.DefaultAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que descreve a ação padrão da <see cref="T:System.Windows.Forms.RadioButton" /> controle.</summary>
+        <value>Uma descrição da ação padrão da <see cref="T:System.Windows.Forms.RadioButton" /> controle.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public override void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.RadioButtonAccessibleObject.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Click" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.RadioButtonAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a função deste objeto acessível.</summary>
+        <value>O valor <see cref="F:System.Windows.Forms.AccessibleRole.RadioButton" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.RadioButtonAccessibleObject.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do <see cref="T:System.Windows.Forms.RadioButton" /> controle.</summary>
+        <value>Se o <see cref="P:System.Windows.Forms.RadioButton.Checked" /> está definida como true, retorna <see cref="F:System.Windows.Forms.AccessibleStates.Checked" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

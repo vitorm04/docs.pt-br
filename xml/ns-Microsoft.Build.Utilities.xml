@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Utilities">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.Build.Utilities" /> namespace fornece classes auxiliares que você pode usar para criar seu próprio MSBuild agentes e tarefas. Para obter informações, consulte <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

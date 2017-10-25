@@ -1,0 +1,392 @@
+<Type Name="IComponentChangeService" FullName="System.ComponentModel.Design.IComponentChangeService">
+  <TypeSignature Language="C#" Value="public interface IComponentChangeService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComponentChangeService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IComponentChangeService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma interface para adicionar e remover os manipuladores de eventos para eventos que adicionar, alterarem, remover ou renomear componentes e fornece métodos para gerar um <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" /> ou <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" /> eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.IComponentChangeService>Fornece uma interface que pode ser usada para indicar os métodos que manipulam os eventos a seguir:  
+  
+-   <xref:System.ComponentModel.Design.IComponentChangeService.ComponentAdded>, gerado quando um componente é adicionado.  
+  
+-   <xref:System.ComponentModel.Design.IComponentChangeService.ComponentAdding>, gerado quando um componente está prestes a ser adicionado.  
+  
+-   <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged>, gerado quando um componente é alterado.  
+  
+-   <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanging>, gerado quando um componente está prestes a ser alterado.  
+  
+-   <xref:System.ComponentModel.Design.IComponentChangeService.ComponentRemoved>, gerado quando um componente é removido.  
+  
+-   <xref:System.ComponentModel.Design.IComponentChangeService.ComponentRemoving>, gerado quando um componente está prestes a ser removido.  
+  
+-   <xref:System.ComponentModel.Design.IComponentChangeService.ComponentRename>, gerado quando um componente é renomeado.  
+  
+ Normalmente, o ambiente de design gera adicionar esses componentes, alterar, remover ou renomear os eventos. Designers devem chamar os métodos desta interface ao usar <xref:System.ComponentModel.Design.DesignerTransaction> objetos para fornecer desfazer e refazer a funcionalidade para ações de tempo de design que afetam componentes. Mais informações estão disponíveis na documentação do <xref:System.ComponentModel.Design.DesignerTransaction>. Em geral, somente o designer raiz manipula essas notificações de alteração.  
+  
+ Esse serviço também fornece métodos que geram um evento de componente alterado ou o evento de alteração de componente. Um <xref:System.ComponentModel.PropertyDescriptor> ou um componente pode indicar que um componente foi alterado ou está sendo alterado com o <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A> e <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanging%2A> métodos, respectivamente.  
+  
+   
+  
+## Examples  
+ Este exemplo a seguir demonstra como usar o <xref:System.ComponentModel.Design.IComponentChangeService> interface para receber notificações sobre alterações nos componentes, adição e remoção de no modo de design.  
+  
+ [!code-cpp[IComponentChangeServiceSample2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IComponentChangeServiceSample2/CPP/icomponentchangeserviceexample.cpp#1)]
+ [!code-csharp[IComponentChangeServiceSample2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IComponentChangeServiceSample2/CS/icomponentchangeserviceexample.cs#1)]
+ [!code-vb[IComponentChangeServiceSample2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IComponentChangeServiceSample2/VB/icomponentchangeserviceexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ComponentAdded">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ComponentEventHandler ComponentAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ComponentEventHandler ComponentAdded" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IComponentChangeService.ComponentAdded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ComponentEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um componente foi adicionado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre durante o carregamento e quando novos componentes são criados pelo usuário, depois que o componente foi localizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentAdding">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ComponentEventHandler ComponentAdding;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ComponentEventHandler ComponentAdding" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IComponentChangeService.ComponentAdding" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ComponentEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um componente está sendo adicionado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre durante o carregamento e quando o usuário cria um novo componente. Você pode cancelar o processo de adicionar um componente lançando uma exceção aqui.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ComponentChangedEventHandler ComponentChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ComponentChangedEventHandler ComponentChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ComponentChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um componente é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre quando qualquer componente do formulário é alterado. Esse evento não será ocorrer durante o formulário carregar e descarregar, porque as alterações são esperadas neste momento.  
+  
+> [!NOTE]
+>  Um <xref:System.ComponentModel.Design.DesignerTransaction> pode gerar vários <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> eventos. Alguns <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> manipuladores de eventos podem interferir com sequências esperadas de eventos, como se seu código altera os valores das propriedades enquanto uma transação está ocorrendo. Um <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> manipulador de eventos também pode prejudicar o desempenho se desenha após cada alteração durante um <xref:System.ComponentModel.Design.DesignerTransaction> está em andamento. Para permitir que um <xref:System.ComponentModel.Design.DesignerTransaction> no processo ser concluído sem interrupção ou interferência por seu <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> manipulador de eventos, você pode testar o estado do <xref:System.ComponentModel.Design.IDesignerHost.InTransaction%2A> propriedade e adiar a manipulação de eventos de alteração até a conclusão da transação adicionando um <xref:System.ComponentModel.Design.DesignerTransactionCloseEventHandler> que irá gerar seu <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> manipulador de eventos e removido após a conclusão da transação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentChanging">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ComponentChangingEventHandler ComponentChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ComponentChangingEventHandler ComponentChanging" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ComponentChangingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um componente está sendo alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre antes do componente é realmente alterado e fornece o designer a oportunidade de cancelar a alteração ou executar qualquer pré-alteração de processamento. Esse evento não ocorrer durante o formulário carregar e descarregar, porque as alterações são esperadas neste momento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentRemoved">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ComponentEventHandler ComponentRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ComponentEventHandler ComponentRemoved" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IComponentChangeService.ComponentRemoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ComponentEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um componente foi removido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre durante a descarregar e quando um componente é excluído pelo usuário. O evento ocorre antes do site foi removido do componente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentRemoving">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ComponentEventHandler ComponentRemoving;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ComponentEventHandler ComponentRemoving" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IComponentChangeService.ComponentRemoving" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ComponentEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um componente está sendo removido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre durante a descarregar e quando o usuário exclui um componente. Você pode cancelar o processo de remoção de um componente lançando uma exceção aqui.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentRename">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ComponentRenameEventHandler ComponentRename;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ComponentRenameEventHandler ComponentRename" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IComponentChangeService.ComponentRename" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ComponentRenameEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um componente é renomeado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre após o <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> evento quando um componente foi renomeado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public void OnComponentChanged (object component, System.ComponentModel.MemberDescriptor member, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnComponentChanged(object component, class System.ComponentModel.MemberDescriptor member, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged(System.Object,System.ComponentModel.MemberDescriptor,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente que foi alterado.</param>
+        <param name="member">O membro que foi alterado. Isso é <see langword="null" /> se essa alteração não está relacionada a um único membro.</param>
+        <param name="oldValue">O valor antigo do membro. Isso é válido somente se o membro não for <see langword="null" />.</param>
+        <param name="newValue">O novo valor do membro. Isso é válido somente se o membro não for <see langword="null" />.</param>
+        <summary>Anuncia para o serviço de alteração de componente que um componente específico foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método gera o <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> evento.  
+  
+ A maioria dos designers que acompanham o [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], bem como o ambiente de tempo de design do Visual Studio, normalmente gerar esse evento para você quando um componente em um projeto for alterada, na maioria das vezes, você não precisa explicitamente chamar este método. Apropriada <xref:System.ComponentModel.Design.IComponentChangeService> eventos são automaticamente gerado quando um <xref:System.ComponentModel.PropertyDescriptor> é usado para alterar uma propriedade de valor ou componentes são adicionados ou removidos do <xref:System.ComponentModel.Design.IDesignerHost> contêiner.  
+  
+ Antes de chamar <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A>, primeiro chame <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanging%2A> para indicar que um componente está prestes a alterar e fazer a alteração. Em seguida, chame <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A> para gerar o <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse evento permite que o implementador de fazer qualquer pós-processamento necessário após uma alteração de propriedade. Por exemplo, um designer normalmente atualiza o código-fonte que define a propriedade com o novo valor.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanging">
+      <MemberSignature Language="C#" Value="public void OnComponentChanging (object component, System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnComponentChanging(object component, class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentChangeService.OnComponentChanging(System.Object,System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente que está prestes a ser alterada.</param>
+        <param name="member">O membro que está sendo alterado. Isso é <see langword="null" /> se essa alteração não está relacionada a um único membro.</param>
+        <summary>Anuncia para o serviço de alteração de componente que um componente específico está sendo alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método gera o <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanging> evento.  
+  
+ A maioria dos designers incluídos com o [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], bem como o ambiente de tempo de design do Visual Studio, normalmente gerar este evento automaticamente; assim a maioria das vezes, você não precisa explicitamente chamar este método. Apropriada <xref:System.ComponentModel.Design.IComponentChangeService> eventos são automaticamente gerado quando um <xref:System.ComponentModel.PropertyDescriptor> é usado para alterar uma propriedade de valor ou componentes são adicionados ou removidos do <xref:System.ComponentModel.Design.IDesignerHost> contêiner.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Este método lança uma exceção se a propriedade não pode ser alterada. Isso não se destina para validar os valores de uma propriedade específica. Em vez disso, destina-se a fornecer um método global de impedindo a alteração de um componente. Por exemplo, se um arquivo de designer estiver marcado para controle do código fonte, manipulador deste evento normalmente gera uma exceção se o usuário se recusou a check-out do arquivo.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

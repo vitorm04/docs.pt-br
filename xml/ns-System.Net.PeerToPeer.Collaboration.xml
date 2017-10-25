@@ -1,0 +1,17 @@
+<Namespace Name="System.Net.PeerToPeer.Collaboration">
+  <Docs>
+    <summary>O <see cref="N:System.Net.PeerToPeer.Collaboration" /> namespace aprimora <see cref="N:System.Net.PeerToPeer" /> funcionalidade de rede e fornece recursos para sessões de colaboração gerenciado sem servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A infraestrutura de colaboração ponto a ponto (P2P) fornece uma estrutura de baseados em rede de ponto a ponto para atividades colaborativas, como compatibilidade de jogos de rede, conferência e outras atividades de vários participantes interativas. Essa infra-estrutura serverless inclui APIs que simplificam o processo pelo qual aplicativos podem acompanhar a presença de ponto a ponto sem um servidor, enviar convites para os participantes, descobrir pares na mesma sub-rede e gerenciar contatos.  
+  
+ APIs nativas de colaboração ponto a ponto estão disponíveis em clientes Windows Vista em edições de 32 bits e 64 bits. APIs de colaboração ponto a ponto não estão disponíveis no Windows Server 2008.  
+  
+ Observação: As APIs de colaboração são funcionais de um serviço apenas se o serviço está representando um chamador e o chamador é um usuário interativo (em vez de um usuário interno). Não há suporte para vários gerenciadores de contatos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

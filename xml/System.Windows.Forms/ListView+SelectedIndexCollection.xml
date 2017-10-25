@@ -1,0 +1,647 @@
+<Type Name="ListView+SelectedIndexCollection" FullName="System.Windows.Forms.ListView+SelectedIndexCollection">
+  <TypeSignature Language="C#" Value="public class ListView.SelectedIndexCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ListView/SelectedIndexCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListView.SelectedIndexCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a coleção que contém os índices para os itens selecionados em um controle <see cref="T:System.Windows.Forms.ListView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.ListView.SelectedIndexCollection> armazena os índices para os itens selecionados em um <xref:System.Windows.Forms.ListView> controle. Os índices são armazenados no <xref:System.Windows.Forms.ListView.SelectedIndexCollection> são as posições de índice dentro do <xref:System.Windows.Forms.ListView.ListViewItemCollection>. O <xref:System.Windows.Forms.ListView.ListViewItemCollection> armazena todos os itens exibidos no <xref:System.Windows.Forms.ListView> controle.  
+  
+ A tabela a seguir mostra um exemplo de como o <xref:System.Windows.Forms.ListView.ListViewItemCollection> armazena os itens do <xref:System.Windows.Forms.ListView> e mostra os estados de seleção em um exemplo <xref:System.Windows.Forms.ListView>.  
+  
+|Índice|Item|Estado de seleção em ListView|  
+|-----------|----------|-------------------------------------|  
+|0|Item1|Não selecionado|  
+|1|Item2|Selecionado|  
+|2|Item3|Não selecionado|  
+|3|Item4|Selecionado|  
+|4|Item5|Selecionado|  
+  
+ Com base no <xref:System.Windows.Forms.ListView.ListViewItemCollection> exemplo na tabela anterior, a tabela a seguir demonstra como o <xref:System.Windows.Forms.ListView.SelectedIndexCollection> seria exibido.  
+  
+|Índice|Índice do item selecionado no ListViewItemCollection|  
+|-----------|----------------------------------------------------------|  
+|0|1|  
+|1|3|  
+|2|4|  
+  
+ Você pode usar as propriedades e métodos dessa classe para executar uma variedade de tarefas com a coleção. O <xref:System.Windows.Forms.ListView.SelectedIndexCollection.Contains%2A> método permite que você determine se uma posição de índice do <xref:System.Windows.Forms.ListView.ListViewItemCollection> é um dos índices armazenados no <xref:System.Windows.Forms.ListView.SelectedIndexCollection>. Quando você sabe que o item na coleção, você pode usar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection.IndexOf%2A> método para determinar a posição do índice de <xref:System.Windows.Forms.ListView.SelectedIndexCollection>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ListView.SelectedIndices%2A>, <xref:System.Windows.Forms.ListView.SelectedIndexChanged>, e <xref:System.Windows.Forms.ListView.HeaderStyle%2A> membros e o <xref:System.Windows.Forms.ListView.SelectedIndexCollection> classe. Para executar este exemplo, cole o código a seguir em um formulário que contém um <xref:System.Windows.Forms.ListView> objeto chamado `ListView1` e um <xref:System.Windows.Forms.TextBox> chamado `TextBox1`. Chamar o `InitializeListView` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> manipulador de eventos. Este exemplo requer que o manipulador de eventos está associado corretamente o <xref:System.Windows.Forms.ListView.SelectedIndexChanged> evento.  
+  
+ [!code-cpp[System.Windows.Forms.ListView1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView1/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.ListView1#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CPP/form1.cpp#3)]
+[!code-csharp[System.Windows.Forms.ListView1#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CS/form1.cs#3)]
+[!code-vb[System.Windows.Forms.ListView1#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView1/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectedIndexCollection (System.Windows.Forms.ListView owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListView owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.#ctor(System.Windows.Forms.ListView)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListView" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Um controle <see cref="T:System.Windows.Forms.ListView" /> que é o proprietário da coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância dessa classe sem associá-lo com um <xref:System.Windows.Forms.ListView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.Add(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item no <see cref="P:System.Windows.Forms.ListView.Items" /> coleção a ser adicionada para o <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</param>
+        <summary>Adiciona o item no índice especificado na <see cref="P:System.Windows.Forms.ListView.Items" /> matriz à coleção.</summary>
+        <returns>O número de itens no <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retornará 0 se o identificador não foi criado para a propriedade <xref:System.Windows.Forms.ListView>. (Você pode determinar se o <xref:System.Windows.Forms.ListView> tem um identificador associado usando o <xref:System.Windows.Forms.Control.IsHandleCreated%2A?displayProperty=nameWithType> propriedade.) Esse método retornará -1 se o identificador não tiver sido criado para uma máquina virtual <xref:System.Windows.Forms.ListView>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice especificado é menor que 0 ou maior que ou igual ao número de itens no proprietário <see cref="T:System.Windows.Forms.ListView" />.  
+  
+ -ou-  
+  
+ O proprietário <see cref="T:System.Windows.Forms.ListView" /> está no modo virtual, e o índice especificado é menor que 0 ou maior que ou igual ao valor de <see cref="P:System.Windows.Forms.ListView.VirtualListSize" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa os itens na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para limpar todos os itens selecionados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (int selectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(int32 selectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.Contains(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndex">O índice a ser localizado na coleção.</param>
+        <summary>Determina se o índice especificado está localizado na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o índice especificado a partir de <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> para o <see cref="T:System.Windows.Forms.ListView" /> é um item na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListView.SelectedIndexCollection.Contains%2A> método permite que você determine se uma posição de índice do <xref:System.Windows.Forms.ListView.ListViewItemCollection> é um dos índices selecionados armazenados no <xref:System.Windows.Forms.ListView.SelectedIndexCollection>. Quando você sabe que um item na coleção de índice selecionada, você pode usar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection.IndexOf%2A> método para determinar a posição do índice de <xref:System.Windows.Forms.ListView.SelectedIndexCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Um <see cref="T:System.Array" /> que representa a matriz para a qual copiar o conteúdo da coleção.</param>
+        <param name="index">O local na matriz de destino para o qual os itens da coleção serão copiados.</param>
+        <summary>Copia toda a coleção em uma matriz existente de um local especificado na matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para combinar os índices selecionados de várias coleções em uma única matriz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedIndexCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção.</summary>
+        <value>Número de itens na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você determine o número de itens selecionados no <xref:System.Windows.Forms.ListView>. Você pode usar esse valor quando são percorrer os valores da coleção e precisa fornecer um número de iterações para executar o loop. Se o <xref:System.Windows.Forms.ListView.MultiSelect%2A> propriedade o <xref:System.Windows.Forms.ListView> é definido como `false`, essa propriedade retorna um valor de 0 ou 1, dependendo se um item é selecionado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para iterar pela coleção do índice selecionada.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que representa a coleção do índice selecionada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (int selectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(int32 selectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.IndexOf(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndex">O índice de base zero do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> localizar na coleção.</param>
+        <summary>Retorna o índice dentro de <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" /> do índice especificado do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> do <see cref="T:System.Windows.Forms.ListView" /> controle.</summary>
+        <returns>O índice baseado em zero na coleção onde o índice especificado do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> está localizado dentro a <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />, ou -1 se o índice não está localizado na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que você sabe que um item está na coleção de índice selecionado (usando o <xref:System.Windows.Forms.ListView.SelectedIndexCollection.Contains%2A> método), você pode usar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection.IndexOf%2A> método para determinar a posição do índice no <xref:System.Windows.Forms.ListView.SelectedIndexCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedIndexCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é sempre `true` para esta coleção. Os itens na coleção podem ser modificados somente pelo <xref:System.Windows.Forms.ListView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public int this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedIndexCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item na coleção a ser obtida.</param>
+        <summary>Obtém o valor do índice especificado nesta coleção.</summary>
+        <value>O valor de índice do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> que é armazenado na localização especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse indexador permite que você obtenha um índice específico selecionado do <xref:System.Windows.Forms.ListView.SelectedIndexCollection>. O índice armazenado na coleção é um índice no <xref:System.Windows.Forms.ListView.ListViewItemCollection> do <xref:System.Windows.Forms.ListView> que representa um item selecionado no <xref:System.Windows.Forms.ListView>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />é menor que 0 ou maior que ou igual ao valor da <see cref="P:System.Windows.Forms.ListView.SelectedIndexCollection.Count" /> propriedade o <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.Remove(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item no <see cref="P:System.Windows.Forms.ListView.Items" /> coleção para remover do <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</param>
+        <summary>Remove o item no índice especificado no <see cref="P:System.Windows.Forms.ListView.Items" /> coleção a partir de <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.ListView> está no modo virtual e o identificador para o proprietário <xref:System.Windows.Forms.ListView> não foi criado (você pode verificar isso usando o <xref:System.Windows.Forms.Control.IsHandleCreated%2A?displayProperty=nameWithType> propriedade), chamar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection.Remove%2A> método não tem efeito o <xref:System.Windows.Forms.ListView.SelectedIndexCollection>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice especificado é menor que 0 ou maior que ou igual ao número de itens no proprietário <see cref="T:System.Windows.Forms.ListView" />.  
+  
+ -ou-  
+  
+ O proprietário <see cref="T:System.Windows.Forms.ListView" /> está no modo virtual, e o índice especificado é menor que 0 ou maior que ou igual ao valor de <see cref="P:System.Windows.Forms.ListView.VirtualListSize" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção de controles.</summary>
+        <value>O objeto usado para sincronizar a coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto a ser adicionado para o <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</param>
+        <summary>Adiciona um item à coleção.</summary>
+        <returns>O local do item adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection> classe diretamente. Para adicionar o índice de um <xref:System.Windows.Forms.ListViewItem> para o <xref:System.Windows.Forms.ListView.SelectedIndexCollection>, use o <xref:System.Windows.Forms.ListViewItem.Selected%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection> classe diretamente. Para limpar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection>, defina o <xref:System.Windows.Forms.ListViewItem.Selected%2A> propriedade `false` para cada <xref:System.Windows.Forms.ListViewItem> no <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object selectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object selectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndex" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndex">O índice a ser localizado na coleção.</param>
+        <summary>Determina se o item especificado está localizado na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o índice especificado a partir de <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> para o <see cref="T:System.Windows.Forms.ListView" /> é um item na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object selectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object selectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedIndex" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="selectedIndex">O índice de base zero do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> localizar na coleção.</param>
+        <summary>Retorna o índice de <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />. O <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" /> contém os índices dos itens selecionados no <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> do <see cref="T:System.Windows.Forms.ListView" /> controle.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> devem ser inseridos.</param>
+        <param name="value">O objeto a ser inserido no <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</param>
+        <summary>Insere um item na coleção em um índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection> classe diretamente. Para adicionar o índice de um <xref:System.Windows.Forms.ListViewItem> para o <xref:System.Windows.Forms.ListView.SelectedIndexCollection>, use o <xref:System.Windows.Forms.ListViewItem.Selected%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" /> tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Obtém ou define um objeto na coleção.</summary>
+        <value>O valor de índice do <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> que é armazenado na localização especificada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a remover do <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</param>
+        <summary>Remove a primeira ocorrência de um item especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection> classe diretamente. Para remover um item do <xref:System.Windows.Forms.ListView.SelectedIndexCollection>, use o <xref:System.Windows.Forms.ListViewItem.Selected%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedIndexCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido.</param>
+        <summary>Remove um item da coleção em um índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.SelectedIndexCollection> classe diretamente. Para remover um item do <xref:System.Windows.Forms.ListView.SelectedIndexCollection>, use o <xref:System.Windows.Forms.ListViewItem.Selected%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

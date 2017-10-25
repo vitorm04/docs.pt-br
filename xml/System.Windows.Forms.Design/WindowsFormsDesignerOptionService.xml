@@ -1,0 +1,80 @@
+<Type Name="WindowsFormsDesignerOptionService" FullName="System.Windows.Forms.Design.WindowsFormsDesignerOptionService">
+  <TypeSignature Language="C#" Value="public class WindowsFormsDesignerOptionService : System.ComponentModel.Design.DesignerOptionService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowsFormsDesignerOptionService extends System.ComponentModel.Design.DesignerOptionService" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.WindowsFormsDesignerOptionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.DesignerOptionService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso para obter e definir valores de opção de um designer de formulários do Windows.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsFormsDesignerOptionService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.WindowsFormsDesignerOptionService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.WindowsFormsDesignerOptionService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompatibilityOptions">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Design.DesignerOptions CompatibilityOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Design.DesignerOptions CompatibilityOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.WindowsFormsDesignerOptionService.CompatibilityOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.DesignerOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.Design.DesignerOptions" /> exposto pelo <see cref="T:System.Windows.Forms.Design.WindowsFormsDesignerOptionService" />.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Design.DesignerOptions" /> exposto pelo <see cref="T:System.Windows.Forms.Design.WindowsFormsDesignerOptionService" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateOptionCollection">
+      <MemberSignature Language="C#" Value="protected override void PopulateOptionCollection (System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection options);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PopulateOptionCollection(class System.ComponentModel.Design.DesignerOptionService/DesignerOptionCollection options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.WindowsFormsDesignerOptionService.PopulateOptionCollection(System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.ComponentModel.Design.DesignerOptionService+DesignerOptionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="options">A coleção para preencher.</param>
+        <summary>Preenche um <see cref="T:System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.WindowsFormsDesignerOptionService.PopulateOptionCollection%2A> método é chamado em demanda na primeira vez que um usuário solicita opções filho ou as propriedades de uma coleção de opções.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,127 @@
+<Type Name="FirstChanceExceptionEventArgs" FullName="System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class FirstChanceExceptionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FirstChanceExceptionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de notificação que é gerado quando uma exceção gerenciada ocorre pela primeira vez, antes que o common language runtime comece a procurar por manipuladores de eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece o manipulador de exceção para o <xref:System.AppDomain.FirstChanceException?displayProperty=nameWithType> eventos com acesso à exceção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma série de domínios de aplicativo chamada `Child_0` por meio de `Child_3`, com um `Worker` objeto em cada domínio de aplicativo. Cada `Worker` objeto tem uma referência para o `Worker` do objeto no próximo domínio de aplicativo, exceto para o `Worker` no último domínio do aplicativo. O <xref:System.AppDomain.FirstChanceException> evento é tratado em todos os domínios de aplicativo, exceto `Child_1`.  
+  
+ Quando os domínios de aplicativo tiveram sido criados, o domínio de aplicativo padrão chama o `TestException` método para o primeiro domínio de aplicativo filho. Cada `Worker` objeto chamadas a `TestException` método para a próxima, até o último `Worker` lança uma exceção que é tratada ou não tratada. Portanto, o thread atual passa por todos os domínios de aplicativo, e `TestException` é adicionada à pilha em cada domínio de aplicativo.  
+  
+ Quando a última `Worker` objeto lida com a exceção, o <xref:System.AppDomain.FirstChanceException> é gerado apenas no último domínio do aplicativo. Os outros domínios de aplicativo nunca obtém a oportunidade de lidar com a exceção, para que o evento não será gerado.  
+  
+ Quando a última `Worker` objeto não lida com a exceção, o <xref:System.AppDomain.FirstChanceException> é gerado em cada domínio de aplicativo que tem um manipulador de eventos. Após cada manipulador de eventos, a pilha continua desenrolar até que a exceção é capturada por domínio de aplicativo padrão.  
+  
+> [!NOTE]
+>  Para ver como a exibição de pilha aumenta à medida que o evento é gerado mais próximo e mais próximo domínio de aplicativo padrão, altere `e.Exception.Message` para `e.Exception` no `FirstChanceHandler` manipuladores de eventos. Observe que, quando `TestException` é chamado nos limites do domínio de aplicativo, ele aparece duas vezes: uma vez para o proxy e outra para o stub.  
+  
+ [!code-csharp[System.AppDomain.FirstChanceException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception/cs/example.cs#1)]
+ [!code-vb[System.AppDomain.FirstChanceException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception/vb/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FirstChanceExceptionEventArgs (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs.#ctor(System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">A exceção que foi lançada apenas pelo código gerenciado e que será examinado pelo <see cref="E:System.AppDomain.UnhandledException" /> evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs" /> classe com uma exceção especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado pelo common language runtime, não pelo código do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto de exceção gerenciada que corresponde à exceção gerada no código gerenciado.</summary>
+        <value>A exceção lançada recentemente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método que manipula o <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType> evento pode examinar a exceção e executar log apropriado ou outros serviços de notificação.  
+  
+ Para obter um exemplo de código, consulte <xref:System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

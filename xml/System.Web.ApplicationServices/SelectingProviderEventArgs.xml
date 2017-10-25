@@ -1,0 +1,104 @@
+<Type Name="SelectingProviderEventArgs" FullName="System.Web.ApplicationServices.SelectingProviderEventArgs">
+  <TypeSignature Language="C#" Value="public class SelectingProviderEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SelectingProviderEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ApplicationServices.SelectingProviderEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.ApplicationServices.RoleService.SelectingProvider" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ApplicationServices.SelectingProviderEventArgs> classe fornece valores para o <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> manipulador de eventos. Você cria um <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> manipulador de eventos para selecionar o provedor de função em tempo de execução.  
+  
+ O <xref:System.Web.ApplicationServices.RoleService> classe gera o <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> evento quando qualquer o <xref:System.Web.ApplicationServices.RoleService.IsCurrentUserInRole%2A> método ou o <xref:System.Web.ApplicationServices.RoleService.GetRolesForCurrentUser%2A> método do <xref:System.Web.ApplicationServices.RoleService> classe é chamada.  
+  
+ Você usa o <xref:System.Web.ApplicationServices.SelectingProviderEventArgs.User%2A> propriedade para recuperar informações sobre o usuário que fez logon. Para recuperar informações de função através de um provedor de função não padrão, defina o <xref:System.Web.ApplicationServices.SelectingProviderEventArgs.ProviderName%2A> propriedade para o nome do provedor de função que você deseja o <xref:System.Web.ApplicationServices.RoleService> objeto a ser usado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> evento. O manipulador de eventos usa o <xref:System.Web.ApplicationServices.SelectingProviderEventArgs> objeto para verificar o nome de usuário e para definir o provedor de função a ser usado. O manipulador de eventos está associado ao <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> evento o `Application_Start` método do arquivo global. asax.  
+  
+ [!code-csharp[System.Web.Security.SelectingProviderEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SelectingProviderEventHandler/cs/Global.asax#1)]
+ [!code-vb[System.Web.Security.SelectingProviderEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SelectingProviderEventHandler/vb/Global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.SelectingProviderEventArgs.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o provedor de função a ser usado para recuperar as funções do usuário.</summary>
+        <value>O nome do provedor de função que é usado para obter as funções do usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.ApplicationServices.SelectingProviderEventArgs.ProviderName%2A> propriedade para definir o provedor de função durante a <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> eventos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> evento. O manipulador de eventos usa o <xref:System.Web.ApplicationServices.SelectingProviderEventArgs> objeto para verificar o nome de usuário e para definir o provedor de função a ser usado. O manipulador de eventos está associado ao <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> evento o `Application_Start` método do arquivo global. asax.  
+  
+ [!code-csharp[System.Web.Security.SelectingProviderEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SelectingProviderEventHandler/cs/Global.asax#1)]
+ [!code-vb[System.Web.Security.SelectingProviderEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SelectingProviderEventHandler/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IPrincipal User { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal User" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.SelectingProviderEventArgs.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o usuário autenticado.</summary>
+        <value>Um objeto que contém o usuário autenticado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.ApplicationServices.SelectingProviderEventArgs.User%2A> propriedade para recuperar informações sobre o usuário durante o <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> evento. O manipulador de eventos usa o <xref:System.Web.ApplicationServices.SelectingProviderEventArgs> objeto para verificar o nome de usuário e definir o provedor de função a ser usado. O manipulador de eventos está associado ao <xref:System.Web.ApplicationServices.RoleService.SelectingProvider> evento o `Application_Start` método do arquivo global. asax.  
+  
+ [!code-csharp[System.Web.Security.SelectingProviderEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SelectingProviderEventHandler/cs/Global.asax#1)]
+ [!code-vb[System.Web.Security.SelectingProviderEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SelectingProviderEventHandler/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

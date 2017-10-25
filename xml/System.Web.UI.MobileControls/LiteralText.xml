@@ -1,0 +1,151 @@
+<Type Name="LiteralText" FullName="System.Web.UI.MobileControls.LiteralText">
+  <TypeSignature Language="C#" Value="public class LiteralText : System.Web.UI.MobileControls.PagedControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LiteralText extends System.Web.UI.MobileControls.PagedControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.LiteralText" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.PagedControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.MobileControls.LiteralTextControlBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a instanciação de tempo de execução de texto literal, especificado em um formulário. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O único lugar onde o código externo deve acessar os membros de um <xref:System.Web.UI.MobileControls.LiteralText> classe está em adaptadores criados para uma nova classe de dispositivos. Certifique-se de que um adaptador é gravado para texto literal.  
+  
+ O estilo com o qual o texto literal é renderizado serão diferentes com base no dispositivo, mas o texto literal aparecerá em todos os dispositivos. Entre HTML e WML, não existem diferenças.  
+  
+ O texto será renderizado da seguinte maneira:  
+  
+-   O controle processa texto literal em sua própria linha com os atributos de estilo apropriadas aplicados.  
+  
+-   Ao aninhar marcas, o hiperlink (marca de ancoragem: <`a`>) não reconhece marcas aninhadas. Por exemplo, o aninhamento a <`b`> ou <`i`> marca como texto literal dentro a <`a`> marca não processará um link como negrito ou itálico. O controle ignora completamente todas as marcas dentro do <`a`> marca.  
+  
+> [!NOTE]
+>  É importante para um adaptador usar o <xref:System.Web.UI.MobileControls.TextView.Text%2A?displayProperty=nameWithType> propriedade para definir dinamicamente o texto que você deseja exibir em um formulário. Não use essa classe para fazer isso.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LiteralText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.LiteralText.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.MobileControls.LiteralText" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalItemCount">
+      <MemberSignature Language="C#" Value="protected override int InternalItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InternalItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.LiteralText.InternalItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens no controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O número de itens no controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemWeight">
+      <MemberSignature Language="C#" Value="protected override int ItemWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.LiteralText.ItemWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o peso aproximado de um único item no controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O peso aproximado de um único item no controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagedText">
+      <MemberSignature Language="C#" Value="public string PagedText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PagedText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.LiteralText.PagedText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o texto da página atual, quando o controle é dividido em páginas. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O texto da página atual, quando o controle é dividido em páginas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.LiteralText.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou retorna o texto do controle. O padrão é um <see langword="string" /> vazio. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O texto do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.LiteralText.Text%2A> propriedade pode ser especificada usando o `Text` atributo, ou como texto interno. Se o <xref:System.Web.UI.MobileControls.LiteralText.Text%2A> propriedade for especificada em ambos os modos, o texto interno sempre terá precedência. No entanto, se o <xref:System.Web.UI.MobileControls.LiteralText.Text%2A> propriedade é definida por meio de programação, o texto interno é removido automaticamente e recentemente defina propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

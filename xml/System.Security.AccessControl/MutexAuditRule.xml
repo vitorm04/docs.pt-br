@@ -1,0 +1,132 @@
+<Type Name="MutexAuditRule" FullName="System.Security.AccessControl.MutexAuditRule">
+  <TypeSignature Language="C#" Value="public sealed class MutexAuditRule : System.Security.AccessControl.AuditRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MutexAuditRule extends System.Security.AccessControl.AuditRule" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.MutexAuditRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.AuditRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um conjunto de direitos de acesso a serem auditados para um usuário ou grupo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.AccessControl.MutexAuditRule> classe é parte de um conjunto de classes do .NET Framework fornece para gerenciar a segurança de controle de acesso do Windows no sistema nomeado mutexes. Para obter uma visão geral dessas classes e suas relações com as estruturas de controle de acesso subjacentes do Windows, consulte <xref:System.Security.AccessControl.MutexSecurity>.  
+  
+> [!NOTE]
+>  Segurança de controle de acesso do Windows é significativa apenas para o sistema nomeado mutexes. Se um <xref:System.Threading.Mutex> objeto representa um mutex local, o controle de acesso é irrelevante.  
+  
+ Para obter uma lista das regras de auditoria aplicadas a um mutex nomeado, use o <xref:System.Threading.Mutex.GetAccessControl%2A?displayProperty=nameWithType> método para obter um <xref:System.Security.AccessControl.MutexSecurity> objeto e, em seguida, use seu <xref:System.Security.AccessControl.CommonObjectSecurity.GetAuditRules%2A> método para obter uma coleção de <xref:System.Security.AccessControl.MutexAuditRule> objetos.  
+  
+ <xref:System.Security.AccessControl.MutexAuditRule>objetos não mapeiam um para um com entradas de controle de acesso na lista de controle de acesso discricionário (DACL) subjacente. Ao obter o conjunto de todas as regras para um mutex de auditoria, o conjunto contém o número mínimo de regras necessárias no momento para expressar todas as entradas de controle de acesso.  
+  
+> [!NOTE]
+>  As entradas de controle de acesso subjacente alterar como aplicar e remover regras. As informações nas regras são mescladas se possível, para manter o menor número de entradas de controle de acesso. Assim, ao ler a lista atual de regras, ele pode não ser exatamente igual a lista de todas as regras que você adicionou.  
+  
+ Use <xref:System.Security.AccessControl.MutexAuditRule> objetos para especificar os direitos de acesso a serem auditados para um usuário ou grupo. Para aplicar uma regra a um mutex do sistema nomeado, use o <xref:System.Threading.Mutex.SetAccessControl%2A?displayProperty=nameWithType> método para obter o <xref:System.Security.AccessControl.MutexSecurity> objeto. Modificar o <xref:System.Security.AccessControl.MutexSecurity> objeto por meio de seus métodos para adicionar a regra e, em seguida, use o <xref:System.Threading.Mutex.SetAccessControl%2A?displayProperty=nameWithType> método para anexar novamente o objeto de segurança.  
+  
+> [!IMPORTANT]
+>  Alterações feitas em um <xref:System.Security.AccessControl.MutexSecurity> objeto não afetam os níveis de acesso do mutex nomeado até que você chamar o <xref:System.Threading.Mutex.SetAccessControl%2A?displayProperty=nameWithType> método para atribuir o objeto de segurança alterado o mutex nomeado.  
+  
+ <xref:System.Security.AccessControl.MutexAuditRule>os objetos são imutáveis. Segurança para um mutex é modificada usando os métodos do <xref:System.Security.AccessControl.MutexSecurity> classe para adicionar ou remover regras; como você faz isso, as entradas de controle de acesso subjacentes são modificadas.  
+  
+> [!NOTE]
+>  Não há suporte para segurança em objetos de sincronização para o Windows 98 ou Windows Millennium Edition.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MutexAuditRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.MutexRights eventRights, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.MutexRights eventRights, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.MutexAuditRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.MutexRights,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="eventRights" Type="System.Security.AccessControl.MutexRights" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identity">O usuário ou grupo ao qual a regra se aplica. Deve ser do tipo <see cref="T:System.Security.Principal.SecurityIdentifier" /> ou um tipo, como <see cref="T:System.Security.Principal.NTAccount" /> que pode ser convertido no tipo <see cref="T:System.Security.Principal.SecurityIdentifier" />.</param>
+        <param name="eventRights">Uma combinação bit a bit de <see cref="T:System.Security.AccessControl.MutexRights" /> valores que especificam os tipos de acesso para auditoria.</param>
+        <param name="flags">Uma combinação bit a bit de <see cref="T:System.Security.AccessControl.AuditFlags" /> valores que especificam se a auditoria de êxito, falha ou ambos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.MutexAuditRule" /> classe, especificando o usuário ou grupo de auditoria, os direitos de auditoria e se a auditoria de êxito, falha ou ambos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar um <xref:System.Security.Principal.NTAccount> do objeto de uma cadeia de caracteres que representa um nome de usuário ou grupo, use o <xref:System.Security.Principal.NTAccount.%23ctor%28System.String%29?displayProperty=nameWithType> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="eventRights" /> especifica um valor inválido.  
+  
+ -ou-  
+  
+ <paramref name="flags" /> especifica um valor inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="eventRights" /> é zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identity" />não é nem do tipo <see cref="T:System.Security.Principal.SecurityIdentifier" /> nem de um tipo como <see cref="T:System.Security.Principal.NTAccount" /> que pode ser convertido no tipo <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MutexRights">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.MutexRights MutexRights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.MutexRights MutexRights" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.MutexAuditRule.MutexRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.MutexRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os direitos de acesso afetados pela regra de auditoria.</summary>
+        <value>Uma combinação bit a bit de <see cref="T:System.Security.AccessControl.MutexRights" /> valores que indicam os direitos afetados pela regra de auditoria.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.AccessControl.MutexAuditRule>os objetos são imutáveis. Você pode criar uma nova regra de auditoria que representa um usuário diferente, direitos diferentes ou uma combinação diferente de <xref:System.Security.AccessControl.AuditFlags> sinalizadores, mas você não pode modificar uma regra de auditoria existente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

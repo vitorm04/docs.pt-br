@@ -1,0 +1,41 @@
+<Type Name="HelpEventHandler" FullName="System.Windows.Forms.HelpEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void HelpEventHandler(object sender, HelpEventArgs hlpevent);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HelpEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HelpEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="hlpevent" Type="System.Windows.Forms.HelpEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="hlpevent">Um <see cref="T:System.Windows.Forms.HelpEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Windows.Forms.Control.HelpRequested" /> de <see cref="T:System.Windows.Forms.Control" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Windows.Forms.HelpEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre como manipular eventos com delegados, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a manipulação de <xref:System.Windows.Forms.Control.HelpRequested> evento para exibir o conteúdo da Ajuda personalizado em um formulário que contém quatro campos de endereço. O <xref:System.Windows.Forms.Control.HelpRequested> é gerado, pressionando a tecla F1 com foco em um campo de endereço ou usando o botão de ajuda contextual e clicando em Ajuda cursor em um campo de endereço. O <xref:System.Windows.Forms.HelpEventArgs.Handled%2A> propriedade é definida como true para indicar que o `HelpRequested` evento é manipulado. O exemplo também demonstra a armazenar o texto de Ajuda no <xref:System.Windows.Forms.Control.Tag%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-cpp[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/CPP/helpevent.cpp#1)]
+ [!code-csharp[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/CS/helpevent.cs#1)]
+ [!code-vb[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/VB/helpevent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

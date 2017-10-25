@@ -1,0 +1,85 @@
+<Type Name="CommonTransportKeys" FullName="System.Runtime.Remoting.Channels.CommonTransportKeys">
+  <TypeSignature Language="C#" Value="public class CommonTransportKeys" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommonTransportKeys extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.CommonTransportKeys" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>As chaves de transporte associadas com valores comuns usados pelos canais.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommonTransportKeys ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.CommonTransportKeys.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Runtime.Remoting.Channels.CommonTransportKeys" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionId">
+      <MemberSignature Language="C#" Value="public const string ConnectionId;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ConnectionId" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Channels.CommonTransportKeys.ConnectionId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A chave de transporte associada com um ID exclusivo atribuído a cada conexão de soquete de entrada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPAddress">
+      <MemberSignature Language="C#" Value="public const string IPAddress;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string IPAddress" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Channels.CommonTransportKeys.IPAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A chave de transporte associada com o endereço IP do qual uma solicitação de entrada chegou.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUri">
+      <MemberSignature Language="C#" Value="public const string RequestUri;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string RequestUri" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Channels.CommonTransportKeys.RequestUri" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A chave de transporte associada com o URI que fez a solicitação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

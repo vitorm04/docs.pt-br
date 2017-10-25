@@ -1,0 +1,649 @@
+<Type Name="ListView+SelectedListViewItemCollection" FullName="System.Windows.Forms.ListView+SelectedListViewItemCollection">
+  <TypeSignature Language="C#" Value="public class ListView.SelectedListViewItemCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ListView/SelectedListViewItemCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListView.SelectedListViewItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a coleção de itens selecionados em um controle de exibição de lista.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection> armazena os itens selecionados em um <xref:System.Windows.Forms.ListView> controle. Os itens armazenados no <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection> itens contidos no <xref:System.Windows.Forms.ListView.ListViewItemCollection>. O <xref:System.Windows.Forms.ListView.ListViewItemCollection> armazena todos os itens exibidos no <xref:System.Windows.Forms.ListView>.  
+  
+ A tabela a seguir mostra um exemplo de como o <xref:System.Windows.Forms.ListView.ListViewItemCollection> armazena os itens do <xref:System.Windows.Forms.ListView> , bem como seus estados de seleção em um exemplo <xref:System.Windows.Forms.ListView> controle.  
+  
+|Índice|Item|Estado de seleção em ListView|  
+|-----------|----------|-------------------------------------|  
+|0|Item1|Não selecionado|  
+|1|Item2|Selecionado|  
+|2|Item3|Não selecionado|  
+|3|Item4|Selecionado|  
+|4|Item5|Selecionado|  
+  
+ Com base no <xref:System.Windows.Forms.ListView.ListViewItemCollection> exemplo na tabela anterior, a tabela a seguir demonstra como o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection> seria exibido.  
+  
+|Índice|Item selecionado no ListViewItemCollection|  
+|-----------|-------------------------------------------------|  
+|0|Item2|  
+|1|Item4|  
+|2|Item5|  
+  
+ Você pode usar as propriedades e métodos dessa classe para executar uma variedade de tarefas com a coleção. O <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.Contains%2A> método permite que você determine se um item do <xref:System.Windows.Forms.ListView.ListViewItemCollection> classe é um membro do <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>. Quando você sabe que o item na coleção, você pode usar o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.IndexOf%2A> método para determinar a posição do item no <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ListView.SelectedItems%2A>, <xref:System.Windows.Forms.ListView.SelectedIndexChanged> evento, e <xref:System.Windows.Forms.ListView.HeaderStyle%2A> membros e o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection> classe. Para executar este exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.ListView> objeto chamado `ListView1` e um <xref:System.Windows.Forms.TextBox> chamado `TextBox1`. Chamar o `InitializeListView` método de construtor do formulário ou o <xref:System.Windows.Forms.Form.Load> manipulador de eventos. Este exemplo requer que o manipulador de eventos está associado corretamente o <xref:System.Windows.Forms.ListView.SelectedIndexChanged> evento  
+  
+ [!code-cpp[System.Windows.Forms.ListView1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView1/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.ListView1#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CPP/form1.cpp#2)]
+[!code-csharp[System.Windows.Forms.ListView1#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView1/CS/form1.cs#2)]
+[!code-vb[System.Windows.Forms.ListView1#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView1/VB/form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectedListViewItemCollection (System.Windows.Forms.ListView owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ListView owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.#ctor(System.Windows.Forms.ListView)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ListView" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.ListView" /> controle que possui a coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ListView.SelectedListViewItemCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância dessa classe sem associá-lo com um <xref:System.Windows.Forms.ListView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que você remova todas as seleções do <xref:System.Windows.Forms.ListView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.ListViewItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.ListViewItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.Contains(System.Windows.Forms.ListViewItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.ListViewItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um <see cref="T:System.Windows.Forms.ListViewItem" /> que representa o item a ser localizado na coleção.</param>
+        <summary>Determina se o item especificado está localizado na coleção.</summary>
+        <returns>
+          <see langword="true" /> se o item especificado estiver localizado na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.Contains%2A> método permite que você determine se um item do <xref:System.Windows.Forms.ListView.ListViewItemCollection> classe é um dos itens selecionados no <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>. Quando você sabe que o item na coleção de itens selecionados, você pode usar o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.IndexOf%2A> método para determinar a posição do item no <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item a ser localizado na coleção.</param>
+        <summary>Determina se um item com a chave especificada está contido na coleção.</summary>
+        <returns>
+          <see langword="true" />para indicar o item especificado está contido na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListViewItem.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.ListViewItem> no <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.ContainsKey%2A> retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">Um <see cref="T:System.Array" /> que representa a matriz para a qual copiar o conteúdo da coleção.</param>
+        <param name="index">O local na matriz de destino para o qual os itens da coleção serão copiados.</param>
+        <summary>Copia toda a coleção em uma matriz existente de um local especificado na matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para combinar os itens selecionados em várias coleções em uma única matriz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedListViewItemCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção.</summary>
+        <value>Número de itens na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você determine o número de itens selecionados no <xref:System.Windows.Forms.ListView> controle. Você pode usar esse valor quando o loop por meio de valores da coleção e é necessário fornecer um número de iterações para executar o loop. A menos que o <xref:System.Windows.Forms.ListView.MultiSelect%2A> propriedade o <xref:System.Windows.Forms.ListView> é definido como `true`, essa propriedade sempre retorna um valor de zero (0) ou um (1), dependendo se você possui um item selecionado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para iterar pela coleção do item selecionado.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que representa a coleção de itens selecionados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.ListViewItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.ListViewItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.IndexOf(System.Windows.Forms.ListViewItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.ListViewItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um <see cref="T:System.Windows.Forms.ListViewItem" /> que representa o item a ser localizado na coleção.</param>
+        <summary>Retorna o índice na coleção do item especificado.</summary>
+        <returns>O índice baseado em zero do item na coleção. Se o item não for encontrado na coleção, o valor de retorno é negativo um (-1).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que você sabe que um item está na coleção de itens selecionados (usando o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.Contains%2A> método), você pode usar o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.IndexOf%2A> método para determinar a posição do item no <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOfKey">
+      <MemberSignature Language="C#" Value="public virtual int IndexOfKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOfKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.IndexOfKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item a ser localizado na coleção.</param>
+        <summary>Retorna o índice da primeira ocorrência do item com a chave especificada.</summary>
+        <returns>O índice de base zero do primeiro item com a chave especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListViewItem.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.ListViewItem> no <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.IndexOfKey%2A> retornará -1.  
+  
+ Se <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.IndexOfKey%2A> é chamado sucessivamente, a última retornou o índice será verificado para uma correspondência de chave pela primeira vez e se não houver nenhuma correspondência, a pesquisa começa no início da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedListViewItemCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é sempre `true` para esta coleção. Os itens na coleção só podem ser modificados pelo <xref:System.Windows.Forms.ListView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListViewItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedListViewItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item na coleção a ser obtida.</param>
+        <summary>Obtém o item no índice especificado da coleção.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.ListViewItem" /> que representa o item localizado no índice especificado da coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse indexador permite que você acesse um item específico do <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>. O item armazenado na coleção é um item no <xref:System.Windows.Forms.ListView.ListViewItemCollection> do <xref:System.Windows.Forms.ListView> que representa um item selecionado no <xref:System.Windows.Forms.ListView>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> parâmetro for menor que zero ou maior que ou igual ao valor da <see cref="P:System.Windows.Forms.ListView.ListViewItemCollection.Count" /> propriedade o <see cref="T:System.Windows.Forms.ListView.SelectedListViewItemCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ListViewItem this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListViewItem Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedListViewItemCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item a ser recuperado da coleção.</param>
+        <summary>Obtém um item com a chave especificada da coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ListViewItem" /> com a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ListViewItem.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.ListViewItem> no <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection.Item%2A> retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção de controles.</summary>
+        <value>O objeto usado para sincronizar a coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto a ser adicionado para o <see cref="T:System.Windows.Forms.ListView.SelectedListViewItemCollection" />.</param>
+        <summary>Adiciona um item à coleção.</summary>
+        <returns>O local do item adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection> classe diretamente. Para adicionar um <xref:System.Windows.Forms.ListViewItem> para o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>, use o <xref:System.Windows.Forms.ListViewItem.Selected%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um objeto que representa o item a ser localizado na coleção.</param>
+        <summary>Determina se o item especificado está localizado na coleção.</summary>
+        <returns>
+          <see langword="true" /> se o item especificado estiver localizado na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um objeto que representa o item a ser localizado na coleção.</param>
+        <summary>Retorna o índice, dentro da coleção, do item especificado.</summary>
+        <returns>O índice de base zero do item se ele estiver na coleção; Caso contrário, -1</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do item a ser inserido.</param>
+        <param name="value">Um objeto a ser adicionado para o <see cref="T:System.Windows.Forms.ListView.SelectedListViewItemCollection" />.</param>
+        <summary>Insere um item na coleção em um índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection> classe diretamente. Para adicionar um <xref:System.Windows.Forms.ListViewItem> para o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>, use o <xref:System.Windows.Forms.ListViewItem.Selected%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do elemento a ser obtido.</param>
+        <summary>Obtém ou define um um objeto da coleção.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.ListViewItem" /> que representa o item localizado no índice especificado na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a remover do <see cref="T:System.Windows.Forms.ListView.SelectedListViewItemCollection" />.</param>
+        <summary>Remove a primeira ocorrência de um item especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection> classe diretamente. Para remover um item do <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>, use o <xref:System.Windows.Forms.ListViewItem.Selected%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListView.SelectedListViewItemCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido.</param>
+        <summary>Remove um item da coleção em um índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível alterar o <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection> classe diretamente. Para remover um item do <xref:System.Windows.Forms.ListView.SelectedListViewItemCollection>, use o <xref:System.Windows.Forms.ListViewItem.Selected%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Sempre lançada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

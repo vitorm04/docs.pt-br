@@ -1,0 +1,98 @@
+<Type Name="MenuMerge" FullName="System.Windows.Forms.MenuMerge">
+  <TypeSignature Language="C#" Value="public enum MenuMerge" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MenuMerge extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MenuMerge" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o comportamento de um <see cref="T:System.Windows.Forms.MenuItem" /> quando ela é mesclada com itens em outro menu.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa enumeração para definir o valor da <xref:System.Windows.Forms.MenuItem.MergeType%2A> propriedade o <xref:System.Windows.Forms.MenuItem>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa esta versão do <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> método para criar uma cópia de um <xref:System.Windows.Forms.MenuItem> e mesclá-lo com outro. O mesclada <xref:System.Windows.Forms.MenuItem> é adicionado a um <xref:System.Windows.Forms.ContextMenu> controle. Este exemplo assume que há dois itens de menu chamados `menuItem1` e `menuItem2` que contêm itens de submenu neles e um <xref:System.Windows.Forms.ContextMenu> chamado `contextMenu1` para exibir os itens de menu. `menuItem1`e `menuItem2` ter itens de menu diferentes contidos neles. Após a chamada a <xref:System.Windows.Forms.MenuItem.MergeMenu%2A> é feita, um consolidados menu é criado.  
+  
+ [!code-cpp[Classic MenuItem.MergeMenu1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MenuItem.MergeMenu1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MenuItem.MergeMenu1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MenuItem.MergeMenu1 Example/CS/source.cs#1)]
+ [!code-vb[Classic MenuItem.MergeMenu1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MenuItem.MergeMenu1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="Add" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MenuMerge Add = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MenuMerge.Add" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuMerge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Forms.MenuItem" /> é adicionado à coleção de existente <see cref="T:System.Windows.Forms.MenuItem" /> objetos em um menu mesclado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeItems">
+      <MemberSignature Language="C#" Value="MergeItems" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MenuMerge MergeItems = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MenuMerge.MergeItems" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuMerge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todos os itens de submenu deste <see cref="T:System.Windows.Forms.MenuItem" /> são mesclados com aqueles dos existentes <see cref="T:System.Windows.Forms.MenuItem" /> objetos na mesma posição em um menu mesclado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="Remove" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MenuMerge Remove = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MenuMerge.Remove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuMerge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Forms.MenuItem" /> não está incluído em um menu mesclado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="Replace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MenuMerge Replace = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MenuMerge.Replace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuMerge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Forms.MenuItem" /> substitui uma existente <see cref="T:System.Windows.Forms.MenuItem" /> na mesma posição em um menu mesclado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

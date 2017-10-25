@@ -1,0 +1,47 @@
+<Type Name="ExceptionEventArgs" FullName="System.Windows.Media.ExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ExceptionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExceptionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.ExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados de exceção de erro para eventos de mídia.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ErrorException">
+      <MemberSignature Language="C#" Value="public Exception ErrorException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception ErrorException" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ExceptionEventArgs.ErrorException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exceção que fornece detalhes sobre a causa da falha.</summary>
+        <value>A exceção que fornece detalhes sobre a condição de erro.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">A tentativa de acessar o arquivo de mídia ou imagem foi negada.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo de mídia ou imagem não foi encontrado.</exception>
+        <exception cref="T:System.IO.FileFormatException">Não há suporte para o formato de mídia ou imagem por qualquer codec instalado.  
+  
+ -ou-  
+  
+ O formato de arquivo não é reconhecido.</exception>
+        <exception cref="T:System.Windows.Media.InvalidWmpVersionException">A versão detectada de [!INCLUDE[TLA#tla_wmp](~/includes/tlasharptla-wmp-md.md)] não tem suporte.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para a operação.</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">É exibido um código de erro COM.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

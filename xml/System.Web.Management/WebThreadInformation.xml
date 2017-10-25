@@ -1,0 +1,233 @@
+<Type Name="WebThreadInformation" FullName="System.Web.Management.WebThreadInformation">
+  <TypeSignature Language="C#" Value="public sealed class WebThreadInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebThreadInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebThreadInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre o estado de um thread em um processo do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de eventos responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ Instâncias do <xref:System.Web.Management.WebThreadInformation> classe contêm informações que são obtidas usando o <xref:System.Web.Management.WebErrorEvent> tipo ou o <xref:System.Web.Management.WebRequestErrorEvent> tipo.  
+  
+ Seu aplicativo precisa as permissões apropriadas para acessar informações protegidas fornecidas por este tipo.  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `healthMonitoring` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de criação de uma classe de evento personalizado, consulte o exemplo fornecido neste tópico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir tem duas partes. A primeira é um trecho de um arquivo de configuração que permite que o ASP.NET usar um evento personalizado que usa o <xref:System.Web.Management.WebThreadInformation> tipo. O segundo mostra como implementar o evento personalizado que usa o <xref:System.Web.Management.WebThreadInformation> tipo.  
+  
+ Certifique-se de que seu evento personalizado é gerado em um momento apropriado, ou seja, quando o evento de integridade do sistema equivalentes substitui será emitido.  
+  
+```  
+<healthMonitoring  
+    heartBeatInterval="0" enabled="true">  
+  
+  <profiles>  
+    <add name="Custom"   
+      minInstances="1"   
+      maxLimit="Infinite"   
+      minInterval="00:00:00" />  
+  </profiles>  
+  
+  <eventMappings>  
+  
+    <add   
+      name="SampleWebThreadInformation"   
+type="SamplesAspNet.SampleWebThreadInformation,webthreadinformation, Version=1.0.1782.29648, Culture=neutral, PublicKeyToken=b3283a2de7dd3f27, processorArchitecture=MSIL" />  
+  
+  </eventMappings>  
+  
+  <rules>  
+  
+    <add name="Custom Web Thread Info Event"   
+      eventName="SampleWebThreadInformation"   
+      provider="EventLogProvider"  
+      profile="Custom" />  
+  
+  </rules>  
+  
+</healthMonitoring>  
+```  
+  
+ [!code-csharp[System.Web.Management.WebThreadInformation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/CS/webthreadinformation.cs#1)]
+ [!code-vb[System.Web.Management.WebThreadInformation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/VB/webthreadinformation.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FormatToString">
+      <MemberSignature Language="C#" Value="public void FormatToString (System.Web.Management.WebEventFormatter formatter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FormatToString(class System.Web.Management.WebEventFormatter formatter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebThreadInformation.FormatToString(System.Web.Management.WebEventFormatter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatter" Type="System.Web.Management.WebEventFormatter" />
+      </Parameters>
+      <Docs>
+        <param name="formatter">O <see cref="T:System.Web.Management.WebEventFormatter" /> que contém as configurações de recuo e tabulação usadas para formatar as informações de evento de integridade da Web.</param>
+        <summary>Formata informações relacionadas ao thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebThreadInformation.FormatToString%2A> método fornece um formato uniforme para obter informações de evento, que é útil se os dados do evento devem ser registrados e posteriormente apresentados ao usuário. Ele é chamado internamente quando o provedor chama uma da <xref:System.Web.Management.WebBaseEvent.ToString%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como formatar informações personalizadas.  
+  
+ [!code-csharp[System.Web.Management.WebThreadInformation#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/CS/webthreadinformation.cs#8)]
+ [!code-vb[System.Web.Management.WebThreadInformation#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/VB/webthreadinformation.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImpersonating">
+      <MemberSignature Language="C#" Value="public bool IsImpersonating { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImpersonating" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebThreadInformation.IsImpersonating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo de representação do thread atual.</summary>
+        <value>
+          <see langword="true" />Se o thread está em execução no modo de representação. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o modo de representação do thread.  
+  
+ [!code-csharp[System.Web.Management.WebThreadInformation#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/CS/webthreadinformation.cs#4)]
+ [!code-vb[System.Web.Management.WebThreadInformation#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/VB/webthreadinformation.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StackTrace">
+      <MemberSignature Language="C#" Value="public string StackTrace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StackTrace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebThreadInformation.StackTrace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o rastreamento de pilha de thread gerenciado atual.</summary>
+        <value>O rastreamento de pilha do thread gerenciado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o rastreamento de pilha do thread.  
+  
+ [!code-csharp[System.Web.Management.WebThreadInformation#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/CS/webthreadinformation.cs#5)]
+ [!code-vb[System.Web.Management.WebThreadInformation#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/VB/webthreadinformation.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadAccountName">
+      <MemberSignature Language="C#" Value="public string ThreadAccountName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreadAccountName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebThreadInformation.ThreadAccountName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da conta de thread.</summary>
+        <value>O nome da conta de thread.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A conta retornada por essa propriedade pode ser arbitrária se o thread está sendo executado no modo de representação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o nome da conta de thread.  
+  
+ [!code-csharp[System.Web.Management.WebThreadInformation#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/CS/webthreadinformation.cs#6)]
+ [!code-vb[System.Web.Management.WebThreadInformation#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/VB/webthreadinformation.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadID">
+      <MemberSignature Language="C#" Value="public int ThreadID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ThreadID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebThreadInformation.ThreadID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador atual de thread.</summary>
+        <value>O identificador de thread atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mesmo que os threads gerenciados podem não ter um mapeamento direto para os segmentos de sistema operacional, para depuração, sempre é útil para isolar um segmento específico em que haja problemas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o identificador de thread.  
+  
+ [!code-csharp[System.Web.Management.WebThreadInformation#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/CS/webthreadinformation.cs#7)]
+ [!code-vb[System.Web.Management.WebThreadInformation#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebThreadInformation/VB/webthreadinformation.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

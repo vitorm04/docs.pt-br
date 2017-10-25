@@ -1,0 +1,71 @@
+<Type Name="StylusTip" FullName="System.Windows.Ink.StylusTip">
+  <TypeSignature Language="C#" Value="public enum StylusTip" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StylusTip extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.StylusTip" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a dica a ser usado para desenhar um <see cref="T:System.Windows.Ink.Stroke" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar a forma da ponta do que é usada para desenhar <xref:System.Windows.Ink.Stroke> objetos definindo o <xref:System.Windows.Ink.DrawingAttributes.StylusTip%2A?displayProperty=nameWithType> propriedade.  
+  
+<a name="xamlTextUsage_StylusTip"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Essa classe não é usada normalmente em XAML.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar duas <xref:System.Windows.Ink.DrawingAttributes> objetos para simular usando uma caneta e um marca-texto no mesmo <xref:System.Windows.Controls.InkCanvas>. O marca-texto <xref:System.Windows.Ink.DrawingAttributes.StylusTip%2A> está definida como um retângulo.  
+  
+ O exemplo supõe que o elemento raiz no arquivo "XAML" é um <xref:System.Windows.Controls.DockPanel> chamado `root`. Também supõe que haja uma <xref:System.Windows.Controls.Button> chamado `btnToggleHilighter` e que o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento foi conectado ao manipulador de eventos.  
+  
+ [!code-csharp[DrawingAttributes#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingAttributes/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[DrawingAttributes#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingAttributes/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ellipse">
+      <MemberSignature Language="C#" Value="Ellipse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Ink.StylusTip Ellipse = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Ink.StylusTip.Ellipse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StylusTip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma dica em forma de elipse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="Rectangle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Ink.StylusTip Rectangle = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Ink.StylusTip.Rectangle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StylusTip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma dica em forma de retângulo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

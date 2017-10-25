@@ -1,0 +1,753 @@
+<Type Name="DataGridBoolColumn" FullName="System.Windows.Forms.DataGridBoolColumn">
+  <TypeSignature Language="C#" Value="public class DataGridBoolColumn : System.Windows.Forms.DataGridColumnStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridBoolColumn extends System.Windows.Forms.DataGridColumnStyle" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridBoolColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridColumnStyle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica uma coluna na qual cada célula contém uma caixa de seleção para representar um valor booliano.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridBoolColumn> deriva o `abstract` classe <xref:System.Windows.Forms.DataGridColumnStyle>. Em tempo de execução, o <xref:System.Windows.Forms.DataGridBoolColumn> contém caixas de seleção em cada célula que tem três estados por padrão: Check (`true`), não verificado (`false`), e <xref:System.DBNull.Value>. Para usar as caixas de seleção de dois estados, defina o <xref:System.Windows.Forms.DataGridBoolColumn.AllowNull%2A> propriedade `false`.  
+  
+ Incluem propriedades adicionadas à classe <xref:System.Windows.Forms.DataGridBoolColumn.FalseValue%2A>, <xref:System.Windows.Forms.DataGridBoolColumn.NullValue%2A>, e <xref:System.Windows.Forms.DataGridBoolColumn.TrueValue%2A>. Essas propriedades especificam o valor subjacente de cada um dos Estados da coluna.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir primeiro cria um novo <xref:System.Windows.Forms.DataGridBoolColumn> e adiciona-o para o <xref:System.Windows.Forms.GridColumnStylesCollection> de um <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ [!code-cpp[DataGridBoolColumn overview#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridBoolColumn overview/CPP/boolcolumn.cpp#1)]
+ [!code-csharp[DataGridBoolColumn overview#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridBoolColumn overview/CS/boolcolumn.cs#1)]
+ [!code-vb[DataGridBoolColumn overview#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridBoolColumn overview/VB/boolcolumn.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridBoolColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridBoolColumn" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao usar essa sobrecarga para criar um <xref:System.Windows.Forms.DataGridBoolColumn>, certifique-se de definir o <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> o valor para o <xref:System.Data.DataColumn.ColumnName%2A> de um <xref:System.Data.DataColumn>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir primeiro cria um novo <xref:System.Windows.Forms.DataGridBoolColumn> e adiciona-o para o <xref:System.Windows.Forms.GridColumnStylesCollection> de um <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ [!code-cpp[Classic DataGridBoolColumn Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridBoolColumn Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridBoolColumn Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridBoolColumn Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridBoolColumn Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridBoolColumn Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridBoolColumn (System.ComponentModel.PropertyDescriptor prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.PropertyDescriptor prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.#ctor(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="prop">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> associada à coluna.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Windows.Forms.DataGridBoolColumn" /> com especificado <see cref="T:System.ComponentModel.PropertyDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridBoolColumn> deve estar associado uma fonte de dados que contém <xref:System.Boolean> valores.  
+  
+ Para obter um <xref:System.ComponentModel.PropertyDescriptor>, primeiro use o <xref:System.Windows.Forms.BindingContext> para retornar as <xref:System.Windows.Forms.BindingManagerBase>. Em seguida, use o <xref:System.Windows.Forms.BindingManagerBase.GetItemProperties%2A> método do <xref:System.Windows.Forms.BindingManagerBase> para retornar um <xref:System.ComponentModel.PropertyDescriptorCollection>. Por fim, use o <xref:System.ComponentModel.PropertyDescriptorCollection.Item%2A> propriedade o <xref:System.ComponentModel.PropertyDescriptorCollection> para retornar a específica <xref:System.ComponentModel.PropertyDescriptor> para a coluna.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.BindingManagerBase.GetItemProperties%2A> método para retornar um <xref:System.ComponentModel.PropertyDescriptorCollection?displayProperty=nameWithType> para um <xref:System.Data.DataTable>. O <xref:System.ComponentModel.PropertyDescriptor> para um <xref:System.Data.DataColumn> é usado para criar o <xref:System.Windows.Forms.DataGridBoolColumn>.  
+  
+ [!code-cpp[Classic DataGridBoolColumn.DataGridBoolColumn1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridBoolColumn.DataGridBoolColumn1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridBoolColumn.DataGridBoolColumn1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridBoolColumn.DataGridBoolColumn1 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridBoolColumn.DataGridBoolColumn1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridBoolColumn.DataGridBoolColumn1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridBoolColumn (System.ComponentModel.PropertyDescriptor prop, bool isDefault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.PropertyDescriptor prop, bool isDefault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.#ctor(System.ComponentModel.PropertyDescriptor,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="isDefault" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="prop">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> associada à coluna.</param>
+        <param name="isDefault">
+          <see langword="true" />para especificar a coluna como padrão. Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Windows.Forms.DataGridBoolColumn" /> com especificado <see cref="T:System.ComponentModel.PropertyDescriptor" />e especifica se o estilo de coluna é uma coluna padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter um <xref:System.ComponentModel.PropertyDescriptor>, primeiro use o <xref:System.Windows.Forms.BindingContext> para retornar as <xref:System.Windows.Forms.BindingManagerBase>. Em seguida, use o <xref:System.Windows.Forms.BindingManagerBase.GetItemProperties%2A> método do <xref:System.Windows.Forms.BindingManagerBase> para retornar um <xref:System.ComponentModel.PropertyDescriptorCollection>. Por fim, use o <xref:System.ComponentModel.PropertyDescriptorCollection.Item%2A> propriedade o <xref:System.ComponentModel.PropertyDescriptorCollection> para retornar a específica <xref:System.ComponentModel.PropertyDescriptor> para a coluna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="protected override void Abort (int rowNum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Abort(int32 rowNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.Abort(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowNum">O número da linha em que uma operação está sendo interrompida.</param>
+        <summary>Inicia uma solicitação para interromper um procedimento de edição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowNull">
+      <MemberSignature Language="C#" Value="public bool AllowNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowNull" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridBoolColumn.AllowNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se valores nulos são permitidos.</summary>
+        <value>
+          <see langword="true" />Se valores nulos são permitidos, caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como false, as caixas de seleção na coluna tem apenas dois estados: Check (`true`) e não verificado (`false`).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DataGridBoolColumn.AllowNull%2A> propriedade.  
+  
+ [!code-cpp[Classic DataGridBoolColumn.AllowNull Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridBoolColumn.AllowNull Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridBoolColumn.AllowNull Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridBoolColumn.AllowNull Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridBoolColumn.AllowNull Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridBoolColumn.AllowNull Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowNullChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AllowNullChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AllowNullChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridBoolColumn.AllowNullChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.DataGridBoolColumn.AllowNull" /> é modificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridBoolColumn#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridBoolColumn/CPP/datagridboolcolumn.cpp#2)]
+ [!code-csharp[DataGridBoolColumn#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridBoolColumn/CS/datagridboolcolumn.cs#2)]
+ [!code-vb[DataGridBoolColumn#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridBoolColumn/VB/datagridboolcolumn.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="protected override bool Commit (System.Windows.Forms.CurrencyManager dataSource, int rowNum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool Commit(class System.Windows.Forms.CurrencyManager dataSource, int32 rowNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.Commit(System.Windows.Forms.CurrencyManager,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">O <see cref="T:System.Data.DataView" /> da coluna editada.</param>
+        <param name="rowNum">O número da linha editada.</param>
+        <summary>Inicia uma solicitação para concluir um procedimento de edição.</summary>
+        <returns>
+          <see langword="true" />Se o procedimento de edição foi confirmada com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConcedeFocus">
+      <MemberSignature Language="C#" Value="protected override void ConcedeFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void ConcedeFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.ConcedeFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica uma coluna que ele deve liberar o foco para o controle que está hospedando.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="protected override void Edit (System.Windows.Forms.CurrencyManager source, int rowNum, System.Drawing.Rectangle bounds, bool readOnly, string displayText, bool cellIsVisible);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Edit(class System.Windows.Forms.CurrencyManager source, int32 rowNum, valuetype System.Drawing.Rectangle bounds, bool readOnly, string displayText, bool cellIsVisible) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.Edit(System.Windows.Forms.CurrencyManager,System.Int32,System.Drawing.Rectangle,System.Boolean,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="readOnly" Type="System.Boolean" />
+        <Parameter Name="displayText" Type="System.String" />
+        <Parameter Name="cellIsVisible" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Data.DataView" /> da célula editada.</param>
+        <param name="rowNum">O número de linha da célula editada.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> no qual é o controle a ser localizado.</param>
+        <param name="readOnly">
+          <see langword="true" />Se o valor é somente leitura; Caso contrário, <see langword="false" />.</param>
+        <param name="displayText">O texto a ser exibido na célula.</param>
+        <param name="cellIsVisible">
+          <see langword="true" />para mostrar a célula; Caso contrário, <see langword="false" />.</param>
+        <summary>Prepara a célula para a edição de um valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de uma implementação típica desse método (conforme descrito no <xref:System.Windows.Forms.DataGridColumnStyle> classe), o <xref:System.Windows.Forms.DataGridBoolColumn.Edit%2A> método não site a um controle para editar o valor da célula. Em vez disso, uma caixa de seleção é desenhada quando o <xref:System.Windows.Forms.DataGridBoolColumn.Paint%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterNullValue">
+      <MemberSignature Language="C#" Value="protected override void EnterNullValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void EnterNullValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.EnterNullValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Insere um <see cref="F:System.DBNull.Value" /> na coluna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o valor real usado ao inserir um valor nulo, use o <xref:System.Windows.Forms.DataGridBoolColumn.NullValue%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridBoolColumn.EnterNullValue%2A> para inserir um valor nulo na coluna.  
+  
+ [!code-cpp[Classic DataGridBoolColumn.EnterNullValue Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridBoolColumn.EnterNullValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridBoolColumn.EnterNullValue Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridBoolColumn.EnterNullValue Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridBoolColumn.EnterNullValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridBoolColumn.EnterNullValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">A propriedade <see cref="P:System.Windows.Forms.DataGridBoolColumn.AllowNull" /> é definida como <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FalseValue">
+      <MemberSignature Language="C#" Value="public object FalseValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object FalseValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridBoolColumn.FalseValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor real usado ao definir o valor da coluna a ser <see langword="false" />.</summary>
+        <value>O valor digitado como <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridBoolColumn.FalseValue%2A>, <xref:System.Windows.Forms.DataGridBoolColumn.NullValue%2A>, e <xref:System.Windows.Forms.DataGridBoolColumn.TrueValue%2A> propriedades determinam os valores reais enviados por push para a fonte de dados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DataGridBoolColumn.TrueValue%2A>, <xref:System.Windows.Forms.DataGridBoolColumn.FalseValue%2A>, e <xref:System.Windows.Forms.DataGridBoolColumn.NullValue%2A> propriedades de um <xref:System.Windows.Forms.DataGridBoolColumn>.  
+  
+ [!code-cpp[Classic DataGridBoolColumn.TrueValue Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridBoolColumn.TrueValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridBoolColumn.TrueValue Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridBoolColumn.TrueValue Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridBoolColumn.TrueValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridBoolColumn.TrueValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FalseValueChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FalseValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FalseValueChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridBoolColumn.FalseValueChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.DataGridBoolColumn.FalseValue" /> é modificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridBoolColumn#3](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridBoolColumn/CPP/datagridboolcolumn.cpp#3)]
+ [!code-csharp[DataGridBoolColumn#3](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridBoolColumn/CS/datagridboolcolumn.cs#3)]
+ [!code-vb[DataGridBoolColumn#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridBoolColumn/VB/datagridboolcolumn.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnValueAtRow">
+      <MemberSignature Language="C#" Value="protected override object GetColumnValueAtRow (System.Windows.Forms.CurrencyManager lm, int row);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object GetColumnValueAtRow(class System.Windows.Forms.CurrencyManager lm, int32 row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.GetColumnValueAtRow(System.Windows.Forms.CurrencyManager,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lm" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="row" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lm">O <see cref="T:System.Windows.Forms.CurrencyManager" /> para a coluna.</param>
+        <param name="row">O número de linha.</param>
+        <summary>Obtém o valor na linha especificada.</summary>
+        <returns>O valor digitado como <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMinimumHeight">
+      <MemberSignature Language="C#" Value="protected override int GetMinimumHeight ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance int32 GetMinimumHeight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.GetMinimumHeight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a altura de uma célula em uma coluna.</summary>
+        <returns>A altura da coluna. O padrão é 16.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredHeight">
+      <MemberSignature Language="C#" Value="protected override int GetPreferredHeight (System.Drawing.Graphics g, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance int32 GetPreferredHeight(class System.Drawing.Graphics g, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.GetPreferredHeight(System.Drawing.Graphics,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que desenha na tela.</param>
+        <param name="value">Um <see cref="T:System.Object" /> que contém o valor a ser desenhada na tela.</param>
+        <summary>Obtém a altura usada ao redimensionar colunas.</summary>
+        <returns>A altura usada para redimensionar automaticamente células em uma coluna.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size GetPreferredSize (System.Drawing.Graphics g, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(class System.Drawing.Graphics g, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.GetPreferredSize(System.Drawing.Graphics,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um <see cref="T:System.Drawing.Graphics" /> que desenha a célula.</param>
+        <param name="value">O valor que deve se ajustar na célula.</param>
+        <summary>Obtém a melhor largura e altura de uma célula que recebe um valor específico para conter.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> que contém as informações de desenho da célula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridBoolColumn.GetPreferredSize%2A> método permite que você redimensionar a coluna com base no valor exibido. Por exemplo, se uma célula contiver um valor especialmente grande, você pode usar o <xref:System.Windows.Forms.DataGridBoolColumn.GetPreferredSize%2A> método para retornar o tamanho ideal da célula com base no valor. O tamanho ideal leva em conta não apenas o tamanho da cadeia de caracteres, mas também a fonte usada para exibi-lo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullValue">
+      <MemberSignature Language="C#" Value="public object NullValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NullValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridBoolColumn.NullValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor real usado ao definir o valor da coluna a ser <see cref="F:System.DBNull.Value" />.</summary>
+        <value>O valor digitado como <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode especificar o texto que será exibido, definindo a <xref:System.Windows.Forms.DataGridColumnStyle.NullText%2A> propriedade.  
+  
+ O <xref:System.Windows.Forms.DataGridBoolColumn.AllowNull%2A> propriedade deve ser definida como true para inserir valores nulos.  
+  
+ O <xref:System.Windows.Forms.DataGridBoolColumn.FalseValue%2A>, <xref:System.Windows.Forms.DataGridBoolColumn.NullValue%2A>, e <xref:System.Windows.Forms.DataGridBoolColumn.TrueValue%2A> propriedades determinam os valores reais enviados por push para a fonte de dados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DataGridBoolColumn.TrueValue%2A>, <xref:System.Windows.Forms.DataGridBoolColumn.FalseValue%2A>, e <xref:System.Windows.Forms.DataGridBoolColumn.NullValue%2A> propriedades de um <xref:System.Windows.Forms.DataGridBoolColumn>.  
+  
+ [!code-cpp[Classic DataGridBoolColumn.TrueValue Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridBoolColumn.TrueValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridBoolColumn.TrueValue Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridBoolColumn.TrueValue Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridBoolColumn.TrueValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridBoolColumn.TrueValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected override void Paint (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.CurrencyManager source, int rowNum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Paint(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.CurrencyManager source, int32 rowNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> desenhar.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> delimitador no qual pintar.</param>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> da coluna.</param>
+        <param name="rowNum">O número da linha chamado nos dados subjacentes.</param>
+        <summary>Desenha o <see cref="T:System.Windows.Forms.DataGridBoolColumn" /> com o determinado <see cref="T:System.Drawing.Graphics" />, <see cref="T:System.Drawing.Rectangle" /> e o número de linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pinta o plano de fundo com a cor de plano de fundo no objeto graphics passado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected override void Paint (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.CurrencyManager source, int rowNum, bool alignToRight);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Paint(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.CurrencyManager source, int32 rowNum, bool alignToRight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="alignToRight" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> desenhar.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> delimitador no qual pintar.</param>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> da coluna.</param>
+        <param name="rowNum">O número da linha na tabela de dados subjacente que está sendo referenciada.</param>
+        <param name="alignToRight">Um valor que indica se é alinhar o conteúdo à direita. <see langword="true" />Se o conteúdo é alinhado à direita, caso contrário, <see langword="false" />.</param>
+        <summary>Desenha o <see cref="T:System.Windows.Forms.DataGridBoolColumn" /> com o determinado <see cref="T:System.Drawing.Graphics" />, <see cref="T:System.Drawing.Rectangle" />, número de linha e as configurações de alinhamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected override void Paint (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.CurrencyManager source, int rowNum, System.Drawing.Brush backBrush, System.Drawing.Brush foreBrush, bool alignToRight);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Paint(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.CurrencyManager source, int32 rowNum, class System.Drawing.Brush backBrush, class System.Drawing.Brush foreBrush, bool alignToRight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,System.Int32,System.Drawing.Brush,System.Drawing.Brush,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="backBrush" Type="System.Drawing.Brush" />
+        <Parameter Name="foreBrush" Type="System.Drawing.Brush" />
+        <Parameter Name="alignToRight" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> desenhar.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> delimitador no qual pintar.</param>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> da coluna.</param>
+        <param name="rowNum">O número da linha na tabela de dados subjacente que está sendo referenciada.</param>
+        <param name="backBrush">Um <see cref="T:System.Drawing.Brush" /> usados para pintar a cor de plano de fundo.</param>
+        <param name="foreBrush">Um <see cref="T:System.Drawing.Color" /> usados para pintar a cor de primeiro plano.</param>
+        <param name="alignToRight">Um valor que indica se é alinhar o conteúdo à direita. <see langword="true" />Se o conteúdo é alinhado à direita, caso contrário, <see langword="false" />.</param>
+        <summary>Desenha o <see cref="T:System.Windows.Forms.DataGridBoolColumn" /> com o determinado <see cref="T:System.Drawing.Graphics" />, <see cref="T:System.Drawing.Rectangle" />, linha número, <see cref="T:System.Drawing.Brush" />, e <see cref="T:System.Drawing.Color" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pinta a caixa de seleção na coluna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnValueAtRow">
+      <MemberSignature Language="C#" Value="protected override void SetColumnValueAtRow (System.Windows.Forms.CurrencyManager lm, int row, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SetColumnValueAtRow(class System.Windows.Forms.CurrencyManager lm, int32 row, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridBoolColumn.SetColumnValueAtRow(System.Windows.Forms.CurrencyManager,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lm" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="row" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="lm">O <see cref="T:System.Windows.Forms.CurrencyManager" /> para a coluna.</param>
+        <param name="row">O número de linha.</param>
+        <param name="value">Para definir o valor digitado como <see cref="T:System.Object" />.</param>
+        <summary>Define o valor de uma linha especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrueValue">
+      <MemberSignature Language="C#" Value="public object TrueValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TrueValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridBoolColumn.TrueValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor real usado ao definir o valor da coluna a ser <see langword="true" />.</summary>
+        <value>O valor digitado como <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridBoolColumn.FalseValue%2A>, <xref:System.Windows.Forms.DataGridBoolColumn.NullValue%2A>, e <xref:System.Windows.Forms.DataGridBoolColumn.TrueValue%2A> propriedades determinam os valores reais enviados por push para a fonte de dados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DataGridBoolColumn.TrueValue%2A>, <xref:System.Windows.Forms.DataGridBoolColumn.FalseValue%2A>, e <xref:System.Windows.Forms.DataGridBoolColumn.NullValue%2A> propriedades de um <xref:System.Windows.Forms.DataGridBoolColumn>.  
+  
+ [!code-cpp[Classic DataGridBoolColumn.TrueValue Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridBoolColumn.TrueValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridBoolColumn.TrueValue Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridBoolColumn.TrueValue Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridBoolColumn.TrueValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridBoolColumn.TrueValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrueValueChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TrueValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TrueValueChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridBoolColumn.TrueValueChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridBoolColumn.TrueValue" /> valor da propriedade é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridBoolColumn#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridBoolColumn/CPP/datagridboolcolumn.cpp#1)]
+ [!code-csharp[DataGridBoolColumn#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridBoolColumn/CS/datagridboolcolumn.cs#1)]
+ [!code-vb[DataGridBoolColumn#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridBoolColumn/VB/datagridboolcolumn.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

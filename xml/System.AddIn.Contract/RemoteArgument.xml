@@ -1,0 +1,1859 @@
+<Type Name="RemoteArgument" FullName="System.AddIn.Contract.RemoteArgument">
+  <TypeSignature Language="C#" Value="public struct RemoteArgument" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit RemoteArgument extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.RemoteArgument" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma instância de um tipo que pode ser transmitido por processo e limites de domínio de aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.AddIn.Contract.RemoteArgument> estrutura para passar argumentos de tipos que não são determinados até o tempo de execução em processo e limites de domínio de aplicativo. A finalidade de <xref:System.AddIn.Contract.RemoteArgument> é semelhante do `VARIANT` tipo em COM.  
+  
+ Você pode usar <xref:System.AddIn.Contract.RemoteArgument> para passar os seguintes tipos e valores de argumentos remotos:  
+  
+-   <xref:System.Type.Missing?displayProperty=nameWithType>.  
+  
+-   <xref:System.AddIn.Contract.IContract>.  
+  
+-   Tipos de dados intrínseco.  
+  
+-   Matrizes que contêm elementos de tipos de dados intrínseco.  
+  
+ Um tipo de dados intrínseco é um tipo de dados primitivo (ou seja, o <xref:System.Type.IsPrimitive%2A?displayProperty=nameWithType> é de propriedade do tipo `true`) ou um <xref:System.String>, <xref:System.Decimal>, <xref:System.DateTime>, ou <xref:System.DBNull>.  
+  
+ <xref:System.AddIn.Contract.RemoteArgument>Fornece construtores para cada um dos tipos que ele suporta. Você também pode usar o <xref:System.AddIn.Contract.RemoteArgument.CreateRemoteArgument%2A> métodos para criar <xref:System.AddIn.Contract.RemoteArgument> objetos. O <xref:System.AddIn.Contract.RemoteArgument.CreateRemoteArgument%2A> métodos automaticamente chamam o <xref:System.AddIn.Contract.RemoteArgument.%23ctor%2A> construtor para o tipo de argumento.  
+  
+ Se você criar um <xref:System.AddIn.Contract.RemoteArgument> usando o construtor sem parâmetros padrão, o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade é definida como o valor <xref:System.AddIn.Contract.RemoteArgumentKind?displayProperty=nameWithType> e <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade é definida como o valor <xref:System.TypeCode?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (System.AddIn.Contract.IContract value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.AddIn.Contract.IContract value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.AddIn.Contract.IContract)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.AddIn.Contract.IContract" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.AddIn.Contract.IContract" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.AddIn.Contract.IContract" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Contract>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (Array array);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Array array) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Array)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Array" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.IntrinsicArray>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade para o código de tipo do tipo de elemento de matriz e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo de elemento de matriz não é um tipo de base (ou seja, o <see cref="M:System.Type.GetTypeCode(System.Type)" /> método para o tipo de elemento de matriz retorna <see cref="F:System.TypeCode.Object" />).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Boolean" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Boolean" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Byte" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Byte" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Char)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Char" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Char" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (DateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.DateTime" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.DateTime" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (DBNull value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DBNull value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.DBNull)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.DBNull" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.DBNull" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.DBNull" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Decimal)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Decimal" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Decimal" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Double" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Double" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Int16" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Int16" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Int32" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Int32" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Int64" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Int64" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (sbyte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.SByte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.SByte" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.SByte" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Single" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Single" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.String" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.String" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.UInt16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.UInt16" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.UInt16" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.UInt32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.UInt32" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.UInt32" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.UInt64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.UInt64" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.UInt64" /> argumento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (System.AddIn.Contract.IContract value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.AddIn.Contract.IContract value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.AddIn.Contract.IContract,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.AddIn.Contract.IContract" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.AddIn.Contract.IContract" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.AddIn.Contract.IContract" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Contract>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (System.AddIn.Contract.RemoteArgumentKind remoteArgKind, TypeCode typeCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.AddIn.Contract.RemoteArgumentKind remoteArgKind, valuetype System.TypeCode typeCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.AddIn.Contract.RemoteArgumentKind,System.TypeCode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="remoteArgKind" Type="System.AddIn.Contract.RemoteArgumentKind" />
+        <Parameter Name="typeCode" Type="System.TypeCode" />
+      </Parameters>
+      <Docs>
+        <param name="remoteArgKind">Uma da <see cref="T:System.AddIn.Contract.RemoteArgumentKind" /> valores que indica se o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa um tipo intrínseco, uma matriz de tipos intrínsecos, um <see cref="T:System.AddIn.Contract.IContract" />, ou o <see cref="F:System.Type.Missing" /> valor.</param>
+        <param name="typeCode">Um <see cref="T:System.TypeCode" /> que especifica o tipo base do argumento remoto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> classe usando especificado <see cref="T:System.AddIn.Contract.RemoteArgumentKind" /> e <see cref="T:System.TypeCode" /> para um argumento que não é passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor atribui o valor padrão do tipo de dados especificado pelo `typeCode` parâmetro para o <xref:System.AddIn.Contract.RemoteArgument>.  
+  
+ Um tipo de dados intrínseco é um tipo de dados primitivo (ou seja, o <xref:System.Type.IsPrimitive%2A?displayProperty=nameWithType> é de propriedade do tipo `true`) ou um <xref:System.String>, <xref:System.Decimal>, <xref:System.DateTime>, ou <xref:System.DBNull>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="remoteArgKind" />is <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> or <see cref="F:System.AddIn.Contract.RemoteArgumentKind.IntrinsicArray" />, and <paramref name="typeCode" /> is <see cref="F:System.TypeCode.Object" /> or <see cref="F:System.TypeCode.Empty" />.  
+  
+ -ou-  
+  
+ <paramref name="remoteArgKind" /> é <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Missing" /> e <paramref name="typeCode" /> não é <see cref="F:System.TypeCode.Empty" />.  
+  
+ -ou-  
+  
+ <paramref name="remoteArgKind" /> é <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Contract" /> e <paramref name="typeCode" /> não é <see cref="F:System.TypeCode.Object" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (Array array, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Array array, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Array,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>matriz</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Array" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade <xref:System.AddIn.Contract.RemoteArgumentKind.IntrinsicArray>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade para o código de tipo do tipo de elemento de matriz e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo de elemento de matriz não é um tipo de base (ou seja, o <see cref="M:System.Type.GetTypeCode(System.Type)" /> método retorna <see cref="F:System.TypeCode.Object" /> para o tipo de elemento de matriz).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (bool value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Boolean" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Boolean" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (byte value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Byte,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Byte" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Byte" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (char value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(char value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Char,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Char" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Char" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (DateTime value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.DateTime,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.DateTime" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.DateTime" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (DBNull value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DBNull value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.DBNull,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.DBNull" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.DBNull" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.DBNull" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (decimal value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Decimal value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Decimal,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Decimal" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Decimal" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (double value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Double,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Double" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Double" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (short value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Int16,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Int16" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Int16" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (int value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Int32" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Int32" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (long value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Int64,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Int64" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Int64" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (sbyte value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int8 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.SByte,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.SByte" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.SByte" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.SByte" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (float value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.Single,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Single" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.Single" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (string value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.String" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.String" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (ushort value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int16 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.UInt16,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt16" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.UInt16" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.UInt16" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (uint value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int32 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.UInt32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.UInt32" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.UInt32" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (ulong value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int64 value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.UInt64,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.UInt64" /> argumento que pode ser transmitido pelo processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />Se <c>valor</c> é um argumento que é passado por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> a classe que representa um <see cref="T:System.UInt64" /> argumento pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind%2A> propriedade para <xref:System.AddIn.Contract.RemoteArgumentKind.Intrinsic>, o <xref:System.AddIn.Contract.RemoteArgument.TypeCode%2A> propriedade <xref:System.TypeCode?displayProperty=nameWithType>e o <xref:System.AddIn.Contract.RemoteArgument.IsByRef%2A> propriedade para o valor da `isByRef` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteArgument (System.AddIn.Contract.RemoteArgumentKind remoteArgKind, TypeCode typeCode, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.AddIn.Contract.RemoteArgumentKind remoteArgKind, valuetype System.TypeCode typeCode, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.#ctor(System.AddIn.Contract.RemoteArgumentKind,System.TypeCode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="remoteArgKind" Type="System.AddIn.Contract.RemoteArgumentKind" />
+        <Parameter Name="typeCode" Type="System.TypeCode" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="remoteArgKind">Uma da <see cref="T:System.AddIn.Contract.RemoteArgumentKind" /> valores que indica se o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa um tipo intrínseco, uma matriz de tipos intrínsecos, um <see cref="T:System.AddIn.Contract.IContract" />, ou o <see cref="F:System.Type.Missing" /> valor.</param>
+        <param name="typeCode">Um <see cref="T:System.TypeCode" /> que especifica o tipo base do argumento remoto.</param>
+        <param name="isByRef">
+          <see langword="true" />Se o argumento remoto é passado por referência; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.AddIn.Contract.RemoteArgument" /> classe usando especificado <see cref="T:System.AddIn.Contract.RemoteArgumentKind" /> e <see cref="T:System.TypeCode" /> para um argumento que pode ser passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor atribui o valor padrão do tipo de dados especificado pelo `typeCode` parâmetro para o <xref:System.AddIn.Contract.RemoteArgument>.  
+  
+ Um tipo de dados intrínseco é um tipo de dados primitivo (ou seja, o <xref:System.Type.IsPrimitive%2A?displayProperty=nameWithType> é de propriedade do tipo `true`) ou um <xref:System.String>, <xref:System.Decimal>, <xref:System.DateTime>, ou <xref:System.DBNull>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="remoteArgKind" />is <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> or <see cref="F:System.AddIn.Contract.RemoteArgumentKind.IntrinsicArray" />, and <paramref name="typeCode" /> is <see cref="F:System.TypeCode.Object" /> or <see cref="F:System.TypeCode.Empty" />.  
+  
+ -ou-  
+  
+ <paramref name="remoteArgKind" /> é <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Missing" /> e <paramref name="typeCode" /> não é <see cref="F:System.TypeCode.Empty" />.  
+  
+ -ou-  
+  
+ <paramref name="remoteArgKind" /> é <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Contract" /> e <paramref name="typeCode" /> não é <see cref="F:System.TypeCode.Object" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="remoteArgKind" /> não é um valor <see cref="T:System.AddIn.Contract.RemoteArgumentKind" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrayValue">
+      <MemberSignature Language="C#" Value="public Array ArrayValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Array ArrayValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.ArrayValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Array</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Array" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Array" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; <see langword="null" /> se o valor de <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.IntrinsicArray" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> está definida como o <see cref="F:System.TypeCode.Object" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BooleanValue">
+      <MemberSignature Language="C#" Value="public bool BooleanValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BooleanValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.BooleanValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Boolean" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Boolean" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; <see langword="false" /> se o valor de <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Boolean" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ByteValue">
+      <MemberSignature Language="C#" Value="public byte ByteValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ByteValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.ByteValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Byte" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Byte" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; 0 (zero) se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Byte" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CharValue">
+      <MemberSignature Language="C#" Value="public char CharValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char CharValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.CharValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Char" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Char" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; <see cref="F:System.Char.MinValue" /> se o valor de <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Char" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractValue">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.IContract ContractValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AddIn.Contract.IContract ContractValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.ContractValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IContract</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.AddIn.Contract.IContract" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.AddIn.Contract.IContract" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; <see langword="null" /> se o valor de <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Contract" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Object" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRemoteArgument">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Contract.RemoteArgument CreateRemoteArgument (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.AddIn.Contract.RemoteArgument CreateRemoteArgument(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.CreateRemoteArgument(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O argumento será passado em processo ou limites de domínio de aplicativo.</param>
+        <summary>Cria um <see cref="T:System.AddIn.Contract.RemoteArgument" /> para um argumento que não é passado por referência.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.RemoteArgument" /> que representa o argumento especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.AddIn.Contract.RemoteArgument.%23ctor%2A> que se aplica ao tipo de construtor o `value` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.TypeCode" /> de <paramref name="value" /> é <see cref="F:System.TypeCode.Object" /> e <paramref name="value" /> não é um <see cref="T:System.AddIn.Contract.IContract" />.  
+  
+ -ou-  
+  
+ O <see cref="T:System.TypeCode" /> de <paramref name="value" /> é <see cref="F:System.TypeCode.Empty" /> e <paramref name="value" /> não está definido como <see cref="F:System.Reflection.Missing.Value" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />não implementa o <see cref="T:System.IConvertible" /> interface e <paramref name="value" /> não é um <see cref="T:System.Array" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />é um <see cref="T:System.Array" /> que contém elementos com um <see cref="T:System.TypeCode" /> valor <see cref="F:System.TypeCode.Object" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRemoteArgument">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Contract.RemoteArgument CreateRemoteArgument (object value, bool isByRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.AddIn.Contract.RemoteArgument CreateRemoteArgument(object value, bool isByRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.CreateRemoteArgument(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">O argumento será passado em processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />para passar o <c>valor</c> argumento por referência; caso contrário, <see langword="false" />.</param>
+        <summary>Cria um <see cref="T:System.AddIn.Contract.RemoteArgument" /> para um argumento que pode ser passado por referência.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.RemoteArgument" /> que representa o argumento especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.AddIn.Contract.RemoteArgument.%23ctor%2A> que se aplica ao tipo de construtor o `value` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.TypeCode" /> de <paramref name="value" /> é <see cref="F:System.TypeCode.Object" /> e <paramref name="value" /> não é um <see cref="T:System.AddIn.Contract.IContract" />.  
+  
+ -ou-  
+  
+ O <see cref="T:System.TypeCode" /> de <paramref name="value" /> é <see cref="F:System.TypeCode.Empty" /> e <paramref name="value" /> não está definido como <see cref="F:System.Reflection.Missing.Value" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />não implementa o <see cref="T:System.IConvertible" /> interface e <paramref name="value" /> não é um <see cref="T:System.Array" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />é um <see cref="T:System.Array" /> que contém elementos com um <see cref="T:System.TypeCode" /> valor <see cref="F:System.TypeCode.Object" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRemoteArgument">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Contract.RemoteArgument CreateRemoteArgument (object value, bool isByRef, TypeCode typeCodeToUse);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.AddIn.Contract.RemoteArgument CreateRemoteArgument(object value, bool isByRef, valuetype System.TypeCode typeCodeToUse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.RemoteArgument.CreateRemoteArgument(System.Object,System.Boolean,System.TypeCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="isByRef" Type="System.Boolean" />
+        <Parameter Name="typeCodeToUse" Type="System.TypeCode" />
+      </Parameters>
+      <Docs>
+        <param name="value">O argumento será passado em processo ou limites de domínio de aplicativo.</param>
+        <param name="isByRef">
+          <see langword="true" />para passar o argumento por referência. Caso contrário, <see langword="false" />.</param>
+        <param name="typeCodeToUse">Um <see cref="T:System.TypeCode" /> que indica o código de tipo <c>valor</c>, se <c>valor</c> não é um <see cref="T:System.Array" />. Caso contrário, um <see cref="T:System.TypeCode" /> que indica o código do tipo dos elementos no <c>valor</c>.</param>
+        <summary>Cria um <see cref="T:System.AddIn.Contract.RemoteArgument" /> para um argumento que tem o código do tipo especificado e que podem ser transmitidos por referência.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.RemoteArgument" /> que representa o argumento especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.AddIn.Contract.RemoteArgument.%23ctor%2A> que se aplica ao tipo de construtor o `value` parâmetro.  
+  
+ Você não pode usar esse método para criar um <xref:System.AddIn.Contract.RemoteArgument> que representa um `null` matriz que contém elementos de tipos de dados intrínseco. Um tipo de dados intrínseco é um tipo de dados primitivo (ou seja, o <xref:System.Type.IsPrimitive%2A?displayProperty=nameWithType> é de propriedade do tipo `true`) ou um <xref:System.String>, <xref:System.Decimal>, <xref:System.DateTime>, ou <xref:System.DBNull>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.TypeCode" /> de <paramref name="value" /> é <see cref="F:System.TypeCode.Object" />, <paramref name="value" /> não é um <see cref="T:System.AddIn.Contract.IContract" />, e <paramref name="value" /> não é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <see cref="T:System.TypeCode" /> de <paramref name="value" /> é <see cref="F:System.TypeCode.Empty" /> e <paramref name="value" /> não é <see cref="F:System.Reflection.Missing.Value" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />não implementa o <see cref="T:System.IConvertible" /> interface, <paramref name="value" /> não é <see langword="null" />, e <paramref name="value" /> não é um <see cref="T:System.Array" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />é um <see cref="T:System.Array" /> que contém elementos com um <see cref="T:System.TypeCode" /> valor <see cref="F:System.TypeCode.Object" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.TypeCode" /> de <paramref name="value" /> não é <see cref="F:System.TypeCode.DBNull" /> e <paramref name="typeCodeToUse" /> é <see cref="F:System.TypeCode.DBNull" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="typeCodeToUse" />não especifique uma opção válida <see cref="T:System.TypeCode" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DateTimeValue">
+      <MemberSignature Language="C#" Value="public DateTime DateTimeValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime DateTimeValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.DateTimeValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.DateTime" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.DateTime" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; <see cref="F:System.DateTime.MinValue" /> se o valor de <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.DateTime" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DBNullValue">
+      <MemberSignature Language="C#" Value="public DBNull DBNullValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DBNull DBNullValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.DBNullValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DBNull</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.DBNull" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.DBNull" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; <see langword="null" /> se o valor de <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.DBNull" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecimalValue">
+      <MemberSignature Language="C#" Value="public decimal DecimalValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Decimal DecimalValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.DecimalValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Decimal" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Decimal" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; 0 (zero) se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Decimal" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleValue">
+      <MemberSignature Language="C#" Value="public double DoubleValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DoubleValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.DoubleValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Double" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Double" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa, 0,0 se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Double" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int16Value">
+      <MemberSignature Language="C#" Value="public short Int16Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 Int16Value" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.Int16Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Int16" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Int16" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; 0 (zero) se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Int16" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int32Value">
+      <MemberSignature Language="C#" Value="public int Int32Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Int32Value" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.Int32Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Int32" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Int32" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; 0 (zero) se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Int32" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int64Value">
+      <MemberSignature Language="C#" Value="public long Int64Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Int64Value" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.Int64Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Int64" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Int64" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; 0 (zero) se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Int64" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsByRef">
+      <MemberSignature Language="C#" Value="public bool IsByRef { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsByRef" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.IsByRef" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa um argumento que é passado por referência.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa um argumento que é passado por referência; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MissingValue">
+      <MemberSignature Language="C#" Value="public System.Reflection.Missing MissingValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Missing MissingValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.MissingValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Missing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="F:System.Type.Missing" /> valor.</summary>
+        <value>O valor <see cref="F:System.Type.Missing" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ Esse valor de propriedade é recuperado enquanto o <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Empty" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteArgumentKind">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.RemoteArgumentKind RemoteArgumentKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.AddIn.Contract.RemoteArgumentKind RemoteArgumentKind" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgumentKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.AddIn.Contract.RemoteArgumentKind" /> que indica o tipo de argumento que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>Uma da <see cref="T:System.AddIn.Contract.RemoteArgumentKind" /> valores que indica se o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa um tipo intrínseco, uma matriz de tipos intrínsecos, um <see cref="T:System.AddIn.Contract.IContract" />, ou o <see cref="F:System.Type.Missing" /> valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um tipo de dados intrínseco é um tipo de dados primitivo (ou seja, o <xref:System.Type.IsPrimitive%2A?displayProperty=nameWithType> é de propriedade do tipo `true`) ou um <xref:System.String>, <xref:System.Decimal>, <xref:System.DateTime>, ou <xref:System.DBNull>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SByteValue">
+      <MemberSignature Language="C#" Value="public sbyte SByteValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int8 SByteValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.SByteValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.SByte" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.SByte" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; 0 (zero) se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.SByte" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleValue">
+      <MemberSignature Language="C#" Value="public float SingleValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 SingleValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.SingleValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Single" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.Single" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa, 0,0 se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.Single" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StringValue">
+      <MemberSignature Language="C#" Value="public string StringValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StringValue" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.StringValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.String" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.String" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; <see langword="null" /> se o valor de <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.String" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeCode">
+      <MemberSignature Language="C#" Value="public TypeCode TypeCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TypeCode TypeCode" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.TypeCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.TypeCode" /> que indica o tipo base do argumento que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>Um <see cref="T:System.TypeCode" /> que indica o tipo base do argumento que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt16Value">
+      <MemberSignature Language="C#" Value="public ushort UInt16Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 UInt16Value" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.UInt16Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.UInt16" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.UInt16" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; 0 (zero) se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.UInt16" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt32Value">
+      <MemberSignature Language="C#" Value="public uint UInt32Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 UInt32Value" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.UInt32Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.UInt32" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.UInt32" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; 0 (zero) se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.UInt32" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UInt64Value">
+      <MemberSignature Language="C#" Value="public ulong UInt64Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 UInt64Value" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Contract.RemoteArgument.UInt64Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.UInt64" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa.</summary>
+        <value>O <see cref="T:System.UInt64" /> que o <see cref="T:System.AddIn.Contract.RemoteArgument" /> representa; 0 (zero) se o valor da <see cref="T:System.AddIn.Contract.RemoteArgument" /> ainda não foi especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.AddIn.Contract.RemoteArgument.RemoteArgumentKind" /> propriedade não é definida como o <see cref="F:System.AddIn.Contract.RemoteArgumentKind.Intrinsic" /> valor.  
+  
+ -ou-  
+  
+ O <see cref="P:System.AddIn.Contract.RemoteArgument.TypeCode" /> propriedade não é definida como o <see cref="F:System.TypeCode.UInt64" /> valor.  
+  
+ -ou-  
+  
+ Essa propriedade é definida durante a <see cref="P:System.AddIn.Contract.RemoteArgument.IsByRef" /> é de propriedade <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

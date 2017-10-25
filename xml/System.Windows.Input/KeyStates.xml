@@ -1,0 +1,86 @@
+<Type Name="KeyStates" FullName="System.Windows.Input.KeyStates">
+  <TypeSignature Language="C#" Value="public enum KeyStates" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed KeyStates extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.KeyStates" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as constantes que definem o estado de uma tecla.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.KeyStates> classe é um pouco enumeração (flagwise) campo. Portanto, uma chave pode estar em vários estados.  Por exemplo, uma chave pode ser em estado inativo, bem como o estado de Toggled.  Use operações de bits para determinar o estado exato ou estados em que a chave está.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir altera a cor de um <xref:System.Windows.Controls.Button> se o <xref:System.Windows.Input.KeyStates.Toggled> da chave transmitido a <xref:System.Windows.Input.KeyEventArgs> está inativo. O estado da chave é determinado por meio de bit a bit `AND` operação.  A mesma técnica pode ser usada para determinar se uma chave tem vários estados, como sendo o estado de Toggled e o estado inativo.  
+  
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyStatesDown](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeystatesdown)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyStatesDown](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeystatesdown)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Down">
+      <MemberSignature Language="C#" Value="Down" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.KeyStates Down = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.KeyStates.Down" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A tecla está pressionada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.KeyStates None = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.KeyStates.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A tecla não está pressionada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Toggled">
+      <MemberSignature Language="C#" Value="Toggled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.KeyStates Toggled = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.KeyStates.Toggled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A tecla é alternada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

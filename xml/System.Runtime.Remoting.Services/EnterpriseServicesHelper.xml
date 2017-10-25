@@ -1,0 +1,148 @@
+<Type Name="EnterpriseServicesHelper" FullName="System.Runtime.Remoting.Services.EnterpriseServicesHelper">
+  <TypeSignature Language="C#" Value="public sealed class EnterpriseServicesHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EnterpriseServicesHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Services.EnterpriseServicesHelper" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece as APIs que são necessários para a comunicação e a operação com classes não gerenciadas fora do <see cref="T:System.AppDomain" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Essa classe faz uma demanda de link. Um SecurityException é gerada se o chamador imediato não tem permissão de infraestrutura. Consulte [demandas de Link](~/docs/framework/misc/link-demands.md) para obter mais informações.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnterpriseServicesHelper ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.EnterpriseServicesHelper.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Runtime.Remoting.Services.EnterpriseServicesHelper" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateConstructionReturnMessage">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Activation.IConstructionReturnMessage CreateConstructionReturnMessage (System.Runtime.Remoting.Activation.IConstructionCallMessage ctorMsg, MarshalByRefObject retObj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.Activation.IConstructionReturnMessage CreateConstructionReturnMessage(class System.Runtime.Remoting.Activation.IConstructionCallMessage ctorMsg, class System.MarshalByRefObject retObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.EnterpriseServicesHelper.CreateConstructionReturnMessage(System.Runtime.Remoting.Activation.IConstructionCallMessage,System.MarshalByRefObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Activation.IConstructionReturnMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctorMsg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+        <Parameter Name="retObj" Type="System.MarshalByRefObject" />
+      </Parameters>
+      <Docs>
+        <param name="ctorMsg">Uma chamada de construção para o objeto do qual o novo <see cref="T:System.Runtime.Remoting.Messaging.ReturnMessage" /> instância está retornando.</param>
+        <param name="retObj">Um <see cref="T:System.Runtime.Remoting.ObjRef" /> que representa o objeto que é construído com a chamada de construção em <c>ctorMsg</c>.</param>
+        <summary>Constrói um <see cref="T:System.Runtime.Remoting.Messaging.ReturnMessage" /> do <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" /> especificado.</summary>
+        <returns>Um <see cref="T:System.Runtime.Remoting.Activation.IConstructionReturnMessage" /> retornado da chamada de construção especificado no <paramref name="ctorMsg" /> parâmetro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchWrappers">
+      <MemberSignature Language="C#" Value="public static void SwitchWrappers (System.Runtime.Remoting.Proxies.RealProxy oldcp, System.Runtime.Remoting.Proxies.RealProxy newcp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SwitchWrappers(class System.Runtime.Remoting.Proxies.RealProxy oldcp, class System.Runtime.Remoting.Proxies.RealProxy newcp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.EnterpriseServicesHelper.SwitchWrappers(System.Runtime.Remoting.Proxies.RealProxy,System.Runtime.Remoting.Proxies.RealProxy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldcp" Type="System.Runtime.Remoting.Proxies.RealProxy" />
+        <Parameter Name="newcp" Type="System.Runtime.Remoting.Proxies.RealProxy" />
+      </Parameters>
+      <Docs>
+        <param name="oldcp">Um proxy que representa a instância antiga de uma classe que é referenciada por um CCW.</param>
+        <param name="newcp">Um proxy que representa a nova instância de uma classe que é referenciada por um CCW.</param>
+        <summary>Opções de uma [COM Callable Wrapper](~/docs/framework/interop/com-callable-wrapper.md) (CCW) de uma instância de uma classe para outra instância da mesma classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Esse método pode causar um comportamento indesejado. Antes de chamar a ele, o usuário deve garantir que essa é uma operação de thread-safe, e que uma chamada não está sendo feita por meio de CCW para uma das instâncias da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão UnmanagedCode.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">A capacidade de chamar código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapIUnknownWithComObject">
+      <MemberSignature Language="C#" Value="public static object WrapIUnknownWithComObject (IntPtr punk);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object WrapIUnknownWithComObject(native int punk) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Services.EnterpriseServicesHelper.WrapIUnknownWithComObject(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="punk" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="punk">Um ponteiro para o <see langword="IUnknown" /> interface COM para encapsular.</param>
+        <summary>Encapsula especificado <see langword="IUnknown" /> interface COM um [Runtime Callable Wrapper](~/docs/framework/interop/runtime-callable-wrapper.md) (RCW).</summary>
+        <returns>RCW onde especificado <see langword="IUnknown" /> é encapsulado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Services.EnterpriseServicesHelper.WrapIUnknownWithComObject%2A> método é semelhante de <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A?displayProperty=nameWithType> método, mas não tenta manter a identidade do objeto não gerenciado. Por exemplo, duas chamadas com o mesmo `IUnknown` para o método atual retornar dois RCWs diferentes, mas duas chamadas para o <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> método com o mesmo `IUnknown` retornam o mesmo RCW.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão UnmanagedCode.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">A capacidade de chamar código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

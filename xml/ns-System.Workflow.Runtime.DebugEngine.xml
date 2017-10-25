@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.Runtime.DebugEngine">
+  <Docs>
+    <summary>Contém classes e interfaces para uso na depuração de instâncias de fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

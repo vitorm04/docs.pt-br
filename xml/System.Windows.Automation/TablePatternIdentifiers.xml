@@ -1,0 +1,122 @@
+<Type Name="TablePatternIdentifiers" FullName="System.Windows.Automation.TablePatternIdentifiers">
+  <TypeSignature Language="C#" Value="public static class TablePatternIdentifiers" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TablePatternIdentifiers extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TablePatternIdentifiers" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém valores usados como identificadores para <see cref="T:System.Windows.Automation.TablePattern" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses identificadores são usados por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar os campos equivalentes em <xref:System.Windows.Automation.TablePattern>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnHeadersProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty ColumnHeadersProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty ColumnHeadersProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TablePatternIdentifiers.ColumnHeadersProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade que chama o <see cref="M:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar os campos equivalentes em <xref:System.Windows.Automation.TablePattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TablePatternIdentifiers.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.TablePattern" /> padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar os campos equivalentes em <xref:System.Windows.Automation.TablePattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowHeadersProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty RowHeadersProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty RowHeadersProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TablePatternIdentifiers.RowHeadersProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade que chama o <see cref="M:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar os campos equivalentes em <xref:System.Windows.Automation.TablePattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowOrColumnMajorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty RowOrColumnMajorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty RowOrColumnMajorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TablePatternIdentifiers.RowOrColumnMajorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por provedores de automação de interface do usuário. Aplicativos de cliente de automação de interface do usuário devem usar os campos equivalentes em <xref:System.Windows.Automation.TablePattern>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

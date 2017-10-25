@@ -1,0 +1,77 @@
+<Type Name="DbBinaryExpression" FullName="System.Data.Common.CommandTrees.DbBinaryExpression">
+  <TypeSignature Language="C#" Value="public abstract class DbBinaryExpression : System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbBinaryExpression extends System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbBinaryExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.CommandTrees.DbExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa a funcionalidade básica necessária por expressões que aceitam dois operandos de expressão.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpression Left { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpression Left" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbBinaryExpression.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> que define o argumento da esquerda.</summary>
+        <value>O <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> que define o argumento da esquerda.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de expressão derivada podem realizar mais rígido tipo verifica quando o <xref:System.Data.Common.CommandTrees.DbBinaryExpression.Left%2A> está definida. Por exemplo, <xref:System.Data.Common.CommandTrees.DbUnionAllExpression> requer que sua expressão esquerdo tenha um tipo de resultado de coleção, enquanto <xref:System.Data.Common.CommandTrees.DbAndExpression> requer um tipo de resultado booliano. Normalmente, os tipos derivados de expressão não permitirá que <xref:System.Data.Common.CommandTrees.DbBinaryExpression.Left%2A> seja definida como uma expressão com um tipo de resultado que não seja igual ou passível de promoção para o tipo de resultado do valor atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A expressão é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A expressão não está associada com a árvore de comandos do <see cref="T:System.Data.Common.CommandTrees.DbBinaryExpression" />,  
+  
+ ou seu tipo de resultado não é passível de promoção ou igual ao tipo necessário para o argumento da esquerda.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpression Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpression Right" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbBinaryExpression.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> que define o argumento da direita.</summary>
+        <value>O <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> que define o argumento da direita.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de expressão derivada podem realizar mais rígido tipo verifica quando o <xref:System.Data.Common.CommandTrees.DbBinaryExpression.Right%2A> está definida. Por exemplo, <xref:System.Data.Common.CommandTrees.DbUnionAllExpression> requer que sua expressão da direita tem um tipo de resultado de coleção, enquanto <xref:System.Data.Common.CommandTrees.DbAndExpression> requer um tipo de resultado booliano. Normalmente, os tipos derivados de expressão não permitirá que <xref:System.Data.Common.CommandTrees.DbBinaryExpression.Right%2A> seja definida como uma expressão com um tipo de resultado que não seja igual ou passível de promoção para o tipo de resultado do valor atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A expressão é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A expressão não está associada com a árvore de comandos do <see cref="T:System.Data.Common.CommandTrees.DbBinaryExpression" />,  
+  
+ ou seu tipo de resultado não é passível de promoção ou igual ao tipo necessário para o argumento da direita.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

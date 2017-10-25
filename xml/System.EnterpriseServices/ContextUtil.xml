@@ -1,0 +1,649 @@
+<Type Name="ContextUtil" FullName="System.EnterpriseServices.ContextUtil">
+  <TypeSignature Language="C#" Value="public sealed class ContextUtil" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContextUtil extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ContextUtil" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Obtém informações sobre o contexto de objeto COM+. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ContextUtil>é a classe preferencial a ser usado para obter informações de contexto COM+. Como os membros dessa classe são todos os `static` (`shared` no Visual Basic), não é necessário instanciá-la antes de usá-los.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.EnterpriseServices.ContextUtil> para criar um transacional <xref:System.EnterpriseServices.ServicedComponent>.  
+  
+ [!code-cpp[EnterpriseServices_Transaction#1](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Transaction/CPP/transaction.cpp#1)]
+ [!code-csharp[EnterpriseServices_Transaction#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Transaction/CS/transaction.cs#1)]
+ [!code-vb[EnterpriseServices_Transaction#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Transaction/VB/transaction.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivityId">
+      <MemberSignature Language="C#" Value="public static Guid ActivityId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Guid ActivityId" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.ActivityId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um GUID que representa a atividade que contém o componente.</summary>
+        <value>O GUID de uma atividade se o contexto atual for parte de uma atividade; caso contrário, <see langword="GUID_NULL" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor de um <xref:System.EnterpriseServices.ContextUtil.ActivityId%2A> propriedade.  
+  
+ [!code-cpp[EnterpriseServicesContextUtil#1](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CPP/class1.cpp#1)]
+ [!code-csharp[EnterpriseServicesContextUtil#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CS/class1.cs#1)]
+ [!code-vb[EnterpriseServicesContextUtil#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesContextUtil/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows 2000 ou posterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationId">
+      <MemberSignature Language="C#" Value="public static Guid ApplicationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Guid ApplicationId" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.ApplicationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um GUID para o aplicativo atual.</summary>
+        <value>O GUID para o aplicativo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso dessa propriedade.  
+  
+ [!code-cpp[EnterpriseServices_Pooling#3](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CPP/inspector.cpp#3)]
+ [!code-csharp[EnterpriseServices_Pooling#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CS/inspector.cs#3)]
+ [!code-vb[EnterpriseServices_Pooling#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Pooling/VB/inspector.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows XP ou posterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationInstanceId">
+      <MemberSignature Language="C#" Value="public static Guid ApplicationInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Guid ApplicationInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.ApplicationInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um GUID para a instância atual do aplicativo.</summary>
+        <value>O GUID para a instância atual do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor de um <xref:System.EnterpriseServices.ContextUtil.ApplicationInstanceId%2A> propriedade.  
+  
+ [!code-cpp[EnterpriseServicesContextUtil#2](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CPP/class1.cpp#2)]
+ [!code-csharp[EnterpriseServicesContextUtil#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CS/class1.cs#2)]
+ [!code-vb[EnterpriseServicesContextUtil#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesContextUtil/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows XP ou posterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextId">
+      <MemberSignature Language="C#" Value="public static Guid ContextId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Guid ContextId" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.ContextId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um GUID para o contexto atual.</summary>
+        <value>O GUID para o contexto atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso deste atributo.  
+  
+ [!code-cpp[EnterpriseServices_Pooling#3](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CPP/inspector.cpp#3)]
+ [!code-csharp[EnterpriseServices_Pooling#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CS/inspector.cs#3)]
+ [!code-vb[EnterpriseServices_Pooling#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Pooling/VB/inspector.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows 2000 ou posterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeactivateOnReturn">
+      <MemberSignature Language="C#" Value="public static bool DeactivateOnReturn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool DeactivateOnReturn" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.DeactivateOnReturn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="done" /> bit no contexto COM+.</summary>
+        <value>
+          <see langword="true" />Se o objeto é desativado quando o método retorna; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O COM+ `done` determina quanto tempo o objeto permanece ativo depois de concluir seu trabalho e pode afetar a duração de uma transação. Quando uma chamada de método retorna, COM+ inspeciona o `done` bits. Se o `done` bit for `true`, COM+ desativa o objeto. Se o `done` bit for `false`, o objeto não está desativado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.EnterpriseServices.ContextUtil.DeactivateOnReturn%2A> propriedade para garantir que um <xref:System.EnterpriseServices.ServicedComponent> é desativada após uma chamada de método.  
+  
+ [!code-cpp[EnterpriseServices_Transaction#1](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Transaction/CPP/transaction.cpp#1)]
+ [!code-csharp[EnterpriseServices_Transaction#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Transaction/CS/transaction.cs#1)]
+ [!code-vb[EnterpriseServices_Transaction#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Transaction/VB/transaction.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows 2000 ou posterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableCommit">
+      <MemberSignature Language="C#" Value="public static void DisableCommit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DisableCommit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ContextUtil.DisableCommit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o <see langword="consistent" /> bit e o <see langword="done" /> bit <see langword="false" /> no contexto COM+.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for solicitado, o contexto COM+ votos para anular a transação atual, mas o objeto não está desativado no retorno do método.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama o <xref:System.EnterpriseServices.ContextUtil.DisableCommit%2A> método.  
+  
+ [!code-cpp[EnterpriseServicesContextUtil#3](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CPP/class1.cpp#3)]
+ [!code-csharp[EnterpriseServicesContextUtil#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CS/class1.cs#3)]
+ [!code-vb[EnterpriseServicesContextUtil#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesContextUtil/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Nenhum contexto COM+ está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCommit">
+      <MemberSignature Language="C#" Value="public static void EnableCommit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableCommit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ContextUtil.EnableCommit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Conjuntos de <see langword="consistent" /> bit a <see langword="true" /> e o <see langword="done" /> bit <see langword="false" /> no contexto COM+.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for solicitado, o contexto COM+ confirmará a transação atual, mas o objeto não está desativado no retorno do método.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama o <xref:System.EnterpriseServices.ContextUtil.EnableCommit%2A> método.  
+  
+ [!code-cpp[EnterpriseServicesContextUtil#4](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CPP/class1.cpp#4)]
+ [!code-csharp[EnterpriseServicesContextUtil#4](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CS/class1.cs#4)]
+ [!code-vb[EnterpriseServicesContextUtil#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesContextUtil/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Nenhum contexto COM+ está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamedProperty">
+      <MemberSignature Language="C#" Value="public static object GetNamedProperty (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetNamedProperty(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ContextUtil.GetNamedProperty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade solicitada.</param>
+        <summary>Retorna uma propriedade nomeada de contexto COM+.</summary>
+        <returns>A propriedade nomeada para o contexto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é útil para obter os objetos intrínsecos do Internet Information Services (IIS) fornecidos por páginas ASP (ASP).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows 2000 ou posterior.</exception>
+        <altmember cref="M:System.EnterpriseServices.ContextUtil.SetNamedProperty(System.String,System.Object)" />
+      </Docs>
+    </Member>
+    <Member MemberName="IsCallerInRole">
+      <MemberSignature Language="C#" Value="public static bool IsCallerInRole (string role);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsCallerInRole(string role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ContextUtil.IsCallerInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="role">O nome da função para verificar.</param>
+        <summary>Determina se o chamador está na função especificada.</summary>
+        <returns>
+          <see langword="true" />Se o chamador está na função especificada. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultContext">
+      <MemberSignature Language="C#" Value="public static bool IsDefaultContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefaultContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ContextUtil.IsDefaultContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o componente de serviço está ativado no contexto padrão. Componentes de serviço que não têm informações de catálogo COM+ são ativados no contexto padrão.</summary>
+        <returns>**True** se o componente de serviço está ativado no contexto padrão; caso contrário, **false**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInTransaction">
+      <MemberSignature Language="C#" Value="public static bool IsInTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsInTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.IsInTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o contexto atual é transacional.</summary>
+        <value>
+          <see langword="true" />Se o contexto atual é transacional; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor de um <xref:System.EnterpriseServices.ContextUtil.IsInTransaction%2A> propriedade.  
+  
+ [!code-cpp[EnterpriseServicesContextUtil#5](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CPP/class1.cpp#5)]
+ [!code-csharp[EnterpriseServicesContextUtil#5](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CS/class1.cs#5)]
+ [!code-vb[EnterpriseServicesContextUtil#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesContextUtil/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecurityEnabled">
+      <MemberSignature Language="C#" Value="public static bool IsSecurityEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsSecurityEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.IsSecurityEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a segurança baseada em função está ativa no contexto atual.</summary>
+        <value>
+          <see langword="true" />Se o contexto atual tem segurança habilitada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor de um <xref:System.EnterpriseServices.ContextUtil.IsSecurityEnabled%2A> propriedade.  
+  
+ [!code-cpp[EnterpriseServicesContextUtil#6](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CPP/class1.cpp#6)]
+ [!code-csharp[EnterpriseServicesContextUtil#6](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CS/class1.cs#6)]
+ [!code-vb[EnterpriseServicesContextUtil#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesContextUtil/VB/class1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MyTransactionVote">
+      <MemberSignature Language="C#" Value="public static System.EnterpriseServices.TransactionVote MyTransactionVote { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.EnterpriseServices.TransactionVote MyTransactionVote" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.MyTransactionVote" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.TransactionVote</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="consistent" /> bit no contexto COM+.</summary>
+        <value>Uma da <see cref="T:System.EnterpriseServices.TransactionVote" /> valores, ou <see langword="Commit" /> ou <see langword="Abort" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.EnterpriseServices.ContextUtil.MyTransactionVote%2A> é definido como `Commit`, COM + `consistent` bit é definido como `true` e o contexto COM+ votos para confirmar a transação. Se <xref:System.EnterpriseServices.ContextUtil.MyTransactionVote%2A> é definido como `Abort`, o `consistent` bit é definido como `false` e o contexto COM+ votos para anular a transação. O valor padrão de `consistent` bit é `true`.  
+  
+ O `consistent` bit converte um voto para confirmar ou anular a transação na qual ele executa, e o `done` bit finaliza o voto. COM+ inspeciona o `consistent` bits quando o `done` bit é definido como `true` em um método de chamada retorno ou quando o objeto desativa. Embora um objeto `consistent` bits podem alterar muitas vezes dentro de cada chamada de método, somente a última alteração contagens.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.EnterpriseServices.ContextUtil.MyTransactionVote%2A> propriedade para criar um transacional <xref:System.EnterpriseServices.ServicedComponent>.  
+  
+ [!code-cpp[EnterpriseServices_Transaction#1](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Transaction/CPP/transaction.cpp#1)]
+ [!code-csharp[EnterpriseServices_Transaction#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Transaction/CS/transaction.cs#1)]
+ [!code-vb[EnterpriseServices_Transaction#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Transaction/VB/transaction.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows 2000 ou posterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PartitionId">
+      <MemberSignature Language="C#" Value="public static Guid PartitionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Guid PartitionId" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.PartitionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um GUID para a partição atual.</summary>
+        <value>O GUID para a partição atual.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows XP ou posterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAbort">
+      <MemberSignature Language="C#" Value="public static void SetAbort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAbort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ContextUtil.SetAbort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Conjuntos de <see langword="consistent" /> bit a <see langword="false" /> e o <see langword="done" /> bit <see langword="true" /> no contexto COM+.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for solicitado, o contexto de votos para anular a transação atual e o objeto é desativado no retorno do método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#13](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#13)]
+ [!code-csharp[EnterpriseServices_Crm#13](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#13)]
+ [!code-vb[EnterpriseServices_Crm#13](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetComplete">
+      <MemberSignature Language="C#" Value="public static void SetComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ContextUtil.SetComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define os bits <see langword="consistent" /> e <see langword="done" /> para <see langword="true" /> no contexto de COM+.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for solicitado, o contexto COM+ confirmará a transação atual e o objeto é desativado no retorno do método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#13](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#13)]
+ [!code-csharp[EnterpriseServices_Crm#13](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#13)]
+ [!code-vb[EnterpriseServices_Crm#13](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNamedProperty">
+      <MemberSignature Language="C#" Value="public static void SetNamedProperty (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetNamedProperty(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ContextUtil.SetNamedProperty(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade a ser definida.</param>
+        <param name="value">Objeto que representa o valor da propriedade para definir.</param>
+        <summary>Define a propriedade nomeada para o contexto COM+.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é útil para obter os objetos intrínsecos do Internet Information Services (IIS) fornecidos por páginas ASP (ASP).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows 2000 ou posterior.</exception>
+        <altmember cref="M:System.EnterpriseServices.ContextUtil.GetNamedProperty(System.String)" />
+      </Docs>
+    </Member>
+    <Member MemberName="SystemTransaction">
+      <MemberSignature Language="C#" Value="public static System.Transactions.Transaction SystemTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Transactions.Transaction SystemTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.SystemTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.Transaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contexto de transação atual.</summary>
+        <value>Um <see cref="T:System.Transactions.Transaction" /> que representa o contexto da transação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum contexto de transação existe quando essa propriedade é acessada, um novo contexto de transação é criado e retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows 2000 ou posterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transaction">
+      <MemberSignature Language="C#" Value="public static object Transaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property object Transaction" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.Transaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que descreve a transação de DTC COM+ atual.</summary>
+        <value>Um objeto que representa a transação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado oferece suporte a <xref:System.EnterpriseServices.ITransaction> interface se a transação é uma transação de DTC COM+.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows 2000 ou posterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionId">
+      <MemberSignature Language="C#" Value="public static Guid TransactionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Guid TransactionId" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ContextUtil.TransactionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID da transação DTC COM+.</summary>
+        <value>Um GUID que representa a transação de DTC COM+ atual, se um existe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor de um <xref:System.EnterpriseServices.ContextUtil.TransactionId%2A> propriedade.  
+  
+ [!code-cpp[EnterpriseServicesContextUtil#7](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CPP/class1.cpp#7)]
+ [!code-csharp[EnterpriseServicesContextUtil#7](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesContextUtil/CS/class1.cs#7)]
+ [!code-vb[EnterpriseServicesContextUtil#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesContextUtil/VB/class1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não há contextos de COM+ disponíveis.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma não é Windows 2000 ou posterior.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

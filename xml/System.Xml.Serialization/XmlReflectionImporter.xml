@@ -1,0 +1,614 @@
+<Type Name="XmlReflectionImporter" FullName="System.Xml.Serialization.XmlReflectionImporter">
+  <TypeSignature Language="C#" Value="public class XmlReflectionImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlReflectionImporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlReflectionImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gera mapeamentos de declarações de elemento de esquema XML, incluindo partes de mensagem de XSD (definição de esquema XML) literais em um documento de linguagem WSDL, para tipos do .NET Framework ou informações de método de serviço Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlReflectionImporter> classe não é usada diretamente. Em vez disso, ele é usado da seguinte maneira:  
+  
+-   Pelo <xref:System.Web.Services.Description.ServiceDescriptionReflector> classe enquanto cria <xref:System.Web.Services.Description.ServiceDescription> objetos das classes que são identificados como serviços da Web.  
+  
+-   Por um serviço Web ou cliente, incluindo durante a inicialização.  
+  
+-   Para inicializar um <xref:System.Xml.Serialization.XmlSerializer> objeto.  
+  
+-   Pela ferramenta de definição de esquema XML (Xsd.exe) enquanto a ferramenta gera esquemas XML de tipos em um arquivo de assembly de tempo de execução.  
+  
+-   Pela ferramenta Web Services Description Language (Wsdl.exe) enquanto a ferramenta gera classes de proxy de cliente ou classes abstratas de servidor de um documento WSDL.  
+  
+ O <xref:System.Xml.Serialization.XmlReflectionImporter> classe é usada para serviços da Web quando um serviço ou cliente especifica:  
+  
+-   Uso literal, o que indica que o conteúdo de SOAP mensagem parâmetros e valores de retorno (ou documentos de solicitação e resposta) literalmente é especificado com definições de esquema XML.  
+  
+-   SOAP não implementações de serviços Web usando as operações HTTP GET e POST HTTP.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlReflectionImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlReflectionImporter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não precisa criar uma instância de um <xref:System.Xml.Serialization.XmlReflectionImporter> diretamente do objeto.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlReflectionImporter (string defaultNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string defaultNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="defaultNamespace">O namespace XML padrão a ser usado para importar mapeamentos de tipo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlReflectionImporter" /> classe usando o namespace XML padrão especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário criar uma instância do <xref:System.Xml.Serialization.XmlReflectionImporter> classe diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlReflectionImporter (System.Xml.Serialization.XmlAttributeOverrides attributeOverrides);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlAttributeOverrides attributeOverrides) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.#ctor(System.Xml.Serialization.XmlAttributeOverrides)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attributeOverrides" Type="System.Xml.Serialization.XmlAttributeOverrides" />
+      </Parameters>
+      <Docs>
+        <param name="attributeOverrides">Um objeto que substitui como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> classe serializa tipos mapeados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlReflectionImporter" /> substituições de classe usando a serialização de XML especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário criar uma instância do <xref:System.Xml.Serialization.XmlReflectionImporter> classe diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlReflectionImporter (System.Xml.Serialization.XmlAttributeOverrides attributeOverrides, string defaultNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlAttributeOverrides attributeOverrides, string defaultNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.#ctor(System.Xml.Serialization.XmlAttributeOverrides,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attributeOverrides" Type="System.Xml.Serialization.XmlAttributeOverrides" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeOverrides">Um objeto que substitui como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> classe serializa tipos mapeados.</param>
+        <param name="defaultNamespace">O namespace XML padrão a ser usado para importar mapeamentos de tipo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlReflectionImporter" /> classe usando as substituições de serialização de XML especificadas e o namespace XML padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário criar uma instância do <xref:System.Xml.Serialization.XmlReflectionImporter> classe diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportMembersMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMembersMapping ImportMembersMapping (string elementName, string ns, System.Xml.Serialization.XmlReflectionMember[] members, bool hasWrapperElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlMembersMapping ImportMembersMapping(string elementName, string ns, class System.Xml.Serialization.XmlReflectionMember[] members, bool hasWrapperElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.ImportMembersMapping(System.String,System.String,System.Xml.Serialization.XmlReflectionMember[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMembersMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="members" Type="System.Xml.Serialization.XmlReflectionMember[]" />
+        <Parameter Name="hasWrapperElement" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Um nome de elemento XML produzido pelo método de serviço Web.</param>
+        <param name="ns">Um namespace do elemento XML produzido pelo método de serviço Web.</param>
+        <param name="members">Uma matriz de <see cref="T:System.Xml.Serialization.XmlReflectionMember" /> entidades que pertencem a um método de serviço Web de código de objetos que contêm o .NET Framework.</param>
+        <param name="hasWrapperElement">
+          <see langword="true" />Se os elementos que correspondem a partes da mensagem WSDL Web Services Description Language () devem ser incluídos em um elemento wrapper extras em uma mensagem SOAP. Caso contrário, <see langword="false" />.</param>
+        <summary>Gera mapeamentos de tipo interna para obter informações de um método de serviço Web.</summary>
+        <returns>Um <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> com mapeamentos para as partes do elemento de um WSDL definição da mensagem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlReflectionImporter.ImportMembersMapping%2A> método é chamado durante inicialização de um cliente ou serviço da Web, ou refletir um serviço Web. Não é necessário chamá-la diretamente.  
+  
+ O <xref:System.Xml.Serialization.XmlReflectionMember> parâmetro de matriz pode consistir em qualquer um dos seguintes:  
+  
+-   Web serviço método parâmetros de entrada.  
+  
+-   Parâmetros de saída do método de serviço da Web, mais o tipo de retorno, se não void, no índice 0.  
+  
+-   Cabeçalhos de entrada SOAP.  
+  
+-   Cabeçalhos de saída SOAP.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportMembersMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMembersMapping ImportMembersMapping (string elementName, string ns, System.Xml.Serialization.XmlReflectionMember[] members, bool hasWrapperElement, bool rpc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlMembersMapping ImportMembersMapping(string elementName, string ns, class System.Xml.Serialization.XmlReflectionMember[] members, bool hasWrapperElement, bool rpc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.ImportMembersMapping(System.String,System.String,System.Xml.Serialization.XmlReflectionMember[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMembersMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="members" Type="System.Xml.Serialization.XmlReflectionMember[]" />
+        <Parameter Name="hasWrapperElement" Type="System.Boolean" />
+        <Parameter Name="rpc" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Um nome de elemento XML produzido pelo método de serviço Web.</param>
+        <param name="ns">Um namespace do elemento XML produzido pelo método de serviço Web.</param>
+        <param name="members">Uma matriz de <see cref="T:System.Xml.Serialization.XmlReflectionMember" /> entidades que pertencem a um método de serviço Web de código de objetos que contêm o .NET Framework.</param>
+        <param name="hasWrapperElement">
+          <see langword="true" />Se os elementos que correspondem a partes da mensagem WSDL Web Services Description Language () devem ser incluídos em um elemento wrapper extras em uma mensagem SOAP. Caso contrário, <see langword="false" />.</param>
+        <param name="rpc">
+          <see langword="true" />Se o método for uma chamada de procedimento remoto; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna os mapeamentos de tipo interno usando as informações de um método de serviço Web e permite que você especifique um nome de elemento XML, namespace XML e outras opções.</summary>
+        <returns>Um <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> que contém os mapeamentos.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportMembersMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMembersMapping ImportMembersMapping (string elementName, string ns, System.Xml.Serialization.XmlReflectionMember[] members, bool hasWrapperElement, bool rpc, bool openModel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlMembersMapping ImportMembersMapping(string elementName, string ns, class System.Xml.Serialization.XmlReflectionMember[] members, bool hasWrapperElement, bool rpc, bool openModel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.ImportMembersMapping(System.String,System.String,System.Xml.Serialization.XmlReflectionMember[],System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMembersMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="members" Type="System.Xml.Serialization.XmlReflectionMember[]" />
+        <Parameter Name="hasWrapperElement" Type="System.Boolean" />
+        <Parameter Name="rpc" Type="System.Boolean" />
+        <Parameter Name="openModel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Um nome de elemento XML produzido pelo método de serviço Web.</param>
+        <param name="ns">Um namespace do elemento XML produzido pelo método de serviço Web.</param>
+        <param name="members">Uma matriz de <see cref="T:System.Xml.Serialization.XmlReflectionMember" /> entidades que pertencem a um método de serviço Web de código de objetos que contêm o .NET Framework.</param>
+        <param name="hasWrapperElement">
+          <see langword="true" />Se os elementos que correspondem a partes da mensagem WSDL Web Services Description Language () devem ser incluídos em um elemento wrapper extras em uma mensagem SOAP. Caso contrário, <see langword="false" />.</param>
+        <param name="rpc">
+          <see langword="true" />Se o método for uma chamada de procedimento remoto; Caso contrário, <see langword="false" />.</param>
+        <param name="openModel">
+          <see langword="true" />para especificar que o tipo de esquema gerado será marcado com o <see langword="&lt;xs:anyAttribute&gt;" /> elemento; caso contrário, <see langword="false" />.</param>
+        <summary>Retorna os mapeamentos de tipo interno usando as informações de um método de serviço Web e permite que você especifique um nome de elemento XML, namespace XML e outras opções.</summary>
+        <returns>Um <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> que contém os mapeamentos.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportMembersMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlMembersMapping ImportMembersMapping (string elementName, string ns, System.Xml.Serialization.XmlReflectionMember[] members, bool hasWrapperElement, bool rpc, bool openModel, System.Xml.Serialization.XmlMappingAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlMembersMapping ImportMembersMapping(string elementName, string ns, class System.Xml.Serialization.XmlReflectionMember[] members, bool hasWrapperElement, bool rpc, bool openModel, valuetype System.Xml.Serialization.XmlMappingAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.ImportMembersMapping(System.String,System.String,System.Xml.Serialization.XmlReflectionMember[],System.Boolean,System.Boolean,System.Boolean,System.Xml.Serialization.XmlMappingAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlMembersMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="members" Type="System.Xml.Serialization.XmlReflectionMember[]" />
+        <Parameter Name="hasWrapperElement" Type="System.Boolean" />
+        <Parameter Name="rpc" Type="System.Boolean" />
+        <Parameter Name="openModel" Type="System.Boolean" />
+        <Parameter Name="access" Type="System.Xml.Serialization.XmlMappingAccess" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">Um nome de elemento XML produzido pelo método de serviço Web.</param>
+        <param name="ns">Um namespace do elemento XML produzido pelo método de serviço Web.</param>
+        <param name="members">Uma matriz de <see cref="T:System.Xml.Serialization.XmlReflectionMember" /> entidades que pertencem a um método de serviço Web de código de objetos que contêm o .NET Framework.</param>
+        <param name="hasWrapperElement">
+          <see langword="true" />Se os elementos que correspondem a partes da mensagem WSDL Web Services Description Language () devem ser incluídos em um elemento wrapper extras em uma mensagem SOAP. Caso contrário, <see langword="false" />.</param>
+        <param name="rpc">
+          <see langword="true" />Se o método for uma chamada de procedimento remoto; Caso contrário, <see langword="false" />.</param>
+        <param name="openModel">
+          <see langword="true" />para especificar que o tipo de esquema gerado será marcado com o <see langword="&lt;xs:anyAttribute&gt;" /> elemento; caso contrário, <see langword="false" />.</param>
+        <param name="access">Um dos valores de <see cref="T:System.Xml.Serialization.XmlMappingAccess" />. O padrão é <see langword="None" />.</param>
+        <summary>Gera mapeamentos de tipo interna para obter informações de um método de serviço Web.</summary>
+        <returns>Um <see cref="T:System.Xml.Serialization.XmlMembersMapping" /> que contém os mapeamentos.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportTypeMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportTypeMapping (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportTypeMapping(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do .NET Framework para o qual gerar um mapeamento de tipo.</param>
+        <summary>Gera um mapeamento para um elemento de esquema XML para um tipo .NET Framework especificado.</summary>
+        <returns>Mapeamento do .NET Framework interno de um tipo para um elemento de esquema XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário chamar o <xref:System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping%2A> método diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportTypeMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportTypeMapping (Type type, string defaultNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportTypeMapping(class System.Type type, string defaultNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do .NET Framework para o qual gerar um mapeamento de tipo.</param>
+        <param name="defaultNamespace">O namespace XML padrão a ser usado.</param>
+        <summary>Gera um mapeamento para um elemento de esquema XML para um tipo .NET Framework, usando o namespace e o tipo especificado.</summary>
+        <returns>Mapeamento do .NET Framework interno de um tipo para um elemento de esquema XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário chamar o <xref:System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping%2A> método diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportTypeMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportTypeMapping (Type type, System.Xml.Serialization.XmlRootAttribute root);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportTypeMapping(class System.Type type, class System.Xml.Serialization.XmlRootAttribute root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(System.Type,System.Xml.Serialization.XmlRootAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="root" Type="System.Xml.Serialization.XmlRootAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do .NET Framework para o qual gerar um mapeamento de tipo.</param>
+        <param name="root">Um <see cref="T:System.Xml.Serialization.XmlRootAttribute" /> atributo é aplicado ao tipo.</param>
+        <summary>Gera um mapeamento para um elemento de esquema XML para um tipo .NET Framework, usando o tipo especificado e o atributo.</summary>
+        <returns>Um <see cref="T:System.Xml.Serialization.XmlTypeMapping" /> que representa um mapeamento de tipo do .NET Framework para um elemento de esquema XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário chamar o <xref:System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping%2A> método diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ImportTypeMapping">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeMapping ImportTypeMapping (Type type, System.Xml.Serialization.XmlRootAttribute root, string defaultNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Serialization.XmlTypeMapping ImportTypeMapping(class System.Type type, class System.Xml.Serialization.XmlRootAttribute root, string defaultNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(System.Type,System.Xml.Serialization.XmlRootAttribute,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="root" Type="System.Xml.Serialization.XmlRootAttribute" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do .NET Framework para o qual gerar um mapeamento de tipo.</param>
+        <param name="root">Um <see cref="T:System.Xml.Serialization.XmlRootAttribute" /> atributo é aplicado ao tipo.</param>
+        <param name="defaultNamespace">O namespace XML padrão a ser usado.</param>
+        <summary>Gera um mapeamento para um elemento de esquema XML para um tipo .NET Framework, usando o tipo especificado, o atributo e o namespace.</summary>
+        <returns>Um <see cref="T:System.Xml.Serialization.XmlTypeMapping" /> que contém o mapeamento do .NET Framework interno de um tipo para um elemento de esquema XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário chamar o <xref:System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping%2A> método diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeType">
+      <MemberSignature Language="C#" Value="public void IncludeType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void IncludeType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.IncludeType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do .NET Framework para o qual salvar as informações de mapeamento de tipo.</param>
+        <summary>Inclui mapeamentos de um tipo para uso posterior durante a importação métodos são chamados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário chamar o <xref:System.Xml.Serialization.XmlReflectionImporter.IncludeType%2A> método diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeTypes">
+      <MemberSignature Language="C#" Value="public void IncludeTypes (System.Reflection.ICustomAttributeProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void IncludeTypes(class System.Reflection.ICustomAttributeProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlReflectionImporter.IncludeTypes(System.Reflection.ICustomAttributeProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Reflection.ICustomAttributeProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Uma instância do <see cref="T:System.Reflection.ICustomAttributeProvider" /> derivado de classe que contém os atributos personalizados de <see cref="T:System.Xml.Serialization.XmlIncludeAttribute" /> atributo.</param>
+        <summary>Inclui mapeamentos de tipos derivados para uso posterior durante a importação métodos forem invocados.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

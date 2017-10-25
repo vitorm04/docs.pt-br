@@ -1,0 +1,116 @@
+<Type Name="TextRun" FullName="System.Windows.Media.TextFormatting.TextRun">
+  <TypeSignature Language="C#" Value="public abstract class TextRun" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextRun extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextRun" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma sequência de caracteres que compartilham um único conjunto de propriedades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma sequência de texto é uma sequência de caracteres que compartilha um único conjunto de propriedades. Qualquer alteração de formato, como o estilo da fonte, cor de primeiro plano, família de fontes ou qualquer outro formatação efeito, quebras de executar o texto. O exemplo a seguir ilustra como as alterações na formatação de um texto de cadeia de caracteres resultados em uma série de sequências de texto — cada sequência de texto tem um conjunto comum de propriedades de formatação.  
+  
+ O <xref:System.Windows.Media.TextFormatting.TextRun> classe é a raiz de uma hierarquia de tipo que representa vários tipos de conteúdo de texto processado por <xref:System.Windows.Media.TextFormatting.TextFormatter>. Cada classe é derivada de <xref:System.Windows.Media.TextFormatting.TextRun> representa um tipo distinto de conteúdo de texto.  
+  
+|Classe|Descrição|  
+|-----------|-----------------|  
+|<xref:System.Windows.Media.TextFormatting.TextRun>|Raiz da hierarquia. Define um grupo de caracteres que compartilham o mesmo conjunto de propriedades de caracteres.|  
+|<xref:System.Windows.Media.TextFormatting.TextCharacters>|Define uma coleção de glifos de caractere de um tipo de letra físico distinto.|  
+|<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Define um tipo de conteúdo de texto em qual medir, ocorrências de teste e desenho de todo o conteúdo é feito como uma entidade diferente. Um exemplo desse tipo de conteúdo é um botão no meio da linha de texto.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfLine>|Define um código de caractere de quebra de linha.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>|Define um código de caractere de quebra de parágrafo. Deriva de <xref:System.Windows.Media.TextFormatting.TextEndOfLine>.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfSegment>|Define um marcador de quebra do segmento.|  
+|<xref:System.Windows.Media.TextFormatting.TextHidden>|Define um intervalo de caracteres não visível.|  
+|<xref:System.Windows.Media.TextFormatting.TextModifier>|Define o início de um escopo de modificação.|  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma substituição para o <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> método é implementado.  
+  
+ [!code-csharp[TextFormattingSnippets#TextFormattingSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormattingSnippets/CSharp/CustomTextClasses.cs#textformattingsnippet4)]
+ [!code-vb[TextFormattingSnippets#TextFormattingSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormattingSnippets/visualbasic/customtextclasses.vb#textformattingsnippet4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextRun ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRun.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de um <see cref="T:System.Windows.Media.TextFormatting.TextRun" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterBufferReference">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.TextFormatting.CharacterBufferReference CharacterBufferReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.TextFormatting.CharacterBufferReference CharacterBufferReference" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRun.CharacterBufferReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.CharacterBufferReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para a sequência de buffer de caracteres de texto.</summary>
+        <value>Um <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> valor que representa os caracteres no texto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public abstract int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRun.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de caracteres na sequência de texto.</summary>
+        <value>Um <see cref="T:System.Int32" /> valor que representa o número de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.TextFormatting.TextRunProperties Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.TextFormatting.TextRunProperties Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRun.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.TextRunProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conjunto de propriedades de texto que são compartilhadas por todos os caracteres no texto, como o pincel de primeiro plano ou de tipo.</summary>
+        <value>Um <see cref="T:System.Windows.Media.TextFormatting.TextRunProperties" /> compartilhado de valor que representa o conjunto de propriedades de texto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

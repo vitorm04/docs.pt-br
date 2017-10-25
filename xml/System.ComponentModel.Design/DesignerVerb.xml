@@ -1,0 +1,211 @@
+<Type Name="DesignerVerb" FullName="System.ComponentModel.Design.DesignerVerb">
+  <TypeSignature Language="C#" Value="public class DesignerVerb : System.ComponentModel.Design.MenuCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerVerb extends System.ComponentModel.Design.MenuCommand" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerVerb" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.MenuCommand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um verbo que pode ser invocado por meio de um designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um verbo do designer é um comando de menu vinculado a um manipulador de eventos. Verbos do designer são adicionados ao menu de atalho de um componente em tempo de design. No Visual Studio, cada verbo do designer também está listado, usando um <xref:System.Windows.Forms.LinkLabel>, além de **descrição** painel da janela Propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar <xref:System.ComponentModel.Design.DesignerVerb> objetos e adicioná-los ao menu de atalho de tempo de design de um componente.  
+  
+ [!code-cpp[DesignerVerb Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DesignerVerb Example/CPP/component1.cpp#1)]
+ [!code-csharp[DesignerVerb Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DesignerVerb Example/CS/component1.cs#1)]
+ [!code-vb[DesignerVerb Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DesignerVerb Example/VB/component1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerVerb (string text, EventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.EventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerVerb.#ctor(System.String,System.EventHandler)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="handler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto do comando de menu que é mostrado ao usuário.</param>
+        <param name="handler">O manipulador de eventos que executa as ações do verbo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.DesignerVerb" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os verbos são comandos de menu que são inseridos no menu dinamicamente em tempo de execução. Comandos de verbo geralmente são exibidos em um menu de editar ou no menu de atalho do componente.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerVerb (string text, EventHandler handler, System.ComponentModel.Design.CommandID startCommandID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, class System.EventHandler handler, class System.ComponentModel.Design.CommandID startCommandID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerVerb.#ctor(System.String,System.EventHandler,System.ComponentModel.Design.CommandID)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="handler" Type="System.EventHandler" />
+        <Parameter Name="startCommandID" Type="System.ComponentModel.Design.CommandID" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto do comando de menu que é mostrado ao usuário.</param>
+        <param name="handler">O manipulador de eventos que executa as ações do verbo.</param>
+        <param name="startCommandID">A ID de comando inicial para esse verbo. Por padrão, a arquitetura reservado define um intervalo de IDs de comando para verbos. Você pode substituir isso fornecendo uma ID de comando personalizado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.DesignerVerb" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os verbos são comandos de menu que são inseridos no menu dinamicamente em tempo de execução. Comandos de verbo geralmente são exibidos em um menu de editar ou no menu de atalho do componente.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerVerb.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição do item de menu para o verbo.</summary>
+        <value>Uma cadeia de caracteres que descreve o item de menu.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerVerb.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição de texto para o comando verbo no menu.</summary>
+        <value>Uma descrição para o comando de verbo.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerVerb.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui <see cref="M:System.Object.ToString" />.</summary>
+        <returns>Texto do verbo, ou uma cadeia de caracteres vazia ("") se o campo de texto está vazio.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

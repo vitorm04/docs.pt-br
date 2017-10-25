@@ -1,0 +1,194 @@
+<Type Name="RegistryHive" FullName="Microsoft.Win32.RegistryHive">
+  <TypeSignature Language="C#" Value="public enum RegistryHive" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed RegistryHive extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.RegistryHive" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa os possíveis valores para um nó de nível superior em um computador externo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `RegistryHive`os valores são usados pelo <xref:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey%2A> método para representar o nó de nível superior de uma chave solicitada em um computador (remoto) externa. O nó que pode ser aberto com o método OpenRemoteBaseKey deve ser um desses nível superior `RegistryKeys`. Acesso ao subchaves do nó identificado está disponível usando os métodos no <xref:Microsoft.Win32.RegistryKey>, desde que o o usuário tem a permissão apropriada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como abrir uma chave do registro em um computador remoto e enumerar os valores da chave. O computador remoto deve estar executando o serviço Registro remoto. Especifique o nome do computador remoto como um argumento de linha de comando ao invocar o programa.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey.OpenRemoteBaseKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey.OpenRemoteBaseKey/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.RegistryKey.OpenRemoteBaseKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey.OpenRemoteBaseKey/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.RegistryKey.OpenRemoteBaseKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey.OpenRemoteBaseKey/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClassesRoot">
+      <MemberSignature Language="C#" Value="ClassesRoot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryHive ClassesRoot = int32(-2147483648)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryHive.ClassesRoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryHive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a chave de base HKEY_CLASSES_ROOT em outro computador. Esse valor pode ser passado para o método <see cref="M:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive,System.String)" /> para abrir este nó remotamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentConfig">
+      <MemberSignature Language="C#" Value="CurrentConfig" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryHive CurrentConfig = int32(-2147483643)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryHive.CurrentConfig" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryHive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a chave de base HKEY_CURRENT_CONFIG em outro computador. Esse valor pode ser passado para o método <see cref="M:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive,System.String)" /> para abrir este nó remotamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentUser">
+      <MemberSignature Language="C#" Value="CurrentUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryHive CurrentUser = int32(-2147483647)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryHive.CurrentUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryHive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a chave de base HKEY_CURRENT_USER em outro computador. Esse valor pode ser passado para o método <see cref="M:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive,System.String)" /> para abrir este nó remotamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DynData">
+      <MemberSignature Language="C#" Value="DynData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryHive DynData = int32(-2147483642)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryHive.DynData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryHive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a chave de base HKEY_DYN_DATA em outro computador. Esse valor pode ser passado para o método <see cref="M:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive,System.String)" /> para abrir este nó remotamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalMachine">
+      <MemberSignature Language="C#" Value="LocalMachine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryHive LocalMachine = int32(-2147483646)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryHive.LocalMachine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryHive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a chave de base HKEY_LOCAL_MACHINE em outro computador. Esse valor pode ser passado para o método <see cref="M:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive,System.String)" /> para abrir este nó remotamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformanceData">
+      <MemberSignature Language="C#" Value="PerformanceData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryHive PerformanceData = int32(-2147483644)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryHive.PerformanceData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryHive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a chave de base HKEY_PERFORMANCE_DATA em outro computador. Esse valor pode ser passado para o método <see cref="M:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive,System.String)" /> para abrir este nó remotamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Users">
+      <MemberSignature Language="C#" Value="Users" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryHive Users = int32(-2147483645)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryHive.Users" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryHive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a chave de base HKEY_USERS em outro computador. Esse valor pode ser passado para o método <see cref="M:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive,System.String)" /> para abrir este nó remotamente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,233 @@
+<Type Name="ImportManyAttribute" FullName="System.ComponentModel.Composition.ImportManyAttribute">
+  <TypeSignature Language="C#" Value="public class ImportManyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImportManyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.ImportManyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que uma propriedade, campo ou parâmetro deve ser preenchido com todas as exportações correspondentes, pelo objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportManyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportManyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.ImportManyAttribute" /> classe, importando o conjunto de exportações com o nome do contrato padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado de chamar o <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> método do tipo de propriedade, campo ou parâmetro que está marcado com esse atributo.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportManyAttribute (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportManyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">O nome do contrato das exportações a importar ou <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.ImportManyAttribute" /> classe, importando o conjunto de exportações com o nome de contrato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado de chamar o <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> método no tipo de propriedade, campo ou parâmetro está marcado com esse atributo.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportManyAttribute (Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportManyAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">O tipo para derivar o nome do contrato de exportações a importação ou <see langword="null" /> para usar o nome do contrato padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.ImportManyAttribute" /> classe, importando o conjunto de exportações com o nome do contrato é derivado do tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `contractType`.  
+  
+ O nome do contrato padrão é o resultado de chamar o <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> método no tipo de propriedade, campo ou parâmetro está marcado com esse atributo.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportManyAttribute (string contractName, Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName, class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportManyAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">O nome do contrato das exportações a importar ou <see langword="null" /> ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <param name="contractType">O tipo de exportação para importar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.ImportManyAttribute" /> classe, importando o conjunto de exportações com o tipo de nome e contrato de contrato especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRecomposition">
+      <MemberSignature Language="C#" Value="public bool AllowRecomposition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowRecomposition" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportManyAttribute.AllowRecomposition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a propriedade decorada ou o campo será recomposto quando a alteração de contrato de exportações que fornecem a correspondência.</summary>
+        <value>
+          <see langword="true" />Se a propriedade ou campo permite recomposition quando exportações que fornecem a mesma <see cref="P:System.ComponentModel.Composition.ImportManyAttribute.ContractName" /> são adicionados ou removidos do <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />; caso contrário, <see langword="false" />.  
+  
+ O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractName">
+      <MemberSignature Language="C#" Value="public string ContractName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportManyAttribute.ContractName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do contrato das exportações para importar.</summary>
+        <value>O nome do contrato das exportações para importar. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractType">
+      <MemberSignature Language="C#" Value="public Type ContractType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContractType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportManyAttribute.ContractType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de contrato da exportação para importar.</summary>
+        <value>O tipo de exportação que essa importação está esperando. O valor padrão é <see langword="null" />, que significa que o tipo será obtido observando o tipo do membro que essa importação está associada. Se o tipo for <see cref="T:System.Object" />, a importação corresponderá a qualquer tipo exportado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredCreationPolicy">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.CreationPolicy RequiredCreationPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Composition.CreationPolicy RequiredCreationPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportManyAttribute.RequiredCreationPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.CreationPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica que o importador requer um determinado <see cref="T:System.ComponentModel.Composition.CreationPolicy" /> para as exportações usadas para satisfazer essa importação.</summary>
+        <value>Um dos seguintes valores:  
+  
+ <see cref="F:System.ComponentModel.Composition.CreationPolicy.Any" />, se o importador de não exigir um determinado <see cref="T:System.ComponentModel.Composition.CreationPolicy" />. Esse é o padrão.  
+  
+ <see cref="F:System.ComponentModel.Composition.CreationPolicy.Shared" />para exigir que todas as exportações usadas ser compartilhado por todas as partes no contêiner.  
+  
+ <see cref="F:System.ComponentModel.Composition.CreationPolicy.NonShared" />para exigir que todas as exportações usadas seja não compartilhado em um contêiner. Nesse caso, cada parte recebe sua própria instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.ImportSource Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Composition.ImportSource Source" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportManyAttribute.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.ImportSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica os escopos do qual essa importação pode ser atendida.</summary>
+        <value>Um valor que especifica os escopos do qual essa importação pode ser atendida.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,75 @@
+<Type Name="EventProvider+WriteEventErrorCode" FullName="System.Diagnostics.Eventing.EventProvider+WriteEventErrorCode">
+  <TypeSignature Language="C#" Value="public enum EventProvider.WriteEventErrorCode" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed EventProvider/WriteEventErrorCode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.EventProvider.WriteEventErrorCode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os possíveis estados da última operação de gravação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma instância dessa enumeração, chame o <xref:System.Diagnostics.Eventing.EventProvider.GetLastWriteEventError%2A?displayProperty=nameWithType> método.  
+  
+ O <xref:System.Diagnostics.Eventing.EventProvider.WriteEvent%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Eventing.EventProvider.WriteMessageEvent%2A?displayProperty=nameWithType>, e <xref:System.Diagnostics.Eventing.EventProvider.WriteTransferEvent%2A?displayProperty=nameWithType> métodos para definir esse valor se houver falha na gravação do evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EventTooBig">
+      <MemberSignature Language="C#" Value="EventTooBig" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.EventProvider/WriteEventErrorCode EventTooBig = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.EventProvider.WriteEventErrorCode.EventTooBig" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.EventProvider+WriteEventErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O evento é maior do que o tamanho do buffer de sessão; eventos não podem abranger buffers.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoError">
+      <MemberSignature Language="C#" Value="NoError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.EventProvider/WriteEventErrorCode NoError = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.EventProvider.WriteEventErrorCode.NoError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.EventProvider+WriteEventErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A gravação foi bem-sucedida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoFreeBuffers">
+      <MemberSignature Language="C#" Value="NoFreeBuffers" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.EventProvider/WriteEventErrorCode NoFreeBuffers = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.EventProvider.WriteEventErrorCode.NoFreeBuffers" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.EventProvider+WriteEventErrorCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A sessão ficou sem buffers livres para gravar. Isso pode ocorrer durante as taxas de eventos de alta porque o subsistema do disco está sobrecarregado ou o número de buffers é muito pequeno. Em vez de bloqueio até que mais buffers ficam disponíveis, o evento será descartado. Considere aumentar o número e tamanho dos buffers para a sessão, ou reduzindo o número de eventos gravados ou o tamanho dos eventos.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

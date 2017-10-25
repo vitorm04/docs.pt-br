@@ -1,0 +1,456 @@
+<Type Name="HttpEncoder" FullName="System.Web.Util.HttpEncoder">
+  <TypeSignature Language="C#" Value="public class HttpEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi HttpEncoder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Util.HttpEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece lógica de codificação e de decodificação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe contém codificação e decodificação de lógica que é usada pelos métodos nas classes como <xref:System.Web.HttpUtility>, <xref:System.Web.HttpServerUtility>, e <xref:System.Net.HttpResponseHeader>.  
+  
+ É possível herdar a <xref:System.Web.Util.HttpEncoder> classe e substituir seu comportamento para personalizar o padrão de codificação e decodificação de comportamento do ASP.NET. Você definir o <xref:System.Web.Configuration.HttpRuntimeSection.EncoderType%2A> propriedade o <xref:System.Web.Configuration.HttpRuntimeSection> classe para configurar sua classe personalizada.  
+  
+ Uma classe personalizada para codificar e decodificar que deriva de <xref:System.Web.Util.HttpEncoder> pode substituir a codificação e decodificação de comportamento do ASP.NET internos ou alterar apenas selecionado aspectos dele.  
+  
+ Você pode configurar o tipo de codificação personalizado para ASP.NET para substituir ou complementar o seguinte comportamento de codificação:  
+  
+-   Codificação HTML  
+  
+-   Codificação do atributo HTML  
+  
+-   Codificação de URL  
+  
+-   Codificação de caminho de URL  
+  
+-   Nome do cabeçalho HTTP e a codificação de valor de cabeçalho  
+  
+ Por padrão, os aplicativos ASP.NET são configurados para usar o <xref:System.Web.Security.AntiXss.AntiXssEncoder> tipo para codificação de saída.  
+  
+ O exemplo a seguir de um mostra do nível do aplicativo Web. config arquivo como o <xref:System.Web.Security.AntiXss.AntiXssEncoder> tipo é definido para um aplicativo ASP.NET:  
+  
+ `<httpRuntime requestValidationMode="4.5" encoderType="System.Web.Security.AntiXss.AntiXssEncoder, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>`  
+  
+ A definição de configuração nos conjuntos de exemplo o <xref:System.Web.Security.AntiXss.AntiXssEncoder> classe para executar todas as saída codificação no aplicativo. Para obter mais informações, consulte o <xref:System.Web.Security.AntiXss.AntiXssEncoder> visão geral da classe.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você cria uma classe de codificador personalizado e substituir os métodos base da classe base, o codificador derivado pode lançar uma exceção de qualquer um dos métodos substituídos. No entanto, nos seguintes casos lançar uma exceção tal pode resultar em comportamento inesperado no ASP.NET:  
+  
+-   Se o ASP.NET está processando uma página de erro é causada por uma exceção sem tratamento foi gerada de um codificador personalizado, o ASP.NET não tentará codificar sua saída de erro chamando o codificador personalizado. Isso evita as condições de erro recursiva.  
+  
+-   Quando o ASP.NET está enviando cabeçalhos HTTP para IIS, ASP.NET não tem provisão para exceções não tratadas. Portanto, a página de erro padrão do ASP.NET será renderizada (se as definições de configuração permite que essa página a ser exibido).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.HttpEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Util.HttpEncoder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Web.Util.HttpEncoder Current { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Util.HttpEncoder Current" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Util.HttpEncoder.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Util.HttpEncoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.Util.HttpEncoder" /> tipo que será usado em um aplicativo.</summary>
+        <value>Uma referência para o tipo de codificador/decodificador que será usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um derivado <xref:System.Web.Util.HttpEncoder> tipo é especificado no arquivo de configuração, o <xref:System.Web.Util.HttpEncoder.Current%2A> propriedade retorna uma referência para o tipo personalizado. No entanto, se nenhum codificador personalizado for usado, a propriedade retorna uma referência para o padrão ASP.NET <xref:System.Web.Util.HttpEncoder> instância.  
+  
+ O <xref:System.Web.Util.HttpEncoder.Current%2A> propriedade não é thread-safe. Defina essa propriedade apenas do aplicativo `Application_Start` método, porque `Application_Start` é executado em um único thread.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A instância do codificador que está sendo atribuída a essa propriedade é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Web.Util.HttpEncoder Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Util.HttpEncoder Default" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Util.HttpEncoder.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Util.HttpEncoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o codificador padrão do ASP.NET.</summary>
+        <value>Uma referência para o codificador padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um problema de codificação comuns é que o padrão ASP.NET <xref:System.Web.Util.HttpEncoder.UrlEncode%2A> comportamento converte espaços no caractere "+". Historicamente, o caractere "+" foi uma convenção de Internet para codificação de caracteres de espaço em uma URL em uma maneira mais legível. No entanto, de acordo com os padrões, o caractere de espaço deve ser codificado como "% 20" e, em vez de como o caractere "+". ASP.NET permite implementar um mais algoritmo codificação compatível com padrões.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderNameValueEncode">
+      <MemberSignature Language="C#" Value="protected virtual void HeaderNameValueEncode (string headerName, string headerValue, out string encodedHeaderName, out string encodedHeaderValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void HeaderNameValueEncode(string headerName, string headerValue, [out] string&amp; encodedHeaderName, [out] string&amp; encodedHeaderValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.HttpEncoder.HeaderNameValueEncode(System.String,System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headerName" Type="System.String" />
+        <Parameter Name="headerValue" Type="System.String" />
+        <Parameter Name="encodedHeaderName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="encodedHeaderValue" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="headerName">O nome do cabeçalho HTTP a ser codificado.</param>
+        <param name="headerValue">O valor do cabeçalho HTTP para codificar.</param>
+        <param name="encodedHeaderName">Quando este método retorna, contém o nome codificado para usar um cabeçalho HTTP. Este parâmetro é passado não inicializado.</param>
+        <param name="encodedHeaderValue">Quando este método retorna, contém o valor codificado para usar em um cabeçalho HTTP. Este parâmetro é passado não inicializado.</param>
+        <summary>Codifica um nome de cabeçalho em uma cadeia de caracteres que pode ser usada como um cabeçalho HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Util.HttpEncoder.HeaderNameValueEncode%2A> método usa cadeias de caracteres de entrada do `headerName` e `headerValue` parâmetros e irá codificá-los. Os valores codificados são retornados como parâmetros de saída.  
+  
+ O <xref:System.Web.Util.HttpEncoder.HeaderNameValueEncode%2A> método usa a seguinte lógica para codificar valores e nomes de cabeçalho:  
+  
+-   Todos os caracteres cujo valor Unicode é menor que o caractere ASCII 32, exceto o caractere ASCII 9, são codificados de URL em um formato de `%NN` onde o `N` caracteres representam valores hexadecimais.  
+  
+-   Caractere ASCII 9 (o caractere de tabulação horizontal) não é codificado de URL.  
+  
+-   Caractere ASCII 127 é codificado como `%7F`.  
+  
+-   Todos os outros caracteres não são codificados.  
+  
+    > [!NOTE]
+    >  Embora esse método pode ser usado para valores Unicode, ele é normalmente usado para valores no intervalo ASCII.  
+  
+ A implementação padrão da <xref:System.Web.Util.HttpEncoder.HeaderNameValueEncode%2A> método retornará o valor de `headerValue` na `encodedHeaderValue` se `headerValue` é `null` ou é uma cadeia de caracteres vazia. Da mesma forma, a implementação padrão retorna o valor de `headerName` na `encodedHeaderName` se `headerName` é `null` ou é uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlAttributeEncode">
+      <MemberSignature Language="C#" Value="protected virtual void HtmlAttributeEncode (string value, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void HtmlAttributeEncode(string value, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.HttpEncoder.HtmlAttributeEncode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser codificada.</param>
+        <param name="output">O gravador de texto no qual gravar o valor codificado.</param>
+        <summary>Codifica um valor de entrada em uma cadeia de caracteres que pode ser inserida em um atributo HTML que é delimitado com aspas simples ou duplas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Util.HttpEncoder.HtmlAttributeEncode%2A> método codifica caracteres usando as entidades HTML padrão. Por exemplo, o `<` (colchete angular esquerdo) é codificado como `&lt;` e `\` (barra invertida) é codificada como `&#92;`.  
+  
+ É seguro usar <xref:System.Web.Util.HttpEncoder.HtmlAttributeEncode%2A> dentro de atributos entre aspas simples e aspas duplas. Os valores devem estar entre aspas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlDecode">
+      <MemberSignature Language="C#" Value="protected virtual void HtmlDecode (string value, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void HtmlDecode(string value, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.HttpEncoder.HtmlDecode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para decodificar.</param>
+        <param name="output">O text writer no qual gravar o valor decodificado.</param>
+        <summary>Decodifica um valor de uma cadeia de caracteres codificada em HTML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir lista as sequências de caracteres que pode decodificar a lógica de decodificação do ASP.NET.  
+  
+|Sequência de caracteres|Regra|  
+|------------------------|----------|  
+|`&#NNN;`(decimais códigos para caracteres ASCII).|Decodificar como o caractere ASCII especificado. A sequência de caracteres começa no primeiro dígito após o caractere # e terminando no ponto e vírgula.|  
+|`&#xZZ;`(códigos hexadecimais para caracteres ASCII).|Decodificar como o caractere ASCII especificado. O formulário codificado Especifica o caractere usando caracteres hexadecimais, em vez de um valor decimal. A sequência de caracteres começa no primeiro dígito após o caractere # e terminando no ponto e vírgula.|  
+|Entidades nomeadas de HTML.|Decodificar como equivalente de caracteres ASCII.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="protected virtual void HtmlEncode (string value, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void HtmlEncode(string value, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.HttpEncoder.HtmlEncode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser codificada.</param>
+        <param name="output">O gravador de texto no qual gravar o valor codificado.</param>
+        <summary>Converte uma cadeia de caracteres em uma cadeia de caracteres codificada em HTML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir lista as sequências de caracteres que pode decodificar a lógica de codificação do ASP.NET.  
+  
+|Caractere|Codificado como|  
+|---------------|----------------|  
+|`<`(colchete angular esquerdo)|`&lt;`|  
+|`>`(colchete angular direito)|`&gt;`|  
+|`"`(aspas duplas)|`&quot;`|  
+|`&`(e comercial)|`&amp;`|  
+|`\`(barra invertida)|`&#92;`|  
+|Caracteres ASCII de 160 até 255.|`&#NNN;`, onde `NNN` é o código de caracteres de três dígitos decimais|  
+  
+ Se você substituir o <xref:System.Web.Util.HttpEncoder.HtmlEncode%2A> método, você deve produzir saída também é segura nos atributos HTML entre aspas duplas ou entre aspas simples. Isso acomoda a análise pelo mecanismo Razor, onde marcação e código podem ser combinados, tais como \<marca attr = "@value" >. Além disso, o operador @ não está ciente do contexto quando processadas pelo mecanismo Razor, portanto, ele chama <xref:System.Web.Util.HttpEncoder.HtmlEncode%2A> em vez de <xref:System.Web.Util.HttpEncoder.HtmlAttributeEncode%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="JavaScriptStringEncode">
+      <MemberSignature Language="C#" Value="protected virtual string JavaScriptStringEncode (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string JavaScriptStringEncode(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.HttpEncoder.JavaScriptStringEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser codificada.</param>
+        <summary>Codifica uma cadeia de caracteres.</summary>
+        <returns>Uma cadeia de caracteres codificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Codificação de URL certifica-se de que todos os navegadores corretamente transmitam texto em cadeias de caracteres de URL. Caracteres como espaços, e comercial (&), barra (/) e um ponto de interrogação (?) pode estar truncado ou corrompido por alguns navegadores. Portanto, esses caracteres devem ser codificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="protected virtual byte[] UrlEncode (byte[] bytes, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance unsigned int8[] UrlEncode(unsigned int8[] bytes, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.HttpEncoder.UrlEncode(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">Uma matriz de bytes a ser codificada.</param>
+        <param name="offset">A posição no <c>bytes</c> matriz na qual iniciar a codificação.</param>
+        <param name="count">O número de itens de <c>bytes</c> matriz para codificar.</param>
+        <summary>Codifica uma matriz de caracteres que não são permitidos em uma URL em uma entidade de caracteres hexadecimais equivalente.</summary>
+        <returns>Uma matriz de caracteres codificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Util.HttpEncoder.UrlEncode%2A> método é chamado por vários métodos de codificação de URL no <xref:System.Web.HttpUtility> classe.  
+  
+ O <xref:System.Web.Util.HttpEncoder.UrlEncode%2A> método codifica a URL de qualquer caractere que não está no conjunto de ASCII caracteres que é considerada segura de URL. Espaços são codificados como o ASCII "`+"` caracteres. Caracteres ASCII de URL seguro incluem os caracteres ASCI (À Z e à z), numerais (0 a 9) e alguns sinais de pontuação. A tabela a seguir lista as marcas de pontuação são consideradas caracteres ASCII de URL seguro.  
+  
+|Caractere|Descrição|  
+|---------------|-----------------|  
+|-|Hífen|  
+|_|Sublinhado|  
+|.|(Ponto)|  
+|!|Ponto de exclamação|  
+|*|Asterisco (estrela)|  
+|(|Parêntese de abertura|  
+|)|Parêntese de fechamento|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />é menor que zero ou maior que o comprimento da <paramref name="bytes" /> matriz.  
+  
+ -ou-  
+  
+ <paramref name="count" />é menor que zero ou <paramref name="count" /> mais <paramref name="offset" /> é maior que o comprimento do <paramref name="bytes" /> matriz.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bytes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlPathEncode">
+      <MemberSignature Language="C#" Value="protected virtual string UrlPathEncode (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string UrlPathEncode(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.HttpEncoder.UrlPathEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser codificada.</param>
+        <summary>Codifica uma subseção de uma URL.</summary>
+        <returns>Uma cadeia de caracteres codificada em URL.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Util.HttpEncoder.UrlPathEncode%2A> método é chamado pelo <xref:System.Web.HttpUtility.UrlPathEncode%2A> método. O <xref:System.Web.HttpUtility.UrlPathEncode%2A> método executa as seguintes etapas:  
+  
+-   Aplica a lógica de codificação do <xref:System.Web.Util.HttpEncoder.UrlPathEncode%2A> método somente a parte do caminho da URL (o que exclui a cadeia de caracteres de consulta). O método pressupõe que a URL é codificada como uma cadeia de caracteres UTF-8.  
+  
+-   Codifica não espaços para que somente um subconjunto dos primeiros 128 caracteres ASCII é usado na cadeia de caracteres codificada resultante. Qualquer caractere no valor Unicode 128 e maior, ou 32 e menor, é codificados de URL.  
+  
+-   Codifica espaços como % 20.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

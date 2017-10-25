@@ -1,0 +1,111 @@
+<Type Name="RootedPathValidator" FullName="System.Xml.Serialization.Configuration.RootedPathValidator">
+  <TypeSignature Language="C#" Value="public class RootedPathValidator : System.Configuration.ConfigurationValidatorBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RootedPathValidator extends System.Configuration.ConfigurationValidatorBase" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.Configuration.RootedPathValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationValidatorBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Valida as regras que regem o uso de <c>tempFilesLocation</c> opção de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao adicionar um `WebReference` objeto a um serviço Web de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], arquivos são criados pelo processo de descoberta de serviço da Web.  
+  
+ Clientes de serviço Web Saiba onde encontrar o documento de descrição (WSDL) do serviço da Web adicionando um `WebReference` objeto. Os clientes de serviço Web, em seguida, salvar os documentos de descoberta para o disco usando o `WriteAll` método. Por exemplo, os documentos de descoberta podem ser arquivos de esquema. xsd ou descrições de serviços. No final do processo, o cliente exclui os arquivos. Você pode alterar o local padrão dos arquivos na pasta temporária usando o `tempFilesLocation` de inserção de `<xmlSerializer>` elemento, especificado no arquivo de configuração Machine. config, como no exemplo a seguir.  
+  
+```  
+<configuration>  
+  <system.web>  
+  <system.xml.serialization>  
+    <xmlSerializer tempFilesLocation=".."/>  
+  </system.xml.serialization>  
+</configuration>  
+```  
+  
+ O valor de `tempFilesLocation` deve ser um caminho absoluto. Se o caminho especificado não é absoluto, o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] gera um <xref:System.Configuration.ConfigurationErrorsException> exceção quando a seção de configuração é referenciada.  
+  
+ O valor da propriedade é truncado para remover espaços à direita e branco.  
+  
+ Se o valor da `tempFilesLocation` propriedade é composta de espaço em branco, o local do padrão % TMP % é usado para a compilação. O mesmo comportamento padrão ocorre quando nenhuma `tempFilesLocation` opção é especificada.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializer> não verifica se o caminho existe. Se não, uma <xref:System.IO.DirectoryNotFoundException> é gerado. Isso é idêntico ao comportamento padrão da `XmlSerializer` se não existir o caminho de % TMP %.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RootedPathValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.RootedPathValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.Configuration.RootedPathValidator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidate">
+      <MemberSignature Language="C#" Value="public override bool CanValidate (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanValidate(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.RootedPathValidator.CanValidate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto.</param>
+        <summary>Determina se o tipo de objeto pode ser validado.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="type" /> parâmetro corresponde a uma opção válida <see langword="XMLSerializer" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override void Validate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Validate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.Configuration.RootedPathValidator.Validate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de um objeto.</param>
+        <summary>Determina se o valor de um objeto é válido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `XmlSerializer` objeto para validar é passado como um parâmetro de `Validate` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

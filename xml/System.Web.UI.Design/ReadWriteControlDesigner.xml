@@ -1,0 +1,218 @@
+<Type Name="ReadWriteControlDesigner" FullName="System.Web.UI.Design.ReadWriteControlDesigner">
+  <TypeSignature Language="C#" Value="public class ReadWriteControlDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ReadWriteControlDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ReadWriteControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The recommended alternative is ContainerControlDesigner because it uses an EditableDesignerRegion for editing the content. Designer regions allow for better control of the content being edited. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Estende o comportamento de tempo de design para leitura/gravação controles de servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ReadWriteControlDesigner> classe está obsoleta. Use o <xref:System.Web.UI.Design.ContainerControlDesigner> classe para a funcionalidade de designer de controle equivalente.  
+  
+ Esse designer de controle fornece a capacidade de soltar os controles para o controle para este designer.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Os implementadores de designers que deseja que seu controle para dar suporte à adição de controles filho deverão usar <see cref="T:System.Web.UI.Design.ReadWriteControlDesigner" />. Se você não desejar que o controle para oferecer suporte a controles filho, usar um designer derivado de <see cref="T:System.Web.UI.Design.ControlDesigner" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReadWriteControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Web.UI.Design.ReadWriteControlDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ReadWriteControlDesigner> classe está obsoleta. Use o <xref:System.Web.UI.Design.ContainerControlDesigner> classe para a funcionalidade de designer de controle equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o HTML que é usado para representar o controle em tempo de design.</summary>
+        <returns>O HTML que é usado para representar o controle em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ReadWriteControlDesigner> classe está obsoleta. Use o <xref:System.Web.UI.Design.ContainerControlDesigner> classe para a funcionalidade de designer de controle equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapPropertyToStyle">
+      <MemberSignature Language="C#" Value="protected virtual void MapPropertyToStyle (string propName, object varPropValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void MapPropertyToStyle(string propName, object varPropValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.MapPropertyToStyle(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propName" Type="System.String" />
+        <Parameter Name="varPropValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propName">O nome da propriedade para mapear.</param>
+        <param name="varPropValue">O valor da propriedade.</param>
+        <summary>Mapeia uma propriedade, incluindo a descrição e o valor em um estilo HTML intrínseco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ReadWriteControlDesigner.MapPropertyToStyle%2A> método está obsoleto. Use o <xref:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeCssAttributes%2A?displayProperty=nameWithType> método para a funcionalidade de designer de controle equivalente.  
+  
+> [!NOTE]
+>  Este método deve ser substituído em uma classe derivada para implementar o designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBehaviorAttached">
+      <MemberSignature Language="C#" Value="protected override void OnBehaviorAttached ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBehaviorAttached() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.OnBehaviorAttached" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is ControlDesigner.Tag. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece notificação que é gerada quando um comportamento está anexado ao designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ReadWriteControlDesigner.OnBehaviorAttached%2A> método está obsoleto. Use os membros de <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType> propriedade em vez disso. Por exemplo, use o <xref:System.Web.UI.Design.IControlDesignerTag.SetAttribute%2A> e <xref:System.Web.UI.Design.IControlDesignerTag.GetAttribute%2A> métodos no <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType> propriedade para mapear propriedades de estilos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComponentChanged">
+      <MemberSignature Language="C#" Value="public override void OnComponentChanged (object sender, System.ComponentModel.Design.ComponentChangedEventArgs ce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnComponentChanged(object sender, class System.ComponentModel.Design.ComponentChangedEventArgs ce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.OnComponentChanged(System.Object,System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="ce" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">O objeto de enviar o evento.</param>
+        <param name="ce">O <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" /> objeto que fornece dados para o evento.</param>
+        <summary>Representa o método que manipulará o evento <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" /> da classe <see cref="T:System.ComponentModel.Design.IComponentChangeService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ReadWriteControlDesigner> classe está obsoleta. Use o <xref:System.Web.UI.Design.ContainerControlDesigner> classe para a funcionalidade de designer de controle equivalente.  
+  
+ O <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> evento ocorre depois que uma propriedade foi alterada. Esse método permite que os implementadores de fazer qualquer processamento que pode ser necessária após uma alteração de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override void UpdateDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UpdateDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ReadWriteControlDesigner.UpdateDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza a exibição do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ReadWriteControlDesigner> classe está obsoleta. Use o <xref:System.Web.UI.Design.ContainerControlDesigner> classe para a funcionalidade de designer de controle equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,398 @@
+<Type Name="SyndicationElementExtension" FullName="System.ServiceModel.Syndication.SyndicationElementExtension">
+  <TypeSignature Language="C#" Value="public class SyndicationElementExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SyndicationElementExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Syndication.SyndicationElementExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe que representa uma extensão de elemento de distribuição.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ RSS e Atom dar suporte à extensibilidade de protocolo com elementos adicionais qualificado de namespace. Um elemento XML não especificamente definido nas especificações do RSS ou Atom pode estar presente no nível de item ou de feed como o namespace do elemento não coincide com o namespace raiz do feed delimitador. Extensões de elemento podem ser adicionadas a várias classes incluindo:  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+  
+-   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+  
+ O modelo de objeto de agregação torna mais fácil a extensibilidade usando <xref:System.ServiceModel.Syndication.SyndicationElementExtension>, que pode ser colocado em um <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationElementExtension (object dataContractExtension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object dataContractExtension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataContractExtension" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataContractExtension">O objeto de contrato de dados usado para inicializar a extensão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" /> classe com o objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationElementExtension (System.Xml.XmlReader xmlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.#ctor(System.Xml.XmlReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">O <see cref="T:System.Xml.XmlReader" /> que contém o conteúdo do novo <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationElementExtension (object dataContractExtension, System.Runtime.Serialization.XmlObjectSerializer dataContractSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object dataContractExtension, class System.Runtime.Serialization.XmlObjectSerializer dataContractSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.#ctor(System.Object,System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataContractExtension" Type="System.Object" />
+        <Parameter Name="dataContractSerializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="dataContractExtension">O objeto de contrato de dados usado para inicializar a extensão.</param>
+        <param name="dataContractSerializer">O serializador de contrato de dados a ser usado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" /> serializador de contrato de classe com o objeto especificado e os dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationElementExtension (object xmlSerializerExtension, System.Xml.Serialization.XmlSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object xmlSerializerExtension, class System.Xml.Serialization.XmlSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.#ctor(System.Object,System.Xml.Serialization.XmlSerializer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlSerializerExtension" Type="System.Object" />
+        <Parameter Name="serializer" Type="System.Xml.Serialization.XmlSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="xmlSerializerExtension">O objeto usado para inicializar a extensão.</param>
+        <param name="serializer">O serializador XML a ser usado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" /> classe com o objeto especificado e o serializador XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationElementExtension (string outerName, string outerNamespace, object dataContractExtension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string outerName, string outerNamespace, object dataContractExtension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.#ctor(System.String,System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="outerName" Type="System.String" />
+        <Parameter Name="outerNamespace" Type="System.String" />
+        <Parameter Name="dataContractExtension" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="outerName">O nome do elemento XML delimitador.</param>
+        <param name="outerNamespace">O namespace do elemento XML delimitador.</param>
+        <param name="dataContractExtension">O objeto usado para inicializar a extensão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" /> classe com o nome externo especificado, o namespace externa e o objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SyndicationElementExtension (string outerName, string outerNamespace, object dataContractExtension, System.Runtime.Serialization.XmlObjectSerializer dataContractSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string outerName, string outerNamespace, object dataContractExtension, class System.Runtime.Serialization.XmlObjectSerializer dataContractSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.#ctor(System.String,System.String,System.Object,System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="outerName" Type="System.String" />
+        <Parameter Name="outerNamespace" Type="System.String" />
+        <Parameter Name="dataContractExtension" Type="System.Object" />
+        <Parameter Name="dataContractSerializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="outerName">O nome do elemento XML delimitador.</param>
+        <param name="outerNamespace">O namespace do elemento XML delimitador.</param>
+        <param name="dataContractExtension">O objeto usado para inicializar a extensão.</param>
+        <param name="dataContractSerializer">O serializador de contrato de dados a ser usado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" /> serializador de contrato de classe com o nome externo especificado, o namespace externa, o objeto e a dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject&lt;TExtension&gt;">
+      <MemberSignature Language="C#" Value="public TExtension GetObject&lt;TExtension&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TExtension GetObject&lt;TExtension&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.GetObject``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TExtension</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TExtension" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TExtension">O tipo de extensão para recuperar.</typeparam>
+        <summary>Obtém o objeto que representa a extensão de elemento.</summary>
+        <returns>Um objeto do tipo especificado que contém a extensão de elemento.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">O tipo não é um contrato de dados válido.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">O XML de entrada não pode ser desserializado no tipo solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject&lt;TExtension&gt;">
+      <MemberSignature Language="C#" Value="public TExtension GetObject&lt;TExtension&gt; (System.Runtime.Serialization.XmlObjectSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TExtension GetObject&lt;TExtension&gt;(class System.Runtime.Serialization.XmlObjectSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.GetObject``1(System.Runtime.Serialization.XmlObjectSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TExtension</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TExtension" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serializer" Type="System.Runtime.Serialization.XmlObjectSerializer" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TExtension">O tipo de extensão para recuperar.</typeparam>
+        <param name="serializer">O <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> a ser usado.</param>
+        <summary>Obtém o objeto que representa a extensão de elemento.</summary>
+        <returns>Um objeto do tipo especificado que contém a extensão de elemento.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">O tipo não é um contrato de dados válido.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">O XML de entrada não pode ser desserializado no tipo solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject&lt;TExtension&gt;">
+      <MemberSignature Language="C#" Value="public TExtension GetObject&lt;TExtension&gt; (System.Xml.Serialization.XmlSerializer serializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TExtension GetObject&lt;TExtension&gt;(class System.Xml.Serialization.XmlSerializer serializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.GetObject``1(System.Xml.Serialization.XmlSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TExtension</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TExtension" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serializer" Type="System.Xml.Serialization.XmlSerializer" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TExtension">O tipo de extensão para recuperar.</typeparam>
+        <param name="serializer">O <see cref="T:System.Xml.Serialization.XmlSerializer" /> a ser usado.</param>
+        <summary>Obtém o objeto que representa a extensão de elemento.</summary>
+        <returns>Um objeto do tipo especificado que contém a extensão de elemento.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O XML de entrada não pode ser desserializado no tipo solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReader">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlReader GetReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlReader GetReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.XmlReader" /> associado ao <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" />.</summary>
+        <returns>O <see cref="T:System.Xml.XmlReader" /> associado ao <see cref="T:System.ServiceModel.Syndication.SyndicationElementExtension" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OuterName">
+      <MemberSignature Language="C#" Value="public string OuterName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OuterName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationElementExtension.OuterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome externo da extensão de elemento.</summary>
+        <value>O nome externo da extensão de elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É o nome externo da extensão de elemento seguinte `custom`.  
+  
+```  
+<feed xmlns:mg="http://contoso.com">  
+....<mg:custom> some text </mg:custom>  
+</feed>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OuterNamespace">
+      <MemberSignature Language="C#" Value="public string OuterNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OuterNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Syndication.SyndicationElementExtension.OuterNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace externo da extensão de elemento.</summary>
+        <value>O namespace externo da extensão de elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O namespace externo do seguinte elemento personalizado é `mg`.  
+  
+```  
+<feed xmlns:mg="http://contoso.com">  
+    <mg:custom> some text </mg:custom>  
+</feed>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Syndication.SyndicationElementExtension.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> no qual ocorrerá a gravação.</param>
+        <summary>Grava a extensão atual especificado <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

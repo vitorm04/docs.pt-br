@@ -1,0 +1,124 @@
+<Type Name="QueryContinueDragEventArgs" FullName="System.Windows.QueryContinueDragEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class QueryContinueDragEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit QueryContinueDragEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.QueryContinueDragEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém argumentos para o evento <see cref="E:System.Windows.DragDrop.QueryContinueDrag" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.QueryContinueDrag> evento ocorrer durante uma operação de arrastar e soltar e permite que a fonte determinar se a operação de arrastar e soltar deve ser cancelada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Windows.DragAction Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.QueryContinueDragEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o status atual da operação de arrastar e soltar associado.</summary>
+        <value>Membro de <see cref="T:System.Windows.DragAction" /> enumeração que indica o status atual da operação de arrastar e soltar associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Windows.DragDrop.QueryContinueDrag> conjuntos de eventos de <xref:System.Windows.QueryContinueDragEventArgs.Action%2A> propriedade `Cancel` se a tecla ESC está pressionada e define <xref:System.Windows.QueryContinueDragEventArgs.Action%2A> para `Drop` se o botão esquerdo, central ou direito do mouse é liberado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EscapePressed">
+      <MemberSignature Language="C#" Value="public bool EscapePressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EscapePressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.QueryContinueDragEventArgs.EscapePressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se a tecla ESC foi pressionada.</summary>
+        <value>Um valor booliano que indica se a tecla ESC foi pressionada. <see langword="true" />Se a ESC foi pressionado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Windows.DragDrop.QueryContinueDrag> evento define o <xref:System.Windows.QueryContinueDragEventArgs.Action%2A> propriedade `Cancel` se for pressionada a tecla ESC.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.QueryContinueDragEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyStates">
+      <MemberSignature Language="C#" Value="public System.Windows.DragDropKeyStates KeyStates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragDropKeyStates KeyStates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.QueryContinueDragEventArgs.KeyStates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropKeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma enumeração de sinalizador que indica o estado atual das teclas SHIFT, CTRL e teclas ALT, bem como o estado dos botões do mouse.</summary>
+        <value>Um ou mais membros a <see cref="T:System.Windows.DragDropKeyStates" /> enumeração de sinalizador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O efeito de uma operação de arrastar e soltar pode ser ajustado dependendo do estado de uma determinada chave. Por exemplo, dados podem ser copiados ou movidos dependendo se forem pressionadas as teclas CTRL ou SHIFT durante a operação de arrastar e soltar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,80 @@
+<Type Name="TypeResolvingOptionsAttribute" FullName="System.Activities.Presentation.TypeResolvingOptionsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TypeResolvingOptionsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeResolvingOptionsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.TypeResolvingOptionsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Usado para configurar como um Designer de fluxo de trabalho do Windows inicializa caixas de diálogo de resolvedor de tipo e tipo de navegador para habilitar um usuário selecionar um tipo de argumentos, variáveis e atividades de tipo genérico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeResolvingOptionsAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.TypeResolvingOptionsAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Activities.Presentation.TypeResolvingOptionsAttribute" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeResolvingOptionsAttribute (System.Activities.Presentation.View.TypeResolvingOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.View.TypeResolvingOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.TypeResolvingOptionsAttribute.#ctor(System.Activities.Presentation.View.TypeResolvingOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="System.Activities.Presentation.View.TypeResolvingOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">O <see cref="T:System.Activities.Presentation.View.TypeResolvingOptions" /> que têm suporte.</param>
+        <summary>Cria uma instância de <see cref="T:System.Activities.Presentation.TypeResolvingOptionsAttribute" /> classe com opções de resolução de tipo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeResolvingOptions">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.View.TypeResolvingOptions TypeResolvingOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.View.TypeResolvingOptions TypeResolvingOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.TypeResolvingOptionsAttribute.TypeResolvingOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.TypeResolvingOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as opções usadas para configurar como um [!INCLUDE[wfd1](~/includes/wfd1-md.md)] inicializa as caixas de diálogo de resolvedor de tipo e tipo de navegador para habilitar um usuário selecionar um tipo de argumentos, variáveis e atividades de tipo genérico.</summary>
+        <value>Uma instância de <see cref="T:System.Activities.Presentation.View.TypeResolvingOptions" /> que especifica as opções disponíveis para como um [!INCLUDE[wfd2](~/includes/wfd2-md.md)] inicializa as caixas de diálogo de resolvedor de tipo e tipo de navegador para habilitar um usuário selecionar um tipo de argumentos, variáveis e atividades de tipo genérico.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,94 @@
+<Type Name="TemplatedEditableDesignerRegion" FullName="System.Web.UI.Design.TemplatedEditableDesignerRegion">
+  <TypeSignature Language="C#" Value="public class TemplatedEditableDesignerRegion : System.Web.UI.Design.EditableDesignerRegion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplatedEditableDesignerRegion extends System.Web.UI.Design.EditableDesignerRegion" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TemplatedEditableDesignerRegion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.EditableDesignerRegion</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma área editável de conteúdo dentro a marcação de tempo de design para o controle associado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplatedEditableDesignerRegion (System.Web.UI.Design.TemplateDefinition templateDefinition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.TemplateDefinition templateDefinition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplatedEditableDesignerRegion.#ctor(System.Web.UI.Design.TemplateDefinition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="templateDefinition" Type="System.Web.UI.Design.TemplateDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="templateDefinition">Um <see cref="T:System.Web.UI.Design.TemplateDefinition" /> instância para o modelo Editar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Design.TemplatedEditableDesignerRegion" /> classe usando a definição do modelo fornecido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSingleInstanceTemplate">
+      <MemberSignature Language="C#" Value="public virtual bool IsSingleInstanceTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSingleInstanceTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedEditableDesignerRegion.IsSingleInstanceTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o modelo ocorre apenas uma vez por instância do recipiente de controle, como um <see langword="header" /> modelo, ou pode aparecer várias vezes acordo com os dados disponíveis, como um <see langword="item" /> modelo.</summary>
+        <value>
+          <see langword="true" />Se o modelo é exibido apenas uma vez; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDataBinding">
+      <MemberSignature Language="C#" Value="public override bool SupportsDataBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDataBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedEditableDesignerRegion.SupportsDataBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o modelo pode ser associado a uma fonte de dados.</summary>
+        <value>
+          <see langword="true" />Se o modelo é representado pela região pode ser associado a uma fonte de dados; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de definir esta propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateDefinition">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.TemplateDefinition TemplateDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateDefinition TemplateDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplatedEditableDesignerRegion.TemplateDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateDefinition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.Design.TemplateDefinition" /> objeto que descreve o modelo que é referenciado por região.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.Design.TemplateDefinition" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

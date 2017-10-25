@@ -1,0 +1,177 @@
+<Type Name="RecipientServiceModelSecurityTokenRequirement" FullName="System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement">
+  <TypeSignature Language="C#" Value="public sealed class RecipientServiceModelSecurityTokenRequirement : System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RecipientServiceModelSecurityTokenRequirement extends System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os requisitos de propriedade de segurança específicos para o serviço de escuta no Windows Communication Foundation (WCF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de requisito de token são usados por um Gerenciador de token de segurança para especificar o que é necessário um token de segurança, como a chave de tamanho, tipo de chave e como a chave pode ser usada. Quando um token de segurança pode ser identificado que corresponde aos critérios especificados, um provedor de token de segurança e o autenticador de token de segurança podem ser criados.  
+  
+ Essa classe de requisito de token Especifica os requisitos relacionados ao destinatário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RecipientServiceModelSecurityTokenRequirement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SupportSecurityContextCancellationProperty%2A> e <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IsInitiatorProperty%2A> propriedades são definidas como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditLogLocation">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.AuditLogLocation AuditLogLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.AuditLogLocation AuditLogLocation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.AuditLogLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLogLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local do log de auditoria.</summary>
+        <value>O local do log de auditoria.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.AuditLogLocation> é uma enumeração com os seguintes membros:  
+  
+-   <xref:System.ServiceModel.AuditLogLocation.Application>: O log de aplicativo no Log de eventos do sistema operacional.  
+  
+-   <xref:System.ServiceModel.AuditLogLocation.Default>: O local padrão, que é determinado pelo sistema operacional.  
+  
+-   <xref:System.ServiceModel.AuditLogLocation.Security>: O log de segurança no log de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenUri">
+      <MemberSignature Language="C#" Value="public Uri ListenUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ListenUri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.ListenUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URI de escuta.</summary>
+        <value>O ouvinte URI.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageAuthenticationAuditLevel">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.AuditLevel MessageAuthenticationAuditLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.AuditLevel MessageAuthenticationAuditLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.MessageAuthenticationAuditLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AuditLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de auditoria de autenticação de mensagem.</summary>
+        <value>O nível de auditoria de autenticação de mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.AuditLevel> é uma enumeração com os seguintes membros:  
+  
+-   <xref:System.ServiceModel.AuditLevel.Failure>: Somente falha relacionadas à segurança eventos são registrados.  
+  
+-   <xref:System.ServiceModel.AuditLevel.None>: Nenhum evento é registrado.  
+  
+-   <xref:System.ServiceModel.AuditLevel.Success>: Apenas bem-sucedida relacionadas à segurança eventos são registrados.  
+  
+-   <xref:System.ServiceModel.AuditLevel.SuccessOrFailure>: Ambos falha e bem-sucedida eventos relacionados à segurança são registrados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressAuditFailure">
+      <MemberSignature Language="C#" Value="public bool SuppressAuditFailure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressAuditFailure" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.SuppressAuditFailure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as falhas de auditoria são suprimidas.</summary>
+        <value>
+          <see langword="true" />Se as falhas de auditoria serão suprimidas; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exibe uma representação de texto dessa instância da classe.</summary>
+        <returns>Uma representação de texto dessa instância da classe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exibe o tipo de propriedade nome e para cada propriedade, o nome de propriedade e valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

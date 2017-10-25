@@ -1,0 +1,809 @@
+<Type Name="ProtocolFamily" FullName="System.Net.Sockets.ProtocolFamily">
+  <TypeSignature Language="C#" Value="public enum ProtocolFamily" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProtocolFamily extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.ProtocolFamily" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de protocolo que uma instância da classe <see cref="T:System.Net.Sockets.Socket" /> pode usar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.ProtocolFamily> enumeração Especifica o esquema de protocolo usado pelo <xref:System.Net.Sockets.Socket> classe para resolver um endereço. Por exemplo, redes indica que o protocolo IP versão 4 é esperado quando um <xref:System.Net.Sockets.Socket> se conecta a um ponto de extremidade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppleTalk">
+      <MemberSignature Language="C#" Value="AppleTalk" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily AppleTalk = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.AppleTalk" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo AppleTalk.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Atm">
+      <MemberSignature Language="C#" Value="Atm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Atm = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Atm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo de serviços de ATM nativos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Banyan">
+      <MemberSignature Language="C#" Value="Banyan" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Banyan = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Banyan" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo Banyan.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ccitt">
+      <MemberSignature Language="C#" Value="Ccitt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Ccitt = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Ccitt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo CCITT, como X.25.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Chaos">
+      <MemberSignature Language="C#" Value="Chaos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Chaos = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Chaos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo de MIT CHAOS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cluster">
+      <MemberSignature Language="C#" Value="Cluster" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Cluster = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Cluster" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo de produtos de cluster da Microsoft.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DataKit">
+      <MemberSignature Language="C#" Value="DataKit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily DataKit = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.DataKit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo DataKit.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DataLink">
+      <MemberSignature Language="C#" Value="DataLink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily DataLink = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.DataLink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo de link de dados direto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DecNet">
+      <MemberSignature Language="C#" Value="DecNet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily DecNet = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.DecNet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo DECNet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ecma">
+      <MemberSignature Language="C#" Value="Ecma" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Ecma = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Ecma" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo ECMA (European Computer Manufacturers Association).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FireFox">
+      <MemberSignature Language="C#" Value="FireFox" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily FireFox = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.FireFox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo do FireFox.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HyperChannel">
+      <MemberSignature Language="C#" Value="HyperChannel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily HyperChannel = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.HyperChannel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo NSC HyperChannel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ieee12844">
+      <MemberSignature Language="C#" Value="Ieee12844" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Ieee12844 = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Ieee12844" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo de grupo de trabalho IEEE 1284.4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImpLink">
+      <MemberSignature Language="C#" Value="ImpLink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily ImpLink = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.ImpLink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo ARPANET IMP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InterNetwork">
+      <MemberSignature Language="C#" Value="InterNetwork" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily InterNetwork = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.InterNetwork" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo do IP versão 4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InterNetworkV6">
+      <MemberSignature Language="C#" Value="InterNetworkV6" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily InterNetworkV6 = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.InterNetworkV6" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo do IP versão 6.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ipx">
+      <MemberSignature Language="C#" Value="Ipx" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Ipx = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Ipx" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo IPX ou SPX.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Irda">
+      <MemberSignature Language="C#" Value="Irda" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Irda = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Irda" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo IrDA.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Iso">
+      <MemberSignature Language="C#" Value="Iso" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Iso = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Iso" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo ISO.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Lat">
+      <MemberSignature Language="C#" Value="Lat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Lat = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Lat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo LAT.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="Max" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Max = int32(29)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Max" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo MAX.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetBios">
+      <MemberSignature Language="C#" Value="NetBios" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily NetBios = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.NetBios" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo NetBIOS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkDesigners">
+      <MemberSignature Language="C#" Value="NetworkDesigners" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily NetworkDesigners = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.NetworkDesigners" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo habilitado de gateway OSI para designers de rede.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NS">
+      <MemberSignature Language="C#" Value="NS" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily NS = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.NS" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo Xerox NS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Osi">
+      <MemberSignature Language="C#" Value="Osi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Osi = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Osi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo OSI.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pup">
+      <MemberSignature Language="C#" Value="Pup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Pup = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Pup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo PUP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sna">
+      <MemberSignature Language="C#" Value="Sna" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Sna = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Sna" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo IBM SNA.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unix">
+      <MemberSignature Language="C#" Value="Unix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Unix = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Unix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo local para host do Unix.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo desconhecido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily Unspecified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo não especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VoiceView">
+      <MemberSignature Language="C#" Value="VoiceView" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.ProtocolFamily VoiceView = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.ProtocolFamily.VoiceView" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.ProtocolFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Protocolo VoiceView.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

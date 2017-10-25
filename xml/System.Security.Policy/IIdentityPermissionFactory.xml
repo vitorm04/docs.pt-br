@@ -1,0 +1,60 @@
+<Type Name="IIdentityPermissionFactory" FullName="System.Security.Policy.IIdentityPermissionFactory">
+  <TypeSignature Language="C#" Value="public interface IIdentityPermissionFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IIdentityPermissionFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.IIdentityPermissionFactory" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o método que cria uma nova permissão de identidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns tipos de evidência têm uma permissão de identidade correspondente que é concedida aos assemblies com essa evidência. Isso permite que outro código tornar as demandas de identidade, para que somente o código com uma parte específica de evidência sejam passados. Por exemplo, você pode exigir chamadores tem um nome forte específico; somente os chamadores com esse nome forte passará a demanda. Implementando <xref:System.Security.Policy.IIdentityPermissionFactory> para um objeto de evidência, você pode fornecer uma implementação de <xref:System.Security.Policy.IIdentityPermissionFactory.CreateIdentityPermission%2A> que o sistema de segurança do .NET Framework pode chamar para obter uma permissão de identidade que representa essa parte de evidência. Durante a resolução de política, o sistema de segurança chame esse método em todos os objetos de evidência que implementam <xref:System.Security.Policy.IIdentityPermissionFactory> e conceda as permissões de identidade resultante para o assembly apropriado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateIdentityPermission">
+      <MemberSignature Language="C#" Value="public System.Security.IPermission CreateIdentityPermission (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.IPermission CreateIdentityPermission(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.IIdentityPermissionFactory.CreateIdentityPermission(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">A evidência do qual criar a nova permissão de identidade.</param>
+        <summary>Cria uma nova permissão de identidade para a evidência especificada.</summary>
+        <returns>A nova permissão de identidade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

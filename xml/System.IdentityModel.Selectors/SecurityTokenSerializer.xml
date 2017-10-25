@@ -1,0 +1,839 @@
+<Type Name="SecurityTokenSerializer" FullName="System.IdentityModel.Selectors.SecurityTokenSerializer">
+  <TypeSignature Language="C#" Value="public abstract class SecurityTokenSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityTokenSerializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SecurityTokenSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe que pode ler e gravar os identificadores de chave, cláusulas de identificador de chave e tokens de segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe para ler e gravar <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>, <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>, e <xref:System.IdentityModel.Tokens.SecurityToken> classes como XML. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe tem métodos para determinar se esta classe pode ler e gravar essas entidades e, na verdade, ler e gravá-los. Para tokens de segurança, esses métodos são <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadToken%2A>, <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteToken%2A>, <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadToken%2A>, e <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteToken%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityTokenSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifier">
+      <MemberSignature Language="C#" Value="public bool CanReadKeyIdentifier (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanReadKeyIdentifier(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifier(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o identificador de chave.</param>
+        <summary>Determina se este serializador pode ler o <see langword="&lt;KeyIdentifier&gt;" /> elemento referenciado pelo leitor XML especificado.</summary>
+        <returns>
+          <see langword="true" />Quando especificado <see langword="&lt;KeyIdentifier&gt;" /> elemento XML pode ser lido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifier%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public bool CanReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler a cláusula de identificador de chave.</param>
+        <summary>Determina se este serializador pode ler uma cláusula em uma <see langword="&lt;KeyIdentifier&gt;" /> elemento referenciado pelo leitor XML especificado.</summary>
+        <returns>
+          <see langword="true" />Quando a cláusula de identificador de chave especificado pode ser lida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierClauseCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierClause%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierClauseCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected abstract bool CanReadKeyIdentifierClauseCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanReadKeyIdentifierClauseCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierClauseCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler a cláusula de identificador de chave.</param>
+        <summary>Determina se este serializador pode ler o <see langword="&lt;KeyIdentifier&gt;" /> elemento referenciado pelo leitor XML especificado. Chamado pela classe base.</summary>
+        <returns>
+          <see langword="true" />Quando especificado <see langword="&lt;KeyIdentifier&gt;" /> elemento pode ser lido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierClauseCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierClause%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierClauseCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadKeyIdentifierCore">
+      <MemberSignature Language="C#" Value="protected abstract bool CanReadKeyIdentifierCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanReadKeyIdentifierCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o identificador de chave.</param>
+        <summary>Determina se este serializador pode ler o <see langword="&lt;KeyIdentifier&gt;" /> elemento referenciado pelo leitor XML especificado. Chamado pela classe base.</summary>
+        <returns>
+          <see langword="true" />Quando a cláusula de identificador de chave especificado pode ser lida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifier%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadKeyIdentifierCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public bool CanReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o token de segurança.</param>
+        <summary>Determina se este serializador pode ler o token de segurança indicada pelo leitor XML especificado.</summary>
+        <returns>
+          <see langword="true" />Quando o token de segurança pode ser lidos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadToken%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract bool CanReadTokenCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanReadTokenCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadTokenCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o token de segurança.</param>
+        <summary>Determina se este serializador pode ler o token de segurança indicada pelo leitor XML especificado. Chamado pela classe base.</summary>
+        <returns>
+          <see langword="true" />Quando o token de segurança pode ser lidos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadToken%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanReadTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteKeyIdentifier">
+      <MemberSignature Language="C#" Value="public bool CanWriteKeyIdentifier (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanWriteKeyIdentifier(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifier(System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> que representa o identificador de chave para gravação.</param>
+        <summary>Determina se este serializador pode gravar o identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando este serializador pode gravar o identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierCore%28System.IdentityModel.Tokens.SecurityKeyIdentifier%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifier%28System.IdentityModel.Tokens.SecurityKeyIdentifier%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierCore%28System.IdentityModel.Tokens.SecurityKeyIdentifier%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public bool CanWriteKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanWriteKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa a cláusula de identificador de chave para gravação.</param>
+        <summary>Determina se este serializador pode gravar a cláusula de identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando este serializador pode gravar a cláusula de identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierClauseCore%28System.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierClauseCore%28System.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected abstract bool CanWriteKeyIdentifierClauseCore (System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanWriteKeyIdentifierClauseCore(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierClauseCore(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifierClause">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa a cláusula de identificador de chave para gravação.</param>
+        <summary>Determina se este serializador pode gravar a cláusula de identificador de chave especificado. Chamado pela classe base.</summary>
+        <returns>
+          <see langword="true" />Quando este serializador pode gravar a cláusula de identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierClauseCore%28System.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierClauseCore%28System.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteKeyIdentifierCore">
+      <MemberSignature Language="C#" Value="protected abstract bool CanWriteKeyIdentifierCore (System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanWriteKeyIdentifierCore(class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierCore(System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="keyIdentifier">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> que representa o identificador de chave para gravação.</param>
+        <summary>Determina se este serializador pode gravar o identificador de chave especificado. Chamado pela classe base.</summary>
+        <returns>
+          <see langword="true" />Quando este serializador pode gravar o identificador de chave especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierCore%28System.IdentityModel.Tokens.SecurityKeyIdentifier%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifier%28System.IdentityModel.Tokens.SecurityKeyIdentifier%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteKeyIdentifierCore%28System.IdentityModel.Tokens.SecurityKeyIdentifier%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteToken">
+      <MemberSignature Language="C#" Value="public bool CanWriteToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanWriteToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> converter em XML.</param>
+        <summary>Determina se este serializador pode gravar o token de segurança especificado em XML.</summary>
+        <returns>
+          <see langword="true" />Quando o token de segurança pode ser gravado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteToken%28System.IdentityModel.Tokens.SecurityToken%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract bool CanWriteTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanWriteTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> converter em XML.</param>
+        <summary>Determina se este serializador pode gravar o token de segurança especificado em XML. Chamado pela classe base.</summary>
+        <returns>
+          <see langword="true" />Quando o token de segurança pode ser gravado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteToken%28System.IdentityModel.Tokens.SecurityToken%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifier">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifier ReadKeyIdentifier (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityKeyIdentifier ReadKeyIdentifier(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifier(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifier</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o identificador de chave.</param>
+        <summary>Lê o identificador de chave usando o leitor XML especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> que representa o identificador de chave que foi lido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifier%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierCore%28System.Xml.XmlReader%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClause(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierClause(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o identificador de chave.</param>
+        <summary>Lê a cláusula de identificador de chave usando o leitor XML especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa o identificador de chave que foi lido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierClauseCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierClause%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierClauseCore%28System.Xml.XmlReader%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected abstract System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClauseCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ReadKeyIdentifierClauseCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierClauseCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o identificador de chave.</param>
+        <summary>Lê a cláusula de identificador de chave usando o leitor XML especificado. Chamado pela classe base.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa o identificador de chave que foi lido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierClauseCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierClause%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierClauseCore%28System.Xml.XmlReader%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKeyIdentifierCore">
+      <MemberSignature Language="C#" Value="protected abstract System.IdentityModel.Tokens.SecurityKeyIdentifier ReadKeyIdentifierCore (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifier ReadKeyIdentifierCore(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierCore(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifier</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o identificador de chave.</param>
+        <summary>Lê a cláusula de identificador de chave usando o leitor XML especificado. Chamado pela classe base.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> que representa o identificador de chave que foi lido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierCore%28System.Xml.XmlReader%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifier%28System.Xml.XmlReader%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadKeyIdentifierCore%28System.Xml.XmlReader%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IdentityModel.Tokens.SecurityToken ReadToken(class System.Xml.XmlReader reader, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadToken(System.Xml.XmlReader,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="tokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o token de segurança.</param>
+        <param name="tokenResolver">Um <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" /> que determina o tipo de token de segurança.</param>
+        <summary>Lê o token de segurança indicada pelo leitor XML especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança que é lido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadToken%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="tokenResolver" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract System.IdentityModel.Tokens.SecurityToken ReadTokenCore (System.Xml.XmlReader reader, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken ReadTokenCore(class System.Xml.XmlReader reader, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadTokenCore(System.Xml.XmlReader,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="tokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> para ler o token de segurança.</param>
+        <param name="tokenResolver">Um <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" /> que determina o tipo de token de segurança.</param>
+        <summary>Lê o token de segurança indicada pelo leitor XML especificado. Chamado pela classe base.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança que é lido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadToken%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="tokenResolver" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifier">
+      <MemberSignature Language="C#" Value="public void WriteKeyIdentifier (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteKeyIdentifier(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifier(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> para gravar o identificador de chave.</param>
+        <param name="keyIdentifier">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> que representa o identificador de chave para gravação.</param>
+        <summary>Grava o identificador de chave especificado usando o gravador XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifier%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifier%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifier%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifier%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public void WriteKeyIdentifierClause (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteKeyIdentifierClause(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierClause(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> para gravar a cláusula de identificador de chave.</param>
+        <param name="keyIdentifierClause">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa a cláusula de identificador de chave para gravação.</param>
+        <summary>Grava a cláusula de identificador de chave especificado usando o gravador XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierClauseCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierClause%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierClauseCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierClauseCore">
+      <MemberSignature Language="C#" Value="protected abstract void WriteKeyIdentifierClauseCore (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteKeyIdentifierClauseCore(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause keyIdentifierClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierClauseCore(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> para gravar a cláusula de identificador de chave.</param>
+        <param name="keyIdentifierClause">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa a cláusula de identificador de chave para gravação.</param>
+        <summary>Grava a cláusula de identificador de chave especificado usando o gravador XML especificado. Chamado pela classe base.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierClauseCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierClause%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierClauseCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifierClause%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifierClause" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteKeyIdentifierCore">
+      <MemberSignature Language="C#" Value="protected abstract void WriteKeyIdentifierCore (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteKeyIdentifierCore(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityKeyIdentifier keyIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierCore(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityKeyIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="keyIdentifier" Type="System.IdentityModel.Tokens.SecurityKeyIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> para gravar o identificador de chave.</param>
+        <param name="keyIdentifier">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifier" /> que representa o identificador de chave para gravação.</param>
+        <summary>Grava o identificador de chave especificado usando o gravador XML especificado. Chamado pela classe base.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifier%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifier%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifier%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteKeyIdentifierCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityKeyIdentifier%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyIdentifier" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public void WriteToken (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteToken(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteToken(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> para gravar o token de segurança.</param>
+        <param name="token">Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança para gravação.</param>
+        <summary>Grava o token de segurança especificado usando o gravador XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteToken%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract void WriteTokenCore (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteTokenCore(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteTokenCore(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> para gravar o token de segurança.</param>
+        <param name="token">Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança para gravação.</param>
+        <summary>Grava o token de segurança especificado usando o gravador XML especificado. Chamado pela classe base.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe deve substituir o <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> método. O <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteToken%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> chamadas de método de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

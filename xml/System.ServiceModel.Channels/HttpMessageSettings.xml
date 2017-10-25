@@ -1,0 +1,80 @@
+<Type Name="HttpMessageSettings" FullName="System.ServiceModel.Channels.HttpMessageSettings">
+  <TypeSignature Language="C#" Value="public sealed class HttpMessageSettings : IEquatable&lt;System.ServiceModel.Channels.HttpMessageSettings&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpMessageSettings extends System.Object implements class System.IEquatable`1&lt;class System.ServiceModel.Channels.HttpMessageSettings&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.HttpMessageSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.ServiceModel.Channels.HttpMessageSettings&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Suporte a um parâmetro de associação que pode ser usado com o transporte HTTP para especificar a configuração de Mensagemhttp.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpMessageSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpMessageSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.HttpMessageSettings" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.ServiceModel.Channels.HttpMessageSettings other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.ServiceModel.Channels.HttpMessageSettings other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpMessageSettings.Equals(System.ServiceModel.Channels.HttpMessageSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Channels.HttpMessageSettings" />
+      </Parameters>
+      <Docs>
+        <param name="other">O objeto a ser comparado com o objeto atual.</param>
+        <summary>Determina se o objeto especificado é igual ao objeto atual.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for igual ao objeto atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpMessagesSupported">
+      <MemberSignature Language="C#" Value="public bool HttpMessagesSupported { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HttpMessagesSupported" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.HttpMessageSettings.HttpMessagesSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o transporte HTTP deve dar suporte <see cref="T:System.Net.Http.HttpRequestMessage" /> e <see cref="T:System.Net.Http.HttpResponseMessage" /> instâncias.</summary>
+        <value>
+          <see langword="true" />Se o transporte HTTP suporta <see cref="T:System.Net.Http.HttpRequestMessage" /> e <see cref="T:System.Net.Http.HttpResponseMessage" /> instâncias; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

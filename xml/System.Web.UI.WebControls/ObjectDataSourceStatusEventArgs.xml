@@ -1,0 +1,273 @@
+<Type Name="ObjectDataSourceStatusEventArgs" FullName="System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectDataSourceStatusEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectDataSourceStatusEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Selected" />, <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Inserted" />, <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Updated" />, e <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Deleted" /> eventos o <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs> classe é usada no <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnSelected%2A>, <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnUpdated%2A>, <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnInserted%2A>, e <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnDeleted%2A> métodos para fornecer acesso aos parâmetros de saída, valores de retorno e exceções que são geradas pelo método que é chamado pelo <xref:System.Web.UI.WebControls.ObjectDataSource> controle. Eles são acessados pelo <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.OutputParameters%2A>, <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.ReturnValue%2A>, e <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.Exception%2A> propriedades, respectivamente. Adicionando um delegado para manipular o <xref:System.Web.UI.WebControls.ObjectDataSource.Selected>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updated>, <xref:System.Web.UI.WebControls.ObjectDataSource.Inserted>, ou <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted> eventos, você pode examinar esses dados e executar qualquer processamento de postagem adicional é necessário.  
+  
+ O <xref:System.Web.UI.WebControls.ObjectDataSource> controle expõe vários eventos que você pode manipular para trabalhar com o objeto comercial subjacente várias vezes durante o ciclo de vida. A tabela a seguir lista os eventos e associado <xref:System.EventArgs> classes e delegados de manipulador de eventos.  
+  
+|Evento|EventArgs|EventHandler|  
+|-----------|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating>.<br /><br /> Ocorre imediatamente antes que a instância do objeto comercial é criada.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated>.<br /><br /> Ocorre imediatamente depois que a instância do objeto comercial é criada.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selecting>.<br /><br /> Ocorre antes que os dados são recuperados.|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserting>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updating> e <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting>.<br /><br /> Ocorre antes de uma operação de inserção, atualização ou delete é executada.|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selected>.<br /><br /> Ocorre depois que os dados são recuperados.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserted>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updated> e <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted>.<br /><br /> Ocorre após a inserção, atualização ou operação de exclusão é concluída.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing>.<br /><br /> Ocorre antes de um objeto comercial é destruído.|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventHandler>|  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para excluir dados. O segundo exemplo de código fornece um objeto comercial de camada intermediária de exemplo que usa o primeiro exemplo de código.  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para excluir dados. O <xref:System.Web.UI.WebControls.GridView> inicialmente exibe um conjunto de todos os funcionários, usando o método especificado pelo <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A> propriedade para recuperar os dados do `EmployeeLogic` objeto. Porque o <xref:System.Web.UI.WebControls.GridView.AutoGenerateDeleteButton%2A> está definida como `true`, o <xref:System.Web.UI.WebControls.GridView> controlar automaticamente exibe um **excluir** botão.  
+  
+ Se você clicar no **excluir** botão, o <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A> ação é executada usando o método especificado pelo <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteMethod%2A> propriedade e os parâmetros que são especificados no <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteParameters%2A> coleção. Neste exemplo de código, um parâmetro é especificado no <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteParameters%2A> coleção que corresponde à ID de funcionário. Isso ocorre porque embora a ID é incluída no <xref:System.Windows.Forms.DataGridView.Columns%2A> coleção como um <xref:System.Web.UI.WebControls.BoundField> do objeto, ela será transmitida como uma cadeia de caracteres para o <xref:System.Web.UI.WebControls.ObjectDataSource> controle. Adicionando explicitamente para o <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteParameters%2A> coleção com uma <xref:System.Web.UI.WebControls.Parameter.Type%2A> propriedade definida como o <xref:System.TypeCode.Int32> valor, ele passará corretamente pelo <xref:System.Web.UI.WebControls.ObjectDataSource> para o método como um número inteiro, em vez de cadeia de caracteres.  
+  
+ Neste exemplo de código, algumas etapas de pós-processamento e pré-processamento também são executadas. O `NorthwindEmployeeDeleting` delegado é chamado para manipular a <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting> evento antes do <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A> ação é executada e o `NorthwindEmployeeDeleted` delegado é chamado para manipular a <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted> evento após o <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A> ação for concluída, para lidar com qualquer exceções que possam ter ocorrido. O `NorthwindEmployeeDeleted` delegado acessa possíveis exceções que são geradas pelo objeto comercial que está usando o <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs> objeto. Neste exemplo, se um `NorthwindDataException` é gerada, ela será manipulada por este delegado.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_10#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_10/CS/objds10cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_10#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_10/VB/objds10vb.aspx#1)]  
+  
+ O exemplo de código a seguir fornece um objeto comercial de camada intermediária de exemplo que usa o exemplo de código anterior. A lista a seguir descreve as duas classes principais que são definidas no código de exemplo:  
+  
+-   O `EmployeeLogic` é uma classe que não mantêm o estado e encapsula a lógica de negócios.  
+  
+-   O `NorthwindEmployee` é uma classe de modelo que contém apenas a funcionalidade básica que é necessário para carregar e manter os dados da camada de dados.  
+  
+ Além disso, um `NorthwindDataException` classe é fornecida como uma conveniência.  
+  
+ Esse conjunto de classes de exemplo usa o banco de dados Northwind Traders, que é um banco de dados de exemplo que está disponível com o Microsoft SQL Server e Microsoft Access. Para um exemplo completo de trabalho, você deve compilar este código como uma biblioteca e, em seguida, use essas classes de uma página ASP. A página ASP que é fornecida no exemplo anterior é configurada para funcionar com esta biblioteca de classe.  O `UpdateEmployeeInfo` método não está totalmente implementado, portanto você não irá inserir dados no banco de dados Northwind Traders quando você testar este exemplo.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_10#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_10/CS/northwindemployee10.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_10#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_10/VB/northwindemployee10.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataSourceStatusEventArgs (object returnValue, System.Collections.IDictionary outputParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object returnValue, class System.Collections.IDictionary outputParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.#ctor(System.Object,System.Collections.IDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="returnValue" Type="System.Object" />
+        <Parameter Name="outputParameters" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="returnValue">Um objeto que representa um valor de retorno para a operação de banco de dados concluída.</param>
+        <param name="outputParameters">Um <see cref="T:System.Collections.IDictionary" /> de pares de nome/valor de objetos de parâmetro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs" /> classe usando os parâmetros de saída especificado e o valor de retorno.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `returnValue` parâmetro pode ser qualquer objeto que é retornado por uma chamada para o método de dados do objeto comercial. O `outputParameters` parâmetro é um <xref:System.Collections.IDictionary> coleção de pares de nome/valor que coincide com a assinatura do método e são transmitidos por referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataSourceStatusEventArgs (object returnValue, System.Collections.IDictionary outputParameters, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object returnValue, class System.Collections.IDictionary outputParameters, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.#ctor(System.Object,System.Collections.IDictionary,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="returnValue" Type="System.Object" />
+        <Parameter Name="outputParameters" Type="System.Collections.IDictionary" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="returnValue">Um objeto que representa um valor de retorno para a operação de banco de dados concluída.</param>
+        <param name="outputParameters">Um <see cref="T:System.Collections.IDictionary" /> de pares de nome/valor de objetos de parâmetro.</param>
+        <param name="exception">Um <see cref="T:System.Exception" /> que encapsula todas as exceções internas lançadas durante a chamada do método.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs" /> classe usando os parâmetros de saída especificado, retorna o valor e a exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `returnValue` parâmetro pode ser qualquer objeto que é retornado por uma chamada para o método de dados do objeto comercial. O `outputParameters` parâmetro é um <xref:System.Collections.IDictionary> coleção de pares de nome/valor que coincide com a assinatura do método e são transmitidos por referência. O `exception` parâmetro é um <xref:System.Exception> exceção que encapsula todas as exceções geradas pelo método que é chamado pelo <xref:System.Web.UI.WebControls.ObjectDataSource> controle durante uma operação de dados. Se a exceção não é tratada por um <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnSelected%2A>, <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnUpdated%2A>, <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnInserted%2A>, ou <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnDeleted%2A> método, ele é gerado pelo <xref:System.Web.UI.WebControls.ObjectDataSource> controlar após a operação de dados retorna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedRows">
+      <MemberSignature Language="C#" Value="public int AffectedRows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AffectedRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.AffectedRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de linhas afetadas pela operação de dados.</summary>
+        <value>O número de linhas afetadas pela operação de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.AffectedRows%2A> valor para verificar que o número de linhas esperado foi afetado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um wrapper para todas as exceções geradas pelo método que é chamado pelo <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> controle durante uma operação de dados.</summary>
+        <value>Um <see cref="T:System.Exception" /> que encapsula as exceções geradas pelo objeto comercial no seu <see cref="P:System.Exception.InnerException" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Exception> exceção não representa a exceção que é lançada pelo método de dados de objeto comercial realmente. Você pode usar o <xref:System.Exception.InnerException%2A> propriedade para acessar a exceção lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para excluir dados. O <xref:System.Web.UI.WebControls.GridView> inicialmente exibe um conjunto de todos os funcionários, usando o método especificado pelo <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A> propriedade para recuperar os dados do `EmployeeLogic` objeto. Porque o <xref:System.Web.UI.WebControls.GridView.AutoGenerateDeleteButton%2A> está definida como `true`, o <xref:System.Web.UI.WebControls.GridView> controlar automaticamente exibe um **excluir** botão.  
+  
+ Se você clicar no **excluir** botão, o <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A> ação é executada usando o método especificado pelo <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteMethod%2A> propriedade e os parâmetros que são especificados no <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteParameters%2A> coleção.  
+  
+ Neste exemplo de código, algumas etapas de pós-processamento e pré-processamento também são executadas. O `NorthwindEmployeeDeleting` delegado é chamado para manipular a <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting> evento antes do <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A> ação é executada e o `NorthwindEmployeeDeleted` delegado é chamado para manipular a <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted> evento após o <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A> ação for concluída, para executar qualquer manipulação de exceção. Neste exemplo, se um `NorthwindDataException` é gerada, ela é tratada pelo `NorthwindEmployeeDeleted` delegate.  
+  
+ Para examinar a implementação de `EmployeeLogic` objeto comercial de camada intermediária que usa este exemplo de código, consulte a visão geral da classe no <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_10#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_10/CS/objds10cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_10#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_10/VB/objds10vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma exceção foi acionada pelo objeto comercial foi tratada.</summary>
+        <value>
+          <see langword="true" />Se uma exceção lançada pelo objeto comercial foi tratada e não devem ser gerada pelo <see cref="T:System.Web.UI.WebControls.ObjectDataSource" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o objeto comercial lança uma exceção, o <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.ExceptionHandled%2A> está definida como `false` e a exceção é encapsulada pelo <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.Exception%2A> propriedade. Se você usar um <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler> do objeto, você pode verificar o <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.Exception%2A> propriedade e o identificador de exceção. Se você lidar com a exceção, defina o <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.ExceptionHandled%2A> propriedade `true` ou <xref:System.Web.UI.WebControls.ObjectDataSource> controle lançará uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para excluir dados. O <xref:System.Web.UI.WebControls.GridView> inicialmente exibe um conjunto de todos os funcionários, usando o método especificado pelo <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A> propriedade para recuperar os dados do `EmployeeLogic` objeto. Porque o <xref:System.Web.UI.WebControls.GridView.AutoGenerateDeleteButton%2A> está definida como `true`, o <xref:System.Web.UI.WebControls.GridView> controlar automaticamente exibe um **excluir** botão.  
+  
+ Se você clicar no **excluir** botão, o <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A> ação é executada usando o método especificado pelo <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteMethod%2A> propriedade e os parâmetros que são especificados no <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteParameters%2A> coleção. Neste exemplo de código, algumas etapas de pós-processamento e pré-processamento também são executadas. O `NorthwindEmployeeDeleting` delegado é chamado para manipular a <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting> evento antes do <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A> ação é executada e o `NorthwindEmployeeDeleted` delegado é chamado para manipular a <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted> evento após o <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A> ação for concluída, para lidar com qualquer exceções que possam ter ocorrido. Neste exemplo, se um `NorthwindDataException` é gerada, ela é tratada pelo `NorthwindEmployeeDeleted` delegate.  
+  
+ Para examinar a implementação de `EmployeeLogic` objeto comercial de camada intermediária que usa este exemplo de código, consulte a visão geral da classe no <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_10#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_10/CS/objds10cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_10#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_10/VB/objds10vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary OutputParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary OutputParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.OutputParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que contém parâmetros de método de objeto comercial e seus valores.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> de pares nome/valor que representam os parâmetros de método de objeto comercial e seus valores correspondentes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os parâmetros que são passados para o método do objeto comercial por referência são retornados no <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.OutputParameters%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnValue">
+      <MemberSignature Language="C#" Value="public object ReturnValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ReturnValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.ReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de retorno que é retornado pelo método de objeto de negócios, se houver, como um objeto.</summary>
+        <value>Um objeto que representa o valor de retorno retornado pelo método de objeto de negócios; Caso contrário, <see langword="null" />, se o método do objeto comercial não retorna nenhum valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.ReturnValue%2A> propriedade é definida no <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs> construtor. O valor é definido como o valor de retorno da chamada de método business objeto, que é chamado por meio de reflexão. Se o método de negócios não retorna nenhum valor (como quando o método do objeto comercial retorna `void`), o <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.ReturnValue%2A> propriedade avaliada como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

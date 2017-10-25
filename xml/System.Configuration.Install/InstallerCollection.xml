@@ -1,0 +1,442 @@
+<Type Name="InstallerCollection" FullName="System.Configuration.Install.InstallerCollection">
+  <TypeSignature Language="C#" Value="public class InstallerCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstallerCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Install.InstallerCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção de instaladores a ser executada durante a instalação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.Install.InstallerCollection> fornece os métodos e propriedades que seu aplicativo precisa para gerenciar uma coleção de <xref:System.Configuration.Install.Installer> objetos.  
+  
+ Use qualquer um dos três formas para adicionar instaladores na coleção:  
+  
+-   O <xref:System.Configuration.Install.InstallerCollection.Add%2A> método adiciona um único instalador à coleção.  
+  
+-   O <xref:System.Configuration.Install.InstallerCollection.AddRange%2A> métodos adicionam vários instaladores na coleção.  
+  
+-   O <xref:System.Configuration.Install.InstallerCollection.Insert%2A> método e o <xref:System.Configuration.Install.InstallerCollection.Item%2A> propriedade, que é o <xref:System.Configuration.Install.InstallerCollection> indexador, cada adicionar um instalador único na coleção no índice especificado.  
+  
+ Remover instaladores por meio de <xref:System.Configuration.Install.InstallerCollection.Remove%2A> método. Verifique se o instalador está na coleção usando o <xref:System.Configuration.Install.InstallerCollection.Contains%2A> método. Localizar onde um instalador está localizado na coleção usando o <xref:System.Configuration.Install.InstallerCollection.IndexOf%2A> método.  
+  
+ Os instaladores em uma coleção são executados quando o instalador que contém a coleção, conforme especificado pelo <xref:System.Configuration.Install.Installer.Parent%2A?displayProperty=nameWithType> propriedade, chama seus <xref:System.Configuration.Install.Installer.Install%2A>, <xref:System.Configuration.Install.Installer.Commit%2A>, <xref:System.Configuration.Install.Installer.Rollback%2A>, ou <xref:System.Configuration.Install.Installer.Uninstall%2A> métodos.  
+  
+ Para obter exemplos do uso de uma coleção de instalador, consulte o <xref:System.Configuration.Install.AssemblyInstaller> e <xref:System.Configuration.Install.TransactedInstaller> classes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.InstallerCollection.Add%2A> método o <xref:System.Configuration.Install.InstallerCollection> classe. Este exemplo fornece uma implementação semelhante do [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md). Ele instala os assemblies com as opções anteriores a esse assembly específico. Se uma opção não for especificada para um assembly, opções do assembly anterior serão executadas se houver um assembly anterior na lista. Se o "/ u" ou "/Uninstall" opção for especificada, os assemblies são desinstalados. Se o "/?" ou "/Help" é fornecida uma opção, as informações de Ajuda serão exibidas no console.  
+  
+ [!code-cpp[InstallerCollection_Add#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_Add/CPP/installercollection_add.cpp#1)]
+ [!code-csharp[InstallerCollection_Add#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_Add/CS/installercollection_add.cs#1)]
+ [!code-vb[InstallerCollection_Add#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_Add/VB/installercollection_add.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Configuration.Install.Installer value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Configuration.Install.Installer value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.Add(System.Configuration.Install.Installer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Configuration.Install.Installer" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Configuration.Install.Installer" /> que representa o instalador para adicionar à coleção.</param>
+        <summary>Adiciona o instalador especificado para esta coleção de instaladores.</summary>
+        <returns>O índice de base zero do instalador adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.Install.Installer.Parent%2A> propriedade adicionado <xref:System.Configuration.Install.Installer> é definido para especificar o <xref:System.Configuration.Install.Installer> que contém essa coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é um trecho do exemplo no <xref:System.Configuration.Install.InstallerCollection> classe.  
+  
+ [!code-cpp[InstallerCollection_Add#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_Add/CPP/installercollection_add.cpp#1)]
+ [!code-csharp[InstallerCollection_Add#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_Add/CS/installercollection_add.cs#1)]
+ [!code-vb[InstallerCollection_Add#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_Add/VB/installercollection_add.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Configuration.Install.Installer[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Configuration.Install.Installer[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.AddRange(System.Configuration.Install.Installer[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Configuration.Install.Installer[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz do tipo <see cref="T:System.Configuration.Install.Installer" /> que representa os instaladores para adicionar a esta coleção.</param>
+        <summary>Adiciona a matriz de instaladores especificada para essa coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.Install.Installer.Parent%2A> propriedade de cada adicionado <xref:System.Configuration.Install.Installer> é definido como o <xref:System.Configuration.Install.Installer> que contém essa coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.InstallerCollection.AddRange%2A> método o <xref:System.Configuration.Install.InstallerCollection> classe. Ele cria <xref:System.Configuration.Install.AssemblyInstaller> instâncias `MyAssembly1.exe` e `MyAssembly2.exe`. Essas instâncias são adicionadas a um <xref:System.Configuration.Install.TransactedInstaller>. O processo de instalação instala ambos `MyAssembly1.exe` e `MyAssembly2.exe`.  
+  
+ [!code-cpp[InstallerCollection_AddRange1#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_AddRange1/CPP/installercollection_addrange1.cpp#1)]
+ [!code-csharp[InstallerCollection_AddRange1#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_AddRange1/CS/installercollection_addrange1.cs#1)]
+ [!code-vb[InstallerCollection_AddRange1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_AddRange1/VB/installercollection_addrange1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Configuration.Install.InstallerCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Configuration.Install.InstallerCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.AddRange(System.Configuration.Install.InstallerCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Configuration.Install.InstallerCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Configuration.Install.InstallerCollection" /> que representa os instaladores para adicionar a esta coleção.</param>
+        <summary>Adiciona a coleção de instaladores especificada para essa coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.Install.Installer.Parent%2A> propriedade de cada adicionado <xref:System.Configuration.Install.Installer> é definido como o <xref:System.Configuration.Install.Installer> que contém essa coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.InstallerCollection.Insert%2A> método e o <xref:System.Configuration.Install.InstallerCollection.AddRange%2A> métodos de <xref:System.Configuration.Install.InstallerCollection> classe. Ele cria <xref:System.Configuration.Install.AssemblyInstaller> instâncias `MyAssembly1.exe` e `MyAssembly2.exe`. Essas instâncias de <xref:System.Configuration.Install.AssemblyInstaller> são adicionados a um <xref:System.Configuration.Install.TransactedInstaller> chamado `myTransactedInstaller1`. Os instaladores no `myTransactedInstaller1` são copiados para outro <xref:System.Configuration.Install.TransactedInstaller> chamado `myTransactedInstaller2`. O processo de instalação instala ambos `MyAssembly1.exe` e `MyAssembly2.exe`.  
+  
+ [!code-cpp[InstallerCollection_Insert#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_Insert/CPP/installercollection_insert.cpp#1)]
+ [!code-csharp[InstallerCollection_Insert#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_Insert/CS/installercollection_insert.cs#1)]
+ [!code-vb[InstallerCollection_Insert#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_Insert/VB/installercollection_insert.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Configuration.Install.Installer value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Configuration.Install.Installer value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.Contains(System.Configuration.Install.Installer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Configuration.Install.Installer" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Configuration.Install.Installer" /> que representa o instalador para procurar.</param>
+        <summary>Determina se o instalador especificado está incluído na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o instalador especificado na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.InstallerCollection.Remove%2A> método <xref:System.Configuration.Install.InstallerCollection.Contains%2A> método, e <xref:System.Configuration.Install.InstallerCollection.IndexOf%2A> método o <xref:System.Configuration.Install.InstallerCollection> classe. Ele cria <xref:System.Configuration.Install.AssemblyInstaller> instâncias `MyAssembly1.exe` e `MyAssembly2.exe`. Essas instâncias são adicionadas a um <xref:System.Configuration.Install.TransactedInstaller>. `MyAssembly2.exe`em seguida, é removido do <xref:System.Configuration.Install.InstallerCollection> do <xref:System.Configuration.Install.TransactedInstaller>. O processo de instalação inicia e instala apenas `MyAssembly1.exe`.  
+  
+ [!code-cpp[InstallerCollection_Remove#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_Remove/CPP/installercollection_remove.cpp#1)]
+ [!code-csharp[InstallerCollection_Remove#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_Remove/CS/installercollection_remove.cs#1)]
+ [!code-vb[InstallerCollection_Remove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_Remove/VB/installercollection_remove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Configuration.Install.Installer[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Configuration.Install.Installer[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.CopyTo(System.Configuration.Install.Installer[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Configuration.Install.Installer[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz na qual copiar.</param>
+        <param name="index">O índice da matriz na qual colar a coleção.</param>
+        <summary>Copia os itens da coleção para uma matriz, começando no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.InstallerCollection.CopyTo%2A> método o <xref:System.Configuration.Install.InstallerCollection> classe. Ele cria <xref:System.Configuration.Install.AssemblyInstaller> instâncias `MyAssembly1.exe` e `MyAssembly2.exe`. Essas instâncias são adicionadas a um <xref:System.Configuration.Install.TransactedInstaller>. Os nomes dos assemblies a serem instalados são exibidos no console. O processo de instalação instala ambos `MyAssembly1.exe` e `MyAssembly2.exe`.  
+  
+ [!code-cpp[InstallerCollection_CopyTo#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_CopyTo/CPP/installercollection_copyto.cpp#1)]
+ [!code-csharp[InstallerCollection_CopyTo#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_CopyTo/CS/installercollection_copyto.cs#1)]
+ [!code-vb[InstallerCollection_CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_CopyTo/VB/installercollection_copyto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Configuration.Install.Installer value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Configuration.Install.Installer value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.IndexOf(System.Configuration.Install.Installer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Configuration.Install.Installer" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Configuration.Install.Installer" /> a ser localizado na coleção.</param>
+        <summary>Determina o índice de um instalador especificado na coleção.</summary>
+        <returns>O índice de base zero do instalador na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir é o mesmo que o exemplo de <xref:System.Configuration.Install.InstallerCollection.Contains%2A> método. Para obter mais informações sobre este exemplo, consulte a seção exemplo de <xref:System.Configuration.Install.InstallerCollection.Contains%2A> método.  
+  
+ [!code-cpp[InstallerCollection_Remove#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_Remove/CPP/installercollection_remove.cpp#1)]
+ [!code-csharp[InstallerCollection_Remove#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_Remove/CS/installercollection_remove.cs#1)]
+ [!code-vb[InstallerCollection_Remove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_Remove/VB/installercollection_remove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Configuration.Install.Installer value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Configuration.Install.Installer value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.Insert(System.Int32,System.Configuration.Install.Installer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Configuration.Install.Installer" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir o instalador.</param>
+        <param name="value">O <see cref="T:System.Configuration.Install.Installer" /> a ser inserido.</param>
+        <summary>Insere o instalador especificado na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir é o mesmo que o exemplo de <xref:System.Configuration.Install.InstallerCollection.AddRange%2A> método. Para obter mais informações sobre este exemplo, consulte a seção exemplo de <xref:System.Configuration.Install.InstallerCollection.AddRange%2A> método.  
+  
+ [!code-cpp[InstallerCollection_Insert#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_Insert/CPP/installercollection_insert.cpp#1)]
+ [!code-csharp[InstallerCollection_Insert#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_Insert/CS/installercollection_insert.cs#1)]
+ [!code-vb[InstallerCollection_Insert#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_Insert/VB/installercollection_insert.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Configuration.Install.Installer this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.Install.Installer Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Install.InstallerCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Install.Installer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do instalador para obter ou definir.</param>
+        <summary>Obtém ou define um instalador no índice especificado.</summary>
+        <value>Um <see cref="T:System.Configuration.Install.Installer" /> que representa o instalador no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando especificado <xref:System.Configuration.Install.Installer> é colocado no <xref:System.Configuration.Install.InstallerCollection>, o <xref:System.Configuration.Install.Installer.Parent%2A> propriedade o <xref:System.Configuration.Install.Installer> é definido como o <xref:System.Configuration.Install.Installer> que contém a coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria <xref:System.Configuration.Install.AssemblyInstaller> instâncias `MyAssembly1.exe` e `MyAssembly2.exe`. Essas instâncias são adicionadas a um <xref:System.Configuration.Install.TransactedInstaller>. Os nomes de todos os assemblies que devem ser instalados são exibidos no console. O processo de instalação instala ambos `MyAssembly1.exe` e `MyAssembly2.exe`.  
+  
+ [!code-cpp[InstallerCollection_Item#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_Item/CPP/installercollection_item.cpp#1)]
+ [!code-csharp[InstallerCollection_Item#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_Item/CS/installercollection_item.cs#1)]
+ [!code-vb[InstallerCollection_Item#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_Item/VB/installercollection_item.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir <c>valor</c>.</param>
+        <param name="value">O novo valor do instalador no <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais antes de um novo instalador é inserido na coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected override void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> pode ser encontrado.</param>
+        <param name="value">O instalador a ser removido da <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais antes de um instalador é removido da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected override void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual substituir <c>oldValue</c>.</param>
+        <param name="oldValue">O valor para substituir <c>newValue.</c></param>
+        <param name="newValue">O novo valor do instalador no <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais antes de um instalador existente é definido como um novo valor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Configuration.Install.Installer value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Configuration.Install.Installer value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallerCollection.Remove(System.Configuration.Install.Installer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Configuration.Install.Installer" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Configuration.Install.Installer" /> que representa o instalador para remover.</param>
+        <summary>Remove o <see cref="T:System.Configuration.Install.Installer" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.Install.Installer.Parent%2A> propriedade o removido <xref:System.Configuration.Install.Installer> é definido como `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é o mesmo que o exemplo de <xref:System.Configuration.Install.InstallerCollection.Contains%2A> método. Para obter mais informações sobre este exemplo, consulte a seção exemplo de <xref:System.Configuration.Install.InstallerCollection.Contains%2A> método.  
+  
+ [!code-cpp[InstallerCollection_Remove#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallerCollection_Remove/CPP/installercollection_remove.cpp#1)]
+ [!code-csharp[InstallerCollection_Remove#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallerCollection_Remove/CS/installercollection_remove.cs#1)]
+ [!code-vb[InstallerCollection_Remove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallerCollection_Remove/VB/installercollection_remove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

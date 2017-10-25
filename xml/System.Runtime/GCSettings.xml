@@ -1,0 +1,211 @@
+<Type Name="GCSettings" FullName="System.Runtime.GCSettings">
+  <TypeSignature Language="C#" Value="public static class GCSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit GCSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.GCSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica as configurações de coleta de lixo para o processo atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.GCSettings.IsServerGC%2A> propriedade para determinar se a coleta de lixo do servidor está habilitada para o processo atual.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsServerGC">
+      <MemberSignature Language="C#" Value="public static bool IsServerGC { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsServerGC" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.GCSettings.IsServerGC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleta de lixo do servidor está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a coleta de lixo do servidor estiver habilitada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre coleta de lixo do servidor, consulte a seção "Coleta de lixo de servidor e estação de trabalho" [conceitos básicos de coleta de lixo](~/docs/standard/garbage-collection/fundamentals.md).  
+  
+ Se a coleta de lixo do servidor não estiver habilitada, coleta de lixo da estação de trabalho está em vigor (com ou sem coleção simultânea). Coleta de lixo do servidor está disponível apenas em computadores multiprocessadores.  
+  
+ Um host não gerenciado pode solicitar a coleta de lixo do servidor, e a solicitação do host substitui o arquivo de configuração. Se o host não especificar o tipo de coleta de lixo, você pode usar uma configuração de arquivo de configuração para especificar a coleta de lixo do servidor. Essa configuração é válida somente no arquivo de configuração do aplicativo, não no arquivo de configuração da máquina (consulte [Configurando aplicativos](http://msdn.microsoft.com/library/86bd26d3-737e-4484-9782-19b17f34cd1f)). O exemplo a seguir mostra o conteúdo de um arquivo de configuração do aplicativo de exemplo que habilita a coleta de lixo do servidor.  
+  
+```  
+<configuration>  
+  <runtime>  
+    <gcServer enabled="true" />  
+  </runtime>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir indica se o computador host está usando o servidor ou a coleta de lixo da estação de trabalho.  
+  
+ [!code-csharp[Environment.IsServerGC#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.IsServerGC/CS/isg.cs#1)]
+ [!code-vb[Environment.IsServerGC#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.IsServerGC/VB/isg.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeObjectHeapCompactionMode">
+      <MemberSignature Language="C#" Value="public static System.Runtime.GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Runtime.GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.GCSettings.LargeObjectHeapCompactionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLargeObjectHeapCompactionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Obtém ou define um valor que indica se a coleta de lixo com bloqueio completo compacta o heap de objeto grande (LOH).</summary>
+        <value>Um dos valores de enumeração que indica se uma coleta de lixo de bloqueio completo compacta o LOH.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O LOH é usado para alocar memória para objetos grandes (como matrizes) que exigem mais de 85.000 bytes. Devido ao impacto de desempenho de cópia de grandes blocos de memória, o coletor de lixo normalmente varre LOH, que envolve a criação de uma lista de locais da memória que foram ocupada por objetos inativos e podem ser reutilizados para atender a solicitações futuras de alocação de memória para objetos grandes. No entanto, em aplicativos que fazem uso extensos use do LOH para armazenar objetos transitórios, fragmentação pode também afetar o desempenho de memória. Nesse caso, é possível usar o <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A> propriedade compactar em vez de simplesmente varredura LOH durante uma coleta de lixo.  
+  
+ O valor padrão de <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A> é de propriedade <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>, que indica que o LOH não é compactado durante a coleta de lixo. Se você atribuir a propriedade de um valor de <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>o LOH é compactado durante a próxima coleta de lixo bloqueio completo e o valor da propriedade é redefinido para <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Coletas de lixo em segundo plano não estão bloqueando. Isso significa que, se você definir o <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A> propriedade <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>qualquer geração de plano de fundo 2 coleções que ocorrem posteriormente não compactar o LOH. Somente a primeira geração bloqueio 2 coleção compacta LOH.  
+  
+ Após o <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A> está definida como <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=nameWithType>, a próxima coleta de lixo de bloqueio completo (e a compactação do LOH) ocorrem em um tempo futuro indeterminado. Você pode compactar o LOH imediatamente usando código semelhante ao seguinte:  
+  
+ [!code-csharp[System.Runtime.GCSettings#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.gcsettings/cs/lohcompactionmode1.cs#1)]
+ [!code-vb[System.Runtime.GCSettings#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.gcsettings/vb/lohcompactionmode1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatencyMode">
+      <MemberSignature Language="C#" Value="public static System.Runtime.GCLatencyMode LatencyMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Runtime.GCLatencyMode LatencyMode" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.GCSettings.LatencyMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de latência atual para a coleta de lixo.</summary>
+        <value>Um dos valores de enumeração que especifica o modo de latência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode reduzir o nível de risco de invasão da coleta de lixo em seu aplicativo, definindo o <xref:System.Runtime.GCLatencyMode> para <xref:System.Runtime.GCLatencyMode.LowLatency> durante as operações essenciais. Depois de concluir essas operações, retorne para o modo mais alto latência de forma que mais objetos a ser recuperados para aumentar a memória.  
+  
+ Em geral, você pode definir o valor da <xref:System.Runtime.GCSettings.LatencyMode%2A> propriedade para definir o modo de latência do coletor de lixo. No entanto, você não pode definir o modo sem-GC região latência atribuindo o <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> valor de enumeração para o <xref:System.Runtime.GCSettings.LatencyMode%2A> propriedade. Em vez disso, você chama o <xref:System.GC.TryStartNoGCRegion%2A?displayProperty=nameWithType> da chamada do método para iniciar o modo sem-GC região latência e o <xref:System.GC.EndNoGCRegion%2A?displayProperty=nameWithType> para encerrá-lo.  
+  
+ Consulte [modos de latência](~/docs/standard/garbage-collection/latency.md) para obter uma discussão de como as definições de configuração de tempo de execução de coleta de lixo afetam o valor padrão de <xref:System.Runtime.GCLatencyMode> enumeração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="P:System.Runtime.GCSettings.LatencyMode" /> propriedade está sendo definida como um valor inválido.  
+  
+ -ou-  
+  
+ O <see cref="P:System.Runtime.GCSettings.LatencyMode" /> propriedade não pode ser definida como <see cref="F:System.Runtime.GCLatencyMode.NoGCRegion" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

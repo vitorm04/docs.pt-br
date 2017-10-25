@@ -1,0 +1,137 @@
+<Type Name="TreeViewEventArgs" FullName="System.Windows.Forms.TreeViewEventArgs">
+  <TypeSignature Language="C#" Value="public class TreeViewEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TreeViewEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeViewEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos <see cref="E:System.Windows.Forms.TreeView.AfterCheck" />, <see cref="E:System.Windows.Forms.TreeView.AfterCollapse" />, <see cref="E:System.Windows.Forms.TreeView.AfterExpand" /> ou <see cref="E:System.Windows.Forms.TreeView.AfterSelect" /> de um controle <see cref="T:System.Windows.Forms.TreeView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra um personalizado <xref:System.Windows.Forms.TreeView>. Herdando de <xref:System.Windows.Forms.TreeView> classe, esta versão personalizada tem toda a funcionalidade de um normal <xref:System.Windows.Forms.TreeView>. Alterar vários valores de propriedade no construtor fornece uma aparência exclusiva. Porque o <xref:System.Windows.Forms.TreeView.ShowPlusMinus%2A> propriedade é definida como false, o controle personalizado também substitui o <xref:System.Windows.Forms.TreeView.OnAfterSelect%2A> método para nós podem ser expandidos e recolhidos quando eles são clicados.  
+  
+ Um controle que é personalizado dessa maneira pode ser usado em toda a organização, tornando mais fácil fornecer uma interface consistente sem exigir que as propriedades de controle a ser especificado em cada projeto.  
+  
+ [!code-cpp[TreeViewCustomization#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewCustomization/CPP/treeviewcustomization.cpp#2)]
+ [!code-csharp[TreeViewCustomization#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewCustomization/CS/treeviewcustomization.cs#2)]
+ [!code-vb[TreeViewCustomization#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewCustomization/VB/treeviewcustomization.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeViewEventArgs (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeViewEventArgs.#ctor(System.Windows.Forms.TreeNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> que o evento está respondendo ao.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.TreeViewEventArgs" /> classe para o nó da árvore.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeViewEventArgs (System.Windows.Forms.TreeNode node, System.Windows.Forms.TreeViewAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TreeNode node, valuetype System.Windows.Forms.TreeViewAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeViewEventArgs.#ctor(System.Windows.Forms.TreeNode,System.Windows.Forms.TreeViewAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+        <Parameter Name="action" Type="System.Windows.Forms.TreeViewAction" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> que o evento está respondendo ao.</param>
+        <param name="action">O tipo de <see cref="T:System.Windows.Forms.TreeViewAction" /> que gerou o evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.TreeViewEventArgs" /> classe para o nó da árvore especificado e com o tipo de ação que gerou o evento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeViewAction Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TreeViewAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeViewEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de ação que gerou o evento.</summary>
+        <value>O tipo de <see cref="T:System.Windows.Forms.TreeViewAction" /> que gerou o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir ilustra um personalizado <xref:System.Windows.Forms.TreeView>. Herdando de <xref:System.Windows.Forms.TreeView> classe, esta versão personalizada tem toda a funcionalidade de um normal <xref:System.Windows.Forms.TreeView>. Alterar vários valores de propriedade no construtor fornece uma aparência exclusiva. Porque o <xref:System.Windows.Forms.TreeView.ShowPlusMinus%2A> propriedade é definida como false, o controle personalizado também substitui o <xref:System.Windows.Forms.TreeView.OnAfterSelect%2A> método para nós podem ser expandidos e recolhidos quando eles são clicados.  
+  
+ Um controle que é personalizado dessa maneira pode ser usado em toda a organização, tornando mais fácil fornecer uma interface consistente sem exigir que as propriedades de controle a ser especificado em cada projeto.  
+  
+ [!code-cpp[TreeViewCustomization#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewCustomization/CPP/treeviewcustomization.cpp#2)]
+ [!code-csharp[TreeViewCustomization#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewCustomization/CS/treeviewcustomization.cs#2)]
+ [!code-vb[TreeViewCustomization#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewCustomization/VB/treeviewcustomization.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Node" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeViewEventArgs.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó de árvore que foi marcado, expandido, recolhido ou selecionado.</summary>
+        <value>O <see cref="T:System.Windows.Forms.TreeNode" /> que foi verificado, expandido, recolhido ou selecionada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir ilustra um personalizado <xref:System.Windows.Forms.TreeView>. Herdando de <xref:System.Windows.Forms.TreeView> classe, esta versão personalizada tem toda a funcionalidade de um normal <xref:System.Windows.Forms.TreeView>. Uma aparência exclusiva é fornecida por meio da alteração de vários valores de propriedade no construtor. Porque <xref:System.Windows.Forms.TreeView.ShowPlusMinus%2A> é definido como false, o controle personalizado também substitui <xref:System.Windows.Forms.TreeView.OnAfterSelect%2A> para que nós podem ser expandidos e recolhidos quando eles são clicados.  
+  
+ Um controle que é personalizado dessa maneira pode ser usado em toda a organização, tornando mais fácil fornecer uma interface consistente sem exigir que as propriedades de controle a ser especificado em cada projeto.  
+  
+ [!code-cpp[TreeViewCustomization#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewCustomization/CPP/treeviewcustomization.cpp#2)]
+ [!code-csharp[TreeViewCustomization#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewCustomization/CS/treeviewcustomization.cs#2)]
+ [!code-vb[TreeViewCustomization#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewCustomization/VB/treeviewcustomization.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

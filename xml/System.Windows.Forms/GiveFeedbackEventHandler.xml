@@ -1,0 +1,49 @@
+<Type Name="GiveFeedbackEventHandler" FullName="System.Windows.Forms.GiveFeedbackEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void GiveFeedbackEventHandler(object sender, GiveFeedbackEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GiveFeedbackEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GiveFeedbackEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.GiveFeedbackEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.GiveFeedbackEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipula o evento <see cref="E:System.Windows.Forms.Control.GiveFeedback" /> de um <see cref="T:System.Windows.Forms.Control" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Windows.Forms.GiveFeedbackEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre como manipular eventos com delegados, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma operação de arrastar e soltar entre duas <xref:System.Windows.Forms.ListBox> controles. O exemplo chama o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método quando a ação de arrastar inicia. A ação de arrastar inicia se moveu o mouse mais de <xref:System.Windows.Forms.SystemInformation.DragSize%2A?displayProperty=nameWithType> do local do mouse durante o <xref:System.Windows.Forms.Control.MouseDown> evento. O <xref:System.Windows.Forms.ListBox.IndexFromPoint%2A> método é usado para determinar o índice do item a arrastar durante o `MouseDown` evento.  
+  
+ O exemplo também demonstra como usar cursores personalizados para a operação de arrastar e soltar. O exemplo supõe que dois arquivos de cursor, `3dwarro.cur` e `3dwno.cur`, existe no diretório de aplicativo para a operação de arrastar personalizado e não-drop cursores, respectivamente. Os cursores personalizados serão usados se o `UseCustomCursorsCheck` <xref:System.Windows.Forms.CheckBox> é verificada. Os cursores personalizados são definidos <xref:System.Windows.Forms.Control.GiveFeedback> manipulador de eventos.  
+  
+ O estado do teclado é avaliado no <xref:System.Windows.Forms.Control.DragOver> manipulador de eventos para a direita `ListBox`, para determinar qual será a operação de arrastar com base no estado das teclas SHIFT, CTRL, ALT e CTRL + ALT. O local no `ListBox` onde ocorreria o descarte também é determinado durante a `DragOver` eventos. Se os dados para remover não são um `String`, em seguida, o <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> é definido como <xref:System.Windows.Forms.DragDropEffects?displayProperty=nameWithType>. Por fim, o status de menu é exibido no `DropLocationLabel` <xref:System.Windows.Forms.Label>.  
+  
+ Os dados para remover à direita `ListBox` é determinado no <xref:System.Windows.Forms.Control.DragDrop> manipulador de eventos e o `String` valor é adicionado no local apropriado no `ListBox`. Se a operação de arrastar é movido para fora dos limites do formulário, a operação de arrastar e soltar foi cancelada no <xref:System.Windows.Forms.Control.QueryContinueDrag> manipulador de eventos.  
+  
+ Esse trecho de código demonstra como usar o <xref:System.Windows.Forms.GiveFeedbackEventHandler> delegar com o <xref:System.Windows.Forms.Control.GiveFeedback> evento. Consulte o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

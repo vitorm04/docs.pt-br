@@ -1,0 +1,26 @@
+<Type Name="GroupDescriptionSelectorCallback" FullName="System.Windows.Data.GroupDescriptionSelectorCallback">
+  <TypeSignature Language="C#" Value="public delegate System.ComponentModel.GroupDescription GroupDescriptionSelectorCallback(CollectionViewGroup group, int level);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GroupDescriptionSelectorCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.GroupDescriptionSelectorCallback" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="group" Type="System.Windows.Data.CollectionViewGroup" />
+    <Parameter Name="level" Type="System.Int32" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.ComponentModel.GroupDescription</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="group">O grupo pai.</param>
+    <param name="level">O nível de <c>grupo</c>.</param>
+    <summary>Representa um método que é usado para fornecer lógica personalizada para selecionar o <see cref="T:System.ComponentModel.GroupDescription" /> com base no grupo pai e seu nível.</summary>
+    <returns>O <see cref="T:System.ComponentModel.GroupDescription" /> escolhido com base no grupo pai e seu nível.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,30 @@
+<Type Name="IRequiresSessionState" FullName="System.Web.SessionState.IRequiresSessionState">
+  <TypeSignature Language="C#" Value="public interface IRequiresSessionState" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRequiresSessionState" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.IRequiresSessionState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica que o manipulador HTTP de destino requer acesso de leitura e gravação aos valores de estado de sessão. Essa é uma interface de marcador e não tem métodos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.Web.SessionState.IRequiresSessionState> interface em que o manipulador HTTP personalizado para identificar o que seu manipulador requer acesso de leitura e gravação aos valores de estado de sessão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir examina o HTTP atual <xref:System.Web.HttpContext.Handler%2A> propriedade para determinar se ele requer acesso de leitura e gravação aos valores de estado de sessão.  
+  
+ [!code-csharp[HttpSessionState#32](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpSessionState/CS/snippetscs.aspx#32)]
+ [!code-vb[HttpSessionState#32](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpSessionState/VB/snippetsvb.aspx#32)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

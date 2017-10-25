@@ -1,0 +1,322 @@
+<Type Name="OpenFileDialog" FullName="System.Windows.Forms.OpenFileDialog">
+  <TypeSignature Language="C#" Value="public sealed class OpenFileDialog : System.Windows.Forms.FileDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OpenFileDialog extends System.Windows.Forms.FileDialog" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.OpenFileDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.FileDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Exibe uma caixa de diálogo padrão que solicita ao usuário para abrir um arquivo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe permite que você verifique se existe um arquivo e abri-lo. O <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> propriedade determina se uma caixa de seleção de somente leitura aparece na caixa de diálogo. O <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A> propriedade indica se a caixa de seleção de somente leitura é verificada.  
+  
+ A maioria da funcionalidade básica para essa classe é encontrada no <xref:System.Windows.Forms.FileDialog> classe.  
+  
+ Se você quiser permitir que o usuário selecione uma pasta em vez de um arquivo, use <xref:System.Windows.Forms.FolderBrowserDialog> em vez disso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.OpenFileDialog>, define várias propriedades para definir o comportamento de filtro e a caixa de diálogo de extensão do arquivo e exibe a caixa de diálogo usando o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A?displayProperty=nameWithType> método. O exemplo requer um formulário com um <xref:System.Windows.Forms.Button> colocados nela e uma referência para o <xref:System.IO> namespace adicionada a ele.  
+  
+ [!code-cpp[Classic OpenFileDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OpenFileDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OpenFileDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OpenFileDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic OpenFileDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OpenFileDialog Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenFileDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.OpenFileDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Windows.Forms.OpenFileDialog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o padrão fornecido pelo compilador construtor para o <xref:System.Windows.Forms.OpenFileDialog> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckFileExists">
+      <MemberSignature Language="C#" Value="public override bool CheckFileExists { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckFileExists" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.OpenFileDialog.CheckFileExists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo exibirá um aviso se o usuário especificar um nome de arquivo que não existe.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo exibe um aviso quando o usuário Especifica um nome de arquivo que não existe; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiselect">
+      <MemberSignature Language="C#" Value="public bool Multiselect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Multiselect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.OpenFileDialog.Multiselect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo permite que vários arquivos sejam selecionados.</summary>
+        <value>
+          <see langword="true" /> se a caixa de diálogo permitir que vários arquivos sejam selecionados juntos ou simultaneamente; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.FileDialog.FileNames%2A> selecionado de propriedade para acessar a lista completa de nomes de arquivo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que o usuário selecione um número de imagens e exibi-los no <xref:System.Windows.Forms.PictureBox> controles em um formulário. Ele demonstra inicializando um <xref:System.Windows.Forms.OpenFileDialog>, a definição de <xref:System.Windows.Forms.FileDialog.Title%2A> e <xref:System.Windows.Forms.FileDialog.Filter%2A> propriedades e permitindo que o usuário selecione vários arquivos, definindo o <xref:System.Windows.Forms.OpenFileDialog.Multiselect%2A> propriedade como true. Este exemplo de código pressupõe que o formulário já tem um <xref:System.Windows.Forms.OpenFileDialog> controle chamado `openFileDialog1`, um <xref:System.Windows.Forms.Button> chamado `SelectFileButton`e um <xref:System.Windows.Forms.FlowLayoutPanel> chamado `flowLayoutPanel1`.  
+  
+ [!code-csharp[System.Windows.Forms.OpenFileDialog.MultiSelect#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.OpenFileDialog.MultiSelect/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.OpenFileDialog.MultiSelect#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.OpenFileDialog.MultiSelect/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenFile">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream OpenFile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.OpenFileDialog.OpenFile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre o arquivo selecionado pelo usuário, com permissão somente leitura. O arquivo é especificado pela propriedade <see cref="P:System.Windows.Forms.FileDialog.FileName" />.</summary>
+        <returns>Um <see cref="T:System.IO.Stream" /> que especifica o arquivo somente leitura selecionado pelo usuário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método é usado para fornecer um recurso para abrir um arquivo rapidamente na caixa de diálogo. O arquivo é aberto no modo somente leitura para fins de segurança. Para abrir um arquivo no modo de leitura/gravação, você deve usar outro método, como <xref:System.IO.FileStream>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método.  
+  
+ [!code-cpp[Classic OpenFileDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OpenFileDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OpenFileDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OpenFileDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic OpenFileDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OpenFileDialog Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O nome do arquivo é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.FileDialogPermission">Para abrir um arquivo. Enumeração associada: <see cref="F:System.Security.Permissions.FileDialogPermissionAccess.Open" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnlyChecked">
+      <MemberSignature Language="C#" Value="public bool ReadOnlyChecked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnlyChecked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de seleção somente leitura está marcada.</summary>
+        <value>
+          <see langword="true" /> se a caixa de seleção somente leitura estiver marcada; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A> estado não afeta o modo de leitura/gravação que <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> usa para abrir um arquivo selecionado na caixa de diálogo. <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>sempre irá abrir o arquivo no modo somente leitura.  
+  
+ O <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> propriedade deve ser definida antes para que a caixa de seleção de somente leitura aparecer na caixa de diálogo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A> propriedade. Este exemplo exibe o <xref:System.Windows.Forms.OpenFileDialog> caixa com o <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> propriedade definida como `true`. Se o usuário clica para abrir o arquivo no modo somente leitura, a opção de <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A> propriedade for avaliada como `true`e o <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método é usado para abrir o arquivo. Caso contrário, o <xref:System.IO.FileStream> classe é usada para abrir o arquivo no modo de leitura/gravação.  
+  
+ [!code-cpp[DlgOpenFileReadOnly#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DlgOpenFileReadOnly/CPP/form1.cpp#1)]
+ [!code-csharp[DlgOpenFileReadOnly#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DlgOpenFileReadOnly/CS/form1.cs#1)]
+ [!code-vb[DlgOpenFileReadOnly#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DlgOpenFileReadOnly/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.OpenFileDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine todas as propriedades para seus valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeFileName">
+      <MemberSignature Language="C#" Value="public string SafeFileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SafeFileName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.OpenFileDialog.SafeFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo e a extensão para o arquivo selecionado na caixa de diálogo. O nome do arquivo não inclui o caminho.</summary>
+        <value>O nome do arquivo e a extensão para o arquivo selecionado na caixa de diálogo. O nome do arquivo não inclui o caminho. O valor padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nome de arquivo seguro (apenas o nome de arquivo e extensão sem um caminho) pode ser usado para aprimorar a segurança de aplicativos porque ele não expõe informações de caminho. Essa propriedade deve ser acessível para o código sendo executado com confiança limitada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeFileNames">
+      <MemberSignature Language="C#" Value="public string[] SafeFileNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] SafeFileNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.OpenFileDialog.SafeFileNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de nomes de arquivo e extensões de todos os arquivos selecionados na caixa de diálogo. Os nomes do arquivo não incluem o caminho.</summary>
+        <value>Uma matriz de nomes de arquivo e extensões de todos os arquivos selecionados na caixa de diálogo. Os nomes do arquivo não incluem o caminho. Se nenhum arquivo for selecionado, uma matriz vazia será retornada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nome de arquivo seguro (apenas o nome de arquivo e extensão sem um caminho) pode ser usado para aprimorar a segurança de aplicativos porque ele não expõe informações de caminho. Essa propriedade deve ser acessível para o código sendo executado com confiança limitada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowReadOnly">
+      <MemberSignature Language="C#" Value="public bool ShowReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.OpenFileDialog.ShowReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo contém uma caixa de seleção somente leitura.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo contém uma caixa de seleção de somente leitura; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> propriedade. Este exemplo exibe o <xref:System.Windows.Forms.OpenFileDialog> caixa com o <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> propriedade definida como `true`. Se o usuário clica para abrir o arquivo no modo somente leitura, a opção de <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método é usado para abrir o arquivo. Caso contrário, o <xref:System.IO.FileStream> classe é usada para abrir o arquivo no modo de leitura/gravação.  
+  
+ [!code-cpp[DlgOpenFileReadOnly#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DlgOpenFileReadOnly/CPP/form1.cpp#1)]
+ [!code-csharp[DlgOpenFileReadOnly#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DlgOpenFileReadOnly/CS/form1.cs#1)]
+ [!code-vb[DlgOpenFileReadOnly#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DlgOpenFileReadOnly/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

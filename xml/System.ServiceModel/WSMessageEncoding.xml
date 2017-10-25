@@ -1,0 +1,66 @@
+<Type Name="WSMessageEncoding" FullName="System.ServiceModel.WSMessageEncoding">
+  <TypeSignature Language="C#" Value="public enum WSMessageEncoding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WSMessageEncoding extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WSMessageEncoding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se o MTOM (mecanismo de otimização de transmissão de mensagem) ou texto é usado para codificar mensagens SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado por associações de interoperabilidade, como <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.WSDualHttpBinding>, e <xref:System.ServiceModel.BasicHttpBinding> para especificar a codificação de mensagens SOAP que pode ser usado.  
+  
+ O mecanismo de otimização de transmissão de mensagem (MTOM) é um método de codificação com eficiência os elementos XML binários de dentro do contexto de um envelope SOAP.  
+  
+ Codificações de texto para mensagens, como UTF8, são usadas para fins de interoperabilidade.  
+  
+ Observe que as associações padrão projetadas para interoperabilidade com serviços da Web não usar a codificação binária. Para obter mais informações sobre as associações padrão, consulte [System-Provided associações](~/docs/framework/wcf/system-provided-bindings.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Mtom">
+      <MemberSignature Language="C#" Value="Mtom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.WSMessageEncoding Mtom = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.WSMessageEncoding.Mtom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WSMessageEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O MTOM é usado para codificar as mensagens SOAP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.WSMessageEncoding Text = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.WSMessageEncoding.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WSMessageEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O texto é usado para codificar as mensagens SOAP.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

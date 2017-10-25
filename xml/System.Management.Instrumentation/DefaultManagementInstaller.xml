@@ -1,0 +1,57 @@
+<Type Name="DefaultManagementInstaller" FullName="System.Management.Instrumentation.DefaultManagementInstaller">
+  <TypeSignature Language="C#" Value="public class DefaultManagementInstaller : System.Configuration.Install.Installer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultManagementInstaller extends System.Configuration.Install.Installer" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.DefaultManagementInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management.Instrumentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.Installer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Instala um assembly instrumentado. Para usar o instalador de projeto padrão, simplesmente derive uma classe de <see cref="T:System.Management.Instrumentation.DefaultManagementInstaller" /> dentro do assembly. Nenhum método precisa ser substituído.  
+  
+ Observação: as bibliotecas do .NET no WMI agora são consideradas em estado final e nenhum desenvolvimento, melhorias ou atualizações adicionais estarão disponíveis para problemas não relacionados à segurança que afetarem essas bibliotecas. O [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) deve ser usado para todos os novos desenvolvimentos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece uma interface para o instalador padrão installUtil no .NET framework. Qualquer assembly que contém as classes de automação deve incluir uma classe que é derivada deste tipo. Isso irá fornecer código que gera o esquema dos objetos de automação, instala-o para a WMI e cria o código de registro do provedor necessário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como derivar uma classe a partir de <xref:System.Management.Instrumentation.DefaultManagementInstaller> classe para instalar um provedor WMI.  
+  
+```csharp  
+// This is the installer class that installs an instrumented assembly.  
+// To use the default project installer, simply derive a class from  
+// DefaultManagementInstaller.  No methods need to be overridden.  
+[System.ComponentModel.RunInstaller(true)]  
+public class TheInstaller : DefaultManagementInstaller  
+{ }  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultManagementInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.DefaultManagementInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management.Instrumentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.Instrumentation.DefaultManagementInstaller" />. Esse é o construtor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

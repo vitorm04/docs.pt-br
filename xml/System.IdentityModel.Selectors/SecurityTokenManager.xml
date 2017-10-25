@@ -1,0 +1,132 @@
+<Type Name="SecurityTokenManager" FullName="System.IdentityModel.Selectors.SecurityTokenManager">
+  <TypeSignature Language="C#" Value="public abstract class SecurityTokenManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityTokenManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SecurityTokenManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um gerenciador de token de segurança que especifica como os tokens de segurança são fornecidos, autenticados e serializados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe quando você precisa de um token de segurança personalizada, o autenticador de token de segurança ou o provedor de token de segurança. Use um token de segurança personalizada para lidar com as credenciais que [!INCLUDE[indigo2](~/includes/indigo2-md.md)] não oferece suporte. Usar um autenticador de token de segurança personalizada quando os métodos de autenticação [!INCLUDE[indigo2](~/includes/indigo2-md.md)] fornece não forem suficientes. Um <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe retorna um autenticador de token de segurança no <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> método. Um provedor de token de segurança fornece tokens de segurança SOAP para mensagens de saída. Um <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe retorna um provedor de token de segurança no <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> método.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]usando autenticadores de token de segurança personalizada e provedores de token de segurança, consulte [credencial personalizada e validação de credencial](~/docs/framework/wcf/extending/custom-credential-and-credential-validation.md). [!INCLUDE[crabout](~/includes/crabout-md.md)]criar um token de segurança personalizada, consulte [como: criar um Token personalizado](~/docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityTokenManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Selectors.SecurityTokenManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSecurityTokenAuthenticator">
+      <MemberSignature Language="C#" Value="public abstract System.IdentityModel.Selectors.SecurityTokenAuthenticator CreateSecurityTokenAuthenticator (System.IdentityModel.Selectors.SecurityTokenRequirement requirement, out System.IdentityModel.Selectors.SecurityTokenResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Selectors.SecurityTokenAuthenticator CreateSecurityTokenAuthenticator(class System.IdentityModel.Selectors.SecurityTokenRequirement requirement, [out] class System.IdentityModel.Selectors.SecurityTokenResolver&amp; resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator(System.IdentityModel.Selectors.SecurityTokenRequirement,System.IdentityModel.Selectors.SecurityTokenResolver@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenAuthenticator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenRequirement" Type="System.IdentityModel.Selectors.SecurityTokenRequirement" />
+        <Parameter Name="outOfBandTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="requirement">To be added.</param>
+        <param name="resolver">To be added.</param>
+        <summary>Obtém um autenticador de token de segurança que atenda aos requisitos de token de segurança especificados.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Selectors.SecurityTokenAuthenticator" /> que autentica os tokens de segurança de mensagens SOAP de entrada que atendem aos requisitos especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe fornece tipos que podem fornecer tokens de segurança para mensagens SOAP de saída e autenticar tokens de segurança em mensagens de SOAP de entrada. O <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> método retorna uma classe que pode autenticar os tokens de segurança que correspondem aos critérios especificados no `tokenRequirement` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSecurityTokenProvider">
+      <MemberSignature Language="C#" Value="public abstract System.IdentityModel.Selectors.SecurityTokenProvider CreateSecurityTokenProvider (System.IdentityModel.Selectors.SecurityTokenRequirement requirement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Selectors.SecurityTokenProvider CreateSecurityTokenProvider(class System.IdentityModel.Selectors.SecurityTokenRequirement requirement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider(System.IdentityModel.Selectors.SecurityTokenRequirement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenRequirement" Type="System.IdentityModel.Selectors.SecurityTokenRequirement" />
+      </Parameters>
+      <Docs>
+        <param name="requirement">To be added.</param>
+        <summary>Obtém um provedor de token de segurança que atenda aos requisitos de token de segurança especificados.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Selectors.SecurityTokenProvider" /> que fornece tokens de segurança que atendem aos requisitos especificados para enviar mensagens de SOAP.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe fornece tipos que podem fornecer tokens de segurança para mensagens SOAP de saída e autenticar tokens de segurança em mensagens de SOAP de entrada. O <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> método retorna uma classe que pode autenticar os tokens de segurança que podem fornecer tokens de segurança que correspondem aos critérios especificados no `tokenRequirement` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSecurityTokenSerializer">
+      <MemberSignature Language="C#" Value="public abstract System.IdentityModel.Selectors.SecurityTokenSerializer CreateSecurityTokenSerializer (System.IdentityModel.Selectors.SecurityTokenVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Selectors.SecurityTokenSerializer CreateSecurityTokenSerializer(class System.IdentityModel.Selectors.SecurityTokenVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer(System.IdentityModel.Selectors.SecurityTokenVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenSerializer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.IdentityModel.Selectors.SecurityTokenVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um <see cref="T:System.IdentityModel.Selectors.SecurityTokenVersion" /> que especifica o WS-* versões da especificação que seguem tokens de segurança.</param>
+        <summary>Obtém um serializador XML que pode serializar tokens de segurança em que a versão especificada do WS-* especificações.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Selectors.SecurityTokenSerializer" /> para serializar os tokens de segurança.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para adicionar suporte de serialização de um token personalizado, derive uma classe de <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> e retornar uma instância dessa classe para o <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> método. O <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> classe que deriva de <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> classe, é capaz de serializar e desserializar os tokens de segurança que acompanham o [!INCLUDE[indigo2](~/includes/indigo2-md.md)]. Portanto, para adicionar suporte para um token personalizado para o serializador, substituir os métodos virtuais no <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> de classe, adicione o código que verifica se o token de segurança desejado é o token personalizado e, se não, chame o método de classe base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1160 @@
+<Type Name="IInternalConfigHost" FullName="System.Configuration.Internal.IInternalConfigHost">
+  <TypeSignature Language="C#" Value="public interface IInternalConfigHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInternalConfigHost" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Internal.IInternalConfigHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as interfaces usadas por estruturas internas do .NET para inicializar as propriedades de configuração do aplicativo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateConfigurationContext">
+      <MemberSignature Language="C#" Value="public object CreateConfigurationContext (string configPath, string locationSubPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateConfigurationContext(string configPath, string locationSubPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.CreateConfigurationContext(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+        <Parameter Name="locationSubPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <param name="locationSubPath">Uma cadeia de caracteres que representa um local subcaminho do elemento de configuração.</param>
+        <summary>Cria e retorna um objeto de contexto para um <see cref="T:System.Configuration.ConfigurationElement" /> de uma configuração de aplicativo.</summary>
+        <returns>Um objeto de contexto para um <see cref="T:System.Configuration.ConfigurationElement" /> objeto de uma configuração de aplicativo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDeprecatedConfigContext">
+      <MemberSignature Language="C#" Value="public object CreateDeprecatedConfigContext (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateDeprecatedConfigContext(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.CreateDeprecatedConfigContext(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa um caminho para um arquivo de configuração do aplicativo.</param>
+        <summary>Cria e retorna um objeto de contexto preterido da configuração do aplicativo.</summary>
+        <returns>Um objeto de contexto preterido da configuração do aplicativo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptSection">
+      <MemberSignature Language="C#" Value="public string DecryptSection (string encryptedXml, System.Configuration.ProtectedConfigurationProvider protectionProvider, System.Configuration.ProtectedConfigurationSection protectedSection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string DecryptSection(string encryptedXml, class System.Configuration.ProtectedConfigurationProvider protectionProvider, class System.Configuration.ProtectedConfigurationSection protectedSection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.DecryptSection(System.String,System.Configuration.ProtectedConfigurationProvider,System.Configuration.ProtectedConfigurationSection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedXml" Type="System.String" />
+        <Parameter Name="protectionProvider" Type="System.Configuration.ProtectedConfigurationProvider" />
+        <Parameter Name="protectedConfigSection" Type="System.Configuration.ProtectedConfigurationSection" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedXml">Uma cadeia criptografada de XML que representa uma seção de configuração.</param>
+        <param name="protectionProvider">O objeto <see cref="T:System.Configuration.ProtectedConfigurationProvider" />.</param>
+        <param name="protectedSection">To be added.</param>
+        <summary>Descriptografa uma seção de configuração criptografada e o retorna como uma cadeia de caracteres.</summary>
+        <returns>Uma seção de configuração descriptografado como uma cadeia de caracteres.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteStream">
+      <MemberSignature Language="C#" Value="public void DeleteStream (string streamName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteStream(string streamName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.DeleteStream(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <summary>Exclui o <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração do aplicativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptSection">
+      <MemberSignature Language="C#" Value="public string EncryptSection (string encryptedXml, System.Configuration.ProtectedConfigurationProvider protectionProvider, System.Configuration.ProtectedConfigurationSection protectedSection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string EncryptSection(string encryptedXml, class System.Configuration.ProtectedConfigurationProvider protectionProvider, class System.Configuration.ProtectedConfigurationSection protectedSection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.EncryptSection(System.String,System.Configuration.ProtectedConfigurationProvider,System.Configuration.ProtectedConfigurationSection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clearTextXml" Type="System.String" />
+        <Parameter Name="protectionProvider" Type="System.Configuration.ProtectedConfigurationProvider" />
+        <Parameter Name="protectedConfigSection" Type="System.Configuration.ProtectedConfigurationSection" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedXml">To be added.</param>
+        <param name="protectionProvider">O objeto <see cref="T:System.Configuration.ProtectedConfigurationProvider" />.</param>
+        <param name="protectedSection">To be added.</param>
+        <summary>Criptografa uma seção de configuração e o retorna como uma cadeia de caracteres.</summary>
+        <returns>Uma seção de configuração criptografados representada como uma cadeia de caracteres.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConfigPathFromLocationSubPath">
+      <MemberSignature Language="C#" Value="public string GetConfigPathFromLocationSubPath (string configPath, string locatinSubPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetConfigPathFromLocationSubPath(string configPath, string locatinSubPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.GetConfigPathFromLocationSubPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+        <Parameter Name="locationSubPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <param name="locatinSubPath">To be added.</param>
+        <summary>Retorna o caminho completo para um arquivo de configuração de aplicativo com base no subcaminho do local.</summary>
+        <returns>Uma cadeia de caracteres que representa o caminho completo para um arquivo de configuração do aplicativo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConfigType">
+      <MemberSignature Language="C#" Value="public Type GetConfigType (string typeName, bool throwOnError);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetConfigType(string typeName, bool throwOnError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.GetConfigType(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="throwOnError" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo</param>
+        <param name="throwOnError">
+          <see langword="true" />para lançar uma exceção se um erro ocorre; Caso contrário,<see langword="false" /></param>
+        <summary>Retorna um <see cref="T:System.Type" /> objeto que representa o tipo de objeto de configuração.</summary>
+        <returns>Um <see cref="T:System.Type" /> objeto que representa o tipo de objeto de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConfigTypeName">
+      <MemberSignature Language="C#" Value="public string GetConfigTypeName (Type t);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetConfigTypeName(class System.Type t) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.GetConfigTypeName(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="t">Um objeto <see cref="T:System.Type" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa um nome de tipo do <see cref="T:System.Type" /> objeto que representa o tipo de configuração.</summary>
+        <returns>Uma cadeia de caracteres que representa o nome do tipo de um <see cref="T:System.Type" /> objeto que representa o tipo de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRestrictedPermissions">
+      <MemberSignature Language="C#" Value="public void GetRestrictedPermissions (System.Configuration.Internal.IInternalConfigRecord configRecord, out System.Security.PermissionSet permissionSet, out bool isHostReady);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetRestrictedPermissions(class System.Configuration.Internal.IInternalConfigRecord configRecord, [out] class System.Security.PermissionSet&amp; permissionSet, [out] bool&amp; isHostReady) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.GetRestrictedPermissions(System.Configuration.Internal.IInternalConfigRecord,System.Security.PermissionSet@,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configRecord" Type="System.Configuration.Internal.IInternalConfigRecord" />
+        <Parameter Name="permissionSet" Type="System.Security.PermissionSet&amp;" RefType="out" />
+        <Parameter Name="isHostReady" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="configRecord">Um objeto <see cref="T:System.Configuration.Internal.IInternalConfigRecord" />.</param>
+        <param name="permissionSet">O <see cref="T:System.Security.PermissionSet" /> objeto para associar com a configuração.</param>
+        <param name="isHostReady">
+          <see langword="true" />para indicar que o host de configuração tiver concluído a criação de permissões associadas; Caso contrário, <see langword="false" />.</param>
+        <summary>Associa a configuração com um <see cref="T:System.Security.PermissionSet" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStreamName">
+      <MemberSignature Language="C#" Value="public string GetStreamName (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetStreamName(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.GetStreamName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o nome do arquivo de configuração associado a <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</summary>
+        <returns>Uma cadeia de caracteres que representa o nome do arquivo de configuração associados a <see cref="T:System.IO.Stream" /> tarefas de e/s no arquivo de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStreamNameForConfigSource">
+      <MemberSignature Language="C#" Value="public string GetStreamNameForConfigSource (string streamName, string configSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetStreamNameForConfigSource(string streamName, string configSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.GetStreamNameForConfigSource(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+        <Parameter Name="configSource" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do arquivo de configuração associados a <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="configSource">Uma cadeia de caracteres que representa um caminho para um arquivo de configuração remota.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o nome do arquivo de configuração associado a <see cref="T:System.IO.Stream" /> tarefas executar e/s de objeto em um arquivo de configuração remota.</summary>
+        <returns>Uma cadeia de caracteres que representa o nome do arquivo de configuração associados a <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStreamVersion">
+      <MemberSignature Language="C#" Value="public object GetStreamVersion (string streamName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetStreamVersion(string streamName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.GetStreamVersion(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <summary>Retorna a versão do <see cref="T:System.IO.Stream" /> objeto associado ao arquivo de configuração.</summary>
+        <returns>A versão do <see cref="T:System.IO.Stream" /> objeto associado ao arquivo de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Impersonate">
+      <MemberSignature Language="C#" Value="public IDisposable Impersonate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IDisposable Impersonate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.Impersonate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o host para representar e retorna um <see cref="T:System.IDisposable" /> objeto necessário para a estrutura interna do .NET.</summary>
+        <returns>Um valor <see cref="T:System.IDisposable" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Configuration.Internal.IInternalConfigRoot root, params object[] hostInitParams);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Configuration.Internal.IInternalConfigRoot root, object[] hostInitParams) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.Init(System.Configuration.Internal.IInternalConfigRoot,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configRoot" Type="System.Configuration.Internal.IInternalConfigRoot" />
+        <Parameter Name="hostInitParams" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="root">To be added.</param>
+        <param name="hostInitParams">O objeto de parâmetro que contém os valores usados para inicializar o host de configuração.</param>
+        <summary>Inicializa um host de configuração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitForConfiguration">
+      <MemberSignature Language="C#" Value="public void InitForConfiguration (ref string locationSubPath, out string configPath, out string locationConfigPath, System.Configuration.Internal.IInternalConfigRoot root, params object[] hostInitConfigurationParams);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitForConfiguration(string&amp; locationSubPath, [out] string&amp; configPath, [out] string&amp; locationConfigPath, class System.Configuration.Internal.IInternalConfigRoot root, object[] hostInitConfigurationParams) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.InitForConfiguration(System.String@,System.String@,System.String@,System.Configuration.Internal.IInternalConfigRoot,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="locationSubPath" Type="System.String&amp;" RefType="ref" />
+        <Parameter Name="configPath" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="locationConfigPath" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="configRoot" Type="System.Configuration.Internal.IInternalConfigRoot" />
+        <Parameter Name="hostInitConfigurationParams" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="locationSubPath">O local de subcaminho do arquivo de configuração.</param>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <param name="locationConfigPath">Uma cadeia de caracteres que representa o local de um caminho de configuração.</param>
+        <param name="root">To be added.</param>
+        <param name="hostInitConfigurationParams">O objeto de parâmetro que contém os valores usados para inicializar o host de configuração.</param>
+        <summary>Inicializa um objeto de configuração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAboveApplication">
+      <MemberSignature Language="C#" Value="public bool IsAboveApplication (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAboveApplication(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.IsAboveApplication(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <summary>Retorna um valor que indica se o arquivo de configuração está localizado em um nível mais alto na hierarquia de configuração que a configuração do aplicativo.</summary>
+        <returns>
+          <see langword="true" />o arquivo de configuração está localizado em um nível mais alto na hierarquia de configuração que a configuração do aplicativo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConfigRecordRequired">
+      <MemberSignature Language="C#" Value="public bool IsConfigRecordRequired (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsConfigRecordRequired(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.IsConfigRecordRequired(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <summary>Retorna um valor que indica se um registro filho é necessário para um caminho de configuração filho.</summary>
+        <returns>
+          <see langword="true" />Se o registro filho é necessário para um caminho de configuração filho. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefinitionAllowed">
+      <MemberSignature Language="C#" Value="public bool IsDefinitionAllowed (string configPath, System.Configuration.ConfigurationAllowDefinition allowDefinition, System.Configuration.ConfigurationAllowExeDefinition allowExeDefinition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDefinitionAllowed(string configPath, valuetype System.Configuration.ConfigurationAllowDefinition allowDefinition, valuetype System.Configuration.ConfigurationAllowExeDefinition allowExeDefinition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.IsDefinitionAllowed(System.String,System.Configuration.ConfigurationAllowDefinition,System.Configuration.ConfigurationAllowExeDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+        <Parameter Name="allowDefinition" Type="System.Configuration.ConfigurationAllowDefinition" />
+        <Parameter Name="allowExeDefinition" Type="System.Configuration.ConfigurationAllowExeDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <param name="allowDefinition">Um objeto <see cref="T:System.Configuration.ConfigurationAllowDefinition" />.</param>
+        <param name="allowExeDefinition">Um objeto <see cref="T:System.Configuration.ConfigurationAllowExeDefinition" />.</param>
+        <summary>Determina se outro <see cref="T:System.Type" /> definição é permitida para um objeto de configuração do aplicativo.</summary>
+        <returns>
+          <see langword="true" />Se outro <see cref="T:System.Type" /> definição é permitido para um objeto de configuração do aplicativo; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFile">
+      <MemberSignature Language="C#" Value="public bool IsFile (string streamName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsFile(string streamName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.IsFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <summary>Retorna um valor que indica se o caminho do arquivo usado por um <see cref="T:System.IO.Stream" /> objeto para ler um arquivo de configuração é um caminho válido.</summary>
+        <returns>
+          <see langword="true" />Se o caminho usado por um <see cref="T:System.IO.Stream" /> objeto para ler um arquivo de configuração é um caminho válido; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFullTrustSectionWithoutAptcaAllowed">
+      <MemberSignature Language="C#" Value="public bool IsFullTrustSectionWithoutAptcaAllowed (System.Configuration.Internal.IInternalConfigRecord configRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsFullTrustSectionWithoutAptcaAllowed(class System.Configuration.Internal.IInternalConfigRecord configRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.IsFullTrustSectionWithoutAptcaAllowed(System.Configuration.Internal.IInternalConfigRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configRecord" Type="System.Configuration.Internal.IInternalConfigRecord" />
+      </Parameters>
+      <Docs>
+        <param name="configRecord">O objeto <see cref="T:System.Configuration.Internal.IInternalConfigRecord" />.</param>
+        <summary>Retorna um valor que indica se uma seção de configuração requer um segurança de acesso ao código totalmente confiável nível e não permite a <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" /> atributo para desabilitar as demandas de link implícita.</summary>
+        <returns>
+          <see langword="true" />Se a seção de configuração requer um nível de segurança de acesso do código totalmente confiável e não permite que o <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" /> atributo para desabilitar as demandas de link implícita; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitDelayed">
+      <MemberSignature Language="C#" Value="public bool IsInitDelayed (System.Configuration.Internal.IInternalConfigRecord configRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsInitDelayed(class System.Configuration.Internal.IInternalConfigRecord configRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.IsInitDelayed(System.Configuration.Internal.IInternalConfigRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configRecord" Type="System.Configuration.Internal.IInternalConfigRecord" />
+      </Parameters>
+      <Docs>
+        <param name="configRecord">O objeto <see cref="T:System.Configuration.Internal.IInternalConfigRecord" />.</param>
+        <summary>Retorna um valor que indica se a inicialização de um objeto de configuração é considerada atrasada.</summary>
+        <returns>
+          <see langword="true" />Se a inicialização de um objeto de configuração for considerada atrasado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocationApplicable">
+      <MemberSignature Language="C#" Value="public bool IsLocationApplicable (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsLocationApplicable(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.IsLocationApplicable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <summary>Retorna um valor que indica se o objeto de configuração oferece suporte a uma marca de local.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de configuração dá suporte a uma marca de local; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRemote">
+      <MemberSignature Language="C#" Value="public bool IsRemote { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRemote" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IInternalConfigHost.IsRemote" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se a configuração é remota.</summary>
+        <value>
+          <see langword="true" />Se a configuração for remota; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecondaryRoot">
+      <MemberSignature Language="C#" Value="public bool IsSecondaryRoot (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSecondaryRoot(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.IsSecondaryRoot(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <summary>Retorna um valor que indica se um caminho de configuração é para um nó de configuração cujo conteúdo deve ser tratado como uma raiz.</summary>
+        <returns>
+          <see langword="true" />Se o caminho de configuração é um nó de configuração cujo conteúdo deve ser tratado como uma raiz. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrustedConfigPath">
+      <MemberSignature Language="C#" Value="public bool IsTrustedConfigPath (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsTrustedConfigPath(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.IsTrustedConfigPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <summary>Retorna um valor que indica se o caminho de configuração é confiável.</summary>
+        <returns>
+          <see langword="true" />Se o caminho de configuração for confiável; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenStreamForRead">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenStreamForRead (string streamName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream OpenStreamForRead(string streamName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.OpenStreamForRead(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <summary>Abre um <see cref="T:System.IO.Stream" /> para ler um arquivo de configuração.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenStreamForRead">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenStreamForRead (string streamName, bool assertPermissions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream OpenStreamForRead(string streamName, bool assertPermissions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.OpenStreamForRead(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+        <Parameter Name="assertPermissions" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="assertPermissions">
+          <see langword="true" />para declarar permissões; Caso contrário, <see langword="false" />.</param>
+        <summary>Abre uma <see cref="T:System.IO.Stream" /> objeto para ler um arquivo de configuração.</summary>
+        <returns>Retorna o <see cref="T:System.IO.Stream" /> o objeto especificado por <paramref name="streamName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenStreamForWrite">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenStreamForWrite (string streamName, string templateStreamName, ref object writeContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream OpenStreamForWrite(string streamName, string templateStreamName, object&amp; writeContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.OpenStreamForWrite(System.String,System.String,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+        <Parameter Name="templateStreamName" Type="System.String" />
+        <Parameter Name="writeContext" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="templateStreamName">O nome de um <see cref="T:System.IO.Stream" /> de qual arquivo de atributos devem ser copiados como um modelo de objeto.</param>
+        <param name="writeContext">O contexto de gravação do <see cref="T:System.IO.Stream" /> objeto.</param>
+        <summary>Abre uma <see cref="T:System.IO.Stream" /> objeto para gravar em um arquivo de configuração ou para gravar em um arquivo temporário usado para criar um arquivo de configuração. Permite que um <see cref="T:System.IO.Stream" /> objeto a ser designado como um modelo para copiar os atributos de arquivo.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Stream" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenStreamForWrite">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenStreamForWrite (string streamName, string templateStreamName, ref object writeContext, bool assertPermissions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream OpenStreamForWrite(string streamName, string templateStreamName, object&amp; writeContext, bool assertPermissions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.OpenStreamForWrite(System.String,System.String,System.Object@,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+        <Parameter Name="templateStreamName" Type="System.String" />
+        <Parameter Name="writeContext" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="assertPermissions" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="templateStreamName">O nome de um <see cref="T:System.IO.Stream" /> de qual arquivo de atributos devem ser copiados como um modelo.</param>
+        <param name="writeContext">O contexto de gravação do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="assertPermissions">
+          <see langword="true" />para declarar permissões; Caso contrário, <see langword="false" />.</param>
+        <summary>Abre uma <see cref="T:System.IO.Stream" /> objeto para gravar em um arquivo de configuração. Permite que um <see cref="T:System.IO.Stream" /> objeto a ser designado como um modelo para copiar os atributos de arquivo.</summary>
+        <returns>Retorna o <see cref="T:System.IO.Stream" /> o objeto especificado por <paramref name="streamName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrefetchAll">
+      <MemberSignature Language="C#" Value="public bool PrefetchAll (string configPath, string streamName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool PrefetchAll(string configPath, string streamName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.PrefetchAll(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+        <Parameter Name="streamName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <summary>Retorna um valor que indica se o arquivo de toda a configuração pode ser lido por um designado <see cref="T:System.IO.Stream" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o arquivo de configuração inteiro pode ser lido pelo <see cref="T:System.IO.Stream" /> objeto designado pelo <paramref name="streamName" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrefetchSection">
+      <MemberSignature Language="C#" Value="public bool PrefetchSection (string sectionGroupName, string sectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool PrefetchSection(string sectionGroupName, string sectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.PrefetchSection(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionGroupName" Type="System.String" />
+        <Parameter Name="sectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sectionGroupName">Uma cadeia de caracteres que representa o nome de identificação de um grupo de seções do arquivo de configuração.</param>
+        <param name="sectionName">Uma cadeia de caracteres que representa o nome de identificação de uma seção do arquivo de configuração.</param>
+        <summary>Instrui o <see cref="T:System.Configuration.Internal.IInternalConfigHost" /> objeto para ler uma seção designada de seu arquivo de configuração associado.</summary>
+        <returns>
+          <see langword="true" />Se uma seção do arquivo de configuração designado pelo <paramref name="sectionGroupName" /> e <paramref name="sectionName" /> pode ser lido por um <see cref="T:System.IO.Stream" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireCompleteInit">
+      <MemberSignature Language="C#" Value="public void RequireCompleteInit (System.Configuration.Internal.IInternalConfigRecord configRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RequireCompleteInit(class System.Configuration.Internal.IInternalConfigRecord configRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.RequireCompleteInit(System.Configuration.Internal.IInternalConfigRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configRecord" Type="System.Configuration.Internal.IInternalConfigRecord" />
+      </Parameters>
+      <Docs>
+        <param name="configRecord">Um objeto <see cref="T:System.Configuration.Internal.IInternalConfigRecord" />.</param>
+        <summary>Indica que um novo registro de configuração requer a concluir a inicialização.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartMonitoringStreamForChanges">
+      <MemberSignature Language="C#" Value="public object StartMonitoringStreamForChanges (string streamName, System.Configuration.Internal.StreamChangeCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object StartMonitoringStreamForChanges(string streamName, class System.Configuration.Internal.StreamChangeCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.StartMonitoringStreamForChanges(System.String,System.Configuration.Internal.StreamChangeCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+        <Parameter Name="callback" Type="System.Configuration.Internal.StreamChangeCallback" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="callback">Um <see cref="T:System.Configuration.Internal.StreamChangeCallback" /> objeto para receber os dados retornados que representa as alterações no arquivo de configuração.</param>
+        <summary>Instrui o <see cref="T:System.Configuration.Internal.IInternalConfigHost" /> objeto para monitorar um associado <see cref="T:System.IO.Stream" /> objeto para alterações em um arquivo de configuração.</summary>
+        <returns>Um <see cref="T:System.Object" /> contendo alteram as definições de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopMonitoringStreamForChanges">
+      <MemberSignature Language="C#" Value="public void StopMonitoringStreamForChanges (string streamName, System.Configuration.Internal.StreamChangeCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopMonitoringStreamForChanges(string streamName, class System.Configuration.Internal.StreamChangeCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.StopMonitoringStreamForChanges(System.String,System.Configuration.Internal.StreamChangeCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+        <Parameter Name="callback" Type="System.Configuration.Internal.StreamChangeCallback" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="callback">Um objeto <see cref="T:System.Configuration.Internal.StreamChangeCallback" />.</param>
+        <summary>Instrui o <see cref="T:System.Configuration.Internal.IInternalConfigHost" /> objeto para parar de monitorar um associado <see cref="T:System.IO.Stream" /> objeto para alterações em um arquivo de configuração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsChangeNotifications">
+      <MemberSignature Language="C#" Value="public bool SupportsChangeNotifications { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsChangeNotifications" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IInternalConfigHost.SupportsChangeNotifications" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se a configuração do host oferece suporte a notificação de alteração.</summary>
+        <value>
+          <see langword="true" />Se a configuração dá suporte à notificação de alteração; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsLocation">
+      <MemberSignature Language="C#" Value="public bool SupportsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IInternalConfigHost.SupportsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se a configuração do host oferece suporte a marcas de localização.</summary>
+        <value>
+          <see langword="true" />Se a configuração dá suporte a marcas de localização; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsPath">
+      <MemberSignature Language="C#" Value="public bool SupportsPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsPath" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IInternalConfigHost.SupportsPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se a configuração do host oferece suporte a marcas de caminho.</summary>
+        <value>
+          <see langword="true" />Se a configuração dá suporte a marcas de caminho; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsRefresh">
+      <MemberSignature Language="C#" Value="public bool SupportsRefresh { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsRefresh" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IInternalConfigHost.SupportsRefresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se a configuração do host oferece suporte à atualização de configuração.</summary>
+        <value>
+          <see langword="true" />Se a configuração dá suporte à atualização de configuração; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyDefinitionAllowed">
+      <MemberSignature Language="C#" Value="public void VerifyDefinitionAllowed (string configPath, System.Configuration.ConfigurationAllowDefinition allowDefinition, System.Configuration.ConfigurationAllowExeDefinition allowExeDefinition, System.Configuration.Internal.IConfigErrorInfo errorInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void VerifyDefinitionAllowed(string configPath, valuetype System.Configuration.ConfigurationAllowDefinition allowDefinition, valuetype System.Configuration.ConfigurationAllowExeDefinition allowExeDefinition, class System.Configuration.Internal.IConfigErrorInfo errorInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.VerifyDefinitionAllowed(System.String,System.Configuration.ConfigurationAllowDefinition,System.Configuration.ConfigurationAllowExeDefinition,System.Configuration.Internal.IConfigErrorInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+        <Parameter Name="allowDefinition" Type="System.Configuration.ConfigurationAllowDefinition" />
+        <Parameter Name="allowExeDefinition" Type="System.Configuration.ConfigurationAllowExeDefinition" />
+        <Parameter Name="errorInfo" Type="System.Configuration.Internal.IConfigErrorInfo" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho do arquivo de configuração do aplicativo.</param>
+        <param name="allowDefinition">Um objeto <see cref="P:System.Configuration.SectionInformation.AllowDefinition" />.</param>
+        <param name="allowExeDefinition">Um <see cref="T:System.Configuration.ConfigurationAllowExeDefinition" /> objeto</param>
+        <param name="errorInfo">Um objeto <see cref="T:System.Configuration.Internal.IConfigErrorInfo" />.</param>
+        <summary>Verifica se uma definição de configuração é permitida para um registro de configuração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCompleted">
+      <MemberSignature Language="C#" Value="public void WriteCompleted (string streamName, bool success, object writeContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteCompleted(string streamName, bool success, object writeContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.WriteCompleted(System.String,System.Boolean,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+        <Parameter Name="success" Type="System.Boolean" />
+        <Parameter Name="writeContext" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="success">
+          <see langword="true" />Se a gravação para o arquivo de configuração foi concluída com êxito; Caso contrário, <see langword="false" />.</param>
+        <param name="writeContext">O contexto de gravação do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <summary>Indica que todos os gravação no arquivo de configuração foi concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCompleted">
+      <MemberSignature Language="C#" Value="public void WriteCompleted (string streamName, bool success, object writeContext, bool assertPermissions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteCompleted(string streamName, bool success, object writeContext, bool assertPermissions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigHost.WriteCompleted(System.String,System.Boolean,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamName" Type="System.String" />
+        <Parameter Name="success" Type="System.Boolean" />
+        <Parameter Name="writeContext" Type="System.Object" />
+        <Parameter Name="assertPermissions" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="streamName">Uma cadeia de caracteres que representa o nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="success">
+          <see langword="true" />para indicar a gravação foi concluída com êxito; Caso contrário, <see langword="false" />.</param>
+        <param name="writeContext">O contexto de gravação do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+        <param name="assertPermissions">
+          <see langword="true" />para declarar permissões; Caso contrário, <see langword="false" />.</param>
+        <summary>Indica se todos os gravação no arquivo de configuração foi concluída e especifica se as permissões devem ser declaradas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

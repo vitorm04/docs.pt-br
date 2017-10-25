@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.SessionState">
+  <Docs>
+    <summary>O <see cref="N:System.Web.SessionState" /> namespace fornece classes e interfaces que permitem o armazenamento de dados específicos a um único cliente dentro de um aplicativo Web no servidor. Os dados de estado de sessão são usados para dar a aparência de uma conexão persistente com o aplicativo de cliente. As informações de estado podem ser armazenadas na memória do processo local ou, para configurações do Web farm, pode ser armazenado fora do processo usando o serviço de estado do ASP.NET ou um banco de dados do Microsoft SQL Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estado da sessão pode ser usado com clientes que não dão suporte a cookies. ASP.NET pode ser configurado para codificar a cadeia de caracteres de URL que é transmitida entre o cliente e o servidor de uma ID de sessão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

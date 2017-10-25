@@ -1,0 +1,2786 @@
+<Type Name="EditingCommands" FullName="System.Windows.Documents.EditingCommands">
+  <TypeSignature Language="C#" Value="public static class EditingCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit EditingCommands extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.EditingCommands" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto padrão de comandos relacionados à edição.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os comandos de edição e o padrão associado a chave gestos (com nomes de chave do <xref:System.Windows.Input.Key> e <xref:System.Windows.Input.ModifierKeys> enumerações).  
+  
+|Comando de edição|Gesto de chave padrão|  
+|---------------------|-------------------------|  
+|<xref:System.Windows.Documents.EditingCommands.AlignCenter%2A>|`Ctrl`+`E`|  
+|<xref:System.Windows.Documents.EditingCommands.AlignJustify%2A>|`Ctrl`+`J`|  
+|<xref:System.Windows.Documents.EditingCommands.AlignLeft%2A>|`Ctrl`+`L`|  
+|<xref:System.Windows.Documents.EditingCommands.AlignRight%2A>|`Ctrl`+`R`|  
+|<xref:System.Windows.Documents.EditingCommands.Backspace%2A>|`Backspace`|  
+|<xref:System.Windows.Documents.EditingCommands.CorrectSpellingError%2A>|Nenhum gesto de chave padrão|  
+|<xref:System.Windows.Documents.EditingCommands.DecreaseFontSize%2A>|`Ctrl`+`OemOpenBrackets`|  
+|<xref:System.Windows.Documents.EditingCommands.DecreaseIndentation%2A>|`Ctrl`+`Shift`+`T`|  
+|<xref:System.Windows.Documents.EditingCommands.Delete%2A>|`Delete`|  
+|<xref:System.Windows.Documents.EditingCommands.DeleteNextWord%2A>|`Ctrl`+`Delete`|  
+|<xref:System.Windows.Documents.EditingCommands.DeletePreviousWord%2A>|`Ctrl`+`Backspace`|  
+|<xref:System.Windows.Documents.EditingCommands.EnterLineBreak%2A>|`Shift`+`Enter`|  
+|<xref:System.Windows.Documents.EditingCommands.EnterParagraphBreak%2A>|`Enter`|  
+|<xref:System.Windows.Documents.EditingCommands.IgnoreSpellingError%2A>|Nenhum gesto de chave padrão|  
+|<xref:System.Windows.Documents.EditingCommands.IncreaseFontSize%2A>|`Ctrl`+`OemCloseBrackets`|  
+|<xref:System.Windows.Documents.EditingCommands.IncreaseIndentation%2A>|`Ctrl`+`T`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveDownByLine%2A>|`Down`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveDownByPage%2A>|`PageDown`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveDownByParagraph%2A>|`Ctrl`+`Down`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveLeftByCharacter%2A>|`Left`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveLeftByWord%2A>|`Ctrl`+`Left`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveRightByCharacter%2A>|`Right`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveRightByWord%2A>|`Ctrl`+`Right`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveToDocumentEnd%2A>|`Ctrl`+`End`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveToDocumentStart%2A>|`Ctrl`+`Home`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>|`End`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveToLineStart%2A>|`Home`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveUpByLine%2A>|`Up`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveUpByPage%2A>|`PageUp`|  
+|<xref:System.Windows.Documents.EditingCommands.MoveUpByParagraph%2A>|`Ctrl`+`Up`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectDownByLine%2A>|`Shift`+`Down`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectDownByPage%2A>|`Shift`+`PageDown`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectDownByParagraph%2A>|`Ctrl`+`Shift`+`Down`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectLeftByCharacter%2A>|`Shift`+`Left`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectLeftByWord%2A>|`Ctrl`+`Shift`+`Left`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectRightByCharacter%2A>|`Shift`+`Right`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectRightByWord%2A>|`Ctrl`+`Shift`+`Right`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectToDocumentEnd%2A>|`Ctrl`+`Shift`+`End`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectToDocumentStart%2A>|`Ctrl`+`Shift`+`Home`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectToLineEnd%2A>|`Shift`+`End`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectToLineStart%2A>|`Shift`+`Home`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectUpByLine%2A>|`Shift`+`Up`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectUpByPage%2A>|`Shift`+`PageUp`|  
+|<xref:System.Windows.Documents.EditingCommands.SelectUpByParagraph%2A>|`Ctrl`+`Shift`+`Up`|  
+|<xref:System.Windows.Documents.EditingCommands.TabBackward%2A>|`Shift`+`Tab`|  
+|<xref:System.Windows.Documents.EditingCommands.TabForward%2A>|`Tab`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>|`Ctrl`+`B`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleBullets%2A>|`Ctrl`+`Shift`+`L`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleInsert%2A>|`Insert`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleItalic%2A>|`Ctrl`+`I`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleNumbering%2A>|`Ctrl`+`Shift`+`N`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleSubscript%2A>|`Ctrl`+`OemPlus`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleSuperscript%2A>|`Ctrl`+`Shift+OemPlus`|  
+|<xref:System.Windows.Documents.EditingCommands.ToggleUnderline%2A>|`Ctrl`+`U`|  
+  
+ Comandos de movimento do cursor e seleção expandindo comandos compartilham um conjunto comum de gestos de chave padrão, a diferença de geral é a adição do <xref:System.Windows.Input.ModifierKeys.Shift> chave para diferenciar os comandos de seleção de comandos de movimento do cursor.  Por exemplo, o <xref:System.Windows.Documents.EditingCommands.MoveLeftByCharacter%2A> command tem um gesto de chave padrão do <xref:System.Windows.Input.Key.Left>e o correspondente <xref:System.Windows.Documents.EditingCommands.SelectLeftByCharacter%2A> command tem um gesto de chave padrão do <xref:System.Windows.Input.ModifierKeys.Shift> + <xref:System.Windows.Input.Key.Left>.  
+  
+ Em geral, as definições de comando fornecidos pelo <xref:System.Windows.Documents.EditingCommands> classe não fazem uso de parâmetros de comando (o `parameter` parâmetro esperado pelo <xref:System.Windows.Input.ICommand.Execute%2A> método).  
+  
+ Para obter mais informações sobre comandos e comandos, consulte [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlignCenter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand AlignCenter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand AlignCenter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.AlignCenter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.AlignCenter" /> comando, que solicita que o parágrafo atual ou uma seleção de parágrafos centralizado.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="E" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comando funciona no <xref:System.Windows.Documents.Paragraph> nível.  Se esse comando é chamado em uma seleção parcial de conteúdo dentro de um parágrafo (incluindo uma seleção vazia em que o cursor está dentro de um parágrafo), o efeito solicitado é aplicado a todo o parágrafo.  Se esse comando é chamado em uma seleção que abrange vários parágrafos, o efeito é aplicado a todo o conteúdo de cada parágrafo que participa da seleção.  
+  
+ A figura a seguir mostra um exemplo de conteúdo centralizado.  
+  
+ ![Captura de tela: Valor Center da propriedade TextAlign](~/add/media/flowdoc-textalign-center.png "captura de tela: valor da propriedade TextAlign do Centro")  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_AlignCenter"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="AlignCenter"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignJustify">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand AlignJustify { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand AlignJustify" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.AlignJustify" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o comando <see cref="P:System.Windows.Documents.EditingCommands.AlignJustify" />, que solicita que o parágrafo atual ou uma seleção de parágrafos sejam justificados.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="J" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comando funciona no <xref:System.Windows.Documents.Paragraph> nível.  Se esse comando é chamado em uma seleção parcial de conteúdo dentro de um parágrafo (incluindo uma seleção vazia em que o cursor está dentro de um parágrafo), o efeito solicitado é aplicado a todo o parágrafo.  Se esse comando é chamado em uma seleção que abrange vários parágrafos, o efeito é aplicado a todos os parágrafos na seleção.  
+  
+ Quando o conteúdo é justificado, o espaçamento horizontal dentro de cada linha de conteúdo é ajustado para que as linhas justificadas de largura igual ou quase igual.  Normalmente é justificado de conteúdo para criar os cantos arredondados nos lados do conteúdo.  
+  
+ Como normalmente é menor do que o restante, a última linha de um parágrafo pode permanecer justificada depois que esse comando é invocado.  
+  
+ A figura a seguir mostra o conteúdo justificado (alinhado à esquerda).  
+  
+ ![Captura de tela: O conteúdo não está justificado](~/add/media/content-unjustified.png "captura de tela: conteúdo não está justificado")  
+  
+ A figura a seguir mostra o mesmo conteúdo depois que ele tiver sido justificado.  
+  
+ ![Captura de tela de conteúdo de texto justificado à](~/add/media/content-justified.png "justificado de captura de tela de conteúdo de texto")  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_AlignJustify"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="AlignJustify"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignLeft">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand AlignLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand AlignLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.AlignLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.AlignLeft" /> comando, que solicita uma seleção de conteúdo ser alinhado à esquerda.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="L" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comando funciona no <xref:System.Windows.Documents.Paragraph> nível.  Se esse comando é chamado em uma seleção parcial de conteúdo dentro de um parágrafo (incluindo uma seleção vazia em que o cursor está dentro de um parágrafo), o efeito solicitado é aplicado a todo o parágrafo.  Se esse comando é chamado em uma seleção que abrange vários parágrafos, o efeito é aplicado a todo o conteúdo de cada parágrafo que participa da seleção.  
+  
+ A figura a seguir mostra um exemplo de conteúdo alinhado à esquerda.  
+  
+ ![Captura de tela: Valor Left da propriedade TextAlign](~/add/media/flowdoc-textalign-left.png "captura de tela: valor da propriedade TextAlign da esquerda")  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_AlignLeft"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="AlignLeft"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignRight">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand AlignRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand AlignRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.AlignRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.AlignRight" /> comando, que solicita que uma seleção de conteúdo ser alinhado à direita.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="R" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comando funciona no <xref:System.Windows.Documents.Paragraph> nível.  Se esse comando é chamado em uma seleção parcial de conteúdo dentro de um parágrafo (incluindo uma seleção vazia em que o cursor está dentro de um parágrafo), o efeito solicitado é aplicado a todo o parágrafo.  Se esse comando é chamado em uma seleção que abrange vários parágrafos, o efeito é aplicado a todo o conteúdo de cada parágrafo que participa da seleção.  
+  
+ A figura a seguir mostra um exemplo de conteúdo alinhado à direita.  
+  
+ ![Captura de tela: Valor TextAlign direita](~/add/media/flowdoc-textalign-right.png "captura de tela: valor da direita TextAlign")  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_AlignRight"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="AlignRight"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Backspace">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Backspace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Backspace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.Backspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o comando <see cref="P:System.Windows.Documents.EditingCommands.Backspace" />, que solicita que um backspace seja inserido na posição atual ou sobre a seleção atual.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Backspace" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando chamado em uma seleção vazia, esse comando exclui o separador de parágrafo ou de caractere antes do cursor. Quando chamado em uma seleção de não vazio, este comando exclui a seleção.  
+  
+ Este comando retém a formatação da seleção excluída para o conteúdo imediatamente inserida no mesmo local depois que esse comando é invocado.  Compare com o <xref:System.Windows.Documents.EditingCommands.Delete%2A> comando, que não mantém a formatação anterior.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_Backspace"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Backspace"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrectSpellingError">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand CorrectSpellingError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand CorrectSpellingError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.CorrectSpellingError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.CorrectSpellingError" /> comando, que solicita que seja corrigido, qualquer palavra na posição atual.</summary>
+        <value>O comando solicitado.  Esse comando não tem nenhum gesto de chave padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_CorrectSpellingError"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="CorrectSpellingError"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseFontSize">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DecreaseFontSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DecreaseFontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.DecreaseFontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.DecreaseFontSize" /> comando, que solicita que o tamanho da fonte para a seleção atual ser diminuído em 1 ponto.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="OemOpenBrackets" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse comando é chamado em uma seleção vazia em que o cursor estiver em uma palavra, a seleção é automaticamente expandida para aplicar o comando para a palavra inteira.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_DecreaseFontSize"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="DecreaseFontSize"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseIndentation">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DecreaseIndentation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DecreaseIndentation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.DecreaseIndentation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.DecreaseIndentation" /> de comando, que solicita que recuo para diminuir o parágrafo atual por uma tabulação.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="T" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+> [!IMPORTANT]
+>  Esse comando não tem nenhum efeito em um elemento de texto, a menos que o <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> propriedade do elemento de texto está definida como `true`.  
+  
+<a name="xamlAttributeUsage_DecreaseIndentation"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="DecreaseIndentation"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Delete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Delete" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.Delete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.Delete" /> comando, que solicita que a seleção atual ser excluído.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Delete" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando descartará qualquer formatação da seleção excluída.  Compare com o <xref:System.Windows.Documents.EditingCommands.Backspace%2A> de comando, que mantém a formatação da seleção excluída para o conteúdo imediatamente inserida no mesmo local depois que esse comando é invocado.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_Delete"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Delete"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteNextWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DeleteNextWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DeleteNextWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.DeleteNextWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.DeleteNextWord" /> comando, que solicita que a próxima palavra (em relação a uma posição atual) ser excluída.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Delete" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cursor estiver em uma palavra, o resto da palavra entre a posição atual e o fim da palavra é excluído.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_DeleteNextWord"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="DeleteNextWord"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeletePreviousWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand DeletePreviousWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand DeletePreviousWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.DeletePreviousWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.DeletePreviousWord" /> comando, que solicita que a palavra anterior (em relação a uma posição atual) ser excluída.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Backspace" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cursor estiver em uma palavra, o resto da palavra entre a posição atual e o início da palavra é excluído.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_DeletePreviousWord"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="DeletePreviousWord"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterLineBreak">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand EnterLineBreak { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand EnterLineBreak" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.EnterLineBreak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.EnterLineBreak" /> comando, que solicita que uma quebra de linha ser inserido na posição atual ou sobre a seleção atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="Enter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para editores que oferecem suporte a conteúdo de fluxo, como <xref:System.Windows.Controls.RichTextBox>, esse comando faz com que um <xref:System.Windows.Documents.LineBreak> elemento a ser inserido na posição atual.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_EnterLineBreak"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="EnterLineBreak"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterParagraphBreak">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand EnterParagraphBreak { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand EnterParagraphBreak" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.EnterParagraphBreak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.EnterParagraphBreak" /> comando, que solicita que uma quebra de parágrafo inserido na posição atual ou sobre a seleção atual.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Enter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comando é equivalente para o usuário pressionar a tecla ENTER.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox> (quando o <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> é de propriedade `true`).  
+  
+> [!IMPORTANT]
+>  Esse comando não tem nenhum efeito em um elemento de texto, a menos que o <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> propriedade do elemento de texto está definida como `true`.  
+  
+<a name="xamlAttributeUsage_EnterParagraphBreak"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="EnterParagraphBreak"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreSpellingError">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IgnoreSpellingError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IgnoreSpellingError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.IgnoreSpellingError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.IgnoreSpellingError" /> comando, o que requer que todas as instâncias de ortografia da posição atual ou na seleção atual ignorado.</summary>
+        <value>O comando solicitado.  Esse comando não tem nenhum gesto de chave padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_IgnoreSpellingError"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="IgnoreSpellingError"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseFontSize">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IncreaseFontSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IncreaseFontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.IncreaseFontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.IncreaseFontSize" /> comando, que solicita que o tamanho da fonte para a seleção atual ser aumentado em 1 ponto.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="OemCloseBrackets" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse comando é chamado em uma seleção vazia em que o cursor estiver em uma palavra, a seleção é expandida para aplicar o comando para a palavra inteira.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_IncreaseFontSize"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="IncreaseFontSize"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseIndentation">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand IncreaseIndentation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand IncreaseIndentation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.IncreaseIndentation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.IncreaseIndentation" /> de comando, que as solicitações que recuo de parágrafo atual ser aumentado em uma parada de tabulação.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="T" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+> [!IMPORTANT]
+>  Esse comando não tem nenhum efeito em um elemento de texto, a menos que o <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> propriedade do elemento de texto está definida como `true`.  
+  
+<a name="xamlAttributeUsage_IncreaseIndentation"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="IncreaseIndentation"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveDownByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveDownByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveDownByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveDownByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveDownByLine" /> comando, que solicita que o cursor move para baixo em uma linha.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Down" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveDownByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveDownByLine"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveDownByPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveDownByPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveDownByPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveDownByPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveDownByPage" /> comando, que solicita que o cursor move para baixo em uma página.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="PageDown" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveDownByPage"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveDownByPage"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveDownByParagraph">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveDownByParagraph { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveDownByParagraph" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveDownByParagraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveDownByParagraph" /> comando, que solicita que o cursor move para baixo por um parágrafo.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Down" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando posiciona o cursor no início do próximo parágrafo.  
+  
+ Esse comando se comporta como <xref:System.Windows.Documents.EditingCommands.MoveToDocumentEnd%2A> quando invocado em um <xref:System.Windows.Controls.TextBox>.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveDownByParagraph"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveDownByParagraph"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveLeftByCharacter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveLeftByCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveLeftByCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveLeftByCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveLeftByCharacter" /> comando, que solicita que o cursor move um caractere à esquerda.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveLeftByCharacter"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveLeftByCharacter"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveLeftByWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveLeftByWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveLeftByWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveLeftByWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveLeftByWord" /> comando, que solicita que o cursor move uma palavra à esquerda.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cursor estiver em uma palavra, este comando move o cursor para o início da palavra.  Caso contrário, este comando move o cursor para o início da palavra anterior.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveLeftByWord"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveLeftByWord"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveRightByCharacter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveRightByCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveRightByCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveRightByCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveRightByCharacter" /> comando, que solicita que o cursor move um caractere à direita.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveRightByCharacter"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveRightByCharacter"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveRightByWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveRightByWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveRightByWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveRightByWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveRightByWord" /> comando, que solicita que o cursor move para a direita por uma palavra.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cursor estiver em uma palavra, este comando move o cursor para o fim da palavra.  Caso contrário, este comando move o cursor para o início da próxima palavra.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveRightByWord"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveRightByWord"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToDocumentEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToDocumentEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToDocumentEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveToDocumentEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveToDocumentEnd" /> comando, que solicita que o cursor se mover para o fim do conteúdo.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="End" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um *recipiente de texto* é o elemento que faz a borda final para o conteúdo em questão.  <xref:System.Windows.Controls.TextBlock>e <xref:System.Windows.Documents.FlowDocument> são exemplos de contêineres de texto.  O conteúdo coletivamente contido em um contêiner de texto é conhecido como um *documento*.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveToDocumentEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveToDocumentEnd"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToDocumentStart">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToDocumentStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToDocumentStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveToDocumentStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveToDocumentStart" /> comando, que solicita que o cursor se mover para o início do conteúdo.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Home" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um *recipiente de texto* é o elemento que faz a borda final para o conteúdo em questão.  <xref:System.Windows.Controls.TextBlock>e <xref:System.Windows.Documents.FlowDocument> são exemplos de contêineres de texto.  O conteúdo coletivamente contido em um contêiner de texto é conhecido como um *documento*.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveToDocumentStart"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveToDocumentStart"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToLineEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToLineEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToLineEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveToLineEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveToLineEnd" /> comando, que solicita que o cursor se mover para o fim da linha atual.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="End" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveToLineEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveToLineEnd"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToLineStart">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveToLineStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveToLineStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveToLineStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveToLineStart" /> comando, que solicita que o cursor se mover para o início da linha atual.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Home" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_MoveToLineStart"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveToLineStart"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveUpByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveUpByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveUpByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveUpByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveUpByLine" /> comando, que solicita que o cursor move para cima em uma linha.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Up" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveUpByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveUpByLine"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveUpByPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveUpByPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveUpByPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveUpByPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveUpByPage" /> comando, que solicita que o cursor move para cima em uma página.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="PageUp" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveUpByPage"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveUpByPage"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveUpByParagraph">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand MoveUpByParagraph { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand MoveUpByParagraph" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.MoveUpByParagraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.MoveUpByParagraph" /> comando, que solicita que o cursor move para cima por um parágrafo.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Up" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando posiciona o cursor no início do próximo parágrafo.  
+  
+ Esse comando se comporta como <xref:System.Windows.Documents.EditingCommands.MoveToDocumentStart%2A> quando invocado em um <xref:System.Windows.Controls.TextBox>.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox>.  
+  
+<a name="xamlAttributeUsage_MoveUpByParagraph"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="MoveUpByParagraph"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectDownByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectDownByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectDownByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectDownByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectDownByLine" /> comando, que solicita que a seleção atual ser expandida para baixo em uma linha.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="Down" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectDownByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectDownByLine"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectDownByPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectDownByPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectDownByPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectDownByPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectDownByPage" /> comando, que solicita que a seleção atual ser expandida para baixo em uma página.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="PageDown" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectDownByPage"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectDownByPage"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectDownByParagraph">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectDownByParagraph { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectDownByParagraph" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectDownByParagraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectDownByParagraph" /> comando, que solicita que a seleção atual ser expandidos para baixo de um parágrafo.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Down" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comando se expande a seleção até o início do próximo parágrafo.  Caso contrário, esse comando se expande a seleção até o final do parágrafo atual.  A seleção expandida inclui a quebra de parágrafo que marca o fim do parágrafo.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectDownByParagraph"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectDownByParagraph"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectLeftByCharacter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectLeftByCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectLeftByCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectLeftByCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectLeftByCharacter" /> comando, que solicita que a seleção atual ser expandido para a esquerda em um caractere.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectLeftByCharacter"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectLeftByCharacter"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectLeftByWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectLeftByWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectLeftByWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectLeftByWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectLeftByWord" /> comando, que solicita que a seleção atual ser expandido para a esquerda por uma palavra.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cursor estiver em uma palavra, este comando se expande a seleção até o início da palavra.  Caso contrário, esse comando se expande a seleção até o início da palavra anterior.  
+  
+ A seleção expandida não inclui o delimitador de palavra.  Compare com <xref:System.Windows.Documents.EditingCommands.SelectRightByWord%2A>, que inclui o delimitador de palavra da seleção expandida.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectLeftByWord"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectLeftByWord"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectRightByCharacter">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectRightByCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectRightByCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectRightByCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectRightByCharacter" /> comando, que solicita que a seleção atual expandidos à direita por um caractere.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectRightByCharacter"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectRightByCharacter"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectRightByWord">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectRightByWord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectRightByWord" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectRightByWord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectRightByWord" /> comando, que solicita que a seleção atual expandidos à direita por uma palavra.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cursor estiver em uma palavra, este comando se expande a seleção até o final da palavra.  Caso contrário, esse comando se expande a seleção até o final da próxima palavra.  
+  
+ A seleção expandida inclui o delimitador de palavra.  Compare com <xref:System.Windows.Documents.EditingCommands.SelectLeftByWord%2A> que não inclui o delimitador de palavra da seleção expandida.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectRightByWord"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectRightByWord"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToDocumentEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToDocumentEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToDocumentEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectToDocumentEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectToDocumentEnd" /> comando, que solicita que a seleção atual ser expandido até o final do conteúdo.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="End" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um *recipiente de texto* é o elemento que faz a borda final para o conteúdo em questão.  <xref:System.Windows.Controls.TextBlock>e <xref:System.Windows.Documents.FlowDocument> são exemplos de contêineres de texto.  O conteúdo coletivamente contido em um contêiner de texto é conhecido como um *documento*.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectToDocumentEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectToDocumentEnd"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToDocumentStart">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToDocumentStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToDocumentStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectToDocumentStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectToDocumentStart" /> comando, que solicita que a seleção atual seja expandida para o início do conteúdo.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Home" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um *recipiente de texto* é o elemento que faz a borda final para o conteúdo em questão.  <xref:System.Windows.Controls.TextBlock>e <xref:System.Windows.Documents.FlowDocument> são exemplos de contêineres de texto.  O conteúdo coletivamente contido em um contêiner de texto é conhecido como um *documento*.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectToDocumentStart"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectToDocumentStart"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToLineEnd">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToLineEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToLineEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectToLineEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectToLineEnd" /> comando, que solicita que a seleção atual ser expandido até o final da linha atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="End" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectToLineEnd"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectToLineEnd"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectToLineStart">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectToLineStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectToLineStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectToLineStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectToLineStart" /> comando, que solicita que a seleção atual ser expandido até o início da linha atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="Home" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectToLineStart"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectToLineStart"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectUpByLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectUpByLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectUpByLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectUpByLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectUpByLine" /> comando, que solicita que a seleção atual ser expandida para cima em uma linha.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="Up" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectUpByLine"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectUpByLine"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectUpByPage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectUpByPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectUpByPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectUpByPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectUpByPage" /> comando, que solicita que a seleção atual ser expandida para cima em uma página.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="PageUp" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectUpByPage"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectUpByPage"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectUpByParagraph">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectUpByParagraph { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectUpByParagraph" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.SelectUpByParagraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.SelectUpByParagraph" /> comando, que solicita que a seleção atual ser expandida para cima, um parágrafo.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="Up" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cursor está no início de um parágrafo, esse comando se expande a seleção até o início do parágrafo anterior.  Caso contrário, esse comando se expande a seleção até o início do parágrafo atual.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_SelectUpByParagraph"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectUpByParagraph"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabBackward">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand TabBackward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand TabBackward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.TabBackward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.TabBackward" /> comando.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Shift" /> + <see langword="Tab" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento desse comando depende da seleção atual. Se a seleção não estiver vazia, esse comando é equivalente a <xref:System.Windows.Documents.EditingCommands.DecreaseIndentation%2A>. Se o cursor estiver em uma célula de tabela (representado pelo <xref:System.Windows.Documents.TableCell> elemento), este comando move o cursor para a célula anterior. Caso contrário, um caractere de tabulação é inserido na posição atual.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox> (quando o <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> é de propriedade `true`).  
+  
+<a name="xamlAttributeUsage_TabBackward"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="TabBackward"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+```csharp  
+RichTextBox rTB = new RichTextBox();  
+  
+EditingCommands.ToggleInsert.Execute(null, rTB);  
+  
+```  
+  
+```vb  
+            Dim rTB As New RichTextBox()  
+  
+            EditingCommands.ToggleInsert.Execute(Nothing, rTB)  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabForward">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand TabForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand TabForward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.TabForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.TabForward" /> comando.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Tab" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento desse comando depende da seleção atual. Se a seleção não estiver vazia ou se a seleção está vazia e a posição do cursor atual está no início de um parágrafo, esse comando é equivalente a <xref:System.Windows.Documents.EditingCommands.IncreaseIndentation%2A>. Se o cursor estiver em uma célula de tabela (representado pelo <xref:System.Windows.Documents.TableCell> elemento), este comando move o cursor para a próxima célula. Se o cursor estiver na última célula de uma tabela, este comando faz com que uma nova linha a ser acrescentada à tabela, com o cursor posicionado na primeira célula da nova linha.  Caso contrário, um caractere de tabulação é inserido na posição atual.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox> (quando o <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsTab%2A> é de propriedade `true`).  
+  
+<a name="xamlAttributeUsage_TabForward"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="TabForward"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+```csharp  
+RichTextBox rTB = new RichTextBox();  
+  
+EditingCommands.ToggleInsert.Execute(null, rTB);  
+  
+```  
+  
+```vb  
+            Dim rTB As New RichTextBox()  
+  
+            EditingCommands.ToggleInsert.Execute(Nothing, rTB)  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleBold">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleBold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleBold" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o comando <see cref="P:System.Windows.Documents.EditingCommands.ToggleBold" />, que solicita que a formatação de <see cref="T:System.Windows.Documents.Bold" /> seja alternada na seleção atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="B" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.FontWeight> para a seleção atual está no intervalo de <xref:System.Windows.FontWeights.Thin%2A> para <xref:System.Windows.FontWeights.SemiBold%2A>, <xref:System.Windows.FontWeights.Bold%2A> é aplicada à seleção atual.  Caso contrário, <xref:System.Windows.FontWeights.Normal%2A> é aplicada.  Para obter uma lista de comparação de <xref:System.Windows.FontWeight> valores, consulte <xref:System.Windows.FontWeights>.  
+  
+ Quando a seleção está vazia e o cursor estiver em uma palavra, a seleção é expandida para incluir a palavra inteira.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleBold"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ToggleBold"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleBullets">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleBullets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleBullets" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleBullets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.ToggleBullets" /> comando, que solicita que a formatação de lista não ordenada (também conhecida como lista com marcadores) ser alternada na seleção atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="L" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comando funciona no <xref:System.Windows.Documents.Paragraph> nível.  Se esse comando é chamado em uma seleção parcial de conteúdo dentro de um parágrafo (incluindo uma seleção vazia em que o cursor está dentro de um parágrafo), o efeito solicitado é aplicado a todo o parágrafo.  Se esse comando é chamado em uma seleção que abrange vários parágrafos, o efeito é aplicado a todo o conteúdo de cada parágrafo que participa da seleção.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleBullets"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ToggleBullets"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleInsert">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleInsert { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.ToggleInsert" /> comando, que alterna entre inserir e sobrescrever o modo.</summary>
+        <value>O comando solicitado.  O gesto de chave padrão para esse comando é <see langword="Insert" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.PasswordBox>.  
+  
+<a name="xamlAttributeUsage_ToggleInsert"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ToggleInsert"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleItalic">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleItalic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleItalic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleItalic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o comando <see cref="P:System.Windows.Documents.EditingCommands.ToggleItalic" />, que solicita que a formatação de <see cref="T:System.Windows.Documents.Italic" /> seja alternada na seleção atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="I" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.FontStyle> para a seleção atual é <xref:System.Windows.FontStyles.Normal%2A>, <xref:System.Windows.FontStyles.Italic%2A> é aplicada à seleção atual.  Caso contrário, <xref:System.Windows.FontStyles.Normal%2A> é aplicada.  
+  
+ Quando a seleção está vazia e o cursor estiver em uma palavra, a seleção é expandida para incluir a palavra inteira.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleItalic"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ToggleItalic"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleNumbering">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleNumbering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleNumbering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleNumbering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.ToggleNumbering" /> comando, que solicita que a formatação de lista ordenada (também conhecida como lista numerada) ser alternada na seleção atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="N" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comando funciona no <xref:System.Windows.Documents.Paragraph> nível.  Se esse comando é chamado em uma seleção parcial de conteúdo dentro de um parágrafo (incluindo uma seleção vazia em que o cursor está dentro de um parágrafo), o efeito solicitado é aplicado a todo o parágrafo.  Se esse comando é chamado em uma seleção que abrange vários parágrafos, o efeito é aplicado a todo o conteúdo de cada parágrafo que participa da seleção.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleNumbering"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ToggleNumbering"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleSubscript">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleSubscript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleSubscript" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleSubscript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.ToggleSubscript" /> comando, que solicita que a formatação de subscrito ser alternada na seleção atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="OemPlus" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ToggleSubscript"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ToggleSubscript"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleSuperscript">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleSuperscript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleSuperscript" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleSuperscript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="P:System.Windows.Documents.EditingCommands.ToggleSuperscript" /> comando, que solicita que sobrescrito alternado na seleção atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="Shift" /> + <see langword="OemPlus" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ToggleSuperscript"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ToggleSuperscript"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleUnderline">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ToggleUnderline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ToggleUnderline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.EditingCommands.ToggleUnderline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o comando <see cref="P:System.Windows.Documents.EditingCommands.ToggleUnderline" />, que solicita que a formatação de <see cref="T:System.Windows.Documents.Underline" /> seja alternada na seleção atual.</summary>
+        <value>O comando solicitado.  É o gesto de chave padrão para este comando <see langword="Ctrl" /> + <see langword="U" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a seleção está vazia e o cursor estiver em uma palavra, a seleção é expandida para incluir a palavra inteira.  
+  
+ Não há necessariamente uma implementação real que responde a este comando em um determinado objeto; em muitos casos, a implementação que responde a um comando é responsabilidade do gravador de aplicativos.  
+  
+ Esse comando tem o suporte nativo pelo <xref:System.Windows.Controls.RichTextBox>.  
+  
+<a name="xamlAttributeUsage_ToggleUnderline"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ToggleUnderline"/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como invocar um comando de edição em um objeto que suporta o comando.  
+  
+ Neste exemplo, um <xref:System.Windows.Controls.RichTextBox> serve como o destino do comando.  Observe que <xref:System.Windows.Controls.RichTextBox> implementa o <xref:System.Windows.IInputElement> interface (herdado de <xref:System.Windows.FrameworkElement>), e que ele inclui suporte nativo para muitos comandos de edição.  
+  
+ O primeiro argumento para o <xref:System.Windows.Input.RoutedCommand.Execute%2A> método é um parâmetro de comando.  Comandos de edição mais ignorar o parâmetro de comando; em geral, esse parâmetro deve ser `null` para comandos de edição.  
+  
+ O segundo argumento especifica o objeto ao qual o comando será roteado.  Este objeto deve implementar a <xref:System.Windows.IInputElement> de interface e deve incluir um manipulador para o comando especificado.  Em geral, um comando é ignorado quando invocado em um objeto que não lida com o comando.  
+  
+ [!code-csharp[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_editingcommands_invoke)]
+ [!code-vb[RichTextBoxSnippets#_EditingCommands_Invoke](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_editingcommands_invoke)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

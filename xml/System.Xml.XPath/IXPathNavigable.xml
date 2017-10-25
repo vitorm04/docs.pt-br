@@ -1,0 +1,73 @@
+<Type Name="IXPathNavigable" FullName="System.Xml.XPath.IXPathNavigable">
+  <TypeSignature Language="C#" Value="public interface IXPathNavigable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXPathNavigable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XPath.IXPathNavigable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XPath</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um acessador para a classe <see cref="T:System.Xml.XPath.XPathNavigator" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateNavigator">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator CreateNavigator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNavigator CreateNavigator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XPath.IXPathNavigable.CreateNavigator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um novo objeto <see cref="T:System.Xml.XPath.XPathNavigator" />.</summary>
+        <returns>Um objeto <see cref="T:System.Xml.XPath.XPathNavigator" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Xml.XPath.IXPathNavigable.CreateNavigator%2A> método é chamado de um <xref:System.Xml.XmlNode> objeto, o <xref:System.Xml.XPath.XPathNavigator> objeto é inicialmente posicionado no nó do qual o método foi chamado. Se o <xref:System.Xml.XPath.IXPathNavigable.CreateNavigator%2A> método é chamado de um <xref:System.Xml.XPath.XPathDocument> objeto ou um <xref:System.Xml.XmlDocument> objeto, o <xref:System.Xml.XPath.XPathNavigator> o objeto é posicionado na raiz do documento.  
+  
+   
+  
+## Examples  
+ Para obter exemplos do <xref:System.Xml.XPath.IXPathNavigable.CreateNavigator%2A> método, consulte o <xref:System.Xml.XmlNode>, <xref:System.Xml.XPath.XPathDocument>, ou <xref:System.Xml.XmlDocument> classes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

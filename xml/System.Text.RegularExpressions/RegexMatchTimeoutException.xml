@@ -1,0 +1,411 @@
+<Type Name="RegexMatchTimeoutException" FullName="System.Text.RegularExpressions.RegexMatchTimeoutException">
+  <TypeSignature Language="C#" Value="public class RegexMatchTimeoutException : TimeoutException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RegexMatchTimeoutException extends System.TimeoutException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.RegexMatchTimeoutException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.TimeoutException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é gerada quando o tempo de execução de um método de correspondência de padrão de expressão regular excede o intervalo de tempo limite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A presença de um <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> exceção geralmente indica que uma das seguintes condições:  
+  
+-   O mecanismo de expressão regular é retrocesso excessivamente conforme ele tenta corresponder o texto de entrada para o padrão de expressão regular.  
+  
+-   O intervalo de tempo limite foi definido muito baixo, especialmente devido ao carregamento de máquina alta.  
+  
+ A maneira na qual um manipulador de exceção manipula uma exceção depende da causa da exceção:  
+  
+-   Se o tempo limite de resultados de retrocesso excessiva, o manipulador de exceção abandonar a tentativa para corresponder à entrada e informar ao usuário que um tempo limite ocorreu no método de correspondência de padrão de expressão regular. Se possível, obter informações sobre o padrão de expressão regular, que está disponível a partir o <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.Pattern%2A> propriedade e a entrada que causou o retrocesso excessivo, que está disponível na <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.Input%2A> propriedade deve ser registrado para que o problema pode ser investigado e o padrão de expressão regular é modificado. Tempos limite devido a excesso de retrocesso sempre são reproduzível.  
+  
+-   Se o tempo limite de resultados de definir o limite de tempo limite muito baixo, você pode aumentar o intervalo de tempo limite e repita a operação de correspondência. O intervalo de tempo limite atual é proveniente do <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.MatchTimeout%2A> propriedade. Quando um <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> exceção for lançada, o mecanismo de expressão regular mantém seu estado para que qualquer invocações futuras retornam o mesmo resultado, como se não ocorreu a exceção. O padrão recomendado é de espera para um intervalo de tempo aleatório, breve depois que a exceção é lançada antes de chamar o método correspondente novamente. Isso pode ser repetido várias vezes. No entanto, o número de repetições deve ser pequeno no caso do tempo limite é causado por acompanhamento inverso excessivo.  
+  
+ O exemplo na próxima seção ilustra ambas as técnicas para tratamento de um <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra duas abordagens para tratamento de <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> exceção. Uma constante cujo valor é dois segundos define o intervalo de tempo limite máximo. O <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> método inicialmente é chamado com um intervalo de tempo limite de um segundo. Cada <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> exceção faz com que o intervalo de tempo limite ser aumentada por um segundo e resulta em outra chamada para o <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> método se o intervalo de tempo limite atual é menor que o intervalo de tempo limite máximo. No entanto, se o intervalo de tempo limite atual excede o intervalo de tempo limite máximo, o manipulador de exceção grava informações no log de eventos e abandona o processamento da expressão regular.  
+  
+ [!code-csharp[System.Text.RegularExpressions.RegexMatchTimeoutException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regexmatchtimeoutexception/cs/class1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.RegexMatchTimeoutException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regexmatchtimeoutexception/vb/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegexMatchTimeoutException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexMatchTimeoutException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException" /> classe com uma mensagem fornecida pelo sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o construtor padrão da <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> classe. Este construtor inicializa o <xref:System.Exception.Message%2A> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro. Esta mensagem é localizada para a cultura atual do sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegexMatchTimeoutException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexMatchTimeoutException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma cadeia de caracteres que descreve a exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException" /> classe com a cadeia de caracteres de mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `message` cadeia de caracteres é atribuída para o <xref:System.Exception.Message%2A?displayProperty=nameWithType> propriedade. A cadeia de caracteres deve ser localizada para a cultura atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RegexMatchTimeoutException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexMatchTimeoutException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que contém os dados serializados.</param>
+        <param name="context">O fluxo que contém os dados serializados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não é chamado diretamente por seu código para instanciar o <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> objeto. Em vez disso, ele é chamado pelo <xref:System.Runtime.Serialization.IFormatter.Deserialize%2A?displayProperty=nameWithType> método ao desserializar o <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> objeto a partir de um fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegexMatchTimeoutException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexMatchTimeoutException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma cadeia de caracteres que descreve a exceção.</param>
+        <param name="inner">A exceção que é a causa da exceção atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa essa sobrecarga para manipular uma exceção em um `try/catch` bloco. O `innerException` parâmetro deve ser uma referência para o objeto de exceção do `catch` bloco, ou pode ser `null`. Esse valor é então atribuído ao <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> do objeto <xref:System.Exception.InnerException%2A?displayProperty=nameWithType> propriedade.  
+  
+ O `message` cadeia de caracteres é atribuída para o <xref:System.Exception.Message%2A?displayProperty=nameWithType> propriedade. A cadeia de caracteres deve ser localizada para a cultura atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegexMatchTimeoutException (string regexInput, string regexPattern, TimeSpan matchTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string regexInput, string regexPattern, valuetype System.TimeSpan matchTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexMatchTimeoutException.#ctor(System.String,System.String,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="regexInput" Type="System.String" />
+        <Parameter Name="regexPattern" Type="System.String" />
+        <Parameter Name="matchTimeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="regexInput">O texto de entrada processado pelo mecanismo de expressão regular, quando o tempo limite ocorreu.</param>
+        <param name="regexPattern">O padrão usado pelo mecanismo de expressão regular quando o tempo limite ocorreu.</param>
+        <param name="matchTimeout">O intervalo de tempo limite.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException" /> classe com informações sobre o padrão de expressão regular, o texto de entrada e o intervalo de tempo limite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `regexInput`, `regexPattern`, e `matchTimeout` para os valores são atribuídos a <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.Input%2A>, <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.Pattern%2A>, e <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.MatchTimeout%2A> propriedades do novo <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public string Input { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Input" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.RegexMatchTimeoutException.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto de entrada que o mecanismo de expressão regular estava processando quando o tempo limite ocorreu.</summary>
+        <value>O texto de entrada de expressão regular.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade reflete o valor da `regexInput` parâmetro o <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.%23ctor%28System.String%2CSystem.String%2CSystem.TimeSpan%29> construtor. Se esse parâmetro não for inicializado explicitamente em uma chamada de construtor, seu valor é <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+ Quando a exceção é gerada pela expressão regular do mecanismo, o valor de <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.Input%2A> propriedade reflete a cadeia de caracteres de entrada inteira é passada para o mecanismo de expressão regular. Não é uma cadeia de caracteres parcial, como a subcadeia de caracteres que o mecanismo de pesquisa na chamada para um método como <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan MatchTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MatchTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.RegexMatchTimeoutException.MatchTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o intervalo de tempo limite para uma correspondência da expressão regular.</summary>
+        <value>O intervalo de tempo limite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade reflete o valor da `matchTimeout` parâmetro o <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.%23ctor%28System.String%2CSystem.String%2CSystem.TimeSpan%29> construtor. Se o parâmetro não foi inicializado corretamente em uma chamada de construtor, seu valor é `Timespan.FromTicks(-1)`.  
+  
+ O valor dessa propriedade reflete o intervalo de tempo limite definido na chamada para o <xref:System.Text.RegularExpressions.Regex> construtor ou método estático. Ele não reflete o intervalo exato decorrido desde o início da chamada de método para o tempo que a exceção é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public string Pattern { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pattern" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.RegexMatchTimeoutException.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão de expressão regular que foi usado na operação de correspondência quando o tempo limite ocorreu.</summary>
+        <value>O padrão de expressão regular.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade reflete o valor da `regexPattern` parâmetro o <xref:System.Text.RegularExpressions.RegexMatchTimeoutException.%23ctor%28System.String%2CSystem.String%2CSystem.TimeSpan%29> construtor. Se o parâmetro não foi inicializado corretamente em uma chamada de construtor, seu valor é <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexMatchTimeoutException.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">O objeto a ser preenchido com dados.</param>
+        <param name="context">O destino dessa serialização.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com os dados necessários para serializar uma <see cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> instância é convertida em um <xref:System.Runtime.Serialization.ISerializable> objeto de interface.  
+  
+ Todos os objetos que estão incluídos no <xref:System.Runtime.Serialization.SerializationInfo> objeto automaticamente são rastreadas e serializado pelo formatador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

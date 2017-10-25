@@ -1,0 +1,215 @@
+<Type Name="ListViewUpdateEventArgs" FullName="System.Web.UI.WebControls.ListViewUpdateEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewUpdateEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewUpdateEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewUpdateEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.ListView.ItemUpdating" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListView> controlar gera o <xref:System.Web.UI.WebControls.ListView.ItemUpdating> eventos quando o <xref:System.Web.UI.WebControls.ListView.UpdateItem%2A> método é chamado ou quando o botão de atualização do item é clicado, mas antes de <xref:System.Web.UI.WebControls.ListView> controle atualiza o item. (Um botão de atualização é um botão cujo `CommandName` propriedade definida como "Update".) Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada sempre que esse evento ocorre, como cancelar a operação de atualização.  
+  
+ Um <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs> objeto é passado para o método de manipulação de eventos. Esse objeto permite que você determine o índice do item atual e para especificar que a operação de atualização deve ser cancelada. Para cancelar a operação de atualização, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs> do objeto para `true`. Você também pode trabalhar com o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys%2A>, <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.OldValues%2A>, e <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> coleções antes que os valores são passados para a fonte de dados. É uma forma comum de usar essas coleções validar ou para a codificação HTML os valores que são fornecidos pelo usuário antes desses valores são armazenados na fonte de dados. Isso pode ajudar a evitar ataques de injeção de script.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.ListViewSelectEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> propriedade para certificar-se de que o usuário forneceu todos os valores antes de atualizar a fonte de dados.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.ItemUpdating#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdating/CS/ListViewItemUpdatingCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.ItemUpdating#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdating/VB/ListViewItemUpdatingVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewUpdateEventArgs (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewUpdateEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item que está sendo atualizado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListViewUpdateEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs> de classe, usando o índice do item especificado.  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando elas geram eventos.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância de <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.ItemIndex%2A>|O valor que está contido no `itemIndex` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdateEventArgs.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do item de dados que está sendo atualizado.</summary>
+        <value>O índice do item de dados que está sendo atualizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.ItemIndex%2A> propriedade para determinar o índice do <xref:System.Web.UI.WebControls.ListViewDataItem> objeto que contém o item de dados que está sendo atualizado. O índice do item é geralmente usado para recuperar o item do <xref:System.Web.UI.WebControls.ListView.Items%2A> coleção do <xref:System.Web.UI.WebControls.ListView> controle, que permite que você acesse as propriedades do item.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de pares de nome/valor do campo que representam a chave ou as chaves do item para atualizar.</summary>
+        <value>Os pares de nome/valor do campo que representam a chave ou as chaves do item para atualizar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.ListView.DataKeyNames%2A> propriedade de um <xref:System.Web.UI.WebControls.ListView> controle está definido, use o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys%2A> (dicionário) de propriedade para acessar o valor da chave primária no item para atualizar.  
+  
+> [!NOTE]
+>  Para acessar os valores dos campos de não-chave, use o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> ou <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.OldValues%2A> propriedades. O <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> propriedade contém os valores atualizados e o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.OldValues%2A> propriedade contém os valores originais.  
+  
+ O <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys%2A> dicionário é preenchido automaticamente com os pares de nome/valor do campo ou campos especificados no <xref:System.Web.UI.WebControls.ListView.DataKeyNames%2A> propriedade. Se vários campos formam a chave primária, uma entrada separada é adicionada para o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys%2A> dicionário para cada campo de chave.  
+  
+ Para determinar o nome de um campo de chave, use o <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> propriedade de um <xref:System.Collections.DictionaryEntry> que está contido no objeto o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys%2A> dicionário. Para determinar o valor de um campo de chave, use o <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys%2A> propriedade para acessar o valor do campo da chave do registro que está sendo atualizado.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys/CS/ListViewUpdateEventArgsKeysCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys/VB/ListViewUpdateEventArgsKeysVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary NewValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary NewValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário que contém os valores revisados do item para atualizar.</summary>
+        <value>Os valores revisados do item para atualizar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> (dicionário) de propriedade para acessar os valores dos campos de chave não revisados no item para atualizar.  
+  
+> [!NOTE]
+>  O campo de chave primária ou campos são incluídos neste dicionário, se o valor de chave primária ou os valores estão sendo atualizados. Para acessar os valores originais do campo de chave primária ou campos, use o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys%2A> propriedade. Para acessar os valores originais dos campos de não-chave no item, use o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.OldValues%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> propriedade é preenchida automaticamente com os pares de nome/valor dos campos revisados no item. Uma entrada separada é adicionada para o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> propriedade para cada campo no item.  
+  
+ Para determinar o nome do campo de uma entrada, use o <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> propriedade de um <xref:System.Collections.DictionaryEntry> que está contido no objeto o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> dicionário. Para determinar o valor de uma entrada, use o <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> propriedade para certificar-se de que o usuário forneceu todos os valores antes de atualizar a fonte de dados. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemUpdating#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdating/CS/ListViewItemUpdatingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemUpdating#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemUpdating/VB/ListViewItemUpdatingVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary OldValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary OldValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewUpdateEventArgs.OldValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário que contém os valores originais do item para atualizar.</summary>
+        <value>Os valores originais do item para atualizar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.OldValues%2A> (dicionário) de propriedade para acessar os valores originais dos campos de item a ser atualizado. Esse dicionário contém todos os campos de item, exceto os campos de chave.  
+  
+> [!NOTE]
+>  Você pode acessar os campos de chave do item usando o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.Keys%2A> propriedade. Para acessar os valores revisados os campos de não-chave no item, use o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.NewValues%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.OldValues%2A> propriedade é preenchida automaticamente com os valores originais de todos os campos no item. Uma entrada separada é adicionada para o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.OldValues%2A> propriedade para cada campo no item.  
+  
+ Para determinar o nome do campo de uma entrada, use o <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> propriedade de um <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> que está contido no objeto o <xref:System.Web.UI.WebControls.ListViewUpdateEventArgs.OldValues%2A> dicionário. Para determinar o valor de uma entrada, use o <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

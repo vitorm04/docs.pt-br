@@ -1,0 +1,13 @@
+<Namespace Name="System.IO.Ports">
+  <Docs>
+    <summary>O <see cref="N:System.IO.Ports" /> namespace contém classes para controlar a portas seriais. A classe mais importante, <see cref="T:System.IO.Ports.SerialPort" />, fornece uma estrutura para a E/S síncrona e orientada a eventos, acesso aos estados de fixação e interrupção e acesso às propriedades do driver serial. Ele pode ser usado para encapsular <see cref="T:System.IO.Stream" /> objetos, permitindo que a porta serial seja acessada por classes que usam fluxos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O namespace inclui enumerações que simplificam o controle de portas seriais, tais como <xref:System.IO.Ports.Handshake>, <xref:System.IO.Ports.Parity>, <xref:System.IO.Ports.SerialPinChange>, e <xref:System.IO.Ports.StopBits>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,430 @@
+<Type Name="CodeActivityMetadata" FullName="System.Activities.CodeActivityMetadata">
+  <TypeSignature Language="C#" Value="public struct CodeActivityMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CodeActivityMetadata extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.CodeActivityMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o conjunto de argumentos que configurado <see cref="T:System.Activities.CodeActivity" /> apresenta o ambiente de execução.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddArgument">
+      <MemberSignature Language="C#" Value="public void AddArgument (System.Activities.RuntimeArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddArgument(class System.Activities.RuntimeArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.AddArgument(System.Activities.RuntimeArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argument" Type="System.Activities.RuntimeArgument" />
+      </Parameters>
+      <Docs>
+        <param name="argument">O argumento para adicionar à coleção.</param>
+        <summary>Adiciona um argumento para a coleção de argumentos de uma atividade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDefaultExtensionProvider&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void AddDefaultExtensionProvider&lt;T&gt; (Func&lt;T&gt; extensionProvider) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddDefaultExtensionProvider&lt;class T&gt;(class System.Func`1&lt;!!T&gt; extensionProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.AddDefaultExtensionProvider``1(System.Func{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="extensionProvider" Type="System.Func&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de provedor de extensão.</typeparam>
+        <param name="extensionProvider">A função que retorna o ramal.</param>
+        <summary>Adiciona o provedor de extensão especificada à coleção de provedores de extensão padrão para a atividade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o host não fornece uma extensão do tipo `T`, em seguida, essa função de provedor de extensão é avaliada para fornecer uma.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddValidationError">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona um erro de validação para a coleção de metadados de erros de validação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Validação baseada em código imperativa](~/docs/framework/windows-workflow-foundation/imperative-code-based-validation.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddValidationError">
+      <MemberSignature Language="C#" Value="public void AddValidationError (System.Activities.Validation.ValidationError validationError);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValidationError(class System.Activities.Validation.ValidationError validationError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.AddValidationError(System.Activities.Validation.ValidationError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validationError" Type="System.Activities.Validation.ValidationError" />
+      </Parameters>
+      <Docs>
+        <param name="validationError">O erro de validação para adicionar.</param>
+        <summary>Adiciona o erro de validação especificado à coleção de metadados de erros de validação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Validação baseada em código imperativa](~/docs/framework/windows-workflow-foundation/imperative-code-based-validation.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValidationError">
+      <MemberSignature Language="C#" Value="public void AddValidationError (string validationErrorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValidationError(string validationErrorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.AddValidationError(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validationErrorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="validationErrorMessage">Uma mensagem que descreve o erro de validação.</param>
+        <summary>Adiciona um erro de validação para a coleção de metadados de erros de validação usando a descrição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Validação baseada em código imperativa](~/docs/framework/windows-workflow-foundation/imperative-code-based-validation.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public void Bind (System.Activities.Argument binding, System.Activities.RuntimeArgument argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Bind(class System.Activities.Argument binding, class System.Activities.RuntimeArgument argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.Bind(System.Activities.Argument,System.Activities.RuntimeArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Activities.Argument" />
+        <Parameter Name="argument" Type="System.Activities.RuntimeArgument" />
+      </Parameters>
+      <Docs>
+        <param name="binding">O <see cref="T:System.Activities.Argument" /> para associar.</param>
+        <param name="argument">O <see cref="T:System.Activities.RuntimeArgument" /> para associar.</param>
+        <summary>Associa especificado <see cref="T:System.Activities.Argument" /> especificado <see cref="T:System.Activities.RuntimeArgument" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Environment">
+      <MemberSignature Language="C#" Value="public System.Activities.LocationReferenceEnvironment Environment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.LocationReferenceEnvironment Environment" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.CodeActivityMetadata.Environment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.LocationReferenceEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atividade <see cref="T:System.Activities.LocationReferenceEnvironment" /> de argumentos ou símbolos introduzidos por um <see cref="T:System.Activities.Hosting.SymbolResolver" />.</summary>
+        <value>Ambiente de referência de local da atividade de argumentos ou símbolos introduzidos por um <see cref="T:System.Activities.Hosting.SymbolResolver" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado.</param>
+        <summary>Determina se o objeto especificado é igual a esta instância de metadados.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado é igual a esta instância de metadados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArgumentsWithReflection">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Activities.RuntimeArgument&gt; GetArgumentsWithReflection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.RuntimeArgument&gt; GetArgumentsWithReflection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.GetArgumentsWithReflection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.RuntimeArgument&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de argumentos obtido por meio de reflexão.</summary>
+        <returns>Uma coleção de argumentos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa uma atividade <xref:System.ComponentModel.TypeDescriptor> para examinar todas as propriedades públicas do tipo <xref:System.Activities.Argument> e os retorna em uma coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um identificador exclusivo para esta instância de metadados.</summary>
+        <returns>Um inteiro que identifica exclusivamente essa instância de metadados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasViolations">
+      <MemberSignature Language="C#" Value="public bool HasViolations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasViolations" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.CodeActivityMetadata.HasViolations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se há erros de validação nos metadados.</summary>
+        <value>
+          <see langword="true" />Se os erros de validação estão presentes; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Activities.CodeActivityMetadata left, System.Activities.CodeActivityMetadata right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Activities.CodeActivityMetadata left, valuetype System.Activities.CodeActivityMetadata right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.op_Equality(System.Activities.CodeActivityMetadata,System.Activities.CodeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Activities.CodeActivityMetadata" />
+        <Parameter Name="right" Type="System.Activities.CodeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro item a ser comparado.</param>
+        <param name="right">O segundo item a ser comparado.</param>
+        <summary>Retorna um valor que indica se as duas instâncias de metadados especificados são iguais.</summary>
+        <returns>
+          <see langword="true" />Se os dois itens forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Activities.CodeActivityMetadata left, System.Activities.CodeActivityMetadata right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Activities.CodeActivityMetadata left, valuetype System.Activities.CodeActivityMetadata right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.op_Inequality(System.Activities.CodeActivityMetadata,System.Activities.CodeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Activities.CodeActivityMetadata" />
+        <Parameter Name="right" Type="System.Activities.CodeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro item a ser comparado.</param>
+        <param name="right">O primeiro item a ser comparado.</param>
+        <summary>Retorna um valor que indica se as duas instâncias de metadados especificados não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se os dois itens que não forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireExtension">
+      <MemberSignature Language="C#" Value="public void RequireExtension (Type extensionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RequireExtension(class System.Type extensionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.RequireExtension(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extensionType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="extensionType">O tipo da extensão.</param>
+        <summary>Especifica que a atividade requer uma extensão do tipo especificado em tempo de execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o host não fornecer uma extensão do tipo especificado, a validação falhará.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireExtension&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void RequireExtension&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RequireExtension&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.RequireExtension``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo da extensão.</typeparam>
+        <summary>Especifica que a atividade requer uma extensão do tipo genérico especificado em tempo de execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o host não fornecer uma extensão do tipo especificado, a validação falhará.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetArgumentsCollection">
+      <MemberSignature Language="C#" Value="public void SetArgumentsCollection (System.Collections.ObjectModel.Collection&lt;System.Activities.RuntimeArgument&gt; arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetArgumentsCollection(class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.RuntimeArgument&gt; arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.SetArgumentsCollection(System.Collections.ObjectModel.Collection{System.Activities.RuntimeArgument})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Collections.ObjectModel.Collection&lt;System.Activities.RuntimeArgument&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Os argumentos para adicionar.</param>
+        <summary>Adiciona o conjunto especificado de argumentos para os argumentos da atividade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValidationErrorsCollection">
+      <MemberSignature Language="C#" Value="public void SetValidationErrorsCollection (System.Collections.ObjectModel.Collection&lt;System.Activities.Validation.ValidationError&gt; validationErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValidationErrorsCollection(class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.Validation.ValidationError&gt; validationErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.CodeActivityMetadata.SetValidationErrorsCollection(System.Collections.ObjectModel.Collection{System.Activities.Validation.ValidationError})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validationErrors" Type="System.Collections.ObjectModel.Collection&lt;System.Activities.Validation.ValidationError&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="validationErrors">Os erros de validação para adicionar.</param>
+        <summary>Adiciona a coleção de erros de validação especificada para a coleção de metadados de erros de validação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

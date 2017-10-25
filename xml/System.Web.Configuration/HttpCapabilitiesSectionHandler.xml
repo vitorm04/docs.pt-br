@@ -1,0 +1,86 @@
+<Type Name="HttpCapabilitiesSectionHandler" FullName="System.Web.Configuration.HttpCapabilitiesSectionHandler">
+  <TypeSignature Language="C#" Value="public class HttpCapabilitiesSectionHandler : System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpCapabilitiesSectionHandler extends System.Object implements class System.Configuration.IConfigurationSectionHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HttpCapabilitiesSectionHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Configuration.IConfigurationSectionHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Auxilia na leitura do <see langword="&lt;browserCaps&gt;" /> seção de um arquivo de configuração e criação de uma instância do <see cref="T:System.Web.HttpBrowserCapabilities" /> classe que contém as informações de recursos para o navegador do cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpCapabilitiesSectionHandler> classe e correspondente `<browserCaps>` seção de configuração foram preteridos no .NET Framework versão 2.0. O método preferencial para o gerenciamento de recursos do navegador é por meio de arquivos de definição de navegador que são compilados para uso pelo <xref:System.Web.Configuration.BrowserCapabilitiesFactory> classe. O objetivo de ambas as abordagens de configuração é gerar uma instância do <xref:System.Web.HttpBrowserCapabilities> classe que pode ser acessado a partir de <xref:System.Web.HttpRequest.Browser%2A> propriedade do <xref:System.Web.HttpRequest> classe.  
+  
+ Usando os arquivos de definição de navegador para armazenar recursos do navegador oferece vantagens em relação a alternativa. Ele oferece melhor desempenho porque as informações de definição do navegador são analisadas a partir do arquivo de configuração XML e compiladas em uma classe antecipadamente. Os arquivos de definição do navegador também são mais fáceis de manter:  
+  
+-   As definições são hierárquicas e, portanto, confiam menos em expressões regulares para determinar os recursos do navegador.  
+  
+-   As definições podem ser organizadas em vários arquivos, tornando mais fácil de gerenciar.  
+  
+-   As definições podem ser definidas em qualquer nível, no nível de Machine. config ou um aplicativo específico. Isso elimina a necessidade de copiar todo o conjunto de definições para fins de substituição de recursos para um navegador específico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCapabilitiesSectionHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpCapabilitiesSectionHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.HttpCapabilitiesSectionHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public object Create (object parent, object configurationContext, System.Xml.XmlNode section);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Create(object parent, object configurationContext, class System.Xml.XmlNode section) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpCapabilitiesSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Object" />
+        <Parameter Name="configurationContext" Type="System.Object" />
+        <Parameter Name="section" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O nó de configuração pai.</param>
+        <param name="configurationContext">O contexto de configuração do arquivo de configuração atual.</param>
+        <param name="section">A seção do arquivo de configuração que contém as informações.</param>
+        <summary>Cria uma instância de <see cref="T:System.Web.HttpBrowserCapabilities" /> classe que contém as informações de recursos para o navegador do cliente.</summary>
+        <returns>Uma instância de <see cref="T:System.Web.HttpBrowserCapabilities" /> que contém as informações de recursos para o navegador do cliente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe deriva seus dados de definição de navegador do `<browserCaps>` seção de configuração. Esta seção está preterida no .NET Framework versão 2.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

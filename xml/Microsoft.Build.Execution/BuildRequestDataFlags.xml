@@ -1,0 +1,97 @@
+<Type Name="BuildRequestDataFlags" FullName="Microsoft.Build.Execution.BuildRequestDataFlags">
+  <TypeSignature Language="C#" Value="public enum BuildRequestDataFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BuildRequestDataFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildRequestDataFlags" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Sinalizadores de fornecer mais controle sobre a solicitação de compilação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IgnoreExistingProjectState">
+      <MemberSignature Language="C#" Value="IgnoreExistingProjectState" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Execution.BuildRequestDataFlags IgnoreExistingProjectState = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.BuildRequestDataFlags.IgnoreExistingProjectState" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando esse sinalizador estiver presente e o projeto anteriormente foi criado em um nó cuja afinidade são incompatível com a afinidade esta solicitação requer, esta solicitação de compilação ignora o estado do projeto (mas não os resultados de destino) que foi gerado anteriormente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comportamento, quando esse sinalizador estiver presente, geralmente não é desejado. Este sinalizador é fornecido apenas para os casos em que o cliente sabe que a nova solicitação de compilação não depende do estado do projeto gerado por uma solicitação anterior. Defina esse sinalizador pode fornecer um aumento de desempenho no caso de afinidades de nó incompatível, porque MSBuild teria que serializar o estado de um nó para outro, serializar o estado do projeto pode ser caro, dependendo da quantidade de dados que o projeto tiver sido gerado anteriormente.  
+  
+ Esse sinalizador não tem nenhum efeito nos resultados de destino, portanto, se uma solicitação anterior criou um destino, a nova solicitação não novamente criará o destino. Além disso, nenhum dos mutações de estado do projeto que ocorreram como consequência anteriormente construir esse destino serão ser aplicada novamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Execution.BuildRequestDataFlags None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.BuildRequestDataFlags.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum sinalizador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideProjectStateAfterBuild">
+      <MemberSignature Language="C#" Value="ProvideProjectStateAfterBuild" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Execution.BuildRequestDataFlags ProvideProjectStateAfterBuild = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.BuildRequestDataFlags.ProvideProjectStateAfterBuild" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando esse sinalizador estiver presente, <see cref="T:Microsoft.Build.Execution.BuildResult" /> emitido em resposta a essa solicitação incluirá <see cref="P:Microsoft.Build.Execution.BuildResult.ProjectStateAfterBuild" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceExistingProjectInstance">
+      <MemberSignature Language="C#" Value="ReplaceExistingProjectInstance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Execution.BuildRequestDataFlags ReplaceExistingProjectInstance = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.BuildRequestDataFlags.ReplaceExistingProjectInstance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildRequestDataFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando esse sinalizador estiver presente, o ProjectInstance existente na compilação será substituído por esta.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

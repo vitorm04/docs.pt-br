@@ -1,0 +1,73 @@
+<Type Name="Graphics+DrawImageAbort" FullName="System.Drawing.Graphics+DrawImageAbort">
+  <TypeSignature Language="C#" Value="public delegate bool Graphics.DrawImageAbort(IntPtr callbackdata);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed Graphics/DrawImageAbort extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Graphics.DrawImageAbort" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="callbackdata" Type="System.IntPtr" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="callbackdata">Ponteiro interno que especifica os dados para o método de retorno de chamada. Esse parâmetro não é passado por todas as sobrecargas <see cref="Overload:System.Drawing.Graphics.DrawImage" />. É possível testar sua ausência verificando se o valor <see cref="F:System.IntPtr.Zero" /> existe.</param>
+    <summary>Fornece um método de retorno de chamada para decidir quando o método <see cref="Overload:System.Drawing.Graphics.DrawImage" /> deve cancelar a execução prematuramente e interromper o desenho de uma imagem.</summary>
+    <returns>Esse método retornará <see langword="true" /> se decidir que o método <see cref="Overload:System.Drawing.Graphics.DrawImage" /> deve interromper a execução prematuramente. Caso contrário, retornará <see langword="false" /> para indicar que o método <see cref="Overload:System.Drawing.Graphics.DrawImage" /> deve continuar a execução.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado em conjunto com o <xref:System.Drawing.Graphics.DrawImage%2A> método o <xref:System.Drawing.Graphics> classe. Determinadas sobrecargas do <xref:System.Drawing.Graphics.DrawImage%2A> um método de retorno de chamada definido pelo aplicativo desse tipo para descobrir se as sobrecargas devem parar ou continuar a execução da chamada do método.  
+  
+ Durante a execução, o relevante <xref:System.Drawing.Graphics.DrawImage%2A> sobrecargas frequentemente chamar esse método de retorno de chamada para descobrir se devem interromper desenhar a imagem especificada ou se eles devem continuar a imagem de desenho. O <xref:System.Drawing.Graphics.DrawImageAbort> método de retorno de chamada pode determinar se deseja continuar ou não com base em um algoritmo escolhido incluído, opcionalmente usando os dados passados para ele pelo parâmetro callbackdata. Por exemplo, um algoritmo pode determinar se a imagem foi colocada fora da tela e sinalizar um cancelamento de <xref:System.Drawing.Graphics.DrawImage%2A> método pare de desenho.  
+  
+ Uma declaração de usuário deste método de manipulação de eventos deve ter os mesmos parâmetros que o <xref:System.Drawing.Graphics.DrawImageAbort> delegar a declaração.  
+  
+   
+  
+## Examples  
+ Este exemplo é uma implementação simples do <xref:System.Drawing.Graphics.DrawImageAbort> delegate. Ele simplesmente verifica se o <xref:System.Drawing.Graphics.DrawImage%2A> método passou a ele usando o parâmetro callbackdata de dados. (Alguns <xref:System.Drawing.Graphics.DrawImage%2A> sobrecargas possuem somente uma `DrawImageAbort` parâmetro e não passar nenhum dado; algumas sobrecargas tem ambos `DrawImageAbort` e `callbackdata` parâmetros e pode transmitir dados.) Se nenhum dado foi passado, ele retorna `true` para indicar que a chamada <xref:System.Drawing.Graphics.DrawImage%2A> que ele deve cancelar o desenho de método. Se dados foi passados, ele retorna `false` para sinalizar que o desenho deve continuar.  
+  
+ Uma implementação realista desse retorno de chamada envolve o controle real de alguns critérios para cancelar ou continuar a execução.  
+  
+```vb  
+Private Function DrawImageCallback(callBackData As IntPtr) As Boolean  
+     ' Test for call that passes callBackData parameter.  
+     If callBackData.Equals(IntPtr.Zero) Then  
+         ' If no callBackData passed, abort DrawImage method.  
+         Return True  
+     Else  
+         ' If callBackData passed, continue DrawImage method.  
+         Return False  
+     End If  
+ End Function 'DrawImageCallback  
+```  
+  
+```csharp  
+// Define DrawImageAbort callback method.  
+ private bool DrawImageCallback(IntPtr callbackdata)  
+ {  
+    // Test for call that passes callBackData parameter.  
+    if(callbackdata==IntPtr.Zero)  
+    {  
+       // If no callbackdata passed, cancel DrawImage method.  
+       return true;  
+    }  
+    else  
+    {  
+       // If callbackdata passed, continue DrawImage method.  
+       return false;  
+    }  
+ }  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

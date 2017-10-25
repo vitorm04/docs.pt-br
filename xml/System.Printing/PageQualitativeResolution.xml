@@ -1,0 +1,123 @@
+<Type Name="PageQualitativeResolution" FullName="System.Printing.PageQualitativeResolution">
+  <TypeSignature Language="C#" Value="public enum PageQualitativeResolution" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PageQualitativeResolution extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PageQualitativeResolution" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a resolução de página como um valor não numérico qualitativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar este tipo como uma alternativa ou suplemento, informando a resolução em pontos por polegada (dpi).  
+  
+ Essa enumeração é usada para fornecer valores para o <xref:System.Printing.PageResolution.QualitativeResolution%2A> propriedade. O <xref:System.Printing.PageResolution> classe, por sua vez, é usada para fornecer valores para o <xref:System.Printing.PrintCapabilities.PageResolutionCapability%2A> propriedade onde ela especifica várias resoluções que dá suporte a uma impressora, e o <xref:System.Printing.PrintTicket.PageResolution%2A> propriedade, onde ele instrui uma impressora resolução a ser usada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageQualitativeResolution Default = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageQualitativeResolution.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageQualitativeResolution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A resolução qualitativa padrão para a impressora.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Draft">
+      <MemberSignature Language="C#" Value="Draft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageQualitativeResolution Draft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageQualitativeResolution.Draft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageQualitativeResolution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade de nível de rascunho, que é de 300 dpi para a maioria das impressoras.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageQualitativeResolution High = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageQualitativeResolution.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageQualitativeResolution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alta qualidade, que é o dpi 1200 ou maior para a maioria das impressoras.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageQualitativeResolution Normal = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageQualitativeResolution.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageQualitativeResolution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade normal, que é 600 dpi para a maioria das impressoras.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageQualitativeResolution Other = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageQualitativeResolution.Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageQualitativeResolution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Outra qualidade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageQualitativeResolution Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageQualitativeResolution.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageQualitativeResolution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O recurso (cujas opções são representadas por esta enumeração) é definido como uma opção não definida no [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

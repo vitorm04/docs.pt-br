@@ -1,0 +1,116 @@
+<Type Name="ExportDescriptor" FullName="System.Composition.Hosting.Core.ExportDescriptor">
+  <TypeSignature Language="C#" Value="public abstract class ExportDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExportDescriptor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Hosting.Core.ExportDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Hosting</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve uma exportação de uma parte conhecida para o mecanismo de composição.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é a sobrecarga de tempo de execução única que é mantida por parte; todas as outras informações específicas da parte devem ser descartadas depois que os descritores de exportação foram recuperados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExportDescriptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.ExportDescriptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Composition.Hosting.Core.ExportDescriptor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um construtor protegido que só pode ser chamado de classes derivadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activator">
+      <MemberSignature Language="C#" Value="public abstract System.Composition.Hosting.Core.CompositeActivator Activator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Composition.Hosting.Core.CompositeActivator Activator" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.ExportDescriptor.Activator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.CompositeActivator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o ativador usado para recuperar instâncias da exportação.</summary>
+        <value>O ativador.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Composition.Hosting.Core.ExportDescriptor Create (System.Composition.Hosting.Core.CompositeActivator activator, System.Collections.Generic.IDictionary&lt;string,object&gt; metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Composition.Hosting.Core.ExportDescriptor Create(class System.Composition.Hosting.Core.CompositeActivator activator, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.ExportDescriptor.Create(System.Composition.Hosting.Core.CompositeActivator,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Hosting.Core.ExportDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activator" Type="System.Composition.Hosting.Core.CompositeActivator" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="activator">O ativador usado para recuperar instâncias da exportação.</param>
+        <param name="metadata">Os metadados associados com a exportação.</param>
+        <summary>Cria um descritor de exportação que tem o ativador e os metadados especificados.</summary>
+        <returns>O descritor criado.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IDictionary&lt;string,object&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.Composition.Hosting.Core.ExportDescriptor.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os metadados para a exportação.</summary>
+        <value>Uma coleção de metadados.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

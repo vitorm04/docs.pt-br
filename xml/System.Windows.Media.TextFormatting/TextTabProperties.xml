@@ -1,0 +1,115 @@
+<Type Name="TextTabProperties" FullName="System.Windows.Media.TextFormatting.TextTabProperties">
+  <TypeSignature Language="C#" Value="public class TextTabProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextTabProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextTabProperties" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica as propriedades de guias definida pelo usuário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextTabProperties (System.Windows.Media.TextFormatting.TextTabAlignment alignment, double location, int tabLeader, int aligningChar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.TextFormatting.TextTabAlignment alignment, float64 location, int32 tabLeader, int32 aligningChar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextTabProperties.#ctor(System.Windows.Media.TextFormatting.TextTabAlignment,System.Double,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="alignment" Type="System.Windows.Media.TextFormatting.TextTabAlignment" />
+        <Parameter Name="location" Type="System.Double" />
+        <Parameter Name="tabLeader" Type="System.Int32" />
+        <Parameter Name="aligningChar" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="alignment">Um valor enumerado de <see cref="T:System.Windows.Media.TextFormatting.TextTabAlignment" /> que representa o alinhamento do texto no local de guia.</param>
+        <param name="location">Um <see cref="T:System.Double" /> valor que representa o local da guia.</param>
+        <param name="tabLeader">Um <see cref="T:System.Int32" /> valor que representa o preenchimento de tabulação.</param>
+        <param name="aligningChar">Um <see cref="T:System.Int32" /> valor que representa o caractere específico em texto é alinhado no local de guia.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.TextFormatting.TextTabProperties" /> classe especificando propriedades da guia.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AligningCharacter">
+      <MemberSignature Language="C#" Value="public int AligningCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AligningCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextTabProperties.AligningCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do caractere específico em que o texto é alinhado no local especificado do guia.</summary>
+        <value>Um <see cref="T:System.Int32" /> que representa o índice de valor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TextFormatting.TextTabAlignment Alignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.TextFormatting.TextTabAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextTabProperties.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.TextTabAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo de alinhamento do texto no local de guia.</summary>
+        <value>Um valor enumerado de <see cref="T:System.Windows.Media.TextFormatting.TextTabAlignment" /> que representa o alinhamento do texto no local de guia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public double Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextTabProperties.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do índice do local da guia.</summary>
+        <value>Um <see cref="T:System.Double" /> valor que representa o local da guia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabLeader">
+      <MemberSignature Language="C#" Value="public int TabLeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TabLeader" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextTabProperties.TabLeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do caractere que é usado para exibir a guia de tabulação.</summary>
+        <value>Um <see cref="T:System.Int32" /> valor que representa o local de preenchimento de tabulação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

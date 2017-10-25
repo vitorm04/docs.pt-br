@@ -1,0 +1,49 @@
+<Type Name="IDocumentStructureProvider" FullName="System.Windows.Xps.Packaging.IDocumentStructureProvider">
+  <TypeSignature Language="C#" Value="public interface IDocumentStructureProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDocumentStructureProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.IDocumentStructureProvider" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um método para adicionar o <see langword="DocumentStructure" /> parte de XML Paper Specification (XPS) a um pacote XPS.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `DocumentStructure` elemento de um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] do pacote, consulte o capítulo 9 o [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] especificação, a qual você pode obter em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddDocumentStructure">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsStructure AddDocumentStructure ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsStructure AddDocumentStructure() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IDocumentStructureProvider.AddDocumentStructure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsStructure</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona o <see langword="DocumentStructure" /> parte do [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] para um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] pacote.</summary>
+        <returns>Um <see cref="T:System.Windows.Xps.Packaging.XpsStructure" /> que representa o <see langword="DocumentStructure" /> faz parte de um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] pacote.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `DocumentStructure` elemento de um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] do pacote, consulte o capítulo 9 a [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] especificação, que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

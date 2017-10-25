@@ -1,0 +1,70 @@
+<Type Name="IMessage" FullName="System.Runtime.Remoting.Messaging.IMessage">
+  <TypeSignature Language="C#" Value="public interface IMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.IMessage" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém os dados de comunicação enviados entre coletores de mensagens de cooperação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagem coletores que usam <xref:System.Runtime.Remoting.Messaging.IMessage> pode ser colocado em cadeias de coletor de cliente ou nas cadeias de coletor de servidor. Um objeto de mensagem é passado do coletor de mensagem para coletor de mensagem por meio da cadeia e executa um conjunto de propriedades nomeadas como identificadores de ação, informações de envoy e parâmetros.  
+  
+ Um objeto que implementa o <xref:System.Runtime.Remoting.Messaging.IMessage> interface atende as qualificações mínimo a ser considerado um objeto de mensagem. O objeto exato recebido por um coletor de mensagem não tem que ser passados para o coletor de Avançar, mas isso é geralmente o caso.  
+  
+ Embora os objetos no recipiente de propriedades não precisam ser serializável, o implementador de coletor de mensagem deve considerar isso, desde que as propriedades de fluem de fora do domínio do aplicativo devem ser serializáveis.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ChannelServices_SyncDispatchMessage#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ChannelServices_SyncDispatchMessage/CPP/channelservices_syncdispatchmessage_client.cpp#1)]
+ [!code-csharp[ChannelServices_SyncDispatchMessage#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ChannelServices_SyncDispatchMessage/CS/channelservices_syncdispatchmessage_client.cs#1)]
+ [!code-vb[ChannelServices_SyncDispatchMessage#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ChannelServices_SyncDispatchMessage/VB/channelservices_syncdispatchmessage_client.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMessage.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IDictionary" /> que representa uma coleção de propriedades da mensagem.</summary>
+        <value>Um dicionário que representa uma coleção de propriedades da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[IMessageSink_Client#2](~/samples/snippets/cpp/VS_Snippets_Remoting/IMessageSink_Client/CPP/imessagesink_client.cpp#2)]
+ [!code-csharp[IMessageSink_Client#2](~/samples/snippets/csharp/VS_Snippets_Remoting/IMessageSink_Client/CS/imessagesink_client.cs#2)]
+ [!code-vb[IMessageSink_Client#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMessageSink_Client/VB/imessagesink_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

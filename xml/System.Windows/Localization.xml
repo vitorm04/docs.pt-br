@@ -1,0 +1,247 @@
+<Type Name="Localization" FullName="System.Windows.Localization">
+  <TypeSignature Language="C#" Value="public static class Localization" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Localization extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Localization" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.Windows.Localization" /> define propriedades anexadas para atributos de localização e comentários.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os autores de marcação podem ter requisitos específicos de elementos no [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] interface do usuário, como restrições de comprimento do texto, família de fontes ou tamanho da fonte. Os localizadores precisam saber sobre eles para fornecer a localização consistente. Propriedades de localização podem ser especificadas dentro de [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], permitindo que os autores de se comunicar suas necessidades de localização para os localizadores. Essas propriedades fornecem dicas e regras para localização, que pode ser usada para modificar o aplicativo. Há dois tipos de propriedades de localização:  
+  
+-   Atributos de localização. Os atributos especificam quais recursos, como <xref:System.Windows.Media.FontFamily>, devem ser localizados.  
+  
+-   Comentários de localização. Os comentários são texto de forma livre que inclui o autor de marcação.  
+  
+ Para obter mais informações sobre como usar essas propriedades de localização, consulte [atributos de localização e comentários](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra os atributos de localização e comentários definidos para um bloco de texto.  
+  
+ [!code-xaml[AttributesSnippets#AttributesSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/AttributesSnippets/CSharp/Comments.xaml#attributessnippet4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AttributesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AttributesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AttributesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Localization.AttributesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Localization.Attributes" /> anexada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter e definir o <xref:System.Windows.Localization.Attributes%2A> anexado a propriedade de um botão.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommentsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommentsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommentsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Localization.CommentsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Localization.Comments" /> anexada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter e definir o <xref:System.Windows.Localization.Comments%2A> anexado a propriedade de um bloco de texto.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributes">
+      <MemberSignature Language="C#" Value="public static string GetAttributes (object element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetAttributes(object element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Localization.GetAttributes(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Object))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um <see cref="T:System.Object" /> que representa o elemento cuja propriedade anexada que você deseja recuperar.</param>
+        <summary>Obtém o valor da <see cref="F:System.Windows.Localization.AttributesProperty" /> anexados a propriedade de um elemento especificado.</summary>
+        <returns>Um <see cref="T:System.String" /> valor que representa o atributo de localização.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atributos de localização especificam quais recursos devem ser localizados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar os atributos de localização definidos para um botão.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComments">
+      <MemberSignature Language="C#" Value="public static string GetComments (object element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetComments(object element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Localization.GetComments(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.AttachedPropertyBrowsableForType(typeof(System.Object))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um <see cref="T:System.Object" /> que representa o elemento cuja propriedade anexada que você deseja recuperar.</param>
+        <summary>Obtém o valor da <see cref="F:System.Windows.Localization.CommentsProperty" /> anexados a propriedade de um elemento especificado.</summary>
+        <returns>Um <see cref="T:System.String" /> valor que representa o comentário da localização.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Comentários de localização são texto de forma livre que inclui o desenvolvedor do aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar os comentários de localização definidos para um bloco de texto.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAttributes">
+      <MemberSignature Language="C#" Value="public static void SetAttributes (object element, string attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAttributes(object element, string attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Localization.SetAttributes(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+        <Parameter Name="attributes" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um <see cref="T:System.Object" /> que representa o elemento cuja propriedade anexada que você deseja definir.</param>
+        <param name="attributes">Um <see cref="T:System.String" /> que especifica os atributos de localização.</param>
+        <summary>Define o <see cref="F:System.Windows.Localization.AttributesProperty" /> anexado a propriedade para o elemento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atributos de localização especificam quais recursos devem ser localizados. Para obter mais informações sobre como definir atributos de localização, consulte [atributos de localização e comentários](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir os atributos de localização de um botão.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetComments">
+      <MemberSignature Language="C#" Value="public static void SetComments (object element, string comments);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetComments(object element, string comments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Localization.SetComments(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+        <Parameter Name="comments" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um <see cref="T:System.Object" /> que representa o elemento cuja propriedade anexada que você deseja definir.</param>
+        <param name="comments">Um <see cref="T:System.String" /> que especifica os comentários de localização.</param>
+        <summary>Conjuntos de <see cref="F:System.Windows.Localization.CommentsProperty" /> propriedade anexada ao elemento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Comentários de localização são texto de forma livre que inclui o desenvolvedor do aplicativo. Para obter mais informações sobre como definir os comentários de localização, consulte [atributos de localização e comentários](~/docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir os comentários de localização de um bloco de texto.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

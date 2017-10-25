@@ -1,0 +1,1042 @@
+<Type Name="DataflowBlock" FullName="System.Threading.Tasks.Dataflow.DataflowBlock">
+  <TypeSignature Language="C#" Value="public static class DataflowBlock" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DataflowBlock extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.DataflowBlock" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de métodos estáticos (compartilhado no Visual Basic) para trabalhar com blocos de fluxo de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A biblioteca de fluxo de dados TPL (<xref:System.Threading.Tasks.Dataflow> namespace) não é distribuído com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)]. Para instalar o <xref:System.Threading.Tasks.Dataflow> namespace, abra seu projeto no [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], escolha **gerenciar pacotes NuGet** no menu projeto e pesquise online o `Microsoft.Tpl.Dataflow` pacote.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsObservable&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static IObservable&lt;TOutput&gt; AsObservable&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IObservable`1&lt;!!TOutput&gt; AsObservable&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.AsObservable``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IObservable&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Especifica o tipo de dados contidos na origem.</typeparam>
+        <param name="source">A fonte para encapsular.</param>
+        <summary>Cria um novo <see cref="T:System.IObservable`1" /> abstração em relação a <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" />.</summary>
+        <returns>Um <see cref="T:System.IObservable`1" /> que permite observadores a ser inscrito para a origem.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="source" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AsObserver&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public static IObserver&lt;TInput&gt; AsObserver&lt;TInput&gt; (this System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt; target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IObserver`1&lt;!!TInput&gt; AsObserver&lt;TInput&gt;(class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!!TInput&gt; target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.AsObserver``1(System.Threading.Tasks.Dataflow.ITargetBlock{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IObserver&lt;TInput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Especifica o tipo de entrada aceita pelo bloco de destino.</typeparam>
+        <param name="target">O destino para encapsular.</param>
+        <summary>Cria um novo <see cref="T:System.IObserver`1" /> abstração em relação a <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" />.</summary>
+        <returns>Um observador que encapsula o bloco de destino.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Choose&lt;T1,T2&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;int&gt; Choose&lt;T1,T2&gt; (System.Threading.Tasks.Dataflow.ISourceBlock&lt;T1&gt; source1, Action&lt;T1&gt; action1, System.Threading.Tasks.Dataflow.ISourceBlock&lt;T2&gt; source2, Action&lt;T2&gt; action2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;int32&gt; Choose&lt;T1, T2&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T1&gt; source1, class System.Action`1&lt;!!T1&gt; action1, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T2&gt; source2, class System.Action`1&lt;!!T2&gt; action2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Choose``2(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Action{``0},System.Threading.Tasks.Dataflow.ISourceBlock{``1},System.Action{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source1" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T1&gt;" />
+        <Parameter Name="action1" Type="System.Action&lt;T1&gt;" />
+        <Parameter Name="source2" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T2&gt;" />
+        <Parameter Name="action2" Type="System.Action&lt;T2&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Especifica o tipo de dados contidos na fonte de primeira.</typeparam>
+        <typeparam name="T2">Especifica o tipo de dados contidos na fonte de segundo.</typeparam>
+        <param name="source1">A primeira fonte.</param>
+        <param name="action1">O manipulador para executar nos dados da origem primeiro.</param>
+        <param name="source2">A segunda fonte.</param>
+        <param name="action2">O manipulador para executar nos dados da fonte de segundo.</param>
+        <summary>Monitora a duas fontes de fluxo de dados, invocar o manipulador fornecido para qualquer fonte disponibiliza os dados primeiro.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task`1" /> que representa a opção assíncrona. Se ambas as fontes são concluídas antes de concluir a opção, a tarefa resultante será cancelada. Quando uma das fontes tem dados disponíveis e propaga com êxito para a opção, a tarefa resultante será concluída quando o manipulador é concluído; Se o manipulador de lançar uma exceção, a tarefa termina no <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> de estado e conterá a exceção não tratada. Caso contrário, a tarefa será finalizada com seu <see cref="P:System.Threading.Tasks.Task`1.Result" /> definido como 0 ou 1 para representar a primeira ou segunda fonte, respectivamente.  
+  
+ Esse método só irão consumir um elemento de uma as duas fontes de dados, não ambos.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="source1" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action1" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="source2" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action2" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Choose&lt;T1,T2&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;int&gt; Choose&lt;T1,T2&gt; (System.Threading.Tasks.Dataflow.ISourceBlock&lt;T1&gt; source1, Action&lt;T1&gt; action1, System.Threading.Tasks.Dataflow.ISourceBlock&lt;T2&gt; source2, Action&lt;T2&gt; action2, System.Threading.Tasks.Dataflow.DataflowBlockOptions dataflowBlockOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;int32&gt; Choose&lt;T1, T2&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T1&gt; source1, class System.Action`1&lt;!!T1&gt; action1, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T2&gt; source2, class System.Action`1&lt;!!T2&gt; action2, class System.Threading.Tasks.Dataflow.DataflowBlockOptions dataflowBlockOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Choose``2(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Action{``0},System.Threading.Tasks.Dataflow.ISourceBlock{``1},System.Action{``1},System.Threading.Tasks.Dataflow.DataflowBlockOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source1" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T1&gt;" />
+        <Parameter Name="action1" Type="System.Action&lt;T1&gt;" />
+        <Parameter Name="source2" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T2&gt;" />
+        <Parameter Name="action2" Type="System.Action&lt;T2&gt;" />
+        <Parameter Name="dataflowBlockOptions" Type="System.Threading.Tasks.Dataflow.DataflowBlockOptions" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Especifica o tipo de dados contidos na fonte de primeira.</typeparam>
+        <typeparam name="T2">Especifica o tipo de dados contidos na fonte de segundo.</typeparam>
+        <param name="source1">A primeira fonte.</param>
+        <param name="action1">O manipulador para executar nos dados da origem primeiro.</param>
+        <param name="source2">A segunda fonte.</param>
+        <param name="action2">O manipulador para executar nos dados da fonte de segundo.</param>
+        <param name="dataflowBlockOptions">As opções com a qual configurar essa opção.</param>
+        <summary>Monitora a duas fontes de fluxo de dados, invocar o manipulador fornecido para qualquer fonte disponibiliza os dados primeiro.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task`1" /> que representa a opção assíncrona. Se ambas as fontes são concluídas antes de concluir a opção, ou se o <see cref="T:System.Threading.CancellationToken" /> fornecido como parte do <paramref name="dataflowBlockOptions" /> foi cancelada antes de concluir a opção, a tarefa resultante será cancelada. Quando uma das fontes tem dados disponíveis e propaga com êxito para a opção, a tarefa resultante será concluída quando o manipulador é concluído; Se o manipulador de lançar uma exceção, a tarefa termina no <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> de estado e conterá a exceção não tratada. Caso contrário, a tarefa será finalizada com seu <see cref="P:System.Threading.Tasks.Task`1.Result" /> definido como 0 ou 1 para representar a primeira ou segunda fonte, respectivamente.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="source1" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action1" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="source2" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action2" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="dataflowBlockOptions" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Choose&lt;T1,T2,T3&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;int&gt; Choose&lt;T1,T2,T3&gt; (System.Threading.Tasks.Dataflow.ISourceBlock&lt;T1&gt; source1, Action&lt;T1&gt; action1, System.Threading.Tasks.Dataflow.ISourceBlock&lt;T2&gt; source2, Action&lt;T2&gt; action2, System.Threading.Tasks.Dataflow.ISourceBlock&lt;T3&gt; source3, Action&lt;T3&gt; action3);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;int32&gt; Choose&lt;T1, T2, T3&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T1&gt; source1, class System.Action`1&lt;!!T1&gt; action1, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T2&gt; source2, class System.Action`1&lt;!!T2&gt; action2, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T3&gt; source3, class System.Action`1&lt;!!T3&gt; action3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Choose``3(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Action{``0},System.Threading.Tasks.Dataflow.ISourceBlock{``1},System.Action{``1},System.Threading.Tasks.Dataflow.ISourceBlock{``2},System.Action{``2})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source1" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T1&gt;" />
+        <Parameter Name="action1" Type="System.Action&lt;T1&gt;" />
+        <Parameter Name="source2" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T2&gt;" />
+        <Parameter Name="action2" Type="System.Action&lt;T2&gt;" />
+        <Parameter Name="source3" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T3&gt;" />
+        <Parameter Name="action3" Type="System.Action&lt;T3&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Especifica o tipo de dados contidos na fonte de primeira.</typeparam>
+        <typeparam name="T2">Especifica o tipo de dados contidos na fonte de segundo.</typeparam>
+        <typeparam name="T3">Especifica o tipo de dados contidos na fonte de terceiro.</typeparam>
+        <param name="source1">A primeira fonte.</param>
+        <param name="action1">O manipulador para executar nos dados da origem primeiro.</param>
+        <param name="source2">A segunda fonte.</param>
+        <param name="action2">O manipulador para executar nos dados da fonte de segundo.</param>
+        <param name="source3">A fonte de terceira.</param>
+        <param name="action3">O manipulador para executar nos dados da fonte de terceiro.</param>
+        <summary>Monitora as três fontes de fluxo de dados, invocar o manipulador fornecido para qualquer fonte disponibiliza os dados primeiro.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task`1" /> que representa a opção assíncrona. Se todas as fontes são concluídas antes de concluir a opção, a tarefa resultante será cancelada. Quando uma das fontes tem dados disponíveis e propaga com êxito para a opção, a tarefa resultante será concluída quando o manipulador é concluído; Se o manipulador de lançar uma exceção, a tarefa termina no <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> de estado e conterá a exceção não tratada. Caso contrário, a tarefa termina com a sua <see cref="P:System.Threading.Tasks.Task`1.Result" /> definida para o índice de base 0 da origem.  
+  
+ Esse método só irão consumir um elemento de uma das fontes de dados, nunca mais de uma vez.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="source1" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action1" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="source2" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action2" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="source3" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action3" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Choose&lt;T1,T2,T3&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;int&gt; Choose&lt;T1,T2,T3&gt; (System.Threading.Tasks.Dataflow.ISourceBlock&lt;T1&gt; source1, Action&lt;T1&gt; action1, System.Threading.Tasks.Dataflow.ISourceBlock&lt;T2&gt; source2, Action&lt;T2&gt; action2, System.Threading.Tasks.Dataflow.ISourceBlock&lt;T3&gt; source3, Action&lt;T3&gt; action3, System.Threading.Tasks.Dataflow.DataflowBlockOptions dataflowBlockOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;int32&gt; Choose&lt;T1, T2, T3&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T1&gt; source1, class System.Action`1&lt;!!T1&gt; action1, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T2&gt; source2, class System.Action`1&lt;!!T2&gt; action2, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!T3&gt; source3, class System.Action`1&lt;!!T3&gt; action3, class System.Threading.Tasks.Dataflow.DataflowBlockOptions dataflowBlockOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Choose``3(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Action{``0},System.Threading.Tasks.Dataflow.ISourceBlock{``1},System.Action{``1},System.Threading.Tasks.Dataflow.ISourceBlock{``2},System.Action{``2},System.Threading.Tasks.Dataflow.DataflowBlockOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source1" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T1&gt;" />
+        <Parameter Name="action1" Type="System.Action&lt;T1&gt;" />
+        <Parameter Name="source2" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T2&gt;" />
+        <Parameter Name="action2" Type="System.Action&lt;T2&gt;" />
+        <Parameter Name="source3" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;T3&gt;" />
+        <Parameter Name="action3" Type="System.Action&lt;T3&gt;" />
+        <Parameter Name="dataflowBlockOptions" Type="System.Threading.Tasks.Dataflow.DataflowBlockOptions" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">Especifica o tipo de dados contidos na fonte de primeira.</typeparam>
+        <typeparam name="T2">Especifica o tipo de dados contidos na fonte de segundo.</typeparam>
+        <typeparam name="T3">Especifica o tipo de dados contidos na fonte de terceiro.</typeparam>
+        <param name="source1">A primeira fonte.</param>
+        <param name="action1">O manipulador para executar nos dados da origem primeiro.</param>
+        <param name="source2">A segunda fonte.</param>
+        <param name="action2">O manipulador para executar nos dados da fonte de segundo.</param>
+        <param name="source3">A fonte de terceira.</param>
+        <param name="action3">O manipulador para executar nos dados da fonte de terceiro.</param>
+        <param name="dataflowBlockOptions">As opções com a qual configurar essa opção.</param>
+        <summary>Monitora as três fontes de fluxo de dados, invocar o manipulador fornecido para qualquer fonte disponibiliza os dados primeiro.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task`1" /> que representa a opção assíncrona. Se todas as fontes são concluídas antes de concluir a opção, ou se o <see cref="T:System.Threading.CancellationToken" /> fornecido como parte do <paramref name="dataflowBlockOptions" /> foi cancelada antes de concluir a opção, a tarefa resultante será cancelada. Quando uma das fontes tem dados disponíveis e propaga com êxito para a opção, a tarefa resultante será concluída quando o manipulador é concluído; Se o manipulador de lançar uma exceção, a tarefa termina no <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" /> de estado e conterá a exceção não tratada. Caso contrário, a tarefa termina com a sua <see cref="P:System.Threading.Tasks.Task`1.Result" /> definida para o índice de base 0 da origem.  
+  
+ Esse método só irão consumir um elemento de uma das fontes de dados, nunca mais de uma vez. Se o cancelamento é solicitado após um elemento foi recebido, a solicitação de cancelamento será ignorada e o manipulador relevante terão permissão para executar.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="source1" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action1" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="source2" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action2" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="source3" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="action3" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="dataflowBlockOptions" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encapsulate&lt;TInput,TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Dataflow.IPropagatorBlock&lt;TInput,TOutput&gt; Encapsulate&lt;TInput,TOutput&gt; (System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt; target, System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Dataflow.IPropagatorBlock`2&lt;!!TInput, !!TOutput&gt; Encapsulate&lt;TInput, TOutput&gt;(class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!!TInput&gt; target, class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate``2(System.Threading.Tasks.Dataflow.ITargetBlock{``0},System.Threading.Tasks.Dataflow.ISourceBlock{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Dataflow.IPropagatorBlock&lt;TInput,TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;" />
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Especifica o tipo de entrada esperado pelo destino.</typeparam>
+        <typeparam name="TOutput">Especifica o tipo de saída produzida pela origem.</typeparam>
+        <param name="target">O destino para encapsular.</param>
+        <param name="source">A origem para encapsular.</param>
+        <summary>Encapsula uma origem e um destino em um único propagador.</summary>
+        <returns>A origem e destino encapsulado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> método requer dois blocos existentes: um bloco de destino (uma instância de uma classe que implementa <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>) e um bloco de código-fonte (uma instância de uma classe que implementa <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>). <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A>cria uma nova instância de uma classe interna que se conecta o <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> membros de interface de `target` parâmetro e o <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> membros de interface de `source` parâmetro.  Ambos <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> e <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> derivam <xref:System.Threading.Tasks.Dataflow.IDataflowBlock>. Conclusão de bloco é passado explicitamente de fontes para destinos. Portanto, o <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> e <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Fault%2A> métodos estão conectados ao destino durante o <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> propriedade está conectada à fonte de.  Certifique-se de que, quando o destino metade for concluído, a fonte de metade obtém concluído da maneira mais adequada; Por exemplo:  
+  
+ `target.Completion.ContinueWith(completion => source.Complete());`  
+  
+ Ou, se você quiser se propague o tipo de conclusão, você pode usar esse código mais sofisticado:  
+  
+```  
+target.Completion.ContinueWith(completion => { if (completion.IsFaulted) 3   
+  
+((IDataflowBlock)batchBlock).Fault(completion.Exception);   
+else   
+batchBlock.Complete();   
+});  
+  
+```  
+  
+ Explicitamente, você deve fornecer a propagação de mensagem do destino para a origem. O benefício dessa conexão explícita é que ele oferece liberdade para executar qualquer processamento irrestrito entre os dois blocos encapsulados. Você pode fazer isso por codificação de processamento necessário em delegados os blocos (se os blocos levar delegados) ou inserindo uma subrede de blocos entre eles. A maneira mais fácil é usar um bloco que usa delegados; Por exemplo, use <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> (se aplicável), ou um bloco personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkTo&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static IDisposable LinkTo&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt; target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IDisposable LinkTo&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!!TOutput&gt; target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Threading.Tasks.Dataflow.ITargetBlock{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Especifica o tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem do qual vincular.</param>
+        <param name="target">O <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> ao qual se conectar a origem.</param>
+        <summary>Links de <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" /> especificado <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" />.</summary>
+        <returns>Um <see cref="T:System.IDisposable" /> que, após chamar <see langword="Dispose" />, será desvincular a origem do destino.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="source" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="target" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkTo&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static IDisposable LinkTo&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt; target, Predicate&lt;TOutput&gt; predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IDisposable LinkTo&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!!TOutput&gt; target, class System.Predicate`1&lt;!!TOutput&gt; predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Threading.Tasks.Dataflow.ITargetBlock{``0},System.Predicate{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt;" />
+        <Parameter Name="predicate" Type="System.Predicate&lt;TOutput&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Especifica o tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem do qual vincular.</param>
+        <param name="target">O <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> ao qual se conectar a origem.</param>
+        <param name="predicate">O filtro de uma mensagem deve ser aprovada para sua propagação da origem para o destino.</param>
+        <summary>Links de <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" /> especificado <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> usando o filtro especificado.</summary>
+        <returns>Um <see cref="T:System.IDisposable" /> que, após chamar <see langword="Dispose" />, será desvincular a origem do destino.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="source" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="target" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="predicate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkTo&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static IDisposable LinkTo&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt; target, System.Threading.Tasks.Dataflow.DataflowLinkOptions linkOptions, Predicate&lt;TOutput&gt; predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IDisposable LinkTo&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!!TOutput&gt; target, class System.Threading.Tasks.Dataflow.DataflowLinkOptions linkOptions, class System.Predicate`1&lt;!!TOutput&gt; predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Threading.Tasks.Dataflow.ITargetBlock{``0},System.Threading.Tasks.Dataflow.DataflowLinkOptions,System.Predicate{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt;" />
+        <Parameter Name="linkOptions" Type="System.Threading.Tasks.Dataflow.DataflowLinkOptions" />
+        <Parameter Name="predicate" Type="System.Predicate&lt;TOutput&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Especifica o tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem do qual vincular.</param>
+        <param name="target">O <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> ao qual se conectar a origem.</param>
+        <param name="linkOptions">Um dos valores de enumeração que especifica como configurar um link entre blocos de fluxo de dados.</param>
+        <param name="predicate">O filtro de uma mensagem deve ser aprovada para sua propagação da origem para o destino.</param>
+        <summary>Links de <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" /> especificado <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> usando o filtro especificado.</summary>
+        <returns>Um <see cref="T:System.IDisposable" /> que, após chamar <see langword="Dispose" />, será desvincular a origem do destino.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="source" /> é nulo (Nothing no Visual Basic).  
+  
+ -ou-  
+  
+ O <paramref name="target" /> é nulo (Nothing no Visual Basic).  
+  
+ -ou-  
+  
+ O <paramref name="linkOptions" /> é nulo (Nothing no Visual Basic).  
+  
+ -ou-  
+  
+ O <paramref name="predicate" /> é nulo (Nothing no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NullTarget&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt; NullTarget&lt;TInput&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!!TInput&gt; NullTarget&lt;TInput&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.NullTarget``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TInput">O tipo de mensagens que pode aceitar esse bloco.</typeparam>
+        <summary>Obtém um bloco de destino que sincronicamente aceita todas as mensagens oferecidas a ele e descarta-los.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> que aceita e subsequentemente descarta todas as mensagens oferecidas.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputAvailableAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;bool&gt; OutputAvailableAsync&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;bool&gt; OutputAvailableAsync&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Especifica o tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem para monitorar.</param>
+        <summary>Fornece um <see cref="T:System.Threading.Tasks.Task`1" /> que monitora assincronamente a fonte de saída disponível.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task`1" /> que o informa de se e quando a saída mais está disponível. Se, quando a tarefa for concluída, seu <see cref="P:System.Threading.Tasks.Task`1.Result" /> é <see langword="true" />, mais saída está disponível na origem (embora outro consumidor da origem pode recuperar os dados).  
+  
+ Se ele retorna <see langword="false" />, mais de saída não está e nunca estará disponível, devido à origem concluir antes de estar disponível da saída.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputAvailableAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;bool&gt; OutputAvailableAsync&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;bool&gt; OutputAvailableAsync&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Especifica o tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem para monitorar.</param>
+        <param name="cancellationToken">O token de cancelamento com o qual deseja cancelar a operação assíncrona.</param>
+        <summary>Fornece um <see cref="T:System.Threading.Tasks.Task`1" /> que monitora assincronamente a fonte de saída disponível.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task`1" /> que o informa de se e quando a saída mais está disponível. Se, quando a tarefa for concluída, seu <see cref="P:System.Threading.Tasks.Task`1.Result" /> é <see langword="true" />, mais saída está disponível na origem (embora outro consumidor da origem pode recuperar os dados). Se ele retorna <see langword="false" />, mais de saída não está e nunca estará disponível, devido à origem concluir antes de estar disponível da saída. Se ela retorna false, mais saída não está e nunca estará disponível, devido à fonte de conclusão antes de saída disponível.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Post&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public static bool Post&lt;TInput&gt; (this System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt; target, TInput item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Post&lt;TInput&gt;(class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!!TInput&gt; target, !!TInput item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Post``1(System.Threading.Tasks.Dataflow.ITargetBlock{``0},``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;" RefType="this" />
+        <Parameter Name="item" Type="TInput" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Especifica o tipo de dados aceitos pelo bloco de destino.</typeparam>
+        <param name="target">O bloco de destino.</param>
+        <param name="item">O item que está sendo oferecido para o destino.</param>
+        <summary>Publica um item para o <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" />.</summary>
+        <returns>
+          <see langword="true" />Se o item foi aceita pelo bloco de destino; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retornará depois que o bloco de destino decidiu aceitar ou recusar o item, mas a menos que o contrário ditada pela semântica especial do bloco de destino, ele não espera para o item a ser processada na verdade. Por exemplo, <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> retornará <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> assim que o item postado tenham sido armazenadas em sua fila de entrada). Da perspectiva de processamento do bloco, `Post` é assíncrona. Para blocos de destino que suporte adiar oferecidos mensagens ou dos blocos que podem fazer mais processamento no seu `Post` implementação, considere o uso de <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A>, que será retornado imediatamente e permitirá que o destino adiar a mensagem postada e posteriormente consumi-lo após `SendAsync` retorna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static TOutput Receive&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TOutput Receive&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Receive``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TOutput</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">O tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem da qual receber o valor.</param>
+        <summary>Modo síncrono recebe um valor de uma origem especificada.</summary>
+        <returns>O valor recebido.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Nenhum item pode ser recebido da origem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static TOutput Receive&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TOutput Receive&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Receive``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TOutput</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">O tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem da qual receber o valor.</param>
+        <param name="cancellationToken">O token a ser usado para cancelar a operação de recebimento.</param>
+        <summary>Modo síncrono recebe um valor de uma origem especificada e fornece um token para cancelar a operação.</summary>
+        <returns>O valor recebido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fonte oferecido com êxito um item que foi recebido por essa operação, esse item será retornado mesmo que ocorra uma solicitação de cancelamento simultâneas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Nenhum item pode ser recebido da origem.</exception>
+        <exception cref="T:System.OperationCanceledException">A operação foi cancelada antes que um item foi recebido da origem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static TOutput Receive&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TOutput Receive&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Receive``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TOutput</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">O tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem da qual receber o valor.</param>
+        <param name="timeout">O intervalo de tempo máximo, em milissegundos, de espera para a operação síncrona ser concluída, ou um intervalo que representa-1 milissegundos a aguardar indefinidamente.</param>
+        <summary>Modo síncrono recebe um valor de uma origem especificada, observando um período de tempo limite opcional.</summary>
+        <returns>O valor recebido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fonte oferecido com êxito um item que foi recebido por essa operação, esse item será retornado mesmo que ocorra um tempo limite simultâneo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />é um número negativo que não seja-1 milissegundos, que representa um período de tempo limite infinito.  
+  
+ -ou-  
+  
+ <paramref name="timeout" /> é maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Nenhum item pode ser recebido da origem.</exception>
+        <exception cref="T:System.TimeoutException">O tempo limite especificado expirou antes que um item foi recebido da origem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static TOutput Receive&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, TimeSpan timeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TOutput Receive&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, valuetype System.TimeSpan timeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.Receive``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.TimeSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TOutput</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">O tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem da qual receber o valor.</param>
+        <param name="timeout">O intervalo de tempo máximo, em milissegundos, de espera para a operação síncrona ser concluída, ou um intervalo que representa-1 milissegundos a aguardar indefinidamente.</param>
+        <param name="cancellationToken">O token a ser usado para cancelar a operação de recebimento.</param>
+        <summary>Modo síncrono recebe um valor de uma origem especificada, fornecendo um token para cancelar a operação e observando um intervalo de tempo limite opcional.</summary>
+        <returns>O valor recebido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fonte oferecido com êxito um valor do item que foi recebido por essa operação, esse valor será retornado, mesmo que uma solicitação de cancelamento ou de tempo limite simultânea ocorra.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="source" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />é um número negativo que não seja-1 milissegundos, que representa um período de tempo limite infinito.  
+  
+ -ou-  
+  
+ <paramref name="timeout" /> é maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Nenhum item pode ser recebido da origem.</exception>
+        <exception cref="T:System.TimeoutException">O tempo limite especificado expirou antes que um item foi recebido da origem.</exception>
+        <exception cref="T:System.OperationCanceledException">A operação foi cancelada antes que um item foi recebido da origem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;TOutput&gt; ReceiveAsync&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; ReceiveAsync&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">O tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem da qual receber o valor.</param>
+        <summary>Recebe de maneira assíncrona um valor de uma origem especificada.</summary>
+        <returns>Uma tarefa que representa a operação de recebimento assíncrona. Quando o valor de um item é recebido com êxito da origem, a tarefa retornada é concluída e sua <see cref="P:System.Threading.Tasks.Task`1.Result" /> retorna o valor recebido. Se um valor do item não pode ser recuperado porque a fonte está vazio e concluídos, um <see cref="T:System.InvalidOperationException" /> exceção na tarefa retornada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;TOutput&gt; ReceiveAsync&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; ReceiveAsync&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Especifica o tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem da qual receber o valor.</param>
+        <param name="cancellationToken">O token a ser usado para cancelar a operação de recebimento.</param>
+        <summary>Recebe um valor de uma origem especificada e fornece um token para cancelar a operação de forma assíncrona.</summary>
+        <returns>Uma tarefa que representa a operação de recebimento assíncrona. Quando um valor é recebido com êxito da origem, a tarefa retornada é concluída e seu <see cref="P:System.Threading.Tasks.Task`1.Result" /> retorna o valor. Se um valor não pode ser recuperado porque o cancelamento foi solicitado, a tarefa retornada é cancelada. Se o valor não pode ser recuperado porque a fonte está vazio e concluídos, um <see cref="T:System.InvalidOperationException" /> exceção na tarefa retornada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;TOutput&gt; ReceiveAsync&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; ReceiveAsync&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">O tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem da qual receber o valor.</param>
+        <param name="timeout">O intervalo de tempo máximo, em milissegundos, de espera para a operação síncrona ser concluída, ou um intervalo que representa-1 milissegundos a aguardar indefinidamente.</param>
+        <summary>Recebe de maneira assíncrona um valor de uma fonte especificada, observando um período de tempo limite opcional.</summary>
+        <returns>Uma tarefa que representa a operação de recebimento assíncrona. Quando um valor é recebido com êxito da origem, a tarefa retornada é concluída e seu <see cref="P:System.Threading.Tasks.Task`1.Result" /> retorna o valor. Se um valor não pode ser recuperado porque o tempo limite expirou, a tarefa retornada é cancelada. Se o valor não pode ser recuperado porque a fonte está vazio e concluídos, um <see cref="T:System.InvalidOperationException" /> exceção na tarefa retornada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />é um número negativo que não seja-1 milissegundos, que representa um período de tempo limite infinito.  
+  
+ -ou-  
+  
+ <paramref name="timeout" /> é maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveAsync&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;TOutput&gt; ReceiveAsync&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt; source, TimeSpan timeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;!!TOutput&gt; ReceiveAsync&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.ISourceBlock`1&lt;!!TOutput&gt; source, valuetype System.TimeSpan timeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync``1(System.Threading.Tasks.Dataflow.ISourceBlock{``0},System.TimeSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">O tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem da qual receber o valor.</param>
+        <param name="timeout">O intervalo de tempo máximo, em milissegundos, de espera para a operação síncrona ser concluída, ou um intervalo que representa-1 milissegundos a aguardar indefinidamente.</param>
+        <param name="cancellationToken">O token que pode ser usado para cancelar a operação de recebimento.</param>
+        <summary>Recebe de maneira assíncrona um valor de uma fonte especificada, fornecendo um token para cancelar a operação e observando um intervalo de tempo limite opcional.</summary>
+        <returns>Uma tarefa que representa a operação de recebimento assíncrona. Quando um valor é recebido com êxito da origem, a tarefa retornada é concluída e seu <see cref="P:System.Threading.Tasks.Task`1.Result" /> retorna o valor. Se um valor não pode ser recuperado porque o tempo limite expirou ou cancelamento foi solicitado, a tarefa retornada é cancelada. Se o valor não pode ser recuperado porque a fonte está vazio e concluídos, um <see cref="T:System.InvalidOperationException" /> exceção na tarefa retornada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />é um número negativo que não seja-1 milissegundos, que representa um período de tempo limite infinito.  
+  
+ -ou-  
+  
+ <paramref name="timeout" /> é maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;bool&gt; SendAsync&lt;TInput&gt; (this System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt; target, TInput item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;bool&gt; SendAsync&lt;TInput&gt;(class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!!TInput&gt; target, !!TInput item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync``1(System.Threading.Tasks.Dataflow.ITargetBlock{``0},``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;" RefType="this" />
+        <Parameter Name="item" Type="TInput" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Especifica o tipo de dados para enviar para o destino.</typeparam>
+        <param name="target">O destino para o qual os dados de postagem.</param>
+        <param name="item">O item que está sendo oferecido para o destino.</param>
+        <summary>Assincronamente oferece uma mensagem para o bloco de mensagens de destino, permitindo adiamento.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task`1" /> que representa o envio assíncrono. Se o destino aceita e consome o elemento oferecido durante a chamada para <see cref="M:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync``1(System.Threading.Tasks.Dataflow.ITargetBlock{``0},``0)" />, no retorno da chamada resultante <see cref="T:System.Threading.Tasks.Task`1" /> será concluída e sua <see cref="P:System.Threading.Tasks.Task`1.Result" /> propriedade retornará <see langword="true" />. Se o destino recusar o elemento oferecido durante a chamada, no retorno da chamada resultante <see cref="T:System.Threading.Tasks.Task`1" /> será concluída e sua <see cref="P:System.Threading.Tasks.Task`1.Result" /> propriedade retornará <see langword="false" />. Se o destino adia o elemento oferecido, o elemento será armazenada em buffer até o momento que o destino consome ou solta, no ponto em que a tarefa seja concluída, com seu <see cref="P:System.Threading.Tasks.Task`1.Result" /> que indica se a mensagem foi consumida. Se o destino nunca tentativas consumir ou liberar a mensagem, a tarefa retornada nunca será concluída.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="target" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync&lt;TInput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;bool&gt; SendAsync&lt;TInput&gt; (this System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt; target, TInput item, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;bool&gt; SendAsync&lt;TInput&gt;(class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!!TInput&gt; target, !!TInput item, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync``1(System.Threading.Tasks.Dataflow.ITargetBlock{``0},``0,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TInput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TInput&gt;" RefType="this" />
+        <Parameter Name="item" Type="TInput" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TInput">Especifica o tipo de dados para enviar para o destino.</typeparam>
+        <param name="target">O destino para o qual os dados de postagem.</param>
+        <param name="item">O item que está sendo oferecido para o destino.</param>
+        <param name="cancellationToken">O token de cancelamento com a qual a solicitação de cancelamento da operação de envio.</param>
+        <summary>Assincronamente oferece uma mensagem para o bloco de mensagens de destino, permitindo adiamento.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task`1" /> que representa o envio assíncrono.  Se o destino aceita e consome o elemento oferecido durante a chamada a SendAsync, após retornar da chamada resultante <see cref="T:System.Threading.Tasks.Task`1" /> será concluída e sua <c>resultados</c> propriedade retornará true.  Se o destino recusar o elemento oferecido durante a chamada, no retorno da chamada resultante <see cref="T:System.Threading.Tasks.Task`1" /> será concluída e sua <c>resultados</c> propriedade retornará false. Se o destino adia o elemento oferecido, o elemento será armazenada em buffer até o momento que o destino consome ou solta, no ponto em que a tarefa seja concluída, com seus <c>resultados</c> que indica se a mensagem foi consumida. Se o destino nunca tentativas consumir ou liberar a mensagem, a tarefa retornada nunca será concluída.  
+  
+ Se cancelamento for solicitado para que o destino consumiu com êxito os dados enviados, a tarefa retornada será concluída em estado cancelado e os dados não estará disponíveis para o destino.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="target" /> é nulo (Nothing no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReceive&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryReceive&lt;TOutput&gt; (this System.Threading.Tasks.Dataflow.IReceivableSourceBlock&lt;TOutput&gt; source, out TOutput item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryReceive&lt;TOutput&gt;(class System.Threading.Tasks.Dataflow.IReceivableSourceBlock`1&lt;!!TOutput&gt; source, [out] !!TOutput&amp; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive``1(System.Threading.Tasks.Dataflow.IReceivableSourceBlock{``0},``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Threading.Tasks.Dataflow.IReceivableSourceBlock&lt;TOutput&gt;" RefType="this" />
+        <Parameter Name="item" Type="TOutput&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">Especifica o tipo de dados contidos na origem.</typeparam>
+        <param name="source">A origem da qual deseja receber.</param>
+        <param name="item">O item recebido da origem.</param>
+        <summary>Tentativas de forma síncrona receber um item do <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" />.</summary>
+        <returns>
+          <see langword="true" />Se um item pode ser recebido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não espera até que a origem tem um item para fornecer.  
+  
+ Será retornado se um elemento estava disponível ou não.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

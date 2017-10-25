@@ -1,0 +1,103 @@
+<Type Name="SaveChangesOptions" FullName="System.Data.Services.Client.SaveChangesOptions">
+  <TypeSignature Language="C#" Value="public enum SaveChangesOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SaveChangesOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.SaveChangesOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica a alteração de opções quando <see cref="M:System.Data.Services.Client.DataServiceContext.SaveChanges" /> é chamado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a opção ContinueOnError é definida, as operações subsequentes ainda terão mesmo depois de ocorrer um erro.  
+  
+ Quando o envio em lote não for usado, o <xref:System.Data.Services.Client.DataServiceResponse.BatchHeaders%2A> propriedade o <xref:System.Data.Services.Client.DataServiceResponse.BatchHeaders%2A> instância retorna uma coleção vazia e o <xref:System.Data.Services.Client.DataServiceResponse.BatchStatusCode%2A> propriedade é zero.  
+  
+ Não é possível definir o lote e ContinueOnError ao mesmo tempo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Batch">
+      <MemberSignature Language="C#" Value="Batch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.SaveChangesOptions Batch = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.SaveChangesOptions.Batch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.SaveChangesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as alterações pendentes são salvas em uma solicitação de lote único.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnError">
+      <MemberSignature Language="C#" Value="ContinueOnError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.SaveChangesOptions ContinueOnError = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.SaveChangesOptions.ContinueOnError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.SaveChangesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pendente as alterações são salvas com o uso de várias solicitações ao servidor, e a operação continuará depois de ocorrer um erro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.SaveChangesOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.SaveChangesOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.SaveChangesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As alterações pendentes são salvos usando várias solicitações para o servidor, mas o operação parar na primeira falha (padrão).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceOnUpdate">
+      <MemberSignature Language="C#" Value="ReplaceOnUpdate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Services.Client.SaveChangesOptions ReplaceOnUpdate = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Services.Client.SaveChangesOptions.ReplaceOnUpdate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.SaveChangesOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Atualizações pendentes são feitas, substituindo todos os valores da entidade na fonte de dados com valores da entidade atualizada (HTTP PUT) em vez de apenas atualizar os valores alterados (MERGE HTTP), que é o comportamento padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

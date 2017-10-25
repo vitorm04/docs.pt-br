@@ -1,0 +1,189 @@
+<Type Name="WmiWebEventProvider" FullName="System.Web.Management.WmiWebEventProvider">
+  <TypeSignature Language="C#" Value="public class WmiWebEventProvider : System.Web.Management.WebEventProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WmiWebEventProvider extends System.Web.Management.WebEventProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WmiWebEventProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebEventProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa um provedor de eventos que mapeia eventos de monitoramento de integridade do ASP.NET para eventos do Windows Management Instrumentation (WMI).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de eventos responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ O ASP.NET usa essa classe para mapear eventos de monitoramento de integridade para eventos WMI. Para habilitar a entrega de eventos de monitoramento de integridade do ASP.NET para o subsistema WMI, você deve configurar o <xref:System.Web.Management.WmiWebEventProvider> classe adicionando as configurações apropriadas no `<healthMonitoring>` seção do arquivo de configuração.  
+  
+ As informações contidas no arquivo ASPNET descrevem os parâmetros dos eventos WMI gerados quando eventos de monitoramento de integridade do ASP.NET são roteados para o <xref:System.Web.Management.WmiWebEventProvider> de classe e mapeados para eventos WMI. O arquivo ASPNET é armazenado no diretório de compilação do .NET Framework, por exemplo %Windir%\Microsoft.NET\Framework.\\*BuildNumber*. Para obter mais informações sobre o relatório de eventos de monitoramento de integridade como eventos do WMI, consulte [NIB: usando o WMI para fornecer eventos de monitoramento de integridade de ASP.NET](http://msdn.microsoft.com/en-us/e57fea2f-610f-4432-9dd6-dd10a6c5bd10).  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `<healthMonitoring>` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de criação de um provedor personalizado, consulte [como: implementar a integridade de monitoramento personalizado provedor exemplo](http://msdn.microsoft.com/library/bbb1c959-e6e4-42b2-be62-49b7ca5ab72c).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um consumidor de eventos WMI emitido por como resultado de eventos de integridade do aplicativo Web de monitoramento de integridade do ASP.NET.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Management.WmiWebEventProvider> classe e os tipos de evento de integridade para monitorar já são configurados por padrão. A única coisa que você precisa fazer é definir a regra para todos os eventos de integridade. Lembre-se de que os eventos de integridade não são enviados para o <xref:System.Web.Management.WmiWebEventProvider> provedor por padrão.  
+  
+ [!code-csharp[System.Web.Management.WmiWebEventProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WmiWebEventProvider/CS/WmiWebEventListener.cs#1)]
+ [!code-vb[System.Web.Management.WmiWebEventProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WmiWebEventProvider/VB/WmiWebEventListener.vb#1)]  
+  
+ O exemplo a seguir é um trecho do arquivo de configuração que mostra uma `<healthMonitoring>` seção de configuração que permite que o ASP.NET usar o <xref:System.Web.Management.WmiWebEventProvider> provedor para processar todos os eventos de monitoramento de integridade.  
+  
+```  
+<healthMonitoring>  
+  <rules>  
+    <add   
+      name="Using Wmi"  
+      eventName="All Events"   
+      provider="WmiWebEventProvider"   
+      profile="Critical"/>  
+  </rules>  
+</healthMonitoring>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WmiWebEventProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WmiWebEventProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Management.WmiWebEventProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo sistema de monitoramento de integridade do ASP.NET. Você nunca usará para criar uma instância do <xref:System.Web.Management.TraceWebEventProvider> classe, mas você pode chamar este construtor quando você implementa seu próprio tipo de provedor que herda dessa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WmiWebEventProvider.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os eventos de buffer do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando este método é chamado, todos os eventos no buffer do provedor serão removidos imediatamente, independentemente de quanto tempo decorrido desde a última gravação ou quantos eventos são no buffer. A hora da última gravação é redefinida para o tempo da ação de liberação. Chamar esse método quando o mecanismo de armazenamento em buffer não está habilitado não tem nenhum efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WmiWebEventProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome usado no arquivo de configuração para identificar esse provedor.</param>
+        <param name="config">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> objeto que especifica os atributos atribuídos para esse provedor no arquivo de configuração.</param>
+        <summary>Define os valores iniciais para este objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET chama o <xref:System.Web.Management.WmiWebEventProvider.Initialize%2A> método depois de chamar o <xref:System.Web.Management.WmiWebEventProvider.%23ctor%2A> construtor. Este método é chamado para inicializar o <xref:System.Web.Management.WmiWebEventProvider> classe com o nome especificado no arquivo de configuração e definições de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEvent">
+      <MemberSignature Language="C#" Value="public override void ProcessEvent (System.Web.Management.WebBaseEvent eventRaised);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessEvent(class System.Web.Management.WebBaseEvent eventRaised) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WmiWebEventProvider.ProcessEvent(System.Web.Management.WebBaseEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventRaised" Type="System.Web.Management.WebBaseEvent" />
+      </Parameters>
+      <Docs>
+        <param name="eventRaised">O <see cref="T:System.Web.Management.WebBaseEvent" /> do objeto de processo.</param>
+        <summary>Processa o evento passado para o provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse é o método que o monitoramento de integridade do ASP.NET chama para iniciar o processamento do evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O evento não pôde ser gerado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public override void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WmiWebEventProvider.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa tarefas associadas ao desligamento do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET chama o <xref:System.Web.Management.EventLogWebEventProvider.Shutdown%2A> método quando o domínio de aplicativo que hospeda o aplicativo Web é encerrado. O método é chamado para executar tarefas que permitirá que o aplicativo terminar normalmente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

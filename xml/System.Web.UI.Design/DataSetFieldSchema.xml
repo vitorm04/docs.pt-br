@@ -1,0 +1,299 @@
+<Type Name="DataSetFieldSchema" FullName="System.Web.UI.Design.DataSetFieldSchema">
+  <TypeSignature Language="C#" Value="public sealed class DataSetFieldSchema : System.Web.UI.Design.IDataSourceFieldSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataSetFieldSchema extends System.Object implements class System.Web.UI.Design.IDataSourceFieldSchema" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DataSetFieldSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.Design.IDataSourceFieldSchema</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a estrutura ou o esquema de um campo de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.Design.DataSetFieldSchema> classe para obter as propriedades de um campo de dados usando um <xref:System.Data.DataColumn>. Você pode descobrir a estrutura de um campo de dados usando as seguintes propriedades dessa classe: <xref:System.Web.UI.Design.DataSetFieldSchema.DataType%2A>, <xref:System.Web.UI.Design.DataSetFieldSchema.IsReadOnly%2A>, <xref:System.Web.UI.Design.DataSetFieldSchema.Length%2A>, <xref:System.Web.UI.Design.DataSetFieldSchema.Name%2A>, e <xref:System.Web.UI.Design.DataSetFieldSchema.IsUnique%2A>. Além disso, você pode usar o <xref:System.Web.UI.Design.DataSetFieldSchema.Identity%2A> propriedade para determinar se uma coluna de dados está definida para <xref:System.Data.DataColumn.AutoIncrement%2A>, ou o <xref:System.Web.UI.Design.DataSetFieldSchema.PrimaryKey%2A> propriedade para determinar se uma coluna de dados está na chave primária.  
+  
+ O <xref:System.Web.UI.Design.DataSetFieldSchema> classe é usada por componentes do designer de controle personalizado para fornecer informações sobre um campo de dados em tempo de design.  
+  
+ Para examinar os componentes de dados usando um <xref:System.Data.DataSet>, use as classes a seguir.  
+  
+-   <xref:System.Web.UI.Design.DataSetSchema>  
+  
+-   <xref:System.Web.UI.Design.DataSetViewSchema>  
+  
+-   <xref:System.Web.UI.Design.DataSetFieldSchema>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSetFieldSchema (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataSetFieldSchema.#ctor(System.Data.DataColumn)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Um <see cref="T:System.Data.DataColumn" /> do objeto que o <see cref="T:System.Web.UI.Design.DataSetFieldSchema" /> descreve do objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Design.DataSetFieldSchema" /> classe usando um <see cref="T:System.Data.DataColumn" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.Design.DataSetFieldSchema> classe para examinar as propriedades de um campo de dados usando um <xref:System.Data.DataColumn> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public Type DataType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DataType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de dados armazenados no campo de dados.</summary>
+        <value>Um <see cref="T:System.Type" /> contém o objeto que representa o tipo de dados que o campo de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public bool Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o valor do campo de dados se incrementa automaticamente para cada nova linha adicionada à tabela ou exibição.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Web.UI.Design.DataSetFieldSchema.DataType" /> é numérico e o valor de incrementos de coluna automaticamente as novas linhas são adicionadas à <see cref="T:System.Data.DataTable" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSetFieldSchema.Identity%2A> propriedade corresponde do <xref:System.Data.DataColumn.AutoIncrement%2A> propriedade de um <xref:System.Data.DataColumn>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.DataColumn" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o campo de dados é somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnique">
+      <MemberSignature Language="C#" Value="public bool IsUnique { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnique" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.IsUnique" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os valores no campo de dados precisam ser exclusivos.</summary>
+        <value>
+          <see langword="true" />Se os dados no campo de dados são exclusivos; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSetFieldSchema.IsUnique%2A> propriedade corresponde do <xref:System.Data.DataColumn.Unique%2A> propriedade de um <xref:System.Data.DataColumn>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o tamanho dos dados que podem ser armazenados no campo de dados.</summary>
+        <value>O número de bytes que a coluna pode armazenar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSetFieldSchema.Length%2A> propriedade corresponde do <xref:System.Data.DataColumn.MaxLength%2A> propriedade de um <xref:System.Data.DataColumn>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do campo de dados.</summary>
+        <value>O nome do campo de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSetFieldSchema.Name%2A> propriedade corresponde do <xref:System.Data.DataColumn.ColumnName%2A> propriedade de um <xref:System.Data.DataColumn>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Nullable">
+      <MemberSignature Language="C#" Value="public bool Nullable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Nullable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.Nullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o campo de dados pode aceitar <see langword="null" /> valores.</summary>
+        <value>
+          <see langword="true" />Se o campo de dados pode aceitar <see langword="null" /> valores; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSetFieldSchema.Nullable%2A> propriedade corresponde do <xref:System.Data.DataColumn.AllowDBNull%2A> propriedade de um <xref:System.Data.DataColumn>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public int Precision { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Precision" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número máximo de dígitos usados para representar um valor numérico no campo de dados.</summary>
+        <value>Essa propriedade sempre retorna <see langword="-1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSetFieldSchema.Precision%2A> propriedade é necessária a <xref:System.Web.UI.Design.IDataSourceFieldSchema> de interface, mas não é usado pelo <xref:System.Web.UI.Design.DataSetFieldSchema> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryKey">
+      <MemberSignature Language="C#" Value="public bool PrimaryKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrimaryKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.PrimaryKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o campo de dados está na chave primária para a tabela ou exibição de conteúdo.</summary>
+        <value>
+          <see langword="true" />Se o campo de dados está na chave primária; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public int Scale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Scale" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DataSetFieldSchema.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de casas decimais para o qual os valores numéricos no campo de dados são resolvidos.</summary>
+        <value>Essa propriedade sempre retorna -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSetFieldSchema.Scale%2A> propriedade é necessária a <xref:System.Web.UI.Design.IDataSourceFieldSchema> de interface, mas não é usado pelo <xref:System.Web.UI.Design.DataSetFieldSchema> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

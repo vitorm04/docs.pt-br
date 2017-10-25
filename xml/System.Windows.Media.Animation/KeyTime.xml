@@ -1,0 +1,452 @@
+<Type Name="KeyTime" FullName="System.Windows.Media.Animation.KeyTime">
+  <TypeSignature Language="C#" Value="public struct KeyTime : IEquatable&lt;System.Windows.Media.Animation.KeyTime&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit KeyTime extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Windows.Media.Animation.KeyTime&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.KeyTime" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Windows.Media.Animation.KeyTime&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.KeyTimeConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Durante o curso relativo de uma animação, uma instância <see cref="T:System.Windows.Media.Animation.KeyTime" /> especifica o momento preciso em que um determinado quadro chave deve ocorrer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada quadro chave <xref:System.Windows.Media.Animation.KeyTime> especifica esse quadro chave termina. Ele não especifica quanto tempo o momento chave é reproduzido. O tempo durante o qual um quadro-chave é reproduzido é determinado pelo tempo em que o quadro-chave é encerrado, pelo tempo em que o quadro-chave anterior foi encerrado e pela duração da animação. Consulte [visão geral de animações de quadro-chave](~/docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) para obter mais informações.  
+  
+ Um <xref:System.Windows.Media.Animation.KeyTime> pode ser expresso em vários formatos, incluindo um valor numérico de tempo, como uma porcentagem ou como um dos valores especiais sentinela <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
+  
+<a name="xamlAttributeUsage_KeyTime"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ \<*object* *property*="[*days*.] *hours*:*minutes*:*seconds*[.* fractionalSeconds*] "/ >  
+  
+ \- ou -  
+  
+ \<*object* *property*="[*days*.] *hours*:*minutes*"/>  
+  
+ \- ou -  
+  
+ \<*objeto* *propriedade*= "*pctValue*%" / >  
+  
+ \- ou -  
+  
+ \<*object* *property*="<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>"/>  
+  
+ \- ou -  
+  
+ \<*object* *property*="<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>"/>  
+  
+<a name="xamlValues_KeyTime"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *dias*  
+ Um valor inteiro maior ou igual a 0 que especifica o número de dias incluídas por este <xref:System.Windows.Media.Animation.KeyTime>. Para obter mais informações, consulte a propriedade <xref:System.Windows.Media.Animation.KeyTime.TimeSpan%2A>.  
+  
+ *horas*  
+ Um valor inteiro entre 0 e 23 que especifica o número de horas incluídas por este <xref:System.Windows.Media.Animation.KeyTime>. Para obter mais informações, consulte a propriedade <xref:System.Windows.Media.Animation.KeyTime.TimeSpan%2A>.  
+  
+ *minutos*  
+ Um valor inteiro entre 0 e 59 que especifica o número de minutos incluídas por este <xref:System.Windows.Media.Animation.KeyTime>. Para obter mais informações, consulte a propriedade <xref:System.Windows.Media.Animation.KeyTime.TimeSpan%2A>.  
+  
+ *segundos*  
+ Um valor de ponto flutuante entre 0 e 59 que especifica o número de segundos incluídas por este <xref:System.Windows.Media.Animation.KeyTime>. Para obter mais informações, consulte a propriedade <xref:System.Windows.Media.Animation.KeyTime.TimeSpan%2A>.  
+  
+ *fractionalSeconds*  
+ Um valor inteiro que consiste de 1 a 7 dígitos que especifica frações de segundo. Para obter mais informações, consulte a propriedade <xref:System.Windows.Media.Animation.KeyTime.TimeSpan%2A>.  
+  
+ *pctValue*  
+ Um valor de ponto flutuante entre 0 e 100, inclusive, que especifica essa <xref:System.Windows.Media.Animation.KeyTime> como uma porcentagem da duração total da animação. Isso deve ser seguido pelo caractere literal `%`. Para obter mais informações, consulte o <xref:System.Windows.Media.Animation.KeyTime.Percent%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser comparado com essa instância.</param>
+        <summary>Indica se esta instância é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> é um <see cref="T:System.Windows.Media.Animation.KeyTime" /> que representa o mesmo período de tempo que esta instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Comparando dois <xref:System.Windows.Media.Animation.KeyTime> instâncias com diferentemente digitado <xref:System.Windows.Media.Animation.KeyTimeType> elicits de propriedades, incluindo os valores especiais uniforme ou Paced, um valor de retorno falso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Media.Animation.KeyTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Windows.Media.Animation.KeyTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.Equals(System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser comparado com essa instância.</param>
+        <summary>Indica se esta instância é igual ao especificado <see cref="T:System.Windows.Media.Animation.KeyTime" />.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="value" /> for igual a essa instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Media.Animation.KeyTime keyTime1, System.Windows.Media.Animation.KeyTime keyTime2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Media.Animation.KeyTime keyTime1, valuetype System.Windows.Media.Animation.KeyTime keyTime2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.Equals(System.Windows.Media.Animation.KeyTime,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyTime1" Type="System.Windows.Media.Animation.KeyTime" />
+        <Parameter Name="keyTime2" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="keyTime1">O primeiro valor a ser comparado.</param>
+        <param name="keyTime2">O segundo valor a ser comparado.</param>
+        <summary>Indica se os dois especificada <see cref="T:System.Windows.Media.Animation.KeyTime" /> estruturas são iguais.</summary>
+        <returns>
+          <see langword="true" />Se os valores de <paramref name="keyTime1" /> e <paramref name="keyTime2" /> forem iguais; caso contrário <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Comparando dois <xref:System.Windows.Media.Animation.KeyTime> instâncias com diferentemente digitado <xref:System.Windows.Media.Animation.KeyTimeType> elicits de propriedades, incluindo os valores especiais uniforme ou Paced, um valor de retorno falso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromPercent">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Animation.KeyTime FromPercent (double percent);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Animation.KeyTime FromPercent(float64 percent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.FromPercent(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="percent" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="percent">O valor do novo <see cref="T:System.Windows.Media.Animation.KeyTime" />.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Media.Animation.KeyTime" /> instância, com o <see cref="T:System.Windows.Media.Animation.KeyTimeType" /> propriedade inicializada com o valor do parâmetro especificado.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Media.Animation.KeyTime" /> instância, inicializada com o valor de <paramref name="percent" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro de porcentagem é passado como um duplo, variando entre os valores 0.0 e 1.0.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="percent" />é menor que 0,0 ou maior do que 1.0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromTimeSpan">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Animation.KeyTime FromTimeSpan (TimeSpan timeSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Animation.KeyTime FromTimeSpan(valuetype System.TimeSpan timeSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.FromTimeSpan(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeSpan" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeSpan">O valor do novo <see cref="T:System.Windows.Media.Animation.KeyTime" />.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Media.Animation.KeyTime" /> instância, com o <see cref="T:System.Windows.Media.Animation.KeyTimeType" /> propriedade inicializada com o valor do parâmetro especificado.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Media.Animation.KeyTime" /> instância, inicializada com o valor de <paramref name="timeSpan" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código de hash de número inteiro que representa esta instância.</summary>
+        <returns>Um código de hash de número inteiro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Media.Animation.KeyTime keyTime1, System.Windows.Media.Animation.KeyTime keyTime2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Media.Animation.KeyTime keyTime1, valuetype System.Windows.Media.Animation.KeyTime keyTime2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.op_Equality(System.Windows.Media.Animation.KeyTime,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyTime1" Type="System.Windows.Media.Animation.KeyTime" />
+        <Parameter Name="keyTime2" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="keyTime1">O primeiro valor a ser comparado.</param>
+        <param name="keyTime2">O segundo valor a ser comparado.</param>
+        <summary>Operador sobrecarregado que compara dois <see cref="T:System.Windows.Media.Animation.KeyTime" /> estruturas para igualdade.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="keyTime1" /> e <paramref name="keyTime2" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Comparando <xref:System.Windows.Media.Animation.KeyTime> instâncias com diferentemente digitado <xref:System.Windows.Media.Animation.KeyTimeType> elicits de propriedades, incluindo os valores especiais uniforme ou Paced, um valor de retorno falso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Windows.Media.Animation.KeyTime (TimeSpan timeSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Windows.Media.Animation.KeyTime op_Implicit(valuetype System.TimeSpan timeSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.op_Implicit(System.TimeSpan)~System.Windows.Media.Animation.KeyTime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeSpan" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeSpan">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Media.Animation.KeyTime keyTime1, System.Windows.Media.Animation.KeyTime keyTime2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Media.Animation.KeyTime keyTime1, valuetype System.Windows.Media.Animation.KeyTime keyTime2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.op_Inequality(System.Windows.Media.Animation.KeyTime,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyTime1" Type="System.Windows.Media.Animation.KeyTime" />
+        <Parameter Name="keyTime2" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="keyTime1">O primeiro valor a ser comparado.</param>
+        <param name="keyTime2">O segundo valor a ser comparado.</param>
+        <summary>Operador sobrecarregado que compara dois <see cref="T:System.Windows.Media.Animation.KeyTime" /> estruturas de desigualdade.</summary>
+        <returns>
+          <see langword="true" /> caso <paramref name="keyTime1" /> e <paramref name="keyTime2" /> não sejam iguais; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paced">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Animation.KeyTime Paced { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Animation.KeyTime Paced" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.KeyTime.Paced" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Windows.Media.Animation.KeyTime.Paced" /> valor que cria o comportamento de tempo, resultando em uma animação interpola a uma taxa constante.</summary>
+        <value>Um valor <see cref="P:System.Windows.Media.Animation.KeyTime.Paced" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma chave de tempo está definido como <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, tempo disponível é alocado de acordo com o comprimento de cada quadro chave para determinar a duração de cada quadro.  Isso fornecerá um comportamento que a "velocity" ou o ritmo da animação permanece constante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Percent">
+      <MemberSignature Language="C#" Value="public double Percent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Percent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.KeyTime.Percent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a hora de término de quadro-chave expressada como uma porcentagem da duração total da animação.</summary>
+        <value>Um valor <see cref="P:System.Windows.Media.Animation.KeyTime.Percent" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma chave de tempo é expresso como uma porcentagem, o hora de término de quadro chave é especificado como uma porcentagem da duração da animação de quadro-chave. Por exemplo, se uma animação de quadro-chave tem uma duração de quatro segundos e 75% é determinado como o <xref:System.Windows.Media.Animation.KeyTime> porcentagem para o quadro-chave, o quadro chave terminará após o segundo 3º.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Se esta instância não é do tipo <see cref="P:System.Windows.Media.Animation.KeyTime.Percent" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeSpan">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.KeyTime.TimeSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a hora de término de quadro-chave expressa como relativo ao início da animação.</summary>
+        <value>Um valor <see cref="P:System.Windows.Media.Animation.KeyTime.TimeSpan" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma chave de tempo é expresso como um período de tempo, o quadro chave na hora de término é especificado como uma hora, relativo ao início da animação. Por exemplo, se o período de tempo está definido como "0:0:2", o quadro chave terminará dois segundos depois que a animação começa.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Se esta instância não é do tipo <see cref="P:System.Windows.Media.Animation.KeyTime.TimeSpan" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.KeyTime.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa este <see cref="T:System.Windows.Media.Animation.KeyTime" /> instância.</summary>
+        <returns>Uma representação de cadeia de caracteres desta instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.KeyTimeType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Animation.KeyTimeType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.KeyTime.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTimeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Windows.Media.Animation.KeyTime.Type" /> valor essa instância representa.</summary>
+        <value>Um valor <see cref="P:System.Windows.Media.Animation.KeyTime.Type" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Animation.KeyTime Uniform { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Animation.KeyTime Uniform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.KeyTime.Uniform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Windows.Media.Animation.KeyTime.Uniform" /> valor que divide o tempo alocado da animação uniformemente entre os quadros-chave.</summary>
+        <value>Um valor <see cref="P:System.Windows.Media.Animation.KeyTime.Uniform" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma chave de tempo está definido como <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, o total alocado de tempo da animação é dividido igualmente entre os quadros-chave. Por exemplo, se a animação de quadro-chave tem uma duração de quatro segundos e há quatro quadros chave, cada quadro chave durar por um segundo e começar imediatamente após o término de anterior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

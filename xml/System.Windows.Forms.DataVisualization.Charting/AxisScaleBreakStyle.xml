@@ -1,0 +1,307 @@
+<Type Name="AxisScaleBreakStyle" FullName="System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle">
+  <TypeSignature Language="C#" Value="public class AxisScaleBreakStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AxisScaleBreakStyle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Enabled")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma quebra de escala no eixo Y do gráfico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quebras de escala são intencionais descontinuidades no eixo y que são geralmente usadas para redistribuir os pontos de dados em uma série em um gráfico. Esse recurso melhora a legibilidade quando há grandes diferenças entre os valores altos e baixos de dados em uma série que estão sendo plotado. Quebras de escala não são desenhadas as diferenças entre os dados em várias séries.  
+  
+ Por padrão, as quebras de escala são desabilitadas. Você pode habilitar quebras de escala no eixo y, definindo o <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.Enabled%2A> propriedade `true`. Para alterar a quantidade de espaço vertical da quebra de escala, você pode especificar um <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.Spacing%2A> valor. Isso é calculado como uma porcentagem da escala do eixo y.  
+  
+ Você deve ter espaço suficiente entre os intervalos de pontos de dados em uma única série para desenhar uma quebra de escala. Por padrão, uma quebra de escala pode ser adicionada somente se houver uma separação entre os intervalos de dados de pelo menos 25% do gráfico. Se você habilitar uma quebra de escala, mas ele não aparece, mesmo que haja distância suficiente entre os intervalos de dados, você pode definir o <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.CollapsibleSpaceThreshold%2A> propriedade para um valor inferior a 25.  
+  
+ Os gráficos suportam até cinco quebras de escala por gráfico; No entanto, o gráfico poderá ficar ilegível, se você exibir mais de uma quebra de escala. Se você tiver mais de dois intervalos de dados, considere o uso de um método diferente para exibir esses dados. Use o <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.MaxNumberOfBreaks%2A> propriedade para reduzir o número de quebras de escala que podem ser exibidos no gráfico.  
+  
+ Quando uma quebra de escala é usada, podem se tornar o deslocamento de rótulos do eixo y. Para desabilitar o deslocamento do rótulo, defina o <xref:System.Windows.Forms.DataVisualization.Charting.LabelStyle.IsStaggered%2A> propriedade `false`.  
+  
+ Não há suporte para quebras de escala em qualquer uma das seguintes condições:  
+  
+-   Pizza, rosca, funil, pirâmide, radial ou qualquer tipo de gráfico empilhado é usado.  
+  
+-   Intervalos personalizados para rótulos, marcas de escala ou linhas de grade estão habilitadas.  
+  
+-   O valor mínimo ou máximo para o eixo é definido.  
+  
+-   Rótulos personalizados são usados.  
+  
+-   Um eixo y logarítmico for especificado.  
+  
+-   Exibições de eixo no eixo y, que incluem a rolagem e zoom, são usadas.  
+  
+-   Gráficos 3D são usados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AxisScaleBreakStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakLineStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.BreakLineStyle BreakLineStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.BreakLineStyle BreakLineStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.BreakLineStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.BreakLineStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da quebra de linha que será usada para desenhar a quebra de escala.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.BreakLineStyle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollapsibleSpaceThreshold">
+      <MemberSignature Language="C#" Value="public int CollapsibleSpaceThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CollapsibleSpaceThreshold" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.CollapsibleSpaceThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(25)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite de espaço no gráfico no qual as quebras de escala são desenhadas.</summary>
+        <value>Um valor <see langword="integer" /> que especifica o limite de espaço no gráfico em que as quebras de escala são desenhadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é medida como uma porcentagem da escala do eixo y. Por padrão, seu valor é definido como 25. Isso significa que os pontos de dados em uma série que têm uma diferença de pelo menos 25% da escala serão recolhidos com a quebra de escala.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se as quebras de escala estão habilitadas.</summary>
+        <value>Um <see langword="Boolean" /> valor que especifica se as quebras de escala estão habilitadas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.LineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da linha de quebra de escala.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor da linha de quebra de escala.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDashStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartDashStyle LineDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartDashStyle LineDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.LineDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da linha de quebra de escala.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle" /> valor que representa o estilo da linha de quebra de escala.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineWidth">
+      <MemberSignature Language="C#" Value="public int LineWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.LineWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da linha de quebra de escala.</summary>
+        <value>Um valor <see langword="integer" /> que representa a largura da linha de quebra de escala.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxNumberOfBreaks">
+      <MemberSignature Language="C#" Value="public int MaxNumberOfBreaks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxNumberOfBreaks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.MaxNumberOfBreaks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de quebras de escala a ser exibida no gráfico.</summary>
+        <value>Um <see langword="integer" /> quebras de valor que representa o número máximo de escala a ser exibida no gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Chart> é capaz de exibir até cinco quebras de escala.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Spacing">
+      <MemberSignature Language="C#" Value="public double Spacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Spacing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.Spacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1.5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de espaçamento entre as linhas de quebra de escala. O intervalo de espaçamento é representado como uma porcentagem do eixo y.</summary>
+        <value>Um valor de <see langword="double" /> que representa o intervalo de espaçamento entre as linhas de quebra de escala.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartFromZero">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.StartFromZero StartFromZero { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.StartFromZero StartFromZero" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.StartFromZero" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.StartFromZero</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.StartFromZero" /> que indica se deve iniciar a quebra de escala a partir do zero.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.StartFromZero" /> que indica se deve iniciar a quebra de escala a partir do zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.DataVisualization.Charting.AxisScaleBreakStyle.StartFromZero%2A> está definida como <xref:System.Windows.Forms.DataVisualization.Charting.StartFromZero.Auto>, o gráfico calcula automaticamente se deseja iniciar o mínimo de escala do eixo y do menor valor da série ou do zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

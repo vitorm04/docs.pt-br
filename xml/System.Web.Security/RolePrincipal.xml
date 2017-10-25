@@ -1,0 +1,697 @@
+<Type Name="RolePrincipal" FullName="System.Web.Security.RolePrincipal">
+  <TypeSignature Language="C#" Value="public class RolePrincipal : System.Security.Claims.ClaimsPrincipal, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RolePrincipal extends System.Security.Claims.ClaimsPrincipal implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.RolePrincipal" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Claims.ClaimsPrincipal</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa informações de segurança para a solicitação HTTP atual, incluindo a associação de função. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RolePrincipal> objeto implementa a <xref:System.Security.Principal.IPrincipal> interface e representa o contexto de segurança atual para a solicitação HTTP.  
+  
+ Quando o gerenciamento de função está habilitado (consulte <xref:System.Web.Security.Roles>), o <xref:System.Web.Security.RoleManagerModule> atribui um <xref:System.Web.Security.RolePrincipal> do objeto para o <xref:System.Web.HttpContext.User%2A> propriedade o <xref:System.Web.HttpContext.Current%2A> <xref:System.Web.HttpContext>.  
+  
+ O <xref:System.Web.Security.RolePrincipal> classe expõe a identidade de segurança para a solicitação HTTP atual e Além disso, executa verificações para associação de função. Se <xref:System.Web.Security.Roles.CacheRolesInCookie%2A> é `true`, em seguida, o <xref:System.Web.Security.RolePrincipal> objeto gerencia em cache a lista de funções e pesquisa associação de função para o usuário atual em cache no primeiro, lista, em seguida, a função <xref:System.Web.Security.Roles.Provider%2A>. Se <xref:System.Web.Security.Roles.CacheRolesInCookie%2A> é `false`, o <xref:System.Web.Security.RolePrincipal> objeto sempre procura a associação de função usando o provedor de função.  
+  
+ O <xref:System.Web.Security.RolePrincipal> objeto criptografa e descriptografa as informações de função armazenados no cookie identificado pelo <xref:System.Web.Security.Roles.CookieName%2A> com base no <xref:System.Web.Security.Roles.CookieProtectionValue%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RolePrincipal (System.Security.Principal.IIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.#ctor(System.Security.Principal.IIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="identity">A identidade do usuário para criar o <see cref="T:System.Web.Security.RolePrincipal" /> para.</param>
+        <summary>Cria um <see cref="T:System.Web.Security.RolePrincipal" /> objeto especificado <paramref name="identity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do <xref:System.Web.Security.RolePrincipal.%23ctor%2A> construtor cria um novo <xref:System.Web.Security.RolePrincipal> de objeto e inicializa seus valores de propriedade. Informações de função em cache não é lido do cookie identificado pelo <xref:System.Web.Security.Roles.CookieName%2A> propriedade. O <xref:System.Web.Security.RolePrincipal.ProviderName%2A> está definida como o <xref:System.Configuration.Provider.ProviderBase.Name%2A> do provedor de função padrão.  
+  
+ Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Web.Security.RolePrincipal> objeto. Se <xref:System.Web.Security.Roles.CacheRolesInCookie%2A> é `true`, o exemplo cria o <xref:System.Web.Security.RolePrincipal> com informações de cookie do cookie identificado pelo <xref:System.Web.Security.Roles.CookieName%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Security.RolePrincipal#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/snippetscs.aspx#2)]
+ [!code-vb[System.Web.Security.RolePrincipal#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/snippetsvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RolePrincipal (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto para popular com dados.</param>
+        <param name="context">O destino dessa serialização.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Security.RolePrincipal" /> classe usando as informações contidas no especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto e usando o contexto de fluxo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RolePrincipal (System.Security.Principal.IIdentity identity, string encryptedTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IIdentity identity, string encryptedTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.#ctor(System.Security.Principal.IIdentity,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+        <Parameter Name="encryptedTicket" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identity">A identidade do usuário para criar o <see cref="T:System.Web.Security.RolePrincipal" /> para.</param>
+        <param name="encryptedTicket">Uma cadeia de caracteres que contém informações de função criptografados.</param>
+        <summary>Cria um <see cref="T:System.Web.Security.RolePrincipal" /> objeto especificado <paramref name="identity" /> com informações de função especificado <paramref name="encryptedTicket" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do <xref:System.Web.Security.RolePrincipal.%23ctor%2A> construtor cria um novo <xref:System.Web.Security.RolePrincipal> de objeto e inicializa seus valores de propriedade. Informações de função para o usuário atual é lido de fornecido `encryptedTicket` e armazenadas em cache com o <xref:System.Web.Security.RolePrincipal> objeto. O <xref:System.Web.Security.RolePrincipal.ProviderName%2A> está definida como o <xref:System.Configuration.Provider.ProviderBase.Name%2A> do provedor de função padrão.  
+  
+ Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Web.Security.RolePrincipal> objeto. Se <xref:System.Web.Security.Roles.CacheRolesInCookie%2A> é `true`, o exemplo cria o <xref:System.Web.Security.RolePrincipal> com informações de cookie do cookie identificado pelo <xref:System.Web.Security.Roles.CookieName%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Security.RolePrincipal#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/snippetscs.aspx#2)]
+ [!code-vb[System.Web.Security.RolePrincipal#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/snippetsvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="encryptedTicket" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RolePrincipal (string providerName, System.Security.Principal.IIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerName, class System.Security.Principal.IIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.#ctor(System.String,System.Security.Principal.IIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">O nome do provedor de função do usuário.</param>
+        <param name="identity">A identidade do usuário para criar o <see cref="T:System.Web.Security.RolePrincipal" /> para.</param>
+        <summary>Cria um <see cref="T:System.Web.Security.RolePrincipal" /> objeto especificado <paramref name="identity" /> usando especificado <paramref name="providerName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do <xref:System.Web.Security.RolePrincipal.%23ctor%2A> construtor cria um novo <xref:System.Web.Security.RolePrincipal> de objeto e inicializa seus valores de propriedade. O <xref:System.Web.Security.RolePrincipal.ProviderName%2A> propriedade é definida como o valor especificado no `providerName` parâmetro.  
+  
+ Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="providerName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="providerName" />refere-se a um provedor de função que não existe na configuração do aplicativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RolePrincipal (string providerName, System.Security.Principal.IIdentity identity, string encryptedTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerName, class System.Security.Principal.IIdentity identity, string encryptedTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.#ctor(System.String,System.Security.Principal.IIdentity,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+        <Parameter Name="encryptedTicket" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">O nome do provedor de função do usuário.</param>
+        <param name="identity">A identidade do usuário para criar o <see cref="T:System.Web.Security.RolePrincipal" /> para.</param>
+        <param name="encryptedTicket">Uma cadeia de caracteres que contém informações de função criptografados.</param>
+        <summary>Cria um <see cref="T:System.Web.Security.RolePrincipal" /> objeto especificado <paramref name="identity" /> usando especificado <paramref name="providerName" /> e informações de função especificado <paramref name="encryptedTicket" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do <xref:System.Web.Security.RolePrincipal.%23ctor%2A> construtor cria um novo <xref:System.Web.Security.RolePrincipal> de objeto e inicializa seus valores de propriedade. Informações de função para o usuário atual é lido de fornecido `encryptedTicket` e armazenadas em cache com o <xref:System.Web.Security.RolePrincipal> objeto. O <xref:System.Web.Security.RolePrincipal.ProviderName%2A> propriedade é definida como o valor especificado no `providerName` parâmetro.  
+  
+ Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identity" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="encryptedTicket" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="providerName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="providerName" />refere-se a um provedor de função que não existe na configuração do aplicativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CachedListChanged">
+      <MemberSignature Language="C#" Value="public bool CachedListChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CachedListChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RolePrincipal.CachedListChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a lista de nomes de função armazenadas em cache com o <see cref="T:System.Web.Security.RolePrincipal" /> objeto foi modificado.</summary>
+        <value>
+          <see langword="true" />Se a lista de nomes de função em cache com o <see cref="T:System.Web.Security.RolePrincipal" /> objeto foi modificada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RolePrincipal.CachedListChanged%2A> propriedade retornará `true` após recuperar os nomes de função da função padrão <xref:System.Web.Security.Roles.Provider%2A> e adicionados ao cache pelo <xref:System.Web.Security.RolePrincipal.GetRoles%2A> método, ou quando o <xref:System.Web.Security.RolePrincipal.IsInRole%2A> chamadas de método de <xref:System.Web.Security.RoleProvider.IsUserInRole%2A> método do provedor de função padrão e, em seguida, recebe uma resposta de `true`, resultando no nome da função passado para o <xref:System.Web.Security.RolePrincipal.IsInRole%2A> método que está sendo adicionado ao cache.  
+  
+ O <xref:System.Web.Security.RolePrincipal.CachedListChanged%2A> propriedade também retornará true se <xref:System.Web.Security.Roles.CookieSlidingExpiration%2A> é definido como `true` e <xref:System.Web.Security.RolePrincipal.ExpireDate%2A> passou, resultando em um novo <xref:System.Web.Security.RolePrincipal.ExpireDate%2A> que está sendo definido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe informações de cache de função para o usuário atual, se o gerenciamento de função está habilitado. Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/getroleinfocs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/getroleinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookiePath">
+      <MemberSignature Language="C#" Value="public string CookiePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CookiePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RolePrincipal.CookiePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho para o cookie de nomes de função em cache.</summary>
+        <value>O caminho do cookie em que os nomes de função são armazenados em cache. O padrão é /.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RolePrincipal.CookiePath%2A> propriedade retorna o valor da `cookiePath` atributo do arquivo Web. config para seu aplicativo ASP.NET. Para obter mais informações sobre caminhos de cookie, consulte <xref:System.Web.HttpCookie.Path%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe informações de cache de função para o usuário atual, se o gerenciamento de função está habilitado. Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/getroleinfocs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/getroleinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expired">
+      <MemberSignature Language="C#" Value="public bool Expired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Expired" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RolePrincipal.Expired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o cookie de funções expirou.</summary>
+        <value>
+          <see langword="true" />Se o cookie de funções expirou; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RolePrincipal.Expired%2A> propriedade retorna um `Boolean` valor que indica se o cookie de funções expirou com base no <xref:System.Web.Security.RolePrincipal.ExpireDate%2A> e a data e hora atuais.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe informações de cache de função para o usuário atual, se o gerenciamento de função está habilitado. Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/getroleinfocs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/getroleinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpireDate">
+      <MemberSignature Language="C#" Value="public DateTime ExpireDate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ExpireDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RolePrincipal.ExpireDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e a hora em que o cookie de funções expirará.</summary>
+        <value>O <see cref="T:System.DateTime" /> valor quando o cookie de funções expirará.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe informações de cache de função para o usuário atual, se o gerenciamento de função está habilitado. Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/getroleinfocs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/getroleinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto para popular com dados.</param>
+        <param name="context">O destino dessa serialização.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com os dados que são necessários para serializar o objeto de destino usando o contexto de fluxo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte o método <xref:System.Runtime.Serialization.ISerializable.GetObjectData%28System.Runtime.Serialization.SerializationInfo%2CSystem.Runtime.Serialization.StreamingContext%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRoles">
+      <MemberSignature Language="C#" Value="public string[] GetRoles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetRoles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.GetRoles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma lista de funções das quais o <see cref="T:System.Web.Security.RolePrincipal" /> é membro.</summary>
+        <returns>A lista de funções das quais o <see cref="T:System.Web.Security.RolePrincipal" /> é membro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Security.Roles.CacheRolesInCookie%2A> é `true` e nomes de função tem sido armazenados em cache para o usuário representado pelo <xref:System.Web.Security.RolePrincipal>, o <xref:System.Web.Security.RolePrincipal.GetRoles%2A> método retornará a lista de nomes de função no cache de que o usuário é membro. Se os nomes de função não foram armazenados, em seguida, o <xref:System.Web.Security.RolePrincipal.GetRoles%2A> método retorna a lista de nomes de função que o usuário é membro da função padrão <xref:System.Web.Security.Roles.Provider%2A>. Somente os nomes de função atual <xref:System.Web.Security.Roles.ApplicationName%2A> são retornados. Para determinar se os nomes de função foram armazenados no <xref:System.Web.Security.RolePrincipal> objeto, verifique o <xref:System.Web.Security.RolePrincipal.IsRoleListCached%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as funções que o usuário conectado é membro.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/GetRolescs.aspx#7)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/GetRolesvb.aspx#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">A propriedade <see cref="P:System.Web.Security.RolePrincipal.Identity" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.IIdentity Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RolePrincipal.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identidade de segurança para a solicitação HTTP atual.</summary>
+        <value>A identidade de segurança para a solicitação HTTP atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RolePrincipal.Identity%2A> de um <xref:System.Web.Security.RolePrincipal> objeto é definido quando o <xref:System.Web.Security.RolePrincipal> construtor seja chamado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe informações de cache de função para o usuário atual, se o gerenciamento de função está habilitado. Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/getroleinfocs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/getroleinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInRole">
+      <MemberSignature Language="C#" Value="public override bool IsInRole (string role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsInRole(string role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.IsInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="role">A função a ser pesquisada.</param>
+        <summary>Obtém um valor que indica se o usuário representado por <see cref="T:System.Web.Security.RolePrincipal" /> está na função especificada.</summary>
+        <returns>
+          <see langword="true" />Se o usuário representado pelo <see cref="T:System.Web.Security.RolePrincipal" /> está na função especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Security.RolePrincipal.IsInRole%2A>primeiro verifica o <xref:System.Web.Security.RolePrincipal.IsRoleListCached%2A> propriedade para determinar se há uma lista armazenada em cache de nomes de função para o usuário atual. Se o <xref:System.Web.Security.RolePrincipal.IsRoleListCached%2A> é de propriedade `true`, a lista em cache é verificada para a função especificada. Se o <xref:System.Web.Security.RolePrincipal.IsInRole%2A> método localiza a função especificada na lista em cache, ele retorna `true`.  
+  
+ Se <xref:System.Web.Security.RolePrincipal.IsInRole%2A> não encontrar a função especificada, ele chama o <xref:System.Web.Security.RoleProvider.GetRolesForUser%2A> método do padrão <xref:System.Web.Security.Roles.Provider%2A> instância para determinar se o nome de usuário está associado uma função da fonte de dados configurado <xref:System.Web.Security.Roles.ApplicationName%2A> valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir verifica se o logon do usuário está na função de administradores antes de permitir que o usuário exibir as funções de usuário.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/ViewRolescs.aspx#8)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/ViewRolesvb.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">A propriedade <see cref="P:System.Web.Security.RolePrincipal.Identity" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRoleListCached">
+      <MemberSignature Language="C#" Value="public bool IsRoleListCached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRoleListCached" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RolePrincipal.IsRoleListCached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a lista de funções para o usuário tiver sido armazenado em cache em um cookie.</summary>
+        <value>
+          <see langword="true" />Se os nomes de função são armazenados em cache em um cookie. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `cacheRolesInCookie` atributo no arquivo Web. config para o aplicativo é definido como `true`, uma lista de nomes de função para o usuário atual é gravada em um cookie quando é verificar a associação do usuário em uma função específica. O <xref:System.Web.Security.RolePrincipal.IsRoleListCached%2A> propriedade indica se os nomes de função foram gravados para o cookie. Observe que, embora o `cacheRolesInCookie` atributo de configuração pode ser `true`, o <xref:System.Web.Security.RolePrincipal.IsRoleListCached%2A> propriedade não retorna `true` até depois que as informações da função foi gravadas para o cookie. Se nenhuma função verificações são executadas para um usuário, <xref:System.Web.Security.RolePrincipal.IsRoleListCached%2A> retornará `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe informações de cache de função para o usuário atual, se o gerenciamento de função está habilitado. Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/getroleinfocs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/getroleinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssueDate">
+      <MemberSignature Language="C#" Value="public DateTime IssueDate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime IssueDate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RolePrincipal.IssueDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e a hora em que o cookie de funções foi emitido.</summary>
+        <value>O <see cref="T:System.DateTime" /> que o cookie de funções foi emitido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe informações de cache de função para o usuário atual, se o gerenciamento de função está habilitado. Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/getroleinfocs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/getroleinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RolePrincipal.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do provedor de função que armazena e recupera informações de função para o usuário.</summary>
+        <value>O nome do provedor de função que armazena e recupera informações de função para o usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RolePrincipal.ProviderName%2A> propriedade expõe o nome do provedor de função que gerencia as informações de função para o usuário representado pelo <xref:System.Web.Security.RolePrincipal> objeto. Isso permite que você acesse a instância do provedor de função específica para um usuário usando o <xref:System.Web.Security.Roles.Providers%2A> propriedade o <xref:System.Web.Security.Roles> classe independentemente se o provedor é o provedor padrão para o aplicativo. Por exemplo, você pode criar um método que utiliza um <xref:System.Web.Security.RolePrincipal> como entrada e retorna a lista de funções para o usuário representado. Você pode garantir que o provedor de função apropriado é usado para retornar a lista de funções para o <xref:System.Web.Security.RolePrincipal> chamando o <xref:System.Web.Security.RoleProvider.GetRolesForUser%2A> método do provedor de função do <xref:System.Web.Security.Roles.Providers%2A> coleção que é indexada pelo <xref:System.Web.Security.RolePrincipal.ProviderName%2A> o valor da propriedade.  
+  
+ Para preencher o <xref:System.Web.Security.RolePrincipal> objeto para cada solicitação, você deve usar um <xref:System.Web.Security.RoleManagerModule.GetRoles> definido no arquivo global. asax para o aplicativo de manipulador de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirty">
+      <MemberSignature Language="C#" Value="public void SetDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.SetDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Marca a lista de função em cache como tendo sido alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.RolePrincipal.SetDirty%2A> método marca a lista de função em cache como tendo sido alterado definindo <xref:System.Web.Security.RolePrincipal.CachedListChanged%2A> para `true` e <xref:System.Web.Security.RolePrincipal.IsRoleListCached%2A> para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino dessa serialização.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Runtime.Serialization.ISerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.Security.RolePrincipal> é convertida em uma interface de <xref:System.Runtime.Serialization.ISerializable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToEncryptedTicket">
+      <MemberSignature Language="C#" Value="public string ToEncryptedTicket ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToEncryptedTicket() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.RolePrincipal.ToEncryptedTicket" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna as informações de função armazenados em cache com o <see cref="T:System.Web.Security.RolePrincipal" /> objeto criptografados com base no <see cref="P:System.Web.Security.Roles.CookieProtectionValue" />.</summary>
+        <returns>As informações de função armazenados em cache com o <see cref="T:System.Web.Security.RolePrincipal" /> objeto criptografados com base no <see cref="P:System.Web.Security.Roles.CookieProtectionValue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado pelo <xref:System.Web.Security.RolePrincipal.ToEncryptedTicket%2A> método são armazenadas no cookie funções quando <xref:System.Web.Security.Roles.CacheRolesInCookie%2A> é `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir grava os resultados de <xref:System.Web.Security.RolePrincipal.ToEncryptedTicket%2A> método para o cookie de funções.  
+  
+ [!code-csharp[System.Web.Security.RolePrincipal#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/snippetscs.aspx#6)]
+ [!code-vb[System.Web.Security.RolePrincipal#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/snippetsvb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.RolePrincipal.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do cookie de funções.</summary>
+        <value>O número de versão do cookie de funções.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com a inclusão de um número de versão no cookie de funções, versões futuras do ASP.NET podem modificar o formato do cookie de funções e usar o <xref:System.Web.Security.RolePrincipal.Version%2A> propriedade para distinguir entre vários formatos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe informações de cache de função para o usuário atual, se o gerenciamento de função está habilitado. Para obter informações sobre como habilitar o gerenciamento de função, consulte o <xref:System.Web.Security.Roles> classe.  
+  
+ [!code-aspx-csharp[System.Web.Security.RolePrincipal#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/CS/getroleinfocs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.RolePrincipal#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.RolePrincipal/VB/getroleinfovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,2088 @@
+<Type Name="JSVsaError" FullName="Microsoft.JScript.Vsa.JSVsaError">
+  <TypeSignature Language="C#" Value="public enum JSVsaError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed JSVsaError extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Vsa.JSVsaError" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because it is being deprecated in Visual Studio 2005; there will be no replacement for this feature. Please see the ICodeCompiler documentation for additional help.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("7607D148-3AA5-4CC6-AED5-D4DB0ECBD992")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o conjunto de exceções que pode ser gerada por um mecanismo de script do .NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppDomainCannotBeSet">
+      <MemberSignature Language="C#" Value="AppDomainCannotBeSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError AppDomainCannotBeSet = int32(-2146226176)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.AppDomainCannotBeSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133000</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não é possível definir o domínio de aplicativo.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.GetOption*> método ou o < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SetOption*> método quando tentativas falharem definir a opção de AppDomain em um mecanismo gerenciado, como os mecanismos de script do Visual Basic ou JScript. Mecanismos de script gerenciado não dão suporte usando domínios de aplicativo personalizado. Mecanismos de script gerenciado sempre usará o domínio do aplicativo no qual eles estão em execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomainInvalid">
+      <MemberSignature Language="C#" Value="AppDomainInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError AppDomainInvalid = int32(-2146226175)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.AppDomainInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133001</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O domínio de aplicativo especificado não é válido.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.GetOption*> método ou < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SetOption*> método durante a tentativa de definir uma referência de AppDomain não é válida. Para redefinir o `AppDomain` opção para uma referência nula, a chamada a <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Reset*> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationBaseCannotBeSet">
+      <MemberSignature Language="C#" Value="ApplicationBaseCannotBeSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ApplicationBaseCannotBeSet = int32(-2146226174)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ApplicationBaseCannotBeSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133002</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não é possível definir a base do aplicativo.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.GetOption*> método ou < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SetOption*> método quando tenta obter ou definir a opção de ApplicationBase em um mecanismo gerenciado, como o Visual Basic .NET ou JScript .NET mecanismos de script. O host deve definir o `ApplicationBase` opção no domínio do aplicativo no qual ele cria o mecanismo de script.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationBaseInvalid">
+      <MemberSignature Language="C#" Value="ApplicationBaseInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ApplicationBaseInvalid = int32(-2146226173)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ApplicationBaseInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133003</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O diretório base do aplicativo especificado não é válido.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.GetOption*> método ou < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SetOption*> método quando tenta obter ou definir o ApplicationBase opção em um mecanismo e pela <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Run*> método quando o diretório especificado como o diretório Base do aplicativo não é um diretório válido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyExpected">
+      <MemberSignature Language="C#" Value="AssemblyExpected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError AssemblyExpected = int32(-2146226172)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.AssemblyExpected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133004</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: <xref:Microsoft.JScript.Vsa.IJSVsaReferenceItem> não faz referência a um assembly válido.  
+  
+ Gerada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Compile*> método quando um do `IVsaReferenceItem` objetos contidos no <xref:Microsoft.JScript.Vsa.IJSVsaItems> coleção não representa um assembly válido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyNameInvalid">
+      <MemberSignature Language="C#" Value="AssemblyNameInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError AssemblyNameInvalid = int32(-2146226171)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.AssemblyNameInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133005</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: nome do Assembly não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaReferenceItem.AssemblyName*> quando um nome de assembly que não é válido de propriedade é especificada para um <xref:Microsoft.JScript.Vsa.IJSVsaReferenceItem> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BadAssembly">
+      <MemberSignature Language="C#" Value="BadAssembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError BadAssembly = int32(-2146226170)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.BadAssembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133006</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: formato de Assembly não é válido.  
+  
+ Gerada quando o assembly fornecido para o mecanismo não é válido. Normalmente, essa exceção ocorre quando um mecanismo tenta executar ou usar o assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrowserNotExist">
+      <MemberSignature Language="C#" Value="BrowserNotExist" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError BrowserNotExist = int32(-2146226115)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.BrowserNotExist" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013303D</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O navegador especificado não foi encontrado.  
+  
+ Lançada pelo método aDTEngine.AttachDebugger quando uma sessão de depuração remota foi iniciada e uma tentativa de iniciar o navegador remoto, mas um navegador não está disponível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachedAssemblyInvalid">
+      <MemberSignature Language="C#" Value="CachedAssemblyInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError CachedAssemblyInvalid = int32(-2146226169)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.CachedAssemblyInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133007</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O assembly em cache não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Run*> método quando ele é chamado e tentar usar um assembly previamente em cache, mas o assembly não é válido, por exemplo, é uma referência nula (`Nothing` no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallbackUnexpected">
+      <MemberSignature Language="C#" Value="CallbackUnexpected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError CallbackUnexpected = int32(-2146226168)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.CallbackUnexpected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133008</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: retorno de chamada não pode ser feito no momento.  
+  
+ Lançada por métodos vários quando um do <xref:Microsoft.JScript.Vsa.IJSVsaSite> ou <xref:Microsoft.JScript.Vsa.IJSVsaPersistSite> métodos de retorno de chamada é chamado em um momento inesperado. Por exemplo, o < xref:Microsoft.JScript.Vsa.IJSVsaSite.GetCompiledState*> método só deve ser chamado pelo mecanismo como resultado de uma chamada para o < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Run*> método. Se for chamado a qualquer momento, será lançada uma exceção CallbackUnexpected.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CannotAttachToWebServer">
+      <MemberSignature Language="C#" Value="CannotAttachToWebServer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError CannotAttachToWebServer = int32(-2146226100)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.CannotAttachToWebServer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013304C</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não é possível anexar ao servidor Web especificado.  
+  
+ Lançada pelo método aDTEngine.AttachDebugger ao iniciar uma sessão de depuração do lado do servidor e VSA não pode anexar o depurador ao servidor Web especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeDOMNotAvailable">
+      <MemberSignature Language="C#" Value="CodeDOMNotAvailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError CodeDOMNotAvailable = int32(-2146226167)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.CodeDOMNotAvailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133009</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: um modelo de objeto de documento do código de válido (CodeDOM) não está disponível.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaCodeItem.CodeDOM*> propriedade quando a propriedade não está disponível para ser lido. O mecanismo não oferece suporte à propriedade ou requer uma chamada explícita para o < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Compile*> método para gerar o modelo de objeto de documento (DOM).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompiledStateNotFound">
+      <MemberSignature Language="C#" Value="CompiledStateNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError CompiledStateNotFound = int32(-2146226166)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.CompiledStateNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013300A</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O estado compilado especificado não pôde ser carregado.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaSite.GetCompiledState*> método quando ele é chamado de um mecanismo que não têm estado compilado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebuggeeNotStarted">
+      <MemberSignature Language="C#" Value="DebuggeeNotStarted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError DebuggeeNotStarted = int32(-2146226114)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.DebuggeeNotStarted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013303E</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: depurar o aplicativo de destino não foi iniciado.  
+  
+ Lançada pelo método aDTEngine.AttachDebugger quando um sessão de depuração de cliente do Windows é iniciado, mas o `AttachDebugger` método não é capaz de iniciar o aplicativo de destino é especificado com a opção TargetEXE.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugInfoNotSupported">
+      <MemberSignature Language="C#" Value="DebugInfoNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError DebugInfoNotSupported = int32(-2146226165)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.DebugInfoNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013300B</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não há suporte para o uso de informações de depuração.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.GenerateDebugInfo*> propriedade quando ele é definido como true, mas o mecanismo não dá suporte à geração de informações de depuração. Compilação continuará, mas o mecanismo compila o código sem informações de depuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementNameInvalid">
+      <MemberSignature Language="C#" Value="ElementNameInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ElementNameInvalid = int32(-2146226164)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ElementNameInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013300C</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O nome do elemento não é válido.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaPersistSite.LoadElement*> método e < xref:Microsoft.JScript.Vsa.IJSVsaPersistSite.SaveElement*> métodos quando o é chamado com um parâmetro de nome não é válido, por exemplo, uma que contém caracteres que não são válidos. Observe que o host não deve lançar uma exceção ElementNameInvalid quando o parâmetro de nome é um ponteiro nulo, como um ponteiro nulo é um argumento válido usado para solicitar dados de nível de mecanismo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementNotFound">
+      <MemberSignature Language="C#" Value="ElementNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ElementNotFound = int32(-2146226163)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ElementNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013300D</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O elemento não foi encontrado.  
+  
+ Gerada pelo <xref:Microsoft.JScript.Vsa.IJSVsaPersistSite.LoadElement*> método quando for chamado com um parâmetro de nome não é válido, ou seja, aquele que não corresponde a um elemento salvo anteriormente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineBusy">
+      <MemberSignature Language="C#" Value="EngineBusy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineBusy = int32(-2146226162)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineBusy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013300E</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: mecanismo está ocupado atendendo a outro thread.  
+  
+ Gerada por todos os membros quando um mecanismo no momento está atendendo a uma solicitação de outro thread. Por design, um mecanismo de script .NET só deve ser chamado de um thread por vez.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineCannotClose">
+      <MemberSignature Language="C#" Value="EngineCannotClose" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineCannotClose = int32(-2146226161)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineCannotClose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013300F</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O mecanismo especificado não pode ser fechado.  
+  
+ Gerada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Close*> método quando é feita uma tentativa de chamar esse método, mas o. Mecanismo de script NET não pode ser fechado corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineCannotReset">
+      <MemberSignature Language="C#" Value="EngineCannotReset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineCannotReset = int32(-2146226160)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineCannotReset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133010</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O mecanismo especificado não pode ser redefinido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Reset*> método quando ele é chamado, mas não foi possível redefinir o mecanismo de script .NET ou seus eventos não podem ser soltos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineClosed">
+      <MemberSignature Language="C#" Value="EngineClosed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineClosed = int32(-2146226159)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineClosed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133011</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: mecanismo foi fechado.  
+  
+ Lançada na maioria dos casos, depois que o mecanismo de script .NET foi fechado usando uma chamada para o <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Close*> método. Depois que o método Close tiver sido chamado, o mecanismo não pode mais ser usado e deve ser criado um novo mecanismo de script para executar as tarefas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineEmpty">
+      <MemberSignature Language="C#" Value="EngineEmpty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineEmpty = int32(-2146226159)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineEmpty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133012</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O mecanismo especificado não tem nenhum item de fonte para compilar.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Compile*> método quando ele é chamado, mas não há itens na <xref:Microsoft.JScript.Vsa.IJSVsaItems> coleção para compilar, ou seja, o < xref:Microsoft.JScript.Vsa.IJSVsaItems.Count*> propriedade = 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineInitialized">
+      <MemberSignature Language="C#" Value="EngineInitialized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineInitialized = int32(-2146226157)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineInitialized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133013</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: mecanismo já foi inicializado.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.LoadSourceState*> método e < xref:Microsoft.JScript.Vsa.IJSVsaEngine.InitNew*> métodos quando esses métodos são chamados, mas o mecanismo de script .NET já foi inicializado. Se quiser que o host ao carregar o estado da fonte ou inicializar um novo mecanismo de script, os métodos do respectivos devem ser primeiro aqueles chamado depois de definir o < xref:Microsoft.JScript.Vsa.IJSVsaEngine.RootMoniker*
+> e <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Site*> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineNameInUse">
+      <MemberSignature Language="C#" Value="EngineNameInUse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineNameInUse = int32(-2146226156)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineNameInUse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133014</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O nome especificado já está em uso por outro mecanismo.  
+  
+ Gerada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Name*> propriedade quando é feita uma tentativa de defini-lo para o mesmo nome que um .NET existente mecanismo no host de script. Enquanto a propriedade de nome não precisa ser globalmente exclusivo, ele não pode ser igual ao nome de um mecanismo de script que está sendo hospedado no momento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineNameInvalid">
+      <MemberSignature Language="C#" Value="EngineNameInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineNameInvalid = int32(-2146226113)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineNameInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013303F</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: o nome do mecanismo não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Name*> propriedade se o nome especificado já está em usar outro mecanismo. VSA requer que os nomes de mecanismo de tempo de design seja exclusivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineNameNotSet">
+      <MemberSignature Language="C#" Value="EngineNameNotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineNameNotSet = int32(-2146226099)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineNameNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013303F</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: o nome do mecanismo não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Name*> propriedade se o nome especificado já está em usar outro mecanismo. VSA requer que os nomes de mecanismo de tempo de design seja exclusivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineNotCompiled">
+      <MemberSignature Language="C#" Value="EngineNotCompiled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineNotCompiled = int32(-2146226155)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineNotCompiled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133015</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O mecanismo especificado não está compilado.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Run*> método e < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SaveCompiledState*> métodos quando não há nenhum estado compilado para executar ou salvar. O mecanismo de script de .NET deve compilar o código com uma chamada para o < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Compile*> método, ou < xref:Microsoft.JScript.Vsa.IJSVsaEngine.LoadSourceState*> método deve ser chamado antes do mecanismo de script pode ser executado ou salva.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineNotExist">
+      <MemberSignature Language="C#" Value="EngineNotExist" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineNotExist = int32(-2146226112)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineNotExist" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133040</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: mecanismo não existe.  
+  
+ Gerada pela propriedade aIDE.ExtensibilityObject em casos em que não há nenhum mecanismo válido do qual recuperar o objeto de extensibilidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineNotInitialized">
+      <MemberSignature Language="C#" Value="EngineNotInitialized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineNotInitialized = int32(-2146226154)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineNotInitialized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133016</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O mecanismo especificado não foi inicializado.  
+  
+ Gerada por vários membros quando o mecanismo de script do .NET não foi inicializado corretamente, e o host tenta acessar uma propriedade ou método que requer o mecanismo de script a ser inicializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineNotRunning">
+      <MemberSignature Language="C#" Value="EngineNotRunning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineNotRunning = int32(-2146226153)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineNotRunning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133017</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O mecanismo especificado deve estar em execução.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Reset*> método e < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Assembly*> propriedade quando o é chamado e o mecanismo de script .NET especificado não está em execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EngineRunning">
+      <MemberSignature Language="C#" Value="EngineRunning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EngineRunning = int32(-2146226152)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EngineRunning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133018</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: mecanismo está em execução.  
+  
+ Gerada por vários membros quando o mecanismo de script do .NET está em execução, e o host tenta executar uma operação que não é permitida enquanto o mecanismo de script está em execução. Por exemplo, a tentativa de criar um novo código de item usando o <xref:Microsoft.JScript.Vsa.IJSVsaItems.CreateItem*> método produzirá essa exceção se o mecanismo está no estado de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSourceInvalid">
+      <MemberSignature Language="C#" Value="EventSourceInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EventSourceInvalid = int32(-2146226151)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EventSourceInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133019</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: A origem do evento especificado não existe.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaSite.GetEventSourceInstance*> método quando ele é chamado com um parâmetro ou emparelhamento de parâmetros que não é válido. Ou o `itemName` parâmetro faz referência a um item que não adicionou o host para o mecanismo, ou o `eventSourceName` parâmetro refere-se a uma fonte de evento que não foi adicionada para o item especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSourceNameInUse">
+      <MemberSignature Language="C#" Value="EventSourceNameInUse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EventSourceNameInUse = int32(-2146226150)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EventSourceNameInUse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013301A</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O nome de origem do evento especificado já está em uso.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaCodeItem.AddEventSource*> método quando ele é chamado com um `eventSourceName` parâmetro tiver sido usado anteriormente como um nome de origem do evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSourceNameInvalid">
+      <MemberSignature Language="C#" Value="EventSourceNameInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EventSourceNameInvalid = int32(-2146226149)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EventSourceNameInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013301B</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O nome de origem do evento especificado não é válido.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaCodeItem.AddEventSource*> método e < xref:Microsoft.JScript.Vsa.IJSVsaCodeItem.RemoveEventSource*> métodos quando o é chamado com um `eventSourceName` parâmetro que não é um identificador válido. Hosts podem determinar se um identificador é válido pelo primeiro chamar o <xref:Microsoft.JScript.Vsa.IJSVsaEngine> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSourceNotFound">
+      <MemberSignature Language="C#" Value="EventSourceNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EventSourceNotFound = int32(-2146226148)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EventSourceNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013301C</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: A origem do evento especificado não encontrada.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaCodeItem.RemoveEventSource*> método quando ele é chamado com um `eventNameType` usar o parâmetro que já não está em como uma fonte de evento no item de código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSourceTypeInvalid">
+      <MemberSignature Language="C#" Value="EventSourceTypeInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError EventSourceTypeInvalid = int32(-2146226147)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.EventSourceTypeInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013301D</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O tipo de origem do evento especificado não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaCodeItem.AddEventSource*> método quando ele é chamado com um `eventSourceType` parâmetro que não é um tipo válido. Observe que isso não é válido para o mecanismo de script do Visual Basic, que informa em vez disso, uma exceção de compilação nessa situação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileFormatUnsupported">
+      <MemberSignature Language="C#" Value="FileFormatUnsupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError FileFormatUnsupported = int32(-2146226111)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.FileFormatUnsupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133041</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não há suporte para o formato de arquivo.  
+  
+ Reservado para uso futuro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileTypeUnknown">
+      <MemberSignature Language="C#" Value="FileTypeUnknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError FileTypeUnknown = int32(-2146226110)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.FileTypeUnknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133042</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: arquivo é de tipo desconhecido.  
+  
+ Reservado para uso futuro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCompiledStateFailed">
+      <MemberSignature Language="C#" Value="GetCompiledStateFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError GetCompiledStateFailed = int32(-2146226146)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.GetCompiledStateFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013301E</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O estado compilado especificado não pôde ser carregado.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaSite.GetCompiledState*> método e < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Run*> métodos quando o `GetCompiledState` método falhar. O método de execução retorna ao chamador a `GetCompiledStateFailed` exceção retornada pelo `GetCompiledState` método. O `Run` método também pode gerar a exceção GetCompiledStateFailed se o cache de assembly lança uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalInstanceInvalid">
+      <MemberSignature Language="C#" Value="GlobalInstanceInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError GlobalInstanceInvalid = int32(-2146226145)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.GlobalInstanceInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013301F</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: A instância global especificada não existe.  
+  
+ Gerada por < xref:Microsoft.JScript.Vsa.IJSVsaSite.GetGlobalInstance*> método quando ele é chamado com um parâmetro de nome inválido, ou seja, que não foi adicionado usando o < xref:Microsoft.JScript.Vsa.IJSVsaItems.CreateItem*> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalInstanceTypeInvalid">
+      <MemberSignature Language="C#" Value="GlobalInstanceTypeInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError GlobalInstanceTypeInvalid = int32(-2146226144)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.GlobalInstanceTypeInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133020</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: tipo de instância Global não é válido.  
+  
+ Lançada quando o `TypeString` propriedade de um <xref:Microsoft.JScript.Vsa.IJSVsaGlobalItem> objeto não é válido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalCompilerError">
+      <MemberSignature Language="C#" Value="InternalCompilerError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError InternalCompilerError = int32(-2146226143)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.InternalCompilerError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133021</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: Ocorreu uma exceção do compilador interno.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Compile*> método quando ele é chamado e ocorrer uma exceção inesperada no compilador. Não, essa exceção é lançada para erros de compilação, são sinalizados para o host por meio do < xref:Microsoft.JScript.Vsa.IJSVsaSite.OnCompilerError*> método, mas para exceções no compilador em si.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCannotBeRemoved">
+      <MemberSignature Language="C#" Value="ItemCannotBeRemoved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ItemCannotBeRemoved = int32(-2146226142)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ItemCannotBeRemoved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133022</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O item especificado não pode ser removido.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaItems.Remove*> e < xref:Microsoft.JScript.Vsa.IJSVsaItems.Remove*> métodos quando é feita uma tentativa de remover um item que não pode ser removido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCannotBeRenamed">
+      <MemberSignature Language="C#" Value="ItemCannotBeRenamed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ItemCannotBeRenamed = int32(-2146226109)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ItemCannotBeRenamed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133043</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O item não pode ser renomeado.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaItem.Name*> propriedade nos casos em que é feita uma tentativa para renomear um item que não pode ser renomeado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemFlagNotSupported">
+      <MemberSignature Language="C#" Value="ItemFlagNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ItemFlagNotSupported = int32(-2146226141)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ItemFlagNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133023</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não há suporte para o sinalizador especificado.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaItems.CreateItem*> método quando a chamada especifica um sinalizador que não é válido ou um sinalizador que não é suportado pelo host.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemNameInUse">
+      <MemberSignature Language="C#" Value="ItemNameInUse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ItemNameInUse = int32(-2146226140)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ItemNameInUse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133024</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: nome do item especificado já está em uso.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaItems.CreateItem*> método e o < xref:Microsoft.JScript.Vsa.IJSVsaItem.Name*> propriedade quando uma chamada para o `CreateItem` método é feito com um parâmetro de nome que já está em uso, ou quando um item existente tem seu `Name` propriedade definida como um nome que já está em uso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemNameInvalid">
+      <MemberSignature Language="C#" Value="ItemNameInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ItemNameInvalid = int32(-2146226139)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ItemNameInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133025</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: nome do Item não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaItems.Item*> propriedade quando o nome de um item não é válido. O nome de um item pode ser definido ao chamar o `CreateItem` método, ou ao definir o `Name` propriedade. Use o <xref:Microsoft.JScript.Vsa.IJSVsaEngine> método para determinar se um identificador é válido para o mecanismo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemNotFound">
+      <MemberSignature Language="C#" Value="ItemNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ItemNotFound = int32(-2146226138)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ItemNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133026</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O item especificado não encontrado na coleção.  
+  
+ Gerada pelo < xref:Microsoft.JScript.Vsa.IJSVsaItems.Item*> propriedade < xref:Microsoft.JScript.Vsa.IJSVsaItems.Remove*> método < xref:Microsoft.JScript.Vsa.IJSVsaItems.Item*> propriedade, e < xref:Microsoft.JScript.Vsa.IJSVsaItems.Remove*> método quando a propriedade aItems.Item é indexada usando um parâmetro que não é válido. Ao usar a sobrecarga de cadeia de caracteres, o parâmetro de nome deve ser igual ao nome de um item já existe na coleção; ao usar a sobrecarga de int, o `index` parâmetro deve estar entre 0 e o valor da <xref:Microsoft.JScript.Vsa.IJSVsaItems.Count*> propriedade -1, inclusivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemTypeNotSupported">
+      <MemberSignature Language="C#" Value="ItemTypeNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ItemTypeNotSupported = int32(-2146226137)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ItemTypeNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133027</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não há suporte para o tipo do item especificado.  
+  
+ Gerada pelo <xref:Microsoft.JScript.Vsa.IJSVsaItems.CreateItem*> método quando é feita uma chamada com um `itemType` parâmetro que não tem suporte pelo mecanismo. Observe que nem todos os mecanismos oferecem suporte a todos os valores da enumeração VsaItemType.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LCIDNotSupported">
+      <MemberSignature Language="C#" Value="LCIDNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError LCIDNotSupported = int32(-2146226136)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.LCIDNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133028</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não há suporte para o identificador de localidade especificada (LCID).  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.LCID*> propriedade quando ela estiver definida para um LCID que não é suportado pelo mecanismo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadElementFailed">
+      <MemberSignature Language="C#" Value="LoadElementFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError LoadElementFailed = int32(-2146226135)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.LoadElementFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133029</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O elemento especificado não pôde ser carregado.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.LoadSourceState*> método e < xref:Microsoft.JScript.Vsa.IJSVsaPersistSite.LoadElement*> métodos quando uma chamada para o `LoadElement` método falhar. O `LoadSourceState` método retorna a exceção LoadElementFailed do `IVsaPersistSite.LoadElement` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MissingPdb">
+      <MemberSignature Language="C#" Value="MissingPdb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError MissingPdb = int32(-2146226102)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.MissingPdb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013304A</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: n/d  
+  
+ Reservado para uso futuro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MissingSource">
+      <MemberSignature Language="C#" Value="MissingSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError MissingSource = int32(-2146226108)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.MissingSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133044</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: origem ausente.  
+  
+ Reservado para uso futuro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameTooLong">
+      <MemberSignature Language="C#" Value="NameTooLong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError NameTooLong = int32(-2146226106)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.NameTooLong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133046</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O nome do mecanismo excede o comprimento permitido de 256 caracteres.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Name*> propriedade nos casos em que o valor definido para o nome do mecanismo excede 256 caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotClientSideAndNoUrl">
+      <MemberSignature Language="C#" Value="NotClientSideAndNoUrl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError NotClientSideAndNoUrl = int32(-2146226101)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.NotClientSideAndNoUrl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013304B</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: n/d  
+  
+ Reservado para uso futuro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotificationInvalid">
+      <MemberSignature Language="C#" Value="NotificationInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError NotificationInvalid = int32(-2146226134)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.NotificationInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013302A</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: A notificação especificada não é válida.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaSite.Notify*> método quando ele é chamado com uma notificação de que não é válida. Geralmente, é recomendável que hospedam aplicativos ignoram as notificações de que eles não têm conhecimento ou que eles não precisam responder. No entanto, em casos onde eles manipular uma notificação específica e a notificação não é válida, hosts devem lançar a exceção NotificationInvalid.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotInitCompleted">
+      <MemberSignature Language="C#" Value="NotInitCompleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError NotInitCompleted = int32(-2146226107)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.NotInitCompleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133045</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O método aDTEngine.InitCompleted não foi chamado.  
+  
+ Lançada pelo método aDTEngine.GetIDE ou pelo método signTime.ShowIDE em casos onde o é chamado antes do `InitCompleted` método foi chamado, sinalizando que a inicialização for concluída. No caso do `ShowIDE` sinaliza ao método, a exceção que o mecanismo primeiro na coleção de mecanismos ainda não foi inicializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionInvalid">
+      <MemberSignature Language="C#" Value="OptionInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError OptionInvalid = int32(-2146226133)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.OptionInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013302B</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: A opção especificada não é válida.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SetOption*> método e < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SetOption*> métodos quando o host tenta definir uma opção usando qualquer método, mas o valor fornecido não é válido para a opção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionNotSupported">
+      <MemberSignature Language="C#" Value="OptionNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError OptionNotSupported = int32(-2146226132)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.OptionNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013302C</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não há suporte para a opção especificada.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SetOption*> método < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SetOption*> método, <xref:Microsoft.JScript.Vsa.IJSVsaEngine.GetOption*> método, e `IVsaItem.SetOption` métodos ao tentar obter ou definir uma opção que não tem suporte pelo mecanismo do  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcNameInUse">
+      <MemberSignature Language="C#" Value="ProcNameInUse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ProcNameInUse = int32(-2146226105)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ProcNameInUse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133047</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: n/d  
+  
+ Reservado para uso futuro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcNameInvalid">
+      <MemberSignature Language="C#" Value="ProcNameInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError ProcNameInvalid = int32(-2146226104)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.ProcNameInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133048</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: n/d  
+  
+ Reservado para uso futuro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevokeFailed">
+      <MemberSignature Language="C#" Value="RevokeFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError RevokeFailed = int32(-2146226131)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.RevokeFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013302D</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: falha em uma solicitação para revogar o cache de assembly.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.RevokeCache*> método quando ele é chamado, mas ele não é possível revogar o cache. Mais informações podem estar disponíveis por meio da propriedade InnerException. Observe que, se não houver nenhum assembly cache revogar, o mecanismo deve retornar "sucesso" e não lançam essa exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootMonikerAlreadySet">
+      <MemberSignature Language="C#" Value="RootMonikerAlreadySet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError RootMonikerAlreadySet = int32(-2146226130)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.RootMonikerAlreadySet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013302E</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O <xref:Microsoft.JScript.Vsa.IJSVsaEngine.RootMoniker*> propriedade já foi definida e não pode ser definida novamente.  
+  
+ Lançada pelo `IVsaEngine.RootMoniker` propriedade quando é feita uma tentativa de definir esta propriedade depois que ele já foi definido para um valor válido. O `RootMoniker` propriedade só pode ser definida uma vez.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootMonikerInUse">
+      <MemberSignature Language="C#" Value="RootMonikerInUse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError RootMonikerInUse = int32(-2146226129)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.RootMonikerInUse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013302F</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O moniker de raiz especificado já está em uso.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.RootMoniker*> propriedade quando é feita uma tentativa de definir essa propriedade como um valor que já está em uso por outro mecanismo. O `RootMoniker` propriedade deve ser globalmente exclusiva.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootMonikerInvalid">
+      <MemberSignature Language="C#" Value="RootMonikerInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError RootMonikerInvalid = int32(-2146226128)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.RootMonikerInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133030</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O moniker de raiz especificado não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.RootMoniker*> propriedade quando é feita uma tentativa de definir essa propriedade como um valor que não é um identificador de origem válido. Um identificador de origem pode ser inválido pelos seguintes motivos:  
+  
+ Não está de acordo com a sintaxe de identificador de origem do \<protocolo > ://\<caminho >.  
+  
+ Ele usa caracteres que não são válidas dentro de um URI Uniform Resource Identifier (). Para obter mais informações sobre caracteres válidos, consulte "Request For Comments 2396" em http://www.ietf.org/rfc/rfc2396.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootMonikerNotSet">
+      <MemberSignature Language="C#" Value="RootMonikerNotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError RootMonikerNotSet = int32(-2146226127)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.RootMonikerNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133031</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O <xref:Microsoft.JScript.Vsa.IJSVsaEngine.RootMoniker*> propriedade não foi definida.  
+  
+ Gerada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Compile*> método < xref:Microsoft.JScript.Vsa.IJSVsaEngine.LoadSourceState*> método, < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Run*> método, e < xref:Microsoft.JScript.Vsa.IJSVsaEngine.InitNew*> métodos e o <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Site*> propriedade quando a propriedade ou método requer um moniker raiz válido, mas o `RootMoniker` propriedade não foi definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootMonikerProtocolInvalid">
+      <MemberSignature Language="C#" Value="RootMonikerProtocolInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError RootMonikerProtocolInvalid = int32(-2146226126)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.RootMonikerProtocolInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133032</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O protocolo especificado no apelido raiz não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.RootMoniker*> propriedade quando é feita uma tentativa de definir essa propriedade como um valor que usa um protocolo já registrado no computador, como arquivos ou http. Protocolos registrados não podem ser usados como parte do moniker.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNamespaceInvalid">
+      <MemberSignature Language="C#" Value="RootNamespaceInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError RootNamespaceInvalid = int32(-2146226125)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.RootNamespaceInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133033</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O namespace raiz especificado não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.RootNamespace*> propriedade quando é feita uma tentativa de definir essa propriedade como um valor que não é um identificador de namespace válido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNamespaceNotSet">
+      <MemberSignature Language="C#" Value="RootNamespaceNotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError RootNamespaceNotSet = int32(-2146226124)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.RootNamespaceNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133034</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O namespace raiz não foi definido.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Compile*> método se for chamado antes do < xref:Microsoft.JScript.Vsa.IJSVsaEngine.RootNamespace*> está definida. O mecanismo de carregador de tempo de execução e o mecanismo de script do Visual Basic também serão gerada essa exceção na chamada do método de execução se a propriedade não tiver sido definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveCompiledStateFailed">
+      <MemberSignature Language="C#" Value="SaveCompiledStateFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError SaveCompiledStateFailed = int32(-2146226123)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.SaveCompiledStateFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133035</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não foi possível salvar o estado compilado especificado.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.SaveCompiledState*> método quando esse método falhar. Observe que esse método, na verdade, não salve o código, mas em vez disso, simplesmente fornece o aplicativo de host com os dados binários especificados, para que o host pode salvá-lo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveElementFailed">
+      <MemberSignature Language="C#" Value="SaveElementFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError SaveElementFailed = int32(-2146226122)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.SaveElementFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133036</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O elemento especificado não pôde ser salvo.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.SaveSourceState*> método e < xref:Microsoft.JScript.Vsa.IJSVsaPersistSite.SaveElement*> métodos quando uma chamada para o `SaveElement` método falhar. O `InnerException` propriedade o <xref:System.Exception> classe é definida como a exceção real é gerada pelo código subjacente (por exemplo, uma saída de exceção de espaço em disco). Para obter mais informações, consulte <xref:System.Exception.InnerException%2A?displayProperty=nameWithType>. O `SaveSourceState` método retorna o `SaveElementFailed` exceção do `SaveElement` método volta para o chamador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteAlreadySet">
+      <MemberSignature Language="C#" Value="SiteAlreadySet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError SiteAlreadySet = int32(-2146226121)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.SiteAlreadySet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133037</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O site especificado já foi definido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Site*> propriedade quando é feita uma tentativa de definir essa propriedade e ele já tem um valor não nulo. Depois que ele tiver sido definido, a propriedade do Site não pode ser redefinida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteInvalid">
+      <MemberSignature Language="C#" Value="SiteInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError SiteInvalid = int32(-2146226120)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.SiteInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133038</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: O site especificado não é válido.  
+  
+ Lançada pelo <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Site*> quando é feita uma tentativa de definir essa propriedade como um valor que não é válido de propriedade <xref:Microsoft.JScript.Vsa.IJSVsaSite> referência de objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteNotSet">
+      <MemberSignature Language="C#" Value="SiteNotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError SiteNotSet = int32(-2146226119)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.SiteNotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133039</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: não foi definido.  
+  
+ Lançada pelo < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Compile*> método, < xref:Microsoft.JScript.Vsa.IJSVsaEngine.LoadSourceState*> método, < xref:Microsoft.JScript.Vsa.IJSVsaEngine.Run*> método, e < xref:Microsoft.JScript.Vsa.IJSVsaEngine.InitNew*> métodos quando uma propriedade ou método que requer um válido <xref:Microsoft.JScript.Vsa.IJSVsaSite> objeto é chamado, mas o <xref:Microsoft.JScript.Vsa.IJSVsaEngine.Site*> propriedade não foi definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceItemNotAvailable">
+      <MemberSignature Language="C#" Value="SourceItemNotAvailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError SourceItemNotAvailable = int32(-2146226118)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.SourceItemNotAvailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013303A</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: item de origem não está disponível para essa exceção.  
+  
+ Gerada quando não há nenhum item de origem para uma exceção, ou seja, o <xref:Microsoft.JScript.Vsa.IJSVsaError.SourceItem*> propriedade não está definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceMonikerNotAvailable">
+      <MemberSignature Language="C#" Value="SourceMonikerNotAvailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError SourceMonikerNotAvailable = int32(-2146226117)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.SourceMonikerNotAvailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013303B</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: moniker de origem não está disponível para essa exceção.  
+  
+ Gerada quando não houver nenhum identificador de origem para uma exceção, ou seja, o <xref:Microsoft.JScript.Vsa.IJSVsaError.SourceMoniker*> propriedade não está definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownError">
+      <MemberSignature Language="C#" Value="UnknownError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError UnknownError = int32(-2146225921)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.UnknownError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x801330FF</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: exceção desconhecida.  
+  
+ Gerada por vários membros quando a exceção não é reconhecida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="URLInvalid">
+      <MemberSignature Language="C#" Value="URLInvalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError URLInvalid = int32(-2146226116)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.URLInvalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x8013303C</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: URL inválida; Extensão de arquivo ASPX está ausente.  
+  
+ Lançada pelo <xref:Microsoft.Vsa.IVsaDTEngine.TargetURL%2A> propriedade quando a URL de destino para o qual o depurador está definido não é válida. A propriedade deve estar apontando para um arquivo ASPX.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VsaServerDown">
+      <MemberSignature Language="C#" Value="VsaServerDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.Vsa.JSVsaError VsaServerDown = int32(-2146226103)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.Vsa.JSVsaError.VsaServerDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor: 0x80133049</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeia de caracteres de exceção: n/d  
+  
+ Reservado para uso futuro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

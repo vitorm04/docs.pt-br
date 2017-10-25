@@ -1,0 +1,67 @@
+<Type Name="MimeParameterReader" FullName="System.Web.Services.Protocols.MimeParameterReader">
+  <TypeSignature Language="C#" Value="public abstract class MimeParameterReader : System.Web.Services.Protocols.MimeFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MimeParameterReader extends System.Web.Services.Protocols.MimeFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.MimeParameterReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.MimeFormatter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma implementação de base comum para os leitores de parâmetros de solicitação para serviços da Web implementado usando HTTP, mas sem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.MimeParameterReader>e outras classes de <xref:System.Web.Services.Protocols> namespace oferece suporte às implementações do .NET Framework do Web services por meio de operações de HTTP GET e POST HTTP. Os leitores e gravadores de serviço web serializar e desserializar, respectivamente, entre os parâmetros ou objetos de retorno de métodos Web e os fluxos de solicitação ou resposta HTTP. Os leitores e gravadores de serviço da web usam o HTTP para o transporte, mas não trocam mensagens usando o padrão SOAP.  
+  
+ O <xref:System.Web.Services.Protocols.MimeParameterReader> classe estabelece um comum <xref:System.Web.Services.Protocols.MimeParameterReader.Read%2A> Formatar para todos os leitores do lado do serviço de HTTP de solicitação de fluxos em parâmetros de método da Web.  
+  
+ Você normalmente não precisará usar <xref:System.Web.Services.Protocols.MimeParameterReader> ou seus descendentes classes diretamente. Os tipos apropriados são usados de acordo com as configurações em um arquivo de configuração do ASP.NET (Web. config).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MimeParameterReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.MimeParameterReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.MimeParameterReader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public abstract object[] Read (System.Web.HttpRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] Read(class System.Web.HttpRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.MimeParameterReader.Read(System.Web.HttpRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Web.HttpRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Um <see cref="T:System.Web.HttpRequest" /> objeto que contém a mensagem de entrada para uma operação.</param>
+        <summary>Quando substituído em uma classe derivada, desserializa uma solicitação HTTP em uma matriz de valores de parâmetro de método da Web.</summary>
+        <returns>Uma matriz de <see cref="T:System.Object" /> objetos que contém a solicitação HTTP desserializada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

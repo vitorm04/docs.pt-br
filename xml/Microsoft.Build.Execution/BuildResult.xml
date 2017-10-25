@@ -1,0 +1,364 @@
+<Type Name="BuildResult" FullName="Microsoft.Build.Execution.BuildResult">
+  <TypeSignature Language="C#" Value="public class BuildResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildResult" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o resultado atual definido para todos os destinos que produziram resultados de uma determinada configuração.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildResult.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria o conjunto de resultados de compilação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResultsForTarget">
+      <MemberSignature Language="C#" Value="public void AddResultsForTarget (string target, Microsoft.Build.Execution.TargetResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddResultsForTarget(string target, class Microsoft.Build.Execution.TargetResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildResult.AddResultsForTarget(System.String,Microsoft.Build.Execution.TargetResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+        <Parameter Name="result" Type="Microsoft.Build.Execution.TargetResult" />
+      </Parameters>
+      <Docs>
+        <param name="target">O destino cujos resultados são a ser adicionado.</param>
+        <param name="result">Os resultados para o destino.</param>
+        <summary>Adiciona os resultados para o destino especificado para esse conjunto de resultados de compilação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CircularDependency">
+      <MemberSignature Language="C#" Value="public bool CircularDependency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CircularDependency" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.CircularDependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um sinalizador que indica se uma dependência circular foi detectada.</summary>
+        <value>Retorna VERDADEIRO se uma dependência circular foi detectada; FALSO caso contrário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationId">
+      <MemberSignature Language="C#" Value="public int ConfigurationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConfigurationId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.ConfigurationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID de configuração para esse conjunto de resultados de compilação.</summary>
+        <value>Retorna a ID de configuração para esse conjunto de resultados de compilação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exceção gerada para esse conjunto de resultados de compilação.</summary>
+        <value>Retorna a exceção gerada para esse conjunto de resultados de compilação. Retornará false se nenhuma exceção ocorreu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalRequestId">
+      <MemberSignature Language="C#" Value="public int GlobalRequestId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GlobalRequestId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.GlobalRequestId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a id de solicitação de compilação para este conjunto de resultados de compilação.</summary>
+        <value>Retorna a id de solicitação de compilação para este conjunto de resultados de compilação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasResultsForTarget">
+      <MemberSignature Language="C#" Value="public bool HasResultsForTarget (string target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasResultsForTarget(string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildResult.HasResultsForTarget(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">O destino cujos resultados são recuperados.</param>
+        <summary>Determina se há resultados para o destino especificado.</summary>
+        <returns>Retorna VERDADEIRO se houver resultados; FALSO caso contrário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ITargetResult this[string target] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.ITargetResult Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ITargetResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">O destino indexado.</param>
+        <summary>Obtém um indexador que pode ser usado para obter o resultado da compilação para o destino fornecido.</summary>
+        <value>O resultado da compilação para o destino indexado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gera um `KeyNotFoundException` se o destino especificado não existe neste resultado da compilação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeResults">
+      <MemberSignature Language="C#" Value="public void MergeResults (Microsoft.Build.Execution.BuildResult results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MergeResults(class Microsoft.Build.Execution.BuildResult results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildResult.MergeResults(Microsoft.Build.Execution.BuildResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="results" Type="Microsoft.Build.Execution.BuildResult" />
+      </Parameters>
+      <Docs>
+        <param name="results">Os resultados de mesclagem.</param>
+        <summary>Mescla os resultados fornecidos com esse conjunto de resultados de compilação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeRequestId">
+      <MemberSignature Language="C#" Value="public int NodeRequestId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NodeRequestId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.NodeRequestId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID de solicitação de compilação do nó de origem.</summary>
+        <value>Retorna a ID de solicitação de compilação do nó de origem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverallResult">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildResultCode OverallResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Execution.BuildResultCode OverallResult" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.OverallResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildResultCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o resultado geral para esta compilação.</summary>
+        <value>Retorna o resultado geral para esta compilação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentGlobalRequestId">
+      <MemberSignature Language="C#" Value="public int ParentGlobalRequestId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ParentGlobalRequestId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.ParentGlobalRequestId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID de solicitação de compilação global que emitiu a solicitação que levam a esse conjunto de resultados de compilação.</summary>
+        <value>Retorna a ID de solicitação de compilação global que emitiu a solicitação que levam a esse conjunto de resultados de compilação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectStateAfterBuild">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance ProjectStateAfterBuild { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.ProjectInstance ProjectStateAfterBuild" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.ProjectStateAfterBuild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define <see cref="T:Microsoft.Build.Execution.ProjectInstance" /> estado após a compilação.</summary>
+        <value>Retorna o <see langword="ProjectInstance" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso pode ser um objeto fictício e não deve ser usado com exceção de recuperar <xref:Microsoft.Build.Execution.ProjectInstance.Properties%2A>, <xref:Microsoft.Build.Execution.ProjectInstance.GlobalProperties%2A> e <xref:Microsoft.Build.Execution.ProjectInstance.Items%2A>. Não há suporte para outras operações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResultsByTarget">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,Microsoft.Build.Execution.TargetResult&gt; ResultsByTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Build.Execution.TargetResult&gt; ResultsByTarget" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.ResultsByTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Build.Execution.TargetResult&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador sobre todos os resultados de destino neste conjunto de resultados de compilação.</summary>
+        <value>Retorna um enumerador sobre todos os resultados de destino neste conjunto de resultados de compilação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmissionId">
+      <MemberSignature Language="C#" Value="public int SubmissionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SubmissionId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildResult.SubmissionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o envio de compilação que define este resultado de compilação está associado.</summary>
+        <value>Retorna o envio de compilação que define este resultado de compilação está associado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

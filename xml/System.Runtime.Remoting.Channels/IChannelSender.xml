@@ -1,0 +1,83 @@
+<Type Name="IChannelSender" FullName="System.Runtime.Remoting.Channels.IChannelSender">
+  <TypeSignature Language="C#" Value="public interface IChannelSender : System.Runtime.Remoting.Channels.IChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannelSender implements class System.Runtime.Remoting.Channels.IChannel" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IChannelSender" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece propriedades e as funções necessárias para os canais do remetente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lado de envio de canais deve expor o <xref:System.Runtime.Remoting.Channels.IChannelSender> interface.  
+  
+   
+  
+## Examples  
+ [!code-cpp[IChannelSender#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IChannelSender/CPP/ichannelsender_2_client.cpp#1)]
+ [!code-csharp[IChannelSender#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IChannelSender/CS/ichannelsender_2_client.cs#1)]
+ [!code-vb[IChannelSender#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IChannelSender/VB/ichannelsender_2_client.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateMessageSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink (string url, object remoteChannelData, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink(string url, object remoteChannelData, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IChannelSender.CreateMessageSink(System.String,System.Object,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="remoteChannelData" Type="System.Object" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL à qual o novo coletor será entregar mensagens. Pode ser <see langword="null" />.</param>
+        <param name="remoteChannelData">O objeto de dados de canal do host remoto para o qual o novo coletor entregue mensagens. Pode ser <see langword="null" />.</param>
+        <param name="objectURI">Quando este método retorna, contém um URI do novo coletor de mensagem de canal que envia mensagens para a URL especificada ou o objeto de dados de canal. Este parâmetro é passado não inicializado.</param>
+        <summary>Retorna um coletor de mensagem de canal que entrega mensagens para o objeto de dados de URL ou canal especificado.</summary>
+        <returns>Um coletor de mensagem de canal que envia mensagens para a URL especificada ou o objeto de dados de canal, ou <see langword="null" /> se o canal não pode se conectar ao ponto de extremidade específico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Channels.IChannelSender.CreateMessageSink%2A> método retorna um coletor de mensagem de canal que envia mensagens para a URL especificada ou o objeto de dados de canal. Se o `uri` parâmetro é `null`, o `remoteChannelData` parâmetro é usado como um destino para o coletor. Ambos os `url` parâmetro ou o `remoteChannelData` parâmetro pode ser `null`, mas não ambos.  
+  
+   
+  
+## Examples  
+ [!code-cpp[IChannelSender#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IChannelSender/CPP/ichannelsender_2_client.cpp#1)]
+ [!code-csharp[IChannelSender#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IChannelSender/CS/ichannelsender_2_client.cs#1)]
+ [!code-vb[IChannelSender#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IChannelSender/VB/ichannelsender_2_client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

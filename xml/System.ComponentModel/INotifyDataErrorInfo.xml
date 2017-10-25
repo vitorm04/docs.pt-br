@@ -1,0 +1,148 @@
+<Type Name="INotifyDataErrorInfo" FullName="System.ComponentModel.INotifyDataErrorInfo">
+  <TypeSignature Language="C#" Value="public interface INotifyDataErrorInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INotifyDataErrorInfo" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.INotifyDataErrorInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ObjectModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define os membros que classes de entidade de dados podem implementar para dar suporte à validação personalizada síncrona e assíncrona.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface permite que classes de entidade de dados implementar regras de validação personalizadas e expor os resultados da validação assincronamente. Essa interface também dá suporte a objetos de erro personalizados, vários erros por propriedade, erros de propriedades cruzadas e erros de nível de entidade. Erros de propriedade entre são erros que afetam várias propriedades. Você pode associar esses erros com uma ou todas as propriedades afetadas ou você pode tratá-los como erros de nível de entidade. Erros de nível de entidade são erros que afetam várias propriedades ou afetam a entidade inteira sem afetar uma determinada propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ErrorsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.DataErrorsChangedEventArgs&gt; ErrorsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.DataErrorsChangedEventArgs&gt; ErrorsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.DataErrorsChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando os erros de validação foram alterados para uma propriedade ou para a entidade inteira.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe de implementação deve gerar esse evento na interface do usuário de thread sempre que o <xref:System.ComponentModel.INotifyDataErrorInfo.GetErrors%2A> retornar alterações de valor, mesmo se o valor de retorno implementa <xref:System.Collections.Specialized.INotifyCollectionChanged>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrors">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable GetErrors (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerable GetErrors(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.INotifyDataErrorInfo.GetErrors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade para a qual recuperar os erros de validação ou então <see langword="null" /> ou <see cref="F:System.String.Empty" />, para recuperar os erros de nível de entidade.</param>
+        <summary>Obtém os erros de validação para uma propriedade especificada ou para a entidade inteira.</summary>
+        <returns>Os erros de validação para a propriedade ou entidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna um <xref:System.Collections.IEnumerable> que pode alterar como as regras de validação assíncrona concluir o processamento. Isso permite que o mecanismo de associação atualizar automaticamente os comentários de validação de interface do usuário quando erros são adicionados, removidos ou modificados.  
+  
+ O valor de retorno pode mudar para outro <xref:System.Collections.IEnumerable>, ou pode reutilizar um previamente retornado <xref:System.Collections.IEnumerable> e alterar seu conteúdo. As alterações para o valor de retorno devem gerar o <xref:System.ComponentModel.INotifyDataErrorInfo.ErrorsChanged> evento, mesmo se o valor de retorno implementa <xref:System.Collections.Specialized.INotifyCollectionChanged>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasErrors">
+      <MemberSignature Language="C#" Value="public bool HasErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasErrors" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.INotifyDataErrorInfo.HasErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a entidade tem erros de validação.</summary>
+        <value>
+          <see langword="true" /> se a entidade tiver erros de validação no momento; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna `false` se não há nenhum erro de validação de nível de entidade ou propriedade conhecido para a entidade no momento em que ela é acessada. No entanto, algumas regras de validação podem ainda estar em execução assíncrona como descritas para o <xref:System.ComponentModel.INotifyDataErrorInfo.GetErrors%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

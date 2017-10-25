@@ -1,0 +1,21 @@
+<Namespace Name="System.Web.Security">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Security" /> namespace contém classes que são usadas para implementar a segurança do ASP.NET em aplicativos de servidor Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.Membership> classe é usada por aplicativos do ASP.NET para validar as credenciais do usuário e gerenciar configurações de usuário, como senhas e endereços de email. O <xref:System.Web.Security.Roles> classe permite que você gerencie a autorização para seu aplicativo com base em grupos de usuários atribuídos a funções no aplicativo Web.  
+  
+ Ambos os <xref:System.Web.Security.Membership> classe e o <xref:System.Web.Security.Roles> classe trabalho com provedores de classes que acessar o repositório de dados do aplicativo para recuperar informações de associação e funções. Informações de associação e funções podem ser armazenadas em um banco de dados do Microsoft SQL Server usando o <xref:System.Web.Security.SqlMembershipProvider> e <xref:System.Web.Security.SqlRoleProvider> classes; em um Active Directory usando o <xref:System.Web.Security.ActiveDirectoryMembershipProvider> e <xref:System.Web.Security.AuthorizationStoreRoleProvider> classes ou em uma fonte de dados personalizados usando implementações do <xref:System.Web.Security.MembershipProvider> e <xref:System.Web.Security.RoleProvider> classes.  
+  
+ Configurar a associação do ASP.NET usando o [associação Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b9c1ee8f-33ca-4361-8666-b42a0fe86049). Quando um aplicativo usando a associação é acessado, o ASP.NET cria uma instância do <xref:System.Web.Security.Membership> classe que você pode usar para consultar informações de associação. Implementações específicas do provedor de <xref:System.Web.Security.MembershipUser> classe contêm informações sobre o usuário que está acessando a página. Você pode criar implementações personalizadas de <xref:System.Web.Security.MembershipUser> classe para seu aplicativo.  
+  
+ Configurar as funções do ASP.NET usando o [roleManager Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b0f6078-4824-4fc8-a5ee-4ae00ee3ceec). O ASP.NET cria uma instância do <xref:System.Web.Security.Roles> classe que contém informações sobre a associação de função do usuário atual.  
+  
+ O ASP.NET fornece controles de servidor que interagem com o <xref:System.Web.Security.Membership> classe e o <xref:System.Web.Security.Roles> classe. O <xref:System.Web.UI.WebControls.Login>, <xref:System.Web.UI.WebControls.CreateUserWizard>, e <xref:System.Web.UI.WebControls.ChangePassword> controles funcionam com o <xref:System.Web.Security.Membership> classe para simplificar a criação de um aplicativo Web autenticado e o <xref:System.Web.UI.WebControls.LoginView> controle usa modelos específicos de função para personalizar as páginas da Web para grupos de usuários específicos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

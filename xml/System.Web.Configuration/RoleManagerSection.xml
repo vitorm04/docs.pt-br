@@ -1,0 +1,638 @@
+<Type Name="RoleManagerSection" FullName="System.Web.Configuration.RoleManagerSection">
+  <TypeSignature Language="C#" Value="public sealed class RoleManagerSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RoleManagerSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.RoleManagerSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define as configurações que são usadas para oferecer suporte a infraestrutura de gerenciamento de função de aplicativos da Web. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection> classe fornece uma maneira de acessar e modificar o conteúdo de programaticamente o `roleManager` seção do arquivo de configuração.  
+  
+   
+  
+## Examples  
+ Esta seção fornece dois exemplos de código. A primeira demonstra como especificar declarativamente valores para várias propriedades da <xref:System.Web.Configuration.RoleManagerSection> classe. O segundo demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection> tipo.  
+  
+ O exemplo de arquivo de configuração a seguir mostra como especificar declarativamente valores para várias propriedades da <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+```  
+<system.web>  
+  <roleManager   
+    enabled="false"   
+    cacheRolesInCookie="false"   
+    cookieName=".ASPXROLES" cookieTimeout="30"  
+    cookiePath="/" cookieRequireSSL="false"  
+    cookieSlidingExpiration="true" createPersistentCookie="false"  
+    cookieProtection="All"   
+    defaultProvider="AspNetSqlRoleProvider"  
+    maxCachedResults="25"  >  
+    <providers>  
+      <add   
+        name="AspNetSqlRoleProvider"  
+        connectionStringName="LocalSqlServer"   
+        applicationName="/"  
+        type="System.Web.Security.SqlRoleProvider, System.Web,  
+          Version=2.0.3600.0, Culture=neutral,  
+          PublicKeyToken=b03f5f7f11d50a3a" />  
+      <add   
+        name="AspNetWindowsTokenRoleProvider"   
+        applicationName="/"  
+        type="System.Web.Security.WindowsTokenRoleProvider, System.Web,   
+          Version=2.0.3600.0, Culture=neutral,   
+          PublicKeyToken=b03f5f7f11d50a3a" />  
+    </providers>  
+  </roleManager>  
+</system.web>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection> tipo.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#1)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoleManagerSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RoleManagerSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.RoleManagerSection" /> classe usando as configurações padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.RoleManagerSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ A tabela a seguir mostra as configurações padrão que são usadas para o <xref:System.Web.Configuration.RoleManagerSection.%23ctor%2A> construtor.  
+  
+|Propriedade|Valor padrão|  
+|--------------|-------------------|  
+|<xref:System.Web.Configuration.RoleManagerSection.Enabled%2A>|`false`|  
+|<xref:System.Web.Configuration.RoleManagerSection.CacheRolesInCookie%2A>|`false`|  
+|<xref:System.Web.Configuration.RoleManagerSection.CookieName%2A>|". ASPXROLES"|  
+|<xref:System.Web.Configuration.RoleManagerSection.CookiePath%2A>|"/"|  
+|<xref:System.Web.Configuration.RoleManagerSection.CookieProtection%2A>|`All`|  
+|<xref:System.Web.Configuration.RoleManagerSection.CookieRequireSSL%2A>|`false`|  
+|<xref:System.Web.Configuration.RoleManagerSection.CookieSlidingExpiration%2A>|`true`|  
+|<xref:System.Web.Configuration.RoleManagerSection.CookieTimeout%2A>|30, em minutos|  
+|<xref:System.Web.Configuration.RoleManagerSection.CreatePersistentCookie%2A>|`false`|  
+|<xref:System.Web.Configuration.RoleManagerSection.DefaultProvider%2A>|"AspNetSqlRoleProvider"|  
+|<xref:System.Web.Configuration.RoleManagerSection.Domain%2A>|Uma cadeia de caracteres vazia ("")|  
+|<xref:System.Web.Configuration.RoleManagerSection.MaxCachedResults%2A>|25|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheRolesInCookie">
+      <MemberSignature Language="C#" Value="public bool CacheRolesInCookie { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CacheRolesInCookie" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.CacheRolesInCookie" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cacheRolesInCookie", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as funções do usuário atual são armazenadas em um cookie.</summary>
+        <value>
+          <see langword="true" /> se as funções do usuário atual são armazenadas em cache em um cookie. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection.CacheRolesInCookie%2A> propriedade retorna um valor booliano que indica se o armazenamento de cookie para nomes de função está habilitado.  
+  
+ Quando o <xref:System.Web.Configuration.RoleManagerSection.CacheRolesInCookie%2A> está definida como `true` no arquivo de configuração, as informações da função de cada usuário são armazenadas em um cookie no cliente. Quando o gerenciamento de função verifica para determinar se um usuário está em uma função específica, o cookie de funções é verificado antes de chamar o provedor de função para verificar a lista de funções na fonte de dados. O cookie é atualizado dinamicamente no cliente para armazenar em cache os nomes de função validados mais recentemente.  
+  
+ Você pode melhorar a confiabilidade dos nomes de função são armazenados em cache em um cookie, especificando um <xref:System.Web.Configuration.RoleManagerSection.CookieProtection%2A> propriedade quando você configura o `roleManager` seção do arquivo de configuração. O padrão <xref:System.Web.Configuration.RoleManagerSection.CookieProtection%2A> é de propriedade `All`, que criptografa os nomes de função no cookie e valida que o conteúdo do cookie não foram alterado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.CacheRolesInCookie%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#2)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieName">
+      <MemberSignature Language="C#" Value="public string CookieName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CookieName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.CookieName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do cookie que é usado para nomes de função de cache.</summary>
+        <value>O nome do cookie usado para nomes de função de cache. O padrão é ". ASPXROLES".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection.CookieName%2A> propriedade retorna o nome do cookie que é usado para nomes de função de cache. Você pode especificar o nome do cookie em funções são armazenadas em cache para seu aplicativo, definindo o `cookieName` atributo no arquivo Web. config para seu aplicativo ASP.NET. Isso é útil quando você deseja identificar exclusivamente um cookie para o seu aplicativo ou quando um cookie é compartilhado entre vários aplicativos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.CookieName%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#3)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookiePath">
+      <MemberSignature Language="C#" Value="public string CookiePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CookiePath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.CookiePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookiePath", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho virtual do cookie é usado para armazenar em cache os nomes de função.</summary>
+        <value>O caminho do cookie usado para armazenar os nomes de função. O padrão é "/".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar o caminho do cookie em que os nomes de função são armazenados em cache para seu aplicativo, definindo o `cookiePath` atributo no arquivo Web. config para seu aplicativo ASP.NET. O <xref:System.Web.Configuration.RoleManagerSection.CookiePath%2A> propriedade retorna o valor da `cookiePath` atributo do arquivo Web. config. O caminho diferencia maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.CookiePath%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#4)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieProtection">
+      <MemberSignature Language="C#" Value="public System.Web.Security.CookieProtection CookieProtection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Security.CookieProtection CookieProtection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.CookieProtection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieProtection", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.CookieProtection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de segurança que é usado para proteger o cookie que armazena em cache os nomes de função.</summary>
+        <value>O tipo de proteção de segurança usado no cookie onde os nomes de função são armazenados em cache. O padrão é <see langword="All" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection.CookieProtection%2A> propriedade descreve como as informações em um cookie é armazenadas com segurança. Você pode especificar o tipo de segurança do cookie em funções são armazenadas em cache para seu aplicativo, definindo o `cookieProtection` atributo no arquivo Web. config para seu aplicativo ASP.NET. O `cookieProtection` atributo toma uma <xref:System.Web.Security.CookieProtection> valor de enumeração de `All`, `Encryption`, `None`, ou `Validation`. O padrão é `All`. Certifique-se de usar o valor padrão para o <xref:System.Web.Configuration.RoleManagerSection.CookieProtection%2A> propriedade se desejar que a validação de dados e criptografia para ajudar a proteger o cookie. Para melhorar a proteção de seus cookies, você também pode definir o <xref:System.Web.Configuration.RoleManagerSection.CookieRequireSSL%2A> propriedade `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.CookieProtection%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#5)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieRequireSSL">
+      <MemberSignature Language="C#" Value="public bool CookieRequireSSL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CookieRequireSSL" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.CookieRequireSSL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieRequireSSL", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cookie é usado para nomes de função de cache requer uma conexão Secure Sockets Layer (SSL) para ser retornado para o servidor.</summary>
+        <value>
+          <see langword="true" />Se uma conexão SSL é necessário para retornar para o servidor de cookie onde os nomes de função são armazenados em cache; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar se o SSL é necessário para retornar o cookie de nomes de função para o servidor definindo a `cookieRequireSSL` atributo no arquivo Web. config para seu aplicativo ASP.NET.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.CookieRequireSSL%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#6)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieSlidingExpiration">
+      <MemberSignature Language="C#" Value="public bool CookieSlidingExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CookieSlidingExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.CookieSlidingExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieSlidingExpiration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cookie é usado para armazenar em cache os nomes de função será reinicializado periodicamente.</summary>
+        <value>
+          <see langword="true" />Se a data de expiração do cookie de nomes de função e a hora serão redefinidas periodicamente; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar se o cookie é usado para nomes de função de cache é periodicamente redefinir ou expirado em um ponto fixo no tempo usando o `cookieSlidingExpiration` atributo no arquivo Web. config para seu aplicativo ASP.NET. Se `true`, a expiração do cookie é inicialmente definida como a data e hora atuais mais o <xref:System.Web.Configuration.RoleManagerSection.CookieTimeout%2A> propriedade, em minutos. Enquanto o usuário continua a usar ativamente o aplicativo ASP.NET, a data de expiração do cookie é atualizado automaticamente, se houver menos da metade do <xref:System.Web.Configuration.RoleManagerSection.CookieTimeout%2A> restantes. O padrão é `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.CookieSlidingExpiration%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#7)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan CookieTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CookieTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.CookieTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanMinutesOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de minutos antes que o cookie é usado para nomes de função de cache expira.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> que é o número de minutos antes que o cookie usado para nomes de função de cache expira. O padrão é 30, em minutos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection.CookieTimeout%2A> propriedade define um valor que especifica o número de minutos antes de expira o cookie de nomes de função. O padrão é 30 minutos. Se o <xref:System.Web.Configuration.RoleManagerSection.CookieSlidingExpiration%2A> é de propriedade `false`, o <xref:System.Web.Configuration.RoleManagerSection.CookieTimeout%2A> propriedade será ignorada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.CookieTimeout%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#8)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePersistentCookie">
+      <MemberSignature Language="C#" Value="public bool CreatePersistentCookie { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CreatePersistentCookie" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.CreatePersistentCookie" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("createPersistentCookie", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se um cookie de sessão ou um cookie persistente é usado para armazenar em cache os nomes de função.</summary>
+        <value>
+          <see langword="true" />Para fazer com que o cookie de nomes de função persistente entre sessões de navegador; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection.CreatePersistentCookie%2A> propriedade indica se o cookie é usado para nomes de função de cache deve ser um cookie baseada em sessão, o que significa que o cookie é perdido quando o navegador for fechado, ou um cookie persistente, o que significa que o cookie está disponível nas sessões do navegador. O padrão é `false`, indicando que um cookie de sessão é usado para armazenar em cache os nomes de função.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.CreatePersistentCookie%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#9)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultProvider">
+      <MemberSignature Language="C#" Value="public string DefaultProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.DefaultProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultProvider", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do provedor padrão que é usado para gerenciar funções.</summary>
+        <value>O nome de um provedor no <see cref="P:System.Web.Configuration.RoleManagerSection.Providers" />. O padrão é "AspNetSqlRoleProvider".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection.DefaultProvider%2A> propriedade deve corresponder a um valor nomeado o `providers` subseção do `roleManager` seção de um arquivo de configuração. Uma cadeia de caracteres vazia ("") não é um valor válido para o <xref:System.Web.Configuration.RoleManagerSection.DefaultProvider%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.CookieSlidingExpiration%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#10)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("domain")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do domínio que está associado com o cookie é usado para armazenar em cache os nomes de função.</summary>
+        <value>O <see cref="P:System.Web.HttpCookie.Domain" /> do cookie usado para nomes de função de cache. O padrão é uma cadeia de caracteres vazia (<see langword="&quot;&quot;" />).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection.Domain%2A> propriedade é definida na configuração de um aplicativo ASP.NET usando o `domain` atributo o `roleManager` elemento de configuração. Se nenhum valor for especificado na configuração para o `domain` atributo, o <xref:System.Web.Configuration.RoleManagerSection.Domain%2A> propriedade retorna `null` e nomes de função padrão de domínio do cookie é o comportamento do <xref:System.Web.HttpCookie.Domain%2A> propriedade. O padrão é uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o recurso de gerenciamento de função ASP.NET está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o recurso de gerenciamento de função ASP.NET estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.RoleManagerSection.Enabled%2A> propriedade retorna um valor booliano que indica se o recurso de gerenciamento de função ASP.NET pode ser acessado em tempo de execução ou não.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.Enabled%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#12)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCachedResults">
+      <MemberSignature Language="C#" Value="public int MaxCachedResults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxCachedResults" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.MaxCachedResults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("maxCachedResults", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de funções que o ASP.NET armazena o cookie de função.</summary>
+        <value>Um valor que indica o número máximo de funções ASP.NET armazena em cache no cookie de função. O padrão é 25.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.Roles.MaxCachedResults%2A> propriedade retorna um inteiro que indica o número máximo de funções que o ASP.NET armazena em cache no cookie de função. O padrão é 25.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public System.Configuration.ProviderSettingsCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ProviderSettingsCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RoleManagerSection.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("providers")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ProviderSettingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.ProviderSettingsCollection" /> objeto do <see cref="T:System.Configuration.ProviderSettings" /> elementos.</summary>
+        <value>Um <see cref="T:System.Configuration.ProviderSettingsCollection" /> que contém os provedores de configurações definidas dentro do <see langword="providers" /> subseção do <see langword="roleManager" /> seção do arquivo de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Provedores de gerenciamento de função são componentes que fornecem acesso aos tipos de funções para um site. Você pode especificar provedores de gerenciamento de função no `providers` subseção do `roleManager` seção de um arquivo de configuração.  
+  
+ O <xref:System.Web.Configuration.RoleManagerSection.DefaultProvider%2A> propriedade especifica o provedor que é usado por padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.RoleManagerSection.Providers%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.RoleManagerSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.RoleManagerSection#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/CS/rolemanagersection.cs#13)]
+ [!code-vb[System.Web.Configuration.RoleManagerSection#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.RoleManagerSection/VB/rolemanagersection.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

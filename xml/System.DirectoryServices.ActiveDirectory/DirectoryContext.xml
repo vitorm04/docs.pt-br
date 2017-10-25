@@ -1,0 +1,209 @@
+<Type Name="DirectoryContext" FullName="System.DirectoryServices.ActiveDirectory.DirectoryContext">
+  <TypeSignature Language="C#" Value="public class DirectoryContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DirectoryContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> identifica um diretório específico e as credenciais usadas para acessar o diretório.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um contexto de diretório deve ser criado antes de acessar os métodos e propriedades de um objeto de diretório do ActiveDirectory como um domínio ou floresta.  
+  
+ Ao criar um contexto de diretório, o processo atuais credenciais ou credenciais alternativas podem ser aplicadas para esse contexto usando o construtor apropriado.  Essas credenciais determinam as permissões que estão em vigor quando o programa acessa objetos de diretório.  Como objetos de serviços de domínio do Active Directory podem ser protegidos contra recuperação ou modificação por usuários não administrativos, o uso de credenciais alternativas com permissão para acessar os objetos de destino, às vezes, é necessário para a funcionalidade do programa apropriado.  
+  
+ A tabela a seguir contém uma lista dos tipos de destino que são permitidos e uma descrição do formato da cadeia de caracteres de destino.  
+  
+|Tipo de destino|Membro do <xref:System.DirectoryServices.ActiveDirectory.DirectoryContextType>|Formato de nome de destino|  
+|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|  
+|Controlador de domínio|<xref:System.DirectoryServices.ActiveDirectory.DirectoryContextType.DirectoryServer>|O nome DNS do controlador de domínio.|  
+|Instância do AD LDS|<xref:System.DirectoryServices.ActiveDirectory.DirectoryContextType.DirectoryServer>|O nome DNS do servidor do AD LDS e o LDAP número da porta, por exemplo, ad_lds_instance.fabrikam.com:389.|  
+|Domain|<xref:System.DirectoryServices.ActiveDirectory.DirectoryContextType.Domain>|O nome DNS do domínio, por exemplo, sales.corp.fabrikam.com.|  
+|Floresta|<xref:System.DirectoryServices.ActiveDirectory.DirectoryContextType.Forest>|O nome DNS da floresta, por exemplo, corp.fabrikam.com.|  
+|Partição de aplicativo|<xref:System.DirectoryServices.ActiveDirectory.DirectoryContextType.ApplicationPartition>|O nome DNS da partição de aplicativos.|  
+|Conjunto de configurações do AD LDS|<xref:System.DirectoryServices.ActiveDirectory.DirectoryContextType.ConfigurationSet>|Uma das palavras-chave que está associado com o ponto de conexão de serviço registrado por instâncias do AD LDS para o conjunto de configurações.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryContext (System.DirectoryServices.ActiveDirectory.DirectoryContextType contextType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DirectoryServices.ActiveDirectory.DirectoryContextType contextType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DirectoryContext.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContextType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.DirectoryServices.ActiveDirectory.DirectoryContextType" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">Um dos membros <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContextType" /> que especifica o tipo de contexto a ser criado.  Para esse construtor, o tipo de contexto deve ser <see cref="F:System.DirectoryServices.ActiveDirectory.DirectoryContextType.Domain" /> ou <see cref="F:System.DirectoryServices.ActiveDirectory.DirectoryContextType.Forest" />.  Outros tipos de contextos de diretório não podem ser criados com esse construtor, pois outros tipos exigem um construtor que inclui um parâmetro que especifica o nome de diretório ou de destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> do tipo especificado que contém as credenciais do contexto do usuário atual.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contextType" /> não é válido.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Essa classe não funciona na plataforma atual.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryContext (System.DirectoryServices.ActiveDirectory.DirectoryContextType contextType, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DirectoryServices.ActiveDirectory.DirectoryContextType contextType, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DirectoryContext.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContextType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.DirectoryServices.ActiveDirectory.DirectoryContextType" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">Um dos membros <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContextType" /> que especifica o tipo de contexto a ser criado.</param>
+        <param name="name">O destino do contexto de diretório. Essa cadeia de caracteres pode assumir qualquer formato definido na seção Comentários do tópico <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> do tipo especificado que contém o nome especificado e as credenciais do contexto do usuário atual.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="contextType" /> não é válido.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Essa classe não funciona na plataforma atual.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryContext (System.DirectoryServices.ActiveDirectory.DirectoryContextType contextType, string username, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DirectoryServices.ActiveDirectory.DirectoryContextType contextType, string username, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DirectoryContext.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContextType,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.DirectoryServices.ActiveDirectory.DirectoryContextType" />
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">Um dos membros <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContextType" /> que especifica o tipo de contexto a ser criado. Para esse construtor, esse parâmetro deve ser <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContextType" /> ou <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContextType" />.</param>
+        <param name="username">O nome de usuário a ser usado para acesso.</param>
+        <param name="password">A senha a ser usada para acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> classe do tipo especificado que contém o nome de usuário especificado e a senha.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contextType" /> não é válido.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Essa classe não funciona na plataforma atual.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryContext (System.DirectoryServices.ActiveDirectory.DirectoryContextType contextType, string name, string username, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DirectoryServices.ActiveDirectory.DirectoryContextType contextType, string name, string username, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.DirectoryContext.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContextType,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.DirectoryServices.ActiveDirectory.DirectoryContextType" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">Um dos membros <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContextType" /> que especifica o tipo de contexto a ser criado.</param>
+        <param name="name">O destino do contexto de diretório. Essa cadeia de caracteres pode assumir qualquer formato definido na seção Comentários do tópico <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" />.</param>
+        <param name="username">O nome de usuário a ser usado para acesso.</param>
+        <param name="password">A senha a ser usada para acesso.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> do tipo especificado que contém o destino, nome de usuário e senha especificados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="contextType" /> não é válido.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Essa classe não funciona na plataforma atual.</exception>
+        <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextType">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DirectoryContextType ContextType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.DirectoryContextType ContextType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DirectoryContext.ContextType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DirectoryContextType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de objeto de contexto.</summary>
+        <value>Uma da <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContextType" /> membros que especifica o tipo de contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DirectoryContext.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do contexto.</summary>
+        <value>O nome do contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.DirectoryContext.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de usuário do contexto.</summary>
+        <value>O nome de usuário a ser usado para acesso neste contexto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

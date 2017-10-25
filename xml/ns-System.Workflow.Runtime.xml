@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.Runtime">
+  <Docs>
+    <summary>Fornece classes relacionadas ao tempo de execução do fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

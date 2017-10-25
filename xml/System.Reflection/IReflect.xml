@@ -1,0 +1,523 @@
+<Type Name="IReflect" FullName="System.Reflection.IReflect">
+  <TypeSignature Language="C#" Value="public interface IReflect" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReflect" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.IReflect" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("AFBF15E5-C37C-11d2-B88E-00A0C9B471B8")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Interopera com a [interface IDispatch](http://msdn.microsoft.com/en-us/ebbff4bc-36b2-4861-9efa-ffa45e013eb5).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.IReflect> interface é usada para interagir com o [interface IDispatch](http://msdn.microsoft.com/en-us/ebbff4bc-36b2-4861-9efa-ffa45e013eb5). <xref:System.Reflection.IReflect>define um subconjunto de <xref:System.Type> métodos de reflexão. Implementar essa interface permite que um tipo personalizar seu comportamento quando o objeto está sendo acessado de COM, como um `IDispatch` objeto. O <xref:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler> classe pode ser usada para realizar marshaling de um objeto que implementa <xref:System.Reflection.IReflect> ou <xref:System.Runtime.InteropServices.Expando.IExpando> como uma COM `IDispatch` objeto e vice-versa.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetField">
+      <MemberSignature Language="C#" Value="public System.Reflection.FieldInfo GetField (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.FieldInfo GetField(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetField(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do campo a ser localizado.</param>
+        <param name="bindingAttr">Os atributos de associação usados para controlar a pesquisa.</param>
+        <summary>Retorna o <see cref="T:System.Reflection.FieldInfo" /> objeto corresponde ao campo especificado e o sinalizador de associação.</summary>
+        <returns>Um <see cref="T:System.Reflection.FieldInfo" /> objeto que contém as informações de campo para o objeto nomeado que atenda às restrições de pesquisa especificadas em <paramref name="bindingAttr" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">O objeto implementa vários campos com o mesmo nome.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFields">
+      <MemberSignature Language="C#" Value="public System.Reflection.FieldInfo[] GetFields (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.FieldInfo[] GetFields(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetFields(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Os atributos de associação usados para controlar a pesquisa.</param>
+        <summary>Retorna uma matriz de <see cref="T:System.Reflection.FieldInfo" /> objetos que correspondem a todos os campos da classe atual.</summary>
+        <returns>Uma matriz de <see cref="T:System.Reflection.FieldInfo" /> objetos que contém todas as informações para este objeto de reflexão que atenda às restrições de pesquisa especificadas no campo <paramref name="bindingAttr" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A correspondência é baseada em um nome. Cada campo deve ter um nome exclusivo. O <xref:System.Reflection.BindingFlags?displayProperty=nameWithType> sinalizador Especifica que os métodos não-públicos são incluídos na pesquisa. O <xref:System.Reflection.BindingFlags?displayProperty=nameWithType> sinalizador Especifica que os métodos públicos são incluídos na pesquisa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMember">
+      <MemberSignature Language="C#" Value="public System.Reflection.MemberInfo[] GetMember (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MemberInfo[] GetMember(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetMember(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do membro a ser localizado.</param>
+        <param name="bindingAttr">Os atributos de associação usados para controlar a pesquisa.</param>
+        <summary>Recupera uma matriz de <see cref="T:System.Reflection.MemberInfo" /> objetos correspondentes para todos os membros públicos ou para todos os membros que correspondem a um nome especificado.</summary>
+        <returns>Uma matriz de <see cref="T:System.Reflection.MemberInfo" /> objetos correspondentes a <paramref name="name" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.IReflect.GetMember%2A> método recupera uma matriz de <xref:System.Reflection.MemberInfo> objetos usando o nome e o atributo de associação que correspondem a todos os membros públicos ou todos os membros que correspondem a um nome especificado. No caso do nome especificado é observado ou ignorado, conforme especificado por <xref:System.Reflection.BindingFlags?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMembers">
+      <MemberSignature Language="C#" Value="public System.Reflection.MemberInfo[] GetMembers (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MemberInfo[] GetMembers(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetMembers(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Os atributos de associação usados para controlar a pesquisa.</param>
+        <summary>Recupera uma matriz de <see cref="T:System.Reflection.MemberInfo" /> objetos que correspondem a todos os membros públicos ou para todos os membros da classe atual.</summary>
+        <returns>Uma matriz de <see cref="T:System.Reflection.MemberInfo" /> objetos que contém todas as informações de membro para esse objeto de reflexão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma matriz de <xref:System.Reflection.MemberInfo> objetos usando o atributo de associação que corresponde a todos os membros públicos ou para todos os membros da classe atual. Retorna uma matriz de todos os membros definidos para esse objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo GetMethod (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetMethod(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetMethod(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do membro a ser localizado.</param>
+        <param name="bindingAttr">Os atributos de associação usados para controlar a pesquisa.</param>
+        <summary>Recupera um <see cref="T:System.Reflection.MethodInfo" /> especificado de objeto que corresponde a um método especificado em restrições de pesquisa.</summary>
+        <returns>Um <see cref="T:System.Reflection.MethodInfo" /> objeto que contém as informações do método, com a correspondência baseada nas restrições de nome e a pesquisa de método especificadas em <paramref name="bindingAttr" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">O objeto implementa vários métodos com o mesmo nome.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo GetMethod (string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo GetMethod(string name, valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetMethod(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do membro a ser localizado.</param>
+        <param name="bindingAttr">Os atributos de associação usados para controlar a pesquisa.</param>
+        <param name="binder">Um objeto que implementa <see cref="T:System.Reflection.Binder" />, contendo as propriedades relacionadas a este método.</param>
+        <param name="types">Uma matriz usada para escolher entre os métodos sobrecarregados.</param>
+        <param name="modifiers">Uma matriz de modificadores de parâmetro usados para fazer a associação funcionar com assinaturas de parâmetro nos quais os tipos foram modificados.</param>
+        <summary>Recupera um <see cref="T:System.Reflection.MethodInfo" /> objeto correspondente a um método especificado, usando um <see cref="T:System.Type" /> métodos sobrecarregados de matriz para a escolha de entre.</summary>
+        <returns>O método solicitado que corresponde aos parâmetros especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno é uma correspondência com base no nome do método, <xref:System.Reflection.BindingFlags> membro de enumeração, o tipo de conversão de tipo especificado pelo `binder` parâmetro, a sobrecarga e o <xref:System.Reflection.ParameterInfo> que descreve a assinatura do método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">O objeto implementa vários métodos com o mesmo nome.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethods">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo[] GetMethods (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.MethodInfo[] GetMethods(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetMethods(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Os atributos de associação usados para controlar a pesquisa.</param>
+        <summary>Recupera uma matriz de <see cref="T:System.Reflection.MethodInfo" /> objetos com todos os métodos públicos ou todos os métodos da classe atual.</summary>
+        <returns>Uma matriz de <see cref="T:System.Reflection.MethodInfo" /> objetos que contém todos os métodos definidos para esse objeto de reflexão atendem as restrições de pesquisa especificadas em <paramref name="bindingAttr" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O atributo não-públicos de `bindingAttr` é indicada apenas se os métodos públicos são retornados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public System.Reflection.PropertyInfo[] GetProperties (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.PropertyInfo[] GetProperties(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetProperties(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">O atributo de associação usado para controlar a pesquisa.</param>
+        <summary>Recupera uma matriz de objetos <see cref="T:System.Reflection.PropertyInfo" /> que correspondem a todas as propriedades públicas ou a todas as propriedades da classe atual.</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Reflection.PropertyInfo" /> para todas as propriedades definidas no objeto de reflexão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public System.Reflection.PropertyInfo GetProperty (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.PropertyInfo GetProperty(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetProperty(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade a ser localizada.</param>
+        <param name="bindingAttr">Os atributos de associação usados para controlar a pesquisa.</param>
+        <summary>Recupera um <see cref="T:System.Reflection.PropertyInfo" /> especificado de objeto correspondente a uma propriedade especificada em restrições de pesquisa.</summary>
+        <returns>Um <see cref="T:System.Reflection.PropertyInfo" /> objeto para a propriedade localizado que atenda às restrições de pesquisa especificadas em <paramref name="bindingAttr" />, ou <see langword="null" /> se a propriedade não foi localizada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">O objeto implementa vários campos com o mesmo nome.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public System.Reflection.PropertyInfo GetProperty (string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, Type returnType, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.PropertyInfo GetProperty(string name, valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, class System.Type returnType, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.GetProperty(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Type,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do membro a ser localizado.</param>
+        <param name="bindingAttr">O atributo de associação usado para controlar a pesquisa.</param>
+        <param name="binder">Um objeto que implementa <see cref="T:System.Reflection.Binder" />, contendo as propriedades relacionadas a este método.</param>
+        <param name="returnType">O tipo da propriedade.</param>
+        <param name="types">Uma matriz usada para escolher entre os métodos sobrecarregados com o mesmo nome.</param>
+        <param name="modifiers">Uma matriz usada para escolher os modificadores de parâmetro.</param>
+        <summary>Recupera um <see cref="T:System.Reflection.PropertyInfo" /> especificado de objeto que corresponde a uma propriedade especificada com restrições de pesquisa.</summary>
+        <returns>Um <see cref="T:System.Reflection.PropertyInfo" /> objeto para a propriedade localizado, se uma propriedade com o nome especificado foi localizada no objeto reflexão, ou <see langword="null" /> se a propriedade não foi localizada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método recupera um <xref:System.Reflection.PropertyInfo> especificado de objeto correspondente a uma propriedade especificada em restrições de pesquisa. Uma matriz de tipo é usada para escolher entre os métodos sobrecarregados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMember">
+      <MemberSignature Language="C#" Value="public object InvokeMember (string name, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object target, object[] args, System.Reflection.ParameterModifier[] modifiers, System.Globalization.CultureInfo culture, string[] namedParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object InvokeMember(string name, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object target, object[] args, valuetype System.Reflection.ParameterModifier[] modifiers, class System.Globalization.CultureInfo culture, string[] namedParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.IReflect.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="namedParameters" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do membro a ser localizado.</param>
+        <param name="invokeAttr">Uma da <see cref="T:System.Reflection.BindingFlags" /> atributos de invocação. O <c>invokeAttr</c> parâmetro pode ser um construtor, método, propriedade ou campo. Um atributo de invocação adequado deve ser especificado. Chamar o membro padrão de uma classe, passando a cadeia de caracteres vazia ("") como o nome do membro.</param>
+        <param name="binder">Uma da <see cref="T:System.Reflection.BindingFlags" /> sinalizadores de bit. Implementa <see cref="T:System.Reflection.Binder" />, que contém as propriedades relacionadas a este método.</param>
+        <param name="target">O objeto no qual invocar o membro especificado. Esse parâmetro é ignorado para membros estáticos.</param>
+        <param name="args">Uma matriz de objetos que contém o número, ordem e tipo dos parâmetros do membro a ser invocado. Isso é uma matriz vazia se não houver nenhum parâmetro.</param>
+        <param name="modifiers">Uma matriz de objetos de <see cref="T:System.Reflection.ParameterModifier" />. Essa matriz tem o mesmo tamanho que o <c>args</c> parâmetro, que representa os atributos de argumento do membro invocado nos metadados. Um parâmetro pode ter os seguintes atributos: <see langword="pdIn" />, <see langword="pdOut" />, <see langword="pdRetval" />, <see langword="pdOptional" />, e <see langword="pdHasDefault" />. Esses representam [In], [Out], [retval], [opcional] e um parâmetro padrão, respectivamente. Esses atributos são usados por vários serviços de interoperabilidade.</param>
+        <param name="culture">Uma instância de <see cref="T:System.Globalization.CultureInfo" /> usada para determinar a coerção de tipos. Por exemplo, <c>cultura</c> converte um <see langword="String" /> que representa a 1000 para um <see langword="Double" /> valor, desde que 1000 é representado de forma diferente por diferentes culturas. Se esse parâmetro for <see langword="null" />, o <see cref="T:System.Globalization.CultureInfo" /> para o segmento atual é usado.</param>
+        <param name="namedParameters">A <see langword="String" /> matriz de parâmetros.</param>
+        <summary>Invoca um membro especificado.</summary>
+        <returns>O membro especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método a ser invocado deve ser acessível e forneça a correspondência mais específica com a lista de argumento especificado, sob as restrições de atributos especificados de fichário e invocação.  
+  
+ Um método é invocado se o número de parâmetros na declaração de método é igual ao número de argumentos na lista de argumentos especificada e o tipo de cada argumento pode ser convertido pelo associador para o tipo do parâmetro.  
+  
+> [!NOTE]
+>  A matriz de modificadores de parâmetro passado para o <xref:System.Reflection.IReflect.InvokeMember%2A> método deve conter um modificador de parâmetro único. Somente o modificador de parâmetro primeiro é considerado ao determinar o argumento deve ser passado por referência quando exposto a COM.  
+  
+ O associador localiza todos os métodos de correspondência, de acordo com o tipo de associação solicitada (<xref:System.Reflection.BindingFlags?displayProperty=nameWithType>, <xref:System.Reflection.IReflect.GetProperties%2A>e assim por diante). O conjunto de métodos é filtrado pelo nome, número de argumentos e um conjunto de modificadores de pesquisa definidos associador. Depois que o método for selecionado, ele é chamado e acessibilidade é verificada pelo ponto. A pesquisa pode controlar qual conjunto de métodos é pesquisado com base no atributo acessibilidade associado com o método. <xref:System.Reflection.Binder.BindToMethod%2A>Seleciona o método a ser invocado. O associador padrão seleciona a correspondência mais específica.  
+  
+ Restrições de acesso são ignoradas por código totalmente confiável. Ou seja, propriedades, métodos, campos e construtores privados podem ser acessadas e invocadas pela reflexão sempre que o código é totalmente confiável.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o valor de <xref:System.DateTime.Now%2A> propriedade.  
+  
+ [!code-cpp[Classic IReflect.InvokeMember Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic IReflect.InvokeMember Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic IReflect.InvokeMember Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic IReflect.InvokeMember Example/CS/source.cs#1)]
+ [!code-vb[Classic IReflect.InvokeMember Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic IReflect.InvokeMember Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Mais de um argumento é especificado para um campo <see langword="set" />.</exception>
+        <exception cref="T:System.MissingFieldException">Não é possível encontrar o campo nem a propriedade.</exception>
+        <exception cref="T:System.MissingMethodException">O método não pode ser encontrado.</exception>
+        <exception cref="T:System.Security.SecurityException">Um membro privado é chamado sem a necessidade <see cref="T:System.Security.Permissions.ReflectionPermission" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlyingSystemType">
+      <MemberSignature Language="C#" Value="public Type UnderlyingSystemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type UnderlyingSystemType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.IReflect.UnderlyingSystemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo subjacente que representa o <see cref="T:System.Reflection.IReflect" /> objeto.</summary>
+        <value>O tipo subjacente que representa o <see cref="T:System.Reflection.IReflect" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

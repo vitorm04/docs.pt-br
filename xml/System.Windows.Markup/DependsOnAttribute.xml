@@ -1,0 +1,108 @@
+<Type Name="DependsOnAttribute" FullName="System.Windows.Markup.DependsOnAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DependsOnAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DependsOnAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.DependsOnAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method | System.AttributeTargets.Property, AllowMultiple=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que a propriedade atribuída é dependente do valor de outra propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Markup.XamlWriter.Save%2A> método <xref:System.Windows.Markup.XamlWriter> processará a propriedade especificada antes de processar a propriedade que esse atributo é definido no.  
+  
+ O `name` valor aplicado a este atributo deve ser o nome não qualificado simples de uma propriedade que existe no mesmo tipo. Você não pode especificar propriedades anexadas como dependentes.  
+  
+ Ao aplicar esse atributo, deve ter cuidado para evitar dependências circulares.  Dependências circulares são detectadas apenas quando todas as propriedades no ciclo foram gravadas e mesmo assim o comportamento é não determinístico.  
+  
+ Aplicar esse atributo a uma definição de propriedade garante que as propriedades dependentes são processadas primeiro por escrito do objeto XAML. Ele faz parte das regras gerais de marcação XAML que valores de atributo aplicado para um objeto criado devem ser capazes de ser processado em qualquer ordem. Usos de <xref:System.Windows.Markup.DependsOnAttribute> especificar os casos excepcionais de propriedades em tipos de onde uma ordem específica de análise deve ser seguida para a criação de objeto válido.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existia no assembly específicos de WPF WindowsBase. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.DependsOnAttribute> está no assembly System. XAML. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
+ O <xref:System.Windows.Setter.Value%2A> propriedade o <xref:System.Windows.Setter> classe é um exemplo de uma propriedade em WPF onde o <xref:System.Windows.Markup.DependsOnAttribute> atributo é aplicado.  <xref:System.Windows.Setter.Value%2A>depende de <xref:System.Windows.Setter.Property%2A> e <xref:System.Windows.Setter.TargetName%2A> que está sendo processada primeiro, caso contrário, não é possível saber o tipo deve ser criado para casos de conversor de valor.  
+  
+<a name="xamlTextUsage_DependsOnAttribute"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DependsOnAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DependsOnAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">A propriedade que a propriedade associada a esta <see cref="T:System.Windows.Markup.DependsOnAttribute" /> depende.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.DependsOnAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.DependsOnAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade relacionado declarado neste <see cref="T:System.Windows.Markup.DependsOnAttribute" />.</summary>
+        <value>O nome da propriedade relacionado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.DependsOnAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo para este <see cref="T:System.Windows.Markup.DependsOnAttribute" />.</summary>
+        <value>O identificador exclusivo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um valor gerado que usa um comportamento de substituição para permitir que vários atributos com o mesmo <xref:System.Windows.Markup.DependsOnAttribute.Name%2A> a ser aplicado. Desde que as dependências não são vários circular ou outra forma ambíguo, <xref:System.Windows.Markup.DependsOnAttribute> há suporte para referências para o mesmo nome de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,47 @@
+<Type Name="VisualStyleElement+Tab" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Tab">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Tab" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Tab extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém classes que fornecem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> objetos para as partes de um controle guia. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab> classe fornece uma base na qual as classes a seguir são definidas:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.Body>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.Pane>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TabItem>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TabItemBothEdges>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TabItemLeftEdge>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TabItemRightEdge>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItem>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemBothEdges>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemLeftEdge>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab.TopTabItemRightEdge>  
+  
+ Cada uma dessas classes fornece uma ou mais propriedades que retornam um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para a parte do controle guia especificada pelo nome da classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

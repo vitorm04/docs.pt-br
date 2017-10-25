@@ -1,0 +1,223 @@
+<Type Name="WSHttpBindingElement" FullName="System.ServiceModel.Configuration.WSHttpBindingElement">
+  <TypeSignature Language="C#" Value="public class WSHttpBindingElement : System.ServiceModel.Configuration.WSHttpBindingBaseElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WSHttpBindingElement extends System.ServiceModel.Configuration.WSHttpBindingBaseElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.WSHttpBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.WSHttpBindingBaseElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma associação interoperável que dá suporte a transações distribuídas e sessões seguras e confiáveis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O wsHttpBinding é uma associação segura, confiável e interoperável adequada para contratos de serviço não-duplex. A associação implementa as seguintes especificações: WS-ReliableMessaging de confiabilidade e WS-Security para autenticação e segurança de mensagem. O transporte é HTTP e a codificação de mensagem é texto/XML codificação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSHttpBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WSHttpBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.WSHttpBindingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSHttpBindingElement (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WSHttpBindingElement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da configuração da associação. Esse valor deve ser exclusivo, porque ele é usado como identificação para a associação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.WSHttpBindingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCookies">
+      <MemberSignature Language="C#" Value="public bool AllowCookies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowCookies" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingElement.AllowCookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("allowCookies", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cliente WCF armazenará e reenviará automaticamente cookies enviados por um único serviço Web.</summary>
+        <value>
+          <see langword="True" /> se o processamento automático de cookies for necessário; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração <xref:System.ServiceModel.Configuration.WSHttpBindingElement.AllowCookies%2A> para `true` é útil quando um cliente está interagindo com um serviço web que usa cookies.  Se você estiver acessando vários serviços com o mesmo cookie, defina <xref:System.ServiceModel.Configuration.WSHttpBindingElement.AllowCookies%2A> para `false` e você terá que adicionar manualmente o cabeçalho do cookie para cada mensagem de saída. O código a seguir mostra como fazer isso:  
+  
+```csharp  
+MyWebServiceClient client = new MyWebServiceClient();  
+  
+        using (new OperationContextScope(client.InnerChannel))  
+        {  
+            client.DoSomething();  
+  
+            // Extract the cookie embedded in the received web service response  
+            // and stores it locally  
+            HttpResponseMessageProperty response = (HttpResponseMessageProperty)  
+            OperationContext.Current.IncomingMessageProperties[  
+                HttpResponseMessageProperty.Name];  
+            sharedCookie = response.Headers["Set-Cookie"];  
+        }  
+  
+        MyOtherWebServiceClient otherClient = new MyOtherWebServiceClient();  
+  
+        using (new OperationContextScope(otherClient.InnerChannel))  
+        {  
+            // Embeds the extracted cookie in the next web service request  
+            // Note that we manually have to create the request object since  
+            // since it doesn't exist yet at this stage   
+            HttpRequestMessageProperty request = new HttpRequestMessageProperty();  
+            request.Headers["Cookie"] = sharedCookie;  
+            OperationContext.Current.OutgoingMessageProperties[  
+                HttpRequestMessageProperty.Name] = request;  
+  
+            otherClient.DoSomethingElse();  
+        }  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElementType">
+      <MemberSignature Language="C#" Value="protected override Type BindingElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingElementType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingElement.BindingElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo deste elemento de associação.</summary>
+        <value>O <see cref="T:System.Type" /> desse elemento de associação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="protected override void InitializeFrom (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeFrom(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WSHttpBindingElement.InitializeFrom(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Um elemento de associação.</param>
+        <summary>Inicializa este elemento de configuração de associação com o conteúdo do elemento de associação especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyConfiguration">
+      <MemberSignature Language="C#" Value="protected override void OnApplyConfiguration (System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnApplyConfiguration(class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WSHttpBindingElement.OnApplyConfiguration(System.ServiceModel.Channels.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">Uma coleção de elementos de associação.</param>
+        <summary>Chamado quando o conteúdo de uma coleção de associação especificada é aplicado a este elemento de configuração de associação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> instância que contém uma coleção de <see cref="T:System.Configuration.ConfigurationProperty" /> objetos que podem ser atributos ou <see cref="T:System.Configuration.ConfigurationElement" /> objetos deste elemento de configuração.</summary>
+        <value>Um <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> instância que contém uma coleção de <see cref="T:System.Configuration.ConfigurationProperty" /> objetos que podem ser atributos ou <see cref="T:System.Configuration.ConfigurationElement" /> objetos deste elemento de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.WSHttpSecurityElement Security { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.WSHttpSecurityElement Security" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WSHttpBindingElement.Security" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("security")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.WSHttpSecurityElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de segurança a ser usado com essa associação.</summary>
+        <value>O <see cref="T:System.ServiceModel.Configuration.WSHttpSecurityElement" /> que é usado com esta associação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

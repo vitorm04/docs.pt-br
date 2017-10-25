@@ -1,0 +1,35 @@
+<Type Name="IContainsThemedScrollbarWindows" FullName="System.Windows.Forms.Design.IContainsThemedScrollbarWindows">
+  <TypeSignature Language="C#" Value="public interface IContainsThemedScrollbarWindows" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContainsThemedScrollbarWindows" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.IContainsThemedScrollbarWindows" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um método para obter informações sobre como as barras de rolagem do windows precisam ser com tema quando exibido no designer do Visual Studio.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ThemedScrollbarWindows">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable ThemedScrollbarWindows ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerable ThemedScrollbarWindows() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IContainsThemedScrollbarWindows.ThemedScrollbarWindows" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma enumeração de <see cref="T:System.Windows.Forms.Design.ThemedScrollbarWindow" /> objetos que representam o windows e como suas barras de rolagem precisam ser com tema quando exibido no designer do Visual Studio.</summary>
+        <returns>Uma enumeração de objetos que representam o windows e como suas barras de rolagem precisam ser com tema quando exibido no designer do Visual Studio.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,49 @@
+<Type Name="IExpandProvider" FullName="System.Data.Services.IExpandProvider">
+  <TypeSignature Language="C#" Value="public interface IExpandProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExpandProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.IExpandProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Essa interface declara os métodos necessários para dar suporte a <c>$expand</c> consultar a opção para um WCF Data Services.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplyExpansions">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable ApplyExpansions (System.Linq.IQueryable queryable, System.Collections.Generic.ICollection&lt;System.Data.Services.ExpandSegmentCollection&gt; expandPaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerable ApplyExpansions(class System.Linq.IQueryable queryable, class System.Collections.Generic.ICollection`1&lt;class System.Data.Services.ExpandSegmentCollection&gt; expandPaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IExpandProvider.ApplyExpansions(System.Linq.IQueryable,System.Collections.Generic.ICollection{System.Data.Services.ExpandSegmentCollection})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queryable" Type="System.Linq.IQueryable" />
+        <Parameter Name="expandPaths" Type="System.Collections.Generic.ICollection&lt;System.Data.Services.ExpandSegmentCollection&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="queryable">O <see cref="T:System.Linq.IQueryable`1" /> objeto para expandir.</param>
+        <param name="expandPaths">Uma coleção de <see cref="T:System.Data.Services.ExpandSegmentCollection" /> caminhos para expandir.</param>
+        <summary>Aplica-se expansões especificado <paramref name="queryable" /> parâmetro.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerable" /> objeto do mesmo tipo como fornecido <paramref name="queryable" /> objeto que inclui especificado <paramref name="expandPaths" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.IExpandProvider.ApplyExpansions%2A> método pode modificar o `expandPaths` para indicar quais expansões são incluídos.  
+  
+ Retornado <xref:System.Collections.IEnumerable> pode implementar o <xref:System.Data.Services.IExpandedResult> interface para fornecer objetos enumeráveis as expansões; caso contrário, as informações de expandido são esperadas a ser encontrado diretamente no objeto enumerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

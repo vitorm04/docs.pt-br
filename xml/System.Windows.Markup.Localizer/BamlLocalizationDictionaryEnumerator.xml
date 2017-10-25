@@ -1,0 +1,195 @@
+<Type Name="BamlLocalizationDictionaryEnumerator" FullName="System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator">
+  <TypeSignature Language="C#" Value="public sealed class BamlLocalizationDictionaryEnumerator : System.Collections.IDictionaryEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BamlLocalizationDictionaryEnumerator extends System.Object implements class System.Collections.IDictionaryEnumerator, class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionaryEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define um enumerador especializado que pode enumerar o conteúdo de um <see cref="T:System.Windows.Markup.Localizer.BamlLocalizationDictionary" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_BamlLocalizationDictionaryEnumerator"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Collections.DictionaryEntry Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.DictionaryEntry Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.DictionaryEntry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto atual na coleção.</summary>
+        <value>O objeto atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Entry">
+      <MemberSignature Language="C#" Value="public System.Collections.DictionaryEntry Entry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Collections.DictionaryEntry Entry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator.Entry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.DictionaryEntry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição atual <see cref="T:System.Collections.DictionaryEntry" /> objeto.</summary>
+        <value>Um objeto que contém a chave e o valor da entrada na posição atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.Localizer.BamlLocalizableResourceKey Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.Localizer.BamlLocalizableResourceKey Key" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.BamlLocalizableResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de entrada atual.</summary>
+        <value>A chave de entrada atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Move para o próximo item na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o enumerador avança com êxito para o próximo elemento. Se não houver nenhum elemento restante, este método retorna <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o enumerador como sua posição inicial, que é antes do primeiro objeto na coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionaryEnumerator.Key">
+      <MemberSignature Language="C#" Value="object System.Collections.IDictionaryEnumerator.Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IDictionaryEnumerator.Key" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator.System#Collections#IDictionaryEnumerator#Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IDictionaryEnumerator.Key" />.</summary>
+        <value>A chave do elemento atual da enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionaryEnumerator.Value">
+      <MemberSignature Language="C#" Value="object System.Collections.IDictionaryEnumerator.Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IDictionaryEnumerator.Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator.System#Collections#IDictionaryEnumerator#Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IDictionaryEnumerator.Value" />.</summary>
+        <value>O valor do elemento atual da enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IEnumerator.Current" />.</summary>
+        <value>O elemento atual na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.Localizer.BamlLocalizableResource Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.Localizer.BamlLocalizableResource Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizationDictionaryEnumerator.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.BamlLocalizableResource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor da entrada atual.</summary>
+        <value>O valor da entrada atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

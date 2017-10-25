@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Persistence">
+  <Docs>
+    <summary>O <see cref="N:System.ServiceModel.Persistence" /> namespace contém classes que permitem aos serviços de fluxo de trabalho (implementados como fluxos de trabalho de serviços WCF) a ser mantido no armazenamento de persistência.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

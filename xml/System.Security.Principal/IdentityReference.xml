@@ -1,0 +1,258 @@
+<Type Name="IdentityReference" FullName="System.Security.Principal.IdentityReference">
+  <TypeSignature Language="C#" Value="public abstract class IdentityReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IdentityReference extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Principal.IdentityReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma identidade e é a classe base para o <see cref="T:System.Security.Principal.NTAccount" /> e <see cref="T:System.Security.Principal.SecurityIdentifier" /> classes. Esta classe não fornece um construtor público e, portanto, não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public abstract bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReference.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um objeto a ser comparado com esse <see cref="T:System.Security.Principal.IdentityReference" /> instância ou uma referência nula.</param>
+        <summary>Retorna um valor que indica se o objeto especificado é igual a esta instância do <see cref="T:System.Security.Principal.IdentityReference" /> classe.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="o" /> é subjacente um objeto com o mesmo tipo e valor este <see cref="T:System.Security.Principal.IdentityReference" /> instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public abstract int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReference.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para <see cref="T:System.Security.Principal.IdentityReference" />. <see cref="M:System.Security.Principal.IdentityReference.GetHashCode" />é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>O código hash para este <see cref="T:System.Security.Principal.IdentityReference" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidTargetType">
+      <MemberSignature Language="C#" Value="public abstract bool IsValidTargetType (Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsValidTargetType(class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReference.IsValidTargetType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">O tipo que está sendo consultado para validade para servir como uma conversão de <see cref="T:System.Security.Principal.IdentityReference" />. Os seguintes tipos de destino são válidos:  
+  
+ <see cref="T:System.Security.Principal.NTAccount" /><see cref="T:System.Security.Principal.SecurityIdentifier" /></param>
+        <summary>Retorna um valor que indica se o tipo especificado é um tipo de conversão para o <see cref="T:System.Security.Principal.IdentityReference" /> classe.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="targetType" /> é um tipo de conversão para o <see cref="T:System.Security.Principal.IdentityReference" /> classe; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Security.Principal.IdentityReference left, System.Security.Principal.IdentityReference right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Security.Principal.IdentityReference left, class System.Security.Principal.IdentityReference right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReference.op_Equality(System.Security.Principal.IdentityReference,System.Security.Principal.IdentityReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="right" Type="System.Security.Principal.IdentityReference" />
+      </Parameters>
+      <Docs>
+        <param name="left">À esquerda <see cref="T:System.Security.Principal.IdentityReference" /> operando a usar para a comparação de igualdade. Esse parâmetro pode ser <see langword="null" />.</param>
+        <param name="right">O direito de <see cref="T:System.Security.Principal.IdentityReference" /> operando a usar para a comparação de igualdade. Esse parâmetro pode ser <see langword="null" />.</param>
+        <summary>Compara dois <see cref="T:System.Security.Principal.IdentityReference" /> objetos para determinar se eles são iguais. Eles são considerados iguais se eles tiverem a mesma representação nome canônico retornado pelo <see cref="P:System.Security.Principal.IdentityReference.Value" /> propriedade ou se os dois são <see langword="null" />.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="left" /> e <paramref name="right" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Security.Principal.IdentityReference.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Security.Principal.IdentityReference left, System.Security.Principal.IdentityReference right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Security.Principal.IdentityReference left, class System.Security.Principal.IdentityReference right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReference.op_Inequality(System.Security.Principal.IdentityReference,System.Security.Principal.IdentityReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="right" Type="System.Security.Principal.IdentityReference" />
+      </Parameters>
+      <Docs>
+        <param name="left">À esquerda <see cref="T:System.Security.Principal.IdentityReference" /> operando a usar para a comparação de desigualdade. Esse parâmetro pode ser <see langword="null" />.</param>
+        <param name="right">O direito de <see cref="T:System.Security.Principal.IdentityReference" /> operando a usar para a comparação de desigualdade. Esse parâmetro pode ser <see langword="null" />.</param>
+        <summary>Compara dois <see cref="T:System.Security.Principal.IdentityReference" /> objetos para determinar se eles não são iguais. Eles são considerados não iguais se tiverem representações de nome canônico diferente daquele retornado pelo <see cref="P:System.Security.Principal.IdentityReference.Value" /> propriedade ou se um dos objetos é <see langword="null" /> e o outro não.</summary>
+        <returns>
+          <see langword="true" /> caso <paramref name="left" /> e <paramref name="right" /> não sejam iguais; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Security.Principal.IdentityReference.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public abstract string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReference.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação de cadeia de caracteres da identidade representada pelo <see cref="T:System.Security.Principal.IdentityReference" /> objeto.</summary>
+        <returns>A identidade no formato de cadeia de caracteres.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Principal.IdentityReference Translate (Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Principal.IdentityReference Translate(class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.IdentityReference.Translate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IdentityReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">O tipo de destino para a conversão de <see cref="T:System.Security.Principal.IdentityReference" />.</param>
+        <summary>Converte o nome da conta representado pelo objeto <see cref="T:System.Security.Principal.IdentityReference" /> em outro tipo derivado de <see cref="T:System.Security.Principal.IdentityReference" />.</summary>
+        <returns>A identidade convertida.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.IdentityReference.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de cadeia de caracteres da identidade representada pelo objeto <see cref="T:System.Security.Principal.IdentityReference" />.</summary>
+        <value>O valor de cadeia de caracteres da identidade representada pelo <see cref="T:System.Security.Principal.IdentityReference" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

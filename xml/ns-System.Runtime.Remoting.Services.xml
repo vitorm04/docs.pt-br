@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Services">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Services" /> namespace contém classes de serviço que fornecem funcionalidade para o .NET Framework. Uma das classes mais importantes desse namespace é o <see cref="T:System.Runtime.Remoting.Services.TrackingServices" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Services.TrackingServices> classe fornece um serviço de controle com manipuladores conectáveis que pode detectar quando objetos são empacotados e desempacotados. Manipuladores conectáveis podem ser criados com a implementação de <xref:System.Runtime.Remoting.Services.ITrackingHandler> interface. Para obter mais informações, consulte a classe <xref:System.Runtime.InteropServices.Marshal>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

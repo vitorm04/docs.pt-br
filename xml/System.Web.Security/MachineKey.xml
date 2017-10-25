@@ -1,0 +1,227 @@
+<Type Name="MachineKey" FullName="System.Web.Security.MachineKey">
+  <TypeSignature Language="C#" Value="public static class MachineKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit MachineKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.MachineKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira de criptografar ou fazer hash (ou ambos) nos dados usando os mesmos algoritmos e valores de chave que são usados para autenticação de formulários e exibição de estado de ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.MachineKey> classe fornece métodos que expõem a lógica de hash e de criptografia que o ASP.NET fornece. Para obter informações sobre quais criptografia e algoritmos de hash usa ASP.NET e os valores de chave que ele utiliza com eles, consulte [machineKey Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b5699a9-bc21-4c4a-85f1-8b3b8ebd2d46).  
+  
+> [!WARNING]
+>  O <xref:System.Web.Security.MachineKey> APIs só deve ser usados em um aplicativo ASP.NET. O comportamento das APIs MachineKey fora do contexto de um aplicativo ASP.NET é indefinido  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.ArgumentNullException">Os dados a criptografar, fazer hash, descriptografar ou validar não existem</exception>
+  </Docs>
+  <Members>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public static byte[] Decode (string encodedData, System.Web.Security.MachineKeyProtection protectionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] Decode(string encodedData, valuetype System.Web.Security.MachineKeyProtection protectionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MachineKey.Decode(System.String,System.Web.Security.MachineKeyProtection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method is obsolete and is only provided for compatibility with existing code. It is recommended that new code use the Protect and Unprotect methods instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encodedData" Type="System.String" />
+        <Parameter Name="protectionOption" Type="System.Web.Security.MachineKeyProtection" />
+      </Parameters>
+      <Docs>
+        <param name="encodedData">Os dados criptografados a serem descriptografados e/ou validados.</param>
+        <param name="protectionOption">Indica se o <c>encodedData</c> parâmetro deve ser criptografado e/ou hash.</param>
+        <summary>Decodifica e/ou valida os dados que foram criptografados ou fornecidos com um HMAC (código de autenticação de mensagem baseado em hash).</summary>
+        <returns>Uma matriz <see cref="T:System.Byte" /> que representa os dados descriptografados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre quais criptografia e algoritmos de hash ASP.NET usa para descriptografar e validar os dados que são transmitidos, consulte [machineKey Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b5699a9-bc21-4c4a-85f1-8b3b8ebd2d46).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Web.Security.MachineKey> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public static string Encode (byte[] data, System.Web.Security.MachineKeyProtection protectionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Encode(unsigned int8[] data, valuetype System.Web.Security.MachineKeyProtection protectionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MachineKey.Encode(System.Byte[],System.Web.Security.MachineKeyProtection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method is obsolete and is only provided for compatibility with existing code. It is recommended that new code use the Protect and Unprotect methods instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="protectionOption" Type="System.Web.Security.MachineKeyProtection" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem criptografados.</param>
+        <param name="protectionOption">Indica se o <c>dados</c> parâmetro deve ser criptografado e/ou hash.</param>
+        <summary>Criptografa dados e/ou acrescenta um HMAC (hash-based message authentication code).</summary>
+        <returns>O valor criptografado, o valor de entrada acrescido de um HMAC ou o resultado da criptografia do valor de entrada acrescido de um HMAC.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre quais criptografia e algoritmos de hash ASP.NET usa para descriptografar e validar os dados que são transmitidos, consulte [machineKey Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b5699a9-bc21-4c4a-85f1-8b3b8ebd2d46).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Web.Security.MachineKey> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Protect">
+      <MemberSignature Language="C#" Value="public static byte[] Protect (byte[] userData, params string[] purposes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] Protect(unsigned int8[] userData, string[] purposes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MachineKey.Protect(System.Byte[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userData" Type="System.Byte[]" />
+        <Parameter Name="purposes" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="userData">Os dados a serem protegidos. Esses dados são passados como texto sem formatação.</param>
+        <param name="purposes">Uma lista de propósitos para os dados. Se esse valor for especificado, a mesma lista deve ser passada para o <see cref="M:System.Web.Security.MachineKey.Unprotect(System.Byte[],System.String[])" /> método para decifrar o texto cifrado retornado.</param>
+        <summary>Protege os dados especificados ao criptografá-los ou assiná-los.</summary>
+        <returns>Os dados do texto cifrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Web.Security.MachineKey.Encode%2A> método, que exige que o chamador especificar se os dados de texto sem formatação devem ser criptografados, assinado, ou ambos. O <xref:System.Web.Security.MachineKey.Protect%2A> método executa a operação apropriada e com segurança protege os dados. Dados de texto cifrado produzidos por esse método só podem ser decifrados pelo <xref:System.Web.Security.MachineKey.Unprotect%2A> método.  
+  
+ O `purposes` parâmetro é uma lista opcional de razões que podem bloquear o texto cifrado para um propósito específico. Esse parâmetro permite isolar as operações de criptografia executadas pelo subsistemas diferentes dentro de um aplicativo. Um cliente mal-intencionado não deve ser capaz de obter o resultado de um subsistema <xref:System.Web.Security.MachineKey.Protect%2A> método e o feed como entrado para outra do subsistema <xref:System.Web.Security.MachineKey.Unprotect%2A> método, que pode comprometer a segurança do aplicativo. O `purposes` parâmetro ajuda a garantir que os dados protegidos só podem ser usados pelo componente que originalmente gerou. Aplicativos devem garantir que cada subsistema usa uma única `purposes` lista.  
+  
+ Por exemplo, para proteger ou desproteger um token de autenticação, você poderia chamar o método usando código como o exemplo a seguir:  
+  
+```csharp  
+MachineKey.Protect(..., "Authentication token");  
+MachineKey.Unprotect(..., "Authentication token");  
+```  
+  
+```vb  
+MachineKey.Protect(..., "Authentication token")  
+MachineKey.Unprotect(..., "Authentication token")  
+```  
+  
+ Aplicativos podem gerar dinamicamente o `purposes` parâmetro. Nesse caso, os valores fornecidos pelo usuário com um valor fixo de prefixo (como "`Username:` " + *username*) para minimizar o risco de um cliente mal-intencionado criação de entrada que corresponde a um token que é usado por alguma outra parte do sistema. Cadeias de caracteres gerados dinamicamente devem vir após cadeias de caracteres fixas. Por exemplo, para proteger ou desproteger uma mensagem privada que está associada a um usuário específico, use um código como o exemplo a seguir:  
+  
+```csharp  
+MachineKey.Protect(..., "Private message", "Recipient: " + username);  
+MachineKey.Unprotect(..., "Private message", "Recipient: " + username);  
+```  
+  
+```vb  
+MachineKey.Protect(..., "Private message", "Recipient: " + username)  
+MachineKey.Unprotect(..., "Private message", "Recipient: " + username)  
+```  
+  
+ Quando o <xref:System.Web.Security.MachineKey.Unprotect%2A> método é chamado, o valor fornecido para o `purposes` parâmetro deve ser o mesmo valor que foi fornecido para o <xref:System.Web.Security.MachineKey.Protect%2A> método. Caso contrário, a operação falhará com um <xref:System.Security.Cryptography.CryptographicException> exceção.  
+  
+ As definições de configuração que são necessárias para o <xref:System.Web.Configuration.MachineKeyCompatibilityMode?displayProperty=nameWithType> opção são necessários para este se até mesmo método de <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode%2A?displayProperty=nameWithType> propriedade não é definida como o <xref:System.Web.Configuration.MachineKeyCompatibilityMode.Framework45> opção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="userData" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">A matriz de finalidades contém uma ou mais entradas apenas com espaço em branco.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unprotect">
+      <MemberSignature Language="C#" Value="public static byte[] Unprotect (byte[] protectedData, params string[] purposes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] Unprotect(unsigned int8[] protectedData, string[] purposes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MachineKey.Unprotect(System.Byte[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="protectedData" Type="System.Byte[]" />
+        <Parameter Name="purposes" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="protectedData">Os dados de texto cifrado a serem desprotegidos.</param>
+        <param name="purposes">Uma lista de propósitos que descrevem o que os dados se destina. Isso deve ser o mesmo valor que foi passado para o <see cref="M:System.Web.Security.MachineKey.Protect(System.Byte[],System.String[])" /> método quando os dados foram protegidos.</param>
+        <summary>Desprotege os dados especificados, que estavam protegidos pelo método <see cref="M:System.Web.Security.MachineKey.Protect(System.Byte[],System.String[])" />.</summary>
+        <returns>Os dados de texto sem formatação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre esse método, consulte o <xref:System.Web.Security.MachineKey.Protect%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="protectedData" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">A matriz de finalidades contém uma ou mais entradas apenas com espaço em branco.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Possíveis causas incluem o seguinte:  
+  
+-   Os dados protegidos foram violados.  
+  
+-   O valor do parâmetro <paramref name="purposes" /> não é o mesmo que o valor que foi especificado quando os dados foram protegidos.  
+  
+-   O aplicativo é implantado em mais de um servidor e está usando chaves de criptografia geradas automaticamente.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

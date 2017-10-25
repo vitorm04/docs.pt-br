@@ -1,0 +1,162 @@
+<Type Name="CodeDelegateCreateExpression" FullName="System.CodeDom.CodeDelegateCreateExpression">
+  <TypeSignature Language="C#" Value="public class CodeDelegateCreateExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeDelegateCreateExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeDelegateCreateExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma expressão que cria um representante.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeDelegateCreateExpression>representa o código que cria um representante. <xref:System.CodeDom.CodeDelegateCreateExpression>geralmente é usado com <xref:System.CodeDom.CodeAttachEventStatement> ou <xref:System.CodeDom.CodeRemoveEventStatement> representar um manipulador de eventos para anexar ou remover de um evento.  
+  
+ O <xref:System.CodeDom.CodeDelegateCreateExpression.DelegateType%2A> propriedade especifica o tipo de delegado para criar. O <xref:System.CodeDom.CodeDelegateCreateExpression.TargetObject%2A> propriedade indica o objeto que contém o método do manipulador de eventos. O <xref:System.CodeDom.CodeDelegateCreateExpression.MethodName%2A> propriedade indica o nome do método manipulador de eventos cuja assinatura de método coincide com a assinatura do método do representante.  
+  
+ No c#, uma expressão de criação de representante é normalmente da seguinte forma: `new EventHandler(this.HandleEventMethod)`. No Visual Basic, uma expressão de criação de representante é normalmente da seguinte forma: `AddressOf Me.HandleEventMethod`.  
+  
+   
+  
+## Examples  
+ O código de exemplo a seguir usa um <xref:System.CodeDom.CodeDelegateCreateExpression> para criar um delegate.  
+  
+ [!code-cpp[CodeAttachEventStatementExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeAttachEventStatementExample/CPP/codeattacheventstatementexample.cpp#3)]
+ [!code-csharp[CodeAttachEventStatementExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeAttachEventStatementExample/CS/codeattacheventstatementexample.cs#3)]
+ [!code-vb[CodeAttachEventStatementExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeAttachEventStatementExample/VB/codeattacheventstatementexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDelegateCreateExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeDelegateCreateExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeDelegateCreateExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeDelegateCreateExpression (System.CodeDom.CodeTypeReference delegateType, System.CodeDom.CodeExpression targetObject, string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeTypeReference delegateType, class System.CodeDom.CodeExpression targetObject, string methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeDelegateCreateExpression.#ctor(System.CodeDom.CodeTypeReference,System.CodeDom.CodeExpression,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="delegateType" Type="System.CodeDom.CodeTypeReference" />
+        <Parameter Name="targetObject" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="methodName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="delegateType">Um <see cref="T:System.CodeDom.CodeTypeReference" /> que indica o tipo de dados do delegado.</param>
+        <param name="targetObject">Um <see cref="T:System.CodeDom.CodeExpression" /> que indica o objeto que contém o método do manipulador de eventos.</param>
+        <param name="methodName">O nome do método manipulador de eventos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeDelegateCreateExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelegateType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference DelegateType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference DelegateType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDelegateCreateExpression.DelegateType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de dados do delegado.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeTypeReference" /> que indica o tipo de dados do delegado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDelegateCreateExpression.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método do manipulador de eventos.</summary>
+        <value>O nome do método do manipulador de eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetObject">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression TargetObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression TargetObject" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeDelegateCreateExpression.TargetObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que contém o método do manipulador de eventos.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpression" /> que indica o objeto que contém o método do manipulador de eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

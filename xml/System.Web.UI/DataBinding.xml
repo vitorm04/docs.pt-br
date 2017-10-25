@@ -1,0 +1,199 @@
+<Type Name="DataBinding" FullName="System.Web.UI.DataBinding">
+  <TypeSignature Language="C#" Value="public sealed class DataBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataBinding extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações sobre uma única expressão de associação de dados em um controle de servidor ASP.NET, que permite o desenvolvimento de aplicativos rápida designers (RAD), como o Microsoft Visual Studio para criar expressões de associação de dados em tempo de design. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada expressão de associação de dados em um controle de servidor é representado em tempo de design por uma instância de <xref:System.Web.UI.DataBinding> classe. Qualquer controle de servidor que contém uma ou mais expressões de associação de dados tem um <xref:System.Web.UI.DataBindingCollection> objeto que contém o <xref:System.Web.UI.DataBinding> objetos. Essa coleção está acessível por meio de <xref:System.Web.UI.Control> classe implementando o <xref:System.Web.UI.IDataBindingsAccessor> interface. Quando você cria um designer personalizado de RAD, use essa implementação para acessar a coleção. Qualquer <xref:System.Web.UI.DataBinding> ou <xref:System.Web.UI.DataBindingCollection> objetos associados a um controle de servidor existem somente em tempo de design. Eles não existem em tempo de execução e, portanto, não estão acessíveis em tempo de execução.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Web.UI.DataBinding> objeto e define-a como um objeto existente no controle do <xref:System.Web.UI.DataBindingCollection> coleção que tem um `propertyName` parâmetro com um valor de `Text`. Se a coleção contém um <xref:System.Web.UI.DataBinding> do objeto com um `propertyName` valor `Text`, esse código retorna o valor do objeto <xref:System.Web.UI.DataBinding.Expression%2A> propriedade. Se não houver nenhum tal objeto, ele retorna uma cadeia de caracteres vazia ("").  
+  
+ [!code-csharp[DataBinding_Sample1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/DataBinding_Sample1/CS/databinding_samp1.cs#2)]
+ [!code-vb[DataBinding_Sample1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataBinding_Sample1/VB/databinding_samp1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBinding (string propertyName, Type propertyType, string expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, class System.Type propertyType, string expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinding.#ctor(System.String,System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="expression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">A propriedade para associar dados ao.</param>
+        <param name="propertyType">O tipo do .NET Framework da propriedade para associar dados ao.</param>
+        <param name="expression">A expressão de associação de dados a ser avaliada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataBinding" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Web.UI.DataBinding> objeto e define-a como um objeto existente no controle do <xref:System.Web.UI.DataBindingCollection> coleção que tem um `propertyName` parâmetro com um valor de `Text`. Se a coleção contém um <xref:System.Web.UI.DataBinding> do objeto com um `propertyName` valor `Text`, esse código retorna o valor do objeto <xref:System.Web.UI.DataBinding.Expression%2A> propriedade. Se não houver nenhum tal objeto, ele retorna uma cadeia de caracteres vazia ("").  
+  
+ [!code-csharp[DataBinding_Sample1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/DataBinding_Sample1/CS/databinding_samp1.cs#3)]
+ [!code-vb[DataBinding_Sample1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataBinding_Sample1/VB/databinding_samp1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinding.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparada com a atual <see cref="T:System.Web.UI.DataBinding" />.</param>
+        <summary>Determina se o objeto especificado é a mesma instância do <see cref="T:System.Web.UI.DataBinding" /> classe como o objeto atual.</summary>
+        <returns>
+          <see langword="true" />Se os nomes de propriedade de associação de dados são correspondentes. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public string Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBinding.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão de associação de dados a ser avaliada.</summary>
+        <value>A expressão de associação de dados a ser avaliada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Web.UI.DataBinding> objeto e define-a como um objeto existente no controle do <xref:System.Web.UI.DataBindingCollection> coleção que tem um `propertyName` parâmetro com um valor de `Text`. Se a coleção contém um <xref:System.Web.UI.DataBinding> do objeto com um `propertyName` valor `Text`, esse código retorna o valor do objeto <xref:System.Web.UI.DataBinding.Expression%2A> propriedade. Se não houver nenhum tal objeto, ele retorna uma cadeia de caracteres vazia ("").  
+  
+ [!code-csharp[DataBinding_Sample1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/DataBinding_Sample1/CS/databinding_samp1.cs#3)]
+ [!code-vb[DataBinding_Sample1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataBinding_Sample1/VB/databinding_samp1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinding.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o código hash para uma instância do <see cref="T:System.Web.UI.DataBinding" /> objeto.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.DataBinding>objetos são colocados em um <xref:System.Web.UI.DataBindingCollection> objeto acessível somente em tempo de design. A coleção é uma tabela de hash que representa as associações de um controle. Pode haver apenas uma associação por propriedade, para que corresponda a computação de código hash de <xref:System.Web.UI.DataBinding.Equals%2A?displayProperty=nameWithType> implementação e usa apenas a propriedade de nome em conta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBinding.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade de controle de servidor ASP.NET para associar dados ao.</summary>
+        <value>A propriedade para associar dados ao.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir declara três variáveis, `dataBindingOutput1`, `dataBindingOutput2`, e `dataBindingOutput3`, que acessar as diferentes propriedades de um <xref:System.Web.UI.DataBinding> objeto `myDataBinding2`. Em seguida, atribui o valor do <xref:System.Web.UI.DataBinding.PropertyName%2A> propriedade `dataBindingOutput1`, concatena com a cadeia de caracteres "é o nome da propriedade" e grava o valor em um arquivo.  
+  
+ [!code-csharp[DataBinding_Sample1#6](~/samples/snippets/csharp/VS_Snippets_WebNet/DataBinding_Sample1/CS/databinding_samp1.cs#6)]
+ [!code-vb[DataBinding_Sample1#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataBinding_Sample1/VB/databinding_samp1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBinding.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do .NET Framework da propriedade de controle de servidor associado a dados ASP.NET.</summary>
+        <value>O tipo do .NET Framework da propriedade de associação de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir declara três variáveis, `dataBindingOutput1`, `dataBindingOutput2`, e `dataBindingOutput3`, que acessar as diferentes propriedades de um <xref:System.Web.UI.DataBinding> objeto `myDataBinding2`. O <xref:System.Web.UI.DataBinding.PropertyType%2A> o valor da propriedade é atribuído a `dataBindingOutput2` e concatenado com a cadeia de caracteres "é o tipo de propriedade" e grava o valor em um arquivo.  
+  
+ [!code-csharp[DataBinding_Sample1#6](~/samples/snippets/csharp/VS_Snippets_WebNet/DataBinding_Sample1/CS/databinding_samp1.cs#6)]
+ [!code-vb[DataBinding_Sample1#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataBinding_Sample1/VB/databinding_samp1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

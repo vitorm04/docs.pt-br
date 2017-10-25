@@ -1,0 +1,105 @@
+<Type Name="ListViewSelectEventArgs" FullName="System.Web.UI.WebControls.ListViewSelectEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewSelectEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewSelectEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewSelectEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.ListView.SelectedIndexChanging" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListView> controlar gera o <xref:System.Web.UI.WebControls.ListView.SelectedIndexChanging> eventos quando um botão de seleção é clicado, mas antes de <xref:System.Web.UI.WebControls.ListView> controle manipula a operação select. (A selecionar um botão é uma cujo `CommandName` estiver definida como "Select".) Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada sempre que esse evento ocorre, como cancelar a operação de seleção.  
+  
+ Um <xref:System.Web.UI.WebControls.ListViewSelectEventArgs> objeto é passado para o método de manipulação de eventos, que permite que você determine o índice do item selecionado pelo usuário. Ele também permite que você cancelar a operação de seleção. Para cancelar a operação de seleção, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.Web.UI.WebControls.ListViewSelectEventArgs> do objeto para `true`.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewSelectEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.ListViewSelectEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewSelectEventArgs> objeto que é passado para o <xref:System.Web.UI.WebControls.ListView.SelectedIndexChanging> evento para cancelar a operação de seleção se o item selecionado não está disponível.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.SelectedIndexChanging#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.SelectedIndexChanging/CS/ListViewItemSelectedIndexChangingCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.SelectedIndexChanging#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.SelectedIndexChanging/VB/ListViewItemSelectedIndexChangingVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewSelectEventArgs (int newSelectedIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 newSelectedIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewSelectEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newSelectedIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="newSelectedIndex">O índice do novo item para selecionar no <see cref="T:System.Web.UI.WebControls.ListView" /> controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListViewSelectEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListViewSelectEventArgs> classe.  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância de <xref:System.Web.UI.WebControls.ListViewSelectEventArgs> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewSelectEventArgs.NewSelectedIndex%2A>|O valor de `newSelectedIndex` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSelectedIndex">
+      <MemberSignature Language="C#" Value="public int NewSelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewSelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewSelectEventArgs.NewSelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice do novo item para selecionar no <see cref="T:System.Web.UI.WebControls.ListView" /> controle.</summary>
+        <value>O índice do novo item para selecionar no <see cref="T:System.Web.UI.WebControls.ListView" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListView.SelectedIndexChanging?displayProperty=nameWithType> evento ocorre antes do <xref:System.Web.UI.WebControls.ListView> controle executa a operação select. Portanto, você não pode usar o <xref:System.Web.UI.WebControls.ListView.SelectedIndex%2A?displayProperty=nameWithType> propriedade do controle para determinar o índice do novo item selecionado pelo usuário. O <xref:System.Web.UI.WebControls.ListView.SelectedIndex%2A?displayProperty=nameWithType> propriedade contém o índice do item selecionado anteriormente. Para determinar o índice do novo item selecionado pelo usuário, use o <xref:System.Web.UI.WebControls.ListViewSelectEventArgs.NewSelectedIndex%2A> propriedade. Você também pode usar essa propriedade para substituir o índice do item selecionado, de forma programática, definindo-o para outro valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewSelectEventArgs.NewSelectedIndex%2A> propriedade o <xref:System.Web.UI.WebControls.ListViewSelectEventArgs> objeto para acessar o item selecionado pelo usuário.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.SelectedIndexChanging#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.SelectedIndexChanging/CS/ListViewItemSelectedIndexChangingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.SelectedIndexChanging#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.SelectedIndexChanging/VB/ListViewItemSelectedIndexChangingVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

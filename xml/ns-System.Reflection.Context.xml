@@ -1,0 +1,6 @@
+<Namespace Name="System.Reflection.Context">
+  <Docs>
+    <summary>O <see cref="N:System.Reflection.Context" /> namespace contém classes que permitem contextos de reflexão personalizados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

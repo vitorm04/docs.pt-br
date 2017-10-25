@@ -1,0 +1,772 @@
+<Type Name="DataGridViewCellStyle" FullName="System.Windows.Forms.DataGridViewCellStyle">
+  <TypeSignature Language="C#" Value="public class DataGridViewCellStyle : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewCellStyle extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataGridViewCellStyleEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataGridViewCellStyleConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa as informações de formatação e estilo aplicadas a células individuais em um controle <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCellStyle> classe permite que você compartilhe informações de estilo em várias <xref:System.Windows.Forms.DataGridView> células, linhas, colunas e cabeçalhos de linha ou coluna, evitando os requisitos de memória de definir propriedades de estilo em células individuais. Para obter mais informações sobre as classes que têm uma propriedade de tipo <xref:System.Windows.Forms.DataGridViewCellStyle> e como elas se relacionam entre si, consulte [estilos de célula no controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o efeito de definir propriedades em vários <xref:System.Windows.Forms.DataGridViewCellStyle> objetos. Este exemplo define a cor de plano de fundo das células no <xref:System.Windows.Forms.DataGridView> definindo o <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> propriedade o <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> propriedade. A cor de plano de fundo é substituída em linhas alternadas porque o <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> propriedade é definida no <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> propriedade. O exemplo também determina o formato de datas na coluna nomeada `Last Prepared` definindo o <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> propriedade na coluna de <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewStyleDemo#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewStyleDemo#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/VB/form1.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewCellStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> usando valores de propriedade padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewCellStyle (System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellStyle.#ctor(System.Windows.Forms.DataGridViewCellStyle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataGridViewCellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridViewCellStyle">O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> usada como um modelo para fornecer valores de propriedade inicial.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> classe usando os valores de propriedade especificada <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataGridViewCellStyle" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewContentAlignment Alignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewContentAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a posição do conteúdo da célula dentro de uma célula <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DataGridViewContentAlignment" />. O padrão é <see cref="F:System.Windows.Forms.DataGridViewContentAlignment.NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#072)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#072)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor da propriedade não é um valor <see cref="T:System.Windows.Forms.DataGridViewContentAlignment" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyStyle">
+      <MemberSignature Language="C#" Value="public virtual void ApplyStyle (System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyStyle(class System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellStyle.ApplyStyle(System.Windows.Forms.DataGridViewCellStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataGridViewCellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridViewCellStyle">O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> a ser aplicado ao <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> atual.</param>
+        <summary>Aplica o <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> especificado ao <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCellStyle.ApplyStyle%2A> método aplica-se os valores das propriedades que são definidas no `dataGridViewCellStyle` parâmetro atual <xref:System.Windows.Forms.DataGridViewCellStyle>. Se uma propriedade não está definida na `dataGridViewCellStyle`, atual <xref:System.Windows.Forms.DataGridViewCellStyle> retém seu valor dessa propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataGridViewCellStyle" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo de uma célula <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de plano de fundo de uma célula. O padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir define a cor de plano de fundo das células no <xref:System.Windows.Forms.DataGridView> definindo o <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> propriedade o <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> propriedade. Observe que a cor do plano de fundo é substituída em linhas alternadas porque o <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> propriedade é definida no <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.DataGridViewCellStyle> classe.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/VB/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridViewCellStyle Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.DataGridViewCellStyle Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellStyle.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata deste <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> que representa uma cópia exata desse estilo de célula.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceNullValue">
+      <MemberSignature Language="C#" Value="public object DataSourceNullValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSourceNullValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor salvo para a fonte de dados quando o usuário insere um valor null em uma célula.</summary>
+        <value>O valor salvo para a fonte de dados quando o usuário especifica um valor null de célula. O padrão é <see cref="F:System.DBNull.Value" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O usuário pode inserir um valor nulo em uma célula pressionando CTRL + 0 ou digitando o valor de <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> propriedade. Quando o usuário confirma a alteração, o valor subjacente da célula é definido como o valor da <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> propriedade ou `null` se <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> é <xref:System.DBNull.Value?displayProperty=nameWithType> e a célula <xref:System.Windows.Forms.DataGridViewCell.ValueType%2A> é um tipo de referência. Essa conversão não ocorre quando você definir o <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType> propriedade programaticamente.  
+  
+> [!NOTE]
+>  O controle não exibirá a <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> para valores de célula iguais ao valor da propriedade de <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> valor de propriedade quando <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> é definida como um valor diferente de <xref:System.DBNull.Value?displayProperty=nameWithType> ou `null`. Nesse caso, você pode manipular o <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> evento para exibir o <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> o valor da propriedade. Para obter mais informações, consulte o exemplo de código neste tópico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa propriedade. Neste exemplo, um <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> manipulador de eventos exibe o valor de <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> propriedade quando o valor da célula é igual a <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc2#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/cs/misc2.cs#50)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc2#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/vb/misc2.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellStyle.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um objeto a ser comparado com essa instância ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se esta instância é equivalente ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="o" /> é um <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> e tem os mesmos valores de propriedade que esta instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte aplicada ao conteúdo textual de uma célula <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>O <see cref="T:System.Drawing.Font" /> aplicado ao texto da célula. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para alterar os estilos de fonte aplicados ao texto da célula. Porque um <xref:System.Drawing.Font> é imutável (suas propriedades são somente leitura), você pode modificar esta propriedade só atribuindo um novo ou existente <xref:System.Drawing.Font> ; você não pode alterar as propriedades do objeto retornado diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define a fonte para cabeçalhos de coluna. Para executar este exemplo, cole o código em um formulário que contém um <xref:System.Windows.Forms.DataGridView> chamado `GridView1`e, em seguida, chame o `SetupUpDataGridView` e `PopulateDataGridView` métodos de construtor do formulário ou <xref:System.Windows.Forms.Form.OnLoad%2A> método. Certifique-se de que todos os eventos estão associados com os métodos de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.GridViewUnbound#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.GridViewUnbound/CPP/form1.cpp#5)]
+ [!code-csharp[System.Windows.Forms.GridViewUnbound#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GridViewUnbound/CS/form1.cs#5)]
+ [!code-vb[System.Windows.Forms.GridViewUnbound#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GridViewUnbound/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano de uma célula <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano de uma célula. O padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> propriedade geralmente deve especificar uma cor que contrasta com o <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> e <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> propriedades para células em linhas alternadas. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.DataGridViewCellStyle> classe.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/VB/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.FormatStringEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de formato aplicada ao conteúdo textual de uma célula <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>Uma cadeia de caracteres que indica o formato do valor da célula. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> propriedade especifica como os valores de célula são formatados como cadeias de caracteres. Para obter mais informações, consulte [Tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define o formato das datas na coluna nomeada `Last Fixed` para "Mês, ano", definindo o <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> propriedade na coluna de <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.DataGridViewCellStyle> classe.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/VB/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatProvider">
+      <MemberSignature Language="C#" Value="public IFormatProvider FormatProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IFormatProvider FormatProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.FormatProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IFormatProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto usado para fornecer a formatação específica da cultura de valores de célula <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>Um <see cref="T:System.IFormatProvider" /> usado para a formatação da célula. O padrão é <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellStyle.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para um tipo específico.</summary>
+        <returns>Um código hash do <see cref="T:System.Object" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataSourceNullValueDefault">
+      <MemberSignature Language="C#" Value="public bool IsDataSourceNullValueDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDataSourceNullValueDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.IsDataSourceNullValueDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue" /> propriedade foi definida.</summary>
+        <value>
+          <see langword="true" />Se o valor de <see cref="P:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue" /> propriedade é o valor padrão; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para determinar se o <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> propriedade foi definida explicitamente sem a necessidade de armazenar seu valor padrão para comparação. Isso é útil porque o <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> propriedade tem um valor padrão de não-vazio, ao contrário da maioria das outras <xref:System.Windows.Forms.DataGridViewCellStyle> propriedades que têm valores padrão, como `null`, <xref:System.Drawing.Color.Empty>, ou <xref:System.Windows.Forms.DataGridViewContentAlignment.NotSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFormatProviderDefault">
+      <MemberSignature Language="C#" Value="public bool IsFormatProviderDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFormatProviderDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.IsFormatProviderDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Windows.Forms.DataGridViewCellStyle.FormatProvider" /> propriedade foi definida.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Windows.Forms.DataGridViewCellStyle.FormatProvider" /> propriedade é o valor padrão; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para determinar se o <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A> propriedade foi definida explicitamente sem a necessidade de armazenar seu valor padrão para comparação. Isso é útil porque o <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A> propriedade tem um valor padrão de não-vazio, ao contrário da maioria das outras <xref:System.Windows.Forms.DataGridViewCellStyle> propriedades que têm valores padrão, como `null`, <xref:System.Drawing.Color.Empty>, ou <xref:System.Windows.Forms.DataGridViewContentAlignment.NotSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullValueDefault">
+      <MemberSignature Language="C#" Value="public bool IsNullValueDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullValueDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.IsNullValueDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Windows.Forms.DataGridViewCellStyle.NullValue" /> propriedade foi definida.</summary>
+        <value>
+          <see langword="true" />Se o valor de <see cref="P:System.Windows.Forms.DataGridViewCellStyle.NullValue" /> propriedade é o valor padrão; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para determinar se o <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> propriedade foi definida explicitamente sem a necessidade de armazenar seu valor padrão para comparação. Isso é útil porque o <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> propriedade tem um valor padrão de não-vazio, ao contrário da maioria das outras <xref:System.Windows.Forms.DataGridViewCellStyle> propriedades que têm valores padrão, como `null`, <xref:System.Drawing.Color.Empty>, ou <xref:System.Windows.Forms.DataGridViewContentAlignment.NotSet>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullValue">
+      <MemberSignature Language="C#" Value="public object NullValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NullValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.NullValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de exibição de célula <see cref="T:System.Windows.Forms.DataGridView" /> que corresponde a um valor de célula de <see cref="F:System.DBNull.Value" /> ou <see langword="null" />.</summary>
+        <value>O objeto usado para indicar um valor null em uma célula. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.DataGridView> célula com esse estilo de célula possui um valor de <xref:System.DBNull.Value?displayProperty=nameWithType> ou `null` ou o usuário edita a célula e pressionar CTRL + 0, o <xref:System.Windows.Forms.DataGridView> controle exibe o <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> o valor da propriedade. Quando um usuário edita uma célula com esse estilo de célula e insira o valor dessa propriedade ou pressiona CTRL + 0, o controle define o valor da célula para o valor da <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> propriedade ou `null` se <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> é <xref:System.DBNull.Value?displayProperty=nameWithType> e a célula <xref:System.Windows.Forms.DataGridViewCell.ValueType%2A> é um tipo de referência. Essa conversão não ocorre quando você definir o <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType> propriedade programaticamente.  
+  
+> [!NOTE]
+>  O controle não exibirá a <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> para valores de célula iguais ao valor da propriedade de <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> valor de propriedade quando <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A> é definida como um valor diferente de <xref:System.DBNull.Value?displayProperty=nameWithType> ou `null`. Nesse caso, você pode manipular o <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> evento para exibir o <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> o valor da propriedade. Para obter mais informações, consulte o exemplo de código neste tópico.  
+  
+ Essa propriedade tem qualquer objeto, que permite que você especifique um valor com um tipo apropriado para o tipo de exibição da célula. Por exemplo, você pode definir essa propriedade para valores de cadeia de caracteres para uso por células da caixa de texto ou imagens para uso por células de imagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa propriedade. Neste exemplo, um <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> manipulador de eventos exibe o valor de <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> propriedade quando o valor da célula é igual a <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc2#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/cs/misc2.cs#50)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc2#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/vb/misc2.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o espaço entre a borda de um <see cref="T:System.Windows.Forms.DataGridViewCell" /> e seu conteúdo.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Padding" /> que representa o espaço entre a borda de um <see cref="T:System.Windows.Forms.DataGridViewCell" /> e seu conteúdo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A> propriedade afeta onde o controle de edição do <xref:System.Windows.Forms.DataGridViewCell> é desenhada. Por exemplo, se você definir <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A> em uma <xref:System.Windows.Forms.DataGridViewTextBoxCell> para um <xref:System.Windows.Forms.Padding?displayProperty=nameWithType> que tem um valor de 10 para seus <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, e <xref:System.Windows.Forms.Padding.Bottom%2A> propriedades, o conteúdo da célula é desenhado no meio da célula com um espaço de 10 pixels entre as bordas da caixa de texto e as bordas da célula.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa propriedade em um <xref:System.Windows.Forms.DataGridView> controle que contém as linhas desenhadas pelo proprietário. Cada linha exibe o texto que se estende por toda a largura da linha abaixo do conteúdo da célula regular. O <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A> propriedade é usada para fornecer o espaço extra para esse texto. No exemplo, a altura extra necessária é armazenada em uma constante chamada `CUSTOM_CONTENT_HEIGHT`.  
+  
+ Este exemplo de código é parte de um exemplo maior. Para o exemplo completo, consulte [como: personalizar a aparência de linhas no controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color SelectionBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SelectionBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo usada por uma célula <see cref="T:System.Windows.Forms.DataGridView" /> quando ela está selecionada.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de plano de fundo de uma célula selecionada. O padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa propriedade em um <xref:System.Windows.Forms.DataGridView> destinada principalmente para exibição de controle. Neste exemplo, a aparência visual do controle é personalizada de várias maneiras, e o controle está configurado para interatividade limitada. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewCellStyle> visão geral da classe.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/VB/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color SelectionForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SelectionForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano usada por uma célula <see cref="T:System.Windows.Forms.DataGridView" /> quando ela é selecionada.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano de uma célula selecionada. O padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A> propriedade geralmente deve especificar uma cor que contrasta com o <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa propriedade em um <xref:System.Windows.Forms.DataGridView> destinada principalmente para exibição de controle. Neste exemplo, a aparência visual do controle é personalizada de várias maneiras, e o controle está configurado para interatividade limitada. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewCellStyle> visão geral da classe.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/VB/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellStyle.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata deste <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> que representa uma cópia exata desse estilo de célula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.DataGridViewCellStyle> é convertida em uma interface de <xref:System.ICloneable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que contém os dados adicionais relacionados para o <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />.</summary>
+        <value>Um objeto que contém dados adicionais. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellStyle.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que indica as configurações de propriedade atuais do <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />.</summary>
+        <returns>Uma cadeia de caracteres que indica as configurações de propriedade atuais do <see cref="T:System.Windows.Forms.DataGridViewCellStyle" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewTriState WrapMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewTriState WrapMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellStyle.WrapMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewTriState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o conteúdo textual em uma célula <see cref="T:System.Windows.Forms.DataGridView" /> é empacotado em linhas subsequentes ou truncado quando ele é muito grande para caber em uma única linha.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DataGridViewTriState" />. O padrão é <see cref="F:System.Windows.Forms.DataGridViewTriState.NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> é <xref:System.Windows.Forms.DataGridViewTriState.False> para uma célula que contém texto, a célula exibe o texto em uma única linha e exibe quaisquer caracteres de nova linha inserida como caracteres de caixa. Se <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> é <xref:System.Windows.Forms.DataGridViewTriState.True> para uma célula que contém texto, a célula exibe os caracteres de linha de quebra, mas também inclui todas as linhas que excedem a largura da célula.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#074)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#074)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor da propriedade não é um valor <see cref="T:System.Windows.Forms.DataGridViewTriState" /> válido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

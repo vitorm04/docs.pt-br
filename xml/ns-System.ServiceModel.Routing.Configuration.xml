@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Routing.Configuration">
+  <Docs>
+    <summary>Este namespace contém classes de configuração que são usados pela infraestrutura do Windows Communication Foundation (WCF) para converter XML em tipos de tempo de execução de linguagem comum (CLR). Você também pode manipular essas classes diretamente para fins de extensibilidade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

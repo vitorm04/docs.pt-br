@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Input">
+  <Docs>
+    <summary>Fornece tipos para suportar o sistema de entrada do Windows Presentation Foundation (WPF). Isso inclui classes de abstração de dispositivo para dispositivos de mouse, teclado e caneta, uma classe comum do Gerenciador de entrada, o suporte para comandos de comando e personalizado e várias classes de utilitário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

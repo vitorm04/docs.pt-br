@@ -1,0 +1,121 @@
+<Type Name="ZipArchiveMode" FullName="System.IO.Compression.ZipArchiveMode">
+  <TypeSignature Language="C#" Value="public enum ZipArchiveMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ZipArchiveMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Compression.ZipArchiveMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Compression</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica valores para interagir com entradas do arquivo morto zip.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você definir o modo de leitura, o arquivo ou o fluxo subjacente deve dar suporte a leitura, mas não tem suporte para busca. Se o arquivo ou o fluxo subjacente oferece suporte à busca, os arquivos são lidos do arquivo morto conforme forem solicitados. Se o arquivo ou o fluxo subjacente não oferece suporte a busca, todo o arquivo será mantido na memória.  
+  
+ Quando você definir o modo para criar, o arquivo ou o fluxo subjacente deve dar suporte a gravação, mas não tem suporte para busca. Cada entrada no arquivo morto pode ser aberta apenas uma vez para gravação. Se você criar uma única entrada, os dados são gravados para o fluxo subjacente ou o arquivo assim que ele está disponível. Se você criar várias entradas, como ao chamar o <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A> método, os dados são gravados no fluxo subjacente ou o arquivo depois que todas as entradas são criadas.  
+  
+ Quando você definir o modo de atualização, o arquivo ou o fluxo subjacente deve dar suporte a leitura, gravação e busca. O conteúdo do arquivo inteiro é mantido na memória, e nenhum dado será escrito para o arquivo ou o fluxo subjacente até que o arquivo é descartado.  
+  
+ Os métodos a seguir incluem um parâmetro denominado `mode` que permite que você especifique o modo de arquivo:  
+  
+-   <xref:System.IO.Compression.ZipArchive.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.ZipArchiveMode%2CSystem.Boolean%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.ZipArchive.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.ZipArchiveMode%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.ZipFile.Open%28System.String%2CSystem.IO.Compression.ZipArchiveMode%29?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como especificar um <xref:System.IO.Compression.ZipArchiveMode> valor ao criar um <xref:System.IO.Compression.ZipArchive.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.ZipArchiveMode%29?displayProperty=nameWithType> objeto.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="Create" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Compression.ZipArchiveMode Create = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Compression.ZipArchiveMode.Create" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.ZipArchiveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente entradas de criação de novo arquivo-morto são permitidas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Compression.ZipArchiveMode Read = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Compression.ZipArchiveMode.Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.ZipArchiveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente entradas de leitura de arquivo-morto são permitidas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="Update" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Compression.ZipArchiveMode Update = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Compression.ZipArchiveMode.Update" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.ZipArchiveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ambas as operações de leitura e gravação são permitidas entradas de arquivos-mortos.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

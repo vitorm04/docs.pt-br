@@ -1,0 +1,529 @@
+<Type Name="IJSVsaEngine" FullName="Microsoft.JScript.Vsa.IJSVsaEngine">
+  <TypeSignature Language="C#" Value="public interface IJSVsaEngine" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IJSVsaEngine" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Vsa.IJSVsaEngine" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because it is being deprecated in Visual Studio 2005; there will be no replacement for this feature. Please see the ICodeCompiler documentation for additional help.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("8FA2C97B-47E4-4A31-A7F5-FF39D1195CD9")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define os métodos e propriedades que um mecanismo de script deve dar suporte e fornece acesso programático ao mecanismo de script.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly Assembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly Assembly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência ao assembly em execução gerado pelo método de execução.</summary>
+        <value>Referência ao assembly em execução no momento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o mecanismo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public bool Compile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Compile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.Compile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o mecanismo compilar o estado de origem existente.</summary>
+        <returns>
+          <see langword="true" />na compilação bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evidence">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.Evidence Evidence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.Evidence Evidence" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.Evidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.Evidence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece evidência com a finalidade de validar a identidade do objeto atual.</summary>
+        <value>Retorna uma referência a um objeto de evidência.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDebugInfo">
+      <MemberSignature Language="C#" Value="public bool GenerateDebugInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GenerateDebugInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.GenerateDebugInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou obtém um valor booliano que indica se o mecanismo de script gera informações de depuração quando o método de compilação é chamado.</summary>
+        <value>
+          <see langword="true" />para gerar informações de depuração. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOption">
+      <MemberSignature Language="C#" Value="public object GetOption (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOption(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.GetOption(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da opção para obter.</param>
+        <summary>Obtém as opções específicas de implementação para o mecanismo.</summary>
+        <returns>O valor da opção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitNew">
+      <MemberSignature Language="C#" Value="public void InitNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.InitNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece uma notificação de que a fase de inicialização for concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompiled">
+      <MemberSignature Language="C#" Value="public bool IsCompiled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompiled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.IsCompiled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a fonte é compilada.</summary>
+        <value>
+          <see langword="true" />Se a fonte é compilada. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a representação na memória atual do item é diferente da representação persistente.</summary>
+        <value>
+          <see langword="true" />Se a representação na memória é diferente da representação persistente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunning">
+      <MemberSignature Language="C#" Value="public bool IsRunning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRunning" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.IsRunning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que informa se o mecanismo de script ainda está no modo de execução.</summary>
+        <value>
+          <see langword="true" />Se o mecanismo está no modo de execução; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidIdentifier">
+      <MemberSignature Language="C#" Value="public bool IsValidIdentifier (string identifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsValidIdentifier(string identifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.IsValidIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">Um valor de cadeia de caracteres fornecido como identificador.</param>
+        <summary>Verifica se o identificador fornecido é válido para o mecanismo.</summary>
+        <returns>
+          <see langword="true" />Se o identificador é válido. Caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItems Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.Vsa.IJSVsaItems Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItems</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de objetos de IJSVsaItem, que representam todos os itens adicionados ao mecanismo de script.</summary>
+        <value>A coleção de itens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public string Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Language" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da linguagem de programação com suporte pelo mecanismo de script.</summary>
+        <value>O nome da linguagem de programação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LCID">
+      <MemberSignature Language="C#" Value="public int LCID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LCID" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.LCID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o idioma e localidade geográfica na qual para informar mensagens de exceção.</summary>
+        <value>Um valor inteiro que representa a localidade na qual a exceção as mensagens devem ser relatados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadSourceState">
+      <MemberSignature Language="C#" Value="public void LoadSourceState (Microsoft.JScript.Vsa.IJSVsaPersistSite site);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadSourceState(class Microsoft.JScript.Vsa.IJSVsaPersistSite site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.LoadSourceState(Microsoft.JScript.Vsa.IJSVsaPersistSite)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="site" Type="Microsoft.JScript.Vsa.IJSVsaPersistSite" />
+      </Parameters>
+      <Docs>
+        <param name="site">O site do qual os itens de origem especificado é carregado.</param>
+        <summary>Instrui o mecanismo para carregar itens de origem de seu ponto de persistência, conforme especificado pelo objeto fornecida pelo host.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou obtém o nome para exibição do mecanismo de script.</summary>
+        <value>O nome do mecanismo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o mecanismo de script do estado de execução e desconecta os manipuladores de eventos associados automaticamente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevokeCache">
+      <MemberSignature Language="C#" Value="public void RevokeCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RevokeCache() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.RevokeCache" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invalida o assembly em cache para o mecanismo, conforme especificado por seu identificador de origem raiz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootMoniker">
+      <MemberSignature Language="C#" Value="public string RootMoniker { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootMoniker" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.RootMoniker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou obtém o moniker de raiz de um mecanismo de script.</summary>
+        <value>O moniker da raiz do mecanismo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNamespace">
+      <MemberSignature Language="C#" Value="public string RootNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RootNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.RootNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou obtém o namespace raiz usado pelo mecanismo de script.</summary>
+        <value>O namespace do mecanismo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public void Run ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Run() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.Run" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia a execução do código compilado no mecanismo de script e associa todos os manipuladores de eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveCompiledState">
+      <MemberSignature Language="C#" Value="public void SaveCompiledState (out byte[] pe, out byte[] pdb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveCompiledState([out] unsigned int8[]&amp; pe, [out] unsigned int8[]&amp; pdb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.SaveCompiledState(System.Byte[]@,System.Byte[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pe" Type="System.Byte[]&amp;" RefType="out" />
+        <Parameter Name="pdb" Type="System.Byte[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pe">O estado compilado do mecanismo de script.</param>
+        <param name="pdb">Especifica as informações de depuração contidas em de. Arquivo PDB correspondente para o PE (executável portátil).</param>
+        <summary>Salva o estado compilado do mecanismo de script; Opcionalmente, ele também salva as informações de depuração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveSourceState">
+      <MemberSignature Language="C#" Value="public void SaveSourceState (Microsoft.JScript.Vsa.IJSVsaPersistSite site);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveSourceState(class Microsoft.JScript.Vsa.IJSVsaPersistSite site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.SaveSourceState(Microsoft.JScript.Vsa.IJSVsaPersistSite)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="site" Type="Microsoft.JScript.Vsa.IJSVsaPersistSite" />
+      </Parameters>
+      <Docs>
+        <param name="site">O site no qual fonte de estado é salva.</param>
+        <summary>Instrui o mecanismo de script para manter o estado de origem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOption">
+      <MemberSignature Language="C#" Value="public void SetOption (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOption(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaEngine.SetOption(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da opção de definir.</param>
+        <param name="value">O valor para a opção que está sendo definida.</param>
+        <summary>Define opções específicas da implementação de um mecanismo de script.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaSite Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.Vsa.IJSVsaSite Site" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaSite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou obtém o objeto IJSVsaSite implementado no host que é usado pelo mecanismo de script para se comunicar com o host.</summary>
+        <value>O objeto implementado pelo host.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaEngine.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão atual do compilador de idioma com suporte pelo mecanismo de script, no formato <c>Major.Minor.Revision.Build</c>.</summary>
+        <value>A versão atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

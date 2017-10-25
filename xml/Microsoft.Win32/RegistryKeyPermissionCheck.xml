@@ -1,0 +1,108 @@
+<Type Name="RegistryKeyPermissionCheck" FullName="Microsoft.Win32.RegistryKeyPermissionCheck">
+  <TypeSignature Language="C#" Value="public enum RegistryKeyPermissionCheck" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RegistryKeyPermissionCheck extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.RegistryKeyPermissionCheck" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se verificações de segurança são executadas ao abrir chaves do Registro e acessar seus pares nome/valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um aplicativo salva ou recupera um grande número de configurações de registro de um conjunto de subchaves, diversas verificações de segurança redundante são executadas. Esta enumeração Especifica quando as verificações de segurança em uma chave devem ser omitido.  
+  
+ A tabela a seguir mostra quando são executadas verificações de segurança com base na maneira como a chave pai e a chave atual aberta.  
+  
+|Chave pai é aberto com|Abrir a chave atual com|Resultado|  
+|----------------------------|-----------------------------|------------|  
+|Padrão|Padrão|É realizada uma verificação de segurança ao acessar qualquer valor na chave atual, ou quando a tentativa de acessar uma subchave. Esse é o comportamento de versões do .NET Framework 1.0 e 1.1.|  
+|Padrão|ReadSubTree|É realizada uma verificação de segurança ao tentar abrir a chave atual.|  
+|Padrão|ReadWriteSubTree|É realizada uma verificação de segurança ao tentar abrir a chave atual.|  
+|ReadSubTree|ReadSubTree ou padrão|Nenhuma verificação de segurança é executada ao abrir a chave atual ou seus valores.|  
+|ReadSubTree|ReadWriteSubTree|É realizada uma verificação de segurança ao tentar abrir a chave atual.|  
+|ReadWriteSubTree|Qualquer|Nenhuma verificação de segurança é executada ao abrir a chave atual ou seus valores.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma subchave que contém pares de chave/valor de 100 e fechá-lo. O exemplo abre a subchave padrão e registra o tempo necessário para ler todos os valores. Em seguida, o exemplo abre a subchave com ReadSubTree e registra o tempo necessário para ler todos os valores. Por fim, o exemplo calcula e exibe a porcentagem de aperfeiçoamento.  
+  
+ [!code-csharp[RegistryKey.OpenSubKey_PermCheck#1](~/samples/snippets/csharp/VS_Snippets_CLR/RegistryKey.OpenSubKey_PermCheck/cs/source.cs#1)]
+ [!code-vb[RegistryKey.OpenSubKey_PermCheck#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RegistryKey.OpenSubKey_PermCheck/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryKeyPermissionCheck Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryKeyPermissionCheck.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKeyPermissionCheck</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A chave do Registro herda o modo de seu pai. Verificações de segurança são executadas ao tentar acessar subchaves ou valores, a menos que o pai tenha sido aberto com os modos <see cref="F:Microsoft.Win32.RegistryKeyPermissionCheck.ReadSubTree" /> ou <see cref="F:Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSubTree">
+      <MemberSignature Language="C#" Value="ReadSubTree" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryKeyPermissionCheck ReadSubTree = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryKeyPermissionCheck.ReadSubTree" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKeyPermissionCheck</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verificações de segurança não são executadas ao acessar subchaves ou valores. Uma verificação de segurança é executada ao tentar abrir a chave atual, a menos que o pai tenha sido aberto com <see cref="F:Microsoft.Win32.RegistryKeyPermissionCheck.ReadSubTree" /> ou <see cref="F:Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadWriteSubTree">
+      <MemberSignature Language="C#" Value="ReadWriteSubTree" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryKeyPermissionCheck ReadWriteSubTree = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKeyPermissionCheck</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Verificações de segurança não são executadas ao acessar subchaves ou valores. Uma verificação de segurança é executada ao tentar abrir a chave atual, a menos que o pai tenha sido aberto com <see cref="F:Microsoft.Win32.RegistryKeyPermissionCheck.ReadWriteSubTree" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

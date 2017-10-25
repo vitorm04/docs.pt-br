@@ -1,0 +1,73 @@
+<Type Name="SortOrder" FullName="System.Windows.Forms.SortOrder">
+  <TypeSignature Language="C#" Value="public enum SortOrder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SortOrder extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.SortOrder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como os itens em uma lista são classificados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa enumeração para definir o valor da <xref:System.Windows.Forms.ListView.Sorting%2A> propriedade o <xref:System.Windows.Forms.ListView> controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Ascending">
+      <MemberSignature Language="C#" Value="Ascending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SortOrder Ascending = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SortOrder.Ascending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SortOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os itens são classificados em ordem crescente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Descending">
+      <MemberSignature Language="C#" Value="Descending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SortOrder Descending = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SortOrder.Descending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SortOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os itens são classificados em ordem decrescente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SortOrder None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SortOrder.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SortOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os itens não são classificados.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

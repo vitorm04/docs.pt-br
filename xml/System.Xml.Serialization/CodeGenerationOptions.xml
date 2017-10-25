@@ -1,0 +1,241 @@
+<Type Name="CodeGenerationOptions" FullName="System.Xml.Serialization.CodeGenerationOptions">
+  <TypeSignature Language="C#" Value="public enum CodeGenerationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CodeGenerationOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.CodeGenerationOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica várias opções para usar ao gerar os tipos do .NET Framework para uso com um serviço Web XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um arquivo de linguagem de descrição de serviço (WSDL) Web geralmente descreve uma classe na linguagem de esquema XML como um `xsd:complex` tipo composto de vários primitivo `xsd:complex` e `xsd:simple` tipos. Ao gerar uma classe do .NET Framework que representa um determinado `xsd:complex` tipo, você deve escolher como representar vários tipos primitivos nele.  
+  
+ Por padrão, cada primitivo é implementado como um campo. Se você especificar a opção GenerateProperties, cada tipo primitivo em vez disso, é implementado como uma propriedade.  
+  
+### <a name="ordering-of-serialization-code"></a>Ordenação de código de serialização  
+ O membro GenerateOrder instrui o gerador de código para criar o código de serialização em uma ordem específica, conforme determinado pelo `Order` propriedade dos atributos a seguir:  
+  
+-   [XmlAnyElementAttribute](http://msdn.microsoft.com/library/system.xml.serialization.xmlanyelementattribute\(v=vs.110\).aspx)  
+  
+-   [XmlArrayAttribute](http://msdn.microsoft.com/library/system.xml.serialization.xmlarrayattribute\(v=vs.110\).aspx)  
+  
+-   [XmlElementAttribute](http://msdn.microsoft.com/library/system.xml.serialization.xmlelementattribute\(v=vs.110\).aspx)  
+  
+> [!NOTE]
+>  Uma vez o `Order` propriedade foi definida em uma propriedade pública ou campo em um tipo, ele deve ser aplicado a todas as propriedades públicas e campos para esse tipo e todas as herdadas de tipos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Xml.Serialization.CodeGenerationOptions.GenerateProperties> enumeração para especificar o comportamento de um <xref:System.Web.Services.Description.ServiceDescriptionImporter> objeto.  
+  
+ [!code-cpp[WebServices_Description_Importer#4](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#4)]
+ [!code-csharp[WebServices_Description_Importer#4](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnableDataBinding">
+      <MemberSignature Language="C#" Value="EnableDataBinding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Serialization.CodeGenerationOptions EnableDataBinding = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Serialization.CodeGenerationOptions.EnableDataBinding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlEnum("enableDataBinding")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.CodeGenerationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita a vinculação de dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateNewAsync">
+      <MemberSignature Language="C#" Value="GenerateNewAsync" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Serialization.CodeGenerationOptions GenerateNewAsync = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Serialization.CodeGenerationOptions.GenerateNewAsync" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlEnum("newAsync")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.CodeGenerationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cria eventos para a invocação assíncrona dos métodos Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateOldAsync">
+      <MemberSignature Language="C#" Value="GenerateOldAsync" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Serialization.CodeGenerationOptions GenerateOldAsync = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Serialization.CodeGenerationOptions.GenerateOldAsync" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlEnum("oldAsync")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.CodeGenerationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cria métodos de Início e Fim para a invocação assíncrona dos métodos Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateOrder">
+      <MemberSignature Language="C#" Value="GenerateOrder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Serialization.CodeGenerationOptions GenerateOrder = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Serialization.CodeGenerationOptions.GenerateOrder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlEnum("order")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.CodeGenerationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gera o código de serialização explicitamente ordenado conforme especificado por meio da propriedade <see langword="Order" /> dos atributos <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" />, <see cref="T:System.Xml.Serialization.XmlArrayAttribute" /> e <see cref="T:System.Xml.Serialization.XmlElementAttribute" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateProperties">
+      <MemberSignature Language="C#" Value="GenerateProperties" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Serialization.CodeGenerationOptions GenerateProperties = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Serialization.CodeGenerationOptions.GenerateProperties" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlEnum("properties")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.CodeGenerationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa tipos primitivos por propriedades.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Serialization.CodeGenerationOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Serialization.CodeGenerationOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.CodeGenerationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa tipos primitivos por campos e tipos primitivos por tipos de namespace <see cref="N:System" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

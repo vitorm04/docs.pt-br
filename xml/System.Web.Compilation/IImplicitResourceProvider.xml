@@ -1,0 +1,87 @@
+<Type Name="IImplicitResourceProvider" FullName="System.Web.Compilation.IImplicitResourceProvider">
+  <TypeSignature Language="C#" Value="public interface IImplicitResourceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IImplicitResourceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.IImplicitResourceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos que implementa uma classe para atuar como um provedor de recursos implícito.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recursos podem ser declarados explicitamente ou implicitamente em uma página. Recursos implícitos permitem ao desenvolvedor atribuir uma coleção de valores de recursos para um controle em uma instrução, em vez de atribuir a cada valor individualmente. Quando o analisador de página encontra um recurso implícita na forma de `meta:resourcekey="WelcomeLabel"`, ele atribui todos os valores com o `WelcomeLabel` prefixo da chave de recurso para os valores correspondentes no controle. Por exemplo, se um arquivo de recurso define valores para `WelcomeLabel.Text` e `WelcomeLabel.ToolTip`, esses valores seriam atribuídos a um `Label` controle com uma referência implícita ao `WelcomeLabel`.  
+  
+ O <xref:System.Web.Compilation.IImplicitResourceProvider> interface define os métodos que implementa um provedor de recursos para acessar os recursos implícita. Você pode obter um valor específico usando o <xref:System.Web.Compilation.IImplicitResourceProvider.GetObject%2A> método.  
+  
+ Se você criar um provedor de recursos personalizado, não é necessário fornecer suporte personalizado para a localização do recurso implícita. Localização implícita funciona com seu provedor de recursos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetImplicitResourceKeys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetImplicitResourceKeys (string keyPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetImplicitResourceKeys(string keyPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.IImplicitResourceProvider.GetImplicitResourceKeys(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyPrefix">O prefixo das chaves implícita de recursos a serem coletados.</param>
+        <summary>Obtém uma coleção de chaves de recurso implícita conforme especificado pelo prefixo.</summary>
+        <returns>Um <see cref="T:System.Collections.ICollection" /> de chaves de recurso implícito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando implementada, o método retorna uma coleção de chaves de recurso implícita para um determinado prefixo. Por exemplo, `WelcomeLabel` é especificado como o prefixo da expressão `meta:resourcekey="WelcomeLabel"`. As propriedades em um arquivo de recurso local com `WelcomeLabel` como um prefixo deve ser retornado com esse método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public object GetObject (System.Web.Compilation.ImplicitResourceKey key, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetObject(class System.Web.Compilation.ImplicitResourceKey key, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.IImplicitResourceProvider.GetObject(System.Web.Compilation.ImplicitResourceKey,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Web.Compilation.ImplicitResourceKey" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave de recurso que contém o prefixo, o filtro e a propriedade.</param>
+        <param name="culture">O <see cref="T:System.Globalization.CultureInfo" /> que representa a cultura para a qual o recurso está localizado.</param>
+        <summary>Obtém um objeto que representa o valor da chave de recurso especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor localizado de uma chave de recurso implícito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando implementada, o método retorna o objeto para o valor representado pela chave implícita do recurso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

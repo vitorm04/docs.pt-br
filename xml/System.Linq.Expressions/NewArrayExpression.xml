@@ -1,0 +1,196 @@
+<Type Name="NewArrayExpression" FullName="System.Linq.Expressions.NewArrayExpression">
+  <TypeSignature Language="C#" Value="public class NewArrayExpression : System.Linq.Expressions.Expression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NewArrayExpression extends System.Linq.Expressions.Expression" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.NewArrayExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Linq.Expressions.Expression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Linq.Expressions.Expression/NewArrayExpressionProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a criação de uma nova matriz e possível inicialização dos elementos da nova matriz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os métodos de fábrica diferentes que você pode usar para criar um <xref:System.Linq.Expressions.NewArrayExpression> dependendo da <xref:System.Linq.Expressions.Expression.NodeType%2A> precisar.  
+  
+|<xref:System.Linq.Expressions.Expression.NodeType%2A>|Métodos de fábrica|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|  
+|<xref:System.Linq.Expressions.ExpressionType.NewArrayBounds>|<xref:System.Linq.Expressions.Expression.NewArrayBounds%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.NewArrayInit>|<xref:System.Linq.Expressions.Expression.NewArrayInit%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Linq.Expressions.NewArrayExpression> objeto que representa a criar e inicializar uma matriz unidimensional de cadeias de caracteres.  
+  
+ [!code-csharp[System.Linq.Expressions.Expression#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/CS/Expression.cs#1)]
+ [!code-vb[System.Linq.Expressions.Expression#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/VB/Expression.vb#1)]  
+  
+ O exemplo a seguir cria um <xref:System.Linq.Expressions.NewArrayExpression> objeto que representa a criação de uma matriz bidimensional de cadeias de caracteres.  
+  
+ [!code-csharp[System.Linq.Expressions.Expression#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/CS/Expression.cs#2)]
+ [!code-vb[System.Linq.Expressions.Expression#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/VB/Expression.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="protected override System.Linq.Expressions.Expression Accept (System.Linq.Expressions.ExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Linq.Expressions.Expression Accept(class System.Linq.Expressions.ExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.NewArrayExpression.Accept(System.Linq.Expressions.ExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Linq.Expressions.ExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">O visitante com o qual visitar esse nó.</param>
+        <summary>Expede o método específico de visita para esse tipo de nó. Por exemplo, <see cref="T:System.Linq.Expressions.MethodCallExpression" /> chama o <see cref="M:System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(System.Linq.Expressions.MethodCallExpression)" />.</summary>
+        <returns>O resultado de visitar esse nó.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta implementação padrão para <xref:System.Linq.Expressions.ExpressionType.Extension> chamadas nós <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>. Substitua este método para chamar um método mais específico em uma classe derivada de visitante do <xref:System.Linq.Expressions.ExpressionVisitor> classe. No entanto, ele ainda deve suportar visitantes desconhecidos chamando <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expressions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.Expression&gt; Expressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Linq.Expressions.Expression&gt; Expressions" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.NewArrayExpression.Expressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.Expression&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os limites da matriz se o valor da <see cref="P:System.Linq.Expressions.Expression.NodeType" /> é de propriedade <see cref="F:System.Linq.Expressions.ExpressionType.NewArrayBounds" />, ou os valores para inicializar os elementos da nova matriz se o valor da <see cref="P:System.Linq.Expressions.Expression.NodeType" /> é de propriedade <see cref="F:System.Linq.Expressions.ExpressionType.NewArrayInit" />.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> de <see cref="T:System.Linq.Expressions.Expression" /> objetos que representam um dos limites da matriz ou os valores de inicialização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override sealed Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.NewArrayExpression.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo estático da expressão que esse <see cref="T:System.Linq.Expressions.Expression" /> representa.</summary>
+        <value>O <see cref="P:System.Linq.Expressions.NewArrayExpression.Type" /> que representa o tipo estático da expressão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.NewArrayExpression Update (System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.Expression&gt; expressions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Linq.Expressions.NewArrayExpression Update(class System.Collections.Generic.IEnumerable`1&lt;class System.Linq.Expressions.Expression&gt; expressions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.NewArrayExpression.Update(System.Collections.Generic.IEnumerable{System.Linq.Expressions.Expression})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.NewArrayExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expressions" Type="System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.Expression&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expressions">A propriedade <see cref="P:System.Linq.Expressions.NewArrayExpression.Expressions" /> do resultado.</param>
+        <summary>Cria uma nova expressão que é parecida com esta, mas usando os filhos fornecidos. Se todos os filhos forem os mesmos, ela retornará esta expressão.</summary>
+        <returns>Essa expressão se nenhum filho foi alterado ou uma expressão com os filhos atualizados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

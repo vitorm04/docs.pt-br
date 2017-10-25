@@ -1,0 +1,1257 @@
+<Type Name="SocketError" FullName="System.Net.Sockets.SocketError">
+  <TypeSignature Language="C#" Value="public enum SocketError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SocketError extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.SocketError" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os códigos de erro para a classe <see cref="T:System.Net.Sockets.Socket" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria desses erros é retornada pelo provedor de soquete subjacente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessDenied">
+      <MemberSignature Language="C#" Value="AccessDenied" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError AccessDenied = int32(10013)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.AccessDenied" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Foi feita uma tentativa de acessar um <see cref="T:System.Net.Sockets.Socket" /> de uma maneira que é proibida pelas permissões de acesso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressAlreadyInUse">
+      <MemberSignature Language="C#" Value="AddressAlreadyInUse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError AddressAlreadyInUse = int32(10048)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.AddressAlreadyInUse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Normalmente, é permitido somente o uso de um endereço.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressFamilyNotSupported">
+      <MemberSignature Language="C#" Value="AddressFamilyNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError AddressFamilyNotSupported = int32(10047)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.AddressFamilyNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há suporte para a família de endereços especificada. Esse erro é retornado se a família de endereços IPv6 foi especificada e a pilha de IPv6 não está instalada no computador local. Esse erro é retornado se a família de endereços IPv4 foi especificada e a pilha de IPv4 não está instalada no computador local.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressNotAvailable">
+      <MemberSignature Language="C#" Value="AddressNotAvailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError AddressNotAvailable = int32(10049)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.AddressNotAvailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O endereço IP selecionado não é válido neste contexto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AlreadyInProgress">
+      <MemberSignature Language="C#" Value="AlreadyInProgress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError AlreadyInProgress = int32(10037)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.AlreadyInProgress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Net.Sockets.Socket" /> não bloqueado já tem uma operação em andamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionAborted">
+      <MemberSignature Language="C#" Value="ConnectionAborted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError ConnectionAborted = int32(10053)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.ConnectionAborted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A conexão foi anulada pelo .NET Framework ou pelo provedor de soquete subjacente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionRefused">
+      <MemberSignature Language="C#" Value="ConnectionRefused" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError ConnectionRefused = int32(10061)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.ConnectionRefused" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O host remoto está recusando ativamente uma conexão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionReset">
+      <MemberSignature Language="C#" Value="ConnectionReset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError ConnectionReset = int32(10054)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.ConnectionReset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A conexão foi redefinida pelo par remoto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationAddressRequired">
+      <MemberSignature Language="C#" Value="DestinationAddressRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError DestinationAddressRequired = int32(10039)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.DestinationAddressRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um endereço obrigatório foi omitido de uma operação em um <see cref="T:System.Net.Sockets.Socket" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnecting">
+      <MemberSignature Language="C#" Value="Disconnecting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError Disconnecting = int32(10101)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.Disconnecting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um desligamento normal está em andamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fault">
+      <MemberSignature Language="C#" Value="Fault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError Fault = int32(10014)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.Fault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um endereço de ponteiro inválido foi detectado pelo provedor de soquete subjacente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HostDown">
+      <MemberSignature Language="C#" Value="HostDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError HostDown = int32(10064)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.HostDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação falhou porque o host remoto está inativo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HostNotFound">
+      <MemberSignature Language="C#" Value="HostNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError HostNotFound = int32(11001)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.HostNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse host não é conhecido. O nome não é um nome de host oficial nem um alias.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HostUnreachable">
+      <MemberSignature Language="C#" Value="HostUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError HostUnreachable = int32(10065)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.HostUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há nenhuma rota de rede para o host especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InProgress">
+      <MemberSignature Language="C#" Value="InProgress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError InProgress = int32(10036)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.InProgress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma operação de bloqueio está em andamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Interrupted">
+      <MemberSignature Language="C#" Value="Interrupted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError Interrupted = int32(10004)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.Interrupted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma chamada de bloqueio <see cref="T:System.Net.Sockets.Socket" /> foi cancelada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidArgument">
+      <MemberSignature Language="C#" Value="InvalidArgument" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError InvalidArgument = int32(10022)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.InvalidArgument" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um argumento inválido foi fornecido para um membro <see cref="T:System.Net.Sockets.Socket" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IOPending">
+      <MemberSignature Language="C#" Value="IOPending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError IOPending = int32(997)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.IOPending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O aplicativo iniciou uma operação sobreposta que não pode ser concluída imediatamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConnected">
+      <MemberSignature Language="C#" Value="IsConnected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError IsConnected = int32(10056)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.IsConnected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Net.Sockets.Socket" /> já está conectado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageSize">
+      <MemberSignature Language="C#" Value="MessageSize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError MessageSize = int32(10040)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.MessageSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O datagrama é muito longo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkDown">
+      <MemberSignature Language="C#" Value="NetworkDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError NetworkDown = int32(10050)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.NetworkDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A rede não está disponível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkReset">
+      <MemberSignature Language="C#" Value="NetworkReset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError NetworkReset = int32(10052)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.NetworkReset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O aplicativo tentou definir <see cref="F:System.Net.Sockets.SocketOptionName.KeepAlive" /> em uma conexão que já atingiu o tempo limite.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkUnreachable">
+      <MemberSignature Language="C#" Value="NetworkUnreachable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError NetworkUnreachable = int32(10051)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.NetworkUnreachable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não existe nenhuma rota para o host remoto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoBufferSpaceAvailable">
+      <MemberSignature Language="C#" Value="NoBufferSpaceAvailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError NoBufferSpaceAvailable = int32(10055)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.NoBufferSpaceAvailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum espaço de buffer livre está disponível para uma operação <see cref="T:System.Net.Sockets.Socket" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoData">
+      <MemberSignature Language="C#" Value="NoData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError NoData = int32(11004)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.NoData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome ou endereço IP solicitado não foi encontrado no servidor de nomes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoRecovery">
+      <MemberSignature Language="C#" Value="NoRecovery" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError NoRecovery = int32(11003)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.NoRecovery" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O erro é irrecuperável ou o banco de dados solicitado não pode ser localizado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotConnected">
+      <MemberSignature Language="C#" Value="NotConnected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError NotConnected = int32(10057)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.NotConnected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O aplicativo tentou enviar ou receber dados e o <see cref="T:System.Net.Sockets.Socket" /> não está conectado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotInitialized">
+      <MemberSignature Language="C#" Value="NotInitialized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError NotInitialized = int32(10093)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.NotInitialized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O provedor de soquete subjacente não foi inicializado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSocket">
+      <MemberSignature Language="C#" Value="NotSocket" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError NotSocket = int32(10038)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.NotSocket" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Houve uma tentativa de uma operação <see cref="T:System.Net.Sockets.Socket" /> em um não soquete.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationAborted">
+      <MemberSignature Language="C#" Value="OperationAborted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError OperationAborted = int32(995)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.OperationAborted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação sobreposta foi anulada devido ao fechamento do <see cref="T:System.Net.Sockets.Socket" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationNotSupported">
+      <MemberSignature Language="C#" Value="OperationNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError OperationNotSupported = int32(10045)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.OperationNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há suporte para a família de endereços na família de protocolos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessLimit">
+      <MemberSignature Language="C#" Value="ProcessLimit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError ProcessLimit = int32(10067)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.ProcessLimit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um número excessivo de processos está usando o provedor de soquete subjacente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolFamilyNotSupported">
+      <MemberSignature Language="C#" Value="ProtocolFamilyNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError ProtocolFamilyNotSupported = int32(10046)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.ProtocolFamilyNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A família de protocolos não foi implementada ou configurada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolNotSupported">
+      <MemberSignature Language="C#" Value="ProtocolNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError ProtocolNotSupported = int32(10043)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.ProtocolNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O protocolo não foi implementado ou configurado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolOption">
+      <MemberSignature Language="C#" Value="ProtocolOption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError ProtocolOption = int32(10042)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.ProtocolOption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma opção ou um nível desconhecido, inválido ou sem suporte foi usado com um <see cref="T:System.Net.Sockets.Socket" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolType">
+      <MemberSignature Language="C#" Value="ProtocolType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError ProtocolType = int32(10041)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.ProtocolType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo de protocolo está incorreto para este <see cref="T:System.Net.Sockets.Socket" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="Shutdown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError Shutdown = int32(10058)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.Shutdown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma solicitação para enviar ou receber dados não foi permitida porque o <see cref="T:System.Net.Sockets.Socket" /> já foi fechado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SocketError">
+      <MemberSignature Language="C#" Value="SocketError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError SocketError = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.SocketError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorreu um erro <see cref="T:System.Net.Sockets.Socket" /> não especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SocketNotSupported">
+      <MemberSignature Language="C#" Value="SocketNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError SocketNotSupported = int32(10044)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.SocketNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O suporte para o tipo de soquete especificado não existe nessa família de endereços.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação <see cref="T:System.Net.Sockets.Socket" /> foi bem-sucedida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemNotReady">
+      <MemberSignature Language="C#" Value="SystemNotReady" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError SystemNotReady = int32(10091)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.SystemNotReady" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O subsistema de rede não está disponível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TimedOut">
+      <MemberSignature Language="C#" Value="TimedOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError TimedOut = int32(10060)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.TimedOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A tentativa de conexão atingiu o tempo limite ou o host conectado não respondeu.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TooManyOpenSockets">
+      <MemberSignature Language="C#" Value="TooManyOpenSockets" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError TooManyOpenSockets = int32(10024)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.TooManyOpenSockets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Há muitos soquetes abertos no provedor de soquete subjacente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAgain">
+      <MemberSignature Language="C#" Value="TryAgain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError TryAgain = int32(11002)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.TryAgain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do host não pôde ser resolvido. Tente novamente mais tarde.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNotFound">
+      <MemberSignature Language="C#" Value="TypeNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError TypeNotFound = int32(10109)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.TypeNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A classe especificada não foi encontrada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionNotSupported">
+      <MemberSignature Language="C#" Value="VersionNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError VersionNotSupported = int32(10092)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.VersionNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A versão do provedor de soquete subjacente está fora do intervalo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WouldBlock">
+      <MemberSignature Language="C#" Value="WouldBlock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketError WouldBlock = int32(10035)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketError.WouldBlock" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma operação em um soquete sem bloqueio não pode ser concluída imediatamente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

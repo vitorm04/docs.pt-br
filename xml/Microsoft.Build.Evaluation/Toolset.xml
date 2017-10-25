@@ -1,0 +1,317 @@
+<Type Name="Toolset" FullName="Microsoft.Build.Evaluation.Toolset">
+  <TypeSignature Language="C#" Value="public class Toolset" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Toolset extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.Toolset" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("ToolsVersion={ToolsVersion} ToolsPath={ToolsPath} #Properties={properties.Count}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representam uma agregação de uma versão de ferramentas (por exemplo. "2.0"), o caminho de ferramentas e um conjunto opcional de propriedades associadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ UNDONE: (danmose) revisão imutabilidade. Se isso não é imutável, adicione um mecanismo para notificar o projeto coleta/s proprietária para incrementar seu toolsetVersion.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Toolset (string toolsVersion, string toolsPath, Microsoft.Build.Evaluation.ProjectCollection projectCollection, string msbuildOverrideTasksPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string toolsVersion, string toolsPath, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, string msbuildOverrideTasksPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Toolset.#ctor(System.String,System.String,Microsoft.Build.Evaluation.ProjectCollection,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="toolsPath" Type="System.String" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+        <Parameter Name="msbuildOverrideTasksPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolsVersion">Nome do conjunto de ferramentas</param>
+        <param name="toolsPath">Caminho para esse conjunto de ferramentas tarefas e destinos</param>
+        <param name="projectCollection">A coleção de projeto do qual obter as propriedades.</param>
+        <param name="msbuildOverrideTasksPath">O caminho para procurar por arquivos de overridetasks do msbuild.</param>
+        <summary>Cria um conjunto de ferramentas com a versão e o caminho das ferramentas indicados. As propriedades globais, reservadas e de ambiente são retiradas da coleção de projetos fornecida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Toolset (string toolsVersion, string toolsPath, System.Collections.Generic.IDictionary&lt;string,string&gt; buildProperties, Microsoft.Build.Evaluation.ProjectCollection projectCollection, string msbuildOverrideTasksPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string toolsVersion, string toolsPath, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; buildProperties, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, string msbuildOverrideTasksPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Toolset.#ctor(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Microsoft.Build.Evaluation.ProjectCollection,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="toolsPath" Type="System.String" />
+        <Parameter Name="buildProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+        <Parameter Name="msbuildOverrideTasksPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolsVersion">Nome do conjunto de ferramentas</param>
+        <param name="toolsPath">Caminho para esse conjunto de ferramentas tarefas e destinos</param>
+        <param name="buildProperties">Propriedades que devem ser associadas com o conjunto de ferramentas.  
+  
+ Pode ser nulo, caso em que um grupo de propriedades vazia será usado.</param>
+        <param name="projectCollection">A coleção de projeto do qual obter as propriedades.</param>
+        <param name="msbuildOverrideTasksPath">O caminho para procurar por arquivos de overridetasks do msbuild.</param>
+        <summary>Cria um conjunto de ferramentas com a versão das ferramentas de determinado, caminho de ferramentas e propriedades de compilação. As propriedades globais, reservadas e de ambiente são retiradas da coleção de projetos fornecida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Toolset (string toolsVersion, string toolsPath, System.Collections.Generic.IDictionary&lt;string,string&gt; buildProperties, Microsoft.Build.Evaluation.ProjectCollection projectCollection, System.Collections.Generic.IDictionary&lt;string,Microsoft.Build.Evaluation.SubToolset&gt; subToolsets, string msbuildOverrideTasksPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string toolsVersion, string toolsPath, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; buildProperties, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Build.Evaluation.SubToolset&gt; subToolsets, string msbuildOverrideTasksPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Toolset.#ctor(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Microsoft.Build.Evaluation.ProjectCollection,System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Evaluation.SubToolset},System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolsVersion" Type="System.String" />
+        <Parameter Name="toolsPath" Type="System.String" />
+        <Parameter Name="buildProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+        <Parameter Name="subToolsets" Type="System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Build.Evaluation.SubToolset&gt;" />
+        <Parameter Name="msbuildOverrideTasksPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolsVersion">Nome do conjunto de ferramentas.</param>
+        <param name="toolsPath">Caminho para esse conjunto de ferramentas tarefas e destinos.</param>
+        <param name="buildProperties">Propriedades que devem ser associadas com o conjunto de ferramentas.  
+  
+ Pode ser nulo, caso em que um grupo de propriedades vazia será usado.</param>
+        <param name="projectCollection">A coleção de projeto do qual obter as propriedades.</param>
+        <param name="subToolsets">O conjunto de conjuntos de ferramentas sub para adicionar a este conjunto de ferramentas.</param>
+        <param name="msbuildOverrideTasksPath">O caminho para procurar por arquivos de overridetasks do msbuild. O conjunto de ferramentas para adicionar a este conjunto de ferramentas</param>
+        <summary>Cria um conjunto de ferramentas com a versão e o caminho das ferramentas indicados. As propriedades globais, reservadas e de ambiente são retiradas da coleção de projetos fornecida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSubToolsetVersion">
+      <MemberSignature Language="C#" Value="public string DefaultSubToolsetVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultSubToolsetVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Toolset.DefaultSubToolsetVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão padrão do conjunto de ferramentas sub para esse conjunto de ferramentas.</summary>
+        <value>Retorna a versão padrão do conjunto de ferramentas sub.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)] é instalado, use o conjunto de ferramentas de base e retornar uma versão de conjunto de ferramentas sub de "10.0".  
+  
+ Caso contrário, use o conjunto de ferramentas sub mais alto número de versão encontrado. Conjuntos de ferramentas sub com versões numeradas são organizados em ordem numérica; quaisquer conjuntos de ferramentas sub adicionais são pré-anexados para o início da lista na ordem encontrada. Retorna null se não houver nenhum conjunto de ferramentas sub e [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)] não está instalado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSubToolsetVersion">
+      <MemberSignature Language="C#" Value="public string GenerateSubToolsetVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GenerateSubToolsetVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Toolset.GenerateSubToolsetVersion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria a versão secundária do conjunto de ferramentas a ser usada com este conjunto de ferramentas.</summary>
+        <returns>Retorna a versão do conjunto de ferramentas sub a ser usado com esse conjunto de ferramentas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se "VisualStudioVersion" é definido como uma propriedade no conjunto de ferramentas em si, a versão do conjunto de ferramentas sub é definido para "VisualStudioVersion".  
+  
+ Caso contrário, a versão do conjunto de ferramentas sub é definido como DefaultSubToolsetVersion do conjunto de ferramentas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSubToolsetVersion">
+      <MemberSignature Language="C#" Value="public string GenerateSubToolsetVersion (System.Collections.Generic.IDictionary&lt;string,string&gt; overrideGlobalProperties, int solutionVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GenerateSubToolsetVersion(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; overrideGlobalProperties, int32 solutionVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Toolset.GenerateSubToolsetVersion(System.Collections.Generic.IDictionary{System.String,System.String},System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="overrideGlobalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="solutionVersion" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="overrideGlobalProperties">Conjunto de propriedades globais será usado para criar a versão do conjunto de ferramentas sub. Pode ser nulo.</param>
+        <param name="solutionVersion">A versão da solução a ser usado para criar a versão do conjunto de ferramentas sub.</param>
+        <summary>Cria a versão secundária do conjunto de ferramentas a ser usada com este conjunto de ferramentas.</summary>
+        <returns>Retorna a versão do conjunto de ferramentas sub.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a propriedade global existe no conjunto de propriedades globais "VisualStudioVersion" passado, a versão do conjunto de ferramentas de sub é definido para "VisualStudioVersion".  
+  
+ Caso contrário, se "VisualStudioVersion" é definido como uma propriedade no conjunto de ferramentas em si, versão do conjunto de ferramentas sub é definido como "VisualStudioVersion".  
+  
+ Caso contrário, se a versão do Visual Studio correspondente à versão de solução (versão do Visual Studio = versão da solução – 1) passado em mapas para um conjunto de ferramentas existente do sub, versão do conjunto de ferramentas sub será definido para a versão do Visual Studio.  
+  
+ Caso contrário, a versão do conjunto de ferramentas sub é definido como DefaultSubToolsetVersion do conjunto de ferramentas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectPropertyInstance GetProperty (string propertyName, string subToolsetVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.ProjectPropertyInstance GetProperty(string propertyName, string subToolsetVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Toolset.GetProperty(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectPropertyInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="subToolsetVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade.</param>
+        <param name="subToolsetVersion">A versão do conjunto de ferramentas sub do conjunto de ferramentas sub. Pode ser nulo</param>
+        <summary>Obtém a propriedade especificada pela versão de conjunto de ferramentas de nome e sub determinada propriedade.</summary>
+        <returns>Retorna a propriedade especificada, se for encontrada, caso contrário, retornará null.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a propriedade não for encontrada no conjunto de ferramentas sub, procura a propriedade no conjunto de ferramentas base.  
+  
+ Se a propriedade não for encontrada no conjunto de ferramentas sub ou o conjunto de ferramentas de base, retornará null.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,Microsoft.Build.Execution.ProjectPropertyInstance&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Build.Execution.ProjectPropertyInstance&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Toolset.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Build.Execution.ProjectPropertyInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as propriedades opcionais associadas com o conjunto de ferramentas.</summary>
+        <value>Retorna as propriedades opcionais associadas com o conjunto de ferramentas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubToolsets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,Microsoft.Build.Evaluation.SubToolset&gt; SubToolsets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Build.Evaluation.SubToolset&gt; SubToolsets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Toolset.SubToolsets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Build.Evaluation.SubToolset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conjunto de conjuntos de ferramentas sub associados a esse conjunto de ferramentas.</summary>
+        <value>Retorna o conjunto de conjuntos de ferramentas sub.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsPath">
+      <MemberSignature Language="C#" Value="public string ToolsPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Toolset.ToolsPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um caminho para as tarefas e destinos desse conjunto de ferramentas.</summary>
+        <value>Retorna um caminho para as tarefas e destinos desse conjunto de ferramentas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Corresponde à $(MSBuildToolsPath) em um arquivo de projeto ou destinos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsVersion">
+      <MemberSignature Language="C#" Value="public string ToolsVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Toolset.ToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome desse conjunto de ferramentas.</summary>
+        <value>Retorna o nome desse conjunto de ferramentas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,316 @@
+<Type Name="COMException" FullName="System.Runtime.InteropServices.COMException">
+  <TypeSignature Language="C#" Value="public class COMException : System.Runtime.InteropServices.ExternalException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit COMException extends System.Runtime.InteropServices.ExternalException" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.COMException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.Runtime.InteropServices.ExternalException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção é lançada quando um HRESULT não reconhecido retorna de uma chamada de método COM.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O common language runtime transforma conhecidos HRESULTs em exceções do .NET Framework, permitindo que os objetos retornar informações de erro significativas para os clientes gerenciados. O HRESULT para mapeamento de exceção também funciona na outra direção, retornando HRESULTs específicos para clientes não gerenciados. Para obter detalhes de mapeamento, consulte [como: mapear HRESULTs e exceções](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ Quando o tempo de execução encontra um HRESULT desconhecido (um HRESULT que não tem uma exceção específica, correspondente), ele gera uma instância do <xref:System.Runtime.InteropServices.COMException> classe. Essa exceção multifuncional expõe os mesmos membros da exceção e herda um público <xref:System.Runtime.InteropServices.ExternalException.ErrorCode%2A> propriedade que contenha o HRESULT retornado pelo receptor. Se uma mensagem de erro está disponível para o tempo de execução (obtido o [IErrorInfo](https://msdn.microsoft.com/library/windows/desktop/ms723041\(v=vs.85\).aspx) interface ou `Err` objeto no Visual Basic ou, em alguns casos do sistema operacional), a mensagem é retornada ao chamador. No entanto, se o desenvolvedor do componente COM não incluir uma mensagem de erro, o tempo de execução retornará o HRESULT de oito dígitos no lugar de uma cadeia de caracteres de mensagem. Ter um HRESULT permite que o chamador determinar a causa da exceção genérica.  
+  
+## <a name="handling-a-comexception-exception"></a>Tratando uma exceção COMException  
+ A seguir estão algumas considerações para solucionar problemas de um <xref:System.Runtime.InteropServices.COMException> exceção.  
+  
+ Verifique o <xref:System.Runtime.InteropServices.ExternalException.ErrorCode%2A> propriedade  
+ Quando o tempo de execução encontra um HRESULT desconhecido e lança um <xref:System.Runtime.InteropServices.COMException> exceção, o <xref:System.Runtime.InteropServices.ExternalException.ErrorCode%2A> propriedade inclui a mensagem de erro ou, se uma mensagem de erro não estiver disponível, o valor HRESULT de oito dígitos.  A mensagem de erro ou o valor HRESULT pode ajudá-lo a determinar a causa da exceção.  
+  
+ Para obter uma lista de valores HRESULT, consulte [valores HRESULT comuns](https://msdn.microsoft.com/library/windows/desktop/aa378137\(v=vs.85\).aspx).  
+  
+ Argumentos de associação tardia e objetos do Microsoft Office  
+ Ao passar argumentos de associação tardia para métodos de objetos do Microsoft Office, um <xref:System.Runtime.InteropServices.COMException> exceção pode ser lançada quando os objetos são objetos COM. A associação tardia presume que essas chamadas de método envolvem um parâmetro `ByRef` e que a propriedade passada por você tem um acessador `set`. Se a propriedade não existir, o .NET Framework gera um <xref:System.MissingMethodException> exceção (com um `CORE_E_MISSINGMETHOD` HRESULT). Para contornar esse comportamento, use objetos de associação antecipada ou passe uma variável em vez de uma propriedade do objeto.  
+  
+ O Visual Studio e o processo de hospedagem  
+ COM é usado para comunicação entre o Visual Studio e o [processo de hospedagem](https://msdn.microsoft.com/library/ms185331.aspx). Porque ele é usado antes de executar o código, uma chamada para [CoInitializeSecurity](https://msdn.microsoft.com/library/windows/desktop/ms693736\(v=vs.85\).aspx) faz com que essa exceção seja lançada.  
+  
+ Em alguns casos, executando o Visual Studio como administrador pode resolver o problema. Você também pode [desabilitar o processo de hospedagem](https://msdn.microsoft.com/library/ms185330.aspx).  
+  
+## <a name="throwing-a-comexception-exception"></a>Gerar uma exceção de COMException  
+ Embora você possa usar o <xref:System.Runtime.InteropServices.COMException> classe para retornar HRESULTs específicos para clientes não gerenciados, lançando uma exceção específica do .NET Framework é melhor do que usando uma exceção genérica. Considere a possibilidade de que clientes gerenciados, bem como os clientes não gerenciados podem usar o objeto do .NET Framework e lançar um HRESULT para um chamador gerenciado é menos abrangente que gerar uma exceção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public COMException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.COMException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.COMException" /> com valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.InteropServices.COMException> herda de <xref:System.Runtime.InteropServices.ExternalException>. A tabela a seguir mostra como esse construtor define as propriedades do <xref:System.Exception> objeto.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|Uma cadeia de caracteres de mensagem de erro localizada.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public COMException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.COMException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que indica o motivo da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.COMException" /> classe com uma mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.InteropServices.COMException> herda de <xref:System.Runtime.InteropServices.ExternalException>. A tabela a seguir mostra como esse construtor define as propriedades do <xref:System.Exception> objeto.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`|  
+|<xref:System.Exception.Message%2A>|`message`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected COMException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.COMException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto que contém os dados do objeto serializado.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> objeto que fornece as informações contextuais sobre a origem ou destino.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.COMException" /> classe a partir de dados de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo. Para obter mais informações, consulte [XML e serialização SOAP](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ <xref:System.Runtime.InteropServices.COMException> herda de <xref:System.Runtime.InteropServices.ExternalException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public COMException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.COMException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="inner">A exceção que é a causa da exceção atual. Se o <c>interna</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.COMException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra como esse construtor define as propriedades do <xref:System.Exception> objeto.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência de exceção interna.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public COMException (string message, int errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, int32 errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.COMException.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que indica o motivo pelo qual a exceção ocorreu.</param>
+        <param name="errorCode">O valor de código (HRESULT) de erro associado a essa exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.COMException" /> classe com um código de mensagem de erro especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Runtime.InteropServices.COMException> construtor define a mensagem de base com o código de erro.  
+  
+ <xref:System.Runtime.InteropServices.COMException> herda de <xref:System.Runtime.InteropServices.ExternalException>. A tabela a seguir mostra como esse construtor define as propriedades do <xref:System.Exception> objeto.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`|  
+|<xref:System.Exception.Message%2A>|`message`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.COMException.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte o conteúdo da exceção em uma cadeia de caracteres.</summary>
+        <returns>Uma cadeia de caracteres que contém o <see cref="P:System.Exception.HResult" />, <see cref="P:System.Exception.Message" />, <see cref="P:System.Exception.InnerException" />, e <see cref="P:System.Exception.StackTrace" /> propriedades da exceção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

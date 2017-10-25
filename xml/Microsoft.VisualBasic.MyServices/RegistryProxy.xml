@@ -1,0 +1,617 @@
+<Type Name="RegistryProxy" FullName="Microsoft.VisualBasic.MyServices.RegistryProxy">
+  <TypeSignature Language="C#" Value="public class RegistryProxy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi RegistryProxy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.MyServices.RegistryProxy" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece propriedades e métodos para manipular o Registro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar essas propriedades, você deve ter permissão de leitura e gravação do <xref:System.Security.Permissions.RegistryPermissionAccess> enumeração. Qualquer código sendo executado com confiança total (sob a política de segurança padrão, este é qualquer código instalado na unidade de disco rígido local do usuário) tem as permissões necessárias para acessar o registro. Para obter mais informações, consulte a classe <xref:System.Security.Permissions.RegistryPermission>.  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Registry` objeto.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Criar uma chave do registro e defina seu valor|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Excluir uma chave do registro|[Como Excluir uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)|  
+|Ler dados do registro|[Como Ler um Valor de uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo lê o valor `Name` de `HKEY_CURRENT_USER\Software\MyApp` e o exibe em uma caixa de mensagem.  
+  
+ [!code-vb[VbVbalrMyRegistry#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClassesRoot">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey ClassesRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.RegistryKey ClassesRoot" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyServices.RegistryProxy.ClassesRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um tipo <see cref="T:Microsoft.Win32.RegistryKey" /> que fornece acesso a <see langword="HKEY_CLASSES_ROOT" />.</summary>
+        <value>
+          <see cref="T:Microsoft.Win32.RegistryKey" />
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HKEY_CLASSES_ROOT`é usado principalmente para armazenar informações sobre associações de arquivo no Windows.  
+  
+ O <xref:System.Security.Permissions.RegistryPermission> classe, que é o <xref:System.Security.Permissions> namespace, controla o acesso a variáveis de registro. As variáveis de Registro não devem ser armazenadas em locais de memória em que o código sem <xref:System.Security.Permissions.RegistryPermission> possa acessá-los. Da mesma forma, quando conceder as permissões, conceda os privilégios mínimos necessários para obter o trabalho feito.  
+  
+ Os valores de acesso de permissão ao Registro são definidos pela enumeração <xref:System.Security.Permissions.RegistryPermissionAccess>. A tabela a seguir detalha seus membros.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|AllAccess|Criar, ler e gravar o acesso a variáveis de registro.|  
+|Create|Crie o acesso a variáveis de Registro.|  
+|NoAccess|Sem acesso a variáveis de Registro.|  
+|Ler|Acesso de leitura a variáveis de Registro.|  
+|Write|Acesso de gravação a variáveis de Registro.|  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Registry` objeto.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Criar uma chave do registro e defina seu valor|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Excluir uma chave do registro|[Como Excluir uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)|  
+|Ler um valor de uma chave do registro|[Como Ler um Valor de uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo obtém os nomes de subchaves para a `ClassesRoot` chave do registro e os adiciona ao `ListBox1`.  
+  
+ [!code-vb[VbVbalrMyRegistry#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#10)]  
+  
+ Este exemplo requer que você tenha um `ListBox` chamado `ListBox1` em seu projeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentConfig">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey CurrentConfig { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.RegistryKey CurrentConfig" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentConfig" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um tipo <see cref="T:Microsoft.Win32.RegistryKey" /> que fornece acesso a <see langword="HKEY_CURRENT_CONFIG" />.</summary>
+        <value>
+          <see cref="T:Microsoft.Win32.RegistryKey" />
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HKEY_CURRENT_CONFIG`é usado principalmente para armazenar configurações de dispositivos no computador.  
+  
+ O <xref:System.Security.Permissions.RegistryPermission> classe, que é o <xref:System.Security.Permissions> namespace, controla o acesso a variáveis de registro. As variáveis de Registro não devem ser armazenadas em locais de memória em que o código sem <xref:System.Security.Permissions.RegistryPermission> possa acessá-los. Da mesma forma, quando conceder as permissões, conceda os privilégios mínimos necessários para obter o trabalho feito.  
+  
+ Os valores de acesso de permissão ao Registro são definidos pela enumeração <xref:System.Security.Permissions.RegistryPermissionAccess>. A tabela a seguir detalha seus membros.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|AllAccess|Criar, ler e gravar o acesso a variáveis de registro.|  
+|Create|Crie o acesso a variáveis de Registro.|  
+|NoAccess|Sem acesso a variáveis de Registro.|  
+|Ler|Acesso de leitura a variáveis de Registro.|  
+|Write|Acesso de gravação a variáveis de Registro.|  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Registry` objeto.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Criar uma chave do registro e defina seu valor|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Excluir uma chave do registro|[Como Excluir uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)|  
+|Ler um valor de uma chave do registro|[Como Ler um Valor de uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo cria a subchave `MyDeviceSettings`.  
+  
+ [!code-vb[VbVbalrMyRegistry#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentUser">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey CurrentUser { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.RegistryKey CurrentUser" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um tipo <see cref="T:Microsoft.Win32.RegistryKey" /> que fornece acesso a <see langword="HKEY_CURRENT_USER" />.</summary>
+        <value>
+          <see cref="T:Microsoft.Win32.RegistryKey" />
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HKEY_CURRENT_USER`é usado principalmente para armazenar configurações por usuário, como cores e fontes, no Windows. A chave difere de acordo com o usuário.  
+  
+ O <xref:System.Security.Permissions.RegistryPermission> classe, que é o <xref:System.Security.Permissions> namespace, controla o acesso a variáveis de registro. As variáveis de Registro não devem ser armazenadas em locais de memória em que o código sem <xref:System.Security.Permissions.RegistryPermission> possa acessá-los. Da mesma forma, quando a concessão de permissões, conceda os privilégios mínimos necessários para obter o trabalho feito.  
+  
+ Os valores de acesso de permissão ao Registro são definidos pela enumeração <xref:System.Security.Permissions.RegistryPermissionAccess>. A tabela a seguir detalha seus membros.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|AllAccess|Criar, ler e gravar o acesso a variáveis de registro.|  
+|Create|Crie o acesso a variáveis de Registro.|  
+|NoAccess|Sem acesso a variáveis de Registro.|  
+|Ler|Acesso de leitura a variáveis de Registro.|  
+|Write|Acesso de gravação a variáveis de Registro.|  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Registry` objeto.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Criar uma chave do registro e defina seu valor|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Excluir uma chave do registro|[Como Excluir uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)|  
+|Ler um valor de uma chave do registro|[Como Ler um Valor de uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo exclui a subchave `Software\MyCompany\Preferences\UserData`.  
+  
+ [!code-vb[VbVbalrMyRegistry#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynData">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey DynData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.RegistryKey DynData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The DynData registry key works only on Win9x, which is not supported by this version of the .NET Framework.  Use the PerformanceData registry key instead.  This property will be removed from a future version of the framework.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:Microsoft.Win32.RegistryKey" /> tipo, que fornece acesso a <see langword="HKEY_DYNDATA" />.</summary>
+        <value>
+          <see cref="T:Microsoft.Win32.RegistryKey" />
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HKEY_DYNDATA`é usado para armazenar dados de registro dinâmico, como o que é usado pelos Drivers de dispositivo Virtual e é suportado apenas em sistemas Windows 95/98. Em sistemas não-Windows 95/98, chamar os métodos da chave retornada pelo `Registry.DynData`, como `CreateSubKey`, `DeleteSubKey`, `GetSubKeyCount`, `GetValueCount`, etc., lançará um <xref:System.IO.IOException>.  
+  
+ O <xref:System.Security.Permissions.RegistryPermission> classe, que é o <xref:System.Security.Permissions> namespace, controla o acesso a variáveis de registro. As variáveis de Registro não devem ser armazenadas em locais de memória em que o código sem <xref:System.Security.Permissions.RegistryPermission> possa acessá-los. Da mesma forma, quando a concessão de permissões, conceda os privilégios mínimos necessários para obter o trabalho feito.  
+  
+ Os valores de acesso de permissão ao Registro são definidos pela enumeração <xref:System.Security.Permissions.RegistryPermissionAccess>. A tabela a seguir detalha seus membros.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|AllAccess|Criar, ler e gravar o acesso a variáveis de registro.|  
+|Create|Crie o acesso a variáveis de Registro.|  
+|NoAccess|Sem acesso a variáveis de Registro.|  
+|Ler|Acesso de leitura a variáveis de Registro.|  
+|Write|Acesso de gravação a variáveis de Registro.|  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Registry` objeto.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Criar uma chave do registro e defina seu valor|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Excluir uma chave do registro|[Como Excluir uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)|  
+|Ler um valor de uma chave do registro|[Como Ler um Valor de uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo exclui a árvore de subchave `Software\MyCompany\Preferences`.  
+  
+ [!code-vb[VbVbalrMyRegistry#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (string keyName, string valueName, object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance object GetValue(string keyName, string valueName, object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.RegistryProxy.GetValue(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">
+          <see langword="String" />. Chave da qual o valor é a ser recuperado. Necessário.</param>
+        <param name="valueName">
+          <see langword="String" />. Valor a ser recuperado. Necessário.</param>
+        <param name="defaultValue">
+          <see langword="Object" />. Valor padrão a ser fornecido se o valor não existir. Necessário.</param>
+        <summary>Obtém um valor de uma chave do registro.</summary>
+        <returns>Obtém um valor de uma chave do registro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `valueName` não diferencia maiúsculas de minúsculas.  
+  
+ Uma chave do registro pode conter um valor que não está associado com qualquer nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para recuperar esse sem nome de valor, especifique null ou cadeia de caracteres vazia ("") para `valueName`.  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `GetValue` método.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Ler um valor de uma chave do registro|[Como Ler um Valor de uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo lê o valor `Name` de `HKEY_CURRENT_USER\Software\MyApp` e exibe-o em um `MessageBox`.  
+  
+ [!code-vb[VbVbalrMyRegistry#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias a serem lidas na chave do Registro.</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado foi marcado para exclusão.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="keyName" /> não começa com uma raiz do Registro válida.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para ler do Registro. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">para ler uma chave do registro do tipo REG_EXPAND_SZ. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalMachine">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey LocalMachine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.RegistryKey LocalMachine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyServices.RegistryProxy.LocalMachine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:Microsoft.Win32.RegistryKey" /> tipo, que fornece acesso a <see langword="HKEY_LOCAL_MACHINE" />.</summary>
+        <value>
+          <see cref="T:Microsoft.Win32.RegistryKey" />
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HKEY_LOCAL_MACHINE`geralmente é usado para armazenar configurações que não variam para cada usuário no Windows. Todos os usuários do computador compartilham essa chave. Suas cinco subchaves (`Hardware`, `SAM`, `Security`, `Software`, e `System`) armazenam dados de configuração para a máquina local.  
+  
+ O <xref:System.Security.Permissions.RegistryPermission> classe, que é o <xref:System.Security.Permissions> namespace, controla o acesso a variáveis de registro. As variáveis de Registro não devem ser armazenadas em locais de memória em que o código sem <xref:System.Security.Permissions.RegistryPermission> possa acessá-los. Da mesma forma, quando a concessão de permissões, conceda os privilégios mínimos necessários para obter o trabalho feito.  
+  
+ Os valores de acesso de permissão ao Registro são definidos pela enumeração <xref:System.Security.Permissions.RegistryPermissionAccess>. A tabela a seguir detalha seus membros.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|AllAccess|Criar, ler e gravar o acesso a variáveis de registro.|  
+|Create|Crie o acesso a variáveis de Registro.|  
+|NoAccess|Sem acesso a variáveis de Registro.|  
+|Ler|Acesso de leitura a variáveis de Registro.|  
+|Write|Acesso de gravação a variáveis de Registro.|  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Registry` objeto.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Criar uma chave do registro e defina seu valor|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Excluir uma chave do registro|[Como Excluir uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)|  
+|Ler um valor de uma chave do registro|[Como Ler um Valor de uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo abre a subchave `Software\MyCompany\Preferences` e define o valor `FontColor` para `"red"`.  
+  
+ [!code-vb[VbVbalrMyRegistry#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformanceData">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey PerformanceData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.RegistryKey PerformanceData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyServices.RegistryProxy.PerformanceData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:Microsoft.Win32.RegistryKey" /> tipo, que fornece acesso a <see langword="HKEY_PERFORMANCE_DATA" />.</summary>
+        <value>
+          <see cref="T:Microsoft.Win32.RegistryKey" />
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HKEY_PERFORMANCE_DATA`é usado para acessar as informações de desempenho de componentes de software. Cada componente de software cria chaves para seus objetos e contadores quando ele está instalado e grava dados do contador durante sua execução. Esses dados não são armazenados no registro, embora o registro é usado para acessá-lo. Em vez disso, chamar funções de registro via `HKEY_PERFORMANCE_DATA` faz com que o sistema coletar os dados de gerenciadores de objetos de sistema apropriado.  
+  
+ Essa chave não existe em sistemas Windows 98. tentar usá-lo diferente de chamar o `Name` método lançará um <xref:System.IO.IOException>.  
+  
+ Essa chave normalmente não pode ser gravada. tentativa de criar uma subchave nele lançará um <xref:System.IO.IOException>.  
+  
+ O <xref:System.Security.Permissions.RegistryPermission> classe, que é o <xref:System.Security.Permissions> namespace, controla o acesso a variáveis de registro. As variáveis de Registro não devem ser armazenadas em locais de memória em que o código sem <xref:System.Security.Permissions.RegistryPermission> possa acessá-los. Da mesma forma, quando a concessão de permissões, conceda os privilégios mínimos necessários para obter o trabalho feito.  
+  
+ Os valores de acesso de permissão ao Registro são definidos pela enumeração <xref:System.Security.Permissions.RegistryPermissionAccess>. A tabela a seguir detalha seus membros.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|AllAccess|Criar, ler e gravar o acesso a variáveis de registro.|  
+|Create|Crie o acesso a variáveis de Registro.|  
+|NoAccess|Sem acesso a variáveis de Registro.|  
+|Ler|Acesso de leitura a variáveis de Registro.|  
+|Write|Acesso de gravação a variáveis de Registro.|  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Registry` objeto.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Criar uma chave do registro e defina seu valor|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Excluir uma chave do registro|[Como Excluir uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)|  
+|Ler um valor de uma chave do registro|[Como Ler um Valor de uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo obtém o valor `ThisSoftware` do `MyCompany` subchave.  
+  
+ [!code-vb[VbVbalrMyRegistry#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (string keyName, string valueName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetValue(string keyName, string valueName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.RegistryProxy.SetValue(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">
+          <see langword="String" />. Nome da chave a serem gravados. Necessário.</param>
+        <param name="valueName">
+          <see langword="String" />. Nome do valor a ser gravado. Necessário.</param>
+        <param name="value">
+          <see langword="Object" />. Valor a ser gravado. Necessário.</param>
+        <summary>Grava um valor em uma chave do registro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor ou a chave especificada não existir, ele será criado.  
+  
+ Aqui está um exemplo de tarefa envolvendo o `My.Computer.Registry.SetValue` método.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Defina um valor em uma chave do registro|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo define o valor `FontColor` para "vermelho" na chave `HKEY_LOCAL_MACHINE\Software\MyCompany\Preferences`.  
+  
+ [!code-vb[VbVbalrMyRegistry#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="Nothing" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="keyName" /> não começa com uma raiz do Registro válida.  
+  
+ -ou-  
+  
+ <paramref name="valueName" /> é maior que o tamanho máximo permitido (255 caracteres).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é somente leitura e, portanto, não pode ser gravado como; por exemplo, é um nó de nível raiz, ou ele não foi aberto com acesso de gravação.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou modificar chaves do Registro.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Para modificar a chave do registro especificado se ele existir, ou para criar a chave do registro se ele ainda não existir. Enumerações associadas: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (string keyName, string valueName, object value, Microsoft.Win32.RegistryValueKind valueKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SetValue(string keyName, string valueName, object value, valuetype Microsoft.Win32.RegistryValueKind valueKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.MyServices.RegistryProxy.SetValue(System.String,System.String,System.Object,Microsoft.Win32.RegistryValueKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="valueKind" Type="Microsoft.Win32.RegistryValueKind" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">
+          <see langword="String" />. Nome da chave a serem gravados. Necessário.</param>
+        <param name="valueName">
+          <see langword="String" />. Nome do valor a ser gravado. Necessário.</param>
+        <param name="value">
+          <see langword="Object" />. Valor a ser gravado. Necessário.</param>
+        <param name="valueKind">
+          <see cref="T:Microsoft.Win32.RegistryValueKind" />. Necessário.</param>
+        <summary>Grava um valor em uma chave do registro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor ou a chave especificada não existir, ele será criado.  
+  
+ Aqui está um exemplo de tarefa envolvendo o `My.Computer.Registry.SetValue` método.  
+  
+|Para|Consulte|  
+|--------|---------|  
+|Defina um valor em uma chave do registro|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo define o valor `FontColor` para "vermelho" na chave `HKEY_LOCAL_MACHINE\Software\MyCompany\Preferences`.  
+  
+ [!code-vb[VbVbalrMyRegistry#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="Nothing" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="keyName" /> não começa com uma raiz do Registro válida.  
+  
+ -ou-  
+  
+ <paramref name="keyName" /> é maior que o tamanho máximo permitido (255 caracteres).  
+  
+ -ou-  
+  
+ O tipo de <paramref name="value" /> não coincide com o tipo de dados do registro especificado por <paramref name="valueKind" />, portanto, os dados não podem ser convertidos corretamente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é somente leitura e, portanto, não pode ser gravado como; por exemplo, é um nó de nível raiz, ou ele não foi aberto com acesso de gravação.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou modificar chaves do Registro.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Para modificar a chave do registro especificado se ele existir, ou para criar a chave do registro se ele ainda não existir. Enumerações associadas: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Users">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey Users { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.RegistryKey Users" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.MyServices.RegistryProxy.Users" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:Microsoft.Win32.RegistryKey" /> tipo, que fornece acesso a <see langword="HKEY_USERS" />.</summary>
+        <value>
+          <see cref="T:Microsoft.Win32.RegistryKey" />
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HKEY_USERS`é usado principalmente para armazenar as configurações padrão para usuários pela primeira vez.  
+  
+ O <xref:System.Security.Permissions.RegistryPermission> classe, que é o <xref:System.Security.Permissions> namespace, controla o acesso a variáveis de registro. As variáveis de Registro não devem ser armazenadas em locais de memória em que o código sem <xref:System.Security.Permissions.RegistryPermission> possa acessá-los. Da mesma forma, quando a concessão de permissões, conceda os privilégios mínimos necessários para obter o trabalho feito.  
+  
+ Os valores de acesso de permissão ao Registro são definidos pela enumeração <xref:System.Security.Permissions.RegistryPermissionAccess>. A tabela a seguir detalha seus membros.  
+  
+|Valor|Acesso às variáveis de Registro|  
+|-----------|----------------------------------|  
+|AllAccess|Criar, ler e gravar|  
+|Create|Create|  
+|NoAccess|Sem acesso.|  
+|Ler|Ler|  
+|Write|Write|  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Registry` objeto.  
+  
+|**To**|**Consulte**|  
+|------------|-------------|  
+|Criar uma chave do registro e defina seu valor|[Como Criar uma Chave do Registro e Definir o Valor](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)|  
+|Excluir uma chave do registro|[Como Excluir uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)|  
+|Ler um valor de uma chave do registro|[Como Ler um Valor de uma Chave do Registro](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)|  
+  
+   
+  
+## Examples  
+ Este exemplo conta e exibe o número de valores na chave do registro.  
+  
+ [!code-vb[VbVbalrMyRegistry#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyRegistry/VB/Class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

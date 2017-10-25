@@ -1,0 +1,65 @@
+<Type Name="PropertyLockMode" FullName="System.EnterpriseServices.PropertyLockMode">
+  <TypeSignature Language="C#" Value="public enum PropertyLockMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PropertyLockMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.PropertyLockMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o modo para acessar as propriedades compartilhadas no Gerenciador de grupo de propriedade compartilhada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="Method" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.PropertyLockMode Method = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.PropertyLockMode.Method" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.PropertyLockMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bloqueia todas as propriedades do grupo de propriedades compartilhadas para uso exclusivo do chamador, desde que o método atual do chamador está sendo executado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Não use <xref:System.EnterpriseServices.PropertyLockMode.Method> ao criar um grupo de propriedade em um construtor, pois isso pode causar um deadlock.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGet">
+      <MemberSignature Language="C#" Value="SetGet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.PropertyLockMode SetGet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.PropertyLockMode.SetGet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.PropertyLockMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Bloqueios de uma propriedade durante get ou set, para garantir que cada get ou defina a operação em uma propriedade compartilhada é atômica.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

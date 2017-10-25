@@ -1,0 +1,86 @@
+<Type Name="SerializationFormat" FullName="System.Data.SerializationFormat">
+  <TypeSignature Language="C#" Value="public enum SerializationFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SerializationFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SerializationFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina o formato de serialização para um <see cref="T:System.Data.DataSet" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Microsoft ADO.NET 2.0 apresenta a capacidade de serializar uma <xref:System.Data.DataSet> como conteúdo binário. Versões anteriores do Microsoft .NET Framework não dão suporte a serialização binária.  
+  
+ O formato padrão é Xml. Isso é compatível com versões anteriores e funciona com todas as versões do .NET Framework.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Binary">
+      <MemberSignature Language="C#" Value="Binary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SerializationFormat Binary = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SerializationFormat.Binary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SerializationFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Serialize como conteúdo binário. Disponível somente no ADO.NET 2.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="Xml" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SerializationFormat Xml = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SerializationFormat.Xml" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SerializationFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Serialize como conteúdo XML. O padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

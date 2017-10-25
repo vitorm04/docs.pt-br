@@ -1,0 +1,1306 @@
+<Type Name="PageCatalogPart" FullName="System.Web.UI.WebControls.WebParts.PageCatalogPart">
+  <TypeSignature Language="C#" Value="public sealed class PageCatalogPart : System.Web.UI.WebControls.WebParts.CatalogPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageCatalogPart extends System.Web.UI.WebControls.WebParts.CatalogPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.CatalogPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.PageCatalogPartDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um catálogo que mantém referências a todos os <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles (e outros controles de servidor contido no <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> zonas) que um usuário tiver fechado em uma única página de Web Parts, que permite aos usuários adicionar os controles fechados de volta para a página. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> classe serve a uma finalidade específica em uma página de Web Parts: ele atua como um catálogo de página para manter os controles adicionados anteriormente à página que um usuário tiver fechado, para que o usuário pode adicioná-los para a página. Esse controle é visível apenas quando uma página da Web está em modo de exibição de catálogo, um modo de exibição especial que permite aos usuários adicionar e remover os controles na página. Adicionar um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> se você deseja fornecer aos usuários a flexibilidade de fechar e reabrir a controles de controle para sua página. Se sua página não permitir que os usuários para fechar a controles em todos os, não é necessário para adicionar um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle para sua página.  
+  
+ Somente controles fechados são adicionados ao catálogo de página. Um controle fechado tem vários atributos:  
+  
+-   Não é visível na página.  
+  
+-   Ele não será renderizado na página.  
+  
+-   Ela não participará em fases do ciclo de vida de página.  
+  
+ Fechar um controle é diferente de excluí-lo, que remove permanentemente da página. Um usuário pode reabrir uma instância do controle fechado de um catálogo de página, mas depois que um usuário exclui um controle, ele ou ela nunca pode recuperar a instância específica.  
+  
+ Forma mais comum e conveniente para adicionar um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle a uma página está declarando-a no formato de persistência de página. Assim como acontece com qualquer declarativa <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle, um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle deve ser declarado dentro do contexto apropriado de elementos de marcação do ASP.NET em uma página da Web. Para obter um exemplo de código de trabalho de como declarar uma <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> em uma página da Web, consulte a seção exemplo deste tópico. Você deve adicionar a seguinte sequência de elementos declarativos para a página:  
+  
+1.  Um `<asp:catalogzone>` elemento deve ser declarado e um filho `<zonetemplate>` elemento deve ser adicionado a ele para conter <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles declarado na zona.  
+  
+2.  Um `<asp:pagecatalogpart>` elemento deve ser adicionado como um filho de `<zonetemplate>` elemento. Também pode haver outros <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles declarados como elementos filho de `<zonetemplate>` elemento, incluindo <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> ou <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controles.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> classe tem apenas uma propriedade utilizável, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Title%2A> propriedade, que substitui a propriedade de base para que um título padrão pode ser fornecido para o catálogo de página, se nenhum valor for fornecido.  
+  
+ As propriedades restantes para o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> propriedades herdadas, mas são na verdade não usado para renderizar o controle de substituição de classe. Elas são substituídas somente para que os atributos de código especial podem ser definidos neles para ocultá-las das ferramentas de design como [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)]. Você não deve usar essas propriedades ocultas, porque eles não têm nenhum efeito no processamento. O fato de que eles estão ocultos do IntelliSense e o painel de propriedades no Visual Studio ajuda os desenvolvedores a Evite usá-las por engano. Todas essas propriedades ocultas são indicadas como tal em seus respectivos tópicos da Ajuda.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> classe também tem vários métodos importantes. O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions%2A> método recupera um <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objeto para cada <xref:System.Web.UI.WebControls.WebParts.WebPart> controle no catálogo de página, que permite que um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle para exibir informações sobre cada controle de servidor sem a necessidade de criar uma instância do controle. Outro método é o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetWebPart%2A> método. Esse método obtém uma instância de um determinado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, com base na descrição do passado para o método.  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ A marcação processada por padrão para este controle pode não estar de acordo com os padrões de acessibilidade, como as diretrizes de prioridade 1 conteúdo WCAG Web Accessibility Guidelines 1.0 (). Para obter detalhes sobre o suporte de acessibilidade para este controle, consulte [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle declarativamente em uma página da Web. Este exemplo tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Uma página da Web que contém um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle, uma <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle e um <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> controle.  
+  
+-   Um arquivo de código fonte que contém dois custom <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+-   O exemplo de uma explicação de como funciona o ao carregar a página em um navegador.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_PageCatalogPart_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Overview/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_PageCatalogPart_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Overview/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ A segunda parte do exemplo de código é a página da Web. Na parte superior da página são dois `register` diretivas, uma para o controle de usuário e uma para o componente compilado que contém dois personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Observe que a página tem uma referência declarativa para o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle aninhado dentro da hierarquia apropriada de elementos declarativos conforme descrito na seção Comentários deste tópico. Também há um `<asp:declarativecatalogpart>` elemento, que contém referências para um padrão ASP.NET <xref:System.Web.UI.WebControls.Calendar> controle e dois personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, que são os controles que os usuários podem selecionar a partir do catálogo.  
+  
+ [!code-aspx-csharp[WebParts_PageCatalogPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Overview/CS/PageCatalogPartCS.aspx#1)]
+ [!code-aspx-vb[WebParts_PageCatalogPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Overview/VB/PageCatalogPartVB.aspx#1)]  
+  
+ A terceira parte do exemplo de código é o código-fonte para os dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_PageCatalogPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_PageCatalogPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ Quando você carrega a página em um navegador, selecione **catálogo modo** no **modo de exibição** controle de lista suspensa para alternar para modo de catálogo. No modo de catálogo, você pode ver os controles que estão disponíveis para serem adicionados à página. Adicionar um dos controles, em seguida, usar o **modo de exibição** controle de lista suspensa para retornar a página para o modo de procura. Clique no menu de verbos (seta para baixo) na barra de título de um dos controles e clique em **fechar** para fechar o controle. Retorna a página para o modo de catálogo e observe que o controle que é fechado agora aparece no catálogo de página e está disponível para ser adicionado novamente a página.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageCatalogPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PageCatalogPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.%23ctor%2A> construtor é um padrão; nenhum construtor está declarado no <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> classe e tarefas especiais, portanto, não são executadas quando uma nova instância da classe é criada. O .NET Framework usa o construtor internamente para criar uma instância da classe.  
+  
+ É possível, mas é improvável que você precisará usar o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.%23ctor%2A> construtor programaticamente em seu próprio código. O uso pretendido do controle é para desenvolvedores de página para adicioná-lo a uma página de forma declarativa em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessKey">
+      <MemberSignature Language="C#" Value="public override string AccessKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AccessKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.AccessKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Uma cadeia de caracteres que representa uma chave de teclado usada para navegação de teclado rápido para um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.AccessKey%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.AccessKey%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.AccessKey%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que é usado para a cor de plano de fundo do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BackColor%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BackColor%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.BackColor%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageUrl">
+      <MemberSignature Language="C#" Value="public override string BackImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.BackImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Uma cadeia de caracteres que contém a URL para uma imagem usada como plano de fundo para um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BackImageUrl%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BackImageUrl%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.Panel.BackImageUrl%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que é usado como a cor da borda ao redor de um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BorderColor%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BorderColor%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.BorderColor%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.BorderStyle" /> que determina o tipo de exibição de título e borda para um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BorderStyle%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BorderStyle%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit BorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> que determina a largura da borda ao redor de um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BorderWidth%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.BorderWidth%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.BorderWidth%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CssClass">
+      <MemberSignature Language="C#" Value="public override string CssClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CssClass" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.CssClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.CssClassProperty</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Uma cadeia de caracteres que contém o nome de uma classe CSS (folha) de estilo em cascata usada para atribuir as características de estilo para um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.CssClass%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.CssClass%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.CssClass%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultButton">
+      <MemberSignature Language="C#" Value="public override string DefaultButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.DefaultButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Uma cadeia de caracteres que contém a ID de um <see cref="T:System.Web.UI.WebControls.Button" /> controle que serve como botão padrão em um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.DefaultButton%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.DefaultButton%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.Panel.DefaultButton%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.ContentDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ContentDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.ContentDirection" /> que indica a direção na qual o conteúdo flui em um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Direction%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Direction%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.Panel.Direction%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public override bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um valor booliano que indica se um controle está habilitado ou desabilitado atualmente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Enabled%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Enabled%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.Enabled%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um valor booliano que indica se os temas podem ser usados em um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.EnableTheming%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.EnableTheming%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.EnableTheming%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir a propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.FontInfo Font { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.FontInfo Font" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.FontInfo" /> que indica a fonte usada para o conteúdo do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Font%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Font%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.Font%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que determina a cor de primeiro plano para um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.ForeColor%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.ForeColor%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.ForeColor%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableWebPartDescriptions">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection GetAvailableWebPartDescriptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de descrições de disponíveis <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles em um catálogo.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" /> que contém um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> para cada fechado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle em um catálogo de página.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions%2A> método fornece uma implementação para o método de base abstrato declarado no <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions%2A> método retorna informações de descrição de cada controle em um catálogo. Um <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objeto contém informações essenciais sobre um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, incluindo sua ID, uma referência de objeto para o controle e os valores de várias propriedades importantes que são herdadas de <xref:System.Web.UI.WebControls.WebParts.Part> classe, como <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> e <xref:System.Web.UI.WebControls.WebParts.Part.Description%2A>.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions%2A> método melhora o desempenho. Quando um catálogo é criado, ele precisa de algumas informações sobre cada controle que ele contém, inclusive um título, uma descrição, um ícone (se houver) e uma ID. Em vez de criar uma instância de cada controle para obter essas informações, um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona que cria um catálogo de chamadas a <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions%2A> método para cada controle que estarão no catálogo e a chamada retorna apenas as informações de descrição para o controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions%2A> método. Este exemplo tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Um arquivo de código fonte que contém dois custom <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+-   Uma página da Web que contém um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle e um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle que faz referência a vários controles de servidor. A página também contém o código de manipulação de eventos que chama o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions%2A> método.  
+  
+-   O exemplo de uma explicação de como funciona o ao carregar a página em um navegador.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_PageCatalogPart_Get#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_PageCatalogPart_Get#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para dois personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_PageCatalogPart_Get#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_PageCatalogPart_Get#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/VB/userinfowebpart.vb#6)]  
+  
+ A terceira parte do exemplo é a página da Web que contém o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle. Observe que o `Button1_Click` chamadas de método de <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetAvailableWebPartDescriptions%2A> método, obtém as descrições do <xref:System.Web.UI.WebControls.WebParts.WebPart> controla no catálogo de página e grava os detalhes para um rótulo.  
+  
+ [!code-aspx-csharp[WebParts_PageCatalogPart_Get#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/CS/PageCatalogPart_GetCS.aspx#1)]
+ [!code-aspx-vb[WebParts_PageCatalogPart_Get#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/VB/PageCatalogPart_GetVB.aspx#1)]  
+  
+ Quando você carrega a página em um navegador, selecione **catálogo modo** no **modo de exibição** controle de lista suspensa para alternar para modo de catálogo. No modo de catálogo, você pode ver os controles que estão disponíveis para serem adicionados à página. Adicionar um ou mais controles para a página e, em seguida, use o **modo de exibição** controle de lista suspensa para retornar a página para o modo de procura. Clique no menu de verbos (seta para baixo) na barra de título de um ou mais dos controles e, em seguida, clique em **fechar**. Retorna a página para o modo de catálogo e observe que o controle ou controles fechados agora aparecem no catálogo de página e estão disponíveis para ser adicionado de volta para a página. Clique o **descrições de Web Part de exibição** botão para gravar os detalhes sobre os controles no catálogo de página para o rótulo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebPart">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPart GetWebPart (System.Web.UI.WebControls.WebParts.WebPartDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPart GetWebPart(class System.Web.UI.WebControls.WebParts.WebPartDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetWebPart(System.Web.UI.WebControls.WebParts.WebPartDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.Web.UI.WebControls.WebParts.WebPartDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> que contém detalhes sobre o controle.</param>
+        <summary>Retorna uma referência a um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle com base no valor da descrição passado para o método.</summary>
+        <returns>Uma referência para a instância real de um fechado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle cuja descrição corresponda <paramref name="description" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetWebPart%2A> método retorna uma referência a um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle cujos detalhes de descrição correspondem aos valores do <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objeto passado para o método. Normalmente, esse método é usado junto com o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetWebPart%2A> método, que é usado para recuperar as descrições de todos os controles no catálogo. Individuais <xref:System.Web.UI.WebControls.WebParts.WebPart> controles podem ser recuperados ou manipulados conforme necessário, passando individuais <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objetos para o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetWebPart%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetWebPart%2A> método. Este exemplo tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Um arquivo de código fonte que contém dois custom <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+-   Uma página da Web que contém um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle e um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle que faz referência a vários controles de servidor. A página também contém o código de manipulação de eventos que chama o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetWebPart%2A> método.  
+  
+-   O exemplo de uma explicação de como funciona o ao carregar a página em um navegador.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_PageCatalogPart_Get#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/CS/DisplayModeMenuCS.ascx#7)]
+ [!code-aspx-vb[WebParts_PageCatalogPart_Get#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/VB/DisplayModeMenuVB.ascx#7)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para dois personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_PageCatalogPart_Get#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_PageCatalogPart_Get#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/VB/userinfowebpart.vb#6)]  
+  
+ A terceira parte do exemplo é a página da Web que contém o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle. Observe que o `Button2_Click` método obtém as descrições do <xref:System.Web.UI.WebControls.WebParts.WebPart> controles no catálogo, chamadas de <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GetWebPart%2A> método para recuperar todos os controles na página de catálogo para uma coleção e, em seguida, adiciona esses controles de volta para a página.  
+  
+ [!code-aspx-csharp[WebParts_PageCatalogPart_Get#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/CS/PageCatalogPart_GetCS.aspx#1)]
+ [!code-aspx-vb[WebParts_PageCatalogPart_Get#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Get/VB/PageCatalogPart_GetVB.aspx#1)]  
+  
+ Quando você carrega a página em um navegador, selecione **catálogo modo** no **modo de exibição** controle de lista suspensa para alternar para modo de catálogo. No modo de catálogo, você pode ver os controles que estão disponíveis para serem adicionados à página. Adicionar um ou mais controles para a página e, em seguida, use o **modo de exibição** controle de lista suspensa para retornar a página para o modo de procura. Clique no menu de verbos (seta para baixo) na barra de título de um ou mais dos controles e, em seguida, clique em **fechar**. Retorna a página para o modo de catálogo e observe que agora o controle ou controles fechados aparecem no catálogo de página e estão disponíveis para ser adicionado de volta para a página. Clique o **adicionar controles de Web Part** botão para adicionar os controles no catálogo de página para a página. Use o **modo de exibição** controle de lista suspensa para retornar a página para o modo de procura normal; os controles que você adicionou estão visíveis na página.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="description" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="description" />Não há um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupingText">
+      <MemberSignature Language="C#" Value="public override string GroupingText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupingText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.GroupingText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Uma cadeia de caracteres que contém o texto no início de uma seção de controles filho agrupados dentro do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GroupingText%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.GroupingText%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.Panel.GroupingText%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Height" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> valor que indica a altura do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Height%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Height%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.Height%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlign">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.HorizontalAlign HorizontalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HorizontalAlign HorizontalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.HorizontalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HorizontalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.HorizontalAlign" /> que indica o tipo de alinhamento horizontal usado no processamento do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.HorizontalAlign%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.HorizontalAlign%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.Panel.HorizontalAlign%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PageCatalogPart.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PageCatalogPart.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PageCatalogPart.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollBars">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.ScrollBars ScrollBars { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ScrollBars ScrollBars" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.ScrollBars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.ScrollBars" /> que é usado se for necessário dentro do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.ScrollBars%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.ScrollBars%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.Panel.ScrollBars%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkinID">
+      <MemberSignature Language="C#" Value="public override string SkinID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkinID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.SkinID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Uma cadeia de caracteres que contém a ID de uma capa do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.SkinID%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.SkinID%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.SkinID%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir a propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndex">
+      <MemberSignature Language="C#" Value="public override short TabIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 TabIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.TabIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um número curto que serve como o índice deste controle na ordem de tabulação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.TabIndex%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.TabIndex%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.TabIndex%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título que aparece na barra de título do controle.</summary>
+        <value>Uma cadeia de caracteres que é usada como o título do controle. O valor padrão é um nome de controle calculado fornecidas pelo conjunto de controle de Web Parts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Title%2A> o valor da propriedade é exibido na barra de título de um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar quando o controle está visível no modo de catálogo. Quando o controle for declarado em uma página, você pode definir um valor para a propriedade usando o `Title` atributo. Se você não fornecer um valor para o título, um valor específico da cultura padrão é usado para descrever o tipo de propriedades que esse controle permite que os usuários editem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso declarativo do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Title%2A> propriedade. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> visão geral da classe.  
+  
+ O código de origem a seguir mostra como definir o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Title%2A> propriedade no controle na marcação declarativa. Se você não definir a propriedade, ou se você atribuir uma cadeia de caracteres vazia (""), um título padrão é fornecido.  
+  
+ [!code-aspx-csharp[WebParts_PageCatalogPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PageCatalogPart_Overview/CS/PageCatalogPartCS.aspx#2)]
+ [!code-aspx-vb[WebParts_PageCatalogPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PageCatalogPart_Overview/VB/PageCatalogPartVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public override string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Uma cadeia de caracteres que contém o conteúdo de uma dica de ferramenta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.ToolTip%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.ToolTip%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um valor booliano que indica se o controle está visível.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Visible%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Visible%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.Control.Visible%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Width" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> que indica a largura do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Width%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Width%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.WebControl.Width%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public override bool Wrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrap" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PageCatalogPart.Wrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade herdada não é usada pelo controle Web Parts definido ao renderizar um <see cref="T:System.Web.UI.WebControls.WebParts.PageCatalogPart" /> controle. A propriedade é substituída apenas a fim de impedir que ela apareça nas ferramentas de designer [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)].</summary>
+        <value>Um valor booliano que indica se linhas longas no controle podem sofrer encapsulamento automático.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Wrap%2A> propriedade, como um membro do <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controlar, não é usada em qualquer lugar dentro do controle de Web Parts definido para renderizar o controle. Portanto, você não deve usar essa propriedade; definir o valor não tem nenhum efeito no processamento.  
+  
+ Para impedir que os desenvolvedores usando essa propriedade, os atributos de código são definidos nele para ocultá-la no Visual Studio. Quando você trabalha com um <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart> controle no Visual Studio, o <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart.Wrap%2A> propriedade não está visível no IntelliSense ou no painel Propriedades.  
+  
+ Se você quiser usar essa propriedade, você precisa criar uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. A classe personalizada pode usar o herdadas <xref:System.Web.UI.WebControls.Panel.Wrap%2A> a propriedade como está, ou substituí-lo e alterar seu comportamento.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

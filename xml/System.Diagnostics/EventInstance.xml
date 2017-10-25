@@ -1,0 +1,935 @@
+<Type Name="EventInstance" FullName="System.Diagnostics.EventInstance">
+  <TypeSignature Language="C#" Value="public class EventInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa informações com neutralidade de idioma para uma entrada de log de eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Diagnostics.EventInstance> para gravar uma entrada de log de eventos com um identificador de recurso em vez de um valor de cadeia de caracteres. Para gravar uma entrada de log de eventos, inicializar o <xref:System.Diagnostics.EventInstance.InstanceId%2A> propriedade e passe a instância para o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método. O Visualizador de eventos usa o identificador de instância para localizar e exibir a cadeia de caracteres correspondente do arquivo de recurso localizada com base nas configurações de idioma atual. Você deve registrar a origem do evento com o arquivo de recurso correspondente antes de gravar eventos usando identificadores de recursos.  
+  
+ Ao gravar eventos, você pode definir o <xref:System.Diagnostics.EventInstance.EntryType%2A> propriedade para especificar o ícone exibido no Visualizador de eventos para a entrada. Você também pode especificar um <xref:System.Diagnostics.EventInstance.CategoryId%2A> propriedade para especificar a categoria que exibe o Visualizador de eventos para a entrada.  
+  
+ O Visualizador de eventos usa a categoria para filtrar eventos gravados por uma fonte de evento. O Visualizador de eventos pode exibir a categoria como um valor numérico, ou pode usar a categoria como um identificador de recurso para exibir uma cadeia de caracteres da categoria localizada.  
+  
+ Para exibir cadeias de caracteres da categoria localizada no Visualizador de eventos, você deve usar uma fonte de evento configurado com um arquivo de recurso de categoria e defina o <xref:System.Diagnostics.EventInstance.CategoryId%2A> para um identificador de recurso no arquivo de recurso de categoria. Se a origem do evento não tem um arquivo de recurso da categoria configurado ou especificado <xref:System.Diagnostics.EventInstance.CategoryId%2A> índice uma cadeia de caracteres no arquivo de recurso de categoria e, em seguida, o Visualizador de eventos exibe o valor da categoria numérica para a entrada. Configurar o arquivo de recurso de categoria, juntamente com o número de cadeias de caracteres de categoria no arquivo de recursos, usando o <xref:System.Diagnostics.EventLogInstaller> ou <xref:System.Diagnostics.EventSourceCreationData> classe.  
+  
+ Você deve registrar uma fonte para um log de eventos antes de usar <xref:System.Diagnostics.EventInstance> para gravar um evento com o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método. A origem deve ser configurada para gravar entradas localizadas no log e a origem deve definir pelo menos um arquivo de recurso de mensagem.  
+  
+ Crie a nova fonte de evento durante a instalação do seu aplicativo. Isso permite que o tempo para o sistema operacional atualizar sua lista de fontes de eventos registrados e suas configurações. Se o sistema operacional não foi atualizado para a sua lista de fontes de eventos, e você tentar gravar um evento com a nova fonte, que haverá falha na operação de gravação. Você pode configurar uma nova fonte usando um <xref:System.Diagnostics.EventLogInstaller>, ou usando o <xref:System.Diagnostics.EventLog.CreateEventSource%2A> método. Você deve ter direitos administrativos no computador para criar uma nova fonte de evento.  
+  
+ Para obter detalhes sobre a definição de mensagens de eventos e criação de arquivos de recurso de log de eventos, consulte o tópico "Mensagem compilador" na documentação do SDK da plataforma em [http://msdn.microsoft.com](http://msdn.microsoft.com).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir grava uma entrada de evento informativo e reutiliza o <xref:System.Diagnostics.EventInstance> para gravar uma entrada para um evento de aviso para um log de eventos existente. O texto da mensagem de evento é especificado usando um identificador de recurso em um arquivo de recurso de mensagem. O exemplo de código pressupõe que o arquivo de recurso correspondente mensagem foi registrado para a origem.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventInstance (long instanceId, int categoryId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 instanceId, int32 categoryId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventInstance.#ctor(System.Int64,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Int64" />
+        <Parameter Name="categoryId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Um identificador de recurso que corresponde a uma cadeia de caracteres definida no arquivo de recurso da mensagem da origem do evento.</param>
+        <param name="categoryId">Um identificador de recurso que corresponde a uma cadeia de caracteres definida no arquivo de recurso de categoria da origem do evento, ou zero para não especificar nenhuma categoria para o evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.EventInstance" /> classe usando os identificadores de recurso especificado para o texto de mensagem e categoria localizado da entrada de evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para gravar uma entrada de informações em um log de eventos, inicializar um <xref:System.Diagnostics.EventInstance> e passá-lo para o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método. Definir o `instanceId` para o identificador do recurso da mensagem de evento no correspondente <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A> propriedade para a fonte. Definir o `categoryId` para um valor da categoria numérica, ou o identificador de recurso da categoria de evento no <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A> propriedade para a fonte; defina a `categoryId` a zero para nenhuma categoria de evento. O <xref:System.Diagnostics.EventInstance.EntryType%2A> propriedade para a nova instância é definida como <xref:System.Diagnostics.EventLogEntryType.Information> por padrão.  
+  
+ O Visualizador de eventos usa os identificadores de recursos para exibir as cadeias de caracteres correspondentes dos arquivos de recurso localizado para a fonte. Você deve registrar a origem com os arquivos de recurso correspondente antes que você possa gravar eventos usando identificadores de recursos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir grava uma entrada de evento informativo e reutiliza o <xref:System.Diagnostics.EventInstance> para gravar uma entrada para um evento de aviso para um log de eventos existente. O texto da mensagem de evento é especificado usando um identificador de recurso em um arquivo de recurso de mensagem. O exemplo de código pressupõe que o arquivo de recurso correspondente mensagem foi registrado para a origem.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="instanceId" /> parâmetro é um valor negativo ou um valor maior do que <see cref="F:System.UInt32.MaxValue" />.  
+  
+ -ou-  
+  
+ O <paramref name="categoryId" /> parâmetro é um valor negativo ou um valor maior do que <see cref="F:System.UInt16.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventInstance (long instanceId, int categoryId, System.Diagnostics.EventLogEntryType entryType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 instanceId, int32 categoryId, valuetype System.Diagnostics.EventLogEntryType entryType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventInstance.#ctor(System.Int64,System.Int32,System.Diagnostics.EventLogEntryType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Int64" />
+        <Parameter Name="categoryId" Type="System.Int32" />
+        <Parameter Name="entryType" Type="System.Diagnostics.EventLogEntryType" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Um identificador de recurso que corresponde a uma cadeia de caracteres definida no arquivo de recurso da mensagem da origem do evento.</param>
+        <param name="categoryId">Um identificador de recurso que corresponde a uma cadeia de caracteres definida no arquivo de recurso de categoria da origem do evento, ou zero para não especificar nenhuma categoria para o evento.</param>
+        <param name="entryType">Um <see cref="T:System.Diagnostics.EventLogEntryType" /> valor que indica o tipo de evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.EventInstance" /> classe usando os identificadores de recurso especificado para o texto de mensagem e categoria localizado de entrada de evento e o tipo de entrada de log de eventos especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para gravar uma entrada em um log de eventos, inicializar um <xref:System.Diagnostics.EventInstance> e passá-lo para o <xref:System.Diagnostics.EventLog.WriteEvent%2A> método. Definir o `instanceId` para o identificador do recurso da mensagem de evento no correspondente <xref:System.Diagnostics.EventSourceCreationData.MessageResourceFile%2A> propriedade para a fonte. Definir o `categoryId` para um valor da categoria numérica, ou o identificador de recurso da categoria de evento no <xref:System.Diagnostics.EventSourceCreationData.CategoryResourceFile%2A> propriedade para a fonte; defina a `categoryId` a zero para nenhuma categoria de evento.  
+  
+ O Visualizador de eventos usa os identificadores de recursos para exibir as cadeias de caracteres correspondentes dos arquivos de recurso localizado para a fonte. Você deve registrar a origem com os arquivos de recurso correspondente antes que você possa gravar eventos usando identificadores de recursos.  
+  
+ Definir o `entryType` para um dos tipos predefinidos de entrada. O Visualizador de eventos usa o tipo de evento para determinar qual ícone será exibido na exibição de lista do log de eventos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir grava duas entradas de eventos para o log de eventos de auditoria `myNewLog`. O exemplo de código cria uma nova fonte de evento e um novo log de eventos se não existirem no computador local. O texto da mensagem de evento é especificado usando um identificador de recurso em um arquivo de recurso.  
+  
+ [!code-cpp[EventLog_WriteEvent#7](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#7)]
+ [!code-csharp[EventLog_WriteEvent#7](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#7)]
+ [!code-vb[EventLog_WriteEvent#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#7)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="entryType" /> não é um valor <see cref="T:System.Diagnostics.EventLogEntryType" /> válido.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="instanceId" />é um valor negativo ou um valor maior do que <see cref="F:System.UInt32.MaxValue" />.  
+  
+ -ou-  
+  
+ <paramref name="categoryId" />é um valor negativo ou um valor maior do que <see cref="F:System.UInt16.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryId">
+      <MemberSignature Language="C#" Value="public int CategoryId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CategoryId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventInstance.CategoryId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de recurso que especifica a categoria da entrada de evento definido pelo aplicativo.</summary>
+        <value>Um categoria numérica valor identificador ou recurso que corresponde a uma cadeia de caracteres definida no arquivo de recurso de categoria de origem do evento. O padrão é zero, o que significa que nenhuma categoria será exibida para a entrada de evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Categorias de log de eventos são valores definidos pelo aplicativo que ajuda a filtrar eventos, ou fornecem mais informações sobre o evento. Por exemplo, seu aplicativo pode definir categorias separadas para diferentes componentes ou operações diferentes.  
+  
+ Definir o <xref:System.Diagnostics.EventInstance.CategoryId%2A> propriedade para especificar a categoria que exibe o Visualizador de eventos para a entrada. O Visualizador de eventos pode exibir a categoria como um valor numérico, ou pode usar o <xref:System.Diagnostics.EventInstance.CategoryId%2A> como um recurso de identificador para exibir uma cadeia de caracteres da categoria localizada com base nas configurações de idioma atual.  
+  
+ Para exibir cadeias de caracteres da categoria localizada no Visualizador de eventos, você deve usar uma fonte de evento configurado com um arquivo de recurso de categoria e defina o <xref:System.Diagnostics.EventInstance.CategoryId%2A> para um identificador de recurso no arquivo de recurso de categoria. Se a origem do evento não tem um arquivo de recurso da categoria configurado ou especificado <xref:System.Diagnostics.EventInstance.CategoryId%2A> índice uma cadeia de caracteres no arquivo de recurso de categoria e, em seguida, o Visualizador de eventos exibe o valor da categoria numérica para a entrada.  
+  
+ Você deve registrar a fonte de arquivo de recurso correspondente antes de gravar as categorias de evento usando identificadores de recursos. Configurar o arquivo de recurso de categoria, juntamente com o número de cadeias de caracteres de categoria no arquivo de recursos, usando o <xref:System.Diagnostics.EventLogInstaller> ou <xref:System.Diagnostics.EventSourceCreationData> classe. Ao definir as cadeias de categorias em um arquivo de recurso, os identificadores de recurso da categoria devem ser numerados consecutivamente, começando em 1 até configurado <xref:System.Diagnostics.EventSourceCreationData.CategoryCount%2A> valor da propriedade.  
+  
+ Categorias de evento são opcionais. Se seu aplicativo não usar categorias, não defina o <xref:System.Diagnostics.EventInstance.CategoryId%2A> para a entrada de log de eventos.  
+  
+ Para obter detalhes sobre a definição de mensagens de eventos e criando arquivos de recursos de evento, consulte o tópico "Mensagem compilador" na documentação do SDK da plataforma em [http://msdn.microsoft.com](http://msdn.microsoft.com/). Para obter detalhes sobre como definir as categorias de evento em arquivos de recurso, consulte o tópico "Categorias de evento" no SDK da plataforma  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir grava uma entrada de evento informativo e reutiliza o <xref:System.Diagnostics.EventInstance> para gravar uma entrada para um evento de aviso para um log de eventos existente. O texto da mensagem de evento é especificado usando um identificador de recurso em um arquivo de recurso de mensagem. O exemplo de código pressupõe que o arquivo de recurso correspondente mensagem foi registrado para a origem.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade está definida com um valor negativo ou um valor maior que <see cref="F:System.UInt16.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.EventLogEntryType EntryType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.EventLogEntryType EntryType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventInstance.EntryType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogEntryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de evento da entrada do log de eventos.</summary>
+        <value>Um <see cref="T:System.Diagnostics.EventLogEntryType" /> valor que indica o tipo de evento de entrada. O valor padrão é <see cref="F:System.Diagnostics.EventLogEntryType.Information" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada evento é de um único tipo, o aplicativo indica quando o evento informa. O Visualizador de eventos usa o tipo de evento para determinar qual ícone será exibido na exibição de lista do log de eventos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir grava uma entrada de evento informativo e reutiliza o <xref:System.Diagnostics.EventInstance> para gravar uma entrada para um evento de aviso para um log de eventos existente. O texto da mensagem de evento é especificado usando um identificador de recurso em um arquivo de recurso de mensagem. O exemplo de código pressupõe que o arquivo de recurso correspondente mensagem foi registrado para a origem.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">A propriedade não é definida como uma opção válida <see cref="T:System.Diagnostics.EventLogEntryType" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public long InstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventInstance.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de recurso que designa o texto da mensagem da entrada do evento.</summary>
+        <value>Um identificador de recurso que corresponde a uma cadeia de caracteres definida no arquivo de recurso da mensagem da origem do evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.EventInstance.InstanceId%2A> propriedade identifica exclusivamente uma entrada de evento para uma fonte de evento configurado. Para eventos definidos em arquivos de recursos de mensagem, o <xref:System.Diagnostics.EventInstance.InstanceId%2A> corresponde ao identificador de recurso compilado a partir de campos de definição de mensagem no arquivo de texto de mensagem. Seu aplicativo pode gravar entradas de log de eventos localizados, definindo o <xref:System.Diagnostics.EventInstance.InstanceId%2A> para um identificador de recurso. O Visualizador de eventos usa o <xref:System.Diagnostics.EventInstance.InstanceId%2A> identificador de recurso para localizar e exibir a cadeia de caracteres correspondente ao arquivo de recurso localizada com base nas configurações de idioma atuais. Você deve registrar a fonte de arquivo de recurso correspondente antes de gravar eventos usando identificadores de recursos.  
+  
+ Para obter detalhes sobre a definição de mensagens de eventos e criação de arquivos de recurso de log de eventos, consulte o tópico "Mensagem compilador" na documentação do SDK da plataforma em [http://msdn.microsoft.com](http://msdn.microsoft.com/). Para obter detalhes sobre os identificadores de log de eventos, consulte o tópico "Identificadores de eventos" no SDK da plataforma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir grava uma entrada de evento informativo e reutiliza o <xref:System.Diagnostics.EventInstance> para gravar uma entrada para um evento de aviso para um log de eventos existente. O texto da mensagem de evento é especificado usando um identificador de recurso em um arquivo de recurso de mensagem. O exemplo de código pressupõe que o arquivo de recurso correspondente mensagem foi registrado para a origem.  
+  
+ [!code-cpp[EventLog_WriteEvent#9](~/samples/snippets/cpp/VS_Snippets_CLR/eventlog_WriteEvent/CPP/source.cpp#9)]
+ [!code-csharp[EventLog_WriteEvent#9](~/samples/snippets/csharp/VS_Snippets_CLR/eventlog_WriteEvent/CS/source.cs#9)]
+ [!code-vb[EventLog_WriteEvent#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventlog_WriteEvent/VB/source.vb#9)]  
+  
+ O exemplo de código usa o seguinte arquivo de texto de mensagem, incorporado a biblioteca de recursos EventLogMsgs.dll. Um arquivo de texto de mensagem é a origem do qual o arquivo de recurso de mensagem é criado. O arquivo de texto de mensagem define os identificadores de recurso e o texto para a categoria, a mensagem de evento e a cadeias de caracteres de inserção de parâmetro.  
+  
+```  
+; // EventLogMsgs.mc  
+; // ********************************************************  
+  
+; // Use the following commands to build this file:  
+  
+; //   mc -s EventLogMsgs.mc  
+; //   rc EventLogMsgs.rc  
+; //   link /DLL /SUBSYSTEM:WINDOWS /NOENTRY /MACHINE:x86 EventLogMsgs.Res   
+; // ********************************************************  
+  
+; // - Event categories -  
+; // Categories must be numbered consecutively starting at 1.  
+; // ********************************************************  
+  
+MessageId=0x1  
+Severity=Success  
+SymbolicName=INSTALL_CATEGORY  
+Language=English  
+Installation  
+.  
+  
+MessageId=0x2  
+Severity=Success  
+SymbolicName=QUERY_CATEGORY  
+Language=English  
+Database Query  
+.  
+  
+MessageId=0x3  
+Severity=Success  
+SymbolicName=REFRESH_CATEGORY  
+Language=English  
+Data Refresh  
+.  
+  
+; // - Event messages -  
+; // *********************************  
+  
+MessageId = 1000  
+Severity = Success  
+Facility = Application  
+SymbolicName = AUDIT_SUCCESS_MESSAGE_ID_1000  
+Language=English  
+My application message text, in English, for message id 1000, called from %1.  
+.  
+  
+MessageId = 1001  
+Severity = Warning  
+Facility = Application  
+SymbolicName = AUDIT_FAILED_MESSAGE_ID_1001  
+Language=English  
+My application message text, in English, for message id 1001, called from %1.  
+.  
+  
+MessageId = 1002  
+Severity = Success  
+Facility = Application  
+SymbolicName = GENERIC_INFO_MESSAGE_ID_1002  
+Language=English  
+My generic information message in English, for message id 1002.  
+.  
+  
+MessageId = 1003  
+Severity = Warning  
+Facility = Application  
+SymbolicName = GENERIC_WARNING_MESSAGE_ID_1003  
+Language=English  
+My generic warning message in English, for message id 1003, called from %1.  
+.  
+  
+MessageId = 1004  
+Severity = Success  
+Facility = Application  
+SymbolicName = UPDATE_CYCLE_COMPLETE_MESSAGE_ID_1004  
+Language=English  
+The update cycle is complete for %%5002.  
+.  
+  
+MessageId = 1005  
+Severity = Warning  
+Facility = Application  
+SymbolicName = SERVER_CONNECTION_DOWN_MESSAGE_ID_1005  
+Language=English  
+The refresh operation did not complete because the connection to server %1 could not be established.  
+.  
+  
+; // - Event log display name -  
+; // ********************************************************  
+  
+MessageId = 5001  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_DISPLAY_NAME_MSGID  
+Language=English  
+Sample Event Log  
+.  
+  
+; // - Event message parameters -  
+; //   Language independent insertion strings  
+; // ********************************************************  
+  
+MessageId = 5002  
+Severity = Success  
+Facility = Application  
+SymbolicName = EVENT_LOG_SERVICE_NAME_MSGID  
+Language=English  
+SVC_UPDATE.EXE  
+.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade está definida com um valor negativo ou um valor maior que <see cref="F:System.UInt32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

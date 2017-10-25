@@ -1,0 +1,663 @@
+<Type Name="Financial" FullName="Microsoft.VisualBasic.Financial">
+  <TypeSignature Language="C#" Value="public sealed class Financial" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Financial extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Financial" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O módulo <see langword="Financial" /> contém procedimentos usados para executar operações financeiras.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este módulo oferece suporte para os membros de biblioteca de tempo de execução do Visual Basic que executa cálculos financeiros como depreciação, valores futuros e presentes, taxas de interesse, taxas de retorno e pagamentos.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Rate` função para calcular a taxa de juros de um empréstimo, dado o número total de pagamentos (`TotPmts`), o valor do pagamento empréstimo (`Payment`), o valor atual ou principal do empréstimo (`PVal`), no futuro valor do empréstimo (`FVal`), um número que indica se o pagamento deve ser feito no início ou no final do período de pagamento (`PayType`) e uma aproximação da taxa de juros esperada (`Guess`).  
+  
+ [!code-vb[VbVbalrMath#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DDB">
+      <MemberSignature Language="C#" Value="public static double DDB (double Cost, double Salvage, double Life, double Period, double Factor = 2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 DDB(float64 Cost, float64 Salvage, float64 Life, float64 Period, float64 Factor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.DDB(System.Double,System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Cost" Type="System.Double" />
+        <Parameter Name="Salvage" Type="System.Double" />
+        <Parameter Name="Life" Type="System.Double" />
+        <Parameter Name="Period" Type="System.Double" />
+        <Parameter Name="Factor" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Cost">Necessário. <see langword="Double" /> especificando o custo inicial do ativo.</param>
+        <param name="Salvage">Necessário. <see langword="Double" /> especificando o valor de um ativo no fim de sua vida útil.</param>
+        <param name="Life">Necessário. <see langword="Double" /> especificando a duração da vida útil do ativo.</param>
+        <param name="Period">Necessário. <see langword="Double" /> especificando o período para o qual a depreciação do ativo é calculada.</param>
+        <param name="Factor">Opcional. <see langword="Double" /> especificando a taxa de amortização degressiva. Se omitido, supõe-se 2 (método degressivo duplo).</param>
+        <summary>Retorna um <see langword="Double" /> especificando a depreciação de um ativo por um período específico usando o método de amortização degressiva dupla ou algum outro método que você especificar.</summary>
+        <returns>Retorna um <see langword="Double" /> especificando a depreciação de um ativo por um período específico usando o método de amortização degressiva dupla ou algum outro método que você especificar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método de saldo decrescente duplo calcula a depreciação a uma taxa acelerada. A depreciação é mais alta no primeiro período e diminui em períodos sucessivos.  
+  
+ O `Life` e `Period` argumentos devem ser expressos nas mesmas unidades. Por exemplo, se `Life` é fornecido em meses, `Period` também deve ser fornecido em meses. Todos os argumentos devem ser números positivos.  
+  
+ O `DDB` função usa a seguinte fórmula para calcular a depreciação de um determinado período:  
+  
+ Depreciação período = ((Cost – Salvage) * fator) / vida  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `DDB` função para retornar a depreciação de um ativo por um período especificado dado o custo inicial (`InitCost`), o valor de recuperação no final da vida útil do ativo (`SalvageVal`), a vida útil total do ativo em anos (`LifeTime`) e o período em anos para o qual a depreciação é calculada (`Depr`).  
+  
+ [!code-vb[VbVbalrMath#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Factor" />&lt;= 0, <paramref name="Salvage" /> &lt; 0, <paramref name="Period" /> &lt;= 0, ou <paramref name="Period" /> &gt;<paramref name="Life." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FV">
+      <MemberSignature Language="C#" Value="public static double FV (double Rate, double NPer, double Pmt, double PV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 FV(float64 Rate, float64 NPer, float64 Pmt, float64 PV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.FV(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="Pmt" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Necessário. <see langword="Double" /> que especifica a taxa de juros por período. Por exemplo, se você conseguir um empréstimo para compra de um carro com uma APR (taxa anual de percentual) de 10% e efetuar pagamentos mensais, a taxa por período será de 0,1/12 ou 0,0083.</param>
+        <param name="NPer">Necessário. <see langword="Double" /> que especifica o número total de períodos de pagamento na anuidade. Por exemplo, se você efetuar pagamentos mensais em um empréstimo de quatro anos para compra de carro, seu empréstimo terá um total de 4 x 12 (ou 48) períodos de pagamento.</param>
+        <param name="Pmt">Necessário. <see langword="Double" /> que especifica o pagamento a ser efetuado em cada período. Os pagamentos geralmente contêm da entidade de segurança e juros que não são alterados durante a vigência da anuidade.</param>
+        <param name="PV">Opcional. <see langword="Double" /> que especifica o valor atual (ou quantia total) de uma série de pagamentos futuros. Por exemplo, quando você pede um empréstimo para comprar um carro, o valor do empréstimo é o valor atual para o credor dos pagamentos mensais do carro que serão efetuados. Se omitida, presume-se que seja 0.</param>
+        <param name="Due">Opcional. Objeto do tipo <see cref="T:Microsoft.VisualBasic.DueDate" /> que especifica quando os pagamentos vencem. Esse argumento deverá ser <see langword="DueDate.EndOfPeriod" /> se os pagamentos vencerem no final do período de pagamento ou <see langword="DueDate.BegOfPeriod" /> se os pagamentos vencerem no início do período. Se omitido, presume-se que seja <see langword="DueDate.EndOfPeriod" />.</param>
+        <summary>Retorna um <see langword="Double" /> que especifica o valor futuro de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</summary>
+        <returns>Retorna um <see langword="Double" /> que especifica o valor futuro de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma anuidade é uma série de pagamentos fixos realizados ao longo do tempo. Uma anuidade pode ser um empréstimo (como uma hipoteca doméstica) ou um investimento (como um plano de economias mensais).  
+  
+ O `Rate` e `NPer` argumentos devem ser calculados usando períodos de pagamento expressados nas mesmas unidades. Por exemplo, se `Rate` é calculada usando meses, `NPer` também deve ser calculado usando meses.  
+  
+ Para todos os argumentos, dinheiro pago (como depósitos de economias) é representado por números negativos; dinheiro recebido (como cheques de dividendos) é representado por números positivos.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `FV` função para retornar o valor futuro de um investimento de acordo com a porcentagem de taxa que acumula por período (`APR / 12`), o número total de pagamentos (`TotPmts`), o pagamento (`Payment`), o valor atual do investimento (`PVal`) e um número que indica se o pagamento é feito no início ou no final do período de pagamento (`PayType`). Observe que, como `Payment` representa dinheiro pago, é um número negativo.  
+  
+ [!code-vb[VbVbalrMath#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPmt">
+      <MemberSignature Language="C#" Value="public static double IPmt (double Rate, double Per, double NPer, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 IPmt(float64 Rate, float64 Per, float64 NPer, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.IPmt(System.Double,System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="Per" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Necessário. <see langword="Double" /> que especifica a taxa de juros por período. Por exemplo, se você conseguir um empréstimo para compra de um carro com uma APR (taxa anual de percentual) de 10% e efetuar pagamentos mensais, a taxa por período será de 0,1/12 ou 0,0083.</param>
+        <param name="Per">Necessário. <see langword="Double" />Especifica o período de pagamento no intervalo de 1 a <c>NPer</c>.</param>
+        <param name="NPer">Necessário. <see langword="Double" /> que especifica o número total de períodos de pagamento na anuidade. Por exemplo, se você efetuar pagamentos mensais em um empréstimo de quatro anos para compra de carro, seu empréstimo terá um total de 4 x 12 (ou 48) períodos de pagamento.</param>
+        <param name="PV">Necessário. <see langword="Double" /> que especifica o valor atual de uma série de pagamentos ou recebimentos futuros. Por exemplo, quando você pede um empréstimo para comprar um carro, o valor do empréstimo é o valor atual para o credor dos pagamentos mensais do carro que serão efetuados.</param>
+        <param name="FV">Opcional. <see langword="Double" /> que especifica o valor futuro ou o saldo à vista que você deseja ter depois de efetuar o pagamento final. Por exemplo, o valor futuro de um empréstimo é US$ 0, porque esse é o valor após o pagamento final. No entanto, se você deseja economizar US$ 50.000 durante 18 anos para a educação de seu filho, o valor futuro é de US$ 50.000. Se omitida, presume-se que seja 0.</param>
+        <param name="Due">Opcional. Objeto do tipo <see cref="T:Microsoft.VisualBasic.DueDate" /> que especifica quando os pagamentos vencem. Esse argumento deve ser <c>EndOfPeriod</c> se os pagamentos são feitos no final do período de pagamento, ou <c>BegOfPeriod</c> se os pagamentos são feitos no início do período. Se omitido, <c>EndOfPeriod</c> será assumido.</param>
+        <summary>Retorna um <see langword="Double" /> que especifica o pagamento de juros de determinado período de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</summary>
+        <returns>Retorna um <see langword="Double" /> que especifica o pagamento de juros de determinado período de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma anuidade é uma série de pagamentos fixos realizados ao longo do tempo. Uma anuidade pode ser um empréstimo (como uma hipoteca doméstica) ou um investimento (como um plano de economias mensais).  
+  
+ O `Rate` e `NPer` argumentos devem ser calculados usando períodos de pagamento expressados nas mesmas unidades. Por exemplo, se `Rate` é calculada usando meses, `NPer` também deve ser calculado usando meses.  
+  
+ Para todos os argumentos, dinheiro pago (como depósitos de economias) é representado por números negativos; dinheiro recebido (como cheques de dividendos) é representado por números positivos.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `IPmt` função para calcular quanto de um pagamento é interesse quando todos os pagamentos são do mesmo valor. Considerando são a taxa percentual de juros por período (`APR / 12`), o período de pagamento para o qual a parte de interesse é desejada (`Period`), o número total de pagamentos (`TotPmts`), o valor atual ou principal do empréstimo (`PVal`), o valor futuro do empréstimo (`FVal`) e um número que indica se o pagamento deve ser feito no início ou no final do período de pagamento (`PayType`).  
+  
+ [!code-vb[VbVbalrMath#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Per" />&lt;= 0 ou <paramref name="Per" /> &gt;<paramref name="NPer" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IRR">
+      <MemberSignature Language="C#" Value="public static double IRR (ref double[] ValueArray, double Guess = 0.1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 IRR(float64[]&amp; ValueArray, float64 Guess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.IRR(System.Double[]@,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ValueArray" Type="System.Double[]&amp;" RefType="ref" />
+        <Parameter Name="Guess" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="ValueArray">Necessário. Matriz de <see langword="Double" /> que especifica valores de fluxo de caixa. A matriz deve conter, pelo menos, um valor negativo (um pagamento) e um valor positivo (um recebimento).</param>
+        <param name="Guess">Opcional. Um objeto que especifica o valor estimado será retornado pelo <see langword="IRR" />. Se omitido, <c>adivinhar</c> é 0,1 (10 por cento).</param>
+        <summary>Retorna um <see langword="Double" /> que especifica a taxa interna de retorno para uma série de fluxos de caixa periódicos (pagamentos e recebimentos).</summary>
+        <returns>Retorna um <see langword="Double" /> que especifica a taxa interna de retorno para uma série de fluxos de caixa periódicos (pagamentos e recebimentos).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A taxa interna de retorno é a taxa de juros recebida para um investimento que consiste em pagamentos e recebimentos que ocorrem em intervalos regulares.  
+  
+ O `IRR` função usa a ordem dos valores dentro da matriz para interpretar a ordem de pagamentos e recebimentos. Certifique-se de inserir os valores de recebimento e pagamento na sequência correta. O fluxo de caixa para cada período não precisa ser corrigido, assim como para uma anuidade.  
+  
+ `IRR`é calculada por iteração. Iniciando com o valor de `Guess`, `IRR` verificará o cálculo até que o resultado é preciso 0,00001%. Se `IRR` não é possível encontrar um resultado após 20 tentativas, ele falhará.  
+  
+   
+  
+## Examples  
+ Neste exemplo, o `IRR` função retorna a taxa interna de retorno para uma série de fluxos de caixa cinco contidos na matriz `Values()`. O primeiro elemento da matriz é um fluxo de caixa negativo que representa os custos de inicialização de negócios. Fluxos de caixa quatro restantes representam fluxos de caixa positivos para os quatro anos subsequentes. `Guess`é a taxa estimada interna de retorno.  
+  
+ [!code-vb[VbVbalrMath#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Argumento de matriz valores é inválidos ou <paramref name="Guess" /> &lt;= -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MIRR">
+      <MemberSignature Language="C#" Value="public static double MIRR (ref double[] ValueArray, double FinanceRate, double ReinvestRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 MIRR(float64[]&amp; ValueArray, float64 FinanceRate, float64 ReinvestRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.MIRR(System.Double[]@,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ValueArray" Type="System.Double[]&amp;" RefType="ref" />
+        <Parameter Name="FinanceRate" Type="System.Double" />
+        <Parameter Name="ReinvestRate" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="ValueArray">Necessário. Matriz de <see langword="Double" /> que especifica valores de fluxo de caixa. A matriz deve conter pelo menos um valor negativo (um pagamento) e um valor positivo (um recebimento).</param>
+        <param name="FinanceRate">Necessário. <see langword="Double" /> que especifica a taxa de juros paga como custo do financiamento.</param>
+        <param name="ReinvestRate">Necessário. <see langword="Double" /> que especifica a taxa de juros recebida sobre o lucro de reinvestimento do capital.</param>
+        <summary>Retorna um <see langword="Double" /> que especifica a taxa interna modificada de retorno para uma série de fluxos de caixa periódicos (pagamentos e recebimentos).</summary>
+        <returns>Retorna um <see langword="Double" /> que especifica a taxa interna modificada de retorno para uma série de fluxos de caixa periódicos (pagamentos e recebimentos).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A taxa interna modificada de retorno é a taxa interna de retorno quando pagamentos e recebimentos são financiados em diferentes taxas. O `MIRR` função leva em conta o custo do investimento (`FinanceRate`) e a taxa de juros recebidos no reinvestimento do capital (`ReinvestRate`).  
+  
+ O `FinanceRate` e `ReinvestRatearguments` são porcentagens expressadas como valores decimais. Por exemplo, 12% é expresso como 0,12.  
+  
+ O `MIRR` função usa a ordem dos valores dentro da matriz para interpretar a ordem de pagamentos e recebimentos. Certifique-se de inserir os valores de recebimento e pagamento na sequência correta.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `MIRR` função para retornar a taxa interna modificada de retorno para uma série de fluxos de caixa contidos na matriz `Values()`. `LoanAPR`representa a taxa de juros financeira, e `InvAPR` representa a taxa de juros recebida no reinvestimento.  
+  
+ [!code-vb[VbVbalrMath#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A classificação de <paramref name="ValueArray" /> não é igual a 1, <paramref name="FinanceRate" /> = -1 ou <paramref name="ReinvestRate" /> = -1</exception>
+        <exception cref="T:System.DivideByZeroException">Ocorreu uma divisão por zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NPer">
+      <MemberSignature Language="C#" Value="public static double NPer (double Rate, double Pmt, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 NPer(float64 Rate, float64 Pmt, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.NPer(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="Pmt" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Necessário. <see langword="Double" /> que especifica a taxa de juros por período. Por exemplo, se você conseguir um empréstimo para compra de um carro com uma APR (taxa anual de percentual) de 10% e efetuar pagamentos mensais, a taxa por período será de 0,1/12 ou 0,0083.</param>
+        <param name="Pmt">Necessário. <see langword="Double" /> que especifica o pagamento a ser efetuado em cada período. Os pagamentos normalmente contêm o montante e os juros, que não são alterados durante a vigência da anuidade.</param>
+        <param name="PV">Necessário. <see langword="Double" /> que especifica o valor atual de uma série de pagamentos ou recebimentos futuros. Por exemplo, quando você pede um empréstimo para comprar um carro, o valor do empréstimo é o valor atual para o credor dos pagamentos mensais do carro que serão efetuados.</param>
+        <param name="FV">Opcional. <see langword="Double" /> especificando o valor futuro ou o saldo à vista que você deseja após efetuar o pagamento final. Por exemplo, o valor futuro de um empréstimo é US$ 0, porque esse é o valor dele após o pagamento final. No entanto, se você deseja guardar US$ 50.000 durante 18 anos para a educação do seu filho, então o valor futuro será de US$ 50.000. Se omitida, presume-se que seja 0.</param>
+        <param name="Due">Opcional. Objeto do tipo <see cref="T:Microsoft.VisualBasic.DueDate" /> que especifica quando os pagamentos vencem. Esse argumento deve ser <c>EndOfPeriod</c> se os pagamentos são feitos no final do período de pagamento, ou <c>BegOfPeriod</c> se os pagamentos são feitos no início do período. Se omitido, <c>EndOfPeriod</c> será assumido.</param>
+        <summary>Retorna um <see langword="Double" /> que especifica o número de períodos de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</summary>
+        <returns>Retorna um <see langword="Double" /> que especifica o número de períodos de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma anuidade é uma série de pagamentos fixos realizados por um período de tempo. Uma anuidade pode ser um empréstimo (como uma hipoteca doméstica) ou um investimento (como um plano de economias mensais).  
+  
+ Para todos os argumentos, dinheiro pago (como depósitos de economias) é representado por números negativos; dinheiro recebido (como cheques de dividendos) é representado por números positivos.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `NPer` função para retornar o número de períodos durante os quais pagamentos devem ser feitos para pagar um empréstimo cujo valor está contida no `PVal`. Também são fornecidas a taxa percentual de juros por período (`APR / 12`), o pagamento (`Payment`), o valor futuro do empréstimo (`FVal`) e um número que indica se o pagamento deve ser feito no início ou no final do período de pagamento (`PayType`).  
+  
+ [!code-vb[VbVbalrMath#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Rate" /> = 0 e <paramref name="Pmt" /> = 0</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NPV">
+      <MemberSignature Language="C#" Value="public static double NPV (double Rate, ref double[] ValueArray);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 NPV(float64 Rate, float64[]&amp; ValueArray) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.NPV(System.Double,System.Double[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="ValueArray" Type="System.Double[]&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Necessário. <see langword="Double" /> que especifica a taxa de desconto pela duração do período, expressa como um decimal.</param>
+        <param name="ValueArray">Necessário. Matriz de <see langword="Double" /> que especifica valores de fluxo de caixa. A matriz deve conter pelo menos um valor negativo (um pagamento) e um valor positivo (um recebimento).</param>
+        <summary>Retorna um <see langword="Double" /> que especifica o valor líquido atual de um investimento com base em uma série de fluxos de caixa periódicos (pagamentos e recebimentos) e uma taxa de desconto.</summary>
+        <returns>Retorna um <see langword="Double" /> que especifica o valor líquido atual de um investimento com base em uma série de fluxos de caixa periódicos (pagamentos e recebimentos) e uma taxa de desconto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor líquido atual de um investimento é o valor atual de uma série futura de pagamentos e recebimentos.  
+  
+ O `NPV` função usa a ordem dos valores dentro da matriz para interpretar a ordem de pagamentos e recebimentos. Certifique-se de inserir os valores de recebimento e pagamento na sequência correta.  
+  
+ O `NPV` investimento começa um período antes da data do primeiro valor de fluxo de caixa e termina com o último valor de fluxo de caixa na matriz.  
+  
+ O cálculo do valor presente líquido é baseado em fluxos de caixa futuros. Se seu primeiro fluxo de caixa ocorrer no início do primeiro período, o primeiro valor deve ser adicionado ao valor retornado por `NPV` e não deve ser incluído nos valores de fluxo de caixa de `ValueArray`.  
+  
+ O `NPV` função é semelhante ao `PV` função (valor presente), exceto que o `PV` função permite que os fluxos de caixa comecem tanto no final ou no início de um período. Ao contrário da variável `NPV` valores de fluxo de caixa, `PV` fluxos de caixa devem ser corrigidos em todo o investimento.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `NPV` função para retornar o valor líquido atual para uma série de fluxos de caixa contidos na matriz `values()`. O valor de retorno, armazenado no `FixedRetRate`, representa a fixa taxa interna de retorno.  
+  
+ [!code-vb[VbVbalrMath#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ValueArray" />é <see langword="Nothing" />, classificação de <paramref name="ValueArray" /> &lt; &gt; 1, ou <paramref name="Rate" /> = -1</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pmt">
+      <MemberSignature Language="C#" Value="public static double Pmt (double Rate, double NPer, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Pmt(float64 Rate, float64 NPer, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.Pmt(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Necessário. <see langword="Double" /> especifica a taxa de juros por período. Por exemplo, se você conseguir um empréstimo para compra de carro com uma APR (taxa anual percentual) de 10% e efetuar pagamentos mensais, a taxa por período será de 0,1/12 ou 0,0083.</param>
+        <param name="NPer">Necessário. <see langword="Double" /> especifica o número total de períodos de pagamento na anuidade. Por exemplo, se você efetuar pagamentos mensais de um empréstimo de quatro anos para compra de um carro, o empréstimo terá um total de 4 x 12 (ou 48) períodos de pagamento.</param>
+        <param name="PV">Necessário. <see langword="Double" /> especifica o valor presente (ou a quantia total) que uma série de pagamentos que serão feitos no futuro tem agora. Por exemplo, quando você pede um empréstimo para comprar um carro, o valor do empréstimo é o valor atual para o credor dos pagamentos mensais do carro que serão efetuados.</param>
+        <param name="FV">Opcional. <see langword="Double" /> especificando o valor futuro ou o saldo à vista que você deseja após efetuar o pagamento final. Por exemplo, o valor futuro de um empréstimo é US$ 0, porque esse é o valor dele após o pagamento final. No entanto, se você deseja economizar US$ 50.000 em um período de 18 anos para a educação do seu filho, o valor futuro é de US$ 50.000. Se omitida, presume-se que seja 0.</param>
+        <param name="Due">Opcional. Objeto do tipo <see cref="T:Microsoft.VisualBasic.DueDate" /> que especifica quando os pagamentos vencem. Esse argumento deve ser <c>EndOfPeriod</c> se os pagamentos são feitos no final do período de pagamento, ou <c>BegOfPeriod</c> se os pagamentos são feitos no início do período. Se omitido, <c>EndOfPeriod</c> será assumido.</param>
+        <summary>Retorna um <see langword="Double" /> que especifica o pagamento de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</summary>
+        <returns>Retorna um <see langword="Double" /> que especifica o pagamento de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma anuidade é uma série de pagamentos fixos realizados durante um período de tempo. Uma anuidade pode ser um empréstimo (como uma hipoteca doméstica) ou um investimento (como um plano de economias mensais).  
+  
+ O `Rate` e `NPer` argumentos devem ser calculados usando períodos de pagamento expressados nas mesmas unidades. Por exemplo, se `Rate` é calculada usando meses, `NPer` também deve ser calculado usando meses.  
+  
+ Para todos os argumentos, dinheiro pago (como depósitos de economias) é representado por números negativos; dinheiro recebido (como cheques de dividendos) é representado por números positivos.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Pmt` função para retornar o pagamento mensal de um empréstimo durante um período fixo. Considerando são a taxa percentual de juros por período (`APR / 12`), o número total de pagamentos (`TotPmts`), o valor atual ou principal do empréstimo (`PVal`), o valor futuro do empréstimo (`FVal`) e um número que indica se a pagamento é no início ou no final do período de pagamento`(PayType).`  
+  
+ [!code-vb[VbVbalrMath#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="NPer" /> = 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PPmt">
+      <MemberSignature Language="C#" Value="public static double PPmt (double Rate, double Per, double NPer, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 PPmt(float64 Rate, float64 Per, float64 NPer, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.PPmt(System.Double,System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="Per" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Necessário. <see langword="Double" /> especifica a taxa de juros por período. Por exemplo, se você conseguir um empréstimo para compra de carro com uma APR (taxa anual percentual) de 10% e efetuar pagamentos mensais, a taxa por período será de 0,1/12 ou 0,0083.</param>
+        <param name="Per">Necessário. <see langword="Double" />Especifica o período de pagamento no intervalo de 1 a <c>NPer</c>.</param>
+        <param name="NPer">Necessário. <see langword="Double" /> especifica o número total de períodos de pagamento na anuidade. Por exemplo, se você efetuar pagamentos mensais em um empréstimo de quatro anos para compra de carro, seu empréstimo terá um total de 4 x 12 (ou 48) períodos de pagamento.</param>
+        <param name="PV">Necessário. <see langword="Double" /> especifica o valor atual de uma série de pagamentos ou recebimentos futuros. Por exemplo, quando você pede um empréstimo para comprar um carro, o valor do empréstimo é o valor atual para o credor dos pagamentos mensais do carro que serão efetuados.</param>
+        <param name="FV">Opcional. <see langword="Double" /> especificando o valor futuro ou o saldo à vista que você deseja após efetuar o pagamento final. Por exemplo, o valor futuro de um empréstimo é US$ 0, porque esse é o valor dele após o pagamento final. No entanto, se você deseja guardar US$ 50.000 durante 18 anos para a educação do seu filho, então o valor futuro será de US$ 50.000. Se omitida, presume-se que seja 0.</param>
+        <param name="Due">Opcional. Objeto do tipo <see cref="T:Microsoft.VisualBasic.DueDate" /> que especifica quando os pagamentos vencem. Esse argumento deve ser <c>EndOfPeriod</c> se os pagamentos são feitos no final do período de pagamento, ou <c>BegOfPeriod</c> se os pagamentos são feitos no início do período. Se omitido, <c>EndOfPeriod</c> será assumido.</param>
+        <summary>Retorna um <see langword="Double" /> que especifica o pagamento da entidade de segurança de determinado período de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</summary>
+        <returns>Retorna um <see langword="Double" /> que especifica o pagamento da entidade de segurança de determinado período de uma anuidade com base em pagamentos fixos periódicos e em uma taxa de juros fixa.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma anuidade é uma série de pagamentos fixos realizados por um período de tempo. Uma anuidade pode ser um empréstimo (como uma hipoteca doméstica) ou um investimento (como um plano de economias mensais).  
+  
+ O `Rate` e `NPer` argumentos devem ser calculados usando períodos de pagamento expressados nas mesmas unidades. Por exemplo, se `Rate` é calculada usando meses, `NPer` também deve ser calculado usando meses.  
+  
+ Para todos os argumentos, dinheiro pago (como depósitos de economias) é representado por números negativos; dinheiro recebido (como cheques de dividendos) é representado por números positivos.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `PPmt` função para calcular quanto de um pagamento para um período específico é principal quando todos os pagamentos são do mesmo valor. Considerando são a taxa percentual de juros por período (`APR / 12`), o período de pagamento para o qual a parte principal for desejada (`Period`), o número total de pagamentos (`TotPmts`), o valor atual ou principal do empréstimo (`PVal`), o valor futuro do empréstimo (`FVal`) e um número que indica se o pagamento deve ser feito no início ou no final do período de pagamento (`PayType`).  
+  
+ [!code-vb[VbVbalrMath#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Per" />&lt;= 0 ou <paramref name="Per" /> &gt; <paramref name="NPer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PV">
+      <MemberSignature Language="C#" Value="public static double PV (double Rate, double NPer, double Pmt, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 PV(float64 Rate, float64 NPer, float64 Pmt, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.PV(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Rate" Type="System.Double" />
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="Pmt" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+      </Parameters>
+      <Docs>
+        <param name="Rate">Necessário. <see langword="Double" /> especifica a taxa de juros por período. Por exemplo, se você conseguir um empréstimo para compra de carro com uma APR (taxa anual percentual) de 10% e efetuar pagamentos mensais, a taxa por período será de 0,1/12 ou 0,0083.</param>
+        <param name="NPer">Necessário. <see langword="Double" /> especifica o número total de períodos de pagamento na anuidade. Por exemplo, se você efetuar pagamentos mensais em um empréstimo de quatro anos para compra de carro, seu empréstimo terá 4 x 12 (ou 48) períodos de pagamento.</param>
+        <param name="Pmt">Necessário. <see langword="Double" /> especifica o pagamento a ser efetuado em cada período. Os pagamentos geralmente contêm entidade de segurança e juros que não são alterados durante a vigência da anuidade.</param>
+        <param name="FV">Opcional. <see langword="Double" /> especificará o saldo de pagamento à vista ou o valor futuro que você deseja após o pagamento final ser efetuado. Por exemplo, o valor futuro de um empréstimo é US$ 0, porque esse é o valor após o pagamento final. No entanto, se você deseja guardar US$ 50.000 durante 18 anos para a educação do seu filho, então o valor futuro será de US$ 50.000. Se omitida, presume-se que seja 0.</param>
+        <param name="Due">Opcional. Objeto do tipo <see cref="T:Microsoft.VisualBasic.DueDate" /> que especifica quando os pagamentos vencem. Esse argumento deve ser <c>EndOfPeriod</c> se os pagamentos são feitos no final do período de pagamento, ou <c>BegOfPeriod</c> se os pagamentos são feitos no início do período. Se omitido, <c>EndOfPeriod</c> será assumido.</param>
+        <summary>Retorna um <see langword="Double" /> que especifica o valor atual de uma anuidade com base em pagamentos fixos periódicos a serem pagos no futuro e em uma taxa de juros fixa.</summary>
+        <returns>Retorna um <see langword="Double" /> que especifica o valor atual de uma anuidade com base em pagamentos fixos periódicos a serem pagos no futuro e em uma taxa de juros fixa.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma anuidade é uma série de pagamentos fixos realizados por um período de tempo. Uma anuidade pode ser um empréstimo (como uma hipoteca doméstica) ou um investimento (como um plano de economias mensais).  
+  
+ O `Rate` e `NPer` argumentos devem ser calculados usando períodos de pagamento expressados nas mesmas unidades. Por exemplo, se `Rate` é calculada usando meses, `NPer` também deve ser calculado usando meses.  
+  
+ Para todos os argumentos, dinheiro pago (como depósitos de economias) é representado por números negativos; dinheiro recebido (como cheques de dividendos) é representado por números positivos.  
+  
+   
+  
+## Examples  
+ Neste exemplo, o `PV` função retorna o valor atual de uma anuidade de r $1.000.000 que fornecerá $50.000 por ano pelos próximos 20 anos. Foram fornecidas a taxa de porcentagem anual esperada (`APR`), o número total de pagamentos (`TotPmts`), a quantidade de cada pagamento (`YrIncome`), o valor futuro total do investimento (`FVal`) e um número que indica se cada pagamento é feito no início ou no final do período de pagamento (`PayType`). Observe que `YrIncome` é um número negativo porque representa dinheiro pago fora da anuidade a cada ano.  
+  
+ [!code-vb[VbVbalrMath#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rate">
+      <MemberSignature Language="C#" Value="public static double Rate (double NPer, double Pmt, double PV, double FV = 0, Microsoft.VisualBasic.DueDate Due = Microsoft.VisualBasic.DueDate.EndOfPeriod, double Guess = 0.1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Rate(float64 NPer, float64 Pmt, float64 PV, float64 FV, valuetype Microsoft.VisualBasic.DueDate Due, float64 Guess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.Rate(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="NPer" Type="System.Double" />
+        <Parameter Name="Pmt" Type="System.Double" />
+        <Parameter Name="PV" Type="System.Double" />
+        <Parameter Name="FV" Type="System.Double" />
+        <Parameter Name="Due" Type="Microsoft.VisualBasic.DueDate" />
+        <Parameter Name="Guess" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="NPer">Necessário. <see langword="Double" /> especifica o número total de períodos de pagamento na anuidade. Por exemplo, se você efetuar pagamentos mensais de um empréstimo de quatro anos para compra de um carro, esse empréstimo terá um total de 4 * 12 (ou 48) períodos de pagamento.</param>
+        <param name="Pmt">Necessário. <see langword="Double" /> especifica o pagamento a ser efetuado em cada período. Pagamentos geralmente contêm principal e juros que não são alterados durante a vigência da anuidade.</param>
+        <param name="PV">Necessário. <see langword="Double" /> especifica o valor atual de uma série de pagamentos ou recebimentos futuros. Por exemplo, quando você pede um empréstimo para comprar um carro, o valor do empréstimo é o valor atual para o credor dos pagamentos mensais do carro que serão efetuados.</param>
+        <param name="FV">Opcional. <see langword="Double" /> especificará o saldo de pagamento à vista ou o valor futuro que você deseja após o pagamento final ser efetuado. Por exemplo, o valor futuro de um empréstimo é US$ 0, porque esse é o valor após o pagamento final. No entanto, se você deseja guardar US$ 50.000 durante 18 anos para a educação do seu filho, então o valor futuro será de US$ 50.000. Se omitida, presume-se que seja 0.</param>
+        <param name="Due">Opcional. Objeto do tipo <see cref="T:Microsoft.VisualBasic.DueDate" /> que especifica quando os pagamentos vencem. Esse argumento deve ser <c>EndOfPeriod</c> se os pagamentos são feitos no final do período de pagamento, ou <c>BegOfPeriod</c> se os pagamentos são feitos no início do período. Se omitido, <c>EndOfPeriod</c> será assumido.</param>
+        <param name="Guess">Opcional. <see langword="Double" /> especificando o valor estimado é retornado por <see langword="Rate" />. Se omitido, <c>adivinhar</c> é 0,1 (10 por cento).</param>
+        <summary>Retorna um <see langword="Double" /> especificando a taxa de juros por período de uma anuidade.</summary>
+        <returns>Retorna um <see langword="Double" /> especificando a taxa de juros por período de uma anuidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma anuidade é uma série de pagamentos fixos realizados por um período de tempo. Uma anuidade pode ser um empréstimo (como uma hipoteca doméstica) ou um investimento (como um plano de economias mensais).  
+  
+ Para todos os argumentos, dinheiro pago (como depósitos de economias) é representado por números negativos; dinheiro recebido (como cheques de dividendos) é representado por números positivos.  
+  
+ `Rate`é calculada por iteração. Iniciando com o valor de `Guess`, `Rate` verificará o cálculo até que o resultado é preciso 0,00001%. Se `Rate` não é possível encontrar um resultado após 20 tentativas, ele falhará. Se sua estimativa é 10 por cento e `Rate` falhar, tente um valor diferente para `Guess`.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Rate` função para calcular a taxa de juros de um empréstimo, dado o número total de pagamentos (`TotPmts`), o valor do pagamento empréstimo (`Payment`), o valor atual ou principal do empréstimo (`PVal`), no futuro valor do empréstimo (`FVal`), um número que indica se o pagamento deve ser feito no início ou no final do período de pagamento (`PayType`) e uma aproximação da taxa de juros esperada (`Guess`).  
+  
+ [!code-vb[VbVbalrMath#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="NPer" /> &lt;= 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SLN">
+      <MemberSignature Language="C#" Value="public static double SLN (double Cost, double Salvage, double Life);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 SLN(float64 Cost, float64 Salvage, float64 Life) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.SLN(System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Cost" Type="System.Double" />
+        <Parameter Name="Salvage" Type="System.Double" />
+        <Parameter Name="Life" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Cost">Necessário. <see langword="Double" /> especificando o custo inicial do ativo.</param>
+        <param name="Salvage">Necessário. <see langword="Double" /> especificando o valor de um ativo no fim de sua vida útil.</param>
+        <param name="Life">Necessário. <see langword="Double" /> especificando a duração da vida útil do ativo.</param>
+        <summary>Retorna um <see langword="Double" /> especificando a depreciação linear de um ativo para um único período.</summary>
+        <returns>Retorna um <see langword="Double" /> especificando a depreciação linear de um ativo para um único período.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O período de depreciação deve ser expresso na mesma unidade como o `Life` argumento. Todos os argumentos devem ser números positivos.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `SLN` função para retornar a depreciação linear de um ativo para um único período dado o custo inicial do ativo (`InitCost`), o valor de recuperação no final da vida útil do ativo (`SalvageVal`) e a vida total do ativo em anos (`LifeTime`).  
+  
+ [!code-vb[VbVbalrMath#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Life" /> = 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SYD">
+      <MemberSignature Language="C#" Value="public static double SYD (double Cost, double Salvage, double Life, double Period);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 SYD(float64 Cost, float64 Salvage, float64 Life, float64 Period) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Financial.SYD(System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Cost" Type="System.Double" />
+        <Parameter Name="Salvage" Type="System.Double" />
+        <Parameter Name="Life" Type="System.Double" />
+        <Parameter Name="Period" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Cost">Necessário. <see langword="Double" />especificando o custo inicial do ativo.</param>
+        <param name="Salvage">Necessário. <see langword="Double" />especificando o valor do ativo no final de sua vida útil.</param>
+        <param name="Life">Necessário. <see langword="Double" />Especifica o período da vida útil do ativo.</param>
+        <param name="Period">Necessário. <see langword="Double" />especificando o período para o ativo a depreciação é calculada.</param>
+        <summary>Retorna um <see langword="Double" /> especificando a depreciação de dígitos da soma dos anos de um ativo por um período especificado.</summary>
+        <returns>Retorna um <see langword="Double" /> especificando a depreciação de dígitos da soma dos anos de um ativo por um período especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Life` e `Period` argumentos devem ser expressos nas mesmas unidades. Por exemplo, se `Life` é fornecido em meses, `Period` também deve ser fornecido em meses. Todos os argumentos devem ser números positivos.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `SYD` função para retornar a depreciação de um ativo por um período especificado dado o custo inicial do ativo (`InitCost`), o valor de recuperação no final da vida útil do ativo (`SalvageVal`) e a vida total do ativo em anos (`LifeTime`).  
+  
+ [!code-vb[VbVbalrMath#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Salvage" />&lt; 0, <paramref name="Period" /> &gt; <paramref name="Life" />, ou <paramref name="Period" /> &lt;= 0.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,77 @@
+<Type Name="WorkflowInstanceQuery" FullName="System.Activities.Tracking.WorkflowInstanceQuery">
+  <TypeSignature Language="C#" Value="public class WorkflowInstanceQuery : System.Activities.Tracking.TrackingQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowInstanceQuery extends System.Activities.Tracking.TrackingQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.WorkflowInstanceQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Quando adicionada para o <see cref="P:System.Activities.Tracking.TrackingProfile.Queries" /> coleção, assina os registros de instância de fluxo de trabalho quando o perfil de rastreamento é criado para se inscrever em registros de controle.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInstanceQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.WorkflowInstanceQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Tracking.WorkflowInstanceQuery" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="States">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; States { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; States" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.WorkflowInstanceQuery.States" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os estados assinados da instância de fluxo de trabalho controladas quando os registros de rastreamento são criados.</summary>
+        <value>Os estados de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os registros retornados são filtrados por estados nesta coleção.  
+  
+ Estado de possíveis valores é descritos na tabela a seguir.  
+  
+|Estado|Descrição|  
+|-----------|-----------------|  
+|Anulado|A instância de fluxo de trabalho será anulada.|  
+|Concluído|A instância de fluxo de trabalho for concluída.|  
+|Deleted|A instância de fluxo de trabalho é excluída.|  
+|Ocioso|A instância de fluxo de trabalho está ociosa.|  
+|Persistentes|A instância de fluxo de trabalho é mantida.|  
+|Retomada|A instância de fluxo de trabalho é retomada.|  
+|Introdução|A instância de fluxo de trabalho é iniciada.|  
+|UnhandledException|A instância de fluxo de trabalho encontrou uma exceção sem tratamento.|  
+|Descarregado|A instância de fluxo de trabalho é descarregada.|  
+|Cancelado|A instância de fluxo de trabalho é cancelada.|  
+|Suspenso|A instância de fluxo de trabalho é suspensa.|  
+|Encerrada|A instância de fluxo de trabalho é encerrada.|  
+|Não suspenso|A instância de fluxo de trabalho é unsuspended.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,161 @@
+<Type Name="IErrorPage" FullName="System.Windows.Interop.IErrorPage">
+  <TypeSignature Language="C#" Value="public interface IErrorPage" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IErrorPage" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.IErrorPage" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a interação entre os aplicativos do Windows Presentation Foundation (WPF) que estão hospedando o conteúdo de interoperação e interpretado, o executável do Windows Presentation Foundation (WPF) e uma página de erro fornecido do host.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeploymentPath">
+      <MemberSignature Language="C#" Value="public Uri DeploymentPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri DeploymentPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IErrorPage.DeploymentPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho para o manifesto de implantação do aplicativo.</summary>
+        <value>O caminho para o manifesto de implantação do aplicativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorFlag">
+      <MemberSignature Language="C#" Value="public bool ErrorFlag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ErrorFlag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IErrorPage.ErrorFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se isso representa um erro ou outra condição, como um aviso. <see langword="true" />indica um erro.</summary>
+        <value>
+          <see langword="true" />indica um erro; <see langword="false" /> denota outra condição, como um aviso.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorText">
+      <MemberSignature Language="C#" Value="public string ErrorText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IErrorPage.ErrorText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma descrição detalhada do erro.</summary>
+        <value>Descrição do erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorTitle">
+      <MemberSignature Language="C#" Value="public string ErrorTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IErrorPage.ErrorTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título da cadeia de caracteres da página de erro.</summary>
+        <value>O título da cadeia de caracteres da página de erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWinFxCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperationCallback GetWinFxCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.DispatcherOperationCallback GetWinFxCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IErrorPage.GetWinFxCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para um <see cref="T:System.Windows.Threading.DispatcherOperationCallback" /> manipulador, que pode lidar com solicitações de [!INCLUDE[TLA#tla_winfx](~/includes/tlasharptla-winfx-md.md)] downloads de tempo de execução.</summary>
+        <value>Um <see cref="T:System.Windows.Threading.DispatcherOperationCallback" /> manipulador,</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogFilePath">
+      <MemberSignature Language="C#" Value="public string LogFilePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LogFilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IErrorPage.LogFilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho de cadeia de caracteres para o arquivo de log do erro, se houver.</summary>
+        <value>Caminho para um arquivo de erro associada. Pode ser uma cadeia de caracteres vazia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.DispatcherOperationCallback RefreshCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.DispatcherOperationCallback RefreshCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IErrorPage.RefreshCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para um <see cref="T:System.Windows.Threading.DispatcherOperationCallback" /> manipulador, que pode lidar com a atualização da página de erro.</summary>
+        <value>Um <see cref="T:System.Windows.Threading.DispatcherOperationCallback" /> manipulador para tratar a atualização da página de erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportUri">
+      <MemberSignature Language="C#" Value="public Uri SupportUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SupportUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.IErrorPage.SupportUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para obter informações de suporte associadas ao erro.</summary>
+        <value>Um link para informações de suporte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

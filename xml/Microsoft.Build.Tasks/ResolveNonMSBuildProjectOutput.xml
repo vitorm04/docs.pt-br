@@ -1,0 +1,138 @@
+<Type Name="ResolveNonMSBuildProjectOutput" FullName="Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput">
+  <TypeSignature Language="C#" Value="public class ResolveNonMSBuildProjectOutput : Microsoft.Build.Tasks.ResolveProjectBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveNonMSBuildProjectOutput extends Microsoft.Build.Tasks.ResolveProjectBase" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.ResolveProjectBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Determina os arquivos de saída para referências de projeto não MSBuild.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `ResolveNonMSBuildProjectOutput` tarefa procura por uma propriedade especial definida pelo [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE para a lista de GUIDs de projeto e suas saídas associadas. O IDE somente previamente resolve não[!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] projetos e dessa forma separa [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] projeto referências de não -[!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] referências. O IDE retorna a lista de [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] projetos como UnresolvedProjectReferences. Isso permite que a tarefa usar mais forte [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] mecanismos para manipular apenas o [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] referências de projeto, como. a chamada para destinos específicos de referências para obter o nome do arquivo de manifesto, que não seria possível com uma lista mista de [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] e não-[!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] referências de projeto.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveNonMSBuildProjectOutput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o <c>ResolveNonMSBuildProjectOutput</c> tarefa.</summary>
+        <returns>
+          <see langword="true" /> caso a execução da tarefa seja bem-sucedida; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PreresolvedProjectOutputs">
+      <MemberSignature Language="C#" Value="public string PreresolvedProjectOutputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreresolvedProjectOutputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.PreresolvedProjectOutputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres XML que contém o projeto resolvido saídas.</summary>
+        <value>Uma cadeia de caracteres XML que contém resolvido saídas do projeto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedOutputPaths">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ResolvedOutputPaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] ResolvedOutputPaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.ResolvedOutputPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os caminhos de referência resolvido que preservam os atributos de referência de projeto original.</summary>
+        <value>Os caminhos de referência resolvido preservam os atributos de referência de projeto original.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnresolvedProjectReferences">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] UnresolvedProjectReferences { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] UnresolvedProjectReferences" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.UnresolvedProjectReferences" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os itens de referência de projeto que estão no [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] formato.</summary>
+        <value>Itens de referência que constam de projeto a [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] formato.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] somente pré-resolve não[!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] projetos, os itens de referência de projeto que não puderam ser resolvidos usando a lista previamente resolvida saídas estão no [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] formato.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

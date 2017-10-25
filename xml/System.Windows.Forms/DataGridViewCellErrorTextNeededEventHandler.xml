@@ -1,0 +1,53 @@
+<Type Name="DataGridViewCellErrorTextNeededEventHandler" FullName="System.Windows.Forms.DataGridViewCellErrorTextNeededEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataGridViewCellErrorTextNeededEventHandler(object sender, DataGridViewCellErrorTextNeededEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewCellErrorTextNeededEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellErrorTextNeededEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DataGridViewCellErrorTextNeededEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.DataGridViewCellErrorTextNeededEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Windows.Forms.DataGridView.CellErrorTextNeeded" /> de <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView.CellErrorTextNeeded> evento ocorre somente quando o <xref:System.Windows.Forms.DataGridView> controle <xref:System.Windows.Forms.DataGridView.DataSource%2A> está definida ou seu <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> é de propriedade `true`. Manipulando o <xref:System.Windows.Forms.DataGridView.CellErrorTextNeeded> evento é útil quando você quiser determinar o erro para uma célula, dependendo de seu valor ou o estado.  
+  
+ Quando você processa o <xref:System.Windows.Forms.DataGridView.CellErrorTextNeeded> eventos e especifique o texto de erro no manipulador de um glifo de erro é exibida na célula, a menos que o <xref:System.Windows.Forms.DataGridView.ShowCellErrors%2A?displayProperty=nameWithType> está definida como `false` ou a célula está em modo de edição. Quando o usuário move o ponteiro do mouse sobre o glifo de erro, o texto de erro é exibida em uma dica de ferramenta.  
+  
+ O <xref:System.Windows.Forms.DataGridView.CellErrorTextNeeded> evento também ocorre sempre que o valor da <xref:System.Windows.Forms.DataGridViewCell.ErrorText%2A?displayProperty=nameWithType> propriedade é recuperada.  
+  
+ Você pode usar o <xref:System.Windows.Forms.DataGridViewCellEventArgs.RowIndex%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.DataGridViewCellEventArgs.ColumnIndex%2A> propriedade para determinar o estado ou o valor de uma célula e, em seguida, usar essas informações para alterar ou modificar o <xref:System.Windows.Forms.DataGridViewCellErrorTextNeededEventArgs.ErrorText%2A?displayProperty=nameWithType> propriedade. Essa propriedade é inicializada com o valor da célula <xref:System.Windows.Forms.DataGridViewCell.ErrorText%2A> propriedade, que substitui o valor do evento.  
+  
+ Manipular o <xref:System.Windows.Forms.DataGridView.CellErrorTextNeeded> eventos ao trabalhar com grandes quantidades de dados para evitar as penalidades de desempenho de definir a célula <xref:System.Windows.Forms.DataGridViewCell.ErrorText%2A> valor para várias células. Para obter mais informações, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Quando você cria um <xref:System.Windows.Forms.DataGridViewCellErrorTextNeededEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.DataGridViewCellErrorTextNeededEventHandler> delegado que define o texto de erro para a célula que precisa dele.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView_SharedRowScenarios#24](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/CPP/sharedrows.cpp#24)]
+ [!code-csharp[System.Windows.Forms.DataGridView_SharedRowScenarios#24](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/CS/sharedrows.cs#24)]
+ [!code-vb[System.Windows.Forms.DataGridView_SharedRowScenarios#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/VB/sharedrows.vb#24)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

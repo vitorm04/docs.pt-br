@@ -1,0 +1,71 @@
+<Type Name="ArrayObject" FullName="Microsoft.JScript.ArrayObject">
+  <TypeSignature Language="C#" Value="public class ArrayObject : Microsoft.JScript.JSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArrayObject extends Microsoft.JScript.JSObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ArrayObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.JSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto de matriz. Essa classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="length">
+      <MemberSignature Language="C#" Value="public virtual object length { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object length" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ArrayObject.length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comprimento da matriz.</summary>
+        <value>O comprimento da matriz.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SpliceSlowly">
+      <MemberSignature Language="C#" Value="protected void SpliceSlowly (uint start, uint deleteCount, object[] args, Microsoft.JScript.ArrayObject outArray, uint oldLength, uint newLength);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SpliceSlowly(unsigned int32 start, unsigned int32 deleteCount, object[] args, class Microsoft.JScript.ArrayObject outArray, unsigned int32 oldLength, unsigned int32 newLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayObject.SpliceSlowly(System.UInt32,System.UInt32,System.Object[],Microsoft.JScript.ArrayObject,System.UInt32,System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.UInt32" />
+        <Parameter Name="deleteCount" Type="System.UInt32" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="outArray" Type="Microsoft.JScript.ArrayObject" />
+        <Parameter Name="oldLength" Type="System.UInt32" />
+        <Parameter Name="newLength" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="start">A posição nesta matriz na qual deseja adicionar e remover elementos.</param>
+        <param name="deleteCount">O número de elementos para remover, se houver.</param>
+        <param name="args">Os elementos para adicionar, se houver.</param>
+        <param name="outArray">Uma matriz que contém os elementos removidos dessa matriz, se houver foram removidos.</param>
+        <param name="oldLength">O comprimento anterior dessa matriz.</param>
+        <param name="newLength">O novo comprimento dessa matriz.</param>
+        <summary>Adiciona os elementos e remove os elementos de uma matriz, na posição especificada na matriz. Você pode adicionar elementos, remover elementos ou ambos.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

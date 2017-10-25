@@ -1,0 +1,502 @@
+<Type Name="IReplyChannel" FullName="System.ServiceModel.Channels.IReplyChannel">
+  <TypeSignature Language="C#" Value="public interface IReplyChannel : System.ServiceModel.Channels.IChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReplyChannel implements class System.ServiceModel.Channels.IChannel, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IReplyChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define a interface que um canal deve implementar para estar no lado de recebimento de uma comunicação de solicitação-resposta entre pontos de extremidade de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IReplyChannel> interface inclui variantes síncronas e assíncronas de um <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> retorno do método um <xref:System.ServiceModel.Channels.RequestContext> que pode ser usado para construir as respostas às solicitações recebidas.  
+  
+ O contrato inclui síncronas e assíncronas variantes de recebimento, funcionalidade tente para receber e de espera de mensagem.  
+  
+ Um <xref:System.ServiceModel.Channels.IReplyChannel> não é necessariamente associado a um único remetente. Outras interfaces de canal e canais de fornecem a correlação entre o remetente e o canal de resposta, mas nenhuma restrição faz com que o contrato básico.  
+  
+ O modelo de pull é usado com um <xref:System.ServiceModel.Channels.IReplyChannel> para receber mensagens. Esse modelo consiste em chamar <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> (ou uma de suas variantes) e, em seguida, aguardar a chegada de uma mensagem.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginReceiveRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginReceiveRequest (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginReceiveRequest(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.BeginReceiveRequest(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação do recebimento de uma operação de solicitação é concluída.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas a receive assíncrona de uma operação de solicitação.</param>
+        <summary>Inicia uma operação assíncrona para receber uma solicitação disponível com um tempo limite padrão.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a recepção assíncrona da solicitação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IReplyChannel.BeginReceiveRequest%28System.AsyncCallback%2CSystem.Object%29> método implementa o padrão para invocar <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest> assincronamente. O tempo limite padrão é 1 minuto. Se um tempo limite de recebimento for definido na associação usada para configurar a conexão, esse valor é usado. Use <xref:System.ServiceModel.Channels.IReplyChannel.BeginReceiveRequest%28System.TimeSpan%2CSystem.AsyncCallback%2CSystem.Object%29> se você deseja especificar um tempo limite explícito com a chamada que substitui esses outros valores.  
+  
+ Se a mensagem de solicitação recebida é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginReceiveRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginReceiveRequest (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginReceiveRequest(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.BeginReceiveRequest(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo de espera para o recebimento de uma solicitação disponível.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação do recebimento de uma operação de solicitação é concluída.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas a receive assíncrona de uma operação de solicitação.</param>
+        <summary>Inicia uma operação assíncrona para receber uma solicitação disponível com um tempo limite especificado.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a recepção assíncrona da solicitação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IReplyChannel.BeginReceiveRequest%28System.TimeSpan%2CSystem.AsyncCallback%2CSystem.Object%29> método implementa o padrão para invocar <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%28System.TimeSpan%29> assincronamente. O tempo limite definido neste método substitui um tempo limite de recebimento definido na associação que é usada para configurar a conexão.  
+  
+ Se a mensagem de solicitação recebida é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTryReceiveRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTryReceiveRequest (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginTryReceiveRequest(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.BeginTryReceiveRequest(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação de solicitação de recebimento tem para concluir antes de atingir o tempo limite e retornar <see langword="false" />.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação do recebimento de uma operação de solicitação é concluída.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas a receive assíncrona de uma operação de solicitação.</param>
+        <summary>Inicia uma operação assíncrona para receber uma mensagem de solicitação que tem um tempo limite especificado e o objeto de estado associados a ele.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação de solicitação de recebimento assíncrono.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o assíncrona <xref:System.ServiceModel.Channels.IReplyChannel.BeginTryReceiveRequest%28System.TimeSpan%2CSystem.AsyncCallback%2CSystem.Object%29> método quando você precisar continuar sem aguardar o processamento de aplicativo. Use um dos síncronos <xref:System.ServiceModel.Channels.IReplyChannel.TryReceiveRequest%28System.TimeSpan%2CSystem.ServiceModel.Channels.RequestContext%40%29> métodos quando ele é aceitável para o thread atual a ser bloqueada enquanto ele responde à mensagem de solicitação ou até que o intervalo de tempo limite for excedido.  
+  
+ Este método recebe notificação por meio de um retorno de chamada da identidade do manipulador de eventos para a operação. A operação não é completa até que uma mensagem se torna disponível no canal ou o tempo limite seja atingido.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A operação retorna <see langword="false" /> se especificado <paramref name="timeout" /> for excedido.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWaitForRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWaitForRequest (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginWaitForRequest(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.BeginWaitForRequest(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo de espera para o recebimento de uma solicitação disponível.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação do recebimento de uma operação de solicitação é concluída.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas a receive assíncrona de uma operação de solicitação.</param>
+        <summary>Inicia uma operação de solicitação assíncrona que tem um tempo limite especificado e um objeto de estado associados a ele.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona para aguardar uma mensagem de solicitação chegar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o síncrona <xref:System.ServiceModel.Channels.IReplyChannel.WaitForRequest%28System.TimeSpan%29> método quando ele é aceitável para o thread atual a ser bloqueado enquanto aguarda uma mensagem de solicitação chegar na fila. O thread está bloqueado para cima especificado `timeout`.  
+  
+ Este método recebe notificação por meio de um retorno de chamada da identidade do manipulador de eventos para a operação. A operação não é completa até que uma mensagem de solicitação se torna disponível no canal ou o tempo limite seja atingido.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A operação retorna <see langword="false" /> se especificado <paramref name="timeout" /> for excedido.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndReceiveRequest">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.RequestContext EndReceiveRequest (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.RequestContext EndReceiveRequest(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.EndReceiveRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RequestContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="Overload:System.ServiceModel.Channels.IInputChannel.BeginReceive" /> método.</param>
+        <summary>Conclui uma operação assíncrona para receber uma solicitação disponível.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.RequestContext" /> usado para construir uma resposta para a solicitação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de solicitação recebida é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A operação deve lançar uma <see cref="T:System.TimeoutException" /> se especificado <paramref name="timeout" /> for excedido antes que a operação seja concluída.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTryReceiveRequest">
+      <MemberSignature Language="C#" Value="public bool EndTryReceiveRequest (IAsyncResult result, out System.ServiceModel.Channels.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EndTryReceiveRequest(class System.IAsyncResult result, [out] class System.ServiceModel.Channels.RequestContext&amp; context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.EndTryReceiveRequest(System.IAsyncResult,System.ServiceModel.Channels.RequestContext@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+        <Parameter Name="context" Type="System.ServiceModel.Channels.RequestContext&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Channels.IReplyChannel.BeginTryReceiveRequest(System.TimeSpan,System.AsyncCallback,System.Object)" /> método.</param>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.RequestContext" /> recebido.</param>
+        <summary>Conclui a operação assíncrona especificada para receber uma mensagem de solicitação.</summary>
+        <returns>
+          <see langword="true" />Se uma mensagem de solicitação for recebida antes do intervalo especificado de tempo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWaitForRequest">
+      <MemberSignature Language="C#" Value="public bool EndWaitForRequest (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EndWaitForRequest(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.EndWaitForRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> que identifica o <see cref="M:System.ServiceModel.Channels.IReplyChannel.BeginWaitForRequest(System.TimeSpan,System.AsyncCallback,System.Object)" /> operação seja concluída e a partir do qual recuperar o resultado final.</param>
+        <summary>Conclui a operação de mensagem de espera de solicitação assíncrona especificada.</summary>
+        <returns>
+          <see langword="true" />Se uma solicitação é recebida antes do intervalo especificado de tempo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress LocalAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress LocalAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IReplyChannel.LocalAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço no qual esse canal de resposta recebe mensagens.</summary>
+        <value>O <see cref="T:System.ServiceModel.EndpointAddress" /> no qual esse canal de resposta recebe mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir ilustra como implementar essa propriedade:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveRequest">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.RequestContext ReceiveRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.RequestContext ReceiveRequest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RequestContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o contexto da solicitação recebida, se houver um disponível. Se um contexto não estiver disponível, aguarda até que haja um disponível.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.RequestContext" /> usado para construir as respostas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.RequestContext>encapsula a mensagem de solicitação e um mecanismo para responder à mensagem.  
+  
+ <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>pode ser chamado várias vezes ou simultaneamente. Apenas um <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> chamada ser concluída por solicitação recebida.  
+  
+ Se a mensagem de solicitação recebida é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveRequest">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.RequestContext ReceiveRequest (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.RequestContext ReceiveRequest(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RequestContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo o recebimento de uma operação de solicitação tem para concluir antes de atingir o tempo limite e retornar <see langword="false" />.</param>
+        <summary>Retorna o contexto da solicitação recebida, se houver um disponível. Se um contexto não estiver disponível, aguarda até que haja um disponível.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.RequestContext" /> usado para construir as respostas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.RequestContext>encapsula a mensagem de solicitação e um mecanismo para responder à mensagem.  
+  
+ <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>pode ser chamado várias vezes ou simultaneamente. Apenas um <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> chamada ser concluída por solicitação recebida.  
+  
+ Se a mensagem de solicitação recebida é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReceiveRequest">
+      <MemberSignature Language="C#" Value="public bool TryReceiveRequest (TimeSpan timeout, out System.ServiceModel.Channels.RequestContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryReceiveRequest(valuetype System.TimeSpan timeout, [out] class System.ServiceModel.Channels.RequestContext&amp; context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.TryReceiveRequest(System.TimeSpan,System.ServiceModel.Channels.RequestContext@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="context" Type="System.ServiceModel.Channels.RequestContext&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo o recebimento de uma operação de solicitação tem para concluir antes de atingir o tempo limite e retornar <see langword="false" />.</param>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.RequestContext" /> recebido.</param>
+        <summary>Retorna um valor que indica se uma solicitação é recebida antes de um intervalo especificado de tempo.</summary>
+        <returns>
+          <see langword="true" />Se uma mensagem de solicitação for recebida antes do intervalo especificado de tempo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.ServiceModel.Channels.IReplyChannel.TryReceiveRequest%28System.TimeSpan%2CSystem.ServiceModel.Channels.RequestContext%40%29> quando é aceitável para o thread atual a ser bloqueado enquanto aguarda uma mensagem de solicitação chegar na fila. O thread está bloqueado para cima especificado `timeout`. Se você precisar continuar sem aguardar o processamento de aplicativo, use o assíncrona <xref:System.ServiceModel.Channels.IReplyChannel.BeginTryReceiveRequest%28System.TimeSpan%2CSystem.AsyncCallback%2CSystem.Object%29> método.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A operação retorna <see langword="false" /> se especificado <paramref name="timeout" /> for excedido.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForRequest">
+      <MemberSignature Language="C#" Value="public bool WaitForRequest (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WaitForRequest(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IReplyChannel.WaitForRequest(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica quanto tempo uma solicitação de operação deve concluir antes de atingir o tempo limite e retornar <see langword="false" />.</param>
+        <summary>Retorna um valor que indica se uma mensagem de solicitação é recebida antes de um intervalo especificado de tempo.</summary>
+        <returns>
+          <see langword="true" />Se uma solicitação é recebida antes do intervalo especificado de tempo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.ServiceModel.Channels.IReplyChannel.WaitForRequest%28System.TimeSpan%29> não resulta em uma mensagem de solicitação está sendo recebidos ou processados de forma alguma.  
+  
+ O <xref:System.ServiceModel.Channels.IReplyChannel.BeginWaitForRequest%28System.TimeSpan%2CSystem.AsyncCallback%2CSystem.Object%29> método existe principalmente para transacionado cenários em que o usuário deseja receber a mensagem de uso de uma transação. Ao usar apenas <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> normalmente para isso, o usuário deve criar a transação e, em seguida, chamar <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> e esperamos que a mensagem chegar antes da transação de tempo limite, que pode não ser possível.  
+  
+ Em vez disso, o usuário pode chamar <xref:System.ServiceModel.Channels.IReplyChannel.WaitForRequest%28System.TimeSpan%29> e especifique o tempo limite (mesmo infinito), em seguida, quando uma mensagem chega, eles poderão abrir a transação, chame <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> e ter certeza de que eles podem obter a mensagem antes de expira a transação.  
+  
+ Use <xref:System.ServiceModel.Channels.IReplyChannel.WaitForRequest%28System.TimeSpan%29> quando é aceitável para o thread atual a ser bloqueado enquanto aguarda uma mensagem para chegar na fila. O thread está bloqueado para cima especificado `timeout`. Se você precisar continuar sem aguardar o processamento de aplicativo, use o assíncrona <xref:System.ServiceModel.Channels.IReplyChannel.BeginWaitForRequest%28System.TimeSpan%2CSystem.AsyncCallback%2CSystem.Object%29> método.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como implementar esse método:  
+  
+ [!code-csharp[S_UE_MessageInterceptor#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageinterceptor/cs/interceptingchannellistener.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A operação retorna <see langword="false" /> se especificado <paramref name="timeout" /> for excedido.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

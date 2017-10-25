@@ -1,0 +1,176 @@
+<Type Name="Label" FullName="System.Windows.Controls.Label">
+  <TypeSignature Language="C#" Value="public class Label : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Label extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Label" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Label)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o rótulo de texto para um controle e fornece suporte para chaves de acesso.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece suporte visual e funcional para chaves de acesso (também conhecido como mnemônicos). Ele é usado frequentemente para habilitar o acesso rápido do teclado para controles, como um <xref:System.Windows.Controls.TextBox>. Para atribuir um <xref:System.Windows.Controls.Label> para um <xref:System.Windows.Controls.Control>, defina o <xref:System.Windows.Controls.Label.Target%2A> propriedade para o controle que deve receber o foco quando o usuário pressiona a tecla de acesso. Definir o destino também faz com que [!INCLUDE[TLA#tla_uiautomation](~/includes/tlasharptla-uiautomation-md.md)] para usar o texto do rótulo como o nome do controle de destino. Para obter mais informações, consulte [acessibilidade](~/docs/framework/ui-automation/index.md).  
+  
+ Para definir a chave de acesso, adicione um sublinhado antes do caractere que deve ser a chave de acesso. Se o conteúdo tiver vários caracteres de sublinhado, somente o primeiro deles é convertido em uma chave de acesso; os outros sublinhados aparecem como texto normal. Se o caractere de sublinhado que você deseja convertido para a chave de acesso não for o primeiro caractere de sublinhado, use dois sublinhados consecutivos para qualquer sublinhados anteriores que você deseja converter. Por exemplo, o código a seguir contém uma chave de acesso e exibe como _Hello**W**World:  
+  
+```  
+<Label>__Hello_World</Label>   
+```  
+  
+ Como o sublinhado que precede H é um duplo, a chave W registra como a chave de acesso.  
+  
+ Não é um rótulo de controle e não é uma parada de tabulação. Para obter detalhes, consulte [visão geral de foco](~/docs/framework/wpf/advanced/focus-overview.md).  
+  
+ Um <xref:System.Windows.Controls.Label> é um <xref:System.Windows.Controls.ContentControl>, que significa que ele pode conter um único objeto de qualquer tipo (como uma cadeia de caracteres, uma imagem ou um painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ContentControl>.  
+  
+## <a name="customizing-the-label-control"></a>Personalizando o controle de rótulo  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.Label> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.Label>, consulte [modelos e estilos de etiquetas](~/docs/framework/wpf/controls/label-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.Label> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Windows.Controls.Label> que usa uma associação para definir o destino.  
+  
+ [!code-xaml[LabelSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#1)]   
+  
+ O exemplo a seguir mostra como criar um <xref:System.Windows.Controls.Label> que tem uma chave de acesso e oferece suporte a quebra automática de texto.  
+  
+ [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Label ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Label.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Label" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Label.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um apropriado <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" /> implementação para este controle, como parte do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] infraestrutura.</summary>
+        <returns>A implementação de <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> específica ao tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement Target" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Label.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Markup.NameReferenceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento que recebe o foco quando o usuário pressiona a tecla de acesso do rótulo.</summary>
+        <value>O <see cref="T:System.Windows.UIElement" /> que recebe o foco quando o usuário pressiona a tecla de acesso. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode fornecer os atalhos de teclado para elementos que não dão suporte a chaves de acesso, fornecendo um <xref:System.Windows.Controls.Label> uma chave de acesso e a definição dessa propriedade. Atribua uma chave de acesso para um rótulo colocando um sublinhado imediatamente antes do caractere que atua como a chave de acesso. Uma chave de acesso pode ser especificada no <xref:System.Windows.Controls.ContentControl.Content%2A> propriedade ou definindo <xref:System.Windows.Controls.ContentControl.Content%2A> para um <xref:System.Windows.Controls.AccessText> objeto.  
+  
+ Você não pode usar essa propriedade para definir um <xref:System.Windows.UIElement>. Por exemplo, o seguinte compila, mas não está funcionando: `<object.Target><UIElement../></object.Target>`. Esta propriedade fornece uma referência a um elemento que já estejam definida em seu aplicativo.  
+  
+<a name="dependencyPropertyInfo_Target"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Label.TargetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+<a name="xamlAttributeUsage_Target"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<Label Target=" nameOfExistingElement"/>  
+  
+```  
+  
+<a name="xamlPropertyElementUsage_Target"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+<a name="xamlValues_Target"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ `nameOfExistingElement`  
+ O nome do <xref:System.Windows.UIElement> que recebe o foco quando a chave de acesso é pressionada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Label.Target%2A> propriedade de um <xref:System.Windows.Controls.Label>.  
+  
+ [!code-xaml[LabelSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#1)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TargetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TargetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Label.TargetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Label.Target" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

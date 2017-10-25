@@ -1,0 +1,154 @@
+<Type Name="TextAnchor" FullName="System.Windows.Annotations.TextAnchor">
+  <TypeSignature Language="C#" Value="public sealed class TextAnchor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextAnchor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.TextAnchor" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma seleção de conteúdo que uma anotação está ancorada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.TextAnchor>é o tipo de objeto de retornado <xref:System.Windows.Annotations.IAnchorInfo.ResolvedAnchor%2A> se você estiver usando notas e destaques no fluxo ou documentos fixos.  
+  
+ <xref:System.Windows.Annotations.TextAnchor>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Considere um aplicativo de leitor de documento simples que tem um painel de comentários. O painel de comentários pode ser uma caixa de listagem que exiba texto de uma lista de anotações ancoradas a um documento. Se o usuário selecionar um item na caixa de listagem, o aplicativo trará para a exibição o parágrafo no documento ao qual o objeto de anotação correspondente está ancorado.  
+  
+ O exemplo a seguir demonstra como implementar o manipulador de eventos de uma caixa de listagem assim que serve como painel de comentários.  
+  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BoundingEnd">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.ContentPosition BoundingEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.ContentPosition BoundingEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.TextAnchor.BoundingEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ContentPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição final da âncora de texto.</summary>
+        <value>A posição final da âncora de texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.TextAnchor.BoundingEnd%2A>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoundingStart">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.ContentPosition BoundingStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.ContentPosition BoundingStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.TextAnchor.BoundingStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ContentPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição de início da âncora de texto.</summary>
+        <value>A posição de início da âncora de texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.TextAnchor.BoundingStart%2A>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Considere um aplicativo de leitor de documento simples que tem um painel de comentários. O painel de comentários pode ser uma caixa de listagem que exiba texto de uma lista de anotações ancoradas a um documento. Se o usuário selecionar um item na caixa de listagem, o aplicativo trará para a exibição o parágrafo no documento ao qual o objeto de anotação correspondente está ancorado.  
+  
+ O exemplo a seguir demonstra como implementar o manipulador de eventos de uma caixa de listagem assim que serve como painel de comentários.  
+  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.TextAnchor.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado.</param>
+        <summary>Retorna um valor que indica se a âncora de texto é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se as duas instâncias forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.TextAnchor.Equals%2A>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.TextAnchor.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash da instância de âncora de texto.</summary>
+        <returns>O código hash da instância de âncora de texto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.TextAnchor.GetHashCode%2A>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

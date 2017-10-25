@@ -1,0 +1,186 @@
+<Type Name="RoutedEventHandlerInfo" FullName="System.Windows.RoutedEventHandlerInfo">
+  <TypeSignature Language="C#" Value="public struct RoutedEventHandlerInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit RoutedEventHandlerInfo extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.RoutedEventHandlerInfo" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações de tratamento especial para informar ouvintes de eventos se os manipuladores específicos devem ser chamados.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado ao atual <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</param>
+        <summary>Determina se o objeto especificado é equivalente à atual <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado é equivalente à atual <see cref="T:System.Windows.RoutedEventHandlerInfo" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.RoutedEventHandlerInfo handlerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.RoutedEventHandlerInfo handlerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.Equals(System.Windows.RoutedEventHandlerInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handlerInfo" Type="System.Windows.RoutedEventHandlerInfo" />
+      </Parameters>
+      <Docs>
+        <param name="handlerInfo">O <see cref="T:System.Windows.RoutedEventHandlerInfo" /> para comparar com a atual <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.Windows.RoutedEventHandlerInfo" /> é equivalente à atual <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Windows.RoutedEventHandlerInfo" /> é equivalente à atual <see cref="T:System.Windows.RoutedEventHandlerInfo" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação depende de equivalência do valor da <xref:System.Windows.RoutedEventHandlerInfo.Handler%2A> <xref:System.Windows.RoutedEventHandlerInfo.InvokeHandledEventsToo%2A> propriedades. O <xref:System.Windows.RoutedEventHandlerInfo.Handler%2A> propriedade é uma referência de delegado. Portanto, equivalência implica uma referência duplicada ao mesmo manipulador.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código hash para a atual <see cref="T:System.Windows.RoutedEventHandlerInfo" />.</summary>
+        <returns>Um código hash do <see cref="T:System.Windows.RoutedEventHandlerInfo" /> atual.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Handler">
+      <MemberSignature Language="C#" Value="public Delegate Handler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Delegate Handler" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RoutedEventHandlerInfo.Handler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o manipulador de eventos.</summary>
+        <value>O manipulador de eventos.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeHandledEventsToo">
+      <MemberSignature Language="C#" Value="public bool InvokeHandledEventsToo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InvokeHandledEventsToo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RoutedEventHandlerInfo.InvokeHandledEventsToo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o manipulador de eventos é chamado quando o evento roteado estiver marcado como tratado.</summary>
+        <value>
+          <see langword="true" />Se o manipulador de eventos é chamado quando o evento roteado está marcado como manipulado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.RoutedEventHandlerInfo handlerInfo1, System.Windows.RoutedEventHandlerInfo handlerInfo2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.RoutedEventHandlerInfo handlerInfo1, valuetype System.Windows.RoutedEventHandlerInfo handlerInfo2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.op_Equality(System.Windows.RoutedEventHandlerInfo,System.Windows.RoutedEventHandlerInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handlerInfo1" Type="System.Windows.RoutedEventHandlerInfo" />
+        <Parameter Name="handlerInfo2" Type="System.Windows.RoutedEventHandlerInfo" />
+      </Parameters>
+      <Docs>
+        <param name="handlerInfo1">O primeiro objeto a ser comparado.</param>
+        <param name="handlerInfo2">O segundo objeto a ser comparado.</param>
+        <summary>Determina se os objetos especificados são equivalentes.</summary>
+        <returns>
+          <see langword="true" />Se os objetos forem equivalentes; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.RoutedEventHandlerInfo handlerInfo1, System.Windows.RoutedEventHandlerInfo handlerInfo2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.RoutedEventHandlerInfo handlerInfo1, valuetype System.Windows.RoutedEventHandlerInfo handlerInfo2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventHandlerInfo.op_Inequality(System.Windows.RoutedEventHandlerInfo,System.Windows.RoutedEventHandlerInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handlerInfo1" Type="System.Windows.RoutedEventHandlerInfo" />
+        <Parameter Name="handlerInfo2" Type="System.Windows.RoutedEventHandlerInfo" />
+      </Parameters>
+      <Docs>
+        <param name="handlerInfo1">O primeiro objeto a ser comparado.</param>
+        <param name="handlerInfo2">O segundo objeto a ser comparado.</param>
+        <summary>Determina se os objetos especificados não são equivalentes.</summary>
+        <returns>
+          <see langword="true" />Se os objetos não forem equivalentes; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

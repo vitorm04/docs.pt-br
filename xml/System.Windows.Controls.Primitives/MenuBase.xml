@@ -1,0 +1,300 @@
+<Type Name="MenuBase" FullName="System.Windows.Controls.Primitives.MenuBase">
+  <TypeSignature Language="C#" Value="public abstract class MenuBase : System.Windows.Controls.ItemsControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract MenuBase extends System.Windows.Controls.ItemsControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.MenuBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ItemsControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Menu)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="ItemContainerStyle", StyleTargetType=typeof(System.Windows.Controls.MenuItem))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle que define as opções para os usuários selecionarem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.MenuBase> é a classe base para controles que definem as opções para os usuários selecionem. O <xref:System.Windows.Controls.Menu> e <xref:System.Windows.Controls.ContextMenu> herdam <xref:System.Windows.Controls.Primitives.MenuBase> e permitir que o usuário selecione um item para invocar qualquer ação.  
+  
+ <xref:System.Windows.Controls.Primitives.MenuBase>é um <xref:System.Windows.Controls.ItemsControl>, que significa que ele pode conter uma coleção de objetos de qualquer tipo (como cadeia de caracteres, imagem ou painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ItemsControl>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MenuBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MenuBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.MenuBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetContainerForItemOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.DependencyObject GetContainerForItemOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MenuBase.GetContainerForItemOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria ou identifica o elemento usado para exibir o item especificado.</summary>
+        <returns>O elemento usado para exibir o item especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleMouseButton">
+      <MemberSignature Language="C#" Value="protected virtual void HandleMouseButton (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void HandleMouseButton(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MenuBase.HandleMouseButton(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento para um evento do mouse.</param>
+        <summary>Chamado quando um botão do mouse é pressionado ou liberado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainerOverride">
+      <MemberSignature Language="C#" Value="protected override bool IsItemItsOwnContainerOverride (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemItsOwnContainerOverride(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MenuBase.IsItemItsOwnContainerOverride(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item para verificar se ele é um contêiner de itens.</param>
+        <summary>Determina se o item especificado está ou é elegível para ser seu próprio contêiner do item.</summary>
+        <returns>
+          <see langword="true" />Se o item for uma <see cref="T:System.Windows.Controls.MenuItem" /> ou um <see cref="T:System.Windows.Controls.Separator" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ItemContainerTemplateSelector ItemContainerTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ItemContainerTemplateSelector ItemContainerTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.MenuBase.ItemContainerTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemContainerTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lógica personalizada para escolher um modelo usado para exibir cada item.</summary>
+        <value>Um objeto personalizado que fornece a lógica e retorna um contêiner de itens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um <xref:System.Windows.Controls.ItemContainerTemplateSelector> escolher contêineres de itens diferentes, se os itens na coleção são do mesmo tipo e você precisa fornecer lógica personalizada para escolher o contêiner do item.  
+  
+<a name="dependencyPropertyInfo_ItemContainerTemplateSelector"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.MenuBase.ItemContainerTemplateSelectorProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemContainerTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemContainerTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.MenuBase.ItemContainerTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.MenuBase.ItemContainerTemplateSelector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsKeyboardFocusWithinChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsKeyboardFocusWithinChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsKeyboardFocusWithinChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MenuBase.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.IsKeyboardFocusWithinChanged" />.</param>
+        <summary>Responde a uma alteração de <see cref="P:System.Windows.UIElement.IsKeyboardFocusWithin" /> propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MenuBase.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.KeyDown" />.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.KeyDown" /> eventos roteados que ocorre quando o usuário pressiona uma tecla.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o usuário pressionar ESC, ALT + ALT ou ALT + F10, essa implementação marca o <xref:System.Windows.UIElement.KeyDown> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.MenuBase.OnKeyDown(System.Windows.Input.KeyEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.MenuBase.OnKeyDown(System.Windows.Input.KeyEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MenuBase.OnMouseLeave(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.MouseLeave" />.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.MouseLeave" /> eventos roteados que ocorre quando o mouse sai do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta implementação não altera o estado manipulado (o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade) da <xref:System.Windows.UIElement.MouseLeave> dados de evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Primitives.MenuBase.OnMouseLeave(System.Windows.Input.MouseEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Primitives.MenuBase.OnMouseLeave(System.Windows.Input.MouseEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesItemContainerTemplate">
+      <MemberSignature Language="C#" Value="public bool UsesItemContainerTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesItemContainerTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.MenuBase.UsesItemContainerTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o menu seleciona os contêineres de itens diferentes, dependendo do tipo do item na coleção subjacente ou alguns outros heurística.</summary>
+        <value>
+          <see langword="true" />o menu seleciona itens diferentes contêineres; Caso contrário, <see langword="false" />.  
+  
+ O padrão registrado é <see langword="false" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é útil se você quiser criar um menu por associação a uma coleção.  O contêiner do item é o elemento de interface do usuário que exibe o objeto em uma coleção. Se você deseja associar a uma coleção para criar um menu que contém <xref:System.Windows.Controls.MenuItem> objetos e <xref:System.Windows.Controls.Separator> objetos, defina o <xref:System.Windows.Controls.Primitives.MenuBase.UsesItemContainerTemplate%2A> propriedade como true e criar um <xref:System.Windows.Controls.ItemContainerTemplate> para cada tipo de objeto em sua coleção.  Cada <xref:System.Windows.Controls.ItemContainerTemplate> deve conter um <xref:System.Windows.Controls.MenuItem> ou <xref:System.Windows.Controls.Separator>.  
+  
+<a name="dependencyPropertyInfo_UsesItemContainerTemplate"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.MenuBase.UsesItemContainerTemplateProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesItemContainerTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UsesItemContainerTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UsesItemContainerTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.MenuBase.UsesItemContainerTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.MenuBase.UsesItemContainerTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

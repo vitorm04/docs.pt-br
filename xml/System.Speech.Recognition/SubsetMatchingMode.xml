@@ -1,0 +1,191 @@
+<Type Name="SubsetMatchingMode" FullName="System.Speech.Recognition.SubsetMatchingMode">
+  <TypeSignature Language="C#" Value="public enum SubsetMatchingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SubsetMatchingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SubsetMatchingMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera valores de correspondência de modo de subconjunto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em Speech, você pode construir uma gramática que reconhece com êxito uma frase, mesmo que apenas um subconjunto de seu conteúdo for encontrado na entrada de áudio.  
+  
+ Por padrão, um mecanismo de reconhecimento requer uma correspondência exata em relação a uma expressão inteira. O mecanismo de reconhecimento também pode corresponder a frases parciais acordo com os parâmetros definidos por um <xref:System.Speech.Recognition.SubsetMatchingMode> membro usado como um argumento para o <xref:System.Speech.Recognition.GrammarBuilder.%23ctor%2A> ou <xref:System.Speech.Recognition.SrgsGrammar.SrgsSubset.%23ctor%2A> construtores, ou o <xref:System.Speech.Recognition.GrammarBuilder.Append%2A> método.  
+  
+ A figura a seguir ilustra como cada do <xref:System.Speech.Recognition.SubsetMatchingMode> membros afeta o reconhecimento quando usada em uma gramática que contém a frase "um carro caminhão um barco plano".  
+  
+ **OrderedSubset**  
+  
+ Esse modo indica que um subconjunto da frase será usado para reconhecer com êxito a frase inteira se estas condições são verdadeiras:  
+  
+-   Uma ou mais palavras na frase são reconhecidas na entrada de áudio.  
+  
+-   A ordem relativa dessas palavras reconhecido é o mesmo que a frase.  
+  
+-   Palavras correspondentes podem conter somente os artigos e preposições.  
+  
+ Adicionando a frase "um carro caminhão um barco plano" a uma gramática usando OrderedSubset modo produz o seguinte resultado no reconhecimento:  
+  
+|**Frase de entrada**|**Result**|  
+|----------------------|----------------|  
+|"um carro caminhão um barco plano"|Toda a frase "um carro caminhão um barco plano" é reconhecida.|  
+|"um carro caminhão um barco"|Toda a frase "um carro caminhão um barco plano" é reconhecida.|  
+|"um carro que plano"|Toda a frase "um carro caminhão um barco plano" é reconhecida. Um subconjunto reconhecido não deve ser uma sequência de cadeia de caracteres original.|  
+|"um carro barco um caminhão plano"|Reconhecimento não for bem-sucedida. As palavras que estão fora de ordem.|  
+|"um a"|Toda a frase "um carro caminhão um barco plano" é reconhecida. Artigos e preposições são usados para o reconhecimento.|  
+  
+ **OrderedSubsetContentRequired**  
+  
+ Esse modo indica que um subconjunto da frase será usado para reconhecer com êxito a frase inteira se estas condições são verdadeiras:  
+  
+-   Uma ou mais palavras na frase são reconhecidas na entrada de áudio, e  
+  
+-   A ordem relativa dessas palavras reconhecido é o mesmo que a frase.  
+  
+-   Palavras correspondentes não podem conter somente os artigos e preposições.  
+  
+ Adicionando a frase "um carro caminhão um barco plano" a uma gramática usando OrderedSubsetContentRequired modo produz o seguinte resultado no reconhecimento:  
+  
+|**Frase de entrada**|**Result**|  
+|----------------------|----------------|  
+|"um carro caminhão um barco plano"|Toda a frase "um carro caminhão um barco plano" é reconhecida.|  
+|"um carro caminhão um barco"|Toda a frase "um carro caminhão um barco plano" é reconhecida.|  
+|"um carro que plano"|Toda a frase "um carro caminhão um barco plano" é reconhecida. Um subconjunto reconhecido não deve ser uma sequência de cadeia de caracteres original.|  
+|"um carro barco um caminhão plano"|Reconhecimento não for bem-sucedida. As palavras que estão fora de ordem.|  
+|"um a"|Reconhecimento não for bem-sucedida.  Entrada de fala deve conter palavras diferentes de artigos e preposições.|  
+  
+ **Subsequência:**  
+  
+ Esse modo indica que um subconjunto da frase será usado para reconhecer com êxito a frase inteira se estas condições são verdadeiras:  
+  
+-   Uma ou mais palavras na frase são reconhecidas na entrada de áudio como uma sequência de frase, e  
+  
+-   A ordem relativa dessas palavras reconhecido é o mesmo que a frase.  
+  
+-   Palavras correspondentes podem conter somente os artigos e preposições.  
+  
+ Adicionando a frase "um carro caminhão um barco plano" a uma gramática usando o modo de subsequência produz o seguinte resultado no reconhecimento:  
+  
+|**Frase de entrada**|**Result**|  
+|----------------------|----------------|  
+|"um carro caminhão um barco plano"|Toda a frase "um carro caminhão um barco plano" é reconhecida.|  
+|"um carro caminhão um barco"|Toda a frase "um carro caminhão um barco plano" é reconhecida.|  
+|"um carro que plano"|Reconhecimento não for bem-sucedida. Um subconjunto reconhecido deve ser uma sequência de cadeia de caracteres original.|  
+|"um carro barco um caminhão plano"|Reconhecimento não for bem-sucedida. As palavras que estão fora de ordem.|  
+|"um a"|Toda a frase "um carro caminhão um barco plano" é reconhecida. Artigos e preposições são usados para o reconhecimento.|  
+  
+ **SubsequenceContentRequired**  
+  
+ Esse modo indica que um subconjunto da frase será usado para reconhecer com êxito a frase inteira se estas condições são verdadeiras:  
+  
+-   Uma ou mais palavras na cadeia de caracteres de correspondência são reconhecidas na entrada de áudio como uma sequência da frase.  
+  
+-   Palavras correspondentes não podem conter somente os artigos e preposições.  
+  
+ Adicionando a frase "um carro caminhão um barco plano" a uma gramática usando SubsequenceContentRequired modo produz o seguinte resultado no reconhecimento:  
+  
+|**Frase de entrada**|**Result**|  
+|----------------------|----------------|  
+|"um carro caminhão um barco plano"|Toda a frase "um carro caminhão um barco plano" é reconhecida.|  
+|"um carro caminhão um barco"|Toda a frase "um carro caminhão um barco plano" é reconhecida.|  
+|"um carro que plano"|Reconhecimento não for bem-sucedida. Um subconjunto reconhecido deve ser uma sequência de cadeia de caracteres original.|  
+|"um carro barco um caminhão plano"|Reconhecimento não for bem-sucedida. As palavras que estão fora de ordem.|  
+|"um a"|Reconhecimento não for bem-sucedida. Entrada de fala deve conter palavras diferentes de artigos e preposições.|  
+  
+   
+  
+## Examples  
+ Abaixo está uma rotina de teste que gera quatro <xref:System.Speech.Recognition.Grammar> objetos, usando a mesma frase, para cada uma da `SubsetMatchingModes`. Essas <xref:System.Speech.Recognition.Grammar> objetos, em seguida, podem ser testados.  
+  
+```  
+private void CreateSubsetMatchTest()   
+{  
+  foreach ( System.Speech.Recognition.SubsetMatchingMode mode   
+              in Enum.GetValues(typeof(System.Speech.Recognition.SubsetMatchingMode)))  
+  {  
+    GrammarBuilder gb = new GrammarBuilder("a car the truck a boat that plane",mode);  
+    Grammar grammar = new Grammar(gb);  
+    grammar.Name = mode.ToString();  
+    grammar.Enabled=true;  
+    _recognizer.LoadGrammar(grammar);  
+  }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OrderedSubset">
+      <MemberSignature Language="C#" Value="OrderedSubset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SubsetMatchingMode OrderedSubset = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SubsetMatchingMode.OrderedSubset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SubsetMatchingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que esse subconjunto correspondência modo é **OrderedSubset**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderedSubsetContentRequired">
+      <MemberSignature Language="C#" Value="OrderedSubsetContentRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SubsetMatchingMode OrderedSubsetContentRequired = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SubsetMatchingMode.OrderedSubsetContentRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SubsetMatchingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que esse subconjunto correspondência modo é **OrderedSubsetContentRequired**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Subsequence">
+      <MemberSignature Language="C#" Value="Subsequence" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SubsetMatchingMode Subsequence = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SubsetMatchingMode.Subsequence" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SubsetMatchingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que esse subconjunto correspondência modo é **subsequência**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SubsequenceContentRequired">
+      <MemberSignature Language="C#" Value="SubsequenceContentRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SubsetMatchingMode SubsequenceContentRequired = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SubsetMatchingMode.SubsequenceContentRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SubsetMatchingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que esse subconjunto correspondência modo é **SubsequenceContentRequired**.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

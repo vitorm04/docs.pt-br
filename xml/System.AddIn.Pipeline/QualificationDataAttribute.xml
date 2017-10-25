@@ -1,0 +1,110 @@
+<Type Name="QualificationDataAttribute" FullName="System.AddIn.Pipeline.QualificationDataAttribute">
+  <TypeSignature Language="C#" Value="public sealed class QualificationDataAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit QualificationDataAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.QualificationDataAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados especificado pelo desenvolvedor de um segmento de pipeline.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse atributo para atribuir dados na forma de pares nome-valor de cadeia de caracteres, para qualquer finalidade para um segmento de pipeline. Por exemplo, você pode indicar que um suplemento deve ser carregado em um processo externo.  
+  
+ O <xref:System.AddIn.Hosting.AddInStore.Rebuild%2A> e <xref:System.AddIn.Hosting.AddInStore.Update%2A> métodos que mantêm o armazenamento de informações sobre segmentos de pipeline disponíveis, usam esse atributo para identificar um segmento de dados de qualificação.  
+  
+ Para acessar os dados de qualificação de um segmento de pipeline, consulte o <xref:System.AddIn.Hosting.AddInToken.QualificationData%2A> propriedade. Para enumerar os dados para todos os segmentos de pipeline, consulte o <xref:System.AddIn.Hosting.QualificationDataItem> classe.  
+  
+ Qualificação de dados é somente leitura pelo host e não é consumida pelo sistema suplemento de qualquer outra forma.  
+  
+ Você pode aplicar a qualificação de dados para um segmento de pipeline, colocando uma <xref:System.AddIn.Pipeline.QualificationDataAttribute> atributo junto ao atributo de segmento. Para obter mais informações sobre segmentos de pipeline e seus atributos, consulte [desenvolvimento de Pipeline](~/docs/framework/add-ins/pipeline-development.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir se aplica a qualificação de dados a um suplemento.  
+  
+ [!code-csharp[AddInP2AddInCalcV2#2](~/samples/snippets/csharp/VS_Snippets_CLR/AddInP2AddInCalcV2/cs/addincalcv2.cs#2)]
+ [!code-vb[AddInP2AddInCalcV2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInP2AddInCalcV2/vb/AddInCalcV2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QualificationDataAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.QualificationDataAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Qualquer identificador que serve como uma chave em um par chave/valor.</param>
+        <param name="value">Qualquer valor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.AddIn.Pipeline.QualificationDataAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `name` e `value` pode ser qualquer texto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Pipeline.QualificationDataAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome, que serve como uma chave de um par chave/valor.</summary>
+        <value>O nome atribuído para o atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Pipeline.QualificationDataAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de um par chave/valor.</summary>
+        <value>O valor atribuído para o atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

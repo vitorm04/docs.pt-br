@@ -1,0 +1,288 @@
+<Type Name="ExpressionEditor" FullName="System.Web.UI.Design.ExpressionEditor">
+  <TypeSignature Language="C#" Value="public abstract class ExpressionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExpressionEditor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ExpressionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um conjunto de propriedades e métodos para avaliar uma expressão que é associada uma propriedade de controle em tempo de design e fornecer uma folha de editor de expressão para o host de design visual para uso na caixa de diálogo do editor de expressão. Esta classe é abstrata.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hospedar um designer visual, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], usa o <xref:System.Web.UI.Design.ExpressionEditor> de classe para apresentar a expressão personalizada folhas de editor para o usuário e, em seguida, avaliar a expressão selecionada para a renderização de tempo de design.  
+  
+ Quando você procura a <xref:System.Web.UI.Design.HtmlControlDesigner.Expressions%2A> propriedade para um controle na grade de propriedades de tempo de design, o designer visual exibe uma caixa de diálogo para definir as expressões para uma propriedade de controle. Você pode selecionar o tipo de expressão com base em uma lista de prefixos de expressão. Quando você seleciona um prefixo de expressão da lista, o designer visual usa associado <xref:System.Web.UI.Design.ExpressionEditor> e <xref:System.Web.UI.Design.ExpressionEditorSheet> objetos para definir, avaliar e converter a cadeia de caracteres de expressão com base na sintaxe para esse tipo de expressão. O designer visual define a expressão para a propriedade do controle associado e, em seguida, usa o resultado da expressão avaliada para atribuir valores de propriedade são renderizados na superfície de design de controle.  
+  
+ Estático <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> métodos de obtém o editor de expressão que está associado com um prefixo de expressão específica ou o construtor de expressões. O <xref:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix%2A> propriedade para um <xref:System.Web.UI.Design.ExpressionEditor> object retorna o prefixo de expressão configurado. O <xref:System.Web.UI.Design.ExpressionEditor.EvaluateExpression%2A> método avalia uma cadeia de caracteres de expressão de entrada. O <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> método retorna o <xref:System.Web.UI.Design.ExpressionEditorSheet> implementação que é usada para solicitar para as propriedades de expressão personalizada na caixa de diálogo de expressões.  
+  
+ Normalmente, para dar suporte a um novo tipo de expressão em tempo de design, você definir um prefixo de expressão exclusivo e fornecer personalizado <xref:System.Web.Compilation.ExpressionBuilder> e <xref:System.Web.UI.Design.ExpressionEditor> implementações. Opcionalmente, você pode fornecer um personalizado <xref:System.Web.UI.Design.ExpressionEditorSheet> implementação que define as propriedades que são usadas para formar a expressão na caixa de diálogo de expressões.  
+  
+ O prefixo de expressão identifica o tipo de expressão personalizada e associa uma expressão com o construtor de expressões e editor de expressão. Quando expressões personalizadas são analisadas em uma página, o prefixo de expressão é usado para criar instâncias de associado <xref:System.Web.Compilation.ExpressionBuilder> e <xref:System.Web.UI.Design.ExpressionEditor> classes. Para associar um prefixo de expressão com um editor de expressão e o construtor de expressões, aplique o <xref:System.Web.Compilation.ExpressionEditorAttribute> e <xref:System.Web.Compilation.ExpressionPrefixAttribute> atributos personalizados <xref:System.Web.Compilation.ExpressionBuilder> classe e configurar o prefixo de expressão para um construtor de expressões a `expressionBuilders` elemento no arquivo de configuração da Web. O prefixo não é necessário, mas altamente recomendado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como derivar o <xref:System.Web.UI.Design.ExpressionEditor> classe para definir um editor de expressão personalizada.  
+  
+ [!code-csharp[CustomExpressionEditor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/customexpressioneditor/cs/CustomAppSettingsExpression.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>As etapas a seguir são necessários na derivar um personalizado <see cref="T:System.Web.UI.Design.ExpressionEditor" /> classe:  
+  
+-   Substituir o <see cref="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" /> método para avaliar o tipo de expressão personalizado em tempo de design.  
+  
+-   Opcionalmente, substituir o <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> método para retornar uma classe personalizada que define as propriedades que são combinadas para formar a expressão personalizada.  
+  
+-   Aplicar o <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" /> atributo no <see cref="T:System.Web.Compilation.ExpressionBuilder" /> declaração para associar o construtor de expressões personalizadas com a classe do editor de expressão derivada de classe.  
+  
+ Por exemplo, o <see cref="T:System.Web.UI.Design.ResourceExpressionEditor" /> classe deriva de <see cref="T:System.Web.UI.Design.ExpressionEditor" /> classe e fornece uma implementação para avaliar e associar uma referência de cadeia de caracteres de recurso uma propriedade de controle em tempo de design. O <see cref="T:System.Web.Compilation.ResourceExpressionBuilder" /> classe está associada com o prefixo de expressão <see langword="Resources" /> e <see cref="T:System.Web.UI.Design.ResourceExpressionEditor" /> implementação. O <see cref="M:System.Web.UI.Design.ResourceExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> método retorna um <see cref="T:System.Web.UI.Design.ResourceExpressionEditorSheet" />, que define as propriedades individuais que formam uma expressão de referência de recurso.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExpressionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.ExpressionEditor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.Design.ExpressionEditor> classe é abstrata, não é possível criar uma instância do <xref:System.Web.UI.Design.ExpressionEditor> classe diretamente usando o <xref:System.Web.UI.Design.ExpressionEditor.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao derivar do <see cref="T:System.Web.UI.Design.ExpressionEditor" /> classe, substitua o <see cref="M:System.Web.UI.Design.ExpressionEditor.#ctor" /> construtor para implementar as ações de inicialização personalizada para sua implementação do editor de expressão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public abstract object EvaluateExpression (string expression, object parseTimeData, Type propertyType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object EvaluateExpression(string expression, object parseTimeData, class System.Type propertyType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="parseTimeData" Type="System.Object" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Uma cadeia de caracteres de expressão para avaliar. A expressão não incluir o prefixo de expressão.</param>
+        <param name="parseTimeData">Um objeto que contém informações de análise adicionais para avaliar <c>expressão</c>. Isso geralmente é fornecido pelo construtor de expressão.</param>
+        <param name="propertyType">O tipo da propriedade de controle para o qual <c>expressão</c> está associado.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer, usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Avalia uma cadeia de caracteres de expressão e fornece o valor de tempo de design para uma propriedade de controle.</summary>
+        <returns>O objeto referenciado pela cadeia de caracteres de expressão avaliada, se a avaliação da expressão for bem-sucedida; Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O host de designer visual usa o <xref:System.Web.UI.Design.ExpressionEditor.EvaluateExpression%2A> método para avaliar uma expressão e forneça o valor de tempo de design para uma propriedade do controle associado.  
+  
+ O designer visual usa o <xref:System.Web.Compilation.ExpressionBuilder.ParseExpression%2A?displayProperty=nameWithType> método para analisar a cadeia de caracteres de expressão em tempo de design e, em seguida, chama o <xref:System.Web.UI.Design.ExpressionEditor.EvaluateExpression%2A> método com os dados da expressão analisada. O designer visual usa o resultado da expressão avaliada para atribuir valores de propriedade são renderizados na superfície de design de controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Derivando de classes de <see cref="T:System.Web.UI.Design.ExpressionEditor" /> classe deve substituir o <see cref="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" /> método para avaliar o tipo de expressão personalizado em tempo de design.  
+  
+ No mínimo, um <see cref="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" /> implementação deve usar as seguintes etapas:  
+  
+1.  Avalie a cadeia de caracteres de expressão e determinar o objeto que é referenciado pela expressão.  
+  
+2.  Retornar <see langword="null" />, se a cadeia de caracteres de expressão não pode ser avaliada.  
+  
+3.  Use o <see cref="M:System.Type.IsAssignableFrom(System.Type)" /> método <paramref name="propertyType" /> para determinar se o objeto referenciado pode ser atribuído diretamente para o tipo de propriedade de controle e, em seguida, dependendo do resultado, complete um das seguintes ações:  
+  
+    -   Se o objeto referenciado pode ser atribuído diretamente para a propriedade de controle, retorne o objeto referenciado para a expressão.  
+  
+    -   Se o objeto referenciado é um tipo simples, como uma cadeia de caracteres, retorna o objeto referenciado.  
+  
+    -   Caso contrário, determine se o objeto referenciado pode ser atribuído a ou convertido para o tipo de propriedade.  
+  
+4.  Use o <see cref="Overload:System.ComponentModel.TypeConverter.CanConvertFrom" /> método o <see cref="T:System.ComponentModel.TypeConverter" /> de objeto para <paramref name="propertyType" /> para determinar se o objeto referenciado pode ser convertido para o tipo de propriedade de controle e, em seguida, dependendo do resultado, complete um das seguintes ações:  
+  
+    -   Se o objeto pode ser convertido para o tipo de propriedade de controle, retornar o objeto convertido usando o <see cref="Overload:System.ComponentModel.TypeConverter.ConvertFrom" /> método.  
+  
+    -   Se o objeto referenciado não pode ser atribuído ou convertido em <paramref name="propertyType" />, retornar o objeto referenciado.  
+  
+ Opcionalmente, o <see cref="M:System.Web.UI.Design.ExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" /> implementação pode usar o <paramref name="parseTimeData" /> que é fornecido pelo objeto de <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" /> implementação para otimizar ou ajudar na avaliação da cadeia de caracteres de expressão de entrada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionPrefix">
+      <MemberSignature Language="C#" Value="public string ExpressionPrefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExpressionPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o prefixo de expressão que identifica as cadeias de caracteres de expressão que são suportadas pela implementação do editor de expressão.</summary>
+        <value>Uma cadeia de caracteres que representa o prefixo para expressões com suporte pela classe derivam do <see cref="T:System.Web.UI.Design.ExpressionEditor" />; caso contrário, uma cadeia de caracteres vazia (""), se o editor de expressão não tem um prefixo de expressão associada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O prefixo de expressão identifica o tipo de expressão personalizada e associa uma expressão com o construtor de expressões e editor de expressão. Quando expressões personalizadas são analisadas em uma página, o prefixo de expressão é usado para criar instâncias de associado <xref:System.Web.Compilation.ExpressionBuilder> e <xref:System.Web.UI.Design.ExpressionEditor> classes. Para associar um prefixo de expressão com um editor de expressão e o construtor de expressões, aplique o <xref:System.Web.Compilation.ExpressionEditorAttribute> e <xref:System.Web.Compilation.ExpressionPrefixAttribute> atributos personalizados <xref:System.Web.Compilation.ExpressionBuilder> classe e configurar o prefixo de expressão para um construtor de expressões a `expressionBuilders` elemento no arquivo de configuração da Web.  
+  
+ Normalmente, as classes derivadas não substituir o <xref:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix%2A> propriedade. A base de <xref:System.Web.UI.Design.ExpressionEditor> classe define o <xref:System.Web.UI.Design.ExpressionEditor.ExpressionPrefix%2A> valor com base no <xref:System.Web.Compilation.ExpressionPrefixAttribute> atributo associado <xref:System.Web.Compilation.ExpressionBuilder> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditor">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.ExpressionEditor GetExpressionEditor (string expressionPrefix, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.ExpressionEditor GetExpressionEditor(string expressionPrefix, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expressionPrefix" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expressionPrefix">O prefixo de expressão usado para localizar a expressão associada editor.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer, usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Retorna um <see cref="T:System.Web.UI.Design.ExpressionEditor" /> implementação que está associada com o prefixo da expressão especificada.</summary>
+        <returns>Um <see cref="T:System.Web.UI.Design.ExpressionEditor" /> implementação associada <paramref name="expressionPrefix" />; caso contrário, <see langword="null" />, se <paramref name="expressionPrefix" /> não está definido ou não está associado com um <see cref="T:System.Web.UI.Design.ExpressionEditor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use estático <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> sobrecargas do método para localizar o <xref:System.Web.UI.Design.ExpressionEditor> objeto que está associado com um prefixo de expressão específica ou um tipo de construtor de expressão.  
+  
+ Para cada tipo de expressão personalizada, um prefixo de expressão identifica o construtor de expressão associada e o editor de expressão. Quando expressões personalizadas são analisadas em uma página, o prefixo de expressão é usado para criar instâncias de associado <xref:System.Web.Compilation.ExpressionBuilder> e <xref:System.Web.UI.Design.ExpressionEditor> classes.  
+  
+ Para associar um prefixo de expressão com um editor de expressão e o construtor de expressões, aplique o <xref:System.Web.Compilation.ExpressionEditorAttribute> e <xref:System.Web.Compilation.ExpressionPrefixAttribute> atributos personalizados <xref:System.Web.Compilation.ExpressionBuilder> classe e configurar o prefixo de expressão para um construtor de expressões a `expressionBuilders` elemento no arquivo de configuração da Web.  
+  
+ Para localizar a expressão associada editor para um prefixo de expressão, o <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> método enumera disponíveis <xref:System.Web.Compilation.ExpressionBuilder> implementações de prefixo correspondente. O <xref:System.Web.Compilation.ExpressionBuilder> implementações podem ser configuradas no `expressionBuilders` seção do arquivo de configuração da Web. Se um <xref:System.Web.Compilation.ExpressionBuilder> implementação define o prefixo de expressão, o <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> método retorna o tipo especificado no <xref:System.Web.Compilation.ExpressionEditorAttribute> atributo do <xref:System.Web.Compilation.ExpressionBuilder> metadados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceProvider" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditor">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.Design.ExpressionEditor GetExpressionEditor (Type expressionBuilderType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.Design.ExpressionEditor GetExpressionEditor(class System.Type expressionBuilderType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor(System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expressionBuilderType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expressionBuilderType">O tipo da classe derivada expressão construtor, usado para localizar o editor de expressão associado.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer, usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Retorna um <see cref="T:System.Web.UI.Design.ExpressionEditor" /> implementação que está associada com o tipo de construtor de expressão especificada.</summary>
+        <returns>Um <see cref="T:System.Web.UI.Design.ExpressionEditor" /> implementação associada <paramref name="expressionBuilderType" />; caso contrário, <see langword="null" />, se <paramref name="expressionBuilderType" /> não pode ser localizado ou não tem nenhum associado <see cref="T:System.Web.UI.Design.ExpressionEditor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use estático <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> sobrecargas para localizar o <xref:System.Web.UI.Design.ExpressionEditor> objeto que está associado com um prefixo de expressão específica ou um tipo de construtor de expressão.  
+  
+ Para cada tipo de expressão personalizada, um prefixo de expressão identifica o construtor de expressão associada e o editor de expressão. Quando expressões personalizadas são analisadas em uma página, o prefixo de expressão é usado para criar instâncias de associado <xref:System.Web.Compilation.ExpressionBuilder> e <xref:System.Web.UI.Design.ExpressionEditor> classes.  
+  
+ Para associar um prefixo de expressão com um editor de expressão e o construtor de expressões, aplique o <xref:System.Web.Compilation.ExpressionEditorAttribute> e <xref:System.Web.Compilation.ExpressionPrefixAttribute> atributos personalizados <xref:System.Web.Compilation.ExpressionBuilder> classe e configurar o prefixo de expressão para um construtor de expressões a `expressionBuilders` elemento no arquivo de configuração da Web.  
+  
+ O <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> método enumera disponíveis <xref:System.Web.Compilation.ExpressionBuilder> implementações para localizar `expressionBuilderType`. O <xref:System.Web.Compilation.ExpressionBuilder> implementações podem ser configuradas no `expressionBuilders` seção do arquivo de configuração da Web. Se `expressionBuilderType` foi encontrado no conjunto de disponíveis <xref:System.Web.Compilation.ExpressionBuilder> implementações, o <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditor%2A> método retorna o tipo especificado no <xref:System.Web.Compilation.ExpressionEditorAttribute> atributo do <xref:System.Web.Compilation.ExpressionBuilder> metadados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="expressionBuilderType" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="serviceProvider" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditorSheet">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditorSheet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">A cadeia de caracteres de expressão definida para uma propriedade de controle, usada para inicializar a folha de editor de expressão.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer, usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Retorna uma folha de editor de expressão que está associada com o editor de expressão atual.</summary>
+        <returns>Um <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> que define as propriedades de expressão personalizada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> método retorna um <xref:System.Web.UI.Design.ExpressionEditorSheet> implementação que define as cadeias de caracteres que são combinadas para formar uma expressão personalizada. O designer visual usa uma folha de editor de expressão para solicitar um ou mais cadeias de caracteres que combinam, em uma expressão personalizada. O método de classe base retorna uma folha de editor de expressão padrão, que usa uma única cadeia de caracteres de entrada para formar a expressão. A folha de editor de expressão define a grade de propriedades para a expressão. Portanto, as propriedades que expõe o editor de expressão tornam-se propriedades que podem ser definidas para a expressão na caixa de diálogo.  
+  
+ Derivando de classes de <xref:System.Web.UI.Design.ExpressionEditor> classe opcionalmente pode substituir o <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> método para fornecer uma folha de editor de expressão personalizada. Uma folha de editor de expressão personalizada pode permitir a entrada de tempo de design para várias propriedades, que são combinados para formar a cadeia de caracteres de expressão.  
+  
+ Por exemplo, o <xref:System.Web.UI.Design.ResourceExpressionEditor> classe deriva de <xref:System.Web.UI.Design.ExpressionEditor> classe e fornece uma implementação para avaliar e associar uma referência de cadeia de caracteres de recurso uma propriedade de controle em tempo de design. O <xref:System.Web.Compilation.ResourceExpressionBuilder> classe está associada com o prefixo de expressão `Resources` e <xref:System.Web.UI.Design.ResourceExpressionEditor> implementação. O <xref:System.Web.UI.Design.ResourceExpressionEditor.GetExpressionEditorSheet%2A?displayProperty=nameWithType> método retorna um <xref:System.Web.UI.Design.ResourceExpressionEditorSheet>, que define as propriedades individuais que formam uma expressão de referência de recurso.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Normalmente, para fornecer um novo tipo de expressão em tempo de design, você definir um prefixo de expressão exclusivo e fornecer personalizado <see cref="T:System.Web.Compilation.ExpressionBuilder" /> e <see cref="T:System.Web.UI.Design.ExpressionEditor" /> implementações. Opcionalmente, você pode fornecer um personalizado <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> implementação que define as propriedades que são usadas para formar a expressão. Mesmo que o arquivo de configuração define o prefixo, você também deve aplicar um <see cref="T:System.Web.Compilation.ExpressionPrefixAttribute" /> objeto e um <see cref="T:System.Web.Compilation.ExpressionEditorAttribute" /> objeto.  
+  
+ Substituir o <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> método para retornar uma folha de editor de expressão que define a entrada de tempo de design para várias propriedades em uma expressão personalizada. Quando você seleciona uma propriedade de controle e o tipo de editor de expressão, o visual designer chama o <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> método e, em seguida, fornece a expressão atual da cadeia de caracteres que é definido para a propriedade de controle. Use <paramref name="expression" /> para definir os valores iniciais para as propriedades de expressão. Use <paramref name="serviceProvider" /> para inicializar um construtor de folha da expressão personalizada e acessar serviços fornecidos pelo host do designer. Por exemplo, chamar o <see cref="M:System.IServiceProvider.GetService(System.Type)" /> método com o <see cref="T:System.Web.UI.Design.IWebApplication" /> tipo para acessar itens do projeto, documentos ou detalhes de arquivo de configuração que são fornecidos por meio do designer visual.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

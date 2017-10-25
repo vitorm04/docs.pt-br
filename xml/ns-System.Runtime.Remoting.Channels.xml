@@ -1,0 +1,17 @@
+<Namespace Name="System.Runtime.Remoting.Channels">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Channels" /> namespace contém classes que oferecem suporte e lidar com canais e Coletores de canal, que são usados como o meio de transporte quando um cliente chama um método em um objeto remoto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Canais são objetos que as mensagens de transporte entre os aplicativos em limites de comunicação remota entre domínios de aplicativo, processos ou computadores. Um canal pode escutar em um ponto de extremidade de mensagens de entrada, enviar mensagens de saída para outro ponto de extremidade, ou ambos. Isso permite que você conecte uma ampla variedade de protocolos, mesmo que o common language runtime não está na outra extremidade do canal.  
+  
+ Canais de enviar cada objeto ao longo de uma cadeia de objetos de coletor de canal antes de enviar ou depois de receber uma mensagem. Esta cadeia de coletor contém coletores necessárias para a funcionalidade básica de canal, como o transporte ou a pilha de Coletores de construtor, mas você pode personalizar a cadeia de coletor de canal para realizar tarefas especiais com uma mensagem ou um fluxo. Cada coletor em cada cadeia recebe o objeto, executa uma operação específica e passa para o coletor Avançar na cadeia. Não há nenhuma regra que o objeto exato recebido por um coletor de mensagem deve ser passado para o coletor de Avançar, embora isso geralmente será o caso.  
+  
+ Para obter mais informações, consulte [canais](http://msdn.microsoft.com/en-us/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18) e [coletores e cadeias de coletor](http://msdn.microsoft.com/en-us/516aaab7-5b3d-4c72-83dd-d435c01af8f6).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

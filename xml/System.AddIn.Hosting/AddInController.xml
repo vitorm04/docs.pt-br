@@ -1,0 +1,208 @@
+<Type Name="AddInController" FullName="System.AddIn.Hosting.AddInController">
+  <TypeSignature Language="C#" Value="public sealed class AddInController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AddInController extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.AddInController" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso a um suplemento para uma variedade de tarefas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta classe para executar as seguintes tarefas:  
+  
+-   Use o <xref:System.AddIn.Hosting.AddInController.AddInEnvironment%2A> propriedade para obter um <xref:System.AddIn.Hosting.AddInEnvironment> objeto para um suplemento. Em seguida, use esse objeto para ativar outros suplementos no mesmo domínio de aplicativo e processo como o suplemento original.  
+  
+-   Use o <xref:System.AddIn.Hosting.AddInController.AppDomain%2A> propriedade para obter um <xref:System.AppDomain> objeto para um suplemento. Em seguida, use esse objeto para ativar outros suplementos no mesmo domínio do aplicativo como o suplemento original. Observe que devido a limitações na comunicação entre processos remota, esse cenário não funcionará com suplementos que são ativados em um processo separado.  
+  
+-   Use o <xref:System.AddIn.Hosting.AddInController.Token%2A> propriedade para obter um <xref:System.AddIn.Hosting.AddInToken> objeto que representa um suplemento.  
+  
+-   Desligar um suplemento com o <xref:System.AddIn.Hosting.AddInController.Shutdown%2A> método.  
+  
+ Para obter o controlador para um suplemento, chame o <xref:System.AddIn.Hosting.AddInController.GetAddInController%2A> método e passar uma instância do suplemento como seu parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ativa um suplemento no mesmo ambiente como um suplemento ativado anteriormente usando um <xref:System.AddIn.Hosting.AddInController> objeto.  
+  
+ [!code-csharp[AddInP3Host#8](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#8)]
+ [!code-vb[AddInP3Host#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddInEnvironment">
+      <MemberSignature Language="C#" Value="public System.AddIn.Hosting.AddInEnvironment AddInEnvironment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AddIn.Hosting.AddInEnvironment AddInEnvironment" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInController.AddInEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInEnvironment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.AddIn.Hosting.AddInEnvironment" /> objeto.</summary>
+        <value>Um objeto que pode ser usado para ativar outros suplementos no mesmo ambiente, como o suplemento original.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para obter o <xref:System.AddIn.Hosting.AddInEnvironment> objeto para um suplemento. Em seguida, use esse objeto para ativar outros suplementos no mesmo domínio de aplicativo e processo como o suplemento original.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ativa um suplemento segundo no mesmo ambiente, como o primeiro suplemento.  
+  
+ [!code-csharp[AddInP3Host#8](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#8)]
+ [!code-vb[AddInP3Host#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomain">
+      <MemberSignature Language="C#" Value="public AppDomain AppDomain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AppDomain AppDomain" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInController.AppDomain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AppDomain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o domínio de aplicativo que contém um suplemento.</summary>
+        <value>O domínio de aplicativo do suplemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para obter um suplemento <xref:System.AppDomain> objeto e para ativar outros suplementos no mesmo domínio do aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ativa um suplemento segundo no mesmo domínio do aplicativo como o primeiro suplemento.  
+  
+ [!code-csharp[AddInP3Host#9](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#9)]
+ [!code-vb[AddInP3Host#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAddInController">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Hosting.AddInController GetAddInController (object addIn);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.AddIn.Hosting.AddInController GetAddInController(object addIn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInController.GetAddInController(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInController</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addIn" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="addIn">O modo de host do suplemento.</param>
+        <summary>Obtém o controlador para um suplemento.</summary>
+        <returns>O controlador para o suplemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Hosting.AddInToken.Activate%2A> métodos retornam um objeto que representa a exibição do host do suplemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInController.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desabilita um suplemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método quebra o pipeline de comunicação entre um suplemento e seu host. Se o suplemento foi ativado em um domínio de aplicativo gerados automaticamente usando o <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInSecurityLevel%29> ou <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.Security.PermissionSet%29> métodos, o <xref:System.AddIn.Hosting.AddInController.Shutdown%2A> método também descarrega o domínio de aplicativo.  
+  
+ Se o suplemento foi carregado em seu próprio domínio de aplicativo, o <xref:System.AddIn.Hosting.AddInController.Shutdown%2A> método também descarrega o domínio de aplicativo.  
+  
+ Se o suplemento foi carregado em um domínio existente, os segmentos de pipeline e host deixará de ter todas as referências a esse suplemento. Nesse caso, o suplemento será elegível para ser recuperada pela coleta de lixo.  
+  
+ Você também pode usar essa classe para desligar um suplemento que é ativado em um processo externo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o <xref:System.AddIn.Hosting.AddInController> objeto para uma exibição de host chamado `manager` e, em seguida, desliga o suplemento.  
+  
+ [!code-csharp[AddInCollectionPipelineHost#6](~/samples/snippets/csharp/VS_Snippets_CLR/AddInCollectionPipelineHost/cs/Program.cs#6)]
+ [!code-vb[AddInCollectionPipelineHost#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInCollectionPipelineHost/vb/Program.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public System.AddIn.Hosting.AddInToken Token { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AddIn.Hosting.AddInToken Token" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInController.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o token que representa o suplemento.</summary>
+        <value>Um objeto que representa o suplemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa essa propriedade para obter um token para ativar um suplemento em um momento posterior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

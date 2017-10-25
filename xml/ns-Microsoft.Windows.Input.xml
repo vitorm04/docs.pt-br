@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Windows.Input">
+  <Docs>
+    <summary>Contém interfaces para comandos de visualização em um Ribbon Microsoft de controle WPF.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,71 @@
+<Type Name="IEditableTextControl" FullName="System.Web.UI.IEditableTextControl">
+  <TypeSignature Language="C#" Value="public interface IEditableTextControl : System.Web.UI.ITextControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEditableTextControl implements class System.Web.UI.ITextControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IEditableTextControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITextControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um controle que renderiza o texto que pode ser alterado pelo usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles, como <xref:System.Web.UI.WebControls.TextBox> e aqueles que derivam de <xref:System.Web.UI.WebControls.ListControl>, forneça uma propriedade de texto que pode ser alterada por um usuário da página. Quando a propriedade text é alterada, um evento é gerado para notificar os manipuladores que a propriedade é alterada. As classes que implementam <xref:System.Web.UI.IEditableTextControl> deve definir o <xref:System.Web.UI.IEditableTextControl.TextChanged> evento.  
+  
+ Embora o <xref:System.Web.UI.IEditableTextControl> interface contém apenas o <xref:System.Web.UI.IEditableTextControl.TextChanged> evento, ele herda o <xref:System.Web.UI.ITextControl> interface, que define um <xref:System.Web.UI.ITextControl.Text%2A> propriedade. Para implementar o <xref:System.Web.UI.IEditableTextControl> interface, um controle deve definir o <xref:System.Web.UI.ITextControl.Text%2A> propriedade e o <xref:System.Web.UI.IEditableTextControl.TextChanged> evento que ocorre quando o <xref:System.Web.UI.ITextControl.Text%2A> alterações de propriedade entre postagens para o servidor.  
+  
+ <xref:System.Web.UI.IEditableTextControl>é implementado por <xref:System.Web.UI.WebControls.TextBox> e <xref:System.Web.UI.WebControls.ListControl>. Nessas classes, o evento é gerado por meio de <xref:System.Web.UI.WebControls.ListControl.OnTextChanged%2A?displayProperty=nameWithType> ou <xref:System.Web.UI.WebControls.TextBox.OnTextChanged%2A?displayProperty=nameWithType> métodos. Uma classe que implementa o <xref:System.Web.UI.IEditableTextControl> interface pode definir um método semelhante para disparar o evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.Web.UI.IEditableTextControl.TextChanged> evento.  
+  
+ [!code-csharp[System.Web.UI.IEditableTextControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IEditableTextControl/CS/customeditablebox.ascx.cs#1)]
+ [!code-vb[System.Web.UI.IEditableTextControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IEditableTextControl/VB/customeditablebox.ascx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.IEditableTextControl.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o conteúdo do texto é alterado entre as postagens no servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IEditableTextControl.TextChanged> evento ocorre quando o <xref:System.Web.UI.ITextControl.Text%2A> alterações de propriedade entre postagens para o servidor. Uma implementação desse evento pode ser encontrada no <xref:System.Web.UI.WebControls.TextBox> ou <xref:System.Web.UI.WebControls.ListControl> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.Web.UI.IEditableTextControl.TextChanged> evento.  
+  
+ [!code-csharp[System.Web.UI.IEditableTextControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IEditableTextControl/CS/customeditablebox.ascx.cs#1)]
+ [!code-vb[System.Web.UI.IEditableTextControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IEditableTextControl/VB/customeditablebox.ascx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,146 @@
+<Type Name="FileNameEditor" FullName="System.Windows.Forms.Design.FileNameEditor">
+  <TypeSignature Language="C#" Value="public class FileNameEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileNameEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.FileNameEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface do usuário para selecionar um nome de arquivo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.FileNameEditor>Fornece uma caixa de diálogo de seleção de arquivo para seleção de nome de arquivo e editar.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.ComponentModel.EditorAttribute> para associar o <xref:System.Windows.Forms.Design.FileNameEditor> com uma propriedade.  
+  
+ [!code-cpp[EditorAttributesExample#5](~/samples/snippets/cpp/VS_Snippets_Winforms/EditorAttributesExample/CPP/class1.cpp#5)]
+ [!code-csharp[EditorAttributesExample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/EditorAttributesExample/CS/class1.cs#5)]
+ [!code-vb[EditorAttributesExample#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/EditorAttributesExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Você pode herdar desta classe para fornecer seu próprio título para a caixa de diálogo e suas próprias extensões de filtro de lista do arquivo.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileNameEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.FileNameEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.FileNameEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.FileNameEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <param name="provider">Um objeto de provedor de serviço por meio do qual edição services pode ser obtido.</param>
+        <param name="value">Uma instância do valor que está sendo editado.</param>
+        <summary>Edita o objeto especificado usando o estilo de editor fornecido pelo <see cref="M:System.Windows.Forms.Design.FileNameEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" /> método.</summary>
+        <returns>O novo valor do objeto. Se o valor do objeto não for alterada, isso deve retornar o mesmo objeto que foi transmitido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor de serviço é fornecido para que todos os serviços necessários edição podem ser obtidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.FileNameEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <summary>Obtém o estilo de edição usado pelo <see cref="M:System.Windows.Forms.Design.FileNameEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> método.</summary>
+        <returns>Uma da <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> estilo de valores que indica a edição fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.Design.FileNameEditor.EditValue%2A> método não é suportado, esse método retornará <xref:System.Drawing.Design.UITypeEditorEditStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDialog">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeDialog (System.Windows.Forms.OpenFileDialog openFileDialog);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeDialog(class System.Windows.Forms.OpenFileDialog openFileDialog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.FileNameEditor.InitializeDialog(System.Windows.Forms.OpenFileDialog)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="openFileDialog" Type="System.Windows.Forms.OpenFileDialog" />
+      </Parameters>
+      <Docs>
+        <param name="openFileDialog">O <see cref="T:System.Windows.Forms.OpenFileDialog" /> para usar para selecionar um nome de arquivo.</param>
+        <summary>Inicializa a caixa de diálogo Abrir arquivo quando ele é criado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método define a caixa de diálogo com um filtro de arquivo genérico e um título.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir esse método para personalizar a inicialização da caixa de diálogo.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

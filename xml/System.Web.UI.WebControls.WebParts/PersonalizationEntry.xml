@@ -1,0 +1,164 @@
+<Type Name="PersonalizationEntry" FullName="System.Web.UI.WebControls.WebParts.PersonalizationEntry">
+  <TypeSignature Language="C#" Value="public sealed class PersonalizationEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PersonalizationEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa principais informações de estado de personalização personalizado contidos em um <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationDictionary" /> objeto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa informações de estado personalizado contidas a <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> objeto disponibilizado pelo <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> interface. Essas informações são usadas por outras classes e interfaces na infraestrutura de personalização.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersonalizationEntry (object value, System.Web.UI.WebControls.WebParts.PersonalizationScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object value, valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationEntry.#ctor(System.Object,System.Web.UI.WebControls.WebParts.PersonalizationScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto de dados de personalização associados ao escopo de personalização no <c>escopo</c> parâmetro.</param>
+        <param name="scope">O <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> que se aplica às informações de personalização personalizado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" /> usando o valor especificado e o escopo de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que as informações de estado personalizado contidas no `value` parâmetro deve ter um escopo associado conforme especificado no `scope` parâmetro. Entradas na <xref:System.Web.UI.WebControls.WebParts.PersonalizationDictionary> devem indicar explicitamente se uma parte dos dados personalizados é considerada personalizável no <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> ou <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared> escopo.  
+  
+ Este construtor, o valor para o <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> propriedade padroniza como `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scope" />é definido como um valor que não é um membro válido da <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersonalizationEntry (object value, System.Web.UI.WebControls.WebParts.PersonalizationScope scope, bool isSensitive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object value, valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope scope, bool isSensitive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationEntry.#ctor(System.Object,System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="scope" Type="System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+        <Parameter Name="isSensitive" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto de dados de personalização associados ao escopo de personalização no <c>escopo</c> parâmetro.</param>
+        <param name="scope">O <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" /> que se aplica às informações de personalização personalizado.</param>
+        <param name="isSensitive">Um valor booliano que indica se as informações de estado personalizado são confidenciais e não devem ser exportadas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" /> classe usando os parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite que você crie um <xref:System.Web.UI.WebControls.WebParts.PersonalizationEntry> que contém dados que não devem ser serializados em formato de Web Part exportado. Se você definir o valor de `isSensitive` para `true`, o manipulador de exportação de Web Parts não irá serializar os dados para exportação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSensitive">
+      <MemberSignature Language="C#" Value="public bool IsSensitive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSensitive" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationEntry.IsSensitive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor booliano que indica se o <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationEntry" /> contém informações confidenciais.</summary>
+        <value>
+          <see langword="true" />Se a configuração confidencial para o atributo for definida; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informações de personalização do Web Parts podem conter dados confidenciais que não devem ser exportados para outros controles. Esta propriedade é usada pelo Web Parts de importação e exportação do processo. Configuração <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute.IsSensitive%2A> para `true` faz com que o manipulador de exportação de Web Parts para não serializar os dados no formato exportado de Web Part.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.PersonalizationScope Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationEntry.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o escopo de personalização associado a essa entrada de dados de personalização.</summary>
+        <value>O escopo de personalização associado a essa entrada de dados de personalização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Efeito dessa propriedade é semelhante ao especificar o escopo associado a uma propriedade pública usando o <xref:System.Web.UI.WebControls.WebParts.PersonalizableAttribute> classe. Você pode usar essa propriedade para definir o escopo de personalização das informações de personalização que compõe o <xref:System.Web.UI.WebControls.WebParts.PersonalizationEntry> instância. Todas as entradas devem ter um escopo associado a ele.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="scope" />é definido como um valor que não é um membro válido da <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationEntry.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de estado de personalização para esta entrada.</summary>
+        <value>Um objeto que representa informações de estado de personalização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que as informações de estado personalizado contidas nessa propriedade devem ter um escopo associado, especificado no <xref:System.Web.UI.WebControls.WebParts.PersonalizationEntry.Scope%2A> propriedade. Essa propriedade pode ser definida como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

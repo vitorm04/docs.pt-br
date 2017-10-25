@@ -1,0 +1,235 @@
+<Type Name="RuleAction" FullName="System.Workflow.Activities.Rules.RuleAction">
+  <TypeSignature Language="C#" Value="public abstract class RuleAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit RuleAction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe abstrata que define uma ação a ser executada se associado <see cref="P:System.Workflow.Activities.Rules.Rule.Condition" /> é avaliada como <see langword="true" />, para <see cref="P:System.Workflow.Activities.Rules.Rule.ThenActions" />, ou <see langword="false" />, para <see cref="P:System.Workflow.Activities.Rules.Rule.ElseActions" />. Essa classe deve ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Rules.RuleStatementAction>objetos (que pode ser usado como <xref:System.Workflow.Activities.Rules.Rule.ThenActions%2A> e <xref:System.Workflow.Activities.Rules.Rule.ElseActions%2A>) normalmente definir um valor de variável em uma das propriedades da atividade, chamar um método de atividade ou chamar métodos estáticos em tipos em assemblies referenciados.  
+  
+ <xref:System.Workflow.Activities.Rules.RuleAction>é o tipo base que <xref:System.Workflow.Activities.Rules.RuleStatementAction>, <xref:System.Workflow.Activities.Rules.RuleHaltAction>, e <xref:System.Workflow.Activities.Rules.RuleUpdateAction> derivam de classes. Os usos dessas classes é a seguinte:  
+  
+-   Um <xref:System.Workflow.Activities.Rules.RuleStatementAction> modifica uma propriedade ou chama um método.  
+  
+-   Um <xref:System.Workflow.Activities.Rules.RuleHaltAction> faz com que o <xref:System.Workflow.Activities.Rules.RuleSet> para interromper a execução e retorna o controle para o método de chamada.  
+  
+-   Um <xref:System.Workflow.Activities.Rules.RuleUpdateAction> explicitamente indica que uma regra está atualizando uma variável. Isso faz com que a reavaliação de quaisquer regras afetadas.  
+  
+   
+  
+## Examples  
+ O código a seguir cria uma ação que pode ser usada em conjuntos de regras. A ação é denominada `Log`e usa um único parâmetro, que deve ser avaliada como uma cadeia de caracteres. Essa ação gera a cadeia de caracteres para o Console.  
+  
+ Para usar esse código, adicione-a um projeto de biblioteca de classes e a biblioteca de referência do seu projeto de fluxo de trabalho.  
+  
+```csharp  
+using System;  
+using System.CodeDom;  
+using System.Collections.Generic;  
+using System.Text;  
+using System.Workflow.Activities.Rules;  
+using System.Workflow.ComponentModel.Compiler;  
+  
+namespace LogRuleAction  
+{  
+    public class Log : RuleAction  
+    {  
+        CodeExpression message;  
+  
+        public CodeExpression Message  
+        {  
+            get { return message; }  
+            set { message = value; }  
+        }  
+  
+        public Log()  
+        {  
+            // constructor required for deserialization  
+        }  
+  
+        public Log(CodeExpression expression)  
+        {  
+            // constructor required by parser  
+            message = expression;  
+        }  
+  
+        public override bool Validate(RuleValidation validator)  
+        {  
+            ValidationError error;  
+            if (message == null)  
+            {  
+                error = new ValidationError("Message cannot be null", 123);  
+                validator.Errors.Add(error);  
+                return false;  
+            }  
+            else  
+            {  
+                RuleExpressionInfo result = RuleExpressionWalker.Validate(validator, message, false);  
+                if ((result == null) || (result.ExpressionType != typeof(string)))  
+                {  
+                    error = new ValidationError("Message must return string result", 123);  
+                    validator.Errors.Add(error);  
+                    return false;  
+                }  
+            }  
+            return (validator.Errors.Count == 0);  
+        }  
+  
+        public override RuleAction Clone()  
+        {  
+            Log result = new Log();  
+            result.Message = RuleExpressionWalker.Clone(message);  
+            return result;  
+        }  
+  
+        public override void Execute(RuleExecution context)  
+        {  
+            RuleExpressionResult result = RuleExpressionWalker.Evaluate(context, message);  
+            if (result != null)  
+                Console.WriteLine(result.Value);  
+        }  
+  
+        public override ICollection<string> GetSideEffects(RuleValidation validation)  
+        {  
+            RuleAnalysis analysis = new RuleAnalysis(validation, true);  
+            if (message != null)  
+                RuleExpressionWalker.AnalyzeUsage(analysis, message, true, false, null);  
+            return analysis.GetSymbols();  
+        }  
+  
+        public override string ToString()  
+        {  
+            // what should be displayed by the parser  
+            StringBuilder result = new StringBuilder("Log(");  
+            RuleExpressionWalker.Decompile(result, message, null);  
+            result.Append(")");  
+            return result.ToString();  
+        }  
+    }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RuleAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleAction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public abstract System.Workflow.Activities.Rules.RuleAction Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Workflow.Activities.Rules.RuleAction Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleAction.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleAction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia profunda da atual <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
+        <returns>Um <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> que é idêntica a esta instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract void Execute (System.Workflow.Activities.Rules.RuleExecution context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(class System.Workflow.Activities.Rules.RuleExecution context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleAction.Execute(System.Workflow.Activities.Rules.RuleExecution)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Workflow.Activities.Rules.RuleExecution" />
+      </Parameters>
+      <Docs>
+        <param name="context">O tempo de execução de estado que o <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> está em execução no.</param>
+        <summary>Executa o <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> usando especificado <see cref="T:System.Workflow.Activities.Rules.RuleExecution" /> instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSideEffects">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.ICollection&lt;string&gt; GetSideEffects (System.Workflow.Activities.Rules.RuleValidation validation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.ICollection`1&lt;string&gt; GetSideEffects(class System.Workflow.Activities.Rules.RuleValidation validation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleAction.GetSideEffects(System.Workflow.Activities.Rules.RuleValidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validation" Type="System.Workflow.Activities.Rules.RuleValidation" />
+      </Parameters>
+      <Docs>
+        <param name="validation">O <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> que foi usado anteriormente em uma chamada para <see cref="M:System.Workflow.Activities.Rules.RuleAction.Validate(System.Workflow.Activities.Rules.RuleValidation)" />.</param>
+        <summary>Retorna os campos e propriedades atualizadas por um <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
+        <returns>Uma coleção de cadeias de caracteres que representa os nomes de campos e propriedades que são alteradas por um <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public abstract bool Validate (System.Workflow.Activities.Rules.RuleValidation validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Validate(class System.Workflow.Activities.Rules.RuleValidation validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleAction.Validate(System.Workflow.Activities.Rules.RuleValidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validator" Type="System.Workflow.Activities.Rules.RuleValidation" />
+      </Parameters>
+      <Docs>
+        <param name="validator">O <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> para gerenciar o processo de validação.</param>
+        <summary>Verifica se o <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> está configurado corretamente e não tem erros.</summary>
+        <returns>
+          <see langword="true" />para mostrar que o <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> validado corretamente e não tem erros; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Workflow.Activities.Rules.RuleAction> contém erros (o `Validate` método retorna `false`), em seguida, <xref:System.Workflow.Activities.Rules.RuleValidation.Errors%2A?displayProperty=nameWithType> conterá a lista de erros encontrados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

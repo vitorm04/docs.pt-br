@@ -1,0 +1,153 @@
+<Type Name="DataListCommandEventArgs" FullName="System.Web.UI.WebControls.DataListCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class DataListCommandEventArgs : System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataListCommandEventArgs extends System.Web.UI.WebControls.CommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataListCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Web.UI.WebControls.DataList.CancelCommand" />, <see cref="E:System.Web.UI.WebControls.DataList.DeleteCommand" />, <see cref="E:System.Web.UI.WebControls.DataList.EditCommand" />, <see cref="E:System.Web.UI.WebControls.DataList.ItemCommand" />, e <see cref="E:System.Web.UI.WebControls.DataList.UpdateCommand" /> eventos o <see cref="T:System.Web.UI.WebControls.DataList" /> controle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataList.CancelCommand> é gerado quando o `Cancel` botão para um item no <xref:System.Web.UI.WebControls.DataList> controle é clicado.  
+  
+ O <xref:System.Web.UI.WebControls.DataList.DeleteCommand> é gerado quando o `Delete` botão para um item no <xref:System.Web.UI.WebControls.DataList> controle é clicado.  
+  
+ O <xref:System.Web.UI.WebControls.DataList.EditCommand> é gerado quando o `Edit` botão para um item no <xref:System.Web.UI.WebControls.DataList> controle é clicado.  
+  
+ O <xref:System.Web.UI.WebControls.DataList.ItemCommand> evento é gerado quando qualquer botão de um item no <xref:System.Web.UI.WebControls.DataList> controle é clicado. Isso permite que você teste para quando um botão de comando específico é clicado e tomar as devidas providências programaticamente. Esse evento é geralmente usado para lidar com os botões de comando personalizado para o <xref:System.Web.UI.WebControls.DataList> controle.  
+  
+ O <xref:System.Web.UI.WebControls.DataList.UpdateCommand> é gerado quando o `Update` botão para um item no <xref:System.Web.UI.WebControls.DataList> controle é clicado.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.DataListCommandEventArgs>, consulte o <xref:System.Web.UI.WebControls.DataListCommandEventArgs.%23ctor%2A> construtor.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como definir manipuladores de eventos para o <xref:System.Web.UI.WebControls.DataList.EditCommand>, <xref:System.Web.UI.WebControls.DataList.UpdateCommand>, <xref:System.Web.UI.WebControls.DataList.CancelCommand> e <xref:System.Web.UI.WebControls.DataList.DeleteCommand> eventos de um <xref:System.Web.UI.WebControls.DataList> controle. Este exemplo especifica os manipuladores de eventos declarativamente, definir o manipulador de eventos para cada propriedade do comando do <xref:System.Web.UI.WebControls.DataList> controle.  
+  
+ [!code-aspx-csharp[DataListEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListEdit/CS/datalisteditcs.aspx#1)]
+ [!code-aspx-vb[DataListEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListEdit/VB/datalisteditvb.aspx#1)]  
+  
+ O exemplo a seguir demonstra como especificar os manipuladores de eventos e programaticamente adicioná-los para os eventos de `Page_Load` método.  
+  
+ [!code-aspx-csharp[DataListEdit2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListEdit2/CS/datalistedit2cs.aspx#1)]
+ [!code-aspx-vb[DataListEdit2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListEdit2/VB/datalistedit2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataListCommandEventArgs (System.Web.UI.WebControls.DataListItem item, object commandSource, System.Web.UI.WebControls.CommandEventArgs originalArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.DataListItem item, object commandSource, class System.Web.UI.WebControls.CommandEventArgs originalArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataListCommandEventArgs.#ctor(System.Web.UI.WebControls.DataListItem,System.Object,System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.DataListItem" />
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="originalArgs" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item selecionado do <see cref="T:System.Web.UI.WebControls.DataList" />.</param>
+        <param name="commandSource">A origem do comando.</param>
+        <param name="originalArgs">Um <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> que contém os dados do evento original.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DataListCommandEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.DataListCommandEventArgs> classe.  
+  
+ Quando uma instância de <xref:System.Web.UI.WebControls.DataListCommandEventArgs> é criado por uma chamada para o construtor, as seguintes propriedades são inicializadas com os valores especificados.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|Item|O valor de `item` parâmetro.|  
+|CommandSource|O valor de `commandSource` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataListCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a fonte do comando.</summary>
+        <value>A origem do comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataListCommandEventArgs.CommandSource%2A> propriedade para determinar a origem de comando que gerou o evento. Essa propriedade normalmente é usada para determinar qual comando gera o evento. Você poderá então agir apropriado, com base no comando.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataListCommandEventArgs.CommandSource%2A> para determinar o comando selecionado pelo usuário. Ele executa a ação apropriada com base no comando.  
+  
+ [!code-aspx-csharp[Classic DataListCommandEventArgs.Item Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataListCommandEventArgs.Item Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataListCommandEventArgs.Item Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataListCommandEventArgs.Item Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataListItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataListItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataListCommandEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item que contém a fonte do comando no controle <see cref="T:System.Web.UI.WebControls.DataList" />.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.WebControls.DataListItem" /> que representa o item selecionado no controle <see cref="T:System.Web.UI.WebControls.DataList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataListCommandEventArgs.Item%2A> propriedade para acessar informações sobre o item selecionado no <xref:System.Web.UI.WebControls.DataList> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataListCommandEventArgs.Item%2A> propriedade para exibir informações sobre o item selecionado no <xref:System.Web.UI.WebControls.DataList> controle.  
+  
+ [!code-aspx-csharp[DataListEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListEdit/CS/datalisteditcs.aspx#1)]
+ [!code-aspx-vb[DataListEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListEdit/VB/datalisteditvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

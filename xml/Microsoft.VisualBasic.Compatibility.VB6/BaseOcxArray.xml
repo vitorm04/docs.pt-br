@@ -1,0 +1,846 @@
+<Type Name="BaseOcxArray" FullName="Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray">
+  <TypeSignature Language="C#" Value="public abstract class BaseOcxArray : Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract BaseOcxArray extends Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma matriz de controle dos controles ActiveX.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `BaseOCXArray` classe fornece um equivalente para a funcionalidade de tempo de execução de uma matriz de controle ActiveX do Visual Basic 6.0. Ele não fornece os recursos de tempo de design de uma matriz de controle do Visual Basic 6.0.  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseOcxArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyspecialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see langword="BaseOCXArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você instancia um `BaseOCXArray`, você também deve chamar o <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.BaseSetIndex%2A> método para criar o elemento inicial na matriz.  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BaseOcxArray (System.ComponentModel.IContainer Container);" />
+      <MemberSignature Language="ILAsm" Value=".method familyspecialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer Container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Container" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="Container">O <see cref="T:System.ComponentModel.IContainer" /> no qual a matriz de controle será hospedada.</param>
+        <summary>Inicializa uma nova instância do <see langword="BaseOCXArray" /> classe, especificando seu contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você instancia um `BaseOCXArray`, você também deve chamar o <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.BaseSetIndex%2A> método para criar o elemento inicial na matriz.  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CausesValidationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CausesValidationChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.CausesValidationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.CausesValidation" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.CausesValidation%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ClientSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ClientSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.ClientSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.ClientSize" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.ClientSize%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.ContextMenuChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.ContextMenu" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.ContextMenu%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStripChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ContextMenuStripChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContextMenuStripChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.ContextMenuStripChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.ContextMenuStrip" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlAdded">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlAdded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.ControlAdded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um novo controle é adicionado ao <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlRemoved">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ControlEventHandler ControlRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ControlEventHandler ControlRemoved" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.ControlRemoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um controle é removido do <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DockChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DockChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.DockChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.Dock" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.Dock%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enter">
+      <MemberSignature Language="C#" Value="public event EventHandler Enter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Enter" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Enter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é inserido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HookUpControlEvents">
+      <MemberSignature Language="C#" Value="protected override void HookUpControlEvents (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HookUpControlEvents(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.HookUpControlEvents(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Um <see cref="T:System.Object" />.</param>
+        <summary>Substitui <see cref="M:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.HookUpControlEvents(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não pode ser chamado no código do aplicativo. Use `AddHandler` para ligar eventos para todos os controles que são adicionados usando-se o método <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray.Load%2A>.  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Leave">
+      <MemberSignature Language="C#" Value="public event EventHandler Leave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Leave" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Leave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o foco de entrada deixa o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você altera o foco usando o teclado (TAB, SHIFT+TAB etc.), ou chamando o método <xref:System.Windows.Forms.Control.Select%2A> ou <xref:System.Windows.Forms.Control.SelectNextControl%2A>, os eventos de foco ocorrem na seguinte ordem:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ `Leave`  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ Quando você altera o foco usando o mouse ou chamando o método <xref:System.Windows.Forms.Control.Focus%2A>, os eventos de foco ocorrem na seguinte ordem:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ `Leave`  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler LocationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LocationChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.LocationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.Location" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.Location%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MarginChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MarginChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.MarginChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.Margin" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.Margin%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseCaptureChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseCaptureChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseCaptureChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.MouseCaptureChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle perde ou ganha captura do mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O clique em um botão do mouse quando o ponteiro está sobre uma forma costuma acionar a seguinte série de eventos do controle:  
+  
+ `MouseDown`  
+  
+ `Click`  
+  
+ `MouseClick`  
+  
+ `MouseUp`  
+  
+ Dois cliques que ocorrem próximos o suficiente no tempo, conforme determinado pelas configurações do mouse do sistema operacional do usuário, irão gerar um evento <xref:System.Windows.Forms.Control.MouseDoubleClick> em vez do segundo evento `MouseClick`.  
+  
+> [!NOTE]
+>  Os eventos <xref:System.Windows.Forms.Control.Click> são logicamente eventos de nível mais alto de um controle. Eles costumam ser acionados por outras ações, como pressionar a tecla ENTER quando o controle tem o foco.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public event EventHandler Move;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Move" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Move" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é movido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.Control.Padding" /> do controle muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.Padding%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ParentChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ParentChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.ParentChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.Control.Parent" /> do controle muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.Parent%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RegionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RegionChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.RegionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.Region" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.Region%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public event EventHandler Resize;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Resize" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Resize" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é redimensionado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para determinar o <xref:System.Windows.Forms.Control.Size%2A> do controle redimensionado, é possível converter o parâmetro `sender` dos dados <xref:System.EventArgs> em um <xref:System.Windows.Forms.Control> e obter as propriedades <xref:System.Windows.Forms.Control.Size%2A> (ou <xref:System.Windows.Forms.Control.Height%2A> e <xref:System.Windows.Forms.Control.Width%2A> individualmente).  
+  
+ Para lidar com layouts personalizados, use o <xref:System.Windows.Forms.Control.Layout> eventos em vez do `Resize` evento. O <xref:System.Windows.Forms.Control.Layout> é gerado em resposta a um `Resize` evento, mas também em resposta a outras alterações que afetam o layout do controle.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SizeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.SizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.Size" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.Size%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemColorsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SystemColorsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SystemColorsChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.SystemColorsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando as cores do sistema mudam.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se o <xref:System.Drawing.SystemColors> for alterado por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validated">
+      <MemberSignature Language="C#" Value="public event EventHandler Validated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Validated" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Validated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a validação do controle é concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você altera o foco usando o teclado (TAB, SHIFT+TAB etc.), chamando os métodos <xref:System.Windows.Forms.Control.Select%2A> ou <xref:System.Windows.Forms.Control.SelectNextControl%2A>, ou definindo a propriedade <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> como o formulário atual, os eventos de foco ocorrem na seguinte ordem:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.Leave>  
+  
+ <xref:System.Windows.Forms.Control.Validating>  
+  
+ `Validated`  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ Quando você altera o foco usando o mouse ou chamando o método <xref:System.Windows.Forms.Control.Focus%2A>, os eventos de foco ocorrem na seguinte ordem:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ <xref:System.Windows.Forms.Control.Leave>  
+  
+ <xref:System.Windows.Forms.Control.Validating>  
+  
+ `Validated`  
+  
+ Se o <xref:System.Windows.Forms.Control.CausesValidation%2A> está definida como `false`, o <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Validating> e `Validated` eventos são suprimidos.  
+  
+ Se o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade do <xref:System.ComponentModel.CancelEventArgs> é definido como `true` no <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Validating> delegado do evento, todos os eventos que normalmente seriam ocorrem após o <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOCXArray.Validating> evento são suprimidos.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validating">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CancelEventHandler Validating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CancelEventHandler Validating" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Validating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle está sendo validado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você altera o foco usando o teclado (TAB, SHIFT+TAB etc.), chamando os métodos <xref:System.Windows.Forms.Control.Select%2A> ou <xref:System.Windows.Forms.Control.SelectNextControl%2A>, ou definindo a propriedade <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> como o formulário atual, os eventos de foco ocorrem na seguinte ordem:  
+  
+ <xref:System.Windows.Forms.Control.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.Leave>  
+  
+ `Validating`  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Validated>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ Quando você altera o foco usando o mouse ou chamando o método <xref:System.Windows.Forms.Control.Focus%2A>, os eventos de foco ocorrem na seguinte ordem:  
+  
+ <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Enter>  
+  
+ <xref:System.Windows.Forms.Control.GotFocus>  
+  
+ <xref:System.Windows.Forms.Control.LostFocus>  
+  
+ <xref:System.Windows.Forms.Control.Leave>  
+  
+ `Validating`  
+  
+ `Validated`  
+  
+ Se o <xref:System.Windows.Forms.Control.CausesValidation%2A> está definida como `false`, o `Validating` e `Validated` eventos são suprimidos.  
+  
+ Se o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade do <xref:System.ComponentModel.CancelEventArgs> é definido como `true` no <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Validating> delegado do evento, todos os eventos que normalmente seriam ocorrem após o <xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.Validating> evento são suprimidos.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler VisibleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler VisibleChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray.VisibleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Control.Visible" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento será acionado se a propriedade <xref:System.Windows.Forms.Control.Visible%2A> for alterada por uma modificação programática ou pela interação do usuário.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

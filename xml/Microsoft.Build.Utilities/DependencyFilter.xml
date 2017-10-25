@@ -1,0 +1,24 @@
+<Type Name="DependencyFilter" FullName="Microsoft.Build.Utilities.DependencyFilter">
+  <TypeSignature Language="C#" Value="public delegate bool DependencyFilter(string fullPath);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DependencyFilter extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.DependencyFilter" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="fullPath" Type="System.String" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="fullPath">O caminho completo para o arquivo de dependência prestes a ser gravado para o TLog compactado</param>
+    <summary>Delegado de filtro de dependência. Usado durante TLog salva na ordem de tarefas para remover seletivamente dependências do gráfico de escrita.</summary>
+    <returns>Se o arquivo, na verdade, deve ser gravado no TLog (true) ou não (false)</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

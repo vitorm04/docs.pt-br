@@ -1,0 +1,325 @@
+<Type Name="TraceSection" FullName="System.Web.Configuration.TraceSection">
+  <TypeSignature Language="C#" Value="public sealed class TraceSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TraceSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TraceSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura o serviço de rastreamento do ASP.NET. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.TraceSection> classe fornece uma maneira de acessar e modificar o conteúdo do arquivo de configuração de forma programática `trace` seção. A seção de rastreamento configura a funcionalidade de rastreamento do ASP.NET e controles, como os resultados do rastreamento são coletados, armazenados e exibidos.  
+  
+ Quando o rastreamento estiver habilitado, cada solicitação de página gera mensagens de rastreamento que podem ser anexadas à saída de página ou armazenadas em um log de rastreamento de aplicativo. Você pode usar o Visualizador de rastreamento do ASP.NET (axd) para exibir o conteúdo do log de rastreamento.  
+  
+> [!NOTE]
+>  O elemento é permitido na seção da hierarquia de configuração no arquivo Machine. config e os arquivos Web. config. Não é permitido em arquivos de configuração dos subdiretórios de Web.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TraceSection> tipo.  
+  
+ [!code-csharp[System.Web.Configuration.TraceSection2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/CS/tracesection.cs#1)]
+ [!code-vb[System.Web.Configuration.TraceSection2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/VB/tracesection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TraceSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.TraceSection" /> classe usando as configurações padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o serviço de rastreamento do ASP.NET está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o rastreamento estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TraceSection.Enabled%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TraceSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TraceSection2#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/CS/tracesection.cs#7)]
+ [!code-vb[System.Web.Configuration.TraceSection2#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/VB/tracesection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalOnly">
+      <MemberSignature Language="C#" Value="public bool LocalOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LocalOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.LocalOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("localOnly", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o Visualizador de rastreamento do ASP.NET (axd) está disponível somente para as solicitações do servidor Web do host.</summary>
+        <value>
+          <see langword="true" />Se o Visualizador de rastreamento do ASP.NET (axd) está disponível somente para as solicitações do servidor Web host; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TraceSection.LocalOnly%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TraceSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TraceSection2#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/CS/tracesection.cs#6)]
+ [!code-vb[System.Web.Configuration.TraceSection2#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/VB/tracesection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MostRecent">
+      <MemberSignature Language="C#" Value="public bool MostRecent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MostRecent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.MostRecent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mostRecent", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as solicitações a mais recentes sempre são armazenadas no servidor.</summary>
+        <value>
+          <see langword="true" />Se as solicitações a mais recentes sempre são armazenadas no log de rastreamento; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Solicitações são armazenadas no log de rastreamento na ordem em que eles chegam, até o número de solicitações especificadas no <xref:System.Web.Configuration.TraceSection.RequestLimit%2A> propriedade. Quando o limite da solicitação for alcançado e <xref:System.Web.Configuration.TraceSection.MostRecent%2A> é `true`, solicitações mais antigas são descartadas automaticamente e novas solicitações continuem a ser adicionado no log. Quando o limite da solicitação for alcançado e <xref:System.Web.Configuration.TraceSection.MostRecent%2A> é `false`, novas solicitações são descartadas até que as solicitações anteriores são removidas do log ou aumenta o limite da solicitação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TraceSection.MostRecent%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TraceSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TraceSection2#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/CS/tracesection.cs#4)]
+ [!code-vb[System.Web.Configuration.TraceSection2#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/VB/tracesection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageOutput">
+      <MemberSignature Language="C#" Value="public bool PageOutput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PageOutput" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.PageOutput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("pageOutput", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as informações de rastreamento do ASP.NET são anexadas à saída de cada página.</summary>
+        <value>
+          <see langword="true" />Se as informações de rastreamento são acrescentadas a cada página. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TraceSection.PageOutput%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TraceSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TraceSection2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/CS/tracesection.cs#2)]
+ [!code-vb[System.Web.Configuration.TraceSection2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/VB/tracesection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestLimit">
+      <MemberSignature Language="C#" Value="public int RequestLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RequestLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.RequestLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requestLimit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o número máximo de solicitações para o aplicativo para o qual o ASP.NET armazena informações de rastreamento.</summary>
+        <value>O número máximo de solicitações para armazenar no servidor. O padrão é 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite máximo de solicitação é 10.000. Se for especificado um valor maior que 10.000, ela é silenciosamente arredondada para baixo para 10.000 pelo ASP.NET.  
+  
+ O <xref:System.Web.Configuration.TraceSection.MostRecent%2A> propriedade obtém ou define um valor que determina se as solicitações armazenadas no servidor são as solicitações mais recentes ou o primeiro solicita a chegada.  
+  
+ **Observação** quando o número de solicitações excede o limite definido por essa configuração e <xref:System.Web.Configuration.TraceSection.MostRecent%2A> é `false`, não há mais solicitações são armazenadas no log de rastreamento. Se <xref:System.Web.Configuration.TraceSection.MostRecent%2A> é `true`, as solicitações a mais recentes são armazenadas do limite imposto por essa configuração e solicitações mais antigas são descartadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TraceSection.RequestLimit%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TraceSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TraceSection2#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/CS/tracesection.cs#5)]
+ [!code-vb[System.Web.Configuration.TraceSection2#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/VB/tracesection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceMode">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.TraceDisplayMode TraceMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.TraceDisplayMode TraceMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.TraceMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("traceMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TraceDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ordem na qual ASP.NET são exibidas informações de rastreamento.</summary>
+        <value>Uma da <see cref="T:System.Web.Configuration.TraceDisplayMode" /> valores, que indica a ordem na qual o rastreamento informações são exibidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TraceSection.TraceMode%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TraceSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TraceSection2#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/CS/tracesection.cs#8)]
+ [!code-vb[System.Web.Configuration.TraceSection2#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/VB/tracesection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToDiagnosticsTrace">
+      <MemberSignature Language="C#" Value="public bool WriteToDiagnosticsTrace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WriteToDiagnosticsTrace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.WriteToDiagnosticsTrace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("writeToDiagnosticsTrace", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as mensagens emitidas por meio do rastreamento de página são encaminhadas para uma instância do <see cref="T:System.Diagnostics.Trace" /> classe.</summary>
+        <value>
+          <see langword="true" />Se as mensagens de rastreamento são enviadas para o <see cref="T:System.Diagnostics.Trace" /> classe; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TraceSection.WriteToDiagnosticsTrace%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TraceSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TraceSection2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/CS/tracesection.cs#3)]
+ [!code-vb[System.Web.Configuration.TraceSection2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TraceSection2/VB/tracesection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

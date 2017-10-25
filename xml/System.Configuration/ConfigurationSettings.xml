@@ -1,0 +1,116 @@
+<Type Name="ConfigurationSettings" FullName="System.Configuration.ConfigurationSettings">
+  <TypeSignature Language="C#" Value="public sealed class ConfigurationSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfigurationSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dá suporte para as versões 1.0 e 1.1 do tempo de execução para ler seções de configuração e as configurações comuns.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando as propriedades e métodos estáticos a <xref:System.Configuration.ConfigurationSettings> tipo é o método recomendado para ler as informações de configuração em tempo de execução para aplicativos de versões 1.0 e 1.1.  
+  
+> [!NOTE]
+>  A classe <xref:System.Configuration.ConfigurationSettings> fornece compatibilidade apenas com versões anteriores. Para novos aplicativos, você deve usar o <xref:System.Configuration.ConfigurationManager> classe ou <xref:System.Web.Configuration.WebConfigurationManager> classe em vez disso. Para usar essas duas classes, você deve adicionar uma referência em seu projeto ou aplicativo para o namespace System. Configuration.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppSettings">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.NameValueCollection AppSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Specialized.NameValueCollection AppSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationSettings.AppSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property is obsolete.  Please use System.Configuration.ConfigurationManager.AppSettings")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Specialized.NameValueCollection" /> somente leitura da seção de configurações do aplicativo do arquivo de configuração.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> somente leitura da seção de configurações do aplicativo do arquivo de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `appSettings` elemento da seção do arquivo de configuração contém uma série de pares de nome/valor que seu aplicativo pode usar para qualquer finalidade.  
+  
+ Esse método é preterido e é mantido para compatibilidade com versões anteriores. Use o método GetSection.  
+  
+> [!NOTE]
+>  A classe <xref:System.Configuration.ConfigurationSettings> fornece compatibilidade apenas com versões anteriores. Você deve usar a classe <xref:System.Configuration.ConfigurationManager> ou <xref:System.Web.Configuration.WebConfigurationManager> em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConfig">
+      <MemberSignature Language="C#" Value="public static object GetConfig (string sectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetConfig(string sectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSettings.GetConfig(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.GetSection")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sectionName">Um nome de configuração e caminho da configuração, como "system.net/settings".</param>
+        <summary>Retorna o objeto <see cref="T:System.Configuration.ConfigurationSection" /> para o nome e caminho da seção de configuração passada.</summary>
+        <returns>O objeto <see cref="T:System.Configuration.ConfigurationSection" /> para o nome e caminho da seção da configuração passada.  
+  
+ <block subset="none" type="note"><para>  
+ A classe <see cref="T:System.Configuration.ConfigurationSettings" /> fornece compatibilidade apenas com versões anteriores. Você deve usar a classe <see cref="T:System.Configuration.ConfigurationManager" /> ou <see cref="T:System.Web.Configuration.WebConfigurationManager" /> em vez disso.  
+  
+</para></block></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é preterido e é mantido para compatibilidade com versões anteriores. Use o método GetSection.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Não é possível recuperar a seção solicitada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

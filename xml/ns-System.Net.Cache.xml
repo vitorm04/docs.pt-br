@@ -1,0 +1,6 @@
+<Namespace Name="System.Net.Cache">
+  <Docs>
+    <summary>O <see cref="N:System.Net.Cache" /> namespace define os tipos e enumerações usados para definir políticas de cache para recursos obtidos usando o <see cref="T:System.Net.WebRequest" /> e <see cref="T:System.Net.HttpWebRequest" /> classes.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,72 @@
+<Type Name="IConfigurationSectionHandler" FullName="System.Configuration.IConfigurationSectionHandler">
+  <TypeSignature Language="C#" Value="public interface IConfigurationSectionHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConfigurationSectionHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.IConfigurationSectionHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Controla o acesso a determinadas seções de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Importante** <xref:System.Configuration.IConfigurationSectionHandler> está obsoleto no .NET Framework 2.0 e posterior. No entanto, porque ela é usada internamente, ele foi mantido. Você pode encontrar um exemplo em [como: criar seções de configuração personalizadas usando IConfigurationSectionHandler](http://msdn.microsoft.com/library/07f68a3f-2920-4665-a824-47bda744e662). Se você usar o exemplo anterior, compile-o com o .NET Framework versão 1.0 ou 1.1.  
+  
+ No .NET Framework versão 2.0 e posterior, em vez disso, deve derivar do <xref:System.Configuration.ConfigurationSection> classe para implementar o manipulador de seção de configuração relacionados. Você pode encontrar um exemplo em [como: criar seções de configuração personalizadas usando ConfigurationSection](http://msdn.microsoft.com/library/febaca98-c727-4017-95ed-82e2fb6cf234).  
+  
+ Instâncias de <xref:System.Configuration.IConfigurationSectionHandler> classe deve ser thread-safe e sem monitoração de estado. O <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> método deve ser chamado de vários threads simultaneamente.  
+  
+ Além disso, o objeto de configuração gerado pelo <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> método deve ser thread-safe e imutável. Como os objetos de configuração são armazenados em cache pelo sistema de configuração, é importante não modificar o argumento pai para o <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> método. Por exemplo, se o valor de retorno de <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> é apenas uma pequena modificação do pai, as modificações reais devem ser feitas em um clone do pai, não o original.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public object Create (object parent, object configContext, System.Xml.XmlNode section);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Create(object parent, object configContext, class System.Xml.XmlNode section) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IConfigurationSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Object" />
+        <Parameter Name="configContext" Type="System.Object" />
+        <Parameter Name="section" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Objeto pai.</param>
+        <param name="configContext">Objeto de contexto de configuração.</param>
+        <param name="section">Nó XML da seção.</param>
+        <summary>Cria um manipulador de seção de configuração.</summary>
+        <returns>O objeto de manipulador de seção criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instâncias de <xref:System.Configuration.IConfigurationSectionHandler> classe deve ser thread-safe e sem monitoração de estado. O <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> método deve ser chamado de vários threads simultaneamente.  
+  
+ Além disso, o objeto de configuração gerado pelo <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> método deve ser thread-safe e imutável. Como os objetos de configuração são armazenados em cache pelo sistema de configuração, é importante não modificar o argumento pai para <xref:System.Configuration.IConfigurationSectionHandler.Create%2A>. Por exemplo, se o valor de retorno de <xref:System.Configuration.IConfigurationSectionHandler.Create%2A> é apenas uma pequena modificação do pai, as modificações reais devem ser feitas em um clone do pai, não o original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

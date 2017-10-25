@@ -1,0 +1,415 @@
+<Type Name="ServiceContractAttribute" FullName="System.ServiceModel.ServiceContractAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ServiceContractAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceContractAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ServiceContractAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que uma interface ou classe define um contrato de serviço em um aplicativo do Windows Communication Foundation (WCF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.ServiceContractAttribute> atributo em uma interface (ou classe) para definir um contrato de serviço. Em seguida, use o <xref:System.ServiceModel.OperationContractAttribute> atributo em um ou mais dos métodos de classe (ou interface) para definir as operações de serviço do contrato. Quando o contrato de serviço é implementado e combinado com um [associações](~/docs/framework/wcf/bindings.md) e um <xref:System.ServiceModel.EndpointAddress> do objeto, o contrato de serviço é exposto para uso pelos clientes. Para obter uma visão geral do processo usando exemplos simples, consulte [Tutorial de Introdução](~/docs/framework/wcf/getting-started-tutorial.md). Para obter mais informações sobre como criar contratos de serviço, consulte [Projetando e Implementando serviços](~/docs/framework/wcf/designing-and-implementing-services.md).  
+  
+ As informações que expressa por um <xref:System.ServiceModel.ServiceContractAttribute> e sua interface é relacionada de forma flexível para o WSDL Web Services Description Language () `<portType>` elemento. Um contrato de serviço é usado no lado do serviço para especificar o ponto de extremidade do serviço expõe para chamadores. Ele também é usado no lado do cliente para especificar o contrato do ponto de extremidade com o qual o cliente se comunica e, no caso de contratos duplex, especifique o contrato de retorno de chamada (usando o <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> propriedade) que o cliente deve implementar para participar de uma conversa duplex.  
+  
+> [!NOTE]
+>  Uma interface ou classe decorada com <xref:System.ServiceModel.ServiceContractAttribute> também deve ter pelo menos um método marcado com o <xref:System.ServiceModel.OperationContractAttribute> atributo para expor a funcionalidade. Consulte a seção de exemplos para obter um exemplo de código de seu uso mais simples de dois atributos para definir e implementar um serviço.  
+  
+ Use o <xref:System.ServiceModel.ServiceContractAttribute> propriedades para modificar o contrato de serviço.  
+  
+-   O <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> propriedade especifica o nome do elemento de serviço no arquivo de configuração para usar.  
+  
+-   O <xref:System.ServiceModel.ServiceContractAttribute.Name%2A> e <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> propriedades que controlam o nome e o namespace do contrato em WSDL `<portType>` elemento.  
+  
+-   O <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> propriedade especifica se o contrato requer uma associação que dá suporte a sessões.  
+  
+-   O <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> propriedade especifica o contrato de retorno em uma conversa (duplex) bidirecional.  
+  
+-   O <xref:System.ServiceModel.ServiceContractAttribute.HasProtectionLevel%2A> e <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> propriedades indicam se o contrato de suporte de todas as mensagens têm um explícita <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> valor, e nesse caso, o que esse nível.  
+  
+ Serviços de implementam contratos de serviço, que representam a troca de dados que oferece suporte a um tipo de serviço. Uma classe de serviço pode implementar um contrato de serviço (Implementando uma interface marcada com <xref:System.ServiceModel.ServiceContractAttribute> que tem métodos marcados com <xref:System.ServiceModel.OperationContractAttribute>) ou ele pode ser marcado com o <xref:System.ServiceModel.ServiceContractAttribute> e aplicar o <xref:System.ServiceModel.OperationContractAttribute> para seus próprios métodos de atributo. (Se uma classe implementa uma interface marcada com <xref:System.ServiceModel.ServiceContractAttribute>, ele não pode ser marcado com <xref:System.ServiceModel.ServiceContractAttribute>.) Métodos em tipos de serviço que são marcados com o <xref:System.ServiceModel.OperationContractAttribute> são tratados como parte de um contrato de serviço padrão especificado, o tipo de serviço. Para obter detalhes sobre as operações de serviço, consulte <xref:System.ServiceModel.OperationContractAttribute>.  
+  
+ Por padrão, o <xref:System.ServiceModel.ServiceContractAttribute.Name%2A> e <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> propriedades são o nome do tipo de contrato e `http://tempuri.org`, respectivamente, e <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> é <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>. É recomendável que os contratos de serviço definido explicitamente seus nomes, os namespaces e os níveis de proteção usando essas propriedades. Isso atinge dois objetivos. Primeiro, ele criará um contrato que não está conectado diretamente às informações de tipo gerenciado, permitindo que você refatorar o código gerenciado e namespaces sem quebrar o contrato conforme ele é expresso em WSDL. Em segundo lugar, explicitamente a necessidade de um determinado nível de proteção no contrato de si mesmo permite que o tempo de execução validar se a configuração de associação oferece suporte a esse nível de segurança, impedindo a configuração ruim de expor informações confidenciais. Para obter mais informações sobre níveis de proteção, consulte [Noções básicas sobre nível de proteção](~/docs/framework/wcf/understanding-protection-level.md).  
+  
+ Para expor um serviço para uso por aplicativos cliente, crie um aplicativo de host para registrar seu ponto de extremidade de serviço com [!INCLUDE[indigo1](~/includes/indigo1-md.md)]. Você pode hospedar [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviços usando os serviços de ativação do Windows (WAS), em aplicativos de console, aplicativos de serviço do Windows, os aplicativos ASP.NET, aplicativos de formulários do Windows ou qualquer outro tipo de domínio de aplicativo.  
+  
+ Hospedando no WAS é muito semelhante à criação de um aplicativo ASP.NET. Para obter detalhes, consulte [como: hospedar um serviço WCF no IIS](~/docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+  
+ Os clientes podem usar a interface de contrato de serviço (a interface marcada com <xref:System.ServiceModel.ServiceContractAttribute>) para criar um canal para o serviço ou usar os objetos de cliente (que combine as informações de tipo de interface de contrato de serviço com o <xref:System.ServiceModel.ClientBase%601> classe) para se comunicar com seu serviço. Para obter detalhes sobre os canais de cliente aos serviços, consulte o <xref:System.ServiceModel.ChannelFactory%601> classe e [visão geral do cliente WCF](~/docs/framework/wcf/wcf-client-overview.md).  
+  
+ Usando um <xref:System.ServiceModel.ServiceContractAttribute> classe ou interface para herdar de outro <xref:System.ServiceModel.ServiceContractAttribute> classe ou interface estende o contrato do pai. Por exemplo, se um `IChildContract` interface está marcada com <xref:System.ServiceModel.ServiceContractAttribute> e herdadas de outra interface de contrato de serviço, `IParentContract`, o `IChildContract` contrato de serviço contém os métodos de ambos `IParentContract` e `IChildContract`. Estender contratos (seja em interfaces ou classes) é muito semelhante a extensão de interfaces e classes gerenciadas.  
+  
+ A abordagem mais flexível para criar serviços é definir as interfaces de contrato de serviço pela primeira vez e, em seguida, sua classe de serviço implementa essa interface. (Isso também é a maneira mais simples para criar seus serviços se você deve implementar contratos de serviço que foram definidos por outras pessoas.) Criar serviços marcando uma classe com <xref:System.ServiceModel.ServiceContractAttribute> e seus métodos com <xref:System.ServiceModel.OperationContractAttribute> funciona quando o serviço expõe apenas um contrato (mas esse contrato pode ser exposto por mais de um ponto de extremidade).  
+  
+ Use o <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> propriedade para indicar outro contrato de serviço que, quando associado junto com o contrato de serviço original, definir uma troca de mensagens que pode fluir de duas maneiras de forma independente. Para obter detalhes, consulte <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como aplicar o <xref:System.ServiceModel.ServiceContractAttribute> para uma interface para definir um contrato de serviço com o método de um serviço, indicado pelo <xref:System.ServiceModel.OperationContractAttribute>. Nesse caso, é o nível de proteção necessário de associações para todas as mensagens <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>.  
+  
+ O exemplo de código, em seguida, implementa esse contrato no `SampleService` classe.  
+  
+ [!code-csharp[ServiceContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/servicecontractattribute/cs/services.cs#1)]
+ [!code-vb[ServiceContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/servicecontractattribute/vb/services.vb#1)]  
+  
+ O exemplo de código a seguir mostra um arquivo de configuração simples para o serviço anterior que cria um ponto de extremidade.  
+  
+ [!code-xml[ServiceContractAttribute#2](~/samples/snippets/csharp/VS_Snippets_CFX/servicecontractattribute/cs/hostapplication.exe.config#2)]   
+  
+ O exemplo de código a seguir mostra um simples de cliente que invoca anterior `SampleService`.  
+  
+ [!code-csharp[ServiceContractAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/servicecontractattribute/cs/client.cs#3)]
+ [!code-vb[ServiceContractAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/servicecontractattribute/vb/client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContractAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceContractAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.ServiceContractAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor cria uma instância do atributo com nenhum requisito de sessão, nenhum contrato de retorno de chamada e o nome padrão e o namespace.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallbackContract">
+      <MemberSignature Language="C#" Value="public Type CallbackContract { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type CallbackContract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.CallbackContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de contrato de retorno de chamada quando o contrato é do tipo duplex.</summary>
+        <value>Um <see cref="T:System.Type" /> que indica o contrato de retorno de chamada. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifica uma interface no <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> propriedade que representa o necessário oposta contrato em uma troca de mensagens bidirecional (ou duplex). Isso permite que aplicativos cliente escutar as chamadas de entrada de operação que o aplicativo de serviço do lado do servidor pode enviar independentemente da atividade do cliente. Contratos de retorno de chamada com operações unidirecionais representam chamadas do serviço que o cliente pode manipular.  
+  
+> [!NOTE]
+>  O <xref:System.ServiceModel.ServiceContractAttribute> atributo é ignorado em contratos de retorno de chamada. Para configurar o comportamento de tempo de execução de objetos de retorno de chamada, use o <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um serviço que especifica um contrato de retorno de chamada, o que indica que um serviço do tipo `IDuplexHello` deve ter um destinatário que implementa um serviço do tipo `IHelloCallbackContract`. Além disso, `IHelloCallbackContract` implementa um método de retorno de chamada unidirecional, permitindo que o serviço chamar o cliente sem aguardar uma resposta oferecer suporte a um cliente distribuído, controlada por evento.  
+  
+ [!code-csharp[SCA.CallbackContract#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/services.cs#1)]
+ [!code-vb[SCA.CallbackContract#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationName">
+      <MemberSignature Language="C#" Value="public string ConfigurationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.ConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome usado para localizar o serviço em um arquivo de configuração do aplicativo.</summary>
+        <value>O nome usado para localizar o elemento de serviço em um arquivo de configuração de aplicativo. O padrão é o nome da classe de implementação de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o valor pelo qual o sistema de configuração localiza um valor de contrato no arquivo de configuração, consulte <xref:System.ServiceModel.ServiceBehaviorAttribute.ConfigurationName%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor é nulo.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProtectionLevel">
+      <MemberSignature Language="C#" Value="public bool HasProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.HasProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o membro tem um nível de proteção atribuído.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.ServiceModel.ServiceContractAttribute.ProtectionLevel" /> propriedade não é <see cref="F:System.Net.Security.ProtectionLevel.None" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.ServiceContractAttribute.HasProtectionLevel%2A> propriedade indica se uma proteção de nível valor diferente de `false` tiver sido definido para o contrato.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do elemento <see langword="&lt;portType&gt;" /> na linguagem WSDL.</summary>
+        <value>O valor padrão é o nome da classe ou da interface à qual o <see cref="T:System.ServiceModel.ServiceContractAttribute" /> é aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.ServiceContractAttribute.Name%2A> e <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> propriedades para controlar o nome e o namespace do `<portType>` elemento em WSDL.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.ServiceModel.ServiceContractAttribute.Name%2A> e <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> propriedades do <xref:System.ServiceModel.ServiceContractAttribute> para definir os valores correspondentes em WSDL.  
+  
+ [!code-csharp[SCA.Names#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.names/cs/services.cs#1)]
+ [!code-vb[SCA.Names#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.names/vb/services.vb#1)]  
+  
+ O seguinte exemplo de código mostra uma [!INCLUDE[indigo1](~/includes/indigo1-md.md)] cliente para o serviço anterior que importou WSDL usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Esse cliente usa um `HelloWorldProxy` cliente em vez de `SampleServiceProxy` cliente (como é o caso com o exemplo na seção exemplo de <xref:System.ServiceModel.ServiceContractAttribute>).  
+  
+ [!code-csharp[SCA.Names#3](~/samples/snippets/csharp/VS_Snippets_CFX/sca.names/cs/client.cs#3)]
+ [!code-vb[SCA.Names#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.names/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor é nulo.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace do elemento <see langword="&lt;portType&gt;" /> na linguagem WSDL.</summary>
+        <value>O namespace WSDL do <see langword="&lt;portType&gt;" /> elemento. O valor padrão é "http://tempuri.org".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.ServiceModel.ServiceContractAttribute.Name%2A> e <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> propriedades do <xref:System.ServiceModel.ServiceContractAttribute> para definir os valores correspondentes em WSDL.  
+  
+ [!code-csharp[SCA.Names#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.names/cs/services.cs#1)]
+ [!code-vb[SCA.Names#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.names/vb/services.vb#1)]  
+  
+ O seguinte exemplo de código mostra uma [!INCLUDE[indigo1](~/includes/indigo1-md.md)] cliente para o serviço anterior que importou WSDL usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Esse cliente usa um `HelloWorldClient` cliente em vez de `SampleServiceClient` cliente (como é o caso com o exemplo na seção exemplo de <xref:System.ServiceModel.ServiceContractAttribute>).  
+  
+ [!code-csharp[SCA.Names#3](~/samples/snippets/csharp/VS_Snippets_CFX/sca.names/cs/client.cs#3)]
+ [!code-vb[SCA.Names#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.names/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se a associação para o contrato deve oferecer suporte ao valor da propriedade <see cref="P:System.ServiceModel.ServiceContractAttribute.ProtectionLevel" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Net.Security.ProtectionLevel" />. O padrão é <see cref="F:System.Net.Security.ProtectionLevel.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> propriedade para especificar o grau ao qual a associação de contrato requer criptografia, assinaturas digitais ou ambos para pontos de extremidade que expõe o contrato. O valor definido aqui é o valor padrão para todas as mensagens de operação, incluindo falhas.  
+  
+ É importante lembrar que o comportamento de proteção em tempo de execução é a combinação dos valores de nível de proteção definido em propriedades a seguir. Essas propriedades não tem uma estrutura hierárquica. Definir o valor externo estabelece a configuração padrão para todos os escopos mais estreitas, a menos que um valor diferente para um escopo mais restrito é explicitamente definido. Nesse caso, o valor externo permanece padrão para todos os mais estreitos escopos com a exceção de que especificamente definido.  
+  
+ Por exemplo, se <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType> é definido como <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> e não há outros escopos mais estreitos têm configurações de nível de proteção, todas as mensagens em um contrato de operação são criptografadas e assinadas. Se, no entanto, uma dessas operações tem o <xref:System.ServiceModel.OperationContractAttribute> definida como <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>, as mensagens para essa operação são assinadas, mas todas as outras mensagens no contrato são criptografadas e assinadas.  
+  
+ Para obter detalhes sobre os níveis de proteção e suas suposições e escopos, consulte [Noções básicas sobre nível de proteção](~/docs/framework/wcf/understanding-protection-level.md).  
+  
+ Os escopos em que esses valores são definidos são:  
+  
+ <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A?displayProperty=nameWithType>  
+  
+ O <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> propriedade <xref:System.ServiceModel.MessageHeaderAttribute?displayProperty=nameWithType>.  
+  
+ O <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> propriedade <xref:System.ServiceModel.MessageBodyMemberAttribute?displayProperty=nameWithType>.  
+  
+ Quando não há nenhum explicitamente especificado no contrato de nível de proteção e a associação subjacente oferece suporte à segurança (quer seja no nível de transporte ou mensagem), o nível de proteção efetivo para o contrato inteiro é <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>. Se a associação não oferece suporte de segurança (como <xref:System.ServiceModel.BasicHttpBinding>), a partir de <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> é <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> para o contrato inteiro. O resultado é que, dependendo do modo de associação de ponto de extremidade, os clientes podem exigir a proteção de segurança em nível de transporte ou mensagem diferente mesmo quando o contrato especifica <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um dos valores <see cref="T:System.Net.Security.ProtectionLevel" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.SessionMode SessionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.SessionMode SessionMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.ServiceContractAttribute.SessionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.SessionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se as sessões são permitidas, não são permitidas ou são necessárias.</summary>
+        <value>Um <see cref="T:System.ServiceModel.SessionMode" /> que indica se as sessões são permitidas, não são permitidas ou são necessárias.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> propriedade exigir associações que oferecem suporte a sessões entre pontos de extremidade. Uma sessão é uma maneira de correlacionar um conjunto de mensagens trocadas entre dois ou mais pontos de extremidade. Se o serviço oferece suporte a sessões de canal, você pode usar o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> propriedade para especificar a relação entre instâncias de sua implementação do contrato de serviço e a sessão de canal. Se uma associação não oferece suporte a sessões, uma exceção será lançada.  
+  
+ Por exemplo, se o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> está definida como <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> e <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> está definida como <xref:System.ServiceModel.InstanceContextMode.PerSession>, os clientes podem usar a mesma conexão para fazer chamadas repetidas para o mesmo objeto de serviço.  
+  
+ Para obter mais informações sobre as sessões e instâncias de serviço, consulte [usando sessões](~/docs/framework/wcf/using-sessions.md) e [sessões, Instancing e simultaneidade](~/docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+  
+> [!NOTE]
+>  Um canal que oferece suporte a sessões oferece suporte a associação de padrão de uma instância de serviço com uma determinada sessão. No entanto, têm suporte em implementações de sessão diferente recursos diferentes, além de controle de instância com base em sessão. [!INCLUDE[indigo2](~/includes/indigo2-md.md)]fornece quatro tipos de sessões que você pode usar para fornecer o comportamento da sessão do aplicativo; cada tipo de sessão fornece o comportamento adicional específico para o tipo de sessão é.  
+  
+1.  O <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> oferece suporte a sessões de segurança, em que ambas as extremidades de comunicação concordaram em um processo de assinatura digital e/ou criptografia; todas as mensagens são correlacionadas com conversa segura específica. Para obter mais informações, consulte [protegendo serviços](~/docs/framework/wcf/securing-services.md). Por exemplo, o <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, que contém suporte para ambas as sessões de segurança e sessões confiáveis, por padrão, usa somente uma sessão segura que criptografa e assina digitalmente as mensagens.  
+  
+2.  O <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> oferece suporte as sessões expostas pelas conexões TCP/IP para garantir que todas as mensagens são correlacionadas pela sessão de conexão no nível de soquete.  
+  
+3.  O <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>, que implementa a especificação WS-ReliableMessaging, fornece suporte para sessões confiáveis em que as mensagens são entregues em ordem e exatamente uma vez, habilitando confiança mesmo quando as mensagens passam por vários nós durante a conversa. Para obter mais informações, consulte [sessões confiáveis](~/docs/framework/wcf/feature-details/reliable-sessions.md).  
+  
+4.  O <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> fornece sessões de datagrama MSMQ. Para obter mais informações, consulte [filas no WCF](~/docs/framework/wcf/feature-details/queues-in-wcf.md).  
+  
+ Lembre-se de que a configuração de <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> propriedade não especifica o tipo de sessão, o contrato requer, somente que ele requer que um.  
+  
+   
+  
+## Examples  
+ O contrato de serviço a seguir requer que associações configuradas usam sessões ao interagir com `SampleDuplexHello` implementações de serviço.  
+  
+ [!code-csharp[SCA.Session#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/services.cs#1)]
+ [!code-vb[SCA.Session#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.session/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um dos valores <see cref="T:System.ServiceModel.SessionMode" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

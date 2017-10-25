@@ -1,0 +1,208 @@
+<Type Name="CounterData" FullName="System.Diagnostics.PerformanceData.CounterData">
+  <TypeSignature Language="C#" Value="public sealed class CounterData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CounterData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceData.CounterData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém os dados brutos de um contador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet.Item%2A?displayProperty=nameWithType> propriedade retorna uma instância dessa classe.  
+  
+ Essa classe fornece métodos de thread-safe para ler e gravar dados do contador.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Decrement">
+      <MemberSignature Language="C#" Value="public void Decrement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decrement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceData.CounterData.Decrement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diminui o contador de valor de 1.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método com segurança diminui o contador de valor para aplicativos multithread.  
+  
+ Para diminuir o valor do contador por um valor específico, chame o <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy%2A> método e defina o `value` parâmetro para um número negativo.  
+  
+ Para definir o valor do contador, use o <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public void Increment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Increment() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceData.CounterData.Increment" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>O valor do contador é incrementado em 1.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método com segurança incrementa o valor do contador para aplicativos multithread.  
+  
+ Para definir o valor do contador, use o <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> propriedade.  
+  
+ Para incrementar o valor do contador por um valor específico, chame o <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementBy">
+      <MemberSignature Language="C#" Value="public void IncrementBy (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void IncrementBy(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceData.CounterData.IncrementBy(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor pelo qual incrementar o valor do contador. O valor de incremento pode ser positivo ou negativo.</param>
+        <summary>O valor do contador é incrementado pelo valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método com segurança incrementa o valor do contador para aplicativos multithread.  
+  
+ Para definir o valor do contador, use o <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> propriedade.  
+  
+ Para incrementar o valor do contador em 1, chame o <xref:System.Diagnostics.PerformanceData.CounterData.Increment%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawValue">
+      <MemberSignature Language="C#" Value="public long RawValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RawValue" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceData.CounterData.RawValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou obtém os dados brutos de contador.</summary>
+        <value>Os dados brutos de contador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é thread-safe e só é adequada para acesso de thread único. Para acessar vários segmentos de dados do contador, use o <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public long Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceData.CounterData.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou obtém os dados do contador.</summary>
+        <value>Os dados do contador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece acesso seguro a dados do contador de aplicativos multithread. Se o desempenho é uma preocupação principal, use o <xref:System.Diagnostics.PerformanceData.CounterData.RawValue%2A> propriedade; no entanto, o <xref:System.Diagnostics.PerformanceData.CounterData.RawValue%2A> propriedade não é thread-safe.  
+  
+ Observe que o <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> propriedade não é thread-safe no .NET Framework 3.5.  
+  
+ Para incrementar o valor do contador, considere o uso de <xref:System.Diagnostics.PerformanceData.CounterData.Increment%2A> ou <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy%2A> método.  
+  
+   
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Diagnostics.PerformanceData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

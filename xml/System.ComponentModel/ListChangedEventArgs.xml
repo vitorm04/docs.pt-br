@@ -1,0 +1,346 @@
+<Type Name="ListChangedEventArgs" FullName="System.ComponentModel.ListChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ListChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ListChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.ComponentModel.IBindingList.ListChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ComponentModel.IBindingList.ListChanged> é gerado quando os dados em um <xref:System.ComponentModel.IBindingList> alterações.  
+  
+ O <xref:System.ComponentModel.ListChangedEventArgs.NewIndex%2A> propriedade indica o índice do item que foi adicionado, alterado ou excluído. Se um item foi movido, o <xref:System.ComponentModel.ListChangedEventArgs.NewIndex%2A> propriedade indica o novo local do item e o <xref:System.ComponentModel.ListChangedEventArgs.OldIndex%2A> propriedade indica o local antigo.  
+  
+ Se apenas um item é afetado por uma alteração, o <xref:System.ComponentModel.ListChangedEventArgs.OldIndex%2A> o valor da propriedade é -1.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.BindingSource> chamado `BindingSource1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#134](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#134)]
+ [!code-vb[System.Windows.Forms.EventExamples#134](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#134)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListChangedEventArgs (System.ComponentModel.ListChangedType listChangedType, System.ComponentModel.PropertyDescriptor propDesc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.ListChangedType listChangedType, class System.ComponentModel.PropertyDescriptor propDesc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ListChangedEventArgs.#ctor(System.ComponentModel.ListChangedType,System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="listChangedType" Type="System.ComponentModel.ListChangedType" />
+        <Parameter Name="propDesc" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="listChangedType">Um valor <see cref="T:System.ComponentModel.ListChangedType" /> que indica o tipo de alteração.</param>
+        <param name="propDesc">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> que foi adicionado, removido ou alterado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.ListChangedEventArgs" /> classe considerando o tipo de alteração e o <see cref="T:System.ComponentModel.PropertyDescriptor" /> afetados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser usado somente se o esquema do objeto foi alterado.  
+  
+ O `listChangedType` parâmetro deve ser <xref:System.ComponentModel.ListChangedType.PropertyDescriptorAdded>, <xref:System.ComponentModel.ListChangedType.PropertyDescriptorChanged>, ou <xref:System.ComponentModel.ListChangedType.PropertyDescriptorDeleted>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListChangedEventArgs (System.ComponentModel.ListChangedType listChangedType, int newIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.ListChangedType listChangedType, int32 newIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ListChangedEventArgs.#ctor(System.ComponentModel.ListChangedType,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="listChangedType" Type="System.ComponentModel.ListChangedType" />
+        <Parameter Name="newIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="listChangedType">Um valor <see cref="T:System.ComponentModel.ListChangedType" /> que indica o tipo de alteração.</param>
+        <param name="newIndex">O índice do item que foi adicionado, alterado ou removido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.ListChangedEventArgs" /> classe considerando o tipo de alteração e o índice do item afetado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor se apenas um item é afetado por uma alteração. Nesse caso, o <xref:System.ComponentModel.ListChangedEventArgs.OldIndex%2A> está definida como -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListChangedEventArgs (System.ComponentModel.ListChangedType listChangedType, int newIndex, System.ComponentModel.PropertyDescriptor propDesc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.ListChangedType listChangedType, int32 newIndex, class System.ComponentModel.PropertyDescriptor propDesc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ListChangedEventArgs.#ctor(System.ComponentModel.ListChangedType,System.Int32,System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="listChangedType" Type="System.ComponentModel.ListChangedType" />
+        <Parameter Name="newIndex" Type="System.Int32" />
+        <Parameter Name="propDesc" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="listChangedType">Um valor <see cref="T:System.ComponentModel.ListChangedType" /> que indica o tipo de alteração.</param>
+        <param name="newIndex">O índice do item que foi adicionado ou alterado.</param>
+        <param name="propDesc">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> que descreve o item.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.ListChangedEventArgs" /> classe considerando o tipo de alteração, o índice do item afetado e um <see cref="T:System.ComponentModel.PropertyDescriptor" /> que descreve o item afetado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListChangedEventArgs (System.ComponentModel.ListChangedType listChangedType, int newIndex, int oldIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.ListChangedType listChangedType, int32 newIndex, int32 oldIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ListChangedEventArgs.#ctor(System.ComponentModel.ListChangedType,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="listChangedType" Type="System.ComponentModel.ListChangedType" />
+        <Parameter Name="newIndex" Type="System.Int32" />
+        <Parameter Name="oldIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="listChangedType">Um valor <see cref="T:System.ComponentModel.ListChangedType" /> que indica o tipo de alteração.</param>
+        <param name="newIndex">O novo índice do item que foi movido.</param>
+        <param name="oldIndex">O índice antigo do item que foi movido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.ListChangedEventArgs" /> classe considerando o tipo de alteração e o índice antigo e novo do item que foi movido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListChangedType">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ListChangedType ListChangedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.ListChangedType ListChangedType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ListChangedEventArgs.ListChangedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de alteração.</summary>
+        <value>Um valor <see cref="T:System.ComponentModel.ListChangedType" /> que indica o tipo de alteração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.BindingSource> chamado `BindingSource1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#134](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#134)]
+ [!code-vb[System.Windows.Forms.EventExamples#134](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#134)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewIndex">
+      <MemberSignature Language="C#" Value="public int NewIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewIndex" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ListChangedEventArgs.NewIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do item afetado pela alteração.</summary>
+        <value>O índice do afetados pela alteração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para os itens que foram movidos, esta propriedade representa o novo local do item.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.BindingSource> chamado `BindingSource1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#134](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#134)]
+ [!code-vb[System.Windows.Forms.EventExamples#134](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#134)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldIndex">
+      <MemberSignature Language="C#" Value="public int OldIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OldIndex" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ListChangedEventArgs.OldIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice antigo de um item que foi movido.</summary>
+        <value>O índice antigo do item movido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.BindingSource> chamado `BindingSource1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#134](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#134)]
+ [!code-vb[System.Windows.Forms.EventExamples#134](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#134)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptor">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptor PropertyDescriptor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor PropertyDescriptor" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ListChangedEventArgs.PropertyDescriptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.PropertyDescriptor" /> que foi adicionado, alterado ou excluído.</summary>
+        <value>O <see cref="T:System.ComponentModel.PropertyDescriptor" /> afetado pela alteração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.BindingSource> chamado `BindingSource1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.BindingSource.ListChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#134](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#134)]
+ [!code-vb[System.Windows.Forms.EventExamples#134](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#134)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

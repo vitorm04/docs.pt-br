@@ -1,0 +1,289 @@
+<Type Name="Copy" FullName="Microsoft.Build.Tasks.Copy">
+  <TypeSignature Language="C#" Value="public class Copy : Microsoft.Build.Tasks.TaskExtension, Microsoft.Build.Framework.ICancelableTask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Copy extends Microsoft.Build.Tasks.TaskExtension implements class Microsoft.Build.Framework.ICancelableTask, class Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Copy" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ICancelableTask</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementa o <c>cópia</c> tarefa. Use o <c>cópia</c> elemento no arquivo de projeto para criar e executar essa tarefa. Para obter informações de uso e de parâmetro, consulte [tarefas de cópia de](http://msdn.microsoft.com/library/a46ba9da-3e4e-4890-b4ea-09a099b6bc40).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Copy.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.Copy" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Copy.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Pare e retornar (em um estado indefinido) assim que possível.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CopiedFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] CopiedFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] CopiedFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Copy.CopiedFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os itens que foram copiados com êxito.</summary>
+        <value>Os itens que foram copiados com êxito.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] DestinationFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] DestinationFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Copy.DestinationFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista de arquivos para copiar os arquivos de origem.</summary>
+        <value>A lista de arquivos para copiar os arquivos de origem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A lista de arquivos de destino deve ser um mapeamento um para um com a lista especificada no <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> propriedade. Ou seja, o primeiro arquivo especificado em <xref:Microsoft.Build.Tasks.Copy.SourceFiles%2A> será copiado para o primeiro local especificado em <xref:Microsoft.Build.Tasks.Copy.DestinationFiles%2A> e assim por diante.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationFolder">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem DestinationFolder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem DestinationFolder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Copy.DestinationFolder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o diretório ao qual você deseja copiar os arquivos.</summary>
+        <value>O diretório para o qual você deseja copiar os arquivos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A pasta de destino deve ser um diretório, não é um arquivo. Se o diretório não existir, ele será criado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Copy.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o <c>cópia</c> tarefa.</summary>
+        <returns>
+          <see langword="true" /> caso a execução da tarefa seja bem-sucedida; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteReadOnlyFiles">
+      <MemberSignature Language="C#" Value="public bool OverwriteReadOnlyFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OverwriteReadOnlyFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Copy.OverwriteReadOnlyFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se deve substituir arquivos mesmo se eles estão marcados como somente arquivos de leitura.</summary>
+        <value>
+          <see langword="true" />Se o <c>cópia</c> tarefa deve substituir arquivos mesmo se elas estiverem marcadas como apenas arquivos de leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Retries">
+      <MemberSignature Language="C#" Value="public int Retries { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Retries" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Copy.Retries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O número de vezes para tentar copiar, se todas as tentativas anteriores falharam. Usa zero como padrão. Aviso: usar repetições pode mascarar um problema de sincronização no processo de compilação.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RetryDelayMilliseconds">
+      <MemberSignature Language="C#" Value="public int RetryDelayMilliseconds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RetryDelayMilliseconds" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Copy.RetryDelayMilliseconds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Atraso entre quaisquer tentativas necessário. Padrão é<see cref="F:Microsoft.Build.Tasks.Copy.RetryDelayMillisecondsDefault" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SkipUnchangedFiles">
+      <MemberSignature Language="C#" Value="public bool SkipUnchangedFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipUnchangedFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Copy.SkipUnchangedFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o <c>cópia</c> tarefa deve ignorar a cópia dos arquivos que foram modificados entre a origem e destino.</summary>
+        <value>
+          <see langword="true" />Se o <c>cópia</c> tarefa deve ignorar a cópia dos arquivos que estão inalterados entre a origem e destino; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tarefa `Copy` considera os arquivos como inalterados se eles têm o mesmo tamanho e a mesma hora da última modificação.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SourceFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] SourceFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] SourceFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Copy.SourceFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os arquivos a serem copiados.</summary>
+        <value>Os arquivos a serem copiados.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseHardlinksIfPossible">
+      <MemberSignature Language="C#" Value="public bool UseHardlinksIfPossible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseHardlinksIfPossible" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Copy.UseHardlinksIfPossible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se os links de disco rígido deve ser usada.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

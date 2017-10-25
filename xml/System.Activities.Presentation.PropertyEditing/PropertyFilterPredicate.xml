@@ -1,0 +1,78 @@
+<Type Name="PropertyFilterPredicate" FullName="System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate">
+  <TypeSignature Language="C#" Value="public class PropertyFilterPredicate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyFilterPredicate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma cadeia de caracteres de texto do predicado é usada para filtrar pesquisas de propriedade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyFilterPredicate (string matchText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string matchText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="matchText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="matchText">A cadeia de predicado que é usada para o processo de correspondência.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate" /> classe com a cadeia de caracteres de pesquisa especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public virtual bool Match (string target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Match(string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate.Match(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">O filtro de cadeia de caracteres.</param>
+        <summary>Indica se uma correspondência de maiusculas e minúsculas da cadeia de caracteres predicada está contida na cadeia de caracteres de destino.</summary>
+        <returns>
+          <see langword="true" />Se uma correspondência de maiusculas e minúsculas da cadeia de caracteres predicada estiver contida na cadeia de caracteres de destino; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchText">
+      <MemberSignature Language="C#" Value="protected string MatchText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MatchText" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.PropertyEditing.PropertyFilterPredicate.MatchText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.String" /> que é usado para corresponder uma cadeia de predicado de filtro de propriedade para uma cadeia de caracteres de destino.</summary>
+        <value>Uma cadeia de predicado que contém o texto para correspondência.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

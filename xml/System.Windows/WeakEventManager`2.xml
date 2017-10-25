@@ -1,0 +1,147 @@
+<Type Name="WeakEventManager&lt;TEventSource,TEventArgs&gt;" FullName="System.Windows.WeakEventManager&lt;TEventSource,TEventArgs&gt;">
+  <TypeSignature Language="C#" Value="public class WeakEventManager&lt;TEventSource,TEventArgs&gt; : System.Windows.WeakEventManager where TEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WeakEventManager`2&lt;TEventSource, (class System.EventArgs) TEventArgs&gt; extends System.Windows.WeakEventManager" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.WeakEventManager`2" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TEventSource" />
+    <TypeParameter Name="TEventArgs">
+      <Constraints>
+        <BaseTypeName>System.EventArgs</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Windows.WeakEventManager</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TEventSource">O tipo que gera o evento.</typeparam>
+    <typeparam name="TEventArgs">O tipo que mantém os dados do evento.</typeparam>
+    <summary>Fornece uma segurança de tipo <see cref="T:System.Windows.WeakEventManager" /> que permite que você especifique o manipulador de eventos para usar o padrão "ouvinte de evento fraco". Essa classe define um parâmetro de tipo para a origem do evento e um parâmetro de tipo para os dados de evento que são usados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.WeakEventManager> classe permite que você aproveite o padrão de ouvinte de evento fraco, especificando o evento para assinar, a origem do evento e o manipulador de eventos.  Você pode usar <xref:System.Windows.WeakEventManager%602> como uma alternativa à implementação de <xref:System.Windows.IWeakEventListener> interface e usando um especializado <xref:System.Windows.WeakEventManager>. Quando você chama <xref:System.Windows.WeakEventManager%602.AddHandler%2A>, a origem deve ser do tipo `TEventSource` e deve ter o manipulador de eventos que você passar `TEventArgs` como seus dados de eventos. Isso garante que a verificação de tipo ocorre em tempo de compilação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddHandler">
+      <MemberSignature Language="C#" Value="public static void AddHandler (TEventSource source, string eventName, EventHandler&lt;TEventArgs&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddHandler(!TEventSource source, string eventName, class System.EventHandler`1&lt;!TEventArgs&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.WeakEventManager`2.AddHandler(`0,System.String,System.EventHandler{`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="TEventSource" />
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="handler" Type="System.EventHandler&lt;TEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="source">O objeto de origem que gera o evento especificado.</param>
+        <param name="eventName">O nome do evento para se inscrever.</param>
+        <param name="handler">O delegado que manipula o evento.</param>
+        <summary>Adiciona o manipulador de eventos especificado ao evento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewListenerList">
+      <MemberSignature Language="C#" Value="protected override System.Windows.WeakEventManager.ListenerList NewListenerList ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.WeakEventManager/ListenerList NewListenerList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.WeakEventManager`2.NewListenerList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WeakEventManager+ListenerList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um novo objeto para conter ouvintes para um evento.</summary>
+        <returns>Um novo objeto para conter ouvintes para um evento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveHandler (TEventSource source, string eventName, EventHandler&lt;TEventArgs&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveHandler(!TEventSource source, string eventName, class System.EventHandler`1&lt;!TEventArgs&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.WeakEventManager`2.RemoveHandler(`0,System.String,System.EventHandler{`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="TEventSource" />
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="handler" Type="System.EventHandler&lt;TEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="source">O objeto de origem que gera o evento especificado.</param>
+        <param name="eventName">O nome do evento para remover o manipulador de.</param>
+        <param name="handler">O representante para remover</param>
+        <summary>Remove o manipulador de eventos especificado no evento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartListening">
+      <MemberSignature Language="C#" Value="protected override void StartListening (object source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StartListening(object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.WeakEventManager`2.StartListening(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">O objeto que gera o evento.</param>
+        <summary>Inicia a escuta para o evento no objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopListening">
+      <MemberSignature Language="C#" Value="protected override void StopListening (object source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopListening(object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.WeakEventManager`2.StopListening(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">O objeto que gera o evento.</param>
+        <summary>Para de escutar o evento no objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

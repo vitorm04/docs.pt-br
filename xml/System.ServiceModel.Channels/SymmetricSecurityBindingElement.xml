@@ -1,0 +1,391 @@
+<Type Name="SymmetricSecurityBindingElement" FullName="System.ServiceModel.Channels.SymmetricSecurityBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class SymmetricSecurityBindingElement : System.ServiceModel.Channels.SecurityBindingElement, System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SymmetricSecurityBindingElement extends System.ServiceModel.Channels.SecurityBindingElement implements class System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.SecurityBindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um elemento de associação personalizado dá suporte à segurança de canal usando criptografia simétrica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma associação personalizada contém uma coleção de elementos organizados em uma ordem específica de associação: o elemento que representa a parte superior da pilha de associação é adicionado pela primeira vez, o próximo elemento para baixo na pilha de associação, é adicionado em segundo lugar, e assim por diante.  
+  
+### <a name="to-add-this-class-to-a-binding"></a>Para adicionar essa classe para uma associação  
+  
+1.  Criará um <xref:System.ServiceModel.Channels.BindingElementCollection>.  
+  
+2.  Criar elementos de associação personalizada que está acima deste elemento de associação da pilha de associação, como opcional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> e <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
+  
+3.  Adicione elementos criados, na ordem mencionada anteriormente, para o <xref:System.ServiceModel.Channels.BindingElementCollection> usando o <xref:System.ServiceModel.Channels.BindingElementCollection.InsertItem%2A> método.  
+  
+4.  Criar uma instância de <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e adicioná-lo à coleção.  
+  
+5.  Adicione todos os elementos adicionais associação personalizada à coleção, como <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.  
+  
+> [!NOTE]
+>  Quando uma instância do objeto é criada, você deve tratar as propriedades de sua classe base, <xref:System.ServiceModel.Channels.SecurityBindingElement>, como imutável. Chamando `set` em algumas propriedades podem ter efeitos imprevisíveis: a associação pode se comportar como se a propriedade retida seu valor antigo, com uma falha de tempo de execução, sendo a única indicação de um problema. Duas propriedades conhecidas se comporta dessa maneira são <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> e <xref:System.ServiceModel.Channels.SecurityBindingElement.MessageSecurityVersion%2A>. Pode haver outras propriedades para o qual é true.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymmetricSecurityBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SymmetricSecurityBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como usar este construtor.  
+  
+ [!code-csharp[c_CustomBinding#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymmetricSecurityBindingElement (System.ServiceModel.Security.Tokens.SecurityTokenParameters protectionTokenParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.Tokens.SecurityTokenParameters protectionTokenParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SymmetricSecurityBindingElement.#ctor(System.ServiceModel.Security.Tokens.SecurityTokenParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="protectionTokenParameters" Type="System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="protectionTokenParameters">O <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" /> classe usando especificados parâmetros de token de segurança.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactoryCore&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactoryCore&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactoryCore&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SymmetricSecurityBindingElement.BuildChannelFactoryCore``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">To be added.</typeparam>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListenerCore&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListenerCore&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListenerCore&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SymmetricSecurityBindingElement.BuildChannelListenerCore``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">To be added.</typeparam>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SymmetricSecurityBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância dessa classe inicializado do atual.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.BindingElement" /> objeto com valores de propriedade iguais da instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso cria uma cópia completa da árvore atual de associação elemento objeto, também chamada de um clone profundo. Um clone profundo de um objeto cria uma cópia do objeto e uma cópia de tudo direta ou indiretamente referenciado por esse objeto. Isso também pode ser descrito como copiar o gráfico de objeto inteiro. Retornar um clone profundo permite que o tempo de execução suportar o caso em que várias associações personalizadas compartilham um elemento de associação personalizada. Se um clone profundo não for retornado, o comportamento de tempo de execução é indefinido.  
+  
+ Um clone superficial de um objeto, por outro lado, é uma cópia do objeto somente. Se o objeto contiver referências a outros objetos, a cópia superficial não cria cópias dos objetos chamados; em vez disso, ele copia somente as referências a objetos originais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SymmetricSecurityBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de objeto a obter.</typeparam>
+        <param name="context">Um <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Obtém um objeto especificado a partir de <see cref="T:System.ServiceModel.Channels.BindingContext" />.</summary>
+        <returns>O objeto especificado do tipo <paramref name="T" /> do <see cref="T:System.ServiceModel.Channels.BindingContext" />, ou <see langword="null" /> se o objeto não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método obtém o objeto especificado da classe base ou de um dos ancestrais dessa classe. O objeto retornado normalmente é uma coleção de propriedades, por exemplo, um objeto que implementa <xref:System.ServiceModel.Channels.ISecurityCapabilities>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageProtectionOrder">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.MessageProtectionOrder MessageProtectionOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Security.MessageProtectionOrder MessageProtectionOrder" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.MessageProtectionOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ordem de criptografia de mensagem e assinatura para essa associação.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.MessageProtectionOrder" /> que especifica como a mensagem está protegida. O padrão é <see cref="F:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se não houver nada na mensagem que é criptografada, o elemento de assinatura não é criptografado mesmo quando o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> está definida como <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Esse comportamento ocorre mesmo com associações fornecidas pelo sistema. No entanto, o WSDL gerado pelo [!INCLUDE[indigo2](~/includes/indigo2-md.md)] ainda contém o <`sp:EncryptSignature`> asserção.  
+  
+ Para obter uma lista de membros e suas descrições, consulte <xref:System.ServiceModel.Security.MessageProtectionOrder>.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir essa propriedade.  
+  
+ [!code-csharp[c_CustomBinding#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see langword="set" />e <see langword="value" /> é indefinido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionTokenParameters">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.Tokens.SecurityTokenParameters ProtectionTokenParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.Tokens.SecurityTokenParameters ProtectionTokenParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SymmetricSecurityBindingElement.ProtectionTokenParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenParameters</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a proteção parâmetros de token.</summary>
+        <value>O <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como definir essa propriedade.  
+  
+ [!code-csharp[c_CustomBinding#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireSignatureConfirmation">
+      <MemberSignature Language="C#" Value="public bool RequireSignatureConfirmation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireSignatureConfirmation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as assinaturas de mensagem devem ser confirmadas.</summary>
+        <value>
+          <see langword="true" />Se as assinaturas de mensagem devem ser confirmadas; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica se a assinatura deve ser criptografada. Se o valor for `true`, a assinatura principal deve ser criptografada e quaisquer elementos de confirmação de assinatura também devem ser criptografados. Se o valor for `false`, a assinatura principal não pode ser criptografada e quaisquer elementos de confirmação de assinatura não pode ser criptografados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKeyDerivation">
+      <MemberSignature Language="C#" Value="public override void SetKeyDerivation (bool requireDerivedKeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetKeyDerivation(bool requireDerivedKeys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SymmetricSecurityBindingElement.SetKeyDerivation(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requireDerivedKeys" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="requireDerivedKeys">
+          <see langword="true" />para indicar que as chaves derivadas são necessárias; Caso contrário, <see langword="false" />.</param>
+        <summary>Define um valor que indica se as chaves derivadas são necessárias.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chave derivada é criada a partir de uma chave existente e torna possível variar a chave usada no decorrer de uma conversa. Isso torna mais difícil para um hacker descriptografar a comunicação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SymmetricSecurityBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">O <see cref="T:System.ServiceModel.Description.MetadataExporter" /> que você pode usar para modificar o processo de exportação.</param>
+        <param name="context">O <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> que você pode usar para inserir a declaração de política personalizada.</param>
+        <summary>Exporta uma declaração de política personalizadas sobre associações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava instruções relacionadas à associação para as informações de WSDL expostas por um contrato específico e é usado pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] para se comunicar com clientes da existência desse elemento de associação personalizada na pilha de associação.  
+  
+ Esse método usa dois parâmetros: o <xref:System.ServiceModel.Description.MetadataExporter> e <xref:System.ServiceModel.Description.PolicyConversionContext> objetos. Use o <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A>, e <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> métodos de obter conjuntos de declarações de política que já foram exportados em vários escopos. Use esse método para adicionar suas próprias declarações de política para a coleção apropriada.  
+  
+ O <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A> propriedade expõe o <xref:System.ServiceModel.Description.ContractDescription> para o ponto de extremidade que está sendo exportado. Isso permite que esse método definir o escopo de suas declarações de política exportados corretamente. Por exemplo, os atributos de segurança no código podem adicionar comportamentos para o <xref:System.ServiceModel.Description.ContractDescription> que indicam onde as declarações de política de segurança devem ser adicionadas.  
+  
+ Depois que as declarações de política personalizadas são anexadas às informações WSDL, os clientes podem detectar e importar as asserções de associação personalizada através da implementação de <xref:System.ServiceModel.Description.IPolicyImportExtension> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SymmetricSecurityBindingElement.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa esta <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" /> instância.</summary>
+        <returns>Uma cadeia de caracteres que representa essa instância <see cref="T:System.ServiceModel.Channels.SymmetricSecurityBindingElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informações retornadas por <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.ToString%2A> inclui o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>, e <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.ProtectionTokenParameters%2A> valores da instância atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

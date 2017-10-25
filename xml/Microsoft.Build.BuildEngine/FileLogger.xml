@@ -1,0 +1,113 @@
+<Type Name="FileLogger" FullName="Microsoft.Build.BuildEngine.FileLogger">
+  <TypeSignature Language="C#" Value="public class FileLogger : Microsoft.Build.BuildEngine.ConsoleLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileLogger extends Microsoft.Build.BuildEngine.ConsoleLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.FileLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.BuildEngine.ConsoleLogger</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Estende o <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> para registrar mensagens para um arquivo em vez da janela do console.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:Microsoft.Build.BuildEngine.FileLogger> grava mensagens em um arquivo exatamente o mesmo formato que o <xref:Microsoft.Build.BuildEngine.ConsoleLogger> grava mensagens de janela do console.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLogger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.FileLogger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.BuildEngine.FileLogger" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um objeto <xref:Microsoft.Build.BuildEngine.Engine> e usa o método <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> para compilar um arquivo de projeto. A classe <xref:Microsoft.Build.BuildEngine.FileLogger> é usada para registrar em log as informações em um arquivo.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.FileLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">O <see cref="T:Microsoft.Build.Framework.IEventSource" /> a ser registrado com o agente.</param>
+        <summary>Registra o agente dos eventos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource, int32 nodeCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.FileLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+        <Parameter Name="nodeCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">O <see cref="T:Microsoft.Build.Framework.IEventSource" /> a ser registrado com o agente.</param>
+        <param name="nodeCount">Um inteiro que representa a ID do nó para a origem do evento.</param>
+        <summary>Registra o agente dos eventos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public override void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.FileLogger.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe o agente de log libera todos os recursos e fecha o arquivo para o qual o agente foi gravando.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

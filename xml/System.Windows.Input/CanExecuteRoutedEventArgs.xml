@@ -1,0 +1,179 @@
+<Type Name="CanExecuteRoutedEventArgs" FullName="System.Windows.Input.CanExecuteRoutedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class CanExecuteRoutedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CanExecuteRoutedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.CanExecuteRoutedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Windows.Input.CommandBinding.CanExecute" /> e <see cref="E:System.Windows.Input.CommandManager.PreviewCanExecute" /> eventos roteados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, uma fonte de comando, tais um <xref:System.Windows.Controls.MenuItem>, chamará o <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> método em um <xref:System.Windows.Input.RoutedCommand> para determinar se o comando pode ou não é possível executar o destino de comando atual.  Se <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> é definido como `false` um manipulador de eventos, a fonte de comando será desabilitado.  Por exemplo, se um <xref:System.Windows.Controls.MenuItem> atua como a fonte de comando para um comando e o comando não pode executar no destino de comando atual, em seguida, o <xref:System.Windows.Controls.MenuItem> será cinza se.  
+  
+ O <xref:System.Windows.Input.ICommand.CanExecuteChanged> evento notifica uma fonte de comando quando a capacidade de executar um comando pode ter sido alterado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Input.CanExecuteRoutedEventHandler> que retorna `true` somente se o destino do comando é um controle.  Primeiro, <xref:System.Windows.RoutedEventArgs.Source%2A> é convertido em um <xref:System.Windows.Controls.Control>.  Se <xref:System.Windows.RoutedEventArgs.Source%2A> é um <xref:System.Windows.Controls.Control>, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> é definido como `true`; caso contrário, ele é definido como `false`.  
+  
+ [!code-csharp[commandingoverviewsnippets#CommandingOverviewCanExecute](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcanexecute)]
+ [!code-vb[commandingoverviewsnippets#CommandingOverviewCanExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcanexecute)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanExecute">
+      <MemberSignature Language="C#" Value="public bool CanExecute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanExecute" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Input.RoutedCommand" /> associado com esse evento pode ser executado no destino de comando.</summary>
+        <value>
+          <see langword="true" />Se o evento pode ser executado no destino de comando; Caso contrário, <see langword="false" />.  O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitas fontes, de comando como <xref:System.Windows.Controls.MenuItem> e <xref:System.Windows.Controls.Button>, são desabilitados quando <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> é `false` e habilitado quando o <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> é `true`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Input.CanExecuteRoutedEventHandler> que retorna true se o destino do comando é um controle somente.  Primeiro o <xref:System.Windows.RoutedEventArgs.Source%2A> dados de evento são convertidos em um <xref:System.Windows.Controls.Control>.  Se for um <xref:System.Windows.Controls.Control>, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> é definido como `true`; caso contrário, ele é definido como `false`.  
+  
+ [!code-csharp[commandingoverviewsnippets#CommandingOverviewCanExecute](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcanexecute)]
+ [!code-vb[commandingoverviewsnippets#CommandingOverviewCanExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcanexecute)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ICommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ICommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.CanExecuteRoutedEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comando associado ao evento.</summary>
+        <value>O comando. A menos que o comando é um comando personalizado, isso é geralmente um <see cref="T:System.Windows.Input.RoutedCommand" />. Nenhum valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre comandos, consulte [Visão geral de comandos](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Input.CanExecuteRoutedEventHandler> que trata de vários comandos.  Se o <xref:System.Windows.Input.CanExecuteRoutedEventArgs.Command%2A> propriedade é igual de <xref:System.Windows.Input.MediaCommands.Play%2A> comando e o método `IsPlaying` retorna `false`, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> é definido como `true`; caso contrário, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> é definido como `false`.  Se o <xref:System.Windows.Input.CanExecuteRoutedEventArgs.Command%2A> propriedade é igual de <xref:System.Windows.Input.MediaCommands.Stop%2A> comando e o método `IsPlaying` retorna `true`, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> é definido como `true`; caso contrário, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> é definido como `false`.  
+  
+ [!code-csharp[commandingoverviewsnippets#CommandingOverviewMultipleCanExecute](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewmultiplecanexecute)]
+ [!code-vb[commandingoverviewsnippets#CommandingOverviewMultipleCanExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewmultiplecanexecute)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueRouting">
+      <MemberSignature Language="C#" Value="public bool ContinueRouting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContinueRouting" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.CanExecuteRoutedEventArgs.ContinueRouting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se os eventos roteados de entrada que invocou o comando devem continuar rotear por meio da árvore de elementos.</summary>
+        <value>
+          <see langword="true" />Se o evento roteado deve continuar a rotear por meio da árvore de elementos; Caso contrário, <see langword="false" />.   O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.CanExecuteRoutedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="target">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameter">
+      <MemberSignature Language="C#" Value="public object Parameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.CanExecuteRoutedEventArgs.Parameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados específicos do comando.</summary>
+        <value>Os dados de comando.  O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro de comando é usado para transmitir informações específicas ao comando quando ele é executado.  O tipo de dados é definido pelo comando.  
+  
+ <xref:System.Windows.Input.CanExecuteRoutedEventArgs.Parameter%2A>pode ser `null`. Muitos comandos não processar ou espera parâmetros de comando.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra usar um <xref:System.Windows.Controls.Button> como a origem de comando para um comando personalizado.  O <xref:System.Windows.Input.ICommandSource.Command%2A> propriedade do <xref:System.Windows.Controls.Button> é definido como personalizado <xref:System.Windows.Input.RoutedCommand> chamado `customComand` e <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> é usado para passar o valor da <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> propriedade de um <xref:System.Windows.Controls.Slider> controle.  Isso é realização usando associação de dados para associar o <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> para o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> propriedade.  O conversor na expressão de associação é um personalizado <xref:System.Windows.Data.IValueConverter> que converte <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> em uma <xref:System.Int32> antes de associação para o <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>.  
+  
+ [!code-xaml[invalidaterequerywithdispatchertimer#InvalidateSampleSliderCommandParameter](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/CSharp/Window1.xaml#invalidatesampleslidercommandparameter)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

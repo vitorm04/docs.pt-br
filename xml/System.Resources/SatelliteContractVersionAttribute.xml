@@ -1,0 +1,126 @@
+<Type Name="SatelliteContractVersionAttribute" FullName="System.Resources.SatelliteContractVersionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SatelliteContractVersionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SatelliteContractVersionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.SatelliteContractVersionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Instrui um <see cref="T:System.Resources.ResourceManager" /> objeto para pedir uma versão específica de um assembly satélite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="desktop-apps"></a>Aplicativos de área de trabalho  
+ Em aplicativos de área de trabalho, o <xref:System.Resources.SatelliteContractVersionAttribute> atributo estabelece um contrato entre um assembly principal e todos os seus satélites. Você aplica esse atributo para seu assembly principal e passe o número de versão dos assemblies de satélite que funcionará com esta versão do assembly principal. Quando o Gerenciador de recursos (<xref:System.Resources.ResourceManager> objeto) parece recursos, ele explicitamente carrega a versão de satélite especificada por esse atributo no assembly principal.  
+  
+ Quando você atualiza o assembly principal, você incrementa o número de versão do assembly. No entanto, não convém enviar novas cópias dos seus assemblies de satélite, se as existentes são compatíveis com o seu aplicativo. Nesse caso, incrementar o número de versão do assembly principal, mas deixe o número de versão do contrato satélite o mesmo. O Gerenciador de recursos usará os assemblies satélite existentes.  
+  
+ Se você quiser revisar um assembly satélite, mas não o assembly principal, aumente o número de versão sobre o satélite. Nesse caso, envie um assembly de diretiva publisher juntamente com seu assembly satélite informando que seu novo assembly satélite tem compatibilidade com versões anteriores com seu assembly satélite antigo. O Gerenciador de recursos ainda usará o número de contrato antigo gravado no assembly principal com base no <xref:System.Resources.SatelliteContractVersionAttribute> atributo; no entanto, o carregador fará uma associação com a versão do assembly satélite especificado pelo assembly de política.  
+  
+ Um fornecedor de um componente compartilhado usa um assembly de política de editor para criar uma instrução de compatibilidade sobre uma versão específica de um assembly de lançamento. Um assembly de política do publicador é um assembly de nome forte que tem um nome no formato `policy.<major>.<minor>.<ComponentAssemblyName>`e é registrada na. A política de publicador é gerada de um arquivo de configuração XML (consulte a) usando o [Al.exe (Assembly Linker)](~/docs/framework/tools/al-exe-assembly-linker.md) ferramenta. O Assembly Linker é usado com o `/link` opção de vincular o arquivo de configuração XML para um assembly de manifesto, que é armazenado no cache de assembly global. Os assemblies de diretiva publisher podem ser usados quando uma versão de manutenção (pacote de serviço) que contém correções de bug de lançamento de um fornecedor.  
+  
+## <a name="includewin8appnamelongincludeswin8-appname-long-mdmd-apps"></a>Aplicativos do [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]  
+ Esse atributo é ignorado em [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, como arquivos de índice (PRI) de recurso do pacote não tem semântica de controle de versão. Além disso, o [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] modelo de empacotamento requer que todos os recursos a enviar no mesmo pacote, sem a possibilidade de reimplantação assemblies satélite ou arquivos PRI.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SatelliteContractVersionAttribute (string version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.SatelliteContractVersionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="version">Uma cadeia de caracteres que especifica a versão dos assemblies satélite para carregar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.SatelliteContractVersionAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Resources.SatelliteContractVersionAttribute.Version%2A> propriedade com o `version` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="version" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.SatelliteContractVersionAttribute.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.ResourceManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão dos assemblies satélite com os recursos necessários.</summary>
+        <value>Uma cadeia de caracteres que contém a versão dos assemblies satélite com os recursos necessários.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade atual indica a versão dos assemblies de satélite que serão usados com o assembly principal marcadas com esse atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

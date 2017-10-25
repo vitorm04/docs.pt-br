@@ -1,0 +1,401 @@
+<Type Name="XmlRootAttribute" FullName="System.Xml.Serialization.XmlRootAttribute">
+  <TypeSignature Language="C#" Value="public class XmlRootAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlRootAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlRootAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Interface | System.AttributeTargets.ReturnValue)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Controla a serialização XML do destino do atributo como um elemento raiz XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlRootAttribute> pertence a uma família de atributos que controla como o <xref:System.Xml.Serialization.XmlSerializer> serializa ou desserializa um objeto. Para obter uma lista completa de atributos semelhantes, consulte [atributos que controle a serialização XML](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ Você pode aplicar o <xref:System.Xml.Serialization.XmlRootAttribute> para uma classe, estrutura, enumeração ou interface. Você também pode aplicar o atributo para o valor de retorno de um método de serviço da Web em XML.  
+  
+ Cada documento XML deve ter um único elemento raiz que contém todos os outros elementos. O <xref:System.Xml.Serialization.XmlRootAttribute> lhe permite controlar como o <xref:System.Xml.Serialization.XmlSerializer> gera o elemento raiz definindo determinadas propriedades. Por exemplo, especifique o nome do elemento XML gerado, definindo o <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A> propriedade.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+> [!NOTE]
+>  Você pode usar a palavra `XmlRoot` em seu código em vez do mais <xref:System.Xml.Serialization.XmlRootAttribute>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir aplica-se a <xref:System.Xml.Serialization.XmlRootAttribute> a uma classe. O atributo especifica o nome do elemento, namespace e se o elemento é qualificado e se o `xsi:nil` atributo será gerado se a classe é definida como `null`.  
+  
+ [!code-cpp[Classic XmlRootAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlRootAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlRootAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlRootAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlRootAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlRootAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlRootAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlRootAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlRootAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma instância de um <xref:System.Xml.Serialization.XmlRootAttribute> e atribui-lo para o <xref:System.Xml.Serialization.XmlAttributes.XmlRoot%2A> propriedade de um <xref:System.Xml.Serialization.XmlAttributes> objeto. Quando o <xref:System.Xml.Serialization.XmlSerializer> serializa o `MyClass` do objeto, ele usa o <xref:System.Xml.Serialization.XmlRootAttribute> objeto para substituir o elemento de raiz padrão.  
+  
+ [!code-cpp[Classic XmlRootAttribute.XmlRootAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlRootAttribute.XmlRootAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlRootAttribute.XmlRootAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlRootAttribute.XmlRootAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlRootAttribute.XmlRootAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlRootAttribute.XmlRootAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlRootAttribute (string elementName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlRootAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O nome do elemento raiz XML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlRootAttribute" /> e especifica o nome do elemento raiz XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma instância de XmlRootAttribute e usa-o para substituir a serialização de uma instância de uma classe denominada "Aluno".  
+  
+ [!code-cpp[XMLRootAttribute_Constructor#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XMLRootAttribute_Constructor/CPP/xmlrootattribute_constructor.cpp#1)]
+ [!code-csharp[XMLRootAttribute_Constructor#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XMLRootAttribute_Constructor/CS/xmlrootattribute_constructor.cs#1)]
+ [!code-vb[XMLRootAttribute_Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XMLRootAttribute_Constructor/VB/xmlrootattribute_constructor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public string DataType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlRootAttribute.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de dados XSD do elemento raiz XML.</summary>
+        <value>Um tipo de dados XSD (esquema XML), conforme definido pelo documento do World Wide Web Consortium (www.w3.org) chamado "XML Schema: DataTypes" (Esquema XML: tipos de dados).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir lista os tipos de dados simples de XSD com seus equivalentes do .NET.  
+  
+ Para o XSD `base64Binary` e `hexBinary` tipos de dados, use uma matriz de <xref:System.Byte> estruturas e aplicar um <xref:System.Xml.Serialization.XmlRootAttribute> com o <xref:System.Xml.Serialization.XmlRootAttribute.DataType%2A> propriedade definida como "base64Binary" ou "hexBinary", conforme apropriado. Para o XSD `time` e `date` tipos de dados, use o <xref:System.DateTime> digite e aplicar o <xref:System.Xml.Serialization.XmlRootAttribute> com o <xref:System.Xml.Serialization.XmlRootAttribute.DataType%2A> definido como "Data" ou "Hora".  
+  
+ Para cada tipo XSD é mapeado para uma cadeia de caracteres, aplicar o <xref:System.Xml.Serialization.XmlRootAttribute> com seus <xref:System.Xml.Serialization.XmlRootAttribute.DataType%2A> propriedade definida para o tipo XSD. No entanto, isso não altera o formato de serialização, somente o esquema para o membro.  
+  
+> [!NOTE]
+>  A propriedade diferencia maiusculas de minúsculas, portanto você deve configurá-lo exatamente a um dos tipos de dados XSD.  
+  
+> [!NOTE]
+>  Elemento passando dados binários como um XML é mais eficiente do que passá-lo como um atributo XML.  
+  
+ Para obter mais informações sobre tipos de dados XML, consulte o documento de World Wide Web Consortium (www.w3.org) chamado "XML Schema Part 2: tipos de dados".  
+  
+|Tipo de dados XSD|Tipo de dados .NET|  
+|-------------------|--------------------|  
+|anyURI|<xref:System.String>|  
+|base64Binary|Matriz de <xref:System.Byte> objetos|  
+|boolean|<xref:System.Boolean>|  
+|byte|<xref:System.SByte>|  
+|date|<xref:System.DateTime>|  
+|dateTime|<xref:System.DateTime>|  
+|decimal|<xref:System.Decimal>|  
+|double|<xref:System.Double>|  
+|ENTITY|<xref:System.String>|  
+|ENTIDADES|<xref:System.String>|  
+|float|<xref:System.Single>|  
+|gDay|<xref:System.String>|  
+|gMonth|<xref:System.String>|  
+|gMonthDay|<xref:System.String>|  
+|gYear|<xref:System.String>|  
+|gYearMonth|<xref:System.String>|  
+|hexBinary|Matriz de <xref:System.Byte> objetos|  
+|ID|<xref:System.String>|  
+|IDREF|<xref:System.String>|  
+|IDREFS|<xref:System.String>|  
+|int|<xref:System.Int32>|  
+|inteiro|<xref:System.String>|  
+|linguagem|<xref:System.String>|  
+|long|<xref:System.Int64>|  
+|Nome|<xref:System.String>|  
+|NCName|<xref:System.String>|  
+|negativeInteger|<xref:System.String>|  
+|NMTOKEN|<xref:System.String>|  
+|NMTOKENS|<xref:System.String>|  
+|normalizedString|<xref:System.String>|  
+|nonNegativeInteger|<xref:System.String>|  
+|nonPositiveInteger|<xref:System.String>|  
+|NOTATION|<xref:System.String>|  
+|positiveInteger|<xref:System.String>|  
+|QName|<xref:System.Xml.XmlQualifiedName>|  
+|recurringDate|<xref:System.String>|  
+|duration|<xref:System.String>|  
+|cadeia de caracteres|<xref:System.String>|  
+|short|<xref:System.Int16>|  
+|hora|<xref:System.DateTime>|  
+|Token|<xref:System.String>|  
+|unsignedByte|<xref:System.Byte>|  
+|unsignedInt|<xref:System.UInt32>|  
+|unsignedLong|<xref:System.UInt64>|  
+|unsignedShort|<xref:System.UInt16>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="public string ElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlRootAttribute.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do elemento XML que é gerado e reconhecido pelo <see cref="T:System.Xml.Serialization.XmlSerializer" /> da classe <see cref="M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)" /> e métodos <see cref="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.IO.Stream)" />, respectivamente.</summary>
+        <value>O nome do elemento raiz XML que é gerado e reconhecido em uma instância de documento XML. O padrão é o nome da classe serializada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifique um <xref:System.Xml.Serialization.XmlArrayItemAttribute.ElementName%2A> se você quiser que o nome do elemento XML gerado seja diferente do nome da classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância do <xref:System.Xml.Serialization.XmlRootAttribute> classe e define o <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A> propriedade para um novo valor. O objeto é usado para criar um <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto usado para substituir a serialização de um objeto.  
+  
+ [!code-cpp[XMLRootAttribute_ElementName#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XMLRootAttribute_ElementName/CPP/xmlrootattribute_elementname.cpp#1)]
+ [!code-csharp[XMLRootAttribute_ElementName#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XMLRootAttribute_ElementName/CS/xmlrootattribute_elementname.cs#1)]
+ [!code-vb[XMLRootAttribute_ElementName#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XMLRootAttribute_ElementName/VB/xmlrootattribute_elementname.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullable">
+      <MemberSignature Language="C#" Value="public bool IsNullable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlRootAttribute.IsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Xml.Serialization.XmlSerializer" /> deve serializar um membro que é definido como <see langword="null" /> para o atributo <see langword="xsi:nil" /> definido como <see langword="true" />.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Xml.Serialization.XmlSerializer" /> gera o atributo <see langword="xsi:nil" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A especificação do esquema XML para estruturas permite que um documento XML indicar explicitamente que o conteúdo de um elemento está ausente. Esse elemento contém o atributo `xsi:nil` definido como `true`. Para obter mais informações, consulte a especificação de http://www.w3.org/TR/xmlschema-1/ denominada `XML Schema Part 1: Structures`.  
+  
+ Se o <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> está definida como `true`, o `xsi:nil` atributo é gerado, conforme mostrado no seguinte XML:  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:nil="true" />  
+```  
+  
+ Se o <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> é de propriedade `false`, um elemento vazio é criado, conforme mostrado no código a seguir:  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" />  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe denominada `Group`. O exemplo aplica o <xref:System.Xml.Serialization.XmlRootAttribute> para a classe e define o <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> propriedade `false`.  
+  
+ [!code-cpp[Classic XmlRootAttribute.IsNullable Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlRootAttribute.IsNullable Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlRootAttribute.IsNullable Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlRootAttribute.IsNullable Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlRootAttribute.IsNullable Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlRootAttribute.IsNullable Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlRootAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace para o elemento raiz XML.</summary>
+        <value>O namespace do elemento XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlArrayItemAttribute.Namespace%2A> propriedade de acordo com a especificação de World Wide Web Consortium (www.w3.org) denominada `Namespaces in XML`.  
+  
+ Para criar espaços de nomes prefixados no documento XML, crie um <xref:System.Xml.Serialization.XmlSerializerNamespaces> objeto que contém todos os pares de prefixo de namespace. O namespace que você definir para cada <xref:System.Xml.Serialization.XmlArrayAttribute> devem estar contidos no <xref:System.Xml.Serialization.XmlSerializerNamespaces> objeto. Quando o <xref:System.Xml.Serialization.XmlSerializer> gera o documento, ele prefixos corretamente o nome do elemento para cada item da matriz.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir se aplica a <xref:System.Xml.Serialization.XmlRootAttribute> como uma classe e define o <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> propriedade.  
+  
+ [!code-cpp[Classic XmlRootAttribute.Namespace Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlRootAttribute.Namespace Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlRootAttribute.Namespace Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlRootAttribute.Namespace Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlRootAttribute.Namespace Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlRootAttribute.Namespace Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

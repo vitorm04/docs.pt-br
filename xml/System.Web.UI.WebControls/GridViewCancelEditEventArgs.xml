@@ -1,0 +1,107 @@
+<Type Name="GridViewCancelEditEventArgs" FullName="System.Web.UI.WebControls.GridViewCancelEditEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewCancelEditEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewCancelEditEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewCancelEditEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.GridView.RowCancelingEdit" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.GridView> controlar gera o <xref:System.Web.UI.WebControls.GridView.RowCancelingEdit> evento quando o botão Cancelar (um botão com sua `CommandName` propriedade definida como "Cancel") for clicado, mas antes de sair do modo de edição. Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada, como interromper a operação de cancelamento se ele deve colocar a linha em um estado indesejado, sempre que esse evento ocorre.  
+  
+ Um <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs> objeto é passado para o método de manipulação de eventos, que permite que você determine o índice da linha que contém o botão Cancelar que gerou o evento e para indicar que a operação de cancelamento deve ser interrompida. Para interromper a operação de cancelamento, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade `true`.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs>, consulte o <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs> objeto passado para o método de manipulação de eventos para determinar o índice da linha que contém o botão Cancelar clicado pelo usuário.  
+  
+ [!code-aspx-csharp[GridViewRowCancellingEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCancellingEdit/CS/gridviewrowcancellingeditcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCancellingEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCancellingEdit/VB/gridviewrowcancellingeditvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewCancelEditEventArgs (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewCancelEditEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha que contém o botão Cancelar que gerou o evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.GridViewCancelEditEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs> classe.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs.RowIndex%2A>|O valor de `rowIndex` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewCancelEditEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice da linha que contém o botão Cancelar que gerou o evento.</summary>
+        <value>O índice baseado em zero da linha que contém o botão Cancelar que gerou o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs.RowIndex%2A> propriedade para determinar o índice da linha que contém o botão Cancelar é clicado pelo usuário. O índice de linha geralmente é usado para recuperar essa linha do <xref:System.Web.UI.WebControls.GridView.Rows%2A> coleção do <xref:System.Web.UI.WebControls.GridView> controle, que permite acessar propriedades da linha.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewCancelEditEventArgs.RowIndex%2A> para determinar o índice da linha que contém o botão Cancelar é clicado pelo usuário.  
+  
+ [!code-aspx-csharp[GridViewRowCancellingEdit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowCancellingEdit/CS/gridviewrowcancellingeditcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowCancellingEdit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowCancellingEdit/VB/gridviewrowcancellingeditvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

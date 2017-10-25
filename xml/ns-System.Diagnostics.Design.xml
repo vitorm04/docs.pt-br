@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.Design">
+  <Docs>
+    <summary>O <see cref="N:System.Diagnostics.Design" /> namespace contém classes que podem ser usados para estender o suporte de tempo de design para instrumentação e monitoramento de aplicativos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

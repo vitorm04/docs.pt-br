@@ -1,0 +1,820 @@
+<Type Name="XmlAttributeCollection" FullName="System.Xml.XmlAttributeCollection">
+  <TypeSignature Language="C#" Value="public sealed class XmlAttributeCollection : System.Xml.XmlNamedNodeMap, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlAttributeCollection extends System.Xml.XmlNamedNodeMap implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlAttributeCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XmlNamedNodeMap</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma coleção de atributos que podem ser acessados por nome ou índice.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `XmlAttributeCollection`estende o <xref:System.Xml.XmlNamedNodeMap> classe adicionando fortemente tipado métodos auxiliares. Você pode usar essa classe para adicionar, remover ou modificar os atributos da coleção. `XmlAttributeCollection`é retornado pelo <xref:System.Xml.XmlElement.Attributes%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute Append (System.Xml.XmlAttribute node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlAttribute Append(class System.Xml.XmlAttribute node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.Append(System.Xml.XmlAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Xml.XmlAttribute" /> a ser inserido.</param>
+        <summary>Insere o atributo especificado como o último nó na coleção.</summary>
+        <returns>O <see langword="XmlAttribute" /> a ser acrescentado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo com o mesmo nome já está presente na coleção, o atributo original é removido da coleção e `node` é adicionada ao final da coleção.  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo atributo para um documento.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.Append Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Append Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.Append Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Append Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.Append Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Append Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="node" /> foi criado com base em um documento diferente daquele que criou essa coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Xml.XmlAttribute[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Xml.XmlAttribute[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Xml.XmlAttribute[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz que é o destino dos objetos copiados dessa coleção.</param>
+        <param name="index">O índice da matriz em que a cópia começa.</param>
+        <summary>Copia todas as <see cref="T:System.Xml.XmlAttribute" /> objetos desta coleção na matriz fornecida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa `CopyTo` para copiar todos os atributos da coleção em uma matriz.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertAfter">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute InsertAfter (System.Xml.XmlAttribute newNode, System.Xml.XmlAttribute refNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlAttribute InsertAfter(class System.Xml.XmlAttribute newNode, class System.Xml.XmlAttribute refNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.InsertAfter(System.Xml.XmlAttribute,System.Xml.XmlAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newNode" Type="System.Xml.XmlAttribute" />
+        <Parameter Name="refNode" Type="System.Xml.XmlAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="newNode">O <see cref="T:System.Xml.XmlAttribute" /> a ser inserido.</param>
+        <param name="refNode">O <see cref="T:System.Xml.XmlAttribute" /> que é o atributo de referência. <c>newNode</c> é posicionada após o <c>refNode</c>.</param>
+        <summary>Insere o atributo especificado imediatamente após o atributo de referência especificado.</summary>
+        <returns>O <see langword="XmlAttribute" /> a ser inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo com o mesmo nome já está presente na coleção, o atributo original é removido da coleção e `newNode` é inserido na coleção. Se `refNode` é `null`, `newNode` é inserido no início da coleção.  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo atributo para um documento.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.InsertAfter Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.InsertAfter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.InsertAfter Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.InsertAfter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.InsertAfter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.InsertAfter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="newNode" /> foi criado a partir de um documento diferente daquela que criou esta coleção. Ou o <paramref name="refNode" /> não é um membro dessa coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertBefore">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute InsertBefore (System.Xml.XmlAttribute newNode, System.Xml.XmlAttribute refNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlAttribute InsertBefore(class System.Xml.XmlAttribute newNode, class System.Xml.XmlAttribute refNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.InsertBefore(System.Xml.XmlAttribute,System.Xml.XmlAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newNode" Type="System.Xml.XmlAttribute" />
+        <Parameter Name="refNode" Type="System.Xml.XmlAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="newNode">O <see cref="T:System.Xml.XmlAttribute" /> a ser inserido.</param>
+        <param name="refNode">O <see cref="T:System.Xml.XmlAttribute" /> que é o atributo de referência. <c>newNode</c> é colocada antes do <c>refNode</c>.</param>
+        <summary>Insere o atributo especificado imediatamente antes do atributo de referência especificado.</summary>
+        <returns>O <see langword="XmlAttribute" /> a ser inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo com o mesmo nome já está presente na coleção, o atributo original é removido da coleção e `newNode` é inserido na coleção. Se `refNode` é `null`, `newNode` é inserido no final da coleção.  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo atributo para um documento.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.InsertBefore Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.InsertBefore Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.InsertBefore Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.InsertBefore Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.InsertBefore Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.InsertBefore Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="newNode" /> foi criado a partir de um documento diferente daquela que criou esta coleção. Ou o <paramref name="refNode" /> não é um membro dessa coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemOf">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute this[int i] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlAttribute ItemOf(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttributeCollection.ItemOf(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">O índice do atributo.</param>
+        <summary>Obtém o atributo com o índice especificado.</summary>
+        <value>O <see cref="T:System.Xml.XmlAttribute" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento). É equivalente a chamar <xref:System.Xml.XmlNamedNodeMap.Item%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe todos os atributos da coleção.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.this Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.this Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O índice que está sendo transmitido está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemOf">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlAttribute ItemOf(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttributeCollection.ItemOf(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome qualificado do atributo.</param>
+        <summary>Obtém o atributo com o nome especificado.</summary>
+        <value>O <see cref="T:System.Xml.XmlAttribute" /> com o nome especificado. Se o atributo não existir, essa propriedade retornará <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento). É equivalente a chamar <xref:System.Xml.XmlNamedNodeMap.GetNamedItem%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir remove um atributo do documento.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.Remove Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Remove Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemOf">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute this[string localName, string namespaceURI] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlAttribute ItemOf(string, string)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttributeCollection.ItemOf(System.String,System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localName" Type="System.String" />
+        <Parameter Name="namespaceURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localName">O nome local do atributo.</param>
+        <param name="namespaceURI">O URI do namespace do atributo.</param>
+        <summary>Obtém o atributo com o nome local especificado e o identificador de recurso uniforme (URI) do namespace.</summary>
+        <value>O <see cref="T:System.Xml.XmlAttribute" /> com o nome do local especificado e o URI de namespace. Se o atributo não existir, essa propriedade retornará <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento). É equivalente a chamar <xref:System.Xml.XmlNamedNodeMap.GetNamedItem%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prepend">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute Prepend (System.Xml.XmlAttribute node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlAttribute Prepend(class System.Xml.XmlAttribute node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.Prepend(System.Xml.XmlAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Xml.XmlAttribute" /> a ser inserido.</param>
+        <summary>Insere o atributo especificado como o primeiro nó na coleção.</summary>
+        <returns>O <see langword="XmlAttribute" /> adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo com o mesmo nome já está presente na coleção, o atributo original é removido da coleção e `node` é adicionado ao início da coleção.  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo atributo para um documento.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.Prepend Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Prepend Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.Prepend Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Prepend Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.Prepend Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Prepend Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute Remove (System.Xml.XmlAttribute node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlAttribute Remove(class System.Xml.XmlAttribute node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.Remove(System.Xml.XmlAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Xml.XmlAttribute" /> a ser removido.</param>
+        <summary>Remove o atributo especificado da coleção.</summary>
+        <returns>O nó removido ou <see langword="null" />, se não for encontrado na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir remove um atributo do documento.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.Remove Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Remove Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.RemoveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os atributos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir remove todos os atributos do documento.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.RemoveAll Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.RemoveAll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.RemoveAll Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.RemoveAll Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.RemoveAll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.RemoveAll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute RemoveAt (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlAttribute RemoveAt(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">O índice do nó a ser removido. O primeiro nó tem um índice 0.</param>
+        <summary>Remove o atributo correspondente ao índice especificado da coleção.</summary>
+        <returns>Retorna <see langword="null" /> se não houver nenhum atributo no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir remove um atributo do documento.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.RemoveAt Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.RemoveAt Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.RemoveAt Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.RemoveAt Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.RemoveAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.RemoveAt Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNamedItem">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNode SetNamedItem (System.Xml.XmlNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlNode SetNamedItem(class System.Xml.XmlNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.SetNamedItem(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Um nó de atributo para armazenar nesta coleção. O nó mais tarde será acessível usando o nome do nó. Se um nó com esse nome já estiver presente na coleção, ele será substituído pelo novo, caso contrário, o nó será acrescentado ao final da coleção.</param>
+        <summary>Adiciona um <see cref="T:System.Xml.XmlNode" /> usando sua propriedade <see cref="P:System.Xml.XmlNode.Name" /></summary>
+        <returns>Se o <paramref name="node" /> substituir um nó existente com o mesmo nome, o nó antigo será retornado, caso contrário, o nó adicionado será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir adiciona um novo atributo para um documento.  
+  
+ [!code-cpp[Classic WebData XmlAttributeCollection.SetNamedItem Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.SetNamedItem Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlAttributeCollection.SetNamedItem Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlAttributeCollection.SetNamedItem Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlAttributeCollection.SetNamedItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlAttributeCollection.SetNamedItem Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="node" /> foi criado com base em um <see cref="T:System.Xml.XmlDocument" /> diferente daquele que criou essa coleção.  
+  
+ Isso <see langword="XmlAttributeCollection" /> é somente leitura.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="node" />é um <see cref="T:System.Xml.XmlAttribute" /> que já é um atributo de outro <see cref="T:System.Xml.XmlElement" /> objeto. Para reutilizar atributos em outros elementos, você deve clonar os objetos <see langword="XmlAttribute" /> que deseja reutilizar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlAttributeCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz que é o destino dos objetos copiados dessa coleção.</param>
+        <param name="index">O índice da matriz em que a cópia começa.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.XmlAttributeCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#Count" />.</summary>
+        <value>Retorna um <see langword="int" /> que contém a contagem dos atributos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.XmlAttributeCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#IsSynchronized" />.</summary>
+        <value>Retorna <see langword="true" /> se a coleção é sincronizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.XmlAttributeCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#SyncRoot" />.</summary>
+        <value>Retorna o <see cref="T:System.Object" /> que é a raiz da coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.XmlAttributeCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

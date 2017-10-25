@@ -1,0 +1,1468 @@
+<Type Name="ConfigurationElementCollection" FullName="System.Configuration.ConfigurationElementCollection">
+  <TypeSignature Language="C#" Value="public abstract class ConfigurationElementCollection : System.Configuration.ConfigurationElement, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ConfigurationElementCollection extends System.Configuration.ConfigurationElement implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationElementCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um elemento de configuração que contém uma coleção de elementos filho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationElementCollection> representa uma coleção de elementos em um arquivo de configuração.  
+  
+> [!NOTE]
+>  Um elemento dentro de um arquivo de configuração se refere a um elemento XML básico ou uma seção. Um elemento simples é uma marca XML com os atributos relacionados, se houver. Um elemento simples constitui uma seção. Seções complexas podem conter um ou mais elementos simples, uma coleção de elementos e outras seções.  
+  
+ Você usa o <xref:System.Configuration.ConfigurationElementCollection> para trabalhar com uma coleção de <xref:System.Configuration.ConfigurationElement> objetos. Implementar essa classe para adicionar uma coleção de personalizado <xref:System.Configuration.ConfigurationElement> elementos para um <xref:System.Configuration.ConfigurationSection>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Configuration.ConfigurationElementCollection>.  
+  
+ O primeiro exemplo consiste em três classes: `UrlsSection`, `UrlsCollection` e `UrlConfigElement`. O `UrlsSection` classe usa a <xref:System.Configuration.ConfigurationCollectionAttribute> para definir uma seção de configuração personalizada. Esta seção contém uma coleção de URL (definido pelo `UrlsCollection` classe) dos elementos de URL (definido pelo `UrlConfigElement` classe).  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/customcollectionsection.cs#1)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#1)]  
+  
+ Este segundo exemplo de código usa as classes especificadas anteriormente. Você combina esses dois exemplos em um projeto de aplicativo de console.  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#31](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/usingconfigurationcollectionelement.cs#31)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#31](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/usingconfigurationcollectionelement.vb#31)]  
+  
+ Quando você executa o aplicativo de console, uma instância do `UrlsSection` classe é criada e os seguintes elementos de configuração são gerados no arquivo de configuração do aplicativo:  
+  
+```  
+<configuration>  
+    <configSections>  
+        <section name="MyUrls" type="UrlsSection,   
+          ConfigurationElementCollection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
+    </configSections>  
+    <MyUrls>  
+        <urls>  
+           <add name="Contoso" url="http://www.contoso.com" port="4040 />  
+        </urls>  
+    </MyUrls>  
+</configuration  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Você pode usar um modelo declarativo de codificação (atribuído) ou por uma programação para criar um elemento de configuração personalizado.  
+  
+ O modelo de programação requer para cada atributo de elemento criar uma propriedade para obter e definir seu valor e adicioná-lo para o recipiente de propriedades internas de subjacente <see cref="T:System.Configuration.ConfigurationElement" /> classe base.  
+  
+ O modelo declarativo, também conhecido como o modelo atribuída, permite que você defina um atributo de elemento usando uma propriedade e configurá-lo com atributos. Esses atributos instruem o sistema de configuração ASP.NET sobre os tipos de propriedades e seus valores padrão. ASP.NET pode usar reflexão para obter essas informações e, em seguida, criar o elemento de objetos de propriedade e executar a inicialização exigida.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConfigurationElementCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Criar uma nova instância do <xref:System.Configuration.ConfigurationElementCollection> quando seu aplicativo precisa para criar um personalizado <xref:System.Configuration.ConfigurationElementCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConfigurationElementCollection (System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.#ctor(System.Collections.IComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">O <see cref="T:System.Collections.IComparer" /> comparador para usar.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.IComparer> é usado para definir um comparador para usar. Por exemplo, você pode usar um comparador de maiusculas e minúsculas para tornar a chave não diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="comparer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddElementName">
+      <MemberSignature Language="C#" Value="protected string AddElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AddElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.AddElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do <see cref="T:System.Configuration.ConfigurationElement" /> para associar com a operação de adição no <see cref="T:System.Configuration.ConfigurationElementCollection" /> Quando substituído em uma classe derivada.</summary>
+        <value>O nome do elemento.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O valor selecionado começa com o prefixo reservado "configuração" ou "bloqueio".</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="BaseAdd">
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona um <see cref="T:System.Configuration.ConfigurationElement" /> para um <see cref="T:System.Configuration.ConfigurationElementCollection" /> Quando substituído em uma classe derivada da instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Configuration.ConfigurationElementCollection.BaseAdd%2A> método para adicionar um novo <xref:System.Configuration.ConfigurationElement> à coleção. Substituir em uma classe derivada, se o comportamento personalizado é necessário quando o elemento é adicionado.  
+  
+ Ao adicionar, um elemento é considerado uma duplicata apenas se as chaves são idênticas, mas os valores são diferentes. Elementos com chaves e valores idênticos são aceitos silenciosamente, porque os elementos não competem. No entanto, um elemento com uma chave idêntica, mas um valor diferente não pode ser adicionado porque não há nenhuma lógica para determinar qual dos valores concorrentes deve ser aceito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BaseAdd">
+      <MemberSignature Language="C#" Value="protected virtual void BaseAdd (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void BaseAdd(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseAdd(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Configuration.ConfigurationElement" /> a ser adicionado.</param>
+        <summary>Adiciona um elemento de configuração ao <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Configuration.ConfigurationElementCollection.BaseAdd%2A> método para adicionar um novo <xref:System.Configuration.ConfigurationElement> à coleção. Substituí-la em uma classe derivada, se o comportamento personalizado é necessário quando o elemento é adicionado.  
+  
+ Ao adicionar, um elemento é considerado uma duplicata apenas se as chaves são idênticas, mas os valores são diferentes. Elementos com chaves e valores idênticos são aceitos silenciosamente, porque os elementos não competem. No entanto, um elemento com uma chave idêntica, mas um valor diferente não pode ser adicionado porque não há nenhuma lógica para determinar qual dos valores concorrentes deve ser aceito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Configuration.ConfigurationElementCollection.BaseAdd%2A> método e como chamá-lo de um `Add` método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/customcollectionsection.cs#2)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAdd">
+      <MemberSignature Language="C#" Value="protected void BaseAdd (System.Configuration.ConfigurationElement element, bool throwIfExists);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BaseAdd(class System.Configuration.ConfigurationElement element, bool throwIfExists) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseAdd(System.Configuration.ConfigurationElement,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="throwIfExists" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Configuration.ConfigurationElement" /> a ser adicionado.</param>
+        <param name="throwIfExists">
+          <see langword="true" />para lançar uma exceção se o <see cref="T:System.Configuration.ConfigurationElement" /> especificado já está contido no <see cref="T:System.Configuration.ConfigurationElementCollection" />; caso contrário, <see langword="false" />.</param>
+        <summary>Adiciona um elemento de configuração para a coleção de elementos de configuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o parâmetro opcional `throwIfExists` para lançar uma <xref:System.Exception> exceção se especificado <xref:System.Configuration.ConfigurationElement> objeto já existe no <xref:System.Configuration.ConfigurationElementCollection> coleção.  
+  
+ Um elemento é considerado uma duplicata apenas se as chaves são idênticas, mas os valores são diferentes. Elementos com chaves e valores idênticos são aceitos silenciosamente, porque os elementos não competem. No entanto, um elemento com uma chave idêntica, mas um valor diferente não pode ser adicionado porque não há nenhuma lógica para determinar qual dos valores concorrentes deve ser aceito.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">O <see cref="T:System.Configuration.ConfigurationElement" /> adicionar já existe no <see cref="T:System.Configuration.ConfigurationElementCollection" /> e <paramref name="throwIfExists" /> parâmetro é <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAdd">
+      <MemberSignature Language="C#" Value="protected virtual void BaseAdd (int index, System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void BaseAdd(int32 index, class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseAdd(System.Int32,System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local do índice no qual adicionar especificado <see cref="T:System.Configuration.ConfigurationElement" />.</param>
+        <param name="element">O <see cref="T:System.Configuration.ConfigurationElement" /> a ser adicionado.</param>
+        <summary>Adiciona um elemento de configuração para a coleção de elementos de configuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `index` parâmetro para adicionar o <xref:System.Configuration.ConfigurationElement> o objeto para o <xref:System.Configuration.ConfigurationElementCollection> em um local de índice específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseClear">
+      <MemberSignature Language="C#" Value="protected void BaseClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void BaseClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os objetos de configuração do elemento da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Configuration.ConfigurationElementCollection.BaseClear%2A> método é chamado, ele remove todas as <xref:System.Configuration.ConfigurationElement> objetos da coleção. Ele também insere um `clear` diretiva no arquivo de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como chamar o <xref:System.Configuration.ConfigurationElementCollection.BaseClear%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/customcollectionsection.cs#3)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">A configuração é somente leitura.  
+  
+ \- ou -  
+  
+ Um item de coleção foi bloqueado em uma configuração de nível superior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGet">
+      <MemberSignature Language="C#" Value="protected System.Configuration.ConfigurationElement BaseGet (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Configuration.ConfigurationElement BaseGet(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseGet(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição do índice de <see cref="T:System.Configuration.ConfigurationElement" /> para retornar.</param>
+        <summary>Obtém o elemento de configuração no local do índice especificado.</summary>
+        <returns>O <see cref="T:System.Configuration.ConfigurationElement" /> no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como chamar o <xref:System.Configuration.ConfigurationElementCollection.BaseGet%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/customcollectionsection.cs#8)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">
+          <paramref name="index" /> é menor que <see langword="0" />.  
+  
+ \- ou -  
+  
+ Não há nenhum <see cref="T:System.Configuration.ConfigurationElement" /> no local especificado <paramref name="index" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGet">
+      <MemberSignature Language="C#" Value="protected System.Configuration.ConfigurationElement BaseGet (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Configuration.ConfigurationElement BaseGet(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseGet(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a retornar.</param>
+        <summary>Retorna o elemento de configuração com a chave especificada.</summary>
+        <returns>O <see cref="T:System.Configuration.ConfigurationElement" /> com a chave especificada; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationElementCollection.BaseGet%2A> método `null` se não houver nenhum <xref:System.Configuration.ConfigurationElement> objeto com a chave especificada na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como chamar o <xref:System.Configuration.ConfigurationElementCollection.BaseGet%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/customcollectionsection.cs#9)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGetAllKeys">
+      <MemberSignature Language="C#" Value="protected object[] BaseGetAllKeys ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance object[] BaseGetAllKeys() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseGetAllKeys" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz das chaves para todos os elementos de configuração contidos no <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <returns>Uma matriz que contém as chaves de todos os <see cref="T:System.Configuration.ConfigurationElement" /> objetos contidos no <see cref="T:System.Configuration.ConfigurationElementCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGetKey">
+      <MemberSignature Language="C#" Value="protected object BaseGetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance object BaseGetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseGetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local do índice para o <see cref="T:System.Configuration.ConfigurationElement" />.</param>
+        <summary>Obtém a chave para o <see cref="T:System.Configuration.ConfigurationElement" /> no local do índice especificado.</summary>
+        <returns>A chave especificada <see cref="T:System.Configuration.ConfigurationElement" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">
+          <paramref name="index" /> é menor que <see langword="0" />.  
+  
+ \- ou -  
+  
+ Não há nenhum <see cref="T:System.Configuration.ConfigurationElement" /> no local especificado <paramref name="index" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseIndexOf">
+      <MemberSignature Language="C#" Value="protected int BaseIndexOf (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int32 BaseIndexOf(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseIndexOf(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Configuration.ConfigurationElement" /> para o local do índice especificado.</param>
+        <summary>Indica o índice especificado <see cref="T:System.Configuration.ConfigurationElement" />.</summary>
+        <returns>O índice especificado <see cref="T:System.Configuration.ConfigurationElement" />; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como chamar o <xref:System.Configuration.ConfigurationElementCollection.BaseIndexOf%2A> método.  
+  
+ [!code-vb[System.Configuration.ConfigurationElementCollection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseIsRemoved">
+      <MemberSignature Language="C#" Value="protected bool BaseIsRemoved (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance bool BaseIsRemoved(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseIsRemoved(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento para verificar.</param>
+        <summary>Indica se o <see cref="T:System.Configuration.ConfigurationElement" /> com a chave especificada foi removido do <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Configuration.ConfigurationElement" /> com a chave especificada foi removido; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseRemove">
+      <MemberSignature Language="C#" Value="protected void BaseRemove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void BaseRemove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseRemove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do <see cref="T:System.Configuration.ConfigurationElement" /> para remover.</param>
+        <summary>Remove um <see cref="T:System.Configuration.ConfigurationElement" /> da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationElementCollection.BaseRemove%2A> método insere um `<remove>` diretiva no arquivo de configuração para o <xref:System.Configuration.ConfigurationElement> com a chave especificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como chamar o <xref:System.Configuration.ConfigurationElementCollection.BaseRemove%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/customcollectionsection.cs#3)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Não <see cref="T:System.Configuration.ConfigurationElement" /> com a chave existe na coleção, o elemento já foi removido ou o elemento não pode ser removido porque o valor de seu <see cref="P:System.Configuration.ConfigurationProperty.Type" /> não é <see cref="F:System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseRemoveAt">
+      <MemberSignature Language="C#" Value="protected void BaseRemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void BaseRemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.BaseRemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição do índice de <see cref="T:System.Configuration.ConfigurationElement" /> para remover.</param>
+        <summary>Remove o <see cref="T:System.Configuration.ConfigurationElement" /> no local do índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationElementCollection.BaseRemoveAt%2A> método insere um `<remove>` diretiva no arquivo de configuração para o elemento no local do índice especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">A configuração é somente leitura.  
+  
+ \- ou -  
+  
+ <paramref name="index" />é menor que <see langword="0" /> ou maior que o número de <see cref="T:System.Configuration.ConfigurationElement" /> objetos na coleção.  
+  
+ \- ou -  
+  
+ O <see cref="T:System.Configuration.ConfigurationElement" /> já foi removido.  
+  
+ \- ou -  
+  
+ O valor de <see cref="T:System.Configuration.ConfigurationElement" /> objeto foi bloqueado em um nível superior.  
+  
+ \- ou -  
+  
+ O <see cref="T:System.Configuration.ConfigurationElement" /> objeto foi herdado.  
+  
+ \- ou -  
+  
+ O valor de <see cref="T:System.Configuration.ConfigurationElement" /> do objeto <see cref="P:System.Configuration.ConfigurationProperty.Type" /> não é <see cref="F:System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap" /> ou <see cref="F:System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMapAlternate" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearElementName">
+      <MemberSignature Language="C#" Value="protected string ClearElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClearElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.ClearElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome para o <see cref="T:System.Configuration.ConfigurationElement" /> para associar com a operação de limpeza no <see cref="T:System.Configuration.ConfigurationElementCollection" /> Quando substituído em uma classe derivada.</summary>
+        <value>O nome do elemento.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O valor selecionado começa com o prefixo reservado "configuração" ou "bloqueio".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionType">
+      <MemberSignature Language="C#" Value="public virtual System.Configuration.ConfigurationElementCollectionType CollectionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationElementCollectionType CollectionType" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.CollectionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementCollectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <value>O <see cref="T:System.Configuration.ConfigurationElementCollectionType" /> dessa coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo será um <xref:System.Configuration.ConfigurationElementCollectionType.BasicMap> ou um <xref:System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap> campo. Para obter mais informações, consulte <xref:System.Configuration.ConfigurationElementCollectionType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Configuration.ConfigurationElementCollection.CollectionType%2A> propriedade.  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/customcollectionsection.cs#5)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Configuration.ConfigurationElement[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Configuration.ConfigurationElement[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.CopyTo(System.Configuration.ConfigurationElement[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Configuration.ConfigurationElement[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Para copiar o conteúdo da matriz de <see cref="T:System.Configuration.ConfigurationElementCollection" />.</param>
+        <param name="index">Local de índice no qual começar a copiar.</param>
+        <summary>Copia o conteúdo do <see cref="T:System.Configuration.ConfigurationElementCollection" /> para uma matriz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos na coleção.</summary>
+        <value>O número de elementos na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateNewElement">
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cria um novo <see cref="T:System.Configuration.ConfigurationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A> método para criar um personalizado <xref:System.Configuration.ConfigurationElement> objetos de um tipo específico. Quando uma coleção é carregada do arquivo de configuração, <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A> é chamado para criar elementos individuais. <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A>deve ser substituído nas classes que derivam de <xref:System.Configuration.ConfigurationElementCollection> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected abstract System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cria um novo <see cref="T:System.Configuration.ConfigurationElement" />.</summary>
+        <returns>Criada uma nova <see cref="T:System.Configuration.ConfigurationElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A> método para criar um personalizado <xref:System.Configuration.ConfigurationElement> objetos de um tipo específico. Quando uma coleção é carregada do arquivo de configuração, <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A> é chamado para criar elementos individuais. <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A>deve ser substituído nas classes que derivam de <xref:System.Configuration.ConfigurationElementCollection> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/customcollectionsection.cs#6)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected virtual System.Configuration.ConfigurationElement CreateNewElement (string elementName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Configuration.ConfigurationElement CreateNewElement(string elementName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.CreateNewElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O nome do <see cref="T:System.Configuration.ConfigurationElement" /> a ser criado.</param>
+        <summary>Cria um novo <see cref="T:System.Configuration.ConfigurationElement" /> Quando substituído em uma classe derivada.</summary>
+        <returns>Um novo <see cref="T:System.Configuration.ConfigurationElement" /> com um nome especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A> método para criar um personalizado <xref:System.Configuration.ConfigurationElement> objetos de um tipo específico. Quando uma coleção é carregada do arquivo de configuração, <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A> é chamado para criar elementos individuais. <xref:System.Configuration.ConfigurationElementCollection.CreateNewElement%2A>deve ser substituído nas classes que derivam de <xref:System.Configuration.ConfigurationElementCollection> classe.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você criar um personalizado <see cref="T:System.Configuration.ConfigurationElementCollection" /> coleção que contém heterogêneos <see cref="T:System.Configuration.ConfigurationElement" /> tipos, você deve executar estas etapas:  
+  
+-   Substituir o método <see cref="M:System.Configuration.ConfigurationElementCollection.GetElementKey(System.Configuration.ConfigurationElement)" />.  
+  
+-   Verifique se o <see cref="M:System.Configuration.ConfigurationElementCollection.GetElementKey(System.Configuration.ConfigurationElement)" /> método retorna uma cadeia de caracteres que identifica o tipo do elemento criado chamando o <see cref="M:System.Configuration.ConfigurationElementCollection.CreateNewElement(System.String)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="protected virtual string ElementName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome usado para identificar esta coleção de elementos no arquivo de configuração quando substituído em uma classe derivada.</summary>
+        <value>O nome da coleção; Caso contrário, uma cadeia de caracteres vazia. O padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Configuration.ConfigurationElementCollection.ElementName%2A> propriedade para nomear um personalizado <xref:System.Configuration.ConfigurationElementCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmitClear">
+      <MemberSignature Language="C#" Value="public bool EmitClear { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EmitClear" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.EmitClear" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se a coleção foi limpo.</summary>
+        <value>
+          <see langword="true" />Se a coleção foi limpo; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A> propriedade `true` faz com que um `<clear>` diretiva a ser gravado no arquivo de configuração quando a coleção é serializada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">A configuração é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object compareTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object compareTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compareTo" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="compareTo">O objeto a ser comparado.</param>
+        <summary>Compara o <see cref="T:System.Configuration.ConfigurationElementCollection" /> ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto a ser comparado com é igual ao atual <see cref="T:System.Configuration.ConfigurationElementCollection" /> instância; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected abstract object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Configuration.ConfigurationElement" /> para o qual retornar a chave.</param>
+        <summary>Obtém a chave de elemento para um elemento de configuração especificado quando substituído em uma classe derivada.</summary>
+        <returns>Um <see cref="T:System.Object" /> que atua como a chave para o <see cref="T:System.Configuration.ConfigurationElement" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir <xref:System.Configuration.ConfigurationElementCollection.GetElementKey%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationElementCollection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/system.configuration.configurationelementcollection/cs/customcollectionsection.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationElementCollection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.configuration.configurationelementcollection/vb/customcollectionsection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IEnumerator" /> que é usado para iterar por meio de <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que é usado para iterar por meio de <see cref="T:System.Configuration.ConfigurationElementCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor exclusivo que representa o <see cref="T:System.Configuration.ConfigurationElementCollection" /> instância.</summary>
+        <returns>Um valor exclusivo que representa o <see cref="T:System.Configuration.ConfigurationElementCollection" /> instância atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsElementName">
+      <MemberSignature Language="C#" Value="protected virtual bool IsElementName (string elementName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsElementName(string elementName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.IsElementName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O nome do elemento para verificar.</param>
+        <summary>Indica se o especificado <see cref="T:System.Configuration.ConfigurationElement" /> existe o <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <returns>
+          <see langword="true" />Se o elemento existir na coleção; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Configuration.ConfigurationElementCollection.IsElementName%2A> método para fornecer um comportamento personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsElementRemovable">
+      <MemberSignature Language="C#" Value="protected virtual bool IsElementRemovable (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsElementRemovable(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.IsElementRemovable(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento para verificar.</param>
+        <summary>Indica se o especificado <see cref="T:System.Configuration.ConfigurationElement" /> podem ser removidos do <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Configuration.ConfigurationElement" /> pode ser removido deste <see cref="T:System.Configuration.ConfigurationElementCollection" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulta <xref:System.Configuration.ConfigurationElementCollection.IsElementRemovable%2A> antes de remover um elemento da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="protected override bool IsModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.IsModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se este <see cref="T:System.Configuration.ConfigurationElementCollection" /> tiver sido modificado desde a última foi salvo ou carregado quando substituído em uma classe derivada.</summary>
+        <returns>
+          <see langword="true" />Se qualquer elemento contido tiver sido modificado; Caso contrário,<see langword="false" /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Configuration.ConfigurationElement.IsModified%2A> método de qualquer <xref:System.Configuration.ConfigurationElement> contido em um <xref:System.Configuration.ConfigurationElementCollection> retorna `true`, o <xref:System.Configuration.ConfigurationElementCollection.IsModified%2A> retorna o método de toda a coleção `true` também.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.IsReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="T:System.Configuration.ConfigurationElementCollection" /> objeto é somente leitura.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Configuration.ConfigurationElementCollection" /> objeto é somente leitura; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema define elementos de configuração que não podem ser modificados. Chame este método para determinar se os elementos podem ser modificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado.</summary>
+        <value>
+          <see langword="true" />Se acessar para o <see cref="T:System.Configuration.ConfigurationElementCollection" /> for sincronizado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializeUnrecognizedElement">
+      <MemberSignature Language="C#" Value="protected override bool OnDeserializeUnrecognizedElement (string elementName, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnDeserializeUnrecognizedElement(string elementName, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.OnDeserializeUnrecognizedElement(System.String,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O nome do elemento não reconhecido.</param>
+        <param name="reader">Um fluxo de entrada que lê o XML do arquivo de configuração.</param>
+        <summary>Faz com que o sistema de configuração lançar uma exceção.</summary>
+        <returns>
+          <see langword="true" />Se o elemento não reconhecido foi desserializado com êxito; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationElementCollection.OnDeserializeUnrecognizedElement%2A> é chamado quando um elemento de configuração não reconhecido é lido de um arquivo de configuração.  
+  
+ Substitua este método para fornecer manipulação personalizada não reconhecido de elementos de configuração de um arquivo de configuração. O padrão retornam um valor, `false`, faz com que o sistema de configuração lançar uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O elemento especificado no <paramref name="elementName" /> é o <see langword="&lt;clear&gt;" /> elemento.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="elementName" />começa com o prefixo reservado "configuração" ou "bloqueio".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveElementName">
+      <MemberSignature Language="C#" Value="protected string RemoveElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RemoveElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.RemoveElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do <see cref="T:System.Configuration.ConfigurationElement" /> para associar com a operação de remoção no <see cref="T:System.Configuration.ConfigurationElementCollection" /> Quando substituído em uma classe derivada.</summary>
+        <value>O nome do elemento.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O valor selecionado começa com o prefixo reservado "configuração" ou "bloqueio".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">O <see cref="T:System.Configuration.ConfigurationElement" /> que representa o elemento pai da coleção, se existirem; caso contrário, <see langword="null" />.</param>
+        <summary>Redefine o <see cref="T:System.Configuration.ConfigurationElementCollection" /> para seu estado inalterado quando substituído em uma classe derivada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão para o <xref:System.Configuration.ConfigurationElementCollection.Reset%2A> método é limpar todos os elementos modificados um <xref:System.Configuration.ConfigurationElementCollection> contém objeto e definir os elementos modificados com os valores especificados pelo seu arquivo de configuração pai. Se qualquer elemento a <xref:System.Configuration.ConfigurationElementCollection> tem elementos filho, <xref:System.Configuration.ConfigurationElementCollection.Reset%2A> também é chamado em um desses elementos filho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetModified">
+      <MemberSignature Language="C#" Value="protected override void ResetModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void ResetModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.ResetModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o valor da <see cref="M:System.Configuration.ConfigurationElementCollection.IsModified" /> propriedade <see langword="false" /> Quando substituído em uma classe derivada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationElementCollection.ResetModified%2A> método determina se os elementos desta coleção serão gravados no arquivo de configuração quando a configuração é atualizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeElement">
+      <MemberSignature Language="C#" Value="protected override bool SerializeElement (System.Xml.XmlWriter writer, bool serializeCollectionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool SerializeElement(class System.Xml.XmlWriter writer, bool serializeCollectionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.SerializeElement(System.Xml.XmlWriter,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="serializeCollectionKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Fluxo de saída que grava o arquivo de configuração XML.</param>
+        <param name="serializeCollectionKey">
+          <see langword="true" />para serializar a chave da coleção; Caso contrário, <see langword="false" />.</param>
+        <summary>Grava os dados de configuração para um elemento XML no arquivo de configuração quando substituído em uma classe derivada.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Configuration.ConfigurationElementCollection" /> foi gravado com êxito para o arquivo de configuração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationElementCollection.SerializeElement%2A> método grava o conteúdo dos elementos de configuração contidos na coleção e quaisquer elementos aninhados que contêm o arquivo de configuração. Substituir <xref:System.Configuration.ConfigurationElementCollection.SerializeElement%2A> para fornecer um personalizado gravar procedimento fora do conteúdo da coleção de elementos aninhados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um dos elementos da coleção foi adicionado ou substituído e começa com o prefixo reservado "configuração" ou "bloqueio".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="protected override void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Conjuntos de <see cref="M:System.Configuration.ConfigurationElementCollection.IsReadOnly" /> propriedade para o <see cref="T:System.Configuration.ConfigurationElementCollection" /> objeto e para todos os subelementos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado internamente para separe os elementos de configuração do sistema que não podem ser modificados. Para determinar quais elementos são modificáveis, chame o <xref:System.Configuration.ConfigurationElementCollection.IsReadOnly%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto usado para sincronizar o acesso a <see cref="T:System.Configuration.ConfigurationElementCollection" />.</summary>
+        <value>Um objeto usado para sincronizar o acesso a <see cref="T:System.Configuration.ConfigurationElementCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array arr, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array arr, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arr" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="arr">Matriz na qual copiar esse <see cref="T:System.Configuration.ConfigurationElementCollection" />.</param>
+        <param name="index">Local de índice no qual começar a copiar.</param>
+        <summary>Copia o <see cref="T:System.Configuration.ConfigurationElementCollection" /> para uma matriz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnDuplicate">
+      <MemberSignature Language="C#" Value="protected virtual bool ThrowOnDuplicate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowOnDuplicate" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationElementCollection.ThrowOnDuplicate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma tentativa de adicionar uma duplicata <see cref="T:System.Configuration.ConfigurationElement" /> para o <see cref="T:System.Configuration.ConfigurationElementCollection" /> fará com que uma exceção seja lançada.</summary>
+        <value>
+          <see langword="true" />Se uma tentativa de adicionar uma duplicata <see cref="T:System.Configuration.ConfigurationElement" /> a este <see cref="T:System.Configuration.ConfigurationElementCollection" /> fará com que uma exceção seja lançada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você adiciona um elemento duplicado, uma exceção será lançada se o <xref:System.Configuration.ConfigurationElementCollection.CollectionType%2A> valor do elemento é <xref:System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap> ou <xref:System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMapAlternate>.  
+  
+ Observe que os elementos com chaves idênticas e os valores não são considerados duplicatas e são aceitas silenciosamente. Somente elementos com chaves idênticas, mas valores diferentes são considerados duplicatas. Para obter mais informações, consulte a seção comentários para o <xref:System.Configuration.ConfigurationElementCollection.BaseAdd%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmerge">
+      <MemberSignature Language="C#" Value="protected override void Unmerge (System.Configuration.ConfigurationElement sourceElement, System.Configuration.ConfigurationElement parentElement, System.Configuration.ConfigurationSaveMode updateMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Unmerge(class System.Configuration.ConfigurationElement sourceElement, class System.Configuration.ConfigurationElement parentElement, valuetype System.Configuration.ConfigurationSaveMode updateMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationElementCollection.Unmerge(System.Configuration.ConfigurationElement,System.Configuration.ConfigurationElement,System.Configuration.ConfigurationSaveMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+      </Parameters>
+      <Docs>
+        <param name="sourceElement">Um <see cref="T:System.Configuration.ConfigurationElement" /> objeto no nível atual que contém uma exibição mesclada das propriedades.</param>
+        <param name="parentElement">O pai <see cref="T:System.Configuration.ConfigurationElement" /> objeto do elemento atual, ou <see langword="null" /> se este é o nível superior.</param>
+        <param name="updateMode">To be added.</param>
+        <summary>Inverte o efeito da mesclagem de informações de configuração de diferentes níveis da hierarquia de configuração</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationElementCollection.Unmerge%2A> método inverte o efeito da mesclagem de informações de configuração de diferentes níveis da hierarquia de configuração. Isso permite que o conjunto de configurações no nível de hierarquia a ser diferenciadas desse conjunto em níveis de pai, antes de serialização.  
+  
+ <xref:System.Configuration.ConfigurationElementCollection.Unmerge%2A>é chamado pelo sistema em um novo elemento temporário para comparar o objeto pai e o objeto de origem. Com base no <xref:System.Configuration.ConfigurationSaveMode> valor, em seguida, define o objeto temporário para conter os dados que precisa ser serializado. Para obter detalhes sobre como salvar modos, consulte <xref:System.Configuration.ConfigurationSaveMode.Minimal>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

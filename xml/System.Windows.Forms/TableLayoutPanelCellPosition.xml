@@ -1,0 +1,215 @@
+<Type Name="TableLayoutPanelCellPosition" FullName="System.Windows.Forms.TableLayoutPanelCellPosition">
+  <TypeSignature Language="C#" Value="public struct TableLayoutPanelCellPosition" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit TableLayoutPanelCellPosition extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutPanelCellPosition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.TableLayoutPanelCellPositionTypeConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma célula em um <see cref="T:System.Windows.Forms.TableLayoutPanel" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Windows.Forms.TableLayoutPanelCellPosition> para definir a posição de um controle filho em um <xref:System.Windows.Forms.TableLayoutPanel> controle. Para obter uma listagem de código completo, consulte [como: implementar um ToolStripRenderer personalizado](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableLayoutPanelCellPosition (int column, int row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 column, int32 row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutPanelCellPosition.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="column" Type="System.Int32" />
+        <Parameter Name="row" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="column">A posição da coluna da célula.</param>
+        <param name="row">A posição da linha da célula.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Windows.Forms.TableLayoutPanelCellPosition> para definir a posição de um controle filho em um <xref:System.Windows.Forms.TableLayoutPanel> controle. Para obter uma listagem de código completo, consulte [como: implementar um ToolStripRenderer personalizado](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public int Column { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutPanelCellPosition.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da coluna do atual <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />.</summary>
+        <value>O número da coluna do atual <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutPanelCellPosition.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> a ser testado.</param>
+        <summary>Especifica se este <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> contém a mesma linha e coluna como especificado <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="other" /> é um <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> e tem a mesma linha e coluna como especificado <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutPanelCellPosition.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código hash para este <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />.</summary>
+        <returns>Um valor inteiro que especifica um valor de hash para este <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Forms.TableLayoutPanelCellPosition p1, System.Windows.Forms.TableLayoutPanelCellPosition p2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Forms.TableLayoutPanelCellPosition p1, valuetype System.Windows.Forms.TableLayoutPanelCellPosition p2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutPanelCellPosition.op_Equality(System.Windows.Forms.TableLayoutPanelCellPosition,System.Windows.Forms.TableLayoutPanelCellPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p1" Type="System.Windows.Forms.TableLayoutPanelCellPosition" />
+        <Parameter Name="p2" Type="System.Windows.Forms.TableLayoutPanelCellPosition" />
+      </Parameters>
+      <Docs>
+        <param name="p1">Um <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> para comparar.</param>
+        <param name="p2">Um <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> para comparar.</param>
+        <summary>Compara dois objetos <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />. Especifica o resultado se os valores de <see cref="P:System.Windows.Forms.TableLayoutPanelCellPosition.Row" /> e <see cref="P:System.Windows.Forms.TableLayoutPanelCellPosition.Column" /> propriedades dos dois <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> objetos são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="p1" /> e <paramref name="p2" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Windows.Forms.TableLayoutPanelCellPosition.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Forms.TableLayoutPanelCellPosition p1, System.Windows.Forms.TableLayoutPanelCellPosition p2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Forms.TableLayoutPanelCellPosition p1, valuetype System.Windows.Forms.TableLayoutPanelCellPosition p2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutPanelCellPosition.op_Inequality(System.Windows.Forms.TableLayoutPanelCellPosition,System.Windows.Forms.TableLayoutPanelCellPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p1" Type="System.Windows.Forms.TableLayoutPanelCellPosition" />
+        <Parameter Name="p2" Type="System.Windows.Forms.TableLayoutPanelCellPosition" />
+      </Parameters>
+      <Docs>
+        <param name="p1">Um <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> para comparar.</param>
+        <param name="p2">Um <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> para comparar.</param>
+        <summary>Compara dois objetos <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />. Especifica o resultado se os valores de <see cref="P:System.Windows.Forms.TableLayoutPanelCellPosition.Row" /> e <see cref="P:System.Windows.Forms.TableLayoutPanelCellPosition.Column" /> propriedades dos dois <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> objetos são diferentes.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="p1" /> e <paramref name="p2" /> forem diferentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é a negação de <xref:System.Windows.Forms.TableLayoutPanelCellPosition.Equals%2A?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public int Row { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Row" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutPanelCellPosition.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da linha do atual <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />.</summary>
+        <value>O número da linha do atual <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutPanelCellPosition.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte essa <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> para uma cadeia de caracteres legível humana.</summary>
+        <returns>Uma cadeia de caracteres que representa este <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

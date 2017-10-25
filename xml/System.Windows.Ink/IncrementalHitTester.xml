@@ -1,0 +1,235 @@
+<Type Name="IncrementalHitTester" FullName="System.Windows.Ink.IncrementalHitTester">
+  <TypeSignature Language="C#" Value="public abstract class IncrementalHitTester" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IncrementalHitTester extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.IncrementalHitTester" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Executa dinamicamente o teste de clique em um <see cref="T:System.Windows.Ink.Stroke" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Ink.IncrementalHitTester> dinamicamente determina se o usuário "atinge" um <xref:System.Windows.Ink.Stroke>. Essa classe permite que você fornecer comentários imediatos para o usuário em situações como selecionar e apagar tinta.  
+  
+ Há duas classes que herdam de <xref:System.Windows.Ink.IncrementalHitTester>:  
+  
+-   O <xref:System.Windows.Ink.IncrementalLassoHitTester> faz testes traços, determinando se um caminho de Laço ao seu redor.  
+  
+-   O <xref:System.Windows.Ink.IncrementalStrokeHitTester> faz testes traços, determinando onde um caminho de borracha faz interseção com ele.  
+  
+ A tabela a seguir lista onde aprender como gerenciar tinta digital em um controle personalizado.  
+  
+|Para fazer isso...|Consulte este artigo|  
+|-----------------|----------------------|  
+|Criar um controle que coleta tinta digital|[Criando um controle de entrada de tinta](~/docs/framework/wpf/advanced/creating-an-ink-input-control.md)|  
+|Criar um controle que permite que o usuário selecione tinta|[Como selecionar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)|  
+|Criar um controle que permite que o usuário tinta de apagamento de ponto|[Como apagar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)|  
+  
+<a name="xamlTextUsage_IncrementalHitTester"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Essa classe não é usada normalmente em XAML.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar pontos a <xref:System.Windows.Ink.IncrementalHitTester> quando o usuário insere dados com a caneta. O exemplo inclui um <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> manipulador de eventos que apaga a parte do <xref:System.Windows.Ink.Stroke> que faz interseção com o usuário. Para criar um controle que permite que um usuário apagar tinta, consulte [como: apagar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#6](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#6)]
+ [!code-vb[InkEraser#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddPoint">
+      <MemberSignature Language="C#" Value="public void AddPoint (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPoint(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.AddPoint(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Windows.Point" /> para adicionar ao <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Point" /> para o <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar pontos a <xref:System.Windows.Ink.IncrementalHitTester> quando o usuário insere dados com o mouse. O exemplo inclui um <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> manipulador de eventos que apaga a parte do <xref:System.Windows.Ink.Stroke> que faz interseção com o usuário. Para criar um controle que permite que um usuário apagar tinta, consulte [como: apagar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#11](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#11)]
+ [!code-vb[InkEraser#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#11)]  
+[!code-csharp[InkEraser#2](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#2)]
+[!code-vb[InkEraser#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPoints">
+      <MemberSignature Language="C#" Value="public void AddPoints (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPoints(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.AddPoints(System.Collections.Generic.IEnumerable{System.Windows.Point})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="points">Uma matriz do tipo <see cref="T:System.Windows.Point" /> para adicionar ao <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</param>
+        <summary>Adiciona pontos para a <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar pontos a <xref:System.Windows.Ink.IncrementalHitTester> quando o usuário insere dados com a caneta. O exemplo inclui um <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> manipulador de eventos que apaga a parte do <xref:System.Windows.Ink.Stroke> que faz interseção com o usuário. Para criar um controle que permite que um usuário apagar tinta, consulte [como: apagar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#6](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#6)]
+ [!code-vb[InkEraser#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPoints">
+      <MemberSignature Language="C#" Value="public void AddPoints (System.Windows.Input.StylusPointCollection stylusPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPoints(class System.Windows.Input.StylusPointCollection stylusPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.AddPoints(System.Windows.Input.StylusPointCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPoints" Type="System.Windows.Input.StylusPointCollection" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPoints">Uma coleção de <see cref="T:System.Windows.Input.StylusPoint" /> objetos para adicionar ao <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</param>
+        <summary>Adiciona o <see cref="T:System.Windows.Input.StylusPoint" /> objetos para o <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar pontos a <xref:System.Windows.Ink.IncrementalStrokeHitTester> quando o usuário insere dados com a caneta. O exemplo inclui um <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> manipulador de eventos que apaga a parte do <xref:System.Windows.Ink.Stroke> que faz interseção com o usuário. Para criar um controle que permite que um usuário apagar tinta, consulte [como: apagar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#6](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#6)]
+ [!code-vb[InkEraser#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPointsCore">
+      <MemberSignature Language="C#" Value="protected abstract void AddPointsCore (System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt; points);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddPointsCore(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Point&gt; points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.AddPointsCore(System.Collections.Generic.IEnumerable{System.Windows.Point})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Point&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="points">Os pontos para adicionar</param>
+        <summary>Adiciona pontos para a <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndHitTesting">
+      <MemberSignature Language="C#" Value="public void EndHitTesting ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndHitTesting() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.IncrementalHitTester.EndHitTesting" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos usados pelo <see cref="T:System.Windows.Ink.IncrementalHitTester" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.Windows.Ink.IncrementalHitTester.EndHitTesting%2A> método quando o <xref:System.Windows.Ink.IncrementalHitTester> conclusão do teste de clique.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como chamar <xref:System.Windows.Ink.IncrementalHitTester.EndHitTesting%2A> depois de usar um <xref:System.Windows.Ink.IncrementalHitTester>. Este exemplo supõe que haja uma <xref:System.Windows.Ink.IncrementalHitTester> chamado `eraseTester`.  
+  
+ [!code-csharp[InkEraser#10](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#10)]
+ [!code-vb[InkEraser#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.IncrementalHitTester.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o <see cref="T:System.Windows.Ink.IncrementalHitTester" /> é teste de clique.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Ink.IncrementalHitTester" /> é atingido teste; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Ink.IncrementalHitTester.IsValid%2A> retorna `true` até <xref:System.Windows.Ink.IncrementalHitTester.EndHitTesting%2A> é chamado. Em seguida, ele retorna `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como verificar se o <xref:System.Windows.Ink.IncrementalHitTester> é válido antes de adicionar pontos a ele. Este exemplo supõe que haja uma <xref:System.Windows.Ink.IncrementalHitTester> chamado `eraseTester`.  
+  
+ [!code-csharp[InkEraser#9](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#9)]
+ [!code-vb[InkEraser#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

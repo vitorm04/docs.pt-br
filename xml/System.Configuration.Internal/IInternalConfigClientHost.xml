@@ -1,0 +1,175 @@
+<Type Name="IInternalConfigClientHost" FullName="System.Configuration.Internal.IInternalConfigClientHost">
+  <TypeSignature Language="C#" Value="public interface IInternalConfigClientHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInternalConfigClientHost" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Internal.IInternalConfigClientHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as interfaces que permitem que a infraestrutura interna do .NET Framework personalizar a configuração.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetExeConfigPath">
+      <MemberSignature Language="C#" Value="public string GetExeConfigPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetExeConfigPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.GetExeConfigPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho para o arquivo de configuração do aplicativo.</summary>
+        <returns>Uma cadeia de caracteres que representa o caminho para o arquivo de configuração do aplicativo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalUserConfigPath">
+      <MemberSignature Language="C#" Value="public string GetLocalUserConfigPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetLocalUserConfigPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.GetLocalUserConfigPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o caminho para o arquivo de configuração de usuário local conhecido.</summary>
+        <returns>Uma cadeia de caracteres que representa o caminho para o arquivo de configuração de usuário local conhecido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRoamingUserConfigPath">
+      <MemberSignature Language="C#" Value="public string GetRoamingUserConfigPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetRoamingUserConfigPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.GetRoamingUserConfigPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o caminho para o arquivo de configuração de usuário móvel conhecidos.</summary>
+        <returns>Uma cadeia de caracteres que representa o caminho para o arquivo de configuração de usuário móvel conhecidos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExeConfig">
+      <MemberSignature Language="C#" Value="public bool IsExeConfig (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsExeConfig(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.IsExeConfig(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho para o arquivo de configuração do aplicativo.</param>
+        <summary>Retorna um valor que indica se um caminho de arquivo de configuração é o mesmo que um caminho de arquivo de configuração de aplicativo atualmente conhecidos.</summary>
+        <returns>
+          <see langword="true" />Se uma cadeia de caracteres que representa um caminho de configuração é o mesmo que um caminho para o arquivo de configuração do aplicativo; <see langword="false" /> se uma cadeia de caracteres que representa um caminho de configuração não é o mesmo que um caminho para o arquivo de configuração do aplicativo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocalUserConfig">
+      <MemberSignature Language="C#" Value="public bool IsLocalUserConfig (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsLocalUserConfig(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.IsLocalUserConfig(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho para o arquivo de configuração do aplicativo.</param>
+        <summary>Retorna um valor que indica se um caminho de arquivo de configuração é o mesmo que o caminho do arquivo de configuração para o usuário local conhecido no momento.</summary>
+        <returns>
+          <see langword="true" />Se uma cadeia de caracteres que representa um caminho de configuração é o mesmo que um caminho para um arquivo de configuração de usuário local conhecido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRoamingUserConfig">
+      <MemberSignature Language="C#" Value="public bool IsRoamingUserConfig (string configPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsRoamingUserConfig(string configPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IInternalConfigClientHost.IsRoamingUserConfig(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configPath">Uma cadeia de caracteres que representa o caminho para um arquivo de configuração do aplicativo.</param>
+        <summary>Retorna um valor que indica se um caminho de arquivo de configuração é o mesmo que o caminho do arquivo de configuração para o usuário de roaming atualmente conhecido.</summary>
+        <returns>
+          <see langword="true" />Se uma cadeia de caracteres que representa um caminho de configuração é o mesmo que um caminho para um arquivo de configuração usuário móvel conhecidos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,134 @@
+<Type Name="WorkflowApplicationUnloadedException" FullName="System.Activities.WorkflowApplicationUnloadedException">
+  <TypeSignature Language="C#" Value="public class WorkflowApplicationUnloadedException : System.Activities.WorkflowApplicationException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WorkflowApplicationUnloadedException extends System.Activities.WorkflowApplicationException" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowApplicationUnloadedException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.WorkflowApplicationException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma exceção que é lançada quando uma operação em uma instância de fluxo de trabalho é inválida porque a instância foi descarregada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationUnloadedException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationUnloadedException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.WorkflowApplicationUnloadedException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationUnloadedException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationUnloadedException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A descrição da exceção de aplicativo descarregado.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.WorkflowApplicationUnloadedException" /> classe com a descrição de cadeia de caracteres de texto especificado da exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowApplicationUnloadedException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationUnloadedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Todas as informações necessárias para serializar ou desserializar o objeto de exceção descarregado do aplicativo.</param>
+        <param name="context">A origem e destino de um determinado fluxo serializado e um contexto adicional definido pelo chamador.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.WorkflowApplicationUnloadedException" /> classe com as informações de serialização e contexto necessárias para recuperar dados sobre esta exceção de um fluxo serializado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationUnloadedException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationUnloadedException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma descrição da exceção de aplicativo descarregado.</param>
+        <param name="innerException">Uma exceção que tem uma relação causal com a exceção de aplicativo descarregado. A exceção de aplicativo descarregado é gerada em resposta a exceção interna e pode usar as informações da exceção interna para tratar o erro mais adequadamente.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.WorkflowApplicationUnloadedException" /> classe com a descrição de cadeia de caracteres de texto especificado da exceção e com uma exceção especificada que tenha uma relação causal para o <see cref="T:System.Activities.WorkflowApplicationUnloadedException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationUnloadedException (string message, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationUnloadedException.#ctor(System.String,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma descrição da exceção de aplicativo descarregado.</param>
+        <param name="instanceId">Um identificador globalmente exclusivo.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.WorkflowApplicationUnloadedException" /> classe com a descrição de cadeia de caracteres de texto especificado de exceção e o identificador exclusivo especificado para ele.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowApplicationUnloadedException (string message, Guid instanceId, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, valuetype System.Guid instanceId, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowApplicationUnloadedException.#ctor(System.String,System.Guid,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma descrição da exceção de aplicativo descarregado.</param>
+        <param name="instanceId">Um identificador globalmente exclusivo.</param>
+        <param name="innerException">Uma exceção que tem uma relação causal com a exceção de aplicativo descarregado. A exceção de aplicativo descarregado é gerada em resposta a exceção interna e pode usar as informações da exceção para tratar o erro mais adequadamente.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.WorkflowApplicationUnloadedException" /> classe com a descrição de cadeia de caracteres de texto especificado, a exceção, um identificador exclusivo para ela e a exceção que é a causa do <see cref="T:System.Activities.WorkflowApplicationUnloadedException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

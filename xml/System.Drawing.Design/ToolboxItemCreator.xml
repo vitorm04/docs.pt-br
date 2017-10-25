@@ -1,0 +1,82 @@
+<Type Name="ToolboxItemCreator" FullName="System.Drawing.Design.ToolboxItemCreator">
+  <TypeSignature Language="C#" Value="public sealed class ToolboxItemCreator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ToolboxItemCreator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.ToolboxItemCreator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula um <see cref="T:System.Drawing.Design.ToolboxItemCreatorCallback" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.ToolboxItemCreator> classe encapsula funções de retorno de chamada de criador de item de caixa de ferramentas. Essas funções de retorno de chamada são usadas por designers para fornecer maneiras de criar itens de caixa de ferramentas para objetos de dados personalizados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem Create (System.Windows.Forms.IDataObject data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Design.ToolboxItem Create(class System.Windows.Forms.IDataObject data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ToolboxItemCreator.Create(System.Windows.Forms.IDataObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Windows.Forms.IDataObject" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um objeto de dados que representa um <see cref="T:System.Drawing.Design.ToolboxItem" />.</param>
+        <summary>Cria um novo <see cref="T:System.Drawing.Design.ToolboxItem" /> com base em um <see cref="T:System.Windows.Forms.IDataObject" />.</summary>
+        <returns>Uma nova instância da classe <see cref="T:System.Drawing.Design.ToolboxItem" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `data` parâmetro pode conter dados fornecidos pelo <xref:System.Drawing.Design.ToolboxItemContainer> classe. Ele pode conter dados que podem ser lidos por um do <xref:System.Drawing.Design.ToolboxItemCreator> classes que foram fornecidos pelo usuário. Também pode ser dados com um formato de área de transferência que tem um <xref:System.Drawing.Design.ToolboxItemCreator> atribuído a ele. Nesse caso, o <xref:System.Drawing.Design.ToolboxItem> é criado sob demanda.  
+  
+ O <xref:System.Drawing.Design.ToolboxItemCreator.Create%2A> método pode gerar uma exceção se o objeto de dados não contém dados para o formato com suporte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.ToolboxItemCreator.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o formato de área de transferência que representa os dados necessários para desserializar um <see cref="T:System.Drawing.Design.ToolboxItem" />.</summary>
+        <value>Uma cadeia de caracteres que representa o formato de área de transferência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando ocorre uma operação de arrastar e soltar, o ambiente de design consulta todos <xref:System.Drawing.Design.ToolboxItemCreator> instâncias. Se um <xref:System.Drawing.Design.ToolboxItemCreator> oferece suporte a qualquer um dos formatos arrastados da área de transferência, uma <xref:System.Drawing.Design.ToolboxItem> é criada a partir de <xref:System.Drawing.Design.ToolboxItemCreator>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

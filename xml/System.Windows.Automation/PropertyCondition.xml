@@ -1,0 +1,140 @@
+<Type Name="PropertyCondition" FullName="System.Windows.Automation.PropertyCondition">
+  <TypeSignature Language="C#" Value="public class PropertyCondition : System.Windows.Automation.Condition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyCondition extends System.Windows.Automation.Condition" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.PropertyCondition" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Condition</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um <see cref="T:System.Windows.Automation.Condition" /> que testa se uma propriedade tem um valor especificado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyCondition (System.Windows.Automation.AutomationProperty property, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Automation.AutomationProperty property, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.PropertyCondition.#ctor(System.Windows.Automation.AutomationProperty,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="property" Type="System.Windows.Automation.AutomationProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="property">A propriedade a ser testada.</param>
+        <param name="value">O valor para o teste da propriedade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Automation.PropertyCondition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro `property` não pode ser <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.PropertyCondition> Especifica que o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento a ser localizado tem um tipo de controle de <xref:System.Windows.Automation.ControlType.List>. O <xref:System.Windows.Automation.PropertyCondition> é usado para obter o elemento de lista de uma caixa de combinação.  
+  
+ [!code-csharp[UIAClient_snip#180](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#180)]
+ [!code-vb[UIAClient_snip#180](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#180)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyCondition (System.Windows.Automation.AutomationProperty property, object value, System.Windows.Automation.PropertyConditionFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Automation.AutomationProperty property, object value, valuetype System.Windows.Automation.PropertyConditionFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.PropertyCondition.#ctor(System.Windows.Automation.AutomationProperty,System.Object,System.Windows.Automation.PropertyConditionFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="property" Type="System.Windows.Automation.AutomationProperty" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="flags" Type="System.Windows.Automation.PropertyConditionFlags" />
+      </Parameters>
+      <Docs>
+        <param name="property">A propriedade a ser testada.</param>
+        <param name="value">O valor para o teste da propriedade.</param>
+        <param name="flags">Sinalizadores que afetam a comparação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Automation.PropertyCondition" />, com sinalizadores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa uma <xref:System.Windows.Automation.PropertyCondition> para recuperar o [!INCLUDE[TLA#tla_uiautomation](~/includes/tlasharptla-uiautomation-md.md)] elemento que representa o formulário principal de um aplicativo. O formulário está localizado por uma pesquisa diferencia maiusculas de minúsculas por seu identificador de cadeia de caracteres.  
+  
+ [!code-csharp[UIAClient_snip#110](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#110)]
+ [!code-vb[UIAClient_snip#110](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#110)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.PropertyConditionFlags Flags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.PropertyConditionFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.PropertyCondition.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.PropertyConditionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os sinalizadores usados para testar o valor da propriedade.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationProperty Property { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.AutomationProperty Property" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.PropertyCondition.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a propriedade que essa condição é testado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.PropertyCondition.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor da propriedade que essa condição é testado.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

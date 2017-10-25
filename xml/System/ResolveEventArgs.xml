@@ -1,0 +1,185 @@
+<Type Name="ResolveEventArgs" FullName="System.ResolveEventArgs">
+  <TypeSignature Language="C#" Value="public class ResolveEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ResolveEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para eventos de resolução do carregador, como os eventos <see cref="E:System.AppDomain.TypeResolve" />, <see cref="E:System.AppDomain.ResourceResolve" />, <see cref="E:System.AppDomain.ReflectionOnlyAssemblyResolve" /> e <see cref="E:System.AppDomain.AssemblyResolve" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o carregador não é possível resolver uma referência de assembly e um manipulador foi fornecido para o evento de resolução de carregador apropriado, o evento é gerado e o <xref:System.ResolveEventArgs> contém informações sobre o item a ser resolvido.  
+  
+-   O <xref:System.ResolveEventArgs.Name%2A> propriedade contém o nome do item a ser resolvido.  
+  
+-   Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o <xref:System.ResolveEventArgs.RequestingAssembly%2A> propriedade contém o assembly que solicitou um assembly que pode fornecer o objeto nomeado. Para obter mais informações, consulte a propriedade <xref:System.ResolveEventArgs.RequestingAssembly%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveEventArgs (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ResolveEventArgs.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um item para resolver.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ResolveEventArgs" /> classe, especificando o nome do item para resolver.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é geralmente chamado apenas pelo common language runtime.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveEventArgs (string name, System.Reflection.Assembly requestingAssembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Reflection.Assembly requestingAssembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ResolveEventArgs.#ctor(System.String,System.Reflection.Assembly)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="requestingAssembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um item para resolver.</param>
+        <param name="requestingAssembly">O assembly cuja dependência está sendo resolvida.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ResolveEventArgs" /> classe, especificando o nome do item para resolver e o assembly cuja dependência está sendo resolvida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ResolveEventArgs.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do item a ser resolvido.</summary>
+        <value>O nome do item a ser resolvido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o <xref:System.AppDomain.AssemblyResolve> evento <xref:System.ResolveEventArgs.Name%2A> é o nome do assembly, antes da política é aplicada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestingAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly RequestingAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly RequestingAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.ResolveEventArgs.RequestingAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o assembly cuja dependência está sendo resolvida.</summary>
+        <value>O assembly que solicitou o item especificado pela propriedade <see cref="P:System.ResolveEventArgs.Name" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O assembly que é retornado por essa propriedade é um assembly que não foi possível resolver o item especificado pelo <xref:System.ResolveEventArgs.Name%2A> propriedade, porque o item não existe no assembly, em qualquer uma de suas dependências carregadas ou em todas as dependências do carregador localizou por meio de sondagem.  
+  
+ Por exemplo, suponha que o usa assembly atual o <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> método para carregar o assembly A partir de um diretório fora do caminho de sondagem, para usar a classe da autoridade de certificação. Suponha que ainda mais essa classe de autoridade de certificação usa CB de classe, no assembly B, e se o assembly A tem uma referência de tempo de compilação para o assembly B, também localizado fora do caminho de investigação. Quando o assembly atual tenta criar uma instância de autoridade de certificação, o carregador tenta resolver a referência ao assembly B. No entanto, como A do assembly foi carregada por meio de <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> método, o carregador não é possível resolver a dependência. Se não houver um manipulador para o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> , o evento é gerado e o <xref:System.ResolveEventArgs.RequestingAssembly%2A> propriedade resultante <xref:System.ResolveEventArgs> objeto contém um assembly de, porque o assembly A é o assembly que está faltando uma dependência.  
+  
+ A semântica do <xref:System.ResolveEventArgs.RequestingAssembly%2A> propriedade variam, dependendo de como o solicitante assembly foi carregado:  
+  
+-   Contexto de carregamento: O valor da propriedade pode ser `null`. O contexto de carregamento é independente da ordem de carregamento e a identidade da solicitando assembly não é necessariamente significativo. Um exemplo de nulos ocorre quando o <xref:System.Type.GetType%2A?displayProperty=nameWithType> método é chamado e o tipo especificado não é conhecido como o assembly solicitante ou qualquer uma de suas dependências.  
+  
+-   Contexto LoadFrom: A propriedade pode ser usada como uma dica de sondagem, mas o manipulador de eventos não deve receber mais de uma solicitação para um nome de assembly fornecido.  
+  
+-   Nenhum contexto de (ou seja, o solicitante assembly foi carregado por meio de <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> método, ou como um fluxo de bytes ou em modo misto): O manipulador pode usar o <xref:System.ResolveEventArgs.RequestingAssembly%2A> propriedade ao carregar implementações diferentes do mesmo assembly com base na identidade do solicitante assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

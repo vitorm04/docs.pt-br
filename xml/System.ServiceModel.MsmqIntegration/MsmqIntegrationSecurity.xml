@@ -1,0 +1,96 @@
+<Type Name="MsmqIntegrationSecurity" FullName="System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity">
+  <TypeSignature Language="C#" Value="public sealed class MsmqIntegrationSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MsmqIntegrationSecurity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity" /> classe encapsula as configurações de segurança de transporte para o canal de integração de enfileiramento de mensagens (MSMQ).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O canal de integração de enfileiramento de mensagens permite que [!INCLUDE[indigo1](~/includes/indigo1-md.md)] aplicativos se comuniquem com aplicativos de enfileiramento de mensagens existentes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqIntegrationSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode" /> que está associado com o canal de integração de enfileiramento de mensagens (MSMQ).</summary>
+        <value>O <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode" /> que está associado com o canal de integração de enfileiramento de mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>é uma enumeração que contém os seguintes valores: <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode.None> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode.Transport>. O valor padrão é <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode.Transport>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MsmqTransportSecurity Transport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.MsmqTransportSecurity Transport" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqTransportSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.MsmqTransportSecurity" /> que está associado com o canal de integração de enfileiramento de mensagens (MSMQ).</summary>
+        <value>O <see cref="T:System.ServiceModel.MsmqTransportSecurity" /> que está associado com o canal de integração de enfileiramento de mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.MsmqTransportSecurity>encapsula as configurações de segurança para o transporte de integração de enfileiramento de mensagens. As configurações são as mesmas para a integração de enfileiramento de mensagens e de transportes na fila. <xref:System.ServiceModel.MsmqTransportSecurity>permite que você defina o modo de autenticação, o algoritmo de criptografia, algoritmo de Hash seguro e nível de proteção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

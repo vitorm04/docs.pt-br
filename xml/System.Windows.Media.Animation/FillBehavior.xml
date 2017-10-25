@@ -1,0 +1,50 @@
+<Type Name="FillBehavior" FullName="System.Windows.Media.Animation.FillBehavior">
+  <TypeSignature Language="C#" Value="public enum FillBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FillBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.FillBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como um <see cref="T:System.Windows.Media.Animation.Timeline" /> se comporta quando está fora de seu período ativo, mas seu pai está dentro do seu ativo ou manter período.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HoldEnd">
+      <MemberSignature Language="C#" Value="HoldEnd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.FillBehavior HoldEnd = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.FillBehavior.HoldEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.FillBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Depois de atingir o final do seu período ativo, a linha do tempo mantém seu progresso até o final dos períodos de atividade e retenção do pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="Stop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.FillBehavior Stop = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.FillBehavior.Stop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.FillBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A linha do tempo será interrompida se ele estiver fora de seu período ativo enquanto seu pai está no período ativo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

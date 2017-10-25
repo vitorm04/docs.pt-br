@@ -1,0 +1,90 @@
+<Type Name="GeometryHitTestParameters" FullName="System.Windows.Media.GeometryHitTestParameters">
+  <TypeSignature Language="C#" Value="public class GeometryHitTestParameters : System.Windows.Media.HitTestParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GeometryHitTestParameters extends System.Windows.Media.HitTestParameters" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GeometryHitTestParameters" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.HitTestParameters</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica um <see cref="T:System.Windows.Media.Geometry" /> como o parâmetro a ser usado para uma árvore visual de teste de clique.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Windows.Media.GeometryHitTestParameters> classe, você pode usar um <xref:System.Windows.Media.Geometry> valor para teste de clique, para determinar se qualquer objeto visual faz interseção com a <xref:System.Windows.Media.Geometry> valor.  
+  
+ Você também pode clicar em teste com um <xref:System.Windows.Point> valor criando um <xref:System.Windows.Media.PointHitTestParameters> objeto.  
+  
+> [!NOTE]
+>  [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]teste de clique considera somente a área preenchida de uma geometria durante um teste de clique. Se você criar um ponto de <xref:System.Windows.Media.Geometry>, o teste de clique não seria intersect-nada porque um ponto de não tem nenhuma área.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como configurar um teste de clique usando <xref:System.Windows.Media.GeometryHitTestParameters> para o <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> método. O <xref:System.Windows.Point> valor que é passado para o `OnMouseDown` método é usado para criar um <xref:System.Windows.Media.Geometry> objeto para expandir o intervalo de teste de clique.  
+  
+ [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet10)]
+ [!code-vb[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet10)]  
+  
+ O <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> propriedade <xref:System.Windows.Media.GeometryHitTestResult> fornece informações sobre os resultados de um teste de clique que usa um <xref:System.Windows.Media.Geometry> como um teste de clique parâmetro. A ilustração a seguir mostra a relação entre a geometria de teste de clique (o círculo azul) e o objeto de destino (o quadrado vermelho).  
+  
+ ![Diagrama de IntersectionDetail usado no teste de hit](~/add/media/intersectiondetail01.png "diagrama de IntersectionDetail usado no teste de clique")  
+Interseção entre o objeto de geometria e de destino de teste de clique  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeometryHitTestParameters (System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GeometryHitTestParameters.#ctor(System.Windows.Media.Geometry)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">O <see cref="T:System.Windows.Media.Geometry" /> valor a ser usado para a geometria de teste de clique.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.GeometryHitTestParameters" /> classe usando especificado <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como configurar um teste de clique usando <xref:System.Windows.Media.GeometryHitTestParameters> para o <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> método. Um <xref:System.Windows.Point> valor é usado para criar um <xref:System.Windows.Media.Geometry> objeto para expandir o intervalo de teste de clique em uma área de exibição maior.  
+  
+ [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet12](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet12)]
+ [!code-vb[HitTestingOverview#HitTestingOverviewSnippet12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry HitGeometry { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry HitGeometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GeometryHitTestParameters.HitGeometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Media.Geometry" /> que define a geometria de teste de clique para este <see cref="T:System.Windows.Media.GeometryHitTestParameters" /> instância.</summary>
+        <value>O <see cref="T:System.Windows.Media.Geometry" /> que define a região de teste de clique.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

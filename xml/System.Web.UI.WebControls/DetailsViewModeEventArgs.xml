@@ -1,0 +1,145 @@
+<Type Name="DetailsViewModeEventArgs" FullName="System.Web.UI.WebControls.DetailsViewModeEventArgs">
+  <TypeSignature Language="C#" Value="public class DetailsViewModeEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewModeEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewModeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.DetailsView.ModeChanging" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DetailsView.ModeChanging> é gerado quando um <xref:System.Web.UI.WebControls.DetailsView> controle tenta alterar entre o modo somente leitura, inserir e editar, mas antes que o modo for alterado. Isso permite que você forneça um manipulador de eventos que executa uma rotina personalizada, como configurar o <xref:System.Web.UI.WebControls.DetailsView> de controle para um modo específico ou cancelar a alteração do modo, sempre que esse evento ocorre.  
+  
+ Um <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs> objeto é passado para o manipulador de eventos, que permite que você determine o modo no qual o <xref:System.Web.UI.WebControls.DetailsView> controle está mudando para determinar se o <xref:System.Web.UI.WebControls.DetailsView.ModeChanging> evento foi gerado como resultado do usuário cancelar uma operação de edição ou para indicar que uma operação de inserção deve ser cancelada. Para determinar o novo modo, use o <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.NewMode%2A> propriedade. Você também pode usar o <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.NewMode%2A> propriedade a ser alterada para um modo alternativo, definindo-a como uma da <xref:System.Web.UI.WebControls.DetailsViewMode> valores de enumeração. Use o <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.CancelingEdit%2A> propriedade para determinar se o usuário cancelou uma operação de edição. Para cancelar uma operação de inserção, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade `true`.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs> objeto passado para o manipulador de eventos para o <xref:System.Web.UI.WebControls.DetailsView.ModeChanging> linha de evento para ocultar o pager quando o <xref:System.Web.UI.WebControls.DetailsView> controlar transições para o modo de edição.  
+  
+ [!code-aspx-csharp[DetailsViewModeEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewModeEventArgs/CS/detailsviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewModeEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewModeEventArgs/VB/detailsviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewModeEventArgs (System.Web.UI.WebControls.DetailsViewMode mode, bool cancelingEdit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.WebControls.DetailsViewMode mode, bool cancelingEdit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewModeEventArgs.#ctor(System.Web.UI.WebControls.DetailsViewMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Web.UI.WebControls.DetailsViewMode" />
+        <Parameter Name="cancelingEdit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DetailsViewMode" />.</param>
+        <param name="cancelingEdit">
+          <see langword="true" />para indicar o <see cref="E:System.Web.UI.WebControls.DetailsView.ModeChanging" /> evento foi gerado como resultado do usuário cancelar uma operação de edição; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DetailsViewModeEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.CancelingEdit%2A>|O valor de `cancelingEdit` parâmetro.|  
+|<xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.NewMode%2A>|O valor de `mode` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelingEdit">
+      <MemberSignature Language="C#" Value="public bool CancelingEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CancelingEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewModeEventArgs.CancelingEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="E:System.Web.UI.WebControls.DetailsView.ModeChanging" /> evento foi gerado como resultado do usuário cancelar uma operação de edição.</summary>
+        <value>
+          <see langword="true" />para indicar o <see cref="E:System.Web.UI.WebControls.DetailsView.ModeChanging" /> evento foi gerado como resultado do usuário cancelar uma operação de edição; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DetailsView.ModeChanging> é gerado quando um <xref:System.Web.UI.WebControls.DetailsView> controle tenta alterar entre o modo somente leitura, inserir e editar, mas antes que o modo for alterado. Use o <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.CancelingEdit%2A> propriedade para determinar se o <xref:System.Web.UI.WebControls.DetailsView.ModeChanging> evento foi gerado como resultado do usuário cancelar uma operação de edição. Por exemplo, você pode querer redefinir o <xref:System.Web.UI.WebControls.DetailsView> controle sempre que o usuário cancela uma operação de edição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.CancelingEdit%2A> para determinar se uma alteração de modo é o resultado do usuário de cancelar uma operação de edição.  
+  
+ [!code-aspx-csharp[DetailsViewModeEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewModeEventArgs/CS/detailsviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewModeEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewModeEventArgs/VB/detailsviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DetailsViewMode NewMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DetailsViewMode NewMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewModeEventArgs.NewMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DetailsViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo no qual o <see cref="T:System.Web.UI.WebControls.DetailsView" /> controle está sendo alterado.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DetailsViewMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.NewMode%2A> propriedade para determinar o modo no qual o <xref:System.Web.UI.WebControls.DetailsView> controle está sendo alterado. Por exemplo, talvez você queira configurar o <xref:System.Web.UI.WebControls.DetailsView> controle com base no modo no qual ele se altera. Você também pode usar essa propriedade para especificar o modo no qual o <xref:System.Web.UI.WebControls.DetailsView> controlar alterações definindo-a como uma da <xref:System.Web.UI.WebControls.DetailsViewMode> valores de enumeração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewModeEventArgs.NewMode%2A> propriedade para determinar o modo no qual o <xref:System.Web.UI.WebControls.DetailsView> controle está em transição.  
+  
+ [!code-aspx-csharp[DetailsViewModeEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewModeEventArgs/CS/detailsviewmodeeventargscs.aspx#1)]
+ [!code-aspx-vb[DetailsViewModeEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewModeEventArgs/VB/detailsviewmodeeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1459 @@
+<Type Name="HttpStatusCode" FullName="System.Net.HttpStatusCode">
+  <TypeSignature Language="C#" Value="public enum HttpStatusCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpStatusCode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpStatusCode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>3.9.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Contém os valores dos códigos de status definidos para HTTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.HttpStatusCode> enumeração contém os valores dos códigos de status definidos na RFC 2616 para HTTP 1.1.  
+  
+ O status de uma solicitação HTTP está contido no <xref:System.Net.HttpWebResponse.StatusCode%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir compara o status retornado por uma <xref:System.Net.HttpWebResponse> com um membro do <xref:System.Net.HttpStatusCode> classe para determinar o status de uma resposta.  
+  
+ [!code-cpp[Classic HttpStatusCode Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic HttpStatusCode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HttpStatusCode Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic HttpStatusCode Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpStatusCode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic HttpStatusCode Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accepted">
+      <MemberSignature Language="C#" Value="Accepted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Accepted = int32(202)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Accepted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 202. <see cref="F:System.Net.HttpStatusCode.Accepted" /> indica que a solicitação foi aceita para processamento adicional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ambiguous">
+      <MemberSignature Language="C#" Value="Ambiguous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Ambiguous = int32(300)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Ambiguous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 300. <see cref="F:System.Net.HttpStatusCode.Ambiguous" /> indica que as informações solicitadas têm várias representações. A ação padrão é tratar esse status como um redirecionamento e seguir o conteúdo do cabeçalho Location associado a essa resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A?displayProperty=nameWithType> é de propriedade `false`, ambígua fará com que uma exceção seja lançada.  
+  
+ Ambíguo é um sinônimo para MultipleChoices.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BadGateway">
+      <MemberSignature Language="C#" Value="BadGateway" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode BadGateway = int32(502)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.BadGateway" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 502. <see cref="F:System.Net.HttpStatusCode.BadGateway" /> indica que um servidor proxy intermediário recebeu uma resposta incorreta de outro proxy ou servidor de origem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BadRequest">
+      <MemberSignature Language="C#" Value="BadRequest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode BadRequest = int32(400)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.BadRequest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 400. <see cref="F:System.Net.HttpStatusCode.BadRequest" /> indica que a solicitação não pôde ser entendida pelo servidor. <see cref="F:System.Net.HttpStatusCode.BadRequest" /> será enviado quando nenhum outro erro for aplicável ou se o erro exato for desconhecido ou não tiver seu próprio código de erro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Conflict">
+      <MemberSignature Language="C#" Value="Conflict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Conflict = int32(409)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Conflict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 409. <see cref="F:System.Net.HttpStatusCode.Conflict" /> indica que não foi possível executar a solicitação devido a um conflito no servidor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Continue">
+      <MemberSignature Language="C#" Value="Continue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Continue = int32(100)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Continue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 100. <see cref="F:System.Net.HttpStatusCode.Continue" /> indica que o cliente pode continuar com a solicitação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Created">
+      <MemberSignature Language="C#" Value="Created" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Created = int32(201)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Created" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 201. <see cref="F:System.Net.HttpStatusCode.Created" /> indica que a solicitação resultou em um novo recurso criado antes de a resposta ter sido enviada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpectationFailed">
+      <MemberSignature Language="C#" Value="ExpectationFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode ExpectationFailed = int32(417)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.ExpectationFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 417. <see cref="F:System.Net.HttpStatusCode.ExpectationFailed" /> indica que uma expectativa fornecida em um cabeçalho Expect não pôde ser atendida pelo servidor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Forbidden">
+      <MemberSignature Language="C#" Value="Forbidden" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Forbidden = int32(403)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Forbidden" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 403. <see cref="F:System.Net.HttpStatusCode.Forbidden" /> indica que o servidor se recusa a atender à solicitação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Found">
+      <MemberSignature Language="C#" Value="Found" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Found = int32(302)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Found" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 302. <see cref="F:System.Net.HttpStatusCode.Found" /> indica que as informações solicitadas estão localizadas no URI especificado no cabeçalho Location. A ação padrão quando esse status é recebido é seguir o cabeçalho Location associado a essa resposta. Quando o método de solicitação original era POST, a solicitação redirecionada usará o método GET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A?displayProperty=nameWithType> é de propriedade `false`, encontrado fará com que uma exceção seja lançada.  
+  
+ Encontrado é um sinônimo para redirecionamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayTimeout">
+      <MemberSignature Language="C#" Value="GatewayTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode GatewayTimeout = int32(504)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.GatewayTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 504. <see cref="F:System.Net.HttpStatusCode.GatewayTimeout" /> indica que um servidor proxy intermediário atingiu o tempo limite ao aguardar uma resposta de outro proxy ou servidor de origem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Gone">
+      <MemberSignature Language="C#" Value="Gone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Gone = int32(410)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Gone" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 410. <see cref="F:System.Net.HttpStatusCode.Gone" /> indica que o recurso solicitado não está mais disponível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpVersionNotSupported">
+      <MemberSignature Language="C#" Value="HttpVersionNotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode HttpVersionNotSupported = int32(505)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.HttpVersionNotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 505. <see cref="F:System.Net.HttpStatusCode.HttpVersionNotSupported" /> indica que a versão HTTP solicitada não tem suporte pelo servidor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalServerError">
+      <MemberSignature Language="C#" Value="InternalServerError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode InternalServerError = int32(500)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.InternalServerError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 500. <see cref="F:System.Net.HttpStatusCode.InternalServerError" /> indica que ocorreu um erro genérico no servidor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LengthRequired">
+      <MemberSignature Language="C#" Value="LengthRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode LengthRequired = int32(411)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.LengthRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 411. <see cref="F:System.Net.HttpStatusCode.LengthRequired" /> indica que o cabeçalho Content-length necessário está ausente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodNotAllowed">
+      <MemberSignature Language="C#" Value="MethodNotAllowed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode MethodNotAllowed = int32(405)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.MethodNotAllowed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 405. <see cref="F:System.Net.HttpStatusCode.MethodNotAllowed" /> indica que o método de solicitação (POST ou GET) não é permitido no recurso solicitado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Moved">
+      <MemberSignature Language="C#" Value="Moved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Moved = int32(301)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Moved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 301. <see cref="F:System.Net.HttpStatusCode.Moved" /> indica que as informações solicitadas foram movidas para o URI especificado no cabeçalho Location. A ação padrão quando esse status é recebido é seguir o cabeçalho Location associado a essa resposta. Quando o método de solicitação original era POST, a solicitação redirecionada usará o método GET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Movido é um sinônimo para MovedPermanently.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MovedPermanently">
+      <MemberSignature Language="C#" Value="MovedPermanently" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode MovedPermanently = int32(301)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.MovedPermanently" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 301. <see cref="F:System.Net.HttpStatusCode.MovedPermanently" /> indica que as informações solicitadas foram movidas para o URI especificado no cabeçalho Location. A ação padrão quando esse status é recebido é seguir o cabeçalho Location associado a essa resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ MovedPermanently é um sinônimo para movido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultipleChoices">
+      <MemberSignature Language="C#" Value="MultipleChoices" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode MultipleChoices = int32(300)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.MultipleChoices" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 300. <see cref="F:System.Net.HttpStatusCode.MultipleChoices" /> indica que as informações solicitadas têm várias representações. A ação padrão é tratar esse status como um redirecionamento e seguir o conteúdo do cabeçalho Location associado a essa resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A?displayProperty=nameWithType> é de propriedade `false`, MultipleChoices fará com que uma exceção seja lançada.  
+  
+ MultipleChoices é um sinônimo para ambígua.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoContent">
+      <MemberSignature Language="C#" Value="NoContent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode NoContent = int32(204)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.NoContent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 204. <see cref="F:System.Net.HttpStatusCode.NoContent" /> indica que a solicitação foi processada com êxito e que a resposta está intencionalmente em branco.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonAuthoritativeInformation">
+      <MemberSignature Language="C#" Value="NonAuthoritativeInformation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode NonAuthoritativeInformation = int32(203)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.NonAuthoritativeInformation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 203. <see cref="F:System.Net.HttpStatusCode.NonAuthoritativeInformation" /> indica que a metainformação retornada é de uma cópia armazenada em cache em vez do servidor de origem e, portanto, pode estar incorreta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAcceptable">
+      <MemberSignature Language="C#" Value="NotAcceptable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode NotAcceptable = int32(406)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.NotAcceptable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 406. <see cref="F:System.Net.HttpStatusCode.NotAcceptable" /> indica que o cliente indicou com cabeçalhos Accept que não aceitará nenhuma das representações disponíveis do recurso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotFound">
+      <MemberSignature Language="C#" Value="NotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode NotFound = int32(404)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.NotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 404. <see cref="F:System.Net.HttpStatusCode.NotFound" /> indica que o recurso solicitado não existe no servidor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotImplemented">
+      <MemberSignature Language="C#" Value="NotImplemented" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode NotImplemented = int32(501)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.NotImplemented" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 501. <see cref="F:System.Net.HttpStatusCode.NotImplemented" /> indica que o servidor não dá suporte à função solicitada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotModified">
+      <MemberSignature Language="C#" Value="NotModified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode NotModified = int32(304)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.NotModified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 304. <see cref="F:System.Net.HttpStatusCode.NotModified" /> indica que a cópia armazenada em cache do cliente está atualizada. O conteúdo do recurso não é transferido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OK">
+      <MemberSignature Language="C#" Value="OK" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode OK = int32(200)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.OK" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 200. <see cref="F:System.Net.HttpStatusCode.OK" /> indica que a solicitação foi bem-sucedida e que as informações solicitadas estão na resposta. Este é o código de status mais comuns a ser recebido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PartialContent">
+      <MemberSignature Language="C#" Value="PartialContent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode PartialContent = int32(206)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.PartialContent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 206. <see cref="F:System.Net.HttpStatusCode.PartialContent" /> indica que a resposta é uma resposta parcial conforme solicitado por uma solicitação GET que inclui um intervalo de bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PaymentRequired">
+      <MemberSignature Language="C#" Value="PaymentRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode PaymentRequired = int32(402)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.PaymentRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 402. <see cref="F:System.Net.HttpStatusCode.PaymentRequired" /> é reservado para uso futuro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreconditionFailed">
+      <MemberSignature Language="C#" Value="PreconditionFailed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode PreconditionFailed = int32(412)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.PreconditionFailed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 412. <see cref="F:System.Net.HttpStatusCode.PreconditionFailed" /> indica que uma condição definida para esta solicitação falhou e a solicitação não pode ser executada. As condições são definidas com cabeçalhos de solicitação condicional como If-Match, If-None-Match ou If-Unmodified-Since.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyAuthenticationRequired">
+      <MemberSignature Language="C#" Value="ProxyAuthenticationRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode ProxyAuthenticationRequired = int32(407)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.ProxyAuthenticationRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 407. <see cref="F:System.Net.HttpStatusCode.ProxyAuthenticationRequired" /> indica que o proxy solicitado requer autenticação. O cabeçalho Proxy-authenticate contém os detalhes de como realizar a autenticação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Redirect">
+      <MemberSignature Language="C#" Value="Redirect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Redirect = int32(302)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Redirect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 302. <see cref="F:System.Net.HttpStatusCode.Redirect" /> indica que as informações solicitadas estão localizadas no URI especificado no cabeçalho Location. A ação padrão quando esse status é recebido é seguir o cabeçalho Location associado a essa resposta. Quando o método de solicitação original era POST, a solicitação redirecionada usará o método GET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A?displayProperty=nameWithType> é de propriedade `false`, redirecionamento fará com que uma exceção seja lançada.  
+  
+ Redirecionamento é um sinônimo para encontrado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectKeepVerb">
+      <MemberSignature Language="C#" Value="RedirectKeepVerb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode RedirectKeepVerb = int32(307)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.RedirectKeepVerb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 307. <see cref="F:System.Net.HttpStatusCode.RedirectKeepVerb" /> indica que as informações de solicitação estão localizadas no URI especificado no cabeçalho Location. A ação padrão quando esse status é recebido é seguir o cabeçalho Location associado a essa resposta. Quando o método de solicitação original era POST, a solicitação redirecionada também usará o método POST.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A?displayProperty=nameWithType> é de propriedade `false`, RedirectKeepVerb fará com que uma exceção seja lançada.  
+  
+ RedirectKeepVerb é um sinônimo para TemporaryRedirect.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectMethod">
+      <MemberSignature Language="C#" Value="RedirectMethod" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode RedirectMethod = int32(303)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.RedirectMethod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 303. <see cref="F:System.Net.HttpStatusCode.RedirectMethod" /> redireciona automaticamente o cliente para o URI especificado no cabeçalho Location como o resultado de um POST. A solicitação para o recurso especificado pelo cabeçalho Location será feita com um GET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A?displayProperty=nameWithType> é de propriedade `false`, RedirectMethod fará com que uma exceção seja lançada.  
+  
+ RedirectMethod é um sinônimo para SeeOther.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedRangeNotSatisfiable">
+      <MemberSignature Language="C#" Value="RequestedRangeNotSatisfiable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode RequestedRangeNotSatisfiable = int32(416)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.RequestedRangeNotSatisfiable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 416. <see cref="F:System.Net.HttpStatusCode.RequestedRangeNotSatisfiable" /> indica que o intervalo de dados solicitados do recurso não pode ser retornado porque o início do intervalo é antes do início do recurso ou o final do intervalo é depois do final do recurso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestEntityTooLarge">
+      <MemberSignature Language="C#" Value="RequestEntityTooLarge" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode RequestEntityTooLarge = int32(413)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.RequestEntityTooLarge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 413. <see cref="F:System.Net.HttpStatusCode.RequestEntityTooLarge" /> indica que a solicitação é muito grande para o servidor processar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestTimeout">
+      <MemberSignature Language="C#" Value="RequestTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode RequestTimeout = int32(408)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.RequestTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 408. <see cref="F:System.Net.HttpStatusCode.RequestTimeout" /> indica que o cliente não enviou uma solicitação dentro do tempo que o servidor estava aguardando a solicitação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUriTooLong">
+      <MemberSignature Language="C#" Value="RequestUriTooLong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode RequestUriTooLong = int32(414)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.RequestUriTooLong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 414. <see cref="F:System.Net.HttpStatusCode.RequestUriTooLong" /> indica que o URI é muito longo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetContent">
+      <MemberSignature Language="C#" Value="ResetContent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode ResetContent = int32(205)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.ResetContent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 205. <see cref="F:System.Net.HttpStatusCode.ResetContent" /> indica que o cliente deve redefinir (não recarregar) o recurso atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SeeOther">
+      <MemberSignature Language="C#" Value="SeeOther" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode SeeOther = int32(303)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.SeeOther" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 303. <see cref="F:System.Net.HttpStatusCode.SeeOther" /> redireciona automaticamente o cliente para o URI especificado no cabeçalho Location como o resultado de um POST. A solicitação para o recurso especificado pelo cabeçalho Location será feita com um GET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A?displayProperty=nameWithType> é de propriedade `false`, SeeOther fará com que uma exceção seja lançada.  
+  
+ SeeOther é um sinônimo para RedirectMethod.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceUnavailable">
+      <MemberSignature Language="C#" Value="ServiceUnavailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode ServiceUnavailable = int32(503)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.ServiceUnavailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 503. <see cref="F:System.Net.HttpStatusCode.ServiceUnavailable" /> indica que o servidor está temporariamente indisponível, geralmente devido à carga elevada ou manutenção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchingProtocols">
+      <MemberSignature Language="C#" Value="SwitchingProtocols" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode SwitchingProtocols = int32(101)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.SwitchingProtocols" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 101. <see cref="F:System.Net.HttpStatusCode.SwitchingProtocols" /> indica que a versão de protocolo ou o protocolo está sendo alterado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TemporaryRedirect">
+      <MemberSignature Language="C#" Value="TemporaryRedirect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode TemporaryRedirect = int32(307)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.TemporaryRedirect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 307. <see cref="F:System.Net.HttpStatusCode.TemporaryRedirect" /> indica que as informações de solicitação estão localizadas no URI especificado no cabeçalho Location. A ação padrão quando esse status é recebido é seguir o cabeçalho Location associado a essa resposta. Quando o método de solicitação original era POST, a solicitação redirecionada também usará o método POST.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A?displayProperty=nameWithType> é de propriedade `false`, TemporaryRedirect fará com que uma exceção seja lançada.  
+  
+ TemporaryRedirect é um sinônimo para RedirectKeepVerb.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unauthorized">
+      <MemberSignature Language="C#" Value="Unauthorized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Unauthorized = int32(401)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Unauthorized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 401. <see cref="F:System.Net.HttpStatusCode.Unauthorized" /> indica que o recurso solicitado requer autenticação. O cabeçalho WWW-Authenticate contém os detalhes de como realizar a autenticação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsupportedMediaType">
+      <MemberSignature Language="C#" Value="UnsupportedMediaType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode UnsupportedMediaType = int32(415)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.UnsupportedMediaType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 415. <see cref="F:System.Net.HttpStatusCode.UnsupportedMediaType" /> indica que a solicitação é um tipo sem suporte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unused">
+      <MemberSignature Language="C#" Value="Unused" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode Unused = int32(306)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.Unused" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 306. <see cref="F:System.Net.HttpStatusCode.Unused" /> é uma extensão proposta para a especificação do HTTP/1.1 que não está totalmente especificada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpgradeRequired">
+      <MemberSignature Language="C#" Value="UpgradeRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode UpgradeRequired = int32(426)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.UpgradeRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 426. <see cref="F:System.Net.HttpStatusCode.UpgradeRequired" /> indica que o cliente deve mudar para um protocolo diferente como TLS/1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseProxy">
+      <MemberSignature Language="C#" Value="UseProxy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.HttpStatusCode UseProxy = int32(305)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.HttpStatusCode.UseProxy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>3.9.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente ao status HTTP 305. <see cref="F:System.Net.HttpStatusCode.UseProxy" /> indica que solicitação deve usar o servidor proxy no URI especificado no cabeçalho Location.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

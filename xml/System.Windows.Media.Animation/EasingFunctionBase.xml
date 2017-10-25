@@ -1,0 +1,170 @@
+<Type Name="EasingFunctionBase" FullName="System.Windows.Media.Animation.EasingFunctionBase">
+  <TypeSignature Language="C#" Value="public abstract class EasingFunctionBase : System.Windows.Freezable, System.Windows.Media.Animation.IEasingFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EasingFunctionBase extends System.Windows.Freezable implements class System.Windows.Media.Animation.IEasingFunction" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.EasingFunctionBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Media.Animation.IEasingFunction</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a classe base para todas as funções de easing.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode criar suas próprias funções personalizadas de atenuação herdar desta classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar uma função de easing personalizada simples. Você pode adicionar sua própria lógica de matemática para como a função de easing se comporta, substituindo o <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> método.  
+  
+ [!code-csharp[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
+ [!code-vb[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]
+ [!code-xaml[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/window1.xaml#customeasingfunction)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EasingFunctionBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingFunctionBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.EasingFunctionBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ease">
+      <MemberSignature Language="C#" Value="public double Ease (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 Ease(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingFunctionBase.Ease(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Tempo (progresso) normalizado de animação, que é um valor de 0 a 1.</param>
+        <summary>Transformações normalizado tempo para controlar o andamento de uma animação.</summary>
+        <returns>Um duplo que representa o progresso transformado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usa o <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> propriedade em conjunto com o <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> método para avaliar a função de easing.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInCore">
+      <MemberSignature Language="C#" Value="protected abstract double EaseInCore (double normalizedTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance float64 EaseInCore(float64 normalizedTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalizedTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="normalizedTime">Tempo (progresso) normalizado de animação, que é um valor de 0 a 1.</param>
+        <summary>Fornece a parte da lógica da função de atenuação que você pode substituir para produzir o <see cref="F:System.Windows.Media.Animation.EasingMode.EaseIn" /> modo da função de atenuação personalizada.</summary>
+        <returns>Um duplo que representa o progresso transformado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método transforma tempo normalizado para controlar o andamento de uma animação para o <xref:System.Windows.Media.Animation.EasingMode.EaseIn> caso de <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>.  
+  
+ Você só precisa especificar a função de easing para o <xref:System.Windows.Media.Animation.EasingMode.EaseIn> caso porque a implementação do <xref:System.Windows.Media.Animation.EasingFunctionBase.Ease%2A> método trata transformando `normalizedTime` para o <xref:System.Windows.Media.Animation.EasingMode.EaseOut> e <xref:System.Windows.Media.Animation.EasingMode.EaseInOut> casos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.EasingMode EasingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Animation.EasingMode EasingMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.EasingFunctionBase.EasingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.EasingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica como a animação interpola.</summary>
+        <value>Um dos valores de enumeração que especifica como a animação interpola. O padrão é <see cref="F:System.Windows.Media.Animation.EasingMode.EaseOut" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_easingMode"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<easingFunction EasingMode="easingMode"/>  
+```  
+  
+<a name="xamlValues_easingMode"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *easingFunction*  
+ Um elemento de objeto para uma classe que deriva de <xref:System.Windows.Media.Animation.EasingFunctionBase>.  
+  
+ *easingMode*  
+ O valor de <xref:System.Windows.Media.Animation.EasingMode> enumeração que especifica como a função de easing interpola.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EasingModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EasingModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.EasingFunctionBase.EasingModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.EasingFunctionBase.EasingMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

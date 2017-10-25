@@ -1,0 +1,206 @@
+<Type Name="ComUdtElement" FullName="System.ServiceModel.Configuration.ComUdtElement">
+  <TypeSignature Language="C#" Value="public sealed class ComUdtElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComUdtElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ComUdtElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contrato de serviço. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tempo de execução de integração COM+ cria serviços inspecionando a biblioteca de tipos. Quando um componente COM+ contém métodos que passem um `VARIANT`, o sistema não pode determinar os tipos reais a serem passados antes do tempo de execução. Portanto, quando você tenta transmitir um usuário definido pelo tipo (UDT) dentro de um `VARIANT`, falhar porque ele não é um tipo conhecido para serialização.  
+  
+ Para contornar esse problema, você pode adicionar os UDTs para o arquivo de configuração para que eles podem ser incluídos como tipos conhecidos no contrato de serviço apropriado. Para fazer isso, você precisa identificar exclusivamente o UDT e o contrato (s), ou seja, as COM interfaces originais que utiliza.  
+  
+ O exemplo a seguir demonstra como adicionar dois UDTs específicos para o <`userDefinedTypes`> seção do arquivo de configuração para essa finalidade.  
+  
+  
+  
+ Os atributos de <`userDefinedType`> elemento são definidas da seguinte maneira:  
+  
+-   `typeName`: um atributo opcional que fornece o nome de tipo legível. Isso não é usado pelo tempo de execução, mas ajuda a um leitor para distinguir os tipos.  
+  
+-   `typeLibID`: uma cadeia de caracteres GUID que especifica a biblioteca de tipos registrada que define o tipo.  
+  
+-   `typeLibVersion`: uma cadeia de caracteres que especifica a versão da biblioteca de tipo que define o tipo.  
+  
+-   `typeDefID`: uma cadeia de caracteres GUID que especifica o tipo UDT específico dentro da biblioteca de tipos registrada.  
+  
+ Quando o serviço é inicializado, o tempo de execução de integração COM+ procura os tipos especificados e os adiciona à coleção de tipos conhecidos para contratos especificados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar dois UDTs específicos para o <`userDefinedTypes`> seção do arquivo de configuração para essa finalidade.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComUdtElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ComUdtElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.ComUdtElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComUdtElement (string typeDefID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeDefID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ComUdtElement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeDefID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeDefID">Uma cadeia de caracteres GUID que identifica o tipo UDT específico dentro da biblioteca de tipos registrada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Configuration.ComUdtElement" /> classe com a cadeia de caracteres do GUID especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComUdtElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de tipo legível.</summary>
+        <value>O nome de tipo legível.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComUdtElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeDefID">
+      <MemberSignature Language="C#" Value="public string TypeDefID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeDefID" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComUdtElement.TypeDefID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("typeDefID", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired | System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres GUID que identifica o tipo UDT específico dentro da biblioteca de tipos registrada.</summary>
+        <value>O tipo UDT específico dentro da biblioteca de tipos registrada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeLibID">
+      <MemberSignature Language="C#" Value="public string TypeLibID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeLibID" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComUdtElement.TypeLibID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("typeLibID", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres GUID que identifica a biblioteca de tipos registrada que define o tipo.</summary>
+        <value>A biblioteca de tipos registrada que define o tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeLibVersion">
+      <MemberSignature Language="C#" Value="public string TypeLibVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeLibVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComUdtElement.TypeLibVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("typeLibVersion", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que identifica a versão da biblioteca de tipo que define o tipo.</summary>
+        <value>A versão da biblioteca de tipo que define o tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

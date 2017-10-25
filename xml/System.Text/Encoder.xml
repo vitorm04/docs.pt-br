@@ -1,0 +1,745 @@
+<Type Name="Encoder" FullName="System.Text.Encoder">
+  <TypeSignature Language="C#" Value="public abstract class Encoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit Encoder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.Encoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Converte um conjunto de caracteres em uma sequência de bytes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma instância de uma implementação do <xref:System.Text.Encoder> classe, o aplicativo deve usar o <xref:System.Text.Encoding.GetEncoder%2A> método de um <xref:System.Text.Encoding> implementação.  
+  
+ O <xref:System.Text.Encoder.GetByteCount%2A> método determina o número de bytes resulta em codificação de um conjunto de caracteres Unicode e o <xref:System.Text.Encoder.GetBytes%2A> método executa a codificação real. Há várias versões de ambos os métodos disponíveis no <xref:System.Text.Encoder> classe. Para obter mais informações, consulte <xref:System.Text.Encoding.GetBytes%2A?displayProperty=nameWithType>.  
+  
+ Um <xref:System.Text.Encoder> objeto mantém informações de estado entre as chamadas sucessivas para `GetBytes` ou <xref:System.Text.Decoder.Convert%2A> sequências que abrangem os blocos de caracteres de métodos para que ele pode codificar corretamente. O <xref:System.Text.Encoder> também preserva à direita caracteres do final de blocos de dados e usa os caracteres à direita na próxima operação de codificação. Por exemplo, um bloco de dados pode terminar com um substituto alto sem correspondência e o correspondência substituto baixo seria o próximo bloco de dados. Portanto, <xref:System.Text.Encoding.GetDecoder%2A> e <xref:System.Text.Encoding.GetEncoder%2A> são úteis para transmissão de rede e operações de arquivo, porque essas operações geralmente lidam com blocos de dados em vez de um fluxo de dados completo.  
+  
+> [!NOTE]
+>  Quando o aplicativo é feito com um fluxo de dados, assegure-se de que as informações de estado são liberadas, definindo o `flush` parâmetro `true` na chamada do método apropriado. Se ocorrer uma exceção ou se o aplicativo alterna fluxos, ele deve chamar <xref:System.Text.Encoder.Reset%2A> para limpar o estado interno do `Encoder` objeto.  
+  
+## <a name="version-considerations"></a>Considerações da versão  
+ Um <xref:System.Text.Decoder> ou <xref:System.Text.Encoder> objeto pode ser serializado durante uma operação de conversão. O estado do objeto é retido se ele é desserializado na mesma versão do .NET Framework, mas perdido se ele é desserializado em outra versão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como converter uma matriz de caracteres Unicode em blocos de bytes usando uma codificação especificada. Para comparação, a matriz de caracteres será codificada primeiro usando <xref:System.Text.UTF7Encoding>. Em seguida, a matriz de caracteres é codificada usando um <xref:System.Text.Encoder>.  
+  
+ [!code-cpp[System.Text.Encoder Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.Encoder Example/CPP/snippet.cpp#1)]
+ [!code-csharp[System.Text.Encoder Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.Encoder Example/CS/snippet.cs#1)]
+ [!code-vb[System.Text.Encoder Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.Encoder Example/VB/snippet.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando seu aplicativo herda dessa classe, ele deve substituir todos os membros.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Encoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Text.Encoder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma instância de uma implementação dessa classe, o aplicativo deve usar o <xref:System.Text.Encoding.GetEncoder%2A> método de um <xref:System.Text.Encoding> implementação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra duas técnicas para inicializar uma nova <xref:System.Text.Encoder> instância.  
+  
+ [!code-cpp[System.Text.Encoder.ctor Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.Encoder.ctor Example/CPP/ctor.cpp#1)]
+ [!code-csharp[System.Text.Encoder.ctor Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.Encoder.ctor Example/CS/ctor.cs#1)]
+ [!code-vb[System.Text.Encoder.ctor Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.Encoder.ctor Example/VB/ctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public virtual void Convert (char* chars, int charCount, byte* bytes, int byteCount, bool flush, out int charsUsed, out int bytesUsed, out bool completed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Convert(char* chars, int32 charCount, unsigned int8* bytes, int32 byteCount, bool flush, [out] int32&amp; charsUsed, [out] int32&amp; bytesUsed, [out] bool&amp; completed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encoder.Convert(System.Char*,System.Int32,System.Byte*,System.Int32,System.Boolean,System.Int32@,System.Int32@,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char*" />
+        <Parameter Name="charCount" Type="System.Int32" />
+        <Parameter Name="bytes" Type="System.Byte*" />
+        <Parameter Name="byteCount" Type="System.Int32" />
+        <Parameter Name="flush" Type="System.Boolean" />
+        <Parameter Name="charsUsed" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="bytesUsed" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="completed" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="chars">O endereço de uma cadeia de caracteres codificados em UTF-16 para converter.</param>
+        <param name="charCount">O número de caracteres em <c>caracteres</c> para converter.</param>
+        <param name="bytes">O endereço de um buffer para armazenar os bytes convertidos.</param>
+        <param name="byteCount">O número máximo de bytes em <c>bytes</c> para usar na conversão.</param>
+        <param name="flush">
+          <see langword="true" /> para indicar que mais nenhum dado deve ser convertido; caso contrário, <see langword="false" />.</param>
+        <param name="charsUsed">Quando este método retorna, contém o número de caracteres de <c>caracteres</c> que foram usados na conversão. Este parâmetro é passado não inicializado.</param>
+        <param name="bytesUsed">Quando este método retorna, contém o número de bytes que foram usados na conversão. Este parâmetro é passado não inicializado.</param>
+        <param name="completed">Quando este método retorna, contém <see langword="true" /> se todos os caracteres especificados por <c>charCount</c> foram convertidos; caso contrário, <see langword="false" />. Este parâmetro é passado não inicializado.</param>
+        <summary>Converte um buffer de caracteres Unicode em uma sequência de bytes codificados e armazena o resultado em outro buffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lembre-se de que o <xref:System.Text.Encoder> salva o objeto de estado entre as chamadas para <xref:System.Text.Encoder.Convert%2A>. Quando o aplicativo é feito com um fluxo de dados, ele deve definir o `flush` parâmetro `true` para certificar-se de que as informações de estado são liberadas. Com essa configuração, o codificador ignora bytes inválidos no final do bloco de dados e limpa o buffer interno. Todos os dados processados restantes que faz parte de uma unidade lógica, como o substituto alto de um par substituto, são convertidos de acordo com as configurações atuais de fallbacks.  
+  
+ O `Convert` método foi projetado para ser usado em um loop para codificar uma quantidade arbitrária de entrada, como a leitura de um arquivo ou fluxo de dados. Ele armazena a saída da operação de codificação em um buffer de tamanho fixo. <xref:System.Text.Encoder.GetBytes%2A>lançará uma exceção se o buffer de saída não for grande o suficiente, mas <xref:System.Text.Encoder.Convert%2A> será preencher tanto espaço quanto possível e retornar os caracteres leitura e bytes gravados. Consulte também o <xref:System.Text.Encoding.GetBytes%2A?displayProperty=nameWithType> tópico mais comentários.  
+  
+ O `completed` parâmetro de saída indica se todos os dados no buffer de entrada foi convertida e armazenada no buffer de saída. Esse parâmetro é definido como `false` se o número de caracteres especificado pelo `charCount` parâmetro não pode ser convertido sem exceder o número de bytes especificado pelo `byteCount` parâmetro. Nessa situação, o aplicativo deve usar o conteúdo do buffer de saída ou forneça um novo buffer de saída, incremento o `chars` parâmetro pelo número de caracteres especificado pelo `charsUsed` parâmetro, em seguida, chamar o `Convert` método novamente para processar a entrada restante.  
+  
+ O `completed` parâmetro também pode ser definido como `false`, mesmo que o `charsUsed` e `charCount` parâmetros são iguais. Essa situação ocorrerá se ainda há dados no <xref:System.Text.Encoder> que não foi armazenado no objeto o `chars` buffer.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Text.Encoder.Convert(System.Char[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32,System.Boolean,System.Int32@,System.Int32@,System.Boolean@)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" />or <paramref name="bytes" /> is <see langword="null" /> (<see langword="Nothing" />).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="charCount" /> ou <paramref name="byteCount" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">O buffer de saída é muito pequeno para conter qualquer entrada convertida. O buffer de saída deve ser maior ou igual ao tamanho indicado pelo método <see cref="Overload:System.Text.Encoder.GetByteCount" />.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ocorreu um fallback (consulte [codificação de caracteres no .NET Framework](~/docs/standard/base-types/character-encoding.md) para explicação mais completa)  
+  
+ -e-  
+  
+ <see cref="P:System.Text.Encoder.Fallback" /> é definido como <see cref="T:System.Text.EncoderExceptionFallback" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public virtual void Convert (char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, int byteCount, bool flush, out int charsUsed, out int bytesUsed, out bool completed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Convert(char[] chars, int32 charIndex, int32 charCount, unsigned int8[] bytes, int32 byteIndex, int32 byteCount, bool flush, [out] int32&amp; charsUsed, [out] int32&amp; bytesUsed, [out] bool&amp; completed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encoder.Convert(System.Char[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Int32,System.Boolean,System.Int32@,System.Int32@,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char[]" />
+        <Parameter Name="charIndex" Type="System.Int32" />
+        <Parameter Name="charCount" Type="System.Int32" />
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="byteIndex" Type="System.Int32" />
+        <Parameter Name="byteCount" Type="System.Int32" />
+        <Parameter Name="flush" Type="System.Boolean" />
+        <Parameter Name="charsUsed" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="bytesUsed" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="completed" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Uma matriz de caracteres a ser convertida.</param>
+        <param name="charIndex">O primeiro elemento da <c>caracteres</c> para converter.</param>
+        <param name="charCount">O número de elementos de <c>caracteres</c> para converter.</param>
+        <param name="bytes">Uma matriz em que os bytes convertidos são armazenados.</param>
+        <param name="byteIndex">O primeiro elemento da <c>bytes</c> no qual os dados são armazenados.</param>
+        <param name="byteCount">O número máximo de elementos de <c>bytes</c> para usar na conversão.</param>
+        <param name="flush">
+          <see langword="true" /> para indicar que mais nenhum dado deve ser convertido; caso contrário, <see langword="false" />.</param>
+        <param name="charsUsed">Quando este método retorna, contém o número de caracteres de <c>caracteres</c> que foram usados na conversão. Este parâmetro é passado não inicializado.</param>
+        <param name="bytesUsed">Quando este método retorna, contém o número de bytes que foram produzidas pela conversão. Este parâmetro é passado não inicializado.</param>
+        <param name="completed">Quando este método retorna, contém <see langword="true" /> se todos os caracteres especificados por <c>charCount</c> foram convertidos; caso contrário, <see langword="false" />. Este parâmetro é passado não inicializado.</param>
+        <summary>Converte uma matriz de caracteres Unicode em uma sequência de bytes codificados e armazena o resultado em uma matriz de bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lembre-se de que o <xref:System.Text.Encoder> salva o objeto de estado entre as chamadas para <xref:System.Text.Encoder.Convert%2A>. Quando o aplicativo é feito com um fluxo de dados, ele deve definir o `flush` parâmetro `true` para certificar-se de que as informações de estado são liberadas. Com essa configuração, o codificador ignora bytes inválidos no final do bloco de dados e limpa o buffer interno. Todos os dados processados restantes que faz parte de uma unidade lógica, como o substituto alto de um par substituto, são convertidos de acordo com as configurações atuais de fallbacks.  
+  
+ O `Convert` método foi projetado para ser usada em um loop para decodificar um valor arbitrário de entrada, como a leitura de um arquivo ou fluxo de dados. Ele armazena a saída da operação de codificação em um buffer de tamanho fixo. <xref:System.Text.Encoder.GetBytes%2A>lançará uma exceção se o buffer de saída não for grande o suficiente, mas <xref:System.Text.Encoder.Convert%2A> será preencher tanto espaço quanto possível e retornar os caracteres leitura e bytes gravados. Consulte também o <xref:System.Text.Encoding.GetBytes%2A?displayProperty=nameWithType> tópico mais comentários.  
+  
+ O `completed` parâmetro de saída indica se todos os dados no buffer de entrada foi convertida e armazenada no buffer de saída. Esse parâmetro é definido como `false` se o número de caracteres especificado pelo `charCount` parâmetro não pode ser convertido sem exceder o número de bytes especificado pelo `byteCount` parâmetro. Nessa situação, o aplicativo deve usar o conteúdo do buffer de saída ou forneça um novo buffer de saída, incremento o `chars` parâmetro pelo número de caracteres especificado pelo `charsUsed` parâmetro, em seguida, chamar o `Convert` método novamente para processar a entrada restante.  
+  
+ O `completed` parâmetro também pode ser definido como `false`, mesmo que o `charsUsed` e `charCount` parâmetros são iguais. Essa situação ocorrerá se ainda há dados no <xref:System.Text.Encoder> que não foi armazenado no objeto o `chars` buffer.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Text.Encoder.Convert%2A> método para converter um arquivo de UTF-16 caracteres UTF-8, em seguida, usa o <xref:System.Text.Decoder.Convert%2A> método para converter os caracteres UTF-8 para UTF-16 caracteres.  
+  
+ [!code-csharp[sys.txt.EncoderDecoder.convert#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.txt.EncoderDecoder.convert/cs/edCvt.cs#1)]
+ [!code-vb[sys.txt.EncoderDecoder.convert#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.txt.EncoderDecoder.convert/vb/edCvt.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" />or <paramref name="bytes" /> is <see langword="null" /> (<see langword="Nothing" />).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="charIndex" />, <paramref name="charCount" />, <paramref name="byteIndex" /> ou <paramref name="byteCount" /> é menor que zero.  
+  
+ -ou-  
+  
+ O comprimento de <paramref name="chars" />  -  <paramref name="charIndex" /> é menor que <paramref name="charCount" />.  
+  
+ -ou-  
+  
+ O comprimento de <paramref name="bytes" />  -  <paramref name="byteIndex" /> é menor que <paramref name="byteCount" />.</exception>
+        <exception cref="T:System.ArgumentException">O buffer de saída é muito pequeno para conter qualquer entrada convertida. O buffer de saída deve ser maior ou igual ao tamanho indicado pelo método <see cref="Overload:System.Text.Encoder.GetByteCount" />.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ocorreu um fallback (consulte [codificação de caracteres no .NET Framework](~/docs/standard/base-types/character-encoding.md) para explicação mais completa)  
+  
+ -e-  
+  
+ <see cref="P:System.Text.Encoder.Fallback" /> é definido como <see cref="T:System.Text.EncoderExceptionFallback" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fallback">
+      <MemberSignature Language="C#" Value="public System.Text.EncoderFallback Fallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.EncoderFallback Fallback" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Encoder.Fallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.EncoderFallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto <see cref="T:System.Text.EncoderFallback" /> para o objeto <see cref="T:System.Text.Encoder" /> atual.</summary>
+        <value>Um objeto <see cref="T:System.Text.EncoderFallback" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.EncoderFallback> objeto representa um manipulador de erro que é invocado quando um caractere não pode ser convertido em uma sequência de bytes codificados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor em uma operação de definição é <see langword="null" /> (<see langword="Nothing" />).</exception>
+        <exception cref="T:System.ArgumentException">Não é possível atribuir um novo valor em uma operação de conjuntos, pois o objeto <see cref="T:System.Text.EncoderFallbackBuffer" /> atual contém dados que ainda não foram codificados.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ocorreu um fallback (consulte [codificação de caracteres no .NET Framework](~/docs/standard/base-types/character-encoding.md) para explicação mais completa)  
+  
+ -e-  
+  
+ <see cref="P:System.Text.Encoder.Fallback" /> é definido como <see cref="T:System.Text.EncoderExceptionFallback" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackBuffer">
+      <MemberSignature Language="C#" Value="public System.Text.EncoderFallbackBuffer FallbackBuffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.EncoderFallbackBuffer FallbackBuffer" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Encoder.FallbackBuffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Text.EncoderFallbackBuffer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Text.EncoderFallbackBuffer" /> objeto associado atual <see cref="T:System.Text.Encoder" /> objeto.</summary>
+        <value>Um objeto <see cref="T:System.Text.EncoderFallbackBuffer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.Encoder.FallbackBuffer%2A> objeto representa dados usados pelo <xref:System.Text.EncoderFallback> objeto. O <xref:System.Text.EncoderFallback> objeto representa um manipulador de erro que é invocado quando um caractere não pode ser convertido em uma sequência de bytes codificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByteCount">
+      <MemberSignature Language="C#" Value="public virtual int GetByteCount (char* chars, int count, bool flush);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetByteCount(char* chars, int32 count, bool flush) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encoder.GetByteCount(System.Char*,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char*" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="flush" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Um ponteiro para o primeiro caractere a ser codificado.</param>
+        <param name="count">O número de caracteres a ser codificado.</param>
+        <param name="flush">
+          <see langword="true" />para simular a limpar o estado interno do codificador após o cálculo; Caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, calcula o número de bytes produzidos por codificação de um conjunto de caracteres a partir do ponteiro de caractere especificado. Um parâmetro indica se deseja limpar o estado interno do codificador após o cálculo.</summary>
+        <returns>O número de bytes produzidos por codificação de caracteres especificados e qualquer caractere no buffer interno.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não afeta o estado do codificador.  
+  
+ Para calcular a matriz exata tamanho que <xref:System.Text.Encoder.GetBytes%2A> requer para armazenar os bytes resultantes, o aplicativo deve usar <xref:System.Text.Encoder.GetByteCount%2A>.  
+  
+ Se `GetBytes` é chamado com `flush` definida como `false`, o codificador armazena caracteres à direita no final do bloco de dados em um buffer interno e os utiliza a próxima operação de codificação. O aplicativo deve chamar `GetByteCount` em um bloco de dados imediatamente antes de chamar `GetBytes` no mesmo bloco, para que qualquer à direita caracteres do bloco anterior está incluído no cálculo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" />é <see langword="null" /> (<see langword="Nothing" /> no Visual Basic .NET).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ocorreu um fallback (consulte [codificação de caracteres no .NET Framework](~/docs/standard/base-types/character-encoding.md) para explicação mais completa)  
+  
+ -e-  
+  
+ <see cref="P:System.Text.Encoder.Fallback" /> é definido como <see cref="T:System.Text.EncoderExceptionFallback" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByteCount">
+      <MemberSignature Language="C#" Value="public abstract int GetByteCount (char[] chars, int index, int count, bool flush);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetByteCount(char[] chars, int32 index, int32 count, bool flush) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encoder.GetByteCount(System.Char[],System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="flush" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="chars">A matriz de caracteres que contém o conjunto de caracteres a serem codificados.</param>
+        <param name="index">O índice do primeiro caractere a codificação.</param>
+        <param name="count">O número de caracteres a ser codificado.</param>
+        <param name="flush">
+          <see langword="true" />para simular a limpar o estado interno do codificador após o cálculo; Caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, calcula o número de bytes produzidos por codificação de um conjunto de caracteres da matriz de caractere especificado. Um parâmetro indica se deseja limpar o estado interno do codificador após o cálculo.</summary>
+        <returns>O número de bytes produzidos por codificação de caracteres especificados e qualquer caractere no buffer interno.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não afeta o estado do codificador.  
+  
+ Para calcular a matriz exata tamanho que <xref:System.Text.Encoder.GetBytes%2A> requer para armazenar os bytes resultantes, o aplicativo deve usar <xref:System.Text.Encoder.GetByteCount%2A>.  
+  
+ Se `GetBytes` é chamado com `flush` definida como `false`, o codificador armazena caracteres à direita no final do bloco de dados em um buffer interno e os utiliza a próxima operação de codificação. O aplicativo deve chamar `GetByteCount` em um bloco de dados imediatamente antes de chamar `GetBytes` no mesmo bloco, para que qualquer à direita caracteres do bloco anterior está incluído no cálculo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Text.Encoder.GetByteCount%2A> método para retornar o número de bytes necessários para codificar uma matriz de caracteres usando um Unicode <xref:System.Text.Encoder>.  
+  
+ [!code-cpp[System.Text.Encoder.GetByteCount Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.Encoder.GetByteCount Example/CPP/getbytecount-char[]-int32-int32.cpp#1)]
+ [!code-csharp[System.Text.Encoder.GetByteCount Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.Encoder.GetByteCount Example/CS/getbytecount-char[]-int32-int32.cs#1)]
+ [!code-vb[System.Text.Encoder.GetByteCount Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.Encoder.GetByteCount Example/VB/getbytecount-char[]-int32-int32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" /> e <paramref name="count" /> não denotam um intervalo válido em <paramref name="chars" />.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ocorreu um fallback (consulte [codificação de caracteres no .NET Framework](~/docs/standard/base-types/character-encoding.md) para explicação mais completa)  
+  
+ -e-  
+  
+ <see cref="P:System.Text.Encoder.Fallback" /> é definido como <see cref="T:System.Text.EncoderExceptionFallback" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public virtual int GetBytes (char* chars, int charCount, byte* bytes, int byteCount, bool flush);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetBytes(char* chars, int32 charCount, unsigned int8* bytes, int32 byteCount, bool flush) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encoder.GetBytes(System.Char*,System.Int32,System.Byte*,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char*" />
+        <Parameter Name="charCount" Type="System.Int32" />
+        <Parameter Name="bytes" Type="System.Byte*" />
+        <Parameter Name="byteCount" Type="System.Int32" />
+        <Parameter Name="flush" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="chars">Um ponteiro para o primeiro caractere a ser codificado.</param>
+        <param name="charCount">O número de caracteres a ser codificado.</param>
+        <param name="bytes">Um ponteiro para o local no qual começar a escrever a sequência resultante de bytes.</param>
+        <param name="byteCount">O número máximo de bytes a serem gravados.</param>
+        <param name="flush">
+          <see langword="true" /> para limpar o estado interno do codificador após a conversão; caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, codifica um conjunto de caracteres a partir do ponteiro de caractere especificado e qualquer caractere no buffer interno em uma sequência de bytes armazenados iniciando o ponteiro de bytes especificado. Um parâmetro indica se você deseja limpar o estado interno do codificador após a conversão.</summary>
+        <returns>O número real de bytes gravados no local indicado pelo parâmetro <paramref name="bytes" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lembre-se de que o <xref:System.Text.Encoder> salva o objeto de estado entre as chamadas para <xref:System.Text.Encoder.GetBytes%2A>. Quando o aplicativo é feito com um fluxo de dados, ele deve definir o `flush` parâmetro para `true` na última chamada `GetBytes` para certificar-se de que as informações de estado são liberadas e que os bytes codificados corretamente são encerrados. Com essa configuração, o codificador ignora bytes inválidos no final do bloco de dados, como substitutos sem correspondência ou sequências de combinação incompletos e limpa o buffer interno.  
+  
+ Para calcular o buffer exato tamanho que `GetBytes` requer para armazenar os caracteres resultantes, o aplicativo deve usar <xref:System.Text.Encoder.GetByteCount%2A>.  
+  
+ Se `GetBytes` é chamado com `flush` definida como `false`, o codificador armazena bytes à direita no final do bloco de dados em um buffer interno e os utiliza a próxima operação de codificação. O aplicativo deve chamar `GetByteCount` em um bloco de dados imediatamente antes de chamar `GetBytes` no mesmo bloco, para que qualquer à direita caracteres do bloco anterior está incluído no cálculo.  
+  
+ Se seu aplicativo é converter o número de segmentos de um fluxo de entrada, considere o uso de <xref:System.Text.Encoder.Convert%2A> método. <xref:System.Text.Encoder.GetBytes%2A>lançará uma exceção se o buffer de saída não for grande o suficiente, mas <xref:System.Text.Encoder.Convert%2A> será preencher tanto espaço quanto possível e retornar os caracteres leitura e bytes gravados. Consulte também o <xref:System.Text.Encoding.GetBytes%2A?displayProperty=nameWithType> tópico mais comentários.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" />is <see langword="null" /> (<see langword="Nothing" />).  
+  
+ -ou-  
+  
+ <paramref name="bytes" />is <see langword="null" /> (<see langword="Nothing" />).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="charCount" /> ou <paramref name="byteCount" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="byteCount" /> é menor que o número de bytes resultante.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ocorreu um fallback (consulte [codificação de caracteres no .NET Framework](~/docs/standard/base-types/character-encoding.md) para explicação mais completa)  
+  
+ -e-  
+  
+ <see cref="P:System.Text.Encoder.Fallback" /> é definido como <see cref="T:System.Text.EncoderExceptionFallback" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public abstract int GetBytes (char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, bool flush);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetBytes(char[] chars, int32 charIndex, int32 charCount, unsigned int8[] bytes, int32 byteIndex, bool flush) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encoder.GetBytes(System.Char[],System.Int32,System.Int32,System.Byte[],System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chars" Type="System.Char[]" />
+        <Parameter Name="charIndex" Type="System.Int32" />
+        <Parameter Name="charCount" Type="System.Int32" />
+        <Parameter Name="bytes" Type="System.Byte[]" />
+        <Parameter Name="byteIndex" Type="System.Int32" />
+        <Parameter Name="flush" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="chars">A matriz de caracteres que contém o conjunto de caracteres a serem codificados.</param>
+        <param name="charIndex">O índice do primeiro caractere a codificação.</param>
+        <param name="charCount">O número de caracteres a ser codificado.</param>
+        <param name="bytes">A matriz de bytes para conter a sequência resultante de bytes.</param>
+        <param name="byteIndex">O índice no qual será iniciada a gravação da sequência de bytes resultante.</param>
+        <param name="flush">
+          <see langword="true" /> para limpar o estado interno do codificador após a conversão; caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, codifica um conjunto de caracteres da matriz de caracteres especificada e quaisquer caracteres no buffer interno na matriz de bytes especificada. Um parâmetro indica se você deseja limpar o estado interno do codificador após a conversão.</summary>
+        <returns>O número real de bytes gravados no <paramref name="bytes" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lembre-se de que o <xref:System.Text.Encoder> salva o objeto de estado entre as chamadas para <xref:System.Text.Encoder.GetBytes%2A>. Quando o aplicativo é feito com um fluxo de dados, ele deve definir o `flush` parâmetro para `true` na última chamada `GetBytes` para certificar-se de que as informações de estado são liberadas e que os bytes codificados corretamente são encerrados. Com essa configuração, o codificador ignora bytes inválidos no final do bloco de dados, como substitutos sem correspondência ou sequências de combinação incompletos e limpa o buffer interno.  
+  
+ Para calcular o buffer exato tamanho que `GetBytes` requer para armazenar os caracteres resultantes, o aplicativo deve usar <xref:System.Text.Encoder.GetByteCount%2A>.  
+  
+ Se `GetBytes` é chamado com `flush` definida como `false`, o codificador armazena bytes à direita no final do bloco de dados em um buffer interno e os utiliza a próxima operação de codificação. O aplicativo deve chamar `GetByteCount` em um bloco de dados imediatamente antes de chamar `GetBytes` no mesmo bloco, para que qualquer à direita caracteres do bloco anterior está incluído no cálculo.  
+  
+ Se seu aplicativo é converter o número de segmentos de um fluxo de entrada, considere o uso de <xref:System.Text.Encoder.Convert%2A> método. <xref:System.Text.Encoder.GetBytes%2A>lançará uma exceção se o buffer de saída não for grande o suficiente, mas <xref:System.Text.Encoder.Convert%2A> será preencher tanto espaço quanto possível e retornar os caracteres leitura e bytes gravados. Consulte também o <xref:System.Text.Encoding.GetBytes%2A?displayProperty=nameWithType> tópico mais comentários.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como codificar um intervalo de elementos de uma matriz de caracteres e armazenar os bytes codificados em um intervalo de elementos em uma matriz de bytes. O <xref:System.Text.Encoder.GetByteCount%2A> método é usado para determinar o tamanho da matriz exigido pelo <xref:System.Text.Encoder.GetBytes%2A>.  
+  
+ [!code-cpp[System.Text.Encoder.GetBytes Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Text.Encoder.GetBytes Example/CPP/getbytes-char[]-int32-int32-byte[]-int32.cpp#1)]
+ [!code-csharp[System.Text.Encoder.GetBytes Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.Encoder.GetBytes Example/CS/getbytes-char[]-int32-int32-byte[]-int32.cs#1)]
+ [!code-vb[System.Text.Encoder.GetBytes Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.Encoder.GetBytes Example/VB/getbytes-char[]-int32-int32-byte[]-int32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="chars" />is <see langword="null" /> (<see langword="Nothing" />).  
+  
+ -ou-  
+  
+ <paramref name="bytes" />is <see langword="null" /> (<see langword="Nothing" />).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="charIndex" />, <paramref name="charCount" /> ou <paramref name="byteIndex" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="charIndex" /> e <paramref name="charCount" /> não denotam um intervalo válido em <paramref name="chars" />.  
+  
+ -ou-  
+  
+ <paramref name="byteIndex" /> não é um índice válido em <paramref name="bytes" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="bytes" /> não tem capacidade suficiente do <paramref name="byteIndex" /> ao final da matriz para acomodar os bytes resultantes.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">Ocorreu um fallback (consulte [codificação de caracteres no .NET Framework](~/docs/standard/base-types/character-encoding.md) para explicação mais completa)  
+  
+ -e-  
+  
+ <see cref="P:System.Text.Encoder.Fallback" /> é definido como <see cref="T:System.Text.EncoderExceptionFallback" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public virtual void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encoder.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, define o codificador de volta ao estado inicial.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método limpa o estado interno do <xref:System.Text.Encoder> objeto. O método limpa qualquer informação de estado preservada de uma chamada anterior para <xref:System.Text.Encoder.GetBytes%2A> ou <xref:System.Text.Decoder.Convert%2A>, incluindo caracteres do final do bloco de dados anterior, como um substituto alto sem correspondência.  
+  
+ Seu aplicativo deve chamar o `Reset` método se desejar reutilizar o mesmo codificador, mesmo depois que uma exceção é lançada por <xref:System.Text.Encoder.GetBytes%2A> ou <xref:System.Text.Encoder.GetByteCount%2A>, ou se o aplicativo alterna fluxos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

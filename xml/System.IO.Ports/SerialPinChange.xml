@@ -1,0 +1,131 @@
+<Type Name="SerialPinChange" FullName="System.IO.Ports.SerialPinChange">
+  <TypeSignature Language="C#" Value="public enum SerialPinChange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SerialPinChange extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.SerialPinChange" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de alteração ocorrida no objeto <see cref="T:System.IO.Ports.SerialPort" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada com a <xref:System.IO.Ports.SerialPort.PinChanged> eventos.  
+  
+ Uma porta serial pin muda de estado quando ela é declarada ou desativada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Break">
+      <MemberSignature Language="C#" Value="Break" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialPinChange Break = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialPinChange.Break" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPinChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma quebra na entrada foi detectada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CDChanged">
+      <MemberSignature Language="C#" Value="CDChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialPinChange CDChanged = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialPinChange.CDChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPinChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado do sinal CD (Carrier Detect) foi alterado. Esse sinal é usado para indicar se um modem está conectado a uma linha telefônica ativa e se um sinal de carrier de dados foi detectado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CtsChanged">
+      <MemberSignature Language="C#" Value="CtsChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialPinChange CtsChanged = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialPinChange.CtsChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPinChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado do sinal CTS (Clear to Send) foi alterado. Esse sinal é usado para indicar se os dados podem ser enviados pela porta serial.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DsrChanged">
+      <MemberSignature Language="C#" Value="DsrChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialPinChange DsrChanged = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialPinChange.DsrChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPinChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado do sinal DSR (Data Set Ready) foi alterado. Esse sinal é usado para indicar se o dispositivo na porta serial está pronto para operar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ring">
+      <MemberSignature Language="C#" Value="Ring" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialPinChange Ring = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialPinChange.Ring" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPinChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um indicador de anel foi detectado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

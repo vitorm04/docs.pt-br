@@ -1,0 +1,16 @@
+<Namespace Name="System.Data.SqlClient">
+  <Docs>
+    <summary>O <see cref="N:System.Data.SqlClient" /> namespace é o.NET Framework Data Provider para SQL Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Provedor de dados.NET Framework para SQL Server descreve uma coleção de classes usadas para acessar um banco de dados do SQL Server no espaço gerenciado. Usando o <xref:System.Data.SqlClient.SqlDataAdapter>, você pode preencher um residente na memória <xref:System.Data.DataSet> que você pode usar para consultar e atualizar o banco de dados.  
+  
+> [!NOTE]
+>  Para obter informações conceituais sobre como usar esse namespace na programação com o .NET Framework, consulte [do SQL Server e ADO.NET](http://msdn.microsoft.com/library/c18b1fb1-2af1-4de7-80a4-95e56fd976cb).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

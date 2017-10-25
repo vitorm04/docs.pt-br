@@ -1,0 +1,40 @@
+<Type Name="LocalNode" FullName="Microsoft.Build.BuildEngine.LocalNode">
+  <TypeSignature Language="C#" Value="public class LocalNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi LocalNode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.LocalNode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe hospeda uma classe de nó no processo de compilação filho. Ele usa a memória compartilhada para se comunicar com o provedor de nó local.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="StartLocalNodeServer">
+      <MemberSignature Language="C#" Value="public static void StartLocalNodeServer (int nodeNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StartLocalNodeServer(int32 nodeNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.LocalNode.StartLocalNodeServer(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="nodeNumber">O número de nós para iniciar.</param>
+        <summary>Inicia o nó local quando o processo é iniciado e desligado no tempo limite.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

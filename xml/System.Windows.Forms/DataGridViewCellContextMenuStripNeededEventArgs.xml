@@ -1,0 +1,101 @@
+<Type Name="DataGridViewCellContextMenuStripNeededEventArgs" FullName="System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewCellContextMenuStripNeededEventArgs : System.Windows.Forms.DataGridViewCellEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewCellContextMenuStripNeededEventArgs extends System.Windows.Forms.DataGridViewCellEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewCellEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> evento ocorre somente quando o <xref:System.Windows.Forms.DataGridView> controle <xref:System.Windows.Forms.DataGridView.DataSource%2A> está definida ou seu <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> é de propriedade `true`.  
+  
+ Quando você processa o <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> evento, o menu de atalho que você especificar o manipulador é mostrado sempre que o usuário clica uma célula. Isso é útil quando você deseja exibir menus de atalho, determinados pelo estado atual ou valor de uma célula.  
+  
+ O <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> evento também ocorre sempre que o valor de <xref:System.Windows.Forms.DataGridViewCell.ContextMenuStrip%2A?displayProperty=nameWithType> propriedade é recuperada, ou programaticamente ou quando o usuário clica na célula.  
+  
+ Você pode usar o <xref:System.Windows.Forms.DataGridViewCellEventArgs.ColumnIndex%2A> e <xref:System.Windows.Forms.DataGridViewCellEventArgs.RowIndex%2A> propriedades para determinar o estado ou o valor de uma célula e use essas informações para definir o <xref:System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs.ContextMenuStrip%2A> propriedade. Essa propriedade é inicializada com o valor da célula <xref:System.Windows.Forms.DataGridViewCell.ContextMenuStrip%2A> propriedade, que substitui o valor do evento.  
+  
+ Manipular o <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> eventos ao trabalhar com grandes quantidades de dados para evitar as penalidades de desempenho de definir a célula <xref:System.Windows.Forms.DataGridViewCell.ContextMenuStrip%2A> valor para várias células. Para obter mais informações, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ Você também pode especificar os menus de atalho para linhas individuais em vez de células individuais, definindo a linha <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> propriedade ou manipulação de <xref:System.Windows.Forms.DataGridView> do controle <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> evento. A célula <xref:System.Windows.Forms.DataGridViewCell.ContextMenuStrip%2A> configuração da propriedade substitui a linha <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> configuração de propriedade e o <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> substituições de evento de ambos os <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> evento e a linha <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> configuração da propriedade. Você pode especificar `null` para um menu de atalho célula, no entanto, para impedir que um menu de atalho da linha que está sendo substituído.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa a <xref:System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs> classe para definir o menu de atalho sem descompartilhar a linha.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView_SharedRowScenarios#20](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/CPP/sharedrows.cpp#20)]
+ [!code-csharp[System.Windows.Forms.DataGridView_SharedRowScenarios#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/CS/sharedrows.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridView_SharedRowScenarios#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/VB/sharedrows.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewCellContextMenuStripNeededEventArgs (int columnIndex, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 columnIndex, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">O índice de coluna da célula que o evento ocorreu para.</param>
+        <param name="rowIndex">O índice de linha da célula que o evento ocorreu em.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o menu de atalho para a célula que gerou o <see cref="E:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded" /> evento.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ContextMenuStrip" /> da célula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicialmente, essa propriedade contém o valor da <xref:System.Windows.Forms.DataGridViewCell.ContextMenuStrip%2A?displayProperty=nameWithType> propriedade se ele tiver sido definido para uma célula.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um manipulador de eventos que usa o <xref:System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs.ContextMenuStrip%2A> propriedade para definir o menu de atalho para uma célula.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView_SharedRowScenarios#22](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/CPP/sharedrows.cpp#22)]
+ [!code-csharp[System.Windows.Forms.DataGridView_SharedRowScenarios#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/CS/sharedrows.cs#22)]
+ [!code-vb[System.Windows.Forms.DataGridView_SharedRowScenarios#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/VB/sharedrows.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

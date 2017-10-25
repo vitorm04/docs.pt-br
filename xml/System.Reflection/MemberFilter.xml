@@ -1,0 +1,54 @@
+<Type Name="MemberFilter" FullName="System.Reflection.MemberFilter">
+  <TypeSignature Language="C#" Value="public delegate bool MemberFilter(MemberInfo m, object filterCriteria);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MemberFilter extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.MemberFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="m" Type="System.Reflection.MemberInfo" />
+    <Parameter Name="filterCriteria" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="m">O objeto <see cref="T:System.Reflection.MemberInfo" /> ao qual o filtro é aplicado.</param>
+    <param name="filterCriteria">Um objeto arbitrário usado para filtrar a lista.</param>
+    <summary>Representa um delegado que é usado para filtrar uma lista de membros representados em uma matriz de <see cref="T:System.Reflection.MemberInfo" /> objetos.</summary>
+    <returns>
+      <see langword="true" /> para incluir o membro na lista filtrada; caso contrário, <see langword="false" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada classe derivada de uma <xref:System.Delegate> e <xref:System.MulticastDelegate> tem um construtor e um `Invoke` método. (Consulte o exemplo de código em `Delegate`.)  
+  
+ O <xref:System.Type.FindMembers%2A> método usa este delegado para filtrar a lista de membros que ele retorna.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

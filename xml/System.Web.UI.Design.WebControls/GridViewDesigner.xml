@@ -1,0 +1,511 @@
+<Type Name="GridViewDesigner" FullName="System.Web.UI.Design.WebControls.GridViewDesigner">
+  <TypeSignature Language="C#" Value="public class GridViewDesigner : System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewDesigner extends System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.GridViewDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.DataBoundControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design em um designer visual para o <see cref="T:System.Web.UI.WebControls.GridView" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um designer visual, quando você alternar de origem para o modo de Design, o código-fonte marcação que descreve o <xref:System.Web.UI.WebControls.GridView> controle é analisado e uma versão de tempo de design do controle é criada na superfície de design. Quando você alternar de volta à exibição da fonte, o controle de tempo de design é persistente para o código-fonte marcação e editado na marcação da página da Web.  
+  
+ As propriedades da <xref:System.Web.UI.Design.WebControls.GridViewDesigner> classe fornecer a seguinte funcionalidade:  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.ActionLists%2A> propriedade retorna um <xref:System.ComponentModel.Design.DesignerActionListCollection> objeto, que normalmente contém um objeto que é derivado do <xref:System.ComponentModel.Design.DesignerActionList> classe para cada nível na árvore de herança do designer.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.AutoFormats%2A> propriedade retorna uma coleção de esquemas para exibição de formatação de **AutoFormatação** caixa de diálogo.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.TemplateGroups%2A> propriedade retorna uma coleção de grupos de modelo para os campos de associado <xref:System.Web.UI.WebControls.GridView> controle e nível superior <xref:System.Web.UI.WebControls.GridView> modelos.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.UsePreviewControl%2A> propriedade sempre retorna `true`, indicando que o designer cria uma cópia temporária do associado <xref:System.Web.UI.WebControls.GridView> para gerar a marcação de tempo de design.  
+  
+ Os métodos de <xref:System.Web.UI.Design.WebControls.GridViewDesigner> classe fornecer a seguinte funcionalidade:  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.DataBind%2A> método associa associado <xref:System.Web.UI.WebControls.GridView> controle a uma fonte de dados de tempo de design.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml%2A> método retorna a marcação que é usada para renderizar associado <xref:System.Web.UI.WebControls.GridView> em tempo de design.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.Initialize%2A> método prepara o designer para exibir, editar e criar associado <xref:System.Web.UI.WebControls.GridView>.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.OnClick%2A> método é chamado quando uma região do modo de exibição de tempo de design de associado <xref:System.Web.UI.WebControls.GridView> é clicado.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.OnSchemaRefreshed%2A> método é chamado quando o esquema da fonte de dados de associado <xref:System.Web.UI.WebControls.GridView> alterações.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.PreFilterProperties%2A> método é usado para remover ou adicionar propriedades ou a propriedades de sombra de associado <xref:System.Web.UI.WebControls.GridView>.  
+  
+ Editáveis do tempo de design não têm suporte no <xref:System.Web.UI.WebControls.GridView> controle, portanto, o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetEditableDesignerRegionContent%2A> e <xref:System.Web.UI.Design.WebControls.GridViewDesigner.SetEditableDesignerRegionContent%2A> métodos não têm nenhuma funcionalidade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como estender o <xref:System.Web.UI.Design.WebControls.GridViewDesigner> classe para alterar a aparência dos controles que são derivados do <xref:System.Web.UI.WebControls.GridView> controle em tempo de design.  
+  
+ O exemplo deriva o `MyGridView` controlar do <xref:System.Web.UI.WebControls.GridView>. O `MyGridView` é simplesmente uma cópia de <xref:System.Web.UI.WebControls.GridView>. O exemplo também deriva o `MyGridViewDesigner` classe o <xref:System.Web.UI.Design.WebControls.GridViewDesigner> classe e coloca um <xref:System.ComponentModel.DesignerAttribute> de objeto para o `MyGridViewDesigner` no `MyGridView` controle.  
+  
+ O `MyGridViewDesigner` substitui o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.PreFilterProperties%2A> método para fazer o <xref:System.Web.UI.Control.Page%2A> propriedade visível no **propriedades** grade em tempo de design. Ela substitui o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml%2A> método para incluir o <xref:System.Web.UI.WebControls.GridView.Caption%2A> propriedade, se for especificado, como uma nova linha primeiro no `MyGridView` controle em tempo de design. Se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade o `MyGridView` controle tem o <xref:System.Web.UI.WebControls.BorderStyle.NotSet> ou <xref:System.Web.UI.WebControls.BorderStyle.None> valor, o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml%2A> desenha uma borda tracejada azul ao redor do controle para tornar sua extensão mais visíveis.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.GridViewDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.GridViewDesigner/CS/gridviewdesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.GridViewDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.GridViewDesigner/VB/gridviewdesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.GridViewDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.GridViewDesigner> classe quando ele cria associado <xref:System.Web.UI.WebControls.GridView> controle ou uma cópia desse controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.GridViewDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção da lista de ação de designer para este designer.</summary>
+        <value>O <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> associado a este designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFormats">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.GridViewDesigner.AutoFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerAutoFormatCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção de esquemas de formatação predefinidas para exibir o **AutoFormatação** caixa de diálogo.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" /> que contém os esquemas predefinidos para a <see cref="T:System.Web.UI.WebControls.GridView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DesignerAutoFormatCollection> objeto é preenchido com um membro codificados em XML de uma classe interna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="protected override void DataBind (System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DataBind(class System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.DataBind(System.Web.UI.WebControls.BaseDataBoundControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataBoundControl" Type="System.Web.UI.WebControls.BaseDataBoundControl" />
+      </Parameters>
+      <Docs>
+        <param name="dataBoundControl">O <see cref="T:System.Web.UI.WebControls.GridView" /> para associar à fonte de dados de tempo de design.</param>
+        <summary>Associa o controle associado à fonte de dados de tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.DataBind%2A> método associa associado <xref:System.Web.UI.WebControls.GridView> controle à fonte de dados de tempo de design e atribui um valor exclusivo para o <xref:System.Web.UI.Design.DesignerRegion.DesignerRegionAttributeName> campo de cada célula do <xref:System.Web.UI.WebControls.GridView> processamento de tempo de design do controle.  
+  
+ O `dataBoundControl` parâmetro é o <xref:System.Web.UI.WebControls.GridView> controle associado este designer, ou uma cópia desse controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a marcação que é usada para renderizar o controle associado em tempo de design.</summary>
+        <returns>Um <see cref="T:System.String" /> contendo a marcação usada para renderizar o <see cref="T:System.Web.UI.WebControls.GridView" /> em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml> método faz o seguinte:  
+  
+1.  Conjuntos de <xref:System.Web.UI.WebControls.GridView.AutoGenerateColumns%2A> propriedade do controle para `true`, se o <xref:System.Web.UI.WebControls.GridView.Columns%2A> propriedade está vazia.  
+  
+2.  Conjuntos de <xref:System.Web.UI.WebControls.GridView.DataKeyNames%2A> propriedade do controle para `null`, se o esquema da fonte de dados não pode ser obtido.  
+  
+3.  Atualiza o <xref:System.ComponentModel.TypeDescriptor> objeto para forçar o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.PreFilterProperties%2A> método a ser chamado.  
+  
+4.  Chama o método base para gerar a marcação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml%2A> método em uma classe herdada do <xref:System.Web.UI.Design.WebControls.GridViewDesigner> classe para alterar a aparência do <xref:System.Web.UI.WebControls.GridView> controle em tempo de design. O exemplo adiciona uma nova linha primeiro à grade para conter o <xref:System.Web.UI.WebControls.GridView.Caption%2A> propriedade, se o <xref:System.Web.UI.WebControls.GridView.Caption%2A> está definido. Se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade do controle que é derivado do <xref:System.Web.UI.WebControls.GridView> classe tem o <xref:System.Web.UI.WebControls.BorderStyle.NotSet> ou <xref:System.Web.UI.WebControls.BorderStyle.None> valor, o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml%2A> desenha uma borda tracejada azul ao redor do controle para tornar sua extensão mais visível. Ele não altera a aparência de tempo de execução do controle.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.GridViewDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.GridViewDesigner/CS/gridviewdesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.GridViewDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.GridViewDesigner/VB/gridviewdesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir o <see cref="M:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml" /> método, não deixe de chamar o método base, pois ela eventualmente, por meio de vários níveis de substituição, chama o <see cref="T:System.Web.UI.WebControls.GridView" /> controle ou uma cópia do controle para gerar a marcação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml (System.Web.UI.Design.DesignerRegionCollection regions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml(class System.Web.UI.Design.DesignerRegionCollection regions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="regions">Um <see cref="T:System.Web.UI.Design.DesignerRegionCollection" /> para quais definições das regiões selecionáveis e clicáveis na exibição de tempo de design do controle são adicionadas.</param>
+        <summary>Obtém a marcação que é usada para renderizar o controle associado em tempo de design e preenche uma coleção de regiões de designer.</summary>
+        <returns>Um <see cref="T:System.String" /> contendo a marcação usada para renderizar o <see cref="T:System.Web.UI.WebControls.GridView" /> em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml%28System.Web.UI.Design.DesignerRegionCollection%29> chamadas de método de <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml> método para gerar a marcação para o processamento de tempo de design do <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml%28System.Web.UI.Design.DesignerRegionCollection%29> também preenche `regions` com um <xref:System.Web.UI.Design.DesignerRegion> objeto para cada região clicável ou selecionável do processamento de tempo de design.  
+  
+ Para o <xref:System.Web.UI.WebControls.GridView>, a primeira célula em cada linha é selecionável; todas as células nas linhas são clicáveis.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml%2A> método em uma classe herdada do <xref:System.Web.UI.Design.WebControls.GridViewDesigner> classe para alterar a aparência do <xref:System.Web.UI.WebControls.GridView> controle em tempo de design. O exemplo adiciona uma nova linha primeiro à grade para conter o <xref:System.Web.UI.WebControls.GridView.Caption%2A> propriedade, se o <xref:System.Web.UI.WebControls.GridView.Caption%2A> está definido. Se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade do controle que é derivado do <xref:System.Web.UI.WebControls.GridView> classe tem o <xref:System.Web.UI.WebControls.BorderStyle.NotSet> ou <xref:System.Web.UI.WebControls.BorderStyle.None> valor, o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml%2A> desenha uma borda tracejada azul ao redor do controle para tornar sua extensão mais visível. Ele não altera a aparência de tempo de execução do controle.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.GridViewDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.GridViewDesigner/CS/gridviewdesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.GridViewDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.GridViewDesigner/VB/gridviewdesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir o <see cref="M:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml(System.Web.UI.Design.DesignerRegionCollection)" /> método, certifique-se de chamar o método base ou o <see cref="M:System.Web.UI.Design.WebControls.GridViewDesigner.GetDesignTimeHtml" /> sobrecarregar, porque eles eventualmente, por meio de vários níveis de substituição, chamam o <see cref="T:System.Web.UI.WebControls.GridView" /> controle ou uma cópia do controle para gerar a marcação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override string GetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.GetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> para o qual buscar o conteúdo.</param>
+        <summary>Retorna o conteúdo de uma área editável da exibição de tempo de design do controle associado.</summary>
+        <returns>
+          <see cref="F:System.String.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa funcionalidade não está disponível no momento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Um <see cref="T:System.Web.UI.WebControls.GridView" />, que implementa um <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Prepara o designer para exibir, editar e criar o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O host de designer chama o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.Initialize%2A> método quando ele estiver pronto para usar o designer para renderizar o <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.Initialize%2A> e seus métodos base configurar propriedades e os eventos que são necessários para a operação do designer.  
+  
+ O `component` parâmetro é o <xref:System.Web.UI.WebControls.GridView> controle associado este designer, ou uma cópia do <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected override void OnClick (System.Web.UI.Design.DesignerRegionMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClick(class System.Web.UI.Design.DesignerRegionMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.OnClick(System.Web.UI.Design.DesignerRegionMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.Design.DesignerRegionMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Web.UI.Design.DesignerRegionMouseEventArgs" /> que define a região clicada do controle.</param>
+        <summary>Chamado quando uma região do modo de exibição de tempo de design do controle associado é clicada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.OnClick%2A> método salva o índice de região selecionada e atualiza a marcação que renderiza o <xref:System.Web.UI.WebControls.GridView> controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSchemaRefreshed">
+      <MemberSignature Language="C#" Value="protected override void OnSchemaRefreshed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSchemaRefreshed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.OnSchemaRefreshed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando as alterações de esquema da fonte de dados para o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que o designer estiver no modo de edição de modelo ou um campo está sendo adicionado ou editado, a <xref:System.Web.UI.Design.WebControls.GridViewDesigner.OnSchemaRefreshed%2A> chamadas de método de <xref:System.Web.UI.Design.ControlDesigner.InvokeTransactedChange%2A> método, que por sua vez chama o <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A> para atualizar o <xref:System.Web.UI.WebControls.GridView> controle para refletir a alteração da fonte de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Implementando uma coleção de <see cref="T:System.Collections.IDictionary" /> das propriedades adicionadas e sombreadas.</param>
+        <summary>Usado pelo designer para remover propriedades da ou adicionar propriedades adicionais para a exibição no **propriedades** grade ou a propriedades de sombra do controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Designers de controle usam métodos que são derivados do <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A?displayProperty=nameWithType> método sombra várias propriedades de controle com as propriedades de tempo de design correspondentes que implementa o designer, e para adicionar ou remover propriedades do **propriedades** grade.  
+  
+ Para o <xref:System.Web.UI.WebControls.GridView> controle, o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.PreFilterProperties%2A> método define o <xref:System.ComponentModel.BrowsableAttribute> objeto do <xref:System.Web.UI.WebControls.GridView.Columns%2A> propriedade `false` quando o controle está no modo de modelo. Isso é uma coluna que está no modo de modelo não pode ser excluído usando o **campos** caixa de diálogo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.PreFilterProperties%2A> método em uma classe herdada do <xref:System.Web.UI.Design.WebControls.GridViewDesigner> para alterar o **propriedades** grade do <xref:System.Web.UI.WebControls.GridView> controle em tempo de design. O exemplo faz o <xref:System.Web.UI.Control.Page%2A> propriedade visível no **propriedades** grade.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.GridViewDesigner#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.GridViewDesigner/CS/gridviewdesigner.cs#3)]
+ [!code-vb[System.Web.UI.Design.WebControls.GridViewDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.GridViewDesigner/VB/gridviewdesigner.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.Web.UI.Design.WebControls.GridViewDesigner.PreFilterProperties(System.Collections.IDictionary)" /> método para adicionar ou alterar atributos de propriedades na coleção de propriedades de tempo de design. Certifique-se de chamar o método base antes de executar outro processamento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleRowCount">
+      <MemberSignature Language="C#" Value="protected override int SampleRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SampleRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.GridViewDesigner.SampleRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de linhas de amostra para o controle associado exibir.</summary>
+        <value>O número de linhas de amostra.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se associado <xref:System.Web.UI.WebControls.GridView> controle permite que a paginação e a <xref:System.Web.UI.WebControls.GridView.PageSize%2A> propriedade é maior que 0, o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.SampleRowCount%2A> propriedade retorna o <xref:System.Web.UI.WebControls.GridView.PageSize%2A> mais 1 (mas não é maior que 100). Se o <xref:System.Web.UI.WebControls.GridView> não permite que a paginação ou <xref:System.Web.UI.WebControls.GridView.PageSize%2A> é 0, <xref:System.Web.UI.Design.WebControls.GridViewDesigner.SampleRowCount%2A> retorna `5`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEditableDesignerRegionContent">
+      <MemberSignature Language="C#" Value="public override void SetEditableDesignerRegionContent (System.Web.UI.Design.EditableDesignerRegion region, string content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetEditableDesignerRegionContent(class System.Web.UI.Design.EditableDesignerRegion region, string content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.GridViewDesigner.SetEditableDesignerRegionContent(System.Web.UI.Design.EditableDesignerRegion,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="region" Type="System.Web.UI.Design.EditableDesignerRegion" />
+        <Parameter Name="content" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="region">O <see cref="T:System.Web.UI.Design.EditableDesignerRegion" /> para atualizar.</param>
+        <param name="content">Um <see cref="T:System.String" /> para gravar <c>região</c>.</param>
+        <summary>Especifica o conteúdo de uma área editável de uma exibição de tempo de design para o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.SetEditableDesignerRegionContent%2A> método não tem nenhuma funcionalidade; não há suporte para regiões editáveis na exibição de tempo de design a <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.GridViewDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de grupos de modelo para os campos do controle associado.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.TemplateGroupCollection" /> que contém um elemento para cada campo modelo de <see cref="T:System.Web.UI.WebControls.GridView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.TemplateGroups%2A> propriedade constrói uma coleção de <xref:System.Web.UI.Design.TemplateGroup> objetos, uma para cada campo de dados modelo e um para cada modelo de controle (pager e dados vazios) associada <xref:System.Web.UI.WebControls.GridView> controle. O campo de dados <xref:System.Web.UI.Design.TemplateGroup> elementos têm um <xref:System.Web.UI.Design.TemplateDefinition> objeto para cada um dos tipos de modelo de linha predefinida. O modelo de controle <xref:System.Web.UI.Design.TemplateGroup> elementos contêm uma única <xref:System.Web.UI.Design.TemplateDefinition>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.GridViewDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer deve usar uma cópia temporária em vez do controle real associada com o designer para gerar a marcação de tempo de design.</summary>
+        <value>
+          <see langword="true" />Se o designer deve usar uma cópia temporária em vez do controle real associada com o designer para gerar a marcação de tempo de design; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.GridViewDesigner.UsePreviewControl%2A> propriedade é sempre `true`, o designer usa um <xref:System.Web.UI.WebControls.View> controle que contém uma cópia do associado <xref:System.Web.UI.WebControls.GridView> controle para gerar a marcação de tempo de design. O <xref:System.Web.UI.WebControls.View> controle não afeta qualquer persistência para o <xref:System.Web.UI.WebControls.GridView>.  
+  
+ Se o <xref:System.Web.UI.Design.WebControls.GridViewDesigner.UsePreviewControl%2A> propriedade foi substituída para retornar `false`, o designer usará associado <xref:System.Web.UI.WebControls.GridView> para gerar a marcação de tempo de design e alterações em tempo de design para o controle será mantido para a origem de marcação da página.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="P:System.Web.UI.Design.WebControls.GridViewDesigner.UsePreviewControl" /> propriedade para retornar <see langword="false" /> ou para determinar seu valor com base em se o controle está marcado com um nível de classe <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> objeto. Se o <see cref="P:System.Web.UI.Design.WebControls.GridViewDesigner.UsePreviewControl" /> não for substituído, o <see cref="T:System.Web.UI.WebControls.GridView" /> ignora o <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

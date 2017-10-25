@@ -1,0 +1,270 @@
+<Type Name="MultiPartWriter" FullName="System.Web.UI.MobileControls.Adapters.MultiPartWriter">
+  <TypeSignature Language="C#" Value="public abstract class MultiPartWriter : System.Web.UI.HtmlTextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MultiPartWriter extends System.Web.UI.HtmlTextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Adapters.MultiPartWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlTextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a classe base para o <see cref="T:System.Web.UI.MobileControls.Adapters.MobileTextWriter" /> classe. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Adapters.MultiPartWriter> classe e suas classes herdadas fornecem serviços e métodos auxiliares para os adaptadores executar a renderização.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MultiPartWriter (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MultiPartWriter.#ctor(System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">A base <see cref="T:System.IO.TextWriter" /> objeto.</param>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Web.UI.MobileControls.Adapters.MultiPartWriter" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é a classe base para o <xref:System.Web.UI.MobileControls.Adapters.MobileTextWriter> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddResource(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MultiPartWriter.AddResource(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL para adicionar a referência de recurso para.</param>
+        <summary>Adiciona uma referência de recurso para a URL fornecida, com o tipo MIME opcional para o conteúdo especificado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento desse método é reservado para versões futuras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public abstract void AddResource (string url, string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddResource(string url, string contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MultiPartWriter.AddResource(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="contentType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL para adicionar a referência de recurso para.</param>
+        <param name="contentType">(Opcional) O tipo MIME do conteúdo.</param>
+        <summary>Adiciona uma referência de recurso para a URL fornecida, com o tipo MIME opcional para o conteúdo especificado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento desse método é reservado para versões futuras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginFile">
+      <MemberSignature Language="C#" Value="public abstract void BeginFile (string url, string contentType, string charset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginFile(string url, string contentType, string charset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MultiPartWriter.BeginFile(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="charset" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL exclusiva para o arquivo.</param>
+        <param name="contentType">O tipo MIME do arquivo.</param>
+        <param name="charset">O conjunto de caracteres usado para o arquivo (geralmente, o mesmo que <see cref="P:System.Web.HttpResponse.Charset" />).</param>
+        <summary>Esse método inicia um arquivo de resposta. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O adaptador de página deve chamar esse método antes do processamento da página, mas depois de chamar o <xref:System.Web.UI.MobileControls.Adapters.MultiPartWriter.BeginResponse%2A> método. Uma exceção é gerada se o <xref:System.Web.UI.MobileControls.Adapters.MultiPartWriter.BeginFile%2A> método é chamado mais de uma vez.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginResponse">
+      <MemberSignature Language="C#" Value="public abstract void BeginResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginResponse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MultiPartWriter.BeginResponse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Começa uma resposta. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Adapters.MultiPartWriter.BeginResponse%2A> método deve ser chamado pela página apenas uma vez, antes de chamar o <xref:System.Web.UI.MobileControls.Adapters.MultiPartWriter.BeginFile%2A> método e antes do processamento da página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndFile">
+      <MemberSignature Language="C#" Value="public abstract void EndFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndFile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MultiPartWriter.EndFile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina um arquivo de resposta. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O adaptador de página deve chamar esse método após o processamento da página, mas antes de chamar o <xref:System.Web.UI.MobileControls.Adapters.MultiPartWriter.EndResponse%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndResponse">
+      <MemberSignature Language="C#" Value="public abstract void EndResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndResponse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MultiPartWriter.EndResponse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina uma resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O adaptador de página deve chamar este método depois da renderização de uma página e depois de chamar o <xref:System.Web.UI.MobileControls.Adapters.MultiPartWriter.EndFile%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewUrl">
+      <MemberSignature Language="C#" Value="public virtual string NewUrl (string filetype);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string NewUrl(string filetype) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Adapters.MultiPartWriter.NewUrl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filetype" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filetype">Contém a extensão de nome de arquivo para a nova URL.</param>
+        <summary>Gera uma URL exclusiva. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Uma URL exclusiva com base em uma ID globalmente exclusivo (GUID).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria uma URL exclusiva ao gerar um GUID, convertendo-a em uma cadeia de caracteres, e acrescentar a extensão de nome de arquivo contido no `filetype` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsMultiPart">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsMultiPart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsMultiPart" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Adapters.MultiPartWriter.SupportsMultiPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se há suporte para a escrita de várias partes. O padrão é <see langword="false" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" />Se houver suporte para gravação com diversas partes; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

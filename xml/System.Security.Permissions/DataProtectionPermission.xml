@@ -1,0 +1,419 @@
+<Type Name="DataProtectionPermission" FullName="System.Security.Permissions.DataProtectionPermission">
+  <TypeSignature Language="C#" Value="public sealed class DataProtectionPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DataProtectionPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.DataProtectionPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Controla a capacidade de acessar a memória e os dados criptografados. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa permissão é usada para controlar a capacidade de criptografar dados e o uso de memória de <xref:System.Security.Cryptography.ProtectedData> e <xref:System.Security.Cryptography.ProtectedMemory> classes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataProtectionPermission (System.Security.Permissions.DataProtectionPermissionFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.DataProtectionPermissionFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermission.#ctor(System.Security.Permissions.DataProtectionPermissionFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flag" Type="System.Security.Permissions.DataProtectionPermissionFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.DataProtectionPermission" /> classe com os sinalizadores de permissões especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.%23ctor%28System.Security.Permissions.DataProtectionPermissionFlags%29> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#2)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#2)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="flags" />não é uma combinação válida do <see cref="T:System.Security.Permissions.DataProtectionPermissionFlags" /> valores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataProtectionPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um dos valores de <see cref="T:System.Security.Permissions.PermissionState" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.DataProtectionPermission" /> classe com o estado de permissão especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um `None` (totalmente restrito) ou `Unrestricted` acesso a dados e de memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.%23ctor%28System.Security.Permissions.PermissionState%29> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#9)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#9)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="state" /> não é um valor <see cref="T:System.Security.Permissions.PermissionState" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia idêntica da permissão atual.</summary>
+        <returns>Uma cópia da permissão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia da permissão representa o mesmo acesso a recursos como a permissão original.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.Copy%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+> [!NOTE]
+>  O exemplo de código destina-se para mostrar o comportamento do método, não para demonstrar o seu uso. Em geral, os métodos das classes de permissão são usados pela infraestrutura de segurança; eles não são normalmente usados em aplicativos.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#5)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#5)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.DataProtectionPermissionFlags Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.DataProtectionPermissionFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.DataProtectionPermission.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.DataProtectionPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os dados e a memória sinalizadores de proteção.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Security.Permissions.DataProtectionPermissionFlags" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica se o `Protect` e `Unprotect` métodos do <xref:System.Security.Cryptography.ProtectedData> e <xref:System.Security.Cryptography.ProtectedMemory> classes podem ser usadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.Flags%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#10)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#10)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado não é uma combinação válida do <see cref="T:System.Security.Permissions.DataProtectionPermissionFlags" /> valores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>Reconstrói uma permissão com um estado específico de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Permissions.DataProtectionPermission.FromXml%2A> método reconstrói um <xref:System.Security.Permissions.DataProtectionPermission> objeto a partir de uma codificação de XML definido pelo <xref:System.Security.SecurityElement> classe. Use o <xref:System.Security.Permissions.DataProtectionPermission.ToXml%2A> método para codificar o XML de <xref:System.Security.Permissions.DataProtectionPermission>, incluindo informações de estado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.FromXml%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+> [!NOTE]
+>  O exemplo de código destina-se para mostrar o comportamento do método, não para demonstrar o seu uso. Em geral, os métodos das classes de permissão são usados pela infraestrutura de segurança; eles não são normalmente usados em aplicativos.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#7)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#7)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="e" />não é um elemento de permissão válido.  
+  
+ -ou-  
+  
+ O número de versão <paramref name="e" /> não tem suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a interseção com a permissão atual. Ele deve ser o mesmo tipo que a permissão atual.</param>
+        <summary>Cria e retorna uma permissão que é a interseção de permissão atual e da permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a interseção de permissão atual e a permissão especificada. Essa nova permissão é <see langword="null" /> se a interseção estiver vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A interseção de duas permissões é uma permissão que descreve o conjunto de operações que ambas descrevem em comum. Somente uma demanda que passa as permissões individuais passará a interseção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.Intersect%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#10)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#10)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />não é <see langword="null" /> e não especifica uma permissão do mesmo tipo como a permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para testar a relação de subconjunto. Essa permissão deve ser do mesmo tipo que a permissão atual.</param>
+        <summary>Determina se a permissão atual é um subconjunto de permissão especificada.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é um subconjunto da permissão especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão atual é um subconjunto de permissão especificada se a permissão atual especifica um conjunto de operações é totalmente contido na permissão especificada.  Por exemplo, uma permissão para <xref:System.Security.Permissions.DataProtectionPermissionFlags.ProtectData> acesso é um subconjunto de uma permissão <xref:System.Security.Permissions.DataProtectionPermissionFlags.AllFlags> acesso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.IsSubsetOf%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+> [!NOTE]
+>  O exemplo de código destina-se para mostrar o comportamento do método, não para demonstrar o seu uso. Em geral, os métodos das classes de permissão são usados pela infraestrutura de segurança; eles não são normalmente usados em aplicativos.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#3)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#3)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />não é <see langword="null" /> e não especifica uma permissão do mesmo tipo como a permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se a permissão atual é irrestrita.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é irrestrita; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma permissão irrestrita representa acesso a todos os recursos protegidos pela permissão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.IsUnrestricted%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#4)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#4)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML de permissão e seu estado atual.</summary>
+        <returns>Uma codificação de XML de permissão, incluindo informações de estado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Permissions.DataProtectionPermission.FromXml%2A> método para restaurar as informações de estado de um <xref:System.Security.SecurityElement>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.ToXml%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+> [!NOTE]
+>  O exemplo de código destina-se para mostrar o comportamento do método, não para demonstrar o seu uso. Em geral, os métodos das classes de permissão são usados pela infraestrutura de segurança; eles não são normalmente usados em aplicativos.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#7)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#7)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria uma permissão que é a união de permissão atual e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a união de permissão atual e a permissão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O resultado de uma chamada para <xref:System.Security.Permissions.DataProtectionPermission.Union%2A> é uma permissão que representa todas as operações representadas pela permissão atual e a permissão especificada. Qualquer solicitação que passa a ter a permissão passa seu union.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.DataProtectionPermission.Union%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+> [!NOTE]
+>  O exemplo de código destina-se para mostrar o comportamento do método, não para demonstrar o seu uso. Em geral, os métodos das classes de permissão são usados pela infraestrutura de segurança; eles não são normalmente usados em aplicativos.  
+  
+ [!code-cpp[System.Security.Permissions.DataProtectionPermission2#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CPP/dataprotect.cpp#6)]
+ [!code-csharp[System.Security.Permissions.DataProtectionPermission2#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/CS/dataprotect.cs#6)]
+ [!code-vb[System.Security.Permissions.DataProtectionPermission2#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.DataProtectionPermission2/VB/dataprotect.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" />não é <see langword="null" /> e não especifica uma permissão do mesmo tipo como a permissão atual.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

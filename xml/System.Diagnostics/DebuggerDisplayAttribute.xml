@@ -1,0 +1,301 @@
+<Type Name="DebuggerDisplayAttribute" FullName="System.Diagnostics.DebuggerDisplayAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerDisplayAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DebuggerDisplayAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggerDisplayAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Delegate, AllowMultiple=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Determina como uma classe ou campo é exibido nas janelas de variáveis do depurador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> tem um único argumento: uma cadeia de caracteres a ser exibida na coluna de valor das instâncias do tipo. Essa cadeia de caracteres pode conter chaves ({ e }). O texto dentro de um par de chaves é avaliado como o nome de um campo, propriedade ou método. Por exemplo, o código C# a seguir faz com que “Contagem = 4” seja exibida quando o sinal de adição (+) é selecionado para expandir a exibição do depurador para uma instância de `MyHashtable`.  
+  
+```  
+[DebuggerDisplay("Count = {count}")]  
+class MyHashtable  
+{  
+    public int count = 4;  
+}  
+```  
+  
+ Para obter informações sobre como usar esse atributo no Visual Studio, consulte [usando o atributo DebuggerDisplay](http://msdn.microsoft.com/library/f4eb7c76-af4e-493b-9ab6-9cb05949d9b3).  
+  
+   
+  
+## Examples  
+ Exibir o exemplo a seguir no Visual Studio para ver os resultados da aplicação de <xref:System.Diagnostics.DebuggerDisplayAttribute>.  
+  
+ [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#1)]
+ [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)]
+ [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerDisplayAttribute (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerDisplayAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser exibida na coluna valor para instâncias do tipo; uma cadeia de caracteres vazia ("") faz com que a coluna de valor seja ocultada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.DebuggerDisplayAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `value` parâmetro pode conter chaves ({e}). O texto dentro de um par de chaves é avaliado como o nome de um campo, propriedade ou método. Por exemplo, o código C# a seguir faz com que “Contagem = 4” seja exibida quando o sinal de adição (+) é selecionado para expandir a exibição do depurador para uma instância de `MyTable`.  
+  
+```  
+[DebuggerDisplay("Count = {count}")]  
+class MyTable  
+{  
+    public int count = 4;  
+}  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir faz com que o valor da <xref:System.Collections.Hashtable.Count%2A> propriedade o herdadas <xref:System.Collections.Hashtable> classe a ser exibida quando o sinal de adição (+) é selecionado para expandir a exibição do depurador para uma instância de `MyHashtable`. Você deve executar o exemplo completo, que é fornecido no <xref:System.Diagnostics.DebuggerDisplayAttribute> classe, para ver os resultados.  
+  
+ [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#4)]
+ [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#4)]
+ [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerDisplayAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome a ser exibido nas janelas de variáveis do depurador.</summary>
+        <value>O nome a ser exibido nas janelas de variáveis do depurador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor pode conter chaves ({e}). Texto dentro de um par de chaves é avaliado como o nome de um campo, propriedade ou método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir faz com que o nome e valor de cada chave a ser exibida nas janelas de variáveis do depurador. Quando o atributo não é aplicado, o tipo de índice e valor são exibidos (por exemplo: "[0] {KeyValuePairs}"). Quando o atributo é aplicado, o nome da chave e seu valor são exibidos (por exemplo, se a primeira chave é "um" e seu valor for 1, a exibição é: "1"). Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.DebuggerDisplayAttribute> classe.  
+  
+ [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#3)]
+ [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#3)]
+ [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public Type Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Target" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerDisplayAttribute.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de destino do atributo.</summary>
+        <value>Tipo de destino do atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para especificar o tipo de destino quando o atributo é usado no nível de assembly.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Diagnostics.DebuggerDisplayAttribute.Target" /> é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetTypeName">
+      <MemberSignature Language="C#" Value="public string TargetTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerDisplayAttribute.TargetTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo de destino do atributo.</summary>
+        <value>O nome do atributo tipo de destino.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para especificar o nome do tipo de destino quando o atributo é usado no nível de assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerDisplayAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres a serem exibidos na coluna de tipo de janelas de variáveis do depurador.</summary>
+        <value>A cadeia de caracteres a serem exibidos na coluna de tipo de janelas de variáveis do depurador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerDisplayAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres na coluna valor das janelas de variáveis do depurador.</summary>
+        <value>A cadeia de caracteres na coluna valor da variável do depurador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade contém a cadeia de caracteres passada pelo `value` parâmetro do construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

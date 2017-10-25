@@ -1,0 +1,270 @@
+<Type Name="DataAnnotationsModelValidatorProvider" FullName="System.Web.ModelBinding.DataAnnotationsModelValidatorProvider">
+  <TypeSignature Language="C#" Value="public class DataAnnotationsModelValidatorProvider : System.Web.ModelBinding.AssociatedValidatorProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataAnnotationsModelValidatorProvider extends System.Web.ModelBinding.AssociatedValidatorProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.ModelBinding.AssociatedValidatorProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa o provedor de validador padrão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é uma implementação de <xref:System.Web.ModelBinding.ModelValidatorProvider> que fornece validadores para atributos que derivam de <xref:System.ComponentModel.DataAnnotations.ValidationAttribute>. Ele também fornece validadores para tipos que implementam <xref:System.ComponentModel.DataAnnotations.IValidatableObject>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataAnnotationsModelValidatorProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddImplicitRequiredAttributeForValueTypes">
+      <MemberSignature Language="C#" Value="public static bool AddImplicitRequiredAttributeForValueTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AddImplicitRequiredAttributeForValueTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os tipos de valor não anuláveis são necessários.</summary>
+        <value>
+          <see langword="true" />Se os tipos de valor não anuláveis são obrigatórios; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValidators">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelValidator&gt; GetValidators (System.Web.ModelBinding.ModelMetadata metadata, System.Web.ModelBinding.ModelBindingExecutionContext context, System.Collections.Generic.IEnumerable&lt;Attribute&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.ModelBinding.ModelValidator&gt; GetValidators(class System.Web.ModelBinding.ModelMetadata metadata, class System.Web.ModelBinding.ModelBindingExecutionContext context, class System.Collections.Generic.IEnumerable`1&lt;class System.Attribute&gt; attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.GetValidators(System.Web.ModelBinding.ModelMetadata,System.Web.ModelBinding.ModelBindingExecutionContext,System.Collections.Generic.IEnumerable{System.Attribute})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelValidator&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Web.ModelBinding.ModelMetadata" />
+        <Parameter Name="context" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="attributes" Type="System.Collections.Generic.IEnumerable&lt;System.Attribute&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Os metadados.</param>
+        <param name="context">o contexto de execução.</param>
+        <param name="attributes">Os atributos de validação.</param>
+        <summary>Obtém uma coleção de validadores para o modelo.</summary>
+        <returns>A coleção de validadores.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAdapter">
+      <MemberSignature Language="C#" Value="public static void RegisterAdapter (Type attributeType, Type adapterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterAdapter(class System.Type attributeType, class System.Type adapterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.RegisterAdapter(System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="adapterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">O tipo de atributo de validação.</param>
+        <param name="adapterType">O tipo de adaptador.</param>
+        <summary>Registra um adaptador para validação do lado do cliente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAdapterFactory">
+      <MemberSignature Language="C#" Value="public static void RegisterAdapterFactory (Type attributeType, System.Web.ModelBinding.DataAnnotationsModelValidationFactory factory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterAdapterFactory(class System.Type attributeType, class System.Web.ModelBinding.DataAnnotationsModelValidationFactory factory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.RegisterAdapterFactory(System.Type,System.Web.ModelBinding.DataAnnotationsModelValidationFactory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="factory" Type="System.Web.ModelBinding.DataAnnotationsModelValidationFactory" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">O tipo do atributo.</param>
+        <param name="factory">A fábrica que será usada para criar o objeto de validador para o atributo especificado.</param>
+        <summary>Registra uma fábrica de adaptador para o provedor de validação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDefaultAdapter">
+      <MemberSignature Language="C#" Value="public static void RegisterDefaultAdapter (Type adapterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterDefaultAdapter(class System.Type adapterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.RegisterDefaultAdapter(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adapterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="adapterType">O tipo de adaptador.</param>
+        <summary>Registra o adaptador padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDefaultAdapterFactory">
+      <MemberSignature Language="C#" Value="public static void RegisterDefaultAdapterFactory (System.Web.ModelBinding.DataAnnotationsModelValidationFactory factory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterDefaultAdapterFactory(class System.Web.ModelBinding.DataAnnotationsModelValidationFactory factory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.RegisterDefaultAdapterFactory(System.Web.ModelBinding.DataAnnotationsModelValidationFactory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="factory" Type="System.Web.ModelBinding.DataAnnotationsModelValidationFactory" />
+      </Parameters>
+      <Docs>
+        <param name="factory">A fábrica que será usada para criar o objeto de validador para o adaptador padrão.</param>
+        <summary>Registra a fábrica do adaptador padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDefaultValidatableObjectAdapter">
+      <MemberSignature Language="C#" Value="public static void RegisterDefaultValidatableObjectAdapter (Type adapterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterDefaultValidatableObjectAdapter(class System.Type adapterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.RegisterDefaultValidatableObjectAdapter(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adapterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="adapterType">O tipo de adaptador.</param>
+        <summary>Registra um adaptador para validação de objeto padrão.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tipo de adaptador não tem um construtor público que aceita dois parâmetros são tipados como <see cref="T:System.Web.ModelBinding.ModelMetadata" /> e <see cref="T:System.Web.ModelBinding.ModelBindingExecutionContext" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDefaultValidatableObjectAdapterFactory">
+      <MemberSignature Language="C#" Value="public static void RegisterDefaultValidatableObjectAdapterFactory (System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory factory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterDefaultValidatableObjectAdapterFactory(class System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory factory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.RegisterDefaultValidatableObjectAdapterFactory(System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="factory" Type="System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory" />
+      </Parameters>
+      <Docs>
+        <param name="factory">A fábrica.</param>
+        <summary>Registra uma fábrica de adaptador para o provedor de validação de objeto padrão.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="factory" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterValidatableObjectAdapter">
+      <MemberSignature Language="C#" Value="public static void RegisterValidatableObjectAdapter (Type modelType, Type adapterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterValidatableObjectAdapter(class System.Type modelType, class System.Type adapterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.RegisterValidatableObjectAdapter(System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelType" Type="System.Type" />
+        <Parameter Name="adapterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="modelType">O tipo do modelo.</param>
+        <param name="adapterType">O tipo de adaptador.</param>
+        <summary>Registra um adaptador para validação de objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="adapterType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tipo de adaptador não tem um construtor público que aceita dois parâmetros que são digitados <see cref="T:System.Web.ModelBinding.ModelMetadata" /> e <see cref="T:System.Web.ModelBinding.ModelBindingExecutionContext" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterValidatableObjectAdapterFactory">
+      <MemberSignature Language="C#" Value="public static void RegisterValidatableObjectAdapterFactory (Type modelType, System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory factory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterValidatableObjectAdapterFactory(class System.Type modelType, class System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory factory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidatorProvider.RegisterValidatableObjectAdapterFactory(System.Type,System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelType" Type="System.Type" />
+        <Parameter Name="factory" Type="System.Web.ModelBinding.DataAnnotationsValidatableObjectAdapterFactory" />
+      </Parameters>
+      <Docs>
+        <param name="modelType">O tipo do modelo.</param>
+        <param name="factory">A fábrica.</param>
+        <summary>Registra uma fábrica de adaptador para o provedor de validação do objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="factory" /> ou <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tipo de modelo não implementa o <see cref="T:System.ComponentModel.DataAnnotations.IValidatableObject" /> interface.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

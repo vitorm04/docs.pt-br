@@ -1,0 +1,215 @@
+<Type Name="DocumentableItem" FullName="System.Web.Services.Description.DocumentableItem">
+  <TypeSignature Language="C#" Value="public abstract class DocumentableItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DocumentableItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.DocumentableItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a classe base abstrata da qual várias classes no <see cref="N:System.Web.Services.Description" /> namespace são derivadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Várias classes são derivados da classe:  
+  
+-   <xref:System.Web.Services.Description.Binding>  
+  
+-   <xref:System.Web.Services.Description.Import>  
+  
+-   <xref:System.Web.Services.Description.Message>  
+  
+-   <xref:System.Web.Services.Description.MessagePart>  
+  
+-   <xref:System.Web.Services.Description.Operation>  
+  
+-   <xref:System.Web.Services.Description.OperationBinding>  
+  
+-   <xref:System.Web.Services.Description.OperationMessage>  
+  
+-   <xref:System.Web.Services.Description.Port>  
+  
+-   <xref:System.Web.Services.Description.PortType>  
+  
+-   <xref:System.Web.Services.Description.Service>  
+  
+-   <xref:System.Web.Services.Description.Types>  
+  
+ Essa classe de base contém apenas uma propriedade, o <xref:System.Web.Services.Description.DocumentableItem.Documentation%2A> propriedade, que representa a documentação do texto de um elemento específico de WSDL (Web Services Description Language).  
+  
+ Para obter mais informações sobre WSDL, consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DocumentableItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.DocumentableItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Web.Services.Description.DocumentableItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Documentation">
+      <MemberSignature Language="C#" Value="public string Documentation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Documentation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.DocumentableItem.Documentation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a documentação de texto para a instância do <see cref="T:System.Web.Services.Description.DocumentableItem" />.</summary>
+        <value>Uma cadeia de caracteres que representa a documentação para o <see cref="T:System.Web.Services.Description.DocumentableItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em uma classe derivada, esta propriedade representa os comentários de texto adicionados a um elemento do serviço da Web em XML. A implementação padrão é uma cadeia de caracteres vazia ("").  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um uso típico do <xref:System.Web.Services.Description.DocumentableItem.Documentation%2A> propriedade.  
+  
+ [!code-cpp[DocumentableItemsample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DocumentableItemsample/CPP/documentableitemsample.cpp#1)]
+ [!code-csharp[DocumentableItemsample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DocumentableItemsample/CS/documentableitemsample.cs#1)]
+ [!code-vb[DocumentableItemsample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DocumentableItemsample/VB/documentableitemsample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentationElement">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement DocumentationElement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement DocumentationElement" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.DocumentableItem.DocumentationElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAnyElement(Name="documentation", Namespace="http://schemas.xmlsoap.org/wsdl/")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento de documentação para o <see cref="T:System.Web.Services.Description.DocumentableItem" />.</summary>
+        <value>Um <see cref="T:System.Xml.XmlElement" /> que representa a documentação para o <see cref="T:System.Web.Services.Description.DocumentableItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade contém elementos XML que são adicionados a uma descrição de um serviço Web XML para documentar a ele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensibleAttributes">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlAttribute[] ExtensibleAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlAttribute[] ExtensibleAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.DocumentableItem.ExtensibleAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAnyAttribute</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttribute[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma matriz do tipo <see cref="T:System.Xml.XmlAttribute" /> representa atributo extensões WSDL para estar em conformidade com a interoperabilidade de serviços da Web (WS-I) Basic Profile 1.1.</summary>
+        <value>Uma matriz do tipo <see cref="T:System.Xml.XmlAttribute" /> representa atributo extensões WSDL para estar em conformidade com a interoperabilidade de serviços da Web (WS-I) Basic Profile 1.1.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.DocumentableItem.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> associado a este <see cref="T:System.Web.Services.Description.DocumentableItem" />.</summary>
+        <value>O <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> associado a este <see cref="T:System.Web.Services.Description.DocumentableItem" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespaces">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSerializerNamespaces Namespaces { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSerializerNamespaces Namespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.DocumentableItem.Namespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlNamespaceDeclarations</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializerNamespaces</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o dicionário de prefixos de namespace e os namespaces usados para preservar a namespaces e prefixos de namespace quando um <see cref="T:System.Web.Services.Description.ServiceDescription" /> objeto for construído.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> dicionário que contém pares de prefixo/namespace.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

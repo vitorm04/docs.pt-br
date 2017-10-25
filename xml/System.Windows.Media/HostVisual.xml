@@ -1,0 +1,92 @@
+<Type Name="HostVisual" FullName="System.Windows.Media.HostVisual">
+  <TypeSignature Language="C#" Value="public class HostVisual : System.Windows.Media.ContainerVisual" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HostVisual extends System.Windows.Media.ContainerVisual" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.HostVisual" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.ContainerVisual</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto <see cref="T:System.Windows.Media.Visual" /> que pode ser conectado em qualquer lugar a uma árvore visual pai.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostVisual ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.HostVisual.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.HostVisual" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.GeometryHitTestResult HitTestCore (System.Windows.Media.GeometryHitTestParameters hitTestParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.GeometryHitTestResult HitTestCore(class System.Windows.Media.GeometryHitTestParameters hitTestParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.HostVisual.HitTestCore(System.Windows.Media.GeometryHitTestParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeometryHitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitTestParameters" Type="System.Windows.Media.GeometryHitTestParameters" />
+      </Parameters>
+      <Docs>
+        <param name="hitTestParameters">Um valor do tipo <see cref="T:System.Windows.Media.GeometryHitTestParameters" />.</param>
+        <summary>Implementa <see cref="M:System.Windows.Media.HostVisual.HitTestCore(System.Windows.Media.GeometryHitTestParameters)" /> para fornecer comportamento de teste de clique de base (retornando <see cref="T:System.Windows.Media.GeometryHitTestParameters" />).</summary>
+        <returns>Retorna um valor do tipo <see cref="T:System.Windows.Media.GeometryHitTestResult" />. O <see cref="P:System.Windows.Media.GeometryHitTestResult.VisualHit" /> propriedade contém o elemento visual que foi atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.HostVisual>relatórios em si nunca como visitado. Para alterar esse comportamento, crie uma classe derivada de <xref:System.Windows.Media.HostVisual> e substituir o <xref:System.Windows.Media.HostVisual.HitTestCore%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.HitTestResult HitTestCore (System.Windows.Media.PointHitTestParameters hitTestParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.HitTestResult HitTestCore(class System.Windows.Media.PointHitTestParameters hitTestParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.HostVisual.HitTestCore(System.Windows.Media.PointHitTestParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitTestParameters" Type="System.Windows.Media.PointHitTestParameters" />
+      </Parameters>
+      <Docs>
+        <param name="hitTestParameters">Um valor do tipo <see cref="T:System.Windows.Media.PointHitTestParameters" />.</param>
+        <summary>Implementa <see cref="M:System.Windows.Media.HostVisual.HitTestCore(System.Windows.Media.PointHitTestParameters)" /> para fornecer comportamento de teste de clique de base (retornando <see cref="T:System.Windows.Media.PointHitTestParameters" />).</summary>
+        <returns>Retorna um valor do tipo <see cref="T:System.Windows.Media.HitTestResult" />. O <see cref="P:System.Windows.Media.HitTestResult.VisualHit" /> propriedade contém o objeto visual foi atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.HostVisual>relatórios em si nunca como visitado. Para alterar esse comportamento, crie uma classe derivada de <xref:System.Windows.Media.HostVisual> e substituir o <xref:System.Windows.Media.HostVisual.HitTestCore%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

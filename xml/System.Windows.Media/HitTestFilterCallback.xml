@@ -1,0 +1,50 @@
+<Type Name="HitTestFilterCallback" FullName="System.Windows.Media.HitTestFilterCallback">
+  <TypeSignature Language="C#" Value="public delegate System.Windows.Media.HitTestFilterBehavior HitTestFilterCallback(DependencyObject potentialHitTestTarget);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HitTestFilterCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.HitTestFilterCallback" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="potentialHitTestTarget" Type="System.Windows.DependencyObject" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Windows.Media.HitTestFilterBehavior</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="potentialHitTestTarget">O visual para o teste de clique.</param>
+    <summary>Representa o método de retorno de chamada que especifica as partes da árvore visual a serem omitidas do processamento de teste de clique</summary>
+    <returns>Um <see cref="T:System.Windows.Media.HitTestFilterBehavior" /> que representa a ação resultante do teste de clique.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método de retorno de chamada de filtro de teste de clique é invocado para todos os objetos visual que mapeiam para os critérios de teste de clique, desde o visual que você especificar e em ordem decrescente por meio de sua ramificação da árvore visual. No entanto, você talvez queira ignorar determinadas ramificações da árvore visual, que você não está interessado em processar em sua função de retorno de chamada de resultados do teste de clique. O valor retornado da função de retorno de chamada do filtro de teste de clique determina o tipo de ação que a enumeração dos objetos visuais deve tomar. Por exemplo, se você retornar o valor <xref:System.Windows.Media.HitTestFilterBehavior.ContinueSkipSelfAndChildren>, você pode remover o objeto visual atual e seus descendentes da enumeração de resultados de teste de clique. Isso significa que o método de retorno de resultados de teste de clique não verá esses objetos em sua enumeração.  
+  
+> [!NOTE]
+>  Aparar a árvore visual de objetos diminui a quantidade de processamento durante a passagem da enumeração de resultados do teste de clique.  
+  
+ ![Remoção de uma árvore visual usando um filtro de teste de clique](~/add/media/filteredvisualtree-01.png "reduzindo uma árvore visual usando um filtro de teste de clique")  
+Aparando uma árvore visual  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como invocar <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> usando um <xref:System.Windows.Media.HitTestFilterCallback> valor. O método de retorno de chamada de teste de hit correspondente também é definido.  
+  
+ [!code-csharp[HitTestingOverview#104](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#104)]
+ [!code-vb[HitTestingOverview#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#104)]  
+  
+ O exemplo a seguir mostra como retornar um <xref:System.Windows.Media.HitTestFilterBehavior> valor de um método de retorno de chamada de filtro de teste de clique.  
+  
+ [!code-csharp[HitTestingOverview#106](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#106)]
+ [!code-vb[HitTestingOverview#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#106)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

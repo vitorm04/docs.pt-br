@@ -1,0 +1,794 @@
+<Type Name="HttpSessionState" FullName="System.Web.SessionState.HttpSessionState">
+  <TypeSignature Language="C#" Value="public sealed class HttpSessionState : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpSessionState extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.HttpSessionState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece acesso aos valores de estado de sessão, bem como configurações do nível de sessão e métodos de gerenciamento do tempo de vida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ASP.NET fornece gerenciamento de estado de sessão para permitir que você armazene as informações associadas a uma sessão do navegador exclusivo em várias solicitações. Você pode armazenar uma coleção de valores referenciados por um nome de chave ou índice numérico. Acesso a valores de sessão e a funcionalidade está disponível com o <xref:System.Web.SessionState.HttpSessionState> classe, que pode ser acessada por meio do <xref:System.Web.HttpContext.Session%2A> propriedade <xref:System.Web.HttpContext>, ou o <xref:System.Web.UI.Page.Session%2A> propriedade do <xref:System.Web.UI.Page>.  
+  
+ Dados de sessão está associados uma sessão de navegador específico usando um identificador exclusivo. Por padrão, esse identificador é armazenado em um cookie de sessão que não expira no navegador, mas você também pode configurar seu aplicativo para armazenar o identificador de sessão na URL, definindo o `cookieless` atributo `true` ou <xref:System.Web.HttpCookieMode.UseUri> no elemento de configuração do aplicativo. Você pode fazer com que o ASP.NET determinar se os cookies são suportados pelo navegador, especificando um valor de <xref:System.Web.HttpCookieMode.UseDeviceProfile> para o `cookieless` atributo. Você também pode ter ASP.NET determinar se os cookies estão habilitados para o navegador, especificando um valor de <xref:System.Web.HttpCookieMode.AutoDetect> para o `cookieless` atributo. Se os cookies são suportados quando <xref:System.Web.HttpCookieMode.UseDeviceProfile> é especificado, ou habilitado quando <xref:System.Web.HttpCookieMode.AutoDetect> for especificado, a sessão de identificador será armazenado em um cookie; caso contrário, o identificador de sessão será armazenado na URL.  
+  
+ As sessões são iniciadas durante a primeira solicitação e valores de sessão serão mantido como uma nova solicitação é feita pelo navegador antes do número de minutos especificado no <xref:System.Web.SessionState.HttpSessionState.Timeout%2A> passagem de propriedade. Quando uma nova sessão é iniciada, a sessão <xref:System.Web.SessionState.SessionStateModule.Start> é gerado. Você pode usar esse evento para executar qualquer trabalho adicional no início de uma sessão, como configuração padrão de valores de sessão. Quando uma sessão expira, o <xref:System.Web.SessionState.HttpSessionState.Abandon%2A> método é chamado, ou o aplicativo ASP.NET é encerrado, a sessão <xref:System.Web.SessionState.SessionStateModule.End> é gerado. Você pode usar esse evento para realizar qualquer limpeza necessária. O <xref:System.Web.SessionState.SessionStateModule.End> é gerado apenas quando o estado da sessão `mode` é definido como <xref:System.Web.SessionState.SessionStateMode.InProc>.  
+  
+ Para melhorar o desempenho, sessões que usam cookies não alocar armazenamento sessão até que os dados são armazenados no <xref:System.Web.UI.Page.Session%2A> objeto. Para obter mais informações, consulte a propriedade <xref:System.Web.SessionState.HttpSessionState.SessionID%2A>.  
+  
+ Estado da sessão não persiste além dos limites do aplicativo ASP.NET. Se um navegador navega para outro aplicativo, as informações de sessão não estão disponíveis para o novo aplicativo.  
+  
+ Valores de sessão são armazenados na memória no servidor Web, por padrão. Você também pode armazenar valores de sessão em um banco de dados do SQL Server, um servidor de estado do ASP.NET ou um servidor personalizado. Isso permite que você para preservar valores de sessão nos casos em que o processo ASP.NET ou IIS ou o aplicativo ASP.NET for reiniciado e para disponibilizar valores de sessão em todos os servidores em um Web farm. Esse comportamento é configurado definindo a `mode` atributo válido <xref:System.Web.SessionState.SessionStateMode> valor no elemento de configuração do aplicativo. Para obter mais informações, consulte [modos de estado de sessão](http://msdn.microsoft.com/library/0bb0a3a3-650f-4c47-a0c5-b08b9b591bb4).  
+  
+ Alternativas para estado de sessão incluem o estado do aplicativo (consulte a <xref:System.Web.HttpApplication.Application%2A> propriedade) e o cache do ASP.NET (consulte o <xref:System.Web.Caching> namespace), quais variáveis de armazenamento que podem ser acessados por todos os usuários de um aplicativo ASP.NET; o perfil do ASP.NET (consulte o <xref:System.Web.Profile> namespace), que persiste valores de usuário em um repositório de dados sem expirando-los usando um tempo limite; ASP.NET <xref:System.Web.UI.WebControls?displayProperty=nameWithType>, que manter valores de controle no <xref:System.Web.UI.Control.ViewState%2A>; <xref:System.Web.HttpResponse.Cookies%2A>; o <xref:System.Web.HttpRequest.QueryString%2A> propriedade; e os campos em um formulário HTML que estão disponíveis a partir de um HTTP `POST` usando o <xref:System.Web.HttpRequest.Form%2A> coleção. Para obter mais detalhes sobre as diferenças entre o estado da sessão e outras alternativas de gerenciamento de estado, consulte [recomendações de gerenciamento de estado do ASP.NET](http://msdn.microsoft.com/library/af79fa0d-4bc8-47a6-9915-d8e355bfb732).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define e recupera os valores do estado da sessão.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[HttpSessionState#30](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpSessionState/CS/session2cs.aspx#30)]
+ [!code-aspx-vb[HttpSessionState#30](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpSessionState/VB/session2vb.aspx#30)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public void Abandon ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abandon() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionState.Abandon" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela a sessão atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma vez o <xref:System.Web.SessionState.HttpSessionState.Abandon%2A> método é chamado, a sessão atual não é mais válida e pode ser iniciada uma nova sessão. <xref:System.Web.SessionState.HttpSessionState.Abandon%2A>faz com que o <xref:System.Web.SessionState.SessionStateModule.End> evento ser gerado. Um novo <xref:System.Web.SessionState.SessionStateModule.Start> evento ocorrerá na próxima solicitação.  
+  
+ Identificadores de sessão para sessões abandonados ou expirados são reciclados por padrão. Ou seja, se for feita uma solicitação que inclui o identificador de sessão para uma sessão expirada ou abandonada, uma nova sessão é iniciada usando o mesmo identificador de sessão. Você pode desabilitar essa opção, definindo `regenerateExpiredSessionId` atributo do elemento de configuração para `true`. Para obter mais informações, consulte [identificadores de sessão](http://msdn.microsoft.com/library/146ca206-d151-4f2e-a548-bcca05ccf0cb).  
+  
+ O <xref:System.Web.SessionState.SessionStateModule.End> evento é suportado apenas quando o <xref:System.Web.SessionState.HttpSessionState.Mode%2A> está definida como <xref:System.Web.SessionState.SessionStateMode.InProc>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionState.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do item a ser adicionado à coleção de estado da sessão.</param>
+        <param name="value">O valor do item a ser adicionado à coleção de estado de sessão.</param>
+        <summary>Adiciona um novo item à coleção de estado da sessão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `name` parâmetro faz referência a um item de estado de sessão existente, o item existente será substituído com especificado `value`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como armazenar valores em estado de sessão usando o <xref:System.Web.SessionState.HttpSessionState.Add%2A> método. Ele também mostra como remover valores no estado de sessão usando o <xref:System.Web.SessionState.HttpSessionState.Remove%2A> método. Um <xref:System.Web.UI.WebControls.Repeater> controle é usado para exibir o estado de sessão do conteúdo na página da Web. O <xref:System.Web.SessionState.HttpSessionState.GetEnumerator%2A> método é usado para iterar na coleção de estado da sessão e preencher o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[HttpSessionState#13](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpSessionState/CS/HttpSessionStateAddCS.aspx#13)]
+ [!code-aspx-vb[HttpSessionState#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpSessionState/VB/HttpSessionStateAddVB.aspx#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionState.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as chaves e os valores da coleção de estado da sessão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodePage">
+      <MemberSignature Language="C#" Value="public int CodePage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CodePage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.CodePage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador do conjunto de caracteres para a sessão atual.</summary>
+        <value>O identificador do conjunto de caracteres para a sessão atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um conjunto de caracteres (página de código) é usado para interpretar os dados de caracteres de vários bytes, determinando o valor de caractere e, portanto, a ordem de classificação. Configurações de página de código se aplicam somente aos dados de caracteres de vários bytes, não para dados de caractere Unicode.  
+  
+ Isso <xref:System.Web.SessionState.IHttpSessionState.CodePage%2A> propriedade é fornecida para compatibilidade com versões anteriores do ASP somente. Se você não precisa manter a compatibilidade com versões anteriores com as páginas ASP, use o <xref:System.Web.HttpResponse.ContentEncoding%2A> propriedade em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contents">
+      <MemberSignature Language="C#" Value="public System.Web.SessionState.HttpSessionState Contents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SessionState.HttpSessionState Contents" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.Contents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.HttpSessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência ao objeto de estado da sessão atual.</summary>
+        <value>O <see cref="T:System.Web.SessionState.HttpSessionState" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.HttpSessionState.Contents%2A> propriedade é fornecida para compatibilidade com versões anteriores do ASP.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir lista os nomes de item e os valores no <xref:System.Web.SessionState.HttpSessionState.Contents%2A> propriedade.  
+  
+ [!code-csharp[HttpSessionState#9](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpSessionState/CS/snippetscs.aspx#9)]
+ [!code-vb[HttpSessionState#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpSessionState/VB/snippetsvb.aspx#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieMode">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookieMode CookieMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.HttpCookieMode CookieMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.CookieMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o aplicativo está configurado para sessões sem cookies.</summary>
+        <value>Uma da <see cref="T:System.Web.HttpCookieMode" /> valores que indicam se o aplicativo está configurado para sessões sem cookies. O padrão é <see cref="F:System.Web.HttpCookieMode.UseCookies" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Web.SessionState.HttpSessionState.IsCookieless%2A> é `true`, o <xref:System.Web.SessionState.HttpSessionState.CookieMode%2A> propriedade retorna <xref:System.Web.HttpCookieMode.UseUri>; caso contrário, o <xref:System.Web.SessionState.HttpSessionState.CookieMode%2A> propriedade retorna <xref:System.Web.HttpCookieMode.UseCookies>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o `cookieless` atributo sessão `true` no arquivo Web. config. Para essa configuração de aplicativo de exemplo, o <xref:System.Web.SessionState.HttpSessionState.CookieMode%2A> propriedade retornaria <xref:System.Web.HttpCookieMode.UseUri>.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <sessionState   
+      mode="InProc"  
+      cookieless="true"  
+      timeout="30" />  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionState.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> que recebe os valores de sessão.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> da qual a cópia inicia.</param>
+        <summary>Copia a coleção de valores de estado de sessão em uma matriz unidimensional, começando no índice especificado na matriz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção de estado da sessão.</summary>
+        <value>Número de itens na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionState.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para ler todos os nomes de variável de estado de sessão na sessão atual.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode iterar os nomes das variáveis na coleção de estados da sessão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como armazenar valores em estado de sessão usando o <xref:System.Web.SessionState.HttpSessionState.Add%2A> método. Ele também mostra como remover valores no estado de sessão usando o <xref:System.Web.SessionState.HttpSessionState.Remove%2A> método. Um <xref:System.Web.UI.WebControls.Repeater> controle é usado para exibir o conteúdo do estado da sessão na página da Web. O <xref:System.Web.SessionState.HttpSessionState.GetEnumerator%2A> método é usado para iterar na coleção de estado da sessão e preencher o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-aspx-csharp[HttpSessionState#13](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpSessionState/CS/HttpSessionStateAddCS.aspx#13)]
+ [!code-aspx-vb[HttpSessionState#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpSessionState/VB/HttpSessionStateAddVB.aspx#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCookieless">
+      <MemberSignature Language="C#" Value="public bool IsCookieless { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCookieless" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.IsCookieless" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a ID de sessão é inserida na URL ou armazenada em um cookie HTTP.</summary>
+        <value>
+          <see langword="true" /> se a sessão for inserida na URL. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET identifica exclusivamente a sessões com cada navegador. Por padrão, o identificador exclusivo de uma sessão é armazenado em um cookie de sessão que não expira no navegador. Você pode especificar que os identificadores de sessão não serão armazenados em um cookie definindo o `cookieless` atributo `true` no elemento de configuração.  
+  
+> [!NOTE]
+>  Para melhorar a segurança do seu aplicativo, seu aplicativo deve permitir que os usuários façam logon, no ponto em que ele deve chamar o <xref:System.Web.SessionState.HttpSessionState.Abandon%2A> método. Isso reduz a possibilidade de uma fonte indesejada usando o identificador exclusivo na URL para recuperar dados particulares armazenados na sessão de um usuário.  
+  
+ Inserindo automaticamente uma ID de sessão exclusiva na URL da página, o ASP.NET mantém estados de sessão. Por exemplo, a URL a seguir foi modificada pelo ASP.NET para incluir a lit3py55t21z5v55vlm25s55 de ID de sessão exclusiva:  
+  
+```  
+http://www.example.com/(S(4danlfat035muve4g0mvgfrr))/orderform.aspx  
+```  
+  
+ O ASP.NET modifica os links contidos em todas as páginas solicitadas, inserindo um valor de ID de sessão nos links antes de enviar cada página para o navegador. Estado de sessão é mantido como o usuário deve seguir o caminho de links de site fornece. No entanto, se o agente do usuário reescreve uma URL, a instância de estado de sessão serão perdida.  
+  
+ A ID de sessão é incorporada na URL após a barra que segue o nome do aplicativo e antes de qualquer identificador de arquivo ou diretório virtual restante. Isso permite que o ASP.NET resolver o nome do aplicativo antes que envolva o <xref:System.Web.SessionState.SessionStateModule> na solicitação.  
+  
+ Por padrão, os identificadores de sessão usados em sessões sem cookies são reciclados. Ou seja, se uma solicitação é feita com uma ID de sessão que expirou, uma nova sessão é iniciada usando a ID de sessão fornecida com a solicitação. Esse comportamento pode resultar no compartilhamento indesejado de dados da sessão quando um link que contém uma ID de sessão cookieless é compartilhado com vários navegadores, talvez por meio de um mecanismo de pesquisa ou outro programa. Você pode reduzir a possibilidade de dados da sessão que está sendo compartilhados por vários clientes, desativando a reciclagem de identificadores de sessão. Para fazer isso, defina o `regenerateExpiredSessionId` atributo do elemento de configuração para `true`. Isso resultará em uma nova ID de sessão que está sendo gerada quando uma solicitação de sessão sem cookie é feita com uma ID de sessão expirada. Observe que, se a solicitação feita com a ID de sessão expirada usa HTTP `POST` método e, em seguida, quaisquer dados lançados serão perdidos quando `regenerateExpiredSessionId` é `true`, como o ASP.NET executa um redirecionamento para garantir que o navegador tenha o identificador da sessão novo na URL.  
+  
+> [!NOTE]
+>  Durante a configuração de `regenerateExpiredSessionId` atributo `true` reduz a possibilidade de compartilhamento indesejado de dados da sessão, ele não protege contra uma fonte indesejada obter acesso à sessão de outro usuário obtendo o <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> valor e incluí-lo nas solicitações ao servidor. Se você estiver armazenando informações pessoais ou confidenciais no estado de sessão, é recomendável que você use criptografia SSL para qualquer comunicação entre o navegador e o servidor que inclui o <xref:System.Web.SessionState.HttpSessionState.SessionID%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o `cookieless` atributo de sessão como true no arquivo Web. config.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <sessionState   
+      mode="InProc"  
+      cookieless="true"  
+      regenerateExpiredSessionId="true"  
+      timeout="30" />  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNewSession">
+      <MemberSignature Language="C#" Value="public bool IsNewSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNewSession" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.IsNewSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a sessão foi criada com a solicitação atual.</summary>
+        <value>
+          <see langword="true" /> se a sessão foi criada com a solicitação atual; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a sessão é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se a sessão for somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção de valores de estado de sessão é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" />Se o acesso à coleção for sincronizado (thread-safe); Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice numérico do valor de sessão.</param>
+        <summary>Obtém ou define um valor de sessão por índice numérico.</summary>
+        <value>O valor de estado de sessão armazenado no índice especificado, ou <see langword="null" /> se o item não existe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da chave do valor de sessão.</param>
+        <summary>Obtém ou define um valor de sessão pelo nome.</summary>
+        <value>O valor de estado de sessão com o nome especificado ou <see langword="null" />, se o item não existir.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameObjectCollectionBase.KeysCollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameObjectCollectionBase/KeysCollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameObjectCollectionBase+KeysCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de chaves para todos os valores armazenados na coleção de estado da sessão.</summary>
+        <value>O <see cref="T:System.Collections.Specialized.NameObjectCollectionBase.KeysCollection" /> que contém todas as chaves de sessão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LCID">
+      <MemberSignature Language="C#" Value="public int LCID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LCID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.LCID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o LCID (identificador de localidade) da sessão atual.</summary>
+        <value>Uma instância <see cref="T:System.Globalization.CultureInfo" /> que especifica a cultura da sessão atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.HttpSessionState.LCID%2A> propriedade é fornecida para compatibilidade com versões anteriores do ASP somente. Se você não precisa manter a compatibilidade com versões anteriores com as páginas ASP, use o <xref:System.Globalization.CultureInfo.LCID%2A> propriedade em vez disso.  
+  
+ ASP.NET não armazena o identificador de localidade no estado de sessão. O <xref:System.Web.SessionState.HttpSessionState.LCID%2A> propriedade acessa o <xref:System.Globalization.CultureInfo.LCID%2A> propriedade para obter e definir o identificador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.SessionState.SessionStateMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.SessionState.SessionStateMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo de estado da sessão atual.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.SessionState.SessionStateMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre como configurar seu servidor para <xref:System.Web.SessionState.SessionStateMode.StateServer> ou <xref:System.Web.SessionState.SessionStateMode.SQLServer> armazenamento de estado de sessão, consulte [visão geral sobre o estado de sessão ASP.NET](http://msdn.microsoft.com/library/6d60d381-6521-4e1d-9089-da6464f2a9bc).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o `mode` atributo sessão <xref:System.Web.SessionState.SessionStateMode.SQLServer> no arquivo Web. config. Para o modo de sessão do SQL Server, o `sqlConnectionString` atributo também é necessário.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <sessionState   
+      mode="SQLServer"  
+      sqlConnectionString="Data Source=localhost;Integrated Security=SSPI"  
+      cookieless="true"  
+      timeout="30" />  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionState.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do item a ser excluído da coleção de estado de sessão.</param>
+        <summary>Exclui um item da coleção de estado de sessão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a coleção de estado da sessão não contém um elemento com especificado `name`, a coleção permaneça inalterada. Nenhuma exceção é lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como armazenar valores em estado de sessão usando o <xref:System.Web.SessionState.HttpSessionState.Add%2A> método. Ele também mostra como remover valores no estado de sessão usando o <xref:System.Web.SessionState.HttpSessionState.Remove%2A> método. Um <xref:System.Web.UI.WebControls.Repeater> controle é usado para exibir o conteúdo do estado da sessão na página da Web. O <xref:System.Web.SessionState.HttpSessionState.GetEnumerator%2A> método é usado para iterar na coleção de estado da sessão e preencher o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-aspx-csharp[HttpSessionState#13](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpSessionState/CS/HttpSessionStateAddCS.aspx#13)]
+ [!code-aspx-vb[HttpSessionState#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpSessionState/VB/HttpSessionStateAddVB.aspx#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionState.RemoveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as chaves e os valores da coleção de estado da sessão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.SessionState.HttpSessionState.RemoveAll%2A>executa a mesma função <xref:System.Web.SessionState.HttpSessionState.Clear%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.HttpSessionState.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item a ser removido da coleção de estado da sessão.</param>
+        <summary>Exclui um item em um índice especificado da coleção de estado da sessão.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ \- ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Web.SessionState.HttpSessionState.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionID">
+      <MemberSignature Language="C#" Value="public string SessionID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.SessionID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador exclusivo para a sessão.</summary>
+        <value>O identificador de sessão exclusivo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> propriedade é usada para identificar exclusivamente um navegador com dados de sessão no servidor. O <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> valor aleatoriamente gerado pelo ASP.NET e armazenado em um cookie de sessão que não expira no navegador. O <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> valor é enviado em um cookie com cada solicitação para o aplicativo ASP.NET.  
+  
+ Se você deseja desabilitar o uso de cookies em seu aplicativo ASP.NET e fazer uso de estado de sessão, você pode configurar seu aplicativo para armazenar o identificador de sessão na URL em vez de um cookie definindo o `cookieless` atributo do elemento de configuração para `true`, ou <xref:System.Web.HttpCookieMode.UseUri>, no arquivo Web. config para seu aplicativo. Você pode fazer com que o ASP.NET determinar se os cookies são suportados pelo navegador, especificando um valor de <xref:System.Web.HttpCookieMode.UseDeviceProfile> para o `cookieless` atributo. Você também pode ter ASP.NET determinar se os cookies estão habilitados para o navegador, especificando um valor de <xref:System.Web.HttpCookieMode.AutoDetect> para o `cookieless` atributo. Se os cookies são suportados quando <xref:System.Web.HttpCookieMode.UseDeviceProfile> é especificado, ou habilitado quando <xref:System.Web.HttpCookieMode.AutoDetect> for especificado, a sessão de identificador será armazenado em um cookie; caso contrário, o identificador de sessão será armazenado na URL. Para obter mais informações, consulte a propriedade <xref:System.Web.SessionState.HttpSessionState.IsCookieless%2A>.  
+  
+ O <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> enviados entre o servidor e o navegador em texto não criptografado em um cookie ou na URL. Como resultado, uma fonte indesejada poderá acessar a sessão de outro usuário obtendo o <xref:System.Web.SessionState.HttpSessionState.SessionID%2A> valor e incluí-lo nas solicitações ao servidor. Se você estiver armazenando informações pessoais ou confidenciais no estado de sessão, é recomendável que você use criptografia SSL para qualquer comunicação entre o navegador e o servidor que inclui o <xref:System.Web.SessionState.HttpSessionState.SessionID%2A>.  
+  
+ Ao usar o estado da sessão baseada em cookies, o ASP.NET não alocar armazenamento para dados de sessão até que o <xref:System.Web.UI.Page.Session%2A> objeto é usado. Como resultado, uma nova ID de sessão é gerado para cada solicitação de página até que o objeto de sessão é acessado. Se seu aplicativo requer uma ID de sessão estático para toda a sessão, você pode ou implementar a `Session_Start` método no arquivo global asax do aplicativo e armazenar dados no <xref:System.Web.UI.Page.Session%2A> de objeto para corrigir a ID de sessão, ou você pode usar o código em outra parte do seu aplicativo explicitamente armazenar dados no <xref:System.Web.UI.Page.Session%2A> objeto.  
+  
+ Se seu aplicativo usa estados de sessão, a ID de sessão é gerada na primeira exibição de página e é mantida para toda a sessão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um arquivo Web. config que configura o estado da sessão para usar os identificadores de sessão sem cookies. Para obter mais informações, consulte a propriedade <xref:System.Web.SessionState.HttpSessionState.IsCookieless%2A>.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <sessionState   
+      cookieless="true"  
+      regenerateExpiredSessionId="true"  
+      timeout="30" />  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticObjects">
+      <MemberSignature Language="C#" Value="public System.Web.HttpStaticObjectsCollection StaticObjects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpStaticObjectsCollection StaticObjects" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.StaticObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpStaticObjectsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos declarados por <see langword="&lt;object Runat=&quot;Server&quot; Scope=&quot;Session&quot;/&gt;" /> marcas dentro do arquivo de aplicativo do ASP.NET global. asax.</summary>
+        <value>Um <see cref="T:System.Web.HttpStaticObjectsCollection" /> que contém objetos declarado no arquivo global. asax.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um objeto em uma página não oferece suporte à serialização e <xref:System.Web.SessionState.HttpSessionState.Mode%2A> está fora do processo (<xref:System.Web.SessionState.SessionStateMode.SQLServer> ou <xref:System.Web.SessionState.SessionStateMode.StateServer>), o objeto não será criado e não será adicionado a esta coleção.  
+  
+ O <xref:System.Web.SessionState.HttpSessionState.StaticObjects%2A> propriedade é fornecida para compatibilidade com versões anteriores do ASP.  
+  
+   
+  
+## Examples  
+ Listas de exemplo de código a seguir a `id` e tipo de objeto dos objetos no <xref:System.Web.SessionState.HttpSessionState.StaticObjects%2A> coleção.  
+  
+ [!code-csharp[HttpSessionState#10](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpSessionState/CS/snippetscs.aspx#10)]
+ [!code-vb[HttpSessionState#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpSessionState/VB/snippetsvb.aspx#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção de valores de estado de sessão.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.HttpSessionState.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define a quantidade de tempo, em minutos, permitida entre solicitações antes que o provedor de estado de sessão termine a sessão.</summary>
+        <value>O período de tempo limite, em minutos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.HttpSessionState.Timeout%2A> propriedade pode ser definida no arquivo Web. config para um aplicativo usando o `timeout` atributo do elemento de configuração, ou você pode definir o <xref:System.Web.SessionState.HttpSessionState.Timeout%2A> valor da propriedade diretamente usando o código do aplicativo.  
+  
+ O <xref:System.Web.SessionState.HttpSessionState.Timeout%2A> não pode ser definida como um valor maior que 525,600 minutos (1 ano). O valor padrão é 20 minutos.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o `timeout` atributo de sessão para 30 minutos no arquivo Web. config.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <sessionState   
+      mode="InProc"  
+      cookieless="true"  
+      timeout="30" />  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

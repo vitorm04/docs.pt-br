@@ -1,0 +1,108 @@
+<Type Name="InfocardInteractiveChannelInitializer" FullName="System.ServiceModel.Security.InfocardInteractiveChannelInitializer">
+  <TypeSignature Language="C#" Value="public class InfocardInteractiveChannelInitializer : System.ServiceModel.Dispatcher.IInteractiveChannelInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InfocardInteractiveChannelInitializer extends System.Object implements class System.ServiceModel.Dispatcher.IInteractiveChannelInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.InfocardInteractiveChannelInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Dispatcher.IInteractiveChannelInitializer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Inicializa um canal interativo CardSpace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InfocardInteractiveChannelInitializer (System.ServiceModel.Description.ClientCredentials credentials, System.ServiceModel.Channels.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ClientCredentials credentials, class System.ServiceModel.Channels.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.InfocardInteractiveChannelInitializer.#ctor(System.ServiceModel.Description.ClientCredentials,System.ServiceModel.Channels.Binding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="credentials" Type="System.ServiceModel.Description.ClientCredentials" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="credentials">O <see cref="T:System.ServiceModel.Description.ClientCredentials" /> do qual esse método é chamado.</param>
+        <param name="binding">A associação no ponto de extremidade de serviço.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.InfocardInteractiveChannelInitializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDisplayInitializationUI">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginDisplayInitializationUI (System.ServiceModel.IClientChannel channel, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginDisplayInitializationUI(class System.ServiceModel.IClientChannel channel, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.InfocardInteractiveChannelInitializer.BeginDisplayInitializationUI(System.ServiceModel.IClientChannel,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.ServiceModel.IClientChannel" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="channel">O canal.</param>
+        <param name="callback">O método de retorno de chamada assíncrono chamado quando este método é concluído.</param>
+        <param name="state">Mantém o estado atual.</param>
+        <summary>Inicia o método assíncrono para exibir a interface do usuário de inicialização (IU).</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> deste método.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Binding Binding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.Binding Binding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.InfocardInteractiveChannelInitializer.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a associação no ponto de extremidade de serviço.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.Binding" /> no ponto de extremidade de serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDisplayInitializationUI">
+      <MemberSignature Language="C#" Value="public virtual void EndDisplayInitializationUI (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndDisplayInitializationUI(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.InfocardInteractiveChannelInitializer.EndDisplayInitializationUI(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> de correspondente <see langword="Begin" /> método.</param>
+        <summary>O método de retorno de chamada assíncrono relacionado ao exibir a interface de usuário de inicialização (IU).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,63 @@
+<Type Name="IExpressionsAccessor" FullName="System.Web.UI.IExpressionsAccessor">
+  <TypeSignature Language="C#" Value="public interface IExpressionsAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExpressionsAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IExpressionsAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define as propriedades de uma classe deve implementar para dar suporte a coleções de expressões.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Control> classe implementa essa interface. Um controle de designer pode consultar uma instância de uma classe que deriva de <xref:System.Web.UI.Control> para obter a coleção de expressões e propriedades que são associadas ao controle.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Expressions">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ExpressionBindingCollection Expressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ExpressionBindingCollection Expressions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IExpressionsAccessor.Expressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ExpressionBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos <see cref="T:System.Web.UI.ExpressionBinding" /> .</summary>
+        <value>Um <see cref="T:System.Web.UI.ExpressionBindingCollection" /> contendo <see cref="T:System.Web.UI.ExpressionBinding" /> objetos que representam as propriedades e expressões para um controle.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HasExpressions">
+      <MemberSignature Language="C#" Value="public bool HasExpressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasExpressions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IExpressionsAccessor.HasExpressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a instância da classe que implementa essa interface tem as propriedades associadas por uma expressão.</summary>
+        <value>
+          <see langword="true" />Se o controle tiver propriedades definidas por expressões; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

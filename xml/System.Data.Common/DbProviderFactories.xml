@@ -1,0 +1,151 @@
+<Type Name="DbProviderFactories" FullName="System.Data.Common.DbProviderFactories">
+  <TypeSignature Language="C#" Value="public static class DbProviderFactories" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DbProviderFactories extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbProviderFactories" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um conjunto de métodos estáticos para criar uma ou mais instâncias de classes <see cref="T:System.Data.Common.DbProviderFactory" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetFactory">
+      <MemberSignature Language="C#" Value="public static System.Data.Common.DbProviderFactory GetFactory (System.Data.Common.DbConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Common.DbProviderFactory GetFactory(class System.Data.Common.DbConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbProviderFactories.GetFactory(System.Data.Common.DbConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbProviderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Data.Common.DbConnection" />
+      </Parameters>
+      <Docs>
+        <param name="connection">A conexão usada.</param>
+        <summary>Retorna uma instância de um <see cref="T:System.Data.Common.DbProviderFactory" />.</summary>
+        <returns>Uma instância de um <see cref="T:System.Data.Common.DbProviderFactory" /> para uma conexão especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFactory">
+      <MemberSignature Language="C#" Value="public static System.Data.Common.DbProviderFactory GetFactory (System.Data.DataRow providerRow);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Common.DbProviderFactory GetFactory(class System.Data.DataRow providerRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbProviderFactories.GetFactory(System.Data.DataRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbProviderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerRow" Type="System.Data.DataRow" />
+      </Parameters>
+      <Docs>
+        <param name="providerRow">
+          <see cref="T:System.Data.DataRow" /> que contém informações de configuração do provedor.</param>
+        <summary>Retorna uma instância de um <see cref="T:System.Data.Common.DbProviderFactory" />.</summary>
+        <returns>Uma instância de um <see cref="T:System.Data.Common.DbProviderFactory" /> para um <see cref="T:System.Data.DataRow" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `providerRow` parâmetro corresponde do <xref:System.Data.DataRow> de uma tabela retornada por <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFactory">
+      <MemberSignature Language="C#" Value="public static System.Data.Common.DbProviderFactory GetFactory (string providerInvariantName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.Common.DbProviderFactory GetFactory(string providerInvariantName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbProviderFactories.GetFactory(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbProviderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerInvariantName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerInvariantName">Nome invariável de um provedor.</param>
+        <summary>Retorna uma instância de um <see cref="T:System.Data.Common.DbProviderFactory" />.</summary>
+        <returns>Uma instância de um <see cref="T:System.Data.Common.DbProviderFactory" /> para um nome de provedor especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `providerInvariantName` parâmetro corresponde do **InvariantName** coluna de uma tabela retornada por <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFactoryClasses">
+      <MemberSignature Language="C#" Value="public static System.Data.DataTable GetFactoryClasses ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.DataTable GetFactoryClasses() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbProviderFactories.GetFactoryClasses" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Data.DataTable" /> que contém informações sobre todos os provedores instalados que implementam <see cref="T:System.Data.Common.DbProviderFactory" />.</summary>
+        <returns>Retorna um <see cref="T:System.Data.DataTable" /> contendo <see cref="T:System.Data.DataRow" /> objetos que contêm os dados a seguir.  
+  
+ <list type="table"><listheader><term>O ordinal da coluna  
+  
+ </term><description>Nome da coluna  
+  
+ </description><description>Descrição  
+  
+ </description></listheader><item><term> 0  
+  
+ </term><description>**Nome**  
+  
+ </description><description>Nome legível para o provedor de dados.  
+  
+ </description></item><item><term> 1  
+  
+ </term><description>**Descrição**  
+  
+ </description><description>Descrição legível do provedor de dados.  
+  
+ </description></item><item><term> 2  
+  
+ </term><description>**InvariantName**  
+  
+ </description><description>Nome que pode ser usado por meio de programação para referir-se ao provedor de dados.  
+  
+ </description></item><item><term> 3  
+  
+ </term><description>**AssemblyQualifiedName**  
+  
+ </description><description>Nome totalmente qualificado da classe de fábrica, que contém informações suficientes para instanciar o objeto.  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

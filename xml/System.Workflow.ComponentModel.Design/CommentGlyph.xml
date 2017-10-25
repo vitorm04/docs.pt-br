@@ -1,0 +1,135 @@
+<Type Name="CommentGlyph" FullName="System.Workflow.ComponentModel.Design.CommentGlyph">
+  <TypeSignature Language="C#" Value="public class CommentGlyph : System.Workflow.ComponentModel.Design.DesignerGlyph" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommentGlyph extends System.Workflow.ComponentModel.Design.DesignerGlyph" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.CommentGlyph" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.DesignerGlyph</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um glifo para um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> a ser exibido quando um usuário desativa uma atividade em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Designers de atividade exibem <xref:System.Workflow.ComponentModel.Design.CommentGlyph> quando um usuário configura o <xref:System.Workflow.ComponentModel.Activity.Enabled%2A> propriedade `false` em tempo de design para o designer ou designer de seu pai.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommentGlyph ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.CommentGlyph.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Design.CommentGlyph" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Rectangle GetBounds (System.Workflow.ComponentModel.Design.ActivityDesigner designer, bool activated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Rectangle GetBounds(class System.Workflow.ComponentModel.Design.ActivityDesigner designer, bool activated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.CommentGlyph.GetBounds(System.Workflow.ComponentModel.Design.ActivityDesigner,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="activated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="designer">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> à qual o símbolo de comentário está associado.</param>
+        <param name="activated">
+          <see langword="true" />para indicar se o glifo aparece na superfície do designer de atividade; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna os limites para o símbolo de comentário atual especificado <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />.</summary>
+        <returns>Um <see cref="T:System.Drawing.Rectangle" /> que representa os limites do glifo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.CommentGlyph.GetBounds%2A>inflação dos limites do `designer` pelo valor mantido em <xref:System.Workflow.ComponentModel.Design.AmbientTheme.Margin%2A> e retorna o retângulo resultante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Drawing.Graphics graphics, bool activated, System.Workflow.ComponentModel.Design.AmbientTheme ambientTheme, System.Workflow.ComponentModel.Design.ActivityDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Drawing.Graphics graphics, bool activated, class System.Workflow.ComponentModel.Design.AmbientTheme ambientTheme, class System.Workflow.ComponentModel.Design.ActivityDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.CommentGlyph.OnPaint(System.Drawing.Graphics,System.Boolean,System.Workflow.ComponentModel.Design.AmbientTheme,System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="activated" Type="System.Boolean" />
+        <Parameter Name="ambientTheme" Type="System.Workflow.ComponentModel.Design.AmbientTheme" />
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> para executar tarefas de desenho e preenchimento.</param>
+        <param name="activated">
+          <see langword="true" />para indicar que o símbolo aparece na superfície de design; Caso contrário, <see langword="false" />.</param>
+        <param name="ambientTheme">O <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> para usar para acessar configurações de propriedade de ambiente.</param>
+        <param name="designer">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> do qual obter informações sobre ações do usuário.</param>
+        <summary>Executa as tarefas necessárias para renderizar o símbolo de comentário na superfície do designer de atividade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public override int Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.CommentGlyph.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a prioridade de exibição do glifo no designer de atividade.</summary>
+        <value>Um inteiro que representa a prioridade de exibição do glifo no designer de atividade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prioridade ajuda a determinar a ordem na qual o glifo é exibido no designer de atividade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

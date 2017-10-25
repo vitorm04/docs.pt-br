@@ -1,0 +1,263 @@
+<Type Name="SamlConstants" FullName="System.IdentityModel.Tokens.SamlConstants">
+  <TypeSignature Language="C#" Value="public static class SamlConstants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SamlConstants extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlConstants" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um conjunto de constantes que são usadas para definir propriedades de um <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> token de segurança. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlConstants> classe para definir propriedades de uma asserção SAML. Use o <xref:System.IdentityModel.Tokens.SamlConstants.EmailNamespace%2A> e <xref:System.IdentityModel.Tokens.SamlConstants.UserNameNamespace%2A> propriedades para definir o <xref:System.IdentityModel.Tokens.SamlSubject.NameFormat%2A> propriedade. Use o <xref:System.IdentityModel.Tokens.SamlConstants.HolderOfKey%2A> e <xref:System.IdentityModel.Tokens.SamlConstants.SenderVouches%2A> para definir o <xref:System.IdentityModel.Tokens.SamlSubject.ConfirmationMethods%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EmailName">
+      <MemberSignature Language="C#" Value="public static string EmailName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string EmailName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlConstants.EmailName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do atributo usado para especificar que o assunto de uma asserção SAML é especificado como um endereço de email. Este campo é constante.</summary>
+        <value>O nome do atributo usado para especificar que o assunto de uma asserção SAML é especificado como um endereço de email. Este campo é constante.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlConstants.EmailName%2A> propriedade ao serializar asserções SAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailNamespace">
+      <MemberSignature Language="C#" Value="public static string EmailNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string EmailNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlConstants.EmailNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um URI que indica que o assunto de uma asserção SAML é especificado como um endereço de email. Este campo é constante.</summary>
+        <value>Um URI que indica o assunto de uma asserção SAML é especificado como um endereço de email.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlConstants.EmailNamespace%2A> propriedade para definir o <xref:System.IdentityModel.Tokens.SamlSubject.NameFormat%2A> propriedade quando o assunto é especificado como um endereço de email.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HolderOfKey">
+      <MemberSignature Language="C#" Value="public static string HolderOfKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string HolderOfKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlConstants.HolderOfKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um URI que especifica que o destinatário de um token de segurança do SAML deve usar o <see langword="&lt;ds:KeyInfo&gt;" /> elemento para confirmar que a mensagem SOAP foi enviada por assunto de asserção SAML. Este campo é constante.</summary>
+        <value>Um URI que especifica que o destinatário de uma <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> deve usar o token de segurança a <see langword="&lt;ds:KeyInfo&gt;" /> elemento para confirmar que a mensagem SOAP foi enviada por assunto de asserção SAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlConstants.HolderOfKey%2A> propriedade para definir o <xref:System.IdentityModel.Tokens.SamlSubject.ConfirmationMethods%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorVersionValue">
+      <MemberSignature Language="C#" Value="public static int MajorVersionValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MajorVersionValue" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlConstants.MajorVersionValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão principal da especificação de SAML que <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> tokens de segurança estão em conformidade com. Este campo é constante.</summary>
+        <value>A versão principal da especificação de SAML que <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> tokens de segurança estão em conformidade com. Sempre <c>1</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A combinação da <xref:System.IdentityModel.Tokens.SamlConstants.MajorVersionValue%2A> e <xref:System.IdentityModel.Tokens.SamlConstants.MinorVersionValue%2A> propriedades inclui a versão da especificação de SAML que <xref:System.IdentityModel.Tokens.SamlSecurityToken> tokens de segurança estão em conformidade com.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorVersionValue">
+      <MemberSignature Language="C#" Value="public static int MinorVersionValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MinorVersionValue" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlConstants.MinorVersionValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão secundária da especificação de SAML usada pelo <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> tokens de segurança. Este campo é constante.</summary>
+        <value>A versão secundária da especificação de SAML. Sempre <c>1</c>.  
+  
+ A combinação da <see cref="P:System.IdentityModel.Tokens.SamlConstants.MajorVersionValue" /> e <see cref="P:System.IdentityModel.Tokens.SamlConstants.MinorVersionValue" /> propriedades inclui a versão da especificação de SAML que <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> tokens de segurança estão em conformidade com.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public static string Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlConstants.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace XML no qual SAML asserções estão definidas. Este campo é constante.</summary>
+        <value>O namespace XML no qual SAML asserções estão definidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O namespace XML é definido na versão da especificação de SAML especificada pelo <xref:System.IdentityModel.Tokens.SamlConstants.MajorVersionValue%2A> e <xref:System.IdentityModel.Tokens.SamlConstants.MinorVersionValue%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public const string Prefix;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Prefix" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SamlConstants.Prefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O prefixo de namespace SAML. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderVouches">
+      <MemberSignature Language="C#" Value="public static string SenderVouches { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SenderVouches" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlConstants.SenderVouches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um URI que especifica informações adicionais não estão disponíveis para um destinatário de um token de segurança do SAML confirmar que a mensagem SOAP foi enviada por assunto de asserção SAML. Este campo é constante.</summary>
+        <value>Um URI que especifica informações adicionais não estão disponíveis para um destinatário de um token de segurança do SAML confirmar que a mensagem SOAP foi enviada por assunto de asserção SAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlConstants.SenderVouches%2A> propriedade para definir o <xref:System.IdentityModel.Tokens.SamlSubject.ConfirmationMethods%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public static string UserName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlConstants.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do atributo usado para especificar que o assunto de uma asserção SAML é especificado como uma conta de domínio do Windows. Este campo é constante.</summary>
+        <value>O nome do atributo usado para especificar que o assunto de uma asserção SAML é especificado como uma conta de domínio do Windows. Este campo é constante.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlConstants.UserName%2A> propriedade ao serializar asserções SAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserNameNamespace">
+      <MemberSignature Language="C#" Value="public static string UserNameNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string UserNameNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlConstants.UserNameNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um URI que indica que o assunto de uma asserção SAML é especificado usando uma conta de domínio do Windows. Este campo é constante.</summary>
+        <value>Um URI que indica o assunto de uma asserção SAML é especificado usando uma conta de domínio do Windows.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlConstants.UserNameNamespace%2A> propriedade para definir o <xref:System.IdentityModel.Tokens.SamlSubject.NameFormat%2A> propriedade quando o assunto é especificado como uma conta de domínio do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

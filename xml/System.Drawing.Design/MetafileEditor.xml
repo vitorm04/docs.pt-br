@@ -1,0 +1,104 @@
+<Type Name="MetafileEditor" FullName="System.Drawing.Design.MetafileEditor">
+  <TypeSignature Language="C#" Value="public class MetafileEditor : System.Drawing.Design.ImageEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MetafileEditor extends System.Drawing.Design.ImageEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.MetafileEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.ImageEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um <see cref="T:System.Drawing.Design.UITypeEditor" /> que pode executar o arquivo padrão procurando arquivos EMF (*.emf).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetafileEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.MetafileEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Design.MetafileEditor" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtensions">
+      <MemberSignature Language="C#" Value="protected override string[] GetExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string[] GetExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.MetafileEditor.GetExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as extensões para o filtro de lista de arquivos que inicialmente usa este editor para filtrar a lista de arquivos.</summary>
+        <returns>Um conjunto de extensões de arquivo usado para filtrar a lista de arquivos.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDialogDescription">
+      <MemberSignature Language="C#" Value="protected override string GetFileDialogDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetFileDialogDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.MetafileEditor.GetFileDialogDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a descrição para o filtro de lista de arquivos padrão fornecida por este editor.</summary>
+        <returns>A descrição para o filtro da lista de arquivos padrão.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFromStream">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Image LoadFromStream (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Drawing.Image LoadFromStream(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.MetafileEditor.LoadFromStream(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém a imagem a ser carregado.</param>
+        <summary>Carrega uma imagem do fluxo especificado.</summary>
+        <returns>O <see cref="T:System.Drawing.Image" /> que tenha sido carregado.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

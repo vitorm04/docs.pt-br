@@ -1,0 +1,81 @@
+<Type Name="ShiftConstants" FullName="Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants">
+  <TypeSignature Language="C#" Value="public enum ShiftConstants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ShiftConstants extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece constantes para compatibilidade com a mudança de constantes de máscara de parâmetro no Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No Visual Basic 6.0, constantes de máscara de parâmetro shift foram usados para representar o estado de teclas modificadoras no `Shift` parâmetro de vários manipuladores de eventos de mouse e chave. Em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], alterou os parâmetros para eventos de mouse e de chave e constantes não são mais necessários. Constantes permitem que o código que foi atualizado do Visual Basic 6.0 para continuar a ser executados sem modificações adicionais.  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles apenas são necessários quando o modelo de código do Visual Basic 6.0 difere significativamente da implementação do .NET Framework.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AltMask">
+      <MemberSignature Language="C#" Value="AltMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants AltMask = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants.AltMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente à constante <see langword="vbAltMask" /> do Visual Basic 6.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CtrlMask">
+      <MemberSignature Language="C#" Value="CtrlMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants CtrlMask = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants.CtrlMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente à constante <see langword="vbCtrlMask" /> do Visual Basic 6.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftMask">
+      <MemberSignature Language="C#" Value="ShiftMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants ShiftMask = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants.ShiftMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ShiftConstants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Equivalente à constante <see langword="vbShiftMask" /> do Visual Basic 6.0.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

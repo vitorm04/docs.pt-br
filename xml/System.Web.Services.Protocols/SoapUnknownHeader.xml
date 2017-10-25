@@ -1,0 +1,88 @@
+<Type Name="SoapUnknownHeader" FullName="System.Web.Services.Protocols.SoapUnknownHeader">
+  <TypeSignature Language="C#" Value="public sealed class SoapUnknownHeader : System.Web.Services.Protocols.SoapHeader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapUnknownHeader extends System.Web.Services.Protocols.SoapHeader" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapUnknownHeader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.SoapHeader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os dados recebidos de um cabeçalho de SOAP que não foi entendido pelo destinatário XML Web Services ou cliente de serviço Web XML. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um cliente SOAP pode invocar um serviço Web XML com dados adicionais além dos parâmetros necessários na forma de um cabeçalho SOAP. Um serviço Web XML criado usando ASP.NET ou um cliente de serviço Web XML pode exibir qualquer cabeçalhos SOAP que ele não sabia no momento em que o serviço Web XML foi escrito, aplicando um <xref:System.Web.Services.Protocols.SoapHeaderAttribute> com um <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> propriedade ou uma matriz de <xref:System.Web.Services.Protocols.SoapHeader>, <xref:System.Web.Services.Protocols.SoapHeader>, <xref:System.Web.Services.Protocols.SoapUnknownHeader> ou uma matriz de <xref:System.Web.Services.Protocols.SoapUnknownHeader> para o método de serviço da Web em XML. Especificando um <xref:System.Type> de <xref:System.Web.Services.Protocols.SoapUnknownHeader>, permite que o serviço da Web em XML exibir o conteúdo do cabeçalho SOAP na forma de um <xref:System.Xml.XmlElement>.  
+  
+   
+  
+## Examples  
+ O `MyWebService` XML Web Services aceita e processa o `MyHeader` cabeçalho SOAP enviado com todas as chamadas para o `MyWebMethod` método de serviço Web XML. Além disso, `MyWebMethod` recebe os cabeçalhos de SOAP que o `MyHeader` cabeçalho SOAP.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapUnknownHeader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapUnknownHeader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.SoapUnknownHeader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement Element { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement Element" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapUnknownHeader.Element" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento de cabeçalho de XML para uma resposta ou solicitação SOAP.</summary>
+        <value>Um <see cref="T:System.Xml.XmlElement" /> que representa o XML bruto do cabeçalho SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um XML Web método de serviço que deseja processar cabeçalhos SOAP não conhecer no momento em que o serviço Web XML é escrito, que pode processar um <xref:System.Xml.XmlElement> classe que representa o XML bruto do cabeçalho SOAP.  
+  
+   
+  
+## Examples  
+ O seguinte `MyWebService` XML Web Services recebe todos os cabeçalhos SOAP, incluindo aqueles que o `MyHeader` cabeçalho SOAP que ele conheça. O `MyWebMethod` método de serviço Web XML retorna ao cliente os atributos XML do último cabeçalho SOAP desconhecido passado a ele como uma cadeia de caracteres.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

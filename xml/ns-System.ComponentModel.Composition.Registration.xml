@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Composition.Registration">
+  <Docs>
+    <summary>O <see cref="N:System.ComponentModel.Composition.Registration" /> namespace contém tipos que habilitam a configuração baseada em regras de partes Managed Extensibility Framework (MEF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,117 @@
+<Type Name="RegisteredWaitHandle" FullName="System.Threading.RegisteredWaitHandle">
+  <TypeSignature Language="C#" Value="public sealed class RegisteredWaitHandle : MarshalByRefObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegisteredWaitHandle extends System.MarshalByRefObject" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.RegisteredWaitHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um identificador que foi registrado ao chamar <see cref="M:System.Threading.ThreadPool.RegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.UInt32,System.Boolean)" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Threading.RegisteredWaitHandle> para determinar por que um método de retorno de chamada é chamado e como cancelar uma tarefa se o retorno de chamada ocorreu porque o identificador de espera foi sinalizado.  
+  
+ O exemplo também mostra como usar o <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> método para executar um método de retorno de chamada especificada quando um identificador de espera especificado é sinalizado. Neste exemplo, o método de retorno de chamada é `WaitProc`, e o identificador de espera é um <xref:System.Threading.AutoResetEvent>.  
+  
+ O exemplo define um `TaskInfo` classe para conter as informações que são passadas para o retorno de chamada quando ele é executado. O exemplo cria um `TaskInfo` do objeto e o atribui alguns dados de cadeia de caracteres. O <xref:System.Threading.RegisteredWaitHandle> que é retornado pelo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> método é atribuído ao `Handle` campo do `TaskInfo` do objeto para que o método de retorno de chamada tem acesso ao <xref:System.Threading.RegisteredWaitHandle>.  
+  
+ Além de especificar `TaskInfo` como o objeto para passar para o método de retorno de chamada, a chamada para o <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> método Especifica o <xref:System.Threading.AutoResetEvent> que a tarefa irá aguardar um <xref:System.Threading.WaitOrTimerCallback> delegado que representa o `WaitProc` método de retorno de chamada, um um intervalo de tempo limite em segundos e vários retornos de chamada.  
+  
+ Quando o thread principal sinaliza o <xref:System.Threading.AutoResetEvent> chamando seu <xref:System.Threading.EventWaitHandle.Set%2A> método, o <xref:System.Threading.WaitOrTimerCallback> delegado é invocado. O `WaitProc` método testes <xref:System.Threading.RegisteredWaitHandle> para determinar se ocorreu um tempo limite. Se o retorno de chamada foi invocado porque o identificador de espera foi sinalizado, o `WaitProc` método cancela o registro de <xref:System.Threading.RegisteredWaitHandle>, parando adicionais retornos de chamada. No caso de um tempo limite, a tarefa continuará sendo espera. O `WaitProc` método termina imprimindo uma mensagem para o console.  
+  
+ [!code-cpp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public bool Unregister (System.Threading.WaitHandle waitObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Unregister(class System.Threading.WaitHandle waitObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.RegisteredWaitHandle.Unregister(System.Threading.WaitHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitObject" Type="System.Threading.WaitHandle" />
+      </Parameters>
+      <Docs>
+        <param name="waitObject">O <see cref="T:System.Threading.WaitHandle" /> a ser sinalizado.</param>
+        <summary>Cancela uma operação de espera registrada emitida pelo método <see cref="M:System.Threading.ThreadPool.RegisterWaitForSingleObject(System.Threading.WaitHandle,System.Threading.WaitOrTimerCallback,System.Object,System.UInt32,System.Boolean)" />.</summary>
+        <returns>
+          <see langword="true" /> se a função for bem-sucedida; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `waitObject` for especificado, ele é sinalizado somente se o <xref:System.Threading.RegisteredWaitHandle> não está registrado com êxito. Se um método de retorno de chamada está em andamento quando <xref:System.Threading.RegisteredWaitHandle.Unregister%2A> é executado, `waitObject` não sinalizado até que o método de retorno de chamada é concluído. Em particular, se um método de retorno de chamada é executado <xref:System.Threading.RegisteredWaitHandle.Unregister%2A>, `waitObject` não sinalizado até que esse método de retorno de chamada é concluída.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Threading.RegisteredWaitHandle.Unregister%2A> método para cancelar uma tarefa se um retorno de chamada ocorreu porque o identificador de espera foi sinalizado.  
+  
+ O exemplo também mostra como usar o <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> método para executar um método de retorno de chamada especificada quando um identificador de espera especificado é sinalizado. Neste exemplo, o método de retorno de chamada é `WaitProc`, e o identificador de espera é um <xref:System.Threading.AutoResetEvent>.  
+  
+ O exemplo define um `TaskInfo` classe para conter as informações que são passadas para o retorno de chamada quando ele é executado. O exemplo cria um `TaskInfo` do objeto e o atribui alguns dados de cadeia de caracteres. O <xref:System.Threading.RegisteredWaitHandle> que é retornado pelo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> método é atribuído ao `Handle` campo do `TaskInfo` do objeto para que o método de retorno de chamada tem acesso ao <xref:System.Threading.RegisteredWaitHandle>.  
+  
+ Além de especificar `TaskInfo` como o objeto para passar para o método de retorno de chamada, a chamada para o <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> método Especifica o <xref:System.Threading.AutoResetEvent> que a tarefa irá aguardar um <xref:System.Threading.WaitOrTimerCallback> delegado que representa o `WaitProc` método de retorno de chamada, um um intervalo de tempo limite em segundos e vários retornos de chamada.  
+  
+ Quando o thread principal sinaliza o <xref:System.Threading.AutoResetEvent> chamando seu <xref:System.Threading.EventWaitHandle.Set%2A> método, o <xref:System.Threading.WaitOrTimerCallback> delegado é invocado. O `WaitProc` método testes <xref:System.Threading.RegisteredWaitHandle> para determinar se ocorreu um tempo limite. Se o retorno de chamada foi invocado porque o identificador de espera foi sinalizado, o `WaitProc` método cancela o registro de <xref:System.Threading.RegisteredWaitHandle>, parando adicionais retornos de chamada. No caso de um tempo limite, a tarefa continuará sendo espera. O `WaitProc` método termina imprimindo uma mensagem para o console.  
+  
+ [!code-cpp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

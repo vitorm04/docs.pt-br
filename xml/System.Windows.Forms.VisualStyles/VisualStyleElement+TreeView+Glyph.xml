@@ -1,0 +1,100 @@
+<Type Name="VisualStyleElement+TreeView+Glyph" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+TreeView+Glyph">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.TreeView.Glyph" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/TreeView/Glyph extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView.Glyph" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> objetos para o sinal de adição (+) e os botões de subtração (-) de uma árvore de controle de exibição. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades do <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView.Glyph> classe get um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> dos botões de sinal de adição e o sinal de menos exibido ao lado de um nó de exibição de árvore que contém os elementos filho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView.Glyph.Opened%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElementTreeViewGlyph1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#320](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#320)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#320](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#320)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Closed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Closed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView.Glyph.Closed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de sinal de subtração (-) de um nó de exibição de árvore.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de sinal de menos de um nó de exibição de árvore.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView.Glyph.Closed%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView.Glyph.Closed%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElementTreeViewGlyph2` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#321](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#321)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#321](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#321)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opened">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Opened { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Opened" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView.Glyph.Opened" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um botão de sinal de adição (+) de um nó de exibição de árvore.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um botão de sinal de adição de um nó de exibição de árvore.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView.Glyph.Opened%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView.Glyph.Opened%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElementTreeViewGlyph1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#320](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#320)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#320](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#320)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

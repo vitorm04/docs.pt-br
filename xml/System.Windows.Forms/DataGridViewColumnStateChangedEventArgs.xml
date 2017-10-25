@@ -1,0 +1,130 @@
+<Type Name="DataGridViewColumnStateChangedEventArgs" FullName="System.Windows.Forms.DataGridViewColumnStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewColumnStateChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewColumnStateChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewColumnStateChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.DataGridView.ColumnStateChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando o valor de uma das seguintes propriedades de coluna é alterado para um <xref:System.Windows.Forms.DataGridViewColumn> em um <xref:System.Windows.Forms.DataGridView> controle  
+  
+-   <xref:System.Windows.Forms.DataGridViewBand.Displayed%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridViewBand.Selected%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A>  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.ColumnStateChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.ColumnStateChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#328](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#328)]
+ [!code-vb[System.Windows.Forms.EventExamples#328](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#328)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewColumnStateChangedEventArgs (System.Windows.Forms.DataGridViewColumn dataGridViewColumn, System.Windows.Forms.DataGridViewElementStates stateChanged);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridViewColumn dataGridViewColumn, valuetype System.Windows.Forms.DataGridViewElementStates stateChanged) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewColumnStateChangedEventArgs.#ctor(System.Windows.Forms.DataGridViewColumn,System.Windows.Forms.DataGridViewElementStates)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataGridViewColumn" Type="System.Windows.Forms.DataGridViewColumn" />
+        <Parameter Name="stateChanged" Type="System.Windows.Forms.DataGridViewElementStates" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridViewColumn">O <see cref="T:System.Windows.Forms.DataGridViewColumn" /> cujo estado é alterado.</param>
+        <param name="stateChanged">Um dos valores de <see cref="T:System.Windows.Forms.DataGridViewElementStates" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewColumnStateChangedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewColumn Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewColumn Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumnStateChangedEventArgs.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coluna cujo estado é alterado.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGridViewColumn" /> cujo estado foi alterado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.ColumnStateChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.ColumnStateChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#328](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#328)]
+ [!code-vb[System.Windows.Forms.EventExamples#328](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#328)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewElementStates StateChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewElementStates StateChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewColumnStateChangedEventArgs.StateChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewElementStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado da coluna nova.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DataGridViewElementStates" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.ColumnStateChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.ColumnStateChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#328](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#328)]
+ [!code-vb[System.Windows.Forms.EventExamples#328](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#328)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

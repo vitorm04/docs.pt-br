@@ -1,0 +1,224 @@
+<Type Name="OdbcTransaction" FullName="System.Data.Odbc.OdbcTransaction">
+  <TypeSignature Language="C#" Value="public sealed class OdbcTransaction : System.Data.Common.DbTransaction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OdbcTransaction extends System.Data.Common.DbTransaction" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcTransaction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbTransaction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma transação SQL a ser feita em uma fonte de dados. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O aplicativo cria um <xref:System.Data.Odbc.OdbcTransaction> objeto chamando <xref:System.Data.Odbc.OdbcConnection.BeginTransaction%2A> no <xref:System.Data.Odbc.OdbcConnection> objeto. Todas as operações subsequentes associadas à transação (por exemplo, confirmar ou anular a transação) são executadas a <xref:System.Data.Odbc.OdbcTransaction> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcConnection> e um <xref:System.Data.Odbc.OdbcTransaction>. Ele também demonstra como usar o <xref:System.Data.Odbc.OdbcConnection.BeginTransaction%2A>, <xref:System.Data.Odbc.OdbcTransaction.Commit%2A>, e <xref:System.Data.Odbc.OdbcTransaction.Rollback%2A> métodos.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.BeginTransaction#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.BeginTransaction#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcTransaction.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Confirma a transação do banco de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcConnection> e um <xref:System.Data.Odbc.OdbcTransaction>. Ele também demonstra como usar o <xref:System.Data.Odbc.OdbcConnection.BeginTransaction%2A>, <xref:System.Data.Odbc.OdbcTransaction.Commit%2A>, e <xref:System.Data.Odbc.OdbcTransaction.Rollback%2A> métodos.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.BeginTransaction1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.BeginTransaction1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Ocorreu um erro ao tentar confirmar a transação.</exception>
+        <exception cref="T:System.InvalidOperationException">A transação já foi confirmada ou revertida.  
+  
+ -ou-  
+  
+ A conexão foi desfeita.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Odbc.OdbcConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcTransaction.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Data.Odbc.OdbcConnection" /> associado à transação ou <see langword="null" />, se a transação não for mais válida.</summary>
+        <value>O objeto <see cref="T:System.Data.Odbc.OdbcConnection" /> associado à transação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um único aplicativo pode ter várias conexões de banco de dados, cada uma com zero ou mais transações. Essa propriedade permite que você determine o objeto de conexão associado a uma transação específica criada por <xref:System.Data.Odbc.OdbcConnection.BeginTransaction%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DbConnection">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbConnection DbConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbConnection DbConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcTransaction.DbConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcTransaction.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsolationLevel">
+      <MemberSignature Language="C#" Value="public override System.Data.IsolationLevel IsolationLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.IsolationLevel IsolationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcTransaction.IsolationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o <see cref="T:System.Data.IsolationLevel" /> para essa transação.</summary>
+        <value>O <see cref="T:System.Data.IsolationLevel" /> para essa transação. O padrão depende do driver ODBC subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há suporte para transações paralelas. Portanto, o <xref:System.Data.IsolationLevel> se aplica a toda a transação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcTransaction.Rollback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reverte uma transação de um estado pendente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transação pode ser revertida somente de um estado pendente (após <xref:System.Data.Odbc.OdbcConnection.BeginTransaction%2A> foi chamado, mas antes <xref:System.Data.Odbc.OdbcTransaction.Commit%2A> é chamado). A transação será revertida novamente caso seja descartada antes `Commit` ou `Rollback` é chamado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcConnection> e um <xref:System.Data.Odbc.OdbcTransaction>. Ele também demonstra como usar o <xref:System.Data.Odbc.OdbcConnection.BeginTransaction%2A>, <xref:System.Data.Odbc.OdbcTransaction.Commit%2A>, e <xref:System.Data.Odbc.OdbcTransaction.Rollback%2A> métodos.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.BeginTransaction1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.BeginTransaction1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Ocorreu um erro ao tentar confirmar a transação.</exception>
+        <exception cref="T:System.InvalidOperationException">A transação já foi confirmada ou revertida.  
+  
+ -ou-  
+  
+ A conexão foi desfeita.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,166 @@
+<Type Name="RibbonMenuItemsPanel" FullName="System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel">
+  <TypeSignature Language="C#" Value="public class RibbonMenuItemsPanel : System.Windows.Controls.VirtualizingStackPanel, System.Windows.Controls.Ribbon.Primitives.ISupportStarLayout" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi RibbonMenuItemsPanel extends System.Windows.Controls.VirtualizingStackPanel implements class System.Windows.Controls.Ribbon.Primitives.ISupportStarLayout" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.VirtualizingStackPanel</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Controls.Ribbon.Primitives.ISupportStarLayout</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um painel que organiza um ou mais <see cref="T:System.Windows.Controls.Ribbon.RibbonMenuItem" /> objetos em um <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> menu.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonMenuItemsPanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">O tamanho que o <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel" /> precisa posicionar seus elementos filho.</param>
+        <summary>Posiciona e dimensiona os elementos filho neste <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel" />.</summary>
+        <returns>O tamanho real do <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStarLayoutPass">
+      <MemberSignature Language="C#" Value="public bool IsStarLayoutPass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStarLayoutPass" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel.IsStarLayoutPass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fase de layout atual após a fase de estrela de layout.</summary>
+        <value>
+          <see langword="true" />Se a fase atual for uma passagem de estrela de layout; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size availableSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size availableSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="availableSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="availableSize">O tamanho máximo de <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel" />.</param>
+        <summary>Mede os elementos filho neste <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel" /> na preparação da organização-las durante a <see cref="M:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel.ArrangeOverride(System.Windows.Size)" /> passar.</summary>
+        <returns>O tamanho desejado do <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsItemsHostChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsItemsHostChanged (bool oldIsItemsHost, bool newIsItemsHost);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsItemsHostChanged(bool oldIsItemsHost, bool newIsItemsHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel.OnIsItemsHostChanged(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldIsItemsHost" Type="System.Boolean" />
+        <Parameter Name="newIsItemsHost" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="oldIsItemsHost">O valor antigo do <see cref="P:System.Windows.Controls.Panel.IsItemsHost" /> propriedade.</param>
+        <param name="newIsItemsHost">O novo valor da propriedade <see cref="P:System.Windows.Controls.Panel.IsItemsHost" />.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.Controls.Panel.IsItemsHost" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterStarLayoutProvider">
+      <MemberSignature Language="C#" Value="public void RegisterStarLayoutProvider (System.Windows.Controls.Ribbon.Primitives.IProvideStarLayoutInfoBase starLayoutInfoProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterStarLayoutProvider(class System.Windows.Controls.Ribbon.Primitives.IProvideStarLayoutInfoBase starLayoutInfoProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel.RegisterStarLayoutProvider(System.Windows.Controls.Ribbon.Primitives.IProvideStarLayoutInfoBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="starLayoutInfoProvider" Type="System.Windows.Controls.Ribbon.Primitives.IProvideStarLayoutInfoBase" />
+      </Parameters>
+      <Docs>
+        <param name="starLayoutInfoProvider">O elemento para registrar.</param>
+        <summary>Registra um elemento para participar no layout de estrela.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterStarLayoutProvider">
+      <MemberSignature Language="C#" Value="public void UnregisterStarLayoutProvider (System.Windows.Controls.Ribbon.Primitives.IProvideStarLayoutInfoBase starLayoutInfoProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterStarLayoutProvider(class System.Windows.Controls.Ribbon.Primitives.IProvideStarLayoutInfoBase starLayoutInfoProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonMenuItemsPanel.UnregisterStarLayoutProvider(System.Windows.Controls.Ribbon.Primitives.IProvideStarLayoutInfoBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="starLayoutInfoProvider" Type="System.Windows.Controls.Ribbon.Primitives.IProvideStarLayoutInfoBase" />
+      </Parameters>
+      <Docs>
+        <param name="starLayoutInfoProvider">O elemento a ser removido.</param>
+        <summary>Remove um elemento da participação no layout de estrela.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

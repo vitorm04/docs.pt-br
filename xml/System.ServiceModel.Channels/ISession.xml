@@ -1,0 +1,82 @@
+<Type Name="ISession" FullName="System.ServiceModel.Channels.ISession">
+  <TypeSignature Language="C#" Value="public interface ISession" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISession" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ISession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a interface para estabelecer um contexto compartilhado entre partes que trocam mensagens fornecendo uma ID para a sessão de comunicação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.ISession> interface é a interface base para todas as sessões. Ele contém um <xref:System.ServiceModel.Channels.ISession.Id%2A> propriedade para identificar a sessão.  
+  
+ Uma sessão é um contexto compartilhado entre todos os participantes em uma troca de comunicação. Esse contexto compartilhado é caracterizado por três propriedades a seguir:  
+  
+-   Estabelecimento da sessão - um processo para estabelecer compartilhado contexto entre todos os participantes.  
+  
+-   Correlação de mensagem - um método para correlacionar um grupo de mensagens a uma instância do contexto compartilhado.  
+  
+-   O <xref:System.ServiceModel.Channels.ISession> interface não é informada sobre o número de participantes em uma sessão ou o tempo de vida de uma sessão.  
+  
+ Essas propriedades de sessão são fornecidas pela associação de uma ID de uma sessão.  
+  
+ <xref:System.ServiceModel.Channels.ISession>é herdada por:  
+  
+-   <xref:System.ServiceModel.Channels.IInputSession>  
+  
+-   <xref:System.ServiceModel.Channels.IOutputSession>  
+  
+-   <xref:System.ServiceModel.Channels.IDuplexSession>  
+  
+-   <xref:System.ServiceModel.Channels.ISessionChannel%601>do tipo<xref:System.ServiceModel.Channels.ISession>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ISession.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID que identifica exclusivamente a sessão.</summary>
+        <value>A ID que identifica exclusivamente a sessão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a sessão for interrompida, ele pode ser recuperado usando o <xref:System.ServiceModel.Channels.ISession.Id%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Controls">
+  <Docs>
+    <summary>Fornece classes para criar elementos, conhecidos como controles, que permitem que um usuário interagir com um aplicativo. As classes de controle são a essência da experiência do usuário com qualquer aplicativo porque elas permitem que um usuário exibir, selecione ou insira dados ou outras informações.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

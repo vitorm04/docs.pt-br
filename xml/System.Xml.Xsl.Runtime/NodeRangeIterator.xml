@@ -1,0 +1,135 @@
+<Type Name="NodeRangeIterator" FullName="System.Xml.Xsl.Runtime.NodeRangeIterator">
+  <TypeSignature Language="C#" Value="public struct NodeRangeIterator" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit NodeRangeIterator extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.NodeRangeIterator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Se o nó inicial é o mesmo nó como o nó final é iterado sobre o nó de singleton. Itera até o final do documento, se o nó inicial é após o nó final ou está em um documento diferente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Itere os nós na ordem do documento, começando com o nó de início em todos os nós de tipo de conteúdo que seguem o nó inicial, até que o nó final seja atingido. Nós que não corresponderem ao teste de predicado são filtradas.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public void Create (System.Xml.XPath.XPathNavigator start, System.Xml.Xsl.Runtime.XmlNavigatorFilter filter, System.Xml.XPath.XPathNavigator end);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Create(class System.Xml.XPath.XPathNavigator start, class System.Xml.Xsl.Runtime.XmlNavigatorFilter filter, class System.Xml.XPath.XPathNavigator end) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.NodeRangeIterator.Create(System.Xml.XPath.XPathNavigator,System.Xml.Xsl.Runtime.XmlNavigatorFilter,System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="filter" Type="System.Xml.Xsl.Runtime.XmlNavigatorFilter" />
+        <Parameter Name="end" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="start">Nó no qual começa a iteração.</param>
+        <param name="filter">Expressão de teste que determina se um nó deve ser filtradas.</param>
+        <param name="end">Nó no qual a iteração termina.</param>
+        <summary>Inicializa o <see cref="T:System.Xml.Xsl.Runtime.NodeRangeIterator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método itera sobre os nós na ordem do documento, começando com o nó de início em todos os nós de tipo de conteúdo que seguem o nó inicial, até que o nó final seja atingido. Nós que não corresponderem ao teste de predicado são filtradas.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Current" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.NodeRangeIterator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o navegador de resultados atual.</summary>
+        <value>O navegador de resultados atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O estado do se navegador alterações somente o <xref:System.Xml.Xsl.Runtime.NodeRangeIterator.MoveNext%2A> método retornou `true`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.NodeRangeIterator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Posiciona o iterador no próximo nó.</summary>
+        <returns>
+          <see langword="true" />Se existir o próximo nó. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o próximo nó existir, o <xref:System.Xml.Xsl.Runtime.NodeRangeIterator.MoveNext%2A> método define o <xref:System.Xml.Xsl.Runtime.NodeRangeIterator.Current%2A> propriedade para o navegador de resultados atual; caso contrário, o <xref:System.Xml.Xsl.Runtime.NodeRangeIterator.Current%2A> propriedade permanece inalterada.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

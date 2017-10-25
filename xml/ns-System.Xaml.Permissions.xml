@@ -1,0 +1,6 @@
+<Namespace Name="System.Xaml.Permissions">
+  <Docs>
+    <summary>Contém tipos que especificar permissões para determinados cenários de carregamento, como carregar em confiança parcial ou carregar tipos internos de XAML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

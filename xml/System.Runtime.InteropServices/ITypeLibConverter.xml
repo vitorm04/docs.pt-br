@@ -1,0 +1,186 @@
+<Type Name="ITypeLibConverter" FullName="System.Runtime.InteropServices.ITypeLibConverter">
+  <TypeSignature Language="C#" Value="public interface ITypeLibConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeLibConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ITypeLibConverter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("F1C3BF78-C3E4-11D3-88E7-00902754C43A")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um conjunto de serviços que convertem um assembly gerenciado em uma biblioteca de tipos COM e vice-versa.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConvertAssemblyToTypeLib">
+      <MemberSignature Language="C#" Value="public object ConvertAssemblyToTypeLib (System.Reflection.Assembly assembly, string typeLibName, System.Runtime.InteropServices.TypeLibExporterFlags flags, System.Runtime.InteropServices.ITypeLibExporterNotifySink notifySink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertAssemblyToTypeLib(class System.Reflection.Assembly assembly, string typeLibName, valuetype System.Runtime.InteropServices.TypeLibExporterFlags flags, class System.Runtime.InteropServices.ITypeLibExporterNotifySink notifySink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibConverter.ConvertAssemblyToTypeLib(System.Reflection.Assembly,System.String,System.Runtime.InteropServices.TypeLibExporterFlags,System.Runtime.InteropServices.ITypeLibExporterNotifySink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+        <Parameter Name="typeLibName" Type="System.String" />
+        <Parameter Name="flags" Type="System.Runtime.InteropServices.TypeLibExporterFlags" />
+        <Parameter Name="notifySink" Type="System.Runtime.InteropServices.ITypeLibExporterNotifySink" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O assembly a ser convertido.</param>
+        <param name="typeLibName">O nome do arquivo da biblioteca de tipo resultante.</param>
+        <param name="flags">Um <see cref="T:System.Runtime.InteropServices.TypeLibExporterFlags" /> valor que indica alguma configuração especial.</param>
+        <param name="notifySink">O <see cref="T:System.Runtime.InteropServices.ITypeLibExporterNotifySink" /> interface implementada pelo chamador.</param>
+        <summary>Converte um assembly em uma biblioteca de tipos COM.</summary>
+        <returns>Um objeto que implementa a interface do <see langword="ITypeLib" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre `ITypeLib`, consulte sua documentação existente na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTypeLibToAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.AssemblyBuilder ConvertTypeLibToAssembly (object typeLib, string asmFileName, int flags, System.Runtime.InteropServices.ITypeLibImporterNotifySink notifySink, byte[] publicKey, System.Reflection.StrongNameKeyPair keyPair, bool unsafeInterfaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Emit.AssemblyBuilder ConvertTypeLibToAssembly(object typeLib, string asmFileName, int32 flags, class System.Runtime.InteropServices.ITypeLibImporterNotifySink notifySink, unsigned int8[] publicKey, class System.Reflection.StrongNameKeyPair keyPair, bool unsafeInterfaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibConverter.ConvertTypeLibToAssembly(System.Object,System.String,System.Int32,System.Runtime.InteropServices.ITypeLibImporterNotifySink,System.Byte[],System.Reflection.StrongNameKeyPair,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.AssemblyBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeLib" Type="System.Object" />
+        <Parameter Name="asmFileName" Type="System.String" />
+        <Parameter Name="flags" Type="System.Int32" />
+        <Parameter Name="notifySink" Type="System.Runtime.InteropServices.ITypeLibImporterNotifySink" />
+        <Parameter Name="publicKey" Type="System.Byte[]" />
+        <Parameter Name="keyPair" Type="System.Reflection.StrongNameKeyPair" />
+        <Parameter Name="unsafeInterfaces" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="typeLib">O objeto que implementa a interface do <see langword="ITypeLib" />.</param>
+        <param name="asmFileName">O nome do arquivo do assembly resultante.</param>
+        <param name="flags">Um <see cref="T:System.Runtime.InteropServices.TypeLibImporterFlags" /> valor que indica alguma configuração especial.</param>
+        <param name="notifySink">
+          <see cref="T:System.Runtime.InteropServices.ITypeLibImporterNotifySink" />interface implementada pelo chamador.</param>
+        <param name="publicKey">A <see langword="byte" /> matriz que contém a chave pública.</param>
+        <param name="keyPair">Um <see cref="T:System.Reflection.StrongNameKeyPair" /> objeto que contém o par de chaves criptográficas público e privado.</param>
+        <param name="unsafeInterfaces">Se <see langword="true" />, as interfaces exigem verificações de tempo de link para <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> permissão. Se <see langword="false" />, as interfaces exigem verificações de tempo de execução que exigem uma pilha percorrer e são mais caras, mas ajudam a fornecer maior proteção.</param>
+        <summary>Converte uma biblioteca de tipo em um assembly.</summary>
+        <returns>Um <see cref="T:System.Reflection.Emit.AssemblyBuilder" /> objeto que contém a biblioteca de tipo convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre `ITypeLib`, consulte sua documentação existente na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTypeLibToAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.AssemblyBuilder ConvertTypeLibToAssembly (object typeLib, string asmFileName, System.Runtime.InteropServices.TypeLibImporterFlags flags, System.Runtime.InteropServices.ITypeLibImporterNotifySink notifySink, byte[] publicKey, System.Reflection.StrongNameKeyPair keyPair, string asmNamespace, Version asmVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Reflection.Emit.AssemblyBuilder ConvertTypeLibToAssembly(object typeLib, string asmFileName, valuetype System.Runtime.InteropServices.TypeLibImporterFlags flags, class System.Runtime.InteropServices.ITypeLibImporterNotifySink notifySink, unsigned int8[] publicKey, class System.Reflection.StrongNameKeyPair keyPair, string asmNamespace, class System.Version asmVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibConverter.ConvertTypeLibToAssembly(System.Object,System.String,System.Runtime.InteropServices.TypeLibImporterFlags,System.Runtime.InteropServices.ITypeLibImporterNotifySink,System.Byte[],System.Reflection.StrongNameKeyPair,System.String,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.AssemblyBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeLib" Type="System.Object" />
+        <Parameter Name="asmFileName" Type="System.String" />
+        <Parameter Name="flags" Type="System.Runtime.InteropServices.TypeLibImporterFlags" />
+        <Parameter Name="notifySink" Type="System.Runtime.InteropServices.ITypeLibImporterNotifySink" />
+        <Parameter Name="publicKey" Type="System.Byte[]" />
+        <Parameter Name="keyPair" Type="System.Reflection.StrongNameKeyPair" />
+        <Parameter Name="asmNamespace" Type="System.String" />
+        <Parameter Name="asmVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="typeLib">O objeto que implementa a interface do <see langword="ITypeLib" />.</param>
+        <param name="asmFileName">O nome do arquivo do assembly resultante.</param>
+        <param name="flags">Um <see cref="T:System.Runtime.InteropServices.TypeLibImporterFlags" /> valor que indica alguma configuração especial.</param>
+        <param name="notifySink">
+          <see cref="T:System.Runtime.InteropServices.ITypeLibImporterNotifySink" />interface implementada pelo chamador.</param>
+        <param name="publicKey">A <see langword="byte" /> matriz que contém a chave pública.</param>
+        <param name="keyPair">Um <see cref="T:System.Reflection.StrongNameKeyPair" /> objeto que contém o par de chaves criptográficas público e privado.</param>
+        <param name="asmNamespace">O namespace para o assembly resultante.</param>
+        <param name="asmVersion">A versão do assembly resultante. Se <see langword="null" />, a versão da biblioteca de tipos é usada.</param>
+        <summary>Converte uma biblioteca de tipo em um assembly.</summary>
+        <returns>Um <see cref="T:System.Reflection.Emit.AssemblyBuilder" /> objeto que contém a biblioteca de tipo convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre `ITypeLib`, consulte sua documentação existente na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrimaryInteropAssembly">
+      <MemberSignature Language="C#" Value="public bool GetPrimaryInteropAssembly (Guid g, int major, int minor, int lcid, out string asmName, out string asmCodeBase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetPrimaryInteropAssembly(valuetype System.Guid g, int32 major, int32 minor, int32 lcid, [out] string&amp; asmName, [out] string&amp; asmCodeBase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibConverter.GetPrimaryInteropAssembly(System.Guid,System.Int32,System.Int32,System.Int32,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Guid" />
+        <Parameter Name="major" Type="System.Int32" />
+        <Parameter Name="minor" Type="System.Int32" />
+        <Parameter Name="lcid" Type="System.Int32" />
+        <Parameter Name="asmName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="asmCodeBase" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="g">O GUID da biblioteca de tipos.</param>
+        <param name="major">O número de versão principal da biblioteca de tipos.</param>
+        <param name="minor">O número de versão secundária da biblioteca de tipos.</param>
+        <param name="lcid">O LCID da biblioteca de tipos.</param>
+        <param name="asmName">No retorno bem-sucedido, o nome do assembly de interoperabilidade primário associado <c>g</c>.</param>
+        <param name="asmCodeBase">No retorno bem-sucedido, a base de código do assembly de interoperabilidade primária associada <c>g</c>.</param>
+        <summary>Obtém o nome e o código de base de um assembly de interoperabilidade primária para uma biblioteca de tipo especificado.</summary>
+        <returns>
+          <see langword="true" />Se o assembly de interoperabilidade primária foi encontrado no registro. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

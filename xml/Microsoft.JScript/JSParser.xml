@@ -1,0 +1,93 @@
+<Type Name="JSParser" FullName="Microsoft.JScript.JSParser">
+  <TypeSignature Language="C#" Value="public class JSParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit JSParser extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.JSParser" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Analisa o código JScript. Essa classe pertence à categoria de verificação e análise. Para obter mais informações sobre a verificação e análise, consulte [criar um compilador de linguagem para o .NET Framework](http://go.microsoft.com/fwlink/?LinkId=110392).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JSParser (Microsoft.JScript.Context context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.JScript.Context context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSParser.#ctor(Microsoft.JScript.Context)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.JScript.Context" />
+      </Parameters>
+      <Docs>
+        <param name="context">O código-fonte para analisar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.JSParser" /> classe, especificando o código-fonte para analisar.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.ScriptBlock Parse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.JScript.ScriptBlock Parse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSParser.Parse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.ScriptBlock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Analisa o código-fonte.</summary>
+        <returns>A raiz da árvore de sintaxe abstrata que é criado pela análise de código.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código-fonte é especificado para o <xref:Microsoft.JScript.JSParser.%23ctor%28Microsoft.JScript.Context%29> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseEvalBody">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Block ParseEvalBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.JScript.Block ParseEvalBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSParser.ParseEvalBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Block</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Analisa o código-fonte. Use esse método em vez de <see cref="M:Microsoft.JScript.JSParser.Parse" /> quando o código-fonte está dentro de um <see langword="eval" /> chamada de método.</summary>
+        <returns>A raiz da árvore de sintaxe abstrata que é criado pela análise de código.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código-fonte é especificado para o <xref:Microsoft.JScript.JSParser.%23ctor%28Microsoft.JScript.Context%29> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

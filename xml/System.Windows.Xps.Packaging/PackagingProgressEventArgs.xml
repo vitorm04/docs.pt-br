@@ -1,0 +1,163 @@
+<Type Name="PackagingProgressEventArgs" FullName="System.Windows.Xps.Packaging.PackagingProgressEventArgs">
+  <TypeSignature Language="C#" Value="public class PackagingProgressEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PackagingProgressEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.PackagingProgressEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Xps.Serialization.XpsPackagingPolicy.PackagingProgressEvent" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PackagingProgressEventArgs (System.Windows.Xps.Packaging.PackagingAction action, int numberCompleted);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Xps.Packaging.PackagingAction action, int32 numberCompleted) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.PackagingProgressEventArgs.#ctor(System.Windows.Xps.Packaging.PackagingAction,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Windows.Xps.Packaging.PackagingAction" />
+        <Parameter Name="numberCompleted" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação que o processo de empacotamento está executando no momento.</param>
+        <param name="numberCompleted">O número de simultâneas que o tempo especificado <c>ação</c> ocorreu.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Xps.Packaging.PackagingProgressEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em certas situações e para tipos específicos, vários eventos de andamento de empacotamento ocorrem ao mesmo tempo. Esses eventos logicamente distintos, mas temporariamente idênticos, são combinados em um único <xref:System.Windows.Xps.Serialization.XpsPackagingPolicy.PackagingProgressEvent> e `numberCompleted` é mais de 1. Por exemplo, quando você imprime, subconjuntos de fontes é executada todas as quatro páginas. Cada página deve ser armazenado em cache até que o subconjunto é concluído e, em seguida, todos os quatro <xref:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted> eventos ocorrem ao mesmo tempo. O construtor para resultante <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs> define `action` para <xref:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted> e define `numberCompleted` 4.  
+  
+ Por exemplo, se um pacote consiste em um único documento de quatro páginas que usa uma fonte e não há imagens ou outros recursos, a sequência de eventos pode ocorrer conforme mostrado na tabela a seguir.  
+  
+ **A sequência de eventos para um pacote simples**  
+  
+ AddingDocumentSequence  
+ 1  
+  
+ AddingFixedDocument  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ FontAdded  
+ 1  
+  
+ FixedPageCompleted  
+ 4  
+  
+ FixedDocumentCompleted  
+ 1  
+  
+ DocumentSequenceCompleted  
+ 1  
+  
+ XpsDocumentCommitted  
+ 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.PackagingAction Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Xps.Packaging.PackagingAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.PackagingProgressEventArgs.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.PackagingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a ação que está ocorrendo no momento no processo de empacotamento.</summary>
+        <value>Um <see cref="T:System.Windows.Xps.Packaging.PackagingAction" /> que representa a parte do processo de empacotamento que está ocorrendo no momento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberCompleted">
+      <MemberSignature Language="C#" Value="public int NumberCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.PackagingProgressEventArgs.NumberCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de vezes simultâneas que a ação que é identificada no <see cref="P:System.Windows.Xps.Packaging.PackagingProgressEventArgs.Action" /> ocorreu.</summary>
+        <value>Um <see cref="T:System.Int32" /> que representa o número de vezes simultâneas que a ação que é identificada no <see cref="P:System.Windows.Xps.Packaging.PackagingProgressEventArgs.Action" /> ocorreu.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em certas situações e para tipos específicos, vários eventos de andamento de empacotamento ocorrem ao mesmo tempo. Esses eventos logicamente distintos, mas temporariamente idênticos, são combinados em um único <xref:System.Windows.Xps.Serialization.XpsPackagingPolicy.PackagingProgressEvent> e <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs.NumberCompleted%2A> é mais de 1. Por exemplo, quando você imprime, subconjuntos de fontes é executada todas as quatro páginas. Cada página deve ser armazenado em cache até que o subconjunto é concluído e, em seguida, todos os quatro <xref:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted> eventos ocorrem ao mesmo tempo. Resultante <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs> define <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs.Action%2A> para <xref:System.Windows.Xps.Packaging.PackagingAction.FixedPageCompleted> e define <xref:System.Windows.Xps.Packaging.PackagingProgressEventArgs.NumberCompleted%2A> 4.  
+  
+ Por exemplo, se um pacote consiste em um único documento de quatro páginas que usa uma fonte e não há imagens ou outros recursos, a sequência de eventos pode ocorrer conforme mostrado na tabela a seguir:  
+  
+ **A sequência de eventos para um pacote simples**  
+  
+ AddingDocumentSequence  
+ 1  
+  
+ AddingFixedDocument  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ AddingFixedPage  
+ 1  
+  
+ FontAdded  
+ 1  
+  
+ FixedPageCompleted  
+ 4  
+  
+ FixedDocumentCompleted  
+ 1  
+  
+ DocumentSequenceCompleted  
+ 1  
+  
+ XpsDocumentCommitted  
+ 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

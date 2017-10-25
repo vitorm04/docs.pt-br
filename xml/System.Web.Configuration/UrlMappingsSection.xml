@@ -1,0 +1,148 @@
+<Type Name="UrlMappingsSection" FullName="System.Web.Configuration.UrlMappingsSection">
+  <TypeSignature Language="C#" Value="public sealed class UrlMappingsSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UrlMappingsSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.UrlMappingsSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso programático à seção de configuração <see langword="urlMappings" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.UrlMappingsSection> classe fornece uma maneira de acessar e modificar programaticamente o `urlMappings` seção de um arquivo de configuração.  
+  
+> [!NOTE]
+>  O `urlMappings` seção contém <xref:System.Web.Configuration.UrlMapping> objetos que mapeiam as URLs são exibidas aos usuários para URLs que existem em seu aplicativo Web. O <xref:System.Web.Configuration.UrlMappingsSection> pode gravar informações para a seção correspondente do arquivo de configuração de acordo com as restrições definidas pela propriedade seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.MachineToApplication>. Qualquer tentativa de gravar em um arquivo de configuração em um nível não é permitido na hierarquia resulta em uma mensagem de erro gerada pelo analisador. No entanto, você pode usar essa classe para ler informações de configuração em qualquer nível na hierarquia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.UrlMappingsSection> objeto do arquivo de configuração de um aplicativo Web existente. Também é mostrado é um trecho do arquivo de configuração.  
+  
+ [!code-csharp[System.Web.Configuration.UrlMapping#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/CS/urlmapping.cs#1)]
+ [!code-vb[System.Web.Configuration.UrlMapping#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/VB/urlmapping.vb#1)]  
+  
+```  
+<urlMappings enabled="true">  
+  <add url= "~/home.aspx"  
+    mappedUrl="~/default.aspx?parm1=1"/>  
+  <add url= "~/products.aspx"  
+    mappedUrl="~/default.aspx?parm1=2"/>  
+</urlMappings>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlMappingsSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingsSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.UrlMappingsSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.UrlMappingsSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.UrlMappingsSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMappingsSection.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o mapeamento está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o mapeamento estiver habilitado; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMappingsSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlMappings">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.UrlMappingCollection UrlMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.UrlMappingCollection UrlMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMappingsSection.UrlMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.UrlMappingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos <see cref="T:System.Web.Configuration.UrlMapping" /> .</summary>
+        <value><see cref="T:System.Web.Configuration.UrlMappingCollection" /> que contém objetos de <see cref="T:System.Web.Configuration.UrlMapping" /> .</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Web.Configuration.UrlMapping> objeto contém duas propriedades de identificação de uma URL. Uma propriedade especifica a URL mostrada ao usuário; a outra especifica uma URL em seu aplicativo Web.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o `urlMappings` seção.  
+  
+ [!code-csharp[System.Web.Configuration.UrlMapping#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/CS/urlmapping.cs#2)]
+ [!code-vb[System.Web.Configuration.UrlMapping#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/VB/urlmapping.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

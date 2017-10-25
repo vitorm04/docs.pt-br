@@ -1,0 +1,67 @@
+<Type Name="HitTestResult" FullName="System.Windows.Media.HitTestResult">
+  <TypeSignature Language="C#" Value="public abstract class HitTestResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HitTestResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.HitTestResult" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a classe base para várias classes derivadas, que representa o valor retornado de um teste de clique.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.PointHitTestResult>, <xref:System.Windows.Media.GeometryHitTestResult>, e <xref:System.Windows.Media.Media3D.RayHitTestResult> derivam de <xref:System.Windows.Media.HitTestResult>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como recuperar o <xref:System.Windows.Media.HitTestResult> retornar valor o <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> método.  
+  
+ [!code-csharp[HitTestingOverview#100](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[HitTestingOverview#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#100)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="VisualHit">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObject VisualHit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObject VisualHit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.HitTestResult.VisualHit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto visual que foi atingido.</summary>
+        <value>Um valor <see cref="T:System.Windows.DependencyObject" /> que representa o objeto visual que foi atingido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DependencyObject>é o tipo em vez de <xref:System.Windows.Media.Visual> para que o teste de clique pode ligar árvores 2D e 3D por meio de um visor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como recuperar o <xref:System.Windows.Media.HitTestResult.VisualHit%2A> valor de propriedade em um método de retorno de chamada de teste de clique.  
+  
+ [!code-csharp[HitTestingOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
+ [!code-vb[HitTestingOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,438 @@
+<Type Name="RuleSettingsCollection" FullName="System.Web.Configuration.RuleSettingsCollection">
+  <TypeSignature Language="C#" Value="public sealed class RuleSettingsCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RuleSettingsCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.RuleSettingsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.RuleSettings))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Uma coleção de objetos <see cref="T:System.Web.Configuration.RuleSettings" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.RuleSettings>objetos são usados para definir regras de evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.RuleSettingsCollection> tipo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.HealthMonitoringSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#8)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleSettingsCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.RuleSettingsCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HealthMonitoringSection.EventMappings%2A> propriedade o <xref:System.Web.Configuration.HealthMonitoringSection> classe sempre contém uma instância do <xref:System.Web.Configuration.RuleSettingsCollection>. Use esta instância, em vez de criar uma nova instância da classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.RuleSettings ruleSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.RuleSettings ruleSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.Add(System.Web.Configuration.RuleSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ruleSettings" Type="System.Web.Configuration.RuleSettings" />
+      </Parameters>
+      <Docs>
+        <param name="ruleSettings">Um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto a ser adicionado à coleção.</param>
+        <summary>Adiciona um objeto de <see cref="T:System.Web.Configuration.RuleSettings" /> à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção já não deve conter um <xref:System.Web.Configuration.RuleSettings> objeto com o mesmo nome.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.RuleSettingsCollection.Add%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.HealthMonitoringSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#73](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#73)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#73](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#73)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">O <see cref="T:System.Web.Configuration.RuleSettings" /> objeto a ser adicionado já existe na coleção ou a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.Configuration.RuleSettings" /> objetos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método insere um `clear` diretiva na seção apropriada do arquivo de configuração para limpar todas as referências a elementos definidos em um arquivo de configuração de nível superior. Todos os elementos definidos na seção apropriada do arquivo de configuração atual são removidos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.RuleSettingsCollection.Clear%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.HealthMonitoringSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#84](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#84)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#84](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#84)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um objeto <see cref="T:System.Web.Configuration.RuleSettings" /> na coleção.</param>
+        <summary>Retorna <see langword="true" /> se a coleção contém um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto com o nome especificado.</summary>
+        <returns>
+          <see langword="true" />Se a coleção contém um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto com o nome; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna `false` se o nome especificado não existe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.RuleSettingsCollection.Contains%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.HealthMonitoringSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#79](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#79)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#79](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#79)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um objeto <see cref="T:System.Web.Configuration.RuleSettings" /> na coleção.</param>
+        <summary>Localiza o índice de um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto na coleção com o nome especificado.</summary>
+        <returns>O índice de um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto na coleção com o nome especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retornará -1 se uma <xref:System.Web.Configuration.RuleSettings> objeto com o nome especificado não está na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.RuleSettingsCollection.IndexOf%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.HealthMonitoringSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#80](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#80)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#80](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#80)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.Configuration.RuleSettings eventSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.Configuration.RuleSettings eventSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.Insert(System.Int32,System.Web.Configuration.RuleSettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="eventSettings" Type="System.Web.Configuration.RuleSettings" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um índice válido de um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto na coleção.</param>
+        <param name="eventSettings">O <see cref="T:System.Web.Configuration.RuleSettings" /> objeto a ser inserido na coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Configuration.RuleSettings" /> objeto para o ponto de índice especificado na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o parâmetro de índice é igual ao número de itens na coleção, a entrada é acrescentada ao final da coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.RuleSettingsCollection.Insert%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.HealthMonitoringSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#77](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#77)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#77](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#77)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">O <see cref="T:System.Web.Configuration.RuleSettings" /> objeto a ser adicionado já existe na coleção, o índice é inválido ou a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.RuleSettings this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.RuleSettings Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RuleSettingsCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.RuleSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto na coleção.</param>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.RuleSettings" /> objeto no índice numérico especificado.</summary>
+        <value>O objeto <see cref="T:System.Web.Configuration.RuleSettings" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Configuration.RuleSettings> objeto no índice especificado deve existir.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.RuleSettingsCollection.Item%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.HealthMonitoringSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#93](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#93)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#93](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#93)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Índice está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.RuleSettings this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.RuleSettings Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RuleSettingsCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.RuleSettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do <see cref="T:System.Web.Configuration.RuleSettings" /> objeto contido na coleção.</param>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.RuleSettings" /> objeto com base na chave especificada na coleção.</summary>
+        <value>Um objeto <see cref="T:System.Web.Configuration.RuleSettings" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.RuleSettingsCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um objeto <see cref="T:System.Web.Configuration.RuleSettings" /> na coleção.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método insere um `remove` elemento na seção apropriada do arquivo de configuração para todos os elementos definidos em um arquivo de configuração de nível mais alto. Se o elemento está definido na seção apropriada do arquivo de configuração atual, sua entrada será removida do arquivo de configuração. O objeto a ser removido deve existir na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.RuleSettingsCollection.Remove%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.HealthMonitoringSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#82](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#82)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#82](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#82)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Não há nenhum <see cref="T:System.Web.Configuration.RuleSettings" /> de objeto com a chave especificada na coleção, o elemento já foi removido ou a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.RuleSettingsCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um índice válido de um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto na coleção.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.RuleSettings" /> objeto no local do índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método insere um `remove` elemento na seção apropriada do arquivo de configuração para todos os elementos definidos em um arquivo de configuração de nível mais alto. Se o elemento está definido na seção apropriada do arquivo de configuração atual, sua entrada será removida do arquivo de configuração. O objeto a ser removido deve existir na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.RuleSettingsCollection.RemoveAt%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.HealthMonitoringSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.HealthMonitoringSection#83](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/CS/healthmonitoringsection.cs#83)]
+ [!code-vb[System.Web.Configuration.HealthMonitoringSection#83](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HealthMonitoringSection/VB/healthmonitoringsection.vb#83)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Não há nenhum <see cref="T:System.Web.Configuration.RuleSettings" /> de objeto no índice especificado na coleção, o elemento já foi removido ou a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

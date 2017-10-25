@@ -1,0 +1,54 @@
+<Type Name="IUrlResolutionService" FullName="System.Web.UI.IUrlResolutionService">
+  <TypeSignature Language="C#" Value="public interface IUrlResolutionService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUrlResolutionService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IUrlResolutionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um serviço implementado por objetos para resolver URLs relativas com base nas informações contextuais.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface define o serviço que é usado para resolver os caminhos de URL. O <xref:System.Web.UI.IUrlResolutionService> interface é usada para resolver os caminhos relativos e caminhos que contêm o ~ operador. Controles de servidor que referenciam recursos podem definir os caminhos para os recursos por meio de ~ operador, que representa a raiz do aplicativo atual. Um caminho que contém o ~ operador não funcionará se passado para o navegador. O controle de servidor deve converter o caminho para um caminho absoluto ou relativo antes de passar para o navegador.  
+  
+ <xref:System.Web.UI.Control>implementa essa interface. Um controle que deriva de <xref:System.Web.UI.Control> pode substituir essa implementação para fornecer a resolução personalizada de URLs.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ResolveClientUrl">
+      <MemberSignature Language="C#" Value="public string ResolveClientUrl (string relativeUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveClientUrl(string relativeUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IUrlResolutionService.ResolveClientUrl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relativeUrl">Uma URL relativa à da atual.</param>
+        <summary>Retorna uma URL resolvida adequada para uso pelo cliente.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém a URL resolvida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a URL especificada é absoluta, a URL absoluta é retornada sem alterações. Caso contrário, a URL é convertida em uma URL relativa que o cliente possa resolver.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

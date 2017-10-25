@@ -1,0 +1,222 @@
+<Type Name="AssociationAttribute" FullName="System.Data.Linq.Mapping.AssociationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssociationAttribute : System.Data.Linq.Mapping.DataAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssociationAttribute extends System.Data.Linq.Mapping.DataAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Mapping.AssociationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Linq.Mapping.DataAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Designa uma propriedade para representar uma associação de banco de dados, como uma relação de chave estrangeira.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse atributo para representar uma associação em um banco de dados, como a relação entre uma chave estrangeira e uma chave primária.  
+  
+ No exemplo a seguir, o `Order` classe inclui um <xref:System.Data.Linq.Mapping.AssociationAttribute> ordens de atributo para associar com clientes.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.AssociationAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/cs/northwind.cs#1)]
+ [!code-vb[System.Data.Linq.Mapping.AssociationAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/vb/northwind.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssociationAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Mapping.AssociationAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Linq.Mapping.AssociationAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteOnNull">
+      <MemberSignature Language="C#" Value="public bool DeleteOnNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DeleteOnNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando colocado em uma associação de 1:1 cujos membros de chave estrangeiras são todos não anuláveis, exclui o objeto quando a associação é definida como null.</summary>
+        <value>Definir como <see langword="True" /> exclui o objeto. O valor padrão é <see langword="False" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteRule">
+      <MemberSignature Language="C#" Value="public string DeleteRule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeleteRule" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a excluir o comportamento de uma associação.</summary>
+        <value>Uma cadeia de caracteres que representa a regra.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se definida como nula, nenhum comportamento de exclusão é adicionado. Por exemplo, "Cascata" Adicione "ON DELETE CASCADE" para a relação de chave estrangeira.  
+  
+ No exemplo a seguir, a regra é para não executar nenhuma ação.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.AssociationAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/cs/northwind.cs#2)]
+ [!code-vb[System.Data.Linq.Mapping.AssociationAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/vb/northwind.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsForeignKey">
+      <MemberSignature Language="C#" Value="public bool IsForeignKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsForeignKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o membro de chave estrangeira em uma associação que representa uma relação de banco de dados.</summary>
+        <value>Padrão = <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.AssociationAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/cs/northwind.cs#3)]
+ [!code-vb[System.Data.Linq.Mapping.AssociationAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/vb/northwind.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnique">
+      <MemberSignature Language="C#" Value="public bool IsUnique { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnique" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.AssociationAttribute.IsUnique" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a indicação de uma restrição de exclusividade na chave estrangeira.</summary>
+        <value>Padrão = <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando for verdadeiro, esta propriedade indica uma relação de 1:1 true.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OtherKey">
+      <MemberSignature Language="C#" Value="public string OtherKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OtherKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.AssociationAttribute.OtherKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um ou mais membros da classe de entidade de destino como valores de chave no outro lado da associação.</summary>
+        <value>Padrão = Id da classe relacionada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para vários membros, use uma lista separada por vírgulas.  
+  
+ A chave não é necessária para coincidir com a chave primária ou chave estrangeira, mas a cardinalidade indicado pelo usuário (0-1 para <xref:System.Data.Linq.EntityRef%601> ou 0-n para <xref:System.Data.Linq.EntitySet%601>) é considerado como true.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.AssociationAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/cs/northwind.cs#2)]
+ [!code-vb[System.Data.Linq.Mapping.AssociationAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/vb/northwind.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThisKey">
+      <MemberSignature Language="C#" Value="public string ThisKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThisKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Mapping.AssociationAttribute.ThisKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os membros dessa classe de entidade para representar os valores de chave no outro lado da associação.</summary>
+        <value>Padrão = Id da classe que contém.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para vários membros, use uma lista separada por vírgulas.  
+  
+ A chave não é necessária para coincidir com a chave primária ou chave estrangeira, mas a cardinalidade indicado pelo usuário (0-1 para <xref:System.Data.Linq.EntityRef%601> ou 0-n para <xref:System.Data.Linq.EntitySet%601>) é considerado como true.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Mapping.AssociationAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/cs/northwind.cs#3)]
+ [!code-vb[System.Data.Linq.Mapping.AssociationAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.Mapping.AssociationAttribute/vb/northwind.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

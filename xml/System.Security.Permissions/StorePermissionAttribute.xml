@@ -1,0 +1,334 @@
+<Type Name="StorePermissionAttribute" FullName="System.Security.Permissions.StorePermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class StorePermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit StorePermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.StorePermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as ações de segurança para <see cref="T:System.Security.Permissions.StorePermission" /> sejam aplicadas ao código usando a segurança declarativa. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O escopo da declaração que é permitido depende do <xref:System.Security.Permissions.SecurityAction> valor que é usado.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. O <xref:System.Security.Permissions.StorePermissionAttribute> atributo é usado apenas para a segurança declarativa. Para segurança obrigatória, use o <xref:System.Security.Permissions.StorePermission> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StorePermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StorePermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores de <see cref="T:System.Security.Permissions.SecurityAction" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.StorePermissionAttribute" /> classe com a ação de segurança especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToStore">
+      <MemberSignature Language="C#" Value="public bool AddToStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AddToStore" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StorePermissionAttribute.AddToStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o código tem permissão para adicionar a um repositório.</summary>
+        <value>
+          <see langword="true" />Se a capacidade de adicionar a um repositório é permitida. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por motivos de segurança, essa capacidade deve ser concedida somente a código altamente confiável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.StorePermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um novo <see cref="T:System.Security.Permissions.StorePermission" />.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.StorePermission" /> que corresponde ao atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método deve ser chamado somente pelo sistema de segurança, nunca pelo código do aplicativo.  
+  
+ Em tempo de compilação, atributos convertem declarações de segurança para um formato serializado em metadados. Os metadados são criados do objeto de permissão que esse método retorna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStore">
+      <MemberSignature Language="C#" Value="public bool CreateStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CreateStore" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StorePermissionAttribute.CreateStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o código tem permissão para criar um repositório.</summary>
+        <value>
+          <see langword="true" />Se a capacidade de criar um repositório é permitida. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Novas lojas são criadas chamando o <xref:System.Security.Cryptography.X509Certificates.X509Store.Open%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteStore">
+      <MemberSignature Language="C#" Value="public bool DeleteStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DeleteStore" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StorePermissionAttribute.DeleteStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o código tem permissão para excluir um repositório.</summary>
+        <value>
+          <see langword="true" />Se a capacidade de excluir um repositório é permitida. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa funcionalidade não é exposta pelo <xref:System.Security.Cryptography.X509Certificates.X509Store> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateCertificates">
+      <MemberSignature Language="C#" Value="public bool EnumerateCertificates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnumerateCertificates" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StorePermissionAttribute.EnumerateCertificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o código tem permissão para enumerar os certificados em um repositório.</summary>
+        <value>
+          <see langword="true" /> se a capacidade de enumerar certificados é permitida; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por motivos de privacidade, esse recurso deve ser concedido somente a código totalmente confiável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateStores">
+      <MemberSignature Language="C#" Value="public bool EnumerateStores { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnumerateStores" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StorePermissionAttribute.EnumerateStores" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o código tem permissão para enumerar repositórios.</summary>
+        <value>
+          <see langword="true" />Se a capacidade de enumerar repositórios é permitida. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa funcionalidade não é exposta pelo <xref:System.Security.Cryptography.X509Certificates.X509Store> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.StorePermissionFlags Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.StorePermissionFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StorePermissionAttribute.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.StorePermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as permissões do repositório.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Security.Permissions.StorePermissionFlags" />. O padrão é <see cref="F:System.Security.Permissions.StorePermissionFlags.NoFlags" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Muitos desses sinalizadores são poderosas e permitirem o acesso a repositórios que deve ser concedida somente para código altamente confiável.  
+  
+ O mais eficiente dos sinalizadores é <xref:System.Security.Permissions.StorePermissionFlags.AddToStore>, <xref:System.Security.Permissions.StorePermissionFlags.CreateStore>, <xref:System.Security.Permissions.StorePermissionFlags.DeleteStore>, e <xref:System.Security.Permissions.StorePermissionFlags.AllFlags>. Para ameaças específicas impostas pelo uso desses sinalizadores, consulte as descrições de sinalizador individuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenStore">
+      <MemberSignature Language="C#" Value="public bool OpenStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OpenStore" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StorePermissionAttribute.OpenStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o código tem permissão para abrir um repositório.</summary>
+        <value>
+          <see langword="true" />Se a capacidade de abrir um repositório é permitida. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de abrir um repositório não inclui a capacidade para enumerar certificados (que gera problemas de privacidade) ou para adicionar ou remover certificados (o que gera a questões de segurança).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFromStore">
+      <MemberSignature Language="C#" Value="public bool RemoveFromStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RemoveFromStore" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.StorePermissionAttribute.RemoveFromStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o código tem permissão para remover um certificado de um repositório.</summary>
+        <value>
+          <see langword="true" />Se a capacidade de remover um certificado de um repositório é permitida. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa capacidade deve ser concedida somente a código altamente confiável porque a remoção de um certificado pode resultar em uma negação de serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
